@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3s-3-hydroxyicosanoyl-c-to-n-eicosanoylsphingan "(3S)-3-hydroxyicosanoyl-C… to N-eicosanoylsphinganine" {
-  spacing 164
+  spacing 176
 
   spine at 0,0 {
     3s_3_hydroxyicosanoyl_coa
@@ -18,13 +18,25 @@ pathway 3s-3-hydroxyicosanoyl-c-to-n-eicosanoylsphingan "(3S)-3-hydroxyicosanoyl
 
   branch from icosanoyl_coa side left {
     icosanoyl_coa
-    <-> . +h2o +coa +hplus
-    icosanoate
+    <-> . +carnitine +coa
+    r_icosanoylcarnitine
   }
 
   branch from icosanoyl_coa side right {
     icosanoyl_coa
-    <-> . +1_hexadecanoyl_sn_glycero_3_phosphocholine +coa
-    1_palmitoyl_2_icosanoyl_sn_glycero_3_phosphochol
+    <-> ec_1_14_19_10 [1.14.19.10] +fe2 +o2 +hplus +iron +h2o
+    5z_icosenoyl_coa
+  }
+
+  branch from icosanoyl_coa side left {
+    icosanoyl_coa
+    <-> . +ketosphinganine +coa +hplus
+    n_icosanoyl_3_ketodihydrosphingosine
+  }
+
+  branch from icosanoyl_coa side right {
+    icosanoyl_coa
+    <-> . +2_oleoylglycerol +coa
+    1_icosanoyl_2_oleoylglycerol
   }
 }

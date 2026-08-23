@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-terminal-l-alanyl-l-pro-to-s-adenosyl-l-homocy "N-terminal L-alanyl-L-pro… to S-adenosyl-L-homocysteine" {
-  spacing 236
+  spacing 260
 
   spine at 0,0 {
     n_terminal_l_alanyl_l_prolyl_l_lysyl_2
@@ -18,13 +18,37 @@ pathway n-terminal-l-alanyl-l-pro-to-s-adenosyl-l-homocy "N-terminal L-alanyl-L-
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_198 [2.1.1.198] +cytidine_5_monophosphate_1 +sam +hplus
-    2_o_methylcytidine_5_monophosphate_1
+    <-> . +picrinine +sam +hplus
+    ervincine
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_199 [2.1.1.199] +cytidine_5_monophosphate_1 +sam +hplus
-    n4_methylcytidine_5_monophosphate_1
+    <-> . +perivine +sam +hplus
+    vobasine
+  }
+
+  branch from sam side left {
+    sam
+    <-> . +emodin +sah
+    physcion
+  }
+
+  branch from sam side right {
+    sam
+    <-> ec_2_1_1_391 [2.1.1.391] +demethylgadusol +sah +hplus
+    gadusol
+  }
+
+  branch from sah side left {
+    sah
+    <-> . +luteolin_7_olate +sam +hplus
+    diosmetin_7_olate
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_392 [2.1.1.392] +4_methylnorajmaline +sam +hplus
+    4_methylajmaline
   }
 }

@@ -98,43 +98,6 @@
       "xrefs": {
         "chebi": "CHEBI:18041"
       }
-    },
-    {
-      "id": "s_methioninol",
-      "name": "(S)-methioninol",
-      "formula": "C5H14NOS",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:195450"
-      }
-    },
-    {
-      "id": "1_hydroxy_4_methythio_butan_2_one",
-      "name": "1-hydroxy-4-(methythio)butan-2-one",
-      "short": "1-hydroxy-4-(methyt…",
-      "formula": "C5H10O2S",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:195451"
-      }
-    },
-    {
-      "id": "d_alanine",
-      "name": "D-alanine",
-      "formula": "C3H7NO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:57416"
-      }
-    },
-    {
-      "id": "pyruvate",
-      "name": "Pyruvate",
-      "formula": "C3H3O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:15361"
-      }
     }
   ],
   "enzymes": [
@@ -289,105 +252,137 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "(S)-methioninol + NAD(+) + H2O = 1-hydroxy-4-(methythio)butan-2-one + NH4(+) + NADH + H(+)",
-      "equation": "(S)-methioninol + NAD(+) + H2O = 1-hydroxy-4-(methythio)butan-2-one + NH4(+) + NADH + H(+)",
-      "substrates": [
-        {
-          "metabolite": "s_methioninol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_hydroxy_4_methythio_butan_2_one",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:76811"
+      "id": "xt_hydroxyacetone_2s-3-sulfopropanediol-to-3-hydroxyhexane-2-5-di",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxyacetone"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2s-3-sulfopropanediol-to-3-hydroxyhexane-2-5-di"
+      },
+      "note": "Shares hydroxyacetone with (2S)-3-sulfopropanediol to 3-hydroxyhexane-2,5-dione.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:76811"
+            "db": "ChEBI",
+            "id": "CHEBI:27957"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "D-alanine + NAD(+) + H2O = pyruvate + NH4(+) + NADH + H(+)",
-      "equation": "D-alanine + NAD(+) + H2O = pyruvate + NH4(+) + NADH + H(+)",
-      "substrates": [
-        {
-          "metabolite": "d_alanine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "pyruvate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:76815"
+      "id": "xt_hydroxyacetone_d-ribitol-5-phosphate-to-h2o-19925",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxyacetone"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "d-ribitol-5-phosphate-to-h2o-19925"
+      },
+      "note": "Shares hydroxyacetone with D-ribitol 5-phosphate to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:76815"
+            "db": "ChEBI",
+            "id": "CHEBI:27957"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hydroxyacetone_dihydrophloroglucinol-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxyacetone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dihydrophloroglucinol-to-nadph"
+      },
+      "note": "Shares hydroxyacetone with dihydrophloroglucinol to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:27957"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hydroxyacetone_maltose-6-phosphate-to-hapalindole-h",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxyacetone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "maltose-6-phosphate-to-hapalindole-h"
+      },
+      "note": "Shares hydroxyacetone with α-maltose 6'-phosphate to hapalindole H.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:27957"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_lactaldehyde_dioscin-to-3s-4s-5s-3-4-5-trihydro",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_lactaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dioscin-to-3s-4s-5s-3-4-5-trihydro"
+      },
+      "note": "Shares (S)-lactaldehyde with dioscin to (3S,4S,5S)-3,4,5-trihydro….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18041"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_lactaldehyde_l-rhamnofuranose-to-3-carboxy-cis-cis-muconate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_lactaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-rhamnofuranose-to-3-carboxy-cis-cis-muconate"
+      },
+      "note": "Shares (S)-lactaldehyde with L-rhamnofuranose to 3-carboxy-cis,cis-muconate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18041"
           }
         ]
       }

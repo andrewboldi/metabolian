@@ -38,57 +38,141 @@ pathway biphenyl-to-nad "biphenyl to NAD" {
     biphenyl_2_3_diol
   }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_3_1_1_1 [3.1.1.1] +n_n_diethylglycine +2_6_dimethylaniline
-    lidocaine
+  branch from 2_hydroxy_6_oxonona_2_4_diene_1_9_dioate side left {
+    2_hydroxy_6_oxonona_2_4_diene_1_9_dioate
+    <-> ec_3_7_1_14 [3.7.1.14] +h +succinate +h2o
+    2e_2_hydroxypenta_2_4_dienoate
   }
 
   branch from h2o side right {
     h2o
-    <-> . +hexadecanoate +core_oligosaccharide_lipid_a +h
-    hepta_acylated_core_oligosaccharide_lipid_a
+    <-> ec_3_6_3_9 [3.6.3.9] +h +adp +k +phosphate +atp +k
+    na
   }
 
-  branch from o2 side left {
-    o2
-    <-> ec_1_14_14_1 [1.14.14.1] +6_hydroxypaclitaxel +nadp +h2o +h +nadph
-    paclitaxel
+  branch from h2o side left {
+    h2o
+    <-> ec_3_1_3_4 [3.1.3.4] +h +1_2_diacyl_sn_glycerol_didodecanoyl_n_c12_0 +phosphate
+    1_2_didodecanoyl_sn_glycerol_3_phosphate
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_14_1 [1.14.14.1] +4_hydroxytolbutamide +nadp +h2o +h +nadph
-    tolbutamide
+    <-> . +9_cis_retinal +h +nadph +nadp +h2o
+    4_oh_9_cis_retinal
   }
 
-  branch from 3_2_3_dihydroxyphenyl_propanoate side left {
-    3_2_3_dihydroxyphenyl_propanoate
-    <-> ec_1_13_11_16 [1.13.11.16] +h +o2
-    2_hydroxy_6_oxonona_2_4_dienedioic_acid
+  branch from o2 side left {
+    o2
+    <-> . +9_cis_retinal +h +nadph +nadp +h2o
+    4_oh_retinal
   }
 
   branch from 3_2_3_dihydroxyphenyl_propanoate side right {
     3_2_3_dihydroxyphenyl_propanoate
     <-> ec_1_13_11_16 [1.13.11.16] +h +o2
+    2_hydroxy_6_oxonona_2_4_dienedioic_acid
+  }
+
+  branch from 3_2_3_dihydroxyphenyl_propanoate side left {
+    3_2_3_dihydroxyphenyl_propanoate
+    <-> ec_1_13_11_16 [1.13.11.16] +h +o2
     2e_4z_2_hydroxy_6_oxonona_2_4_dienedioate
   }
 
-  branch from cis_3_3_carboxyethyl_3_5_cyclohexadiene_1_2_diol side left {
+  branch from cis_3_3_carboxyethyl_3_5_cyclohexadiene_1_2_diol side right {
     cis_3_3_carboxyethyl_3_5_cyclohexadiene_1_2_diol
     <-> ec_1_14_12_19 [1.14.12.19] +nadh +h +o2 +nad
     3_phenylpropanoate
   }
 
+  branch from nad side left {
+    nad
+    <-> . +nadh +z_3_aminoperacrylic_acid +h2o
+    z_3_aminoacrylate
+  }
+
   branch from nad side right {
     nad
-    <-> ec_1_2_1_18 [1.2.1.18] +nadh +h +r_methylmalonyl_coa +coa
-    2_methyl_3_oxopropanoate
+    <-> . +nadh +h +5_aminopentanoate +h2o
+    1_piperideinium
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_1_3_4 [3.1.3.4] +1_2_diacyl_sn_glycerol_ditetradec_7_enoyl_n_c14 +phosphate +h2o
+    1_2_ditetradec_7_enoyl_sn_glycerol_3_phosphate
+  }
+
+  branch from h side right {
+    h
+    <-> . +adp +pe_18_1_11z_18_1_9z +phosphate +pe_18_1_11z_18_1_9z +h2o
+    atp
+  }
+
+  branch from succinate side left {
+    succinate
+    <-> . +h +phosphate +atp +h2o
+    adp
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> ec_1_14_11_12 [1.14.11.12] +gibberellin_a20 +co2 +h2o +h +gibberellin_a19 +o2
+    2_oxoglutarate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +h +adp +phosphate +atp
+    1_11z_octadecenoyl_2_9z_12z_octadecadienoyl_sn_g
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +h +adp +phosphate +atp
+    phosphatidylglycerophosphate_didodecanoyl_n_c12
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +all_trans_retinal +h +nadph +4_oh_retinal +h2o
+    nadp
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +all_trans_retinol +h +nadph +nadp +h2o
+    4_hydroxyvitamin_a1
+  }
+
+  branch from 3_2_3_dihydroxyphenyl_propanoate side left {
+    3_2_3_dihydroxyphenyl_propanoate
+    <-> ec_1_3_1_87 [1.3.1.87] +nadh +h +nad
+    3_5s_6r_5_6_dihydroxycyclohexa_1_3_dienyl_propan
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_1_1_1 [1.1.1.1] +5_hydroxyindol_3_yl_acetaldehyde +h +nad
+    5_hydroxytryptophol
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> . +h +7alpha_hydroxycholest_4_en_3_one +nad
+    20_hydroxycholesterol
+  }
+
+  branch from nad side right {
+    nad
+    <-> . +nadh +h +all_trans_3_4_didehydroretinoate +h2o
+    all_trans_3_4_didehydroretinol
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +1_4_dihydroxy_2_naphthoate +h2o
-    menadione
+    <-> . +nadh +h +8_dehydrocholesterol +o2 +h2o
+    27alpha_hydroxy_8_dehydrocholesterol
   }
 }

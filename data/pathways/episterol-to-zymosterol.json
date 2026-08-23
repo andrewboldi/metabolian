@@ -165,65 +165,6 @@
       "xrefs": {
         "metanetx": "MNXM738369"
       }
-    },
-    {
-      "id": "l_dehydroascorbic_acid",
-      "name": "L-dehydroascorbic acid",
-      "short": "L-dehydroascorbic…",
-      "formula": "C6H6O6",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1108062"
-      }
-    },
-    {
-      "id": "5_9_11_trihydroxyprosta_6e_14z_dien_1_oate",
-      "name": "5,9,11-trihydroxyprosta-6E,14Z-dien-1-oate",
-      "short": "5,9,11-trihydroxypr…",
-      "formula": "C20H33O5",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM1560406"
-      }
-    },
-    {
-      "id": "9_11_cycloperoxy_5_hydroperoxy_6e_14z_eicosadien",
-      "name": "9,11-cycloperoxy-5-hydroperoxy-6E,14Z-eicosadienoate",
-      "short": "9,11-cycloperoxy-5-…",
-      "formula": "C20H31O6",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM1560400"
-      }
-    },
-    {
-      "id": "l_ascorbate",
-      "name": "L-ascorbate",
-      "formula": "C6H7O6",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM727871"
-      }
-    },
-    {
-      "id": "5_9_cyclo_6_8_12_trihydroxy_10e_14z_eicosadienoi",
-      "name": "5,9-cyclo-6,8,12-trihydroxy-(10E,14Z)-eicosadienoic acid",
-      "short": "5,9-cyclo-6,8,12-tr…",
-      "formula": "C20H33O5",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM1560416"
-      }
-    },
-    {
-      "id": "5_9_cyclo_6_8_cycloperoxy_12_hydroperoxy_10e_14z",
-      "name": "5,9-cyclo-6,8-cycloperoxy-12-hydroperoxy-(10E,14Z)-eicosadienoic acid",
-      "short": "5,9-cyclo-6,8-cyclo…",
-      "formula": "C20H31O6",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM1560415"
-      }
     }
   ],
   "enzymes": [
@@ -232,14 +173,20 @@
       "name": "Delta(7)-sterol 5(6)-desaturase",
       "ec": [
         "1.14.19.20"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "O75845"
+      }
     },
     {
       "id": "ec_5_3_3_5",
       "name": "cholestenol Delta-isomerase",
       "ec": [
         "5.3.3.5"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q15125"
+      }
     }
   ],
   "reactions": [
@@ -405,95 +352,203 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "Reaction MNXR206721",
-      "substrates": [
-        {
-          "metabolite": "l_dehydroascorbic_acid",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "5_9_11_trihydroxyprosta_6e_14z_dien_1_oate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "9_11_cycloperoxy_5_hydroperoxy_6e_14z_eicosadien",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "l_ascorbate",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR206721"
+      "id": "xt_episterol_24-methylidenelophenol-to-episterol-ester",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "episterol"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "24-methylidenelophenol-to-episterol-ester"
+      },
+      "note": "Shares episterol with 24-methylidenelophenol to episterol ester.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR206721"
+            "db": "ChEBI",
+            "id": "CHEBI:23929"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "Reaction MNXR206727",
-      "substrates": [
-        {
-          "metabolite": "l_dehydroascorbic_acid",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "5_9_cyclo_6_8_12_trihydroxy_10e_14z_eicosadienoi",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "5_9_cyclo_6_8_cycloperoxy_12_hydroperoxy_10e_14z",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "l_ascorbate",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR206727"
+      "id": "xt_episterol_5-cholest-7-en-3-ol-to-coniferyl-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "episterol"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cholest-7-en-3-ol-to-coniferyl-acetate"
+      },
+      "note": "Shares episterol with 5α-cholest-7-en-3β-ol to coniferyl acetate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:23929"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_episterol_5-cholest-7-en-3-ol-to-ergosta-5-7-22-24-28-tet",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "episterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cholest-7-en-3-ol-to-ergosta-5-7-22-24-28-tet"
+      },
+      "note": "Shares episterol with 5α-cholest-7-en-3β-ol to ergosta-5,7,22,24(28)-tet….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:23929"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ergosta_5_7_24_28_trien_3_ol_5-cholest-7-en-3-ol-to-coniferyl-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ergosta_5_7_24_28_trien_3_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cholest-7-en-3-ol-to-coniferyl-acetate"
+      },
+      "note": "Shares ergosta-5,7,24(28)-trien-3β-ol with 5α-cholest-7-en-3β-ol to coniferyl acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:52972"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ergosta_5_7_24_28_trien_3_ol_5-cholest-7-en-3-ol-to-ergosta-5-7-22-24-28-tet",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ergosta_5_7_24_28_trien_3_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cholest-7-en-3-ol-to-ergosta-5-7-22-24-28-tet"
+      },
+      "note": "Shares ergosta-5,7,24(28)-trien-3β-ol with 5α-cholest-7-en-3β-ol to ergosta-5,7,22,24(28)-tet….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:52972"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ergosta_5_7_24_28_trien_3_ol_ergosta-5-7-22-24-28-tet-to-24-methylenecholeste",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ergosta_5_7_24_28_trien_3_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ergosta-5-7-22-24-28-tet-to-24-methylenecholeste"
+      },
+      "note": "Shares ergosta-5,7,24(28)-trien-3β-ol with ergosta-5,7,22,24(28)-tet… to 24-methylenecholesteryl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:52972"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ergosta_5_7_22_24_28_tetraen_3beta_ol_ergosta-5-7-22-24-28-tet-to-24-methylenecholeste",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ergosta_5_7_22_24_28_tetraen_3beta_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ergosta-5-7-22-24-28-tet-to-24-methylenecholeste"
+      },
+      "note": "Shares ergosta-5,7,22,24(28)-tetraen-3beta-ol with ergosta-5,7,22,24(28)-tet… to 24-methylenecholesteryl….",
+      "provenance": {
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR206727"
+            "id": "MNXM1109"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_zymosterol_palmatine-to-h2o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "zymosterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "palmatine-to-h2o2"
+      },
+      "note": "Shares zymosterol with palmatine to H2O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM738369"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_zymosterol_s-adenosyl-l-homocysteine-to-5alpha-cholest-8-en",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "zymosterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-5alpha-cholest-8-en"
+      },
+      "note": "Shares zymosterol with S-adenosyl-L-homocysteine to 5alpha-cholest-8-en-3beta….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM738369"
           }
         ]
       }

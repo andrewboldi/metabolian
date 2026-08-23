@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-acyl-15-methylhexadecas-to-d-glucopyranose "N-acyl-15-methylhexadecasâ€¦ to D-glucopyranose" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     n_acyl_15_methylhexadecasphing_4_enine_1_phospha
@@ -14,17 +14,5 @@ pathway n-acyl-15-methylhexadecas-to-d-glucopyranose "N-acyl-15-methylhexadecasâ
     n_acyl_1_o_d_glucosyl_15_methylhexadecasphing_4
     <-> . +h2o -glucose
     n_acyl_15_methylhexadecasphing_4_enine
-  }
-
-  branch from glucose side left {
-    glucose
-    <-> . +indol_3_ylacetothiohydroxamate_o_sulfonate +h +h2o
-    z_glucobrassicin
-  }
-
-  branch from glucose side right {
-    glucose
-    <-> . +ternatin_c3 +1_o_4_coumaroyl_d_glucose
-    ternatin_c5
   }
 }

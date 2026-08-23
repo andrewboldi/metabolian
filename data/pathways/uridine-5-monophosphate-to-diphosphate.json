@@ -142,6 +142,44 @@
       "xrefs": {
         "chebi": "CHEBI:90618"
       }
+    },
+    {
+      "id": "pseudouridine_5_phosphate_1",
+      "name": "pseudouridine 5'-phosphate(1−)",
+      "short": "pseudouridine…",
+      "formula": "C9H10N2O8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:65314"
+      }
+    },
+    {
+      "id": "5_6_dihydrouridine_5_monophosphate_1",
+      "name": "5,6-dihydrouridine 5'-monophosphate(1−)",
+      "short": "5,6-dihydrouridine…",
+      "formula": "C9H12N2O8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74443"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
     }
   ],
   "enzymes": [
@@ -158,6 +196,23 @@
       "ec": [
         "2.8.1.15"
       ]
+    },
+    {
+      "id": "ec_5_4_99_20",
+      "name": "23S rRNA pseudouridine(2457) synthase",
+      "ec": [
+        "5.4.99.20"
+      ]
+    },
+    {
+      "id": "ec_1_3_1_91",
+      "name": "tRNA-dihydrouridine(20) synthase [NAD(P)(+)]",
+      "ec": [
+        "1.3.1.91"
+      ],
+      "xrefs": {
+        "uniprot": "Q9NX74"
+      }
     }
   ],
   "reactions": [
@@ -314,6 +369,358 @@
           {
             "db": "Rhea",
             "id": "RHEA:55168"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "23S rRNA pseudouridine(2457) synthase",
+      "equation": "uridine(2457) in 23S rRNA = pseudouridine(2457) in 23S rRNA",
+      "ec": "5.4.99.20",
+      "substrates": [
+        {
+          "metabolite": "uridine_5_monophosphate_1",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pseudouridine_5_phosphate_1",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_99_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:38871"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38871"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "tRNA-dihydrouridine(20) synthase [NAD(P)(+)]",
+      "equation": "5,6-dihydrouridine(20) in tRNA + NAD(+) = uridine(20) in tRNA + NADH + H(+)",
+      "ec": "1.3.1.91",
+      "substrates": [
+        {
+          "metabolite": "5_6_dihydrouridine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "uridine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_1_91"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:53340"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53340"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_5_methyluridine_5_monophosphate_1_4-chlorobenzoate-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_methyluridine_5_monophosphate_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-chlorobenzoate-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares 5-methyluridine 5'-monophosphate(1−) with 4-chlorobenzoate to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74447"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_methyluridine_5_monophosphate_1_5-end-purine-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_methyluridine_5_monophosphate_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-end-purine-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares 5-methyluridine 5'-monophosphate(1−) with 5'-end purine… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74447"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_methyluridine_5_monophosphate_1_cobalt-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_methyluridine_5_monophosphate_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cobalt-to-diphosphate"
+      },
+      "note": "Shares 5-methyluridine 5'-monophosphate(1−) with cobalt to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74447"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_methyluridine_5_monophosphate_1_d-allothreonine-to-l-methionine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_methyluridine_5_monophosphate_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-allothreonine-to-l-methionine"
+      },
+      "note": "Shares 5-methyluridine 5'-monophosphate(1−) with D-allothreonine to L-methionine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74447"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_methyluridine_5_monophosphate_1_d-galnac-1-3-l-fuc-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_methyluridine_5_monophosphate_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-galnac-1-3-l-fuc-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares 5-methyluridine 5'-monophosphate(1−) with α-D-GalNAc-(1→3)-[α-L-Fuc… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74447"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_methyluridine_5_monophosphate_1_precorrin-6y-to-cob-ii-yrinic-acid-a-c",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_methyluridine_5_monophosphate_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "precorrin-6y-to-cob-ii-yrinic-acid-a-c"
+      },
+      "note": "Shares 5-methyluridine 5'-monophosphate(1−) with precorrin-6Y to cob(II)yrinic acid a,c….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74447"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_methyluridine_5_monophosphate_1_veratrylglycerol-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_methyluridine_5_monophosphate_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "veratrylglycerol-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares 5-methyluridine 5'-monophosphate(1−) with veratrylglycerol… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74447"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_c_terminal_n_glycylaminoethanethioate_1_c-terminal-gly-gly-1-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "c_terminal_n_glycylaminoethanethioate_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "c-terminal-gly-gly-1-to-diphosphate"
+      },
+      "note": "Shares C-terminal N-glycylaminoethanethioate(1−) with C-terminal Gly-Gly(1−) to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:232372"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_c_terminal_n_glycylaminoethanethioate_1_c-terminal-gly-gly-l-cys-to-l-cysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "c_terminal_n_glycylaminoethanethioate_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "c-terminal-gly-gly-l-cys-to-l-cysteine"
+      },
+      "note": "Shares C-terminal N-glycylaminoethanethioate(1−) with C-terminal Gly-Gly-L-Cys(… to L-cysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:232372"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_c_terminal_n_glycylaminoethanethioate_1_n-5-phosphonato-d-ribo-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "c_terminal_n_glycylaminoethanethioate_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-5-phosphonato-d-ribo-to-h2o"
+      },
+      "note": "Shares C-terminal N-glycylaminoethanethioate(1−) with N-(5-phosphonato-β-D-ribo… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:232372"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_c_terminal_gly_gly_1_c-terminal-gly-gly-1-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "c_terminal_gly_gly_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "c-terminal-gly-gly-1-to-diphosphate"
+      },
+      "note": "Shares C-terminal Gly-Gly(1−) with C-terminal Gly-Gly(1−) to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:90778"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_c_terminal_gly_gly_1_c-terminal-gly-gly-l-cys-to-l-cysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "c_terminal_gly_gly_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "c-terminal-gly-gly-l-cys-to-l-cysteine"
+      },
+      "note": "Shares C-terminal Gly-Gly(1−) with C-terminal Gly-Gly-L-Cys(… to L-cysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:90778"
           }
         ]
       }

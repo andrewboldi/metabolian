@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway crocetin-to-crocin-1 "crocetin to crocin-1" {
-  spacing 276
+  spacing 294
 
   spine at 0,0 {
     crocetin
@@ -16,5 +16,23 @@ pathway crocetin-to-crocin-1 "crocetin to crocin-1" {
     d_gentiobiosyl_d_glucosyl_crocetin
     <-> ec_2_4_1_330 [2.4.1.330] +udp_d_glucose -udp -hplus
     crocin_1
+  }
+
+  branch from d_glucosyl_crocetin side left {
+    d_glucosyl_crocetin
+    <-> ec_2_4_1_330 [2.4.1.330] +udp_d_glucose +udp +hplus
+    d_gentiobiosyl_crocetin
+  }
+
+  branch from udp_d_glucose side right {
+    udp_d_glucose
+    <-> ec_2_4_1_111 [2.4.1.111] +coniferol +udp +hplus
+    coniferin
+  }
+
+  branch from udp_d_glucose side left {
+    udp_d_glucose
+    <-> ec_2_4_1_116 [2.4.1.116] +pelargonidin_3_o_rutinoside_betaine +udp +hplus
+    pelargonidin_3_o_rutinoside_5_o_d_glucoside_beta
   }
 }

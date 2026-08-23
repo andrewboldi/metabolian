@@ -1,0 +1,584 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "udp-to-d-glucopyranose-null",
+  "name": "UDP to D-glucopyranose",
+  "category": "other",
+  "summary": "A 4-step route from UDP to D-glucopyranose, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR198384"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1102128"
+      }
+    },
+    {
+      "id": "3beta_12beta_3_12_dihydroxydammar_24_en_20_yl_b",
+      "name": "(3beta,12beta)-3,12-dihydroxydammar-24-en-20-yl beta-D-glucopyranoside",
+      "short": "(3beta,12beta)-3,12…",
+      "formula": "C36H62O8",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1368177"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "udp_alpha_d_glucose",
+      "name": "UDP-alpha-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1364019"
+      }
+    },
+    {
+      "id": "20s_protopanaxadiol",
+      "name": "(20S)-protopanaxadiol",
+      "short": "protopanaxadiol",
+      "formula": "C30H52O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:75950"
+      }
+    },
+    {
+      "id": "glucose",
+      "name": "D-Glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4167"
+      }
+    },
+    {
+      "id": "20s_ginsenoside_rh2",
+      "name": "(20S)-ginsenoside Rh2",
+      "short": "ginsenoside Rh2",
+      "formula": "C36H62O8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77147"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "20s_ginsenoside_rg3",
+      "name": "(20S)-ginsenoside Rg3",
+      "short": "ginsenoside Rg3",
+      "formula": "C42H72O13",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:67991"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_1_365",
+      "name": "protopanaxadiol-type ginsenoside-3-O-glucoside 2''-O-glucosyltransferase",
+      "ec": [
+        "2.4.1.365"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR198384",
+      "substrates": [
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3beta_12beta_3_12_dihydroxydammar_24_en_20_yl_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "udp_alpha_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "20s_protopanaxadiol",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR198384"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198384"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR118802",
+      "substrates": [
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "20s_protopanaxadiol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "20s_ginsenoside_rh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR118802"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR118802"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "protopanaxadiol-type ginsenoside-3-O-glucoside 2''-O-glucosyltransferase",
+      "equation": "(20S)-ginsenoside Rh2 + UDP-alpha-D-glucose = (20S)-ginsenoside Rg3 + UDP + H(+)",
+      "ec": "2.4.1.365",
+      "substrates": [
+        {
+          "metabolite": "20s_ginsenoside_rh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "20s_ginsenoside_rg3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_365"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:58000"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58000"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(20S)-ginsenoside Rg3 + H2O = (20S)-ginsenoside Rh2 + D-glucose",
+      "equation": "(20S)-ginsenoside Rg3 + H2O = (20S)-ginsenoside Rh2 + D-glucose",
+      "substrates": [
+        {
+          "metabolite": "20s_ginsenoside_rg3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "20s_ginsenoside_rh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:59060"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59060"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3beta_12beta_3_12_dihydroxydammar_24_en_20_yl_b_2-dehydro-d-glucose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3beta_12beta_3_12_dihydroxydammar_24_en_20_yl_b"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-dehydro-d-glucose-to-h2o"
+      },
+      "note": "Shares (3beta,12beta)-3,12-dihydroxydammar-24-en-20-yl beta-D-glucopyranoside with 2-Dehydro-D-glucose to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368177"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3beta_12beta_3_12_dihydroxydammar_24_en_20_yl_b_3-keto-beta-d-galactose-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3beta_12beta_3_12_dihydroxydammar_24_en_20_yl_b"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-keto-beta-d-galactose-to-h2o-null"
+      },
+      "note": "Shares (3beta,12beta)-3,12-dihydroxydammar-24-en-20-yl beta-D-glucopyranoside with 3-keto-beta-D-galactose to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368177"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3beta_12beta_3_12_dihydroxydammar_24_en_20_yl_b_d-glucopyranose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3beta_12beta_3_12_dihydroxydammar_24_en_20_yl_b"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glucopyranose-to-h2o"
+      },
+      "note": "Shares (3beta,12beta)-3,12-dihydroxydammar-24-en-20-yl beta-D-glucopyranoside with D-glucopyranose to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368177"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3beta_12beta_3_12_dihydroxydammar_24_en_20_yl_b_dammarenediol-ii-to-ginsenoside-c-k",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3beta_12beta_3_12_dihydroxydammar_24_en_20_yl_b"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dammarenediol-ii-to-ginsenoside-c-k"
+      },
+      "note": "Shares (3beta,12beta)-3,12-dihydroxydammar-24-en-20-yl beta-D-glucopyranoside with dammarenediol-II to ginsenoside C-K.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368177"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3beta_12beta_3_12_dihydroxydammar_24_en_20_yl_b_dammarenediol-ii-to-ginsenoside-c-k-59044",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3beta_12beta_3_12_dihydroxydammar_24_en_20_yl_b"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dammarenediol-ii-to-ginsenoside-c-k-59044"
+      },
+      "note": "Shares (3beta,12beta)-3,12-dihydroxydammar-24-en-20-yl beta-D-glucopyranoside with dammarenediol-II to ginsenoside C-K.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368177"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3beta_12beta_3_12_dihydroxydammar_24_en_20_yl_b_enterobacterial-common-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3beta_12beta_3_12_dihydroxydammar_24_en_20_yl_b"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "enterobacterial-common-to-h2o"
+      },
+      "note": "Shares (3beta,12beta)-3,12-dihydroxydammar-24-en-20-yl beta-D-glucopyranoside with (enterobacterial common… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368177"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3beta_12beta_3_12_dihydroxydammar_24_en_20_yl_b_udp-to-d-glucopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3beta_12beta_3_12_dihydroxydammar_24_en_20_yl_b"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-d-glucopyranose"
+      },
+      "note": "Shares (3beta,12beta)-3,12-dihydroxydammar-24-en-20-yl beta-D-glucopyranoside with UDP to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368177"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_20s_protopanaxadiol_dammarenediol-ii-to-d-glucopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "20s_protopanaxadiol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dammarenediol-ii-to-d-glucopyranose"
+      },
+      "note": "Shares (20S)-protopanaxadiol with dammarenediol-II to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75950"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_20s_protopanaxadiol_dammarenediol-ii-to-d-glucopyranose-38579",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "20s_protopanaxadiol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dammarenediol-ii-to-d-glucopyranose-38579"
+      },
+      "note": "Shares (20S)-protopanaxadiol with dammarenediol-II to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75950"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_20s_protopanaxadiol_dammarenediol-ii-to-ginsenoside-c-k",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "20s_protopanaxadiol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dammarenediol-ii-to-ginsenoside-c-k"
+      },
+      "note": "Shares (20S)-protopanaxadiol with dammarenediol-II to ginsenoside C-K.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75950"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_20s_protopanaxadiol_dammarenediol-ii-to-ginsenoside-c-k-59044",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "20s_protopanaxadiol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dammarenediol-ii-to-ginsenoside-c-k-59044"
+      },
+      "note": "Shares (20S)-protopanaxadiol with dammarenediol-II to ginsenoside C-K.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75950"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_20s_protopanaxadiol_udp-to-d-glucopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "20s_protopanaxadiol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-d-glucopyranose"
+      },
+      "note": "Shares (20S)-protopanaxadiol with UDP to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75950"
+          }
+        ]
+      }
+    }
+  ]
+}

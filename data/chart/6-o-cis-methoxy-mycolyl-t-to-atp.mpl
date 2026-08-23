@@ -18,61 +18,151 @@ pathway 6-o-cis-methoxy-mycolyl-t-to-atp "6-O-cis-methoxy-mycolyl-t… to ATP" {
 
   branch from alpha_alpha_trehalose_6_phosphate side left {
     alpha_alpha_trehalose_6_phosphate
-    <-> . +adp_alpha_d_glucose +h +adp
-    alpha_d_glucose_6_phosphate
+    <-> ec_2_4_1_216 [2.4.1.216] +alpha_d_glucose_6_phosphate +beta_d_glucose_1_phosphate
+    phosphate
   }
 
   branch from alpha_alpha_trehalose_6_phosphate side right {
     alpha_alpha_trehalose_6_phosphate
-    <-> ec_2_7_1_69 [2.7.1.69] +alpha_alpha_trehalose +phosphoenolpyruvate
-    pyruvate
+    <-> . +d_glucopyranose_1_phosphate +phosphate
+    d_glucose_6_phosphate
   }
 
   branch from beta_d_glucose_6_phosphate side left {
     beta_d_glucose_6_phosphate
-    <-> ec_3_1_3_58 [3.1.3.58] +h2o +phosphate
+    <-> . +pyruvate +phosphoenolpyruvate
     beta_d_glucose
   }
 
   branch from beta_d_glucose_6_phosphate side right {
     beta_d_glucose_6_phosphate
-    <-> ec_2_7_1_1 [2.7.1.1] +itp +beta_d_glucose +h
-    idp
+    <-> ec_3_2_1_26 [3.2.1.26] +d_fructofuranose +h2o
+    sucrose_6_f_phosphate
   }
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +calycosin_7_o_d_glucoside
-    calycosin
+    <-> . +udp +curcumin_4_o_d_gentiotetraside +h
+    curcumin_4_o_d_gentiotrioside
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_338 [2.4.1.338] +udp +validienamycin +h
-    1_1_bis_valienamine
+    <-> ec_2_4_1_360 [2.4.1.360] +udp +1_3_4_dihydroxyphenyl_3_3_c_glucosyl_2_4_6_trihy +h
+    1_3_4_dihydroxyphenyl_3_2_4_6_trihydroxyphenyl_p
   }
 
   branch from glucose side left {
     glucose
-    <-> ec_1_1_3_10 [1.1.3.10] +2_dehydro_d_glucose +compound_0045496
-    tetrafluoro_1_4_benzoquinone
+    <-> . +aloesone +h2o
+    aloesin
   }
 
   branch from glucose side right {
     glucose
-    <-> ec_3_2_1_23 [3.2.1.23] +d_galactopyranose +h2o
-    allolactose
+    <-> . +j_104303 +h2o
+    j_109384
   }
 
   branch from atp side left {
     atp
-    <-> . +3_methylpyrrole_2_4_dicarboxylic_acid +3_amino_4_7_dihydroxy_8_methylcoumarin +h +coumeroic_acid +amp
-    diphosphate
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    3_o_alpha_l_mycarosylerythronolide_b
   }
 
   branch from atp side right {
     atp
-    <-> . +diphosphate +h +coumermic_acid +amp +coumeroic_acid
-    3_amino_4_7_dihydroxy_8_methylcoumarin
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    clindamycin
+  }
+
+  branch from alpha_alpha_trehalose_6_phosphate side left {
+    alpha_alpha_trehalose_6_phosphate
+    <-> . +beta_d_fructose +d_glucose_6_phosphate
+    h2o
+  }
+
+  branch from udp side right {
+    udp
+    <-> ec_2_4_1_290 [2.4.1.290] +udp_n_acetyl_alpha_d_galactosamine +n_n_diacetyl_alpha_d_bacillosaminyldiphospho_tri +h
+    n_acetyl_d_galactosaminyl_alpha_1_3_n_n_diacetyl
+  }
+
+  branch from udp side left {
+    udp
+    <-> . +1_3_4_dihydroxyphenyl_3_3_c_glucosyl_2_4_6_trihy +h +udp_alpha_d_glucose
+    1_3_4_dihydroxyphenyl_3_2_4_6_trihydroxyphenyl_p
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    lincomycin
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    n_demethyllincomycin
+  }
+
+  branch from beta_d_glucose_6_phosphate side right {
+    beta_d_glucose_6_phosphate
+    <-> ec_1_1_1_363 [1.1.1.363] +6_phospho_d_glucono_1_5_lactone +h +nadph
+    nadp
+  }
+
+  branch from beta_d_glucose_6_phosphate side left {
+    beta_d_glucose_6_phosphate
+    <-> ec_5_3_1_9 [5.3.1.9]
+    beta_d_fructose_6_phosphate
+  }
+
+  branch from udp_alpha_d_glucose side right {
+    udp_alpha_d_glucose
+    <-> ec_2_4_1_360 [2.4.1.360] +udp +1_phenyl_3_3_c_glucosyl_2_4_6_trihydroxyphenyl_p +h
+    1_phenyl_3_2_4_6_trihydroxyphenyl_propane_1_3_di
+  }
+
+  branch from udp_alpha_d_glucose side left {
+    udp_alpha_d_glucose
+    <-> . +udp +1_phenyl_3_3_c_glucosyl_2_4_6_trihydroxyphenyl_p +h
+    1_phenyl_3_2_4_6_trihydroxyphenyl_propane_1_3_di
+  }
+
+  branch from adp side right {
+    adp
+    <-> ec_3_6_3_44 [3.6.3.44] +h +phosphate +atp +h2o
+    lincomycin_b
+  }
+
+  branch from adp side left {
+    adp
+    <-> ec_3_6_3_44 [3.6.3.44] +h +phosphate +atp +h2o
+    8_8a_deoxyoleandolide
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> . +be_13793c +h2o
+    ed_110
+  }
+
+  branch from glucose side left {
+    glucose
+    <-> . +benzylglucosinolate_aglycone +h +h2o
+    z_glucotropeolin
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    carbomycin
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    daunorubicin
   }
 }

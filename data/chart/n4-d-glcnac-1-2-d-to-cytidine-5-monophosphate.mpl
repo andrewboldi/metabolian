@@ -16,15 +16,15 @@ pathway n4-d-glcnac-1-2-d-to-cytidine-5-monophosphate "N4-{β-D-GlcNAc-(1→2)-�
     n4_neu5ac_2_3_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d
   }
 
-  branch from cytidine_5_monophosphate side left {
-    cytidine_5_monophosphate
-    <-> . +1_stearoyl_2_arachidonoyl_sn_glycerol +cdp_ethanolamine +hplus
-    1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphoet
+  branch from udp_d_galactose side left {
+    udp_d_galactose
+    <-> . +n_acetyl_d_glucosaminide +udp +hplus
+    d_galactosyl_1_3_n_acetyl_d_glucosaminide
   }
 
-  branch from cytidine_5_monophosphate side right {
-    cytidine_5_monophosphate
-    <-> . +d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_glcnac_1_3_d +cmp_n_acetyl_neuraminate +hplus
-    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_4_n_ace
+  branch from udp_d_galactose side right {
+    udp_d_galactose
+    <-> . +o_n_acetyl_d_galactosaminyl_l_serine +udp +hplus
+    o3_d_galactosyl_1_3_n_acetyl_d_galactosaminyl_l
   }
 }

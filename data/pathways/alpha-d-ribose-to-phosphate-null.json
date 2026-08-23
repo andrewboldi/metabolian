@@ -1,0 +1,506 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "alpha-d-ribose-to-phosphate-null",
+  "name": "alpha-D-ribose to phosphate",
+  "category": "nucleotide-metabolism",
+  "summary": "A 3-step route from alpha-D-ribose to phosphate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR150193"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "alpha_d_ribose",
+      "name": "alpha-D-ribose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1108050"
+      }
+    },
+    {
+      "id": "beta_d_ribofuranose",
+      "name": "beta-D-ribofuranose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM3548"
+      }
+    },
+    {
+      "id": "7h_purine",
+      "name": "7H-purine",
+      "formula": "C5H4N4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1102325"
+      }
+    },
+    {
+      "id": "nebularine",
+      "name": "nebularine",
+      "formula": "C10H12N4O4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM733458"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "diphosphate",
+      "name": "diphosphate",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM11"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "6_deoxyinosine_5_phosphate",
+      "name": "6-deoxyinosine 5'-phosphate",
+      "short": "6-deoxyinosine 5'-P",
+      "formula": "C10H13N4O7P",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM79751"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_2_2_1",
+      "name": "purine nucleosidase",
+      "ec": [
+        "3.2.2.1"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_143",
+      "name": "diphosphate-purine nucleoside kinase",
+      "ec": [
+        "2.7.1.143"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR150193",
+      "substrates": [
+        {
+          "metabolite": "alpha_d_ribose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "beta_d_ribofuranose",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR150193"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR150193"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "purine nucleosidase",
+      "ec": "3.2.2.1",
+      "substrates": [
+        {
+          "metabolite": "7h_purine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "beta_d_ribofuranose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nebularine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_2_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR173289"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR173289"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "diphosphate-purine nucleoside kinase",
+      "ec": "2.7.1.143",
+      "substrates": [
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nebularine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_deoxyinosine_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_143"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR108352"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR108352"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_alpha_d_ribose_alpha-d-ribose-1-phosphate-to-d-glycero-d-altro",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "alpha_d_ribose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-ribose-1-phosphate-to-d-glycero-d-altro"
+      },
+      "note": "Shares alpha-D-ribose with alpha-D-ribose 1-phosphate to D-glycero-D-altro-octulos….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1108050"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_alpha_d_ribose_alpha-d-ribose-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "alpha_d_ribose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-ribose-to-phosphate"
+      },
+      "note": "Shares alpha-D-ribose with alpha-D-ribose to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1108050"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7h_purine_5alpha-androstane-3alpha-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7h_purine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5alpha-androstane-3alpha-to-h2o"
+      },
+      "note": "Shares 7H-purine with 5alpha-Androstane-3alpha,… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1102325"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7h_purine_alpha-d-glucose-to-keto-d-fructose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7h_purine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-glucose-to-keto-d-fructose"
+      },
+      "note": "Shares 7H-purine with alpha-D-glucose… to keto-D-fructose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1102325"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7h_purine_alpha-d-ribofuranose-to-phosphate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7h_purine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-ribofuranose-to-phosphate-null"
+      },
+      "note": "Shares 7H-purine with alpha-D-ribofuranose… to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1102325"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7h_purine_alpha-d-ribose-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7h_purine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-ribose-to-phosphate"
+      },
+      "note": "Shares 7H-purine with alpha-D-ribose to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1102325"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7h_purine_fadh2-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7h_purine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fadh2-to-h2o"
+      },
+      "note": "Shares 7H-purine with FADH2 to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1102325"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nebularine_alpha-d-glucose-to-keto-d-fructose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nebularine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-glucose-to-keto-d-fructose"
+      },
+      "note": "Shares nebularine with alpha-D-glucose… to keto-D-fructose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM733458"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nebularine_alpha-d-ribofuranose-to-phosphate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nebularine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-ribofuranose-to-phosphate-null"
+      },
+      "note": "Shares nebularine with alpha-D-ribofuranose… to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM733458"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nebularine_alpha-d-ribose-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nebularine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-ribose-to-phosphate"
+      },
+      "note": "Shares nebularine with alpha-D-ribose to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM733458"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nebularine_fadh2-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nebularine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fadh2-to-h2o"
+      },
+      "note": "Shares nebularine with FADH2 to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM733458"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_deoxyinosine_5_phosphate_alpha-d-ribose-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_deoxyinosine_5_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-ribose-to-phosphate"
+      },
+      "note": "Shares 6-deoxyinosine 5'-phosphate with alpha-D-ribose to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM79751"
+          }
+        ]
+      }
+    }
+  ]
+}

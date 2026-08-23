@@ -20,25 +20,25 @@ pathway 3-methyl-fatty-acid-anion-to-2-methyl-fatty-acid "3-methyl fatty acid an
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_96 [4.2.3.96] +fpp +h2o
-    avermitilol
+    <-> . +gtp +atp
+    cyclic_amp_amp_gmp
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_95 [4.2.3.95] +fpp
-    cuprenene
+    <-> . +r_lavandulyl_diphosphate +h2o
+    r_lavandulol
   }
 
-  branch from succinate side left {
-    succinate
-    <-> . +eriodictyol +akg +o2 +co2
-    taxifolin
+  branch from ppi side left {
+    ppi
+    <-> ec_6_2_1_73 [6.2.1.73] +holo-acp +l_tryptophan +atp +amp
+    o_s_l_tryptophyl_pantetheine_4_phosphoryl_l_seri
   }
 
-  branch from succinate side right {
-    succinate
-    <-> . +taxifolin +akg +o2 +co2 +h2o +hplus
-    quercetin_7_olate
+  branch from ppi side right {
+    ppi
+    <-> . +l_tryptophan +atp
+    l_tryptophyl_amp
   }
 }

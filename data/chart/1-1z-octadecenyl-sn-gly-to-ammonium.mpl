@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-1z-octadecenyl-sn-gly-to-ammonium "1-(1Z-octadecenyl)-sn-gly… to ammonium" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     1_1z_octadecenyl_sn_glycero_3_phospho_n_oleoyl_e
@@ -14,29 +14,5 @@ pathway 1-1z-octadecenyl-sn-gly-to-ammonium "1-(1Z-octadecenyl)-sn-gly… to amm
     ethanolaminium
     <-> ec_1_4_3_8 [1.4.3.8] +o2 +h2o -h2o2 -nh3
     glycolaldehyde
-  }
-
-  branch from ethanolaminium side left {
-    ethanolaminium
-    <-> . +n_docosanoyl_ethanolamine +h2o
-    behenate
-  }
-
-  branch from ethanolaminium side right {
-    ethanolaminium
-    <-> . +n_15z_tetracosenoyl_ethanolamine +h2o
-    15z_tetracosenoate
-  }
-
-  branch from nh3 side left {
-    nh3
-    <-> . +arachidonoyl_amine +h2o
-    arachidonate
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +linoleamide +h2o
-    linoleate
   }
 }

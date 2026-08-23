@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway linoleoyl-ethanolamide-to-acetate "linoleoyl ethanolamide to acetate" {
-  spacing 204
+  spacing 216
 
   spine at 0,0 {
     linoleoyl_ethanolamide
@@ -14,18 +14,6 @@ pathway linoleoyl-ethanolamide-to-acetate "linoleoyl ethanolamide to acetate" {
     acetaldehyde
     <-> . +iron +h2o -fe2 -hplus
     acetate
-  }
-
-  branch from ethanolaminium side left {
-    ethanolaminium
-    <-> . +1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol +1_2_diacyl_sn_glycero_3_phosphoethanolamine
-    cardiolipin
-  }
-
-  branch from ethanolaminium side right {
-    ethanolaminium
-    <-> . +hplus +co2
-    serine
   }
 
   branch from linoleate side left {
@@ -42,13 +30,37 @@ pathway linoleoyl-ethanolamide-to-acetate "linoleoyl ethanolamide to acetate" {
 
   branch from nh3 side left {
     nh3
-    <-> ec_3_5_1_121 [3.5.1.121] +l_asparaginyl_group +h2o +hplus
-    l_aspartyl_zwitterionic_group
+    <-> . +2_methylbutan_1_aminium +nad +h2o +nadh +hplus
+    2_methylbutanal
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_3_5_1_122 [3.5.1.122] +l_glutaminiumyl_group +h2o
-    l_glutamyl_zwitterionic_group
+    <-> . +nadp +h2o +2_methylbutanal +nadph +hplus
+    2_methylbutan_1_aminium
+  }
+
+  branch from linoleate side left {
+    linoleate
+    <-> ec_1_13_11_60 [1.13.11.60] +o2
+    8_r_hpode
+  }
+
+  branch from linoleate side right {
+    linoleate
+    <-> ec_1_13_11_58 [1.13.11.58] +o2
+    9_s_hpode
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> . +2s_2_amino_3_methylbutan_1_ol +nad +h2o +nadh +hplus
+    1_hydroxy_3_methylbutan_2_one
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> . +s_leucinol +nad +h2o +nadh +hplus
+    1_hydroxy_4_methylpentan_2_one
   }
 }

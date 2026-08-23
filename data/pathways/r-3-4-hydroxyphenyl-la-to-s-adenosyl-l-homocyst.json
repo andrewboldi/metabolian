@@ -207,73 +207,6 @@
       "xrefs": {
         "chebi": "CHEBI:57856"
       }
-    },
-    {
-      "id": "pppa_2_5_pg",
-      "name": "pppA(2'→5')pG",
-      "formula": "C20H23N10O20P4",
-      "charge": -5,
-      "xrefs": {
-        "chebi": "CHEBI:177335"
-      }
-    },
-    {
-      "id": "3_2_cgamp",
-      "name": "3',2'-cGAMP",
-      "formula": "C20H22N10O13P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:177334"
-      }
-    },
-    {
-      "id": "l_tryptophan",
-      "name": "L-tryptophan",
-      "formula": "C11H10N2O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:29954"
-      }
-    },
-    {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:175763"
-      }
-    },
-    {
-      "id": "2s_3r_3_farnesyl_2_3_dihydro_2_n_cyclo_l_trypto",
-      "name": "(2S,3R)-3-farnesyl-2,3-dihydro-2,Nα-cyclo-L-tryptophan",
-      "short": "(2S,3R)-3-farnesyl-…",
-      "formula": "C26H34N2O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:177368"
-      }
-    },
-    {
-      "id": "cytidine_5_monophosphate_1",
-      "name": "cytidine 5'-monophosphate(1−)",
-      "short": "cytidine 5'-MP(1−)",
-      "formula": "C9H11N3O7P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:82748"
-      }
-    },
-    {
-      "id": "5_methylcytidine_5_monophosphate_1",
-      "name": "5-methylcytidine 5'-monophosphate(1−)",
-      "short": "5-methylcytidine…",
-      "formula": "C10H13N3O7P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:74483"
-      }
     }
   ],
   "enzymes": [
@@ -617,163 +550,269 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r7",
-      "name": "pppA(2'-5')pG = 3',2'-cGAMP + diphosphate",
-      "equation": "pppA(2'-5')pG = 3',2'-cGAMP + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "pppa_2_5_pg",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_2_cgamp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:68352"
+      "id": "xt_r_3_4_hydroxyphenyl_lactate_h2o2-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_3_4_hydroxyphenyl_lactate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "h2o2-to-h2o"
+      },
+      "note": "Shares (R)-3-(4-hydroxyphenyl)lactate with H2O2 to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:68352"
+            "db": "ChEBI",
+            "id": "CHEBI:10980"
           }
         ]
       }
     },
     {
-      "id": "r8",
-      "name": "L-tryptophyl-[protein] + (2E,6E)-farnesyl diphosphate = (2S,3R)-3-farnesyl-2,3-dihydro-...",
-      "equation": "L-tryptophyl-[protein] + (2E,6E)-farnesyl diphosphate = (2S,3R)-3-farnesyl-2,3-dihydro-2,N(alpha)-cyclo-L-tryptophyl-[protein] + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "l_tryptophan",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fpp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2s_3r_3_farnesyl_2_3_dihydro_2_n_cyclo_l_trypto",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "rhea": "RHEA:68384"
+      "id": "xt_r_3_4_hydroxyphenyl_lactate_r-3-4-hydroxyphenyl-la-to-4-hydroxyphenylglyoxy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_3_4_hydroxyphenyl_lactate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "r-3-4-hydroxyphenyl-la-to-4-hydroxyphenylglyoxy"
+      },
+      "note": "Shares (R)-3-(4-hydroxyphenyl)lactate with (R)-3-(4-hydroxyphenyl)la… to 4-hydroxyphenylglyoxylate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:68384"
+            "db": "ChEBI",
+            "id": "CHEBI:10980"
           }
         ]
       }
     },
     {
-      "id": "r9",
-      "name": "a cytidine in tRNA + S-adenosyl-L-methionine = a 5-methylcytidine in tRNA + S-adenosyl-...",
-      "equation": "a cytidine in tRNA + S-adenosyl-L-methionine = a 5-methylcytidine in tRNA + S-adenosyl-L-homocysteine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "cytidine_5_monophosphate_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "5_methylcytidine_5_monophosphate_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 9,
-      "xrefs": {
-        "rhea": "RHEA:61468"
+      "id": "xt_r_3_4_hydroxyphenyl_lactate_trans-4-coumarate-to-trans-4-coumaroyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_3_4_hydroxyphenyl_lactate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-4-coumarate-to-trans-4-coumaroyl-coa"
+      },
+      "note": "Shares (R)-3-(4-hydroxyphenyl)lactate with trans-4-coumarate to trans-4-coumaroyl-CoA.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:61468"
+            "db": "ChEBI",
+            "id": "CHEBI:10980"
           }
         ]
       }
     },
     {
-      "id": "r10",
-      "name": "a cytidine in rRNA + S-adenosyl-L-methionine = a 5-methylcytidine in rRNA + S-adenosyl-...",
-      "equation": "a cytidine in rRNA + S-adenosyl-L-methionine = a 5-methylcytidine in rRNA + S-adenosyl-L-homocysteine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "cytidine_5_monophosphate_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "5_methylcytidine_5_monophosphate_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 10,
-      "xrefs": {
-        "rhea": "RHEA:61484"
+      "id": "xt_3_4_hydroxyphenyl_pyruvate_2r-2-hydroxy-4-methyls-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_4_hydroxyphenyl_pyruvate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2r-2-hydroxy-4-methyls-to-h2o"
+      },
+      "note": "Shares 3-(4-hydroxyphenyl)pyruvate with (2R)-2-hydroxy-4-(methyls… to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:61484"
+            "db": "ChEBI",
+            "id": "CHEBI:36242"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_4_hydroxyphenyl_pyruvate_3-hydroxy-16-methoxy-2-3-to-vindolinium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_4_hydroxyphenyl_pyruvate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxy-16-methoxy-2-3-to-vindolinium"
+      },
+      "note": "Shares 3-(4-hydroxyphenyl)pyruvate with 3-hydroxy-16-methoxy-2,3-… to vindolinium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:36242"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_4_hydroxyphenyl_pyruvate_l-arogenate-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_4_hydroxyphenyl_pyruvate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-arogenate-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares 3-(4-hydroxyphenyl)pyruvate with L-arogenate to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:36242"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_4_hydroxyphenyl_pyruvate_l-arogenate-to-trans-3-methylglutaconyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_4_hydroxyphenyl_pyruvate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-arogenate-to-trans-3-methylglutaconyl"
+      },
+      "note": "Shares 3-(4-hydroxyphenyl)pyruvate with L-arogenate to trans-3-methylglutaconyl-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:36242"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_4_hydroxyphenyl_pyruvate_quinine-to-5-hydroxyisouric-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_4_hydroxyphenyl_pyruvate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "quinine-to-5-hydroxyisouric-acid"
+      },
+      "note": "Shares 3-(4-hydroxyphenyl)pyruvate with quinine to 5-hydroxyisouric acid.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:36242"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_4_hydroxyphenyl_pyruvate_r-2-hydroxybutyrate-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_4_hydroxyphenyl_pyruvate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-2-hydroxybutyrate-to-diphosphate"
+      },
+      "note": "Shares 3-(4-hydroxyphenyl)pyruvate with (R)-2-hydroxybutyrate to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:36242"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_4_hydroxyphenyl_pyruvate_r-3-4-hydroxyphenyl-la-to-4-hydroxyphenylglyoxy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_4_hydroxyphenyl_pyruvate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-3-4-hydroxyphenyl-la-to-4-hydroxyphenylglyoxy"
+      },
+      "note": "Shares 3-(4-hydroxyphenyl)pyruvate with (R)-3-(4-hydroxyphenyl)la… to 4-hydroxyphenylglyoxylate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:36242"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_8_desmethylnovobiocic_acid_2-4-6-trichlorophenolate-to-6-chlorobenzene-1-2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "8_desmethylnovobiocic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-4-6-trichlorophenolate-to-6-chlorobenzene-1-2"
+      },
+      "note": "Shares 8-desmethylnovobiocic acid with 2,4,6-trichlorophenolate to 6-Chlorobenzene-1,2,4-tri….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:73954"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_novobiocic_acid_dtdp-5-5-di-c-methyl-l-to-novobiocin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "novobiocic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-5-5-di-c-methyl-l-to-novobiocin"
+      },
+      "note": "Shares novobiocic acid with dTDP-5,5-di-C-methyl-β-L-… to novobiocin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:73953"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3e-7z-decadienoyl-coa-to-h2o2 "(3E,7Z)-decadienoyl-CoA to H2O2" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     3e_7z_decadienoyl_coa
@@ -14,29 +14,5 @@ pathway 3e-7z-decadienoyl-coa-to-h2o2 "(3E,7Z)-decadienoyl-CoA to H2O2" {
     fad
     <-> . +4_7_decadienoyl_coa +o2 -h -h2o2
     2_4_7_decatrienoylcoa
-  }
-
-  branch from h side left {
-    h
-    <-> . +1_hexadecanoylglycerone_3_phosphate +hexadecan_1_ol +1_1z_hexadecenyl_glycero_3_phosphate
-    hexadecanoate
-  }
-
-  branch from h side right {
-    h
-    <-> . +24_r_25_r_varanoyl_coa
-    25_r_tetrahca_coenzyme_a
-  }
-
-  branch from h2o2 side left {
-    h2o2
-    <-> . +7_8_epoxy_8alpha_hydroperoxytocopherone +h2o
-    5_6_epoxy_alpha_tocopheryl_quinone
-  }
-
-  branch from h2o2 side right {
-    h2o2
-    <-> . +4alpha_5_epoxy_8alpha_hydroperoxytocopherone +h2o
-    2_3_epoxy_alpha_tocopheryl_quinone
   }
 }

@@ -20,14 +20,14 @@ pathway 6-o-mycolyltrehalose-6-p-to-d-myo-inositol "6'-O-mycolyltrehalose-6'p…
 
   branch from h side left {
     h
-    <-> ec_1_1_1_179 [1.1.1.179] +d_ribose +nadp +nadph
-    d_ribono_1_4_lactone
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    mycinamicin_ii
   }
 
   branch from h side right {
     h
-    <-> . +3beta_hydroxytibolone +nadp +nadph
-    tibolone
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    mycinamicin_vi
   }
 
   branch from alpha_alpha_trehalose_6_phosphate side left {
@@ -38,55 +38,121 @@ pathway 6-o-mycolyltrehalose-6-p-to-d-myo-inositol "6'-O-mycolyltrehalose-6'p…
 
   branch from alpha_alpha_trehalose_6_phosphate side right {
     alpha_alpha_trehalose_6_phosphate
-    <-> ec_3_2_1_122 [3.2.1.122] +beta_d_glucose_6_phosphate +beta_d_glucose
-    h2o
+    <-> . +alpha_d_glucose_6_phosphate +h +adp
+    adp_alpha_d_glucose
   }
 
   branch from alpha_d_glucose_6_phosphate side left {
     alpha_d_glucose_6_phosphate
-    <-> . +alpha_d_glucose +phosphoenolpyruvate
-    pyruvate
+    <-> . +beta_d_fructose +h2o
+    sucrose_6_g_phosphate
   }
 
   branch from alpha_d_glucose_6_phosphate side right {
     alpha_d_glucose_6_phosphate
-    <-> ec_2_7_1_142 [2.7.1.142] +alpha_d_glucose +sn_glycerol_3_phosphate
-    glycerol
-  }
-
-  branch from gdp_alpha_d_glucose side left {
-    gdp_alpha_d_glucose
-    <-> ec_2_4_1_13 [2.4.1.13] +gdp +sucrose +h
-    beta_d_fructose
-  }
-
-  branch from gdp_alpha_d_glucose side right {
-    gdp_alpha_d_glucose
-    <-> ec_2_4_1_13 [2.4.1.13] +gdp +sucrose +h
-    beta_d_fructopyranose
+    <-> ec_3_2_1_122 [3.2.1.122] +alpha_maltose_6_phosphate +h2o
+    alpha_d_glucose
   }
 
   branch from 1d_myo_inositol_3_phosphate side left {
-    1d_myo_inositol_3_phosphate
-    <-> ec_3_1_3_25 [3.1.3.25] +h2o +phosphate
-    inositol
-  }
-
-  branch from 1d_myo_inositol_3_phosphate side right {
     1d_myo_inositol_3_phosphate
     <-> ec_5_5_1_4 [5.5.1.4]
     beta_d_glucose_6_phosphate
   }
 
+  branch from 1d_myo_inositol_3_phosphate side right {
+    1d_myo_inositol_3_phosphate
+    <-> ec_2_7_8_39 [2.7.8.39] +cmp +2_3_bis_o_sesterterpanyl_sn_glycero_1_phospho_1 +h
+    cdp_2_3_bis_o_sesterterpanyl_sn_glycerol
+  }
+
   branch from adp side left {
     adp
-    <-> ec_2_7_1_64 [2.7.1.64] +myo_inositol +atp +h
-    1d_myo_inositol_1_phosphate
+    <-> ec_3_6_3_44 [3.6.3.44] +h +phosphate +atp +h2o
+    mycinamicin_v
   }
 
   branch from adp side right {
     adp
-    <-> . +h +phosphate +atp +h2o
-    d_aspartate
+    <-> ec_3_6_3_44 [3.6.3.44] +h +phosphate +atp +h2o
+    3_o_l_olivosyl_oleandolide
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    oleandolide
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    10_deoxymethymycin
+  }
+
+  branch from alpha_alpha_trehalose_6_phosphate side left {
+    alpha_alpha_trehalose_6_phosphate
+    <-> ec_2_7_1_69 [2.7.1.69] +alpha_alpha_trehalose +phosphoenolpyruvate
+    pyruvate
+  }
+
+  branch from alpha_alpha_trehalose_6_phosphate side right {
+    alpha_alpha_trehalose_6_phosphate
+    <-> ec_3_2_1_122 [3.2.1.122] +alpha_d_glucose +alpha_d_glucose_6_phosphate
+    h2o
+  }
+
+  branch from gdp side left {
+    gdp
+    <-> ec_2_4_1_251 [2.4.1.251] +d_man_beta_1_4_glca_beta_1_2_d_man_alpha_1_3_d_g +h +beta_d_glca_1_2_alpha_d_man_1_3_beta_d_glc_1_4_a
+    gdp_alpha_d_mannose
+  }
+
+  branch from gdp side right {
+    gdp
+    <-> ec_2_4_1_251 [2.4.1.251] +beta_d_man_1_4_beta_d_glca_1_2_alpha_d_man_1_3_b +h +gdp_alpha_d_mannose
+    beta_d_glca_1_2_alpha_d_man_1_3_beta_d_glc_1_4_a
+  }
+
+  branch from alpha_d_glucose_6_phosphate side left {
+    alpha_d_glucose_6_phosphate
+    <-> ec_2_7_1_1 [2.7.1.1] +itp +alpha_d_glucose +h
+    idp
+  }
+
+  branch from alpha_d_glucose_6_phosphate side right {
+    alpha_d_glucose_6_phosphate
+    <-> ec_2_7_1_1 [2.7.1.1] +alpha_d_glucose +datp +h
+    dadp
+  }
+
+  branch from 1d_myo_inositol_3_phosphate side left {
+    1d_myo_inositol_3_phosphate
+    <-> ec_2_7_8_34 [2.7.8.34] +cmp +1_sn_glycero_1_phospho_3_phospho_1d_myo_inositol +h
+    2s_cdp_glycerol
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    10_deoxymethynolide
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    methymycin
+  }
+
+  branch from adp side right {
+    adp
+    <-> ec_3_6_3_44 [3.6.3.44] +h +phosphate +atp +h2o
+    neomethymycin
+  }
+
+  branch from adp side left {
+    adp
+    <-> ec_3_6_3_44 [3.6.3.44] +h +phosphate +atp +h2o
+    pikromycin
   }
 }

@@ -30,33 +30,27 @@ pathway sedoheptulose-to-2-oxoglutarate "sedoheptulose to 2-oxoglutarate" {
     sedoheptulose_1_7_bisphosphate
   }
 
-  branch from s7p side right {
-    s7p
-    <-> ec_4_2_3_155 [4.2.3.155] +pi
-    2_epi_valiolone
+  branch from ppi side right {
+    ppi
+    <-> ec_2_5_1_122 [2.5.1.122] +tyrosine +dmapp
+    4_o_dimethylallyl_l_tyrosine
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_91 [2.5.1.91] +ipp +fpp
-    all_trans_decaprenyl_diphosphate
+    <-> ec_2_7_7_86 [2.7.7.86] +gtp +atp
+    2_3_cgamp
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_51 [4.2.3.51] +neryl_diphosphate
-    phellandrene
+    <-> ec_6_1_2_2 [6.1.2.2] +kanamycin_a +carbamoyl_p +atp +h2o +amp +pi +hplus
+    6_o_carbamoylkanamycin_a
   }
 
-  branch from akg side left {
-    akg
-    <-> ec_1_1_1_41 [1.1.1.41] +nad +co2 +nadh
-    d_threo_isocitrate
-  }
-
-  branch from akg side right {
-    akg
-    <-> ec_1_1_99_24 [1.1.99.24] +4_hydroxybutyrate +4_oxobutanoate
-    r_2_hydroxyglutarate
+  branch from ppi side left {
+    ppi
+    <-> ec_2_9_1_3 [2.9.1.3] +5_methylaminomethyl_2_thiouridine_5_monophosphat +selenophosphate +gpp +h2o +hplus +thiogeraniol +pi
+    5_methylaminomethyl_2_selenouridine_5_monophosph
   }
 }

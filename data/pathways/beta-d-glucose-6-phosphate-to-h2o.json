@@ -9,7 +9,7 @@
     "sources": [
       {
         "db": "MetaNetX",
-        "id": "MNXR191976"
+        "id": "MNXR173123"
       }
     ]
   },
@@ -25,23 +25,12 @@
       }
     },
     {
-      "id": "beta_d_fructose_6_phosphate",
-      "name": "beta-D-fructose 6-phosphate",
-      "short": "beta-D-fructose 6-P",
-      "formula": "C6H11O9P",
-      "charge": -2,
+      "id": "beta_d_glucose",
+      "name": "beta-D-glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM1107898"
-      }
-    },
-    {
-      "id": "keto_d_fructose_6_phosphate",
-      "name": "keto-D-fructose 6-phosphate",
-      "short": "keto-D-fructose 6-P",
-      "formula": "C6H11O9P",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM89629"
+        "metanetx": "MNXM1364060"
       }
     },
     {
@@ -54,21 +43,31 @@
       }
     },
     {
+      "id": "6_phospho_beta_d_glucosyl_1_4_beta_d_glucose",
+      "name": "6-phospho-beta-D-glucosyl-(1->4)-beta-D-glucose",
+      "short": "6-phospho-beta-D-gl…",
+      "formula": "C12H23O14P",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1107797"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
       "id": "adp",
       "name": "ADP",
       "formula": "C10H12N5O10P2",
       "charge": -3,
       "xrefs": {
         "metanetx": "MNXM40333"
-      }
-    },
-    {
-      "id": "phosphate",
-      "name": "phosphate",
-      "formula": "HO4P",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM9"
       }
     },
     {
@@ -81,94 +80,148 @@
       }
     },
     {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
+      "id": "beta_cellobiose",
+      "name": "beta-cellobiose",
+      "formula": "C12H22O11",
       "charge": 0,
       "xrefs": {
-        "metanetx": "WATER"
+        "metanetx": "MNXM726890"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_5_3_1_9",
-      "name": "glucose-6-phosphate isomerase",
+      "id": "ec_3_2_1_86",
+      "name": "6-phospho-beta-glucosidase",
       "ec": [
-        "5.3.1.9"
+        "3.2.1.86"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_85",
+      "name": "beta-glucoside kinase",
+      "ec": [
+        "2.7.1.85"
+      ]
+    },
+    {
+      "id": "ec_3_6_3_18",
+      "name": "EC 3.6.3.18",
+      "ec": [
+        "3.6.3.18"
       ]
     }
   ],
   "reactions": [
     {
       "id": "r1",
-      "name": "glucose-6-phosphate isomerase",
-      "ec": "5.3.1.9",
+      "name": "6-phospho-beta-glucosidase",
+      "ec": "3.2.1.86",
       "substrates": [
         {
           "metabolite": "beta_d_glucose_6_phosphate",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "beta_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "beta_d_fructose_6_phosphate",
+          "metabolite": "6_phospho_beta_d_glucosyl_1_4_beta_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_5_3_1_9"
+          "enzyme": "ec_3_2_1_86"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 1,
       "xrefs": {
-        "metanetx": "MNXR191976"
+        "metanetx": "MNXR173123"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR191976"
+            "id": "MNXR173123"
           }
         ]
       }
     },
     {
       "id": "r2",
-      "name": "Reaction MNXR118950",
+      "name": "beta-glucoside kinase",
+      "ec": "2.7.1.85",
       "substrates": [
         {
-          "metabolite": "beta_d_fructose_6_phosphate",
+          "metabolite": "6_phospho_beta_d_glucosyl_1_4_beta_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "keto_d_fructose_6_phosphate",
+          "metabolite": "h",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "beta_cellobiose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_85"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 2,
       "xrefs": {
-        "metanetx": "MNXR118950"
+        "metanetx": "MNXR147301"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR118950"
+            "id": "MNXR147301"
           }
         ]
       }
     },
     {
       "id": "r3",
-      "name": "Reaction MNXR200746",
+      "name": "Reaction MNXR174804",
+      "ec": "3.6.3.18",
       "substrates": [
         {
           "metabolite": "h",
@@ -179,7 +232,7 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "keto_d_fructose_6_phosphate",
+          "metabolite": "beta_cellobiose",
           "stoichiometry": 1
         },
         {
@@ -193,7 +246,7 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "keto_d_fructose_6_phosphate",
+          "metabolite": "beta_cellobiose",
           "stoichiometry": 1
         },
         {
@@ -201,17 +254,222 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_3_18"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 3,
       "xrefs": {
-        "metanetx": "MNXR200746"
+        "metanetx": "MNXR174804"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR200746"
+            "id": "MNXR174804"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_6_phospho_beta_d_glucosyl_1_4_beta_d_glucose_2-amino-4-hydroxy-5-phosp-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_phospho_beta_d_glucosyl_1_4_beta_d_glucose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-amino-4-hydroxy-5-phosp-to-phosphate"
+      },
+      "note": "Shares 6-phospho-beta-D-glucosyl-(1->4)-beta-D-glucose with 2-amino-4-hydroxy-5-phosp… to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1107797"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_phospho_beta_d_glucosyl_1_4_beta_d_glucose_d-cellobiono-1-5-lactone-to-d-glucosyl-1-4-d-gl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_phospho_beta_d_glucosyl_1_4_beta_d_glucose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-cellobiono-1-5-lactone-to-d-glucosyl-1-4-d-gl"
+      },
+      "note": "Shares 6-phospho-beta-D-glucosyl-(1->4)-beta-D-glucose with D-cellobiono-1,5-lactone to β-D-glucosyl-(1→4)-β-D-gl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1107797"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_phospho_beta_d_glucosyl_1_4_beta_d_glucose_keto-d-fructose-to-beta-d-fructose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_phospho_beta_d_glucosyl_1_4_beta_d_glucose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "keto-d-fructose-to-beta-d-fructose"
+      },
+      "note": "Shares 6-phospho-beta-D-glucosyl-(1->4)-beta-D-glucose with keto-D-fructose… to beta-D-fructose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1107797"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_beta_cellobiose_1-5-anhydro-d-fructose-to-d-cellotrionate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "beta_cellobiose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-5-anhydro-d-fructose-to-d-cellotrionate"
+      },
+      "note": "Shares beta-cellobiose with 1,5-anhydro-D-fructose to D-cellotrionate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM726890"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_beta_cellobiose_3-deoxo-4b-deoxypaxilline-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "beta_cellobiose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-deoxo-4b-deoxypaxilline-to-diphosphate"
+      },
+      "note": "Shares beta-cellobiose with 3-Deoxo-4b-deoxypaxilline to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM726890"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_beta_cellobiose_alpha-d-glucose-to-d-glucosyl-1-4-d-ma",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "beta_cellobiose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-glucose-to-d-glucosyl-1-4-d-ma"
+      },
+      "note": "Shares beta-cellobiose with alpha-D-glucose to β-D-glucosyl-(1→4)-β-D-ma….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM726890"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_beta_cellobiose_d-xylp-1-6-d-glcp-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "beta_cellobiose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-xylp-1-6-d-glcp-to-h2o"
+      },
+      "note": "Shares beta-cellobiose with α-D-Xylp-(1→6)-D-Glcp to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM726890"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_beta_cellobiose_diphosphate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "beta_cellobiose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-h2o"
+      },
+      "note": "Shares beta-cellobiose with diphosphate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM726890"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_beta_cellobiose_keto-d-fructose-to-beta-d-fructose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "beta_cellobiose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "keto-d-fructose-to-beta-d-fructose"
+      },
+      "note": "Shares beta-cellobiose with keto-D-fructose… to beta-D-fructose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM726890"
           }
         ]
       }

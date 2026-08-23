@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-o-indol-3-ylacetyl-be-to-1-o-indol-3-ylacetyl "4-O-(indol-3-ylacetyl)-be… to 1-O-(indol-3-ylacetyl)-be…" {
-  spacing 294
+  spacing 270
 
   spine at 0,0 {
     4_o_indol_3_ylacetyl_beta_d_glucose
@@ -22,39 +22,15 @@ pathway 4-o-indol-3-ylacetyl-be-to-1-o-indol-3-ylacetyl "4-O-(indol-3-ylacetyl)-
     6_o_indol_3_ylacetyl_beta_d_glucose
   }
 
-  branch from 1_o_indol_3_ylacetyl_beta_d_glucose side right {
-    1_o_indol_3_ylacetyl_beta_d_glucose
-    <-> . +beta_d_glucose +h +indol_3_yl_acetate
-    h2o
-  }
-
-  branch from indole_3_acetyl_1d_myo_inositol side left {
-    indole_3_acetyl_1d_myo_inositol
-    <-> ec_2_4_2_34 [2.4.2.34] +udp +indol_3_ylacetyl_myo_inositol_l_arabinoside +h
-    udp_beta_l_arabinopyranose
-  }
-
-  branch from beta_d_glucose side right {
-    beta_d_glucose
-    <-> ec_3_2_1_3 [3.2.1.3] +h2o
-    nigerose
-  }
-
-  branch from beta_d_glucose side left {
-    beta_d_glucose
-    <-> ec_2_3_1_103 [2.3.1.103] +1_o_trans_sinapoyl_beta_d_glucose
-    1_2_di_o_sinapoyl_beta_d_glucose
-  }
-
   branch from myo_inositol side right {
     myo_inositol
-    <-> ec_1_13_99_1 [1.13.99.1] +o2 +beta_d_glucuronate +h2o
-    h
+    <-> . +ajugose +verbascose
+    galactinol
   }
 
   branch from myo_inositol side left {
     myo_inositol
-    <-> ec_3_2_1_22 [3.2.1.22] +beta_d_galactose +h2o
+    <-> . +ajugose +verbascose
     alpha_d_galactosyl_1_3_1d_myo_inositol
   }
 }

@@ -144,22 +144,68 @@
       }
     },
     {
-      "id": "glutaryl_coa",
-      "name": "glutaryl-CoA",
-      "formula": "C26H37N7O19P3S",
-      "charge": -5,
+      "id": "l_cysteinyl_amp",
+      "name": "L-cysteinyl-AMP",
+      "formula": "C13H19N6O8PS",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57378"
+        "chebi": "CHEBI:144924"
       }
     },
     {
-      "id": "n6_r_s8_glutaryldihydrolipoyl_l_lysine_1",
-      "name": "N6-[(R)-S8-glutaryldihydrolipoyl]-L-lysine(1−)",
-      "short": "N6-[(R)-S8-glutaryl…",
-      "formula": "C19H31N2O5S2",
-      "charge": -1,
+      "id": "o_s_l_cysteinyl_pantetheine_4_phosphoryl_l_serin",
+      "name": "O-[S-(L-cysteinyl)pantetheine-4'-phosphoryl]-L-serine residue",
+      "short": "O-[S-(L-cysteinyl)p…",
+      "formula": "C17H31N4O9PS2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:184385"
+        "chebi": "CHEBI:144926"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "threonine",
+      "name": "L-Threonine",
+      "formula": "C4H9NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57926"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "o_s_l_threonyl_pantetheine_4_phosphoryl_l_serine",
+      "name": "O-[S-(L-threonyl)pantetheine-4'-phosphoryl]-L-serine residue",
+      "short": "O-[S-(L-threonyl)pa…",
+      "formula": "C18H33N4O10PS",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:144927"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
       }
     }
   ],
@@ -183,6 +229,16 @@
       "name": "dihydrolipoyllysine-residue succinyltransferase",
       "ec": [
         "2.3.1.61"
+      ],
+      "xrefs": {
+        "uniprot": "P36957"
+      }
+    },
+    {
+      "id": "ec_6_2_1_70",
+      "name": "L-threonine--[L-threonyl-carrier protein] ligase",
+      "ec": [
+        "6.2.1.70"
       ]
     }
   ],
@@ -336,39 +392,362 @@
     },
     {
       "id": "r4",
-      "name": "N(6)-[(R)-dihydrolipoyl]-L-lysyl-[protein] + glutaryl-CoA = N(6)-[(R)-S(8)-glutaryldihy...",
-      "equation": "N(6)-[(R)-dihydrolipoyl]-L-lysyl-[protein] + glutaryl-CoA = N(6)-[(R)-S(8)-glutaryldihydrolipoyl]-L-lysyl-[protein] + CoA",
+      "name": "L-cysteinyl-5'-AMP + holo-[peptidyl-carrier protein] = L-cysteinyl-[peptidyl-carrier pr...",
+      "equation": "L-cysteinyl-5'-AMP + holo-[peptidyl-carrier protein] = L-cysteinyl-[peptidyl-carrier protein] + AMP + H(+)",
       "substrates": [
         {
-          "metabolite": "n6_r_dihydrolipoyl_l_lysine",
+          "metabolite": "l_cysteinyl_amp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "glutaryl_coa",
+          "metabolite": "holo-acp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n6_r_s8_glutaryldihydrolipoyl_l_lysine_1",
+          "metabolite": "o_s_l_cysteinyl_pantetheine_4_phosphoryl_l_serin",
           "stoichiometry": 1
         },
         {
-          "metabolite": "coa",
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:86675"
+        "rhea": "RHEA:61676"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:86675"
+            "id": "RHEA:61676"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "L-threonine--[L-threonyl-carrier protein] ligase",
+      "equation": "holo-[peptidyl-carrier protein] + L-threonine + ATP = L-threonyl-[peptidyl-carrier protein] + AMP + diphosphate",
+      "ec": "6.2.1.70",
+      "substrates": [
+        {
+          "metabolite": "holo-acp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "threonine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_s_l_threonyl_pantetheine_4_phosphoryl_l_serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_2_1_70"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:61688"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61688"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_x5p_6-deoxy-6-sulfo-d-fructof-to-d-xylulose-5-phosph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "x5p"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-deoxy-6-sulfo-d-fructof-to-d-xylulose-5-phosph"
+      },
+      "note": "Shares D-Xylulose 5-phosphate with 6-deoxy-6-sulfo-D-fructof… to D-xylulose 5-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57737"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_x5p_acetylacetone-to-dehydro-coenzyme-f420-0",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "x5p"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetylacetone-to-dehydro-coenzyme-f420-0"
+      },
+      "note": "Shares D-Xylulose 5-phosphate with acetylacetone to dehydro coenzyme F420-0.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57737"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_x5p_d-apiitol-to-nitrate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "x5p"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-apiitol-to-nitrate"
+      },
+      "note": "Shares D-Xylulose 5-phosphate with D-apiitol to nitrate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57737"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_x5p_d-arabinitol-to-fmnh2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "x5p"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-arabinitol-to-fmnh2"
+      },
+      "note": "Shares D-Xylulose 5-phosphate with D-arabinitol to FMNH2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57737"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_x5p_d-xylulose-1-5-bisphospha-to-n6-r-s8-acetyldihyd",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "x5p"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-xylulose-1-5-bisphospha-to-n6-r-s8-acetyldihyd"
+      },
+      "note": "Shares D-Xylulose 5-phosphate with D-xylulose 1,5-bisphospha… to N6-[(R)-S8-acetyldihydrol….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57737"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_x5p_deacetylipecoside-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "x5p"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "deacetylipecoside-to-hydrogen-donor"
+      },
+      "note": "Shares D-Xylulose 5-phosphate with deacetylipecoside to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57737"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_o_s_glycolylpantetheine_4_phosphoryl_l_serine_1_d-xylulose-1-5-bisphospha-to-n6-r-s8-acetyldihyd",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "o_s_glycolylpantetheine_4_phosphoryl_l_serine_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-xylulose-1-5-bisphospha-to-n6-r-s8-acetyldihyd"
+      },
+      "note": "Shares O-(S-glycolylpantetheine-4'-phosphoryl)-L-serine(1−) with D-xylulose 1,5-bisphospha… to N6-[(R)-S8-acetyldihydrol….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:234475"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n6_r_dihydrolipoyl_l_lysine_1-8-diazacyclotetradecane-to-adipate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n6_r_dihydrolipoyl_l_lysine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-8-diazacyclotetradecane-to-adipate"
+      },
+      "note": "Shares N6-[(R)-dihydrolipoyl]-L-lysine with 1,8-diazacyclotetradecane… to adipate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83100"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n6_r_dihydrolipoyl_l_lysine_2-hydroxy-4-methylvalerate-to-o-s-isoheptanoyl-p",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n6_r_dihydrolipoyl_l_lysine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-hydroxy-4-methylvalerate-to-o-s-isoheptanoyl-p"
+      },
+      "note": "Shares N6-[(R)-dihydrolipoyl]-L-lysine with 2-hydroxy-4-methylvalerate to O-[S-(isoheptanoyl)pantet….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83100"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n6_r_dihydrolipoyl_l_lysine_d-valine-to-n6-r-s8-isobutyryldihy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n6_r_dihydrolipoyl_l_lysine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-valine-to-n6-r-s8-isobutyryldihy"
+      },
+      "note": "Shares N6-[(R)-dihydrolipoyl]-L-lysine with D-valine to N6-[(R)-S8-isobutyryldihy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83100"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n6_r_dihydrolipoyl_l_lysine_d-xylulose-1-5-bisphospha-to-n6-r-s8-acetyldihyd",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n6_r_dihydrolipoyl_l_lysine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-xylulose-1-5-bisphospha-to-n6-r-s8-acetyldihyd"
+      },
+      "note": "Shares N6-[(R)-dihydrolipoyl]-L-lysine with D-xylulose 1,5-bisphospha… to N6-[(R)-S8-acetyldihydrol….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83100"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n6_r_dihydrolipoyl_l_lysine_r-alanopine-to-n6-r-s8-succinyldihydr",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n6_r_dihydrolipoyl_l_lysine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-alanopine-to-n6-r-s8-succinyldihydr"
+      },
+      "note": "Shares N6-[(R)-dihydrolipoyl]-L-lysine with (R)-β-alanopine to N6-[(R)-S8-succinyldihydr….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83100"
           }
         ]
       }

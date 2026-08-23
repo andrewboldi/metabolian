@@ -1,0 +1,382 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1-myristoyl-sn-glycero-3-to-h2o",
+  "name": "1-myristoyl-sn-glycero-3-… to H2O",
+  "category": "other",
+  "summary": "A 3-step route from 1-myristoyl-sn-glycero-3-phosphoethanolamine zwitterion to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR102997"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:84299"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1_myristoyl_sn_glycero_3_phosphoethanolamine",
+      "name": "1-myristoyl-sn-glycero-3-phosphoethanolamine",
+      "short": "1-myristoyl-sn-glyc…",
+      "formula": "C19H40NO7P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:84299"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "tetradecanoate",
+      "name": "tetradecanoate",
+      "formula": "C14H27O2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM314"
+      }
+    },
+    {
+      "id": "phosphatidylethanolamine_ditetradecanoyl_n_c14_0",
+      "name": "Phosphatidylethanolamine (ditetradecanoyl, n-C14:0)",
+      "short": "Phosphatidylethanol…",
+      "formula": "C33H66NO8P",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM733473"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "phosphatidylserine_ditetradecanoyl_n_c14_0",
+      "name": "Phosphatidylserine (ditetradecanoyl, n-C14:0)",
+      "short": "Phosphatidylserine…",
+      "formula": "C34H64NO10P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM7665"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR102997",
+      "substrates": [
+        {
+          "metabolite": "1_myristoyl_sn_glycero_3_phosphoethanolamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "tetradecanoate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phosphatidylethanolamine_ditetradecanoyl_n_c14_0",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR102997"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR102997"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR103230",
+      "substrates": [
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphatidylethanolamine_ditetradecanoyl_n_c14_0",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "phosphatidylserine_ditetradecanoyl_n_c14_0",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR103230"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR103230"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR103219",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphatidylserine_ditetradecanoyl_n_c14_0",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphatidylserine_ditetradecanoyl_n_c14_0",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR103219"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR103219"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_1_myristoyl_sn_glycero_3_phosphoethanolamine_c20-phytosphingosine-to-o-phosphonatoethanaminiu",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_myristoyl_sn_glycero_3_phosphoethanolamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "c20-phytosphingosine-to-o-phosphonatoethanaminiu"
+      },
+      "note": "Shares 1-myristoyl-sn-glycero-3-phosphoethanolamine with C20 phytosphingosine… to O-phosphonatoethanaminium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84299"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_myristoyl_sn_glycero_3_phosphoethanolamine_tetradecanoate-ester-to-1-myristoyl-2-oleoyl-sn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_myristoyl_sn_glycero_3_phosphoethanolamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "tetradecanoate-ester-to-1-myristoyl-2-oleoyl-sn"
+      },
+      "note": "Shares 1-myristoyl-sn-glycero-3-phosphoethanolamine with tetradecanoate ester to 1-myristoyl-2-oleoyl-sn-g….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84299"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_myristoyl_sn_glycero_3_phosphoethanolamine_tetradecanoyl-coa-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_myristoyl_sn_glycero_3_phosphoethanolamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "tetradecanoyl-coa-to-h2o"
+      },
+      "note": "Shares 1-myristoyl-sn-glycero-3-phosphoethanolamine with tetradecanoyl-CoA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84299"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phosphatidylethanolamine_ditetradecanoyl_n_c14_0_glycerophosphatidylethano-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phosphatidylethanolamine_ditetradecanoyl_n_c14_0"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "glycerophosphatidylethano-to-h2o"
+      },
+      "note": "Shares Phosphatidylethanolamine (ditetradecanoyl, n-C14:0) with glycerophosphatidylethano… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM733473"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phosphatidylethanolamine_ditetradecanoyl_n_c14_0_tetradecanoyl-coa-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phosphatidylethanolamine_ditetradecanoyl_n_c14_0"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "tetradecanoyl-coa-to-h2o"
+      },
+      "note": "Shares Phosphatidylethanolamine (ditetradecanoyl, n-C14:0) with tetradecanoyl-CoA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM733473"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phosphatidylserine_ditetradecanoyl_n_c14_0_24-methylidenelophenol-to-avenasterol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phosphatidylserine_ditetradecanoyl_n_c14_0"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "24-methylidenelophenol-to-avenasterol"
+      },
+      "note": "Shares Phosphatidylserine (ditetradecanoyl, n-C14:0) with 24-methylidenelophenol to avenasterol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM7665"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-2-halocarboxylic-to-l-glutamyl-phosphate "(S)-2-halocarboxylic… to L-γ-glutamyl phosphate" {
-  spacing 280
+  spacing 340
 
   spine at 0,0 {
     s_2_halocarboxylic_acid_anion
@@ -38,8 +38,8 @@ pathway s-2-halocarboxylic-to-l-glutamyl-phosphate "(S)-2-halocarboxylic… to L
 
   branch from 2_oxo_monocarboxylic_acid_anion side right {
     2_oxo_monocarboxylic_acid_anion
-    <-> . +o2 +h2o2
-    2_hydroxy_carboxylate
+    <-> . +a_2_iminiocarboxylate +h2o
+    nh3
   }
 
   branch from hydroquinones side left {
@@ -76,5 +76,65 @@ pathway s-2-halocarboxylic-to-l-glutamyl-phosphate "(S)-2-halocarboxylic… to L
     l_amino_acid
     <-> ec_3_4_13_19 [3.4.13.19] +h2o
     l_aminoacyl_l_amino_acid
+  }
+
+  branch from halide_anion side left {
+    halide_anion
+    <-> ec_1_14_12_13 [1.14.12.13] +2_halobenzoate +nadh +o2 +hplus +co2 +nad
+    catechol
+  }
+
+  branch from 1_4_benzoquinones side right {
+    1_4_benzoquinones
+    <-> ec_1_6_5_5 [1.6.5.5] +nadph +hplus +nadp
+    1_4_benzosemiquinones
+  }
+
+  branch from 1_4_benzoquinones side left {
+    1_4_benzoquinones
+    <-> ec_1_1_5_4 [1.1.5.4] +malate +hydroquinones
+    oxaloacetate
+  }
+
+  branch from 2_oxo_monocarboxylic_acid_anion side right {
+    2_oxo_monocarboxylic_acid_anion
+    <-> . +l_amino_acid +glyoxylate
+    glycine
+  }
+
+  branch from hydroquinones side left {
+    hydroquinones
+    <-> . +shikimate +1_4_benzoquinones
+    3_dehydroshikimate
+  }
+
+  branch from hydroquinones side right {
+    hydroquinones
+    <-> ec_1_1_5_9 [1.1.5.9] +1_4_benzoquinones +glucose
+    d_glucono_1_5_lactone
+  }
+
+  branch from ornithine side left {
+    ornithine
+    <-> ec_2_3_1_35 [2.3.1.35] +n2_acetyl_l_ornithine +glutamate
+    nag
+  }
+
+  branch from ornithine side right {
+    ornithine
+    <-> ec_3_5_3_1 [3.5.3.1] +arginine +h2o
+    urea
+  }
+
+  branch from l_amino_acid side left {
+    l_amino_acid
+    <-> . +n_fatty_acyl_l_amino_acid_anion +h2o
+    fatty-acid
+  }
+
+  branch from l_amino_acid side right {
+    l_amino_acid
+    <-> ec_3_4_13_9 [3.4.13.9] +xaa_l_proline +h2o
+    l_proline
   }
 }

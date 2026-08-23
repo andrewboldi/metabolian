@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-hydroxyisoheptadecanoyl-to-e-isoheptadec-2-eno "3-hydroxyisoheptadecanoyl… to (E)-isoheptadec-2-enoyl-C…" {
-  spacing 152
+  spacing 158
 
   spine at 0,0 {
     3_hydroxyisoheptadecanoyl_coa
@@ -14,5 +14,11 @@ pathway 3-hydroxyisoheptadecanoyl-to-e-isoheptadec-2-eno "3-hydroxyisoheptadecan
     isoheptadecanoyl_coa
     <-> . +o2 -h2o2
     e_isoheptadec_2_enoyl_coa
+  }
+
+  branch from 3_hydroxyisoheptadecanoyl_coa side left {
+    3_hydroxyisoheptadecanoyl_coa
+    <-> . +nadp +nadph +hplus
+    3_oxoisoheptadecanoyl_coa
   }
 }

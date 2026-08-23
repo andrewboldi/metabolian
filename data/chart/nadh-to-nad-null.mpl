@@ -4,73 +4,147 @@
 # edit the generator, not this file.
 
 pathway nadh-to-nad-null "NADH to NAD" {
-  spacing 206
+  spacing 284
 
   spine at 0,0 {
     nadh
-    <-> . +3_oxo_4_r_8_dimethyl_nonanoyl_coenzyme_a +h -nad
-    3_s_hydroxy_4_r_8_dimethyl_nonanoyl_coenzyme_a
-    <-> . -h2o
-    4_r_8_dimethyl_trans_2_nonenoyl_coa
-    <-> . +fadh2 +h -4_r_8_dimethyl_nonanoyl_coa
-    fad
-    <-> . +propanoyl_coa +4_r_8_dimethyl_nonanoyl_coa -coa
-    3_oxo_2s_6r_10r_trimethyl_hendecanoyl_coa
-    <-> . +nadh +h -nad
-    3_r_hydroxy_2s_6r_10_trimethyl_hendecanoyl_coa
+    <-> . +2z_4e_2_aminomuconate +h +h2o -nh4 -nad
+    2_oxoadipate
+    <-> . +nadp +nh4 -nadph -h2o
+    2e_4z_2_aminomuconic_acid
+    <-> . +nadh +h2o -nh4 -nad
+    2_oxoadipate
+  }
+
+  branch from nh4 side left {
+    nh4
+    <-> . +co2 +l_ornithine +h +h2o
+    l_citrulline
+  }
+
+  branch from nh4 side right {
+    nh4
+    <-> . +2_2_difluorodeoxyuridine +h +h2o
+    gemcitabine
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +acetyl_coa +fadh2 +h +fad +coa +h2o
-    8z_11z_icosadienoyl_coa
+    <-> . +nadh +acetyl_coa +4e_decenoyl_coa +h +coa +h2o
+    trans_cis_lauro_2_6_dienoyl_coa
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +acetyl_coa +fadh2 +h +fad +coa +h2o
-    5z_8z_11z_eicosatrienoyl_coenzyme_a
+    <-> . +nadh +acetyl_coa +cis_cis_tetradeca_5_8_dienoyl_coa +h +coa +h2o
+    trans_cis_cis_2_7_10_hexadecatrienoyl_coa
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +nadp +5_s_15_s_dihete
+    6e_8z_11z_13e_15s_15_hydroxy_5_oxoicosatetraeno
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +prostaglandin_d2 +nadp
+    pgk2
   }
 
   branch from h2o side left {
     h2o
-    <-> . +d_alanine +1_6_anhydrous_n_acetylmuramyl_tripeptide
-    1_6_anhydrous_n_acetylmuramyl_tetrapeptide
+    <-> . +d_glucuronate +ortho_hydroxyatorvastatin +h
+    2_hydroxy_atorvastatin_acyl_glucuronide
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_5_1_4 [3.5.1.4] +h +2_phenylacetamide +phenyl_acetate
+    <-> . +d_glucuronate +h +2_hydroxy_atorvastatin_lactone_ortho_hydroxy_ato
+    2_hydroxy_atorvastatin_lactone_glucuronide
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> . +acetyl_coa +4_7_10_13_hexadecatetraenoylcoa +h +h2o2 +coa +o2 +nad +h2o
+    6z_9z_12z_15z_octadecatetraenoyl_coa
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +acetyl_coa +4_7_10_13_hexadecatetraenoylcoa +h +2_6_9_12_15_octadecapentenoyl_coenzyme_a +nad +h2o
+    coa
+  }
+
+  branch from h side left {
+    h
+    <-> ec_1_16_1_1 [1.16.1.1] +uranium_dioxide +nadp +nadph
+    dioxouranium
+  }
+
+  branch from h side right {
+    h
+    <-> . +d_glucuronate +2_hydroxyibuprofen +h2o
+    2_hydroxy_s_ibuprofen_glucuronide
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +2_4_dihydroxyhept_2_enedioic_acid
+    2_hydroxyhepta_2_4_dienedioic_acid
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +d_glucuronate +2_hydroxycarbamazepine
+    2_hydroxy_carbamazepine_glucuronide
+  }
+
+  branch from nh4 side left {
     nh4
+    <-> . +5_amino_6_5_phospho_d_ribosylamino_uracil +h +h2o
+    2_5_diamino_6_ribosylamino_4_3h_pyrimidinone_5_p
   }
 
-  branch from fad side left {
-    fad
-    <-> . +nadh +acetyl_coa +fadh2 +h +coa +nad +h2o
-    4z_7z_10z_13z_16z_docosapentaenoyl_coa
+  branch from nh4 side right {
+    nh4
+    <-> . +5_deoxy_5_fluorocytidine +h +h2o
+    doxifluridine
   }
 
-  branch from fad side right {
-    fad
-    <-> . +nadh +acetyl_coa +fadh2 +h +coa +nad +h2o
-    13z_16z_docosadienoyl_coa
+  branch from nad side left {
+    nad
+    <-> . +nadh +acetyl_coa +3_6_9_12_octadecatetraenoylcoa +h +coa +h2o
+    2_5_8_11_14_eicosapentaenoyl_coenzyme_a
   }
 
-  branch from coa side left {
-    coa
-    <-> . +10z_heptadecenoyl_coa +h2o
-    10z_heptadecenoic_acid
+  branch from nad side right {
+    nad
+    <-> . +nadh +acetyl_coa +5z_8z_11z_14z_eicosatetraenoyl_coa +h +coa +h2o
+    2_7_10_13_16_docosapentenoylcoa
   }
 
-  branch from coa side right {
-    coa
-    <-> . +diphosphate +trans_9_octadecenoyl_coa +amp +atp
-    9e_octadecenoate
+  branch from nadp side left {
+    nadp
+    <-> . +nadph +pgk2
+    prostaglandin_e2
   }
 
-  branch from 3_r_hydroxy_2s_6r_10_trimethyl_hendecanoyl_coa side left {
-    3_r_hydroxy_2s_6r_10_trimethyl_hendecanoyl_coa
-    <-> . +h2o
-    2s_6r_10r_trimethyl_2e_hendecenoyl_coa
+  branch from nadp side right {
+    nadp
+    <-> . +3_decaprenyl_4_hydroxybenzoate +h +o2 +nadph +h2o
+    3_4_dihydroxy_5_all_trans_decaprenyl_benzoate
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +5_fluorouracil +h +nadp
+    5_6_dihydro_5_fluorouracil
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +2_hydroxy_5_carboxymethylmuconate_semialdehyde +h +nadp +h2o
+    2z_4e_5_hydroxypenta_2_4_diene_1_2_5_tricarboxy
   }
 }

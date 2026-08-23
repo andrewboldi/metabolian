@@ -34,43 +34,127 @@ pathway biotin-amide-to-4-hydroxy-5-methyl-6-pent "biotin amide to 4-hydroxy-5-m
 
   branch from nh3 side left {
     nh3
-    <-> ec_6_3_1_2 [6.3.1.2] +glutamate +atp +adp +pi +hplus
-    glutamine
+    <-> ec_2_3_2_5 [2.3.2.5] +l_glutaminiumyl_group
+    n_terminal_5_oxo_l_proline
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +utp +atp +adp +pi +hplus
-    ctp
+    <-> ec_1_4_1_12 [1.4.1.12] +2r_4s_2_4_diazaniumylpentanoate +nad +h2o +nadh +hplus
+    r_2_amino_4_oxopentanoic_acid
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_6_2_1_15 [6.2.1.15] +arachidonate +atp +coa +amp
-    arachidonoyl_coa
+    <-> ec_4_2_3_117 [4.2.3.117] +gpp
+    camphene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_9 [4.2.3.9] +fpp
-    aristolochene
+    <-> ec_4_2_3_52 [4.2.3.52] +gpp
+    phellandrene
   }
 
   branch from acetyl-acp side left {
-    acetyl-acp
-    <-> . +l_serine +acetyl_coa +hplus
-    adenosine_3_5_bismonophosphate
-  }
-
-  branch from acetyl-acp side right {
     acetyl-acp
     <-> ec_2_3_3_22 [2.3.3.22] +o_s_3_oxoacylpantetheine_4_phosphoryl_l_serine_1 +h2o +holo-acp +hplus
     o_s_3_carboxymethyl_3_hydroxyacylpantetheine_4_p
   }
 
-  branch from methylmalonyl_coa side left {
+  branch from methylmalonyl_coa side right {
     methylmalonyl_coa
     <-> . +stearoyl_coa +malonyl-coa +hplus +co2 +coa
     4_hydroxy_5_methyl_6_heptadecylpyran_2_one
+  }
+
+  branch from biotinate side left {
+    biotinate
+    <-> ec_3_5_1_12 [3.5.1.12] +biocytin +h2o
+    l_lysinium
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_1_7_1_4 [1.7.1.4] +nadp +h2o +nadph +hplus
+    nitrite
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_4_3_1_23 [4.3.1.23] +tyrosine
+    trans_4_coumarate
+  }
+
+  branch from l_lysinium side right {
+    l_lysinium
+    <-> ec_2_3_1_48 [2.3.1.48] +acetyl_coa +coa +hplus
+    n6_acetyl_l_lysine
+  }
+
+  branch from l_lysinium side left {
+    l_lysinium
+    <-> . +n6_malonyl_l_lysine_1 +nad +h2o +nicotinamide
+    2_o_malonyl_adp_d_ribose
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_120 [4.2.3.120] +gpp
+    pinene
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_113 [4.2.3.113] +gpp
+    terpinolene
+  }
+
+  branch from malonyl-acp side right {
+    malonyl-acp
+    <-> . +propionyl_coa +hplus +co2 +coa
+    o_s_3_oxopentanoylpantetheine_4_phosphoryl_serin
+  }
+
+  branch from malonyl-acp side left {
+    malonyl-acp
+    <-> . +butyryl_coa +hplus +co2 +coa
+    o_s_3_oxohexanoylpantetheine_4_phosphoryl_serine
+  }
+
+  branch from propionyl_coa side right {
+    propionyl_coa
+    <-> ec_2_3_3_5 [2.3.3.5] +oxaloacetate +h2o +coa +hplus
+    2s_3s_2_methylcitrate
+  }
+
+  branch from propionyl_coa side left {
+    propionyl_coa
+    <-> ec_1_3_1_84 [1.3.1.84] +nadp +nadph +hplus
+    acryloyl_coa
+  }
+
+  branch from palmitoyl_coa side right {
+    palmitoyl_coa
+    <-> ec_2_3_1_139 [2.3.1.139] +ecdysone +coa
+    ecdysone_palmitate
+  }
+
+  branch from palmitoyl_coa side left {
+    palmitoyl_coa
+    <-> ec_3_1_2_2 [3.1.2.2] +h2o +coa +hplus
+    palmitate
+  }
+
+  branch from malonyl-coa side right {
+    malonyl-coa
+    <-> ec_2_3_1_206 [2.3.1.206] +hexanoyl_coa +hplus +co2 +coa
+    3_5_7_trioxododecanoyl_coa
+  }
+
+  branch from malonyl-coa side left {
+    malonyl-coa
+    <-> ec_2_3_1_216 [2.3.1.216] +hplus +co2 +coa +h2o
+    noreugenin
   }
 }

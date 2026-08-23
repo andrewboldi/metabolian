@@ -101,57 +101,9 @@
       "xrefs": {
         "chebi": "CHEBI:63659"
       }
-    },
-    {
-      "id": "all_trans_4_hydroxyretinoate",
-      "name": "all-trans-4-hydroxyretinoate",
-      "short": "all-trans-4-hydroxy…",
-      "formula": "C20H27O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:134178"
-      }
-    },
-    {
-      "id": "all_trans_4_oxoretinoate",
-      "name": "all-trans-4-oxoretinoate",
-      "short": "all-trans-4-oxoreti…",
-      "formula": "C20H25O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:134186"
-      }
-    },
-    {
-      "id": "s_cis_n_methyltetrahydrothalifendine",
-      "name": "(S)-cis-N-methyltetrahydrothalifendine",
-      "short": "cis-N-methyltetrahy…",
-      "formula": "C20H22NO4",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:194521"
-      }
-    },
-    {
-      "id": "7_hydroxy_8_methoxy_11_methyl_17_19_dioxa_11_aza",
-      "name": "7-hydroxy-8-methoxy-11-methyl-17,19-dioxa-11-azatetracyclo[12.7.0.04,9.016,20]henicosa-1(21),4(9),5,7,14,16(20)-hexaen-2-one",
-      "short": "7-hydroxy-8-methoxy…",
-      "formula": "C20H21NO5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:194522"
-      }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_1_14_14_97",
-      "name": "methyltetrahydroprotoberberine 14-monooxygenase",
-      "ec": [
-        "1.14.14.97"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -305,111 +257,225 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "all-trans-4-hydroxyretinoate + reduced [NADPH--hemoprotein reductase] + O2 = all-trans-...",
-      "equation": "all-trans-4-hydroxyretinoate + reduced [NADPH--hemoprotein reductase] + O2 = all-trans-4-oxoretinoate + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "all_trans_4_hydroxyretinoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "all_trans_4_oxoretinoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:75851"
+      "id": "xt_9_pimara_7_15_diene_1-oleoyl-2-stearoyl-sn-gl-to-9z-18-hydroxyoctade",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9_pimara_7_15_diene"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1-oleoyl-2-stearoyl-sn-gl-to-9z-18-hydroxyoctade"
+      },
+      "note": "Shares 9β-pimara-7,15-diene with 1-oleoyl-2-stearoyl-sn-gl… to (9Z)-18-hydroxyoctadec-9-….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:75851"
+            "db": "ChEBI",
+            "id": "CHEBI:50067"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "methyltetrahydroprotoberberine 14-monooxygenase",
-      "equation": "(S)-cis-N-methyltetrahydrothalifendine + reduced [NADPH--hemoprotein reductase] + O2 = 7-hydroxy-8-methoxy-11-methyl-17,19-dioxa-11-azatetracyclo[12.7.0.0(4,9).0(16,20)]henicosa-1(21),4(9),5,7,14,16(20)-hexaen-2-one + oxidized [NADPH--hemoprotein reductase] + H2O + 2 H(+)",
-      "ec": "1.14.14.97",
-      "substrates": [
-        {
-          "metabolite": "s_cis_n_methyltetrahydrothalifendine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "7_hydroxy_8_methoxy_11_methyl_17_19_dioxa_11_aza",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_97"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:76039"
+      "id": "xt_9_pimara_7_15_diene_2-c-methyl-d-erythritol-to-pseudouridine-5-phosp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9_pimara_7_15_diene"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2-c-methyl-d-erythritol-to-pseudouridine-5-phosp"
+      },
+      "note": "Shares 9β-pimara-7,15-diene with 2-C-methyl-D-erythritol… to pseudouridine 5'-phosphate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:76039"
+            "db": "ChEBI",
+            "id": "CHEBI:50067"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_9_pimara_7_15_diene_9-pimara-7-15-diene-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9_pimara_7_15_diene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "9-pimara-7-15-diene-to-h2o"
+      },
+      "note": "Shares 9β-pimara-7,15-diene with 9β-pimara-7,15-diene to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:50067"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_9_pimara_7_15_diene_d-arabinitol-to-fmnh2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9_pimara_7_15_diene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-arabinitol-to-fmnh2"
+      },
+      "note": "Shares 9β-pimara-7,15-diene with D-arabinitol to FMNH2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:50067"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_9_pimara_7_15_diene_malonyl-coa-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9_pimara_7_15_diene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "malonyl-coa-to-h2o"
+      },
+      "note": "Shares 9β-pimara-7,15-diene with malonyl-CoA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:50067"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_9_pimara_7_15_dien_19_ol_9-pimara-7-15-diene-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9_pimara_7_15_dien_19_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "9-pimara-7-15-diene-to-h2o"
+      },
+      "note": "Shares 9β-pimara-7,15-dien-19-ol with 9β-pimara-7,15-diene to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:63656"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_9_pimara_7_15_dien_19_al_9-pimara-7-15-diene-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9_pimara_7_15_dien_19_al"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "9-pimara-7-15-diene-to-h2o"
+      },
+      "note": "Shares 9β-pimara-7,15-dien-19-al with 9β-pimara-7,15-diene to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:63658"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_9_pimara_7_15_dien_19_oate_9-pimara-7-15-diene-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9_pimara_7_15_dien_19_oate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "9-pimara-7-15-diene-to-h2o"
+      },
+      "note": "Shares 9β-pimara-7,15-dien-19-oate with 9β-pimara-7,15-diene to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:63659"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_9_pimara_7_15_dien_19_oate_d-arabinitol-to-fmnh2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9_pimara_7_15_dien_19_oate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-arabinitol-to-fmnh2"
+      },
+      "note": "Shares 9β-pimara-7,15-dien-19-oate with D-arabinitol to FMNH2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:63659"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_9_pimara_7_15_dien_19_oate_malonyl-coa-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9_pimara_7_15_dien_19_oate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "malonyl-coa-to-h2o"
+      },
+      "note": "Shares 9β-pimara-7,15-dien-19-oate with malonyl-CoA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:63659"
           }
         ]
       }

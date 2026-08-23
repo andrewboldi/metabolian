@@ -22,15 +22,15 @@ pathway 3-phenylpropionitrile-to-3-2-3-dihydroxyphenyl-p "3-phenylpropionitrile 
     methyl_3_phenylpropanoate
   }
 
-  branch from nh3 side right {
-    nh3
-    <-> . +hco3 +h2o +hplus
-    carbamate
+  branch from 3_phenylpropionitrile side right {
+    3_phenylpropionitrile
+    <-> . +h2o
+    3_phenylpropionaldoxim
   }
 
-  branch from nh3 side left {
-    nh3
-    <-> ec_3_5_1_131 [3.5.1.131] +1_carboxybiuret +h2o
-    1_3_dicarboxyurea
+  branch from 3_phenylpropionitrile side left {
+    3_phenylpropionitrile
+    <-> ec_4_2_1_65 [4.2.1.65] +h2o
+    3_phenylpropanamide
   }
 }

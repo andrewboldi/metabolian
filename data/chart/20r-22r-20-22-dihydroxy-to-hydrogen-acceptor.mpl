@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 20r-22r-20-22-dihydroxy-to-hydrogen-acceptor "(20R,22R)-20,22-dihydroxyâ€¦ to hydrogen acceptor" {
-  spacing 198
+  spacing 180
 
   spine at 0,0 {
     20r_22r_20_22_dihydroxycholesterol
@@ -24,27 +24,9 @@ pathway 20r-22r-20-22-dihydroxy-to-hydrogen-acceptor "(20R,22R)-20,22-dihydroxyâ
     4_methylpentan_1_ol
   }
 
-  branch from pregnenolone side right {
-    pregnenolone
-    <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
-    pregnenolone_sulfate
-  }
-
-  branch from pregnenolone side left {
-    pregnenolone
-    <-> . +udp_d_glucose +udp +hplus
-    pregnenolone_3_d_glucoside
-  }
-
   branch from progesterone side right {
     progesterone
     <-> . +nadp +nadph +hplus
     20s_20_hydroxypregn_4_en_3_one
-  }
-
-  branch from progesterone side left {
-    progesterone
-    <-> . +nadph +hplus +nadp
-    4_pregnen_3_ol_20_one
   }
 }

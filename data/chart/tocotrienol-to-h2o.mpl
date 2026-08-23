@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway tocotrienol-to-h2o "γ-tocotrienol to H2O" {
-  spacing 226
+  spacing 322
 
   spine at 0,0 {
     tocotrienol
@@ -24,37 +24,133 @@ pathway tocotrienol-to-h2o "γ-tocotrienol to H2O" {
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_275 [2.1.1.275] +gibberellin_a20 +sam
-    gibberellin_a20_methyl_ester
+    <-> . +cytidine_5_monophosphate_1 +sam +hplus
+    n3_methylcytidine_5_monophosphate_1
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_275 [2.1.1.275] +gibberellin_a34 +sam
-    gibberellin_a34_methyl_ester
+    <-> . +sam +n3_methylcytidine_5_monophosphate_1 +hplus
+    cytidine_5_monophosphate_1
   }
 
   branch from nadp side right {
     nadp
-    <-> . +adrenochrome +nadph +h
-    adrenochrome_o_semiquinone
+    <-> ec_1_14_12_18 [1.14.12.18] +h +biphenyl +o2 +nadph
+    2r_3s_3_phenylcyclohexa_3_5_diene_1_2_diol
   }
 
   branch from nadp side left {
     nadp
-    <-> . +h +noradrenochrome_o_semiquinone +nadph
-    noradrenochrome
+    <-> ec_1_2_1_28 [1.2.1.28] +h +4_methylbenzoate +nadph +h2o
+    4_methylbenzaldehyde
   }
 
   branch from h2o side right {
     h2o
-    <-> . +all_trans_retinol
-    anhydrovitamin_a
+    <-> . +6_hydroxykynurenic_acid
+    4_2_amino_5_hydroxyphenyl_2_4_dioxobutanoate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +kinetensin +kinetensin_1_7 +l_phenylalanine
-    l_leucine
+    <-> ec_4_2_1_148 [4.2.1.148] +2_methylfumaryl_coa +h
+    l_erythro_3_methylmalyl_coa
+  }
+
+  branch from tocotrienol side right {
+    tocotrienol
+    <-> ec_5_5_1_24 [5.5.1.24]
+    2_3_dimethyl_6_geranylgeranyl_1_4_benzoquinol
+  }
+
+  branch from tocotrienol side left {
+    tocotrienol
+    <-> . +h +o2 +nadph +nadp +h2o
+    13_hydroxy_gamma_tocotrienol
+  }
+
+  branch from sam side right {
+    sam
+    <-> . +eriodictyol +sah +hplus
+    homoeriodictyol
+  }
+
+  branch from sam side left {
+    sam
+    <-> . +cytidine_5_monophosphate_1 +sah +hplus
+    5_methylcytidine_5_monophosphate_1
+  }
+
+  branch from sah side right {
+    sah
+    <-> . +n6_n6_dimethyl_l_lysine_1 +sam +hplus
+    n6_n6_n6_trimethyl_l_lysine
+  }
+
+  branch from sah side left {
+    sah
+    <-> . +r_2_hydroxy_3_methylbutyrate +l_phenylalanine +sam +atp +amp +ppi +hplus
+    beauvericin
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_1_1_201 [2.1.1.201] +s_adenosyl_l_homocysteine +2_methoxy_5_methyl_6_all_trans_hexaprenyl_1_4_be +2_methoxy_6_all_trans_hexaprenyl_1_4_benzoquinon
+    s_adenosyl_l_methionine
+  }
+
+  branch from h side left {
+    h
+    <-> . +6_3_triphosphoryl_1_methylglyceryl_7_methyl_7_8 +s_adenosyl_l_homocysteine +h2o +s_adenosyl_l_methionine
+    2_5_diamino_6_5_triphosphoryl_3_4_trihydroxy_2_o
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_13_11_3 [1.13.11.3] +h +3_4_dihydroxybenzenesulfonate
+    3_sulfomuconate
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +h +4_methylbenzoate +nadph +nadp
+    1r_6s_1_6_dihydroxy_4_methylcyclohexa_2_4_diene
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +h +2_3_dihydroxy_ddt +nadp
+    1s_2s_ddt_2_3_dihydrodiol
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_14_12_10 [1.14.12.10] +h +benzoate +o2 +nadp
+    1r_6s_1_6_dihydroxycyclohexa_2_4_diene_1_carbox
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_2_1_28 [1.2.1.28] +h +o_toluate +nadph +h2o
+    2_methylbenzaldehyde
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_2_1_28 [1.2.1.28] +h +3_methylbenzoate +nadph +h2o
+    3_methylbenzaldehyde
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_4_2_1_98 [4.2.1.98] +16_17_didehydropregnenolone
+    16alpha_hydroxypregnenolone
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +leukotriene_e4 +l_glutamate
+    leukotriene_f4
   }
 }

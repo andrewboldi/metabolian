@@ -20,37 +20,37 @@ pathway n2-4-aminobutanoyl-l-ar-to-diphosphate "N2-(4-aminobutanoyl)-L-ar… to 
 
   branch from arginine side left {
     arginine
-    <-> ec_2_7_3_3 [2.7.3.3] +atp +adp +hplus
-    n_phosphonato_l_arginine
-  }
-
-  branch from arginine side right {
-    arginine
-    <-> . +nadph +o2 +hplus +nadp +h2o
-    n5_hydroxyamino_imino_methyl_l_ornithinium
-  }
-
-  branch from l_histidine side left {
-    l_histidine
-    <-> ec_5_1_1_24 [5.1.1.24]
-    d_histidine
+    <-> . +taurocholate +taurine
+    l_arginocholate
   }
 
   branch from l_histidine side right {
     l_histidine
-    <-> . +sam +5_s_methyl_5_thioadenosine +hplus
-    n_3s_3_amino_3_carboxypropyl_l_histidine_dizwitt
+    <-> . +taurocholate +taurine
+    l_histidocholate
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_2_7_7_90 [2.7.7.90] +8_amino_3_8_dideoxy_d_manno_oct_2_ulosonic_acid +ctp
-    cmp_8_amino_3_8_dideoxy_d_manno_oct_2_ulosonate
+    <-> . +amikacin +atp
+    4_adenylylamikacin
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_2_7_7_93 [2.7.7.93] +phosphonoformate +ctp
-    cmp_5_phosphonoformate
+    <-> . +kanamycin_a +atp
+    4_adenylylkanamycin_a
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +framycetin +atp
+    4_adenylylframycetin_b
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +paromomycin +atp
+    4_adenylylparomomycin
   }
 }

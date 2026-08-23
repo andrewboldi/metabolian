@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-chloro-5-deoxy-d-ribona-to-3e-2-chloro-5-oxohe "5-chloro-5-deoxy-D-ribona… to (3E)-2-chloro-5-oxohex-3-…" {
-  spacing 242
+  spacing 278
 
   spine at 0,0 {
     5_chloro_5_deoxy_d_ribonate
@@ -24,26 +24,26 @@ pathway 5-chloro-5-deoxy-d-ribona-to-3e-2-chloro-5-oxohe "5-chloro-5-deoxy-D-rib
 
   branch from h2o side right {
     h2o
-    <-> . +gamma_l_glutamyl_s_methyl_l_cysteine +glycine
-    s_methyl_glutathione
+    <-> . +glycylglycine +l_arginine
+    arginyl_glycyl_glycine
   }
 
   branch from h2o side left {
     h2o
-    <-> . +6_hydroxy_2_4_glucosyl_hydroxyphenyl_methyl_1_be
-    hispidol_4_o_beta_d_glucoside
+    <-> . +l_lysine +l_aspartate +l_arginine
+    arginyl_lysyl_aspartate
   }
 
   branch from h side right {
     h
-    <-> . +echinocandin_c +o2 +nadph +nadp +h2o
-    echinocandin_b
+    <-> . +o2 +nadph +cerivastatin +cerivastatin_m23 +h2o
+    nadp
   }
 
   branch from h side left {
     h
-    <-> . +ellagic_acid +h2o
-    4_4_5_5_6_6_hexahydroxydiphenate
+    <-> . +d_glucuronate +cerivastatin_m23 +h2o
+    cerivastatin_m23_glucuronide
   }
 
   branch from 3e_2_chloro_5_oxohex_3_enedioate side right {
@@ -56,5 +56,41 @@ pathway 5-chloro-5-deoxy-d-ribona-to-3e-2-chloro-5-oxohe "5-chloro-5-deoxy-D-rib
     3e_2_chloro_5_oxohex_3_enedioate
     <-> .
     2_hydroxy_5_chloromuconate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +l_arginine +l_phenylalanine
+    arginyl_phenylalanine_arginine
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +l_valine +l_arginine +l_tryptophan
+    arginyl_valyl_tryptophan
+  }
+
+  branch from co2 side right {
+    co2
+    <-> . +h2o +h +o2
+    formate
+  }
+
+  branch from co2 side left {
+    co2
+    <-> . +nonadecanoyl_coa +malonyl_coa +h +3_oxoheneicosanoyl_coenzyme_a
+    coa
+  }
+
+  branch from h side right {
+    h
+    <-> . +5_guanidino_2_oxopentanoate +fadh2 +nh4 +d_arginine +h2o
+    fad
+  }
+
+  branch from h side left {
+    h
+    <-> . +nh4 +5_aminopentanoate +cadaverine
+    o2
   }
 }

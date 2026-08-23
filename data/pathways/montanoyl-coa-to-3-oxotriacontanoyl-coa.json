@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "montanoyl-coa-to-3-oxotriacontanoyl-coa",
   "name": "montanoyl-CoA to 3-oxotriacontanoyl-CoA",
-  "category": "other",
+  "category": "redox-detox",
   "summary": "A 3-step route from montanoyl-CoA(4−) to 3-oxotriacontanoyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -117,6 +117,34 @@
       "charge": -2,
       "xrefs": {
         "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "trans_2_octacosenoyl_coa",
+      "name": "trans-2-octacosenoyl-CoA",
+      "short": "trans-2-octacosenoy…",
+      "formula": "C49H84N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:76383"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
       }
     }
   ],
@@ -251,6 +279,157 @@
           {
             "db": "Rhea",
             "id": "RHEA:85335"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "octacosanoyl-CoA + O2 = (2E)-octacosenoyl-CoA + H2O2",
+      "equation": "octacosanoyl-CoA + O2 = (2E)-octacosenoyl-CoA + H2O2",
+      "substrates": [
+        {
+          "metabolite": "montanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_2_octacosenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:85323"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:85323"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_montanoyl_coa_5-end-nad-phospho-ribonu-to-diphosphate-60880",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "montanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-end-nad-phospho-ribonu-to-diphosphate-60880"
+      },
+      "note": "Shares montanoyl-CoA with 5'-end NAD-phospho-ribonu… to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74141"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_montanoyl_coa_r-3-hydroxyoctacosanoyl-to-n-octacosanoylsphing",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "montanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-3-hydroxyoctacosanoyl-to-n-octacosanoylsphing"
+      },
+      "note": "Shares montanoyl-CoA with (R)-3-hydroxyoctacosanoyl… to N-octacosanoylsphinganine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74141"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_oxotriacontanoyl_coa_r-3-hydroxyoctacosanoyl-to-n-octacosanoylsphing",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_oxotriacontanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-3-hydroxyoctacosanoyl-to-n-octacosanoylsphing"
+      },
+      "note": "Shares 3-oxotriacontanoyl-CoA with (R)-3-hydroxyoctacosanoyl… to N-octacosanoylsphinganine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74228"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_3_hydroxytriacontanoyl_coa_r-3-hydroxytriacontanoy-to-triacontan-1-ol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_3_hydroxytriacontanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-3-hydroxytriacontanoy-to-triacontan-1-ol"
+      },
+      "note": "Shares (R)-3-hydroxytriacontanoyl-CoA with (R)-3-hydroxytriacontanoy… to triacontan-1-ol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76384"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_2_octacosenoyl_coa_r-3-hydroxyoctacosanoyl-to-n-octacosanoylsphing",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_2_octacosenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-3-hydroxyoctacosanoyl-to-n-octacosanoylsphing"
+      },
+      "note": "Shares trans-2-octacosenoyl-CoA with (R)-3-hydroxyoctacosanoyl… to N-octacosanoylsphinganine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76383"
           }
         ]
       }

@@ -4,15 +4,17 @@
 # edit the generator, not this file.
 
 pathway nadh-to-nadp "NADH to NADP" {
-  spacing 152
+  spacing 232
 
   spine at 0,0 {
     nadh
-    <-> . +acetyl_coa +propanoyl_coa +h +h2o2 -coa -o2 -nad -h2o
-    tricosanoyl_coa
-    <-> . +fad +hplus -fadh2
-    2e_tricosenoyl_coa
-    <-> . +h +nadph -nadp
-    tricosanoyl_coa
+    <-> . +n5_phenyl_l_glutamine +h +o2 -nad
+    gamma_glutamylanilide_diol
+    <-> ec_3_5_1_123 [3.5.1.123] +h2o -l_glutamate
+    1_aminocyclohexa_3_5_diene_1_2_diol
+    <-> . -catechol
+    nh4
+    <-> ec_1_1_1_209 [1.1.1.209] +h +catechol +nadph -nadp
+    cyclohexa_3_5_diene_1_2_diol
   }
 }

@@ -149,40 +149,30 @@
       }
     },
     {
-      "id": "s_corytuberine",
-      "name": "(S)-corytuberine",
-      "formula": "C19H21NO4",
-      "charge": 0,
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:81200"
+        "chebi": "CHEBI:58349"
       }
     },
     {
-      "id": "s_magnoflorine",
-      "name": "(S)-magnoflorine",
-      "formula": "C20H24NO4",
-      "charge": 1,
+      "id": "questin_2_olate",
+      "name": "questin-2-olate",
+      "formula": "C16H11O5",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:6641"
+        "chebi": "CHEBI:57676"
       }
     },
     {
-      "id": "s_glaucine",
-      "name": "(S)-glaucine",
-      "formula": "C21H26NO4",
-      "charge": 1,
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:134212"
-      }
-    },
-    {
-      "id": "s_1_2_9_10_tetramethoxy_6_methylaporphine",
-      "name": "(S)-1,2,9,10-tetramethoxy-6-methylaporphine",
-      "short": "1,2,9,10-tetrametho…",
-      "formula": "C22H28NO4",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:134213"
+        "chebi": "CHEBI:57783"
       }
     }
   ],
@@ -209,10 +199,10 @@
       ]
     },
     {
-      "id": "ec_2_1_1_337",
-      "name": "reticuline N-methyltransferase",
+      "id": "ec_1_1_1_443",
+      "name": "questin reductase",
       "ec": [
-        "2.1.1.337"
+        "1.1.1.443"
       ]
     }
   ],
@@ -456,94 +446,95 @@
     },
     {
       "id": "r6",
-      "name": "reticuline N-methyltransferase",
-      "equation": "(S)-corytuberine + S-adenosyl-L-methionine = magnoflorine + S-adenosyl-L-homocysteine",
-      "ec": "2.1.1.337",
+      "name": "questin reductase",
+      "equation": "questin hydroquinone + NADP(+) = questin + NADPH + 2 H(+)",
+      "ec": "1.1.1.443",
       "substrates": [
         {
-          "metabolite": "s_corytuberine",
+          "metabolite": "questin_hydroquinone",
           "stoichiometry": 1
         },
         {
-          "metabolite": "sam",
+          "metabolite": "nadp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "s_magnoflorine",
+          "metabolite": "questin_2_olate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "sah",
+          "metabolite": "nadph",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_337"
+          "enzyme": "ec_1_1_1_443"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:51524"
+        "rhea": "RHEA:86147"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:51524"
+            "id": "RHEA:86147"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_dihydrogeodin_5-chloro-trans-dienelacto-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dihydrogeodin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-chloro-trans-dienelacto-to-nad"
+      },
+      "note": "Shares dihydrogeodin with 5-chloro-trans-dienelacto… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:150012"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "reticuline N-methyltransferase",
-      "equation": "(S)-glaucine + S-adenosyl-L-methionine = (S)-N-methylglaucine + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.337",
-      "substrates": [
-        {
-          "metabolite": "s_glaucine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "s_1_2_9_10_tetramethoxy_6_methylaporphine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_1_337"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:51556"
+      "id": "xt_questin_2_olate_atrochrysone-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "questin_2_olate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "atrochrysone-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares questin-2-olate with atrochrysone to S-adenosyl-L-homocysteine.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:51556"
+            "db": "ChEBI",
+            "id": "CHEBI:57676"
           }
         ]
       }

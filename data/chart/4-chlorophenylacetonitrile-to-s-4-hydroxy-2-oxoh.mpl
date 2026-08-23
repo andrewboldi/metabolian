@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-chlorophenylacetonitrile-to-s-4-hydroxy-2-oxoh "4-chlorophenylacetonitrile to (S)-4-hydroxy-2-oxoheptan…" {
-  spacing 324
+  spacing 340
 
   spine at 0,0 {
     4_chlorophenylacetonitrile
@@ -26,14 +26,14 @@ pathway 4-chlorophenylacetonitrile-to-s-4-hydroxy-2-oxoh "4-chlorophenylacetonit
 
   branch from nh3 side left {
     nh3
-    <-> . +l_lysinium +nad +h2o +nadh +hplus
-    l_allysine
+    <-> . +serine +o2 +h2o +h2o2
+    3_hydroxypyruvate
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_1_13_12_15 [1.13.12.15] +ldopa +o2
-    3_4_dihydroxyphenylpyruvate
+    <-> . +palmitoleamide +h2o
+    palmitoleate
   }
 
   branch from dopac side left {
@@ -46,5 +46,29 @@ pathway 4-chlorophenylacetonitrile-to-s-4-hydroxy-2-oxoh "4-chlorophenylacetonit
     dopac
     <-> . +nadph +o2 +hplus +nadp +h2o
     2_4_5_trihydroxyphenylacetate
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> . +hexadecanamide +h2o
+    palmitate
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> . +8z_11z_14z_icosatrienamide +h2o
+    all_cis_icosa_8_11_14_trienoate
+  }
+
+  branch from dopac side left {
+    dopac
+    <-> . +4_hydroxyphenylacetate +fmnh2 +o2 +h2o +hplus
+    fmn
+  }
+
+  branch from dopac side right {
+    dopac
+    <-> ec_4_1_1_83 [4.1.1.83] +hplus +co2
+    4_methylcatechol
   }
 }

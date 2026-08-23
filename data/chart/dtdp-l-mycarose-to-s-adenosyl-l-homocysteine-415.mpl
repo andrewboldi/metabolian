@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dtdp-l-mycarose-to-s-adenosyl-l-homocysteine-415 "dTDP-β-L-mycarose to S-adenosyl-L-homocysteine" {
-  spacing 312
+  spacing 336
 
   spine at 0,0 {
     dtdp_l_mycarose
@@ -32,13 +32,37 @@ pathway dtdp-l-mycarose-to-s-adenosyl-l-homocysteine-415 "dTDP-β-L-mycarose to 
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_279 [2.1.1.279] +trans_anol +sam +hplus
-    trans_anethole
+    <-> . +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_288 [2.1.1.288] +aklanonate +sam
-    methyl_aklanonate
+    <-> . +sam +5_methylcytidine_5_monophosphate_1 +hplus
+    cytidine_5_monophosphate_1
+  }
+
+  branch from sam side left {
+    sam
+    <-> ec_2_1_1_365 [2.1.1.365] +d_man3me_1_4_d_man3me +sah +hplus
+    1_3_3_tri_o_methyl_4_mannobiose
+  }
+
+  branch from sam side right {
+    sam
+    <-> . +cytidine_5_monophosphate_1 +sah +hplus
+    n4_methylcytidine_5_monophosphate_1
+  }
+
+  branch from sah side left {
+    sah
+    <-> . +adenosine_5_monophosphate_1 +sam +hplus
+    n6_methyladenosine_5_monophosphate_1
+  }
+
+  branch from sah side right {
+    sah
+    <-> . +2_o_methyladenosine_5_monophosphate_1 +sam +hplus
+    n6_methyl_2_o_methyladenosine_monophosphate_1
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-carvone-to-3r-3-isopropenyl-6-oxoh "(S)-carvone to (3R)-3-isopropenyl-6-oxoh…" {
-  spacing 308
+  spacing 236
 
   spine at 0,0 {
     s_carvone
@@ -23,15 +23,4 @@ pathway s-carvone-to-3r-3-isopropenyl-6-oxoh "(S)-carvone to (3R)-3-isopropenyl-
     <-> ec_1_14_13_105 [1.14.13.105] -hplus
     3r_3_isopropenyl_6_oxoheptanoate
   }
-
-
-
-
-
-
-
-
-
-
-
 }

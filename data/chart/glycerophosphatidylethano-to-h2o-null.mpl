@@ -4,39 +4,129 @@
 # edit the generator, not this file.
 
 pathway glycerophosphatidylethano-to-h2o-null "glycerophosphatidylethano… to H2O" {
-  spacing 176
+  spacing 266
 
   spine at 0,0 {
     glycerophosphatidylethanolamine
-    <-> . +9e_tetradecenoic_acid -h2o
-    1_acyl_sn_glycero_3_phosphoethanolamine_n_c14_1
-    <-> . +9e_tetradecenoic_acid -h2o
-    phosphatidylethanolamine_ditetradec_7_enoyl_n_c1
-    <-> . +h +adp +phosphate -phosphatidylethanolamine_ditetradec_7_enoyl_n_c1 -h2o
+    <-> . +h +acyl_phosphatidylglycerol_n_c18_0 -distearoyl_phosphatidylglycerol
+    2_octadecanoyl_sn_glycero_3_phosphoethanolamine
+    <-> ec_3_1_1_32 [3.1.1.32] +h +octadecanoate -h2o
+    1_2_distearoylphosphatidylethanolamine
+    <-> . +h +adp +phosphate -1_2_distearoylphosphatidylethanolamine -h2o
     atp
+  }
+
+  branch from distearoyl_phosphatidylglycerol side left {
+    distearoyl_phosphatidylglycerol
+    <-> . +h +octadecanoate +h2o
+    2_octadecanoyl_sn_glycero_3_phospho_1_sn_glycero
+  }
+
+  branch from distearoyl_phosphatidylglycerol side right {
+    distearoyl_phosphatidylglycerol
+    <-> . +h +cardiolipin_tetraoctadecanoyl_n_c18_0 +h2o
+    3_phosphonooxy_1_2_propanediyl_dioctadecanoate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_1_3_73 [3.1.3.73] +5_methoxy_6_methylbenzimidazolyl_cobamide_5_phos +phosphate
-    5_methoxy_6_methylbenzimidazolyl_cobamide
+    <-> . +pyrrothine
+    l_cystine
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_1_3_73 [3.1.3.73] +coalpha_alpha_2_methyladenin_9_yl_cobeta_adenosy +phosphate
-    coalpha_alpha_2_methyladenin_7_yl_cobeta_adenosy
+    <-> . +l_2_amino_8_hydroxydecanoate +nadp +h +o2 +nadph
+    2_aminodecanoic_acid
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
-    alpha_lactose
+    <-> . +3_methylpyrrole_2_4_dicarboxylic_acid +3_amino_4_7_dihydroxy_8_methylcoumarin +h +coumeroic_acid +amp
+    diphosphate
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_47 [3.6.3.47] +h +adp +phosphate +h2o
-    tetracosanoyl_coa
+    <-> . +h +adp +phosphate +h2o
+    d_aspartate
+  }
+
+  branch from h side left {
+    h
+    <-> ec_1_2_1_84 [1.2.1.84] +11e_tetradecen_1_ol +nadp +coa +nadph
+    trans_tetradec_11_enoyl_coa
+  }
+
+  branch from h side right {
+    h
+    <-> ec_1_2_1_84 [1.2.1.84] +tetradecanoyl_coa +nadph +nadp +coa
+    tetradecan_1_ol
+  }
+
+  branch from distearoyl_phosphatidylglycerol side left {
+    distearoyl_phosphatidylglycerol
+    <-> . +h +glycerol
+    cardiolipin_tetraoctadecanoyl_n_c18_0
+  }
+
+  branch from octadecanoate side right {
+    octadecanoate
+    <-> . +nadh +acetyl_coa +fadh2 +diphosphate +h +amp +atp +coa +nad +h2o
+    fad
+  }
+
+  branch from octadecanoate side left {
+    octadecanoate
+    <-> . +h +cholesterol +h2o
+    cholesteryl_stearate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +fusaridione_a
+    fusaridione_a_open_ring
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +20_hydroxy_prefusarin +nadp +h +o2 +nadph
+    prefusarin
+  }
+
+  branch from adp side right {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    w
+  }
+
+  branch from adp side left {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    butyro_betaine
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_3_1_3_29 [3.1.3.29] +d_arabinose_5_phosphate +h2o
+    2_3_4_5_tetrahydroxypentanal
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> ec_3_1_3_1 [3.1.3.1] +2_4_dinitrophenyl_phosphate +h2o +h
+    2_4_dinitrophenol
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    biotin
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    actn
   }
 }

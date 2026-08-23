@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3a-deolivosylpremithramyc-to-dtdp-beta-d-mycaros "3A-Deolivosylpremithramyc… to dTDP-beta-D-mycarose" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     3a_deolivosylpremithramycin_b
@@ -14,17 +14,5 @@ pathway 3a-deolivosylpremithramyc-to-dtdp-beta-d-mycaros "3A-Deolivosylpremithra
     s_adenosyl_l_methionine
     <-> . +premithramycin_a3 +dtdp +h -dtdp_beta_d_mycarose
     premithramycin_a2
-  }
-
-  branch from s_adenosyl_l_methionine side left {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +s_methyl_l_cysteinyl_adenylate +h
-    l_cysteinyl_amp
-  }
-
-  branch from s_adenosyl_l_methionine side right {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +pyrrolomycin_h +h
-    pyrrolomycin_g
   }
 }

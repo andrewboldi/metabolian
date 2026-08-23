@@ -93,4 +93,76 @@ pathway l-saccharopinate-to-r-crotonylcarnitine "L-saccharopinate to (R)-crotony
     <-> ec_1_3_8_1 [1.3.8.1] +fad +hplus +fadh2
     butyryl_coa
   }
+
+  branch from l_allysine side left {
+    l_allysine
+    <-> ec_1_4_3_20 [1.4.3.20] +l_lysinium +o2 +h2o +h2o2
+    nh3
+  }
+
+  branch from l_allysine side right {
+    l_allysine
+    <-> . +holo-acp +nadp +nadph +hplus
+    o_s_l_2_amino_6_adipoylpantetheine_4_phosphoryl
+  }
+
+  branch from glutamate side left {
+    glutamate
+    <-> . +4_hydroxy_l_glutamate +akg
+    4_hydroxy_2_oxoglutarate
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> ec_2_6_1_17 [2.6.1.17] +n_3_carboxylatopropionyl_ll_2_6_diaminopimelate +akg
+    l_2_succinylamino_6_oxoheptanedioate
+  }
+
+  branch from akg side left {
+    akg
+    <-> ec_2_3_3_4 [2.3.3.4] +lauroyl_coa +h2o +coa +hplus
+    3s_4s_3_hydroxytetradecane_1_3_4_tricarboxylate
+  }
+
+  branch from akg side right {
+    akg
+    <-> ec_1_14_20_5 [1.14.20.5] +flavanones +o2 +succinate +co2 +h2o
+    flavones
+  }
+
+  branch from glutaryl_coa side left {
+    glutaryl_coa
+    <-> ec_1_3_99_32 [1.3.99.32] +hydrogen_acceptor +trans_4_carboxybut_2_enoyl_coa
+    hydrogen_donor
+  }
+
+  branch from glutaryl_coa side right {
+    glutaryl_coa
+    <-> . +malonyl-acp +hplus +co2 +coa
+    o_s_3_oxo_6_carboxyhexanoyl_pantetheine_4_phosph
+  }
+
+  branch from crotonoyl_coa side left {
+    crotonoyl_coa
+    <-> . +butyryl_coa +hydrogen_donor
+    hydrogen_acceptor
+  }
+
+  branch from crotonoyl_coa side right {
+    crotonoyl_coa
+    <-> ec_4_2_1_120 [4.2.1.120] +h2o
+    4_hydroxybutyryl_coa
+  }
+
+  branch from carnitine side left {
+    carnitine
+    <-> ec_2_3_1_21 [2.3.1.21] +palmitoyl_coa +coa
+    palmitoylcarnitine
+  }
+
+  branch from carnitine side right {
+    carnitine
+    <-> ec_3_1_1_28 [3.1.1.28] +o_acyl_l_carnitine +h2o +hplus
+    fatty-acid
+  }
 }

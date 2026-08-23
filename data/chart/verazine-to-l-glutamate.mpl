@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway verazine-to-l-glutamate "verazine to L-glutamate" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     verazine
@@ -14,29 +14,5 @@ pathway verazine-to-l-glutamate "verazine to L-glutamate" {
     22r_22_hydroxy_26_aminocholesterol
     <-> . +2_oxoglutarate -l_glutamate
     22r_22_hydroxycholesterol_26_al
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +r_linalool +h +nadph
-    2e_geranial
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +2e_geranial +h +nadph
-    s_linalool
-  }
-
-  branch from l_glutamate side left {
-    l_glutamate
-    <-> ec_3_4_19_13 [3.4.19.13] +s_1_hydroxyhexan_3_yl_l_cysteinylglycine +h2o
-    3_glutathion_s_yl_hexan_1_ol
-  }
-
-  branch from l_glutamate side right {
-    l_glutamate
-    <-> ec_3_4_19_13 [3.4.19.13] +s_methyl_l_cysteinylglycine +h2o
-    s_methyl_glutathione
   }
 }

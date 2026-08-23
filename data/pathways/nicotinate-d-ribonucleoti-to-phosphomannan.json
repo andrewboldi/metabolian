@@ -1,0 +1,567 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "nicotinate-d-ribonucleoti-to-phosphomannan",
+  "name": "nicotinate D-ribonucleoti… to Phosphomannan",
+  "category": "other",
+  "summary": "A 3-step route from nicotinate D-ribonucleotide(2−) to Phosphomannan, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:38619"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57502"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "nicotinate_d_ribonucleotide",
+      "name": "nicotinate D-ribonucleotide",
+      "short": "nicotinate…",
+      "formula": "C11H12NO9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57502"
+      }
+    },
+    {
+      "id": "phenol",
+      "name": "phenol",
+      "formula": "C6H6O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15882"
+      }
+    },
+    {
+      "id": "phenyl_5_phosphonato_d_ribofuranoside",
+      "name": "phenyl 5-phosphonato-α-D-ribofuranoside",
+      "short": "phenyl 5-phosphonat…",
+      "formula": "C11H13O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:75992"
+      }
+    },
+    {
+      "id": "nicotinate",
+      "name": "nicotinate",
+      "formula": "C6H4NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:32544"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "adenosylcob_iii_inamide_gdp",
+      "name": "adenosylcob(III)inamide-GDP",
+      "short": "adenosylcob(III)ina…",
+      "formula": "C68H95CoN21O21P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1101279"
+      }
+    },
+    {
+      "id": "gmp",
+      "name": "GMP",
+      "formula": "C10H12N5O8P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1101285"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "phenyl_cobeta_adenosylcobamide_5_phosphate",
+      "name": "phenyl-Cobeta-adenosylcobamide 5'-phosphate",
+      "short": "phenyl-Cobeta-adeno…",
+      "formula": "C69H95CoN16O21P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM818813"
+      }
+    },
+    {
+      "id": "phosphomannan_mannosephosphate",
+      "name": "Phosphomannan mannosephosphate",
+      "short": "Phosphomannan…",
+      "formula": "C48H84O47P2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM727653"
+      }
+    },
+    {
+      "id": "gdp_alpha_d_mannose",
+      "name": "GDP-alpha-D-mannose",
+      "formula": "C16H23N5O16P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1104188"
+      }
+    },
+    {
+      "id": "phosphomannan",
+      "name": "Phosphomannan",
+      "formula": "C42H73O39P",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM740003"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_2_55",
+      "name": "nicotinate D-ribonucleotide:phenol phospho-D-ribosyltransferase",
+      "ec": [
+        "2.4.2.55"
+      ]
+    },
+    {
+      "id": "ec_2_7_8_26",
+      "name": "adenosylcobinamide-GDP ribazoletransferase",
+      "ec": [
+        "2.7.8.26"
+      ]
+    },
+    {
+      "id": "ec_2_7_8_9",
+      "name": "phosphomannan mannosephosphotransferase",
+      "ec": [
+        "2.7.8.9"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "nicotinate D-ribonucleotide:phenol phospho-D-ribosyltransferase",
+      "equation": "nicotinate beta-D-ribonucleotide + phenol = phenyl 5-phospho-alpha-D-ribofuranoside + nicotinate + H(+)",
+      "ec": "2.4.2.55",
+      "substrates": [
+        {
+          "metabolite": "nicotinate_d_ribonucleotide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phenol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phenyl_5_phosphonato_d_ribofuranoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nicotinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_2_55"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:38619"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38619"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "adenosylcobinamide-GDP ribazoletransferase",
+      "ec": "2.7.8.26",
+      "substrates": [
+        {
+          "metabolite": "adenosylcob_iii_inamide_gdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phenyl_5_phosphonato_d_ribofuranoside",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gmp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phenyl_cobeta_adenosylcobamide_5_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_8_26"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR187948"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR187948"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "phosphomannan mannosephosphotransferase",
+      "ec": "2.7.8.9",
+      "substrates": [
+        {
+          "metabolite": "gmp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphomannan_mannosephosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gdp_alpha_d_mannose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphomannan",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_8_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR148459"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR148459"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_nicotinate_d_ribonucleotide_5-end-nad-phospho-ribonu-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nicotinate_d_ribonucleotide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-end-nad-phospho-ribonu-to-diphosphate"
+      },
+      "note": "Shares nicotinate D-ribonucleotide with 5'-end NAD-phospho-ribonu… to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57502"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nicotinate_d_ribonucleotide_cyclotriphosphate-to-nadp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nicotinate_d_ribonucleotide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cyclotriphosphate-to-nadp"
+      },
+      "note": "Shares nicotinate D-ribonucleotide with cyclotriphosphate to NADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57502"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nicotinate_d_ribonucleotide_pyridine-3-4-diol-to-cobamamide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nicotinate_d_ribonucleotide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "pyridine-3-4-diol-to-cobamamide"
+      },
+      "note": "Shares nicotinate D-ribonucleotide with pyridine-3,4-diol to cobamamide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57502"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phenol_2-naphthyl-beta-d-xylopyr-to-2-naphthol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phenol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-naphthyl-beta-d-xylopyr-to-2-naphthol"
+      },
+      "note": "Shares phenol with 2-Naphthyl-beta-D-xylopyr… to 2-naphthol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15882"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phenol_4-methoxybenzoate-to-formaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phenol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-methoxybenzoate-to-formaldehyde"
+      },
+      "note": "Shares phenol with 4-methoxybenzoate to formaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15882"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phenol_4-methylumbelliferyl-to-ctp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phenol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-methylumbelliferyl-to-ctp"
+      },
+      "note": "Shares phenol with 4-methylumbelliferyl… to CTP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15882"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phenol_acetylsalicylate-to-dibenzo-1-4-dioxine-2-3-d",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phenol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetylsalicylate-to-dibenzo-1-4-dioxine-2-3-d"
+      },
+      "note": "Shares phenol with acetylsalicylate to dibenzo[1,4]dioxine-2,3-d….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15882"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phenol_benzene-to-4-methylcatechol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phenol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "benzene-to-4-methylcatechol"
+      },
+      "note": "Shares phenol with benzene to 4-methylcatechol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15882"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phenol_creatinine-to-n5-formyl-5-6-7-8-tetrahy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phenol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "creatinine-to-n5-formyl-5-6-7-8-tetrahy"
+      },
+      "note": "Shares phenol with creatinine to N5-formyl-5,6,7,8-tetrahy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15882"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phenol_naphthalene-to-catechol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phenol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "naphthalene-to-catechol"
+      },
+      "note": "Shares phenol with naphthalene to catechol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15882"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nicotinate_2-phospho-cyclic-to-nicotinate-adenine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nicotinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-phospho-cyclic-to-nicotinate-adenine"
+      },
+      "note": "Shares nicotinate with 2'-phospho-cyclic… to nicotinate-adenine….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:32544"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nicotinate_6-demethylsterigmatocystin-to-acetylene",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nicotinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-demethylsterigmatocystin-to-acetylene"
+      },
+      "note": "Shares nicotinate with 6-demethylsterigmatocystin to acetylene.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:32544"
+          }
+        ]
+      }
+    }
+  ]
+}

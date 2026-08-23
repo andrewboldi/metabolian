@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2e-4z-2-hydroxy-6-oxono-to-o2 "(2E,4Z)-2-hydroxy-6-oxono… to O2" {
-  spacing 206
+  spacing 242
 
   spine at 0,0 {
     2e_4z_2_hydroxy_6_oxonona_2_4_dienedioate
@@ -18,11 +18,93 @@ pathway 2e-4z-2-hydroxy-6-oxono-to-o2 "(2E,4Z)-2-hydroxy-6-oxono… to O2" {
     biphenyl_2_2_3_triol
   }
 
+  branch from 2_hydroxy_6_oxo_6_2_hydroxyphenyl_hexa_2_4_dieno side left {
+    2_hydroxy_6_oxo_6_2_hydroxyphenyl_hexa_2_4_dieno
+    <-> ec_3_7_1_8 [3.7.1.8] +h +salicylate +h2o
+    2e_2_hydroxypenta_2_4_dienoate
+  }
 
+  branch from 2_hydroxy_6_oxo_6_2_hydroxyphenyl_hexa_2_4_dieno side right {
+    2_hydroxy_6_oxo_6_2_hydroxyphenyl_hexa_2_4_dieno
+    <-> ec_3_7_1_8 [3.7.1.8] +h +salicylate +h2o
+    2_keto_4_pentenoate
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> . +2r_3r_2_2r_2_2r_2_amino_1_hydroxy_3_1h_indol_3 +h +neuromedin_b_1_3
+    neuromedin_b
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> . +neuromedin_n +neuromedin_n_1_4
+    l_leucine
+  }
 
+  branch from biphenyl_2_2_3_triol side left {
+    biphenyl_2_2_3_triol
+    <-> . +h +o2
+    2z_2e_2_hydroxy_6_oxo_6_2_hydroxyphenyl_hexa_2
+  }
 
+  branch from o2 side right {
+    o2
+    <-> . +12_hydroxyeicosatetraenoate +h +nadph +12_20_dihete +h2o
+    nadp
+  }
 
+  branch from o2 side left {
+    o2
+    <-> . +5_oxo_12_s_hydroxy_eicosa_6e_8z_10e_14z_tetraeno
+    5_oxo_6e_8z_11z_14z_eicosatetraenoate
+  }
 
+  branch from h side right {
+    h
+    <-> . +17_estradiol_3_4_quinone +glutathione
+    4_hydroxy_17beta_estradiol_2_s_glutathione
+  }
+
+  branch from h side left {
+    h
+    <-> . +spermidine +l_lysine +deoxyhypusine
+    propane_1_3_diamine
+  }
+
+  branch from salicylate side right {
+    salicylate
+    <-> . +ethanol +h +h2o
+    ethyl_salicylate
+  }
+
+  branch from salicylate side left {
+    salicylate
+    <-> . +pyruvate
+    chorismate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +superoxide +h +melatonin
+    n_gamma_acetyl_n_2_formyl_5_methoxykynurenamine
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +5_ht_moduline +d_ala_leu
+    l_leucyl_l_serine
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +coa_18_cooh_16e_dinor_lte5 +h2o2
+    coa_omega_cooh_dinor_lte4
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +benzo_a_pyrene_2_3_oxide +nadp +h2o +h +nadph
+    benzo_a_pyrene
+  }
 }

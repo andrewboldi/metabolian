@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-2-dioctanoyl-3-d-gala-to-o-pantetheine-4-phosp "1,2-dioctanoyl-3-β-D-gala… to O-(pantetheine-4'-phospho…" {
-  spacing 188
+  spacing 200
 
   spine at 0,0 {
     1_2_dioctanoyl_3_d_galactosyl_sn_glycerol
@@ -18,39 +18,51 @@ pathway 1-2-dioctanoyl-3-d-gala-to-o-pantetheine-4-phosp "1,2-dioctanoyl-3-β-D-
     octanoate
   }
 
-  branch from octanoate side left {
-    octanoate
-    <-> ec_6_2_1_3 [6.2.1.3] +octanoyl_coa +diphosphate +amp +coa
-    atp
-  }
-
-  branch from octanoate side right {
-    octanoate
-    <-> . +h +o2 +nadph +nadp +h2o
-    7_hydroxy_octanoate
-  }
-
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_137 [4.2.3.137] +fpp
-    e_2_epi_caryophyllene
+    <-> . +2_cis_6_trans_farnesyl_diphosphate
+    bisabolene
   }
 
   branch from ppi side right {
     ppi
-    <-> . +atp +hplus
-    p1_p4_bis_5_adenosyl_tetraphosphate
+    <-> . +2_cis_6_trans_farnesyl_diphosphate
+    e_bisabolene
   }
 
   branch from holo-acp side left {
     holo-acp
-    <-> ec_6_2_1_51 [6.2.1.51] +17_4_hydroxyphenyl_heptadecanoate +atp +amp +ppi
-    o_s_17_4_hydroxyphenyl_heptadecanoyl_pantetheine
+    <-> . +malonyl-coa +acetyl_coa +hplus +co2 +coa +h2o
+    o_s_3_6_8_9_tetrahydroxy_1_oxo_3_2_oxopropyl_1_2
   }
 
   branch from holo-acp side right {
     holo-acp
-    <-> . +l_serine +coa +hplus
-    adenosine_3_5_bismonophosphate
+    <-> . +malonyl-coa +acetyl_coa +hplus +co2 +coa +h2o
+    o_s_3_2_4_dioxopentyl_3_6_8_9_tetrahydroxy_1_oxo
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +2_cis_6_trans_farnesyl_diphosphate +h2o
+    6e_nerolidol
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_228 [4.2.3.228] +gpp
+    z_ocimene
+  }
+
+  branch from holo-acp side left {
+    holo-acp
+    <-> . +malonyl-coa +hplus +co2 +coa +h2o
+    o_3r_atrochrysone_carboxylpantetheine_4_phosphor
+  }
+
+  branch from holo-acp side right {
+    holo-acp
+    <-> . +malonyl-coa +acetyl_coa +hplus +co2 +coa
+    o_s_3_5_7_9_11_13_hexaoxotetradecanoyl_pantethei
   }
 }

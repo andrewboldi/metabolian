@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-azaniumyl-2-deoxyisocho-to-nad "2-azaniumyl-2-deoxyisocho… to NAD" {
-  spacing 232
+  spacing 220
 
   spine at 0,0 {
     2_azaniumyl_2_deoxyisochorismate
@@ -16,17 +16,5 @@ pathway 2-azaniumyl-2-deoxyisocho-to-nad "2-azaniumyl-2-deoxyisocho… to NAD" {
     3_4_aminophenyl_pyruvate
     <-> ec_1_3_1_121 [1.3.1.121] +nadh +co2 +h -nad
     4_amino_4_deoxyprephenate
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_193 [1.1.1.193] +nadh +5_amino_6_5_phospho_d_ribosylamino_uracil +h
-    5_amino_6_5_phospho_d_ribitylamino_uracil
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_76 [1.1.1.76] +nadh +actn +h
-    s_s_butane_2_3_diol
   }
 }

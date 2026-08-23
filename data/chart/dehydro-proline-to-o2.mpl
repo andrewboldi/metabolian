@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dehydro-proline-to-o2 "Dehydro-proline to O2" {
-  spacing 194
+  spacing 242
 
   spine at 0,0 {
     dehydro_proline
@@ -24,37 +24,85 @@ pathway dehydro-proline-to-o2 "Dehydro-proline to O2" {
 
   branch from h side right {
     h
-    <-> ec_1_18_1_2 [1.18.1.2] +dibromothymohydroquinone +nadp +nadph
-    dibromothymoquinone
+    <-> ec_3_6_3_34 [3.6.3.34] +adp +phosphate +atp +h2o
+    fe_iii_dicitrate
   }
 
   branch from h side left {
     h
-    <-> . +fluoride +alpha_d_xylose +h2o
-    alpha_d_xylopyranosyl_fluoride
+    <-> . +4_coumaroyl_diketide +coa +h2o
+    p_coumaroyl_diketide_coa
   }
 
   branch from h2o2 side right {
     h2o2
-    <-> ec_1_11_1_7 [1.11.1.7] +4_methylphenol +h2o
-    4_methylcatechol
+    <-> . +2_indol_3_ylidene_ethanol +o2
+    indole_3_ethanol
   }
 
   branch from h2o2 side left {
     h2o2
-    <-> ec_1_14_18_1 [1.14.18.1] +methyl_3_4_dihydroxybenzoate +h2o
-    methylparaben
+    <-> . +2_3z_indol_3_ylidene_acetate +o2
+    indol_3_yl_acetate
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_3_8_7 [1.3.8.7] +e_3_indol_3_yl_acryloyl_coa +h +h2o2
-    3_indolepropionyl_coa
+    <-> ec_1_13_11_49 [1.13.11.49] +chlorous_acid +h
+    chloride
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_11_1 [1.14.11.1] +r_carnitine +co2 +bromosuccinate +4_trimethylamino_butanoate
-    3_bromo_2_ketoglutarate
+    <-> ec_1_14_13_97 [1.14.13.97] +hyodeoxycholate +nadp +h2o +h +lithocholate
+    nadph
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_14_13_101 [1.14.13.101] +senecionine_n_oxide +nadp +h2o +h +nadph
+    senecionine
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +s_autumnaline +h +nadph +isoandrocymbine +h2o
+    nadp
+  }
+
+  branch from h side right {
+    h
+    <-> . +5_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem +h2o
+    4z_4_2e_3_carboxylato_3_hydroxyprop_2_en_1_ylid
+  }
+
+  branch from h side left {
+    h
+    <-> . +dehydroascorbide +h2o
+    dehydroascorbate_bicyclic_form
+  }
+
+  branch from h2o2 side right {
+    h2o2
+    <-> . +2_3z_indol_3_ylidene_acetaldehyde +o2
+    indole_3_acetaldehyde
+  }
+
+  branch from h2o2 side left {
+    h2o2
+    <-> ec_1_13_99_3 [1.13.99.3] +indole_3_methanol +o2 +h2o
+    skatole
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_1_1_1 [3.1.1.1] +3_2_2_dichlorovinyl_2_2_dimethylcyclopropanecarb +3_phenoxyphenyl_methanol
+    trans_permethrin
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_4_2_1_138 [4.2.1.138] +caryolan_1_ol
+    caryophyllene
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1r-2r-cyclohexa-3-5-die-to-norsalsolinol "(1R,2R)-cyclohexa-3,5-die… to norsalsolinol" {
-  spacing 276
+  spacing 324
 
   spine at 0,0 {
     1r_2r_cyclohexa_3_5_diene_1_2_diol
@@ -20,25 +20,73 @@ pathway 1r-2r-cyclohexa-3-5-die-to-norsalsolinol "(1R,2R)-cyclohexa-3,5-die… t
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_150 [2.1.1.150] +7_hydroxyisoflavones +sam +hplus
-    7_methoxyisoflavones
+    <-> . +3_methyl_1_2_didehydro_2_3_dihydrobotryococcene +sam +hplus
+    3_20_dimethyl_1_2_21_22_tetradehydro_2_3_20_21_t
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_84 [2.1.1.84] +3_4_5_6_tetrahydroxy_3_7_dimethoxyflavone +sam
-    3_4_5_trihydroxy_3_6_7_trimethoxyflavone
+    <-> . +precorrin_7 +sam +hplus
+    precorrin_8x
   }
 
   branch from formaldehyde side left {
     formaldehyde
-    <-> . +5_5_dehydrodivanillate +nadh +o2 +hplus +nad +h2o
-    5_6_6_trihydroxy_5_methoxy_biphenyl_3_3_dicarbox
+    <-> . +chlorotoluron +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    3_3_chloro_4_methylphenyl_1_methylurea
   }
 
   branch from formaldehyde side right {
     formaldehyde
-    <-> . +3_6_dichloro_2_methoxybenzoate +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
-    3_6_dichlorosalicylate
+    <-> . +metoxuron +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    3_3_chloro_4_methoxylphenyl_1_methylurea
+  }
+
+  branch from sam side left {
+    sam
+    <-> . +lathosterone +sah +hplus
+    4_methyllathosterone
+  }
+
+  branch from sam side right {
+    sam
+    <-> . +gibberellin_a1 +sah
+    gibberellin_a1_methyl_ester
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_275 [2.1.1.275] +gibberellin_a3 +sam
+    gibberellin_a3_methyl_ester
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_275 [2.1.1.275] +gibberellin_a20 +sam
+    gibberellin_a20_methyl_ester
+  }
+
+  branch from formaldehyde side left {
+    formaldehyde
+    <-> . +monuron +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    3_4_chlorophenyl_1_methylurea
+  }
+
+  branch from formaldehyde side right {
+    formaldehyde
+    <-> . +diuron +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    diuron_desmethyl
+  }
+
+  branch from dopamine side left {
+    dopamine
+    <-> . +l_glutamine +nh3
+    n_2_3_4_dihydroxyphenyl_ethyl_l_glutamine
+  }
+
+  branch from dopamine side right {
+    dopamine
+    <-> . +o2 +h2o
+    dopamine_quinone
   }
 }

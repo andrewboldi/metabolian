@@ -1,0 +1,410 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "h-to-7-25-dihydroxy-4-cholest-null",
+  "name": "H to 7α,25-dihydroxy-4-cholest…",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from H(+) to 7α,25-dihydroxy-4-cholesten-3-one, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR105366"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "7alpha_hydroxycholest_4_en_3_one",
+      "name": "7alpha-hydroxycholest-4-en-3-one",
+      "short": "7alpha-hydroxychole…",
+      "formula": "C27H44O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM730346"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "25_hydroxycholesterol",
+      "name": "25-hydroxycholesterol",
+      "short": "25-hydroxycholester…",
+      "formula": "C27H46O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM740834"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "7_25_dihydroxycholesterol",
+      "name": "7α,25-dihydroxycholesterol",
+      "short": "7α,25-dihydroxychol…",
+      "formula": "C27H46O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:37623"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "7_25_dihydroxy_4_cholesten_3_one",
+      "name": "7α,25-dihydroxy-4-cholesten-3-one",
+      "short": "7α,25-dihydroxy-4-c…",
+      "formula": "C27H44O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:81013"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_181",
+      "name": "cholest-5-ene-3beta,7alpha-diol 3beta-dehydrogenase",
+      "ec": [
+        "1.1.1.181"
+      ],
+      "xrefs": {
+        "uniprot": "Q9H2F3"
+      }
+    },
+    {
+      "id": "ec_1_14_13_100",
+      "name": "EC 1.14.13.100",
+      "ec": [
+        "1.14.13.100"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "cholest-5-ene-3beta,7alpha-diol 3beta-dehydrogenase",
+      "ec": "1.1.1.181",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "7alpha_hydroxycholest_4_en_3_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "25_hydroxycholesterol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_181"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR105366"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR105366"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR102295",
+      "ec": "1.14.13.100",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "25_hydroxycholesterol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "7_25_dihydroxycholesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_100"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR102295"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR102295"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "7alpha,25-dihydroxycholesterol + NAD(+) = 7alpha,25-dihydroxy-4-cholesten-3-one + NADH ...",
+      "equation": "7alpha,25-dihydroxycholesterol + NAD(+) = 7alpha,25-dihydroxy-4-cholesten-3-one + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "7_25_dihydroxycholesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_25_dihydroxy_4_cholesten_3_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:47156"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47156"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_25_hydroxycholesterol_h-to-7-25-dihydroxy-4-cholest",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "25_hydroxycholesterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-7-25-dihydroxy-4-cholest"
+      },
+      "note": "Shares 25-hydroxycholesterol with H to 7α,25-dihydroxy-4-cholest….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM740834"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_25_dihydroxycholesterol_3-5-unsubstituted-to-r-allantoin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_25_dihydroxycholesterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-5-unsubstituted-to-r-allantoin"
+      },
+      "note": "Shares 7α,25-dihydroxycholesterol with 3',5'-unsubstituted… to (R)-(−)-allantoin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:37623"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_25_dihydroxycholesterol_3-5-unsubstituted-to-r-allantoin-10592",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_25_dihydroxycholesterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-5-unsubstituted-to-r-allantoin-10592"
+      },
+      "note": "Shares 7α,25-dihydroxycholesterol with 3',5'-unsubstituted… to (R)-(−)-allantoin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:37623"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_25_dihydroxycholesterol_h-to-7-25-dihydroxy-4-cholest",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_25_dihydroxycholesterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-7-25-dihydroxy-4-cholest"
+      },
+      "note": "Shares 7α,25-dihydroxycholesterol with H to 7α,25-dihydroxy-4-cholest….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:37623"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_25_dihydroxy_4_cholesten_3_one_h-to-7-25-dihydroxy-4-cholest",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_25_dihydroxy_4_cholesten_3_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-7-25-dihydroxy-4-cholest"
+      },
+      "note": "Shares 7α,25-dihydroxy-4-cholesten-3-one with H to 7α,25-dihydroxy-4-cholest….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:81013"
+          }
+        ]
+      }
+    }
+  ]
+}

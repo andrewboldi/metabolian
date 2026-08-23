@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-1-deoxy-d-fructopyra-to-cortalcerone "N-(1-deoxy-β-D-fructopyra… to cortalcerone" {
-  spacing 188
+  spacing 164
 
   spine at 0,0 {
     n_1_deoxy_d_fructopyranos_1_yl_glycine_betaine
@@ -14,29 +14,5 @@ pathway n-1-deoxy-d-fructopyra-to-cortalcerone "N-(1-deoxy-β-D-fructopyra… to
     2_dehydro_d_glucopyranose
     <-> ec_4_2_1_110 [4.2.1.110] -h2o
     cortalcerone
-  }
-
-  branch from 2_dehydro_d_glucopyranose side left {
-    2_dehydro_d_glucopyranose
-    <-> . +2s_2_e_2r_3s_4r_5r_2_3_4_5_tetrahydroxyoxan_2_y +h2o +hplus
-    glutamate
-  }
-
-  branch from 2_dehydro_d_glucopyranose side right {
-    2_dehydro_d_glucopyranose
-    <-> . +n_1_deoxy_d_fructopyranos_1_yl_l_tyrosine_betain +o2 +h2o +h2o2
-    tyrosine
-  }
-
-  branch from glycine side left {
-    glycine
-    <-> . +n_n_dimethyl_l_argininium +glyoxylate
-    5_3_3_dimethylguanidino_2_oxopentanoate
-  }
-
-  branch from glycine side right {
-    glycine
-    <-> . +2s_2_ammonio_5_iminio_methylamino_methyl_amino +glyoxylate
-    5_3_methylguanidino_2_oxopentanoate
   }
 }

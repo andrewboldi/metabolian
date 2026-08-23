@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-glucopyranose-to-d-glucopyranose-null "D-glucopyranose to D-glucopyranose" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     glucose
@@ -14,29 +14,5 @@ pathway d-glucopyranose-to-d-glucopyranose-null "D-glucopyranose to D-glucopyran
     25_acyl_27_norcholesteryl_d_glucoside
     <-> . +h2o -glucose
     25_acyl_27_norcholesterol
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +l_xylose +phosphate +l_xylose
-    atp
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    lyxulose
-  }
-
-  branch from glucose side left {
-    glucose
-    <-> ec_5_3_1_5 [5.3.1.5]
-    d_fructofuranose
-  }
-
-  branch from glucose side right {
-    glucose
-    <-> ec_3_2_1_118 [3.2.1.118] +r_mandelonitrile +h2o
-    r_prunasin
   }
 }

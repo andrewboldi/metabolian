@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway calicheamicin-gamma-1-i-to-h "Calicheamicin gamma(1)I to H" {
-  spacing 200
+  spacing 212
 
   spine at 0,0 {
     calicheamicin_gamma_1_i
@@ -14,55 +14,65 @@ pathway calicheamicin-gamma-1-i-to-h "Calicheamicin gamma(1)I to H" {
     calicheamicin_psag
     <-> . +s_adenosyl_l_homocysteine +dtdp_3_o_methyl_beta_l_rhamnose -s_adenosyl_l_methionine -h
     dtdp_beta_l_rhamnose
-    <-> ec_2_1_1_349 [2.1.1.349] +1_6_didemethyltoxoflavin +s_adenosyl_l_methionine -1_demethyltoxoflavin -h
-    s_adenosyl_l_homocysteine
-  }
-
-  branch from dtdp_beta_l_rhamnose side left {
-    dtdp_beta_l_rhamnose
-    <-> . +h
-    dtdp_l_dihydrostreptose
-  }
-
-  branch from dtdp_beta_l_rhamnose side right {
-    dtdp_beta_l_rhamnose
-    <-> . +nadh +dtdp_4_dehydro_6_deoxy_alpha_d_glucose +h
-    nad
   }
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +tetracenomycin_e
-    tetracenomycin_b3
+    <-> . +s_adenosyl_l_homocysteine +h +1_5_dibromo_2_2_4_dibromophenoxy_3_methoxybenzen
+    3_5_dibromo_2_2_4_dibromophenoxy_phenol
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> ec_2_1_1_88 [2.1.1.88] +s_adenosyl_l_homocysteine +h +sexangularetin
-    herbacetin
+    <-> . +s_adenosyl_l_homocysteine +h +crotonosine
+    4_r_10_11_dihydroxy_5_azaspiro_cyclohexane_1_2
   }
 
   branch from h side left {
     h
-    <-> . +2r_3s_tartrate +1_o_4_coumaroyl_d_glucose +glucose
-    2r_3s_trans_coutaric_acid
+    <-> ec_2_7_8_8 [2.7.8.8] +cmp +phosphatidylserine_dihexadecanoyl_n_c16_0 +l_serine
+    cdp_dipalmitoyl_sn_glycerol
   }
 
   branch from h side right {
     h
-    <-> . +acetyl_coa +2r_3s_trans_coutaric_acid +coa
-    2_o_acetyl_3_o_trans_coutarate
+    <-> ec_2_7_8_8 [2.7.8.8] +cmp +phosphatidylserine_dioctadecanoyl_n_c18_0 +l_serine
+    cdp_1_2_dioctadecanoylglycerol
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_8_1_2 [2.8.1.2] +thiosulfate +pyruvate +sulfite
+    2_oxo_3_sulfanylpropanoate
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_4_1_90 [2.4.1.90] +udp +n_acetyllactosamine +aldehydo_n_acetyl_d_glucosamine
+    udp_alpha_d_galactose
   }
 
   branch from s_adenosyl_l_homocysteine side left {
     s_adenosyl_l_homocysteine
-    <-> . +limocitrin +s_adenosyl_l_methionine
-    3_3_4_5_7_pentahydroxy_8_methoxyflavone
+    <-> . +31r_8_12_diethylbacteriochlorophyllide_d +s_adenosyl_l_methionine +h
+    31r_8_12_diethylbacteriochlorophyllide_c
   }
 
   branch from s_adenosyl_l_homocysteine side right {
     s_adenosyl_l_homocysteine
-    <-> . +fusicocca_1_10_14_diene_16_hydroxymethyl_3_8beta +h +s_adenosyl_l_methionine
-    fusicocca_1_10_14_diene_3_8beta_16_triol
+    <-> . +mitomycin_b +s_adenosyl_l_methionine
+    6_demethylmitomycin_b
+  }
+
+  branch from s_adenosyl_l_methionine side left {
+    s_adenosyl_l_methionine
+    <-> . +s_adenosyl_l_homocysteine +1_5_dibromo_3_2_4_dibromophenoxy_2_methoxybenzen
+    2_4_dibromo_6_2_4_dibromophenoxy_phenol
+  }
+
+  branch from s_adenosyl_l_methionine side right {
+    s_adenosyl_l_methionine
+    <-> ec_1_21_98_3 [1.21.98.3] +5_deoxyadenosine +h +l_methionine +divinylprotochlorophyllide +h2o
+    mg_protoporphyrin_ix_13_monomethyl_ester
   }
 }

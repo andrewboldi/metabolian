@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-methyl-5-thio-d-ribulos-to-dimethyl-disulfide "S-methyl-5-thio-D-ribulos… to dimethyl disulfide" {
-  spacing 240
+  spacing 228
 
   spine at 0,0 {
     s_methyl_5_thio_d_ribulose_1_phosphate
@@ -16,17 +16,5 @@ pathway s-methyl-5-thio-d-ribulos-to-dimethyl-disulfide "S-methyl-5-thio-D-ribul
     ethene
     <-> ec_1_8_1_21 [1.8.1.21] +methanethiol +nad -nadh -hplus
     dimethyl_disulfide
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_418 [1.1.1.418] +nadh +isoavenastenone +co2
-    24e_4alpha_carboxy_stigmasta_7_24_241_dien_3bet
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_6_5_2 [1.6.5.2] +nadh +h +plastoquinone_9
-    plastoquinol_9
   }
 }

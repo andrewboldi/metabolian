@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-2-iminoethyl-phenol-to-2-4-hydroxyphenyl-ethan "4-(2-iminoethyl)phenol to 2-(4-hydroxyphenyl)ethanol" {
-  spacing 194
+  spacing 284
 
   spine at 0,0 {
     4_2_iminoethyl_phenol
@@ -20,43 +20,133 @@ pathway 4-2-iminoethyl-phenol-to-2-4-hydroxyphenyl-ethan "4-(2-iminoethyl)phenol
 
   branch from nh4 side left {
     nh4
-    <-> ec_4_4_1_13 [4.4.1.13] +z_1_l_cystein_s_yl_n_hydroxy_omega_methylsulfan +h2o +9_methylthio_nonyl_thiohydroximic_acid
-    pyruvate
+    <-> ec_3_5_4_11 [3.5.4.11] +h +2_amino_4_6_pteridinediol +h2o
+    2_4_6_trihydroxypteridine
   }
 
   branch from nh4 side right {
     nh4
-    <-> ec_3_5_1_4 [3.5.1.4] +butanamide +h +hydroxylamine
-    butyrylhydroxamic_acid
-  }
-
-  branch from 2_4_hydroxyphenyl_ethanol side left {
-    2_4_hydroxyphenyl_ethanol
-    <-> . +salidroside +h2o
-    glucose
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_14_12_26 [1.14.12.26] +nadh +1_3_dichlorobenzene +h +o2
-    1r_2s_3_5_dichlorocyclohexa_3_5_diene_1_2_diol
+    <-> ec_3_5_4_11 [3.5.4.11] +biolumazine +h +h2o
+    d_erythro_7_8_dihydrobiopterin
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_3_1_119 [1.3.1.119] +nadh +h +1r_2s_3_5_dichlorocyclohexa_3_5_diene_1_2_diol
-    3_5_dichlorocatechol
+    <-> ec_1_8_1_4 [1.8.1.4] +nadh +s_lipoic_acid +h
+    s_dihydrolipoic_acid
   }
 
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> . +udp +3_7_3_4_tetramethylquercetin_2_o_beta_d_glucosid +h
-    2_hydroxy_3_7_3_4_tetramethylquercetin
+  branch from nad side right {
+    nad
+    <-> ec_1_8_1_4 [1.8.1.4] +nadh +h +1_2_diselenolane_3_pentanoic_acid
+    6_8_diselenyloctanoic_acid
   }
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +3_6_7_2_4_pentamethylquercetagetin_3_o_beta_d_gl +h
-    3_6_7_2_4_pentamethylquercetagetin
+    <-> . +udp +beta_d_man_1_2_alpha_d_glc_1_3_alpha_d_man_1_2_a +h
+    beta_d_man_1_2_alpha_d_man_1_2_alpha_d_man_1_2_b
+  }
+
+  branch from udp_alpha_d_glucose side right {
+    udp_alpha_d_glucose
+    <-> . +udp +h +beta_d_man_1_2_alpha_d_man_1_2_alpha_d_man_1_2_b
+    beta_d_man_1_2_alpha_d_man_1_2_alpha_d_glc_1_3_a
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +l_proline +l_lysine +l_tryptophan
+    prolyl_tryptophanyl_lysine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +l_proline +l_threonine +l_tryptophan
+    pro_trp_thr
+  }
+
+  branch from nh4 side left {
+    nh4
+    <-> ec_3_5_3_15 [3.5.3.15] +h +benzoyl_l_arginine_amide +h2o
+    benzoyl_l_citrulline_amide
+  }
+
+  branch from nh4 side right {
+    nh4
+    <-> . +d_alanine +2_6_dichloroindophenol +h2o +reduced_2_6_dichlorophenolindophenol
+    pyruvate
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> ec_1_1_1_4 [1.1.1.4] +acetoin +h +nad
+    butane_2_3_diol
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_1_1_21 [1.1.1.21] +beta_d_galactose +h +nad
+    galactitol
+  }
+
+  branch from h side left {
+    h
+    <-> . +2_methyl_3_n_amyl_pyrrole +4_methoxy_2_2_bipyrrole_5_carboxaldehyde +atp +prodigiosin +phosphate
+    adp
+  }
+
+  branch from h side right {
+    h
+    <-> . +2_undecylpyrrole +4_methoxy_2_2_bipyrrole_5_carboxaldehyde +atp +adp +phosphate
+    undecylprodigiosin
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_48 [1.1.1.48] +nadh +h +d_galactono_1_4_lactone
+    beta_d_galactose
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_240 [1.1.1.240] +nadh +h +n_acetyl_d_glucosaminate +h2o
+    n_acetyl_beta_d_glucosamine
+  }
+
+  branch from udp_d_glucose side left {
+    udp_d_glucose
+    <-> ec_2_4_1_385 [2.4.1.385] +17_hydroxywithaferin_a +udp +hplus
+    17_sitoindoside_ix
+  }
+
+  branch from udp_d_glucose side right {
+    udp_d_glucose
+    <-> ec_2_4_1_385 [2.4.1.385] +27_hydroxywithanone +udp +hplus
+    withanone_27_o_d_glucoside
+  }
+
+  branch from udp side left {
+    udp
+    <-> ec_2_4_1_241 [2.4.1.241] +h +1_18_0_2_18_3_digalactosyldiacylglycerol +1_18_0_2_18_3_monogalactosyldiacylglycerol
+    udp_alpha_d_galactose
+  }
+
+  branch from udp side right {
+    udp
+    <-> ec_2_4_1_241 [2.4.1.241] +h +1_18_1_2_18_2_digalactosyldiacylglycerol +udp_alpha_d_galactose
+    1_18_1_2_18_2_monogalactosyldiacylglycerol
+  }
+
+  branch from udp_alpha_d_glucose side left {
+    udp_alpha_d_glucose
+    <-> . +udp +alpha_d_glcl_1_4_beta_d_gal_1_3_alpha_d_galnac_d +h
+    beta_d_gal_1_3_alpha_d_galnac_pp_und
+  }
+
+  branch from udp_alpha_d_glucose side right {
+    udp_alpha_d_glucose
+    <-> . +udp +alpha_d_glc_1_2_beta_d_glc_1_3_alpha_d_glcnac_pp +h
+    d_glc_1_3_d_glcnac_diphospho_ditrans_octacis_un
   }
 }

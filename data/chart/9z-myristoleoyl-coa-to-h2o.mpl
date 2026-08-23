@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 9z-myristoleoyl-coa-to-h2o "(9Z)-myristoleoyl-CoA to H2O" {
-  spacing 244
+  spacing 232
 
   spine at 0,0 {
     9z_myristoleoyl_coa
@@ -14,17 +14,5 @@ pathway 9z-myristoleoyl-coa-to-h2o "(9Z)-myristoleoyl-CoA to H2O" {
     3s_11z_3_hydroxyhexadec_11_enoyl_coa
     <-> ec_4_2_1_17 [4.2.1.17] -h2o
     2e_11z_hexadec_2_11_dienoyl_coa
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +2e_9z_octadecadienoyl_coa
-    3_s_hydroxy_cis_9_octadecenoyl_coa
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +12_13_dihydroxyoleic_acid +h
-    vernolate
   }
 }

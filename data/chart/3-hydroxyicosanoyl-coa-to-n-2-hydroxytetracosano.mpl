@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-hydroxyicosanoyl-coa-to-n-2-hydroxytetracosano "3-hydroxyicosanoyl-CoA to N-(2-hydroxytetracosanoyl…" {
-  spacing 242
+  spacing 308
 
   spine at 0,0 {
     3_hydroxyicosanoyl_coa
@@ -74,10 +74,10 @@ pathway 3-hydroxyicosanoyl-coa-to-n-2-hydroxytetracosano "3-hydroxyicosanoyl-CoA
     3s_3_hydroxydocosanoyl_coa
   }
 
-  branch from docosanoyl_coa side left {
-    docosanoyl_coa
-    <-> . +glycine +coa +hplus
-    n_docosanoylglycinate
+  branch from trans_2_docosenoyl_coa side left {
+    trans_2_docosenoyl_coa
+    <-> ec_4_2_1_134 [4.2.1.134] +3_hydroxydocosanoyl_coa
+    h2o
   }
 
   branch from docosanoyl_coa side right {
@@ -86,45 +86,111 @@ pathway 3-hydroxyicosanoyl-coa-to-n-2-hydroxytetracosano "3-hydroxyicosanoyl-CoA
     n_docosanoyl_4_hydroxysphinganine
   }
 
-  branch from 3_oxotetracosanoyl_coa side left {
+  branch from docosanoyl_coa side left {
+    docosanoyl_coa
+    <-> . +ketosphinganine +coa +hplus
+    n_docosanoyl_3_ketodihydrosphingosine
+  }
+
+  branch from 3_oxotetracosanoyl_coa side right {
     3_oxotetracosanoyl_coa
     <-> . +nad +nadh +hplus
     3s_3_hydroxytetracosanoyl_coa
   }
 
-  branch from trans_2_tetracosenoyl_coa side right {
+  branch from trans_2_tetracosenoyl_coa side left {
     trans_2_tetracosenoyl_coa
     <-> . +3_hydroxytetracosanoyl_coa +h2o
     h
   }
 
-  branch from tetracosanoyl_coa side left {
+  branch from tetracosanoyl_coa side right {
     tetracosanoyl_coa
     <-> . +c17_sphingosine +coa +hplus
     n_tetracosanoyl_c17_sphingosine
   }
 
-  branch from tetracosanoyl_coa side right {
+  branch from tetracosanoyl_coa side left {
     tetracosanoyl_coa
     <-> . +h2o +coa +hplus
     tetracosanoate
   }
 
-  branch from n_tetracosanoylsphinganine side left {
+  branch from n_tetracosanoylsphinganine side right {
     n_tetracosanoylsphinganine
     <-> . +h +o2 +nadph +n_tetracosanoyl_4r_hydroxysphinganine +h2o
     nadp
   }
 
-  branch from n_tetracosanoylsphinganine side right {
+  branch from n_tetracosanoylsphinganine side left {
     n_tetracosanoylsphinganine
     <-> . +h +o2 +nadph +nadp +h2o
     cer_d18_0_h24_0
   }
 
-  branch from n_2_hydroxytetracosanoyl_sphinganine side left {
+  branch from n_2_hydroxytetracosanoyl_sphinganine side right {
     n_2_hydroxytetracosanoyl_sphinganine
     <-> . +sphinganine +coa +hplus
     2_hydroxytetracosanoyl_coa
+  }
+
+  branch from icosanoyl_coa side left {
+    icosanoyl_coa
+    <-> . +h2o +coa +hplus
+    icosanoate
+  }
+
+  branch from icosanoyl_coa side right {
+    icosanoyl_coa
+    <-> . +1_hexadecanoyl_sn_glycero_3_phosphocholine +coa
+    1_palmitoyl_2_icosanoyl_sn_glycero_3_phosphochol
+  }
+
+  branch from malonyl-coa side left {
+    malonyl-coa
+    <-> . +isotridecanoyl_coa +hplus +co2 +coa
+    3_oxoisopentadecanoyl_coa
+  }
+
+  branch from malonyl-coa side right {
+    malonyl-coa
+    <-> . +isopentadecanoyl_coa +hplus +co2 +coa
+    3_oxoisoheptadecanoyl_coa
+  }
+
+  branch from docosanoyl_coa side left {
+    docosanoyl_coa
+    <-> ec_2_3_1_198 [2.3.1.198] +2_docosanoyl_sn_glycero_3_phosphate +coa
+    sn_glycerol_3_phosphate
+  }
+
+  branch from docosanoyl_coa side right {
+    docosanoyl_coa
+    <-> . +nadh +eicosanoyl_coa +acetyl_coa +h +h2o2 +o2 +nad +h2o
+    coa
+  }
+
+  branch from tetracosanoyl_coa side left {
+    tetracosanoyl_coa
+    <-> . +hco3 +atp +adp +pi +hplus
+    2_carboxytetracosanoyl_coa
+  }
+
+  branch from tetracosanoyl_coa side right {
+    tetracosanoyl_coa
+    <-> . +sphinga_4e_8z_dienine +coa +hplus
+    4e_8z_n_tetracosanoylsphinga_4_8_dienine
+  }
+
+  branch from sphinganine side left {
+    sphinganine
+    <-> . +fe2 +o2 +hplus +iron +h2o
+    phytosphingosine
+  }
+
+  branch from sphinganine side right {
+    sphinganine
+    <-> . +palmitoyl_coa +coa +hplus
+    n_hexadecanoylsphinganine
   }
 }

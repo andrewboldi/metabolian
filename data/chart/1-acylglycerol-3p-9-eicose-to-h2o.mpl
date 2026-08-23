@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-acylglycerol-3p-9-eicose-to-h2o "1-Acylglycerol-3P-9-Eicose to H2O" {
-  spacing 200
+  spacing 152
 
   spine at 0,0 {
     1_acylglycerol_3p_9_eicose
@@ -14,53 +14,5 @@ pathway 1-acylglycerol-3p-9-eicose-to-h2o "1-Acylglycerol-3P-9-Eicose to H2O" {
     atp
     <-> . +gadoleic_acid +coa -h2o
     9z_icos_9_enoyl_coa
-  }
-
-  branch from sn_glycerol_3_phosphate side left {
-    sn_glycerol_3_phosphate
-    <-> . +9e_myristelaidoyl_coa +coa
-    1_9z_tetradecenoyl_glycero_3_phosphate
-  }
-
-  branch from sn_glycerol_3_phosphate side right {
-    sn_glycerol_3_phosphate
-    <-> . +7z_hexadecenoyl_coa +coa
-    1_acylglycerol_3p_7_hexade
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
-    tenuecyclamide_b
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
-    tenuecyclamide_c
-  }
-
-  branch from coa side left {
-    coa
-    <-> ec_1_2_1_84 [1.2.1.84] +h +11z_octadecenoyl_coa +nadph +nadp
-    z_octadec_11_enol
-  }
-
-  branch from coa side right {
-    coa
-    <-> ec_2_3_3_20 [2.3.3.20] +dodecanoyl_coa +h2o +h
-    2r_2_decyl_3_oxotetradecanoate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    ulongamide_f
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    westiellamide
   }
 }

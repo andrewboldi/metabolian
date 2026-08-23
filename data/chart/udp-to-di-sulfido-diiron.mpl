@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-di-sulfido-diiron "UDP to di-μ-sulfido-diiron" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     udp
@@ -20,29 +20,5 @@ pathway udp-to-di-sulfido-diiron "UDP to di-μ-sulfido-diiron" {
     oxobut
     <-> ec_1_2_7_1 [1.2.7.1] +di_sulfido_diiron +coa -di_sulfido_diiron -co2 -hplus
     propionyl_coa
-  }
-
-  branch from glutamate side left {
-    glutamate
-    <-> ec_2_6_1_125 [2.6.1.125] +arginine +akg
-    5_guanidino_2_oxopentanoic_acid
-  }
-
-  branch from glutamate side right {
-    glutamate
-    <-> . +citrylglutamate +h2o
-    citrate
-  }
-
-  branch from propionyl_coa side left {
-    propionyl_coa
-    <-> . +carnitine +coa
-    o_propanoyl_l_carnitine
-  }
-
-  branch from propionyl_coa side right {
-    propionyl_coa
-    <-> . +myristoyl_coa +coa
-    2_methyl_3_oxopalmitoyl_coa
   }
 }

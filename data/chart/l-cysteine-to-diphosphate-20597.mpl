@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-cysteine-to-diphosphate-20597 "L-cysteine to diphosphate" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     cysteine
@@ -14,17 +14,5 @@ pathway l-cysteine-to-diphosphate-20597 "L-cysteine to diphosphate" {
     3_disulfanyl_l_alanine
     <-> . +amp_3_end_1 +atp -amp -ppi
     3_s_sulfanyl_l_cysteinyl_adenylyl_zwitterionic_g
-  }
-
-  branch from 2_ammonioprop_2_enoate side left {
-    2_ammonioprop_2_enoate
-    <-> . +3_sulfanylpentan_1_ol_l_cysteine
-    3_mercaptopentanol
-  }
-
-  branch from 2_ammonioprop_2_enoate side right {
-    2_ammonioprop_2_enoate
-    <-> . +s_ethyl_l_cysteine
-    ethanethiol
   }
 }

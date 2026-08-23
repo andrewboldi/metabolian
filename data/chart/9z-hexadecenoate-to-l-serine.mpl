@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 9z-hexadecenoate-to-l-serine "(9Z)-hexadecenoate to L-serine" {
-  spacing 302
+  spacing 272
 
   spine at 0,0 {
     9z_hexadecenoate
@@ -16,35 +16,5 @@ pathway 9z-hexadecenoate-to-l-serine "(9Z)-hexadecenoate to L-serine" {
     h
     <-> ec_2_7_8_8 [2.7.8.8] +cmp +phosphatidylserine_dihexadec_9_enoyl_n_c16_1 -l_serine
     cdp_1_2_dihexadec_9_enoylglycerol
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +methionyl_tryptophanyl_phenylalanine +l_tryptophan +l_phenylalanine
-    l_methionine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    phenobarbital_o_glucuronide
-  }
-
-  branch from 1_2_di_9z_hexadecenoyl_sn_glycero_3_phosphoethan side left {
-    1_2_di_9z_hexadecenoyl_sn_glycero_3_phosphoethan
-    <-> . +9z_hexadecenoate +h +h2o
-    pe_16_1_9z_0_0
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    pc_18_1_9z_e_2_0
-  }
-
-  branch from h side left {
-    h
-    <-> . +hydrogenobyrinate
-    precorrin_8
   }
 }

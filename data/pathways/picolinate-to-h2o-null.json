@@ -1,0 +1,444 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "picolinate-to-h2o-null",
+  "name": "picolinate to H2O",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from picolinate to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR195554"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "picolinate",
+      "name": "picolinate",
+      "formula": "C6H4NO2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM12691"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "2_aminomuconate_6_semialdehyde",
+      "name": "2-aminomuconate 6-semialdehyde",
+      "short": "2-aminomuconate…",
+      "formula": "C6H7NO3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1371250"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "cis_cis_2_amino_3_3_oxoprop_1_enyl_but_2_enedioa",
+      "name": "cis,cis-2-amino-3-(3-oxoprop-1-enyl)but-2-enedioate",
+      "short": "cis,cis-2-amino-3-(…",
+      "formula": "C7H6NO5",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1560578"
+      }
+    },
+    {
+      "id": "quinolinate",
+      "name": "quinolinate",
+      "formula": "C7H3NO4",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM555"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR195554",
+      "substrates": [
+        {
+          "metabolite": "picolinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_aminomuconate_6_semialdehyde",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR195554"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR195554"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR206286",
+      "substrates": [
+        {
+          "metabolite": "2_aminomuconate_6_semialdehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cis_cis_2_amino_3_3_oxoprop_1_enyl_but_2_enedioa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR206286"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR206286"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR206490",
+      "substrates": [
+        {
+          "metabolite": "cis_cis_2_amino_3_3_oxoprop_1_enyl_but_2_enedioa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "quinolinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR206490"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR206490"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_picolinate_2-butenoic-acid-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "picolinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-butenoic-acid-to-coa"
+      },
+      "note": "Shares picolinate with 2-butenoic acid to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM12691"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_picolinate_h-to-3-5-dichloro-2-methylmuco-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "picolinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-3-5-dichloro-2-methylmuco-null"
+      },
+      "note": "Shares picolinate with H to 3,5-Dichloro-2-methylmuco….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM12691"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_picolinate_picolinate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "picolinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "picolinate-to-h2o"
+      },
+      "note": "Shares picolinate with picolinate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM12691"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_aminomuconate_6_semialdehyde_25s-3alpha-7alpha-12alp-to-nad-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_aminomuconate_6_semialdehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "25s-3alpha-7alpha-12alp-to-nad-null"
+      },
+      "note": "Shares 2-aminomuconate 6-semialdehyde with (25S)-3alpha,7alpha,12alp… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371250"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_aminomuconate_6_semialdehyde_4-hydroxy-2-oxopentanoic-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_aminomuconate_6_semialdehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxy-2-oxopentanoic-to-h2o"
+      },
+      "note": "Shares 2-aminomuconate 6-semialdehyde with 4-hydroxy-2-oxopentanoic… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371250"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_aminomuconate_6_semialdehyde_4-hydroxy-2-oxopentanoic-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_aminomuconate_6_semialdehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxy-2-oxopentanoic-to-h2o-null"
+      },
+      "note": "Shares 2-aminomuconate 6-semialdehyde with 4-hydroxy-2-oxopentanoic… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371250"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_aminomuconate_6_semialdehyde_picolinate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_aminomuconate_6_semialdehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "picolinate-to-h2o"
+      },
+      "note": "Shares 2-aminomuconate 6-semialdehyde with picolinate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371250"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_aminomuconate_6_semialdehyde_r-lipoamide-to-s-8-2-methylbutanoyl-di",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_aminomuconate_6_semialdehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-lipoamide-to-s-8-2-methylbutanoyl-di"
+      },
+      "note": "Shares 2-aminomuconate 6-semialdehyde with (R)-lipoamide to S(8)-(2-methylbutanoyl)di….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371250"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cis_cis_2_amino_3_3_oxoprop_1_enyl_but_2_enedioa_2-aminophenol-to-l-glutamate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cis_cis_2_amino_3_3_oxoprop_1_enyl_but_2_enedioa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-aminophenol-to-l-glutamate"
+      },
+      "note": "Shares cis,cis-2-amino-3-(3-oxoprop-1-enyl)but-2-enedioate with 2-aminophenol to L-glutamate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1560578"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cis_cis_2_amino_3_3_oxoprop_1_enyl_but_2_enedioa_2-aminophenol-to-l-glutamate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cis_cis_2_amino_3_3_oxoprop_1_enyl_but_2_enedioa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-aminophenol-to-l-glutamate-null"
+      },
+      "note": "Shares cis,cis-2-amino-3-(3-oxoprop-1-enyl)but-2-enedioate with 2-aminophenol to L-glutamate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1560578"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cis_cis_2_amino_3_3_oxoprop_1_enyl_but_2_enedioa_picolinate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cis_cis_2_amino_3_3_oxoprop_1_enyl_but_2_enedioa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "picolinate-to-h2o"
+      },
+      "note": "Shares cis,cis-2-amino-3-(3-oxoprop-1-enyl)but-2-enedioate with picolinate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1560578"
+          }
+        ]
+      }
+    }
+  ]
+}

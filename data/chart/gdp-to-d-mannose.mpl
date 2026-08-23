@@ -4,11 +4,11 @@
 # edit the generator, not this file.
 
 pathway gdp-to-d-mannose "GDP to α-D-mannose…" {
-  spacing 212
+  spacing 340
 
   spine at 0,0 {
     gdp
-    <-> . +d_mannosyl_phosphomycoketide -phosphomycoketide_c32 -h
+    <-> ec_2_4_1_83 [2.4.1.83] +beta_d_mannosyl_c55_omega_saturated_dolichyl_pho -an_archeal_dolichol_phosphate
     gdp_alpha_d_mannose
     <-> . +l_galactose_1_phosphate -h -gdp_beta_l_galactose
     alpha_d_mannose_1_phosphate
@@ -18,61 +18,103 @@ pathway gdp-to-d-mannose "GDP to α-D-mannose…" {
 
   branch from gdp_alpha_d_mannose side left {
     gdp_alpha_d_mannose
-    <-> ec_2_4_1_361 [2.4.1.361] +gdp +h +2_o_beta_d_mannosyl_1_2_beta_d_mannosyl_bis_myo
-    bis_myo_inositol_1_3_phosphate
-  }
-
-  branch from gdp_alpha_d_mannose side right {
-    gdp_alpha_d_mannose
     <-> . +gdp +beta_d_man_1_3_beta_d_glc_1_3_alpha_d_glcnac_pp +h
     d_glc_1_3_d_glcnac_diphospho_ditrans_octacis_un
   }
 
-  branch from h side left {
-    h
-    <-> ec_1_3_1_10 [1.3.1.10] +nadh +o_s_2e_11z_triacontadienoylpantetheine_4_phospho +nad
-    o_s_11z_triacontenoylpantetheine_4_phosphoryl_l
-  }
-
-  branch from h side right {
-    h
-    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_9z_3_hydroxyoctacosenoylpantetheine_4_pho +nadp +nadph
-    o_s_9z_3_oxooctacosenoylpantetheine_4_phosphoryl
+  branch from gdp_alpha_d_mannose side right {
+    gdp_alpha_d_mannose
+    <-> . +gdp +beta_d_man_1_4_beta_d_glc_1_3_alpha_d_galnac_pp +h
+    beta_d_glc_1_3_alpha_d_galnac_pp_und
   }
 
   branch from alpha_d_mannose_1_phosphate side left {
     alpha_d_mannose_1_phosphate
-    <-> ec_2_4_1_320 [2.4.1.320] +aldehydo_n_acetyl_d_glucosamine +phosphate
-    d_manp_1_4_d_glcpnac
-  }
-
-  branch from alpha_d_mannose_1_phosphate side right {
-    alpha_d_mannose_1_phosphate
-    <-> ec_2_4_1_281 [2.4.1.281] +beta_d_glucose +phosphate
+    <-> ec_2_4_1_281 [2.4.1.281] +aldehydo_d_glucose +phosphate
     d_manp_1_4_d_glcp
   }
 
-  branch from gdp_beta_l_galactose side left {
-    gdp_beta_l_galactose
-    <-> ec_2_7_7_69 [2.7.7.69] +gdp +l_galactose_1_phosphate +h
-    phosphate
+  branch from h side right {
+    h
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    pa_18_3_9z_12z_15z_18_3_9z_12z_15z
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    pc_16_1_9z_18_3_9z_12z_15z
   }
 
   branch from adp side right {
     adp
-    <-> ec_2_7_1_1 [2.7.1.1] +1_5_anhydro_d_glucitol_6_phosphate +h +atp
-    1_5_anhydro_d_glucitol
+    <-> ec_3_6_3_1 [3.6.3.1] +h +phosphate +atp +h2o
+    1_octadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph
   }
 
   branch from adp side left {
     adp
-    <-> ec_2_7_1_1 [2.7.1.1] +d_arabinose_5_phosphate +h +atp
-    d_arabinofuranose
+    <-> ec_3_6_3_1 [3.6.3.1] +h +phosphate +atp +h2o
+    1_octadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
   }
 
-  branch from d_mannose_1_6_bisphosphate side right {
-    d_mannose_1_6_bisphosphate
-    <-> . +atp +h +adp
-    d_mannose_1_phosphate
+  branch from gdp side right {
+    gdp
+    <-> . +4_amino_2_methyl_5_phosphooxymethyl_pyrimidine +h +4_amino_5_hydroxymethyl_2_methylpyrimidine
+    gtp
+  }
+
+  branch from gdp side left {
+    gdp
+    <-> . +h +2s_2_phospholactate +gtp
+    s_lactate
+  }
+
+  branch from gdp_alpha_d_mannose side right {
+    gdp_alpha_d_mannose
+    <-> . +gdp +alpha_d_man_1_4_beta_d_gal_1_3_alpha_d_glcnac_pp +h
+    d_gal_1_3_d_glcnac_diphospho_ditrans_octacis_un
+  }
+
+  branch from gdp_alpha_d_mannose side left {
+    gdp_alpha_d_mannose
+    <-> . +gdp +beta_d_man_1_2_alpha_d_man_1_2_alpha_d_man_1_3_a +h
+    d_mannosyl_1_3_d_mannosyl_1_3_d_mannosyl_1_3_n
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_hexadecanoyl_2_z_octadec_9_enoyl_sn_glycero_3
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    1_9z_hexadecenoyl_2_9z_12z_octadecadienoyl_sn_gl
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    1_2_dioleoyl_sn_glycero_3_phosphoethanolamine
+  }
+
+  branch from adp side right {
+    adp
+    <-> ec_3_6_3_1 [3.6.3.1] +h +phosphate +atp +h2o
+    18_0_18_3_pe
+  }
+
+  branch from adp side left {
+    adp
+    <-> ec_3_6_3_1 [3.6.3.1] +h +phosphate +atp +h2o
+    1_oleoyl_2_linoleoyl_sn_glycero_3_phosphoethanol
   }
 }

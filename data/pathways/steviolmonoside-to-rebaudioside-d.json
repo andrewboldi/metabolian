@@ -89,15 +89,6 @@
       "xrefs": {
         "chebi": "CHEBI:145022"
       }
-    },
-    {
-      "id": "rebaudioside_b",
-      "name": "rebaudioside B",
-      "formula": "C38H59O18",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:145013"
-      }
     }
   ],
   "enzymes": [],
@@ -269,46 +260,93 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "steviolbioside + UDP-alpha-D-glucose = rebaudioside B + UDP + H(+)",
-      "equation": "steviolbioside + UDP-alpha-D-glucose = rebaudioside B + UDP + H(+)",
-      "substrates": [
-        {
-          "metabolite": "steviolbioside",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp_d_glucose",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "rebaudioside_b",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:61752"
+      "id": "xt_steviolmonoside_steviol-to-rebaudioside-m",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "steviolmonoside"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "steviol-to-rebaudioside-m"
+      },
+      "note": "Shares steviolmonoside with steviol to rebaudioside M.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:61752"
+            "db": "ChEBI",
+            "id": "CHEBI:145010"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_steviolbioside_isatin-to-2r-dimboa-glucoside",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "steviolbioside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isatin-to-2r-dimboa-glucoside"
+      },
+      "note": "Shares steviolbioside with isatin to (2R)-DIMBOA glucoside.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:145009"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_stevioside_steviol-to-rebaudioside-m",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "stevioside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "steviol-to-rebaudioside-m"
+      },
+      "note": "Shares stevioside with steviol to rebaudioside M.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:9271"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_rebaudioside_d_steviol-to-rebaudioside-m",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "rebaudioside_d"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "steviol-to-rebaudioside-m"
+      },
+      "note": "Shares rebaudioside D with steviol to rebaudioside M.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:145022"
           }
         ]
       }

@@ -205,6 +205,36 @@ export function loadReactions(chebi) {
   return { reactions: out, stats: { skippedMismatch, skippedGeneric, skippedUnbalanced } };
 }
 
+/**
+ * EC number -> a representative human UniProt accession, from the ExPASy ENZYME
+ * DR (database cross-reference) lines.
+ *
+ * enzyme.dat lists, per EC, the UniProt entries that carry that activity as
+ * "accession, ENTRYNAME_ORG" pairs. It does NOT carry HGNC gene symbols, and the
+ * UniProt entry name is not one (KPYM ≠ the PKM gene, HXK1 ≠ HK1, MDHC ≠ MDH1),
+ * so a gene symbol cannot be derived here without fabricating it. The accession,
+ * however, is a real, citable Rhea/ExPASy → UniProt link: we take the first human
+ * entry as the enzyme's representative protein cross-reference. One per EC keeps
+ * it deterministic and consistent with the module collapsing an EC to one enzyme.
+ */
+export function expasyUniprot() {
+  const file = join(DIR, "enzyme.dat");
+  const out = new Map();
+  if (!existsSync(file)) return out;
+  let ec = null;
+  const commit = (ec, acc) => { if (ec && acc && !out.has(ec)) out.set(ec, acc); };
+  for (const line of readFileSync(file, "utf8").split("\n")) {
+    if (line.startsWith("ID   ")) { ec = line.slice(5).trim(); continue; }
+    if (line.startsWith("DR   ") && ec && !out.has(ec)) {
+      for (const ent of line.slice(5).split(";")) {
+        const m = ent.trim().match(/^([A-Z0-9]+),\s*[A-Za-z0-9]+_HUMAN\b/);
+        if (m) { commit(ec, m[1]); break; }
+      }
+    }
+  }
+  return out;
+}
+
 if (import.meta.url === `file://${process.argv[1]}`) {
   const chebi = chebiTable();
   console.log(`ChEBI: ${chebi.size} compounds (${[...chebi.values()].filter((c) => c.formula).length} with a formula)`);

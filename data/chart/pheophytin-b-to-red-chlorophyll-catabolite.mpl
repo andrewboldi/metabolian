@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway pheophytin-b-to-red-chlorophyll-catabolite "pheophytin b to Red chlorophyll catabolite" {
-  spacing 212
+  spacing 152
 
   spine at 0,0 {
     pheophytin_b
@@ -16,65 +16,5 @@ pathway pheophytin-b-to-red-chlorophyll-catabolite "pheophytin b to Red chloroph
     pheophorbide_a
     <-> ec_1_14_12_20 [1.14.12.20] +h +o2 +nadph -red_chlorophyll_catabolite
     nadp
-  }
-
-  branch from phytol side left {
-    phytol
-    <-> ec_3_1_1_14 [3.1.1.14] +chlorophyllide_a +h2o
-    chlorophyll_a
-  }
-
-  branch from phytol side right {
-    phytol
-    <-> . +pheophytin_b +h2o
-    pheide_b
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_4_19_13 [3.4.19.13] +indol_3_ylmethylisothiocyanate_gamma_glu_cys +indol_3_ylmethylisothiocyanate_l_cysteine
-    l_glutamate
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_4_19_13 [3.4.19.13] +s_indol_3_ylmethylisothiocyanyl_l_cysteinylglyci +l_glutamate
-    indol_3_ylmethylisothiocyanate_glutathione
-  }
-
-  branch from pheophorbide_a side left {
-    pheophorbide_a
-    <-> ec_3_1_1_82 [3.1.1.82] +h2o +h +methanol
-    c_132_carboxypyropheophorbide_a
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    pe_18_1_9z_18_3_9z_12z_15z
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    18_2_18_3_pe
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +2e_geranial +h +nadph
-    1s_2s_4s_dihydrocarveol
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +dihydrocarveol +h +nadph
-    phellandral
-  }
-
-  branch from red_chlorophyll_catabolite side right {
-    red_chlorophyll_catabolite
-    <-> . +h2o
-    epoxypheophorbide_a
   }
 }

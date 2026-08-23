@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-acetylneuraminyl-2-3-to-3-fucosyllactose "α-N-acetylneuraminyl-(2→3… to 3-fucosyllactose" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     n_acetylneuraminyl_2_3_d_galactosyl_1_4_d_gluco
@@ -14,5 +14,17 @@ pathway n-acetylneuraminyl-2-3-to-3-fucosyllactose "α-N-acetylneuraminyl-(2→3
     lactose
     <-> . +gdp_l_fucose -gdp -hplus
     3_fucosyllactose
+  }
+
+  branch from gdp_l_fucose side left {
+    gdp_l_fucose
+    <-> . +d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_glc +gdp +hplus
+    l_fucp_1_3_d_galp_1_4_d_glcpnac_1_3_d_galp_1_4
+  }
+
+  branch from gdp_l_fucose side right {
+    gdp_l_fucose
+    <-> . +d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_glcnac_1_3_d +gdp +hplus
+    d_galp_1_4_l_fucp_1_3_d_glcpnac_1_3_d_galp_1_4
   }
 }

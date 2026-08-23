@@ -139,44 +139,6 @@
       "xrefs": {
         "chebi": "CHEBI:15667"
       }
-    },
-    {
-      "id": "c28_steroid",
-      "name": "C28-steroid",
-      "formula": "C28H50",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:188921"
-      }
-    },
-    {
-      "id": "22s_22_hydroxy_c28_steroid",
-      "name": "(22S)-22-hydroxy C28-steroid",
-      "short": "22-hydroxy…",
-      "formula": "C28H50O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:188922"
-      }
-    },
-    {
-      "id": "c29_steroid",
-      "name": "C29-steroid",
-      "formula": "C29H52",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:188923"
-      }
-    },
-    {
-      "id": "22s_22_hydroxy_c29_steroid",
-      "name": "(22S)-22-hydroxy C29-steroid",
-      "short": "22-hydroxy…",
-      "formula": "C29H52O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:188924"
-      }
     }
   ],
   "enzymes": [
@@ -192,13 +154,6 @@
       "name": "cyanohydrin beta-glucosyltransferase",
       "ec": [
         "2.4.1.85"
-      ]
-    },
-    {
-      "id": "ec_1_14_14_178",
-      "name": "steroid 22S-hydroxylase",
-      "ec": [
-        "1.14.14.178"
       ]
     }
   ],
@@ -382,117 +337,93 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "steroid 22S-hydroxylase",
-      "equation": "a C28-steroid + reduced [NADPH--hemoprotein reductase] + O2 = a (22S)-22-hydroxy C28-steroid + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "ec": "1.14.14.178",
-      "substrates": [
-        {
-          "metabolite": "c28_steroid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "22s_22_hydroxy_c28_steroid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_178"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:70063"
+      "id": "xt_n_n_dihydroxy_l_tyrosinate_3-5-unsubstituted-to-r-allantoin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_n_dihydroxy_l_tyrosinate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "3-5-unsubstituted-to-r-allantoin"
+      },
+      "note": "Shares N,N-dihydroxy-L-tyrosinate with 3',5'-unsubstituted… to (R)-(−)-allantoin.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:70063"
+            "db": "ChEBI",
+            "id": "CHEBI:57270"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "steroid 22S-hydroxylase",
-      "equation": "a C29-steroid + reduced [NADPH--hemoprotein reductase] + O2 = a (22S)-22-hydroxy C29-steroid + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "ec": "1.14.14.178",
-      "substrates": [
-        {
-          "metabolite": "c29_steroid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "22s_22_hydroxy_c29_steroid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_178"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:70067"
+      "id": "xt_e_4_hydroxyphenyl_acetaldehyde_oxime_d-arabinitol-to-fmnh2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_4_hydroxyphenyl_acetaldehyde_oxime"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "d-arabinitol-to-fmnh2"
+      },
+      "note": "Shares (E)-(4-hydroxyphenyl)acetaldehyde oxime with D-arabinitol to FMNH2.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:70067"
+            "db": "ChEBI",
+            "id": "CHEBI:15666"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_4_hydroxymandelonitrile_z-4-hydroxyphenyl-acet-to-hydrogen-cyanide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_4_hydroxymandelonitrile"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "z-4-hydroxyphenyl-acet-to-hydrogen-cyanide"
+      },
+      "note": "Shares (S)-4-hydroxymandelonitrile with (Z)-(4-hydroxyphenyl)acet… to hydrogen cyanide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16660"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_z_4_hydroxyphenyl_acetaldehyde_oxime_z-4-hydroxyphenyl-acet-to-hydrogen-cyanide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "z_4_hydroxyphenyl_acetaldehyde_oxime"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "z-4-hydroxyphenyl-acet-to-hydrogen-cyanide"
+      },
+      "note": "Shares (Z)-(4-hydroxyphenyl)acetaldehyde oxime with (Z)-(4-hydroxyphenyl)acet… to hydrogen cyanide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15667"
           }
         ]
       }

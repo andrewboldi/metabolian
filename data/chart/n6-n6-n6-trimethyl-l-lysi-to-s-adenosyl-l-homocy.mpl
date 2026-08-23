@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n6-n6-n6-trimethyl-l-lysi-to-s-adenosyl-l-homocy "N6,N6,N6-trimethyl-L-lysi… to S-adenosyl-L-homocysteine" {
-  spacing 334
+  spacing 340
 
   spine at 0,0 {
     n6_n6_n6_trimethyl_l_lysine
@@ -32,26 +32,26 @@ pathway n6-n6-n6-trimethyl-l-lysi-to-s-adenosyl-l-homocy "N6,N6,N6-trimethyl-L-l
 
   branch from succinate side left {
     succinate
-    <-> ec_1_14_11_56 [1.14.11.56] +l_proline +akg +o2 +co2
-    cis_4_hydroxy_l_proline
+    <-> . +l_proline +akg +o2 +co2
+    trans_4_hydroxy_l_proline
   }
 
   branch from succinate side right {
     succinate
-    <-> ec_1_14_11_40 [1.14.11.40] +l_enduracididine +akg +o2 +co2
-    3s_3_hydroxy_l_enduracididine
+    <-> . +2_4_dichlorophenoxy_acetate +akg +o2 +glyoxylate +co2
+    2_4_dichlorophenol
   }
 
   branch from glycine side left {
     glycine
-    <-> ec_4_1_3_14 [4.1.3.14] +3r_3_hydroxy_l_aspartate
+    <-> ec_4_1_3_41 [4.1.3.41] +3r_3_hydroxy_d_aspartate
     glyoxylate
   }
 
   branch from glycine side right {
     glycine
-    <-> ec_2_6_1_35 [2.6.1.35] +oxaloacetate +glyoxylate
-    aspartate
+    <-> . +cysgly +h2o
+    cysteine
   }
 
   branch from 4_trimethylammonio_butanoate side left {
@@ -80,14 +80,14 @@ pathway n6-n6-n6-trimethyl-l-lysi-to-s-adenosyl-l-homocy "N6,N6,N6-trimethyl-L-l
 
   branch from acetate side left {
     acetate
-    <-> . +2_hydroxyglutarate +acetyl_coa
-    2_hydroxyglutaryl_coa
+    <-> . +h2o +h2o2 +hplus
+    peracetic_acid
   }
 
   branch from acetate side right {
     acetate
-    <-> . +triacetin +h2o +hplus
-    diacetin
+    <-> . +o2 +pi +hplus
+    1r_1_hydroxyethyl_phosphonate
   }
 
   branch from n_n_n_trimethylglycyl_coa side left {
@@ -98,25 +98,91 @@ pathway n6-n6-n6-trimethyl-l-lysi-to-s-adenosyl-l-homocy "N6,N6,N6-trimethyl-L-l
 
   branch from methionine side right {
     methionine
-    <-> ec_2_1_1_224 [2.1.1.224] +adenosine_5_monophosphate_1 +di_sulfido_diiron +sam +5_deoxyadenosine +di_sulfido_diiron +sah
-    8_methyladenosine_5_monophosphate_1
-  }
-
-  branch from methionine side left {
-    methionine
     <-> ec_2_1_1_192 [2.1.1.192] +adenosine_5_monophosphate_1 +di_sulfido_diiron +sam +5_deoxyadenosine +di_sulfido_diiron +sah
     2_methyladenosine_5_monophosphate_1
   }
 
+  branch from methionine side left {
+    methionine
+    <-> . +neomycin_c +hydrogen_donor +sam +5_deoxyadenosine +hydrogen_acceptor +hplus
+    framycetin
+  }
+
   branch from sah side right {
     sah
-    <-> ec_2_1_1_87 [2.1.1.87] +pyridine +sam
-    n_methylpyridinium
+    <-> ec_2_1_1_237 [2.1.1.237] +mycinamicin_iii +sam +hplus
+    mycinamicin_iv
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_197 [2.1.1.197] +malonyl-acp +sam
-    o_s_methoxycarbonylacetyl_pantetheine_4_phosphor
+    <-> ec_2_1_1_238 [2.1.1.238] +mycinamicin_vi +sam +hplus
+    mycinamicin_iii
+  }
+
+  branch from akg side right {
+    akg
+    <-> ec_1_5_1_8 [1.5.1.8] +l_saccharopinate +nadp +h2o +nadph +hplus
+    l_lysinium
+  }
+
+  branch from akg side left {
+    akg
+    <-> . +hplus +co2
+    s_oxalatosuccinate
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> . +5_methylcytidine_5_monophosphate_1 +akg +o2 +co2 +h2o
+    5_formyl_cmp_1
+  }
+
+  branch from succinate side left {
+    succinate
+    <-> . +l_proline +akg +o2 +co2
+    trans_3_hydroxy_l_proline
+  }
+
+  branch from glycine side right {
+    glycine
+    <-> . +atp +hplus +ppi
+    glycyl_amp
+  }
+
+  branch from glycine side left {
+    glycine
+    <-> . +2_3_dihydroxybenzoate +threonine +atp +amp +ppi +h2o +hplus
+    corynebactin
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> ec_4_1_2_65 [4.1.2.65] +4_o_d_glucosyl_trans_ferulate +h2o
+    glucovanillin
+  }
+
+  branch from acetate side left {
+    acetate
+    <-> ec_4_1_2_66 [4.1.2.66] +trans_4_coumarate +h2o
+    4_hydroxybenzaldehyde
+  }
+
+  branch from methionine side right {
+    methionine
+    <-> ec_1_21_98_3 [1.21.98.3] +magnesium_protoporphyrin_13_monomethyl_ester +sam +h2o +5_deoxyadenosine +hplus
+    2_4_divinyl_protochlorophyllide_a
+  }
+
+  branch from methionine side left {
+    methionine
+    <-> ec_4_1_99_22 [4.1.99.22] +gtp +hydrogen_donor +sam +5_deoxyadenosine +hydrogen_acceptor +hplus
+    8s_3_8_cyclo_7_8_dihydroguanosine_5_triphosphat
+  }
+
+  branch from sam side right {
+    sam
+    <-> ec_2_1_1_46 [2.1.1.46] +4_hydroxyisoflavones +sah +hplus
+    4_methoxyisoflavones
   }
 }

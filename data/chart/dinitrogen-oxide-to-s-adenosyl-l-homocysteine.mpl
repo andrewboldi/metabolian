@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dinitrogen-oxide-to-s-adenosyl-l-homocysteine "dinitrogen oxide to S-adenosyl-L-homocysteine" {
-  spacing 242
+  spacing 224
 
   spine at 0,0 {
     dinitrogen_oxide
@@ -22,27 +22,9 @@ pathway dinitrogen-oxide-to-s-adenosyl-l-homocysteine "dinitrogen oxide to S-ade
     heme_d_cis_diol
   }
 
-  branch from fmn side right {
-    fmn
-    <-> . +6_deoxo_28_norcastasterone +fmnh2 +o2 +h2o +hplus
-    6_hydroxy_28_norcastasterone
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +6_hydroxy_28_norcastasterone +fmnh2 +o2 +h2o +hplus
-    28_norcastasterone
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +4_amino_l_phenylalanine +sam +hplus
-    4_methylamino_l_phenylalanine
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +4_methylamino_l_phenylalanine +sam +hplus
-    4_dimethylamino_l_phenylalanine
+  branch from ferriheme_b side right {
+    ferriheme_b
+    <-> ec_4_99_1_8 [4.99.1.8]
+    hematin
   }
 }

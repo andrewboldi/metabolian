@@ -182,45 +182,6 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
-    },
-    {
-      "id": "2s_3_1h_indol_3_yl_2_isocyanopropanoate",
-      "name": "(2S)-3-(1H-indol-3-yl)-2-isocyanopropanoate",
-      "short": "3-(1H-indol-3-yl)-2…",
-      "formula": "C12H9N2O2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:140652"
-      }
-    },
-    {
-      "id": "3_e_2_isocyanovinyl_indole",
-      "name": "3-[(E)-2-isocyanovinyl]indole",
-      "short": "3-[(E)-2-isocyanovi…",
-      "formula": "C11H8N2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:140654"
-      }
-    },
-    {
-      "id": "l_argininium",
-      "name": "L-argininium",
-      "formula": "C6H13N4O",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:29965"
-      }
-    },
-    {
-      "id": "3r_3_hydroxy_l_argininium",
-      "name": "(3R)-3-hydroxy-L-argininium",
-      "short": "3-hydroxy-L-arginin…",
-      "formula": "C6H13N4O2",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:78294"
-      }
     }
   ],
   "enzymes": [
@@ -243,20 +204,6 @@
       "name": "dihydrouracil dehydrogenase (NAD(+))",
       "ec": [
         "1.3.1.1"
-      ]
-    },
-    {
-      "id": "ec_1_14_20_12",
-      "name": "3-[(E)-2-isocyanoethenyl]-1H-indole synthase",
-      "ec": [
-        "1.14.20.12"
-      ]
-    },
-    {
-      "id": "ec_1_14_11_73",
-      "name": "[protein]-arginine 3-hydroxylase",
-      "ec": [
-        "1.14.11.73"
       ]
     }
   ],
@@ -485,117 +432,269 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r6",
-      "name": "3-[(E)-2-isocyanoethenyl]-1H-indole synthase",
-      "equation": "(2S)-3-(1H-indol-3-yl)-2-isocyanopropanoate + 2-oxoglutarate + O2 + H(+) = 3-[(E)-2-isocyanovinyl]indole + succinate + 2 CO2 + H2O",
-      "ec": "1.14.20.12",
-      "substrates": [
-        {
-          "metabolite": "2s_3_1h_indol_3_yl_2_isocyanopropanoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_e_2_isocyanovinyl_indole",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "succinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_20_12"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:56704"
+      "id": "xt_thymidine_dichloromethane-to-dtmp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "thymidine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "dichloromethane-to-dtmp"
+      },
+      "note": "Shares thymidine with dichloromethane to dTMP.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:56704"
+            "db": "ChEBI",
+            "id": "CHEBI:17748"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "[protein]-arginine 3-hydroxylase",
-      "equation": "L-arginyl-[protein] + 2-oxoglutarate + O2 = (3R)-3-hydroxy-L-arginyl-[protein] + succinate + CO2",
-      "ec": "1.14.11.73",
-      "substrates": [
-        {
-          "metabolite": "l_argininium",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3r_3_hydroxy_l_argininium",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "succinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_11_73"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:56744"
+      "id": "xt_thymidine_dtdp-3-azaniumyl-3-6-dide-to-dtdp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "thymidine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-3-azaniumyl-3-6-dide-to-dtdp"
+      },
+      "note": "Shares thymidine with dTDP-3-azaniumyl-3,6-dide… to dTDP.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:56744"
+            "db": "ChEBI",
+            "id": "CHEBI:17748"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_thymidine_dttp-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "thymidine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dttp-to-hydrogen-donor"
+      },
+      "note": "Shares thymidine with dTTP to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17748"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dtmp_coenzyme-b-to-dtdp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dtmp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "coenzyme-b-to-dtdp"
+      },
+      "note": "Shares dTMP with coenzyme B to dTDP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:63528"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dtmp_dichloromethane-to-dtmp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dtmp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dichloromethane-to-dtmp"
+      },
+      "note": "Shares dTMP with dichloromethane to dTMP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:63528"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dtmp_dtdp-3-azaniumyl-3-6-dide-to-dtdp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dtmp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-3-azaniumyl-3-6-dide-to-dtdp"
+      },
+      "note": "Shares dTMP with dTDP-3-azaniumyl-3,6-dide… to dTDP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:63528"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dtmp_dtdp-l-dihydrostreptose-to-dtdp-4-dehydro-l-rham",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dtmp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-l-dihydrostreptose-to-dtdp-4-dehydro-l-rham"
+      },
+      "note": "Shares dTMP with dTDP-L-dihydrostreptose to dTDP-4-dehydro-β-L-rhamno….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:63528"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dtmp_dtmp-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dtmp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtmp-to-ammonium"
+      },
+      "note": "Shares dTMP with dTMP to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:63528"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_adenosine_2-3-cyclic-amp-to-9h-xanthine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "adenosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3-cyclic-amp-to-9h-xanthine"
+      },
+      "note": "Shares Adenosine with 2',3'-cyclic AMP to 9H-xanthine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16335"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_adenosine_2-3-cyclic-amp-to-adenin-9-yl-riburonosate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "adenosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3-cyclic-amp-to-adenin-9-yl-riburonosate"
+      },
+      "note": "Shares Adenosine with 2',3'-cyclic AMP to adenin-9-yl riburonosate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16335"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_adenosine_4-coumaroyl-coa-to-adenin-9-yl-riburonosate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "adenosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-coumaroyl-coa-to-adenin-9-yl-riburonosate"
+      },
+      "note": "Shares Adenosine with 4-coumaroyl-CoA to adenin-9-yl riburonosate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16335"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_adenosine_5-end-purine-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "adenosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-end-purine-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares Adenosine with 5'-end purine… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16335"
           }
         ]
       }

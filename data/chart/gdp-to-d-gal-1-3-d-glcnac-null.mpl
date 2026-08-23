@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway gdp-to-d-gal-1-3-d-glcnac-null "GDP to α-D-Gal-(1→3)-α-D-GlcNAc-…" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     gdp
@@ -14,17 +14,5 @@ pathway gdp-to-d-gal-1-3-d-glcnac-null "GDP to α-D-Gal-(1→3)-α-D-GlcNAc-…"
     udp_alpha_d_galactose
     <-> . +udp +beta_d_glcnac_1_3_alpha_d_gal_1_3_alpha_d_glcnac +h -d_gal_1_3_d_glcnac_diphospho_ditrans_octacis_un
     udp_n_acetyl_alpha_d_glucosamine
-  }
-
-  branch from udp_alpha_d_galactose side left {
-    udp_alpha_d_galactose
-    <-> ec_2_4_1_241 [2.4.1.241] +udp +h +1_20_0_2_18_3_digalactosyldiacylglycerol
-    1_20_0_2_18_3_monogalactosyldiacylglycerol
-  }
-
-  branch from udp_alpha_d_galactose side right {
-    udp_alpha_d_galactose
-    <-> ec_2_4_1_241 [2.4.1.241] +udp +h +1_20_1_2_18_2_digalactosyldiacylglycerol
-    1_20_1_2_18_2_monogalactosyldiacylglycerol
   }
 }

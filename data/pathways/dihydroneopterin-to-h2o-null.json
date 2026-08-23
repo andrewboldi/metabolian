@@ -1,0 +1,509 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "dihydroneopterin-to-h2o-null",
+  "name": "Dihydroneopterin… to H2O",
+  "category": "other",
+  "summary": "A 3-step route from Dihydroneopterin monophosphate to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR192418"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "dihydroneopterin_monophosphate",
+      "name": "Dihydroneopterin monophosphate",
+      "short": "Dihydroneopterin MP",
+      "formula": "C9H13N5O7P",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1107940"
+      }
+    },
+    {
+      "id": "diphosphate",
+      "name": "diphosphate",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM11"
+      }
+    },
+    {
+      "id": "7_8_dihydroneopterin_3_triphosphate",
+      "name": "7,8-dihydroneopterin 3'-triphosphate",
+      "short": "7,8-dihydroneopteri…",
+      "formula": "C9H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1369355"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "a_7_8_dihydroneopterin",
+      "name": "a 7,8-dihydroneopterin",
+      "short": "a 7,8-dihydroneopte…",
+      "formula": "C9H13N5O4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1371238"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_6_1_67",
+      "name": "dihydroneopterin triphosphate diphosphatase",
+      "ec": [
+        "3.6.1.67"
+      ]
+    },
+    {
+      "id": "ec_3_1_3_1",
+      "name": "alkaline phosphatase",
+      "ec": [
+        "3.1.3.1"
+      ],
+      "xrefs": {
+        "uniprot": "P05187"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "dihydroneopterin triphosphate diphosphatase",
+      "ec": "3.6.1.67",
+      "substrates": [
+        {
+          "metabolite": "dihydroneopterin_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_8_dihydroneopterin_3_triphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_67"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR192418"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR192418"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "alkaline phosphatase",
+      "ec": "3.1.3.1",
+      "substrates": [
+        {
+          "metabolite": "7_8_dihydroneopterin_3_triphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "a_7_8_dihydroneopterin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_3_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR151842"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR151842"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR163374",
+      "substrates": [
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "a_7_8_dihydroneopterin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_8_dihydroneopterin_3_triphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR163374"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR163374"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_dihydroneopterin_monophosphate_dihydroneopterin-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dihydroneopterin_monophosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dihydroneopterin-to-h2o"
+      },
+      "note": "Shares Dihydroneopterin monophosphate with Dihydroneopterin… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1107940"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dihydroneopterin_monophosphate_dihydroneopterin-to-l-xylulose-1-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dihydroneopterin_monophosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dihydroneopterin-to-l-xylulose-1-phosphate"
+      },
+      "note": "Shares Dihydroneopterin monophosphate with Dihydroneopterin… to L-Xylulose 1-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1107940"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dihydroneopterin_monophosphate_dihydroneopterin-to-l-xylulose-1-phosphate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dihydroneopterin_monophosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dihydroneopterin-to-l-xylulose-1-phosphate-null"
+      },
+      "note": "Shares Dihydroneopterin monophosphate with Dihydroneopterin… to L-Xylulose 1-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1107940"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dihydroneopterin_monophosphate_sedoheptulose-1-phosphate-to-d-glycero-beta-d-ma",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dihydroneopterin_monophosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sedoheptulose-1-phosphate-to-d-glycero-beta-d-ma"
+      },
+      "note": "Shares Dihydroneopterin monophosphate with sedoheptulose 1-phosphate to D-glycero-beta-D-manno-he….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1107940"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_8_dihydroneopterin_3_triphosphate_2-3-dihydroxy-n-benzoylse-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_8_dihydroneopterin_3_triphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3-dihydroxy-n-benzoylse-to-h2o"
+      },
+      "note": "Shares 7,8-dihydroneopterin 3'-triphosphate with 2,3-dihydroxy-N-benzoylse… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1369355"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_8_dihydroneopterin_3_triphosphate_2-butenoic-acid-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_8_dihydroneopterin_3_triphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-butenoic-acid-to-coa"
+      },
+      "note": "Shares 7,8-dihydroneopterin 3'-triphosphate with 2-butenoic acid to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1369355"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_8_dihydroneopterin_3_triphosphate_6s-5-formyl-5-6-7-8-tet-to-l-glutamate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_8_dihydroneopterin_3_triphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6s-5-formyl-5-6-7-8-tet-to-l-glutamate-null"
+      },
+      "note": "Shares 7,8-dihydroneopterin 3'-triphosphate with (6S)-5-formyl-5,6,7,8-tet… to L-glutamate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1369355"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_8_dihydroneopterin_3_triphosphate_cyclotriphosphate-to-nadp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_8_dihydroneopterin_3_triphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cyclotriphosphate-to-nadp"
+      },
+      "note": "Shares 7,8-dihydroneopterin 3'-triphosphate with cyclotriphosphate to NADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1369355"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_8_dihydroneopterin_3_triphosphate_cyclotriphosphate-to-nadp-11088",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_8_dihydroneopterin_3_triphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cyclotriphosphate-to-nadp-11088"
+      },
+      "note": "Shares 7,8-dihydroneopterin 3'-triphosphate with cyclotriphosphate to NADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1369355"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_8_dihydroneopterin_3_triphosphate_dihydroneopterin-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_8_dihydroneopterin_3_triphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dihydroneopterin-to-h2o"
+      },
+      "note": "Shares 7,8-dihydroneopterin 3'-triphosphate with Dihydroneopterin… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1369355"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_8_dihydroneopterin_3_triphosphate_s-adenosyl-l-homocysteine-to-euphol-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_8_dihydroneopterin_3_triphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-euphol-null"
+      },
+      "note": "Shares 7,8-dihydroneopterin 3'-triphosphate with S-adenosyl-L-homocysteine to Euphol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1369355"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_a_7_8_dihydroneopterin_dihydroneopterin-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "a_7_8_dihydroneopterin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dihydroneopterin-to-h2o"
+      },
+      "note": "Shares a 7,8-dihydroneopterin with Dihydroneopterin… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371238"
+          }
+        ]
+      }
+    }
+  ]
+}

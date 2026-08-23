@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway z-1-l-cysteinylglycin-to-e-8-methylsulfanyl-oct "(Z)-1-(L-cysteinylglycin-… to (E)-8-(methylsulfanyl)oct…" {
-  spacing 308
+  spacing 224
 
   spine at 0,0 {
     z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth
@@ -20,89 +20,5 @@ pathway z-1-l-cysteinylglycin-to-e-8-methylsulfanyl-oct "(Z)-1-(L-cysteinylglyci
     n_n_dihydroxy_l_pentahomomethioninate
     <-> . +hplus -co2 -h2o
     e_8_methylsulfanyl_octanal_oxime
-  }
-
-  branch from glycine side left {
-    glycine
-    <-> . +l_valine +l_arginine +h2o
-    valyl_arginyl_glycine
-  }
-
-  branch from glycine side right {
-    glycine
-    <-> ec_3_4_17_25 [3.4.17.25] +indol_3_ylmethylisothiocyanate_gamma_glu_cys +h2o
-    indol_3_ylmethylisothiocyanate_glutathione
-  }
-
-  branch from h side left {
-    h
-    <-> . +l_leucine +l_lysine +l_arginine +h2o
-    lys_arg_leu
-  }
-
-  branch from h side right {
-    h
-    <-> . +l_lysine +l_arginine +l_tryptophan +h2o
-    lys_trp_arg
-  }
-
-  branch from e_8_methylsulfanyl_octanal_oxime side left {
-    e_8_methylsulfanyl_octanal_oxime
-    <-> . +h +nadph +nadp +h2o
-    8_methylthiooctanonitrile_oxide
-  }
-
-  branch from o2 side right {
-    o2
-    <-> ec_1_1_3_10 [1.1.3.10] +2_dehydro_d_glucose +h2o2
-    alpha_d_glucose
-  }
-
-  branch from o2 side left {
-    o2
-    <-> ec_1_1_3_9 [1.1.3.9] +beta_d_galactose +h2o +h +h2o2
-    d_galactonate
-  }
-
-  branch from l_cysteine side right {
-    l_cysteine
-    <-> . +cyclopropene
-    s_allylcysteine
-  }
-
-  branch from l_cysteine side left {
-    l_cysteine
-    <-> ec_3_4_11_1 [3.4.11.1] +l_leucine +h2o
-    cys_leu
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> ec_1_14_13_121 [1.14.13.121] +solavetivol +nadp +h2o +h +o2
-    vetispiradiene
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> ec_1_14_13_121 [1.14.13.121] +solavetivol +h +o2 +nadp +h2o
-    solavetivone
-  }
-
-  branch from l_pentahomomethionine side right {
-    l_pentahomomethionine
-    <-> . +h +o2 +nadph +nadp +h2o
-    n_hydroxypentahomomethionine
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +valencene +fmnh2 +o2 +h2o +hplus
-    nootkatol
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +nootkatol +fmnh2 +o2 +h2o +hplus
-    nootkatone
   }
 }

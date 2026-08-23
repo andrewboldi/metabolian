@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 17-estradiol-to-16-hydroxyestrone "17α-estradiol to 16α-hydroxyestrone…" {
-  spacing 218
+  spacing 242
 
   spine at 0,0 {
     17_estradiol
@@ -16,18 +16,6 @@ pathway 17-estradiol-to-16-hydroxyestrone "17α-estradiol to 16α-hydroxyestrone
     16_hydroxyestrone_3_o_d_glucuronide
   }
 
-  branch from estrone side left {
-    estrone
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    15_hydroxyestrone
-  }
-
-  branch from estrone side right {
-    estrone
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    6_hydroxyestrone
-  }
-
   branch from 16_hydroxyestrone side left {
     16_hydroxyestrone
     <-> . +udp_d_glucuronate +udp +hplus
@@ -36,13 +24,49 @@ pathway 17-estradiol-to-16-hydroxyestrone "17α-estradiol to 16α-hydroxyestrone
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_87 [1.14.14.87] +liquiritigenin +fmnh2 +o2 +h2o +hplus
-    2r_3s_2_4_7_trihydroxyisoflavanone
+    <-> ec_1_14_14_26 [1.14.14.26] +24s_24_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
+    24s_7_24_dihydroxycholesterol
   }
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_153 [1.14.14.153] +1h_indole +fmnh2 +o2 +h2o +hplus
-    indolin_2_one
+    <-> . +cholesterol +fmnh2 +o2 +h2o +hplus
+    4_hydroxycholesterol
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> . +cholesterol +o2 +fmn +h2o +hplus
+    22r_22_hydroxycholesterol
+  }
+
+  branch from fmnh2 side left {
+    fmnh2
+    <-> . +cholesterol +o2 +fmn +h2o +hplus
+    24r_24_hydroxycholesterol
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +pregnenolone +fmnh2 +o2 +h2o +hplus
+    7_hydroxypregnenolone
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> . +5_androstane_3_17_diol +fmnh2 +o2 +h2o +hplus
+    5_androstane_3_6_17_triol
+  }
+
+  branch from udp_d_glucuronate side right {
+    udp_d_glucuronate
+    <-> ec_1_1_1_22 [1.1.1.22] +nad +h2o +nadh +hplus
+    udp_d_glucose
+  }
+
+  branch from udp_d_glucuronate side left {
+    udp_d_glucuronate
+    <-> ec_4_1_1_35 [4.1.1.35] +hplus +co2
+    udp_d_xylose
   }
 }

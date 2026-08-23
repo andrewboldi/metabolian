@@ -4,95 +4,15 @@
 # edit the generator, not this file.
 
 pathway fmnh2-to-cytosine "FMNH2 to cytosine" {
-  spacing 294
+  spacing 152
 
   spine at 0,0 {
     fmnh2
-    <-> ec_1_14_14_21 [1.14.14.21] +dibenzothiophene +h +o2 -fmn -h2o
-    dibenzothiophene_5_5_dioxide
-    <-> ec_1_14_14_22 [1.14.14.22] +nadh +fmnh2 +h +o2 -2_hydroxybiphenyl_2_sulfinate -nad -h2o
+    <-> . +h +5_deoxy_dihydrokalafungin +o2 -dihydrokalafungin_dihydroquinone_form -h2o
     fmn
     <-> . +5_deoxyadenosine +co2 +1_d_xylopyranosyl_cytosine +l_methionine -s_adenosyl_l_methionine -cytosylglucuronic_acid -h
     fmnh2
     <-> . +udp +cytosylglucuronic_acid -cytosine
     udp_alpha_d_glucuronate
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> ec_1_17_7_4 [1.17.7.4] +fmnh2 +2e_4_hydroxy_3_methylbut_2_enyl_diphosphate +h +h2o
-    ipp
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +fmnh2 +iminoaspartate +h
-    l_aspartate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    d_rhamnose
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    3_acetamido_3_deoxy_alpha_d_fucose
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_geranial +h
-    thujan_3_ol
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_geranial +h
-    1r_2s_4r_borneol
-  }
-
-  branch from s_adenosyl_l_methionine side left {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +ovothiol +h
-    mercaptohistidine
-  }
-
-  branch from s_adenosyl_l_methionine side right {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +meleagrin +h
-    glandicoline_b
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +l_oleandrose +phosphate +l_oleandrose +h2o
-    atp
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
-    d_oliose
-  }
-
-  branch from udp_alpha_d_glucuronate side left {
-    udp_alpha_d_glucuronate
-    <-> . +udp +amaranthin
-    betanin
-  }
-
-  branch from udp_alpha_d_glucuronate side right {
-    udp_alpha_d_glucuronate
-    <-> . +udp +alpha_d_glca_1_6_alpha_d_glc_1_2_alpha_l_rha_1_3 +h
-    alpha_d_glc_1_2_alpha_l_rha_1_3_alpha_l_rha_1_3
-  }
-
-  branch from cytosine side left {
-    cytosine
-    <-> . +cmp +h2o
-    alpha_d_ribose_5_phosphate
   }
 }

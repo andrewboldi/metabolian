@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "cholest-5-en-3-one-to-h2o",
   "name": "cholest-5-en-3-one to H2O",
-  "category": "amino-acid-metabolism",
+  "category": "energy-metabolism",
   "summary": "A 3-step route from cholest-5-en-3-one to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -136,54 +136,6 @@
       "xrefs": {
         "metanetx": "WATER"
       }
-    },
-    {
-      "id": "neurotensin",
-      "name": "neurotensin",
-      "formula": "C78H122N21O20",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:147362"
-      }
-    },
-    {
-      "id": "neurotensin_1_10",
-      "name": "Neurotensin 1-10",
-      "formula": "C57H91N18O16",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM64522"
-      }
-    },
-    {
-      "id": "2r_2_2s_2_2r_2_amino_1_hydroxy_3_4_hydroxypheny",
-      "name": "(2R)-2-{[(2S)-2-{[(2R)-2-amino-1-hydroxy-3-(4-hydroxyphenyl)propylidene]amino}-1-hydroxy-3-methylpentylidene]amino}-4-methylpentanoic acid",
-      "short": "2-{[(2S)-2-{[(2R)-2…",
-      "formula": "C21H33N3O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:185343"
-      }
-    },
-    {
-      "id": "5_s_l_cysteinyl_dopaquinone",
-      "name": "5-(S-L-cysteinyl)-dopaquinone",
-      "short": "5-(S-L-cysteinyl)-d…",
-      "formula": "C12H14N2O6S",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1560305"
-      }
-    },
-    {
-      "id": "1_4_benzothiazine_o_quinonimine",
-      "name": "1,4-Benzothiazine-O-quinonimine",
-      "short": "1,4-Benzothiazine-O…",
-      "formula": "C12H12N2O5S",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:184282"
-      }
     }
   ],
   "enzymes": [
@@ -192,7 +144,10 @@
       "name": "steroid Delta-isomerase",
       "ec": [
         "5.3.3.1"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P14060"
+      }
     },
     {
       "id": "ec_1_14_15_28",
@@ -342,75 +297,159 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "Reaction MNXR206507",
-      "substrates": [
-        {
-          "metabolite": "neurotensin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "neurotensin_1_10",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "2r_2_2s_2_2r_2_amino_1_hydroxy_3_4_hydroxypheny",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR206507"
+      "id": "xt_cholest_5_en_3_one_1-palmitoyl-2-6z-9z-12z-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cholest_5_en_3_one"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1-palmitoyl-2-6z-9z-12z-to-h2o"
+      },
+      "note": "Shares cholest-5-en-3-one with 1-palmitoyl-2-[(6Z,9Z,12Z… to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR206507"
+            "db": "ChEBI",
+            "id": "CHEBI:63906"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "Reaction MNXR206534",
-      "substrates": [
-        {
-          "metabolite": "5_s_l_cysteinyl_dopaquinone",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_4_benzothiazine_o_quinonimine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR206534"
+      "id": "xt_cholest_5_en_3_one_cholesterol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cholest_5_en_3_one"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "cholesterol-to-h2o"
+      },
+      "note": "Shares cholest-5-en-3-one with cholesterol to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR206534"
+            "db": "ChEBI",
+            "id": "CHEBI:63906"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cholest_4_en_3_one_5-cholestan-3-one-to-amp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cholest_4_en_3_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cholestan-3-one-to-amp"
+      },
+      "note": "Shares cholest-4-en-3-one with 5α-cholestan-3-one to AMP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16175"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cholest_4_en_3_one_5-cholestan-3-one-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cholest_4_en_3_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cholestan-3-one-to-hydrogen-donor"
+      },
+      "note": "Shares cholest-4-en-3-one with 5β-cholestan-3-one to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16175"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cholest_4_en_3_one_cholest-4-en-3-one-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cholest_4_en_3_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cholest-4-en-3-one-to-nad"
+      },
+      "note": "Shares cholest-4-en-3-one with cholest-4-en-3-one to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16175"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_25r_4_dafachronate_5-cholestan-3-one-to-amp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "25r_4_dafachronate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cholestan-3-one-to-amp"
+      },
+      "note": "Shares (25R)-Δ4-dafachronate with 5α-cholestan-3-one to AMP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:71570"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_25r_3_ketocholest_4_en_26_al_5-cholestan-3-one-to-amp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "25r_3_ketocholest_4_en_26_al"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cholestan-3-one-to-amp"
+      },
+      "note": "Shares (25R)-3-ketocholest-4-en-26-al with 5α-cholestan-3-one to AMP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83862"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway panose-to-1-o-acetylmaltose "panose to 1-O-acetylmaltose" {
-  spacing 268
+  spacing 328
 
   spine at 0,0 {
     panose
@@ -26,26 +26,26 @@ pathway panose-to-1-o-acetylmaltose "panose to 1-O-acetylmaltose" {
 
   branch from alpha_d_glucose side left {
     alpha_d_glucose
-    <-> ec_3_2_1_10 [3.2.1.10] +h +4_nitrophenol +h2o
-    4_nitrophenyl_d_glucoside
+    <-> ec_1_1_99_28 [1.1.99.28] +d_fructofuranose +d_sorbitol
+    d_glucono_1_5_lactone
   }
 
   branch from alpha_d_glucose side right {
     alpha_d_glucose
-    <-> ec_3_2_1_20 [3.2.1.20] +methanol +h2o
-    methyl_d_glucopyranoside
+    <-> ec_2_3_1_91 [2.3.1.91] +o_sinapoylcholine +choline
+    1_o_trans_sinapoyl_beta_d_glucose
   }
 
   branch from d_maltose side left {
     d_maltose
-    <-> ec_2_3_1_79 [2.3.1.79] +acetyl_coa +acetyl_maltose
-    coa
+    <-> . +alpha_maltose_6_phosphate +pyruvate
+    phosphoenolpyruvate
   }
 
   branch from d_maltose side right {
     d_maltose
-    <-> ec_2_4_1_25 [2.4.1.25] +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g +glucose
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
+    <-> ec_2_4_1_25 [2.4.1.25] +d_glcp_1_4_d_glcp_1_4_d_glcp +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp
+    beta_d_glucose
   }
 
   branch from starch_structure_2_1_6_2_1_4_glc_1_4_glc side left {
@@ -56,26 +56,26 @@ pathway panose-to-1-o-acetylmaltose "panose to 1-O-acetylmaltose" {
 
   branch from h2o side right {
     h2o
-    <-> . +alpha_d_ribose_1_phosphate +h
-    ribose_1_3_cyclic_phosphate
+    <-> . +4_3_pyridyl_3_butenoic_acid
+    gamma_hydroxy_3_pyridinebutanoate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_14_12_17 [1.14.12.17] +nadh +h +cumene_hydroperoxide +2_phenylpropan_2_ol
-    nad
+    <-> ec_3_2_2_3 [3.2.2.3] +uridine +aldehydo_d_ribose
+    uracil
   }
 
   branch from glucose side right {
     glucose
-    <-> ec_5_1_3_3 [5.1.3.3]
-    beta_d_glucose
+    <-> . +lampranthin_i +1_o_4_coumaroyl_d_glucose
+    betanin
   }
 
   branch from glucose side left {
     glucose
-    <-> . +nadp +h +nadph
-    d_glucono_1_5_lactone
+    <-> . +ternatin_c3 +1_o_4_coumaroyl_d_glucose
+    ternatin_c5
   }
 
   branch from d_glucosyl_1_4_d_mannose side right {
@@ -92,14 +92,14 @@ pathway panose-to-1-o-acetylmaltose "panose to 1-O-acetylmaltose" {
 
   branch from d_glcp_1_4_d_glcp_1_4_d_glcp side right {
     d_glcp_1_4_d_glcp_1_4_d_glcp
-    <-> . +h2o +d_maltose
-    beta_d_fructose
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
+    atp
   }
 
   branch from d_glcp_1_4_d_glcp_1_4_d_glcp side left {
     d_glcp_1_4_d_glcp_1_4_d_glcp
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
-    atp
+    <-> . +h2o +d_glucosyl_1_4_d_mannose
+    beta_d_fructose
   }
 
   branch from maltose side right {
@@ -116,7 +116,67 @@ pathway panose-to-1-o-acetylmaltose "panose to 1-O-acetylmaltose" {
 
   branch from 1_o_acetylmaltose side right {
     1_o_acetylmaltose
-    <-> . +d_glucosyl_1_4_d_mannose +coa
-    acetyl_coa
+    <-> . +acetyl_coa +d_glucosyl_1_4_d_mannose
+    coa
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +h +adp +phosphate +atp
+    l_iditol
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +h +adp +phosphate +atp
+    beta_cyclodextrin
+  }
+
+  branch from alpha_d_glucose side left {
+    alpha_d_glucose
+    <-> ec_1_1_5_2 [1.1.5.2] +ubiquinone_2 +d_glucono_1_5_lactone
+    ubiquinol_2
+  }
+
+  branch from alpha_d_glucose side right {
+    alpha_d_glucose
+    <-> ec_3_2_1_108 [3.2.1.108] +beta_d_galactose +h2o
+    beta_lactose
+  }
+
+  branch from d_maltose side left {
+    d_maltose
+    <-> . +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g +beta_d_glucose
+    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
+  }
+
+  branch from d_maltose side right {
+    d_maltose
+    <-> . +sucrose +2r_3s_4s_5r_6s_2_hydroxymethyl_6_2r_3s_4s_5r_6r
+    d_fructofuranose
+  }
+
+  branch from glucose side left {
+    glucose
+    <-> . +ternatin_c3 +1_o_4_coumaroyl_d_glucose
+    ternatin_c5
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> . +l_arabinopyranose +ginsenoside_f2 +h2o
+    ginsenoside_rb2
+  }
+
+  branch from d_glucosyl_1_4_d_mannose side left {
+    d_glucosyl_1_4_d_mannose
+    <-> . +d_glucopyranose_1_phosphate +h2o
+    phosphate
+  }
+
+  branch from d_glucosyl_1_4_d_mannose side right {
+    d_glucosyl_1_4_d_mannose
+    <-> . +adp +phosphate +atp +h2o
+    h
   }
 }

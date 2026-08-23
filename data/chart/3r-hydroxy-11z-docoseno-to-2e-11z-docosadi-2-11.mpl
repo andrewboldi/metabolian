@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3r-hydroxy-11z-docoseno-to-2e-11z-docosadi-2-11 "3R-hydroxy-(11Z)-docoseno… to (2E,11Z)-docosadi-2,11-en…" {
-  spacing 182
+  spacing 224
 
   spine at 0,0 {
     3r_hydroxy_11z_docosenoyl_coa
@@ -22,31 +22,73 @@ pathway 3r-hydroxy-11z-docoseno-to-2e-11z-docosadi-2-11 "3R-hydroxy-(11Z)-docose
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +h +bromobenzene +o2 +nadph +h2o
-    bromobenzene_2_3_oxide
+    <-> . +h +nadph +l_1_piperideine_6_carboxylate
+    l_pipecolate
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +h +benzo_a_pyrene +o2 +nadph +h2o
-    benzo_a_pyrene_7_8_oxide
+    <-> ec_1_2_1_84 [1.2.1.84] +16_hydroxyhexadecanoyl_coa +h +nadph +coa
+    1_16_hexadecanediol
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_3_2_9 [3.3.2.9] +1_2_dihydronaphthalene_1_2_diol
-    1r_2s_naphthalene_1_2_oxide
+    <-> . +6_hydroxy_allocryptopine
+    dihydrochelerythrine
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_3_2_9 [3.3.2.9] +1_2_dihydronaphthalene_1_2_diol
-    1s_2r_naphthalene_1_2_oxide
+    <-> . +2_keto_4_hydroxy_5_phosphopentanoate
+    2_keto_5_phospho_3_cis_pentenoate
   }
 
-  branch from 11z_docosenoyl_coa side left {
-    11z_docosenoyl_coa
-    <-> . +s_carnitine +coa
-    11z_docos_11_enoylcarnitine
+  branch from h side left {
+    h
+    <-> . +d_glucaro_1_4_lactone +h2o
+    d_glucarate
+  }
+
+  branch from h side right {
+    h
+    <-> . +d_glucarate +h2o
+    d_glucaro_1_5_lactone
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_2_1_84 [1.2.1.84] +18_hydroxyoleoyl_coa +h +nadp +coa
+    9z_octadec_9_ene_1_18_diol
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_2_1_84 [1.2.1.84] +18_hydroxystearoyl_coa +h +nadp +coa
+    1_18_octadecane_diol
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +2_8_hydroxy_2_oxotridecyl_6_oxopyran_4_olate +h +nadph
+    2_2_8_dihydroxytridecyl_6_oxopyran_4_olate
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_2_1_84 [1.2.1.84] +7_hydroxylauroyl_coa +h +nadph +coa
+    1_7_dodecanediol
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +3_benzyl_3_6_bis_cysteinyl_6_hydroxymethyl_diket +pyruvate +nh4
+    3_benzyl_3_6_dithio_6_hydroxymethyl_diketopipera
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +2_dihydroxymethyl_furan
+    furfural
   }
 }

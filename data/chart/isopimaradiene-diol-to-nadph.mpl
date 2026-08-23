@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway isopimaradiene-diol-to-nadph "isopimaradiene-diol to NADPH" {
-  spacing 200
+  spacing 260
 
   spine at 0,0 {
     isopimaradiene_diol
@@ -18,49 +18,109 @@ pathway isopimaradiene-diol-to-nadph "isopimaradiene-diol to NADPH" {
 
   branch from isopimara_7_15_dienal side left {
     isopimara_7_15_dienal
-    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +nadp
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +nad
     levopimaradienol
   }
 
   branch from isopimara_7_15_dienal side right {
     isopimara_7_15_dienal
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +levopimaradienol
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +nad
+    palustradienol
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +bistratamide_a +phosphate +bistratamide_a
+    atp
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    bistratamide_b
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_14_13_70 [1.14.13.70] +h +24_25_dihydrolanosterol +nadph +nadp +4_4_dimethyl_8_14_cholestadien_3_ol +h2o
+    formate
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_14_13_72 [1.14.13.72] +nadh +h +4_4_dimethyl_5alpha_cholesta_8_24_dien_3beta_ol +nad +h2o
+    4beta_methylzymosterol_4alpha_carboxylate
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_2_1_5 [1.2.1.5] +h +5z_8z_11z_14z_17z_eicosapentaenoate +nadp +h2o
+    abietal
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_2_1_5 [1.2.1.5] +5z_8z_11z_14z_17z_eicosapentaenoate +nadp +isopimara_7_15_dienal +h2o
+    h
+  }
+
+  branch from isopimara_7_15_dienal side left {
+    isopimara_7_15_dienal
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +nad
+    isopimara_7_15_dienol
+  }
+
+  branch from isopimara_7_15_dienal side right {
+    isopimara_7_15_dienal
+    <-> ec_1_2_1_5 [1.2.1.5] +nadh +h +5z_7e_9e_14z_17z_icosapentaenoate +h2o
     nad
   }
 
   branch from h2o side left {
     h2o
-    <-> . +glycylglycine +l_phenylalanine
-    phe_gly_gly
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    bistratamide_e
   }
 
   branch from h2o side right {
     h2o
-    <-> . +ala_gly +glycine
-    gly_ala_gly
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    dendroamide_a
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_2_1_5 [1.2.1.5] +9z_octadecenoate +h +nadph +h2o
+    cis_9_octadecenal
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_2_1_5 [1.2.1.5] +15z_tetracosenoate +h +nadph +h2o
+    15_tetracosenal
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_18_1 [1.14.18.1] +2_3_4_dioxocyclohexa_1_5_dien_1_yl_acetic_acid +h2o +3_4_dihydroxyphenylacetate
-    h
+    <-> . +9z_12z_octadecadienoate +h +nadph +nadp +h2o
+    vernolic_acid
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_18_1 [1.14.18.1] +1_1_hydroxy_2_propan_2_ylamino_ethyl_3_4_dioxocy +h2o
-    l_isoprenaline
+    <-> . +9z_12z_octadecadienoate +h +vernolic_acid +nad +h2o
+    nadh
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_21 [1.1.1.21] +formaldehyde +h +nadp
-    methanol
+    <-> ec_1_2_1_5 [1.2.1.5] +hexacosanoate +h +nadp +h2o
+    hexacosanal
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_21 [1.1.1.21] +2_4_6_trimethylbenzoyl_methanol +nadp +h
-    2_4_6_trimethylphenylglyoxal
+    <-> ec_1_2_1_5 [1.2.1.5] +h +triacontanoate +nadp +h2o
+    triacontanal
   }
 }

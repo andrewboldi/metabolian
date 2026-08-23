@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-descarboxy-betanidin-to-h2o "2-Descarboxy-betanidin to H2O" {
-  spacing 218
+  spacing 272
 
   spine at 0,0 {
     2_descarboxy_betanidin
@@ -18,14 +18,14 @@ pathway 2-descarboxy-betanidin-to-h2o "2-Descarboxy-betanidin to H2O" {
 
   branch from h side left {
     h
-    <-> . +2_3_dioxo_l_gulonate
-    dehydroascorbate_bicyclic_form
+    <-> . +l_dehydroascorbic_acid +14_hydroxy_d4_neuroprostane +h2o +l_ascorbate
+    14_hydroperoxy_h4_neuroprostane
   }
 
   branch from h side right {
     h
-    <-> . +4_o_oxalyl_l_threonate +h2o
-    cyclic_3_4_o_oxalyl_l_threonate
+    <-> . +l_dehydroascorbic_acid +13_hydroxy_e4_neuroprostane +h2o +l_ascorbate
+    13_hydroperoxy_h4_neuroprostane
   }
 
   branch from betalamic_acid side left {
@@ -40,45 +40,99 @@ pathway 2-descarboxy-betanidin-to-h2o "2-Descarboxy-betanidin to H2O" {
     cyclodopa_5_d_glucoside
   }
 
-  branch from leukoaminochrome side left {
-    leukoaminochrome
-    <-> . +nadh +h +dopaminechrome_keto_form
-    nad
-  }
-
-  branch from portulacaxanthin_ii side right {
+  branch from portulacaxanthin_ii side left {
     portulacaxanthin_ii
     <-> . +dehydroascorbide +dopaxanthin +h2o +o2
     l_ascorbate
   }
 
-  branch from portulacaxanthin_ii side left {
+  branch from portulacaxanthin_ii side right {
     portulacaxanthin_ii
     <-> . +dopaxanthin +h2o +h +l_ascorbate +o2
     l_dehydroascorbic_acid
   }
 
-  branch from h2o side right {
-    h2o
-    <-> . +4_chloro_3_hydroxybutyryl_coa
-    4_chloro_crotonyl_coa
-  }
-
   branch from h2o side left {
     h2o
-    <-> . +vincaleukoblastine
-    3_4_anhydrovinblastine
+    <-> . +polydextrose +d_galactose
+    alpha_d_glucose
   }
 
-  branch from dopaxanthin_quinone side right {
+  branch from h2o side right {
+    h2o
+    <-> ec_3_2_1_22 [3.2.1.22] +polydextrose +d_galactose
+    beta_d_glucose
+  }
+
+  branch from dopaxanthin_quinone side left {
     dopaxanthin_quinone
     <-> .
     betanidin
   }
 
-  branch from dopaxanthin_quinone side left {
+  branch from dopaxanthin_quinone side right {
     dopaxanthin_quinone
     <-> . +h
     betanidin
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +l_dehydroascorbic_acid +20_hydroxy_d4_neuroprostane +h +l_ascorbate
+    20_hydroperoxy_h4_neuroprostane
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +l_dehydroascorbic_acid +20_hydroperoxy_h4_neuroprostane +h +l_ascorbate
+    20_hydroxy_e4_neuroprostane
+  }
+
+  branch from h side left {
+    h
+    <-> . +2_dehydro_d_gluconate +h2o
+    2_dehydro_d_glucono_1_5_lactone
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_7_1_9 [3.7.1.9] +formate +trans_2_oxohex_4_enoate +h2o
+    2_hydroxy_5_methyl_cis_cis_muconic_semialdehyde
+  }
+
+  branch from betalamic_acid side left {
+    betalamic_acid
+    <-> . +h +h2o
+    4_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem
+  }
+
+  branch from betalamic_acid side right {
+    betalamic_acid
+    <-> . +h +h2o
+    4_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem
+  }
+
+  branch from l_tyrosine side left {
+    l_tyrosine
+    <-> . +n_6_n_6_o_tridemethylpuromycin_5_phosphate +h2o
+    3_amino_3_deoxy_amp
+  }
+
+  branch from l_tyrosine side right {
+    l_tyrosine
+    <-> . +glycine +h2o
+    l_tyrosine_n_glycyl
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_14_13_81 [1.14.13.81] +h +nadph +13_1_oxo_mg_protoporphyrin_ix_13_monomethyl_este +divinylprotochlorophyllide +h2o
+    nadp
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +20_hydroxy_5s_hete +nadp +h2o +h +5s_hydroxy_6e_8z_11z_14z_eicosatetraenoate
+    nadph
   }
 }

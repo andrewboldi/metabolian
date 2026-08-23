@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-trans-6-trans-farnesyl-to-fmn-27530 "2-trans,6-trans-farnesyl… to FMN" {
-  spacing 208
+  spacing 196
 
   spine at 0,0 {
     fpp
@@ -16,17 +16,5 @@ pathway 2-trans-6-trans-farnesyl-to-fmn-27530 "2-trans,6-trans-farnesyl… to FM
     h
     <-> ec_1_14_14_58 [1.14.14.58] +geranyllinalool +fmnh2 +o2 -buten_2_one -fmn -h2o -hplus
     4_8_12_trimethyltrideca_1_3_7_11_tetraene
-  }
-
-  branch from h side left {
-    h
-    <-> . +l_dehydroascorbic_acid +7_hydroxy_d4_neuroprostane +h2o +l_ascorbate
-    7_hydroperoxy_h4_neuroprostane
-  }
-
-  branch from h side right {
-    h
-    <-> . +l_dehydroascorbic_acid +10_hydroxy_e4_neuroprostane +h2o +l_ascorbate
-    10_hydroperoxy_h4_neuroprostane
   }
 }

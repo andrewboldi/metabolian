@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "phloretin-to-4-o-d-glucosyl-trans-4",
   "name": "phloretin to 4-O-β-D-glucosyl-trans-4-…",
-  "category": "amino-acid-metabolism",
+  "category": "energy-metabolism",
   "summary": "A 3-step route from phloretin to 4-O-β-D-glucosyl-trans-4-coumarate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -116,55 +116,6 @@
       "charge": -3,
       "xrefs": {
         "chebi": "CHEBI:58223"
-      }
-    },
-    {
-      "id": "sam",
-      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
-      "short": "S-Adenosyl-L-methio…",
-      "formula": "C15H23N6O5S",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:59789"
-      }
-    },
-    {
-      "id": "methyl_3_4_hydroxyphenyl_propionate",
-      "name": "methyl 3-(4-hydroxyphenyl)propionate",
-      "short": "methyl 3-(4-hydroxy…",
-      "formula": "C10H12O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:176565"
-      }
-    },
-    {
-      "id": "sah",
-      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
-      "short": "S-Adenosyl-L-homocy…",
-      "formula": "C14H20N6O5S",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:57856"
-      }
-    },
-    {
-      "id": "nh4",
-      "name": "NH4",
-      "formula": "H4N",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM729302"
-      }
-    },
-    {
-      "id": "3s_3_azaniumyl_3_4_hydroxyphenyl_propanoate",
-      "name": "(3S)-3-Azaniumyl-3-(4-hydroxyphenyl)propanoate",
-      "short": "3-Azaniumyl-3-(4-hy…",
-      "formula": "C9H11NO3",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM4326"
       }
     }
   ],
@@ -338,76 +289,159 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "phloretate + S-adenosyl-L-methionine = 3-(4-hydroxyphenyl)propionic acid methyl ether +...",
-      "equation": "phloretate + S-adenosyl-L-methionine = 3-(4-hydroxyphenyl)propionic acid methyl ether + S-adenosyl-L-homocysteine",
-      "substrates": [
-        {
-          "metabolite": "phloretate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "methyl_3_4_hydroxyphenyl_propionate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:74883"
+      "id": "xt_phloretin_madecassate-to-madecassoside",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phloretin"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "madecassate-to-madecassoside"
+      },
+      "note": "Shares phloretin with madecassate to madecassoside.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:74883"
+            "db": "ChEBI",
+            "id": "CHEBI:17276"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "Reaction MNXR186919",
-      "substrates": [
-        {
-          "metabolite": "trans_4_coumarate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh4",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3s_3_azaniumyl_3_4_hydroxyphenyl_propanoate",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR186919"
+      "id": "xt_phloretin_toluene-4-sulfonate-to-1-3-4-dihydroxybenzoyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phloretin"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "toluene-4-sulfonate-to-1-3-4-dihydroxybenzoyl"
+      },
+      "note": "Shares phloretin with toluene-4-sulfonate to 1-(3,4-dihydroxybenzoyl)-….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR186919"
+            "db": "ChEBI",
+            "id": "CHEBI:17276"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phloretin_trehalose-6-mycolate-to-6-o-acetyl-d-glucose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phloretin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trehalose-6-mycolate-to-6-o-acetyl-d-glucose"
+      },
+      "note": "Shares phloretin with α,α'-trehalose 6-mycolate to 6-O-acetyl-β-D-glucose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17276"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phloretate_dtdp-4-amino-4-6-dideoxy-to-s-adenosyl-l-homocys",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phloretate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-4-amino-4-6-dideoxy-to-s-adenosyl-l-homocys"
+      },
+      "note": "Shares phloretate with dTDP-4-amino-4,6-dideoxy-… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16331"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phloretate_phloretate-to-d-glucose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phloretate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phloretate-to-d-glucose"
+      },
+      "note": "Shares phloretate with phloretate to β-D-glucose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16331"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phloroglucinol_dihydrophloroglucinol-to-3-hydroxy-2-4-dioxopent",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phloroglucinol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dihydrophloroglucinol-to-3-hydroxy-2-4-dioxopent"
+      },
+      "note": "Shares phloroglucinol with dihydrophloroglucinol to 3-hydroxy-2,4-dioxopentyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16204"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phloroglucinol_malonyl-coa-to-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phloroglucinol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "malonyl-coa-to-acetate"
+      },
+      "note": "Shares phloroglucinol with malonyl-CoA to acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16204"
           }
         ]
       }

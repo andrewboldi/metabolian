@@ -22,25 +22,25 @@ pathway bromochloromethane-to-d-fructofuranose "bromochloromethane to β-D-fruct
 
   branch from formaldehyde side left {
     formaldehyde
-    <-> ec_1_14_13_179 [1.14.13.179] +3_methyl_7h_xanthine +nadph +o2 +hplus +nadp +h2o
-    xanthine
+    <-> . +3_methoxycatechol +fadh2 +o2 +fad +h2o +hplus
+    pyrogallol
   }
 
   branch from formaldehyde side right {
     formaldehyde
-    <-> ec_1_14_99_48 [1.14.99.48] +ferroheme_b +hydrogen_donor +o2 +hplus +fe2 +hydrogen_acceptor +h2o
-    5_oxo_bilirubin
+    <-> . +5_n7_methyl_5_triphosphoguanosine_n6_methyl_2_o +akg +o2 +succinate +co2
+    5_n7_methyl_5_triphosphoguanosine_2_o_methyladen
   }
 
-  branch from d_fructofuranose_6_phosphate side left {
-    d_fructofuranose_6_phosphate
-    <-> ec_2_4_1_329 [2.4.1.329] +sucrose_6f_phosphate +pi
-    g1p
+  branch from formaldehyde side left {
+    formaldehyde
+    <-> . +n6_methyladenosine_5_monophosphate_1 +akg +o2 +succinate +co2
+    adenosine_5_monophosphate_1
   }
 
-  branch from d_fructofuranose_6_phosphate side right {
-    d_fructofuranose_6_phosphate
-    <-> ec_5_3_1_9 [5.3.1.9]
-    d_fructofuranose_6_phosphate
+  branch from formaldehyde side right {
+    formaldehyde
+    <-> . +5_n7_methyl_5_triphosphoguanosine_n6_methyl_2_o +akg +o2 +5_n7_methyl_5_triphosphoguanosine_2_o_methyladen +co2
+    succinate
   }
 }

@@ -1,0 +1,295 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "lipoxin-a4-to-5s-7e-9e-11z-13e-15s-15",
+  "name": "lipoxin A4 to (5S,7E,9E,11Z,13E,15S)-15…",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from lipoxin A4 to (5S,7E,9E,11Z,13E,15S)-15-hydroperoxy-5-hydroxyicosa-7,9,11,13-tetraenoate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR185632"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "lipoxin_a4",
+      "name": "lipoxin A4",
+      "formula": "C20H31O5",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM12129"
+      }
+    },
+    {
+      "id": "15s_hydroxy_5z_8z_11z_13e_eicosatetraenoate",
+      "name": "(15S)-hydroxy-(5Z,8Z,11Z,13E)-eicosatetraenoate",
+      "short": "hydroxy-(5Z,8Z,11Z,…",
+      "formula": "C20H31O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM2059"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "lipoxin_b4",
+      "name": "lipoxin B4",
+      "formula": "C20H31O5",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM727336"
+      }
+    },
+    {
+      "id": "5s_7e_9e_11z_13e_15s_15_hydroperoxy_5_hydroxyic",
+      "name": "(5S,7E,9E,11Z,13E,15S)-15-hydroperoxy-5-hydroxyicosa-7,9,11,13-tetraenoate",
+      "short": "(5S,7E,9E,11Z,13E,1…",
+      "formula": "C20H31O5",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM819441"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_13_11_33",
+      "name": "arachidonate 15-lipoxygenase",
+      "ec": [
+        "1.13.11.33"
+      ],
+      "xrefs": {
+        "uniprot": "P18054"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "arachidonate 15-lipoxygenase",
+      "ec": "1.13.11.33",
+      "substrates": [
+        {
+          "metabolite": "lipoxin_a4",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "15s_hydroxy_5z_8z_11z_13e_eicosatetraenoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_33"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR185632"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR185632"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR183697",
+      "substrates": [
+        {
+          "metabolite": "15s_hydroxy_5z_8z_11z_13e_eicosatetraenoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "lipoxin_b4",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR183697"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR183697"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR123761",
+      "substrates": [
+        {
+          "metabolite": "lipoxin_b4",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5s_7e_9e_11z_13e_15s_15_hydroperoxy_5_hydroxyic",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR123761"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR123761"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_lipoxin_a4_nadh-to-o2-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lipoxin_a4"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-o2-null"
+      },
+      "note": "Shares lipoxin A4 with NADH to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM12129"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lipoxin_a4_o-phospho-l-serine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lipoxin_a4"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "o-phospho-l-serine-to-h2o"
+      },
+      "note": "Shares lipoxin A4 with O-phospho-L-serine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM12129"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lipoxin_b4_nadh-to-o2-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lipoxin_b4"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-o2-null"
+      },
+      "note": "Shares lipoxin B4 with NADH to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM727336"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lipoxin_b4_o-phospho-l-serine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lipoxin_b4"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "o-phospho-l-serine-to-h2o"
+      },
+      "note": "Shares lipoxin B4 with O-phospho-L-serine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM727336"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5s_7e_9e_11z_13e_15s_15_hydroperoxy_5_hydroxyic_nadh-to-o2-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5s_7e_9e_11z_13e_15s_15_hydroperoxy_5_hydroxyic"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-o2-null"
+      },
+      "note": "Shares (5S,7E,9E,11Z,13E,15S)-15-hydroperoxy-5-hydroxyicosa-7,9,11,13-tetraenoate with NADH to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM819441"
+          }
+        ]
+      }
+    }
+  ]
+}

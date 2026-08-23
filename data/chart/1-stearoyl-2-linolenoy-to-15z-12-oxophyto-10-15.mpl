@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-stearoyl-2-linolenoy-to-15z-12-oxophyto-10-15 "1-stearoyl-2-(α-linolenoy… to (15Z)-12-oxophyto-10,15-d…" {
-  spacing 192
+  spacing 204
 
   spine at 0,0 {
     1_stearoyl_2_linolenoyl_sn_glycero_3_phosphochol
@@ -20,14 +20,14 @@ pathway 1-stearoyl-2-linolenoy-to-15z-12-oxophyto-10-15 "1-stearoyl-2-(α-linole
 
   branch from linolenate side left {
     linolenate
-    <-> . +o2
-    9z_11s_12z_15z_11_hydroperoxyoctadecatrienoate
+    <-> . +h2o
+    10_s_hydroxy_12z_15z_octadecadienoate
   }
 
   branch from linolenate side right {
     linolenate
-    <-> . +o2
-    9z_11e_15z_13_hydroperoxyoctadecatrienoate
+    <-> . +h2o
+    12z_15z_10_hydroxyoctadecadienoate
   }
 
   branch from 9z_11e_13s_15z_13_hydroperoxyoctadeca_9_11_15_t side left {
@@ -40,5 +40,17 @@ pathway 1-stearoyl-2-linolenoy-to-15z-12-oxophyto-10-15 "1-stearoyl-2-(α-linole
     9z_11e_13s_15z_13_hydroperoxyoctadeca_9_11_15_t
     <-> .
     plasmodiophorol_a
+  }
+
+  branch from 9z_11e_13s_15z_13_hydroperoxyoctadeca_9_11_15_t side left {
+    9z_11e_13s_15z_13_hydroperoxyoctadeca_9_11_15_t
+    <-> .
+    plasmodiophorol_b
+  }
+
+  branch from 9z_11e_13s_15z_13_hydroperoxyoctadeca_9_11_15_t side right {
+    9z_11e_13s_15z_13_hydroperoxyoctadeca_9_11_15_t
+    <-> ec_4_2_1_183 [4.2.1.183] +h2o
+    etherolenate
   }
 }

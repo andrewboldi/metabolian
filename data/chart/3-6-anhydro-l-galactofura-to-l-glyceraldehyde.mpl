@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-6-anhydro-l-galactofura-to-l-glyceraldehyde "3,6-anhydro-L-galactofura… to L-glyceraldehyde" {
-  spacing 242
+  spacing 236
 
   spine at 0,0 {
     3_6_anhydro_l_galactofuranose
@@ -16,11 +16,5 @@ pathway 3-6-anhydro-l-galactofura-to-l-glyceraldehyde "3,6-anhydro-L-galactofura
     2_keto_3_deoxy_l_galactonate
     <-> ec_4_1_2_54 [4.1.2.54] -pyruvate
     l_glyceraldehyde
-  }
-
-  branch from 2_keto_3_deoxy_l_galactonate side left {
-    2_keto_3_deoxy_l_galactonate
-    <-> ec_4_2_1_146 [4.2.1.146] +h2o
-    l_galactonate
   }
 }

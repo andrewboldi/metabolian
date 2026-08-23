@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway ganglioside-gd3-to-d-galactopyranose "ganglioside GD3 to D-galactopyranose" {
-  spacing 284
+  spacing 260
 
   spine at 0,0 {
     ganglioside_gd3
@@ -18,39 +18,15 @@ pathway ganglioside-gd3-to-d-galactopyranose "ganglioside GD3 to D-galactopyrano
     d_galactosyl_1_4_d_glucosyl_1_1_n_acylsphingosi
   }
 
-  branch from d_galactosyl_1_4_d_glucosyl_1_1_n_acylsphingosi side left {
-    d_galactosyl_1_4_d_glucosyl_1_1_n_acylsphingosi
-    <-> . +udp_d_galactose +udp +hplus
-    d_galp_1_3_d_galp_1_4_d_glcp_1_1_cer
+  branch from udp_d_galactose side left {
+    udp_d_galactose
+    <-> . +d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_glc_1_1_cer +udp +hplus
+    d_galactosyl_1_4_d_galactosyl_1_4_n_acetyl_d_gl
   }
 
-  branch from d_galactosyl_1_4_d_glucosyl_1_1_n_acylsphingosi side right {
-    d_galactosyl_1_4_d_glucosyl_1_1_n_acylsphingosi
-    <-> . +udp_n_acetyl_d_galactosamine +udp +hplus
-    n_acetyl_d_galactosaminyl_1_4_d_galactosyl_1_4_d
-  }
-
-  branch from d_galactosyl_1_4_d_galactosyl_1_4_d_glucosylcer side left {
-    d_galactosyl_1_4_d_galactosyl_1_4_d_glucosylcer
-    <-> . +n_acetyl_d_galactosaminyl_1_3_d_galactosyl_1_4_d +h2o
-    n_acetyl_d_galactosamine
-  }
-
-  branch from d_galactosyl_1_4_d_galactosyl_1_4_d_glucosylcer side right {
-    d_galactosyl_1_4_d_galactosyl_1_4_d_glucosylcer
-    <-> . +udp_d_galactose +udp +hplus
-    d_gal_1_3_d_gal_1_4_d_gal_1_4_d_glc_1_1_n_acyls
-  }
-
-  branch from d_galactopyranose side left {
-    d_galactopyranose
-    <-> .
-    aldehydo_d_galactose
-  }
-
-  branch from d_galactopyranose side right {
-    d_galactopyranose
-    <-> ec_5_3_1_4 [5.3.1.4]
-    d_tagatopyranose
+  branch from udp_d_galactose side right {
+    udp_d_galactose
+    <-> . +n4_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_gal_1_4_d +udp +hplus
+    n4_d_gal_1_4_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway o-s-4a-5-dihydro-ml-236-to-o-pantetheine-4-phosp "O-[S-(4a,5-dihydro-ML-236… to O-(pantetheine-4'-phospho…" {
-  spacing 176
+  spacing 164
 
   spine at 0,0 {
     o_s_4a_5_dihydro_ml_236c_carboxy_pantetheine_4_p
@@ -22,18 +22,6 @@ pathway o-s-4a-5-dihydro-ml-236-to-o-pantetheine-4-phosp "O-[S-(4a,5-dihydro-ML-
     ml_236c_carboxylate
     <-> . +h2o
     3_hydroxy_3_5_dihydro_ml_236c_carboxylate
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> ec_1_14_14_191 [1.14.14.191] +taxa_4_20_11_diene_2_5_7_9_10_13_hexayl_hexaacet +fmnh2 +o2 +h2o +hplus
-    1_dehydroxybaccatin_iv
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +taxusin +fmnh2 +o2 +h2o +hplus
-    1_hydroxytaxusin
   }
 
   branch from mevinic_acid_anion side right {

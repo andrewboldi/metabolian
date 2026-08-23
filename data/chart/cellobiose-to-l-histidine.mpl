@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cellobiose-to-l-histidine "cellobiose to L-histidine" {
-  spacing 328
+  spacing 340
 
   spine at 0,0 {
     cellobiose
@@ -24,7 +24,19 @@ pathway cellobiose-to-l-histidine "cellobiose to L-histidine" {
 
   branch from l_histidine side right {
     l_histidine
-    <-> ec_2_7_1_203 [2.7.1.203] +2_amino_2_deoxy_d_gluconic_acid +n_phosphonato_l_histidine
-    d_glucosaminic_acid_6_phosphate
+    <-> ec_2_7_1_208 [2.7.1.208] +maltose +n_phosphonato_l_histidine
+    maltose_6_phosphate
+  }
+
+  branch from l_histidine side left {
+    l_histidine
+    <-> . +nad +nicotinamide +hplus
+    n_adp_d_ribosyl_l_histidyl_2
+  }
+
+  branch from l_histidine side right {
+    l_histidine
+    <-> . +utp +ppi
+    n_uridylyl_l_histidine_1
   }
 }

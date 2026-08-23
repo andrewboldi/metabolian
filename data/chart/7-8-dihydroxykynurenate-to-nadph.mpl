@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 7-8-dihydroxykynurenate-to-nadph "7,8-dihydroxykynurenate to NADPH" {
-  spacing 254
+  spacing 296
 
   spine at 0,0 {
     7_8_dihydroxykynurenate
@@ -16,33 +16,75 @@ pathway 7-8-dihydroxykynurenate-to-nadph "7,8-dihydroxykynurenate to NADPH" {
     5_3_carboxy_3_oxopropenyl_4_6_dihydroxypicolinat
   }
 
-  branch from 5_3_carboxy_3_oxopropyl_4_6_dihydroxypicolinate side left {
-    5_3_carboxy_3_oxopropyl_4_6_dihydroxypicolinate
-    <-> . +co2 +h
-    5_2_formylethyl_4_6_dihydroxypicolinate
+  branch from nadp side left {
+    nadp
+    <-> . +h +o2 +nadph +cyclosporin_a_metabolite_m18 +h2o
+    cyclosporin_a_metabolite_m26
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_7_1_2 [1.7.1.2] +nitrite +h2o +nadph
-    nitric_acid
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_2 [1.1.1.2] +glyceraldehyde_3_phosphate +nadph +h
-    sn_glycerol_3_phosphate
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> ec_1_14_13_12 [1.14.13.12] +4_hydroxybenzoate +nadp +h2o +h +o2
-    benzoate
+    <-> . +h +o2 +nadph +cyclosporin_a_metabolite_m21 +h2o
+    cyclosporin_a_metabolite_m13
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_14_14_23 [1.14.14.23] +h +cholesterol +o2 +nadp +h2o
-    7alpha_hydroxycholesterol
+    <-> . +4_aminobenzoyl_beta_alanine +mesalaminate +nadp +h
+    balsalazide
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +hyocholic_acid_gamma_muricholate +nadp +h2o +h +o2
+    chenodeoxycholate
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_13_11_33 [1.13.11.33] +5z_8z_11z_13e_15s_17z_15_hydroperoxy_5_8_11_13
+    5z_8z_11z_14z_17z_eicosapentaenoate
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +18_hepe
+    resolvin_e1
+  }
+
+  branch from h side left {
+    h
+    <-> . +d_glucuronate +cyclosporin_a_metabolite_m18 +h2o
+    am1c_glucuronide_cyclosporine
+  }
+
+  branch from h side right {
+    h
+    <-> . +beta_d_mannose_6_phosphate +r_glycerate +h2o
+    2_alpha_d_mannosyl_6_phosphate_d_glycerate
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +chlorophyllide +nadp +h
+    protochlorophyllide
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +chlorophyllide +nadp +h
+    divinyl_chlorophyllide_a
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +7_aminoclonazepam +h2o +h +nadph
+    clonazepam
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +h2o +h +clonazepam +nadph
+    7_aminoclonazepam
   }
 }

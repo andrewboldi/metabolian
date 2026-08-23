@@ -4,39 +4,87 @@
 # edit the generator, not this file.
 
 pathway biphenyl-2-3-diol-to-nadp "biphenyl-2,3-diol to NADP" {
-  spacing 292
+  spacing 340
 
   spine at 0,0 {
     biphenyl_2_3_diol
     <-> ec_1_13_11_39 [1.13.11.39] +o2
     hpk
     <-> . -h
-    2_hydroxy_6_oxo_6_phenylhexa_2_4_dienoate
+    2_6_dioxo_6_phenylhexa_3_enoate
     <-> ec_1_3_1_40 [1.3.1.40] +h +nadph -nadp
     2_6_dioxo_6_phenylhexanoate
   }
 
   branch from h side left {
     h
-    <-> ec_5_5_1_7 [5.5.1.7] +2e_4z_2_chloromuconate +chloride
-    trans_4_carboxymethylenebut_2_en_4_olide
+    <-> . +adp +losartan_n1_glucuronide +phosphate +losartan_n1_glucuronide +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> . +10r_hydroxy_11s_12s_epoxy_5z_8z_14z_eicosatrien +h2o
-    5z_8z_14z_11r_12r_10_11_12_trihydroxyicosa_5_8
+    <-> . +adp +phosphate +atp +h2o
+    losartan_m4_glucuronide_derivative
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_13_85 [1.14.13.85] +6as_11as_2_dimethylallyl_3_6a_9_trihydroxyptero +h +o2 +nadph +h2o
-    glyceollin_iii
+    <-> . +adenosine_3_5_bisphosphate +l_cysteate +2_aminoprop_2_enoate +nadph
+    3_phosphoadenylyl_sulfate
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_13_85 [1.14.13.85] +h +6as_11as_4_dimethylallyl_3_6a_9_trihydroxyptero +o2 +nadph +h2o
-    glyceollin_i
+    <-> ec_1_2_1_5 [1.2.1.5] +r_3_4_dihydroxymandelaldehyde +h2o +h +nadph
+    r_3_4_dihydroxymandelate
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +3alpha_7alpha_12alpha_trihydroxy_5beta_cholest_2 +h2o2 +h
+    25_s_trihydroxycoprostanoyl_coa
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +fadh2 +5z_8z_11z_14z_eicosatetraenoate +h +14_15_eet +h2o
+    fad
+  }
+
+  branch from h side left {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    losartan_2_n_d_glucuronide
+  }
+
+  branch from h side right {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    lovastatin_hydroxyacid_form
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +h +4_hydroxy_3_all_trans_decaprenyl_benzoate +o2 +nadp +h2o
+    3_4_dihydroxy_5_all_trans_decaprenyl_benzoate
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +hydroxyacetone +h +o2 +nadp +h2o
+    methylglyoxal
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +hydroxyacetone +h2o +h +o2 +nadph
+    acetone
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_2_1_5 [1.2.1.5] +h +indol_3_yl_acetate +nadph +h2o
+    indole_3_acetaldehyde
   }
 }

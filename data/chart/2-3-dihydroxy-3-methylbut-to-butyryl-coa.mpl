@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-3-dihydroxy-3-methylbut-to-butyryl-coa "2,3-dihydroxy-3-methylbut… to butyryl-CoA" {
-  spacing 312
+  spacing 340
 
   spine at 0,0 {
     2_3_dihydroxy_3_methylbutanoate
@@ -24,8 +24,8 @@ pathway 2-3-dihydroxy-3-methylbut-to-butyryl-coa "2,3-dihydroxy-3-methylbut… t
 
   branch from kiv side right {
     kiv
-    <-> ec_2_6_1_42 [2.6.1.42] +valine +akg
-    glutamate
+    <-> . +nadp +nadph +hplus
+    r_2_hydroxy_3_methylbutyrate
   }
 
   branch from isobutyryl_coa side left {
@@ -42,25 +42,79 @@ pathway 2-3-dihydroxy-3-methylbut-to-butyryl-coa "2,3-dihydroxy-3-methylbut… t
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_14_15_16 [1.14.15.16] +1s_1_hydroxy_23_oxo_24_25_26_27_tetranorcalciol +o2 +hplus +di_sulfido_diiron +h2o
-    calcitroate
+    <-> . +pentalen_13_ol +o2 +hplus +di_sulfido_diiron +h2o
+    pentalen_13_al
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_14_19_69 [1.14.19.69] +flaviolin_2_olate +o2 +hplus +di_sulfido_diiron +h2o
-    3_3_biflaviolin
+    <-> ec_1_14_15_15 [1.14.15.15] +triol_ca +o2 +hplus +di_sulfido_diiron +h2o
+    25r_3_7_12_trihydroxy_5_cholestan_26_oate
   }
 
   branch from butyryl_coa side left {
     butyryl_coa
-    <-> ec_2_3_1_19 [2.3.1.19] +pi +coa
-    butyryl_p
+    <-> . +fad +hplus +fadh2
+    crotonoyl_coa
   }
 
   branch from butyryl_coa side right {
     butyryl_coa
-    <-> ec_1_3_1_86 [1.3.1.86] +nadp +nadph +hplus
-    crotonoyl_coa
+    <-> . +acetyl_coa +coa
+    3_oxohexanoyl_coa
+  }
+
+  branch from kiv side left {
+    kiv
+    <-> . +valine +glyoxylate
+    glycine
+  }
+
+  branch from kiv side right {
+    kiv
+    <-> ec_1_2_4_4 [1.2.4.4] +co2 +2_methyl_1_hydroxypropylthiamine_diphosphate +thiamine_diphosphate
+    h
+  }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> ec_1_14_15_13 [1.14.15.13] +cyclo_l_leucyl_l_leucyl +di_sulfido_diiron +o2 +hplus +h2o
+    pulcherriminate
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_14_15_6 [1.14.15.6] +di_sulfido_diiron +cholesterol +o2 +hplus +pregnenolone +h2o
+    4_methylpentanal
+  }
+
+  branch from isobutyryl_coa side left {
+    isobutyryl_coa
+    <-> . +l_lysinium +coa +hplus
+    n6_isobutyryl_l_lysine
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_14_15_33 [1.14.15.33] +narbomycin +o2 +hplus +di_sulfido_diiron +h2o
+    pikromycin
+  }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> ec_1_14_15_35 [1.14.15.35] +6_deoxyerythronolide_b +o2 +hplus +di_sulfido_diiron +h2o
+    erythronolide_b
+  }
+
+  branch from butyryl_coa side right {
+    butyryl_coa
+    <-> ec_4_1_1_94 [4.1.1.94] +hplus +co2
+    s_ethylmalonyl_coa
+  }
+
+  branch from butyryl_coa side left {
+    butyryl_coa
+    <-> . +h2o +coa +hplus
+    butyrate
   }
 }

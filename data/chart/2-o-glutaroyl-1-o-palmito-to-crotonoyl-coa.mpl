@@ -20,55 +20,55 @@ pathway 2-o-glutaroyl-1-o-palmito-to-crotonoyl-coa "2-O-glutaroyl-1-O-palmito…
 
   branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side left {
     1_hexadecanoyl_sn_glycero_3_phosphocholine
-    <-> . +palmitoyl_coa +coa
-    1_2_dihexadecanoyl_sn_glycero_3_phosphocholine
+    <-> . +linoleoyl_coa +coa
+    1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
   }
 
   branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side right {
     1_hexadecanoyl_sn_glycero_3_phosphocholine
-    <-> . +oleoyl_coa +coa
-    1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph
+    <-> . +arachidonoyl_coa +coa
+    1_palmitoyl_2_arachidonoyl_sn_glycero_3_phosphoc
   }
 
-  branch from glutaryl_coa side left {
-    glutaryl_coa
-    <-> . +malonyl-acp +hplus +co2 +coa
-    o_s_3_oxo_6_carboxyhexanoyl_pantetheine_4_phosph
-  }
-
-  branch from succinate side right {
-    succinate
-    <-> . +l_argininium +akg +o2 +co2
-    3r_3_hydroxy_l_argininium
-  }
-
-  branch from succinate side left {
-    succinate
-    <-> . +pyruvate
-    3_hydroxybutane_1_2_3_tricarboxylate
-  }
-
-  branch from trans_4_carboxybut_2_enoyl_coa side right {
+  branch from trans_4_carboxybut_2_enoyl_coa side left {
     trans_4_carboxybut_2_enoyl_coa
     <-> ec_4_2_1_167 [4.2.1.167] +h2o
     r_2_hydroxyglutaryl_coa
   }
 
-  branch from trans_4_carboxybut_2_enoyl_coa side left {
+  branch from trans_4_carboxybut_2_enoyl_coa side right {
     trans_4_carboxybut_2_enoyl_coa
     <-> . +h2o
     s_3_hydroxyglutaryl_coa
   }
 
+  branch from crotonoyl_coa side left {
+    crotonoyl_coa
+    <-> . +h2o
+    3_hydroxybutanoyl_coa
+  }
+
   branch from crotonoyl_coa side right {
     crotonoyl_coa
-    <-> ec_4_2_1_116 [4.2.1.116] +h2o
-    hydroxybutyryl_coa
+    <-> . +h2o
+    r_2_hydroxybutanoyl_coa
+  }
+
+  branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side left {
+    1_hexadecanoyl_sn_glycero_3_phosphocholine
+    <-> . +lauroyl_coa +coa
+    1_palmitoyl_2_lauroyl_sn_glycero_3_phosphocholin
+  }
+
+  branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side right {
+    1_hexadecanoyl_sn_glycero_3_phosphocholine
+    <-> . +acetyl_coa +coa
+    1_palmitoyl_2_acetyl_sn_glycero_3_phosphocholine
   }
 
   branch from crotonoyl_coa side left {
     crotonoyl_coa
-    <-> ec_1_3_1_85 [1.3.1.85] +nadp +co2 +nadph
-    s_ethylmalonyl_coa
+    <-> . +nad +nadh +hplus
+    butyryl_coa
   }
 }

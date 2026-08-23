@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-gulono-1-4-lactone-to-d-fructofuranuronate "L-gulono-1,4-lactone to D-fructofuranuronate" {
-  spacing 186
+  spacing 198
 
   spine at 0,0 {
     l_gulono_1_4_lactone
@@ -24,13 +24,25 @@ pathway l-gulono-1-4-lactone-to-d-fructofuranuronate "L-gulono-1,4-lactone to D-
 
   branch from d_glucopyranuronate side right {
     d_glucopyranuronate
-    <-> ec_3_2_1_167 [3.2.1.167] +baicalin +h2o +hplus
-    baicalein
+    <-> . +4z_15z_bilirubin_ix_c8_d_glucuronoside +h2o +hplus
+    bilirubin
   }
 
   branch from d_glucopyranuronate side left {
     d_glucopyranuronate
-    <-> ec_3_2_1_167 [3.2.1.167] +wogonin_7_o_d_glucuronate +h2o +hplus
-    wogonin
+    <-> . +h2o +bilirubin +hplus
+    4z_15z_bilirubin_ix_c12_d_glucuronoside
+  }
+
+  branch from l_gulono_1_4_lactone side right {
+    l_gulono_1_4_lactone
+    <-> . +o2 +h2o2
+    l_xylo_hex_3_ulonolactone
+  }
+
+  branch from l_gulono_1_4_lactone side left {
+    l_gulono_1_4_lactone
+    <-> ec_1_1_3_8 [1.1.3.8] +o2 +h2o2 +hplus
+    ascorbate
   }
 }

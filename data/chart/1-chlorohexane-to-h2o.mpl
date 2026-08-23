@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-chlorohexane-to-h2o "1-Chlorohexane to H2O" {
-  spacing 292
+  spacing 340
 
   spine at 0,0 {
     1_chlorohexane
@@ -22,75 +22,26 @@ pathway 1-chlorohexane-to-h2o "1-Chlorohexane to H2O" {
     capecitabine
   }
 
-  branch from hexan_1_ol side left {
-    hexan_1_ol
-    <-> ec_2_4_1_85 [2.4.1.85] +udp +hexyl_glucoside +h
-    udp_alpha_d_glucose
-  }
 
-  branch from h side right {
-    h
-    <-> ec_3_8_1_5 [3.8.1.5] +bromocyclohexane +h2o +bromide
-    cyclohexanol
-  }
 
-  branch from h side left {
-    h
-    <-> ec_3_8_1_5 [3.8.1.5] +cyclohexanol +chloride +h2o
-    monochlorocyclohexane
-  }
 
-  branch from chloride side right {
-    chloride
-    <-> ec_2_5_1_18 [2.5.1.18] +dcnb_3_4_dichloronitrobenzene +glutathione
-    s_2_chloro_4_nitrophenyl_glutathione
-  }
 
-  branch from chloride side left {
-    chloride
-    <-> ec_3_8_1_5 [3.8.1.5] +1_3_dichloropropane +h2o +h
-    compound_0040745
-  }
 
-  branch from hexanal side right {
-    hexanal
-    <-> . +nad +nadh +hplus
-    hexan_1_ol
-  }
 
-  branch from hexanal side left {
-    hexanal
-    <-> . +hydrogen_cyanide
-    2s_2_hydroxyheptanenitrile
-  }
 
-  branch from allyl_alcohol side right {
-    allyl_alcohol
-    <-> . +h +formate +h2o
-    vinyl_acetate
-  }
 
-  branch from nad side left {
-    nad
-    <-> ec_1_2_1_3 [1.2.1.3] +nadh +h +6_dimethylamino_2_naphthoic_acid +h2o
-    6_dimethylamino_2_naphthaldehyde
-  }
 
-  branch from nad side right {
-    nad
-    <-> ec_1_2_1_3 [1.2.1.3] +nadh +3_phenylpropanoate +h +h2o
-    3_phenylpropanal
-  }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_4_99_1_5 [4.99.1.5] +butyronitrile
-    butanal_oxime
-  }
 
-  branch from h2o side right {
-    h2o
-    <-> ec_4_99_1_5 [4.99.1.5] +pyridine_2_aldoxime
-    2_cyanopyridine
-  }
+
+
+
+
+
+
+
+
+
+
+
 }

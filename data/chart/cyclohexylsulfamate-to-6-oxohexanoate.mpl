@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cyclohexylsulfamate-to-6-oxohexanoate "cyclohexylsulfamate to 6-oxohexanoate" {
-  spacing 222
+  spacing 228
 
   spine at 0,0 {
     cyclohexylsulfamate
@@ -22,31 +22,37 @@ pathway cyclohexylsulfamate-to-6-oxohexanoate "cyclohexylsulfamate to 6-oxohexan
 
   branch from sulfate side left {
     sulfate
-    <-> . +z_n_sulfonatooxy_prop_2_enimidothioate
-    allyl_isothiocyanate
+    <-> . +sulfosungeidine_e +hplus
+    sungeidine_b
   }
 
   branch from sulfate side right {
     sulfate
-    <-> . +z_n_sulfonatooxy_prop_2_enimidothioate +sulfur_atom
-    allyl_cyanide
+    <-> . +o2 +hplus
+    h2s
   }
 
   branch from nh3 side left {
     nh3
-    <-> ec_1_4_1_20 [1.4.1.20] +l_phenylalanine +nad +h2o +nadh +hplus
+    <-> . +o_carbamoyl_l_serine +hplus +co2
+    2_ammonioprop_2_enoate
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_3_5_4_33 [3.5.4.33] +adenosine_5_monophosphate_1 +h2o +hplus
+    inosine_5_phosphate_1
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> . +l_threo_3_phenylserine
     keto_phenylpyruvate
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_3_5_4_36 [3.5.4.36] +cytidine_5_monophosphate_1 +h2o +hplus
-    uridine_5_monophosphate_1
-  }
-
-  branch from 6_oxohexanoate side left {
-    6_oxohexanoate
-    <-> ec_1_14_13_66 [1.14.13.66] +nadph +o2 +nadp +h2o
-    2_hydroxycyclohexan_1_one
+    <-> . +carboxyphosphate +pi +hplus
+    carbamate
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-2-di-9z-12z-15z-octade-to-h2o "1,2-di-(9Z,12Z,15Z-octade… to H2O" {
-  spacing 188
+  spacing 242
 
   spine at 0,0 {
     1_2_di_9z_12z_15z_octadecatrienoyl_sn_glycero_3
@@ -20,39 +20,93 @@ pathway 1-2-di-9z-12z-15z-octade-to-h2o "1,2-di-(9Z,12Z,15Z-octade… to H2O" {
     1_linolenoyl_sn_glycero_3_phosphocholine
   }
 
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_260 [2.1.1.260] +pseudouridine_5_phosphate_1 +sam +hplus
-    n1_methylpseudouridine_5_monophosphate_1
-  }
-
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_317 [2.1.1.317] +n_acyl_4e_8e_sphinga_4_8_dienine +sam +hplus
-    n_acyl_4e_8e_9_methylsphinga_4_8_dienine
-  }
-
   branch from atp side left {
     atp
-    <-> . +diphosphate +2_4_dichlorobenzoyl_coa +amp +2_4_dichlorobenzoate
-    coa
+    <-> . +4_hydroxybenzoyl_acetate +h +amp +phosphate +4_hydroxyacetophenone +h2o
+    co2
   }
 
   branch from atp side right {
     atp
-    <-> . +nadh +3_dehydro_atp +h
-    nad
+    <-> . +4_hydroxybenzoyl_acetate +coa +3_4_hydroxyphenyl_3_oxo_propanoyl_coa +amp
+    diphosphate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +n_carbamoyl_l_glutamate
-    hydantoin_5_propionate
+    <-> . +3r_2_hydroxydihydrodaidzein
+    anhydroglycinol
   }
 
   branch from h2o side right {
     h2o
-    <-> . +6_hydroxykynurenic_acid
-    4_2_amino_5_hydroxyphenyl_2_4_dioxobutanoate
+    <-> ec_3_4_13_23 [3.4.13.23] +l_cys_ian +glycine
+    cys_ian_gly
+  }
+
+  branch from 1_myristoyl_sn_glycero_3_phosphocholine side left {
+    1_myristoyl_sn_glycero_3_phosphocholine
+    <-> . +1_2_dilinoleoyl_sn_glycero_3_phosphoethanolamine +1_tetradecanoyl_2_9z_12z_octadecadienoyl_sn_glyc
+    1_linoleoyl_sn_glycero_3_phosphoethanolamine
+  }
+
+  branch from h side right {
+    h
+    <-> . +spermidine +trans_caffeoyl_coa +coa
+    n1_n5_n10_tris_e_caffeoyl_spermidine
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_3_1_74 [2.3.1.74] +malonyl_coa +dihydro_4_coumaroyl_coa +co2 +coa
+    phloretin
+  }
+
+  branch from adp side right {
+    adp
+    <-> ec_3_6_3_44 [3.6.3.44] +h +phosphate +atp +h2o
+    glucosyl_oleandomycin
+  }
+
+  branch from adp side left {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    coprogen
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_3_1_3_2 [3.1.3.2] +2_deoxyuridine_3_monophosphate +h2o +h
+    2_deoxyuridine
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> ec_2_4_1_320 [2.4.1.320] +n_n_diacetylchitobiose +alpha_d_mannose_1_phosphate
+    d_manp_1_4_d_glcpnac_1_4_d_glcpnac
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_6_2_1_3 [6.2.1.3] +phytenoyl_coa +diphosphate +h +amp +2e_phytenoic_acid
+    coa
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    selenate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +3_oxotetradecanoyl_coa +coa
+    3_oxotetradecanoic_acid
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +4_chloro_3_hydroxybutyryl_coa
+    4_chloro_crotonyl_coa
   }
 }

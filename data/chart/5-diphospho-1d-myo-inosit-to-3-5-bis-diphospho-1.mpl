@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-diphospho-1d-myo-inosit-to-3-5-bis-diphospho-1 "5-diphospho-1D-myo-inosit… to 3,5-bis(diphospho)-1D-myo…" {
-  spacing 268
+  spacing 304
 
   spine at 0,0 {
     5_diphospho_1d_myo_inositol_1_2_3_4_6_pentakisph
@@ -18,25 +18,61 @@ pathway 5-diphospho-1d-myo-inosit-to-3-5-bis-diphospho-1 "5-diphospho-1D-myo-ino
 
   branch from adp side left {
     adp
-    <-> ec_6_4_1_7 [6.4.1.7] +s_oxalatosuccinate +h +phosphate +co2 +atp +h2o
-    2_oxoglutarate
+    <-> ec_3_6_3_23 [3.6.3.23] +h +phosphate +atp +h2o
+    carnosine
   }
 
   branch from adp side right {
     adp
-    <-> . +3s_3_isopropenyl_6_oxoheptanoyl_coa +phosphate +h +atp +coa
-    3s_3_isopropenyl_6_oxoheptanoate
+    <-> . +h +phosphate +atp +h2o
+    chenodeoxycholic_acid_24_o_d_glucuronide
   }
 
-  branch from 3_diphospho_1d_myo_inositol_1_2_4_5_6_pentakisph side left {
-    3_diphospho_1d_myo_inositol_1_2_4_5_6_pentakisph
-    <-> ec_2_7_4_21 [2.7.4.21] +atp +adp
-    1d_myo_inositol_hexakisphosphate
+  branch from 5_diphospho_1d_myo_inositol_1_2_3_4_6_pentakisph side left {
+    5_diphospho_1d_myo_inositol_1_2_3_4_6_pentakisph
+    <-> ec_2_7_4_21 [2.7.4.21] +h +atp +adp
+    5_6_bis_diphospho_1d_myo_inositol_tetrakisphosph
   }
 
-  branch from 3_diphospho_1d_myo_inositol_1_2_4_5_6_pentakisph side right {
-    3_diphospho_1d_myo_inositol_1_2_4_5_6_pentakisph
-    <-> ec_3_6_1_52 [3.6.1.52] +1d_myo_inositol_hexakisphosphate +h +phosphate
-    h2o
+  branch from 5_diphospho_1d_myo_inositol_1_2_3_4_6_pentakisph side right {
+    5_diphospho_1d_myo_inositol_1_2_3_4_6_pentakisph
+    <-> ec_2_7_4_24 [2.7.4.24] +atp +adp
+    a_bis_diphospho_1d_myo_inositol_tetrakisphosphat
+  }
+
+  branch from h side left {
+    h
+    <-> ec_1_1_1_153 [1.1.1.153] +l_sepiapterin +nadph +d_erythro_7_8_dihydrobiopterin
+    nadp
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_4_1_171 [2.4.1.171] +udp +cycasin +methylazoxymethanol
+    udp_alpha_d_glucose
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    chenodeoxycholate_3_o_d_glucuronide
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    12s_hht
+  }
+
+  branch from adp side left {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    cholestane_3_7_12_24_25_pentol
+  }
+
+  branch from adp side right {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    8_dehydrocholesterol
   }
 }

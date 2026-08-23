@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-oleoyl-2-acyl-sn-glycer-to-h2o "1-oleoyl-2-acyl-sn-glycer… to H2O" {
-  spacing 206
+  spacing 266
 
   spine at 0,0 {
     1_oleoyl_2_acyl_sn_glycero_3_phosphate
@@ -16,11 +16,117 @@ pathway 1-oleoyl-2-acyl-sn-glycer-to-h2o "1-oleoyl-2-acyl-sn-glycer… to H2O" {
     atp
   }
 
+  branch from 1_oleoyl_sn_glycero_3_phosphate side left {
+    1_oleoyl_sn_glycero_3_phosphate
+    <-> . +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +1_hexadecanoyl_sn_glycero_3_phosphocholine
+    1_oleoyl_2_linoleoyl_sn_glycero_3_phosphate
+  }
 
+  branch from 1_oleoyl_sn_glycero_3_phosphate side right {
+    1_oleoyl_sn_glycero_3_phosphate
+    <-> . +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +1_oleoyl_2_linoleoyl_sn_glycero_3_phosphate
+    1_hexadecanoyl_sn_glycero_3_phospho_1_sn_glycero
+  }
 
+  branch from 1_oleoyl_2_palmitoyl_sn_glycero_3_phosphate side left {
+    1_oleoyl_2_palmitoyl_sn_glycero_3_phosphate
+    <-> . +atp +adp +hplus
+    1_oleoyl_2_palmitoyl_sn_glycerol
+  }
 
+  branch from atp side right {
+    atp
+    <-> ec_6_2_1_3 [6.2.1.3] +18_hydroxyoctadecanoate +coa +18_hydroxystearoyl_coa +amp
+    diphosphate
+  }
 
+  branch from atp side left {
+    atp
+    <-> . +9z_12z_octadecadienoate +h +diphosphate
+    linoleyl_amp
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> . +1r_5as_6r_4a_hydroxy_1_4_4a_5_5a_6_9_10a_octahy
+    1r_6s_6_amino_5_oxocyclohex_2_ene_1_carboxylic
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> ec_2_1_1_90 [2.1.1.90] +h +5_hydroxybenzimidazolylcobamide +methanol
+    co_methyl_co_5_hydroxybenzimidazolylcob_i_amide
+  }
 
+  branch from palmitoyl_coa side right {
+    palmitoyl_coa
+    <-> ec_1_14_19_32 [1.14.19.32] +fe2 +o2 +hplus +iron +h2o
+    14e_hexadecenoyl_coa
+  }
+
+  branch from palmitoyl_coa side left {
+    palmitoyl_coa
+    <-> ec_1_14_19_32 [1.14.19.32] +fe2 +o2 +hplus +iron +h2o
+    14z_hexadecenoyl_coa
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_1_4_42 [3.1.4.42] +sn_glycerol_3_phosphate +h2o
+    glycerol_1_2_cyclic_phosphate
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_4_17_13 [3.4.17.13] +d_alanine +n_acetyl_d_glucosaminyl_n_acetylmuramoyl_l_alany +h2o
+    n_acetyl_d_glucosaminyl_n_acetylmuramoyl_l_ala_d
+  }
+
+  branch from adp side right {
+    adp
+    <-> ec_2_7_1_166 [2.7.1.166] +alpha_kdo8n_2_6_lipid_iva +atp +h
+    4_o_phospho_alpha_kdo8n_2_6_lipid_iva
+  }
+
+  branch from adp side left {
+    adp
+    <-> . +phosphomycoketide_c32 +h +atp
+    c32_mycoketide
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_2_5_1_95 [2.5.1.95] +4_6_ch3_coo_c_beta_d_man_1_4_beta_glca_1_2_6_o_a +d_man_beta_1_4_glca_beta_1_2_6_o_acetyl_d_man_al
+    phosphoenolpyruvate
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +bis_myo_inositol_1_3_phosphate +h2o
+    bis_1l_myo_inositol_3_1_phosphate_1_phosphate
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +s_adenosyl_l_homocysteine +diphosphate +co2 +dieckmann_product +nadp +coa +amp +h2o +s_adenosyl_l_methionine +h +l_serine +nadph
+    malonyl_coa
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +s_adenosyl_l_homocysteine +5s_5_2s_2_carboxylato_2_hydroxy_2_methylethyl_2 +diphosphate +co2 +nadp +coa +amp +h2o +malonyl_coa +h +4_hydroxy_4_methyl_l_glutamic_acid +nadph
+    s_adenosyl_l_methionine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +beta_d_glucose_6_phosphate +beta_d_fructose
+    sucrose_6_g_phosphate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_4_19_11 [3.4.19.11] +meso_diaminopimeloyl_alanine +n_acetylmuramoyl_l_ala_d_glu
+    n_acetylmuramoyl_l_ala_d_glu_l_meso_diaminopimel
+  }
 }

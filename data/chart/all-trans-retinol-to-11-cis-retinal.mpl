@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway all-trans-retinol-to-11-cis-retinal "all-trans-retinol to 11-cis-retinal" {
-  spacing 226
+  spacing 256
 
   spine at 0,0 {
     all_trans_retinol
@@ -20,31 +20,61 @@ pathway all-trans-retinol-to-11-cis-retinal "all-trans-retinol to 11-cis-retinal
 
   branch from nadp side left {
     nadp
-    <-> . +cdp_4_dehydro_3_6_dideoxy_d_glucose_epimer +h +nadph
-    cdp_ascarylose
+    <-> ec_1_8_4_2 [1.8.4.2] +mercaptoethanol +h +nadph
+    2_2_dithiodiethanol
   }
 
   branch from nadp side right {
     nadp
-    <-> . +h +dihydrogeranylgeranyl_diphosphate +nadph
-    tetrahydrogeranylgeranyl_diphosphate
-  }
-
-  branch from all_trans_retinol side left {
-    all_trans_retinol
-    <-> .
-    13_cis_retinol
-  }
-
-  branch from 11_cis_retinol side right {
-    11_cis_retinol
-    <-> .
-    9_cis_retinol
+    <-> ec_1_1_1_188 [1.1.1.188] +duroquinol +h +nadph
+    duroquinone
   }
 
   branch from 11_cis_retinol side left {
     11_cis_retinol
-    <-> . +fatty_acyl_coa +coa
-    11_cis_retinyl_ester
+    <-> .
+    13_cis_retinol
+  }
+
+  branch from all_trans_retinol side right {
+    all_trans_retinol
+    <-> ec_2_3_1_76 [2.3.1.76] +hexadecanoyl_coa +coa
+    all_trans_retinyl_palmitate
+  }
+
+  branch from h side left {
+    h
+    <-> . +s_adenosyl_l_homocysteine +desoxyhemigossypol_6_methyl_ether +desoxyhemigossypol
+    s_adenosyl_l_methionine
+  }
+
+  branch from h side right {
+    h
+    <-> . +s_adenosyl_l_homocysteine +7_hydroxy_2_4_5_trimethoxyisoflavone +s_adenosyl_l_methionine
+    2_7_dihydroxy_4_5_dimethoxyisoflavone
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_1_1_188 [1.1.1.188] +prostaglandin_d3 +h +nadp
+    prostaglandin_f3alpha
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_1_1_21 [1.1.1.21] +h +l_xylose +nadp
+    xylitol
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_2_1_47 [1.2.1.47] +h +nadph +4_trimethylamino_butanoate +h2o
+    4_trimethylamino_butanal
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_14_15_15 [1.14.15.15] +h +o2 +epidihydrocholesterin +nadph +h2o
+    5beta_cholestane_3alpha_26_diol
   }
 }

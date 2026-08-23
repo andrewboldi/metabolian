@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-3-hydroxypalmitoyl-coa-to-1-palmitoyl-2-palmi "(S)-3-hydroxypalmitoyl-CoA to 1-palmitoyl-2-palmitoleoy…" {
-  spacing 194
+  spacing 218
 
   spine at 0,0 {
     hydroxyhexadecanoyl_coa
@@ -40,7 +40,7 @@ pathway s-3-hydroxypalmitoyl-coa-to-1-palmitoyl-2-palmi "(S)-3-hydroxypalmitoyl-
 
   branch from trans_hexadecenoyl_coa side right {
     trans_hexadecenoyl_coa
-    <-> . +fad +hplus +fadh2
+    <-> . +o2 +h2o2
     palmitoyl_coa
   }
 
@@ -60,5 +60,29 @@ pathway s-3-hydroxypalmitoyl-coa-to-1-palmitoyl-2-palmi "(S)-3-hydroxypalmitoyl-
     1_palmitoyl_2_palmitoleoyl_sn_glycero_3_phosphoc
     <-> . +1_1_2_trioleoyl_2_palmitoleoyl_cardiolipin +1_hexadecanoyl_sn_glycero_3_phosphocholine
     trioleoyl_2_monolysocardiolipin
+  }
+
+  branch from palmitoleoyl_coa side right {
+    palmitoleoyl_coa
+    <-> . +1_acyl_sn_glycero_3_phosphoserine +coa
+    1_acyl_2_palmitoleoyl_sn_glycero_3_phosphoserine
+  }
+
+  branch from palmitoleoyl_coa side left {
+    palmitoleoyl_coa
+    <-> . +hexadecan_1_ol +coa
+    palmityl_palmitoleate
+  }
+
+  branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side right {
+    1_hexadecanoyl_sn_glycero_3_phosphocholine
+    <-> . +palmitoyl_coa +coa
+    1_2_dihexadecanoyl_sn_glycero_3_phosphocholine
+  }
+
+  branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side left {
+    1_hexadecanoyl_sn_glycero_3_phosphocholine
+    <-> . +oleoyl_coa +coa
+    1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph
   }
 }

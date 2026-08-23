@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dihydrophloroglucinol-to-3-hydroxy-2-4-dioxopent "dihydrophloroglucinol to 3-hydroxy-2,4-dioxopentyl…" {
-  spacing 334
+  spacing 340
 
   spine at 0,0 {
     dihydrophloroglucinol
@@ -78,5 +78,53 @@ pathway dihydrophloroglucinol-to-3-hydroxy-2-4-dioxopent "dihydrophloroglucinol 
     3_hydroxy_2_4_dioxopentyl_phosphate
     <-> . +3_4_4_trihydroxy_5_phosphooxypentan_2_one
     h2o
+  }
+
+  branch from sam side right {
+    sam
+    <-> . +methylarsonous_acid +sah +hplus
+    dimethylarsinate
+  }
+
+  branch from sam side left {
+    sam
+    <-> ec_2_1_1_139 [2.1.1.139] +3_demethylstaurosporinium +sah +hplus
+    staurosporinium
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_69 [2.1.1.69] +bergaptol +sam
+    5_methoxypsoralen
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_121 [2.1.1.121] +6_o_methylnorlaudanosolinium +sam +hplus
+    nororientalinium
+  }
+
+  branch from adenine side right {
+    adenine
+    <-> ec_2_4_2_57 [2.4.2.57] +amp +pi
+    d_ribose_1_5_bisphosphate
+  }
+
+  branch from adenine side left {
+    adenine
+    <-> . +atp +h2o
+    d_ribose_5_triphosphate
+  }
+
+  branch from s_4_5_dihydroxypentane_2_3_dione side right {
+    s_4_5_dihydroxypentane_2_3_dione
+    <-> ec_4_4_1_21 [4.4.1.21] +l_homocysteine
+    s_ribosyl_l_homocysteine
+  }
+
+  branch from s_4_5_dihydroxypentane_2_3_dione side left {
+    s_4_5_dihydroxypentane_2_3_dione
+    <-> . +h2o
+    4_hydroxy_5_methyl_3_furanone
   }
 }

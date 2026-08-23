@@ -18,25 +18,25 @@ pathway n-oleoyl-l-serinate-to-8z-heptadecenal "N-oleoyl-L-serinate to (8Z)-hept
 
   branch from serine side left {
     serine
-    <-> ec_5_1_1_18 [5.1.1.18]
-    dserine
+    <-> . +nad +nadh +hplus
+    l_3_oxoalanine
   }
 
   branch from serine side right {
     serine
-    <-> ec_3_1_3_3 [3.1.3.3] +h2o +pi
+    <-> ec_1_1_1_276 [1.1.1.276] +nadp +co2 +nadph
+    ammonioacetaldehyde
+  }
+
+  branch from serine side left {
+    serine
+    <-> ec_2_7_1_225 [2.7.1.225] +atp +adp +hplus
     pser
   }
 
-  branch from oleate side left {
-    oleate
-    <-> . +1_2_dioleoyl_sn_glycero_3_phospho_1d_myo_inosito +h2o +hplus
-    2_oleoyl_sn_glycero_3_phospho_1d_myo_inositol
-  }
-
-  branch from oleate side right {
-    oleate
-    <-> . +1_oleoyl_2_8z_11z_14z_icosatrienoyl_sn_glycero_3 +h2o +hplus
-    2_8z_11z_14z_icosatrienoyl_sn_glycero_3_phospho
+  branch from serine side right {
+    serine
+    <-> . +n_arachidonoyl_l_serine +h2o
+    arachidonate
   }
 }

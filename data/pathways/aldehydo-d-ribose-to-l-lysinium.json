@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "aldehydo-d-ribose-to-l-lysinium",
   "name": "aldehydo-D-ribose… to L-lysinium",
-  "category": "amino-acid-metabolism",
+  "category": "other",
   "summary": "A 4-step route from aldehydo-D-ribose 5-phosphate(2−) to L-lysinium residue, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -120,52 +120,6 @@
       "xrefs": {
         "chebi": "CHEBI:144585"
       }
-    },
-    {
-      "id": "l_methionine",
-      "name": "L-methionine",
-      "formula": "C5H9NOS",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16044"
-      }
-    },
-    {
-      "id": "h2o2",
-      "name": "Hydrogen peroxide",
-      "formula": "H2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16240"
-      }
-    },
-    {
-      "id": "s_l_lysyl_l_methionine_sulfilimine",
-      "name": "S-(L-lysyl)-L-methionine sulfilimine",
-      "short": "S-(L-lysyl)-L-methi…",
-      "formula": "C11H19N3O2S",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:166867"
-      }
-    },
-    {
-      "id": "hypobromite",
-      "name": "hypobromite",
-      "formula": "BrO",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:29250"
-      }
-    },
-    {
-      "id": "bromide",
-      "name": "bromide",
-      "formula": "Br",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:15858"
-      }
     }
   ],
   "enzymes": [
@@ -174,7 +128,10 @@
       "name": "protein-ribulosamine 3-kinase",
       "ec": [
         "2.7.1.172"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q9H479"
+      }
     }
   ],
   "reactions": [
@@ -347,101 +304,93 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "L-lysyl-[collagen] + L-methionyl-[collagen] + H2O2 = [collagen]-L-lysyl-N-S-L-methionyl...",
-      "equation": "L-lysyl-[collagen] + L-methionyl-[collagen] + H2O2 = [collagen]-L-lysyl-N-S-L-methionyl-[collagen] + 2 H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "l_lysinium",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_methionine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "s_l_lysyl_l_methionine_sulfilimine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:66020"
+      "id": "xt_r5p_1-methyladenosine-to-5-amino-1-5-phosphonato",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r5p"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1-methyladenosine-to-5-amino-1-5-phosphonato"
+      },
+      "note": "Shares D-Ribose 5-phosphate with 1-methyladenosine to 5-amino-1-(5-phosphonato-….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:66020"
+            "db": "ChEBI",
+            "id": "CHEBI:58273"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "L-lysyl-[collagen] + L-methionyl-[collagen] + hypobromite = [collagen]-L-lysyl-N-S-L-me...",
-      "equation": "L-lysyl-[collagen] + L-methionyl-[collagen] + hypobromite = [collagen]-L-lysyl-N-S-L-methionyl-[collagen] + bromide + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "l_lysinium",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_methionine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hypobromite",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "s_l_lysyl_l_methionine_sulfilimine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "bromide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:66024"
+      "id": "xt_r5p_acetylacetone-to-dehydro-coenzyme-f420-0",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r5p"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "acetylacetone-to-dehydro-coenzyme-f420-0"
+      },
+      "note": "Shares D-Ribose 5-phosphate with acetylacetone to dehydro coenzyme F420-0.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:66024"
+            "db": "ChEBI",
+            "id": "CHEBI:58273"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r5p_d-arabinitol-to-fmnh2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r5p"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-arabinitol-to-fmnh2"
+      },
+      "note": "Shares D-Ribose 5-phosphate with D-arabinitol to FMNH2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58273"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r5p_urethane-to-acetaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r5p"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "urethane-to-acetaldehyde"
+      },
+      "note": "Shares D-Ribose 5-phosphate with urethane to acetaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58273"
           }
         ]
       }

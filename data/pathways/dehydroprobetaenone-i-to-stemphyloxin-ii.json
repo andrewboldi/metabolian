@@ -108,6 +108,15 @@
       "xrefs": {
         "chebi": "CHEBI:145070"
       }
+    },
+    {
+      "id": "epoxybetaenone",
+      "name": "epoxybetaenone",
+      "formula": "C21H34O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:145069"
+      }
     }
   ],
   "enzymes": [],
@@ -292,6 +301,103 @@
           {
             "db": "Rhea",
             "id": "RHEA:62712"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "dehydroprobetaenone I + NADPH + O2 + H(+) = epoxybetaenone + NADP(+) + H2O",
+      "equation": "dehydroprobetaenone I + NADPH + O2 + H(+) = epoxybetaenone + NADP(+) + H2O",
+      "substrates": [
+        {
+          "metabolite": "dehydroprobetaenone_i",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "epoxybetaenone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:61860"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61860"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_dehydroprobetaenone_i_ethylbenzene-to-3-oxo-3-phenylpropionate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dehydroprobetaenone_i"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ethylbenzene-to-3-oxo-3-phenylpropionate"
+      },
+      "note": "Shares dehydroprobetaenone I with ethylbenzene to 3-oxo-3-phenylpropionate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:145061"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_betaenone_c_ethylbenzene-to-3-oxo-3-phenylpropionate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "betaenone_c"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ethylbenzene-to-3-oxo-3-phenylpropionate"
+      },
+      "note": "Shares betaenone C with ethylbenzene to 3-oxo-3-phenylpropionate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:145053"
           }
         ]
       }

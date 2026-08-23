@@ -16,15 +16,15 @@ pathway 3-end-3-n-acyl-l-ami-to-l-arginyl-l-amino-acid "3'-end 3'-(N-acyl-L-α-a
     l_arginyl_l_amino_acid
   }
 
-  branch from amp_3_end_1 side left {
-    amp_3_end_1
-    <-> . +3_l_seryl_adenylyl_1_group +h2o
-    serine
+  branch from arginine side left {
+    arginine
+    <-> . +fe2 +hplus +iron +h2o
+    n5_hydroxyamino_imino_methyl_l_ornithinium
   }
 
-  branch from amp_3_end_1 side right {
-    amp_3_end_1
-    <-> . +h2o +serine
-    3_l_seryl_adenylyl_1_group
+  branch from arginine side right {
+    arginine
+    <-> . +neurotensin_1_8_dizwitterion +h2o
+    neurotensin_1_7
   }
 }

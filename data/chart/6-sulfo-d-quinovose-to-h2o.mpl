@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 6-sulfo-d-quinovose-to-h2o "6-sulfo-D-quinovose to H2O" {
-  spacing 176
+  spacing 164
 
   spine at 0,0 {
     6_sulfo_d_quinovose
@@ -16,27 +16,15 @@ pathway 6-sulfo-d-quinovose-to-h2o "6-sulfo-D-quinovose to H2O" {
     atp
   }
 
-  branch from h2o side left {
-    h2o
-    <-> . +naphthomycin_e
-    pronaphthomycin
+  branch from glycerol side left {
+    glycerol
+    <-> . +phosphatidylglycerol_ditetradec_7_enoyl_n_c14_1
+    cardiolipin_tetratetradec_7_enoyl_n_c14_1
   }
 
-  branch from h2o side right {
-    h2o
-    <-> . +salinisporamycin_a +2_6_8_trihydroxy_7_methylnaphthalene_1_4_dione
-    2z_4e_6s_7s_8r_9r_10r_10_1s_3s_4r_5s_1_4_dimeth
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    1_9z_hexadecenoyl_2_9z_12z_15z_octadecatrienoyl
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    1_stearoyl_2_linoleoyl_sn_glycero_3_phospho_l_se
+  branch from glycerol side right {
+    glycerol
+    <-> . +cardiolipin_tetrahexadec_9_enoyl_n_c16_1
+    phosphatidylglycerol_dihexadec_9_enoyl_n_c16_1
   }
 }

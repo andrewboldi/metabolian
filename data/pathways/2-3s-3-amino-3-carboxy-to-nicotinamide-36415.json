@@ -1,0 +1,548 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-3s-3-amino-3-carboxy-to-nicotinamide-36415",
+  "name": "2-[(3S)-3-amino-3-carboxy… to nicotinamide",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from 2-[(3S)-3-amino-3-carboxypropyl]-L-histidine zwitterion residue to nicotinamide, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:36415"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:73995"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_3s_3_amino_3_carboxypropyl_l_histidine_zwitter",
+      "name": "2-[(3S)-3-amino-3-carboxypropyl]-L-histidine zwitterion",
+      "short": "2-[(3S)-3-amino-3-c…",
+      "formula": "C10H14N4O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:73995"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "diphthine_betaine",
+      "name": "diphthine betaine",
+      "formula": "C13H20N4O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:82696"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "diphthamide",
+      "name": "diphthamide",
+      "formula": "C13H22N5O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:16692"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "n_adp_d_ribosyl_diphthamide_1",
+      "name": "N-(ADP-α-D-ribosyl)diphthamide(1−)",
+      "short": "N-(ADP-α-D-ribosyl)…",
+      "formula": "C28H41N10O15P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:82697"
+      }
+    },
+    {
+      "id": "nicotinamide",
+      "name": "nicotinamide",
+      "formula": "C6H6N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17154"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_98",
+      "name": "diphthine synthase",
+      "ec": [
+        "2.1.1.98"
+      ]
+    },
+    {
+      "id": "ec_6_3_1_14",
+      "name": "diphthine--ammonia ligase",
+      "ec": [
+        "6.3.1.14"
+      ],
+      "xrefs": {
+        "uniprot": "Q7L8W6"
+      }
+    },
+    {
+      "id": "ec_2_4_2_36",
+      "name": "NAD(+)--diphthamide ADP-ribosyltransferase",
+      "ec": [
+        "2.4.2.36"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "diphthine synthase",
+      "equation": "2-[(3S)-amino-3-carboxypropyl]-L-histidyl-[translation elongation factor 2] + 3 S-adenosyl-L-methionine = diphthine-[translation elongation factor 2] + 3 S-adenosyl-L-homocysteine + 3 H(+)",
+      "ec": "2.1.1.98",
+      "substrates": [
+        {
+          "metabolite": "2_3s_3_amino_3_carboxypropyl_l_histidine_zwitter",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "diphthine_betaine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_98"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:36415"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36415"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "diphthine--ammonia ligase",
+      "equation": "diphthine-[translation elongation factor 2] + NH4(+) + ATP = diphthamide-[translation elongation factor 2] + AMP + diphosphate + H(+)",
+      "ec": "6.3.1.14",
+      "substrates": [
+        {
+          "metabolite": "diphthine_betaine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "diphthamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_3_1_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:19753"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19753"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "NAD(+)--diphthamide ADP-ribosyltransferase",
+      "equation": "diphthamide-[translation elongation factor 2] + NAD(+) = N-(ADP-D-ribosyl)diphthamide-[translation elongation factor 2] + nicotinamide + H(+)",
+      "ec": "2.4.2.36",
+      "substrates": [
+        {
+          "metabolite": "diphthamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_adp_d_ribosyl_diphthamide_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nicotinamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_2_36"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:11820"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11820"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_2_3s_3_amino_3_carboxypropyl_l_histidine_zwitter_2-3s-3-amino-3-carboxy-to-nicotinamide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_3s_3_amino_3_carboxypropyl_l_histidine_zwitter"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3s-3-amino-3-carboxy-to-nicotinamide"
+      },
+      "note": "Shares 2-[(3S)-3-amino-3-carboxypropyl]-L-histidine zwitterion with 2-[(3S)-3-amino-3-carboxy… to nicotinamide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:73995"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_3s_3_amino_3_carboxypropyl_l_histidine_zwitter_2-3s-3-amino-3-carboxy-to-s-adenosyl-l-homocyste",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_3s_3_amino_3_carboxypropyl_l_histidine_zwitter"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3s-3-amino-3-carboxy-to-s-adenosyl-l-homocyste"
+      },
+      "note": "Shares 2-[(3S)-3-amino-3-carboxypropyl]-L-histidine zwitterion with 2-[(3S)-3-amino-3-carboxy… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:73995"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_3s_3_amino_3_carboxypropyl_l_histidine_zwitter_n-acetyl-d-mannosamine-to-methanol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_3s_3_amino_3_carboxypropyl_l_histidine_zwitter"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyl-d-mannosamine-to-methanol"
+      },
+      "note": "Shares 2-[(3S)-3-amino-3-carboxypropyl]-L-histidine zwitterion with N-acetyl-D-mannosamine to methanol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:73995"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_3s_3_amino_3_carboxypropyl_l_histidine_zwitter_n-acetyl-d-mannosamine-to-methanol-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_3s_3_amino_3_carboxypropyl_l_histidine_zwitter"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyl-d-mannosamine-to-methanol-null"
+      },
+      "note": "Shares 2-[(3S)-3-amino-3-carboxypropyl]-L-histidine zwitterion with N-acetyl-D-mannosamine to methanol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:73995"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_diphthine_betaine_2-3s-3-amino-3-carboxy-to-nicotinamide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "diphthine_betaine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3s-3-amino-3-carboxy-to-nicotinamide"
+      },
+      "note": "Shares diphthine betaine with 2-[(3S)-3-amino-3-carboxy… to nicotinamide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:82696"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_diphthine_betaine_2-3s-3-amino-3-carboxy-to-s-adenosyl-l-homocyste",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "diphthine_betaine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3s-3-amino-3-carboxy-to-s-adenosyl-l-homocyste"
+      },
+      "note": "Shares diphthine betaine with 2-[(3S)-3-amino-3-carboxy… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:82696"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_diphthine_betaine_n-acetyl-d-mannosamine-to-methanol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "diphthine_betaine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyl-d-mannosamine-to-methanol"
+      },
+      "note": "Shares diphthine betaine with N-acetyl-D-mannosamine to methanol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:82696"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_diphthine_betaine_n-acetyl-d-mannosamine-to-methanol-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "diphthine_betaine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyl-d-mannosamine-to-methanol-null"
+      },
+      "note": "Shares diphthine betaine with N-acetyl-D-mannosamine to methanol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:82696"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_diphthamide_2-3s-3-amino-3-carboxy-to-nicotinamide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "diphthamide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3s-3-amino-3-carboxy-to-nicotinamide"
+      },
+      "note": "Shares diphthamide with 2-[(3S)-3-amino-3-carboxy… to nicotinamide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16692"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_adp_d_ribosyl_diphthamide_1_2-3s-3-amino-3-carboxy-to-nicotinamide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_adp_d_ribosyl_diphthamide_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3s-3-amino-3-carboxy-to-nicotinamide"
+      },
+      "note": "Shares N-(ADP-α-D-ribosyl)diphthamide(1−) with 2-[(3S)-3-amino-3-carboxy… to nicotinamide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:82697"
+          }
+        ]
+      }
+    }
+  ]
+}

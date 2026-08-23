@@ -38,69 +38,45 @@ pathway isatin-to-2r-dimboa-glucoside "isatin to (2R)-DIMBOA glucoside" {
     nad
   }
 
-  branch from fmn side left {
-    fmn
-    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +fmnh2 +o2 +h2o +hplus
-    4z_7z_10z_13z_16z_19s_20r_19_20_epoxydocosapent
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +fmnh2 +o2 +h2o +hplus
-    5z_11z_14z_17z_8_9_epoxyicosatetraenoate
-  }
-
-  branch from diboa_d_glucoside side left {
-    diboa_d_glucoside
-    <-> . +s_adenosyl_l_homocysteine +4_o_methyl_diboa_glucoside +h
-    s_adenosyl_l_methionine
-  }
-
-  branch from diboa_d_glucoside side right {
-    diboa_d_glucoside
-    <-> ec_2_4_1_202 [2.4.1.202] +udp +udp_alpha_d_glucose
-    diboa
-  }
-
   branch from triboa_d_glucoside side left {
     triboa_d_glucoside
     <-> ec_2_1_1_241 [2.1.1.241] +s_adenosyl_l_homocysteine +h +dimboa_beta_d_glucoside
     s_s_adenosyl_l_methionine
   }
 
-  branch from succinate side right {
-    succinate
-    <-> . +2_deoxyadenosine_5_monophosphate +chloride +akg +o2 +hplus +co2 +h2o
-    2_chloro_deoxyadenosine_5_monophosphate
-  }
-
-  branch from succinate side left {
-    succinate
-    <-> . +2_deoxyguanosine_5_monophosphate +chloride +akg +o2 +hplus +co2 +h2o
-    2_chloro_deoxyguanosine_5_monophosphate
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +uridine_5_monophosphate_1 +sam +hplus
-    5_methyluridine_5_monophosphate_1
-  }
-
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_266 [2.1.1.266] +adenosine_5_monophosphate_1 +sam +hplus
-    n6_methyladenosine_5_monophosphate_1
-  }
-
   branch from glucose side right {
     glucose
-    <-> . +z_alkenyl_glucosinolate +h2o +hplus
-    z_n_sulfonatooxy_alkenimidothioate
+    <-> . +quercetin_4_o_d_glucopyranoside +h +h2o
+    quercetin_3_4_di_o_d_glucoside
   }
 
   branch from glucose side left {
     glucose
-    <-> . +sinigrin +h2o +hplus
-    z_n_sulfonatooxy_prop_2_enimidothioate
+    <-> ec_3_2_1_21 [3.2.1.21] +scopoletin +h2o
+    scopolin
+  }
+
+  branch from udp_d_glucose side right {
+    udp_d_glucose
+    <-> . +malvidin +udp
+    malvidin_3_o_d_glucoside_betaine
+  }
+
+  branch from udp_d_glucose side left {
+    udp_d_glucose
+    <-> . +steviolbioside +udp +hplus
+    rebaudioside_b
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> . +20s_ginsenoside_rh1 +h2o
+    ginsenoside_rf
+  }
+
+  branch from glucose side left {
+    glucose
+    <-> . +notoginsenoside_fe +h2o
+    ginsenoside_rc
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway maltose-6-phosphate-to-d-glucopyranose "α-maltose 6'-phosphate to D-glucopyranose" {
-  spacing 216
+  spacing 204
 
   spine at 0,0 {
     maltose_6_phosphate
@@ -14,17 +14,5 @@ pathway maltose-6-phosphate-to-d-glucopyranose "α-maltose 6'-phosphate to D-glu
     trehalose
     <-> ec_2_4_1_64 [2.4.1.64] +pi -glucose
     d_glucose_1_phosphate
-  }
-
-  branch from glucose side left {
-    glucose
-    <-> . +avenacin_a_2 +benzoyl_d_glucoside
-    des_acyl_avenacin_a
-  }
-
-  branch from glucose side right {
-    glucose
-    <-> . +avenacin_a_2 +des_acyl_avenacin_a
-    benzoyl_d_glucoside
   }
 }

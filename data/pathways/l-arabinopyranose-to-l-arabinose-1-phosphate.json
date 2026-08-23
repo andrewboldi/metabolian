@@ -138,21 +138,21 @@
       }
     },
     {
-      "id": "nad",
-      "name": "NAD+",
-      "formula": "C21H26N7O14P2",
-      "charge": -1,
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:57540"
+        "chebi": "CHEBI:58349"
       }
     },
     {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
-      "charge": -2,
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:57945"
+        "chebi": "CHEBI:57783"
       }
     },
     {
@@ -193,7 +193,10 @@
       "name": "aldose reductase",
       "ec": [
         "1.1.1.21"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P15121"
+      }
     }
   ],
   "reactions": [
@@ -345,7 +348,7 @@
     {
       "id": "r4",
       "name": "aldose reductase",
-      "equation": "L-arabinitol + NAD(+) = L-arabinose + NADH + H(+)",
+      "equation": "L-arabinitol + NADP(+) = L-arabinose + NADPH + H(+)",
       "ec": "1.1.1.21",
       "substrates": [
         {
@@ -353,7 +356,7 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "nad",
+          "metabolite": "nadp",
           "stoichiometry": 1
         }
       ],
@@ -363,7 +366,7 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadh",
+          "metabolite": "nadph",
           "stoichiometry": 1
         },
         {
@@ -379,14 +382,14 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:25225"
+        "rhea": "RHEA:25229"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:25225"
+            "id": "RHEA:25229"
           }
         ]
       }
@@ -417,6 +420,272 @@
           {
             "db": "MetaNetX",
             "id": "MNXR136590"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_l_arabinopyranose_1-2-dioleoyl-sn-glycero-3-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_arabinopyranose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-dioleoyl-sn-glycero-3-to-h2o"
+      },
+      "note": "Shares β-L-arabinopyranose with 1,2-dioleoyl-sn-glycero-3… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:40886"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_arabinopyranose_l-arabinopyranose-to-l-xylulose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_arabinopyranose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-arabinopyranose-to-l-xylulose"
+      },
+      "note": "Shares β-L-arabinopyranose with α-L-arabinopyranose to L-xylulose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:40886"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_arabinopyranose_l-arabinopyranose-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_arabinopyranose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-arabinopyranose-to-nad"
+      },
+      "note": "Shares β-L-arabinopyranose with β-L-arabinopyranose to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:40886"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_arabinono_1_4_lactone_gdp-3-dehydro-6-deoxy-alp-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_arabinono_1_4_lactone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gdp-3-dehydro-6-deoxy-alp-to-nadph"
+      },
+      "note": "Shares L-arabinono-1,4-lactone with GDP-3-dehydro-6-deoxy-alp… to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1674"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_arabinono_1_4_lactone_ginsenoside-mc-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_arabinono_1_4_lactone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ginsenoside-mc-to-h2o"
+      },
+      "note": "Shares L-arabinono-1,4-lactone with ginsenoside Mc to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1674"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_arabinono_1_4_lactone_l-arabinopyranose-to-l-arabinitol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_arabinono_1_4_lactone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-arabinopyranose-to-l-arabinitol"
+      },
+      "note": "Shares L-arabinono-1,4-lactone with L-arabinopyranose to L-arabinitol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1674"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_arabinono_1_4_lactone_l-arabinopyranose-to-l-xylulose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_arabinono_1_4_lactone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-arabinopyranose-to-l-xylulose"
+      },
+      "note": "Shares L-arabinono-1,4-lactone with α-L-arabinopyranose to L-xylulose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1674"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_arabinono_1_4_lactone_nadh-to-cdp-d-arabinitol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_arabinono_1_4_lactone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-cdp-d-arabinitol"
+      },
+      "note": "Shares L-arabinono-1,4-lactone with NADH to CDP-D-arabinitol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1674"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_arabinono_1_4_lactone_udp-to-d-glucose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_arabinono_1_4_lactone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-d-glucose"
+      },
+      "note": "Shares L-arabinono-1,4-lactone with UDP to β-D-glucose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1674"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_arabinitol_l-arabinitol-to-l-xylulose-5-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_arabinitol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-arabinitol-to-l-xylulose-5-phosphate"
+      },
+      "note": "Shares L-arabinitol with L-arabinitol to L-xylulose 5-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18403"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_beta_l_arabinofuranose_2-amino-4-hydroxy-5-phosp-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "beta_l_arabinofuranose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-amino-4-hydroxy-5-phosp-to-phosphate"
+      },
+      "note": "Shares beta-L-arabinofuranose with 2-amino-4-hydroxy-5-phosp… to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM730690"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_beta_l_arabinofuranose_9-hydroxygeraniol-to-2e-geraniol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "beta_l_arabinofuranose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "9-hydroxygeraniol-to-2e-geraniol"
+      },
+      "note": "Shares beta-L-arabinofuranose with 9-Hydroxygeraniol to (2E)-geraniol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM730690"
           }
         ]
       }

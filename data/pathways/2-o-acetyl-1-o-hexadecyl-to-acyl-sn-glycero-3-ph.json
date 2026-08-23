@@ -121,34 +121,6 @@
       "xrefs": {
         "chebi": "CHEBI:57287"
       }
-    },
-    {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:30616"
-      }
-    },
-    {
-      "id": "n_acetylsphingosine_1_phosphate",
-      "name": "N-acetylsphingosine 1-phosphate",
-      "short": "N-acetylsphingosine…",
-      "formula": "C20H38NO6P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:85375"
-      }
-    },
-    {
-      "id": "adp",
-      "name": "ADP",
-      "formula": "C10H12N5O10P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:456216"
-      }
     }
   ],
   "enzymes": [],
@@ -273,46 +245,269 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "N-(acetyl)-sphing-4-enine + ATP = N-(acetyl)-sphing-4-enine-1-phosphate + ADP + H(+)",
-      "equation": "N-(acetyl)-sphing-4-enine + ATP = N-(acetyl)-sphing-4-enine-1-phosphate + ADP + H(+)",
-      "substrates": [
-        {
-          "metabolite": "n_acetylsphingosine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n_acetylsphingosine_1_phosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:47904"
+      "id": "xt_2_o_acetyl_1_o_hexadecyl_sn_glycero_3_phosphocho_1-hexadecyl-2-butanoyl-sn-to-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_o_acetyl_1_o_hexadecyl_sn_glycero_3_phosphocho"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1-hexadecyl-2-butanoyl-sn-to-acetate"
+      },
+      "note": "Shares 2-O-acetyl-1-O-hexadecyl-sn-glycero-3-phosphocholine with 1-hexadecyl-2-butanoyl-sn… to acetate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:47904"
+            "db": "ChEBI",
+            "id": "CHEBI:44811"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_o_acetyl_1_o_hexadecyl_sn_glycero_3_phosphocho_1-o-palmityl-2-acetyl-sn-to-1-hexadecyl-2-hexade",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_o_acetyl_1_o_hexadecyl_sn_glycero_3_phosphocho"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-o-palmityl-2-acetyl-sn-to-1-hexadecyl-2-hexade"
+      },
+      "note": "Shares 2-O-acetyl-1-O-hexadecyl-sn-glycero-3-phosphocholine with 1-O-palmityl-2-acetyl-sn-… to 1-hexadecyl-2-hexadecanoy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:44811"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lysophosphatidylcholine_o_16_0_0_0_1-hexadecyl-2-butanoyl-sn-to-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lysophosphatidylcholine_o_16_0_0_0"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-hexadecyl-2-butanoyl-sn-to-acetate"
+      },
+      "note": "Shares lysophosphatidylcholine O-16:0/0:0 with 1-hexadecyl-2-butanoyl-sn… to acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64496"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lysophosphatidylcholine_o_16_0_0_0_1-hexadecyl-2-glutaryl-sn-to-arachidonate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lysophosphatidylcholine_o_16_0_0_0"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-hexadecyl-2-glutaryl-sn-to-arachidonate"
+      },
+      "note": "Shares lysophosphatidylcholine O-16:0/0:0 with 1-hexadecyl-2-glutaryl-sn… to arachidonate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64496"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lysophosphatidylcholine_o_16_0_0_0_1-hexadecyl-2-propionyl-s-to-1-hexadecyl-sn-glyc",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lysophosphatidylcholine_o_16_0_0_0"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-hexadecyl-2-propionyl-s-to-1-hexadecyl-sn-glyc"
+      },
+      "note": "Shares lysophosphatidylcholine O-16:0/0:0 with 1-hexadecyl-2-propionyl-s… to 1-hexadecyl-sn-glycero-3-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64496"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lysophosphatidylcholine_o_16_0_0_0_1-hexadecyl-2-succinyl-sn-to-n-oleoyl-l-phenylal",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lysophosphatidylcholine_o_16_0_0_0"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-hexadecyl-2-succinyl-sn-to-n-oleoyl-l-phenylal"
+      },
+      "note": "Shares lysophosphatidylcholine O-16:0/0:0 with 1-hexadecyl-2-succinyl-sn… to N-oleoyl-L-phenylalaninate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64496"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lysophosphatidylcholine_o_16_0_0_0_1-o-hexadecyl-2-8-carbox-to-di-sulfido-diiron",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lysophosphatidylcholine_o_16_0_0_0"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-o-hexadecyl-2-8-carbox-to-di-sulfido-diiron"
+      },
+      "note": "Shares lysophosphatidylcholine O-16:0/0:0 with 1-O-hexadecyl-2-(8-carbox… to di-μ-sulfido-diiron.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64496"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lysophosphatidylcholine_o_16_0_0_0_1-o-palmityl-2-acetyl-sn-to-1-hexadecyl-2-hexade",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lysophosphatidylcholine_o_16_0_0_0"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-o-palmityl-2-acetyl-sn-to-1-hexadecyl-2-hexade"
+      },
+      "note": "Shares lysophosphatidylcholine O-16:0/0:0 with 1-O-palmityl-2-acetyl-sn-… to 1-hexadecyl-2-hexadecanoy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64496"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lysophosphatidylcholine_o_16_0_0_0_1-stearoyl-2-arachidonoyl-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lysophosphatidylcholine_o_16_0_0_0"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-stearoyl-2-arachidonoyl-to-h2o"
+      },
+      "note": "Shares lysophosphatidylcholine O-16:0/0:0 with 1-stearoyl-2-arachidonoyl… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64496"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_hexadecyl_2_hexadecanoyl_sn_glycero_3_phosphoc_1-hexadecyl-2-propionyl-s-to-1-hexadecyl-sn-glyc",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_hexadecyl_2_hexadecanoyl_sn_glycero_3_phosphoc"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-hexadecyl-2-propionyl-s-to-1-hexadecyl-sn-glyc"
+      },
+      "note": "Shares 1-hexadecyl-2-hexadecanoyl-sn-glycero-3-phosphocholine with 1-hexadecyl-2-propionyl-s… to 1-hexadecyl-sn-glycero-3-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:72744"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_hexadecyl_2_hexadecanoyl_sn_glycero_3_phosphoc_1-o-palmityl-2-acetyl-sn-to-1-hexadecyl-2-hexade",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_hexadecyl_2_hexadecanoyl_sn_glycero_3_phosphoc"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-o-palmityl-2-acetyl-sn-to-1-hexadecyl-2-hexade"
+      },
+      "note": "Shares 1-hexadecyl-2-hexadecanoyl-sn-glycero-3-phosphocholine with 1-O-palmityl-2-acetyl-sn-… to 1-hexadecyl-2-hexadecanoy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:72744"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_acyl_sn_glycero_3_phosphocholine_1-2-diacyl-sn-glycero-3-p-to-1-acyl-2-hexadecano",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acyl_sn_glycero_3_phosphocholine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-diacyl-sn-glycero-3-p-to-1-acyl-2-hexadecano"
+      },
+      "note": "Shares acyl-sn-glycero-3-phosphocholine with 1,2-diacyl-sn-glycero-3-p… to 1-acyl-2-hexadecanoyl-sn-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84465"
           }
         ]
       }

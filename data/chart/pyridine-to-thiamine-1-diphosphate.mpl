@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway pyridine-to-thiamine-1-diphosphate "pyridine to thiamine(1+) diphosphate" {
-  spacing 208
+  spacing 232
 
   spine at 0,0 {
     pyridine
@@ -36,14 +36,14 @@ pathway pyridine-to-thiamine-1-diphosphate "pyridine to thiamine(1+) diphosphate
 
   branch from ppi side left {
     ppi
-    <-> . +fpp
-    guaia_6_9_diene
+    <-> ec_4_2_3_70 [4.2.3.70] +fpp +h2o
+    patchouli_alcohol
   }
 
   branch from ppi side right {
     ppi
-    <-> . +fpp
-    germacrene_a
+    <-> ec_4_2_3_72 [4.2.3.72] +fpp
+    gurjunene
   }
 
   branch from thiamine_1_diphosphate side left {
@@ -56,5 +56,29 @@ pathway pyridine-to-thiamine-1-diphosphate "pyridine to thiamine(1+) diphosphate
     thiamine_1_diphosphate
     <-> . +thiamine +utp +hplus
     ump
+  }
+
+  branch from pyridine side left {
+    pyridine
+    <-> . +h2o2 +h2o
+    pyridine_n_oxide
+  }
+
+  branch from thiamine side right {
+    thiamine
+    <-> ec_1_1_3_23 [1.1.3.23] +o2 +h2o +h2o2 +hplus
+    thiaminium_carboxylate_betaine
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_73 [4.2.3.73] +fpp
+    valencene
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_79 [4.2.3.79] +fpp
+    thujopsene
   }
 }

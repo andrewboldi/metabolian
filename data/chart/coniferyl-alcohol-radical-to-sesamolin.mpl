@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway coniferyl-alcohol-radical-to-sesamolin "coniferyl alcohol radical to Sesamolin" {
-  spacing 218
+  spacing 200
 
   spine at 0,0 {
     coniferyl_alcohol_radical
@@ -16,23 +16,5 @@ pathway coniferyl-alcohol-radical-to-sesamolin "coniferyl alcohol radical to Ses
     sesamin
     <-> . +o2
     sesamolin
-  }
-
-  branch from 4_1s_3ar_4s_6ar_4_1_3_benzodioxol_5_yl_tetrahydr side left {
-    4_1s_3ar_4s_6ar_4_1_3_benzodioxol_5_yl_tetrahydr
-    <-> . +h +o2 +nadph +sesamin +h2o
-    nadp
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> ec_1_14_14_151 [1.14.14.151] +5_epi_aristolochene +fmnh2 +o2 +h2o +hplus
-    2_hydroxy_5_epi_aristolochene
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> ec_1_14_14_151 [1.14.14.151] +4_epi_eremophilene +fmnh2 +o2 +h2o +hplus
-    4_epi_eremophilene_2_ol
   }
 }

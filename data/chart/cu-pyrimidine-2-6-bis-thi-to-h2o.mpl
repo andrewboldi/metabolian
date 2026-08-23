@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cu-pyrimidine-2-6-bis-thi-to-h2o "Cu:pyrimidine-2,6-bis(thi… to H2O" {
-  spacing 194
+  spacing 152
 
   spine at 0,0 {
     cu_pyrimidine_2_6_bis_thiocarboxylate_radical
@@ -14,47 +14,5 @@ pathway cu-pyrimidine-2-6-bis-thi-to-h2o "Cu:pyrimidine-2,6-bis(thi… to H2O" {
     cu_pyrimidine_2_thiocarboxylate_6_carboxylate
     <-> . +h +chloride +trichloromethanethiol -h2o
     trichloromethylthioester_of_cu_pyrimidine_2_6_bi
-  }
-
-  branch from cu_pyrimidine_2_6_bis_thiocarboxylate side left {
-    cu_pyrimidine_2_6_bis_thiocarboxylate
-    <-> . +trichloromethyl +h +tetrachloromethane
-    cu_pyrimidine_2_6_bis_thiocarboxylate_radical
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +1_docosatetraenoylglycerophosphocholine_delta_7 +phosphate +1_docosatetraenoylglycerophosphocholine_delta_7 +h2o
-    atp
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    1_docosapentenoylglycerophosphocholine_delta_4_7
-  }
-
-  branch from chloride side right {
-    chloride
-    <-> ec_3_8_1_5 [3.8.1.5] +h +2_3_4_5_6_pentachlorocyclohexanol +h2o
-    beta_hexachlorocyclohexane
-  }
-
-  branch from chloride side left {
-    chloride
-    <-> ec_3_6_3_11 [3.6.3.11] +h +phosphate +atp +h2o
-    adp
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_asparagine +l_methionine +l_tyrosine
-    methionyl_asparaginyl_tyrosine
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_glutamine +l_methionine +l_tyrosine
-    met_gln_tyr
   }
 }

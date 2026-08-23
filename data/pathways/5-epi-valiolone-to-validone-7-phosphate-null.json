@@ -1,0 +1,516 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "5-epi-valiolone-to-validone-7-phosphate-null",
+  "name": "5-epi-valiolone to validone 7-phosphate",
+  "category": "other",
+  "summary": "A 3-step route from 5-epi-valiolone to validone 7-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR114531"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:84361"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "5_epi_valiolone",
+      "name": "5-epi-valiolone",
+      "formula": "C7H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:84361"
+      }
+    },
+    {
+      "id": "valienone",
+      "name": "valienone",
+      "formula": "C7H10O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:111521"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "valienone_7_phosphate",
+      "name": "valienone 7-phosphate",
+      "short": "valienone 7-P",
+      "formula": "C7H9O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:111522"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "validone_7_phosphate",
+      "name": "validone 7-phosphate",
+      "formula": "C7H11O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:111523"
+      }
+    },
+    {
+      "id": "validone",
+      "name": "validone",
+      "formula": "C7H12O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:111542"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_1_214",
+      "name": "C7-cyclitol 7-kinase",
+      "ec": [
+        "2.7.1.214"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR114531",
+      "substrates": [
+        {
+          "metabolite": "5_epi_valiolone",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "valienone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR114531"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR114531"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "C7-cyclitol 7-kinase",
+      "equation": "valienone + ATP = valienone 7-phosphate + ADP + H(+)",
+      "ec": "2.7.1.214",
+      "substrates": [
+        {
+          "metabolite": "valienone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "valienone_7_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_214"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:49420"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49420"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR140877",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "valienone_7_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "validone_7_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR140877"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR140877"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "C7-cyclitol 7-kinase",
+      "equation": "validone + ATP = validone 7-phosphate + ADP + H(+)",
+      "ec": "2.7.1.214",
+      "substrates": [
+        {
+          "metabolite": "validone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "validone_7_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_214"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:49424"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49424"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_5_epi_valiolone_5-epi-valiolone-to-validone-7-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_epi_valiolone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-epi-valiolone-to-validone-7-phosphate"
+      },
+      "note": "Shares 5-epi-valiolone with 5-epi-valiolone to validone 7-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84361"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_epi_valiolone_r-demethyl-4-deoxygadus-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_epi_valiolone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-demethyl-4-deoxygadus-to-nad"
+      },
+      "note": "Shares 5-epi-valiolone with (R)-demethyl-4-deoxygadus… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84361"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_epi_valiolone_r-demethyl-4-deoxygadus-to-nad-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_epi_valiolone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-demethyl-4-deoxygadus-to-nad-null"
+      },
+      "note": "Shares 5-epi-valiolone with (R)-demethyl-4-deoxygadus… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84361"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_valienone_5-epi-valiolone-to-validone-7-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "valienone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-epi-valiolone-to-validone-7-phosphate"
+      },
+      "note": "Shares valienone with 5-epi-valiolone to validone 7-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:111521"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_valienone_7_phosphate_5-epi-valiolone-to-validone-7-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "valienone_7_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-epi-valiolone-to-validone-7-phosphate"
+      },
+      "note": "Shares valienone 7-phosphate with 5-epi-valiolone to validone 7-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:111522"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_validone_7_phosphate_5-epi-valiolone-to-validone-7-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "validone_7_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-epi-valiolone-to-validone-7-phosphate"
+      },
+      "note": "Shares validone 7-phosphate with 5-epi-valiolone to validone 7-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:111523"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_validone_7_phosphate_valienol-1-phosphate-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "validone_7_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "valienol-1-phosphate-to-succinate"
+      },
+      "note": "Shares validone 7-phosphate with valienol 1-phosphate to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:111523"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_validone_7_phosphate_valienol-1-phosphate-to-succinate-26055",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "validone_7_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "valienol-1-phosphate-to-succinate-26055"
+      },
+      "note": "Shares validone 7-phosphate with valienol 1-phosphate to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:111523"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_validone_5-epi-valiolone-to-validone-7-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "validone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-epi-valiolone-to-validone-7-phosphate"
+      },
+      "note": "Shares validone with 5-epi-valiolone to validone 7-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:111542"
+          }
+        ]
+      }
+    }
+  ]
+}

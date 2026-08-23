@@ -108,53 +108,6 @@
       "xrefs": {
         "chebi": "CHEBI:65004"
       }
-    },
-    {
-      "id": "6_phospho_d_glucono_1_5_lactone",
-      "name": "6-phospho-D-glucono-1,5-lactone",
-      "short": "6-phospho-D-glucono…",
-      "formula": "C6H9O9P",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM1104491"
-      }
-    },
-    {
-      "id": "alpha_d_glucose_6_phosphate",
-      "name": "alpha-D-glucose 6-phosphate",
-      "short": "alpha-D-glucose 6-P",
-      "formula": "C6H11O9P",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM1105855"
-      }
-    },
-    {
-      "id": "vitamin_b12r",
-      "name": "Vitamin B12r",
-      "formula": "C62H87CoN13O14P",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM1104738"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "WATER"
-      }
-    },
-    {
-      "id": "aquacobalamin",
-      "name": "Aquacobalamin",
-      "formula": "C62H89CoN13O15P",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1106043"
-      }
     }
   ],
   "enzymes": [
@@ -170,20 +123,6 @@
       "name": "(+)-lariciresinol reductase",
       "ec": [
         "1.23.1.2"
-      ]
-    },
-    {
-      "id": "ec_1_1_1_49",
-      "name": "glucose-6-phosphate dehydrogenase (NADP(+))",
-      "ec": [
-        "1.1.1.49"
-      ]
-    },
-    {
-      "id": "ec_1_16_1_5",
-      "name": "EC 1.16.1.5",
-      "ec": [
-        "1.16.1.5"
       ]
     }
   ],
@@ -381,103 +320,115 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "glucose-6-phosphate dehydrogenase (NADP(+))",
-      "ec": "1.1.1.49",
-      "substrates": [
-        {
-          "metabolite": "6_phospho_d_glucono_1_5_lactone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "alpha_d_glucose_6_phosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_1_1_49"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR192435"
+      "id": "xt_pinoresinol_coniferyl-alcohol-radical-to-sesamolin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pinoresinol"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "coniferyl-alcohol-radical-to-sesamolin"
+      },
+      "note": "Shares (+)-pinoresinol with coniferyl alcohol radical to Sesamolin.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR192435"
+            "db": "ChEBI",
+            "id": "CHEBI:40"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "Reaction MNXR192587",
-      "ec": "1.16.1.5",
-      "substrates": [
-        {
-          "metabolite": "vitamin_b12r",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "aquacobalamin",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_16_1_5"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "metanetx": "MNXR192587"
+      "id": "xt_pinoresinol_pinoresinol-diglucoside-to-4-4-dihydroxy-alpha-m",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pinoresinol"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "pinoresinol-diglucoside-to-4-4-dihydroxy-alpha-m"
+      },
+      "note": "Shares (+)-pinoresinol with Pinoresinol diglucoside to 4,4'-Dihydroxy-alpha-meth….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR192587"
+            "db": "ChEBI",
+            "id": "CHEBI:40"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pinoresinol_udp-to-pinoresinol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pinoresinol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-pinoresinol"
+      },
+      "note": "Shares (+)-pinoresinol with UDP to (−)-pinoresinol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:40"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lariciresinol_udp-to-pinoresinol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lariciresinol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-pinoresinol"
+      },
+      "note": "Shares (−)-lariciresinol with UDP to (−)-pinoresinol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:67244"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_secoisolariciresinol_s-adenosyl-l-homocysteine-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "secoisolariciresinol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-fmn"
+      },
+      "note": "Shares (−)-secoisolariciresinol with S-adenosyl-L-homocysteine to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:65004"
           }
         ]
       }

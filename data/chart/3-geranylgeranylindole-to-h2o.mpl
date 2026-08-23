@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-geranylgeranylindole-to-h2o "3-Geranylgeranylindole to H2O" {
-  spacing 176
+  spacing 236
 
   spine at 0,0 {
     3_geranylgeranylindole
@@ -22,25 +22,85 @@ pathway 3-geranylgeranylindole-to-h2o "3-Geranylgeranylindole to H2O" {
 
   branch from nadp side left {
     nadp
-    <-> . +4_sulfoacetophenone +h +o2 +nadph +h2o
-    4_sulfophenyl_acetate
+    <-> ec_1_1_1_50 [1.1.1.50] +h +5_dihydrocortisol +nadph
+    tetrahydrocortisol
   }
 
   branch from nadp side right {
     nadp
-    <-> . +lambertine +nadph
-    berberine
+    <-> ec_1_1_1_209 [1.1.1.209] +h +5beta_dihydrocorticosterone +nadph
+    tetrahydrocorticosterone
   }
 
   branch from h2o side left {
     h2o
-    <-> . +2s_bisdechlorogeodin
-    asterric_acid
+    <-> ec_4_4_1_21 [4.4.1.21] +d_ribose +l_homocysteine
+    s_5_deoxy_d_ribos_5_yl_l_homocysteine
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_21 [3.2.1.21] +linamarin +glucose
-    linustatin
+    <-> ec_3_2_1_10 [3.2.1.10] +sucrose +glucose
+    d_fructofuranose
+  }
+
+  branch from h side left {
+    h
+    <-> . +udp +9_d_glucosyl_trans_zeatin +trans_zeatin
+    udp_alpha_d_glucose
+  }
+
+  branch from h side right {
+    h
+    <-> . +udp +7_d_glucosyl_n6_isopentenyladenine +udp_alpha_d_glucose
+    n_6_dimethylallyladenine
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_14_99_9 [1.14.99.9] +20s_17_20_dihydroxycholesterol +nadp +h2o +h +nadph
+    20_hydroxycholesterol
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +2_methoxy_5_methyl_6_all_trans_hexaprenyl_1_4_be +nadph +nadp +h2o
+    3_demethylubiquinone_6
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_14_21_3 [1.14.21.3] +s_coclaurine +r_n_methylcoclaurine +o2 +h +nadp +h2o
+    2_norberbamunine
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_14_21_3 [1.14.21.3] +h +nadp +guattegaumerine +h2o +o2
+    r_n_methylcoclaurine
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_8_1_15 [1.8.1.15] +h +mycothione +nadph
+    mycothiol
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_14_13_71 [1.14.13.71] +s_3_hydroxy_n_methylcoclaurine +h2o +h +o2 +nadph
+    s_n_methylcoclaurine
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_2_4_1_10 [2.4.1.10] +sucrose +glucose
+    keto_d_fructose
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +hydroxymethylbilane
+    uroporphyrinogen_i
   }
 }

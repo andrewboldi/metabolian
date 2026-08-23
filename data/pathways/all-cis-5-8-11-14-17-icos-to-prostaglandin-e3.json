@@ -99,9 +99,36 @@
       "xrefs": {
         "chebi": "CHEBI:132149"
       }
+    },
+    {
+      "id": "5z_7e_9e_14z_17z_icosapentaenoate",
+      "name": "(5Z,7E,9E,14Z,17Z)-icosapentaenoate",
+      "short": "(5Z,7E,9E,14Z,17Z)-…",
+      "formula": "C20H29O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:60025"
+      }
+    },
+    {
+      "id": "12_hpepe",
+      "name": "12-HPEPE",
+      "formula": "C20H29O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78078"
+      }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_5_3_3_13",
+      "name": "polyenoic fatty acid isomerase",
+      "ec": [
+        "5.3.3.13"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -239,6 +266,146 @@
           {
             "db": "Rhea",
             "id": "RHEA:50456"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "polyenoic fatty acid isomerase",
+      "equation": "(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoate = (5Z,7E,9E,14Z,17Z)-icosapentaenoate",
+      "ec": "5.3.3.13",
+      "substrates": [
+        {
+          "metabolite": "all_cis_5_8_11_14_17_icosapentaenoate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5z_7e_9e_14z_17z_icosapentaenoate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_3_13"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:14889"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14889"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoate + O2 = (5Z,7Z,8Z,10E,14Z,17Z)-12-hydroperoxyeicos...",
+      "equation": "(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoate + O2 = (5Z,7Z,8Z,10E,14Z,17Z)-12-hydroperoxyeicosapentaenoate",
+      "substrates": [
+        {
+          "metabolite": "all_cis_5_8_11_14_17_icosapentaenoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "12_hpepe",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:41344"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41344"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_prostaglandin_h3_alpha-kdo-2-6-lipid-to-d-gal-1-3-l-fuc-1",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_h3"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-kdo-2-6-lipid-to-d-gal-1-3-l-fuc-1"
+      },
+      "note": "Shares prostaglandin H3 with alpha-Kdo-(2->6)-lipid… to α-D-Gal-(1→3)-[α-L-Fuc-(1….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133134"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_e3_glyceric-acid-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_e3"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "glyceric-acid-to-nad"
+      },
+      "note": "Shares prostaglandin E3 with Glyceric acid… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133132"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_d3_all-trans-retinol-to-11-cis-retinal",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_d3"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "all-trans-retinol-to-11-cis-retinal"
+      },
+      "note": "Shares prostaglandin D3 with all-trans-retinol to 11-cis-retinal.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:132149"
           }
         ]
       }

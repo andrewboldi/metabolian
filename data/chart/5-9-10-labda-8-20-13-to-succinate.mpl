@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-9-10-labda-8-20-13-to-succinate "5β,9α,10α-labda-8(20),13-… to succinate" {
-  spacing 200
+  spacing 164
 
   spine at 0,0 {
     5_9_10_labda_8_20_13_dien_15_yl_diphosphate
@@ -20,41 +20,5 @@ pathway 5-9-10-labda-8-20-13-to-succinate "5β,9α,10α-labda-8(20),13-… to su
     gibberellin_a12
     <-> . +akg +o2 -succinate -co2 -h2o -hplus
     gibberellin_a25
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +piperonylate +atp +nadph +hplus +amp +nadp
-    piperonal
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +3_hydroxybenzoate +atp +nadph +hplus +amp +nadp
-    3_hydroxybenzaldehyde
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> ec_1_14_19_79 [1.14.19.79] +22s_22_hydroxycampesterol +fmnh2 +o2 +h2o +hplus
-    22s_22_hydroxycampest_4_en_3_one
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> ec_1_14_14_179 [1.14.14.179] +6_deoxocastasterone +fmnh2 +o2 +h2o +hplus
-    castasterone
-  }
-
-  branch from gibberellin_a25 side left {
-    gibberellin_a25
-    <-> . +gibberellin_a46 +co2 +succinate +o2
-    2_oxoglutarate
-  }
-
-  branch from gibberellin_a25 side right {
-    gibberellin_a25
-    <-> . +ga46 +co2 +succinate +2_oxoglutarate
-    o2
   }
 }

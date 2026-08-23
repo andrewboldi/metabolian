@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-nitrosoamino-1-3-pyr-to-phosphate "4-(Nitrosoamino)-1-(3-pyr… to phosphate" {
-  spacing 282
+  spacing 204
 
   spine at 0,0 {
     4_nitrosoamino_1_3_pyridinyl_1_butanone
@@ -12,7 +12,7 @@ pathway 4-nitrosoamino-1-3-pyr-to-phosphate "4-(Nitrosoamino)-1-(3-pyr… to pho
     4_hydroxy_1_3_pyridinyl_1_butanone
     <-> ec_1_19_6_1 [1.19.6.1] +fmnh2 +atp +n2 +h2o -fmn -h -adp -nh4 -phosphate
     h2
-    <-> ec_2_7_1_42 [2.7.1.42] +alpha_d_glucose +fmn -h -riboflavin
+    <-> ec_2_7_1_42 [2.7.1.42] +beta_d_glucose +fmn -h -riboflavin
     alpha_d_glucose_1_phosphate
     <-> ec_2_4_1_31 [2.4.1.31] +beta_d_glucose -phosphate
     beta_d_glucosyl_1_3_d_glucose
@@ -24,99 +24,21 @@ pathway 4-nitrosoamino-1-3-pyr-to-phosphate "4-(Nitrosoamino)-1-(3-pyr… to pho
     1_3_pyridinyl_1_4_butanediol
   }
 
-  branch from n2 side right {
-    n2
-    <-> . +nh4 +h2o
-    nitrite
+  branch from h2 side right {
+    h2
+    <-> . +conhydrinone
+    conhydrine
   }
 
   branch from h2 side left {
     h2
-    <-> ec_1_12_5_1 [1.12.5.1] +menaquinone_2
-    menaquinol
+    <-> . +all_trans_neurosporene
+    all_trans_zeta_carotene
   }
 
   branch from h2 side right {
     h2
-    <-> . +hydroxyspirilloxanthin
-    rhodovibrin
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> ec_1_14_99_46 [1.14.99.46] +nadh +fmnh2 +thymine +h +o2 +nad +h2o
-    z_2_methylureidoacrylate
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> ec_1_3_8_17 [1.3.8.17] +fmnh2 +dehydro_coenzyme_f420_0
-    f420_0
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    9_10_dihome
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    12_13_dihome
-  }
-
-  branch from adp side left {
-    adp
-    <-> . +h +phosphate +atp +h2o
-    5alpha_androstane_3alpha_17beta_diol
-  }
-
-  branch from adp side right {
-    adp
-    <-> . +h +phosphate +atp +h2o
-    3alpha_hydroxy_5alpha_pregnan_20_one
-  }
-
-  branch from nh4 side left {
-    nh4
-    <-> . +l_histidine +h2o +l_glutamate
-    formamide
-  }
-
-  branch from nh4 side right {
-    nh4
-    <-> . +5_phospho_alpha_d_ribose_1_diphosphate +5_phospho_beta_d_ribosylamine
-    diphosphate
-  }
-
-  branch from phosphate side left {
-    phosphate
-    <-> . +h +adp +atp +h2o
-    6_trans_leukotriene_b4
-  }
-
-  branch from phosphate side right {
-    phosphate
-    <-> . +h +adp +atp +h2o
-    11z_icos_11_enoic_acid
-  }
-
-  branch from alpha_d_glucose_1_phosphate side left {
-    alpha_d_glucose_1_phosphate
-    <-> ec_2_7_1_41 [2.7.1.41] +beta_d_glucose
-    alpha_d_glucose_1_6_bisphosphate
-  }
-
-  branch from alpha_d_glucose_1_phosphate side right {
-    alpha_d_glucose_1_phosphate
-    <-> ec_2_7_1_41 [2.7.1.41] +alpha_d_glucose_1_6_bisphosphate
-    glucose
-  }
-
-  branch from riboflavin side left {
-    riboflavin
-    <-> . +fe +enterobactin +h +fe_enterobactin
-    4a_5_dihydroriboflavin
+    <-> . +3_oxoadipyl_coa
+    3s_hydroxyadipyl_coa
   }
 }

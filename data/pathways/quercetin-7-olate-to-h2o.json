@@ -82,22 +82,30 @@
       }
     },
     {
-      "id": "quercetin",
-      "name": "quercetin",
-      "formula": "C15H9O7",
-      "charge": -1,
+      "id": "glucose",
+      "name": "D-Glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM620"
+        "chebi": "CHEBI:4167"
       }
     },
     {
-      "id": "quercetin_3_o_rhamnoside",
-      "name": "quercetin 3-O-rhamnoside",
-      "short": "quercetin…",
-      "formula": "C21H19O11",
-      "charge": -1,
+      "id": "ginsenoside_f1",
+      "name": "ginsenoside F1",
+      "formula": "C36H62O9",
+      "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM163891"
+        "chebi": "CHEBI:77150"
+      }
+    },
+    {
+      "id": "20s_ginsenoside_re",
+      "name": "(20S)-ginsenoside Re",
+      "formula": "C48H82O18",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM54984"
       }
     },
     {
@@ -107,60 +115,6 @@
       "charge": 0,
       "xrefs": {
         "metanetx": "WATER"
-      }
-    },
-    {
-      "id": "h",
-      "name": "H",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM1"
-      }
-    },
-    {
-      "id": "adp",
-      "name": "ADP",
-      "formula": "C10H12N5O10P2",
-      "charge": -3,
-      "xrefs": {
-        "metanetx": "MNXM40333"
-      }
-    },
-    {
-      "id": "l_rhamnitol",
-      "name": "L-rhamnitol",
-      "formula": "C6H14O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:45530"
-      }
-    },
-    {
-      "id": "phosphate",
-      "name": "phosphate",
-      "formula": "HO4P",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM9"
-      }
-    },
-    {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM3"
-      }
-    },
-    {
-      "id": "erythritol",
-      "name": "erythritol",
-      "formula": "C4H10O4",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1371602"
       }
     }
   ],
@@ -173,10 +127,10 @@
       ]
     },
     {
-      "id": "ec_3_2_1_66",
-      "name": "EC 3.2.1.66",
+      "id": "ec_3_2_1_194",
+      "name": "ginsenosidase type IV",
       "ec": [
-        "3.2.1.66"
+        "3.2.1.194"
       ]
     }
   ],
@@ -271,144 +225,94 @@
     },
     {
       "id": "r3",
-      "name": "Reaction MNXR180321",
-      "ec": "3.2.1.66",
+      "name": "ginsenosidase type IV",
+      "ec": "3.2.1.194",
       "substrates": [
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        },
         {
           "metabolite": "l_rhamnopyranose",
           "stoichiometry": 1
         },
         {
-          "metabolite": "quercetin",
+          "metabolite": "ginsenoside_f1",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "quercetin_3_o_rhamnoside",
+          "metabolite": "20s_ginsenoside_re",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_2_1_66"
+          "enzyme": "ec_3_2_1_194"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 3,
       "xrefs": {
-        "metanetx": "MNXR180321"
+        "metanetx": "MNXR118814"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR180321"
+            "id": "MNXR118814"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_quercitrin_7_olate_udp-4-ammonio-d-fucose-to-flavanone-7-o-l-rhamno",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "quercitrin_7_olate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-4-ammonio-d-fucose-to-flavanone-7-o-l-rhamno"
+      },
+      "note": "Shares quercitrin-7-olate with UDP-4-ammonio-α-D-fucose to flavanone 7-O-[α-L-rhamno….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58192"
           }
         ]
       }
     },
     {
-      "id": "r4",
-      "name": "Reaction MNXR178986",
-      "substrates": [
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_rhamnitol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_rhamnitol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR178986"
+      "id": "xt_ginsenoside_f1_dammarenediol-ii-to-d-glucopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ginsenoside_f1"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "dammarenediol-ii-to-d-glucopyranose"
+      },
+      "note": "Shares ginsenoside F1 with dammarenediol-II to D-glucopyranose.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR178986"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "Reaction MNXR178987",
-      "substrates": [
-        {
-          "metabolite": "erythritol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "erythritol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR178987"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR178987"
+            "db": "ChEBI",
+            "id": "CHEBI:77150"
           }
         ]
       }

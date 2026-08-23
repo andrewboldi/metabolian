@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-iodo-l-thyronine-to-hydrogen-donor-83779 "3'-iodo-L-thyronine to hydrogen donor" {
-  spacing 188
+  spacing 194
 
   spine at 0,0 {
     3_iodo_l_thyronine
@@ -16,39 +16,45 @@ pathway 3-iodo-l-thyronine-to-hydrogen-donor-83779 "3'-iodo-L-thyronine to hydro
     3_3_5_triiodo_l_thyronine_sulfate
   }
 
-  branch from 3_3_diiodo_l_thyronine side left {
-    3_3_diiodo_l_thyronine
-    <-> . +3_3_5_triiodo_l_thyronine +nadph +nadp
-    iodide
-  }
-
-  branch from 3_3_diiodo_l_thyronine side right {
-    3_3_diiodo_l_thyronine
-    <-> . +3_3_5_triiodo_l_thyronine +nadph +iodide
-    nadp
-  }
-
   branch from adenosine_3_5_bismonophosphate side left {
     adenosine_3_5_bismonophosphate
-    <-> . +decanoyl_coa +h2o +hplus
-    s_decanoyl_4_phosphopantetheine
+    <-> . +o3_d_galactosyl_1_3_n_acetyl_d_glucosaminyl_1_6 +3_phosphonato_5_adenylyl_sulfate +hplus
+    o3_d_galactosyl_1_3_6_o_sulfo_n_acetyl_d_glucosa
   }
 
   branch from adenosine_3_5_bismonophosphate side right {
     adenosine_3_5_bismonophosphate
-    <-> . +lauroyl_coa +h2o +hplus
-    s_dodecanoyl_4_phosphopantetheine
+    <-> . +3_phosphonato_5_adenylyl_sulfate +3_3_5_triiodo_l_thyronine_sulfate +hplus
+    3_3_5_triiodo_l_thyronine
   }
 
   branch from 3_3_5_triiodo_l_thyronine_sulfate side left {
     3_3_5_triiodo_l_thyronine_sulfate
-    <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
-    3_3_5_triiodo_l_thyronine
-  }
-
-  branch from 3_3_5_triiodo_l_thyronine_sulfate side right {
-    3_3_5_triiodo_l_thyronine_sulfate
     <-> . +3_3_5_triiodo_l_thyronine +h +sulfate
     h2o
+  }
+
+  branch from 3_phosphonato_5_adenylyl_sulfate side right {
+    3_phosphonato_5_adenylyl_sulfate
+    <-> ec_2_8_2_15 [2.8.2.15] +phenolic_steroid +adenosine_3_5_bismonophosphate +hplus
+    phenolic_steroid_3_o_sulfate
+  }
+
+  branch from 3_phosphonato_5_adenylyl_sulfate side left {
+    3_phosphonato_5_adenylyl_sulfate
+    <-> . +17_estradiol_3_o_d_glucuronide_17_sulfate +adenosine_3_5_bismonophosphate +hplus
+    17_estradiol_3_o_3_sulfo_d_glucuronide_17_sulfat
+  }
+
+  branch from adenosine_3_5_bismonophosphate side right {
+    adenosine_3_5_bismonophosphate
+    <-> . +17_estradiol_17_glucosiduronate +3_phosphonato_5_adenylyl_sulfate +hplus
+    17_estradiol_17_o_3_sulfo_d_glucuronide
+  }
+
+  branch from adenosine_3_5_bismonophosphate side left {
+    adenosine_3_5_bismonophosphate
+    <-> . +estriol_16_o_d_glucuronide +3_phosphonato_5_adenylyl_sulfate +hplus
+    estriol_16_o_3_sulfo_d_glucuronide
   }
 }

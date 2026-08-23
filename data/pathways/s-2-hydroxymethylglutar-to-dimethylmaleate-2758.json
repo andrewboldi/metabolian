@@ -1,0 +1,489 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-2-hydroxymethylglutar-to-dimethylmaleate-2758",
+  "name": "(S)-2-hydroxymethylglutar… to dimethylmaleate",
+  "category": "other",
+  "summary": "A 3-step route from (S)-2-hydroxymethylglutarate to dimethylmaleate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:27582"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:180543"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_2_hydroxymethylglutarate",
+      "name": "(S)-2-hydroxymethylglutarate",
+      "short": "2-hydroxymethylglut…",
+      "formula": "C6H8O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:180543"
+      }
+    },
+    {
+      "id": "2_methylideneglutarate",
+      "name": "2-methylideneglutarate",
+      "short": "2-methylideneglutar…",
+      "formula": "C6H6O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58056"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2_methylene_3_methylsuccinate",
+      "name": "2-methylene-3-methylsuccinate",
+      "short": "2-methylene-3-methy…",
+      "formula": "C6H6O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57637"
+      }
+    },
+    {
+      "id": "dimethylmaleate",
+      "name": "dimethylmaleate",
+      "formula": "C6H6O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:17081"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "2_formylglutarate",
+      "name": "2-formylglutarate",
+      "formula": "C6H6O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58776"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_4_99_4",
+      "name": "2-methyleneglutarate mutase",
+      "ec": [
+        "5.4.99.4"
+      ]
+    },
+    {
+      "id": "ec_5_3_3_6",
+      "name": "methylitaconate Delta-isomerase",
+      "ec": [
+        "5.3.3.6"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_291",
+      "name": "2-hydroxymethylglutarate dehydrogenase",
+      "ec": [
+        "1.1.1.291"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(S)-2-hydroxymethylglutarate = 2-methyleneglutarate + H2O",
+      "equation": "(S)-2-hydroxymethylglutarate = 2-methyleneglutarate + H2O",
+      "substrates": [
+        {
+          "metabolite": "s_2_hydroxymethylglutarate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_methylideneglutarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:27582"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27582"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2-methyleneglutarate mutase",
+      "equation": "2-methyleneglutarate = 2-methylene-3-methylsuccinate",
+      "ec": "5.4.99.4",
+      "substrates": [
+        {
+          "metabolite": "2_methylideneglutarate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_methylene_3_methylsuccinate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_99_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:13793"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13793"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "methylitaconate Delta-isomerase",
+      "equation": "2-methylene-3-methylsuccinate = dimethylmaleate",
+      "ec": "5.3.3.6",
+      "substrates": [
+        {
+          "metabolite": "2_methylene_3_methylsuccinate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dimethylmaleate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_3_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:23480"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23480"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "2-hydroxymethylglutarate dehydrogenase",
+      "equation": "(S)-2-hydroxymethylglutarate + NAD(+) = 2-formylglutarate + NADH + H(+)",
+      "ec": "1.1.1.291",
+      "substrates": [
+        {
+          "metabolite": "s_2_hydroxymethylglutarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_formylglutarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_291"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:15505"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15505"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_s_2_hydroxymethylglutarate_s-2-hydroxymethylglutar-to-dimethylmaleate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_2_hydroxymethylglutarate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2-hydroxymethylglutar-to-dimethylmaleate"
+      },
+      "note": "Shares (S)-2-hydroxymethylglutarate with (S)-2-hydroxymethylglutar… to dimethylmaleate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:180543"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_methylideneglutarate_s-2-hydroxymethylglutar-to-dimethylmaleate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_methylideneglutarate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2-hydroxymethylglutar-to-dimethylmaleate"
+      },
+      "note": "Shares 2-methylideneglutarate with (S)-2-hydroxymethylglutar… to dimethylmaleate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58056"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_methylene_3_methylsuccinate_s-2-hydroxymethylglutar-to-dimethylmaleate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_methylene_3_methylsuccinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2-hydroxymethylglutar-to-dimethylmaleate"
+      },
+      "note": "Shares 2-methylene-3-methylsuccinate with (S)-2-hydroxymethylglutar… to dimethylmaleate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57637"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dimethylmaleate_2r-3s-2-3-dimethylmalate-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dimethylmaleate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2r-3s-2-3-dimethylmalate-to-diphosphate"
+      },
+      "note": "Shares dimethylmaleate with (2R,3S)-2,3-dimethylmalate to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17081"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dimethylmaleate_2r-3s-2-3-dimethylmalate-to-diphosphate-10472",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dimethylmaleate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2r-3s-2-3-dimethylmalate-to-diphosphate-10472"
+      },
+      "note": "Shares dimethylmaleate with (2R,3S)-2,3-dimethylmalate to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17081"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dimethylmaleate_s-2-hydroxymethylglutar-to-dimethylmaleate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dimethylmaleate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2-hydroxymethylglutar-to-dimethylmaleate"
+      },
+      "note": "Shares dimethylmaleate with (S)-2-hydroxymethylglutar… to dimethylmaleate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17081"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_formylglutarate_d-glucosamine-to-d-fructofuranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_formylglutarate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glucosamine-to-d-fructofuranose"
+      },
+      "note": "Shares 2-formylglutarate with α-D-glucosamine… to β-D-fructofuranose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58776"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_formylglutarate_d-glucosamine-to-d-fructofuranose-12172",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_formylglutarate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glucosamine-to-d-fructofuranose-12172"
+      },
+      "note": "Shares 2-formylglutarate with α-D-glucosamine… to β-D-fructofuranose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58776"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_formylglutarate_s-2-hydroxymethylglutar-to-dimethylmaleate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_formylglutarate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2-hydroxymethylglutar-to-dimethylmaleate"
+      },
+      "note": "Shares 2-formylglutarate with (S)-2-hydroxymethylglutar… to dimethylmaleate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58776"
+          }
+        ]
+      }
+    }
+  ]
+}

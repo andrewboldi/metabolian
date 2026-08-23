@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway octanoyl-coa-to-glyoxylate "octanoyl-CoA to glyoxylate" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     octanoyl_coa
@@ -14,5 +14,17 @@ pathway octanoyl-coa-to-glyoxylate "octanoyl-CoA to glyoxylate" {
     n_octanoyl_2s_hydroxyglycinate
     <-> . -glyoxylate
     octanamide
+  }
+
+  branch from octanoyl_coa side left {
+    octanoyl_coa
+    <-> ec_2_3_1_273 [2.3.1.273] +2_o_d_glucopyranosyl_1_6_d_glucopyranosyl_d_glyc +coa
+    2_o_6_o_octanoyl_d_glucopyranosyl_1_6_d_glucopyr
+  }
+
+  branch from octanoyl_coa side right {
+    octanoyl_coa
+    <-> . +nadh +hplus +nad
+    trans_oct_2_enoyl_coa
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway r-2-hydroxy-4-methylpen-to-5-3-carboxylato-3-ox "(R)-2-hydroxy-4-methylpen… to 5-(3-carboxylato-3-oxopro…" {
-  spacing 260
+  spacing 320
 
   spine at 0,0 {
     r_2_hydroxy_4_methylpentanoate
@@ -40,19 +40,79 @@ pathway r-2-hydroxy-4-methylpen-to-5-3-carboxylato-3-ox "(R)-2-hydroxy-4-methylp
 
   branch from leucine side right {
     leucine
-    <-> . +malonyl-coa +sam +atp +nadph +hplus +amp +sah +co2 +ppi +nadp +coa +h2o
-    5s_5_2_methylpropyl_3_2e_6r_8e_10e_12e_6_8_10_1
+    <-> . +r_2_hydroxy_3_methylbutyrate +sam +atp +amp +sah +ppi +hplus
+    bassianolide
   }
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> . +8z_11z_14z_heptadecatrienal +h2o +hydrogen_donor +hplus
-    8z_11z_14z_heptadecatrienoate
+    <-> ec_1_3_99_17 [1.3.99.17] +quinolin_6_ol +h2o +hydrogen_donor
+    6_hydroxyquinolin_2_1h_one
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> ec_1_14_99_24 [1.14.99.24] +pregna_4_9_11_diene_3_20_dione +hydrogen_donor +o2 +h2o
-    9_11_epoxypregn_4_ene_3_20_dione
+    <-> ec_1_3_99_17 [1.3.99.17] +quinolin_7_ol +h2o +hydrogen_donor
+    7_hydroxyquinolin_2_1h_one
+  }
+
+  branch from l_kynurenine side left {
+    l_kynurenine
+    <-> . +pyruvate +kynurenate +h2o
+    alanine
+  }
+
+  branch from l_kynurenine side right {
+    l_kynurenine
+    <-> . +pyruvate +alanine
+    4_2_aminophenyl_2_4_dioxobutanoate
+  }
+
+  branch from kynurenate side left {
+    kynurenate
+    <-> . +3_indol_3_yl_pyruvate +l_kynurenine +h2o
+    l_tryptophan
+  }
+
+  branch from kynurenate side right {
+    kynurenate
+    <-> . +l_kynurenine +oxaloacetate +h2o
+    aspartate
+  }
+
+  branch from leucine side left {
+    leucine
+    <-> . +malonyl-coa +sam +atp +nadph +hplus +amp +sah +co2 +ppi +nadp +coa +h2o
+    5s_5_2_methylpropyl_3_2e_6r_8e_10e_12e_6_8_10_1
+  }
+
+  branch from leucine side right {
+    leucine
+    <-> . +r_3_phenyllactate +dlactate +sam +atp +amp +sah +ppi +hplus
+    pf1022c
+  }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> ec_1_3_99_17 [1.3.99.17] +quinolin_8_ol +hydrogen_acceptor +h2o
+    8_hydroxyquinolin_2_1h_one
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> ec_1_3_99_17 [1.3.99.17] +3_methylquinoline +hydrogen_acceptor +h2o
+    3_methylquinolin_2_1h_one
+  }
+
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> ec_1_3_99_17 [1.3.99.17] +4_methylquinoline +h2o +hydrogen_donor
+    4_methylquinolin_2_1h_one
+  }
+
+  branch from hydrogen_acceptor side right {
+    hydrogen_acceptor
+    <-> ec_1_3_99_17 [1.3.99.17] +8_methylquinoline +h2o +hydrogen_donor
+    8_methylquinolin_2_1h_one
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway palustric-acid-to-fmn "Palustric acid to FMN" {
-  spacing 308
+  spacing 340
 
   spine at 0,0 {
     palustric_acid
@@ -20,109 +20,157 @@ pathway palustric-acid-to-fmn "Palustric acid to FMN" {
 
   branch from h side left {
     h
-    <-> . +epibromohydrin +bromide
-    2_3_dibromo_1_propanol
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +aeruginopeptin_95b +phosphate +aeruginopeptin_95b +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> . +glycidol +bromide
-    3_bromopropane_1_2_diol
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    aeruginopeptin_95a
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_18_1 [1.14.18.1] +4_methyl_o_benzoquinone +h2o
-    4_methylcatechol
+    <-> ec_1_14_13_107 [1.14.13.107] +nadh +4s_limonene +h +nad +h2o
+    1r_4s_limonene_1_2_epoxide
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_18_1 [1.14.18.1] +4_tert_butylcatechol +h2o
-    4_tert_butyl_benzo_1_2_quinone
+    <-> . +nadh +9z_12z_octadecadienoate +h +nad +h2o
+    vernolate
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_21 [1.1.1.21] +4_bromophenylglyoxal +h +nadp
-    4_bromobenzoyl_methanol
+    <-> ec_1_1_1_71 [1.1.1.71] +h +palustradienal +nadp
+    isopimara_7_15_dienol
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_21 [1.1.1.21] +compound_0280197 +nadp +h
-    2_2_dimethylpropanal
+    <-> ec_1_2_1_5 [1.2.1.5] +h +nadp +palustradienal +h2o
+    5z_7e_9e_14z_17z_icosapentaenoate
   }
 
   branch from palustradienal side left {
     palustradienal
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +nad
-    palustradienol
-  }
-
-  branch from palustradienal side right {
-    palustradienal
-    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +nadp
-    isopimara_7_15_dienol
-  }
-
-  branch from abietol side left {
-    abietol
-    <-> . +h +o2 +nadph +nadp +h2o
-    abieta_7_13_diene
+    <-> ec_1_2_1_5 [1.2.1.5] +nadh +h +nad +h2o
+    5z_8z_11z_14z_17z_eicosapentaenoate
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +2_octanone
-    2s_octan_2_ol
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_geranial +h
+    isodihydrocarveol
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +heptan_2_one
-    heptan_2r_ol
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
+    neoisodihydrocarveol
   }
 
   branch from abietal side right {
     abietal
-    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +nadp
-    levopimaradienol
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +nad
+    palustradienol
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_21 [1.1.1.21] +h +2_naphthaldehyde +nadph
-    2_naphthyl_methanol
+    <-> ec_1_2_1_5 [1.2.1.5] +h +5z_7e_9e_14z_17z_icosapentaenoate +nadph +h2o
+    isopimara_7_15_dienal
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_21 [1.1.1.21] +4_hydroxynon_2_enal +h +nadph
-    4_hydroxynonenol
+    <-> ec_1_2_1_5 [1.2.1.5] +h +5z_8z_11z_14z_17z_eicosapentaenoate +nadph +h2o
+    levopimaradienal
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_alanine +ala_gly
-    ala_ala_gly
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    aeruginopeptin_228b
   }
 
   branch from h2o side right {
     h2o
-    <-> . +ala_tyr +glycine
-    gly_ala_tyr
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    aeruginopeptin_228a
   }
 
-  branch from fmn side left {
-    fmn
-    <-> ec_1_14_14_67 [1.14.14.67] +11_hydroxysugiol +fmnh2 +o2 +h2o +hplus
-    11_20_dihydroxysugiol
+  branch from nadp side left {
+    nadp
+    <-> ec_1_2_1_5 [1.2.1.5] +h2o +h +5z_8z_11z_14z_17z_eicosapentaenoate +nadph
+    neoabietadienal
   }
 
-  branch from fmn side right {
-    fmn
-    <-> ec_1_14_14_68 [1.14.14.68] +9_pimara_7_15_diene +fmnh2 +o2 +h2o +hplus
-    9_pimara_7_15_diene_3_ol
+  branch from nadp side right {
+    nadp
+    <-> ec_1_2_1_5 [1.2.1.5] +z_but_2_enol +h2o +h +nadph
+    butanoate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    aeruginopeptin_917s_b
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    aeruginopeptin_917s_c
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    aeruginopeptin_917s_a
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    nodularin_v
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +ubiquinol_9 +ubiquinone_9 +h2o
+    pmf
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +pmf +ubiquinol_10 +pmf +h2o
+    ubiquinone_10
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_2_1_5 [1.2.1.5] +9e_octadecenoate +h +nadp +h2o
+    cis_9_octadecenal
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_2_1_5 [1.2.1.5] +h +nadp +cis_9_octadecenal +h2o
+    6z_octadecenoate
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> ec_1_1_1_71 [1.1.1.71] +h +neoisodihydrocarveol +nad
+    2e_geranial
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_1_1_71 [1.1.1.71] +h +phellandral +nad
+    neodihydrocarveol
   }
 }

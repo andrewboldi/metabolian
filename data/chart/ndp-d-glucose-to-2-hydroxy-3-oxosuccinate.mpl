@@ -18,33 +18,33 @@ pathway ndp-d-glucose-to-2-hydroxy-3-oxosuccinate "NDP-α-D-glucose to 2-hydroxy
     2_hydroxy_3_oxosuccinate
   }
 
-  branch from 2_o_d_glucopyranosyl_d_glycerate side left {
-    2_o_d_glucopyranosyl_d_glycerate
-    <-> . +d_glycerate +gdp +hplus
-    gdp_d_glucose
-  }
-
-  branch from d_glycerate side right {
-    d_glycerate
-    <-> ec_2_7_1_165 [2.7.1.165] +atp +adp +hplus
-    pg2
-  }
-
   branch from glucose side left {
     glucose
-    <-> ec_3_2_1_104 [3.2.1.104] +daucosterol +h2o
-    sitosterol
+    <-> ec_3_2_1_21 [3.2.1.21] +4_methylumbelliferyl_d_glucoside +h2o
+    4_methylumbelliferone
   }
 
   branch from glucose side right {
     glucose
-    <-> . +campesterol_3_d_glucoside +h2o
-    campesterol
+    <-> . +h2o
+    beta_d_glcp_1_6_beta_d_glcp
   }
 
   branch from 2_hydroxy_3_oxosuccinate side left {
     2_hydroxy_3_oxosuccinate
     <-> ec_1_1_1_93 [1.1.1.93] +nad +nadh +hplus
     l_tartrate
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> . +gypenoside_xvii +h2o
+    gypenoside_lxxv
+  }
+
+  branch from glucose side left {
+    glucose
+    <-> ec_3_2_1_177 [3.2.1.177] +d_xylp_1_6_d_glcp +h2o
+    alpha_d_xylose
   }
 }

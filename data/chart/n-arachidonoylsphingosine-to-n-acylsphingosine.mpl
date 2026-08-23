@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-arachidonoylsphingosine-to-n-acylsphingosine "N-arachidonoylsphingosine to N-acylsphingosine" {
-  spacing 268
+  spacing 310
 
   spine at 0,0 {
     n_arachidonoylsphingosine
@@ -20,26 +20,26 @@ pathway n-arachidonoylsphingosine-to-n-acylsphingosine "N-arachidonoylsphingosin
 
   branch from arachidonate side left {
     arachidonate
-    <-> . +h2o +coa +hplus
-    arachidonoyl_coa
+    <-> . +o2
+    12_r_hpete
   }
 
   branch from arachidonate side right {
     arachidonate
-    <-> . +1_hexadecanoyl_2_5z_8z_11z_14z_icosatetraenoyl_s +h2o +hplus
-    1_hexadecanoyl_sn_glycero_3_phosphoethanolamine
+    <-> . +o2
+    11_r_hpete
   }
 
   branch from n_acylsphingosine side left {
     n_acylsphingosine
-    <-> . +d_glucosyl_n_acylsphingosine +cholesterol
-    cholesteryl_d_glucoside
+    <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +h2o
+    d_galp_1_3_d_galpnac_1_4_neup5ac_2_3_d_galp_1_4
   }
 
   branch from n_acylsphingosine side right {
     n_acylsphingosine
-    <-> . +fe2 +o2 +hplus +iron +h2o
-    n_acyl_4e_14z_sphingadienine
+    <-> . +l_fuc_1_2_d_gal_1_3_d_galnac_1_4_neu5ac_2_3_d_g +h2o
+    l_fucp_1_2_d_galp_1_3_d_galpnac_1_4_neup5ac_2_3
   }
 
   branch from n_acyl_d_galactosylsphingosine side left {
@@ -48,21 +48,63 @@ pathway n-arachidonoylsphingosine-to-n-acylsphingosine "N-arachidonoylsphingosin
     d_galactosyl_1_4_d_galactosyl_1_1_ceramide_d18
   }
 
-  branch from n_acyl_d_galactosylsphingosine side right {
-    n_acyl_d_galactosylsphingosine
-    <-> . +cholesterol +n_acylsphingosine
-    cholesteryl_d_galactoside
+  branch from d_galactopyranose side right {
+    d_galactopyranose
+    <-> ec_1_1_3_5 [1.1.3.5] +o2 +h2o2
+    d_galactono_1_5_lactone
   }
 
   branch from d_galactopyranose side left {
     d_galactopyranose
-    <-> ec_1_1_1_21 [1.1.1.21] +nadp +nadph +hplus
-    galactitol
+    <-> . +d_galp_1_6_d_manp_1_4_d_manp_1_4_d_manp +h2o
+    d_manp_1_4_d_manp_1_4_d_manp
+  }
+
+  branch from arachidonate side right {
+    arachidonate
+    <-> . +o2
+    15_r_hpete
+  }
+
+  branch from arachidonate side left {
+    arachidonate
+    <-> . +o2
+    prostaglandin_g2
+  }
+
+  branch from fatty_acyl_coa side right {
+    fatty_acyl_coa
+    <-> . +hexadecasphinganine +coa +hplus
+    n_acylhexadecasphinganine
+  }
+
+  branch from fatty_acyl_coa side left {
+    fatty_acyl_coa
+    <-> . +6_d_glucosaminyl_1_phosphatidyl_1d_myo_inositol +coa
+    2_acyl_6_d_glucosaminyl_1_1_2_diacyl_sn_glycero
+  }
+
+  branch from udp_d_galactose side right {
+    udp_d_galactose
+    <-> . +1_2_dioleoyl_sn_glycerol +udp +hplus
+    1_2_dioleoyl_3_d_galactosyl_sn_glycerol
+  }
+
+  branch from udp_d_galactose side left {
+    udp_d_galactose
+    <-> . +1_2_dilinoleoyl_sn_glycerol +udp +hplus
+    1_2_di_9z_12z_octadecadienoyl_3_d_galactosyl_sn
   }
 
   branch from d_galactopyranose side right {
     d_galactopyranose
-    <-> ec_1_1_1_359 [1.1.1.359] +nad +nadh +hplus
-    d_galactono_1_5_lactone
+    <-> . +d_manp_1_4_d_galp_1_6_d_manp_1_4_d_manp_1_4_d_m +h2o
+    d_manp_1_4_d_manp_1_4_d_manp_1_4_d_manp
+  }
+
+  branch from d_galactopyranose side left {
+    d_galactopyranose
+    <-> ec_5_1_3_3 [5.1.3.3]
+    alpha_d_galactose
   }
 }

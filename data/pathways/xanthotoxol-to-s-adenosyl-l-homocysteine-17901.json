@@ -1,0 +1,420 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "xanthotoxol-to-s-adenosyl-l-homocysteine-17901",
+  "name": "xanthotoxol to S-adenosyl-L-homocysteine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from xanthotoxol to S-adenosyl-L-homocysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:17901"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:15709"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "xanthotoxol",
+      "name": "xanthotoxol",
+      "formula": "C11H6O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15709"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "methoxsalen",
+      "name": "methoxsalen",
+      "formula": "C12H8O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18358"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "5_hydroxyxanthotoxin",
+      "name": "5-hydroxyxanthotoxin",
+      "formula": "C12H7O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78326"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "isopimpinellin",
+      "name": "isopimpinellin",
+      "formula": "C13H10O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28853"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_70",
+      "name": "8-hydroxyfuranocoumarin 8-O-methyltransferase",
+      "ec": [
+        "2.1.1.70"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_69",
+      "name": "5-hydroxyfuranocoumarin 5-O-methyltransferase",
+      "ec": [
+        "2.1.1.69"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "8-hydroxyfuranocoumarin 8-O-methyltransferase",
+      "equation": "xanthotoxol + S-adenosyl-L-methionine = xanthotoxin + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.70",
+      "substrates": [
+        {
+          "metabolite": "xanthotoxol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methoxsalen",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_70"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:17901"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17901"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "xanthotoxin + reduced [NADPH--hemoprotein reductase] + O2 = 5-hydroxyxanthotoxin + oxid...",
+      "equation": "xanthotoxin + reduced [NADPH--hemoprotein reductase] + O2 = 5-hydroxyxanthotoxin + oxidized [NADPH--hemoprotein reductase] + H2O + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "methoxsalen",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_hydroxyxanthotoxin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:58064"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58064"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "5-hydroxyfuranocoumarin 5-O-methyltransferase",
+      "equation": "5-hydroxyxanthotoxin + S-adenosyl-L-methionine = isopimpinellin + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.69",
+      "substrates": [
+        {
+          "metabolite": "5_hydroxyxanthotoxin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "isopimpinellin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_69"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:24894"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24894"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_xanthotoxol_7-demethylsuberosin-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "xanthotoxol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-demethylsuberosin-to-fmn"
+      },
+      "note": "Shares xanthotoxol with 7-demethylsuberosin to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15709"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_xanthotoxol_7-demethylsuberosin-to-fmn-32471",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "xanthotoxol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-demethylsuberosin-to-fmn-32471"
+      },
+      "note": "Shares xanthotoxol with 7-demethylsuberosin to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15709"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_xanthotoxol_xanthotoxol-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "xanthotoxol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "xanthotoxol-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares xanthotoxol with xanthotoxol to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15709"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_methoxsalen_xanthotoxol-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "methoxsalen"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "xanthotoxol-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares methoxsalen with xanthotoxol to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18358"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_hydroxyxanthotoxin_xanthotoxol-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_hydroxyxanthotoxin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "xanthotoxol-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares 5-hydroxyxanthotoxin with xanthotoxol to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78326"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_isopimpinellin_xanthotoxol-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isopimpinellin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "xanthotoxol-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares isopimpinellin with xanthotoxol to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28853"
+          }
+        ]
+      }
+    }
+  ]
+}

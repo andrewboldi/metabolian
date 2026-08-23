@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway tetracosanoyl-coa-to-fmn "tetracosanoyl-CoA to FMN" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     tetracosanoyl_coa
@@ -14,17 +14,5 @@ pathway tetracosanoyl-coa-to-fmn "tetracosanoyl-CoA to FMN" {
     tetracosanoate
     <-> . +fmnh2 +o2 -fmn -h2o -hplus
     hydroxytetracosanoate
-  }
-
-  branch from taurine side left {
-    taurine
-    <-> . +n_arachidonoyltaurine +h2o
-    arachidonate
-  }
-
-  branch from taurine side right {
-    taurine
-    <-> . +taurocholate +arginine
-    l_arginocholate
   }
 }

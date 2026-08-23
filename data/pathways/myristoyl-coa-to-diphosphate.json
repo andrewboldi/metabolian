@@ -139,22 +139,51 @@
       }
     },
     {
-      "id": "carnitine",
-      "name": "L-Carnitine",
-      "formula": "C7H15NO3",
-      "charge": 0,
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H30N9O15P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:16347"
+        "chebi": "CHEBI:57692"
       }
     },
     {
-      "id": "o_9z_tetradecenoyl_l_carnitine",
-      "name": "O-[(9Z)-tetradecenoyl]-L-carnitine",
-      "short": "O-[(9Z)-tetradeceno…",
-      "formula": "C21H39NO4",
+      "id": "trans_tetradec_2_enoyl_coa",
+      "name": "trans-tetradec-2-enoyl-CoA",
+      "short": "trans-tetradec-2-en…",
+      "formula": "C35H56N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:61405"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58307"
+      }
+    },
+    {
+      "id": "ketosphinganine",
+      "name": "3-Ketodihydrosphingosine",
+      "short": "3-Ketodihydrosphing…",
+      "formula": "C18H38NO2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58299"
+      }
+    },
+    {
+      "id": "n_myristoyl_3_ketodihydrosphingosine",
+      "name": "N-myristoyl-3-ketodihydrosphingosine",
+      "short": "N-myristoyl-3-ketod…",
+      "formula": "C32H63NO3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:84647"
+        "chebi": "CHEBI:189536"
       }
     }
   ],
@@ -354,39 +383,242 @@
     },
     {
       "id": "r5",
-      "name": "(9Z)-tetradecenoyl-CoA + (R)-carnitine = O-(9Z)-tetradecenoyl-(R)-carnitine + CoA",
-      "equation": "(9Z)-tetradecenoyl-CoA + (R)-carnitine = O-(9Z)-tetradecenoyl-(R)-carnitine + CoA",
+      "name": "tetradecanoyl-CoA + oxidized [electron-transfer flavoprotein] + H(+) = (2E)-tetradeceno...",
+      "equation": "tetradecanoyl-CoA + oxidized [electron-transfer flavoprotein] + H(+) = (2E)-tetradecenoyl-CoA + reduced [electron-transfer flavoprotein]",
       "substrates": [
         {
-          "metabolite": "9z_myristoleoyl_coa",
+          "metabolite": "myristoyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "carnitine",
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "o_9z_tetradecenoyl_l_carnitine",
+          "metabolite": "trans_tetradec_2_enoyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "coa",
+          "metabolite": "fadh2",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:44848"
+        "rhea": "RHEA:47316"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:44848"
+            "id": "RHEA:47316"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "3-oxosphinganine + tetradecanoyl-CoA = N-tetradecanoyl-3-oxosphinganine + CoA + H(+)",
+      "equation": "3-oxosphinganine + tetradecanoyl-CoA = N-tetradecanoyl-3-oxosphinganine + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "ketosphinganine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "myristoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_myristoyl_3_ketodihydrosphingosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:70379"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:70379"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_9z_myristoleoyl_coa_3-iodo-l-thyronine-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9z_myristoleoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-iodo-l-thyronine-to-hydrogen-donor"
+      },
+      "note": "Shares (9Z)-myristoleoyl-CoA with 3'-iodo-L-thyronine to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:65060"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_9z_myristoleoyl_coa_5-amino-1-5-phosphonato-to-methyl-com",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9z_myristoleoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-amino-1-5-phosphonato-to-methyl-com"
+      },
+      "note": "Shares (9Z)-myristoleoyl-CoA with 5-amino-1-(5-phosphonato-… to methyl-CoM.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:65060"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_9z_myristoleoyl_coa_9z-myristoleoyl-coa-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9z_myristoleoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "9z-myristoleoyl-coa-to-h2o"
+      },
+      "note": "Shares (9Z)-myristoleoyl-CoA with (9Z)-myristoleoyl-CoA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:65060"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_9z_myristoleoyl_coa_glycerophosphatidylethano-to-1-2-dihexadecanoyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9z_myristoleoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "glycerophosphatidylethano-to-1-2-dihexadecanoyl"
+      },
+      "note": "Shares (9Z)-myristoleoyl-CoA with glycerophosphatidylethano… to 1,2-dihexadecanoyl-sn-gly….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:65060"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_tetradec_2_enoyl_coa_2e-4e-tetradecadienoyl-to-cis-tetradec-3-enoyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_tetradec_2_enoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2e-4e-tetradecadienoyl-to-cis-tetradec-3-enoyl"
+      },
+      "note": "Shares trans-tetradec-2-enoyl-CoA with (2E,4E)-tetradecadienoyl-… to cis-tetradec-3-enoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61405"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_tetradec_2_enoyl_coa_3-oxotetradecanoyl-coa-to-myristoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_tetradec_2_enoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-oxotetradecanoyl-coa-to-myristoyl-coa"
+      },
+      "note": "Shares trans-tetradec-2-enoyl-CoA with 3-oxotetradecanoyl-CoA to myristoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61405"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_tetradec_2_enoyl_coa_n-myristoyl-1-2-dioleoyl-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_tetradec_2_enoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-myristoyl-1-2-dioleoyl-to-diphosphate"
+      },
+      "note": "Shares trans-tetradec-2-enoyl-CoA with N-myristoyl-1,2-dioleoyl-… to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61405"
           }
         ]
       }

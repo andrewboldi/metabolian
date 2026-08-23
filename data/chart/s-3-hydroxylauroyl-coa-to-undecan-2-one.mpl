@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-3-hydroxylauroyl-coa-to-undecan-2-one "(S)-3-hydroxylauroyl-CoA to undecan-2-one" {
-  spacing 174
+  spacing 180
 
   spine at 0,0 {
     s_3_hydroxylauroyl_coa
@@ -20,5 +20,11 @@ pathway s-3-hydroxylauroyl-coa-to-undecan-2-one "(S)-3-hydroxylauroyl-CoA to und
     3_oxolauroyl_coa
     <-> . +nadp +nadph +hplus
     r_3_hydroxylauroyl_coa
+  }
+
+  branch from s_3_hydroxylauroyl_coa side right {
+    s_3_hydroxylauroyl_coa
+    <-> . +h2o
+    trans_dodec_2_enoyl_coa
   }
 }

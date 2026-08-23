@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway all-trans-dodecaprenyl-to-nad "all-trans-dodecaprenyl… to NAD" {
-  spacing 322
+  spacing 340
 
   spine at 0,0 {
     all_trans_dodecaprenyl_diphosphate
@@ -18,69 +18,28 @@ pathway all-trans-dodecaprenyl-to-nad "all-trans-dodecaprenyl… to NAD" {
     menaquinol_12
   }
 
-  branch from 2_demethylmenaquinol_12 side left {
-    2_demethylmenaquinol_12
-    <-> ec_1_6_5_2 [1.6.5.2] +h +nadph +nadp
-    demethylmenaquinone_12
-  }
 
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_115 [4.2.3.115] +gpp
-    terpinene
-  }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_116 [4.2.3.116] +gpp
-    camphene
-  }
 
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_33 [2.1.1.33] +guanosine_5_monophosphate_1 +sam
-    n7_methylguanosine_5_phosphate_zwitterion
-  }
 
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_35 [2.1.1.35] +uridine_5_monophosphate_1 +sam +hplus
-    5_methyluridine_5_monophosphate_1
-  }
 
-  branch from h side right {
-    h
-    <-> . +glutathione +estrone_2_3_quinone
-    2_hydroxyestrone_4_s_glutathione
-  }
 
-  branch from h side left {
-    h
-    <-> . +acetyl_coa +leukotriene_e4 +coa
-    n_acetyl_leukotriene_e4
-  }
 
-  branch from nadph side right {
-    nadph
-    <-> . +cis_cis_cis_10_13_16_docosatrienoyl_coa +nadp +h
-    trans_cis_cis_cis_2_10_13_16_docosatetraenoyl_co
-  }
 
-  branch from nadph side left {
-    nadph
-    <-> . +13z_3_oxodocosenoyl_coa +h +nadp
-    3_s_hydroxy_13cis_docosenoyl_coa
-  }
 
-  branch from nad side right {
-    nad
-    <-> . +nadh +h +l_cysteate +h2o
-    3_sulfino_l_alanine
-  }
 
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_147 [1.1.1.147] +nadh +h +16_oxosteroid
-    16alpha_hydroxysteroid
-  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

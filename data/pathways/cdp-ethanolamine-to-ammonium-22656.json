@@ -1,0 +1,483 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "cdp-ethanolamine-to-ammonium-22656",
+  "name": "CDP-ethanolamine to ammonium",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from CDP-ethanolamine(1−) to ammonium, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:22656"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57876"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "cdp_ethanolamine",
+      "name": "CDP-ethanolamine",
+      "formula": "C11H19N4O11P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57876"
+      }
+    },
+    {
+      "id": "serine",
+      "name": "L-Serine",
+      "formula": "C3H7NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:33384"
+      }
+    },
+    {
+      "id": "l_serine_phosphoethanolamine_dizwitterion",
+      "name": "L-serine phosphoethanolamine dizwitterion",
+      "short": "L-serine phosphoeth…",
+      "formula": "C5H13N2O6P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57804"
+      }
+    },
+    {
+      "id": "cytidine_5_monophosphate",
+      "name": "cytidine 5'-monophosphate",
+      "short": "cytidine 5'-MP",
+      "formula": "C9H12N3O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:60377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "phosphoethanolamine",
+      "name": "Ethanolamine phosphate",
+      "short": "Ethanolamine P",
+      "formula": "C2H7NO4P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58190"
+      }
+    },
+    {
+      "id": "acetaldehyde",
+      "name": "Acetaldehyde",
+      "formula": "C2H4O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15343"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "n_formyl_l_methionyl_l_serinate",
+      "name": "N-formyl-L-methionyl-L-serinate",
+      "short": "N-formyl-L-methiony…",
+      "formula": "C9H15N2O5S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:233103"
+      }
+    },
+    {
+      "id": "n_formyl_l_methioninate",
+      "name": "N-formyl-L-methioninate",
+      "short": "N-formyl-L-methioni…",
+      "formula": "C6H10NO3S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57809"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_8_4",
+      "name": "serine-phosphoethanolamine synthase",
+      "ec": [
+        "2.7.8.4"
+      ]
+    },
+    {
+      "id": "ec_3_1_4_13",
+      "name": "serine-ethanolaminephosphate phosphodiesterase",
+      "ec": [
+        "3.1.4.13"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_2",
+      "name": "ethanolamine-phosphate phospho-lyase",
+      "ec": [
+        "4.2.3.2"
+      ],
+      "xrefs": {
+        "uniprot": "Q8TBG4"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "serine-phosphoethanolamine synthase",
+      "equation": "CDP-ethanolamine + L-serine = L-serine-phosphoethanolamine + CMP + H(+)",
+      "ec": "2.7.8.4",
+      "substrates": [
+        {
+          "metabolite": "cdp_ethanolamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "serine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_serine_phosphoethanolamine_dizwitterion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cytidine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_8_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:22656"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22656"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "serine-ethanolaminephosphate phosphodiesterase",
+      "equation": "L-serine-phosphoethanolamine + H2O = phosphoethanolamine + L-serine + H(+)",
+      "ec": "3.1.4.13",
+      "substrates": [
+        {
+          "metabolite": "l_serine_phosphoethanolamine_dizwitterion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phosphoethanolamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_4_13"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:17113"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17113"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "ethanolamine-phosphate phospho-lyase",
+      "equation": "phosphoethanolamine + H2O = acetaldehyde + NH4(+) + phosphate",
+      "ec": "4.2.3.2",
+      "substrates": [
+        {
+          "metabolite": "phosphoethanolamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:17889"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17889"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "N(alpha)-formyl-L-methionyl-L-serine + H2O = N(alpha)-formyl-L-methionine + L-serine",
+      "equation": "N(alpha)-formyl-L-methionyl-L-serine + H2O = N(alpha)-formyl-L-methionine + L-serine",
+      "substrates": [
+        {
+          "metabolite": "n_formyl_l_methionyl_l_serinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_formyl_l_methioninate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "serine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:83499"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:83499"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_l_serine_phosphoethanolamine_dizwitterion_cdp-ethanolamine-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_serine_phosphoethanolamine_dizwitterion"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cdp-ethanolamine-to-ammonium"
+      },
+      "note": "Shares L-serine phosphoethanolamine dizwitterion with CDP-ethanolamine to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57804"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_formyl_l_methionyl_l_serinate_1-stearoyl-2-10-hydroxyo-to-l-serine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_formyl_l_methionyl_l_serinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-stearoyl-2-10-hydroxyo-to-l-serine"
+      },
+      "note": "Shares N-formyl-L-methionyl-L-serinate with 1-stearoyl,2-(10-hydroxyo… to L-serine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:233103"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_formyl_l_methioninate_1-stearoyl-2-10-hydroxyo-to-l-serine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_formyl_l_methioninate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-stearoyl-2-10-hydroxyo-to-l-serine"
+      },
+      "note": "Shares N-formyl-L-methioninate with 1-stearoyl,2-(10-hydroxyo… to L-serine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57809"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_formyl_l_methioninate_5-6-dihydrothymine-to-l-alanine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_formyl_l_methioninate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-6-dihydrothymine-to-l-alanine"
+      },
+      "note": "Shares N-formyl-L-methioninate with 5,6-dihydrothymine to L-alanine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57809"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_formyl_l_methioninate_n-formyl-l-methionyl-l-ph-to-n-propanoyl-l-methi",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_formyl_l_methioninate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-formyl-l-methionyl-l-ph-to-n-propanoyl-l-methi"
+      },
+      "note": "Shares N-formyl-L-methioninate with N-formyl-L-methionyl-L-ph… to N-propanoyl-L-methioninate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57809"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_formyl_l_methioninate_s-n-acetyl-1-phenylethy-to-r-1-phenylethanol-56",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_formyl_l_methioninate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-n-acetyl-1-phenylethy-to-r-1-phenylethanol-56"
+      },
+      "note": "Shares N-formyl-L-methioninate with (S)-N-acetyl-1-phenylethy… to (R)-1-phenylethanol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57809"
+          }
+        ]
+      }
+    }
+  ]
+}

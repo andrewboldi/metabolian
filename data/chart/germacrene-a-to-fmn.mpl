@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway germacrene-a-to-fmn "(+)-germacrene A to FMN" {
-  spacing 172
+  spacing 160
 
   spine at 0,0 {
     germacrene_a
@@ -16,17 +16,5 @@ pathway germacrene-a-to-fmn "(+)-germacrene A to FMN" {
     costunolide
     <-> . +fmnh2 +o2 -fmn -h2o -hplus
     3_hydroxycostunolide
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +cordypyrone_a +fmnh2 +o2 +h2o +hplus
-    cordypyrone_b
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> ec_1_14_14_183 [1.14.14.183] +taxusin +fmnh2 +o2 +h2o +hplus
-    2_hydroxytaxusin
   }
 }

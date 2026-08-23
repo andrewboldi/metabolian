@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 12-ethyl-71-71-dihydroxy-to-12-ethyl-8-isobutylb "12-ethyl-71,71-dihydroxy-… to 12-Ethyl-8-isobutylbacter…" {
-  spacing 276
+  spacing 252
 
   spine at 0,0 {
     12_ethyl_71_71_dihydroxy_8_isobutylbacteriochlor
@@ -14,29 +14,5 @@ pathway 12-ethyl-71-71-dihydroxy-to-12-ethyl-8-isobutylb "12-ethyl-71,71-dihydro
     12_ethyl_8_isobutylbacteriochlorophyllide_c
     <-> ec_2_1_1_333 [2.1.1.333] +s_adenosyl_l_homocysteine +h -12_ethyl_8_isobutylbacteriochlorophyllide_d
     s_adenosyl_l_methionine
-  }
-
-  branch from s_adenosyl_l_methionine side left {
-    s_adenosyl_l_methionine
-    <-> ec_2_1_1_352 [2.1.1.352] +s_adenosyl_l_homocysteine +h +noscapine
-    narcotoline
-  }
-
-  branch from s_adenosyl_l_methionine side right {
-    s_adenosyl_l_methionine
-    <-> . +brassinin +s_adenosyl_l_homocysteine +h
-    indol_3_ylmethylcarbamodithiolate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +1_hydroxymidazolam +nadp +h +o2 +nadph
-    midazolam
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +pravastatin_sodium +h +o2 +nadph +3_alpha_5_beta_dihydroxy_pravastatin_3_alpha5_be
-    nadp
   }
 }

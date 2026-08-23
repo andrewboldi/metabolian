@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 6-methylpretetramide-to-h2o "6-methylpretetramide to H2O" {
-  spacing 286
+  spacing 340
 
   spine at 0,0 {
     6_methylpretetramide
@@ -12,37 +12,97 @@ pathway 6-methylpretetramide-to-h2o "6-methylpretetramide to H2O" {
     4_hydroxy_6_methylpretetramide
     <-> ec_1_14_13_233 [1.14.13.233] +nadph +o2 -nadp -h2o
     4_de_dimethylamino_4_oxoanhydrotetracycline
-    <-> . +fadh2 +h +o2 +chloride -4_dedimethylamine_4_oxo_anhydro_7_cl_tetracyclin -h2o
-    fad
+    <-> . +h +nadph -nadp -h2o
+    4_hydroxy_6_methylpretetramide
   }
 
   branch from 4_de_dimethylamino_4_oxoanhydrotetracycline side left {
     4_de_dimethylamino_4_oxoanhydrotetracycline
-    <-> ec_1_14_13_232 [1.14.13.232] +h +6_methylpretetramide +o2 +nadph +h2o
+    <-> ec_1_14_13_232 [1.14.13.232] +h +6_methylpretetramide +nadph +nadp +h2o
+    o2
+  }
+
+  branch from 4_de_dimethylamino_4_oxoanhydrotetracycline side right {
+    4_de_dimethylamino_4_oxoanhydrotetracycline
+    <-> . +fadh2 +h +o2 +chloride +4_dedimethylamine_4_oxo_anhydro_7_cl_tetracyclin +h2o
+    fad
+  }
+
+  branch from nadp side left {
     nadp
+    <-> . +h +nadph +n_demethylnarwedine
+    norgalanthamine
   }
 
-  branch from fad side right {
-    fad
-    <-> . +6r_5_10_methylene_5_6_7_8_tetrahydrofolate +fadh2 +h +glycine +sarcosine
-    6s_5_6_7_8_tetrahydrofolate
-  }
-
-  branch from fad side left {
-    fad
-    <-> . +fadh2 +h +2_5_dichloro_p_benzoquinone
-    2_5_dichlorohydroquinone
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +5_s_6_s_epoxy_15_r_hepe
-    15_epi_lipoxin_a5
+  branch from nadp side right {
+    nadp
+    <-> . +cinchonidine +h +nadph
+    cinchoninone
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +18_coa_18_oxo_dinorleukotriene_b4 +coa
-    omega_carboxy_trinor_leukotriene_b4
+    <-> . +carbamazepine_10_11_epoxide
+    dihydroxycarbazepine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +h +glutathione +glutathionylaminopropylcadaverine
+    homotrypanothione
+  }
+
+  branch from 6_methylpretetramide side left {
+    6_methylpretetramide
+    <-> . +s_adenosyl_l_homocysteine +h +pretetramid
+    s_adenosyl_l_methionine
+  }
+
+  branch from h side right {
+    h
+    <-> . +s_adenosyl_l_homocysteine +theophylline +s_adenosyl_l_methionine
+    xanthine
+  }
+
+  branch from h side left {
+    h
+    <-> . +galanthamine +s_adenosyl_l_methionine +norgalanthamine
+    s_adenosyl_l_homocysteine
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +cinchonidine +nadp +h
+    cinchonidinone
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +n_hydroxyl_tryptamine +nadp +h2o +o2
+    tryptamine
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +z_phenylacetaldehyde_oxime +h +o2 +l_cysteine +nadph +h2o
+    s_phenylacetothiohydroximoyl_l_cysteine
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +3_phenylpropionaldoxim +co2 +h2o +h +o2 +nadph
+    l_homophenylalanine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +h +demecolcine +formate
+    n_formyldemecolcine
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_1_1_36 [3.1.1.36] +limonin
+    limonoate_a_ring_lactone
   }
 }

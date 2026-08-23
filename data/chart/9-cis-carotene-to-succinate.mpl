@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 9-cis-carotene-to-succinate "9-cis-β-carotene to succinate" {
-  spacing 282
+  spacing 252
 
   spine at 0,0 {
     9_cis_carotene
@@ -22,35 +22,5 @@ pathway 9-cis-carotene-to-succinate "9-cis-β-carotene to succinate" {
     11r_methyl_carlactonoate
     <-> . +akg +o2 -succinate -co2
     11r_hydroxymethyl_carlactonoate
-  }
-
-  branch from 9_cis_10_apo_carotenal side left {
-    9_cis_10_apo_carotenal
-    <-> ec_1_13_11_69 [1.13.11.69] +2e_4e_6e_7_hydroxy_4_methylhepta_2_4_6_trienal +11r_carlactone
-    o2
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +tetradecane +fmnh2 +o2 +h2o +hplus
-    tetradecan_7_ol
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +hexadecane +fmnh2 +o2 +h2o +hplus
-    hexadecan_8_ol
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +scopoletin +sam +hplus
-    scoparone
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +7_8_dihydroxycoumarin +sam +hplus
-    7_hydroxy_8_methoxycoumarin
   }
 }

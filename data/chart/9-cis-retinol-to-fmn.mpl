@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 9-cis-retinol-to-fmn "9-cis-retinol to FMN" {
-  spacing 152
+  spacing 158
 
   spine at 0,0 {
     9_cis_retinol
@@ -16,5 +16,11 @@ pathway 9-cis-retinol-to-fmn "9-cis-retinol to FMN" {
     9_cis_4_hydroxyretinoate
     <-> . +fmnh2 +o2 -fmn -h2o -hplus
     9_cis_4_oxoretinoate
+  }
+
+  branch from 9_cis_retinal side left {
+    9_cis_retinal
+    <-> .
+    all_trans_retinal
   }
 }

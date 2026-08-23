@@ -162,9 +162,35 @@
       "xrefs": {
         "chebi": "CHEBI:57287"
       }
+    },
+    {
+      "id": "d_lysinium",
+      "name": "D-lysinium",
+      "formula": "C6H15N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:32557"
+      }
+    },
+    {
+      "id": "n_acetylcadaverine",
+      "name": "N-acetylcadaverine",
+      "formula": "C7H17N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:134408"
+      }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_4_1_1_116",
+      "name": "D-ornithine/D-lysine decarboxylase",
+      "ec": [
+        "4.1.1.116"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -311,6 +337,360 @@
           {
             "db": "Rhea",
             "id": "RHEA:66808"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "D-ornithine/D-lysine decarboxylase",
+      "equation": "D-lysine + H(+) = cadaverine + CO2",
+      "ec": "4.1.1.116",
+      "substrates": [
+        {
+          "metabolite": "d_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cadaverine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_116"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:59052"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59052"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "cadaverine + acetyl-CoA = N-acetylcadaverine + CoA + H(+)",
+      "equation": "cadaverine + acetyl-CoA = N-acetylcadaverine + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "cadaverine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetylcadaverine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:79547"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79547"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_cadaverine_3-4-oxo-4-5-dihydro-1h-i-to-n2-formyl-n1-5-phosp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cadaverine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-4-oxo-4-5-dihydro-1h-i-to-n2-formyl-n1-5-phosp"
+      },
+      "note": "Shares cadaverine with 3-(4-oxo-4,5-dihydro-1H-i… to N2-formyl-N1-(5-phospho-β….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58384"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cadaverine_3-acyloxy-acyl-group-to-1-4-benzoquinones",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cadaverine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-acyloxy-acyl-group-to-1-4-benzoquinones"
+      },
+      "note": "Shares cadaverine with 3-(acyloxy)acyl group to 1,4-benzoquinones.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58384"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cadaverine_guaiacylglycerol-guaiac-to-hydroquinone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cadaverine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "guaiacylglycerol-guaiac-to-hydroquinone"
+      },
+      "note": "Shares cadaverine with guaiacylglycerol-β-guaiac… to hydroquinone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58384"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cadaverine_n4-n-acetyl-d-glucosam-to-n-acetyl-d-glucosamine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cadaverine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n4-n-acetyl-d-glucosam-to-n-acetyl-d-glucosamine"
+      },
+      "note": "Shares cadaverine with N4-(β-N-acetyl-D-glucosam… to N-acetyl-D-glucosamine….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58384"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cadaverine_psicosyllysine-to-d-glucopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cadaverine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "psicosyllysine-to-d-glucopyranose"
+      },
+      "note": "Shares cadaverine with psicosyllysine to D-glucopyranose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58384"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_ammoniopentanal_5-ammoniopentanal-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_ammoniopentanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-ammoniopentanal-to-h2o"
+      },
+      "note": "Shares 5-ammoniopentanal with 5-ammoniopentanal to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:144896"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_ammoniopentanal_guaiacylglycerol-guaiac-to-hydroquinone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_ammoniopentanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "guaiacylglycerol-guaiac-to-hydroquinone"
+      },
+      "note": "Shares 5-ammoniopentanal with guaiacylglycerol-β-guaiac… to hydroquinone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:144896"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_aminopentanoic_acid_5-6-dihydrouridine-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_aminopentanoic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-6-dihydrouridine-to-hydrogen-donor"
+      },
+      "note": "Shares 5-aminopentanoic acid with 5,6-dihydrouridine… to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:356010"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_aminopentanoic_acid_l-lysinium-to-wortmanamide-b",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_aminopentanoic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-lysinium-to-wortmanamide-b"
+      },
+      "note": "Shares 5-aminopentanoic acid with L-lysinium to wortmanamide B.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:356010"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_lysinium_7r-7-5-carboxy-5-oxope-to-cephalosporin-c",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_lysinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7r-7-5-carboxy-5-oxope-to-cephalosporin-c"
+      },
+      "note": "Shares D-lysinium with (7R)-7-(5-carboxy-5-oxope… to cephalosporin C.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:32557"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_lysinium_d-glutamine-to-udp-n-acetyl-d-muramoyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_lysinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glutamine-to-udp-n-acetyl-d-muramoyl"
+      },
+      "note": "Shares D-lysinium with D-glutamine to UDP-N-acetyl-α-D-muramoyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:32557"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_lysinium_n-carbamoyl-l-amino-to-n-acetyl-d-amino-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_lysinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-carbamoyl-l-amino-to-n-acetyl-d-amino-acid"
+      },
+      "note": "Shares D-lysinium with N-carbamoyl-L-α-amino… to N-acetyl-D-amino acid….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:32557"
           }
         ]
       }

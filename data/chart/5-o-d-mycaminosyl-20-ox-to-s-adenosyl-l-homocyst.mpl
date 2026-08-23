@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-o-d-mycaminosyl-20-ox-to-s-adenosyl-l-homocyst "5-O-β-D-mycaminosyl-20-ox… to S-adenosyl-L-homocysteine" {
-  spacing 296
+  spacing 340
 
   spine at 0,0 {
     5_o_d_mycaminosyl_20_oxotylonolide
@@ -16,39 +16,99 @@ pathway 5-o-d-mycaminosyl-20-ox-to-s-adenosyl-l-homocyst "5-O-β-D-mycaminosyl-2
     lactenocin
   }
 
+  branch from 5_o_mycaminosyltylonolide side left {
+    5_o_mycaminosyltylonolide
+    <-> . +h +5_o_beta_d_mycaminosyltylactone +o2 +nadph +h2o
+    nadp
+  }
+
+  branch from 5_o_mycaminosyltylonolide side right {
+    5_o_mycaminosyltylonolide
+    <-> ec_1_14_13_186 [1.14.13.186] +20_oxo_5_o_beta_d_mycaminosyltylonolide +h +o2 +nadph +nadp
+    h2o
+  }
+
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_14_15_39 [1.14.15.39] +epi_isozizaene +di_sulfido_diiron +o2 +hplus +h2o
-    albaflavenone
+    <-> ec_1_14_19_42 [1.14.19.42] +1_acyl_2_palmitoylglycerolipid +di_sulfido_diiron +o2 +hplus +h2o
+    1_acyl_2_7z_hexadec_7_enoyl_glycerolipid
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_14_15_9 [1.14.15.9] +spirilloxanthin +di_sulfido_diiron +o2 +hplus +h2o
-    2_oxospirilloxanthin
+    <-> ec_1_14_19_43 [1.14.19.43] +1_acyl_2_palmitoylglycerolipid +di_sulfido_diiron +o2 +hplus +h2o
+    1_acyl_2_3e_hexadec_3_enoyl_glycerolipid
   }
 
-  branch from dtdp side left {
-    dtdp
-    <-> . +dtdp_l_vancosamine +devancoaminyl_vancomycin +hplus
-    epivancomycin
-  }
-
-  branch from dtdp side right {
-    dtdp
-    <-> . +dtdp_6_deoxy_l_mannose +l_argininium +hplus
-    n_6_deoxy_l_mannosyl_l_arginyl_2
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +3_methoxy_4_5_dihydroxy_trans_stilbene +sam +hplus
-    pterostilbene
+  branch from lactenocin side left {
+    lactenocin
+    <-> . +s_adenosyl_l_homocysteine +h +tylosin_b
+    s_adenosyl_l_methionine
   }
 
   branch from sah side right {
     sah
-    <-> . +trans_resveratrol +sam +hplus
-    3_methoxy_4_5_dihydroxy_trans_stilbene
+    <-> ec_2_1_1_324 [2.1.1.324] +dtdp_4_ammonio_2_3_4_6_tetradeoxy_d_glucose +sam +hplus
+    dtdp_d_forosamine
+  }
+
+  branch from sah side left {
+    sah
+    <-> . +dtdp_4_ammonio_2_3_4_6_tetradeoxy_d_glucose +sam +hplus
+    dtdp_4_methylammonio_2_3_4_6_tetradeoxy_d_glucos
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_14_19_27 [1.14.19.27] +1_acyl_2_palmitoylglycerolipid +o2 +hplus +di_sulfido_diiron +h2o
+    1_acyl_2_palmitoleoylglycerolipid
+  }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> ec_1_14_19_36 [1.14.19.36] +1_linoleoyl_2_acylglycerolipid +o2 +hplus +di_sulfido_diiron +h2o
+    1_linolenoyl_2_acylglycerolipid
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_3_1_108 [1.3.1.108] +dihydrocaffeoyl_coa +di_sulfido_diiron +nad +nadh
+    trans_caffeoyl_coa
+  }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> . +epothilone_c +di_sulfido_diiron +o2 +hplus +h2o
+    epothilone_a
+  }
+
+  branch from dtdp_6_deoxy_d_allose side right {
+    dtdp_6_deoxy_d_allose
+    <-> ec_1_1_1_364 [1.1.1.364] +nad +nadh +hplus
+    dtdp_4_dehydro_6_deoxy_d_gulose
+  }
+
+  branch from sam side left {
+    sam
+    <-> . +malonyl-coa +acetyl_coa +sah +co2 +coa
+    3_5_dimethylorsellinate
+  }
+
+  branch from sam side right {
+    sam
+    <-> . +l_glutamine +sah +hplus
+    n5_methyl_l_glutamine
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_268 [2.1.1.268] +cytidine_5_monophosphate_1 +sam +hplus
+    n3_methylcytidine_5_monophosphate_1
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_268 [2.1.1.268] +sam +n3_methylcytidine_5_monophosphate_1 +hplus
+    cytidine_5_monophosphate_1
   }
 }

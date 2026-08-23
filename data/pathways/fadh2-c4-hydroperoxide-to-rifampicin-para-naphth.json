@@ -111,9 +111,90 @@
       "xrefs": {
         "chebi": "CHEBI:142731"
       }
+    },
+    {
+      "id": "rifamycin_sv",
+      "name": "rifamycin SV",
+      "formula": "C37H46NO12",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:84571"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "rifamycin_sv_hemiaminal",
+      "name": "rifamycin SV hemiaminal",
+      "short": "rifamycin SV…",
+      "formula": "C37H46NO13",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:142726"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "21_phosphorifampicin",
+      "name": "21-phosphorifampicin",
+      "formula": "C43H57N4O15P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:140195"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_2_7_9_6",
+      "name": "rifampicin phosphotransferase",
+      "ec": [
+        "2.7.9.6"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -228,6 +309,230 @@
           {
             "db": "Rhea",
             "id": "RHEA:58708"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "rifamycin SV + FADH2-C4alpha-hydroperoxide + NADH + H(+) = rifamycin SV hemiaminal + FA...",
+      "equation": "rifamycin SV + FADH2-C4alpha-hydroperoxide + NADH + H(+) = rifamycin SV hemiaminal + FADH2 + NAD(+) + H2O",
+      "substrates": [
+        {
+          "metabolite": "rifamycin_sv",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fadh2_c4_hydroperoxide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "rifamycin_sv_hemiaminal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:58692"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58692"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "rifampicin phosphotransferase",
+      "equation": "rifampicin + ATP + H2O = 21-phosphorifampicin + AMP + phosphate + 2 H(+)",
+      "ec": "2.7.9.6",
+      "substrates": [
+        {
+          "metabolite": "rifampicin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "21_phosphorifampicin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_9_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:56304"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56304"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_fadh2_c4_hydroperoxide_27-o-demethylrifamycin-sv-to-rifamycin-sv",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "fadh2_c4_hydroperoxide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "27-o-demethylrifamycin-sv-to-rifamycin-sv"
+      },
+      "note": "Shares FADH2-C4α-hydroperoxide with 27-O-demethylrifamycin SV to rifamycin SV….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:142775"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_rifampicin_27-o-demethylrifamycin-sv-to-rifamycin-sv",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "rifampicin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "27-o-demethylrifamycin-sv-to-rifamycin-sv"
+      },
+      "note": "Shares rifampicin with 27-O-demethylrifamycin SV to rifamycin SV….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:71365"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_rifampicin_hemiaminal_27-o-demethylrifamycin-sv-to-rifamycin-sv",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "rifampicin_hemiaminal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "27-o-demethylrifamycin-sv-to-rifamycin-sv"
+      },
+      "note": "Shares rifampicin hemiaminal with 27-O-demethylrifamycin SV to rifamycin SV….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:142729"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_rifamycin_sv_27-o-demethylrifamycin-sv-to-rifamycin-sv",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "rifamycin_sv"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "27-o-demethylrifamycin-sv-to-rifamycin-sv"
+      },
+      "note": "Shares rifamycin SV with 27-O-demethylrifamycin SV to rifamycin SV….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84571"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_rifamycin_sv_hemiaminal_27-o-demethylrifamycin-sv-to-rifamycin-sv",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "rifamycin_sv_hemiaminal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "27-o-demethylrifamycin-sv-to-rifamycin-sv"
+      },
+      "note": "Shares rifamycin SV hemiaminal with 27-O-demethylrifamycin SV to rifamycin SV….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:142726"
           }
         ]
       }

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "15-methylhexadecasphing-4-to-choline-phosphate",
   "name": "15-methylhexadecasphing-4… to choline phosphate",
-  "category": "lipid-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from 15-methylhexadecasphing-4-enine(1+) to choline phosphate(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -138,6 +138,45 @@
       "charge": -3,
       "xrefs": {
         "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "sphinga_4e_14z_dienine",
+      "name": "sphinga-4E,14Z-dienine",
+      "short": "sphinga-4E,14Z-dien…",
+      "formula": "C18H36NO2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:83568"
+      }
+    },
+    {
+      "id": "n_acyl_4e_14z_sphingadienine",
+      "name": "N-acyl-(4E,14Z)-sphingadienine",
+      "short": "N-acyl-(4E,14Z)-sph…",
+      "formula": "C19H34NO3R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:139573"
+      }
+    },
+    {
+      "id": "l_serine",
+      "name": "L-serine",
+      "formula": "C3H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29999"
+      }
+    },
+    {
+      "id": "o_fatty_acyl_l_serine",
+      "name": "O-fatty acyl-L-serine",
+      "short": "O-fatty acyl-L-seri…",
+      "formula": "C4H4NO3R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:177286"
       }
     }
   ],
@@ -307,6 +346,266 @@
           {
             "db": "Rhea",
             "id": "RHEA:34751"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "sphinga-4E,14Z-dienine + a fatty acyl-CoA = an N-acyl-sphinga-4E,14Z-dienine + CoA + H(+)",
+      "equation": "sphinga-4E,14Z-dienine + a fatty acyl-CoA = an N-acyl-sphinga-4E,14Z-dienine + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "sphinga_4e_14z_dienine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fatty_acyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acyl_4e_14z_sphingadienine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:63944"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63944"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "L-seryl-[protein] + a fatty acyl-CoA = O-fatty acyl-L-seryl-[protein] + CoA",
+      "equation": "L-seryl-[protein] + a fatty acyl-CoA = O-fatty acyl-L-seryl-[protein] + CoA",
+      "substrates": [
+        {
+          "metabolite": "l_serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fatty_acyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_fatty_acyl_l_serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:68272"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:68272"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_15_methylhexadecasphing_4_enine_n-acyl-15-methylhexadecas-to-15-methylhexadecasp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "15_methylhexadecasphing_4_enine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acyl-15-methylhexadecas-to-15-methylhexadecasp"
+      },
+      "note": "Shares 15-methylhexadecasphing-4-enine with N-acyl-15-methylhexadecas… to 15-methylhexadecasphing-4….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:70771"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acyl_15_methylhexadecasphing_4_enine_n-acyl-15-methylhexadecas-to-15-methylhexadecasp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acyl_15_methylhexadecasphing_4_enine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acyl-15-methylhexadecas-to-15-methylhexadecasp"
+      },
+      "note": "Shares N-acyl-15-methylhexadecasphing-4-enine with N-acyl-15-methylhexadecas… to 15-methylhexadecasphing-4….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:70846"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acyl_15_methylhexadecasphing_4_enine_n-acyl-15-methylhexadecas-to-d-glucopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acyl_15_methylhexadecasphing_4_enine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acyl-15-methylhexadecas-to-d-glucopyranose"
+      },
+      "note": "Shares N-acyl-15-methylhexadecasphing-4-enine with N-acyl-15-methylhexadecas… to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:70846"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acyl_15_methylhexadecasphing_4_enine_1_phospha_n-acyl-15-methylhexadecas-to-d-glucopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acyl_15_methylhexadecasphing_4_enine_1_phospha"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acyl-15-methylhexadecas-to-d-glucopyranose"
+      },
+      "note": "Shares N-acyl-15-methylhexadecasphing-4-enine-1-phosphate with N-acyl-15-methylhexadecas… to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:71156"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sphinga_4e_14z_dienine_n-tetradecanoylsphingosine-to-adenosine-3-5-bism",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sphinga_4e_14z_dienine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-tetradecanoylsphingosine-to-adenosine-3-5-bism"
+      },
+      "note": "Shares sphinga-4E,14Z-dienine with N-tetradecanoylsphingosine to adenosine 3',5'-bismonoph….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83568"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sphinga_4e_14z_dienine_pa-0-0-18-0-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sphinga_4e_14z_dienine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "pa-0-0-18-0-to-h2o"
+      },
+      "note": "Shares sphinga-4E,14Z-dienine with PA(0:0/18:0) to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83568"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sphinga_4e_14z_dienine_sphinganine-to-o-s-3r-hydroxyicosanoy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sphinga_4e_14z_dienine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sphinganine-to-o-s-3r-hydroxyicosanoy"
+      },
+      "note": "Shares sphinga-4E,14Z-dienine with sphinganine to O-[S-(3R)-hydroxyicosanoy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83568"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acyl_4e_14z_sphingadienine_phosphatidylcholine-to-n-acylsphingosine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acyl_4e_14z_sphingadienine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phosphatidylcholine-to-n-acylsphingosine"
+      },
+      "note": "Shares N-acyl-(4E,14Z)-sphingadienine with phosphatidylcholine to N-acylsphingosine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:139573"
           }
         ]
       }

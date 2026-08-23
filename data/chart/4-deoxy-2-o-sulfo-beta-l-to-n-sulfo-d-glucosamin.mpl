@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-deoxy-2-o-sulfo-beta-l-to-n-sulfo-d-glucosamin "4-deoxy-2-O-sulfo-beta-L-… to N-sulfo-D-glucosamine" {
-  spacing 286
+  spacing 304
 
   spine at 0,0 {
     4_deoxy_2_o_sulfo_beta_l_erythro_hex_4_enopyranu
@@ -18,43 +18,61 @@ pathway 4-deoxy-2-o-sulfo-beta-l-to-n-sulfo-d-glucosamin "4-deoxy-2-O-sulfo-beta
 
   branch from h side left {
     h
-    <-> . +acetyl_coa +n6_n6_o_tridemethylpuromycin +coa
-    n_acetyl_n6_n6_o_tridemethylpuromycin
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +1_2_di_9z_12z_octadecadienoyl_sn_glycero_3_phosp +phosphate +1_2_di_9z_12z_octadecadienoyl_sn_glycero_3_phosp +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> . +34a_deoxy_rifamycin_w +nadph +proansamycin_x
-    nadp
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_9z_octadec_9_enoyl_2_hexadecanoyl_sn_glycero_3
   }
 
   branch from sulfate side left {
     sulfate
-    <-> ec_3_1_6_1 [3.1.6.1] +h +4_nitrophenol +h2o
-    4_nitrophenyl_sulfate
+    <-> ec_1_8_3_1 [1.8.3.1] +o2
+    sulfite
   }
 
   branch from sulfate side right {
     sulfate
-    <-> ec_3_1_6_3 [3.1.6.3] +alpha_d_glucose +h +h2o
-    d_glucopyranose_6_sulfate
+    <-> . +d_glca_1_4_d_glcnac6s_1_4_d_glca +h +h2o
+    d_glca2s_1_4_d_glcnac6s_1_4_d_glca
   }
 
-  branch from n_6_o_disulfo_d_glucosamine side left {
-    n_6_o_disulfo_d_glucosamine
-    <-> ec_3_2_1_56 [3.2.1.56] +beta_d_glucuronate +h +h2o
-    3_d_glucuronosyl_n_2_6_disulfo_beta_d_glucosamin
+  branch from h2o side left {
+    h2o
+    <-> . +l_valine +l_arginine +l_phenylalanine
+    valyl_phenylalanyl_arginine
   }
 
-  branch from 4_deoxy_l_threo_hex_4_enopyranuronate side right {
-    4_deoxy_l_threo_hex_4_enopyranuronate
-    <-> ec_4_2_2_6 [4.2.2.6] +h
-    4_4_deoxy_beta_d_gluc_4_enosyluronic_acid_d_gala
+  branch from h2o side right {
+    h2o
+    <-> . +l_proline +l_valine +l_tryptophan
+    val_pro_trp
   }
 
-  branch from 4_deoxy_l_threo_hex_4_enopyranuronate side left {
-    4_deoxy_l_threo_hex_4_enopyranuronate
-    <-> ec_4_2_2_6 [4.2.2.6] +h
-    4_4_deoxy_alpha_d_gluc_4_enuronosyl_d_galacturon
+  branch from h side left {
+    h
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_oleoyl_2_3e_hexadecenoyl_phosphatidylglycerol
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_linoleoyl_2_3e_hexadecenoyl_phosphatidylglycer
+  }
+
+  branch from sulfate side left {
+    sulfate
+    <-> ec_2_7_7_4 [2.7.7.4] +adenosine_5_phosphosulfate +gdp +diphosphate +phosphate +atp +h2o
+    gtp
+  }
+
+  branch from sulfate side right {
+    sulfate
+    <-> ec_2_7_7_53 [2.7.7.53] +adenosine_5_phosphosulfate +atp
+    p_1_p_4_bis_5_adenosyl_tetraphosphate
   }
 }

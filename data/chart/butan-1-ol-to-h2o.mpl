@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway butan-1-ol-to-h2o "butan-1-ol to H2O" {
-  spacing 194
+  spacing 152
 
   spine at 0,0 {
     butan_1_ol
@@ -14,47 +14,5 @@ pathway butan-1-ol-to-h2o "butan-1-ol to H2O" {
     h
     <-> ec_3_1_1_1 [3.1.1.1] +butan_1_ol +4_aminobenzoate -h2o
     butamben
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_6 [3.6.3.6] +adp +phosphate +h2o
-    atp
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    alanine_d7
-  }
-
-  branch from acetate side left {
-    acetate
-    <-> ec_3_5_1_108 [3.5.1.108] +udp_3_o_3_hydroxytetradecanoyl_n_acetylglucosami +h2o
-    udp_3_o_3r_3_hydroxytetradecanoyl_alpha_d_glucos
-  }
-
-  branch from acetate side right {
-    acetate
-    <-> . +n_demethyllincomycin_mercapturate +h2o
-    n_demethyllincomycin_s_cysteine_conjugate
-  }
-
-  branch from butan_1_ol side left {
-    butan_1_ol
-    <-> ec_3_1_1_3 [3.1.1.3] +butyl_dodecanoate +h2o +h
-    dodecanoate
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +alpha_lactose +aldehydo_d_galactose
-    beta_d_glucose
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +s_malate
-    fumarate
   }
 }

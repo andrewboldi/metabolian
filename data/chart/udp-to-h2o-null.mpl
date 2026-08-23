@@ -4,11 +4,11 @@
 # edit the generator, not this file.
 
 pathway udp-to-h2o-null "UDP to H2O" {
-  spacing 228
+  spacing 300
 
   spine at 0,0 {
     udp
-    <-> . +isovitexin_7_o_galactoside -isovitexin
+    <-> . +isovitexin_2_o_beta_d_glucosyl_7_o_galactoside +h -2_o_beta_d_glucosyl_isovitexin
     udp_alpha_d_galactose
     <-> ec_3_6_1_45 [3.6.1.45] +h2o -alpha_d_glucose_1_phosphate -h
     ump
@@ -18,73 +18,145 @@ pathway udp-to-h2o-null "UDP to H2O" {
 
   branch from udp_alpha_d_galactose side left {
     udp_alpha_d_galactose
-    <-> ec_2_4_1_90 [2.4.1.90] +udp +h +n_acetyllactosamine
-    aldehydo_n_acetyl_d_glucosamine
+    <-> ec_2_4_1_241 [2.4.1.241] +udp +1_16_0_2_18_2_digalactosyldiacylglycerol +h
+    1_9z_12z_octadecadienoyl_2_hexadecanoyl_3_beta_d
   }
 
   branch from udp_alpha_d_galactose side right {
     udp_alpha_d_galactose
-    <-> ec_2_4_1_74 [2.4.1.74] +udp +h +a_d_galactosylglycosaminoglycan
-    a_glycosaminoglycan
-  }
-
-  branch from isovitexin side left {
-    isovitexin
-    <-> . +udp +udp_alpha_d_glucose
-    7_o_d_glucosyl_isovitexin
-  }
-
-  branch from isovitexin side right {
-    isovitexin
-    <-> . +h +h2o
-    6c_glucosyl_2_hydroxynaringenin
+    <-> ec_2_4_1_241 [2.4.1.241] +udp +1_16_0_2_18_3_digalactosyldiacylglycerol +h
+    1_9z_12z_15z_octadecatrienoyl_2_hexadecanoyl_3_b
   }
 
   branch from alpha_d_glucose_1_phosphate side left {
     alpha_d_glucose_1_phosphate
-    <-> ec_5_4_2_2 [5.4.2.2]
-    beta_d_glucose_6_phosphate
+    <-> ec_3_1_3_10 [3.1.3.10] +phosphate +h2o
+    aldehydo_d_glucose
   }
 
   branch from alpha_d_glucose_1_phosphate side right {
     alpha_d_glucose_1_phosphate
-    <-> ec_2_4_1_1 [2.4.1.1] +maltopentaose +phosphate
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp
+    <-> ec_2_7_1_41 [2.7.1.41] +beta_d_glucose
+    alpha_d_glucose_1_6_bisphosphate
   }
 
   branch from h side left {
     h
-    <-> . +trans_2_methyl_4_carboxylatomethylenebut_2_en_1 +chloride
-    2_2_chloro_2_5_dihydro_4_methyl_5_oxofuryl_aceta
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +1_9z_octadecenoyl_sn_glycero_3_phosphocholine +phosphate +1_9z_octadecenoyl_sn_glycero_3_phosphocholine +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> ec_5_5_1_7 [5.5.1.7] +2_2_chloro_2_5_dihydro_4_methyl_5_oxofuryl_aceta
-    4_chloro_2_methyl_cis_cis_muconate
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_9z_12z_octadecadienoyl_sn_glycero_3_phosphocho
   }
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +2_o_beta_d_glucopyranosyl_tylosin +h
-    tylosin
+    <-> . +udp +aloin_a +h
+    aloe_emodin_anthrone
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +loganin +h
-    loganetin
+    <-> ec_2_4_1_360 [2.4.1.360] +udp +6c_glucosyl_2_hydroxynaringenin +h
+    2_4_4_6_tetrahydroxydibenzoylmethane
   }
 
   branch from h2o side left {
     h2o
-    <-> . +o_s_3r_19z_3_hydroxyoctatriacontenoylpantetheine
-    o_s_2e_19z_octatriacontadienoylpantetheine_4_pho
+    <-> . +7r_7_hydroxyluteothin
+    dehydrodeoxyaureothin
   }
 
   branch from h2o side right {
     h2o
-    <-> . +o_s_3r_11z_23z_3_hydroxydotetracontadienoylpante
-    o_s_2e_11z_23z_dotetracontatrienoylpantetheine_4
+    <-> . +prochaxamycin
+    3_demethylchaxamycin_b
+  }
+
+  branch from udp side left {
+    udp
+    <-> ec_2_4_1_241 [2.4.1.241] +1_18_3_2_16_0_digalactosyldiacylglycerol +h +udp_alpha_d_galactose
+    1_18_2_2_16_1_monogalactosyldiacylglycerol
+  }
+
+  branch from udp side right {
+    udp
+    <-> ec_2_4_1_241 [2.4.1.241] +h +udp_alpha_d_galactose +1_18_2_2_16_1_monogalactosyldiacylglycerol
+    1_16_0_2_18_3_digalactosyldiacylglycerol
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    pe_16_1_9z_0_0
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_oleoyl_sn_glycero_3_phosphoethanolamine
+  }
+
+  branch from udp_alpha_d_galactose side left {
+    udp_alpha_d_galactose
+    <-> ec_2_4_1_241 [2.4.1.241] +udp +1_18_3_2_16_0_digalactosyldiacylglycerol +h
+    1_18_1_2_16_2_monogalactosyldiacylglycerol
+  }
+
+  branch from udp_alpha_d_galactose side right {
+    udp_alpha_d_galactose
+    <-> . +udp +alpha_d_gal_1_3_beta_d_mannac_1_6_beta_d_galf_1 +h
+    beta_d_mannac_1_6_beta_d_galf_1_3_alpha_d_glcnac
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +naphthomycin_e
+    pronaphthomycin
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +salinisporamycin_a +2_6_8_trihydroxy_7_methylnaphthalene_1_4_dione
+    2z_4e_6s_7s_8r_9r_10r_10_1s_3s_4r_5s_1_4_dimeth
+  }
+
+  branch from alpha_d_glucose_1_phosphate side left {
+    alpha_d_glucose_1_phosphate
+    <-> .
+    beta_d_glucose_1_phosphate
+  }
+
+  branch from alpha_d_glucose_1_phosphate side right {
+    alpha_d_glucose_1_phosphate
+    <-> ec_2_4_1_389 [2.4.1.389] +d_glcp_1_3_d_galp +phosphate
+    aldehydo_d_galactose
+  }
+
+  branch from d_glucopyranose_1_phosphate side left {
+    d_glucopyranose_1_phosphate
+    <-> ec_3_1_3_1 [3.1.3.1] +aldehydo_d_glucose +h2o
+    phosphate
+  }
+
+  branch from d_glucopyranose_1_phosphate side right {
+    d_glucopyranose_1_phosphate
+    <-> ec_3_1_3_10 [3.1.3.10] +phosphate +h2o
+    glucose
+  }
+
+  branch from udp_alpha_d_glucose side left {
+    udp_alpha_d_glucose
+    <-> . +udp +c_glucosyl_2_hydroxyflavanone +h
+    dibenzoylmethane
+  }
+
+  branch from udp_alpha_d_glucose side right {
+    udp_alpha_d_glucose
+    <-> ec_2_4_1_293 [2.4.1.293] +udp +n_acetylgalactosaminyl_2_glucosyl_n_acetylgalac +h
+    n_acetylgalactosaminyl_5_n_n_diacetylbacillosam
   }
 }

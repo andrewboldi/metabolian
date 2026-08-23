@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-11z-icosenoylsphingos-to-n-15z-tetracosenoylsp "N-(11Z)-icosenoylsphingos… to N-(15Z)-tetracosenoylsphi…" {
-  spacing 242
+  spacing 302
 
   spine at 0,0 {
     n_11z_icosenoylsphingosine
@@ -38,87 +38,147 @@ pathway n-11z-icosenoylsphingos-to-n-15z-tetracosenoylsp "N-(11Z)-icosenoylsphin
     sphinganine
   }
 
-  branch from gondoate side right {
-    gondoate
-    <-> . +n_11z_icosenoylphytosphingosine +h2o
-    phytosphingosine
-  }
-
-  branch from 11z_eicosenoyl_coa side left {
+  branch from 11z_eicosenoyl_coa side right {
     11z_eicosenoyl_coa
     <-> . +nadh +acetyl_coa +9z_octadecenoyl_coa +h +h2o2 +o2 +nad +h2o
     coa
   }
 
-  branch from 11z_eicosenoyl_coa side right {
+  branch from 11z_eicosenoyl_coa side left {
     11z_eicosenoyl_coa
     <-> . +nadh +acetyl_coa +h +h2o2 +erucoyl_coa +coa +nad +h2o
     o2
   }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_127 [4.2.3.127] +fpp
-    copaene
-  }
-
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_129 [4.2.3.129] +fpp
-    sativene
+    <-> . +8_oxo_gtp +h2o +hplus
+    8_oxo_gmp
   }
 
-  branch from 13z_3_oxodocosenoyl_coa side left {
+  branch from ppi side left {
+    ppi
+    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +atp +coa +amp
+    5z_8z_11z_14z_17z_icosapentaenoyl_coa
+  }
+
+  branch from 13z_3_oxodocosenoyl_coa side right {
     13z_3_oxodocosenoyl_coa
     <-> . +nadh +h +nad
     3_s_hydroxy_13cis_docosenoyl_coa
   }
 
-  branch from 13z_3_oxodocosenoyl_coa side right {
+  branch from 13z_3_oxodocosenoyl_coa side left {
     13z_3_oxodocosenoyl_coa
     <-> . +11z_eicosenoyl_coa +coa
     acetyl_coa
   }
 
-  branch from 2e_13z_docosadienoyl_coa side left {
+  branch from 2e_13z_docosadienoyl_coa side right {
     2e_13z_docosadienoyl_coa
     <-> . +h2o
     3s_13z_3_hydroxydocosenoyl_coa
   }
 
-  branch from 2e_13z_docosadienoyl_coa side right {
+  branch from 2e_13z_docosadienoyl_coa side left {
     2e_13z_docosadienoyl_coa
-    <-> . +3_s_hydroxy_13cis_docosenoyl_coa
-    h2o
+    <-> . +erucoyl_coa +fad +h
+    fadh2
   }
 
-  branch from erucoyl_coa side left {
+  branch from erucoyl_coa side right {
     erucoyl_coa
     <-> . +phytosphingosine +coa +hplus
     n_13z_docosenoyl_phytosphingosine
   }
 
-  branch from erucoyl_coa side right {
+  branch from erucoyl_coa side left {
     erucoyl_coa
     <-> . +h2o +coa +hplus
     erucate
   }
 
-  branch from 15z_3_oxotetracosenoyl_coa side left {
+  branch from 15z_3_oxotetracosenoyl_coa side right {
     15z_3_oxotetracosenoyl_coa
     <-> . +nadh +h +nad
     3_s_hydroxy_cis_15_tetracosaenoyl_coa
   }
 
+  branch from 15z_tetracosenoyl_coa side left {
+    15z_tetracosenoyl_coa
+    <-> ec_2_3_1_199 [2.3.1.199] +malonyl_coa +h +coa +3_oxo_17z_hexacosenoyl_coa
+    co2
+  }
+
   branch from 15z_tetracosenoyl_coa side right {
     15z_tetracosenoyl_coa
-    <-> . +cholesterol +coa
-    cholest_5_en_3beta_yl_15z_tetracosenoate
+    <-> . +h2o +h +coa
+    15z_tetracosenoate
+  }
+
+  branch from 11z_eicosenoyl_coa side left {
+    11z_eicosenoyl_coa
+    <-> . +diphosphate +amp +atp +coa
+    11z_eicosenoate
+  }
+
+  branch from 11z_eicosenoyl_coa side right {
+    11z_eicosenoyl_coa
+    <-> . +r_carnitine +coa
+    eicosenoylcarnitine_9
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +l_histidine +gtp
+    n_5_guanosyl_phosphono_l_histidine_1
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +gtp +atp
+    3_2_cgamp
+  }
+
+  branch from malonyl-coa side left {
+    malonyl-coa
+    <-> . +lauroyl_coa +hplus +co2 +coa
+    4_hydroxy_6_undecylpyran_2_one
+  }
+
+  branch from malonyl-coa side right {
+    malonyl-coa
+    <-> . +palmitoyl_coa +hplus +co2 +coa
+    4_hydroxy_6_pentadecylpyran_2_one
+  }
+
+  branch from 2e_13z_docosadienoyl_coa side left {
+    2e_13z_docosadienoyl_coa
+    <-> . +erucoyl_coa +o2
+    h2o2
+  }
+
+  branch from erucoyl_coa side right {
+    erucoyl_coa
+    <-> . +h +adp +phosphate +h2o
+    atp
+  }
+
+  branch from erucoyl_coa side left {
+    erucoyl_coa
+    <-> . +diphosphate +amp +atp +coa
+    13z_docosenoate
+  }
+
+  branch from 15z_tetracosenoyl_coa side right {
+    15z_tetracosenoyl_coa
+    <-> ec_6_2_1_3 [6.2.1.3] +amp +15z_tetracosenoate +atp +coa
+    diphosphate
   }
 
   branch from 15z_tetracosenoyl_coa side left {
     15z_tetracosenoyl_coa
-    <-> ec_2_3_1_26 [2.3.1.26] +cholesterol +coa
-    15z_tetracosenoyl_cholesterol
+    <-> . +sn_glycerol_3_phosphate +coa
+    1_acylglycerol_3p_15_tetra
   }
 }

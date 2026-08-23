@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "queuosine-to-nicotinamide",
   "name": "queuosine to nicotinamide",
-  "category": "amino-acid-metabolism",
+  "category": "nucleotide-metabolism",
   "summary": "A 3-step route from queuosine to nicotinamide, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -118,53 +118,6 @@
       "charge": 1,
       "xrefs": {
         "chebi": "CHEBI:15378"
-      }
-    },
-    {
-      "id": "n6_capryl_l_lysine",
-      "name": "N6-capryl-L-lysine",
-      "formula": "C16H30N2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:143222"
-      }
-    },
-    {
-      "id": "2_o_decanoyl_adp_d_ribose",
-      "name": "2''-O-decanoyl-ADP-D-ribose",
-      "short": "2''-O-decanoyl-ADP-…",
-      "formula": "C25H39N5O15P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:189688"
-      }
-    },
-    {
-      "id": "l_lysinium",
-      "name": "L-lysinium",
-      "formula": "C6H13N2O",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:29969"
-      }
-    },
-    {
-      "id": "n6_hexanoyl_l_lysine",
-      "name": "N6-hexanoyl-L-lysine",
-      "formula": "C12H22N2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:189850"
-      }
-    },
-    {
-      "id": "2_o_hexanoyl_adp_d_ribose",
-      "name": "2''-O-hexanoyl-ADP-D-ribose",
-      "short": "2''-O-hexanoyl-ADP-…",
-      "formula": "C21H31N5O15P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:189844"
       }
     }
   ],
@@ -290,97 +243,247 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "N(6)-decanoyl-L-lysyl-[protein] + NAD(+) + H2O = 2''-O-decanoyl-ADP-D-ribose + nicotina...",
-      "equation": "N(6)-decanoyl-L-lysyl-[protein] + NAD(+) + H2O = 2''-O-decanoyl-ADP-D-ribose + nicotinamide + L-lysyl-[protein]",
-      "substrates": [
-        {
-          "metabolite": "n6_capryl_l_lysine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_o_decanoyl_adp_d_ribose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nicotinamide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_lysinium",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:70631"
+      "id": "xt_queuine_queuosine-5-phosphate-to-d-galactosyl-5-o-queu",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "queuine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "queuosine-5-phosphate-to-d-galactosyl-5-o-queu"
+      },
+      "note": "Shares queuine with queuosine 5'-phosphate to β-D-galactosyl-5''-O-queu….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:70631"
+            "db": "ChEBI",
+            "id": "CHEBI:17433"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "N(6)-hexanoyl-L-lysyl-[protein] + NAD(+) + H2O = 2''-O-hexanoyl-ADP-D-ribose + nicotina...",
-      "equation": "N(6)-hexanoyl-L-lysyl-[protein] + NAD(+) + H2O = 2''-O-hexanoyl-ADP-D-ribose + nicotinamide + L-lysyl-[protein]",
-      "substrates": [
-        {
-          "metabolite": "n6_hexanoyl_l_lysine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_o_hexanoyl_adp_d_ribose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nicotinamide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_lysinium",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:70639"
+      "id": "xt_queuine_quinine-to-5-hydroxyisouric-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "queuine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "quinine-to-5-hydroxyisouric-acid"
+      },
+      "note": "Shares queuine with quinine to 5-hydroxyisouric acid.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:70639"
+            "db": "ChEBI",
+            "id": "CHEBI:17433"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_queuosine_5_phosphate_1_7-ammoniomethyl-7-deazagu-to-d-mannosyl-4-o-queu",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "queuosine_5_phosphate_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-ammoniomethyl-7-deazagu-to-d-mannosyl-4-o-queu"
+      },
+      "note": "Shares queuosine 5'-phosphate(1−) with 7-ammoniomethyl-7-deazagu… to α-D-mannosyl-4''-O-queuos….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:194431"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_queuosine_5_phosphate_1_queuosine-5-phosphate-to-d-galactosyl-5-o-queu",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "queuosine_5_phosphate_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "queuosine-5-phosphate-to-d-galactosyl-5-o-queu"
+      },
+      "note": "Shares queuosine 5'-phosphate(1−) with queuosine 5'-phosphate to β-D-galactosyl-5''-O-queu….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:194431"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_queuosine_5_phosphate_1_quinine-to-5-hydroxyisouric-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "queuosine_5_phosphate_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "quinine-to-5-hydroxyisouric-acid"
+      },
+      "note": "Shares queuosine 5'-phosphate(1−) with quinine to 5-hydroxyisouric acid.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:194431"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_guanine_1-methyladenosine-to-5-amino-1-5-phosphonato",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "guanine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-methyladenosine-to-5-amino-1-5-phosphonato"
+      },
+      "note": "Shares Guanine with 1-methyladenosine to 5-amino-1-(5-phosphonato-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16235"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_guanine_6-acetyl-2-amino-3-7-8-9-to-l-glutamate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "guanine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-acetyl-2-amino-3-7-8-9-to-l-glutamate"
+      },
+      "note": "Shares Guanine with 6-acetyl-2-amino-3,7,8,9-… to L-glutamate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16235"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_guanine_7-ammoniomethyl-7-deazagu-to-d-mannosyl-4-o-queu",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "guanine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-ammoniomethyl-7-deazagu-to-d-mannosyl-4-o-queu"
+      },
+      "note": "Shares Guanine with 7-ammoniomethyl-7-deazagu… to α-D-mannosyl-4''-O-queuos….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16235"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_guanine_purine-salvage-pathway",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "guanine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "purine-salvage-pathway"
+      },
+      "note": "Shares Guanine with Purine salvage pathway.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16235"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_guanine_queuosine-5-phosphate-to-d-galactosyl-5-o-queu",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "guanine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "queuosine-5-phosphate-to-d-galactosyl-5-o-queu"
+      },
+      "note": "Shares Guanine with queuosine 5'-phosphate to β-D-galactosyl-5''-O-queu….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16235"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_guanine_quinine-to-5-hydroxyisouric-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "guanine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "quinine-to-5-hydroxyisouric-acid"
+      },
+      "note": "Shares Guanine with quinine to 5-hydroxyisouric acid.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16235"
           }
         ]
       }

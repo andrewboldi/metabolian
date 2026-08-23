@@ -184,71 +184,12 @@
       }
     },
     {
-      "id": "6_deoxo_28_norcastasterone",
-      "name": "6-deoxo-28-norcastasterone",
-      "short": "6-deoxo-28-norcasta…",
-      "formula": "C27H48O4",
-      "charge": 0,
+      "id": "hematin",
+      "name": "β-hematin",
+      "formula": "C68H60Fe2N8O8",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:188995"
-      }
-    },
-    {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:15379"
-      }
-    },
-    {
-      "id": "6_hydroxy_28_norcastasterone",
-      "name": "6α-hydroxy-28-norcastasterone",
-      "short": "6α-hydroxy-28-norca…",
-      "formula": "C27H48O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:188996"
-      }
-    },
-    {
-      "id": "28_norcastasterone",
-      "name": "28-norcastasterone",
-      "formula": "C27H46O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:188997"
-      }
-    },
-    {
-      "id": "4_amino_l_phenylalanine",
-      "name": "4-amino-L-phenylalanine",
-      "short": "4-amino-L-phenylala…",
-      "formula": "C9H12N2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:143072"
-      }
-    },
-    {
-      "id": "4_methylamino_l_phenylalanine",
-      "name": "4-methylamino-L-phenylalanine",
-      "short": "4-methylamino-L-phe…",
-      "formula": "C10H14N2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:176804"
-      }
-    },
-    {
-      "id": "4_dimethylamino_l_phenylalanine",
-      "name": "4-dimethylamino-L-phenylalanine",
-      "short": "4-dimethylamino-L-p…",
-      "formula": "C11H16N2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:176805"
+        "chebi": "CHEBI:55377"
       }
     }
   ],
@@ -265,6 +206,13 @@
       "name": "anaerobilin synthase",
       "ec": [
         "2.1.1.342"
+      ]
+    },
+    {
+      "id": "ec_4_99_1_8",
+      "name": "heme ligase",
+      "ec": [
+        "4.99.1.8"
       ]
     }
   ],
@@ -471,188 +419,127 @@
     },
     {
       "id": "r5",
-      "name": "6-deoxo-28-norcastasterone + reduced [NADPH--hemoprotein reductase] + O2 = 6alpha-hydro...",
-      "equation": "6-deoxo-28-norcastasterone + reduced [NADPH--hemoprotein reductase] + O2 = 6alpha-hydroxy-28-norcastasterone + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "heme ligase",
+      "equation": "2 Fe(III)-heme b = beta-hematin",
+      "ec": "4.99.1.8",
       "substrates": [
         {
-          "metabolite": "6_deoxo_28_norcastasterone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
+          "metabolite": "ferriheme_b",
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "6_hydroxy_28_norcastasterone",
+          "metabolite": "hematin",
           "stoichiometry": 1
-        },
+        }
+      ],
+      "catalysts": [
         {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
+          "enzyme": "ec_4_99_1_8"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:70151"
+        "rhea": "RHEA:53712"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:70151"
+            "id": "RHEA:53712"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_dinitrogen_oxide_dinitrogen-oxide-to-nitrate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dinitrogen_oxide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dinitrogen-oxide-to-nitrate"
+      },
+      "note": "Shares dinitrogen oxide with dinitrogen oxide to nitrate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17045"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "6alpha-hydroxy-28-norcastasterone + reduced [NADPH--hemoprotein reductase] + O2 = 28-no...",
-      "equation": "6alpha-hydroxy-28-norcastasterone + reduced [NADPH--hemoprotein reductase] + O2 = 28-norcastasterone + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "6_hydroxy_28_norcastasterone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "28_norcastasterone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:70155"
+      "id": "xt_dinitrogen_oxide_hydrazine-to-nitrate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dinitrogen_oxide"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "hydrazine-to-nitrate"
+      },
+      "note": "Shares dinitrogen oxide with hydrazine to nitrate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:70155"
+            "db": "ChEBI",
+            "id": "CHEBI:17045"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "4-amino-L-phenylalanine + S-adenosyl-L-methionine = 4-methylamino-L-phenylalanine + S-a...",
-      "equation": "4-amino-L-phenylalanine + S-adenosyl-L-methionine = 4-methylamino-L-phenylalanine + S-adenosyl-L-homocysteine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "4_amino_l_phenylalanine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "4_methylamino_l_phenylalanine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:67960"
+      "id": "xt_ferriheme_b_fe-coproporphyrin-iii-to-protoporphyrin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ferriheme_b"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "fe-coproporphyrin-iii-to-protoporphyrin"
+      },
+      "note": "Shares ferriheme b with Fe-coproporphyrin III to protoporphyrin.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:67960"
+            "db": "ChEBI",
+            "id": "CHEBI:55376"
           }
         ]
       }
     },
     {
-      "id": "r8",
-      "name": "4-methylamino-L-phenylalanine + S-adenosyl-L-methionine = 4-dimethylamino-L-phenylalani...",
-      "equation": "4-methylamino-L-phenylalanine + S-adenosyl-L-methionine = 4-dimethylamino-L-phenylalanine + S-adenosyl-L-homocysteine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "4_methylamino_l_phenylalanine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "4_dimethylamino_l_phenylalanine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "rhea": "RHEA:67964"
+      "id": "xt_ferriheme_b_hydrazine-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ferriheme_b"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "hydrazine-to-fmn"
+      },
+      "note": "Shares ferriheme b with hydrazine to FMN.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:67964"
+            "db": "ChEBI",
+            "id": "CHEBI:55376"
           }
         ]
       }

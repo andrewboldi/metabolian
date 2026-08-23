@@ -3,13 +3,13 @@
   "id": "nadh-to-3-hydroxyheptadecanoyl",
   "name": "NADH to 3-Hydroxyheptadecanoyl…",
   "category": "other",
-  "summary": "A 4-step route from NADH to 3-Hydroxyheptadecanoyl Coenzyme A, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "summary": "A 3-step route from NADH to 3-Hydroxyheptadecanoyl Coenzyme A, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
     "sources": [
       {
         "db": "MetaNetX",
-        "id": "MNXR158683"
+        "id": "MNXR99311"
       }
     ]
   },
@@ -42,12 +42,12 @@
       }
     },
     {
-      "id": "propanoyl_coa",
-      "name": "propanoyl-CoA",
-      "formula": "C24H36N7O17P3S",
+      "id": "pentadecanoyl_coa",
+      "name": "pentadecanoyl-CoA",
+      "formula": "C36H60N7O17P3S",
       "charge": -4,
       "xrefs": {
-        "metanetx": "MNXM1364266"
+        "chebi": "CHEBI:74309"
       }
     },
     {
@@ -60,13 +60,12 @@
       }
     },
     {
-      "id": "9z_heptadecenoyl_coa",
-      "name": "(9Z)-heptadecenoyl-CoA",
-      "short": "heptadecenoyl-CoA",
-      "formula": "C38H62N7O17P3S",
+      "id": "heptadecanoyl_coa",
+      "name": "heptadecanoyl-CoA",
+      "formula": "C38H64N7O17P3S",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:74308"
+        "chebi": "CHEBI:74307"
       }
     },
     {
@@ -103,42 +102,6 @@
       "charge": 0,
       "xrefs": {
         "metanetx": "WATER"
-      }
-    },
-    {
-      "id": "nadp",
-      "name": "NADP",
-      "formula": "C21H25N7O17P3",
-      "charge": -3,
-      "xrefs": {
-        "metanetx": "MNXM5"
-      }
-    },
-    {
-      "id": "heptadecanoyl_coa",
-      "name": "heptadecanoyl-CoA",
-      "formula": "C38H64N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:74307"
-      }
-    },
-    {
-      "id": "o2",
-      "name": "O2",
-      "formula": "O2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM735438"
-      }
-    },
-    {
-      "id": "nadph",
-      "name": "NADPH",
-      "formula": "C21H26N7O17P3",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM738702"
       }
     },
     {
@@ -193,81 +156,27 @@
   "reactions": [
     {
       "id": "r1",
-      "name": "Reaction MNXR158683",
+      "name": "Reaction MNXR99311",
       "substrates": [
         {
           "metabolite": "nadh",
-          "stoichiometry": 7
+          "stoichiometry": 1
         },
         {
           "metabolite": "acetyl_coa",
-          "stoichiometry": 7
+          "stoichiometry": 1
         },
         {
           "metabolite": "fadh2",
-          "stoichiometry": 6
+          "stoichiometry": 1
         },
         {
-          "metabolite": "propanoyl_coa",
+          "metabolite": "pentadecanoyl_coa",
           "stoichiometry": 1
         },
         {
           "metabolite": "h",
-          "stoichiometry": 19
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "9z_heptadecenoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fad",
-          "stoichiometry": 6
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 7
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 7
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 7
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 1,
-      "xrefs": {
-        "metanetx": "MNXR158683"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR158683"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r2",
-      "name": "Reaction MNXR158492",
-      "substrates": [
-        {
-          "metabolite": "9z_heptadecenoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
+          "stoichiometry": 3
         }
       ],
       "products": [
@@ -276,35 +185,39 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "h",
+          "metabolite": "fad",
           "stoichiometry": 1
         },
         {
-          "metabolite": "o2",
+          "metabolite": "coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadph",
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 2,
+      "pathwayStep": 1,
       "xrefs": {
-        "metanetx": "MNXR158492"
+        "metanetx": "MNXR99311"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR158492"
+            "id": "MNXR99311"
           }
         ]
       }
     },
     {
-      "id": "r3",
+      "id": "r2",
       "name": "heptadecanoyl-CoA + FAD + H(+) = trans-2-heptadecenoyl-CoA + FADH2",
       "equation": "heptadecanoyl-CoA + FAD + H(+) = trans-2-heptadecenoyl-CoA + FADH2",
       "substrates": [
@@ -332,7 +245,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 3,
+      "pathwayStep": 2,
       "xrefs": {
         "rhea": "RHEA:40863"
       },
@@ -347,7 +260,7 @@
       }
     },
     {
-      "id": "r4",
+      "id": "r3",
       "name": "Reaction MNXR158629",
       "substrates": [
         {
@@ -366,7 +279,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 3,
       "xrefs": {
         "metanetx": "MNXR158629"
       },
@@ -376,6 +289,272 @@
           {
             "db": "MetaNetX",
             "id": "MNXR158629"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_pentadecanoyl_coa_1-2-diheptadecanoyl-sn-gl-to-9z-12z-pentadecadie",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pentadecanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-diheptadecanoyl-sn-gl-to-9z-12z-pentadecadie"
+      },
+      "note": "Shares pentadecanoyl-CoA with 1,2-diheptadecanoyl-sn-gl… to (9Z,12Z)-pentadecadienoyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74309"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pentadecanoyl_coa_fadh2-to-1-oleoyl-2-pentadecanoyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pentadecanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fadh2-to-1-oleoyl-2-pentadecanoyl"
+      },
+      "note": "Shares pentadecanoyl-CoA with FADH2 to 1-oleoyl-2-pentadecanoyl-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74309"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pentadecanoyl_coa_formononetin-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pentadecanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "formononetin-to-coa"
+      },
+      "note": "Shares pentadecanoyl-CoA with formononetin to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74309"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pentadecanoyl_coa_pentadecanoate-to-3-hydroxypentadecanoyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pentadecanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "pentadecanoate-to-3-hydroxypentadecanoyl"
+      },
+      "note": "Shares pentadecanoyl-CoA with pentadecanoate to 3-Hydroxypentadecanoyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74309"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pentadecanoyl_coa_pentadecanoyl-coa-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pentadecanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "pentadecanoyl-coa-to-h2o"
+      },
+      "note": "Shares pentadecanoyl-CoA with pentadecanoyl-CoA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74309"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pentadecanoyl_coa_propanoate-to-h2o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pentadecanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "propanoate-to-h2o2"
+      },
+      "note": "Shares pentadecanoyl-CoA with propanoate to H2O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74309"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_heptadecanoyl_coa_2s-3r-3-hydroxybutane-1-to-menaquinol-7",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "heptadecanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2s-3r-3-hydroxybutane-1-to-menaquinol-7"
+      },
+      "note": "Shares heptadecanoyl-CoA with (2S,3R)-3-hydroxybutane-1… to menaquinol-7.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74307"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_heptadecanoyl_coa_9-hydroxyoctadecanoate-to-1-oleoyl-2-heptadecano",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "heptadecanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "9-hydroxyoctadecanoate-to-1-oleoyl-2-heptadecano"
+      },
+      "note": "Shares heptadecanoyl-CoA with 9-hydroxyoctadecanoate to 1-oleoyl-2-heptadecanoyl-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74307"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_heptadecanoyl_coa_formononetin-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "heptadecanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "formononetin-to-h2o"
+      },
+      "note": "Shares heptadecanoyl-CoA with formononetin to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74307"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_heptadecanoyl_coa_margarate-to-9z-12z-heptadecadienoyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "heptadecanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "margarate-to-9z-12z-heptadecadienoyl"
+      },
+      "note": "Shares heptadecanoyl-CoA with margarate to (9Z,12Z)-heptadecadienoyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74307"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_heptadecanoyl_coa_nadh-to-3-hydroxyheptadecanoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "heptadecanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-3-hydroxyheptadecanoyl-coa"
+      },
+      "note": "Shares heptadecanoyl-CoA with NADH to 3-hydroxyheptadecanoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74307"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_heptadecanoyl_coa_sn-glycero-3-phosphoethan-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "heptadecanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sn-glycero-3-phosphoethan-to-h2o"
+      },
+      "note": "Shares heptadecanoyl-CoA with sn-glycero-3-phosphoethan… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74307"
           }
         ]
       }

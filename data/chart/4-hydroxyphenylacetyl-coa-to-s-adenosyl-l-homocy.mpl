@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-hydroxyphenylacetyl-coa-to-s-adenosyl-l-homocy "4-hydroxyphenylacetyl-CoA to S-adenosyl-L-homocysteine" {
-  spacing 308
+  spacing 290
 
   spine at 0,0 {
     4_hydroxyphenylacetyl_coa
@@ -24,33 +24,15 @@ pathway 4-hydroxyphenylacetyl-coa-to-s-adenosyl-l-homocy "4-hydroxyphenylacetyl-
     tocotrienol
   }
 
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_188 [4.2.3.188] +all_trans_hexaprenyl_diphosphate
-    hexaprene
+  branch from 2_trans_6_trans_10_trans_geranylgeranyl_diphosph side right {
+    2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    <-> ec_5_5_1_14 [5.5.1.14]
+    5_9_10_labda_8_20_13_dien_15_yl_diphosphate
   }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_188 [4.2.3.188] +all_trans_heptaprenyl_diphosphate
-    heptaprene
-  }
-
-  branch from 2_3_dimethyl_6_geranylgeranyl_1_4_benzoquinol side right {
-    2_3_dimethyl_6_geranylgeranyl_1_4_benzoquinol
-    <-> ec_5_5_1_24 [5.5.1.24]
-    tocotrienol
-  }
-
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_316 [2.1.1.316] +7_demethylmitomycin_a +sam
-    mitomycin_a
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +cobalt_ii_factor_iii +sam +hplus
-    cobalt_ii_factor_iv
+  branch from 2_trans_6_trans_10_trans_geranylgeranyl_diphosph side left {
+    2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    <-> ec_5_5_1_15 [5.5.1.15]
+    terpentedienyl_diphosphate
   }
 }

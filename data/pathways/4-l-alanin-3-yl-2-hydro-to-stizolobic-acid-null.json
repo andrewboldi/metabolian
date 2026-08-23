@@ -1,0 +1,404 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "4-l-alanin-3-yl-2-hydro-to-stizolobic-acid-null",
+  "name": "4-(L-Alanin-3-yl)-2-hydro… to Stizolobic acid",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 4-(L-Alanin-3-yl)-2-hydroxy-cis,cis-muconate 6-semialdehyde to Stizolobic acid, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR195777"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "4_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem",
+      "name": "4-(L-Alanin-3-yl)-2-hydroxy-cis,cis-muconate 6-semialdehyde",
+      "short": "4-(L-Alanin-3-yl)-2…",
+      "formula": "C9H10NO6",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1368751"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "stizolobic_acid",
+      "name": "Stizolobic acid",
+      "formula": "C9H9NO6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:177665"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "4_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem",
+      "name": "4-(L-alanin-3-yl)-2-hydroxy-cis,cis-muconate 6-semialdehyde",
+      "short": "4-(L-alanin-3-yl)-2…",
+      "formula": "C9H10NO6",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1368750"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_13_11_29",
+      "name": "stizolobate synthase",
+      "ec": [
+        "1.13.11.29"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "stizolobate synthase",
+      "ec": "1.13.11.29",
+      "substrates": [
+        {
+          "metabolite": "4_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "stizolobic_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_29"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR195777"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR195777"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "stizolobate synthase",
+      "ec": "1.13.11.29",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "stizolobic_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_29"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR195774"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR195774"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "stizolobate synthase",
+      "ec": "1.13.11.29",
+      "substrates": [
+        {
+          "metabolite": "4_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "stizolobic_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_29"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR195776"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR195776"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_4_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem_2-descarboxy-betanidin-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-descarboxy-betanidin-to-h2o"
+      },
+      "note": "Shares 4-(L-Alanin-3-yl)-2-hydroxy-cis,cis-muconate 6-semialdehyde with 2-Descarboxy-betanidin to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368751"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem_2-descarboxy-betanidin-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-descarboxy-betanidin-to-h2o-null"
+      },
+      "note": "Shares 4-(L-Alanin-3-yl)-2-hydroxy-cis,cis-muconate 6-semialdehyde with 2-Descarboxy-betanidin to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368751"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem_4-l-alanin-3-yl-2-hydro-to-stizolobic-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-l-alanin-3-yl-2-hydro-to-stizolobic-acid"
+      },
+      "note": "Shares 4-(L-Alanin-3-yl)-2-hydroxy-cis,cis-muconate 6-semialdehyde with 4-(L-Alanin-3-yl)-2-hydro… to Stizolobic acid.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368751"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem_nadh-to-l-tyrosine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-l-tyrosine"
+      },
+      "note": "Shares 4-(L-Alanin-3-yl)-2-hydroxy-cis,cis-muconate 6-semialdehyde with NADH to L-tyrosine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368751"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem_nadh-to-l-tyrosine-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-l-tyrosine-null"
+      },
+      "note": "Shares 4-(L-Alanin-3-yl)-2-hydroxy-cis,cis-muconate 6-semialdehyde with NADH to L-tyrosine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368751"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_stizolobic_acid_4-l-alanin-3-yl-2-hydro-to-stizolobic-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "stizolobic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-l-alanin-3-yl-2-hydro-to-stizolobic-acid"
+      },
+      "note": "Shares Stizolobic acid with 4-(L-Alanin-3-yl)-2-hydro… to Stizolobic acid.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:177665"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_stizolobic_acid_nadh-to-l-tyrosine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "stizolobic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-l-tyrosine"
+      },
+      "note": "Shares Stizolobic acid with NADH to L-tyrosine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:177665"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_stizolobic_acid_nadh-to-l-tyrosine-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "stizolobic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-l-tyrosine-null"
+      },
+      "note": "Shares Stizolobic acid with NADH to L-tyrosine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:177665"
+          }
+        ]
+      }
+    }
+  ]
+}

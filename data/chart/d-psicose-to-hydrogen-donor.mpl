@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-psicose-to-hydrogen-donor "D-psicose to hydrogen donor" {
-  spacing 202
+  spacing 172
 
   spine at 0,0 {
     d_psicose
@@ -18,18 +18,6 @@ pathway d-psicose-to-hydrogen-donor "D-psicose to hydrogen donor" {
     5_dehydro_d_fructose
   }
 
-  branch from d_glucitol side left {
-    d_glucitol
-    <-> ec_1_1_3_40 [1.1.3.40] +o2 +h2o2
-    d_sorbopyranose
-  }
-
-  branch from d_glucitol side right {
-    d_glucitol
-    <-> . +o2 +h2o2
-    glucose
-  }
-
   branch from keto_l_sorbose side left {
     keto_l_sorbose
     <-> ec_1_1_1_14 [1.1.1.14] +nad +nadh +hplus
@@ -40,23 +28,5 @@ pathway d-psicose-to-hydrogen-donor "D-psicose to hydrogen donor" {
     keto_l_sorbose
     <-> ec_1_1_1_67 [1.1.1.67] +nadh +h +nad
     d_sorbitol
-  }
-
-  branch from 5_dehydro_d_fructose side left {
-    5_dehydro_d_fructose
-    <-> ec_1_1_1_124 [1.1.1.124] +nadp +nadph +hplus
-    d_fructofuranose
-  }
-
-  branch from hydrogen_donor side right {
-    hydrogen_donor
-    <-> . +dihydroalstonine +hydrogen_acceptor
-    alstonine
-  }
-
-  branch from hydrogen_donor side left {
-    hydrogen_donor
-    <-> . +dihydroserpentine +hydrogen_acceptor
-    serpentine
   }
 }

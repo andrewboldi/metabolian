@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway h-to-protochlorophyllide "H to protochlorophyllide" {
-  spacing 332
+  spacing 320
 
   spine at 0,0 {
     h
@@ -16,17 +16,5 @@ pathway h-to-protochlorophyllide "H to protochlorophyllide" {
     nadp
     <-> ec_1_3_1_75 [1.3.1.75] +h +nadph +2_4_divinyl_protochlorophyllide_a -nadp
     protochlorophyllide
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_4_2_1_9 [4.2.1.9] +2r_3r_2_3_dihydroxy_3_methylpentanoate
-    r_3_methyl_2_oxopentanoate
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    a_tetradecenoyl_coa_n_c14_1coa
   }
 }

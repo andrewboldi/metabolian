@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-2-acetamido-2-deoxy-to-udp-2-3-diacetamido-2 "UDP-2-acetamido-2-deoxy-α… to UDP-2,3-diacetamido-2,3-d…" {
-  spacing 340
+  spacing 338
 
   spine at 0,0 {
     udp_2_acetamido_2_deoxy_d_glucuronate
@@ -18,15 +18,9 @@ pathway udp-2-acetamido-2-deoxy-to-udp-2-3-diacetamido-2 "UDP-2-acetamido-2-deox
     udp_2_3_diacetamido_2_3_dideoxy_d_mannuronate
   }
 
-  branch from akg side left {
-    akg
-    <-> . +nadp +nadph +hplus
-    r_2_hydroxyglutarate
-  }
-
-  branch from akg side right {
-    akg
-    <-> . +pseudopaline +nadp +h2o +nadph +hplus
-    n_3s_3_amino_3_carboxypropyl_l_histidine_dizwitt
+  branch from udp_2_acetamido_2_deoxy_d_glucuronate side left {
+    udp_2_acetamido_2_deoxy_d_glucuronate
+    <-> ec_4_1_1_128 [4.1.1.128] +hplus +co2
+    udp_n_acetyl_d_xylosamine
   }
 }

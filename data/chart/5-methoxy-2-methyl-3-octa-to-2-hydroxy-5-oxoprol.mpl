@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-methoxy-2-methyl-3-octa-to-2-hydroxy-5-oxoprol "5-methoxy-2-methyl-3-octa… to 2-hydroxy-5-oxoprolinate" {
-  spacing 228
+  spacing 216
 
   spine at 0,0 {
     5_methoxy_2_methyl_3_octaprenylhydroquinone
@@ -14,17 +14,5 @@ pathway 5-methoxy-2-methyl-3-octa-to-2-hydroxy-5-oxoprol "5-methoxy-2-methyl-3-o
     2_oxoglutaramate
     <-> .
     2_hydroxy_5_oxoprolinate
-  }
-
-  branch from l_phenylalanine side left {
-    l_phenylalanine
-    <-> . +apelin_17 +h2o
-    apelin_16
-  }
-
-  branch from l_phenylalanine side right {
-    l_phenylalanine
-    <-> . +n_dha_l_phenylalanine +h2o
-    4z_7z_10z_13z_16z_19z_docosahexaenoate
   }
 }

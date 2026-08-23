@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-serine-to-2-5-didehydro-d-gluconate "D-serine to 2,5-didehydro-D-gluconate" {
-  spacing 326
+  spacing 320
 
   spine at 0,0 {
     dserine
@@ -14,11 +14,5 @@ pathway d-serine-to-2-5-didehydro-d-gluconate "D-serine to 2,5-didehydro-D-gluco
     2_dehydro_d_gluconate
     <-> ec_1_1_1_274 [1.1.1.274] +nadp -nadph -hplus
     2_5_didehydro_d_gluconate
-  }
-
-  branch from 2_dehydro_d_gluconate side left {
-    2_dehydro_d_gluconate
-    <-> . +fad +hplus +fadh2
-    d_gluconate
   }
 }

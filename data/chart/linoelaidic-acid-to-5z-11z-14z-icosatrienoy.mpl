@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway linoelaidic-acid-to-5z-11z-14z-icosatrienoy "linoelaidic acid to (5Z,11Z,14Z)-icosatrienoy…" {
-  spacing 224
+  spacing 152
 
   spine at 0,0 {
     linoelaidic_acid
@@ -15,15 +15,4 @@ pathway linoelaidic-acid-to-5z-11z-14z-icosatrienoy "linoelaidic acid to (5Z,11Z
     <-> ec_1_14_19_37 [1.14.19.37] +fe2 +o2 +hplus -iron -h2o
     5z_11z_14z_icosatrienoyl_coa
   }
-
-
-
-
-
-
-
-
-
-
-
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway erythromycin-b-to-h2o "erythromycin B to H2O" {
-  spacing 220
+  spacing 172
 
   spine at 0,0 {
     erythromycin_b
@@ -14,53 +14,5 @@ pathway erythromycin-b-to-h2o "erythromycin B to H2O" {
     h
     <-> ec_3_6_3_44 [3.6.3.44] +adp +1r_4r_4_r_5s_5_s_6r_6_s_7r_9r_11r_12r_13s_14s_1 +phosphate -1r_4r_4_r_5s_5_s_6r_6_s_7r_9r_11r_12r_13s_14s_1 -h2o
     atp
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +tetracenomycin_c +h +nadph
-    4_dehydro_tetracenomycin_c
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +h +2_4_6_trihydroxybenzophenone +o2 +nadph +h2o
-    2_3_4_6_tetrahydroxybenzophenone
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +r_3_hydroxypentanoyl_coa
-    2e_pentenoyl_coa
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    aerobactin
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_33 [3.6.3.33] +adp +phosphate +atp +h2o
-    cbl
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_1_26 [3.6.1.26] +cmp +1_2_didodecanoyl_sn_glycerol_3_phosphate +h2o
-    cdp_1_2_didodecanoylglycerol
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    s_carnitine
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    tetradecanoyl_coa
   }
 }

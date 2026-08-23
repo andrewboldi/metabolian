@@ -4,71 +4,15 @@
 # edit the generator, not this file.
 
 pathway c8-beta-glucuronosyl-bili-to-h2o "C8-beta-glucuronosyl-bili… to H2O" {
-  spacing 210
+  spacing 156
 
   spine at 0,0 {
     c8_beta_glucuronosyl_bilirubin_ix_alpha
-    <-> ec_2_4_1_17 [2.4.1.17] +udp_alpha_d_glucuronate -bilirubin_ixalpha_bis_beta_d_glucuronoside
-    udp
-    <-> ec_2_4_1_17 [2.4.1.17] +bilirubin_ixalpha_bis_beta_d_glucuronoside -4z_15z_bilirubin_ixalpha
+    <-> ec_2_4_1_17 [2.4.1.17] +udp -4z_15z_bilirubin_ixalpha
     udp_alpha_d_glucuronate
     <-> . +bilirubin_ixalpha_bis_beta_d_glucuronoside +4z_15z_bilirubin_ixalpha
     mono_glucosyluronic_acid_bilirubin
     <-> . +h +adp +phosphate -mono_glucosyluronic_acid_bilirubin -h2o
     atp
-  }
-
-  branch from udp side left {
-    udp
-    <-> . +2_hydroxy_atorvastatin_lactone_glucuronide +udp_alpha_d_glucuronate
-    2_hydroxy_atorvastatin_lactone_ortho_hydroxy_ato
-  }
-
-  branch from udp side right {
-    udp
-    <-> . +4_oh_midazolam_glucuronide +udp_alpha_d_glucuronate
-    4_hydroxymidazolam
-  }
-
-  branch from bilirubin_ixalpha_bis_beta_d_glucuronoside side left {
-    bilirubin_ixalpha_bis_beta_d_glucuronoside
-    <-> ec_2_4_1_17 [2.4.1.17] +udp +udp_alpha_d_glucuronate
-    4e_15e_bilirubin_ixalpha_c8_beta_d_glucuronosid
-  }
-
-  branch from udp_alpha_d_glucuronate side right {
-    udp_alpha_d_glucuronate
-    <-> . +udp +6_beta_oh_gliclazide_glucuronide
-    6_beta_oh_gliclazide
-  }
-
-  branch from udp_alpha_d_glucuronate side left {
-    udp_alpha_d_glucuronate
-    <-> . +udp +7_beta_oh_gliclazide_glucuronide
-    n_5_hydroxyhexahydrocyclopenta_c_pyrrol_2_1h_yl
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    6_beta_oh_gliclazide_glucuronide
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    6_exomethylene_lovastatin_acid_form
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +hexanoate +h +o2 +nadph +nadp
-    5_hydroxyhexanoic_acid
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +6_beta_oh_gliclazide +nadp +h +o2 +nadph
-    gliclazide
   }
 }

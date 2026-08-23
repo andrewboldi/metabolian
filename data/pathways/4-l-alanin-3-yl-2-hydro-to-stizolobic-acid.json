@@ -78,42 +78,6 @@
       "xrefs": {
         "metanetx": "MNXM8"
       }
-    },
-    {
-      "id": "h",
-      "name": "H",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM1"
-      }
-    },
-    {
-      "id": "decanedioate",
-      "name": "decanedioate",
-      "formula": "C10H16O4",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM730743"
-      }
-    },
-    {
-      "id": "10_hydroxycaprate",
-      "name": "10-hydroxycaprate",
-      "formula": "C10H19O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:11305"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "WATER"
-      }
     }
   ],
   "enzymes": [
@@ -257,49 +221,71 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "Reaction MNXR99381",
-      "substrates": [
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "decanedioate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "10_hydroxycaprate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR99381"
+      "id": "xt_4_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem_2-descarboxy-betanidin-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2-descarboxy-betanidin-to-h2o"
+      },
+      "note": "Shares 4-(L-Alanin-3-yl)-2-hydroxy-cis,cis-muconate 6-semialdehyde with 2-Descarboxy-betanidin to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR99381"
+            "id": "MNXM1368751"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem_nadh-to-l-tyrosine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-l-tyrosine"
+      },
+      "note": "Shares 4-(L-Alanin-3-yl)-2-hydroxy-cis,cis-muconate 6-semialdehyde with NADH to L-tyrosine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368751"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_stizolobic_acid_nadh-to-l-tyrosine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "stizolobic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-l-tyrosine"
+      },
+      "note": "Shares Stizolobic acid with NADH to L-tyrosine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:177665"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-galnac-1-3-d-gal-to-d-galactosyl-1-3-n-a "β-D-GalNAc-(1→3)-α-D-Gal-… to β-D-galactosyl-(1→3)-[N-a…" {
-  spacing 176
+  spacing 206
 
   spine at 0,0 {
     d_galnac_1_3_d_gal_1_3_l_fuc_1_2_d_gal_1_4_d_gl
@@ -32,13 +32,43 @@ pathway d-galnac-1-3-d-gal-to-d-galactosyl-1-3-n-a "β-D-GalNAc-(1→3)-α-D-Gal
 
   branch from d_galactopyranose side left {
     d_galactopyranose
-    <-> . +3_keto_beta_d_galactose +h +nadph
-    nadp
+    <-> . +h +adp +phosphate +h2o
+    atp
   }
 
   branch from d_galactopyranose side right {
     d_galactopyranose
-    <-> ec_3_2_1_159 [3.2.1.159] +3_6_anhydro_l_galactopyranose +h2o
-    neoagarobiose
+    <-> ec_3_2_1_22 [3.2.1.22] +3_beta_d_galactosyl_sn_glycerol +h2o
+    glycerol
+  }
+
+  branch from l_fucosyl_1_2_d_galactosyl_1_3_n_acetyl_d_gluco side left {
+    l_fucosyl_1_2_d_galactosyl_1_3_n_acetyl_d_gluco
+    <-> . +udp_d_galactose +udp +hplus
+    d_gal_1_3_l_fuc_1_2_d_gal_1_3_d_glcnac
+  }
+
+  branch from d_galactopyranose side right {
+    d_galactopyranose
+    <-> ec_3_2_1_23 [3.2.1.23] +glucose +h2o
+    beta_lactose
+  }
+
+  branch from d_galactopyranose side left {
+    d_galactopyranose
+    <-> ec_3_2_1_22 [3.2.1.22] +melibiose +h2o
+    2r_3r_4s_5s_6r_6_2s_3r_4s_5r_6r_3_4_5_trihydrox
+  }
+
+  branch from udpglcnac side right {
+    udpglcnac
+    <-> ec_2_4_1_146 [2.4.1.146] +o3_d_galactosyl_1_3_n_acetyl_d_glucosaminyl_1_6 +udp +hplus
+    o3_d_glcnac_1_3_d_gal_1_3_d_glcnac_1_6_d_galnac
+  }
+
+  branch from udpglcnac side left {
+    udpglcnac
+    <-> ec_2_4_1_146 [2.4.1.146] +o3_d_galactosyl_1_3_n_acetyl_d_glucosaminyl_1_6 +udp +hplus
+    o3_n_acetyl_d_glucosaminyl_1_3_d_galactosyl_1_3
   }
 }

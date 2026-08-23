@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway oxamate-to-2-deoxyribonucleoside "oxamate to 2'-deoxyribonucleoside…" {
-  spacing 288
+  spacing 282
 
   spine at 0,0 {
     oxamate
@@ -22,39 +22,33 @@ pathway oxamate-to-2-deoxyribonucleoside "oxamate to 2'-deoxyribonucleoside…" 
     2_deoxyribonucleoside_5_triphosphate
   }
 
-  branch from nh3 side left {
-    nh3
-    <-> . +serine +o2 +h2o +h2o2
-    3_hydroxypyruvate
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +palmitoleamide +h2o
-    palmitoleate
-  }
-
-  branch from 2_deoxyribonucleoside_5_triphosphate side left {
-    2_deoxyribonucleoside_5_triphosphate
-    <-> . +pyruvate +2_deoxyribonucleoside_5_diphosphate +hplus
-    phosphonatoenolpyruvate
-  }
-
-  branch from 2_deoxynucleoside_5_monophosphate side right {
+  branch from 2_deoxynucleoside_5_monophosphate side left {
     2_deoxynucleoside_5_monophosphate
     <-> . +dgtp +2_deoxyribonucleoside_5_diphosphate
     dgdp
   }
 
+  branch from ppi side right {
+    ppi
+    <-> . +atp
+    cyclic_a_3_5_pa_3_5_pa_3_5_p
+  }
+
   branch from ppi side left {
     ppi
-    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
-    syn_copalol
+    <-> . +didemethylasterriquinone_d +dmapp
+    asterriquinone_c1
   }
 
   branch from ppi side right {
     ppi
-    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
-    13s_vitexifolin_a
+    <-> . +harmol +dmapp
+    6_3_dimethylallyl_harmol
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +3s_3_1h_indol_3_ylmethyl_3h_1_4_benzodiazepine +dmapp
+    2r_3s_11s_aszonalenin
   }
 }

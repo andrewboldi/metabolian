@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway kaempferol-3-o-3-o-4-co-to-coa "kaempferol 3-O-(3″-O-4-co… to CoA" {
-  spacing 194
+  spacing 224
 
   spine at 0,0 {
     kaempferol_3_o_3_o_4_coumaroyl_glucoside
@@ -16,45 +16,14 @@ pathway kaempferol-3-o-3-o-4-co-to-coa "kaempferol 3-O-(3″-O-4-co… to CoA" {
     kaempferol_3_o_3_6_o_di_4_coumaroyl_glucoside
   }
 
-  branch from trans_4_coumaroyl_coa side left {
-    trans_4_coumaroyl_coa
-    <-> ec_1_3_1_117 [1.3.1.117] +nadp +nadph +hplus
-    dihydro_4_coumaroyl_coa
-  }
 
-  branch from trans_4_coumaroyl_coa side right {
-    trans_4_coumaroyl_coa
-    <-> . +myricetin_3_o_d_glucosyl_1_2_l_rhamnoside +coa +hplus
-    myricetin_3_o_6_o_trans_4_coumaroyl_d_glucosyl_1
-  }
 
-  branch from h side left {
-    h
-    <-> . +co2 +c33_phthiodiolenone_a
-    c34_carboxyphthiodiolenone
-  }
 
-  branch from h side right {
-    h
-    <-> . +co2 +c31_phthiodiolenone_a
-    c32_carboxyphthiodiolenone
-  }
 
-  branch from tribuloside side left {
-    tribuloside
-    <-> . +coa +trans_4_coumaroyl_coa
-    kaempferol_3_o_4_6_o_di_4_coumaroyl_glucoside
-  }
 
-  branch from coa side right {
-    coa
-    <-> . +acetyl_coa +11z_tetradecenol
-    11z_tetradecenyl_acetate
-  }
 
-  branch from coa side left {
-    coa
-    <-> . +acetyl_coa +9z_tetradecen_1_ol
-    9z_tetradecenyl_acetate
-  }
+
+
+
+
 }

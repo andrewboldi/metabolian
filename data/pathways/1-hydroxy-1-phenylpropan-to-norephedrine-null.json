@@ -1,0 +1,376 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1-hydroxy-1-phenylpropan-to-norephedrine-null",
+  "name": "1-hydroxy-1-phenylpropan-… to (+)-norephedrine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from 1-hydroxy-1-phenylpropan-2-one to (+)-norephedrine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR193219"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:149767"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1_hydroxy_1_phenylpropan_2_one",
+      "name": "1-hydroxy-1-phenylpropan-2-one",
+      "short": "1-hydroxy-1-phenylp…",
+      "formula": "C9H10O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:149767"
+      }
+    },
+    {
+      "id": "methylamine",
+      "name": "methylamine",
+      "formula": "CH6N",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM255"
+      }
+    },
+    {
+      "id": "r_2_methylimino_1_phenylpropan_1_ol",
+      "name": "(R)-2-Methylimino-1-phenylpropan-1-ol",
+      "short": "2-Methylimino-1-phe…",
+      "formula": "C10H13NO",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1369277"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "1r_2s_ephedrine",
+      "name": "(1R,2S)-ephedrine",
+      "formula": "C10H16NO",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM2881"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "s_adenosyl_l_homocysteine",
+      "name": "S-adenosyl-L-homocysteine",
+      "short": "S-adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1102167"
+      }
+    },
+    {
+      "id": "s_adenosyl_l_methionine",
+      "name": "S-adenosyl-L-methionine",
+      "short": "S-adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1363767"
+      }
+    },
+    {
+      "id": "norephedrine",
+      "name": "(+)-norephedrine",
+      "formula": "C9H13NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:36"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_5_1_18",
+      "name": "(-)-ephedrine dehydrogenase",
+      "ec": [
+        "1.5.1.18"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR193219",
+      "substrates": [
+        {
+          "metabolite": "1_hydroxy_1_phenylpropan_2_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methylamine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_2_methylimino_1_phenylpropan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR193219"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR193219"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(-)-ephedrine dehydrogenase",
+      "ec": "1.5.1.18",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "r_2_methylimino_1_phenylpropan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1r_2s_ephedrine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_5_1_18"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR195727"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR195727"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR150281",
+      "substrates": [
+        {
+          "metabolite": "s_adenosyl_l_homocysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1r_2s_ephedrine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_adenosyl_l_methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "norephedrine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR150281"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR150281"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_1_hydroxy_1_phenylpropan_2_one_1-hydroxy-1-phenylpropan-to-norephedrine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_hydroxy_1_phenylpropan_2_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-hydroxy-1-phenylpropan-to-norephedrine"
+      },
+      "note": "Shares 1-hydroxy-1-phenylpropan-2-one with 1-hydroxy-1-phenylpropan-… to (+)-norephedrine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:149767"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_2_methylimino_1_phenylpropan_1_ol_1-hydroxy-1-phenylpropan-to-norephedrine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_2_methylimino_1_phenylpropan_1_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-hydroxy-1-phenylpropan-to-norephedrine"
+      },
+      "note": "Shares (R)-2-Methylimino-1-phenylpropan-1-ol with 1-hydroxy-1-phenylpropan-… to (+)-norephedrine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1369277"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1r_2s_ephedrine_1-hydroxy-1-phenylpropan-to-norephedrine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1r_2s_ephedrine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-hydroxy-1-phenylpropan-to-norephedrine"
+      },
+      "note": "Shares (1R,2S)-ephedrine with 1-hydroxy-1-phenylpropan-… to (+)-norephedrine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2881"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1r_2s_ephedrine_s-adenosyl-l-homocysteine-to-l-xylo-hex-2-ulono",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1r_2s_ephedrine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-l-xylo-hex-2-ulono"
+      },
+      "note": "Shares (1R,2S)-ephedrine with S-adenosyl-L-homocysteine to L-xylo-hex-2-ulono-1,4-la….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2881"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_norephedrine_1-hydroxy-1-phenylpropan-to-norephedrine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "norephedrine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-hydroxy-1-phenylpropan-to-norephedrine"
+      },
+      "note": "Shares (+)-norephedrine with 1-hydroxy-1-phenylpropan-… to (+)-norephedrine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:36"
+          }
+        ]
+      }
+    }
+  ]
+}

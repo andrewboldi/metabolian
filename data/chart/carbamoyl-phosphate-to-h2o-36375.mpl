@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway carbamoyl-phosphate-to-h2o-36375 "carbamoyl phosphate to H2O" {
-  spacing 158
+  spacing 152
 
   spine at 0,0 {
     carbamoyl_p
@@ -14,11 +14,5 @@ pathway carbamoyl-phosphate-to-h2o-36375 "carbamoyl phosphate to H2O" {
     nebramycin_5
     <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate -nebramycin_5 -h2o
     atp
-  }
-
-  branch from carbamoyl_adenylate side left {
-    carbamoyl_adenylate
-    <-> . +l_cysteinate_group +amp +hplus
-    c_terminal_s_carbamoyl_l_cysteinate
   }
 }

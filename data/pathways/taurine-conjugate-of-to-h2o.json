@@ -1,0 +1,310 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "taurine-conjugate-of-to-h2o",
+  "name": "Taurine conjugate of… to H2O",
+  "category": "other",
+  "summary": "A 3-step route from Taurine conjugate of S-ibuprofen to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR205820"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "taurine_conjugate_of_s_ibuprofen",
+      "name": "Taurine conjugate of S-ibuprofen",
+      "short": "Taurine conjugate…",
+      "formula": "C15H22NO4S",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1094242"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "ibuprofen_coa_s_form",
+      "name": "ibuprofen-CoA-S form",
+      "formula": "C34H48N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1560627"
+      }
+    },
+    {
+      "id": "taurine",
+      "name": "taurine",
+      "formula": "C2H7NO3S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM282"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "ibuprofen",
+      "name": "ibuprofen",
+      "formula": "C13H18O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM724821"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR205820",
+      "substrates": [
+        {
+          "metabolite": "taurine_conjugate_of_s_ibuprofen",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ibuprofen_coa_s_form",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "taurine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR205820"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR205820"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR205819",
+      "substrates": [
+        {
+          "metabolite": "ibuprofen_coa_s_form",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ibuprofen",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR205819"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR205819"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR205824",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ibuprofen",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ibuprofen",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR205824"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR205824"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_ibuprofen_compound-0048591-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ibuprofen"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "compound-0048591-to-h2o"
+      },
+      "note": "Shares ibuprofen with compound 0048591 to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM724821"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ibuprofen_diphosphate-to-phosphate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ibuprofen"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-phosphate-null"
+      },
+      "note": "Shares ibuprofen with diphosphate to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM724821"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ibuprofen_udp-to-triiodothyronine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ibuprofen"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-triiodothyronine"
+      },
+      "note": "Shares ibuprofen with UDP to triiodothyronine….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM724821"
+          }
+        ]
+      }
+    }
+  ]
+}

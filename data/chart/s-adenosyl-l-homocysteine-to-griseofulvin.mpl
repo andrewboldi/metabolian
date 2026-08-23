@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-adenosyl-l-homocysteine-to-griseofulvin "S-adenosyl-L-homocysteine to griseofulvin" {
-  spacing 230
+  spacing 284
 
   spine at 0,0 {
     s_adenosyl_l_homocysteine
@@ -21,6 +21,15 @@ pathway s-adenosyl-l-homocysteine-to-griseofulvin "S-adenosyl-L-homocysteine to 
     <-> . +nadph +hplus -nadp
     griseofulvin
   }
+
+
+
+
+
+
+
+
+
 
 
 

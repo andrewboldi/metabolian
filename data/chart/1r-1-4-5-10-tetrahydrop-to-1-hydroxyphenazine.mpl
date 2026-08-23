@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1r-1-4-5-10-tetrahydrop-to-1-hydroxyphenazine "(1R)-1,4,5,10-tetrahydrop… to 1-hydroxyphenazine" {
-  spacing 264
+  spacing 252
 
   spine at 0,0 {
     1r_1_4_5_10_tetrahydrophenazine_1_carboxylate
@@ -14,17 +14,5 @@ pathway 1r-1-4-5-10-tetrahydrop-to-1-hydroxyphenazine "(1R)-1,4,5,10-tetrahydrop
     phenazine_1_carboxylate
     <-> ec_1_14_13_218 [1.14.13.218] +nadh +o2 +hplus -co2 -nad -h2o
     1_hydroxyphenazine
-  }
-
-  branch from h2o2 side left {
-    h2o2
-    <-> ec_1_11_1_7 [1.11.1.7] +uncyclized_xanthommatin +h2o
-    3_hydroxy_l_kynurenine
-  }
-
-  branch from h2o2 side right {
-    h2o2
-    <-> . +trimethylarsine +h2o
-    trimethylarsine_oxide
   }
 }

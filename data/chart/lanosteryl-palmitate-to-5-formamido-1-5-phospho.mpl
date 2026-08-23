@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway lanosteryl-palmitate-to-5-formamido-1-5-phospho "lanosteryl palmitate to 5-formamido-1-(5-phospho-…" {
-  spacing 326
+  spacing 340
 
   spine at 0,0 {
     lanosteryl_palmitate
@@ -18,43 +18,73 @@ pathway lanosteryl-palmitate-to-5-formamido-1-5-phospho "lanosteryl palmitate to
 
   branch from lanosterol side left {
     lanosterol
-    <-> . +sam +sah +hplus
-    eburicol
-  }
-
-  branch from lanosterol side right {
-    lanosterol
     <-> . +fmnh2 +o2 +fmn +h2o +hplus
     32_hydroxylanosterol
   }
 
-  branch from palmitate side left {
-    palmitate
-    <-> . +1_oleoyl_2_palmitoyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_o_oleoyl_sn_glycero_3_phosphocholine
-  }
-
   branch from palmitate side right {
     palmitate
-    <-> . +1_monopalmitoylglycerol +h2o +hplus
-    glycerol
+    <-> . +9z_12z_octadecadien_1_ol +1_palmitoylglycerone_3_phosphate +hplus
+    1_9z_12z_octadecadienylglycerone_3_phosphate
   }
 
-  branch from ffmas side left {
+  branch from palmitate side left {
+    palmitate
+    <-> . +9z_12z_15z_octadecatrien_1_ol +1_palmitoylglycerone_3_phosphate +hplus
+    1_9z_12z_15z_octadecatrienylglycerone_3_phosphat
+  }
+
+  branch from ffmas side right {
     ffmas
     <-> ec_1_3_1_70 [1.3.1.70] +nadp +nadph +hplus
     tmas
   }
 
+  branch from fmn side left {
+    fmn
+    <-> . +thromboxane_a2 +fmnh2 +o2 +h2o +hplus
+    18_hydroxythromboxane_a2
+  }
+
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_26 [1.14.14.26] +24s_24_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
-    24s_7_24_dihydroxycholesterol
+    <-> . +carbocyclic_thromboxane_a2 +fmnh2 +o2 +h2o +hplus
+    19_hydroxycarbocyclic_thromboxane_a2
+  }
+
+  branch from palmitate side left {
+    palmitate
+    <-> . +1_palmitoylglycerone_3_phosphate +linoleate
+    1_linoleoylglycerone_3_phosphate
+  }
+
+  branch from palmitate side right {
+    palmitate
+    <-> . +1_palmitoylglycerone_3_phosphate +arachidonate
+    1_arachidonoylglycerone_3_phosphate
+  }
+
+  branch from fmnh2 side left {
+    fmnh2
+    <-> . +carbocyclic_thromboxane_a2 +o2 +fmn +h2o +hplus
+    18_hydroxycarbocyclic_thromboxane_a2
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> ec_1_14_14_48 [1.14.14.48] +n_jasmonyl_l_amino_acid_anion +o2 +fmn +h2o +hplus
+    n_12_hydroxyjasmonyl_l_amino_acid_anion
   }
 
   branch from fmn side left {
     fmn
-    <-> . +cholesterol +fmnh2 +o2 +h2o +hplus
-    4_hydroxycholesterol
+    <-> ec_1_14_14_49 [1.14.14.49] +n_12_hydroxyjasmonyl_l_amino_acid_anion +fmnh2 +o2 +h2o +hplus
+    n_12_hydroxy_12_oxojasmonyl_l_amino_acid_dianion
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +n_12_hydroxyjasmonyl_l_amino_acid_anion +fmnh2 +o2 +h2o +hplus
+    n_12_oxojasmonyl_l_amino_acid_anion
   }
 }

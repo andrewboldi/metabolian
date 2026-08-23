@@ -28,18 +28,6 @@ pathway d-tagatofuranose-to-l-serine "D-tagatofuranose… to L-serine" {
     d_tagatopyranose_1_phosphate
   }
 
-  branch from g3p side right {
-    g3p
-    <-> ec_4_2_3_153 [4.2.3.153] +pi +h2o
-    4_phosphooxymethyl_2_furancarboxaldehyde
-  }
-
-  branch from g3p side left {
-    g3p
-    <-> ec_1_2_1_107 [1.2.1.107] +arsenate +nad +nadh +hplus
-    1_arsono_3_phospho_d_glycerate
-  }
-
   branch from dhap side right {
     dhap
     <-> . +fad +hplus +fadh2
@@ -104,5 +92,41 @@ pathway d-tagatofuranose-to-l-serine "D-tagatofuranose… to L-serine" {
     l_serine
     <-> ec_3_2_1_97 [3.2.1.97] +o3_d_galactosyl_1_3_n_acetyl_d_galactosaminyl_l +h2o
     d_galp_1_3_d_galpnac
+  }
+
+  branch from g1p side left {
+    g1p
+    <-> ec_2_4_1_20 [2.4.1.20] +cellobiose +pi
+    glucose
+  }
+
+  branch from g1p side right {
+    g1p
+    <-> ec_2_4_1_139 [2.4.1.139] +h2o +pi
+    maltose
+  }
+
+  branch from pg3 side left {
+    pg3
+    <-> ec_2_4_1_266 [2.4.1.266] +adp_d_glucoside +adp +hplus
+    2_o_d_glucopyranosyl_3_o_phosphonato_d_glycerate
+  }
+
+  branch from pg3 side right {
+    pg3
+    <-> ec_2_4_1_266 [2.4.1.266] +2_o_d_glucopyranosyl_3_o_phosphonato_d_glycerate +udp +hplus
+    udp_d_glucose
+  }
+
+  branch from l_serine side left {
+    l_serine
+    <-> ec_2_7_7_66 [2.7.7.66] +2_5_triphosphoribosyl_3_dephospho_coa +ppi
+    o_2_5_phosphoribosyl_3_dephospho_coa_l_serine_3
+  }
+
+  branch from l_serine side right {
+    l_serine
+    <-> . +acetyl_coa +adenosine_3_5_bismonophosphate +hplus
+    acetyl-acp
   }
 }

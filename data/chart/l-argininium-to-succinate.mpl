@@ -4,14 +4,14 @@
 # edit the generator, not this file.
 
 pathway l-argininium-to-succinate "L-argininium to succinate" {
-  spacing 232
+  spacing 236
 
   spine at 0,0 {
     l_argininium
-    <-> ec_2_1_1_320 [2.1.1.320] +sam -sah -hplus
-    n_n_dimethyl_l_arginine_1
-    <-> . +akg +o2 -formaldehyde -succinate -co2
+    <-> ec_2_1_1_321 [2.1.1.321] +sam -sah -hplus
     n_methyl_argininium_1
+    <-> . +sam -sah -hplus
+    n_n_dimethyl_l_arginine_1
     <-> . +akg +o2 -formaldehyde -succinate -co2
     l_argininium
   }

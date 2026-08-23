@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-hydroxy-7-ethoxycoumarin-to-o2 "3-Hydroxy-7-ethoxycoumarin to O2" {
-  spacing 232
+  spacing 316
 
   spine at 0,0 {
     3_hydroxy_7_ethoxycoumarin
@@ -18,73 +18,157 @@ pathway 3-hydroxy-7-ethoxycoumarin-to-o2 "3-Hydroxy-7-ethoxycoumarin to O2" {
 
   branch from h side left {
     h
-    <-> ec_3_5_2_6 [3.5.2.6] +3_hydroxybenzoate +phenylacetylglycine +h2o
-    3_phenylacetyl_glycyl_oxybenzoic_acid
+    <-> ec_3_1_4_12 [3.1.4.12] +1_monopalmitoylglycerol +phosphocholine +h2o
+    1_palmitoylglycerophosphocholine
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_2 [1.1.1.2] +1_acenaphthalenol +nadp +nadph
-    1_ketoacenaphthalene
+    <-> . +5z_9e_14z_8xi_11r_12s_11_12_epoxy_8_hydroxyicos
+    12s_hydroperoxy_5z_8z_10e_14z_eicosatetraenoate
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_4_3_21 [1.4.3.21] +compound_0066903 +nh4 +h2o2 +h +h2o
-    4_methoxyphenylethylamine
+    <-> ec_1_13_99_1 [1.13.99.1] +myo_inositol +h +h2o
+    aldehydo_d_glucuronate
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_7_3_1 [1.7.3.1] +butanal +nitrite +h +h2o2 +h2o
-    1_nitrobutane
+    <-> ec_1_13_11_90 [1.13.11.90] +1r_1_hydroxy_2_trimethylamino_ethyl_phosphonate +h +phosphate
+    glycine_betaine
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_2 [1.1.1.2] +d_ribose +h +nadp
-    ribitol
+    <-> . +malonyl_coa +methylmalonyl_coa +h +nadp +coa +protomycinolide_iv +h2o
+    co2
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_184 [1.1.1.184] +h +3_nitrobenzaldehyde +nadp
-    3_nitrobenzyl_alcohol
+    <-> . +acetyl_coa +malonyl_coa +h +co2 +nadp +coa +h2o
+    7_methylmellein
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_184 [1.1.1.184] +o_nitrobenzyl_alcohol +h +nadph
-    2_nitrobenzaldehyde
+    <-> ec_1_14_13_122 [1.14.13.122] +chlorophyllide_b2 +h2o +h +o2 +nadph
+    chlorophyllide_a2
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_2 [1.1.1.2] +h +nadph +3_chlorobenzaldehyde
-    3_chlorophenyl_methanol
+    <-> . +h2o +h +chlorophyllide_a2 +o2 +nadph
+    71_hydroxychlorophyllide_a2
   }
 
   branch from acetaldehyde side left {
     acetaldehyde
-    <-> . +actn +co2 +h
-    pyruvate
+    <-> . +4_hydroxy_5_methyl_3_furanone +h2o
+    2e_2_ethylidene_4_hydroxy_5_methyl_3_2h_furanon
   }
 
   branch from acetaldehyde side right {
     acetaldehyde
-    <-> .
-    actn
+    <-> . +2e_2_ethylidene_4_hydroxy_5_methyl_3_2h_furanon +h2o
+    4_hydroxy_5_methyl_3_2h_furanone
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_14_18_1 [1.14.18.1] +4_bromocatechol +h2o2
-    4_bromophenol
+    <-> . +2_4_dinitrocyclohexan_1_one
+    4_6_dinitrohexanoate
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_7_1_3 [3.7.1.3] +l_alanine +h +benzoate
-    betamipron
+    <-> . +2_heptyl_4_quinolone
+    1_2_aminophenyl_decane_1_3_dione
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +71_hydroxychlorophyllide_a2 +h +o2 +nadph +h2o
+    71_dihydroxychlorophyllide_a2
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +cdp_4_dehydro_6_deoxy_alpha_d_gulose +h +nadph
+    cdp_6_deoxy_alpha_d_gulose
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +acetyl_coa +malonyl_coa +h +co2 +coa
+    3_5_7_9_11_13_15_17_19_nonaoxoicosanoate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_4_2_1_79 [4.2.1.79] +2r_3s_2_methylcitrate
+    2_methyl_cis_aconitate
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_3_1_51 [2.3.1.51] +pa_16_0_18_1_11z +coa +1_hexadecanoyl_sn_glycero_3_phosphate
+    11z_octadecenoyl_coa
+  }
+
+  branch from h side right {
+    h
+    <-> ec_5_4_99_3 [5.4.99.3] +3_hydroxy_3_methyl_2_oxopentanoic_acid
+    s_2_ethyl_2_hydroxy_3_oxobutanoate
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_13_11_66 [1.13.11.66] +2z_4e_4_hydroxy_6_methoxy_6_oxohexa_2_4_dienoat +h
+    2_methoxyhydroquinone
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_7_1_1_7 [7.1.1.7] +menaquinol_9 +menaquinone_9 +h2o
+    pmf
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +tomatid_5_en_3_one +h +nadp
+    dehydrotomatidine
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +3r_3_n5_dihydroxy_l_glutamine +nadp +h2o +h +o2
+    3r_3_hydroxy_l_glutamine
+  }
+
+  branch from acetaldehyde side left {
+    acetaldehyde
+    <-> . +fmnh2 +h +ethane_1_sulfonate +o2 +sulfite +h2o
+    fmn
+  }
+
+  branch from acetaldehyde side right {
+    acetaldehyde
+    <-> . +prefumagillin +o2
+    prefumagillin_aldehyde
+  }
+
+  branch from nitrite side left {
+    nitrite
+    <-> . +2_4_dinitrophenol_hydride_sigma_complex
+    2_4_6_trinitrophenol_dihydride_meisenheimer_comp
+  }
+
+  branch from nitrite side right {
+    nitrite
+    <-> ec_1_7_5_1 [1.7.5.1] +pmf +menaquinone_9 +h2o +pmf +nitrate
+    menaquinol_9
   }
 }

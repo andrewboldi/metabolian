@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-oxoorientin-to-luteolin-7-o-d-glucos "3''-oxoorientin to luteolin 7-O-[(β-D-glucos…" {
-  spacing 296
+  spacing 302
 
   spine at 0,0 {
     3_oxoorientin
@@ -18,15 +18,21 @@ pathway 3-oxoorientin-to-luteolin-7-o-d-glucos "3''-oxoorientin to luteolin 7-O-
     luteolin_7_o_d_glucosyluronate_1_2_d_glucosiduro
   }
 
-  branch from luteolin_7_olate side left {
-    luteolin_7_olate
-    <-> . +sam +sah +hplus
-    luteolin_5_olate_7_methyl_ether
+  branch from 3_oxoorientin side left {
+    3_oxoorientin
+    <-> ec_1_1_3_50 [1.1.3.50] +h +h2o2 +orientin
+    o2
   }
 
-  branch from luteolin_7_olate side right {
-    luteolin_7_olate
-    <-> . +udp_d_glucose +udp +hplus
-    isoorientin
+  branch from udp_d_glucuronate side right {
+    udp_d_glucuronate
+    <-> . +estriol +udp +hplus
+    estriol_16_o_d_glucuronide
+  }
+
+  branch from udp_d_glucuronate side left {
+    udp_d_glucuronate
+    <-> . +epitestosterone +udp +hplus
+    epitestosterone_17_o_d_glucuronide
   }
 }

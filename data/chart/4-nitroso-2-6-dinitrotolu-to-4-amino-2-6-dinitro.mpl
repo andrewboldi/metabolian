@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-nitroso-2-6-dinitrotolu-to-4-amino-2-6-dinitro "4-nitroso-2,6-dinitrotolu… to 4-amino-2,6-dinitrotoluen…" {
-  spacing 182
+  spacing 242
 
   spine at 0,0 {
     4_nitroso_2_6_dinitrotoluene
@@ -16,33 +16,17 @@ pathway 4-nitroso-2-6-dinitrotolu-to-4-amino-2-6-dinitro "4-nitroso-2,6-dinitrot
     4_amino_2_6_dinitrotoluene_d_glucoside
   }
 
-  branch from 4_hydroxylamino_2_6_dinitrotoluene side left {
-    4_hydroxylamino_2_6_dinitrotoluene
-    <-> . +nadph +hplus +nadp +h2o
-    2_4_6_trinitrotoluene
-  }
 
-  branch from 4_hydroxylamino_2_6_dinitrotoluene side right {
-    4_hydroxylamino_2_6_dinitrotoluene
-    <-> . +udp_d_glucose +udp +hplus
-    4_hydroxylamino_2_6_dinitrotoluene_o_d_glucoside
-  }
 
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_184 [1.1.1.184] +4_pyridinecarboxaldehyde +h +nadph
-    4_pyridinemethanol
-  }
 
-  branch from nadp side right {
-    nadp
-    <-> ec_1_1_1_2 [1.1.1.2] +h +nadph +1_2_naphthoquinone
-    naphthalene_1_2_diol
-  }
 
-  branch from 4_amino_2_6_dinitrotoluene side left {
-    4_amino_2_6_dinitrotoluene
-    <-> . +nadph +hplus +nadp +h2o
-    4_amino_2_hydroxylamino_6_nitrotoluene
-  }
+
+
+
+
+
+
+
+
+
 }

@@ -146,9 +146,65 @@
       "xrefs": {
         "chebi": "CHEBI:16526"
       }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "H2O2",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM732620"
+      }
+    },
+    {
+      "id": "isovanillin",
+      "name": "isovanillin",
+      "formula": "C8H8O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:193161"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_1_2_3_1",
+      "name": "aldehyde oxidase",
+      "ec": [
+        "1.2.3.1"
+      ],
+      "xrefs": {
+        "uniprot": "Q06278"
+      }
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -311,6 +367,126 @@
           {
             "db": "Rhea",
             "id": "RHEA:56376"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "aldehyde oxidase",
+      "ec": "1.2.3.1",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_hydroxy_4_methoxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "isovanillin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_3_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR172071"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR172071"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3_hydroxy_4_methoxybenzoate_5-6-7-8-tetrahydromethano-to-3-d-glucosyloxy-4-h",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_hydroxy_4_methoxybenzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-6-7-8-tetrahydromethano-to-3-d-glucosyloxy-4-h"
+      },
+      "note": "Shares 3-hydroxy-4-methoxybenzoate with 5,6,7,8-tetrahydromethano… to 3-(β-D-glucosyloxy)-4-hyd….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:63797"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_5_dibromocatechol_bis-2-hydroxyethyl-to-3-5-dibromocatechol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_5_dibromocatechol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "bis-2-hydroxyethyl-to-3-5-dibromocatechol"
+      },
+      "note": "Shares 3,5-dibromocatechol with bis(2-hydroxyethyl)… to 3,5-dibromocatechol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:140214"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_isovanillin_3-methoxyanthranilate-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isovanillin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-methoxyanthranilate-to-o2"
+      },
+      "note": "Shares isovanillin with 3-methoxyanthranilate to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:193161"
           }
         ]
       }

@@ -110,45 +110,6 @@
       "xrefs": {
         "chebi": "CHEBI:57945"
       }
-    },
-    {
-      "id": "3_sulfanylhexan_1_ol_l_cysteine",
-      "name": "3-sulfanylhexan-1-ol-L-cysteine",
-      "short": "3-sulfanylhexan-1-o…",
-      "formula": "C9H19NO3S",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:156140"
-      }
-    },
-    {
-      "id": "3_mercaptohexanol",
-      "name": "3-mercaptohexanol",
-      "formula": "C6H14OS",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:77690"
-      }
-    },
-    {
-      "id": "s_4_hydroxy_3_methylbutan_2_yl_l_cysteine",
-      "name": "S-(4-hydroxy-3-methylbutan-2-yl)-L-cysteine",
-      "short": "S-(4-hydroxy-3-meth…",
-      "formula": "C8H17NO3S",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:156146"
-      }
-    },
-    {
-      "id": "2_methyl_3_sulfanylbutan_1_ol",
-      "name": "2-methyl-3-sulfanylbutan-1-ol",
-      "short": "2-methyl-3-sulfanyl…",
-      "formula": "C5H12OS",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:156147"
-      }
     }
   ],
   "enzymes": [],
@@ -273,73 +234,71 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "S-3-(hexan-1-ol)-L-cysteine = 3-sulfanyl-1-hexanol + 2-aminoprop-2-enoate",
-      "equation": "S-3-(hexan-1-ol)-L-cysteine = 3-sulfanyl-1-hexanol + 2-aminoprop-2-enoate",
-      "substrates": [
-        {
-          "metabolite": "3_sulfanylhexan_1_ol_l_cysteine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_mercaptohexanol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "2_ammonioprop_2_enoate",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:64768"
+      "id": "xt_cystathionine_2-methylpropanal-oxime-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cystathionine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2-methylpropanal-oxime-to-ammonium"
+      },
+      "note": "Shares L-Cystathionine with 2-methylpropanal oxime to ammonium.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:64768"
+            "db": "ChEBI",
+            "id": "CHEBI:58161"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "S-(4-hydroxy-3-methylbutan-2-yl)-L-cysteine = 2-methyl-3-sulfanylbutan-1-ol + 2-aminopr...",
-      "equation": "S-(4-hydroxy-3-methylbutan-2-yl)-L-cysteine = 2-methyl-3-sulfanylbutan-1-ol + 2-aminoprop-2-enoate",
-      "substrates": [
-        {
-          "metabolite": "s_4_hydroxy_3_methylbutan_2_yl_l_cysteine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_methyl_3_sulfanylbutan_1_ol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "2_ammonioprop_2_enoate",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:64772"
+      "id": "xt_cystathionine_l-homocysteinyl-amp-to-l-cysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cystathionine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "l-homocysteinyl-amp-to-l-cysteine"
+      },
+      "note": "Shares L-Cystathionine with L-homocysteinyl-AMP to L-cysteine.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:64772"
+            "db": "ChEBI",
+            "id": "CHEBI:58161"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cystathionine_o-succinyl-l-homoserinate-to-propionyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cystathionine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "o-succinyl-l-homoserinate-to-propionyl-coa"
+      },
+      "note": "Shares L-Cystathionine with O-succinyl-L-homoserinate to propionyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58161"
           }
         ]
       }

@@ -50,14 +50,14 @@ pathway chlorophyll-to-2-4-divinyl "chlorophyll to 2,4-divinyl…" {
 
   branch from cdp side left {
     cdp
-    <-> ec_2_7_1_216 [2.7.1.216] +2_trans_6_trans_farnesol +ctp +hplus
-    2e_6e_farnesyl_monophosphate
+    <-> ec_2_7_4_32 [2.7.4.32] +2e_6e_farnesyl_monophosphate +ctp
+    fpp
   }
 
   branch from cdp side right {
     cdp
-    <-> ec_2_7_4_32 [2.7.4.32] +2e_6e_farnesyl_monophosphate +ctp
-    fpp
+    <-> . +cdp_d_glucose +g6p +hplus
+    trehalose_6_phosphate
   }
 
   branch from phytyl_diphosphate side left {
@@ -86,14 +86,14 @@ pathway chlorophyll-to-2-4-divinyl "chlorophyll to 2,4-divinyl…" {
 
   branch from ppi side left {
     ppi
-    <-> . +gpp
-    phellandrene
+    <-> ec_3_6_1_56 [3.6.1.56] +2_hydroxy_datp +h2o +hplus
+    2_hydroxy_damp
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_109 [4.2.3.109] +gpp
-    sabinene
+    <-> ec_2_5_1_153 [2.5.1.153] +tuberculosinyl_diphosphate +h2o
+    tuberculosinol
   }
 
   branch from chlorophyllide_a side left {
@@ -104,8 +104,8 @@ pathway chlorophyll-to-2-4-divinyl "chlorophyll to 2,4-divinyl…" {
 
   branch from chlorophyllide_a side right {
     chlorophyllide_a
-    <-> ec_1_17_7_2 [1.17.7.2] +di_sulfido_diiron +h2o +di_sulfido_diiron +hplus
-    71_hydroxychlorophyllide_a
+    <-> ec_1_3_7_13 [1.3.7.13] +di_sulfido_diiron +di_sulfido_diiron +hplus
+    divinyl_chlorophyllide_a
   }
 
   branch from protochlorophyllide side left {
@@ -124,5 +124,47 @@ pathway chlorophyll-to-2-4-divinyl "chlorophyll to 2,4-divinyl…" {
     2_4_divinyl_protochlorophyllide_a
     <-> ec_1_14_13_81 [1.14.13.81] +nadph +o2 +hplus +nadp +h2o
     magnesium_protoporphyrin_13_monomethyl_ester
+  }
+
+  branch from phytol side right {
+    phytol
+    <-> . +lauroyl_coa +coa
+    laurate_phytyl_ester
+  }
+
+  branch from phytol side left {
+    phytol
+    <-> . +decanoyl_coa +coa
+    caprate_phytyl_ester
+  }
+
+  branch from ctp side right {
+    ctp
+    <-> . +1_stearoyl_2_linoleoyl_sn_glycero_3_phosphate +hplus +ppi
+    cdp_1_stearoyl_2_linoleoyl_sn_glycerol
+  }
+
+  branch from ctp side left {
+    ctp
+    <-> . +1_stearoyl_2_oleoyl_sn_glycero_3_phosphate +hplus +ppi
+    cdp_1_stearoyl_2_oleoyl_sn_glycerol
+  }
+
+  branch from cdp side right {
+    cdp
+    <-> . +e_e_e_geranylgeraniol +ctp +hplus
+    2e_6e_10e_geranylgeranyl_phosphate
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_2_5_1_153 [2.5.1.153] +tuberculosinyl_diphosphate +h2o
+    13r_edaxadiene
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_2_5_1_153 [2.5.1.153] +tuberculosinyl_diphosphate +h2o
+    13s_edaxadiene
   }
 }

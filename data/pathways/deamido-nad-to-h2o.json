@@ -1,0 +1,623 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "deamido-nad-to-h2o",
+  "name": "deamido-NAD to H2O",
+  "category": "energy-metabolism",
+  "summary": "A 4-step route from deamido-NAD(+) to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR130122"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "deamido_nad",
+      "name": "deamido-NAD",
+      "formula": "C21H24N6O15P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1103300"
+      }
+    },
+    {
+      "id": "r_lactate",
+      "name": "(R)-lactate",
+      "formula": "C3H5O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1371362"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM23"
+      }
+    },
+    {
+      "id": "nicotinamide_hypoxanthine_dinucleotide",
+      "name": "nicotinamide hypoxanthine dinucleotide",
+      "short": "nicotinamide…",
+      "formula": "C21H26N6O15P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM507495"
+      }
+    },
+    {
+      "id": "glyceric_acid_1_3_biphosphate",
+      "name": "Glyceric acid 1,3-biphosphate",
+      "short": "Glyceric acid…",
+      "formula": "C3H8O10P2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:89363"
+      }
+    },
+    {
+      "id": "d_glyceraldehyde_3_phosphate",
+      "name": "D-glyceraldehyde 3-phosphate",
+      "short": "D-glyceraldehyde 3-P",
+      "formula": "C3H5O6P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1372045"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nicotinamide_hypoxanthine_dinucleotide",
+      "name": "Nicotinamide hypoxanthine dinucleotide",
+      "short": "Nicotinamide…",
+      "formula": "C21H27N6O15P2",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM588097"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "d_glyceraldehyde",
+      "name": "D-glyceraldehyde",
+      "formula": "C3H6O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM435"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_28",
+      "name": "D-lactate dehydrogenase",
+      "ec": [
+        "1.1.1.28"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_12",
+      "name": "glyceraldehyde-3-phosphate dehydrogenase (phosphorylating)",
+      "ec": [
+        "1.2.1.12"
+      ],
+      "xrefs": {
+        "uniprot": "O14556"
+      }
+    },
+    {
+      "id": "ec_3_6_3_17",
+      "name": "EC 3.6.3.17",
+      "ec": [
+        "3.6.3.17"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "D-lactate dehydrogenase",
+      "ec": "1.1.1.28",
+      "substrates": [
+        {
+          "metabolite": "deamido_nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "r_lactate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nicotinamide_hypoxanthine_dinucleotide",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_28"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR130122"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR130122"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "glyceraldehyde-3-phosphate dehydrogenase (phosphorylating)",
+      "ec": "1.2.1.12",
+      "substrates": [
+        {
+          "metabolite": "glyceric_acid_1_3_biphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nicotinamide_hypoxanthine_dinucleotide",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glyceraldehyde_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nicotinamide_hypoxanthine_dinucleotide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_12"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR144443"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR144443"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR123410",
+      "substrates": [
+        {
+          "metabolite": "d_glyceraldehyde_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glyceraldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR123410"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR123410"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Reaction MNXR174778",
+      "ec": "3.6.3.17",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_glyceraldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_glyceraldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_3_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR174778"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR174778"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_deamido_nad_acryloyl-coa-to-nicotinamide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "deamido_nad"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acryloyl-coa-to-nicotinamide"
+      },
+      "note": "Shares deamido-NAD with acryloyl-CoA to nicotinamide….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1103300"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_deamido_nad_deamido-nad-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "deamido_nad"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "deamido-nad-to-h2o-null"
+      },
+      "note": "Shares deamido-NAD with deamido-NAD to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1103300"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_deamido_nad_nadh-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "deamido_nad"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-h2o"
+      },
+      "note": "Shares deamido-NAD with NADH to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1103300"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_deamido_nad_propanoate-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "deamido_nad"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "propanoate-to-o2"
+      },
+      "note": "Shares deamido-NAD with propanoate to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1103300"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nicotinamide_hypoxanthine_dinucleotide_4-hydroxy-4-methylnitros-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nicotinamide_hypoxanthine_dinucleotide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxy-4-methylnitros-to-h2o"
+      },
+      "note": "Shares nicotinamide hypoxanthine dinucleotide with 4-Hydroxy-4-(methylnitros… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM507495"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nicotinamide_hypoxanthine_dinucleotide_acryloyl-coa-to-nicotinamide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nicotinamide_hypoxanthine_dinucleotide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acryloyl-coa-to-nicotinamide"
+      },
+      "note": "Shares nicotinamide hypoxanthine dinucleotide with acryloyl-CoA to nicotinamide….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM507495"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nicotinamide_hypoxanthine_dinucleotide_itp-to-3r-3-carboxy-3-hydroxyp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nicotinamide_hypoxanthine_dinucleotide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "itp-to-3r-3-carboxy-3-hydroxyp"
+      },
+      "note": "Shares nicotinamide hypoxanthine dinucleotide with ITP to (3R)-3-carboxy-3-hydroxyp….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM507495"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nicotinamide_hypoxanthine_dinucleotide_nadh-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nicotinamide_hypoxanthine_dinucleotide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-h2o"
+      },
+      "note": "Shares nicotinamide hypoxanthine dinucleotide with NADH to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM507495"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nicotinamide_hypoxanthine_dinucleotide_propanoate-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nicotinamide_hypoxanthine_dinucleotide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "propanoate-to-o2"
+      },
+      "note": "Shares nicotinamide hypoxanthine dinucleotide with propanoate to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM507495"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glyceraldehyde_1r-6r-2-3-carboxylatop-to-cyclic-dehypoxanthiny",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glyceraldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1r-6r-2-3-carboxylatop-to-cyclic-dehypoxanthiny"
+      },
+      "note": "Shares D-glyceraldehyde with (1R,6R)-2-(3-carboxylatop… to cyclic dehypoxanthinylfut….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM435"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glyceraldehyde_atrazine-to-2-deoxy-d-ribose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glyceraldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "atrazine-to-2-deoxy-d-ribose"
+      },
+      "note": "Shares D-glyceraldehyde with atrazine to 2-deoxy-D-ribose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM435"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glyceraldehyde_beta-d-fructose-to-2-amino-3-2-5-dihydroxy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glyceraldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-d-fructose-to-2-amino-3-2-5-dihydroxy"
+      },
+      "note": "Shares D-glyceraldehyde with beta-D-fructose… to 2-amino-3-[(2,5-dihydroxy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM435"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway fmnh2-to-o2 "FMNH2 to O2" {
-  spacing 228
+  spacing 162
 
   spine at 0,0 {
     fmnh2
@@ -12,79 +12,13 @@ pathway fmnh2-to-o2 "FMNH2 to O2" {
     fmn
     <-> . +fmnh2 +h +dihydrokalafungin_dihydroquinone_form +o2 -fmn -h2o
     dhk_oh
-    <-> ec_1_13_12_16 [1.13.12.16] +nitrite +fmn +acetaldehyde +h2o -aci_nitroethane -h -o2
+    <-> ec_1_13_12_16 [1.13.12.16] +nitrite +fmn +acetaldehyde +h2o -nitroethane -h -o2
     fmnh2
   }
 
   branch from fmn side left {
     fmn
-    <-> ec_1_5_1_38 [1.5.1.38] +nadp +nadph +hplus
+    <-> ec_1_5_1_39 [1.5.1.39] +nad +nadh +hplus
     fmnh2
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +linoleate +fmnh2 +o2 +h2o +hplus
-    9z_12z_17_hydroxyoctadeca_9_12_dienoate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_3_2_9 [3.3.2.9] +1s_2s_1_2_dihydronaphthalene_1_2_diol
-    1s_2r_naphthalene_1_2_oxide
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +alpha_d_glucose +4_hydroxybenzoate
-    4_d_glucosyloxy_benzoate
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> ec_1_16_8_1 [1.16.8.1] +fmnh2 +cob_ii_yrinate_diamide
-    cob_i_yrinate_diamide
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> ec_1_14_14_33 [1.14.14.33] +fmnh2 +ethylenediaminetriacetate +h +o2 +glyoxylate +h2o
-    ethylenediaminediacetate
-  }
-
-  branch from fmnh2 side left {
-    fmnh2
-    <-> ec_1_14_14_33 [1.14.14.33] +edta +h +o2 +fmn +ethylenediaminediacetate +h2o
-    glyoxylate
-  }
-
-  branch from fmnh2 side right {
-    fmnh2
-    <-> ec_1_19_1_1 [1.19.1.1] +h +nadp +fmn
-    nadph
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    22_1_18_3_ps
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_tetracosanoyl_2_9z_octadecenoyl_sn_glycero_3_p
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +nadh +h +6_r_beta_epsilon_carotene +nad +h2o
-    zeinoxanthin
-  }
-
-  branch from o2 side right {
-    o2
-    <-> ec_1_14_13_156 [1.14.13.156] +h +1_8_cineole +nadph +6_endo_hydroxycineole +h2o
-    nadp
   }
 }

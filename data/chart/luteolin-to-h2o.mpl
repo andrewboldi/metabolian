@@ -4,111 +4,21 @@
 # edit the generator, not this file.
 
 pathway luteolin-to-h2o "luteolin to H2O" {
-  spacing 248
+  spacing 182
 
   spine at 0,0 {
     luteolin
-    <-> ec_1_14_11_22 [1.14.11.22] +co2 +h +succinate +h2o -2_oxoglutarate -o2
-    s_eriodictyol
-    <-> ec_1_1_1_234 [1.1.1.234] +h +nadph -nadp
-    3_deoxyleucocyanidin
-    <-> . +2_oxoglutarate +h +o2 -co2 -succinate -h2o
-    luteolinidin
-  }
-
-  branch from s_eriodictyol side left {
-    s_eriodictyol
-    <-> . +malonyl_coa +trans_caffeoyl_coa +h +co2
-    coa
-  }
-
-  branch from s_eriodictyol side right {
-    s_eriodictyol
-    <-> ec_1_14_13_21 [1.14.13.21] +nadp +h2o +h +o2 +nadph
-    naringenin
-  }
-
-  branch from 2_oxoglutarate side left {
+    <-> ec_1_14_11_23 [1.14.11.23] +co2 +h +succinate +h2o -2_oxoglutarate -o2
+    2r_3r_dihydrokaempferol
+    <-> ec_1_14_11_19 [1.14.11.19] +co2 +succinate +h2o -2r_3s_4s_3_4_leucopelargonidin -o2
     2_oxoglutarate
-    <-> ec_2_6_1_124 [2.6.1.124] +c_terminal_l_ornithyl_l_glutamyl_1_group +l_glutamate
-    c_terminal_l_glutamyl_5_semialdehyde_l_glutamyl
-  }
-
-  branch from 2_oxoglutarate side right {
-    2_oxoglutarate
-    <-> . +h +aminobacteriohopanetriol +l_glutamate
-    ribosylhopane
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +9_10_dihydroxybenzo_a_pyrene
-    cis_4_8_hydroxypyren_7_yl_2_oxobut_3_enoate
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +4_5_dihydroxybenzo_a_pyrene
-    4_5_chrysenedicarboxylate
-  }
-
-  branch from 3_deoxyleucocyanidin side left {
-    3_deoxyleucocyanidin
-    <-> . +2_oxoglutarate +o2 +co2 +succinate +h2o
-    2_3_4_dihydroxyphenyl_5_hydroxychromen_7_one
-  }
-
-  branch from nadp side right {
+    <-> ec_1_17_1_3 [1.17.1.3] +h +2r_3s_4s_3_4_leucopelargonidin +nadph -afzelechin -h2o
     nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +aflatoxin_m1 +h2o +h +o2 +nadph
-    lsm_36909
   }
 
-  branch from nadp side left {
-    nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +aflatoxin_m1 +h +o2 +nadph +h2o
-    aflatoxin_m1_8_9_epoxide
-  }
-
-  branch from luteolinidin side right {
-    luteolinidin
-    <-> . +udp +luteolinidin_3_o_glucoside +h
-    udp_alpha_d_glucose
-  }
-
-  branch from co2 side left {
-    co2
-    <-> . +4_5_chrysenedicarboxylate
-    4_chrysenecarboxylate
-  }
-
-  branch from co2 side right {
-    co2
-    <-> . +4_5_chrysenedicarboxylate
-    5_chrysenecarboxylate
-  }
-
-  branch from succinate side left {
-    succinate
-    <-> . +gibberellin_a29 +2_oxoglutarate +h +o2 +co2 +h2o
-    gibberellin_a29_catabolite
-  }
-
-  branch from succinate side right {
-    succinate
-    <-> . +gibberellin_a8 +2_oxoglutarate +o2 +co2 +h2o
-    gibberellin_a8_catabolite
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_1_14_14_1 [1.14.14.1] +nadp +h +lsm_36909 +o2 +nadph
-    aflatoxin_b1_endo_8_9_oxide
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_3_2_9 [3.3.2.9] +aflatoxin_b1_diol
-    aflatoxin_b1_exo_8_9_epoxide
+  branch from 2r_3r_dihydrokaempferol side left {
+    2r_3r_dihydrokaempferol
+    <-> .
+    maesopsin
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway phosphouridine-phosphouri-to-diphosphate "phosphouridine-phosphouri… to diphosphate" {
-  spacing 226
+  spacing 202
 
   spine at 0,0 {
     phosphouridine_phosphouridine_phosphoribonucleot
@@ -20,29 +20,5 @@ pathway phosphouridine-phosphouri-to-diphosphate "phosphouridine-phosphouri… t
     5_end_ribonucleoside
     <-> . +5_end_5_hydroxy_ribonucleotidyl_ribonucleotide +h2o +hplus
     ribonucleoside_3_monophosphate
-  }
-
-  branch from 5_end_ribonucleotide_2 side right {
-    5_end_ribonucleotide_2
-    <-> . +5_n7_methyl_5_triphosphoguanosine_ribonucleoside +h2o +hplus
-    n7_methyl_5_triphosphoguanosine_nucleoside
-  }
-
-  branch from 5_end_ribonucleotide_2 side left {
-    5_end_ribonucleotide_2
-    <-> . +h2o +fad +hplus
-    5_fad_phosphoribonucleoside_2
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_177 [4.2.3.177] +gpp
-    thujene
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_179 [4.2.3.179] +fpp
-    guaia_4_6_diene
   }
 }

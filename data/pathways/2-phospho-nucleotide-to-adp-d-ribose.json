@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "2-phospho-nucleotide-to-adp-d-ribose",
   "name": "2'-phospho-nucleotide… to ADP-D-ribose",
-  "category": "nucleotide-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from 2'-phospho-nucleotide 5'-phosphate(3−) residue to ADP-D-ribose(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -113,51 +113,12 @@
       }
     },
     {
-      "id": "nadp",
-      "name": "NADP+",
-      "formula": "C21H25N7O17P3",
-      "charge": -3,
+      "id": "l_cysteine",
+      "name": "L-cysteine",
+      "formula": "C3H5NOS",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58349"
-      }
-    },
-    {
-      "id": "2_phospho_cyclic_adp_ribose",
-      "name": "2'-phospho-cyclic ADP-ribose",
-      "short": "2'-phospho-cyclic…",
-      "formula": "C15H19N5O16P3",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:75970"
-      }
-    },
-    {
-      "id": "cyclic_adp_d_ribose",
-      "name": "cyclic ADP-β-D-ribose",
-      "short": "cyclic ADP-β-D-ribo…",
-      "formula": "C15H19N5O13P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:73672"
-      }
-    },
-    {
-      "id": "4_adp_d_ribosyl_l_aspartyl_2",
-      "name": "4-(ADP-D-ribosyl)-L-aspartyl(2−)",
-      "short": "4-(ADP-D-ribosyl)-L…",
-      "formula": "C19H24N6O16P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:138102"
-      }
-    },
-    {
-      "id": "l_aspartate",
-      "name": "L-aspartate",
-      "formula": "C4H4NO3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:29961"
+        "chebi": "CHEBI:29950"
       }
     },
     {
@@ -171,12 +132,60 @@
       }
     },
     {
-      "id": "l_cysteine",
-      "name": "L-cysteine",
-      "formula": "C3H5NOS",
+      "id": "l_asparagine",
+      "name": "L-asparagine",
+      "formula": "C4H6N2O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:29950"
+        "chebi": "CHEBI:50347"
+      }
+    },
+    {
+      "id": "n4_adp_d_ribosyl_l_asparagine_2",
+      "name": "N4-(ADP-D-ribosyl)-L-asparagine(2−)",
+      "short": "N4-(ADP-D-ribosyl)-…",
+      "formula": "C19H25N7O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:142555"
+      }
+    },
+    {
+      "id": "l_serine",
+      "name": "L-serine",
+      "formula": "C3H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29999"
+      }
+    },
+    {
+      "id": "o_adp_d_ribosyl_l_serine_2",
+      "name": "O-(ADP-D-ribosyl)-L-serine(2−)",
+      "short": "O-(ADP-D-ribosyl)-L…",
+      "formula": "C18H24N6O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:142556"
+      }
+    },
+    {
+      "id": "l_tyrosine",
+      "name": "L-tyrosine",
+      "formula": "C9H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:46858"
+      }
+    },
+    {
+      "id": "o_adp_d_ribosyl_l_tyrosine_2",
+      "name": "O-(ADP-D-ribosyl)-L-tyrosine(2−)",
+      "short": "O-(ADP-D-ribosyl)-L…",
+      "formula": "C24H28N6O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:142557"
       }
     }
   ],
@@ -186,7 +195,10 @@
       "name": "2'-phosphotransferase",
       "ec": [
         "2.7.1.160"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q86TN4"
+      }
     },
     {
       "id": "ec_3_1_3_84",
@@ -332,44 +344,13 @@
     },
     {
       "id": "r4",
-      "name": "NADP(+) = 2'-phospho-cyclic ADP-ribose + nicotinamide",
-      "equation": "NADP(+) = 2'-phospho-cyclic ADP-ribose + nicotinamide",
+      "name": "L-cysteinyl-[protein] + NAD(+) = S-(ADP-D-ribosyl)-L-cysteinyl-[protein] + nicotinamide...",
+      "equation": "L-cysteinyl-[protein] + NAD(+) = S-(ADP-D-ribosyl)-L-cysteinyl-[protein] + nicotinamide + H(+)",
       "substrates": [
         {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_phospho_cyclic_adp_ribose",
+          "metabolite": "l_cysteine",
           "stoichiometry": 1
         },
-        {
-          "metabolite": "nicotinamide",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:38603"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:38603"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "NAD(+) = cyclic ADP-beta-D-ribose + nicotinamide + H(+)",
-      "equation": "NAD(+) = cyclic ADP-beta-D-ribose + nicotinamide + H(+)",
-      "substrates": [
         {
           "metabolite": "nad",
           "stoichiometry": 1
@@ -377,7 +358,50 @@
       ],
       "products": [
         {
-          "metabolite": "cyclic_adp_d_ribose",
+          "metabolite": "s_adp_d_ribosyl_l_cysteine_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nicotinamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:56612"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56612"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "L-asparaginyl-[protein] + NAD(+) = N(4)-(ADP-D-ribosyl)-L-asparaginyl-[protein] + nicot...",
+      "equation": "L-asparaginyl-[protein] + NAD(+) = N(4)-(ADP-D-ribosyl)-L-asparaginyl-[protein] + nicotinamide + H(+)",
+      "substrates": [
+        {
+          "metabolite": "l_asparagine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n4_adp_d_ribosyl_l_asparagine_2",
           "stoichiometry": 1
         },
         {
@@ -392,39 +416,39 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:38611"
+        "rhea": "RHEA:58228"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:38611"
+            "id": "RHEA:58228"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "4-O-(ADP-D-ribosyl)-L-aspartyl-[protein] + H2O = L-aspartyl-[protein] + ADP-D-ribose + ...",
-      "equation": "4-O-(ADP-D-ribosyl)-L-aspartyl-[protein] + H2O = L-aspartyl-[protein] + ADP-D-ribose + H(+)",
+      "name": "L-seryl-[protein] + NAD(+) = O-(ADP-D-ribosyl)-L-seryl-[protein] + nicotinamide + H(+)",
+      "equation": "L-seryl-[protein] + NAD(+) = O-(ADP-D-ribosyl)-L-seryl-[protein] + nicotinamide + H(+)",
       "substrates": [
         {
-          "metabolite": "4_adp_d_ribosyl_l_aspartyl_2",
+          "metabolite": "l_serine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "nad",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "l_aspartate",
+          "metabolite": "o_adp_d_ribosyl_l_serine_2",
           "stoichiometry": 1
         },
         {
-          "metabolite": "adp_d_ribose",
+          "metabolite": "nicotinamide",
           "stoichiometry": 1
         },
         {
@@ -435,53 +459,301 @@
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:54428"
+        "rhea": "RHEA:58232"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:54428"
+            "id": "RHEA:58232"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "S-(ADP-D-ribosyl)-L-cysteinyl-[protein] + H2O = ADP-D-ribose + L-cysteinyl-[protein]",
-      "equation": "S-(ADP-D-ribosyl)-L-cysteinyl-[protein] + H2O = ADP-D-ribose + L-cysteinyl-[protein]",
+      "name": "L-tyrosyl-[protein] + NAD(+) = O-(ADP-D-ribosyl)-L-tyrosyl-[protein] + nicotinamide + H(+)",
+      "equation": "L-tyrosyl-[protein] + NAD(+) = O-(ADP-D-ribosyl)-L-tyrosyl-[protein] + nicotinamide + H(+)",
       "substrates": [
         {
-          "metabolite": "s_adp_d_ribosyl_l_cysteine_2",
+          "metabolite": "l_tyrosine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "nad",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "adp_d_ribose",
+          "metabolite": "o_adp_d_ribosyl_l_tyrosine_2",
           "stoichiometry": 1
         },
         {
-          "metabolite": "l_cysteine",
+          "metabolite": "nicotinamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:58240"
+        "rhea": "RHEA:58236"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:58240"
+            "id": "RHEA:58236"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_adp_d_ribose_1_phosphate_monosaccharide-1-phosphate-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "adp_d_ribose_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "monosaccharide-1-phosphate-to-phosphate"
+      },
+      "note": "Shares ADP-α-D-ribose 1''-phosphate with monosaccharide 1-phosphate to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58753"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_adp_d_ribosyl_l_cysteine_2_pyrimidine-ribonucleoside-to-d-ribofuranose-5-ph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_adp_d_ribosyl_l_cysteine_2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "pyrimidine-ribonucleoside-to-d-ribofuranose-5-ph"
+      },
+      "note": "Shares S-(ADP-D-ribosyl)-L-cysteine(2−) with pyrimidine ribonucleoside… to D-ribofuranose 5-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:140607"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_asparagine_d-apiitol-to-nitrate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_asparagine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-apiitol-to-nitrate"
+      },
+      "note": "Shares L-asparagine with D-apiitol to nitrate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:50347"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_asparagine_d-glucosamine-to-5-o-phosphonato-d-ribof",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_asparagine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glucosamine-to-5-o-phosphonato-d-ribof"
+      },
+      "note": "Shares L-asparagine with α-D-glucosamine… to 5-O-phosphonato-α-D-ribof….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:50347"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_asparagine_decanoate-ester-to-1-2-diacyl-3-o-d-glc",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_asparagine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "decanoate-ester-to-1-2-diacyl-3-o-d-glc"
+      },
+      "note": "Shares L-asparagine with decanoate ester to 1,2-diacyl-3-O-(β-D-Glc-(….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:50347"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_asparagine_phylloquinone-to-adp-d-ribose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_asparagine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phylloquinone-to-adp-d-ribose"
+      },
+      "note": "Shares L-asparagine with phylloquinone to ADP-D-ribose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:50347"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_asparagine_r-mevalonate-to-propionyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_asparagine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-mevalonate-to-propionyl-coa"
+      },
+      "note": "Shares L-asparagine with (R)-mevalonate to propionyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:50347"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_asparagine_s-s-dimethyl-propiothet-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_asparagine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-s-dimethyl-propiothet-to-ammonium"
+      },
+      "note": "Shares L-asparagine with S,S-dimethyl-β-propiothet… to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:50347"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n4_adp_d_ribosyl_l_asparagine_2_phylloquinone-to-adp-d-ribose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n4_adp_d_ribosyl_l_asparagine_2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phylloquinone-to-adp-d-ribose"
+      },
+      "note": "Shares N4-(ADP-D-ribosyl)-L-asparagine(2−) with phylloquinone to ADP-D-ribose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:142555"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_o_adp_d_ribosyl_l_serine_2_phylloquinone-to-adp-d-ribose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "o_adp_d_ribosyl_l_serine_2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phylloquinone-to-adp-d-ribose"
+      },
+      "note": "Shares O-(ADP-D-ribosyl)-L-serine(2−) with phylloquinone to ADP-D-ribose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:142556"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_o_adp_d_ribosyl_l_tyrosine_2_o-adp-d-ribosyl-l-tyros-to-l-tyrosine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "o_adp_d_ribosyl_l_tyrosine_2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "o-adp-d-ribosyl-l-tyros-to-l-tyrosine"
+      },
+      "note": "Shares O-(ADP-D-ribosyl)-L-tyrosine(2−) with O-(ADP-D-ribosyl)-L-tyros… to L-tyrosine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:142557"
           }
         ]
       }

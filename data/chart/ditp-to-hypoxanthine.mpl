@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway ditp-to-hypoxanthine "dITP to hypoxanthine" {
-  spacing 206
+  spacing 194
 
   spine at 0,0 {
     ditp
@@ -20,17 +20,5 @@ pathway ditp-to-hypoxanthine "dITP to hypoxanthine" {
     2_deoxyinosine_5_phosphate
     <-> ec_3_6_1_64 [3.6.1.64] +h2o +pi +hplus
     2_deoxyinosine_5_diphosphate
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +preechinulin +dmapp
-    tardioxopiperazine_b
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +preechinulin +dmapp
-    tardioxopiperazine_a
   }
 }

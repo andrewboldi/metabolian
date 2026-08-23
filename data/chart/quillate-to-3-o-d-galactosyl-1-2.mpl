@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway quillate-to-3-o-d-galactosyl-1-2 "quillate to 3-O-[β-D-galactosyl-(1→2)…" {
-  spacing 158
+  spacing 164
 
   spine at 0,0 {
     quillate
@@ -18,9 +18,15 @@ pathway quillate-to-3-o-d-galactosyl-1-2 "quillate to 3-O-[β-D-galactosyl-(1→
     udp_alpha_d_xylose
   }
 
-  branch from 3_o_d_galactosyl_1_2_d_glucuronosyl_quillate side left {
-    3_o_d_galactosyl_1_2_d_glucuronosyl_quillate
-    <-> . +udp_l_rhamnose +udp +hplus
-    3_o_l_rha_1_3_d_gal_1_2_d_glca_quillate
+  branch from udp_d_glucuronate side left {
+    udp_d_glucuronate
+    <-> . +5_dihydrotestosterone_17_o_d_glucuronide +udp +hplus
+    5_dihydrotestosterone_17_o_d_glucuronosyl_1_2_gl
+  }
+
+  branch from udp_d_glucuronate side right {
+    udp_d_glucuronate
+    <-> . +5_6_epoxyretinoate +udp
+    1_o_5_6_epoxyretinoyl_d_glucuronate
   }
 }

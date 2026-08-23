@@ -4,51 +4,111 @@
 # edit the generator, not this file.
 
 pathway dtdp-to-h2o-null "dTDP to H2O" {
-  spacing 188
+  spacing 248
 
   spine at 0,0 {
     dtdp
-    <-> . +c1_c9_glycosylated_uwm6 +h -uwm6
+    <-> . +h +urdamycin_a -urdamycin_g
     dtdp_d_olivose
-    <-> . +uwm6 -h2o
-    2_3_dehydro_uwm6
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate -2_3_dehydro_uwm6 -h2o
+    <-> . +3a_deolivosylpremithramycin_b -dtdp -h
+    premithramycin_b
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate -premithramycin_b -h2o
     atp
   }
 
-  branch from 2_3_dehydro_uwm6 side left {
-    2_3_dehydro_uwm6
-    <-> . +8_methyltetraphene_1_5_6_11_12_pentol +nadp +h2o +h +nadph
-    o2
+  branch from h side left {
+    h
+    <-> ec_1_2_1_3 [1.2.1.3] +nadh +2_nitrobenzoate +nad +h2o
+    2_nitrobenzaldehyde
   }
 
-  branch from 2_3_dehydro_uwm6 side right {
-    2_3_dehydro_uwm6
-    <-> . +8_methyltetraphene_1_5_6_11_12_pentol +nad +h2o +h +o2
-    nadh
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_2_1_159 [3.2.1.159] +agarotriose +3_6_anhydro_l_galactopyranose
-    neoagarotetraose
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_2_1_159 [3.2.1.159] +agaropentaose +3_6_anhydro_l_galactopyranose
-    neoagarohexaose
+  branch from h side right {
+    h
+    <-> ec_1_2_1_3 [1.2.1.3] +nadh +p_dimethylamino_cinnamate +nad +h2o
+    4_dimethylaminocinnamaldehyde
   }
 
   branch from atp side left {
     atp
-    <-> . +s_adenosyl_l_homocysteine +5s_5_2s_2_carboxylato_2_hydroxy_2_methylethyl_2 +diphosphate +co2 +nadp +coa +amp +h2o +s_adenosyl_l_methionine +h +4_hydroxy_4_methyl_l_glutamic_acid +nadph
-    malonyl_coa
+    <-> . +h +adp +phosphate +h2o
+    ferroxamine
   }
 
   branch from atp side right {
     atp
-    <-> . +diphosphate +n_3_fumaramoyl_s_2_3_diaminopropanoyl_adenylate +h
-    n3_fumaramoyl_s_2_3_diaminopropanoic_acid
+    <-> . +udp_n_acetyl_alpha_d_muramate +l_alanine_d_glutamate_meso_2_6_diaminoheptanedio +h +adp +phosphate
+    udp_n_acetylmuramoyl_l_alanyl_d_gamma_glutamyl_m
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_4_11_10 [3.4.11.10] +l_phenylalanine_p_nitroanilide +l_phenylalanine
+    4_nitroaniline
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_5_2_16 [3.5.2.16] +succinamic_acid
+    succinimide
+  }
+
+  branch from h side left {
+    h
+    <-> ec_1_2_1_3 [1.2.1.3] +nadh +4_methoxybenzoate +nad +h2o
+    4_methoxybenzaldehyde
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_1_1_1 [3.1.1.1] +hexanoate +4_nitrophenol +h2o
+    4_nitrophenyl_hexanoate
+  }
+
+  branch from adp side left {
+    adp
+    <-> ec_3_6_3_33 [3.6.3.33] +h +phosphate +atp +h2o
+    adenosylcob_iii_alamin
+  }
+
+  branch from adp side right {
+    adp
+    <-> . +atp +1_6_anhydrous_n_acetylmuramate +h2o
+    n_acetylmuramate_6_phosphate
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +3_azido_3_deoxythymidine_5_phosphate +h2o
+    zidovudine
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_1_2_1_41 [1.2.1.41] +s_4_amino_5_oxopentanoate +h +nadp +nadph
+    l_alpha_glutamyl_phosphate
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_3_6_1_15 [3.6.1.15] +h +adp +phosphate +h2o
+    pmf
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_2_4_2_17 [2.4.2.17] +5_phospho_alpha_d_ribose_1_diphosphate +h +1_5_phosphoribosyl_atp
+    diphosphate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_5_2_16 [3.5.2.16] +glutaramic_acid
+    piperidine_2_6_dione
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_5_2_16 [3.5.2.16] +2_carbamothioylamino_acetic_acid
+    thiohydantoin
   }
 }

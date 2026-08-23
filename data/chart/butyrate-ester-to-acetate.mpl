@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway butyrate-ester-to-acetate "butyrate ester to acetate" {
-  spacing 184
+  spacing 172
 
   spine at 0,0 {
     butyrate_ester
@@ -14,17 +14,5 @@ pathway butyrate-ester-to-acetate "butyrate ester to acetate" {
     acetate_ester
     <-> ec_3_1_1_6 [3.1.1.6] +h2o -acetate -hplus
     aliphatic_alcohol
-  }
-
-  branch from aliphatic_alcohol side left {
-    aliphatic_alcohol
-    <-> . +octadecanoate_ester +h2o +hplus
-    octadecanoate
-  }
-
-  branch from aliphatic_alcohol side right {
-    aliphatic_alcohol
-    <-> . +fatty_acid_ester +h2o +hplus
-    fatty-acid
   }
 }

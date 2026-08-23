@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-oxochenodeoxycholoyl-coa-to-7-hydroxy-3-oxocho "3-oxochenodeoxycholoyl-CoA to 7β-hydroxy-3-oxochol-4-en…" {
-  spacing 198
+  spacing 186
 
   spine at 0,0 {
     3_oxochenodeoxycholoyl_coa
@@ -18,19 +18,7 @@ pathway 3-oxochenodeoxycholoyl-coa-to-7-hydroxy-3-oxocho "3-oxochenodeoxycholoyl
 
   branch from 7_hydroxy_3_oxochol_4_en_24_oyl_coa side left {
     7_hydroxy_3_oxochol_4_en_24_oyl_coa
-    <-> ec_2_8_3_25 [2.8.3.25] +choloyl_coa +7_hydroxy_3_oxochol_4_en_24_oate
+    <-> ec_2_8_3_25 [2.8.3.25] +choloyl_coa +7beta_hydroxy_3_oxochol_4_enate
     cholate
-  }
-
-  branch from 7_hydroxy_3_oxochol_4_en_24_oyl_coa side right {
-    7_hydroxy_3_oxochol_4_en_24_oyl_coa
-    <-> ec_1_3_1_116 [1.3.1.116] +nad +nadh +hplus
-    7_hydroxy_3_oxochol_24_oyl_coa
-  }
-
-  branch from 7_hydroxy_3_oxochol_4_en_24_oyl_coa side left {
-    7_hydroxy_3_oxochol_4_en_24_oyl_coa
-    <-> ec_2_8_3_25 [2.8.3.25] +7beta_hydroxy_3_oxochol_4_enate +cholate
-    choloyl_coa
   }
 }

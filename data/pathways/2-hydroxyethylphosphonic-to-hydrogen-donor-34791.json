@@ -1,0 +1,433 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-hydroxyethylphosphonic-to-hydrogen-donor-34791",
+  "name": "2-hydroxyethylphosphonic… to hydrogen donor",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 2-hydroxyethylphosphonic acid(1−) to hydrogen donor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:34791"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:60991"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_hydroxyethylphosphonic_acid",
+      "name": "2-hydroxyethylphosphonic acid",
+      "short": "2-hydroxyethylphosp…",
+      "formula": "C2H6O4P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:60991"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hydroxymethylphosphonate",
+      "name": "hydroxymethylphosphonate",
+      "short": "hydroxymethylphosph…",
+      "formula": "CH4O4P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:71199"
+      }
+    },
+    {
+      "id": "formate",
+      "name": "Formate",
+      "formula": "CHO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15740"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_13_11_72",
+      "name": "2-hydroxyethylphosphonate dioxygenase",
+      "ec": [
+        "1.13.11.72"
+      ]
+    },
+    {
+      "id": "ec_1_13_11_89",
+      "name": "(hydroxymethyl)phosphonate dioxygenase",
+      "ec": [
+        "1.13.11.89"
+      ]
+    },
+    {
+      "id": "ec_1_17_98_4",
+      "name": "formate dehydrogenase (acceptor)",
+      "ec": [
+        "1.17.98.4"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2-hydroxyethylphosphonate dioxygenase",
+      "equation": "2-hydroxyethylphosphonate + O2 = hydroxymethylphosphonate + formate + H(+)",
+      "ec": "1.13.11.72",
+      "substrates": [
+        {
+          "metabolite": "2_hydroxyethylphosphonic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hydroxymethylphosphonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_72"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:34791"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34791"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(hydroxymethyl)phosphonate dioxygenase",
+      "equation": "hydroxymethylphosphonate + O2 = formate + phosphate + 2 H(+)",
+      "ec": "1.13.11.89",
+      "substrates": [
+        {
+          "metabolite": "hydroxymethylphosphonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "formate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_89"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:60000"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:60000"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "formate dehydrogenase (acceptor)",
+      "equation": "formate + A + H(+) = AH2 + CO2",
+      "ec": "1.17.98.4",
+      "substrates": [
+        {
+          "metabolite": "formate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_17_98_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:27290"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27290"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_2_hydroxyethylphosphonic_acid_2-hydroxyethylphosphonic-to-1r-2s-epoxypropylpho",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_hydroxyethylphosphonic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-hydroxyethylphosphonic-to-1r-2s-epoxypropylpho"
+      },
+      "note": "Shares 2-hydroxyethylphosphonic acid with 2-hydroxyethylphosphonic… to (1R,2S)-epoxypropylphosph….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60991"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_hydroxyethylphosphonic_acid_2-hydroxyethylphosphonic-to-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_hydroxyethylphosphonic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-hydroxyethylphosphonic-to-acetate"
+      },
+      "note": "Shares 2-hydroxyethylphosphonic acid with 2-hydroxyethylphosphonic… to acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60991"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_hydroxyethylphosphonic_acid_2-hydroxyethylphosphonic-to-acetate-28078",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_hydroxyethylphosphonic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-hydroxyethylphosphonic-to-acetate-28078"
+      },
+      "note": "Shares 2-hydroxyethylphosphonic acid with 2-hydroxyethylphosphonic… to acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60991"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_hydroxyethylphosphonic_acid_2-hydroxyethylphosphonic-to-d-ribose-1-5-bisphos",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_hydroxyethylphosphonic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-hydroxyethylphosphonic-to-d-ribose-1-5-bisphos"
+      },
+      "note": "Shares 2-hydroxyethylphosphonic acid with 2-hydroxyethylphosphonic… to α-D-ribose 1,5-bisphospha….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60991"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_hydroxyethylphosphonic_acid_2-hydroxyethylphosphonic-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_hydroxyethylphosphonic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-hydroxyethylphosphonic-to-hydrogen-donor"
+      },
+      "note": "Shares 2-hydroxyethylphosphonic acid with 2-hydroxyethylphosphonic… to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60991"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hydroxymethylphosphonate_2-hydroxyethylphosphonic-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxymethylphosphonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-hydroxyethylphosphonic-to-hydrogen-donor"
+      },
+      "note": "Shares hydroxymethylphosphonate with 2-hydroxyethylphosphonic… to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:71199"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hydroxymethylphosphonate_deoxycylindrospermopsin-to-s-succinyl-l-cysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxymethylphosphonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "deoxycylindrospermopsin-to-s-succinyl-l-cysteine"
+      },
+      "note": "Shares hydroxymethylphosphonate with deoxycylindrospermopsin to S-succinyl-L-cysteine(2−).",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:71199"
+          }
+        ]
+      }
+    }
+  ]
+}

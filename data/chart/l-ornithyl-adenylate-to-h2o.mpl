@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-ornithyl-adenylate-to-h2o "(L-ornithyl)adenylate to H2O" {
-  spacing 212
+  spacing 152
 
   spine at 0,0 {
     l_ornithyl_adenylate
@@ -14,65 +14,5 @@ pathway l-ornithyl-adenylate-to-h2o "(L-ornithyl)adenylate to H2O" {
     atp
     <-> ec_3_6_3_21 [3.6.3.21] +h +adp +l_ornithine +phosphate -atp -h2o
     l_ornithine
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
-    d_glucosaminyl_1_4_n_acetyl_d_glucosamine
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
-    d_glucosaminyl_1_4_d_glucosamine
-  }
-
-  branch from amp side left {
-    amp
-    <-> . +l_alanine +atp +jasmonate +diphosphate +h
-    7_epi_jasmonoyl_l_alanine
-  }
-
-  branch from amp side right {
-    amp
-    <-> . +diphosphate +schizokinen +h +atp +citryl_n_3_aminopropyl_n_hydroxyacetamide
-    n_3_aminopropyl_n_hydroxyacetamide
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
-    6_alpha_maltosylglucose
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
-    beta_d_glucosaminyl_1_4_beta_d_glucosamine_6_pho
-  }
-
-  branch from l_ornithine side left {
-    l_ornithine
-    <-> ec_3_5_3_25 [3.5.3.25] +l_hydroxyarginine +h +h2o
-    hydroxyurea
-  }
-
-  branch from l_ornithine side right {
-    l_ornithine
-    <-> ec_1_5_1_24 [1.5.1.24] +n5_l_1_carboxyethyl_l_ornithine +nadp +h2o +h +nadph
-    pyruvate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    gal_alpha_1_3_glca_beta_1_2_man_alpha_1_3_gal
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    mannobiose
   }
 }

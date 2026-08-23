@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 6-o-trans-methoxy-mycolyl-to-h2o "6-O-trans-methoxy-mycolyl… to H2O" {
-  spacing 328
+  spacing 340
 
   spine at 0,0 {
     6_o_trans_methoxy_mycolyl_trehalose_6_phosphate
@@ -16,51 +16,93 @@ pathway 6-o-trans-methoxy-mycolyl-to-h2o "6-O-trans-methoxy-mycolyl… to H2O" {
     turanose_6_phosphate
   }
 
-  branch from alpha_alpha_trehalose_6_phosphate side left {
-    alpha_alpha_trehalose_6_phosphate
-    <-> ec_3_2_1_122 [3.2.1.122] +alpha_d_glucose_6_phosphate +h2o
-    alpha_d_glucose
-  }
-
-  branch from alpha_alpha_trehalose_6_phosphate side right {
-    alpha_alpha_trehalose_6_phosphate
-    <-> ec_2_4_1_216 [2.4.1.216] +alpha_d_glucose_6_phosphate +beta_d_glucose_1_phosphate
-    phosphate
-  }
-
   branch from alpha_d_glucose_6_phosphate side left {
     alpha_d_glucose_6_phosphate
-    <-> ec_2_7_1_147 [2.7.1.147] +alpha_d_glucose +adp +h
-    amp
-  }
-
-  branch from alpha_d_glucose_6_phosphate side right {
-    alpha_d_glucose_6_phosphate
-    <-> ec_5_4_2_2 [5.4.2.2]
-    d_glucopyranose_1_phosphate
-  }
-
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> . +udp +epicatechin_3_o_glucoside +h
-    epicatechin
+    <-> . +phosphate
+    2_deoxy_scyllo_inosose
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +glc_aatgal_pp_undecaprenol +h
-    2_acetamido_4_amino_2_4_6_trideoxy_alpha_d_galac
+    <-> . +udp +luteolinidin_5_o_glucoside +h
+    2_3_4_dihydroxyphenyl_5_hydroxychromen_7_one
   }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_3_2_2_6 [3.2.2.6] +adp_beta_d_ribose +3_acetylpyridine +h
-    3_acetylpyridine_adenine_dinucleotide
+  branch from udp_alpha_d_glucose side left {
+    udp_alpha_d_glucose
+    <-> . +udp +apigeninidin_5_o_beta_d_glucoside +h
+    apigeninidin
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_2_6 [3.2.2.6] +adp_beta_d_ribose +thionicotinamide
-    thionicotinamide_adenine_dinucleotide
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    premithramycinone
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +doxorubicin +phosphate +doxorubicin
+    atp
+  }
+
+  branch from udp side right {
+    udp
+    <-> . +apigeninidin_5_o_glucoside +h +udp_alpha_d_glucose
+    apigeninidin
+  }
+
+  branch from udp side left {
+    udp
+    <-> . +cyanidin_3_o_6_o_glucosyl_2_o_xylosylgalactoside +udp_alpha_d_glucose
+    cyanidin_3_o_d_xylosyl_1_2_d_galactoside
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    neamine
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    kanamycin_d
+  }
+
+  branch from udp_alpha_d_glucose side right {
+    udp_alpha_d_glucose
+    <-> . +udp +arabidopsis_anthocyanin_a3 +h
+    cyanidin_3_o_2_o_xylosyl_6_o_p_coumaroyl_glucosi
+  }
+
+  branch from udp_alpha_d_glucose side left {
+    udp_alpha_d_glucose
+    <-> ec_2_4_1_115 [2.4.1.115] +udp +peonidin_3_glucoside
+    3_5_7_trihydroxy_2_4_hydroxy_3_methoxyphenyl_chr
+  }
+
+  branch from keto_d_fructose side right {
+    keto_d_fructose
+    <-> ec_3_2_1_20 [3.2.1.20] +alpha_d_glucose +h2o
+    maltulose
+  }
+
+  branch from keto_d_fructose side left {
+    keto_d_fructose
+    <-> ec_3_2_1_20 [3.2.1.20] +alpha_d_glucose +h2o
+    leucrose
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    3_deamino_3_hydroxykanamycin_b
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    neomycin_b
   }
 }

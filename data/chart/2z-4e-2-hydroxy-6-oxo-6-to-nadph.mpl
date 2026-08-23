@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2z-4e-2-hydroxy-6-oxo-6-to-nadph "(2Z,4E)-2-hydroxy-6-oxo-6… to NADPH" {
-  spacing 302
+  spacing 248
 
   spine at 0,0 {
     2z_4e_2_hydroxy_6_oxo_6_phenoxyhexa_2_4_dienoat
@@ -14,59 +14,5 @@ pathway 2z-4e-2-hydroxy-6-oxo-6-to-nadph "(2Z,4E)-2-hydroxy-6-oxo-6… to NADPH"
     1s_2s_3_phenoxycyclohexa_3_5_diene_1_2_diol
     <-> ec_1_14_12_18 [1.14.12.18] +nadp -diphenyl_ether -o2 -nadph
     h
-  }
-
-  branch from diphenyl_ether_2_3_diol side left {
-    diphenyl_ether_2_3_diol
-    <-> . +h +o2
-    2z_4e_2_hydroxy_6_oxo_6_phenoxyhexa_2_4_dienoat
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +nadh +h +phenazine_1_carboxylate +nad +h2o
-    2_hydroxyphenazine_1_carboxylic_acid
-  }
-
-  branch from o2 side left {
-    o2
-    <-> ec_1_14_13_107 [1.14.13.107] +nadh +4r_limonene +h +nad +h2o
-    4r_limonene_1alpha_2alpha_epoxide
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
-    1s_2s_4s_dihydrocarveol
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +1s_2s_4s_dihydrocarveol
-    2e_geranial
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +1_palmitoyl_2_linoleoyl_sn_glycero_3_phosphoseri +phosphate +1_palmitoyl_2_linoleoyl_sn_glycero_3_phosphoseri +h2o
-    atp
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    16_0_18_3_ps
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> ec_1_1_1_71 [1.1.1.71] +h +11r_dihydroartemisinic_aldehyde +nadp
-    presilphiperfolan_8_ol
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> ec_1_1_1_71 [1.1.1.71] +h +phellandral +nadp
-    thujan_3_ol
   }
 }

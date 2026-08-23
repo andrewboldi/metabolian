@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-all-cis-docosa-7-10-13-to-3r-15z-18z-21z-24z-3 "1-(all-cis-docosa-7,10,13… to (3R,15Z,18Z,21Z,24Z)-3-hy…" {
-  spacing 176
+  spacing 200
 
   spine at 0,0 {
     1_all_cis_docosa_7_10_13_16_tetraenoyl_glycerol
@@ -44,14 +44,14 @@ pathway 1-all-cis-docosa-7-10-13-to-3r-15z-18z-21z-24z-3 "1-(all-cis-docosa-7,10
 
   branch from ppi side left {
     ppi
-    <-> . +1_stearoyl_2_4z_7z_10z_13z_16z_19z_docosahexaeno +ctp +hplus
-    cdp_1_stearoyl_2_4z_7z_10z_13z_16z_19z_docosahex
+    <-> . +hancockiamide_h +trans_cinnamate +atp +amp
+    hancockiamide_g
   }
 
   branch from ppi side right {
     ppi
-    <-> . +1_2_dilinoleoyl_sn_glycero_3_phosphate +ctp +hplus
-    cdp_1_2_dilinoleoyl_sn_glycerol
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    ent_trachylobane
   }
 
   branch from 2e_9z_12z_15z_18z_tetracosapentaenoyl_coa side left {
@@ -64,5 +64,29 @@ pathway 1-all-cis-docosa-7-10-13-to-3r-15z-18z-21z-24z-3 "1-(all-cis-docosa-7,10
     3r_15z_18z_21z_24z_3_hydroxytriacontatetraenoyl
     <-> . +h2o
     2e_15z_18z_21z_24z_triacontapentaenoyl_coa
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    ent_12e_labda_8_17_12_14_triene
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
+    16_hydroxy_ent_kaurene
+  }
+
+  branch from malonyl-coa side left {
+    malonyl-coa
+    <-> . +stearoyl_coa +hplus +co2 +coa
+    4_hydroxy_6_heptadecylpyran_2_one
+  }
+
+  branch from malonyl-coa side right {
+    malonyl-coa
+    <-> . +octanoyl_coa +hplus +co2 +coa
+    4_hydroxy_6_heptylpyran_2_one
   }
 }

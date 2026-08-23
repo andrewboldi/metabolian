@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "l-sorbopyranose-to-h2o",
   "name": "α-L-sorbopyranose to H2O",
-  "category": "amino-acid-metabolism",
+  "category": "energy-metabolism",
   "summary": "A 3-step route from α-L-sorbopyranose to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -117,109 +117,6 @@
       "xrefs": {
         "metanetx": "WATER"
       }
-    },
-    {
-      "id": "glycochenodeoxycholate",
-      "name": "glycochenodeoxycholate",
-      "short": "glycochenodeoxychol…",
-      "formula": "C26H43NO5",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1560588"
-      }
-    },
-    {
-      "id": "adp",
-      "name": "ADP",
-      "formula": "C10H12N5O10P2",
-      "charge": -3,
-      "xrefs": {
-        "metanetx": "MNXM40333"
-      }
-    },
-    {
-      "id": "phosphate",
-      "name": "phosphate",
-      "formula": "HO4P",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM9"
-      }
-    },
-    {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM3"
-      }
-    },
-    {
-      "id": "taurochenodeoxycholate",
-      "name": "taurochenodeoxycholate",
-      "short": "taurochenodeoxychol…",
-      "formula": "C26H44NO6S",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM731821"
-      }
-    },
-    {
-      "id": "tryptophanyl_isoleucyl_tryptophan",
-      "name": "Tryptophanyl-Isoleucyl-Tryptophan",
-      "short": "Tryptophanyl-Isoleu…",
-      "formula": "C28H33N5O4",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1560784"
-      }
-    },
-    {
-      "id": "l_isoleucine",
-      "name": "L-isoleucine",
-      "formula": "C6H13NO2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM728337"
-      }
-    },
-    {
-      "id": "l_tryptophan",
-      "name": "L-tryptophan",
-      "formula": "C11H12N2O2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM741553"
-      }
-    },
-    {
-      "id": "l_leucine",
-      "name": "L-leucine",
-      "formula": "C6H13NO2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1106761"
-      }
-    },
-    {
-      "id": "l_valine",
-      "name": "L-valine",
-      "formula": "C5H11NO2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM199"
-      }
-    },
-    {
-      "id": "tryptophanyl_leucyl_valine",
-      "name": "Tryptophanyl-Leucyl-Valine",
-      "short": "Tryptophanyl-Leucyl…",
-      "formula": "C22H32N4O4",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1560785"
-      }
     }
   ],
   "enzymes": [
@@ -235,14 +132,20 @@
       "name": "L-iditol 2-dehydrogenase",
       "ec": [
         "1.1.1.14"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q00796"
+      }
     },
     {
       "id": "ec_3_2_1_20",
       "name": "alpha-glucosidase",
       "ec": [
         "3.2.1.20"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q8TET4"
+      }
     }
   ],
   "reactions": [
@@ -385,183 +288,49 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "Reaction MNXR207147",
-      "substrates": [
-        {
-          "metabolite": "glycochenodeoxycholate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "glycochenodeoxycholate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR207147"
+      "id": "xt_5_dehydro_d_fructose_h-to-bacteriopheophytin-a",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_dehydro_d_fructose"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-bacteriopheophytin-a"
+      },
+      "note": "Shares 5-dehydro-D-fructose with H to bacteriopheophytin a.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR207147"
+            "id": "MNXM855"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "Reaction MNXR207149",
-      "substrates": [
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "taurochenodeoxycholate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "taurochenodeoxycholate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR207149"
+      "id": "xt_5_dehydro_d_fructose_keto-d-fructose-to-5-dehydro-d-fructose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_dehydro_d_fructose"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "keto-d-fructose-to-5-dehydro-d-fructose"
+      },
+      "note": "Shares 5-dehydro-D-fructose with keto-D-fructose to 5-dehydro-D-fructose.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR207149"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "Reaction MNXR207028",
-      "substrates": [
-        {
-          "metabolite": "tryptophanyl_isoleucyl_tryptophan",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "l_isoleucine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_tryptophan",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "metanetx": "MNXR207028"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR207028"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "Reaction MNXR207030",
-      "substrates": [
-        {
-          "metabolite": "l_leucine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_valine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_tryptophan",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "tryptophanyl_leucyl_valine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "metanetx": "MNXR207030"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR207030"
+            "id": "MNXM855"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-methylpalmitoyl-coa-to-n3-carboxylatoformyl-l "3-methylpalmitoyl-CoA to N3-(carboxylatoformyl)-L-…" {
-  spacing 252
+  spacing 228
 
   spine at 0,0 {
     3_methylpalmitoyl_coa
@@ -16,29 +16,5 @@ pathway 3-methylpalmitoyl-coa-to-n3-carboxylatoformyl-l "3-methylpalmitoyl-CoA t
     oxalyl_coa
     <-> ec_2_3_1_58 [2.3.1.58] +3_amino_l_alanine -coa
     n3_carboxylatoformyl_l_2_3_diaminopropionate
-  }
-
-  branch from succinate side left {
-    succinate
-    <-> . +l_lysinium +chloride +akg +o2 +hplus +co2 +h2o
-    4_chloro_l_lysinium
-  }
-
-  branch from succinate side right {
-    succinate
-    <-> . +gibberellin_a53 +akg +o2 +co2 +h2o +hplus
-    gibberellin_a17
-  }
-
-  branch from formyl_coa side left {
-    formyl_coa
-    <-> . +2_hydroxystearoyl_coa
-    heptadecanal
-  }
-
-  branch from formyl_coa side right {
-    formyl_coa
-    <-> . +heptadecanal
-    2r_2_hydroxyoctadecanoyl_coa
   }
 }

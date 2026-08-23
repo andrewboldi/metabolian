@@ -4,57 +4,15 @@
 # edit the generator, not this file.
 
 pathway nadh-to-o2 "NADH to O2" {
-  spacing 226
+  spacing 256
 
   spine at 0,0 {
     nadh
-    <-> ec_1_14_13_230 [1.14.13.230] +h +o2 +propane -nad -h2o
-    1_propanol
-    <-> ec_1_2_98_1 [1.2.98.1] +propanoate +h -h2o
-    propanal
-    <-> ec_1_13_12_16 [1.13.12.16] +nitrite +h -o2
-    1_nitropropane
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_3_1_10 [1.3.1.10] +nadh +o_s_2e_17z_29z_octatetracontatrienoylpantetheine +h
-    o_s_17z_29z_octatetracontadienoylpantetheine_4_p
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_3_1_10 [1.3.1.10] +nadh +o_s_2e_17z_hexatriacontadienoylpantetheine_4_pho +h
-    o_s_17z_hexatriacontenoylpantetheine_4_phosphory
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +o_s_3r_17z_3_hydroxyhexatriacontenoylpantetheine
-    o_s_2e_17z_hexatriacontadienoylpantetheine_4_pho
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +simvastatin
-    simvastatin_hydroxy_acid
-  }
-
-  branch from propanal side left {
-    propanal
-    <-> . +4_hydroxy_5_methyl_3_2h_furanone +h2o
-    2e_4_hydroxy_5_methyl_2_propylidene_3_2h_furano
-  }
-
-  branch from o2 side right {
-    o2
-    <-> ec_1_2_3_1 [1.2.3.1] +nicotine_delta1_5_iminium_ion +h2o +h +cotinine
-    h2o2
-  }
-
-  branch from o2 side left {
-    o2
-    <-> ec_1_14_13_237 [1.14.13.237] +glucohirsutin +nadp +h2o +h +nadph
-    8_methylsulfanyl_octyl_glucosinolate
+    <-> ec_1_2_1_5 [1.2.1.5] +h +octacosanoic_acid -nad -h2o
+    octacosanal
+    <-> . +h -carbon_monoxide
+    heptacosane
+    <-> ec_1_13_11_48 [1.13.11.48] +n_acetylanthranilate +carbon_monoxide -o2
+    3_hydroxy_2_methyl_1h_quinolin_4_one
   }
 }

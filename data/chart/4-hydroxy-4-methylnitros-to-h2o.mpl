@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-hydroxy-4-methylnitros-to-h2o "4-Hydroxy-4-(methylnitros… to H2O" {
-  spacing 288
+  spacing 340
 
   spine at 0,0 {
     4_hydroxy_4_methylnitrosoamino_1_3_pyridinyl_1_b
@@ -18,14 +18,14 @@ pathway 4-hydroxy-4-methylnitros-to-h2o "4-Hydroxy-4-(methylnitros… to H2O" {
 
   branch from h side left {
     h
-    <-> ec_2_7_7_67 [2.7.7.67] +ctp +2_3_bis_o_phytanyl_sn_glycerol_1_phosphate +cdp_2_3_bis_o_phytanyl_sn_glycerol
-    diphosphate
+    <-> . +udp +2_o_beta_d_glucopyranosyl_tylosin +tylosin
+    udp_alpha_d_glucose
   }
 
   branch from h side right {
     h
-    <-> . +2_oxo_4_phenylbutyric_acid +co2
-    2_benzyl_3_oxobutanedioate
+    <-> . +udp +loganin +udp_alpha_d_glucose
+    loganetin
   }
 
   branch from 4_n_nitrosomethylamino_1_3_pyridyl_butan_1_one side left {
@@ -36,67 +36,127 @@ pathway 4-hydroxy-4-methylnitros-to-h2o "4-Hydroxy-4-(methylnitros… to H2O" {
 
   branch from o2 side right {
     o2
-    <-> . +2_amino_4_hydroxypteridine +h2o2
-    7_8_dihydropterin
+    <-> . +nitrite
+    nitrate
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_16_3_2 [1.16.3.2] +fe +h2o +h
-    feo_oh_monomer
+    <-> ec_1_14_14_23 [1.14.14.23] +h +cholesterol +nadph +nadp +h2o
+    7alpha_hydroxycholesterol
   }
 
   branch from nadph side right {
     nadph
-    <-> . +malonyl_coa +s_methylmalonyl_coa +h +nadp +coa +protomycinolide_iv +h2o
-    co2
+    <-> ec_1_1_1_2 [1.1.1.2] +glyceraldehyde_3_phosphate +h +nadp
+    sn_glycerol_3_phosphate
   }
 
   branch from nadph side left {
     nadph
-    <-> . +tylosin +h +nadp
-    relomycin
+    <-> ec_1_14_13_47 [1.14.13.47] +4s_limonene +h +o2 +nadp +h2o
+    1s_6r_isopiperitenol
   }
 
   branch from 4_methylnitrosamino_1_3_pyridyl_1_butanol side right {
-    4_methylnitrosamino_1_3_pyridyl_1_butanol
-    <-> ec_2_4_1_17 [2.4.1.17] +udp +nnal_n_glucuronide
-    udp_alpha_d_glucuronate
-  }
-
-  branch from 4_methylnitrosamino_1_3_pyridyl_1_butanol side left {
     4_methylnitrosamino_1_3_pyridyl_1_butanol
     <-> . +o2
     4_methylnitrosamino_1_3_pyridyl_n_oxide_1_butano
   }
 
-  branch from nadp side right {
-    nadp
-    <-> . +h +10e_12z_hexadeca_10_12_dienoate +nadph +h2o
-    bombykol
-  }
-
   branch from nadp side left {
     nadp
-    <-> . +luteolin +h +o2 +nadph +h2o
-    hypolaetin
+    <-> ec_1_14_13_16 [1.14.13.16] +cyclopentanone +h +o2 +nadph +h2o
+    valerolactone
   }
 
-  branch from 1_methylnitrosoamino_4_3_pyridinyl_1_4_butanedio side right {
+  branch from nadp side right {
+    nadp
+    <-> ec_1_1_1_206 [1.1.1.206] +tropinone +nadph
+    tropine
+  }
+
+  branch from 1_methylnitrosoamino_4_3_pyridinyl_1_4_butanedio side left {
     1_methylnitrosoamino_4_3_pyridinyl_1_4_butanedio
     <-> . +n_nitrosomethanamine
     5_3_pyridyl_2_hydroxytetrahydrofuran
   }
 
+  branch from h2o side right {
+    h2o
+    <-> ec_1_1_1_205 [1.1.1.205] +imp +nicotinamide_hypoxanthine_dinucleotide +h +nicotinamide_hypoxanthine_dinucleotide
+    xmp
+  }
+
   branch from h2o side left {
     h2o
-    <-> . +3_4_dihydroxybenzoate +2_4_6_trihydroxybenzoic_acid
-    2_3_4_dihydroxybenzoyloxy_4_6_dihydroxybenzoate
+    <-> ec_3_1_2_20 [3.1.2.20] +2_hydroxybutanoate +h +coa
+    2_hydroxybutyryl_coa
+  }
+
+  branch from 4_hydroxy_4_methylnitrosoamino_1_3_pyridinyl_1_b side right {
+    4_hydroxy_4_methylnitrosoamino_1_3_pyridinyl_1_b
+    <-> . +n_nitrosomethanamine
+    4_oxo_4_pyridin_3_yl_butanal
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_14_13_52 [1.14.13.52] +formononetin +h +o2 +nadph +h2o
+    calycosin
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_14_13_21 [1.14.13.21] +2r_3r_dihydrokaempferol +h +o2 +nadph +h2o
+    2r_3r_dihydroquercetin
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_4_21_62 [3.4.21.62] +n_acetyl_l_tryptophanate +h +methanol
+    n_acetyl_l_tryptophan_methyl_ester
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_52 [3.2.1.52] +n_acetyl_d_hexosamine +n_n_diacetylchitobiose
-    n_n_n_triacetylchitotriose
+    <-> ec_1_7_3_4 [1.7.3.4] +nitrite +ubiquinol_2 +h +hydroxylamine
+    ubiquinone_2
+  }
+
+  branch from h side left {
+    h
+    <-> . +udp +des_acyl_avenacin_a +udp_alpha_d_glucose
+    monodeglucosyl_des_acyl_avenacin_a
+  }
+
+  branch from h side right {
+    h
+    <-> . +udp +6_methoxypodophyllotoxin_7_glucoside +udp_alpha_d_glucose
+    5_methoxypodophyllotoxin
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_13_11_10 [1.13.11.10] +h +7_8_dihydroxykynurenate
+    5_3_carboxy_3_oxopropenyl_4_6_dihydroxypicolinat
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_13_11_22 [1.13.11.22] +e_caffeate +h
+    3_2_carboxyethenyl_cis_cis_muconate
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_1_1_252 [1.1.1.252] +1_3_8_trihydroxynaphthalene +h +nadp
+    vermelone
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_14_13_28 [1.14.13.28] +6as_11as_3_6a_9_trihydroxypterocarpan +nadp +h2o +h +o2
+    6ar_11ar_3_9_dihydroxypterocarpan
   }
 }

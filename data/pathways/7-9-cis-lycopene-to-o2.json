@@ -79,72 +79,129 @@
       }
     },
     {
-      "id": "2_oxoglutarate",
-      "name": "2-oxoglutarate",
-      "formula": "C5H4O5",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM1368744"
-      }
-    },
-    {
-      "id": "5_hydroxy_leucine",
-      "name": "5-hydroxy-leucine",
-      "formula": "C6H13NO3",
+      "id": "retinal",
+      "name": "retinal",
+      "formula": "C20H28O",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM147851"
+        "chebi": "CHEBI:15035"
       }
     },
     {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
+      "id": "all_trans_beta_carotene",
+      "name": "all-trans-beta-carotene",
+      "short": "all-trans-beta-caro…",
+      "formula": "C40H56",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM13"
+        "metanetx": "MNXM1108250"
       }
     },
     {
-      "id": "5_5_dihydroxy_leucine",
-      "name": "5,5-dihydroxy-leucine",
-      "short": "5,5-dihydroxy-leuci…",
-      "formula": "C6H13NO4",
+      "id": "pravastatin_sodium",
+      "name": "pravastatin sodium",
+      "formula": "C23H35O7.Na",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM147842"
+        "chebi": "CHEBI:8361"
       }
     },
     {
-      "id": "succinate",
-      "name": "succinate",
-      "formula": "C4H4O4",
-      "charge": -2,
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
       "xrefs": {
-        "metanetx": "MNXM25"
+        "metanetx": "MNXM1"
       }
     },
     {
-      "id": "l_homotyrosine",
-      "name": "L-Homotyrosine",
-      "formula": "C10H13NO3",
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "3_s_hydroxy_pravastatin",
+      "name": "3'-S-hydroxy-pravastatin",
+      "short": "3'-S-hydroxy-pravas…",
+      "formula": "C23H35NaO8",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:81871"
+        "metanetx": "MNXM744432"
       }
     },
     {
-      "id": "3_hydroxy_l_homotyrosine",
-      "name": "3-hydroxy-L-homotyrosine",
-      "short": "3-hydroxy-L-homotyr…",
-      "formula": "C10H13NO4",
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM147786"
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "4_hydroxymidazolam",
+      "name": "4-hydroxymidazolam",
+      "formula": "C18H13ClFN3O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:145331"
+      }
+    },
+    {
+      "id": "midazolam",
+      "name": "midazolam",
+      "formula": "C18H13ClFN3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:6931"
+      }
+    },
+    {
+      "id": "hexanoate",
+      "name": "hexanoate",
+      "formula": "C6H11O2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1653"
+      }
+    },
+    {
+      "id": "5_hydroxyhexanoic_acid",
+      "name": "5-hydroxyhexanoic acid",
+      "short": "5-hydroxyhexanoic…",
+      "formula": "C6H12O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:131434"
       }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_1_13_11_63",
+      "name": "beta-carotene 15,15'-dioxygenase",
+      "ec": [
+        "1.13.11.63"
+      ],
+      "xrefs": {
+        "uniprot": "Q9HAY6"
+      }
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -258,14 +315,17 @@
     },
     {
       "id": "r4",
-      "name": "Reaction MNXR120127",
+      "name": "beta-carotene 15,15'-dioxygenase",
+      "ec": "1.13.11.63",
       "substrates": [
         {
-          "metabolite": "2_oxoglutarate",
-          "stoichiometry": 1
-        },
+          "metabolite": "retinal",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
         {
-          "metabolite": "5_hydroxy_leucine",
+          "metabolite": "all_trans_beta_carotene",
           "stoichiometry": 1
         },
         {
@@ -273,77 +333,438 @@
           "stoichiometry": 1
         }
       ],
-      "products": [
+      "catalysts": [
         {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "5_5_dihydroxy_leucine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "succinate",
-          "stoichiometry": 1
+          "enzyme": "ec_1_13_11_63"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "metanetx": "MNXR120127"
+        "metanetx": "MNXR153094"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR120127"
+            "id": "MNXR153094"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "Reaction MNXR120135",
+      "name": "Reaction MNXR153952",
       "substrates": [
         {
-          "metabolite": "2_oxoglutarate",
+          "metabolite": "pravastatin_sodium",
           "stoichiometry": 1
         },
         {
-          "metabolite": "l_homotyrosine",
+          "metabolite": "h",
           "stoichiometry": 1
         },
         {
           "metabolite": "o2",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "co2",
+          "metabolite": "nadp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "3_hydroxy_l_homotyrosine",
+          "metabolite": "3_s_hydroxy_pravastatin",
           "stoichiometry": 1
         },
         {
-          "metabolite": "succinate",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR120135"
+        "metanetx": "MNXR153952"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR120135"
+            "id": "MNXR153952"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "Reaction MNXR154036",
+      "substrates": [
+        {
+          "metabolite": "4_hydroxymidazolam",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "midazolam",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "metanetx": "MNXR154036"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR154036"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "Reaction MNXR154071",
+      "substrates": [
+        {
+          "metabolite": "hexanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_hydroxyhexanoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "metanetx": "MNXR154071"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR154071"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_all_trans_lycopene_5-cis-lycopene-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_lycopene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cis-lycopene-to-h2o"
+      },
+      "note": "Shares all-trans-lycopene with 5-cis-lycopene to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364638"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_lycopene_plastoquinone-9-to-neurosporaxanthin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_lycopene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "plastoquinone-9-to-neurosporaxanthin"
+      },
+      "note": "Shares all-trans-lycopene with plastoquinone-9 to neurosporaxanthin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364638"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sulcatone_5-cis-lycopene-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sulcatone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cis-lycopene-to-h2o"
+      },
+      "note": "Shares sulcatone with 5-cis-lycopene to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2867"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sulcatone_cyanidin-3-o-6-o-p-coum-to-e-5-hydroxyconiferyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sulcatone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cyanidin-3-o-6-o-p-coum-to-e-5-hydroxyconiferyl"
+      },
+      "note": "Shares sulcatone with cyanidin 3-O-[6-O-(p-coum… to (E)-5-hydroxyconiferyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2867"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pseudoionone_5-cis-lycopene-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pseudoionone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cis-lycopene-to-h2o"
+      },
+      "note": "Shares pseudoionone with 5-cis-lycopene to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:67207"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_bixin_dialdehyde_3r-5s-1-pyrroline-3-hyd-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "bixin_dialdehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3r-5s-1-pyrroline-3-hyd-to-h2o"
+      },
+      "note": "Shares bixin dialdehyde with (3R,5S)-1-pyrroline-3-hyd… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133327"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_retinal_aflatoxin-q1-to-aflatoxin-b1exo-8-9-epoxi",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "retinal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aflatoxin-q1-to-aflatoxin-b1exo-8-9-epoxi"
+      },
+      "note": "Shares retinal with aflatoxin Q1 to Aflatoxin B1exo-8,9-epoxi….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15035"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_retinal_retinal-to-all-trans-neoxanthin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "retinal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "retinal-to-all-trans-neoxanthin"
+      },
+      "note": "Shares retinal with retinal to all-trans-neoxanthin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15035"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_retinal_retncoa-c-to-1-o-4-oxoretinoyl-d-g",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "retinal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "retncoa-c-to-1-o-4-oxoretinoyl-d-g"
+      },
+      "note": "Shares retinal with Retncoa c to 1-O-(4-oxoretinoyl)-β-D-g….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15035"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_retinal_s-adenosyl-l-homocysteine-to-8-apo-caroten-8-al",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "retinal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-8-apo-caroten-8-al"
+      },
+      "note": "Shares retinal with S-adenosyl-L-homocysteine to 8'-apo-β,ψ-caroten-8'-al.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15035"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pravastatin_sodium_3-hydroxy-3-phenylpropion-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pravastatin_sodium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxy-3-phenylpropion-to-h2o"
+      },
+      "note": "Shares pravastatin sodium with 3-hydroxy-3-phenylpropion… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:8361"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pravastatin_sodium_3-phospho-ji-20a-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pravastatin_sodium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-phospho-ji-20a-to-h2o"
+      },
+      "note": "Shares pravastatin sodium with 3'-phospho-JI-20A to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:8361"
           }
         ]
       }

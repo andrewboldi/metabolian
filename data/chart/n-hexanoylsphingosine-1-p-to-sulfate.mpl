@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-hexanoylsphingosine-1-p-to-sulfate "N-hexanoylsphingosine-1-p… to sulfate" {
-  spacing 184
+  spacing 196
 
   spine at 0,0 {
     n_hexanoylsphingosine_1_phosphocholine
@@ -18,25 +18,37 @@ pathway n-hexanoylsphingosine-1-p-to-sulfate "N-hexanoylsphingosine-1-p… to su
 
   branch from adenosine_3_5_bismonophosphate side left {
     adenosine_3_5_bismonophosphate
-    <-> ec_2_8_2_36 [2.8.2.36] +a41030a +3_phosphonato_5_adenylyl_sulfate +hplus
-    a47934
+    <-> . +oleoyl_coa +h2o +hplus
+    s_oleoyl_4_phosphopantetheine
   }
 
   branch from adenosine_3_5_bismonophosphate side right {
     adenosine_3_5_bismonophosphate
-    <-> . +d_galactosyl_1_4_d_glucosyl_1_1_n_acylsphingosi +3_phosphonato_5_adenylyl_sulfate +hplus
-    1_3_o_sulfo_d_galactosyl_1_4_d_glucosyl_n_acylsp
+    <-> . +arachidonoyl_coa +h2o +hplus
+    s_arachidonoyl_4_phosphopantetheine
   }
 
-  branch from sulfate side left {
-    sulfate
-    <-> . +z_4_methylsulfanylbutyl_n_sulfonatooxy_methanim +hplus
-    erucin
+  branch from 3_phosphonato_5_adenylyl_sulfate side left {
+    3_phosphonato_5_adenylyl_sulfate
+    <-> . +4_isopropylphenol +adenosine_3_5_bismonophosphate +hplus
+    4_isopropylphenyl_sulfate
   }
 
-  branch from sulfate side right {
-    sulfate
-    <-> . +z_4_methylsulfanylbutyl_n_sulfonatooxy_methanim +sulfur_atom +hplus
-    5_methylsulfanyl_pentanenitrile
+  branch from 3_phosphonato_5_adenylyl_sulfate side right {
+    3_phosphonato_5_adenylyl_sulfate
+    <-> . +bisphenol_a +adenosine_3_5_bismonophosphate +hplus
+    bisphenol_a_sulfate
+  }
+
+  branch from adenosine_3_5_bismonophosphate side left {
+    adenosine_3_5_bismonophosphate
+    <-> . +malonyl-coa +h2o +hplus
+    s_malonyl_4_phosphopantetheine
+  }
+
+  branch from adenosine_3_5_bismonophosphate side right {
+    adenosine_3_5_bismonophosphate
+    <-> . +4_8_dimethylnonanoyl_coa +h2o +hplus
+    s_4_8_dimethylnonanoyl_4_phosphopantetheine
   }
 }

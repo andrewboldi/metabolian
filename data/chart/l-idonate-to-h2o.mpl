@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-idonate-to-h2o "L-idonate to H2O" {
-  spacing 242
+  spacing 176
 
   spine at 0,0 {
     l_idonate
@@ -18,81 +18,15 @@ pathway l-idonate-to-h2o "L-idonate to H2O" {
     atp
   }
 
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    12s_hht
+  branch from alpha_d_galactose side left {
+    alpha_d_galactose
+    <-> .
+    aldehydo_d_galactose
   }
 
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    cholestane_3_7_12_24_25_pentol
-  }
-
-  branch from 2_dehydro_d_gluconate side left {
-    2_dehydro_d_gluconate
-    <-> . +nadh +h +d_gluconate
-    nad
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> . +h +2e_henicosenoyl_coa +nadp
-    heneicosanoyl_coenzyme_a
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> . +octadecanoyl_coa +h +o2 +nadp +h2o
-    vaccenyl_coenzyme_a
-  }
-
-  branch from d_gluconate side right {
-    d_gluconate
-    <-> ec_3_2_1_23 [3.2.1.23] +beta_d_galactose +h2o
-    lactobionate
-  }
-
-  branch from d_gluconate side left {
-    d_gluconate
-    <-> . +fadh2 +2_keto_l_gluconate +h
-    fad
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +17z_hexacosenoyl_coa +h +nadph
-    2e_17z_hexacosadi_2_17_enoyl_coa
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +13z_3_oxoicosenoyl_coa +h +nadph
-    3_s_hydroxy_13_cis_eicosenoyl_coenzyme_a
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_aspartate +l_glutamate
-    aspartyl_glutamate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_histidine +l_aspartate +l_cysteine
-    aspartyl_histidyl_cysteine
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    8_dehydrocholesterol
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    17alpha_hydroxypregnenolone_sulfate
+  branch from alpha_d_galactose side right {
+    alpha_d_galactose
+    <-> ec_5_3_1_4 [5.3.1.4]
+    d_tagatopyranose
   }
 }

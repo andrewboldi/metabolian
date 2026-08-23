@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway o-s-fatty-acylpantethein-to-h2o "O-(S-fatty acylpantethein… to H2O" {
-  spacing 306
+  spacing 270
 
   spine at 0,0 {
     o_s_fatty_acylpantetheine_4_phosphoryl_l_serine
@@ -24,55 +24,19 @@ pathway o-s-fatty-acylpantethein-to-h2o "O-(S-fatty acylpantethein… to H2O" {
 
   branch from diglyceride side left {
     diglyceride
-    <-> . +n_hydroxytetratriacontenoyl_sphingosine +linoleoyl_containing_1_2_3_triacyl_sn_glycerol
-    n_linoleoyloxy_tetratriacontenoyl_sphingosine
+    <-> . +n_hydroxyoctatriacontenoyl_sphingosine +linoleoyl_containing_1_2_3_triacyl_sn_glycerol
+    n_linoleoyloxy_octatriacontenoyl_sphingosine
   }
 
   branch from diglyceride side right {
     diglyceride
-    <-> . +n_hydroxytetratriacontadienoyl_sphingosine +linoleoyl_containing_1_2_3_triacyl_sn_glycerol
-    n_linoleoyloxy_tetratriacontadienoyl_sphingosine
-  }
-
-  branch from 13_cis_retinol side left {
-    13_cis_retinol
-    <-> . +myristoyl_coa +coa
-    13_cis_retinyl_tetradecanoate
-  }
-
-  branch from 13_cis_retinol side right {
-    13_cis_retinol
-    <-> . +palmitoyl_coa +coa
-    13_cis_retinyl_hexadecanoate
+    <-> . +n_hydroxytriacontanoyl_sphingosine +linoleoyl_containing_1_2_3_triacyl_sn_glycerol
+    n_30_9z_12z_octadecadienoyloxy_tricontanoyl_sphi
   }
 
   branch from 13_cis_retinal side left {
     13_cis_retinal
     <-> .
     all_trans_retinal
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +2_hexaprenyl_6_hydroxyphenol +h2o +h +o2 +nadph
-    2_hexaprenylphenol
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +2_hexaprenyl_6_hydroxyphenol +h2o +h +o2 +nadph
-    2_hexaprenylphenol
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +sucrose +beta_d_fructose
-    beta_d_glucose
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_2_1_108 [3.2.1.108] +alpha_d_glucose +beta_d_galactose
-    beta_lactose
   }
 }

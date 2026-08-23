@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4alpha-14alpha-dimethyl-5-to-4alpha-methyl-5alph "4alpha,14alpha-dimethyl-5… to 4alpha-methyl-5alpha-chol…" {
-  spacing 208
+  spacing 178
 
   spine at 0,0 {
     4alpha_14alpha_dimethyl_5alpha_cholesta_8_24_die
@@ -16,39 +16,9 @@ pathway 4alpha-14alpha-dimethyl-5-to-4alpha-methyl-5alph "4alpha,14alpha-dimethy
     4alpha_methyl_5alpha_cholesta_7_24_dien_3beta_ol
   }
 
-  branch from formate side left {
-    formate
-    <-> ec_3_7_1_25 [3.7.1.25] +2z_4e_2_hydroxy_5_methyl_6_oxohexa_2_4_dienoate +h2o +h
-    2z_2_hydroxyhexa_2_5_dienoate
-  }
-
-  branch from formate side right {
-    formate
-    <-> ec_1_2_1_4 [1.2.1.4] +nadp +h2o +h +nadph
-    formaldehyde
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +protoporphyrin_ix +h +nadph
-    protoporphyrinogen_ix
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +h +o2 +nadph +thiomethyl_conjugate_acetaminophen +h2o
-    thiomethyl_sulphoxide_conjugate_acetaminophen
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +h +adp +cerivastatin +phosphate +cerivastatin
-    atp
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    cerivastatin_m1
+  branch from 4alpha_14alpha_dimethyl_5alpha_cholesta_8_24_die side left {
+    4alpha_14alpha_dimethyl_5alpha_cholesta_8_24_die
+    <-> ec_5_5_1_9 [5.5.1.9]
+    31_norcycloartenol
   }
 }

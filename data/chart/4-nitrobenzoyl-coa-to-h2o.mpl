@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-nitrobenzoyl-coa-to-h2o "4-nitrobenzoyl-CoA to H2O" {
-  spacing 266
+  spacing 340
 
   spine at 0,0 {
     4_nitrobenzoyl_coa
@@ -26,49 +26,127 @@ pathway 4-nitrobenzoyl-coa-to-h2o "4-nitrobenzoyl-CoA to H2O" {
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_214 [2.1.1.214] +guanosine_5_monophosphate_1 +sam +hplus
-    n2_methylguanosine_5_monophosphate_1
+    <-> ec_2_1_1_403 [2.1.1.403] +ecgonone +sam
+    ecgononium_methyl_ester
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_216 [2.1.1.216] +guanosine_5_monophosphate_1 +sam +hplus
-    n2_n2_dimethylguanosine_5_monophosphate_1
-  }
-
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
-    <-> ec_1_14_15_26 [1.14.15.26] +toluene +di_sulfido_diiron +o2 +hplus +h2o
-    benzyl_alcohol
-  }
-
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
-    <-> ec_1_14_15_25 [1.14.15.25] +p_cymene +di_sulfido_diiron +o2 +hplus +h2o
-    4_isopropylbenzyl_alcohol
+    <-> . +l_lysinium +sam +hplus
+    n6_methyl_l_lysinium
   }
 
   branch from atp side right {
     atp
-    <-> . +h +adp +phosphate +h2o
-    hexadecanoate
+    <-> . +diphosphate +amp +r_r_chrysanthemoyl_coa +coa
+    r_r_chrysanthemate
   }
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
-    9z_octadecenoate
+    <-> . +diphosphate +amp +3_24_dioxocholest_4_en_26_oyl_coa +3_24_dioxo_cholest_4_en_26_oate
+    coa
   }
 
   branch from h2o side right {
     h2o
-    <-> . +h +adp +phosphate +atp
-    all_cis_octadeca_6_9_12_15_tetraenoic_acid
+    <-> ec_3_2_1_21 [3.2.1.21] +linamarin +2_hydroxy_2_methylpropanenitrile
+    beta_d_glucose
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +adp +phosphate +atp
-    9z_12z_octadecadienoate
+    <-> ec_3_4_17_21 [3.4.17.21] +n_acetyl_l_aspartyl_l_glutamate +l_glutamate
+    ac_asp_glu_glu
+  }
+
+  branch from malonyl-coa side right {
+    malonyl-coa
+    <-> . +9_decenoyl_coa +hplus +co2 +coa
+    4_hydroxy_6_non_8_en_1_yl_pyran_2_one
+  }
+
+  branch from malonyl-coa side left {
+    malonyl-coa
+    <-> . +15_hydroxypentadecanoyl_coa +hplus +co2 +coa
+    4_hydroxy_6_14_hydroxytetradecyl_pyran_2_one
+  }
+
+  branch from sam side right {
+    sam
+    <-> . +n6_methyl_l_lysinium +sah +hplus
+    n6_n6_dimethyl_l_lysine_1
+  }
+
+  branch from sam side left {
+    sam
+    <-> . +n6_n6_dimethyl_l_lysine_1 +sah +hplus
+    n6_n6_n6_trimethyl_l_lysine
+  }
+
+  branch from sah side right {
+    sah
+    <-> . +4_hydroxystyrene +sam +hplus
+    4_vinylanisole
+  }
+
+  branch from h side left {
+    h
+    <-> . +dtdp_4_oxo_2_6_dideoxy_d_allose +nadp +nadph
+    dtdp_3_4_didehydro_2_6_dideoxy_d_glucose
+  }
+
+  branch from h side right {
+    h
+    <-> . +2_oxoglutarate +aminobacteriohopanetriol +l_glutamate
+    ribosylhopane
+  }
+
+  branch from adp side left {
+    adp
+    <-> . +cytosinine +3s_beta_arginine +atp +h +phosphate
+    demethylblasticidin_s
+  }
+
+  branch from adp side right {
+    adp
+    <-> ec_6_3_2_47 [6.3.2.47] +3_2r_3r_3_carbamoyloxiran_2_yl_carbonyl_amino_l +l_valine +atp +h +phosphate
+    dapdiamide_e
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> ec_3_6_1_52 [3.6.1.52] +5_diphospho_1d_myo_inositol_1_2_3_4_6_pentakisph +h +h2o
+    1_5_bis_diphospho_1d_myo_inositol_2_3_4_6_tetrak
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> . +beta_d_galacturonate +h2o
+    1_phospho_alpha_d_galacturonate
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +3_oxo_24_ethyl_cholest_4_en_26_oate +coa +diphosphate +amp
+    3_oxo_24_ethyl_cholest_4_en_26_oyl_coa
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +diphosphate +amp +2_naphthoyl_coa +h +coa
+    2_naphthoic_acid
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +2_oxoglutarate +2_3_dihydrothienamycin +o2 +succinate +thienamycin
+    co2
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_5_2_1 [3.5.2.1] +5_methylbarbituric_acid
+    3_oxo_3_ureidoisobutyrate
   }
 }

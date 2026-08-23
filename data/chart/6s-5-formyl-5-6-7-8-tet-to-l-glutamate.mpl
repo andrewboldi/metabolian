@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 6s-5-formyl-5-6-7-8-tet-to-l-glutamate "(6S)-5-formyl-5,6,7,8-tet… to L-glutamate" {
-  spacing 230
+  spacing 272
 
   spine at 0,0 {
     6s_5_formyl_5_6_7_8_tetrahydrofolate
@@ -20,81 +20,123 @@ pathway 6s-5-formyl-5-6-7-8-tet-to-l-glutamate "(6S)-5-formyl-5,6,7,8-tet… to 
     10_formyltetrahydrofolate_glu_6
   }
 
-  branch from 6r_10_formyltetrahydrofolate side left {
-    6r_10_formyltetrahydrofolate
-    <-> . +n5_hydroxy_l_ornithine +n5_formyl_n5_hydroxy_l_ornithine
-    6s_5_6_7_8_tetrahydrofolate
+  branch from h side left {
+    h
+    <-> . +l_dehydroascorbic_acid +11_hydroxy_d4_neuroprostane +h2o +l_ascorbate
+    11_hydroperoxy_h4_neuroprostane
   }
 
   branch from h side right {
     h
-    <-> ec_1_3_1_111 [1.3.1.111] +geranylgeranyl_bacteriochlorophyllide_a +nadph +bacteriochlorophyll_a
-    nadp
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_1_1_81 [3.1.1.81] +n_butyryl_l_homoserine +h2o
-    a_s_butyr_amido_r_butyrolactone
-  }
-
-  branch from adp side right {
-    adp
-    <-> . +h +phosphate +atp +h2o
-    12s_hydroperoxy_5z_8z_10e_14z_eicosatetraenoate
+    <-> . +l_dehydroascorbic_acid +10_hydroxy_e4_neuroprostane +h2o +l_ascorbate
+    10_hydroperoxy_h4_neuroprostane
   }
 
   branch from adp side left {
     adp
     <-> . +h +phosphate +atp +h2o
-    12_ht_or_m_vi_12_hydroxy_tacrolimus
+    rosuvastatin
+  }
+
+  branch from adp side right {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    rosuvastatin_glucuronide
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +alpha_d_ribose_1_phosphate +e_5_2_bromovinyl_uracil
+    sorivudine
   }
 
   branch from phosphate side right {
     phosphate
     <-> . +h +adp +atp +h2o
-    15_31_o_didesmethyl_tacrolimus
-  }
-
-  branch from phosphate side left {
-    phosphate
-    <-> . +h +adp +atp +h2o
-    15_dmt_or_m_iii_15_o_desmethyl_tacrolimus
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_2_1_22 [3.2.1.22] +d_galactopyranose +h +4_nitrophenol
-    4_nitrophenyl_d_galactoside
+    rosuvastatin_5s_lactone
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_62 [3.2.1.62] +daidzein_7_o_beta_d_glucoside +glucose +h
-    daidzein
+    <-> . +5_s_l_cysteinyl_dopaquinone
+    1_4_benzothiazine_o_quinonimine
   }
 
-  branch from atp side right {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    15s_hydroperoxy_5z_8z_11z_13e_eicosatetraenoate
+  branch from h2o side right {
+    h2o
+    <-> . +prostaglandin_pge2_glyceryl_ester
+    prostaglandin_pgb2_glyceryl_ester
   }
 
   branch from atp side left {
     atp
     <-> . +h +adp +phosphate +h2o
-    18_hete
+    sch_488128
   }
 
-  branch from l_glutamate side right {
-    l_glutamate
-    <-> . +l_arginine +h2o
-    arginyl_glutamyl_glutamate
+  branch from atp side right {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    sch_57871_glucuronide
   }
 
-  branch from l_glutamate side left {
-    l_glutamate
-    <-> . +l_proline +l_arginine +h2o
-    arginyl_glutamyl_proline
+  branch from atp side left {
+    atp
+    <-> . +4r_hydroxysphinganine_1_phosphate +adp
+    2_amino_1_3_4_octadecanetriol
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    sm_d18_0_24_1_sphingomyelin
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +l_dehydroascorbic_acid +10_hydroxy_d4_neuroprostane +10_hydroperoxy_h4_neuroprostane +h
+    l_ascorbate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +l_dehydroascorbic_acid +14_hydroxy_e4_neuroprostane +h +l_ascorbate
+    14_hydroperoxy_h4_neuroprostane
+  }
+
+  branch from h side left {
+    h
+    <-> . +14_hydroxy_d4_neuroprostane +h2o +14_hydroperoxy_h4_neuroprostane +l_ascorbate
+    l_dehydroascorbic_acid
+  }
+
+  branch from h side right {
+    h
+    <-> . +l_dehydroascorbic_acid +20_hydroxy_e4_neuroprostane +h2o +l_ascorbate
+    20_hydroperoxy_h4_neuroprostane
+  }
+
+  branch from adp side left {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    sm_d18_1_14_0_sphingomyelin
+  }
+
+  branch from adp side right {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    sm_d18_1_15_0_sphingomyelin
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    sm_d18_1_16_1_sphingomyelin
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    sm_d18_1_16_0_sphingomyelin
   }
 }

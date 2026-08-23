@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dtdp-l-dihydrostreptose-to-dtdp-4-dehydro-l-rham "dTDP-L-dihydrostreptose to dTDP-4-dehydro-β-L-rhamno…" {
-  spacing 308
+  spacing 340
 
   spine at 0,0 {
     dtdp_l_dihydrostreptose
@@ -22,38 +22,38 @@ pathway dtdp-l-dihydrostreptose-to-dtdp-4-dehydro-l-rham "dTDP-L-dihydrostreptos
 
   branch from dtdp side left {
     dtdp
-    <-> ec_2_4_1_327 [2.4.1.327] +dtdp_2_deoxy_l_fucose +aclacinomycin_t +hplus
-    aclacinomycin_s
+    <-> . +dtdp_l_vancosamine +devancoaminyl_vancomycin +hplus
+    epivancomycin
   }
 
   branch from dtdp side right {
     dtdp
-    <-> ec_2_4_1_327 [2.4.1.327] +dtdp_2_deoxy_l_fucose +aclacinomycin_s +hplus
-    2_deoxy_l_fucosylaclacinomycin_s
+    <-> . +dttp +2_deoxyguanosine_5_monophosphate
+    dgdp
   }
 
   branch from dttp side left {
     dttp
-    <-> . +2_deoxyguanosine_5_monophosphate +dtdp
-    dgdp
+    <-> . +kanamycin_a +ppi
+    4_thymidylylkanamycin_a
   }
 
   branch from dttp side right {
     dttp
-    <-> . +h2o +pi +hplus
-    dtmp
+    <-> . +amikacin +ppi
+    4_thymidylylamikacin
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_74 [4.2.3.74] +fpp +h2o
-    presilphiperfolan_8_ol
+    <-> ec_4_2_3_147 [4.2.3.147] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    pimara_8_14_15_diene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_194 [4.2.3.194] +fpp +h2o
-    drimenol
+    <-> ec_4_2_3_148 [4.2.3.148] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    cembrene_c
   }
 
   branch from dtdp_4_dehydro_6_deoxy_d_glucose side left {
@@ -78,5 +78,47 @@ pathway dtdp-l-dihydrostreptose-to-dtdp-4-dehydro-l-rham "dTDP-L-dihydrostreptos
     dtdp_4_dehydro_l_rhamnose
     <-> ec_1_1_1_134 [1.1.1.134] +nadp +nadph +hplus
     dtdp_6_deoxy_l_talose
+  }
+
+  branch from dtdp side left {
+    dtdp
+    <-> . +dtdp_6_deoxy_l_mannose +l_argininium +hplus
+    n_6_deoxy_l_mannosyl_l_arginyl_2
+  }
+
+  branch from dtdp side right {
+    dtdp
+    <-> . +dctp +dtmp
+    dcdp
+  }
+
+  branch from dttp side left {
+    dttp
+    <-> . +ddtmp +dtdp
+    ddtdp
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_149 [4.2.3.149] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +h2o
+    r_nephthenol
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_150 [4.2.3.150] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    r_cembrene_a
+  }
+
+  branch from dtdp_4_dehydro_6_deoxy_d_glucose side right {
+    dtdp_4_dehydro_6_deoxy_d_glucose
+    <-> ec_5_1_3_27 [5.1.3.27]
+    dtdp_4_dehydro_6_deoxy_d_gulose
+  }
+
+  branch from dtdp_4_dehydro_6_deoxy_d_glucose side left {
+    dtdp_4_dehydro_6_deoxy_d_glucose
+    <-> ec_4_2_1_159 [4.2.1.159] +h2o
+    dtdp_3_4_didehydro_2_6_dideoxy_d_glucose
   }
 }

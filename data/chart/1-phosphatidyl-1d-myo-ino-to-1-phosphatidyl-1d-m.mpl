@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-phosphatidyl-1d-myo-ino-to-1-phosphatidyl-1d-m "1-phosphatidyl-1D-myo-ino… to 1-phosphatidyl-1D-myo-ino…" {
-  spacing 298
+  spacing 286
 
   spine at 0,0 {
     1_phosphatidyl_1d_myo_inositol_3_4_5_trisphospha
@@ -20,17 +20,5 @@ pathway 1-phosphatidyl-1d-myo-ino-to-1-phosphatidyl-1d-m "1-phosphatidyl-1D-myo-
     1_phosphatidyl_1d_myo_inositol_3_4_bisphosphate
     <-> ec_2_7_1_154 [2.7.1.154] +atp +adp +hplus
     1_phosphatidyl_1d_myo_inositol_4_phosphate
-  }
-
-  branch from 1_phosphatidyl_1d_myo_inositol side right {
-    1_phosphatidyl_1d_myo_inositol
-    <-> . +acyl_coa +coa
-    1_acyl_sn_glycero_3_phospho_1d_myo_inositol
-  }
-
-  branch from 1_phosphatidyl_1d_myo_inositol side left {
-    1_phosphatidyl_1d_myo_inositol
-    <-> . +acyl_coa +coa
-    2_acyl_sn_glycero_3_phospho_1d_myo_inositol
   }
 }

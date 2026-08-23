@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-ascorbate-to-l-ascorbate "L-ascorbate to L-ascorbate" {
-  spacing 218
+  spacing 212
 
   spine at 0,0 {
     ascorbate
@@ -14,11 +14,5 @@ pathway l-ascorbate-to-l-ascorbate "L-ascorbate to L-ascorbate" {
     l_dehydroascorbate
     <-> ec_1_8_5_1 [1.8.5.1] +gsh -ascorbate
     gssg
-  }
-
-  branch from ascorbate side left {
-    ascorbate
-    <-> ec_1_1_3_8 [1.1.3.8] +o2 +h2o2 +hplus
-    l_gulono_1_4_lactone
   }
 }

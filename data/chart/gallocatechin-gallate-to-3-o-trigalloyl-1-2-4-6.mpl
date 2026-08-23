@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway gallocatechin-gallate-to-3-o-trigalloyl-1-2-4-6 "(−)-gallocatechin gallate to 3-O-trigalloyl-1,2,4,6-te…" {
-  spacing 188
+  spacing 218
 
   spine at 0,0 {
     gallocatechin_gallate
@@ -18,14 +18,14 @@ pathway gallocatechin-gallate-to-3-o-trigalloyl-1-2-4-6 "(−)-gallocatechin gal
 
   branch from epigallocatechin side left {
     epigallocatechin
-    <-> ec_1_3_1_77 [1.3.1.77] +delphinidin +h +nadph
-    nadp
+    <-> ec_1_3_1_77 [1.3.1.77] +nadh +ephdine +h
+    nad
   }
 
   branch from epigallocatechin side right {
     epigallocatechin
-    <-> ec_1_3_1_77 [1.3.1.77] +h +nadph +nadp
-    ephdine
+    <-> ec_1_3_1_77 [1.3.1.77] +delphinidin +h +nadph
+    nadp
   }
 
   branch from 1_o_galloyl_beta_d_glucose side left {
@@ -42,13 +42,43 @@ pathway gallocatechin-gallate-to-3-o-trigalloyl-1-2-4-6 "(−)-gallocatechin gal
 
   branch from glucose side left {
     glucose
-    <-> . +4_o_indol_3_ylacetyl_beta_d_glucose +h2o +h
-    indol_3_yl_acetate
+    <-> ec_3_2_1_108 [3.2.1.108] +alpha_lactose +h2o
+    beta_d_galactose
   }
 
   branch from glucose side right {
     glucose
-    <-> . +h +indol_3_yl_acetate +h2o
-    1_o_indol_3_ylacetyl_beta_d_glucose
+    <-> ec_2_3_1_79 [2.3.1.79] +acetyl_coa +coa
+    6_o_acetyl_beta_d_glucose
+  }
+
+  branch from glucose side left {
+    glucose
+    <-> ec_2_4_1_10 [2.4.1.10] +sucrose +h2o
+    beta_d_fructose
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> ec_1_1_1_119 [1.1.1.119] +h +nadph +nadp
+    d_glucono_1_4_lactone
+  }
+
+  branch from epigallocatechin side left {
+    epigallocatechin
+    <-> ec_1_3_1_77 [1.3.1.77] +h +nadph +nadp
+    ephdine
+  }
+
+  branch from 1_o_galloyl_beta_d_glucose side right {
+    1_o_galloyl_beta_d_glucose
+    <-> . +3_o_digalloyl_1_2_4_6_tetra_o_beta_d_galloylgluc +beta_d_glucose +h
+    1_2_3_4_6_pentakis_o_galloyl_beta_d_glucose
+  }
+
+  branch from 1_o_galloyl_beta_d_glucose side left {
+    1_o_galloyl_beta_d_glucose
+    <-> . +beta_d_glucose +2_3_o_digalloyl_1_4_6_tri_o_beta_d_galloylglucos
+    2_o_digalloyl_1_3_4_6_tetra_o_beta_d_galloylgluc
   }
 }

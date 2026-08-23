@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway benzene-to-4-methylcatechol "benzene to 4-methylcatechol" {
-  spacing 322
+  spacing 340
 
   spine at 0,0 {
     benzene
@@ -24,14 +24,14 @@ pathway benzene-to-4-methylcatechol "benzene to 4-methylcatechol" {
 
   branch from catechol side left {
     catechol
-    <-> ec_1_14_14_20 [1.14.14.20] +fadh2 +o2 +fad +h2o +hplus
+    <-> ec_1_14_13_244 [1.14.13.244] +nadh +o2 +hplus +nad +h2o
     phenol
   }
 
-  branch from catechol side right {
-    catechol
-    <-> . +2_ethoxyphenol +fadh2 +o2 +fad +h2o +hplus
-    acetaldehyde
+  branch from 2z_4e_2_hydroxy_6_oxohexa_2_4_dienoate side right {
+    2z_4e_2_hydroxy_6_oxohexa_2_4_dienoate
+    <-> ec_3_7_1_9 [3.7.1.9] +h +formate +h2o
+    2z_2_hydroxypenta_2_4_dienoate
   }
 
   branch from 2_oxopent_4_enoate side left {
@@ -48,14 +48,14 @@ pathway benzene-to-4-methylcatechol "benzene to 4-methylcatechol" {
 
   branch from formate side left {
     formate
-    <-> ec_4_1_99_5 [4.1.99.5] +octadecanal +nadph +o2 +hplus +nadp +h2o
-    heptadecane
+    <-> . +obtusifoliol +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    4_methyl_5_ergosta_8_14_24_28_trien_3_ol
   }
 
   branch from formate side right {
     formate
-    <-> ec_1_14_14_154 [1.14.14.154] +14_methyl_steroid +fmnh2 +o2 +fmn +h2o +hplus
-    14_steroid
+    <-> . +24_25_dihydrolanosterol +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    4_4_dimethyl_8_14_cholestadien_3_ol
   }
 
   branch from 2_hydroxy_5_methyl_6_oxohexa_2_4_dienoate side left {
@@ -66,26 +66,26 @@ pathway benzene-to-4-methylcatechol "benzene to 4-methylcatechol" {
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_21 [3.6.3.21] +h +adp +phosphate +atp
-    l_histidine
+    <-> . +3_dephospho_coa +phosphate
+    coa
   }
 
   branch from h2o side left {
     h2o
-    <-> . +2_oxoglutarate +nh4
-    4_oxoglutaramate
+    <-> ec_3_1_1_1 [3.1.1.1] +n_n_diethylglycine +2_6_dimethylaniline
+    lidocaine
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_15_4 [1.14.15.4] +h +21_hydroxyprogesterone +nadph +corticosterone +h2o
+    <-> . +h +ebastine +nadph +hydroxyebastine +h2o
     nadp
   }
 
   branch from o2 side left {
     o2
-    <-> . +h +21_hydroxyprogesterone +nadph +nadp +h2o
-    aldosterone
+    <-> . +5z_8z_11z_14z_eicosatetraenoate +h +nadph +nadp +h2o
+    18r_hydroxy_5z_8z_11z_14z_eicosatetraenoate
   }
 
   branch from 4_methylcatechol side right {
@@ -98,5 +98,83 @@ pathway benzene-to-4-methylcatechol "benzene to 4-methylcatechol" {
     4_methylcatechol
     <-> ec_1_13_11_1 [1.13.11.1] +o2
     3_methyl_cis_cis_muconic_acid
+  }
+
+  branch from 2_oxopent_4_enoate side right {
+    2_oxopent_4_enoate
+    <-> ec_1_4_3_2 [1.4.3.2] +nh4 +h2o2 +o2 +h2o
+    l_allylglycine
+  }
+
+  branch from formate side left {
+    formate
+    <-> . +intermediate_i +nadph +h2o +nadp
+    16r_deshydroxymethyl_stemmadenine
+  }
+
+  branch from formate side right {
+    formate
+    <-> . +h2o +16r_deshydroxymethyl_stemmadenine
+    methyl_1s_2s_16e_16_ethylidene_2_formyl_4_14_dia
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_1_1_5 [3.1.1.5] +1_tetradecanoyl_sn_glycerol_3_phosphate +h2o +sn_glycerol_3_phosphate
+    tetradecanoate
+  }
+
+  branch from h side right {
+    h
+    <-> . +9z_octadecenoate +sn_glycerol_3_phosphate +h2o
+    1_11e_octadecenoyl_sn_glycero_3_phosphate
+  }
+
+  branch from acetate side left {
+    acetate
+    <-> . +l_asparagine +h +h2o
+    n_acetyl_l_asparagine
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> ec_3_6_1_20 [3.6.1.20] +acetyl_amp +h2o +h
+    amp
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +hexadecanoate +glycerophosphatidylethanolamine +h
+    1_palmitoyl_2_hydroxy_sn_glycero_3_pe
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +glycerophosphatidylethanolamine +9z_octadecenoate +h
+    2_acyl_sn_glycero_3_phosphoethanolamine_n_c18_1
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_14_13_17 [1.14.13.17] +h +cholesterol +nadph +nadp +h2o
+    7alpha_hydroxycholesterol
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +nadh +h +7alpha_hydroxycholest_4_en_3_one +nad +h2o
+    7alpha_12alpha_dihydroxycholest_4_en_3_one
+  }
+
+  branch from 4_methylcatechol side left {
+    4_methylcatechol
+    <-> ec_1_14_13_1 [1.14.13.1] +nadh +h +4_methylsalicylic_acid +o2 +nad +h2o
+    co2
+  }
+
+  branch from 4_methylcatechol side right {
+    4_methylcatechol
+    <-> ec_1_14_13_236 [1.14.13.236] +nadh +h +o2 +4_methylphenol +h2o
+    nad
   }
 }

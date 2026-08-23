@@ -137,54 +137,6 @@
       "xrefs": {
         "chebi": "CHEBI:15377"
       }
-    },
-    {
-      "id": "uncyclized_xanthommatin",
-      "name": "uncyclized xanthommatin",
-      "short": "uncyclized…",
-      "formula": "C20H18N4O8",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1132833"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "WATER"
-      }
-    },
-    {
-      "id": "3_hydroxy_l_kynurenine",
-      "name": "3-hydroxy-L-kynurenine",
-      "short": "3-hydroxy-L-kynuren…",
-      "formula": "C10H12N2O4",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM728564"
-      }
-    },
-    {
-      "id": "trimethylarsine",
-      "name": "trimethylarsine",
-      "formula": "C3H9As",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:27130"
-      }
-    },
-    {
-      "id": "trimethylarsine_oxide",
-      "name": "trimethylarsine oxide",
-      "short": "trimethylarsine…",
-      "formula": "C3H9AsO",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:27131"
-      }
     }
   ],
   "enzymes": [
@@ -200,13 +152,6 @@
       "name": "5-methylphenazine-1-carboxylate 1-monooxygenase",
       "ec": [
         "1.14.13.218"
-      ]
-    },
-    {
-      "id": "ec_1_11_1_7",
-      "name": "peroxidase",
-      "ec": [
-        "1.11.1.7"
       ]
     }
   ],
@@ -354,85 +299,115 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "peroxidase",
-      "ec": "1.11.1.7",
-      "substrates": [
-        {
-          "metabolite": "uncyclized_xanthommatin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 6
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_hydroxy_l_kynurenine",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o2",
-          "stoichiometry": 3
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_11_1_7"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR193784"
+      "id": "xt_1r_1_4_5_10_tetrahydrophenazine_1_carboxylate_1r-1-4-5-10-tetrahydrop-to-10as-10-10a-dihydrop",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1r_1_4_5_10_tetrahydrophenazine_1_carboxylate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1r-1-4-5-10-tetrahydrop-to-10as-10-10a-dihydrop"
+      },
+      "note": "Shares (1R)-1,4,5,10-tetrahydrophenazine-1-carboxylate with (1R)-1,4,5,10-tetrahydrop… to (10aS)-10,10a-dihydrophen….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR193784"
+            "db": "ChEBI",
+            "id": "CHEBI:132005"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "Reaction MNXR193822",
-      "substrates": [
-        {
-          "metabolite": "h2o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "trimethylarsine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "trimethylarsine_oxide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR193822"
+      "id": "xt_5_10_dihydrophenazine_1_carboxylate_1r-5as-6r-1-4-5-5a-6-9-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_10_dihydrophenazine_1_carboxylate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1r-5as-6r-1-4-5-5a-6-9-to-h2o"
+      },
+      "note": "Shares 5,10-dihydrophenazine-1-carboxylate with (1R,5aS,6R)-1,4,5,5a,6,9-… to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR193822"
+            "db": "ChEBI",
+            "id": "CHEBI:78312"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phenazine_1_carboxylate_dioleoyl-phosphatidic-acid-to-1-octanoyl-2-oleoy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phenazine_1_carboxylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dioleoyl-phosphatidic-acid-to-1-octanoyl-2-oleoy"
+      },
+      "note": "Shares phenazine-1-carboxylate with dioleoyl phosphatidic acid to 1-octanoyl-2-oleoyl-sn-gl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62248"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phenazine_1_carboxylate_diphosphate-to-pyocyanine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phenazine_1_carboxylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-pyocyanine"
+      },
+      "note": "Shares phenazine-1-carboxylate with diphosphate to pyocyanine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62248"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phenazine_1_carboxylate_n-3-aminopropyl-hydroxyl-to-h2o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phenazine_1_carboxylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-3-aminopropyl-hydroxyl-to-h2o2"
+      },
+      "note": "Shares phenazine-1-carboxylate with N-(3-aminopropyl)hydroxyl… to H2O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62248"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway indole-3-carbaldehyde-to-2-formylphenylformamide "indole-3-carbaldehyde to 2-formylphenylformamide" {
-  spacing 212
+  spacing 206
 
   spine at 0,0 {
     indole_3_carbaldehyde
@@ -17,12 +17,6 @@ pathway indole-3-carbaldehyde-to-2-formylphenylformamide "indole-3-carbaldehyde 
   }
 
   branch from 1h_indole side left {
-    1h_indole
-    <-> ec_4_2_1_122 [4.2.1.122] +serine +h2o
-    l_tryptophan
-  }
-
-  branch from 1h_indole side right {
     1h_indole
     <-> . +nadh +o2 +hplus +nad +h2o
     indoxyl

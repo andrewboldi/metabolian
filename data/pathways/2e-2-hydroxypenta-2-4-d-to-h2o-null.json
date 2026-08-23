@@ -1,0 +1,347 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2e-2-hydroxypenta-2-4-d-to-h2o-null",
+  "name": "(2E)-2-hydroxypenta-2,4-d… to H2O",
+  "category": "other",
+  "summary": "A 3-step route from (2E)-2-hydroxypenta-2,4-dienoate to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR198696"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2e_2_hydroxypenta_2_4_dienoate",
+      "name": "(2E)-2-hydroxypenta-2,4-dienoate",
+      "short": "2-hydroxypenta-2,4-…",
+      "formula": "C5H5O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1107795"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "4_hydroxy_2_oxopentanoic_acid",
+      "name": "4-hydroxy-2-oxopentanoic acid",
+      "short": "4-hydroxy-2-oxopent…",
+      "formula": "C5H8O4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364819"
+      }
+    },
+    {
+      "id": "2_hydroxypenta_2_4_dienoic_acid",
+      "name": "2-hydroxypenta-2,4-dienoic acid",
+      "short": "2-hydroxypenta-2,4-…",
+      "formula": "C5H6O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18355"
+      }
+    },
+    {
+      "id": "fumarate",
+      "name": "fumarate",
+      "formula": "C4H2O4",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM737340"
+      }
+    },
+    {
+      "id": "2_hydroxy_6_oxonona_2_4_7_trienedioic_acid",
+      "name": "2-hydroxy-6-oxonona-2,4,7-trienedioic acid",
+      "short": "2-hydroxy-6-oxonona…",
+      "formula": "C9H8O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:31082"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_2_1_80",
+      "name": "2-oxopent-4-enoate hydratase",
+      "ec": [
+        "4.2.1.80"
+      ]
+    },
+    {
+      "id": "ec_3_7_1_14",
+      "name": "2-hydroxy-6-oxonona-2,4-dienedioate hydrolase",
+      "ec": [
+        "3.7.1.14"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2-oxopent-4-enoate hydratase",
+      "ec": "4.2.1.80",
+      "substrates": [
+        {
+          "metabolite": "2e_2_hydroxypenta_2_4_dienoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxy_2_oxopentanoic_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_80"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR198696"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198696"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2-oxopent-4-enoate hydratase",
+      "ec": "4.2.1.80",
+      "substrates": [
+        {
+          "metabolite": "4_hydroxy_2_oxopentanoic_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxypenta_2_4_dienoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_80"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR126136"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR126136"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "2-hydroxy-6-oxonona-2,4-dienedioate hydrolase",
+      "ec": "3.7.1.14",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "2_hydroxypenta_2_4_dienoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fumarate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxy_6_oxonona_2_4_7_trienedioic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_7_1_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR138519"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR138519"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_4_hydroxy_2_oxopentanoic_acid_4-hydroxy-2-oxopentanoic-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_hydroxy_2_oxopentanoic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxy-2-oxopentanoic-to-h2o"
+      },
+      "note": "Shares 4-hydroxy-2-oxopentanoic acid with 4-hydroxy-2-oxopentanoic… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364819"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_hydroxy_2_oxopentanoic_acid_mercaptoethanol-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_hydroxy_2_oxopentanoic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "mercaptoethanol-to-ammonium"
+      },
+      "note": "Shares 4-hydroxy-2-oxopentanoic acid with mercaptoethanol to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364819"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_hydroxy_2_oxopentanoic_acid_s-adenosyl-l-homocysteine-to-cobalt-dihydrosiroh",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_hydroxy_2_oxopentanoic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-cobalt-dihydrosiroh"
+      },
+      "note": "Shares 4-hydroxy-2-oxopentanoic acid with S-adenosyl-L-homocysteine to cobalt-dihydrosirohydroch….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364819"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_hydroxypenta_2_4_dienoic_acid_formaldehyde-to-morphiniumone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_hydroxypenta_2_4_dienoic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "formaldehyde-to-morphiniumone"
+      },
+      "note": "Shares 2-hydroxypenta-2,4-dienoic acid with formaldehyde to morphiniumone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18355"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_hydroxy_6_oxonona_2_4_7_trienedioic_acid_p-cumate-to-2-hydroxy-6-oxonona-2-4-7",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_hydroxy_6_oxonona_2_4_7_trienedioic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "p-cumate-to-2-hydroxy-6-oxonona-2-4-7"
+      },
+      "note": "Shares 2-hydroxy-6-oxonona-2,4,7-trienedioic acid with p-cumate to 2-hydroxy-6-oxonona-2,4,7….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:31082"
+          }
+        ]
+      }
+    }
+  ]
+}

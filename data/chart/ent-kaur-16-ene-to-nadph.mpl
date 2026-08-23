@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway ent-kaur-16-ene-to-nadph "ent-kaur-16-ene to NADPH" {
-  spacing 236
+  spacing 152
 
   spine at 0,0 {
     ent_kaur_16_ene
@@ -16,89 +16,5 @@ pathway ent-kaur-16-ene-to-nadph "ent-kaur-16-ene to NADPH" {
     co2
     <-> . +gibberellin_a14 +nadp +h2o -o2 -nadph
     gibberellin_a14_aldehyde
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +hydroxy_torasemide +h2o +h +o2 +nadph
-    torasemide
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +h +o2 +nadph +torasemide +h2o
-    4_hydroxy_torasemide
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +h +adp +cerivastatin_m23 +phosphate +cerivastatin_m23
-    atp
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    cyclosporin_a_sulfate
-  }
-
-  branch from gibberellin_a12 side left {
-    gibberellin_a12
-    <-> . +h +o2 +nadph +nadp +h2o
-    16alpha_17_epoxy_gibberellin_a12
-  }
-
-  branch from gibberellin_a12 side right {
-    gibberellin_a12
-    <-> . +nadh +h +o2 +16alpha_17_epoxy_gibberellin_a12 +h2o
-    nad
-  }
-
-  branch from co2 side left {
-    co2
-    <-> . +2_polyprenyl_6_methoxyphenol
-    3_polyprenyl_4_hydroxy_5_methoxybenzoate
-  }
-
-  branch from co2 side right {
-    co2
-    <-> ec_4_1_1_68 [4.1.1.68] +cis_2_oxohept_3_enedioic_acid
-    5_carboxy_2_oxohept_3_enedioate
-  }
-
-  branch from succinate side left {
-    succinate
-    <-> ec_1_3_5_1 [1.3.5.1] +ubiquinone_6 +fumarate
-    ubiquinol_6
-  }
-
-  branch from succinate side right {
-    succinate
-    <-> . +menaquinone_6 +menaquinol_6
-    fumarate
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +pitavastatin +h2o
-    pitavastatin_m3
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +5z_8z_11z_14z_eicosatetraenoyl_coa +2_trans_cis_cis_cis_cis_4_8_11_14_eicosapentaeno
-    h2o2
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> . +pravastatin_sodium +h +o2 +nadp +h2o2
-    triol_metabolite_of_pravastatin
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> . +2_undecylpyrrole +nadp +h2o +h
-    4_keto_2_undecylpyrroline
   }
 }

@@ -1,0 +1,507 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-fructofuranose-to-coa",
+  "name": "β-D-fructofuranose… to CoA",
+  "category": "other",
+  "summary": "A 4-step route from β-D-fructofuranose 1-phosphate(2−) to CoA, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR134301"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:138881"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_fructofuranose_1_phosphate",
+      "name": "β-D-fructofuranose 1-phosphate",
+      "short": "β-D-fructofuranose…",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:138881"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "beta_d_fructose_1_6_bisphosphate",
+      "name": "beta-D-fructose 1,6-bisphosphate",
+      "short": "beta-D-fructose…",
+      "formula": "C6H10O12P2",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1364229"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "methylglyoxal",
+      "name": "methylglyoxal",
+      "formula": "C3H4O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM310"
+      }
+    },
+    {
+      "id": "glyceraldehyde_3_phosphate",
+      "name": "glyceraldehyde 3-phosphate",
+      "short": "glyceraldehyde 3-P",
+      "formula": "C3H7O6P",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1372044"
+      }
+    },
+    {
+      "id": "1_deoxy_d_threo_hexo_2_5_diulose_6_phosphate",
+      "name": "1-deoxy-D-threo-hexo-2,5-diulose 6-phosphate",
+      "short": "1-deoxy-D-threo-hex…",
+      "formula": "C6H9O8P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1974"
+      }
+    },
+    {
+      "id": "dihydroxyacetone_phosphate",
+      "name": "dihydroxyacetone phosphate",
+      "short": "dihydroxyacetone P",
+      "formula": "C3H5O6P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM77"
+      }
+    },
+    {
+      "id": "9z_octadecenoyl_coa",
+      "name": "(9Z)-octadecenoyl-CoA",
+      "short": "octadecenoyl-CoA",
+      "formula": "C39H64N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1364155"
+      }
+    },
+    {
+      "id": "1_9z_octadecenoylglycerone_3_phosphate",
+      "name": "1-(9Z)-octadecenoylglycerone 3-phosphate",
+      "short": "1-(9Z)-octadecenoyl…",
+      "formula": "C21H37O7P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM32961"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_3_68",
+      "name": "2-deoxyglucose-6-phosphatase",
+      "ec": [
+        "3.1.3.68"
+      ]
+    },
+    {
+      "id": "ec_2_2_1_11",
+      "name": "6-deoxy-5-ketofructose 1-phosphate synthase",
+      "ec": [
+        "2.2.1.11"
+      ]
+    },
+    {
+      "id": "ec_5_3_1_1",
+      "name": "triose-phosphate isomerase",
+      "ec": [
+        "5.3.1.1"
+      ],
+      "xrefs": {
+        "uniprot": "P60174"
+      }
+    },
+    {
+      "id": "ec_2_3_1_42",
+      "name": "glycerone-phosphate O-acyltransferase",
+      "ec": [
+        "2.3.1.42"
+      ],
+      "xrefs": {
+        "uniprot": "O15228"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2-deoxyglucose-6-phosphatase",
+      "ec": "3.1.3.68",
+      "substrates": [
+        {
+          "metabolite": "d_fructofuranose_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "beta_d_fructose_1_6_bisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_3_68"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR134301"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR134301"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "6-deoxy-5-ketofructose 1-phosphate synthase",
+      "ec": "2.2.1.11",
+      "substrates": [
+        {
+          "metabolite": "beta_d_fructose_1_6_bisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "methylglyoxal",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glyceraldehyde_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_deoxy_d_threo_hexo_2_5_diulose_6_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_2_1_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR153369"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR153369"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "triose-phosphate isomerase",
+      "ec": "5.3.1.1",
+      "substrates": [
+        {
+          "metabolite": "glyceraldehyde_3_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "dihydroxyacetone_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR146573"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR146573"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "glycerone-phosphate O-acyltransferase",
+      "ec": "2.3.1.42",
+      "substrates": [
+        {
+          "metabolite": "9z_octadecenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dihydroxyacetone_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_9z_octadecenoylglycerone_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_42"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR119102"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR119102"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_d_fructofuranose_1_phosphate_4-hydroxy-2-oxooctanoate-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_fructofuranose_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxy-2-oxooctanoate-to-ammonium"
+      },
+      "note": "Shares β-D-fructofuranose 1-phosphate with 4-Hydroxy-2-oxooctanoate to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:138881"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_fructofuranose_1_phosphate_acetylacetone-to-dehydro-coenzyme-f420-0",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_fructofuranose_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetylacetone-to-dehydro-coenzyme-f420-0"
+      },
+      "note": "Shares β-D-fructofuranose 1-phosphate with acetylacetone to dehydro coenzyme F420-0.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:138881"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_fructofuranose_1_phosphate_d-fructofuranose-to-d-fructofuranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_fructofuranose_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-fructofuranose-to-d-fructofuranose"
+      },
+      "note": "Shares β-D-fructofuranose 1-phosphate with β-D-fructofuranose… to β-D-fructofuranose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:138881"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_fructofuranose_1_phosphate_d-fructofuranose-to-glycolaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_fructofuranose_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-fructofuranose-to-glycolaldehyde"
+      },
+      "note": "Shares β-D-fructofuranose 1-phosphate with β-D-fructofuranose… to glycolaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:138881"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_fructofuranose_1_phosphate_h2o2-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_fructofuranose_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h2o2-to-h2o"
+      },
+      "note": "Shares β-D-fructofuranose 1-phosphate with H2O2 to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:138881"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_fructofuranose_1_phosphate_n-demethyl-desepoxymaytan-to-7a-hydroxy-o-carbam",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_fructofuranose_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-demethyl-desepoxymaytan-to-7a-hydroxy-o-carbam"
+      },
+      "note": "Shares β-D-fructofuranose 1-phosphate with N-Demethyl-desepoxymaytan… to 7a-Hydroxy-o-carbamoyl-de….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:138881"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_fructofuranose_1_phosphate_udp-2-4-diacetamido-2-4-6-to-cmp-5-7-diacetamido",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_fructofuranose_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-2-4-diacetamido-2-4-6-to-cmp-5-7-diacetamido"
+      },
+      "note": "Shares β-D-fructofuranose 1-phosphate with UDP-2,4-diacetamido-2,4,6… to CMP-5,7-diacetamido-3,5,7….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:138881"
+          }
+        ]
+      }
+    }
+  ]
+}

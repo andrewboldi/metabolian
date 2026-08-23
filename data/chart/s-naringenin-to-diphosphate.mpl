@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-naringenin-to-diphosphate "(S)-naringenin to diphosphate" {
-  spacing 256
+  spacing 232
 
   spine at 0,0 {
     s_naringenin
@@ -14,29 +14,5 @@ pathway s-naringenin-to-diphosphate "(S)-naringenin to diphosphate" {
     leachianone_g
     <-> ec_2_5_1_71 [2.5.1.71] +dmapp -ppi
     sophoraflavanone_g
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +fpp
-    cadinene
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +gpp
-    sabinene
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +dodecanoate +fmnh2 +o2 +h2o +hplus
-    10_hydroxylaurate
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +tetradecanoate +fmnh2 +o2 +h2o +hplus
-    9_hydroxymyristate
   }
 }

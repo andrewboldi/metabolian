@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-acyloxy-acyl-group-to-1-4-benzoquinones "3-(acyloxy)acyl group to 1,4-benzoquinones" {
-  spacing 306
+  spacing 340
 
   spine at 0,0 {
     3_acyloxy_acyl_group
@@ -24,117 +24,28 @@ pathway 3-acyloxy-acyl-group-to-1-4-benzoquinones "3-(acyloxy)acyl group to 1,4-
     1_4_benzoquinones
   }
 
-  branch from fatty-acid side left {
-    fatty-acid
-    <-> ec_3_1_1_26 [3.1.1.26] +1_2_diacyl_3_d_galactosyl_sn_glycerol +h2o +hplus
-    3_o_d_galactopyranosyl_sn_glycerol
-  }
 
-  branch from fatty-acid side right {
-    fatty-acid
-    <-> ec_3_1_1_4 [3.1.1.4] +phosphatidylcholine +h2o +hplus
-    1_o_acyl_sn_glycero_3_phosphocholine
-  }
 
-  branch from o_s_fatty_acylpantetheine_4_phosphoryl_l_serine side left {
-    o_s_fatty_acylpantetheine_4_phosphoryl_l_serine
-    <-> ec_2_3_1_41 [2.3.1.41] +malonyl-acp +hplus +holo-acp +co2
-    o_s_3_oxoacylpantetheine_4_phosphoryl_l_serine_1
-  }
 
-  branch from o_s_fatty_acylpantetheine_4_phosphoryl_l_serine side right {
-    o_s_fatty_acylpantetheine_4_phosphoryl_l_serine
-    <-> ec_2_3_1_274 [2.3.1.274] +pi +holo-acp
-    acyl_monophosphate
-  }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_2_5_1_42 [2.5.1.42] +sn_3_o_geranylgeranyl_glycerol_1_phosphate +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    2_3_bis_o_geranylgeranyl_sn_glycerol_1_phosphate
-  }
 
-  branch from ppi side right {
-    ppi
-    <-> ec_2_7_7_45 [2.7.7.45] +gtp +hplus
-    p1_p4_bis_5_guanosyl_tetraphosphate
-  }
 
-  branch from n_acyl_l_homoserine_lactone side left {
-    n_acyl_l_homoserine_lactone
-    <-> ec_3_1_1_81 [3.1.1.81] +h2o +hplus
-    n_acyl_l_homoserinate
-  }
 
-  branch from 5_s_methyl_5_thioadenosine side right {
-    5_s_methyl_5_thioadenosine
-    <-> ec_2_5_1_43 [2.5.1.43] +sam +hplus
-    s_s_s_nicotianamine_trizwitterion
-  }
 
-  branch from 5_s_methyl_5_thioadenosine side left {
-    5_s_methyl_5_thioadenosine
-    <-> ec_2_5_1_24 [2.5.1.24] +n6_dimethylallyladenine +sam +hplus
-    discadenine
-  }
 
-  branch from holo-acp side right {
-    holo-acp
-    <-> ec_3_1_4_14 [3.1.4.14] +h2o +d_pantetheine_4_phosphate +hplus
-    l_serine
-  }
 
-  branch from holo-acp side left {
-    holo-acp
-    <-> ec_2_3_1_38 [2.3.1.38] +acetyl_coa +coa
-    acetyl-acp
-  }
 
-  branch from carboxylic_acid_anion side right {
-    carboxylic_acid_anion
-    <-> ec_3_5_1_11 [3.5.1.11] +penicillinate_anion +h2o
-    6_aminopenicillanic_acid
-  }
 
-  branch from carboxylic_acid_anion side left {
-    carboxylic_acid_anion
-    <-> ec_3_7_1_5 [3.7.1.5] +h2o +pyruvate +hplus
-    3_acylpyruvate
-  }
 
-  branch from aldehyde side right {
-    aldehyde
-    <-> ec_1_1_3_13 [1.1.3.13] +o2 +h2o2
-    primary_alcohol
-  }
 
-  branch from aldehyde side left {
-    aldehyde
-    <-> ec_1_7_3_1 [1.7.3.1] +primary_nitroalkane +o2 +h2o +h2o2 +hplus
-    nitrite
-  }
 
-  branch from hydroquinones side right {
-    hydroquinones
-    <-> ec_1_3_5_2 [1.3.5.2] +dihydroorotate +1_4_benzoquinones
-    orotate
-  }
 
-  branch from hydroquinones side left {
-    hydroquinones
-    <-> ec_1_1_5_4 [1.1.5.4] +malate +1_4_benzoquinones
-    oxaloacetate
-  }
 
-  branch from 1_4_benzoquinones side right {
-    1_4_benzoquinones
-    <-> ec_1_6_5_5 [1.6.5.5] +nadph +hplus +nadp
-    1_4_benzosemiquinones
-  }
 
-  branch from 1_4_benzoquinones side left {
-    1_4_benzoquinones
-    <-> . +shikimate +hydroquinones
-    3_dehydroshikimate
-  }
+
+
+
+
+
+
 }

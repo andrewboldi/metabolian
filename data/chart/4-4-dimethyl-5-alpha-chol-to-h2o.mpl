@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-4-dimethyl-5-alpha-chol-to-h2o "4,4-dimethyl-5-alpha-chol… to H2O" {
-  spacing 188
+  spacing 152
 
   spine at 0,0 {
     4_4_dimethyl_5_alpha_cholesta_8_14_dien_3_beta_o
@@ -16,41 +16,5 @@ pathway 4-4-dimethyl-5-alpha-chol-to-h2o "4,4-dimethyl-5-alpha-chol… to H2O" {
     4beta_formyl_4alpha_methyl_5alpha_cholesta_8_en
     <-> . +nadh +o2 -nad -h2o
     4beta_carboxy_4alpha_methyl_5alpha_cholesta_8_en
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_6_5_2 [1.6.5.2] +menaquinol_7 +h +nadph
-    menaquinone_7
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_6_5_2 [1.6.5.2] +h +plastoquinone_9 +nadph
-    plastoquinol_9
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_geranial +h
-    s_linalool
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_2_1_5 [1.2.1.5] +nadh +9e_octadecenoate +h +h2o
-    cis_9_octadecenal
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +glu_glu +phosphate +glu_glu
-    atp
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    beta_homovaline_beta_homoalanine_beta_homoleucin
   }
 }

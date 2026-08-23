@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-o-digalloyl-1-2-4-6-tet-to-3-o-trigalloyl-1-2 "3-O-digalloyl-1,2,4,6-tet… to 3-O-trigalloyl-1,2,4,6-te…" {
-  spacing 332
+  spacing 340
 
   spine at 0,0 {
     3_o_digalloyl_1_2_4_6_tetra_o_beta_d_galloylgluc
@@ -24,25 +24,73 @@ pathway 3-o-digalloyl-1-2-4-6-tet-to-3-o-trigalloyl-1-2 "3-O-digalloyl-1,2,4,6-t
 
   branch from h side left {
     h
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +4_6_6_trimethylbicyclo_3_1_1_hept_3_en_2_one +nad
-    r_cis_verbenol
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +raocyclamide_b +phosphate +raocyclamide_b +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +2_oxohexane +hexan_2_ol
-    nad
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    tenuecyclamide_b
   }
 
   branch from beta_d_glucose side left {
     beta_d_glucose
-    <-> ec_3_2_1_3 [3.2.1.3] +h2o
-    isomaltose
+    <-> ec_2_3_1_91 [2.3.1.91] +1_o_trans_sinapoyl_beta_d_glucose +choline
+    o_sinapoylcholine
   }
 
   branch from beta_d_glucose side right {
     beta_d_glucose
-    <-> ec_3_2_1_3 [3.2.1.3] +panose +h2o
-    d_maltose
+    <-> ec_2_3_1_92 [2.3.1.92] +1_o_trans_sinapoyl_beta_d_glucose +s_malate
+    sinapoyl_s_malate
+  }
+
+  branch from glucose side left {
+    glucose
+    <-> ec_2_7_1_1 [2.7.1.1] +datp +h +dadp
+    d_glucose_6_phosphate
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> ec_3_2_1_20 [3.2.1.20] +h2o
+    nigerose
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    tenuecyclamide_c
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    ulongamide_f
+  }
+
+  branch from alpha_d_glucose side left {
+    alpha_d_glucose
+    <-> ec_5_3_1_5 [5.3.1.5]
+    d_fructofuranose
+  }
+
+  branch from alpha_d_glucose side right {
+    alpha_d_glucose
+    <-> ec_2_3_1_103 [2.3.1.103] +1_2_di_o_sinapoyl_beta_d_glucose
+    1_o_trans_sinapoyl_beta_d_glucose
+  }
+
+  branch from beta_d_glucose side left {
+    beta_d_glucose
+    <-> ec_1_1_5_2 [1.1.5.2] +ubiquinol_2 +d_glucono_1_5_lactone
+    ubiquinone_2
+  }
+
+  branch from beta_d_glucose side right {
+    beta_d_glucose
+    <-> . +be_13793c +h2o
+    ed_110
   }
 }

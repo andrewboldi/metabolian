@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway z-1-l-cysteinylglycin-to-e-6-methylsulfanyl-hex "(Z)-1-(L-cysteinylglycin-… to (E)-6-(methylsulfanyl)hex…" {
-  spacing 302
+  spacing 224
 
   spine at 0,0 {
     z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth
@@ -20,83 +20,5 @@ pathway z-1-l-cysteinylglycin-to-e-6-methylsulfanyl-hex "(Z)-1-(L-cysteinylglyci
     n_n_dihydroxy_l_trihomomethioninate
     <-> . +hplus -co2 -h2o
     e_6_methylsulfanyl_hexanal_oxime
-  }
-
-  branch from glycine side left {
-    glycine
-    <-> . +2e_2_methylbut_2_enoyl_coa +tiglylglycine
-    coa
-  }
-
-  branch from glycine side right {
-    glycine
-    <-> . +l_glutamate +l_tryptophan +h2o
-    tryptophanyl_glutamyl_glycine
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    leucyl_leucine
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    losartan
-  }
-
-  branch from e_6_methylsulfanyl_hexanal_oxime side left {
-    e_6_methylsulfanyl_hexanal_oxime
-    <-> . +h +nadph +nadp +h2o
-    6_methylthiohexanonitrile_oxide
-  }
-
-  branch from o2 side right {
-    o2
-    <-> ec_1_13_11_11 [1.13.11.11] +5_methyl_dl_tryptophan
-    5_methyl_n_formylkynurenine
-  }
-
-  branch from o2 side left {
-    o2
-    <-> ec_1_13_11_16 [1.13.11.16] +h +compound_0054366
-    2_hydroxyhexa_2_4_dienoic_acid_6_carboxymethyles
-  }
-
-  branch from l_cysteine side right {
-    l_cysteine
-    <-> . +l_serine +l_arginine +h2o
-    seryl_cysteinyl_arginine
-  }
-
-  branch from l_cysteine side left {
-    l_cysteine
-    <-> . +glycine +l_tyrosine +h2o
-    tyrosyl_cysteinyl_glycine
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> ec_1_1_1_215 [1.1.1.215] +l_idonate +nadp +h
-    2_dehydro_d_galactonate
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> ec_1_14_13_115 [1.14.13.115] +h +o2 +s_columbianetin +acetone +nadp +h2o
-    angelicin
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +s_naringenin +fmnh2 +o2 +h2o +hplus
-    2s_2_hydroxynaringenin
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +pinocembrin +fmnh2 +o2 +h2o +hplus
-    2s_2_hydroxypinocembrin
   }
 }

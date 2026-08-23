@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 6r-isopiperitenone-to-nad "(6R)-isopiperitenone to NAD" {
-  spacing 206
+  spacing 236
 
   spine at 0,0 {
     6r_isopiperitenone
@@ -16,21 +16,51 @@ pathway 6r-isopiperitenone-to-nad "(6R)-isopiperitenone to NAD" {
     1s_6r_isopiperitenol
   }
 
-  branch from 1s_6r_isopiperitenol side left {
-    1s_6r_isopiperitenol
-    <-> ec_1_14_13_47 [1.14.13.47] +4s_limonene +h +o2 +nadph +h2o
-    nadp
+  branch from nad side left {
+    nad
+    <-> . +nadh +octadecanoyl_coa +h +o2 +h2o
+    11z_octadecenoyl_coa
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_90 [1.1.1.90] +nadh +3_hydroxy_5_methylbenzaldehyde +h
-    3_hydroxymethyl_5_methylphenol
+    <-> . +nadh +h +11z_octadecenoyl_coa +o2 +h2o
+    9z_12z_octadecadienoyl_coa
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> . +formaldehyde +h +sarcosine +nad +h2o
+    n_n_dimethylglycine
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +octanoyl_coa +acetyl_coa +h +coa +nad +h2o
+    2e_decenoyl_coa
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_5_1_96 [2.5.1.96] +diphosphate +15_cis_4_4_diapophytoene
+    presqualene_diphosphate
+  }
+
+  branch from h side right {
+    h
+    <-> ec_1_1_1_317 [1.1.1.317] +perakine +nadph +raucaffrinoline
+    nadp
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_14_12_18 [1.14.12.18] +nadh +4_bromodiphenyl_ether +h +o2
-    4_bromo_2_3_dihydrodiol_diphenyl_ether
+    <-> . +nadh +acetyl_coa +h +5z_octenoyl_coa +2e_7z_decadienoyl_coa +h2o
+    coa
+  }
+
+  branch from nad side right {
+    nad
+    <-> . +nadh +acetyl_coa +fadh2 +3e_decenoyl_coa +h +coa +5_dodecenoyl_coenzyme_a +h2o
+    fad
   }
 }

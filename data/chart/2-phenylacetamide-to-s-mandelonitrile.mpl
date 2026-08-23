@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-phenylacetamide-to-s-mandelonitrile "2-phenylacetamide to (S)-mandelonitrile" {
-  spacing 270
+  spacing 294
 
   spine at 0,0 {
     2_phenylacetamide
@@ -26,49 +26,73 @@ pathway 2-phenylacetamide-to-s-mandelonitrile "2-phenylacetamide to (S)-mandelon
 
   branch from h2o side right {
     h2o
-    <-> . +6_hydroxy_2_hydroxy_4_hydroxyphenyl_methyl_1_ben
-    hispidol
+    <-> ec_4_99_1_5 [4.99.1.5] +pyridine_2_aldoxime
+    2_cyanopyridine
   }
 
   branch from h2o side left {
     h2o
-    <-> . +gypenoside_xvii +gypenoside_lxxv
-    glucose
+    <-> . +2_phenylpropionaldoxime
+    2_phenylpropiononitrile
   }
 
   branch from r_mandelonitrile side right {
-    r_mandelonitrile
-    <-> ec_2_4_1_354 [2.4.1.354] +udp_d_glucose +udp +hplus
-    r_prunasin
-  }
-
-  branch from r_mandelonitrile side left {
     r_mandelonitrile
     <-> ec_3_2_1_119 [3.2.1.119] +vicianose +h2o
     vicianin
   }
 
-  branch from fmn side right {
-    fmn
-    <-> . +9r_10s_9_10_epoxyoctadecanoate +fmnh2 +o2 +h2o +hplus
-    9r_10s_9_10_epoxy_18_hydroxyoctadecanoate
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +9_10_epoxyoctadecanoate +fmnh2 +o2 +h2o +hplus
-    9_10_epoxy_18_hydroxyoctadecanoate
+  branch from r_mandelonitrile side left {
+    r_mandelonitrile
+    <-> ec_3_2_1_118 [3.2.1.118] +glucose +h2o
+    r_prunasin
   }
 
   branch from hydrogen_cyanide side right {
     hydrogen_cyanide
-    <-> ec_4_1_2_47 [4.1.2.47] +disubstituted_aliphatic_s_cyanohydrin
-    ketone
+    <-> . +methyl_isobutyl_ketone
+    2s_2_hydroxy_2_4_dimethylpentanenitrile
   }
 
   branch from hydrogen_cyanide side left {
     hydrogen_cyanide
-    <-> . +2_2_dimethylpropanal
-    2s_2_hydroxy_3_3_dimethylbutanenitrile
+    <-> . +3_3_dimethylbutan_2_one
+    2s_2_hydroxy_2_methyl_3_3_dimethylbutanenitrile
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +mandelonitrile
+    mandelaldoxime
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +propionaldoxime
+    propionitrile
+  }
+
+  branch from r_mandelonitrile side right {
+    r_mandelonitrile
+    <-> ec_3_2_1_118 [3.2.1.118] +r_prunasin +h2o
+    alpha_d_glucose
+  }
+
+  branch from r_mandelonitrile side left {
+    r_mandelonitrile
+    <-> ec_3_2_1_118 [3.2.1.118] +r_prunasin +h2o
+    beta_d_glucose
+  }
+
+  branch from hydrogen_cyanide side right {
+    hydrogen_cyanide
+    <-> . +2_methoxybenzaldehyde
+    2s_2_hydroxy_2_2_methoxyphenyl_acetonitrile
+  }
+
+  branch from hydrogen_cyanide side left {
+    hydrogen_cyanide
+    <-> . +3_methoxybenzaldehyde
+    2s_2_hydroxy_2_3_methoxyphenyl_acetonitrile
   }
 }

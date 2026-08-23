@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2s-3r-4s-5s-6s-6-4-4-to-3-3-5-triiodo-d-thyroni "(2S,3R,4S,5S,6S)-6-(4-{4-… to 3,3',5'-triiodo-D-thyroni…" {
-  spacing 200
+  spacing 248
 
   spine at 0,0 {
     2s_3r_4s_5s_6s_6_4_4_2r_2_amino_2_carboxyethyl
@@ -16,51 +16,18 @@ pathway 2s-3r-4s-5s-6s-6-4-4-to-3-3-5-triiodo-d-thyroni "(2S,3R,4S,5S,6S)-6-(4-{
     udp_alpha_d_glucuronate
   }
 
-  branch from udp_alpha_d_glucuronate side left {
-    udp_alpha_d_glucuronate
-    <-> . +rac_4_hydroxy_4_o_beta_d_glucuronide_all_trans_r +udp
-    4_hydroxy_all_trans_retinyl_acetate
-  }
 
-  branch from udp_alpha_d_glucuronate side right {
-    udp_alpha_d_glucuronate
-    <-> . +udp +all_trans_retinoyl_1_o_beta_d_glucuronate
-    13_cis_retinoate
-  }
 
-  branch from 3_5_diiodo_l_thyronine side left {
-    3_5_diiodo_l_thyronine
-    <-> . +adenosine_3_5_bisphosphate +3_5_diiodo_l_thyronine_4_o_sulfate +h
-    3_phosphoadenylyl_sulfate
-  }
 
-  branch from 3_5_diiodo_l_thyronine side right {
-    3_5_diiodo_l_thyronine
-    <-> . +3_5_diiodo_l_thyronine_4_o_sulfate +h2o +h
-    sulfate
-  }
 
-  branch from udp side left {
-    udp
-    <-> ec_2_4_1_17 [2.4.1.17] +trichloroethanol_glucuronide +udp_alpha_d_glucuronate
-    2_2_2_trichloroethanol
-  }
 
-  branch from udp side right {
-    udp
-    <-> ec_2_4_1_225 [2.4.1.225] +beta_d_glucuronosyl_1_4_n_acetyl_alpha_d_glucosa +udp_alpha_d_glucuronate
-    n_acetyl_alpha_d_glucosaminyl_1_4_beta_d_glucuro
-  }
 
-  branch from h side left {
-    h
-    <-> ec_2_5_1_18 [2.5.1.18] +1_nitro_5_hydroxy_6_glutathionyl_5_6_dihydronaph +glutathione
-    1_nitronaphthalene_5_6_oxide
-  }
 
-  branch from h side right {
-    h
-    <-> ec_2_5_1_18 [2.5.1.18] +1_nitro_5_glutathionyl_6_hydroxy_5_6_dihydronaph +1_nitronaphthalene_5_6_oxide
-    glutathione
-  }
+
+
+
+
+
+
+
 }

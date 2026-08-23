@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 9-pimara-7-15-diene-to-h2o "9β-pimara-7,15-diene to H2O" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     9_pimara_7_15_diene
@@ -14,29 +14,5 @@ pathway 9-pimara-7-15-diene-to-h2o "9β-pimara-7,15-diene to H2O" {
     9_pimara_7_15_dien_19_al
     <-> ec_1_14_13_144 [1.14.13.144] +o2 +nadph -nadp -h2o
     9_pimara_7_15_dien_19_oate
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +ferricytochrome_c +nadph +h
-    ferrocytochrome_c
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +malonyl_coa +h +nadph +h2o
-    malonyl_coa_semialdehyde
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +mupirocin_c1
-    mupirocin_p
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +pelargonidin
-    4s_2_3_dehydroleucopelargonidin
   }
 }

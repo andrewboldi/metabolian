@@ -1,0 +1,592 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "nadh-to-6-hydroxynicotinate-null",
+  "name": "NADH to 6-hydroxynicotinate",
+  "category": "energy-metabolism",
+  "summary": "A 4-step route from NADH to 6-hydroxynicotinate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR197359"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "2_6_dihydroxypyridine",
+      "name": "2,6-Dihydroxypyridine",
+      "short": "2,6-Dihydroxypyridi…",
+      "formula": "C5H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1368908"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "2_3_6_trihydroxypyridine",
+      "name": "2,3,6-Trihydroxypyridine",
+      "short": "2,3,6-Trihydroxypyr…",
+      "formula": "C5H5NO3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364774"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "maleamate",
+      "name": "maleamate",
+      "formula": "C4H4NO3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM902"
+      }
+    },
+    {
+      "id": "formate",
+      "name": "formate",
+      "formula": "CHO2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM39"
+      }
+    },
+    {
+      "id": "2_5_dihydroxypyridine",
+      "name": "2,5-dihydroxypyridine",
+      "short": "2,5-dihydroxypyridi…",
+      "formula": "C5H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM888"
+      }
+    },
+    {
+      "id": "6_hydroxynicotinate",
+      "name": "6-hydroxynicotinate",
+      "formula": "C6H4NO3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM773"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_13_10",
+      "name": "2,6-dihydroxypyridine 3-monooxygenase",
+      "ec": [
+        "1.14.13.10"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2,6-dihydroxypyridine 3-monooxygenase",
+      "ec": "1.14.13.10",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_6_dihydroxypyridine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_3_6_trihydroxypyridine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_10"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR197359"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197359"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR142282",
+      "substrates": [
+        {
+          "metabolite": "2_3_6_trihydroxypyridine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "maleamate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR142282"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR142282"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR108018",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "formate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "maleamate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_5_dihydroxypyridine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR108018"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR108018"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Reaction MNXR134187",
+      "substrates": [
+        {
+          "metabolite": "co2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "2_5_dihydroxypyridine",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "6_hydroxynicotinate",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR134187"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR134187"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_2_6_dihydroxypyridine_2-6-dihydroxypyridine-to-4-oxobutanoate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_6_dihydroxypyridine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-6-dihydroxypyridine-to-4-oxobutanoate"
+      },
+      "note": "Shares 2,6-Dihydroxypyridine with 2,6-Dihydroxypyridine to 4-oxobutanoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368908"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_6_dihydroxypyridine_2-6-dihydroxypyridine-to-4-oxobutanoate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_6_dihydroxypyridine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-6-dihydroxypyridine-to-4-oxobutanoate-null"
+      },
+      "note": "Shares 2,6-Dihydroxypyridine with 2,6-Dihydroxypyridine to 4-oxobutanoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368908"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_6_dihydroxypyridine_nadh-to-6-hydroxynicotinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_6_dihydroxypyridine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-6-hydroxynicotinate"
+      },
+      "note": "Shares 2,6-Dihydroxypyridine with NADH to 6-hydroxynicotinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368908"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_3_6_trihydroxypyridine_2-oxoglutaramate-to-nicotine-blue",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_3_6_trihydroxypyridine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-oxoglutaramate-to-nicotine-blue"
+      },
+      "note": "Shares 2,3,6-Trihydroxypyridine with 2-oxoglutaramate to nicotine blue.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364774"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_3_6_trihydroxypyridine_2-oxoglutaramate-to-nicotine-blue-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_3_6_trihydroxypyridine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-oxoglutaramate-to-nicotine-blue-null"
+      },
+      "note": "Shares 2,3,6-Trihydroxypyridine with 2-oxoglutaramate to nicotine blue.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364774"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_3_6_trihydroxypyridine_nadh-to-6-hydroxynicotinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_3_6_trihydroxypyridine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-6-hydroxynicotinate"
+      },
+      "note": "Shares 2,3,6-Trihydroxypyridine with NADH to 6-hydroxynicotinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364774"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_maleamate_cobalt-factor-iii-to-sirohydrochlorin-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "maleamate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cobalt-factor-iii-to-sirohydrochlorin-null"
+      },
+      "note": "Shares maleamate with Cobalt-factor III to sirohydrochlorin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM902"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_maleamate_nadh-to-6-hydroxynicotinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "maleamate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-6-hydroxynicotinate"
+      },
+      "note": "Shares maleamate with NADH to 6-hydroxynicotinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM902"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_maleamate_trans-methylferulate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "maleamate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-methylferulate-to-h2o"
+      },
+      "note": "Shares maleamate with trans-methylferulate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM902"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_5_dihydroxypyridine_h-to-heptanal",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_5_dihydroxypyridine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-heptanal"
+      },
+      "note": "Shares 2,5-dihydroxypyridine with H to heptanal.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM888"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_5_dihydroxypyridine_malonyl-coa-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_5_dihydroxypyridine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "malonyl-coa-to-h2o"
+      },
+      "note": "Shares 2,5-dihydroxypyridine with malonyl-CoA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM888"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_5_dihydroxypyridine_n-n-dimethylurea-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_5_dihydroxypyridine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-n-dimethylurea-to-h2o-null"
+      },
+      "note": "Shares 2,5-dihydroxypyridine with N,N'-dimethylurea to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM888"
+          }
+        ]
+      }
+    }
+  ]
+}

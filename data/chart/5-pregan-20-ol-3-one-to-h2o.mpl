@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-pregan-20-ol-3-one-to-h2o "5α-pregan-20β-ol-3-one to H2O" {
-  spacing 280
+  spacing 340
 
   spine at 0,0 {
     5_pregan_20_ol_3_one
@@ -24,14 +24,14 @@ pathway 5-pregan-20-ol-3-one-to-h2o "5α-pregan-20β-ol-3-one to H2O" {
 
   branch from h side left {
     h
-    <-> . +udp +3_5_diiodothyroacetate_beta_d_glucuronoside +3_5_diiodothyroacetate
-    udp_alpha_d_glucuronate
+    <-> . +4_sulfomuconolactone
+    3_sulfomuconate
   }
 
   branch from h side right {
     h
-    <-> . +17_estradiol_3_4_quinone +glutathione
-    4_hydroxy_17beta_estradiol_2_s_glutathione
+    <-> . +nadh +2_3_dihydroxy_ddt +nad
+    1s_2s_ddt_2_3_dihydrodiol
   }
 
   branch from 3alpha_hydroxy_5alpha_pregnan_20_one side left {
@@ -42,14 +42,14 @@ pathway 5-pregan-20-ol-3-one-to-h2o "5α-pregan-20β-ol-3-one to H2O" {
 
   branch from nadph side right {
     nadph
-    <-> . +h +25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol +nadp +h2o
-    3alpha_7alpha_12alpha_trihydroxy_5beta_cholestan
+    <-> . +1_2_dihydronaphthalene_1_2_diol +h +o2 +nadp +h2o
+    1_2_dihydroxy_3_4_epoxy_1_2_3_4_tetrahydronaphth
   }
 
   branch from nadph side left {
     nadph
-    <-> . +cholestane_3_7_12_24_25_pentol +nadp +h
-    3alpha_7alpha_12alpha_25_tetrahydroxy_5beta_chol
+    <-> ec_1_14_14_1 [1.14.14.1] +h +1_nitronaphthalene +o2 +nadp +h2o
+    1_nitronaphthalene_7_8_oxide
   }
 
   branch from 5_alpha_thdoc side right {
@@ -60,37 +60,121 @@ pathway 5-pregan-20-ol-3-one-to-h2o "5α-pregan-20β-ol-3-one to H2O" {
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +12_dehydro_leukotriene_b4
-    10_11_dihydro_12_oxo_ltb4
+    <-> ec_1_3_1_119 [1.3.1.119] +nadh +h +3_6_dichlorocatechol
+    3_6_dichloro_cis_cyclohexa_3_5_diene_1_2_diol
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +3_oxo_5_s_12_r_dihydroxy_eicosa_8_trans_6_14_cis
-    3_s_5_s_12_r_trihydroxy_eicosa_8_trans_6_14_cis
+    <-> . +nadh +h +ethylbenzene +o2
+    cis_1_2_dihydro_3_ethylcatechol
   }
 
   branch from h2o side left {
     h2o
-    <-> . +superoxide +h +melatonin
-    n_gamma_acetyl_n_2_formyl_5_methoxykynurenamine
+    <-> ec_4_2_1_84 [4.2.1.84] +benzamide
+    benzonitrile
   }
 
   branch from h2o side right {
     h2o
-    <-> . +5_ht_moduline +d_ala_leu
-    l_leucyl_l_serine
+    <-> . +h +cyclohex_1_ene_1_carbonyl_coa
+    2_hydroxycyclohexane_1_carbonyl_coa
   }
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
-    6z_9z_12z_15z_octadecatetraenoyl_coa
+    <-> ec_3_6_3_48 [3.6.3.48] +h +adp +phosphate +h2o
+    whwlqlkpgqpmy
   }
 
   branch from atp side right {
     atp
-    <-> . +h +adp +phosphate +h2o
-    succinate
+    <-> ec_3_6_3_53 [3.6.3.53] +h +adp +phosphate +h2o
+    ag
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_14_14_1 [1.14.14.1] +h +1_nitronaphthalene +o2 +nadph +h2o
+    1_nitronaphthalene_5_6_oxide
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_14_14_1 [1.14.14.1] +5z_8z_11z_14z_eicosatetraenoate +h +o2 +nadph +h2o
+    14_15_epoxy_5z_8z_11z_eicosatrienoate
+  }
+
+  branch from h side left {
+    h
+    <-> . +2_succinylbenzoyl_coa +spirodilactone
+    coa
+  }
+
+  branch from h side right {
+    h
+    <-> . +nadh +streptomycin_6_phosphate +nad
+    dihydrostreptomycin_6_phosphate
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_14_14_1 [1.14.14.1] +5z_8z_11z_14z_eicosatetraenoate +h +o2 +nadp +h2o
+    11s_12r_eet
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_14_14_1 [1.14.14.1] +5z_8z_11z_14z_eicosatetraenoate +h +o2 +nadp +h2o
+    8_9_epoxy_5z_11z_14z_eicosatrienoate
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> . +1_hydroxy_2_naphthoate +h +nad +h2o
+    1_hydroxy_2_naphthaldehyde
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +h +phenanthrene +o2 +nad +h2o
+    1_phenanthrol
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +fluorene
+    3_4_dihydroxyfluorene
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +fluorene
+    1_2_dihydroxyfluorene
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_262 [1.1.1.262] +nadh +2s_2_amino_3_oxo_4_phosphonatooxy_butanoate +h
+    4_phosphooxy_l_threonine
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_14_13_69 [1.14.13.69] +nadh +h +propene +o2 +h2o
+    r_1_2_epoxypropane
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +6_carboxyhex_2_enoyl_coa +h
+    3_hydroxy_6_carboxyhexanoyl_coa
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +h +6_hydroxycyclohex_1_ene_1_carbonyl_coa
+    2_6_dihydroxycyclohexane_1_carbonyl_coa
   }
 }

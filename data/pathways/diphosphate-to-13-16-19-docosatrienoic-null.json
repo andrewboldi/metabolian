@@ -1,0 +1,509 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "diphosphate-to-13-16-19-docosatrienoic-null",
+  "name": "diphosphate to 13,16,19-Docosatrienoic…",
+  "category": "other",
+  "summary": "A 3-step route from diphosphate to 13,16,19-Docosatrienoic acid, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR205055"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "diphosphate",
+      "name": "diphosphate",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM11"
+      }
+    },
+    {
+      "id": "13z_16z_19z_docosa_13_16_19_trienoyl_coa",
+      "name": "(13Z,16Z,19Z)-docosa-13,16,19-trienoyl-CoA",
+      "short": "(13Z,16Z,19Z)-docos…",
+      "formula": "C43H72N7O17P3S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1554471"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM728294"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "13_16_19_docosatrienoic_acid",
+      "name": "13,16,19-Docosatrienoic acid",
+      "short": "13,16,19-Docosatrie…",
+      "formula": "C22H38O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:80549"
+      }
+    },
+    {
+      "id": "13z_16z_19z_docosatrienoyl_coa",
+      "name": "(13Z,16Z,19Z)-docosatrienoyl-CoA",
+      "short": "(13Z,16Z,19Z)-docos…",
+      "formula": "C43H68N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:232574"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR205055",
+      "substrates": [
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "13z_16z_19z_docosa_13_16_19_trienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "13_16_19_docosatrienoic_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR205055"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR205055"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR158335",
+      "substrates": [
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "13_16_19_docosatrienoic_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "13z_16z_19z_docosatrienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR158335"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR158335"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR158334",
+      "substrates": [
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "13z_16z_19z_docosatrienoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "13_16_19_docosatrienoic_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR158334"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR158334"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_13z_16z_19z_docosa_13_16_19_trienoyl_coa_1s-2r-5s-7s-8r-9r-11s-12-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "13z_16z_19z_docosa_13_16_19_trienoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1s-2r-5s-7s-8r-9r-11s-12-to-nadph"
+      },
+      "note": "Shares (13Z,16Z,19Z)-docosa-13,16,19-trienoyl-CoA with (1S,2R,5S,7S,8R,9R,11S,12… to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1554471"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_13z_16z_19z_docosa_13_16_19_trienoyl_coa_7-7-dimethyl-2-methyl-to-nad-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "13z_16z_19z_docosa_13_16_19_trienoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-7-dimethyl-2-methyl-to-nad-null"
+      },
+      "note": "Shares (13Z,16Z,19Z)-docosa-13,16,19-trienoyl-CoA with (-)-7,7-Dimethyl-2-methyl… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1554471"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_13z_16z_19z_docosa_13_16_19_trienoyl_coa_co2-to-16-hydroxy-hentriaconta-3-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "13z_16z_19z_docosa_13_16_19_trienoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "co2-to-16-hydroxy-hentriaconta-3-null"
+      },
+      "note": "Shares (13Z,16Z,19Z)-docosa-13,16,19-trienoyl-CoA with CO2 to 16-hydroxy-hentriaconta-3….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1554471"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_13z_16z_19z_docosa_13_16_19_trienoyl_coa_diphosphate-to-13-16-19-docosatrienoic",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "13z_16z_19z_docosa_13_16_19_trienoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-13-16-19-docosatrienoic"
+      },
+      "note": "Shares (13Z,16Z,19Z)-docosa-13,16,19-trienoyl-CoA with diphosphate to 13,16,19-Docosatrienoic….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1554471"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_13z_16z_19z_docosa_13_16_19_trienoyl_coa_ent-kaur-16-ene-to-nadph-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "13z_16z_19z_docosa_13_16_19_trienoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ent-kaur-16-ene-to-nadph-null"
+      },
+      "note": "Shares (13Z,16Z,19Z)-docosa-13,16,19-trienoyl-CoA with ent-kaur-16-ene to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1554471"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_13z_16z_19z_docosa_13_16_19_trienoyl_coa_s-adenosyl-l-homocysteine-to-14-epi-thalianol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "13z_16z_19z_docosa_13_16_19_trienoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-14-epi-thalianol"
+      },
+      "note": "Shares (13Z,16Z,19Z)-docosa-13,16,19-trienoyl-CoA with S-adenosyl-L-homocysteine to 14-Epi-Thalianol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1554471"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_13z_16z_19z_docosa_13_16_19_trienoyl_coa_udp-to-n-acetyl-alpha-d-glucosam",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "13z_16z_19z_docosa_13_16_19_trienoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-n-acetyl-alpha-d-glucosam"
+      },
+      "note": "Shares (13Z,16Z,19Z)-docosa-13,16,19-trienoyl-CoA with UDP to N-acetyl-alpha-D-glucosam….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1554471"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_13_16_19_docosatrienoic_acid_3-oxo-24-isopropanoyl-c-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "13_16_19_docosatrienoic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-oxo-24-isopropanoyl-c-to-coa"
+      },
+      "note": "Shares 13,16,19-Docosatrienoic acid with 3-oxo-24-(isopropanoyl)-c… to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:80549"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_13_16_19_docosatrienoic_acid_7-7-dimethyl-2-methyl-to-nad-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "13_16_19_docosatrienoic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-7-dimethyl-2-methyl-to-nad-null"
+      },
+      "note": "Shares 13,16,19-Docosatrienoic acid with (-)-7,7-Dimethyl-2-methyl… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:80549"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_13_16_19_docosatrienoic_acid_diphosphate-to-13-16-19-docosatrienoic",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "13_16_19_docosatrienoic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-13-16-19-docosatrienoic"
+      },
+      "note": "Shares 13,16,19-Docosatrienoic acid with diphosphate to 13,16,19-Docosatrienoic….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:80549"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_13_16_19_docosatrienoic_acid_gdp-2-acetamido-2-deoxy-b-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "13_16_19_docosatrienoic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gdp-2-acetamido-2-deoxy-b-to-h2o-null"
+      },
+      "note": "Shares 13,16,19-Docosatrienoic acid with GDP-2-acetamido-2-deoxy-b… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:80549"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_13_16_19_docosatrienoic_acid_s-adenosyl-l-homocysteine-to-14-epi-thalianol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "13_16_19_docosatrienoic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-14-epi-thalianol"
+      },
+      "note": "Shares 13,16,19-Docosatrienoic acid with S-adenosyl-L-homocysteine to 14-Epi-Thalianol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:80549"
+          }
+        ]
+      }
+    }
+  ]
+}

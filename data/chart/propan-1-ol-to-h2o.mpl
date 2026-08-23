@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway propan-1-ol-to-h2o "propan-1-ol to H2O" {
-  spacing 266
+  spacing 320
 
   spine at 0,0 {
     propan_1_ol
@@ -22,26 +22,26 @@ pathway propan-1-ol-to-h2o "propan-1-ol to H2O" {
 
   branch from h side left {
     h
-    <-> ec_6_2_1_23 [6.2.1.23] +diphosphate +amp +omega_carboxyacyl_coa +coa +alpha_omega_dicarboxylic_acid
-    atp
+    <-> ec_2_4_1_17 [2.4.1.17] +udp +tetraiodothyroacetate_ester_glucuronide +3_3_5_5_tetraiodothyroacetic_acid
+    udp_alpha_d_glucuronate
   }
 
   branch from h side right {
     h
-    <-> . +2_methyl_3_oxosuccinic_acid +l_glutamate +2s_3s_3_methyl_l_aspartate
-    2_oxoglutarate
+    <-> ec_2_4_1_17 [2.4.1.17] +udp +triiodothyroacetate_ester_glucuronide +udp_alpha_d_glucuronate
+    tiratricol
   }
 
   branch from acetate side left {
     acetate
-    <-> . +itaconyl_coa +itaconate
-    acetyl_coa
+    <-> . +4_sulfophenyl_acetate +h2o
+    4_hydroxybenzenesulfonic_acid
   }
 
   branch from acetate side right {
     acetate
-    <-> ec_2_8_3_8 [2.8.3.8] +acetyl_coa +2_3_4_saturated_fatty_acid
-    2_3_4_saturated_fatty_acyl_coa
+    <-> ec_2_8_3_1 [2.8.3.1] +acetyl_coa +r_lactate
+    r_lactoyl_coa
   }
 
   branch from 1_propanol side left {
@@ -64,25 +64,79 @@ pathway propan-1-ol-to-h2o "propan-1-ol to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> ec_4_2_1_11 [4.2.1.11] +3_phospho_d_erythronic_acid
-    2_hydroxy_3_phosphonooxybut_3_enoic_acid
+    <-> . +n_acetyl_5_methoxykynuramine +h +formate
+    n_gamma_acetyl_n_2_formyl_5_methoxykynurenamine
   }
 
   branch from h2o side left {
     h2o
-    <-> . +3_4_oxo_4_5_dihydro_1h_imidazol_5_yl_propanoic_a +h
-    formylisoglutamine
+    <-> . +6_hydroxy_2_6_oxo_1_oxaspiro_2_5_octa_4_7_dien_2
+    2_hydroperoxy_4_hydroxyphenyl_methyl_6_hydroxy_1
   }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
-    <-> . +acetochlor +di_sulfido_diiron +o2 +hplus +ethyl_formate +h2o
-    n_2_ethyl_6_methylphenyl_2_chloroacetamide
+  branch from propan_1_ol side right {
+    propan_1_ol
+    <-> . +nadp +nadph +hplus
+    propanal
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
-    <-> . +5_cholestan_3_ol +di_sulfido_diiron +o2 +hplus +h2o
-    25r_26_hydroxycholestanol
+  branch from h2o side left {
+    h2o
+    <-> . +6_hydroxy_2_hydroxy_4_hydroxyphenyl_methyl_1_ben
+    hispidol
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +6_2_amino_2_carboxylatoethyl_1_2_3_4_tetrahydroq +h
+    2_amino_4_3_2_amino_2_carboxylatoethyl_6_oxocycl
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_4_1_17 [2.4.1.17] +triiodothyroacetate_ether_glucuronide +udp_alpha_d_glucuronate +tiratricol
+    udp
+  }
+
+  branch from h side right {
+    h
+    <-> . +gdp +myxol_2_fucoside +myxol
+    gdp_beta_l_fucose
+  }
+
+  branch from acetate side left {
+    acetate
+    <-> . +3_15_acetyldeoxynivalenol +h2o +h
+    3_acetyldeoxynivalenol
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> . +3_15_acetyldeoxynivalenol +h2o +h
+    15_acetyldeoxynivalenol
+  }
+
+  branch from 1_propanol side left {
+    1_propanol
+    <-> ec_2_3_1_84 [2.3.1.84] +propyl_benzoate +coa
+    benzoyl_coa
+  }
+
+  branch from 1_propanol side right {
+    1_propanol
+    <-> ec_3_1_1_2 [3.1.1.2] +propanoate +h +h2o
+    propyl_propionate
+  }
+
+  branch from methanol side left {
+    methanol
+    <-> . +cocaine +h2o +h
+    ecgonine_benzoate
+  }
+
+  branch from methanol side right {
+    methanol
+    <-> . +cocaine +ethanol +h
+    cocaethylene
   }
 }

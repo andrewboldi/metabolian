@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n6-methyl-atp-to-diphosphate "N6-methyl-ATP to diphosphate" {
-  spacing 182
+  spacing 164
 
   spine at 0,0 {
     n6_methyl_atp
@@ -24,27 +24,9 @@ pathway n6-methyl-atp-to-diphosphate "N6-methyl-ATP to diphosphate" {
     n6_methyladenosine
   }
 
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_187 [4.2.3.187] +fpp +h2o
-    2z_6e_hedycaryol
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_175 [4.2.3.175] +fpp +h2o
-    10_epi_cubebol
-  }
-
   branch from imp side right {
     imp
-    <-> ec_3_1_3_99 [3.1.3.99] +h2o +pi
+    <-> . +gmp +guanosine
     inosine
-  }
-
-  branch from imp side left {
-    imp
-    <-> . +2_deoxyguanosine_5_monophosphate +inosine
-    2_deoxyguanosine
   }
 }

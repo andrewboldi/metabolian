@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-4-oxo-4-5-dihydro-1h-i-to-n2-formyl-n1-5-phosp "3-(4-oxo-4,5-dihydro-1H-i… to N2-formyl-N1-(5-phospho-β…" {
-  spacing 268
+  spacing 298
 
   spine at 0,0 {
     3_4_oxo_4_5_dihydro_1h_imidazol_5_yl_propanoate
@@ -20,25 +20,55 @@ pathway 3-4-oxo-4-5-dihydro-1h-i-to-n2-formyl-n1-5-phosp "3-(4-oxo-4,5-dihydro-1
 
   branch from nh3 side left {
     nh3
-    <-> . +3_oxocyclopentanecarbonitrile +h2o
-    3_oxocyclopentanecarboxylate
+    <-> . +n_acetylputrescinium +o2 +h2o +h2o2
+    4_acetamidobutanal
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +methyl_3_cyano_2_phenylpropanoate +h2o
-    4_methoxy_4_oxo_3_phenylbutanoate
+    <-> . +dserine +o2 +h2o +h2o2
+    3_hydroxypyruvate
   }
 
   branch from glutamate side left {
     glutamate
-    <-> ec_3_4_19_13 [3.4.19.13] +gsh +h2o
-    cysgly
+    <-> . +cadaverine +atp +adp +pi +hplus
+    l_glutamylcadaverine
   }
 
   branch from glutamate side right {
     glutamate
-    <-> . +l_alanyl_l_glutamate +h2o
-    alanine
+    <-> . +n6_hydroxy_l_lysine +atp +amp +ppi +hplus
+    1_l_glutamo_2_n6_l_lysinohydrazine
+  }
+
+  branch from 3_4_oxo_4_5_dihydro_1h_imidazol_5_yl_propanoate side left {
+    3_4_oxo_4_5_dihydro_1h_imidazol_5_yl_propanoate
+    <-> ec_4_2_1_49 [4.2.1.49] +h2o
+    trans_urocanate
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> . +d_dopa +o2 +h2o +h2o2
+    3_4_dihydroxyphenylpyruvate
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> . +n_carbamoyl_l_cysteinate +h2o +hplus +co2
+    cysteine
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> . +n6_hydroxy_l_lysine +atp +amp +ppi
+    o_glutamyl_n6_hydroxy_l_lysine
+  }
+
+  branch from glutamate side left {
+    glutamate
+    <-> . +isochorismate +atp +amp +ppi +hplus
+    isochorismoyl_l_glutamate
   }
 }

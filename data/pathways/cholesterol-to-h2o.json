@@ -120,12 +120,22 @@
       }
     },
     {
-      "id": "linoleoyl_coa",
-      "name": "linoleoyl-CoA",
-      "formula": "C39H62N7O17P3S",
+      "id": "palmitoleoyl_coa",
+      "name": "palmitoleoyl-CoA",
+      "formula": "C37H60N7O17P3S",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:57383"
+        "chebi": "CHEBI:61540"
+      }
+    },
+    {
+      "id": "cholesteryl_palmitoleate",
+      "name": "cholesteryl palmitoleate",
+      "short": "cholesteryl…",
+      "formula": "C43H74O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:84323"
       }
     },
     {
@@ -135,26 +145,6 @@
       "charge": -4,
       "xrefs": {
         "chebi": "CHEBI:57287"
-      }
-    },
-    {
-      "id": "1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce",
-      "name": "1-hexadecanoyl-2-(9Z,12Z-octadecadienoyl)-sn-glycero-3-phosphocholine",
-      "short": "1-hexadecanoyl-2-(9…",
-      "formula": "C42H80NO8P",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:73002"
-      }
-    },
-    {
-      "id": "1_hexadecanoyl_sn_glycero_3_phosphocholine",
-      "name": "1-hexadecanoyl-sn-glycero-3-phosphocholine",
-      "short": "1-hexadecanoyl-sn-g…",
-      "formula": "C24H50NO7P",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:72998"
       }
     }
   ],
@@ -171,14 +161,20 @@
       "name": "11beta-hydroxysteroid dehydrogenase",
       "ec": [
         "1.1.1.146"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P28845"
+      }
     },
     {
       "id": "ec_3_1_1_13",
       "name": "sterol esterase",
       "ec": [
         "3.1.1.13"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P19835"
+      }
     }
   ],
   "reactions": [
@@ -325,11 +321,11 @@
     },
     {
       "id": "r4",
-      "name": "(9Z,12Z)-octadecadienoyl-CoA + cholesterol = cholesteryl (9Z,12Z)-octadecadienoate + CoA",
-      "equation": "(9Z,12Z)-octadecadienoyl-CoA + cholesterol = cholesteryl (9Z,12Z)-octadecadienoate + CoA",
+      "name": "(9Z)-hexadecenoyl-CoA + cholesterol = cholesteryl (9Z)-hexadecenoate + CoA",
+      "equation": "(9Z)-hexadecenoyl-CoA + cholesterol = cholesteryl (9Z)-hexadecenoate + CoA",
       "substrates": [
         {
-          "metabolite": "linoleoyl_coa",
+          "metabolite": "palmitoleoyl_coa",
           "stoichiometry": 1
         },
         {
@@ -339,7 +335,7 @@
       ],
       "products": [
         {
-          "metabolite": "cholesteryl_linoleate",
+          "metabolite": "cholesteryl_palmitoleate",
           "stoichiometry": 1
         },
         {
@@ -350,53 +346,280 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:42796"
+        "rhea": "RHEA:64320"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:42796"
+            "id": "RHEA:64320"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_cholest_5_en_3_one_1-palmitoyl-2-6z-9z-12z-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cholest_5_en_3_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-palmitoyl-2-6z-9z-12z-to-h2o"
+      },
+      "note": "Shares cholest-5-en-3-one with 1-palmitoyl-2-[(6Z,9Z,12Z… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:63906"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "1-hexadecanoyl-2-(9Z,12Z-octadecadienoyl)-sn-glycero-3-phosphocholine + cholesterol = c...",
-      "equation": "1-hexadecanoyl-2-(9Z,12Z-octadecadienoyl)-sn-glycero-3-phosphocholine + cholesterol = cholesteryl (9Z,12Z)-octadecadienoate + 1-hexadecanoyl-sn-glycero-3-phosphocholine",
-      "substrates": [
-        {
-          "metabolite": "1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "cholesterol",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "cholesteryl_linoleate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "1_hexadecanoyl_sn_glycero_3_phosphocholine",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:53472"
+      "id": "xt_cholest_5_en_3_one_cholest-5-en-3-one-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cholest_5_en_3_one"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "cholest-5-en-3-one-to-h2o"
+      },
+      "note": "Shares cholest-5-en-3-one with cholest-5-en-3-one to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:53472"
+            "db": "ChEBI",
+            "id": "CHEBI:63906"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cholesterol_1-stearoyl-2-arachidonoyl-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cholesterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-stearoyl-2-arachidonoyl-to-h2o"
+      },
+      "note": "Shares Cholesterol with 1-stearoyl-2-arachidonoyl… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM726123"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cholesterol_4-hydroxy-4-methylnitros-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cholesterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxy-4-methylnitros-to-h2o"
+      },
+      "note": "Shares Cholesterol with 4-Hydroxy-4-(methylnitros… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM726123"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cholesterol_6-acetamido-2-oxohexanoate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cholesterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-acetamido-2-oxohexanoate-to-h2o"
+      },
+      "note": "Shares Cholesterol with 6-acetamido-2-oxohexanoate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM726123"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cholesterol_aflatoxin-q1-to-aflatoxin-b1exo-8-9-epoxi",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cholesterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aflatoxin-q1-to-aflatoxin-b1exo-8-9-epoxi"
+      },
+      "note": "Shares Cholesterol with aflatoxin Q1 to Aflatoxin B1exo-8,9-epoxi….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM726123"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cholesterol_glycerophosphatidylethano-to-1-2-dihexadecanoyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cholesterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "glycerophosphatidylethano-to-1-2-dihexadecanoyl"
+      },
+      "note": "Shares Cholesterol with glycerophosphatidylethano… to 1,2-dihexadecanoyl-sn-gly….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM726123"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cholesterol_tetradecanoate-ester-to-1-myristoyl-2-oleoyl-sn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cholesterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "tetradecanoate-ester-to-1-myristoyl-2-oleoyl-sn"
+      },
+      "note": "Shares Cholesterol with tetradecanoate ester to 1-myristoyl-2-oleoyl-sn-g….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM726123"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cholesteryl_linoleate_1-2-2-trilinoleoyl-1-mo-to-tetralinoleoyl-cardio",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cholesteryl_linoleate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-2-trilinoleoyl-1-mo-to-tetralinoleoyl-cardio"
+      },
+      "note": "Shares cholesteryl linoleate with 1,2,2'-trilinoleoyl-1'-mo… to tetralinoleoyl cardiolipin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:41509"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cholesteryl_linoleate_cholesteryl-to-3-7-10-13-16-19-docosahex",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cholesteryl_linoleate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cholesteryl-to-3-7-10-13-16-19-docosahex"
+      },
+      "note": "Shares cholesteryl linoleate with cholesteryl… to 3,7,10,13,16,19-Docosahex….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:41509"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cholesteryl_linoleate_d-glucosyl-n-oleoyl-sp-to-n-octadecanoylsphingo",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cholesteryl_linoleate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glucosyl-n-oleoyl-sp-to-n-octadecanoylsphingo"
+      },
+      "note": "Shares cholesteryl linoleate with β-D-glucosyl-N-(oleoyl)sp… to N-octadecanoylsphingosine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:41509"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cholesteryl_linoleate_dihydrocarveol-to-5s-6-hydroxy-5-isoprope",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cholesteryl_linoleate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dihydrocarveol-to-5s-6-hydroxy-5-isoprope"
+      },
+      "note": "Shares cholesteryl linoleate with (+)-dihydrocarveol to (5S)-6-Hydroxy-5-isoprope….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:41509"
           }
         ]
       }

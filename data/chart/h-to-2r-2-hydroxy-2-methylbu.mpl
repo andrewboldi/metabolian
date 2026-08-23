@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway h-to-2r-2-hydroxy-2-methylbu "H to (2R)-2-hydroxy-2-methylbu…" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     h
@@ -14,29 +14,5 @@ pathway h-to-2r-2-hydroxy-2-methylbu "H to (2R)-2-hydroxy-2-methylbu…" {
     lotaustralin
     <-> ec_2_4_1_63 [2.4.1.63] +udp +h -2r_2_hydroxy_2_methylbutanenitrile
     udp_alpha_d_glucose
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +torasemide_m3 +h2o +o2 +nadph
-    torasemide
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +h +4_hydroxy_3_all_trans_decaprenylbenzoic_acid +o2 +nadph +h2o
-    3_decaprenyl_4_5_dihydroxybenzoic_acid
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_4_16_4 [3.4.16.4] +d_alanine +und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig
-    und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +d_alanine +und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig
-    und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig
   }
 }

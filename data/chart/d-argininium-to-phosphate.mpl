@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-argininium-to-phosphate "D-argininium to phosphate" {
-  spacing 340
+  spacing 308
 
   spine at 0,0 {
     d_argininium
@@ -20,65 +20,5 @@ pathway d-argininium-to-phosphate "D-argininium to phosphate" {
     demethylarginomycin
     <-> . +l_leucine +atp -h -adp -phosphate
     l_leucyl_demethylarginomycin
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +diosmetin_7_olate +sam
-    luteolin_4_7_dimethyl_ether
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +quercetin_7_olate +sam +hplus
-    rhamnetin_3_olate
-  }
-
-  branch from oxaloacetate side left {
-    oxaloacetate
-    <-> . +aspartate +pyruvate
-    alanine
-  }
-
-  branch from oxaloacetate side right {
-    oxaloacetate
-    <-> . +2e_10e_dode_2_10_dicenoyl_coa +h2o +coa +hplus
-    4e_11e_2_hydroxytrideca_4_11_dien_1_2_3_tricarb
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_47 [3.6.3.47] +adp +phosphate +atp +h2o
-    tetradecanoyl_coa
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_2_1_147 [3.2.1.147] +beta_d_glucose +benzylglucosinolate_aglycone +h2o
-    z_glucotropeolin
-  }
-
-  branch from adp side left {
-    adp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +phosphate +atp +h2o
-    1_palmitoleoyl_sn_glycerol_3_phosphate
-  }
-
-  branch from adp side right {
-    adp
-    <-> ec_3_6_3_47 [3.6.3.47] +h +phosphate +atp +h2o
-    decanoyl_coa
-  }
-
-  branch from phosphate side left {
-    phosphate
-    <-> ec_2_4_1_8 [2.4.1.8] +d_maltose +beta_d_glucose
-    beta_d_glucose_1_phosphate
-  }
-
-  branch from phosphate side right {
-    phosphate
-    <-> . +carbamoyl_phosphate +kanamycin_b +h
-    nebramycin_iv
   }
 }

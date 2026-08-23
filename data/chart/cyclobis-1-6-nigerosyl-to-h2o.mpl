@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cyclobis-1-6-nigerosyl-to-h2o "cyclobis-(1→6)-α-nigerosyl to H2O" {
-  spacing 188
+  spacing 152
 
   spine at 0,0 {
     cyclobis_1_6_nigerosyl
@@ -18,41 +18,5 @@ pathway cyclobis-1-6-nigerosyl-to-h2o "cyclobis-(1→6)-α-nigerosyl to H2O" {
     d_fructofuranose
     <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate -d_fructofuranose -h2o
     atp
-  }
-
-  branch from glucose side left {
-    glucose
-    <-> . +sucrose +6_kestotriose
-    6_6_kestotetraose
-  }
-
-  branch from glucose side right {
-    glucose
-    <-> ec_3_2_1_147 [3.2.1.147] +4_methoxyglucobrassicin +h2o +h
-    4_methoxy_3_indolylmethyl_glucosinolate_aglycone
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_47 [3.6.3.47] +h +adp +phosphate +h2o
-    dodecanoyl_coa
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    n_acetyl_beta_d_glucosamine
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    1_f_beta_d_fructosylsucrose
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    4_amino_4_deoxy_l_arabinopyranose
   }
 }

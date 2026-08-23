@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway aldehydo-d-glucose-to-4s-5s-4-5-dihydroxy-2-6 "aldehydo-D-glucose to (4S,5S)-4,5-dihydroxy-2,6…" {
-  spacing 274
+  spacing 280
 
   spine at 0,0 {
     aldehydo_d_glucose
@@ -20,33 +20,39 @@ pathway aldehydo-d-glucose-to-4s-5s-4-5-dihydroxy-2-6 "aldehydo-D-glucose to (4S
     4s_5s_4_5_dihydroxy_2_6_dioxohexanoate
   }
 
-  branch from n6_d_fructosyl_l_lysinium side left {
-    n6_d_fructosyl_l_lysinium
-    <-> ec_2_7_1_171 [2.7.1.171] +h +n6_3_o_phospho_d_fructosyl_l_lysinium_1 +adp
-    atp
-  }
-
-  branch from 3_deoxyglucosone side right {
+  branch from 3_deoxyglucosone side left {
     3_deoxyglucosone
     <-> . +nadp +nadph +hplus
     3_deoxy_keto_d_fructose
   }
 
+  branch from l_lysinium side right {
+    l_lysinium
+    <-> ec_6_3_1_20 [6.3.1.20] +r_lipoate +atp +amp +ppi +hplus
+    n6_r_lipoyl_l_lysine
+  }
+
   branch from l_lysinium side left {
     l_lysinium
-    <-> ec_2_3_1_48 [2.3.1.48] +acetyl_coa +coa +hplus
-    n6_acetyl_l_lysine
+    <-> ec_3_5_1_124 [3.5.1.124] +n6_1_hydroxy_2_oxopropyl_l_lysine +h2o +hplus
+    lactate
+  }
+
+  branch from 4s_5s_4_5_dihydroxy_2_6_dioxohexanoate side right {
+    4s_5s_4_5_dihydroxy_2_6_dioxohexanoate
+    <-> ec_4_2_99_25 [4.2.99.25]
+    4_deoxy_l_erythro_hex_4_enopyranuronate
+  }
+
+  branch from l_lysinium side left {
+    l_lysinium
+    <-> ec_2_1_1_259 [2.1.1.259] +sam +sah +hplus
+    n6_n6_n6_trimethyl_l_lysine
   }
 
   branch from l_lysinium side right {
     l_lysinium
-    <-> . +n6_propanoyl_l_lysine +nad +h2o +nicotinamide
-    3_o_propanoyl_adp_d_ribose
-  }
-
-  branch from 4s_5s_4_5_dihydroxy_2_6_dioxohexanoate side left {
-    4s_5s_4_5_dihydroxy_2_6_dioxohexanoate
-    <-> ec_4_2_99_25 [4.2.99.25]
-    4_deoxy_l_erythro_hex_4_enopyranuronate
+    <-> . +butyryl_coa +coa +hplus
+    n6_butyryl_l_lysine
   }
 }

@@ -1,0 +1,446 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "alpha-d-glucosamine-to-h2o-null",
+  "name": "alpha-D-glucosamine… to H2O",
+  "category": "other",
+  "summary": "A 3-step route from alpha-D-glucosamine 6-phosphate to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR198503"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "alpha_d_glucosamine_6_phosphate",
+      "name": "alpha-D-glucosamine 6-phosphate",
+      "short": "alpha-D-glucosamine…",
+      "formula": "C6H13NO8P",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1104065"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "d_glucosamine_1_phosphate",
+      "name": "D-Glucosamine 1-phosphate",
+      "short": "D-Glucosamine 1-P",
+      "formula": "C6H14NO8P",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364051"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1104266"
+      }
+    },
+    {
+      "id": "n_acetyl_alpha_d_glucosamine_1_phosphate",
+      "name": "N-acetyl-alpha-D-glucosamine 1-phosphate",
+      "short": "N-acetyl-alpha-D-gl…",
+      "formula": "C8H14NO9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1105798"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_4_2_10",
+      "name": "phosphoglucosamine mutase",
+      "ec": [
+        "5.4.2.10"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_157",
+      "name": "glucosamine-1-phosphate N-acetyltransferase",
+      "ec": [
+        "2.3.1.157"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_4",
+      "name": "glucosamine-phosphate N-acetyltransferase",
+      "ec": [
+        "2.3.1.4"
+      ],
+      "xrefs": {
+        "uniprot": "Q96EK6"
+      }
+    },
+    {
+      "id": "ec_3_6_3_17",
+      "name": "EC 3.6.3.17",
+      "ec": [
+        "3.6.3.17"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "phosphoglucosamine mutase",
+      "ec": "5.4.2.10",
+      "substrates": [
+        {
+          "metabolite": "alpha_d_glucosamine_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glucosamine_1_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_2_10"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR198503"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198503"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "glucosamine-1-phosphate N-acetyltransferase",
+      "ec": "2.3.1.157",
+      "substrates": [
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_glucosamine_1_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_alpha_d_glucosamine_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_157"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR195827"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR195827"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR174789",
+      "ec": "3.6.3.17",
+      "substrates": [
+        {
+          "metabolite": "n_acetyl_alpha_d_glucosamine_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_alpha_d_glucosamine_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_3_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR174789"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR174789"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_d_glucosamine_1_phosphate_alpha-d-glucosamine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glucosamine_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-glucosamine-to-h2o"
+      },
+      "note": "Shares D-Glucosamine 1-phosphate with alpha-D-glucosamine… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364051"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetyl_alpha_d_glucosamine_1_phosphate_alpha-d-glucosamine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyl_alpha_d_glucosamine_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-glucosamine-to-h2o"
+      },
+      "note": "Shares N-acetyl-alpha-D-glucosamine 1-phosphate with alpha-D-glucosamine… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1105798"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetyl_alpha_d_glucosamine_1_phosphate_dtdp-n-acetyl-alpha-d-glu-to-n-acetyl-d-hexosami",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyl_alpha_d_glucosamine_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-n-acetyl-alpha-d-glu-to-n-acetyl-d-hexosami"
+      },
+      "note": "Shares N-acetyl-alpha-D-glucosamine 1-phosphate with dTDP-N-acetyl-alpha-D-glu… to N-acetyl-α-D-hexosamine….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1105798"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetyl_alpha_d_glucosamine_1_phosphate_n-acetyl-d-mannosamine-to-n-acetyl-d-glucosamino",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyl_alpha_d_glucosamine_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyl-d-mannosamine-to-n-acetyl-d-glucosamino"
+      },
+      "note": "Shares N-acetyl-alpha-D-glucosamine 1-phosphate with N-acetyl-D-mannosamine to N-acetyl-D-glucosamino-1,….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1105798"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetyl_alpha_d_glucosamine_1_phosphate_udp-n-acetyl-alpha-d-gala-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyl_alpha_d_glucosamine_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-n-acetyl-alpha-d-gala-to-h2o"
+      },
+      "note": "Shares N-acetyl-alpha-D-glucosamine 1-phosphate with UDP-N-acetyl-alpha-D-gala… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1105798"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetyl_alpha_d_glucosamine_1_phosphate_udp-n-acetyl-alpha-d-gala-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyl_alpha_d_glucosamine_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-n-acetyl-alpha-d-gala-to-h2o-null"
+      },
+      "note": "Shares N-acetyl-alpha-D-glucosamine 1-phosphate with UDP-N-acetyl-alpha-D-gala… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1105798"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetyl_alpha_d_glucosamine_1_phosphate_udp-n-acetyl-alpha-d-mann-to-n-acetyl-d-glucosam",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyl_alpha_d_glucosamine_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-n-acetyl-alpha-d-mann-to-n-acetyl-d-glucosam"
+      },
+      "note": "Shares N-acetyl-alpha-D-glucosamine 1-phosphate with UDP-N-acetyl-alpha-D-mann… to N-acetyl-D-glucosamine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1105798"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,418 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1-acylglycerol-3p-9-eicose-to-h2o-null",
+  "name": "1-Acylglycerol-3P-9-Eicose to H2O",
+  "category": "other",
+  "summary": "A 3-step route from 1-Acylglycerol-3P-9-Eicose to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR205097"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1_acylglycerol_3p_9_eicose",
+      "name": "1-Acylglycerol-3P-9-Eicose",
+      "short": "1-Acylglycerol-3P-9…",
+      "formula": "C23H43O7P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1560506"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "sn_glycerol_3_phosphate",
+      "name": "sn-glycerol 3-phosphate",
+      "short": "sn-glycerol 3-P",
+      "formula": "C3H7O6P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM66"
+      }
+    },
+    {
+      "id": "9z_icos_9_enoyl_coa",
+      "name": "(9Z)-icos-9-enoyl-CoA",
+      "short": "icos-9-enoyl-CoA",
+      "formula": "C41H68N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:232891"
+      }
+    },
+    {
+      "id": "diphosphate",
+      "name": "diphosphate",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM11"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM728294"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "gadoleic_acid",
+      "name": "gadoleic acid",
+      "formula": "C20H38O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:32419"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR205097",
+      "substrates": [
+        {
+          "metabolite": "1_acylglycerol_3p_9_eicose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sn_glycerol_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "9z_icos_9_enoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR205097"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR205097"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR158297",
+      "substrates": [
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "9z_icos_9_enoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gadoleic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR158297"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR158297"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR158298",
+      "substrates": [
+        {
+          "metabolite": "gadoleic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "9z_icos_9_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR158298"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR158298"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_1_acylglycerol_3p_9_eicose_1-acylglycerol-3p-9-eicose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_acylglycerol_3p_9_eicose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-acylglycerol-3p-9-eicose-to-h2o"
+      },
+      "note": "Shares 1-Acylglycerol-3P-9-Eicose with 1-Acylglycerol-3P-9-Eicose to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1560506"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_9z_icos_9_enoyl_coa_1-acylglycerol-3p-9-eicose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9z_icos_9_enoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-acylglycerol-3p-9-eicose-to-h2o"
+      },
+      "note": "Shares (9Z)-icos-9-enoyl-CoA with 1-Acylglycerol-3P-9-Eicose to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:232891"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_9z_icos_9_enoyl_coa_3r-9z-hydroxyicos-9-eno-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9z_icos_9_enoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3r-9z-hydroxyicos-9-eno-to-diphosphate"
+      },
+      "note": "Shares (9Z)-icos-9-enoyl-CoA with (3R,9Z)-hydroxyicos-9-eno… to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:232891"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_9z_icos_9_enoyl_coa_3r-9z-hydroxyicos-9-eno-to-diphosphate-86199",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9z_icos_9_enoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3r-9z-hydroxyicos-9-eno-to-diphosphate-86199"
+      },
+      "note": "Shares (9Z)-icos-9-enoyl-CoA with (3R,9Z)-hydroxyicos-9-eno… to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:232891"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_9z_icos_9_enoyl_coa_cetoleate-to-ce-18-1-7z",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9z_icos_9_enoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cetoleate-to-ce-18-1-7z"
+      },
+      "note": "Shares (9Z)-icos-9-enoyl-CoA with cetoleate to CE 18:1(7Z).",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:232891"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_9z_icos_9_enoyl_coa_cetoleate-to-ce-18-1-7z-83403",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9z_icos_9_enoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cetoleate-to-ce-18-1-7z-83403"
+      },
+      "note": "Shares (9Z)-icos-9-enoyl-CoA with cetoleate to CE 18:1(7Z).",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:232891"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_gadoleic_acid_1-acylglycerol-3p-9-eicose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "gadoleic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-acylglycerol-3p-9-eicose-to-h2o"
+      },
+      "note": "Shares gadoleic acid with 1-Acylglycerol-3P-9-Eicose to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:32419"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_gadoleic_acid_3-oxo-24-isopropanoyl-c-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "gadoleic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-oxo-24-isopropanoyl-c-to-coa"
+      },
+      "note": "Shares gadoleic acid with 3-oxo-24-(isopropanoyl)-c… to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:32419"
+          }
+        ]
+      }
+    }
+  ]
+}

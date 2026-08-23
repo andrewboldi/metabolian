@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cis-beta-d-glucosyl-2-hyd-to-h2o "cis-beta-D-glucosyl-2-hyd… to H2O" {
-  spacing 208
+  spacing 160
 
   spine at 0,0 {
     cis_beta_d_glucosyl_2_hydroxycinnamate
@@ -14,53 +14,5 @@ pathway cis-beta-d-glucosyl-2-hyd-to-h2o "cis-beta-D-glucosyl-2-hyd… to H2O" {
     coumarin
     <-> ec_1_14_14_1 [1.14.14.1] +h +o2 +nadph -nadp -h2o
     umbelliferone
-  }
-
-  branch from alpha_d_glucose side left {
-    alpha_d_glucose
-    <-> ec_3_2_1_177 [3.2.1.177] +alpha_d_xylose +h2o
-    isoprimeverose
-  }
-
-  branch from alpha_d_glucose side right {
-    alpha_d_glucose
-    <-> ec_2_3_1_103 [2.3.1.103] +1_2_di_o_sinapoyl_beta_d_glucose
-    1_o_trans_sinapoyl_beta_d_glucose
-  }
-
-  branch from cis_2_coumarate side left {
-    cis_2_coumarate
-    <-> ec_3_2_1_21 [3.2.1.21] +cis_beta_d_glucosyl_2_hydroxycinnamate +h2o
-    glucose
-  }
-
-  branch from coumarin side right {
-    coumarin
-    <-> . +nadh +h +nad
-    3_4_dihydrocoumarin
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_asparagine +l_phenylalanine +l_tyrosine
-    asparaginyl_tyrosyl_phenylalanine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_asparagine +l_threonine +l_tyrosine
-    asparaginyl_tyrosyl_threonine
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +nonadecanoyl_coa +h +nadph
-    2e_nonadecenoyl_coenzyme_a
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +h +nadph +3_oxoheneicosanoyl_coenzyme_a
-    3_hydroxyheneicosanoyl_coenzyme_a
   }
 }

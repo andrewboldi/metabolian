@@ -1,0 +1,369 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "oxaloacetate-to-succinate",
+  "name": "oxaloacetate to succinate",
+  "category": "other",
+  "summary": "A 3-step route from oxaloacetate(2−) to succinate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:16845"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:16452"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "oxaloacetate",
+      "name": "Oxaloacetate",
+      "formula": "C4H2O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16452"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "citrate",
+      "name": "Citrate",
+      "formula": "C6H5O7",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:16947"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "d_threo_isocitrate",
+      "name": "D-threo-isocitrate",
+      "formula": "C6H5O7",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:15562"
+      }
+    },
+    {
+      "id": "glyoxylate",
+      "name": "Glyoxylate",
+      "formula": "C2HO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36655"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_3_3_1",
+      "name": "citrate (Si)-synthase",
+      "ec": [
+        "2.3.3.1"
+      ],
+      "xrefs": {
+        "uniprot": "O75390"
+      }
+    },
+    {
+      "id": "ec_2_3_3_3",
+      "name": "citrate (Re)-synthase",
+      "ec": [
+        "2.3.3.3"
+      ]
+    },
+    {
+      "id": "ec_2_3_3_16",
+      "name": "citrate synthase (unknown stereospecificity)",
+      "ec": [
+        "2.3.3.16"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_3",
+      "name": "aconitate hydratase",
+      "ec": [
+        "4.2.1.3"
+      ],
+      "xrefs": {
+        "uniprot": "P21399"
+      }
+    },
+    {
+      "id": "ec_4_1_3_1",
+      "name": "isocitrate lyase",
+      "ec": [
+        "4.1.3.1"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "citrate (Si)-synthase",
+      "equation": "oxaloacetate + acetyl-CoA + H2O = citrate + CoA + H(+)",
+      "ec": "2.3.3.1",
+      "substrates": [
+        {
+          "metabolite": "oxaloacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "citrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_3_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:16845"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16845"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "aconitate hydratase",
+      "equation": "citrate = D-threo-isocitrate",
+      "ec": "4.2.1.3",
+      "substrates": [
+        {
+          "metabolite": "citrate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_threo_isocitrate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:10336"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10336"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "isocitrate lyase",
+      "equation": "D-threo-isocitrate = glyoxylate + succinate",
+      "ec": "4.1.3.1",
+      "substrates": [
+        {
+          "metabolite": "d_threo_isocitrate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glyoxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_3_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:13245"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13245"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_d_threo_isocitrate_7r-7-5-carboxy-5-oxope-to-cephalosporin-c",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_threo_isocitrate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7r-7-5-carboxy-5-oxope-to-cephalosporin-c"
+      },
+      "note": "Shares D-threo-isocitrate with (7R)-7-(5-carboxy-5-oxope… to cephalosporin C.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15562"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_threo_isocitrate_l-histidinol-phosphate-to-l-glutamate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_threo_isocitrate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-histidinol-phosphate-to-l-glutamate"
+      },
+      "note": "Shares D-threo-isocitrate with L-histidinol phosphate to L-glutamate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15562"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_threo_isocitrate_tricarballylate-to-d-erythro-isocitrate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_threo_isocitrate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "tricarballylate-to-d-erythro-isocitrate"
+      },
+      "note": "Shares D-threo-isocitrate with tricarballylate to D-erythro-isocitrate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15562"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_threo_isocitrate_udp-to-quercetin-3-o-6-o-caffe",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_threo_isocitrate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-quercetin-3-o-6-o-caffe"
+      },
+      "note": "Shares D-threo-isocitrate with UDP to quercetin 3-O-[(6-O-caffe….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15562"
+          }
+        ]
+      }
+    }
+  ]
+}

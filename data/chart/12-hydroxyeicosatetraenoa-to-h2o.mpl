@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 12-hydroxyeicosatetraenoa-to-h2o "12-hydroxyeicosatetraenoa… to H2O" {
-  spacing 194
+  spacing 278
 
   spine at 0,0 {
     12_hydroxyeicosatetraenoate
@@ -32,14 +32,14 @@ pathway 12-hydroxyeicosatetraenoa-to-h2o "12-hydroxyeicosatetraenoa… to H2O" {
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +h +valproic_acid +o2 +nadph +h2o
-    3_hydroxyvalproic_acid
+    <-> ec_1_14_13_148 [1.14.13.148] +h +dimethyl_sulfide +o2 +nadph +h2o
+    dimethyl_sulfoxide
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_8_1_12 [1.8.1.12] +bis_glutathionyl_spermine_disulfide +h +nadph
-    bis_glutathionyl_spermine
+    <-> ec_1_14_13_20 [1.14.13.20] +h +o2 +nadph +2_chloro_4_methylphenol +h2o
+    3_chloro_5_methylcatechol
   }
 
   branch from 20_hydroxy_leukotriene_b4 side left {
@@ -50,13 +50,97 @@ pathway 12-hydroxyeicosatetraenoa-to-h2o "12-hydroxyeicosatetraenoa… to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> . +h +glutathione +glutathionylaminopropylcadaverine
-    homotrypanothione
+    <-> . +s_methylcysteine +o2 +s_methylcysteine_s_oxide
+    h2o2
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +demecolcine +formate
-    n_formyldemecolcine
+    <-> . +s_ethyl_l_cysteine +o2 +h2o2
+    ethiin
+  }
+
+  branch from 12_hydroxyeicosatetraenoate side right {
+    12_hydroxyeicosatetraenoate
+    <-> . +glutathione_disulfide +h2o +glutathione
+    12s_hydroperoxy_5z_8z_10e_14z_eicosatetraenoate
+  }
+
+  branch from 12_hydroxyeicosatetraenoate side left {
+    12_hydroxyeicosatetraenoate
+    <-> . +nadp +h +nadph
+    12_oxo_5z_8z_10e_14z_eicosatetraenoate
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +2_oxoglutarate +gibberellin_a15_closed_lactone_form +succinate +gibberellin_a37_closed_lactone_form
+    co2
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +all_trans_beta_carotene +ionone
+    4_9_dimethyldodeca_2_4_6_8_10_pentaenedial
+  }
+
+  branch from leukotriene_b4 side right {
+    leukotriene_b4
+    <-> . +o2
+    5s_hydroxy_6e_8z_11z_14z_eicosatetraenoate
+  }
+
+  branch from leukotriene_b4 side left {
+    leukotriene_b4
+    <-> . +h +o2 +nadph +nadp +h2o
+    20_hydroxy_6_trans_leukotriene_b4
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_5_1_1 [2.5.1.1] +diphosphate +lupiwighteone +genistein
+    dimethylallyl_diphosphate
+  }
+
+  branch from h side left {
+    h
+    <-> . +co2 +cannabichromene
+    cannabichromenate
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_3_1_94 [1.3.1.94] +h +di_trans_poly_cis_polyprenol_c80 +nadp
+    c80_dolichol
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_1_1_274 [1.1.1.274] +ethyl_2r_methyl_3s_hydroxybutanoate +nadp +h
+    ethyl_2_methylacetoacetate
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_1_1_2 [1.1.1.2] +1_2_4_butanetriol +h +nadph
+    3r_3_4_dihydroxybutanal
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +h +4_3_acetyl_5_hydroxy_4_oxo_1_4_dihydronapthalen +nadph
+    s_chiral_alcohol
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +h2o2 +hemigossypol +o2
+    desoxyhemigossypol
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +desoxyhemigossypol_6_methyl_ether +o2 +h2o2
+    2_8_dihydroxy_4_isopropyl_3_methoxy_6_methyl_1_n
   }
 }

@@ -1,0 +1,558 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "lyxulose-to-udp-n-acetyltunicamine-ur-null",
+  "name": "Lyxulose to UDP-N-acetyltunicamine-ur…",
+  "category": "nucleotide-metabolism",
+  "summary": "A 3-step route from Lyxulose to UDP-N-acetyltunicamine-uracil(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR198151"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:165240"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "lyxulose",
+      "name": "Lyxulose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:165240"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "3_dehydro_l_gulonate",
+      "name": "3-dehydro-L-gulonate",
+      "formula": "C6H9O7",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM736"
+      }
+    },
+    {
+      "id": "3_ump",
+      "name": "3'-UMP",
+      "formula": "C9H11N2O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1102189"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "uridine",
+      "name": "uridine",
+      "formula": "C9H12N2O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1103104"
+      }
+    },
+    {
+      "id": "3_dehydro_l_gulonate_6_phosphate",
+      "name": "3-dehydro-L-gulonate 6-phosphate",
+      "short": "3-dehydro-L-gulonat…",
+      "formula": "C6H8O10P",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1170"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "udp_n_acetylgalactosamine_5_6_ene",
+      "name": "UDP-N-acetylgalactosamine-5,6-ene",
+      "short": "UDP-N-acetylgalacto…",
+      "formula": "C17H23N3O16P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:85718"
+      }
+    },
+    {
+      "id": "udp_n_acetyltunicamine_uracil",
+      "name": "UDP-N-acetyltunicamine-uracil",
+      "short": "UDP-N-acetyltunicam…",
+      "formula": "C26H35N5O22P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:85719"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_1_1_34",
+      "name": "dehydro-L-gulonate decarboxylase",
+      "ec": [
+        "4.1.1.34"
+      ],
+      "xrefs": {
+        "uniprot": "Q9H0W9"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "dehydro-L-gulonate decarboxylase",
+      "ec": "4.1.1.34",
+      "substrates": [
+        {
+          "metabolite": "lyxulose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_dehydro_l_gulonate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_34"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR198151"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198151"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR94933",
+      "substrates": [
+        {
+          "metabolite": "3_ump",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_dehydro_l_gulonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "uridine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_dehydro_l_gulonate_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR94933"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR94933"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR121383",
+      "substrates": [
+        {
+          "metabolite": "udp_n_acetylgalactosamine_5_6_ene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "uridine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "udp_n_acetyltunicamine_uracil",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR121383"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR121383"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3_dehydro_l_gulonate_l-gulono-1-4-lactone-to-l-xylulose-5-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_dehydro_l_gulonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-gulono-1-4-lactone-to-l-xylulose-5-phosphate"
+      },
+      "note": "Shares 3-dehydro-L-gulonate with L-gulono-1,4-lactone to L-xylulose 5-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM736"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_dehydro_l_gulonate_l-gulono-1-4-lactone-to-l-xylulose-5-phosphate-4",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_dehydro_l_gulonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-gulono-1-4-lactone-to-l-xylulose-5-phosphate-4"
+      },
+      "note": "Shares 3-dehydro-L-gulonate with L-gulono-1,4-lactone to L-xylulose 5-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM736"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_dehydro_l_gulonate_lyxulose-to-udp-n-acetyltunicamine-ur",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_dehydro_l_gulonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "lyxulose-to-udp-n-acetyltunicamine-ur"
+      },
+      "note": "Shares 3-dehydro-L-gulonate with Lyxulose to UDP-N-acetyltunicamine-ur….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM736"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_ump_lyxulose-to-udp-n-acetyltunicamine-ur",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_ump"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "lyxulose-to-udp-n-acetyltunicamine-ur"
+      },
+      "note": "Shares 3'-UMP with Lyxulose to UDP-N-acetyltunicamine-ur….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1102189"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_dehydro_l_gulonate_6_phosphate_1-carboxyvinyl-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_dehydro_l_gulonate_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-carboxyvinyl-to-nadph"
+      },
+      "note": "Shares 3-dehydro-L-gulonate 6-phosphate with 1-carboxyvinyl… to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1170"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_dehydro_l_gulonate_6_phosphate_3-dehydro-l-gulonate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_dehydro_l_gulonate_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-dehydro-l-gulonate-to-h2o"
+      },
+      "note": "Shares 3-dehydro-L-gulonate 6-phosphate with 3-dehydro-L-gulonate… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1170"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_dehydro_l_gulonate_6_phosphate_3-dehydro-l-gulonate-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_dehydro_l_gulonate_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-dehydro-l-gulonate-to-h2o-null"
+      },
+      "note": "Shares 3-dehydro-L-gulonate 6-phosphate with 3-dehydro-L-gulonate… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1170"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_dehydro_l_gulonate_6_phosphate_kaempferol-3-o-4-o-4-co-to-h-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_dehydro_l_gulonate_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "kaempferol-3-o-4-o-4-co-to-h-null"
+      },
+      "note": "Shares 3-dehydro-L-gulonate 6-phosphate with kaempferol 3-O-(4″-O-4-co… to H.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1170"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_dehydro_l_gulonate_6_phosphate_lyxulose-to-udp-n-acetyltunicamine-ur",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_dehydro_l_gulonate_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "lyxulose-to-udp-n-acetyltunicamine-ur"
+      },
+      "note": "Shares 3-dehydro-L-gulonate 6-phosphate with Lyxulose to UDP-N-acetyltunicamine-ur….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1170"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_udp_n_acetylgalactosamine_5_6_ene_lyxulose-to-udp-n-acetyltunicamine-ur",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "udp_n_acetylgalactosamine_5_6_ene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "lyxulose-to-udp-n-acetyltunicamine-ur"
+      },
+      "note": "Shares UDP-N-acetylgalactosamine-5,6-ene with Lyxulose to UDP-N-acetyltunicamine-ur….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:85718"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_udp_n_acetylgalactosamine_5_6_ene_udp-n-acetylgalactosamine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "udp_n_acetylgalactosamine_5_6_ene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-n-acetylgalactosamine-to-h2o"
+      },
+      "note": "Shares UDP-N-acetylgalactosamine-5,6-ene with UDP-N-acetylgalactosamine… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:85718"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_udp_n_acetylgalactosamine_5_6_ene_udp-n-acetylgalactosamine-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "udp_n_acetylgalactosamine_5_6_ene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-n-acetylgalactosamine-to-h2o-null"
+      },
+      "note": "Shares UDP-N-acetylgalactosamine-5,6-ene with UDP-N-acetylgalactosamine… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:85718"
+          }
+        ]
+      }
+    }
+  ]
+}

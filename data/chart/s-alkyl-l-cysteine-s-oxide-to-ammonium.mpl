@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-alkyl-l-cysteine-s-oxide-to-ammonium "S-alkyl-L-cysteine S-oxide to ammonium" {
-  spacing 264
+  spacing 288
 
   spine at 0,0 {
     s_alkyl_l_cysteine_s_oxide
@@ -30,13 +30,37 @@ pathway s-alkyl-l-cysteine-s-oxide-to-ammonium "S-alkyl-L-cysteine S-oxide to am
 
   branch from nh3 side left {
     nh3
-    <-> ec_2_3_2_5 [2.3.2.5] +l_glutaminiumyl_group
-    n_terminal_5_oxo_l_proline
+    <-> . +undecaprenyldiphosphonato_n_acetyl_n_acetylgluco +pi +hplus
+    undecaprenyldiphospho_n_acetyl_n_acetylglucosami
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_1_4_1_12 [1.4.1.12] +2r_4s_2_4_diazaniumylpentanoate +nad +h2o +nadh +hplus
-    r_2_amino_4_oxopentanoic_acid
+    <-> ec_3_5_1_131 [3.5.1.131] +1_carboxybiuret +h2o
+    1_3_dicarboxyurea
+  }
+
+  branch from 2_ammonioprop_2_enoate side left {
+    2_ammonioprop_2_enoate
+    <-> . +h2o
+    dserine
+  }
+
+  branch from 2_ammonioprop_2_enoate side right {
+    2_ammonioprop_2_enoate
+    <-> . +s_alkyl_l_cysteine
+    alkanethiol
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> . +5_methoxytryptamine +o2 +h2o +h2o2
+    5_methoxyindoleacetaldehyde
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> . +spermidine +o2 +h2o +h2o2
+    4_ammoniobutyl_3_oxopropyl_azanium
   }
 }

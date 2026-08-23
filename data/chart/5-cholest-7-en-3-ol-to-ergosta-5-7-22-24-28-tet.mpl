@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-cholest-7-en-3-ol-to-ergosta-5-7-22-24-28-tet "5α-cholest-7-en-3β-ol to ergosta-5,7,22,24(28)-tet…" {
-  spacing 232
+  spacing 262
 
   spine at 0,0 {
     lathosterol
@@ -40,14 +40,14 @@ pathway 5-cholest-7-en-3-ol-to-ergosta-5-7-22-24-28-tet "5α-cholest-7-en-3β-ol
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_16 [2.1.1.16] +1_acyl_2_z_9_10_enoyl_sn_glycero_3_phospholipid +sam +hplus
-    1_acyl_2_10_methylenealkanoyl_sn_3_glycerophosph
+    <-> ec_2_1_1_169 [2.1.1.169] +tricetin +sam +hplus
+    3_4_5_o_trimethyltricetin
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_76 [2.1.1.76] +quercetin_7_olate +sam +hplus
-    3_4_5_trihydroxy_3_methoxyflavon_7_olate
+    <-> ec_2_1_1_255 [2.1.1.255] +gpp +sam +hplus
+    e_2_methylgeranyl_diphosphate
   }
 
   branch from ergosta_5_7_dien_3_ol side left {
@@ -60,5 +60,35 @@ pathway 5-cholest-7-en-3-ol-to-ergosta-5-7-22-24-28-tet "5α-cholest-7-en-3β-ol
     ergosterol
     <-> ec_2_3_2_37 [2.3.2.37] +3_l_aspartate_adenylyl_1_group +amp_3_end_1
     1_ergostan_3_yl_l_aspartate
+  }
+
+  branch from lathosterol side left {
+    lathosterol
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    cholestanol_7_8_epoxide
+  }
+
+  branch from sam side right {
+    sam
+    <-> ec_2_1_1_254 [2.1.1.254] +erythromycin_d +sah +hplus
+    erythromycin_b
+  }
+
+  branch from sam side left {
+    sam
+    <-> ec_2_1_1_225 [2.1.1.225] +cytidine_5_monophosphate_1 +sah +hplus
+    2_o_methylcytidine_5_monophosphate_1
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_261 [2.1.1.261] +4_3_methylbut_2_enyl_l_tryptophan +sam +hplus
+    4_3_methylbut_2_enyl_l_abrine
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_265 [2.1.1.265] +tellurite +sam
+    methanetelluronate
   }
 }

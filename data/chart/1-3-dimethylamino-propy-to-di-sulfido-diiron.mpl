@@ -4,87 +4,39 @@
 # edit the generator, not this file.
 
 pathway 1-3-dimethylamino-propy-to-di-sulfido-diiron "1-[3-(dimethylamino)propy… to di-μ-sulfido-diiron" {
-  spacing 224
+  spacing 302
 
   spine at 0,0 {
     1_3_dimethylamino_propyl_1_4_fluorophenyl_1_3_di
     <-> ec_1_4_3_4 [1.4.3.4] +h +o2 +h2o -h2o2 -dimethylamine
     citalopram_aldehyde
-    <-> . +co2 +3_chloro_p_toluidine +dimethylamine -chlorotoluron -h2o
+    <-> . +co2 +para_isopropylaniline +dimethylamine -isoproturon -h2o
     h
-    <-> . +chlorotoluron +di_sulfido_diiron +o2 +hplus -formaldehyde -di_sulfido_diiron -h2o
-    3_3_chloro_4_methylphenyl_1_methylurea
+    <-> . +isoproturon +di_sulfido_diiron +o2 +hplus -formaldehyde -di_sulfido_diiron -h2o
+    isoproturon_monodemethyl
   }
 
-  branch from citalopram_aldehyde side left {
-    citalopram_aldehyde
-    <-> ec_1_2_3_1 [1.2.3.1] +h2o2 +o2 +h2o
-    citalopram_propionic_acid
-  }
 
-  branch from citalopram_aldehyde side right {
-    citalopram_aldehyde
-    <-> ec_1_4_3_4 [1.4.3.4] +h +didemethylcitalopram +o2 +h2o +h2o2
-    nh4
-  }
 
-  branch from h2o2 side left {
-    h2o2
-    <-> . +2_dihydroxymethyl_furan +o2 +h
-    2_furoate
-  }
 
-  branch from h2o2 side right {
-    h2o2
-    <-> . +co2 +nonadec_1_ene +h2o +h
-    eicosanoate
-  }
 
-  branch from dimethylamine side left {
-    dimethylamine
-    <-> . +co2 +3_trifluoromethyl_aniline +h +h2o
-    fluometuron
-  }
 
-  branch from dimethylamine side right {
-    dimethylamine
-    <-> . +3_chloro_4_methoxyaniline +co2 +h +h2o
-    metoxuron
-  }
 
-  branch from h side left {
-    h
-    <-> . +neocarrabiose +sulfate +h2o
-    neocarrabiose_sulfate
-  }
 
-  branch from h side right {
-    h
-    <-> . +d_glucosaminyl_1_4_d_glucosamine +acetate +h2o
-    n_acetyl_d_glucosaminyl_1_4_d_glucosaminium
-  }
 
-  branch from h2o side left {
-    h2o
-    <-> . +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +9_methylthio_nonyl_thiohydroximic_acid
-    ser_gly
-  }
 
-  branch from h2o side right {
-    h2o
-    <-> . +petivericin
-    phenylmethanesulfenate
-  }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
-    <-> . +androst_4_ene_3_17_dione +di_sulfido_diiron +o2 +hplus +h2o
-    11_hydroxyandrost_4_ene_3_17_dione
-  }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
-    <-> . +testosterone +di_sulfido_diiron +o2 +hplus +h2o
-    11_hydroxytestosterone
-  }
+
+
+
+
+
+
+
+
+
+
+
+
 }

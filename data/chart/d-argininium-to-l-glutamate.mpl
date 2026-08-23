@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-argininium-to-l-glutamate "D-argininium to L-glutamate" {
-  spacing 226
+  spacing 220
 
   spine at 0,0 {
     d_argininium
@@ -14,11 +14,5 @@ pathway d-argininium-to-l-glutamate "D-argininium to L-glutamate" {
     1_4_butanediammonium
     <-> ec_2_6_1_82 [2.6.1.82] +akg -glutamate -h2o
     1_pyrrolinium
-  }
-
-  branch from 1_4_butanediammonium side left {
-    1_4_butanediammonium
-    <-> ec_1_14_13_252 [1.14.13.252] +nadph +o2 +nadp +h2o
-    n_hydroxyputrescine
   }
 }

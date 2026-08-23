@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-carbamoyl-l-amino-to-n-acetyl-d-amino-acid "N-carbamoyl-L-α-amino… to N-acetyl-D-amino acid…" {
-  spacing 218
+  spacing 224
 
   spine at 0,0 {
     n_carbamoyl_l_amino_acid_anion
@@ -18,19 +18,25 @@ pathway n-carbamoyl-l-amino-to-n-acetyl-d-amino-acid "N-carbamoyl-L-α-amino… 
 
   branch from nh3 side left {
     nh3
-    <-> ec_1_7_1_10 [1.7.1.10] +nad +h2o +nadh +hplus
-    hydroxylamine
+    <-> ec_2_3_2_1 [2.3.2.1] +d_glutamine +d_glutamate
+    d_glutamyl_d_glutamate
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_1_4_1_7 [1.4.1.7] +serine +nad +h2o +nadh +hplus
-    3_hydroxypyruvate
+    <-> ec_3_5_4_11 [3.5.4.11] +2_amino_4_hydroxypteridine +h2o +hplus
+    2_4_dihydroxypteridine
   }
 
-  branch from d_amino_acid side left {
-    d_amino_acid
-    <-> . +o2 +h2o2
-    a_2_iminiocarboxylate
+  branch from nh3 side left {
+    nh3
+    <-> . +l_alaninamide +h2o
+    alanine
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_1_4_3_3 [1.4.3.3] +d_lysinium +o2 +h2o +h2o2
+    6_amino_2_oxohexanoic_acid
   }
 }

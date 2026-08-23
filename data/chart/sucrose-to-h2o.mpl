@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway sucrose-to-h2o "sucrose to H2O" {
-  spacing 212
+  spacing 308
 
   spine at 0,0 {
     sucrose
@@ -30,37 +30,133 @@ pathway sucrose-to-h2o "sucrose to H2O" {
 
   branch from glucose side left {
     glucose
-    <-> ec_2_4_1_10 [2.4.1.10] +sucrose
-    6_kestotriose
+    <-> . +phosphoenolpyruvate +pyruvate
+    d_glucose_6_phosphate
   }
 
   branch from glucose side right {
     glucose
-    <-> . +6_o_indol_3_ylacetyl_beta_d_glucose +h2o +h
-    indol_3_yl_acetate
+    <-> . +d_glcp_1_4_d_glcp_1_4_d_glcp +h2o
+    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp
   }
 
   branch from atp side left {
     atp
-    <-> ec_2_7_1_76 [2.7.1.76] +2r_3s_4s_5r_2_6_amino_2_fluoro_9_purinyl_5_hydr +h +adp
-    fludarabine_phosphate
+    <-> ec_6_3_2_2 [6.3.2.2] +l_alanine +l_glutamate +h +adp +phosphate
+    gamma_l_glutamyl_d_alanine
   }
 
   branch from atp side right {
     atp
-    <-> ec_2_7_1_20 [2.7.1.20] +2_methyladenosine_5_monophosphate +adp +h
-    2_methyladenosine
+    <-> ec_7_5_2_11 [7.5.2.11] +h +adp +phosphate +h2o
+    aldehydo_d_galactose
   }
 
   branch from h2o side left {
     h2o
-    <-> . +2_2_methylsulfanyl_heptyl_maleate +h
-    3_7_methylthio_heptylmalic_acid
+    <-> . +l_proline +l_valine +l_glutamine
+    prolyl_valyl_glutamine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +10_formyl_tetrahydromethanopterin +h
-    5_10_methenyl_5_6_7_8_tetrahydromethanopterin
+    <-> . +pitavastatin
+    pitavastatin_lactone
+  }
+
+  branch from sucrose side left {
+    sucrose
+    <-> ec_2_4_1_166 [2.4.1.166] +3f_alpha_d_galactosylraffinose
+    raffinose
+  }
+
+  branch from sucrose side right {
+    sucrose
+    <-> . +stellariose +raffinose
+    1_f_alpha_d_galactosylraffinose
+  }
+
+  branch from 1_f_beta_d_fructosylsucrose side left {
+    1_f_beta_d_fructosylsucrose
+    <-> ec_3_2_1_80 [3.2.1.80] +sucrose +h2o
+    beta_d_fructose
+  }
+
+  branch from 1_f_beta_d_fructosylsucrose side right {
+    1_f_beta_d_fructosylsucrose
+    <-> ec_3_2_1_26 [3.2.1.26] +sucrose +h2o
+    keto_d_fructose
+  }
+
+  branch from glucose side left {
+    glucose
+    <-> ec_3_2_1_20 [3.2.1.20] +h2o +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp
+    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> ec_3_2_1_20 [3.2.1.20] +h2o +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
+    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
+  }
+
+  branch from h side left {
+    h
+    <-> . +3r_hydroxytetradecanoate +deacyl_lipid_iva +h2o
+    lipid_iva_e_coli
+  }
+
+  branch from h side right {
+    h
+    <-> . +1_dephospho_kdo2_lipid_a +phosphate +h2o
+    h_pylori_kdo2_lipid_a
+  }
+
+  branch from adp side left {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    d_selenomethionine
+  }
+
+  branch from adp side right {
+    adp
+    <-> ec_6_2_1_13 [6.2.1.13] +2_methylpropanoyl_coa +phosphate +atp +coa
+    2_methylpropanoate
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +pyruvate +phosphoenolpyruvate +h2o
+    udp_n_acetyl_3_o_1_carboxyvinyl_alpha_d_glucosam
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> . +h +4_dephosphorylated_1_petn_kdo_lipid_a +h2o
+    1_petn_kdo_lipid_a
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_2_7_11_1 [2.7.11.1] +h +kemptide +adp
+    phosphokemptide
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_2_7_1_179 [2.7.1.179] +h +aldehydo_d_kanosamine +adp
+    3_amino_3_deoxy_6_o_phosphono_d_glucopyranose
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +2e_9z_12z_octadecatrienoyl_coa
+    3s_3_hydroxylinoleoyl_coa
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +2e_pristenoyl_coa
+    3_r_hydroxy_pristanoyl_coenzyme_a
   }
 }

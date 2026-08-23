@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway ethyl-methyl-sulfide-to-n-acetyl-l-methionine "ethyl methyl sulfide to N-acetyl-L-methionine" {
-  spacing 272
+  spacing 248
 
   spine at 0,0 {
     ethyl_methyl_sulfide
@@ -18,29 +18,5 @@ pathway ethyl-methyl-sulfide-to-n-acetyl-l-methionine "ethyl methyl sulfide to N
     methionine
     <-> . +acetyl_coa -coa -hplus
     n_acetyl_l_methionine
-  }
-
-  branch from hydrogen_acceptor side left {
-    hydrogen_acceptor
-    <-> . +3_3_diiodo_l_thyronine_sulfate +iodide +hplus +hydrogen_donor
-    3_3_5_triiodo_l_thyronine_sulfate
-  }
-
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> . +terremutin +hydrogen_donor
-    terreate
-  }
-
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_268 [2.1.1.268] +cytidine_5_monophosphate_1 +sam +hplus
-    n3_methylcytidine_5_monophosphate_1
-  }
-
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_256 [2.1.1.256] +guanosine_5_monophosphate_1 +sam +hplus
-    n2_methylguanosine_5_monophosphate_1
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway icosanoyl-coa-to-2-hydroxyarachidate "icosanoyl-CoA to 2-hydroxyarachidate" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     icosanoyl_coa
@@ -14,5 +14,17 @@ pathway icosanoyl-coa-to-2-hydroxyarachidate "icosanoyl-CoA to 2-hydroxyarachida
     icosanoate
     <-> . +fe2 +o2 +hplus -iron -h2o
     2_hydroxyarachidate
+  }
+
+  branch from icosanoyl_coa side left {
+    icosanoyl_coa
+    <-> . +fad +hplus +fadh2
+    trans_2_icosenoyl_coa
+  }
+
+  branch from icosanoyl_coa side right {
+    icosanoyl_coa
+    <-> . +acetyl_coa +coa
+    3_oxodocosanoyl_coa
   }
 }

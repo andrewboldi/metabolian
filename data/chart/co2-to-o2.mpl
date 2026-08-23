@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway co2-to-o2 "CO2 to O2" {
-  spacing 290
+  spacing 340
 
   spine at 0,0 {
     co2
@@ -22,38 +22,38 @@ pathway co2-to-o2 "CO2 to O2" {
 
   branch from 3_4_hydroxyphenyl_pyruvate side left {
     3_4_hydroxyphenyl_pyruvate
-    <-> . +2_4_hydroxybenzyl_malate +h +coa +h2o
-    acetyl_coa
-  }
-
-  branch from 3_4_hydroxyphenyl_pyruvate side right {
-    3_4_hydroxyphenyl_pyruvate
     <-> . +l_tryptophan +l_tyrosine
     indole_3_pyruvate
   }
 
+  branch from 3_4_hydroxyphenyl_pyruvate side right {
+    3_4_hydroxyphenyl_pyruvate
+    <-> ec_5_3_2_1 [5.3.2.1] +h
+    2_hydroxy_3_4_hydroxyphenyl_prop_2_enoic_acid
+  }
+
   branch from o2 side left {
     o2
-    <-> . +4_4a_dihydroxy_dihydro_dibenzo_p_dioxin +nad +h +dibenzo_p_dioxin
-    nadh
+    <-> ec_1_14_14_1 [1.14.14.1] +diclofenac +h +nadph +nadp +h2o
+    4_hydroxydiclofenac
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_12_26 [1.14.12.26] +nadh +h +2_4_dichlorotoluene +nad
-    1r_2s_4_6_dichloro_3_methylcyclohexa_3_5_diene
+    <-> ec_1_14_14_25 [1.14.14.25] +testosterone +h +nadph +2_hydroxytestosterone +h2o
+    nadp
   }
 
   branch from l_tyrosine side left {
     l_tyrosine
-    <-> . +6r_10_formyltetrahydrofolate +n_formyl_l_tyrosine
-    6s_5_6_7_8_tetrahydrofolate
+    <-> ec_3_5_1_14 [3.5.1.14] +h +acetate +h2o
+    n_acetyl_l_tyrosine
   }
 
   branch from l_tyrosine side right {
     l_tyrosine
-    <-> . +l_leucine +h2o
-    tyr_leu
+    <-> ec_1_14_13_41 [1.14.13.41] +z_4_hydroxyphenyl_acetaldehyde_oxime +co2 +nadp +h2o +h +o2
+    nadph
   }
 
   branch from s_4_hydroxymandelate side left {
@@ -64,13 +64,97 @@ pathway co2-to-o2 "CO2 to O2" {
 
   branch from fmn side right {
     fmn
+    <-> . +fmnh2 +h +1_pentanesulfonate +o2 +pentanal +h2o
+    sulfite
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> . +utp +fmnh2 +h +h2o
+    dutp
+  }
+
+  branch from co2 side right {
+    co2
+    <-> ec_1_2_99_5 [1.2.99.5] +nadh +methanofuran +nad +h2o
+    n_formylmethanofuran
+  }
+
+  branch from co2 side left {
+    co2
+    <-> . +d_glyceraldehyde_3_phosphate +h +pyruvate +h2o +phosphate
+    1_deoxy_d_xylulose
+  }
+
+  branch from 3_4_hydroxyphenyl_pyruvate side right {
+    3_4_hydroxyphenyl_pyruvate
+    <-> ec_2_6_1_57 [2.6.1.57] +l_phenylalanine +l_tyrosine
+    3_phenylpyruvate
+  }
+
+  branch from 3_4_hydroxyphenyl_pyruvate side left {
+    3_4_hydroxyphenyl_pyruvate
+    <-> ec_2_6_1_13 [2.6.1.13] +l_glutamate_5_semialdehyde +l_tyrosine
+    l_ornithine
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_14_14_25 [1.14.14.25] +testosterone +h +nadph +nadp +h2o
+    16_hydroxytestosterone
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_14_14_1 [1.14.14.1] +n_hydroxy_meiqx +nadp +h2o +h +nadph
+    meiqx
+  }
+
+  branch from l_tyrosine side right {
+    l_tyrosine
+    <-> ec_1_14_16_1 [1.14.16.1] +4as_6r_4a_hydroxy_l_erythro_5_6_7_8_tetrahydrob +6r_5_6_7_8_tetrahydrobiopterin +o2
+    l_phenylalanine
+  }
+
+  branch from l_tyrosine side left {
+    l_tyrosine
+    <-> . +o4_phosphonatotyrosine +h2o
+    phosphate
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> ec_1_19_6_1 [1.19.6.1] +acetylene +atp +h2o +fmn +h +adp +ethene +phosphate
+    h2
+  }
+
+  branch from fmnh2 side left {
+    fmnh2
+    <-> . +h +o2 +l_arginine +fmn +h2o
+    n_omega_hydroxy_l_arginine
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_4_17_11 [3.4.17.11] +methotrexate +h2o +l_glutamate
+    4_amino_n10_methylpteroic_acid
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_3_2_6 [3.3.2.6] +l_lysine +4_nitroaniline +h2o
+    l_lysine_p_nitroanilide
+  }
+
+  branch from fmn side right {
+    fmn
     <-> ec_1_14_14_22 [1.14.14.22] +fmn_n5_oxide +nadh +h +h2o
     nad
   }
 
   branch from fmn side left {
     fmn
-    <-> ec_1_19_6_1 [1.19.6.1] +fmnh2 +acetylene +atp +h2o +h +adp +ethene +phosphate
-    h2
+    <-> ec_1_14_99_46 [1.14.99.46] +fmnh2 +uracil +h +o2
+    ureidoperacrylic_acid
   }
 }

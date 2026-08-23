@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway o-s-4-aminobutanoyl-pan-to-h2o "O-[S-4-(aminobutanoyl)pan… to H2O" {
-  spacing 340
+  spacing 314
 
   spine at 0,0 {
     o_s_4_aminobutanoyl_pantetheine_4_phosphoryl_ser
@@ -22,51 +22,9 @@ pathway o-s-4-aminobutanoyl-pan-to-h2o "O-[S-4-(aminobutanoyl)pan… to H2O" {
     atp
   }
 
-  branch from fmn side left {
-    fmn
-    <-> . +n1_n5_n10_e_tri_p_coumaroylspermidine +fmnh2 +o2 +h2o +hplus
-    n1_n5_n10_tris_e_caffeoyl_spermidine
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +12_deshydroxyl_okaramine_e +fmnh2 +o2 +h2o +hplus
-    3_desmethyl_okaramine_b
-  }
-
-  branch from h side left {
-    h
-    <-> . +terpinene
-    alpha_terpinyl_cation
-  }
-
-  branch from h side right {
-    h
-    <-> . +alpha_terpinyl_cation
-    phellandrene
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    6_kestotriose
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    neokestose
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    aldehydo_d_apiose
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    maltose_6_phosphate
+  branch from o_s_4_aminobutanoyl_pantetheine_4_phosphoryl_ser side left {
+    o_s_4_aminobutanoyl_pantetheine_4_phosphoryl_ser
+    <-> ec_4_1_1_95 [4.1.1.95] +hplus +co2
+    o_s_l_glutamyl_pantetheine_4_phosphoryl_serine_1
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-atp-null "UDP to ATP" {
-  spacing 304
+  spacing 256
 
   spine at 0,0 {
     udp
@@ -16,53 +16,5 @@ pathway udp-to-atp-null "UDP to ATP" {
     udp_alpha_d_galactose
     <-> . +glucosyl_heptosyl_3_kdo2_lipid_a_bisphosphate +h +adp -atp
     glucosyl_heptosyl_3_kdo2_lipid_a_phosphate
-  }
-
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> . +udp +alpha_d_glc_1_2_alpha_l_rha_1_3_alpha_l_rha_1_3 +h
-    alpha_l_rha_1_3_alpha_l_rha_1_3_beta_l_rha_1_4_a
-  }
-
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> . +udp +h_pylori_core_oligosaccharide_lipid_a +h
-    beta_d_gal_1_7_alpha_d_d_hep_1_2_alpha_l_d_hep_1
-  }
-
-  branch from udp_alpha_d_galactose side left {
-    udp_alpha_d_galactose
-    <-> ec_2_4_1_275 [2.4.1.275] +udp +d_gal_1_3_d_glcnac_1_3_d_gal_1_4_d_glcnac_1_6_d +h
-    beta_d_gal_1_3_beta_d_glcnac_1_3_beta_d_glcnac_1
-  }
-
-  branch from udp_alpha_d_galactose side right {
-    udp_alpha_d_galactose
-    <-> . +udp +beta_d_gal_1_7_alpha_d_d_hep_1_2_alpha_l_d_hep_1 +h
-    alpha_d_d_hep_1_2_alpha_l_d_hep_1_3_alpha_l_d_he
-  }
-
-  branch from glucosyl_heptosyl_3_kdo2_lipid_a_phosphate side left {
-    glucosyl_heptosyl_3_kdo2_lipid_a_phosphate
-    <-> . +udp +h +glucosyl_heptosyl_3_glucosyluronate_kdo2_lipid_a
-    udp_alpha_d_glucuronate
-  }
-
-  branch from glucosyl_heptosyl_3_kdo2_lipid_a_phosphate side right {
-    glucosyl_heptosyl_3_kdo2_lipid_a_phosphate
-    <-> . +glucosyl_heptosyl_2_kdo2_lipid_a_phosphate +h +adp
-    adp_l_glycero_d_manno_heptose
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    20_3_18_3_ps
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    22_0_18_1_ps
   }
 }

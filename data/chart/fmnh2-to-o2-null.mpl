@@ -4,77 +4,15 @@
 # edit the generator, not this file.
 
 pathway fmnh2-to-o2-null "FMNH2 to O2" {
-  spacing 276
+  spacing 152
 
   spine at 0,0 {
     fmnh2
-    <-> ec_1_14_14_21 [1.14.14.21] +dibenzothiophene +h +o2 -fmn -h2o
-    dibenzothiophene_5_oxide
-    <-> ec_1_14_14_21 [1.14.14.21] +fmnh2 +h +o2 -fmn -h2o
-    dibenzothiophene_5_5_dioxide
-    <-> ec_1_14_14_22 [1.14.14.22] +fmnh2 +h +o2 -2_hydroxybiphenyl_2_sulfinate -h2o
-    fmn
-    <-> ec_1_13_12_16 [1.13.12.16] +nitrite +acetaldehyde +h2o -nitroethane -h -o2
-    fmnh2
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> ec_2_7_7_2 [2.7.7.2] +diphosphate +fad +h
-    atp
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> ec_1_14_13_7 [1.14.13.7] +nadh +fmnh2 +h
-    nad
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    3_6_anhydro_l_galactopyranose
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    n_acetyl_d_mannosamine
-  }
-
-  branch from fmnh2 side left {
-    fmnh2
-    <-> . +dihydrokalafungin_dihydroquinone_form +o2 +fmn +h +h2o
-    dhk_oh
-  }
-
-  branch from fmnh2 side right {
-    fmnh2
-    <-> ec_1_17_7_4 [1.17.7.4] +2e_4_hydroxy_3_methylbut_2_enyl_diphosphate +h +fmn +h2o
-    dimethylallyl_diphosphate
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
-    alpha_d_mannopyranose
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
-    4_o_methyl_d_glucuronate
-  }
-
-  branch from o2 side left {
-    o2
-    <-> ec_1_14_13_8 [1.14.13.8] +1_phenylpropan_2_amine +h +nadph +n_1_phenylpropan_2_yl_hydroxylamine +h2o
-    nadp
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +h +nadph +5_methyl_n_4_nitrophenyl_thiophene_2_carboxamide +nadp +h2o
-    5_methyl_n_4_nitrophenyl_1_oxo_1lambda4_thiophen
+    <-> . +n_omega_hydroxy_l_arginine +o2 -fmn -l_citrulline -h2o
+    nitric_oxide
+    <-> ec_1_7_99_7 [1.7.99.7] +hydroquinone -1_4_benzoquinone -h2o
+    nitrous_oxide
+    <-> . +nitrite +1_4_benzoquinone +nad +h2o -h -4_nitrophenol -o2
+    nadh
   }
 }

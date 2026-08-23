@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway chenodeoxycholate-3-o-d-to-adenosine-3-5-bismono "chenodeoxycholate-3-O-β-D… to adenosine 3',5'-bismonoph…" {
-  spacing 268
+  spacing 226
 
   spine at 0,0 {
     chenodeoxycholate_3_o_d_glucoside
@@ -16,51 +16,9 @@ pathway chenodeoxycholate-3-o-d-to-adenosine-3-5-bismono "chenodeoxycholate-3-O-
     glycochenodeoxycholate_7_sulfate
   }
 
-  branch from chenodeoxycholate side left {
-    chenodeoxycholate
-    <-> . +nadp +nadph +hplus
-    7_oxolithocholate
-  }
-
-  branch from chenodeoxycholate side right {
-    chenodeoxycholate
-    <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
-    chenodeoxycholate_7_sulfate
-  }
-
-  branch from glucose side left {
-    glucose
-    <-> ec_2_3_1_213 [2.3.1.213] +1_o_trans_sinapoyl_beta_d_glucose +cyanidin_3_o_6_o_glucosyl_2_o_xylosylgalactoside +h
-    cyanidin_3_o_6_o_sinapoyl_beta_d_glucosyl_1_6_be
-  }
-
-  branch from glucose side right {
-    glucose
-    <-> ec_5_3_1_5 [5.3.1.5]
-    keto_d_fructose
-  }
-
   branch from glycochenodeoxycholate side left {
     glycochenodeoxycholate
     <-> . +nad +nadh +hplus
     7_oxoglycolithocholate
-  }
-
-  branch from glycochenodeoxycholate side right {
-    glycochenodeoxycholate
-    <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
-    glycochenodeoxycholate_3_sulfate
-  }
-
-  branch from adenosine_3_5_bismonophosphate side left {
-    adenosine_3_5_bismonophosphate
-    <-> . +photinus_luciferin +3_phosphonato_5_adenylyl_sulfate +hplus
-    firefly_d_sulfoluciferin
-  }
-
-  branch from adenosine_3_5_bismonophosphate side right {
-    adenosine_3_5_bismonophosphate
-    <-> . +acetyl_coa +h2o +hplus
-    s_acetyl_4_phosphopantetheine
   }
 }

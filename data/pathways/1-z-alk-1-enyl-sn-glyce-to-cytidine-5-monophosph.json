@@ -140,35 +140,6 @@
       "xrefs": {
         "chebi": "CHEBI:60377"
       }
-    },
-    {
-      "id": "lactose",
-      "name": "lactose",
-      "formula": "C12H22O11",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:17716"
-      }
-    },
-    {
-      "id": "cmp_n_acetyl_neuraminate",
-      "name": "CMP-N-acetyl-β-neuraminate",
-      "short": "CMP-N-acetyl-β-neur…",
-      "formula": "C20H29N4O16P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57812"
-      }
-    },
-    {
-      "id": "n_acetylneuraminosyl_2_3_d_galactosyl_1_4_d_glu",
-      "name": "α-N-acetylneuraminosyl-(2→3)-β-D-galactosyl-(1→4)-D-glucose",
-      "short": "α-N-acetylneuramino…",
-      "formula": "C23H38NO19",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:156068"
-      }
     }
   ],
   "enzymes": [
@@ -177,14 +148,20 @@
       "name": "alkylglycerophosphoethanolamine phosphodiesterase",
       "ec": [
         "3.1.4.39"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q13822"
+      }
     },
     {
       "id": "ec_2_7_8_22",
       "name": "1-alkenyl-2-acylglycerol choline phosphotransferase",
       "ec": [
         "2.7.8.22"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q9Y6K0"
+      }
     }
   ],
   "reactions": [
@@ -363,46 +340,159 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "lactose + CMP-N-acetyl-beta-neuraminate = N-acetyl-alpha-neuraminosyl-(2->3)-beta-D-gal...",
-      "equation": "lactose + CMP-N-acetyl-beta-neuraminate = N-acetyl-alpha-neuraminosyl-(2->3)-beta-D-galactosyl-(1->4)-D-glucose + CMP + H(+)",
-      "substrates": [
-        {
-          "metabolite": "lactose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "cmp_n_acetyl_neuraminate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n_acetylneuraminosyl_2_3_d_galactosyl_1_4_d_glu",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "cytidine_5_monophosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:86443"
+      "id": "xt_1_z_alk_1_enyl_sn_glycero_3_phosphate_acylcholine-to-n5-methyl-l-glutamine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_z_alk_1_enyl_sn_glycero_3_phosphate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "acylcholine-to-n5-methyl-l-glutamine"
+      },
+      "note": "Shares 1-(Z)-alk-1-enyl-sn-glycero-3-phosphate with acylcholine to N5-methyl-L-glutamine.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:86443"
+            "db": "ChEBI",
+            "id": "CHEBI:77283"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_z_alk_1_enyl_sn_glycero_3_phosphate_n-acyl-1-1z-alkenyl-2-to-1-z-alk-1-enyl-sn-glyce",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_z_alk_1_enyl_sn_glycero_3_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acyl-1-1z-alkenyl-2-to-1-z-alk-1-enyl-sn-glyce"
+      },
+      "note": "Shares 1-(Z)-alk-1-enyl-sn-glycero-3-phosphate with N-acyl-1-[(1Z)-alkenyl]-2… to 1-(Z)-alk-1-enyl-sn-glyce….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77283"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphate_1-alkyl-sn-glycero-3-phos-to-1-alkyl-sn-glycerol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-alkyl-sn-glycero-3-phos-to-1-alkyl-sn-glycerol"
+      },
+      "note": "Shares 1-(Z)-alk-1-enyl-2-acyl-sn-glycero-3-phosphate with 1-alkyl-sn-glycero-3-phos… to 1-alkyl-sn-glycerol….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77284"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphate_1-z-alk-1-enyl-2-acyl-s-to-2-acyl-sn-glycero-3-p",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-z-alk-1-enyl-2-acyl-s-to-2-acyl-sn-glycero-3-p"
+      },
+      "note": "Shares 1-(Z)-alk-1-enyl-2-acyl-sn-glycero-3-phosphate with 1-(Z)-alk-1-enyl-2-acyl-s… to 2-acyl-sn-glycero-3-phosp….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77284"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_z_alk_1_enyl_2_acyl_sn_glycerol_1-saturated-to-1-z-alk-1-enyl-2-acyl-s",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_z_alk_1_enyl_2_acyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-saturated-to-1-z-alk-1-enyl-2-acyl-s"
+      },
+      "note": "Shares 1-(Z)-alk-1-enyl-2-acyl-sn-glycerol with 1-(α,β-saturated… to 1-(Z)-alk-1-enyl-2-acyl-s….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77296"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_z_alk_1_enyl_2_acyl_sn_glycerol_15-methylhexadecasphingan-to-1-z-alk-1-enyl-2-ac",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_z_alk_1_enyl_2_acyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "15-methylhexadecasphingan-to-1-z-alk-1-enyl-2-ac"
+      },
+      "note": "Shares 1-(Z)-alk-1-enyl-2-acyl-sn-glycerol with 15-methylhexadecasphingan… to 1-(Z)-alk-1-enyl-2-acyl-s….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77296"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphocholin_1-saturated-to-1-z-alk-1-enyl-2-acyl-s",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphocholin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-saturated-to-1-z-alk-1-enyl-2-acyl-s"
+      },
+      "note": "Shares 1-(Z)-alk-1-enyl-2-acyl-sn-glycero-3-phosphocholine with 1-(α,β-saturated… to 1-(Z)-alk-1-enyl-2-acyl-s….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77286"
           }
         ]
       }

@@ -18,20 +18,22 @@ pathway lipid-a-to-h "lipid A to H" {
     4_o_2r_1_glycerylphosphonato_n_acetyl_d_mannosam
     <-> ec_2_7_8_45 [2.7.8.45] +2r_cdp_glycerol -cytidine_5_monophosphate -hplus
     4_o_di_2r_1_glycerylphosphonato_n_acetyl_d_manno
-    <-> ec_2_7_8_14 [2.7.8.14] +cdp_l_ribitol -rib_ol_p_gro_p_gro_p_mannac_glcnac_pp_undecapren -h
+    <-> ec_2_7_8_45 [2.7.8.45] +cmp +h -cdp_glycerol
+    gro_p_beta_d_mannac_1_4_alpha_d_glcnac_pp_und
+    <-> ec_2_7_8_46 [2.7.8.46] +cdp_l_ribitol -rib_ol_p_gro_p_mannac_glcnac_pp_undecaprenol -h
     cmp
   }
 
   branch from n_acetyl_d_glucosaminyl_1_diphospho_ditrans_poly side left {
     n_acetyl_d_glucosaminyl_1_diphospho_ditrans_poly
-    <-> ec_2_4_1_188 [2.4.1.188] +udp_d_glucose +udp +hplus
-    d_glucosyl_1_4_n_acetyl_d_glucosaminyl_undecapr
+    <-> ec_5_1_3_26 [5.1.3.26]
+    n_acetyl_d_galactosaminyl_1_diphospho_ditrans_po
   }
 
   branch from n_acetyl_d_glucosaminyl_1_diphospho_ditrans_poly side right {
     n_acetyl_d_glucosaminyl_1_diphospho_ditrans_poly
-    <-> ec_5_1_3_26 [5.1.3.26]
-    n_acetyl_d_galactosaminyl_1_diphospho_ditrans_po
+    <-> ec_2_4_1_348 [2.4.1.348] +gdp_d_mannose +gdp +hplus
+    d_mannosyl_1_3_n_acetyl_d_glucosaminyl_1_diphos
   }
 
   branch from n_acetyl_d_mannosaminyl_1_4_n_acetyl_d_glucosami side left {
@@ -40,39 +42,123 @@ pathway lipid-a-to-h "lipid A to H" {
     udp
   }
 
-  branch from cytidine_5_monophosphate side right {
-    cytidine_5_monophosphate
-    <-> . +d_gal_1_3_d_galnac_1_3_d_gal_1_4_d_gal_1_4_d_gl +cmp_n_acetyl_neuraminate +hplus
-    monosialyl_gb5
+  branch from 4_o_di_2r_1_glycerylphosphonato_n_acetyl_d_manno side right {
+    4_o_di_2r_1_glycerylphosphonato_n_acetyl_d_manno
+    <-> ec_2_7_8_14 [2.7.8.14] +cdp_l_ribitol +cmp +h
+    rib_ol_p_gro_p_gro_p_mannac_glcnac_pp_undecapren
   }
 
-  branch from cytidine_5_monophosphate side left {
-    cytidine_5_monophosphate
-    <-> . +d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_glc_1_1_cer +cmp_n_acetyl_neuraminate +hplus
-    neu5ac_2_3_d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_g
+  branch from gro_p_beta_d_mannac_1_4_alpha_d_glcnac_pp_und side left {
+    gro_p_beta_d_mannac_1_4_alpha_d_glcnac_pp_und
+    <-> . +udp_n_acetyl_alpha_d_galactosamine +galnac_p_gro_p_mannac_glcnac_pp_undecaprenol +h
+    ump
   }
 
-  branch from cmp side right {
+  branch from gro_p_beta_d_mannac_1_4_alpha_d_glcnac_pp_und side right {
+    gro_p_beta_d_mannac_1_4_alpha_d_glcnac_pp_und
+    <-> ec_3_6_3_40 [3.6.3.40] +h +adp +phosphate +h2o
+    atp
+  }
+
+  branch from cdp_glycerol side left {
+    cdp_glycerol
+    <-> ec_2_7_8_44 [2.7.8.44] +cmp +4_o_2r_1_glycerophospho_n_acetyl_beta_d_mannosam
+    n_acetyl_beta_d_mannosaminyl_1_4_n_acetyl_d_gluc
+  }
+
+  branch from cdp_glycerol side right {
+    cdp_glycerol
+    <-> . +cytidine +h +sn_glycerol_3_phosphate +phosphate
+    h2o
+  }
+
+  branch from cmp side left {
     cmp
     <-> . +phosphatidylglycerophosphate_ditetradecanoyl_n_c +cdp_1_2_ditetradecanoylglycerol
     sn_glycerol_3_phosphate
   }
 
-  branch from cmp side left {
+  branch from cmp side right {
     cmp
     <-> . +phosphatidylglycerophosphate_ditetradec_7_enoyl +sn_glycerol_3_phosphate
     cdp_1_2_ditetradec_7_enoylglycerol
   }
 
+  branch from h side left {
+    h
+    <-> . +anhalonine +s_adenosyl_l_homocysteine +anhalonidine
+    s_adenosyl_l_methionine
+  }
+
   branch from h side right {
     h
-    <-> . +s_9_deoxy_delta12_pgd2_glutathione +glutathione
-    9_deoxy_delta12_pgd2
+    <-> . +s_adenosyl_l_homocysteine +o_methylandrocymbine +s_adenosyl_l_methionine
+    isoandrocymbine
+  }
+
+  branch from udpglcnac side left {
+    udpglcnac
+    <-> . +n_acetyl_d_glucosaminide +udp +hplus
+    n_acetyl_d_glucosaminyl_1_4_n_acetyl_d_glucosami
+  }
+
+  branch from udpglcnac side right {
+    udpglcnac
+    <-> ec_2_4_1_150 [2.4.1.150] +d_galactosyl_1_4_n_acetyl_d_glucosaminyl_1_3_d +udp +hplus
+    d_galactosyl_1_4_n_acetyl_d_glucosaminyl_1_3_n
+  }
+
+  branch from n_acetyl_d_glucosaminyl_1_diphospho_ditrans_poly side left {
+    n_acetyl_d_glucosaminyl_1_diphospho_ditrans_poly
+    <-> . +gdp_6_deoxy_d_mannose +gdp +hplus
+    d_rhamnosyl_1_3_n_acetyl_d_glucosaminyl_1_dipho
+  }
+
+  branch from cmp side right {
+    cmp
+    <-> ec_2_7_8_5 [2.7.8.5] +phosphatidylglycerophosphate_dioctadec_11_enoyl +sn_glycerol_3_phosphate
+    cdp_1_2_dioctadec_11_enoylglycerol
+  }
+
+  branch from cmp side left {
+    cmp
+    <-> . +2_3_bis_o_geranylgeranyl_sn_glycero_1_phospho_1 +h +cdp_2_3_bis_o_geranylgeranyl_sn_glycerol
+    1d_myo_inositol_3_phosphate
+  }
+
+  branch from h side right {
+    h
+    <-> . +s_adenosyl_l_homocysteine +kreysigine +s_adenosyl_l_methionine
+    floramultine
   }
 
   branch from h side left {
     h
-    <-> . +prostaglandin_a1 +glutathione
-    s_pga1_glutathione
+    <-> ec_1_1_1_272 [1.1.1.272] +nadh +3_sulfopyruvate +nad
+    3_sulfolactic_acid
+  }
+
+  branch from cdp_glycerol side right {
+    cdp_glycerol
+    <-> ec_2_7_7_39 [2.7.7.39] +ctp +h +sn_glycerol_3_phosphate +diphosphate
+    pmf
+  }
+
+  branch from cdp_glycerol side left {
+    cdp_glycerol
+    <-> ec_2_7_8_45 [2.7.8.45] +cmp +4_o_di_2r_1_glycerophospho_n_acetyl_beta_d_manno
+    4_o_2r_1_glycerophospho_n_acetyl_beta_d_mannosam
+  }
+
+  branch from cdp_l_ribitol side right {
+    cdp_l_ribitol
+    <-> . +diphosphate +d_ribitol_5_phosphate
+    ctp
+  }
+
+  branch from cdp_l_ribitol side left {
+    cdp_l_ribitol
+    <-> ec_2_7_7_40 [2.7.7.40] +pmf +diphosphate +pmf +ctp
+    d_ribitol_5_phosphate
   }
 }

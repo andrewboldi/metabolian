@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway hexachlorocyclohexane-to-maleylacetate "γ-hexachlorocyclohexane to maleylacetate" {
-  spacing 176
+  spacing 164
 
   spine at 0,0 {
     hexachlorocyclohexane
@@ -34,17 +34,5 @@ pathway hexachlorocyclohexane-to-maleylacetate "γ-hexachlorocyclohexane to male
     3r_6r_1_3_4_6_tetrachlorocyclohexa_1_4_diene
     <-> . +h2o +chloride +hplus
     2_4_5_trichlorocyclohexa_2_5_dien_1_ol
-  }
-
-  branch from gssg side left {
-    gssg
-    <-> . +9_s_hpode +gsh +h2o
-    9_s_hode
-  }
-
-  branch from gssg side right {
-    gssg
-    <-> . +12_r_hpete +gsh +h2o
-    12_r_hete
   }
 }

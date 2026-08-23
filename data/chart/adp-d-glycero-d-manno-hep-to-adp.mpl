@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway adp-d-glycero-d-manno-hep-to-adp "ADP-D-glycero-D-manno-hep… to ADP" {
-  spacing 262
+  spacing 232
 
   spine at 0,0 {
     adp_d_glycero_d_manno_heptose
@@ -18,35 +18,5 @@ pathway adp-d-glycero-d-manno-hep-to-adp "ADP-D-glycero-D-manno-hep… to ADP" {
     alpha_hep_1_3_4_o_phospho_alpha_hep_1_5_alpha_kd
     <-> ec_2_4_99_25 [2.4.99.25] +adp_l_glycero_d_manno_heptose -h -adp
     heptosyl_3_kdo2_lipid_a_phosphate_e_coli
-  }
-
-  branch from adp_l_glycero_d_manno_heptose side left {
-    adp_l_glycero_d_manno_heptose
-    <-> . +phospho_heptosyl_heptosyl_kdo2_lipida +h +adp
-    inner_core_oligosaccharide_lipid_a
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    sphingomyelin_homo_sapiens
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +sphingomyelin_homo_sapiens +phosphate +atp +sphingomyelin_homo_sapiens
-    h2o
-  }
-
-  branch from adp side right {
-    adp
-    <-> ec_7_6_2_11 [7.6.2.11] +h +phosphate +atp +h2o
-    spermine
-  }
-
-  branch from adp side left {
-    adp
-    <-> . +h +phosphate +atp +h2o
-    paracetamol_sulfate
   }
 }

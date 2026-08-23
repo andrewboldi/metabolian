@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-phenylacetonitrile-oxide-to-h2o "2-phenylacetonitrile oxide to H2O" {
-  spacing 276
+  spacing 222
 
   spine at 0,0 {
     2_phenylacetonitrile_oxide
@@ -18,63 +18,9 @@ pathway 2-phenylacetonitrile-oxide-to-h2o "2-phenylacetonitrile oxide to H2O" {
     atp
   }
 
-  branch from h2o side left {
-    h2o
-    <-> . +glycerophosphatidylethanolamine +vaccenic_acid
-    1_oleoylglycerophosphoethanolamine_delta_9
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +7_2_6_dimethyl_8_2_methyl_1_oxobutoxy_1_2_6_7_8
-    lovastatin
-  }
-
-  branch from s_z_n_hydroxy_2_phenylethanimidoyl_l_cysteinylgl side left {
-    s_z_n_hydroxy_2_phenylethanimidoyl_l_cysteinylgl
-    <-> ec_3_4_13_23 [3.4.13.23] +h2o +s_phenylacetothiohydroximoyl_l_cysteine
-    glycine
-  }
-
-  branch from glutamate side right {
-    glutamate
-    <-> . +isochorismate +atp +amp +ppi +hplus
-    isochorismoyl_l_glutamate
-  }
-
-  branch from glutamate side left {
-    glutamate
-    <-> . +4_hydroxy_methyl_phosphoryl_2_oxobutanoate +akg
-    glufosinate_p
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    1_eicosadienoylglycerophosphocholine_delta_11_14
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    1_eicosatrienoylglycerophosphocholine_delta_11_1
-  }
-
-  branch from z_2_phenyl_1_thioacetohydroximate side right {
-    z_2_phenyl_1_thioacetohydroximate
-    <-> ec_2_4_1_195 [2.4.1.195] +udp +desulfoglucotropeolin
-    udp_alpha_d_glucose
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    1_heptadecanoyl_sn_glycero_3_phosphocholine
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    1_myristoyl_sn_glycero_3_phosphocholine
+  branch from glutathione side left {
+    glutathione
+    <-> . +trans_urocanate
+    s_2_carboxy_1_1h_imidazol_4_yl_ethyl_glutathione
   }
 }

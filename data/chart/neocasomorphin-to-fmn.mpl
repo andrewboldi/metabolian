@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway neocasomorphin-to-fmn "neocasomorphin to FMN" {
-  spacing 250
+  spacing 280
 
   spine at 0,0 {
     neocasomorphin
@@ -24,14 +24,14 @@ pathway neocasomorphin-to-fmn "neocasomorphin to FMN" {
 
   branch from fmn side right {
     fmn
-    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +fmnh2 +o2 +h2o +hplus
-    4z_7z_13z_16z_19z_10_11_epoxydocosapentaenoate
+    <-> . +2_deoxypolytolypin +fmnh2 +o2 +h2o +hplus
+    polytolypin
   }
 
   branch from fmn side left {
     fmn
-    <-> . +7z_10z_13z_16z_19z_docosapentaenoate +fmnh2 +o2 +h2o +hplus
-    7z_10z_13z_16z_19_20_epoxydocosatetraenoate
+    <-> . +tyraminium +fmnh2 +o2 +h2o +hplus
+    dopamine
   }
 
   branch from 2_hydroxy_2_methylbutanenitrile side right {
@@ -44,5 +44,35 @@ pathway neocasomorphin-to-fmn "neocasomorphin to FMN" {
     2_hydroxy_2_methylbutanenitrile
     <-> . +hydrogen_cyanide
     butan_2_one
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> . +n_acetyltyramine +o2 +fmn +h2o +hplus
+    n_acetyldopamine
+  }
+
+  branch from fmnh2 side left {
+    fmnh2
+    <-> . +ldopa +o2 +fmn +h2o +hplus
+    leucodopachrome
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +hancockiamide_b +fmnh2 +o2 +h2o +hplus
+    hancockiamide_c
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> . +hancockiamide_d +fmnh2 +o2 +h2o +hplus
+    hancockiamide_h
+  }
+
+  branch from 2_hydroxy_2_methylbutanenitrile side right {
+    2_hydroxy_2_methylbutanenitrile
+    <-> ec_1_11_1_13 [1.11.1.13] +udp +h +lotaustralin
+    udp_alpha_d_glucose
   }
 }

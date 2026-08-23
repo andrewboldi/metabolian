@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dttp-to-hydrogen-donor "dTTP to hydrogen donor" {
-  spacing 210
+  spacing 204
 
   spine at 0,0 {
     dttp
@@ -14,11 +14,5 @@ pathway dttp-to-hydrogen-donor "dTTP to hydrogen donor" {
     2_deoxy_d_ribose_1_phosphate
     <-> ec_1_17_99_4 [1.17.99.4] +thymine +hydrogen_acceptor +h2o -hydrogen_donor -hplus
     5_methylbarbituride
-  }
-
-  branch from thymine side left {
-    thymine
-    <-> ec_1_3_1_2 [1.3.1.2] +nadp +nadph +hplus
-    5_6_dihydrothymine
   }
 }

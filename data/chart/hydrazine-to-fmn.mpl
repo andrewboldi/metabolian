@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway hydrazine-to-fmn "hydrazine to FMN" {
-  spacing 236
+  spacing 218
 
   spine at 0,0 {
     hydrazine
@@ -18,27 +18,9 @@ pathway hydrazine-to-fmn "hydrazine to FMN" {
     biliverdin
   }
 
-  branch from ferriheme_b side left {
-    ferriheme_b
-    <-> ec_4_99_1_8 [4.99.1.8]
-    hematin
-  }
-
-  branch from biliverdin side right {
+  branch from biliverdin side left {
     biliverdin
     <-> ec_1_3_1_24 [1.3.1.24] +nadp +nadph +hplus
     bilirubin
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +1r_4r_5s_acoradiene +fmnh2 +o2 +h2o +hplus
-    2_6_9_trimethyl_13_oxatetracyclo_6_3_1_16_9_01_5
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> ec_1_14_14_185 [1.14.14.185] +4alpha_5beta_5_20_epoxytax_11_ene_4_ol +fmnh2 +o2 +h2o +hplus
-    4_5_9_5_20_epoxytax_11_ene_4_9_diol
   }
 }

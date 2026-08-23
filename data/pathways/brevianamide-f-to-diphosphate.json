@@ -257,109 +257,6 @@
       "xrefs": {
         "chebi": "CHEBI:58349"
       }
-    },
-    {
-      "id": "utp",
-      "name": "UTP",
-      "formula": "C9H11N2O15P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:46398"
-      }
-    },
-    {
-      "id": "gtp",
-      "name": "GTP",
-      "formula": "C10H12N5O14P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:37565"
-      }
-    },
-    {
-      "id": "c_gmp_ump",
-      "name": "c-GMP-UMP",
-      "formula": "C19H21N7O15P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:197444"
-      }
-    },
-    {
-      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
-      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
-      "short": "2-trans,6-trans,10-…",
-      "formula": "C20H33O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58756"
-      }
-    },
-    {
-      "id": "5r_12r_14s_dolasta_1_15_8_diene",
-      "name": "(5R,12R,14S)-dolasta-1(15),8-diene",
-      "short": "(5R,12R,14S)-dolast…",
-      "formula": "C20H32",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:192990"
-      }
-    },
-    {
-      "id": "decan_1_ol",
-      "name": "decan-1-ol",
-      "formula": "C10H22O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:28903"
-      }
-    },
-    {
-      "id": "1_3_decanediol",
-      "name": "1,3-decanediol",
-      "formula": "C10H22O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:195415"
-      }
-    },
-    {
-      "id": "dodecan_1_ol",
-      "name": "dodecan-1-ol",
-      "formula": "C12H26O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:28878"
-      }
-    },
-    {
-      "id": "1_5_dodecanediol",
-      "name": "1,5-dodecanediol",
-      "formula": "C12H26O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:195414"
-      }
-    },
-    {
-      "id": "uridine_5_monophosphate_1",
-      "name": "uridine 5'-monophosphate(1−)",
-      "short": "uridine 5'-MP(1−)",
-      "formula": "C9H10N2O8P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:65315"
-      }
-    },
-    {
-      "id": "5_methyluridine_5_monophosphate_1",
-      "name": "5-methyluridine 5'-monophosphate(1−)",
-      "short": "5-methyluridine…",
-      "formula": "C10H12N2O8P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:74447"
-      }
     }
   ],
   "enzymes": [
@@ -417,13 +314,6 @@
       "name": "verruculogen prenyltransferase",
       "ec": [
         "2.5.1.107"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_214",
-      "name": "dolasta-1(15),8-diene synthase",
-      "ec": [
-        "4.2.3.214"
       ]
     }
   ],
@@ -898,271 +788,225 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r10",
-      "name": "UTP + GTP = 3',3'-cGMP-UMP + 2 diphosphate",
-      "equation": "UTP + GTP = 3',3'-cGMP-UMP + 2 diphosphate",
-      "substrates": [
-        {
-          "metabolite": "utp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "gtp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "c_gmp_ump",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 10,
-      "xrefs": {
-        "rhea": "RHEA:77707"
+      "id": "xt_brevianamide_f_5-hydroxy-d-tryptophan-to-r-dyspropterin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "brevianamide_f"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "5-hydroxy-d-tryptophan-to-r-dyspropterin"
+      },
+      "note": "Shares brevianamide F with 5-hydroxy-D-tryptophan to (R)-dyspropterin.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:77707"
+            "db": "ChEBI",
+            "id": "CHEBI:64530"
           }
         ]
       }
     },
     {
-      "id": "r11",
-      "name": "dolasta-1(15),8-diene synthase",
-      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate = (5R,12R,14S)-dolasta-1(15),8-diene + diphosphate",
-      "ec": "4.2.3.214",
-      "substrates": [
-        {
-          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "5r_12r_14s_dolasta_1_15_8_diene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_214"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 11,
-      "xrefs": {
-        "rhea": "RHEA:77963"
+      "id": "xt_brevianamide_f_dimethylsulfonio-acetate-to-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "brevianamide_f"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "dimethylsulfonio-acetate-to-acetate"
+      },
+      "note": "Shares brevianamide F with (dimethylsulfonio)acetate to acetate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:77963"
+            "db": "ChEBI",
+            "id": "CHEBI:64530"
           }
         ]
       }
     },
     {
-      "id": "r12",
-      "name": "decan-1-ol + reduced [NADPH--hemoprotein reductase] + O2 = 1,3-decanediol + oxidized [N...",
-      "equation": "decan-1-ol + reduced [NADPH--hemoprotein reductase] + O2 = 1,3-decanediol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "decan_1_ol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_3_decanediol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 12,
-      "xrefs": {
-        "rhea": "RHEA:76755"
+      "id": "xt_brevianamide_f_l-proline-betaine-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "brevianamide_f"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "l-proline-betaine-to-hydrogen-donor"
+      },
+      "note": "Shares brevianamide F with L-proline betaine to hydrogen donor.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:76755"
+            "db": "ChEBI",
+            "id": "CHEBI:64530"
           }
         ]
       }
     },
     {
-      "id": "r13",
-      "name": "dodecan-1-ol + reduced [NADPH--hemoprotein reductase] + O2 = 1,5-dodecanediol + oxidize...",
-      "equation": "dodecan-1-ol + reduced [NADPH--hemoprotein reductase] + O2 = 1,5-dodecanediol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "dodecan_1_ol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_5_dodecanediol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 13,
-      "xrefs": {
-        "rhea": "RHEA:76759"
+      "id": "xt_tryprostatin_b_4-nitroso-2-6-dinitrotolu-to-4-amino-2-6-dinitro",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tryprostatin_b"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "4-nitroso-2-6-dinitrotolu-to-4-amino-2-6-dinitro"
+      },
+      "note": "Shares tryprostatin B with 4-nitroso-2,6-dinitrotolu… to 4-amino-2,6-dinitrotoluen….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:76759"
+            "db": "ChEBI",
+            "id": "CHEBI:72760"
           }
         ]
       }
     },
     {
-      "id": "r14",
-      "name": "a uridine in 12S rRNA + S-adenosyl-L-methionine = a 5-methyluridine in 12S rRNA + S-ade...",
-      "equation": "a uridine in 12S rRNA + S-adenosyl-L-methionine = a 5-methyluridine in 12S rRNA + S-adenosyl-L-homocysteine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "uridine_5_monophosphate_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "5_methyluridine_5_monophosphate_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 14,
-      "xrefs": {
-        "rhea": "RHEA:69859"
+      "id": "xt_6_hydroxytryprostatin_b_4-nitroso-2-6-dinitrotolu-to-4-amino-2-6-dinitro",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_hydroxytryprostatin_b"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "4-nitroso-2-6-dinitrotolu-to-4-amino-2-6-dinitro"
+      },
+      "note": "Shares 6-hydroxytryprostatin B with 4-nitroso-2,6-dinitrotolu… to 4-amino-2,6-dinitrotoluen….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:69859"
+            "db": "ChEBI",
+            "id": "CHEBI:72762"
           }
         ]
       }
     },
     {
-      "id": "r15",
-      "name": "a uridine in mRNA + S-adenosyl-L-methionine = a 5-methyluridine in mRNA + S-adenosyl-L-...",
-      "equation": "a uridine in mRNA + S-adenosyl-L-methionine = a 5-methyluridine in mRNA + S-adenosyl-L-homocysteine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "uridine_5_monophosphate_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "5_methyluridine_5_monophosphate_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 15,
-      "xrefs": {
-        "rhea": "RHEA:69863"
+      "id": "xt_tryprostatin_a_s-reticuline-to-h2o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tryprostatin_a"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "s-reticuline-to-h2o2"
+      },
+      "note": "Shares tryprostatin A with (S)-reticuline to H2O2.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:69863"
+            "db": "ChEBI",
+            "id": "CHEBI:72761"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_fumitremorgin_c_s-reticuline-to-h2o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "fumitremorgin_c"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-reticuline-to-h2o2"
+      },
+      "note": "Shares fumitremorgin C with (S)-reticuline to H2O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:72763"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_12_13_dihydroxyfumitremorgin_c_s-reticuline-to-h2o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "12_13_dihydroxyfumitremorgin_c"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-reticuline-to-h2o2"
+      },
+      "note": "Shares 12,13-dihydroxyfumitremorgin C with (S)-reticuline to H2O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:72764"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_fumitremorgin_b_4-o-oxalyl-l-threonate-to-h2o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "fumitremorgin_b"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-o-oxalyl-l-threonate-to-h2o2"
+      },
+      "note": "Shares fumitremorgin B with 4-O-oxalyl-L-threonate to H2O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64531"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_verruculogen_4-o-oxalyl-l-threonate-to-h2o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "verruculogen"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-o-oxalyl-l-threonate-to-h2o2"
+      },
+      "note": "Shares verruculogen with 4-O-oxalyl-L-threonate to H2O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:72765"
           }
         ]
       }

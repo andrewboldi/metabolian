@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway maltoheptaose-to-d-glucopyranose "maltoheptaose to D-glucopyranose" {
-  spacing 212
+  spacing 230
 
   spine at 0,0 {
     maltoheptaose
@@ -24,51 +24,69 @@ pathway maltoheptaose-to-d-glucopyranose "maltoheptaose to D-glucopyranose" {
     d_glucose
   }
 
-  branch from d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp side left {
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp
-    <-> ec_3_2_1_20 [3.2.1.20] +h2o +glucose
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
-  }
-
-  branch from d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp side right {
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp
-    <-> ec_2_4_1_25 [2.4.1.25] +d_glcp_1_4_d_glcp_1_4_d_glcp +d_maltose
-    beta_d_glucose
-  }
-
   branch from alpha_d_glucose side left {
     alpha_d_glucose
-    <-> . +polydextrose +h2o
-    d_galactose
+    <-> ec_3_2_1_117 [3.2.1.117] +r_prunasin +h2o
+    r_amygdalin
   }
 
   branch from alpha_d_glucose side right {
     alpha_d_glucose
-    <-> ec_5_3_1_5 [5.3.1.5]
-    d_fructofuranose
+    <-> ec_3_2_1_126 [3.2.1.126] +trans_p_coumaryl_alcohol +h2o
+    4_hydroxycinnamyl_alcohol_4_d_glucoside
   }
 
   branch from d_glcp_1_4_d_glcp_1_4_d_glcp side left {
     d_glcp_1_4_d_glcp_1_4_d_glcp
-    <-> . +glucose
-    d_maltose
-  }
-
-  branch from d_glcp_1_4_d_glcp_1_4_d_glcp side right {
-    d_glcp_1_4_d_glcp_1_4_d_glcp
-    <-> . +h2o +d_glucosyl_1_4_d_mannose
-    beta_d_fructose
-  }
-
-  branch from glucose side left {
-    glucose
-    <-> . +h +4_nitrophenol +h2o
-    4_nitrophenyl_d_glucoside
+    <-> . +h2o +glucose
+    d_glucosyl_1_4_d_mannose
   }
 
   branch from glucose side right {
     glucose
-    <-> ec_1_1_5_2 [1.1.5.2] +ubiquinol_2 +d_glucono_1_5_lactone
-    ubiquinone_2
+    <-> . +avenacin_a_2 +benzoyl_d_glucoside
+    des_acyl_avenacin_a
+  }
+
+  branch from glucose side left {
+    glucose
+    <-> . +e_3r_2_3_hydroxybutenyl_thiohydroximate_o_sulfa +h +h2o
+    z_progoitrin
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_2_1_119 [3.2.1.119] +mandelonitrile +vicianose
+    vicianin
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_4_2_1_165 [4.2.1.165] +chlorophyllide_a
+    3_1_hydroxyethyl_chlorophyllide_a
+  }
+
+  branch from alpha_d_glucose side right {
+    alpha_d_glucose
+    <-> ec_3_2_1_10 [3.2.1.10] +h2o
+    d_maltose
+  }
+
+  branch from alpha_d_glucose side left {
+    alpha_d_glucose
+    <-> ec_1_1_1_119 [1.1.1.119] +nadp +h +nadph
+    d_glucono_1_5_lactone
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> ec_3_2_1_147 [3.2.1.147] +z_3s_2_3_hydroxybutenyl_thiohydroximate_o_sulfa +h +h2o
+    2r_2_hydroxybut_3_enylglucosinolate
+  }
+
+  branch from glucose side left {
+    glucose
+    <-> . +h +2r_2_hydroxybut_3_enylglucosinolate +h2o
+    e_3s_2_3_hydroxybutenyl_thiohydroximate_o_sulfa
   }
 }

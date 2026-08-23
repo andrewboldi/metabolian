@@ -1,0 +1,485 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "4-hydroxycholesterol-to-di-sulfido-diiron-46428",
+  "name": "4β-hydroxycholesterol to di-μ-sulfido-diiron",
+  "category": "other",
+  "summary": "A 3-step route from 4β-hydroxycholesterol to di-μ-sulfido-diiron(2+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:46428"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:85778"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "4_hydroxycholesterol",
+      "name": "4β-hydroxycholesterol",
+      "short": "4β-hydroxycholester…",
+      "formula": "C27H46O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:85778"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "25r_4_26_dihydroxycholesterol",
+      "name": "(25R)-4β,26-dihydroxycholesterol",
+      "short": "4β,26-dihydroxychol…",
+      "formula": "C27H46O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:86113"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "25r_3_4_dihydroxycholest_5_en_26_al",
+      "name": "(25R)-3β,4β-dihydroxycholest-5-en-26-al",
+      "short": "3β,4β-dihydroxychol…",
+      "formula": "C27H44O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:86115"
+      }
+    },
+    {
+      "id": "25r_3_4_dihydroxycholest_5_en_26_oate",
+      "name": "(25R)-3β,4β-dihydroxycholest-5-en-26-oate",
+      "short": "3β,4β-dihydroxychol…",
+      "formula": "C27H43O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:86116"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "4beta-hydroxycholesterol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = (25R)-4beta,26-dihyd...",
+      "equation": "4beta-hydroxycholesterol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = (25R)-4beta,26-dihydroxycholesterol + 2 oxidized [adrenodoxin] + H2O",
+      "substrates": [
+        {
+          "metabolite": "4_hydroxycholesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "25r_4_26_dihydroxycholesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:46428"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46428"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(25R)-4beta,26-dihydroxycholesterol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = (25R)-3be...",
+      "equation": "(25R)-4beta,26-dihydroxycholesterol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = (25R)-3beta,4beta-dihydroxycholest-5-en-26-al + 2 oxidized [adrenodoxin] + 2 H2O",
+      "substrates": [
+        {
+          "metabolite": "25r_4_26_dihydroxycholesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "25r_3_4_dihydroxycholest_5_en_26_al",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:46432"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46432"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(25R)-3beta,4beta-dihydroxycholest-5-en-26-al + 2 reduced [adrenodoxin] + O2 + H(+) = (...",
+      "equation": "(25R)-3beta,4beta-dihydroxycholest-5-en-26-al + 2 reduced [adrenodoxin] + O2 + H(+) = (25R)-3beta,4beta-dihydroxycholest-5-en-26-oate + 2 oxidized [adrenodoxin] + H2O",
+      "substrates": [
+        {
+          "metabolite": "25r_3_4_dihydroxycholest_5_en_26_al",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "25r_3_4_dihydroxycholest_5_en_26_oate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:46436"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46436"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_4_hydroxycholesterol_17-estradiol-to-16-hydroxyestrone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_hydroxycholesterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "17-estradiol-to-16-hydroxyestrone"
+      },
+      "note": "Shares 4β-hydroxycholesterol with 17α-estradiol to 16α-hydroxyestrone….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:85778"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_hydroxycholesterol_17-estradiol-to-16-hydroxyestrone-16705",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_hydroxycholesterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "17-estradiol-to-16-hydroxyestrone-16705"
+      },
+      "note": "Shares 4β-hydroxycholesterol with 17α-estradiol to 16α-hydroxyestrone….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:85778"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_hydroxycholesterol_4-hydroxycholesterol-to-di-sulfido-diiron",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_hydroxycholesterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxycholesterol-to-di-sulfido-diiron"
+      },
+      "note": "Shares 4β-hydroxycholesterol with 4β-hydroxycholesterol to di-μ-sulfido-diiron.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:85778"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_hydroxycholesterol_9-cis-violaxanthin-to-fmnh2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_hydroxycholesterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "9-cis-violaxanthin-to-fmnh2"
+      },
+      "note": "Shares 4β-hydroxycholesterol with 9-cis-violaxanthin to FMNH2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:85778"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_hydroxycholesterol_9-cis-violaxanthin-to-fmnh2-16541",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_hydroxycholesterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "9-cis-violaxanthin-to-fmnh2-16541"
+      },
+      "note": "Shares 4β-hydroxycholesterol with 9-cis-violaxanthin to FMNH2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:85778"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_hydroxycholesterol_r-h-to-hydrogen-acceptor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_hydroxycholesterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-h-to-hydrogen-acceptor"
+      },
+      "note": "Shares 4β-hydroxycholesterol with R-H to hydrogen acceptor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:85778"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_hydroxycholesterol_r-h-to-hydrogen-acceptor-17149",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_hydroxycholesterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-h-to-hydrogen-acceptor-17149"
+      },
+      "note": "Shares 4β-hydroxycholesterol with R-H to hydrogen acceptor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:85778"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_25r_4_26_dihydroxycholesterol_4-hydroxycholesterol-to-di-sulfido-diiron",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "25r_4_26_dihydroxycholesterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxycholesterol-to-di-sulfido-diiron"
+      },
+      "note": "Shares (25R)-4β,26-dihydroxycholesterol with 4β-hydroxycholesterol to di-μ-sulfido-diiron.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:86113"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_25r_3_4_dihydroxycholest_5_en_26_al_4-hydroxycholesterol-to-di-sulfido-diiron",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "25r_3_4_dihydroxycholest_5_en_26_al"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxycholesterol-to-di-sulfido-diiron"
+      },
+      "note": "Shares (25R)-3β,4β-dihydroxycholest-5-en-26-al with 4β-hydroxycholesterol to di-μ-sulfido-diiron.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:86115"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_25r_3_4_dihydroxycholest_5_en_26_oate_4-hydroxycholesterol-to-di-sulfido-diiron",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "25r_3_4_dihydroxycholest_5_en_26_oate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxycholesterol-to-di-sulfido-diiron"
+      },
+      "note": "Shares (25R)-3β,4β-dihydroxycholest-5-en-26-oate with 4β-hydroxycholesterol to di-μ-sulfido-diiron.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:86116"
+          }
+        ]
+      }
+    }
+  ]
+}

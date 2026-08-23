@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-8-diazacyclotetradecane-to-adipate "1,8-diazacyclotetradecane… to adipate" {
-  spacing 250
+  spacing 292
 
   spine at 0,0 {
     1_8_diazacyclotetradecane_2_9_dione
@@ -36,19 +36,61 @@ pathway 1-8-diazacyclotetradecane-to-adipate "1,8-diazacyclotetradecane… to ad
 
   branch from glutamate side left {
     glutamate
-    <-> ec_2_6_1_72 [2.6.1.72] +d_4_hydroxyphenylglycine +akg
-    4_hydroxyphenylglyoxylate
+    <-> . +l_alanyl_l_glutamate +h2o
+    alanine
   }
 
   branch from glutamate side right {
     glutamate
-    <-> ec_2_6_1_52 [2.6.1.52] +4_phosphonatooxy_l_threonine +akg
-    r_3_hydroxy_2_oxo_4_phosphonatoooxy_butanoate
+    <-> ec_2_6_1_90 [2.6.1.90] +dtdp_3_amino_3_6_dideoxy_d_galactopyranose +akg
+    dtdp_3_dehydro_6_deoxy_d_galactose
   }
 
   branch from adipoyl_coa side left {
     adipoyl_coa
     <-> . +coa +acetyl_coa
     3_oxooctanedioyl_coa
+  }
+
+  branch from akg side right {
+    akg
+    <-> ec_1_13_12_19 [1.13.12.19] +o2 +hplus +co2 +h2o
+    ethene
+  }
+
+  branch from akg side left {
+    akg
+    <-> ec_2_6_1_89 [2.6.1.89] +dtdp_3_azaniumyl_3_6_dideoxy_d_glucose +glutamate
+    dtdp_3_dehydro_6_deoxy_d_glucose
+  }
+
+  branch from 6_oxohexanoate side right {
+    6_oxohexanoate
+    <-> ec_1_14_13_66 [1.14.13.66] +nadph +o2 +nadp +h2o
+    2_hydroxycyclohexan_1_one
+  }
+
+  branch from 6_oxohexanoate side left {
+    6_oxohexanoate
+    <-> . +n_1_deoxy_d_fructopyranos_1_yl_l_6_aminohexanoat +o2 +h2o +h2o2
+    1_deoxy_d_fructos_1_yl_amine
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> . +di_sulfido_diiron +h2o +akg +nh3 +hplus
+    di_sulfido_diiron
+  }
+
+  branch from glutamate side left {
+    glutamate
+    <-> ec_2_6_1_93 [2.6.1.93] +neamine +akg
+    6_oxoparomamine
+  }
+
+  branch from glutaryl_coa side right {
+    glutaryl_coa
+    <-> . +n6_r_dihydrolipoyl_l_lysine +coa
+    n6_r_s8_glutaryldihydrolipoyl_l_lysine_1
   }
 }

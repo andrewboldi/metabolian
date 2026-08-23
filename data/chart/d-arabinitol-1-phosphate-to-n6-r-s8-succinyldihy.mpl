@@ -16,9 +16,15 @@ pathway d-arabinitol-1-phosphate-to-n6-r-s8-succinyldihy "D-arabinitol 1-phospha
     n6_r_s8_succinyldihydrolipoyl_l_lysine_1
   }
 
-  branch from n6_r_dihydrolipoyl_l_lysine side left {
-    n6_r_dihydrolipoyl_l_lysine
-    <-> . +glutaryl_coa +coa
-    n6_r_s8_glutaryldihydrolipoyl_l_lysine_1
+  branch from holo-acp side left {
+    holo-acp
+    <-> . +l_cysteinyl_amp +amp +hplus
+    o_s_l_cysteinyl_pantetheine_4_phosphoryl_l_serin
+  }
+
+  branch from holo-acp side right {
+    holo-acp
+    <-> ec_6_2_1_70 [6.2.1.70] +threonine +atp +amp +ppi
+    o_s_l_threonyl_pantetheine_4_phosphoryl_l_serine
   }
 }

@@ -147,13 +147,13 @@
       }
     },
     {
-      "id": "4_hydroxy_6_pentylpyran_2_one",
-      "name": "4-hydroxy-6-pentylpyran-2-one",
-      "short": "4-hydroxy-6-pentylp…",
-      "formula": "C10H14O3",
+      "id": "2_4_6_trihydroxyphenylhexan_1_one",
+      "name": "2,4,6-trihydroxyphenylhexan-1-one",
+      "short": "2,4,6-trihydroxyphe…",
+      "formula": "C12H16O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:66958"
+        "chebi": "CHEBI:150865"
       }
     },
     {
@@ -163,6 +163,79 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "3_oxohexanoyl_coa",
+      "name": "3-oxohexanoyl-CoA",
+      "formula": "C27H40N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:62418"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "r_3_hydroxyhexanoyl_coa",
+      "name": "(R)-3-hydroxyhexanoyl-CoA",
+      "short": "3-hydroxyhexanoyl-C…",
+      "formula": "C27H42N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:74280"
+      }
+    },
+    {
+      "id": "butan_1_ol",
+      "name": "butan-1-ol",
+      "formula": "C4H10O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28885"
+      }
+    },
+    {
+      "id": "butyl_hexanoate",
+      "name": "butyl hexanoate",
+      "formula": "C10H20O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:89561"
+      }
+    },
+    {
+      "id": "ethanol",
+      "name": "ethanol",
+      "formula": "C2H6O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16236"
+      }
+    },
+    {
+      "id": "ethyl_hexanoate",
+      "name": "ethyl hexanoate",
+      "formula": "C8H16O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:86055"
       }
     }
   ],
@@ -396,8 +469,8 @@
     },
     {
       "id": "r7",
-      "name": "hexanoyl-CoA + 2 malonyl-CoA + 2 H(+) = 4-hydroxy-6-pentylpyran-2-one + 2 CO2 + 3 CoA",
-      "equation": "hexanoyl-CoA + 2 malonyl-CoA + 2 H(+) = 4-hydroxy-6-pentylpyran-2-one + 2 CO2 + 3 CoA",
+      "name": "hexanoyl-CoA + 3 malonyl-CoA + 3 H(+) = 2,4,6-trihydroxyphenylhexan-1-one + 3 CO2 + 4 CoA",
+      "equation": "hexanoyl-CoA + 3 malonyl-CoA + 3 H(+) = 2,4,6-trihydroxyphenylhexan-1-one + 3 CO2 + 4 CoA",
       "substrates": [
         {
           "metabolite": "hexanoyl_coa",
@@ -405,38 +478,460 @@
         },
         {
           "metabolite": "malonyl-coa",
-          "stoichiometry": 2
+          "stoichiometry": 3
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 2
+          "stoichiometry": 3
         }
       ],
       "products": [
         {
-          "metabolite": "4_hydroxy_6_pentylpyran_2_one",
+          "metabolite": "2_4_6_trihydroxyphenylhexan_1_one",
           "stoichiometry": 1
         },
         {
           "metabolite": "co2",
-          "stoichiometry": 2
+          "stoichiometry": 3
         },
         {
           "metabolite": "coa",
-          "stoichiometry": 3
+          "stoichiometry": 4
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:43452"
+        "rhea": "RHEA:64352"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:43452"
+            "id": "RHEA:64352"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "(3S)-hydroxyhexanoyl-CoA + NAD(+) = 3-oxohexanoyl-CoA + NADH + H(+)",
+      "equation": "(3S)-hydroxyhexanoyl-CoA + NAD(+) = 3-oxohexanoyl-CoA + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "s_3_hydroxyhexanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_oxohexanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:31143"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31143"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "(3R)-hydroxyhexanoyl-CoA = (2E)-hexenoyl-CoA + H2O",
+      "equation": "(3R)-hydroxyhexanoyl-CoA = (2E)-hexenoyl-CoA + H2O",
+      "substrates": [
+        {
+          "metabolite": "r_3_hydroxyhexanoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_hex_2_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:46720"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46720"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "butan-1-ol + hexanoyl-CoA = butyl hexanoate + CoA",
+      "equation": "butan-1-ol + hexanoyl-CoA = butyl hexanoate + CoA",
+      "substrates": [
+        {
+          "metabolite": "butan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hexanoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "butyl_hexanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:65404"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65404"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "hexanoyl-CoA + ethanol = ethyl hexanoate + CoA",
+      "equation": "hexanoyl-CoA + ethanol = ethyl hexanoate + CoA",
+      "substrates": [
+        {
+          "metabolite": "hexanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ethanol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ethyl_hexanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:65452"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65452"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_trans_hex_2_enoyl_coa_n-methylhexanamide-to-3-oxooctanoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_hex_2_enoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-methylhexanamide-to-3-oxooctanoyl-coa"
+      },
+      "note": "Shares trans-hex-2-enoyl-CoA with N-methylhexanamide to 3-oxooctanoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62077"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_z_hex_3_enoyl_coa_2-2-4-dichloro-5-oxofura-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "z_hex_3_enoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-2-4-dichloro-5-oxofura-to-nad"
+      },
+      "note": "Shares (Z)-hex-3-enoyl-CoA with 2-(2,4-dichloro-5-oxofura… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:85415"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_z_hex_3_enoyl_coa_sedoheptulose-1-phosphate-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "z_hex_3_enoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sedoheptulose-1-phosphate-to-nad"
+      },
+      "note": "Shares (Z)-hex-3-enoyl-CoA with sedoheptulose 1-phosphate to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:85415"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_z_hex_3_enoyl_coa_sphing-4-enine-to-safingol-l-threo-sphing",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "z_hex_3_enoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sphing-4-enine-to-safingol-l-threo-sphing"
+      },
+      "note": "Shares (Z)-hex-3-enoyl-CoA with sphing-4-enine to Safingol ( L-threo-sphing….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:85415"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hexanoate_1-hexanoyl-2-acyl-sn-glyc-to-linoleoyl-sn-glycer",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hexanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-hexanoyl-2-acyl-sn-glyc-to-linoleoyl-sn-glycer"
+      },
+      "note": "Shares hexanoate with 1-hexanoyl-2-acyl-sn-glyc… to linoleoyl-sn-glycero-3-ph….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17120"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hexanoate_1-octadecanoyl-2-hexanoyl-to-1-stearoyl-sn-glyce",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hexanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-octadecanoyl-2-hexanoyl-to-1-stearoyl-sn-glyce"
+      },
+      "note": "Shares hexanoate with 1-octadecanoyl-2-hexanoyl… to 1-stearoyl-sn-glycero-3-p….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17120"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hexanoate_n-hexanoyl-sphing-4-enine-to-sphingosine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hexanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-hexanoyl-sphing-4-enine-to-sphingosine"
+      },
+      "note": "Shares hexanoate with N-(hexanoyl)sphing-4-enine to sphingosine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17120"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hexanoate_n-hexanoyldihydroceramide-to-2s-3e-2-hydroxyhept",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hexanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-hexanoyldihydroceramide-to-2s-3e-2-hydroxyhept"
+      },
+      "note": "Shares hexanoate with N-hexanoyldihydroceramide to (2S,3E)-2-hydroxyhept-3-e….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17120"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hexanoate_n-methylhexanamide-to-3-oxooctanoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hexanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-methylhexanamide-to-3-oxooctanoyl-coa"
+      },
+      "note": "Shares hexanoate with N-methylhexanamide to 3-oxooctanoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17120"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_4_6_trihydroxyphenylhexan_1_one_s-adenosyl-l-homocysteine-to-s-adenosyl-l-homocy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_4_6_trihydroxyphenylhexan_1_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-s-adenosyl-l-homocy"
+      },
+      "note": "Shares 2,4,6-trihydroxyphenylhexan-1-one with S-adenosyl-L-homocysteine to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:150865"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_oxohexanoyl_coa_2-3-dihydroxy-3-methylbut-to-butyryl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_oxohexanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3-dihydroxy-3-methylbut-to-butyryl-coa"
+      },
+      "note": "Shares 3-oxohexanoyl-CoA with 2,3-dihydroxy-3-methylbut… to butyryl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62418"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ethyl_hexanoate_d-threo-3-methylmalic-acid-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ethyl_hexanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-threo-3-methylmalic-acid-to-o2"
+      },
+      "note": "Shares ethyl hexanoate with D-threo-3-methylmalic acid to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:86055"
           }
         ]
       }

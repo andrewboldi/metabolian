@@ -189,42 +189,6 @@
       "xrefs": {
         "chebi": "CHEBI:28989"
       }
-    },
-    {
-      "id": "9_s_hpode",
-      "name": "9(S)-HPODE",
-      "formula": "C18H31O4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:60955"
-      }
-    },
-    {
-      "id": "9_s_hode",
-      "name": "9(S)-HODE",
-      "formula": "C18H31O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:77852"
-      }
-    },
-    {
-      "id": "12_r_hpete",
-      "name": "12(R)-HPETE",
-      "formula": "C20H31O4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:75230"
-      }
-    },
-    {
-      "id": "12_r_hete",
-      "name": "12(R)-HETE",
-      "formula": "C20H31O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:83343"
-      }
     }
   ],
   "enzymes": [],
@@ -603,89 +567,115 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r10",
-      "name": "(9S)-hydroperoxy-(10E,12Z)-octadecadienoate + 2 glutathione = (9S)-hydroxy-(10E,12Z)-oc...",
-      "equation": "(9S)-hydroperoxy-(10E,12Z)-octadecadienoate + 2 glutathione = (9S)-hydroxy-(10E,12Z)-octadecadienoate + glutathione disulfide + H2O",
-      "substrates": [
-        {
-          "metabolite": "9_s_hpode",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "gsh",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "9_s_hode",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "gssg",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 10,
-      "xrefs": {
-        "rhea": "RHEA:76687"
+      "id": "xt_chlorohydroquinone_s-hydroxymethyl-glutathi-to-folate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "chlorohydroquinone"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "s-hydroxymethyl-glutathi-to-folate"
+      },
+      "note": "Shares chlorohydroquinone with S-(hydroxymethyl)glutathi… to folate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:76687"
+            "db": "ChEBI",
+            "id": "CHEBI:27675"
           }
         ]
       }
     },
     {
-      "id": "r11",
-      "name": "(12R)-hydroperoxy-(5Z,8Z,10E,14Z)-eicosatetraenoate + 2 glutathione = (12R)-hydroxy-(5Z...",
-      "equation": "(12R)-hydroperoxy-(5Z,8Z,10E,14Z)-eicosatetraenoate + 2 glutathione = (12R)-hydroxy-(5Z,8Z,10E,14Z)-eicosatetraenoate + glutathione disulfide + H2O",
-      "substrates": [
-        {
-          "metabolite": "12_r_hpete",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "gsh",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "12_r_hete",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "gssg",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 11,
-      "xrefs": {
-        "rhea": "RHEA:76691"
+      "id": "xt_maleylacetate_4-chlorobenzoate-to-maleylacetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "maleylacetate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "4-chlorobenzoate-to-maleylacetate"
+      },
+      "note": "Shares maleylacetate with 4-chlorobenzoate to maleylacetate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:76691"
+            "db": "ChEBI",
+            "id": "CHEBI:16468"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_maleylacetate_4-nitrophenyl-phosphate-to-maleylacetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "maleylacetate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-nitrophenyl-phosphate-to-maleylacetate"
+      },
+      "note": "Shares maleylacetate with 4-nitrophenyl phosphate to maleylacetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16468"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_maleylacetate_5-oxo-2-sulfonato-2-5-di-to-3-phosphonato-5-ade",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "maleylacetate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-oxo-2-sulfonato-2-5-di-to-3-phosphonato-5-ade"
+      },
+      "note": "Shares maleylacetate with (5-oxo-2-sulfonato-2,5-di… to 3'-phosphonato-5'-adenyly….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16468"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_maleylacetate_s-5-oxo-2-5-dihydro-2-f-to-nitrite",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "maleylacetate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-5-oxo-2-5-dihydro-2-f-to-nitrite"
+      },
+      "note": "Shares maleylacetate with (S)-5-oxo-2,5-dihydro-2-f… to nitrite.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16468"
           }
         ]
       }

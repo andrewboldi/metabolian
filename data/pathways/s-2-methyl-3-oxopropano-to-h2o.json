@@ -1,0 +1,664 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-2-methyl-3-oxopropano-to-h2o",
+  "name": "(S)-2-methyl-3-oxopropano… to H2O",
+  "category": "energy-metabolism",
+  "summary": "A 4-step route from (S)-2-methyl-3-oxopropanoate to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR108490"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_2_methyl_3_oxopropanoate",
+      "name": "(S)-2-methyl-3-oxopropanoate",
+      "short": "2-methyl-3-oxopropa…",
+      "formula": "C4H5O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1105058"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "methylmalonate",
+      "name": "methylmalonate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1572"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "H2O2",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM732620"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "2_methyl_3_oxopropanoate",
+      "name": "2-methyl-3-oxopropanoate",
+      "short": "2-methyl-3-oxopropa…",
+      "formula": "C4H5O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM305"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "s_3_hydroxy_2_methylpropanoate",
+      "name": "(S)-3-hydroxy-2-methylpropanoate",
+      "short": "3-hydroxy-2-methylp…",
+      "formula": "C4H7O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1105921"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "3_hydroxy_2_methylpropanoyl_coa",
+      "name": "3-hydroxy-2-methylpropanoyl-CoA",
+      "short": "3-hydroxy-2-methylp…",
+      "formula": "C25H38N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1364135"
+      }
+    },
+    {
+      "id": "r_methylmalonate_semialdehyde",
+      "name": "(R)-methylmalonate semialdehyde",
+      "short": "methylmalonate…",
+      "formula": "C4H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:141212"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_2_3_1",
+      "name": "aldehyde oxidase",
+      "ec": [
+        "1.2.3.1"
+      ],
+      "xrefs": {
+        "uniprot": "Q06278"
+      }
+    },
+    {
+      "id": "ec_1_2_1_3",
+      "name": "aldehyde dehydrogenase (NAD(+))",
+      "ec": [
+        "1.2.1.3"
+      ],
+      "xrefs": {
+        "uniprot": "P00352"
+      }
+    },
+    {
+      "id": "ec_1_1_1_31",
+      "name": "3-hydroxyisobutyrate dehydrogenase",
+      "ec": [
+        "1.1.1.31"
+      ],
+      "xrefs": {
+        "uniprot": "P31937"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "aldehyde oxidase",
+      "ec": "1.2.3.1",
+      "substrates": [
+        {
+          "metabolite": "s_2_methyl_3_oxopropanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methylmalonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_3_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR108490"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR108490"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "aldehyde dehydrogenase (NAD(+))",
+      "ec": "1.2.1.3",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methylmalonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_methyl_3_oxopropanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR105358"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR105358"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3-hydroxyisobutyrate dehydrogenase",
+      "ec": "1.1.1.31",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_methyl_3_oxopropanoate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_3_hydroxy_2_methylpropanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_31"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR145203"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR145203"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Reaction MNXR198567",
+      "substrates": [
+        {
+          "metabolite": "s_3_hydroxy_2_methylpropanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_hydroxy_2_methylpropanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR198567"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198567"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "Reaction MNXR114331",
+      "substrates": [
+        {
+          "metabolite": "s_2_methyl_3_oxopropanoate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_methylmalonate_semialdehyde",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR114331"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR114331"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_s_2_methyl_3_oxopropanoate_1d-chiro-inositol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_2_methyl_3_oxopropanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1d-chiro-inositol-to-h2o"
+      },
+      "note": "Shares (S)-2-methyl-3-oxopropanoate with 1D-chiro-inositol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1105058"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_2_methyl_3_oxopropanoate_3-hydroxy-2-methylpropano-to-propionyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_2_methyl_3_oxopropanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxy-2-methylpropano-to-propionyl-coa"
+      },
+      "note": "Shares (S)-2-methyl-3-oxopropanoate with 3-hydroxy-2-methylpropano… to propionyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1105058"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_2_methyl_3_oxopropanoate_ethionamide-to-sulfate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_2_methyl_3_oxopropanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ethionamide-to-sulfate"
+      },
+      "note": "Shares (S)-2-methyl-3-oxopropanoate with ethionamide to sulfate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1105058"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_2_methyl_3_oxopropanoate_manganese-to-h2o-52240",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_2_methyl_3_oxopropanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "manganese-to-h2o-52240"
+      },
+      "note": "Shares (S)-2-methyl-3-oxopropanoate with manganese to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1105058"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_2_methyl_3_oxopropanoate_nadh-to-propionyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_2_methyl_3_oxopropanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-propionyl-coa"
+      },
+      "note": "Shares (S)-2-methyl-3-oxopropanoate with NADH to propionyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1105058"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_methylmalonate_25-deacetylrifampicin-to-rifampicin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "methylmalonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "25-deacetylrifampicin-to-rifampicin"
+      },
+      "note": "Shares methylmalonate with 25-Deacetylrifampicin to rifampicin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1572"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_methylmalonate_5-cholestan-3-one-to-amp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "methylmalonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cholestan-3-one-to-amp"
+      },
+      "note": "Shares methylmalonate with 5α-cholestan-3-one to AMP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1572"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_methylmalonate_7-8-dihydro-8-oxoguanine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "methylmalonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-8-dihydro-8-oxoguanine-to-h2o"
+      },
+      "note": "Shares methylmalonate with 7,8-dihydro-8-oxoguanine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1572"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_methylmalonate_benzamide-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "methylmalonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "benzamide-to-coa"
+      },
+      "note": "Shares methylmalonate with benzamide to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1572"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_methylmalonate_co2-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "methylmalonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "co2-to-h2o-null"
+      },
+      "note": "Shares methylmalonate with CO2 to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1572"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_methyl_3_oxopropanoate_4-2-iminoethyl-phenol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_methyl_3_oxopropanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-2-iminoethyl-phenol-to-h2o"
+      },
+      "note": "Shares 2-methyl-3-oxopropanoate with 4-(2-iminoethyl)phenol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM305"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_methyl_3_oxopropanoate_5-hydroperoxy-epa-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_methyl_3_oxopropanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-hydroperoxy-epa-to-h2o"
+      },
+      "note": "Shares 2-methyl-3-oxopropanoate with 5-hydroperoxy-EPA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM305"
+          }
+        ]
+      }
+    }
+  ]
+}

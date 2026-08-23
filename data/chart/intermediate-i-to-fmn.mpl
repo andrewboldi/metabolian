@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway intermediate-i-to-fmn "intermediate I to FMN" {
-  spacing 204
+  spacing 198
 
   spine at 0,0 {
     intermediate_i
@@ -20,11 +20,5 @@ pathway intermediate-i-to-fmn "intermediate I to FMN" {
     norfluorocurarine
     <-> ec_1_5_1_57 [1.5.1.57] +nadp +nadph +hplus
     19e_cur_19_en_17_al
-  }
-
-  branch from 18_hydroxynorfluorocurarine side right {
-    18_hydroxynorfluorocurarine
-    <-> ec_1_5_1_57 [1.5.1.57] +nadp +nadph +hplus
-    17_18_epoxy_17_hydroxycur_19_ene
   }
 }

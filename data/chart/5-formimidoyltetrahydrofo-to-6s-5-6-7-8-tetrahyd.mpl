@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-formimidoyltetrahydrofo-to-6s-5-6-7-8-tetrahyd "5-formimidoyltetrahydrofo… to (6S)-5,6,7,8-tetrahydrofo…" {
-  spacing 250
+  spacing 280
 
   spine at 0,0 {
     5_formimidoyltetrahydrofolate
@@ -22,19 +22,49 @@ pathway 5-formimidoyltetrahydrofo-to-6s-5-6-7-8-tetrahyd "5-formimidoyltetrahydr
 
   branch from nh3 side left {
     nh3
-    <-> . +4_guanidiniumylbutanamide +h2o
-    4_guanidinobutanoic_acid
+    <-> . +agmatinium +o2 +h2o +h2o2
+    4_guanidiniumylbutanal
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +iminodiacetonitrile +h2o
-    n_cyanomethyl_glycinate
+    <-> . +agmatinium +o2 +h2o +h2o2
+    2r_2_hydroxypyrrolidine_1_carboximidamide
   }
 
-  branch from formate side left {
-    formate
-    <-> . +h2o +nh3
-    hydrogen_cyanide
+  branch from nh3 side left {
+    nh3
+    <-> . +l_argininium +nad +nicotinamide +hplus
+    adp_2_imine_ribofurano_1_2_4_5_oxazolidine_2
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> . +2_azaniumyl_2_deoxyisochorismate +glutamine +h2o +glutamate
+    4_amino_4_deoxychorismate
+  }
+
+  branch from glycine side left {
+    glycine
+    <-> ec_6_2_1_66 [6.2.1.66] +holo-acp +atp +amp +ppi
+    o_s_glycylpantetheine_4_phosphoryl_l_serine_resi
+  }
+
+  branch from glycine side right {
+    glycine
+    <-> . +s_1_hydroxy_3_methylhexan_3_yl_l_cysteinylglycin +h2o
+    s_1_hydroxy_3_methylhexan_3_yl_l_cysteine
+  }
+
+  branch from d_alanine side left {
+    d_alanine
+    <-> ec_3_4_13_22 [3.4.13.22] +h2o
+    d_alanyl_d_alanine
+  }
+
+  branch from d_alanine side right {
+    d_alanine
+    <-> ec_6_3_2_35 [6.3.2.35] +dserine +atp +adp +pi +hplus
+    d_alanyl_d_serine
   }
 }

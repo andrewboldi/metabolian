@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway arseno-mycothiol-to-h2o "Arseno-mycothiol to H2O" {
-  spacing 312
+  spacing 240
 
   spine at 0,0 {
     arseno_mycothiol
@@ -18,77 +18,5 @@ pathway arseno-mycothiol-to-h2o "Arseno-mycothiol to H2O" {
     cu
     <-> ec_1_14_13_7 [1.14.13.7] +h +o2 +nadph +4_methylphenol -4_methylcatechol -h2o
     nadp
-  }
-
-  branch from arsenate side left {
-    arsenate
-    <-> . +h +adp +phosphate +h2o
-    atp
-  }
-
-  branch from arsenate side right {
-    arsenate
-    <-> ec_7_3_2_1 [7.3.2.1] +h +phosphate +atp +h2o
-    adp
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_palmitoyl_2_vernoloyl_phosphatidylcholine
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_2_distearoyl_sn_glycero_3_phosphoserine
-  }
-
-  branch from cu side left {
-    cu
-    <-> ec_3_6_3_4 [3.6.3.4] +h +adp +atp +h2o
-    phosphate
-  }
-
-  branch from arsenous_acid side right {
-    arsenous_acid
-    <-> . +phytochelatin_3 +h +h2o
-    arsenic_phytochelatin_3
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_prolylglycine +l_tryptophan
-    trp_pro_gly
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_leucine +l_proline +l_tryptophan
-    tryptophanyl_prolyl_leucine
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_14_13_84 [1.14.13.84] +nadh +4_hydroxyacetophenone +o2 +h2o
-    4_hydroxyphenylacetate
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_14_13_91 [1.14.13.91] +nadh +h +10_deoxysarpagine +o2 +h2o
-    sarpagine
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_14_13_70 [1.14.13.70] +h +32_hydroxylanosterol +o2 +nadph +h2o
-    4_4_dimethyl_14a_formyl_5alpha_cholesta_8_24_die
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_14_15_6 [1.14.15.6] +20r_22r_20_22_dihydroxycholesterol +h +o2 +nadph +4_methylpentanal +h2o
-    pregnenolone
   }
 }

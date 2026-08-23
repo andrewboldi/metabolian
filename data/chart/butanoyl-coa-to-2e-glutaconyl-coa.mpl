@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway butanoyl-coa-to-2e-glutaconyl-coa "butanoyl-CoA to (2E)-glutaconyl-CoA" {
-  spacing 264
+  spacing 282
 
   spine at 0,0 {
     butanoyl_coa
@@ -18,51 +18,69 @@ pathway butanoyl-coa-to-2e-glutaconyl-coa "butanoyl-CoA to (2E)-glutaconyl-CoA" 
     h
   }
 
-  branch from but_2_enoyl_coa side left {
-    but_2_enoyl_coa
-    <-> ec_4_2_1_116 [4.2.1.116] +3s_3_hydroxybutanoyl_coa +h
-    h2o
-  }
-
-  branch from but_2_enoyl_coa side right {
-    but_2_enoyl_coa
-    <-> ec_1_3_8_1 [1.3.8.1] +butanoyl_coa +fad +h
-    fadh2
-  }
-
   branch from butanoate side left {
     butanoate
-    <-> ec_3_1_1_1 [3.1.1.1] +4_methylumbelliferyl_butyate +h2o +h
-    4_methylumbelliferone
+    <-> ec_3_7_1_7 [3.7.1.7] +nonane_4_6_dione +h2o +h
+    pentan_2_one
   }
 
   branch from butanoate side right {
     butanoate
-    <-> ec_3_1_1_7 [3.1.1.7] +thiocholine +h +h2o
-    butyrylthiocholine
+    <-> . +2z_2_hydroxypenta_2_4_dienoate +h +h2o
+    2_hydroxy_6_oxo_nona_2_4_dienoate
   }
 
   branch from h side left {
     h
-    <-> ec_1_1_1_2 [1.1.1.2] +1_7_7_trimethylbicyclo_2_2_1_heptane_2_3_diol +nadp +nadph
-    bornane_2_3_dione
+    <-> ec_1_6_5_2 [1.6.5.2] +nadh +2_demethylmenaquinone_11 +nad
+    2_demethylmenaquinol_11
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_209 [1.1.1.209] +1_2_dihydro_1_2_acenaphthylenediol +nadp +nadph
-    acenaphthene_1_2_dione
+    <-> ec_1_6_5_2 [1.6.5.2] +nadh +demethylmenaquinone_12 +nad
+    2_demethylmenaquinol_12
   }
 
-  branch from r_2_hydroxyglutaryl_coa side left {
-    r_2_hydroxyglutaryl_coa
-    <-> ec_2_8_3_12 [2.8.3.12] +acetyl_coa +s_2_hydroxyglutarate
-    acetate
-  }
-
-  branch from 3_hydroxyglutarate side right {
-    3_hydroxyglutarate
-    <-> . +s_3_hydroxyglutaryl_coa +h2o +h
+  branch from butanoyl_coa side left {
+    butanoyl_coa
+    <-> ec_2_3_1_206 [2.3.1.206] +malonyl_coa +h +co2 +divarinol
     coa
+  }
+
+  branch from butanoyl_coa side right {
+    butanoyl_coa
+    <-> . +s_carnitine +coa
+    o_butanoyl_l_carnitine
+  }
+
+  branch from h side left {
+    h
+    <-> ec_1_6_5_2 [1.6.5.2] +nadh +2_demethylmenaquinone_13 +nad
+    2_demethylmenaquinol_13
+  }
+
+  branch from h side right {
+    h
+    <-> ec_1_6_5_2 [1.6.5.2] +nadh +menaquinone_6 +nad
+    menaquinol_6
+  }
+
+  branch from butanoate side left {
+    butanoate
+    <-> . +butanoyl_coa +diphosphate +amp +atp +coa
+    pmf
+  }
+
+  branch from co2 side right {
+    co2
+    <-> ec_4_1_1_65 [4.1.1.65] +22_0_18_3_pe +h
+    22_0_18_3_ps
+  }
+
+  branch from co2 side left {
+    co2
+    <-> ec_4_1_1_65 [4.1.1.65] +24_0_18_2_pe +h
+    24_0_18_2_ps
   }
 }

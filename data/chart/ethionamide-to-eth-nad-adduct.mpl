@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway ethionamide-to-eth-nad-adduct "ethionamide to ETH-NAD adduct" {
-  spacing 188
+  spacing 152
 
   spine at 0,0 {
     ethionamide
@@ -14,41 +14,5 @@ pathway ethionamide-to-eth-nad-adduct "ethionamide to ETH-NAD adduct" {
     eth_nad_imine_adduct
     <-> . +h +h2o -eth_nad_adduct
     nh4
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_14_13_112 [1.14.13.112] +22s_22_hydroxycampesterol +h +o2 +nadph +h2o
-    22r_23r_22_23_dihydroxycampesterol
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_14_13_112 [1.14.13.112] +22s_22_hydroxycampest_4_en_3_one +h +o2 +nadph +h2o
-    22r_23r_22_23_dihydroxycampest_4_en_3_one
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +8z_11z_14z_eicosatrienoate +h +cholesterol
-    cholesteryl_all_cis_icosa_8_11_14_trienoate
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +cholest_5_en_3_yl_13z_16z_docosadienoate +cholesterol
-    13z_16z_docosadienoic_acid
-  }
-
-  branch from nh4 side left {
-    nh4
-    <-> ec_3_5_4_11 [3.5.4.11] +6_hydroxymethyl_2_4_1h_3h_pteridinedione +h +h2o
-    6_hydroxymethyl_pterin
-  }
-
-  branch from nh4 side right {
-    nh4
-    <-> ec_3_5_4_11 [3.5.4.11] +l_erythro_biopterin +h +h2o
-    2_4_dihydroxy_6_1_2_dihydroxypropyl_pteridine
   }
 }

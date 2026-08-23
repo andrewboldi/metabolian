@@ -19,16 +19,4 @@ pathway cpd-5167-to-c80-dolichol-phosphate "CPD-5167 to C80 dolichol phosphate" 
     <-> ec_2_4_1_256 [2.4.1.256] +a_dolichyl_beta_d_glucosyl_phosphate -h -c80_dolichol_phosphate
     cpd_18076
   }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    18_2_18_3_ps
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    ps_18_3_9z_12z_15z_18_3_9z_12z_15z
-  }
 }

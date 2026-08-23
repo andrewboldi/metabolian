@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway r-5-diphosphonatomevalo-to-isopentenyl-alcohol "(R)-5-diphosphonatomevalo… to isopentenyl alcohol" {
-  spacing 200
+  spacing 188
 
   spine at 0,0 {
     mevalonate_5pp
@@ -14,17 +14,5 @@ pathway r-5-diphosphonatomevalo-to-isopentenyl-alcohol "(R)-5-diphosphonatomeval
     isopentenyl_phosphate
     <-> ec_2_7_1_32 [2.7.1.32] +h +adp -isopentenyl_alcohol
     atp
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_7_6_2_2 [7.6.2.2] +h +adp +phosphate +h2o
-    cefoperazone
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +h +adp +4_phosphopentanoyl_coa
-    4_hydroxypentanoyl_coa
   }
 }

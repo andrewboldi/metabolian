@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-hydroxy-3-octaprenylben-to-h2o "4-hydroxy-3-octaprenylben… to H2O" {
-  spacing 340
+  spacing 256
 
   spine at 0,0 {
     4_hydroxy_3_octaprenylbenzoate
@@ -22,101 +22,7 @@ pathway 4-hydroxy-3-octaprenylben-to-h2o "4-hydroxy-3-octaprenylben… to H2O" {
     3_demethylubiquinol_8
     <-> ec_2_1_1_64 [2.1.1.64] +sam -sah -hplus
     ubiquinol_8
-    <-> . +pmf +ferricytochrome_c -ferrocytochrome_c -ubiquinone_8 -h
-    pmf
-    <-> . +ferrocytochrome_c +h +pyruvate -ferricytochrome_c
-    s_lactate
-    <-> . +h -h2o
-    lactide
-  }
-
-  branch from 3_all_trans_octaprenyl_benzene_1_2_diol side left {
-    3_all_trans_octaprenyl_benzene_1_2_diol
-    <-> . +o2
-    2_all_trans_octaprenylphenol
-  }
-
-  branch from 3_all_trans_octaprenyl_benzene_1_2_diol side right {
-    3_all_trans_octaprenyl_benzene_1_2_diol
-    <-> . +nadh +h +adp +phosphate +2_all_trans_octaprenylphenol +nad +h2o
-    atp
-  }
-
-  branch from 2_methoxy_6_all_trans_octaprenyl_phenol side left {
-    2_methoxy_6_all_trans_octaprenyl_phenol
-    <-> . +6_methoxy_2_octaprenylhydroquinone
-    o2
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +l_lysinium +sam +hplus
-    n6_n6_n6_trimethyl_l_lysine
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +n6_methyl_l_lysinium +sam +hplus
-    n6_n6_dimethyl_l_lysine_1
-  }
-
-  branch from ubiquinol_8 side right {
-    ubiquinol_8
-    <-> . +pmf +ubiquinone_8 +h +formate +pmf
-    co2
-  }
-
-  branch from ubiquinol_8 side left {
-    ubiquinol_8
-    <-> ec_1_2_2_1 [1.2.2.1] +pmf +ubiquinone_8 +h +pmf +co2
-    formate
-  }
-
-  branch from pmf side right {
-    pmf
-    <-> . +ubiquinol_10 +ferricytochrome_c +ferrocytochrome_c +h
-    ubiquinone_10
-  }
-
-  branch from pmf side left {
-    pmf
-    <-> . +nadh +h +pyruvate +s_lactate
-    nad
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    6_deamino_6_oxoparomomycin_ii
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    l_glutamylbutirosin_b
-  }
-
-  branch from s_lactate side right {
-    s_lactate
-    <-> . +menaquinol_9 +pyruvate
-    menaquinone_9
-  }
-
-  branch from s_lactate side left {
-    s_lactate
-    <-> . +h +nadph +s_lactaldehyde +h2o
-    nadp
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    butirosin_b
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    xylostasin
+    <-> . +nitrite +h -nh4 -h2o
+    ubiquinone_8
   }
 }

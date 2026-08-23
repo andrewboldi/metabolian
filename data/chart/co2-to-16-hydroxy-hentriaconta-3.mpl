@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway co2-to-16-hydroxy-hentriaconta-3 "CO2 to 16-hydroxy-hentriaconta-3…" {
-  spacing 206
+  spacing 164
 
   spine at 0,0 {
     co2
@@ -16,57 +16,15 @@ pathway co2-to-16-hydroxy-hentriaconta-3 "CO2 to 16-hydroxy-hentriaconta-3…" {
     nadp
   }
 
-  branch from h side left {
-    h
-    <-> . +adenosine_3_5_bisphosphate +cyclosporin_a_sulfate +cyclosporin_a
-    3_phosphoadenylyl_sulfate
+  branch from coa side left {
+    coa
+    <-> . +6z_9z_12z_15z_18z_tetracosapentaenoyl_coa +s_carnitine
+    tetracosapentaenoyl_carnitine
   }
 
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    cyclosporin_a
-  }
-
-  branch from 6z_9z_12z_15z_3_oxo_2_2z_5z_8z_11z_tetradeca_2 side left {
-    6z_9z_12z_15z_3_oxo_2_2z_5z_8z_11z_tetradeca_2
-    <-> ec_1_1_1_412 [1.1.1.412] +h +nadph +nadp
-    6z_9z_12z_15z_3_hydroxy_2_2z_5z_8z_11z_tetradec
-  }
-
-  branch from 6z_9z_12z_15z_3_oxo_2_2z_5z_8z_11z_tetradeca_2 side right {
-    6z_9z_12z_15z_3_oxo_2_2z_5z_8z_11z_tetradeca_2
-    <-> ec_2_3_3_20 [2.3.3.20] +h2o +h +coa
-    4z_7z_10z_13z_hexadecatetraenoyl_coa
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +h +adp +cyanate +phosphate +cyanate
-    atp
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    s_5_acetamido_2_hydroxyphenyl_cysteine
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_21 [1.1.1.21] +sapropterin +h +nadph
-    6_1_hydroxy_2_oxopropyl_tetrahydropterin
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_14_13_237 [1.14.13.237] +h +o2 +nadph +omega_methylthio_alkyl_glucosinolate +h2o
-    omega_methylsulfinyl_alkyl_glucosinolate
-  }
-
-  branch from 16_hydroxy_hentriaconta_3_6_9_12_19_22_25_28_oct side left {
-    16_hydroxy_hentriaconta_3_6_9_12_19_22_25_28_oct
-    <-> . +co2 +coa
-    3z_6z_9z_12z_15z_19z_22z_25z_28z_hentriaconta_3
+  branch from coa side right {
+    coa
+    <-> . +6z_9z_12z_15z_18z_21z_tetracosahexaenoyl_coa +s_carnitine
+    6z_9z_12z_15z_18z_21z_tetracosa_6_9_12_15_18_21
   }
 }

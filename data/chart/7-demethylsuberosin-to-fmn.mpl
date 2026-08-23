@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 7-demethylsuberosin-to-fmn "7-demethylsuberosin to FMN" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     7_demethylsuberosin
@@ -14,17 +14,5 @@ pathway 7-demethylsuberosin-to-fmn "7-demethylsuberosin to FMN" {
     psoralen
     <-> . +fmnh2 +o2 -fmn -h2o -hplus
     xanthotoxol
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +2_hydroxymethyl_3_pentylphenol +fmnh2 +o2 +h2o +hplus
-    8s_annullatin_e
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +dodecanoate +fmnh2 +o2 +h2o +hplus
-    3_hydroxylaurate
   }
 }

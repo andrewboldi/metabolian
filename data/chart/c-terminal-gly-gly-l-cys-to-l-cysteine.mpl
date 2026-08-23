@@ -20,45 +20,27 @@ pathway c-terminal-gly-gly-l-cys-to-l-cysteine "C-terminal Gly-Gly-L-Cys(… to 
     c_terminal_gly_gly_1
   }
 
-  branch from cysteine side left {
-    cysteine
-    <-> . +alanine
-    3_disulfanyl_l_alanine
-  }
-
-  branch from cysteine side right {
-    cysteine
-    <-> . +glyoxylate +glycine
-    mercaptopyruvate
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_202 [4.2.3.202] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +h2o
-    hydropyrenol
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_203 [4.2.3.203] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    isoelisabethatriene
-  }
-
   branch from l_cysteine side left {
     l_cysteine
-    <-> ec_4_4_1_29 [4.4.1.29] +s_3_2r_phycocyanobilin_l_cysteine_2
-    3e_phycocyanobilin
+    <-> . +myristoyl_coa +coa
+    s_myristoyl_l_cysteine_group
   }
 
   branch from l_cysteine side right {
     l_cysteine
-    <-> ec_4_4_1_29 [4.4.1.29] +3e_phycocyanobilin
-    s_3_2r_phycocyanobilin_l_cysteine_2
+    <-> . +stearoyl_coa +coa
+    s_stearoyl_l_cysteine_group
   }
 
-  branch from c_terminal_s_gly_gly_l_cys_zwitterion side left {
-    c_terminal_s_gly_gly_l_cys_zwitterion
-    <-> ec_2_5_1_113 [2.5.1.113] +o_phospho_l_serine +c_terminal_n_glycylaminoethanethioic_s_acid
-    phosphate
+  branch from l_cysteine side left {
+    l_cysteine
+    <-> . +oleoyl_coa +coa
+    s_oleoyl_l_cysteine_group
+  }
+
+  branch from l_cysteine side right {
+    l_cysteine
+    <-> . +arachidonoyl_coa +coa
+    s_arachidonoyl_l_cysteine_group
   }
 }

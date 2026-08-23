@@ -126,99 +126,6 @@
       "xrefs": {
         "chebi": "CHEBI:33019"
       }
-    },
-    {
-      "id": "hco3",
-      "name": "Bicarbonate (HCO3-)",
-      "formula": "CHO3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:17544"
-      }
-    },
-    {
-      "id": "s_ethylmalonyl_coa",
-      "name": "(S)-ethylmalonyl-CoA",
-      "formula": "C26H37N7O19P3S",
-      "charge": -5,
-      "xrefs": {
-        "chebi": "CHEBI:60909"
-      }
-    },
-    {
-      "id": "adp",
-      "name": "ADP",
-      "formula": "C10H12N5O10P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:456216"
-      }
-    },
-    {
-      "id": "pi",
-      "name": "Orthophosphate (Pi)",
-      "formula": "HO4P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:43474"
-      }
-    },
-    {
-      "id": "r_ethylmalonyl_coa",
-      "name": "(R)-ethylmalonyl-CoA",
-      "formula": "C26H37N7O19P3S",
-      "charge": -5,
-      "xrefs": {
-        "chebi": "CHEBI:85316"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16526"
-      }
-    },
-    {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:175763"
-      }
-    },
-    {
-      "id": "silphinene",
-      "name": "silphinene",
-      "formula": "C15H24",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:229523"
-      }
-    },
-    {
-      "id": "5_end_ribonucleotide_5_triphosphate_4",
-      "name": "5'-end ribonucleotide 5'-triphosphate(4−)",
-      "short": "5'-end ribonucleoti…",
-      "formula": "C5H7O13P3R",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:167618"
-      }
-    },
-    {
-      "id": "5_end_ribonucleotide_2",
-      "name": "5'-end ribonucleotide(2−)",
-      "short": "5'-end ribonucleoti…",
-      "formula": "C5H7O7PR",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:138282"
-      }
     }
   ],
   "enzymes": [
@@ -227,13 +134,6 @@
       "name": "1-butanol dehydrogenase (cytochrome c)",
       "ec": [
         "1.1.2.9"
-      ]
-    },
-    {
-      "id": "ec_4_1_1_94",
-      "name": "ethylmalonyl-CoA decarboxylase",
-      "ec": [
-        "4.1.1.94"
       ]
     }
   ],
@@ -380,177 +280,159 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "butanoyl-CoA + hydrogencarbonate + ATP = (2S)-ethylmalonyl-CoA + ADP + phosphate + H(+)",
-      "equation": "butanoyl-CoA + hydrogencarbonate + ATP = (2S)-ethylmalonyl-CoA + ADP + phosphate + H(+)",
-      "substrates": [
-        {
-          "metabolite": "butyryl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hco3",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "s_ethylmalonyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pi",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:59520"
+      "id": "xt_butanal_2s-2-1r-1-carboxyla-to-butyryl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "butanal"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2s-2-1r-1-carboxyla-to-butyryl-coa"
+      },
+      "note": "Shares butanal with (2S)-2-{[(1R)-1-carboxyla… to butyryl-CoA.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:59520"
+            "db": "ChEBI",
+            "id": "CHEBI:15743"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "ethylmalonyl-CoA decarboxylase",
-      "equation": "(2R)-ethylmalonyl-CoA + H(+) = butanoyl-CoA + CO2",
-      "ec": "4.1.1.94",
-      "substrates": [
-        {
-          "metabolite": "r_ethylmalonyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "butyryl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_1_1_94"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:59540"
+      "id": "xt_butanal_3-acyloxy-acyl-group-to-1-4-benzoquinones",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "butanal"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "3-acyloxy-acyl-group-to-1-4-benzoquinones"
+      },
+      "note": "Shares butanal with 3-(acyloxy)acyl group to 1,4-benzoquinones.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:59540"
+            "db": "ChEBI",
+            "id": "CHEBI:15743"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "(2E,6E)-farnesyl diphosphate = silphinene + diphosphate",
-      "equation": "(2E,6E)-farnesyl diphosphate = silphinene + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "fpp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "silphinene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:78655"
+      "id": "xt_butanal_butanal-to-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "butanal"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "butanal-to-acetate"
+      },
+      "note": "Shares butanal with butanal to acetate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:78655"
+            "db": "ChEBI",
+            "id": "CHEBI:15743"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "a 5'-end triphospho-ribonucleoside in mRNA + H2O = a 5'-end phospho-ribonucleoside in m...",
-      "equation": "a 5'-end triphospho-ribonucleoside in mRNA + H2O = a 5'-end phospho-ribonucleoside in mRNA + diphosphate + H(+)",
-      "substrates": [
-        {
-          "metabolite": "5_end_ribonucleotide_5_triphosphate_4",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "5_end_ribonucleotide_2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:78683"
+      "id": "xt_butanal_butane-to-butyryl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "butanal"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "butane-to-butyryl-coa"
+      },
+      "note": "Shares butanal with butane to butyryl-CoA.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:78683"
+            "db": "ChEBI",
+            "id": "CHEBI:15743"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_butanal_butanoyl-coa-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "butanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "butanoyl-coa-to-diphosphate"
+      },
+      "note": "Shares butanal with butanoyl-CoA to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15743"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_butanal_butyl-sulfate-to-butanoyl-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "butanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "butyl-sulfate-to-butanoyl-phosphate"
+      },
+      "note": "Shares butanal with butyl sulfate to butanoyl phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15743"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_butanal_fmnh2-to-2s-2-hydroxypentanenitr",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "butanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fmnh2-to-2s-2-hydroxypentanenitr"
+      },
+      "note": "Shares butanal with FMNH2 to (2S)-2-hydroxypentanenitr….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15743"
           }
         ]
       }

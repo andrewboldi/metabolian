@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-hydroxybutanoyl-coa-to-diphosphate "3-hydroxybutanoyl-CoA to diphosphate" {
-  spacing 194
+  spacing 218
 
   spine at 0,0 {
     3_hydroxybutanoyl_coa
@@ -16,33 +16,57 @@ pathway 3-hydroxybutanoyl-coa-to-diphosphate "3-hydroxybutanoyl-CoA to diphospha
     acetoacetyl_coa
   }
 
-  branch from acetoacetyl_coa side left {
-    acetoacetyl_coa
-    <-> ec_1_1_1_36 [1.1.1.36] +nadp +nadph +hplus
-    r_3_hydroxybutanoyl_coa
+  branch from acetoacetate side left {
+    acetoacetate
+    <-> ec_2_8_3_9 [2.8.3.9] +acetoacetyl_coa +4_hydroxybutanoate
+    4_hydroxybutanoyl_coa
   }
 
   branch from acetoacetate side right {
     acetoacetate
-    <-> ec_2_8_3_9 [2.8.3.9] +acetoacetyl_coa +pentanoate
-    pentanoyl_coa
-  }
-
-  branch from acetoacetate side left {
-    acetoacetate
-    <-> ec_2_8_3_9 [2.8.3.9] +acetoacetyl_coa +2_methylpropanoate
-    2_methylpropanoyl_coa
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_100 [4.2.3.100] +fpp
-    bicyclogermacrene
+    <-> ec_2_6_1_19 [2.6.1.19] +2_oxoglutarate +h +2_methylaspartate +l_glutamate
+    co2
   }
 
   branch from ppi side left {
     ppi
-    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    isopimara_8_14_15_diene
+    <-> ec_6_2_1_60 [6.2.1.60] +marinolate_c +atp +coa +amp
+    marinoloyl_coa_c
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_6_2_1_60 [6.2.1.60] +pseudomonate_c +atp +coa +amp
+    pseudomonoyl_coa_c
+  }
+
+  branch from 3_hydroxybutanoyl_coa side left {
+    3_hydroxybutanoyl_coa
+    <-> . +carnitine +coa
+    r_3_hydroxybutyrylcarnitine
+  }
+
+  branch from acetoacetate side right {
+    acetoacetate
+    <-> ec_2_8_3_9 [2.8.3.9] +acetoacetyl_coa +2_hydroxybutanoate +h
+    2_hydroxybutyryl_coa
+  }
+
+  branch from acetoacetate side left {
+    acetoacetate
+    <-> . +acetyl_coa +2_deoxy_3_dehydro_d_ribonate
+    d_glyceroyl_coa
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_201 [4.2.3.201] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    hydropyrene
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_202 [4.2.3.202] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +h2o
+    hydropyrenol
   }
 }

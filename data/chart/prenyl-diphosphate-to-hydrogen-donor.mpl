@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway prenyl-diphosphate-to-hydrogen-donor "prenyl diphosphate to hydrogen donor" {
-  spacing 300
+  spacing 288
 
   spine at 0,0 {
     dmapp
@@ -14,17 +14,5 @@ pathway prenyl-diphosphate-to-hydrogen-donor "prenyl diphosphate to hydrogen don
     n6_dimethylallyladenine
     <-> ec_1_5_99_12 [1.5.99.12] +hydrogen_acceptor +h2o -adenine -hydrogen_donor
     3_methylbut_2_enal
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +fpp
-    z_bisabolene
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +fpp
-    cedr_8_ene
   }
 }

@@ -8,9 +8,7 @@ pathway nadh-to-3-hydroxyheptadecanoyl "NADH to 3-Hydroxyheptadecanoyl…" {
 
   spine at 0,0 {
     nadh
-    <-> . +acetyl_coa +fadh2 +propanoyl_coa +h -fad -coa -nad -h2o
-    9z_heptadecenoyl_coa
-    <-> . +nadp +h2o -h -o2 -nadph
+    <-> . +acetyl_coa +fadh2 +pentadecanoyl_coa +h -fad -coa -nad -h2o
     heptadecanoyl_coa
     <-> . +fad +hplus -fadh2
     trans_2_heptadecenoyl_coa

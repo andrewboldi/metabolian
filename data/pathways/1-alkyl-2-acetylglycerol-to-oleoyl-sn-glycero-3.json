@@ -93,6 +93,42 @@
       "xrefs": {
         "chebi": "CHEBI:57287"
       }
+    },
+    {
+      "id": "decan_1_ol",
+      "name": "decan-1-ol",
+      "formula": "C10H22O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28903"
+      }
+    },
+    {
+      "id": "decyl_oleate",
+      "name": "decyl oleate",
+      "formula": "C28H54O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:75620"
+      }
+    },
+    {
+      "id": "palmitoleyl_alcohol",
+      "name": "palmitoleyl alcohol",
+      "formula": "C16H32O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:75623"
+      }
+    },
+    {
+      "id": "palmitoleyl_oleate",
+      "name": "palmitoleyl oleate",
+      "formula": "C34H64O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:75624"
+      }
     }
   ],
   "enzymes": [],
@@ -206,6 +242,196 @@
           {
             "db": "Rhea",
             "id": "RHEA:56168"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "decan-1-ol + (9Z)-octadecenoyl-CoA = decyl (9Z)-octadecenoate + CoA",
+      "equation": "decan-1-ol + (9Z)-octadecenoyl-CoA = decyl (9Z)-octadecenoate + CoA",
+      "substrates": [
+        {
+          "metabolite": "decan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oleoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "decyl_oleate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:38223"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38223"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(9Z)-hexadecen-1-ol + (9Z)-octadecenoyl-CoA = 1-O-(9Z)-hexadecenyl (9Z)-octadecenoate +...",
+      "equation": "(9Z)-hexadecen-1-ol + (9Z)-octadecenoyl-CoA = 1-O-(9Z)-hexadecenyl (9Z)-octadecenoate + CoA",
+      "substrates": [
+        {
+          "metabolite": "palmitoleyl_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oleoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "palmitoleyl_oleate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:38231"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38231"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_1_alkyl_2_acetylglycerol_1-alkyl-2-acetylglycerol-to-monoacylglycerol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_alkyl_2_acetylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-alkyl-2-acetylglycerol-to-monoacylglycerol"
+      },
+      "note": "Shares 1-alkyl-2-acetylglycerol with 1-alkyl-2-acetylglycerol to monoacylglycerol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75882"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_o_alkyl_2_acetyl_3_acylglycerol_1-alkyl-2-acetylglycerol-to-monoacylglycerol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_o_alkyl_2_acetyl_3_acylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-alkyl-2-acetylglycerol-to-monoacylglycerol"
+      },
+      "note": "Shares 1-O-alkyl-2-acetyl-3-acylglycerol with 1-alkyl-2-acetylglycerol to monoacylglycerol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:189574"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_decan_1_ol_dammarenediol-ii-to-ginsenoside-c-k",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "decan_1_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dammarenediol-ii-to-ginsenoside-c-k"
+      },
+      "note": "Shares decan-1-ol with dammarenediol-II to ginsenoside C-K.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28903"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_decan_1_ol_dihydroprecondylocarpine-to-echitovenine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "decan_1_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dihydroprecondylocarpine-to-echitovenine"
+      },
+      "note": "Shares decan-1-ol with dihydroprecondylocarpine… to (+)-echitovenine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28903"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_decan_1_ol_n-stearoylsphingosine-1-p-to-n-hexadecanoylsphin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "decan_1_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-stearoylsphingosine-1-p-to-n-hexadecanoylsphin"
+      },
+      "note": "Shares decan-1-ol with N-stearoylsphingosine-1-p… to N-hexadecanoylsphingosine….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28903"
           }
         ]
       }

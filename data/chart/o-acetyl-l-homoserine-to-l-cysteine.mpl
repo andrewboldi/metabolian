@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway o-acetyl-l-homoserine-to-l-cysteine "O-acetyl-L-homoserine to L-cysteine" {
-  spacing 302
+  spacing 340
 
   spine at 0,0 {
     o_acetyl_l_homoserine
@@ -20,80 +20,80 @@ pathway o-acetyl-l-homoserine-to-l-cysteine "O-acetyl-L-homoserine to L-cysteine
 
   branch from h side left {
     h
-    <-> ec_4_2_2_13 [4.2.2.13] +1_5_anhydro_d_fructose +2_nitrophenol
-    o_nitrophenyl_alpha_d_glucopyranoside
+    <-> . +5_2_formylethyl_4_6_dihydroxypicolinate +co2
+    5_3_carboxy_3_oxopropyl_4_6_dihydroxypicolinate
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_184 [1.1.1.184] +nadh +4_pyridinecarboxaldehyde +nad
-    4_pyridinemethanol
+    <-> . +6_oxo_2_hydroxy_7_4_chlorophenyl_3_8_8_8_tetrach +o2
+    2_3_dihydroxy_ddt
   }
 
   branch from acetate side left {
     acetate
-    <-> ec_3_1_1_2 [3.1.1.2] +h +phenol +h2o
-    phenyl_acetate
+    <-> ec_1_13_11_50 [1.13.11.50] +acetylacetone +o2 +h
+    methylglyoxal
   }
 
   branch from acetate side right {
     acetate
-    <-> . +puromycin +h2o
-    n_acetylpuromycin
-  }
-
-  branch from d_cystathionine side left {
-    d_cystathionine
-    <-> . +2_oxobutanoate +nh4 +cysteine
-    h2o
-  }
-
-  branch from cysteine side right {
-    cysteine
-    <-> . +l_cysteine
-    pmf
-  }
-
-  branch from cysteine side left {
-    cysteine
-    <-> ec_6_3_2_2 [6.3.2.2] +h +adp +glutathione +phosphate +atp +l_glutamate
-    glycine
-  }
-
-  branch from glutathione side right {
-    glutathione
-    <-> . +r_s_lactoylglutathione +h2o +h
-    lactate
+    <-> . +acetylpyruvate +h +h2o
+    2_4_6_trioxoheptanoate
   }
 
   branch from glutathione side left {
     glutathione
-    <-> . +3_hydroxykynurenine_o_beta_d_glucoside +h2o
-    glutathionyl_3_hydroxykynurenine_glucoside
+    <-> . +1_aci_nitro_2_1h_indol_3_yl_ethane +h2o
+    z_1_glutathion_s_yl_n_hydroxy_2_1h_indol_3_yl_e
   }
 
-  branch from l_cystine side right {
+  branch from glutathione side right {
+    glutathione
+    <-> ec_4_4_1_20 [4.4.1.20] +leukotriene_c4
+    epi_leukotriene_a4
+  }
+
+  branch from l_cystine side left {
     l_cystine
     <-> . +h +riboflavin +l_cysteine
     4a_5_dihydroriboflavin
   }
 
-  branch from l_cystine side left {
+  branch from l_cystine side right {
     l_cystine
-    <-> . +l_cysteine +h2o
-    o2
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_1_1_10 [1.1.1.10] +3_hydroxyheptan_2_one +h +nadph
-    2_3_heptanedione
+    <-> . +o2 +l_cysteine
+    h2o
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_10 [1.1.1.10] +3_hydroxyhexan_2_one +h +nadph
-    hexane_2_3_dione
+    <-> . +2_octaprenyl_6_methoxyphenol +h +o2 +nadph +h2o
+    2_octaprenyl_6_methoxy_1_4_benzoquinol
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +elymoclavine_aldehyde +o2 +nadph +h2o
+    paspalic_acid
+  }
+
+  branch from l_cysteine side left {
+    l_cysteine
+    <-> . +nadh +h +7_oxoheptanoic_acid +l_serine +nad
+    7_mercaptoheptanoic_acid
+  }
+
+  branch from l_cysteine side right {
+    l_cysteine
+    <-> ec_4_2_1_22 [4.2.1.22] +h +l_serine +h2o
+    hydrogen_sulfide
+  }
+
+  branch from l_cysteine side left {
+    l_cysteine
+    <-> . +hydrogen_sulfide +nadp +nadph
+    l_alanine
   }
 
   branch from l_cysteine side right {
@@ -102,9 +102,75 @@ pathway o-acetyl-l-homoserine-to-l-cysteine "O-acetyl-L-homoserine to L-cysteine
     atp
   }
 
-  branch from l_cysteine side left {
-    l_cysteine
-    <-> . +h +4_methylthiobutanaldoxime +o2 +nadph +nadp +h2o
-    s_4_methylthiobutylthiohydroximoyl_l_cysteine
+  branch from h side left {
+    h
+    <-> . +2_hydroxy_4_1_oxo_1_3_dihydro_2h_inden_2_ylidene +o2
+    3_4_dihydroxyfluorene
+  }
+
+  branch from h side right {
+    h
+    <-> . +2_hydroxy_4_2_oxo_1_3_dihydro_2h_inden_1_ylidene +o2
+    1_2_dihydroxyfluorene
+  }
+
+  branch from acetate side left {
+    acetate
+    <-> . +acetylpyruvate +h +h2o
+    2_4_6_trioxoheptanoate
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> . +3_4_15_triacetyl_nivalenol +h2o +h
+    4_15_diacetylnivalenol
+  }
+
+  branch from succinate side left {
+    succinate
+    <-> ec_1_14_11_19 [1.14.11.19] +2_oxoglutarate +2r_3s_4s_3_4_leucopelargonidin +o2 +co2 +h +h2o
+    pelargonidin
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> . +2_oxoglutarate +2r_3s_4s_3_4_leucopelargonidin +o2 +co2 +h2o
+    4s_2_3_dehydroleucopelargonidin
+  }
+
+  branch from glutathione_disulfide side left {
+    glutathione_disulfide
+    <-> . +8_s_hete +h2o +h +glutathione
+    8s_hydoperoxy_5z_9e_11z_14z_eicosatetraenoic_aci
+  }
+
+  branch from glutathione side right {
+    glutathione
+    <-> ec_6_3_1_9 [6.3.1.9] +glutathionylspermidine +atp +h +adp +phosphate
+    trypanothione
+  }
+
+  branch from glutathione side left {
+    glutathione
+    <-> . +4_6_bis_glutathion_s_yl_2_5_dichloroisophthaloni +h +chloride
+    2_4_6_tris_glutathion_s_yl_5_chloroisophthalonit
+  }
+
+  branch from l_cystine side right {
+    l_cystine
+    <-> ec_3_6_3_21 [3.6.3.21] +h +phosphate +atp +h2o
+    adp
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_1_1_2 [1.1.1.2] +e_hex_2_en_1_ol +nadp +h
+    2_hexenal
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +ent_kaur_19_al_17_oate +h +o2 +nadp +h2o
+    ent_kauran_17_19_dioic_acid
   }
 }

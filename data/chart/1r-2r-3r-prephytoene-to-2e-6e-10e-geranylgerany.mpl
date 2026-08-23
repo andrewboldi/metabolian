@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1r-2r-3r-prephytoene-to-2e-6e-10e-geranylgerany "(1R,2R,3R)-prephytoene… to (2E,6E,10E)-geranylgerany…" {
-  spacing 208
+  spacing 160
 
   spine at 0,0 {
     1r_2r_3r_prephytoene_diphosphate
@@ -14,53 +14,5 @@ pathway 1r-2r-3r-prephytoene-to-2e-6e-10e-geranylgerany "(1R,2R,3R)-prephytoene�
     h
     <-> ec_2_5_1_32 [2.5.1.32] +diphosphate +prephytoene_diphosphate
     2e_6e_10e_geranylgeranyl_diphosphate
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +kanamycin_a +dctp
-    4_2_deoxycytidylyl_kanamycin_a
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +kanamycin_a +dgtp
-    4_2_deoxyguanylyl_kanamycin_a
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +octyl_alpha_d_galactopyranoside +phosphate +octyl_alpha_d_galactopyranoside +h2o
-    atp
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    octyl_2_acetamido_2_deoxy_alpha_d_glucopyranosid
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> ec_1_3_1_16 [1.3.1.16] +3_nitropropanoate +nadp +h
-    3_nitroacrylate
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> ec_1_14_12_5 [1.14.12.5] +2_hydroxymethyl_3_acetamidomethylene_succinate +nadp +h +o2
-    5_pyridoxate
-  }
-
-  branch from 2e_6e_10e_geranylgeranyl_diphosphate side left {
-    2e_6e_10e_geranylgeranyl_diphosphate
-    <-> ec_2_5_1_89 [2.5.1.89] +diphosphate +tritrans_heptacis_undecaprenyl_diphosphate +h
-    ipp
-  }
-
-  branch from 2e_6e_10e_geranylgeranyl_diphosphate side right {
-    2e_6e_10e_geranylgeranyl_diphosphate
-    <-> ec_2_5_1_89 [2.5.1.89] +diphosphate +ipp
-    tri_trans_poly_cis_undecaprenyl_diphosphate
   }
 }

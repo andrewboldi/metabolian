@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-anthraniloyl-l-cysteine-to-1-2-aminophenyl-dec "S-anthraniloyl-L-cysteine to 1-(2-aminophenyl)decane-1…" {
-  spacing 230
+  spacing 218
 
   spine at 0,0 {
     s_anthraniloyl_l_cysteine
@@ -20,21 +20,9 @@ pathway s-anthraniloyl-l-cysteine-to-1-2-aminophenyl-dec "S-anthraniloyl-L-cyste
     1_2_aminophenyl_decane_1_3_dione
   }
 
-  branch from l_cysteine side left {
-    l_cysteine
-    <-> ec_4_4_1_29 [4.4.1.29] +s_3_2r_phycoerythrobilin_l_cysteine_2
-    3e_phycoerythrobilin
-  }
-
-  branch from l_cysteine side right {
-    l_cysteine
-    <-> ec_4_4_1_30 [4.4.1.30] +s_3_2r_phycocyanobilin_l_cysteine_2
-    3e_phycocyanobilin
-  }
-
-  branch from 1_2_aminophenyl_decane_1_3_dione side left {
-    1_2_aminophenyl_decane_1_3_dione
-    <-> . +h2o
-    2_heptyl_4_quinolone
+  branch from malonyl-coa side left {
+    malonyl-coa
+    <-> ec_2_3_1_333 [2.3.1.333] +h2o +co2 +coa
+    3_oxoglutarate
   }
 }

@@ -1,0 +1,635 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "fmn-n5-oxide-to-o2-null",
+  "name": "FMN-N5-oxide to O2",
+  "category": "redox-detox",
+  "summary": "A 3-step route from FMN-N5-oxide to O2, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR192695"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "fmn_n5_oxide",
+      "name": "FMN-N5-oxide",
+      "formula": "C17H21N4O10P",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1096345"
+      }
+    },
+    {
+      "id": "z_2_methylureidoacrylate",
+      "name": "(Z)-2-methylureidoacrylate",
+      "short": "2-methylureidoacryl…",
+      "formula": "C5H7N2O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:143783"
+      }
+    },
+    {
+      "id": "fmn_n5_peroxide",
+      "name": "FMN-N5-peroxide",
+      "formula": "C17H21N4O11P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:176498"
+      }
+    },
+    {
+      "id": "thymine",
+      "name": "thymine",
+      "formula": "C5H6N2O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1369302"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1107623"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H21N4O9P",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364147"
+      }
+    },
+    {
+      "id": "z_2_methylureidoperacrylic_acid",
+      "name": "(Z)-2-methylureidoperacrylic acid",
+      "short": "2-methylureidoperac…",
+      "formula": "C5H8N2O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:63249"
+      }
+    },
+    {
+      "id": "nitrite",
+      "name": "nitrite",
+      "formula": "NO2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM107"
+      }
+    },
+    {
+      "id": "acetaldehyde",
+      "name": "acetaldehyde",
+      "formula": "C2H4O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM75"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "aci_nitroethane",
+      "name": "aci-nitroethane",
+      "formula": "C2H4NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:55327"
+      }
+    },
+    {
+      "id": "2_4_dinitrophenol_hydride_sigma_complex",
+      "name": "2,4-dinitrophenol hydride sigma-complex",
+      "short": "2,4-dinitrophenol…",
+      "formula": "C6H6N2O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM819946"
+      }
+    },
+    {
+      "id": "2_4_6_trinitrophenol_dihydride_meisenheimer_comp",
+      "name": "2,4,6-trinitrophenol dihydride-Meisenheimer complex, aci-nitro form",
+      "short": "2,4,6-trinitropheno…",
+      "formula": "C6H6N3O7",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1107648"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_99_46",
+      "name": "pyrimidine monooxygenase",
+      "ec": [
+        "1.14.99.46"
+      ]
+    },
+    {
+      "id": "ec_1_13_12_16",
+      "name": "nitronate monooxygenase",
+      "ec": [
+        "1.13.12.16"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "pyrimidine monooxygenase",
+      "ec": "1.14.99.46",
+      "substrates": [
+        {
+          "metabolite": "fmn_n5_oxide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "z_2_methylureidoacrylate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fmn_n5_peroxide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "thymine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_99_46"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR192695"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR192695"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "pyrimidine monooxygenase",
+      "ec": "1.14.99.46",
+      "substrates": [
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "thymine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "z_2_methylureidoperacrylic_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_99_46"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR192278"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR192278"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "nitronate monooxygenase",
+      "ec": "1.13.12.16",
+      "substrates": [
+        {
+          "metabolite": "nitrite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "aci_nitroethane",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_12_16"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR191418"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR191418"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Reaction MNXR185646",
+      "substrates": [
+        {
+          "metabolite": "nitrite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_4_dinitrophenol_hydride_sigma_complex",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_4_6_trinitrophenol_dihydride_meisenheimer_comp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR185646"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR185646"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_fmn_n5_oxide_co2-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "fmn_n5_oxide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "co2-to-o2"
+      },
+      "note": "Shares FMN-N5-oxide with CO2 to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1096345"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_fmn_n5_oxide_co2-to-o2-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "fmn_n5_oxide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "co2-to-o2-null"
+      },
+      "note": "Shares FMN-N5-oxide with CO2 to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1096345"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_fmn_n5_oxide_fmn-n5-oxide-to-l-homocitrulline",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "fmn_n5_oxide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fmn-n5-oxide-to-l-homocitrulline"
+      },
+      "note": "Shares FMN-N5-oxide with FMN-N5-oxide to L-homocitrulline.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1096345"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_fmn_n5_oxide_fmn-n5-oxide-to-l-homocitrulline-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "fmn_n5_oxide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fmn-n5-oxide-to-l-homocitrulline-null"
+      },
+      "note": "Shares FMN-N5-oxide with FMN-N5-oxide to L-homocitrulline.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1096345"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_fmn_n5_oxide_fmn-n5-oxide-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "fmn_n5_oxide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fmn-n5-oxide-to-o2"
+      },
+      "note": "Shares FMN-N5-oxide with FMN-N5-oxide to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1096345"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_fmn_n5_oxide_h-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "fmn_n5_oxide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-ammonium"
+      },
+      "note": "Shares FMN-N5-oxide with H to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1096345"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_z_2_methylureidoperacrylic_acid_2-hydroxy-n-methyl-5-oxop-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "z_2_methylureidoperacrylic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-hydroxy-n-methyl-5-oxop-to-h2o-null"
+      },
+      "note": "Shares (Z)-2-methylureidoperacrylic acid with 2-hydroxy-N-methyl-5-oxop… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:63249"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_z_2_methylureidoperacrylic_acid_fmn-n5-oxide-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "z_2_methylureidoperacrylic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fmn-n5-oxide-to-o2"
+      },
+      "note": "Shares (Z)-2-methylureidoperacrylic acid with FMN-N5-oxide to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:63249"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_z_2_methylureidoperacrylic_acid_fmnh2-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "z_2_methylureidoperacrylic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fmnh2-to-h2o-null"
+      },
+      "note": "Shares (Z)-2-methylureidoperacrylic acid with FMNH2 to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:63249"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_z_2_methylureidoperacrylic_acid_n-demethyl-desepoxymaytan-to-7a-hydroxy-o-carbam",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "z_2_methylureidoperacrylic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-demethyl-desepoxymaytan-to-7a-hydroxy-o-carbam"
+      },
+      "note": "Shares (Z)-2-methylureidoperacrylic acid with N-Demethyl-desepoxymaytan… to 7a-Hydroxy-o-carbamoyl-de….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:63249"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_z_2_methylureidoperacrylic_acid_s-2-ureidoglycine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "z_2_methylureidoperacrylic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2-ureidoglycine-to-h2o"
+      },
+      "note": "Shares (Z)-2-methylureidoperacrylic acid with (S)-2-ureidoglycine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:63249"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_z_2_methylureidoperacrylic_acid_s-2-ureidoglycine-to-h2o-33871",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "z_2_methylureidoperacrylic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2-ureidoglycine-to-h2o-33871"
+      },
+      "note": "Shares (Z)-2-methylureidoperacrylic acid with (S)-2-ureidoglycine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:63249"
+          }
+        ]
+      }
+    }
+  ]
+}

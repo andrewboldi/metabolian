@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway coniferin-to-e-ferulate "coniferin to (E)-ferulate" {
-  spacing 326
+  spacing 192
 
   spine at 0,0 {
     coniferin
@@ -16,25 +16,7 @@ pathway coniferin-to-e-ferulate "coniferin to (E)-ferulate" {
     trans_ferulate
     <-> . +udp_d_glucose -udp
     1_o_feruloyl_d_glucose
-    <-> ec_2_4_1_300 [2.4.1.300] +pelargonidin_3_o_d_glucoside_betaine -e_ferulate
+    <-> . +pelargonidin_3_glucoside -h -e_ferulate
     pelargonidin_3_7_di_o_beta_d_glucoside
-  }
-
-  branch from glucose side left {
-    glucose
-    <-> . +j_104303 +h2o
-    j_109384
-  }
-
-  branch from glucose side right {
-    glucose
-    <-> . +be_13793c +h2o
-    ed_110
-  }
-
-  branch from coniferyl_aldehyde side left {
-    coniferyl_aldehyde
-    <-> . +udp_d_glucose +udp +hplus
-    coniferaldehyde_d_glucoside
   }
 }

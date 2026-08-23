@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway p-hydroxybenzyl-alcohol-to-h2o "p-hydroxybenzyl alcohol to H2O" {
-  spacing 252
+  spacing 228
 
   spine at 0,0 {
     p_hydroxybenzyl_alcohol
@@ -16,29 +16,5 @@ pathway p-hydroxybenzyl-alcohol-to-h2o "p-hydroxybenzyl alcohol to H2O" {
     udp_alpha_d_glucose
     <-> ec_3_2_1_21 [3.2.1.21] +beta_d_glucose +s_4_hydroxymandelonitrile -h2o
     dhurrin
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_21 [3.6.3.21] +adp +phosphate +atp +h2o
-    l_asparagine
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_21 [3.6.3.21] +adp +phosphate +atp +h2o
-    l_aspartate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +2_deoxy_alpha_d_ribose_1_phosphate +phosphate
-    2_deoxy_d_ribofuranose
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_5_2_2 [3.5.2.2] +5_6_dihydro_5_fluorouracil
-    alpha_fluoro_beta_ureidopropionic_acid
   }
 }

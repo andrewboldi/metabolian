@@ -91,6 +91,24 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
+    },
+    {
+      "id": "18_r_hepe",
+      "name": "18(R)-HEPE",
+      "formula": "C20H29O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:90818"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
     }
   ],
   "enzymes": [],
@@ -204,6 +222,109 @@
           {
             "db": "Rhea",
             "id": "RHEA:49244"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(18R)-hydroxy-(5Z,8Z,11Z,14Z,16E)-eicosapentaenoate + O2 = (5S)-hydroperoxy-(18R)-hydro...",
+      "equation": "(18R)-hydroxy-(5Z,8Z,11Z,14Z,16E)-eicosapentaenoate + O2 = (5S)-hydroperoxy-(18R)-hydroxy-(6E,8Z,11Z,14Z,16E)-eicosapentaenoate",
+      "substrates": [
+        {
+          "metabolite": "18_r_hepe",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_s_hydroperoxy_18_r_hydroxy_6e_8z_11z_14z_16e_i",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:51968"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51968"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_5_s_hydroperoxy_18_r_hydroxy_6e_8z_11z_14z_16e_i_carbamoyl-phosphate-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_s_hydroperoxy_18_r_hydroxy_6e_8z_11z_14z_16e_i"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "carbamoyl-phosphate-to-succinate"
+      },
+      "note": "Shares 5(S)-hydroperoxy-18(R)-hydroxy-(6E,8Z,11Z,14Z,16E)-icosapentaenoate with carbamoyl phosphate to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:132218"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_s_hydroperoxy_18_r_hydroxy_6e_8z_11z_14z_16e_i_trans-isoeugenol-to-arsenite",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_s_hydroperoxy_18_r_hydroxy_6e_8z_11z_14z_16e_i"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-isoeugenol-to-arsenite"
+      },
+      "note": "Shares 5(S)-hydroperoxy-18(R)-hydroxy-(6E,8Z,11Z,14Z,16E)-icosapentaenoate with trans-isoeugenol to arsenite.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:132218"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_18_r_hepe_r-2-halocarboxylic-to-2-2-methylthio-ethylmale",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "18_r_hepe"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-2-halocarboxylic-to-2-2-methylthio-ethylmale"
+      },
+      "note": "Shares 18(R)-HEPE with (R)-2-halocarboxylic… to 2-(2-methylthio)ethylmale….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:90818"
           }
         ]
       }

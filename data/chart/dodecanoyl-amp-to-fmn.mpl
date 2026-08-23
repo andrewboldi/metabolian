@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dodecanoyl-amp-to-fmn "dodecanoyl-AMP to FMN" {
-  spacing 248
+  spacing 236
 
   spine at 0,0 {
     dodecanoyl_amp
@@ -14,17 +14,5 @@ pathway dodecanoyl-amp-to-fmn "dodecanoyl-AMP to FMN" {
     dodecanoate
     <-> . +fmnh2 +o2 -fmn -h2o -hplus
     r_11_hydroxylaurate
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +2_hexyl_5_pentylresorcinol +fmnh2 +o2 +h2o +hplus
-    2_hexyl_5_5_hydroxypentyl_resorcinol
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +2_hexyl_5_heptylresorcinol +fmnh2 +o2 +h2o +hplus
-    2_hexyl_5_7_hydroxyheptyl_resorcinol
   }
 }

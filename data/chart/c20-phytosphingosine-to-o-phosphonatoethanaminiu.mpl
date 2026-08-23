@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway c20-phytosphingosine-to-o-phosphonatoethanaminiu "C20 phytosphingosineâ€¦ to O-phosphonatoethanaminium" {
-  spacing 272
+  spacing 302
 
   spine at 0,0 {
     c20_phytosphingosine_1_phosphate
@@ -30,13 +30,43 @@ pathway c20-phytosphingosine-to-o-phosphonatoethanaminiu "C20 phytosphingosineâ€
 
   branch from ethanolaminium side left {
     ethanolaminium
-    <-> . +1_1z_octadecenyl_2_4z_7z_10z_13z_16z_19z_docosah +serine
-    1_1z_octadecenyl_2_4z_7z_10z_13z_16z_19z_docosah
+    <-> . +1_myristoyl_sn_glycero_3_phosphoethanolamine
+    1_myristoyl_sn_glycero_2_3_cyclic_phosphate
   }
 
   branch from ethanolaminium side right {
     ethanolaminium
-    <-> . +1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphoet +serine
-    1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphose
+    <-> . +n_lauroyl_heptadecasphingosine_1_phosphoethanola
+    n_lauroyl_heptadecasphingosine_1_3_cyclophosphat
+  }
+
+  branch from c20_phytosphingosine_1_phosphate side left {
+    c20_phytosphingosine_1_phosphate
+    <-> . +h2o +pi
+    c20_phytosphingosine
+  }
+
+  branch from phosphoethanolamine side right {
+    phosphoethanolamine
+    <-> . +sphinga_4e_14z_dienine_1_phosphate
+    2e_12z_hexadecadienal
+  }
+
+  branch from phosphoethanolamine side left {
+    phosphoethanolamine
+    <-> ec_3_1_4_62 [3.1.4.62] +1_2_diacyl_sn_glycero_3_phosphoethanolamine +h2o +hplus
+    dag
+  }
+
+  branch from ethanolaminium side right {
+    ethanolaminium
+    <-> . +n_acyl_sphingosylphosphoethanolamine
+    n_acyl_sphingosyl_1_3_cyclicphosphate
+  }
+
+  branch from ethanolaminium side left {
+    ethanolaminium
+    <-> . +1_acyl_sn_glycero_3_phosphoethanolamine
+    1_acyl_sn_glycero_2_3_cyclic_phosphate
   }
 }

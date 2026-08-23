@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cdp-diacylglycerol-to-amp-3-end-1 "CDP-diacylglycerol to AMP 3'-end(1−)" {
-  spacing 340
+  spacing 328
 
   spine at 0,0 {
     cdp_diacylglycerol
@@ -14,29 +14,5 @@ pathway cdp-diacylglycerol-to-amp-3-end-1 "CDP-diacylglycerol to AMP 3'-end(1−
     1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol
     <-> ec_2_3_2_11 [2.3.2.11] +3_l_alanyl_adenylyl_zwitterionic_group -amp_3_end_1
     1_2_diacyl_sn_glycero_3_phospho_1_3_o_l_alanyl_s
-  }
-
-  branch from cytidine_5_monophosphate side left {
-    cytidine_5_monophosphate
-    <-> . +o3_d_galactosyl_1_3_n_acetyl_d_galactosaminyl_l +cmp_n_acetyl_neuraminate +hplus
-    o3_d_galactosyl_1_3_n_acetyl_neuraminosyl_2_6_n
-  }
-
-  branch from cytidine_5_monophosphate side right {
-    cytidine_5_monophosphate
-    <-> . +n_acetylneuraminyl_2_3_d_galactosyl_1_4_d_gluco +cmp_n_acetyl_9_o_acetylneuraminate +hplus
-    n_acetyl_9_o_acetylneuraminosyl_2_8_n_acetylneu
-  }
-
-  branch from 1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol side left {
-    1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol
-    <-> . +n_acetylsphingosine +1_acyl_sn_glycero_3_phospho_1_sn_glycerol
-    1_o_acyl_n_acetylsphingosine
-  }
-
-  branch from 1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol side right {
-    1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol
-    <-> . +nad +nadh +hplus
-    1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerone
   }
 }

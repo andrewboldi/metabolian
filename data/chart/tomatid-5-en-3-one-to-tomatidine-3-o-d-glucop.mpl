@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway tomatid-5-en-3-one-to-tomatidine-3-o-d-glucop "tomatid-5-en-3-one to tomatidine 3-O-β-D-glucop…" {
-  spacing 164
+  spacing 158
 
   spine at 0,0 {
     tomatid_5_en_3_one
@@ -18,15 +18,9 @@ pathway tomatid-5-en-3-one-to-tomatidine-3-o-d-glucop "tomatid-5-en-3-one to tom
     tomatidine_3_o_d_glucopyranoside
   }
 
-  branch from nadp side left {
-    nadp
-    <-> . +n_hydroxy_l_dihomomethioninate +h2o +o2 +nadph
-    l_dihomomethionine
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +h +o2 +n_hydroxy_l_dihomomethioninate +nadph +h2o
-    n_n_dihydroxy_l_dihomomethioninate
+  branch from udp_d_glucose side left {
+    udp_d_glucose
+    <-> . +4_2_4_dihydroxy_6_nonylbenzoyloxy_2_hydroxy_6_no +udp +hplus
+    exophillate
   }
 }

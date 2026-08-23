@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-arachidonoyl-1-oleoyl-s-to-9z-17-hydroxyoctade "N-arachidonoyl-1-oleoyl-s… to (9Z)-17-hydroxyoctadec-9-…" {
-  spacing 176
+  spacing 200
 
   spine at 0,0 {
     n_arachidonoyl_1_oleoyl_sn_glycero_3_phosphoetha
@@ -22,27 +22,51 @@ pathway n-arachidonoyl-1-oleoyl-s-to-9z-17-hydroxyoctade "N-arachidonoyl-1-oleoy
     9z_17_hydroxyoctadec_9_enoate_17_o_diacetylsoph
   }
 
-  branch from oleate side left {
-    oleate
-    <-> . +n_oleoyl_l_tyrosine +h2o
-    tyrosine
-  }
-
-  branch from oleate side right {
-    oleate
-    <-> . +n_oleoyl_l_lysine +h2o
-    l_lysinium
-  }
-
   branch from fmn side left {
     fmn
-    <-> . +dehydroepiandrosterone +fmnh2 +o2 +h2o +hplus
-    16_hydroxydehydroepiandrosterone
+    <-> ec_1_14_14_162 [1.14.14.162] +flavanones +fmnh2 +o2 +h2o +hplus
+    2_hydroxyflavanones
   }
 
   branch from fmn side right {
     fmn
-    <-> . +dehydroepiandrosterone_sulfate +fmnh2 +o2 +h2o +hplus
-    16_hydroxydehydroepiandrosterone_3_sulfate
+    <-> . +s_naringenin +fmnh2 +o2 +h2o +hplus
+    2s_2_hydroxynaringenin
+  }
+
+  branch from fmnh2 side left {
+    fmnh2
+    <-> . +pinocembrin +o2 +fmn +h2o +hplus
+    2s_2_hydroxypinocembrin
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> . +4a_5_dihydro_ml_236c_carboxylate +o2 +fmn +h2o +hplus
+    3_hydroxy_3_5_dihydro_ml_236c_carboxylate
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_151 [1.14.14.151] +valencene +fmnh2 +o2 +h2o +hplus
+    nootkatone
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +valencene +fmnh2 +o2 +h2o +hplus
+    nootkatol
+  }
+
+  branch from udp_d_glucose side left {
+    udp_d_glucose
+    <-> ec_2_4_1_305 [2.4.1.305] +n_acetyl_d_glucosaminyl_1_diphospho_ditrans_poly +udp +hplus
+    d_glc_1_3_d_glcnac_diphospho_ditrans_octacis_un
+  }
+
+  branch from udp_d_glucose side right {
+    udp_d_glucose
+    <-> . +dihydroceramide +udp +hplus
+    d_glucosyl_1_1_n_acylsphinganine
   }
 }

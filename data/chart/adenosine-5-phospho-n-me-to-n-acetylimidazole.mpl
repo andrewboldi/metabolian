@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway adenosine-5-phospho-n-me-to-n-acetylimidazole "Adenosine-5'-phospho-N-me… to N-acetylimidazole" {
-  spacing 224
+  spacing 248
 
   spine at 0,0 {
     adenosine_5_phospho_n_methylimidazolide
@@ -18,37 +18,61 @@ pathway adenosine-5-phospho-n-me-to-n-acetylimidazole "Adenosine-5'-phospho-N-me
 
   branch from h side left {
     h
-    <-> ec_3_2_1_177 [3.2.1.177] +alpha_d_xylose +4_nitrophenol +h2o
-    4_nitrophenyl_d_xyloside
+    <-> ec_2_3_1_51 [2.3.1.51] +pa_14_0_16_1_9z +coa +1_tetradecanoyl_sn_glycerol_3_phosphate
+    9z_hexadecenoyl_coa
   }
 
   branch from h side right {
     h
-    <-> ec_2_5_1_18 [2.5.1.18] +fluoride +s_2_4_dinitrophenyl_glutathione +glutathione
-    1_fluoro_2_4_dinitrobenzene
+    <-> ec_2_3_1_230 [2.3.1.230] +octanoyl_coa +2_aminobenzoylacetate +co2 +coa +h2o
+    2_heptyl_4_quinolone
   }
 
   branch from amp side left {
     amp
-    <-> ec_6_2_1_3 [6.2.1.3] +diphosphate +11z_octadecenoyl_coa +11z_octadecenoate +atp +coa
-    pmf
+    <-> . +7r_11s_16s_7_hydroxy_ent_kauran_11_16_epoxy_19 +h +coa
+    7r_11s_16s_7_hydroxy_ent_kauran_11_16_epoxy_19
   }
 
   branch from amp side right {
     amp
-    <-> ec_2_7_4_3 [2.7.4.3] +h +adp +adenosine_5_o_3_thiodiphophate
-    adenosine_5_gamma_thio_triphosphate
+    <-> . +l_alanine +l_proline +atp +6_methyl_9_10_didehydroergoline_8_carboxylic_aci +l_phenylalanine +ergotamam +h
+    diphosphate
   }
 
-  branch from s_s_adenosyl_l_methionine side left {
-    s_s_adenosyl_l_methionine
-    <-> ec_2_1_1_212 [2.1.1.212] +s_adenosyl_l_homocysteine +h +2_7_dihydroxy_4_methoxyisoflavanone
-    2_4_7_trihydroxyisoflavanone
+  branch from h2o side left {
+    h2o
+    <-> . +hydroxyl +dgtp
+    8_oxo_dgtp
   }
 
-  branch from s_s_adenosyl_l_methionine side right {
-    s_s_adenosyl_l_methionine
-    <-> ec_2_1_1_41 [2.1.1.41] +s_adenosyl_l_homocysteine +h +fecosterol
-    zymosterol
+  branch from h2o side right {
+    h2o
+    <-> ec_3_2_1_162 [3.2.1.162] +neo_lambda_carratetraose +neo_lambda_carrabiose
+    neo_lambda_carrahexaose
+  }
+
+  branch from h side left {
+    h
+    <-> . +cu_pyrimidine_2_6_bis_thiocarboxylate_radical +trichloromethyl +tetrachloromethane
+    cu_pyrimidine_2_6_bis_thiocarboxylate
+  }
+
+  branch from h side right {
+    h
+    <-> . +cu_pyrimidine_2_6_bis_thiocarboxylate_radical +trichloromethyl
+    trichloromethylthioester_of_cu_pyrimidine_2_6_bi
+  }
+
+  branch from amp side left {
+    amp
+    <-> . +3r_3_1h_indol_3_ylmethyl_3h_1_4_benzodiazepine +diphosphate +h2o +atp +l_tryptophan
+    anthranilate
+  }
+
+  branch from amp side right {
+    amp
+    <-> . +shinorine +h +l_seryl_amp
+    mycosporine_glycine
   }
 }

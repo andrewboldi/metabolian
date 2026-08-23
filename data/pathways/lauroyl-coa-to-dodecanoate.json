@@ -116,6 +116,34 @@
       "xrefs": {
         "chebi": "CHEBI:28878"
       }
+    },
+    {
+      "id": "trans_dodec_2_enoyl_coa",
+      "name": "trans-dodec-2-enoyl-CoA",
+      "short": "trans-dodec-2-enoyl…",
+      "formula": "C33H52N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57330"
+      }
+    },
+    {
+      "id": "hexadecan_1_ol",
+      "name": "hexadecan-1-ol",
+      "formula": "C16H34O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16125"
+      }
+    },
+    {
+      "id": "palmityl_laurate",
+      "name": "palmityl laurate",
+      "formula": "C28H56O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:84080"
+      }
     }
   ],
   "enzymes": [
@@ -306,6 +334,328 @@
           {
             "db": "Rhea",
             "id": "RHEA:69484"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "dodecanoyl-CoA + O2 = (2E)-dodecenoyl-CoA + H2O2",
+      "equation": "dodecanoyl-CoA + O2 = (2E)-dodecenoyl-CoA + H2O2",
+      "substrates": [
+        {
+          "metabolite": "lauroyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_dodec_2_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:40171"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40171"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "hexadecan-1-ol + dodecanoyl-CoA = hexadecyl dodecanoate + CoA",
+      "equation": "hexadecan-1-ol + dodecanoyl-CoA = hexadecyl dodecanoate + CoA",
+      "substrates": [
+        {
+          "metabolite": "hexadecan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "lauroyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "palmityl_laurate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:44136"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44136"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_dodecanal_n-lauroyl-1-2-dioleoyl-sn-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dodecanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-lauroyl-1-2-dioleoyl-sn-to-diphosphate"
+      },
+      "note": "Shares dodecanal with N-lauroyl-1,2-dioleoyl-sn… to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:27836"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dodecanal_nadh-to-e-dodec-2-enal",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dodecanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-e-dodec-2-enal"
+      },
+      "note": "Shares dodecanal with NADH to (E)-dodec-2-enal.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:27836"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dodecan_1_ol_1-palmitoyl-2-oleoyl-sn-g-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dodecan_1_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-palmitoyl-2-oleoyl-sn-g-to-fmn"
+      },
+      "note": "Shares dodecan-1-ol with 1-palmitoyl-2-oleoyl-sn-g… to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28878"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dodecan_1_ol_dammarenediol-ii-to-ginsenoside-c-k",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dodecan_1_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dammarenediol-ii-to-ginsenoside-c-k"
+      },
+      "note": "Shares dodecan-1-ol with dammarenediol-II to ginsenoside C-K.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28878"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dodecan_1_ol_dihydroprecondylocarpine-to-echitovenine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dodecan_1_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dihydroprecondylocarpine-to-echitovenine"
+      },
+      "note": "Shares dodecan-1-ol with dihydroprecondylocarpine… to (+)-echitovenine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28878"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dodecan_1_ol_methyl-group-to-1-hexadecyl-sn-glycero-3",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dodecan_1_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "methyl-group-to-1-hexadecyl-sn-glycero-3"
+      },
+      "note": "Shares dodecan-1-ol with methyl group to 1-hexadecyl-sn-glycero-3-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28878"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dodecan_1_ol_nadh-to-e-dodec-2-enal",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dodecan_1_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-e-dodec-2-enal"
+      },
+      "note": "Shares dodecan-1-ol with NADH to (E)-dodec-2-enal.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28878"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_dodec_2_enoyl_coa_2e-4e-tetradecadienoyl-to-lauroyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_dodec_2_enoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2e-4e-tetradecadienoyl-to-lauroyl-coa"
+      },
+      "note": "Shares trans-dodec-2-enoyl-CoA with (2E,4E)-tetradecadienoyl-… to lauroyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57330"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_dodec_2_enoyl_coa_n-lauroyl-1-2-dioleoyl-sn-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_dodec_2_enoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-lauroyl-1-2-dioleoyl-sn-to-diphosphate"
+      },
+      "note": "Shares trans-dodec-2-enoyl-CoA with N-lauroyl-1,2-dioleoyl-sn… to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57330"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_dodec_2_enoyl_coa_s-3-hydroxylauroyl-coa-to-undecan-2-one",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_dodec_2_enoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-3-hydroxylauroyl-coa-to-undecan-2-one"
+      },
+      "note": "Shares trans-dodec-2-enoyl-CoA with (S)-3-hydroxylauroyl-CoA to undecan-2-one.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57330"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_dodec_2_enoyl_coa_utp-to-1-lauroyl-2-oleoyl-sn-gly",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_dodec_2_enoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "utp-to-1-lauroyl-2-oleoyl-sn-gly"
+      },
+      "note": "Shares trans-dodec-2-enoyl-CoA with UTP to 1-lauroyl-2-oleoyl-sn-gly….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57330"
           }
         ]
       }

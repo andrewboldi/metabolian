@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-beta-d-glc-1-3-alpha-d "UDP to beta-D-Glc-(1->3)-alpha-D…" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     udp
@@ -14,17 +14,5 @@ pathway udp-to-beta-d-glc-1-3-alpha-d "UDP to beta-D-Glc-(1->3)-alpha-D…" {
     udp_n_acetyl_alpha_d_glucosamine
     <-> . +udp +beta_d_gal_1_4_beta_d_glc_1_3_alpha_d_galnac_pp +h -beta_d_glc_1_3_alpha_d_galnac_pp_und
     udp_alpha_d_galactose
-  }
-
-  branch from udp_alpha_d_galactose side left {
-    udp_alpha_d_galactose
-    <-> . +udp +alpha_neu5ac_2_3_alpha_d_gal_1_2_beta_d_glc_1_3 +h
-    alpha_neu5ac_2_3_beta_d_glc_1_3_alpha_d_glcnac_p
-  }
-
-  branch from udp_alpha_d_galactose side right {
-    udp_alpha_d_galactose
-    <-> . +udp +beta_d_gal_1_3_beta_d_galnac_1_4_alpha_d_gal_1_3 +h
-    beta_d_galnac_1_4_alpha_d_gal_1_3_alpha_d_galnac
   }
 }

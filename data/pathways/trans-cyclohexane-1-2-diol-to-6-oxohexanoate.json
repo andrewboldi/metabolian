@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "trans-cyclohexane-1-2-diol-to-6-oxohexanoate",
   "name": "trans-cyclohexane-1,2-diol to 6-oxohexanoate",
-  "category": "carbohydrate-metabolism",
+  "category": "energy-metabolism",
   "summary": "A 3-step route from trans-cyclohexane-1,2-diol to 6-oxohexanoate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -137,35 +137,6 @@
       "charge": 1,
       "xrefs": {
         "chebi": "CHEBI:28938"
-      }
-    },
-    {
-      "id": "n_1_deoxy_d_fructopyranos_1_yl_l_6_aminohexanoat",
-      "name": "N-(1-deoxy-β-D-fructopyranos-1-yl)-L-6-aminohexanoate",
-      "short": "N-(1-deoxy-β-D-fruc…",
-      "formula": "C12H23NO7",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:228169"
-      }
-    },
-    {
-      "id": "1_deoxy_d_fructos_1_yl_amine",
-      "name": "(1-deoxy-D-fructos-1-yl)amine",
-      "short": "(1-deoxy-D-fructos-…",
-      "formula": "C6H14NO5",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:228165"
-      }
-    },
-    {
-      "id": "h2o2",
-      "name": "Hydrogen peroxide",
-      "formula": "H2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16240"
       }
     }
   ],
@@ -364,50 +335,71 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "N-(1-deoxy-beta-D-fructopyranos-1-yl)-L-6-aminohexanoate + O2 + H2O = (1-deoxy-D-fructo...",
-      "equation": "N-(1-deoxy-beta-D-fructopyranos-1-yl)-L-6-aminohexanoate + O2 + H2O = (1-deoxy-D-fructos-1-yl)amine + 6-oxohexanoate + H2O2",
-      "substrates": [
-        {
-          "metabolite": "n_1_deoxy_d_fructopyranos_1_yl_l_6_aminohexanoat",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_deoxy_d_fructos_1_yl_amine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "6_oxohexanoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o2",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:77899"
+      "id": "xt_2_hydroxycyclohexan_1_one_1-8-diazacyclotetradecane-to-adipate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_hydroxycyclohexan_1_one"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1-8-diazacyclotetradecane-to-adipate"
+      },
+      "note": "Shares 2-hydroxycyclohexan-1-one with 1,8-diazacyclotetradecane… to adipate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:77899"
+            "db": "ChEBI",
+            "id": "CHEBI:17878"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_oxohexanoate_1-8-diazacyclotetradecane-to-adipate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_oxohexanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-8-diazacyclotetradecane-to-adipate"
+      },
+      "note": "Shares 6-oxohexanoate with 1,8-diazacyclotetradecane… to adipate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18322"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_oxohexanoate_cyclohexylsulfamate-to-6-oxohexanoate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_oxohexanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cyclohexylsulfamate-to-6-oxohexanoate"
+      },
+      "note": "Shares 6-oxohexanoate with cyclohexylsulfamate to 6-oxohexanoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18322"
           }
         ]
       }

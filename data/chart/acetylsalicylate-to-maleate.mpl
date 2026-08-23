@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway acetylsalicylate-to-maleate "acetylsalicylate to maleate" {
-  spacing 170
+  spacing 182
 
   spine at 0,0 {
     acetylsalicylate
@@ -22,5 +22,17 @@ pathway acetylsalicylate-to-maleate "acetylsalicylate to maleate" {
     2_5_dihydroxybenzoate
     <-> ec_1_14_13_24 [1.14.13.24] +nadh +o2 +hplus +nad +h2o
     3_hydroxybenzoate
+  }
+
+  branch from l_serine side right {
+    l_serine
+    <-> ec_3_1_3_53 [3.1.3.53] +h2o +pi
+    o_phospho_l_serine_2
+  }
+
+  branch from l_serine side left {
+    l_serine
+    <-> . +udpglcnac +udp +hplus
+    o_n_acetyl_d_glucosaminyl_l_serine
   }
 }

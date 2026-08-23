@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway octane-to-2-6-dihydroxynicotinate "octane to 2,6-dihydroxynicotinate" {
-  spacing 298
+  spacing 340
 
   spine at 0,0 {
     octane
@@ -28,105 +28,28 @@ pathway octane-to-2-6-dihydroxynicotinate "octane to 2,6-dihydroxynicotinate" {
     2_6_dihydroxynicotinate
   }
 
-  branch from octan_1_ol side left {
-    octan_1_ol
-    <-> . +palmitoyl_coa +coa
-    octyl_palmitate
-  }
 
-  branch from octan_1_ol side right {
-    octan_1_ol
-    <-> . +octyl_d_glucopyranoside +chenodeoxycholate
-    chenodeoxycholate_3_o_d_glucoside
-  }
 
-  branch from octanoate side left {
-    octanoate
-    <-> . +h2o +coa +hplus
-    octanoyl_coa
-  }
 
-  branch from octanoate side right {
-    octanoate
-    <-> . +trioctanoin +h2o +hplus
-    2_3_dioctanoyl_sn_glycerol
-  }
 
-  branch from o_s_octanoylpantetheine_4_phosphoryl_serine_1 side left {
-    o_s_octanoylpantetheine_4_phosphoryl_serine_1
-    <-> ec_1_3_1_10 [1.3.1.10] +h +o_s_2e_octenoylpantetheine_4_phosphoryl_serine_1 +nadph
-    nadp
-  }
 
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_117 [4.2.3.117] +gpp
-    camphene
-  }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_52 [4.2.3.52] +gpp
-    phellandrene
-  }
 
-  branch from holo-acp side right {
-    holo-acp
-    <-> ec_6_2_1_46 [6.2.1.46] +l_alloisoleucine +atp +amp +ppi
-    o_s_l_alloisoleucyl_pantetheine_4_phosphoryl_ser
-  }
 
-  branch from holo-acp side left {
-    holo-acp
-    <-> . +l_serine +coa +hplus
-    adenosine_3_5_bismonophosphate
-  }
 
-  branch from nicotinamide side right {
-    nicotinamide
-    <-> . +nadp +h2o +hplus
-    adp_d_ribose_2_phosphate
-  }
 
-  branch from nicotinamide side left {
-    nicotinamide
-    <-> . +pi +nad +hplus
-    adp_d_ribose_1_phosphate
-  }
 
-  branch from l_lysinium side right {
-    l_lysinium
-    <-> ec_2_3_1_48 [2.3.1.48] +acetyl_coa +coa +hplus
-    n6_acetyl_l_lysine
-  }
 
-  branch from l_lysinium side left {
-    l_lysinium
-    <-> . +n6_succinyl_l_lysine_1 +nad +h2o +nicotinamide
-    2_o_succinyl_adp_d_ribose
-  }
 
-  branch from nicotinate side right {
-    nicotinate
-    <-> ec_2_4_99_20 [2.4.99.20] +nadp +nicotinamide
-    nicotinate_adenine_dinucleotide_phosphate
-  }
 
-  branch from nicotinate side left {
-    nicotinate
-    <-> . +atp +coa +amp +ppi
-    nicotinyl_coa
-  }
 
-  branch from nh3 side right {
-    nh3
-    <-> . +s_alkyl_l_cysteine +h2o +pyruvate
-    alkanethiol
-  }
 
-  branch from nh3 side left {
-    nh3
-    <-> ec_1_13_99_3 [1.13.99.3] +l_tryptophan +o2 +hplus +co2
-    3_indoleglycolaldehyde
-  }
+
+
+
+
+
+
+
+
 }

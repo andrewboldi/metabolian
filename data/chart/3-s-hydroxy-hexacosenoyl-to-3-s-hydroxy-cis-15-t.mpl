@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-s-hydroxy-hexacosenoyl-to-3-s-hydroxy-cis-15-t "3(S)-Hydroxy-Hexacosenoyl… to 3(S)-hydroxy-cis-15-tetra…" {
-  spacing 182
+  spacing 158
 
   spine at 0,0 {
     3_s_hydroxy_hexacosenoyl_coenzyme_a
@@ -26,29 +26,5 @@ pathway 3-s-hydroxy-hexacosenoyl-to-3-s-hydroxy-cis-15-t "3(S)-Hydroxy-Hexacosen
     2e_17z_hexacosadi_2_17_enoyl_coa
     <-> . +o2 +h2o2
     17z_hexacosenoyl_coa
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_31 [3.6.3.31] +h +adp +n_1_n_12_diacetylspermine +phosphate +n_1_n_12_diacetylspermine
-    atp
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_31 [3.6.3.31] +h +adp +phosphate +atp
-    thermospermine
-  }
-
-  branch from 15z_tetracosenoyl_coa side right {
-    15z_tetracosenoyl_coa
-    <-> . +h2o +h +coa
-    15z_tetracosenoate
-  }
-
-  branch from 15z_tetracosenoyl_coa side left {
-    15z_tetracosenoyl_coa
-    <-> ec_6_2_1_3 [6.2.1.3] +diphosphate +amp +15z_tetracosenoate +atp
-    coa
   }
 }

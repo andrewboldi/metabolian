@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-naringin-chalcone "UDP to naringin chalcone" {
-  spacing 182
+  spacing 212
 
   spine at 0,0 {
     udp
@@ -18,31 +18,61 @@ pathway udp-to-naringin-chalcone "UDP to naringin chalcone" {
 
   branch from 2s_naringenin_7_o_beta_d_glucoside side left {
     2s_naringenin_7_o_beta_d_glucoside
-    <-> ec_3_2_1_21 [3.2.1.21] +h2o +naringenin
-    beta_d_glucose
-  }
-
-  branch from 2s_naringenin_7_o_beta_d_glucoside side right {
-    2s_naringenin_7_o_beta_d_glucoside
     <-> ec_3_2_1_62 [3.2.1.62] +h2o +2s_naringenin
     glucose
   }
 
-  branch from naringin side left {
+  branch from naringin side right {
     naringin
     <-> . +malonyl_coa +coa
     6_o_malonylnaringin
   }
 
+  branch from h2o side left {
+    h2o
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
+    neo_lambda_carratetraose
+  }
+
   branch from h2o side right {
     h2o
-    <-> ec_3_1_1_1 [3.1.1.1] +propanoate +ethanol +h
-    ethyl_propionate
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
+    neo_lambda_carrahexaose
+  }
+
+  branch from udp side left {
+    udp
+    <-> ec_2_4_2_34 [2.4.2.34] +indol_3_ylacetyl_myo_inositol_l_arabinoside +h +udp_beta_l_arabinopyranose
+    indole_3_acetyl_myo_inositol
+  }
+
+  branch from udp side right {
+    udp
+    <-> . +udp_4_acetamido_4_6_dideoxy_alpha_l_galactose +4_e_2_isocyanoethenyl_phenol +h
+    rhabduscin
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
+    neo_lambda_carrabiose
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +d_glucosaminyl_1_4_n_acetyl_d_glucosamine +phosphate +d_glucosaminyl_1_4_n_acetyl_d_glucosamine +h2o
+    atp
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_1_1_1 [3.1.1.1] +ethanol +h +butanoate
-    ethyl_butyrate
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
+    d_glucosaminyl_1_4_d_glucosamine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
+    6_alpha_maltosylglucose
   }
 }

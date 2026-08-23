@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-benzyl-l-cysteinylglyci-to-thiobenzaldehyde "S-benzyl-L-cysteinylglyci… to thiobenzaldehyde" {
-  spacing 188
+  spacing 164
 
   spine at 0,0 {
     s_benzyl_l_cysteinylglycine
@@ -26,29 +26,5 @@ pathway s-benzyl-l-cysteinylglyci-to-thiobenzaldehyde "S-benzyl-L-cysteinylglyci
     s_benzyl_l_cysteine
     <-> . +acetyl_coa +coa +hplus
     n_acetyl_s_benzyl_l_cysteine
-  }
-
-  branch from glycine side left {
-    glycine
-    <-> . +s_1_hydroxy_3_methylhexan_3_yl_l_cysteinylglycin +h2o
-    s_1_hydroxy_3_methylhexan_3_yl_l_cysteine
-  }
-
-  branch from glycine side right {
-    glycine
-    <-> . +glycyldehydrophenylalanine +h2o
-    2_3_didehydrophenylalanine
-  }
-
-  branch from nh3 side left {
-    nh3
-    <-> . +2_deoxycytidine_5_monophosphate_1 +h2o +hplus
-    dump
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +serotonin +o2 +h2o +h2o2
-    5_hydroxyindol_3_yl_acetaldehyde
   }
 }

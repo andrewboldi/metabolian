@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-acyl-6-d-mannosyl-1-to-n-retinylidene-n-retiny "2-acyl-6-(α-D-mannosyl-(1… to N-retinylidene-N-retinylp…" {
-  spacing 178
+  spacing 184
 
   spine at 0,0 {
     2_acyl_6_d_mannosyl_1_4_d_glucosaminyl_1_1_radyl
@@ -16,9 +16,15 @@ pathway 2-acyl-6-d-mannosyl-1-to-n-retinylidene-n-retiny "2-acyl-6-(α-D-mannosy
     n_retinylidene_n_retinylphosphatidylethanolamine
   }
 
-  branch from cdp side left {
-    cdp
-    <-> . +e_e_e_geranylgeraniol +ctp +hplus
-    2e_6e_10e_geranylgeranyl_phosphate
+  branch from n_retinylidene_n_retinylethanolamine side left {
+    n_retinylidene_n_retinylethanolamine
+    <-> .
+    iso_a2e_13_cis
+  }
+
+  branch from n_retinylidene_n_retinylethanolamine side right {
+    n_retinylidene_n_retinylethanolamine
+    <-> .
+    iso_a2e_11_cis
   }
 }

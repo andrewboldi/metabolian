@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "17-o-acetylnorajmaline-to-d-glucopyranose",
   "name": "17-O-acetylnorajmaline to D-glucopyranose",
-  "category": "redox-detox",
+  "category": "lipid-metabolism",
   "summary": "A 4-step route from 17-O-acetylnorajmaline(1+) to D-glucopyranose, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -185,6 +185,91 @@
       "xrefs": {
         "chebi": "CHEBI:57684"
       }
+    },
+    {
+      "id": "limonin",
+      "name": "limonin",
+      "formula": "C26H30O8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16226"
+      }
+    },
+    {
+      "id": "limonin_17_d_glucoside",
+      "name": "limonin 17-β-D-glucoside",
+      "short": "limonin 17-β-D-gluc…",
+      "formula": "C32H41O14",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57626"
+      }
+    },
+    {
+      "id": "menthol",
+      "name": "(−)-menthol",
+      "formula": "C10H20O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15409"
+      }
+    },
+    {
+      "id": "menthyl_d_glucoside",
+      "name": "(−)-menthyl β-D-glucoside",
+      "short": "(−)-menthyl…",
+      "formula": "C16H30O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15411"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "g6p",
+      "name": "D-Glucose 6-phosphate",
+      "short": "D-Glucose 6-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:61548"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "cholesteryl_d_glucoside",
+      "name": "cholesteryl β-D-glucoside",
+      "short": "cholesteryl…",
+      "formula": "C33H56O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17495"
+      }
+    },
+    {
+      "id": "cholesterol",
+      "name": "Cholesterol",
+      "formula": "C27H46O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16113"
+      }
     }
   ],
   "enzymes": [
@@ -228,6 +313,37 @@
       "name": "kojibiose phosphorylase",
       "ec": [
         "2.4.1.230"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_210",
+      "name": "limonoid glucosyltransferase",
+      "ec": [
+        "2.4.1.210"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_127",
+      "name": "monoterpenol beta-glucosyltransferase",
+      "ec": [
+        "2.4.1.127"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_147",
+      "name": "ADP-specific glucose/glucosamine kinase",
+      "ec": [
+        "2.7.1.147"
+      ],
+      "xrefs": {
+        "uniprot": "Q9BRR6"
+      }
+    },
+    {
+      "id": "ec_3_2_1_104",
+      "name": "steryl-beta-glucosidase",
+      "ec": [
+        "3.2.1.104"
       ]
     }
   ],
@@ -553,6 +669,468 @@
           {
             "db": "Rhea",
             "id": "RHEA:11176"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "limonoid glucosyltransferase",
+      "equation": "limonin + UDP-alpha-D-glucose + H2O = limonin 17-beta-D-glucoside + UDP + 2 H(+)",
+      "ec": "2.4.1.210",
+      "substrates": [
+        {
+          "metabolite": "limonin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "limonin_17_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_210"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:11256"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11256"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "monoterpenol beta-glucosyltransferase",
+      "equation": "(-)-menthol + UDP-alpha-D-glucose = (-)-menthyl beta-D-glucoside + UDP + H(+)",
+      "ec": "2.4.1.127",
+      "substrates": [
+        {
+          "metabolite": "menthol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "menthyl_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_127"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:11520"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11520"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "ADP-specific glucose/glucosamine kinase",
+      "equation": "D-glucose + ADP = D-glucose 6-phosphate + AMP + H(+)",
+      "ec": "2.7.1.147",
+      "substrates": [
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "g6p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_147"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:11460"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11460"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "steryl-beta-glucosidase",
+      "equation": "cholesteryl 3-beta-D-glucoside + H2O = cholesterol + D-glucose",
+      "ec": "3.2.1.104",
+      "substrates": [
+        {
+          "metabolite": "cholesteryl_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cholesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_104"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:11956"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11956"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_17_o_acetylnorajmaline_17-o-acetylnorajmaline-to-s-adenosyl-l-homocyste",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "17_o_acetylnorajmaline"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "17-o-acetylnorajmaline-to-s-adenosyl-l-homocyste"
+      },
+      "note": "Shares 17-O-acetylnorajmaline with 17-O-acetylnorajmaline to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77725"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_vomilenine_19e-geissoschizine-to-perakine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "vomilenine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "19e-geissoschizine-to-perakine"
+      },
+      "note": "Shares vomilenine with (19E)-geissoschizine to perakine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16408"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glcp_1_2_d_glcp_cellobiose-to-mycothione",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glcp_1_2_d_glcp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cellobiose-to-mycothione"
+      },
+      "note": "Shares α-D-Glcp-(1→2)-D-Glcp with cellobiose to mycothione.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:142460"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glcp_1_2_d_glcp_d-glucopyranose-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glcp_1_2_d_glcp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glucopyranose-to-phosphate"
+      },
+      "note": "Shares α-D-Glcp-(1→2)-D-Glcp with D-glucopyranose to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:142460"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glcp_1_2_d_glcp_maltose-to-d-glucose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glcp_1_2_d_glcp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "maltose-to-d-glucose"
+      },
+      "note": "Shares α-D-Glcp-(1→2)-D-Glcp with α-maltose to α-D-glucose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:142460"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glcp_1_2_d_glcp_nadh-to-cdp-d-arabinitol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glcp_1_2_d_glcp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-cdp-d-arabinitol"
+      },
+      "note": "Shares α-D-Glcp-(1→2)-D-Glcp with NADH to CDP-D-arabinitol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:142460"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glucose_1_phosphate_laminarabiose-to-d-glucose-6-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glucose_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "laminarabiose-to-d-glucose-6-phosphate"
+      },
+      "note": "Shares β-D-glucose 1-phosphate with laminarabiose to β-D-glucose 6-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57684"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glucose_1_phosphate_maltose-6-phosphate-to-d-glucopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glucose_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "maltose-6-phosphate-to-d-glucopyranose"
+      },
+      "note": "Shares β-D-glucose 1-phosphate with α-maltose 6'-phosphate to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57684"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glucose_1_phosphate_p-nitrophenyl-alpha-l-rha-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glucose_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "p-nitrophenyl-alpha-l-rha-to-h2o"
+      },
+      "note": "Shares β-D-glucose 1-phosphate with p-nitrophenyl-alpha-L-rha… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57684"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glucose_1_phosphate_psicosyllysine-to-d-glucopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glucose_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "psicosyllysine-to-d-glucopyranose"
+      },
+      "note": "Shares β-D-glucose 1-phosphate with psicosyllysine to D-glucopyranose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57684"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_menthol_menthol-to-fmnh2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "menthol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "menthol-to-fmnh2"
+      },
+      "note": "Shares (−)-menthol with (−)-menthol to FMNH2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15409"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cholesteryl_d_glucoside_1-lauroyl-sn-glycero-3-ph-to-d-glucopyranose-411",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cholesteryl_d_glucoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-lauroyl-sn-glycero-3-ph-to-d-glucopyranose-411"
+      },
+      "note": "Shares cholesteryl β-D-glucoside with 1-lauroyl-sn-glycero-3-ph… to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17495"
           }
         ]
       }

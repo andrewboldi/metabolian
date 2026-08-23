@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 6z-octadecenoyl-coa-to-palmitoyl-coa "(6Z)-octadecenoyl-CoA to palmitoyl-CoA" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     6z_octadecenoyl_coa
@@ -24,17 +24,5 @@ pathway 6z-octadecenoyl-coa-to-palmitoyl-coa "(6Z)-octadecenoyl-CoA to palmitoyl
     trans_hexadecenoyl_coa
     <-> . +nadh +hplus -nad
     palmitoyl_coa
-  }
-
-  branch from palmitoyl_coa side left {
-    palmitoyl_coa
-    <-> ec_1_2_1_84 [1.2.1.84] +nadph +hplus +nadp +coa
-    hexadecan_1_ol
-  }
-
-  branch from palmitoyl_coa side right {
-    palmitoyl_coa
-    <-> . +1_oleoyl_sn_glycero_3_phosphoserine +coa
-    1_oleoyl_2_palmitoyl_sn_glycero_3_phospho_l_seri
   }
 }

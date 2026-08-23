@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway tauropinate-to-sulfoacetyl-coa "tauropinate to sulfoacetyl-CoA" {
-  spacing 278
+  spacing 296
 
   spine at 0,0 {
     tauropinate
@@ -18,14 +18,14 @@ pathway tauropinate-to-sulfoacetyl-coa "tauropinate to sulfoacetyl-CoA" {
 
   branch from taurine side left {
     taurine
-    <-> . +choloyl_coa +coa +hplus
-    taurocholate
+    <-> . +fatty_acyl_coa +coa +hplus
+    fatty_acid_taurine_conjugate
   }
 
   branch from taurine side right {
     taurine
-    <-> . +taurocholate +h2o
-    cholate
+    <-> . +lauroyl_coa +coa +hplus
+    n_dodecanoyltaurine
   }
 
   branch from sulfonatoacetaldehyde side left {
@@ -34,27 +34,45 @@ pathway tauropinate-to-sulfoacetyl-coa "tauropinate to sulfoacetyl-CoA" {
     isethionate
   }
 
-  branch from sulfonatoacetaldehyde side right {
-    sulfonatoacetaldehyde
-    <-> . +taurine +iron +h2o +fe2 +hplus
-    nh3
+  branch from alanine side right {
+    alanine
+    <-> ec_2_6_1_30 [2.6.1.30] +pyridoxaminium +pyruvate
+    pyridoxal
   }
 
   branch from alanine side left {
     alanine
-    <-> ec_2_6_1_15 [2.6.1.15] +glutamine +pyruvate
-    2_oxoglutaramate
+    <-> ec_2_6_1_58 [2.6.1.58] +l_phenylalanine +pyruvate
+    keto_phenylpyruvate
+  }
+
+  branch from sulfoacetyl_coa side right {
+    sulfoacetyl_coa
+    <-> . +atp +coa +adp +pi
+    sulfonatoacetate
+  }
+
+  branch from taurine side left {
+    taurine
+    <-> . +myristoyl_coa +coa +hplus
+    n_tetradecanoyltaurine
+  }
+
+  branch from taurine side right {
+    taurine
+    <-> . +palmitoyl_coa +coa +hplus
+    n_hexadecanoyltaurine
+  }
+
+  branch from alanine side left {
+    alanine
+    <-> ec_2_6_1_84 [2.6.1.84] +arginine +pyruvate
+    5_guanidino_2_oxopentanoic_acid
   }
 
   branch from alanine side right {
     alanine
-    <-> ec_2_6_1_46 [2.6.1.46] +l_2_4_diazaniumylbutyrate +pyruvate
-    l_aspartic_acid_4_semialdehyde
-  }
-
-  branch from sulfoacetyl_coa side left {
-    sulfoacetyl_coa
-    <-> . +atp +coa +adp +pi
-    sulfonatoacetate
+    <-> ec_2_6_1_56 [2.6.1.56] +1d_3_ammmonio_1_guanidiniumyl_1_3_dideoxy_scyllo +pyruvate
+    1d_1_guanidiniumyl_1_deoxy_3_dehydro_scyllo_inos
   }
 }

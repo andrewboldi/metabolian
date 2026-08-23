@@ -1,0 +1,587 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "r-dihydroformononetin-to-apiforol",
+  "name": "(R)-dihydroformononetin to apiforol",
+  "category": "amino-acid-metabolism",
+  "summary": "A 4-step route from (R)-dihydroformononetin to apiforol, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR193895"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "r_dihydroformononetin",
+      "name": "(R)-dihydroformononetin",
+      "short": "dihydroformononetin",
+      "formula": "C16H14O4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1132905"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "formononetin",
+      "name": "formononetin",
+      "formula": "C16H11O4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1232"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "s_adenosyl_l_homocysteine",
+      "name": "S-adenosyl-L-homocysteine",
+      "short": "S-adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1102167"
+      }
+    },
+    {
+      "id": "daidzein",
+      "name": "daidzein",
+      "formula": "C15H9O4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1227"
+      }
+    },
+    {
+      "id": "s_adenosyl_l_methionine",
+      "name": "S-adenosyl-L-methionine",
+      "short": "S-adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1363767"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "2s_naringenin",
+      "name": "(2S)-naringenin",
+      "formula": "C15H12O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM738152"
+      }
+    },
+    {
+      "id": "apiforol",
+      "name": "apiforol",
+      "formula": "C15H14O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM739560"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_212",
+      "name": "2,7,4'-trihydroxyisoflavanone 4'-O-methyltransferase",
+      "ec": [
+        "2.1.1.212"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_46",
+      "name": "isoflavone 4'-O-methyltransferase",
+      "ec": [
+        "2.1.1.46"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_234",
+      "name": "flavanone 4-reductase",
+      "ec": [
+        "1.1.1.234"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR193895",
+      "substrates": [
+        {
+          "metabolite": "r_dihydroformononetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "formononetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR193895"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR193895"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2,7,4'-trihydroxyisoflavanone 4'-O-methyltransferase",
+      "ec": "2.1.1.212",
+      "substrates": [
+        {
+          "metabolite": "s_adenosyl_l_homocysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formononetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "daidzein",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "s_adenosyl_l_methionine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_212"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR110353"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR110353"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR134676",
+      "substrates": [
+        {
+          "metabolite": "daidzein",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2s_naringenin",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR134676"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR134676"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "flavanone 4-reductase",
+      "ec": "1.1.1.234",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2s_naringenin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "apiforol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_234"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR110390"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR110390"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_formononetin_4-hydroxy-4-methylnitros-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "formononetin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxy-4-methylnitros-to-h2o"
+      },
+      "note": "Shares formononetin with 4-Hydroxy-4-(methylnitros… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1232"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_formononetin_formononetin-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "formononetin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "formononetin-to-h2o"
+      },
+      "note": "Shares formononetin with formononetin to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1232"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_formononetin_n-acetyl-d-galactosamin-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "formononetin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyl-d-galactosamin-to-h2o"
+      },
+      "note": "Shares formononetin with N-acetyl-α-D-galactosamin… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1232"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_formononetin_r-pantothenate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "formononetin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-pantothenate-to-h2o"
+      },
+      "note": "Shares formononetin with (R)-pantothenate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1232"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_daidzein_1-6-didemethyltoxoflavin-to-s-adenosyl-l-methion",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "daidzein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-6-didemethyltoxoflavin-to-s-adenosyl-l-methion"
+      },
+      "note": "Shares daidzein with 1,6-didemethyltoxoflavin to S-adenosyl-L-methionine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1227"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_daidzein_3s-4r-tetrahydrodaidzein-to-anhydroglycinol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "daidzein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3s-4r-tetrahydrodaidzein-to-anhydroglycinol"
+      },
+      "note": "Shares daidzein with (3S,4R)-Tetrahydrodaidzein to Anhydroglycinol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1227"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_daidzein_5alpha-androstane-3alpha-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "daidzein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5alpha-androstane-3alpha-to-h2o"
+      },
+      "note": "Shares daidzein with 5alpha-Androstane-3alpha,… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1227"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_daidzein_dtdp-3-amino-4-oxo-2-3-6-to-dtdp-3-4-didehydro-2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "daidzein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-3-amino-4-oxo-2-3-6-to-dtdp-3-4-didehydro-2"
+      },
+      "note": "Shares daidzein with dTDP-3-amino-4-oxo-2,3,6-… to dTDP-3,4-didehydro-2,6-di….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1227"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_daidzein_formononetin-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "daidzein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "formononetin-to-h2o"
+      },
+      "note": "Shares daidzein with formononetin to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1227"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2s_naringenin_h-to-2-hydroxyacetophenone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2s_naringenin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-2-hydroxyacetophenone"
+      },
+      "note": "Shares (2S)-naringenin with H to 2-hydroxyacetophenone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM738152"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2s_naringenin_udp-to-naringin-chalcone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2s_naringenin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-naringin-chalcone"
+      },
+      "note": "Shares (2S)-naringenin with UDP to naringin chalcone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM738152"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_apiforol_s-ethyl-l-cysteine-to-o-succinyl-l-homoserine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "apiforol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-ethyl-l-cysteine-to-o-succinyl-l-homoserine"
+      },
+      "note": "Shares apiforol with S-ethyl-L-cysteine to O-succinyl-L-homoserine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM739560"
+          }
+        ]
+      }
+    }
+  ]
+}

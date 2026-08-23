@@ -162,42 +162,6 @@
       "xrefs": {
         "chebi": "CHEBI:16526"
       }
-    },
-    {
-      "id": "ethanol",
-      "name": "ethanol",
-      "formula": "C2H6O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16236"
-      }
-    },
-    {
-      "id": "benzyl_acetate",
-      "name": "benzyl acetate",
-      "formula": "C9H10O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:52051"
-      }
-    },
-    {
-      "id": "hexan_2_ol",
-      "name": "hexan-2-ol",
-      "formula": "C6H14O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:88370"
-      }
-    },
-    {
-      "id": "hexan_2_yl_benzoate",
-      "name": "hexan-2-yl benzoate",
-      "formula": "C13H18O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:156347"
-      }
     }
   ],
   "enzymes": [
@@ -412,81 +376,203 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "ethanol + benzoyl-CoA = benzyl acetate + CoA",
-      "equation": "ethanol + benzoyl-CoA = benzyl acetate + CoA",
-      "substrates": [
-        {
-          "metabolite": "ethanol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "benzoyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "benzyl_acetate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:65124"
+      "id": "xt_benzoate_benzoin-to-4-d-glucosyloxy-benzoa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "benzoate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "benzoin-to-4-d-glucosyloxy-benzoa"
+      },
+      "note": "Shares benzoate with benzoin to 4-(β-D-glucosyloxy)benzoa….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:65124"
+            "db": "ChEBI",
+            "id": "CHEBI:16150"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "hexan-2-ol + benzoyl-CoA = hexan-2-yl benzoate + CoA",
-      "equation": "hexan-2-ol + benzoyl-CoA = hexan-2-yl benzoate + CoA",
-      "substrates": [
-        {
-          "metabolite": "hexan_2_ol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "benzoyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "hexan_2_yl_benzoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:65160"
+      "id": "xt_benzoate_benzoylagmatinium-to-glycine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "benzoate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "benzoylagmatinium-to-glycine"
+      },
+      "note": "Shares benzoate with benzoylagmatinium to glycine.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:65160"
+            "db": "ChEBI",
+            "id": "CHEBI:16150"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_benzoate_biphenyl-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "benzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "biphenyl-to-nad"
+      },
+      "note": "Shares benzoate with biphenyl to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16150"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_benzoate_ecgoninium-methyl-ester-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "benzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ecgoninium-methyl-ester-to-diphosphate"
+      },
+      "note": "Shares benzoate with ecgoninium methyl ester to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16150"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_benzoate_l-threo-3-phenylserine-to-s-adenosyl-l-homocyste",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "benzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-threo-3-phenylserine-to-s-adenosyl-l-homocyste"
+      },
+      "note": "Shares benzoate with L-threo-3-phenylserine to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16150"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_benzoate_phenylglyoxylyl-coa-to-cis-cis-muconate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "benzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phenylglyoxylyl-coa-to-cis-cis-muconate"
+      },
+      "note": "Shares benzoate with phenylglyoxylyl-CoA to cis,cis-muconate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16150"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_benzoyl_amp_digallate-to-nadp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "benzoyl_amp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "digallate-to-nadp"
+      },
+      "note": "Shares benzoyl-AMP with digallate to NADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:149705"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_hydroxybenzoyl_coa_5-cholestan-3-one-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_hydroxybenzoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cholestan-3-one-to-hydrogen-donor"
+      },
+      "note": "Shares 3-hydroxybenzoyl-CoA with 5β-cholestan-3-one to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57342"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_hydroxybenzoyl_coa_d-ribitol-5-phosphate-to-3-o-d-xylosyl-1-3",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_hydroxybenzoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-ribitol-5-phosphate-to-3-o-d-xylosyl-1-3"
+      },
+      "note": "Shares 3-hydroxybenzoyl-CoA with D-ribitol 5-phosphate to 3-O-[α-D-xylosyl-(1→3)-β-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57342"
           }
         ]
       }

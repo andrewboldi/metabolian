@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-2-di-9z-12z-octadeca-to-h2o "1,2-di-[(9Z,12Z)-octadeca… to H2O" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     1_2_di_9z_12z_octadecadienoyl_sn_glycero_3_phosp
@@ -14,17 +14,5 @@ pathway 1-2-di-9z-12z-octadeca-to-h2o "1,2-di-[(9Z,12Z)-octadeca… to H2O" {
     2_linoleoyl_sn_glycero_3_phosphocholine
     <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate -2_linoleoyl_sn_glycero_3_phosphocholine -h2o
     atp
-  }
-
-  branch from 1_tetradecanoyl_2_9z_12z_octadecadienoyl_sn_glyc side left {
-    1_tetradecanoyl_2_9z_12z_octadecadienoyl_sn_glyc
-    <-> . +1_myristoyl_sn_glycero_3_phosphocholine +tetralinoleoyl_cardiolipin
-    trilinoleoyl_2_monolysocardiolipin
-  }
-
-  branch from 1_tetradecanoyl_2_9z_12z_octadecadienoyl_sn_glyc side right {
-    1_tetradecanoyl_2_9z_12z_octadecadienoyl_sn_glyc
-    <-> . +1_2_dilinoleoyl_sn_glycero_3_phosphoethanolamine +1_myristoyl_sn_glycero_3_phosphocholine
-    1_linoleoyl_sn_glycero_3_phosphoethanolamine
   }
 }

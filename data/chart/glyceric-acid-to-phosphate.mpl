@@ -4,81 +4,75 @@
 # edit the generator, not this file.
 
 pathway glyceric-acid-to-phosphate "Glyceric acid… to phosphate" {
-  spacing 282
+  spacing 340
 
   spine at 0,0 {
     glyceric_acid_1_3_biphosphate
-    <-> ec_2_7_2_3 [2.7.2.3] +ddcdp -h -2r_3_phosphoglycerate
-    ddctp
-    <-> ec_3_1_3_13 [3.1.3.13] +2r_3_phosphoglycerate +phosphate -h2o
-    2r_2_3_bisphosphoglycerate
-    <-> ec_6_5_1_9 [6.5.1.9] +h +atp -cyclic_2_3_bisphosphoglycerate -phosphate
-    adp
+    <-> ec_2_7_2_3 [2.7.2.3] +l_ddcdp -h -2r_3_phosphoglycerate
+    l_ddctp
+    <-> . +alpha_d_glucose_1_6_bisphosphate +h +2r_3_phosphoglycerate -2r_3_phospho_glyceroyl_phosphate
+    d_glucopyranose_1_phosphate
+    <-> ec_2_7_7_69 [2.7.7.69] +gdp +h -phosphate
+    gdp_alpha_d_glucose
   }
 
   branch from h side left {
     h
-    <-> ec_2_7_2_3 [2.7.2.3] +glyceric_acid_1_3_biphosphate +l_ddcdp +2r_3_phosphoglycerate
-    l_ddctp
+    <-> . +n_glycoloyl_alpha_neuraminic_acid
+    aldehydo_n_glycolylneuraminate
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_21 [1.1.1.21] +d_arabinitol +nad +d_lyxose
-    nadh
+    <-> . +plp_d_cycloserine_aldimine
+    plp_d_cycloserine_ketimine
   }
 
-  branch from 2r_3_phosphoglycerate side left {
-    2r_3_phosphoglycerate
-    <-> ec_2_7_2_10 [2.7.2.10] +itp +h +glyceric_acid_1_3_biphosphate
-    idp
-  }
-
-  branch from 2r_3_phosphoglycerate side right {
-    2r_3_phosphoglycerate
-    <-> . +d_glucopyranose_1_phosphate +2r_3_phospho_glyceroyl_phosphate
-    alpha_d_glucose_1_6_bisphosphate
-  }
-
-  branch from 2r_2_3_bisphosphoglycerate side left {
-    2r_2_3_bisphosphoglycerate
-    <-> . +nadh +h +nad +phosphate
-    d_glyceraldehyde_3_phosphate
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_1_14_99_39 [1.14.99.39] +ubiquinol_2 +nh4 +o2 +h +hydroxylamine
-    ubiquinone_2
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_1_7_3_4 [1.7.3.4] +nitrite +ubiquinol_2 +h +ubiquinone_2
-    hydroxylamine
-  }
-
-  branch from adp side right {
+  branch from d_glucopyranose_1_phosphate side left {
+    d_glucopyranose_1_phosphate
+    <-> . +adp_alpha_d_glucose +phosphate +h
     adp
-    <-> ec_2_7_7_35 [2.7.7.35] +adp_beta_d_ribose +phosphate +h
-    aldehydo_d_ribose_5_phosphate
   }
 
-  branch from adp side left {
-    adp
-    <-> . +udp_n_acetyl_alpha_d_muramate +atp +l_alanine_d_glutamate_meso_2_6_diaminoheptanedio +h +phosphate
-    udp_n_acetylmuramoyl_l_alanyl_d_gamma_glutamyl_m
-  }
-
-  branch from phosphate side right {
-    phosphate
-    <-> . +o4_phosphonatotyrosine +h2o
-    l_tyrosine
+  branch from d_glucopyranose_1_phosphate side right {
+    d_glucopyranose_1_phosphate
+    <-> . +alpha_d_glucose_1_6_bisphosphate +h
+    glucose
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_3_1_3_51 [3.1.3.51] +c80_dolichol_phosphate +h2o
-    c80_dolichol
+    <-> . +h +adp +atp +h2o
+    6_hydroxy_fluvastatin_glucuronide
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    6_hydroxy_fluvastatin
+  }
+
+  branch from h side left {
+    h
+    <-> . +plp_d_cycloserine_ketimine
+    plp_d_cycloserine_isoxazole
+  }
+
+  branch from h side right {
+    h
+    <-> . +a_peptide_cleavage_product_1_l_plantarum +a_peptidoglycan_cleavage_product_2_l_plantarum +h2o
+    a_peptidoglycan_with_cross_links_l_plantarum
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    7_beta_oh_gliclazide_glucuronide
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> . +7_beta_oh_gliclazide_glucuronide +h +adp +7_beta_oh_gliclazide_glucuronide +h2o
+    atp
   }
 }

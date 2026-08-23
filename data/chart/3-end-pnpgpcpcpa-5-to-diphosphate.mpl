@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-end-pnpgpcpcpa-5-to-diphosphate "3'-end pNpGpCpCpA(5−) to diphosphate" {
-  spacing 244
+  spacing 226
 
   spine at 0,0 {
     3_end_pnpgpcpcpa_5
@@ -22,27 +22,9 @@ pathway 3-end-pnpgpcpcpa-5-to-diphosphate "3'-end pNpGpCpCpA(5−) to diphosphat
     trna_3_terminal_nucleotidyl_cytidyl_cytidyl_aden
   }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_169 [4.2.3.169] +fpp +h2o
-    7_epi_eudesmol
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_170 [4.2.3.170] +fpp +h2o
-    4_epi_cubebol
-  }
-
   branch from 3_end_ribonucleotide_1 side left {
     3_end_ribonucleotide_1
-    <-> . +ctp +ppi
-    trna_3_terminal_nucleotidyl_cytidyl_cytidine_3
-  }
-
-  branch from 3_end_ribonucleotide_1 side right {
-    3_end_ribonucleotide_1
-    <-> . +ribonucleotide_ribonucleotide_2 +h2o +hplus
-    5_end_ribonucleotide_2
+    <-> . +3_end_ribonucleotidyl_ribonucleotide_2 +h2o +hplus
+    nucleoside_5_monophosphate
   }
 }

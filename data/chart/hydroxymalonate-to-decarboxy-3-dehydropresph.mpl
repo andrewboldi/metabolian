@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway hydroxymalonate-to-decarboxy-3-dehydropresph "hydroxymalonate to decarboxy 3-dehydropresph…" {
-  spacing 208
+  spacing 238
 
   spine at 0,0 {
     hydroxymalonate
@@ -20,13 +20,43 @@ pathway hydroxymalonate-to-decarboxy-3-dehydropresph "hydroxymalonate to decarbo
 
   branch from holo-acp side left {
     holo-acp
-    <-> ec_2_3_1_141 [2.3.1.141] +2_o_acyl_3_o_d_galactosyl_sn_glycerol +o_s_fatty_acylpantetheine_4_phosphoryl_l_serine
-    1_2_diacyl_3_d_galactosyl_sn_glycerol
+    <-> ec_2_3_1_38 [2.3.1.38] +acetyl_coa +coa
+    acetyl-acp
   }
 
   branch from holo-acp side right {
     holo-acp
-    <-> ec_2_3_1_161 [2.3.1.161] +malonyl-coa +sam +nadph +hplus +sah +co2 +nadp +coa +h2o
-    o_s_dihydromonacolin_l_carboxy_pantetheine_4_pho
+    <-> ec_2_3_1_39 [2.3.1.39] +malonyl-coa +coa
+    malonyl-acp
+  }
+
+  branch from alanine side left {
+    alanine
+    <-> ec_2_6_1_15 [2.6.1.15] +glutamine +pyruvate
+    2_oxoglutaramate
+  }
+
+  branch from alanine side right {
+    alanine
+    <-> ec_2_6_1_46 [2.6.1.46] +l_2_4_diazaniumylbutyrate +pyruvate
+    l_aspartic_acid_4_semialdehyde
+  }
+
+  branch from o_s_3r_hydroxyoctadeca_4_10_dienoylpantetheine_4 side left {
+    o_s_3r_hydroxyoctadeca_4_10_dienoylpantetheine_4
+    <-> . +holo-acp +malonyl-coa +acetyl_coa +hydrogen_donor +nadph +hplus +co2 +nadp +coa +h2o
+    hydrogen_acceptor
+  }
+
+  branch from holo-acp side right {
+    holo-acp
+    <-> ec_2_3_1_274 [2.3.1.274] +o_s_fatty_acylpantetheine_4_phosphoryl_l_serine +pi
+    acyl_monophosphate
+  }
+
+  branch from holo-acp side left {
+    holo-acp
+    <-> ec_2_3_1_n4 [2.3.1.n4] +o_s_fatty_acylpantetheine_4_phosphoryl_l_serine +1_acyl_sn_glycerol_3_phosphate
+    1_2_diacyl_sn_glycerol_3_phosphate
   }
 }

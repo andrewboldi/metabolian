@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway sphingoid-1-phosphocholine-to-diphosphate "sphingoid-1-phosphocholine to diphosphate" {
-  spacing 206
+  spacing 242
 
   spine at 0,0 {
     sphingoid_1_phosphocholine
@@ -40,37 +40,73 @@ pathway sphingoid-1-phosphocholine-to-diphosphate "sphingoid-1-phosphocholine to
 
   branch from phosphoethanolamine side right {
     phosphoethanolamine
-    <-> . +sphinga_4e_14z_dienine_1_phosphate
-    2e_12z_hexadecadienal
+    <-> . +1_2_dioleoyl_sn_glycero_3_phosphoethanolamine +h2o +hplus
+    1_2_dioleoyl_sn_glycerol
   }
 
   branch from phosphoethanolamine side left {
     phosphoethanolamine
-    <-> . +hplus +co2
-    pser
+    <-> ec_3_6_1_53 [3.6.1.53] +cdp_ethanolamine +h2o +hplus
+    cytidine_5_monophosphate
   }
 
   branch from fatty-acid side right {
     fatty-acid
-    <-> . +phosphatidylcholine +h2o +hplus
-    acyl_sn_glycero_3_phosphocholine
+    <-> . +n_fatty_acyl_l_lysine +h2o
+    l_lysinium
   }
 
   branch from fatty-acid side left {
     fatty-acid
-    <-> . +3_sn_phosphatidyl_l_serine +h2o +hplus
-    1_acyl_sn_glycero_3_phosphoserine
+    <-> . +1_2_diacyl_sn_glycero_3_phospholipid +h2o +hplus
+    a_2_acyl_sn_glycero_3_phospholipid
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_106 [4.2.3.106] +gpp
-    e_ocimene
+    <-> . +fpp +h2o
+    trichobrasilenol
   }
 
   branch from ppi side left {
     ppi
-    <-> . +gpp
-    car_3_ene
+    <-> . +fpp
+    african_3_ene
+  }
+
+  branch from sphingoid_base side right {
+    sphingoid_base
+    <-> ec_2_3_1_297 [2.3.1.297] +very_long_chain_fatty_acyl_coa +coa +hplus
+    n_very_long_chain_fatty_acyl_sphingoid_base
+  }
+
+  branch from sphingoid_base side left {
+    sphingoid_base
+    <-> ec_2_3_1_298 [2.3.1.298] +ultra_long_chain_fatty_acyl_coa +coa +hplus
+    n_ultra_long_chain_acyl_sphingoid_base
+  }
+
+  branch from fatty-acid side right {
+    fatty-acid
+    <-> . +1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol +h2o +hplus
+    2_acyl_sn_glycero_3_phospho_1_sn_glycerol
+  }
+
+  branch from fatty-acid side left {
+    fatty-acid
+    <-> . +1_acyl_2_arachidonoyl_sn_glycero_3_phosphocholin +h2o +hplus
+    2_arachidonoyl_sn_glycero_3_phosphocholine
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +fpp
+    african_1_ene
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_2_5_1_154 [2.5.1.154] +cob_ii_inamide +fadh2 +atp +h2o +fad +pi +hplus
+    adenosylcobinamide
   }
 }

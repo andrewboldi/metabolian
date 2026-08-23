@@ -28,27 +28,27 @@ pathway 17-18-epoxy-17-hydroxycur-to-s-adenosyl-l-homocy "17,18-epoxy-17-hydroxy
     isostrychnine
   }
 
-  branch from fmn side right {
-    fmn
-    <-> . +dehydrocholesterol_7 +fmnh2 +o2 +h2o +hplus
-    7_ketocholesterol
+  branch from 17_18_epoxy_17_hydroxycur_19_ene side right {
+    17_18_epoxy_17_hydroxycur_19_ene
+    <-> ec_1_5_1_57 [1.5.1.57] +nadp +nadph +hplus
+    18_hydroxynorfluorocurarine
   }
 
-  branch from fmn side left {
-    fmn
-    <-> . +lathosterol +fmnh2 +o2 +h2o +hplus
-    7_oxo_5_cholestan_3_ol
+  branch from 17_18_epoxy_17_hydroxycur_19_ene side left {
+    17_18_epoxy_17_hydroxycur_19_ene
+    <-> ec_2_3_1_326 [2.3.1.326] +acetyl_coa +coa
+    n_acetyl_wieland_gumlich_aldehyde
   }
 
-  branch from sah side right {
-    sah
-    <-> . +l_glutamine +sam +hplus
-    n5_methyl_l_glutamine
+  branch from malonyl-coa side right {
+    malonyl-coa
+    <-> . +15_hydroxypentadecanoyl_coa +hplus +co2 +coa
+    4_hydroxy_6_16_hydroxy_2_oxohexadecyl_pyran_2_on
   }
 
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_268 [2.1.1.268] +cytidine_5_monophosphate_1 +sam +hplus
-    n3_methylcytidine_5_monophosphate_1
+  branch from malonyl-coa side left {
+    malonyl-coa
+    <-> . +2_methylhexadecanoyl_coa +hplus +co2 +coa
+    4_hydroxy_6_3_methyl_2_oxoheptadecyl_pyran_2_one
   }
 }

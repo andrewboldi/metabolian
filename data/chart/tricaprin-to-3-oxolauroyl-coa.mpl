@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway tricaprin-to-3-oxolauroyl-coa "tricaprin to 3-oxolauroyl-CoA" {
-  spacing 194
+  spacing 218
 
   spine at 0,0 {
     tricaprin
@@ -30,31 +30,55 @@ pathway tricaprin-to-3-oxolauroyl-coa "tricaprin to 3-oxolauroyl-CoA" {
 
   branch from decanoyl_coa side left {
     decanoyl_coa
-    <-> . +1_o_palmityl_2_acetyl_sn_glycerol +coa
-    1_hexadecyl_2_acetyl_3_decanoyl_sn_glycerol
+    <-> . +carnitine +coa
+    o_decanoyl_l_carnitine
   }
 
   branch from decanoyl_coa side right {
     decanoyl_coa
-    <-> . +malonyl-acp +hplus +co2 +coa
-    o_s_3_oxododecanoylpantetheine_4_phosphoryl_seri
+    <-> . +fad +hplus +fadh2
+    trans_dec_2_enoyl_coa
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_153 [2.5.1.153] +tuberculosinyl_diphosphate +h2o
-    13s_edaxadiene
+    <-> . +c_terminal_gly_gly_1 +atp +hplus
+    c_terminal_gly_gly_amp_1_group
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_87 [4.2.3.87] +fpp
-    guaiene
+    <-> ec_2_7_7_100 [2.7.7.100] +atp +hplus +c_terminal_gly_gly_amp_1_group
+    c_terminal_gly_gly_1
   }
 
   branch from 3_oxolauroyl_coa side left {
     3_oxolauroyl_coa
     <-> . +nad +nadh +hplus
     r_3_hydroxylauroyl_coa
+  }
+
+  branch from decanoyl_coa side right {
+    decanoyl_coa
+    <-> . +l_serine +coa
+    o_decanoyl_l_serine
+  }
+
+  branch from decanoyl_coa side left {
+    decanoyl_coa
+    <-> . +ketosphinganine +coa +hplus
+    n_decanoyl_3_ketodihydrosphingosine
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +fpp
+    cadinene
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +neryl_diphosphate +h2o
+    1_8_cineole
   }
 }

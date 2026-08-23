@@ -1,0 +1,482 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "quinidine-to-h2o-null",
+  "name": "quinidine to H2O",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from quinidine to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR150297"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "quinidine",
+      "name": "quinidine",
+      "formula": "C20H24N2O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1371402"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "quinidinone",
+      "name": "quinidinone",
+      "formula": "C20H22N2O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735611"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "quinine",
+      "name": "quinine",
+      "formula": "C20H25N2O2",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM2862"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "3_hydroxyquinine",
+      "name": "3-hydroxyquinine",
+      "formula": "C20H25N2O3",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM735184"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_13_67",
+      "name": "EC 1.14.13.67",
+      "ec": [
+        "1.14.13.67"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_55",
+      "name": "quinine 3-monooxygenase",
+      "ec": [
+        "1.14.14.55"
+      ],
+      "xrefs": {
+        "uniprot": "P08684"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR150297",
+      "substrates": [
+        {
+          "metabolite": "quinidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "quinidinone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR150297"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR150297"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR150336",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "quinidinone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "quinine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR150336"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR150336"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR149293",
+      "ec": "1.14.13.67",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "quinine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_hydroxyquinine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_67"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR149293"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR149293"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_quinidine_quinidine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "quinidine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "quinidine-to-h2o"
+      },
+      "note": "Shares quinidine with quinidine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371402"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_quinidine_quinidine-to-nadp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "quinidine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "quinidine-to-nadp"
+      },
+      "note": "Shares quinidine with quinidine to NADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371402"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_quinidine_quinidine-to-nadp-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "quinidine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "quinidine-to-nadp-null"
+      },
+      "note": "Shares quinidine with quinidine to NADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371402"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_quinidinone_quinidine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "quinidinone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "quinidine-to-h2o"
+      },
+      "note": "Shares quinidinone with quinidine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM735611"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_quinidinone_quinidine-to-nadp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "quinidinone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "quinidine-to-nadp"
+      },
+      "note": "Shares quinidinone with quinidine to NADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM735611"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_quinidinone_quinidine-to-nadp-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "quinidinone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "quinidine-to-nadp-null"
+      },
+      "note": "Shares quinidinone with quinidine to NADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM735611"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_quinine_quinidine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "quinine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "quinidine-to-h2o"
+      },
+      "note": "Shares quinine with quinidine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2862"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_quinine_quinidine-to-nadp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "quinine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "quinidine-to-nadp"
+      },
+      "note": "Shares quinine with quinidine to NADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2862"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_quinine_quinidine-to-nadp-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "quinine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "quinidine-to-nadp-null"
+      },
+      "note": "Shares quinine with quinidine to NADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2862"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_hydroxyquinine_quinidine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_hydroxyquinine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "quinidine-to-h2o"
+      },
+      "note": "Shares 3-hydroxyquinine with quinidine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM735184"
+          }
+        ]
+      }
+    }
+  ]
+}

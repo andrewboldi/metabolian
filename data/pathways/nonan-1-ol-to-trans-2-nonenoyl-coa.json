@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "nonan-1-ol-to-trans-2-nonenoyl-coa",
   "name": "nonan-1-ol to trans-2-nonenoyl-CoA",
-  "category": "other",
+  "category": "nucleotide-metabolism",
   "summary": "A 5-step route from nonan-1-ol to trans-2-nonenoyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -236,30 +236,60 @@
       }
     },
     {
-      "id": "r_lipoate",
-      "name": "(R)-lipoate",
-      "formula": "C8H13O2S2",
-      "charge": -1,
+      "id": "s_s_drim_8_en_11_yl_diphosphate",
+      "name": "(S,S)-drim-8-en-11-yl diphosphate",
+      "short": "(S,S)-drim-8-en-11-…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:83088"
+        "chebi": "CHEBI:231796"
       }
     },
     {
-      "id": "gtp",
-      "name": "GTP",
-      "formula": "C10H12N5O14P3",
+      "id": "d_mannitol",
+      "name": "D-mannitol",
+      "formula": "C6H14O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16899"
+      }
+    },
+    {
+      "id": "sporulositol_a",
+      "name": "Sporulositol A",
+      "formula": "C21H38O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:206556"
+      }
+    },
+    {
+      "id": "5_triphosphoadenylyl_2_5_adenosine",
+      "name": "5'-triphosphoadenylyl-(2'→5')-adenosine",
+      "short": "5'-triphosphoadenyl…",
+      "formula": "C20H23N10O19P4",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:140294"
+      }
+    },
+    {
+      "id": "17z_hexacosenoate",
+      "name": "(17Z)-hexacosenoate",
+      "formula": "C26H49O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77221"
+      }
+    },
+    {
+      "id": "17z_hexacosenoyl_coa",
+      "name": "(17Z)-hexacosenoyl-CoA",
+      "short": "hexacosenoyl-CoA",
+      "formula": "C47H80N7O17P3S",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:37565"
-      }
-    },
-    {
-      "id": "r_lipoyl_gmp",
-      "name": "(R)-lipoyl-GMP",
-      "formula": "C18H25N5O9PS2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:86460"
+        "chebi": "CHEBI:74134"
       }
     },
     {
@@ -273,12 +303,12 @@
       }
     },
     {
-      "id": "selinene",
-      "name": "α-selinene",
+      "id": "gurjunene",
+      "name": "β-gurjunene",
       "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:59961"
+        "chebi": "CHEBI:80940"
       }
     }
   ],
@@ -288,14 +318,10 @@
       "name": "alcohol dehydrogenase",
       "ec": [
         "1.1.1.1"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_198",
-      "name": "alpha-selinene synthase",
-      "ec": [
-        "4.2.3.198"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P07327"
+      }
     }
   ],
   "reactions": [
@@ -603,25 +629,21 @@
     },
     {
       "id": "r8",
-      "name": "(R)-lipoate + GTP + H(+) = (R)-lipoyl-GMP + diphosphate",
-      "equation": "(R)-lipoate + GTP + H(+) = (R)-lipoyl-GMP + diphosphate",
+      "name": "(S,S)-drim-8-en-11-yl diphosphate + D-mannitol = sporulositol A + diphosphate",
+      "equation": "(S,S)-drim-8-en-11-yl diphosphate + D-mannitol = sporulositol A + diphosphate",
       "substrates": [
         {
-          "metabolite": "r_lipoate",
+          "metabolite": "s_s_drim_8_en_11_yl_diphosphate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "gtp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "d_mannitol",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "r_lipoyl_gmp",
+          "metabolite": "sporulositol_a",
           "stoichiometry": 1
         },
         {
@@ -632,23 +654,104 @@
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:46700"
+        "rhea": "RHEA:82587"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:46700"
+            "id": "RHEA:82587"
           }
         ]
       }
     },
     {
       "id": "r9",
-      "name": "alpha-selinene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = alpha-selinene + diphosphate",
-      "ec": "4.2.3.198",
+      "name": "2 ATP = 5'-triphosphoadenylyl-(2'->5')-adenosine + diphosphate",
+      "equation": "2 ATP = 5'-triphosphoadenylyl-(2'->5')-adenosine + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_triphosphoadenylyl_2_5_adenosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:82599"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82599"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "(17Z)-hexacosenoate + ATP + CoA = (17Z)-hexacosenoyl-CoA + AMP + diphosphate",
+      "equation": "(17Z)-hexacosenoate + ATP + CoA = (17Z)-hexacosenoyl-CoA + AMP + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "17z_hexacosenoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "17z_hexacosenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:83103"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:83103"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "(2E,6E)-farnesyl diphosphate = beta-gurjunene + diphosphate",
+      "equation": "(2E,6E)-farnesyl diphosphate = beta-gurjunene + diphosphate",
       "substrates": [
         {
           "metabolite": "fpp",
@@ -657,7 +760,7 @@
       ],
       "products": [
         {
-          "metabolite": "selinene",
+          "metabolite": "gurjunene",
           "stoichiometry": 1
         },
         {
@@ -665,22 +768,283 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_198"
-        }
-      ],
       "reversibility": "reversible",
-      "pathwayStep": 9,
+      "pathwayStep": 11,
       "xrefs": {
-        "rhea": "RHEA:47052"
+        "rhea": "RHEA:83287"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:47052"
+            "id": "RHEA:83287"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_nonan_1_ol_1-o-palmityl-2-acetyl-sn-to-1-hexadecyl-2-hexade",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nonan_1_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-o-palmityl-2-acetyl-sn-to-1-hexadecyl-2-hexade"
+      },
+      "note": "Shares nonan-1-ol with 1-O-palmityl-2-acetyl-sn-… to 1-hexadecyl-2-hexadecanoy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:35986"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nonanal_1-octadecanoyl-2-nonanoyl-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nonanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-octadecanoyl-2-nonanoyl-to-h2o"
+      },
+      "note": "Shares nonanal with 1-octadecanoyl-2-nonanoyl… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84268"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nonanal_1r-5as-6r-1-4-5-5a-6-9-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nonanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1r-5as-6r-1-4-5-5a-6-9-to-h2o"
+      },
+      "note": "Shares nonanal with (1R,5aS,6R)-1,4,5,5a,6,9-… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84268"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nonanal_phenylthioacetohydroximate-to-benzyl-thiocyanate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nonanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phenylthioacetohydroximate-to-benzyl-thiocyanate"
+      },
+      "note": "Shares nonanal with phenylthioacetohydroximate to benzyl thiocyanate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84268"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nonanoate_1-octadecanoyl-2-nonanoyl-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nonanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-octadecanoyl-2-nonanoyl-to-h2o"
+      },
+      "note": "Shares nonanoate with 1-octadecanoyl-2-nonanoyl… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:32361"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nonanoate_1r-5as-6r-1-4-5-5a-6-9-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nonanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1r-5as-6r-1-4-5-5a-6-9-to-h2o"
+      },
+      "note": "Shares nonanoate with (1R,5aS,6R)-1,4,5,5a,6,9-… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:32361"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nonanoyl_coa_1-octadecanoyl-2-nonanoyl-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nonanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-octadecanoyl-2-nonanoyl-to-h2o"
+      },
+      "note": "Shares nonanoyl-CoA with 1-octadecanoyl-2-nonanoyl… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76291"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nonanoyl_coa_3e-nonenoyl-coa-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nonanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3e-nonenoyl-coa-to-nad"
+      },
+      "note": "Shares nonanoyl-CoA with (3E)-nonenoyl-CoA to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76291"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_2_nonenoyl_coa_1-octadecanoyl-2-nonanoyl-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_2_nonenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-octadecanoyl-2-nonanoyl-to-h2o"
+      },
+      "note": "Shares trans-2-nonenoyl-CoA with 1-octadecanoyl-2-nonanoyl… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76292"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_2_nonenoyl_coa_3e-nonenoyl-coa-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_2_nonenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3e-nonenoyl-coa-to-nad"
+      },
+      "note": "Shares trans-2-nonenoyl-CoA with (3E)-nonenoyl-CoA to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76292"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_s_drim_8_en_11_yl_diphosphate_2-trans-6-trans-farnesyl-to-s-s-drim-8-en-11-ol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_s_drim_8_en_11_yl_diphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-trans-6-trans-farnesyl-to-s-s-drim-8-en-11-ol"
+      },
+      "note": "Shares (S,S)-drim-8-en-11-yl diphosphate with 2-trans,6-trans-farnesyl… to (S,S)-drim-8-en-11-ol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:231796"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_mannitol_6-sulfo-d-quinovose-to-d-fructofuranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_mannitol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-sulfo-d-quinovose-to-d-fructofuranose"
+      },
+      "note": "Shares D-mannitol with 6-sulfo-D-quinovose to D-fructofuranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16899"
           }
         ]
       }

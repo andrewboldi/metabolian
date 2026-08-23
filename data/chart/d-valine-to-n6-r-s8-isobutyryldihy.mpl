@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-valine-to-n6-r-s8-isobutyryldihy "D-valine to N6-[(R)-S8-isobutyryldihy…" {
-  spacing 338
+  spacing 320
 
   spine at 0,0 {
     d_valine
@@ -16,45 +16,27 @@ pathway d-valine-to-n6-r-s8-isobutyryldihy "D-valine to N6-[(R)-S8-isobutyryldih
     n6_r_s8_isobutyryldihydrolipoyl_l_lysine
   }
 
-  branch from kiv side left {
-    kiv
-    <-> . +o2 +h2o +h2o2 +nh3
-    valine
-  }
-
-  branch from kiv side right {
-    kiv
-    <-> ec_1_2_4_4 [1.2.4.4] +co2 +2_methyl_1_hydroxypropylthiamine_diphosphate +thiamine_diphosphate
-    h
-  }
-
-  branch from hydrogen_donor side left {
-    hydrogen_donor
-    <-> ec_1_14_99_58 [1.14.99.58] +ferroheme_b +o2 +hplus +carbon_monoxide +fe2 +hydrogen_acceptor +h2o
-    biliverdin
-  }
-
-  branch from hydrogen_donor side right {
-    hydrogen_donor
-    <-> ec_1_14_99_57 [1.14.99.57] +ferroheme_b +o2 +hplus +fe2 +hydrogen_acceptor +h2o
-    mycobilin_a
-  }
-
   branch from nh3 side left {
     nh3
-    <-> ec_3_5_4_34 [3.5.4.34] +adenosine_5_monophosphate_1 +h2o +hplus
-    inosine_5_phosphate_1
+    <-> . +4_phenylbutan_2_aminium +nad +h2o +nadh +hplus
+    4_phenylbutan_2_one
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +3_4_bis_7_chloroindol_3_yl_2_5_diiminiohexanedio +hplus
-    dichlorochromopyrrolate
+    <-> . +3_5_dimethylcyclohexan_1_aminium +nadp +h2o +nadph +hplus
+    3_5_dimethylcyclohexanone
   }
 
-  branch from isobutyryl_coa side left {
-    isobutyryl_coa
-    <-> . +l_lysinium +coa +hplus
-    n6_isobutyryl_l_lysine
+  branch from nh3 side left {
+    nh3
+    <-> . +cyclopentylammonium +nadp +h2o +nadph +hplus
+    cyclopentanone
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> . +3_methylcyclopentanaminium +nadp +h2o +nadph +hplus
+    3_methylcyclopentanone
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-oxoethyl-com-to-h2o "2-oxoethyl-CoM to H2O" {
-  spacing 188
+  spacing 164
 
   spine at 0,0 {
     2_oxoethyl_com
@@ -14,29 +14,5 @@ pathway 2-oxoethyl-com-to-h2o "2-oxoethyl-CoM to H2O" {
     h
     <-> . +pyruvate +coenzyme_m +nh4 -h2o
     sulfoethylcysteine
-  }
-
-  branch from h side left {
-    h
-    <-> . +n6_tuberculosinyladenosine
-    1_tuberculosinyladenosine
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_4_11_7 [3.4.11.7] +l_aspartate +methyl_l_phenylalaninate +h2o
-    aspartame
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +4_bromo_3_chloroaniline +co2 +n_o_dimethylhydroxylamine
-    chlorbromuron
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +co2 +n_o_dimethylhydroxylamine +4_bromoaniline
-    metobromuron
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dtdp-to-h2o "dTDP to H2O" {
-  spacing 200
+  spacing 284
 
   spine at 0,0 {
     dtdp
@@ -18,49 +18,133 @@ pathway dtdp-to-h2o "dTDP to H2O" {
 
   branch from dtdp side left {
     dtdp
-    <-> . +h +phosphoenolpyruvate +dttp
-    pyruvate
+    <-> ec_2_4_1_331 [2.4.1.331] +dtdp_beta_l_rhamnose +8_demethyltetracenomycin_c +h
+    8_demethyl_8_alpha_l_rhamnosyl_tetracenomycin_c
   }
 
   branch from dtdp side right {
     dtdp
-    <-> ec_2_7_1_48 [2.7.1.48] +cmp +h +dttp
-    cytidine
+    <-> . +dtdp_beta_l_rhamnose +n_acetyl_alpha_d_glucosaminyl_di_trans_octa_cis +h
+    rhamanosyl_n_acetylglucosamyl_undecaprenyl_dipho
   }
 
   branch from h side left {
     h
-    <-> ec_3_1_1_81 [3.1.1.81] +n_3_oxohexanoyl_l_homoserine_lactone +h2o
-    n_3_oxohexanoyl_l_homoserine
+    <-> ec_1_3_8_7 [1.3.8.7] +e_3_indol_3_yl_acryloyl_coa +h2o2 +o2
+    3_indolepropionyl_coa
   }
 
   branch from h side right {
     h
-    <-> ec_1_3_1_119 [1.3.1.119] +nadh +4_6_dichloro_3_methylcatechol +nad
-    1r_2s_4_6_dichloro_3_methylcyclohexa_3_5_diene
+    <-> ec_1_1_1_2 [1.1.1.2] +1_acenaphthalenol +nadp +nadph
+    1_ketoacenaphthalene
   }
 
   branch from atp side left {
     atp
-    <-> . +diphosphate +amp +2_naphthoyl_coa +h +coa
-    2_naphthoic_acid
+    <-> ec_6_3_2_29 [6.3.2.29] +l_aspartate +l_asp_4_l_arg_n +adp +phosphate
+    l_asp_4_l_arg_n_l_asp
   }
 
   branch from atp side right {
     atp
-    <-> . +cyclo_l_phenylalanyl_l_seryl +h +adp +phosphate +l_phenylalanine
-    l_serine
+    <-> ec_6_3_2_30 [6.3.2.30] +h +adp +l_asp_4_l_arg_n_1 +phosphate +l_asp_4_l_arg_n_l_asp
+    l_arginine
   }
 
   branch from h2o side left {
     h2o
-    <-> . +tetrahydroxoborate +2s_4s_2_methyl_2_3_3_4_tetrahydroxytetrahydrofu
-    autoinducer_2
+    <-> ec_3_4_13_9 [3.4.13.9] +l_proline +l_serine
+    ser_pro
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_5_1_97 [3.5.1.97] +n_3_oxododecanoyl_l_homoserine_lactone +3_oxododecanoate
-    l_homoserine_lactone
+    <-> ec_3_2_1_22 [3.2.1.22] +beta_d_galactose +n_acetyllactosamine
+    alpha_d_galactosyl_1_3_beta_d_galactosyl_1_4_n_a
+  }
+
+  branch from dtdp side left {
+    dtdp
+    <-> ec_2_4_1_289 [2.4.1.289] +dtdp_beta_l_rhamnose +n_acetyl_alpha_d_glucosaminyl_diphospho_trans_oc +h
+    alpha_l_rhamnopyranosyl_1_3_n_acetyl_alpha_d_glu
+  }
+
+  branch from dtdp side right {
+    dtdp
+    <-> . +dtdp_alpha_d_forosamine +2_3_o_methyl_rhamnosyl_tetracyclic_spinosyn_pseu +h
+    spinosyn_k
+  }
+
+  branch from h side left {
+    h
+    <-> ec_1_1_1_2 [1.1.1.2] +d_ribose +nadph +nadp
+    ribitol
+  }
+
+  branch from h side right {
+    h
+    <-> ec_1_1_1_184 [1.1.1.184] +3_nitrobenzaldehyde +nadph +nadp
+    3_nitrobenzyl_alcohol
+  }
+
+  branch from premithramycinone side left {
+    premithramycinone
+    <-> . +s_adenosyl_l_homocysteine +h +4_demethylpremithramycinone
+    s_adenosyl_l_methionine
+  }
+
+  branch from premithramycinone side right {
+    premithramycinone
+    <-> . +s_adenosyl_l_homocysteine +s_adenosyl_l_methionine
+    4_demethylpremithracinone
+  }
+
+  branch from adp side left {
+    adp
+    <-> ec_2_7_7_35 [2.7.7.35] +adp_beta_d_ribose +phosphate +h
+    aldehydo_d_ribose_5_phosphate
+  }
+
+  branch from adp side right {
+    adp
+    <-> ec_3_6_3_23 [3.6.3.23] +h +phosphate +atp +h2o
+    gly_asp
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> ec_3_1_3_36 [3.1.3.36] +1d_myo_inositol_4_phosphate +h2o
+    1d_myo_inositol_4_5_bisphosphate
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_3_1_3_2 [3.1.3.2] +thymophthalein +h +h2o
+    thymolphthalein_monophosphate
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_2_7_7_96 [2.7.7.96] +diphosphate +aldehydo_d_ribose_5_phosphate +h
+    adp_beta_d_ribose
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    ferroxamine
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_1_1_1 [3.1.1.1] +nafamostat +4_guanidinobenzoic_acid
+    6_amidino_2_naphthol
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_2_1_22 [3.2.1.22] +alpha_d_galactose +4_methylumbelliferone
+    4_methylumbelliferyl_d_galactoside
   }
 }

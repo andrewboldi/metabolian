@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-adenosyl-l-homocysteine-to-5alpha-cholest-8-en "S-adenosyl-L-homocysteine to 5alpha-cholest-8-en-3beta…" {
-  spacing 206
+  spacing 158
 
   spine at 0,0 {
     s_adenosyl_l_homocysteine
@@ -16,57 +16,9 @@ pathway s-adenosyl-l-homocysteine-to-5alpha-cholest-8-en "S-adenosyl-L-homocyste
     fad
   }
 
-  branch from s_adenosyl_l_methionine side left {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +pederin
-    pseudopederin
-  }
-
-  branch from s_adenosyl_l_methionine side right {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +dim2boa_beta_d_glucoside
-    trimboa_beta_d_glucoside
-  }
-
-  branch from 26_27_dehydrozymosterol side left {
-    26_27_dehydrozymosterol
-    <-> . +24_alkyl_sterol_2
-    methanol
-  }
-
-  branch from 26_27_dehydrozymosterol side right {
-    26_27_dehydrozymosterol
-    <-> . +methanol
-    26_hydroxy_27_methyl_zymosterol
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +trans_3_cis_8_11_14_eicosatetraenoyl_coenzyme_a +h +nadph
-    2_trans_cis_cis_cis_cis_4_8_11_14_eicosapentaeno
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +h +nadph +2e_4z_7z_10z_hexadecatetraenoyl_coenzyme_a
-    3z_7z_10z_hexadecatrienoyl_coenzyme_a
-  }
-
   branch from zymosterol side left {
     zymosterol
     <-> . +cycloartenol
     propene
-  }
-
-  branch from fad side right {
-    fad
-    <-> . +fadh2 +h +4_hydroxyphenylacetate +o2 +3_4_dihydroxyphenylacetate +h2o
-    pmf
-  }
-
-  branch from fad side left {
-    fad
-    <-> . +fadh2 +h +2_6_dimethyl_trans_2_heptenoyl_coa
-    2s_2_6_dimethylheptanoyl_coa
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway ethylbenzene-to-3-oxo-3-phenylpropionate "ethylbenzene to 3-oxo-3-phenylpropionate" {
-  spacing 232
+  spacing 256
 
   spine at 0,0 {
     ethylbenzene
@@ -18,14 +18,14 @@ pathway ethylbenzene-to-3-oxo-3-phenylpropionate "ethylbenzene to 3-oxo-3-phenyl
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> ec_1_3_99_17 [1.3.99.17] +8_chloroquinoline +hydrogen_acceptor +h2o
-    8_chloroquinolin_2_1h_one
+    <-> . +1_1_dihydroxy_1_1_2_2_tetrahydrolycopene +hydrogen_acceptor
+    1_1_dihydroxy_3_4_didehydrolycopene
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> ec_1_14_99_39 [1.14.99.39] +nh3 +o2 +hydrogen_acceptor +h2o +hplus
-    hydroxylamine
+    <-> . +cannabigerolate +hydrogen_acceptor
+    cannabichromenate
   }
 
   branch from acetophenone side left {
@@ -42,13 +42,37 @@ pathway ethylbenzene-to-3-oxo-3-phenylpropionate "ethylbenzene to 3-oxo-3-phenyl
 
   branch from 3_oxo_3_phenylpropionate side left {
     3_oxo_3_phenylpropionate
-    <-> . +s_3_ammonio_3_phenylpropanoate +akg
-    glutamate
+    <-> . +s_3_ammonio_3_phenylpropanoate +pyruvate
+    alanine
   }
 
   branch from 3_oxo_3_phenylpropionate side right {
     3_oxo_3_phenylpropionate
-    <-> . +s_3_ammonio_3_phenylpropanoate +pyruvate
-    alanine
+    <-> ec_6_4_1_8 [6.4.1.8] +co2 +acetophenone
+    h
+  }
+
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> . +dehydroprobetaenone_i +hydrogen_donor
+    probetaenone_i
+  }
+
+  branch from hydrogen_acceptor side right {
+    hydrogen_acceptor
+    <-> . +betaenone_c +hydrogen_donor
+    betaenone_b
+  }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> . +protoporphyrinogen9 +hydrogen_acceptor
+    protoporphyrin9
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> ec_1_17_99_8 [1.17.99.8] +4r_limonene +hydrogen_acceptor +h2o
+    r_perillyl_alcohol
   }
 }

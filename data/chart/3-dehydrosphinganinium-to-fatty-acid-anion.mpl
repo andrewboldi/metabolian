@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-dehydrosphinganinium-to-fatty-acid-anion "3-dehydrosphinganinium to fatty acid anion" {
-  spacing 170
+  spacing 164
 
   spine at 0,0 {
     ketosphinganine
@@ -16,21 +16,15 @@ pathway 3-dehydrosphinganinium-to-fatty-acid-anion "3-dehydrosphinganinium to fa
     sphinganine
   }
 
-  branch from dihydroceramide side left {
-    dihydroceramide
-    <-> . +fe2 +o2 +hplus +iron +h2o
-    n_acyl_sphing_14z_enine
+  branch from ketosphinganine side left {
+    ketosphinganine
+    <-> . +octanoyl_coa +coa +hplus
+    n_octanoyl_3_ketodihydrosphingosine
   }
 
-  branch from sphinganine side right {
-    sphinganine
-    <-> . +2_hydroxybehenoyl_coa +coa +hplus
-    n_2_hydroxydocosanoyl_sphinganine
-  }
-
-  branch from sphinganine side left {
-    sphinganine
-    <-> . +2_hydroxypalmitoyl_coa +coa +hplus
-    n_2_hydroxyhexadecanoyl_sphinganine
+  branch from ketosphinganine side right {
+    ketosphinganine
+    <-> . +lauroyl_coa +coa +hplus
+    n_lauroyl_3_ketodihydrosphingosine
   }
 }

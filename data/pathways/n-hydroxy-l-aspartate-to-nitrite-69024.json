@@ -1,0 +1,495 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n-hydroxy-l-aspartate-to-nitrite-69024",
+  "name": "N-hydroxy-L-aspartate to nitrite",
+  "category": "other",
+  "summary": "A 4-step route from N-hydroxy-L-aspartate to nitrite, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:69024"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:180679"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n_hydroxy_l_aspartate",
+      "name": "N-hydroxy-L-aspartate",
+      "short": "N-hydroxy-L-asparta…",
+      "formula": "C4H5NO5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:180679"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "n_n_dihydroxy_l_aspartate",
+      "name": "N,N-dihydroxy-L-aspartate",
+      "short": "N,N-dihydroxy-L-asp…",
+      "formula": "C4H5NO6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:180680"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2s_2_nitrosobutanedioate",
+      "name": "(2S)-2-nitrosobutanedioate",
+      "short": "2-nitrosobutanedioa…",
+      "formula": "C4H3NO5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:180681"
+      }
+    },
+    {
+      "id": "2_nitrobutanedioate",
+      "name": "2-nitrobutanedioate",
+      "formula": "C4H3NO6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:180682"
+      }
+    },
+    {
+      "id": "fumarate",
+      "name": "Fumarate",
+      "formula": "C4H2O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:29806"
+      }
+    },
+    {
+      "id": "nitrite",
+      "name": "nitrite",
+      "formula": "NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16301"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_3_99_5",
+      "name": "nitrosuccinate lyase",
+      "ec": [
+        "4.3.99.5"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "N-hydroxy-L-aspartate + NADPH + O2 + H(+) = N,N-dihydroxy-L-aspartate + NADP(+) + H2O",
+      "equation": "N-hydroxy-L-aspartate + NADPH + O2 + H(+) = N,N-dihydroxy-L-aspartate + NADP(+) + H2O",
+      "substrates": [
+        {
+          "metabolite": "n_hydroxy_l_aspartate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_n_dihydroxy_l_aspartate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:69024"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69024"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N,N-dihydroxy-L-aspartate = (2S)-2-nitrosobutanedioate + H2O",
+      "equation": "N,N-dihydroxy-L-aspartate = (2S)-2-nitrosobutanedioate + H2O",
+      "substrates": [
+        {
+          "metabolite": "n_n_dihydroxy_l_aspartate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2s_2_nitrosobutanedioate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:69032"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69032"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(2S)-2-nitrosobutanedioate + NADPH + O2 + H(+) = 2-nitrobutanedioate + NADP(+) + H2O",
+      "equation": "(2S)-2-nitrosobutanedioate + NADPH + O2 + H(+) = 2-nitrobutanedioate + NADP(+) + H2O",
+      "substrates": [
+        {
+          "metabolite": "2s_2_nitrosobutanedioate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_nitrobutanedioate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:69040"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69040"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "nitrosuccinate lyase",
+      "equation": "2-nitrobutanedioate = fumarate + nitrite + H(+)",
+      "ec": "4.3.99.5",
+      "substrates": [
+        {
+          "metabolite": "2_nitrobutanedioate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fumarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nitrite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_3_99_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:69044"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69044"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_n_hydroxy_l_aspartate_3-d-phenylalanyl-adenyl-to-l-phenylalanine-69791",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_hydroxy_l_aspartate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-d-phenylalanyl-adenyl-to-l-phenylalanine-69791"
+      },
+      "note": "Shares N-hydroxy-L-aspartate with 3'-(D-phenylalanyl)adenyl… to L-phenylalanine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:180679"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_hydroxy_l_aspartate_l-arogenate-to-trans-3-methylglutaconyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_hydroxy_l_aspartate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-arogenate-to-trans-3-methylglutaconyl"
+      },
+      "note": "Shares N-hydroxy-L-aspartate with L-arogenate to trans-3-methylglutaconyl-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:180679"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_hydroxy_l_aspartate_n-hydroxy-l-aspartate-to-nitrite",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_hydroxy_l_aspartate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-hydroxy-l-aspartate-to-nitrite"
+      },
+      "note": "Shares N-hydroxy-L-aspartate with N-hydroxy-L-aspartate to nitrite.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:180679"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_n_dihydroxy_l_aspartate_n-hydroxy-l-aspartate-to-nitrite",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_n_dihydroxy_l_aspartate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-hydroxy-l-aspartate-to-nitrite"
+      },
+      "note": "Shares N,N-dihydroxy-L-aspartate with N-hydroxy-L-aspartate to nitrite.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:180680"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2s_2_nitrosobutanedioate_n-hydroxy-l-aspartate-to-nitrite",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2s_2_nitrosobutanedioate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-hydroxy-l-aspartate-to-nitrite"
+      },
+      "note": "Shares (2S)-2-nitrosobutanedioate with N-hydroxy-L-aspartate to nitrite.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:180681"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_nitrobutanedioate_l-aspartate-to-3-nitroacrylate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_nitrobutanedioate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-aspartate-to-3-nitroacrylate"
+      },
+      "note": "Shares 2-nitrobutanedioate with L-aspartate to 3-nitroacrylate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:180682"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_nitrobutanedioate_l-aspartate-to-3-nitroacrylate-69008",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_nitrobutanedioate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-aspartate-to-3-nitroacrylate-69008"
+      },
+      "note": "Shares 2-nitrobutanedioate with L-aspartate to 3-nitroacrylate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:180682"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_nitrobutanedioate_n-hydroxy-l-aspartate-to-nitrite",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_nitrobutanedioate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-hydroxy-l-aspartate-to-nitrite"
+      },
+      "note": "Shares 2-nitrobutanedioate with N-hydroxy-L-aspartate to nitrite.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:180682"
+          }
+        ]
+      }
+    }
+  ]
+}

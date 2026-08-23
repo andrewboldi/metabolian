@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dichloromethane-to-dtmp "dichloromethane to dTMP" {
-  spacing 200
+  spacing 224
 
   spine at 0,0 {
     dichloromethane
@@ -20,14 +20,14 @@ pathway dichloromethane-to-dtmp "dichloromethane to dTMP" {
 
   branch from formaldehyde side left {
     formaldehyde
-    <-> ec_1_14_11_53 [1.14.11.53] +n6_methyladenosine_5_monophosphate_1 +akg +o2 +succinate +co2
-    adenosine_5_monophosphate_1
+    <-> ec_1_14_13_247 [1.14.13.247] +l_proline_betaine +nadh +o2 +hplus +nad +h2o
+    n_methylproline
   }
 
   branch from formaldehyde side right {
     formaldehyde
-    <-> . +n1_methyladenosine_5_monophosphate_1 +akg +o2 +adenosine_5_monophosphate_1 +co2
-    succinate
+    <-> . +n6_n6_dimethyl_l_lysine_1 +akg +o2 +succinate +co2
+    n6_methyl_l_lysinium
   }
 
   branch from dtmp side left {
@@ -40,5 +40,29 @@ pathway dichloromethane-to-dtmp "dichloromethane to dTMP" {
     dtmp
     <-> . +dttp
     dtdp
+  }
+
+  branch from formaldehyde side left {
+    formaldehyde
+    <-> . +2_methyl_l_serine
+    alanine
+  }
+
+  branch from formaldehyde side right {
+    formaldehyde
+    <-> ec_1_14_15_38 [1.14.15.38] +3_3_4_substituted_phenyl_1_1_dimethylurea +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    a_1_methyl_3_phenylurea
+  }
+
+  branch from dtmp side left {
+    dtmp
+    <-> . +h2o +pi +hplus
+    dttp
+  }
+
+  branch from dtmp side right {
+    dtmp
+    <-> . +ctp +dtdp
+    cdp
   }
 }

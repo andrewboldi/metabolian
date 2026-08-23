@@ -1,0 +1,487 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "5-trans-prostaglandin-d2-to-h2o-null",
+  "name": "5-trans Prostaglandin D2 to H2O",
+  "category": "other",
+  "summary": "A 3-step route from 5-trans Prostaglandin D2 to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR205276"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:156156"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "5_trans_prostaglandin_d2",
+      "name": "5-trans Prostaglandin D2",
+      "short": "5-trans Prostagland…",
+      "formula": "C20H32O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:156156"
+      }
+    },
+    {
+      "id": "prostaglandin_j2",
+      "name": "Prostaglandin J2",
+      "formula": "C20H29O4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1560301"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "15_deoxy_delta_12_14_prostaglandin_j2",
+      "name": "15-deoxy-Delta(12,14)-prostaglandin J2",
+      "short": "15-deoxy-Delta(12,1…",
+      "formula": "C20H27O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM33413"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR205276",
+      "substrates": [
+        {
+          "metabolite": "5_trans_prostaglandin_d2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "prostaglandin_j2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR205276"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR205276"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR206540",
+      "substrates": [
+        {
+          "metabolite": "prostaglandin_j2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "15_deoxy_delta_12_14_prostaglandin_j2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR206540"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR206540"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR155168",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "15_deoxy_delta_12_14_prostaglandin_j2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "15_deoxy_delta_12_14_prostaglandin_j2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR155168"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR155168"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_5_trans_prostaglandin_d2_2e-2-hydroxypenta-2-4-d-to-tert-butoxymethanol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_trans_prostaglandin_d2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2e-2-hydroxypenta-2-4-d-to-tert-butoxymethanol"
+      },
+      "note": "Shares 5-trans Prostaglandin D2 with (2E)-2-hydroxypenta-2,4-d… to tert-butoxymethanol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:156156"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_trans_prostaglandin_d2_5-trans-prostaglandin-d2-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_trans_prostaglandin_d2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-trans-prostaglandin-d2-to-h2o"
+      },
+      "note": "Shares 5-trans Prostaglandin D2 with 5-trans Prostaglandin D2 to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:156156"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_trans_prostaglandin_d2_5-trans-prostaglandin-d2-to-s-pgj2-s-glutathione",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_trans_prostaglandin_d2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-trans-prostaglandin-d2-to-s-pgj2-s-glutathione"
+      },
+      "note": "Shares 5-trans Prostaglandin D2 with 5-trans Prostaglandin D2 to (S)-PGJ2-S-glutathione….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:156156"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_trans_prostaglandin_d2_ent-kaur-16-en-19-al-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_trans_prostaglandin_d2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ent-kaur-16-en-19-al-to-h2o"
+      },
+      "note": "Shares 5-trans Prostaglandin D2 with ent-kaur-16-en-19-al to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:156156"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_trans_prostaglandin_d2_l-idonate-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_trans_prostaglandin_d2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-idonate-to-h2o-null"
+      },
+      "note": "Shares 5-trans Prostaglandin D2 with L-idonate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:156156"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_trans_prostaglandin_d2_triboa-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_trans_prostaglandin_d2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "triboa-to-h2o-null"
+      },
+      "note": "Shares 5-trans Prostaglandin D2 with TRIBOA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:156156"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_j2_5-trans-prostaglandin-d2-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_j2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-trans-prostaglandin-d2-to-h2o"
+      },
+      "note": "Shares Prostaglandin J2 with 5-trans Prostaglandin D2 to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1560301"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_j2_glycine-to-monochlorobimane",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_j2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "glycine-to-monochlorobimane"
+      },
+      "note": "Shares Prostaglandin J2 with glycine to monochlorobimane.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1560301"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_j2_prostaglandin-d2-to-s-11-oh-9-deoxy-delta9-1",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_j2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "prostaglandin-d2-to-s-11-oh-9-deoxy-delta9-1"
+      },
+      "note": "Shares Prostaglandin J2 with prostaglandin D2 to S-(11-OH-9-deoxy-delta9,1….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1560301"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_j2_prostaglandin-d2-to-s-11-oh-9-deoxy-delta9-1-nul",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_j2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "prostaglandin-d2-to-s-11-oh-9-deoxy-delta9-1-nul"
+      },
+      "note": "Shares Prostaglandin J2 with prostaglandin D2 to S-(11-OH-9-deoxy-delta9,1….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1560301"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_15_deoxy_delta_12_14_prostaglandin_j2_5-trans-prostaglandin-d2-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "15_deoxy_delta_12_14_prostaglandin_j2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-trans-prostaglandin-d2-to-h2o"
+      },
+      "note": "Shares 15-deoxy-Delta(12,14)-prostaglandin J2 with 5-trans Prostaglandin D2 to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM33413"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_15_deoxy_delta_12_14_prostaglandin_j2_delta-12-prostaglandin-j2-to-r-pgj2-s-glutathion",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "15_deoxy_delta_12_14_prostaglandin_j2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "delta-12-prostaglandin-j2-to-r-pgj2-s-glutathion"
+      },
+      "note": "Shares 15-deoxy-Delta(12,14)-prostaglandin J2 with Delta(12)-prostaglandin J2 to (R)-PGJ2-S-glutathione….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM33413"
+          }
+        ]
+      }
+    }
+  ]
+}

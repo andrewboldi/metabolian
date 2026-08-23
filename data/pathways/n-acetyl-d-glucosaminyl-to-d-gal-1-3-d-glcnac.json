@@ -104,6 +104,82 @@
       "xrefs": {
         "chebi": "CHEBI:61610"
       }
+    },
+    {
+      "id": "verapyrone_b_aglycone",
+      "name": "verapyrone B aglycone",
+      "short": "verapyrone B…",
+      "formula": "C28H44O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:232030"
+      }
+    },
+    {
+      "id": "verapyrone_b",
+      "name": "verapyrone B",
+      "formula": "C34H53O9",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:232031"
+      }
+    },
+    {
+      "id": "exophillate",
+      "name": "exophillate",
+      "formula": "C38H55O12",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:232029"
+      }
+    },
+    {
+      "id": "phaeomoniecin_d",
+      "name": "phaeomoniecin D",
+      "formula": "C44H65O17",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:232032"
+      }
+    },
+    {
+      "id": "n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_glcnac",
+      "name": "N4-{β-D-GlcNAc-(1→2)-α-D-Man-(1→3)-[β-D-GlcNAc-(1→2)-{β-D-GlcNAc-(1→6)}-α-D-Man-(1→6)]-β-D-Man-(1→4)-β-D-GlcNAc-(1→4)-β-D-GlcNAc}-Asn",
+      "short": "N4-{β-D-GlcNAc-(1→2…",
+      "formula": "C62H101N7O42",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:187874"
+      }
+    },
+    {
+      "id": "n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_glcnac",
+      "name": "N4-{β-D-GlcNAc-(1→2)-α-D-Man-(1→3)-[β-D-GlcNAc-(1→2)-{β-D-GlcNAc-(1→4)}-{β-D-GlcNAc-(1→6)}-α-D-Man-(1→6)]-β-D-Man-(1→4)-β-D-GlcNAc-(1→4)-β-D-GlcNAc}-L-Asn",
+      "short": "N4-{β-D-GlcNAc-(1→2…",
+      "formula": "C70H114N8O47",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:233673"
+      }
+    },
+    {
+      "id": "d_galactoside",
+      "name": "β-D-galactoside",
+      "formula": "C6H11O6R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28034"
+      }
+    },
+    {
+      "id": "n_acetyl_d_glucosaminyl_1_4_d_galactoside",
+      "name": "N-acetyl-α-D-glucosaminyl-(1→4)-β-D-galactoside",
+      "short": "N-acetyl-α-D-glucos…",
+      "formula": "C14H24NO11R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:235336"
+      }
     }
   ],
   "enzymes": [
@@ -112,7 +188,10 @@
       "name": "neolactotriaosylceramide beta-1,4-galactosyltransferase",
       "ec": [
         "2.4.1.275"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P15291"
+      }
     }
   ],
   "reactions": [
@@ -290,6 +369,378 @@
           {
             "db": "Rhea",
             "id": "RHEA:83447"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "verapyrone B aglycone + UDP-alpha-D-galactose = verapyrone B + UDP + 2 H(+)",
+      "equation": "verapyrone B aglycone + UDP-alpha-D-galactose = verapyrone B + UDP + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "verapyrone_b_aglycone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_galactose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "verapyrone_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:82199"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82199"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "exophillate + UDP-alpha-D-galactose = phaeomoniecin D + UDP + H(+)",
+      "equation": "exophillate + UDP-alpha-D-galactose = phaeomoniecin D + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "exophillate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_galactose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phaeomoniecin_d",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:82203"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82203"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "an N(4)-{beta-D-GlcNAc-(1->2)-alpha-D-Man-(1->3)-[beta-D-GlcNAc-(1->2)-[beta-D-GlcNAc-(...",
+      "equation": "an N(4)-{beta-D-GlcNAc-(1->2)-alpha-D-Man-(1->3)-[beta-D-GlcNAc-(1->2)-[beta-D-GlcNAc-(1->6)]-alpha-D-Man-(1->6)]-beta-D-Man-(1->4)-beta-D-GlcNAc-(1->4)-beta-D-GlcNAc}-L-asparaginyl-[protein] + UDP-N-acetyl-alpha-D-glucosamine = an N(4)-{beta-D-GlcNAc-(1->2)-alpha-D-Man-(1->3)-[beta-D-GlcNAc-(1->2)-[beta-D-GlcNAc-(1->4)]-[beta-D-GlcNAc-(1->6)]-alpha-D-Man-(1->6)]-beta-D-Man-(1->4)-beta-D-GlcNAc-(1->4)-beta-D-GlcNAc}-L-asparaginyl-[protein] + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_glcnac",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udpglcnac",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_glcnac",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:84303"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84303"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "a beta-D-galactoside + UDP-N-acetyl-alpha-D-glucosamine = an N-acetyl-alpha-D-glucosami...",
+      "equation": "a beta-D-galactoside + UDP-N-acetyl-alpha-D-glucosamine = an N-acetyl-alpha-D-glucosaminyl-(1->4)-beta-D-galactosyl derivative + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "d_galactoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udpglcnac",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_d_glucosaminyl_1_4_d_galactoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:85983"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:85983"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_n_acetyl_d_glucosaminyl_1_3_d_galactosyl_1_4_d_g_d-galactosyl-1-4-d-to-l-fuc-1-2-d-gal-1",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyl_d_glucosaminyl_1_3_d_galactosyl_1_4_d_g"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-galactosyl-1-4-d-to-l-fuc-1-2-d-gal-1"
+      },
+      "note": "Shares N-acetyl-β-D-glucosaminyl-(1→3)-β-D-galactosyl-(1→4)-β-D-glucosylceramide(d18:1(4E)) with β-D-galactosyl-(1→4)-β-D-… to α-L-Fuc-(1→2)-β-D-Gal-(1→….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17103"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_galactosyl_1_4_n_acetyl_d_glucosaminyl_1_3_d_d-galnac-1-3-l-fuc-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_galactosyl_1_4_n_acetyl_d_glucosaminyl_1_3_d"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-galnac-1-3-l-fuc-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares β-D-galactosyl-(1→4)-N-acetyl-β-D-glucosaminyl-(1→3)-β-D-galactosyl-(1→4)-β-D-glucosylceramide with α-D-GalNAc-(1→3)-[α-L-Fuc… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17006"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_galactosyl_1_4_n_acetyl_d_glucosaminyl_1_3_d_l-fucose-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_galactosyl_1_4_n_acetyl_d_glucosaminyl_1_3_d"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-fucose-to-diphosphate"
+      },
+      "note": "Shares β-D-galactosyl-(1→4)-N-acetyl-β-D-glucosaminyl-(1→3)-β-D-galactosyl-(1→4)-β-D-glucosylceramide with α-L-fucose to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17006"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_glcnac_1_3_d_d-galactosyl-1-3-n-ac-to-cytidine-5-monophospha",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_glcnac_1_3_d"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-galactosyl-1-3-n-ac-to-cytidine-5-monophospha"
+      },
+      "note": "Shares β-D-Gal-(1→4)-β-D-GlcNAc-(1→3)-β-D-Gal-(1→4)-β-D-GlcNAc-(1→3)-β-D-Gal-(1→4)-β-D-Glc-(1↔1')-Cer with β-D-galactosyl-(1→3)-N-ac… to cytidine 5'-monophosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61610"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_glcnac_1_3_d_d-galnac-1-3-l-fuc-to-l-fucosyl-1-2-d-gal",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_glcnac_1_3_d"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-galnac-1-3-l-fuc-to-l-fucosyl-1-2-d-gal"
+      },
+      "note": "Shares β-D-Gal-(1→4)-β-D-GlcNAc-(1→3)-β-D-Gal-(1→4)-β-D-GlcNAc-(1→3)-β-D-Gal-(1→4)-β-D-Glc-(1↔1')-Cer with α-D-GalNAc-(1→3)-[α-L-Fuc… to α-L-fucosyl-(1→2)-β-D-gal….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61610"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_glcnac_1_3_d_n-acetylneuraminyl-2-3-to-3-fucosyllactose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_glcnac_1_3_d"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetylneuraminyl-2-3-to-3-fucosyllactose"
+      },
+      "note": "Shares β-D-Gal-(1→4)-β-D-GlcNAc-(1→3)-β-D-Gal-(1→4)-β-D-GlcNAc-(1→3)-β-D-Gal-(1→4)-β-D-Glc-(1↔1')-Cer with α-N-acetylneuraminyl-(2→3… to 3-fucosyllactose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61610"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_exophillate_tomatid-5-en-3-one-to-tomatidine-3-o-d-glucop",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "exophillate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "tomatid-5-en-3-one-to-tomatidine-3-o-d-glucop"
+      },
+      "note": "Shares exophillate with tomatid-5-en-3-one to tomatidine 3-O-β-D-glucop….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:232029"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_glcnac_o3-d-galactosyl-1-4-to-o3-n-acetyl-d-glucosam",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_glcnac"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "o3-d-galactosyl-1-4-to-o3-n-acetyl-d-glucosam"
+      },
+      "note": "Shares N4-{β-D-GlcNAc-(1→2)-α-D-Man-(1→3)-[β-D-GlcNAc-(1→2)-{β-D-GlcNAc-(1→6)}-α-D-Man-(1→6)]-β-D-Man-(1→4)-β-D-GlcNAc-(1→4)-β-D-GlcNAc}-Asn with O3-(β-D-galactosyl-(1→4)-… to O3-(N-acetyl-α-D-glucosam….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:187874"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_galactoside_n-acetylneuraminyl-2-3-to-cytidine-5-monophosph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_galactoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetylneuraminyl-2-3-to-cytidine-5-monophosph"
+      },
+      "note": "Shares β-D-galactoside with α-N-acetylneuraminyl-(2→3… to cytidine 5'-monophosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28034"
           }
         ]
       }

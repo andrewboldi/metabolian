@@ -32,43 +32,67 @@ pathway dtdp-3-amino-4-oxo-2-3-6-to-dtdp-3-4-didehydro-2 "dTDP-3-amino-4-oxo-2,3
 
   branch from h side left {
     h
-    <-> ec_3_1_1_13 [3.1.1.13] +9z_octadecenoate +lanosterol +h2o
-    lanosteryl_oleate
+    <-> ec_2_4_1_13 [2.4.1.13] +udp +sucrose +beta_d_fructose
+    udp_alpha_d_glucose
   }
 
   branch from h side right {
     h
-    <-> ec_3_1_1_13 [3.1.1.13] +9z_octadecenoate +ergosterol +h2o
-    ergosteryl_oleate
-  }
-
-  branch from dtdp_4_dehydro_2_6_dideoxy_d_glucose side left {
-    dtdp_4_dehydro_2_6_dideoxy_d_glucose
-    <-> . +h +nadph +nadp
-    dtdp_l_olivose
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +acetyl_coa +malonyl_coa +h +nadph +4z_7z_10z_13z_16z_19z_docosahexaenoate +coa +h2o
-    co2
+    <-> ec_1_3_5_2 [1.3.5.2] +ubiquinol_2 +methyl_s_orotate +ubiquinone_2
+    methyl_s_dihydroorotate
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_330 [1.1.1.330] +3_oxoauricoloyl_coa +h +nadph
-    3r_hydroxy_auricoloyl_coa
+    <-> ec_1_14_13_89 [1.14.13.89] +biochanin_a +h +o2 +nadph +h2o
+    2_hydroxybiochanin_a
   }
 
-  branch from dtdp_3_4_didehydro_2_6_dideoxy_d_glucose side right {
-    dtdp_3_4_didehydro_2_6_dideoxy_d_glucose
-    <-> ec_4_2_1_159 [4.2.1.159] +h2o
-    dtdp_4_dehydro_6_deoxy_d_glucose
+  branch from nadp side right {
+    nadp
+    <-> . +rifamycin_b +h +nadph
+    rifamycin_o
   }
 
-  branch from dtdp_3_4_didehydro_2_6_dideoxy_d_glucose side left {
-    dtdp_3_4_didehydro_2_6_dideoxy_d_glucose
-    <-> .
-    dtdp_2_3_dehydro_2_6_dideoxy_4_keto_d_glucose
+  branch from pyridoxal_5_phosphate side left {
+    pyridoxal_5_phosphate
+    <-> ec_4_3_3_6 [4.3.3.6] +aldehydo_d_ribose_5_phosphate +glyceraldehyde_3_phosphate +nh4 +h +h2o
+    phosphate
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_4_1_85 [2.4.1.85] +udp +s_prunasin +udp_alpha_d_glucose
+    mandelonitrile
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_4_1_35 [2.4.1.35] +udp +3_o_d_glucosyl_trans_caffeic_acid +udp_alpha_d_glucose
+    caffeic_acid
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_14_13_89 [1.14.13.89] +daidzein +h +o2 +nadp +h2o
+    2_hydroxydaidzein
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_14_13_84 [1.14.13.84] +4_hydroxyacetophenone +o2 +nadp +h2o
+    4_hydroxyphenylacetate
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_14_14_1 [1.14.14.1] +5z_8z_11z_14z_eicosatetraenoate +h +o2 +nadph +h2o
+    19_s_hete
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_14_13_85 [1.14.13.85] +6as_11as_2_dimethylallyl_3_6a_9_trihydroxyptero +h +o2 +nadph +h2o
+    glyceollin_ii
   }
 }

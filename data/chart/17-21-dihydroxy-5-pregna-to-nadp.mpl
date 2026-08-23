@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 17-21-dihydroxy-5-pregna-to-nadp "17,21-dihydroxy-5β-pregna… to NADP" {
-  spacing 272
+  spacing 314
 
   spine at 0,0 {
     17_21_dihydroxy_5_pregnane_3_11_20_trione
@@ -32,13 +32,55 @@ pathway 17-21-dihydroxy-5-pregna-to-nadp "17,21-dihydroxy-5β-pregna… to NADP"
 
   branch from nadp side left {
     nadp
-    <-> . +h +1_4_dihydroxy_2_naphthoate +nadph +h2o
-    menadione
+    <-> . +5z_8z_11z_14z_eicosatetraenoate +h +o2 +nadph +h2o
+    prostaglandin_h2
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_8_2_2 [1.8.2.2] +methanesulfonate +h +nadph +h2o
-    methanethiol
+    <-> . +h +estrone +o2 +nadph +h2o
+    4_hydroxyestrone
+  }
+
+  branch from cortisone side left {
+    cortisone
+    <-> . +nadph +hplus +nadp
+    20_hydroxycortisone
+  }
+
+  branch from h side right {
+    h
+    <-> . +glycerophosphatidylethanolamine +acyl_phosphatidylglycerol_n_c12_0 +2_dodecanoyl_sn_glycero_3_phosphoethanolamine
+    dilauroyl_phosphatidylglycerol
+  }
+
+  branch from h side left {
+    h
+    <-> . +hexadecanoate +sn_glycero_3_phospho_1_rac_glycerol +h2o
+    2_hexadecanoyl_sn_glycero_3_phospho_1_sn_glycero
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_14_14_1 [1.14.14.1] +h +estrone +o2 +nadp +h2o
+    2_hydroxyestrone
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +5_hydroxyindol_3_yl_acetaldehyde +h +nadp
+    5_hydroxytryptophol
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +cholestane_3_7_12_24_25_pentol +h2o +h +o2 +nadph
+    5beta_cholestane_3alpha_7alpha_12alpha_25_tetrol
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +5beta_cholestane_3alpha_7alpha_12alpha_23_25_pen +h2o +h +5beta_cholestane_3alpha_7alpha_12alpha_25_tetrol +nadph
+    o2
   }
 }

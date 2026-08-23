@@ -1,0 +1,565 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "beta-d-galacturonate-to-nad-null",
+  "name": "beta-D-galacturonate to NAD",
+  "category": "other",
+  "summary": "A 3-step route from beta-D-galacturonate to NAD(+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR118896"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "beta_d_galacturonate",
+      "name": "beta-D-galacturonate",
+      "formula": "C6H9O7",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1106181"
+      }
+    },
+    {
+      "id": "aldehydo_d_galacturonate",
+      "name": "aldehydo-D-galacturonate",
+      "short": "aldehydo-D-galactur…",
+      "formula": "C6H9O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:12952"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "d_fructofuranuronic_acid",
+      "name": "D-fructofuranuronic acid",
+      "short": "D-fructofuranuronic…",
+      "formula": "C6H10O7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4126"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "isohexonic_acid",
+      "name": "Isohexonic acid",
+      "formula": "C6H12O7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:192972"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "keto_d_tagaturonate",
+      "name": "keto-D-tagaturonate",
+      "formula": "C6H9O7",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM728348"
+      }
+    },
+    {
+      "id": "5_dehydro_4_deoxy_d_glucuronate",
+      "name": "5-dehydro-4-deoxy-D-glucuronate",
+      "short": "5-dehydro-4-deoxy-D…",
+      "formula": "C6H7O6",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM729033"
+      }
+    },
+    {
+      "id": "d_galacturonosyl_1_4_d_galacturonate",
+      "name": "α-D-galacturonosyl-(1→4)-D-galacturonate",
+      "short": "α-D-galacturonosyl-…",
+      "formula": "C12H16O13",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:141004"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_3_1_12",
+      "name": "glucuronate isomerase",
+      "ec": [
+        "5.3.1.12"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR118896",
+      "substrates": [
+        {
+          "metabolite": "beta_d_galacturonate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aldehydo_d_galacturonate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR118896"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR118896"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR204993",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "aldehydo_d_galacturonate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_fructofuranuronic_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR204993"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR204993"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR206058",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_fructofuranuronic_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "isohexonic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR206058"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR206058"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "glucuronate isomerase",
+      "ec": "5.3.1.12",
+      "substrates": [
+        {
+          "metabolite": "beta_d_galacturonate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "keto_d_tagaturonate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_1_12"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR145149"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR145149"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "Reaction MNXR176049",
+      "substrates": [
+        {
+          "metabolite": "beta_d_galacturonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_dehydro_4_deoxy_d_glucuronate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_galacturonosyl_1_4_d_galacturonate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR176049"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR176049"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_aldehydo_d_galacturonate_beta-d-galacturonate-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aldehydo_d_galacturonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-d-galacturonate-to-nad"
+      },
+      "note": "Shares aldehydo-D-galacturonate with beta-D-galacturonate to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:12952"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_aldehydo_d_galacturonate_l-galactonate-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aldehydo_d_galacturonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-galactonate-to-nad"
+      },
+      "note": "Shares aldehydo-D-galacturonate with L-galactonate to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:12952"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_aldehydo_d_galacturonate_l-galactonate-to-nad-26345",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aldehydo_d_galacturonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-galactonate-to-nad-26345"
+      },
+      "note": "Shares aldehydo-D-galacturonate with L-galactonate to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:12952"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_aldehydo_d_galacturonate_nadh-to-keto-d-fructuronate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aldehydo_d_galacturonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-keto-d-fructuronate"
+      },
+      "note": "Shares aldehydo-D-galacturonate with NADH to keto-D-fructuronate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:12952"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_aldehydo_d_galacturonate_nadh-to-keto-d-fructuronate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aldehydo_d_galacturonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-keto-d-fructuronate-null"
+      },
+      "note": "Shares aldehydo-D-galacturonate with NADH to keto-D-fructuronate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:12952"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_fructofuranuronic_acid_beta-d-galacturonate-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_fructofuranuronic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-d-galacturonate-to-nad"
+      },
+      "note": "Shares D-fructofuranuronic acid with beta-D-galacturonate to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:4126"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_fructofuranuronic_acid_d-mannonate-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_fructofuranuronic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-mannonate-to-h2o-null"
+      },
+      "note": "Shares D-fructofuranuronic acid with D-mannonate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:4126"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_fructofuranuronic_acid_octanoyl-coa-to-2r-3s-homoisocitrate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_fructofuranuronic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "octanoyl-coa-to-2r-3s-homoisocitrate-null"
+      },
+      "note": "Shares D-fructofuranuronic acid with octanoyl-CoA to (2R,3S)-homoisocitrate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:4126"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_fructofuranuronic_acid_p-nitrophenyl-alpha-l-rha-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_fructofuranuronic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "p-nitrophenyl-alpha-l-rha-to-h2o"
+      },
+      "note": "Shares D-fructofuranuronic acid with p-nitrophenyl-alpha-L-rha… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:4126"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_isohexonic_acid_beta-d-galacturonate-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isohexonic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-d-galacturonate-to-nad"
+      },
+      "note": "Shares Isohexonic acid with beta-D-galacturonate to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:192972"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_isohexonic_acid_d-mannonate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isohexonic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-mannonate-to-h2o"
+      },
+      "note": "Shares Isohexonic acid with D-mannonate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:192972"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_keto_d_tagaturonate_beta-d-galacturonate-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "keto_d_tagaturonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-d-galacturonate-to-nad"
+      },
+      "note": "Shares keto-D-tagaturonate with beta-D-galacturonate to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM728348"
+          }
+        ]
+      }
+    }
+  ]
+}

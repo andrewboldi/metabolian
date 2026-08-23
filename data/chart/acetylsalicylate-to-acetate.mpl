@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway acetylsalicylate-to-acetate "acetylsalicylate to acetate" {
-  spacing 260
+  spacing 242
 
   spine at 0,0 {
     acetylsalicylate
@@ -18,37 +18,19 @@ pathway acetylsalicylate-to-acetate "acetylsalicylate to acetate" {
 
   branch from nicotinamide side left {
     nicotinamide
-    <-> . +l_serine +nad +hplus
-    o_adp_d_ribosyl_l_serine_2
+    <-> . +n6_benzoyl_l_lysine +nad +h2o +l_lysinium
+    2_o_benzoyl_adp_d_ribose
   }
 
   branch from nicotinamide side right {
     nicotinamide
-    <-> . +l_tyrosine +nad +hplus
-    o_adp_d_ribosyl_l_tyrosine_2
+    <-> . +n6_2_methylpropenoyl_l_lysine +nad +h2o +l_lysinium
+    2_o_methacrylyl_adp_d_ribose
   }
 
   branch from l_lysinium side left {
     l_lysinium
-    <-> ec_2_1_1_354 [2.1.1.354] +sam +sah +hplus
-    n6_n6_n6_trimethyl_l_lysine
-  }
-
-  branch from l_lysinium side right {
-    l_lysinium
-    <-> ec_2_1_1_364 [2.1.1.364] +sam +sah +hplus
-    n6_methyl_l_lysinium
-  }
-
-  branch from adp_d_ribose side left {
-    adp_d_ribose
-    <-> . +o_adp_d_ribosyl_l_serine_2 +h2o
-    l_serine
-  }
-
-  branch from adp_d_ribose side right {
-    adp_d_ribose
-    <-> . +h2o +nicotinamide +hplus
-    nad
+    <-> . +benzoyl_coa +coa +hplus
+    n6_benzoyl_l_lysine
   }
 }

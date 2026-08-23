@@ -26,25 +26,67 @@ pathway menthol-to-fmnh2 "(−)-menthol to FMNH2" {
 
   branch from fmn side right {
     fmn
-    <-> . +l_tryptophan +fmnh2 +o2 +h2o +hplus
-    n_hydroxy_l_tryptophanate
+    <-> ec_1_14_14_87 [1.14.14.87] +s_naringenin +fmnh2 +o2 +h2o +hplus
+    2_hydroxy_2_3_dihydrogenistein
   }
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_17 [1.14.14.17] +squalene +fmnh2 +o2 +h2o +hplus
-    epoxysqualene
+    <-> ec_1_14_14_116 [1.14.14.116] +s_averantin +fmnh2 +o2 +h2o
+    1_s_5_r_5_hydroxyaverantin
   }
 
   branch from fmnh2 side right {
     fmnh2
-    <-> ec_1_14_14_135 [1.14.14.135] +6as_11as_2_dimethylallyl_3_6a_9_trihydroxyptero +o2 +fmn +h2o +hplus
-    glyceollin_iii
+    <-> ec_2_5_1_129 [2.5.1.129] +prenyl_phosphate +pi
+    prenyl_fmnh2
   }
 
   branch from fmnh2 side left {
     fmnh2
-    <-> ec_1_14_14_148 [1.14.14.148] +s_columbianetin +o2 +acetone +fmn +h2o +hplus
-    angelicin
+    <-> . +methyl_fatty_acid_anion +o2 +fmn +h2o +hplus
+    hydroxy_fatty_acid_anion
+  }
+
+  branch from menthol side right {
+    menthol
+    <-> ec_1_14_13_46 [1.14.13.46] +nadph +o2 +hplus +nadp +h2o
+    1_3_4_p_menthane_3_8_diol
+  }
+
+  branch from fmnh2 side left {
+    fmnh2
+    <-> . +3_hydroxypalmitate +o2 +fmn +h2o +hplus
+    3_16_dihydroxyhexadecanoate
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> . +3_hydroxyoctadecanoate +o2 +fmn +h2o +hplus
+    3_18_dihydroxyoctadecanoate
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    19_hete
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +fmnh2 +o2 +h2o +hplus
+    17_18_eetetr
+  }
+
+  branch from 2e_4_hydroxy_3_methylbut_2_enyl_diphosphate side left {
+    2e_4_hydroxy_3_methylbut_2_enyl_diphosphate
+    <-> ec_1_17_7_4 [1.17.7.4] +ipp +di_sulfido_diiron +h2o +hplus
+    di_sulfido_diiron
+  }
+
+  branch from 2e_4_hydroxy_3_methylbut_2_enyl_diphosphate side right {
+    2e_4_hydroxy_3_methylbut_2_enyl_diphosphate
+    <-> ec_1_17_7_4 [1.17.7.4] +di_sulfido_diiron +h2o +di_sulfido_diiron +hplus
+    dmapp
   }
 }

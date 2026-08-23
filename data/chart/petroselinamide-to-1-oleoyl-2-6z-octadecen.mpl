@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway petroselinamide-to-1-oleoyl-2-6z-octadecen "petroselinamide to 1-oleoyl-2-(6Z)-octadecen…" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     petroselinamide
@@ -14,29 +14,5 @@ pathway petroselinamide-to-1-oleoyl-2-6z-octadecen "petroselinamide to 1-oleoyl-
     6z_octadecenoyl_coa
     <-> . +1_oleoyl_sn_glycero_3_phosphate -coa
     1_oleoyl_2_6z_octadecenoyl_sn_glycero_3_phosphat
-  }
-
-  branch from nh3 side left {
-    nh3
-    <-> ec_2_6_1_123 [2.6.1.123] +chorismate +glutamine +h2o +glutamate
-    4_amino_4_deoxychorismate
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +2_azaniumyl_2_deoxyisochorismate +glutamine +h2o +4_amino_4_deoxychorismate
-    glutamate
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_157 [4.2.3.157] +fpp +h2o
-    isoafricanol
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_158 [4.2.3.158] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    spiroviolene
   }
 }

@@ -1,0 +1,439 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "rctr1-to-7-oxoresolvin-d2-null",
+  "name": "RCTR1 to 7-oxoresolvin D2",
+  "category": "redox-detox",
+  "summary": "A 3-step route from RCTR1 to 7-oxoresolvin D2(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR199711"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "rctr1",
+      "name": "RCTR1",
+      "formula": "C32H45N3O10S",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1130513"
+      }
+    },
+    {
+      "id": "7s_8s_epoxy_resolvin",
+      "name": "(7S,8S)-epoxy-resolvin",
+      "short": "(7S,8S)-epoxy-resol…",
+      "formula": "C22H29O4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1364776"
+      }
+    },
+    {
+      "id": "glutathione",
+      "name": "glutathione",
+      "formula": "C10H16N3O6S",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM490899"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "resolvin_d2",
+      "name": "resolvin D2",
+      "formula": "C22H31O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:133367"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "7_oxoresolvin_d2",
+      "name": "7-oxoresolvin D2",
+      "formula": "C22H29O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:137497"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "16_oxoresolvin_d2",
+      "name": "16-oxoresolvin D2",
+      "formula": "C22H29O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:137498"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_4_1_20",
+      "name": "leukotriene-C4 synthase",
+      "ec": [
+        "4.4.1.20"
+      ],
+      "xrefs": {
+        "uniprot": "Q03013"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "leukotriene-C4 synthase",
+      "ec": "4.4.1.20",
+      "substrates": [
+        {
+          "metabolite": "rctr1",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7s_8s_epoxy_resolvin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutathione",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_4_1_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR199711"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR199711"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR123782",
+      "substrates": [
+        {
+          "metabolite": "7s_8s_epoxy_resolvin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "resolvin_d2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR123782"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR123782"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "resolvin D2 + NAD(+) = 7-oxoresolvin D2 + NADH + H(+)",
+      "equation": "resolvin D2 + NAD(+) = 7-oxoresolvin D2 + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "resolvin_d2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_oxoresolvin_d2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:53584"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53584"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "resolvin D2 + NAD(+) = 16-oxoresolvin D2 + NADH + H(+)",
+      "equation": "resolvin D2 + NAD(+) = 16-oxoresolvin D2 + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "resolvin_d2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "16_oxoresolvin_d2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:53588"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53588"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_rctr1_rctr1-to-7-oxoresolvin-d2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "rctr1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "rctr1-to-7-oxoresolvin-d2"
+      },
+      "note": "Shares RCTR1 with RCTR1 to 7-oxoresolvin D2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1130513"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7s_8s_epoxy_resolvin_7s-17s-17-hydroxy-7-hyd-to-8-oxoresolvin-d1",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7s_8s_epoxy_resolvin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7s-17s-17-hydroxy-7-hyd-to-8-oxoresolvin-d1"
+      },
+      "note": "Shares (7S,8S)-epoxy-resolvin with (7S,17S)-17-hydroxy-7-hyd… to 8-oxoresolvin D1.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364776"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7s_8s_epoxy_resolvin_7s-17s-17-hydroxy-7-hyd-to-8-oxoresolvin-d1-nul",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7s_8s_epoxy_resolvin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7s-17s-17-hydroxy-7-hyd-to-8-oxoresolvin-d1-nul"
+      },
+      "note": "Shares (7S,8S)-epoxy-resolvin with (7S,17S)-17-hydroxy-7-hyd… to 8-oxoresolvin D1.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364776"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7s_8s_epoxy_resolvin_rctr1-to-7-oxoresolvin-d2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7s_8s_epoxy_resolvin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "rctr1-to-7-oxoresolvin-d2"
+      },
+      "note": "Shares (7S,8S)-epoxy-resolvin with RCTR1 to 7-oxoresolvin D2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364776"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_resolvin_d2_rctr1-to-7-oxoresolvin-d2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "resolvin_d2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "rctr1-to-7-oxoresolvin-d2"
+      },
+      "note": "Shares resolvin D2 with RCTR1 to 7-oxoresolvin D2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133367"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_oxoresolvin_d2_rctr1-to-7-oxoresolvin-d2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_oxoresolvin_d2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "rctr1-to-7-oxoresolvin-d2"
+      },
+      "note": "Shares 7-oxoresolvin D2 with RCTR1 to 7-oxoresolvin D2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:137497"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_16_oxoresolvin_d2_rctr1-to-7-oxoresolvin-d2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "16_oxoresolvin_d2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "rctr1-to-7-oxoresolvin-d2"
+      },
+      "note": "Shares 16-oxoresolvin D2 with RCTR1 to 7-oxoresolvin D2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:137498"
+          }
+        ]
+      }
+    }
+  ]
+}

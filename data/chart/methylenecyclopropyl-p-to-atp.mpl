@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway methylenecyclopropyl-p-to-atp "β-(methylenecyclopropyl)p… to ATP" {
-  spacing 242
+  spacing 320
 
   spine at 0,0 {
     methylenecyclopropyl_pyruvic_acid
@@ -20,79 +20,157 @@ pathway methylenecyclopropyl-p-to-atp "β-(methylenecyclopropyl)p… to ATP" {
 
   branch from h side left {
     h
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +2_methylcyclohexanone +nad
-    2_methyl_cyclohexanol
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    l_alanyl_l_glutamate
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +4_methylcyclohexanone +nad
-    trans_4_methylcyclohexanol
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +glycylglycine +phosphate +atp +glycylglycine
+    h2o
   }
 
   branch from pyruvate side left {
     pyruvate
-    <-> ec_2_6_1_58 [2.6.1.58] +3_imidazol_5_yl_pyruvate +l_alanine
-    l_histidine
+    <-> ec_4_1_3_3 [4.1.3.3] +n_acetyl_beta_neuraminate
+    aldehydo_n_acetyl_d_mannosamine
   }
 
   branch from pyruvate side right {
     pyruvate
-    <-> ec_1_1_1_28 [1.1.1.28] +deamido_nad +r_lactate
-    nicotinamide_hypoxanthine_dinucleotide
-  }
-
-  branch from cysgly side left {
-    cysgly
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    h2o
-  }
-
-  branch from glutathione side right {
-    glutathione
-    <-> . +glutathione_disulfide +hydroxylamine
-    s_hydroxysulfenamide_glutathione
+    <-> . +l_fuculose +phosphoenolpyruvate
+    l_fuculose_1_phosphate
   }
 
   branch from glutathione side left {
     glutathione
-    <-> ec_1_8_4_2 [1.8.4.2] +mercaptoethanol +glutathione_disulfide
-    2_2_dithiodiethanol
+    <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa +h2o
+    1_methylsulfanyl_6_aci_nitrohexane
   }
 
-  branch from glycylglycine side right {
-    glycylglycine
-    <-> ec_3_4_11_19 [3.4.11.19] +d_alanine +h2o
-    d_ala_gly_gly
-  }
-
-  branch from glycylglycine side left {
-    glycylglycine
-    <-> ec_3_4_11_15 [3.4.11.15] +l_lysine +h +h2o
-    lys_gly_gly
-  }
-
-  branch from glycine side right {
-    glycine
-    <-> ec_3_4_11_19 [3.4.11.19] +glycinamide +h +h2o
-    nh4
+  branch from glutathione side right {
+    glutathione
+    <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa +h2o
+    6_methylthiohexanonitrile_oxide
   }
 
   branch from glycine side left {
     glycine
-    <-> ec_3_4_11_19 [3.4.11.19] +d_alanine +h2o
-    d_ala_gly
+    <-> ec_3_4_13_23 [3.4.13.23] +s_4_hydroxy_2_methylpentan_2_yl_l_cysteine +h2o
+    s_4_hydroxy_2_methylpentan_2_yl_l_cysteinylglyci
   }
 
-  branch from atp side right {
-    atp
-    <-> ec_6_3_2_4 [6.3.2.4] +udpmurnac_oyl_l_ala_gamma_d_glu_l_lys_d_ala_d_se +h +adp +phosphate +udp_n_acetyl_muramoyl_l_alanyl_d_glutamyl_l_lysi
-    d_alanyl_d_serine
+  branch from glycine side right {
+    glycine
+    <-> ec_3_4_17_25 [3.4.17.25] +gamma_glutamylcysteine_s_yl_bimane +h2o
+    glutathion_s_yl_bimane
   }
 
   branch from atp side left {
     atp
-    <-> ec_2_7_4_8 [2.7.4.8] +8_azaguanosine_5_diphosphate +adp +h
-    8_azaguanosine_5_monophosphate
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
+    leu_leu
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
+    viomycin
+  }
+
+  branch from l_alanine side left {
+    l_alanine
+    <-> . +udp_n_acetyl_alpha_d_muramoyl_l_alanyl_gamma_d_g +h2o
+    udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_meso
+  }
+
+  branch from l_alanine side right {
+    l_alanine
+    <-> . +h +nadph +nadp +h2o
+    s_2_aminopropanal
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_31 [3.6.3.31] +adp +phosphate +atp +h2o
+    n_1_n_12_diacetylspermine
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_31 [3.6.3.31] +adp +phosphate +atp +h2o
+    thermospermine
+  }
+
+  branch from pyruvate side left {
+    pyruvate
+    <-> ec_4_1_3_3 [4.1.3.3] +n_acetyl_d_mannosamine
+    n_acetyl_alpha_neuraminate
+  }
+
+  branch from pyruvate side right {
+    pyruvate
+    <-> ec_4_1_3_3 [4.1.3.3] +n_acetylneuraminate
+    n_acetyl_d_mannosamine
+  }
+
+  branch from glutathione side left {
+    glutathione
+    <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa +h2o
+    1_methylsulfanyl_7_aci_nitroheptane
+  }
+
+  branch from glutathione side right {
+    glutathione
+    <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa +h2o
+    7_methylthioheptanonitrile_oxide
+  }
+
+  branch from adp side left {
+    adp
+    <-> ec_3_6_3_31 [3.6.3.31] +h +phosphate +atp +h2o
+    caldopentamine
+  }
+
+  branch from adp side right {
+    adp
+    <-> ec_3_6_3_33 [3.6.3.33] +h +phosphate +atp +h2o
+    5_methoxybenzimidazolylcobamide
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> ec_3_6_3_33 [3.6.3.33] +h +adp +atp +h2o
+    hydroxycobalamin
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_3_6_3_37 [3.6.3.37] +h +adp +atp +h2o
+    guanine
+  }
+
+  branch from glycine side left {
+    glycine
+    <-> ec_3_4_13_23 [3.4.13.23] +3_sulfanylhexan_1_ol_l_cysteine +h2o
+    s_1_hydroxyhexan_3_yl_l_cysteinylglycine
+  }
+
+  branch from glycine side right {
+    glycine
+    <-> ec_3_4_17_25 [3.4.17.25] +s_benzyl_gamma_glutamylcysteine +h2o
+    s_benzyl_glutatione
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_3_6_3_39 [3.6.3.39] +h +adp +phosphate +h2o
+    kdo_lipid_a
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_3_6_3_39 [3.6.3.39] +h +adp +phosphate +h2o
+    octyl_d_glucopyranoside
   }
 }

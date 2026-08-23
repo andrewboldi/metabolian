@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway jasmonoyl-l-isoleucine-to-diphosphate "(-)-Jasmonoyl-L-isoleucine to diphosphate" {
-  spacing 234
+  spacing 240
 
   spine at 0,0 {
     jasmonoyl_l_isoleucine
@@ -18,14 +18,14 @@ pathway jasmonoyl-l-isoleucine-to-diphosphate "(-)-Jasmonoyl-L-isoleucine to dip
 
   branch from h side left {
     h
-    <-> . +s_adenosyl_l_homocysteine +l_leucyl_arginomycin +l_leucyl_demethylarginomycin
-    s_adenosyl_l_methionine
+    <-> ec_2_4_1_159 [2.4.1.159] +udp +flavonol_3_o_alpha_l_rhamnosyl_1_6_beta_d_glucos +flavonol_3_o_beta_d_glucoside
+    udp_beta_l_rhamnose
   }
 
   branch from h side right {
     h
-    <-> . +s_adenosyl_l_homocysteine +l_leucyl_blasticidin_s +s_adenosyl_l_methionine
-    l_leucyl_demethyl_blasticidin_s
+    <-> ec_3_7_1_8 [3.7.1.8] +2e_4z_2_hydroxymuconate +catechol +h2o
+    2_hydroxy_6_2_hydroxyphenoxy_6_oxo_cis_cis_hexa
   }
 
   branch from n_7_isojasmonyl_l_isoleucinate side left {
@@ -46,15 +46,21 @@ pathway jasmonoyl-l-isoleucine-to-diphosphate "(-)-Jasmonoyl-L-isoleucine to dip
     jasmonate
   }
 
-  branch from ppi side right {
-    ppi
-    <-> . +o_orsellinate +fpp
-    ilicicolinate_b
+  branch from jasmonoyl_l_isoleucine side right {
+    jasmonoyl_l_isoleucine
+    <-> ec_6_3_2_52 [6.3.2.52] +diphosphate +amp +atp +jasmonate
+    l_isoleucine
   }
 
-  branch from ppi side left {
-    ppi
-    <-> . +5_methylorsellinate +atp +nadph +hplus +amp +nadp
-    2_4_dihydroxy_5_6_dimethylbenzaldehyde
+  branch from h side left {
+    h
+    <-> . +beta_d_fructose_6_phosphate
+    d_allulose_6_phosphate
+  }
+
+  branch from h side right {
+    h
+    <-> . +succinate_semialdehyde +isochorismate +2_succinyl_6_hydroxycyclohexa_2_4_diene_1_carbox
+    pyruvate
   }
 }

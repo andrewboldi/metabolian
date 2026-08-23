@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2e-9z-hexadecadienoyl-c-to-coa "(2E,9Z)-hexadecadienoyl-C… to CoA" {
-  spacing 188
+  spacing 176
 
   spine at 0,0 {
     2e_9z_hexadecadienoyl_coa
@@ -16,17 +16,5 @@ pathway 2e-9z-hexadecadienoyl-c-to-coa "(2E,9Z)-hexadecadienoyl-C… to CoA" {
     z_tetradec_7_enoyl_coa
     <-> ec_2_3_1_16 [2.3.1.16] +acetyl_coa -coa
     z_3_oxohexadec_9_enoyl_coa
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +octanedioyl_coa +r_carnitine
-    o_suberoylcarnitine
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +8z_11z_14z_eicosatrienoyl_coa +r_carnitine
-    dihomo_gamma_linolenyl_carnitine
   }
 }

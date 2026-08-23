@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-stearoyl-2-arachidonoyl-to-h2o "1-stearoyl-2-arachidonoyl… to H2O" {
-  spacing 188
+  spacing 306
 
   spine at 0,0 {
     1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphoet
@@ -12,43 +12,15 @@ pathway 1-stearoyl-2-arachidonoyl-to-h2o "1-stearoyl-2-arachidonoyl… to H2O" {
     1_stearoyl_sn_glycero_3_phosphoethanolamine
     <-> . +octadecanoyl_coa -1_2_distearoylphosphatidylethanolamine
     coa
-    <-> . +h +adp +1_2_distearoylphosphatidylethanolamine +phosphate -1_2_distearoylphosphatidylethanolamine -h2o
-    atp
+    <-> ec_2_3_1_40 [2.3.1.40] +diphosphate +amp +1_2_distearoylphosphatidylethanolamine -2_octadecanoyl_sn_glycero_3_phosphoethanolamine -atp
+    octadecanoate
+    <-> ec_3_1_1_13 [3.1.1.13] +h +cholesterol -h2o
+    cholesteryl_stearate
   }
 
-  branch from coa side left {
-    coa
-    <-> . +feruloyl_diketide +trans_4_coumaroyl_coa +h +co2
-    demethoxycurcumin
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +4_coumaroyl_diketide +trans_4_coumaroyl_coa +h +co2
-    1e_4z_6e_5_hydroxy_1_7_bis_4_hydroxyphenyl_hept
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    enterobactin
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +h +adp +2r_2_3_bisphosphoglycerate
-    2r_3_phosphoglycerate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +2_succinylbenzoate +h
-    1s_6r_2_succinyl_6_hydroxycyclohexa_2_4_diene_1
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +melibiose +aldehydo_d_galactose
-    beta_d_glucose
+  branch from 1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphoet side left {
+    1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphoet
+    <-> . +o2
+    1_stearoyl_2_15_hydroperoxyarachidonoyl_sn_glyce
   }
 }

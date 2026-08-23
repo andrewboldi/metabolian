@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway phaseollin-to-coa "(-)-Phaseollin to CoA" {
-  spacing 230
+  spacing 308
 
   spine at 0,0 {
     phaseollin
@@ -20,79 +20,157 @@ pathway phaseollin-to-coa "(-)-Phaseollin to CoA" {
 
   branch from h side left {
     h
-    <-> ec_3_5_1_4 [3.5.1.4] +acetamide +hydroxylamine +acetohydroxamic_acid
-    nh4
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +d_threose +phosphate +d_threose +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> ec_2_5_1_18 [2.5.1.18] +s_n_benzylthiocarbamoyl_glutathione +glutathione
-    benzyl_isothiocyanate
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    alpha_d_xylose
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_1_3_7 [1.1.3.7] +4_methoxybenzyl_alcohol +h2o2
-    4_methoxybenzaldehyde
+    <-> ec_1_14_18_3 [1.14.18.3] +2_demethylmenaquinone_8 +methanol +h2o +methane
+    2_demethylmenaquinol_8
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_1_3_7 [1.1.3.7] +3_chloro_anisaldehyde +h2o2
-    3_chloroanisylalcohol
+    <-> ec_1_14_18_3 [1.14.18.3] +ubiquinone_8 +methanol +h2o +methane
+    ubiquinol_8
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_21 [1.1.1.21] +3_fluorobenzyl_alcohol +nadp +h
-    3_fluorobenzaldehyde
+    <-> ec_1_1_1_71 [1.1.1.71] +2e_geranial +h +nadp
+    neodihydrocarveol
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_2 [1.1.1.2] +2_chlorobenzaldehyde +h +nadp
-    compound_0041489
+    <-> ec_1_1_1_71 [1.1.1.71] +h +phellandral +nadp
+    thujan_3_ol
   }
 
   branch from dimethylallyl_diphosphate side left {
     dimethylallyl_diphosphate
-    <-> ec_2_5_1_159 [2.5.1.159] +ambiguine_h +diphosphate
-    hapalindole_u
+    <-> ec_1_17_1_2 [1.17.1.2] +nadp +h2o +h +nadph
+    2e_4_hydroxy_3_methylbut_2_enyl_diphosphate
   }
 
   branch from dimethylallyl_diphosphate side right {
     dimethylallyl_diphosphate
-    <-> ec_2_5_1_35 [2.5.1.35] +diphosphate +aspulvinone_h
-    aspulvinone_e
-  }
-
-  branch from 6ar_11ar_3_9_dihydroxypterocarpan side left {
-    6ar_11ar_3_9_dihydroxypterocarpan
-    <-> ec_1_14_13_28 [1.14.13.28] +nadp +h2o +h +o2 +nadph
-    6as_11as_3_6a_9_trihydroxypterocarpan
-  }
-
-  branch from diphosphate side right {
-    diphosphate
-    <-> . +delta_cuprenene
-    2e_6e_farnesyl_diphosphate
+    <-> ec_2_7_4_26 [2.7.4.26] +prenyl_phosphate +atp
+    adp
   }
 
   branch from diphosphate side left {
     diphosphate
-    <-> . +2e_6e_farnesyl_diphosphate
-    alpha_cubebene
+    <-> . +6_7_dihydro_5_oxo_12_epi_ltb4 +atp +coa +h +amp
+    5_oxo_12_r_hydroxy_eicosa_8e_10e_14z_trienoyl_co
   }
 
-  branch from coa side right {
-    coa
-    <-> ec_2_3_1_255 [2.3.1.255] +l_cysteinyl_group +acetyl_coa
-    n_acetyl_l_cysteinyl
+  branch from diphosphate side right {
+    diphosphate
+    <-> . +oxidized_factor_390_a +atp
+    coenzyme_f420_2
   }
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_255 [2.3.1.255] +l_seryl_group +acetyl_coa
-    n_terminal_n_acetyl_l_serine
+    <-> . +2s_2_methylbutanoyl_coa +2_4_di_2_methyl_butanoyl_3_6_methyl_heptanoyl_su
+    2_4_di_2_methyl_butanoyl_3_6_methyl_heptanoyl_6
+  }
+
+  branch from coa side right {
+    coa
+    <-> . +sucrose +2_methylpropanoyl_coa
+    4_isobutanoyl_sucrose
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +phellandral
+    r_terpineol
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +phellandral
+    thujan_3_ol
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
+    alpha_maltose
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
+    n_n_diacetylchitobiose
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
+    d_galp_1_6_d_galp
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
+    udp_2_3_diacetamido_2_3_dideoxy_alpha_d_glucuron
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_14_18_3 [1.14.18.3] +ubiquinol_9 +methane +methanol +h2o
+    ubiquinone_9
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_14_18_3 [1.14.18.3] +ubiquinol_10 +methane +methanol +h2o
+    ubiquinone_10
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_1_1_71 [1.1.1.71] +h +phellandral +nadp
+    1r_2s_4r_borneol
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_1_1_71 [1.1.1.71] +borneol +nadp +h
+    phellandral
+  }
+
+  branch from diphosphate side left {
+    diphosphate
+    <-> . +coenzyme_f390_a +h +atp
+    coenzyme_gamma_f420_2
+  }
+
+  branch from diphosphate side right {
+    diphosphate
+    <-> . +ctp +5_n_acetyl_7_n_d_alanyl_legionaminic_acid +h
+    cmp_5_n_acetyl_7_n_d_alanyl_legionaminic_acid
+  }
+
+  branch from dimethylallyl_diphosphate side left {
+    dimethylallyl_diphosphate
+    <-> ec_1_17_7_4 [1.17.7.4] +fmnh2 +2e_4_hydroxy_3_methylbut_2_enyl_diphosphate +h +h2o
+    fmn
+  }
+
+  branch from dimethylallyl_diphosphate side right {
+    dimethylallyl_diphosphate
+    <-> . +geranylgeranyl_diphosphate +diphosphate
+    2e_6e_farnesyl_diphosphate
   }
 }

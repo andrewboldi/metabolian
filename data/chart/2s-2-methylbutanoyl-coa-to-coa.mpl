@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2s-2-methylbutanoyl-coa-to-coa "(2S)-2-methylbutanoyl-CoA to CoA" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     2s_2_methylbutanoyl_coa
@@ -14,17 +14,5 @@ pathway 2s-2-methylbutanoyl-coa-to-coa "(2S)-2-methylbutanoyl-CoA to CoA" {
     3_2_methylbutanoyl_3_4_di_3_methylbutanoyl_sucro
     <-> . +acetyl_coa -coa
     2_acetyl_3_2_methylbutanoyl_3_4_di_3_methylbutan
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +acetyl_coa +cucurbitacin_i
-    cucurbitacin_e
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +acetyl_coa +deacetylcucurbitacin_c
-    cucurbitacin_c
   }
 }

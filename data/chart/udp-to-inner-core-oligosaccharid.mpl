@@ -18,15 +18,15 @@ pathway udp-to-inner-core-oligosaccharid "UDP to Inner core oligosaccharid…" {
     inner_core_oligosaccharide_lipid_a_e_coli
   }
 
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> ec_2_4_1_173 [2.4.1.173] +udp +h +solasodine_3_o_beta_d_glucoside
-    solasodine
+  branch from h side left {
+    h
+    <-> . +nitrite +ubiquinol_8 +ubiquinone_8 +h2o
+    nitric_oxide
   }
 
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> ec_2_4_1_13 [2.4.1.13] +udp +sucrose +h
-    beta_d_fructopyranose
+  branch from h side right {
+    h
+    <-> . +nitrite +ferrocytochrome_c +nh4 +h2o
+    ferricytochrome_c
   }
 }

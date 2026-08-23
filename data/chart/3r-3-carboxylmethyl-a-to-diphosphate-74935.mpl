@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3r-3-carboxylmethyl-a-to-diphosphate-74935 "(3R)-3-[(carboxylmethyl)a… to diphosphate" {
-  spacing 340
+  spacing 320
 
   spine at 0,0 {
     3r_3_carboxylmethyl_amino_butanoic_acid
@@ -14,29 +14,5 @@ pathway 3r-3-carboxylmethyl-a-to-diphosphate-74935 "(3R)-3-[(carboxylmethyl)a…
     o_s_3r_3_isocyanoylbutenoyl_pantetheine_4_phosph
     <-> . +l_lysinium +atp +nadph -holo-acp -amp -ppi -nadp
     2s_2_6_bis_3r_3_isocyanobutanamido_hexan_1_ol
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +c_terminal_gly_gly_1 +atp +hplus
-    c_terminal_gly_gly_amp_1_group
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> ec_2_7_7_100 [2.7.7.100] +atp +hplus +c_terminal_gly_gly_amp_1_group
-    c_terminal_gly_gly_1
-  }
-
-  branch from holo-acp side left {
-    holo-acp
-    <-> . +l_glutamyl_amp +amp +hplus
-    o_s_l_glutamyl_pantetheine_4_phosphoryl_serine_1
-  }
-
-  branch from holo-acp side right {
-    holo-acp
-    <-> ec_6_2_1_63 [6.2.1.63] +arginine +atp +amp +ppi
-    o_s_l_arginyl_pantetheine_4_phosphoryl_serine_1
   }
 }

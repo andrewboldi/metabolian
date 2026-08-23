@@ -153,23 +153,13 @@
       }
     },
     {
-      "id": "11e_13z_octadecadienoyl_coa",
-      "name": "(11E,13Z)-octadecadienoyl-CoA",
-      "short": "(11E,13Z)-octadecad…",
+      "id": "6z_11e_octadecadienoyl_coa",
+      "name": "(6Z,11E)-octadecadienoyl-CoA",
+      "short": "(6Z,11E)-octadecadi…",
       "formula": "C39H62N7O17P3S",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:85650"
-      }
-    },
-    {
-      "id": "5z_11e_octadecadienoyl_coa",
-      "name": "(5Z,11E)-octadecadienoyl-CoA",
-      "short": "(5Z,11E)-octadecadi…",
-      "formula": "C39H62N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:85651"
+        "chebi": "CHEBI:85652"
       }
     }
   ],
@@ -316,8 +306,8 @@
     },
     {
       "id": "r4",
-      "name": "(11E)-octadecenoyl-CoA + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = (11E,13Z)-octadecadie...",
-      "equation": "(11E)-octadecenoyl-CoA + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = (11E,13Z)-octadecadienoyl-CoA + 2 Fe(III)-[cytochrome b5] + 2 H2O",
+      "name": "(11E)-octadecenoyl-CoA + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = (6Z,11E)-octadecadien...",
+      "equation": "(11E)-octadecenoyl-CoA + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = (6Z,11E)-octadecadienoyl-CoA + 2 Fe(III)-[cytochrome b5] + 2 H2O",
       "substrates": [
         {
           "metabolite": "11e_octadecenoyl_coa",
@@ -338,7 +328,7 @@
       ],
       "products": [
         {
-          "metabolite": "11e_13z_octadecadienoyl_coa",
+          "metabolite": "6z_11e_octadecadienoyl_coa",
           "stoichiometry": 1
         },
         {
@@ -353,65 +343,258 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:46056"
+        "rhea": "RHEA:46064"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:46056"
+            "id": "RHEA:46064"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_trans_vaccenic_acid_25s-3alpha-7alpha-12alp-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_vaccenic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "25s-3alpha-7alpha-12alp-to-nad"
+      },
+      "note": "Shares trans-vaccenic acid with (25S)-3alpha,7alpha,12alp… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1372018"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "(11E)-octadecenoyl-CoA + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = (5Z,11E)-octadecadien...",
-      "equation": "(11E)-octadecenoyl-CoA + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = (5Z,11E)-octadecadienoyl-CoA + 2 Fe(III)-[cytochrome b5] + 2 H2O",
-      "substrates": [
-        {
-          "metabolite": "11e_octadecenoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fe2",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "5z_11e_octadecadienoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "iron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:46060"
+      "id": "xt_trans_vaccenic_acid_3alpha-7alpha-12alpha-tri-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_vaccenic_acid"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "3alpha-7alpha-12alpha-tri-to-nadph"
+      },
+      "note": "Shares trans-vaccenic acid with 3alpha,7alpha,12alpha-tri… to NADPH.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:46060"
+            "db": "MetaNetX",
+            "id": "MNXM1372018"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_vaccenic_acid_butan-2-one-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_vaccenic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "butan-2-one-to-h2o"
+      },
+      "note": "Shares trans-vaccenic acid with butan-2-one to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1372018"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_vaccenic_acid_diphosphate-to-3-hydroxyethylbacteriochl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_vaccenic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-3-hydroxyethylbacteriochl"
+      },
+      "note": "Shares trans-vaccenic acid with diphosphate to 3-Hydroxyethylbacteriochl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1372018"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_11e_octadecenoyl_coa_11e-octadecenoyl-coa-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11e_octadecenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "11e-octadecenoyl-coa-to-h2o"
+      },
+      "note": "Shares (11E)-octadecenoyl-CoA with (11E)-octadecenoyl-CoA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74296"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_11e_octadecenoyl_coa_1s-2r-5s-7s-8r-9r-11s-12-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11e_octadecenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1s-2r-5s-7s-8r-9r-11s-12-to-nadph"
+      },
+      "note": "Shares (11E)-octadecenoyl-CoA with (1S,2R,5S,7S,8R,9R,11S,12… to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74296"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_11e_octadecenoyl_coa_3alpha-7alpha-12alpha-tri-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11e_octadecenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3alpha-7alpha-12alpha-tri-to-nadph"
+      },
+      "note": "Shares (11E)-octadecenoyl-CoA with 3alpha,7alpha,12alpha-tri… to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74296"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_11e_octadecenoyl_coa_acetoin-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11e_octadecenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetoin-to-nad"
+      },
+      "note": "Shares (11E)-octadecenoyl-CoA with acetoin to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74296"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_11e_octadecenoyl_coa_ent-kaur-16-en-19-al-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11e_octadecenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ent-kaur-16-en-19-al-to-h2o"
+      },
+      "note": "Shares (11E)-octadecenoyl-CoA with ent-kaur-16-en-19-al to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74296"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_11e_octadecenoyl_coa_sphing-4-enine-to-safingol-l-threo-sphing",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11e_octadecenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sphing-4-enine-to-safingol-l-threo-sphing"
+      },
+      "note": "Shares (11E)-octadecenoyl-CoA with sphing-4-enine to Safingol ( L-threo-sphing….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74296"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_9z_11e_octadecadienoyl_coa_a-2-3-di-o-phytanyl-sn-gl-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9z_11e_octadecadienoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "a-2-3-di-o-phytanyl-sn-gl-to-nad"
+      },
+      "note": "Shares (9Z,11E)-octadecadienoyl-CoA with a 2,3-di-O-phytanyl-sn-gl… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74297"
           }
         ]
       }

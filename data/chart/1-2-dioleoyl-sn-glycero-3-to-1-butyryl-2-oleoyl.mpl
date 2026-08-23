@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-2-dioleoyl-sn-glycero-3-to-1-butyryl-2-oleoyl "1,2-dioleoyl-sn-glycero-3… to 1-butyryl-2-oleoyl-sn-gly…" {
-  spacing 164
+  spacing 188
 
   spine at 0,0 {
     1_2_dioleoyl_sn_glycero_3_diphosphate
@@ -20,13 +20,37 @@ pathway 1-2-dioleoyl-sn-glycero-3-to-1-butyryl-2-oleoyl "1,2-dioleoyl-sn-glycero
 
   branch from 2_oleoylglycerol side left {
     2_oleoylglycerol
-    <-> . +linoleoyl_coa +coa
-    1_linoleoyl_2_oleoyl_sn_glycerol
+    <-> . +arachidonoyl_coa +coa
+    1_arachidonoyl_2_oleoyl_sn_glycerol
   }
 
   branch from 2_oleoylglycerol side right {
     2_oleoylglycerol
-    <-> . +arachidonoyl_coa +coa
-    1_arachidonoyl_2_oleoyl_sn_glycerol
+    <-> . +oleoyl_coa +coa
+    1_2_dioleoylglycerol
+  }
+
+  branch from 2_oleoylglycerol side left {
+    2_oleoylglycerol
+    <-> . +butyryl_coa +coa
+    1_butanoyl_2_oleoylglycerol
+  }
+
+  branch from 2_oleoylglycerol side right {
+    2_oleoylglycerol
+    <-> . +lauroyl_coa +coa
+    1_lauroyl_2_oleoylglycerol
+  }
+
+  branch from butyryl_coa side left {
+    butyryl_coa
+    <-> . +tyraminium +coa +hplus
+    n_butanoyltyramine
+  }
+
+  branch from butyryl_coa side right {
+    butyryl_coa
+    <-> . +serotonin +coa +hplus
+    n_butanoylserotonin
   }
 }

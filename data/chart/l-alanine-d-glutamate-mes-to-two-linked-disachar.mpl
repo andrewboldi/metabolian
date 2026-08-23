@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-alanine-d-glutamate-mes-to-two-linked-disachar "L-alanine-D-glutamate-mes… to Two linked disacharide…" {
-  spacing 170
+  spacing 152
 
   spine at 0,0 {
     l_alanine_d_glutamate_meso_2_6_diaminoheptanedio
@@ -14,23 +14,5 @@ pathway l-alanine-d-glutamate-mes-to-two-linked-disachar "L-alanine-D-glutamate-
     n_acetyl_d_glucosamine_anhydrous_n_acetylmuramyl
     <-> .
     two_linked_disacharide_tetrapeptide_murein_units
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_5_1_10 [3.5.1.10] +co2 +z_2_methyl_3_aminoperacrylic_acid +nh4 +z_2_methylureidoperacrylic_acid
-    h
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +dehydroxypaxilline +nadp +h +o2 +nadph
-    beta_pc_m6
-  }
-
-  branch from n_acetyl_d_glucosamine_anhydrous_n_acetylmuramyl side left {
-    n_acetyl_d_glucosamine_anhydrous_n_acetylmuramyl
-    <-> . +n_acetyl_d_glucosamine_anhydrous_n_acetylmuramyl +h2o
-    d_alanine
   }
 }

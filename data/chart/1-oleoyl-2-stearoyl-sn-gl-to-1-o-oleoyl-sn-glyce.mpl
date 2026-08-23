@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-oleoyl-2-stearoyl-sn-gl-to-1-o-oleoyl-sn-glyce "1-oleoyl-2-stearoyl-sn-gl… to 1-O-oleoyl-sn-glycero-3-p…" {
-  spacing 188
+  spacing 242
 
   spine at 0,0 {
     1_oleoyl_2_stearoyl_sn_glycero_3_phosphocholine
@@ -36,8 +36,8 @@ pathway 1-oleoyl-2-stearoyl-sn-gl-to-1-o-oleoyl-sn-glyce "1-oleoyl-2-stearoyl-sn
 
   branch from 1_o_oleoyl_sn_glycero_3_phosphocholine side right {
     1_o_oleoyl_sn_glycero_3_phosphocholine
-    <-> . +2_oleoylglycerol +1_2_dioleoyl_sn_glycero_3_phosphocholine
-    1_2_dioleoylglycerol
+    <-> . +linolenoyl_coa +coa
+    1_9z_octadecenoyl_2_9z_12z_15z_octadecatrienoyl
   }
 
   branch from 1_o_palmitoyl_n_acetylsphingosine side left {
@@ -50,5 +50,59 @@ pathway 1-oleoyl-2-stearoyl-sn-gl-to-1-o-oleoyl-sn-glyce "1-oleoyl-2-stearoyl-sn
     1_o_palmitoyl_n_acetylsphingosine
     <-> . +1_palmitoyl_2_azelaoyl_sn_glycero_3_phosphocholi +n_acetylsphingosine
     2_azelaoyl_sn_glycero_3_phosphocholine
+  }
+
+  branch from 1_oleoyl_2_stearoyl_sn_glycero_3_phosphocholine side left {
+    1_oleoyl_2_stearoyl_sn_glycero_3_phosphocholine
+    <-> . +n_acetylsphingosine +1_o_oleoyl_n_acetylsphingosine
+    2_stearoyl_sn_glycero_3_phosphocholine
+  }
+
+  branch from 1_oleoyl_2_stearoyl_sn_glycero_3_phosphocholine side right {
+    1_oleoyl_2_stearoyl_sn_glycero_3_phosphocholine
+    <-> . +1_nonadecanoyl_sn_glycero_3_phosphocholine +2_stearoyl_sn_glycero_3_phosphocholine
+    1_nonadecanoyl_2_oleoyl_sn_glycero_3_phosphochol
+  }
+
+  branch from n_acetylsphingosine side left {
+    n_acetylsphingosine
+    <-> . +1_palmitoyl_2_arachidonoyl_sn_glycero_3_phosphoc +1_hexadecanoyl_sn_glycero_3_phosphocholine
+    1_o_arachidonoyl_n_acetylsphingosine
+  }
+
+  branch from n_acetylsphingosine side right {
+    n_acetylsphingosine
+    <-> . +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +1_hexadecanoyl_sn_glycero_3_phosphoethanolamine
+    1_o_linoleoyl_n_acetylsphingosine
+  }
+
+  branch from 1_o_stearoyl_n_acetylsphingosine side left {
+    1_o_stearoyl_n_acetylsphingosine
+    <-> . +1_stearoyl_2_oleoyl_sn_glycero_3_phosphoserine +n_acetylsphingosine
+    2_oleoyl_sn_glycero_3_phosphoserine
+  }
+
+  branch from 1_o_stearoyl_n_acetylsphingosine side right {
+    1_o_stearoyl_n_acetylsphingosine
+    <-> . +1_octadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph +n_acetylsphingosine
+    2_oleoyl_sn_glycero_3_phospho_1_sn_glycerol
+  }
+
+  branch from 1_o_oleoyl_sn_glycero_3_phosphocholine side left {
+    1_o_oleoyl_sn_glycero_3_phosphocholine
+    <-> . +tetraoleoyl_cardiolipin +1_2_dioleoyl_sn_glycero_3_phosphocholine
+    trioleoyl_2_monolysocardiolipin
+  }
+
+  branch from palmitoyl_coa side right {
+    palmitoyl_coa
+    <-> . +1_lauroyl_sn_glycero_3_phosphocholine +coa
+    1_lauroyl_2_palmitoyl_sn_glycero_3_phosphocholin
+  }
+
+  branch from palmitoyl_coa side left {
+    palmitoyl_coa
+    <-> . +1_myristoyl_sn_glycero_3_phosphocholine +coa
+    1_myristoyl_2_palmitoyl_sn_glycero_3_phosphochol
   }
 }

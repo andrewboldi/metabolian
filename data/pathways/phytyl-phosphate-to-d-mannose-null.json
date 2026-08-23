@@ -1,0 +1,599 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "phytyl-phosphate-to-d-mannose-null",
+  "name": "phytyl phosphate to α-D-mannose…",
+  "category": "other",
+  "summary": "A 4-step route from phytyl phosphate(2−) to α-D-mannose 1,6-bisphosphate(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR182269"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:75483"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "phytyl_phosphate",
+      "name": "phytyl phosphate",
+      "formula": "C20H39O4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:75483"
+      }
+    },
+    {
+      "id": "datp",
+      "name": "dATP",
+      "formula": "C10H12N5O12P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM286"
+      }
+    },
+    {
+      "id": "dadp",
+      "name": "dADP",
+      "formula": "C10H12N5O9P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM735047"
+      }
+    },
+    {
+      "id": "phytyl_diphosphate",
+      "name": "phytyl diphosphate",
+      "formula": "C20H39O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:75434"
+      }
+    },
+    {
+      "id": "glyceric_acid_1_3_biphosphate",
+      "name": "Glyceric acid 1,3-biphosphate",
+      "short": "Glyceric acid…",
+      "formula": "C3H8O10P2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:89363"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "2r_3_phosphoglycerate",
+      "name": "(2R)-3-phosphoglycerate",
+      "short": "3-phosphoglycerate",
+      "formula": "C3H4O7P",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM727604"
+      }
+    },
+    {
+      "id": "2_deoxy_d_ribose_1_5_bisphosphate",
+      "name": "2-deoxy-D-ribose 1,5-bisphosphate",
+      "short": "2-deoxy-D-ribose…",
+      "formula": "C5H12O10P2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1107188"
+      }
+    },
+    {
+      "id": "2_deoxy_d_ribose_5_phosphate",
+      "name": "2-deoxy-D-ribose 5-phosphate",
+      "short": "2-deoxy-D-ribose 5-P",
+      "formula": "C5H11O7P",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM732593"
+      }
+    },
+    {
+      "id": "alpha_d_mannose_1_phosphate",
+      "name": "alpha-D-mannose 1-phosphate",
+      "short": "alpha-D-mannose 1-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1106057"
+      }
+    },
+    {
+      "id": "d_mannose_1_6_bisphosphate",
+      "name": "α-D-mannose 1,6-bisphosphate",
+      "short": "α-D-mannose…",
+      "formula": "C6H10O12P2",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:190127"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_2_3",
+      "name": "phosphoglycerate kinase",
+      "ec": [
+        "2.7.2.3"
+      ],
+      "xrefs": {
+        "uniprot": "P00558"
+      }
+    },
+    {
+      "id": "ec_2_7_1_106",
+      "name": "glucose-1,6-bisphosphate synthase",
+      "ec": [
+        "2.7.1.106"
+      ],
+      "xrefs": {
+        "uniprot": "Q6PCE3"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR182269",
+      "substrates": [
+        {
+          "metabolite": "phytyl_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "datp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phytyl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR182269"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR182269"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "phosphoglycerate kinase",
+      "ec": "2.7.2.3",
+      "substrates": [
+        {
+          "metabolite": "glyceric_acid_1_3_biphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "datp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2r_3_phosphoglycerate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_2_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR144447"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR144447"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "glucose-1,6-bisphosphate synthase",
+      "ec": "2.7.1.106",
+      "substrates": [
+        {
+          "metabolite": "2_deoxy_d_ribose_1_5_bisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "2r_3_phosphoglycerate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glyceric_acid_1_3_biphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_deoxy_d_ribose_5_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_106"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR172732"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR172732"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "glucose-1,6-bisphosphate synthase",
+      "ec": "2.7.1.106",
+      "substrates": [
+        {
+          "metabolite": "alpha_d_mannose_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glyceric_acid_1_3_biphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 5
+        },
+        {
+          "metabolite": "2r_3_phosphoglycerate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_mannose_1_6_bisphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_106"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR144361"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR144361"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_2_deoxy_d_ribose_1_5_bisphosphate_beta-d-glucose-1-phosphate-to-2-deoxy-d-ribose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxy_d_ribose_1_5_bisphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-d-glucose-1-phosphate-to-2-deoxy-d-ribose"
+      },
+      "note": "Shares 2-deoxy-D-ribose 1,5-bisphosphate with beta-D-glucose 1-phosphate to 2-deoxy-D-ribose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1107188"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxy_d_ribose_1_5_bisphosphate_beta-d-glucose-1-phosphate-to-2-deoxy-d-ribose-n",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxy_d_ribose_1_5_bisphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-d-glucose-1-phosphate-to-2-deoxy-d-ribose-n"
+      },
+      "note": "Shares 2-deoxy-D-ribose 1,5-bisphosphate with beta-D-glucose 1-phosphate to 2-deoxy-D-ribose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1107188"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxy_d_ribose_1_5_bisphosphate_phytyl-phosphate-to-d-mannose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxy_d_ribose_1_5_bisphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phytyl-phosphate-to-d-mannose"
+      },
+      "note": "Shares 2-deoxy-D-ribose 1,5-bisphosphate with phytyl phosphate to α-D-mannose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1107188"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxy_d_ribose_5_phosphate_actn-to-2-deoxy-d-ribose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxy_d_ribose_5_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "actn-to-2-deoxy-d-ribose"
+      },
+      "note": "Shares 2-deoxy-D-ribose 5-phosphate with ACTN to 2-deoxy-D-ribose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM732593"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxy_d_ribose_5_phosphate_actn-to-2-deoxy-d-ribose-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxy_d_ribose_5_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "actn-to-2-deoxy-d-ribose-null"
+      },
+      "note": "Shares 2-deoxy-D-ribose 5-phosphate with ACTN to 2-deoxy-D-ribose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM732593"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxy_d_ribose_5_phosphate_atrazine-to-2-deoxy-d-ribose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxy_d_ribose_5_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "atrazine-to-2-deoxy-d-ribose"
+      },
+      "note": "Shares 2-deoxy-D-ribose 5-phosphate with atrazine to 2-deoxy-D-ribose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM732593"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxy_d_ribose_5_phosphate_atrazine-to-2-deoxy-d-ribose-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxy_d_ribose_5_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "atrazine-to-2-deoxy-d-ribose-null"
+      },
+      "note": "Shares 2-deoxy-D-ribose 5-phosphate with atrazine to 2-deoxy-D-ribose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM732593"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxy_d_ribose_5_phosphate_beta-d-glucose-1-phosphate-to-2-deoxy-d-ribose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxy_d_ribose_5_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-d-glucose-1-phosphate-to-2-deoxy-d-ribose"
+      },
+      "note": "Shares 2-deoxy-D-ribose 5-phosphate with beta-D-glucose 1-phosphate to 2-deoxy-D-ribose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM732593"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxy_d_ribose_5_phosphate_beta-d-glucose-1-phosphate-to-2-deoxy-d-ribose-n",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxy_d_ribose_5_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-d-glucose-1-phosphate-to-2-deoxy-d-ribose-n"
+      },
+      "note": "Shares 2-deoxy-D-ribose 5-phosphate with beta-D-glucose 1-phosphate to 2-deoxy-D-ribose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM732593"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxy_d_ribose_5_phosphate_phytyl-phosphate-to-d-mannose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxy_d_ribose_5_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phytyl-phosphate-to-d-mannose"
+      },
+      "note": "Shares 2-deoxy-D-ribose 5-phosphate with phytyl phosphate to α-D-mannose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM732593"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_mannose_1_6_bisphosphate_1-carboxyvinyl-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_mannose_1_6_bisphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-carboxyvinyl-to-nadph"
+      },
+      "note": "Shares α-D-mannose 1,6-bisphosphate with 1-carboxyvinyl… to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:190127"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_mannose_1_6_bisphosphate_1-carboxyvinyl-to-nadph-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_mannose_1_6_bisphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-carboxyvinyl-to-nadph-null"
+      },
+      "note": "Shares α-D-mannose 1,6-bisphosphate with 1-carboxyvinyl… to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:190127"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway r-2-halocarboxylic-to-2-2-methylthio-ethylmale "(R)-2-halocarboxylic… to 2-(2-methylthio)ethylmale…" {
-  spacing 302
+  spacing 326
 
   spine at 0,0 {
     r_2_halocarboxylic_acid_anion
@@ -22,45 +22,69 @@ pathway r-2-halocarboxylic-to-2-2-methylthio-ethylmale "(R)-2-halocarboxylic… 
     2_2_methylthio_ethylmaleate
   }
 
-  branch from 2_oxo_monocarboxylic_acid_anion side left {
-    2_oxo_monocarboxylic_acid_anion
-    <-> . +l_amino_acid +glyoxylate
-    glycine
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +o2 +hydrogen_acceptor +h2o
+    4z_7z_10z_14e_16z_19z_13_hydroxydocosahexaenoat
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> . +linoleate +o2 +hydrogen_acceptor +h2o
-    crepenynate
+    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +o2 +hydrogen_acceptor +h2o
+    18_r_hepe
   }
 
-  branch from hydrogen_donor side left {
-    hydrogen_donor
-    <-> ec_1_3_99_6 [1.3.99.6] +3_oxo_5_steroid +hydrogen_acceptor
-    3_oxo_4_steroid
-  }
-
-  branch from 4_methylthio_2_oxobutanoate side right {
+  branch from 4_methylthio_2_oxobutanoate side left {
     4_methylthio_2_oxobutanoate
     <-> . +d_methionine +o2 +h2o +h2o2
     nh3
   }
 
-  branch from l_amino_acid side left {
-    l_amino_acid
-    <-> . +glycocholate +glycine
-    n_choloyl_l_amino_acid_anion
-  }
-
-  branch from l_amino_acid side right {
-    l_amino_acid
-    <-> . +acetyl_coa +coa +hplus
-    n_acetyl_l_amino_acid_anion
+  branch from 3_2_methylthioethyl_malate side right {
+    3_2_methylthioethyl_malate
+    <-> . +nadh +co2 +2_5_methylsulfanyl_oxopentanoate
+    nad
   }
 
   branch from 3_2_methylthioethyl_malate side left {
     3_2_methylthioethyl_malate
-    <-> . +nadh +2_2_methylsulfanyl_ethyl_3_oxobutanedioate +h
-    nad
+    <-> . +2_2_methylsulfanyl_ethyl_3_oxobutanedioate +h +nad
+    nadh
+  }
+
+  branch from hydrogen_acceptor side right {
+    hydrogen_acceptor
+    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +hydrogen_donor +o2 +h2o
+    15_r_hepe
+  }
+
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> . +7z_10z_13z_16z_19z_docosapentaenoate +hydrogen_donor +o2 +h2o
+    7z_10z_13r_14e_16z_19z_13_hydroxydocosapentaeno
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +o2 +hydrogen_acceptor +h2o
+    15_s_hepe
+  }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +o2 +hydrogen_acceptor +h2o
+    18_s_hepe
+  }
+
+  branch from methionine side right {
+    methionine
+    <-> ec_1_17_98_2 [1.17.98.2] +bacteriochlorophyllide_c +sam +h2o +5_deoxyadenosine +hplus
+    bacteriochlorophyllide_e
+  }
+
+  branch from methionine side left {
+    methionine
+    <-> ec_1_17_98_2 [1.17.98.2] +bacteriochlorophyllide_d +sam +h2o +5_deoxyadenosine +hplus
+    bacteriochlorophyllide_f
   }
 }

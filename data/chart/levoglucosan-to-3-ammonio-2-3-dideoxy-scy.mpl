@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway levoglucosan-to-3-ammonio-2-3-dideoxy-scy "levoglucosan to 3-ammonio-2,3-dideoxy-scy…" {
-  spacing 268
+  spacing 274
 
   spine at 0,0 {
     levoglucosan
@@ -16,5 +16,11 @@ pathway levoglucosan-to-3-ammonio-2-3-dideoxy-scy "levoglucosan to 3-ammonio-2,3
     2_deoxy_scyllo_inosamine
     <-> ec_1_1_1_329 [1.1.1.329] +nad -nadh -hplus
     3_ammonio_2_3_dideoxy_scyllo_inosose
+  }
+
+  branch from levoglucosan side left {
+    levoglucosan
+    <-> ec_1_1_1_425 [1.1.1.425] +nad +nadh +hplus
+    3_dehydrolevoglucosan
   }
 }

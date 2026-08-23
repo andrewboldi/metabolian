@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-oleanolic-acid-null "UDP to oleanolic acid…" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     udp
@@ -14,17 +14,5 @@ pathway udp-to-oleanolic-acid-null "UDP to oleanolic acid…" {
     udp_alpha_d_galactose
     <-> . +udp +chikusetsusaponin_iva +h -oleanolic_acid_3_o_beta_d_glucosiduronic_acid
     udp_alpha_d_glucose
-  }
-
-  branch from udp_alpha_d_galactose side left {
-    udp_alpha_d_galactose
-    <-> ec_2_4_1_38 [2.4.1.38] +udp +beta_d_gal_1_4_alpha_d_glcnac_1_2_alpha_d_d_hep +h
-    alpha_d_glcnac_1_2_alpha_d_d_hep_1_3_3_alpha_d_g
-  }
-
-  branch from udp_alpha_d_galactose side right {
-    udp_alpha_d_galactose
-    <-> ec_2_4_1_38 [2.4.1.38] +udp +beta_d_gal_1_4_alpha_d_glcnac_1_2_beta_d_gal_1_4 +h
-    alpha_d_glcnac_1_2_beta_d_gal_1_4_alpha_l_fuc_1
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway h-to-o2 "H to O2" {
-  spacing 220
+  spacing 172
 
   spine at 0,0 {
     h
@@ -14,53 +14,5 @@ pathway h-to-o2 "H to O2" {
     typhasterol
     <-> . +h2o -o2
     6_deoxotyphasterol
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +h +lovastatin +o2 +nadph +h2o
-    6_exomethylene_lovastatin_lactone_form
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +n_hexahydrocyclopenta_c_pyrrol_2_1h_yl_amino_car +h2o +h +o2 +nadph
-    gliclazide
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +h +adp +carboxy_gliclazide +phosphate +carboxy_gliclazide
-    atp
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    cerivastatin
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +all_trans_retinoate +fmnh2 +o2 +h2o +hplus
-    all_trans_18_hydroxyretinoate
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +all_trans_retinoate +fmnh2 +o2 +h2o +hplus
-    5_6_epoxyretinoate
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +2_octaprenyl_3_methyl_6_methoxy_1_4_benzoquinol +h +nadph +nadp +h2o
-    2_octaprenyl_3_methyl_5_hydroxy_6_methoxy_1_4_be
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +h +nadph +pitavastatin +nadp +pitavastatin_m13
-    h2o2
   }
 }

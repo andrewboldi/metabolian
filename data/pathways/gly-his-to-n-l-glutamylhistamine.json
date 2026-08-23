@@ -126,90 +126,6 @@
       "xrefs": {
         "chebi": "CHEBI:43474"
       }
-    },
-    {
-      "id": "cholate",
-      "name": "Cholic acid (cholate)",
-      "short": "Cholic acid…",
-      "formula": "C24H39O5",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:29747"
-      }
-    },
-    {
-      "id": "l_histidocholate",
-      "name": "L-histidocholate",
-      "formula": "C30H46N3O6",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:229712"
-      }
-    },
-    {
-      "id": "taurocholate",
-      "name": "Taurocholate",
-      "formula": "C26H44NO7S",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:36257"
-      }
-    },
-    {
-      "id": "taurine",
-      "name": "Taurine",
-      "formula": "C2H7NO3S",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:507393"
-      }
-    },
-    {
-      "id": "myristoyl_coa",
-      "name": "Myristoyl-CoA (tetradecanoyl-CoA)",
-      "short": "Myristoyl-CoA…",
-      "formula": "C35H58N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57385"
-      }
-    },
-    {
-      "id": "n_myristoylglycinate",
-      "name": "N-myristoylglycinate",
-      "formula": "C16H30NO3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:86500"
-      }
-    },
-    {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57287"
-      }
-    },
-    {
-      "id": "lauroyl_coa",
-      "name": "lauroyl-CoA",
-      "formula": "C33H54N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57375"
-      }
-    },
-    {
-      "id": "n_dodecanoylglycinate",
-      "name": "N-dodecanoylglycinate",
-      "short": "N-dodecanoylglycina…",
-      "formula": "C14H26NO3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:142678"
-      }
     }
   ],
   "enzymes": [
@@ -218,7 +134,10 @@
       "name": "histidine decarboxylase",
       "ec": [
         "4.1.1.22"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P19113"
+      }
     },
     {
       "id": "ec_6_3_2_18",
@@ -369,167 +288,115 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "cholate + L-histidine = L-histidocholate + H2O",
-      "equation": "cholate + L-histidine = L-histidocholate + H2O",
-      "substrates": [
-        {
-          "metabolite": "cholate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_histidine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "l_histidocholate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:79099"
+      "id": "xt_histaminium_histaminium-to-5-hydroxyimidazole-4-acet",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "histaminium"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "histaminium-to-5-hydroxyimidazole-4-acet"
+      },
+      "note": "Shares histaminium with histaminium to 5-hydroxyimidazole-4-acet….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:79099"
+            "db": "ChEBI",
+            "id": "CHEBI:58432"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "taurocholate + L-histidine = L-histidocholate + taurine",
-      "equation": "taurocholate + L-histidine = L-histidocholate + taurine",
-      "substrates": [
-        {
-          "metabolite": "taurocholate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_histidine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "l_histidocholate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "taurine",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:79103"
+      "id": "xt_histaminium_methylenediurea-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "histaminium"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "methylenediurea-to-ammonium"
+      },
+      "note": "Shares histaminium with methylenediurea to ammonium.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:79103"
+            "db": "ChEBI",
+            "id": "CHEBI:58432"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "tetradecanoyl-CoA + glycine = N-tetradecanoylglycine + CoA + H(+)",
-      "equation": "tetradecanoyl-CoA + glycine = N-tetradecanoylglycine + CoA + H(+)",
-      "substrates": [
-        {
-          "metabolite": "myristoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glycine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n_myristoylglycinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:64252"
+      "id": "xt_histaminium_o-s-alanyl-pantethein-to-alanyl-l-argininium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "histaminium"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "o-s-alanyl-pantethein-to-alanyl-l-argininium"
+      },
+      "note": "Shares histaminium with O-[S-(β-alanyl)pantethein… to β-alanyl-L-argininium.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:64252"
+            "db": "ChEBI",
+            "id": "CHEBI:58432"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "dodecanoyl-CoA + glycine = N-dodecanoylglycine + CoA + H(+)",
-      "equation": "dodecanoyl-CoA + glycine = N-dodecanoylglycine + CoA + H(+)",
-      "substrates": [
-        {
-          "metabolite": "lauroyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glycine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n_dodecanoylglycinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:64256"
+      "id": "xt_histaminium_r-alanopine-to-n6-r-s8-succinyldihydr",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "histaminium"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "r-alanopine-to-n6-r-s8-succinyldihydr"
+      },
+      "note": "Shares histaminium with (R)-β-alanopine to N6-[(R)-S8-succinyldihydr….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:64256"
+            "db": "ChEBI",
+            "id": "CHEBI:58432"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_histaminium_vitexin-2-o-l-rhamnos-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "histaminium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "vitexin-2-o-l-rhamnos-to-hydrogen-donor"
+      },
+      "note": "Shares histaminium with vitexin 2''-O-β-L-rhamnos… to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58432"
           }
         ]
       }

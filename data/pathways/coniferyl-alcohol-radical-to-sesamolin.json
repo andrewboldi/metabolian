@@ -114,82 +114,6 @@
       "xrefs": {
         "chebi": "CHEBI:175751"
       }
-    },
-    {
-      "id": "h",
-      "name": "H",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM1"
-      }
-    },
-    {
-      "id": "nadph",
-      "name": "NADPH",
-      "formula": "C21H26N7O17P3",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM738702"
-      }
-    },
-    {
-      "id": "nadp",
-      "name": "NADP",
-      "formula": "C21H25N7O17P3",
-      "charge": -3,
-      "xrefs": {
-        "metanetx": "MNXM5"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "WATER"
-      }
-    },
-    {
-      "id": "5_epi_aristolochene",
-      "name": "(+)-5-epi-aristolochene",
-      "short": "(+)-5-epi-aristoloc…",
-      "formula": "C15H24",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:23925"
-      }
-    },
-    {
-      "id": "2_hydroxy_5_epi_aristolochene",
-      "name": "2β-hydroxy-5-epi-aristolochene",
-      "short": "2β-hydroxy-5-epi-ar…",
-      "formula": "C15H24O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:142082"
-      }
-    },
-    {
-      "id": "4_epi_eremophilene",
-      "name": "(−)-4-epi-eremophilene",
-      "short": "(−)-4-epi-eremophil…",
-      "formula": "C15H24",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:142083"
-      }
-    },
-    {
-      "id": "4_epi_eremophilene_2_ol",
-      "name": "4-epi-eremophilene-2β-ol",
-      "short": "4-epi-eremophilene-…",
-      "formula": "C15H24O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:142084"
-      }
     }
   ],
   "enzymes": [
@@ -198,13 +122,6 @@
       "name": "(+)-piperitol/(+)-sesamin synthase",
       "ec": [
         "1.14.19.74"
-      ]
-    },
-    {
-      "id": "ec_1_14_14_151",
-      "name": "premnaspirodiene oxygenase",
-      "ec": [
-        "1.14.14.151"
       ]
     }
   ],
@@ -386,167 +303,181 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "Reaction MNXR177283",
-      "substrates": [
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "4_1s_3ar_4s_6ar_4_1_3_benzodioxol_5_yl_tetrahydr",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sesamin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR177283"
+      "id": "xt_coniferyl_alcohol_radical_s-adenosyl-l-homocysteine-to-e-caffeyl-aldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coniferyl_alcohol_radical"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-e-caffeyl-aldehyde"
+      },
+      "note": "Shares coniferyl alcohol radical with S-adenosyl-L-homocysteine to (E)-caffeyl aldehyde.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR177283"
+            "id": "MNXM1106916"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "premnaspirodiene oxygenase",
-      "equation": "(+)-5-epi-aristolochene + reduced [NADPH--hemoprotein reductase] + O2 = 2beta-hydroxy-5-epi-aristolochene + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "ec": "1.14.14.151",
-      "substrates": [
-        {
-          "metabolite": "5_epi_aristolochene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_hydroxy_5_epi_aristolochene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_151"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:57672"
+      "id": "xt_coniferyl_alcohol_radical_udp-to-pinoresinol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coniferyl_alcohol_radical"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-pinoresinol"
+      },
+      "note": "Shares coniferyl alcohol radical with UDP to (−)-pinoresinol.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:57672"
+            "db": "MetaNetX",
+            "id": "MNXM1106916"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "premnaspirodiene oxygenase",
-      "equation": "4-epi-eremophilene + reduced [NADPH--hemoprotein reductase] + O2 = 4-epi-eremophilene-2beta-ol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "ec": "1.14.14.151",
-      "substrates": [
-        {
-          "metabolite": "4_epi_eremophilene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "4_epi_eremophilene_2_ol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_151"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:57676"
+      "id": "xt_pinoresinol_lariciresinol-to-lariciresinol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pinoresinol"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "lariciresinol-to-lariciresinol"
+      },
+      "note": "Shares (+)-pinoresinol with (+)-lariciresinol to (+)-lariciresinol.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:57676"
+            "db": "ChEBI",
+            "id": "CHEBI:40"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pinoresinol_pinoresinol-diglucoside-to-4-4-dihydroxy-alpha-m",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pinoresinol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "pinoresinol-diglucoside-to-4-4-dihydroxy-alpha-m"
+      },
+      "note": "Shares (+)-pinoresinol with Pinoresinol diglucoside to 4,4'-Dihydroxy-alpha-meth….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:40"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pinoresinol_udp-to-pinoresinol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pinoresinol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-pinoresinol"
+      },
+      "note": "Shares (+)-pinoresinol with UDP to (−)-pinoresinol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:40"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_1s_3ar_4s_6ar_4_1_3_benzodioxol_5_yl_tetrahydr_diphosphate-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_1s_3ar_4s_6ar_4_1_3_benzodioxol_5_yl_tetrahydr"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-h2o-null"
+      },
+      "note": "Shares 4-[(1S,3aR,4S,6aR)-4-(1,3-benzodioxol-5-yl)tetrahydrofuro[3,4-c]furan-1-yl]-2-methoxyphenol with diphosphate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:141003"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sesamin_diphosphate-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sesamin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-h2o-null"
+      },
+      "note": "Shares (+)-sesamin with diphosphate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:66470"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sesamin_udp-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sesamin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-h2o"
+      },
+      "note": "Shares (+)-sesamin with UDP to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:66470"
           }
         ]
       }

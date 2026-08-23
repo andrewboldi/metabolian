@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway protoaustinoid-a-to-succinate-65176 "protoaustinoid A to succinate" {
-  spacing 188
+  spacing 152
 
   spine at 0,0 {
     protoaustinoid_a
@@ -14,41 +14,5 @@ pathway protoaustinoid-a-to-succinate-65176 "protoaustinoid A to succinate" {
     preaustinoid_a
     <-> . +akg +o2 -succinate -co2 -h2o
     berkeleytrione
-  }
-
-  branch from hydrogen_donor side left {
-    hydrogen_donor
-    <-> ec_1_17_99_11 [1.17.99.11] +1_dihydrotestosterone +hydrogen_acceptor +h2o
-    17_hydroxyandrostan_1_3_dione
-  }
-
-  branch from hydrogen_donor side right {
-    hydrogen_donor
-    <-> . +hydrogen_acceptor +17_hydroxyandrostan_1_3_dione
-    1_17_dihydroxyandrostan_3_one
-  }
-
-  branch from hydrogen_acceptor side left {
-    hydrogen_acceptor
-    <-> . +1_hydroxy_5_androstan_3_17_dione +hydrogen_donor
-    5_androstan_1_3_17_trione
-  }
-
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> ec_1_17_99_10 [1.17.99.10] +cholest_4_6_dien_3_one +h2o +hydrogen_donor
-    25_hydroxycholest_4_6_dien_3_one
-  }
-
-  branch from succinate side left {
-    succinate
-    <-> ec_2_8_3_28 [2.8.3.28] +phenylsuccinate +succinyl_coa
-    3_phenylsuccinyl_coa
-  }
-
-  branch from succinate side right {
-    succinate
-    <-> ec_2_8_3_28 [2.8.3.28] +s_2_benzylsuccinate +succinyl_coa
-    s_2_benzylsuccinyl_coa
   }
 }

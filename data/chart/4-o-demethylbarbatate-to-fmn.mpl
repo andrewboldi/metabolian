@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-o-demethylbarbatate-to-fmn "4-O-demethylbarbatate to FMN" {
-  spacing 170
+  spacing 152
 
   spine at 0,0 {
     4_o_demethylbarbatate
@@ -14,23 +14,5 @@ pathway 4-o-demethylbarbatate-to-fmn "4-O-demethylbarbatate to FMN" {
     proatranorin_iv
     <-> . +fmnh2 +o2 -fmn -h2o -hplus
     atranorin
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +desmethylrestrictinol +sam +hplus
-    restrictinol
-  }
-
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_398 [2.1.1.398] +3_hydroxyisoflavones +sam +hplus
-    3_methoxyisoflavones
-  }
-
-  branch from atranorin side left {
-    atranorin
-    <-> . +proatranorin_v
-    h2o
   }
 }

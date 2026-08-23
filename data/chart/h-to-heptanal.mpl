@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway h-to-heptanal "H to heptanal" {
-  spacing 230
+  spacing 272
 
   spine at 0,0 {
     h
@@ -16,45 +16,87 @@ pathway h-to-heptanal "H to heptanal" {
     heptanal
   }
 
-  branch from heptanal side left {
-    heptanal
-    <-> . +heptanoate +atp +nadph +hplus +amp +nadp
-    ppi
-  }
-
-  branch from heptanal side right {
-    heptanal
-    <-> ec_1_2_1_3 [1.2.1.3] +h +nadph +heptanoate +h2o
-    nadp
-  }
-
   branch from h2o side left {
     h2o
-    <-> . +isotrichotriol
-    trichotriol
+    <-> . +cholest_5_en_3_yl_13z_16z_docosadienoate +cholesterol
+    13z_16z_docosadienoic_acid
   }
 
   branch from h2o side right {
     h2o
-    <-> . +trichotriol
-    3_hydroxytrichothecene
-  }
-
-  branch from heptan_1_ol side left {
-    heptan_1_ol
-    <-> ec_3_2_1_21 [3.2.1.21] +beta_d_glucose +h2o
-    n_heptyl_beta_d_glucoside
-  }
-
-  branch from nad side right {
-    nad
-    <-> . +nadh +3_ethyl_2_oxosuccinate +h
-    3_ethylmalate
+    <-> . +maltoheptaose +beta_d_fructose
+    maltononaose
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +2_3_dihydroxy_2_carboxybiphenyl +h2o
-    1_10_dihydro_1_10_dihydroxyfluoren_9_one
+    <-> . +nadh +h +4_o_methyl_d_myo_inosose
+    1d_4_o_methyl_myo_inositol
+  }
+
+  branch from nad side right {
+    nad
+    <-> . +nadh +h +o2 +5_hydroxypicolinic_acid +2_5_dihydroxypyridine +h2o
+    co2
+  }
+
+  branch from h side left {
+    h
+    <-> . +ferrocytochrome_c +pyruvate +ferricytochrome_c
+    r_lactate
+  }
+
+  branch from h side right {
+    h
+    <-> . +l_leucine +l_lysine +l_arginine +h2o
+    lys_arg_leu
+  }
+
+  branch from formate side left {
+    formate
+    <-> ec_3_7_1_25 [3.7.1.25] +2z_4e_2_hydroxy_5_methyl_6_oxohexa_2_4_dienoate +h2o +h
+    2z_2_hydroxyhexa_2_5_dienoate
+  }
+
+  branch from formate side right {
+    formate
+    <-> ec_1_2_1_4 [1.2.1.4] +formaldehyde +nadp +h2o +h
+    nadph
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +d_glcp_1_4_d_glcp_1_4_d_glcp +beta_d_fructose
+    d_maltose
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +d_maltose
+    beta_d_fructose
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> . +h +l_pipecolate +o2 +nad +h2o
+    n_hydroxy_l_pipecolic_acid
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +h +solanid_4_en_3_one +nad
+    solanidine
+  }
+
+  branch from nad side left {
+    nad
+    <-> . +nadh +h +solanid_4_en_3_one
+    solanid_3_one
+  }
+
+  branch from nad side right {
+    nad
+    <-> . +nadh +h +solanid_3_one
+    demissidine
   }
 }

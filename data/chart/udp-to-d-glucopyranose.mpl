@@ -17,16 +17,4 @@ pathway udp-to-d-glucopyranose "UDP to D-glucopyranose" {
     <-> . +h2o -glucose
     20s_ginsenoside_rh2
   }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_aspartate +h +glycine
-    glycyl_aspartate
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +glycine +l_glutamate
-    glycyl_glutamate
-  }
 }

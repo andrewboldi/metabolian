@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-feruloylglycinate-to-2-e-o-feruloyl-d-galact "N-feruloylglycinate to 2-(E)-O-feruloyl-D-galact…" {
-  spacing 264
+  spacing 300
 
   spine at 0,0 {
     n_feruloylglycinate
@@ -36,8 +36,8 @@ pathway n-feruloylglycinate-to-2-e-o-feruloyl-d-galact "N-feruloylglycinate to 2
 
   branch from glycine side right {
     glycine
-    <-> ec_1_4_3_19 [1.4.3.19] +o2 +h2o +h2o2 +nh3
-    glyoxylate
+    <-> ec_2_3_1_37 [2.3.1.37] +succinyl_coa +hplus +co2 +coa
+    ala
   }
 
   branch from trans_feruloyl_coa side left {
@@ -50,5 +50,41 @@ pathway n-feruloylglycinate-to-2-e-o-feruloyl-d-galact "N-feruloylglycinate to 2
     trans_feruloyl_coa
     <-> ec_4_1_2_61 [4.1.2.61] +h2o +acetyl_coa
     vanillin
+  }
+
+  branch from trans_ferulate side left {
+    trans_ferulate
+    <-> . +udp_d_glucuronate +udp
+    e_ferulic_acid_d_glucuronate_ester
+  }
+
+  branch from glycine side right {
+    glycine
+    <-> ec_2_1_4_1 [2.1.4.1] +arginine +ornithine
+    guanidinoacetic_acid
+  }
+
+  branch from glycine side left {
+    glycine
+    <-> ec_6_3_2_3 [6.3.2.3] +glu_cys +atp +adp +pi +hplus
+    gsh
+  }
+
+  branch from trans_feruloyl_coa side right {
+    trans_feruloyl_coa
+    <-> . +2r_3s_piscidate +coa
+    cimicifugate_e
+  }
+
+  branch from galactarate side left {
+    galactarate
+    <-> ec_4_2_1_42 [4.2.1.42] +h2o
+    5_dehydro_4_deoxy_d_glucarate
+  }
+
+  branch from galactarate side right {
+    galactarate
+    <-> ec_4_2_1_158 [4.2.1.158] +h2o
+    3_deoxy_d_threo_hex_2_ulosarate
   }
 }

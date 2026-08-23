@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cobalt-precorrin-2-to-s-adenosyl-l-homocysteine "cobalt-precorrin-2 to S-adenosyl-L-homocysteine" {
-  spacing 264
+  spacing 282
 
   spine at 0,0 {
     cobalt_precorrin_2
@@ -22,25 +22,43 @@ pathway cobalt-precorrin-2-to-s-adenosyl-l-homocysteine "cobalt-precorrin-2 to S
 
   branch from sah side left {
     sah
-    <-> . +cytidine_5_monophosphate_1 +sam +hplus
-    5_methylcytidine_5_monophosphate_1
+    <-> ec_2_1_1_168 [2.1.1.168] +uridine_5_monophosphate_1 +sam +hplus
+    2_o_methyluridine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_70 [2.1.1.70] +8_hydroxyfurocoumarin +sam +hplus
-    8_methoxyfurocoumarin
+    <-> ec_2_1_1_170 [2.1.1.170] +guanosine_5_monophosphate_1 +sam
+    n7_methylguanosine_5_phosphate_zwitterion
   }
 
-  branch from cobalt_precorrin_4 side left {
-    cobalt_precorrin_4
-    <-> ec_2_1_1_272 [2.1.1.272] +cobalt_ii_factor_iii +hydrogen_donor +sam +sah
-    hydrogen_acceptor
-  }
-
-  branch from cobalt_precorrin_6a side right {
+  branch from cobalt_precorrin_6a side left {
     cobalt_precorrin_6a
     <-> ec_1_3_1_106 [1.3.1.106] +nad +nadh +hplus
     cobalt_precorrin_6b
+  }
+
+  branch from sam side right {
+    sam
+    <-> ec_2_1_1_172 [2.1.1.172] +guanosine_5_monophosphate_1 +sah +hplus
+    n2_methylguanosine_5_monophosphate_1
+  }
+
+  branch from sam side left {
+    sam
+    <-> ec_2_1_1_173 [2.1.1.173] +n2_methylguanosine_5_monophosphate_1 +sah +hplus
+    guanosine_5_monophosphate_1
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_176 [2.1.1.176] +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_177 [2.1.1.177] +pseudouridine_5_phosphate_1 +sam +hplus
+    n3_methylpseudouridine_5_monophosphate_1
   }
 }

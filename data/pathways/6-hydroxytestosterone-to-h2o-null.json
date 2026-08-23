@@ -1,0 +1,660 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "6-hydroxytestosterone-to-h2o-null",
+  "name": "6β-hydroxytestosterone to H2O",
+  "category": "energy-metabolism",
+  "summary": "A 4-step route from 6β-hydroxytestosterone to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR102287"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:34477"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "6_hydroxytestosterone",
+      "name": "6β-hydroxytestosterone",
+      "short": "6β-hydroxytestoster…",
+      "formula": "C19H28O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:34477"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "testosterone",
+      "name": "testosterone",
+      "formula": "C19H28O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1363892"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "formate",
+      "name": "formate",
+      "formula": "CHO2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM39"
+      }
+    },
+    {
+      "id": "17beta_estradiol",
+      "name": "17beta-estradiol",
+      "formula": "C18H24O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM733896"
+      }
+    },
+    {
+      "id": "16alpha_17beta_estriol",
+      "name": "16alpha,17beta-estriol",
+      "short": "16alpha,17beta-estr…",
+      "formula": "C18H24O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM2673"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_14_1",
+      "name": "unspecific monooxygenase",
+      "ec": [
+        "1.14.14.1"
+      ],
+      "xrefs": {
+        "uniprot": "P04798"
+      }
+    },
+    {
+      "id": "ec_1_14_14_25",
+      "name": "cholesterol 24-hydroxylase",
+      "ec": [
+        "1.14.14.25"
+      ],
+      "xrefs": {
+        "uniprot": "Q9Y6A2"
+      }
+    },
+    {
+      "id": "ec_1_14_14_55",
+      "name": "quinine 3-monooxygenase",
+      "ec": [
+        "1.14.14.55"
+      ],
+      "xrefs": {
+        "uniprot": "P08684"
+      }
+    },
+    {
+      "id": "ec_1_14_14_57",
+      "name": "taurochenodeoxycholate 6alpha-hydroxylase",
+      "ec": [
+        "1.14.14.57"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "unspecific monooxygenase",
+      "ec": "1.14.14.1",
+      "substrates": [
+        {
+          "metabolite": "6_hydroxytestosterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "testosterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR102287"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR102287"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR102260",
+      "substrates": [
+        {
+          "metabolite": "testosterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "formate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "17beta_estradiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR102260"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR102260"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "unspecific monooxygenase",
+      "ec": "1.14.14.1",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "17beta_estradiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "16alpha_17beta_estriol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR107941"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR107941"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Reaction MNXR156186",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "16alpha_17beta_estriol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "16alpha_17beta_estriol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR156186"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR156186"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_6_hydroxytestosterone_6-hydroxytestosterone-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_hydroxytestosterone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-hydroxytestosterone-to-h2o"
+      },
+      "note": "Shares 6β-hydroxytestosterone with 6β-hydroxytestosterone to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:34477"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_hydroxytestosterone_r-h-to-hydrogen-acceptor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_hydroxytestosterone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-h-to-hydrogen-acceptor"
+      },
+      "note": "Shares 6β-hydroxytestosterone with R-H to hydrogen acceptor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:34477"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_hydroxytestosterone_r-h-to-hydrogen-acceptor-17149",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_hydroxytestosterone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-h-to-hydrogen-acceptor-17149"
+      },
+      "note": "Shares 6β-hydroxytestosterone with R-H to hydrogen acceptor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:34477"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_17beta_estradiol_2-oxohepta-3-5-dienedioa-to-o2-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "17beta_estradiol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-oxohepta-3-5-dienedioa-to-o2-null"
+      },
+      "note": "Shares 17beta-estradiol with 2-oxohepta--3,5-dienedioa… to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM733896"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_17beta_estradiol_4-hydroxy-17beta-estradiol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "17beta_estradiol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxy-17beta-estradiol-to-h2o"
+      },
+      "note": "Shares 17beta-estradiol with 4-hydroxy-17beta-estradiol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM733896"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_17beta_estradiol_4-hydroxy-17beta-estradiol-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "17beta_estradiol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxy-17beta-estradiol-to-h2o-null"
+      },
+      "note": "Shares 17beta-estradiol with 4-hydroxy-17beta-estradiol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM733896"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_17beta_estradiol_6-hydroxytestosterone-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "17beta_estradiol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-hydroxytestosterone-to-h2o"
+      },
+      "note": "Shares 17beta-estradiol with 6β-hydroxytestosterone to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM733896"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_17beta_estradiol_aflatoxin-q1-to-aflatoxin-b1exo-8-9-epoxi",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "17beta_estradiol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aflatoxin-q1-to-aflatoxin-b1exo-8-9-epoxi"
+      },
+      "note": "Shares 17beta-estradiol with aflatoxin Q1 to Aflatoxin B1exo-8,9-epoxi….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM733896"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_16alpha_17beta_estriol_2-azaniumyl-4-5-dihydroxy-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "16alpha_17beta_estriol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-azaniumyl-4-5-dihydroxy-to-nad"
+      },
+      "note": "Shares 16alpha,17beta-estriol with 2-azaniumyl-4,5-dihydroxy… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2673"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_16alpha_17beta_estriol_2-azaniumyl-4-5-dihydroxy-to-nad-26313",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "16alpha_17beta_estriol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-azaniumyl-4-5-dihydroxy-to-nad-26313"
+      },
+      "note": "Shares 16alpha,17beta-estriol with 2-azaniumyl-4,5-dihydroxy… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2673"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_16alpha_17beta_estriol_6-hydroxytestosterone-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "16alpha_17beta_estriol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-hydroxytestosterone-to-h2o"
+      },
+      "note": "Shares 16alpha,17beta-estriol with 6β-hydroxytestosterone to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2673"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_16alpha_17beta_estriol_r-dichlorprop-to-2-2-4-dichloro-5-oxo-2-5-37823",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "16alpha_17beta_estriol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-dichlorprop-to-2-2-4-dichloro-5-oxo-2-5-37823"
+      },
+      "note": "Shares 16alpha,17beta-estriol with (R)-dichlorprop to 2-(2,4-dichloro-5-oxo-2,5….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2673"
+          }
+        ]
+      }
+    }
+  ]
+}

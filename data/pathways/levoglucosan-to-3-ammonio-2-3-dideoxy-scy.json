@@ -147,6 +147,16 @@
       "xrefs": {
         "chebi": "CHEBI:57945"
       }
+    },
+    {
+      "id": "3_dehydrolevoglucosan",
+      "name": "3-dehydrolevoglucosan",
+      "short": "3-dehydrolevoglucos…",
+      "formula": "C6H8O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:144894"
+      }
     }
   ],
   "enzymes": [
@@ -176,6 +186,13 @@
       "name": "2-deoxy-scyllo-inosamine dehydrogenase",
       "ec": [
         "1.1.1.329"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_425",
+      "name": "levoglucosan dehydrogenase",
+      "ec": [
+        "1.1.1.425"
       ]
     }
   ],
@@ -364,6 +381,255 @@
           {
             "db": "Rhea",
             "id": "RHEA:33883"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "levoglucosan dehydrogenase",
+      "equation": "levoglucosan + NAD(+) = 3-dehydrolevoglucosan + NADH + H(+)",
+      "ec": "1.1.1.425",
+      "substrates": [
+        {
+          "metabolite": "levoglucosan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_dehydrolevoglucosan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_425"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:62392"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62392"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_levoglucosan_d-glucopyranose-to-1-o-galloyl-beta-d-glucose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "levoglucosan"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glucopyranose-to-1-o-galloyl-beta-d-glucose"
+      },
+      "note": "Shares levoglucosan with D-glucopyranose to 1-O-galloyl-beta-D-glucose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:30997"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_levoglucosan_diphosphate-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "levoglucosan"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-phosphate"
+      },
+      "note": "Shares levoglucosan with diphosphate to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:30997"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxy_scyllo_inosose_6-o-trans-methoxy-mycolyl-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxy_scyllo_inosose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-o-trans-methoxy-mycolyl-to-h2o"
+      },
+      "note": "Shares 2-deoxy-scyllo-inosose with 6-O-trans-methoxy-mycolyl… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64796"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxy_scyllo_inosose_nadh-to-cdp-d-arabinitol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxy_scyllo_inosose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-cdp-d-arabinitol"
+      },
+      "note": "Shares 2-deoxy-scyllo-inosose with NADH to CDP-D-arabinitol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64796"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxy_scyllo_inosamine_2-deoxy-scyllo-inosamine-to-kanamycin-c",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxy_scyllo_inosamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-deoxy-scyllo-inosamine-to-kanamycin-c"
+      },
+      "note": "Shares 2-deoxy-scyllo-inosamine with 2-deoxy-scyllo-inosamine to kanamycin C.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:65003"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxy_scyllo_inosamine_5-end-purine-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxy_scyllo_inosamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-end-purine-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares 2-deoxy-scyllo-inosamine with 5'-end purine… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:65003"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_ammonio_2_3_dideoxy_scyllo_inosose_2-deoxy-scyllo-inosamine-to-kanamycin-c",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_ammonio_2_3_dideoxy_scyllo_inosose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-deoxy-scyllo-inosamine-to-kanamycin-c"
+      },
+      "note": "Shares 3-ammonio-2,3-dideoxy-scyllo-inosose with 2-deoxy-scyllo-inosamine to kanamycin C.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:65002"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_ammonio_2_3_dideoxy_scyllo_inosose_5-end-purine-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_ammonio_2_3_dideoxy_scyllo_inosose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-end-purine-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares 3-ammonio-2,3-dideoxy-scyllo-inosose with 5'-end purine… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:65002"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_dehydrolevoglucosan_mangiferin-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_dehydrolevoglucosan"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "mangiferin-to-fmn"
+      },
+      "note": "Shares 3-dehydrolevoglucosan with mangiferin to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:144894"
           }
         ]
       }

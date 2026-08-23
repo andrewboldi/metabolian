@@ -1,0 +1,275 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "nogalaviketone-to-o2",
+  "name": "nogalaviketone to O2",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from nogalaviketone to O2, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR196245"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "nogalaviketone",
+      "name": "nogalaviketone",
+      "formula": "C21H15O8",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM12475"
+      }
+    },
+    {
+      "id": "name",
+      "name": "NAME",
+      "formula": "C21H15O8",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1370099"
+      }
+    },
+    {
+      "id": "s_adenosyl_l_homocysteine",
+      "name": "S-adenosyl-L-homocysteine",
+      "short": "S-adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1102167"
+      }
+    },
+    {
+      "id": "s_adenosyl_l_methionine",
+      "name": "S-adenosyl-L-methionine",
+      "short": "S-adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1363767"
+      }
+    },
+    {
+      "id": "nogalonic_acid",
+      "name": "Nogalonic acid",
+      "formula": "C20H12O8",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1372528"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "12_deoxynogalonic_acid",
+      "name": "12-Deoxynogalonic acid",
+      "short": "12-Deoxynogalonic…",
+      "formula": "C20H14O7",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1372579"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_5_1_26",
+      "name": "nogalonic acid methyl ester cyclase",
+      "ec": [
+        "5.5.1.26"
+      ]
+    },
+    {
+      "id": "ec_1_13_12_22",
+      "name": "deoxynogalonate monooxygenase",
+      "ec": [
+        "1.13.12.22"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "nogalonic acid methyl ester cyclase",
+      "ec": "5.5.1.26",
+      "substrates": [
+        {
+          "metabolite": "nogalaviketone",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "name",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_5_1_26"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR196245"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196245"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR195948",
+      "substrates": [
+        {
+          "metabolite": "s_adenosyl_l_homocysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "name",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_adenosyl_l_methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nogalonic_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR195948"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR195948"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "deoxynogalonate monooxygenase",
+      "ec": "1.13.12.22",
+      "substrates": [
+        {
+          "metabolite": "nogalonic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "12_deoxynogalonic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_12_22"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR196243"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196243"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_nogalaviketone_9r-13r-1a-1b-dinor-10-1-to-1s-2s-opc-8",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nogalaviketone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "9r-13r-1a-1b-dinor-10-1-to-1s-2s-opc-8"
+      },
+      "note": "Shares nogalaviketone with (9R,13R)-1a,1b-dinor-10,1… to (1S,2S)-OPC-8.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM12475"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_name_ergothioneine-thione-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "name"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ergothioneine-thione-to-h2o"
+      },
+      "note": "Shares NAME with ergothioneine (thione… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1370099"
+          }
+        ]
+      }
+    }
+  ]
+}

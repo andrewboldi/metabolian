@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway octadecanamide-to-2-oxooctadecanoate "octadecanamide to 2-oxooctadecanoate" {
-  spacing 240
+  spacing 228
 
   spine at 0,0 {
     octadecanamide
@@ -14,18 +14,6 @@ pathway octadecanamide-to-2-oxooctadecanoate "octadecanamide to 2-oxooctadecanoa
     r_2_hydroxyoctadecanoate
     <-> ec_1_1_1_98 [1.1.1.98] +nad -nadh -hplus
     2_oxooctadecanoate
-  }
-
-  branch from nh3 side left {
-    nh3
-    <-> . +n_acetylputrescinium +o2 +h2o +h2o2
-    4_acetamidobutanal
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +dserine +o2 +h2o +h2o2
-    3_hydroxypyruvate
   }
 
   branch from 2_oxooctadecanoate side left {

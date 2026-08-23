@@ -54,19 +54,73 @@ pathway 7-8-dihydroneopterin-to-dihydrofolate "7,8-dihydroneopterin to dihydrofo
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_6 [4.2.3.6] +fpp
-    trichodiene
+    <-> ec_4_2_3_27 [4.2.3.27] +dmapp
+    isoprene
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_166 [4.2.3.166] +fpp +h2o
-    1_10_e_4e_6s_7r_germacradien_6_ol
+    <-> ec_4_6_1_2 [4.6.1.2] +gtp
+    3_5_cyclic_gmp
   }
 
   branch from dhf side right {
     dhf
     <-> . +uridine_5_monophosphate_1 +5_10_methylenetetrahydrofolate +taurine +gtp +hydrogen_acceptor +h2o +gdp +hydrogen_donor +pi +hplus
     5_taurinomethyluridine_5_phosphate_1
+  }
+
+  branch from 4_aminobenzoate side left {
+    4_aminobenzoate
+    <-> ec_1_14_13_27 [1.14.13.27] +nadph +o2 +hplus +co2 +nadp +h2o
+    4_aminophenol
+  }
+
+  branch from 4_aminobenzoate side right {
+    4_aminobenzoate
+    <-> . +h2o +glutamate
+    n_4_aminobenzoyl_l_glutamate
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_6_3_1_7 [6.3.1.7] +4_methylene_l_glutamate +nh3 +atp +amp +hplus
+    4_methylene_l_glutamine
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_2_5_1_34 [2.5.1.34] +dmapp +l_tryptophan
+    4_3_methylbut_2_enyl_l_tryptophan
+  }
+
+  branch from glutamate side left {
+    glutamate
+    <-> ec_5_1_1_3 [5.1.1.3]
+    d_glutamate
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> ec_5_4_99_1 [5.4.99.1]
+    threo_3_methyl_l_aspartate
+  }
+
+  branch from formate side left {
+    formate
+    <-> ec_3_5_1_9 [3.5.1.9] +n_formyl_l_kynurenine +h2o +hplus
+    l_kynurenine
+  }
+
+  branch from formate side right {
+    formate
+    <-> ec_3_5_4_16 [3.5.4.16] +gtp +h2o +hplus
+    7_8_dihydroneopterin_3_triphosphate
+  }
+
+  branch from aicar side left {
+    aicar
+    <-> . +5_5_phospho_1_deoxy_d_ribulos_1_ylimino_methylam +nh3 +h2o +hplus
+    d_erythro_1_imidazol_4_yl_glycerol_3_phosphate
   }
 }

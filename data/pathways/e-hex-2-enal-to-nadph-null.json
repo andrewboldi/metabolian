@@ -1,0 +1,490 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "e-hex-2-enal-to-nadph-null",
+  "name": "(E)-hex-2-enal to NADPH",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from (E)-hex-2-enal to NADPH, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR118098"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "e_hex_2_enal",
+      "name": "(E)-hex-2-enal",
+      "formula": "C6H10O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1369480"
+      }
+    },
+    {
+      "id": "cis_3_hexenal",
+      "name": "cis-3-hexenal",
+      "formula": "C6H10O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:23292"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "3z_hex_3_en_1_ol",
+      "name": "(3Z)-hex-3-en-1-ol",
+      "formula": "C6H12O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1108072"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_1",
+      "name": "alcohol dehydrogenase",
+      "ec": [
+        "1.1.1.1"
+      ],
+      "xrefs": {
+        "uniprot": "P07327"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR118098",
+      "substrates": [
+        {
+          "metabolite": "e_hex_2_enal",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cis_3_hexenal",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR118098"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR118098"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "alcohol dehydrogenase",
+      "ec": "1.1.1.1",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cis_3_hexenal",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3z_hex_3_en_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR114099"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR114099"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR117476",
+      "substrates": [
+        {
+          "metabolite": "3z_hex_3_en_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cis_3_hexenal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR117476"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR117476"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_e_hex_2_enal_1-chlorohexane-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_hex_2_enal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-chlorohexane-to-h2o-null"
+      },
+      "note": "Shares (E)-hex-2-enal with 1-Chlorohexane to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1369480"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_hex_2_enal_4-hydroxytetracenomycin-a2-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_hex_2_enal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxytetracenomycin-a2-to-h2o"
+      },
+      "note": "Shares (E)-hex-2-enal with 4-hydroxytetracenomycin A2 to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1369480"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_hex_2_enal_5alpha-androstane-3alpha-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_hex_2_enal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5alpha-androstane-3alpha-to-h2o-null"
+      },
+      "note": "Shares (E)-hex-2-enal with 5alpha-Androstane-3alpha,… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1369480"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_hex_2_enal_beta-d-fructose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_hex_2_enal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-d-fructose-to-h2o"
+      },
+      "note": "Shares (E)-hex-2-enal with beta-D-fructose… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1369480"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_hex_2_enal_e-hex-2-enal-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_hex_2_enal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "e-hex-2-enal-to-nadph"
+      },
+      "note": "Shares (E)-hex-2-enal with (E)-hex-2-enal to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1369480"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_hex_2_enal_nadh-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_hex_2_enal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-diphosphate"
+      },
+      "note": "Shares (E)-hex-2-enal with NADH to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1369480"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_hex_2_enal_nadh-to-e-dodec-2-enal-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_hex_2_enal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-e-dodec-2-enal-null"
+      },
+      "note": "Shares (E)-hex-2-enal with NADH to (E)-dodec-2-enal.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1369480"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cis_3_hexenal_4-hydroxytetracenomycin-a2-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cis_3_hexenal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxytetracenomycin-a2-to-h2o"
+      },
+      "note": "Shares cis-3-hexenal with 4-hydroxytetracenomycin A2 to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:23292"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cis_3_hexenal_5alpha-androstane-3alpha-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cis_3_hexenal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5alpha-androstane-3alpha-to-h2o-null"
+      },
+      "note": "Shares cis-3-hexenal with 5alpha-Androstane-3alpha,… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:23292"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cis_3_hexenal_9z-11e-13s-15z-13-hydro-to-13s-hydroperoxy-9z-1",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cis_3_hexenal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "9z-11e-13s-15z-13-hydro-to-13s-hydroperoxy-9z-1"
+      },
+      "note": "Shares cis-3-hexenal with (9Z,11E,13S,15Z)-13-hydro… to (13S)-hydroperoxy-(9Z,11E….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:23292"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cis_3_hexenal_e-hex-2-enal-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cis_3_hexenal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "e-hex-2-enal-to-nadph"
+      },
+      "note": "Shares cis-3-hexenal with (E)-hex-2-enal to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:23292"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cis_3_hexenal_nadh-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cis_3_hexenal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-diphosphate"
+      },
+      "note": "Shares cis-3-hexenal with NADH to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:23292"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-2-3-epoxysqualene-to-fmn "(S)-2,3-epoxysqualene to FMN" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     epoxysqualene
@@ -14,5 +14,17 @@ pathway s-2-3-epoxysqualene-to-fmn "(S)-2,3-epoxysqualene to FMN" {
     3_o_d_glucopyranosyl_isomotiol
     <-> . +fmnh2 +o2 -fmn -h2o -hplus
     2_deacetoxyfuscoatroside
+  }
+
+  branch from epoxysqualene side left {
+    epoxysqualene
+    <-> ec_5_4_99_41 [5.4.99.41]
+    lupeol
+  }
+
+  branch from epoxysqualene side right {
+    epoxysqualene
+    <-> ec_5_4_99_40 [5.4.99.40]
+    amyrin
   }
 }

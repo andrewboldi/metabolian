@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway o16-antigen-4-undecapren-to-o-acetyl-rhamanosyl "(O16 antigen)4-undecapren… to O-acetyl-rhamanosyl-N-ace…" {
-  spacing 170
+  spacing 152
 
   spine at 0,0 {
     o16_antigen_4_undecaprenyl_diphosphate
@@ -20,23 +20,5 @@ pathway o16-antigen-4-undecapren-to-o-acetyl-rhamanosyl "(O16 antigen)4-undecapr
     udp_d_galactofuranose
     <-> . +udp +glucosyl_o_acetyl_rhamanosyl_n_acetylglucosamyl +h -o_acetyl_rhamanosyl_n_acetylglucosamyl_undecapre
     udp_alpha_d_glucose
-  }
-
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> . +udp +pelargonin +h
-    pelargonidin_3_glucoside
-  }
-
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> . +udp +bisdemalonylsalvianin +h
-    pelargonidin_3_o_6_caffeoyl_beta_d_glucoside
-  }
-
-  branch from o_acetyl_rhamanosyl_n_acetylglucosamyl_undecapre side left {
-    o_acetyl_rhamanosyl_n_acetylglucosamyl_undecapre
-    <-> . +acetyl_coa +rhamanosyl_n_acetylglucosamyl_undecaprenyl_dipho
-    coa
   }
 }

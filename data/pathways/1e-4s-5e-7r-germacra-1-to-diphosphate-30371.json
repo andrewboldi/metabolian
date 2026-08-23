@@ -1,0 +1,478 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1e-4s-5e-7r-germacra-1-to-diphosphate-30371",
+  "name": "(1E,4S,5E,7R)-germacra-1(… to diphosphate",
+  "category": "other",
+  "summary": "A 3-step route from (1E,4S,5E,7R)-germacra-1(10),5-dien-11-ol to diphosphate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:30371"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:46734"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1e_4s_5e_7r_germacra_1_10_5_dien_11_ol",
+      "name": "(1E,4S,5E,7R)-germacra-1(10),5-dien-11-ol",
+      "short": "(1E,4S,5E,7R)-germa…",
+      "formula": "C15H26O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:46734"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "geosmin",
+      "name": "(−)-geosmin",
+      "formula": "C12H22O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:46702"
+      }
+    },
+    {
+      "id": "acetone",
+      "name": "Acetone",
+      "formula": "C3H6O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15347"
+      }
+    },
+    {
+      "id": "diphosphate",
+      "name": "diphosphate",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM11"
+      }
+    },
+    {
+      "id": "acetone",
+      "name": "acetone",
+      "formula": "C3H6O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM398"
+      }
+    },
+    {
+      "id": "2e_6e_farnesyl_diphosphate",
+      "name": "(2E,6E)-farnesyl diphosphate",
+      "short": "(2E,6E)-farnesyl PP",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1363833"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "31r_8_12_diethylbacteriochlorophyllide_e",
+      "name": "(31R)-8,12-diethylbacteriochlorophyllide e",
+      "short": "8,12-diethylbacteri…",
+      "formula": "C35H36MgN4O5",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1100669"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "31r_8_12_diethylbacteriochlorophyll_e",
+      "name": "(31R)-8,12-diethylbacteriochlorophyll e",
+      "short": "8,12-diethylbacteri…",
+      "formula": "C50H61MgN4O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1100674"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_1_99_16",
+      "name": "geosmin synthase",
+      "ec": [
+        "4.1.99.16"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_22",
+      "name": "germacradienol synthase",
+      "ec": [
+        "4.2.3.22"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "geosmin synthase",
+      "equation": "(1E,4S,5E,7R)-germacra-1(10),5-dien-11-ol + H2O = (-)-geosmin + acetone",
+      "ec": "4.1.99.16",
+      "substrates": [
+        {
+          "metabolite": "1e_4s_5e_7r_germacra_1_10_5_dien_11_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "geosmin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetone",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_99_16"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:30371"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30371"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "geosmin synthase",
+      "ec": "4.1.99.16",
+      "substrates": [
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "geosmin",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2e_6e_farnesyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_99_16"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR150321"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR150321"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR186087",
+      "substrates": [
+        {
+          "metabolite": "31r_8_12_diethylbacteriochlorophyllide_e",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2e_6e_farnesyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "31r_8_12_diethylbacteriochlorophyll_e",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR186087"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR186087"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_1e_4s_5e_7r_germacra_1_10_5_dien_11_ol_1e-4s-5e-7r-germacra-1-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1e_4s_5e_7r_germacra_1_10_5_dien_11_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1e-4s-5e-7r-germacra-1-to-diphosphate"
+      },
+      "note": "Shares (1E,4S,5E,7R)-germacra-1(10),5-dien-11-ol with (1E,4S,5E,7R)-germacra-1(… to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:46734"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1e_4s_5e_7r_germacra_1_10_5_dien_11_ol_2-trans-6-trans-farnesyl-to-geosmin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1e_4s_5e_7r_germacra_1_10_5_dien_11_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-trans-6-trans-farnesyl-to-geosmin"
+      },
+      "note": "Shares (1E,4S,5E,7R)-germacra-1(10),5-dien-11-ol with 2-trans,6-trans-farnesyl… to (−)-geosmin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:46734"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1e_4s_5e_7r_germacra_1_10_5_dien_11_ol_2-trans-6-trans-farnesyl-to-geosmin-22436",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1e_4s_5e_7r_germacra_1_10_5_dien_11_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-trans-6-trans-farnesyl-to-geosmin-22436"
+      },
+      "note": "Shares (1E,4S,5E,7R)-germacra-1(10),5-dien-11-ol with 2-trans,6-trans-farnesyl… to (−)-geosmin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:46734"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_geosmin_1e-4s-5e-7r-germacra-1-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "geosmin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1e-4s-5e-7r-germacra-1-to-diphosphate"
+      },
+      "note": "Shares (−)-geosmin with (1E,4S,5E,7R)-germacra-1(… to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:46702"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_geosmin_2-trans-6-trans-farnesyl-to-geosmin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "geosmin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-trans-6-trans-farnesyl-to-geosmin"
+      },
+      "note": "Shares (−)-geosmin with 2-trans,6-trans-farnesyl… to (−)-geosmin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:46702"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_geosmin_2-trans-6-trans-farnesyl-to-geosmin-22436",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "geosmin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-trans-6-trans-farnesyl-to-geosmin-22436"
+      },
+      "note": "Shares (−)-geosmin with 2-trans,6-trans-farnesyl… to (−)-geosmin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:46702"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_31r_8_12_diethylbacteriochlorophyllide_e_1e-4s-5e-7r-germacra-1-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "31r_8_12_diethylbacteriochlorophyllide_e"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1e-4s-5e-7r-germacra-1-to-diphosphate"
+      },
+      "note": "Shares (31R)-8,12-diethylbacteriochlorophyllide e with (1E,4S,5E,7R)-germacra-1(… to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1100669"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_31r_8_12_diethylbacteriochlorophyllide_e_31r-8-12-diethyl-71-hyd-to-31r-8-12-diethyl-71",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "31r_8_12_diethylbacteriochlorophyllide_e"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "31r-8-12-diethyl-71-hyd-to-31r-8-12-diethyl-71"
+      },
+      "note": "Shares (31R)-8,12-diethylbacteriochlorophyllide e with (31R)-8,12-diethyl-71-hyd… to (31R)-8,12-diethyl-71,71-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1100669"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_31r_8_12_diethylbacteriochlorophyll_e_1e-4s-5e-7r-germacra-1-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "31r_8_12_diethylbacteriochlorophyll_e"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1e-4s-5e-7r-germacra-1-to-diphosphate"
+      },
+      "note": "Shares (31R)-8,12-diethylbacteriochlorophyll e with (1E,4S,5E,7R)-germacra-1(… to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1100674"
+          }
+        ]
+      }
+    }
+  ]
+}

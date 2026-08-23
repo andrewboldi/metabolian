@@ -20,39 +20,39 @@ pathway 7alpha-24-dihydroxycholes-to-h2o-null "7Alpha,24-Dihydroxycholes… to H
     3_7_24_trihydroxy_5_cholestan_26_oic_acid
   }
 
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_153 [1.1.1.153] +l_sepiapterin +h +nadph
-    d_erythro_7_8_dihydrobiopterin
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_5_1_3 [1.5.1.3] +h +d_erythro_7_8_dihydrobiopterin +nadph
-    5_6_7_8_tetrahydrobiopterin
-  }
-
-  branch from 7alpha_24alpha_dihydroxy_5beta_cholestan_3_one side left {
-    7alpha_24alpha_dihydroxy_5beta_cholestan_3_one
-    <-> . +h +nadph +nadp
-    7alpha_24_dihydroxycholest_4_en_3_one
+  branch from h2o side left {
+    h2o
+    <-> . +h +adp +phosphate +atp
+    3_5_cyclic_amp
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_21 [3.2.1.21] +glucose +methanol
-    methyl_d_glucopyranoside
+    <-> ec_3_6_3_3 [3.6.3.3] +h +adp +cd +phosphate +cd
+    atp
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_46 [3.6.3.46] +adp +phosphate +atp +h2o
+    cd
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    cysgly
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_4_11_2 [3.4.11.2] +glycine +l_phenylalanine
-    glycyl_dl_phenylalanine
+    <-> . +h +adp +phosphate +atp
+    3_5_cyclic_gmp
   }
 
-  branch from 3_7_24_trihydroxy_5_cholestan_26_oic_acid side right {
-    3_7_24_trihydroxy_5_cholestan_26_oic_acid
-    <-> . +diphosphate +3_7_24thca_coenzyme_a +amp +h +coa
-    atp
+  branch from h2o side right {
+    h2o
+    <-> . +h +adp +phosphate +atp
+    choline
   }
 }

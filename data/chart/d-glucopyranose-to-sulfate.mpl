@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-glucopyranose-to-sulfate "D-glucopyranose to sulfate" {
-  spacing 188
+  spacing 200
 
   spine at 0,0 {
     glucose
@@ -18,39 +18,51 @@ pathway d-glucopyranose-to-sulfate "D-glucopyranose to sulfate" {
     3r_3_hydroxy_3_thiiran_2_yl_propanenitrile
   }
 
-  branch from gluconapin side left {
-    gluconapin
-    <-> ec_3_2_1_147 [3.2.1.147] +2_butenyl_thiohydroximate_o_sulfate +h2o
-    alpha_d_glucose
+  branch from h2o side left {
+    h2o
+    <-> ec_4_2_1_67 [4.2.1.67] +2_dehydro_3_deoxy_d_fuconate
+    d_fuconate
   }
 
   branch from h2o side right {
     h2o
-    <-> . +aminodhq
-    5_amino_5_deoxy_3_dehydroshikimic_acid
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +7_9_12_decaketide_intermediate_2
-    7_9_12_decaketide_intermediate_3
-  }
-
-  branch from z_progoitrin side right {
-    z_progoitrin
-    <-> . +glucose +h +h2o
-    e_3r_2_3_hydroxybutenyl_thiohydroximate_o_sulfa
+    <-> ec_3_2_1_125 [3.2.1.125] +glucose +vomilenine
+    raucaffricine
   }
 
   branch from glucose side left {
     glucose
-    <-> ec_3_2_1_23 [3.2.1.23] +d_galactopyranose +h2o
-    beta_lactose
+    <-> . +cyanidin_o_o_6_o_6_o_4_hydroxycinnamoyl_beta_d_g +1_o_4_coumaroyl_d_glucose
+    cyanidin_3_o_6_glucosyl_2_xylosylgalactoside
   }
 
   branch from glucose side right {
     glucose
-    <-> ec_3_2_1_10 [3.2.1.10] +h2o
-    isomaltose
+    <-> . +1_o_trans_sinapoyl_beta_d_glucose +cyanidin_3_o_6_glucosyl_2_xylosylgalactoside
+    cyanidin_o_o_6_o_6_o_sinapoyl_beta_d_glucosyl_2
+  }
+
+  branch from glucose side left {
+    glucose
+    <-> ec_2_3_1_213 [2.3.1.213] +cyanidin_o_o_6_o_6_o_feruloyl_beta_d_glucosyl_2 +cyanidin_3_o_6_glucosyl_2_xylosylgalactoside
+    1_o_feruloyl_d_glucose
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> ec_5_3_1_5 [5.3.1.5]
+    keto_d_fructose
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_1_7_3_2 [1.7.3.2] +acetylindoxyl +o2
+    n_acetylisatin
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_1_1_45 [3.1.1.45] +maleylacetate +h
+    trans_4_carboxymethylenebut_2_en_4_olide
   }
 }

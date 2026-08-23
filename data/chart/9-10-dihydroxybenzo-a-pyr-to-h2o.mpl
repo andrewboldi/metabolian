@@ -18,62 +18,62 @@ pathway 9-10-dihydroxybenzo-a-pyr-to-h2o "9,10-Dihydroxybenzo[a]pyr… to H2O" {
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_85 [1.1.1.85] +nadh +co2 +2_oxopentanoate
-    3_ethylmalate
+    <-> . +nadh +l_sorbopyranose +h
+    l_glucitol
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +cortisol
-    20alpha_hydroxycortisol
+    <-> . +udp_alpha_d_galacturonate +nadh +h +h2o
+    udp_alpha_d_galactose
   }
 
   branch from nadh side left {
     nadh
-    <-> . +dehydrodiconiferyl_alcohol +nad +h
-    dehydrodiconiferyl_aldehyde
+    <-> ec_1_1_1_21 [1.1.1.21] +d_ribose +h +nad
+    ribitol
   }
 
   branch from nadh side right {
     nadh
-    <-> ec_1_2_1_29 [1.2.1.29] +h +dehydrodiconiferyl_aldehyde +nad +h2o
-    glycosmisate
+    <-> ec_1_6_2_6 [1.6.2.6] +ferrileghemoglobin +h +nad
+    ferroleghemoglobin
   }
 
   branch from h side left {
     h
-    <-> . +cocaine +h2o +ecgonine_benzoate
-    methanol
+    <-> ec_3_2_2_10 [3.2.2.10] +pyrimidine +alpha_d_ribofuranose_5_phosphate +h2o
+    pyrimidine_5_nucleotide
   }
 
   branch from h side right {
     h
-    <-> . +2_oxoglutarate +35_aminobacteriohopane_32_33_34_triol +formyl_hopane
-    l_glutamate
+    <-> ec_1_11_2_3 [1.11.2.3] +9z_12z_octadecadienoate +9s_hydroperoxy_10e_12z_15z_octadecatrienoate +9_s_hotre
+    9_10_epoxy_12z_octadecenoate
   }
 
   branch from o2 side left {
     o2
-    <-> . +2_aminophenoxazin_3_one +h2o
-    6_iminocyclohexa_2_4_dienone
+    <-> . +sulfinosuccinate +h
+    thiomalic_acid
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_13_11_65 [1.13.11.65] +all_trans_beta_carotene +all_trans_retinal
-    11_cis_retinal
+    <-> ec_1_14_17_1 [1.14.17.1] +l_dehydroascorbic_acid +4_trifluoromethyl_phenylethanolamine +h2o +h +l_ascorbate
+    4_trifluoromethyl_phenethylamine
   }
 
   branch from nadp side left {
     nadp
-    <-> . +porifersta_7_25_27_dienol +h +nadph
-    poriferast_7_en_3beta_ol
+    <-> ec_1_1_1_271 [1.1.1.271] +gdp_l_fucose +h +nadph
+    gdp_4_dehydro_beta_l_fucose
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_3_1_93 [1.3.1.93] +lesqueroloyl_coa +h +nadph
-    trans_lesqueroloyl_coa
+    <-> ec_1_14_13_70 [1.14.13.70] +h +o2 +lanosterol +nadph +4_4_dimethyl_5alpha_cholesta_8_14_24_trien_3beta +h2o
+    formate
   }
 
   branch from benzo_a_pyrene_9_10_oxide side left {
@@ -84,13 +84,91 @@ pathway 9-10-dihydroxybenzo-a-pyr-to-h2o "9,10-Dihydroxybenzo[a]pyr… to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_177 [3.2.1.177] +d_xylp_1_6_d_glcp +alpha_d_xylose
-    glucose
+    <-> ec_3_5_2_16 [3.5.2.16] +carbamoylsulfanyl_acetic_acid
+    1_3_thiazolidine_2_4_dione
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_158 [3.2.1.158] +agarotriose +neoagarotriose
-    agarohexaose
+    <-> ec_3_4_21_104 [3.4.21.104] +ethanol +n_benzoyl_arginine
+    bz_arg_oet
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_1_1_10 [1.1.1.10] +acetoin +nad +h
+    diacetyl
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> . +acetoin +h +nad
+    s_s_butane_2_3_diol
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_4_1_35 [2.4.1.35] +udp +1_naphthyl_d_glucoside +1_naphthol
+    udp_alpha_d_glucose
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_4_1_126 [2.4.1.126] +udp +4_o_beta_d_glucosyl_daphnetin +udp_alpha_d_glucose
+    7_8_dihydroxycoumarin
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_241 [1.1.1.241] +nadh +6_oxocineole +h
+    6_endo_hydroxycineole
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_145 [1.1.1.145] +nadh +h +3_oxo_delta5_steroid
+    3beta_hydroxy_delta5_steroid
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_14_17_1 [1.14.17.1] +l_dehydroascorbic_acid +phenylethanolamine +h2o +h +l_ascorbate
+    2_phenylethylamine
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +ubiquinol_2 +ubiquinone_2 +h2o
+    pmf
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_6_5_2 [1.6.5.2] +h +menaquinone_6 +nadp
+    menaquinol_6
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +pmf +h +pmf +nadp +menaquinol_6
+    menaquinone_6
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_14_12_17 [1.14.12.17] +nitric_oxide +h +o2 +nadph
+    nitric_acid
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_14_13_70 [1.14.13.70] +h +obtusifoliol +o2 +nadph +formate +h2o
+    4alpha_methyl_5alpha_ergosta_8_14_24_28_trien_3b
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +5a_11a_dehydrotetracycline
+    oxytetracycline
   }
 }

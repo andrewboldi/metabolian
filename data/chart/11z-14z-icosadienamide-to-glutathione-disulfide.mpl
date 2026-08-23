@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 11z-14z-icosadienamide-to-glutathione-disulfide "(11Z,14Z)-icosadienamide to glutathione disulfide" {
-  spacing 170
+  spacing 158
 
   spine at 0,0 {
     11z_14z_icosadienamide
@@ -20,17 +20,5 @@ pathway 11z-14z-icosadienamide-to-glutathione-disulfide "(11Z,14Z)-icosadienamid
     11z_14z_icosadienoate
     <-> . +o2
     12_hpede
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +agmatinium +o2 +h2o +h2o2
-    2r_2_hydroxypyrrolidine_1_carboximidamide
-  }
-
-  branch from nh3 side left {
-    nh3
-    <-> . +l_argininium +nad +nicotinamide +hplus
-    adp_2_imine_ribofurano_1_2_4_5_oxazolidine_2
   }
 }

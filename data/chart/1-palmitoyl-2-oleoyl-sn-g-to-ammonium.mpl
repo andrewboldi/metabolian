@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-palmitoyl-2-oleoyl-sn-g-to-ammonium "1-palmitoyl-2-oleoyl-sn-g… to ammonium" {
-  spacing 216
+  spacing 186
 
   spine at 0,0 {
     1_palmitoyl_2_oleoyl_sn_glycero_3_phosphoglycero
@@ -20,51 +20,21 @@ pathway 1-palmitoyl-2-oleoyl-sn-g-to-ammonium "1-palmitoyl-2-oleoyl-sn-g… to a
     oleate
   }
 
-  branch from oleate side left {
-    oleate
-    <-> . +5_9z_octadecenoyloxy_octadecanoate +h2o +hplus
-    5_hydroxyoctadecanoate
-  }
-
-  branch from oleate side right {
-    oleate
-    <-> . +n_hexadecanoyl_o_1_octadecanoyl_2_oleoyl_sn_glyc +h2o +hplus
-    n_hexadecanoyl_o_1_octadecanoyl_sn_glycero_3_pho
-  }
-
-  branch from n_oleoylglycinate side left {
-    n_oleoylglycinate
-    <-> . +glycine +coa +hplus
-    oleoyl_coa
-  }
-
-  branch from mdha side right {
+  branch from mdha side left {
     mdha
     <-> ec_1_14_17_3 [1.14.17.3] +c_terminal_xaa_gly_1 +ascorbate +o2 +h2o
     c_terminal_xaa_2s_hydroxyglycino_1
   }
 
-  branch from glyoxylate side left {
-    glyoxylate
-    <-> . +5_methyl_dcmp_1 +ascorbate +o2 +co2
-    8s_9r_5_glyceryldeoxycytidine_5_monophosphate_1
+  branch from ascorbate side right {
+    ascorbate
+    <-> . +o2 +h2o
+    l_dehydroascorbate
   }
 
-  branch from glyoxylate side right {
-    glyoxylate
-    <-> ec_2_6_1_63 [2.6.1.63] +3_hydroxy_l_kynurenine +glycine +h2o
-    xanthurenate
-  }
-
-  branch from nh3 side left {
-    nh3
-    <-> . +l_asparagine +h2o
-    l_aspartate
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +4_hydroxyestrone +o2 +h2o +hplus
-    pyridinestrone_3_carboxylate
+  branch from ascorbate side left {
+    ascorbate
+    <-> . +hplus
+    l_xylo_hex_3_ulonolactone
   }
 }

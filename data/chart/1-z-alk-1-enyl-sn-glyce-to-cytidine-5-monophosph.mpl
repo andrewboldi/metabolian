@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-z-alk-1-enyl-sn-glyce-to-cytidine-5-monophosph "1-(Z)-alk-1-enyl-sn-glyce… to cytidine 5'-monophosphate" {
-  spacing 274
+  spacing 268
 
   spine at 0,0 {
     1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine
@@ -16,11 +16,5 @@ pathway 1-z-alk-1-enyl-sn-glyce-to-cytidine-5-monophosph "1-(Z)-alk-1-enyl-sn-gl
     1_z_alk_1_enyl_2_acyl_sn_glycerol
     <-> ec_2_7_8_22 [2.7.8.22] +cdp_choline -cytidine_5_monophosphate -hplus
     1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphocholin
-  }
-
-  branch from cytidine_5_monophosphate side left {
-    cytidine_5_monophosphate
-    <-> . +lactose +cmp_n_acetyl_neuraminate +hplus
-    n_acetylneuraminosyl_2_3_d_galactosyl_1_4_d_glu
   }
 }

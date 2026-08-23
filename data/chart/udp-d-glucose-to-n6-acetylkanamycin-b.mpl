@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-d-glucose-to-n6-acetylkanamycin-b "UDP-α-D-glucose to N6'-acetylkanamycin B" {
-  spacing 314
+  spacing 308
 
   spine at 0,0 {
     udp_d_glucose
@@ -16,11 +16,5 @@ pathway udp-d-glucose-to-n6-acetylkanamycin-b "UDP-α-D-glucose to N6'-acetylkan
     kanamycin_b
     <-> ec_2_3_1_82 [2.3.1.82] +acetyl_coa -coa -hplus
     n6_acetylkanamycin_b
-  }
-
-  branch from udp_d_kanosamine side left {
-    udp_d_kanosamine
-    <-> ec_2_4_1_301 [2.4.1.301] +2_deamino_2_hydroxyneamine +udp +hplus
-    kanamycin_a
   }
 }

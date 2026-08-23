@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-dehydroascorbic-acid-to-h2o-null "L-dehydroascorbic acid to H2O" {
-  spacing 238
+  spacing 184
 
   spine at 0,0 {
     l_dehydroascorbic_acid
@@ -14,59 +14,5 @@ pathway l-dehydroascorbic-acid-to-h2o-null "L-dehydroascorbic acid to H2O" {
     4z_7z_10z_13z_16z_19z_docosahexaenoate
     <-> ec_3_1_1_52 [3.1.1.52] +1_octadecanoyl_sn_glycero_3_phospho_d_myo_inosit +h -h2o
     1_octadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex
-  }
-
-  branch from 20_hydroperoxy_h4_neuroprostane side left {
-    20_hydroperoxy_h4_neuroprostane
-    <-> . +l_dehydroascorbic_acid +h2o +h +l_ascorbate
-    20_hydroxy_e4_neuroprostane
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    ceftriaxone
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    nisin
-  }
-
-  branch from l_ascorbate side right {
-    l_ascorbate
-    <-> . +l_ascorbic_acid_2_phosphate +h2o +h
-    phosphate
-  }
-
-  branch from l_ascorbate side left {
-    l_ascorbate
-    <-> . +h2o +h +phosphate
-    2_phospho_l_ascorbate
-  }
-
-  branch from o2 side right {
-    o2
-    <-> ec_1_10_3_2 [1.10.3.2] +tetramethoxy_azobismethylene_quinine +h2o
-    syringaldazine
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +o4_o5_dimethylthujaplicatin +h +nadph +nadp +h2o
-    dihydroanhydropodorhizol
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +enterocin +phosphate +enterocin
-    atp
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    streptothricin_f_acid
   }
 }

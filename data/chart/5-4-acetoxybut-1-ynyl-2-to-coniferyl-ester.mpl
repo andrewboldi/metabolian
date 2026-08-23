@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-4-acetoxybut-1-ynyl-2-to-coniferyl-ester "5-(4-acetoxybut-1-ynyl)-2… to coniferyl ester" {
-  spacing 236
+  spacing 278
 
   spine at 0,0 {
     5_4_acetoxybut_1_ynyl_2_2_bithiophene
@@ -18,25 +18,67 @@ pathway 5-4-acetoxybut-1-ynyl-2-to-coniferyl-ester "5-(4-acetoxybut-1-ynyl)-2…
 
   branch from acetate side left {
     acetate
-    <-> ec_3_1_1_80 [3.1.1.80] +17_o_acetylajmalinium +h2o +hplus
-    ajmalinium
+    <-> ec_2_8_3_14 [2.8.3.14] +5_hydroxypentanoate +acetyl_coa
+    5_hydroxypentanoyl_coa
   }
 
   branch from acetate side right {
     acetate
-    <-> ec_3_5_1_51 [3.5.1.51] +4_acetamidobutanoyl_coa +h2o
-    4_aminobutanoyl_coa
+    <-> . +n2_acetyl_l_lysine +h2o
+    l_lysinium
   }
 
   branch from carboxylic_acid_anion side left {
     carboxylic_acid_anion
-    <-> ec_3_6_1_20 [3.6.1.20] +h2o +amp +hplus
-    5_acylphosphoadenosine
+    <-> ec_3_7_1_5 [3.7.1.5] +h2o +pyruvate +hplus
+    3_acylpyruvate
   }
 
   branch from carboxylic_acid_anion side right {
     carboxylic_acid_anion
-    <-> ec_3_5_1_83 [3.5.1.83] +n_acyl_d_aspartate +h2o
-    d_aspartate
+    <-> ec_3_1_1_1 [3.1.1.1] +carboxylic_ester +h2o +hplus
+    alcohol
+  }
+
+  branch from acetate side left {
+    acetate
+    <-> ec_3_1_1_94 [3.1.1.94] +3s_versiconol_acetate +h2o +hplus
+    s_versiconol
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> ec_2_8_3_19 [2.8.3.19] +oxalate +acetyl_coa
+    oxalyl_coa
+  }
+
+  branch from acyl_coa side left {
+    acyl_coa
+    <-> ec_2_3_1_186 [2.3.1.186] +pseudotropinium +coa +hplus
+    o_acylpseudotropine
+  }
+
+  branch from acyl_coa side right {
+    acyl_coa
+    <-> . +2_monoglyceride +coa
+    dag
+  }
+
+  branch from carboxylic_acid_anion side left {
+    carboxylic_acid_anion
+    <-> ec_3_1_2_7 [3.1.2.7] +s_acylglutathionate +h2o +hplus
+    gsh
+  }
+
+  branch from carboxylic_acid_anion side right {
+    carboxylic_acid_anion
+    <-> ec_3_5_1_17 [3.5.1.17] +h2o +l_lysinium
+    n6_acyl_l_lysine
+  }
+
+  branch from eugenol side left {
+    eugenol
+    <-> . +udp +h +eugenyl_o_beta_d_glucopyranoside
+    udp_alpha_d_glucose
   }
 }

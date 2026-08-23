@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dtdp-5-5-di-c-methyl-l-to-novobiocin "dTDP-5,5-di-C-methyl-β-L-… to novobiocin" {
-  spacing 272
+  spacing 302
 
   spine at 0,0 {
     dtdp_5_5_di_c_methyl_l_lyxose
@@ -18,13 +18,43 @@ pathway dtdp-5-5-di-c-methyl-l-to-novobiocin "dTDP-5,5-di-C-methyl-β-L-… to n
 
   branch from sah side left {
     sah
-    <-> . +precorrin_6y +sam +co2 +hplus
-    precorrin_7
+    <-> . +ribonucleotide +sam +hplus
+    2_o_methylribonucleotide_1
   }
 
   branch from sah side right {
     sah
-    <-> . +lathosterone +sam +hplus
-    4_methyllathosterone
+    <-> ec_2_1_1_41 [2.1.1.41] +cycloartenol +sam +hplus
+    24_methylenecycloartanol
+  }
+
+  branch from sam side left {
+    sam
+    <-> ec_2_1_1_353 [2.1.1.353] +demethyldeoxyspectinabilin +sah
+    deoxyspectinabilin
+  }
+
+  branch from sam side right {
+    sam
+    <-> ec_2_5_1_152 [2.5.1.152] +d_histidine +5_s_methyl_5_thioadenosine +hplus
+    n_3s_3_amino_3_carboxypropyl_d_histidine_dizwitt
+  }
+
+  branch from sah side left {
+    sah
+    <-> . +s_reticulinium +sam +hplus
+    s_codamine
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_363 [2.1.1.363] +fpp +sam +hplus
+    pre_sodorifen_diphosphate
+  }
+
+  branch from carbamoyl_p side left {
+    carbamoyl_p
+    <-> . +l_cysteinate_group +atp +h2o +amp +pi +ppi +hplus
+    c_terminal_s_carbamoyl_l_cysteinate
   }
 }

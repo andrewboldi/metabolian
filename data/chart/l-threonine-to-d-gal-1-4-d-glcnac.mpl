@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-threonine-to-d-gal-1-4-d-glcnac "L-threonine to β-D-Gal-(1→4)-β-D-GlcNAc-…" {
-  spacing 290
+  spacing 302
 
   spine at 0,0 {
     l_threonine
@@ -16,9 +16,21 @@ pathway l-threonine-to-d-gal-1-4-d-glcnac "L-threonine to β-D-Gal-(1→4)-β-D-
     d_gal_1_4_d_glcnac_1_3_l_fuc_l_thr
   }
 
-  branch from l_fucosyl_l_threonyl side left {
-    l_fucosyl_l_threonyl
-    <-> . +udp_d_glucose +udp +hplus
-    d_glucosyl_1_3_l_fucosyl_l_threonyl
+  branch from l_threonine side left {
+    l_threonine
+    <-> ec_2_7_11_1 [2.7.11.1] +atp +adp +hplus
+    o_phosphonato_l_threonine_2
+  }
+
+  branch from gdp_l_fucose side right {
+    gdp_l_fucose
+    <-> . +methyl_8_l_fucosyl_1_2_d_galactosyl_1_4_n_acetyl +gdp +hplus
+    methyl_8_l_fucopyranosyl_1_3_l_fucopyranosyl_1_2
+  }
+
+  branch from gdp_l_fucose side left {
+    gdp_l_fucose
+    <-> . +n_acetyl_neuraminosyl_2_3_d_galactosyl_1_4_n_ace +gdp +hplus
+    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_4_l_fuc
   }
 }

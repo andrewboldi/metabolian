@@ -26,91 +26,91 @@ pathway lipid-iia-to-1-2-diacyl-sn-glycero-3-p "lipid IIA to 1,2-diacyl-sn-glyce
 
   branch from 2_acyl_sn_glycero_3_phosphocholine side left {
     2_acyl_sn_glycero_3_phosphocholine
-    <-> . +1_acyl_sn_glycerol +phosphatidylcholine
-    1_3_diacyl_sn_glycerol
+    <-> . +all_trans_retinol +phosphatidylcholine
+    all_trans_retinyl_ester
   }
 
-  branch from 2_acyl_sn_glycero_3_phosphocholine side right {
-    2_acyl_sn_glycero_3_phosphocholine
-    <-> . +phosphatidylcholine +1_3_diacyl_sn_glycerol
-    3_acyl_sn_glycerol
-  }
-
-  branch from 2_acyl_sn_glycero_3_phosphate side left {
+  branch from 2_acyl_sn_glycero_3_phosphate side right {
     2_acyl_sn_glycero_3_phosphate
     <-> . +2_acyl_sn_glycero_3_phosphoserine +h2o +hplus
     serine
   }
 
-  branch from 1_acyl_sn_glycerol_3_phosphate side right {
+  branch from 1_acyl_sn_glycerol_3_phosphate side left {
     1_acyl_sn_glycerol_3_phosphate
     <-> . +arachidonoyl_coa +coa
     1_acyl_2_arachidonoyl_sn_glycero_3_phosphate
   }
 
-  branch from 1_acyl_sn_glycerol_3_phosphate side left {
+  branch from 1_acyl_sn_glycerol_3_phosphate side right {
     1_acyl_sn_glycerol_3_phosphate
     <-> . +h2o +serine +hplus
     1_acyl_sn_glycero_3_phosphoserine
   }
 
-  branch from fatty-acid side right {
-    fatty-acid
-    <-> . +3_d_galactosyl_1_6_d_galactosyl_1_2_bis_long_cha +h2o +hplus
-    3_d_galactosyl_1_6_d_galactosyl_2_mono_long_chai
-  }
-
   branch from fatty-acid side left {
     fatty-acid
-    <-> . +3_d_galactosyl_1_2_bis_long_chain_acyl_sn_glycer +h2o +hplus
-    3_d_galactosyl_2_mono_long_chain_acyl_sn_glycero
+    <-> . +1_acyl_2_arachidonoyl_sn_glycero_3_phosphoethano +h2o +hplus
+    2_arachidonoyl_sn_glycero_3_phosphoethanolamine
   }
 
-  branch from 1_acyl_sn_glycerol side right {
-    1_acyl_sn_glycerol
-    <-> . +phosphatidylcholine +2_acyl_sn_glycero_3_phosphocholine
-    1_3_diglyceride
-  }
-
-  branch from 1_acyl_sn_glycerol side left {
-    1_acyl_sn_glycerol
-    <-> . +r_s_glycero_3_phospho_3_acyl_1_glycerol +glycerol
-    2_2_lysobisphosphatidate
-  }
-
-  branch from 1_o_acyl_sn_glycero_3_phosphocholine side right {
-    1_o_acyl_sn_glycero_3_phosphocholine
-    <-> . +1_2_diacyl_sn_glycero_3_phosphoethanolamine +phosphatidylcholine
-    1_acyl_sn_glycero_3_phosphoethanolamine
+  branch from fatty-acid side right {
+    fatty-acid
+    <-> . +1_2_diacyl_sn_glycero_3_phospho_n_acyl_serine +h2o +hplus
+    1_acyl_2_hydroxy_sn_glycero_3_phospho_n_acyl_ser
   }
 
   branch from 1_o_acyl_sn_glycero_3_phosphocholine side left {
     1_o_acyl_sn_glycero_3_phosphocholine
-    <-> . +1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol +phosphatidylcholine
-    1_acyl_sn_glycero_3_phospho_1_sn_glycerol
+    <-> . +1_3_o_alkylglycerol +phosphatidylcholine
+    1_alkyl_3_acylglycerol
   }
 
   branch from dag side right {
     dag
-    <-> . +n_hexadecanoylsphinganine +1_2_diacyl_sn_glycero_3_phosphoethanolamine
-    n_hexadecanoylsphinganine_1_phosphoethanolamine
+    <-> . +lipid_a +1_2_diacyl_sn_glycero_3_phosphoethanolamine +hplus
+    lipid_a_1_2_aminoethyl_diphosphate_oxoanion
   }
 
   branch from dag side left {
     dag
-    <-> . +dihydroceramide +1_2_diacyl_sn_glycero_3_phosphoethanolamine
-    n_acylsphinganine_1_phosphoethanolamine
+    <-> . +mannosylinositol_phosphorylceramide +1_phosphatidyl_1d_myo_inositol
+    mannosyl_diphosphorylinositol_ceramide
   }
 
-  branch from phosphatidylcholine side right {
-    phosphatidylcholine
-    <-> . +n_acylphytosphingosine +dag
-    n_acylphytosphingosine_1_phosphocholine
+  branch from acyl_coa side right {
+    acyl_coa
+    <-> . +1_alkyl_3_acylglycerol +coa
+    1_alkyl_2_3_diacylglycerol
   }
 
-  branch from phosphatidylcholine side left {
-    phosphatidylcholine
-    <-> . +1_3_o_alkylglycerol +acyl_sn_glycero_3_phosphocholine
-    1_alkyl_3_acylglycerol
+  branch from 1_acyl_sn_glycerol_3_phosphate side left {
+    1_acyl_sn_glycerol_3_phosphate
+    <-> . +lauroyl_coa +coa
+    1_acyl_2_dodecanoyl_sn_glycero_3_phosphate
+  }
+
+  branch from fatty-acid side right {
+    fatty-acid
+    <-> . +1_2_diacyl_3_d_galactosyl_sn_glycerol +h2o +hplus
+    2_o_acyl_3_o_d_galactosyl_sn_glycerol
+  }
+
+  branch from fatty-acid side left {
+    fatty-acid
+    <-> . +1_2_diacyl_3_d_galactosyl_sn_glycerol +h2o +hplus
+    1_acyl_3_o_d_galactosyl_sn_glycerol
+  }
+
+  branch from dag side right {
+    dag
+    <-> . +man_1_6_ins_1_p_cer +1_phosphatidyl_1d_myo_inositol
+    ins_1_p_man_1_6_ins_1_p_cer
+  }
+
+  branch from dag side left {
+    dag
+    <-> . +2_acyl_6_d_mannosyl_1_6_d_mannosyl_1_4_d_glucosa +1_2_diacyl_sn_glycero_3_phosphoethanolamine
+    2_acyl_6_d_mannosyl_1_6_2_phosphoethanolamine_d
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-acetyl-d-galactosamin-to-h2o "N-acetyl-α-D-galactosamin… to H2O" {
-  spacing 176
+  spacing 188
 
   spine at 0,0 {
     n_acetyl_d_galactosaminyl_1_3_l_fucosyl_1_2_d_ga
@@ -16,27 +16,39 @@ pathway n-acetyl-d-galactosamin-to-h2o "N-acetyl-α-D-galactosamin… to H2O" {
     4_methylumbelliferyl_alpha_l_fucopyranoside
   }
 
-  branch from n_acetyl_d_galactosamine side left {
-    n_acetyl_d_galactosamine
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
-    atp
-  }
-
-  branch from l_fucopyranose side right {
-    l_fucopyranose
-    <-> ec_3_2_1_51 [3.2.1.51] +n_acetyl_d_hexosamine +h2o
-    l_fucp_1_3_d_glcpnac
-  }
-
   branch from h2o side left {
     h2o
-    <-> . +trans_cis_cis_cis_cis_2_10_13_16_19_docosapentae
-    3_s_hydroxy_docosa_10_13_16_19_all_cis_tetraenoy
+    <-> ec_4_2_1_131 [4.2.1.131] +chlorobactene
+    hydroxychlorobactene
   }
 
   branch from h2o side right {
     h2o
-    <-> . +2e_9z_octadecadienoyl_coa
-    3_s_hydroxy_cis_9_octadecenoyl_coa
+    <-> ec_4_2_1_105 [4.2.1.105] +formononetin +h
+    2_7_dihydroxy_4_methoxyisoflavanone
+  }
+
+  branch from 4_methylumbelliferone side left {
+    4_methylumbelliferone
+    <-> ec_2_4_1_17 [2.4.1.17] +udp +h +4_methylumbelliferone_d_glucuronide
+    udp_alpha_d_glucuronate
+  }
+
+  branch from 4_methylumbelliferone side right {
+    4_methylumbelliferone
+    <-> ec_3_2_1_21 [3.2.1.21] +4_methylumbelliferyl_d_glucoside +h2o
+    beta_d_glucose
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_4_2_1_84 [4.2.1.84] +h +3_5_dibromo_4_hydroxybenzonitrile
+    3_5_dibromo_4_hydroxybenzamide
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +3_5_dibromo_4_hydroxybenzoate +nh4 +3_5_dibromo_4_hydroxybenzamide
+    h
   }
 }

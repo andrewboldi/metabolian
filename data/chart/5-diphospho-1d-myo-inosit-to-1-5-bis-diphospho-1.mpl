@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-diphospho-1d-myo-inosit-to-1-5-bis-diphospho-1 "5-diphospho-1D-myo-inosit… to 1,5-bis(diphospho)-1D-myo…" {
-  spacing 268
+  spacing 280
 
   spine at 0,0 {
     5_diphospho_1d_myo_inositol_1_3_4_6_tetrakisphos
@@ -44,5 +44,17 @@ pathway 5-diphospho-1d-myo-inosit-to-1-5-bis-diphospho-1 "5-diphospho-1D-myo-ino
     myo_inositol_hexakisphosphate
     <-> ec_3_1_3_26 [3.1.3.26] +h2o +pi
     1d_myo_inositol_1_2_3_5_6_pentakisphosphate
+  }
+
+  branch from myo_inositol_hexakisphosphate side left {
+    myo_inositol_hexakisphosphate
+    <-> . +h2o +pi
+    1d_myo_inositol_1_2_3_4_5_pentakisphosphate
+  }
+
+  branch from myo_inositol_hexakisphosphate side right {
+    myo_inositol_hexakisphosphate
+    <-> ec_3_6_1_52 [3.6.1.52] +h2o +pi +hplus
+    6_diphospho_1d_myo_inositol_pentakisphosphate
   }
 }

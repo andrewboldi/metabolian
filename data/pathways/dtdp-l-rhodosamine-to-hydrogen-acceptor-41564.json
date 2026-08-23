@@ -1,0 +1,504 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "dtdp-l-rhodosamine-to-hydrogen-acceptor-41564",
+  "name": "dTDP-β-L-rhodosamine to hydrogen acceptor",
+  "category": "other",
+  "summary": "A 3-step route from dTDP-β-L-rhodosamine(1−) to hydrogen acceptor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:41564"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:78301"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "dtdp_l_rhodosamine",
+      "name": "dTDP-β-L-rhodosamine",
+      "formula": "C18H30N3O13P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78301"
+      }
+    },
+    {
+      "id": "aklavinone",
+      "name": "aklavinone",
+      "formula": "C22H20O8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:31181"
+      }
+    },
+    {
+      "id": "aclacinomycin_t",
+      "name": "aclacinomycin T",
+      "formula": "C30H35NO10",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77979"
+      }
+    },
+    {
+      "id": "dtdp",
+      "name": "dTDP",
+      "formula": "C10H13N2O11P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58369"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "15_demethylaclacinomycin_t",
+      "name": "15-demethylaclacinomycin T",
+      "short": "15-demethylaclacino…",
+      "formula": "C29H33NO10",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:74354"
+      }
+    },
+    {
+      "id": "methanol",
+      "name": "methanol",
+      "formula": "CH4O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17790"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "11_deoxy_rhodomycin",
+      "name": "11-deoxy-β-rhodomycin",
+      "short": "11-deoxy-β-rhodomyc…",
+      "formula": "C28H33NO9",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:85430"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_1_326",
+      "name": "aklavinone 7-L-rhodosaminyltransferase",
+      "ec": [
+        "2.4.1.326"
+      ]
+    },
+    {
+      "id": "ec_3_1_1_95",
+      "name": "aclacinomycin methylesterase",
+      "ec": [
+        "3.1.1.95"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "aklavinone 7-L-rhodosaminyltransferase",
+      "equation": "dTDP-beta-L-rhodosamine + aklavinone = aclacinomycin T + dTDP + 2 H(+)",
+      "ec": "2.4.1.326",
+      "substrates": [
+        {
+          "metabolite": "dtdp_l_rhodosamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "aklavinone",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aclacinomycin_t",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dtdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_326"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:41564"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41564"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "aclacinomycin methylesterase",
+      "equation": "aclacinomycin T + H2O = 15-demethylaclacinomycin T + methanol",
+      "ec": "3.1.1.95",
+      "substrates": [
+        {
+          "metabolite": "aclacinomycin_t",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "15_demethylaclacinomycin_t",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methanol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_95"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:37891"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37891"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "15-demethylaclacinomycin T + AH2 + O2 = 10-decarboxymethylaclacinomycin T + A + CO2 + H2O",
+      "equation": "15-demethylaclacinomycin T + AH2 + O2 = 10-decarboxymethylaclacinomycin T + A + CO2 + H2O",
+      "substrates": [
+        {
+          "metabolite": "15_demethylaclacinomycin_t",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "11_deoxy_rhodomycin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:45800"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45800"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_dtdp_l_rhodosamine_dtdp-l-rhodosamine-to-hydrogen-acceptor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dtdp_l_rhodosamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-l-rhodosamine-to-hydrogen-acceptor"
+      },
+      "note": "Shares dTDP-β-L-rhodosamine with dTDP-β-L-rhodosamine to hydrogen acceptor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78301"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_aklavinone_aklavinone-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aklavinone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aklavinone-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares aklavinone with aklavinone to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:31181"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_aklavinone_aklavinone-to-s-adenosyl-l-homocysteine-37835",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aklavinone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aklavinone-to-s-adenosyl-l-homocysteine-37835"
+      },
+      "note": "Shares aklavinone with aklavinone to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:31181"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_aklavinone_dtdp-l-rhodosamine-to-hydrogen-acceptor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aklavinone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-l-rhodosamine-to-hydrogen-acceptor"
+      },
+      "note": "Shares aklavinone with dTDP-β-L-rhodosamine to hydrogen acceptor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:31181"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_aclacinomycin_t_dtdp-l-mycarose-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aclacinomycin_t"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-l-mycarose-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares aclacinomycin T with dTDP-β-L-mycarose to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77979"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_aclacinomycin_t_dtdp-l-mycarose-to-s-adenosyl-l-homocysteine-146",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aclacinomycin_t"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-l-mycarose-to-s-adenosyl-l-homocysteine-146"
+      },
+      "note": "Shares aclacinomycin T with dTDP-β-L-mycarose to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77979"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_aclacinomycin_t_dtdp-l-rhodosamine-to-hydrogen-acceptor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aclacinomycin_t"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-l-rhodosamine-to-hydrogen-acceptor"
+      },
+      "note": "Shares aclacinomycin T with dTDP-β-L-rhodosamine to hydrogen acceptor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77979"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_15_demethylaclacinomycin_t_dtdp-l-rhodosamine-to-hydrogen-acceptor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "15_demethylaclacinomycin_t"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-l-rhodosamine-to-hydrogen-acceptor"
+      },
+      "note": "Shares 15-demethylaclacinomycin T with dTDP-β-L-rhodosamine to hydrogen acceptor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74354"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_11_deoxy_rhodomycin_dtdp-l-rhodosamine-to-hydrogen-acceptor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11_deoxy_rhodomycin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-l-rhodosamine-to-hydrogen-acceptor"
+      },
+      "note": "Shares 11-deoxy-β-rhodomycin with dTDP-β-L-rhodosamine to hydrogen acceptor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:85430"
+          }
+        ]
+      }
+    }
+  ]
+}

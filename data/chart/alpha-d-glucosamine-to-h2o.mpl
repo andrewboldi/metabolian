@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway alpha-d-glucosamine-to-h2o "alpha-D-glucosamine… to H2O" {
-  spacing 284
+  spacing 236
 
   spine at 0,0 {
     alpha_d_glucosamine_6_phosphate
@@ -14,53 +14,5 @@ pathway alpha-d-glucosamine-to-h2o "alpha-D-glucosamine… to H2O" {
     n_acetyl_alpha_d_glucosamine_1_phosphate
     <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate -n_acetyl_alpha_d_glucosamine_1_phosphate -h2o
     atp
-  }
-
-  branch from h side left {
-    h
-    <-> . +compound_0286062 +2_hydroxy_3_oxopropanoate
-    pyruvate
-  }
-
-  branch from h side right {
-    h
-    <-> . +diphosphate +11e_octadecenoyl_coa +amp +atp +coa
-    trans_vaccenic_acid
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +linoelaidic_acid +h2o
-    linoelaidyl_coenzyme_a
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +13z_16z_19z_docosa_13_16_19_trienoyl_coa +h2o +h
-    13_16_19_docosatrienoic_acid
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    5z_8z_11z_icosatrienoic_acid
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    all_cis_7_10_13_16_19_docosapentaenoate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_histidine +l_arginine +l_phenylalanine
-    histidyl_phenylalanyl_arginine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_histidine +l_tryptophan
-    histidyl_tryptophanyl_histidine
   }
 }

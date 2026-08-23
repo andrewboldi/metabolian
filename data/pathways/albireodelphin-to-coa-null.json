@@ -1,0 +1,525 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "albireodelphin-to-coa-null",
+  "name": "Albireodelphin to CoA",
+  "category": "other",
+  "summary": "A 3-step route from Albireodelphin to CoA, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR197670"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "albireodelphin",
+      "name": "Albireodelphin",
+      "formula": "C42H46O25",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1368868"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "trans_caffeoyl_coa",
+      "name": "trans-caffeoyl-CoA",
+      "formula": "C30H38N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:87136"
+      }
+    },
+    {
+      "id": "delphinidin_3_5_3_triglucoside",
+      "name": "Delphinidin 3,5,3'-triglucoside",
+      "short": "Delphinidin…",
+      "formula": "C33H40O22",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1370314"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1102128"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "udp_alpha_d_glucose",
+      "name": "UDP-alpha-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1364019"
+      }
+    },
+    {
+      "id": "delphin",
+      "name": "Delphin",
+      "formula": "C27H30O17",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1371156"
+      }
+    },
+    {
+      "id": "trans_4_coumaroyl_coa",
+      "name": "trans-4-coumaroyl-CoA",
+      "short": "trans-4-coumaroyl-C…",
+      "formula": "C30H38N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:85008"
+      }
+    },
+    {
+      "id": "delphinidin_3_o_beta_d_glucoside_5_o_6_coumaroyl",
+      "name": "Delphinidin 3-O-beta-D-glucoside 5-O-(6-coumaroyl-beta-D-glucoside)",
+      "short": "Delphinidin…",
+      "formula": "C36H36O19",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364657"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_1_238",
+      "name": "delphinidin 3,5-di-O-glucoside 3'-O-glucosyltransferase",
+      "ec": [
+        "2.4.1.238"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_153",
+      "name": "anthocyanin 5-(6'''-hydroxycinnamoyltransferase)",
+      "ec": [
+        "2.3.1.153"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR197670",
+      "substrates": [
+        {
+          "metabolite": "albireodelphin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_caffeoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "delphinidin_3_5_3_triglucoside",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR197670"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197670"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "delphinidin 3,5-di-O-glucoside 3'-O-glucosyltransferase",
+      "ec": "2.4.1.238",
+      "substrates": [
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "delphinidin_3_5_3_triglucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "udp_alpha_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "delphin",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_238"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR198212"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198212"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "anthocyanin 5-(6'''-hydroxycinnamoyltransferase)",
+      "ec": "2.3.1.153",
+      "substrates": [
+        {
+          "metabolite": "trans_4_coumaroyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "delphin",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "delphinidin_3_o_beta_d_glucoside_5_o_6_coumaroyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_153"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR196044"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196044"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_albireodelphin_albireodelphin-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "albireodelphin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "albireodelphin-to-coa"
+      },
+      "note": "Shares Albireodelphin with Albireodelphin to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368868"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_albireodelphin_nadh-to-o-5z-tetradecenoyl-l-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "albireodelphin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-o-5z-tetradecenoyl-l-null"
+      },
+      "note": "Shares Albireodelphin with NADH to O-[(5Z)-tetradecenoyl]-L-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368868"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_albireodelphin_tetrahydrofolyl-poly-glut-to-3-methylsulfanyl-pr",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "albireodelphin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "tetrahydrofolyl-poly-glut-to-3-methylsulfanyl-pr"
+      },
+      "note": "Shares Albireodelphin with tetrahydrofolyl-poly(glut… to 3-(methylsulfanyl)propano….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368868"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_albireodelphin_udp-to-5-hydroxyferulic-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "albireodelphin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-5-hydroxyferulic-acid"
+      },
+      "note": "Shares Albireodelphin with UDP to 5-hydroxyferulic acid.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368868"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_albireodelphin_udp-to-5-hydroxyferulic-acid-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "albireodelphin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-5-hydroxyferulic-acid-null"
+      },
+      "note": "Shares Albireodelphin with UDP to 5-hydroxyferulic acid.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368868"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_delphinidin_3_5_3_triglucoside_albireodelphin-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "delphinidin_3_5_3_triglucoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "albireodelphin-to-coa"
+      },
+      "note": "Shares Delphinidin 3,5,3'-triglucoside with Albireodelphin to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1370314"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_delphin_albireodelphin-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "delphin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "albireodelphin-to-coa"
+      },
+      "note": "Shares Delphin with Albireodelphin to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371156"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_delphin_udp-to-5-hydroxyferulic-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "delphin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-5-hydroxyferulic-acid"
+      },
+      "note": "Shares Delphin with UDP to 5-hydroxyferulic acid.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371156"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_delphin_udp-to-5-hydroxyferulic-acid-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "delphin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-5-hydroxyferulic-acid-null"
+      },
+      "note": "Shares Delphin with UDP to 5-hydroxyferulic acid.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371156"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_delphin_veratrate-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "delphin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "veratrate-to-coa"
+      },
+      "note": "Shares Delphin with veratrate to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371156"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_delphin_veratrate-to-coa-82591",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "delphin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "veratrate-to-coa-82591"
+      },
+      "note": "Shares Delphin with veratrate to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371156"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_delphinidin_3_o_beta_d_glucoside_5_o_6_coumaroyl_albireodelphin-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "delphinidin_3_o_beta_d_glucoside_5_o_6_coumaroyl"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "albireodelphin-to-coa"
+      },
+      "note": "Shares Delphinidin 3-O-beta-D-glucoside 5-O-(6-coumaroyl-beta-D-glucoside) with Albireodelphin to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364657"
+          }
+        ]
+      }
+    }
+  ]
+}

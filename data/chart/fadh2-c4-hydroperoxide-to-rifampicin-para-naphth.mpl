@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway fadh2-c4-hydroperoxide-to-rifampicin-para-naphth "FADH2-C4α-hydroperoxide to rifampicin para-naphthoqu…" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     fadh2_c4_hydroperoxide
@@ -14,5 +14,17 @@ pathway fadh2-c4-hydroperoxide-to-rifampicin-para-naphth "FADH2-C4α-hydroperoxi
     rifampicin_ortho_naphthoquinone_carboxamide
     <-> .
     rifampicin_para_naphthoquinone_carboxamide
+  }
+
+  branch from fadh2_c4_hydroperoxide side left {
+    fadh2_c4_hydroperoxide
+    <-> . +rifamycin_sv +nadh +hplus +fadh2 +nad +h2o
+    rifamycin_sv_hemiaminal
+  }
+
+  branch from rifampicin side right {
+    rifampicin
+    <-> ec_2_7_9_6 [2.7.9.6] +atp +h2o +amp +pi +hplus
+    21_phosphorifampicin
   }
 }

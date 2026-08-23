@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nb-feruloyltryptamine-to-3-4-dimethoxyphenyl-met "Nb-Feruloyltryptamine to (3,4-dimethoxyphenyl)meth…" {
-  spacing 292
+  spacing 244
 
   spine at 0,0 {
     nb_feruloyltryptamine
@@ -14,81 +14,33 @@ pathway nb-feruloyltryptamine-to-3-4-dimethoxyphenyl-met "Nb-Feruloyltryptamine 
     h
     <-> ec_1_1_99_36 [1.1.99.36] +4_hydroxylamino_n_n_dimethylaniline +e_coniferaldehyde -e_coniferol
     n_n_dimethyl_4_nitrosoaniline
-    <-> ec_1_1_99_36 [1.1.99.36] +heptan_2_ol -heptan_2_one
+    <-> ec_1_1_99_36 [1.1.99.36] +2_phenylethanol -2_phenylacetaldehyde
     4_hydroxylamino_n_n_dimethylaniline
     <-> ec_1_1_99_36 [1.1.99.36] +3_4_dimethoxybenzaldehyde -3_4_dimethoxyphenyl_methanol
     n_n_dimethyl_4_nitrosoaniline
   }
 
-  branch from feruloyl_coa side left {
-    feruloyl_coa
-    <-> ec_2_3_1_159 [2.3.1.159] +malonyl_coa +h +homoeriodictyol_chalcone +coa
-    co2
-  }
-
-  branch from tryptamine side right {
-    tryptamine
-    <-> . +indole_3_acetaldehyde +nh4 +h2o2 +o2 +h2o
-    pmf
-  }
-
-  branch from tryptamine side left {
-    tryptamine
-    <-> ec_4_3_3_2 [4.3.3.2] +3alphas_21s_strictosidinate +h +h2o
-    secologanate
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    alaninamide
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +5alpha_pregnane_3_20_dione +phosphate +5alpha_pregnane_3_20_dione +h2o
-    atp
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +dihydroxy_4_cholesten_3_one_7a26 +h +nadph
-    7alpha_26_dihydroxy_5beta_cholestan_3_one
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +h +nadph +7alpha_26_dihydroxy_5beta_cholestan_3_one
-    25r_5beta_cholestane_3alpha_7alpha_26_triol
+  branch from coa side left {
+    coa
+    <-> . +6z_9z_12z_15z_octadecatetraenoyl_coa +s_carnitine
+    stearidonyl_carnitine
   }
 
   branch from coa side right {
     coa
-    <-> . +17z_hexacosenoyl_coa +h2o +h
-    17z_hexacosenoate
+    <-> . +5z_8z_11z_14z_17z_eicosapentaenoyl_coa +s_carnitine
+    timnodonyl_carnitine
   }
 
   branch from coa side left {
     coa
-    <-> . +cis_cis_cis_10_13_16_docosatrienoyl_coa +diphosphate +amp +atp
-    10z_13z_16z_docosatrienoate
+    <-> . +6z_9z_12z_octadecatrienoyl_coa +s_carnitine
+    gamma_linolenyl_carnitine
   }
 
-  branch from e_coniferol side right {
-    e_coniferol
-    <-> ec_3_2_1_126 [3.2.1.126] +alpha_d_glucose +h2o
-    4_o_beta_d_glucosyl_e_coniferol
-  }
-
-  branch from heptan_2_one side left {
-    heptan_2_one
-    <-> . +nadph +o2 +hplus +nadp +h2o
-    pentyl_acetate
-  }
-
-  branch from heptan_2_one side right {
-    heptan_2_one
-    <-> . +hydrogen_cyanide
-    2s_2_hydroxy_2_methylheptanenitrile
+  branch from coa side right {
+    coa
+    <-> . +tricosanoyl_coa +s_carnitine
+    tricosanoylcarnitine
   }
 }

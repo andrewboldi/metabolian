@@ -18,13 +18,13 @@ pathway clavatol-to-hydroxyclavatol-ethyl "clavatol to hydroxyclavatol ethyl…"
 
   branch from ortho_quinone_methide side left {
     ortho_quinone_methide
-    <-> . +r_5_methyl_tetronate
-    peniphenone_d
+    <-> . +penilactone_d +hplus
+    penilactone_b
   }
 
   branch from ortho_quinone_methide side right {
     ortho_quinone_methide
-    <-> . +peniphenone_d +hplus
-    penilactone_a
+    <-> . +s_5_carboxymethyl_tetronate +hplus
+    penilactone_d
   }
 }

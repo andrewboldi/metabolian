@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway psicosyllysine-to-d-glucopyranose "psicosyllysine to D-glucopyranose…" {
-  spacing 316
+  spacing 328
 
   spine at 0,0 {
     psicosyllysine
@@ -32,27 +32,39 @@ pathway psicosyllysine-to-d-glucopyranose "psicosyllysine to D-glucopyranose…"
     alpha_d_glucose_6_phosphate
   }
 
-  branch from g6p side left {
-    g6p
-    <-> . +tdp_d_glucose +trehalose_6_phosphate +hplus
-    tdp
-  }
-
-  branch from g6p side right {
-    g6p
-    <-> .
-    d_mannopyranose_6_phosphate
-  }
-
   branch from l_lysinium side left {
     l_lysinium
-    <-> ec_4_3_2_8 [4.3.2.8] +glutamyl_lysine_dizwitterion
-    5_oxo_l_prolinate
+    <-> ec_1_5_1_16 [1.5.1.16] +nadp +h2o +pyruvate +nadph +hplus
+    d_lysopine_dizwitterion
   }
 
   branch from l_lysinium side right {
     l_lysinium
-    <-> ec_1_5_1_16 [1.5.1.16] +nadp +h2o +pyruvate +nadph +hplus
-    d_lysopine_dizwitterion
+    <-> ec_5_4_3_2 [5.4.3.2]
+    3s_3_6_diammoniohexanoate
+  }
+
+  branch from fructoselysine_6_phosphate side left {
+    fructoselysine_6_phosphate
+    <-> . +d_lysine +h2o
+    beta_d_glucose_6_phosphate
+  }
+
+  branch from l_lysinium side right {
+    l_lysinium
+    <-> ec_3_5_2_11 [3.5.2.11] +h2o
+    l_2_ammoniohexano_6_lactam
+  }
+
+  branch from l_lysinium side left {
+    l_lysinium
+    <-> ec_4_1_1_18 [4.1.1.18] +hplus +co2
+    cadaverine
+  }
+
+  branch from gdp_d_glucose side right {
+    gdp_d_glucose
+    <-> . +d_glycerate +gdp +hplus
+    2_o_d_glucopyranosyl_d_glycerate
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-deoxy-11-oxopentalenate-to-neopentalenoketolac "1-deoxy-11-oxopentalenate to neopentalenoketolactone" {
-  spacing 220
+  spacing 184
 
   spine at 0,0 {
     1_deoxy_11_oxopentalenate
@@ -16,41 +16,5 @@ pathway 1-deoxy-11-oxopentalenate-to-neopentalenoketolac "1-deoxy-11-oxopentalen
     neopentalenolactone_f
     <-> .
     neopentalenoketolactone
-  }
-
-  branch from co2 side left {
-    co2
-    <-> ec_4_1_1_65 [4.1.1.65] +1_15z_tetracosenoyl_2_9z_12z_octadecadienoyl_sn +1_15z_tetracosenoyl_2_9z_12z_octadecadienoyl_sn
-    h
-  }
-
-  branch from co2 side right {
-    co2
-    <-> ec_4_1_1_65 [4.1.1.65] +24_1_18_3_pe +h
-    1_15z_tetracosenoyl_2_9z_12z_15z_octadecatrienoy
-  }
-
-  branch from succinate side left {
-    succinate
-    <-> . +7s_11s_16s_7_hydroxy_ent_kauran_11_16_epoxy_19 +co2 +2_oxoglutarate +o2
-    11s_16s_ent_kauran_11_16_epoxy_19_oate
-  }
-
-  branch from succinate side right {
-    succinate
-    <-> ec_1_3_5_1 [1.3.5.1] +plastoquinone_9 +fumarate
-    plastoquinol_9
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    nitrocefin
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +imipenem +phosphate +imipenem
-    atp
   }
 }

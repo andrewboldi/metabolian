@@ -1,0 +1,479 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "11-cis-retinal-to-9-cis-retinoate",
+  "name": "11-cis-retinal to 9-cis-retinoate",
+  "category": "other",
+  "summary": "A 3-step route from 11-cis-retinal to 9-cis-retinoate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR146230"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "11_cis_retinal",
+      "name": "11-cis-retinal",
+      "formula": "C20H28O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364166"
+      }
+    },
+    {
+      "id": "all_trans_retinal",
+      "name": "all-trans-retinal",
+      "formula": "C20H28O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364167"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "all_trans_retinoate",
+      "name": "all-trans-retinoate",
+      "formula": "C20H27O2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1364381"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "9_cis_retinoate",
+      "name": "9-cis-retinoate",
+      "formula": "C20H27O2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1364383"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_2_1_3",
+      "name": "EC 5.2.1.3",
+      "ec": [
+        "5.2.1.3"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR146230",
+      "ec": "5.2.1.3",
+      "substrates": [
+        {
+          "metabolite": "11_cis_retinal",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "all_trans_retinal",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_2_1_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR146230"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR146230"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR103413",
+      "substrates": [
+        {
+          "metabolite": "all_trans_retinal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "all_trans_retinoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR103413"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR103413"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR103571",
+      "substrates": [
+        {
+          "metabolite": "all_trans_retinoate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "9_cis_retinoate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR103571"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR103571"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_11_cis_retinal_2-4-dichloro-5-oxo-2-5-di-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11_cis_retinal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-4-dichloro-5-oxo-2-5-di-to-o2"
+      },
+      "note": "Shares 11-cis-retinal with 2,4-dichloro-5-oxo-2,5-di… to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364166"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_11_cis_retinal_s-adenosyl-l-homocysteine-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11_cis_retinal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-fmn"
+      },
+      "note": "Shares 11-cis-retinal with S-adenosyl-L-homocysteine to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364166"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_11_cis_retinal_z-indol-3-yl-n-sulfo-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11_cis_retinal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "z-indol-3-yl-n-sulfo-to-h2o"
+      },
+      "note": "Shares 11-cis-retinal with (Z)-(indol-3-yl)-N-(sulfo… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364166"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinal_3-phospho-ji-20a-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-phospho-ji-20a-to-h2o"
+      },
+      "note": "Shares all-trans-retinal with 3'-phospho-JI-20A to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364167"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinal_9-cis-retinol-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "9-cis-retinol-to-fmn"
+      },
+      "note": "Shares all-trans-retinal with 9-cis-retinol to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364167"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinal_biphenyl-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "biphenyl-to-nad"
+      },
+      "note": "Shares all-trans-retinal with biphenyl to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364167"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinal_o-s-fatty-acylpantethein-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "o-s-fatty-acylpantethein-to-h2o"
+      },
+      "note": "Shares all-trans-retinal with O-(S-fatty acylpantethein… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364167"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinal_s-adenosyl-l-homocysteine-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-fmn"
+      },
+      "note": "Shares all-trans-retinal with S-adenosyl-L-homocysteine to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364167"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinal_z-indol-3-yl-n-sulfo-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "z-indol-3-yl-n-sulfo-to-h2o"
+      },
+      "note": "Shares all-trans-retinal with (Z)-(indol-3-yl)-N-(sulfo… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364167"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinoate_24-methylidenelophenol-to-avenasterol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "24-methylidenelophenol-to-avenasterol"
+      },
+      "note": "Shares all-trans-retinoate with 24-methylidenelophenol to avenasterol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364381"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinoate_all-trans-18-hydroxyretin-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "all-trans-18-hydroxyretin-to-h2o"
+      },
+      "note": "Shares all-trans-retinoate with all-trans-18-hydroxyretin… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364381"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinoate_glycosmisate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "glycosmisate-to-h2o"
+      },
+      "note": "Shares all-trans-retinoate with glycosmisate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364381"
+          }
+        ]
+      }
+    }
+  ]
+}

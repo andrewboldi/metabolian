@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-15z-tetracosenoyl-sp-to-n-15z-tetracosenoyl-sp "N-[(15Z)-tetracosenoyl]sp… to N-[(15Z)-tetracosenoyl]sp…" {
-  spacing 194
+  spacing 242
 
   spine at 0,0 {
     n_15z_tetracosenoyl_sphing_4_enine_1_phosphochol
@@ -26,14 +26,14 @@ pathway n-15z-tetracosenoyl-sp-to-n-15z-tetracosenoyl-sp "N-[(15Z)-tetracosenoyl
 
   branch from 15z_tetracosenoate side right {
     15z_tetracosenoate
-    <-> . +1_nervonoylglycerol +h2o +hplus
-    glycerol
+    <-> . +n_nervonoyltaurine +h2o
+    taurine
   }
 
   branch from 15z_tetracosenoate side left {
     15z_tetracosenoate
-    <-> . +nervonamide +h2o
-    nh3
+    <-> . +h +adp +phosphate +h2o
+    atp
   }
 
   branch from 15z_tetracosenoyl_coa side right {
@@ -50,13 +50,61 @@ pathway n-15z-tetracosenoyl-sp-to-n-15z-tetracosenoyl-sp "N-[(15Z)-tetracosenoyl
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_123 [4.2.3.123] +fpp
-    sesquiphellandrene
+    <-> . +all_trans_pentaprenyl_diphosphate
+    quiannulatene
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_3_1_7_2 [3.1.7.2] +h2o +gtp +hplus
-    guanosine_3_diphosphate_5_triphosphate_hexaanion
+    <-> . +isocaproate +atp +coa +amp
+    4_methylpentanoyl_coa
+  }
+
+  branch from 15z_tetracosenoate side right {
+    15z_tetracosenoate
+    <-> . +h +cholesterol +h2o
+    cholest_5_en_3beta_yl_15z_tetracosenoate
+  }
+
+  branch from 15z_tetracosenoate side left {
+    15z_tetracosenoate
+    <-> . +adp +phosphate +atp +h2o
+    h
+  }
+
+  branch from 15z_tetracosenoyl_coa side right {
+    15z_tetracosenoyl_coa
+    <-> . +cholesterol +cholest_5_en_3beta_yl_15z_tetracosenoate
+    coa
+  }
+
+  branch from 15z_tetracosenoyl_coa side left {
+    15z_tetracosenoyl_coa
+    <-> ec_2_3_1_26 [2.3.1.26] +cholesterol +coa
+    15z_tetracosenoyl_cholesterol
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +3_methylvalerate +atp +coa +amp
+    3_methylpentanoyl_coa
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +2_methylvalerate +atp +coa +amp
+    2_methylpentanoyl_coa
+  }
+
+  branch from sphinganine side right {
+    sphinganine
+    <-> . +2_hydroxypalmitoyl_coa +coa +hplus
+    n_2_hydroxyhexadecanoyl_sphinganine
+  }
+
+  branch from sphinganine side left {
+    sphinganine
+    <-> . +17z_hexacosenoyl_coa +coa +hplus
+    n_17z_hexacosenoyl_sphinganine
   }
 }

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "tyraminium-to-2-4-5-trihydroxyphenylace",
   "name": "tyraminium to 2,4,5-trihydroxyphenylace…",
-  "category": "lipid-metabolism",
+  "category": "redox-detox",
   "summary": "A 4-step route from tyraminium to 2,4,5-trihydroxyphenylacetate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -130,41 +130,13 @@
       }
     },
     {
-      "id": "pyruvate",
-      "name": "Pyruvate",
-      "formula": "C3H3O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:15361"
-      }
-    },
-    {
-      "id": "r_salsolinol_1_carboxylate",
-      "name": "(R)-salsolinol-1-carboxylate",
-      "short": "salsolinol-1-carbox…",
-      "formula": "C11H13NO4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:194092"
-      }
-    },
-    {
-      "id": "fatty_acyl_coa",
-      "name": "fatty acyl-CoA",
-      "formula": "C22H31N7O17P3SR",
+      "id": "3_4_dihydroxyphenylacetyl_coa",
+      "name": "3,4-dihydroxyphenylacetyl-CoA",
+      "short": "3,4-dihydroxyphenyl…",
+      "formula": "C29H38N7O19P3S",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:77636"
-      }
-    },
-    {
-      "id": "n_fatty_acyl_dopamine",
-      "name": "N-(fatty acyl)-dopamine",
-      "short": "N-(fatty acyl)-dopa…",
-      "formula": "C9H10NO3R",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:157740"
+        "chebi": "CHEBI:189558"
       }
     },
     {
@@ -175,45 +147,9 @@
       "xrefs": {
         "chebi": "CHEBI:57287"
       }
-    },
-    {
-      "id": "4_methylcatechol",
-      "name": "4-methylcatechol",
-      "formula": "C7H8O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:17254"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16526"
-      }
-    },
-    {
-      "id": "3_4_dihydroxyphenylacetyl_coa",
-      "name": "3,4-dihydroxyphenylacetyl-CoA",
-      "short": "3,4-dihydroxyphenyl…",
-      "formula": "C29H38N7O19P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:189558"
-      }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_4_1_1_83",
-      "name": "4-hydroxyphenylacetate decarboxylase",
-      "ec": [
-        "4.1.1.83"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -397,133 +333,6 @@
     },
     {
       "id": "r5",
-      "name": "dopamine + pyruvate = (R)-salsolinol-1-carboxylate + H2O",
-      "equation": "dopamine + pyruvate = (R)-salsolinol-1-carboxylate + H2O",
-      "substrates": [
-        {
-          "metabolite": "dopamine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pyruvate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "r_salsolinol_1_carboxylate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:74855"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:74855"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "dopamine + a fatty acyl-CoA = an N-(fatty acyl)-dopamine + CoA + H(+)",
-      "equation": "dopamine + a fatty acyl-CoA = an N-(fatty acyl)-dopamine + CoA + H(+)",
-      "substrates": [
-        {
-          "metabolite": "dopamine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fatty_acyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n_fatty_acyl_dopamine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:86415"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:86415"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "4-hydroxyphenylacetate decarboxylase",
-      "equation": "3,4-dihydroxyphenylacetate + H(+) = 4-methylcatechol + CO2",
-      "ec": "4.1.1.83",
-      "substrates": [
-        {
-          "metabolite": "dopac",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "4_methylcatechol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_1_1_83"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:62556"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:62556"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r8",
       "name": "3,4-dihydroxyphenylacetyl-CoA + H2O = 3,4-dihydroxyphenylacetate + CoA + H(+)",
       "equation": "3,4-dihydroxyphenylacetyl-CoA + H2O = 3,4-dihydroxyphenylacetate + CoA + H(+)",
       "substrates": [
@@ -551,7 +360,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 8,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:70419"
       },
@@ -561,6 +370,118 @@
           {
             "db": "Rhea",
             "id": "RHEA:70419"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_dopal_catecholamine-metabolism",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dopal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "catecholamine-metabolism"
+      },
+      "note": "Shares 3,4-Dihydroxyphenylacetaldehyde (DOPAL) with Catecholamine biosynthesis and degradation.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:27978"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dopal_n-n-dimethylformamide-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dopal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-n-dimethylformamide-to-ammonium"
+      },
+      "note": "Shares 3,4-Dihydroxyphenylacetaldehyde (DOPAL) with N,N-dimethylformamide to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:27978"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dopac_4-chlorophenylacetonitrile-to-s-4-hydroxy-2-oxoh",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dopac"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-chlorophenylacetonitrile-to-s-4-hydroxy-2-oxoh"
+      },
+      "note": "Shares 3,4-Dihydroxyphenylacetate (DOPAC) with 4-chlorophenylacetonitrile to (S)-4-hydroxy-2-oxoheptan….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17612"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dopac_catecholamine-metabolism",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dopac"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "catecholamine-metabolism"
+      },
+      "note": "Shares 3,4-Dihydroxyphenylacetate (DOPAC) with Catecholamine biosynthesis and degradation.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17612"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_4_5_trihydroxyphenylacetate_4-chlorophenylacetonitrile-to-s-4-hydroxy-2-oxoh",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_4_5_trihydroxyphenylacetate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-chlorophenylacetonitrile-to-s-4-hydroxy-2-oxoh"
+      },
+      "note": "Shares 2,4,5-trihydroxyphenylacetate with 4-chlorophenylacetonitrile to (S)-4-hydroxy-2-oxoheptan….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:138056"
           }
         ]
       }

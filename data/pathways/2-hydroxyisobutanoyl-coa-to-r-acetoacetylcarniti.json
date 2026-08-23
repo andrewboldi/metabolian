@@ -111,6 +111,43 @@
       "xrefs": {
         "chebi": "CHEBI:57315"
       }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "o_acetyl_l_carnitine",
+      "name": "O-acetyl-L-carnitine",
+      "formula": "C9H17NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57589"
+      }
+    },
+    {
+      "id": "hexadecanedioyl_coa",
+      "name": "hexadecanedioyl-CoA",
+      "formula": "C37H59N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:77085"
+      }
+    },
+    {
+      "id": "o_hexadecanedioyl_l_carnitine",
+      "name": "O-hexadecanedioyl-L-carnitine",
+      "short": "O-hexadecanedioyl-L…",
+      "formula": "C23H42NO6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77087"
+      }
     }
   ],
   "enzymes": [
@@ -134,6 +171,16 @@
       "ec": [
         "5.1.2.3"
       ]
+    },
+    {
+      "id": "ec_2_3_1_7",
+      "name": "carnitine O-acetyltransferase",
+      "ec": [
+        "2.3.1.7"
+      ],
+      "xrefs": {
+        "uniprot": "P43155"
+      }
     }
   ],
   "reactions": [
@@ -295,6 +342,356 @@
           {
             "db": "Rhea",
             "id": "RHEA:21760"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "carnitine O-acetyltransferase",
+      "equation": "(R)-carnitine + acetyl-CoA = O-acetyl-(R)-carnitine + CoA",
+      "ec": "2.3.1.7",
+      "substrates": [
+        {
+          "metabolite": "carnitine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_acetyl_l_carnitine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:21136"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21136"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "hexadecanedioyl-CoA + (R)-carnitine = O-hexadecanedioyl-L-carnitine + CoA",
+      "equation": "hexadecanedioyl-CoA + (R)-carnitine = O-hexadecanedioyl-L-carnitine + CoA",
+      "substrates": [
+        {
+          "metabolite": "hexadecanedioyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "carnitine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_hexadecanedioyl_l_carnitine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:40283"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40283"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_2_hydroxyisobutanoyl_coa_2-hydroxyisobutanoyl-coa-to-2-oxopropyl-com",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_hydroxyisobutanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-hydroxyisobutanoyl-coa-to-2-oxopropyl-com"
+      },
+      "note": "Shares 2-hydroxyisobutanoyl-CoA with 2-hydroxyisobutanoyl-CoA to 2-oxopropyl-CoM.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:131780"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_hydroxyisobutanoyl_coa_2-hydroxyisobutanoyl-coa-to-3-cyanopyridine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_hydroxyisobutanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-hydroxyisobutanoyl-coa-to-3-cyanopyridine"
+      },
+      "note": "Shares 2-hydroxyisobutanoyl-CoA with 2-hydroxyisobutanoyl-CoA to 3-cyanopyridine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:131780"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hydroxybutyryl_coa_l-arogenate-to-trans-3-methylglutaconyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxybutyryl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-arogenate-to-trans-3-methylglutaconyl"
+      },
+      "note": "Shares (S)-3-Hydroxybutanoyl-CoA with L-arogenate to trans-3-methylglutaconyl-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57316"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hydroxybutyryl_coa_s-3-hydroxybutanoyl-coa-to-3-hydroxy-5-oxohexan",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxybutyryl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-3-hydroxybutanoyl-coa-to-3-hydroxy-5-oxohexan"
+      },
+      "note": "Shares (S)-3-Hydroxybutanoyl-CoA with (S)-3-hydroxybutanoyl-CoA to 3-hydroxy-5-oxohexanoyl-C….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57316"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hydroxybutyryl_coa_vinylacetyl-coa-to-norsolorinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxybutyryl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "vinylacetyl-coa-to-norsolorinate"
+      },
+      "note": "Shares (S)-3-Hydroxybutanoyl-CoA with vinylacetyl-CoA to norsolorinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57316"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_3_hydroxybutanoyl_coa_3r-3-3r-3-3r-3-to-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_3_hydroxybutanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3r-3-3r-3-3r-3-to-acetate"
+      },
+      "note": "Shares (R)-3-hydroxybutanoyl-CoA with (3R)-3-{[(3R)-3-{[(3R)-3-… to acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57315"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_3_hydroxybutanoyl_coa_l-arogenate-to-trans-3-methylglutaconyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_3_hydroxybutanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-arogenate-to-trans-3-methylglutaconyl"
+      },
+      "note": "Shares (R)-3-hydroxybutanoyl-CoA with L-arogenate to trans-3-methylglutaconyl-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57315"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_3_hydroxybutanoyl_coa_l-saccharopinate-to-r-crotonylcarnitine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_3_hydroxybutanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-saccharopinate-to-r-crotonylcarnitine"
+      },
+      "note": "Shares (R)-3-hydroxybutanoyl-CoA with L-saccharopinate to (R)-crotonylcarnitine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57315"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hexadecanedioyl_coa_1-dodecanoyl-sn-glycerol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hexadecanedioyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-dodecanoyl-sn-glycerol-to-h2o"
+      },
+      "note": "Shares hexadecanedioyl-CoA with 1-dodecanoyl-sn-glycerol… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77085"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hexadecanedioyl_coa_2e-hexadecenedioyl-coa-to-2e-hexadecenedioyl-co",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hexadecanedioyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2e-hexadecenedioyl-coa-to-2e-hexadecenedioyl-co"
+      },
+      "note": "Shares hexadecanedioyl-CoA with (2E)-hexadecenedioyl-CoA to (2E)-hexadecenedioyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77085"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hexadecanedioyl_coa_3-sinapoyloxypropylglucos-to-s-sulfanylglutathio",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hexadecanedioyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-sinapoyloxypropylglucos-to-s-sulfanylglutathio"
+      },
+      "note": "Shares hexadecanedioyl-CoA with 3-sinapoyloxypropylglucos… to S-sulfanylglutathione.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77085"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hexadecanedioyl_coa_loganin-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hexadecanedioyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "loganin-to-h2o"
+      },
+      "note": "Shares hexadecanedioyl-CoA with loganin to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77085"
           }
         ]
       }

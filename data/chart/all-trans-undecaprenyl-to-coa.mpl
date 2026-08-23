@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway all-trans-undecaprenyl-to-coa "all-trans-undecaprenyl… to CoA" {
-  spacing 170
+  spacing 152
 
   spine at 0,0 {
     all_trans_undecaprenyl_diphosphate
@@ -14,23 +14,5 @@ pathway all-trans-undecaprenyl-to-coa "all-trans-undecaprenyl… to CoA" {
     coa
     <-> . +acetyl_coa +d_man_beta_1_4_glca_beta_1_2_6_o_acetyl_d_man_al -coa
     6_o_acetyl_beta_d_mannosyl_1_4_beta_d_glucoronat
-  }
-
-  branch from d_man_beta_1_4_glca_beta_1_2_d_man_alpha_1_3_d_g side left {
-    d_man_beta_1_4_glca_beta_1_2_d_man_alpha_1_3_d_g
-    <-> . +phosphoenolpyruvate +phosphate
-    4_6_ch3_coo_c_d_man_beta_1_4_glca_beta_1_2_d_man
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +acetyl_coa +purpurea_glycoside_a
-    lanatoside_a
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +acetyl_coa +deslanoside
-    lanatoside_c
   }
 }

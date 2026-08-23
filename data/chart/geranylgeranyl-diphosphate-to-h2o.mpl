@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway geranylgeranyl-diphosphate-to-h2o "geranylgeranyl diphosphate to H2O" {
-  spacing 250
+  spacing 208
 
   spine at 0,0 {
     geranylgeranyl_diphosphate
@@ -14,47 +14,5 @@ pathway geranylgeranyl-diphosphate-to-h2o "geranylgeranyl diphosphate to H2O" {
     13e_labda_7_13_dien_15_ol
     <-> ec_3_1_7_10 [3.1.7.10] +diphosphate -h2o
     2e_6e_10e_geranylgeranyl_diphosphate
-  }
-
-  branch from 5s_9s_10s_13e_labda_7_13_dien_15_yl_diphosphate side left {
-    5s_9s_10s_13e_labda_7_13_dien_15_yl_diphosphate
-    <-> ec_5_5_1_30 [5.5.1.30]
-    2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +neoechinulin_a +dmapp
-    isoechinulin_a
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +isoechinulin_a +dmapp
-    dehydroechinulin
-  }
-
-  branch from 2e_6e_10e_geranylgeranyl_diphosphate side right {
-    2e_6e_10e_geranylgeranyl_diphosphate
-    <-> ec_4_2_3_42 [4.2.3.42] +diphosphate +h2o
-    aphidicolan_16_ol
-  }
-
-  branch from 2e_6e_10e_geranylgeranyl_diphosphate side left {
-    2e_6e_10e_geranylgeranyl_diphosphate
-    <-> ec_4_2_3_42 [4.2.3.42] +diphosphate +h2o
-    aphidicolan_16beta_ol
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    demycarosyl_mithramycin
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    mithramycin_sdk
   }
 }

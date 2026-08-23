@@ -1,0 +1,307 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "4-aminobenzoate-to-h2o-85851",
+  "name": "4-aminobenzoate to H2O",
+  "category": "other",
+  "summary": "A 3-step route from 4-aminobenzoate to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:85851"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:17836"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "4_aminobenzoate",
+      "name": "4-aminobenzoate",
+      "formula": "C7H6NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17836"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "1_o_4_aminobenzoyl_d_glucopyranose",
+      "name": "1-O-(4-aminobenzoyl)-β-D-glucopyranose",
+      "short": "1-O-(4-aminobenzoyl…",
+      "formula": "C13H17NO7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:139329"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1102128"
+      }
+    },
+    {
+      "id": "udp_alpha_d_glucose",
+      "name": "UDP-alpha-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1364019"
+      }
+    },
+    {
+      "id": "4_aminobenzoate",
+      "name": "4-aminobenzoate",
+      "formula": "C7H6NO2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM421"
+      }
+    },
+    {
+      "id": "ethanol",
+      "name": "ethanol",
+      "formula": "C2H6O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1108092"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "benzocaine",
+      "name": "benzocaine",
+      "formula": "C9H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:116735"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_1_1",
+      "name": "carboxylesterase",
+      "ec": [
+        "3.1.1.1"
+      ],
+      "xrefs": {
+        "uniprot": "P23141"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "4-aminobenzoate + UDP-alpha-D-glucose = 1-O-(4-aminobenzoyl)-beta-D-glucose + UDP",
+      "equation": "4-aminobenzoate + UDP-alpha-D-glucose = 1-O-(4-aminobenzoyl)-beta-D-glucose + UDP",
+      "substrates": [
+        {
+          "metabolite": "4_aminobenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_o_4_aminobenzoyl_d_glucopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:85851"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:85851"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR144036",
+      "substrates": [
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_o_4_aminobenzoyl_d_glucopyranose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "udp_alpha_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4_aminobenzoate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR144036"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR144036"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "carboxylesterase",
+      "ec": "3.1.1.1",
+      "substrates": [
+        {
+          "metabolite": "ethanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4_aminobenzoate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "benzocaine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR130864"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR130864"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_1_o_4_aminobenzoyl_d_glucopyranose_4-aminobenzoate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_o_4_aminobenzoyl_d_glucopyranose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-aminobenzoate-to-h2o"
+      },
+      "note": "Shares 1-O-(4-aminobenzoyl)-β-D-glucopyranose with 4-aminobenzoate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:139329"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_benzocaine_4-aminobenzoate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "benzocaine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-aminobenzoate-to-h2o"
+      },
+      "note": "Shares benzocaine with 4-aminobenzoate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:116735"
+          }
+        ]
+      }
+    }
+  ]
+}

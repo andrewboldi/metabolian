@@ -4,45 +4,27 @@
 # edit the generator, not this file.
 
 pathway olivetolate-to-h2o "olivetolate to H2O" {
-  spacing 238
+  spacing 300
 
   spine at 0,0 {
     olivetolate
-    <-> . +neryl_diphosphate -ppi
-    cannabinerolate
+    <-> ec_2_5_1_102 [2.5.1.102] +gpp -ppi
+    cannabigerolate
     <-> ec_1_21_3_7 [1.21.3.7] +o2 -h2o2
     9_tetrahydrocannabinolate
     <-> . +h +o2 -h2o
     cannabinolic_acid
   }
 
-  branch from ppi side left {
-    ppi
-    <-> . +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    talarodiene
+  branch from cannabigerolate side left {
+    cannabigerolate
+    <-> ec_1_21_3_8 [1.21.3.8] +o2 +h2o2
+    cannabidiolate
   }
 
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_211 [4.2.3.211] +fpp
-    exo_bergamotene
-  }
-
-  branch from cannabinolic_acid side left {
-    cannabinolic_acid
-    <-> . +cannabinol
-    co2
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +cefaloridine +phosphate +cefaloridine
-    atp
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    cefalotin
+  branch from olivetolate side right {
+    olivetolate
+    <-> ec_4_4_1_26 [4.4.1.26] +coa +hplus
+    3_5_7_trioxododecanoyl_coa
   }
 }

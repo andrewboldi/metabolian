@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "datp-to-diphosphate",
   "name": "dATP to diphosphate",
-  "category": "amino-acid-metabolism",
+  "category": "other",
   "summary": "A 4-step route from dATP to diphosphate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -139,92 +139,6 @@
       "xrefs": {
         "metanetx": "MNXM11"
       }
-    },
-    {
-      "id": "1_propionyl_2_butanoyl_sn_glycero_3_phospho_l_se",
-      "name": "1-propionyl-2-butanoyl-sn-glycero-3-phospho-L-serine",
-      "short": "1-propionyl-2-butan…",
-      "formula": "C13H23NO10P",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM732661"
-      }
-    },
-    {
-      "id": "phosphate",
-      "name": "phosphate",
-      "formula": "HO4P",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM9"
-      }
-    },
-    {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM3"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "WATER"
-      }
-    },
-    {
-      "id": "pitavastatin_glucuronide",
-      "name": "pitavastatin-glucuronide",
-      "short": "pitavastatin-glucur…",
-      "formula": "C62H62CaF2N2O20",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1583020"
-      }
-    },
-    {
-      "id": "ent_atiserene",
-      "name": "ent-atiserene",
-      "formula": "C20H32",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1372167"
-      }
-    },
-    {
-      "id": "ent_copalyl_diphosphate",
-      "name": "ent-copalyl diphosphate",
-      "short": "ent-copalyl PP",
-      "formula": "C20H33O7P2",
-      "charge": -3,
-      "xrefs": {
-        "metanetx": "MNXM720"
-      }
-    },
-    {
-      "id": "13r_9_13_epoxylabd_14_ene",
-      "name": "(13R)-9,13-epoxylabd-14-ene",
-      "short": "9,13-epoxylabd-14-e…",
-      "formula": "C20H34O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1364561"
-      }
-    },
-    {
-      "id": "peregrinol_diphosphate",
-      "name": "peregrinol diphosphate",
-      "short": "peregrinol PP",
-      "formula": "C20H35O8P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:138232"
-      }
     }
   ],
   "enzymes": [
@@ -233,27 +147,16 @@
       "name": "NAD(+) kinase",
       "ec": [
         "2.7.1.23"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q4G0N4"
+      }
     },
     {
       "id": "ec_2_5_1_62",
       "name": "chlorophyll synthase",
       "ec": [
         "2.5.1.62"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_185",
-      "name": "ent-atiserene synthase",
-      "ec": [
-        "4.2.3.185"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_189",
-      "name": "9,13-epoxylabda-14-ene synthase",
-      "ec": [
-        "4.2.3.189"
       ]
     }
   ],
@@ -429,183 +332,247 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "Reaction MNXR206450",
-      "substrates": [
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "1_propionyl_2_butanoyl_sn_glycero_3_phospho_l_se",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "1_propionyl_2_butanoyl_sn_glycero_3_phospho_l_se",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR206450"
+      "id": "xt_dgmp_8-hydroxy-2-deoxyguanosi-to-2-deoxyguanosine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dgmp"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "8-hydroxy-2-deoxyguanosi-to-2-deoxyguanosine"
+      },
+      "note": "Shares dGMP with 8-hydroxy-2'-deoxyguanosi… to 2'-deoxyguanosine.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR206450"
+            "id": "MNXM736654"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "Reaction MNXR206460",
-      "substrates": [
-        {
-          "metabolite": "pitavastatin_glucuronide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "pitavastatin_glucuronide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "metanetx": "MNXR206460"
+      "id": "xt_dgmp_nadh-to-cdp-d-arabinitol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dgmp"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-cdp-d-arabinitol"
+      },
+      "note": "Shares dGMP with NADH to CDP-D-arabinitol.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR206460"
+            "id": "MNXM736654"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "ent-atiserene synthase",
-      "ec": "4.2.3.185",
-      "substrates": [
-        {
-          "metabolite": "diphosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ent_atiserene",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "ent_copalyl_diphosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_185"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "metanetx": "MNXR198368"
+      "id": "xt_dgdp_beta-d-fructose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dgdp"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-d-fructose-to-h2o"
+      },
+      "note": "Shares dGDP with beta-D-fructose… to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR198368"
+            "id": "MNXM436"
           }
         ]
       }
     },
     {
-      "id": "r8",
-      "name": "9,13-epoxylabda-14-ene synthase",
-      "ec": "4.2.3.189",
-      "substrates": [
-        {
-          "metabolite": "diphosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "13r_9_13_epoxylabd_14_ene",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "peregrinol_diphosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_189"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "metanetx": "MNXR198793"
+      "id": "xt_dgdp_cdp-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dgdp"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "cdp-to-h2o"
+      },
+      "note": "Shares dGDP with CDP to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR198793"
+            "id": "MNXM436"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dgdp_dcmp-to-dcdp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dgdp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dcmp-to-dcdp"
+      },
+      "note": "Shares dGDP with dCMP to dCDP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM436"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dgdp_dgtp-to-3s-citryl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dgdp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dgtp-to-3s-citryl-coa"
+      },
+      "note": "Shares dGDP with dGTP to (3S)-Citryl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM436"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dgdp_h-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dgdp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-diphosphate"
+      },
+      "note": "Shares dGDP with H to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM436"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dgdp_n4-acetyl-2-deoxycytidine-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dgdp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n4-acetyl-2-deoxycytidine-to-succinate"
+      },
+      "note": "Shares dGDP with N4-acetyl-2'-deoxycytidine to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM436"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dgdp_phytyl-phosphate-to-di-trans-poly-cis-undecap",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dgdp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phytyl-phosphate-to-di-trans-poly-cis-undecap"
+      },
+      "note": "Shares dGDP with phytyl phosphate to di-trans,poly-cis-Undecap….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM436"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_chlorophyllide_b2_3-hydroxy-7-ethoxycoumarin-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "chlorophyllide_b2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxy-7-ethoxycoumarin-to-o2"
+      },
+      "note": "Shares chlorophyllide b2 with 3-Hydroxy-7-ethoxycoumarin to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1136031"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_chlorophyllide_b2_4-chlorophenyl-phosphate-to-l-erythro-3-methylma",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "chlorophyllide_b2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-chlorophenyl-phosphate-to-l-erythro-3-methylma"
+      },
+      "note": "Shares chlorophyllide b2 with 4-Chlorophenyl phosphate to L-erythro-3-Methylmalyl-C….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1136031"
           }
         ]
       }

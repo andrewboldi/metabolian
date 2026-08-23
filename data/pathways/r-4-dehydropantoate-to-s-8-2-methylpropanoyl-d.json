@@ -1,0 +1,380 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "r-4-dehydropantoate-to-s-8-2-methylpropanoyl-d",
+  "name": "(R)-4-dehydropantoate to S(8)-(2-methylpropanoyl)d…",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from (R)-4-dehydropantoate to S(8)-(2-methylpropanoyl)dihydrolipoamide, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:19349"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57849"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "r_4_dehydropantoate",
+      "name": "(R)-4-dehydropantoate",
+      "short": "4-dehydropantoate",
+      "formula": "C6H9O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57849"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "r_3_3_dimethylmalate",
+      "name": "(R)-3,3-dimethylmalate",
+      "short": "3,3-dimethylmalate",
+      "formula": "C6H8O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57424"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "kiv",
+      "name": "3-Methyl-2-oxobutanoate",
+      "short": "3-Methyl-2-oxobutan…",
+      "formula": "C5H7O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:11851"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "r_lipoamide",
+      "name": "(R)-lipoamide",
+      "formula": "C8H15NOS2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1024"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "s_8_2_methylpropanoyl_dihydrolipoamide",
+      "name": "S(8)-(2-methylpropanoyl)dihydrolipoamide",
+      "short": "S(8)-(2-methylpropa…",
+      "formula": "C12H23NO2S2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM740144"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_2_1_33",
+      "name": "(R)-dehydropantoate dehydrogenase",
+      "ec": [
+        "1.2.1.33"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_84",
+      "name": "dimethylmalate dehydrogenase",
+      "ec": [
+        "1.1.1.84"
+      ]
+    },
+    {
+      "id": "ec_1_2_4_4",
+      "name": "3-methyl-2-oxobutanoate dehydrogenase (2-methylpropanoyl-transferring)",
+      "ec": [
+        "1.2.4.4"
+      ],
+      "xrefs": {
+        "uniprot": "P12694"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(R)-dehydropantoate dehydrogenase",
+      "equation": "(R)-4-dehydropantoate + NAD(+) + H2O = (R)-3,3-dimethylmalate + NADH + 2 H(+)",
+      "ec": "1.2.1.33",
+      "substrates": [
+        {
+          "metabolite": "r_4_dehydropantoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_3_3_dimethylmalate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_33"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:19349"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19349"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "dimethylmalate dehydrogenase",
+      "equation": "(R)-3,3-dimethylmalate + NAD(+) = 3-methyl-2-oxobutanoate + CO2 + NADH",
+      "ec": "1.1.1.84",
+      "substrates": [
+        {
+          "metabolite": "r_3_3_dimethylmalate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "kiv",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_84"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:13321"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13321"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3-methyl-2-oxobutanoate dehydrogenase (2-methylpropanoyl-transferring)",
+      "ec": "1.2.4.4",
+      "substrates": [
+        {
+          "metabolite": "r_lipoamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "kiv",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "s_8_2_methylpropanoyl_dihydrolipoamide",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_4_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR152647"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR152647"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_r_4_dehydropantoate_r-alanopine-to-n6-r-s8-succinyldihydr",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_4_dehydropantoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-alanopine-to-n6-r-s8-succinyldihydr"
+      },
+      "note": "Shares (R)-4-dehydropantoate with (R)-β-alanopine to N6-[(R)-S8-succinyldihydr….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57849"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_8_2_methylpropanoyl_dihydrolipoamide_alpha-beta-dihydroxyethyl-to-s-8-succinyldihydro",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_8_2_methylpropanoyl_dihydrolipoamide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-beta-dihydroxyethyl-to-s-8-succinyldihydro"
+      },
+      "note": "Shares S(8)-(2-methylpropanoyl)dihydrolipoamide with alpha,beta-Dihydroxyethyl… to S(8)-succinyldihydrolipoa….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM740144"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_8_2_methylpropanoyl_dihydrolipoamide_r-lipoamide-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_8_2_methylpropanoyl_dihydrolipoamide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-lipoamide-to-h2o"
+      },
+      "note": "Shares S(8)-(2-methylpropanoyl)dihydrolipoamide with (R)-lipoamide to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM740144"
+          }
+        ]
+      }
+    }
+  ]
+}

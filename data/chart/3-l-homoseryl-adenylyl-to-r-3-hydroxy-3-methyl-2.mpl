@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-l-homoseryl-adenylyl-to-r-3-hydroxy-3-methyl-2 "3'-(L-homoseryl)adenylyl to (R)-3-hydroxy-3-methyl-2-…" {
-  spacing 304
+  spacing 268
 
   spine at 0,0 {
     3_l_homoseryl_adenylyl
@@ -22,18 +22,6 @@ pathway 3-l-homoseryl-adenylyl-to-r-3-hydroxy-3-methyl-2 "3'-(L-homoseryl)adenyl
     r_3_hydroxy_3_methyl_2_oxopentanoate
   }
 
-  branch from amp_3_end_1 side left {
-    amp_3_end_1
-    <-> . +3_l_threonyl_adenylyl_1_group +h2o
-    threonine
-  }
-
-  branch from amp_3_end_1 side right {
-    amp_3_end_1
-    <-> . +h2o +threonine
-    3_l_threonyl_adenylyl_1_group
-  }
-
   branch from l_homoserine side left {
     l_homoserine
     <-> . +h2o
@@ -44,29 +32,5 @@ pathway 3-l-homoseryl-adenylyl-to-r-3-hydroxy-3-methyl-2 "3'-(L-homoseryl)adenyl
     l_homoserine
     <-> .
     d_homoserine
-  }
-
-  branch from oxobut side left {
-    oxobut
-    <-> . +3_hydroxy_l_kynurenine +l_aminobutyrate
-    4_2_amino_3_hydroxyphenyl_2_4_dioxobutanoate
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +adp_1_deoxy_o_didehydro_ribofuranosylium +l_argininium +hplus
-    adp_2_imine_ribofurano_1_2_4_5_oxazolidine_2
-  }
-
-  branch from nh3 side left {
-    nh3
-    <-> . +s_4_aminopentanoic_acid +nad +h2o +nadh +hplus
-    4_oxopentanoate
-  }
-
-  branch from s_2_acetyl_2_hydroxybutanoate side right {
-    s_2_acetyl_2_hydroxybutanoate
-    <-> ec_1_1_1_86 [1.1.1.86] +nadp +nadph +hplus
-    2r_3r_2_3_dihydroxy_3_methylpentanoate
   }
 }

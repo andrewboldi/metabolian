@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "gdp-to-2-o-d-mannosyl-1-2",
   "name": "GDP to 2-O-(β-D-mannosyl-(1→2)-β…",
-  "category": "lipid-metabolism",
+  "category": "other",
   "summary": "A 3-step route from GDP to 2-O-(β-D-mannosyl-(1→2)-β-D-mannosyl)-bis(myo-inositol) 1,3'-phosphate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -106,56 +106,6 @@
       "charge": 1,
       "xrefs": {
         "chebi": "CHEBI:15378"
-      }
-    },
-    {
-      "id": "beta_d_man_1_2_alpha_d_man_1_2_alpha_d_man_1_3_a",
-      "name": "beta-D-Man-(1->2)-alpha-D-Man-(1->2)-alpha-D-Man-(1->3)-alpha-D-Man-(1->3)-alpha-D-Man-(1->3)-alpha-D-Man-(1->3)-alphaGlcNAc-PP-Und",
-      "short": "beta-D-Man-(1->2)-a…",
-      "formula": "C99H163NO42P2",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM1132729"
-      }
-    },
-    {
-      "id": "d_mannosyl_1_3_d_mannosyl_1_3_d_mannosyl_1_3_n",
-      "name": "α-D-mannosyl-(1→3)-α-D-mannosyl-(1→3)-α-D-mannosyl-(1→3)-N-acetyl-α-D-glucosaminyl-1-diphospho-ditrans,polycis-undecaprenol",
-      "short": "α-D-mannosyl-(1→3)-…",
-      "formula": "C81H133NO27P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:137169"
-      }
-    },
-    {
-      "id": "p_gingivalis_capped_core_i_lipid_a_penta_acylate",
-      "name": "P. gingivalis capped core I-lipid A (penta-acylated)",
-      "short": "P. gingivalis…",
-      "formula": "C170H306N5O93P5",
-      "charge": -6,
-      "xrefs": {
-        "metanetx": "MNXM1132821"
-      }
-    },
-    {
-      "id": "p_gingivalis_uncapped_core_i_lipid_a_penta_acyla",
-      "name": "P. gingivalis uncapped core I-lipid A (penta-acylated)",
-      "short": "P. gingivalis…",
-      "formula": "C146H266N5O73P5",
-      "charge": -6,
-      "xrefs": {
-        "metanetx": "MNXM1132818"
-      }
-    },
-    {
-      "id": "2_o_d_mannosyl_bis_myo_inositol_1_3_phosphate",
-      "name": "2-O-(β-D-mannosyl)-bis(myo-inositol) 1,3'-phosphate",
-      "short": "2-O-(β-D-mannosyl)-…",
-      "formula": "C18H32O19P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:142888"
       }
     }
   ],
@@ -309,130 +259,115 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "Reaction MNXR193660",
-      "substrates": [
-        {
-          "metabolite": "gdp",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "beta_d_man_1_2_alpha_d_man_1_2_alpha_d_man_1_3_a",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 3
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "gdp_alpha_d_mannose",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "d_mannosyl_1_3_d_mannosyl_1_3_d_mannosyl_1_3_n",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR193660"
+      "id": "xt_2_o_beta_d_mannosyl_1_2_beta_d_mannosyl_bis_myo_gdp-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_o_beta_d_mannosyl_1_2_beta_d_mannosyl_bis_myo"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "gdp-to-h2o"
+      },
+      "note": "Shares 2-O-(beta-D-Mannosyl-(1->2)-beta-D-mannosyl)-bis(myo-inositol) 1,3'-phosphate with GDP to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR193660"
+            "id": "MNXM814736"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "Reaction MNXR193777",
-      "substrates": [
-        {
-          "metabolite": "gdp",
-          "stoichiometry": 4
-        },
-        {
-          "metabolite": "p_gingivalis_capped_core_i_lipid_a_penta_acylate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 4
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "gdp_alpha_d_mannose",
-          "stoichiometry": 4
-        },
-        {
-          "metabolite": "p_gingivalis_uncapped_core_i_lipid_a_penta_acyla",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR193777"
+      "id": "xt_bis_myo_inositol_1_3_phosphate_1-oleoyl-2-acyl-sn-glycer-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "bis_myo_inositol_1_3_phosphate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1-oleoyl-2-acyl-sn-glycer-to-h2o"
+      },
+      "note": "Shares bis(myo-inositol) 1,3'-phosphate with 1-oleoyl-2-acyl-sn-glycer… to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR193777"
+            "db": "ChEBI",
+            "id": "CHEBI:142886"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "bis(myo-inositol) 1,3'-phosphate + GDP-alpha-D-mannose = 2-O-(beta-D-mannosyl)-bis(myo-...",
-      "equation": "bis(myo-inositol) 1,3'-phosphate + GDP-alpha-D-mannose = 2-O-(beta-D-mannosyl)-bis(myo-inositol) 1,3'-phosphate + GDP + H(+)",
-      "substrates": [
-        {
-          "metabolite": "bis_myo_inositol_1_3_phosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "gdp_d_mannose",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_o_d_mannosyl_bis_myo_inositol_1_3_phosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "gdp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:59080"
+      "id": "xt_bis_myo_inositol_1_3_phosphate_gdp-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "bis_myo_inositol_1_3_phosphate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "gdp-to-h2o"
+      },
+      "note": "Shares bis(myo-inositol) 1,3'-phosphate with GDP to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:59080"
+            "db": "ChEBI",
+            "id": "CHEBI:142886"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_bis_myo_inositol_1_3_phosphate_n-1-2-saturated-to-cytidine-5-monophosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "bis_myo_inositol_1_3_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-1-2-saturated-to-cytidine-5-monophosphate"
+      },
+      "note": "Shares bis(myo-inositol) 1,3'-phosphate with N-(1,2-saturated… to cytidine 5'-monophosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:142886"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_o_d_mannosyl_1_2_d_mannosyl_bis_myo_inositol_1_n-1-2-saturated-to-cytidine-5-monophosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_o_d_mannosyl_1_2_d_mannosyl_bis_myo_inositol_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-1-2-saturated-to-cytidine-5-monophosphate"
+      },
+      "note": "Shares 2-O-(β-D-mannosyl-(1→2)-β-D-mannosyl)-bis(myo-inositol) 1,3'-phosphate with N-(1,2-saturated… to cytidine 5'-monophosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:142887"
           }
         ]
       }

@@ -1,0 +1,348 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "5-dehydro-l-gluconate-to-adp-null",
+  "name": "5-dehydro-L-gluconate to ADP",
+  "category": "other",
+  "summary": "A 3-step route from 5-dehydro-L-gluconate to ADP, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR118293"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:137108"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "5_dehydro_l_gluconate",
+      "name": "5-dehydro-L-gluconate",
+      "short": "5-dehydro-L-glucona…",
+      "formula": "C6H9O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:137108"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "d_idonate",
+      "name": "D-idonate",
+      "formula": "C6H11O7",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM114501"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "2_dehydro_3_deoxy_d_galactonate",
+      "name": "2-dehydro-3-deoxy-D-galactonate",
+      "short": "2-dehydro-3-deoxy-D…",
+      "formula": "C6H9O6",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1368524"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "2_dehydro_3_deoxy_d_galactonate_6_phosphate",
+      "name": "2-Dehydro-3-deoxy-D-galactonate 6-phosphate",
+      "short": "2-Dehydro-3-deoxy-D…",
+      "formula": "C6H8O9P",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1560255"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR118293",
+      "substrates": [
+        {
+          "metabolite": "5_dehydro_l_gluconate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_idonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR118293"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR118293"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR118294",
+      "substrates": [
+        {
+          "metabolite": "d_idonate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_dehydro_3_deoxy_d_galactonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR118294"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR118294"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR204540",
+      "substrates": [
+        {
+          "metabolite": "2_dehydro_3_deoxy_d_galactonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_dehydro_3_deoxy_d_galactonate_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR204540"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR204540"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_d_idonate_5-dehydro-l-gluconate-to-adp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_idonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-dehydro-l-gluconate-to-adp"
+      },
+      "note": "Shares D-idonate with 5-dehydro-L-gluconate to ADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM114501"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_dehydro_3_deoxy_d_galactonate_5-dehydro-l-gluconate-to-adp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_dehydro_3_deoxy_d_galactonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-dehydro-l-gluconate-to-adp"
+      },
+      "note": "Shares 2-dehydro-3-deoxy-D-galactonate with 5-dehydro-L-gluconate to ADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368524"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_dehydro_3_deoxy_d_galactonate_6_phosphate_5-dehydro-l-gluconate-to-adp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_dehydro_3_deoxy_d_galactonate_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-dehydro-l-gluconate-to-adp"
+      },
+      "note": "Shares 2-Dehydro-3-deoxy-D-galactonate 6-phosphate with 5-dehydro-L-gluconate to ADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1560255"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_dehydro_3_deoxy_d_galactonate_6_phosphate_sedoheptulose-1-phosphate-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_dehydro_3_deoxy_d_galactonate_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sedoheptulose-1-phosphate-to-nad"
+      },
+      "note": "Shares 2-Dehydro-3-deoxy-D-galactonate 6-phosphate with sedoheptulose 1-phosphate to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1560255"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_dehydro_3_deoxy_d_galactonate_6_phosphate_sedoheptulose-1-phosphate-to-nad-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_dehydro_3_deoxy_d_galactonate_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sedoheptulose-1-phosphate-to-nad-null"
+      },
+      "note": "Shares 2-Dehydro-3-deoxy-D-galactonate 6-phosphate with sedoheptulose 1-phosphate to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1560255"
+          }
+        ]
+      }
+    }
+  ]
+}

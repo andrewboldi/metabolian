@@ -1,0 +1,576 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "diphosphate-to-o2",
+  "name": "diphosphate to O2",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from diphosphate to O2, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR133017"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "diphosphate",
+      "name": "diphosphate",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM11"
+      }
+    },
+    {
+      "id": "acryloyl_coa",
+      "name": "acryloyl-CoA",
+      "formula": "C24H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1364005"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM728294"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "acrylate",
+      "name": "acrylate",
+      "formula": "C3H3O2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM728199"
+      }
+    },
+    {
+      "id": "2e_2_hydroxypenta_2_4_dienoate",
+      "name": "(2E)-2-hydroxypenta-2,4-dienoate",
+      "short": "2-hydroxypenta-2,4-…",
+      "formula": "C5H5O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1107795"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "2_hydroxy_6_oxoocta_2_4_7_trienoate",
+      "name": "2-Hydroxy-6-oxoocta-2,4,7-trienoate",
+      "short": "2-Hydroxy-6-oxoocta…",
+      "formula": "C8H7O4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1369021"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "3_vinylcatechol",
+      "name": "3-Vinylcatechol",
+      "formula": "C8H8O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM6850"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_6_2_1_1",
+      "name": "acetate--CoA ligase",
+      "ec": [
+        "6.2.1.1"
+      ],
+      "xrefs": {
+        "uniprot": "Q9NUB1"
+      }
+    },
+    {
+      "id": "ec_6_2_1_17",
+      "name": "propionate--CoA ligase",
+      "ec": [
+        "6.2.1.17"
+      ],
+      "xrefs": {
+        "uniprot": "Q9NUB1"
+      }
+    },
+    {
+      "id": "ec_3_7_1_9",
+      "name": "2-hydroxymuconate-6-semialdehyde hydrolase",
+      "ec": [
+        "3.7.1.9"
+      ]
+    },
+    {
+      "id": "ec_1_13_11_2",
+      "name": "catechol 2,3-dioxygenase",
+      "ec": [
+        "1.13.11.2"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "acetate--CoA ligase",
+      "ec": "6.2.1.1",
+      "substrates": [
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acryloyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acrylate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_2_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR133017"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR133017"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2-hydroxymuconate-6-semialdehyde hydrolase",
+      "ec": "3.7.1.9",
+      "substrates": [
+        {
+          "metabolite": "2e_2_hydroxypenta_2_4_dienoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acrylate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxy_6_oxoocta_2_4_7_trienoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_7_1_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR195830"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR195830"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "catechol 2,3-dioxygenase",
+      "ec": "1.13.11.2",
+      "substrates": [
+        {
+          "metabolite": "2_hydroxy_6_oxoocta_2_4_7_trienoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_vinylcatechol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR195840"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR195840"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_acryloyl_coa_2-6-dimethylaniline-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acryloyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-6-dimethylaniline-to-h2o"
+      },
+      "note": "Shares acryloyl-CoA with 2,6-dimethylaniline to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364005"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_acryloyl_coa_acetoacetyl-coa-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acryloyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetoacetyl-coa-to-h2o-null"
+      },
+      "note": "Shares acryloyl-CoA with acetoacetyl-CoA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364005"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_acryloyl_coa_acryloyl-coa-to-nadp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acryloyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acryloyl-coa-to-nadp"
+      },
+      "note": "Shares acryloyl-CoA with acryloyl-CoA to NADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364005"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_acryloyl_coa_acryloyl-coa-to-nicotinamide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acryloyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acryloyl-coa-to-nicotinamide"
+      },
+      "note": "Shares acryloyl-CoA with acryloyl-CoA to nicotinamide….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364005"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_acryloyl_coa_acryloyl-coa-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acryloyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acryloyl-coa-to-o2"
+      },
+      "note": "Shares acryloyl-CoA with acryloyl-CoA to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364005"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_acryloyl_coa_antibiotic-ji-20ba-to-antibiotic-g-418",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acryloyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "antibiotic-ji-20ba-to-antibiotic-g-418"
+      },
+      "note": "Shares acryloyl-CoA with Antibiotic JI-20Ba to Antibiotic G-418.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364005"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_acryloyl_coa_dimethylselenoniopropanoa-to-acrylate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acryloyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dimethylselenoniopropanoa-to-acrylate"
+      },
+      "note": "Shares acryloyl-CoA with dimethylselenoniopropanoa… to acrylate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364005"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_acrylate_2e-2-hydroxypenta-2-4-d-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acrylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2e-2-hydroxypenta-2-4-d-to-nad"
+      },
+      "note": "Shares acrylate with (2E)-2-hydroxypenta-2,4-d… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM728199"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_acrylate_acetoacetyl-coa-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acrylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetoacetyl-coa-to-h2o-null"
+      },
+      "note": "Shares acrylate with acetoacetyl-CoA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM728199"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_acrylate_acrylamide-to-3-methylsulfanyl-propano",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acrylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acrylamide-to-3-methylsulfanyl-propano"
+      },
+      "note": "Shares acrylate with acrylamide to 3-(methylsulfanyl)propano….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM728199"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_acrylate_dimethylselenoniopropanoa-to-acrylate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acrylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dimethylselenoniopropanoa-to-acrylate"
+      },
+      "note": "Shares acrylate with dimethylselenoniopropanoa… to acrylate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM728199"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_vinylcatechol_2e-2-hydroxypenta-2-4-d-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_vinylcatechol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2e-2-hydroxypenta-2-4-d-to-nad"
+      },
+      "note": "Shares 3-Vinylcatechol with (2E)-2-hydroxypenta-2,4-d… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM6850"
+          }
+        ]
+      }
+    }
+  ]
+}

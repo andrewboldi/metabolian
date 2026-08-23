@@ -167,12 +167,12 @@
       }
     },
     {
-      "id": "glycine",
-      "name": "glycine",
-      "formula": "C2H5NO2",
+      "id": "thr_thr",
+      "name": "Thr-Thr",
+      "formula": "C8H16N2O5",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM29"
+        "chebi": "CHEBI:169953"
       }
     }
   ],
@@ -396,34 +396,81 @@
     },
     {
       "id": "r5",
-      "name": "Reaction MNXR200311",
+      "name": "L-threonyl-L-threonine + H2O = 2 L-threonine",
+      "equation": "L-threonyl-L-threonine + H2O = 2 L-threonine",
       "substrates": [
         {
-          "metabolite": "uridine_5_aldehyde",
+          "metabolite": "thr_thr",
           "stoichiometry": 1
         },
         {
-          "metabolite": "glycine",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "5_s_6_s_c_glycyluridine",
-          "stoichiometry": 1
+          "metabolite": "threonine",
+          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR200311"
+        "rhea": "RHEA:67360"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR200311"
+            "db": "Rhea",
+            "id": "RHEA:67360"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_uridine_5_aldehyde_h-to-2-hydroxyacetophenone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "uridine_5_aldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-2-hydroxyacetophenone"
+      },
+      "note": "Shares uridine-5'-aldehyde with H to 2-hydroxyacetophenone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:86258"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_s_6_s_c_glycyluridine_h-to-2-hydroxyacetophenone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_s_6_s_c_glycyluridine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-2-hydroxyacetophenone"
+      },
+      "note": "Shares (5'S,6'S)-C-glycyluridine with H to 2-hydroxyacetophenone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:229461"
           }
         ]
       }

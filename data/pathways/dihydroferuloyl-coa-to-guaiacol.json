@@ -144,33 +144,6 @@
       "xrefs": {
         "chebi": "CHEBI:16526"
       }
-    },
-    {
-      "id": "2r_3s_piscidate",
-      "name": "(2R,3S)-piscidate",
-      "formula": "C11H10O7",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:192789"
-      }
-    },
-    {
-      "id": "cimicifugate_e",
-      "name": "cimicifugate E",
-      "formula": "C21H18O10",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:192793"
-      }
-    },
-    {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57287"
-      }
     }
   ],
   "enzymes": [
@@ -400,42 +373,269 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r6",
-      "name": "(2R,3S)-piscidate + (E)-feruloyl-CoA = cimicifugate E + CoA",
-      "equation": "(2R,3S)-piscidate + (E)-feruloyl-CoA = cimicifugate E + CoA",
-      "substrates": [
-        {
-          "metabolite": "2r_3s_piscidate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "trans_feruloyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "cimicifugate_e",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:73331"
+      "id": "xt_trans_feruloyl_coa_coniferyl-aldehyde-to-scopolin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_feruloyl_coa"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "coniferyl-aldehyde-to-scopolin"
+      },
+      "note": "Shares trans-feruloyl-CoA with coniferyl aldehyde to scopolin.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:73331"
+            "db": "ChEBI",
+            "id": "CHEBI:87305"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_feruloyl_coa_dihydroferulate-to-n-feruloyltyramine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_feruloyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dihydroferulate-to-n-feruloyltyramine"
+      },
+      "note": "Shares trans-feruloyl-CoA with dihydroferulate to N-feruloyltyramine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87305"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_feruloyl_coa_l-idarate-to-4-o-feruloyl-d-quinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_feruloyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-idarate-to-4-o-feruloyl-d-quinate"
+      },
+      "note": "Shares trans-feruloyl-CoA with L-idarate to 4-O-feruloyl-D-quinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87305"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_feruloyl_coa_n-aryl-1-2-dipalmitoyl-sn-to-16-feruloyloxypalmi",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_feruloyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-aryl-1-2-dipalmitoyl-sn-to-16-feruloyloxypalmi"
+      },
+      "note": "Shares trans-feruloyl-CoA with N-aryl-1,2-dipalmitoyl-sn… to 16-feruloyloxypalmitate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87305"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_feruloyl_coa_n-feruloylglycinate-to-2-e-o-feruloyl-d-galact",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_feruloyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-feruloylglycinate-to-2-e-o-feruloyl-d-galact"
+      },
+      "note": "Shares trans-feruloyl-CoA with N-feruloylglycinate to 2-(E)-O-feruloyl-D-galact….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87305"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_feruloyl_coa_trans-caffeoyl-coa-to-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_feruloyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-caffeoyl-coa-to-acetate"
+      },
+      "note": "Shares trans-feruloyl-CoA with trans-caffeoyl-CoA to acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87305"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_feruloyl_coa_trans-feruloyl-amp-to-curcumin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_feruloyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-feruloyl-amp-to-curcumin"
+      },
+      "note": "Shares trans-feruloyl-CoA with trans-feruloyl-AMP to curcumin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87305"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_vanillate_3-3-dimethoxystilbene-4-to-4-carboxy-2-hydroxy-c",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "vanillate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-3-dimethoxystilbene-4-to-4-carboxy-2-hydroxy-c"
+      },
+      "note": "Shares vanillate with 3,3'-dimethoxystilbene-4,… to 4-carboxy-2-hydroxy-cis,c….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16632"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_vanillate_3-hydroxy-3-3-4-dihydrox-to-s-adenosyl-l-homocys",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "vanillate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxy-3-3-4-dihydrox-to-s-adenosyl-l-homocys"
+      },
+      "note": "Shares vanillate with 3-hydroxy-3-(3,4-dihydrox… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16632"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_vanillate_gdp-4-amino-4-6-dideoxy-to-2-deoxy-5-hydroxymeth",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "vanillate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gdp-4-amino-4-6-dideoxy-to-2-deoxy-5-hydroxymeth"
+      },
+      "note": "Shares vanillate with GDP-4-amino-4,6-dideoxy-α… to 2'-deoxy-5-hydroxymethyl-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16632"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_vanillate_vanillyl-alcohol-to-trimethylamine-n-oxide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "vanillate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "vanillyl-alcohol-to-trimethylamine-n-oxide"
+      },
+      "note": "Shares vanillate with vanillyl alcohol to trimethylamine N-oxide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16632"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_vanillate_veratrate-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "vanillate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "veratrate-to-coa"
+      },
+      "note": "Shares vanillate with veratrate to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16632"
           }
         ]
       }

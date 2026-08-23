@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway microperfuranone-to-2-phenylethanol "(−)-microperfuranone to 2-phenylethanol" {
-  spacing 278
+  spacing 332
 
   spine at 0,0 {
     microperfuranone
@@ -28,105 +28,28 @@ pathway microperfuranone-to-2-phenylethanol "(−)-microperfuranone to 2-phenyle
     udp_alpha_d_glucose
   }
 
-  branch from atp side left {
-    atp
-    <-> . +h +3r_3_isopropenyl_6_oxoheptanoate +coa +3r_3_isopropenyl_6_oxoheptanoyl_coa +phosphate
-    adp
-  }
 
-  branch from atp side right {
-    atp
-    <-> ec_2_7_1_11 [2.7.1.11] +aldehydo_d_ribose_5_phosphate +h +adp
-    alpha_d_ribose_1_5_bisphosphate
-  }
 
-  branch from 3_phenylpyruvate side left {
-    3_phenylpyruvate
-    <-> . +l_dihydroanticapsin +l_phenylalanine
-    3_1r_2s_5r_6s_5_hydroxy_7_oxabicyclo_4_1_0_hepta
-  }
 
-  branch from 3_phenylpyruvate side right {
-    3_phenylpyruvate
-    <-> ec_1_1_3_15 [1.1.3.15] +r_3_phenyllactate +o2
-    h2o2
-  }
 
-  branch from h2o side left {
-    h2o
-    <-> . +3_dehydro_6_deoxoteasterone +o2
-    3_dehydroteasterone
-  }
 
-  branch from h2o side right {
-    h2o
-    <-> . +2_oxospirilloxanthin +o2
-    spirilloxanthin
-  }
 
-  branch from nadp side left {
-    nadp
-    <-> ec_1_3_1_111 [1.3.1.111] +h +geranylgeranyl_bacteriopheophytin +nadph
-    bacteriopheophytin_a
-  }
 
-  branch from nadp side right {
-    nadp
-    <-> ec_1_14_13_8 [1.14.13.8] +h +methimazole +o2 +nadph +h2o
-    methimazole_s_oxide
-  }
 
-  branch from r_3_phenyllactate side left {
-    r_3_phenyllactate
-    <-> . +h2o
-    e_cinnamate
-  }
 
-  branch from keto_phenylpyruvate side right {
-    keto_phenylpyruvate
-    <-> . +nadp +nadph +hplus
-    3_phenyllactate
-  }
 
-  branch from keto_phenylpyruvate side left {
-    keto_phenylpyruvate
-    <-> ec_6_4_1_11 [6.4.1.11] +atp +amp +ppi +hplus
-    polyporic_acid_anion
-  }
 
-  branch from h side right {
-    h
-    <-> . +nadh +cob_ii_yrinate_diamide +nad
-    cob_i_yrinate_diamide
-  }
 
-  branch from h side left {
-    h
-    <-> ec_1_6_5_2 [1.6.5.2] +nadh +menaquinone_2 +nad
-    menaquinol
-  }
 
-  branch from acetate side right {
-    acetate
-    <-> ec_3_1_1_80 [3.1.1.80] +17_o_acetylnorajmaline +h2o +h
-    norajmaline
-  }
 
-  branch from acetate side left {
-    acetate
-    <-> . +s_2_carboxy_1_1_h_imidazol_4_yl_ethyl_l_cysteine +h2o
-    n_acetyl_s_2_carboxy_1_1_h_imidazol_4_yl_ethyl_l
-  }
 
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> . +udp +h +soyasapogenol_e_3_o_beta_d_glucoside
-    soyasapogenol_e
-  }
 
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> . +udp +kaempferol_3_o_gentiobioside_7_o_rhamnoside +h
-    kaempferol_3_o_d_glucopyranosyl_7_o_l_rhamnopyra
-  }
+
+
+
+
+
+
+
+
 }

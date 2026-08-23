@@ -200,21 +200,21 @@
       }
     },
     {
-      "id": "guaia_6_9_diene",
-      "name": "(+)-guaia-6,9-diene",
-      "formula": "C15H24",
+      "id": "patchouli_alcohol",
+      "name": "patchouli alcohol",
+      "formula": "C15H26O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:49204"
+        "chebi": "CHEBI:7940"
       }
     },
     {
-      "id": "germacrene_a",
-      "name": "germacrene A",
+      "id": "gurjunene",
+      "name": "(−)-α-gurjunene",
       "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:36517"
+        "chebi": "CHEBI:61699"
       }
     },
     {
@@ -244,6 +244,61 @@
       "charge": -2,
       "xrefs": {
         "chebi": "CHEBI:57865"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "pyridine_n_oxide",
+      "name": "pyridine N-oxide",
+      "formula": "C5H5NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29136"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "thiaminium_carboxylate_betaine",
+      "name": "thiaminium carboxylate betaine",
+      "short": "thiaminium…",
+      "formula": "C12H14N4O2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58438"
+      }
+    },
+    {
+      "id": "valencene",
+      "name": "(+)-valencene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61700"
+      }
+    },
+    {
+      "id": "thujopsene",
+      "name": "(+)-thujopsene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61737"
       }
     }
   ],
@@ -288,13 +343,51 @@
       "name": "thiamine-triphosphatase",
       "ec": [
         "3.6.1.28"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q9BU02"
+      }
     },
     {
       "id": "ec_3_5_99_2",
       "name": "aminopyrimidine aminohydrolase",
       "ec": [
         "3.5.99.2"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_70",
+      "name": "patchoulol synthase",
+      "ec": [
+        "4.2.3.70"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_72",
+      "name": "alpha-gurjunene synthase",
+      "ec": [
+        "4.2.3.72"
+      ]
+    },
+    {
+      "id": "ec_1_1_3_23",
+      "name": "thiamine oxidase",
+      "ec": [
+        "1.1.3.23"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_73",
+      "name": "valencene synthase",
+      "ec": [
+        "4.2.3.73"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_79",
+      "name": "thujopsene synthase",
+      "ec": [
+        "4.2.3.79"
       ]
     }
   ],
@@ -685,17 +778,22 @@
     },
     {
       "id": "r9",
-      "name": "(2E,6E)-farnesyl diphosphate = (+)-guaia-6,9-diene + diphosphate",
-      "equation": "(2E,6E)-farnesyl diphosphate = (+)-guaia-6,9-diene + diphosphate",
+      "name": "patchoulol synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = patchoulol + diphosphate",
+      "ec": "4.2.3.70",
       "substrates": [
         {
           "metabolite": "fpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "guaia_6_9_diene",
+          "metabolite": "patchouli_alcohol",
           "stoichiometry": 1
         },
         {
@@ -703,25 +801,31 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_70"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:25448"
+        "rhea": "RHEA:29503"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:25448"
+            "id": "RHEA:29503"
           }
         ]
       }
     },
     {
       "id": "r10",
-      "name": "(2E,6E)-farnesyl diphosphate = germacrene A + diphosphate",
-      "equation": "(2E,6E)-farnesyl diphosphate = germacrene A + diphosphate",
+      "name": "alpha-gurjunene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (-)-alpha-gurjunene + diphosphate",
+      "ec": "4.2.3.72",
       "substrates": [
         {
           "metabolite": "fpp",
@@ -730,7 +834,7 @@
       ],
       "products": [
         {
-          "metabolite": "germacrene_a",
+          "metabolite": "gurjunene",
           "stoichiometry": 1
         },
         {
@@ -738,17 +842,22 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_72"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:25452"
+        "rhea": "RHEA:29507"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:25452"
+            "id": "RHEA:29507"
           }
         ]
       }
@@ -835,6 +944,402 @@
           {
             "db": "Rhea",
             "id": "RHEA:79423"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r13",
+      "name": "pyridine + H2O2 = pyridine N-oxide + H2O",
+      "equation": "pyridine + H2O2 = pyridine N-oxide + H2O",
+      "substrates": [
+        {
+          "metabolite": "pyridine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pyridine_n_oxide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 13,
+      "xrefs": {
+        "rhea": "RHEA:25872"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25872"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r14",
+      "name": "thiamine oxidase",
+      "equation": "thiamine + 2 O2 + H2O = thiamine acetate + 2 H2O2 + H(+)",
+      "ec": "1.1.3.23",
+      "substrates": [
+        {
+          "metabolite": "thiamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "thiaminium_carboxylate_betaine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_3_23"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 14,
+      "xrefs": {
+        "rhea": "RHEA:21280"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21280"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r15",
+      "name": "valencene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (+)-valencene + diphosphate",
+      "ec": "4.2.3.73",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "valencene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_73"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 15,
+      "xrefs": {
+        "rhea": "RHEA:29511"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:29511"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r16",
+      "name": "thujopsene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (+)-thujopsene + diphosphate",
+      "ec": "4.2.3.79",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "thujopsene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_79"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 16,
+      "xrefs": {
+        "rhea": "RHEA:30375"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30375"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_pyridine_5-end-purine-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pyridine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-end-purine-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares pyridine with 5'-end purine… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16227"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_thiamine_2-2r-5z-2-carboxy-4-me-to-thiamine-1-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "thiamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-2r-5z-2-carboxy-4-me-to-thiamine-1-diphosphate"
+      },
+      "note": "Shares thiamine with 2-[(2R,5Z)-2-carboxy-4-me… to thiamine(1+) diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18385"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_amino_2_methyl_5_diphosphonatooxymethylpyrimid_2-2r-5z-2-carboxy-4-me-to-thiamine-1-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_amino_2_methyl_5_diphosphonatooxymethylpyrimid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-2r-5z-2-carboxy-4-me-to-thiamine-1-diphosphate"
+      },
+      "note": "Shares 4-amino-2-methyl-5-diphosphonatooxymethylpyrimidine with 2-[(2R,5Z)-2-carboxy-4-me… to thiamine(1+) diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57841"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_amino_2_methyl_5_diphosphonatooxymethylpyrimid_5-aminoimidazol-3-ium-to-4-amino-2-methyl-5-phos",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_amino_2_methyl_5_diphosphonatooxymethylpyrimid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-aminoimidazol-3-ium-to-4-amino-2-methyl-5-phos"
+      },
+      "note": "Shares 4-amino-2-methyl-5-diphosphonatooxymethylpyrimidine with 5-aminoimidazol-3-ium… to 4-amino-2-methyl-5-phosph….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57841"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_thiamine_1_monophosphate_2-2r-5z-2-carboxy-4-me-to-thiamine-1-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "thiamine_1_monophosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-2r-5z-2-carboxy-4-me-to-thiamine-1-diphosphate"
+      },
+      "note": "Shares thiamine(1+) monophosphate with 2-[(2R,5Z)-2-carboxy-4-me… to thiamine(1+) diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:37575"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_thiamine_1_diphosphate_2-2r-5z-2-carboxy-4-me-to-thiamine-1-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "thiamine_1_diphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-2r-5z-2-carboxy-4-me-to-thiamine-1-diphosphate"
+      },
+      "note": "Shares thiamine(1+) diphosphate with 2-[(2R,5Z)-2-carboxy-4-me… to thiamine(1+) diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58937"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_thiamine_1_triphosphate_2-2r-5z-2-carboxy-4-me-to-thiamine-1-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "thiamine_1_triphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-2r-5z-2-carboxy-4-me-to-thiamine-1-diphosphate"
+      },
+      "note": "Shares thiamine(1+) triphosphate with 2-[(2R,5Z)-2-carboxy-4-me… to thiamine(1+) diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58938"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_amino_5_hydroxymethyl_2_methylpyrimidine_4-amino-5-formamidomethyl-to-4-amino-2-methyl-5",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_amino_5_hydroxymethyl_2_methylpyrimidine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-amino-5-formamidomethyl-to-4-amino-2-methyl-5"
+      },
+      "note": "Shares 4-amino-5-hydroxymethyl-2-methylpyrimidine with 4-amino-5-formamidomethyl… to 4-amino-2-methyl-5-phosph….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16892"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_z_2_carboxylato_4_methyl_5_2_phosphonatooxy_e_n-5-phosphonato-d-ribo-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_z_2_carboxylato_4_methyl_5_2_phosphonatooxy_e"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-5-phosphonato-d-ribo-to-h2o"
+      },
+      "note": "Shares (R,Z)- 2-carboxylato-4-methyl-5-[(2-phosphonatooxy)ethylidene]-2,5-dihydrothiazole with N-(5-phosphonato-β-D-ribo… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62899"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_valencene_n-arachidonoyl-1-oleoyl-s-to-9z-17-hydroxyoctade",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "valencene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-arachidonoyl-1-oleoyl-s-to-9z-17-hydroxyoctade"
+      },
+      "note": "Shares (+)-valencene with N-arachidonoyl-1-oleoyl-s… to (9Z)-17-hydroxyoctadec-9-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61700"
           }
         ]
       }

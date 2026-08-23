@@ -127,80 +127,9 @@
       "xrefs": {
         "chebi": "CHEBI:456215"
       }
-    },
-    {
-      "id": "agmatine",
-      "name": "agmatine",
-      "formula": "C5H16N4",
-      "charge": 2,
-      "xrefs": {
-        "metanetx": "MNXM328"
-      }
-    },
-    {
-      "id": "e_p_coumaroylagmatine",
-      "name": "(E)-p-coumaroylagmatine",
-      "short": "p-coumaroylagmatine",
-      "formula": "C14H21N4O2",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:86078"
-      }
-    },
-    {
-      "id": "h",
-      "name": "H",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM1"
-      }
-    },
-    {
-      "id": "coa",
-      "name": "CoA",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM727276"
-      }
-    },
-    {
-      "id": "l_quinate",
-      "name": "L-quinate",
-      "formula": "C7H11O6",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM736788"
-      }
-    },
-    {
-      "id": "trans_5_o_4_coumaroyl_d_quinate",
-      "name": "trans-5-O-(4-coumaroyl)-D-quinate",
-      "short": "trans-5-O-(4-coumar…",
-      "formula": "C16H17O8",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM733481"
-      }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_2_3_1_64",
-      "name": "agmatine N(4)-coumaroyltransferase",
-      "ec": [
-        "2.3.1.64"
-      ]
-    },
-    {
-      "id": "ec_2_3_1_133",
-      "name": "shikimate O-hydroxycinnamoyltransferase",
-      "ec": [
-        "2.3.1.133"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -330,95 +259,115 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "agmatine N(4)-coumaroyltransferase",
-      "ec": "2.3.1.64",
-      "substrates": [
-        {
-          "metabolite": "trans_4_coumaroyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "agmatine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "e_p_coumaroylagmatine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_3_1_64"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR195648"
+      "id": "xt_e_3_diazocoumarate_1-chloro-2-nitrobenzene-to-methanofuranate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_3_diazocoumarate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1-chloro-2-nitrobenzene-to-methanofuranate"
+      },
+      "note": "Shares (E)-3-diazocoumarate with 1-chloro-2-nitrobenzene to methanofuranate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR195648"
+            "db": "ChEBI",
+            "id": "CHEBI:229673"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "shikimate O-hydroxycinnamoyltransferase",
-      "ec": "2.3.1.133",
-      "substrates": [
-        {
-          "metabolite": "trans_4_coumaroyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_quinate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "trans_5_o_4_coumaroyl_d_quinate",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_3_1_133"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR196003"
+      "id": "xt_dinitrogen_1-chloro-2-nitrobenzene-to-methanofuranate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dinitrogen"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1-chloro-2-nitrobenzene-to-methanofuranate"
+      },
+      "note": "Shares dinitrogen with 1-chloro-2-nitrobenzene to methanofuranate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR196003"
+            "db": "ChEBI",
+            "id": "CHEBI:17997"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dinitrogen_2-3-dinitrotoluene-to-3-methoxyphenol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dinitrogen"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3-dinitrotoluene-to-3-methoxyphenol"
+      },
+      "note": "Shares dinitrogen with 2,3-dinitrotoluene to 3-methoxyphenol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17997"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dinitrogen_hydrazine-to-nitrate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dinitrogen"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hydrazine-to-nitrate"
+      },
+      "note": "Shares dinitrogen with hydrazine to nitrate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17997"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dinitrogen_methyl-sulfate-to-s-formylmycothiol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dinitrogen"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "methyl-sulfate-to-s-formylmycothiol"
+      },
+      "note": "Shares dinitrogen with methyl sulfate to S-formylmycothiol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17997"
           }
         ]
       }

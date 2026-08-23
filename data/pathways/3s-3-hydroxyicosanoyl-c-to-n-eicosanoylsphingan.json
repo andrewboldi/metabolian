@@ -112,36 +112,109 @@
       }
     },
     {
-      "id": "icosanoate",
-      "name": "icosanoate",
-      "formula": "C20H39O2",
-      "charge": -1,
+      "id": "carnitine",
+      "name": "L-Carnitine",
+      "formula": "C7H15NO3",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:32360"
+        "chebi": "CHEBI:16347"
       }
     },
     {
-      "id": "1_hexadecanoyl_sn_glycero_3_phosphocholine",
-      "name": "1-hexadecanoyl-sn-glycero-3-phosphocholine",
-      "short": "1-hexadecanoyl-sn-g…",
-      "formula": "C24H50NO7P",
+      "id": "r_icosanoylcarnitine",
+      "name": "(R)-icosanoylcarnitine",
+      "short": "icosanoylcarnitine",
+      "formula": "C27H53NO4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:72998"
+        "chebi": "CHEBI:84645"
       }
     },
     {
-      "id": "1_palmitoyl_2_icosanoyl_sn_glycero_3_phosphochol",
-      "name": "1-palmitoyl-2-icosanoyl-sn-glycero-3-phosphocholine",
-      "short": "1-palmitoyl-2-icosa…",
-      "formula": "C44H88NO8P",
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29033"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:82943"
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "5z_icosenoyl_coa",
+      "name": "(5Z)-icosenoyl-CoA",
+      "formula": "C41H68N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:85268"
+      }
+    },
+    {
+      "id": "iron",
+      "name": "iron",
+      "formula": "Fe",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:29034"
+      }
+    },
+    {
+      "id": "ketosphinganine",
+      "name": "3-Ketodihydrosphingosine",
+      "short": "3-Ketodihydrosphing…",
+      "formula": "C18H38NO2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58299"
+      }
+    },
+    {
+      "id": "n_icosanoyl_3_ketodihydrosphingosine",
+      "name": "N-icosanoyl-3-ketodihydrosphingosine",
+      "short": "N-icosanoyl-3-ketod…",
+      "formula": "C38H75NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:189541"
+      }
+    },
+    {
+      "id": "2_oleoylglycerol",
+      "name": "2-oleoylglycerol",
+      "formula": "C21H40O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:73990"
+      }
+    },
+    {
+      "id": "1_icosanoyl_2_oleoylglycerol",
+      "name": "1-icosanoyl-2-oleoylglycerol",
+      "short": "1-icosanoyl-2-oleoy…",
+      "formula": "C41H78O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:197392"
       }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_1_14_19_10",
+      "name": "icosanoyl-CoA 5-desaturase",
+      "ec": [
+        "1.14.19.10"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -266,21 +339,117 @@
     },
     {
       "id": "r4",
-      "name": "eicosanoyl-CoA + H2O = eicosanoate + CoA + H(+)",
-      "equation": "eicosanoyl-CoA + H2O = eicosanoate + CoA + H(+)",
+      "name": "eicosanoyl-CoA + (R)-carnitine = O-eicosanoyl-(R)-carnitine + CoA",
+      "equation": "eicosanoyl-CoA + (R)-carnitine = O-eicosanoyl-(R)-carnitine + CoA",
       "substrates": [
         {
           "metabolite": "icosanoyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "carnitine",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "icosanoate",
+          "metabolite": "r_icosanoylcarnitine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:44844"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44844"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "icosanoyl-CoA 5-desaturase",
+      "equation": "eicosanoyl-CoA + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = (5Z)-eicosenoyl-CoA + 2 Fe(III)-[cytochrome b5] + 2 H2O",
+      "ec": "1.14.19.10",
+      "substrates": [
+        {
+          "metabolite": "icosanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5z_icosenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_10"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:45464"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45464"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "3-oxosphinganine + eicosanoyl-CoA = N-eicosanoyl-3-oxosphinganine + CoA + H(+)",
+      "equation": "3-oxosphinganine + eicosanoyl-CoA = N-eicosanoyl-3-oxosphinganine + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "ketosphinganine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "icosanoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_icosanoyl_3_ketodihydrosphingosine",
           "stoichiometry": 1
         },
         {
@@ -293,37 +462,37 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:40147"
+        "rhea": "RHEA:70391"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:40147"
+            "id": "RHEA:70391"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "eicosanoyl-CoA + 1-hexadecanoyl-sn-glycero-3-phosphocholine = 1-hexadecanoyl-2-eicosano...",
-      "equation": "eicosanoyl-CoA + 1-hexadecanoyl-sn-glycero-3-phosphocholine = 1-hexadecanoyl-2-eicosanoyl-sn-glycero-3-phosphocholine + CoA",
+      "id": "r7",
+      "name": "eicosanoyl-CoA + 2-(9Z-octadecenoyl)-glycerol = 1-eicosanoyl-2-(9Z-octadecenoyl)-glycer...",
+      "equation": "eicosanoyl-CoA + 2-(9Z-octadecenoyl)-glycerol = 1-eicosanoyl-2-(9Z-octadecenoyl)-glycerol + CoA",
       "substrates": [
         {
           "metabolite": "icosanoyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "1_hexadecanoyl_sn_glycero_3_phosphocholine",
+          "metabolite": "2_oleoylglycerol",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "1_palmitoyl_2_icosanoyl_sn_glycero_3_phosphochol",
+          "metabolite": "1_icosanoyl_2_oleoylglycerol",
           "stoichiometry": 1
         },
         {
@@ -332,16 +501,106 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:43264"
+        "rhea": "RHEA:77543"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:43264"
+            "id": "RHEA:77543"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3s_3_hydroxyicosanoyl_coa_3-hydroxyicosanoyl-coa-to-n-2-hydroxytetracosano",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3s_3_hydroxyicosanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxyicosanoyl-coa-to-n-2-hydroxytetracosano"
+      },
+      "note": "Shares (3S)-3-hydroxyicosanoyl-CoA with 3-hydroxyicosanoyl-CoA to N-(2-hydroxytetracosanoyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87562"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_2_icosenoyl_coa_3-hydroxyicosanoyl-coa-to-n-2-hydroxytetracosano",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_2_icosenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxyicosanoyl-coa-to-n-2-hydroxytetracosano"
+      },
+      "note": "Shares trans-2-icosenoyl-CoA with 3-hydroxyicosanoyl-CoA to N-(2-hydroxytetracosanoyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74691"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_2_icosenoyl_coa_d-ribitol-5-phosphate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_2_icosenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-ribitol-5-phosphate-to-h2o"
+      },
+      "note": "Shares trans-2-icosenoyl-CoA with D-ribitol 5-phosphate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74691"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_2_icosenoyl_coa_icosanoyl-coa-to-2-hydroxyarachidate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_2_icosenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "icosanoyl-coa-to-2-hydroxyarachidate"
+      },
+      "note": "Shares trans-2-icosenoyl-CoA with icosanoyl-CoA to 2-hydroxyarachidate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74691"
           }
         ]
       }

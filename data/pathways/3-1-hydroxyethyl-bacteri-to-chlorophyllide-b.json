@@ -183,26 +183,6 @@
       "xrefs": {
         "chebi": "CHEBI:57945"
       }
-    },
-    {
-      "id": "divinyl_chlorophyllide_a",
-      "name": "divinyl chlorophyllide a",
-      "short": "divinyl chlorophyll…",
-      "formula": "C35H30MgN4O5",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:83349"
-      }
-    },
-    {
-      "id": "bacteriochlorophyllide_a",
-      "name": "bacteriochlorophyllide a",
-      "short": "bacteriochlorophyll…",
-      "formula": "C35H34MgN4O6",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:90795"
-      }
     }
   ],
   "enzymes": [
@@ -225,13 +205,6 @@
       "name": "bacteriochlorophyllide-a dehydrogenase",
       "ec": [
         "1.1.1.396"
-      ]
-    },
-    {
-      "id": "ec_1_3_7_13",
-      "name": "3,8-divinyl protochlorophyllide a 8-vinyl-reductase (ferredoxin)",
-      "ec": [
-        "1.3.7.13"
       ]
     }
   ],
@@ -492,117 +465,181 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r6",
-      "name": "3,8-divinyl protochlorophyllide a 8-vinyl-reductase (ferredoxin)",
-      "equation": "chlorophyllide a + 2 oxidized [2Fe-2S]-[ferredoxin] = 3,8-divinyl chlorophyllide a + 2 reduced [2Fe-2S]-[ferredoxin] + 2 H(+)",
-      "ec": "1.3.7.13",
-      "substrates": [
-        {
-          "metabolite": "chlorophyllide_a",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "divinyl_chlorophyllide_a",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_3_7_13"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:48900"
+      "id": "xt_3_1_hydroxyethyl_bacteriochlorophyllide_a_3-1-hydroxyethyl-bacteri-to-divinyl-chlorophylli",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_1_hydroxyethyl_bacteriochlorophyllide_a"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "3-1-hydroxyethyl-bacteri-to-divinyl-chlorophylli"
+      },
+      "note": "Shares 3-(1-hydroxyethyl)bacteriochlorophyllide a with 3-(1-hydroxyethyl)bacteri… to divinyl chlorophyllide a.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:48900"
+            "db": "ChEBI",
+            "id": "CHEBI:90791"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "chlorophyllide a reductase",
-      "equation": "bacteriochlorophyllide a + 2 oxidized [2Fe-2S]-[ferredoxin] + ADP + phosphate = 3-acetyl-3-devinylchlorophyllide a + 2 reduced [2Fe-2S]-[ferredoxin] + ATP + H2O + H(+)",
-      "ec": "1.3.7.15",
-      "substrates": [
-        {
-          "metabolite": "bacteriochlorophyllide_a",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pi",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_acetylchlorophyllide_a",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_3_7_15"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:48944"
+      "id": "xt_chlorophyllide_a_3-1-hydroxyethyl-bacteri-to-divinyl-chlorophylli",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "chlorophyllide_a"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "3-1-hydroxyethyl-bacteri-to-divinyl-chlorophylli"
+      },
+      "note": "Shares chlorophyllide a with 3-(1-hydroxyethyl)bacteri… to divinyl chlorophyllide a.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:48944"
+            "db": "ChEBI",
+            "id": "CHEBI:83348"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_chlorophyllide_a_chlorophyll-to-2-4-divinyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "chlorophyllide_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "chlorophyll-to-2-4-divinyl"
+      },
+      "note": "Shares chlorophyllide a with chlorophyll to 2,4-divinyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83348"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_chlorophyllide_a_chlorophyllide-a-to-pyropheophorbide-a-anion",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "chlorophyllide_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "chlorophyllide-a-to-pyropheophorbide-a-anion"
+      },
+      "note": "Shares chlorophyllide a with chlorophyllide a to pyropheophorbide a anion.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83348"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_chlorophyllide_a_n-acyl-d-amino-acid-to-di-sulfido-diiron",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "chlorophyllide_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acyl-d-amino-acid-to-di-sulfido-diiron"
+      },
+      "note": "Shares chlorophyllide a with N-acyl-D-α-amino acid… to di-μ-sulfido-diiron.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83348"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_71_hydroxychlorophyllide_a_n-acyl-d-amino-acid-to-di-sulfido-diiron",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "71_hydroxychlorophyllide_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acyl-d-amino-acid-to-di-sulfido-diiron"
+      },
+      "note": "Shares 71-hydroxychlorophyllide a with N-acyl-D-α-amino acid… to di-μ-sulfido-diiron.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83357"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_chlorophyllide_b_chlorophyll-to-2-4-divinyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "chlorophyllide_b"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "chlorophyll-to-2-4-divinyl"
+      },
+      "note": "Shares chlorophyllide b with chlorophyll to 2,4-divinyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83356"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_acetylchlorophyllide_a_5-cholestan-3-one-to-amp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_acetylchlorophyllide_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cholestan-3-one-to-amp"
+      },
+      "note": "Shares 3-acetylchlorophyllide a with 5α-cholestan-3-one to AMP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:90794"
           }
         ]
       }

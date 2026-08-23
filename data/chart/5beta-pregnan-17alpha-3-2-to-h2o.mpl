@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5beta-pregnan-17alpha-3-2-to-h2o "5beta-pregnan-17alpha-3,2… to H2O" {
-  spacing 278
+  spacing 212
 
   spine at 0,0 {
     5beta_pregnan_17alpha_3_20_dione_17_ol
@@ -16,71 +16,5 @@ pathway 5beta-pregnan-17alpha-3-2-to-h2o "5beta-pregnan-17alpha-3,2… to H2O" {
     cortisol
     <-> . +h +o2 +nadph -acetate -nadp -h2o
     11beta_hydroxyandrost_4_ene_3_17_dione
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_18 [3.6.3.18] +adp +gxgg_xyloglucan_oligosaccharide +phosphate +gxgg_xyloglucan_oligosaccharide +h2o
-    atp
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
-    agarobiose
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> ec_1_1_1_71 [1.1.1.71] +h +triacontanal +nadp
-    triacontan_1_ol
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> ec_1_1_1_71 [1.1.1.71] +2e_geranial +h +nadp
-    nerol
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +h +abietal +nadph
-    palustradienol
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +neoabietadienal +h +nadph
-    levopimaradienol
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    agarotriose
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    neoagarobiose
-  }
-
-  branch from cortisol side left {
-    cortisol
-    <-> . +h +o2 +nadph +nadp +h2o
-    4_pregnene_11beta_17alpha_diol_3_20_dione
-  }
-
-  branch from acetate side right {
-    acetate
-    <-> ec_1_2_5_1 [1.2.5.1] +ubiquinone_6 +pyruvate +h2o +ubiquinol_6
-    co2
-  }
-
-  branch from acetate side left {
-    acetate
-    <-> . +4_aminophenol +h +h2o
-    4_acetamidophenol
   }
 }

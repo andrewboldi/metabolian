@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-adenosyl-l-homocysteine-to-coa "S-adenosyl-L-homocysteine to CoA" {
-  spacing 248
+  spacing 320
 
   spine at 0,0 {
     s_adenosyl_l_homocysteine
@@ -22,56 +22,44 @@ pathway s-adenosyl-l-homocysteine-to-coa "S-adenosyl-L-homocysteine to CoA" {
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +casticin +s_adenosyl_l_homocysteine +h
-    oxyayanin_b
+    <-> . +s_adenosyl_l_homocysteine +h +tacrolimus
+    31_dmt_or_m_ii_31_o_desmethyl_tacrolimus
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_4_deoxygadusol +s_adenosyl_l_homocysteine
-    s_demethyl_4_deoxygadusol
+    <-> . +s_adenosyl_l_homocysteine +h +cyclosporin_a_metabolite_m26
+    am1c4n9_cyclosporine
   }
 
   branch from beta_alanine side left {
     beta_alanine
-    <-> . +h2o +h +coa
-    beta_alanyl_coa
-  }
-
-  branch from beta_alanine side right {
-    beta_alanine
-    <-> ec_3_4_13_4 [3.4.13.4] +d_arginine +h2o
-    beta_alanyl_l_arginine
-  }
-
-  branch from diphosphate side left {
-    diphosphate
-    <-> . +z_e_germacrene_b
-    2e_6e_farnesyl_diphosphate
+    <-> . +h +adp +phosphate +atp
+    h2o
   }
 
   branch from diphosphate side right {
     diphosphate
-    <-> . +2e_6e_farnesyl_diphosphate
-    3_7_11_eudesmadiene
+    <-> . +ctp +5_7_diacetamido_3_5_7_9_tetradeoxy_l_glycero_d_g +h
+    cmp_5_7_diacetamido_3_5_7_9_tetradeoxy_l_glycero
   }
 
-  branch from h side left {
-    h
-    <-> ec_3_1_2_6 [3.1.2.6] +acetate +glutathione +h2o
-    s_acetylglutathione
+  branch from diphosphate side left {
+    diphosphate
+    <-> . +l_asparagine +h +atp
+    l_asparaginyl_adenylate
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_284 [1.1.1.284] +nadh +ethanol +s_formylglutathione +glutathione_ethyl_ester +nad +h2o
-    formaldehyde
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
+    d_manp_1_3_d_manp
   }
 
-  branch from carnosine side left {
-    carnosine
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    h2o
+  branch from h side left {
+    h
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
+    3_o_6_o_alpha_d_xylosylphospho_alpha_d_mannopyra
   }
 
   branch from carnosine side right {
@@ -82,25 +70,109 @@ pathway s-adenosyl-l-homocysteine-to-coa "S-adenosyl-L-homocysteine to CoA" {
 
   branch from amp side left {
     amp
-    <-> ec_6_2_1_1 [6.2.1.1] +diphosphate +fluoroacetyl_coa +atp +coa
-    fluoroacetate
+    <-> ec_6_2_1_1 [6.2.1.1] +propanoyl_amp +coa +h
+    propanoyl_coa
   }
 
   branch from amp side right {
     amp
-    <-> ec_3_6_1_29 [3.6.1.29] +h +adp +h2o
-    p_1_p_2_bis_5_adenosyl_triphosphate
+    <-> ec_3_6_1_9 [3.6.1.9] +3_dephospho_coa +h2o +h
+    r_4_phosphopantetheine
   }
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_255 [2.3.1.255] +acetyl_coa +l_threonyl_group
-    n_acetyl_l_threonyl
+    <-> . +sucrose +2s_2_methylbutanoyl_coa
+    beta_d_fructofuranosyl_4_o_2_methylbutanoyl_alph
   }
 
   branch from coa side right {
     coa
-    <-> . +trans_4_coumaroyl_coa +r_3_4_hydroxyphenyl_lactate
-    4_coumaroyl_4_hydroxyphenyllactate
+    <-> . +decanoyl_coa +sucrose
+    beta_d_fructofuranosyl_4_o_decanoyl_alpha_d_gluc
+  }
+
+  branch from s_adenosyl_l_homocysteine side left {
+    s_adenosyl_l_homocysteine
+    <-> . +h +cyclosporin_a_metabolite_m1 +s_adenosyl_l_methionine
+    cyclosporin_a_metabolite_m13
+  }
+
+  branch from s_adenosyl_l_homocysteine side right {
+    s_adenosyl_l_homocysteine
+    <-> . +nadp +menaquinol +s_adenosyl_l_methionine +nadph
+    2_demethylmenaquinone_7
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
+    d_xylobiose
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
+    avilamycin_a
+  }
+
+  branch from s_adenosyl_l_methionine side left {
+    s_adenosyl_l_methionine
+    <-> . +s_adenosyl_l_homocysteine +cerivastatin_m23 +h +o2 +nadph +nadp +h2o2
+    cerivastatin_m24
+  }
+
+  branch from s_adenosyl_l_methionine side right {
+    s_adenosyl_l_methionine
+    <-> . +s_adenosyl_l_homocysteine +d_glucuronate +cerivastatin_m22 +h
+    cerivastatin_m1_glucuronide
+  }
+
+  branch from l_histidine side left {
+    l_histidine
+    <-> ec_4_3_1_3 [4.3.1.3] +nh4
+    urocanate
+  }
+
+  branch from l_histidine side right {
+    l_histidine
+    <-> . +h +atp +diphosphate
+    l_histidyl_adenylate
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
+    d_4_glcpa_1_4_d_glcp_1_4_l_rhap_1_3_d_glcp
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
+    d_glcp_1_4_l_rhap_1_3_d_glcp
+  }
+
+  branch from diphosphate side left {
+    diphosphate
+    <-> . +4_propyl_l_proline +h +atp
+    4_propyl_l_prolyl_adenylate
+  }
+
+  branch from diphosphate side right {
+    diphosphate
+    <-> . +3r_3_hydroxy_l_glutamate +atp +nh4 +h +amp
+    3r_3_hydroxy_l_glutamine
+  }
+
+  branch from amp side left {
+    amp
+    <-> . +co2 +butan_2_one +atp +h2o +h +phosphate
+    3_oxopentanoate
+  }
+
+  branch from amp side right {
+    amp
+    <-> ec_2_7_1_147 [2.7.1.147] +alpha_d_glucose +adp +h
+    alpha_d_glucose_6_phosphate
   }
 }

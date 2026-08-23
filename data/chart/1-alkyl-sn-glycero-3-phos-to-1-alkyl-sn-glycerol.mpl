@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-alkyl-sn-glycero-3-phos-to-1-alkyl-sn-glycerol "1-alkyl-sn-glycero-3-phos… to 1-alkyl-sn-glycerol…" {
-  spacing 296
+  spacing 302
 
   spine at 0,0 {
     1_alkyl_sn_glycero_3_phosphoethanolamine
@@ -44,15 +44,21 @@ pathway 1-alkyl-sn-glycero-3-phos-to-1-alkyl-sn-glycerol "1-alkyl-sn-glycero-3-p
     2_acyl_sn_glycero_3_phosphocholine
   }
 
-  branch from acetate side left {
-    acetate
-    <-> ec_3_1_1_106 [3.1.1.106] +3_o_acetyl_adp_d_ribose +h2o +hplus
-    adp_d_ribose
+  branch from ethanolaminium side left {
+    ethanolaminium
+    <-> ec_3_1_4_4 [3.1.4.4] +1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphoethano +h2o +hplus
+    1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphate
   }
 
-  branch from acetate side right {
-    acetate
-    <-> . +n_acetyl_l_aspartate +h2o
-    aspartate
+  branch from ethanolaminium side right {
+    ethanolaminium
+    <-> . +1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph +serine
+    1_palmitoyl_2_oleoyl_sn_glycero_3_phosphoserine
+  }
+
+  branch from 1_alkyl_2_acetyl_sn_glycerol side left {
+    1_alkyl_2_acetyl_sn_glycerol
+    <-> . +phosphatidylcholine +1_alkyl_2_acetyl_3_acyl_sn_glycerol
+    1_o_acyl_sn_glycero_3_phosphocholine
   }
 }

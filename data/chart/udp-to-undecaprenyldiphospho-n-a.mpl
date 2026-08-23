@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-undecaprenyldiphospho-n-a "UDP to undecaprenyldiphospho-N-a…" {
-  spacing 276
+  spacing 288
 
   spine at 0,0 {
     udp
@@ -16,15 +16,27 @@ pathway udp-to-undecaprenyldiphospho-n-a "UDP to undecaprenyldiphospho-N-a…" {
     undecaprenyldiphospho_n_acetyl_n_acetylglucosami
   }
 
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> ec_2_4_1_195 [2.4.1.195] +6_methylsulfanyl_hexyl_desulfoglucosinolate +udp +h
-    z_omega_methylsulfanyl_heptyl_thiohydroximate
+  branch from udp side left {
+    udp
+    <-> . +2_hydroxy_s_ibuprofen_glucuronide +2_hydroxyibuprofen
+    udp_alpha_d_glucuronate
   }
 
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> ec_2_4_1_195 [2.4.1.195] +7_methylthioheptyl_desulfoglucosinolate +udp +h
-    z_omega_methylsulfanyl_octyl_thiohydroximate
+  branch from udp side right {
+    udp
+    <-> . +5_hydroxy_fluvastatin_glucuronide +h +udp_alpha_d_glucuronate
+    5_hydroxy_fluvastatin
+  }
+
+  branch from udpglcnac side left {
+    udpglcnac
+    <-> . +o_n_acetyl_d_glucosaminyl_l_serine +udp +hplus
+    n_acetyl_d_glucosaminyl_1_6_n_acetyl_d_glucosami
+  }
+
+  branch from udpglcnac side right {
+    udpglcnac
+    <-> . +l_threonine +udp +hplus
+    n_acetyl_d_glucosaminyl_l_threonyl
   }
 }

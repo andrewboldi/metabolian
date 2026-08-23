@@ -32,32 +32,20 @@ pathway n-acetyl-d-galactosamin-to-glyoxylate "N-acetyl-α-D-galactosamin… to 
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> ec_3_6_1_8 [3.6.1.8] +ctp +h2o +hplus
-    ppi
+    <-> . +n_acyl_d_galactosylsphingosine +cmp_n_acetyl_neuraminate +hplus
+    n_acetyl_neuraminosyl_2_3_d_galactosylceramide
   }
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> ec_2_7_8_38 [2.7.8.38] +cdp_2_3_bis_o_phytanyl_sn_glycerol +serine +hplus
-    2_3_bis_o_phytanyl_sn_glycero_3_phospho_l_serine
+    <-> . +neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac +cmp_n_acetyl_neuraminate +hplus
+    neu5ac_2_3_d_gal_1_3_neu5ac_2_6_d_galnac_1_4_ne
   }
 
   branch from 2_phosphonatoglycolate side right {
     2_phosphonatoglycolate
     <-> . +3_end_deoxyribonucleotide_3_phosphoglycolate_3 +h2o +hplus
     3_end_deoxyribonucleotide_1
-  }
-
-  branch from pg3 side left {
-    pg3
-    <-> ec_2_4_1_266 [2.4.1.266] +udp_d_glucose +udp +hplus
-    2_o_d_glucopyranosyl_3_o_phosphonato_d_glycerate
-  }
-
-  branch from pg3 side right {
-    pg3
-    <-> ec_3_7_1_28 [3.7.1.28] +h2o +glycolate +hplus
-    3_oxoisoapionate_4_phosphate
   }
 
   branch from glycolate side left {
@@ -74,13 +62,73 @@ pathway n-acetyl-d-galactosamin-to-glyoxylate "N-acetyl-α-D-galactosamin… to 
 
   branch from glyoxylate side left {
     glyoxylate
-    <-> ec_1_2_3_5 [1.2.3.5] +o2 +h2o +h2o2 +hplus
-    oxalate
+    <-> ec_4_3_2_5 [4.3.2.5] +c_terminal_xaa_2s_hydroxyglycino_1
+    c_terminal_amino_acid_amide
   }
 
   branch from glyoxylate side right {
     glyoxylate
-    <-> ec_4_1_3_24 [4.1.3.24] +acetyl_coa
-    3s_3_carboxy_3_hydroxypropanoyl_coa
+    <-> ec_1_2_1_17 [1.2.1.17] +nadp +coa +nadph +hplus
+    oxalyl_coa
+  }
+
+  branch from udp_d_galactose side left {
+    udp_d_galactose
+    <-> ec_2_4_1_156 [2.4.1.156] +1d_1_o_indol_3_yl_acetyl_myo_inositol +udp +hplus
+    5_o_indol_3_ylacetyl_myo_inositol_d_galactoside
+  }
+
+  branch from udp_d_galactose side right {
+    udp_d_galactose
+    <-> ec_5_1_3_2 [5.1.3.2]
+    udp_d_glucose
+  }
+
+  branch from cmp_n_acetyl_neuraminate side left {
+    cmp_n_acetyl_neuraminate
+    <-> ec_1_14_18_2 [1.14.18.2] +fe2 +o2 +hplus +iron +h2o
+    cmp_n_glycoloyl_neuraminate
+  }
+
+  branch from cmp_n_acetyl_neuraminate side right {
+    cmp_n_acetyl_neuraminate
+    <-> . +neu5ac_2_3_d_gal_1_3_d_glcnac_1_3_d_gal_1_4_d_g +cytidine_5_monophosphate +hplus
+    neu5ac_2_3_d_gal_1_3_neu5ac_2_6_d_glcnac_1_3_d
+  }
+
+  branch from cytidine_5_monophosphate side left {
+    cytidine_5_monophosphate
+    <-> . +d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4 +cmp_n_acetyl_neuraminate +hplus
+    n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace
+  }
+
+  branch from cytidine_5_monophosphate side right {
+    cytidine_5_monophosphate
+    <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +cmp_n_acetyl_neuraminate +hplus
+    neu5ac_2_8_neu5ac_2_3_d_gal_1_3_d_galnac_1_4_ne
+  }
+
+  branch from glycolate side left {
+    glycolate
+    <-> ec_3_5_1_124 [3.5.1.124] +n6_1_hydroxy_2_oxoethyl_l_lysinium +h2o +hplus
+    l_lysinium
+  }
+
+  branch from glycolate side right {
+    glycolate
+    <-> ec_3_5_1_124 [3.5.1.124] +s_1_hydroxy_2_oxoethyl_l_cysteine +h2o +hplus
+    l_cysteine
+  }
+
+  branch from glyoxylate side left {
+    glyoxylate
+    <-> ec_4_1_3_13 [4.1.3.13] +3_oxalomalate
+    oxaloacetate
+  }
+
+  branch from glyoxylate side right {
+    glyoxylate
+    <-> ec_1_5_3_20 [1.5.3.20] +n_alkylglycine +o2 +h2o +h2o2
+    alkylaminium
   }
 }

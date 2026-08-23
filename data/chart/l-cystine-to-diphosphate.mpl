@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-cystine-to-diphosphate "L-cystine to diphosphate" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     l_cystine
@@ -14,17 +14,5 @@ pathway l-cystine-to-diphosphate "L-cystine to diphosphate" {
     3_trisulfanyl_l_alanine
     <-> . +amp_3_end_1 +atp -amp -ppi
     3_s_disulfanyl_l_cysteinyl_adenylyl_zwitterionic
-  }
-
-  branch from alanine side left {
-    alanine
-    <-> . +n_acetyl_l_alanyl_l_alaninate +h2o
-    n_acetyl_l_alaninate
-  }
-
-  branch from alanine side right {
-    alanine
-    <-> . +glutamine +atp +adp +pi +hplus
-    ala_gln
   }
 }

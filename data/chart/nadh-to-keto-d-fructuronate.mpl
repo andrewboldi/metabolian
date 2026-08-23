@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-keto-d-fructuronate "NADH to keto-D-fructuronate" {
-  spacing 200
+  spacing 236
 
   spine at 0,0 {
     nadh
@@ -16,51 +16,16 @@ pathway nadh-to-keto-d-fructuronate "NADH to keto-D-fructuronate" {
     keto_d_fructuronate
   }
 
-  branch from aldehydo_d_galacturonate side left {
-    aldehydo_d_galacturonate
-    <-> . +h
-    d_fructofuranuronic_acid
-  }
 
-  branch from nad side right {
-    nad
-    <-> . +nadh +3_oxoicosanoyl_coa +h
-    3_hydroxyicosanoyl_coa
-  }
 
-  branch from nad side left {
-    nad
-    <-> . +nadh +h +3_oxoheneicosanoyl_coenzyme_a
-    3_hydroxyheneicosanoyl_coenzyme_a
-  }
 
-  branch from h2o side right {
-    h2o
-    <-> ec_1_14_19_41 [1.14.19.41] +brassicasterol +nadp +h +o2 +nadph
-    24_epicampesterol
-  }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_1_14_15_17 [1.14.15.17] +epoxypheophorbide_a
-    red_chlorophyll_catabolite
-  }
 
-  branch from d_tagaturonate side right {
-    d_tagaturonate
-    <-> ec_1_1_1_58 [1.1.1.58] +nad +nadh +hplus
-    d_altronate
-  }
 
-  branch from d_tagaturonate side left {
-    d_tagaturonate
-    <-> ec_1_1_1_414 [1.1.1.414] +nad +nadh +hplus
-    l_galactonate
-  }
 
-  branch from keto_d_fructuronate side right {
-    keto_d_fructuronate
-    <-> ec_1_1_1_57 [1.1.1.57] +nad +nadh +hplus
-    d_mannonate
-  }
+
+
+
+
+
 }

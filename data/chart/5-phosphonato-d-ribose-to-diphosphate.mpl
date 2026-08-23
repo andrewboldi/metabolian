@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-phosphonato-d-ribose-to-diphosphate "5-phosphonato-α-D-ribose… to diphosphate" {
-  spacing 312
+  spacing 300
 
   spine at 0,0 {
     5_phosphonato_d_ribose_cyclic_1_2_phosphate
@@ -14,17 +14,5 @@ pathway 5-phosphonato-d-ribose-to-diphosphate "5-phosphonato-α-D-ribose… to d
     d_ribofuranose_5_phosphate
     <-> ec_2_7_7_96 [2.7.7.96] +atp +hplus -ppi
     adp_d_ribose
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_216 [4.2.3.216] +all_trans_pentaprenyl_diphosphate
-    somaliensene_a
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_217 [4.2.3.217] +all_trans_pentaprenyl_diphosphate
-    somaliensene_b
   }
 }

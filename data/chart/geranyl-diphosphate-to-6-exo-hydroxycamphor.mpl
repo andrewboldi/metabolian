@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway geranyl-diphosphate-to-6-exo-hydroxycamphor "geranyl diphosphate to (+)-6-exo-hydroxycamphor" {
-  spacing 200
+  spacing 188
 
   spine at 0,0 {
     gpp
@@ -16,17 +16,5 @@ pathway geranyl-diphosphate-to-6-exo-hydroxycamphor "geranyl diphosphate to (+)-
     r_camphor
     <-> ec_1_14_13_161 [1.14.13.161] +nadph +o2 +hplus -nadp -h2o
     6_exo_hydroxycamphor
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +2_cis_6_trans_farnesyl_diphosphate
-    z_bisabolene
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +2_cis_6_trans_farnesyl_diphosphate
-    cadinene
   }
 }

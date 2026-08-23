@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-1-dihydroxy-1-1-2-2-to-1-hydroxytorulene "1,1'-dihydroxy-1,1',2,2'-… to 1'-hydroxytorulene" {
-  spacing 224
+  spacing 212
 
   spine at 0,0 {
     1_1_dihydroxy_1_1_2_2_tetrahydrolycopene
@@ -26,17 +26,5 @@ pathway 1-1-dihydroxy-1-1-2-2-to-1-hydroxytorulene "1,1'-dihydroxy-1,1',2,2'-…
     3e_3_4_didehydrorhodopin
     <-> ec_2_1_1_210 [2.1.1.210] +s_adenosyl_l_homocysteine +h +anhydrorhodovibrin
     s_adenosyl_l_methionine
-  }
-
-  branch from hydrogen_donor side left {
-    hydrogen_donor
-    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +o2 +hydrogen_acceptor +h2o
-    15_s_hepe
-  }
-
-  branch from hydrogen_donor side right {
-    hydrogen_donor
-    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +o2 +hydrogen_acceptor +h2o
-    18_s_hepe
   }
 }

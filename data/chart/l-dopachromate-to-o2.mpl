@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-dopachromate-to-o2 "L-dopachromate to O2" {
-  spacing 164
+  spacing 188
 
   spine at 0,0 {
     l_dopachromate
@@ -24,7 +24,31 @@ pathway l-dopachromate-to-o2 "L-dopachromate to O2" {
 
   branch from o2 side right {
     o2
-    <-> . +h +cholesterol +nadph +pregnenolone +4_methylpentanal +h2o
-    nadp
+    <-> . +alpha_pinene +h +nadph +nadp +h2o
+    alpha_pinene_oxide
+  }
+
+  branch from h2o2 side left {
+    h2o2
+    <-> . +spermidine_dialdehyde +nh4 +o2 +h2o
+    n_3_aminopropyl_4_aminobutanal
+  }
+
+  branch from h2o2 side right {
+    h2o2
+    <-> . +spermine_monoaldehyde_3 +o2 +h2o +spermine_dialdehyde
+    nh4
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +4_hydroxydebrisoquin +nadp +h2o +h +nadph
+    debrisoquin
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +5z_8z_11z_14z_eicosatetraenoate +h +nadph +nadp +h2o
+    12s_hydroxy_5z_8z_10e_14z_eicosatetraenoate
   }
 }

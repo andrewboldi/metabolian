@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-alpha-phenylglycine-to-n-hydroxysuccinimide "D-alpha-phenylglycine to N-hydroxysuccinimide" {
-  spacing 238
+  spacing 280
 
   spine at 0,0 {
     d_alpha_phenylglycine
@@ -18,43 +18,85 @@ pathway d-alpha-phenylglycine-to-n-hydroxysuccinimide "D-alpha-phenylglycine to 
 
   branch from h2o side left {
     h2o
-    <-> ec_3_4_11_19 [3.4.11.19] +d_alanine +nh4
-    1_2_diaminopropanoate
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    oleandomycin
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_4_11_19 [3.4.11.19] +d_alanine +d_alanyl_d_alanine
-    d_alanyl_d_alanyl_d_alanine
-  }
-
-  branch from 2_oxohexanoate side left {
-    2_oxohexanoate
-    <-> ec_1_4_1_2 [1.4.1.2] +nadh +h +nh4 +nad +h2o
-    l_2_aminohexanoate
-  }
-
-  branch from o2 side right {
-    o2
-    <-> ec_1_17_3_2 [1.17.3.2] +oxoformycin_b +h2o2 +h2o
-    formycin_b
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    rifamycin_b
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_13_84 [1.14.13.84] +4_hydroxyhydratropate +nadp +h2o +h +nadph
-    p_hydroxypropiophenone
+    <-> ec_1_14_13_236 [1.14.13.236] +nadh +h +4_fluorophenol +nad +h2o
+    4_fluorocatechol
   }
 
-  branch from h side right {
-    h
-    <-> ec_4_3_1_24 [4.3.1.24] +4_chloro_l_phenylalanine +nh4
-    4_chlorocinnamic_acid
+  branch from o2 side right {
+    o2
+    <-> . +vincristine +h2o
+    vincaleukoblastine
   }
 
   branch from h side left {
     h
-    <-> ec_2_3_2_2 [2.3.2.2] +l_glutamine_hydroxamate +nh4 +hydroxylamine
-    l_glutamine
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    streptomycin
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +tuberactinomycin_a +phosphate +tuberactinomycin_a +h2o
+    atp
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    tuberactinomycin_o
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    tylosin
+  }
+
+  branch from co2 side left {
+    co2
+    <-> ec_4_1_1_65 [4.1.1.65] +pe_20_2_11z_14z_18_3_9z_12z_15z
+    ps_20_2_11z_14z_18_3_9z_12z_15z
+  }
+
+  branch from co2 side right {
+    co2
+    <-> ec_4_1_1_65 [4.1.1.65] +1_11z_14z_17z_eicoastrienoyl_2_9z_12z_15z_octade +h
+    20_3_18_3_ps
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_14_13_8 [1.14.13.8] +h +nadph +n_methyl_n_2s_1_phenylpropan_2_yl_hydroxylamine +z_methyl_oxido_1_phenylpropan_2_ylidene_azanium +h2o
+    nadp
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +h +nadph +5_methyl_n_4_nitrophenyl_1_oxo_1lambda4_thiophen +nadp +h2o
+    5_methyl_n_4_nitrophenyl_1_1_dioxo_1lambda6_thio
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    validamycin_a
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    o_phosphoviomycin
   }
 }

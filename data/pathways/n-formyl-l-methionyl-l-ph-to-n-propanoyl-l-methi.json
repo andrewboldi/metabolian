@@ -131,78 +131,22 @@
       }
     },
     {
-      "id": "n_formyl_l_methionyl_l_alaninate",
-      "name": "N-formyl-L-methionyl-L-alaninate",
+      "id": "n_formyl_l_methionyl_l_alanyl_l_serinate",
+      "name": "N-formyl-L-methionyl-L-alanyl-L-serinate",
       "short": "N-formyl-L-methiony…",
-      "formula": "C9H15N2O4S",
+      "formula": "C12H20N3O6S",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:233100"
+        "chebi": "CHEBI:233102"
       }
     },
     {
-      "id": "alanine",
-      "name": "L-Alanine",
-      "formula": "C3H7NO2",
+      "id": "ala_ser",
+      "name": "Ala-Ser",
+      "formula": "C6H12N2O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57972"
-      }
-    },
-    {
-      "id": "sapropterin",
-      "name": "sapropterin",
-      "formula": "C9H15N5O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:59560"
-      }
-    },
-    {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:15379"
-      }
-    },
-    {
-      "id": "l_m_tyrosine",
-      "name": "L-m-tyrosine",
-      "formula": "C9H11NO3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:78290"
-      }
-    },
-    {
-      "id": "4a_hydroxy_l_erythro_5_6_7_8_tetrahydrobiopterin",
-      "name": "4a-hydroxy-L-erythro-5,6,7,8-tetrahydrobiopterin",
-      "short": "4a-hydroxy-L-erythr…",
-      "formula": "C9H15N5O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:15642"
-      }
-    },
-    {
-      "id": "arachidonate",
-      "name": "arachidonate",
-      "formula": "C20H31O2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:32395"
-      }
-    },
-    {
-      "id": "n_arachidonoyl_l_phenylalaninate",
-      "name": "N-arachidonoyl-L-phenylalaninate",
-      "short": "N-arachidonoyl-L-ph…",
-      "formula": "C29H40NO3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:134022"
+        "chebi": "CHEBI:233101"
       }
     }
   ],
@@ -212,13 +156,6 @@
       "name": "formylmethionine deformylase",
       "ec": [
         "3.5.1.31"
-      ]
-    },
-    {
-      "id": "ec_1_14_16_7",
-      "name": "phenylalanine 3-monooxygenase",
-      "ec": [
-        "1.14.16.7"
       ]
     }
   ],
@@ -391,11 +328,11 @@
     },
     {
       "id": "r5",
-      "name": "N(alpha)-formyl-L-methionyl-L-alanine + H2O = N(alpha)-formyl-L-methionine + L-alanine",
-      "equation": "N(alpha)-formyl-L-methionyl-L-alanine + H2O = N(alpha)-formyl-L-methionine + L-alanine",
+      "name": "N(alpha)-formyl-L-methionyl-L-alanyl-L-serine + H2O = L-alanyl-L-serine + N(alpha)-form...",
+      "equation": "N(alpha)-formyl-L-methionyl-L-alanyl-L-serine + H2O = L-alanyl-L-serine + N(alpha)-formyl-L-methionine",
       "substrates": [
         {
-          "metabolite": "n_formyl_l_methionyl_l_alaninate",
+          "metabolite": "n_formyl_l_methionyl_l_alanyl_l_serinate",
           "stoichiometry": 1
         },
         {
@@ -405,113 +342,137 @@
       ],
       "products": [
         {
-          "metabolite": "n_formyl_l_methioninate",
+          "metabolite": "ala_ser",
           "stoichiometry": 1
         },
         {
-          "metabolite": "alanine",
+          "metabolite": "n_formyl_l_methioninate",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:83491"
+        "rhea": "RHEA:83495"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:83491"
+            "id": "RHEA:83495"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_n_formyl_l_methioninate_1-stearoyl-2-10-hydroxyo-to-l-serine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_formyl_l_methioninate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-stearoyl-2-10-hydroxyo-to-l-serine"
+      },
+      "note": "Shares N-formyl-L-methioninate with 1-stearoyl,2-(10-hydroxyo… to L-serine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57809"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "phenylalanine 3-monooxygenase",
-      "equation": "(6R)-L-erythro-5,6,7,8-tetrahydrobiopterin + L-phenylalanine + O2 = 3-hydroxy-L-phenylalanine + (4aS,6R)-4a-hydroxy-L-erythro-5,6,7,8-tetrahydrobiopterin",
-      "ec": "1.14.16.7",
-      "substrates": [
-        {
-          "metabolite": "sapropterin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_phenylalanine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "l_m_tyrosine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "4a_hydroxy_l_erythro_5_6_7_8_tetrahydrobiopterin",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_16_7"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:41532"
+      "id": "xt_n_formyl_l_methioninate_5-6-dihydrothymine-to-l-alanine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_formyl_l_methioninate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "5-6-dihydrothymine-to-l-alanine"
+      },
+      "note": "Shares N-formyl-L-methioninate with 5,6-dihydrothymine to L-alanine.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:41532"
+            "db": "ChEBI",
+            "id": "CHEBI:57809"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + L-phenylalanine = N-(5Z,8Z,11Z,14Z-eicosatetraenoyl...",
-      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + L-phenylalanine = N-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-L-phenylalanine + H2O",
-      "substrates": [
-        {
-          "metabolite": "arachidonate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_phenylalanine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n_arachidonoyl_l_phenylalaninate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:51312"
+      "id": "xt_n_formyl_l_methionyl_l_leucyl_l_phenylalaninate_3-methylcatechol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_formyl_l_methionyl_l_leucyl_l_phenylalaninate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "3-methylcatechol-to-h2o"
+      },
+      "note": "Shares N-formyl-L-methionyl-L-leucyl-L-phenylalaninate with 3-methylcatechol to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:51312"
+            "db": "ChEBI",
+            "id": "CHEBI:194314"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_formyl_l_methionyl_l_alanyl_l_serinate_4-hydroxymethylcatechol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_formyl_l_methionyl_l_alanyl_l_serinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxymethylcatechol-to-h2o"
+      },
+      "note": "Shares N-formyl-L-methionyl-L-alanyl-L-serinate with 4-hydroxymethylcatechol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:233102"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ala_ser_l-methionyl-l-aspartyl-to-amp-3-end-1",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ala_ser"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-methionyl-l-aspartyl-to-amp-3-end-1"
+      },
+      "note": "Shares Ala-Ser with L-methionyl-L-aspartyl… to AMP 3'-end(1−).",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:233101"
           }
         ]
       }

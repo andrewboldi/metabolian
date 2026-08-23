@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-palmitoyl-sn-glycerol-to-h2o "3-palmitoyl-sn-glycerol to H2O" {
-  spacing 182
+  spacing 248
 
   spine at 0,0 {
     3_palmitoyl_sn_glycerol
@@ -16,33 +16,99 @@ pathway 3-palmitoyl-sn-glycerol-to-h2o "3-palmitoyl-sn-glycerol to H2O" {
     atp
   }
 
-  branch from 1_o_oleoyl_sn_glycero_3_phosphocholine side left {
-    1_o_oleoyl_sn_glycero_3_phosphocholine
-    <-> . +linolenoyl_coa +coa
-    1_9z_octadecenoyl_2_9z_12z_15z_octadecatrienoyl
+  branch from atp side left {
+    atp
+    <-> ec_2_7_1_74 [2.7.1.74] +zalcitabine +h +adp
+    l_ddcmp
   }
 
   branch from atp side right {
     atp
-    <-> ec_6_3_1_9 [6.3.1.9] +glutathione +glutathionylspermine +adp +phosphate
-    bis_glutathionyl_spermine
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_6_3_1_9 [6.3.1.9] +h +adp +glutathionylaminopropylcadaverine +phosphate +aminopropylcadaverine
-    glutathione
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +pyruvate +1_hydroxy_2_naphthaldehyde
-    cis_4_1_hydroxynaphth_2_yl_2_oxobut_3_enoate
+    <-> ec_2_7_1_20 [2.7.1.20] +vidarabine_phosphate_usan +adp +h
+    adenine_arabinoside
   }
 
   branch from h2o side left {
     h2o
-    <-> . +r_allantoin +co2
-    s_5_hydroxyisourate
+    <-> . +11_dehydro_15_oxo_spinosyn_macrolactone
+    15_oxo_spinosyn_macrolactone
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +formaldehyde +h +4_hydroxycoumarin
+    dicoumarol
+  }
+
+  branch from linoleoyl_coa side left {
+    linoleoyl_coa
+    <-> . +1_acyl_sn_glycero_3_phosphoserine +coa
+    1_acyl_2_linoleoyl_sn_glycero_3_phosphoserine
+  }
+
+  branch from linoleoyl_coa side right {
+    linoleoyl_coa
+    <-> . +2_2_dilysocardiolipin +coa
+    2_linoleoyl_2_monolysocardiolipin
+  }
+
+  branch from h side left {
+    h
+    <-> . +dtdp_beta_l_rhamnose +spinosyn_tricyclic_macrolactone +rhamnosyl_tricyclic_spinosyn_pseudoaglycone
+    dtdp
+  }
+
+  branch from h side right {
+    h
+    <-> . +dtdp_alpha_d_forosamine +2_3_4_o_methyl_rhamnosyl_tetracyclic_spinosyn_ps +dtdp
+    spinosyn_a
+  }
+
+  branch from adp side left {
+    adp
+    <-> ec_2_7_1_2 [2.7.1.2] +glucose +atp +h
+    d_glucopyranose_1_phosphate
+  }
+
+  branch from adp side right {
+    adp
+    <-> ec_2_7_1_66 [2.7.1.66] +dolichol_phosphate_human_uterine_homolog +h +atp
+    dolichol
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> ec_3_1_3_62 [3.1.3.62] +1d_myo_inositol_1_2_3_4_5_pentakisphosphate +h2o
+    d_myo_inositol_1_2_3_4_tetrakisphosphate
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_3_1_3_62 [3.1.3.62] +d_myo_inositol_1_2_3_4_tetrakisphosphate +h2o
+    d_myo_inositol_2_3_4_trisphosphate
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_2_7_7_1 [2.7.7.1] +nadh +diphosphate +h
+    reduced_beta_nicotinamide_d_ribonucleotide
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_2_7_1_3 [2.7.1.3] +alpha_d_ribose_1_phosphate +h +adp
+    d_ribose
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_4_19_13 [3.4.19.13] +l_glutamate +s_4_hydroxy_nonenal_3_yl_l_cysteinylglycine
+    3_glutathion_s_yl_4_hydroxynonanal
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_4_11_2 [3.4.11.2] +glycine +s_4_hydroxy_nonenal_3_yl_l_cysteine
+    s_4_hydroxy_nonenal_3_yl_l_cysteinylglycine
   }
 }

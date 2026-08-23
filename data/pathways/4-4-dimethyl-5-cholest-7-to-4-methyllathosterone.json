@@ -141,6 +141,15 @@
       }
     },
     {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
       "id": "h",
       "name": "H",
       "formula": "H",
@@ -159,24 +168,6 @@
       }
     },
     {
-      "id": "nadph",
-      "name": "NADPH",
-      "formula": "C21H26N7O17P3",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM738702"
-      }
-    },
-    {
-      "id": "nadp",
-      "name": "NADP",
-      "formula": "C21H25N7O17P3",
-      "charge": -3,
-      "xrefs": {
-        "metanetx": "MNXM5"
-      }
-    },
-    {
       "id": "3beta_hydroxy_4beta_methyl_5alpha_cholest_7_ene",
       "name": "3beta-hydroxy-4beta-methyl-5alpha-cholest-7-ene-4alpha-carbaldehyde",
       "short": "3beta-hydroxy-4beta…",
@@ -184,6 +175,15 @@
       "charge": 0,
       "xrefs": {
         "metanetx": "MNXM726155"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
       }
     },
     {
@@ -196,21 +196,13 @@
       }
     },
     {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
-      "charge": -2,
+      "id": "4_4_dimethyl_5alpha_cholest_7_en_3beta_ol",
+      "name": "4,4-dimethyl-5alpha-cholest-7-en-3beta-ol",
+      "short": "4,4-dimethyl-5alpha…",
+      "formula": "C29H50O",
+      "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM10"
-      }
-    },
-    {
-      "id": "nad",
-      "name": "NAD",
-      "formula": "C21H26N7O14P2",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM8"
+        "metanetx": "MNXM728180"
       }
     },
     {
@@ -255,7 +247,10 @@
       "name": "3beta-hydroxysteroid 3-dehydrogenase",
       "ec": [
         "1.1.1.270"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P14060"
+      }
     }
   ],
   "reactions": [
@@ -457,62 +452,6 @@
     },
     {
       "id": "r5",
-      "name": "Reaction MNXR109793",
-      "ec": "1.14.13.72",
-      "substrates": [
-        {
-          "metabolite": "4_hydroxymethyl_4_methyl_5_cholest_7_en_3_ol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "3beta_hydroxy_4beta_methyl_5alpha_cholest_7_ene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_13_72"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR109793"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR109793"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
       "name": "Reaction MNXR149299",
       "ec": "1.14.13.72",
       "substrates": [
@@ -553,7 +492,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
         "metanetx": "MNXR149299"
       },
@@ -563,6 +502,62 @@
           {
             "db": "MetaNetX",
             "id": "MNXR149299"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "Reaction MNXR197922",
+      "ec": "1.14.13.72",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4_4_dimethyl_5alpha_cholest_7_en_3beta_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxymethyl_4_methyl_5_cholest_7_en_3_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_72"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "metanetx": "MNXR197922"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197922"
           }
         ]
       }
@@ -612,6 +607,184 @@
           {
             "db": "Rhea",
             "id": "RHEA:18409"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_4_hydroxymethyl_4_methyl_5_cholest_7_en_3_ol_4-hydroxymethyl-4-methy-to-4beta-methyl-5alpha-c",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_hydroxymethyl_4_methyl_5_cholest_7_en_3_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxymethyl-4-methy-to-4beta-methyl-5alpha-c"
+      },
+      "note": "Shares 4α-hydroxymethyl-4β-methyl-5α-cholest-7-en-3β-ol with 4α-hydroxymethyl-4β-methy… to 4beta-methyl-5alpha-chole….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:146140"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_hydroxymethyl_4_methyl_5_cholest_7_en_3_ol_narbomycin-to-narbonolide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_hydroxymethyl_4_methyl_5_cholest_7_en_3_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "narbomycin-to-narbonolide"
+      },
+      "note": "Shares 4α-hydroxymethyl-4β-methyl-5α-cholest-7-en-3β-ol with narbomycin to narbonolide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:146140"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_methyllathosterone_1r-2r-cyclohexa-3-5-die-to-norsalsolinol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_methyllathosterone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1r-2r-cyclohexa-3-5-die-to-norsalsolinol"
+      },
+      "note": "Shares 4α-methyllathosterone with (1R,2R)-cyclohexa-3,5-die… to norsalsolinol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16495"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3beta_hydroxy_4beta_methyl_5alpha_cholest_7_ene_narbomycin-to-narbonolide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3beta_hydroxy_4beta_methyl_5alpha_cholest_7_ene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "narbomycin-to-narbonolide"
+      },
+      "note": "Shares 3beta-hydroxy-4beta-methyl-5alpha-cholest-7-ene-4alpha-carbaldehyde with narbomycin to narbonolide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM726155"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_4_dimethyl_5alpha_cholest_7_en_3beta_ol_3-indoleglyoxylic-acid-to-2-formaminobenzoylacet",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_4_dimethyl_5alpha_cholest_7_en_3beta_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-indoleglyoxylic-acid-to-2-formaminobenzoylacet"
+      },
+      "note": "Shares 4,4-dimethyl-5alpha-cholest-7-en-3beta-ol with 3-indoleglyoxylic acid to 2-Formaminobenzoylacetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM728180"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_4_dimethyl_5alpha_cholest_7_en_3beta_ol_3-oxo-24-ethyl-26-al-chol-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_4_dimethyl_5alpha_cholest_7_en_3beta_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-oxo-24-ethyl-26-al-chol-to-nadph"
+      },
+      "note": "Shares 4,4-dimethyl-5alpha-cholest-7-en-3beta-ol with 3-oxo-24-ethyl-26-al-chol… to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM728180"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_4_dimethyl_5alpha_cholest_7_en_3beta_ol_4-hydroxymethyl-4-methy-to-4beta-methyl-5alpha-c",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_4_dimethyl_5alpha_cholest_7_en_3beta_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxymethyl-4-methy-to-4beta-methyl-5alpha-c"
+      },
+      "note": "Shares 4,4-dimethyl-5alpha-cholest-7-en-3beta-ol with 4α-hydroxymethyl-4β-methy… to 4beta-methyl-5alpha-chole….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM728180"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_methyl_5_cholest_7_en_3_ol_4-methyl-5-cholest-7-en-to-4-carboxy-5-cholest-7",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_methyl_5_cholest_7_en_3_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-methyl-5-cholest-7-en-to-4-carboxy-5-cholest-7"
+      },
+      "note": "Shares 4α-methyl-5α-cholest-7-en-3β-ol with 4α-methyl-5α-cholest-7-en… to 4α-carboxy-5α-cholest-7-e….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18378"
           }
         ]
       }

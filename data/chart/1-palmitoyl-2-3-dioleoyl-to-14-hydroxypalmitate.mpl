@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-palmitoyl-2-3-dioleoyl-to-14-hydroxypalmitate "1-palmitoyl-2,3-dioleoyl-… to 14-hydroxypalmitate" {
-  spacing 164
+  spacing 158
 
   spine at 0,0 {
     1_palmitoyl_2_3_dioleoyl_sn_glycerol
@@ -17,12 +17,6 @@ pathway 1-palmitoyl-2-3-dioleoyl-to-14-hydroxypalmitate "1-palmitoyl-2,3-dioleoy
   }
 
   branch from 9_hydroxyoctadecanoate side left {
-    9_hydroxyoctadecanoate
-    <-> . +1_2_3_trilinoleoylglycerol +9_9z_12z_octadecadienoyloxy_octadecanoate
-    1_3_dilinoleoylglycerol
-  }
-
-  branch from 9_hydroxyoctadecanoate side right {
     9_hydroxyoctadecanoate
     <-> . +1_2_3_tri_10z_heptadecenoyl_glycerol +9_10z_heptadecenoyloxy_octadecanoate
     1_3_di_10z_heptadecenoyl_glycerol

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway h-to-bacteriopheophytin-a "H to bacteriopheophytin a" {
-  spacing 164
+  spacing 200
 
   spine at 0,0 {
     h
@@ -18,13 +18,49 @@ pathway h-to-bacteriopheophytin-a "H to bacteriopheophytin a" {
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_21 [1.1.1.21] +2_methylpentanal +h +nadph
-    2_methylpentanol
+    <-> ec_1_2_1_5 [1.2.1.5] +h +tetracosanoate +nadph +h2o
+    tetracosanal
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_21 [1.1.1.21] +4_bromobenzaldehyde +h +nadph
-    4_bromobenzyl_alcohol
+    <-> ec_1_2_1_5 [1.2.1.5] +h +nadph +tetratriacontanoate +h2o
+    tetratriacontanal
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +ile5_angiotensin_ii_1_7 +phosphate +ile5_angiotensin_ii_1_7 +h2o
+    atp
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    balenine
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +3_oxocholoyl_coa +h +nadp
+    choloyl_coa
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_1_1_124 [1.1.1.124] +beta_d_fructose +nadp +h
+    5_dehydro_d_fructose
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_1_1_138 [1.1.1.138] +d_mannitol +h +nadph
+    beta_d_fructose
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_6_5_2 [1.6.5.2] +h +nadph +2_decaprenyl_6_methoxy_1_4_benzoquinone
+    2_decaprenyl_6_methoxyhydroquinone
   }
 }

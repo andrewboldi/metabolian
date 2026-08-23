@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway myo-inositol-to-h2o-null "myo-inositol to H2O" {
-  spacing 272
+  spacing 236
 
   spine at 0,0 {
     myo_inositol
@@ -14,41 +14,5 @@ pathway myo-inositol-to-h2o-null "myo-inositol to H2O" {
     inositol
     <-> ec_3_6_3_18 [3.6.3.18] +h +adp +stachyose +phosphate -stachyose -h2o
     atp
-  }
-
-  branch from alpha_d_galactosyl_1_3_1d_myo_inositol side left {
-    alpha_d_galactosyl_1_3_1d_myo_inositol
-    <-> . +myo_inositol +ciceritol
-    galactopinitol_a
-  }
-
-  branch from alpha_d_galactosyl_1_3_1d_myo_inositol side right {
-    alpha_d_galactosyl_1_3_1d_myo_inositol
-    <-> . +ajugose +myo_inositol
-    verbascose
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    pg_18_2_9z_12z_0_0
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    pg_18_3_9z_12z_15z_0_0
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_4_2_1_80 [4.2.1.80] +s_4_hydroxy_2_oxohexanoate
-    2z_2_hydroxyhexa_2_5_dienoate
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +r_3_hydroxydecanoic_acid +alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_form_d_p_put
-    alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_form_c_p_put
   }
 }

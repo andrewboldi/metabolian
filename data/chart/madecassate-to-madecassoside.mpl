@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway madecassate-to-madecassoside "madecassate to madecassoside" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     madecassate
@@ -14,5 +14,17 @@ pathway madecassate-to-madecassoside "madecassate to madecassoside" {
     2_3_6_23_tetrahydroxyurs_12_en_28_oic_acid_28_o
     <-> . +udp_l_rhamnose -udp -hplus
     madecassoside
+  }
+
+  branch from udp_d_glucose side left {
+    udp_d_glucose
+    <-> . +l_threonine +udp +hplus
+    d_glucosyl_l_threonyl
+  }
+
+  branch from udp_d_glucose side right {
+    udp_d_glucose
+    <-> . +phloretin +udp +hplus
+    trilobatin
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-saturated-to-1-z-alk-1-enyl-2-acyl-s "1-(α,β-saturated… to 1-(Z)-alk-1-enyl-2-acyl-s…" {
-  spacing 240
+  spacing 306
 
   spine at 0,0 {
     1_saturated_alkyl_2_acyl_sn_glycero_3_phosphoeth
@@ -32,14 +32,14 @@ pathway 1-saturated-to-1-z-alk-1-enyl-2-acyl-s "1-(α,β-saturated… to 1-(Z)-a
 
   branch from ethanolaminium side left {
     ethanolaminium
-    <-> . +1_hexadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex +serine
-    1_hexadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex
+    <-> . +1_1z_octadecenyl_2_9z_octadecenoyl_sn_glycero_3 +serine
+    1_1z_octadecenyl_2_oleoyl_sn_glycero_3_phosphose
   }
 
   branch from ethanolaminium side right {
     ethanolaminium
-    <-> . +1_octadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex +serine
-    1_octadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex
+    <-> . +1_1z_octadecenyl_2_arachidonoyl_sn_glycero_3_pho +serine
+    1_1z_octadecenyl_2_arachidonoyl_sn_glycero_3_pho
   }
 
   branch from 1_z_alk_1_enyl_sn_glycero_3_phosphocholine side left {
@@ -56,13 +56,79 @@ pathway 1-saturated-to-1-z-alk-1-enyl-2-acyl-s "1-(α,β-saturated… to 1-(Z)-a
 
   branch from fatty-acid side left {
     fatty-acid
-    <-> . +n_acylphytosphingosine +h2o
-    phytosphingosine
+    <-> . +2_monolysocardiolipin +h2o +hplus
+    2_2_dilysocardiolipin
   }
 
   branch from fatty-acid side right {
     fatty-acid
-    <-> ec_3_1_1_118 [3.1.1.118] +1_phosphatidyl_1d_myo_inositol +h2o +hplus
-    2_acyl_sn_glycero_3_phospho_1d_myo_inositol
+    <-> . +phosphatidylcholine +h2o +hplus
+    acyl_sn_glycero_3_phosphocholine
+  }
+
+  branch from 1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphoethano side left {
+    1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphoethano
+    <-> . +1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine +phosphatidylcholine
+    1_o_acyl_sn_glycero_3_phosphocholine
+  }
+
+  branch from choline side right {
+    choline
+    <-> . +1_oleyl_sn_glycero_3_phosphocholine +h2o +hplus
+    1_oleyl_sn_glycero_3_phosphate
+  }
+
+  branch from choline side left {
+    choline
+    <-> . +1_2_dihexadecanoyl_sn_glycero_3_phosphocholine +h2o +hplus
+    1_2_dihexadecanoyl_sn_glycerol_3_phosphate
+  }
+
+  branch from ethanolaminium side right {
+    ethanolaminium
+    <-> . +1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol +1_2_diacyl_sn_glycero_3_phosphoethanolamine
+    cardiolipin
+  }
+
+  branch from ethanolaminium side left {
+    ethanolaminium
+    <-> . +hplus +co2
+    serine
+  }
+
+  branch from 1_z_alk_1_enyl_sn_glycero_3_phosphocholine side right {
+    1_z_alk_1_enyl_sn_glycero_3_phosphocholine
+    <-> . +acetyl_coa +coa
+    1_1z_alkenyl_2_acetyl_sn_glycero_3_phosphocholin
+  }
+
+  branch from 1_z_alk_1_enyl_sn_glycero_3_phosphocholine side left {
+    1_z_alk_1_enyl_sn_glycero_3_phosphocholine
+    <-> . +palmitoyl_coa +coa
+    1_z_alk_1_enyl_2_palmitoyl_sn_glycero_3_phosphoc
+  }
+
+  branch from fatty-acid side right {
+    fatty-acid
+    <-> . +3_sn_phosphatidyl_l_serine +h2o +hplus
+    1_acyl_sn_glycero_3_phosphoserine
+  }
+
+  branch from fatty-acid side left {
+    fatty-acid
+    <-> . +2_monoglyceride +h2o +hplus
+    glycerol
+  }
+
+  branch from acyl_coa side right {
+    acyl_coa
+    <-> . +malonyl-coa +hplus +co2 +coa
+    3_oxoacyl_coa
+  }
+
+  branch from acyl_coa side left {
+    acyl_coa
+    <-> ec_2_3_1_265 [2.3.1.265] +2_6_o_bis_d_mannopyranosyl_1_phosphatidyl_1d_myo +coa
+    2_o_d_mannopyranosyl_6_o_6_acyl_d_mannopyranosyl
   }
 }

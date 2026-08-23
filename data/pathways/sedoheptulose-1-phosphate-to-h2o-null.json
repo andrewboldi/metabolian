@@ -1,0 +1,619 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "sedoheptulose-1-phosphate-to-h2o-null",
+  "name": "sedoheptulose 1-phosphate to H2O",
+  "category": "energy-metabolism",
+  "summary": "A 4-step route from sedoheptulose 1-phosphate to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR195127"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:9082"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "sedoheptulose_1_phosphate",
+      "name": "sedoheptulose 1-phosphate",
+      "short": "sedoheptulose 1-P",
+      "formula": "C7H15O10P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:9082"
+      }
+    },
+    {
+      "id": "l_erythrose",
+      "name": "L-erythrose",
+      "formula": "C4H8O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:21288"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "dihydroxyacetone_phosphate",
+      "name": "dihydroxyacetone phosphate",
+      "short": "dihydroxyacetone P",
+      "formula": "C3H5O6P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM77"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "erythritol",
+      "name": "erythritol",
+      "formula": "C4H10O4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1371602"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "l_erythrulose",
+      "name": "L-erythrulose",
+      "formula": "C4H8O4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM59384"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_1_2_13",
+      "name": "fructose-bisphosphate aldolase",
+      "ec": [
+        "4.1.2.13"
+      ],
+      "xrefs": {
+        "uniprot": "P04075"
+      }
+    },
+    {
+      "id": "ec_1_1_1_10",
+      "name": "L-xylulose reductase",
+      "ec": [
+        "1.1.1.10"
+      ],
+      "xrefs": {
+        "uniprot": "Q7Z4W1"
+      }
+    },
+    {
+      "id": "ec_3_6_3_17",
+      "name": "EC 3.6.3.17",
+      "ec": [
+        "3.6.3.17"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "fructose-bisphosphate aldolase",
+      "ec": "4.1.2.13",
+      "substrates": [
+        {
+          "metabolite": "sedoheptulose_1_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_erythrose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "dihydroxyacetone_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_2_13"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR195127"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR195127"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR172785",
+      "substrates": [
+        {
+          "metabolite": "l_erythrose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "erythritol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR172785"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR172785"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "L-xylulose reductase",
+      "ec": "1.1.1.10",
+      "substrates": [
+        {
+          "metabolite": "erythritol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_erythrulose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_10"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR133649"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR133649"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Reaction MNXR174774",
+      "ec": "3.6.3.17",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_erythrulose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_erythrulose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_3_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR174774"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR174774"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_sedoheptulose_1_phosphate_5-fluoro-5-deoxy-d-ribose-to-fluoroacetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sedoheptulose_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-fluoro-5-deoxy-d-ribose-to-fluoroacetate"
+      },
+      "note": "Shares sedoheptulose 1-phosphate with 5-fluoro-5-deoxy-D-ribose… to fluoroacetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:9082"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sedoheptulose_1_phosphate_d-xylulose-1-phosphate-to-phosphate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sedoheptulose_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-xylulose-1-phosphate-to-phosphate-null"
+      },
+      "note": "Shares sedoheptulose 1-phosphate with D-Xylulose 1-phosphate to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:9082"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sedoheptulose_1_phosphate_sedoheptulose-1-phosphate-to-d-glycero-beta-d-ma",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sedoheptulose_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sedoheptulose-1-phosphate-to-d-glycero-beta-d-ma"
+      },
+      "note": "Shares sedoheptulose 1-phosphate with sedoheptulose 1-phosphate to D-glycero-beta-D-manno-he….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:9082"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sedoheptulose_1_phosphate_sedoheptulose-1-phosphate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sedoheptulose_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sedoheptulose-1-phosphate-to-h2o"
+      },
+      "note": "Shares sedoheptulose 1-phosphate with sedoheptulose 1-phosphate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:9082"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sedoheptulose_1_phosphate_sedoheptulose-1-phosphate-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sedoheptulose_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sedoheptulose-1-phosphate-to-nad"
+      },
+      "note": "Shares sedoheptulose 1-phosphate with sedoheptulose 1-phosphate to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:9082"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sedoheptulose_1_phosphate_sedoheptulose-1-phosphate-to-nad-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sedoheptulose_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sedoheptulose-1-phosphate-to-nad-null"
+      },
+      "note": "Shares sedoheptulose 1-phosphate with sedoheptulose 1-phosphate to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:9082"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_erythrose_sedoheptulose-1-phosphate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_erythrose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sedoheptulose-1-phosphate-to-h2o"
+      },
+      "note": "Shares L-erythrose with sedoheptulose 1-phosphate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:21288"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_erythritol_d-glycero-alpha-d-manno-h-to-nadp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "erythritol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glycero-alpha-d-manno-h-to-nadp"
+      },
+      "note": "Shares erythritol with D-glycero-alpha-D-manno-h… to NADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371602"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_erythritol_d-glycero-alpha-d-manno-h-to-nadp-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "erythritol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glycero-alpha-d-manno-h-to-nadp-null"
+      },
+      "note": "Shares erythritol with D-glycero-alpha-D-manno-h… to NADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371602"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_erythritol_diphosphate-to-pyocyanine-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "erythritol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-pyocyanine-null"
+      },
+      "note": "Shares erythritol with diphosphate to pyocyanine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371602"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_erythritol_keto-d-fructose-to-beta-d-fructose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "erythritol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "keto-d-fructose-to-beta-d-fructose"
+      },
+      "note": "Shares erythritol with keto-D-fructose… to beta-D-fructose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371602"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_erythritol_sedoheptulose-1-phosphate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "erythritol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sedoheptulose-1-phosphate-to-h2o"
+      },
+      "note": "Shares erythritol with sedoheptulose 1-phosphate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371602"
+          }
+        ]
+      }
+    }
+  ]
+}

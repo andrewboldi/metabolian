@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-hydroxybenzoyl-coa-to-diphosphate "4-hydroxybenzoyl-CoA to diphosphate" {
-  spacing 240
+  spacing 312
 
   spine at 0,0 {
     4_hydroxybenzoyl_coa
@@ -18,62 +18,62 @@ pathway 4-hydroxybenzoyl-coa-to-diphosphate "4-hydroxybenzoyl-CoA to diphosphate
 
   branch from succinyl_coa side left {
     succinyl_coa
-    <-> . +h +n_hydroxycadaverine +coa
-    n_3_carboxypropanoyl_n_hydroxycadaverine
+    <-> . +3_methylbenzylsuccinate +succinate
+    3_methylbenzyl_succinyl_coa
   }
 
   branch from succinyl_coa side right {
     succinyl_coa
-    <-> . +n_hydroxyputrescine +n_3_carboxypropanoyl_n_hydroxyputrescine
-    coa
+    <-> ec_6_2_1_4 [6.2.1.4] +itp +succinate +coa +phosphate
+    idp
   }
 
   branch from 4_hydroxybenzoate side left {
     4_hydroxybenzoate
-    <-> . +4_hydroxyphenyl_4_hydroxybenzoate +h2o +h
-    hydroquinone
+    <-> . +h +o2 +nadph +2_5_dihydroxybenzoate +h2o
+    nadp
   }
 
   branch from 4_hydroxybenzoate side right {
     4_hydroxybenzoate
-    <-> . +4_hydroxybenzoate_1_phenylethylidene +h2o +h
-    acetophenone_hydrazone
+    <-> ec_2_5_1_39 [2.5.1.39] +2e_geranyl_diphosphate +3_geranyl_4_hydroxybenzoate
+    diphosphate
   }
 
   branch from trans_4_coumarate side left {
-    trans_4_coumarate
-    <-> ec_1_14_18_1 [1.14.18.1] +h +o2 +h2o
-    caffeic_acid_quinone
-  }
-
-  branch from trans_4_coumarate side right {
     trans_4_coumarate
     <-> . +h +o2 +nadph +nadp +h2o
     e_caffeate
   }
 
+  branch from trans_4_coumarate side right {
+    trans_4_coumarate
+    <-> . +nh4
+    3s_3_azaniumyl_3_4_hydroxyphenyl_propanoate
+  }
+
   branch from nad side left {
     nad
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +5_phenyl_1_3_oxazinane_2_4_dione
-    4_hydroxy_5_phenyltetrahydro_1_3_oxazin_2_one
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +acetophenone +h
+    r_1_phenylethanol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_272 [1.1.1.272] +nadh +h +3_sulfopyruvate
-    3_sulfolactic_acid
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +butan_2_one +h
+    2r_butan_2_ol
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_1_1_45 [3.1.1.45] +2_3_5_trichlorodienelactone
-    2_3_5_trichloromaleylacetic_acid
+    <-> ec_1_13_11_34 [1.13.11.34] +7_s_hydroperoxy_17_r_hydroxydocosahexaenoic_acid +h
+    7_8_epoxy_17r_hydroxy_docosahexaenoate
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_14_13_25 [1.14.13.25] +nadh +trichloroethene +h +o2 +nad
-    trichloroepoxyethane
+    <-> . +h +7_8_epoxy_17r_hydroxy_docosahexaenoate
+    aspirin_triggered_resolvin_d1
   }
 
   branch from trans_4_coumaroyl_coa side left {
@@ -88,15 +88,87 @@ pathway 4-hydroxybenzoyl-coa-to-diphosphate "4-hydroxybenzoyl-CoA to diphosphate
     demethoxycurcumin
   }
 
-  branch from ppi side left {
-    ppi
-    <-> . +peregrinol_diphosphate
-    labd_13_16_14_diene_9_ol
+  branch from 4_hydroxybenzoyl_coa side left {
+    4_hydroxybenzoyl_coa
+    <-> . +nadh +acetyl_coa +h +trans_4_coumaroyl_coa +nad +h2o
+    coa
   }
 
-  branch from ppi side right {
-    ppi
-    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    syn_isopimara_7_15_diene
+  branch from 4_hydroxybenzoyl_coa side right {
+    4_hydroxybenzoyl_coa
+    <-> . +nadh +acetyl_coa +h +coa +nad +h2o
+    4_coumaroyl_coa
+  }
+
+  branch from succinate side left {
+    succinate
+    <-> ec_3_5_1_3 [3.5.1.3] +ethanol +h +h2o
+    4_ethoxy_4_oxobutanoic_acid
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> ec_3_5_1_131 [3.5.1.131] +h +nh4 +h2o
+    succinamic_acid
+  }
+
+  branch from succinyl_coa side left {
+    succinyl_coa
+    <-> ec_2_3_1_61 [2.3.1.61] +r_dihydrolipoamide +h +coa
+    s_8_succinyldihydrolipoamide
+  }
+
+  branch from succinyl_coa side right {
+    succinyl_coa
+    <-> ec_2_3_1_61 [2.3.1.61] +r_dihydrolipoamide +coa
+    s_succinyl_dihydrolipoamide
+  }
+
+  branch from 4_hydroxybenzoate side left {
+    4_hydroxybenzoate
+    <-> ec_1_14_13_12 [1.14.13.12] +nadp +h2o +h +o2 +nadph
+    benzoate
+  }
+
+  branch from 4_hydroxybenzoate side right {
+    4_hydroxybenzoate
+    <-> ec_1_13_11_41 [1.13.11.41] +h +formate +o2
+    2_4_dihydroxyacetophenone
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> ec_1_1_1_1 [1.1.1.1] +2_methylcyclohexanone +h +nad
+    2_methyl_cyclohexanol
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_1_1_1 [1.1.1.1] +4_methylcyclohexanone +h +nad
+    trans_4_methylcyclohexanol
+  }
+
+  branch from h side left {
+    h
+    <-> . +methylenecyclopropyl_pyruvic_acid +co2
+    2_oxo_3_carboxy_4_5_cyclopropylhex_5_enoate
+  }
+
+  branch from h side right {
+    h
+    <-> . +s_adenosyl_l_homocysteine +methoxyfuraneol_enol_form +furaneol_enol_form
+    s_adenosyl_l_methionine
+  }
+
+  branch from acetate side left {
+    acetate
+    <-> ec_3_1_1_1 [3.1.1.1] +h +glycerol_1_2_diacetate +h2o
+    triacetin
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> ec_3_5_1_4 [3.5.1.4] +4_nitroacetanilide +h2o +h
+    4_nitroaniline
   }
 }

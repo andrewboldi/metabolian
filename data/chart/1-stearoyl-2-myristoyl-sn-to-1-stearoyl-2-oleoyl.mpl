@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-stearoyl-2-myristoyl-sn-to-1-stearoyl-2-oleoyl "1-stearoyl-2-myristoyl-sn… to 1-stearoyl-2-oleoyl-sn-gl…" {
-  spacing 182
+  spacing 188
 
   spine at 0,0 {
     1_stearoyl_2_myristoyl_sn_glycero_3_phosphocholi
@@ -20,18 +20,6 @@ pathway 1-stearoyl-2-myristoyl-sn-to-1-stearoyl-2-oleoyl "1-stearoyl-2-myristoyl
     1_stearoyl_2_oleoyl_sn_glycero_3_phosphate
   }
 
-  branch from tetradecanoate side left {
-    tetradecanoate
-    <-> . +1_2_di_o_myristoyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_myristoyl_sn_glycero_3_phosphocholine
-  }
-
-  branch from tetradecanoate side right {
-    tetradecanoate
-    <-> ec_1_13_11_92 [1.13.11.92] +o2
-    2r_2_hydroperoxytetradecanoate
-  }
-
   branch from 1_stearoyl_sn_glycero_3_phosphate side left {
     1_stearoyl_sn_glycero_3_phosphate
     <-> . +h2o +pi
@@ -40,13 +28,31 @@ pathway 1-stearoyl-2-myristoyl-sn-to-1-stearoyl-2-oleoyl "1-stearoyl-2-myristoyl
 
   branch from 1_stearoyl_sn_glycero_3_phosphate side right {
     1_stearoyl_sn_glycero_3_phosphate
+    <-> ec_3_1_1_4 [3.1.1.4] +h +octadecanoate +h2o
+    3_phosphonooxy_1_2_propanediyl_dioctadecanoate
+  }
+
+  branch from 1_stearoyl_sn_glycero_3_phosphate side left {
+    1_stearoyl_sn_glycero_3_phosphate
+    <-> . +octadecanoyl_coa +h +3_phosphonooxy_1_2_propanediyl_dioctadecanoate
+    coa
+  }
+
+  branch from 1_stearoyl_sn_glycero_3_phosphate side right {
+    1_stearoyl_sn_glycero_3_phosphate
     <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
     atp
   }
 
-  branch from 1_stearoyl_2_oleoyl_sn_glycero_3_phosphate side left {
-    1_stearoyl_2_oleoyl_sn_glycero_3_phosphate
-    <-> . +ctp +hplus +ppi
-    cdp_1_stearoyl_2_oleoyl_sn_glycerol
+  branch from oleoyl_coa side left {
+    oleoyl_coa
+    <-> . +2_2_dilysocardiolipin +coa
+    2_oleoyl_2_monolysocardiolipin
+  }
+
+  branch from oleoyl_coa side right {
+    oleoyl_coa
+    <-> . +1_acyl_sn_glycero_3_phospho_1_sn_glycerol +coa
+    1_acyl_2_oleoyl_sn_glycero_3_phospho_1_sn_glycer
   }
 }

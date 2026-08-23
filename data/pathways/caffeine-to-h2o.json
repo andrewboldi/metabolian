@@ -1,0 +1,578 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "caffeine-to-h2o",
+  "name": "caffeine to H2O",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from caffeine to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:36271"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:27732"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "caffeine",
+      "name": "caffeine",
+      "formula": "C8H10N4O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27732"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "theobromine",
+      "name": "theobromine",
+      "formula": "C7H8N4O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28946"
+      }
+    },
+    {
+      "id": "formaldehyde",
+      "name": "formaldehyde",
+      "formula": "CH2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16842"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "7_methylxanthine",
+      "name": "7-methylxanthine",
+      "formula": "C6H6N4O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:48991"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "aldehydo_d_ribose",
+      "name": "aldehydo-D-ribose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:47014"
+      }
+    },
+    {
+      "id": "7_methylxanthosine",
+      "name": "7-methylxanthosine",
+      "formula": "C11H15N4O6",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:49310"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_13_178",
+      "name": "methylxanthine N(1)-demethylase",
+      "ec": [
+        "1.14.13.178"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_179",
+      "name": "methylxanthine N(3)-demethylase",
+      "ec": [
+        "1.14.13.179"
+      ]
+    },
+    {
+      "id": "ec_3_2_2_25",
+      "name": "N-methyl nucleosidase",
+      "ec": [
+        "3.2.2.25"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "methylxanthine N(1)-demethylase",
+      "equation": "caffeine + NADPH + O2 + H(+) = theobromine + formaldehyde + NADP(+) + H2O",
+      "ec": "1.14.13.178",
+      "substrates": [
+        {
+          "metabolite": "caffeine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "theobromine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_178"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:36271"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36271"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "methylxanthine N(3)-demethylase",
+      "equation": "theobromine + NADPH + O2 + H(+) = 7-methylxanthine + formaldehyde + NADP(+) + H2O",
+      "ec": "1.14.13.179",
+      "substrates": [
+        {
+          "metabolite": "theobromine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_methylxanthine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_179"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:36287"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36287"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "N-methyl nucleosidase",
+      "ec": "3.2.2.25",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "7_methylxanthine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "aldehydo_d_ribose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_methylxanthosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_2_25"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR176963"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR176963"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_caffeine_1-7-dimethyluric-acid-to-s-adenosyl-l-homocystei",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "caffeine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-7-dimethyluric-acid-to-s-adenosyl-l-homocystei"
+      },
+      "note": "Shares caffeine with 1,7-dimethyluric acid to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:27732"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_caffeine_ubiquinone-0-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "caffeine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ubiquinone-0-to-h2o"
+      },
+      "note": "Shares caffeine with ubiquinone-0 to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:27732"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_theobromine_1-7-dimethyluric-acid-to-formaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "theobromine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-7-dimethyluric-acid-to-formaldehyde"
+      },
+      "note": "Shares theobromine with 1,7-Dimethyluric acid to formaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28946"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_theobromine_1-7-dimethyluric-acid-to-s-adenosyl-l-homocystei",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "theobromine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-7-dimethyluric-acid-to-s-adenosyl-l-homocystei"
+      },
+      "note": "Shares theobromine with 1,7-dimethyluric acid to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28946"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_methylxanthine_1-3-7-trimethyluric-acid-to-formaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_methylxanthine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-3-7-trimethyluric-acid-to-formaldehyde"
+      },
+      "note": "Shares 7-methylxanthine with 1,3,7-Trimethyluric acid to formaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:48991"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_methylxanthine_1-7-dimethyluric-acid-to-formaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_methylxanthine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-7-dimethyluric-acid-to-formaldehyde"
+      },
+      "note": "Shares 7-methylxanthine with 1,7-Dimethyluric acid to formaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:48991"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_methylxanthine_d-arabinitol-to-7-methyluric-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_methylxanthine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-arabinitol-to-7-methyluric-acid"
+      },
+      "note": "Shares 7-methylxanthine with D-arabinitol to 7-Methyluric acid.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:48991"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_methylxanthine_nadh-to-7-methylxanthine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_methylxanthine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-7-methylxanthine"
+      },
+      "note": "Shares 7-methylxanthine with NADH to 7-methylxanthine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:48991"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_methylxanthine_ubiquinol-9-to-formaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_methylxanthine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ubiquinol-9-to-formaldehyde"
+      },
+      "note": "Shares 7-methylxanthine with ubiquinol-9 to formaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:48991"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_methylxanthosine_d-arabinitol-to-7-methyluric-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_methylxanthosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-arabinitol-to-7-methyluric-acid"
+      },
+      "note": "Shares 7-methylxanthosine with D-arabinitol to 7-Methyluric acid.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:49310"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_methylxanthosine_xanthosine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_methylxanthosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "xanthosine-to-h2o"
+      },
+      "note": "Shares 7-methylxanthosine with xanthosine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:49310"
+          }
+        ]
+      }
+    }
+  ]
+}

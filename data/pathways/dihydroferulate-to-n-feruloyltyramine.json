@@ -127,32 +127,39 @@
       }
     },
     {
-      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
-      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
-      "short": "2-trans,6-trans,10-…",
-      "formula": "C20H33O7P2",
-      "charge": -3,
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:58756"
+        "chebi": "CHEBI:57288"
       }
     },
     {
-      "id": "lycopaoctaene",
-      "name": "lycopaoctaene",
-      "formula": "C40H66",
+      "id": "n_acetyltyramine",
+      "name": "N-acetyltyramine",
+      "formula": "C10H13NO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:142538"
+        "chebi": "CHEBI:125610"
       }
     },
     {
-      "id": "1r_2r_3r_prephytoene_diphosphate",
-      "name": "(1R,2R,3R)-prephytoene diphosphate",
-      "short": "(1R,2R,3R)-prephyto…",
-      "formula": "C40H65O7P2",
-      "charge": -3,
+      "id": "hexanoyl_coa",
+      "name": "hexanoyl-CoA",
+      "formula": "C27H42N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:58011"
+        "chebi": "CHEBI:62620"
+      }
+    },
+    {
+      "id": "n_hexanoyltyramine",
+      "name": "N-hexanoyltyramine",
+      "formula": "C14H21NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:166901"
       }
     }
   ],
@@ -320,62 +327,68 @@
     },
     {
       "id": "r4",
-      "name": "2 (2E,6E,10E)-geranylgeranyl diphosphate + NADH + H(+) = all-trans-lycopaoctaene + 2 di...",
-      "equation": "2 (2E,6E,10E)-geranylgeranyl diphosphate + NADH + H(+) = all-trans-lycopaoctaene + 2 diphosphate + NAD(+)",
+      "name": "tyramine + acetyl-CoA = N-acetyltyramine + CoA + H(+)",
+      "equation": "tyramine + acetyl-CoA = N-acetyltyramine + CoA + H(+)",
       "substrates": [
         {
-          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "nadh",
+          "metabolite": "tyraminium",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hplus",
+          "metabolite": "acetyl_coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "lycopaoctaene",
+          "metabolite": "n_acetyltyramine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "ppi",
-          "stoichiometry": 2
+          "metabolite": "coa",
+          "stoichiometry": 1
         },
         {
-          "metabolite": "nad",
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:58936"
+        "rhea": "RHEA:66136"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:58936"
+            "id": "RHEA:66136"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "(1R,2R,3R)-prephytoene diphosphate + NADH + H(+) = all-trans-lycopaoctaene + diphosphat...",
-      "equation": "(1R,2R,3R)-prephytoene diphosphate + NADH + H(+) = all-trans-lycopaoctaene + diphosphate + NAD(+)",
+      "name": "tyramine + hexanoyl-CoA = N-hexanoyltyramine + CoA + H(+)",
+      "equation": "tyramine + hexanoyl-CoA = N-hexanoyltyramine + CoA + H(+)",
       "substrates": [
         {
-          "metabolite": "1r_2r_3r_prephytoene_diphosphate",
+          "metabolite": "tyraminium",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadh",
+          "metabolite": "hexanoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_hexanoyltyramine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
           "stoichiometry": 1
         },
         {
@@ -383,31 +396,283 @@
           "stoichiometry": 1
         }
       ],
-      "products": [
-        {
-          "metabolite": "lycopaoctaene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:58940"
+        "rhea": "RHEA:66160"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:58940"
+            "id": "RHEA:66160"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_trans_ferulate_coniferin-to-e-ferulate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_ferulate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "coniferin-to-e-ferulate"
+      },
+      "note": "Shares trans-ferulate with coniferin to (E)-ferulate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29749"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_ferulate_coniferol-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_ferulate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "coniferol-to-diphosphate"
+      },
+      "note": "Shares trans-ferulate with coniferol to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29749"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_ferulate_n-feruloylglycinate-to-2-e-o-feruloyl-d-galact",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_ferulate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-feruloylglycinate-to-2-e-o-feruloyl-d-galact"
+      },
+      "note": "Shares trans-ferulate with N-feruloylglycinate to 2-(E)-O-feruloyl-D-galact….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29749"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_ferulate_shikimate-to-4-ethyl-2-methoxyphenol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_ferulate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "shikimate-to-4-ethyl-2-methoxyphenol"
+      },
+      "note": "Shares trans-ferulate with shikimate to 4-Ethyl-2-methoxyphenol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29749"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_ferulate_trans-caffeoyl-coa-to-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_ferulate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-caffeoyl-coa-to-acetate"
+      },
+      "note": "Shares trans-ferulate with trans-caffeoyl-CoA to acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29749"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_feruloyl_coa_coniferyl-aldehyde-to-scopolin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_feruloyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "coniferyl-aldehyde-to-scopolin"
+      },
+      "note": "Shares trans-feruloyl-CoA with coniferyl aldehyde to scopolin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87305"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_feruloyl_coa_dihydroferuloyl-coa-to-guaiacol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_feruloyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dihydroferuloyl-coa-to-guaiacol"
+      },
+      "note": "Shares trans-feruloyl-CoA with dihydroferuloyl-CoA to guaiacol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87305"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_feruloyl_coa_l-idarate-to-4-o-feruloyl-d-quinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_feruloyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-idarate-to-4-o-feruloyl-d-quinate"
+      },
+      "note": "Shares trans-feruloyl-CoA with L-idarate to 4-O-feruloyl-D-quinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87305"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_feruloyl_coa_n-aryl-1-2-dipalmitoyl-sn-to-16-feruloyloxypalmi",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_feruloyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-aryl-1-2-dipalmitoyl-sn-to-16-feruloyloxypalmi"
+      },
+      "note": "Shares trans-feruloyl-CoA with N-aryl-1,2-dipalmitoyl-sn… to 16-feruloyloxypalmitate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87305"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_feruloyl_coa_n-feruloylglycinate-to-2-e-o-feruloyl-d-galact",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_feruloyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-feruloylglycinate-to-2-e-o-feruloyl-d-galact"
+      },
+      "note": "Shares trans-feruloyl-CoA with N-feruloylglycinate to 2-(E)-O-feruloyl-D-galact….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87305"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_feruloyl_coa_trans-caffeoyl-coa-to-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_feruloyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-caffeoyl-coa-to-acetate"
+      },
+      "note": "Shares trans-feruloyl-CoA with trans-caffeoyl-CoA to acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87305"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_feruloyl_coa_trans-feruloyl-amp-to-curcumin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_feruloyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-feruloyl-amp-to-curcumin"
+      },
+      "note": "Shares trans-feruloyl-CoA with trans-feruloyl-AMP to curcumin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87305"
           }
         ]
       }

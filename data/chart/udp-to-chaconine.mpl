@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-chaconine "UDP to γ-chaconine" {
-  spacing 176
+  spacing 164
 
   spine at 0,0 {
     udp
@@ -18,27 +18,15 @@ pathway udp-to-chaconine "UDP to γ-chaconine" {
     chaconine
   }
 
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> ec_2_4_1_360 [2.4.1.360] +udp +6c_glucosyl_2_hydroxynaringenin +h
-    2_4_4_6_tetrahydroxydibenzoylmethane
+  branch from udp_d_glucose side left {
+    udp_d_glucose
+    <-> . +mogroside_ii_e +udp +hplus
+    mogroside_iiie
   }
 
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> . +udp +c_glucosyl_2_hydroxyflavanone +h
-    dibenzoylmethane
-  }
-
-  branch from udp_alpha_d_galactose side left {
-    udp_alpha_d_galactose
-    <-> ec_2_4_1_241 [2.4.1.241] +udp +h +1_18_0_2_18_1_digalactosyldiacylglycerol
-    1_18_0_2_18_1_monogalactosyldiacylglycerol
-  }
-
-  branch from udp_alpha_d_galactose side right {
-    udp_alpha_d_galactose
-    <-> ec_2_4_1_241 [2.4.1.241] +udp +h +1_18_0_2_18_2_digalactosyldiacylglycerol
-    1_18_0_2_18_2_monogalactosyldiacylglycerol
+  branch from udp_d_glucose side right {
+    udp_d_glucose
+    <-> . +stromemycin_aglycone +udp +hplus
+    stromemycin
   }
 }

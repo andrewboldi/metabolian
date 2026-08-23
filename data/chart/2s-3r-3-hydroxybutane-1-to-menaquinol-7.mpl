@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2s-3r-3-hydroxybutane-1-to-menaquinol-7 "(2S,3R)-3-hydroxybutane-1… to menaquinol-7" {
-  spacing 200
+  spacing 254
 
   spine at 0,0 {
     2s_3r_3_hydroxybutane_1_2_3_tricarboxylate
@@ -20,38 +20,38 @@ pathway 2s-3r-3-hydroxybutane-1-to-menaquinol-7 "(2S,3R)-3-hydroxybutane-1… to
 
   branch from succinate side left {
     succinate
-    <-> ec_2_8_3_20 [2.8.3.20] +r_malate +succinyl_coa
-    3r_3_carboxy_3_hydroxypropanoyl_coa
+    <-> . +decanoyl_coa +akg +o2 +co2
+    2_hydroxydecanoyl_coa
   }
 
   branch from succinate side right {
     succinate
-    <-> . +l_lysinium +akg +o2 +co2
-    3s_3_hydroxy_l_lysine
+    <-> . +heptadecanoyl_coa +akg +o2 +co2
+    2_hydroxyheptadecanoyl_coa
   }
 
   branch from menaquinol_7 side left {
-    menaquinol_7
-    <-> . +fadh2 +menaquinone_7 +h +fad
-    pmf
-  }
-
-  branch from menaquinol_7 side right {
     menaquinol_7
     <-> . +fadh2 +menaquinone_7 +h
     fad
   }
 
+  branch from menaquinol_7 side right {
+    menaquinol_7
+    <-> . +s_malate +menaquinone_7
+    oxaloacetate
+  }
+
   branch from menaquinone_7 side left {
     menaquinone_7
-    <-> . +s_malate +menaquinol_7
-    oxaloacetate
+    <-> ec_2_1_1_163 [2.1.1.163] +s_adenosyl_l_homocysteine +h +s_adenosyl_l_methionine
+    demethylmenaquinone_7
   }
 
   branch from menaquinone_7 side right {
     menaquinone_7
-    <-> ec_2_1_1_163 [2.1.1.163] +s_adenosyl_l_homocysteine +h +s_adenosyl_l_methionine
-    demethylmenaquinone_7
+    <-> . +menaquinol_7 +o2 +h2o
+    pmf
   }
 
   branch from s_lactate side left {
@@ -62,7 +62,61 @@ pathway 2s-3r-3-hydroxybutane-1-to-menaquinol-7 "(2S,3R)-3-hydroxybutane-1… to
 
   branch from s_lactate side right {
     s_lactate
-    <-> ec_2_8_3_1 [2.8.3.1] +acetyl_coa +s_lactoyl_coa
-    acetate
+    <-> . +r_s_lactoylglutathione +h2o +glutathione
+    h
+  }
+
+  branch from 2s_3r_3_hydroxybutane_1_2_3_tricarboxylate side left {
+    2s_3r_3_hydroxybutane_1_2_3_tricarboxylate
+    <-> ec_4_2_1_99 [4.2.1.99] +h2o
+    z_but_2_ene_1_2_3_tricarboxylate
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> . +icosanoyl_coa +akg +o2 +co2
+    2_hydroxyicosanoyl_coa
+  }
+
+  branch from succinate side left {
+    succinate
+    <-> . +stearoyl_coa +akg +o2 +co2
+    2_hydroxystearoyl_coa
+  }
+
+  branch from menaquinone_7 side right {
+    menaquinone_7
+    <-> . +pmf +menaquinol_7 +o2 +pmf
+    h2o
+  }
+
+  branch from menaquinone_7 side left {
+    menaquinone_7
+    <-> . +menaquinol_7 +dihydroxyacetone_phosphate
+    sn_glycerol_3_phosphate
+  }
+
+  branch from pyruvate side right {
+    pyruvate
+    <-> . +salicin_6_phosphate +phosphoenolpyruvate
+    salicin
+  }
+
+  branch from pyruvate side left {
+    pyruvate
+    <-> . +d_tagatose_1_phosphate +h +phosphoenolpyruvate
+    keto_d_tagatose
+  }
+
+  branch from s_lactate side right {
+    s_lactate
+    <-> ec_1_2_1_5 [1.2.1.5] +h +nadph +r_lactaldehyde +h2o
+    nadp
+  }
+
+  branch from s_lactate side left {
+    s_lactate
+    <-> ec_1_2_1_5 [1.2.1.5] +nadh +h +r_lactaldehyde +h2o
+    nad
   }
 }

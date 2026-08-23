@@ -99,62 +99,6 @@
       "xrefs": {
         "metanetx": "WATER"
       }
-    },
-    {
-      "id": "sm_d18_1_22_0_sphingomyelin",
-      "name": "Sm (D18:1/22:0), Sphingomyelin",
-      "short": "Sm (D18:1/22:0),…",
-      "formula": "C45H92N2O6P",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM1560757"
-      }
-    },
-    {
-      "id": "h",
-      "name": "H",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM1"
-      }
-    },
-    {
-      "id": "adp",
-      "name": "ADP",
-      "formula": "C10H12N5O10P2",
-      "charge": -3,
-      "xrefs": {
-        "metanetx": "MNXM40333"
-      }
-    },
-    {
-      "id": "phosphate",
-      "name": "phosphate",
-      "formula": "HO4P",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM9"
-      }
-    },
-    {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM3"
-      }
-    },
-    {
-      "id": "sm_d18_1_23_0_sphingomyelin",
-      "name": "Sm (D18:1/23:0), Sphingomyelin",
-      "short": "Sm (D18:1/23:0),…",
-      "formula": "C46H94N2O6P",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM1560758"
-      }
     }
   ],
   "enzymes": [],
@@ -290,103 +234,137 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "Reaction MNXR206917",
-      "substrates": [
-        {
-          "metabolite": "sm_d18_1_22_0_sphingomyelin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "sm_d18_1_22_0_sphingomyelin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR206917"
+      "id": "xt_4_nitrobenzaldehyde_4-aminobenzoate-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_nitrobenzaldehyde"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "4-aminobenzoate-to-nad"
+      },
+      "note": "Shares 4-nitrobenzaldehyde with 4-aminobenzoate to NAD.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR206917"
+            "db": "ChEBI",
+            "id": "CHEBI:66926"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "Reaction MNXR206919",
-      "substrates": [
-        {
-          "metabolite": "sm_d18_1_23_0_sphingomyelin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "sm_d18_1_23_0_sphingomyelin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR206919"
+      "id": "xt_4_nitrobenzaldehyde_4-nitrotoluene-to-4-nitrobenzyl-alcohol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_nitrobenzaldehyde"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "4-nitrotoluene-to-4-nitrobenzyl-alcohol"
+      },
+      "note": "Shares 4-nitrobenzaldehyde with 4-nitrotoluene to 4-nitrobenzyl alcohol.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR206919"
+            "db": "ChEBI",
+            "id": "CHEBI:66926"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_nitrobenzoate_4-aminobenzoate-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_nitrobenzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-aminobenzoate-to-nad"
+      },
+      "note": "Shares 4-nitrobenzoate with 4-aminobenzoate to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:142863"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_nitrobenzoate_diphosphate-to-o-pantetheine-4-phospho",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_nitrobenzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-o-pantetheine-4-phospho"
+      },
+      "note": "Shares 4-nitrobenzoate with diphosphate to O-(pantetheine-4'-phospho….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:142863"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_hydroxyamino_benzoate_diphosphate-to-o-pantetheine-4-phospho",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_hydroxyamino_benzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-o-pantetheine-4-phospho"
+      },
+      "note": "Shares 4-(hydroxyamino)benzoate with diphosphate to O-(pantetheine-4'-phospho….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:231457"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_hydroxyamino_benzoate_s-adenosyl-l-homocysteine-to-griseofulvin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_hydroxyamino_benzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-griseofulvin"
+      },
+      "note": "Shares 4-(hydroxyamino)benzoate with S-adenosyl-L-homocysteine to griseofulvin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:231457"
           }
         ]
       }

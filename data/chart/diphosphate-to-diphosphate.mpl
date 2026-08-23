@@ -24,37 +24,43 @@ pathway diphosphate-to-diphosphate "diphosphate to diphosphate" {
 
   branch from ipp side left {
     ipp
-    <-> . +2_cis_6_cis_farnesyl_diphosphate +ppi
-    nerylneryl_diphosphate
-  }
-
-  branch from ipp side right {
-    ipp
     <-> ec_3_6_1_76 [3.6.1.76] +h2o +pi +hplus
     isopentenyl_phosphate
   }
 
+  branch from ipp side right {
+    ipp
+    <-> ec_2_5_1_87 [2.5.1.87] +diphosphate +di_trans_poly_cis_decaprenyl_diphosphate
+    2e_6e_farnesyl_diphosphate
+  }
+
   branch from 2_cis_6_trans_farnesyl_diphosphate side left {
     2_cis_6_trans_farnesyl_diphosphate
-    <-> . +ppi
-    bisabolene
+    <-> ec_2_5_1_86 [2.5.1.86] +diphosphate +trans_octacis_decaprenyl_diphosphate +ipp
+    h
   }
 
-  branch from 2_cis_6_trans_farnesyl_diphosphate side right {
-    2_cis_6_trans_farnesyl_diphosphate
-    <-> . +ppi
-    e_bisabolene
+  branch from diphosphate side right {
+    diphosphate
+    <-> ec_4_2_3_21 [4.2.3.21] +2e_6e_farnesyl_diphosphate
+    vetispiradiene
   }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_2_7_7_68 [2.7.7.68] +2_phosphonato_l_lactate +gtp +hplus
-    l_lactyl_2_diphospho_5_guanosine
+  branch from diphosphate side left {
+    diphosphate
+    <-> ec_2_5_1_32 [2.5.1.32] +all_trans_phytoene
+    1r_2r_3r_prephytoene_diphosphate
   }
 
-  branch from ppi side right {
-    ppi
-    <-> ec_2_7_7_107 [2.7.7.107] +2_aminoethyl_phosphonic_acid +ctp
-    cmp_2_aminoethyl_phosphonate
+  branch from ipp side right {
+    ipp
+    <-> ec_2_5_1_89 [2.5.1.89] +2z_6e_10e_geranylgeranyl_diphosphate +diphosphate
+    tri_trans_poly_cis_undecaprenyl_diphosphate
+  }
+
+  branch from ipp side left {
+    ipp
+    <-> ec_2_5_1_1 [2.5.1.1] +diphosphate
+    2e_geranyl_diphosphate
   }
 }

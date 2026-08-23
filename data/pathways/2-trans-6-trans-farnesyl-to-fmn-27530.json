@@ -173,65 +173,6 @@
       "xrefs": {
         "chebi": "CHEBI:74299"
       }
-    },
-    {
-      "id": "l_dehydroascorbic_acid",
-      "name": "L-dehydroascorbic acid",
-      "short": "L-dehydroascorbic…",
-      "formula": "C6H6O6",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1108062"
-      }
-    },
-    {
-      "id": "7_hydroxy_d4_neuroprostane",
-      "name": "7-hydroxy-D4-neuroprostane",
-      "short": "7-hydroxy-D4-neurop…",
-      "formula": "C22H32O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:174985"
-      }
-    },
-    {
-      "id": "7_hydroperoxy_h4_neuroprostane",
-      "name": "7-hydroperoxy-H4-neuroprostane",
-      "short": "7-hydroperoxy-H4-ne…",
-      "formula": "C22H31O6",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM1560445"
-      }
-    },
-    {
-      "id": "l_ascorbate",
-      "name": "L-ascorbate",
-      "formula": "C6H7O6",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM727871"
-      }
-    },
-    {
-      "id": "10_hydroxy_e4_neuroprostane",
-      "name": "10-hydroxy-E4-neuroprostane",
-      "short": "10-hydroxy-E4-neuro…",
-      "formula": "C22H31O5",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM727333"
-      }
-    },
-    {
-      "id": "10_hydroperoxy_h4_neuroprostane",
-      "name": "10-hydroperoxy-H4-neuroprostane",
-      "short": "10-hydroperoxy-H4-n…",
-      "formula": "C22H31O6",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM1560447"
-      }
     }
   ],
   "enzymes": [
@@ -478,95 +419,247 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "Reaction MNXR206575",
-      "substrates": [
-        {
-          "metabolite": "l_dehydroascorbic_acid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "7_hydroxy_d4_neuroprostane",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "7_hydroperoxy_h4_neuroprostane",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "l_ascorbate",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR206575"
+      "id": "xt_3s_6e_nerolidol_arginyl-glycine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3s_6e_nerolidol"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "arginyl-glycine-to-h2o"
+      },
+      "note": "Shares (3S,6E)-nerolidol with Arginyl-Glycine to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR206575"
+            "db": "ChEBI",
+            "id": "CHEBI:59958"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "Reaction MNXR206578",
-      "substrates": [
-        {
-          "metabolite": "l_dehydroascorbic_acid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "10_hydroxy_e4_neuroprostane",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "10_hydroperoxy_h4_neuroprostane",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_ascorbate",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "metanetx": "MNXR206578"
+      "id": "xt_3s_6e_nerolidol_dimethylsulfoniopropanoyl-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3s_6e_nerolidol"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "dimethylsulfoniopropanoyl-to-h2o"
+      },
+      "note": "Shares (3S,6E)-nerolidol with dimethylsulfoniopropanoyl… to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR206578"
+            "db": "ChEBI",
+            "id": "CHEBI:59958"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3s_6e_nerolidol_farnesol-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3s_6e_nerolidol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "farnesol-to-o2"
+      },
+      "note": "Shares (3S,6E)-nerolidol with farnesol to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:59958"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3s_6e_nerolidol_n-3-aminopropyl-hydroxyl-to-h2o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3s_6e_nerolidol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-3-aminopropyl-hydroxyl-to-h2o2"
+      },
+      "note": "Shares (3S,6E)-nerolidol with N-(3-aminopropyl)hydroxyl… to H2O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:59958"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3s_6e_nerolidol_s-adenosyl-l-homocysteine-to-griseofulvin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3s_6e_nerolidol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-griseofulvin"
+      },
+      "note": "Shares (3S,6E)-nerolidol with S-adenosyl-L-homocysteine to griseofulvin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:59958"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_4_8_dimethyl_1_3_7_nonatriene_3-s-hydroxy-tetracosa-12-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_4_8_dimethyl_1_3_7_nonatriene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-s-hydroxy-tetracosa-12-to-h2o"
+      },
+      "note": "Shares (E)-4,8-dimethyl-1,3,7-nonatriene with 3(S)-hydroxy-tetracosa-12… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60158"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_4_8_dimethyl_1_3_7_nonatriene_s-adenosyl-l-homocysteine-to-griseofulvin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_4_8_dimethyl_1_3_7_nonatriene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-griseofulvin"
+      },
+      "note": "Shares (E)-4,8-dimethyl-1,3,7-nonatriene with S-adenosyl-L-homocysteine to griseofulvin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60158"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_buten_2_one_3-s-hydroxy-tetracosa-12-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "buten_2_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-s-hydroxy-tetracosa-12-to-h2o"
+      },
+      "note": "Shares buten-2-one with 3(S)-hydroxy-tetracosa-12… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:48058"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_buten_2_one_h-to-2s-3e-2-hydroxypent-3-e",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "buten_2_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-2s-3e-2-hydroxypent-3-e"
+      },
+      "note": "Shares buten-2-one with H to (2S,3E)-2-hydroxypent-3-e….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:48058"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_buten_2_one_s-adenosyl-l-homocysteine-to-griseofulvin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "buten_2_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-griseofulvin"
+      },
+      "note": "Shares buten-2-one with S-adenosyl-L-homocysteine to griseofulvin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:48058"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_geranyllinalool_l-arogenate-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "geranyllinalool"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-arogenate-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares geranyllinalool with L-arogenate to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74299"
           }
         ]
       }

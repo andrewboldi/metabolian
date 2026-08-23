@@ -8,9 +8,9 @@ pathway udp-to-h "UDP to H" {
 
   spine at 0,0 {
     udp
-    <-> ec_2_4_1_197 [2.4.1.197] +o_mannopyranosyl_alpha_1_3_o_mannopyranosyl_alph +h -o_mannopyranosyl_alpha_1_3_o_mannopyranosyl_alph
+    <-> ec_2_4_1_227 [2.4.1.227] +und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_gl +h -und_pp_murnac_l_ala_gamma_d_glu_l_lys_d_ala
     udp_n_acetyl_alpha_d_glucosamine
-    <-> ec_2_7_8_15 [2.7.8.15] +c80_dolichol_phosphate -n_acetyl_alpha_d_glucosaminyl_diphosphodolichol
+    <-> . +undecaprenyl_phosphate -undecaprenyl_diphospho_n_acetyl_glucosamine -h
     ump
     <-> ec_2_7_8_31 [2.7.8.31] +alpha_d_glc_pp_und -ditrans_polycis_undecaprenyl_phosphate
     udp_alpha_d_glucose
@@ -20,49 +20,97 @@ pathway udp-to-h "UDP to H" {
 
   branch from udp_n_acetyl_alpha_d_glucosamine side left {
     udp_n_acetyl_alpha_d_glucosamine
-    <-> ec_2_4_1_39 [2.4.1.39] +udp +h +17_alpha_n_acetyl_alpha_d_glucosaminyl_estradiol
-    estradiol_17_alpha_3_d_glucuronoside
+    <-> . +udp +alpha_d_glcnac_1_4_beta_d_gal_1_3_galnac_pp_und +h
+    beta_d_gal_1_3_alpha_d_galnac_pp_und
   }
 
   branch from udp_n_acetyl_alpha_d_glucosamine side right {
     udp_n_acetyl_alpha_d_glucosamine
-    <-> ec_2_4_1_255 [2.4.1.255] +udp +h +o_n_acetyl_d_glucosaminyl_l_threonine
-    l_threonine
-  }
-
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> . +udp +tuberonic_acid_glucoside
-    12_hydroxyjasmonate
-  }
-
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> . +udp +quercetin_4_o_d_glucopyranoside +h
-    quercetin
-  }
-
-  branch from udp side left {
-    udp
-    <-> ec_2_4_1_17 [2.4.1.17] +thyroxine_glucuronide +l_thyroxine
-    udp_alpha_d_glucuronate
-  }
-
-  branch from udp side right {
-    udp
-    <-> . +4_o_acetyl_udp_n_acetylglucosamine +h2o +h
-    4_o_acetyl_n_acetylmannosamine
+    <-> . +udp +beta_d_glcnac_1_3_beta_l_rha_1_4_alpha_d_glcnac +h
+    beta_l_rha_1_4_alpha_d_glcnac_pp_und
   }
 
   branch from h side left {
     h
-    <-> ec_1_5_3_12 [1.5.3.12] +dihydrochelerythrine +o2 +h2o2
-    chelerythrine
+    <-> ec_1_13_11_2 [1.13.11.2] +2e_4z_2_hydroxy_6_oxohexa_2_4_dienoate +o2
+    catechol
   }
 
   branch from h side right {
     h
-    <-> . +2r_3r_4s_5s_1_3_4_5_tetrahydroxy_6_oxohexan_2_a
-    nojirimycin_b
+    <-> ec_1_1_99_1 [1.1.99.1] +fadh2 +betaine_aldehyde +choline
+    fad
+  }
+
+  branch from udp_alpha_d_glucose side left {
+    udp_alpha_d_glucose
+    <-> . +udp +wogonin_7_o_glucoside
+    wogonin
+  }
+
+  branch from udp_alpha_d_glucose side right {
+    udp_alpha_d_glucose
+    <-> . +udp +n_methylanthraniloyl_beta_d_glucopyranose
+    n_methylanthranilate
+  }
+
+  branch from udp side left {
+    udp
+    <-> . +calycosin_7_o_d_glucoside +udp_alpha_d_glucose
+    calycosin
+  }
+
+  branch from udp side right {
+    udp
+    <-> . +quercetin_3_5_o_diglucoside +udp_alpha_d_glucose
+    quercetin_3_o_d_glucopyranoside
+  }
+
+  branch from udp side left {
+    udp
+    <-> . +kaempferol_3_o_rhamnoside_7_o_glucoside +udp_alpha_d_glucose
+    afzelin
+  }
+
+  branch from udp side right {
+    udp
+    <-> . +quercetin_3_o_rhamnoside_7_o_glucoside +udp_alpha_d_glucose
+    quercetin_3_o_rhamnoside
+  }
+
+  branch from h side left {
+    h
+    <-> ec_4_1_2_21 [4.1.2.21] +glyceraldehyde_3_phosphate +pyruvate
+    2_dehydro_3_deoxy_6_phospho_d_galactonate
+  }
+
+  branch from h side right {
+    h
+    <-> ec_4_99_1_3 [4.99.1.3] +dihydrosirohydrochlorin +co
+    cobalt_dihydrosirohydrochlorin
+  }
+
+  branch from udp_n_acetyl_alpha_d_glucosamine side left {
+    udp_n_acetyl_alpha_d_glucosamine
+    <-> ec_2_4_1_227 [2.4.1.227] +udp +glcnac_1_4_mur2ac_oyl_l_ala_gamma_d_glu_l_lys_d +h
+    murac_oyl_l_ala_d_gamma_glu_l_lys_d_ala_d_ala_di
+  }
+
+  branch from udp_n_acetyl_alpha_d_glucosamine side right {
+    udp_n_acetyl_alpha_d_glucosamine
+    <-> ec_2_4_1_227 [2.4.1.227] +udp +undecaprenyl_diphospho_n_acetylmuramoyl_n_acetyl +h
+    undecaprenyl_diphospho_n_acetylmuramoyl_l_alanyl
+  }
+
+  branch from udp_alpha_d_glucose side left {
+    udp_alpha_d_glucose
+    <-> . +udp +quercetin_3_o_d_glucopyranoside
+    quercetin_3_7_di_o_d_glucoside
+  }
+
+  branch from udp_alpha_d_glucose side right {
+    udp_alpha_d_glucose
+    <-> . +udp +gypsogenate_28_beta_d_glucoside
+    gypsogenate
   }
 }

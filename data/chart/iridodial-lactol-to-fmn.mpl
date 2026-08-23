@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway iridodial-lactol-to-fmn "(+)-iridodial lactol to FMN" {
-  spacing 164
+  spacing 298
 
   spine at 0,0 {
     iridodial_lactol
@@ -14,17 +14,101 @@ pathway iridodial-lactol-to-fmn "(+)-iridodial lactol to FMN" {
     7_deoxyloganetic_aldehyde
     <-> . +fmnh2 +o2 -fmn -h2o -hplus
     7_deoxyloganetate
+    <-> . +s_adenosyl_l_methionine -7_deoxyloganetin
+    s_adenosyl_l_homocysteine
+    <-> ec_2_4_1_324 [2.4.1.324] +7_deoxyloganetin +udp_d_glucose -udp -hplus
+    7_deoxyloganin
+    <-> ec_1_14_14_85 [1.14.14.85] +fmnh2 +o2 -fmn -h2o -hplus
+    loganin
   }
 
   branch from fmn side left {
     fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    5_6_eet
+    <-> . +6_hydroxy_28_norteasterone +fmnh2 +o2 +h2o +hplus
+    28_norteasterone
   }
 
   branch from fmn side right {
     fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    17_hete
+    <-> . +3_dehydro_6_hydroxy_28_norteasterone +fmnh2 +o2 +h2o +hplus
+    6_dehydro_28_norteasterone
+  }
+
+  branch from s_adenosyl_l_homocysteine side left {
+    s_adenosyl_l_homocysteine
+    <-> . +dtdp_3_o_methyl_4_oxo_2_6_dideoxy_l_mannose +h +s_adenosyl_l_methionine
+    dtdp_4_oxo_2_6_dideoxy_l_mannose
+  }
+
+  branch from s_adenosyl_l_homocysteine side right {
+    s_adenosyl_l_homocysteine
+    <-> . +3_6_dimethylsalicylyl_coa +h +s_adenosyl_l_methionine
+    6_methylsalicylyl_coa
+  }
+
+  branch from 7_deoxyloganetin side left {
+    7_deoxyloganetin
+    <-> . +h +o2 +nadph +nadp +h2o
+    loganetin
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> . +6_deoxo_28_nortyphasterol +o2 +fmn +h2o +hplus
+    28_nortyphasterol
+  }
+
+  branch from fmnh2 side left {
+    fmnh2
+    <-> . +6_deoxo_28_nortyphasterol +o2 +fmn +h2o +hplus
+    6_hydroxy_28_nortyphasterol
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +6_deoxo_28_norcastasterone +fmnh2 +o2 +h2o +hplus
+    28_norcastasterone
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> . +6_deoxo_28_norcastasterone +fmnh2 +o2 +h2o +hplus
+    6_hydroxy_28_norcastasterone
+  }
+
+  branch from s_adenosyl_l_methionine side right {
+    s_adenosyl_l_methionine
+    <-> . +s_adenosyl_l_homocysteine +dtdp_4_methylamino_2_4_dideoxy_beta_l_xylose +h
+    dtdp_4_amino_2_4_dideoxy_beta_l_xylose
+  }
+
+  branch from s_adenosyl_l_methionine side left {
+    s_adenosyl_l_methionine
+    <-> ec_2_1_1_46 [2.1.1.46] +s_adenosyl_l_homocysteine +h +4_methoxyisoflavone
+    4_hydroxyisoflavone
+  }
+
+  branch from s_adenosyl_l_homocysteine side right {
+    s_adenosyl_l_homocysteine
+    <-> . +nadp +coa +amp +yersiniabactin +h2o +s_adenosyl_l_methionine +h +l_cysteine +nadph +2_hydroxybenzoyl_5_amp
+    malonyl_coa
+  }
+
+  branch from s_adenosyl_l_homocysteine side left {
+    s_adenosyl_l_homocysteine
+    <-> . +n1_n5_n10_tris_e_feruloyl_spermidine +h +s_adenosyl_l_methionine
+    n1_n5_n10_tris_e_caffeoyl_spermidine
+  }
+
+  branch from udp_d_glucose side right {
+    udp_d_glucose
+    <-> . +coniferyl_aldehyde +udp +hplus
+    coniferaldehyde_d_glucoside
+  }
+
+  branch from udp_d_glucose side left {
+    udp_d_glucose
+    <-> . +e_sinapaldehyde +udp +hplus
+    e_sinapaldehyde_4_o_d_glucopyranoside
   }
 }

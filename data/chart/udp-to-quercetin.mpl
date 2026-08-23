@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-quercetin "UDP to quercetin" {
-  spacing 242
+  spacing 296
 
   spine at 0,0 {
     udp
@@ -18,33 +18,87 @@ pathway udp-to-quercetin "UDP to quercetin" {
     udp_alpha_d_glucose
   }
 
-  branch from quercetin_3_o_rhamnoside side left {
-    quercetin_3_o_rhamnoside
-    <-> . +udp +udp_alpha_d_glucose
-    quercetin_3_o_rhamnoside_7_o_glucoside
+  branch from h2o side left {
+    h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    gentamicin_a2e
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_22 [3.2.1.22] +alpha_d_galactose +h +2_nitrophenol
-    o_nitrophenyl_alpha_d_galactoside
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_1_4_1 [3.1.4.1] +gmp +adenosine +h
-    5_apg_3
-  }
-
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> . +udp +glc_galnac_p_gro_p_mannac_glcnac_pp_undecaprenol +h
-    galnac_p_gro_p_mannac_glcnac_pp_undecaprenol
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +gentamycin_c2_5 +phosphate +gentamycin_c2_5
+    atp
   }
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +glc_galnac_p_glc_galnac_p_gro_p_mannac_glcnac_pp +h
-    galnac_p_glc_galnac_p_gro_p_mannac_glcnac_pp_und
+    <-> ec_2_4_1_238 [2.4.1.238] +udp +albireodelphin +h
+    delphinidin_3_glucoside_5_caffoyl_glucoside
+  }
+
+  branch from udp_alpha_d_glucose side right {
+    udp_alpha_d_glucose
+    <-> . +udp +oleanolate_3_beta_d_glucuronoside_3_1_galactosid
+    oleanolate_3_beta_d_glucuronoside_3_1_galactosid
+  }
+
+  branch from udp side left {
+    udp
+    <-> . +udp_alpha_d_glucose +oleanolate_3_beta_d_glucuronoside_3_1_galactosid
+    oleanolate_3_beta_d_glucuronoside_3_1_galactosid
+  }
+
+  branch from udp side right {
+    udp
+    <-> . +h +udp_alpha_d_glucose +oleanolate_3_beta_d_glucuronoside_3_1_galactosid
+    oleanolate_3_beta_d_glucuronoside_3_1_galactosid
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    gentamicin_c1
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    gentamicin_x2_cation
+  }
+
+  branch from beta_d_glucose side left {
+    beta_d_glucose
+    <-> . +alpha_lactose +h2o
+    aldehydo_d_galactose
+  }
+
+  branch from beta_d_glucose side right {
+    beta_d_glucose
+    <-> ec_3_2_1_22 [3.2.1.22] +melibiose +h2o
+    beta_d_galactose
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    antibiotic_ji_20a
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    gentamicin_c1a
+  }
+
+  branch from udp_alpha_d_glucose side left {
+    udp_alpha_d_glucose
+    <-> ec_2_4_1_173 [2.4.1.173] +udp +digitoxigenin_3beta_yl_beta_d_glucoside +h
+    digitoxigenin
+  }
+
+  branch from udp_alpha_d_glucose side right {
+    udp_alpha_d_glucose
+    <-> . +udp +h +digitoxigenin
+    3_o_beta_d_glucoside_digitoxigenin
   }
 }

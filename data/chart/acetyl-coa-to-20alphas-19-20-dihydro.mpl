@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway acetyl-coa-to-20alphas-19-20-dihydro "acetyl-CoA to (20alphaS)-19,20--dihydro…" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     acetyl_coa
@@ -14,5 +14,17 @@ pathway acetyl-coa-to-20alphas-19-20-dihydro "acetyl-CoA to (20alphaS)-19,20--di
     nadp
     <-> . +h +vomilenine +nadph -nadp
     20alphas_19_20_dihydrovomilenine
+  }
+
+  branch from 16_epivellosimine side left {
+    16_epivellosimine
+    <-> .
+    vellosimine
+  }
+
+  branch from 16_epivellosimine side right {
+    16_epivellosimine
+    <-> .
+    vellosimine
   }
 }

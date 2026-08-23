@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2s-2-amino-3-3z-indo-to-nad "(2S)-2-amino-3-[(3Z)-indo… to NAD" {
-  spacing 224
+  spacing 152
 
   spine at 0,0 {
     2s_2_amino_3_3z_indol_3_ylidene_propanoate
@@ -14,77 +14,5 @@ pathway 2s-2-amino-3-3z-indo-to-nad "(2S)-2-amino-3-[(3Z)-indo… to NAD" {
     co2
     <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +2r_2_hydroxy_2_indol_3_yl_acetaldehyde -nad
     indol_3_yl_glycol
-  }
-
-  branch from co2 side left {
-    co2
-    <-> ec_4_1_1_42 [4.1.1.42] +s_carnitine +h
-    2_methylcholine
-  }
-
-  branch from co2 side right {
-    co2
-    <-> ec_3_5_1_6 [3.5.1.6] +3_ureidoisobutyric_acid +h +h2o +nh4
-    s_3_amino_2_methylpropanoate
-  }
-
-  branch from 2r_2_hydroxy_2_indol_3_yl_acetaldehyde side left {
-    2r_2_hydroxy_2_indol_3_yl_acetaldehyde
-    <-> ec_1_13_99_3 [1.13.99.3] +h2o2 +o2 +h2o
-    indole_3_acetaldehyde
-  }
-
-  branch from 2r_2_hydroxy_2_indol_3_yl_acetaldehyde side right {
-    2r_2_hydroxy_2_indol_3_yl_acetaldehyde
-    <-> ec_1_13_99_3 [1.13.99.3] +co2 +nh4 +h2o2 +h +o2 +h2o
-    l_tryptophan
-  }
-
-  branch from nh4 side left {
-    nh4
-    <-> ec_3_5_4_11 [3.5.4.11] +biolumazine +h +h2o
-    d_erythro_7_8_dihydrobiopterin
-  }
-
-  branch from nh4 side right {
-    nh4
-    <-> ec_3_5_3_15 [3.5.3.15] +h +benzoyl_l_arginine_amide +h2o
-    benzoyl_l_citrulline_amide
-  }
-
-  branch from h2o2 side left {
-    h2o2
-    <-> ec_1_11_1_16 [1.11.1.16] +2_methoxy_1_4_benzoquinone +h2o
-    2_methoxyhydroquinone
-  }
-
-  branch from h2o2 side right {
-    h2o2
-    <-> ec_1_11_1_16 [1.11.1.16] +2_6_dimethoxybenzoquinone +h2o
-    1_4_dihydroxy_2_6_dimethoxybenzene
-  }
-
-  branch from indol_3_yl_glycol side left {
-    indol_3_yl_glycol
-    <-> ec_1_13_99_3 [1.13.99.3] +o2 +h2o +h2o2
-    indole_3_ethanol
-  }
-
-  branch from indol_3_yl_glycol side right {
-    indol_3_yl_glycol
-    <-> . +h2o
-    2_indol_3_ylidene_ethanol
-  }
-
-  branch from nad side left {
-    nad
-    <-> . +nadh +h +cdp_4_dehydro_3_6_dideoxy_d_glucose
-    cdp_d_abequose
-  }
-
-  branch from nad side right {
-    nad
-    <-> . +nadh +acetyl_coa +co2 +coa
-    pyruvate
   }
 }

@@ -8,7 +8,7 @@ pathway iminoaspartate-to-h2o2 "Iminoaspartate to H2O2" {
 
   spine at 0,0 {
     iminoaspartate
-    <-> . +h +h2o -nh4
+    <-> . +h2o -nh4
     oxaloacetate
     <-> ec_1_1_5_4 [1.1.5.4] +ubiquinol_9 -ubiquinone_9
     s_malate

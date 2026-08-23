@@ -1,0 +1,367 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "cannabidiol-to-9-tetrahydrocannabinol",
+  "name": "cannabidiol to Δ9-tetrahydrocannabinol",
+  "category": "redox-detox",
+  "summary": "A 4-step route from cannabidiol to Δ9-tetrahydrocannabinol, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR197095"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "cannabidiol",
+      "name": "cannabidiol",
+      "formula": "C21H30O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1370928"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "cannabidiolate",
+      "name": "cannabidiolate",
+      "formula": "C22H29O4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM45385"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "H2O2",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM732620"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "cannabinerolate",
+      "name": "cannabinerolate",
+      "formula": "C22H31O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:66961"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "9_tetrahydrocannabinolate",
+      "name": "Δ9-tetrahydrocannabinolate",
+      "short": "Δ9-tetrahydrocannab…",
+      "formula": "C22H29O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:66963"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "9_tetrahydrocannabinol",
+      "name": "Δ9-tetrahydrocannabinol",
+      "short": "Δ9-tetrahydrocannab…",
+      "formula": "C21H30O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:66964"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_21_3_8",
+      "name": "cannabidiolic acid synthase",
+      "ec": [
+        "1.21.3.8"
+      ]
+    },
+    {
+      "id": "ec_1_21_3_7",
+      "name": "tetrahydrocannabinolic acid synthase",
+      "ec": [
+        "1.21.3.7"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR197095",
+      "substrates": [
+        {
+          "metabolite": "cannabidiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cannabidiolate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR197095"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197095"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "cannabidiolic acid synthase",
+      "ec": "1.21.3.8",
+      "substrates": [
+        {
+          "metabolite": "cannabidiolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cannabinerolate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_21_3_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR122066"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR122066"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "tetrahydrocannabinolic acid synthase",
+      "equation": "cannabinerolate + O2 = Delta(9)-tetrahydrocannabinolate + H2O2",
+      "ec": "1.21.3.7",
+      "substrates": [
+        {
+          "metabolite": "cannabinerolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "9_tetrahydrocannabinolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_21_3_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:34143"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34143"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Delta(9)-tetrahydrocannabinolate + H(+) = Delta(9)-tetrahydrocannabinol + CO2",
+      "equation": "Delta(9)-tetrahydrocannabinolate + H(+) = Delta(9)-tetrahydrocannabinol + CO2",
+      "substrates": [
+        {
+          "metabolite": "9_tetrahydrocannabinolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "9_tetrahydrocannabinol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:34139"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34139"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_cannabinerolate_malonyl-coa-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cannabinerolate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "malonyl-coa-to-hydrogen-donor"
+      },
+      "note": "Shares cannabinerolate with malonyl-CoA to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:66961"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_9_tetrahydrocannabinolate_olivetolate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9_tetrahydrocannabinolate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "olivetolate-to-h2o"
+      },
+      "note": "Shares Δ9-tetrahydrocannabinolate with olivetolate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:66963"
+          }
+        ]
+      }
+    }
+  ]
+}

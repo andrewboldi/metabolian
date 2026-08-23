@@ -24,63 +24,63 @@ pathway 1-palmitoyl-2-azelaoyl-sn-to-fatty-acid-anion "1-palmitoyl-2-azelaoyl-sn
     diglyceride
   }
 
-  branch from palmitate side left {
-    palmitate
-    <-> . +n_palmitoyl_l_phenylalanine +h2o
-    l_phenylalanine
-  }
-
-  branch from palmitate side right {
-    palmitate
-    <-> . +1_palmitoyl_2_oleoyl_sn_glycero_3_phospho_1_sn_g +h2o +hplus
-    2_oleoyl_sn_glycero_3_phospho_1_sn_glycerol
-  }
-
   branch from n_hexadecanoylsphinganine side left {
-    n_hexadecanoylsphinganine
-    <-> . +sphinganine +coa +hplus
-    palmitoyl_coa
-  }
-
-  branch from n_hexadecanoylsphinganine side right {
     n_hexadecanoylsphinganine
     <-> . +d_galactosyl_1_1_n_hexadecanoylsphinganine +h2o
     d_galactose
   }
 
-  branch from 1_acyl_sn_glycero_3_phosphoethanolamine side left {
-    1_acyl_sn_glycero_3_phosphoethanolamine
-    <-> . +palmitoyl_coa +coa
-    1_acyl_2_palmitoyl_sn_glycero_3_phosphoethanolam
-  }
-
-  branch from 1_acyl_sn_glycero_3_phosphoethanolamine side right {
-    1_acyl_sn_glycero_3_phosphoethanolamine
-    <-> . +stearoyl_coa +coa
-    1_acyl_2_stearoyl_sn_glycero_3_phosphoethanolami
-  }
-
-  branch from fatty-acid side left {
-    fatty-acid
-    <-> . +1_2_diacyl_3_d_galactosyl_sn_glycerol +h2o +hplus
-    2_o_acyl_3_o_d_galactosyl_sn_glycerol
-  }
-
-  branch from fatty-acid side right {
-    fatty-acid
-    <-> . +1_2_diacyl_3_d_galactosyl_sn_glycerol +h2o +hplus
-    1_acyl_3_o_d_galactosyl_sn_glycerol
+  branch from n_hexadecanoylsphinganine side right {
+    n_hexadecanoylsphinganine
+    <-> ec_3_2_1_45 [3.2.1.45] +d_galactopyranose +h2o
+    d_glucosyl_1_1_n_hexadecanoylsphinganine
   }
 
   branch from diglyceride side left {
     diglyceride
-    <-> . +n_hydroxydotriacontanoyl_sphingosine +linoleoyl_containing_1_2_3_triacyl_sn_glycerol
-    n_linoleoyloxydotricontanoyl_sphingosine
+    <-> . +n_hydroxytetratriacontenoyl_sphingosine +linoleoyl_containing_1_2_3_triacyl_sn_glycerol
+    n_linoleoyloxy_tetratriacontenoyl_sphingosine
   }
 
   branch from diglyceride side right {
     diglyceride
-    <-> . +n_hydroxydotriacontenoyl_sphingosine +linoleoyl_containing_1_2_3_triacyl_sn_glycerol
-    n_linoleoyloxy_dotriacontenoyl_sphingosine
+    <-> . +n_hydroxytetratriacontadienoyl_sphingosine +linoleoyl_containing_1_2_3_triacyl_sn_glycerol
+    n_linoleoyloxy_tetratriacontadienoyl_sphingosine
+  }
+
+  branch from sphinganine side left {
+    sphinganine
+    <-> . +2_hydroxytetracosenoyl_coa +coa +hplus
+    n_2_hydroxytetracosenoyl_sphinganine
+  }
+
+  branch from sphinganine side right {
+    sphinganine
+    <-> . +2_hydroxy_fatty_acyl_coa +coa +hplus
+    n_2_hydroxyacyl_sphinganine
+  }
+
+  branch from n_hexadecanoylsphinganine side left {
+    n_hexadecanoylsphinganine
+    <-> ec_3_2_1_46 [3.2.1.46] +d_galactopyranose +h2o
+    d_galactosyl_1_1_n_hexadecanoylsphinganine
+  }
+
+  branch from 1_monoglyceride side right {
+    1_monoglyceride
+    <-> . +palmitoyl_coa +coa
+    palmitoylacylglycerol
+  }
+
+  branch from diglyceride side left {
+    diglyceride
+    <-> . +n_hydroxyhexatriacontenoyl_sphingosine +linoleoyl_containing_1_2_3_triacyl_sn_glycerol
+    n_linoleoyloxy_hexatriacontenoyl_sphingosine
+  }
+
+  branch from diglyceride side right {
+    diglyceride
+    <-> . +n_hydroxyhexatriacontadienoyl_sphingosine +linoleoyl_containing_1_2_3_triacyl_sn_glycerol
+    n_linoleoyloxy_hexatriacontadienoyl_sphingosine
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-haloalkane-to-carboxylic-acid-anion "1-haloalkane to carboxylic acid anion" {
-  spacing 212
+  spacing 194
 
   spine at 0,0 {
     1_haloalkane
@@ -16,27 +16,9 @@ pathway 1-haloalkane-to-carboxylic-acid-anion "1-haloalkane to carboxylic acid a
     carboxylic_acid_anion
   }
 
-  branch from aldehyde side left {
-    aldehyde
-    <-> ec_1_4_3_4 [1.4.3.4] +secondary_aliphatic_ammonium_ion +o2 +h2o +h2o2
-    primary_ammonium_ion
-  }
-
-  branch from aldehyde side right {
-    aldehyde
-    <-> ec_4_1_2_47 [4.1.2.47] +monosubstituted_aliphatic_s_cyanohydrin
-    hydrogen_cyanide
-  }
-
   branch from carboxylic_acid_anion side left {
     carboxylic_acid_anion
-    <-> . +1_2_diacyl_sn_glycero_3_phosphoethanolamine +h2o +hplus
-    2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate
-  }
-
-  branch from carboxylic_acid_anion side right {
-    carboxylic_acid_anion
-    <-> . +3_sn_phosphatidyl_l_serine +h2o +hplus
-    sn_glycero_3_phosphoserine
+    <-> . +h2o +coa +hplus
+    acyl_coa
   }
 }

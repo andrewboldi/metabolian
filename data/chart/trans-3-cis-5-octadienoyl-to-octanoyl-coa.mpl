@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway trans-3-cis-5-octadienoyl-to-octanoyl-coa "trans-3-cis-5-octadienoyl… to octanoyl-CoA" {
-  spacing 170
+  spacing 182
 
   spine at 0,0 {
     trans_3_cis_5_octadienoyl_coa
@@ -18,21 +18,33 @@ pathway trans-3-cis-5-octadienoyl-to-octanoyl-coa "trans-3-cis-5-octadienoyl… 
     octanoyl_coa
   }
 
-  branch from trans_oct_2_enoyl_coa side left {
-    trans_oct_2_enoyl_coa
-    <-> . +h2o
-    3_hydroxyoctanoyl_coa
-  }
-
-  branch from octanoyl_coa side right {
+  branch from octanoyl_coa side left {
     octanoyl_coa
     <-> ec_2_3_1_137 [2.3.1.137] +carnitine +coa
     o_octanoyl_l_carnitine
   }
 
-  branch from octanoyl_coa side left {
+  branch from octanoyl_coa side right {
     octanoyl_coa
     <-> . +acetyl_coa +coa
     3_oxodecanoyl_coa
+  }
+
+  branch from trans_3_cis_5_octadienoyl_coa side left {
+    trans_3_cis_5_octadienoyl_coa
+    <-> .
+    2e_5z_octadienoyl_coa
+  }
+
+  branch from octanoyl_coa side right {
+    octanoyl_coa
+    <-> . +1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine +coa
+    1_z_alk_1_enyl_2_octanoyl_sn_glycero_3_phosphoet
+  }
+
+  branch from octanoyl_coa side left {
+    octanoyl_coa
+    <-> . +1_acyl_sn_glycero_3_phosphoethanolamine +coa
+    1_acyl_2_octanoyl_sn_glycero_3_phosphoethanolami
   }
 }

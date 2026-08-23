@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 17-estradiol-to-adenosine-3-5-bismonoph "17β-estradiol to adenosine 3',5'-bismonoph…" {
-  spacing 170
+  spacing 164
 
   spine at 0,0 {
     17_estradiol
@@ -16,21 +16,15 @@ pathway 17-estradiol-to-adenosine-3-5-bismonoph "17β-estradiol to adenosine 3',
     estriol_3_o_3_sulfo_d_glucuronide
   }
 
-  branch from estriol side left {
-    estriol
-    <-> . +udp_d_glucuronate +udp +hplus
-    estriol_16_o_d_glucuronide
+  branch from udp_d_glucuronate side left {
+    udp_d_glucuronate
+    <-> . +prunetin_5_olate +udp +hplus
+    prunetin_c8_d_glucuronide
   }
 
-  branch from adenosine_3_5_bismonophosphate side right {
-    adenosine_3_5_bismonophosphate
-    <-> . +6z_octenoyl_coa +h2o +hplus
-    s_6z_octenoyl_4_phosphopantetheine
-  }
-
-  branch from adenosine_3_5_bismonophosphate side left {
-    adenosine_3_5_bismonophosphate
-    <-> . +linolenoyl_coa +h2o +hplus
-    s_9z_12z_15z_octadecatrienoyl_4_phosphopantethei
+  branch from udp_d_glucuronate side right {
+    udp_d_glucuronate
+    <-> . +losartan +udp
+    losartan_1_n_d_glucuronide
   }
 }

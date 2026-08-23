@@ -16,15 +16,15 @@ pathway 1-1-2-trioleoyl-2-palmi-to-oleate "1,1',2-trioleoyl-2'-palmi… to oleat
     trioleoyl_2_monolysocardiolipin
   }
 
-  branch from trioleoyl_2_monolysocardiolipin side left {
-    trioleoyl_2_monolysocardiolipin
-    <-> . +1_1_2_trioleoyl_2_linoleoyl_cardiolipin +1_linoleoyl_sn_glycero_3_phosphocholine
-    1_2_di_9z_12z_octadecadienoyl_sn_glycero_3_phosp
+  branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side left {
+    1_hexadecanoyl_sn_glycero_3_phosphocholine
+    <-> . +1_hexadecanoyl_2_5z_8z_11z_14z_17z_icosapentaeno +cholesterol
+    cholesteryl_5z_8z_11z_14z_17z_eicosapentaenoate
   }
 
-  branch from 1_2_dihexadecanoyl_sn_glycero_3_phosphocholine side right {
-    1_2_dihexadecanoyl_sn_glycero_3_phosphocholine
-    <-> . +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +1_hexadecanoyl_sn_glycero_3_phosphocholine
-    2_linoleoyl_sn_glycero_3_phosphocholine
+  branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side right {
+    1_hexadecanoyl_sn_glycero_3_phosphocholine
+    <-> . +1_hexadecanoyl_2_11z_14z_17z_icosatrienoyl_sn_gl +cholesterol
+    cholesteryl_11z_14z_17z_icosatrienoate
   }
 }

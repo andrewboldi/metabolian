@@ -18,7 +18,7 @@ pathway l-arabinopyranose-to-l-arabinose-1-phosphate "β-L-arabinopyranose to β
 
   branch from l_arabinopyranose side left {
     l_arabinopyranose
-    <-> ec_1_1_1_21 [1.1.1.21] +nad +nadh +hplus
+    <-> ec_1_1_1_21 [1.1.1.21] +nadp +nadph +hplus
     l_arabinitol
   }
 

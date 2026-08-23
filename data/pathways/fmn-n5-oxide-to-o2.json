@@ -1,0 +1,581 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "fmn-n5-oxide-to-o2",
+  "name": "FMN-N5-oxide to O2",
+  "category": "redox-detox",
+  "summary": "A 3-step route from FMN-N5-oxide to O2, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR192695"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "fmn_n5_oxide",
+      "name": "FMN-N5-oxide",
+      "formula": "C17H21N4O10P",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1096345"
+      }
+    },
+    {
+      "id": "z_2_methylureidoacrylate",
+      "name": "(Z)-2-methylureidoacrylate",
+      "short": "2-methylureidoacryl…",
+      "formula": "C5H7N2O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:143783"
+      }
+    },
+    {
+      "id": "fmn_n5_peroxide",
+      "name": "FMN-N5-peroxide",
+      "formula": "C17H21N4O11P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:176498"
+      }
+    },
+    {
+      "id": "thymine",
+      "name": "thymine",
+      "formula": "C5H6N2O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1369302"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1107623"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H21N4O9P",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364147"
+      }
+    },
+    {
+      "id": "z_2_methylureidoperacrylic_acid",
+      "name": "(Z)-2-methylureidoperacrylic acid",
+      "short": "2-methylureidoperac…",
+      "formula": "C5H8N2O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:63249"
+      }
+    },
+    {
+      "id": "nitrite",
+      "name": "nitrite",
+      "formula": "NO2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM107"
+      }
+    },
+    {
+      "id": "acetaldehyde",
+      "name": "acetaldehyde",
+      "formula": "C2H4O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM75"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "aci_nitroethane",
+      "name": "aci-nitroethane",
+      "formula": "C2H4NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:55327"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_99_46",
+      "name": "pyrimidine monooxygenase",
+      "ec": [
+        "1.14.99.46"
+      ]
+    },
+    {
+      "id": "ec_1_13_12_16",
+      "name": "nitronate monooxygenase",
+      "ec": [
+        "1.13.12.16"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "pyrimidine monooxygenase",
+      "ec": "1.14.99.46",
+      "substrates": [
+        {
+          "metabolite": "fmn_n5_oxide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "z_2_methylureidoacrylate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fmn_n5_peroxide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "thymine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_99_46"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR192695"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR192695"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "pyrimidine monooxygenase",
+      "ec": "1.14.99.46",
+      "substrates": [
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "thymine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "z_2_methylureidoperacrylic_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_99_46"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR192278"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR192278"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "nitronate monooxygenase",
+      "ec": "1.13.12.16",
+      "substrates": [
+        {
+          "metabolite": "nitrite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "aci_nitroethane",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_12_16"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR191418"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR191418"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_fmn_n5_oxide_co2-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "fmn_n5_oxide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "co2-to-o2"
+      },
+      "note": "Shares FMN-N5-oxide with CO2 to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1096345"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_fmn_n5_oxide_fmn-n5-oxide-to-l-homocitrulline",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "fmn_n5_oxide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fmn-n5-oxide-to-l-homocitrulline"
+      },
+      "note": "Shares FMN-N5-oxide with FMN-N5-oxide to L-homocitrulline.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1096345"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_fmn_n5_oxide_h-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "fmn_n5_oxide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-ammonium"
+      },
+      "note": "Shares FMN-N5-oxide with H to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1096345"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_z_2_methylureidoacrylate_6-demethylsterigmatocystin-to-acetylene",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "z_2_methylureidoacrylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-demethylsterigmatocystin-to-acetylene"
+      },
+      "note": "Shares (Z)-2-methylureidoacrylate with 6-demethylsterigmatocystin to acetylene.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:143783"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_z_2_methylureidoacrylate_dibenzothiophene-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "z_2_methylureidoacrylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dibenzothiophene-to-fmn"
+      },
+      "note": "Shares (Z)-2-methylureidoacrylate with dibenzothiophene to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:143783"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_z_2_methylureidoacrylate_fmn-n5-oxide-to-l-homocitrulline",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "z_2_methylureidoacrylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fmn-n5-oxide-to-l-homocitrulline"
+      },
+      "note": "Shares (Z)-2-methylureidoacrylate with FMN-N5-oxide to L-homocitrulline.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:143783"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_z_2_methylureidoacrylate_n-acyl-d-amino-acid-to-di-sulfido-diiron",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "z_2_methylureidoacrylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acyl-d-amino-acid-to-di-sulfido-diiron"
+      },
+      "note": "Shares (Z)-2-methylureidoacrylate with N-acyl-D-α-amino acid… to di-μ-sulfido-diiron.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:143783"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_z_2_methylureidoacrylate_propanoate-to-h2o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "z_2_methylureidoacrylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "propanoate-to-h2o2"
+      },
+      "note": "Shares (Z)-2-methylureidoacrylate with propanoate to H2O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:143783"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_fmn_n5_peroxide_2-glutathion-s-yl-1-4-h-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "fmn_n5_peroxide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-glutathion-s-yl-1-4-h-to-fmn"
+      },
+      "note": "Shares FMN-N5-peroxide with 2-(glutathion-S-yl)-1,4-h… to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:176498"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_fmn_n5_peroxide_dibenzothiophene-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "fmn_n5_peroxide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dibenzothiophene-to-fmn"
+      },
+      "note": "Shares FMN-N5-peroxide with dibenzothiophene to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:176498"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_fmn_n5_peroxide_fmn-n5-oxide-to-l-homocitrulline",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "fmn_n5_peroxide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fmn-n5-oxide-to-l-homocitrulline"
+      },
+      "note": "Shares FMN-N5-peroxide with FMN-N5-oxide to L-homocitrulline.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:176498"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_fmn_n5_peroxide_h-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "fmn_n5_peroxide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-ammonium"
+      },
+      "note": "Shares FMN-N5-peroxide with H to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:176498"
+          }
+        ]
+      }
+    }
+  ]
+}

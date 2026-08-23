@@ -1,0 +1,380 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-arabinitol-to-l-arabinitol-null",
+  "name": "D-arabinitol to L-arabinitol",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from D-arabinitol to L-arabinitol, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR154181"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_arabinitol",
+      "name": "D-arabinitol",
+      "formula": "C5H12O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1018"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "l_xylulose",
+      "name": "L-xylulose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1371095"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "l_lyxose",
+      "name": "L-lyxose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM6309"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "l_arabinitol",
+      "name": "L-arabinitol",
+      "formula": "C5H12O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM740330"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_3_1_14",
+      "name": "L-rhamnose isomerase",
+      "ec": [
+        "5.3.1.14"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_21",
+      "name": "aldose reductase",
+      "ec": [
+        "1.1.1.21"
+      ],
+      "xrefs": {
+        "uniprot": "P15121"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR154181",
+      "substrates": [
+        {
+          "metabolite": "d_arabinitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_xylulose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR154181"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR154181"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "L-rhamnose isomerase",
+      "ec": "5.3.1.14",
+      "substrates": [
+        {
+          "metabolite": "l_xylulose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_lyxose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_1_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR197555"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197555"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "aldose reductase",
+      "ec": "1.1.1.21",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_lyxose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_arabinitol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR133486"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR133486"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_l_xylulose_aldehydo-d-ribose-to-l-erythrulose-1-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_xylulose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aldehydo-d-ribose-to-l-erythrulose-1-phosphate"
+      },
+      "note": "Shares L-xylulose with aldehydo-D-ribose… to L-erythrulose 1-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371095"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_xylulose_aldehydo-d-ribose-to-l-erythrulose-1-phosphate-n",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_xylulose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aldehydo-d-ribose-to-l-erythrulose-1-phosphate-n"
+      },
+      "note": "Shares L-xylulose with aldehydo-D-ribose… to L-erythrulose 1-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371095"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_xylulose_d-arabinitol-to-l-arabinitol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_xylulose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-arabinitol-to-l-arabinitol"
+      },
+      "note": "Shares L-xylulose with D-arabinitol to L-arabinitol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371095"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_lyxose_d-arabinitol-to-l-arabinitol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_lyxose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-arabinitol-to-l-arabinitol"
+      },
+      "note": "Shares L-lyxose with D-arabinitol to L-arabinitol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM6309"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_lyxose_lyxulose-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_lyxose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "lyxulose-to-nad"
+      },
+      "note": "Shares L-lyxose with Lyxulose to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM6309"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_lyxose_lyxulose-to-nad-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_lyxose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "lyxulose-to-nad-null"
+      },
+      "note": "Shares L-lyxose with Lyxulose to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM6309"
+          }
+        ]
+      }
+    }
+  ]
+}

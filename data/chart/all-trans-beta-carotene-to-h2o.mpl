@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway all-trans-beta-carotene-to-h2o "all-trans-beta-carotene to H2O" {
-  spacing 190
+  spacing 160
 
   spine at 0,0 {
     all_trans_beta_carotene
@@ -14,35 +14,5 @@ pathway all-trans-beta-carotene-to-h2o "all-trans-beta-carotene to H2O" {
     canthaxanthin
     <-> . +nadh +h +o2 -nad -h2o
     2_2_dihydroxycanthaxanthin
-  }
-
-  branch from plastoquinol_9 side left {
-    plastoquinol_9
-    <-> ec_1_3_5_1 [1.3.5.1] +succinate +plastoquinone_9
-    fumarate
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_3_1_41 [1.3.1.41] +nadh +h +xanthommatin
-    5_12_dihydroxanthommatin
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_3_1_41 [1.3.1.41] +nadh +h +xanthommatin
-    5_12_dihydroxanthommatin
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +myristoyl_d_asparaginyl_butan_2_aminyl_malonyl_1 +glycine
-    myristoyl_d_asparaginyl_butan_2_aminyl_malonyl_1
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +precolibactin_1491 +unstable_precolibactin_intermediate
-    n_myristoyl_d_asparagine
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway drosopterin-to-6-1-hydroxy-2-oxopropy "drosopterin to 6-(1'-Hydroxy-2'-oxopropy…" {
-  spacing 340
+  spacing 318
 
   spine at 0,0 {
     drosopterin
@@ -16,49 +16,7 @@ pathway drosopterin-to-6-1-hydroxy-2-oxopropy "drosopterin to 6-(1'-Hydroxy-2'-o
     nadp
   }
 
-  branch from 2_amino_6_acetyl_3_7_8_9_tetrahydro_3h_pyrimido side left {
-    2_amino_6_acetyl_3_7_8_9_tetrahydro_3h_pyrimido
-    <-> . +aurodrosopterin +h2o
-    7_8_dihydrolumazine
-  }
-
-  branch from 7_8_dihydropterin side right {
-    7_8_dihydropterin
-    <-> ec_3_5_4_3 [3.5.4.3] +7_8_dihydrolumazine +h +h2o
-    nh4
-  }
-
-  branch from 7_8_dihydropterin side left {
-    7_8_dihydropterin
-    <-> . +nh4 +h +h2o
-    7_8_dihydrolumazine
-  }
-
-  branch from glutathione side right {
-    glutathione
-    <-> ec_2_5_1_18 [2.5.1.18] +dichloroacetate +s_alpha_chlorocarboxymethyl_glutathione
-    chloride
-  }
-
-  branch from glutathione side left {
-    glutathione
-    <-> ec_2_5_1_18 [2.5.1.18] +h +chloride +4_glutathion_s_yl_fenclorim
-    fenclorim
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +2e_geranial +h +nadph
-    1s_2s_4r_isodihydrocarveol
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +phellandral
-    neodihydrocarveol
-  }
-
-  branch from 6_1_hydroxy_2_oxopropyl_tetrahydropterin side right {
+  branch from 6_1_hydroxy_2_oxopropyl_tetrahydropterin side left {
     6_1_hydroxy_2_oxopropyl_tetrahydropterin
     <-> ec_1_1_1_153 [1.1.1.153]
     6r_6_lactoyl_5_6_7_8_tetrahydropterin

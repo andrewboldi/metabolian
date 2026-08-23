@@ -20,55 +20,55 @@ pathway 5-hydroxy-d-tryptophan-to-r-dyspropterin "5-hydroxy-D-tryptophan to (R)-
 
   branch from 5_hydroxy_l_tryptophan side left {
     5_hydroxy_l_tryptophan
-    <-> ec_1_14_16_4 [1.14.16.4] +5_6_7_8_tetrahydrobiopterin +o2 +l_tryptophan +h2o
-    tetrahydrobiopterin_4a_carbinolamine
-  }
-
-  branch from 5_hydroxy_l_tryptophan side right {
-    5_hydroxy_l_tryptophan
-    <-> ec_1_14_16_4 [1.14.16.4] +sapropterin +o2 +l_tryptophan +tetrahydrobiopterin_4a_carbinolamine
-    h2o
-  }
-
-  branch from o2 side left {
-    o2
-    <-> ec_1_14_14_94 [1.14.14.94] +leukotriene_b4 +h +nadph +nadp +h2o
-    19_hydroxyleukotriene_b4
+    <-> . +h +adp +phosphate +h2o
+    atp
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_13_12_16 [1.13.12.16] +butanal +nitrite +h
-    1_nitrobutane
+    <-> ec_1_1_3_29 [1.1.3.29] +h +n_acetyl_d_glucosaminate +h2o2 +h2o
+    n_acetyl_beta_d_glucosamine
   }
 
-  branch from 6r_5_6_7_8_tetrahydrobiopterin side left {
-    6r_5_6_7_8_tetrahydrobiopterin
-    <-> . +udp +h +6r_tetrahydrobiopterin_beta_d_glucoside
-    udp_alpha_d_glucose
-  }
-
-  branch from 6r_5_6_7_8_tetrahydrobiopterin side right {
-    6r_5_6_7_8_tetrahydrobiopterin
-    <-> ec_1_5_1_33 [1.5.1.33] +l_erythro_biopterin +h +nadph
-    nadp
-  }
-
-  branch from l_tryptophan side left {
-    l_tryptophan
-    <-> ec_3_5_1_14 [3.5.1.14] +n_acetyl_l_tryptophanate +h2o
-    acetate
+  branch from o2 side left {
+    o2
+    <-> ec_1_13_11_8 [1.13.11.8] +3_4_dihydroxybenzoate +h
+    4_carboxy_2_hydroxymuconate_semialdehyde
   }
 
   branch from l_tryptophan side right {
     l_tryptophan
-    <-> ec_1_5_3_2 [1.5.3.2] +formaldehyde +h2o2 +o2 +h2o
-    3_1h_indol_3_yl_2_methylamino_propanoic_acid
+    <-> . +brevianamide_f +h +adp +phosphate +atp
+    l_proline
   }
 
-  branch from r_dyspropterin side left {
-    r_dyspropterin
-    <-> ec_1_1_1_153 [1.1.1.153] +nadp +nadph +hplus
-    sapropterin
+  branch from l_tryptophan side left {
+    l_tryptophan
+    <-> . +3r_3_1h_indol_3_ylmethyl_3h_1_4_benzodiazepine +h +adp +phosphate +atp
+    anthranilate
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +2_hexaprenyl_6_hydroxyphenol +nadp +h2o +h +nadph
+    2_hexaprenylphenol
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +2_octaprenyl_6_hydroxyphenol +nadp +h2o +h +nadph
+    2_octaprenylphenol
+  }
+
+  branch from l_tryptophan side right {
+    l_tryptophan
+    <-> ec_1_14_14_156 [1.14.14.156] +indol_3_yl_acetaldehyde_oxime +co2 +nadp +h2o +o2 +nadph
+    h
+  }
+
+  branch from l_tryptophan side left {
+    l_tryptophan
+    <-> ec_1_14_13_125 [1.14.13.125] +e_indol_3_yl_acetaldehyde_oxime +co2 +nadp +h2o +h +o2
+    nadph
   }
 }

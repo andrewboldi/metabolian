@@ -24,27 +24,15 @@ pathway udp-to-n-acetyl-alpha-d-glucosam "UDP to N-acetyl-alpha-D-glucosam…" {
     udp_n_acetyl_alpha_d_glucosamine
   }
 
-  branch from udp_n_acetyl_alpha_d_glucosamine side left {
-    udp_n_acetyl_alpha_d_glucosamine
-    <-> ec_2_4_1_150 [2.4.1.150] +udp +beta_d_gal_1_3_beta_d_glcnac_1_3_beta_d_glcnac_1 +h
-    beta_d_gal_1_3_beta_d_glcnac_1_3_beta_d_gal_1_4
+  branch from h side left {
+    h
+    <-> . +s_carnitine +13z_16z_19z_docosa_13_16_19_trienoyl_coa +coa
+    13z_16z_19z_docosa_13_16_19_trienoylcarnitine
   }
 
-  branch from udp_n_acetyl_alpha_d_glucosamine side right {
-    udp_n_acetyl_alpha_d_glucosamine
-    <-> . +udp +alpha_d_glcnac_1_2_alpha_d_d_hep_1_3_3_alpha_d_g +h
-    alpha_d_d_hep_1_3_3_alpha_d_glu_1_3_alpha_d_glu
-  }
-
-  branch from gdp_alpha_d_mannose side left {
-    gdp_alpha_d_mannose
-    <-> . +gdp +alpha_d_man_1_3_alpha_l_fuc_1_3_alpha_d_galnac_p +h
-    alpha_l_fuc_1_3_alpha_d_galnac_pp_und
-  }
-
-  branch from gdp_alpha_d_mannose side right {
-    gdp_alpha_d_mannose
-    <-> . +gdp +alpha_d_man_1_4_beta_d_gal_1_3_alpha_d_glcnac_pp +h
-    d_gal_1_3_d_glcnac_diphospho_ditrans_octacis_un
+  branch from h side right {
+    h
+    <-> . +2e_dodecenoyl_coa
+    5_dodecenoyl_coa
   }
 }

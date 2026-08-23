@@ -18,33 +18,17 @@ pathway precorrin-6y-to-cob-ii-yrinic-acid-a-c "precorrin-6Y to cob(II)yrinic ac
     cob_ii_yrinic_acid_a_c_diamide
   }
 
-  branch from precorrin_8x side left {
-    precorrin_8x
-    <-> . +sam +sah +hplus
-    precorrin_7
-  }
 
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_34 [2.1.1.34] +guanosine_5_monophosphate_1 +sam +hplus
-    2_o_methylguanosine_5_monophosphate_1
-  }
 
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_344 [2.1.1.344] +n2_3r_3_2_saturated_acyloxy_acyl_l_ornithine +sam +hplus
-    n5_n5_n5_trimethyl_n2_3r_3_acyloxy_acyl_l_ornith
-  }
 
-  branch from glutamate side right {
-    glutamate
-    <-> ec_2_6_1_11 [2.6.1.11] +n2_acetyl_l_ornithine +akg
-    2_acetamido_5_oxopentanoate
-  }
 
-  branch from glutamate side left {
-    glutamate
-    <-> ec_2_6_1_33 [2.6.1.33] +dtdp_4_amino_4_6_dideoxy_d_glucose +akg
-    dtdp_4_dehydro_6_deoxy_d_glucose
-  }
+
+
+
+
+
+
+
+
+
 }

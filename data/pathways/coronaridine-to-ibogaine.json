@@ -147,91 +147,9 @@
       "xrefs": {
         "chebi": "CHEBI:16526"
       }
-    },
-    {
-      "id": "11_deoxycorticosterone",
-      "name": "11-deoxycorticosterone",
-      "short": "11-deoxycorticoster…",
-      "formula": "C21H30O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16973"
-      }
-    },
-    {
-      "id": "6_hydroxy_11_deoxycorticosterone",
-      "name": "6β-hydroxy-11-deoxycorticosterone",
-      "short": "6β-hydroxy-11-deoxy…",
-      "formula": "C21H30O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:235403"
-      }
-    },
-    {
-      "id": "luteolin_7_olate",
-      "name": "luteolin-7-olate",
-      "formula": "C15H9O6",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:57545"
-      }
-    },
-    {
-      "id": "tricetin",
-      "name": "tricetin",
-      "formula": "C15H9O7",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:60045"
-      }
-    },
-    {
-      "id": "s_scoulerine",
-      "name": "(S)-scoulerine",
-      "formula": "C19H21NO4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:17129"
-      }
-    },
-    {
-      "id": "cyclanoline",
-      "name": "cyclanoline",
-      "formula": "C20H24NO4",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:76923"
-      }
-    },
-    {
-      "id": "norreticuline",
-      "name": "norreticuline",
-      "formula": "C18H22NO4",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:194517"
-      }
-    },
-    {
-      "id": "reticuline",
-      "name": "reticuline",
-      "formula": "C19H24NO4",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:194518"
-      }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_2_1_1_300",
-      "name": "pavine N-methyltransferase",
-      "ec": [
-        "2.1.1.300"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -408,193 +326,49 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "21-hydroxyprogesterone + reduced [NADPH--hemoprotein reductase] + O2 = 6beta-hydroxy-11...",
-      "equation": "21-hydroxyprogesterone + reduced [NADPH--hemoprotein reductase] + O2 = 6beta-hydroxy-11-deoxycorticosterone + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "11_deoxycorticosterone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "6_hydroxy_11_deoxycorticosterone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:86139"
+      "id": "xt_coronaridine_dehydrosecodine-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coronaridine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "dehydrosecodine-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares (−)-coronaridine with dehydrosecodine to S-adenosyl-L-homocysteine.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:86139"
+            "db": "ChEBI",
+            "id": "CHEBI:146232"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "luteolin + reduced [NADPH--hemoprotein reductase] + O2 = tricetin + oxidized [NADPH--he...",
-      "equation": "luteolin + reduced [NADPH--hemoprotein reductase] + O2 = tricetin + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "luteolin_7_olate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "tricetin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:86495"
+      "id": "xt_ibogaine_dehydrosecodine-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ibogaine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "dehydrosecodine-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares ibogaine with dehydrosecodine to S-adenosyl-L-homocysteine.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:86495"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "pavine N-methyltransferase",
-      "equation": "(S)-scoulerine + S-adenosyl-L-methionine = (S)-cis-N-methylscoulerine + S-adenosyl-L-homocysteine",
-      "ec": "2.1.1.300",
-      "substrates": [
-        {
-          "metabolite": "s_scoulerine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "cyclanoline",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_1_300"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:76051"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:76051"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r8",
-      "name": "norreticuline + S-adenosyl-L-methionine = reticuline + S-adenosyl-L-homocysteine + H(+)",
-      "equation": "norreticuline + S-adenosyl-L-methionine = reticuline + S-adenosyl-L-homocysteine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "norreticuline",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "reticuline",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "rhea": "RHEA:76055"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:76055"
+            "db": "ChEBI",
+            "id": "CHEBI:146259"
           }
         ]
       }

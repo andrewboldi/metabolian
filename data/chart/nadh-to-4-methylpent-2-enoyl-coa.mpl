@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-4-methylpent-2-enoyl-coa "NADH to 4-methylpent-2-enoyl-CoA" {
-  spacing 292
+  spacing 322
 
   spine at 0,0 {
     nadh
@@ -16,39 +16,69 @@ pathway nadh-to-4-methylpent-2-enoyl-coa "NADH to 4-methylpent-2-enoyl-CoA" {
     4_methylpent_2_enoyl_coa
   }
 
-  branch from 4_methylpentanoyl_coa side left {
-    4_methylpentanoyl_coa
-    <-> . +isocaproate +atp +coa +amp
-    ppi
+  branch from h side left {
+    h
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +d_fructopyranose +phosphate +d_fructopyranose +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> ec_1_3_1_10 [1.3.1.10] +nadh +o_s_2e_7z_19z_octatriacontatrienoylpantetheine_4 +nad
-    o_s_7z_19z_octatriacontadienoylpantetheine_4_pho
-  }
-
-  branch from h side left {
-    h
-    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3_oxoicosanoylpantetheine_4_phosphoryl_l_ser +nadph +nadp
-    o_s_3r_hydroxyicosanoylpantetheine_4_phosphoryl
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_3_1_10 [1.3.1.10] +nadh +o_s_2e_7z_hexacosadienoylpantetheine_4_phosphory +h
-    o_s_7z_hexacosenoylpantetheine_4_phosphoryl_l_se
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    beta_d_fructopyranose
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_3_1_10 [1.3.1.10] +nadh +h +o_s_2e_15z_tetratriacontadienoylpantetheine_4_ph
-    o_s_15z_tetratriacontenoylpantetheine_4_phosphor
+    <-> ec_1_14_13_103 [1.14.13.103] +nadh +h +sophoraflavanone_b +o2 +h2o
+    leachianone_g
   }
 
-  branch from r_2_hydroxy_4_methylpentanoyl_coa side right {
+  branch from nad side right {
+    nad
+    <-> ec_1_14_13_119 [1.14.13.119] +nadh +5_epi_aristolochene +h +o2 +h2o
+    capsidiol
+  }
+
+  branch from r_2_hydroxy_4_methylpentanoyl_coa side left {
     r_2_hydroxy_4_methylpentanoyl_coa
     <-> ec_4_2_1_157 [4.2.1.157] +isocaprenoyl_coa +h
     h2o
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_14_13_84 [1.14.13.84] +4_hydroxyacetophenone +o2 +nad +h2o
+    4_hydroxyphenylacetate
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> ec_1_14_13_91 [1.14.13.91] +h +10_deoxysarpagine +o2 +nad +h2o
+    sarpagine
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    l_fructopyranose
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    l_fructopyranose
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_14_13_92 [1.14.13.92] +nadh +h +phenylacetone +o2 +h2o
+    benzyl_acetate
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_14_13_94 [1.14.13.94] +nadh +h +o2 +lithocholate +h2o
+    6beta_hydroxylithocholate
   }
 }

@@ -1,0 +1,575 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3s-4r-tetrahydrodaidzein-to-h2o-null",
+  "name": "(3S,4R)-Tetrahydrodaidzein to H2O",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from (3S,4R)-Tetrahydrodaidzein to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR191537"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3s_4r_tetrahydrodaidzein",
+      "name": "(3S,4R)-Tetrahydrodaidzein",
+      "short": "(3S,4R)-Tetrahydrod…",
+      "formula": "C15H14O4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1132906"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "s_dihydrodaidzein",
+      "name": "(S)-Dihydrodaidzein",
+      "formula": "C15H12O4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM11374"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "3r_2_hydroxydihydrodaidzein",
+      "name": "(3R)-2'-hydroxydihydrodaidzein",
+      "short": "2'-hydroxydihydroda…",
+      "formula": "C15H12O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM2770"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "6ar_11ar_3_9_dihydroxypterocarpan",
+      "name": "(6aR,11aR)-3,9-dihydroxypterocarpan",
+      "short": "(6aR,11aR)-3,9-dihy…",
+      "formula": "C15H12O4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM2751"
+      }
+    },
+    {
+      "id": "r_dihydrodaidzein",
+      "name": "(R)-Dihydrodaidzein",
+      "formula": "C15H12O4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1132901"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_13_89",
+      "name": "EC 1.14.13.89",
+      "ec": [
+        "1.14.13.89"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_246",
+      "name": "EC 1.1.1.246",
+      "ec": [
+        "1.1.1.246"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR191537",
+      "substrates": [
+        {
+          "metabolite": "3s_4r_tetrahydrodaidzein",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_dihydrodaidzein",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR191537"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR191537"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR176113",
+      "ec": "1.14.13.89",
+      "substrates": [
+        {
+          "metabolite": "s_dihydrodaidzein",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3r_2_hydroxydihydrodaidzein",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_89"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR176113"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR176113"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR111321",
+      "ec": "1.1.1.246",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3r_2_hydroxydihydrodaidzein",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6ar_11ar_3_9_dihydroxypterocarpan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_246"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR111321"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR111321"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Reaction MNXR193892",
+      "substrates": [
+        {
+          "metabolite": "r_dihydrodaidzein",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_dihydrodaidzein",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR193892"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR193892"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3s_4r_tetrahydrodaidzein_3s-4r-tetrahydrodaidzein-to-anhydroglycinol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3s_4r_tetrahydrodaidzein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3s-4r-tetrahydrodaidzein-to-anhydroglycinol"
+      },
+      "note": "Shares (3S,4R)-Tetrahydrodaidzein with (3S,4R)-Tetrahydrodaidzein to Anhydroglycinol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1132906"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3s_4r_tetrahydrodaidzein_3s-4r-tetrahydrodaidzein-to-anhydroglycinol-nul",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3s_4r_tetrahydrodaidzein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3s-4r-tetrahydrodaidzein-to-anhydroglycinol-nul"
+      },
+      "note": "Shares (3S,4R)-Tetrahydrodaidzein with (3S,4R)-Tetrahydrodaidzein to Anhydroglycinol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1132906"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3s_4r_tetrahydrodaidzein_3s-4r-tetrahydrodaidzein-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3s_4r_tetrahydrodaidzein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3s-4r-tetrahydrodaidzein-to-h2o"
+      },
+      "note": "Shares (3S,4R)-Tetrahydrodaidzein with (3S,4R)-Tetrahydrodaidzein to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1132906"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_dihydrodaidzein_25-deacetylrifampicin-to-rifampicin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_dihydrodaidzein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "25-deacetylrifampicin-to-rifampicin"
+      },
+      "note": "Shares (S)-Dihydrodaidzein with 25-Deacetylrifampicin to rifampicin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM11374"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_dihydrodaidzein_3s-4r-tetrahydrodaidzein-to-anhydroglycinol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_dihydrodaidzein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3s-4r-tetrahydrodaidzein-to-anhydroglycinol"
+      },
+      "note": "Shares (S)-Dihydrodaidzein with (3S,4R)-Tetrahydrodaidzein to Anhydroglycinol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM11374"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_dihydrodaidzein_3s-4r-tetrahydrodaidzein-to-anhydroglycinol-nul",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_dihydrodaidzein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3s-4r-tetrahydrodaidzein-to-anhydroglycinol-nul"
+      },
+      "note": "Shares (S)-Dihydrodaidzein with (3S,4R)-Tetrahydrodaidzein to Anhydroglycinol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM11374"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_dihydrodaidzein_3s-4r-tetrahydrodaidzein-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_dihydrodaidzein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3s-4r-tetrahydrodaidzein-to-h2o"
+      },
+      "note": "Shares (S)-Dihydrodaidzein with (3S,4R)-Tetrahydrodaidzein to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM11374"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3r_2_hydroxydihydrodaidzein_1-2-di-9z-12z-15z-octade-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3r_2_hydroxydihydrodaidzein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-di-9z-12z-15z-octade-to-h2o"
+      },
+      "note": "Shares (3R)-2'-hydroxydihydrodaidzein with 1,2-di-(9Z,12Z,15Z-octade… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2770"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3r_2_hydroxydihydrodaidzein_3s-4r-tetrahydrodaidzein-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3r_2_hydroxydihydrodaidzein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3s-4r-tetrahydrodaidzein-to-h2o"
+      },
+      "note": "Shares (3R)-2'-hydroxydihydrodaidzein with (3S,4R)-Tetrahydrodaidzein to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2770"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3r_2_hydroxydihydrodaidzein_5z-8z-11z-13e-15s-17z-1-to-h2o-76707",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3r_2_hydroxydihydrodaidzein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5z-8z-11z-13e-15s-17z-1-to-h2o-76707"
+      },
+      "note": "Shares (3R)-2'-hydroxydihydrodaidzein with (5Z,8Z,11Z,13E,15S,17Z)-1… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2770"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3r_2_hydroxydihydrodaidzein_h-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3r_2_hydroxydihydrodaidzein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-h2o"
+      },
+      "note": "Shares (3R)-2'-hydroxydihydrodaidzein with H to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2770"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3r_2_hydroxydihydrodaidzein_h2o2-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3r_2_hydroxydihydrodaidzein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h2o2-to-h2o-null"
+      },
+      "note": "Shares (3R)-2'-hydroxydihydrodaidzein with H2O2 to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2770"
+          }
+        ]
+      }
+    }
+  ]
+}

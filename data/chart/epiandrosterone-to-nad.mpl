@@ -24,40 +24,165 @@ pathway epiandrosterone-to-nad "epiandrosterone to NAD" {
     4_2_5_hydroxy_2_methylphenyl_ethyl_7a_methylhexa
     <-> ec_1_14_14_12 [1.14.14.12] +fmnh2 +h +o2 -3_4_dihydroxy_9_10_secoandrosta_1_3_5_10_triene -h2o
     fmn
-    <-> . +deferrichrome +fe -h -ferrichrome
+    <-> ec_1_1_99_31 [1.1.99.31] +2_hydroxy_4_methylvalerate -h -4_methyl_2_oxopentanoate
     fmnh2
-    <-> . +fadh2 +h +ferrichrome -fad -fe
-    deferrichrome
-    <-> . +fmn +fe -h -ferrichrome
+    <-> . +nadh +co2 +4_methyl_2_oxopentanoate -nad
+    2s_2_isopropylmalate
+  }
+
+  branch from 17_hydroxy_5_androstan_3_one side left {
+    17_hydroxy_5_androstan_3_one
+    <-> . +nadp +nadph +hplus
+    5_androstane_3_17_diol
+  }
+
+  branch from 17_hydroxy_5_androstan_3_one side right {
+    17_hydroxy_5_androstan_3_one
+    <-> . +udp_d_glucuronate +udp +hplus
+    5_dihydrotestosterone_17_o_d_glucuronide
+  }
+
+  branch from 5_androst_1_ene_3_17_dione side left {
+    5_androst_1_ene_3_17_dione
+    <-> . +h2o
+    1_hydroxy_5_androstan_3_17_dione
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_1_99_31 [1.1.99.31] +fmnh2 +h +2_oxopentanoate
+    2_hydroxypentanoate
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_1_99_31 [1.1.99.31] +fmnh2 +h +2_oxohexanoate
+    2_hydroxyhexanoate
+  }
+
+  branch from 3_4_dihydroxy_9_10_secoandrosta_1_3_5_10_triene side right {
+    3_4_dihydroxy_9_10_secoandrosta_1_3_5_10_triene
+    <-> ec_1_13_11_25 [1.13.11.25] +o2
+    3_hydroxy_5_9_17_trioxo_4_5_9_10_disecoandrosta
+  }
+
+  branch from 3_4_dihydroxy_9_10_secoandrosta_1_3_5_10_triene side left {
+    3_4_dihydroxy_9_10_secoandrosta_1_3_5_10_triene
+    <-> ec_1_13_11_25 [1.13.11.25] +h +o2
+    3_hydroxy_5_9_17_trioxo_4_5_9_10_disecoandrosta
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_1_14_12_11 [1.14.12.11] +nadh +trichloroethene +o2 +h +chloride +nad
+    formate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +pyrene_4_5_oxide
+    trans_4_5_dihydroxy_4_5_dihydropyrene
+  }
+
+  branch from fmnh2 side right {
     fmnh2
-    <-> . +diphosphate +h +amp +ferrichrome +h2o -n5_acetyl_n5_hydroxy_l_ornithine -glycine -atp
-    fe
-    <-> ec_1_14_12_17 [1.14.12.17] +nadh -h -nad
+    <-> . +h +fe_iii_enterobactin +fmn +enterobactin
     fe
   }
 
+  branch from fmnh2 side left {
+    fmnh2
+    <-> . +1_hexanesulfonic_acid +o2 +fmn +hexanal +h2o
+    sulfite
+  }
 
+  branch from h side right {
+    h
+    <-> ec_2_3_1_183 [2.3.1.183] +acetyl_coa +demethylphosphinothricin +coa
+    n_acetyl_demethyl_l_phosphinothricin
+  }
 
+  branch from h side left {
+    h
+    <-> ec_1_1_1_213 [1.1.1.213] +5_dihydrodeoxycorticosterone +nadph +5_alpha_thdoc
+    nadp
+  }
 
+  branch from 4_methyl_2_oxopentanoate side right {
+    4_methyl_2_oxopentanoate
+    <-> ec_1_1_3_15 [1.1.3.15] +s_2_hydroxy_4_methylpentanoic_acid +o2 +h
+    h2o2
+  }
 
+  branch from 4_methyl_2_oxopentanoate side left {
+    4_methyl_2_oxopentanoate
+    <-> ec_1_2_4_4 [1.2.4.4] +co2 +3_methyl_1_hydroxybutyl_thpp +h
+    thiamine_diphosphate
+  }
 
+  branch from 2s_2_isopropylmalate side right {
+    2s_2_isopropylmalate
+    <-> ec_1_1_1_85 [1.1.1.85] +nadh +l_leucine +2_oxoglutarate +co2 +nad
+    l_glutamate
+  }
 
+  branch from 2s_2_isopropylmalate side left {
+    2s_2_isopropylmalate
+    <-> ec_4_2_1_33 [4.2.1.33] +h2o
+    2_isopropylmaleate
+  }
 
+  branch from nad side right {
+    nad
+    <-> . +nadh +h +o2 +1_2_3_4_tetrachlorobenzene
+    1r_2s_3_4_5_6_tetrachlorocyclohexa_3_5_diene_1
+  }
 
+  branch from nad side left {
+    nad
+    <-> . +nadh +h +1r_2s_3_4_5_6_tetrachlorocyclohexa_3_5_diene_1
+    tetrachlorocatechol
+  }
 
+  branch from fmnh2 side right {
+    fmnh2
+    <-> ec_1_1_99_31 [1.1.99.31] +h +3_phenylpyruvate +fmn
+    r_3_phenyllactate
+  }
 
+  branch from fmnh2 side left {
+    fmnh2
+    <-> ec_1_1_99_31 [1.1.99.31] +h +phenylglyoxylate +fmn
+    mandelate
+  }
 
+  branch from h side right {
+    h
+    <-> . +spermidine +trans_4_coumaroyl_coa +coa
+    n1_n5_n10_e_tri_p_coumaroylspermidine
+  }
 
+  branch from h side left {
+    h
+    <-> . +s_adenosyl_l_homocysteine +n1_n5_dihydroxyferuloyl_n10_sinapoyl_spermidine +n1_n5_n10_tri_e_5_hydroxyferuloyl_spermidine
+    s_adenosyl_l_methionine
+  }
 
+  branch from o2 side right {
+    o2
+    <-> . +h +1_2_3_4_tetrachlorobenzene +nadp +1r_2s_3_4_5_6_tetrachlorocyclohexa_3_5_diene_1
+    nadph
+  }
 
+  branch from o2 side left {
+    o2
+    <-> ec_1_13_11_1 [1.13.11.1] +tetrachlorocatechol
+    tetrachloro_cis_cis_muconic_acid
+  }
 
-
-
-
-
-
-
-
-
-
+  branch from fmn side right {
+    fmn
+    <-> . +fmnh2 +h +ferroxamine +fe
+    desferrioxamine_b
+  }
 }

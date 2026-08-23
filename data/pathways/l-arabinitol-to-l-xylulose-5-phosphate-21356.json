@@ -1,0 +1,664 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-arabinitol-to-l-xylulose-5-phosphate-21356",
+  "name": "L-arabinitol to L-xylulose 5-phosphate",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from L-arabinitol to L-xylulose 5-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:21356"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:18403"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_arabinitol",
+      "name": "L-arabinitol",
+      "formula": "C5H12O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18403"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "l_ribulose",
+      "name": "L-ribulose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16880"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "l_ribulose_5_phosphate",
+      "name": "L-ribulose 5-phosphate",
+      "short": "L-ribulose 5-P",
+      "formula": "C5H9O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58226"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "l_xylulose_5_phosphate",
+      "name": "L-xylulose 5-phosphate",
+      "short": "L-xylulose 5-P",
+      "formula": "C5H9O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57829"
+      }
+    },
+    {
+      "id": "l_xylulose",
+      "name": "L-xylulose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17399"
+      }
+    },
+    {
+      "id": "l_arabinopyranose",
+      "name": "L-arabinopyranose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17535"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_13",
+      "name": "L-arabinitol 2-dehydrogenase",
+      "ec": [
+        "1.1.1.13"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_16",
+      "name": "ribulokinase",
+      "ec": [
+        "2.7.1.16"
+      ]
+    },
+    {
+      "id": "ec_5_1_3_22",
+      "name": "L-ribulose-5-phosphate 3-epimerase",
+      "ec": [
+        "5.1.3.22"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_12",
+      "name": "L-arabinitol 4-dehydrogenase",
+      "ec": [
+        "1.1.1.12"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_21",
+      "name": "aldose reductase",
+      "ec": [
+        "1.1.1.21"
+      ],
+      "xrefs": {
+        "uniprot": "P15121"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "L-arabinitol 2-dehydrogenase",
+      "equation": "L-arabinitol + NAD(+) = L-ribulose + NADH + H(+)",
+      "ec": "1.1.1.13",
+      "substrates": [
+        {
+          "metabolite": "l_arabinitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_ribulose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_13"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:21356"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21356"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "ribulokinase",
+      "equation": "L-ribulose + ATP = L-ribulose 5-phosphate + ADP + H(+)",
+      "ec": "2.7.1.16",
+      "substrates": [
+        {
+          "metabolite": "l_ribulose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_ribulose_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_16"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:22072"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22072"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "L-ribulose-5-phosphate 3-epimerase",
+      "equation": "L-ribulose 5-phosphate = L-xylulose 5-phosphate",
+      "ec": "5.1.3.22",
+      "substrates": [
+        {
+          "metabolite": "l_ribulose_5_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_xylulose_5_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_1_3_22"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:18497"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18497"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "L-arabinitol 4-dehydrogenase",
+      "equation": "L-arabinitol + NAD(+) = L-xylulose + NADH + H(+)",
+      "ec": "1.1.1.12",
+      "substrates": [
+        {
+          "metabolite": "l_arabinitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_xylulose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_12"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:16381"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16381"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "aldose reductase",
+      "equation": "L-arabinitol + NAD(+) = L-arabinose + NADH + H(+)",
+      "ec": "1.1.1.21",
+      "substrates": [
+        {
+          "metabolite": "l_arabinitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_arabinopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:25225"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25225"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_l_arabinitol_l-arabinitol-to-l-xylulose-5-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_arabinitol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-arabinitol-to-l-xylulose-5-phosphate"
+      },
+      "note": "Shares L-arabinitol with L-arabinitol to L-xylulose 5-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18403"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_arabinitol_l-arabinopyranose-to-l-arabinose-1-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_arabinitol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-arabinopyranose-to-l-arabinose-1-phosphate"
+      },
+      "note": "Shares L-arabinitol with β-L-arabinopyranose to β-L-arabinose 1-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18403"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_arabinitol_l-arabinopyranose-to-l-arabinose-1-phosphate-nu",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_arabinitol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-arabinopyranose-to-l-arabinose-1-phosphate-nu"
+      },
+      "note": "Shares L-arabinitol with β-L-arabinopyranose to β-L-arabinose 1-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18403"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_ribulose_l-arabinitol-to-l-xylulose-5-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_ribulose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-arabinitol-to-l-xylulose-5-phosphate"
+      },
+      "note": "Shares L-ribulose with L-arabinitol to L-xylulose 5-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16880"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_ribulose_l-arabinopyranose-to-l-xylulose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_ribulose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-arabinopyranose-to-l-xylulose"
+      },
+      "note": "Shares L-ribulose with α-L-arabinopyranose to L-xylulose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16880"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_ribulose_l-arabinopyranose-to-l-xylulose-63332",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_ribulose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-arabinopyranose-to-l-xylulose-63332"
+      },
+      "note": "Shares L-ribulose with α-L-arabinopyranose to L-xylulose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16880"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_ribulose_5_phosphate_d-arabinitol-to-fmnh2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_ribulose_5_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-arabinitol-to-fmnh2"
+      },
+      "note": "Shares L-ribulose 5-phosphate with D-arabinitol to FMNH2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58226"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_ribulose_5_phosphate_d-arabinitol-to-fmnh2-11868",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_ribulose_5_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-arabinitol-to-fmnh2-11868"
+      },
+      "note": "Shares L-ribulose 5-phosphate with D-arabinitol to FMNH2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58226"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_ribulose_5_phosphate_l-arabinitol-to-l-xylulose-5-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_ribulose_5_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-arabinitol-to-l-xylulose-5-phosphate"
+      },
+      "note": "Shares L-ribulose 5-phosphate with L-arabinitol to L-xylulose 5-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58226"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_ribulose_5_phosphate_l-arabinopyranose-to-l-xylulose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_ribulose_5_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-arabinopyranose-to-l-xylulose"
+      },
+      "note": "Shares L-ribulose 5-phosphate with α-L-arabinopyranose to L-xylulose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58226"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_ribulose_5_phosphate_l-arabinopyranose-to-l-xylulose-63332",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_ribulose_5_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-arabinopyranose-to-l-xylulose-63332"
+      },
+      "note": "Shares L-ribulose 5-phosphate with α-L-arabinopyranose to L-xylulose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58226"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_xylulose_5_phosphate_l-arabinitol-to-l-xylulose-5-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_xylulose_5_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-arabinitol-to-l-xylulose-5-phosphate"
+      },
+      "note": "Shares L-xylulose 5-phosphate with L-arabinitol to L-xylulose 5-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57829"
+          }
+        ]
+      }
+    }
+  ]
+}

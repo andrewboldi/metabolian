@@ -108,55 +108,6 @@
       "xrefs": {
         "chebi": "CHEBI:57783"
       }
-    },
-    {
-      "id": "pelargonidin_3_o_6_o_caffeoyl_d_glucoside_5_o_d",
-      "name": "pelargonidin 3-O-(6-O-caffeoyl-β-D-glucoside) 5-O-β-D-glucoside betaine",
-      "short": "pelargonidin…",
-      "formula": "C36H36O18",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:58640"
-      }
-    },
-    {
-      "id": "4_demalonylsalvianin",
-      "name": "4'''-demalonylsalvianin",
-      "short": "4'''-demalonylsalvi…",
-      "formula": "C39H37O21",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:58638"
-      }
-    },
-    {
-      "id": "n_methylanthraniloyl_coa",
-      "name": "N-methylanthraniloyl-CoA",
-      "short": "N-methylanthraniloy…",
-      "formula": "C29H39N8O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:58630"
-      }
-    },
-    {
-      "id": "1_3_dihydroxy_n_methylacridone",
-      "name": "1,3-dihydroxy-N-methylacridone",
-      "short": "1,3-dihydroxy-N-met…",
-      "formula": "C14H11NO3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:30306"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16526"
-      }
     }
   ],
   "enzymes": [
@@ -165,20 +116,6 @@
       "name": "malonyl CoA reductase (malonate semialdehyde-forming)",
       "ec": [
         "1.2.1.75"
-      ]
-    },
-    {
-      "id": "ec_2_3_1_172",
-      "name": "anthocyanin 5-O-glucoside 6'''-O-malonyltransferase",
-      "ec": [
-        "2.3.1.172"
-      ]
-    },
-    {
-      "id": "ec_2_3_1_159",
-      "name": "acridone synthase",
-      "ec": [
-        "2.3.1.159"
       ]
     }
   ],
@@ -313,105 +250,181 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "anthocyanin 5-O-glucoside 6'''-O-malonyltransferase",
-      "equation": "pelargonidin 3-O-(6-O-[(E)-caffeoyl]-beta-D-glucoside) 5-O-beta-D-glucoside + malonyl-CoA = 4'''-demalonylsalvianin + CoA",
-      "ec": "2.3.1.172",
-      "substrates": [
-        {
-          "metabolite": "pelargonidin_3_o_6_o_caffeoyl_d_glucoside_5_o_d",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "malonyl-coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "4_demalonylsalvianin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_3_1_172"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:21988"
+      "id": "xt_3_hydroxy_3_methylthio_propanoyl_coa_dimethylsulfonio-acetate-to-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_hydroxy_3_methylthio_propanoyl_coa"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "dimethylsulfonio-acetate-to-acetate"
+      },
+      "note": "Shares 3-hydroxy-3-(methylthio)propanoyl-CoA with (dimethylsulfonio)acetate to acetate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:21988"
+            "db": "ChEBI",
+            "id": "CHEBI:84995"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "acridone synthase",
-      "equation": "N-methylanthraniloyl-CoA + 3 malonyl-CoA + 3 H(+) = 1,3-dihydroxy-N-methylacridone + 3 CO2 + 4 CoA + H2O",
-      "ec": "2.3.1.159",
-      "substrates": [
-        {
-          "metabolite": "n_methylanthraniloyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "malonyl-coa",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 3
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_3_dihydroxy_n_methylacridone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 4
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_3_1_159"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:22224"
+      "id": "xt_3_oxopropanoate_1d-myo-inositol-to-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_oxopropanoate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1d-myo-inositol-to-acetate"
+      },
+      "note": "Shares 3-oxopropanoate with 1D-myo-inositol… to acetate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:22224"
+            "db": "ChEBI",
+            "id": "CHEBI:33190"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_oxopropanoate_3-aci-nitropropanoate-to-l-glutamyl-l-cysteinyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_oxopropanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-aci-nitropropanoate-to-l-glutamyl-l-cysteinyl"
+      },
+      "note": "Shares 3-oxopropanoate with 3-aci-nitropropanoate to L-γ-glutamyl-L-cysteinyl-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:33190"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_oxopropanoate_dihydrophloroglucinol-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_oxopropanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dihydrophloroglucinol-to-nadph"
+      },
+      "note": "Shares 3-oxopropanoate with dihydrophloroglucinol to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:33190"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_oxopropanoate_propane-1-3-diol-to-malonyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_oxopropanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "propane-1-3-diol-to-malonyl-coa"
+      },
+      "note": "Shares 3-oxopropanoate with propane-1,3-diol to malonyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:33190"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_oxopropanoate_propane-1-3-diol-to-propynoate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_oxopropanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "propane-1-3-diol-to-propynoate"
+      },
+      "note": "Shares 3-oxopropanoate with propane-1,3-diol to propynoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:33190"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_oxopropanoate_prostaglandin-h2-to-acetaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_oxopropanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "prostaglandin-h2-to-acetaldehyde"
+      },
+      "note": "Shares 3-oxopropanoate with prostaglandin H2 to acetaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:33190"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_oxopropanoate_s-5-oxo-2-5-dihydro-2-f-to-nitrite",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_oxopropanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-5-oxo-2-5-dihydro-2-f-to-nitrite"
+      },
+      "note": "Shares 3-oxopropanoate with (S)-5-oxo-2,5-dihydro-2-f… to nitrite.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:33190"
           }
         ]
       }

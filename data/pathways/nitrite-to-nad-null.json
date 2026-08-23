@@ -1,0 +1,478 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "nitrite-to-nad-null",
+  "name": "nitrite to NAD",
+  "category": "energy-metabolism",
+  "summary": "A 4-step route from nitrite to NAD(+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR195518"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "nitrite",
+      "name": "nitrite",
+      "formula": "NO2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM107"
+      }
+    },
+    {
+      "id": "mk_8",
+      "name": "MK-8",
+      "formula": "C51H72O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:205208"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "menaquinol_8",
+      "name": "Menaquinol 8",
+      "formula": "C51H74O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1368769"
+      }
+    },
+    {
+      "id": "nitrate",
+      "name": "nitrate",
+      "formula": "NO3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM732398"
+      }
+    },
+    {
+      "id": "glyoxylate",
+      "name": "glyoxylate",
+      "formula": "C2HO3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM69"
+      }
+    },
+    {
+      "id": "glycolate",
+      "name": "glycolate",
+      "formula": "C2H3O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM222"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM23"
+      }
+    },
+    {
+      "id": "5_hydroxy_2_4_dioxopentanoate",
+      "name": "5-hydroxy-2,4-dioxopentanoate",
+      "short": "5-hydroxy-2,4-dioxo…",
+      "formula": "C5H5O5",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM6923"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "2_dehydro_3_deoxy_l_arabinonate",
+      "name": "2-dehydro-3-deoxy-L-arabinonate",
+      "short": "2-dehydro-3-deoxy-L…",
+      "formula": "C5H7O5",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM727326"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_7_99_4",
+      "name": "EC 1.7.99.4",
+      "ec": [
+        "1.7.99.4"
+      ]
+    },
+    {
+      "id": "ec_3_7_1_26",
+      "name": "2,4-didehydro-3-deoxy-L-rhamnonate hydrolase",
+      "ec": [
+        "3.7.1.26"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_401",
+      "name": "2-dehydro-3-deoxy-L-rhamnonate dehydrogenase (NAD(+))",
+      "ec": [
+        "1.1.1.401"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR195518",
+      "ec": "1.7.99.4",
+      "substrates": [
+        {
+          "metabolite": "nitrite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "mk_8",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "menaquinol_8",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nitrate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_7_99_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR195518"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR195518"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR195444",
+      "substrates": [
+        {
+          "metabolite": "menaquinol_8",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glyoxylate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "mk_8",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycolate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR195444"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR195444"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "2,4-didehydro-3-deoxy-L-rhamnonate hydrolase",
+      "ec": "3.7.1.26",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_hydroxy_2_4_dioxopentanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_7_1_26"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR106929"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR106929"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "2-dehydro-3-deoxy-L-rhamnonate dehydrogenase (NAD(+))",
+      "ec": "1.1.1.401",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_hydroxy_2_4_dioxopentanoate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_dehydro_3_deoxy_l_arabinonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_401"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR199561"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR199561"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_glycolate_co2-to-ubiquinone-8",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "glycolate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "co2-to-ubiquinone-8"
+      },
+      "note": "Shares glycolate with CO2 to ubiquinone-8.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM222"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_glycolate_co2-to-ubiquinone-8-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "glycolate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "co2-to-ubiquinone-8-null"
+      },
+      "note": "Shares glycolate with CO2 to ubiquinone-8.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM222"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_glycolate_nitrite-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "glycolate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nitrite-to-h2o-null"
+      },
+      "note": "Shares glycolate with nitrite to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM222"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_glycolate_nitrite-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "glycolate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nitrite-to-nad"
+      },
+      "note": "Shares glycolate with nitrite to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM222"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_hydroxy_2_4_dioxopentanoate_nitrite-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_hydroxy_2_4_dioxopentanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nitrite-to-nad"
+      },
+      "note": "Shares 5-hydroxy-2,4-dioxopentanoate with nitrite to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM6923"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_dehydro_3_deoxy_l_arabinonate_nitrite-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_dehydro_3_deoxy_l_arabinonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nitrite-to-nad"
+      },
+      "note": "Shares 2-dehydro-3-deoxy-L-arabinonate with nitrite to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM727326"
+          }
+        ]
+      }
+    }
+  ]
+}

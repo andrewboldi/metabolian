@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 6-deoxocastasterone-to-fmn "6-deoxocastasterone to FMN" {
-  spacing 176
+  spacing 164
 
   spine at 0,0 {
     6_deoxocastasterone
@@ -16,27 +16,15 @@ pathway 6-deoxocastasterone-to-fmn "6-deoxocastasterone to FMN" {
     brassinolide
   }
 
-  branch from fmn side left {
-    fmn
-    <-> . +e_phenylacetaldehyde_oxime +fmnh2 +o2 +h2o +hplus
-    1_aci_nitro_2_phenyl_ethane
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +linoleate +fmnh2 +o2 +h2o +hplus
-    9z_12z_11_hydroxyoctadecadienoate
-  }
-
   branch from castasterone side left {
     castasterone
-    <-> . +adenosine_3_5_bisphosphate +h +castasterone_22_o_sulfate
-    3_phosphoadenylyl_sulfate
+    <-> . +udp +h +castasterone_23_o_d_glucoside
+    udp_alpha_d_glucose
   }
 
   branch from castasterone side right {
     castasterone
-    <-> . +udp +h +castasterone_23_o_d_glucoside
-    udp_alpha_d_glucose
+    <-> . +h +o2 +nadph +brassinolide +h2o
+    nadp
   }
 }

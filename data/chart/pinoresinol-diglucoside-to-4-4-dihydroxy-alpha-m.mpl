@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway pinoresinol-diglucoside-to-4-4-dihydroxy-alpha-m "Pinoresinol diglucoside to 4,4'-Dihydroxy-alpha-meth…" {
-  spacing 238
+  spacing 178
 
   spine at 0,0 {
     pinoresinol_diglucoside
@@ -20,69 +20,9 @@ pathway pinoresinol-diglucoside-to-4-4-dihydroxy-alpha-m "Pinoresinol diglucosid
     o2
   }
 
-  branch from glucose side left {
-    glucose
-    <-> ec_3_2_1_20 [3.2.1.20] +h2o
-    d_maltose
-  }
-
-  branch from glucose side right {
-    glucose
-    <-> ec_3_2_1_206 [3.2.1.206] +oleuropein_aglycone +h2o
-    oleuropein
-  }
-
   branch from cu side left {
     cu
     <-> . +cuii_phytate
     1d_myo_inositol_hexakisphosphate
-  }
-
-  branch from cu side right {
-    cu
-    <-> ec_3_6_3_4 [3.6.3.4] +h +adp +phosphate +h2o
-    atp
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +glycyl_dl_phenylalanine +l_tryptophan
-    tryptophanyl_glycyl_phenylalanine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_histidine +l_methionine +l_tryptophan
-    tryptophanyl_histidyl_methionine
-  }
-
-  branch from h side left {
-    h
-    <-> ec_2_4_1_245 [2.4.1.245] +adp_alpha_d_glucose +beta_d_glucose +adp
-    alpha_alpha_trehalose
-  }
-
-  branch from h side right {
-    h
-    <-> ec_2_4_1_245 [2.4.1.245] +alpha_d_glucose +adp_alpha_d_glucose +alpha_alpha_trehalose
-    adp
-  }
-
-  branch from cu side left {
-    cu
-    <-> ec_3_6_3_54 [3.6.3.54] +h +adp +atp +h2o
-    phosphate
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +8_hydroxy_delta_cadinene +nadp +h2o +h +nadph
-    1s_8ar_delta_cadinene
-  }
-
-  branch from o2 side left {
-    o2
-    <-> ec_1_14_13_174 [1.14.13.174] +h +nadph +s_averantin +1_s_5_s_5_hydroxyaverantin +h2o
-    nadp
   }
 }

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "s-averantin-to-versicolorin-a",
   "name": "(S)-averantin to versicolorin A",
-  "category": "lipid-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 8-step route from (S)-averantin(1−) to versicolorin A(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -193,32 +193,41 @@
       }
     },
     {
-      "id": "cholesterol",
-      "name": "Cholesterol",
-      "formula": "C27H46O",
-      "charge": 0,
+      "id": "n_12_oxojasmonyl_l_amino_acid_anion",
+      "name": "N-(12-oxojasmonyl)-L-α-amino acid anion",
+      "short": "N-(12-oxojasmonyl)-…",
+      "formula": "C14H17NO5R",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:16113"
+        "chebi": "CHEBI:138463"
       }
     },
     {
-      "id": "22r_22_hydroxycholesterol",
-      "name": "(22R)-22-hydroxycholesterol",
-      "short": "22-hydroxycholester…",
-      "formula": "C27H46O2",
-      "charge": 0,
+      "id": "n_12_hydroxy_12_oxojasmonyl_l_amino_acid_dianion",
+      "name": "N-(12-hydroxy-12-oxojasmonyl)-L-α-amino acid dianion",
+      "short": "N-(12-hydroxy-12-ox…",
+      "formula": "C14H16NO6R",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:67237"
+        "chebi": "CHEBI:138464"
       }
     },
     {
-      "id": "24r_24_hydroxycholesterol",
-      "name": "(24R)-24-hydroxycholesterol",
-      "short": "24-hydroxycholester…",
-      "formula": "C27H46O2",
+      "id": "ferruginol",
+      "name": "ferruginol",
+      "formula": "C20H30O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:50516"
+        "chebi": "CHEBI:78274"
+      }
+    },
+    {
+      "id": "salviol",
+      "name": "salviol",
+      "formula": "C20H30O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138944"
       }
     },
     {
@@ -257,6 +266,62 @@
       "charge": -1,
       "xrefs": {
         "chebi": "CHEBI:77947"
+      }
+    },
+    {
+      "id": "amyrin",
+      "name": "β-amyrin",
+      "formula": "C30H50O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:10352"
+      }
+    },
+    {
+      "id": "maniladiol",
+      "name": "maniladiol",
+      "formula": "C30H50O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138945"
+      }
+    },
+    {
+      "id": "3_5_unsubstituted_flavanone",
+      "name": "3',5'-unsubstituted flavanone",
+      "short": "3',5'-unsubstituted…",
+      "formula": "C15H2O2R10",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138897"
+      }
+    },
+    {
+      "id": "3_5_dihydroxyflavanone",
+      "name": "3',5'-dihydroxyflavanone",
+      "short": "3',5'-dihydroxyflav…",
+      "formula": "C15H2O4R10",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:48025"
+      }
+    },
+    {
+      "id": "daturadiol",
+      "name": "daturadiol",
+      "formula": "C30H50O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138955"
+      }
+    },
+    {
+      "id": "sugiol",
+      "name": "sugiol",
+      "formula": "C20H28O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138961"
       }
     }
   ],
@@ -304,10 +369,45 @@
       ]
     },
     {
+      "id": "ec_1_14_14_62",
+      "name": "salviol synthase",
+      "ec": [
+        "1.14.14.62"
+      ]
+    },
+    {
       "id": "ec_1_1_1_353",
       "name": "versiconal hemiacetal acetate reductase",
       "ec": [
         "1.1.1.353"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_63",
+      "name": "beta-amyrin 16beta-monooxygenase",
+      "ec": [
+        "1.14.14.63"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_81",
+      "name": "flavonoid 3',5'-hydroxylase",
+      "ec": [
+        "1.14.14.81"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_64",
+      "name": "beta-amyrin 6beta-monooxygenase",
+      "ec": [
+        "1.14.14.64"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_65",
+      "name": "sugiol synthase",
+      "ec": [
+        "1.14.14.65"
       ]
     }
   ],
@@ -710,11 +810,11 @@
     },
     {
       "id": "r9",
-      "name": "cholesterol + reduced [NADPH--hemoprotein reductase] + O2 = (22R)-hydroxycholesterol + ...",
-      "equation": "cholesterol + reduced [NADPH--hemoprotein reductase] + O2 = (22R)-hydroxycholesterol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "a 12-oxojasmonyl-L-alpha-amino acid + reduced [NADPH--hemoprotein reductase] + O2 = a 1...",
+      "equation": "a 12-oxojasmonyl-L-alpha-amino acid + reduced [NADPH--hemoprotein reductase] + O2 = a 12-hydroxy-12-oxojasmonyl-L-alpha-amino acid + oxidized [NADPH--hemoprotein reductase] + H2O + 2 H(+)",
       "substrates": [
         {
-          "metabolite": "cholesterol",
+          "metabolite": "n_12_oxojasmonyl_l_amino_acid_anion",
           "stoichiometry": 1
         },
         {
@@ -728,7 +828,7 @@
       ],
       "products": [
         {
-          "metabolite": "22r_22_hydroxycholesterol",
+          "metabolite": "n_12_hydroxy_12_oxojasmonyl_l_amino_acid_dianion",
           "stoichiometry": 1
         },
         {
@@ -741,31 +841,32 @@
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:46140"
+        "rhea": "RHEA:55068"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:46140"
+            "id": "RHEA:55068"
           }
         ]
       }
     },
     {
       "id": "r10",
-      "name": "cholesterol + reduced [NADPH--hemoprotein reductase] + O2 = (24R)-hydroxycholesterol + ...",
-      "equation": "cholesterol + reduced [NADPH--hemoprotein reductase] + O2 = (24R)-hydroxycholesterol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "salviol synthase",
+      "equation": "ferruginol + reduced [NADPH--hemoprotein reductase] + O2 = salviol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.62",
       "substrates": [
         {
-          "metabolite": "cholesterol",
+          "metabolite": "ferruginol",
           "stoichiometry": 1
         },
         {
@@ -779,7 +880,7 @@
       ],
       "products": [
         {
-          "metabolite": "24r_24_hydroxycholesterol",
+          "metabolite": "salviol",
           "stoichiometry": 1
         },
         {
@@ -795,17 +896,22 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_62"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:46144"
+        "rhea": "RHEA:55436"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:46144"
+            "id": "RHEA:55436"
           }
         ]
       }
@@ -1002,6 +1108,478 @@
           {
             "db": "Rhea",
             "id": "RHEA:35699"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r15",
+      "name": "beta-amyrin 16beta-monooxygenase",
+      "equation": "beta-amyrin + reduced [NADPH--hemoprotein reductase] + O2 = maniladiol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.63",
+      "substrates": [
+        {
+          "metabolite": "amyrin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "maniladiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_63"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 15,
+      "xrefs": {
+        "rhea": "RHEA:55440"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55440"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r16",
+      "name": "flavonoid 3',5'-hydroxylase",
+      "equation": "a 3',5'-unsubstituted flavanone + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = a 3',5'-dihydroxyflavanone + 2 oxidized [NADPH--hemoprotein reductase] + 2 H2O + 2 H(+)",
+      "ec": "1.14.14.81",
+      "substrates": [
+        {
+          "metabolite": "3_5_unsubstituted_flavanone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_5_dihydroxyflavanone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_81"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 16,
+      "xrefs": {
+        "rhea": "RHEA:55448"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55448"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r17",
+      "name": "beta-amyrin 6beta-monooxygenase",
+      "equation": "beta-amyrin + reduced [NADPH--hemoprotein reductase] + O2 = daturadiol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.64",
+      "substrates": [
+        {
+          "metabolite": "amyrin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "daturadiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_64"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 17,
+      "xrefs": {
+        "rhea": "RHEA:55452"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55452"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r18",
+      "name": "sugiol synthase",
+      "equation": "ferruginol + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = sugiol + 2 oxidized [NADPH--hemoprotein reductase] + 3 H2O + 2 H(+)",
+      "ec": "1.14.14.65",
+      "substrates": [
+        {
+          "metabolite": "ferruginol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sugiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_65"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 18,
+      "xrefs": {
+        "rhea": "RHEA:55456"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55456"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_s_averantin_menthol-to-fmnh2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_averantin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "menthol-to-fmnh2"
+      },
+      "note": "Shares (S)-averantin with (−)-menthol to FMNH2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77899"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_averantin_vinylacetyl-coa-to-norsolorinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_averantin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "vinylacetyl-coa-to-norsolorinate"
+      },
+      "note": "Shares (S)-averantin with vinylacetyl-CoA to norsolorinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77899"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_12_oxojasmonyl_l_amino_acid_anion_lanosteryl-palmitate-to-5-formamido-1-5-phospho",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_12_oxojasmonyl_l_amino_acid_anion"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "lanosteryl-palmitate-to-5-formamido-1-5-phospho"
+      },
+      "note": "Shares N-(12-oxojasmonyl)-L-α-amino acid anion with lanosteryl palmitate to 5-formamido-1-(5-phospho-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:138463"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_12_hydroxy_12_oxojasmonyl_l_amino_acid_dianion_lanosteryl-palmitate-to-5-formamido-1-5-phospho",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_12_hydroxy_12_oxojasmonyl_l_amino_acid_dianion"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "lanosteryl-palmitate-to-5-formamido-1-5-phospho"
+      },
+      "note": "Shares N-(12-hydroxy-12-oxojasmonyl)-L-α-amino acid dianion with lanosteryl palmitate to 5-formamido-1-(5-phospho-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:138464"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ferruginol_abietatriene-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ferruginol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "abietatriene-to-fmn"
+      },
+      "note": "Shares ferruginol with abietatriene to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78274"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_s_5_r_5_hydroxyaverantin_co2-to-coenzyme-m",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_s_5_r_5_hydroxyaverantin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "co2-to-coenzyme-m"
+      },
+      "note": "Shares (1'S,5'R)-5'-hydroxyaverantin with CO2 to coenzyme M.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:71536"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_s_5_r_5_hydroxyaverantin_menthol-to-fmnh2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_s_5_r_5_hydroxyaverantin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "menthol-to-fmnh2"
+      },
+      "note": "Shares (1'S,5'R)-5'-hydroxyaverantin with (−)-menthol to FMNH2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:71536"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3s_versiconol_acetate_5-4-acetoxybut-1-ynyl-2-to-coniferyl-ester",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3s_versiconol_acetate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-4-acetoxybut-1-ynyl-2-to-coniferyl-ester"
+      },
+      "note": "Shares (3S)-versiconol acetate with 5-(4-acetoxybut-1-ynyl)-2… to coniferyl ester.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:72673"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_versiconol_5-4-acetoxybut-1-ynyl-2-to-coniferyl-ester",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_versiconol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-4-acetoxybut-1-ynyl-2-to-coniferyl-ester"
+      },
+      "note": "Shares (S)-versiconol with 5-(4-acetoxybut-1-ynyl)-2… to coniferyl ester.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77947"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_5_unsubstituted_flavanone_3-5-unsubstituted-to-r-allantoin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_5_unsubstituted_flavanone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-5-unsubstituted-to-r-allantoin"
+      },
+      "note": "Shares 3',5'-unsubstituted flavanone with 3',5'-unsubstituted… to (R)-(−)-allantoin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:138897"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_5_dihydroxyflavanone_3-5-unsubstituted-to-r-allantoin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_5_dihydroxyflavanone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-5-unsubstituted-to-r-allantoin"
+      },
+      "note": "Shares 3',5'-dihydroxyflavanone with 3',5'-unsubstituted… to (R)-(−)-allantoin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:48025"
           }
         ]
       }

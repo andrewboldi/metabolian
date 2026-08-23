@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-2-3-epoxysqualene-to-onocerin "(S)-2,3-epoxysqualene to α-onocerin" {
-  spacing 172
+  spacing 184
 
   spine at 0,0 {
     epoxysqualene
@@ -14,5 +14,17 @@ pathway s-2-3-epoxysqualene-to-onocerin "(S)-2,3-epoxysqualene to α-onocerin" {
     21s_21_22_epoxypolypoda_8_26_13_17_trien_3_ol
     <-> ec_5_4_99_66 [5.4.99.66]
     onocerin
+  }
+
+  branch from epoxysqualene side left {
+    epoxysqualene
+    <-> ec_4_2_1_124 [4.2.1.124] +h2o
+    arabidiol
+  }
+
+  branch from epoxysqualene side right {
+    epoxysqualene
+    <-> ec_4_2_1_128 [4.2.1.128] +h2o
+    lupan_3_20_diol
   }
 }

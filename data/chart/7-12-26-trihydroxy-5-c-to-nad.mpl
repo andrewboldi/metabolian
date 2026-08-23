@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 7-12-26-trihydroxy-5-c-to-nad "7α,12α,26-trihydroxy-5β-c… to NAD" {
-  spacing 194
+  spacing 188
 
   spine at 0,0 {
     7_12_26_trihydroxy_5_cholestan_3_one
@@ -18,45 +18,39 @@ pathway 7-12-26-trihydroxy-5-c-to-nad "7α,12α,26-trihydroxy-5β-c… to NAD" {
     25r_5beta_cholestane_3alpha_7alpha_12alpha_26_t
   }
 
-  branch from 25r_5beta_cholestane_3alpha_7alpha_12alpha_26_t side left {
-    25r_5beta_cholestane_3alpha_7alpha_12alpha_26_t
-    <-> . +h +o2 +nadph +nadp +h2o
-    5beta_cholestane_3alpha_7alpha_12alpha_27_27_pen
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +h +medicarpin +nadph
-    vestitol
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_14_13_90 [1.14.13.90] +h +all_trans_antheraxanthin +o2 +nadph +h2o
-    all_trans_violaxanthin
+  branch from h2o side left {
+    h2o
+    <-> . +h +adp +phosphate +atp
+    cholate
   }
 
   branch from h2o side right {
     h2o
-    <-> . +2_4_dihydroxy_2_heptenedioic_acid
-    cis_2_oxohept_3_enedioic_acid
+    <-> . +h +adp +cholesterol +phosphate +cholesterol
+    atp
+  }
+
+  branch from h side left {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    cholesterol
+  }
+
+  branch from h side right {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    citrate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_3_2_7 [3.3.2.7] +5z_9e_14z_8xi_11r_12s_11_12_epoxy_8_hydroxyicos +h
-    5z_9e_14z_8xi_11xi_12s_8_11_12_trihydroxyicosa
+    <-> . +phosphatidylglycerol_ditetradec_7_enoyl_n_c14_1 +1_2_ditetradec_7_enoyl_sn_glycerol_3_phosphate
+    cardiolipin_tetratetradec_7_enoyl_n_c14_1
   }
 
-  branch from nad side right {
-    nad
-    <-> . +nadh +h +3_oxononadecanoyl_coenzyme_a
-    3_hydroxynonadecanoyl_coenzyme_a
-  }
-
-  branch from nad side left {
-    nad
-    <-> . +nadh +h +3_oxoheptadecanoyl_coenzyme_a
-    3_hydroxyheptadecanoyl_coenzyme_a
+  branch from h2o side right {
+    h2o
+    <-> . +h +adp +phosphate +atp
+    r_carnitine
   }
 }

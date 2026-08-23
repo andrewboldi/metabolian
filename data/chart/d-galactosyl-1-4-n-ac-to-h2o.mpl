@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-galactosyl-1-4-n-ac-to-h2o "β-D-galactosyl-(1→4)-N-ac… to H2O" {
-  spacing 284
+  spacing 272
 
   spine at 0,0 {
     d_galactosyl_1_4_n_acetyl_d_glucosaminide
@@ -16,27 +16,15 @@ pathway d-galactosyl-1-4-n-ac-to-h2o "β-D-galactosyl-(1→4)-N-ac… to H2O" {
     4_nitrophenyl_l_fucoside
   }
 
-  branch from d_galactosyl_1_4_n_acetyl_d_glucosaminide side left {
-    d_galactosyl_1_4_n_acetyl_d_glucosaminide
-    <-> ec_2_4_1_149 [2.4.1.149] +udpglcnac +udp +hplus
-    n_acetyl_d_glucosaminyl_1_3_d_galactosyl_1_4_n_a
+  branch from gdp_l_fucose side left {
+    gdp_l_fucose
+    <-> . +n_acetyl_neuraminosyl_2_3_d_galactosyl_1_4_n_ace +gdp +hplus
+    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_4_l_fuc
   }
 
-  branch from d_galactosyl_1_4_n_acetyl_d_glucosaminide side right {
-    d_galactosyl_1_4_n_acetyl_d_glucosaminide
-    <-> ec_2_4_1_150 [2.4.1.150] +udpglcnac +udp +hplus
-    n_acetyl_d_glucosaminyl_1_6_d_galactosyl_1_4_n_a
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +indole_carboxyl_tetrahydro_thiazole +h
-    s_indole_l_cysteine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +4_3_pyridyl_3_butenoic_acid
-    gamma_hydroxy_3_pyridinebutanoate
+  branch from gdp_l_fucose side right {
+    gdp_l_fucose
+    <-> . +n_acetylneuraminyl_2_3_d_galactosyl_1_4_n_acety +gdp +hplus
+    n_acetylneuraminosyl_2_3_d_galactosyl_1_4_l_fuc
   }
 }

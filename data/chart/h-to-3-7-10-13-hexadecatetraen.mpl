@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway h-to-3-7-10-13-hexadecatetraen "H to 3,7,10,13-Hexadecatetraen…" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     h
@@ -14,17 +14,5 @@ pathway h-to-3-7-10-13-hexadecatetraen "H to 3,7,10,13-Hexadecatetraen…" {
     2e_7z_10z_13z_hexadecatetraenoyl_coa
     <-> .
     3_7_10_13_hexadecatetraenoyl_coenzyme_a
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +2_4_6_6_tetranitro_2_4_azoxytoluene +2_hydroxylamino_4_6_dinitrotoluene +o2
-    4_hydroxylamino_2_6_dinitrotoluene
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +7_8_dihydro_d_neopterin_2_phosphate +phosphate
-    dihydroneopterin
   }
 }

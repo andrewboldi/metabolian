@@ -110,43 +110,6 @@
       "xrefs": {
         "chebi": "CHEBI:62286"
       }
-    },
-    {
-      "id": "preechinulin",
-      "name": "preechinulin",
-      "formula": "C19H23N3O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:193003"
-      }
-    },
-    {
-      "id": "dmapp",
-      "name": "Dimethylallyl diphosphate (DMAPP)",
-      "short": "Dimethylallyl PP…",
-      "formula": "C5H9O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:57623"
-      }
-    },
-    {
-      "id": "tardioxopiperazine_b",
-      "name": "tardioxopiperazine B",
-      "formula": "C24H31N3O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:193006"
-      }
-    },
-    {
-      "id": "tardioxopiperazine_a",
-      "name": "tardioxopiperazine A",
-      "formula": "C24H31N3O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:193007"
-      }
     }
   ],
   "enzymes": [
@@ -155,28 +118,40 @@
       "name": "nucleotide diphosphatase",
       "ec": [
         "3.6.1.9"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "O95671"
+      }
     },
     {
       "id": "ec_3_6_1_66",
       "name": "XTP/dITP diphosphatase",
       "ec": [
         "3.6.1.66"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q9BY32"
+      }
     },
     {
       "id": "ec_2_4_2_1",
       "name": "purine-nucleoside phosphorylase",
       "ec": [
         "2.4.2.1"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q8IV20"
+      }
     },
     {
       "id": "ec_3_6_1_64",
       "name": "inosine diphosphate phosphatase",
       "ec": [
         "3.6.1.64"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q96DE0"
+      }
     }
   ],
   "reactions": [
@@ -361,81 +336,203 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "preechinulin + dimethylallyl diphosphate = tardioxopiperazine B + diphosphate",
-      "equation": "preechinulin + dimethylallyl diphosphate = tardioxopiperazine B + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "preechinulin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "dmapp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "tardioxopiperazine_b",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:73775"
+      "id": "xt_2_deoxyinosine_5_phosphate_7s-salutaridinol-to-codeinone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxyinosine_5_phosphate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "7s-salutaridinol-to-codeinone"
+      },
+      "note": "Shares 2'-deoxyinosine 5'-phosphate with (7S)-salutaridinol to codeinone.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:73775"
+            "db": "ChEBI",
+            "id": "CHEBI:61194"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "preechinulin + dimethylallyl diphosphate = tardioxopiperazine A + diphosphate",
-      "equation": "preechinulin + dimethylallyl diphosphate = tardioxopiperazine A + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "preechinulin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "dmapp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "tardioxopiperazine_a",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:73779"
+      "id": "xt_2_deoxyinosine_5_phosphate_aldehydo-d-allose-to-5-hydroxyisouric-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxyinosine_5_phosphate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "aldehydo-d-allose-to-5-hydroxyisouric-acid"
+      },
+      "note": "Shares 2'-deoxyinosine 5'-phosphate with aldehydo-D-allose to 5-hydroxyisouric acid.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:73779"
+            "db": "ChEBI",
+            "id": "CHEBI:61194"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxyinosine_5_phosphate_n-acetylneuraminyl-2-3-to-cytidine-5-monophosph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxyinosine_5_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetylneuraminyl-2-3-to-cytidine-5-monophosph"
+      },
+      "note": "Shares 2'-deoxyinosine 5'-phosphate with α-N-acetylneuraminyl-(2→3… to cytidine 5'-monophosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61194"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxyinosine_dtmp-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxyinosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtmp-to-ammonium"
+      },
+      "note": "Shares 2'-deoxyinosine with dTMP to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28997"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxyinosine_n-acetylneuraminyl-2-3-to-cytidine-5-monophosph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxyinosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetylneuraminyl-2-3-to-cytidine-5-monophosph"
+      },
+      "note": "Shares 2'-deoxyinosine with α-N-acetylneuraminyl-(2→3… to cytidine 5'-monophosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28997"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxy_d_ribose_1_phosphate_2-deoxyguanosine-to-2-hydroxy-3-oxopropanoate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxy_d_ribose_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-deoxyguanosine-to-2-hydroxy-3-oxopropanoate"
+      },
+      "note": "Shares 2-deoxy-α-D-ribose 1-phosphate with 2'-deoxyguanosine… to 2-hydroxy-3-oxopropanoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57259"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxy_d_ribose_1_phosphate_dadp-to-adenine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxy_d_ribose_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dadp-to-adenine"
+      },
+      "note": "Shares 2-deoxy-α-D-ribose 1-phosphate with dADP to adenine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57259"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxy_d_ribose_1_phosphate_dttp-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxy_d_ribose_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dttp-to-hydrogen-donor"
+      },
+      "note": "Shares 2-deoxy-α-D-ribose 1-phosphate with dTTP to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57259"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxy_d_ribose_1_phosphate_purines-2-deoxy-d-ribonu-to-2-hydroxy-3-oxosucci",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxy_d_ribose_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "purines-2-deoxy-d-ribonu-to-2-hydroxy-3-oxosucci"
+      },
+      "note": "Shares 2-deoxy-α-D-ribose 1-phosphate with purines 2'-deoxy-D-ribonu… to 2-hydroxy-3-oxosuccinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57259"
           }
         ]
       }

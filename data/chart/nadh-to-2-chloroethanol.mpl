@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-2-chloroethanol "NADH to 2-chloroethanol" {
-  spacing 206
+  spacing 260
 
   spine at 0,0 {
     nadh
@@ -20,43 +20,97 @@ pathway nadh-to-2-chloroethanol "NADH to 2-chloroethanol" {
 
   branch from nad side left {
     nad
-    <-> . +o_s_docosanoylpantetheine_4_phosphoryl_l_serine +nadh +h
-    o_s_2e_docosenoylpantetheine_4_phosphoryl_l_seri
+    <-> ec_1_14_13_96 [1.14.13.96] +nadh +h +5beta_cholestane_3alpha_7alpha_diol +o2 +h2o
+    5beta_cholestane_3alpha_7alpha_12alpha_triol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_3_1_10 [1.3.1.10] +nadh +o_s_2e_9z_21z_tetracontatrienoylpantetheine_4_ph +h
-    o_s_9z_21z_tetracontadienoylpantetheine_4_phosph
+    <-> ec_1_14_99_33 [1.14.99.33] +nadh +9z_12z_octadecadienoate +h +o2 +h2o
+    crepenynate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +mycothiol +h2o2
-    mycothione
+    <-> ec_3_2_2_3 [3.2.2.3] +uridine +beta_d_ribofuranose
+    uracil
   }
 
   branch from h2o side right {
     h2o
-    <-> . +o_s_3r_17z_29z_3_hydroxyoctatetracontadienoylpan
-    o_s_2e_17z_29z_octatetracontatrienoylpantetheine
+    <-> ec_3_2_1_22 [3.2.1.22] +sucrose +beta_d_galactose
+    raffinose
   }
 
   branch from h side left {
     h
-    <-> ec_1_3_1_10 [1.3.1.10] +nadh +o_s_2e_15z_27z_hexatetracontatrienoylpantetheine +nad
-    o_s_15z_27z_hexatetracontadienoylpantetheine_4_p
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +l_lyxopyranose +phosphate +l_lyxopyranose +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_11z_23z_3_hydroxydotetracontadienoylpante +nadp +nadph
-    o_s_11z_23z_3_oxodotetracontadienoylpantetheine
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    dideoxy_dihydrostreptose
   }
 
-  branch from oxirane side left {
-    oxirane
-    <-> . +2_bromoethanol +h
-    bromide
+  branch from nadh side left {
+    nadh
+    <-> ec_1_3_1_77 [1.3.1.77] +pelargonidin +h +nad
+    epiafzelechin
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_3_1_77 [1.3.1.77] +pelargonidin +h +nad
+    afzelechin
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    l_dihydrostreptose
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    l_olivose
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +11r_dihydroartemisinic_aldehyde
+    2z_6e_farnesol
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +octanal
+    2_ethylhexan_1_ol
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_2_1_22 [3.2.1.22] +3_beta_d_galactosyl_sn_glycerol +glycerol
+    beta_d_galactose
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_2_1_22 [3.2.1.22] +myo_inositol +beta_d_galactose
+    alpha_d_galactosyl_1_3_1d_myo_inositol
+  }
+
+  branch from chloride side left {
+    chloride
+    <-> . +5_chloro_trans_dienelactone
+    2z_4z_2_3_dichloromuconate
+  }
+
+  branch from chloride side right {
+    chloride
+    <-> . +h +5_chloromaleylacetate
+    2_5_dichloro_3_oxoadipate
   }
 }

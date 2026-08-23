@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway caldariellaquinone-to-succinate "caldariellaquinone to succinate" {
-  spacing 192
+  spacing 234
 
   spine at 0,0 {
     caldariellaquinone
@@ -16,39 +16,15 @@ pathway caldariellaquinone-to-succinate "caldariellaquinone to succinate" {
     naphthyl_2_methyl_succinyl_coa
   }
 
-  branch from caldariellaquinol side left {
-    caldariellaquinol
-    <-> ec_7_1_1_4 [7.1.1.4] +caldariellaquinone +h2o +o2
-    pmf
-  }
 
-  branch from caldariellaquinol side right {
-    caldariellaquinol
-    <-> ec_1_10_3_13 [1.10.3.13] +caldariellaquinone +h2o
-    o2
-  }
 
-  branch from fumarate side left {
-    fumarate
-    <-> ec_3_7_1_14 [3.7.1.14] +h +2_hydroxypenta_2_4_dienoic_acid +h2o
-    2_hydroxy_6_oxonona_2_4_7_trienedioic_acid
-  }
 
-  branch from fumarate side right {
-    fumarate
-    <-> ec_1_3_5_1 [1.3.5.1] +ubiquinol_2 +succinate
-    ubiquinone_2
-  }
 
-  branch from succinate side left {
-    succinate
-    <-> . +succinyl_coa +3_methylbenzylsuccinate
-    3_methylbenzyl_succinyl_coa
-  }
 
-  branch from succinate side right {
-    succinate
-    <-> ec_3_5_1_3 [3.5.1.3] +ethanol +h +h2o
-    4_ethoxy_4_oxobutanoic_acid
-  }
+
+
+
+
+
+
 }

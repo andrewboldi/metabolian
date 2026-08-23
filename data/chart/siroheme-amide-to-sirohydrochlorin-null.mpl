@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway siroheme-amide-to-sirohydrochlorin-null "siroheme amide to sirohydrochlorin" {
-  spacing 248
+  spacing 164
 
   spine at 0,0 {
     siroheme_amide
@@ -16,89 +16,5 @@ pathway siroheme-amide-to-sirohydrochlorin-null "siroheme amide to sirohydrochlo
     precorrin_2
     <-> . +nadp -nadph -sirohydrochlorin
     h
-  }
-
-  branch from l_glutamine side left {
-    l_glutamine
-    <-> ec_4_2_1_19 [4.2.1.19] +5_amino_1_5_phospho_beta_d_ribosyl_imidazole_4_c +3_imidazol_4_yl_2_oxopropyl_phosphate +h +l_glutamate +h2o
-    5_5_phospho_1_deoxy_d_ribulos_1_ylimino_methylam
-  }
-
-  branch from l_glutamine side right {
-    l_glutamine
-    <-> . +udp_3_acetamido_2_seryl_amino_2_3_dideoxy_alpha +atp +h2o +h +adp +l_glutamate +phosphate
-    udp_3_acetamido_2_3_dideoxy_2_seryl_amino_alpha
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    1_oleoyl_sn_glycero_3_phosphoethanolamine
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    1_linoleoyl_sn_glycero_3_phosphoethanolamine
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_1_13_11_34 [1.13.11.34] +5s_6e_8z_11z_13e_15r_5_hydroperoxy_15_hydroxyic
-    7e_9e_11z_13e_15r_5s_6s_5_6_epoxyicosa_15_hydro
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_1_13_11_34 [1.13.11.34] +5_s_hydroperoxy_18_r_hydroxy_6e_8z_11z_14z_16e_i
-    7e_9e_11z_14z_18r_16e_5s_6s_5_6_epoxyicosa_15_h
-  }
-
-  branch from precorrin_2 side left {
-    precorrin_2
-    <-> ec_2_1_1_130 [2.1.1.130] +s_adenosyl_l_homocysteine +precorrin_3a +h
-    s_adenosyl_l_methionine
-  }
-
-  branch from precorrin_2 side right {
-    precorrin_2
-    <-> ec_2_1_1_107 [2.1.1.107] +s_adenosyl_l_homocysteine +h +s_adenosyl_l_methionine
-    uroporphyrinogen_iii
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_geranial +h
-    1s_2s_4r_isodihydrocarveol
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
-    neodihydrocarveol
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    lysope_18_3_9z_12z_15z_0_0
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    2_hexadecanoyl_sn_glycero_3_phospho_1_sn_glycero
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> ec_1_1_1_71 [1.1.1.71] +h +phellandral +nadp
-    1r_2s_4r_borneol
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> ec_1_1_1_71 [1.1.1.71] +borneol +nadp +h
-    phellandral
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway e-hex-2-enal-to-nadph "(E)-hex-2-enal to NADPH" {
-  spacing 188
+  spacing 152
 
   spine at 0,0 {
     e_hex_2_enal
@@ -14,41 +14,5 @@ pathway e-hex-2-enal-to-nadph "(E)-hex-2-enal to NADPH" {
     3z_hex_3_en_1_ol
     <-> . +nadp -cis_3_hexenal -nadph
     h
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_14_13_5 [1.14.13.5] +nadh +imidazole_4_acetate +o2 +h2o
-    5_hydroxy_4_imidazoleacetate
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_14_13_5 [1.14.13.5] +nadh +h +imidazole_4_acetate +o2 +h2o
-    imidazolone_acetate
-  }
-
-  branch from h side left {
-    h
-    <-> ec_5_4_99_3 [5.4.99.3] +3_hydroxy_3_methyl_2_oxopentanoic_acid
-    s_2_ethyl_2_hydroxy_3_oxobutanoate
-  }
-
-  branch from h side right {
-    h
-    <-> ec_2_3_1_226 [2.3.1.226] +methylmalonyl_coa +co2
-    propanoyl_coa
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> . +4_hydroxy_5_methyl_2_propyl_3_2h_furanone +nadp +h
-    2e_4_hydroxy_5_methyl_2_propylidene_3_2h_furano
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> ec_1_1_1_1 [1.1.1.1] +s_nitrosoglutathione +h +nadp
-    sulfinamide_glutathione
   }
 }

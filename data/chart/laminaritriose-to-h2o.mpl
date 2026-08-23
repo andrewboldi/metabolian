@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway laminaritriose-to-h2o "laminaritriose to H2O" {
-  spacing 184
+  spacing 208
 
   spine at 0,0 {
     laminaritriose
@@ -20,13 +20,37 @@ pathway laminaritriose-to-h2o "laminaritriose to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> ec_3_1_1_1 [3.1.1.1] +nafamostat +4_guanidinobenzoic_acid
-    6_amidino_2_naphthol
+    <-> ec_4_4_1_13 [4.4.1.13] +pyruvate +nh4 +6_chloro_2_phenyl_4_sulfanylpyrimidine
+    s_fenclorimyl_l_cysteine
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_22 [3.2.1.22] +alpha_d_galactose +4_methylumbelliferone
-    4_methylumbelliferyl_d_galactoside
+    <-> ec_4_4_1_13 [4.4.1.13] +4_mercapto_4_methylpentan_2_one +pyruvate +nh4
+    s_4_oxo_2_methylpentan_2_yl_l_cysteine
+  }
+
+  branch from beta_d_glucose side left {
+    beta_d_glucose
+    <-> ec_1_1_5_2 [1.1.5.2] +ubiquinol_10 +d_glucono_1_5_lactone
+    ubiquinone_10
+  }
+
+  branch from beta_d_glucose side right {
+    beta_d_glucose
+    <-> ec_5_3_1_5 [5.3.1.5]
+    beta_d_fructose
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +d_galactopyranose
+    d_galp_1_6_d_galp
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +4_6_methyloctanoyl_5_oxo_2h_furan_3_yl_methyl_p
+    2_oxo_3_phosphooxy_propyl_8_methyl_3_oxodecanoat
   }
 }

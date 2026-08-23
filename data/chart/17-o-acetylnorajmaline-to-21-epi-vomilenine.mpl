@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 17-o-acetylnorajmaline-to-21-epi-vomilenine "17-O-acetylnorajmaline to 21-epi-vomilenine" {
-  spacing 224
+  spacing 212
 
   spine at 0,0 {
     17_o_acetylnorajmaline
@@ -14,17 +14,5 @@ pathway 17-o-acetylnorajmaline-to-21-epi-vomilenine "17-O-acetylnorajmaline to 2
     h
     <-> . +vomilenine
     21_epi_vomilenine
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    estrone_3_o_d_glucuronide
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    ezetimibe_phenoxy_glucuronide
   }
 }

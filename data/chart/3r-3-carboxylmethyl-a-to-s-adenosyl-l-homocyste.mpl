@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3r-3-carboxylmethyl-a-to-s-adenosyl-l-homocyste "(3R)-3-[(carboxylmethyl)a… to S-adenosyl-L-homocysteine" {
-  spacing 200
+  spacing 164
 
   spine at 0,0 {
     3r_3_carboxylmethyl_amino_decanoate
@@ -16,51 +16,15 @@ pathway 3r-3-carboxylmethyl-a-to-s-adenosyl-l-homocyste "(3R)-3-[(carboxylmethyl
     2_4_dihydroxy_3_methyl_6_2_oxoundecyl_benzaldehy
   }
 
-  branch from glycine side left {
-    glycine
-    <-> ec_4_3_2_11 [4.3.2.11] +3r_3_carboxylmethyl_amino_fatty_acid +holo-acp +hplus +h2o
-    o_s_2e_2_enoylpantetheine_4_phosphoryl_l_serine
+  branch from malonyl-coa side left {
+    malonyl-coa
+    <-> . +12_methyloctadecanoyl_coa +hplus +co2 +coa
+    4_hydroxy_6_11_methylheptadecyl_pyran_2_one
   }
 
-  branch from glycine side right {
-    glycine
-    <-> . +n_n_dimethyl_l_argininium +glyoxylate
-    5_3_3_dimethylguanidino_2_oxopentanoate
-  }
-
-  branch from holo-acp side left {
-    holo-acp
-    <-> . +hexadecanoyl_amp +amp +hplus
-    o_s_hexadecanoylpantetheine_4_phosphoryl_serine
-  }
-
-  branch from holo-acp side right {
-    holo-acp
-    <-> . +medium_chain_fatty_acyl_amp +amp +hplus
-    o_s_medium_chain_fatty_acyl_pantetheine_4_phosph
-  }
-
-  branch from hydrogen_acceptor side left {
-    hydrogen_acceptor
-    <-> . +urobilinogen +hydrogen_donor
-    4z_15z_mesobilirubin_ix
-  }
-
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> . +2_4_6_trinitrotoluene +gsh +hydrogen_donor +h2o
-    s_2_4_dinitro_6_hydroxylaminotoluyl_glutathione
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +cytidine_5_monophosphate_1 +sam +hplus
-    5_methylcytidine_5_monophosphate_1
-  }
-
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_319 [2.1.1.319] +l_argininium +sam +hplus
-    n_n_dimethyl_l_arginine_1
+  branch from malonyl-coa side right {
+    malonyl-coa
+    <-> . +isomyristoyl_coa +hplus +co2 +coa
+    4_hydroxy_6_11_methyldodecyl_pyran_2_one
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-2-hydroxy-fatty-to-s-adenosyl-l-homocysteine "N-(2-hydroxy-fatty… to S-adenosyl-L-homocysteine" {
-  spacing 300
+  spacing 276
 
   spine at 0,0 {
     n_2_hydroxy_fatty_acyl_dihydroceramide
@@ -16,29 +16,5 @@ pathway n-2-hydroxy-fatty-to-s-adenosyl-l-homocysteine "N-(2-hydroxy-fatty… to
     1_2_diacyl_sn_glycero_3_phospho_n_n_dimethyletha
     <-> ec_2_1_1_71 [2.1.1.71] +sam -sah -hplus
     phosphatidylcholine
-  }
-
-  branch from cytidine_5_monophosphate side left {
-    cytidine_5_monophosphate
-    <-> . +neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac +cmp_n_acetyl_neuraminate +hplus
-    neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac
-  }
-
-  branch from cytidine_5_monophosphate side right {
-    cytidine_5_monophosphate
-    <-> . +neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac +cmp_n_acetyl_neuraminate +hplus
-    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +uridine_5_monophosphate_1 +sam +hplus
-    2_o_methyluridine_5_monophosphate_1
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +sam +2_o_methyluridine_5_monophosphate_1 +hplus
-    uridine_5_monophosphate_1
   }
 }

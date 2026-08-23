@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway angiotensin-i-dizwitterion-to-his-pro "angiotensin I dizwitterion to His-Pro" {
-  spacing 152
+  spacing 158
 
   spine at 0,0 {
     angiotensin_i_dizwitterion
@@ -14,5 +14,11 @@ pathway angiotensin-i-dizwitterion-to-his-pro "angiotensin I dizwitterion to His
     phe_his
     <-> . +ile5_angiotensin_ii_1_7_dizwitterion +h2o -his_pro
     angiotensin_1_5_dizwitterion
+  }
+
+  branch from angiotensin_i_dizwitterion side left {
+    angiotensin_i_dizwitterion
+    <-> ec_3_4_15_1 [3.4.15.1] +h2o +ile5_angiotensin_ii_dizwitterion
+    his_leu
   }
 }

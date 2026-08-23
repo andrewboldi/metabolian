@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-demethyl-desepoxymaytan-to-7a-hydroxy-o-carbam "N-Demethyl-desepoxymaytan… to 7a-Hydroxy-o-carbamoyl-de…" {
-  spacing 286
+  spacing 340
 
   spine at 0,0 {
     n_demethyl_desepoxymaytansinol
@@ -18,14 +18,14 @@ pathway n-demethyl-desepoxymaytan-to-7a-hydroxy-o-carbam "N-Demethyl-desepoxymay
 
   branch from carbamoyl_phosphate side left {
     carbamoyl_phosphate
-    <-> ec_2_7_2_2 [2.7.2.2] +gdp +carbamate
-    gtp
+    <-> . +9beta_mitosane_core +phosphate
+    carbamoylated_9beta_mitosane_core
   }
 
   branch from carbamoyl_phosphate side right {
     carbamoyl_phosphate
-    <-> ec_2_1_3_6 [2.1.3.6] +spermidine +h +phosphate
-    n_carbamoylspermidine
+    <-> . +9alpha_mitosane_core +phosphate
+    carbamoylated_9alpha_mitosane_core
   }
 
   branch from 20_o_methyl_19_chloroproansamitocin side left {
@@ -36,37 +36,121 @@ pathway n-demethyl-desepoxymaytan-to-7a-hydroxy-o-carbam "N-Demethyl-desepoxymay
 
   branch from phosphate side right {
     phosphate
-    <-> . +1_archaetidyl_d_myo_inositol +h2o
-    1_archaetidyl_1d_myo_inositol_3_phosphate
+    <-> ec_3_1_3_63 [3.1.3.63] +2_carboxy_d_arabinitol +h2o
+    2_carboxy_d_arabinitol_1_phosphate
   }
 
   branch from phosphate side left {
     phosphate
-    <-> . +guanosine +h2o
-    guanosine_2_monophosphate
+    <-> ec_2_5_1_56 [2.5.1.56] +n_acetyl_beta_neuraminate_9_phosphate +h +phosphoenolpyruvate +h2o
+    n_acetyl_d_mannosamine_6_phosphate
   }
 
   branch from co2 side right {
     co2
-    <-> ec_4_1_1_56 [4.1.1.56] +tridecan_2_one
-    3_oxotetradecanoic_acid
+    <-> ec_3_1_1_78 [3.1.1.78] +polyneuridine_aldehyde +h2o +16_epivellosimine
+    methanol
   }
 
   branch from co2 side left {
     co2
-    <-> . +15_decarboxymethyl_epsilon_rhodomycinone +h
-    15_demethoxy_epsilon_rhodomycinone
+    <-> ec_3_1_1_78 [3.1.1.78] +polyneuridine_aldehyde +h2o +methanol
+    16_epivellosimine
   }
 
   branch from succinate side right {
     succinate
-    <-> . +2_oxoglutarate +fusicocca_2_10_14_diene_8beta_16_diol +o2 +co2
-    fusicocca_1_10_14_diene_3_8beta_16_triol
+    <-> ec_1_14_20_4 [1.14.20.4] +2_oxoglutarate +o2 +2r_3s_4s_leucoanthocyanidin +co2 +h2o
+    4s_2_3_dehydroflavan_3_4_diol
   }
 
   branch from succinate side left {
     succinate
-    <-> . +2_oxoglutarate +fusicocca_2_10_14_diene_8beta_16_diol +o2 +co2 +h2o
-    8beta_hydroxyfusicocca_1_10_14_diene_16_al
+    <-> ec_1_14_20_4 [1.14.20.4] +2_oxoglutarate +h +o2 +2r_3s_4s_leucoanthocyanidin +co2 +h2o
+    3_hydroxy_2_phenylchromenylium
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_1_20_1_1 [1.20.1.1] +nadh +h +nad +h2o
+    phosphite
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> ec_3_1_3_11 [3.1.3.11] +d_fructofuranose_1_phosphate +h2o
+    beta_d_fructose
+  }
+
+  branch from carbamoyl_phosphate side right {
+    carbamoyl_phosphate
+    <-> . +kanamycin_b +h +phosphate
+    nebramycin_iv
+  }
+
+  branch from carbamoyl_phosphate side left {
+    carbamoyl_phosphate
+    <-> . +tobramycin +phosphate
+    nebramycin_5
+  }
+
+  branch from h side right {
+    h
+    <-> . +udp +isovitexin_7_o_xylosyl_2_o_arabinoside +isovitexin_7_o_xyloside
+    udp_beta_l_arabinopyranose
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_4_1_338 [2.4.1.338] +udp +validienamycin +1_1_bis_valienamine
+    udp_alpha_d_glucose
+  }
+
+  branch from 2_oxoglutarate side right {
+    2_oxoglutarate
+    <-> ec_2_2_1_9 [2.2.1.9] +h +isochorismate +co2 +1r_6r_6_hydroxy_2_succinyl_cyclohexa_2_4_diene
+    pyruvate
+  }
+
+  branch from 2_oxoglutarate side left {
+    2_oxoglutarate
+    <-> ec_1_2_4_2 [1.2.4.2] +r_lipoamide +h +co2
+    s_8_succinyldihydrolipoamide
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_14_13_55 [1.14.13.55] +h +protopine +nadph +nadp +h2o
+    6_hydroxyprotopine
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_14_13_37 [1.14.13.37] +s_cis_n_methylstylopine +nadph +nadp +h2o
+    protopine
+  }
+
+  branch from co2 side right {
+    co2
+    <-> ec_3_5_1_10 [3.5.1.10] +z_2_methyl_3_aminoperacrylic_acid +nh4 +h +h2o
+    z_2_methylureidoperacrylic_acid
+  }
+
+  branch from co2 side left {
+    co2
+    <-> ec_2_3_1_235 [2.3.1.235] +malonyl_coa +h +coa +h2o
+    tetracenomycin_f2
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> . +2_oxoglutarate +h +alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_e_coli +o2 +co2
+    s_2_hydroxymyristate_modified_lipid_a
+  }
+
+  branch from succinate side left {
+    succinate
+    <-> . +2_oxindole_3_acetate +co2 +2_oxoglutarate +o2
+    indol_3_yl_acetate
   }
 }

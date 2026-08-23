@@ -1,0 +1,545 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1-haloalkane-to-carboxylic-acid-anion-19081",
+  "name": "1-haloalkane to carboxylic acid anion",
+  "category": "lipid-metabolism",
+  "summary": "A 3-step route from 1-haloalkane to carboxylic acid anion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:19081"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:18060"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1_haloalkane",
+      "name": "1-haloalkane",
+      "formula": "CH2RX",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18060"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "halide_anion",
+      "name": "halide anion",
+      "formula": "X",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16042"
+      }
+    },
+    {
+      "id": "primary_alcohol",
+      "name": "primary alcohol",
+      "formula": "CH3OR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15734"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "aldehyde",
+      "name": "aldehyde",
+      "formula": "CHOR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17478"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "carboxylic_acid_anion",
+      "name": "carboxylic acid anion",
+      "short": "carboxylic acid…",
+      "formula": "CO2R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29067"
+      }
+    },
+    {
+      "id": "acyl_coa",
+      "name": "acyl-CoA",
+      "formula": "C22H31N7O17P3SR",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58342"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_8_1_5",
+      "name": "haloalkane dehalogenase",
+      "ec": [
+        "3.8.1.5"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_1",
+      "name": "alcohol dehydrogenase",
+      "ec": [
+        "1.1.1.1"
+      ],
+      "xrefs": {
+        "uniprot": "P07327"
+      }
+    },
+    {
+      "id": "ec_1_1_1_71",
+      "name": "alcohol dehydrogenase [NAD(P)(+)]",
+      "ec": [
+        "1.1.1.71"
+      ],
+      "xrefs": {
+        "uniprot": "P16152"
+      }
+    },
+    {
+      "id": "ec_1_2_1_3",
+      "name": "aldehyde dehydrogenase (NAD(+))",
+      "ec": [
+        "1.2.1.3"
+      ],
+      "xrefs": {
+        "uniprot": "P00352"
+      }
+    },
+    {
+      "id": "ec_1_2_1_5",
+      "name": "aldehyde dehydrogenase [NAD(P)(+)]",
+      "ec": [
+        "1.2.1.5"
+      ],
+      "xrefs": {
+        "uniprot": "P30838"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "haloalkane dehalogenase",
+      "equation": "1-haloalkane + H2O = a halide anion + a primary alcohol + H(+)",
+      "ec": "3.8.1.5",
+      "substrates": [
+        {
+          "metabolite": "1_haloalkane",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "halide_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "primary_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_8_1_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:19081"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19081"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "alcohol dehydrogenase",
+      "equation": "a primary alcohol + NAD(+) = an aldehyde + NADH + H(+)",
+      "ec": "1.1.1.1",
+      "substrates": [
+        {
+          "metabolite": "primary_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:10736"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10736"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "aldehyde dehydrogenase (NAD(+))",
+      "equation": "an aldehyde + NAD(+) + H2O = a carboxylate + NADH + 2 H(+)",
+      "ec": "1.2.1.3",
+      "substrates": [
+        {
+          "metabolite": "aldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "carboxylic_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:16185"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16185"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "an acyl-CoA + H2O = a carboxylate + CoA + H(+)",
+      "equation": "an acyl-CoA + H2O = a carboxylate + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "acyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "carboxylic_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:70423"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:70423"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_1_haloalkane_1-haloalkane-to-carboxylic-acid-anion",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_haloalkane"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-haloalkane-to-carboxylic-acid-anion"
+      },
+      "note": "Shares 1-haloalkane with 1-haloalkane to carboxylic acid anion.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18060"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_halide_anion_1-haloalkane-to-carboxylic-acid-anion",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "halide_anion"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-haloalkane-to-carboxylic-acid-anion"
+      },
+      "note": "Shares halide anion with 1-haloalkane to carboxylic acid anion.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16042"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_halide_anion_organohalogen-compound-to-adenosine-3-5-bismonop",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "halide_anion"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "organohalogen-compound-to-adenosine-3-5-bismonop"
+      },
+      "note": "Shares halide anion with organohalogen compound to adenosine 3',5'-bismonoph….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16042"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_halide_anion_r-2-halocarboxylic-to-2-2-methylthio-ethylmale",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "halide_anion"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-2-halocarboxylic-to-2-2-methylthio-ethylmale"
+      },
+      "note": "Shares halide anion with (R)-2-halocarboxylic… to 2-(2-methylthio)ethylmale….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16042"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_halide_anion_s-2-halocarboxylic-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "halide_anion"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2-halocarboxylic-to-ammonium"
+      },
+      "note": "Shares halide anion with (S)-2-halocarboxylic… to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16042"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_halide_anion_s-2-halocarboxylic-to-ammonium-12072",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "halide_anion"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2-halocarboxylic-to-ammonium-12072"
+      },
+      "note": "Shares halide anion with (S)-2-halocarboxylic… to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16042"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_halide_anion_s-2-halocarboxylic-to-l-glutamyl-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "halide_anion"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2-halocarboxylic-to-l-glutamyl-phosphate"
+      },
+      "note": "Shares halide anion with (S)-2-halocarboxylic… to L-γ-glutamyl phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16042"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_halide_anion_s-2-halocarboxylic-to-l-glutamyl-phosphate-1119",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "halide_anion"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2-halocarboxylic-to-l-glutamyl-phosphate-1119"
+      },
+      "note": "Shares halide anion with (S)-2-halocarboxylic… to L-γ-glutamyl phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16042"
+          }
+        ]
+      }
+    }
+  ]
+}

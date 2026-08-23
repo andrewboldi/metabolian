@@ -1,0 +1,492 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n-acetyltyramine-to-h2o-67200",
+  "name": "N-acetyltyramine to H2O",
+  "category": "amino-acid-metabolism",
+  "summary": "A 4-step route from N-acetyltyramine to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:67200"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:125610"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n_acetyltyramine",
+      "name": "N-acetyltyramine",
+      "formula": "C10H13NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:125610"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "tyraminium",
+      "name": "tyraminium",
+      "formula": "C8H12NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:327995"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "Acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30089"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "n_methyltyraminium",
+      "name": "N-methyltyraminium",
+      "formula": "C9H14NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58155"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "n_n_dimethyltyraminium",
+      "name": "N,N-dimethyltyraminium",
+      "short": "N,N-dimethyltyramin…",
+      "formula": "C10H16NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:231770"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "n_n_dimethyldopaminequinone",
+      "name": "N,N-dimethyldopaminequinone",
+      "short": "N,N-dimethyldopamin…",
+      "formula": "C10H14NO2",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM163443"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_27",
+      "name": "tyramine N-methyltransferase",
+      "ec": [
+        "2.1.1.27"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "N-acetyltyramine + H2O = tyramine + acetate",
+      "equation": "N-acetyltyramine + H2O = tyramine + acetate",
+      "substrates": [
+        {
+          "metabolite": "n_acetyltyramine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "tyraminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:67200"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:67200"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "tyramine N-methyltransferase",
+      "equation": "tyramine + S-adenosyl-L-methionine = N-methyltyramine + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.27",
+      "substrates": [
+        {
+          "metabolite": "tyraminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_methyltyraminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_27"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:14865"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14865"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "N-methyltyramine + S-adenosyl-L-methionine = hordenine + S-adenosyl-L-homocysteine + H(+)",
+      "equation": "N-methyltyramine + S-adenosyl-L-methionine = hordenine + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "n_methyltyraminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_n_dimethyltyraminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:80991"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:80991"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Reaction MNXR103839",
+      "substrates": [
+        {
+          "metabolite": "n_n_dimethyltyraminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_n_dimethyldopaminequinone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR103839"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR103839"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_n_acetyltyramine_dihydroferulate-to-n-feruloyltyramine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyltyramine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dihydroferulate-to-n-feruloyltyramine"
+      },
+      "note": "Shares N-acetyltyramine with dihydroferulate to N-feruloyltyramine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:125610"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetyltyramine_dihydroferulate-to-n-feruloyltyramine-79511",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyltyramine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dihydroferulate-to-n-feruloyltyramine-79511"
+      },
+      "note": "Shares N-acetyltyramine with dihydroferulate to N-feruloyltyramine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:125610"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetyltyramine_isatin-to-2r-dimboa-glucoside-68608",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyltyramine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isatin-to-2r-dimboa-glucoside-68608"
+      },
+      "note": "Shares N-acetyltyramine with isatin to (2R)-DIMBOA glucoside.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:125610"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetyltyramine_n-acetyltyramine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyltyramine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyltyramine-to-h2o"
+      },
+      "note": "Shares N-acetyltyramine with N-acetyltyramine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:125610"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetyltyramine_neocasomorphin-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyltyramine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "neocasomorphin-to-fmn"
+      },
+      "note": "Shares N-acetyltyramine with neocasomorphin to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:125610"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_methyltyraminium_n-acetyltyramine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_methyltyraminium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyltyramine-to-h2o"
+      },
+      "note": "Shares N-methyltyraminium with N-acetyltyramine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58155"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_n_dimethyltyraminium_n-acetyltyramine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_n_dimethyltyraminium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyltyramine-to-h2o"
+      },
+      "note": "Shares N,N-dimethyltyraminium with N-acetyltyramine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:231770"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_n_dimethyldopaminequinone_n-acetyltyramine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_n_dimethyldopaminequinone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyltyramine-to-h2o"
+      },
+      "note": "Shares N,N-dimethyldopaminequinone with N-acetyltyramine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM163443"
+          }
+        ]
+      }
+    }
+  ]
+}

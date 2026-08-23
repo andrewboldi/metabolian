@@ -20,49 +20,145 @@ pathway 24-methylidenelophenol-to-avenasterol "24-methylidenelophenol to avenast
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_49 [2.1.1.49] +primary_ammonium_ion +sam +hplus
-    methylated_primary_amine
+    <-> ec_2_1_1_199 [2.1.1.199] +cytidine_5_monophosphate_1 +sam +hplus
+    n4_methylcytidine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_117 [2.1.1.117] +s_scoulerine +sam +hplus
-    s_tetrahydrocolumbamine
+    <-> ec_2_1_1_200 [2.1.1.200] +cytidine_5_monophosphate_1 +sam +hplus
+    2_o_methylcytidine_5_monophosphate_1
   }
 
   branch from nadh side left {
     nadh
-    <-> ec_1_7_1_4 [1.7.1.4] +nitrite +h +nad +h2o
-    ammonium_hydroxide
+    <-> . +h +isoputreanine +nad +h2o
+    n_3_aminopropyl_4_aminobutanal
   }
 
   branch from nadh side right {
     nadh
-    <-> . +h +7alpha_hydroxycholest_4_en_3_one +o2 +nad +h2o
-    7alpha_12alpha_dihydroxycholest_4_en_3_one
+    <-> . +3_hydroxykynurenine_o_beta_d_glucoside +h +nh4 +nad
+    4_2_amino_3_hydroxyphenyl_4_oxobutanoic_acid_o_g
   }
 
   branch from co2 side left {
     co2
-    <-> ec_1_2_4_1 [1.2.4.1] +hetpp +h +thiamine_diphosphate
-    pyruvate
+    <-> . +n_acetyl_5_methoxykynuramine +h +formate +h2o2
+    n_gamma_acetyl_n_2_formyl_5_methoxykynurenamine
   }
 
   branch from co2 side right {
     co2
-    <-> ec_4_1_1_31 [4.1.1.31] +phosphoenolpyruvate +h2o +h +phosphate
-    oxaloacetate
+    <-> . +peroxynitrite
+    nitrosoperoxycarbonate
   }
 
   branch from nadp side left {
     nadp
-    <-> . +h +estrone +o2 +nadph +h2o
-    4_hydroxyestrone
+    <-> . +h +o2 +nadph +lithocholate +h2o
+    deoxycholate
   }
 
   branch from nadp side right {
     nadp
-    <-> . +5_hydroxyindol_3_yl_acetaldehyde +h +nadph
-    5_hydroxytryptophol
+    <-> . +8z_11z_14z_17z_3_oxoicosatetraenoyl_coa +h +nadph
+    3s_8z_11z_14z_17z_3_hydroxyicosatetraenoyl_coa
+  }
+
+  branch from sam side left {
+    sam
+    <-> ec_2_1_1_200 [2.1.1.200] +uridine_5_monophosphate_1 +sah +hplus
+    2_o_methyluridine_5_monophosphate_1
+  }
+
+  branch from sam side right {
+    sam
+    <-> ec_2_1_1_202 [2.1.1.202] +cytidine_5_monophosphate_1 +sah +hplus
+    5_methylcytidine_5_monophosphate_1
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_202 [2.1.1.202] +sam +5_methylcytidine_5_monophosphate_1 +hplus
+    cytidine_5_monophosphate_1
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_207 [2.1.1.207] +5_carboxymethylaminomethyluridine_5_monophosphat +sam +hplus
+    5_carboxymethylaminomethyl_2_o_methyluridine_5_m
+  }
+
+  branch from nad side left {
+    nad
+    <-> . +nadh +h +7alpha_hydroxycholest_4_en_3_one
+    26_hydroxycholesterol
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_35 [1.1.1.35] +nadh +z_3_oxohexadec_9_enoyl_coa +h
+    3s_9z_3_hydroxyhexadecenoyl_coa
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> . +z_3_oxododec_5_enoyl_coa +h +nad
+    3_s_3_hydroxydodecen_5z_oyl_coa
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +all_trans_retinoate +h +nad +h2o
+    13_cis_retinal
+  }
+
+  branch from co2 side left {
+    co2
+    <-> . +p_hydroxybenzyl_alcohol +l_alanine +diphosphate +h +amp +4_methyl_5_2_phosphooxyethyl_thiazole +h2o +1_deoxy_d_xylulose_5_phosphate +l_cysteine +l_tyrosine
+    atp
+  }
+
+  branch from co2 side right {
+    co2
+    <-> ec_2_3_1_119 [2.3.1.119] +eicosanoyl_coa +nadp +coa +h2o +malonyl_coa +h +nadph
+    octadecanoyl_coa
+  }
+
+  branch from h side left {
+    h
+    <-> . +cmp +phosphatidylserine_ditetradecanoyl_n_c14_0 +l_serine
+    cdp_1_2_ditetradecanoylglycerol
+  }
+
+  branch from h side right {
+    h
+    <-> . +cmp +phosphatidylserine_ditetradec_7_enoyl_n_c14_1 +l_serine
+    cdp_1_2_ditetradec_7_enoylglycerol
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +h +7z_10z_13z_16z_19z_3_oxodocosapentaenoyl_coa +nadp
+    3_s_hydroxy_docosa_7_10_13_16_19_all_cis_pentaen
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +3_oxo_all_cis_6_9_12_15_18_tetracosapentaenoyl_c +h +nadp
+    3_s_hydroxy_tetracosa_9_12_15_18_21_all_cis_pent
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +calcitroate +h2o +o2 +nadph
+    24_25_26_27_tetranor_23_oxo_hydroxyvitamin_d3
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +11z_14z_3_oxoicosa_11_14_dienoyl_coa +h +nadph
+    3s_hydroxy_eicosa_cis_cis_11_14_dienoyl_coa
   }
 }

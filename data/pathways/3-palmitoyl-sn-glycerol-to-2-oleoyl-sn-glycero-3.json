@@ -106,27 +106,110 @@
       }
     },
     {
-      "id": "1_octadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph",
-      "name": "1-octadecanoyl-2-(9Z-octadecenoyl)-sn-glycero-3-phospho-(1'-sn-glycerol)",
-      "short": "1-octadecanoyl-2-(9…",
-      "formula": "C42H80O10P",
-      "charge": -1,
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H30N9O15P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:72845"
+        "chebi": "CHEBI:57692"
       }
     },
     {
-      "id": "2_oleoyl_sn_glycero_3_phospho_1_sn_glycerol",
-      "name": "2-oleoyl-sn-glycero-3-phospho-(1'-sn-glycerol)",
-      "short": "2-oleoyl-sn-glycero…",
-      "formula": "C24H46O9P",
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "trans_2_octadecenoyl_coa",
+      "name": "trans-2-octadecenoyl-CoA",
+      "short": "trans-2-octadecenoy…",
+      "formula": "C39H64N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:71412"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58307"
+      }
+    },
+    {
+      "id": "hexadecasphinganine",
+      "name": "hexadecasphinganine",
+      "formula": "C16H36NO2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:71009"
+      }
+    },
+    {
+      "id": "n_stearoylhexadecasphinganine",
+      "name": "N-stearoylhexadecasphinganine",
+      "short": "N-stearoylhexadecas…",
+      "formula": "C34H69NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:82811"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "sphing_4_enine",
+      "name": "sphing-4-enine",
+      "formula": "C18H37NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:26743"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "acetate",
+      "formula": "C2H3O2",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:141490"
+        "metanetx": "MNXM26"
       }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_23",
+      "name": "ceramidase",
+      "ec": [
+        "3.5.1.23"
+      ],
+      "xrefs": {
+        "uniprot": "Q8TDN7"
+      }
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -247,39 +330,400 @@
     },
     {
       "id": "r4",
-      "name": "1-octadecanoyl-2-(9Z-octadecenoyl)-sn-glycero-3-phospho-(1'-sn-glycerol) + N-(acetyl)-s...",
-      "equation": "1-octadecanoyl-2-(9Z-octadecenoyl)-sn-glycero-3-phospho-(1'-sn-glycerol) + N-(acetyl)-sphing-4-enine = 2-(9Z-octadecenoyl)-sn-glycero-3-phospho-(1'-sn-glycerol) + 1-octadecanoyl-N-(acetyl)-sphing-4-enine",
+      "name": "octadecanoyl-CoA + FAD + H(+) = (2E)-octadecenoyl-CoA + FADH2",
+      "equation": "octadecanoyl-CoA + FAD + H(+) = (2E)-octadecenoyl-CoA + FADH2",
       "substrates": [
         {
-          "metabolite": "1_octadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph",
+          "metabolite": "stearoyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "n_acetylsphingosine",
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "2_oleoyl_sn_glycero_3_phospho_1_sn_glycerol",
+          "metabolite": "trans_2_octadecenoyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "1_o_stearoyl_n_acetylsphingosine",
+          "metabolite": "fadh2",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:57144"
+        "rhea": "RHEA:40843"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:57144"
+            "id": "RHEA:40843"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "hexadecasphinganine + octadecanoyl-CoA = N-octadecanoylhexadecasphinganine + CoA + H(+)",
+      "equation": "hexadecasphinganine + octadecanoyl-CoA = N-octadecanoylhexadecasphinganine + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "hexadecasphinganine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "stearoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_stearoylhexadecasphinganine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:43044"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43044"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "ceramidase",
+      "ec": "3.5.1.23",
+      "substrates": [
+        {
+          "metabolite": "n_acetylsphingosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sphing_4_enine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_23"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "metanetx": "MNXR197283"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197283"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3_palmitoyl_sn_glycerol_1-palmitoyl-2-3-dioleoyl-to-oleate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_palmitoyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-palmitoyl-2-3-dioleoyl-to-oleate"
+      },
+      "note": "Shares 3-palmitoyl-sn-glycerol with 1-palmitoyl-2,3-dioleoyl-… to oleate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64757"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_palmitoyl_sn_glycerol_3-palmitoyl-sn-glycerol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_palmitoyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-palmitoyl-sn-glycerol-to-h2o"
+      },
+      "note": "Shares 3-palmitoyl-sn-glycerol with 3-palmitoyl-sn-glycerol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64757"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_oleoyl_3_palmitoyl_sn_glycerol_1-palmitoyl-2-3-dioleoyl-to-oleate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_oleoyl_3_palmitoyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-palmitoyl-2-3-dioleoyl-to-oleate"
+      },
+      "note": "Shares 1-oleoyl-3-palmitoyl-sn-glycerol with 1-palmitoyl-2,3-dioleoyl-… to oleate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75867"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_oleoyl_3_palmitoyl_sn_glycerol_3-palmitoyl-sn-glycerol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_oleoyl_3_palmitoyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-palmitoyl-sn-glycerol-to-h2o"
+      },
+      "note": "Shares 1-oleoyl-3-palmitoyl-sn-glycerol with 3-palmitoyl-sn-glycerol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75867"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_oleoyl_sn_glycero_3_phosphocholine_1-hexadecanoyl-2-9z-octa-to-h2o-38783",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oleoyl_sn_glycero_3_phosphocholine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-hexadecanoyl-2-9z-octa-to-h2o-38783"
+      },
+      "note": "Shares 2-oleoyl-sn-glycero-3-phosphocholine with 1-hexadecanoyl-2-(9Z-octa… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76071"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_oleoyl_sn_glycero_3_phosphocholine_1-hexadecanoyl-2-9z-octa-to-oleoyl-sn-glycero-3",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oleoyl_sn_glycero_3_phosphocholine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-hexadecanoyl-2-9z-octa-to-oleoyl-sn-glycero-3"
+      },
+      "note": "Shares 2-oleoyl-sn-glycero-3-phosphocholine with 1-hexadecanoyl-2-(9Z-octa… to oleoyl-sn-glycero-3-phosp….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76071"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_oleoyl_sn_glycero_3_phosphocholine_1-oleoyl-2-linoleoyl-sn-g-to-3-hydroxypropanal",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oleoyl_sn_glycero_3_phosphocholine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-oleoyl-2-linoleoyl-sn-g-to-3-hydroxypropanal"
+      },
+      "note": "Shares 2-oleoyl-sn-glycero-3-phosphocholine with 1-oleoyl-2-linoleoyl-sn-g… to 3-hydroxypropanal.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76071"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_oleoyl_sn_glycero_3_phosphocholine_1-stearoyl-2-oleoyl-sn-gl-to-1-hexadecanoyl-sn-g",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oleoyl_sn_glycero_3_phosphocholine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-stearoyl-2-oleoyl-sn-gl-to-1-hexadecanoyl-sn-g"
+      },
+      "note": "Shares 2-oleoyl-sn-glycero-3-phosphocholine with 1-stearoyl-2-oleoyl-sn-gl… to 1-hexadecanoyl-sn-glycero….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76071"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_stearoyl_2_oleoyl_sn_glycero_3_phosphocholine_1-octadecanoyl-2-hexanoyl-to-1-stearoyl-sn-glyce",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_stearoyl_2_oleoyl_sn_glycero_3_phosphocholine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-octadecanoyl-2-hexanoyl-to-1-stearoyl-sn-glyce"
+      },
+      "note": "Shares 1-stearoyl-2-oleoyl-sn-glycero-3-phosphocholine with 1-octadecanoyl-2-hexanoyl… to 1-stearoyl-sn-glycero-3-p….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75034"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_stearoyl_2_oleoyl_sn_glycero_3_phosphocholine_1-octadecanoyl-2-pentanoy-to-arachidonate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_stearoyl_2_oleoyl_sn_glycero_3_phosphocholine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-octadecanoyl-2-pentanoy-to-arachidonate"
+      },
+      "note": "Shares 1-stearoyl-2-oleoyl-sn-glycero-3-phosphocholine with 1-octadecanoyl-2-pentanoy… to arachidonate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75034"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_stearoyl_2_oleoyl_sn_glycero_3_phosphocholine_1-palmitoyl-2-3-dioleoyl-to-oleate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_stearoyl_2_oleoyl_sn_glycero_3_phosphocholine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-palmitoyl-2-3-dioleoyl-to-oleate"
+      },
+      "note": "Shares 1-stearoyl-2-oleoyl-sn-glycero-3-phosphocholine with 1-palmitoyl-2,3-dioleoyl-… to oleate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75034"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_stearoyl_2_oleoyl_sn_glycero_3_phosphocholine_1-stearoyl-2-oleoyl-sn-gl-to-1-hexadecanoyl-sn-g",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_stearoyl_2_oleoyl_sn_glycero_3_phosphocholine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-stearoyl-2-oleoyl-sn-gl-to-1-hexadecanoyl-sn-g"
+      },
+      "note": "Shares 1-stearoyl-2-oleoyl-sn-glycero-3-phosphocholine with 1-stearoyl-2-oleoyl-sn-gl… to 1-hexadecanoyl-sn-glycero….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75034"
           }
         ]
       }

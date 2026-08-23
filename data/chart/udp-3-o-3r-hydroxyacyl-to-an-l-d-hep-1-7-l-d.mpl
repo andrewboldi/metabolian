@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-3-o-3r-hydroxyacyl-to-an-l-d-hep-1-7-l-d "UDP-3-O-[(3R)-hydroxyacyl… to an L-α-D-Hep-(1→7)-L-α-D-…" {
-  spacing 340
+  spacing 328
 
   spine at 0,0 {
     udp_3_o_3r_hydroxyacyl_d_glucosamine
@@ -34,39 +34,27 @@ pathway udp-3-o-3r-hydroxyacyl-to-an-l-d-hep-1-7-l-d "UDP-3-O-[(3R)-hydroxyacyl�
     an_l_d_hep_1_7_l_d_hep_1_3_4_o_phospho_l_d_hep_1
   }
 
-  branch from holo-acp side left {
-    holo-acp
-    <-> ec_6_2_1_71 [6.2.1.71] +2_3_dihydroxybenzoate +atp +amp +ppi
-    o_s_2_3_dihydroxybenzoylpantetheine_4_phosphoryl
-  }
-
-  branch from holo-acp side right {
-    holo-acp
-    <-> . +l_cysteinyl_amp +amp +hplus
-    o_s_l_cysteinyl_pantetheine_4_phosphoryl_l_serin
-  }
-
   branch from a_kdo_lipid_iva side left {
     a_kdo_lipid_iva
     <-> ec_2_7_1_166 [2.7.1.166] +atp +adp +hplus
     a_4_o_phospho_kdo_2_6_lipid_iva
   }
 
-  branch from cytidine_5_monophosphate side right {
-    cytidine_5_monophosphate
-    <-> ec_2_4_99_15 [2.4.99.15] +a_kdo_3_lipid_iva +cmp_3_deoxy_d_manno_octulosonate +hplus
-    an_kdo_2_8_kdo_2_4_kdo_2_4_kdo_2_6_lipid_iva
+  branch from o_s_3r_3_hydroxyacylpantetheine_4_phosphoryl_ser side right {
+    o_s_3r_3_hydroxyacylpantetheine_4_phosphoryl_ser
+    <-> ec_1_1_1_212 [1.1.1.212] +nad +nadh +hplus
+    o_s_3_oxoacylpantetheine_4_phosphoryl_l_serine_1
   }
 
-  branch from cytidine_5_monophosphate side left {
-    cytidine_5_monophosphate
-    <-> ec_2_4_99_15 [2.4.99.15] +a_kdo_2_lipid_iva +cmp_3_deoxy_d_manno_octulosonate +hplus
-    an_kdo_2_4_kdo_2_4_kdo_2_6_lipid_iva
+  branch from adp_l_glycero_d_manno_heptose side left {
+    adp_l_glycero_d_manno_heptose
+    <-> . +l_serine +adp +hplus
+    o_l_glycero_d_manno_heptosyl_l_serine
   }
 
-  branch from a_kdo_2_lipid_iva side right {
-    a_kdo_2_lipid_iva
-    <-> ec_2_3_1_242 [2.3.1.242] +o_s_fatty_acylpantetheine_4_phosphoryl_l_serine +holo-acp
-    an_acyl_kdo_2_4_kdo_2_6_lipid_iva
+  branch from adp_l_glycero_d_manno_heptose side right {
+    adp_l_glycero_d_manno_heptose
+    <-> ec_2_4_1_56 [2.4.1.56] +glucosyl_glucosyl_galactosyl_glucosyl_inner_core +adp +core_oligosaccharide_lipid_a
+    h
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 6-n-acetyl-d-glucosami-to-cytidine-5-monophospha "6-(N-acetyl-α-D-glucosami… to cytidine 5'-monophosphate" {
-  spacing 296
+  spacing 272
 
   spine at 0,0 {
     6_n_acetyl_d_glucosaminyl_1_phosphatidyl_1d_myo
@@ -14,29 +14,5 @@ pathway 6-n-acetyl-d-glucosami-to-cytidine-5-monophospha "6-(N-acetyl-α-D-gluco
     6_d_glucosaminyl_1d_myo_inositol_1_2_cyclic_phos
     <-> . +cdp_n_n_dimethylethanolamine +dag -cytidine_5_monophosphate -hplus
     1_2_diacyl_sn_glycero_3_phospho_n_n_dimethyletha
-  }
-
-  branch from 6_d_glucosaminyl_1_phosphatidyl_1d_myo_inositol side left {
-    6_d_glucosaminyl_1_phosphatidyl_1d_myo_inositol
-    <-> . +fatty_acyl_coa +coa
-    2_acyl_6_d_glucosaminyl_1_1_2_diacyl_sn_glycero
-  }
-
-  branch from 6_d_glucosaminyl_1_phosphatidyl_1d_myo_inositol side right {
-    6_d_glucosaminyl_1_phosphatidyl_1d_myo_inositol
-    <-> . +palmitoyl_coa +coa
-    2_palmitoyl_6_d_glucosaminy_1_1_2_diacyl_sn_glyc
-  }
-
-  branch from cytidine_5_monophosphate side left {
-    cytidine_5_monophosphate
-    <-> . +o_n_acetyl_d_galactosaminyl_l_serine +cmp_n_acetyl_neuraminate +hplus
-    o3_n_acetyl_neuraminosyl_2_6_n_acetyl_d_galactos
-  }
-
-  branch from cytidine_5_monophosphate side right {
-    cytidine_5_monophosphate
-    <-> . +o3_d_galactosyl_1_3_n_acetyl_d_galactosaminyl_l +cmp_n_acetyl_neuraminate +hplus
-    o3_d_galactosyl_1_3_n_acetyl_neuraminosyl_2_6_n
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-1z-octadecenyl-2-9z-to-palmitoyl-ethanolamide "1-(1Z-octadecenyl)-2-(9Z-… to palmitoyl ethanolamide" {
-  spacing 152
+  spacing 158
 
   spine at 0,0 {
     1_1z_octadecenyl_2_9z_octadecenoyl_sn_glycero_3
@@ -14,5 +14,11 @@ pathway 1-1z-octadecenyl-2-9z-to-palmitoyl-ethanolamide "1-(1Z-octadecenyl)-2-(9
     1_1z_octadecenyl_sn_glycero_3_phospho_n_hexadeca
     <-> . +h2o -palmitoyl_ethanolamide -hplus
     1_1z_octadecenyl_sn_glycero_3_phosphate
+  }
+
+  branch from 1_1z_octadecenyl_2_9z_octadecenoyl_sn_glycero_3 side left {
+    1_1z_octadecenyl_2_9z_octadecenoyl_sn_glycero_3
+    <-> . +fe2 +o2 +hplus +iron +h2o
+    1_o_octadecyl_2_oleoyl_sn_glycero_3_phosphoethan
   }
 }

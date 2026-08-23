@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway acetoacetyl-coa-to-2e-glutaconyl-coa "acetoacetyl-CoA to (2E)-glutaconyl-CoA" {
-  spacing 288
+  spacing 340
 
   spine at 0,0 {
     acetoacetyl_coa
@@ -32,61 +32,145 @@ pathway acetoacetyl-coa-to-2e-glutaconyl-coa "acetoacetyl-CoA to (2E)-glutaconyl
 
   branch from h side left {
     h
-    <-> ec_1_1_1_51 [1.1.1.51] +nadh +5beta_pregnan_3_20_dione +nad
-    5_pregnan_20_ol_3_one
+    <-> ec_5_3_1_6 [5.3.1.6] +alpha_d_ribofuranose_5_phosphate
+    l_ribulose_5_phosphate
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_51 [1.1.1.51] +nadh +5_pregnan_20_ol_3_one +nad
-    pregnanediol
+    <-> ec_3_6_3_6 [3.6.3.6] +adp +phosphate +atp
+    h2o
   }
 
   branch from adp side left {
     adp
-    <-> . +acetyl_coa +co2 +atp +h2o +h +phosphate
-    malonyl_coa
+    <-> . +h +phosphate +atp +h2o
+    cysteine
   }
 
   branch from adp side right {
     adp
-    <-> . +d_ribose +nicotinamide +atp +h2o
-    beta_nicotinamide_d_ribonucleotide
+    <-> . +h +phosphate +atp +h2o
+    butanoyl_coa
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_3_1_3_36 [3.1.3.36] +1d_myo_inositol_4_phosphate +h2o
-    1d_myo_inositol_4_5_bisphosphate
+    <-> ec_3_1_3_27 [3.1.3.27] +h +1_2_dioctadecanoyl_sn_glycero_3_phospho_1_sn_gly +h2o
+    pg_18_0_18_0
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_1_3_2 [3.1.3.2] +thymophthalein +h +h2o
-    thymolphthalein_monophosphate
+    <-> ec_3_1_3_27 [3.1.3.27] +h +1_2_dipalmitoyl_sn_glycero_3_phospho_1_sn_glycer +h2o
+    1_2_dihexadecanoyl_sn_glycero_3_phospho_1_sn_gly
   }
 
   branch from glutaryl_coa side left {
     glutaryl_coa
-    <-> . +glutarate +atp +coa +amp
-    diphosphate
+    <-> ec_2_3_1_16 [2.3.1.16] +acetyl_coa +coa
+    3_oxo_6_carboxyhexanoyl_coa
   }
 
   branch from glutaryl_coa side right {
     glutaryl_coa
-    <-> . +r_carnitine +h +glutarylcarnitine
+    <-> . +s_carnitine +h +glutarylcarnitine
     coa
   }
 
   branch from fadh2 side left {
     fadh2
-    <-> . +h +menaquinone_6 +fad
-    menaquinol_6
+    <-> . +sibiromycin_aglycon +h +fad
+    5e_7s_8r_8_11_13_trihydroxy_12_methyl_5_propyli
   }
 
   branch from fadh2 side right {
     fadh2
-    <-> . +hexadecanoate +fad +atp +coa +nad +h2o +acetyl_coa +diphosphate +h +amp
+    <-> ec_1_14_19_9 [1.14.19.9] +5_nitroindole +h +o2 +bromide +fad +h2o
+    3_bromo_5_nitroindole
+  }
+
+  branch from h side left {
+    h
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +neoabietadienal +nad
+    isopimara_7_15_dienol
+  }
+
+  branch from h side right {
+    h
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +palustradienal +isopimara_7_15_dienol
+    nad
+  }
+
+  branch from but_2_enoyl_coa side left {
+    but_2_enoyl_coa
+    <-> ec_4_2_1_116 [4.2.1.116] +h +h2o
+    3s_3_hydroxybutanoyl_coa
+  }
+
+  branch from hydrogencarbonate side right {
+    hydrogencarbonate
+    <-> . +h +atp +coa +nadph +nad +acetyl_coa +diphosphate +adp +nadp +amp +phosphate +h2o
     nadh
+  }
+
+  branch from hydrogencarbonate side left {
+    hydrogencarbonate
+    <-> . +putrescine +nh4 +h +h2o
+    n_carbamoylputrescine
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_2_7_1_1 [2.7.1.1] +beta_d_fructose +h +adp
+    6_o_phosphonohexopyranose
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_2_7_1_1 [2.7.1.1] +h +adp +6_o_phosphonohexopyranose
+    beta_d_fructopyranose
+  }
+
+  branch from adp side right {
+    adp
+    <-> ec_2_7_1_1 [2.7.1.1] +h +atp +6_o_phosphonohexopyranose
+    alpha_d_mannopyranose
+  }
+
+  branch from adp side left {
+    adp
+    <-> ec_2_7_1_1 [2.7.1.1] +h +atp +6_o_phosphonohexopyranose
+    beta_d_glucose
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_3_1_3_27 [3.1.3.27] +pgp_16_1_9z_16_1_9z +h2o +h
+    phosphatidylglycerol_dihexadec_9_enoyl_n_c16_1
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +nadh +h +atp +2_4_substituted_furan_phosphate +adp +nad
+    4_phosphooxymethyl_2_furancarboxaldehyde
+  }
+
+  branch from glutaryl_coa side right {
+    glutaryl_coa
+    <-> . +fad +fadh2 +h
+    glutaconyl_coenzyme_a
+  }
+
+  branch from fad side left {
+    fad
+    <-> . +fadh2 +h +7_8_dihydropteroate
+    6s_5_6_7_8_tetrahydropteroate
+  }
+
+  branch from fad side right {
+    fad
+    <-> . +nadh +acetyl_coa +fadh2 +3_s_hydroxy_pravastatin_tetranor_coa +h +o2 +coa +nad +h2o
+    3_s_hydroxy_pravastatin_coa
   }
 }

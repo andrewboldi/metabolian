@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-allothreonine-to-acetaldehyde "L-allothreonine to acetaldehyde" {
-  spacing 226
+  spacing 244
 
   spine at 0,0 {
     l_allothreonine
@@ -18,19 +18,37 @@ pathway l-allothreonine-to-acetaldehyde "L-allothreonine to acetaldehyde" {
 
   branch from glycine side left {
     glycine
-    <-> . +atp +hplus +ppi
-    glycyl_amp
+    <-> . +fatty_acyl_coa +coa +hplus
+    n_fatty_acyl_glycine
   }
 
   branch from glycine side right {
     glycine
-    <-> . +2_3_dihydroxybenzoate +threonine +atp +amp +ppi +h2o +hplus
-    corynebactin
+    <-> . +myristoyl_coa +coa +hplus
+    n_myristoylglycinate
   }
 
   branch from acetoin side left {
     acetoin
     <-> . +3_aminobutan_2_ol +nadp +h2o +nadph +hplus
     nh3
+  }
+
+  branch from l_allothreonine side right {
+    l_allothreonine
+    <-> ec_1_1_1_381 [1.1.1.381] +nadp +co2 +nadph
+    ammonioacetone
+  }
+
+  branch from glycine side left {
+    glycine
+    <-> . +lauroyl_coa +coa +hplus
+    n_dodecanoylglycinate
+  }
+
+  branch from glycine side right {
+    glycine
+    <-> . +linoleoyl_coa +coa +hplus
+    n_linoleoylglycine
   }
 }

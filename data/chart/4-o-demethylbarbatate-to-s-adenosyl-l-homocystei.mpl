@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-o-demethylbarbatate-to-s-adenosyl-l-homocystei "4-O-demethylbarbatate to S-adenosyl-L-homocysteine" {
-  spacing 170
+  spacing 152
 
   spine at 0,0 {
     4_o_demethylbarbatate
@@ -14,23 +14,5 @@ pathway 4-o-demethylbarbatate-to-s-adenosyl-l-homocystei "4-O-demethylbarbatate 
     proatranorin_iii
     <-> . +sam -sah
     atranorin
-  }
-
-  branch from proatranorin_iii side left {
-    proatranorin_iii
-    <-> . +h2o
-    proatranorin_vi
-  }
-
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_398 [2.1.1.398] +3_4_7_trihydroxyisoflavone_7_olate +sam +hplus
-    7_4_dihydroxy_3_methoxyisoflavone_7_olate
-  }
-
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_399 [2.1.1.399] +trans_resveratrol +sam +hplus
-    4_o_methyl_trans_resveratrol
   }
 }

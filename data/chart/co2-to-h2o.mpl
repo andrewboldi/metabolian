@@ -4,57 +4,99 @@
 # edit the generator, not this file.
 
 pathway co2-to-h2o "CO2 to H2O" {
-  spacing 238
+  spacing 324
 
   spine at 0,0 {
     co2
-    <-> . +o_aminoacetophenone -h
-    2_aminobenzoylacetate
-    <-> ec_2_3_1_230 [2.3.1.230] +octanoyl_coa +hplus -co2 -coa -h2o
-    2_heptyl_4_quinolone
-    <-> . +fadh2 +h +o2 -2_heptyl_3_hydroxy_4_quinolone -h2o
-    fad
+    <-> ec_4_1_1_98 [4.1.1.98] +2_polyprenylphenol
+    4_hydroxy_3_polyprenylbenzoate
+    <-> ec_2_5_1_39 [2.5.1.39] +diphosphate +h -all_trans_polyprenyl_diphosphate
+    4_hydroxybenzoate
+    <-> . +glucose -h2o
+    4_d_glucosyloxy_benzoate
   }
 
-  branch from 2_aminobenzoylacetate side left {
-    2_aminobenzoylacetate
-    <-> ec_2_3_1_230 [2.3.1.230] +octanoyl_coa +h +co2 +coa +h2o
-    2_heptyl_4_quinolone
-  }
-
-  branch from h side right {
-    h
-    <-> . +nadh +octane +o2 +nad +h2o
-    octan_1_ol
-  }
-
-  branch from h side left {
-    h
-    <-> . +2_methoxy_5_methyl_6_all_trans_hexaprenyl_1_4_be +o2
-    3_demethylubiquinone_6
-  }
-
-  branch from fad side right {
-    fad
-    <-> ec_1_1_99_3 [1.1.99.3] +fadh2 +h +2_dehydro_d_gluconate
-    d_gluconate
-  }
-
-  branch from fad side left {
-    fad
-    <-> . +fadh2 +h +d_gluconate
-    2_dehydro_d_gluconate
+  branch from 4_hydroxybenzoate side left {
+    4_hydroxybenzoate
+    <-> ec_2_5_1_39 [2.5.1.39] +diphosphate +3_hexaprenyl_4_hydroxybenzoate +h
+    all_trans_hexaprenyl_diphosphate
   }
 
   branch from h2o side right {
     h2o
-    <-> . +2_oxospirilloxanthin +o2
-    2_2_dioxospirilloxanthin
+    <-> ec_3_2_1_3 [3.2.1.3] +isomaltose
+    beta_d_glucose
   }
 
   branch from h2o side left {
     h2o
-    <-> . +hydroxyspheroidene +o2
-    hydroxyspheroidenone
+    <-> ec_3_2_1_3 [3.2.1.3] +panose +beta_d_glucose
+    d_maltose
+  }
+
+  branch from co2 side right {
+    co2
+    <-> . +2_aminoethyl_phosphonate
+    2_amino_3_phosphonopropanoic_acid
+  }
+
+  branch from co2 side left {
+    co2
+    <-> . +styrene
+    3_isochromanone
+  }
+
+  branch from 2_polyprenylphenol side right {
+    2_polyprenylphenol
+    <-> ec_1_14_13_240 [1.14.13.240] +h +o2 +nadph +2_polyprenyl_6_hydroxyphenol +h2o
+    nadp
+  }
+
+  branch from diphosphate side left {
+    diphosphate
+    <-> . +isoitalicene
+    2e_6e_farnesyl_diphosphate
+  }
+
+  branch from diphosphate side right {
+    diphosphate
+    <-> . +2e_6e_farnesyl_diphosphate
+    eudesma_4_11_diene
+  }
+
+  branch from h side left {
+    h
+    <-> . +3beta_hydroxytibolone +nadp +nadph
+    tibolone
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_4_13_9 [3.4.13.9] +l_proline +l_arginine +h2o
+    arg_pro
+  }
+
+  branch from glucose side left {
+    glucose
+    <-> ec_2_4_1_10 [2.4.1.10] +sucrose
+    6_kestotriose
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> ec_1_1_3_10 [1.1.3.10] +2_dehydro_d_glucose +tetrabromohydroquinone
+    tetrabromo_1_4_benzoquinone
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_4_13_9 [3.4.13.9] +l_leucine +l_proline
+    leucyl_proline
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_4_2_1_11 [4.2.1.11] +2_phosphonomethyl_3_hydroxypropanoate
+    alpha_dihydroxyphosphinylmethyl_acrylate
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway umbelliferone-to-2-nitropropane "umbelliferone to 2-nitropropane" {
-  spacing 290
+  spacing 224
 
   spine at 0,0 {
     umbelliferone
@@ -16,71 +16,5 @@ pathway umbelliferone-to-2-nitropropane "umbelliferone to 2-nitropropane" {
     acetone
     <-> ec_1_13_11_32 [1.13.11.32] +nitrite +h -2_nitropropane
     o2
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    ent_12e_labda_8_17_12_14_triene
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
-    16_hydroxy_ent_kaurene
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_6_5_2 [1.6.5.2] +2_3_dichloro_5_6_dicyanohydroquinone +h +nadph
-    2_3_dichloro_5_6_dicyano_1_4_benzoquinone
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_6_5_2 [1.6.5.2] +2_5_dihydroxybiphenyl +h +nadph
-    phenyl_1_4_benzoquinone
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +4_methoxyglucobrassicin +beta_d_glucose +h
-    4_methoxy_3_indolylmethyl_glucosinolate_aglycone
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_1_1_19 [3.1.1.19] +aldehydo_d_glucuronate +h
-    d_glucurono_6_2_lactone
-  }
-
-  branch from acetone side left {
-    acetone
-    <-> ec_4_1_2_47 [4.1.2.47] +cyanide +h
-    2_hydroxy_2_methylpropanenitrile
-  }
-
-  branch from acetone side right {
-    acetone
-    <-> . +nadp +h2o +h +o2 +nadph
-    hydroxyacetone
-  }
-
-  branch from psoralen side left {
-    psoralen
-    <-> . +h +o2 +nadph +nadp +h2o
-    xanthotoxol
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +2s_2_amino_3_3z_indol_3_ylidene_propanoate +h2o2
-    l_tryptophan
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +fadh2 +pyrrolomycin_c +h +chloride +fad +h2o
-    pyrrolomycin_d
   }
 }

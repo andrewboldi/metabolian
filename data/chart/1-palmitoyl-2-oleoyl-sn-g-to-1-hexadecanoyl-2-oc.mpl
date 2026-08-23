@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-palmitoyl-2-oleoyl-sn-g-to-1-hexadecanoyl-2-oc "1-palmitoyl-2-oleoyl-sn-g… to 1-hexadecanoyl-2-octadeca…" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     1_palmitoyl_2_oleoyl_sn_glycerol
@@ -14,17 +14,5 @@ pathway 1-palmitoyl-2-oleoyl-sn-g-to-1-hexadecanoyl-2-oc "1-palmitoyl-2-oleoyl-s
     1_o_oleoyl_n_acetylsphingosine
     <-> . +1_hexadecanoyl_sn_glycero_3_phosphoethanolamine +stearoyl_coa -coa
     1_hexadecanoyl_2_octadecanoyl_sn_glycero_3_phosp
-  }
-
-  branch from 1_hexadecanoyl_sn_glycero_3_phosphoethanolamine side left {
-    1_hexadecanoyl_sn_glycero_3_phosphoethanolamine
-    <-> . +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +n_acetylsphingosine
-    1_o_linoleoyl_n_acetylsphingosine
-  }
-
-  branch from 1_hexadecanoyl_sn_glycero_3_phosphoethanolamine side right {
-    1_hexadecanoyl_sn_glycero_3_phosphoethanolamine
-    <-> . +1_hexadecanoyl_2_5z_8z_11z_14z_icosatetraenoyl_s +n_acetylsphingosine
-    1_o_arachidonoyl_n_acetylsphingosine
   }
 }

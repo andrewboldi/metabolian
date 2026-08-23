@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway beta-d-glucose-to-nad "beta-D-glucose to NAD" {
-  spacing 340
+  spacing 296
 
   spine at 0,0 {
     beta_d_glucose
@@ -18,65 +18,5 @@ pathway beta-d-glucose-to-nad "beta-D-glucose to NAD" {
     udp_alpha_d_galactose
     <-> ec_1_3_1_77 [1.3.1.77] +nadh +idb_1027 +h -nad
     2r_3s_catechin
-  }
-
-  branch from cyanidin_3_o_6_glucosyl_2_xylosylgalactoside side left {
-    cyanidin_3_o_6_glucosyl_2_xylosylgalactoside
-    <-> . +cyanidin_o_o_6_o_6_o_4_hydroxycinnamoyl_beta_d_g +1_o_4_coumaroyl_d_glucose
-    glucose
-  }
-
-  branch from cyanidin_3_o_6_glucosyl_2_xylosylgalactoside side right {
-    cyanidin_3_o_6_glucosyl_2_xylosylgalactoside
-    <-> . +1_o_trans_sinapoyl_beta_d_glucose +glucose
-    cyanidin_o_o_6_o_6_o_sinapoyl_beta_d_glucosyl_2
-  }
-
-  branch from 1_o_4_coumaroyl_d_glucose side left {
-    1_o_4_coumaroyl_d_glucose
-    <-> . +glucose +lampranthin_i +h
-    betanin
-  }
-
-  branch from 1_o_4_coumaroyl_d_glucose side right {
-    1_o_4_coumaroyl_d_glucose
-    <-> . +glucose +ternatin_c3
-    ternatin_c5
-  }
-
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> . +udp +cicerin_7_o_glucoside
-    cicerin
-  }
-
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> . +udp +h +isoorientin_4_o_beta_d_glucoside
-    isoorientin
-  }
-
-  branch from udp_alpha_d_galactose side left {
-    udp_alpha_d_galactose
-    <-> . +udp +oleanolate_3_beta_d_glucuronoside_3_1_galactosid +h
-    chikusetsusaponin_iva
-  }
-
-  branch from udp_alpha_d_galactose side right {
-    udp_alpha_d_galactose
-    <-> . +udp +3_o_d_galactosyl_1_2_d_glucuronosyl_quillate +h
-    3_o_d_glucuronosyl_quillate
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_geranial +h
-    1s_2r_4r_neoisodihydrocarveol
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
-    isodihydrocarveol
   }
 }

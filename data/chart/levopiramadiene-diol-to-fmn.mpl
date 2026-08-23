@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway levopiramadiene-diol-to-fmn "levopiramadiene-diol to FMN" {
-  spacing 260
+  spacing 314
 
   spine at 0,0 {
     levopiramadiene_diol
@@ -16,63 +16,21 @@ pathway levopiramadiene-diol-to-fmn "levopiramadiene-diol to FMN" {
     abietate
   }
 
-  branch from levopimaradienal side left {
-    levopimaradienal
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +nad
-    levopimaradienol
-  }
 
-  branch from levopimaradienal side right {
-    levopimaradienal
-    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +nadp
-    palustradienol
-  }
 
-  branch from h2o side left {
-    h2o
-    <-> . +tyr_gly +l_tyrosine
-    glycine
-  }
 
-  branch from h2o side right {
-    h2o
-    <-> . +l_proline +l_phenylalanine
-    pro_phe
-  }
 
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_21 [1.1.1.21] +h +3_methylbenzaldehyde +nadph
-    3_methylbenzyl_alcohol
-  }
 
-  branch from nadp side right {
-    nadp
-    <-> ec_1_1_1_21 [1.1.1.21] +3_cyanobenzaldehyde +h +nadph
-    3_cyanobenzyl_alcohol
-  }
 
-  branch from abietol side left {
-    abietol
-    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +nadp
-    abietal
-  }
 
-  branch from abietol side right {
-    abietol
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +abietal
-    nad
-  }
 
-  branch from fmn side left {
-    fmn
-    <-> . +n_12_oxojasmonyl_l_amino_acid_anion +fmnh2 +o2 +h2o +hplus
-    n_12_hydroxy_12_oxojasmonyl_l_amino_acid_dianion
-  }
 
-  branch from fmn side right {
-    fmn
-    <-> ec_1_14_14_63 [1.14.14.63] +amyrin +fmnh2 +o2 +h2o +hplus
-    maniladiol
-  }
+
+
+
+
+
+
+
+
 }

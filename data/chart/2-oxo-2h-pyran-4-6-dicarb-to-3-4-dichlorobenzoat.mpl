@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-oxo-2h-pyran-4-6-dicarb-to-3-4-dichlorobenzoat "2-oxo-2H-pyran-4,6-dicarb… to 3,4-dichlorobenzoate-cis-…" {
-  spacing 200
+  spacing 188
 
   spine at 0,0 {
     2_oxo_2h_pyran_4_6_dicarboxylate
@@ -14,17 +14,5 @@ pathway 2-oxo-2h-pyran-4-6-dicarb-to-3-4-dichlorobenzoat "2-oxo-2H-pyran-4,6-dic
     o2
     <-> . +h +chloride +5_chloroprotocatechuate
     3_4_dichlorobenzoate_cis_4_5_diol
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +trimethylamine +3r_3_hydroxy_4_oxobutanoate +nadp +h2o +h +nadph
-    s_carnitine
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +trimethylamine +3r_3_hydroxy_4_oxobutanoate +nad +h2o +s_carnitine +h
-    nadh
   }
 }

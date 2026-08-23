@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway hydrogencarbonate-to-naphthyl-2-oxomethyl-succ "hydrogencarbonate to Naphthyl-2-oxomethyl-succ…" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     hydrogencarbonate
@@ -14,29 +14,5 @@ pathway hydrogencarbonate-to-naphthyl-2-oxomethyl-succ "hydrogencarbonate to Nap
     2_naphthoyl_coa
     <-> . +succinyl_coa +h -naphthyl_2_oxomethyl_succinyl_coa
     coa
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_2_1_164 [3.2.1.164] +d_galactopyranose +d_galp_1_6_d_galp
-    3r_4s_5r_6r_6_2r_3r_4s_5r_6r_3_4_5_trihydroxy_6
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_2_1_214 [3.2.1.214] +sophorose
-    3r_4s_5s_6r_3_2s_3r_4s_5s_6r_3_2s_3r_4s_5s_6r_4
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +acetyl_coa +alpha_neu5ac_2_6_beta_d_gal_1_6_beta_d_glcl_1_3
-    alpha_neu5_7_9ac3_2_6_beta_d_gal_1_6_beta_d_glcl
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +acetyl_coa +n_glycylclavaminate +h
-    n_acetylglycylclavaminate
   }
 }

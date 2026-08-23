@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-hexadecyl-2-succinyl-sn-to-n-oleoyl-l-phenylal "1-hexadecyl-2-succinyl-sn… to N-oleoyl-L-phenylalaninate" {
-  spacing 176
+  spacing 200
 
   spine at 0,0 {
     1_hexadecyl_2_succinyl_sn_glycero_3_phosphocholi
@@ -18,27 +18,51 @@ pathway 1-hexadecyl-2-succinyl-sn-to-n-oleoyl-l-phenylal "1-hexadecyl-2-succinyl
     n_oleoyl_l_phenylalaninate
   }
 
-  branch from succinate side left {
-    succinate
-    <-> ec_1_14_11_60 [1.14.11.60] +scopoletin +akg +o2 +co2
-    fraxetin
-  }
-
-  branch from succinate side right {
-    succinate
-    <-> . +l_lysinium +akg +o2 +co2
-    5s_5_hydroxy_l_lysinium
-  }
-
   branch from oleate side left {
     oleate
-    <-> . +1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph +h2o +hplus
-    1_hexadecanoyl_sn_glycero_3_phospho_d_myo_inosit
+    <-> . +1_1z_hexadecenyl_2_9z_octadecenoyl_sn_glycero_3 +h2o +hplus
+    1_1z_hexadecenyl_sn_glycero_3_phosphocholine
   }
 
   branch from oleate side right {
     oleate
-    <-> . +1_9z_octadecenoyl_sn_glycero_3_phospho_1_sn_glyc +h2o +hplus
-    sn_glycero_3_phospho_1_sn_glycerol
+    <-> . +1_oleoyl_2_7z_10z_13z_16z_19z_docosapentaenoyl_s +h2o +hplus
+    2_7z_10z_13z_16z_19z_docosapentaenoyl_sn_glycero
+  }
+
+  branch from oleoyl_coa side left {
+    oleoyl_coa
+    <-> . +1_linolenoyl_sn_glycero_3_phosphate +coa
+    1_linolenoyl_2_oleoyl_sn_glycero_3_phosphate
+  }
+
+  branch from oleoyl_coa side right {
+    oleoyl_coa
+    <-> . +1_heptadecanoyl_sn_glycero_3_phosphate +coa
+    1_heptadecanoyl_2_oleoyl_sn_glycero_3_phosphate
+  }
+
+  branch from oleate side left {
+    oleate
+    <-> . +1_2_dioleoyl_sn_glycero_3_phospho_1d_myo_inosito +h2o +hplus
+    2_oleoyl_sn_glycero_3_phospho_1d_myo_inositol
+  }
+
+  branch from oleate side right {
+    oleate
+    <-> . +1_oleoyl_2_8z_11z_14z_icosatrienoyl_sn_glycero_3 +h2o +hplus
+    2_8z_11z_14z_icosatrienoyl_sn_glycero_3_phospho
+  }
+
+  branch from l_phenylalanine side left {
+    l_phenylalanine
+    <-> . +arachidonate +h2o
+    n_arachidonoyl_l_phenylalaninate
+  }
+
+  branch from l_phenylalanine side right {
+    l_phenylalanine
+    <-> .
+    d_phenylalanine
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dtdp-n-acetyl-alpha-d-glu-to-n-acetyl-d-hexosami "dTDP-N-acetyl-alpha-D-glu… to N-acetyl-α-D-hexosamine…" {
-  spacing 208
+  spacing 172
 
   spine at 0,0 {
     dtdp_n_acetyl_alpha_d_glucosamine
@@ -14,41 +14,5 @@ pathway dtdp-n-acetyl-alpha-d-glu-to-n-acetyl-d-hexosami "dTDP-N-acetyl-alpha-D-
     n_acetyl_d_hexosamine
     <-> ec_2_7_1_162 [2.7.1.162] +atp -adp -hplus
     n_acetyl_d_hexosamine_1_phosphate
-  }
-
-  branch from h side left {
-    h
-    <-> . +l_ascorbate_6_phosphate +pyruvate +phosphoenolpyruvate
-    l_ascorbate
-  }
-
-  branch from h side right {
-    h
-    <-> ec_1_2_4_2 [1.2.4.2] +r_lipoamide +2_oxoglutarate +s_8_succinyldihydrolipoamide
-    co2
-  }
-
-  branch from n_acetyl_d_hexosamine side left {
-    n_acetyl_d_hexosamine
-    <-> ec_2_7_1_59 [2.7.1.59]
-    n_acetyl_d_mannosamine
-  }
-
-  branch from n_acetyl_d_hexosamine side right {
-    n_acetyl_d_hexosamine
-    <-> . +n_acetyl_beta_d_glucosamine_6_phosphate +h2o
-    diacetylchitobiose_6_phosphate
-  }
-
-  branch from phosphate side left {
-    phosphate
-    <-> . +h +adp +atp +h2o
-    6_beta_oh_gliclazide
-  }
-
-  branch from phosphate side right {
-    phosphate
-    <-> . +h +adp +6_hydroxy_fluvastatin +6_hydroxy_fluvastatin +h2o
-    atp
   }
 }

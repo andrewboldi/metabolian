@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dtdp-l-evernosamine-to-dtdp-3-amino-2-3-6-trideo "dTDP-β-L-evernosamine to dTDP-3-amino-2,3,6-trideo…" {
-  spacing 188
+  spacing 242
 
   spine at 0,0 {
     dtdp_l_evernosamine
@@ -18,39 +18,17 @@ pathway dtdp-l-evernosamine-to-dtdp-3-amino-2-3-6-trideo "dTDP-β-L-evernosamine
     s_adenosyl_l_methionine
   }
 
-  branch from dtdp_beta_l_4_epi_vancosamine side left {
-    dtdp_beta_l_4_epi_vancosamine
-    <-> ec_2_4_1_311 [2.4.1.311] +desvancosaminyl_vancomycin +dtdp +h
-    chloroorienticin_b
-  }
 
-  branch from dtdp_beta_l_4_epi_vancosamine side right {
-    dtdp_beta_l_4_epi_vancosamine
-    <-> ec_2_4_1_311 [2.4.1.311] +devancosaminyl_vancomycin +dtdp +h
-    chloroorienticin_b
-  }
 
-  branch from s_adenosyl_l_methionine side left {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +beta_bixin +h
-    norbixin
-  }
 
-  branch from s_adenosyl_l_methionine side right {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +trans_methylbixin +h
-    beta_bixin
-  }
 
-  branch from nadph side left {
-    nadph
-    <-> . +4_hydroxycinnamoylmethane +h +nadp
-    raspberry_ketone
-  }
 
-  branch from nadph side right {
-    nadph
-    <-> . +formaldehyde +acetate +nadp +h2o +o2
-    hydroxyacetone
-  }
+
+
+
+
+
+
+
+
 }

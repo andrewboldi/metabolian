@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n4-acetylcytidine-to-d-ribose-1-5-bisphospha "N4-acetylcytidine to α-D-ribose 1,5-bisphospha…" {
-  spacing 228
+  spacing 234
 
   spine at 0,0 {
     n4_acetylcytidine
@@ -14,5 +14,11 @@ pathway n4-acetylcytidine-to-d-ribose-1-5-bisphospha "N4-acetylcytidine to α-D-
     cytosine
     <-> ec_2_7_1_212 [2.7.1.212] +r1p +adp -amp -hplus
     d_ribose_1_5_bisphosphate
+  }
+
+  branch from n4_acetylcytidine side left {
+    n4_acetylcytidine
+    <-> . +atp +adp +hplus
+    n4_acetylcytidine_5_monophosphate
   }
 }

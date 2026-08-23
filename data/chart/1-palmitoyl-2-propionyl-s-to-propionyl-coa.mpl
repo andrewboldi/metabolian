@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-palmitoyl-2-propionyl-s-to-propionyl-coa "1-palmitoyl-2-propionyl-s… to propionyl-CoA" {
-  spacing 284
+  spacing 314
 
   spine at 0,0 {
     1_palmitoyl_2_propionyl_sn_glycero_3_phosphochol
@@ -16,10 +16,81 @@ pathway 1-palmitoyl-2-propionyl-s-to-propionyl-coa "1-palmitoyl-2-propionyl-s…
     propionyl_coa
   }
 
+  branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side left {
+    1_hexadecanoyl_sn_glycero_3_phosphocholine
+    <-> . +octanoyl_coa +coa
+    1_palmitoyl_2_capryloyl_sn_glycero_3_phosphochol
+  }
 
+  branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side right {
+    1_hexadecanoyl_sn_glycero_3_phosphocholine
+    <-> . +myristoyl_coa +coa
+    1_palmitoyl_2_myristoyl_sn_glycero_3_phosphochol
+  }
 
+  branch from propanal side left {
+    propanal
+    <-> . +iron +fe2 +hplus
+    propan_1_ol
+  }
 
+  branch from ppi side right {
+    ppi
+    <-> ec_2_5_1_148 [2.5.1.148] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +nadph +hplus +nadp
+    lycopaoctaene
+  }
 
+  branch from ppi side left {
+    ppi
+    <-> . +atp
+    cyclic_hexaadenylate
+  }
 
+  branch from propionyl_coa side right {
+    propionyl_coa
+    <-> ec_1_3_1_95 [1.3.1.95] +nad +nadh +hplus
+    acryloyl_coa
+  }
 
+  branch from propionyl_coa side left {
+    propionyl_coa
+    <-> ec_4_1_1_94 [4.1.1.94] +hplus +co2
+    s_methylmalonyl_coa
+  }
+
+  branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side right {
+    1_hexadecanoyl_sn_glycero_3_phosphocholine
+    <-> . +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +h2o +hplus
+    linoleate
+  }
+
+  branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side left {
+    1_hexadecanoyl_sn_glycero_3_phosphocholine
+    <-> . +1_palmitoyl_2_10e_9_hydroperoxyoctadecenoyl_sn_g +h2o +hplus
+    9_hydroperoxy_10e_octadecenoate
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +atp
+    cyclic_tetraadenylate
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +5_methyl_ctp +h2o +hplus
+    5_methyl_cmp
+  }
+
+  branch from propionyl_coa side right {
+    propionyl_coa
+    <-> . +butan_1_ol +coa
+    butyl_propionate
+  }
+
+  branch from propionyl_coa side left {
+    propionyl_coa
+    <-> . +mycophenolyl_coa +coa
+    4_3_oxo_2_6_dimethyl_6e_octenoyl_coa_5_o_methyl
+  }
 }

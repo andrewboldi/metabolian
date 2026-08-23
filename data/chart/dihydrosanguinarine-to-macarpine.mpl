@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dihydrosanguinarine-to-macarpine "dihydrosanguinarine to macarpine" {
-  spacing 302
+  spacing 340
 
   spine at 0,0 {
     dihydrosanguinarine
@@ -22,14 +22,14 @@ pathway dihydrosanguinarine-to-macarpine "dihydrosanguinarine to macarpine" {
 
   branch from fmn side left {
     fmn
-    <-> . +24r_24_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
-    24r_7_24_dihydroxycholesterol
+    <-> ec_1_14_14_90 [1.14.14.90] +2_unsubstituted_isoflavones +fmnh2 +o2 +h2o +hplus
+    2_hydroxyisoflavones
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_96 [1.14.14.96] +trans_5_o_4_coumaroyl_d_quinate +fmnh2 +o2 +h2o +hplus
-    trans_5_o_caffeoyl_d_quinate
+    <-> ec_2_7_1_42 [2.7.1.42] +riboflavin +g1p
+    glucose
   }
 
   branch from dihydrochelirubine side left {
@@ -40,13 +40,67 @@ pathway dihydrosanguinarine-to-macarpine "dihydrosanguinarine to macarpine" {
 
   branch from sah side right {
     sah
-    <-> . +methylarsonous_acid +sam +hplus
-    dimethylarsinate
+    <-> ec_2_1_1_79 [2.1.1.79] +1_acyl_2_z_9_10_enoyl_sn_glycero_3_phospholipid +sam +hplus
+    1_acyl_2_9_10_methyleneacyl_sn_glycero_3_phospho
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_139 [2.1.1.139] +3_demethylstaurosporinium +sam +hplus
-    staurosporinium
+    <-> ec_2_1_1_28 [2.1.1.28] +phenylethanolaminium +sam +hplus
+    n_methylphenylethanolaminium
+  }
+
+  branch from dihydrosanguinarine side right {
+    dihydrosanguinarine
+    <-> ec_1_5_3_12 [1.5.3.12] +o2 +hplus +h2o2
+    sanguinarine
+  }
+
+  branch from fmnh2 side left {
+    fmnh2
+    <-> ec_1_14_19_65 [1.14.19.65] +s_scoulerine +o2 +fmn +h2o +hplus
+    s_cheilanthifoline
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> ec_1_14_14_23 [1.14.14.23] +cholesterol +o2 +fmn +h2o +hplus
+    hydroxycholesterol_7a
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> . +tyrosine +fmnh2 +o2 +h2o +hplus
+    n_hydroxy_l_tyrosinate
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_25 [1.14.14.25] +cholesterol +fmnh2 +o2 +h2o +hplus
+    24s_24_hydroxycholesterol
+  }
+
+  branch from sam side left {
+    sam
+    <-> ec_2_1_1_111 [2.1.1.111] +anthranilate +sah +hplus
+    n_methylanthranilate
+  }
+
+  branch from sam side right {
+    sam
+    <-> ec_2_5_1_25 [2.5.1.25] +uridine_5_monophosphate_1 +5_s_methyl_5_thioadenosine +hplus
+    3_3_amino_3_carboxypropyl_uridine_5_phosphate_1
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_67 [2.1.1.67] +mercaptopurine +sam +hplus
+    6_methylthiopurine
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_77 [2.1.1.77] +l_isoaspartate +sam
+    l_isoaspartate_methyl_ester
   }
 }

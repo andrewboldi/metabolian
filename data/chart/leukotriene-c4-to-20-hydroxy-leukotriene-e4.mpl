@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway leukotriene-c4-to-20-hydroxy-leukotriene-e4 "leukotriene C4 to 20-hydroxy-leukotriene E4" {
-  spacing 212
+  spacing 206
 
   spine at 0,0 {
     leukotriene_c4
@@ -16,27 +16,21 @@ pathway leukotriene-c4-to-20-hydroxy-leukotriene-e4 "leukotriene C4 to 20-hydrox
     20_hydroxy_leukotriene_e4
   }
 
-  branch from glutamate side left {
-    glutamate
-    <-> ec_6_3_1_17 [6.3.1.17] +citrate +atp +adp +pi +hplus
-    citrylglutamate
-  }
-
-  branch from glutamate side right {
-    glutamate
-    <-> ec_2_6_1_118 [2.6.1.118] +c_terminal_l_glutamyl_l_lysine_1_group +akg
-    c_terminal_l_glutamyl_l_2_aminoadipate_semialdeh
-  }
-
   branch from glycine side left {
     glycine
-    <-> . +gly_gln +h2o
-    glutamine
+    <-> . +o_s_3r_3_hydroxyacylpantetheine_4_phosphoryl_ser +holo-acp +hplus
+    n2_3r_3_hydroxyacyl_glycinate
   }
 
   branch from glycine side right {
     glycine
-    <-> ec_1_13_11_78 [1.13.11.78] +o2 +pi +hplus
-    1r_2_amino_1_hydroxyethyl_phosphonate
+    <-> . +restrictinol +hplus +h2o
+    restricticin
+  }
+
+  branch from glycine side left {
+    glycine
+    <-> . +n_carbamoylglycinate +h2o +hplus +co2
+    nh3
   }
 }

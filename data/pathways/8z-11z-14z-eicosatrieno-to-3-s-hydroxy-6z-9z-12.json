@@ -9,7 +9,7 @@
     "sources": [
       {
         "db": "MetaNetX",
-        "id": "MNXR99219"
+        "id": "MNXR99218"
       }
     ]
   },
@@ -89,6 +89,15 @@
       }
     },
     {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
       "id": "nadph",
       "name": "NADPH",
       "formula": "C21H26N7O17P3",
@@ -140,7 +149,7 @@
   "reactions": [
     {
       "id": "r1",
-      "name": "Reaction MNXR99219",
+      "name": "Reaction MNXR99218",
       "substrates": [
         {
           "metabolite": "8z_11z_14z_eicosatrienoyl_coa",
@@ -152,7 +161,7 @@
         },
         {
           "metabolite": "nadp",
-          "stoichiometry": 2
+          "stoichiometry": 4
         },
         {
           "metabolite": "coa",
@@ -160,7 +169,7 @@
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
+          "stoichiometry": 3
         }
       ],
       "products": [
@@ -174,24 +183,28 @@
         },
         {
           "metabolite": "h",
-          "stoichiometry": 3
+          "stoichiometry": 5
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
         },
         {
           "metabolite": "nadph",
-          "stoichiometry": 2
+          "stoichiometry": 4
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 1,
       "xrefs": {
-        "metanetx": "MNXR99219"
+        "metanetx": "MNXR99218"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR99219"
+            "id": "MNXR99218"
           }
         ]
       }
@@ -268,6 +281,118 @@
           {
             "db": "MetaNetX",
             "id": "MNXR158711"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_2e_6z_9z_12z_octadecatetraenoyl_coa_h2o2-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2e_6z_9z_12z_octadecatetraenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h2o2-to-coa"
+      },
+      "note": "Shares (2E,6Z,9Z,12Z)-octadecatetraenoyl-CoA with H2O2 to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:233778"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2e_6z_9z_12z_octadecatetraenoyl_coa_linolenoyl-coa-to-3-oxo-6z-9z-12z-octadec",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2e_6z_9z_12z_octadecatetraenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "linolenoyl-coa-to-3-oxo-6z-9z-12z-octadec"
+      },
+      "note": "Shares (2E,6Z,9Z,12Z)-octadecatetraenoyl-CoA with γ-linolenoyl-CoA to 3-oxo-(6Z,9Z,12Z)-octadec….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:233778"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2e_6z_9z_12z_octadecatetraenoyl_coa_linolenoyl-coa-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2e_6z_9z_12z_octadecatetraenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "linolenoyl-coa-to-nad"
+      },
+      "note": "Shares (2E,6Z,9Z,12Z)-octadecatetraenoyl-CoA with γ-linolenoyl-CoA to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:233778"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2e_6z_9z_12z_octadecatetraenoyl_coa_petiveriin-to-diiodine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2e_6z_9z_12z_octadecatetraenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "petiveriin-to-diiodine"
+      },
+      "note": "Shares (2E,6Z,9Z,12Z)-octadecatetraenoyl-CoA with petiveriin to diiodine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:233778"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_s_hydroxy_6z_9z_12z_octadecatrienoyl_coenzyme_linolenoyl-coa-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_s_hydroxy_6z_9z_12z_octadecatrienoyl_coenzyme"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "linolenoyl-coa-to-nad"
+      },
+      "note": "Shares 3(S)-Hydroxy-6Z,9Z,12Z-Octadecatrienoyl Coenzyme A with γ-linolenoyl-CoA to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM744483"
           }
         ]
       }

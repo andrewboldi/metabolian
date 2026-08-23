@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway sphinganine-to-palmitoyl-coa "sphinganine to palmitoyl-CoA" {
-  spacing 210
+  spacing 198
 
   spine at 0,0 {
     sphinganine
@@ -20,17 +20,5 @@ pathway sphinganine-to-palmitoyl-coa "sphinganine to palmitoyl-CoA" {
     hexadecanal
     <-> . +o2 +h2o2
     hexadecan_1_ol
-  }
-
-  branch from palmitoyl_coa side right {
-    palmitoyl_coa
-    <-> . +2_2_dilysocardiolipin +coa
-    2_palmitoyl_2_monolysocardiolipin
-  }
-
-  branch from palmitoyl_coa side left {
-    palmitoyl_coa
-    <-> . +1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine +coa
-    1_z_alk_1_enyl_2_palmitoyl_sn_glycero_3_phosphoe
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n6-hydroxy-l-lysine-to-diphosphate "N6-hydroxy-L-lysine to diphosphate" {
-  spacing 280
+  spacing 268
 
   spine at 0,0 {
     n6_hydroxy_l_lysine
@@ -14,17 +14,5 @@ pathway n6-hydroxy-l-lysine-to-diphosphate "N6-hydroxy-L-lysine to diphosphate" 
     n_citryl_n_acetyl_n_hydroxylysine
     <-> ec_6_3_2_39 [6.3.2.39] +n6_acetyl_n6_hydroxy_l_lysine +atp -amp -ppi -hplus
     aerobactinate
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +o_methylsalicylate +atp +nadph +hplus +amp +nadp
-    2_methoxybenzaldehyde
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +3_methoxybenzoate +atp +nadph +hplus +amp +nadp
-    3_methoxybenzaldehyde
   }
 }

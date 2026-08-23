@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-acetyl-alaninate-to-h2o "N-acetyl-β-alaninate to H2O" {
-  spacing 310
+  spacing 340
 
   spine at 0,0 {
     n_acetyl_alaninate
@@ -26,14 +26,14 @@ pathway n-acetyl-alaninate-to-h2o "N-acetyl-β-alaninate to H2O" {
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_165 [2.1.1.165] +iodide +sam
-    iodomethane
+    <-> ec_2_1_1_225 [2.1.1.225] +adenosine_5_monophosphate_1 +sam +hplus
+    2_o_methyladenosine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_165 [2.1.1.165] +chloride +sam
-    chloromethane
+    <-> ec_2_1_1_226 [2.1.1.226] +cytidine_5_monophosphate_1 +sam +hplus
+    2_o_methylcytidine_5_monophosphate_1
   }
 
   branch from n_methyl_l_histidine side left {
@@ -50,14 +50,14 @@ pathway n-acetyl-alaninate-to-h2o "N-acetyl-β-alaninate to H2O" {
 
   branch from h side left {
     h
-    <-> ec_3_1_3_4 [3.1.3.4] +1_2_diacyl_sn_glycerol_didodecanoyl_n_c12_0 +phosphate +h2o
-    1_2_didodecanoyl_sn_glycerol_3_phosphate
+    <-> . +udp +3_5_3_triiodothyroacetate_beta_d_glucuronoside +tiratricol
+    udp_alpha_d_glucuronate
   }
 
   branch from h side right {
     h
-    <-> ec_3_1_3_4 [3.1.3.4] +1_2_diacyl_sn_glycerol_ditetradec_7_enoyl_n_c14 +phosphate +h2o
-    1_2_ditetradec_7_enoyl_sn_glycerol_3_phosphate
+    <-> . +udp +3_5_diiodothyroacetate_beta_d_glucuronoside +udp_alpha_d_glucuronate
+    3_5_diiodothyroacetate
   }
 
   branch from anserine side left {
@@ -69,25 +69,25 @@ pathway n-acetyl-alaninate-to-h2o "N-acetyl-β-alaninate to H2O" {
   branch from adp side right {
     adp
     <-> . +h +phosphate +atp +h2o
-    phosphatidylethanolamine_ditetradecanoyl_n_c14_0
+    thioglycolate
   }
 
   branch from adp side left {
     adp
-    <-> . +h +phosphate +atp +h2o
-    pe_18_1_11z_18_1_9z
+    <-> ec_7_6_2_15 [7.6.2.15] +h +phosphate +atp +h2o
+    thiamine
   }
 
   branch from phosphate side right {
     phosphate
-    <-> . +h +adp +atp +h2o
-    1_11z_octadecenoyl_2_9z_12z_octadecadienoyl_sn_g
+    <-> ec_3_6_3_21 [3.6.3.21] +h +adp +atp +h2o
+    l_threonine
   }
 
   branch from phosphate side left {
     phosphate
     <-> . +h +adp +atp +h2o
-    phosphatidylglycerol_ditetradecanoyl_n_c14_0
+    testosterone_17_o_d_glucuronide
   }
 
   branch from beta_alanine side right {
@@ -104,14 +104,14 @@ pathway n-acetyl-alaninate-to-h2o "N-acetyl-β-alaninate to H2O" {
 
   branch from atp side right {
     atp
-    <-> . +pseudoecgonyl_coa +diphosphate +amp +h +coa
-    pseudoecgonine
+    <-> ec_3_6_3_25 [3.6.3.25] +h +adp +phosphate +h2o
+    thiosulfate
   }
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
-    phosphatidylglycerophosphate_didodecanoyl_n_c12
+    <-> ec_3_6_3_55 [3.6.3.55] +h +adp +phosphate +h2o
+    tungstate
   }
 
   branch from beta_aminopropionitrile side right {
@@ -128,13 +128,55 @@ pathway n-acetyl-alaninate-to-h2o "N-acetyl-β-alaninate to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> . +h +adp +phosphate +atp
-    phosphatidylglycerophosphate_ditetradecanoyl_n_c
+    <-> . +prostaglandin_e2
+    prostaglandin_b2
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_1_3_27 [3.1.3.27] +phosphate +phosphatidylglycerophosphate_didodecanoyl_n_c12
-    dilauroyl_phosphatidylglycerol
+    <-> . +prostaglandin_pge2_glyceryl_ester
+    prostaglandin_pgb2_glyceryl_ester
+  }
+
+  branch from l_histidine side right {
+    l_histidine
+    <-> . +sam +5_s_methyl_5_thioadenosine +hplus
+    n_3s_3_amino_3_carboxypropyl_l_histidine_dizwitt
+  }
+
+  branch from l_histidine side left {
+    l_histidine
+    <-> . +cholate +h2o
+    l_histidocholate
+  }
+
+  branch from sam side right {
+    sam
+    <-> ec_2_1_1_227 [2.1.1.227] +2_o_methylcytidine_5_monophosphate_1 +sah +hplus
+    cytidine_5_monophosphate_1
+  }
+
+  branch from sam side left {
+    sam
+    <-> ec_2_1_1_229 [2.1.1.229] +5_carboxymethyl_uridine_5_monophosphate_2 +sah
+    5_2_methoxy_2_oxoethyl_uridine_5_monophosphate
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_230 [2.1.1.230] +sam +2_o_methyladenosine_5_monophosphate_1 +hplus
+    adenosine_5_monophosphate_1
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_242 [2.1.1.242] +guanosine_5_monophosphate_1 +sam +hplus
+    n2_methylguanosine_5_monophosphate_1
+  }
+
+  branch from beta_alanine side right {
+    beta_alanine
+    <-> . +beta_alanyl_coa +h2o +h
+    coa
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2r-hydroxyhexanoate-to-l-glutamate "(2R)-hydroxyhexanoate to L-glutamate" {
-  spacing 192
+  spacing 180
 
   spine at 0,0 {
     2r_hydroxyhexanoate
@@ -14,17 +14,5 @@ pathway 2r-hydroxyhexanoate-to-l-glutamate "(2R)-hydroxyhexanoate to L-glutamate
     l_2_aminohexanoic_acid
     <-> ec_2_6_1_67 [2.6.1.67] +akg -glutamate
     2_oxohexanoate
-  }
-
-  branch from glutamate side left {
-    glutamate
-    <-> ec_6_3_2_61 [6.3.2.61] +l_glutamyl_l_glutamate_2 +atp +adp +pi +hplus
-    l_glutamyl_l_glutamyl_l_glutamate_3
-  }
-
-  branch from glutamate side right {
-    glutamate
-    <-> ec_6_3_2_62 [6.3.2.62] +atp +l_glutamyl_l_glutamyl_l_glutamate_3 +adp +pi +hplus
-    l_glutamyl_l_glutamate_2
   }
 }

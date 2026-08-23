@@ -1,0 +1,363 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-arabinitol-to-h2o-null",
+  "name": "D-arabinitol to H2O",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from D-arabinitol to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR197985"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_arabinitol",
+      "name": "D-arabinitol",
+      "formula": "C5H12O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1018"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "alpha_d_ribulose",
+      "name": "alpha-D-ribulose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1371691"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "beta_d_ribopyranose",
+      "name": "beta-D-ribopyranose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM732914"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_287",
+      "name": "D-arabinitol dehydrogenase (NADP(+))",
+      "ec": [
+        "1.1.1.287"
+      ]
+    },
+    {
+      "id": "ec_5_3_1_20",
+      "name": "ribose isomerase",
+      "ec": [
+        "5.3.1.20"
+      ]
+    },
+    {
+      "id": "ec_3_6_3_17",
+      "name": "EC 3.6.3.17",
+      "ec": [
+        "3.6.3.17"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "D-arabinitol dehydrogenase (NADP(+))",
+      "ec": "1.1.1.287",
+      "substrates": [
+        {
+          "metabolite": "d_arabinitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "alpha_d_ribulose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_287"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR197985"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197985"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "ribose isomerase",
+      "ec": "5.3.1.20",
+      "substrates": [
+        {
+          "metabolite": "alpha_d_ribulose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "beta_d_ribopyranose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_1_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR186893"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR186893"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR174758",
+      "ec": "3.6.3.17",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "beta_d_ribopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "beta_d_ribopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_3_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR174758"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR174758"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_alpha_d_ribulose_d-arabinitol-to-2-5-dioxopentanoate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "alpha_d_ribulose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-arabinitol-to-2-5-dioxopentanoate"
+      },
+      "note": "Shares alpha-D-ribulose with D-arabinitol to 2,5-dioxopentanoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371691"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_alpha_d_ribulose_d-arabinitol-to-7-methyluric-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "alpha_d_ribulose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-arabinitol-to-7-methyluric-acid"
+      },
+      "note": "Shares alpha-D-ribulose with D-arabinitol to 7-Methyluric acid.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371691"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_alpha_d_ribulose_d-ribitol-5-phosphate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "alpha_d_ribulose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-ribitol-5-phosphate-to-h2o"
+      },
+      "note": "Shares alpha-D-ribulose with D-ribitol 5-phosphate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371691"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_alpha_d_ribulose_sedoheptulose-1-phosphate-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "alpha_d_ribulose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sedoheptulose-1-phosphate-to-nad"
+      },
+      "note": "Shares alpha-D-ribulose with sedoheptulose 1-phosphate to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371691"
+          }
+        ]
+      }
+    }
+  ]
+}

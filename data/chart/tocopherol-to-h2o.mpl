@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway tocopherol-to-h2o "γ-tocopherol to H2O" {
-  spacing 238
+  spacing 340
 
   spine at 0,0 {
     tocopherol
@@ -16,57 +16,28 @@ pathway tocopherol-to-h2o "γ-tocopherol to H2O" {
     13_carboxy_alpha_tocopherol
   }
 
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_238 [2.1.1.238] +mycinamicin_vi +sam +hplus
-    mycinamicin_iii
-  }
 
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_46 [2.1.1.46] +4_hydroxyisoflavones +sam +hplus
-    4_methoxyisoflavones
-  }
 
-  branch from 13_hydroxy_tocopherol side left {
-    13_hydroxy_tocopherol
-    <-> ec_1_14_13_30 [1.14.13.30] +h +o2 +nadph +nadp +h2o
-    alpha_tocopherol
-  }
 
-  branch from fmn side right {
-    fmn
-    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +fmnh2 +o2 +h2o +hplus
-    17_18_eetetr
-  }
 
-  branch from fmn side left {
-    fmn
-    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +fmnh2 +o2 +h2o +hplus
-    17_r_18_s_eetetr
-  }
 
-  branch from nadp side right {
-    nadp
-    <-> . +h +12_oxo_c_ltb3 +nadph
-    11_12_dihydro_12r_hydroxyleukotriene_c4
-  }
 
-  branch from nadp side left {
-    nadp
-    <-> . +26_hydroxycholesterol +h +nadph
-    3beta_hydroxy_5_cholestenal
-  }
 
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_27 [3.6.3.27] +h +adp +phosphate +phosphate
-    atp
-  }
 
-  branch from h2o side left {
-    h2o
-    <-> . +hexadecanoate +h +2_hexadecanoyl_sn_glycero_3_phospho_1_sn_glycero
-    dipalmitoyl_phosphatidylglycerol
-  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

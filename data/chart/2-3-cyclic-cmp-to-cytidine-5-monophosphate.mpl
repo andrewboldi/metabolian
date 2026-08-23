@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-3-cyclic-cmp-to-cytidine-5-monophosphate "2',3'-cyclic CMP to cytidine 5'-monophosphate" {
-  spacing 252
+  spacing 264
 
   spine at 0,0 {
     2_3_cyclic_cmp
@@ -18,13 +18,25 @@ pathway 2-3-cyclic-cmp-to-cytidine-5-monophosphate "2',3'-cyclic CMP to cytidine
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> . +o3_d_galactosyl_1_3_n_acetyl_d_galactosaminyl_l +cmp_n_acetyl_neuraminate +hplus
-    o3_n_acetyl_neuraminyl_2_3_d_galactosyl_1_3_n_ac
+    <-> . +o_n_acetyl_d_galactosaminyl_l_serine +cmp_n_acetyl_neuraminate +hplus
+    o3_n_acetyl_neuraminosyl_2_6_n_acetyl_d_galactos
   }
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> . +d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4 +cmp_n_acetyl_neuraminate +hplus
-    d_galactosyl_1_3_n_acetyl_neuraminosyl_2_6_n_ac
+    <-> . +o3_d_galactosyl_1_3_n_acetyl_d_galactosaminyl_l +cmp_n_acetyl_neuraminate +hplus
+    o3_d_galactosyl_1_3_n_acetyl_neuraminosyl_2_6_n
+  }
+
+  branch from cytidine_5_monophosphate side left {
+    cytidine_5_monophosphate
+    <-> . +o3_d_galactosyl_1_3_n_acetyl_d_galactosaminyl_l +cmp_n_acetyl_neuraminate +hplus
+    o3_d_galactosyl_1_3_n_acetyl_neuraminosyl_2_6_n
+  }
+
+  branch from cytidine_5_monophosphate side right {
+    cytidine_5_monophosphate
+    <-> . +n_acetylneuraminyl_2_3_d_galactosyl_1_4_d_gluco +cmp_n_acetyl_9_o_acetylneuraminate +hplus
+    n_acetyl_9_o_acetylneuraminosyl_2_8_n_acetylneu
   }
 }

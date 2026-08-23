@@ -20,25 +20,55 @@ pathway dtdp-3-azaniumyl-3-6-dide-to-dtdp "dTDP-3-azaniumyl-3,6-dide… to dTDP"
 
   branch from sah side left {
     sah
-    <-> . +3_methyl_1_2_didehydro_2_3_dihydrosqualene +sam +hplus
-    3_22_dimethyl_1_2_23_24_tetradehydro_2_3_22_23_t
+    <-> ec_2_1_1_244 [2.1.1.244] +n_terminal_l_alanyl_l_prolyl_l_lysyl_2 +sam +hplus
+    n_terminal_n_n_n_trimethyl_l_alanyl_l_prolyl_l_l
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_263 [2.1.1.263] +c30_botryococcene +sam +hplus
-    3_20_dimethyl_1_2_21_22_tetradehydro_2_3_20_21_t
+    <-> ec_2_1_1_244 [2.1.1.244] +n_terminal_l_seryl_l_prolyl_l_lysyl_2 +sam +hplus
+    n_terminal_n_n_n_trimethyl_l_seryl_l_prolyl_l_ly
   }
 
-  branch from dtdp side left {
-    dtdp
-    <-> . +ddtmp +dttp
-    ddtdp
-  }
-
-  branch from dtmp side right {
+  branch from dtmp side left {
     dtmp
     <-> ec_2_7_1_21 [2.7.1.21] +atp +adp +hplus
     thymidine
+  }
+
+  branch from sam side right {
+    sam
+    <-> . +n_terminal_n_methyl_l_prolyl_l_prolyl_l_lysyl_2 +sah +hplus
+    n_terminal_n_n_dimethyl_l_prolyl_l_prolyl_l_lysy
+  }
+
+  branch from sam side left {
+    sam
+    <-> ec_2_1_1_244 [2.1.1.244] +n_terminal_n_n_dimethyl_l_prolyl_l_prolyl_l_lysy +sah +hplus
+    n_terminal_l_prolyl_l_prolyl_l_lysyl_2
+  }
+
+  branch from sah side right {
+    sah
+    <-> . +eburicol +sam +hplus
+    pneumocysterol
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_257 [2.1.1.257] +pseudouridine_5_phosphate_1 +sam +hplus
+    n1_methylpseudouridine_5_monophosphate_1
+  }
+
+  branch from tylactone side right {
+    tylactone
+    <-> . +2s_ethylmalonyl_coa +malonyl_coa +methylmalonyl_coa +h +nadph +nadp +coa +h2o
+    co2
+  }
+
+  branch from tylactone side left {
+    tylactone
+    <-> . +2s_ethylmalonyl_coa +malonyl_coa +s_methylmalonyl_coa +h +nadph +co2 +coa +h2o
+    nadp
   }
 }

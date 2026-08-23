@@ -1,0 +1,267 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "beta-tri-n-acetylchitotri-to-udp-alpha-d-glucuro",
+  "name": "beta-tri-N-acetylchitotri… to UDP-alpha-D-glucuronate",
+  "category": "other",
+  "summary": "A 3-step route from beta-tri-N-acetylchitotriose to UDP-alpha-D-glucuronate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR96717"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "beta_tri_n_acetylchitotriose",
+      "name": "beta-tri-N-acetylchitotriose",
+      "short": "beta-tri-N-acetylch…",
+      "formula": "C24H41N3O16",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1103914"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "n_acetyl_d_hexosamine",
+      "name": "N-acetyl-D-hexosamine",
+      "short": "N-acetyl-D-hexosami…",
+      "formula": "C8H15NO6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:21601"
+      }
+    },
+    {
+      "id": "d_glucuronate",
+      "name": "D-glucuronate",
+      "formula": "C6H9O7",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1105765"
+      }
+    },
+    {
+      "id": "beta_d_4_deoxy_delta_4_glcpa_1_3_beta_d_glcpnac",
+      "name": "beta-D-4-deoxy-Delta(4)-GlcpA-(1->3)-beta-D-GlcpNAc",
+      "short": "beta-D-4-deoxy-Delt…",
+      "formula": "C14H20NO11",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1106091"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1102128"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "udp_n_acetyl_alpha_d_glucosamine",
+      "name": "UDP-N-acetyl-alpha-D-glucosamine",
+      "short": "UDP-N-acetyl-alpha-…",
+      "formula": "C17H25N3O17P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1104529"
+      }
+    },
+    {
+      "id": "udp_alpha_d_glucuronate",
+      "name": "UDP-alpha-D-glucuronate",
+      "short": "UDP-alpha-D-glucuro…",
+      "formula": "C15H19N2O18P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1104890"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR96717",
+      "substrates": [
+        {
+          "metabolite": "beta_tri_n_acetylchitotriose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_d_hexosamine",
+          "stoichiometry": 3
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR96717"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR96717"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR100163",
+      "substrates": [
+        {
+          "metabolite": "d_glucuronate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_acetyl_d_hexosamine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "beta_d_4_deoxy_delta_4_glcpa_1_3_beta_d_glcpnac",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR100163"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR100163"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR100558",
+      "substrates": [
+        {
+          "metabolite": "udp",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "beta_d_4_deoxy_delta_4_glcpa_1_3_beta_d_glcpnac",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "udp_n_acetyl_alpha_d_glucosamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_alpha_d_glucuronate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR100558"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR100558"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_beta_tri_n_acetylchitotriose_beta-tri-n-acetylchitotri-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "beta_tri_n_acetylchitotriose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-tri-n-acetylchitotri-to-h2o"
+      },
+      "note": "Shares beta-tri-N-acetylchitotriose with beta-tri-N-acetylchitotri… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1103914"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_beta_d_4_deoxy_delta_4_glcpa_1_3_beta_d_glcpnac_n-acetyl-d-hexosamine-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "beta_d_4_deoxy_delta_4_glcpa_1_3_beta_d_glcpnac"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyl-d-hexosamine-to-h2o-null"
+      },
+      "note": "Shares beta-D-4-deoxy-Delta(4)-GlcpA-(1->3)-beta-D-GlcpNAc with N-acetyl-D-hexosamine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1106091"
+          }
+        ]
+      }
+    }
+  ]
+}

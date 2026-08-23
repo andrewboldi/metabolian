@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-3-o-d-xyl-1-3-d-g "UDP to 3-O-{β-D-Xyl-(1→3)-[β-D-G…" {
-  spacing 158
+  spacing 152
 
   spine at 0,0 {
     udp
@@ -14,11 +14,5 @@ pathway udp-to-3-o-d-xyl-1-3-d-g "UDP to 3-O-{β-D-Xyl-(1→3)-[β-D-G…" {
     udp_alpha_d_xylose
     <-> . +udp +3_o_d_xyl_1_3_d_gal_1_2_d_glca_quillaic_acid_l_r +h -3_o_d_xyl_1_3_d_gal_1_2_d_glca_quillaic_acid_d_f
     udp_beta_l_rhamnose
-  }
-
-  branch from udp_alpha_d_apiose side left {
-    udp_alpha_d_apiose
-    <-> ec_2_4_2_25 [2.4.2.25] +udp +apiin
-    apigenin_7_o_beta_d_glucoside
   }
 }

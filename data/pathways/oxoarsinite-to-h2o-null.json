@@ -1,0 +1,446 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "oxoarsinite-to-h2o-null",
+  "name": "oxoarsinite to H2O",
+  "category": "amino-acid-metabolism",
+  "summary": "A 4-step route from oxoarsinite to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR193814"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "oxoarsinite",
+      "name": "oxoarsinite",
+      "formula": "AsO2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1369462"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "arsenite",
+      "name": "arsenite",
+      "formula": "H2AsO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29242"
+      }
+    },
+    {
+      "id": "d_ribose",
+      "name": "D-ribose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1108051"
+      }
+    },
+    {
+      "id": "r_lipoate",
+      "name": "(R)-lipoate",
+      "formula": "C8H13O2S2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1371179"
+      }
+    },
+    {
+      "id": "r_dihydrolipoate",
+      "name": "(R)-dihydrolipoate",
+      "formula": "C8H15O2S2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1370825"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "ribose_1_arsenate",
+      "name": "ribose-1-arsenate",
+      "formula": "C5H9AsO8",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM727860"
+      }
+    },
+    {
+      "id": "l_dehydroascorbic_acid",
+      "name": "L-dehydroascorbic acid",
+      "short": "L-dehydroascorbic…",
+      "formula": "C6H6O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1108062"
+      }
+    },
+    {
+      "id": "l_ascorbate",
+      "name": "L-ascorbate",
+      "formula": "C6H7O6",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM727871"
+      }
+    },
+    {
+      "id": "l_lysine",
+      "name": "L-lysine",
+      "formula": "C6H15N2O2",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1364268"
+      }
+    },
+    {
+      "id": "lipoyllysine",
+      "name": "Lipoyllysine",
+      "formula": "C14H26N2O3S2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:175262"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR193814",
+      "substrates": [
+        {
+          "metabolite": "oxoarsinite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "arsenite",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR193814"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR193814"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR191928",
+      "substrates": [
+        {
+          "metabolite": "d_ribose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "r_lipoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "arsenite",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_dihydrolipoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ribose_1_arsenate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR191928"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR191928"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR143340",
+      "substrates": [
+        {
+          "metabolite": "l_dehydroascorbic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "r_dihydrolipoate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_lipoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_ascorbate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR143340"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR143340"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Reaction MNXR103682",
+      "substrates": [
+        {
+          "metabolite": "l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "r_lipoate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "lipoyllysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR103682"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR103682"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_oxoarsinite_oxoarsinite-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "oxoarsinite"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "oxoarsinite-to-h2o"
+      },
+      "note": "Shares oxoarsinite with oxoarsinite to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1369462"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ribose_1_arsenate_4-hydroxymandelate-to-arsenate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ribose_1_arsenate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxymandelate-to-arsenate"
+      },
+      "note": "Shares ribose-1-arsenate with 4-hydroxymandelate to arsenate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM727860"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ribose_1_arsenate_4-hydroxymandelate-to-arsenate-62588",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ribose_1_arsenate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxymandelate-to-arsenate-62588"
+      },
+      "note": "Shares ribose-1-arsenate with 4-hydroxymandelate to arsenate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM727860"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ribose_1_arsenate_oxoarsinite-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ribose_1_arsenate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "oxoarsinite-to-h2o"
+      },
+      "note": "Shares ribose-1-arsenate with oxoarsinite to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM727860"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ribose_1_arsenate_trans-isoeugenol-to-arsenite",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ribose_1_arsenate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-isoeugenol-to-arsenite"
+      },
+      "note": "Shares ribose-1-arsenate with trans-isoeugenol to arsenite.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM727860"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ribose_1_arsenate_trans-isoeugenol-to-arsenite-17081",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ribose_1_arsenate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-isoeugenol-to-arsenite-17081"
+      },
+      "note": "Shares ribose-1-arsenate with trans-isoeugenol to arsenite.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM727860"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lipoyllysine_oxoarsinite-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lipoyllysine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "oxoarsinite-to-h2o"
+      },
+      "note": "Shares Lipoyllysine with oxoarsinite to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:175262"
+          }
+        ]
+      }
+    }
+  ]
+}

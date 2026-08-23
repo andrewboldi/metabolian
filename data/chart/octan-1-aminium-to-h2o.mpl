@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway octan-1-aminium-to-h2o "octan-1-aminium to H2O" {
-  spacing 180
+  spacing 162
 
   spine at 0,0 {
     octan_1_aminium
@@ -20,23 +20,5 @@ pathway octan-1-aminium-to-h2o "octan-1-aminium to H2O" {
     octanal
     <-> . +iron +fe2 +hplus
     octan_1_ol
-  }
-
-  branch from o_octanoyl_r_carnitine side right {
-    o_octanoyl_r_carnitine
-    <-> . +octanoyl_coa +s_carnitine
-    coa
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_4_2_1_119 [4.2.1.119] +2e_7_carboxy_4_methyl_5_oxohept_2_enoyl_coa
-    3r_7_carboxy_3_hydroxy_4_methyl_5_oxoheptanoyl
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +4_4_diaponeurosporenal
-    4_4_diaponeurosporen_1_1_diol
   }
 }

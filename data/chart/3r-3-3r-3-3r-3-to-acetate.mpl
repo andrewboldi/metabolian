@@ -34,25 +34,25 @@ pathway 3r-3-3r-3-3r-3-to-acetate "(3R)-3-{[(3R)-3-{[(3R)-3-… to acetate" {
 
   branch from bhb side right {
     bhb
-    <-> ec_3_5_1_97 [3.5.1.97] +l_homoserine_lactone +h2o
-    hai_1
-  }
-
-  branch from acetoacetate side left {
-    acetoacetate
-    <-> . +acetyl_coa +2_deoxy_3_dehydro_d_ribonate
-    d_glyceroyl_coa
-  }
-
-  branch from acetoacetate side right {
-    acetoacetate
-    <-> ec_6_4_1_6 [6.4.1.6] +co2 +acetone +atp +h2o +amp +phosphate
-    h
+    <-> . +atp +coa +3r_3_hydroxybutanoyl_coa +amp
+    diphosphate
   }
 
   branch from acetone side left {
     acetone
     <-> . +iron +fe2 +hplus
     propan_2_ol
+  }
+
+  branch from bhb side right {
+    bhb
+    <-> ec_1_2_1_3 [1.2.1.3] +nadh +h +nad +h2o
+    r_3_hydroxybutanal
+  }
+
+  branch from bhb side left {
+    bhb
+    <-> . +h +coa +h2o
+    3_hydroxybutanoyl_coa
   }
 }

@@ -4,11 +4,11 @@
 # edit the generator, not this file.
 
 pathway nadh-to-keto-d-tagatose "NADH to keto-D-tagatose…" {
-  spacing 204
+  spacing 260
 
   spine at 0,0 {
     nadh
-    <-> ec_1_1_1_15 [1.1.1.15] +d_allulose +h -nad
+    <-> ec_1_1_1_12 [1.1.1.12] +h +ketose -nad
     d_altritol
     <-> ec_1_1_1_407 [1.1.1.407] +nad -nadh -hplus
     keto_d_tagatose
@@ -30,25 +30,73 @@ pathway nadh-to-keto-d-tagatose "NADH to keto-D-tagatose…" {
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +cis_3_hexenal
-    e_hex_2_en_1_ol
+    <-> ec_1_1_1_92 [1.1.1.92] +nadh +oxaloglycolate +h +co2
+    r_glycerate
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +e_hex_2_enal +h
-    3z_hex_3_en_1_ol
+    <-> ec_1_13_11_30 [1.13.11.30] +nadh +stizolobinic_acid
+    5_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem
   }
 
   branch from keto_d_tagatose side left {
     keto_d_tagatose
-    <-> ec_1_1_1_16 [1.1.1.16] +nad +nadh +hplus
-    galactitol
+    <-> .
+    d_tagatofuranose
   }
 
   branch from keto_d_tagatose side right {
     keto_d_tagatose
-    <-> ec_5_1_3_31 [5.1.3.31]
-    keto_d_sorbose
+    <-> . +d_tagatofuranose_6_phosphate +h +adp
+    atp
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> ec_1_13_11_30 [1.13.11.30] +stizolobinic_acid +nad
+    5_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_3_1_62 [1.3.1.62] +6_carboxyhex_2_enoyl_coa +h +nad
+    6_carboxyhexanoyl_coa
+  }
+
+  branch from h side left {
+    h
+    <-> . +phytochelatin_3 +arsenous_acid +h2o
+    arsenic_phytochelatin_3
+  }
+
+  branch from h side right {
+    h
+    <-> ec_1_11_1_18 [1.11.1.18] +indoxyl_sulfate +h2o2 +bromide +h2o
+    6_bromoindoxyl_sulfate
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_3_1_65 [1.3.1.65] +nadh +5_6_dihydroxy_3_methyl_2_oxo_1_2_dihydroquinolin +h
+    5_6_dihydroxy_3_methyl_5_6_dihydroquinolin_2_1h
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_6_5_7 [1.6.5.7] +nadh +hydroxybenzoquinone +h
+    benzene_1_2_4_triol
+  }
+
+  branch from keto_d_tagatose side left {
+    keto_d_tagatose
+    <-> .
+    d_tagatopyranose
+  }
+
+  branch from keto_d_tagatose side right {
+    keto_d_tagatose
+    <-> . +h +adp +phosphate +atp
+    h2o
   }
 }

@@ -1,0 +1,290 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-4-dihydroxybenzoate-to-caffeoyltryptamine-null",
+  "name": "3,4-dihydroxybenzoate to Caffeoyltryptamine",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 3,4-dihydroxybenzoate to Caffeoyltryptamine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR122133"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_4_dihydroxybenzoate",
+      "name": "3,4-dihydroxybenzoate",
+      "short": "3,4-dihydroxybenzoa…",
+      "formula": "C7H5O4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1137687"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "H2O2",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM732620"
+      }
+    },
+    {
+      "id": "3_4_dihydroxybenzaldehyde",
+      "name": "3,4-dihydroxybenzaldehyde",
+      "short": "3,4-dihydroxybenzal…",
+      "formula": "C7H6O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50205"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1104266"
+      }
+    },
+    {
+      "id": "caffeoyl_coa",
+      "name": "caffeoyl-CoA",
+      "formula": "C30H42N7O19P3S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1369520"
+      }
+    },
+    {
+      "id": "tryptamine",
+      "name": "tryptamine",
+      "formula": "C10H13N2",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM806"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "caffeoyltryptamine",
+      "name": "Caffeoyltryptamine",
+      "formula": "C19H18N2O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:176347"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_2_3_9",
+      "name": "aryl-aldehyde oxidase",
+      "ec": [
+        "1.2.3.9"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "aryl-aldehyde oxidase",
+      "ec": "1.2.3.9",
+      "substrates": [
+        {
+          "metabolite": "3_4_dihydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_4_dihydroxybenzaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_3_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR122133"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR122133"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR198612",
+      "substrates": [
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "3_4_dihydroxybenzaldehyde",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "caffeoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR198612"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198612"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR172603",
+      "substrates": [
+        {
+          "metabolite": "caffeoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "tryptamine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 5
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "caffeoyltryptamine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR172603"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR172603"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_caffeoyltryptamine_3-4-dihydroxybenzoate-to-caffeoyltryptamine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "caffeoyltryptamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-4-dihydroxybenzoate-to-caffeoyltryptamine"
+      },
+      "note": "Shares Caffeoyltryptamine with 3,4-dihydroxybenzoate to Caffeoyltryptamine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:176347"
+          }
+        ]
+      }
+    }
+  ]
+}

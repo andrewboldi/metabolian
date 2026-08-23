@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway diphosphate-to-l-methionine "diphosphate to L-methionine" {
-  spacing 250
+  spacing 184
 
   spine at 0,0 {
     diphosphate
@@ -14,71 +14,5 @@ pathway diphosphate-to-l-methionine "diphosphate to L-methionine" {
     s_methyl_l_methionine
     <-> ec_2_1_1_12 [2.1.1.12] +s_adenosyl_l_homocysteine -l_methionine
     s_s_adenosyl_l_methionine
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
-    1_o_d_glucopyranosyl_d_mannitol
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
-    ciceritol
-  }
-
-  branch from l_homoserine side left {
-    l_homoserine
-    <-> . +h2o +h
-    l_homoserine_lactone
-  }
-
-  branch from l_homoserine side right {
-    l_homoserine
-    <-> . +diphosphate +l_homoserine_lactone +atp
-    amp
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
-    ajugose
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
-    fagopyritol_b2
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    fagopyritol_b3
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    fagopyritol_a2
-  }
-
-  branch from s_s_adenosyl_l_methionine side left {
-    s_s_adenosyl_l_methionine
-    <-> ec_4_1_1_19 [4.1.1.19] +co2 +h
-    s_adenosyl_3_methylsulfanyl_propylamine
-  }
-
-  branch from l_methionine side right {
-    l_methionine
-    <-> . +l_methionine_s_oxide +h2o
-    h2o2
-  }
-
-  branch from l_methionine side left {
-    l_methionine
-    <-> . +l_homocysteine +co_methyl_co_5_hydroxybenzimidazolylcob_i_amide +h
-    5_hydroxybenzimidazolylcobamide
   }
 }

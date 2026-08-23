@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-monodecanoylglycerol-to-o-pantetheine-4-phosph "1-monodecanoylglycerol to O-(pantetheine-4'-phospho…" {
-  spacing 200
+  spacing 212
 
   spine at 0,0 {
     1_monodecanoylglycerol
@@ -16,51 +16,63 @@ pathway 1-monodecanoylglycerol-to-o-pantetheine-4-phosph "1-monodecanoylglycerol
     decanoate
   }
 
-  branch from glycerol side left {
-    glycerol
-    <-> ec_3_1_3_21 [3.1.3.21] +h2o +pi
-    sn_glycerol_1_phosphate
-  }
-
-  branch from glycerol side right {
-    glycerol
-    <-> . +1_icosanoylglycerol +h2o +hplus
-    icosanoate
-  }
-
-  branch from o_s_decanoylpantetheine_4_phosphoryl_serine_1 side left {
-    o_s_decanoylpantetheine_4_phosphoryl_serine_1
-    <-> ec_2_3_1_41 [2.3.1.41] +malonyl_coa +h +coa +o_s_3_oxododecanoylpantetheine_4_phosphoryl_seri
-    co2
-  }
-
-  branch from o_s_decanoylpantetheine_4_phosphoryl_serine_1 side right {
-    o_s_decanoylpantetheine_4_phosphoryl_serine_1
-    <-> ec_1_3_1_9 [1.3.1.9] +nadh +h +o_s_2e_decenoylpantetheine_4_phosphoryl_serine_1
-    nad
-  }
-
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_21 [2.5.1.21] +fpp +nadh +hplus +nad
-    squalene
+    <-> . +spectinomycin +atp
+    9_o_adenylylspectinomycin
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_107 [4.2.3.107] +gpp
-    car_3_ene
+    <-> . +streptomycin +atp
+    6_o_adenylylstreptomycin
   }
 
   branch from holo-acp side left {
     holo-acp
-    <-> . +l_serine +coa +hplus
-    adenosine_3_5_bismonophosphate
+    <-> . +l_seryl_amp +amp
+    o_s_l_seryl_pantetheine_4_phosphoryl_l_serine_re
   }
 
   branch from holo-acp side right {
     holo-acp
-    <-> ec_1_2_1_80 [1.2.1.80] +long_chain_fatty_aldehyde +nad +nadh +hplus
-    o_s_long_chain_fatty_acyl_pantetheine_4_phosphor
+    <-> . +l_tryptophyl_amp +amp
+    o_s_l_tryptophyl_pantetheine_4_phosphoryl_l_seri
+  }
+
+  branch from 1_monodecanoylglycerol side left {
+    1_monodecanoylglycerol
+    <-> . +oleoyl_coa +coa
+    1_decanoyl_2_oleoylglycerol
+  }
+
+  branch from 1_monodecanoylglycerol side right {
+    1_monodecanoylglycerol
+    <-> . +oleoyl_coa +coa
+    1_decanoyl_3_oleoylglycerol
+  }
+
+  branch from holo-acp side left {
+    holo-acp
+    <-> . +l_alanyl_amp +amp +hplus
+    o_s_l_alanyl_pantetheine_4_phosphoryl_l_serine_r
+  }
+
+  branch from holo-acp side right {
+    holo-acp
+    <-> . +l_glutamyl_amp +amp +hplus
+    o_s_l_glutamyl_pantetheine_4_phosphoryl_serine_1
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +spermidine +citrate +atp +amp +hplus
+    n_citryl_spermidine
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +n_citryl_spermidine +spermidine +atp +amp +hplus
+    n8_n_8_citryl_bis_spermidine_3
   }
 }

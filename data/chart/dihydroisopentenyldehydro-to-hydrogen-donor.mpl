@@ -16,18 +16,6 @@ pathway dihydroisopentenyldehydro-to-hydrogen-donor "dihydroisopentenyldehydroâ€
     bisanhydrobacterioruberin
   }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_6_3_2_63 [6.3.2.63] +n_3_carboxypropanoyl_n_hydroxyputrescine +atp +amp +hplus
-    putrebactin
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +n_3_carboxypropanoyl_n_hydroxyputrescine +atp +amp +hplus
-    pre_putrebactin
-  }
-
   branch from bisanhydrobacterioruberin side left {
     bisanhydrobacterioruberin
     <-> ec_4_2_1_161 [4.2.1.161] +h2o

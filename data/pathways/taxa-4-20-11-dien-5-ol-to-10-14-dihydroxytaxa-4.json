@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "taxa-4-20-11-dien-5-ol-to-10-14-dihydroxytaxa-4",
   "name": "taxa-4(20),11-dien-5α-ol to 10β,14β-dihydroxytaxa-4(2…",
-  "category": "lipid-metabolism",
+  "category": "energy-metabolism",
   "summary": "A 3-step route from taxa-4(20),11-dien-5α-ol to 10β,14β-dihydroxytaxa-4(20),11-dien-5α-yl acetate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -138,54 +138,6 @@
       "xrefs": {
         "chebi": "CHEBI:58349"
       }
-    },
-    {
-      "id": "5_20_epoxytaxa_11_en_4_yl_acetate",
-      "name": "5,20-epoxytaxa-11-en-4α-yl acetate",
-      "short": "5,20-epoxytaxa-11-e…",
-      "formula": "C22H34O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:233991"
-      }
-    },
-    {
-      "id": "cholesterol",
-      "name": "Cholesterol",
-      "formula": "C27H46O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16113"
-      }
-    },
-    {
-      "id": "22s_22_hydroxycholesterol",
-      "name": "(22S)-22-hydroxycholesterol",
-      "short": "22-hydroxycholester…",
-      "formula": "C27H46O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:1301"
-      }
-    },
-    {
-      "id": "5_cholestan_3_ol",
-      "name": "(5α)-cholestan-3β-ol",
-      "formula": "C27H48O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:86570"
-      }
-    },
-    {
-      "id": "5_22s_22_hydroxycholestan_3_ol",
-      "name": "(5α,22S)-22-hydroxycholestan-3β-ol",
-      "short": "(5α,22S)-22-hydroxy…",
-      "formula": "C27H48O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:188465"
-      }
     }
   ],
   "enzymes": [
@@ -208,13 +160,6 @@
       "name": "taxoid 14beta-hydroxylase",
       "ec": [
         "1.14.13.146"
-      ]
-    },
-    {
-      "id": "ec_1_14_14_191",
-      "name": "taxane oxetanase 1",
-      "ec": [
-        "1.14.14.191"
       ]
     }
   ],
@@ -377,162 +322,49 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "taxane oxetanase 1",
-      "equation": "taxa-4(20),11-dien-5alpha-yl acetate + reduced [NADPH--hemoprotein reductase] + O2 = 5,20-epoxytaxa-11-en-4alpha-yl acetate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "ec": "1.14.14.191",
-      "substrates": [
-        {
-          "metabolite": "taxa_4_20_11_dien_5_yl_acetate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "5_20_epoxytaxa_11_en_4_yl_acetate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_191"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:84799"
+      "id": "xt_taxa_4_20_11_dien_5_ol_2-trans-6-trans-10-trans-to-fmn-20912",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "taxa_4_20_11_dien_5_ol"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2-trans-6-trans-10-trans-to-fmn-20912"
+      },
+      "note": "Shares taxa-4(20),11-dien-5α-ol with 2-trans,6-trans,10-trans-… to FMN.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:84799"
+            "db": "ChEBI",
+            "id": "CHEBI:30038"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "cholesterol + reduced [NADPH--hemoprotein reductase] + O2 = (22S)-22-hydroxycholesterol...",
-      "equation": "cholesterol + reduced [NADPH--hemoprotein reductase] + O2 = (22S)-22-hydroxycholesterol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "cholesterol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "22s_22_hydroxycholesterol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:69839"
+      "id": "xt_taxa_4_20_11_dien_5_yl_acetate_casbene-to-jolkinol-c",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "taxa_4_20_11_dien_5_yl_acetate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "casbene-to-jolkinol-c"
+      },
+      "note": "Shares taxa-4(20),11-dien-5α-yl acetate with (−)-casbene to jolkinol C.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:69839"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "cholestanol + reduced [NADPH--hemoprotein reductase] + O2 = (22S)-22-hydroxycholestanol...",
-      "equation": "cholestanol + reduced [NADPH--hemoprotein reductase] + O2 = (22S)-22-hydroxycholestanol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "5_cholestan_3_ol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "5_22s_22_hydroxycholestan_3_ol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:69871"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:69871"
+            "db": "ChEBI",
+            "id": "CHEBI:30042"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-opc4-coa "NADH to OPC4-CoA" {
-  spacing 236
+  spacing 188
 
   spine at 0,0 {
     nadh
@@ -14,53 +14,5 @@ pathway nadh-to-opc4-coa "NADH to OPC4-CoA" {
     trans_2_enoyl_opc4_coa
     <-> ec_1_3_3_6 [1.3.3.6] +fadh2 +h -opc4_coa
     fad
-  }
-
-  branch from h side left {
-    h
-    <-> . +co2 +tropinone
-    4_1_methyl_2_delta1_pyrrolidinyl_3_oxobutanoate
-  }
-
-  branch from h side right {
-    h
-    <-> . +n_1_deoxy_d_fructos_1_yl_l_valine +o2 +h2o2
-    3_methyl_2_e_3s_4r_5r_3_4_5_6_tetrahydroxy_2_oxo
-  }
-
-  branch from nad side left {
-    nad
-    <-> . +nadh +acetyl_coa +h +h2o2 +coa +o2 +h2o
-    a_tetradecenoyl_coa_n_c14_1coa
-  }
-
-  branch from nad side right {
-    nad
-    <-> . +decanoyl_coa +coa +o2 +h2o +nadh +acetyl_coa +h +h2o2
-    octanoyl_coa
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +h +13_14_dihydro_15_oxo_prostaglandin_e2
-    bicyclo_pge2
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +thromboxane_a1 +h
-    thromboxane_b1
-  }
-
-  branch from fad side left {
-    fad
-    <-> . +nadh +acetyl_coa +tetradecanoyl_coa +fadh2 +h +coa +nad +h2o
-    hexadecanoyl_coa
-  }
-
-  branch from fad side right {
-    fad
-    <-> . +octanoyl_coa +nadh +acetyl_coa +fadh2 +h +hexadecanoyl_coa +nad +h2o
-    coa
   }
 }

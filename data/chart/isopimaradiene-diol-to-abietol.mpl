@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway isopimaradiene-diol-to-abietol "isopimaradiene-diol to abietol" {
-  spacing 262
+  spacing 196
 
   spine at 0,0 {
     isopimaradiene_diol
@@ -14,71 +14,5 @@ pathway isopimaradiene-diol-to-abietol "isopimaradiene-diol to abietol" {
     isopimara_7_15_dienal
     <-> ec_1_1_1_71 [1.1.1.71] +h +nadph -abietol
     nadp
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +estrone +phosphate +estrone +h2o
-    atp
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    estrone_3_sulfate
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +fadh2 +h +bromide +o_s_4_5_dibromopyrrole_2_carbonyl_pantetheine_4 +o_s_3_4_5_tribromopyrrole_2_carbonyl_pantetheine +h2o
-    fad
-  }
-
-  branch from o2 side right {
-    o2
-    <-> ec_1_14_20_14 [1.14.20.14] +2_oxoglutarate +h +chloride +12_epi_hapalindole_c_isonitrile +succinate +12_epi_hapalindole_e +h2o
-    co2
-  }
-
-  branch from isopimara_7_15_dienol side left {
-    isopimara_7_15_dienol
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +abietal
-    nad
-  }
-
-  branch from isopimara_7_15_dienol side right {
-    isopimara_7_15_dienol
-    <-> ec_1_1_1_71 [1.1.1.71] +h +levopimaradienal +nad
-    nadh
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> ec_1_3_1_70 [1.3.1.70] +h +4alpha_methyl_ergosta_8_14_25_27_trienol +nadp
-    4alpha_methyl_ergosta_8_25_27_dienol
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> . +h +tomatid_4_en_3_one +nadp
-    dehydrotomatidine
-  }
-
-  branch from isopimara_7_15_dienal side left {
-    isopimara_7_15_dienal
-    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +nadp
-    palustradienol
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_1_1_201 [1.1.1.201] +h +nadph +7_oxolithocholate_methyl_ester
-    ursodeoxycholic_acid_methyl_ester
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +hexyl_butyrate +h2o +h +o2 +nadph
-    decan_4_one
   }
 }

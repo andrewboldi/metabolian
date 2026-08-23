@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-cys-gly-disulfide-to-tetrachloro-1-4-benzoquin "L-Cys-Gly disulfide… to tetrachloro-1,4-benzoquin…" {
-  spacing 314
+  spacing 272
 
   spine at 0,0 {
     l_cys_gly_disulfide_dizwitterion
@@ -18,58 +18,10 @@ pathway l-cys-gly-disulfide-to-tetrachloro-1-4-benzoquin "L-Cys-Gly disulfide…
     tetrachloro_1_4_benzoquinone
   }
 
-  branch from glycine side left {
-    glycine
-    <-> . +palmitoyl_coa +coa +hplus
-    n_hexadecanoylglycinate
-  }
-
-  branch from glycine side right {
-    glycine
-    <-> ec_6_2_1_66 [6.2.1.66] +holo-acp +atp +amp +ppi
-    o_s_glycylpantetheine_4_phosphoryl_l_serine_resi
-  }
-
-  branch from gssg side left {
-    gssg
-    <-> . +12_s_hpepe +gsh +h2o
-    12_s_hepe
-  }
-
-  branch from gssg side right {
-    gssg
-    <-> . +a_phosphatidylcholine_hydroperoxide +gsh +h2o
-    a_hydroxy_phosphatidylcholine
-  }
-
-  branch from cysteine side left {
-    cysteine
-    <-> .
-    d_cysteine
-  }
-
-  branch from cysteine side right {
-    cysteine
-    <-> . +indole_3_butyrate +atp +amp +ppi +hplus
-    n_4_indol_3_yl_butanoyl_l_cysteinate
-  }
-
   branch from 2_3_5_6_tetrachlorobenzene_1_4_bis_olate side left {
     2_3_5_6_tetrachlorobenzene_1_4_bis_olate
     <-> ec_1_14_13_50 [1.14.13.50] +nadph +o2 +nadp +h2o
     2_3_5_6_tetrachlorophenolate
-  }
-
-  branch from gsh side right {
-    gsh
-    <-> ec_1_14_14_45 [1.14.14.45] +e_indol_3_ylacetaldehyde_oxime +fmnh2 +o2 +fmn +h2o +hplus
-    e_1_glutathion_s_yl_2_indol_3_yl_acetohydroxima
-  }
-
-  branch from gsh side left {
-    gsh
-    <-> ec_1_14_14_45 [1.14.14.45] +e_phenylacetaldehyde_oxime +fmnh2 +o2 +fmn +h2o +hplus
-    z_1_glutathione_s_yl_2_phenylacetohydroximate
   }
 
   branch from tetrachloro_1_4_benzoquinone side right {
@@ -82,5 +34,11 @@ pathway l-cys-gly-disulfide-to-tetrachloro-1-4-benzoquin "L-Cys-Gly disulfide…
     tetrachloro_1_4_benzoquinone
     <-> ec_1_1_3_10 [1.1.3.10] +2_dehydro_d_glucose +2_3_5_6_tetrachlorohydroquinone +h
     glucose
+  }
+
+  branch from 2_3_6_trichloro_4_hydroxyphenolate side right {
+    2_3_6_trichloro_4_hydroxyphenolate
+    <-> ec_2_5_1_18 [2.5.1.18] +glutathione +2_6_dichloro_3_glutathion_s_yl_hydroquinone
+    chloride
   }
 }

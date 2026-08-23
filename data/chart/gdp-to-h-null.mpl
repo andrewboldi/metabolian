@@ -4,59 +4,15 @@
 # edit the generator, not this file.
 
 pathway gdp-to-h-null "GDP to H" {
-  spacing 194
+  spacing 152
 
   spine at 0,0 {
     gdp
-    <-> . +beta_d_man_1_4_beta_d_glc_1_3_alpha_d_galnac_pp +h -beta_d_glc_1_3_alpha_d_galnac_pp_und
+    <-> . +beta_d_man_1_4_alpha_d_gal_1_4_alpha_l_rha_1_3_g +h -alpha_d_gal_1_4_alpha_l_rha_1_3_glcnac_pp_undeca
     gdp_alpha_d_mannose
-    <-> . +udp +beta_d_glc_1_3_alpha_d_galnac_pp_und +h -n_acetyl_d_galactosaminyl_1_diphospho_ditrans_po
-    udp_alpha_d_glucose
-    <-> . +udp_n_acetyl_l_fucosamine +n_acetyl_d_galactosaminyl_1_diphospho_ditrans_po -alpha_l_fucnac_1_3_alpha_d_galnac_pp_und -h
-    udp
-    <-> . +udp_n_acetyl_alpha_d_mannosamine +alpha_l_fucnac_1_3_alpha_d_galnac_pp_und -udp -h
-    beta_d_mannac_1_3_alpha_l_fucnac_1_3_alpha_d_gal
-  }
-
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> . +udp +cyanidin_3_o_6_o_p_coumaroyl_2_o_d_xylosyl_d_glu +h
-    cyanidin_3_o_6_o_4_coumaroyl_beta_d_sambubioside
-  }
-
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> . +udp +arabidopsis_anthocyanin_a3 +h
-    cyanidin_3_o_2_o_xylosyl_6_o_p_coumaroyl_glucosi
-  }
-
-  branch from udp side left {
-    udp
-    <-> . +l_arabinopyranose +h +h2o
-    udp_beta_l_arabinopyranose
-  }
-
-  branch from udp side right {
-    udp
-    <-> ec_2_4_1_241 [2.4.1.241] +1_16_0_2_18_2_digalactosyldiacylglycerol +h +18_1_16_1_mgdg
+    <-> . +udp +alpha_d_gal_1_4_alpha_l_rha_1_3_glcnac_pp_undeca +h -alpha_l_rha_1_3_alpha_d_glcnac_pp_und
     udp_alpha_d_galactose
-  }
-
-  branch from h side left {
-    h
-    <-> . +adenosine_3_5_bisphosphate +deoxycylindrospermopsin +desulfo_7_deoxycylindrospermopsin
-    3_phosphoadenylyl_sulfate
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_1_4_11 [3.1.4.11] +1d_myo_inositol_1_4_5_trisphosphate +1_stearoyl_2_arachidonoyl_sn_glycerol +h2o
-    1_stearoyl_2_arachidonoyl_sn_glycero_3_phospho_1
-  }
-
-  branch from beta_d_mannac_1_3_alpha_l_fucnac_1_3_alpha_d_gal side left {
-    beta_d_mannac_1_3_alpha_l_fucnac_1_3_alpha_d_gal
-    <-> . +udp +h +udp_alpha_d_galactose
-    alpha_d_gal_1_3_beta_d_mannac_1_3_alpha_l_fucnac
+    <-> . +udp_n_acetyl_alpha_d_galactosamine +alpha_l_rha_1_3_alpha_d_glcnac_pp_und -beta_d_galnac_1_4_alpha_l_rha_1_3_alpha_d_glcnac -h
+    udp
   }
 }

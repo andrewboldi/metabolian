@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway chorismate-to-1r-6s-6-ammonio-5-oxocy "chorismate to (1R,6S)-6-ammonio-5-oxocy…" {
-  spacing 278
+  spacing 272
 
   spine at 0,0 {
     chorismate
@@ -14,11 +14,5 @@ pathway chorismate-to-1r-6s-6-ammonio-5-oxocy "chorismate to (1R,6S)-6-ammonio-5
     2s_3s_2_3_dihydro_3_hydroxyanthranilic_acid
     <-> ec_5_3_3_17 [5.3.3.17]
     1r_6s_6_ammonio_5_oxocyclohex_2_ene_1_carboxyla
-  }
-
-  branch from 2_azaniumyl_2_deoxyisochorismate side left {
-    2_azaniumyl_2_deoxyisochorismate
-    <-> . +pyruvate +hplus
-    anthranilate
   }
 }

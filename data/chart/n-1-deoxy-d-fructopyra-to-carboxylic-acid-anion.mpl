@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-1-deoxy-d-fructopyra-to-carboxylic-acid-anion "N-(1-deoxy-β-D-fructopyra… to carboxylic acid anion" {
-  spacing 188
+  spacing 152
 
   spine at 0,0 {
     n_1_deoxy_d_fructopyranos_1_yl_amine
@@ -16,41 +16,5 @@ pathway n-1-deoxy-d-fructopyra-to-carboxylic-acid-anion "N-(1-deoxy-β-D-fructop
     aldehyde
     <-> . +iron +h2o -fe2 -hplus
     carboxylic_acid_anion
-  }
-
-  branch from 2_dehydro_d_glucopyranose side left {
-    2_dehydro_d_glucopyranose
-    <-> . +2s_2_e_2r_3s_4r_5r_2_3_4_5_tetrahydroxyoxan_2_y +h2o +hplus
-    alanine
-  }
-
-  branch from 2_dehydro_d_glucopyranose side right {
-    2_dehydro_d_glucopyranose
-    <-> . +n_1_deoxy_d_fructopyranos_1_yl_l_glutamate +o2 +h2o +h2o2
-    glutamate
-  }
-
-  branch from hydrogen_donor side left {
-    hydrogen_donor
-    <-> . +3_amino_5_6_7_7a_tetrahydro_1h_pyrrolizin_1_one +hydrogen_acceptor
-    3_amino_5_6_7_7a_tetrahydro_1h_pyrrolizin_1_ol
-  }
-
-  branch from hydrogen_donor side right {
-    hydrogen_donor
-    <-> . +l_thyronine +iodide +hydrogen_acceptor +hplus
-    3_iodo_l_thyronine
-  }
-
-  branch from nh3 side left {
-    nh3
-    <-> . +2_hydroxy_1_phenylethan_1_aminium +nad +h2o +nadh +hplus
-    2_hydroxyacetophenone
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +cyclohexylammonium +nadp +h2o +nadph +hplus
-    cyclohexanone
   }
 }

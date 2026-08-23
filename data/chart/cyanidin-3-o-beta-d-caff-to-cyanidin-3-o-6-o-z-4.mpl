@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cyanidin-3-o-beta-d-caff-to-cyanidin-3-o-6-o-z-4 "cyanidin 3-O-beta-D-(caff… to cyanidin 3-O-{6-O-[(Z)-4-…" {
-  spacing 188
+  spacing 152
 
   spine at 0,0 {
     cyanidin_3_o_beta_d_caffeoyl_sambubioside
@@ -14,41 +14,5 @@ pathway cyanidin-3-o-beta-d-caff-to-cyanidin-3-o-6-o-z-4 "cyanidin 3-O-beta-D-(c
     cyanidin_3_o_6_o_4_coumaroyl_beta_d_sambubioside
     <-> . +udp +h -cyanidin_3_o_6_o_z_4_coumaroyl_d_glucoside
     udp_alpha_d_xylose
-  }
-
-  branch from trans_caffeoyl_coa side left {
-    trans_caffeoyl_coa
-    <-> ec_2_3_1_126 [2.3.1.126] +h +isocitrate +coa
-    2_caffeoylisocitric_acid
-  }
-
-  branch from trans_caffeoyl_coa side right {
-    trans_caffeoyl_coa
-    <-> ec_2_3_1_153 [2.3.1.153] +pelargonin +coa
-    pelargonidin_3_glucoside_5_caffeoylglucoside
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_stearoyl_2_linoleoyl_sn_glycero_3_phospho_1d_m
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_octadecanoyl_2_9z_12z_15z_octadecatrienoyl_sn
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +sucrose +2_methylpropanoyl_coa
-    4_isobutanoyl_sucrose
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +sucrose +2s_2_methylbutanoyl_coa
-    beta_d_fructofuranosyl_4_o_2_methylbutanoyl_alph
   }
 }

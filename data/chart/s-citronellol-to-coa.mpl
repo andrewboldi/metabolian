@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-citronellol-to-coa "(S)-(−)-citronellol to CoA" {
-  spacing 220
+  spacing 196
 
   spine at 0,0 {
     s_citronellol
@@ -14,29 +14,5 @@ pathway s-citronellol-to-coa "(S)-(−)-citronellol to CoA" {
     menthol
     <-> ec_2_3_1_69 [2.3.1.69] +acetyl_coa -coa
     menthyl_acetate
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_8_1_4 [1.8.1.4] +nadh +bisnorlipoic_acid +h
-    4_6_dimercaptohexanoic_acid
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_8_1_4 [1.8.1.4] +nadh +tetranorlipoic_acid +h
-    2_4_dimercaptobutanoic_acid
-  }
-
-  branch from coa side left {
-    coa
-    <-> ec_2_3_2_35 [2.3.2.35] +h +nordihydrocapsaicin +7_methyloctanoyl_coa
-    vanillylamine
-  }
-
-  branch from coa side right {
-    coa
-    <-> ec_2_3_2_35 [2.3.2.35] +4e_6_methylhept_4_enoyl_coa +vanillylamine +h
-    dinorcapsaicin
   }
 }

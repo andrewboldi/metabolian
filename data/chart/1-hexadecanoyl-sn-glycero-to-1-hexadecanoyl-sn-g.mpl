@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-hexadecanoyl-sn-glycero-to-1-hexadecanoyl-sn-g "1-hexadecanoyl-sn-glycero… to 1-hexadecanoyl-sn-glycero…" {
-  spacing 188
+  spacing 152
 
   spine at 0,0 {
     1_hexadecanoyl_sn_glycero_3_phospho_1_sn_glycero
@@ -14,41 +14,5 @@ pathway 1-hexadecanoyl-sn-glycero-to-1-hexadecanoyl-sn-g "1-hexadecanoyl-sn-glyc
     1_hexadecanoyl_sn_glycero_3_phospho_1_sn_glycero
     <-> . +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +n_acetylsphingosine -1_hexadecanoyl_sn_glycero_3_phosphocholine
     1_o_linoleoyl_n_acetylsphingosine
-  }
-
-  branch from 1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce side left {
-    1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
-    <-> . +1_oleoyl_sn_glycero_3_phosphate +1_hexadecanoyl_sn_glycero_3_phospho_1_sn_glycero
-    1_oleoyl_2_linoleoyl_sn_glycero_3_phosphate
-  }
-
-  branch from 1_hexadecanoyl_sn_glycero_3_phospho_1_sn_glycero side right {
-    1_hexadecanoyl_sn_glycero_3_phospho_1_sn_glycero
-    <-> . +lauroyl_coa +coa
-    1_palmitoyl_2_lauroyl_sn_glycero_3_phospho_1_sn
-  }
-
-  branch from 1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce side left {
-    1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
-    <-> . +1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine +1_hexadecanoyl_sn_glycero_3_phosphocholine
-    1_1z_alk_1_enyl_2_9z_12z_octadecadienoyl_sn_glyc
-  }
-
-  branch from 1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce side right {
-    1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
-    <-> . +1_oleoyl_2_linoleoyl_sn_glycero_3_phosphate +1_hexadecanoyl_sn_glycero_3_phosphocholine
-    1_oleoyl_sn_glycero_3_phosphate
-  }
-
-  branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side left {
-    1_hexadecanoyl_sn_glycero_3_phosphocholine
-    <-> . +1_hexadecanoyl_2_8z_11z_14z_eicosatrienoyl_sn_gl +cholesterol
-    cholesteryl_all_cis_icosa_8_11_14_trienoate
-  }
-
-  branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side right {
-    1_hexadecanoyl_sn_glycero_3_phosphocholine
-    <-> . +1_hexadecanoyl_2_5z_8z_11z_14z_17z_icosapentaeno +cholesterol
-    cholesteryl_5z_8z_11z_14z_17z_eicosapentaenoate
   }
 }

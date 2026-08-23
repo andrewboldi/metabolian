@@ -4,15 +4,175 @@
 # edit the generator, not this file.
 
 pathway fmnh2-to-h2o "FMNH2 to H2O" {
-  spacing 152
+  spacing 328
 
   spine at 0,0 {
     fmnh2
-    <-> . +h +coprogen -fmn -fe
-    desferricoprogen
-    <-> . +fe -coprogen
-    h
-    <-> . +adp +coprogen +phosphate -coprogen -h2o
+    <-> ec_1_1_99_31 [1.1.99.31] +3_indoleglyoxylic_acid +h -indoleglycolate
+    fmn
+    <-> ec_2_1_1_342 [2.1.1.342] +s_adenosyl_l_homocysteine +5_deoxyadenosine +fe +l_methionine +anaerobilin -s_adenosyl_l_methionine -h -heme_b
+    fmnh2
+    <-> . +fadh2 +h +heme_b +o2 -fe -biliverdin_ixalpha -co -h2o
+    fad
+    <-> . +fe +biliverdin_ixalpha +nadp +co +h2o -h -o2 -nadph
+    protoheme
+    <-> . +h +adp +phosphate -protoheme -h2o
     atp
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_3_8_17 [1.3.8.17] +fmnh2 +dehydro_coenzyme_f420_0
+    f420_0
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +fmnh2 +idramantone +h +o2 +h2o
+    1_hydroxy_4_oxahomoadamantan_5_one
+  }
+
+  branch from fmnh2 side left {
+    fmnh2
+    <-> . +o2 +h
+    fmn_n5_peroxide
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> ec_1_14_14_155 [1.14.14.155] +1s_bornane_2_5_dione +h +o2 +fmn +h2o
+    1r_4r_5_oxo_1_2_campholide
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_3_1_23 [2.3.1.23] +hexadecanoyl_coa +1_palmitoylglycerophosphocholine +coa
+    1_2_dihexadecanoyl_sn_glycero_3_phosphocholine
+  }
+
+  branch from h side right {
+    h
+    <-> . +2_4_dinitrocyclohexan_1_one +h2o
+    4_6_dinitrohexanoate
+  }
+
+  branch from fad side left {
+    fad
+    <-> . +4e_decenoyl_coa +fadh2 +h
+    2e_4z_deca_2_4_dienoyl_coa
+  }
+
+  branch from fad side right {
+    fad
+    <-> . +nadh +acetyl_coa +fadh2 +3e_decenoyl_coa +h +coa +nad +h2o
+    5_dodecenoylcoa
+  }
+
+  branch from fe side left {
+    fe
+    <-> ec_1_16_3_2 [1.16.3.2] +o2 +h2o +h +h2o2
+    iron_iii_oxide_hydroxide
+  }
+
+  branch from fe side right {
+    fe
+    <-> ec_1_16_3_2 [1.16.3.2] +h2o +iron_iii_oxide_hydroxide +h
+    h2o2
+  }
+
+  branch from co side left {
+    co
+    <-> ec_1_2_5_3 [1.2.5.3] +menaquinol_9 +co2 +h2o
+    menaquinone_9
+  }
+
+  branch from co side right {
+    co
+    <-> . +fadh2 +h +fad +h2o
+    co2
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_4_21_54 [3.4.21.54] +angiotensin_i_dizwitterion +leu_val_tyr_ser_tetrapeptide
+    synthetic_tetradecapeptide_renin_substrate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_4_2_1_3 [4.2.1.3] +cis_aconitate
+    isocitrate
+  }
+
+  branch from protoheme side left {
+    protoheme
+    <-> . +fe
+    protoporphyrin_ix
+  }
+
+  branch from protoheme side right {
+    protoheme
+    <-> . +diphosphate +heme_o +h2o
+    2e_6e_farnesyl_diphosphate
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +2e_3_4_hydroxyphenyl_2_isocyanoprop_2_enoate +h2o
+    2e_3_3_4_dioxocyclohexa_1_5_dien_1_yl_2_isocyan
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +2e_3_4_hydroxyphenyl_2_isocyanoprop_2_enoate +h +h2o
+    6_7_dihydroxy_3_isocyanochromen_2_one
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_16_1_5 [1.16.1.5] +vitamin_b12r +h +nadp +h2o
+    aquacobalamin
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_1_1_424 [1.1.1.424] +d_xylopyranose +nadp +h
+    d_xylono_1_4_lactone
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
+    l_alanyl_d_glutamyl_meso_2_6_diaminoheptanedioat
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_2_7_1_1 [2.7.1.1] +2_deoxy_d_glucose +h +adp
+    2_deoxy_d_glucose_6_phosphate
+  }
+
+  branch from fmnh2 side left {
+    fmnh2
+    <-> . +h +3_n_morpholino_propanesulfonate +o2 +fmn +sulfite +h2o
+    3_n_morpholino_propanal
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> . +medermycin +h +o2 +fmn +h2o
+    mederrhodin_a
+  }
+
+  branch from h side left {
+    h
+    <-> . +3_2r_3_5_dioxo_4_2e_4s_6s_8e_10e_12e_4_6_12_trim
+    sch210971
+  }
+
+  branch from h side right {
+    h
+    <-> . +3_2r_3_5_dioxo_4_2e_4s_6s_8e_10e_12e_4_6_12_trim
+    sch210972
   }
 }

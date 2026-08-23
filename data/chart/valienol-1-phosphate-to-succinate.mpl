@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway valienol-1-phosphate-to-succinate "valienol 1-phosphate to succinate" {
-  spacing 262
+  spacing 274
 
   spine at 0,0 {
     valienol_1_phosphate
@@ -22,31 +22,43 @@ pathway valienol-1-phosphate-to-succinate "valienol 1-phosphate to succinate" {
 
   branch from ppi side left {
     ppi
-    <-> ec_6_2_1_48 [6.2.1.48] +carnitine +atp +coa +amp
-    r_carnitinyl_coa
+    <-> . +12_methyloctadecanoate +atp +coa +amp
+    12_methyloctadecanoyl_coa
   }
 
   branch from ppi side right {
     ppi
-    <-> . +serine +atp
-    l_seryl_amp
+    <-> . +2_hydroxyhexadecanoate +atp +coa +amp
+    2_hydroxypalmitoyl_coa
   }
 
-  branch from validoxylamine_a side left {
-    validoxylamine_a
-    <-> . +akg +o2 +succinate +co2 +hplus
-    validoxylamine_b
+  branch from ppi side left {
+    ppi
+    <-> . +isomyristate +atp +coa +amp
+    isomyristoyl_coa
   }
 
-  branch from succinate side right {
-    succinate
-    <-> . +icosanoyl_coa +akg +o2 +co2
-    2_hydroxyicosanoyl_coa
+  branch from ppi side right {
+    ppi
+    <-> . +3_hydroxytetradecanoate +atp +coa +amp
+    3_hydroxytetradecanoyl_coa
   }
 
-  branch from succinate side left {
-    succinate
-    <-> . +stearoyl_coa +akg +o2 +co2
-    2_hydroxystearoyl_coa
+  branch from validamine_7_phosphate side left {
+    validamine_7_phosphate
+    <-> . +2_oxoglutarate +validone_7_phosphate
+    l_glutamate
+  }
+
+  branch from udp_d_glucose side right {
+    udp_d_glucose
+    <-> ec_2_4_1_105 [2.4.1.105] +vitexin_7_olate +udp +hplus
+    vitexin_2_o_d_glucoside
+  }
+
+  branch from udp_d_glucose side left {
+    udp_d_glucose
+    <-> ec_2_4_1_158 [2.4.1.158] +13_hydroxydocosanoate +udp +hplus
+    13_d_glucosyloxy_docosanoate
   }
 }

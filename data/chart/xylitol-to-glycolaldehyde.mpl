@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway xylitol-to-glycolaldehyde "xylitol to glycolaldehyde" {
-  spacing 234
+  spacing 258
 
   spine at 0,0 {
     xylitol
@@ -36,5 +36,29 @@ pathway xylitol-to-glycolaldehyde "xylitol to glycolaldehyde" {
     d_xylonate
     <-> ec_3_1_1_68 [3.1.1.68] +h2o +hplus
     d_xylono_1_4_lactone
+  }
+
+  branch from xylitol side right {
+    xylitol
+    <-> ec_1_1_1_10 [1.1.1.10] +nadp +nadph +hplus
+    l_xylulose
+  }
+
+  branch from xylitol side left {
+    xylitol
+    <-> ec_2_7_1_122 [2.7.1.122] +atp +adp +hplus
+    xylitol_5_phosphate
+  }
+
+  branch from d_xylopyranose side right {
+    d_xylopyranose
+    <-> .
+    aldehydo_d_xylose
+  }
+
+  branch from d_xylopyranose side left {
+    d_xylopyranose
+    <-> . +20s_ginsenoside_rg1 +h2o
+    ginsenoside_r1
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway fadh2-to-1-oleoyl-2-pentadecanoyl "FADH2 to 1-oleoyl-2-pentadecanoyl-…" {
-  spacing 224
+  spacing 212
 
   spine at 0,0 {
     fadh2
@@ -16,75 +16,63 @@ pathway fadh2-to-1-oleoyl-2-pentadecanoyl "FADH2 to 1-oleoyl-2-pentadecanoyl-…
     1_oleoyl_2_pentadecanoyl_sn_glycero_3_phosphate
   }
 
-  branch from tridecanoyl_coa side left {
-    tridecanoyl_coa
-    <-> . +h +sn_glycerol_3_phosphate +coa
-    pa_13_0_0_0
-  }
-
-  branch from tridecanoyl_coa side right {
-    tridecanoyl_coa
-    <-> . +s_carnitine +h +coa
-    acar_13_0
-  }
-
-  branch from fad side left {
-    fad
-    <-> . +2e_13z_icosadienoyl_coa +fadh2 +h
-    13z_icosenoyl_coa
-  }
-
-  branch from fad side right {
-    fad
-    <-> . +nadh +acetyl_coa +fadh2 +h +coa +nad +h2o
-    13z_octadecenoyl_coa
-  }
-
-  branch from pentadecanoyl_coa side left {
-    pentadecanoyl_coa
-    <-> . +cholesterol +coa
-    cholest_5_en_3b_yl_pentadecanoate
-  }
-
-  branch from pentadecanoyl_coa side right {
-    pentadecanoyl_coa
-    <-> . +sn_glycerol_3_phosphate +coa
-    1_pentadecanoyl_glycero_3_phosphate
-  }
-
   branch from coa side left {
     coa
-    <-> . +r_carnitine +malonyl_coa +h
-    o_malonyl_d_carnitine
+    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoyl_coa +sn_glycerol_3_phosphate
+    1_4z_7z_10z_13z_16z_19z_docosahexaenoyl_glycero
   }
 
   branch from coa side right {
     coa
-    <-> . +3_hydroxyisovaleryl_coa +r_carnitine
-    3_hydroxyisovalerylcarnitine
-  }
-
-  branch from nad side left {
-    nad
-    <-> . +nadh +h +3_oxotridecanoyl_coenzyme_a
-    3_hydroxytridecanoyl_coenzyme_a
-  }
-
-  branch from nad side right {
-    nad
-    <-> . +nadh +13z_3_oxoicosenoyl_coa +h
-    3_s_hydroxy_13_cis_eicosenoyl_coenzyme_a
+    <-> . +11z_14z_17z_icosatrienoyl_coa +sn_glycerol_3_phosphate
+    1_acylglycerol_3p_11_14_17_eico
   }
 
   branch from h2o side left {
     h2o
-    <-> . +4_hydroxy_2_oxoheptanedioate +h
-    cis_2_oxohept_3_enedioic_acid
+    <-> . +h +adp +chromate +phosphate +chromate
+    atp
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_4_2_1_17 [4.2.1.17] +z_2_3_dehydroadipyl_coa
-    3s_hydroxyadipyl_coa
+    <-> ec_3_6_3_54 [3.6.3.54] +h +adp +phosphate +atp
+    cu
+  }
+
+  branch from h side left {
+    h
+    <-> . +adp +coenzyme_b +atp
+    7_mercaptoheptanoylthreonine
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_4 [3.6.3.4] +adp +phosphate +atp +h2o
+    cu
+  }
+
+  branch from coa side left {
+    coa
+    <-> . +6z_9z_12z_octadecatrienoyl_coa +sn_glycerol_3_phosphate
+    1_6z_9z_12z_octadecatrienoyl_glycero_3_phosphate
+  }
+
+  branch from coa side right {
+    coa
+    <-> . +8z_11z_14z_eicosatrienoyl_coa +sn_glycerol_3_phosphate
+    1_8z_11z_14z_eicosatrienoyl_glycero_3_phosphate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_6_3_4 [3.6.3.4] +h +cu +phosphate +atp +cu
+    adp
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +h +adp +phosphate +atp
+    d_cysteine
   }
 }

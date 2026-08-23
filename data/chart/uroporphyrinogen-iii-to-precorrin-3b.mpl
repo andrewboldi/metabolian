@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway uroporphyrinogen-iii-to-precorrin-3b "uroporphyrinogen III to precorrin-3B" {
-  spacing 236
+  spacing 224
 
   spine at 0,0 {
     uroporphyrinogen3
@@ -14,17 +14,5 @@ pathway uroporphyrinogen-iii-to-precorrin-3b "uroporphyrinogen III to precorrin-
     precorrin_3a
     <-> ec_1_14_13_83 [1.14.13.83] +nadh +o2 +hplus -nad -h2o
     precorrin_3b
-  }
-
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_77 [2.1.1.77] +d_aspartate +sam
-    d_aspartate_methyl_ester
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +esculetin +sam +hplus
-    isoscopoletin
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway capsiconiate-to-trans-caffeoyl-coa "capsiconiate to trans-caffeoyl-CoA" {
-  spacing 212
+  spacing 248
 
   spine at 0,0 {
     capsiconiate
@@ -18,39 +18,75 @@ pathway capsiconiate-to-trans-caffeoyl-coa "capsiconiate to trans-caffeoyl-CoA" 
     trans_caffeoyl_coa
   }
 
-  branch from e_coniferol side left {
-    e_coniferol
-    <-> ec_1_10_3_2 [1.10.3.2] +coniferyl_alcohol_radical +h2o
-    o2
-  }
-
-  branch from e_coniferol side right {
-    e_coniferol
-    <-> ec_1_11_1_7 [1.11.1.7] +coniferyl_alcohol_radical +h2o
-    h2o2
-  }
-
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +sativan
-    vestitol
+    <-> . +s_adenosyl_l_homocysteine +co2 +precorrin_8 +h
+    precorrin_6b
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> ec_2_1_1_11 [2.1.1.11] +s_adenosyl_l_homocysteine +h +mg_protoporphyrin_ix_13_monomethyl_ester
-    magnesium_protoporphyrin
+    <-> . +s_adenosyl_l_homocysteine +precorrin_6a +h +acetate +h2o
+    precorrin_5
   }
 
   branch from trans_caffeoyl_coa side left {
     trans_caffeoyl_coa
-    <-> ec_2_3_1_126 [2.3.1.126] +d_threo_isocitrate +coa
-    2_e_caffeoyl_d_threo_isocitrate
+    <-> ec_4_1_2_61 [4.1.2.61] +h2o +acetyl_coa
+    3_4_dihydroxybenzaldehyde
   }
 
   branch from trans_caffeoyl_coa side right {
     trans_caffeoyl_coa
-    <-> ec_2_3_1_140 [2.3.1.140] +2r_3_3_4_dihydroxyphenyl_lactate +coa
-    r_rosmarinate
+    <-> . +h2o
+    3_hydroxy_3_3_4_dihydroxyphenyl_propanoyl_coa
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +streptothricin_f_acid +phosphate +streptothricin_f_acid
+    atp
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    streptothricin_d
+  }
+
+  branch from s_adenosyl_l_homocysteine side left {
+    s_adenosyl_l_homocysteine
+    <-> . +ubiquinone_10 +s_adenosyl_l_methionine
+    3_demethylubiquinone_10
+  }
+
+  branch from s_adenosyl_l_homocysteine side right {
+    s_adenosyl_l_homocysteine
+    <-> . +h +2_decaprenyl_6_methoxy_3_methyl_1_4_benzoquinone +s_adenosyl_l_methionine
+    2_decaprenyl_6_methoxy_1_4_benzoquinone
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    streptothricin_d_acid
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    ciprofloxacin
+  }
+
+  branch from trans_caffeoyl_coa side left {
+    trans_caffeoyl_coa
+    <-> ec_2_3_1_302 [2.3.1.302] +5_hydroxyanthranilate +coa
+    avenanthramide_c
+  }
+
+  branch from trans_caffeoyl_coa side right {
+    trans_caffeoyl_coa
+    <-> . +coa +amp +hplus
+    trans_caffeoyl_amp
   }
 }

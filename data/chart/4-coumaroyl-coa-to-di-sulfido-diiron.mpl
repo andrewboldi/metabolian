@@ -28,14 +28,14 @@ pathway 4-coumaroyl-coa-to-di-sulfido-diiron "4-coumaroyl-CoA to di-μ-sulfido-d
 
   branch from 5_s_methyl_5_thioadenosine side left {
     5_s_methyl_5_thioadenosine
-    <-> ec_2_5_1_79 [2.5.1.79] +s_adenosylmethioninaminium +spermidine +hplus
-    thermosperminium
+    <-> ec_2_5_1_127 [2.5.1.127] +3_3_3_tetraminium +s_adenosylmethioninaminium +hplus
+    caldopentamine
   }
 
   branch from 5_s_methyl_5_thioadenosine side right {
     5_s_methyl_5_thioadenosine
-    <-> . +cadaverine +s_adenosylmethioninaminium +hplus
-    aminopropylcadaverine
+    <-> . +n4_aminopropylspermidine +s_adenosylmethioninaminium +hplus
+    n4_bis_aminopropyl_spermidine
   }
 
   branch from s_methyl_5_thio_d_ribulose_1_phosphate side left {
@@ -58,25 +58,73 @@ pathway 4-coumaroyl-coa-to-di-sulfido-diiron "4-coumaroyl-CoA to di-μ-sulfido-d
 
   branch from carbon_monoxide side right {
     carbon_monoxide
-    <-> ec_1_13_11_48 [1.13.11.48] +3_hydroxy_2_methylquinolin_4_1h_one +o2 +hplus
-    n_acetylanthranilate
+    <-> . +a_tetracycline +nadph +o2 +hplus +nadp +h2o
+    1s_10as_3_conh2_1_me2n_3_3a_4_6_ho_4_2_5_dioxo
   }
 
   branch from carbon_monoxide side left {
     carbon_monoxide
-    <-> ec_1_14_15_20 [1.14.15.20] +ferroheme_b +di_sulfido_diiron +o2 +hplus +fe2 +di_sulfido_diiron +h2o
-    biliverdin
+    <-> . +tert_butylisonitrile +h2o +hplus
+    tert_butylammonium
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> . +calcidiol +o2 +hplus +di_sulfido_diiron +h2o
-    23s_23_25_dihydroxycalciol
+    <-> . +18_hydroxycortisol +o2 +hplus +di_sulfido_diiron +h2o
+    18_oxocortisol
   }
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_14_19_42 [1.14.19.42] +1_acyl_2_palmitoylglycerolipid +o2 +hplus +di_sulfido_diiron +h2o
-    1_acyl_2_7z_hexadec_7_enoyl_glycerolipid
+    <-> . +11_deoxycorticosterone +o2 +hplus +di_sulfido_diiron +h2o
+    18_hydroxydeoxycorticosterone
+  }
+
+  branch from sam side right {
+    sam
+    <-> . +guanosine_5_monophosphate_1 +sah
+    n7_methylguanosine_5_phosphate_zwitterion
+  }
+
+  branch from sam side left {
+    sam
+    <-> . +guanosine_5_monophosphate_1 +n7_methylguanosine_5_phosphate_zwitterion
+    sah
+  }
+
+  branch from 5_s_methyl_5_thioadenosine side right {
+    5_s_methyl_5_thioadenosine
+    <-> . +spermine +s_adenosylmethioninaminium +hplus
+    n4_aminopropylspermine
+  }
+
+  branch from 5_s_methyl_5_thioadenosine side left {
+    5_s_methyl_5_thioadenosine
+    <-> ec_2_5_1_25 [2.5.1.25] +uridine_5_monophosphate_1 +sam +hplus
+    3_3_amino_3_carboxypropyl_uridine_5_phosphate_1
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> . +11_deoxycorticosterone +di_sulfido_diiron +o2 +hplus +h2o
+    19_hydroxy_11_deoxycorticosterone
+  }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> . +19_hydroxy_11_deoxycorticosterone +di_sulfido_diiron +o2 +hplus +h2o
+    19_oxo_deoxycorticosterone
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_14_15_45 [1.14.15.45] +4_hydroxy_3_all_trans_heptaprenylbenzoate +o2 +hplus +di_sulfido_diiron +h2o
+    3_4_dihydroxy_5_all_trans_heptaprenylbenzoate
+  }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> ec_1_14_15_45 [1.14.15.45] +4_hydroxy_3_all_trans_decaprenylbenzoate +o2 +hplus +di_sulfido_diiron +h2o
+    3_decaprenyl_4_5_dihydroxybenzoate
   }
 }

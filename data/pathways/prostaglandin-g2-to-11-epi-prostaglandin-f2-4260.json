@@ -1,0 +1,613 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "prostaglandin-g2-to-11-epi-prostaglandin-f2-4260",
+  "name": "prostaglandin G2 to 11-epi-prostaglandin F2α",
+  "category": "other",
+  "summary": "A 3-step route from prostaglandin G2(1−) to 11-epi-prostaglandin F2α(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:42600"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:82629"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "prostaglandin_g2",
+      "name": "prostaglandin G2",
+      "formula": "C20H31O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:82629"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "prostaglandin_h2",
+      "name": "prostaglandin H2",
+      "formula": "C20H31O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57405"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "prostaglandin_d2",
+      "name": "prostaglandin D2",
+      "formula": "C20H31O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57406"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "11_epi_prostaglandin_f2",
+      "name": "11-epi-prostaglandin F2α",
+      "short": "11-epi-prostaglandi…",
+      "formula": "C20H33O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:85173"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "prostaglandin_i2",
+      "name": "prostaglandin I2",
+      "formula": "C20H31O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57403"
+      }
+    },
+    {
+      "id": "15s_15_hydroperoxy_prostaglandin_e2",
+      "name": "(15S)-15-hydroperoxy-prostaglandin E2",
+      "short": "15-hydroperoxy-pros…",
+      "formula": "C20H31O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:152564"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_3_99_2",
+      "name": "prostaglandin-D synthase",
+      "ec": [
+        "5.3.99.2"
+      ],
+      "xrefs": {
+        "uniprot": "O60760"
+      }
+    },
+    {
+      "id": "ec_5_3_99_4",
+      "name": "prostaglandin-I synthase",
+      "ec": [
+        "5.3.99.4"
+      ],
+      "xrefs": {
+        "uniprot": "Q16647"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "prostaglandin G2 + AH2 = prostaglandin H2 + A + H2O",
+      "equation": "prostaglandin G2 + AH2 = prostaglandin H2 + A + H2O",
+      "substrates": [
+        {
+          "metabolite": "prostaglandin_g2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "prostaglandin_h2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:42600"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42600"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "prostaglandin-D synthase",
+      "equation": "prostaglandin H2 = prostaglandin D2",
+      "ec": "5.3.99.2",
+      "substrates": [
+        {
+          "metabolite": "prostaglandin_h2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "prostaglandin_d2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_99_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:10600"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10600"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "prostaglandin D2 + NADPH + H(+) = 11beta-prostaglandin F2 + NADP(+)",
+      "equation": "prostaglandin D2 + NADPH + H(+) = 11beta-prostaglandin F2 + NADP(+)",
+      "substrates": [
+        {
+          "metabolite": "prostaglandin_d2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "11_epi_prostaglandin_f2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:45316"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45316"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "prostaglandin-I synthase",
+      "equation": "prostaglandin H2 = prostaglandin I2",
+      "ec": "5.3.99.4",
+      "substrates": [
+        {
+          "metabolite": "prostaglandin_h2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "prostaglandin_i2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_99_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:23580"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23580"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "prostaglandin G2 = (15S)-15-hydroperoxy-prostaglandin E2",
+      "equation": "prostaglandin G2 = (15S)-15-hydroperoxy-prostaglandin E2",
+      "substrates": [
+        {
+          "metabolite": "prostaglandin_g2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "15s_15_hydroperoxy_prostaglandin_e2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:64364"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64364"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_prostaglandin_g2_n-arachidonoylsphingosine-to-n-acylsphingosine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_g2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-arachidonoylsphingosine-to-n-acylsphingosine"
+      },
+      "note": "Shares prostaglandin G2 with N-arachidonoylsphingosine to N-acylsphingosine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:82629"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_g2_n-arachidonoylsphingosine-to-n-acylsphingosine-4",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_g2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-arachidonoylsphingosine-to-n-acylsphingosine-4"
+      },
+      "note": "Shares prostaglandin G2 with N-arachidonoylsphingosine to N-acylsphingosine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:82629"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_g2_prostaglandin-g2-to-11-epi-prostaglandin-f2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_g2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "prostaglandin-g2-to-11-epi-prostaglandin-f2"
+      },
+      "note": "Shares prostaglandin G2 with prostaglandin G2 to 11-epi-prostaglandin F2α.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:82629"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_d2_1-o-1-2-saturated-alkyl-to-di-sulfido-diiron",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_d2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-o-1-2-saturated-alkyl-to-di-sulfido-diiron"
+      },
+      "note": "Shares prostaglandin D2 with 1-O-(1,2-saturated-alkyl)… to di-μ-sulfido-diiron.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57406"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_d2_1-o-1-2-saturated-alkyl-to-di-sulfido-diiron-362",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_d2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-o-1-2-saturated-alkyl-to-di-sulfido-diiron-362"
+      },
+      "note": "Shares prostaglandin D2 with 1-O-(1,2-saturated-alkyl)… to di-μ-sulfido-diiron.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57406"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_d2_prostaglandin-f2-to-15-dehydro-prostaglandin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_d2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "prostaglandin-f2-to-15-dehydro-prostaglandin"
+      },
+      "note": "Shares prostaglandin D2 with prostaglandin F2α… to 15-dehydro-prostaglandin….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57406"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_d2_prostaglandin-f2-to-15-dehydro-prostaglandin-483",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_d2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "prostaglandin-f2-to-15-dehydro-prostaglandin-483"
+      },
+      "note": "Shares prostaglandin D2 with prostaglandin F2α… to 15-dehydro-prostaglandin….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57406"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_d2_prostaglandin-g2-to-11-epi-prostaglandin-f2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_d2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "prostaglandin-g2-to-11-epi-prostaglandin-f2"
+      },
+      "note": "Shares prostaglandin D2 with prostaglandin G2 to 11-epi-prostaglandin F2α.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57406"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_11_epi_prostaglandin_f2_prostaglandin-g2-to-11-epi-prostaglandin-f2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11_epi_prostaglandin_f2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "prostaglandin-g2-to-11-epi-prostaglandin-f2"
+      },
+      "note": "Shares 11-epi-prostaglandin F2α with prostaglandin G2 to 11-epi-prostaglandin F2α.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:85173"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_i2_dammarenediol-ii-to-d-glucopyranose-38579",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_i2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dammarenediol-ii-to-d-glucopyranose-38579"
+      },
+      "note": "Shares prostaglandin I2 with dammarenediol-II to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57403"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_i2_ergosteryl-palmitate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_i2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ergosteryl-palmitate-to-h2o"
+      },
+      "note": "Shares prostaglandin I2 with ergosteryl palmitate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57403"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_i2_prostaglandin-g2-to-11-epi-prostaglandin-f2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_i2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "prostaglandin-g2-to-11-epi-prostaglandin-f2"
+      },
+      "note": "Shares prostaglandin I2 with prostaglandin G2 to 11-epi-prostaglandin F2α.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57403"
+          }
+        ]
+      }
+    }
+  ]
+}

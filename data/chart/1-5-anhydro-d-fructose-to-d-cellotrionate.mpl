@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-5-anhydro-d-fructose-to-d-cellotrionate "1,5-anhydro-D-fructose to D-cellotrionate" {
-  spacing 236
+  spacing 266
 
   spine at 0,0 {
     1_5_anhydro_d_fructose
@@ -22,49 +22,79 @@ pathway 1-5-anhydro-d-fructose-to-d-cellotrionate "1,5-anhydro-D-fructose to D-c
 
   branch from h side left {
     h
-    <-> ec_3_2_1_21 [3.2.1.21] +beta_d_galactose +4_nitrophenol +h2o
-    4_nitrophenyl_d_galactoside
+    <-> ec_2_4_99_12 [2.4.99.12] +cmp +alpha_kdo_2_6_lipid_iva_brucella +cmp_3_deoxy_alpha_d_manno_octulosonic_acid
+    lipid_iva_brucella
   }
 
   branch from h side right {
     h
-    <-> ec_3_2_1_22 [3.2.1.22] +beta_d_galactose +2_nitrophenol +h2o
-    2_nitrophenyl_d_galactoside
-  }
-
-  branch from 4_nitrophenol side left {
-    4_nitrophenol
-    <-> ec_1_2_1_3 [1.2.1.3] +propanoate +h +h2o
-    4_nitrophenyl_propanoate
-  }
-
-  branch from 4_nitrophenol side right {
-    4_nitrophenol
-    <-> ec_3_2_1_52 [3.2.1.52] +p_nitrophenyl_n_acetyl_beta_d_glucosaminide +h2o +h
-    n_acetyl_beta_d_galactosamine
+    <-> ec_2_4_99_13 [2.4.99.13] +cmp +alpha_kdo_2_4_alpha_kdo_2_6_lipid_iva_brucella +cmp_3_deoxy_alpha_d_manno_octulosonic_acid
+    alpha_kdo_2_6_lipid_iva_brucella
   }
 
   branch from beta_cellobiose side left {
     beta_cellobiose
-    <-> ec_2_4_1_20 [2.4.1.20] +glucose +d_glucopyranose_1_phosphate
-    phosphate
-  }
-
-  branch from beta_cellobiose side right {
-    beta_cellobiose
-    <-> ec_1_1_99_18 [1.1.99.18] +d_cellobiono_1_5_lactone +h2o2
-    o2
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +acetylpyruvate
-    2_oxo_3_pentynoate
+    <-> ec_3_2_1_91 [3.2.1.91] +h2o
+    cellotetraose
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_3_2_9 [3.3.2.9] +1_chloroethenyl_oxirane
-    3_chloro_3_butene_1_2_diol
+    <-> . +2e_pentenoyl_coa
+    s_3_hydroxypentanoyl_coa
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +2_3z_indol_3_ylidene_acetaldehyde
+    2r_2_hydroxy_2_indol_3_yl_acetaldehyde
+  }
+
+  branch from h side right {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    guanosine
+  }
+
+  branch from h side left {
+    h
+    <-> . +adp +fe_iii_petrobactin +phosphate +fe_iii_petrobactin +h2o
+    atp
+  }
+
+  branch from beta_d_glucose side right {
+    beta_d_glucose
+    <-> ec_3_2_1_22 [3.2.1.22] +melibiose +h2o
+    alpha_d_galactose
+  }
+
+  branch from beta_d_glucose side left {
+    beta_d_glucose
+    <-> ec_2_4_1_10 [2.4.1.10] +sucrose +6_kestotriose
+    6_6_kestotetraose
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> . +celosianin_i +h +1_o_4_coumaroyl_d_glucose
+    amaranthin
+  }
+
+  branch from glucose side left {
+    glucose
+    <-> . +4_coumaroylamaranthin +1_o_4_coumaroyl_d_glucose
+    amaranthin
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +2_indol_3_ylidene_ethanol
+    indol_3_yl_glycol
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +udp_3_acetamido_2_amino_2_3_dideoxy_alpha_d_gluc +l_serine
+    udp_3_acetamido_2_seryl_amino_2_3_dideoxy_alpha
   }
 }

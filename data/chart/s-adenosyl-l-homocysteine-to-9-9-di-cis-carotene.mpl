@@ -8,10 +8,10 @@ pathway s-adenosyl-l-homocysteine-to-9-9-di-cis-carotene "S-adenosyl-L-homocyste
 
   spine at 0,0 {
     s_adenosyl_l_homocysteine
-    <-> . +menaquinone_8 +h -2_demethylmenaquinone_8
+    <-> . +mk_8 +h -2_demethylmenaquinone_8
     s_adenosyl_l_methionine
-    <-> ec_1_6_5_3 [1.6.5.3] +pmf +nadh +h +2_demethylmenaquinone_8 -2_demethylmenaquinol_8 -nad
-    pmf
+    <-> . +thiosulfate +2_demethylmenaquinone_8 -2_demethylmenaquinol_8
+    tetrathionate
     <-> ec_1_3_5_6 [1.3.5.6] +7_7_9_9_tetra_cis_lycopene +2_demethylmenaquinol_8 -9_9_di_cis_carotene
     2_demethylmenaquinone_8
   }

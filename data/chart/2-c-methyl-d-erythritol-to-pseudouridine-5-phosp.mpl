@@ -34,14 +34,14 @@ pathway 2-c-methyl-d-erythritol-to-pseudouridine-5-phosp "2-C-methyl-D-erythrito
 
   branch from ppi side right {
     ppi
-    <-> ec_2_7_7_47 [2.7.7.47] +streptomycin +atp
-    3_adenylylstreptomycin
+    <-> ec_4_2_3_32 [4.2.3.32] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    abieta_8_14_12_diene
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_6_1_1_19 [6.1.1.19] +amp_3_end_1 +arginine +atp +amp
-    3_l_arginyl_adenylyl_1_group
+    <-> ec_4_2_3_33 [4.2.3.33] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    stemar_13_ene
   }
 
   branch from 2_c_methyl_d_erythritol_2_4_cyclic_diphosphate side right {
@@ -52,37 +52,79 @@ pathway 2-c-methyl-d-erythritol-to-pseudouridine-5-phosp "2-C-methyl-D-erythrito
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> ec_3_6_1_53 [3.6.1.53] +cdp_choline +h2o +hplus
-    phosphocholine
+    <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +cmp_n_acetyl_neuraminate +hplus
+    neu5ac_2_3_d_gal_1_3_neu5ac_2_6_d_galnac_1_4_ne
   }
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> ec_2_7_8_39 [2.7.8.39] +cdp_2_3_bis_o_phytanyl_sn_glycerol +1d_myo_inositol_3_phosphate +hplus
-    1_archaetidyl_1d_myo_inositol_3_phosphate
-  }
-
-  branch from cytosine side left {
-    cytosine
-    <-> ec_3_5_1_135 [3.5.1.135] +n4_acetylcytosine +h2o +hplus
-    acetate
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> ec_1_4_2_1 [1.4.2.1] +iron +glycine +h2o +fe2 +hplus
-    glyoxylate
+    <-> . +neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac +cmp_n_acetyl_neuraminate +hplus
+    neu5ac_2_3_d_gal_1_3_neu5ac_2_6_d_galnac_1_4_ne
   }
 
   branch from nh3 side left {
     nh3
-    <-> ec_3_5_2_18 [3.5.2.18] +1_4_5_6_tetrahydro_6_oxonicotinate +h2o
-    2_formylglutarate
+    <-> ec_4_4_1_1 [4.4.1.1] +l_homoserine
+    oxobut
   }
 
-  branch from pseudouridine_5_phosphate side right {
+  branch from nh3 side right {
+    nh3
+    <-> ec_4_4_1_1 [4.4.1.1] +cysteine +h2o +pyruvate +hplus
+    h2s
+  }
+
+  branch from pseudouridine_5_phosphate side left {
     pseudouridine_5_phosphate
     <-> . +h2o +ppi +hplus
     pseudo_utp
+  }
+
+  branch from ctp side right {
+    ctp
+    <-> . +1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphate +hplus +ppi
+    cdp_1_stearoyl_2_arachidonoyl_sn_glycerol
+  }
+
+  branch from ctp side left {
+    ctp
+    <-> . +1_hexadecanoyl_2_5z_8z_11z_14z_eicosatetraenoyl +hplus +ppi
+    cdp_1_palmitoyl_2_arachidonoyl_sn_glycerol
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_34 [4.2.3.34] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    stemod_13_17_ene
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_35 [4.2.3.35] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    9_pimara_7_15_diene
+  }
+
+  branch from cytidine_5_monophosphate side right {
+    cytidine_5_monophosphate
+    <-> ec_2_7_8_48 [2.7.8.48] +cdp_ethanolamine +n_acylsphingosine +hplus
+    n_acylsphingosine_1_phosphoethanolamine
+  }
+
+  branch from cytidine_5_monophosphate side left {
+    cytidine_5_monophosphate
+    <-> ec_2_4_99_15 [2.4.99.15] +kdo_2_lipid_iva +cmp_3_deoxy_d_manno_octulosonate +hplus
+    kdo_3_lipid_iva
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> . +l_lysinium +nad +h2o +nadh +hplus
+    l_allysine
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_1_13_12_15 [1.13.12.15] +ldopa +o2
+    3_4_dihydroxyphenylpyruvate
   }
 }

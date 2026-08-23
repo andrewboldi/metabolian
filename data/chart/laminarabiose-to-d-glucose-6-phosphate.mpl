@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway laminarabiose-to-d-glucose-6-phosphate "laminarabiose to β-D-glucose 6-phosphate" {
-  spacing 302
+  spacing 340
 
   spine at 0,0 {
     laminarabiose
@@ -24,26 +24,26 @@ pathway laminarabiose-to-d-glucose-6-phosphate "laminarabiose to β-D-glucose 6-
 
   branch from g1p side left {
     g1p
-    <-> ec_5_4_2_2 [5.4.2.2]
-    d_glucose_6_phosphate
+    <-> ec_2_4_1_342 [2.4.1.342] +adp_d_glucoside +adp +hplus
+    maltose_1_phosphate
   }
 
   branch from g1p side right {
     g1p
-    <-> . +udp_d_glucose +h2o +hplus
-    ump
+    <-> ec_2_4_1_352 [2.4.1.352] +2_o_d_glucopyranosyl_d_glycerate +pi
+    d_glycerate
   }
 
   branch from glucose side left {
     glucose
-    <-> ec_1_1_1_47 [1.1.1.47] +nad +nadh +hplus
-    d_glucono_1_5_lactone
+    <-> ec_2_7_1_1 [2.7.1.1] +atp +adp +hplus
+    g6p
   }
 
   branch from glucose side right {
     glucose
-    <-> ec_3_2_1_42 [3.2.1.42] +h2o +gdp +hplus
-    gdp_d_glucose
+    <-> ec_2_4_1_8 [2.4.1.8] +pi +d_glucose_1_phosphate
+    maltose
   }
 
   branch from adp_d_glucoside side left {
@@ -54,38 +54,86 @@ pathway laminarabiose-to-d-glucose-6-phosphate "laminarabiose to β-D-glucose 6-
 
   branch from adp_d_glucoside side right {
     adp_d_glucoside
-    <-> ec_2_4_1_342 [2.4.1.342] +g1p +adp +hplus
-    maltose_1_phosphate
+    <-> ec_2_4_1_13 [2.4.1.13] +d_fructofuranose +adp +hplus
+    sucrose
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_6_1_1_2 [6.1.1.2] +amp_3_end_1 +l_tryptophan +atp +amp +hplus
-    3_l_tryptophyl_adenylyl_1_group
+    <-> ec_2_5_1_91 [2.5.1.91] +ipp +fpp
+    all_trans_decaprenyl_diphosphate
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_25 [4.2.3.25] +gpp +h2o
-    s_linalool
+    <-> ec_4_2_3_51 [4.2.3.51] +neryl_diphosphate
+    phellandrene
   }
 
   branch from d_glucose_1_phosphate side left {
-    d_glucose_1_phosphate
-    <-> ec_2_4_1_8 [2.4.1.8] +pi +glucose
-    maltose
-  }
-
-  branch from d_glucose_1_phosphate side right {
     d_glucose_1_phosphate
     <-> ec_2_4_1_279 [2.4.1.279] +pi +glucose
     nigerose
   }
 
-  branch from glycerol side left {
+  branch from glycerol side right {
     glycerol
     <-> ec_3_1_4_46 [3.1.4.46] +h2o +sn_glycerol_3_phosphate +hplus
     sn_glycero_3_phosphoglycerol
+  }
+
+  branch from glycerol side left {
+    glycerol
+    <-> . +h2o +sn_glycerol_3_phosphate +hplus
+    sn_glycero_3_phospho_1_sn_glycerol
+  }
+
+  branch from g1p side right {
+    g1p
+    <-> . +h2o +gmp +hplus
+    gdp_d_glucose
+  }
+
+  branch from g1p side left {
+    g1p
+    <-> ec_2_7_7_69 [2.7.7.69] +gdp_l_galactose +gdp_d_glucose
+    l_galactose_1_phosphate
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> ec_2_3_1_103 [2.3.1.103] +1_o_sinapoyl_d_glucose
+    1_2_di_o_sinapoyl_d_glucose
+  }
+
+  branch from glucose side left {
+    glucose
+    <-> . +melibiose +h2o
+    d_galactopyranose
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_74 [4.2.3.74] +fpp +h2o
+    presilphiperfolan_8_ol
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_194 [4.2.3.194] +fpp +h2o
+    drimenol
+  }
+
+  branch from sn_glycerol_3_phosphate side right {
+    sn_glycerol_3_phosphate
+    <-> . +1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol +h2o +hplus
+    dag
+  }
+
+  branch from sn_glycerol_3_phosphate side left {
+    sn_glycerol_3_phosphate
+    <-> . +lauroyl_coa +coa
+    1_lauroyl_sn_glycerol_3_phosphate
   }
 
   branch from glycerol side right {
@@ -94,9 +142,9 @@ pathway laminarabiose-to-d-glucose-6-phosphate "laminarabiose to β-D-glucose 6-
     octadecanoate
   }
 
-  branch from d_glucose_6_phosphate side left {
-    d_glucose_6_phosphate
-    <-> . +salicin_6_phosphate +h2o
-    salicyl_alcohol
+  branch from glycerol side left {
+    glycerol
+    <-> . +1_oleoylglycerol +h2o +hplus
+    oleate
   }
 }

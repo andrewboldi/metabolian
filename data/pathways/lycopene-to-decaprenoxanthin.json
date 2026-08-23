@@ -101,53 +101,6 @@
       }
     },
     {
-      "id": "kanamycin_a",
-      "name": "kanamycin A",
-      "formula": "C18H40N4O11",
-      "charge": 4,
-      "xrefs": {
-        "chebi": "CHEBI:58214"
-      }
-    },
-    {
-      "id": "gtp",
-      "name": "GTP",
-      "formula": "C10H12N5O14P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:37565"
-      }
-    },
-    {
-      "id": "4_guanylylkanamycin_a",
-      "name": "4'-guanylylkanamycin A",
-      "short": "4'-guanylylkanamyci…",
-      "formula": "C28H51N9O18P",
-      "charge": 3,
-      "xrefs": {
-        "chebi": "CHEBI:233207"
-      }
-    },
-    {
-      "id": "itp",
-      "name": "ITP",
-      "formula": "C10H11N4O14P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:61402"
-      }
-    },
-    {
-      "id": "4_inosinylylkanamycin_a",
-      "name": "4'-inosinylylkanamycin A",
-      "short": "4'-inosinylylkanamy…",
-      "formula": "C28H50N8O18P",
-      "charge": 3,
-      "xrefs": {
-        "chebi": "CHEBI:233208"
-      }
-    },
-    {
       "id": "sarcinaxanthin",
       "name": "Sarcinaxanthin",
       "formula": "C50H72O2",
@@ -322,84 +275,6 @@
     },
     {
       "id": "r4",
-      "name": "kanamycin A + GTP = 4'-guanylylkanamycin A + diphosphate",
-      "equation": "kanamycin A + GTP = 4'-guanylylkanamycin A + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "kanamycin_a",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "gtp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "4_guanylylkanamycin_a",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:83695"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:83695"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "kanamycin A + ITP = 4'-inosinylylkanamycin A + diphosphate",
-      "equation": "kanamycin A + ITP = 4'-inosinylylkanamycin A + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "kanamycin_a",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "itp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "4_inosinylylkanamycin_a",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:83699"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:83699"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
       "name": "Reaction MNXR183618",
       "substrates": [
         {
@@ -414,7 +289,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 4,
       "xrefs": {
         "metanetx": "MNXR183618"
       },
@@ -429,7 +304,7 @@
       }
     },
     {
-      "id": "r7",
+      "id": "r5",
       "name": "Reaction MNXR183653",
       "substrates": [
         {
@@ -444,7 +319,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 5,
       "xrefs": {
         "metanetx": "MNXR183653"
       },
@@ -454,6 +329,162 @@
           {
             "db": "MetaNetX",
             "id": "MNXR183653"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_lycopene_1r-2r-3r-prephytoene-to-carotene",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lycopene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1r-2r-3r-prephytoene-to-carotene"
+      },
+      "note": "Shares lycopene with (1R,2R,3R)-prephytoene… to ε-carotene.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15948"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lycopene_2-trans-6-trans-10-trans-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lycopene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-trans-6-trans-10-trans-to-hydrogen-donor"
+      },
+      "note": "Shares lycopene with 2-trans,6-trans,10-trans-… to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15948"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lycopene_h2-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lycopene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h2-to-diphosphate"
+      },
+      "note": "Shares lycopene with H2 to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15948"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lycopene_plastoquinone-9-to-neurosporaxanthin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lycopene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "plastoquinone-9-to-neurosporaxanthin"
+      },
+      "note": "Shares lycopene with plastoquinone-9 to neurosporaxanthin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15948"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lycopene_s-adenosyl-l-homocysteine-to-8-apo-caroten-8-al",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lycopene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-8-apo-caroten-8-al"
+      },
+      "note": "Shares lycopene with S-adenosyl-L-homocysteine to 8'-apo-β,ψ-caroten-8'-al.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15948"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_decaprenoxanthin_hesperidin-to-3-o-beta-glucosyl-2-ox",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "decaprenoxanthin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hesperidin-to-3-o-beta-glucosyl-2-ox"
+      },
+      "note": "Shares decaprenoxanthin with hesperidin to 3-(O-beta-glucosyl)-(2-ox….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM737120"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sarcinaxanthin_s-adenosyl-l-homocysteine-to-afrormosin-7-o-gluc",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sarcinaxanthin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-afrormosin-7-o-gluc"
+      },
+      "note": "Shares Sarcinaxanthin with S-adenosyl-L-homocysteine to afrormosin-7-O-glucoside.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:202023"
           }
         ]
       }

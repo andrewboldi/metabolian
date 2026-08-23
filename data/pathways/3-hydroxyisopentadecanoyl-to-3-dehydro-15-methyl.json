@@ -121,25 +121,6 @@
       }
     },
     {
-      "id": "malonyl-coa",
-      "name": "Malonyl-CoA",
-      "formula": "C24H33N7O19P3S",
-      "charge": -5,
-      "xrefs": {
-        "chebi": "CHEBI:57384"
-      }
-    },
-    {
-      "id": "3_oxoisoheptadecanoyl_coa",
-      "name": "3-oxoisoheptadecanoyl-CoA",
-      "short": "3-oxoisoheptadecano…",
-      "formula": "C38H62N7O18P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:71445"
-      }
-    },
-    {
       "id": "l_cysteate",
       "name": "L-cysteate",
       "formula": "C3H6NO5S",
@@ -166,6 +147,55 @@
       "charge": 1,
       "xrefs": {
         "chebi": "CHEBI:70829"
+      }
+    },
+    {
+      "id": "3_oxoisopentadecanoyl_coa",
+      "name": "3-oxoisopentadecanoyl-CoA",
+      "short": "3-oxoisopentadecano…",
+      "formula": "C36H58N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:71430"
+      }
+    },
+    {
+      "id": "stearoyl_coa",
+      "name": "stearoyl-CoA",
+      "formula": "C39H66N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57394"
+      }
+    },
+    {
+      "id": "c20_3_dehydrosphinganine",
+      "name": "C20 3-dehydrosphinganine",
+      "short": "C20 3-dehydrosphing…",
+      "formula": "C20H42NO2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:65073"
+      }
+    },
+    {
+      "id": "myristoyl_coa",
+      "name": "Myristoyl-CoA (tetradecanoyl-CoA)",
+      "short": "Myristoyl-CoA…",
+      "formula": "C35H58N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57385"
+      }
+    },
+    {
+      "id": "3_dehydrohexadecasphinganine",
+      "name": "3-dehydrohexadecasphinganine",
+      "short": "3-dehydrohexadecasp…",
+      "formula": "C16H34NO2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:71007"
       }
     }
   ],
@@ -298,53 +328,6 @@
     },
     {
       "id": "r4",
-      "name": "isopentadecanoyl-CoA + malonyl-CoA + H(+) = 3-oxoisoheptadecanoyl-CoA + CO2 + CoA",
-      "equation": "isopentadecanoyl-CoA + malonyl-CoA + H(+) = 3-oxoisoheptadecanoyl-CoA + CO2 + CoA",
-      "substrates": [
-        {
-          "metabolite": "isopentadecanoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "malonyl-coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_oxoisoheptadecanoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:35335"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:35335"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
       "name": "isopentadecanoyl-CoA + L-cysteate + H(+) = 3-oxocapnine + CO2 + CoA",
       "equation": "isopentadecanoyl-CoA + L-cysteate + H(+) = 3-oxocapnine + CO2 + CoA",
       "substrates": [
@@ -376,7 +359,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
         "rhea": "RHEA:81571"
       },
@@ -391,7 +374,7 @@
       }
     },
     {
-      "id": "r6",
+      "id": "r5",
       "name": "15-methylhexadecasphinganine + NADP(+) = 3-dehydro-15-methylhexadecasphinganine + NADPH...",
       "equation": "15-methylhexadecasphinganine + NADP(+) = 3-dehydro-15-methylhexadecasphinganine + NADPH + H(+)",
       "substrates": [
@@ -419,7 +402,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:34599"
       },
@@ -429,6 +412,321 @@
           {
             "db": "Rhea",
             "id": "RHEA:34599"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "3-hydroxyisopentadecanoyl-CoA + NADP(+) = 3-oxoisopentadecanoyl-CoA + NADPH + H(+)",
+      "equation": "3-hydroxyisopentadecanoyl-CoA + NADP(+) = 3-oxoisopentadecanoyl-CoA + NADPH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxyisopentadecanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_oxoisopentadecanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:35303"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35303"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "octadecanoyl-CoA + L-serine + H(+) = 3-oxoeicosasphinganine + CO2 + CoA",
+      "equation": "octadecanoyl-CoA + L-serine + H(+) = 3-oxoeicosasphinganine + CO2 + CoA",
+      "substrates": [
+        {
+          "metabolite": "stearoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "c20_3_dehydrosphinganine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:33683"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33683"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "tetradecanoyl-CoA + L-serine + H(+) = 3-oxohexadecasphinganine + CO2 + CoA",
+      "equation": "tetradecanoyl-CoA + L-serine + H(+) = 3-oxohexadecasphinganine + CO2 + CoA",
+      "substrates": [
+        {
+          "metabolite": "myristoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_dehydrohexadecasphinganine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:35675"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35675"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_isopentadecanoyl_coa_3-hydroxyicosanoyl-coa-to-n-2-hydroxytetracosano",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isopentadecanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxyicosanoyl-coa-to-n-2-hydroxytetracosano"
+      },
+      "note": "Shares isopentadecanoyl-CoA with 3-hydroxyicosanoyl-CoA to N-(2-hydroxytetracosanoyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:70827"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_cysteate_3-mercaptopropionate-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_cysteate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-mercaptopropionate-to-ammonium"
+      },
+      "note": "Shares L-cysteate with 3-mercaptopropionate to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58090"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_cysteate_d-arabinitol-to-fmnh2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_cysteate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-arabinitol-to-fmnh2"
+      },
+      "note": "Shares L-cysteate with D-arabinitol to FMNH2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58090"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_cysteate_n-oleoyltaurine-to-taurine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_cysteate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-oleoyltaurine-to-taurine"
+      },
+      "note": "Shares L-cysteate with N-oleoyltaurine to taurine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58090"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_15_methylhexadecasphinganine_15-methylhexadecasphingan-to-1-z-alk-1-enyl-2-ac",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "15_methylhexadecasphinganine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "15-methylhexadecasphingan-to-1-z-alk-1-enyl-2-ac"
+      },
+      "note": "Shares 15-methylhexadecasphinganine with 15-methylhexadecasphingan… to 1-(Z)-alk-1-enyl-2-acyl-s….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:70829"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_15_methylhexadecasphinganine_2-saturated-fatty-acid-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "15_methylhexadecasphinganine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-saturated-fatty-acid-to-diphosphate"
+      },
+      "note": "Shares 15-methylhexadecasphinganine with 2-saturated fatty acid… to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:70829"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_15_methylhexadecasphinganine_aliphatic-primary-amide-to-acyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "15_methylhexadecasphinganine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aliphatic-primary-amide-to-acyl-coa"
+      },
+      "note": "Shares 15-methylhexadecasphinganine with aliphatic primary amide to acyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:70829"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_oxoisopentadecanoyl_coa_3-hydroxyicosanoyl-coa-to-n-2-hydroxytetracosano",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_oxoisopentadecanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxyicosanoyl-coa-to-n-2-hydroxytetracosano"
+      },
+      "note": "Shares 3-oxoisopentadecanoyl-CoA with 3-hydroxyicosanoyl-CoA to N-(2-hydroxytetracosanoyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:71430"
           }
         ]
       }

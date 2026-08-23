@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-fatty-acyl-l-isoleuci-to-fmn "N-(fatty acyl)-L-isoleuci… to FMN" {
-  spacing 182
+  spacing 188
 
   spine at 0,0 {
     n_fatty_acyl_l_isoleucine
@@ -24,33 +24,39 @@ pathway n-fatty-acyl-l-isoleuci-to-fmn "N-(fatty acyl)-L-isoleuci… to FMN" {
     2_hydroxy_2_methylbutanenitrile
   }
 
-  branch from fatty-acid side left {
-    fatty-acid
-    <-> . +d_galactosyl_1_4_d_galactosyl_1_4_d_glucosylcer +h2o
-    d_galactosyl_d_galactosyl_d_glucosylsphingosine
-  }
-
-  branch from fatty-acid side right {
-    fatty-acid
-    <-> . +d_galactosyl_1_4_d_galactosyl_1_4_d_glucosyl_1 +h2o
-    d_galactosyl_1_4_d_galactosyl_1_4_d_glucosylsph
-  }
-
   branch from fmn side left {
     fmn
-    <-> . +7z_10z_13z_16z_19z_docosapentaenoate +fmnh2 +o2 +h2o +hplus
-    7z_10z_13z_19z_16_17_epoxydocosatetraenoate
+    <-> . +n1_n5_n10_e_tri_p_coumaroylspermidine +fmnh2 +o2 +h2o +hplus
+    n1_n5_n10_tris_e_caffeoyl_spermidine
   }
 
   branch from fmn side right {
     fmn
-    <-> . +7z_10z_13z_16z_19z_docosapentaenoate +fmnh2 +o2 +h2o +hplus
-    7z_10z_16z_19z_13_14_epoxydocosatetraenoate
+    <-> . +12_deshydroxyl_okaramine_e +fmnh2 +o2 +h2o +hplus
+    3_desmethyl_okaramine_b
   }
 
-  branch from 2_hydroxy_2_methylbutanenitrile side left {
-    2_hydroxy_2_methylbutanenitrile
-    <-> ec_1_11_1_13 [1.11.1.13] +udp +h +lotaustralin
-    udp_alpha_d_glucose
+  branch from fmnh2 side left {
+    fmnh2
+    <-> . +prenyl_phosphate +pi
+    n5_dimethylallyl_fmnh2
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> . +isomotiol +o2 +fmn +h2o +hplus
+    19_hydroxyisomotiol
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> . +campesine_b +fmnh2 +o2 +h2o +hplus
+    campesine_f
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +testosterone +fmnh2 +o2 +h2o +hplus
+    15_hydroxytestosterone
   }
 }

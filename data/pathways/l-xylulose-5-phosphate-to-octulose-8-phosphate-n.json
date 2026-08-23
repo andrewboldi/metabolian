@@ -1,0 +1,528 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-xylulose-5-phosphate-to-octulose-8-phosphate-n",
+  "name": "L-xylulose 5-phosphate to octulose 8-phosphate",
+  "category": "other",
+  "summary": "A 3-step route from L-xylulose 5-phosphate to octulose 8-phosphate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR179280"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_xylulose_5_phosphate",
+      "name": "L-xylulose 5-phosphate",
+      "short": "L-xylulose 5-P",
+      "formula": "C5H9O8P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1238"
+      }
+    },
+    {
+      "id": "alpha_d_ribofuranose_5_phosphate",
+      "name": "alpha-D-ribofuranose 5-phosphate",
+      "short": "alpha-D-ribofuranos…",
+      "formula": "C5H11O8P",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1363910"
+      }
+    },
+    {
+      "id": "d_glyceraldehyde_3_phosphate",
+      "name": "D-glyceraldehyde 3-phosphate",
+      "short": "D-glyceraldehyde 3-P",
+      "formula": "C3H5O6P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1372045"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "d_sedoheptulose_7_phosphate",
+      "name": "D-sedoheptulose 7-phosphate",
+      "short": "D-sedoheptulose 7-P",
+      "formula": "C7H13O10P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM733314"
+      }
+    },
+    {
+      "id": "d_xylulose",
+      "name": "D-xylulose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1371292"
+      }
+    },
+    {
+      "id": "glycolaldehyde",
+      "name": "glycolaldehyde",
+      "formula": "C2H4O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM734590"
+      }
+    },
+    {
+      "id": "keto_d_fructose_6_phosphate",
+      "name": "keto-D-fructose 6-phosphate",
+      "short": "keto-D-fructose 6-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM89629"
+      }
+    },
+    {
+      "id": "aldehydo_d_ribose_5_phosphate",
+      "name": "aldehydo-D-ribose 5-phosphate",
+      "short": "aldehydo-D-ribose…",
+      "formula": "C5H9O8P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1363911"
+      }
+    },
+    {
+      "id": "octulose_8_phosphate",
+      "name": "octulose 8-phosphate",
+      "formula": "C8H17O11P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:134365"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_2_1_1",
+      "name": "transketolase",
+      "ec": [
+        "2.2.1.1"
+      ],
+      "xrefs": {
+        "uniprot": "P51854"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "transketolase",
+      "ec": "2.2.1.1",
+      "substrates": [
+        {
+          "metabolite": "l_xylulose_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alpha_d_ribofuranose_5_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glyceraldehyde_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "d_sedoheptulose_7_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_2_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR179280"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR179280"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "transketolase",
+      "ec": "2.2.1.1",
+      "substrates": [
+        {
+          "metabolite": "d_xylulose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_glyceraldehyde_3_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glycolaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "keto_d_fructose_6_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_2_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR129774"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR129774"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR143956",
+      "substrates": [
+        {
+          "metabolite": "aldehydo_d_ribose_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "keto_d_fructose_6_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glyceraldehyde_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "octulose_8_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR143956"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR143956"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_l_xylulose_5_phosphate_3-methylbut-2-enoyl-coa-to-3-methylglutaric-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_xylulose_5_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-methylbut-2-enoyl-coa-to-3-methylglutaric-acid"
+      },
+      "note": "Shares L-xylulose 5-phosphate with 3-methylbut-2-enoyl-CoA to 3-methylglutaric acid.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1238"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_xylulose_5_phosphate_6s-5-formyl-5-6-7-8-tet-to-l-glutamate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_xylulose_5_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6s-5-formyl-5-6-7-8-tet-to-l-glutamate-null"
+      },
+      "note": "Shares L-xylulose 5-phosphate with (6S)-5-formyl-5,6,7,8-tet… to L-glutamate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1238"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_xylulose_5_phosphate_beta-d-fructose-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_xylulose_5_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-d-fructose-to-h2o-null"
+      },
+      "note": "Shares L-xylulose 5-phosphate with beta-D-fructose… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1238"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_xylulose_5_phosphate_l-xylulose-5-phosphate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_xylulose_5_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-xylulose-5-phosphate-to-h2o"
+      },
+      "note": "Shares L-xylulose 5-phosphate with L-xylulose 5-phosphate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1238"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_xylulose_5_phosphate_l-xylulose-5-phosphate-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_xylulose_5_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-xylulose-5-phosphate-to-h2o-null"
+      },
+      "note": "Shares L-xylulose 5-phosphate with L-xylulose 5-phosphate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1238"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_xylulose_5_phosphate_l-xylulose-5-phosphate-to-octulose-8-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_xylulose_5_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-xylulose-5-phosphate-to-octulose-8-phosphate"
+      },
+      "note": "Shares L-xylulose 5-phosphate with L-xylulose 5-phosphate to octulose 8-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1238"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_xylulose_alpha-d-lyxopyranose-to-d-xylono-1-5-lactone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_xylulose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-lyxopyranose-to-d-xylono-1-5-lactone"
+      },
+      "note": "Shares D-xylulose with alpha-D-lyxopyranose to D-xylono-1,5-lactone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371292"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_xylulose_alpha-d-lyxopyranose-to-d-xylono-1-5-lactone-nul",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_xylulose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-lyxopyranose-to-d-xylono-1-5-lactone-nul"
+      },
+      "note": "Shares D-xylulose with alpha-D-lyxopyranose to D-xylono-1,5-lactone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371292"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_xylulose_d-ribulose-1-phosphate-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_xylulose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-ribulose-1-phosphate-to-nad"
+      },
+      "note": "Shares D-xylulose with D-ribulose 1-phosphate to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371292"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_xylulose_d-ribulose-1-phosphate-to-nad-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_xylulose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-ribulose-1-phosphate-to-nad-null"
+      },
+      "note": "Shares D-xylulose with D-ribulose 1-phosphate to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371292"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_xylulose_d-xylulose-1-phosphate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_xylulose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-xylulose-1-phosphate-to-h2o"
+      },
+      "note": "Shares D-xylulose with D-Xylulose 1-phosphate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371292"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_xylulose_d-xylulose-1-phosphate-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_xylulose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-xylulose-1-phosphate-to-h2o-null"
+      },
+      "note": "Shares D-xylulose with D-Xylulose 1-phosphate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371292"
+          }
+        ]
+      }
+    }
+  ]
+}

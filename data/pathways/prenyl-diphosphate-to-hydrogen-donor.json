@@ -120,34 +120,6 @@
       "xrefs": {
         "chebi": "CHEBI:17499"
       }
-    },
-    {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:175763"
-      }
-    },
-    {
-      "id": "z_bisabolene",
-      "name": "(Z)-α-bisabolene",
-      "formula": "C15H24",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:49241"
-      }
-    },
-    {
-      "id": "cedr_8_ene",
-      "name": "cedr-8-ene",
-      "formula": "C15H24",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:10216"
-      }
     }
   ],
   "enzymes": [
@@ -316,73 +288,93 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "(2E,6E)-farnesyl diphosphate = (Z)-alpha-bisabolene + diphosphate",
-      "equation": "(2E,6E)-farnesyl diphosphate = (Z)-alpha-bisabolene + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "fpp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "z_bisabolene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:68532"
+      "id": "xt_n6_dimethylallyl_adenosine_5_phosphate_fadh2-to-o-d-glucosyl-trans-zeat",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n6_dimethylallyl_adenosine_5_phosphate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "fadh2-to-o-d-glucosyl-trans-zeat"
+      },
+      "note": "Shares N6-(dimethylallyl)adenosine 5'-phosphate with FADH2 to O-β-D-glucosyl-trans-zeat….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:68532"
+            "db": "ChEBI",
+            "id": "CHEBI:57526"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "(2E,6E)-farnesyl diphosphate = (-)-alpha-cedrene + diphosphate",
-      "equation": "(2E,6E)-farnesyl diphosphate = (-)-alpha-cedrene + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "fpp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "cedr_8_ene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:68536"
+      "id": "xt_n6_dimethylallyl_adenosine_5_phosphate_n-acetylneuraminyl-2-3-to-cytidine-5-monophosph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n6_dimethylallyl_adenosine_5_phosphate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetylneuraminyl-2-3-to-cytidine-5-monophosph"
+      },
+      "note": "Shares N6-(dimethylallyl)adenosine 5'-phosphate with α-N-acetylneuraminyl-(2→3… to cytidine 5'-monophosphate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:68536"
+            "db": "ChEBI",
+            "id": "CHEBI:57526"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n6_dimethylallyladenine_vitexin-2-o-l-rhamnos-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n6_dimethylallyladenine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "vitexin-2-o-l-rhamnos-to-hydrogen-donor"
+      },
+      "note": "Shares N6-dimethylallyladenine with vitexin 2''-O-β-L-rhamnos… to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17660"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_methylbut_2_enal_plastoquinone-9-to-neurosporaxanthin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_methylbut_2_enal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "plastoquinone-9-to-neurosporaxanthin"
+      },
+      "note": "Shares 3-methylbut-2-enal with plastoquinone-9 to neurosporaxanthin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15825"
           }
         ]
       }

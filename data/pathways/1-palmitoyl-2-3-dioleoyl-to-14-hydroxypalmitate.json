@@ -121,36 +121,6 @@
       }
     },
     {
-      "id": "1_2_3_trilinoleoylglycerol",
-      "name": "1,2,3-trilinoleoylglycerol",
-      "short": "1,2,3-trilinoleoylg…",
-      "formula": "C57H98O6",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:75844"
-      }
-    },
-    {
-      "id": "1_3_dilinoleoylglycerol",
-      "name": "1,3-dilinoleoylglycerol",
-      "short": "1,3-dilinoleoylglyc…",
-      "formula": "C39H68O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:75850"
-      }
-    },
-    {
-      "id": "9_9z_12z_octadecadienoyloxy_octadecanoate",
-      "name": "9-[(9Z),(12Z)-octadecadienoyloxy]-octadecanoate",
-      "short": "9-[(9Z),(12Z)-octad…",
-      "formula": "C36H65O4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:194142"
-      }
-    },
-    {
       "id": "1_2_3_tri_10z_heptadecenoyl_glycerol",
       "name": "1,2,3-tri-(10Z-heptadecenoyl)glycerol",
       "short": "1,2,3-tri-(10Z-hept…",
@@ -318,45 +288,6 @@
     },
     {
       "id": "r4",
-      "name": "1,2,3-tri-(9Z,12Z)-octadecadienoylglycerol + 9-hydroxy-octadecanoate = 1,3-di-(9Z,12Z)-...",
-      "equation": "1,2,3-tri-(9Z,12Z)-octadecadienoylglycerol + 9-hydroxy-octadecanoate = 1,3-di-(9Z,12Z)-octadecadienoylglycerol + 9-(9Z,12Z-octadecadienoyloxy)-octadecanoate",
-      "substrates": [
-        {
-          "metabolite": "1_2_3_trilinoleoylglycerol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "9_hydroxyoctadecanoate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_3_dilinoleoylglycerol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "9_9z_12z_octadecadienoyloxy_octadecanoate",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:77939"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:77939"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
       "name": "1,2,3-tri-(10Z)-heptadecenoylglycerol + 9-hydroxy-octadecanoate = 1,3-di-(10Z-heptadece...",
       "equation": "1,2,3-tri-(10Z)-heptadecenoylglycerol + 9-hydroxy-octadecanoate = 1,3-di-(10Z-heptadecenoyl)-glycerol + 9-(10Z-heptadecenoyloxy)-octadecanoate",
       "substrates": [
@@ -380,7 +311,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
         "rhea": "RHEA:77947"
       },
@@ -390,6 +321,162 @@
           {
             "db": "Rhea",
             "id": "RHEA:77947"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_1_palmitoyl_2_3_dioleoyl_sn_glycerol_1-palmitoyl-2-3-dioleoyl-to-oleate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_palmitoyl_2_3_dioleoyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-palmitoyl-2-3-dioleoyl-to-oleate"
+      },
+      "note": "Shares 1-palmitoyl-2,3-dioleoyl-sn-glycerol with 1-palmitoyl-2,3-dioleoyl-… to oleate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75847"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_palmitoyl_2_3_dioleoyl_sn_glycerol_r-10-hydroxyoctadecanoa-to-l-2-aminoadipate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_palmitoyl_2_3_dioleoyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-10-hydroxyoctadecanoa-to-l-2-aminoadipate"
+      },
+      "note": "Shares 1-palmitoyl-2,3-dioleoyl-sn-glycerol with (R)-10-hydroxyoctadecanoa… to L-2-aminoadipate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75847"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_3_dioleoyl_sn_glycerol_1-palmitoyl-2-3-dioleoyl-to-oleate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_3_dioleoyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-palmitoyl-2-3-dioleoyl-to-oleate"
+      },
+      "note": "Shares 2,3-dioleoyl-sn-glycerol with 1-palmitoyl-2,3-dioleoyl-… to oleate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75824"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_3_dioleoyl_sn_glycerol_2-3-dioleoyl-sn-glycerol-to-oleate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_3_dioleoyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3-dioleoyl-sn-glycerol-to-oleate"
+      },
+      "note": "Shares 2,3-dioleoyl-sn-glycerol with 2,3-dioleoyl-sn-glycerol to oleate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75824"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_3_dioleoyl_sn_glycerol_9-octadecanoyloxy-octade-to-10-hydroperoxy-8e-oc",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_3_dioleoyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "9-octadecanoyloxy-octade-to-10-hydroperoxy-8e-oc"
+      },
+      "note": "Shares 2,3-dioleoyl-sn-glycerol with 9-(octadecanoyloxy)octade… to 10-hydroperoxy-8E-octadec….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75824"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_2_3_tri_10z_heptadecenoyl_glycerol_9-octadecanoyloxy-octade-to-10-hydroperoxy-8e-oc",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_2_3_tri_10z_heptadecenoyl_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "9-octadecanoyloxy-octade-to-10-hydroperoxy-8e-oc"
+      },
+      "note": "Shares 1,2,3-tri-(10Z-heptadecenoyl)glycerol with 9-(octadecanoyloxy)octade… to 10-hydroperoxy-8E-octadec….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:194143"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_9_10z_heptadecenoyloxy_octadecanoate_9-octadecanoyloxy-octade-to-10-hydroperoxy-8e-oc",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9_10z_heptadecenoyloxy_octadecanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "9-octadecanoyloxy-octade-to-10-hydroperoxy-8e-oc"
+      },
+      "note": "Shares 9-[(10Z)-heptadecenoyloxy]-octadecanoate with 9-(octadecanoyloxy)octade… to 10-hydroperoxy-8E-octadec….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:194145"
           }
         ]
       }

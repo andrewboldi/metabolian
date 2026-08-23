@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 7-8-dihydroneopterin-to-5-dehydro-d-gluconate "7,8-dihydroneopterin to 5-dehydro-D-gluconate" {
-  spacing 244
+  spacing 292
 
   spine at 0,0 {
     7_8_dihydroneopterin
@@ -34,26 +34,26 @@ pathway 7-8-dihydroneopterin-to-5-dehydro-d-gluconate "7,8-dihydroneopterin to 5
 
   branch from h side left {
     h
-    <-> . +erucoyl_coa +h2o +coa
-    13z_docosenoate
+    <-> ec_2_5_1_18 [2.5.1.18] +1_nitro_7_hydroxy_8_glutathionyl_7_8_dihydronaph +1_nitronaphthalene_7_8_oxide
+    glutathione
   }
 
   branch from h side right {
     h
-    <-> . +6_7_dihydro_5_oxo_12_epi_ltb4 +nadp +nadph
-    5_oxo_6e_12_epi_leukotriene_b4
+    <-> ec_2_5_1_18 [2.5.1.18] +1_nitro_7_glutathionyl_8_hydroxy_7_8_dihydronaph +glutathione
+    1_nitronaphthalene_7_8_oxide
   }
 
   branch from nadph side left {
     nadph
-    <-> . +6_7_dihydro_5_oxo_leukotriene_b4 +h +nadp
-    6_7_dihydro_leukotriene_b4
+    <-> ec_1_14_13_179 [1.14.13.179] +1_methyl_7h_xanthine +formaldehyde +nadp +h2o +h +o2
+    theophylline
   }
 
   branch from nadph side right {
     nadph
-    <-> . +h +12_dehydro_leukotriene_b4 +nadp
-    10_11_dihydro_12_oxo_ltb4
+    <-> ec_1_1_1_219 [1.1.1.219] +garbanzol +h +nadp
+    5_deoxyleucopelargonidin
   }
 
   branch from 6_hydroxymethyl_7_8_dihydropterin side left {
@@ -76,7 +76,55 @@ pathway 7-8-dihydroneopterin-to-5-dehydro-d-gluconate "7,8-dihydroneopterin to 5
 
   branch from glycolaldehyde side right {
     glycolaldehyde
-    <-> ec_1_2_1_19 [1.2.1.19] +h +glycolate +nadph +nadp
-    h2o
+    <-> ec_1_13_11_81 [1.13.11.81] +dihydroneopterin +o2 +h +7_8_dihydroxanthopterin
+    formate
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_1_1_219 [1.1.1.219] +h +trans_fustin +nadph
+    fisetinidol_4beta_ol
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_1_1_183 [1.1.1.183] +neral +h +nadph
+    nerol
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_5_1_18 [2.5.1.18] +1_nitro_5_hydroxy_6_glutathionyl_5_6_dihydronaph +glutathione
+    1_nitronaphthalene_5_6_oxide
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_5_1_18 [2.5.1.18] +1_nitronaphthalene_5_6_oxide +glutathione
+    1_nitro_5_glutathionyl_6_hydroxy_5_6_dihydronaph
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_14_13_8 [1.14.13.8] +h +tamoxifen +o2 +nadp +h2o
+    tamoxifen_n_oxide
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_14_14_1 [1.14.14.1] +h +tamoxifen +o2 +nadp +h2o
+    afimoxifene
+  }
+
+  branch from 6_hydroxymethyl_7_8_dihydropterin side left {
+    6_hydroxymethyl_7_8_dihydropterin
+    <-> . +nadp +h +nadph
+    6_hydroxymethyl_5_6_7_8_tetrahydropterin
+  }
+
+  branch from glycolaldehyde side right {
+    glycolaldehyde
+    <-> ec_1_14_14_5 [1.14.14.5] +fmnh2 +2_hydroxyethane_1_sulfonate +h +o2 +sulfite +h2o
+    fmn
   }
 }

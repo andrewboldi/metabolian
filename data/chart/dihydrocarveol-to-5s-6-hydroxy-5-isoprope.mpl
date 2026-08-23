@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dihydrocarveol-to-5s-6-hydroxy-5-isoprope "(+)-dihydrocarveol to (5S)-6-Hydroxy-5-isoprope…" {
-  spacing 272
+  spacing 332
 
   spine at 0,0 {
     dihydrocarveol
@@ -30,25 +30,85 @@ pathway dihydrocarveol-to-5s-6-hydroxy-5-isoprope "(+)-dihydrocarveol to (5S)-6-
 
   branch from nadp side left {
     nadp
-    <-> . +all_trans_retinal +h +o2 +nadph +h2o
-    4_oh_retinal
+    <-> . +h +cholesterol +o2 +nadph +h2o
+    5_6_epoxy_5_cholestan_3_ol
   }
 
   branch from nadp side right {
     nadp
-    <-> . +all_trans_retinol +h +o2 +nadph +h2o
-    4_hydroxyvitamin_a1
+    <-> . +h +cholesterol +o2 +nadph +h2o
+    5_6beta_epoxy_5beta_cholestan_3beta_ol
   }
 
   branch from h2o side left {
     h2o
-    <-> . +neocasomorphin +l_isoleucine
-    neocasomorphin_1_5
+    <-> ec_3_1_1_13 [3.1.1.13] +hexadecanoate +h +cholesterol
+    cholesteryl_palmitate
   }
 
   branch from h2o side right {
     h2o
-    <-> . +apelin_13 +l_phenylalanine
-    apelin_1_12
+    <-> ec_3_1_1_13 [3.1.1.13] +9z_hexadecenoate +h +cholesterol
+    cholesteryl_palmitoleate
+  }
+
+  branch from h side left {
+    h
+    <-> . +succinyl_coa +r_carnitine +o_succinylcarnitine
+    coa
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_1_1_13 [3.1.1.13] +9z_12z_octadecadienoate +cholesterol +h2o
+    cholesteryl_linoleate
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +trans_4_coumarate
+    e_caffeate
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_17_3_2 [1.17.3.2] +3_4_oxo_4_5_dihydro_1h_imidazol_5_yl_propanoic_a +h2o +h +h2o2
+    hydantoin_5_propionate
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_1_1_119 [1.1.1.119] +beta_d_glucose +nadp +h
+    d_glucono_1_5_lactone
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_1_1_131 [1.1.1.131] +d_mannonate +nadp
+    d_mannopyranuronic_acid
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_1_1_246 [1.1.1.246] +h +3r_vestitone +nadph +h2o
+    medicarpin
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_1_1_147 [1.1.1.147] +h +16_oxosteroid +nadph
+    16alpha_hydroxysteroid
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_1_1_13 [3.1.1.13] +cholesteryl_arachidonate +h +cholesterol
+    5z_8z_11z_14z_eicosatetraenoate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +h +adp +6z_9z_12z_15z_octadecatetraenoate +phosphate +6z_9z_12z_15z_octadecatetraenoate
+    atp
   }
 }

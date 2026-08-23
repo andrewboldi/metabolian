@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-1-deoxy-d-fructopyra-to-2s-2-isopropylmalate "N-(1-deoxy-β-D-fructopyra… to (2S)-2-isopropylmalate" {
-  spacing 238
+  spacing 190
 
   spine at 0,0 {
     n_1_deoxy_d_fructopyranos_1_yl_l_valine_betaine
@@ -18,57 +18,9 @@ pathway n-1-deoxy-d-fructopyra-to-2s-2-isopropylmalate "N-(1-deoxy-β-D-fructopy
     2s_2_isopropylmalate
   }
 
-  branch from 2_dehydro_d_glucopyranose side left {
-    2_dehydro_d_glucopyranose
-    <-> . +2s_3_phenyl_2_e_2r_3s_4r_5r_2_3_4_5_tetrahydrox +h2o +hplus
-    l_phenylalanine
-  }
-
-  branch from valine side right {
-    valine
-    <-> ec_2_1_4_4 [2.1.4.4] +arginine +ornithine
-    n_amidino_l_valine
-  }
-
-  branch from valine side left {
-    valine
-    <-> . +atp +nadph +hplus +amp +ppi +nadp
-    2_ammonio_3_methylbutanal
-  }
-
-  branch from kiv side right {
-    kiv
-    <-> ec_1_2_4_4 [1.2.4.4] +r_lipoamide +h +s_8_2_methylpropanoyl_dihydrolipoamide
-    co2
-  }
-
-  branch from kiv side left {
-    kiv
-    <-> ec_1_2_4_4 [1.2.4.4] +r_lipoamide +h +co2
-    s_2_methylpropanoyl_dihydrolipoamide
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +1s_2_methyl_cyclohexylammonium +nad +h2o +nadh +hplus
-    2_methylcyclohexanone
-  }
-
-  branch from nh3 side left {
-    nh3
-    <-> . +nadp +h2o +2_methylcyclohexanone +nadph +hplus
-    1s_2_methyl_cyclohexylammonium
-  }
-
-  branch from 2s_2_isopropylmalate side right {
+  branch from 2s_2_isopropylmalate side left {
     2s_2_isopropylmalate
     <-> . +h2o
     2_isopropylmaleate
-  }
-
-  branch from 2s_2_isopropylmalate side left {
-    2s_2_isopropylmalate
-    <-> ec_4_2_1_33 [4.2.1.33]
-    2r_3s_3_isopropylmalate
   }
 }

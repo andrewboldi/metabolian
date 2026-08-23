@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-glycero-d-manno-hepto-to-diphosphate "D-glycero-β-D-manno-hepto… to diphosphate" {
-  spacing 326
+  spacing 308
 
   spine at 0,0 {
     d_glycero_d_manno_heptose_7_phosphate
@@ -14,23 +14,5 @@ pathway d-glycero-d-manno-hepto-to-diphosphate "D-glycero-β-D-manno-hepto… to
     d_glycero_d_manno_heptose_1_phosphate
     <-> . +ctp +hplus -ppi
     cdp_d_glycero_d_manno_heptose
-  }
-
-  branch from d_glycero_d_manno_heptose_1_phosphate side left {
-    d_glycero_d_manno_heptose_1_phosphate
-    <-> . +utp +hplus +ppi
-    udp_d_glycero_d_manno_heptose
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +atp
-    cyclic_a_3_5_pa_3_5_pa_3_5_p
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +butyrolactone_ii +dmapp
-    butyrolactone_i
   }
 }

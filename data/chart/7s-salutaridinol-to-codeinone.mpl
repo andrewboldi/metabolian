@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 7s-salutaridinol-to-codeinone "(7S)-salutaridinol to codeinone" {
-  spacing 252
+  spacing 258
 
   spine at 0,0 {
     7s_salutaridinol
@@ -20,49 +20,55 @@ pathway 7s-salutaridinol-to-codeinone "(7S)-salutaridinol to codeinone" {
 
   branch from thebaine side left {
     thebaine
-    <-> ec_1_14_11_32 [1.14.11.32] +akg +o2 +formaldehyde +succinate +co2
-    oripavine
+    <-> . +oripavine +sam +hplus
+    sah
   }
 
-  branch from thebaine side right {
-    thebaine
-    <-> . +akg +o2 +formaldehyde +succinate +co2 +hplus
-    6_o_demethylthebaine
-  }
-
-  branch from neopinone side left {
+  branch from neopinone side right {
     neopinone
     <-> ec_1_1_1_247 [1.1.1.247] +nadp +nadph +hplus
     neopine
   }
 
-  branch from formaldehyde side right {
-    formaldehyde
-    <-> . +n6_methyl_l_lysinium +akg +o2 +succinate +co2
-    l_lysinium
-  }
-
-  branch from formaldehyde side left {
-    formaldehyde
-    <-> . +3_methyldeoxycytidine_5_monophosphate_zwitterion +akg +o2 +succinate +co2 +hplus
-    2_deoxycytidine_5_monophosphate_1
+  branch from succinate side left {
+    succinate
+    <-> . +2_deoxyinosine_5_phosphate +chloride +akg +o2 +hplus +co2 +h2o
+    2_chloro_deoxyinosine_5_monophosphate
   }
 
   branch from succinate side right {
     succinate
-    <-> ec_1_14_20_4 [1.14.20.4] +2r_3s_4s_leucoanthocyanidin +akg +o2 +co2 +h2o
-    4_unsubstituted_3_hydroxyanthocyanidin_betaine
+    <-> ec_1_14_20_16 [1.14.20.16] +4_5_9_5_20_epoxytax_11_ene_4_9_diol +akg +o2 +co2 +h2o
+    4_hydroxy_5_5_20_epoxytax_11_en_9_one
+  }
+
+  branch from codeinone side left {
+    codeinone
+    <-> ec_1_1_1_247 [1.1.1.247] +nadp +nadph +hplus
+    codeine
+  }
+
+  branch from akg side right {
+    akg
+    <-> ec_6_3_2_65 [6.3.2.65] +udp_2_acetamido_4_amino_2_4_6_trideoxy_d_galacto +atp +adp +pi +hplus
+    udp_yelosamine
+  }
+
+  branch from akg side left {
+    akg
+    <-> ec_2_6_1_92 [2.6.1.92] +udp_2_acetamido_4_amino_2_4_6_trideoxy_d_galacto +glutamate
+    udp_2_acetamido_2_6_dideoxy_d_xylo_hex_4_ulose
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> . +4ar_7s_2_adenosyl_5_diphospho_5_ribosyl_7_amino +akg +o2 +co2
+    4ar_6s_7r_2_adenosyl_5_diphospho_5_ribosyl_6_hy
   }
 
   branch from succinate side left {
     succinate
-    <-> . +2r_3s_4s_leucoanthocyanidin +akg +o2 +co2 +h2o +hplus
-    4s_2_3_dehydroflavan_3_4_diol
-  }
-
-  branch from codeinone side right {
-    codeinone
-    <-> ec_1_1_1_247 [1.1.1.247] +nadp +nadph +hplus
-    codeine
+    <-> . +okaramine_a +akg +o2 +co2
+    okaramine_e
   }
 }

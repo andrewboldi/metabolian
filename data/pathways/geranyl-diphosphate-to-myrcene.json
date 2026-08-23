@@ -117,34 +117,6 @@
       "xrefs": {
         "chebi": "CHEBI:57945"
       }
-    },
-    {
-      "id": "palmitoyl_coa",
-      "name": "Palmitoyl-CoA",
-      "formula": "C37H62N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57379"
-      }
-    },
-    {
-      "id": "2e_geranyl_hexadecanoate",
-      "name": "(2E)-geranyl hexadecanoate",
-      "short": "geranyl hexadecanoa…",
-      "formula": "C26H48O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:235328"
-      }
-    },
-    {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57287"
-      }
     }
   ],
   "enzymes": [
@@ -153,7 +125,10 @@
       "name": "geranyl diphosphate phosphohydrolase",
       "ec": [
         "3.6.1.68"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q9NV35"
+      }
     },
     {
       "id": "ec_5_4_4_4",
@@ -392,42 +367,269 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r6",
-      "name": "(2E)-geraniol + hexadecanoyl-CoA = (2E)-geranyl hexadecanoate + CoA",
-      "equation": "(2E)-geraniol + hexadecanoyl-CoA = (2E)-geranyl hexadecanoate + CoA",
-      "substrates": [
-        {
-          "metabolite": "geraniol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "palmitoyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2e_geranyl_hexadecanoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:85979"
+      "id": "xt_geranyl_phosphate_geranyl-diphosphate-to-3-7-dimethylocta-2-6-dien",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "geranyl_phosphate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "geranyl-diphosphate-to-3-7-dimethylocta-2-6-dien"
+      },
+      "note": "Shares geranyl phosphate with geranyl diphosphate to 3,7-dimethylocta-2,6-dien….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:85979"
+            "db": "ChEBI",
+            "id": "CHEBI:88107"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_geraniol_benzoylagmatinium-to-glycine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "geraniol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "benzoylagmatinium-to-glycine"
+      },
+      "note": "Shares geraniol with benzoylagmatinium to glycine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17447"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_geraniol_geranyl-diphosphate-to-3-7-dimethylocta-2-6-dien",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "geraniol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "geranyl-diphosphate-to-3-7-dimethylocta-2-6-dien"
+      },
+      "note": "Shares geraniol with geranyl diphosphate to 3,7-dimethylocta-2,6-dien….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17447"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_geraniol_linalool-to-6e-8-oxogeranial",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "geraniol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "linalool-to-6e-8-oxogeranial"
+      },
+      "note": "Shares geraniol with linalool to (6E)-8-oxogeranial.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17447"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_linalool_acetoacetyl-coa-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_linalool"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetoacetyl-coa-to-h2o"
+      },
+      "note": "Shares (S)-linalool with acetoacetyl-CoA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:98"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_linalool_d-ribitol-5-phosphate-to-3-o-d-xylosyl-1-3",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_linalool"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-ribitol-5-phosphate-to-3-o-d-xylosyl-1-3"
+      },
+      "note": "Shares (S)-linalool with D-ribitol 5-phosphate to 3-O-[α-D-xylosyl-(1→3)-β-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:98"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_linalool_n-3-aminopropyl-hydroxyl-to-h2o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_linalool"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-3-aminopropyl-hydroxyl-to-h2o2"
+      },
+      "note": "Shares (S)-linalool with N-(3-aminopropyl)hydroxyl… to H2O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:98"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_linalool_nadh-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_linalool"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-nad"
+      },
+      "note": "Shares (S)-linalool with NADH to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:98"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_linalool_palustradiene-diol-to-abietate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_linalool"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "palustradiene-diol-to-abietate"
+      },
+      "note": "Shares (S)-linalool with palustradiene-diol to abietate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:98"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_linalool_syringaldehyde-to-methanol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_linalool"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "syringaldehyde-to-methanol"
+      },
+      "note": "Shares (S)-linalool with syringaldehyde to methanol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:98"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_myrcene_geranyl-diphosphate-to-ipsdienone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "myrcene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "geranyl-diphosphate-to-ipsdienone"
+      },
+      "note": "Shares β-myrcene with geranyl diphosphate to ipsdienone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17221"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_geranial_geranyl-diphosphate-to-3-7-dimethylocta-2-6-dien",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "geranial"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "geranyl-diphosphate-to-3-7-dimethylocta-2-6-dien"
+      },
+      "note": "Shares geranial with geranyl diphosphate to 3,7-dimethylocta-2,6-dien….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16980"
           }
         ]
       }

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "2-3-dihydrobiochanin-a-to-biochanin-a",
   "name": "2,3-dihydrobiochanin A to biochanin A…",
-  "category": "energy-metabolism",
+  "category": "lipid-metabolism",
   "summary": "A 3-step route from 2,3-dihydrobiochanin A to biochanin A 7-O-β-D-glucoside 6''-O-malonate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -119,6 +119,109 @@
       "xrefs": {
         "chebi": "CHEBI:57287"
       }
+    },
+    {
+      "id": "indoxyl",
+      "name": "indoxyl",
+      "formula": "C8H7NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17840"
+      }
+    },
+    {
+      "id": "indican",
+      "name": "indican",
+      "formula": "C14H17NO6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16700"
+      }
+    },
+    {
+      "id": "cyanidin_3_o_rutinoside_betaine",
+      "name": "cyanidin 3-O-rutinoside betaine",
+      "short": "cyanidin 3-O-rutino…",
+      "formula": "C27H30O15",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58546"
+      }
+    },
+    {
+      "id": "cyanidin_3_o_rutinoside_5_o_d_glucoside_betaine",
+      "name": "cyanidin 3-O-rutinoside 5-O-β-D-glucoside betaine",
+      "short": "cyanidin 3-O-rutino…",
+      "formula": "C33H40O20",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57830"
+      }
+    },
+    {
+      "id": "malonate",
+      "name": "malonate",
+      "formula": "C3H2O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:15792"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "very_long_chain_acyl_coa",
+      "name": "very long-chain acyl-CoA",
+      "short": "very long-chain…",
+      "formula": "C22H31N7O17P3SR",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:90736"
+      }
+    },
+    {
+      "id": "very_long_chain_3_oxoacyl_coa",
+      "name": "very long-chain 3-oxoacyl-CoA",
+      "short": "very long-chain…",
+      "formula": "C24H33N7O18P3SR",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:90725"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
     }
   ],
   "enzymes": [
@@ -134,7 +237,10 @@
       "name": "isoflavone 7-O-glucosyltransferase",
       "ec": [
         "2.4.1.170"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q6NUS8"
+      }
     },
     {
       "id": "ec_2_3_1_115",
@@ -142,6 +248,40 @@
       "ec": [
         "2.3.1.115"
       ]
+    },
+    {
+      "id": "ec_2_4_1_220",
+      "name": "indoxyl-UDPG glucosyltransferase",
+      "ec": [
+        "2.4.1.220"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_116",
+      "name": "cyanidin 3-O-rutinoside 5-O-glucosyltransferase",
+      "ec": [
+        "2.4.1.116"
+      ]
+    },
+    {
+      "id": "ec_6_2_1_76",
+      "name": "malonate--CoA ligase",
+      "ec": [
+        "6.2.1.76"
+      ],
+      "xrefs": {
+        "uniprot": "Q4G176"
+      }
+    },
+    {
+      "id": "ec_2_3_1_199",
+      "name": "very-long-chain 3-oxoacyl-CoA synthase",
+      "ec": [
+        "2.3.1.199"
+      ],
+      "xrefs": {
+        "uniprot": "Q9BW60"
+      }
     }
   ],
   "reactions": [
@@ -284,6 +424,344 @@
           {
             "db": "Rhea",
             "id": "RHEA:15581"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "indoxyl-UDPG glucosyltransferase",
+      "equation": "indoxyl + UDP-alpha-D-glucose = indican + UDP + H(+)",
+      "ec": "2.4.1.220",
+      "substrates": [
+        {
+          "metabolite": "indoxyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "indican",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_220"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:12004"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12004"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "cyanidin 3-O-rutinoside 5-O-glucosyltransferase",
+      "equation": "cyanidin 3-O-rutinoside + UDP-alpha-D-glucose = cyanidin 3-O-rutinoside 5-O-beta-D-glucoside + UDP + H(+)",
+      "ec": "2.4.1.116",
+      "substrates": [
+        {
+          "metabolite": "cyanidin_3_o_rutinoside_betaine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cyanidin_3_o_rutinoside_5_o_d_glucoside_betaine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_116"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:12144"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12144"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "malonate--CoA ligase",
+      "equation": "malonate + ATP + CoA = malonyl-CoA + AMP + diphosphate",
+      "ec": "6.2.1.76",
+      "substrates": [
+        {
+          "metabolite": "malonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_2_1_76"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:32139"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32139"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "very-long-chain 3-oxoacyl-CoA synthase",
+      "equation": "a very-long-chain acyl-CoA + malonyl-CoA + H(+) = a very-long-chain 3-oxoacyl-CoA + CO2 + CoA",
+      "ec": "2.3.1.199",
+      "substrates": [
+        {
+          "metabolite": "very_long_chain_acyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "very_long_chain_3_oxoacyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_199"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:32727"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32727"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_indoxyl_indole-3-carbaldehyde-to-2-formylphenylformamide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "indoxyl"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "indole-3-carbaldehyde-to-2-formylphenylformamide"
+      },
+      "note": "Shares indoxyl with indole-3-carbaldehyde to 2-formylphenylformamide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17840"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_indoxyl_trehalose-to-sl1278",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "indoxyl"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trehalose-to-sl1278"
+      },
+      "note": "Shares indoxyl with α,α-trehalose to SL1278.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17840"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_malonate_1d-myo-inositol-to-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "malonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1d-myo-inositol-to-acetate"
+      },
+      "note": "Shares malonate with 1D-myo-inositol… to acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15792"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_malonate_2r-3s-3-isopropylmalate-to-neomycin-c",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "malonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2r-3s-3-isopropylmalate-to-neomycin-c"
+      },
+      "note": "Shares malonate with (2R,3S)-3-isopropylmalate to neomycin C.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15792"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_malonate_propane-1-3-diol-to-malonyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "malonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "propane-1-3-diol-to-malonyl-coa"
+      },
+      "note": "Shares malonate with propane-1,3-diol to malonyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15792"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_malonate_uracil-5-carboxylate-to-o-s-butanoylpantetheine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "malonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "uracil-5-carboxylate-to-o-s-butanoylpantetheine"
+      },
+      "note": "Shares malonate with uracil-5-carboxylate to O-(S-butanoylpantetheine-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15792"
           }
         ]
       }

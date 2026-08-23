@@ -1,0 +1,520 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-oxo-3-sulfanylpropanoate-to-e-2-4-hydroxypheny",
+  "name": "2-oxo-3-sulfanylpropanoate to (E)-2-(4-hydroxyphenyl)-N…",
+  "category": "other",
+  "summary": "A 3-step route from 2-oxo-3-sulfanylpropanoate to (E)-2-(4-hydroxyphenyl)-N-(sulfonatooxy)ethenimidothioate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR151714"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_oxo_3_sulfanylpropanoate",
+      "name": "2-oxo-3-sulfanylpropanoate",
+      "short": "2-oxo-3-sulfanylpro…",
+      "formula": "C3H3O3S",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1214"
+      }
+    },
+    {
+      "id": "hydrogen_cyanide",
+      "name": "hydrogen cyanide",
+      "formula": "CHN",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM727657"
+      }
+    },
+    {
+      "id": "thiocyanate",
+      "name": "thiocyanate",
+      "formula": "CNS",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1363636"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM23"
+      }
+    },
+    {
+      "id": "p_hydroxybenzyl_alcohol",
+      "name": "p-hydroxybenzyl alcohol",
+      "short": "p-hydroxybenzyl…",
+      "formula": "C7H8O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:67410"
+      }
+    },
+    {
+      "id": "4_hydroxybenzyl_isothiocyanate",
+      "name": "4-Hydroxybenzyl isothiocyanate",
+      "short": "4-Hydroxybenzyl…",
+      "formula": "C8H7NOS",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:178135"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "sulfate",
+      "name": "sulfate",
+      "formula": "O4S",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM58"
+      }
+    },
+    {
+      "id": "e_2_4_hydroxyphenyl_n_sulfonatooxy_ethenimidoth",
+      "name": "(E)-2-(4-hydroxyphenyl)-N-(sulfonatooxy)ethenimidothioate",
+      "short": "2-(4-hydroxyphenyl)…",
+      "formula": "C8H8NO5S2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1372351"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_8_1_2",
+      "name": "3-mercaptopyruvate sulfurtransferase",
+      "ec": [
+        "2.8.1.2"
+      ],
+      "xrefs": {
+        "uniprot": "P25325"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3-mercaptopyruvate sulfurtransferase",
+      "ec": "2.8.1.2",
+      "substrates": [
+        {
+          "metabolite": "2_oxo_3_sulfanylpropanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_cyanide",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "thiocyanate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_1_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR151714"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR151714"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR183972",
+      "substrates": [
+        {
+          "metabolite": "p_hydroxybenzyl_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "thiocyanate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxybenzyl_isothiocyanate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR183972"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR183972"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR198459",
+      "substrates": [
+        {
+          "metabolite": "4_hydroxybenzyl_isothiocyanate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "e_2_4_hydroxyphenyl_n_sulfonatooxy_ethenimidoth",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR198459"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198459"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_2_oxo_3_sulfanylpropanoate_2r-3s-3-isopropylmalate-to-neomycin-c",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxo_3_sulfanylpropanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2r-3s-3-isopropylmalate-to-neomycin-c"
+      },
+      "note": "Shares 2-oxo-3-sulfanylpropanoate with (2R,3S)-3-isopropylmalate to neomycin C.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1214"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_oxo_3_sulfanylpropanoate_3-cyano-l-alanine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxo_3_sulfanylpropanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-cyano-l-alanine-to-h2o"
+      },
+      "note": "Shares 2-oxo-3-sulfanylpropanoate with 3-cyano-L-alanine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1214"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_oxo_3_sulfanylpropanoate_calicheamicin-gamma-1-i-to-h",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxo_3_sulfanylpropanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "calicheamicin-gamma-1-i-to-h"
+      },
+      "note": "Shares 2-oxo-3-sulfanylpropanoate with Calicheamicin gamma(1)I to H.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1214"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_oxo_3_sulfanylpropanoate_diaminobutyryl-citryl-eth-to-amp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxo_3_sulfanylpropanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diaminobutyryl-citryl-eth-to-amp"
+      },
+      "note": "Shares 2-oxo-3-sulfanylpropanoate with diaminobutyryl-citryl-eth… to AMP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1214"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_oxo_3_sulfanylpropanoate_ethionamide-to-sulfate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxo_3_sulfanylpropanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ethionamide-to-sulfate"
+      },
+      "note": "Shares 2-oxo-3-sulfanylpropanoate with ethionamide to sulfate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1214"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_oxo_3_sulfanylpropanoate_trans-isoeugenol-to-arsenite",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxo_3_sulfanylpropanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-isoeugenol-to-arsenite"
+      },
+      "note": "Shares 2-oxo-3-sulfanylpropanoate with trans-isoeugenol to arsenite.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1214"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_thiocyanate_3-cyano-l-alanine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "thiocyanate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-cyano-l-alanine-to-h2o"
+      },
+      "note": "Shares thiocyanate with 3-cyano-L-alanine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1363636"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_thiocyanate_l-homocysteine-to-r-4-hydroxymandelonitri",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "thiocyanate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-homocysteine-to-r-4-hydroxymandelonitri"
+      },
+      "note": "Shares thiocyanate with L-homocysteine to (R)-4-hydroxymandelonitri….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1363636"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_thiocyanate_mandelonitrile-to-trypanothione",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "thiocyanate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "mandelonitrile-to-trypanothione"
+      },
+      "note": "Shares thiocyanate with mandelonitrile to trypanothione.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1363636"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_thiocyanate_mercaptoethanol-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "thiocyanate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "mercaptoethanol-to-ammonium"
+      },
+      "note": "Shares thiocyanate with mercaptoethanol to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1363636"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_p_hydroxybenzyl_alcohol_24-methylidenelophenol-to-avenasterol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "p_hydroxybenzyl_alcohol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "24-methylidenelophenol-to-avenasterol"
+      },
+      "note": "Shares p-hydroxybenzyl alcohol with 24-methylidenelophenol to avenasterol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:67410"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_p_hydroxybenzyl_alcohol_2r-4-2-ammonio-1-hydro-to-menaquinol-8",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "p_hydroxybenzyl_alcohol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2r-4-2-ammonio-1-hydro-to-menaquinol-8"
+      },
+      "note": "Shares p-hydroxybenzyl alcohol with (2R)-4-(2-ammonio-1-hydro… to Menaquinol 8.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:67410"
+          }
+        ]
+      }
+    }
+  ]
+}

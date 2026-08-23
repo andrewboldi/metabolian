@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-prolinylglycine-to-l-glutamate "L-prolinylglycine to L-glutamate" {
-  spacing 276
+  spacing 270
 
   spine at 0,0 {
     l_prolinylglycine
@@ -22,33 +22,27 @@ pathway l-prolinylglycine-to-l-glutamate "L-prolinylglycine to L-glutamate" {
     1_pyrroline_2_carboxylic_acid
   }
 
-  branch from l_proline side right {
-    l_proline
-    <-> . +akg +o2 +succinate +co2
-    trans_3_hydroxy_l_proline
+  branch from glycine side right {
+    glycine
+    <-> ec_4_3_2_11 [4.3.2.11] +3r_3_carboxylmethyl_amino_fatty_acid +holo-acp +hplus +h2o
+    o_s_2e_2_enoylpantetheine_4_phosphoryl_l_serine
   }
 
   branch from glycine side left {
     glycine
-    <-> . +palmitoyl_coa +hplus +co2 +coa
-    1_deoxymethyl_3_dehydrosphinganine
+    <-> . +n_1_deoxy_d_fructopyranos_1_yl_glycine_betaine +o2 +h2o +h2o2
+    2_dehydro_d_glucopyranose
   }
 
   branch from glycine side right {
     glycine
-    <-> . +ala_gly +h2o
-    alanine
+    <-> . +glycocholate +l_histidine
+    l_histidocholate
   }
 
-  branch from glutamate side left {
-    glutamate
-    <-> ec_2_6_1_103 [2.6.1.103] +s_3_5_dihydroxyphenylglycine +akg
-    3_5_dihydroxyphenylglyoxylate
-  }
-
-  branch from glutamate side right {
-    glutamate
-    <-> ec_2_6_1_106 [2.6.1.106] +dtdp_3_azaniumyl_3_4_6_trideoxy_d_glucose +akg
-    dtdp_3_dehydro_4_6_dideoxy_d_glucose
+  branch from glycine side left {
+    glycine
+    <-> . +glycocholate +arginine
+    l_arginocholate
   }
 }

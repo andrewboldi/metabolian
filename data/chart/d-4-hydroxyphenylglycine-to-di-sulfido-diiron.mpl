@@ -20,31 +20,31 @@ pathway d-4-hydroxyphenylglycine-to-di-sulfido-diiron "D-4-hydroxyphenylglycine-
 
   branch from h2o side left {
     h2o
-    <-> . +h +4_5_epoxy_17r_hydroxy_docosahexaenoate
-    aspirin_triggered_resolvin_d3
+    <-> ec_3_2_1_74 [3.2.1.74] +alpha_d_glucose +cellotetraose
+    cellopentaose
   }
 
   branch from h2o side right {
     h2o
-    <-> . +aspirin_triggered_resolvin_d4 +4_5_epoxy_17r_hydroxy_docosahexaenoate
-    h
-  }
-
-  branch from 5_s_methyl_5_thioadenosine side left {
-    5_s_methyl_5_thioadenosine
-    <-> . +n4_aminopropylspermidine +s_adenosylmethioninaminium +hplus
-    n4_bis_aminopropyl_spermidine
-  }
-
-  branch from 5_s_methyl_5_thioadenosine side right {
-    5_s_methyl_5_thioadenosine
-    <-> . +spermine +s_adenosylmethioninaminium +hplus
-    n4_aminopropylspermine
+    <-> ec_3_2_1_105 [3.2.1.105] +beta_d_glucose +strictosidine_aglycone
+    3alpha_s_strictosidine
   }
 
   branch from nocardicin_a side left {
     nocardicin_a
     <-> ec_5_1_1_14 [5.1.1.14]
     isonocardicin_a
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_2_1_105 [3.2.1.105] +strictosidine_aglycone +3alpha_s_strictosidine
+    alpha_d_glucose
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_4_13_4 [3.4.13.4] +beta_alanine +d_arginine
+    beta_alanyl_l_arginine
   }
 }

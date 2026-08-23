@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-methyl-2-methylpropan-1-to-2-methylpropanoyl "N-methyl-2-methylpropan-1… to 2-methylpropanoyl…" {
-  spacing 204
+  spacing 216
 
   spine at 0,0 {
     n_methyl_2_methylpropan_1_aminium
@@ -20,13 +20,25 @@ pathway n-methyl-2-methylpropan-1-to-2-methylpropanoyl "N-methyl-2-methylpropan-
 
   branch from isobutyraldehyde side left {
     isobutyraldehyde
-    <-> . +2_methylpropanaminium +nadp +h2o +nadph +hplus
-    nh3
+    <-> ec_1_2_1_5 [1.2.1.5] +nadh +2_methylpropanoate +h +h2o
+    nad
   }
 
   branch from isobutyraldehyde side right {
     isobutyraldehyde
-    <-> ec_1_2_1_5 [1.2.1.5] +nadh +2_methylpropanoate +h +h2o
-    nad
+    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +butan_2_ol
+    nadp
+  }
+
+  branch from isobutyraldehyde side left {
+    isobutyraldehyde
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +nad
+    butan_2_ol
+  }
+
+  branch from isobutyraldehyde side right {
+    isobutyraldehyde
+    <-> ec_1_2_1_5 [1.2.1.5] +h +butanoate +nadph +nadp
+    h2o
   }
 }

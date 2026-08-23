@@ -119,43 +119,6 @@
       "xrefs": {
         "chebi": "CHEBI:16526"
       }
-    },
-    {
-      "id": "z_hex_3_en_1_ol",
-      "name": "(Z)-hex-3-en-1-ol",
-      "formula": "C6H12O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:28857"
-      }
-    },
-    {
-      "id": "3z_hex_3_en_1_yl_benzoate",
-      "name": "(3Z)-hex-3-en-1-yl benzoate",
-      "short": "hex-3-en-1-yl…",
-      "formula": "C13H16O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:156235"
-      }
-    },
-    {
-      "id": "octan_1_ol",
-      "name": "octan-1-ol",
-      "formula": "C8H18O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16188"
-      }
-    },
-    {
-      "id": "octyl_benzoate",
-      "name": "octyl benzoate",
-      "formula": "C15H22O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:156236"
-      }
     }
   ],
   "enzymes": [
@@ -328,81 +291,71 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "(3Z)-hex-3-en-1-ol + benzoyl-CoA = (3Z)-hex-3-en-1-yl benzoate + CoA",
-      "equation": "(3Z)-hex-3-en-1-ol + benzoyl-CoA = (3Z)-hex-3-en-1-yl benzoate + CoA",
-      "substrates": [
-        {
-          "metabolite": "z_hex_3_en_1_ol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "benzoyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3z_hex_3_en_1_yl_benzoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:64848"
+      "id": "xt_r_s_hydroxy_phenyl_methyl_succinyl_coa_gama-glutamylglutathione-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_s_hydroxy_phenyl_methyl_succinyl_coa"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "gama-glutamylglutathione-to-h2o"
+      },
+      "note": "Shares (R,S)-[hydroxy(phenyl)methyl]succinyl-CoA with Gama-glutamylglutathione to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:64848"
+            "db": "ChEBI",
+            "id": "CHEBI:189059"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "octan-1-ol + benzoyl-CoA = octyl benzoate + CoA",
-      "equation": "octan-1-ol + benzoyl-CoA = octyl benzoate + CoA",
-      "substrates": [
-        {
-          "metabolite": "octan_1_ol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "benzoyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "octyl_benzoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:64852"
+      "id": "xt_r_s_hydroxy_phenyl_methyl_succinyl_coa_succinyl-coa-to-e-2-benzylidenesuccinyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_s_hydroxy_phenyl_methyl_succinyl_coa"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "succinyl-coa-to-e-2-benzylidenesuccinyl"
+      },
+      "note": "Shares (R,S)-[hydroxy(phenyl)methyl]succinyl-CoA with succinyl-CoA to (E)-2-benzylidenesuccinyl….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:64852"
+            "db": "ChEBI",
+            "id": "CHEBI:189059"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_5_dihydroxybiphenyl_nadh-to-h2o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_5_dihydroxybiphenyl"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-h2o2"
+      },
+      "note": "Shares 3,5-dihydroxybiphenyl with NADH to H2O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:52069"
           }
         ]
       }

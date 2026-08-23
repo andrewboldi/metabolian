@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway norcraugsodine-to-o-pantetheine-4-phospho "Norcraugsodine to O-(pantetheine-4'-phospho…" {
-  spacing 308
+  spacing 296
 
   spine at 0,0 {
     norcraugsodine
@@ -18,39 +18,27 @@ pathway norcraugsodine-to-o-pantetheine-4-phospho "Norcraugsodine to O-(pantethe
     petrobactin
   }
 
-  branch from 3_4_dihydroxybenzaldehyde side left {
-    3_4_dihydroxybenzaldehyde
-    <-> ec_4_1_2_61 [4.1.2.61] +h2o +acetyl_coa
-    trans_caffeoyl_coa
+  branch from h side left {
+    h
+    <-> . +adp +glucuronide_conjugate_of_3_methoxy_acetaminophen +phosphate +glucuronide_conjugate_of_3_methoxy_acetaminophen +h2o
+    atp
   }
 
-  branch from tyramine side right {
-    tyramine
-    <-> ec_2_3_1_110 [2.3.1.110] +trans_n_p_coumaroyl_tyramine +h +coa
-    trans_4_coumaroyl_coa
+  branch from h side right {
+    h
+    <-> . +compound_0286062 +2_hydroxy_3_oxopropanoate
+    pyruvate
   }
 
-  branch from ppi side left {
-    ppi
-    <-> . +atp
-    cyclic_a_2_5_pa_3_5_pa_3_5_p
+  branch from h2o side left {
+    h2o
+    <-> . +levanbiose
+    beta_d_fructose
   }
 
-  branch from ppi side right {
-    ppi
-    <-> ec_3_1_7_13 [3.1.7.13] +neryl_diphosphate +h2o
-    nerol
-  }
-
-  branch from holo-acp side left {
-    holo-acp
-    <-> . +malonyl-coa +acetyl_coa +hplus +co2 +coa +h2o
-    o_s_3_2_4_dioxopentyl_3_6_8_9_tetrahydroxy_1_oxo
-  }
-
-  branch from holo-acp side right {
-    holo-acp
-    <-> . +malonyl-coa +hplus +co2 +coa +h2o
-    o_3r_atrochrysone_carboxylpantetheine_4_phosphor
+  branch from h2o side right {
+    h2o
+    <-> . +beta_d_fructose +phosphate
+    d_fructose_1_phosphate
   }
 }

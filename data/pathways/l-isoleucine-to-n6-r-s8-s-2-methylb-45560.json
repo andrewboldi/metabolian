@@ -1,0 +1,522 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-isoleucine-to-n6-r-s8-s-2-methylb-45560",
+  "name": "L-isoleucine to N6-{(R)-S8-[(S)-2-methylb…",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from L-isoleucine zwitterion to N6-{(R)-S8-[(S)-2-methylbutanoyl]dihydrolipoyl}-L-lysine residue, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:45560"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58045"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "isoleucine",
+      "name": "L-Isoleucine",
+      "formula": "C6H13NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58045"
+      }
+    },
+    {
+      "id": "d_alloisoleucine",
+      "name": "D-alloisoleucine",
+      "formula": "C6H13NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:85306"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "kmv",
+      "name": "(S)-3-Methyl-2-oxopentanoate",
+      "short": "3-Methyl-2-oxopenta…",
+      "formula": "C6H9O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:35146"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "n6_r_lipoyl_l_lysine",
+      "name": "N6-[(R)-lipoyl]-L-lysine",
+      "short": "N6-[(R)-lipoyl]-L-l…",
+      "formula": "C14H24N2O2S2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:83099"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "n6_r_s8_s_2_methylbutanoyl_dihydrolipoyl_l_lysin",
+      "name": "N6-{(R)-S8-[(S)-2-methylbutanoyl]dihydrolipoyl}-L-lysine",
+      "short": "N6-{(R)-S8-[(S)-2-m…",
+      "formula": "C19H34N2O3S2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:233974"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_1_1_21",
+      "name": "isoleucine 2-epimerase",
+      "ec": [
+        "5.1.1.21"
+      ]
+    },
+    {
+      "id": "ec_1_2_4_4",
+      "name": "3-methyl-2-oxobutanoate dehydrogenase (2-methylpropanoyl-transferring)",
+      "ec": [
+        "1.2.4.4"
+      ],
+      "xrefs": {
+        "uniprot": "P12694"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "isoleucine 2-epimerase",
+      "equation": "L-isoleucine = D-allo-isoleucine",
+      "ec": "5.1.1.21",
+      "substrates": [
+        {
+          "metabolite": "isoleucine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_alloisoleucine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_1_1_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:45560"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45560"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "D-allo-isoleucine + O2 + H2O = (S)-3-methyl-2-oxopentanoate + H2O2 + NH4(+)",
+      "equation": "D-allo-isoleucine + O2 + H2O = (S)-3-methyl-2-oxopentanoate + H2O2 + NH4(+)",
+      "substrates": [
+        {
+          "metabolite": "d_alloisoleucine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "kmv",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:78223"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:78223"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3-methyl-2-oxobutanoate dehydrogenase (2-methylpropanoyl-transferring)",
+      "equation": "N(6)-[(R)-lipoyl]-L-lysyl-[protein] + (S)-3-methyl-2-oxopentanoate + H(+) = N(6)-{(R)-S(8)-[(2S)-2-methylbutanoyl]dihydrolipoyl}-L-lysyl-[protein] + CO2",
+      "ec": "1.2.4.4",
+      "substrates": [
+        {
+          "metabolite": "n6_r_lipoyl_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "kmv",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_r_s8_s_2_methylbutanoyl_dihydrolipoyl_l_lysin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_4_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:84643"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84643"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_d_alloisoleucine_l-isoleucine-to-n6-r-s8-s-2-methylb",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_alloisoleucine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-isoleucine-to-n6-r-s8-s-2-methylb"
+      },
+      "note": "Shares D-alloisoleucine with L-isoleucine to N6-{(R)-S8-[(S)-2-methylb….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:85306"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_kmv_2r-3r-2-3-dihydroxy-3-m-to-n6-r-s8-isobutyryldi",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "kmv"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2r-3r-2-3-dihydroxy-3-m-to-n6-r-s8-isobutyryldi"
+      },
+      "note": "Shares (S)-3-Methyl-2-oxopentanoate with (2R,3R)-2,3-dihydroxy-3-m… to N6-[(R)-S8-isobutyryldihy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:35146"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_kmv_casomorphin-7-human-to-2-methylbutanal",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "kmv"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "casomorphin-7-human-to-2-methylbutanal"
+      },
+      "note": "Shares (S)-3-Methyl-2-oxopentanoate with β-casomorphin-7 (human) to 2-methylbutanal.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:35146"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_kmv_casomorphin-7-human-to-2-methylbutanal-63568",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "kmv"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "casomorphin-7-human-to-2-methylbutanal-63568"
+      },
+      "note": "Shares (S)-3-Methyl-2-oxopentanoate with β-casomorphin-7 (human) to 2-methylbutanal.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:35146"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_kmv_l-isoleucine-to-n6-r-s8-s-2-methylb",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "kmv"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-isoleucine-to-n6-r-s8-s-2-methylb"
+      },
+      "note": "Shares (S)-3-Methyl-2-oxopentanoate with L-isoleucine to N6-{(R)-S8-[(S)-2-methylb….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:35146"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_kmv_n-12-hydroxy-7-isoja-to-o-s-4s-4-methyl-3-oxoh",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "kmv"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-12-hydroxy-7-isoja-to-o-s-4s-4-methyl-3-oxoh"
+      },
+      "note": "Shares (S)-3-Methyl-2-oxopentanoate with N-[(+)-12-hydroxy-7-isoja… to O{S-[(4S)-4-methyl-3-oxoh….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:35146"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_kmv_n-12-hydroxy-7-isoja-to-o-s-4s-4-methyl-3-oxoh-5",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "kmv"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-12-hydroxy-7-isoja-to-o-s-4s-4-methyl-3-oxoh-5"
+      },
+      "note": "Shares (S)-3-Methyl-2-oxopentanoate with N-[(+)-12-hydroxy-7-isoja… to O{S-[(4S)-4-methyl-3-oxoh….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:35146"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_kmv_quinine-to-5-hydroxyisouric-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "kmv"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "quinine-to-5-hydroxyisouric-acid"
+      },
+      "note": "Shares (S)-3-Methyl-2-oxopentanoate with quinine to 5-hydroxyisouric acid.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:35146"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n6_r_s8_s_2_methylbutanoyl_dihydrolipoyl_l_lysin_l-isoleucine-to-n6-r-s8-s-2-methylb",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n6_r_s8_s_2_methylbutanoyl_dihydrolipoyl_l_lysin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-isoleucine-to-n6-r-s8-s-2-methylb"
+      },
+      "note": "Shares N6-{(R)-S8-[(S)-2-methylbutanoyl]dihydrolipoyl}-L-lysine with L-isoleucine to N6-{(R)-S8-[(S)-2-methylb….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:233974"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n6_r_s8_s_2_methylbutanoyl_dihydrolipoyl_l_lysin_r-alanopine-to-n6-r-s8-succinyldihydr",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n6_r_s8_s_2_methylbutanoyl_dihydrolipoyl_l_lysin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-alanopine-to-n6-r-s8-succinyldihydr"
+      },
+      "note": "Shares N6-{(R)-S8-[(S)-2-methylbutanoyl]dihydrolipoyl}-L-lysine with (R)-β-alanopine to N6-[(R)-S8-succinyldihydr….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:233974"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n6_r_s8_s_2_methylbutanoyl_dihydrolipoyl_l_lysin_r-alanopine-to-n6-r-s8-succinyldihydr-21684",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n6_r_s8_s_2_methylbutanoyl_dihydrolipoyl_l_lysin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-alanopine-to-n6-r-s8-succinyldihydr-21684"
+      },
+      "note": "Shares N6-{(R)-S8-[(S)-2-methylbutanoyl]dihydrolipoyl}-L-lysine with (R)-β-alanopine to N6-[(R)-S8-succinyldihydr….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:233974"
+          }
+        ]
+      }
+    }
+  ]
+}

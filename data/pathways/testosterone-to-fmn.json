@@ -125,34 +125,6 @@
       "xrefs": {
         "chebi": "CHEBI:87605"
       }
-    },
-    {
-      "id": "udp_d_glucuronate",
-      "name": "UDP-α-D-glucuronate",
-      "formula": "C15H19N2O18P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58052"
-      }
-    },
-    {
-      "id": "17_estradiol_17_glucosiduronate",
-      "name": "17β-estradiol 17-glucosiduronate",
-      "short": "17β-estradiol…",
-      "formula": "C24H31O8",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:82961"
-      }
-    },
-    {
-      "id": "udp",
-      "name": "UDP",
-      "formula": "C9H11N2O12P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58223"
-      }
     }
   ],
   "enzymes": [
@@ -161,14 +133,20 @@
       "name": "aromatase",
       "ec": [
         "1.14.14.14"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P11511"
+      }
     },
     {
       "id": "ec_1_1_1_62",
       "name": "17beta-estradiol 17-dehydrogenase",
       "ec": [
         "1.1.1.62"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q04828"
+      }
     }
   ],
   "reactions": [
@@ -332,46 +310,115 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "17beta-estradiol + UDP-alpha-D-glucuronate = 17beta-estradiol 17-O-(beta-D-glucuronate)...",
-      "equation": "17beta-estradiol + UDP-alpha-D-glucuronate = 17beta-estradiol 17-O-(beta-D-glucuronate) + UDP + H(+)",
-      "substrates": [
-        {
-          "metabolite": "17_estradiol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp_d_glucuronate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "17_estradiol_17_glucosiduronate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:52464"
+      "id": "xt_estrone_17-estradiol-to-16-hydroxyestrone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "estrone"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "17-estradiol-to-16-hydroxyestrone"
+      },
+      "note": "Shares estrone with 17α-estradiol to 16α-hydroxyestrone….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:52464"
+            "db": "ChEBI",
+            "id": "CHEBI:17263"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_estrone_17-estradiol-to-sulfate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "estrone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "17-estradiol-to-sulfate"
+      },
+      "note": "Shares estrone with 17α-estradiol to sulfate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17263"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_estrone_19-hydroxyandrostenedione-to-4-hydroxyestrone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "estrone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "19-hydroxyandrostenedione-to-4-hydroxyestrone"
+      },
+      "note": "Shares estrone with 19-Hydroxyandrostenedione to 4-hydroxyestrone….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17263"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_estrone_epiandrosterone-to-2-hydroxyestrone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "estrone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "epiandrosterone-to-2-hydroxyestrone"
+      },
+      "note": "Shares estrone with epiandrosterone to 2-hydroxyestrone….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17263"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_estrone_phosphate-monoester-to-6-phospho-2-dehydro-d-glu",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "estrone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phosphate-monoester-to-6-phospho-2-dehydro-d-glu"
+      },
+      "note": "Shares estrone with phosphate monoester… to 6-phospho-2-dehydro-D-glu….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17263"
           }
         ]
       }

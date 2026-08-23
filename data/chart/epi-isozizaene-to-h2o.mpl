@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway epi-isozizaene-to-h2o "(+)-epi-isozizaene to H2O" {
-  spacing 200
+  spacing 152
 
   spine at 0,0 {
     epi_isozizaene
@@ -14,53 +14,5 @@ pathway epi-isozizaene-to-h2o "(+)-epi-isozizaene to H2O" {
     albaflavenone
     <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate -albaflavenone -h2o
     atp
-  }
-
-  branch from 5s_albaflavenol side left {
-    5s_albaflavenol
-    <-> ec_1_14_13_106 [1.14.13.106] +h +epi_isozizaene +o2 +nadph +h2o
-    nadp
-  }
-
-  branch from 5s_albaflavenol side right {
-    5s_albaflavenol
-    <-> ec_1_14_13_106 [1.14.13.106] +h +nadph +nadp +albaflavenone +h2o
-    o2
-  }
-
-  branch from albaflavenone side left {
-    albaflavenone
-    <-> ec_1_14_13_106 [1.14.13.106] +h +o2 +nadph +nadp +h2o
-    5r_albaflavenol
-  }
-
-  branch from albaflavenone side right {
-    albaflavenone
-    <-> ec_1_14_13_106 [1.14.13.106] +h +epi_isozizaene +o2 +nadp +h2o
-    nadph
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    lividomycin_b
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    paromomycin_ii
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    5_phosphoribostamycin
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    5_ribosylparomamine
   }
 }

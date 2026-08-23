@@ -1,0 +1,462 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "tetradecan-1-ol-to-fmn",
+  "name": "tetradecan-1-ol to FMN",
+  "category": "other",
+  "summary": "A 3-step route from tetradecan-1-ol to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:59456"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:77417"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "tetradecan_1_ol",
+      "name": "tetradecan-1-ol",
+      "formula": "C14H30O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77417"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "tetradecanal",
+      "name": "tetradecanal",
+      "formula": "C14H28O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:84067"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "tetradecanoate",
+      "name": "tetradecanoate",
+      "formula": "C14H27O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30807"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "13_hydroxytetradecanoate",
+      "name": "13-hydroxytetradecanoate",
+      "short": "13-hydroxytetradeca…",
+      "formula": "C14H27O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:132031"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "tetradecan-1-ol + NADP(+) = tetradecanal + NADPH + H(+)",
+      "equation": "tetradecan-1-ol + NADP(+) = tetradecanal + NADPH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "tetradecan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "tetradecanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:59456"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59456"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "tetradecanal + NAD(+) + H2O = tetradecanoate + NADH + 2 H(+)",
+      "equation": "tetradecanal + NAD(+) + H2O = tetradecanoate + NADH + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "tetradecanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "tetradecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:44172"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44172"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "tetradecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 13-hydroxytetradecanoate...",
+      "equation": "tetradecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 13-hydroxytetradecanoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "tetradecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "13_hydroxytetradecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:50096"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50096"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_tetradecan_1_ol_1-octadecanoyl-2-octanoyl-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tetradecan_1_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-octadecanoyl-2-octanoyl-to-diphosphate"
+      },
+      "note": "Shares tetradecan-1-ol with 1-octadecanoyl-2-octanoyl… to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77417"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tetradecan_1_ol_glycerophosphatidylethano-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tetradecan_1_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "glycerophosphatidylethano-to-h2o-null"
+      },
+      "note": "Shares tetradecan-1-ol with glycerophosphatidylethano… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77417"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tetradecan_1_ol_h-to-nad-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tetradecan_1_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-nad-null"
+      },
+      "note": "Shares tetradecan-1-ol with H to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77417"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tetradecan_1_ol_tetradecyl-acetate-to-15-hydroxypalmitate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tetradecan_1_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "tetradecyl-acetate-to-15-hydroxypalmitate"
+      },
+      "note": "Shares tetradecan-1-ol with Tetradecyl acetate to 15-hydroxypalmitate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77417"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tetradecanal_h-to-nad-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tetradecanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-nad-null"
+      },
+      "note": "Shares tetradecanal with H to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84067"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tetradecanal_nadh-to-e-dodec-2-enal",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tetradecanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-e-dodec-2-enal"
+      },
+      "note": "Shares tetradecanal with NADH to (E)-dodec-2-enal.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84067"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tetradecanal_tetradecanal-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tetradecanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "tetradecanal-to-h2o"
+      },
+      "note": "Shares tetradecanal with tetradecanal to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84067"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tetradecanal_tetradecyl-acetate-to-15-hydroxypalmitate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tetradecanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "tetradecyl-acetate-to-15-hydroxypalmitate"
+      },
+      "note": "Shares tetradecanal with Tetradecyl acetate to 15-hydroxypalmitate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84067"
+          }
+        ]
+      }
+    }
+  ]
+}

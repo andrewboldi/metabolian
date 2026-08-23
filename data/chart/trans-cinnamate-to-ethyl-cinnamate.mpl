@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway trans-cinnamate-to-ethyl-cinnamate "trans-cinnamate to Ethyl cinnamate" {
-  spacing 196
+  spacing 184
 
   spine at 0,0 {
     trans_cinnamate
@@ -14,17 +14,5 @@ pathway trans-cinnamate-to-ethyl-cinnamate "trans-cinnamate to Ethyl cinnamate" 
     1_o_trans_cinnamoyl_beta_d_glucose
     <-> ec_2_3_1_152 [2.3.1.152] +ethanol -ethyl_cinnamate
     beta_d_glucose
-  }
-
-  branch from beta_d_glucose side left {
-    beta_d_glucose
-    <-> ec_2_3_1_91 [2.3.1.91] +1_o_trans_sinapoyl_beta_d_glucose +choline
-    o_sinapoylcholine
-  }
-
-  branch from beta_d_glucose side right {
-    beta_d_glucose
-    <-> ec_2_3_1_92 [2.3.1.92] +1_o_trans_sinapoyl_beta_d_glucose +s_malate
-    sinapoyl_s_malate
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway o-succinyl-l-homoserinate-to-propionyl-coa "O-succinyl-L-homoserinate to propionyl-CoA" {
-  spacing 200
+  spacing 176
 
   spine at 0,0 {
     o_succinyl_l_homoserinate
@@ -14,29 +14,5 @@ pathway o-succinyl-l-homoserinate-to-propionyl-coa "O-succinyl-L-homoserinate to
     oxobut
     <-> . +nad +coa -co2 -nadh
     propionyl_coa
-  }
-
-  branch from cysteine side left {
-    cysteine
-    <-> ec_1_13_11_95 [1.13.11.95] +o2 +co2 +h2o
-    2_oxoethane_1_sulfonamide
-  }
-
-  branch from cysteine side right {
-    cysteine
-    <-> . +o2 +co2 +h2o
-    z_2_aminoethene_1_so_thioperoxol
-  }
-
-  branch from propionyl_coa side left {
-    propionyl_coa
-    <-> ec_4_1_1_94 [4.1.1.94] +hplus +co2
-    s_methylmalonyl_coa
-  }
-
-  branch from propionyl_coa side right {
-    propionyl_coa
-    <-> . +mycophenolyl_coa +coa
-    4_3_oxo_2_6_dimethyl_6e_octenoyl_coa_5_o_methyl
   }
 }

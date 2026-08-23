@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3as-4s-5r-7as-5-hydroxy-to-4-methyl-5-oxo-octan "(3aS,4S,5R,7aS)-5-hydroxy… to 4-methyl-5-oxo-octanedioy…" {
-  spacing 152
+  spacing 158
 
   spine at 0,0 {
     3as_4s_5r_7as_5_hydroxy_7a_methyl_1_oxo_octahyd
@@ -18,5 +18,11 @@ pathway 3as-4s-5r-7as-5-hydroxy-to-4-methyl-5-oxo-octan "(3aS,4S,5R,7aS)-5-hydro
     6_methyl_3_7_dioxodecanedioyl_coa
     <-> . +coa -acetyl_coa
     4_methyl_5_oxo_octanedioyl_coa
+  }
+
+  branch from 3as_4s_5r_7as_5_hydroxy_7a_methyl_1_oxo_octahyd side left {
+    3as_4s_5r_7as_5_hydroxy_7a_methyl_1_oxo_octahyd
+    <-> ec_2_3_1_16 [2.3.1.16] +acetyl_coa +3_3as_4s_5r_7as_5_hydroxy_7a_methyl_1_oxo_octahy
+    coa
   }
 }

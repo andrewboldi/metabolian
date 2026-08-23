@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway acetyl-coa-to-e-5-6-dihydro-4-hydroxy "acetyl-CoA to (E)-5,6-dihydro-4-hydroxy…" {
-  spacing 206
+  spacing 176
 
   spine at 0,0 {
     acetyl_coa
@@ -14,35 +14,5 @@ pathway acetyl-coa-to-e-5-6-dihydro-4-hydroxy "acetyl-CoA to (E)-5,6-dihydro-4-h
     coa
     <-> . +h +nadph +e_4_hydroxy_6_styryl_pyran_2_one -e_5_6_dihydro_4_hydroxy_6_styryl_pyran_2_one
     nadp
-  }
-
-  branch from coa side left {
-    coa
-    <-> ec_2_3_1_3 [2.3.1.3] +acetyl_coa +beta_d_glucosamine
-    n_acetyl_beta_d_glucosamine
-  }
-
-  branch from coa side right {
-    coa
-    <-> ec_2_3_1_79 [2.3.1.79] +acetyl_coa +alpha_maltose
-    acetyl_maltose
-  }
-
-  branch from e_4_hydroxy_6_styryl_pyran_2_one side left {
-    e_4_hydroxy_6_styryl_pyran_2_one
-    <-> . +s_adenosyl_l_homocysteine +h +5_6_dehydrokawain
-    s_adenosyl_l_methionine
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +h +dehydroabietadienal +nadph
-    dehydroabietadienol
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +h +isopimara_7_15_dienal +nadph
-    isopimara_7_15_dienol
   }
 }

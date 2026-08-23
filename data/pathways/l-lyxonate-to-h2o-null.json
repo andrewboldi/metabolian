@@ -1,0 +1,496 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-lyxonate-to-h2o-null",
+  "name": "L-lyxonate to H2O",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from L-lyxonate to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR147657"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:145753"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_lyxonate",
+      "name": "L-lyxonate",
+      "formula": "C5H9O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:145753"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "d_xylono_1_5_lactone",
+      "name": "D-xylono-1,5-lactone",
+      "formula": "C5H8O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1737"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "H2O2",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM732620"
+      }
+    },
+    {
+      "id": "aldehydo_d_xylose",
+      "name": "aldehydo-D-xylose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM734573"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "d_xylulofuranose",
+      "name": "D-xylulofuranose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:144889"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_1_68",
+      "name": "xylono-1,4-lactonase",
+      "ec": [
+        "3.1.1.68"
+      ]
+    },
+    {
+      "id": "ec_1_1_3_4",
+      "name": "glucose oxidase",
+      "ec": [
+        "1.1.3.4"
+      ]
+    },
+    {
+      "id": "ec_7_5_2_10",
+      "name": "ABC-type D-xylose transporter",
+      "ec": [
+        "7.5.2.10"
+      ]
+    },
+    {
+      "id": "ec_7_5_2_13",
+      "name": "ABC-type D-xylose/L-arabinose transporter",
+      "ec": [
+        "7.5.2.13"
+      ]
+    },
+    {
+      "id": "ec_5_3_1_5",
+      "name": "xylose isomerase",
+      "ec": [
+        "5.3.1.5"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "xylono-1,4-lactonase",
+      "ec": "3.1.1.68",
+      "substrates": [
+        {
+          "metabolite": "l_lyxonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_xylono_1_5_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_68"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR147657"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR147657"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "glucose oxidase",
+      "ec": "1.1.3.4",
+      "substrates": [
+        {
+          "metabolite": "d_xylono_1_5_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aldehydo_d_xylose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_3_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR130803"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR130803"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "ABC-type D-xylose transporter",
+      "ec": "7.5.2.10",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "aldehydo_d_xylose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "aldehydo_d_xylose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_7_5_2_10"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR115654"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR115654"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "xylose isomerase",
+      "ec": "5.3.1.5",
+      "substrates": [
+        {
+          "metabolite": "d_xylulofuranose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aldehydo_d_xylose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_1_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR197327"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197327"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_l_lyxonate_3-dehydro-l-gulonate-to-glycolaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_lyxonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-dehydro-l-gulonate-to-glycolaldehyde"
+      },
+      "note": "Shares L-lyxonate with 3-dehydro-L-gulonate to glycolaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:145753"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_lyxonate_3-dehydro-l-gulonate-to-glycolaldehyde-21924",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_lyxonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-dehydro-l-gulonate-to-glycolaldehyde-21924"
+      },
+      "note": "Shares L-lyxonate with 3-dehydro-L-gulonate to glycolaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:145753"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_lyxonate_acetyl-coa-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_lyxonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetyl-coa-to-succinate"
+      },
+      "note": "Shares L-lyxonate with acetyl-CoA to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:145753"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_lyxonate_adenylyl-selenate-to-nadph-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_lyxonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "adenylyl-selenate-to-nadph-null"
+      },
+      "note": "Shares L-lyxonate with adenylyl selenate to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:145753"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_lyxonate_co2-to-16-hydroxy-hentriaconta-3-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_lyxonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "co2-to-16-hydroxy-hentriaconta-3-null"
+      },
+      "note": "Shares L-lyxonate with CO2 to 16-hydroxy-hentriaconta-3….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:145753"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_lyxonate_co2-to-pyruvate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_lyxonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "co2-to-pyruvate"
+      },
+      "note": "Shares L-lyxonate with CO2 to pyruvate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:145753"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_lyxonate_l-lyxonate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_lyxonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-lyxonate-to-h2o"
+      },
+      "note": "Shares L-lyxonate with L-lyxonate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:145753"
+          }
+        ]
+      }
+    }
+  ]
+}

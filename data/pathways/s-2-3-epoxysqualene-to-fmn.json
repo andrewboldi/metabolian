@@ -119,9 +119,42 @@
       "xrefs": {
         "chebi": "CHEBI:15377"
       }
+    },
+    {
+      "id": "lupeol",
+      "name": "lupeol",
+      "formula": "C30H50O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:6570"
+      }
+    },
+    {
+      "id": "amyrin",
+      "name": "α-amyrin",
+      "formula": "C30H50O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:10213"
+      }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_5_4_99_41",
+      "name": "lupeol synthase",
+      "ec": [
+        "5.4.99.41"
+      ]
+    },
+    {
+      "id": "ec_5_4_99_40",
+      "name": "alpha-amyrin synthase",
+      "ec": [
+        "5.4.99.40"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -244,6 +277,126 @@
           {
             "db": "Rhea",
             "id": "RHEA:82747"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "lupeol synthase",
+      "equation": "(S)-2,3-epoxysqualene = lupeol",
+      "ec": "5.4.99.41",
+      "substrates": [
+        {
+          "metabolite": "epoxysqualene",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "lupeol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_99_41"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:31383"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31383"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "alpha-amyrin synthase",
+      "equation": "(S)-2,3-epoxysqualene = alpha-amyrin",
+      "ec": "5.4.99.40",
+      "substrates": [
+        {
+          "metabolite": "epoxysqualene",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "amyrin",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_99_40"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:31387"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31387"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_isomotiol_isomotiol-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isomotiol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isomotiol-to-fmn"
+      },
+      "note": "Shares isomotiol with isomotiol to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:232471"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_isomotiol_n-fatty-acyl-l-isoleuci-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isomotiol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-fatty-acyl-l-isoleuci-to-fmn"
+      },
+      "note": "Shares isomotiol with N-(fatty acyl)-L-isoleuci… to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:232471"
           }
         ]
       }

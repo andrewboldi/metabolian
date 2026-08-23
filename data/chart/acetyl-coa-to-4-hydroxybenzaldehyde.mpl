@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway acetyl-coa-to-4-hydroxybenzaldehyde "acetyl-CoA to 4-hydroxybenzaldehyde" {
-  spacing 224
+  spacing 278
 
   spine at 0,0 {
     acetyl_coa
@@ -16,39 +16,93 @@ pathway acetyl-coa-to-4-hydroxybenzaldehyde "acetyl-CoA to 4-hydroxybenzaldehyde
     4_hydroxybenzaldehyde
   }
 
-  branch from 3_4_hydroxyphenyl_3_oxo_propanoyl_coa side left {
-    3_4_hydroxyphenyl_3_oxo_propanoyl_coa
-    <-> . +4_hydroxybenzoyl_acetate +atp +coa +amp
-    diphosphate
+  branch from coa side left {
+    coa
+    <-> . +2s_3s_3_hydroxy_2_methylbutanoyl_coa +h2o
+    3_hydroxy_2_methylbutanoic_acid
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_16 [2.3.1.16] +acetyl_coa +3as_4s_5r_7as_5_hydroxy_7a_methyl_1_oxo_octahyd
-    3_3as_4s_5r_7as_5_hydroxy_7a_methyl_1_oxo_octahy
+    <-> . +2_methyl_3_ketovaleric_acid +h2o
+    2_methyl_3_oxo_valeryl_coenzyme_a
   }
 
-  branch from coa side left {
-    coa
-    <-> ec_2_3_1_198 [2.3.1.198] +2_c22_0_dca_lpa +sn_glycerol_3_phosphate
-    22_carboxy_docosanoyl_coa
-  }
-
-  branch from 3_hydroxy_3_4_hydroxyphenyl_propionyl_coa side right {
+  branch from 3_hydroxy_3_4_hydroxyphenyl_propionyl_coa side left {
     3_hydroxy_3_4_hydroxyphenyl_propionyl_coa
     <-> . +h2o
     trans_4_coumaroyl_coa
   }
 
+  branch from nad side right {
+    nad
+    <-> . +nadh +acetyl_coa +fadh2 +h +fad +coa +h2o
+    4z_7z_10z_13z_16z_docosapentaenoyl_coa
+  }
+
   branch from nad side left {
     nad
-    <-> . +nadh +h +methyl_tert_butyl_ether +o2 +h2o
-    tert_butoxymethanol
+    <-> . +nadh +acetyl_coa +fadh2 +h +11z_14z_icosadienoyl_coa +coa +h2o
+    fad
+  }
+
+  branch from acetyl_coa side right {
+    acetyl_coa
+    <-> . +l_tyrosine +coa
+    n_acetyl_l_tyrosine
+  }
+
+  branch from acetyl_coa side left {
+    acetyl_coa
+    <-> . +s_5_acetamido_2_hydroxyphenyl_cysteine +coa
+    acetaminophen_mercapturate_conjugate_n_acetyl_cy
+  }
+
+  branch from coa side right {
+    coa
+    <-> . +2_methyl_3_oxo_valeryl_coenzyme_a
+    propanoyl_coa
+  }
+
+  branch from coa side left {
+    coa
+    <-> . +3_hydroxyadipyl_coa +h +h2o
+    3_hydroxyadipic_acid
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +acetyl_coa +fadh2 +h +fad +coa +nad +h2o
+    13z_16z_docosadienoyl_coa
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> . +acetyl_coa +fadh2 +h +fad +coa +nad +h2o
+    cis_cis_cis_10_13_16_docosatrienoyl_coa
+  }
+
+  branch from h side right {
+    h
+    <-> ec_5_1_3_14 [5.1.3.14] +udp_n_acetyl_alpha_d_mannosamine +h2o +n_acetyl_d_mannosamine
+    udp
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_4_1_181 [2.4.1.181] +udp +glucosyloxyanthraquinone +1_hydroxyanthraquinone
+    udp_alpha_d_glucose
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +tert_butoxymethanol
-    tert_butyl_formate
+    <-> . +nadh +acetyl_coa +fadh2 +h +fad +coa +h2o
+    9z_12z_15z_octadecatrienoyl_coa
+  }
+
+  branch from nad side left {
+    nad
+    <-> . +nadh +acetyl_coa +fadh2 +h +fad +coa +h2o
+    8z_11z_14z_17z_eicosatetraenoyl_coa
   }
 }

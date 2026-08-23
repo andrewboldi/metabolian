@@ -1,0 +1,336 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "o-s-6-methoxycarbonylhe-to-di-sulfido-diiron",
+  "name": "O-[S-(6-methoxycarbonylhe… to di-μ-sulfido-diiron",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from O-[S-(6-methoxycarbonylhexanoyl)pantetheine-4'-phosphoryl]serine(1−) residue to di-μ-sulfido-diiron(1+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:42700"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:82735"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "o_s_6_methoxycarbonylhexanoyl_pantetheine_4_phos",
+      "name": "O-[S-(6-methoxycarbonylhexanoyl)pantetheine-4'-phosphoryl]serine(1−)",
+      "short": "O-[S-(6-methoxycarb…",
+      "formula": "C22H37N3O11PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:82735"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "o_s_pimeloylpantetheine_4_phosphoryl_serine_2",
+      "name": "O-(S-pimeloylpantetheine-4'-phosphoryl)serine(2−)",
+      "short": "O-(S-pimeloylpantet…",
+      "formula": "C21H34N3O11PS",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:78846"
+      }
+    },
+    {
+      "id": "methanol",
+      "name": "methanol",
+      "formula": "CH4O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17790"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "iron",
+      "name": "iron",
+      "formula": "Fe",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:29034"
+      }
+    },
+    {
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29033"
+      }
+    },
+    {
+      "id": "formate",
+      "name": "Formate",
+      "formula": "CHO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15740"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_1_85",
+      "name": "pimeloyl-[acyl-carrier protein] methyl ester esterase",
+      "ec": [
+        "3.1.1.85"
+      ]
+    },
+    {
+      "id": "ec_1_17_1_11",
+      "name": "formate dehydrogenase (NAD(+), ferredoxin)",
+      "ec": [
+        "1.17.1.11"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "pimeloyl-[acyl-carrier protein] methyl ester esterase",
+      "equation": "6-carboxyhexanoyl-[ACP] methyl ester + H2O = 6-carboxyhexanoyl-[ACP] + methanol + H(+)",
+      "ec": "3.1.1.85",
+      "substrates": [
+        {
+          "metabolite": "o_s_6_methoxycarbonylhexanoyl_pantetheine_4_phos",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_s_pimeloylpantetheine_4_phosphoryl_serine_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_85"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:42700"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42700"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "4 Fe(III)-[cytochrome cL] + methanol + H2O = 4 Fe(II)-[cytochrome cL] + formate + 5 H(+)",
+      "equation": "4 Fe(III)-[cytochrome cL] + methanol + H2O = 4 Fe(II)-[cytochrome cL] + formate + 5 H(+)",
+      "substrates": [
+        {
+          "metabolite": "iron",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "methanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "formate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 5
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:56272"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56272"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "formate dehydrogenase (NAD(+), ferredoxin)",
+      "equation": "2 formate + 2 oxidized [2Fe-2S]-[ferredoxin] + NAD(+) = 2 reduced [2Fe-2S]-[ferredoxin] + 2 CO2 + NADH + H(+)",
+      "ec": "1.17.1.11",
+      "substrates": [
+        {
+          "metabolite": "formate",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_17_1_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:46952"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46952"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_o_s_pimeloylpantetheine_4_phosphoryl_serine_2_r-h-to-hydrogen-acceptor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "o_s_pimeloylpantetheine_4_phosphoryl_serine_2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-h-to-hydrogen-acceptor"
+      },
+      "note": "Shares O-(S-pimeloylpantetheine-4'-phosphoryl)serine(2−) with R-H to hydrogen acceptor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78846"
+          }
+        ]
+      }
+    }
+  ]
+}

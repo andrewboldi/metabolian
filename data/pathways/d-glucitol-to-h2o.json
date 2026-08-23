@@ -1,0 +1,477 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-glucitol-to-h2o",
+  "name": "D-glucitol to H2O",
+  "category": "redox-detox",
+  "summary": "A 3-step route from D-glucitol to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:59772"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:17924"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_glucitol",
+      "name": "D-glucitol",
+      "formula": "C6H14O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17924"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "d_sorbopyranose",
+      "name": "D-sorbopyranose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:48674"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "d_iditol",
+      "name": "D-iditol",
+      "formula": "C6H14O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM3573"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "d_tagatopyranose",
+      "name": "D-tagatopyranose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4249"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_3_40",
+      "name": "D-mannitol oxidase",
+      "ec": [
+        "1.1.3.40"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_15",
+      "name": "D-iditol 2-dehydrogenase",
+      "ec": [
+        "1.1.1.15"
+      ]
+    },
+    {
+      "id": "ec_5_1_3_31",
+      "name": "D-tagatose 3-epimerase",
+      "ec": [
+        "5.1.3.31"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "D-mannitol oxidase",
+      "equation": "D-sorbitol + O2 = D-sorbopyranose + H2O2",
+      "ec": "1.1.3.40",
+      "substrates": [
+        {
+          "metabolite": "d_glucitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_sorbopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_3_40"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:59772"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59772"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "D-iditol 2-dehydrogenase",
+      "ec": "1.1.1.15",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_sorbopyranose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_iditol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_15"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR107809"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR107809"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR178969",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_iditol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_iditol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR178969"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR178969"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "D-tagatose 3-epimerase",
+      "ec": "5.1.3.31",
+      "substrates": [
+        {
+          "metabolite": "d_tagatopyranose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_sorbopyranose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_1_3_31"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR114133"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR114133"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_d_glucitol_1-2-3-6-tetrakis-o-galloy-to-cornusiin-e",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glucitol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-3-6-tetrakis-o-galloy-to-cornusiin-e"
+      },
+      "note": "Shares D-glucitol with 1,2,3,6-tetrakis-O-galloy… to cornusiin E.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17924"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glucitol_d-glucitol-6-phosphate-to-5-dehydro-d-fructose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glucitol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glucitol-6-phosphate-to-5-dehydro-d-fructose"
+      },
+      "note": "Shares D-glucitol with D-glucitol 6-phosphate to 5-dehydro-D-fructose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17924"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glucitol_d-glucitol-to-galactitol-1-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glucitol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glucitol-to-galactitol-1-phosphate"
+      },
+      "note": "Shares D-glucitol with D-glucitol to galactitol 1-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17924"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glucitol_d-psicose-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glucitol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-psicose-to-hydrogen-donor"
+      },
+      "note": "Shares D-glucitol with D-psicose to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17924"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glucitol_dammarenediol-ii-to-d-glucopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glucitol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dammarenediol-ii-to-d-glucopyranose"
+      },
+      "note": "Shares D-glucitol with dammarenediol-II to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17924"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glucitol_phosphate-monoester-to-6-phospho-2-dehydro-d-glu",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glucitol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phosphate-monoester-to-6-phospho-2-dehydro-d-glu"
+      },
+      "note": "Shares D-glucitol with phosphate monoester… to 6-phospho-2-dehydro-D-glu….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17924"
+          }
+        ]
+      }
+    }
+  ]
+}

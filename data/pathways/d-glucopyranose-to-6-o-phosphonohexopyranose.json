@@ -118,33 +118,6 @@
       "xrefs": {
         "chebi": "CHEBI:182132"
       }
-    },
-    {
-      "id": "alpha_d_glucose",
-      "name": "alpha-D-glucose",
-      "formula": "C6H12O6",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1105027"
-      }
-    },
-    {
-      "id": "ubiquinone_2",
-      "name": "ubiquinone-2",
-      "formula": "C19H26O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:46372"
-      }
-    },
-    {
-      "id": "ubiquinol_2",
-      "name": "ubiquinol-2",
-      "formula": "C19H28O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:167578"
-      }
     }
   ],
   "enzymes": [
@@ -167,7 +140,10 @@
       "name": "hexokinase",
       "ec": [
         "2.7.1.1"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q2TB90"
+      }
     }
   ],
   "reactions": [
@@ -310,47 +286,71 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "quinoprotein glucose dehydrogenase (PQQ, quinone)",
-      "ec": "1.1.5.2",
-      "substrates": [
-        {
-          "metabolite": "alpha_d_glucose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ubiquinone_2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "ubiquinol_2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "d_glucono_1_5_lactone",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_1_5_2"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR173503"
+      "id": "xt_hexopyranose_d-glucopyranose-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hexopyranose"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glucopyranose-to-phosphate"
+      },
+      "note": "Shares hexopyranose with D-glucopyranose to phosphate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR173503"
+            "db": "ChEBI",
+            "id": "CHEBI:167473"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hexopyranose_itp-to-h",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hexopyranose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "itp-to-h"
+      },
+      "note": "Shares hexopyranose with ITP to H.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:167473"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hexopyranose_nadh-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hexopyranose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-nadph"
+      },
+      "note": "Shares hexopyranose with NADH to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:167473"
           }
         ]
       }

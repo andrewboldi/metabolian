@@ -103,62 +103,6 @@
       "xrefs": {
         "chebi": "CHEBI:139593"
       }
-    },
-    {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:175763"
-      }
-    },
-    {
-      "id": "barbatene",
-      "name": "(+)-β-barbatene",
-      "formula": "C15H24",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:193086"
-      }
-    },
-    {
-      "id": "sativene",
-      "name": "(−)-sativene",
-      "formula": "C15H24",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:64800"
-      }
-    },
-    {
-      "id": "taxifolin",
-      "name": "taxifolin",
-      "formula": "C15H12O7",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:38747"
-      }
-    },
-    {
-      "id": "taxifolin_4_methyl_ether",
-      "name": "taxifolin 4'-methyl ether",
-      "short": "taxifolin…",
-      "formula": "C16H14O7",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:193113"
-      }
-    },
-    {
-      "id": "dihydroisorhamnetin",
-      "name": "dihydroisorhamnetin",
-      "formula": "C16H14O7",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:175075"
-      }
     }
   ],
   "enzymes": [
@@ -327,159 +271,27 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "(2E,6E)-farnesyl diphosphate = (+)-beta-barbatene + diphosphate",
-      "equation": "(2E,6E)-farnesyl diphosphate = (+)-beta-barbatene + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "fpp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "barbatene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:81463"
+      "id": "xt_2_4_4_6_tetrahydroxychalcone_trans-4-coumaroyl-coa-to-aureusidin-6-o-glucosid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_4_4_6_tetrahydroxychalcone"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-4-coumaroyl-coa-to-aureusidin-6-o-glucosid"
+      },
+      "note": "Shares 2',4,4',6'-tetrahydroxychalcone with trans-4-coumaroyl-CoA to aureusidin 6-O-β-glucoside.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:81463"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "(2E,6E)-farnesyl diphosphate = (-)-sativene + diphosphate",
-      "equation": "(2E,6E)-farnesyl diphosphate = (-)-sativene + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "fpp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "sativene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:81539"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:81539"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "taxifolin + S-adenosyl-L-methionine = taxifolin 4'-methyl ether + S-adenosyl-L-homocyst...",
-      "equation": "taxifolin + S-adenosyl-L-methionine = taxifolin 4'-methyl ether + S-adenosyl-L-homocysteine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "taxifolin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "taxifolin_4_methyl_ether",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:74183"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:74183"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "taxifolin + S-adenosyl-L-methionine = taxifolin 3'-methyl ether + S-adenosyl-L-homocyst...",
-      "equation": "taxifolin + S-adenosyl-L-methionine = taxifolin 3'-methyl ether + S-adenosyl-L-homocysteine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "taxifolin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "dihydroisorhamnetin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:74187"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:74187"
+            "db": "ChEBI",
+            "id": "CHEBI:15413"
           }
         ]
       }

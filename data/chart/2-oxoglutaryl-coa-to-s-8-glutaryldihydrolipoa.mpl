@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-oxoglutaryl-coa-to-s-8-glutaryldihydrolipoa "2-oxoglutaryl-CoA to S(8)-glutaryldihydrolipoa…" {
-  spacing 288
+  spacing 252
 
   spine at 0,0 {
     2_oxoglutaryl_coa
@@ -14,41 +14,5 @@ pathway 2-oxoglutaryl-coa-to-s-8-glutaryldihydrolipoa "2-oxoglutaryl-CoA to S(8)
     glutaryl_coa
     <-> ec_2_3_1_61 [2.3.1.61] +r_dihydrolipoamide +h -s_8_glutaryldihydrolipoamide
     coa
-  }
-
-  branch from glutaryl_coa side left {
-    glutaryl_coa
-    <-> . +s_carnitine +h +coa
-    glutarylcarnitine
-  }
-
-  branch from 2_oxoglutarate side right {
-    2_oxoglutarate
-    <-> . +n_succinyl_l_l_2_6_diaminopimelate +h +l_glutamate
-    s_2_succinylamino_6_oxoheptanedioate
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    cerivastatin_m1
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    cerivastatin_m23
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +linoelaidic_acid +atp +linoelaidyl_coenzyme_a +h +amp
-    diphosphate
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +dodecanedioyl_coa +s_carnitine +h
-    o_dodecanedioylcarnitine
   }
 }

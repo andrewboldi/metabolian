@@ -1,0 +1,346 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n-fatty-acyl-l-leucine-to-n-acetyl-d-leucinate-6",
+  "name": "N-(fatty acyl)-L-leucine to N-acetyl-D-leucinate",
+  "category": "lipid-metabolism",
+  "summary": "A 3-step route from N-(fatty acyl)-L-leucine(1−) to N-acetyl-D-leucinate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:64200"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:149740"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n_fatty_acyl_l_leucine",
+      "name": "N-(fatty acyl)-L-leucine",
+      "short": "N-(fatty acyl)-L-le…",
+      "formula": "C7H11NO3R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:149740"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "leucine",
+      "name": "L-Leucine",
+      "formula": "C6H13NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57427"
+      }
+    },
+    {
+      "id": "fatty-acid",
+      "name": "Fatty acid",
+      "formula": "CO2R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:28868"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "n_acetyl_l_leucinate",
+      "name": "N-acetyl-L-leucinate",
+      "formula": "C8H14NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58270"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "n_acetyl_d_leucinate",
+      "name": "N-acetyl-D-leucinate",
+      "formula": "C8H14NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:145946"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_3_1_66",
+      "name": "leucine N-acetyltransferase",
+      "ec": [
+        "2.3.1.66"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "an N-(fatty acyl)-L-leucine + H2O = L-leucine + a fatty acid",
+      "equation": "an N-(fatty acyl)-L-leucine + H2O = L-leucine + a fatty acid",
+      "substrates": [
+        {
+          "metabolite": "n_fatty_acyl_l_leucine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "leucine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fatty-acid",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:64200"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64200"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "leucine N-acetyltransferase",
+      "equation": "L-leucine + acetyl-CoA = N-acetyl-L-leucine + CoA + H(+)",
+      "ec": "2.3.1.66",
+      "substrates": [
+        {
+          "metabolite": "leucine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_l_leucinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_66"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:20089"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20089"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "N-acetyl-L-leucine = N-acetyl-D-leucine",
+      "equation": "N-acetyl-L-leucine = N-acetyl-D-leucine",
+      "substrates": [
+        {
+          "metabolite": "n_acetyl_l_leucinate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_d_leucinate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:67984"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:67984"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_n_fatty_acyl_l_leucine_n-fatty-acyl-l-leucine-to-n-acetyl-d-leucinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_fatty_acyl_l_leucine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-fatty-acyl-l-leucine-to-n-acetyl-d-leucinate"
+      },
+      "note": "Shares N-(fatty acyl)-L-leucine with N-(fatty acyl)-L-leucine to N-acetyl-D-leucinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:149740"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetyl_l_leucinate_20s-17-20-dihydroxypreg-to-testolate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyl_l_leucinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "20s-17-20-dihydroxypreg-to-testolate"
+      },
+      "note": "Shares N-acetyl-L-leucinate with (20S)-17,20-dihydroxypreg… to testolate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58270"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetyl_l_leucinate_20s-17-20-dihydroxypreg-to-testolate-15853",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyl_l_leucinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "20s-17-20-dihydroxypreg-to-testolate-15853"
+      },
+      "note": "Shares N-acetyl-L-leucinate with (20S)-17,20-dihydroxypreg… to testolate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58270"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetyl_l_leucinate_n-fatty-acyl-l-leucine-to-n-acetyl-d-leucinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyl_l_leucinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-fatty-acyl-l-leucine-to-n-acetyl-d-leucinate"
+      },
+      "note": "Shares N-acetyl-L-leucinate with N-(fatty acyl)-L-leucine to N-acetyl-D-leucinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58270"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetyl_d_leucinate_n-fatty-acyl-l-leucine-to-n-acetyl-d-leucinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyl_d_leucinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-fatty-acyl-l-leucine-to-n-acetyl-d-leucinate"
+      },
+      "note": "Shares N-acetyl-D-leucinate with N-(fatty acyl)-L-leucine to N-acetyl-D-leucinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:145946"
+          }
+        ]
+      }
+    }
+  ]
+}

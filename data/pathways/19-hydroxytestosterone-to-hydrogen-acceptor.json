@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "19-hydroxytestosterone-to-hydrogen-acceptor",
   "name": "19-hydroxytestosterone to hydrogen acceptor",
-  "category": "nucleotide-metabolism",
+  "category": "energy-metabolism",
   "summary": "A 3-step route from 19-hydroxytestosterone to hydrogen acceptor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -126,91 +126,6 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:13193"
-      }
-    },
-    {
-      "id": "dodecan_1_ol",
-      "name": "dodecan-1-ol",
-      "formula": "C12H26O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:28878"
-      }
-    },
-    {
-      "id": "1_4_dodecanediol",
-      "name": "1,4-dodecanediol",
-      "formula": "C12H26O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:195422"
-      }
-    },
-    {
-      "id": "1_3_dodecanediol",
-      "name": "1,3-dodecanediol",
-      "formula": "C12H26O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:195421"
-      }
-    },
-    {
-      "id": "3_phosphonato_5_adenylyl_sulfate",
-      "name": "3'-phosphonato-5'-adenylyl sulfate",
-      "short": "3'-phosphonato-5'-a…",
-      "formula": "C10H11N5O13P2S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:58339"
-      }
-    },
-    {
-      "id": "17_estradiol_3_sulfate",
-      "name": "17β-estradiol 3-sulfate",
-      "short": "17β-estradiol…",
-      "formula": "C18H23O5S",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:136582"
-      }
-    },
-    {
-      "id": "adenosine_3_5_bismonophosphate",
-      "name": "adenosine 3',5'-bismonophosphate",
-      "short": "adenosine…",
-      "formula": "C10H11N5O10P2",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:58343"
-      }
-    },
-    {
-      "id": "udp_d_glucuronate",
-      "name": "UDP-α-D-glucuronate",
-      "formula": "C15H19N2O18P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58052"
-      }
-    },
-    {
-      "id": "17_estradiol_3_o_d_glucuronide",
-      "name": "17β-estradiol 3-O-(β-D-glucuronide)",
-      "short": "17β-estradiol…",
-      "formula": "C24H31O8",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:136641"
-      }
-    },
-    {
-      "id": "udp",
-      "name": "UDP",
-      "formula": "C9H11N2O12P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58223"
       }
     }
   ],
@@ -382,191 +297,93 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "dodecan-1-ol + reduced [NADPH--hemoprotein reductase] + O2 = 1,4-dodecanediol + oxidize...",
-      "equation": "dodecan-1-ol + reduced [NADPH--hemoprotein reductase] + O2 = 1,4-dodecanediol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "dodecan_1_ol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_4_dodecanediol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:76763"
+      "id": "xt_19_hydroxytestosterone_17-hydroxy-5-androstan-to-h2o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "19_hydroxytestosterone"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "17-hydroxy-5-androstan-to-h2o2"
+      },
+      "note": "Shares 19-hydroxytestosterone with 17β-hydroxy-5α-androstan-… to H2O2.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:76763"
+            "db": "ChEBI",
+            "id": "CHEBI:798"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "dodecan-1-ol + reduced [NADPH--hemoprotein reductase] + O2 = 1,3-dodecanediol + oxidize...",
-      "equation": "dodecan-1-ol + reduced [NADPH--hemoprotein reductase] + O2 = 1,3-dodecanediol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "dodecan_1_ol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_3_dodecanediol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:76771"
+      "id": "xt_19_hydroxytestosterone_19-hydroxytestosterone-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "19_hydroxytestosterone"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "19-hydroxytestosterone-to-fmn"
+      },
+      "note": "Shares 19-hydroxytestosterone with 19-hydroxytestosterone to FMN.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:76771"
+            "db": "ChEBI",
+            "id": "CHEBI:798"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "17beta-estradiol + 3'-phosphoadenylyl sulfate = 17beta-estradiol 3-sulfate + adenosine ...",
-      "equation": "17beta-estradiol + 3'-phosphoadenylyl sulfate = 17beta-estradiol 3-sulfate + adenosine 3',5'-bisphosphate + H(+)",
-      "substrates": [
-        {
-          "metabolite": "17_estradiol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "3_phosphonato_5_adenylyl_sulfate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "17_estradiol_3_sulfate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adenosine_3_5_bismonophosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:52372"
+      "id": "xt_19_oxotestosterone_17-hydroxy-5-androstan-to-h2o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "19_oxotestosterone"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "17-hydroxy-5-androstan-to-h2o2"
+      },
+      "note": "Shares 19-oxotestosterone with 17β-hydroxy-5α-androstan-… to H2O2.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:52372"
+            "db": "ChEBI",
+            "id": "CHEBI:75308"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "17beta-estradiol + UDP-alpha-D-glucuronate = 17beta-estradiol 3-O-(beta-D-glucuronate) ...",
-      "equation": "17beta-estradiol + UDP-alpha-D-glucuronate = 17beta-estradiol 3-O-(beta-D-glucuronate) + UDP + H(+)",
-      "substrates": [
-        {
-          "metabolite": "17_estradiol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp_d_glucuronate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "17_estradiol_3_o_d_glucuronide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:52460"
+      "id": "xt_6_hydroxy_17_estradiol_leukotriene-c4-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_hydroxy_17_estradiol"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "leukotriene-c4-to-hydrogen-donor"
+      },
+      "note": "Shares 6β-hydroxy-17β-estradiol with leukotriene C4 to hydrogen donor.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:52460"
+            "db": "ChEBI",
+            "id": "CHEBI:16784"
           }
         ]
       }

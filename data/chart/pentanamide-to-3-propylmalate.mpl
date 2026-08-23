@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway pentanamide-to-3-propylmalate "pentanamide to 3-propylmalate" {
-  spacing 204
+  spacing 240
 
   spine at 0,0 {
     pentanamide
@@ -62,5 +62,41 @@ pathway pentanamide-to-3-propylmalate "pentanamide to 3-propylmalate" {
     ppi
     <-> ec_2_5_1_28 [2.5.1.28] +ipp +dmapp
     neryl_diphosphate
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_2_7_2_2 [2.7.2.2] +hco3 +atp +adp +h2o +hplus
+    carbamoyl_p
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_2_7_1_62 [2.7.1.62] +phosphoramidate +d_hexose +hplus
+    d_hexose_1_phosphate
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_6_3_1_1 [6.3.1.1] +aspartate +nh3 +atp +amp +hplus
+    l_asparagine
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_75 [4.2.3.75] +fpp
+    germacrene_d
+  }
+
+  branch from glyoxylate side left {
+    glyoxylate
+    <-> ec_4_1_1_47 [4.1.1.47] +hplus +co2
+    2_hydroxy_3_oxopropanoate
+  }
+
+  branch from glyoxylate side right {
+    glyoxylate
+    <-> ec_2_3_3_7 [2.3.3.7] +butyryl_coa +h2o +coa +hplus
+    3_ethylmalate
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway carotene-to-all-trans-violaxanthin "β-carotene to all-trans-violaxanthin" {
-  spacing 246
+  spacing 216
 
   spine at 0,0 {
     carotene
@@ -14,35 +14,5 @@ pathway carotene-to-all-trans-violaxanthin "β-carotene to all-trans-violaxanthi
     4_9_dimethyldodeca_2_4_6_8_10_pentaenedial
     <-> ec_1_13_11_71 [1.13.11.71] +5_6_epoxy_3_hydroxy_9_apo_beta_caroten_9_one -all_trans_violaxanthin
     o2
-  }
-
-  branch from zeaxanthin side left {
-    zeaxanthin
-    <-> ec_1_13_11_65 [1.13.11.65] +o2 +3r_all_trans_3_hydroxyretinal
-    3r_11_cis_3_hydroxyretinal
-  }
-
-  branch from zeaxanthin side right {
-    zeaxanthin
-    <-> . +o2 +hydroxy_cyclocitral
-    3r_3_hydroxy_8_apo_carotenal
-  }
-
-  branch from 3r_hydroxy_ionone side left {
-    3r_hydroxy_ionone
-    <-> . +zeaxanthin +o2
-    3r_3_hydroxy_10_apo_carotenal
-  }
-
-  branch from o2 side right {
-    o2
-    <-> ec_1_14_20_10 [1.14.20.10] +2s_3_4_hydroxyphenyl_2_isocyanopropanoate +2_oxoglutarate +h +co2 +succinate +h2o
-    e_4_2_isocyanovinyl_phenol
-  }
-
-  branch from o2 side left {
-    o2
-    <-> ec_1_13_11_90 [1.13.11.90] +1r_1_hydroxy_2_trimethylamino_ethyl_phosphonate +glycine_betaine +phosphate
-    h
   }
 }

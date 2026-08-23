@@ -101,24 +101,6 @@
       }
     },
     {
-      "id": "e_caffeoylpyruvate",
-      "name": "(E)-caffeoylpyruvate",
-      "formula": "C12H9O6",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:190290"
-      }
-    },
-    {
-      "id": "pyruvate",
-      "name": "Pyruvate",
-      "formula": "C3H3O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:15361"
-      }
-    },
-    {
       "id": "3_4_dihydroxystyrene",
       "name": "3,4-Dihydroxystyrene",
       "formula": "C8H8O2",
@@ -289,49 +271,6 @@
     },
     {
       "id": "r4",
-      "name": "(E)-caffeoylpyruvate + H2O = (E)-caffeate + pyruvate + H(+)",
-      "equation": "(E)-caffeoylpyruvate + H2O = (E)-caffeate + pyruvate + H(+)",
-      "substrates": [
-        {
-          "metabolite": "e_caffeoylpyruvate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "trans_caffeate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pyruvate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:71155"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:71155"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
       "name": "(E)-caffeate + H(+) = 3,4-dihydroxystyrene + CO2",
       "equation": "(E)-caffeate + H(+) = 3,4-dihydroxystyrene + CO2",
       "substrates": [
@@ -355,7 +294,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
         "rhea": "RHEA:75055"
       },
@@ -365,6 +304,250 @@
           {
             "db": "Rhea",
             "id": "RHEA:75055"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_quinate_2r-2-o-phosphonato-3-su-to-3-dehydroquinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "quinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2r-2-o-phosphonato-3-su-to-3-dehydroquinate"
+      },
+      "note": "Shares (−)-quinate with (2R)-2-O-phosphonato-3-su… to 3-dehydroquinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29751"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_quinate_l-idarate-to-4-o-feruloyl-d-quinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "quinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-idarate-to-4-o-feruloyl-d-quinate"
+      },
+      "note": "Shares (−)-quinate with L-idarate to 4-O-feruloyl-D-quinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29751"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_quinate_l-rhamnofuranose-to-3-carboxy-cis-cis-muconate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "quinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-rhamnofuranose-to-3-carboxy-cis-cis-muconate"
+      },
+      "note": "Shares (−)-quinate with L-rhamnofuranose to 3-carboxy-cis,cis-muconate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29751"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_quinate_s-2-halocarboxylic-to-l-glutamyl-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "quinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2-halocarboxylic-to-l-glutamyl-phosphate"
+      },
+      "note": "Shares (−)-quinate with (S)-2-halocarboxylic… to L-γ-glutamyl phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29751"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_chlorogenate_l-idarate-to-4-o-feruloyl-d-quinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "chlorogenate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-idarate-to-4-o-feruloyl-d-quinate"
+      },
+      "note": "Shares chlorogenate with L-idarate to 4-O-feruloyl-D-quinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57644"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_caffeate_1-chloro-2-nitrobenzene-to-methanofuranate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_caffeate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-chloro-2-nitrobenzene-to-methanofuranate"
+      },
+      "note": "Shares trans-caffeate with 1-chloro-2-nitrobenzene to methanofuranate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57770"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_caffeate_l-dopa-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_caffeate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-dopa-to-diphosphate"
+      },
+      "note": "Shares trans-caffeate with L-dopa to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57770"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_caffeate_l-tyrosine-to-trans-caffeoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_caffeate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-tyrosine-to-trans-caffeoyl-coa"
+      },
+      "note": "Shares trans-caffeate with L-tyrosine to trans-caffeoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57770"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_caffeate_shikimate-to-4-ethyl-2-methoxyphenol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_caffeate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "shikimate-to-4-ethyl-2-methoxyphenol"
+      },
+      "note": "Shares trans-caffeate with shikimate to 4-Ethyl-2-methoxyphenol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57770"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_4_dihydroxystyrene_1-3-5-trihydroxybenzene-to-s-8-glutaryldihydroli",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_4_dihydroxystyrene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-3-5-trihydroxybenzene-to-s-8-glutaryldihydroli"
+      },
+      "note": "Shares 3,4-Dihydroxystyrene with 1,3,5-trihydroxybenzene to S(8)-glutaryldihydrolipoa….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:1390"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_4_dihydroxystyrene_imp-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_4_dihydroxystyrene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "imp-to-h2o"
+      },
+      "note": "Shares 3,4-Dihydroxystyrene with IMP to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:1390"
           }
         ]
       }

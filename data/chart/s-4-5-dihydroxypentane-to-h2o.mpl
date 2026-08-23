@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-4-5-dihydroxypentane-to-h2o "(S)-4,5-dihydroxypentane-… to H2O" {
-  spacing 224
+  spacing 200
 
   spine at 0,0 {
     s_4_5_dihydroxypentane_2_3_dione
@@ -14,29 +14,5 @@ pathway s-4-5-dihydroxypentane-to-h2o "(S)-4,5-dihydroxypentane-… to H2O" {
     2r_4s_2_methyltetrahydrofuran_2_3_3_4_tetrol
     <-> ec_7_6_2_13 [7.6.2.13] +h +adp +phosphate -2r_4s_2_methyltetrahydrofuran_2_3_3_4_tetrol -h2o
     atp
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    7r_3_e_2_4_dinitrostyryl_7_2_thienylacetamido_3
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    clavulanate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    1_carbapenem_3_carboxylic_acid
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    2_hydroxyphenazine
   }
 }

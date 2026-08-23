@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway taxa-4-20-11-dien-5-ol-to-10-14-dihydroxytaxa-4 "taxa-4(20),11-dien-5α-ol to 10β,14β-dihydroxytaxa-4(2…" {
-  spacing 234
+  spacing 216
 
   spine at 0,0 {
     taxa_4_20_11_dien_5_ol
@@ -14,23 +14,5 @@ pathway taxa-4-20-11-dien-5-ol-to-10-14-dihydroxytaxa-4 "taxa-4(20),11-dien-5α-
     10_hydroxytaxa_4_20_11_dien_5_yl_acetate
     <-> ec_1_14_13_146 [1.14.13.146] +nadph +o2 +hplus -nadp -h2o
     10_14_dihydroxytaxa_4_20_11_dien_5_yl_acetate
-  }
-
-  branch from taxa_4_20_11_dien_5_yl_acetate side left {
-    taxa_4_20_11_dien_5_yl_acetate
-    <-> ec_1_14_14_191 [1.14.14.191] +fmnh2 +o2 +fmn +h2o +hplus
-    5_20_epoxytaxa_11_en_4_yl_acetate
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +cholesterol +fmnh2 +o2 +h2o +hplus
-    22s_22_hydroxycholesterol
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +5_cholestan_3_ol +fmnh2 +o2 +h2o +hplus
-    5_22s_22_hydroxycholestan_3_ol
   }
 }

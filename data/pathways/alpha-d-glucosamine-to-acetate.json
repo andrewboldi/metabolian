@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "alpha-d-glucosamine-to-acetate",
   "name": "alpha-D-glucosamine… to acetate",
-  "category": "lipid-metabolism",
+  "category": "other",
   "summary": "A 3-step route from alpha-D-glucosamine 6-phosphate to acetate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -98,63 +98,6 @@
       "charge": -1,
       "xrefs": {
         "chebi": "CHEBI:30089"
-      }
-    },
-    {
-      "id": "2e_6z_9z_12z_octadecatetraenoyl_coa",
-      "name": "2E,6Z,9Z,12Z-octadecatetraenoyl-CoA",
-      "short": "2E,6Z,9Z,12Z-octade…",
-      "formula": "C39H58N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM1560320"
-      }
-    },
-    {
-      "id": "3_s_hydroxy_6z_9z_12z_octadecatrienoyl_coa",
-      "name": "3(S)-hydroxy-6Z,9Z,12Z-octadecatrienoyl-CoA",
-      "short": "3(S)-hydroxy-6Z,9Z,…",
-      "formula": "C39H60N7O18P3S",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM1560321"
-      }
-    },
-    {
-      "id": "13z_docosenoate",
-      "name": "(13Z)-docosenoate",
-      "formula": "C22H41O2",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM11520"
-      }
-    },
-    {
-      "id": "h",
-      "name": "H",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM1"
-      }
-    },
-    {
-      "id": "cholesterol",
-      "name": "cholesterol",
-      "formula": "C27H46O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM726122"
-      }
-    },
-    {
-      "id": "cholest_5_en_3b_yl_13z_docosenoate",
-      "name": "Cholest-5-En-3B-Yl (13Z-Docosenoate)",
-      "short": "Cholest-5-En-3B-Yl…",
-      "formula": "C49H86O2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1560537"
       }
     }
   ],
@@ -274,79 +217,93 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "Reaction MNXR205524",
-      "substrates": [
-        {
-          "metabolite": "2e_6z_9z_12z_octadecatetraenoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_s_hydroxy_6z_9z_12z_octadecatrienoyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR205524"
+      "id": "xt_diacetylchitobiose_6_phosphate_e-coli-mlps-to-h",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "diacetylchitobiose_6_phosphate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "e-coli-mlps-to-h"
+      },
+      "note": "Shares diacetylchitobiose-6'-phosphate with E. coli MLPS to H.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR205524"
+            "db": "ChEBI",
+            "id": "CHEBI:64883"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "Reaction MNXR205532",
-      "substrates": [
-        {
-          "metabolite": "13z_docosenoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "cholesterol",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "cholest_5_en_3b_yl_13z_docosenoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR205532"
+      "id": "xt_diacetylchitobiose_6_phosphate_h-to-4-methylcatechol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "diacetylchitobiose_6_phosphate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-4-methylcatechol"
+      },
+      "note": "Shares diacetylchitobiose-6'-phosphate with H to 4-methylcatechol.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR205532"
+            "db": "ChEBI",
+            "id": "CHEBI:64883"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_diacetylchitobiose_6_phosphate_p-nitrophenyl-n-acetyl-be-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "diacetylchitobiose_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "p-nitrophenyl-n-acetyl-be-to-h2o"
+      },
+      "note": "Shares diacetylchitobiose-6'-phosphate with p-Nitrophenyl-N-acetyl-be… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64883"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_monoacetylchitobiose_6_phosphate_n-monoacetylchitobiose-6-to-s-adenosyl-l-homocys",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_monoacetylchitobiose_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-monoacetylchitobiose-6-to-s-adenosyl-l-homocys"
+      },
+      "note": "Shares N'-monoacetylchitobiose-6'-phosphate with N'-monoacetylchitobiose-6… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:71315"
           }
         ]
       }

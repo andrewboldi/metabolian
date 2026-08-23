@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-h2o2 "NADH to H2O2" {
-  spacing 188
+  spacing 266
 
   spine at 0,0 {
     nadh
@@ -16,39 +16,117 @@ pathway nadh-to-h2o2 "NADH to H2O2" {
     25_hydroxyvitamin_d3_26_23_lactone
   }
 
-  branch from nad side left {
-    nad
-    <-> ec_1_3_1_29 [1.3.1.29] +nadh +h +1_2_anthracenediol
-    anthracene_cis_1_2_dihydrodiol
+  branch from 23s_23_25_26_trihydroxycalciol side left {
+    23s_23_25_26_trihydroxycalciol
+    <-> . +nadh +h +o2 +nad +h2o
+    23s_25_dihydroxyvitamin_d3
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +9h_fluoren_9_one +h +o2
-    1_10_dihydro_1_10_dihydroxyfluoren_9_one
+    <-> ec_1_2_1_32 [1.2.1.32] +nadh +h +2z_4e_2_amino_5_methyl_muconate +h2o
+    2z_4e_2_amino_5_methyl_muconate_semialdehyde
   }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_2_4_1_8 [2.4.1.8] +gamma_carotene
-    1_hydroxy_carotene
+  branch from nad side left {
+    nad
+    <-> . +nadh +h +3r_3_isopropenyl_6_oxoheptanoate
+    3r_6r_6_hydroxy_3_isopropenylheptanoate
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_4_2_1_131 [4.2.1.131] +anhydrorhodovibrin
-    rhodovibrin
+    <-> ec_4_2_1_169 [4.2.1.169] +8_12_diethyl_3_vinylbacteriochlorophyllide_d +h
+    31r_8_12_diethylbacteriochlorophyllide_d
   }
 
-  branch from h2o2 side left {
-    h2o2
-    <-> ec_1_6_3_5 [1.6.3.5] +h +o2 +nad
-    nadh
+  branch from h2o side left {
+    h2o
+    <-> ec_4_2_1_84 [4.2.1.84] +2_hydroxyisobutyramide
+    2_hydroxy_2_methylpropanenitrile
   }
 
   branch from h2o2 side right {
     h2o2
-    <-> ec_1_6_3_5 [1.6.3.5] +h +nadph +o2
-    nadp
+    <-> . +arabidopaldehyde +o2
+    2_hydroxy_4_1e_3_oxoprop_1_en_1_yl_2h_pyran_6_ca
+  }
+
+  branch from h2o2 side left {
+    h2o2
+    <-> . +iso_arabidopaldehyde +o2
+    2_hydroxy_3_1e_3_oxoprop_1_en_1_yl_2h_pyran_6_ca
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_14_12_26 [1.14.12.26] +1_3_dichlorobenzene +h +o2 +nad
+    1r_2s_3_5_dichlorocyclohexa_3_5_diene_1_2_diol
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> ec_1_3_1_119 [1.3.1.119] +h +nad +1r_2s_3_5_dichlorocyclohexa_3_5_diene_1_2_diol
+    3_5_dichlorocatechol
+  }
+
+  branch from h side right {
+    h
+    <-> . +s_adenosyl_l_homocysteine +thiocoraline_dithiol +s_demethyl_thiocoraline_dithiol
+    s_adenosyl_l_methionine
+  }
+
+  branch from h side left {
+    h
+    <-> . +3_hydroxy_5_methoxybiphenyl +s_adenosyl_l_homocysteine +s_adenosyl_l_methionine
+    3_5_dihydroxybiphenyl
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +s_beta_hydroxy_l_tryptophan
+    r_n_formyl_beta_hydroxy_l_kynurenine
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +triostin_a_dithiol +h2o2
+    triostin_a
+  }
+
+  branch from nad side right {
+    nad
+    <-> . +nadh +h +3_chlorobenzoate +o2
+    3_chloro_3_5_cyclohexadiene_l_2_diol_1_carboxyla
+  }
+
+  branch from nad side left {
+    nad
+    <-> . +5_chloro_3_5_cyclohexadiene_l_2_diol_1_carboxyla +nadh +h +o2
+    3_chlorobenzoate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +1_1_dihydroxypropan_2_one
+    methylglyoxal
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +l_galactono_1_5_lactone +h
+    l_galactonate
+  }
+
+  branch from h2o2 side right {
+    h2o2
+    <-> . +thiocoraline_dithiol +o2
+    thiocoraline
+  }
+
+  branch from h2o2 side left {
+    h2o2
+    <-> ec_1_1_3_5 [1.1.3.5] +glucose +o2
+    d_glucono_1_5_lactone
   }
 }

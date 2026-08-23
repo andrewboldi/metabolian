@@ -1,0 +1,511 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3r-11z-14z-3-hydroxyico-to-hydrogen-acceptor-39",
+  "name": "(3R,11Z,14Z)-3-hydroxyico… to hydrogen acceptor",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from (3R,11Z,14Z)-3-hydroxyicosadienoyl-CoA(4−) to hydrogen acceptor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:39303"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:76408"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3r_11z_14z_3_hydroxyicosadienoyl_coa",
+      "name": "(3R,11Z,14Z)-3-hydroxyicosadienoyl-CoA",
+      "short": "(3R,11Z,14Z)-3-hydr…",
+      "formula": "C41H66N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:76408"
+      }
+    },
+    {
+      "id": "2e_11z_14z_icosatrienoyl_coa",
+      "name": "(2E,11Z,14Z)-icosatrienoyl-CoA",
+      "short": "(2E,11Z,14Z)-icosat…",
+      "formula": "C41H64N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:76409"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "11z_14z_icosadienoyl_coa",
+      "name": "(11Z,14Z)-icosadienoyl-CoA",
+      "short": "(11Z,14Z)-icosadien…",
+      "formula": "C41H66N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:76410"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "5z_11z_14z_icosatrienoyl_coa",
+      "name": "(5Z,11Z,14Z)-icosatrienoyl-CoA",
+      "short": "(5Z,11Z,14Z)-icosat…",
+      "formula": "C41H64N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:78663"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_19_37",
+      "name": "acyl-CoA 5-desaturase",
+      "ec": [
+        "1.14.19.37"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(3R)-hydroxy-(11Z,14Z)-eicosadienoyl-CoA = (2E,11Z,14Z)-eicosatrienoyl-CoA + H2O",
+      "equation": "(3R)-hydroxy-(11Z,14Z)-eicosadienoyl-CoA = (2E,11Z,14Z)-eicosatrienoyl-CoA + H2O",
+      "substrates": [
+        {
+          "metabolite": "3r_11z_14z_3_hydroxyicosadienoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2e_11z_14z_icosatrienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:39303"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:39303"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(2E,11Z,14Z)-eicosatrienoyl-CoA + NADPH + H(+) = (11Z,14Z)-eicosadienoyl-CoA + NADP(+)",
+      "equation": "(2E,11Z,14Z)-eicosatrienoyl-CoA + NADPH + H(+) = (11Z,14Z)-eicosadienoyl-CoA + NADP(+)",
+      "substrates": [
+        {
+          "metabolite": "2e_11z_14z_icosatrienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "11z_14z_icosadienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:39307"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:39307"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "acyl-CoA 5-desaturase",
+      "equation": "(11Z,14Z)-eicosadienoyl-CoA + AH2 + O2 = (5Z,11Z,14Z)-eicosatrienoyl-CoA + A + 2 H2O",
+      "ec": "1.14.19.37",
+      "substrates": [
+        {
+          "metabolite": "11z_14z_icosadienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5z_11z_14z_icosatrienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_37"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:42160"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42160"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3r_11z_14z_3_hydroxyicosadienoyl_coa_3r-11z-14z-3-hydroxyico-to-hydrogen-acceptor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3r_11z_14z_3_hydroxyicosadienoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3r-11z-14z-3-hydroxyico-to-hydrogen-acceptor"
+      },
+      "note": "Shares (3R,11Z,14Z)-3-hydroxyicosadienoyl-CoA with (3R,11Z,14Z)-3-hydroxyico… to hydrogen acceptor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76408"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3r_11z_14z_3_hydroxyicosadienoyl_coa_fadh2-to-3r-11z-14z-3-hydroxyico",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3r_11z_14z_3_hydroxyicosadienoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fadh2-to-3r-11z-14z-3-hydroxyico"
+      },
+      "note": "Shares (3R,11Z,14Z)-3-hydroxyicosadienoyl-CoA with FADH2 to (3R,11Z,14Z)-3-hydroxyico….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76408"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3r_11z_14z_3_hydroxyicosadienoyl_coa_fadh2-to-3r-11z-14z-3-hydroxyico-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3r_11z_14z_3_hydroxyicosadienoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fadh2-to-3r-11z-14z-3-hydroxyico-null"
+      },
+      "note": "Shares (3R,11Z,14Z)-3-hydroxyicosadienoyl-CoA with FADH2 to (3R,11Z,14Z)-3-hydroxyico….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76408"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2e_11z_14z_icosatrienoyl_coa_2-azaniumyl-4-5-dihydroxy-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2e_11z_14z_icosatrienoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-azaniumyl-4-5-dihydroxy-to-nad"
+      },
+      "note": "Shares (2E,11Z,14Z)-icosatrienoyl-CoA with 2-azaniumyl-4,5-dihydroxy… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76409"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2e_11z_14z_icosatrienoyl_coa_3-epi-6-deoxocathasterone-to-nadp-27321",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2e_11z_14z_icosatrienoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-epi-6-deoxocathasterone-to-nadp-27321"
+      },
+      "note": "Shares (2E,11Z,14Z)-icosatrienoyl-CoA with 3-epi-6-deoxocathasterone to NADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76409"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2e_11z_14z_icosatrienoyl_coa_3r-11z-14z-3-hydroxyico-to-hydrogen-acceptor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2e_11z_14z_icosatrienoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3r-11z-14z-3-hydroxyico-to-hydrogen-acceptor"
+      },
+      "note": "Shares (2E,11Z,14Z)-icosatrienoyl-CoA with (3R,11Z,14Z)-3-hydroxyico… to hydrogen acceptor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76409"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2e_11z_14z_icosatrienoyl_coa_diaminobutyryl-citryl-eth-to-amp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2e_11z_14z_icosatrienoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diaminobutyryl-citryl-eth-to-amp"
+      },
+      "note": "Shares (2E,11Z,14Z)-icosatrienoyl-CoA with diaminobutyryl-citryl-eth… to AMP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76409"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2e_11z_14z_icosatrienoyl_coa_kaempferol-3-o-3-o-4-co-to-coa-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2e_11z_14z_icosatrienoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "kaempferol-3-o-3-o-4-co-to-coa-null"
+      },
+      "note": "Shares (2E,11Z,14Z)-icosatrienoyl-CoA with kaempferol 3-O-(3″-O-4-co… to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76409"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5z_11z_14z_icosatrienoyl_coa_3r-11z-14z-3-hydroxyico-to-hydrogen-acceptor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5z_11z_14z_icosatrienoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3r-11z-14z-3-hydroxyico-to-hydrogen-acceptor"
+      },
+      "note": "Shares (5Z,11Z,14Z)-icosatrienoyl-CoA with (3R,11Z,14Z)-3-hydroxyico… to hydrogen acceptor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78663"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5z_11z_14z_icosatrienoyl_coa_linoelaidic-acid-to-5z-11z-14z-icosatrienoy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5z_11z_14z_icosatrienoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "linoelaidic-acid-to-5z-11z-14z-icosatrienoy"
+      },
+      "note": "Shares (5Z,11Z,14Z)-icosatrienoyl-CoA with linoelaidic acid to (5Z,11Z,14Z)-icosatrienoy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78663"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5z_11z_14z_icosatrienoyl_coa_linoelaidic-acid-to-5z-11z-14z-icosatrienoy-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5z_11z_14z_icosatrienoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "linoelaidic-acid-to-5z-11z-14z-icosatrienoy-null"
+      },
+      "note": "Shares (5Z,11Z,14Z)-icosatrienoyl-CoA with linoelaidic acid to (5Z,11Z,14Z)-icosatrienoy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78663"
+          }
+        ]
+      }
+    }
+  ]
+}

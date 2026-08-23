@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-acyl-d-amino-acid-to-di-sulfido-diiron "N-acyl-D-α-amino acid… to di-μ-sulfido-diiron" {
-  spacing 266
+  spacing 320
 
   spine at 0,0 {
     n_acyl_d_amino_acid_anion
@@ -18,55 +18,109 @@ pathway n-acyl-d-amino-acid-to-di-sulfido-diiron "N-acyl-D-α-amino acid… to d
 
   branch from carboxylic_acid_anion side left {
     carboxylic_acid_anion
-    <-> ec_3_5_1_17 [3.5.1.17] +n6_acyl_l_lysine +h2o
-    l_lysinium
+    <-> ec_3_5_1_133 [3.5.1.133] +n2_acyl_l_glutaminate +h2o
+    glutamine
   }
 
   branch from carboxylic_acid_anion side right {
     carboxylic_acid_anion
-    <-> . +phosphatidylcholine +h2o +hplus
-    choline_alfoscerate
-  }
-
-  branch from 2_oxo_monocarboxylic_acid_anion side left {
-    2_oxo_monocarboxylic_acid_anion
-    <-> . +fad +hplus +fadh2
-    2r_2_hydroxy_monocarboxylic_acid_anion
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> ec_3_5_1_1 [3.5.1.1] +l_asparagine +h2o
-    aspartate
+    <-> . +h2o +h2o2 +hplus
+    a_peroxy_acid
   }
 
   branch from nh3 side left {
     nh3
-    <-> ec_4_3_1_24 [4.3.1.24] +l_phenylalanine
-    trans_cinnamate
+    <-> ec_3_5_4_40 [3.5.4.40] +aminodeoxyfutalosinate +h2o +hplus
+    futalosinate
   }
 
-  branch from acyl_coa side right {
-    acyl_coa
-    <-> ec_2_3_1_186 [2.3.1.186] +pseudotropinium +coa +hplus
-    o_acylpseudotropine
+  branch from nh3 side right {
+    nh3
+    <-> . +2_amino_2_phenylacetonitrile +h2o +hplus
+    d_phenylglycine
   }
 
   branch from acyl_coa side left {
     acyl_coa
-    <-> . +2_monoglyceride +coa
-    dag
+    <-> . +2_acyl_sn_glycero_3_phospho_1d_myo_inositol +coa
+    1_phosphatidyl_1d_myo_inositol
   }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
-    <-> ec_1_17_7_4 [1.17.7.4] +dmapp +di_sulfido_diiron +h2o +hplus
-    2e_4_hydroxy_3_methylbut_2_enyl_diphosphate
+  branch from acyl_coa side right {
+    acyl_coa
+    <-> . +2_monolysocardiolipin +coa
+    cardiolipin
   }
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_14_15_16 [1.14.15.16] +1s_1_23_dihydroxy_24_25_26_27_tetranorcalciol +o2 +hplus +di_sulfido_diiron +h2o
-    1s_1_hydroxy_23_oxo_24_25_26_27_tetranorcalciol
+    <-> ec_1_14_15_32 [1.14.15.32] +pentalenene +o2 +hplus +di_sulfido_diiron +h2o
+    pentalen_13_al
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> . +pentalenene +o2 +hplus +di_sulfido_diiron +h2o
+    pentalen_13_ol
+  }
+
+  branch from carboxylic_acid_anion side left {
+    carboxylic_acid_anion
+    <-> . +tetra_3_sulfido_tetrairon +aldehyde +h2o +hplus
+    tetra_3_sulfido_tetrairon
+  }
+
+  branch from carboxylic_acid_anion side right {
+    carboxylic_acid_anion
+    <-> . +n6_acyl_l_lysine +h2o
+    l_lysinium
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_4_3_1_31 [4.3.1.31] +l_tryptophan
+    e_3_indol_3_yl_acrylate
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_3_5_1_110 [3.5.1.110] +z_2_methylureidoacrylate +h2o +hplus +co2
+    z_3_amino_2_methylacrylate
+  }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> ec_1_17_7_2 [1.17.7.2] +chlorophyllide_a +h2o +di_sulfido_diiron +hplus
+    71_hydroxychlorophyllide_a
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_14_15_39 [1.14.15.39] +epi_isozizaene +di_sulfido_diiron +o2 +hplus +h2o
+    albaflavenone
+  }
+
+  branch from acyl_coa side left {
+    acyl_coa
+    <-> . +2_2_dilysocardiolipin +coa
+    2_monolysocardiolipin
+  }
+
+  branch from acyl_coa side right {
+    acyl_coa
+    <-> . +malonyl-acp +hplus +co2 +coa
+    o_s_3_oxoacylpantetheine_4_phosphoryl_l_serine_1
+  }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> ec_1_14_15_9 [1.14.15.9] +spirilloxanthin +o2 +hplus +di_sulfido_diiron +h2o
+    2_oxospirilloxanthin
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_14_15_10 [1.14.15.10] +r_camphor +o2 +hplus +di_sulfido_diiron +h2o
+    6_endo_hydroxycamphor
   }
 }

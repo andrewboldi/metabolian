@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway all-trans-beta-carotene-to-hydrogen-acceptor "all-trans-beta-carotene to hydrogen acceptor" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     all_trans_beta_carotene
@@ -16,29 +16,5 @@ pathway all-trans-beta-carotene-to-hydrogen-acceptor "all-trans-beta-carotene to
     adonixanthin
     <-> ec_1_14_99_64 [1.14.99.64] +hydrogen_donor +o2 -hydrogen_acceptor -h2o
     astaxanthin
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +1_phenyl_3_3_c_glucosyl_2_4_6_trihydroxyphenyl_p
-    8_c_glucosyl_chrysin
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +8_c_glucosyl_chrysin
-    1_phenyl_3_3_c_glucosyl_2_4_6_trihydroxyphenyl_p
-  }
-
-  branch from nad side left {
-    nad
-    <-> . +nadh +acetyl_coa +4_7_10_13_hexadecatetraenoylcoa +h +2_6_9_12_15_octadecapentenoyl_coenzyme_a +h2o
-    coa
-  }
-
-  branch from nad side right {
-    nad
-    <-> . +nadh +acetyl_coa +3_6_9_12_octadecatetraenoylcoa +h +coa +h2o
-    2_5_8_11_14_eicosapentaenoyl_coenzyme_a
   }
 }

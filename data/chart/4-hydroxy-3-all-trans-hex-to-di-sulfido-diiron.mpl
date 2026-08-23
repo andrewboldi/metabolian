@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-hydroxy-3-all-trans-hex-to-di-sulfido-diiron "4-hydroxy-3-all-trans-hex… to di-μ-sulfido-diiron" {
-  spacing 292
+  spacing 280
 
   spine at 0,0 {
     4_hydroxy_3_all_trans_hexaprenylbenzoate
@@ -16,17 +16,5 @@ pathway 4-hydroxy-3-all-trans-hex-to-di-sulfido-diiron "4-hydroxy-3-all-trans-he
     2_hexaprenyl_6_methoxyphenol
     <-> ec_1_14_15_46 [1.14.15.46] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
     all_trans_6_methoxy_2_hexaprenylhydroquinone
-  }
-
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_375 [2.1.1.375] +g5_ppp5_aaca_mrna +sam +hplus
-    m7g5_ppp5_m2_aaca_mrna
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +g5_ppp5_aaca_mrna +sam +hplus
-    g5_ppp5_m2_aaca_mrna
   }
 }

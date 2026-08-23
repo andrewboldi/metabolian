@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-long-chain-fatty-acyl-to-aromatic-carboxylate "N-(long-chain-fatty-acyl)… to aromatic carboxylate" {
-  spacing 252
+  spacing 294
 
   spine at 0,0 {
     n_long_chain_fatty_acyl_l_glutamate
@@ -18,25 +18,67 @@ pathway n-long-chain-fatty-acyl-to-aromatic-carboxylate "N-(long-chain-fatty-acy
 
   branch from glutamate side left {
     glutamate
-    <-> ec_2_6_1_2 [2.6.1.2] +akg +pyruvate
-    alanine
+    <-> . +hydroxylamine +atp +adp +pi
+    glutamine_hydroxamate
   }
 
   branch from glutamate side right {
     glutamate
-    <-> ec_1_4_3_11 [1.4.3.11] +o2 +h2o +h2o2 +nh3
-    akg
+    <-> ec_2_6_1_109 [2.6.1.109] +8_amino_3_8_dideoxy_d_manno_oct_2_ulosonic_acid +akg
+    7r_6_deoxy_d_manno_oct_7_ulosuronate
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_3_6_1_67 [3.6.1.67] +7_8_dihydroneopterin_3_triphosphate +h2o +hplus
-    7_8_dihydroneopterin_3_phosphate
+    <-> ec_4_2_3_65 [4.2.3.65] +fpp
+    zingiberene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_38 [4.2.3.38] +fpp
-    e_r_bisabolene
+    <-> ec_4_2_3_63 [4.2.3.63] +fpp
+    cubenene
+  }
+
+  branch from glutamate side left {
+    glutamate
+    <-> . +s_3_ammonio_3_phenylpropanoate +akg
+    3_oxo_3_phenylpropionate
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> ec_2_6_1_110 [2.6.1.110] +dtdp_4_ammonio_2_3_4_6_tetradeoxy_d_glucose +akg
+    dtdp_4_dehydro_2_3_6_trideoxy_d_glucose
+  }
+
+  branch from l_cysteine side left {
+    l_cysteine
+    <-> ec_4_4_1_29 [4.4.1.29] +s_3_2r_phycocyanobilin_l_cysteine_2
+    3e_phycocyanobilin
+  }
+
+  branch from l_cysteine side right {
+    l_cysteine
+    <-> ec_4_4_1_29 [4.4.1.29] +3e_phycocyanobilin
+    s_3_2r_phycocyanobilin_l_cysteine_2
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_64 [4.2.3.64] +fpp +h2o
+    epicubenol
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_66 [4.2.3.66] +fpp
+    selinene
+  }
+
+  branch from arenecarbaldehyde side left {
+    arenecarbaldehyde
+    <-> ec_1_1_3_7 [1.1.3.7] +o2 +h2o2
+    aromatic_primary_alcohol
   }
 }

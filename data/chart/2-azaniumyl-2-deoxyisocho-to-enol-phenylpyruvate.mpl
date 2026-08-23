@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-azaniumyl-2-deoxyisocho-to-enol-phenylpyruvate "2-azaniumyl-2-deoxyisocho… to enol-phenylpyruvate" {
-  spacing 218
+  spacing 200
 
   spine at 0,0 {
     2_azaniumyl_2_deoxyisochorismate
@@ -16,23 +16,5 @@ pathway 2-azaniumyl-2-deoxyisocho-to-enol-phenylpyruvate "2-azaniumyl-2-deoxyiso
     keto_phenylpyruvate
     <-> ec_5_3_2_1 [5.3.2.1]
     enol_phenylpyruvate
-  }
-
-  branch from glutamine side left {
-    glutamine
-    <-> .
-    d_glutamine
-  }
-
-  branch from glutamine side right {
-    glutamine
-    <-> ec_3_5_1_133 [3.5.1.133] +n2_3_hydroxy_3_methylhexanoyl_l_glutaminate +h2o
-    3_hydroxy_3_methylhexanoate
-  }
-
-  branch from keto_phenylpyruvate side left {
-    keto_phenylpyruvate
-    <-> . +fad +hplus +fadh2
-    r_3_phenyllactate
   }
 }

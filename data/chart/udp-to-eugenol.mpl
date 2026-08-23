@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-eugenol "UDP to eugenol" {
-  spacing 228
+  spacing 192
 
   spine at 0,0 {
     udp
@@ -16,41 +16,5 @@ pathway udp-to-eugenol "UDP to eugenol" {
     o_methyleugenol
     <-> ec_2_1_1_146 [2.1.1.146] +s_adenosyl_l_homocysteine +h -eugenol
     s_s_adenosyl_l_methionine
-  }
-
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> . +udp +alpha_neu5ac_2_3_alpha_d_glc_1_2_beta_d_glc_1_3 +h
-    alpha_neu5ac_2_3_beta_d_glc_1_3_alpha_d_galnac_p
-  }
-
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> . +udp +alpha_d_glcl_1_4_beta_d_gal_1_3_alpha_d_galnac_d +h
-    beta_d_gal_1_3_alpha_d_galnac_pp_und
-  }
-
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_267 [2.1.1.267] +5_hydroxy_3_methoxyflavone +sam +hplus
-    3_5_dimethoxyflavone
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +adenosine_5_monophosphate_1 +sam +hplus
-    n1_methyladenosine_5_monophosphate_1
-  }
-
-  branch from s_s_adenosyl_l_methionine side left {
-    s_s_adenosyl_l_methionine
-    <-> ec_2_1_1_20 [2.1.1.20] +s_adenosyl_l_homocysteine +h +sarcosine
-    glycine
-  }
-
-  branch from s_s_adenosyl_l_methionine side right {
-    s_s_adenosyl_l_methionine
-    <-> ec_2_1_1_10 [2.1.1.10] +s_adenosyl_l_homocysteine +h +l_methionine
-    l_homocysteine
   }
 }

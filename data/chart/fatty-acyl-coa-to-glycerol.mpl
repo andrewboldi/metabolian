@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway fatty-acyl-coa-to-glycerol "fatty acyl-CoA to glycerol" {
-  spacing 164
+  spacing 176
 
   spine at 0,0 {
     fatty_acyl_coa
@@ -18,13 +18,25 @@ pathway fatty-acyl-coa-to-glycerol "fatty acyl-CoA to glycerol" {
 
   branch from dihydroceramide side left {
     dihydroceramide
-    <-> . +udp_d_glucose +udp +hplus
-    d_glucosyl_1_1_n_acylsphinganine
+    <-> ec_1_14_18_5 [1.14.18.5] +fe2 +o2 +hplus +iron +h2o
+    n_acylphytosphingosine
   }
 
   branch from dihydroceramide side right {
     dihydroceramide
-    <-> ec_1_14_18_5 [1.14.18.5] +fe2 +o2 +hplus +iron +h2o
-    n_acylphytosphingosine
+    <-> . +fe2 +o2 +hplus +iron +h2o
+    n_acyl_sphing_14z_enine
+  }
+
+  branch from fatty_acyl_coa side left {
+    fatty_acyl_coa
+    <-> . +sphinga_4e_8e_dienine +coa +hplus
+    n_acyl_sphinga_4_8_dienine
+  }
+
+  branch from fatty_acyl_coa side right {
+    fatty_acyl_coa
+    <-> . +1_deoxysphinganine +coa +hplus
+    n_acyl_1_deoxysphinganine
   }
 }

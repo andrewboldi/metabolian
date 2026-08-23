@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1r-5as-6r-1-4-5-5a-6-9-to-s-adenosyl-l-homocyst "(1R,5aS,6R)-1,4,5,5a,6,9-… to S-adenosyl-L-homocysteine" {
-  spacing 246
+  spacing 282
 
   spine at 0,0 {
     1r_5as_6r_1_4_5_5a_6_9_hexahydrophenazine_1_6_d
@@ -46,13 +46,49 @@ pathway 1r-5as-6r-1-4-5-5a-6-9-to-s-adenosyl-l-homocyst "(1R,5aS,6R)-1,4,5,5a,6,
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_184 [2.1.1.184] +adenosine_5_monophosphate_1 +sam +hplus
-    n6_n6_dimethyladenosine_5_monophosphate_1
+    <-> . +3_4_8_trihydroxyflavone_7_olate +sam +hplus
+    3_4_dihydroxy_8_methoxyflavone_7_olate
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_186 [2.1.1.186] +cytidine_5_monophosphate_1 +sam +hplus
-    2_o_methylcytidine_5_monophosphate_1
+    <-> . +8_hydroxyflavone_7_olate +sam +hplus
+    8_methoxyflavone_7_olate
+  }
+
+  branch from 1r_5as_6r_1_4_5_5a_6_9_hexahydrophenazine_1_6_d side right {
+    1r_5as_6r_1_4_5_5a_6_9_hexahydrophenazine_1_6_d
+    <-> . +h +h2o
+    1r_6s_6_amino_5_oxocyclohex_2_ene_1_carboxylic
+  }
+
+  branch from 1r_5as_6r_1_4_5_5a_6_9_hexahydrophenazine_1_6_d side left {
+    1r_5as_6r_1_4_5_5a_6_9_hexahydrophenazine_1_6_d
+    <-> . +h +h2o
+    1r_5as_6r_4a_hydroxy_1_4_4a_5_5a_6_9_10a_octahy
+  }
+
+  branch from sam side right {
+    sam
+    <-> . +guanosine_5_monophosphate_1 +sah +hplus
+    2_o_methylguanosine_5_monophosphate_1
+  }
+
+  branch from sam side left {
+    sam
+    <-> . +gdp +sah
+    7_methylguanosine_5_diphosphate
+  }
+
+  branch from sah side right {
+    sah
+    <-> . +2_2_4_dihydroxy_6_oxidobenzoyl_5_hydroxy_3_methy +sam +hplus
+    griseophenone_d
+  }
+
+  branch from sah side left {
+    sah
+    <-> . +griseophenone_d +sam
+    griseophenone_c
   }
 }

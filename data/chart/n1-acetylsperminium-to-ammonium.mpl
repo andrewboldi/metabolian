@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n1-acetylsperminium-to-ammonium "N1-acetylsperminium to ammonium" {
-  spacing 152
+  spacing 158
 
   spine at 0,0 {
     n1_acetylsperminium
@@ -14,5 +14,11 @@ pathway n1-acetylsperminium-to-ammonium "N1-acetylsperminium to ammonium" {
     4_acetamidobutanal
     <-> . +trimethylenediaminium +o2 +h2o -h2o2 -nh3
     3_ammoniopropanal
+  }
+
+  branch from n1_acetylsperminium side left {
+    n1_acetylsperminium
+    <-> ec_2_3_1_57 [2.3.1.57] +acetyl_coa +coa +hplus
+    spermine
   }
 }

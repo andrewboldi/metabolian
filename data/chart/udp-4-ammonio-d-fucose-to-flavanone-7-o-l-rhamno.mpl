@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-4-ammonio-d-fucose-to-flavanone-7-o-l-rhamno "UDP-4-ammonio-α-D-fucose to flavanone 7-O-[α-L-rhamno…" {
-  spacing 340
+  spacing 332
 
   spine at 0,0 {
     udp_4_ammonio_d_fucose
@@ -18,27 +18,15 @@ pathway udp-4-ammonio-d-fucose-to-flavanone-7-o-l-rhamno "UDP-4-ammonio-α-D-fuc
     flavanone_7_o_l_rhamnosyl_1_2_d_glucoside
   }
 
-  branch from glutamate side left {
-    glutamate
-    <-> ec_2_6_1_122 [2.6.1.122] +udp_2_acetamido_3_ammonio_2_3_dideoxy_d_glucopyr +akg
-    udp_2_acetamido_2_deoxy_3_dehydro_d_glucopyranos
-  }
-
-  branch from glutamate side right {
-    glutamate
-    <-> . +spermidine +atp +adp +pi +hplus
-    l_glutamylspermidine
-  }
-
   branch from udp_l_rhamnose side left {
     udp_l_rhamnose
-    <-> . +kaempferol_oxoanion +udp +hplus
-    afzelin
+    <-> . +quercitrin_7_olate +udp +hplus
+    quercetin_3_7_bis_o_l_rhamnoside
   }
 
   branch from udp_l_rhamnose side right {
     udp_l_rhamnose
-    <-> . +quercitrin_7_olate +udp +hplus
-    quercetin_3_7_bis_o_l_rhamnoside
+    <-> . +3_o_d_galactosyl_1_2_d_glucuronosyl_quillate +udp +hplus
+    3_o_l_rha_1_3_d_gal_1_2_d_glca_quillate
   }
 }

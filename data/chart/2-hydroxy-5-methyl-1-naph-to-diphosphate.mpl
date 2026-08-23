@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-hydroxy-5-methyl-1-naph-to-diphosphate "2-hydroxy-5-methyl-1-naph… to diphosphate" {
-  spacing 316
+  spacing 292
 
   spine at 0,0 {
     2_hydroxy_5_methyl_1_naphthoate
@@ -14,29 +14,5 @@ pathway 2-hydroxy-5-methyl-1-naph-to-diphosphate "2-hydroxy-5-methyl-1-naph… t
     2_hydroxy_7_methoxy_5_methyl_1_naphthoate
     <-> ec_6_2_1_43 [6.2.1.43] +atp +coa -amp -ppi
     2_hydroxy_7_methoxy_5_methyl_1_naphthoyl_coa
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +1_hydroxy_6_methoxyphenazine_n10_oxide +sam
-    1_6_dimethoxyphenazine_n5_oxide
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +malonyl-coa +acetyl_coa +sam +hplus +co2 +coa +h2o
-    4_o_demethylbarbatate
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +h2o
-    penichrysol
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +l_lysinium +atp +hplus
-    l_lysyl_5_amp
   }
 }

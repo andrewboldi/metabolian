@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway toluene-4-sulfonate-to-1-3-4-dihydroxybenzoyl "toluene-4-sulfonate to 1-(3,4-dihydroxybenzoyl)-…" {
-  spacing 252
+  spacing 264
 
   spine at 0,0 {
     toluene_4_sulfonate
@@ -18,5 +18,17 @@ pathway toluene-4-sulfonate-to-1-3-4-dihydroxybenzoyl "toluene-4-sulfonate to 1-
     3_4_dihydroxybenzoate
     <-> ec_2_4_1_136 [2.4.1.136] +udp_d_glucose -udp
     1_3_4_dihydroxybenzoyl_d_glucopyranose
+  }
+
+  branch from udp_d_glucose side left {
+    udp_d_glucose
+    <-> ec_2_4_1_360 [2.4.1.360] +3_hydro_2_hydroxy_oxodihydrochalcone +udp +hplus
+    3_d_glucopyranosyl_2_hydroxy_oxodihydrochalcone
+  }
+
+  branch from udp_d_glucose side right {
+    udp_d_glucose
+    <-> ec_2_4_1_357 [2.4.1.357] +phloretin +udp +hplus
+    phlorizin
   }
 }

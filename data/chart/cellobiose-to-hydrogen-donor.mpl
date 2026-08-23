@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cellobiose-to-hydrogen-donor "cellobiose to hydrogen donor" {
-  spacing 228
+  spacing 240
 
   spine at 0,0 {
     cellobiose
@@ -22,25 +22,37 @@ pathway cellobiose-to-hydrogen-donor "cellobiose to hydrogen donor" {
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> ec_1_5_99_15 [1.5.99.15] +5_6_7_8_tetrahydromethanopterin +hydrogen_acceptor
-    7_8_dihydromethanopterin
+    <-> ec_1_17_99_10 [1.17.99.10] +dehydrocholesterol_7 +hydrogen_acceptor +h2o
+    cholesta_5_7_dien_3_25_diol
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> . +c20_dihydroceramide +o2 +hydrogen_acceptor +h2o
-    c20_ceramide
+    <-> ec_1_17_99_10 [1.17.99.10] +3_oxocholestane +hydrogen_acceptor +h2o
+    25_hydroxy_3_oxocholestane
   }
 
-  branch from g1p side left {
-    g1p
-    <-> ec_2_7_7_69 [2.7.7.69] +gdp_l_galactose +gdp_d_glucose
-    l_galactose_1_phosphate
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> . +malonyl-coa +acetyl_coa +hydrogen_donor +sam +hplus +sah +co2 +coa +h2o
+    clavatol
   }
 
-  branch from g1p side right {
-    g1p
-    <-> ec_2_7_7_69 [2.7.7.69] +gdp_d_glucose +d_mannose_1_phosphate
-    gdp_d_mannose
+  branch from hydrogen_acceptor side right {
+    hydrogen_acceptor
+    <-> . +malonyl-coa +acetyl_coa +hydrogen_donor +nadph +hplus +co2 +nadp +coa +h2o
+    cordypyrone_a
+  }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> . +5_n_glycyl_dtmp_1 +hydrogen_acceptor +h2o +glyoxylate
+    5_aminomethyl_dump_zwitterion
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> . +malate +malonyl-coa +acetyl_coa +sam +nadph +hplus +hydrogen_acceptor +sah +co2 +nadp +coa +h2o
+    trihazone_a
   }
 }

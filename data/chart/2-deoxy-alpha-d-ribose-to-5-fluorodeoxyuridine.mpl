@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-deoxy-alpha-d-ribose-to-5-fluorodeoxyuridine "2-deoxy-alpha-D-ribose… to 5-Fluorodeoxyuridine…" {
-  spacing 204
+  spacing 180
 
   spine at 0,0 {
     2_deoxy_alpha_d_ribose_1_phosphate
@@ -16,29 +16,5 @@ pathway 2-deoxy-alpha-d-ribose-to-5-fluorodeoxyuridine "2-deoxy-alpha-D-ribose�
     adp
     <-> ec_2_7_4_6 [2.7.4.6] +h +atp +5_fluorodeoxyuridine_diphosphate -adp
     5_fluorodeoxyuridine_triphosphate
-  }
-
-  branch from phosphate side left {
-    phosphate
-    <-> . +h +adp +atp +h2o
-    3r_4s_5s_6r_2_4e_2_amino_3_hydroxyoctadec_4_en
-  }
-
-  branch from phosphate side right {
-    phosphate
-    <-> . +h +adp +atp +h2o
-    glycyl_aspartate
-  }
-
-  branch from adp side left {
-    adp
-    <-> . +h +phosphate +atp +h2o
-    glycyl_glutamate
-  }
-
-  branch from adp side right {
-    adp
-    <-> . +h +phosphate +atp +h2o
-    l_tyrosine_n_glycyl
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cholest-5-en-3-yl-to-h2o "cholest-5-en-3β-yl… to H2O" {
-  spacing 220
+  spacing 184
 
   spine at 0,0 {
     cholest_5_en_3_yl_13z_16z_docosadienoate
@@ -16,63 +16,27 @@ pathway cholest-5-en-3-yl-to-h2o "cholest-5-en-3β-yl… to H2O" {
     atp
   }
 
-  branch from 13z_16z_docosadienoyl_coa side left {
-    13z_16z_docosadienoyl_coa
-    <-> . +r_carnitine +coa
-    13z_16z_docosadienoylcarnitine
-  }
-
-  branch from 13z_16z_docosadienoyl_coa side right {
-    13z_16z_docosadienoyl_coa
-    <-> . +sn_glycerol_3_phosphate +coa
-    1_13z_16z_docosadienoyl_glycero_3_phosphate
-  }
-
-  branch from cholesterol side left {
-    cholesterol
-    <-> . +tetradecanoyl_coa +coa
-    cholesteryl_myristate
-  }
-
-  branch from cholesterol side right {
-    cholesterol
-    <-> . +heptadecanoyl_coa +coa
-    cholest_5_en_3b_yl_heptadecanoate
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    nitrite
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    r_noradrenaline
-  }
-
   branch from coa side left {
     coa
-    <-> . +r_carnitine +13z_octadecenoyl_coa
-    octadecenoyl_carnitine
+    <-> . +5z_8z_11z_14z_eicosatetraenoyl_coa +sn_glycerol_3_phosphate
+    1_5z_8z_11z_14z_eicosatetraenoyl_sn_glycero_3_ph
   }
 
   branch from coa side right {
     coa
-    <-> . +r_carnitine +trans_9_octadecenoyl_coa
-    9e_octadec_9_enoylcarnitine
+    <-> . +succinyl_coa +benzoyl_coa
+    2_succinylbenzoyl_coa
   }
 
-  branch from h2o side left {
-    h2o
-    <-> . +l_leucine +l_proline +l_arginine
-    leucyl_prolyl_arginine
+  branch from coa side left {
+    coa
+    <-> . +3s_3_hydroxydodecanoyl_coa +r_carnitine
+    3_hydroxydodecanoylcarnitine
   }
 
-  branch from h2o side right {
-    h2o
-    <-> . +l_leucine +l_serine +l_tryptophan
-    leu_ser_trp
+  branch from coa side right {
+    coa
+    <-> . +3s_hydroxytetradecanoyl_coa +r_carnitine
+    3_hydroxytetradecanoylcarnitine
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 31r-8-ethyl-71-71-dihyd-to-h2o "(31R)-8-ethyl-71,71-dihyd… to H2O" {
-  spacing 288
+  spacing 252
 
   spine at 0,0 {
     31r_8_ethyl_71_71_dihydroxy_12_methylbacterioch
@@ -16,45 +16,5 @@ pathway 31r-8-ethyl-71-71-dihyd-to-h2o "(31R)-8-ethyl-71,71-dihyd… to H2O" {
     s_adenosyl_l_methionine
     <-> ec_4_2_1_169 [4.2.1.169] +31r_8_ethyl_12_methylbacteriochlorophyllide_d -h2o
     8_ethyl_12_methyl_3_vinylbacteriochlorophyllide
-    <-> ec_3_1_1_100 [3.1.1.100] +co2 +methanol -h2o
-    chlorophyllide_a
-    <-> . +h +o2 +nadph -71_hydroxychlorophyllide_a -h2o
-    nadp
-  }
-
-  branch from s_adenosyl_l_methionine side left {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +s_methyl_glutathione
-    glutathione
-  }
-
-  branch from s_adenosyl_l_methionine side right {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +nbeta_methylajmaline
-    ajmaline
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +pravastatin_sodium +h +o2 +nadph +nadp
-    3_s_hydroxy_pravastatin
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +3_hydroxy_simvastatin_lactone_form
-    3_hydroxy_simvastatin_acid_form
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_3_1_54 [1.3.1.54] +h +cobalt_precorrin_6a +nadph
-    cobalt_precorrin_6b
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +4_hydroxymidazolam +h2o +h +o2 +nadph
-    midazolam
   }
 }

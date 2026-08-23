@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-galactosyl-1-4-d-to-l-fuc-1-2-d-gal-1-22252 "α-D-galactosyl-(1→4)-β-D-… to α-L-Fuc-(1→2)-β-D-Gal-(1→…" {
-  spacing 318
+  spacing 324
 
   spine at 0,0 {
     d_galactosyl_1_4_d_galactosyl_1_4_d_glucosylcer
@@ -16,9 +16,15 @@ pathway d-galactosyl-1-4-d-to-l-fuc-1-2-d-gal-1-22252 "α-D-galactosyl-(1→4)-�
     l_fuc_1_2_d_gal_1_3_d_galnac_1_3_d_gal_1_4_d_ga
   }
 
-  branch from d_galp_1_3_d_galpnac_1_3_d_galp_1_4_d_galp_1_4 side left {
-    d_galp_1_3_d_galpnac_1_3_d_galp_1_4_d_galp_1_4
-    <-> . +udpglcnac +udp +hplus
-    d_gal_1_3_d_glcnac_1_6_d_galnac_1_3_d_gal_1_4_d
+  branch from gdp_l_fucose side left {
+    gdp_l_fucose
+    <-> . +n_acetyl_neuraminyl_2_3_d_galactosyl_1_3_n_acety +gdp +hplus
+    n_acetylneuraminosyl_2_3_d_galactosyl_1_3_l_fuc
+  }
+
+  branch from gdp_l_fucose side right {
+    gdp_l_fucose
+    <-> . +2_fucosyllactose +gdp +hplus
+    l_fucp_1_2_d_galp_1_4_l_fucp_1_3_d_glcp
   }
 }

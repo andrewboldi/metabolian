@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-sn-phosphatidyl-l-serine-to-h2o "3-sn-phosphatidyl-L-serine to H2O" {
-  spacing 248
+  spacing 218
 
   spine at 0,0 {
     3_sn_phosphatidyl_l_serine
@@ -16,39 +16,9 @@ pathway 3-sn-phosphatidyl-l-serine-to-h2o "3-sn-phosphatidyl-L-serine to H2O" {
     atp
   }
 
-  branch from 1_acyl_sn_glycero_3_phosphoserine side left {
-    1_acyl_sn_glycero_3_phosphoserine
-    <-> ec_2_3_1_n6 [2.3.1.n6] +3_sn_phosphatidyl_l_serine +coa
-    acyl_coa
-  }
-
-  branch from 1_acyl_sn_glycero_3_phosphoserine side right {
-    1_acyl_sn_glycero_3_phosphoserine
-    <-> . +linoleoyl_coa +coa
-    1_acyl_2_linoleoyl_sn_glycero_3_phosphoserine
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_2_7_1_1 [2.7.1.1] +aldehydo_d_mannose +h +adp
-    6_o_phosphonohexopyranose
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +alpha_ribazole_5_phosphate +h +adp
-    ribazole
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_4_16_4 [3.4.16.4] +d_alanine +n_acetyl_muramoyl_l_alanyl_gamma_d_glutamyl_l_ly
-    n_acetyl_muramoyl_l_alanyl_gamma_d_glutamyl_l_ly
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_3_2_9 [3.3.2.9] +benzo_a_pyrene_4_5_oxide
-    4r_5r_benzo_a_pyrene_trans_4_5_dihydrodiol
+  branch from 3_sn_phosphatidyl_l_serine side left {
+    3_sn_phosphatidyl_l_serine
+    <-> . +c_terminal_amino_acid_phosphatidylserine_amidate +h2o
+    c_terminal_amino_acid_glycine
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-5-dichloro-4-methyl-muc-to-1r-2s-3-6-dichloro "2,5-dichloro-4-methyl-muc… to (1R,2S)-3,6-dichloro-4-me…" {
-  spacing 256
+  spacing 304
 
   spine at 0,0 {
     2_5_dichloro_4_methyl_muconolactone
@@ -18,37 +18,85 @@ pathway 2-5-dichloro-4-methyl-muc-to-1r-2s-3-6-dichloro "2,5-dichloro-4-methyl-m
 
   branch from h side left {
     h
-    <-> ec_2_2_1_12 [2.2.1.12] +co2 +r_1_3_diphenyl_pentane_1_4_dione +trans_chalcone
-    pyruvate
+    <-> ec_1_3_1_33 [1.3.1.33] +divinyl_chlorophyllide_a +nadp +2_4_divinyl_protochlorophyllide_a
+    nadph
   }
 
   branch from h side right {
     h
-    <-> . +gdp_d_erythro_alpha_d_gluco_octose +diphosphate +d_erythro_alpha_d_gluco_octopyranose1_phosphate
-    gtp
+    <-> . +n_carbamoyl_d_phenylglycine +h2o
+    phenylhydantoin
   }
 
   branch from o2 side left {
     o2
-    <-> . +h2
-    h2o
+    <-> ec_1_14_21_7 [1.14.21.7] +flaviolin +nadph +nadp +h2o
+    3_3_biflaviolin
   }
 
   branch from o2 side right {
     o2
-    <-> . +l_tryptophan +h2o
-    ttq_cofactor
+    <-> ec_1_14_21_7 [1.14.21.7] +3_8_biflaviolin +nadp +h2o +h +nadph
+    flaviolin
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_14_13_69 [1.14.13.69] +nadh +2_methylprop_1_ene +h +o2 +h2o
-    2_2_dimethyloxirane
+    <-> . +nadh +3_oxoeicosanoyl_coa +h
+    3_hydroxyicosanoyl_coa
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_14_13_69 [1.14.13.69] +nadh +h +isoprene +o2 +h2o
-    3r_3_4_epoxy_3_methylbut_1_ene
+    <-> . +nadh +h +3_oxoheneicosanoyl_coenzyme_a
+    3_hydroxyheneicosanoyl_coenzyme_a
+  }
+
+  branch from h side left {
+    h
+    <-> ec_1_3_1_75 [1.3.1.75] +nadph +3_8_divinyl_protochlorophyllide_a +protochlorophyllide_a
+    nadp
+  }
+
+  branch from h side right {
+    h
+    <-> ec_1_3_1_75 [1.3.1.75] +nadph +divinylprotochlorophyllide +nadp
+    protochlorophyllide
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_14_19_41 [1.14.19.41] +brassicasterol +nadp +h2o +h +nadph
+    24_epicampesterol
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_14_13_88 [1.14.13.88] +2r_3r_dihydroquercetin +h +nadph +nadp +h2o
+    2r_3r_dihydromyricetin
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> . +h +3_oxononadecanoyl_coenzyme_a +nad
+    3_hydroxynonadecanoyl_coenzyme_a
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +h +3_oxoheptadecanoyl_coenzyme_a +nad
+    3_hydroxyheptadecanoyl_coenzyme_a
+  }
+
+  branch from nad side left {
+    nad
+    <-> . +nadh +h +3_oxopentadecanoyl_coenzyme_a
+    3_hydroxypentadecanoyl_coenzyme_a
+  }
+
+  branch from nad side right {
+    nad
+    <-> . +nadh +h +3_oxotridecanoyl_coenzyme_a
+    3_hydroxytridecanoyl_coenzyme_a
   }
 }

@@ -4,15 +4,15 @@
 # edit the generator, not this file.
 
 pathway carbamoyl-phosphate-to-h2o "carbamoyl phosphate to H2O" {
-  spacing 180
+  spacing 184
 
   spine at 0,0 {
     carbamoyl_phosphate
-    <-> . -cyanate -phosphate
-    h
-    <-> ec_4_2_1_104 [4.2.1.104] +cyanate +h2o
-    carbamate
-    <-> ec_3_5_1_110 [3.5.1.110] +h +z_2_methyl_3_aminoperacrylic_acid -h2o
-    z_2_methylureidoperacrylic_acid
+    <-> ec_2_1_3_3 [2.1.3.3] +ornithine -phosphate
+    l_citrulline
+    <-> . +nitric_oxide +nadp +h2o -h -o2 -nadph
+    l_hydroxyarginine
+    <-> ec_3_6_3_21 [3.6.3.21] +h +adp +phosphate -l_hydroxyarginine -h2o
+    atp
   }
 }

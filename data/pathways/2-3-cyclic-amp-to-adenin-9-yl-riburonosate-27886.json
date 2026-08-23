@@ -1,0 +1,472 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-3-cyclic-amp-to-adenin-9-yl-riburonosate-27886",
+  "name": "2',3'-cyclic AMP to adenin-9-yl riburonosate",
+  "category": "nucleotide-metabolism",
+  "summary": "A 4-step route from 2',3'-cyclic AMP(1−) to adenin-9-yl riburonosate(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:27886"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:60879"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_3_cyclic_amp",
+      "name": "2',3'-cyclic AMP",
+      "formula": "C10H11N5O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:60879"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "3_amp",
+      "name": "3'-AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:60880"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "adenosine",
+      "name": "Adenosine",
+      "formula": "C10H13N5O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16335"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "5_dehydroadenosine",
+      "name": "5'-dehydroadenosine",
+      "formula": "C10H11N5O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:1958"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "adenin_9_yl_riburonosate",
+      "name": "adenin-9-yl riburonosate",
+      "short": "adenin-9-yl…",
+      "formula": "C10H10N5O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57605"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_4_16",
+      "name": "2',3'-cyclic-nucleotide 2'-phosphodiesterase",
+      "ec": [
+        "3.1.4.16"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2',3'-cyclic-nucleotide 2'-phosphodiesterase",
+      "equation": "2',3'-cyclophospho-AMP + H2O = 3'-AMP + H(+)",
+      "ec": "3.1.4.16",
+      "substrates": [
+        {
+          "metabolite": "2_3_cyclic_amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_4_16"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:27886"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27886"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "3'-AMP + H2O = adenosine + phosphate",
+      "equation": "3'-AMP + H2O = adenosine + phosphate",
+      "substrates": [
+        {
+          "metabolite": "3_amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "adenosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:27898"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27898"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "adenosine + O2 = 5'-dehydroadenosine + H2O2",
+      "equation": "adenosine + O2 = 5'-dehydroadenosine + H2O2",
+      "substrates": [
+        {
+          "metabolite": "adenosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_dehydroadenosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:18185"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18185"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "5'-dehydroadenosine + O2 + H2O = 9-riburonosyladenine + H2O2 + H(+)",
+      "equation": "5'-dehydroadenosine + O2 + H2O = 9-riburonosyladenine + H2O2 + H(+)",
+      "substrates": [
+        {
+          "metabolite": "5_dehydroadenosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "adenin_9_yl_riburonosate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:22540"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22540"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_2_3_cyclic_amp_2-3-cyclic-amp-to-9h-xanthine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_3_cyclic_amp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3-cyclic-amp-to-9h-xanthine"
+      },
+      "note": "Shares 2',3'-cyclic AMP with 2',3'-cyclic AMP to 9H-xanthine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60879"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_3_cyclic_amp_2-3-cyclic-amp-to-9h-xanthine-37191",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_3_cyclic_amp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3-cyclic-amp-to-9h-xanthine-37191"
+      },
+      "note": "Shares 2',3'-cyclic AMP with 2',3'-cyclic AMP to 9H-xanthine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60879"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_3_cyclic_amp_2-3-cyclic-amp-to-adenin-9-yl-riburonosate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_3_cyclic_amp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3-cyclic-amp-to-adenin-9-yl-riburonosate"
+      },
+      "note": "Shares 2',3'-cyclic AMP with 2',3'-cyclic AMP to adenin-9-yl riburonosate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60879"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_amp_2-3-cyclic-amp-to-adenin-9-yl-riburonosate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_amp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3-cyclic-amp-to-adenin-9-yl-riburonosate"
+      },
+      "note": "Shares 3'-AMP with 2',3'-cyclic AMP to adenin-9-yl riburonosate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60880"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_dehydroadenosine_2-3-cyclic-amp-to-adenin-9-yl-riburonosate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_dehydroadenosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3-cyclic-amp-to-adenin-9-yl-riburonosate"
+      },
+      "note": "Shares 5'-dehydroadenosine with 2',3'-cyclic AMP to adenin-9-yl riburonosate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:1958"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_adenin_9_yl_riburonosate_2-3-cyclic-amp-to-adenin-9-yl-riburonosate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "adenin_9_yl_riburonosate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3-cyclic-amp-to-adenin-9-yl-riburonosate"
+      },
+      "note": "Shares adenin-9-yl riburonosate with 2',3'-cyclic AMP to adenin-9-yl riburonosate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57605"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_adenin_9_yl_riburonosate_4-coumaroyl-coa-to-adenin-9-yl-riburonosate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "adenin_9_yl_riburonosate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-coumaroyl-coa-to-adenin-9-yl-riburonosate"
+      },
+      "note": "Shares adenin-9-yl riburonosate with 4-coumaroyl-CoA to adenin-9-yl riburonosate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57605"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_adenin_9_yl_riburonosate_4-coumaroyl-coa-to-adenin-9-yl-riburonosate-1058",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "adenin_9_yl_riburonosate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-coumaroyl-coa-to-adenin-9-yl-riburonosate-1058"
+      },
+      "note": "Shares adenin-9-yl riburonosate with 4-coumaroyl-CoA to adenin-9-yl riburonosate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57605"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -119,6 +119,44 @@
       "xrefs": {
         "chebi": "CHEBI:58210"
       }
+    },
+    {
+      "id": "2e_6e_10e_hydroxyfarnesol",
+      "name": "(2E,6E,10E)-ω-hydroxyfarnesol",
+      "short": "(2E,6E,10E)-ω-hydro…",
+      "formula": "C15H26O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:83951"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "2e_6e_farnesyl_monophosphate",
+      "name": "(2E,6E)-farnesyl monophosphate",
+      "short": "(2E,6E)-farnesyl MP",
+      "formula": "C15H25O4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:88226"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
     }
   ],
   "enzymes": [
@@ -127,13 +165,23 @@
       "name": "farnesol dehydrogenase",
       "ec": [
         "1.1.1.216"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "C9JRZ8"
+      }
     },
     {
       "id": "ec_1_14_14_128",
       "name": "farnesoate epoxidase",
       "ec": [
         "1.14.14.128"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_216",
+      "name": "farnesol kinase",
+      "ec": [
+        "2.7.1.216"
       ]
     }
   ],
@@ -287,6 +335,350 @@
           {
             "db": "Rhea",
             "id": "RHEA:43724"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(2E,6E)-farnesol + NADPH + O2 + H(+) = (2E,6E)-omega-hydroxy-farnesol + NADP(+) + H2O",
+      "equation": "(2E,6E)-farnesol + NADPH + O2 + H(+) = (2E,6E)-omega-hydroxy-farnesol + NADP(+) + H2O",
+      "substrates": [
+        {
+          "metabolite": "2_trans_6_trans_farnesol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2e_6e_10e_hydroxyfarnesol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:43984"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43984"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "farnesol kinase",
+      "equation": "(2E,6E)-farnesol + ATP = (2E,6E)-farnesyl phosphate + ADP + H(+)",
+      "ec": "2.7.1.216",
+      "substrates": [
+        {
+          "metabolite": "2_trans_6_trans_farnesol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2e_6e_farnesyl_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_216"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:61656"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61656"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_2_trans_6_trans_farnesol_2-trans-6-trans-farnesyl-to-2-cis-6-trans-farnes",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_trans_6_trans_farnesol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-trans-6-trans-farnesyl-to-2-cis-6-trans-farnes"
+      },
+      "note": "Shares (2-trans,6-trans)-farnesol with 2-trans,6-trans-farnesyl… to (2-cis,6-trans)-farnesol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16619"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_trans_6_trans_farnesol_3-d-glucuronosyl-n2-6-dis-to-5-o-phosphonato-d-r",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_trans_6_trans_farnesol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-d-glucuronosyl-n2-6-dis-to-5-o-phosphonato-d-r"
+      },
+      "note": "Shares (2-trans,6-trans)-farnesol with 3-D-glucuronosyl-N2,6-dis… to 5-O-phosphonato-α-D-ribof….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16619"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_trans_6_trans_farnesol_4-methylumbelliferyl-to-ctp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_trans_6_trans_farnesol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-methylumbelliferyl-to-ctp"
+      },
+      "note": "Shares (2-trans,6-trans)-farnesol with 4-methylumbelliferyl… to CTP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16619"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_trans_6_trans_farnesol_s-2e-6e-farnesyl-l-cy-to-s-adenosyl-l-homocystei",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_trans_6_trans_farnesol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2e-6e-farnesyl-l-cy-to-s-adenosyl-l-homocystei"
+      },
+      "note": "Shares (2-trans,6-trans)-farnesol with S-[(2E,6E)-farnesyl]-L-cy… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16619"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_trans_6_trans_farnesal_s-2e-6e-farnesyl-l-cy-to-s-adenosyl-l-homocystei",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_trans_6_trans_farnesal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2e-6e-farnesyl-l-cy-to-s-adenosyl-l-homocystei"
+      },
+      "note": "Shares (2-trans,6-trans)-farnesal with S-[(2E,6E)-farnesyl]-L-cy… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15894"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2e_6e_farnesoate_h-to-dihydroartemisinic-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2e_6e_farnesoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-dihydroartemisinic-acid"
+      },
+      "note": "Shares (2E,6E)-farnesoate with H to dihydroartemisinic acid….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83276"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2e_6e_farnesoate_s-2e-6e-farnesyl-l-cy-to-s-adenosyl-l-homocystei",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2e_6e_farnesoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2e-6e-farnesyl-l-cy-to-s-adenosyl-l-homocystei"
+      },
+      "note": "Shares (2E,6E)-farnesoate with S-[(2E,6E)-farnesyl]-L-cy… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83276"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_juvenile_hormone_iii_carboxylate_s-2e-6e-farnesyl-l-cy-to-s-adenosyl-l-homocystei",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "juvenile_hormone_iii_carboxylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2e-6e-farnesyl-l-cy-to-s-adenosyl-l-homocystei"
+      },
+      "note": "Shares juvenile hormone III carboxylate with S-[(2E,6E)-farnesyl]-L-cy… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83274"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2e_6e_farnesyl_monophosphate_2-trans-6-trans-farnesyl-to-2-cis-6-trans-farnes",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2e_6e_farnesyl_monophosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-trans-6-trans-farnesyl-to-2-cis-6-trans-farnes"
+      },
+      "note": "Shares (2E,6E)-farnesyl monophosphate with 2-trans,6-trans-farnesyl… to (2-cis,6-trans)-farnesol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:88226"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2e_6e_farnesyl_monophosphate_4-methylumbelliferyl-to-ctp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2e_6e_farnesyl_monophosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-methylumbelliferyl-to-ctp"
+      },
+      "note": "Shares (2E,6E)-farnesyl monophosphate with 4-methylumbelliferyl… to CTP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:88226"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2e_6e_farnesyl_monophosphate_chlorophyll-to-2-4-divinyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2e_6e_farnesyl_monophosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "chlorophyll-to-2-4-divinyl"
+      },
+      "note": "Shares (2E,6E)-farnesyl monophosphate with chlorophyll to 2,4-divinyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:88226"
           }
         ]
       }

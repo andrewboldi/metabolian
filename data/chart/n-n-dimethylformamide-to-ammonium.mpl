@@ -18,34 +18,10 @@ pathway n-n-dimethylformamide-to-ammonium "N,N-dimethylformamide to ammonium" {
     methyl_co
   }
 
-  branch from formate side left {
-    formate
-    <-> . +methyl_1s_2s_16e_16_ethylidene_2_formyl_4_14_dia +h2o
-    16r_deshydroxymethyl_stemmadenine
-  }
-
-  branch from formate side right {
-    formate
-    <-> . +methyl_1s_2s_16e_16_ethylidene_2_formyl_4_14_dia +h2o
-    16s_deshydroxymethyl_stemmadenine
-  }
-
   branch from methylamine side left {
     methylamine
-    <-> . +carbaryl +h2o +hplus +co2
-    1_naphthol
-  }
-
-  branch from methylamine side right {
-    methylamine
-    <-> ec_3_5_1_137 [3.5.1.137] +carbofuran +h2o +hplus +co2
-    2_2_dimethyl_2_3_dihydro_1_benzofuran_7_ol
-  }
-
-  branch from cobalt side left {
-    cobalt
-    <-> ec_1_16_99_1 [1.16.99.1] +cobalt +hydrogen_donor +atp +h2o +adp +pi +hplus
-    hydrogen_acceptor
+    <-> ec_1_5_99_16 [1.5.99.16] +2_methylaminoethyl_phosphonate +hydrogen_acceptor +h2o +hydrogen_donor
+    phosphonoacetaldehyde
   }
 
   branch from cobalt side right {
@@ -56,13 +32,25 @@ pathway n-n-dimethylformamide-to-ammonium "N,N-dimethylformamide to ammonium" {
 
   branch from nh3 side left {
     nh3
-    <-> ec_3_5_5_2 [3.5.5.2] +ricinine +h2o
-    4_methoxy_1_methyl_2_oxo_1_2_dihydropyridine_3_c
+    <-> ec_4_1_1_107 [4.1.1.107] +ldopa +o2 +h2o +hplus +h2o2 +co2
+    dopal
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_3_5_4_46 [3.5.4.46] +camp +h2o +hplus
-    3_5_cyclic_imp
+    <-> ec_4_1_1_108 [4.1.1.108] +tyrosine +o2 +h2o +hplus +h2o2 +co2
+    4_hydroxyphenyl_acetaldehyde
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_4_1_1_109 [4.1.1.109] +l_phenylalanine +o2 +h2o +hplus +h2o2 +co2
+    phenylacetaldehyde
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> . +chorismate +h2o
+    4_amino_4_deoxychorismate
   }
 }

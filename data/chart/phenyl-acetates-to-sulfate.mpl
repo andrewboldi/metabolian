@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway phenyl-acetates-to-sulfate "phenyl acetates to sulfate" {
-  spacing 188
+  spacing 212
 
   spine at 0,0 {
     phenyl_acetates
@@ -16,39 +16,63 @@ pathway phenyl-acetates-to-sulfate "phenyl acetates to sulfate" {
     phenols
   }
 
-  branch from acetate side left {
-    acetate
-    <-> ec_3_5_1_108 [3.5.1.108] +udp_3_o_3r_hydroxyacyl_n_acetyl_d_glucosamine +h2o
-    udp_3_o_3r_hydroxyacyl_d_glucosamine
-  }
-
-  branch from acetate side right {
-    acetate
-    <-> . +h2o +h2o2 +hplus
-    peracetic_acid
-  }
-
   branch from adenosine_3_5_bismonophosphate side left {
     adenosine_3_5_bismonophosphate
-    <-> ec_2_8_2_10 [2.8.2.10] +renilla_luciferin +3_phosphonato_5_adenylyl_sulfate +hplus
-    renilla_luciferyl_sulfate
+    <-> . +lauroyl_coa +h2o +hplus
+    s_dodecanoyl_4_phosphopantetheine
   }
 
   branch from adenosine_3_5_bismonophosphate side right {
     adenosine_3_5_bismonophosphate
-    <-> ec_2_8_2_11 [2.8.2.11] +n_acyl_d_galactosylsphingosine +3_phosphonato_5_adenylyl_sulfate +hplus
-    d_galactosylceramide_sulfate
+    <-> . +myristoyl_coa +h2o +hplus
+    s_tetradecanoyl_4_phosphopantetheine
   }
 
   branch from sulfate side left {
     sulfate
-    <-> ec_4_8_1_8 [4.8.1.8] +z_n_sulfonatooxy_prop_2_enimidothioate
-    2_thiiran_2_yl_acetonitrile
+    <-> . +z_4_methylsulfanylbutyl_n_sulfonatooxy_methanim +sulfur_atom +hplus
+    5_methylsulfanyl_pentanenitrile
   }
 
   branch from sulfate side right {
     sulfate
-    <-> . +z_n_sulfonatooxy_alkenimidothioate
-    alkenyl_isothiocyanate
+    <-> . +1_alkyl_2_acyl_3_3_o_sulfo_d_galactosyl_sn_glyce +h2o +hplus
+    1_alkyl_2_acyl_3_d_galactosyl_sn_glycerol
+  }
+
+  branch from 3_phosphonato_5_adenylyl_sulfate side left {
+    3_phosphonato_5_adenylyl_sulfate
+    <-> . +17_ethynylestradiol +adenosine_3_5_bismonophosphate +hplus
+    17_ethynylestradiol_3_sulfate
+  }
+
+  branch from 3_phosphonato_5_adenylyl_sulfate side right {
+    3_phosphonato_5_adenylyl_sulfate
+    <-> . +24s_24_hydroxycholesterol +adenosine_3_5_bismonophosphate +hplus
+    24s_hydroxycholesterol_3_sulfate
+  }
+
+  branch from adenosine_3_5_bismonophosphate side left {
+    adenosine_3_5_bismonophosphate
+    <-> . +palmitoyl_coa +h2o +hplus
+    s_hexadecanoyl_4_phosphopantetheine
+  }
+
+  branch from adenosine_3_5_bismonophosphate side right {
+    adenosine_3_5_bismonophosphate
+    <-> . +3_7_12_trihydroxy_5_cholestan_26_oyl_coa +h2o +hplus
+    s_3_7_12_trihydroxy_5_cholestan_26_oyl_4_phospho
+  }
+
+  branch from sulfate side left {
+    sulfate
+    <-> . +1_3_o_sulfonato_d_galactosyl_ceramide +h2o +hplus
+    galactosylceramide
+  }
+
+  branch from sulfate side right {
+    sulfate
+    <-> . +sulfosungeidine_f +hplus
+    sungeidine_a
   }
 }

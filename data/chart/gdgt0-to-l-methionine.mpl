@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway gdgt0-to-l-methionine "GDGT0 to L-methionine" {
-  spacing 216
+  spacing 192
 
   spine at 0,0 {
     gdgt0
@@ -14,29 +14,5 @@ pathway gdgt0-to-l-methionine "GDGT0 to L-methionine" {
     4_methylthio_2_oxobutanoate
     <-> . +l_kynurenine -methionine -h2o
     kynurenate
-  }
-
-  branch from hydrogen_acceptor side left {
-    hydrogen_acceptor
-    <-> . +3_iodothyronamine +iodide +hplus +hydrogen_donor
-    3_5_diiodothyronamine
-  }
-
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> . +3_iodothyronamine +iodide +hplus +hydrogen_donor
-    3_3_diiodothyronamine
-  }
-
-  branch from glutamate side left {
-    glutamate
-    <-> . +nadp +h2o +nadph +hplus
-    l_glutamic_5_semialdehyde
-  }
-
-  branch from glutamate side right {
-    glutamate
-    <-> . +l_glutamyl_l_glutamate_2 +atp +adp +pi +hplus
-    l_glutamyl_l_glutamyl_l_glutamate_3
   }
 }

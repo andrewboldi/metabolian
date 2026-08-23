@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 6-2-2-4-dihydroxy-6-met-to-aloesone "6-[2-(2,4-dihydroxy-6-met… to aloesone" {
-  spacing 200
+  spacing 152
 
   spine at 0,0 {
     6_2_2_4_dihydroxy_6_methylphenyl_2_oxoethyl_4_hy
@@ -12,57 +12,9 @@ pathway 6-2-2-4-dihydroxy-6-met-to-aloesone "6-[2-(2,4-dihydroxy-6-met… to alo
     heptaketide_pyrone_intermediate
     <-> . +h -aloesone
     co2
-    <-> . +glucose +aloesone -h2o
+    <-> . +aldehydo_d_glucose +aloesone -h2o
     aloesin
     <-> . +udp +h -aloesone
     udp_alpha_d_glucose
-  }
-
-  branch from h side left {
-    h
-    <-> . +5_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem +h2o
-    4z_4_2e_3_carboxylato_3_hydroxyprop_2_en_1_ylid
-  }
-
-  branch from h side right {
-    h
-    <-> . +dehydroascorbide +h2o
-    dehydroascorbate_bicyclic_form
-  }
-
-  branch from co2 side left {
-    co2
-    <-> ec_4_1_1_114 [4.1.1.114] +7z_pentadec_7_ene
-    3_hexyl_4_septyloxetan_2_one
-  }
-
-  branch from co2 side right {
-    co2
-    <-> . +firefly_oxyluciferin
-    firefly_oxyluciferin_dioxetanone
-  }
-
-  branch from aloesone side left {
-    aloesone
-    <-> . +malonyl_coa +h +co2 +h2o
-    coa
-  }
-
-  branch from aloesone side right {
-    aloesone
-    <-> . +malonyl_coa +h +co2 +coa +h2o
-    acetyl_coa
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +4_1e_3_carboxy_3_oxoprop_1_en_1_yl_2_3_dihydro_1
-    5_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +2_4_dinitrocyclohexan_1_one +h
-    4_6_dinitrohexanoate
   }
 }

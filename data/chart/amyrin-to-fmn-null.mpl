@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway amyrin-to-fmn-null "β-amyrin to FMN" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     amyrin
@@ -16,29 +16,5 @@ pathway amyrin-to-fmn-null "β-amyrin to FMN" {
     glycyrrhetaldehyde
     <-> . +fmnh2 +o2 -fmn -h2o -hplus
     glycyrrhetinate
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +3_3_5_triiodo_l_thyronine +nadph +3_5_diiodo_l_thyronine
-    iodide
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +iodide +3_monoiodo_l_thyronine +nadph
-    3_5_diiodo_l_thyronine
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_4_2_3_174 [4.2.3.174] +diphosphate +hedycaryol
-    2e_6e_farnesyl_diphosphate
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +mupirocin_c1
-    mupirocin_p
   }
 }

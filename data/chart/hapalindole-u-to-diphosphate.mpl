@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway hapalindole-u-to-diphosphate "hapalindole U to diphosphate" {
-  spacing 264
+  spacing 216
 
   spine at 0,0 {
     hapalindole_u
@@ -16,53 +16,5 @@ pathway hapalindole-u-to-diphosphate "hapalindole U to diphosphate" {
     hapalindole_g
     <-> . +dimethylallyl_diphosphate -diphosphate
     ambiguine_a
-  }
-
-  branch from co2 side left {
-    co2
-    <-> ec_4_1_1_114 [4.1.1.114] +11z_tricos_11_ene
-    3_decyl_4_undecyloxetan_2_one
-  }
-
-  branch from co2 side right {
-    co2
-    <-> ec_4_1_1_114 [4.1.1.114] +9z_nonadec_9_ene
-    4_nonyl_3_octyl_oxetan_2_one
-  }
-
-  branch from succinate side left {
-    succinate
-    <-> ec_2_8_3_22 [2.8.3.22] +succinyl_coa +citramalate
-    3s_citramalyl_coa
-  }
-
-  branch from succinate side right {
-    succinate
-    <-> . +2r_6z_2_hydroxy_6_hydroxymethylidene_2_5_dimeth +2_oxoglutarate +o2 +co2 +h2o
-    stipitaldehyde
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +4_4_diapolycopen_4_al
-    4_4_dihydroxy_4_4_diapolycopene
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_1_3_73 [3.1.3.73] +4_methylphenyl_cobeta_adenosylcobamide_5_phospha +phosphate
-    4_methylphenyl_cobeta_adenosylcobamide
-  }
-
-  branch from diphosphate side left {
-    diphosphate
-    <-> . +l_asparagine +h +atp
-    l_asparaginyl_adenylate
-  }
-
-  branch from diphosphate side right {
-    diphosphate
-    <-> . +4_propyl_l_proline +h +atp
-    4_propyl_l_prolyl_adenylate
   }
 }

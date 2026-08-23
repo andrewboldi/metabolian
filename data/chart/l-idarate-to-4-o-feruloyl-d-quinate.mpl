@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-idarate-to-4-o-feruloyl-d-quinate "L-idarate to 4-O-feruloyl-D-quinate" {
-  spacing 282
+  spacing 288
 
   spine at 0,0 {
     l_idarate
@@ -20,5 +20,11 @@ pathway l-idarate-to-4-o-feruloyl-d-quinate "L-idarate to 4-O-feruloyl-D-quinate
     quinate
     <-> ec_2_3_1_324 [2.3.1.324] +chlorogenate
     3_5_di_o_caffeoyl_quinate
+  }
+
+  branch from l_idarate side right {
+    l_idarate
+    <-> ec_4_2_1_40 [4.2.1.40] +h2o
+    5_dehydro_4_deoxy_d_glucarate
   }
 }

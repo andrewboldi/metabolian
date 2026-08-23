@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-oxo-24-ethyl-26-al-chol-to-nadph "3-oxo-24-ethyl-26-al-chol… to NADPH" {
-  spacing 312
+  spacing 340
 
   spine at 0,0 {
     3_oxo_24_ethyl_26_al_cholest_4_ene
@@ -22,73 +22,157 @@ pathway 3-oxo-24-ethyl-26-al-chol-to-nadph "3-oxo-24-ethyl-26-al-chol… to NADP
 
   branch from nad side left {
     nad
-    <-> . +nadh +3_carboxy_10_methylsulfanyl_2_oxodecanoate +h
-    3_7_methylthio_heptylmalic_acid
+    <-> . +nadh +isonicotinoylradical +h
+    isonicotinoyl_nad_adduct
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +3_carboxy_9_methylsulfanyl_2_oxononanoate +h
-    3_6_methylthio_hexylmalic_acid
+    <-> ec_1_14_13_246 [1.14.13.246] +nadh +h +4_4_dimethyl_5alpha_cholest_7_en_3beta_ol +o2 +h2o
+    3_hydroxy_4_methyl_5_cholest_7_ene_4_carboxylic
   }
 
   branch from nadh side left {
     nadh
-    <-> . +3_carboxy_8_methylsulfanyl_2_oxooctanoate +h +nad
-    3_5_methylthio_pentylmalic_acid
+    <-> ec_1_14_13_246 [1.14.13.246] +h +3beta_4alpha_5alpha_4_4_dimethylcholest_8_en_3 +o2 +nad +h2o
+    4beta_carboxy_4alpha_methyl_5alpha_cholesta_8_en
   }
 
   branch from nadh side right {
     nadh
-    <-> . +3_carboxy_7_methylsulfanyl_2_oxoheptanoate +h +nad
-    3_4_methylthio_butylmalic_acid
+    <-> . +h +5_amino_5_deoxy_3_dehydroshikimic_acid +nad
+    5_deoxy_5_aminoshikimic_acid
   }
 
   branch from h side left {
     h
-    <-> . +8_o_methyl_5_10_dihydroxy_fusarubinaldehdye +nadp +h2o +o2 +nadph
-    8_o_methyl_5_hydroxy_fusarubinaldehyde
+    <-> . +adp +tricosanoate +phosphate +tricosanoate +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> . +8_o_methyl_13_carboxynorjavanicin
-    8_o_methyl_fusarubinlactone
+    <-> . +17z_hexacosenoyl_coa +h2o +17z_hexacosenoate
+    coa
   }
 
   branch from o2 side left {
     o2
-    <-> . +7_hydroxy_pre_bikaverin +nadp +h2o +h +nadph
-    pre_bikaverin
+    <-> . +fadh2 +h +4_hydroxyphenylacetate +fad +3_4_dihydroxyphenylacetate +h2o
+    pmf
   }
 
   branch from o2 side right {
     o2
-    <-> . +tirandamycin_a +h +nadph +nadp +h2o
-    tirandamycin_b
+    <-> . +h +lovastatin +nadph +nadp +h2o
+    6_beta_hydroxy_lovastatin_lactone_form
   }
 
   branch from isofucosterol side left {
-    isofucosterol
-    <-> ec_1_3_1_21 [1.3.1.21] +h +nadph +nadp
-    5_dehydroavenasterol
-  }
-
-  branch from isofucosterol side right {
     isofucosterol
     <-> .
     delta24_25_sitosterol
   }
 
+  branch from isofucosterol side right {
+    isofucosterol
+    <-> . +nadp +h2o +h +o2 +nadph
+    24z_ethylidene_cholest_5_en_3beta_22s_diol
+  }
+
   branch from nadph side left {
     nadph
-    <-> ec_1_2_1_7 [1.2.1.7] +3_hydroxy_4_methyl_benzoate +h +nadp +h2o
-    3_hydroxy_4_methylbenzaldehyde
+    <-> . +h +lovastatin +o2 +nadp +h2o
+    6_exomethylene_lovastatin_lactone_form
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_2_1_7 [1.2.1.7] +3_hydroxy_5_methyl_benzoate +h +nadp +h2o
-    3_hydroxy_5_methylbenzaldehyde
+    <-> . +n_hexahydrocyclopenta_c_pyrrol_2_1h_yl_amino_car +nadp +h2o +h +o2
+    gliclazide
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> . +all_trans_beta_carotene +h +o2 +nad +h2o
+    2s_hydroxy_all_trans_beta_carotene
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +h +o2 +2s_hydroxy_all_trans_beta_carotene +nad +h2o
+    2s_2_s_dihydroxy_all_trans_beta_carotene
+  }
+
+  branch from h side left {
+    h
+    <-> . +6z_9z_12z_15z_octadecatetraenoyl_coa +h2o +coa
+    6z_9z_12z_15z_octadecatetraenoate
+  }
+
+  branch from h side right {
+    h
+    <-> . +9z_12z_15z_18z_21z_tetracosapentaenoyl_coa +h2o +coa
+    9z_12z_15z_18z_21z_tetracosapentaenoate
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_418 [1.1.1.418] +nadh +co2 +31_norcycloartanone
+    3beta_9beta_4alpha_demethyl_4alpha_carboxy_9_19
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_418 [1.1.1.418] +nadh +co2 +h +lathosterone
+    3beta_hydroxy_5alpha_cholest_7_ene_4alpha_carbox
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +l_histidine +l_proline +l_lysine
+    histidyl_prolyl_lysine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +l_histidine +l_tryptophan
+    histidyl_tryptophanyl_histidine
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +2_octaprenyl_3_methyl_6_methoxy_1_4_benzoquinol +h +nadph +nadp +h2o
+    2_octaprenyl_3_methyl_5_hydroxy_6_methoxy_1_4_be
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +pitavastatin +h2o
+    pitavastatin_m3
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +protoporphyrin_ix +h +nadph
+    protoporphyrinogen_ix
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +d_ribulose_5_phosphate +h +nadph
+    d_ribitol_5_phosphate
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +taurohyocholate +nadp +h2o +o2
+    taurochenodeoxycholate
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +hydroxy_torasemide +nadp +h2o +h +o2
+    torasemide
   }
 }

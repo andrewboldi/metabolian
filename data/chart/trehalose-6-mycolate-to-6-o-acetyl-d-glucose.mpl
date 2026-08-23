@@ -24,33 +24,33 @@ pathway trehalose-6-mycolate-to-6-o-acetyl-d-glucose "α,α'-trehalose 6-mycolat
     d_fructofuranose
   }
 
-  branch from d_glucose side right {
-    d_glucose
-    <-> ec_3_2_1_48 [3.2.1.48] +maltose +h2o
-    glucose
-  }
-
-  branch from g1p side left {
-    g1p
-    <-> . +maltohexaose +pi
-    maltopentaose
-  }
-
   branch from g1p side right {
     g1p
-    <-> . +h2o +gmp +hplus
-    gdp_d_glucose
+    <-> . +h2o +amp +hplus
+    adp_d_glucoside
   }
 
   branch from d_glucose side left {
     d_glucose
-    <-> . +sucrose
-    6_kestotriose
+    <-> . +phlorizin +h2o
+    phloretin
   }
 
   branch from d_glucose side right {
     d_glucose
-    <-> . +6_kestotriose +sucrose
-    6_6_kestotetraose
+    <-> . +quercetin_3_o_d_glucopyranoside +h2o
+    quercetin_7_olate
+  }
+
+  branch from d_glucose side left {
+    d_glucose
+    <-> . +d_glucosyl_n_hexadecanoylsphingosine +h2o
+    n_hexadecanoylsphingosine
+  }
+
+  branch from d_glucose side right {
+    d_glucose
+    <-> . +d_glucosyl_1_1_n_hexadecanoylsphinganine +h2o
+    n_hexadecanoylsphinganine
   }
 }

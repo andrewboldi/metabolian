@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway allocholate-to-7-oxolithocholate "allocholate to 7-oxolithocholate" {
-  spacing 188
+  spacing 212
 
   spine at 0,0 {
     allocholate
@@ -22,14 +22,14 @@ pathway allocholate-to-7-oxolithocholate "allocholate to 7-oxolithocholate" {
 
   branch from lithocholate side left {
     lithocholate
-    <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
-    lithocholate_sulfate
+    <-> . +udp_d_glucuronate +udp
+    lithocholic_acid_24_o_d_glucuronide
   }
 
   branch from lithocholate side right {
     lithocholate
-    <-> . +udp_d_glucuronate +udp
-    lithocholic_acid_24_o_d_glucuronide
+    <-> . +udp_d_glucuronate +udp +hplus
+    lithocholate_3_o_d_glucuronide
   }
 
   branch from chenodeoxycholate side left {
@@ -40,8 +40,8 @@ pathway allocholate-to-7-oxolithocholate "allocholate to 7-oxolithocholate" {
 
   branch from chenodeoxycholate side right {
     chenodeoxycholate
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    muricholate
+    <-> . +udp_d_glucuronate +udp
+    chenodeoxycholic_acid_24_o_d_glucuronide
   }
 
   branch from ursodeoxycholate side left {
@@ -54,5 +54,29 @@ pathway allocholate-to-7-oxolithocholate "allocholate to 7-oxolithocholate" {
     ursodeoxycholate
     <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
     ursodeoxycholate_3_sulfate
+  }
+
+  branch from chenodeoxycholate side left {
+    chenodeoxycholate
+    <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
+    chenodeoxycholate_7_sulfate
+  }
+
+  branch from chenodeoxycholate side right {
+    chenodeoxycholate
+    <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
+    chenodeoxycholate_3_sulfate
+  }
+
+  branch from ursodeoxycholate side left {
+    ursodeoxycholate
+    <-> . +h +adp +phosphate +h2o
+    atp
+  }
+
+  branch from ursodeoxycholate side right {
+    ursodeoxycholate
+    <-> . +adenosine_3_5_bisphosphate +ursodeoxycholic_acid_3_sulfate +h
+    3_phosphoadenylyl_sulfate
   }
 }

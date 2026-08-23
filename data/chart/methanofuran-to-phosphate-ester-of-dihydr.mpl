@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway methanofuran-to-phosphate-ester-of-dihydr "methanofuran… to phosphate-ester-of-dihydr…" {
-  spacing 182
+  spacing 152
 
   spine at 0,0 {
     methanofuran_biosynththesis_intermediate_mf1
@@ -14,35 +14,5 @@ pathway methanofuran-to-phosphate-ester-of-dihydr "methanofuran… to phosphate-
     methanofuran_biosynththesis_intermediate_mf3
     <-> .
     phosphate_ester_of_dihydrofuran
-  }
-
-  branch from phosphate side left {
-    phosphate
-    <-> . +h +adp +dopamine_3_o_glucuronide +dopamine_3_o_glucuronide +h2o
-    atp
-  }
-
-  branch from phosphate side right {
-    phosphate
-    <-> . +h +adp +atp +h2o
-    dopamine_glucuronide
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    d_ornithine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    d_proline
-  }
-
-  branch from phosphate_ester_of_dihydrofuran side left {
-    phosphate_ester_of_dihydrofuran
-    <-> . +h2o
-    2_4_substituted_furan_phosphate
   }
 }

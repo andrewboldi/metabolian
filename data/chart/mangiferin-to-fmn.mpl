@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway mangiferin-to-fmn "mangiferin to FMN" {
-  spacing 218
+  spacing 242
 
   spine at 0,0 {
     mangiferin
@@ -36,26 +36,26 @@ pathway mangiferin-to-fmn "mangiferin to FMN" {
 
   branch from 3_dehydro_d_glucose side left {
     3_dehydro_d_glucose
-    <-> . +glucose +nadp +h
-    nadph
-  }
-
-  branch from 3_dehydro_d_glucose side right {
-    3_dehydro_d_glucose
     <-> . +h2o
     3_dehydrolevoglucosan
   }
 
+  branch from 3_dehydro_d_glucose side right {
+    3_dehydro_d_glucose
+    <-> . +alpha_d_glucose +nadp +h
+    nadph
+  }
+
   branch from glucose side left {
     glucose
-    <-> ec_3_2_1_220 [3.2.1.220] +ipecoside +h2o
-    ipecoside_aglycone
+    <-> . +5_methoxypodophyllotoxin +h2o
+    6_methoxypodophyllotoxin_7_glucoside
   }
 
   branch from glucose side right {
     glucose
-    <-> ec_3_2_1_220 [3.2.1.220] +deacetylipecoside +h2o
-    deacetylipecoside_aglycone
+    <-> . +h +4_4_5_5_6_6_hexahydroxydiphenate +h2o
+    pedunculagin
   }
 
   branch from 2_hydroxydaidzein side left {
@@ -64,15 +64,39 @@ pathway mangiferin-to-fmn "mangiferin to FMN" {
     2_hydroxy_2_3_dihydrodaidzein
   }
 
-  branch from fmn side right {
-    fmn
-    <-> . +prostaglandin_e1 +fmnh2 +o2 +h2o +hplus
-    20_hydroxyprostaglandin_e1
+  branch from h side right {
+    h
+    <-> . +hexadecanoate +h2o2 +1_pentadecene +h2o
+    co2
   }
 
-  branch from fmn side left {
-    fmn
-    <-> . +prostaglandin_a1 +fmnh2 +o2 +h2o +hplus
-    20_hydroxyprostaglandin_a1
+  branch from h side left {
+    h
+    <-> . +9z_octadecenoate +h2o2 +co2 +h2o
+    1e_8z_heptadecadiene
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +neocarrabiose +neocarrabiose_sulfate
+    neocarratetraose_4_o_sulfate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_4_2_3_38 [4.2.3.38] +diphosphate +alpha_bisabolol
+    2e_6e_farnesyl_diphosphate
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> . +pedunculagin
+    ellagic_acid
+  }
+
+  branch from glucose side left {
+    glucose
+    <-> ec_3_2_1_57 [3.2.1.57] +isomaltose +h2o
+    2r_3s_4s_5r_6s_2_hydroxymethyl_6_2r_3s_4s_5r_6r
   }
 }

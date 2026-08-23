@@ -1,0 +1,566 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "dihydroisopentenyldehydro-to-hydrogen-donor-4696",
+  "name": "dihydroisopentenyldehydro… to hydrogen donor",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from dihydroisopentenyldehydrorhodopin to hydrogen donor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:46968"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:87163"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "dihydroisopentenyldehydrorhodopin",
+      "name": "dihydroisopentenyldehydrorhodopin",
+      "short": "dihydroisopentenyld…",
+      "formula": "C45H66O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:87163"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "isopentenyldehydrorhodopin",
+      "name": "isopentenyldehydrorhodopin",
+      "short": "isopentenyldehydror…",
+      "formula": "C45H64O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:87162"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "dmapp",
+      "name": "Dimethylallyl diphosphate (DMAPP)",
+      "short": "Dimethylallyl PP…",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57623"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "dihydrobisanhydrobacterioruberin",
+      "name": "dihydrobisanhydrobacterioruberin",
+      "short": "dihydrobisanhydroba…",
+      "formula": "C50H74O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:87161"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "bisanhydrobacterioruberin",
+      "name": "bisanhydrobacterioruberin",
+      "short": "bisanhydrobacterior…",
+      "formula": "C50H72O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:87121"
+      }
+    },
+    {
+      "id": "bacterioruberin",
+      "name": "bacterioruberin",
+      "formula": "C50H76O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:49388"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_3_99_37",
+      "name": "1-hydroxy-2-isopentenylcarotenoid 3,4-desaturase",
+      "ec": [
+        "1.3.99.37"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_150",
+      "name": "lycopene elongase/hydratase (dihydrobisanhydrobacterioruberin-forming)",
+      "ec": [
+        "2.5.1.150"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_161",
+      "name": "bisanhydrobacterioruberin hydratase",
+      "ec": [
+        "4.2.1.161"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "1-hydroxy-2-isopentenylcarotenoid 3,4-desaturase",
+      "equation": "dihydroisopentenyldehydrorhodopin + A = isopentenyldehydrorhodopin + AH2",
+      "ec": "1.3.99.37",
+      "substrates": [
+        {
+          "metabolite": "dihydroisopentenyldehydrorhodopin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "isopentenyldehydrorhodopin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_99_37"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:46968"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46968"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "lycopene elongase/hydratase (dihydrobisanhydrobacterioruberin-forming)",
+      "equation": "isopentenyldehydrorhodopin + dimethylallyl diphosphate + H2O = dihydrobisanhydrobacterioruberin + diphosphate",
+      "ec": "2.5.1.150",
+      "substrates": [
+        {
+          "metabolite": "isopentenyldehydrorhodopin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dmapp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dihydrobisanhydrobacterioruberin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_150"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:58192"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58192"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "1-hydroxy-2-isopentenylcarotenoid 3,4-desaturase",
+      "equation": "dihydrobisanhydrobacterioruberin + A = bisanhydrobacterioruberin + AH2",
+      "ec": "1.3.99.37",
+      "substrates": [
+        {
+          "metabolite": "dihydrobisanhydrobacterioruberin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "bisanhydrobacterioruberin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_99_37"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:46972"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46972"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "bisanhydrobacterioruberin hydratase",
+      "equation": "bacterioruberin = bisanhydrobacterioruberin + 2 H2O",
+      "ec": "4.2.1.161",
+      "substrates": [
+        {
+          "metabolite": "bacterioruberin",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "bisanhydrobacterioruberin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_161"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:38375"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38375"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_dihydroisopentenyldehydrorhodopin_dihydroisopentenyldehydro-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dihydroisopentenyldehydrorhodopin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dihydroisopentenyldehydro-to-hydrogen-donor"
+      },
+      "note": "Shares dihydroisopentenyldehydrorhodopin with dihydroisopentenyldehydro… to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87163"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dihydroisopentenyldehydrorhodopin_h2-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dihydroisopentenyldehydrorhodopin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h2-to-diphosphate"
+      },
+      "note": "Shares dihydroisopentenyldehydrorhodopin with H2 to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87163"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dihydroisopentenyldehydrorhodopin_h2-to-diphosphate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dihydroisopentenyldehydrorhodopin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h2-to-diphosphate-null"
+      },
+      "note": "Shares dihydroisopentenyldehydrorhodopin with H2 to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87163"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_isopentenyldehydrorhodopin_dihydroisopentenyldehydro-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isopentenyldehydrorhodopin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dihydroisopentenyldehydro-to-hydrogen-donor"
+      },
+      "note": "Shares isopentenyldehydrorhodopin with dihydroisopentenyldehydro… to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87162"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dihydrobisanhydrobacterioruberin_dihydroisopentenyldehydro-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dihydrobisanhydrobacterioruberin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dihydroisopentenyldehydro-to-hydrogen-donor"
+      },
+      "note": "Shares dihydrobisanhydrobacterioruberin with dihydroisopentenyldehydro… to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87161"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_bisanhydrobacterioruberin_bacterioruberin-to-c-p-473",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "bisanhydrobacterioruberin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "bacterioruberin-to-c-p-473"
+      },
+      "note": "Shares bisanhydrobacterioruberin with bacterioruberin to C.p.473.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87121"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_bisanhydrobacterioruberin_bacterioruberin-to-c-p-473-47268",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "bisanhydrobacterioruberin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "bacterioruberin-to-c-p-473-47268"
+      },
+      "note": "Shares bisanhydrobacterioruberin with bacterioruberin to C.p.473.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87121"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_bisanhydrobacterioruberin_dihydroisopentenyldehydro-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "bisanhydrobacterioruberin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dihydroisopentenyldehydro-to-hydrogen-donor"
+      },
+      "note": "Shares bisanhydrobacterioruberin with dihydroisopentenyldehydro… to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87121"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_bacterioruberin_bacterioruberin-to-c-p-473",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "bacterioruberin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "bacterioruberin-to-c-p-473"
+      },
+      "note": "Shares bacterioruberin with bacterioruberin to C.p.473.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:49388"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_bacterioruberin_bacterioruberin-to-c-p-473-47268",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "bacterioruberin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "bacterioruberin-to-c-p-473-47268"
+      },
+      "note": "Shares bacterioruberin with bacterioruberin to C.p.473.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:49388"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_bacterioruberin_dihydroisopentenyldehydro-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "bacterioruberin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dihydroisopentenyldehydro-to-hydrogen-donor"
+      },
+      "note": "Shares bacterioruberin with dihydroisopentenyldehydro… to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:49388"
+          }
+        ]
+      }
+    }
+  ]
+}

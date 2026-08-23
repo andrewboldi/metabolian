@@ -236,34 +236,6 @@
       }
     },
     {
-      "id": "gtp",
-      "name": "GTP",
-      "formula": "C10H12N5O14P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:37565"
-      }
-    },
-    {
-      "id": "3_r_glyceryl_diphospho_5_guanosine",
-      "name": "3-[(R)-glyceryl]-diphospho-5'-guanosine",
-      "short": "3-[(R)-glyceryl]-di…",
-      "formula": "C13H16N5O14P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:147306"
-      }
-    },
-    {
-      "id": "ppi",
-      "name": "Diphosphate (PPi)",
-      "formula": "HO7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:33019"
-      }
-    },
-    {
       "id": "l_tartrate",
       "name": "L-tartrate",
       "formula": "C4H4O6",
@@ -273,13 +245,13 @@
       }
     },
     {
-      "id": "2_hydroxy_3_oxopropanoate",
-      "name": "2-hydroxy-3-oxopropanoate",
-      "short": "2-hydroxy-3-oxoprop…",
-      "formula": "C3H3O4",
-      "charge": -1,
+      "id": "pg2",
+      "name": "2-Phospho-D-glycerate",
+      "short": "2-Phospho-D-glycera…",
+      "formula": "C3H4O7P",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:57978"
+        "chebi": "CHEBI:58289"
       }
     },
     {
@@ -308,21 +280,30 @@
       "name": "purine-nucleoside phosphorylase",
       "ec": [
         "2.4.2.1"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q8IV20"
+      }
     },
     {
       "id": "ec_5_4_2_7",
       "name": "phosphopentomutase",
       "ec": [
         "5.4.2.7"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q96G03"
+      }
     },
     {
       "id": "ec_4_1_2_4",
       "name": "deoxyribose-phosphate aldolase",
       "ec": [
         "4.1.2.4"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q9Y315"
+      }
     },
     {
       "id": "ec_1_2_1_9",
@@ -360,13 +341,6 @@
       ]
     },
     {
-      "id": "ec_2_7_7_106",
-      "name": "3-phospho-D-glycerate guanylyltransferase",
-      "ec": [
-        "2.7.7.106"
-      ]
-    },
-    {
       "id": "ec_4_1_1_73",
       "name": "tartrate decarboxylase",
       "ec": [
@@ -374,10 +348,10 @@
       ]
     },
     {
-      "id": "ec_1_1_1_60",
-      "name": "2-hydroxy-3-oxopropionate reductase",
+      "id": "ec_2_7_1_165",
+      "name": "glycerate 2-kinase",
       "ec": [
-        "1.1.1.60"
+        "2.7.1.165"
       ]
     },
     {
@@ -796,55 +770,6 @@
     },
     {
       "id": "r10",
-      "name": "3-phospho-D-glycerate guanylyltransferase",
-      "equation": "(2R)-3-phosphoglycerate + GTP + H(+) = 3-[(R)-glyceryl]-diphospho-5'-guanosine + diphosphate",
-      "ec": "2.7.7.106",
-      "substrates": [
-        {
-          "metabolite": "pg3",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "gtp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_r_glyceryl_diphospho_5_guanosine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_7_7_106"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 10,
-      "xrefs": {
-        "rhea": "RHEA:63440"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:63440"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r11",
       "name": "tartrate decarboxylase",
       "equation": "(2R,3R)-tartrate + H(+) = (R)-glycerate + CO2",
       "ec": "4.1.1.73",
@@ -874,7 +799,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 11,
+      "pathwayStep": 10,
       "xrefs": {
         "rhea": "RHEA:13317"
       },
@@ -889,27 +814,27 @@
       }
     },
     {
-      "id": "r12",
-      "name": "2-hydroxy-3-oxopropionate reductase",
-      "equation": "(R)-glycerate + NAD(+) = 2-hydroxy-3-oxopropanoate + NADH + H(+)",
-      "ec": "1.1.1.60",
+      "id": "r11",
+      "name": "glycerate 2-kinase",
+      "equation": "(R)-glycerate + ATP = (2R)-2-phosphoglycerate + ADP + H(+)",
+      "ec": "2.7.1.165",
       "substrates": [
         {
           "metabolite": "d_glycerate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nad",
+          "metabolite": "atp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "2_hydroxy_3_oxopropanoate",
+          "metabolite": "pg2",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadh",
+          "metabolite": "adp",
           "stoichiometry": 1
         },
         {
@@ -919,26 +844,26 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_1_1_60"
+          "enzyme": "ec_2_7_1_165"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 12,
+      "pathwayStep": 11,
       "xrefs": {
-        "rhea": "RHEA:18845"
+        "rhea": "RHEA:27377"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:18845"
+            "id": "RHEA:27377"
           }
         ]
       }
     },
     {
-      "id": "r13",
+      "id": "r12",
       "name": "tartrate dehydrogenase",
       "equation": "(2R,3S)-tartrate + NAD(+) = 2-hydroxy-3-oxosuccinate + NADH + H(+)",
       "ec": "1.1.1.93",
@@ -972,7 +897,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 13,
+      "pathwayStep": 12,
       "xrefs": {
         "rhea": "RHEA:16457"
       },
@@ -987,7 +912,7 @@
       }
     },
     {
-      "id": "r14",
+      "id": "r13",
       "name": "tartrate dehydrogenase",
       "equation": "tartrate + NAD(+) = 2-hydroxy-3-oxosuccinate + NADH + H(+)",
       "ec": "1.1.1.93",
@@ -1021,7 +946,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 14,
+      "pathwayStep": 13,
       "xrefs": {
         "rhea": "RHEA:18853"
       },
@@ -1031,6 +956,272 @@
           {
             "db": "Rhea",
             "id": "RHEA:18853"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_purine_nucleobase_2-amino-2-deoxy-d-gluconi-to-2-dehydro-3-deoxy-d",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "purine_nucleobase"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-amino-2-deoxy-d-gluconi-to-2-dehydro-3-deoxy-d"
+      },
+      "note": "Shares purine nucleobase with 2-amino-2-deoxy-D-gluconi… to 2-dehydro-3-deoxy-D-arabi….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:26386"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_purine_nucleobase_3-d-ribofuranosyl-uric-to-5-o-phosphonato-d-ribo",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "purine_nucleobase"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-d-ribofuranosyl-uric-to-5-o-phosphonato-d-ribo"
+      },
+      "note": "Shares purine nucleobase with 3-(β-D-ribofuranosyl)uric… to 5-O-phosphonato-α-D-ribof….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:26386"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxy_d_ribose_1_phosphate_2-deoxyguanosine-to-2-hydroxy-3-oxopropanoate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxy_d_ribose_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-deoxyguanosine-to-2-hydroxy-3-oxopropanoate"
+      },
+      "note": "Shares 2-deoxy-α-D-ribose 1-phosphate with 2'-deoxyguanosine… to 2-hydroxy-3-oxopropanoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57259"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxy_d_ribose_1_phosphate_dadp-to-adenine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxy_d_ribose_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dadp-to-adenine"
+      },
+      "note": "Shares 2-deoxy-α-D-ribose 1-phosphate with dADP to adenine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57259"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxy_d_ribose_1_phosphate_ditp-to-hypoxanthine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxy_d_ribose_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ditp-to-hypoxanthine"
+      },
+      "note": "Shares 2-deoxy-α-D-ribose 1-phosphate with dITP to hypoxanthine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57259"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxy_d_ribose_1_phosphate_dttp-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxy_d_ribose_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dttp-to-hydrogen-donor"
+      },
+      "note": "Shares 2-deoxy-α-D-ribose 1-phosphate with dTTP to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57259"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxy_d_ribofuranose_5_phosphate_aldehydo-d-allose-to-5-hydroxyisouric-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxy_d_ribofuranose_5_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aldehydo-d-allose-to-5-hydroxyisouric-acid"
+      },
+      "note": "Shares 2-deoxy-D-ribofuranose 5-phosphate with aldehydo-D-allose to 5-hydroxyisouric acid.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62877"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxy_d_ribofuranose_5_phosphate_dudp-to-2-deoxy-d-ribofuranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxy_d_ribofuranose_5_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dudp-to-2-deoxy-d-ribofuranose"
+      },
+      "note": "Shares 2-deoxy-D-ribofuranose 5-phosphate with dUDP to 2-deoxy-D-ribofuranose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62877"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxy_d_ribofuranose_5_phosphate_pyridine-3-4-diol-to-cobamamide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxy_d_ribofuranose_5_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "pyridine-3-4-diol-to-cobamamide"
+      },
+      "note": "Shares 2-deoxy-D-ribofuranose 5-phosphate with pyridine-3,4-diol to cobamamide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62877"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxy_d_ribofuranose_5_phosphate_pyrimidine-ribonucleoside-to-d-ribofuranose-5-ph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxy_d_ribofuranose_5_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "pyrimidine-ribonucleoside-to-d-ribofuranose-5-ph"
+      },
+      "note": "Shares 2-deoxy-D-ribofuranose 5-phosphate with pyrimidine ribonucleoside… to D-ribofuranose 5-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62877"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxy_d_ribofuranose_5_phosphate_quinine-to-5-hydroxyisouric-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxy_d_ribofuranose_5_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "quinine-to-5-hydroxyisouric-acid"
+      },
+      "note": "Shares 2-deoxy-D-ribofuranose 5-phosphate with quinine to 5-hydroxyisouric acid.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62877"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxy_d_ribofuranose_5_phosphate_thymidine-3-monophosphate-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxy_d_ribofuranose_5_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "thymidine-3-monophosphate-to-succinate"
+      },
+      "note": "Shares 2-deoxy-D-ribofuranose 5-phosphate with thymidine 3'-monophosphate to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62877"
           }
         ]
       }

@@ -4,59 +4,15 @@
 # edit the generator, not this file.
 
 pathway 9z-hexadecenoate-to-h2o-null "(9Z)-hexadecenoate to H2O" {
-  spacing 234
+  spacing 152
 
   spine at 0,0 {
     9z_hexadecenoate
-    <-> . +glycerophosphatidylethanolamine +h -h2o
-    a_1_acyl_sn_glycero_3_phosphoethanolamine_n_c16
+    <-> . +h +sn_glycerol_3_phosphate -h2o
+    2_9z_hexadecenoyl_sn_glycero_3_phosphate
     <-> . +9z_hexadecenoate +h -h2o
-    phosphatidylethanolamine_dihexadec_9enoyl_n_c16
-    <-> ec_4_1_1_65 [4.1.1.65] +co2 -phosphatidylserine_dihexadec_9_enoyl_n_c16_1
-    h
-    <-> . +adp +phosphatidylserine_dihexadec_9_enoyl_n_c16_1 +phosphate -phosphatidylserine_dihexadec_9_enoyl_n_c16_1 -h2o
-    atp
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_4_13_23 [3.4.13.23] +glycine +s_4_hydroxy_3_methylbutan_2_yl_l_cysteine
-    s_4_hydroxy_3_methylbutan_2_yl_l_cysteinylglycin
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +4_hydroxymethyl_3_5_methylhexanoyl_5h_furan_2_on
-    3_hydroxy_2_oxopropyl_7_methyl_3_oxooctanoate
-  }
-
-  branch from h side left {
-    h
-    <-> . +2r_3_1_5_6_dihydropyridin_2_yl_2_hydroxy_2_3_1e
-    n_3r_6_5_6_dihydropyridin_2_yl_7_hydroxy_8_2e_1
-  }
-
-  branch from h side right {
-    h
-    <-> . +e_caffeate +pyruvate +h2o
-    ground_state_fungal_oxyluciferin
-  }
-
-  branch from phosphatidylserine_dihexadec_9_enoyl_n_c16_1 side left {
-    phosphatidylserine_dihexadec_9_enoyl_n_c16_1
-    <-> . +cmp +h +l_serine
+    1_2_di_9z_hexadecenoyl_sn_glycero_3_phosphate
+    <-> . +cmp +h -h2o
     cdp_1_2_di_9z_hexadecenoyl_sn_glycerol
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_2_7_1_151 [2.7.1.151] +1d_myo_inositol_1_3_4_5_6_pentakisphosphate +h +adp
-    1d_myo_inositol_1_3_4_5_tetrakisphosphate
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_47 [3.6.3.47] +h +adp +phosphate +h2o
-    octadecanoyl_coa
   }
 }

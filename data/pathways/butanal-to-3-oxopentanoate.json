@@ -148,89 +148,6 @@
       "xrefs": {
         "chebi": "CHEBI:43474"
       }
-    },
-    {
-      "id": "tazarotenic_acid",
-      "name": "tazarotenic acid",
-      "formula": "C19H17NO2S",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:73129"
-      }
-    },
-    {
-      "id": "o2",
-      "name": "O2",
-      "formula": "O2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM735438"
-      }
-    },
-    {
-      "id": "tazarotenic_acid_sulfoxide",
-      "name": "Tazarotenic acid sulfoxide",
-      "short": "Tazarotenic acid…",
-      "formula": "C19H17NO3S",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM819723"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "WATER"
-      }
-    },
-    {
-      "id": "3_methylcyclohexanone",
-      "name": "3-methylcyclohexanone",
-      "short": "3-methylcyclohexano…",
-      "formula": "C7H12O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:195391"
-      }
-    },
-    {
-      "id": "3_methylcyclohexanol",
-      "name": "3-Methylcyclohexanol",
-      "formula": "C7H14O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:195740"
-      }
-    },
-    {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM10"
-      }
-    },
-    {
-      "id": "z_but_2_enol",
-      "name": "(Z)-but-2-enol",
-      "formula": "C4H8O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1106171"
-      }
-    },
-    {
-      "id": "nad",
-      "name": "NAD",
-      "formula": "C21H26N7O14P2",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM8"
-      }
     }
   ],
   "enzymes": [
@@ -239,20 +156,16 @@
       "name": "alcohol dehydrogenase [NAD(P)(+)]",
       "ec": [
         "1.1.1.71"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P16152"
+      }
     },
     {
       "id": "ec_6_4_1_6",
       "name": "acetone carboxylase",
       "ec": [
         "6.4.1.6"
-      ]
-    },
-    {
-      "id": "ec_1_1_1_206",
-      "name": "tropinone reductase I",
-      "ec": [
-        "1.1.1.206"
       ]
     }
   ],
@@ -408,149 +321,137 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "Reaction MNXR172553",
-      "substrates": [
-        {
-          "metabolite": "tazarotenic_acid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "tazarotenic_acid_sulfoxide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR172553"
+      "id": "xt_butan_2_ol_but-1-en-3-ol-to-1-hydroxybutan-2-one",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "butan_2_ol"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "but-1-en-3-ol-to-1-hydroxybutan-2-one"
+      },
+      "note": "Shares butan-2-ol with but-1-en-3-ol to 1-hydroxybutan-2-one.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR172553"
+            "db": "ChEBI",
+            "id": "CHEBI:35687"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "tropinone reductase I",
-      "ec": "1.1.1.206",
-      "substrates": [
-        {
-          "metabolite": "3_methylcyclohexanone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_methylcyclohexanol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_1_1_206"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR172562"
+      "id": "xt_butan_2_ol_n-methyl-2-methylpropan-1-to-2-methylpropanoyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "butan_2_ol"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "n-methyl-2-methylpropan-1-to-2-methylpropanoyl"
+      },
+      "note": "Shares butan-2-ol with N-methyl-2-methylpropan-1… to 2-methylpropanoyl….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR172562"
+            "db": "ChEBI",
+            "id": "CHEBI:35687"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "alcohol dehydrogenase [NAD(P)(+)]",
-      "ec": "1.1.1.71",
-      "substrates": [
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "z_but_2_enol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "butan_2_ol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_1_1_71"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "metanetx": "MNXR181324"
+      "id": "xt_butan_2_one_5-nitroanthranilate-to-fumarate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "butan_2_one"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "5-nitroanthranilate-to-fumarate"
+      },
+      "note": "Shares butan-2-one with 5-nitroanthranilate to fumarate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR181324"
+            "db": "ChEBI",
+            "id": "CHEBI:28398"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_butan_2_one_but-1-en-3-ol-to-1-hydroxybutan-2-one",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "butan_2_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "but-1-en-3-ol-to-1-hydroxybutan-2-one"
+      },
+      "note": "Shares butan-2-one with but-1-en-3-ol to 1-hydroxybutan-2-one.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28398"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_butan_2_one_h-to-2s-3e-2-hydroxypent-3-e",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "butan_2_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-2s-3e-2-hydroxypent-3-e"
+      },
+      "note": "Shares butan-2-one with H to (2S,3E)-2-hydroxypent-3-e….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28398"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_butan_2_one_neocasomorphin-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "butan_2_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "neocasomorphin-to-fmn"
+      },
+      "note": "Shares butan-2-one with neocasomorphin to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28398"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-5-didehydrojasmonate-to-diphosphate "4,5-didehydrojasmonate to diphosphate" {
-  spacing 258
+  spacing 270
 
   spine at 0,0 {
     4_5_didehydrojasmonate
@@ -20,31 +20,43 @@ pathway 4-5-didehydrojasmonate-to-diphosphate "4,5-didehydrojasmonate to diphosp
 
   branch from jasmonic_acid_anion side left {
     jasmonic_acid_anion
-    <-> ec_6_3_2_52 [6.3.2.52] +diphosphate +a_jasmonoyl_glutamine +h +amp +atp
-    l_glutamine
+    <-> ec_6_3_2_52 [6.3.2.52] +l_alanine +atp +h +amp +7_epi_jasmonoyl_l_alanine
+    diphosphate
   }
 
   branch from jasmonic_acid_anion side right {
     jasmonic_acid_anion
-    <-> ec_6_3_2_52 [6.3.2.52] +diphosphate +a_jasmonoyl_l_isoleucine +h +amp +l_isoleucine
-    atp
-  }
-
-  branch from n_jasmonyl_l_amino_acid_anion side left {
-    n_jasmonyl_l_amino_acid_anion
-    <-> ec_1_14_14_48 [1.14.14.48] +fmnh2 +o2 +fmn +h2o +hplus
-    n_12_hydroxyjasmonyl_l_amino_acid_anion
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> ec_2_5_1_74 [2.5.1.74] +all_trans_nonaprenyl_diphosphate +1_4_dihydroxy_2_naphthoate +hplus +co2
-    2_demethylmenaquinol_9
+    <-> ec_3_1_1_1 [3.1.1.1] +h +methanol +h2o
+    methyl_jasmonate
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_74 [2.5.1.74] +all_trans_decaprenyl_diphosphate +1_4_dihydroxy_2_naphthoate +hplus +co2
-    2_demethylmenaquinol_10
+    <-> ec_4_2_3_229 [4.2.3.229] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    ent_beyerene
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_6_3_2_63 [6.3.2.63] +n_3_carboxypropanoyl_n_hydroxyputrescine +atp +amp +hplus
+    putrebactin
+  }
+
+  branch from jasmonic_acid_anion side left {
+    jasmonic_acid_anion
+    <-> ec_2_1_1_141 [2.1.1.141] +s_adenosyl_l_homocysteine +methyl_jasmonate
+    s_adenosyl_l_methionine
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +n_3_carboxypropanoyl_n_hydroxyputrescine +atp +amp +hplus
+    pre_putrebactin
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    sobralene
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway naphthalene-1-2-4-8-tetrol-to-2-succinyl-6-hydro "naphthalene-1,2,4,8-tetrol to 2-succinyl-6-hydroxycyclo…" {
-  spacing 328
+  spacing 340
 
   spine at 0,0 {
     naphthalene_1_2_4_8_tetrol
@@ -16,5 +16,17 @@ pathway naphthalene-1-2-4-8-tetrol-to-2-succinyl-6-hydro "naphthalene-1,2,4,8-te
     h
     <-> ec_2_2_1_9 [2.2.1.9] +2_oxoglutarate +isochorismate -pyruvate -2_succinyl_6_hydroxycyclohexa_2_4_diene_1_carbox
     co2
+  }
+
+  branch from naphthalene_1_2_4_8_tetrol side left {
+    naphthalene_1_2_4_8_tetrol
+    <-> . +h2o
+    juglone
+  }
+
+  branch from naphthalene_1_2_4_8_tetrol side right {
+    naphthalene_1_2_4_8_tetrol
+    <-> . +o2 +h2o +hplus
+    8_hydroxy_1_4_dioxo_1_4_dihydronaphthalen_2_olat
   }
 }

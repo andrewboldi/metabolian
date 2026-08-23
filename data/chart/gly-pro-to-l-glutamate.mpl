@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway gly-pro-to-l-glutamate "Gly-Pro to L-glutamate" {
-  spacing 264
+  spacing 240
 
   spine at 0,0 {
     gly_pro
@@ -14,29 +14,5 @@ pathway gly-pro-to-l-glutamate "Gly-Pro to L-glutamate" {
     s_1_pyrroline_5_carboxylate
     <-> ec_1_2_1_88 [1.2.1.88] +nadp +h2o -nadph -hplus
     glutamate
-  }
-
-  branch from glycine side left {
-    glycine
-    <-> . +icosanoate +h2o
-    n_icosanoylglycinate
-  }
-
-  branch from glycine side right {
-    glycine
-    <-> . +cerotate +h2o
-    n_hexacosanoylglycinate
-  }
-
-  branch from glutamate side left {
-    glutamate
-    <-> ec_6_2_1_39 [6.2.1.39] +holo-acp +atp +adp +pi
-    o_s_l_glutamyl_pantetheine_4_phosphoryl_serine_1
-  }
-
-  branch from glutamate side right {
-    glutamate
-    <-> . +4_amino_l_phenylalanine +akg
-    3_4_aminophenyl_pyruvate
   }
 }

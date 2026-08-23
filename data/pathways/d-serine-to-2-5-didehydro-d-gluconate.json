@@ -127,33 +127,6 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
-    },
-    {
-      "id": "d_gluconate",
-      "name": "D-gluconate",
-      "formula": "C6H11O7",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:18391"
-      }
-    },
-    {
-      "id": "fad",
-      "name": "FAD",
-      "formula": "C27H30N9O15P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:57692"
-      }
-    },
-    {
-      "id": "fadh2",
-      "name": "FADH2",
-      "formula": "C27H33N9O15P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:58307"
-      }
     }
   ],
   "enzymes": [
@@ -296,46 +269,225 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "D-gluconate + FAD + H(+) = 2-dehydro-D-gluconate + FADH2",
-      "equation": "D-gluconate + FAD + H(+) = 2-dehydro-D-gluconate + FADH2",
-      "substrates": [
-        {
-          "metabolite": "d_gluconate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fad",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_dehydro_d_gluconate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fadh2",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:30779"
+      "id": "xt_d_glyceraldehyde_1-monolinolein-to-glycerol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glyceraldehyde"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1-monolinolein-to-glycerol"
+      },
+      "note": "Shares D-glyceraldehyde with 1-monolinolein to glycerol.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:30779"
+            "db": "ChEBI",
+            "id": "CHEBI:17378"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glyceraldehyde_acetylacetone-to-dehydro-coenzyme-f420-0",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glyceraldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetylacetone-to-dehydro-coenzyme-f420-0"
+      },
+      "note": "Shares D-glyceraldehyde with acetylacetone to dehydro coenzyme F420-0.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17378"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glyceraldehyde_d-fructofuranose-to-glycolaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glyceraldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-fructofuranose-to-glycolaldehyde"
+      },
+      "note": "Shares D-glyceraldehyde with β-D-fructofuranose… to glycolaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17378"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glyceraldehyde_d-galactono-1-4-lactone-to-l-serine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glyceraldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-galactono-1-4-lactone-to-l-serine"
+      },
+      "note": "Shares D-glyceraldehyde with D-galactono-1,4-lactone to L-serine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17378"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glyceraldehyde_d-gluconate-to-2-hydroxy-3-oxopropanoate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glyceraldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-gluconate-to-2-hydroxy-3-oxopropanoate"
+      },
+      "note": "Shares D-glyceraldehyde with D-gluconate to 2-hydroxy-3-oxopropanoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17378"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_dehydro_d_gluconate_cellobiose-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_dehydro_d_gluconate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cellobiose-to-hydrogen-donor"
+      },
+      "note": "Shares 2-dehydro-D-gluconate with cellobiose to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16808"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_dehydro_d_gluconate_d-gluconate-to-2-hydroxy-3-oxopropanoate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_dehydro_d_gluconate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-gluconate-to-2-hydroxy-3-oxopropanoate"
+      },
+      "note": "Shares 2-dehydro-D-gluconate with D-gluconate to 2-hydroxy-3-oxopropanoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16808"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_dehydro_d_gluconate_phosphate-monoester-to-6-phospho-2-dehydro-d-glu",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_dehydro_d_gluconate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phosphate-monoester-to-6-phospho-2-dehydro-d-glu"
+      },
+      "note": "Shares 2-dehydro-D-gluconate with phosphate monoester… to 6-phospho-2-dehydro-D-glu….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16808"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_5_didehydro_d_gluconate_cellobiose-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_5_didehydro_d_gluconate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cellobiose-to-hydrogen-donor"
+      },
+      "note": "Shares 2,5-didehydro-D-gluconate with cellobiose to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:11449"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_5_didehydro_d_gluconate_l-idonate-to-5-dehydro-d-gluconate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_5_didehydro_d_gluconate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-idonate-to-5-dehydro-d-gluconate"
+      },
+      "note": "Shares 2,5-didehydro-D-gluconate with L-idonate to 5-dehydro-D-gluconate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:11449"
           }
         ]
       }

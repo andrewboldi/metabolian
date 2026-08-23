@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-atp "UDP to ATP" {
-  spacing 264
+  spacing 228
 
   spine at 0,0 {
     udp
@@ -16,41 +16,5 @@ pathway udp-to-atp "UDP to ATP" {
     udp_alpha_d_galactose
     <-> . +glucosyl_heptosyl_3_kdo2_lipid_a_bisphosphate_e +h +adp -atp
     glucosyl_heptosyl_3_kdo2_lipid_a_phosphate_e_col
-  }
-
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> . +udp +benzoylsalicin +h
-    salicyl_benzoate
-  }
-
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> . +udp +salicyl_salicylate_glucoside +h
-    salicyl_salicylate
-  }
-
-  branch from udp_alpha_d_galactose side left {
-    udp_alpha_d_galactose
-    <-> . +udp +3_n_methylgalacamine +h
-    hyosamine
-  }
-
-  branch from udp_alpha_d_galactose side right {
-    udp_alpha_d_galactose
-    <-> . +udp +galacamine +h
-    2_deoxystreptamine
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    ps_20_2_11z_14z_18_2_9z_12z
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    ps_20_2_11z_14z_18_3_9z_12z_15z
   }
 }

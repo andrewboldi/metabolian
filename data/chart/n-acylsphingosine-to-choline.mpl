@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-acylsphingosine-to-choline "N-acylsphingosine to choline" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     n_acylsphingosine
@@ -14,17 +14,5 @@ pathway n-acylsphingosine-to-choline "N-acylsphingosine to choline" {
     1_alkyl_sn_glycero_3_phosphocholine
     <-> . +h2o -choline -hplus
     1_alkyl_sn_glycerol_3_phosphate
-  }
-
-  branch from n_acylsphingosine side left {
-    n_acylsphingosine
-    <-> . +xylosyl_d_ceramide_d18_1_4e +cholesterol
-    cholesteryl_d_xyloside
-  }
-
-  branch from n_acylsphingosine side right {
-    n_acylsphingosine
-    <-> . +udp_d_xylose +udp +hplus
-    xylosyl_d_ceramide_d18_1_4e
   }
 }

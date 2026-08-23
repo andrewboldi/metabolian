@@ -152,25 +152,6 @@
       "xrefs": {
         "metanetx": "WATER"
       }
-    },
-    {
-      "id": "l_cysteinate_group",
-      "name": "L-cysteinate group",
-      "formula": "C3H5NO2S",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:76913"
-      }
-    },
-    {
-      "id": "c_terminal_s_carbamoyl_l_cysteinate",
-      "name": "C-terminal S-carbamoyl-L-cysteinate",
-      "short": "C-terminal…",
-      "formula": "C4H6N2O3S",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:139126"
-      }
     }
   ],
   "enzymes": [
@@ -328,46 +309,137 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "C-terminal L-cysteinyl-[HypE protein] + carbamoyl adenylate = C-terminal S-carboxamide-...",
-      "equation": "C-terminal L-cysteinyl-[HypE protein] + carbamoyl adenylate = C-terminal S-carboxamide-L-cysteinyl-[HypE protein] + AMP + H(+)",
-      "substrates": [
-        {
-          "metabolite": "l_cysteinate_group",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "carbamoyl_adenylate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "c_terminal_s_carbamoyl_l_cysteinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "amp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:55640"
+      "id": "xt_carbamoyl_adenylate_carbamoyl-adenylate-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "carbamoyl_adenylate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "carbamoyl-adenylate-to-phosphate"
+      },
+      "note": "Shares carbamoyl adenylate with carbamoyl adenylate to phosphate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:55640"
+            "db": "ChEBI",
+            "id": "CHEBI:73674"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_carbamoyl_adenylate_kanamycin-b-to-kanamycin-a-3-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "carbamoyl_adenylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "kanamycin-b-to-kanamycin-a-3-phosphate"
+      },
+      "note": "Shares carbamoyl adenylate with kanamycin B to kanamycin A 3'-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:73674"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tobramycin_5-end-triphospho-adenosi-to-s-adenosyl-l-homocys",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tobramycin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-end-triphospho-adenosi-to-s-adenosyl-l-homocys"
+      },
+      "note": "Shares tobramycin with 5'-end triphospho-adenosi… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:73678"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tobramycin_n5-l-1-carboxyethyl-l-o-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tobramycin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n5-l-1-carboxyethyl-l-o-to-ammonium"
+      },
+      "note": "Shares tobramycin with N5-(L-1-carboxyethyl)-L-o… to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:73678"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nebramycin_5_n-demethyl-desepoxymaytan-to-7a-hydroxy-o-carbam",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nebramycin_5"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-demethyl-desepoxymaytan-to-7a-hydroxy-o-carbam"
+      },
+      "note": "Shares nebramycin 5' with N-Demethyl-desepoxymaytan… to 7a-Hydroxy-o-carbamoyl-de….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:73679"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nebramycin_5_n5-l-1-carboxyethyl-l-o-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nebramycin_5"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n5-l-1-carboxyethyl-l-o-to-ammonium"
+      },
+      "note": "Shares nebramycin 5' with N5-(L-1-carboxyethyl)-L-o… to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:73679"
           }
         ]
       }

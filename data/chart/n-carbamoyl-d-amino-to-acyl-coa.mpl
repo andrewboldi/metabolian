@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-carbamoyl-d-amino-to-acyl-coa "N-carbamoyl-D-α-amino… to acyl-CoA" {
-  spacing 284
+  spacing 340
 
   spine at 0,0 {
     n_carbamoyl_d_amino_acid_anion
@@ -20,87 +20,28 @@ pathway n-carbamoyl-d-amino-to-acyl-coa "N-carbamoyl-D-α-amino… to acyl-CoA" 
     acyl_coa
   }
 
-  branch from d_amino_acid side left {
-    d_amino_acid
-    <-> ec_3_1_1_96 [3.1.1.96] +3_d_aminoacyl_adenylyl_zwitterionic_group +h2o +hplus
-    amp_3_end_1
-  }
 
-  branch from d_amino_acid side right {
-    d_amino_acid
-    <-> ec_1_4_5_1 [1.4.5.1] +1_4_benzoquinones +h2o +2_oxo_monocarboxylic_acid_anion +nh3
-    hydroquinones
-  }
 
-  branch from nh3 side left {
-    nh3
-    <-> ec_1_4_1_21 [1.4.1.21] +aspartate +nadp +h2o +nadph +hplus
-    oxaloacetate
-  }
 
-  branch from nh3 side right {
-    nh3
-    <-> ec_1_4_1_21 [1.4.1.21] +nad +h2o +oxaloacetate +nadh +hplus
-    aspartate
-  }
 
-  branch from 2_oxo_monocarboxylic_acid_anion side left {
-    2_oxo_monocarboxylic_acid_anion
-    <-> ec_1_2_1_49 [1.2.1.49] +nadp +h2o +nadph +hplus
-    2_oxo_aldehyde
-  }
 
-  branch from 2_oxo_monocarboxylic_acid_anion side right {
-    2_oxo_monocarboxylic_acid_anion
-    <-> ec_1_1_1_337 [1.1.1.337] +nad +nadh +hplus
-    2s_2_hydroxy_monocarboxylic_acid_anion
-  }
 
-  branch from hydrogen_donor side left {
-    hydrogen_donor
-    <-> . +2_aminophenol +hydrogen_acceptor +o2 +h2o
-    2_aminophenoxazin_3_one
-  }
 
-  branch from hydrogen_donor side right {
-    hydrogen_donor
-    <-> ec_1_3_99_19 [1.3.99.19] +quinoline_4_carboxylate +hydrogen_acceptor +h2o
-    2_oxo_1_2_dihydroquinoline_4_carboxylate
-  }
 
-  branch from aldehyde side left {
-    aldehyde
-    <-> ec_1_1_1_2 [1.1.1.2] +nadp +nadph +hplus
-    primary_alcohol
-  }
 
-  branch from aldehyde side right {
-    aldehyde
-    <-> ec_1_4_3_21 [1.4.3.21] +o2 +h2o +h2o2 +nh3
-    primary_methyl_ammonium_ion
-  }
 
-  branch from carboxylic_acid_anion side left {
-    carboxylic_acid_anion
-    <-> ec_3_5_1_15 [3.5.1.15] +h2o +aspartate
-    n_acyl_l_aspartate
-  }
 
-  branch from carboxylic_acid_anion side right {
-    carboxylic_acid_anion
-    <-> ec_3_5_1_82 [3.5.1.82] +n_acyl_d_glutamates +h2o
-    d_glutamate
-  }
 
-  branch from acyl_coa side left {
-    acyl_coa
-    <-> ec_2_3_1_15 [2.3.1.15] +sn_glycerol_3_phosphate +coa
-    1_acyl_sn_glycerol_3_phosphate
-  }
 
-  branch from acyl_coa side right {
-    acyl_coa
-    <-> ec_2_3_1_26 [2.3.1.26] +cholesterol +coa
-    cholesteryl_ester
-  }
+
+
+
+
+
+
+
+
+
+
+
 }

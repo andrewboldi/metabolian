@@ -101,34 +101,6 @@
       "xrefs": {
         "chebi": "CHEBI:33019"
       }
-    },
-    {
-      "id": "all_trans_pentaprenyl_diphosphate",
-      "name": "all-trans-pentaprenyl diphosphate",
-      "short": "all-trans-pentapren…",
-      "formula": "C25H41O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:57907"
-      }
-    },
-    {
-      "id": "somaliensene_a",
-      "name": "somaliensene A",
-      "formula": "C25H40",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:209271"
-      }
-    },
-    {
-      "id": "somaliensene_b",
-      "name": "(−)-somaliensene B",
-      "formula": "C25H40",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:209277"
-      }
     }
   ],
   "enzymes": [
@@ -144,21 +116,10 @@
       "name": "ADP-D-ribose pyrophosphorylase",
       "ec": [
         "2.7.7.96"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_216",
-      "name": "somaliensene A synthase",
-      "ec": [
-        "4.2.3.216"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_217",
-      "name": "somaliensene B synthase",
-      "ec": [
-        "4.2.3.217"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q9UKK9"
+      }
     }
   ],
   "reactions": [
@@ -300,85 +261,27 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "somaliensene A synthase",
-      "equation": "(2E,6E,10E,14E)-geranylfarnesyl diphosphate = somaliensene A + diphosphate",
-      "ec": "4.2.3.216",
-      "substrates": [
-        {
-          "metabolite": "all_trans_pentaprenyl_diphosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "somaliensene_a",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_216"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:78279"
+      "id": "xt_5_phosphonato_d_ribose_cyclic_1_2_phosphate_2-hydroxyethylphosphonic-to-d-ribose-1-5-bisphos",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_phosphonato_d_ribose_cyclic_1_2_phosphate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2-hydroxyethylphosphonic-to-d-ribose-1-5-bisphos"
+      },
+      "note": "Shares 5-phosphonato-α-D-ribose cyclic-1,2-phosphate with 2-hydroxyethylphosphonic… to α-D-ribose 1,5-bisphospha….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:78279"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "somaliensene B synthase",
-      "equation": "(2E,6E,10E,14E)-geranylfarnesyl diphosphate = (-)-somaliensene B + diphosphate",
-      "ec": "4.2.3.217",
-      "substrates": [
-        {
-          "metabolite": "all_trans_pentaprenyl_diphosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "somaliensene_b",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_217"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:78283"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:78283"
+            "db": "ChEBI",
+            "id": "CHEBI:68687"
           }
         ]
       }

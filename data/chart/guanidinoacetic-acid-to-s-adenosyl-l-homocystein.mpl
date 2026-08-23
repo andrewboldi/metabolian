@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway guanidinoacetic-acid-to-s-adenosyl-l-homocystein "guanidinoacetic acid to S-adenosyl-L-homocysteine" {
-  spacing 256
+  spacing 250
 
   spine at 0,0 {
     guanidinoacetic_acid
@@ -16,15 +16,9 @@ pathway guanidinoacetic-acid-to-s-adenosyl-l-homocystein "guanidinoacetic acid t
     betaine
   }
 
-  branch from sah side left {
-    sah
-    <-> . +cytidine_5_monophosphate_1 +sam +hplus
-    5_methylcytidine_5_monophosphate_1
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +sam +5_methylcytidine_5_monophosphate_1 +hplus
-    cytidine_5_monophosphate_1
+  branch from guanidinoacetic_acid side left {
+    guanidinoacetic_acid
+    <-> ec_2_7_3_1 [2.7.3.1] +atp +adp +hplus
+    phosphonatoguanidiniumylacetate
   }
 }

@@ -35,4 +35,28 @@ pathway 5-formimidoyltetrahydrofo-to-methyl-com "5-formimidoyltetrahydrofo… to
     <-> ec_1_13_11_47 [1.13.11.47] +3_hydroxyquinolin_4_1h_one +o2 +hplus
     n_formylanthranilate
   }
+
+  branch from glycine side right {
+    glycine
+    <-> . +glycyldehydrophenylalanine +h2o
+    2_3_didehydrophenylalanine
+  }
+
+  branch from glycine side left {
+    glycine
+    <-> . +n_arachidonoylglycinate +h2o
+    arachidonate
+  }
+
+  branch from carbon_monoxide side right {
+    carbon_monoxide
+    <-> ec_1_13_11_48 [1.13.11.48] +3_hydroxy_2_methylquinolin_4_1h_one +o2 +hplus
+    n_acetylanthranilate
+  }
+
+  branch from carbon_monoxide side left {
+    carbon_monoxide
+    <-> ec_1_14_15_20 [1.14.15.20] +ferroheme_b +di_sulfido_diiron +o2 +hplus +fe2 +di_sulfido_diiron +h2o
+    biliverdin
+  }
 }

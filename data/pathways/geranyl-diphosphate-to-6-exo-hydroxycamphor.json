@@ -137,34 +137,6 @@
       "xrefs": {
         "chebi": "CHEBI:58349"
       }
-    },
-    {
-      "id": "2_cis_6_trans_farnesyl_diphosphate",
-      "name": "2-cis,6-trans-farnesyl diphosphate",
-      "short": "2-cis,6-trans-farne…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:162247"
-      }
-    },
-    {
-      "id": "z_bisabolene",
-      "name": "(Z)-α-bisabolene",
-      "formula": "C15H24",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:49241"
-      }
-    },
-    {
-      "id": "cadinene",
-      "name": "γ-cadinene",
-      "formula": "C15H24",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:180496"
-      }
     }
   ],
   "enzymes": [
@@ -385,73 +357,49 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "(2Z,6E)-farnesyl diphosphate = (Z)-alpha-bisabolene + diphosphate",
-      "equation": "(2Z,6E)-farnesyl diphosphate = (Z)-alpha-bisabolene + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "2_cis_6_trans_farnesyl_diphosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "z_bisabolene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:68844"
+      "id": "xt_r_camphor_di-sulfido-diiron-to-r-2-2-3-trimethyl-5-ox",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_camphor"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "di-sulfido-diiron-to-r-2-2-3-trimethyl-5-ox"
+      },
+      "note": "Shares (R)-camphor with di-μ-sulfido-diiron to [(R)-2,2,3-trimethyl-5-ox….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:68844"
+            "db": "ChEBI",
+            "id": "CHEBI:15396"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "(2Z,6E)-farnesyl diphosphate = gamma-cadinene + diphosphate",
-      "equation": "(2Z,6E)-farnesyl diphosphate = gamma-cadinene + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "2_cis_6_trans_farnesyl_diphosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "cadinene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:68848"
+      "id": "xt_r_camphor_n-acyl-d-amino-acid-to-di-sulfido-diiron",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_camphor"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acyl-d-amino-acid-to-di-sulfido-diiron"
+      },
+      "note": "Shares (R)-camphor with N-acyl-D-α-amino acid… to di-μ-sulfido-diiron.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:68848"
+            "db": "ChEBI",
+            "id": "CHEBI:15396"
           }
         ]
       }

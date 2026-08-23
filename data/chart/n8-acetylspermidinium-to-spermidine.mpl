@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n8-acetylspermidinium-to-spermidine "N8-acetylspermidinium to spermidine" {
-  spacing 194
+  spacing 176
 
   spine at 0,0 {
     n8_acetylspermidinium
@@ -14,23 +14,5 @@ pathway n8-acetylspermidinium-to-spermidine "N8-acetylspermidinium to spermidine
     spermine
     <-> ec_1_5_3_13 [1.5.3.13] +o2 +h2o -spermidine -h2o2
     3_ammoniopropanal
-  }
-
-  branch from spermine side left {
-    spermine
-    <-> ec_2_3_1_57 [2.3.1.57] +acetyl_coa +coa +hplus
-    n1_acetylsperminium
-  }
-
-  branch from 5_s_methyl_5_thioadenosine side right {
-    5_s_methyl_5_thioadenosine
-    <-> . +n1_methylpseudouridine_5_monophosphate_1 +sam +hplus
-    n1_methyl_n3_3s_3_amino_3_carboxypropyl_pseudour
-  }
-
-  branch from 5_s_methyl_5_thioadenosine side left {
-    5_s_methyl_5_thioadenosine
-    <-> ec_2_5_1_161 [2.5.1.161] +sam +nad +hplus
-    4ar_7s_2_adenosyl_5_diphospho_5_ribosyl_7_amino
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway stearoyl-coa-to-sn-glycerol-3-phosphate "stearoyl-CoA to sn-glycerol 3-phosphate" {
-  spacing 158
+  spacing 164
 
   spine at 0,0 {
     stearoyl_coa
@@ -20,9 +20,15 @@ pathway stearoyl-coa-to-sn-glycerol-3-phosphate "stearoyl-CoA to sn-glycerol 3-p
     palmitoyl_ethanolamide
   }
 
-  branch from 2_stearoyl_sn_glycero_3_phosphocholine side left {
-    2_stearoyl_sn_glycero_3_phosphocholine
-    <-> . +1_oleoyl_2_stearoyl_sn_glycero_3_phosphocholine +1_nonadecanoyl_sn_glycero_3_phosphocholine
-    1_nonadecanoyl_2_oleoyl_sn_glycero_3_phosphochol
+  branch from stearoyl_coa side left {
+    stearoyl_coa
+    <-> . +1_heptadecanoyl_sn_glycero_3_phosphate +coa
+    1_heptadecanoyl_2_stearoyl_sn_glycero_3_phosphat
+  }
+
+  branch from stearoyl_coa side right {
+    stearoyl_coa
+    <-> . +fad +hplus +fadh2
+    trans_2_octadecenoyl_coa
   }
 }

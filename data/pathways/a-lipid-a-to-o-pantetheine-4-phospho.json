@@ -94,71 +94,6 @@
       "xrefs": {
         "chebi": "CHEBI:64479"
       }
-    },
-    {
-      "id": "l_seryl_amp",
-      "name": "L-seryl-AMP",
-      "formula": "C13H18N6O9P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:61231"
-      }
-    },
-    {
-      "id": "o_s_l_seryl_pantetheine_4_phosphoryl_l_serine_re",
-      "name": "O-[S-(L-seryl)pantetheine-4'-phosphoryl]-L-serine residue",
-      "short": "O-[S-(L-seryl)pante…",
-      "formula": "C17H31N4O10PS",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:144955"
-      }
-    },
-    {
-      "id": "amp",
-      "name": "AMP",
-      "formula": "C10H12N5O7P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:456215"
-      }
-    },
-    {
-      "id": "l_tryptophan",
-      "name": "L-tryptophan",
-      "formula": "C11H12N2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:57912"
-      }
-    },
-    {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:30616"
-      }
-    },
-    {
-      "id": "o_s_l_tryptophyl_pantetheine_4_phosphoryl_l_seri",
-      "name": "O-[S-(L-tryptophyl)pantetheine-4'-phosphoryl]-L-serine residue",
-      "short": "O-[S-(L-tryptophyl)…",
-      "formula": "C25H36N5O9PS",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:144956"
-      }
-    },
-    {
-      "id": "ppi",
-      "name": "Diphosphate (PPi)",
-      "formula": "HO7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:33019"
-      }
     }
   ],
   "enzymes": [
@@ -174,13 +109,6 @@
       "name": "acyl-[acyl-carrier-protein]--phospholipid O-acyltransferase",
       "ec": [
         "2.3.1.40"
-      ]
-    },
-    {
-      "id": "ec_6_2_1_73",
-      "name": "L-tryptophan--[L-tryptophyl-carrier protein] ligase",
-      "ec": [
-        "6.2.1.73"
       ]
     }
   ],
@@ -313,95 +241,93 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "L-seryl-5'-AMP + holo-[peptidyl-carrier protein] = L-seryl-[peptidyl-carrier protein] +...",
-      "equation": "L-seryl-5'-AMP + holo-[peptidyl-carrier protein] = L-seryl-[peptidyl-carrier protein] + AMP",
-      "substrates": [
-        {
-          "metabolite": "l_seryl_amp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "holo-acp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "o_s_l_seryl_pantetheine_4_phosphoryl_l_serine_re",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "amp",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:61708"
+      "id": "xt_2_acyl_sn_glycero_3_phosphoethanolamine_1-2-diacyl-sn-glycero-3-p-to-hexadecanoate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_acyl_sn_glycero_3_phosphoethanolamine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-diacyl-sn-glycero-3-p-to-hexadecanoate"
+      },
+      "note": "Shares 2-acyl-sn-glycero-3-phosphoethanolamine with 1,2-diacyl-sn-glycero-3-p… to hexadecanoate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:61708"
+            "db": "ChEBI",
+            "id": "CHEBI:65213"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "L-tryptophan--[L-tryptophyl-carrier protein] ligase",
-      "equation": "holo-[peptidyl-carrier protein] + L-tryptophan + ATP = L-tryptophyl-[peptidyl-carrier protein] + AMP + diphosphate",
-      "ec": "6.2.1.73",
-      "substrates": [
-        {
-          "metabolite": "holo-acp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_tryptophan",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "o_s_l_tryptophyl_pantetheine_4_phosphoryl_l_seri",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "amp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_6_2_1_73"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:61788"
+      "id": "xt_2_acyl_sn_glycero_3_phosphoethanolamine_1-2-dioleoyl-sn-glycero-3-to-1-stearoyl-2-acyl-s",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_acyl_sn_glycero_3_phosphoethanolamine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-dioleoyl-sn-glycero-3-to-1-stearoyl-2-acyl-s"
+      },
+      "note": "Shares 2-acyl-sn-glycero-3-phosphoethanolamine with 1,2-dioleoyl-sn-glycero-3… to 1-stearoyl-2-acyl-sn-glyc….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:61788"
+            "db": "ChEBI",
+            "id": "CHEBI:65213"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_acyl_sn_glycero_3_phosphoethanolamine_decanoate-ester-to-1-2-diacyl-3-o-d-glc",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_acyl_sn_glycero_3_phosphoethanolamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "decanoate-ester-to-1-2-diacyl-3-o-d-glc"
+      },
+      "note": "Shares 2-acyl-sn-glycero-3-phosphoethanolamine with decanoate ester to 1,2-diacyl-3-O-(β-D-Glc-(….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:65213"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_acyl_sn_glycero_3_phosphoethanolamine_lipid-a-4-e-coli-to-fatty-acyl-monophosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_acyl_sn_glycero_3_phosphoethanolamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "lipid-a-4-e-coli-to-fatty-acyl-monophosphate"
+      },
+      "note": "Shares 2-acyl-sn-glycero-3-phosphoethanolamine with lipid A(4−) (E. coli) to fatty acyl monophosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:65213"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dtdp-4-oxo-2-6-dideoxy-d-to-dtdp-3-4-dioxo-2-6-d "dTDP-4-oxo-2,6-dideoxy-D-… to dTDP-3,4-dioxo-2,6-dideox…" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     dtdp_4_oxo_2_6_dideoxy_d_allose
@@ -14,17 +14,5 @@ pathway dtdp-4-oxo-2-6-dideoxy-d-to-dtdp-3-4-dioxo-2-6-d "dTDP-4-oxo-2,6-dideoxy
     dtdp_1_ester_with_6s_5_6_dihydro_4_hydroxy_6_met
     <-> .
     dtdp_3_4_dioxo_2_6_dideoxy_l_glucose
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +cholesterol +phosphate +cholesterol +h2o
-    atp
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    cholesterol
   }
 }

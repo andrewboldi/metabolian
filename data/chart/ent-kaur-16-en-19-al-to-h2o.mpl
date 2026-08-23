@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway ent-kaur-16-en-19-al-to-h2o "ent-kaur-16-en-19-al to H2O" {
-  spacing 218
+  spacing 284
 
   spine at 0,0 {
     ent_kaur_16_en_19_al
@@ -26,67 +26,133 @@ pathway ent-kaur-16-en-19-al-to-h2o "ent-kaur-16-en-19-al to H2O" {
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_13_74 [1.14.13.74] +loganin +h2o +h +o2 +nadph
-    7_deoxyloganin
+    <-> . +5z_8z_11z_14z_eicosatetraenoate +h +o2 +nadph +h2o
+    15_r_hydroxy_5z_8z_11z_13e_eicosatetraenoate
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_13_7 [1.14.13.7] +h +o2 +nadph +toluene +h2o
-    2_hydroxytoluene
-  }
-
-  branch from ent_kaur_16_en_19_oate side left {
-    ent_kaur_16_en_19_oate
-    <-> . +h +o2 +nadph +nadp +h2o
-    steviol
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_1_4_1_11 [1.4.1.11] +nadh +h +5s_5_amino_3_oxohexanoate +nh4 +nad
-    3r_5r_3_5_diammoniohexanoate
+    <-> . +h +13_14_dihydro_15_oxo_lipoxin_a4 +nadph
+    13_14_dihydrolipoxin_a4
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +tropate +tropine
-    l_hyoscyamine
+    <-> . +ureidoisobutyric_acid
+    dihydrothymine
   }
 
-  branch from ent_7alpha_hydroxykaur_16_en_19_oate side right {
-    ent_7alpha_hydroxykaur_16_en_19_oate
-    <-> ec_1_14_13_79 [1.14.13.79] +nadp +h2o +h +o2 +nadph
-    6beta_7beta_dihydroxykaurenoic_acid
-  }
-
-  branch from gibberellin_a12_aldehyde side left {
-    gibberellin_a12_aldehyde
-    <-> ec_1_14_13_79 [1.14.13.79] +nadp +h2o +o2 +nadph
-    gibberellin_a12
-  }
-
-  branch from co2 side right {
-    co2
-    <-> . +tetracenomycin_b1
-    tetracenomycin_b3
+  branch from h2o side right {
+    h2o
+    <-> . +d_glucuronate +donepezil_metabolite_m9
+    donepezil_metabolite_m13
   }
 
   branch from co2 side left {
     co2
-    <-> . +tetralin
-    5_6_7_8_tetrahydro_2_naphthoic_acid
+    <-> . +3e_5_oxopent_3_ene_1_2_5_tricarboxylic_acid
+    cis_2_oxohept_3_enedioic_acid
   }
 
-  branch from succinate side right {
-    succinate
-    <-> ec_1_3_5_1 [1.3.5.1] +menaquinone_2 +fumarate
-    menaquinol
+  branch from co2 side right {
+    co2
+    <-> . +3e_5_oxopent_3_ene_1_2_5_tricarboxylic_acid
+    2_hydroxyhepta_2_4_dienedioic_acid
   }
 
   branch from succinate side left {
     succinate
-    <-> ec_4_1_3_30 [4.1.3.30] +pyruvate
-    2_methylcitrate
+    <-> ec_1_4_3_16 [1.4.3.16] +l_aspartate +fumarate
+    iminoaspartate
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> . +menaquinol_8 +fumarate
+    mk_8
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +5z_8z_11z_14z_eicosatetraenoate
+    8s_hydoperoxy_5z_9e_11z_14z_eicosatetraenoic_aci
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +nadh +acetyl_coa +diphosphate +7_8_epoxy_4z_10z_hexadecadienoic_acid +h +amp +h2o2 +gamma_9_10_epode +coa +nad +h2o
+    atp
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +6_7_dihydro_5_oxo_leukotriene_b4 +nadp
+    5_oxo_6_trans_leukotriene_b4
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +6_7_dihydro_5_oxo_12_epi_ltb4 +h +nadp
+    6_7_dihydro_12_epi_ltb4
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +5_trans_prostaglandin_d2 +nadph
+    prostaglandin_f2alpha
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +5_trans_prostaglandin_d2 +h +nadph
+    compound_0040855
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +d_glucuronate +donepezil_metabolite_m9
+    donepezil_metabolite_m14
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +glucose +1_4_alpha_d_glucan
+    starch_structure_1_1_6_7_1_4_glc_4_1_4_glc
+  }
+
+  branch from h side left {
+    h
+    <-> . +s_carnitine +malonyl_coa +coa
+    o_malonyl_d_carnitine
+  }
+
+  branch from h side right {
+    h
+    <-> . +succinyl_coa +s_carnitine +o_succinylcarnitine
+    coa
+  }
+
+  branch from co2 side left {
+    co2
+    <-> . +13z_3_oxoicosenoyl_coa +coa +11e_octadecenoyl_coa +h
+    malonyl_coa
+  }
+
+  branch from co2 side right {
+    co2
+    <-> . +malonyl_coa +7z_octadec_7_enoyl_coa +h +coa
+    3_oxo_9_cis_eicosenoyl_coenzyme_a
+  }
+
+  branch from succinate side left {
+    succinate
+    <-> ec_1_3_5_1 [1.3.5.1] +plastoquinone_9 +fumarate
+    plastoquinol_9
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> . +n_2_succinyl_l_ornithine +h2o
+    l_ornithine
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 17-o-acetylnorajmaline-to-s-adenosyl-l-homocyste "17-O-acetylnorajmaline to S-adenosyl-L-homocysteine" {
-  spacing 206
+  spacing 230
 
   spine at 0,0 {
     17_o_acetylnorajmaline
@@ -24,13 +24,37 @@ pathway 17-o-acetylnorajmaline-to-s-adenosyl-l-homocyste "17-O-acetylnorajmaline
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_239 [2.1.1.239] +3_o_l_olivosyl_oleandolide +sam +hplus
-    3_o_l_oleandrosyl_oleandolide
+    <-> ec_2_1_1_260 [2.1.1.260] +pseudouridine_5_phosphate_1 +sam +hplus
+    n1_methylpseudouridine_5_monophosphate_1
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_237 [2.1.1.237] +mycinamicin_iii +sam +hplus
-    mycinamicin_iv
+    <-> ec_2_1_1_317 [2.1.1.317] +n_acyl_4e_8e_sphinga_4_8_dienine +sam +hplus
+    n_acyl_4e_8e_9_methylsphinga_4_8_dienine
+  }
+
+  branch from sam side right {
+    sam
+    <-> ec_2_1_1_318 [2.1.1.318] +l_cysteine +sah +hplus
+    s_methyl_l_cysteine
+  }
+
+  branch from sam side left {
+    sam
+    <-> . +gtp +sah
+    7_methyl_gtp
+  }
+
+  branch from sah side right {
+    sah
+    <-> . +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
+  }
+
+  branch from sah side left {
+    sah
+    <-> . +sam +5_methylcytidine_5_monophosphate_1 +hplus
+    cytidine_5_monophosphate_1
   }
 }

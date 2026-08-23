@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway stearoyl-coa-to-o-pantetheine-4-phospho "stearoyl-CoA to O-(pantetheine-4'-phospho…" {
-  spacing 288
+  spacing 276
 
   spine at 0,0 {
     stearoyl_coa
@@ -18,27 +18,15 @@ pathway stearoyl-coa-to-o-pantetheine-4-phospho "stearoyl-CoA to O-(pantetheine-
     oleate
   }
 
-  branch from ppi side left {
-    ppi
-    <-> . +tardioxopiperazine_a +dmapp
-    echinulin
+  branch from stearoyl_coa side left {
+    stearoyl_coa
+    <-> . +1_acyl_sn_glycero_3_phospho_1d_myo_inositol +coa
+    1_acyl_2_stearoyl_sn_glycero_3_phospho_1d_myo_in
   }
 
-  branch from ppi side right {
-    ppi
-    <-> . +tardioxopiperazine_a +dmapp
-    variecolorin_l
-  }
-
-  branch from holo-acp side left {
-    holo-acp
-    <-> ec_2_3_1_305 [2.3.1.305] +udp_2_acetamido_3_ammonio_2_3_dideoxy_d_glucopyr +o_s_3r_3_hydroxyacylpantetheine_4_phosphoryl_ser +hplus
-    udp_2_acetamido_3_3r_3_hydroxyacyl_amino_2_3_did
-  }
-
-  branch from holo-acp side right {
-    holo-acp
-    <-> . +o_s_fatty_acylpantetheine_4_phosphoryl_l_serine +l_lysinium +hplus
-    n6_fatty_acyl_l_lysine
+  branch from stearoyl_coa side right {
+    stearoyl_coa
+    <-> . +2_acyl_sn_glycero_3_phospho_1d_myo_inositol +coa
+    1_octadecanoyl_2_acyl_sn_glycero_3_phospho_1d_my
   }
 }

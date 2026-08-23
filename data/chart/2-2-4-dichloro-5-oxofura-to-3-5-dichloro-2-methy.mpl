@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-2-4-dichloro-5-oxofura-to-3-5-dichloro-2-methy "2-(2,4-dichloro-5-oxofura… to 3,5-Dichloro-2-methylmuco…" {
-  spacing 198
+  spacing 216
 
   spine at 0,0 {
     2_2_4_dichloro_5_oxofuran_2_yl_propanoate
@@ -18,19 +18,37 @@ pathway 2-2-4-dichloro-5-oxofura-to-3-5-dichloro-2-methy "2-(2,4-dichloro-5-oxof
 
   branch from chloride side left {
     chloride
-    <-> . +trans_4_carboxymethylenebut_2_en_4_olide
-    5_chloromuconolactone
+    <-> ec_3_6_3_11 [3.6.3.11] +h +adp +phosphate +h2o
+    atp
   }
 
   branch from chloride side right {
     chloride
-    <-> . +2_chloro_2_2_4_dichloro_5_oxofuran_2_yl_acetate
-    2_5_dichloro_carboxymethylenebut_2_en_4_olide
+    <-> . +h +2_chloro_3_methyl_dienelactone
+    2_5_dichloro_3_methyl_muconolactone
   }
 
-  branch from 3_5_dichloro_2_methylmuconolactone side left {
-    3_5_dichloro_2_methylmuconolactone
-    <-> ec_5_5_1_7 [5.5.1.7] +h +chloride
-    3_chloro_2_methyl_dienelactone
+  branch from chloride side left {
+    chloride
+    <-> . +h +2e_4z_2_hydroxymuconate +h2o
+    5_chlorocarbonyl_2_hydroxy_penta_2_4_dienate
+  }
+
+  branch from chloride side right {
+    chloride
+    <-> . +h +carbonyl_sulfide +h2o
+    thiophosgene
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    pe_20_2_11z_14z_18_3_9z_12z_15z
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    22_0_18_2_pe
   }
 }

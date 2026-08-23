@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "l-canavanine-to-4-phosphonato-l-aspartic",
   "name": "L-canavanine to 4-phosphonato-L-aspartic…",
-  "category": "amino-acid-metabolism",
+  "category": "energy-metabolism",
   "summary": "A 3-step route from L-canavanine(1+) to 4-phosphonato-L-aspartic acid(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -127,52 +127,6 @@
       "xrefs": {
         "chebi": "CHEBI:57783"
       }
-    },
-    {
-      "id": "l_canavanine",
-      "name": "L-canavanine",
-      "formula": "C5H13N4O3",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM12052"
-      }
-    },
-    {
-      "id": "l_vinylglycine",
-      "name": "L-vinylglycine",
-      "formula": "C4H7NO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:134467"
-      }
-    },
-    {
-      "id": "aspartate",
-      "name": "L-Aspartate",
-      "formula": "C4H6NO4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:29991"
-      }
-    },
-    {
-      "id": "n1_s_3_amino_3_carboxypropyl_agmatine",
-      "name": "N1-[(S)-3-amino-3-carboxypropyl]agmatine",
-      "short": "N1-[(S)-3-amino-3-c…",
-      "formula": "C9H23N5O2",
-      "charge": 2,
-      "xrefs": {
-        "chebi": "CHEBI:229577"
-      }
-    },
-    {
-      "id": "agmatinium",
-      "name": "agmatinium",
-      "formula": "C5H16N4",
-      "charge": 2,
-      "xrefs": {
-        "chebi": "CHEBI:58145"
-      }
     }
   ],
   "enzymes": [
@@ -195,13 +149,6 @@
       "name": "aspartate-semialdehyde dehydrogenase",
       "ec": [
         "1.2.1.11"
-      ]
-    },
-    {
-      "id": "ec_1_5_1_55",
-      "name": "carboxyaminopropylagmatine dehydrogenase",
-      "ec": [
-        "1.5.1.55"
       ]
     }
   ],
@@ -352,147 +299,269 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "canavanine-gamma-lyase",
-      "ec": "4.4.1.43",
-      "substrates": [
-        {
-          "metabolite": "l_canavanine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "l_vinylglycine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "n_hydroxyguanidinium",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_4_1_43"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR199176"
+      "id": "xt_l_canavanine_l-canavanine-to-o-ureidohomoserine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_canavanine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "l-canavanine-to-o-ureidohomoserine"
+      },
+      "note": "Shares L-canavanine with L-canavanine to O-Ureidohomoserine.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR199176"
+            "db": "ChEBI",
+            "id": "CHEBI:78902"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "L-aspartate 4-semialdehyde + NAD(+) + H2O = L-aspartate + NADH + 2 H(+)",
-      "equation": "L-aspartate 4-semialdehyde + NAD(+) + H2O = L-aspartate + NADH + 2 H(+)",
-      "substrates": [
-        {
-          "metabolite": "l_aspartic_acid_4_semialdehyde",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "aspartate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:45764"
+      "id": "xt_n_hydroxyguanidinium_l-canavanine-to-o-ureidohomoserine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_hydroxyguanidinium"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "l-canavanine-to-o-ureidohomoserine"
+      },
+      "note": "Shares N-hydroxyguanidinium with L-canavanine to O-Ureidohomoserine.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:45764"
+            "db": "ChEBI",
+            "id": "CHEBI:194307"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "carboxyaminopropylagmatine dehydrogenase",
-      "equation": "N(1)-[(S)-3-amino-3-carboxypropyl]agmatine + NADP(+) + H2O = L-aspartate 4-semialdehyde + agmatine + NADPH + H(+)",
-      "ec": "1.5.1.55",
-      "substrates": [
-        {
-          "metabolite": "n1_s_3_amino_3_carboxypropyl_agmatine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "l_aspartic_acid_4_semialdehyde",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "agmatinium",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_5_1_55"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:78811"
+      "id": "xt_l_homoserine_2-c-methyl-d-erythritol-to-pseudouridine-5-phosp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_homoserine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2-c-methyl-d-erythritol-to-pseudouridine-5-phosp"
+      },
+      "note": "Shares L-homoserine with 2-C-methyl-D-erythritol… to pseudouridine 5'-phosphate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:78811"
+            "db": "ChEBI",
+            "id": "CHEBI:57476"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_homoserine_2-deoxymugineate-to-succinyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_homoserine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-deoxymugineate-to-succinyl-coa"
+      },
+      "note": "Shares L-homoserine with 2'-deoxymugineate to succinyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57476"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_homoserine_3-l-homoseryl-adenylyl-to-acetaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_homoserine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-l-homoseryl-adenylyl-to-acetaldehyde"
+      },
+      "note": "Shares L-homoserine with 3'-(L-homoseryl)adenylyl to acetaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57476"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_homoserine_3-l-homoseryl-adenylyl-to-r-3-hydroxy-3-methyl-2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_homoserine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-l-homoseryl-adenylyl-to-r-3-hydroxy-3-methyl-2"
+      },
+      "note": "Shares L-homoserine with 3'-(L-homoseryl)adenylyl to (R)-3-hydroxy-3-methyl-2-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57476"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_homoserine_l-rhamnofuranose-to-3-carboxy-cis-cis-muconate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_homoserine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-rhamnofuranose-to-3-carboxy-cis-cis-muconate"
+      },
+      "note": "Shares L-homoserine with L-rhamnofuranose to 3-carboxy-cis,cis-muconate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57476"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_aspartic_acid_4_semialdehyde_2-azaniumyl-4-5-dihydroxy-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_aspartic_acid_4_semialdehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-azaniumyl-4-5-dihydroxy-to-nad"
+      },
+      "note": "Shares L-aspartic acid 4-semialdehyde with 2-azaniumyl-4,5-dihydroxy… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:537519"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_aspartic_acid_4_semialdehyde_2s-2-acetamido-4-aminob-to-2s-4s-4-hydroxy-2-3",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_aspartic_acid_4_semialdehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2s-2-acetamido-4-aminob-to-2s-4s-4-hydroxy-2-3"
+      },
+      "note": "Shares L-aspartic acid 4-semialdehyde with (2S)-2-acetamido-4-aminob… to (2S,4S)-4-hydroxy-2,3,4,5….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:537519"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_aspartic_acid_4_semialdehyde_hydroxymalonate-to-decarboxy-3-dehydropresph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_aspartic_acid_4_semialdehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hydroxymalonate-to-decarboxy-3-dehydropresph"
+      },
+      "note": "Shares L-aspartic acid 4-semialdehyde with hydroxymalonate to decarboxy 3-dehydropresph….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:537519"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_aspartic_acid_4_semialdehyde_l-arogenate-to-trans-3-methylglutaconyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_aspartic_acid_4_semialdehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-arogenate-to-trans-3-methylglutaconyl"
+      },
+      "note": "Shares L-aspartic acid 4-semialdehyde with L-arogenate to trans-3-methylglutaconyl-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:537519"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_aspartic_acid_4_semialdehyde_l-rhamnofuranose-to-3-carboxy-cis-cis-muconate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_aspartic_acid_4_semialdehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-rhamnofuranose-to-3-carboxy-cis-cis-muconate"
+      },
+      "note": "Shares L-aspartic acid 4-semialdehyde with L-rhamnofuranose to 3-carboxy-cis,cis-muconate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:537519"
           }
         ]
       }

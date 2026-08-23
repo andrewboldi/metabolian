@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-acetyl-d-hexosamine-to-h2o "N-acetyl-D-hexosamine to H2O" {
-  spacing 236
+  spacing 212
 
   spine at 0,0 {
     n_acetyl_d_hexosamine
@@ -18,29 +18,5 @@ pathway n-acetyl-d-hexosamine-to-h2o "N-acetyl-D-hexosamine to H2O" {
     two_linked_disacharide_tetrapeptide_and_tripepti
     <-> ec_3_4_17_13 [3.4.17.13] +d_alanine -h2o
     two_linked_disacharide_tetrapeptide_murein_units
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_leucine +l_arginine +l_tryptophan
-    leucyl_tryptophanyl_arginine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_leucine +l_tryptophan
-    leucyl_tryptophan
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    15z_tetracosenoate
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    5_guanidino_2_oxopentanoate
   }
 }

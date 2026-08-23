@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway r-lipoate-to-n6-r-s8-ammoniomethyld "(R)-lipoate to N6-[(R)-S8-ammoniomethyld…" {
-  spacing 268
+  spacing 256
 
   spine at 0,0 {
     r_lipoate
@@ -14,17 +14,5 @@ pathway r-lipoate-to-n6-r-s8-ammoniomethyld "(R)-lipoate to N6-[(R)-S8-ammoniome
     n6_r_lipoyl_l_lysine
     <-> ec_1_4_4_2 [1.4.4.2] +glycine +hplus -co2
     n6_r_s8_ammoniomethyldihydrolipoyl_l_lysine_1
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +fpp
-    cis_farnesene
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +2_cis_6_cis_farnesyl_diphosphate
-    acoradiene
   }
 }

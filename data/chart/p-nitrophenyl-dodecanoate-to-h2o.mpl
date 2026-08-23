@@ -4,83 +4,155 @@
 # edit the generator, not this file.
 
 pathway p-nitrophenyl-dodecanoate-to-h2o "p-Nitrophenyl dodecanoate to H2O" {
-  spacing 218
+  spacing 290
 
   spine at 0,0 {
     p_nitrophenyl_dodecanoate
     <-> ec_3_1_1_1 [3.1.1.1] +h2o -dodecanoate -4_nitrophenol
     h
-    <-> . +glycerophosphatidylethanolamine +dodecanoate -h2o
-    pe_12_0_0_0
+    <-> ec_3_1_1_5 [3.1.1.5] +sn_glycero_3_phospho_1_rac_glycerol +dodecanoate -h2o
+    1_dodecanoyl_sn_glycero_3_phospho_1_sn_glycerol
     <-> . +h +dodecanoate -h2o
-    1_2_didodecanoyl_sn_glycero_3_phosphoethanolamin
-    <-> . +h +adp +phosphate -1_2_didodecanoyl_sn_glycero_3_phosphoethanolamin -h2o
+    dilauroyl_phosphatidylglycerol
+    <-> . +h +adp +phosphate -dilauroyl_phosphatidylglycerol -h2o
     atp
   }
 
   branch from h side left {
     h
-    <-> ec_1_1_1_2 [1.1.1.2] +3_methoxybenzaldehyde +nadph +nadp
-    3_methoxybenzyl_alcohol
+    <-> . +6_7_dihydroxy_3_isocyanochromen_2_one
+    2e_3_3_4_dioxocyclohexa_1_5_dien_1_yl_2_isocyan
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_2 [1.1.1.2] +4_methoxybenzyl_alcohol +nadp +nadph
-    4_methoxybenzaldehyde
+    <-> ec_2_7_4_21 [2.7.4.21] +1d_myo_inositol_1_3_4_5_6_pentakisphosphate +atp +adp
+    diphosphoinositol_tetrakisphosphate
   }
 
   branch from dodecanoate side left {
     dodecanoate
-    <-> . +nadh +h +o2 +nad +h2o
+    <-> ec_3_1_1_3 [3.1.1.3] +butyl_dodecanoate +h2o +h
+    butan_1_ol
+  }
+
+  branch from dodecanoate side right {
+    dodecanoate
+    <-> . +dilauroyl_phosphatidylglycerol +h2o +h
+    2_dodecanoyl_sn_glycero_3_phospho_1_sn_glycerol
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +d_alanine +l_alanyl_d_glutamyl_meso_2_6_diaminoheptanedioat +h
+    l_alanine_d_glutamate_meso_2_6_diaminoheptanedio
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +udp_n_acetylbacillosamine +d_alanine +h
+    udp_2_acetamido_4_d_alanylamino_2_4_6_trideoxy_a
+  }
+
+  branch from dilauroyl_phosphatidylglycerol side left {
+    dilauroyl_phosphatidylglycerol
+    <-> . +1_2_didodecanoyl_sn_glycerol_3_phosphate +h +h2o
+    cardiolipin_tetradodecanoyl_n_c12_0
+  }
+
+  branch from dilauroyl_phosphatidylglycerol side right {
+    dilauroyl_phosphatidylglycerol
+    <-> . +h +cardiolipin_tetradodecanoyl_n_c12_0
+    glycerol
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_2_7_1_157 [2.7.1.157] +n_acetyl_alpha_d_galactosamine_1_phosphate +h +adp
+    n_acetyl_d_galactosamine
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +ochratoxin_b +adp +phosphate +l_phenylalanine
+    7_carboxymellein
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +2_acetamido_4_d_alanylamino_2_4_6_trideoxy_d_man +h +phosphoenolpyruvate +phosphate
+    5_n_acetyl_7_n_d_alanyl_legionaminic_acid
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_1_17_99_11 [1.17.99.11] +1_hydroxy_3_oxo_steroid
+    3_oxo_delta1_steroid
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_7_8_28 [2.7.8.28] +gmp +3pg_factor_420_0 +7_8_didemethyl_8_hydroxy_5_deazariboflavin
+    3_r_glyceryl_diphospho_5_guanosine
+  }
+
+  branch from h side right {
+    h
+    <-> . +heptaprenylglyceryl_phosphate +h2o +phosphate
+    heptaprenylglycerol
+  }
+
+  branch from dodecanoate side left {
+    dodecanoate
+    <-> . +h +o2 +nadph +nadp +h2o
     12_hydroxydodecanoate
   }
 
   branch from dodecanoate side right {
     dodecanoate
-    <-> . +nadh +acetyl_coa +fadh2 +diphosphate +h +amp +atp +coa +nad +h2o
-    fad
+    <-> . +malonyl_coa +h +o2 +nadph +co2 +nadp +coa +h2o
+    9e_tetradecenoic_acid
   }
 
-  branch from 4_nitrophenol side left {
-    4_nitrophenol
-    <-> ec_3_1_1_1 [3.1.1.1] +hexanoate +h +h2o
-    4_nitrophenyl_hexanoate
+  branch from sn_glycero_3_phospho_1_rac_glycerol side left {
+    sn_glycero_3_phospho_1_rac_glycerol
+    <-> . +h +octadecanoate +h2o
+    2_octadecanoyl_sn_glycero_3_phospho_1_sn_glycero
   }
 
-  branch from 4_nitrophenol side right {
-    4_nitrophenol
-    <-> ec_1_14_13_25 [1.14.13.25] +nadh +nitrobenzene +o2 +h2o
-    nad
+  branch from adp side right {
+    adp
+    <-> ec_6_2_1_3 [6.2.1.3] +4e_6_methylhept_4_enoate +atp +coa +phosphate
+    4e_6_methylhept_4_enoyl_coa
   }
 
-  branch from h2o side left {
-    h2o
-    <-> . +2_phenylpropionaldoxime
-    2_phenylpropiononitrile
+  branch from adp side left {
+    adp
+    <-> ec_6_2_1_3 [6.2.1.3] +h +7_methyloctanoic_acid +atp +coa +phosphate
+    7_methyloctanoyl_coa
   }
 
-  branch from h2o side right {
-    h2o
-    <-> . +mandelonitrile
-    mandelaldoxime
+  branch from phosphate side right {
+    phosphate
+    <-> ec_6_2_1_3 [6.2.1.3] +7_methyloct_6_enoate +atp +coa +adp
+    7_methyloct_6_enoyl_coa
   }
 
-  branch from 1_2_didodecanoyl_sn_glycero_3_phosphoethanolamin side left {
-    1_2_didodecanoyl_sn_glycero_3_phosphoethanolamin
-    <-> . +diphosphate +amp +atp +dodecanoate
-    2_dodecanoyl_sn_glycero_3_phosphoethanolamine
+  branch from phosphate side left {
+    phosphate
+    <-> ec_6_2_1_3 [6.2.1.3] +9_methyldecanoyl_coa +h +adp +atp +coa
+    9_methyl_decanoic_acid
   }
 
   branch from atp side right {
     atp
-    <-> ec_2_7_1_6 [2.7.1.6] +2_amino_2_deoxy_d_galactopyranose +h +adp
-    d_galactosamine_1_phosphate
+    <-> ec_6_2_1_3 [6.2.1.3] +6e_9_methyldec_6_enoate +coa +adp +phosphate
+    6e_9_methyldec_6_enoyl_coa
   }
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
-    crotono_betaine
+    <-> ec_6_2_1_3 [6.2.1.3] +8_methylnonanoyl_coa +h +adp +phosphate +coa
+    8_methyl_nonanoic_acid
   }
 }

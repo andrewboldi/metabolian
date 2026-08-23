@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 7-2-dihydroxy-4-5-meth-to-h2o "7,2'-dihydroxy-4',5'-meth… to H2O" {
-  spacing 188
+  spacing 248
 
   spine at 0,0 {
     7_2_dihydroxy_4_5_methylenedioxyisoflavan
@@ -18,37 +18,97 @@ pathway 7-2-dihydroxy-4-5-meth-to-h2o "7,2'-dihydroxy-4',5'-meth… to H2O" {
 
   branch from h side left {
     h
-    <-> . +2_o_alpha_l_rhamnosylisoorietin +h2o
-    maysin
+    <-> ec_3_5_2_5 [3.5.2.5] +r_allantoin +h2o
+    allantoate
   }
 
   branch from h side right {
     h
-    <-> . +trichloroacetate +h2o +o2
-    2_2_2_trichloroethanol
+    <-> ec_3_1_2_4 [3.1.2.4] +r_3_hydroxyisobutyrate +coa +h2o
+    3_hydroxy_2_methylpropanoyl_coa
   }
 
   branch from nadph side left {
     nadph
-    <-> . +deacetylcolchicine +formaldehyde +nadp +h2o +h +o2
-    demecolcine
+    <-> ec_1_14_13_133 [1.14.13.133] +h +pentalen_13_ol +o2 +nadp +h2o
+    pentalen_13_al
   }
 
   branch from nadph side right {
     nadph
-    <-> . +3_nonaprenyl_4_5_dihydroxybenzoic_acid +nadp +h2o +h +o2
-    4_hydroxy_3_all_trans_nonaprenylbenzoic_acid
+    <-> ec_1_14_13_133 [1.14.13.133] +h +o2 +nadp +pentalen_13_al +h2o
+    pentalenene
   }
 
   branch from h2o side left {
     h2o
-    <-> . +dalcochinin +glucose
-    dalcochinin_8_o_beta_glucoside
+    <-> . +l_leucine +l_arginine +l_tyrosine
+    tyrosyl_leucyl_arginine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +2_hydroxy_2_2_methylidenecyclopropyl_butanedioic +coa +h +2_oxohexa_4_5_cyclopropyl_5_enoate
-    acetyl_coa
+    <-> . +l_phenylalanine +l_tyrosine
+    tyrosyl_phenylalanyl_tyrosine
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_14_13_134 [1.14.13.134] +amyrin +h +o2 +nadph +h2o
+    11_hydroxy_amyrin
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_14_13_134 [1.14.13.134] +11_oxo_amyrin +h2o +11_hydroxy_amyrin +h +nadph
+    o2
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_2_1_56 [3.2.1.56] +n_6_o_disulfo_d_glucosamine +beta_d_glucuronate +h2o
+    3_d_glucuronosyl_n_2_6_disulfo_beta_d_glucosamin
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_1_1_53 [3.1.1.53] +n_acetyl_alpha_neuraminate +acetate +h2o
+    n_acetyl_4_o_acetylneuraminate
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_14_13_143 [1.14.13.143] +h +ent_isokaurene +o2 +nadp +h2o
+    2_hydroxy_ent_isokaurene
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_14_13_145 [1.14.13.145] +ent_cassa_12_15_diene +h +o2 +nadp +h2o
+    11_hydroxy_ent_cassa_12_15_diene
+  }
+
+  branch from beta_d_glucose side left {
+    beta_d_glucose
+    <-> . +beta1_tomatine +h2o
+    gamma_tomatine
+  }
+
+  branch from beta_d_glucose side right {
+    beta_d_glucose
+    <-> ec_3_2_1_3 [3.2.1.3] +h2o
+    2_alpha_d_glucosyl_d_glucose
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +l_threonine +l_tyrosine
+    tyrosyl_threonine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +l_tryptophan +l_phenylalanine +l_tyrosine
+    tyr_trp_phe
   }
 }

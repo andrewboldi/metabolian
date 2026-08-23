@@ -16,39 +16,39 @@ pathway n-stearoyl-1-oleoyl-sn-gl-to-fmn "N-stearoyl-1-oleoyl-sn-gl… to FMN" {
     9z_12r_12_18_dihydroxyoctadecenoate
   }
 
-  branch from oleate side left {
-    oleate
-    <-> . +1_2_dioleoyl_sn_glycero_3_phosphocholine +h2o +hplus
-    2_oleoyl_sn_glycero_3_phosphocholine
-  }
-
-  branch from oleate side right {
-    oleate
-    <-> . +1_oleoyl_2_acyl_sn_glycero_3_phosphoglycerol +h2o +hplus
-    2_acyl_sn_glycero_3_phosphoglycerol
-  }
-
-  branch from hydrogen_acceptor side left {
-    hydrogen_acceptor
-    <-> . +1_1_dihydroxy_1_1_2_2_tetrahydrolycopene +hydrogen_donor
-    1_1_dihydroxy_3_4_didehydrolycopene
-  }
-
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> . +cannabigerolate +hydrogen_donor
-    cannabichromenate
-  }
-
   branch from fmn side left {
     fmn
-    <-> . +17_estradiol +fmnh2 +o2 +h2o +hplus
-    2_hydroxy_17_estradiol
+    <-> ec_1_14_14_75 [1.14.14.75] +fenbendazole +fmnh2 +o2 +h2o +hplus
+    hydroxyfenbendazole
   }
 
   branch from fmn side right {
     fmn
-    <-> . +17_estradiol +fmnh2 +o2 +h2o +hplus
-    6_hydroxy_17_estradiol
+    <-> ec_1_14_19_54 [1.14.19.54] +s_reticulinium +fmnh2 +o2 +h2o +hplus
+    reticulinylium
+  }
+
+  branch from fmnh2 side left {
+    fmnh2
+    <-> ec_1_14_14_76 [1.14.14.76] +ent_isokaurene +o2 +fmn +h2o +hplus
+    2_3_dihydroxy_ent_isokaurene
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> . +oleanolate +o2 +fmn +h2o +hplus
+    gypsogenate
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_171 [1.14.14.171] +amyrin +fmnh2 +o2 +h2o +hplus
+    16_hydroxy_amyrin
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_80 [1.14.14.80] +methyl_long_chain_fatty_acid_anion +fmnh2 +o2 +h2o +hplus
+    hydroxy_long_chain_fatty_acid_anion
   }
 }

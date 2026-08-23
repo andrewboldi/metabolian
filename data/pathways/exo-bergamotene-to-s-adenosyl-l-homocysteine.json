@@ -175,45 +175,6 @@
       "xrefs": {
         "chebi": "CHEBI:57783"
       }
-    },
-    {
-      "id": "3_desmethyl_okaramine_b",
-      "name": "3-desmethyl okaramine B",
-      "short": "3-desmethyl…",
-      "formula": "C32H32N4O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:232467"
-      }
-    },
-    {
-      "id": "okaramine_b",
-      "name": "Okaramine B",
-      "formula": "C33H34N4O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:197976"
-      }
-    },
-    {
-      "id": "guanosine_5_monophosphate_1",
-      "name": "guanosine 5'-monophosphate(1−)",
-      "short": "guanosine 5'-MP(1−)",
-      "formula": "C10H11N5O7P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:74269"
-      }
-    },
-    {
-      "id": "n2_methylguanosine_5_monophosphate_1",
-      "name": "N2-methylguanosine 5'-monophosphate(1−)",
-      "short": "N2-methylguanosine…",
-      "formula": "C11H13N5O7P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:74481"
-      }
     }
   ],
   "enzymes": [
@@ -454,89 +415,93 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "3-desmethyl okaramine B + S-adenosyl-L-methionine = okaramine B + S-adenosyl-L-homocyst...",
-      "equation": "3-desmethyl okaramine B + S-adenosyl-L-methionine = okaramine B + S-adenosyl-L-homocysteine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "3_desmethyl_okaramine_b",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "okaramine_b",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:82715"
+      "id": "xt_exo_bergamotene_1-octadecanoyl-2-octanoyl-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "exo_bergamotene"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1-octadecanoyl-2-octanoyl-to-diphosphate"
+      },
+      "note": "Shares (+)-exo-β-bergamotene with 1-octadecanoyl-2-octanoyl… to diphosphate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:82715"
+            "db": "ChEBI",
+            "id": "CHEBI:193166"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "guanosine(7) in tRNA + S-adenosyl-L-methionine = N(2)-methylguanosine(7) in tRNA + S-ad...",
-      "equation": "guanosine(7) in tRNA + S-adenosyl-L-methionine = N(2)-methylguanosine(7) in tRNA + S-adenosyl-L-homocysteine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "guanosine_5_monophosphate_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n2_methylguanosine_5_monophosphate_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:83419"
+      "id": "xt_exo_bergamotene_exo-bergamotene-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "exo_bergamotene"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "exo-bergamotene-to-fmn"
+      },
+      "note": "Shares (+)-exo-β-bergamotene with (+)-exo-β-bergamotene to FMN.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:83419"
+            "db": "ChEBI",
+            "id": "CHEBI:193166"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_dehydro_6_demethoxyfumagillol_exo-bergamotene-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_dehydro_6_demethoxyfumagillol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "exo-bergamotene-to-fmn"
+      },
+      "note": "Shares 5-dehydro-6-demethoxyfumagillol with (+)-exo-β-bergamotene to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:193517"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_fumagillol_o-pantetheine-4-phospho-to-acetaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "fumagillol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "o-pantetheine-4-phospho-to-acetaldehyde"
+      },
+      "note": "Shares fumagillol with O-(pantetheine-4'-phospho… to acetaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:324935"
           }
         ]
       }

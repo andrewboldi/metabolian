@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway apigenin-7-o-d-glucoside-to-fmn "apigenin 7-O-β-D-glucoside to FMN" {
-  spacing 206
+  spacing 188
 
   spine at 0,0 {
     apigenin_7_o_d_glucoside
@@ -16,23 +16,5 @@ pathway apigenin-7-o-d-glucoside-to-fmn "apigenin 7-O-β-D-glucoside to FMN" {
     apigenin_7_4_dimethyl_ether
     <-> . +fmnh2 +o2 -fmn -h2o -hplus
     ladanein
-  }
-
-  branch from apigenin_7_olate side left {
-    apigenin_7_olate
-    <-> . +udp_d_glucose +udp +hplus
-    isovitexin_7_olate
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +n_methyl_l_tryptophan +sam +hplus
-    n_n_dimethyl_l_tryptophan
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +n_n_dimethyl_l_tryptophan +sam +hplus
-    hypaphorine
   }
 }

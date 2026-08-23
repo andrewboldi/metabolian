@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-arabinitol-to-2-5-dioxopentanoate "D-arabinitol to 2,5-dioxopentanoate" {
-  spacing 248
+  spacing 260
 
   spine at 0,0 {
     d_arabinitol
@@ -28,7 +28,19 @@ pathway d-arabinitol-to-2-5-dioxopentanoate "D-arabinitol to 2,5-dioxopentanoate
 
   branch from d_arabinopyranose side right {
     d_arabinopyranose
+    <-> ec_5_3_1_3 [5.3.1.3]
+    alpha_d_ribulose
+  }
+
+  branch from d_arabinopyranose side left {
+    d_arabinopyranose
     <-> . +alpha_d_arabinopyranose_1_phosphate +adp +atp
     h
+  }
+
+  branch from d_arabinopyranose side right {
+    d_arabinopyranose
+    <-> . +h +adp +phosphate +h2o
+    atp
   }
 }

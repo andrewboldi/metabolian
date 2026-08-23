@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-d-glucose "UDP to β-D-glucose" {
-  spacing 272
+  spacing 340
 
   spine at 0,0 {
     udp
@@ -36,61 +36,133 @@ pathway udp-to-d-glucose "UDP to β-D-glucose" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +n_methylanthraniloyl_beta_d_glucopyranose
-    n_methylanthranilate
+    <-> ec_2_4_1_293 [2.4.1.293] +udp +n_acetylgalactosaminyl_2_glucosaminyl_n_acetylg +h
+    n_acetylgalactosaminyl_5_n_n_diacetylbacillosam
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +des_acyl_avenacin_a +h
-    monodeglucosyl_des_acyl_avenacin_a
-  }
-
-  branch from apigenin side left {
-    apigenin
-    <-> ec_1_14_13_88 [1.14.13.88] +nadp +h2o +h +o2 +nadph
-    tricetin
-  }
-
-  branch from apigenin side right {
-    apigenin
-    <-> ec_2_1_1_155 [2.1.1.155] +s_adenosyl_l_homocysteine +acacetin +h
-    s_s_adenosyl_l_methionine
+    <-> . +udp +curcumin_4_o_beta_d_gentiotrioside +h
+    curcumin_4_o_beta_d_gentiobioside
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_21 [1.1.1.21] +h +1_naphthaldehyde +nadph
-    1_naphthyl_methanol
+    <-> . +1s_2s_4r_endo_fenchol +h +nadph
+    1r_4s_fenchone
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_2 [1.1.1.2] +2_formylbenzoate +h +nadph
-    2_hydroxymethyl_benzoic_acid
+    <-> ec_1_1_1_46 [1.1.1.46] +l_arabinono_1_4_lactone +h +nadph
+    alpha_l_arabinofuranose
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_4_13_9 [3.4.13.9] +l_proline +l_phenylalanine
-    phe_pro
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +bafilomycin_a1 +phosphate +bafilomycin_a1
+    atp
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_4_13_9 [3.4.13.9] +l_proline +l_valine
-    valyl_proline
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    vancomycin
   }
 
-  branch from genistein side left {
-    genistein
-    <-> ec_1_14_14_90 [1.14.14.90] +fmnh2 +o2 +fmn +h2o +hplus
-    2_hydroxygenistein
+  branch from udp side left {
+    udp
+    <-> . +udp_n_acetyl_alpha_d_mannosamine +beta_d_galf_1_3_alpha_d_glcnac_pp_undecaprenol +h
+    beta_d_mannac_1_6_beta_d_galf_1_3_alpha_d_glcnac
   }
 
-  branch from d_glucose side right {
-    d_glucose
-    <-> . +d_glucosyl_1_1_n_hexadecanoylsphinganine +h2o
-    n_hexadecanoylsphinganine
+  branch from udp side right {
+    udp
+    <-> . +beta_d_glca_1_4_3_o_acetyl_alpha_l_fuc_1_3_beta +h +3_o_acetyl_alpha_l_fuc_1_3_beta_d_ribf_1_4_alpha
+    udp_alpha_d_glucuronate
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    teicoplanin
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    ceftriaxone
+  }
+
+  branch from udp_alpha_d_glucose side left {
+    udp_alpha_d_glucose
+    <-> . +udp +h +curcumin_4_o_beta_d_gentiobioside
+    curcumin_4_o_d_gentiotrioside
+  }
+
+  branch from udp_alpha_d_glucose side right {
+    udp_alpha_d_glucose
+    <-> . +udp +curcumin_4_o_beta_d_gentiotetraside +h
+    curcumin_4_o_beta_d_gentiotrioside
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +trimethylamine +3r_3_hydroxy_4_oxobutanoate +nadp +h2o +h +nadph
+    carnitine
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +trimethylamine +3r_3_hydroxy_4_oxobutanoate +nad +h2o +h +carnitine
+    nadh
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_1_1_46 [1.1.1.46] +l_arabinono_1_4_lactone +h +nadp
+    beta_l_arabinofuranose
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_1_1_21 [1.1.1.21] +h +beta_d_ribofuranose +nadp
+    l_arabinitol
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_1_1_21 [1.1.1.21] +h +beta_d_ribofuranose +nadph
+    xylitol
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_14_13_156 [1.14.13.156] +h +1_8_cineole +o2 +nadph +h2o
+    6_endo_hydroxycineole
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    nisin
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    enterocin
+  }
+
+  branch from udp_d_glucose side left {
+    udp_d_glucose
+    <-> . +apigenin_7_olate +udp +hplus
+    isovitexin_7_olate
+  }
+
+  branch from udp_d_glucose side right {
+    udp_d_glucose
+    <-> . +4_hydroxylamino_2_6_dinitrotoluene +udp +hplus
+    4_hydroxylamino_2_6_dinitrotoluene_o_d_glucoside
   }
 }

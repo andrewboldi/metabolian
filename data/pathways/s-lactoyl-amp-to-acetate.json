@@ -108,25 +108,6 @@
       "xrefs": {
         "chebi": "CHEBI:16526"
       }
-    },
-    {
-      "id": "2_phosphonato_l_lactate",
-      "name": "2-phosphonato-L-lactate",
-      "short": "2-phosphonato-L-lac…",
-      "formula": "C3H4O6P",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:59906"
-      }
-    },
-    {
-      "id": "pi",
-      "name": "Orthophosphate (Pi)",
-      "formula": "HO4P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:43474"
-      }
     }
   ],
   "enzymes": [
@@ -269,42 +250,159 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "(2S)-2-phospholactate + H2O = (S)-lactate + phosphate",
-      "equation": "(2S)-2-phospholactate + H2O = (S)-lactate + phosphate",
-      "substrates": [
-        {
-          "metabolite": "2_phosphonato_l_lactate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "lactate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:86559"
+      "id": "xt_s_lactoyl_amp_l-fucoside-to-oxaloacetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_lactoyl_amp"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "l-fucoside-to-oxaloacetate"
+      },
+      "note": "Shares (S)-lactoyl-AMP with α-L-fucoside to oxaloacetate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:86559"
+            "db": "ChEBI",
+            "id": "CHEBI:231470"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n6_s_lactoyl_l_lysine_propanoate-to-l-lysinium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n6_s_lactoyl_l_lysine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "propanoate-to-l-lysinium"
+      },
+      "note": "Shares N6-[(S)-lactoyl]-L-lysine with propanoate to L-lysinium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:231527"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lactate_l-fucoside-to-oxaloacetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lactate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-fucoside-to-oxaloacetate"
+      },
+      "note": "Shares L-Lactate with α-L-fucoside to oxaloacetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16651"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lactate_propanoate-to-l-lysinium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lactate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "propanoate-to-l-lysinium"
+      },
+      "note": "Shares L-Lactate with propanoate to L-lysinium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16651"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lactate_s-lactate-to-f420-0",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lactate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-lactate-to-f420-0"
+      },
+      "note": "Shares L-Lactate with (S)-lactate to F420-0.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16651"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lactate_s-lactate-to-s-lactoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lactate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-lactate-to-s-lactoyl-coa"
+      },
+      "note": "Shares L-Lactate with (S)-lactate to (S)-lactoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16651"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lactate_warburg-effect-cancer",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lactate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "warburg-effect-cancer"
+      },
+      "note": "Shares L-Lactate with Warburg effect and cancer metabolic rewiring.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16651"
           }
         ]
       }

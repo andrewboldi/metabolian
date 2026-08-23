@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway medium-chain-primary-to-mycoketide-coa "medium-chain primary… to mycoketide-CoA" {
-  spacing 200
+  spacing 224
 
   spine at 0,0 {
     medium_chain_primary_fatty_alcohol
@@ -18,27 +18,51 @@ pathway medium-chain-primary-to-mycoketide-coa "medium-chain primary… to mycok
     mycoketide_coa
   }
 
-  branch from medium_chain_fatty_acid_anion side left {
-    medium_chain_fatty_acid_anion
-    <-> . +atp +hplus +ppi
-    medium_chain_fatty_acyl_amp
-  }
-
-  branch from medium_chain_fatty_acyl_coa side right {
+  branch from medium_chain_fatty_acyl_coa side left {
     medium_chain_fatty_acyl_coa
     <-> . +acetyl_coa +coa
     medium_chain_3_oxoacyl_coa
   }
 
+  branch from ppi side right {
+    ppi
+    <-> . +fpp
+    barbatene
+  }
+
   branch from ppi side left {
     ppi
-    <-> . +icosanoate +atp +coa +amp
-    icosanoyl_coa
+    <-> . +fpp
+    sativene
+  }
+
+  branch from medium_chain_primary_fatty_alcohol side right {
+    medium_chain_primary_fatty_alcohol
+    <-> ec_2_3_1_332 [2.3.1.332] +fatty_acyl_coa +coa
+    medium_chain_alcohol_wax_ester
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +fpp
+    isosativene
   }
 
   branch from ppi side right {
     ppi
-    <-> . +5_end_purine_ribonucleotide_5_triphosphate_4 +gdp +hplus
-    5_5_triphosphoguanosine_purine_ribonucleotide_3
+    <-> . +fpp
+    z_e_farnesene
+  }
+
+  branch from malonyl-coa side left {
+    malonyl-coa
+    <-> ec_2_3_1_246 [2.3.1.246] +hplus +co2 +coa +h2o
+    3_5_dihydroxyphenylacetyl_coa
+  }
+
+  branch from malonyl-coa side right {
+    malonyl-coa
+    <-> . +3_hydroxytetradecanoyl_coa +hplus +co2 +coa
+    4_hydroxy_6_2_hydroxytridecyl_pyran_2_one
   }
 }

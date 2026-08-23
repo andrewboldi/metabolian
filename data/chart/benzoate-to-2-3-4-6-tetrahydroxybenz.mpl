@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway benzoate-to-2-3-4-6-tetrahydroxybenz "benzoate to 2,3',4,6-tetrahydroxybenz…" {
-  spacing 244
+  spacing 232
 
   spine at 0,0 {
     benzoate
@@ -16,17 +16,5 @@ pathway benzoate-to-2-3-4-6-tetrahydroxybenz "benzoate to 2,3',4,6-tetrahydroxyb
     3_hydroxybenzoyl_coa
     <-> ec_2_3_1_151 [2.3.1.151] +malonyl-coa +hplus -co2 -coa
     2_3_4_6_tetrahydroxybenzophenone
-  }
-
-  branch from benzoyl_coa side left {
-    benzoyl_coa
-    <-> . +ethanol +coa
-    benzyl_acetate
-  }
-
-  branch from benzoyl_coa side right {
-    benzoyl_coa
-    <-> . +hexan_2_ol +coa
-    hexan_2_yl_benzoate
   }
 }

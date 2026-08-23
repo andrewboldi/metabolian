@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway casbene-to-jolkinol-c "(−)-casbene to jolkinol C" {
-  spacing 170
+  spacing 188
 
   spine at 0,0 {
     casbene
@@ -20,19 +20,37 @@ pathway casbene-to-jolkinol-c "(−)-casbene to jolkinol C" {
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_19_50 [1.14.19.50] +4_o_methylnorbelladine +fmnh2 +o2 +h2o +hplus
-    4ar_10bs_noroxomaritidine
+    <-> ec_1_14_14_191 [1.14.14.191] +taxa_4_20_11_dien_5_yl_acetate +fmnh2 +o2 +h2o +hplus
+    5_20_epoxytaxa_11_en_4_yl_acetate
   }
 
   branch from fmn side right {
     fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    14_15_eet
+    <-> ec_1_14_14_191 [1.14.14.191] +taxa_4_20_11_diene_2_5_7_9_10_13_hexayl_hexaacet +fmnh2 +o2 +h2o +hplus
+    1_dehydroxybaccatin_iv
   }
 
-  branch from 4_8_dihydroxycasbene side left {
-    4_8_dihydroxycasbene
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    4_hydroxycasbene
+  branch from fmnh2 side left {
+    fmnh2
+    <-> . +taxusin +o2 +fmn +h2o +hplus
+    1_hydroxytaxusin
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> ec_1_14_14_194 [1.14.14.194] +s_4_1_methylpyrrolidin_2_yl_3_oxobutanoate +o2 +fmn +h2o +hplus
+    ecgonone
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_197 [1.14.14.197] +progesterone +fmnh2 +o2 +h2o +hplus
+    11_hydroxyprogesterone
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +steroid +fmnh2 +o2 +h2o +hplus
+    11_hydroxy_steroid
   }
 }

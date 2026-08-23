@@ -24,51 +24,75 @@ pathway 2s-2-carbamoylpyrrolidi-to-o-s-4-5-dichloropyrr "(2S)-2-carbamoylpyrroli
     1_pyrroline_2_carboxylic_acid
   }
 
-  branch from l_proline side right {
-    l_proline
-    <-> . +e_sinapaldehyde +h2o
-    e_nesocodin_alcohol_form
+  branch from nh3 side right {
+    nh3
+    <-> . +s_4_aminopentanoic_acid +nad +h2o +nadh +hplus
+    4_oxopentanoate
   }
 
   branch from nh3 side left {
     nh3
-    <-> . +l_alaninamide +h2o
-    alanine
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> ec_1_4_3_3 [1.4.3.3] +d_lysinium +o2 +h2o +h2o2
-    6_amino_2_oxohexanoic_acid
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> ec_3_6_1_9 [3.6.1.9] +xtp +h2o +hplus
-    xmp
+    <-> . +2_deoxyguanosine +h2o +hplus
+    2_deoxyxanthosine
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_61 [4.2.3.61] +fpp
-    5_epi_aristolochene
+    <-> . +15_hydroxypentadecanoate +atp +coa +amp
+    15_hydroxypentadecanoyl_coa
   }
 
-  branch from o_s_pyrrole_2_carbonyl_pantetheine_4_phosphoryl side left {
+  branch from ppi side left {
+    ppi
+    <-> . +16_hydroxyhexadecanoate +atp +coa +amp
+    16_hydroxyhexadecanoyl_coa
+  }
+
+  branch from o_s_pyrrole_2_carbonyl_pantetheine_4_phosphoryl side right {
     o_s_pyrrole_2_carbonyl_pantetheine_4_phosphoryl
     <-> . +fadh2 +chloride +o2 +fad +h2o
     o_s_5_chloropyrrole_2_carbonyl_pantetheine_4_pho
   }
 
-  branch from o_s_pyrrole_2_carbonyl_pantetheine_4_phosphoryl side right {
+  branch from o_s_pyrrole_2_carbonyl_pantetheine_4_phosphoryl side left {
     o_s_pyrrole_2_carbonyl_pantetheine_4_phosphoryl
     <-> ec_1_14_19_57 [1.14.19.57] +bromide +fadh2 +o2 +fad +h2o
     o_s_3_4_5_tribromopyrrole_2_carbonyl_pantetheine
   }
 
-  branch from o_s_4_5_dichloropyrrole_2_carbonyl_pantetheine_4 side left {
-    o_s_4_5_dichloropyrrole_2_carbonyl_pantetheine_4
-    <-> . +fadh2 +h +o2 +chloride +o_s_5_chloropyrrole_2_carbonyl_pantetheine_4_pho +h2o
-    fad
+  branch from nh3 side right {
+    nh3
+    <-> . +2s_2_aminobutan_1_ol +nad +h2o +nadh +hplus
+    1_hydroxybutan_2_one
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> . +2_aminopentan_1_ol +nad +h2o +nadh +hplus
+    1_hydroxy_2_pentanone
+  }
+
+  branch from holo-acp side right {
+    holo-acp
+    <-> . +glycyl_amp +amp +hplus
+    o_s_glycylpantetheine_4_phosphoryl_l_serine_resi
+  }
+
+  branch from holo-acp side left {
+    holo-acp
+    <-> ec_6_2_1_72 [6.2.1.72] +serine +atp +amp +ppi
+    o_s_l_seryl_pantetheine_4_phosphoryl_l_serine_re
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +dec_9_enoate +atp +coa +amp
+    9_decenoyl_coa
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +atp +coa +amp
+    4z_7z_10z_13z_16z_19z_docosahexaenoyl_coa
   }
 }

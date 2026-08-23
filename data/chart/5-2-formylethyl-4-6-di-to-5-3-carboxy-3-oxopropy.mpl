@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-2-formylethyl-4-6-di-to-5-3-carboxy-3-oxopropy "5-(2'-Formylethyl)-4,6-di… to 5-(3'-carboxy-3'-oxopropy…" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     5_2_formylethyl_4_6_dihydroxypicolinate
@@ -14,29 +14,5 @@ pathway 5-2-formylethyl-4-6-di-to-5-3-carboxy-3-oxopropy "5-(2'-Formylethyl)-4,6
     5_2_formylethyl_4_6_dihydroxypicolinic_acid
     <-> . +co2 -5_3_carboxy_3_oxopropyl_4_6_dihydroxypicolinate
     h
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +h +adp +dextrorphan_o_glucosiduronic_acid +phosphate +dextrorphan_o_glucosiduronic_acid
-    atp
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +2e_hexadecenoyl_coa +h
-    s_3_hydroxyhexadecanoyl_coa
-  }
-
-  branch from h side left {
-    h
-    <-> . +r_lactate +ferricytochrome_c +pyruvate
-    ferrocytochrome_c
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    estriol_16_o_d_glucuronide
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-o-glutaroyl-1-o-palmito-to-hexadecanoate "2-O-glutaroyl-1-O-palmito… to hexadecanoate" {
-  spacing 256
+  spacing 208
 
   spine at 0,0 {
     2_o_glutaroyl_1_o_palmitoyl_sn_glycero_3_phospho
@@ -22,63 +22,15 @@ pathway 2-o-glutaroyl-1-o-palmito-to-hexadecanoate "2-O-glutaroyl-1-O-palmito…
     1_oleylglycerone_3_phosphate
   }
 
-  branch from palmitate side left {
-    palmitate
-    <-> . +s_palmitoyl_n_acetylcysteamine +h2o +hplus
-    n_acetylcysteamine
-  }
-
-  branch from palmitate side right {
-    palmitate
-    <-> . +s_palmitoyl_n_acetylcysteine_methyl_ester +h2o +hplus
-    n_acetylcysteine_methyl_ester
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +5z_8z_11z_13e_15_hete +atp +coa +amp
-    15_hydroxy_5z_8z_11z_13e_icosatetraenoyl_coa
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_164 [4.2.3.164] +fpp
-    eremophilene
-  }
-
   branch from o_s_hexadecanoylpantetheine_4_phosphoryl_serine side left {
     o_s_hexadecanoylpantetheine_4_phosphoryl_serine
-    <-> ec_2_3_1_287 [2.3.1.287] +s_methylmalonyl_coa +nadph +hplus +co2 +nadp +coa +h2o
-    o_s_c40_phthioceranylpantetheine_4_phosphoryl_l
+    <-> . +nadh +hplus +nad
+    o_s_2e_hexadecenoylpantetheine_4_phosphoryl_seri
   }
 
-  branch from o_s_hexadecanoylpantetheine_4_phosphoryl_serine side right {
-    o_s_hexadecanoylpantetheine_4_phosphoryl_serine
-    <-> ec_2_3_1_287 [2.3.1.287] +s_methylmalonyl_coa +nadph +hplus +co2 +nadp +coa +h2o
-    o_s_c37_phthioceranylpantetheine_4_phosphoryl_l
-  }
-
-  branch from 1_palmitoyl_sn_glycerol_3_phosphate side left {
-    1_palmitoyl_sn_glycerol_3_phosphate
-    <-> . +h2o +pi
-    1_hexadecanoyl_sn_glycerol
-  }
-
-  branch from 1_palmitoyl_sn_glycerol_3_phosphate side right {
-    1_palmitoyl_sn_glycerol_3_phosphate
-    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoyl_coa +coa
-    1_palmitoyl_2_4z_7z_10z_13z_16z_19z_docosahexaen
-  }
-
-  branch from holo-acp side left {
-    holo-acp
-    <-> . +glycyl_amp +amp +hplus
-    o_s_glycylpantetheine_4_phosphoryl_l_serine_resi
-  }
-
-  branch from holo-acp side right {
-    holo-acp
-    <-> ec_6_2_1_72 [6.2.1.72] +serine +atp +amp +ppi
-    o_s_l_seryl_pantetheine_4_phosphoryl_l_serine_re
+  branch from 9z_octadecen_1_ol side right {
+    9z_octadecen_1_ol
+    <-> . +oleoyl_coa +coa
+    oleyl_oleate
   }
 }

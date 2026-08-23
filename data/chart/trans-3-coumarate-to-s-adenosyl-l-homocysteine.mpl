@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway trans-3-coumarate-to-s-adenosyl-l-homocysteine "trans-3-coumarate to S-adenosyl-L-homocysteine" {
-  spacing 266
+  spacing 302
 
   spine at 0,0 {
     trans_3_coumarate
@@ -34,13 +34,49 @@ pathway trans-3-coumarate-to-s-adenosyl-l-homocysteine "trans-3-coumarate to S-a
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_169 [2.1.1.169] +tricetin +sam +hplus
-    3_4_5_o_trimethyltricetin
+    <-> . +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_255 [2.1.1.255] +gpp +sam +hplus
-    e_2_methylgeranyl_diphosphate
+    <-> . +sam +5_methylcytidine_5_monophosphate_1 +hplus
+    cytidine_5_monophosphate_1
+  }
+
+  branch from cysteine side right {
+    cysteine
+    <-> ec_1_13_11_95 [1.13.11.95] +o2 +co2 +h2o
+    2_oxoethane_1_sulfonamide
+  }
+
+  branch from cysteine side left {
+    cysteine
+    <-> . +o2 +co2 +h2o
+    z_2_aminoethene_1_so_thioperoxol
+  }
+
+  branch from sam side right {
+    sam
+    <-> ec_2_1_1_337 [2.1.1.337] +bulbocapnine +sah +hplus
+    n_methylbulbocapnine
+  }
+
+  branch from sam side left {
+    sam
+    <-> ec_2_1_1_338 [2.1.1.338] +xanthogalenol +sah +hplus
+    4_o_methylxanthohumol
+  }
+
+  branch from sah side right {
+    sah
+    <-> . +glandicoline_b +sam +hplus
+    meleagrine
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_343 [2.1.1.343] +8_amino_8_demethylriboflavin +sam +hplus
+    roseoflavin
   }
 }

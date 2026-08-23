@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 22e-3-oxochola-4-22-die-to-22-hydroxy-3-oxochol "(22E)-3-oxochola-4,22-die… to 22-hydroxy-3-oxochol-4-en…" {
-  spacing 206
+  spacing 188
 
   spine at 0,0 {
     22e_3_oxochola_4_22_dien_24_oyl_coa
@@ -14,23 +14,5 @@ pathway 22e-3-oxochola-4-22-die-to-22-hydroxy-3-oxochol "(22E)-3-oxochola-4,22-d
     3_22_dioxochol_4_en_24_oyl_coa
     <-> ec_1_1_1_35 [1.1.1.35] +nadh +h -22_hydroxy_3_oxochol_4_en_24_oyl_coa
     nad
-  }
-
-  branch from nad side left {
-    nad
-    <-> . +nadh +2_c_methyl_d_erythritol_2_4_cyclic_diphosphate +h +h2o
-    1_hydroxy_2_methyl_2_e_butenyl_4_diphosphate
-  }
-
-  branch from nad side right {
-    nad
-    <-> . +nadh +2_c_methyl_d_erythritol_2_4_cyclic_diphosphate +h2o
-    2e_4_hydroxy_3_methylbut_2_enyl_diphosphate
-  }
-
-  branch from 22_hydroxy_3_oxochol_4_en_24_oyl_coa side left {
-    22_hydroxy_3_oxochol_4_en_24_oyl_coa
-    <-> . +3_23_dioxo_23_24_bisnorchol_4_ene
-    acetyl_coa
   }
 }

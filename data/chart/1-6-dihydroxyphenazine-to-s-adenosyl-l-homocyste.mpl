@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-6-dihydroxyphenazine-to-s-adenosyl-l-homocyste "1,6-dihydroxyphenazine to S-adenosyl-L-homocysteine" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     1_6_dihydroxyphenazine
@@ -16,17 +16,5 @@ pathway 1-6-dihydroxyphenazine-to-s-adenosyl-l-homocyste "1,6-dihydroxyphenazine
     1_hydroxy_6_methoxyphenazine_n5_n10_dioxide
     <-> . +sam -sah
     1_6_dimethoxyphenazine_n5_n10_dioxide
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +11_hydroxystrychnine +sam +hplus
-    colubrine
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +p_methoxyphenol +sam +hplus
-    1_4_dimethoxybenzene
   }
 }

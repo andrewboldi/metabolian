@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-s-hydroxy-10-13-16-all-to-h2o "3(S)-hydroxy-10,13,16-all… to H2O" {
-  spacing 212
+  spacing 254
 
   spine at 0,0 {
     3_s_hydroxy_10_13_16_all_cis_docosatrienoyl_coa
@@ -16,12 +16,105 @@ pathway 3-s-hydroxy-10-13-16-all-to-h2o "3(S)-hydroxy-10,13,16-all… to H2O" {
     trans_cis_cis_cis_2_10_13_16_docosatetraenoyl_co
   }
 
+  branch from h side left {
+    h
+    <-> . +co2 +2_oxo_9_methylthiononanoic_acid
+    3_carboxy_9_methylsulfanyl_2_oxononanoate
+  }
 
+  branch from h side right {
+    h
+    <-> . +co2 +2_oxo_8_methylthiooctanoic_acid
+    3_carboxy_8_methylsulfanyl_2_oxooctanoate
+  }
 
+  branch from nadph side left {
+    nadph
+    <-> . +dihydrogeranylgeranyl_bacteriochlorophyll_a +nadp +h
+    geranylgeranyl_bacteriochlorophyllide_a
+  }
 
+  branch from nadph side right {
+    nadph
+    <-> . +dihydrogeranylgeranyl_bacteriochlorophyll_a +h +nadp
+    tetrahydrogeranylgeranyl_bacteriochlorophyll_a
+  }
 
+  branch from nadp side left {
+    nadp
+    <-> . +tetrahydrogeranylgeranyl_bacteriochlorophyll_a +nadph
+    bacteriochlorophyll_a
+  }
 
+  branch from nadp side right {
+    nadp
+    <-> . +4_hydroxylaminotoluene +h2o +h +nadph
+    4_nitrotoluene
+  }
 
+  branch from trans_cis_cis_cis_2_10_13_16_docosatetraenoyl_co side left {
+    trans_cis_cis_cis_2_10_13_16_docosatetraenoyl_co
+    <-> . +nadp +h +nadph
+    10z_13z_16z_docosatrienoyl_coa
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> . +l_leucine +h +indol_3_yl_acetate
+    n_indole_3_acetyl_l_leucine
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> . +6_o_indol_3_ylacetyl_beta_d_glucose +h +indol_3_yl_acetate
+    glucose
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +h +nadph +1_chloro_4_nitrosobenzene
+    1_chloro_4_hydroxylaminobenzene
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +trichloroethene +o2 +nadph +h +chloride
+    dichloroacetate
+  }
+
+  branch from h side right {
+    h
+    <-> . +co2 +2_oxo_7_methylthioheptanoic_acid
+    3_carboxy_7_methylsulfanyl_2_oxoheptanoate
+  }
+
+  branch from h side left {
+    h
+    <-> . +co2 +2_oxo_6_methylthiohexanoic_acid
+    3_carboxy_6_methylsulfanyl_2_oxohexanoate
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +h +oxalate +nadp +chloride +dichloroacetate
+    o2
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +trichloroethene +h +o2 +nadp +h2o
+    2_2_2_trichloroethanol
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +4_o_indol_3_ylacetyl_beta_d_glucose +glucose +h
+    indol_3_yl_acetate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +glucose +h +indol_3_yl_acetate
+    1_o_indol_3_ylacetyl_beta_d_glucose
+  }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway vinylacetyl-coa-to-norsolorinate "vinylacetyl-CoA to norsolorinate" {
-  spacing 296
+  spacing 340
 
   spine at 0,0 {
     vinylacetyl_coa
@@ -32,111 +32,28 @@ pathway vinylacetyl-coa-to-norsolorinate "vinylacetyl-CoA to norsolorinate" {
     norsolorinate
   }
 
-  branch from crotonoyl_coa side left {
-    crotonoyl_coa
-    <-> . +butyryl_coa +hydrogen_acceptor
-    hydrogen_donor
-  }
 
-  branch from crotonoyl_coa side right {
-    crotonoyl_coa
-    <-> ec_4_2_1_120 [4.2.1.120] +h2o
-    4_hydroxybutyryl_coa
-  }
 
-  branch from n6_e_but_2_enoyl_l_lysine side left {
-    n6_e_but_2_enoyl_l_lysine
-    <-> . +nad +h2o +nicotinamide +l_lysinium
-    2_o_crotonyl_adp_d_ribose
-  }
 
-  branch from crotonate side right {
-    crotonate
-    <-> . +acetyl_coa +acetate
-    2e_butenoyl_coa
-  }
 
-  branch from crotonate side left {
-    crotonate
-    <-> . +h +coa +2e_butenoyl_coa
-    h2o
-  }
 
-  branch from l_lysinium side right {
-    l_lysinium
-    <-> ec_2_3_1_108 [2.3.1.108] +acetyl_coa +coa +hplus
-    n6_acetyl_l_lysine
-  }
 
-  branch from l_lysinium side left {
-    l_lysinium
-    <-> . +succinyl_coa +coa +hplus
-    n6_succinyl_l_lysine_1
-  }
 
-  branch from butenoyl-acp side right {
-    butenoyl-acp
-    <-> ec_4_3_2_11 [4.3.2.11] +3r_3_carboxylmethyl_amino_butanoic_acid +holo-acp +hplus +h2o
-    glycine
-  }
 
-  branch from butenoyl-acp side left {
-    butenoyl-acp
-    <-> ec_1_3_1_10 [1.3.1.10] +h +nadph +butyryl-acp
-    nadp
-  }
 
-  branch from ppi side right {
-    ppi
-    <-> ec_6_3_5_4 [6.3.5.4] +aspartate +glutamine +atp +h2o +glutamate +amp +hplus
-    l_asparagine
-  }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_6_1_1_7 [6.1.1.7] +amp_3_end_1 +alanine +atp +amp
-    3_l_alanyl_adenylyl_zwitterionic_group
-  }
 
-  branch from butyryl-acp side right {
-    butyryl-acp
-    <-> ec_1_3_1_9 [1.3.1.9] +nadh +h +butenoyl-acp
-    nad
-  }
 
-  branch from o_s_3_oxohexanoylpantetheine_4_phosphoryl_serine side left {
-    o_s_3_oxohexanoylpantetheine_4_phosphoryl_serine
-    <-> . +malonyl-acp +hplus +co2 +coa
-    butyryl_coa
-  }
 
-  branch from o_s_3_oxohexanoylpantetheine_4_phosphoryl_serine side right {
-    o_s_3_oxohexanoylpantetheine_4_phosphoryl_serine
-    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_hydroxyhexanoylpantetheine_4_phosphoryl_s +nadp +nadph
-    h
-  }
 
-  branch from holo-acp side left {
-    holo-acp
-    <-> ec_2_7_8_7 [2.7.8.7] +l_serine +coa +hplus
-    adenosine_3_5_bismonophosphate
-  }
 
-  branch from holo-acp side right {
-    holo-acp
-    <-> . +o_s_11z_hexadecenoylpantetheine_4_phosphoryl_ser +malonyl-acp +hplus +co2
-    o_s_13z_3_oxooctadecenoylpantetheine_4_phosphory
-  }
 
-  branch from o_s_hexanoylpantetheine_4_phosphoryl_serine_1 side left {
-    o_s_hexanoylpantetheine_4_phosphoryl_serine_1
-    <-> ec_2_3_1_41 [2.3.1.41] +malonyl_coa +h +coa +o_s_3_oxooctanoylpantetheine_4_phosphoryl_serine
-    co2
-  }
 
-  branch from norsolorinate side right {
-    norsolorinate
-    <-> ec_1_1_1_349 [1.1.1.349] +nadp +nadph +hplus
-    s_averantin
-  }
+
+
+
+
+
+
+
 }

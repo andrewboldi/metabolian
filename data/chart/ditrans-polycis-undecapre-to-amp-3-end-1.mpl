@@ -26,14 +26,14 @@ pathway ditrans-polycis-undecapre-to-amp-3-end-1 "ditrans,polycis-undecapre… t
 
   branch from ditrans_polycis_undecaprenyl_phosphate side left {
     ditrans_polycis_undecaprenyl_phosphate
-    <-> ec_2_7_4_29 [2.7.4.29] +an_kdo_2_4_kdo_2_6_lipid_a +ditrans_polycis_undecaprenyl_diphosphate
-    an_d_kdo_2_4_d_kdo_2_6_lipid_a_1_diphosphate
+    <-> . +alpha_d_man_1_2_alpha_d_man_1_2_beta_d_man_1_3_g +beta_d_glc_pp_und +h
+    alpha_d_man_1_2_alpha_d_man_1_2_beta_d_man_1_3_a
   }
 
   branch from ditrans_polycis_undecaprenyl_phosphate side right {
     ditrans_polycis_undecaprenyl_phosphate
     <-> . +alpha_d_man_1_2_alpha_d_man_1_2_beta_d_man_1_3_g +beta_d_glc_pp_und +h
-    alpha_d_man_1_2_alpha_d_man_1_2_beta_d_man_1_3_a
+    alpha_d_man_1_2_alpha_d_glc_1_4_alpha_d_man_1_2
   }
 
   branch from lipid_ii side left {
@@ -42,33 +42,51 @@ pathway ditrans-polycis-undecapre-to-amp-3-end-1 "ditrans,polycis-undecapre… t
     undecaprenyldiphosphonato_n_acetyl_n_acetylgluco
   }
 
-  branch from undecaprenyldiphospho_n_acetyl_n_acetylglucosami side right {
-    undecaprenyldiphospho_n_acetyl_n_acetylglucosami
-    <-> . +undecaprenyldiphosphonato_n_acetyl_n_acetylgluco +pi +hplus
-    nh3
-  }
-
-  branch from glutamate side left {
-    glutamate
-    <-> . +n_4_aminobenzoyl_l_glutamate +h2o
-    4_aminobenzoate
-  }
-
-  branch from glutamate side right {
-    glutamate
-    <-> . +gly_glu +h2o
-    glycine
+  branch from amp_3_end_1 side right {
+    amp_3_end_1
+    <-> . +3_l_threonyl_adenylyl_1_group +h2o
+    threonine
   }
 
   branch from amp_3_end_1 side left {
     amp_3_end_1
-    <-> ec_6_1_1_11 [6.1.1.11] +serine +atp +amp +ppi +hplus
-    3_l_seryl_adenylyl_1_group
+    <-> . +3_l_seryl_adenylyl_1_group +h2o
+    serine
+  }
+
+  branch from udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_l_ly side right {
+    udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_l_ly
+    <-> . +h2o +d_alanine
+    udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_l_ly
+  }
+
+  branch from udpglcnac side left {
+    udpglcnac
+    <-> ec_4_2_1_135 [4.2.1.135] +h2o
+    udp_2_acetamido_2_6_dideoxy_d_xylo_hex_4_ulose
+  }
+
+  branch from udpglcnac side right {
+    udpglcnac
+    <-> ec_2_7_1_176 [2.7.1.176] +atp +adp +hplus
+    udp_n_acetyl_d_glucosamine_3_phosphate
+  }
+
+  branch from 3_glycyladenylyl_zwitterionic_group side left {
+    3_glycyladenylyl_zwitterionic_group
+    <-> . +acetyl_coa +coa +hplus
+    3_n_acetylglycyl_adenylyl
   }
 
   branch from amp_3_end_1 side right {
     amp_3_end_1
-    <-> ec_2_3_2_22 [2.3.2.22] +3_l_leucyl_adenylyl_zwitterionic_group +hplus
-    cyclo_l_leucyl_l_leucyl
+    <-> . +h2o +serine
+    3_l_seryl_adenylyl_1_group
+  }
+
+  branch from amp_3_end_1 side left {
+    amp_3_end_1
+    <-> . +h2o +threonine
+    3_l_threonyl_adenylyl_1_group
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-2-acetamido-4-azanium-to-diphosphate "UDP-2-acetamido-4-azanium… to diphosphate" {
-  spacing 306
+  spacing 318
 
   spine at 0,0 {
     udp_2_acetamido_4_azaniumyl_2_4_6_trideoxy_d_glu
@@ -26,13 +26,25 @@ pathway udp-2-acetamido-4-azanium-to-diphosphate "UDP-2-acetamido-4-azanium… t
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_77 [4.2.3.77] +fpp
-    germacrene_d
+    <-> ec_4_2_3_159 [4.2.3.159] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    tsukubadiene
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_54 [4.2.3.54] +2_cis_6_cis_farnesyl_diphosphate
-    endo_bergamotene
+    <-> ec_4_2_3_160 [4.2.3.160] +fpp
+    2s_3r_6s_9s_protoillud_7_ene
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_161 [4.2.3.161] +fpp
+    3s_asterisca_2_9_6_diene
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_162 [4.2.3.162] +fpp
+    amorphene
   }
 }

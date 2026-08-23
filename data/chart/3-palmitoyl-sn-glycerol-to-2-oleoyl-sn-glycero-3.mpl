@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-palmitoyl-sn-glycerol-to-2-oleoyl-sn-glycero-3 "3-palmitoyl-sn-glycerol to 2-oleoyl-sn-glycero-3-pho…" {
-  spacing 158
+  spacing 170
 
   spine at 0,0 {
     3_palmitoyl_sn_glycerol
@@ -16,9 +16,21 @@ pathway 3-palmitoyl-sn-glycerol-to-2-oleoyl-sn-glycero-3 "3-palmitoyl-sn-glycero
     1_o_stearoyl_n_acetylsphingosine
   }
 
-  branch from 1_o_stearoyl_n_acetylsphingosine side left {
-    1_o_stearoyl_n_acetylsphingosine
-    <-> . +1_octadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph +n_acetylsphingosine
-    2_oleoyl_sn_glycero_3_phospho_1_sn_glycerol
+  branch from stearoyl_coa side left {
+    stearoyl_coa
+    <-> . +fad +hplus +fadh2
+    trans_2_octadecenoyl_coa
+  }
+
+  branch from stearoyl_coa side right {
+    stearoyl_coa
+    <-> . +hexadecasphinganine +coa +hplus
+    n_stearoylhexadecasphinganine
+  }
+
+  branch from n_acetylsphingosine side left {
+    n_acetylsphingosine
+    <-> ec_3_5_1_23 [3.5.1.23] +h2o +h +acetate
+    sphing_4_enine
   }
 }

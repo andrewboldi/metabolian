@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-hexaprenyl-6-methoxyphe-to-diphosphate "2-Hexaprenyl-6-methoxyphe… to diphosphate" {
-  spacing 212
+  spacing 152
 
   spine at 0,0 {
     2_hexaprenyl_6_methoxyphenol
@@ -18,65 +18,5 @@ pathway 2-hexaprenyl-6-methoxyphe-to-diphosphate "2-Hexaprenyl-6-methoxyphe… t
     dimethylallyl_diphosphate
     <-> . +dehydrohistidyltryptophyldiketopiperazine -diphosphate
     4e_4_1h_imidazol_5_ylmethylidene_9_2_methylbut
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
-    3_6_anhydro_l_galactofuranose
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +beta_colitopyranose +phosphate +beta_colitopyranose +h2o
-    atp
-  }
-
-  branch from 2e_6e_10e_14e_geranylfarnesyl_diphosphate side left {
-    2e_6e_10e_14e_geranylfarnesyl_diphosphate
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +atp
-    h2o
-  }
-
-  branch from 2e_6e_10e_14e_geranylfarnesyl_diphosphate side right {
-    2e_6e_10e_14e_geranylfarnesyl_diphosphate
-    <-> . +diphosphate +2_geranylfernesyl_phenazine
-    2_hydroxyphenazine
-  }
-
-  branch from ipp side left {
-    ipp
-    <-> ec_1_17_1_2 [1.17.1.2] +2e_4_hydroxy_3_methylbut_2_enyl_diphosphate +h +nadph +h2o
-    nadp
-  }
-
-  branch from ipp side right {
-    ipp
-    <-> ec_1_17_1_2 [1.17.1.2] +nadh +1_hydroxy_2_methyl_2_e_butenyl_4_diphosphate +h2o
-    nad
-  }
-
-  branch from dimethylallyl_diphosphate side left {
-    dimethylallyl_diphosphate
-    <-> ec_1_17_1_2 [1.17.1.2] +2e_4_hydroxy_3_methylbut_2_enyl_diphosphate +h +nad +h2o
-    nadh
-  }
-
-  branch from dimethylallyl_diphosphate side right {
-    dimethylallyl_diphosphate
-    <-> ec_1_17_1_2 [1.17.1.2] +nadp +h2o +nadph
-    1_hydroxy_2_methyl_2_e_butenyl_4_diphosphate
-  }
-
-  branch from diphosphate side left {
-    diphosphate
-    <-> . +5_phospho_alpha_d_ribose_1_diphosphate +h +h2o
-    alpha_d_ribofuranose_5_phosphate
-  }
-
-  branch from diphosphate side right {
-    diphosphate
-    <-> ec_6_1_3_1 [6.1.3.1] +amp +3_dodecyl_4_tridecyloxetan_2_one +atp
-    2r_3s_2_dodecyl_3_hydroxyhexadecanoate
   }
 }

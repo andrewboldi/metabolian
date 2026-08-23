@@ -4,63 +4,135 @@
 # edit the generator, not this file.
 
 pathway glycerophosphatidylethano-to-h2o "glycerophosphatidylethano… to H2O" {
-  spacing 200
+  spacing 272
 
   spine at 0,0 {
     glycerophosphatidylethanolamine
-    <-> . +acyl_phosphatidylglycerol_n_c18_1 -phosphatidylglycerol_dioctadec_11_enoyl_n_c18_1
-    2_acyl_sn_glycero_3_phosphoethanolamine_n_c18_1
-    <-> . +9z_octadecenoate +h -h2o
-    phosphatidylethanolamine_dioctadec_11_enoyl_n_c1
-    <-> . +h +adp +phosphate -phosphatidylethanolamine_dioctadec_11_enoyl_n_c1 -h2o
+    <-> . +acyl_phosphatidylglycerol_n_c14_0 -phosphatidylglycerol_ditetradecanoyl_n_c14_0
+    pe_0_0_14_0
+    <-> . +h +tetradecanoate -h2o
+    phosphatidylethanolamine_ditetradecanoyl_n_c14_0
+    <-> . +h +adp +phosphate -phosphatidylethanolamine_ditetradecanoyl_n_c14_0 -h2o
     atp
   }
 
-  branch from 2_acyl_sn_glycero_3_phosphoethanolamine_n_c18_1 side left {
-    2_acyl_sn_glycero_3_phosphoethanolamine_n_c18_1
-    <-> . +phosphatidylethanolamine_dioctadec_11_enoyl_n_c1 +h2o
-    vaccenic_acid
+  branch from pe_0_0_14_0 side left {
+    pe_0_0_14_0
+    <-> . +amp +phosphatidylethanolamine_ditetradecanoyl_n_c14_0 +tetradecanoate +atp
+    diphosphate
   }
 
-  branch from phosphatidylglycerol_dioctadec_11_enoyl_n_c18_1 side right {
-    phosphatidylglycerol_dioctadec_11_enoyl_n_c18_1
-    <-> . +vaccenic_acid +h2o
-    2_acyl_sn_glycero_3_phosphoglycerol_n_c18_1
-  }
-
-  branch from phosphatidylglycerol_dioctadec_11_enoyl_n_c18_1 side left {
-    phosphatidylglycerol_dioctadec_11_enoyl_n_c18_1
-    <-> . +h2o +vaccenic_acid
-    1_acyl_sn_glycero_3_phosphoglycerol_n_c18_1
-  }
-
-  branch from phosphatidylethanolamine_dioctadec_11_enoyl_n_c1 side right {
-    phosphatidylethanolamine_dioctadec_11_enoyl_n_c1
-    <-> . +h2o +vaccenic_acid
-    1_oleoylglycerophosphoethanolamine_delta_9
+  branch from phosphatidylglycerol_ditetradecanoyl_n_c14_0 side right {
+    phosphatidylglycerol_ditetradecanoyl_n_c14_0
+    <-> . +diphosphate +amp +tetradecanoate +atp
+    2_tetradecanoyl_sn_glycero_3_phospho_1_sn_glycer
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_14_14_1 [1.14.14.1] +h +1_1_dichloroethene +o2 +nadph +nadp
-    2_2_dichloroacetaldehyde
+    <-> . +nitroxyl
+    nitrous_oxide
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_14_14_1 [1.14.14.1] +h +1_1_dichloroethene +o2 +nadph +1_1_dichloroethylene_epoxide
-    nadp
+    <-> . +7_2_dihydroxy_4_5_methylenedioxyisoflav_3_ene
+    3r_4r_2_hydroxy_4_5_methylenedioxyisoflavan_4_7
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_21 [3.6.3.21] +h +adp +phosphate +h2o
-    polar_amino_acid
+    <-> ec_2_7_4_8 [2.7.4.8] +8_azaguanosine_5_diphosphate +adp +h
+    8_azaguanosine_5_monophosphate
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_42 [3.6.3.42] +h +adp +phosphate +h2o
-    beta_d_glucan
+    <-> . +h +l_glutamate +adp
+    d_alpha_glutamyl_phosphate
+  }
+
+  branch from glycerophosphatidylethanolamine side left {
+    glycerophosphatidylethanolamine
+    <-> . +vaccenic_acid +h2o
+    1_oleoylglycerophosphoethanolamine_delta_9
+  }
+
+  branch from glycerophosphatidylethanolamine side right {
+    glycerophosphatidylethanolamine
+    <-> . +9z_hexadecenoate +h +h2o
+    pe_16_1_9z_0_0
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_7_7_77 [2.7.7.77] +bis_guanylyl_molybdopterin_cofactor +diphosphate +gtp
+    bis_molybdenum_cofactor
+  }
+
+  branch from h side right {
+    h
+    <-> . +3_methyl_pyrroline_5_carboxylate +h2o
+    5_5_dihydroxy_leucine
+  }
+
+  branch from tetradecanoate side left {
+    tetradecanoate
+    <-> ec_3_5_1_23 [3.5.1.23] +sphing_4_enine +h +h2o
+    n_myristoyl_d_sphingosine
+  }
+
+  branch from tetradecanoate side right {
+    tetradecanoate
+    <-> . +h +cholesterol +h2o
+    cholesteryl_myristate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +o2
+    h2
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +2_4_hydroxybenzyl_malate +h +coa +3_4_hydroxyphenyl_pyruvate
+    acetyl_coa
+  }
+
+  branch from adp side left {
+    adp
+    <-> ec_3_6_1_29 [3.6.1.29] +h +amp +h2o
+    p_1_p_2_bis_5_adenosyl_triphosphate
+  }
+
+  branch from adp side right {
+    adp
+    <-> ec_2_7_1_64 [2.7.1.64] +myo_inositol +atp +h
+    1d_myo_inositol_1_phosphate
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> ec_2_4_1_7 [2.4.1.7] +sucrose +alpha_d_glucose_1_phosphate
+    beta_d_fructose
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_3_1_3_29 [3.1.3.29] +lyxose +h2o
+    d_ribulose_5_phosphate
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_6_3_2_18 [6.3.2.18] +diphosphate +h +n_alpha_gamma_l_glutamylhistamine +amp +l_glutamate
+    histamine
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +l_2_aminoadipate +h +h2o +phosphate
+    l_2_aminoadipate_adenylate
   }
 }

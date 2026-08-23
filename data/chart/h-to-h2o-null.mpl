@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway h-to-h2o-null "H to H2O" {
-  spacing 190
+  spacing 250
 
   spine at 0,0 {
     h
@@ -18,14 +18,14 @@ pathway h-to-h2o-null "H to H2O" {
 
   branch from nadp side left {
     nadp
-    <-> . +dtdp_beta_l_rhamnose +h +nadph
-    dtdp_4_dehydro_6_deoxy_alpha_d_glucose
+    <-> ec_1_1_1_2 [1.1.1.2] +4_phenylbutan_2_one +h +nadph
+    s_4_phenyl_2_butanol
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_3_1_22 [1.3.1.22] +5_dihydrodeoxycorticosterone +h +nadph
-    21_hydroxyprogesterone
+    <-> ec_1_1_1_2 [1.1.1.2] +s_1_phenyl_2_propanol +h +nadph
+    phenylacetone
   }
 
   branch from 25_hydroxyvitamin_d2 side left {
@@ -36,13 +36,73 @@ pathway h-to-h2o-null "H to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> ec_3_1_1_45 [3.1.1.45] +2_chloro_5_methyl_cis_dienelactone
-    2_chloro_5_methylmaleylacetate
+    <-> ec_4_4_1_13 [4.4.1.13] +z_1_l_cystein_s_yl_n_hydroxy_omega_methylsulfan +nh4 +9_methylthio_nonyl_thiohydroximic_acid
+    pyruvate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +nadh +h +5_nitro_o_toluidine +nad
-    2_4_diaminotoluene
+    <-> . +formaldehyde +3_3_diindolylmethane
+    indole_3_methanol
+  }
+
+  branch from h side right {
+    h
+    <-> ec_5_5_1_7 [5.5.1.7] +2e_4z_2_chloromuconate
+    5_chloromuconolactone
+  }
+
+  branch from h side left {
+    h
+    <-> . +3_4_6_trichlorocatechol +chloride
+    1r_2s_1_3_4_6_tetrachlorocyclohexa_3_5_diene_1
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +glucoraphanin +h +gluconapin
+    methanesulfonate
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +glucobrassicanapin +methanesulfonate +h
+    glucoalyssin
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_1_1_149 [1.1.1.149] +2_hydroxycyclohexa_3_5_diene_1_one +h +nadp
+    cyclohexa_3_5_diene_1_2_diol
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_1_1_21 [1.1.1.21] +3_fluorobenzyl_alcohol +nadp +h
+    3_fluorobenzaldehyde
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_1_1_2 [1.1.1.2] +2_chlorobenzaldehyde +h +nadph
+    compound_0041489
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_1_1_21 [1.1.1.21] +4_methylphenylglyoxal +h +nadph
+    4_methylbenzoyl_methanol
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +indol_3_ylmethyl_l_cysteine +indole_3_methanol
+    l_cysteine
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_1_1_1 [3.1.1.1] +h +butanoate +4_nitrophenol
+    p_nitrophenyl_butyrate
   }
 }

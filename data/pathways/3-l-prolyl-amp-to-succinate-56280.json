@@ -1,0 +1,530 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-l-prolyl-amp-to-succinate-56280",
+  "name": "3'-L-prolyl-AMP to succinate",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from 3'-L-prolyl-AMP(1−) to succinate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:56280"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:140179"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_l_prolyl_amp",
+      "name": "3'-L-prolyl-AMP",
+      "formula": "C15H20N6O8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:140179"
+      }
+    },
+    {
+      "id": "holo-acp",
+      "name": "Holo-[acyl-carrier protein]",
+      "short": "Holo-[acyl-carrier…",
+      "formula": "C14H25N3O8PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64479"
+      }
+    },
+    {
+      "id": "o_s_l_prolylpantetheine_4_phosphoryl_serine_zwit",
+      "name": "O-(S-L-prolylpantetheine-4'-phosphoryl)serine zwitterionic",
+      "short": "O-(S-L-prolylpantet…",
+      "formula": "C19H33N4O9PS",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138622"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "aculene_d",
+      "name": "aculene D",
+      "formula": "C14H20O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:155910"
+      }
+    },
+    {
+      "id": "aculene_b",
+      "name": "aculene B",
+      "formula": "C19H28NO3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:155913"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "aculene_a",
+      "name": "aculene A",
+      "formula": "C19H26NO3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:155914"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3'-L-prolyl-AMP + holo-[peptidyl-carrier protein] = L-prolyl-[peptidyl-carrier protein]...",
+      "equation": "3'-L-prolyl-AMP + holo-[peptidyl-carrier protein] = L-prolyl-[peptidyl-carrier protein] + AMP",
+      "substrates": [
+        {
+          "metabolite": "3_l_prolyl_amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "holo-acp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_s_l_prolylpantetheine_4_phosphoryl_serine_zwit",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:56280"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56280"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "aculene D + L-prolyl-[peptidyl-carrier protein] = aculene B + holo-[peptidyl-carrier pr...",
+      "equation": "aculene D + L-prolyl-[peptidyl-carrier protein] = aculene B + holo-[peptidyl-carrier protein]",
+      "substrates": [
+        {
+          "metabolite": "aculene_d",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o_s_l_prolylpantetheine_4_phosphoryl_serine_zwit",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aculene_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "holo-acp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:65104"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65104"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "aculene B + 2-oxoglutarate + O2 = aculene A + succinate + CO2 + H2O",
+      "equation": "aculene B + 2-oxoglutarate + O2 = aculene A + succinate + CO2 + H2O",
+      "substrates": [
+        {
+          "metabolite": "aculene_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aculene_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:65116"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65116"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3_l_prolyl_amp_3-l-prolyl-amp-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_l_prolyl_amp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-l-prolyl-amp-to-succinate"
+      },
+      "note": "Shares 3'-L-prolyl-AMP with 3'-L-prolyl-AMP to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:140179"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_l_prolyl_amp_l-proline-betaine-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_l_prolyl_amp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-proline-betaine-to-hydrogen-donor"
+      },
+      "note": "Shares 3'-L-prolyl-AMP with L-proline betaine to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:140179"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_l_prolyl_amp_l-proline-betaine-to-hydrogen-donor-19357",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_l_prolyl_amp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-proline-betaine-to-hydrogen-donor-19357"
+      },
+      "note": "Shares 3'-L-prolyl-AMP with L-proline betaine to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:140179"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_o_s_l_prolylpantetheine_4_phosphoryl_serine_zwit_2s-2-carbamoylpyrrolidi-to-o-s-4-5-dichloropyrr",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "o_s_l_prolylpantetheine_4_phosphoryl_serine_zwit"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2s-2-carbamoylpyrrolidi-to-o-s-4-5-dichloropyrr"
+      },
+      "note": "Shares O-(S-L-prolylpantetheine-4'-phosphoryl)serine zwitterionic with (2S)-2-carbamoylpyrrolidi… to O-[S-(4,5-dichloropyrrole….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:138622"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_o_s_l_prolylpantetheine_4_phosphoryl_serine_zwit_3-l-prolyl-amp-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "o_s_l_prolylpantetheine_4_phosphoryl_serine_zwit"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-l-prolyl-amp-to-succinate"
+      },
+      "note": "Shares O-(S-L-prolylpantetheine-4'-phosphoryl)serine zwitterionic with 3'-L-prolyl-AMP to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:138622"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_o_s_l_prolylpantetheine_4_phosphoryl_serine_zwit_dauca-4-7-diene-to-o-pantetheine-4-phospho",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "o_s_l_prolylpantetheine_4_phosphoryl_serine_zwit"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dauca-4-7-diene-to-o-pantetheine-4-phospho"
+      },
+      "note": "Shares O-(S-L-prolylpantetheine-4'-phosphoryl)serine zwitterionic with dauca-4,7-diene to O-(pantetheine-4'-phospho….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:138622"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_o_s_l_prolylpantetheine_4_phosphoryl_serine_zwit_dauca-4-7-diene-to-o-pantetheine-4-phospho-65076",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "o_s_l_prolylpantetheine_4_phosphoryl_serine_zwit"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dauca-4-7-diene-to-o-pantetheine-4-phospho-65076"
+      },
+      "note": "Shares O-(S-L-prolylpantetheine-4'-phosphoryl)serine zwitterionic with dauca-4,7-diene to O-(pantetheine-4'-phospho….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:138622"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_aculene_d_1-2-didecanoylglycerol-to-10-oxocaprate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aculene_d"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-didecanoylglycerol-to-10-oxocaprate"
+      },
+      "note": "Shares aculene D with 1,2-didecanoylglycerol to 10-oxocaprate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:155910"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_aculene_d_3-l-prolyl-amp-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aculene_d"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-l-prolyl-amp-to-succinate"
+      },
+      "note": "Shares aculene D with 3'-L-prolyl-AMP to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:155910"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_aculene_d_dauca-4-7-diene-to-o-pantetheine-4-phospho",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aculene_d"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dauca-4-7-diene-to-o-pantetheine-4-phospho"
+      },
+      "note": "Shares aculene D with dauca-4,7-diene to O-(pantetheine-4'-phospho….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:155910"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_aculene_d_dauca-4-7-diene-to-o-pantetheine-4-phospho-65076",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aculene_d"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dauca-4-7-diene-to-o-pantetheine-4-phospho-65076"
+      },
+      "note": "Shares aculene D with dauca-4,7-diene to O-(pantetheine-4'-phospho….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:155910"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_aculene_d_iridodial-lactol-to-2s-3r-4s-5-methoxycarb-5756",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aculene_d"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "iridodial-lactol-to-2s-3r-4s-5-methoxycarb-5756"
+      },
+      "note": "Shares aculene D with (+)-iridodial lactol to (2S,3R,4S)-5-(methoxycarb….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:155910"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "6z-octadecenoyl-coa-to-palmitoyl-coa",
   "name": "(6Z)-octadecenoyl-CoA to palmitoyl-CoA",
-  "category": "amino-acid-metabolism",
+  "category": "other",
   "summary": "A 8-step route from (6Z)-octadecenoyl-CoA(4−) to palmitoyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -196,46 +196,9 @@
       "xrefs": {
         "chebi": "CHEBI:57379"
       }
-    },
-    {
-      "id": "hexadecan_1_ol",
-      "name": "hexadecan-1-ol",
-      "formula": "C16H34O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16125"
-      }
-    },
-    {
-      "id": "1_oleoyl_sn_glycero_3_phosphoserine",
-      "name": "1-oleoyl-sn-glycero-3-phosphoserine",
-      "short": "1-oleoyl-sn-glycero…",
-      "formula": "C24H45NO9P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:74617"
-      }
-    },
-    {
-      "id": "1_oleoyl_2_palmitoyl_sn_glycero_3_phospho_l_seri",
-      "name": "1-oleoyl-2-palmitoyl-sn-glycero-3-phospho-L-serine",
-      "short": "1-oleoyl-2-palmitoy…",
-      "formula": "C40H75NO10P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:74909"
-      }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_1_2_1_84",
-      "name": "alcohol-forming fatty acyl-CoA reductase (NADPH)",
-      "ec": [
-        "1.2.1.84"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -556,95 +519,115 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r9",
-      "name": "alcohol-forming fatty acyl-CoA reductase (NADPH)",
-      "equation": "hexadecanoyl-CoA + 2 NADPH + 2 H(+) = hexadecan-1-ol + 2 NADP(+) + CoA",
-      "ec": "1.2.1.84",
-      "substrates": [
-        {
-          "metabolite": "palmitoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "hexadecan_1_ol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_2_1_84"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 9,
-      "xrefs": {
-        "rhea": "RHEA:36315"
+      "id": "xt_6z_octadecenoyl_coa_petroselinamide-to-1-oleoyl-2-6z-octadecen",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6z_octadecenoyl_coa"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "petroselinamide-to-1-oleoyl-2-6z-octadecen"
+      },
+      "note": "Shares (6Z)-octadecenoyl-CoA with petroselinamide to 1-oleoyl-2-(6Z)-octadecen….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:36315"
+            "db": "ChEBI",
+            "id": "CHEBI:75123"
           }
         ]
       }
     },
     {
-      "id": "r10",
-      "name": "1-(9Z-octadecenoyl)-sn-glycero-3-phospho-L-serine + hexadecanoyl-CoA = 1-(9Z)-octadecen...",
-      "equation": "1-(9Z-octadecenoyl)-sn-glycero-3-phospho-L-serine + hexadecanoyl-CoA = 1-(9Z)-octadecenoyl-2-hexadecanoyl-sn-glycero-3-phosphoserine + CoA",
-      "substrates": [
-        {
-          "metabolite": "1_oleoyl_sn_glycero_3_phosphoserine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "palmitoyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_oleoyl_2_palmitoyl_sn_glycero_3_phospho_l_seri",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 10,
-      "xrefs": {
-        "rhea": "RHEA:37415"
+      "id": "xt_trans_hexadecenoyl_coa_methyl-group-to-1-hexadecyl-sn-glycero-3",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_hexadecenoyl_coa"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "methyl-group-to-1-hexadecyl-sn-glycero-3"
+      },
+      "note": "Shares trans-Hexadec-2-enoyl-CoA with methyl group to 1-hexadecyl-sn-glycero-3-….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:37415"
+            "db": "ChEBI",
+            "id": "CHEBI:61526"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_hexadecenoyl_coa_n-hexadecanoylsphingosine-to-palmitoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_hexadecenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-hexadecanoylsphingosine-to-palmitoyl-coa"
+      },
+      "note": "Shares trans-Hexadec-2-enoyl-CoA with N-hexadecanoylsphingosine… to palmitoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61526"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_hexadecenoyl_coa_n-stearoylsphingosine-1-p-to-n-hexadecanoylsphin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_hexadecenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-stearoylsphingosine-1-p-to-n-hexadecanoylsphin"
+      },
+      "note": "Shares trans-Hexadec-2-enoyl-CoA with N-stearoylsphingosine-1-p… to N-hexadecanoylsphingosine….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61526"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_hexadecenoyl_coa_s-3-hydroxypalmitoyl-coa-to-1-palmitoyl-2-palmi",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_hexadecenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-3-hydroxypalmitoyl-coa-to-1-palmitoyl-2-palmi"
+      },
+      "note": "Shares trans-Hexadec-2-enoyl-CoA with (S)-3-hydroxypalmitoyl-CoA to 1-palmitoyl-2-palmitoleoy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61526"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-dehydroascorbic-acid-to-h2o "L-dehydroascorbic acid to H2O" {
-  spacing 206
+  spacing 152
 
   spine at 0,0 {
     l_dehydroascorbic_acid
@@ -14,59 +14,5 @@ pathway l-dehydroascorbic-acid-to-h2o "L-dehydroascorbic acid to H2O" {
     4z_7z_10z_13z_16z_19z_docosahexaenoate
     <-> . +h +cholesterol -h2o
     cholesteryl_docosahexanoate_cholesterol_ester_22
-  }
-
-  branch from 11_hydroperoxy_h4_neuroprostane side left {
-    11_hydroperoxy_h4_neuroprostane
-    <-> . +l_dehydroascorbic_acid +h2o +h +l_ascorbate
-    11_hydroxy_d4_neuroprostane
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +gramicidin_s +phosphate +gramicidin_s +h2o
-    atp
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    destruxin_b
-  }
-
-  branch from l_ascorbate side right {
-    l_ascorbate
-    <-> ec_1_8_5_1 [1.8.5.1] +l_dehydroascorbic_acid +glutathione +h
-    glutathione_disulfide
-  }
-
-  branch from l_ascorbate side left {
-    l_ascorbate
-    <-> ec_1_10_99_3 [1.10.99.3] +l_dehydroascorbic_acid +all_trans_zeaxanthin +h2o +h
-    all_trans_violaxanthin
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +triethylamine_n_oxide +nadp +h2o +h +triethylamine
-    nadph
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +n_n_diethylethanamine_oxide +nadp +h2o +h +nadph
-    triethylamine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    concanamycin_a
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    bafilomycin_a1
   }
 }

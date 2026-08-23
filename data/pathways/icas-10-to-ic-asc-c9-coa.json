@@ -116,61 +116,9 @@
       "xrefs": {
         "chebi": "CHEBI:16240"
       }
-    },
-    {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:175763"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "Water",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:15377"
-      }
-    },
-    {
-      "id": "corvol_ether_b",
-      "name": "(+)-corvol ether B",
-      "formula": "C15H26O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:137536"
-      }
-    },
-    {
-      "id": "corvol_ether_a",
-      "name": "(+)-corvol ether A",
-      "formula": "C15H26O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:137535"
-      }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_4_2_3_163",
-      "name": "(+)-corvol ether B synthase",
-      "ec": [
-        "4.2.3.163"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_171",
-      "name": "(+)-corvol ether A synthase",
-      "ec": [
-        "4.2.3.171"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -296,93 +244,49 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "(+)-corvol ether B synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate + H2O = (+)-corvol ether B + diphosphate",
-      "ec": "4.2.3.163",
-      "substrates": [
-        {
-          "metabolite": "fpp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "corvol_ether_b",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_163"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:53644"
+      "id": "xt_icas_10_all-trans-tridecaprenyl-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "icas_10"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "all-trans-tridecaprenyl-to-nad"
+      },
+      "note": "Shares icas#10 with all-trans-tridecaprenyl… to NAD.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:53644"
+            "db": "ChEBI",
+            "id": "CHEBI:140801"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "(+)-corvol ether A synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate + H2O = (+)-corvol ether A + diphosphate",
-      "ec": "4.2.3.171",
-      "substrates": [
-        {
-          "metabolite": "fpp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "corvol_ether_a",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_171"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:53648"
+      "id": "xt_ic_asc_c9_coa_all-trans-tridecaprenyl-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ic_asc_c9_coa"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "all-trans-tridecaprenyl-to-nad"
+      },
+      "note": "Shares IC-asc-C9-CoA with all-trans-tridecaprenyl… to NAD.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:53648"
+            "db": "ChEBI",
+            "id": "CHEBI:166973"
           }
         ]
       }

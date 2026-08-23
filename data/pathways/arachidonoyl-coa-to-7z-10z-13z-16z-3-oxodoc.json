@@ -1,0 +1,305 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "arachidonoyl-coa-to-7z-10z-13z-16z-3-oxodoc",
+  "name": "arachidonoyl-CoA to (7Z,10Z,13Z,16Z)-3-oxodoc…",
+  "category": "other",
+  "summary": "A 3-step route from arachidonoyl-CoA(4−) to (7Z,10Z,13Z,16Z)-3-oxodocosatetraenoyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:36475"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57368"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "arachidonoyl_coa",
+      "name": "arachidonoyl-CoA",
+      "formula": "C41H62N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57368"
+      }
+    },
+    {
+      "id": "malonyl-coa",
+      "name": "Malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57384"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "7z_10z_13z_16z_3_oxodocosatetraenoyl_coa",
+      "name": "(7Z,10Z,13Z,16Z)-3-oxodocosatetraenoyl-CoA",
+      "short": "(7Z,10Z,13Z,16Z)-3-…",
+      "formula": "C43H64N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:73852"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "3r_7z_10z_13z_16z_3_hydroxydocosatetraenoyl_coa",
+      "name": "(3R,7Z,10Z,13Z,16Z)-3-hydroxydocosatetraenoyl-CoA",
+      "short": "(3R,7Z,10Z,13Z,16Z)…",
+      "formula": "C43H66N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:76415"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoyl-CoA + malonyl-CoA + H(+) = (7Z,10Z,13Z,16Z)-3-oxodocos...",
+      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoyl-CoA + malonyl-CoA + H(+) = (7Z,10Z,13Z,16Z)-3-oxodocosatetraenoyl-CoA + CO2 + CoA",
+      "substrates": [
+        {
+          "metabolite": "arachidonoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7z_10z_13z_16z_3_oxodocosatetraenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:36475"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36475"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(7Z,10Z,13Z,16Z)-3-oxodocosatetraenoyl-CoA + NADPH + H(+) = (3R)-hydroxy-(7Z,10Z,13Z,16...",
+      "equation": "(7Z,10Z,13Z,16Z)-3-oxodocosatetraenoyl-CoA + NADPH + H(+) = (3R)-hydroxy-(7Z,10Z,13Z,16Z)-docosatetraenoyl-CoA + NADP(+)",
+      "substrates": [
+        {
+          "metabolite": "7z_10z_13z_16z_3_oxodocosatetraenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3r_7z_10z_13z_16z_3_hydroxydocosatetraenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:39323"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:39323"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(3R)-hydroxy-(7Z,10Z,13Z,16Z)-docosatetraenoyl-CoA + NAD(+) = (7Z,10Z,13Z,16Z)-3-oxodoc...",
+      "equation": "(3R)-hydroxy-(7Z,10Z,13Z,16Z)-docosatetraenoyl-CoA + NAD(+) = (7Z,10Z,13Z,16Z)-3-oxodocosatetraenoyl-CoA + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "3r_7z_10z_13z_16z_3_hydroxydocosatetraenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7z_10z_13z_16z_3_oxodocosatetraenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:84387"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84387"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_7z_10z_13z_16z_3_oxodocosatetraenoyl_coa_1-2-dioleoylglycerol-to-1-oleoyl-2-arachidonoyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7z_10z_13z_16z_3_oxodocosatetraenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-dioleoylglycerol-to-1-oleoyl-2-arachidonoyl"
+      },
+      "note": "Shares (7Z,10Z,13Z,16Z)-3-oxodocosatetraenoyl-CoA with 1,2-dioleoylglycerol to 1-oleoyl-2-arachidonoyl-s….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:73852"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3r_7z_10z_13z_16z_3_hydroxydocosatetraenoyl_coa_3r-7z-10z-13z-16z-3-hyd-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3r_7z_10z_13z_16z_3_hydroxydocosatetraenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3r-7z-10z-13z-16z-3-hyd-to-nadph"
+      },
+      "note": "Shares (3R,7Z,10Z,13Z,16Z)-3-hydroxydocosatetraenoyl-CoA with (3R,7Z,10Z,13Z,16Z)-3-hyd… to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76415"
+          }
+        ]
+      }
+    }
+  ]
+}

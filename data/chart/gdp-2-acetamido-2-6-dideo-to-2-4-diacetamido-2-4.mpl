@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway gdp-2-acetamido-2-6-dideo-to-2-4-diacetamido-2-4 "GDP-2-acetamido-2,6-dideo… to 2,4-diacetamido-2,4,6-tri…" {
-  spacing 324
+  spacing 340
 
   spine at 0,0 {
     gdp_2_acetamido_2_6_dideoxy_alpha_d_xylo_hexos_4
@@ -18,37 +18,97 @@ pathway gdp-2-acetamido-2-6-dideo-to-2-4-diacetamido-2-4 "GDP-2-acetamido-2,6-di
 
   branch from 2_oxoglutarate side left {
     2_oxoglutarate
-    <-> . +gibberellin_a15_closed_lactone_form +o2 +succinate +gibberellin_a37_closed_lactone_form
-    co2
+    <-> ec_1_2_1_38 [1.2.1.38] +acetyl_coa +atp +nadph +l_glutamate +nadp +coa +n_2_acetyl_l_ornithine +phosphate
+    adp
   }
 
   branch from 2_oxoglutarate side right {
     2_oxoglutarate
-    <-> . +h +gibberellin_a12 +o2 +co2 +gibberellin_a110
-    succinate
+    <-> ec_1_2_1_38 [1.2.1.38] +acetyl_coa +atp +nadph +l_glutamate +h2o +h +adp +nadp +coa +ornithine +phosphate
+    acetate
   }
 
   branch from h side left {
     h
-    <-> ec_2_7_1_190 [2.7.1.190] +gdp +tobramycin_2_phosphate +tobramycin
-    gtp
+    <-> . +sn_glycerol_3_phosphocholine +h2o +choline
+    glycerol_2_phosphate
   }
 
   branch from h side right {
     h
-    <-> ec_2_7_1_190 [2.7.1.190] +gdp +sisomicin_2_phosphate +gtp
-    sisomicin
+    <-> . +glycoursodeoxycholate +coa +ursodeoxycholoyl_coa
+    glycine
   }
 
   branch from coa side left {
     coa
-    <-> . +quercetin_3_o_6_o_4_coumaroyl_glucoside +trans_4_coumaroyl_coa
-    quercetin_3_o_3_6_o_di_4_coumaroyl_glucoside
+    <-> . +hexanoyl_coa +glycine
+    n_hexanoylglycine
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_16 [2.3.1.16] +acetyl_coa +3z_5e_dodecadienoyl_coa
-    5_cis_7_trans_3_oxo_tetradecadienoyl_coa
+    <-> . +5z_tetradecenoyl_coa +h2o
+    cis_tetradec_5_enoic_acid
+  }
+
+  branch from l_glutamate side left {
+    l_glutamate
+    <-> . +l_histidine +l_glutamine +h2o
+    histidyl_glutamyl_glutamine
+  }
+
+  branch from l_glutamate side right {
+    l_glutamate
+    <-> . +l_histidine +h2o
+    histidyl_glutamate
+  }
+
+  branch from 2_oxoglutarate side left {
+    2_oxoglutarate
+    <-> ec_1_14_11_33 [1.14.11.33] +formaldehyde +co2 +succinate +datp +1_methyl_datp
+    o2
+  }
+
+  branch from 2_oxoglutarate side right {
+    2_oxoglutarate
+    <-> ec_1_14_20_14 [1.14.20.14] +12_epi_hapalindole_c +h +o2 +chloride +co2 +succinate +h2o
+    12_epi_hapalindole_e
+  }
+
+  branch from acetyl_coa side left {
+    acetyl_coa
+    <-> . +9z_octadecenoyl_coa +coa
+    11z_3_oxoicosa_11_enoyl_coa
+  }
+
+  branch from acetyl_coa side right {
+    acetyl_coa
+    <-> . +3z_dodecenoyl_coa +h +coa
+    3_oxomyrist_5_enoyl_coenzyme_a
+  }
+
+  branch from h side left {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    hexadecanedioate
+  }
+
+  branch from h side right {
+    h
+    <-> . +adp +z_z_z_7_10_13_hexadecatrienoic_acid +phosphate +z_z_z_7_10_13_hexadecatrienoic_acid +h2o
+    atp
+  }
+
+  branch from coa side left {
+    coa
+    <-> . +7z_hexadecenoyl_coa +h2o
+    7_palmitoleic_acid
+  }
+
+  branch from coa side right {
+    coa
+    <-> . +10z_heptadecenoyl_coa +h2o
+    10z_heptadecenoic_acid
   }
 }

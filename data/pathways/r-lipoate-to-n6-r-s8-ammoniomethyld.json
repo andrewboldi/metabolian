@@ -118,44 +118,6 @@
       "xrefs": {
         "chebi": "CHEBI:16526"
       }
-    },
-    {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:175763"
-      }
-    },
-    {
-      "id": "cis_farnesene",
-      "name": "cis-β-farnesene",
-      "formula": "C15H24",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:39242"
-      }
-    },
-    {
-      "id": "2_cis_6_cis_farnesyl_diphosphate",
-      "name": "2-cis,6-cis-farnesyl diphosphate",
-      "short": "2-cis,6-cis-farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:60374"
-      }
-    },
-    {
-      "id": "acoradiene",
-      "name": "α-acoradiene",
-      "formula": "C15H24",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:172926"
-      }
     }
   ],
   "enzymes": [
@@ -164,7 +126,10 @@
       "name": "glycine dehydrogenase (aminomethyl-transferring)",
       "ec": [
         "1.4.4.2"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P23378"
+      }
     }
   ],
   "reactions": [
@@ -302,73 +267,93 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "(2E,6E)-farnesyl diphosphate = (Z)-beta-farnesene + diphosphate",
-      "equation": "(2E,6E)-farnesyl diphosphate = (Z)-beta-farnesene + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "fpp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "cis_farnesene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:68508"
+      "id": "xt_r_lipoate_alaninium-amide-to-d-pantetheine-4-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_lipoate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "alaninium-amide-to-d-pantetheine-4-phosphate"
+      },
+      "note": "Shares (R)-lipoate with β-alaninium amide to D-pantetheine 4'-phosphate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:68508"
+            "db": "ChEBI",
+            "id": "CHEBI:83088"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "(2Z,6Z)-farnesyl diphosphate = alpha-acoradiene + diphosphate",
-      "equation": "(2Z,6Z)-farnesyl diphosphate = alpha-acoradiene + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "2_cis_6_cis_farnesyl_diphosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "acoradiene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:68512"
+      "id": "xt_r_lipoate_aldehydo-d-glucose-to-4s-5s-4-5-dihydroxy-2-6",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_lipoate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "aldehydo-d-glucose-to-4s-5s-4-5-dihydroxy-2-6"
+      },
+      "note": "Shares (R)-lipoate with aldehydo-D-glucose to (4S,5S)-4,5-dihydroxy-2,6….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:68512"
+            "db": "ChEBI",
+            "id": "CHEBI:83088"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_lipoate_r-alanopine-to-n6-r-s8-succinyldihydr",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_lipoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-alanopine-to-n6-r-s8-succinyldihydr"
+      },
+      "note": "Shares (R)-lipoate with (R)-β-alanopine to N6-[(R)-S8-succinyldihydr….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83088"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n6_r_s8_ammoniomethyldihydrolipoyl_l_lysine_1_r-alanopine-to-n6-r-s8-succinyldihydr",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n6_r_s8_ammoniomethyldihydrolipoyl_l_lysine_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-alanopine-to-n6-r-s8-succinyldihydr"
+      },
+      "note": "Shares N6-[(R)-S8-ammoniomethyldihydrolipoyl]-L-lysine(1+) with (R)-β-alanopine to N6-[(R)-S8-succinyldihydr….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83143"
           }
         ]
       }

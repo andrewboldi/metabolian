@@ -16,15 +16,15 @@ pathway r-3-phenyllactate-to-fmn "(R)-3-phenyllactate to FMN" {
     hyoscyamine_aldehyde
   }
 
-  branch from glucose side left {
-    glucose
-    <-> ec_3_2_1_147 [3.2.1.147] +sinalbin +h2o
-    e_2_4_hydroxyphenyl_n_sulfonatooxy_ethenimidoth
+  branch from tropinium side left {
+    tropinium
+    <-> ec_1_1_1_206 [1.1.1.206] +nadp +nadph +hplus
+    tropiniumone
   }
 
-  branch from glucose side right {
-    glucose
-    <-> . +sinalbin +h2o +h
-    e_2_4_hydroxyphenyl_n_sulfonatooxy_ethenimidoth
+  branch from tropinium side right {
+    tropinium
+    <-> ec_3_1_1_10 [3.1.1.10] +atropinium +h2o +hplus
+    tropate
   }
 }

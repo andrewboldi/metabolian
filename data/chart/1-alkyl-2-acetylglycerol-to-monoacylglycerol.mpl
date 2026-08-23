@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-alkyl-2-acetylglycerol-to-monoacylglycerol "1-alkyl-2-acetylglycerol to monoacylglycerol" {
-  spacing 182
+  spacing 176
 
   spine at 0,0 {
     1_alkyl_2_acetylglycerol
@@ -26,25 +26,19 @@ pathway 1-alkyl-2-acetylglycerol-to-monoacylglycerol "1-alkyl-2-acetylglycerol t
 
   branch from acyl_sn_glycero_3_phosphocholine side right {
     acyl_sn_glycero_3_phosphocholine
-    <-> . +1_acyl_sn_glycerol +phosphatidylcholine
-    1_3_diacyl_sn_glycerol
+    <-> . +1_3_o_alkylglycerol +phosphatidylcholine
+    1_alkyl_3_acylglycerol
   }
 
-  branch from acyl_sn_glycero_3_phosphocholine side left {
-    acyl_sn_glycero_3_phosphocholine
-    <-> . +phosphatidylcholine +1_3_diacyl_sn_glycerol
-    3_acyl_sn_glycerol
+  branch from phosphatidylcholine side left {
+    phosphatidylcholine
+    <-> . +1_o_acyl_sn_glycero_3_phosphocholine +1_2_diacyl_sn_glycero_3_phosphoethanolamine
+    1_acyl_sn_glycero_3_phosphoethanolamine
   }
 
-  branch from phosphocholine side right {
-    phosphocholine
-    <-> . +2_o_acetyl_1_o_octadecyl_sn_glycero_3_phosphocho +h2o +hplus
-    1_o_octadecyl_2_acetyl_sn_glycerol
-  }
-
-  branch from phosphocholine side left {
-    phosphocholine
-    <-> . +1_2_dioleoyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_2_dioleoyl_sn_glycerol
+  branch from phosphatidylcholine side right {
+    phosphatidylcholine
+    <-> . +1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol +1_o_acyl_sn_glycero_3_phosphocholine
+    1_acyl_sn_glycero_3_phospho_1_sn_glycerol
   }
 }

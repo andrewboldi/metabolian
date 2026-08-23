@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 6-sulfo-d-quinovose-to-d-fructofuranose "6-sulfo-D-quinovose to D-fructofuranose" {
-  spacing 236
+  spacing 248
 
   spine at 0,0 {
     6_sulfo_d_quinovose
@@ -18,13 +18,25 @@ pathway 6-sulfo-d-quinovose-to-d-fructofuranose "6-sulfo-D-quinovose to D-fructo
 
   branch from d_fructofuranose side left {
     d_fructofuranose
-    <-> ec_1_1_1_138 [1.1.1.138] +nadp +nadph +hplus
+    <-> ec_1_1_2_2 [1.1.2.2] +iron +fe2 +hplus
     d_mannitol
   }
 
   branch from d_fructofuranose side right {
     d_fructofuranose
-    <-> ec_2_4_1_13 [2.4.1.13] +adp_d_glucoside +adp +hplus
-    sucrose
+    <-> ec_5_3_1_7 [5.3.1.7]
+    alpha_d_mannopyranose
+  }
+
+  branch from d_fructofuranose side left {
+    d_fructofuranose
+    <-> ec_5_3_1_7 [5.3.1.7]
+    aldehydo_d_mannose
+  }
+
+  branch from d_fructofuranose side right {
+    d_fructofuranose
+    <-> ec_5_1_3_30 [5.1.3.30]
+    psicopyranose
   }
 }

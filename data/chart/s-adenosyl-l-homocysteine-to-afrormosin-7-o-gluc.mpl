@@ -4,75 +4,129 @@
 # edit the generator, not this file.
 
 pathway s-adenosyl-l-homocysteine-to-afrormosin-7-o-gluc "S-adenosyl-L-homocysteine to afrormosin-7-O-glucoside" {
-  spacing 212
+  spacing 266
 
   spine at 0,0 {
     s_adenosyl_l_homocysteine
-    <-> . +3_7_3_4_tetramethylquercetin_2_o_beta_d_glucosid +h -s_adenosyl_l_methionine
-    3_7_4_trimethylquercetin_2_o_beta_d_glucoside
-    <-> . +udp +h -2_hydroxy_3_7_4_trimethylquercetin
-    udp_alpha_d_glucose
-    <-> . +afrormosin -h -afrormosin_7_o_glucoside
+    <-> . +3_6_7_2_4_pentamethylquercetagetin_3_o_beta_d_gl +h -s_adenosyl_l_methionine
+    2_hydroxy_3_6_7_4_tetramethylquercetagetin_3_o_b
+    <-> . +udp +h -udp_alpha_d_glucose
+    2_hydroxy_3_6_7_4_tetramethylquercetagetin
+    <-> . +afrormosin +udp_alpha_d_glucose -h -afrormosin_7_o_glucoside
     udp
   }
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +fusarin_c
-    carboxy_fusarin_c
+    <-> . +s_adenosyl_l_homocysteine +s_methyl_l_cysteinyl_adenylate +h
+    l_cysteinyl_amp
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +echinomycin
-    triostin_a
+    <-> . +s_adenosyl_l_homocysteine +pyrrolomycin_h +h
+    pyrrolomycin_g
   }
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_91 [2.4.1.91] +udp +h +3_o_beta_d_glucosyl_daphnetin
-    7_8_dihydroxycoumarin
+    <-> . +udp +decaprenoxanthin_diglucoside +h
+    decaprenoxanthin_monoglucoside
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +19_o_beta_glucopyranosyl_steviol
-    steviol
+    <-> . +udp +h +sarcinaxanthin_monoglucoside
+    sarcinaxanthin
   }
 
   branch from udp side left {
     udp
-    <-> . +h +digitoxigenin_3beta_yl_beta_d_quinovoside +digitoxigenin
-    udp_alpha_d_quinovose
+    <-> . +7_beta_oh_gliclazide_glucuronide +n_5_hydroxyhexahydrocyclopenta_c_pyrrol_2_1h_yl
+    udp_alpha_d_glucuronate
   }
 
   branch from udp side right {
     udp
-    <-> . +octyl_6_o_d_galactofuranosyl_d_glucopyranoside +h +octyl_d_glucopyranoside
-    udp_d_galactofuranose
+    <-> . +acetaminophen_o_beta_d_glucosiduronic_acid +udp_alpha_d_glucuronate
+    4_acetamidophenol
   }
 
   branch from h side left {
     h
-    <-> . +trans_trans_2_4_dihydroxy_5_methyl_6_oxo_2_4_hex
-    4_hydroxy_2_keto_5_methyl_6_oxo_3_hexenoate
+    <-> . +alloxanthine +udp_ribose +udp
+    oxypurinol_7_riboside
   }
 
   branch from h side right {
     h
-    <-> . +s_adenosyl_l_homocysteine +thiocoraline_dithiol +s_adenosyl_l_methionine
-    s_demethyl_thiocoraline_dithiol
+    <-> . +adp +1_docosahexenoylglycerophosphocholine_delta_4_7 +phosphate +1_docosahexenoylglycerophosphocholine_delta_4_7 +h2o
+    atp
   }
 
   branch from afrormosin_7_o_glucoside side left {
     afrormosin_7_o_glucoside
-    <-> . +afrormosin +glucose
+    <-> . +afrormosin +beta_d_glucose
     h2o
   }
 
-  branch from afrormosin_7_o_glucoside side right {
-    afrormosin_7_o_glucoside
-    <-> . +afrormosin +h2o
-    beta_d_glucose
+  branch from s_adenosyl_l_homocysteine side right {
+    s_adenosyl_l_homocysteine
+    <-> . +pyrrolomycin_j +h +s_adenosyl_l_methionine
+    pyrrolomycin_d
+  }
+
+  branch from s_adenosyl_l_homocysteine side left {
+    s_adenosyl_l_homocysteine
+    <-> . +fucosterol +h +s_adenosyl_l_methionine
+    24_methylenecholesterol
+  }
+
+  branch from h side right {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    2_linoleoylglycerophosphocholine
+  }
+
+  branch from h side left {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    2_oleoylglycerophosphocholine
+  }
+
+  branch from s_adenosyl_l_methionine side right {
+    s_adenosyl_l_methionine
+    <-> ec_2_1_1_145 [2.1.1.145] +s_adenosyl_l_homocysteine +2s_3r_3_hydroxy_2_isopropyl_4_methoxy_4_oxobuta
+    2r_3s_3_isopropylmalate
+  }
+
+  branch from s_adenosyl_l_methionine side left {
+    s_adenosyl_l_methionine
+    <-> ec_2_1_1_49 [2.1.1.49] +s_adenosyl_l_homocysteine +n_methyltryptamine +h
+    tryptamine
+  }
+
+  branch from udp side right {
+    udp
+    <-> . +am1c_glucuronide_cyclosporine +udp_alpha_d_glucuronate
+    cyclosporin_a_metabolite_m18
+  }
+
+  branch from udp side left {
+    udp
+    <-> ec_2_4_1_17 [2.4.1.17] +bilirubin_ixalpha_bis_beta_d_glucuronoside +udp_alpha_d_glucuronate
+    4e_15e_bilirubin_ixalpha_c8_beta_d_glucuronosid
+  }
+
+  branch from udp_alpha_d_glucose side right {
+    udp_alpha_d_glucose
+    <-> . +udp +h +sarcinaxanthin_diglucoside
+    sarcinaxanthin_monoglucoside
+  }
+
+  branch from udp_alpha_d_glucose side left {
+    udp_alpha_d_glucose
+    <-> . +4_o_beta_d_glucosyl_indol_3_yl_formamide +udp +h
+    n_4_hydroxy_1h_indol_3_yl_formamide
   }
 }

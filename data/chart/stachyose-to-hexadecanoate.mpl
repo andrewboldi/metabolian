@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway stachyose-to-hexadecanoate "stachyose to hexadecanoate" {
-  spacing 248
+  spacing 236
 
   spine at 0,0 {
     stachyose
@@ -16,17 +16,5 @@ pathway stachyose-to-hexadecanoate "stachyose to hexadecanoate" {
     1_2_dihexadecanoyl_sn_glycero_3_phospho_d_myo_in
     <-> . +h2o -palmitate -hplus
     2_palmitoyl_sn_glycero_3_phospho_1d_myo_inositol
-  }
-
-  branch from d_galactopyranose side left {
-    d_galactopyranose
-    <-> ec_3_2_1_108 [3.2.1.108] +alpha_lactose +h2o
-    alpha_d_glucose
-  }
-
-  branch from d_galactopyranose side right {
-    d_galactopyranose
-    <-> ec_2_7_1_6 [2.7.1.6] +atp +h +adp
-    alpha_d_galactose_1_phosphate
   }
 }

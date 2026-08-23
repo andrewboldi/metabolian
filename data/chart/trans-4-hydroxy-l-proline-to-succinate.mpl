@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway trans-4-hydroxy-l-proline-to-succinate "trans-4-hydroxy-L-proline to succinate" {
-  spacing 234
+  spacing 222
 
   spine at 0,0 {
     trans_4_hydroxy_l_proline
@@ -22,17 +22,5 @@ pathway trans-4-hydroxy-l-proline-to-succinate "trans-4-hydroxy-L-proline to suc
     3s_5s_carbapenam_3_carboxylate
     <-> .
     3s_5r_carbapenam
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +s_s_drim_8_en_11_yl_diphosphate +d_mannitol
-    sporulositol_a
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +atp
-    5_triphosphoadenylyl_2_5_adenosine
   }
 }

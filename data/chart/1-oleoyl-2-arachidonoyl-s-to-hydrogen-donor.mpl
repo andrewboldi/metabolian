@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-oleoyl-2-arachidonoyl-s-to-hydrogen-donor "1-oleoyl-2-arachidonoyl-sâ€¦ to hydrogen donor" {
-  spacing 256
+  spacing 280
 
   spine at 0,0 {
     1_oleoyl_2_arachidonoyl_sn_glycerol
@@ -30,26 +30,26 @@ pathway 1-oleoyl-2-arachidonoyl-s-to-hydrogen-donor "1-oleoyl-2-arachidonoyl-sâ€
 
   branch from oleate side left {
     oleate
-    <-> . +1_stearoyl_2_oleoyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_stearoyl_sn_glycero_3_phosphocholine
+    <-> . +n_9z_octadecenoyl_sphinganine +h2o
+    sphinganine
   }
 
   branch from oleate side right {
     oleate
-    <-> . +1_2_dioleoylglycerol +h2o +hplus
-    1_oleoylglycerol
+    <-> . +n_icosanoyl_1_oleoyl_sn_glycero_3_phosphoethanol +h2o +hplus
+    n_icosanoyl_sn_glycero_3_phosphoethanolamine
   }
 
   branch from glycerol side left {
     glycerol
-    <-> . +1_monooctanoylglycerol +h2o +hplus
-    octanoate
+    <-> . +1_linolenoylglycerol +h2o +hplus
+    linolenate
   }
 
   branch from glycerol side right {
     glycerol
-    <-> . +h2o +arachidonate +hplus
-    1_arachidonoylglycerol
+    <-> . +1_all_cis_docosa_4_7_10_13_16_19_hexaenoyl_glyce +h2o +hplus
+    4z_7z_10z_13z_16z_19z_docosahexaenoate
   }
 
   branch from arachidonate side left {
@@ -64,15 +64,39 @@ pathway 1-oleoyl-2-arachidonoyl-s-to-hydrogen-donor "1-oleoyl-2-arachidonoyl-sâ€
     8_r_hpete
   }
 
-  branch from hydrogen_donor side left {
-    hydrogen_donor
-    <-> ec_1_1_99_41 [1.1.99.41] +3r_3_hydroxy_2_3_dihydrotabersoninium +hydrogen_acceptor
-    3r_1_2_didehydro_3_hydroxy_2_3_dihydrotabersoni
+  branch from oleate side left {
+    oleate
+    <-> . +12_9z_octadecenoyloxy_octadecanoate +h2o +hplus
+    12_hydroxyoctadecanoate
   }
 
-  branch from hydrogen_donor side right {
-    hydrogen_donor
-    <-> ec_1_3_99_40 [1.3.99.40] +carotenoid_end_derivative +hydrogen_acceptor
-    carotenoid_end_group
+  branch from oleate side right {
+    oleate
+    <-> . +13_9z_octadecenoyloxy_octadecanoate +h2o +hplus
+    13_hydroxyoctadecanoate
+  }
+
+  branch from glycerol side left {
+    glycerol
+    <-> . +1_tetracosanoylglycerol +h2o +hplus
+    tetracosanoate
+  }
+
+  branch from glycerol side right {
+    glycerol
+    <-> . +1_nervonoylglycerol +h2o +hplus
+    15z_tetracosenoate
+  }
+
+  branch from arachidonate side left {
+    arachidonate
+    <-> ec_1_13_11_33 [1.13.11.33] +o2
+    15_s_hpete
+  }
+
+  branch from arachidonate side right {
+    arachidonate
+    <-> . +o2
+    5_s_hpete
   }
 }

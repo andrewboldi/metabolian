@@ -20,39 +20,39 @@ pathway 3-phenylpropionate-to-adenosine-3-5-bismonoph "3-phenylpropionate to ade
     4_ethylphenyl_sulfate
   }
 
-  branch from fmn side left {
-    fmn
-    <-> . +tyraminium +fmnh2 +o2 +h2o +hplus
-    dopamine
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +n_acetyltyramine +fmnh2 +o2 +h2o +hplus
-    n_acetyldopamine
-  }
-
-  branch from 4_hydroxystyrene side left {
-    4_hydroxystyrene
-    <-> . +sam +sah +hplus
-    4_vinylanisole
-  }
-
-  branch from 4_hydroxystyrene side right {
-    4_hydroxystyrene
-    <-> . +4_coumarate +h
-    co2
-  }
-
   branch from adenosine_3_5_bismonophosphate side left {
     adenosine_3_5_bismonophosphate
-    <-> . +cholesterol +3_phosphonato_5_adenylyl_sulfate +hplus
-    cholesterol_sulfate
+    <-> . +neu5ac_2_3_d_gal_1_4_6_o_sulfo_d_glcnac_1_3_d_g +3_phosphonato_5_adenylyl_sulfate +hplus
+    neu5ac_2_3_6_o_sulfo_d_gal_1_4_6_o_sulfo_d_glcn
   }
 
   branch from adenosine_3_5_bismonophosphate side right {
     adenosine_3_5_bismonophosphate
-    <-> ec_2_8_2_39 [2.8.2.39] +12_hydroxyjasmonates +3_phosphonato_5_adenylyl_sulfate +hplus
-    12_sulfojasmonate
+    <-> . +d_gal_1_4_6_o_sulfo_d_glcnac_1_3_d_gal_1_4_d_gl +3_phosphonato_5_adenylyl_sulfate +hplus
+    d_gal_1_4_6_o_sulfo_d_glcnac_1_3_6_o_sulfo_d_ga
+  }
+
+  branch from 3_phosphonato_5_adenylyl_sulfate side left {
+    3_phosphonato_5_adenylyl_sulfate
+    <-> . +neu5ac_2_3_6_o_sulfo_d_gal_1_4_6_o_sulfo_d_glcn +adenosine_3_5_bismonophosphate +hplus
+    neu5ac_2_3_6_o_sulfo_d_gal_1_4_6_o_sulfo_d_glcn
+  }
+
+  branch from 3_phosphonato_5_adenylyl_sulfate side right {
+    3_phosphonato_5_adenylyl_sulfate
+    <-> . +tauroursodeoxycholate +adenosine_3_5_bismonophosphate +hplus
+    tauroursodeoxycholate_3_sulfate
+  }
+
+  branch from adenosine_3_5_bismonophosphate side left {
+    adenosine_3_5_bismonophosphate
+    <-> . +glycoursodeoxycholate +3_phosphonato_5_adenylyl_sulfate +hplus
+    glycoursodeoxycholate_3_sulfate
+  }
+
+  branch from adenosine_3_5_bismonophosphate side right {
+    adenosine_3_5_bismonophosphate
+    <-> . +glycochenodeoxycholate +3_phosphonato_5_adenylyl_sulfate +hplus
+    glycochenodeoxycholate_3_sulfate
   }
 }

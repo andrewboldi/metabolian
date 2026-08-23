@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-adenosyl-l-homocysteine-to-formate "S-adenosyl-L-homocysteine to formate" {
-  spacing 254
+  spacing 200
 
   spine at 0,0 {
     s_adenosyl_l_homocysteine
@@ -14,59 +14,5 @@ pathway s-adenosyl-l-homocysteine-to-formate "S-adenosyl-L-homocysteine to forma
     menaquinol_8
     <-> ec_1_2_2_1 [1.2.2.1] +co2 -h -formate
     menaquinone_8
-  }
-
-  branch from fmnh2 side left {
-    fmnh2
-    <-> . +medermycin +o2 +mederrhodin_a +h +h2o
-    fmn
-  }
-
-  branch from fmnh2 side right {
-    fmnh2
-    <-> . +medermycin +h +o2 +fmn +h2o
-    mederrhodin_a
-  }
-
-  branch from s_adenosyl_l_methionine side left {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +s_2_methylscoulerine
-    s_scoulerine
-  }
-
-  branch from s_adenosyl_l_methionine side right {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +3_5_dibromo_2_3_5_dibromo_2_methoxyphenoxy_pheno
-    2_4_dibromo_6_2_4_dibromo_6_hydroxyphenoxy_pheno
-  }
-
-  branch from menaquinone_8 side left {
-    menaquinone_8
-    <-> . +hydrogen_sulfide +h2o +menaquinol_8 +h
-    sulfite
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +sm_d18_1_15_0_sphingomyelin +phosphate +sm_d18_1_15_0_sphingomyelin +h2o
-    atp
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    sm_d18_1_16_1_sphingomyelin
-  }
-
-  branch from formate side right {
-    formate
-    <-> ec_1_1_5_6 [1.1.5.6] +ubiquinol_10 +co2 +h
-    ubiquinone_10
-  }
-
-  branch from formate side left {
-    formate
-    <-> . +2_hydroxy_3_oxobutyl_phosphate +h
-    alpha_d_ribofuranose_5_phosphate
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway bacteriochlorophyllide-d-to-bacteriochlorophylli "bacteriochlorophyllide d to bacteriochlorophyllide e" {
-  spacing 264
+  spacing 294
 
   spine at 0,0 {
     bacteriochlorophyllide_d
@@ -20,13 +20,43 @@ pathway bacteriochlorophyllide-d-to-bacteriochlorophylli "bacteriochlorophyllide
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_179 [2.1.1.179] +guanosine_5_monophosphate_1 +sam
-    n7_methylguanosine_5_phosphate_zwitterion
+    <-> . +rhamnetin_3_olate +sam +hplus
+    rhamnacene_3_olate
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_180 [2.1.1.180] +adenosine_5_monophosphate_1 +sam +hplus
-    n1_methyladenosine_5_monophosphate_1
+    <-> . +3_4_8_trihydroxyflavone_7_olate +sam +hplus
+    4_8_dihydroxy_3_methoxyflavone_7_olate
+  }
+
+  branch from bacteriochlorophyllide_d side left {
+    bacteriochlorophyllide_d
+    <-> ec_4_2_1_169 [4.2.1.169] +h2o
+    3_vinyl_bacteriochlorophyllide_d
+  }
+
+  branch from sam side right {
+    sam
+    <-> . +s_naringenin +sah +hplus
+    4_methoxy_5_7_dihydroxyflavanone
+  }
+
+  branch from sam side left {
+    sam
+    <-> . +4_8_dihydroxyflavone_7_olate +sah +hplus
+    8_hydroxy_4_methoxyflavone_7_olate
+  }
+
+  branch from sah side right {
+    sah
+    <-> . +an_8_hydroxyflavone +sam +hplus
+    an_8_methoxyflavone
+  }
+
+  branch from sah side left {
+    sah
+    <-> . +3_4_dihydroxyflavone_7_olate +sam +hplus
+    4_hydroxy_3_methoxyflavone_7_olate
   }
 }

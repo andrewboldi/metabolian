@@ -1,0 +1,369 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "leukotriene-b4-to-5s-6r-dihydroxy-15s-h",
+  "name": "leukotriene B4 to (5S,6R)-dihydroxy-(15S)-h…",
+  "category": "other",
+  "summary": "A 3-step route from leukotriene B4 to (5S,6R)-dihydroxy-(15S)-hydroperoxy-(7E,9E,11Z,13E)-icosatetraenoate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR195494"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "leukotriene_b4",
+      "name": "leukotriene B4",
+      "formula": "C20H31O4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1368516"
+      }
+    },
+    {
+      "id": "epi_leukotriene_a4",
+      "name": "epi-leukotriene A4",
+      "formula": "C20H29O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:193571"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "5s_6r_dihydroxy_7e_9e_11z_14z_icosatetraenoate",
+      "name": "(5S,6R)-dihydroxy-(7E,9E,11Z,14Z)-icosatetraenoate",
+      "short": "(5S,6R)-dihydroxy-(…",
+      "formula": "C20H31O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:137542"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "5s_6r_dihydroxy_15s_hydroperoxy_7e_9e_11z_13e_i",
+      "name": "(5S,6R)-dihydroxy-(15S)-hydroperoxy-(7E,9E,11Z,13E)-icosatetraenoate",
+      "short": "(5S,6R)-dihydroxy-(…",
+      "formula": "C20H31O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:137547"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_3_2_6",
+      "name": "leukotriene-A4 hydrolase",
+      "ec": [
+        "3.3.2.6"
+      ],
+      "xrefs": {
+        "uniprot": "P09960"
+      }
+    },
+    {
+      "id": "ec_3_3_2_10",
+      "name": "soluble epoxide hydrolase",
+      "ec": [
+        "3.3.2.10"
+      ],
+      "xrefs": {
+        "uniprot": "Q9H6B9"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "leukotriene-A4 hydrolase",
+      "ec": "3.3.2.6",
+      "substrates": [
+        {
+          "metabolite": "leukotriene_b4",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "epi_leukotriene_a4",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_3_2_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR195494"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR195494"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "soluble epoxide hydrolase",
+      "ec": "3.3.2.10",
+      "substrates": [
+        {
+          "metabolite": "epi_leukotriene_a4",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5s_6r_dihydroxy_7e_9e_11z_14z_icosatetraenoate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_3_2_10"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR199707"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR199707"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(5S,6R)-dihydroxy-(7E,9E,11Z,14Z)-eicosatetraenoate + O2 = (5S,6R)-dihydroxy-(15S)-hydr...",
+      "equation": "(5S,6R)-dihydroxy-(7E,9E,11Z,14Z)-eicosatetraenoate + O2 = (5S,6R)-dihydroxy-(15S)-hydroperoxy-(7E,9E,11Z,13E)-eicosatetraenoate",
+      "substrates": [
+        {
+          "metabolite": "5s_6r_dihydroxy_7e_9e_11z_14z_icosatetraenoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5s_6r_dihydroxy_15s_hydroperoxy_7e_9e_11z_13e_i",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:53656"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53656"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_leukotriene_b4_1-2-dihydroxy-3-keto-5-me-to-3-5-dioxo-6-4-5-7-t",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "leukotriene_b4"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-dihydroxy-3-keto-5-me-to-3-5-dioxo-6-4-5-7-t"
+      },
+      "note": "Shares leukotriene B4 with 1,2-dihydroxy-3-keto-5-me… to 3,5-dioxo-6-[4,5,7-trihyd….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368516"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_leukotriene_b4_12-hydroxyeicosatetraenoa-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "leukotriene_b4"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "12-hydroxyeicosatetraenoa-to-h2o"
+      },
+      "note": "Shares leukotriene B4 with 12-hydroxyeicosatetraenoa… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368516"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_leukotriene_b4_4-hydroxymethylcatechol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "leukotriene_b4"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxymethylcatechol-to-h2o"
+      },
+      "note": "Shares leukotriene B4 with 4-hydroxymethylcatechol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368516"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_leukotriene_b4_nadh-to-5-oxo-6-trans-leukotriene",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "leukotriene_b4"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-5-oxo-6-trans-leukotriene"
+      },
+      "note": "Shares leukotriene B4 with NADH to 5-Oxo-6-trans-leukotriene….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368516"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_epi_leukotriene_a4_6-trans-leukotriene-b4-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "epi_leukotriene_a4"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-trans-leukotriene-b4-to-h2o"
+      },
+      "note": "Shares epi-leukotriene A4 with 6-trans-leukotriene B4 to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:193571"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_epi_leukotriene_a4_o-acetyl-l-homoserine-to-l-cysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "epi_leukotriene_a4"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "o-acetyl-l-homoserine-to-l-cysteine"
+      },
+      "note": "Shares epi-leukotriene A4 with O-acetyl-L-homoserine to L-cysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:193571"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5s_6r_dihydroxy_7e_9e_11z_14z_icosatetraenoate_leukotriene-c4-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5s_6r_dihydroxy_7e_9e_11z_14z_icosatetraenoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "leukotriene-c4-to-hydrogen-donor"
+      },
+      "note": "Shares (5S,6R)-dihydroxy-(7E,9E,11Z,14Z)-icosatetraenoate with leukotriene C4 to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:137542"
+          }
+        ]
+      }
+    }
+  ]
+}

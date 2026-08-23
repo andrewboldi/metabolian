@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 6-s-hydroxy-tetradeca-2e-to-nad "6(S)-hydroxy-tetradeca-2E… to NAD" {
-  spacing 188
+  spacing 152
 
   spine at 0,0 {
     6_s_hydroxy_tetradeca_2e_4e_8z_trienoate
@@ -14,41 +14,5 @@ pathway 6-s-hydroxy-tetradeca-2e-to-nad "6(S)-hydroxy-tetradeca-2E… to NAD" {
     coa
     <-> . +nadh +6e_8s_10z_8_hydroxy_3_oxohexadecadienoic_acid -nad
     3_s_8_s_dihydroxy_6e_10z_hexadecadienoate
-  }
-
-  branch from o2 side left {
-    o2
-    <-> ec_1_14_13_124 [1.14.13.124] +z_phenylacetaldehyde_oxime +co2 +nadp +h2o +h +l_phenylalanine
-    nadph
-  }
-
-  branch from o2 side right {
-    o2
-    <-> ec_1_14_13_124 [1.14.13.124] +e_phenylacetaldehyde_oxime +co2 +nadp +h2o +h +nadph
-    l_phenylalanine
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +glycine +3_hydroxyhexadecanoyl_coa
-    n_3_hydroxy_1_oxohexadecyl_glycine
-  }
-
-  branch from coa side right {
-    coa
-    <-> ec_2_3_1_107 [2.3.1.107] +acetyl_coa +deacetylvindorosine
-    vindorosine
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_46 [1.1.1.46] +nadh +l_arabinono_1_4_lactone +h
-    l_arabinopyranose
-  }
-
-  branch from nad side right {
-    nad
-    <-> . +nadh +l_alanine +h +h2o
-    s_2_aminopropanal
   }
 }

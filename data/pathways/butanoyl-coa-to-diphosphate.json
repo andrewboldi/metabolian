@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "butanoyl-coa-to-diphosphate",
   "name": "butanoyl-CoA to diphosphate",
-  "category": "amino-acid-metabolism",
+  "category": "other",
   "summary": "A 3-step route from butanoyl-CoA to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -140,54 +140,6 @@
       "xrefs": {
         "chebi": "CHEBI:58349"
       }
-    },
-    {
-      "id": "acetyl_coa",
-      "name": "acetyl-CoA",
-      "formula": "C23H34N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM1104266"
-      }
-    },
-    {
-      "id": "3_aminopropyl_l_aspartyl_1_amino_phosphoryl_5_a",
-      "name": "(3-aminopropyl)(L-aspartyl-1-amino)phosphoryl-5'-adenosine",
-      "short": "(3-aminopropyl)(L-a…",
-      "formula": "C17H27N8O9P",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:60869"
-      }
-    },
-    {
-      "id": "5_o_3_acetylaminopropoxy_l_alpha_aspartyl_amino",
-      "name": "5'-O-{(3-acetylaminopropoxy)[L-alpha-aspartyl)amino]phosphoryl}adenosine",
-      "short": "5'-O-{(3-acetylamin…",
-      "formula": "C19H29N8O10P",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1559862"
-      }
-    },
-    {
-      "id": "cucurbitacin_e",
-      "name": "cucurbitacin E",
-      "formula": "C32H44O8",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:3944"
-      }
-    },
-    {
-      "id": "16_o_acetylcucurbitacin_e",
-      "name": "16-O-acetylcucurbitacin E",
-      "short": "16-O-acetylcucurbit…",
-      "formula": "C34H46O9",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1559974"
-      }
     }
   ],
   "enzymes": [
@@ -196,7 +148,10 @@
       "name": "diacylglycerol O-acyltransferase",
       "ec": [
         "2.3.1.20"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q6E213"
+      }
     }
   ],
   "reactions": [
@@ -341,79 +296,203 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "Reaction MNXR199985",
-      "substrates": [
-        {
-          "metabolite": "acetyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "3_aminopropyl_l_aspartyl_1_amino_phosphoryl_5_a",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "5_o_3_acetylaminopropoxy_l_alpha_aspartyl_amino",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR199985"
+      "id": "xt_2s_3_hydroxy_1_2_propanediyl_dibutanoate_dibenzofuran-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2s_3_hydroxy_1_2_propanediyl_dibutanoate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "dibenzofuran-to-o2"
+      },
+      "note": "Shares (2S)-3-Hydroxy-1,2-propanediyl dibutanoate with dibenzofuran to O2.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR199985"
+            "db": "ChEBI",
+            "id": "CHEBI:177530"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "Reaction MNXR200211",
-      "substrates": [
-        {
-          "metabolite": "acetyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "cucurbitacin_e",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "16_o_acetylcucurbitacin_e",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR200211"
+      "id": "xt_tributyrin_dibenzofuran-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tributyrin"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "dibenzofuran-to-o2"
+      },
+      "note": "Shares tributyrin with dibenzofuran to O2.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR200211"
+            "db": "ChEBI",
+            "id": "CHEBI:35020"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_butanal_2s-2-1r-1-carboxyla-to-butyryl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "butanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2s-2-1r-1-carboxyla-to-butyryl-coa"
+      },
+      "note": "Shares butanal with (2S)-2-{[(1R)-1-carboxyla… to butyryl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15743"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_butanal_3-acyloxy-acyl-group-to-1-4-benzoquinones",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "butanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-acyloxy-acyl-group-to-1-4-benzoquinones"
+      },
+      "note": "Shares butanal with 3-(acyloxy)acyl group to 1,4-benzoquinones.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15743"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_butanal_butan-1-ol-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "butanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "butan-1-ol-to-diphosphate"
+      },
+      "note": "Shares butanal with butan-1-ol to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15743"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_butanal_butanal-to-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "butanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "butanal-to-acetate"
+      },
+      "note": "Shares butanal with butanal to acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15743"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_butanal_butane-to-butyryl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "butanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "butane-to-butyryl-coa"
+      },
+      "note": "Shares butanal with butane to butyryl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15743"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_butanal_butyl-sulfate-to-butanoyl-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "butanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "butyl-sulfate-to-butanoyl-phosphate"
+      },
+      "note": "Shares butanal with butyl sulfate to butanoyl phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15743"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_butanal_fmnh2-to-2s-2-hydroxypentanenitr",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "butanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fmnh2-to-2s-2-hydroxypentanenitr"
+      },
+      "note": "Shares butanal with FMNH2 to (2S)-2-hydroxypentanenitr….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15743"
           }
         ]
       }

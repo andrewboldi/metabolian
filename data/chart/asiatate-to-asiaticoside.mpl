@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway asiatate-to-asiaticoside "asiatate to asiaticoside" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     asiatate
@@ -14,5 +14,17 @@ pathway asiatate-to-asiaticoside "asiatate to asiaticoside" {
     2_3_23_trihydroxyurs_12_en_28_oic_acid_28_o_d_gl
     <-> . +udp_l_rhamnose -udp -hplus
     asiaticoside
+  }
+
+  branch from udp_d_glucose side left {
+    udp_d_glucose
+    <-> . +3_hydroxy_16_17_epoxypregnenolone +udp +hplus
+    3_hydroxy_16_17_epoxypregnenolone_3_d_glucoside
+  }
+
+  branch from udp_d_glucose side right {
+    udp_d_glucose
+    <-> . +indole_3_butyrate +udp
+    4_indol_3_yl_butanoyl_d_glucose
   }
 }

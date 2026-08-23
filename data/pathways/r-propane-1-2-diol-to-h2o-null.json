@@ -1,0 +1,355 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "r-propane-1-2-diol-to-h2o-null",
+  "name": "(R)-propane-1,2-diol to H2O",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from (R)-propane-1,2-diol to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR198416"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "r_propane_1_2_diol",
+      "name": "(R)-propane-1,2-diol",
+      "formula": "C3H8O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364596"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "s_lactaldehyde",
+      "name": "(S)-lactaldehyde",
+      "formula": "C3H6O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM732880"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "glycerol",
+      "name": "glycerol",
+      "formula": "C3H8O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM89612"
+      }
+    },
+    {
+      "id": "sn_glycerol_3_phosphate",
+      "name": "sn-glycerol 3-phosphate",
+      "short": "sn-glycerol 3-P",
+      "formula": "C3H7O6P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM66"
+      }
+    },
+    {
+      "id": "bis_glycerophospho_glycerol",
+      "name": "bis(glycerophospho)glycerol",
+      "short": "bis(glycerophospho)…",
+      "formula": "C9H22O13P2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:3121"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_71",
+      "name": "alcohol dehydrogenase [NAD(P)(+)]",
+      "ec": [
+        "1.1.1.71"
+      ],
+      "xrefs": {
+        "uniprot": "P16152"
+      }
+    },
+    {
+      "id": "ec_4_2_1_30",
+      "name": "glycerol dehydratase",
+      "ec": [
+        "4.2.1.30"
+      ]
+    },
+    {
+      "id": "ec_3_1_4_46",
+      "name": "glycerophosphodiester phosphodiesterase",
+      "ec": [
+        "3.1.4.46"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "alcohol dehydrogenase [NAD(P)(+)]",
+      "ec": "1.1.1.71",
+      "substrates": [
+        {
+          "metabolite": "r_propane_1_2_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "s_lactaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_71"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR198416"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198416"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "glycerol dehydratase",
+      "ec": "4.2.1.30",
+      "substrates": [
+        {
+          "metabolite": "s_lactaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glycerol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_30"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR173144"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR173144"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "glycerophosphodiester phosphodiesterase",
+      "ec": "3.1.4.46",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "sn_glycerol_3_phosphate",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "glycerol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "bis_glycerophospho_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_4_46"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR131699"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR131699"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_r_propane_1_2_diol_r-lactate-to-r-lactaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_propane_1_2_diol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-lactate-to-r-lactaldehyde"
+      },
+      "note": "Shares (R)-propane-1,2-diol with (R)-lactate to (R)-lactaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364596"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_propane_1_2_diol_r-lactate-to-r-lactaldehyde-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_propane_1_2_diol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-lactate-to-r-lactaldehyde-null"
+      },
+      "note": "Shares (R)-propane-1,2-diol with (R)-lactate to (R)-lactaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364596"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_propane_1_2_diol_r-propane-1-2-diol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_propane_1_2_diol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-propane-1-2-diol-to-h2o"
+      },
+      "note": "Shares (R)-propane-1,2-diol with (R)-propane-1,2-diol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364596"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_bis_glycerophospho_glycerol_r-propane-1-2-diol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "bis_glycerophospho_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-propane-1-2-diol-to-h2o"
+      },
+      "note": "Shares bis(glycerophospho)glycerol with (R)-propane-1,2-diol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:3121"
+          }
+        ]
+      }
+    }
+  ]
+}

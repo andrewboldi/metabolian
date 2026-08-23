@@ -1,0 +1,388 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2z-6e-10e-geranylgerany-to-nadp",
+  "name": "(2Z,6E,10E)-geranylgerany… to NADP",
+  "category": "other",
+  "summary": "A 3-step route from (2Z,6E,10E)-geranylgeranyl diphosphate to NADP(+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR205293"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2z_6e_10e_geranylgeranyl_diphosphate",
+      "name": "(2Z,6E,10E)-geranylgeranyl diphosphate",
+      "short": "(2Z,6E,10E)-geranyl…",
+      "formula": "C20H33O7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1102546"
+      }
+    },
+    {
+      "id": "diphosphate",
+      "name": "diphosphate",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM11"
+      }
+    },
+    {
+      "id": "dimethylallyl_diphosphate",
+      "name": "dimethylallyl diphosphate",
+      "short": "dimethylallyl PP",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM132"
+      }
+    },
+    {
+      "id": "2e_6e_farnesyl_diphosphate",
+      "name": "(2E,6E)-farnesyl diphosphate",
+      "short": "(2E,6E)-farnesyl PP",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1363833"
+      }
+    },
+    {
+      "id": "2_hydroxygenistein",
+      "name": "2'-hydroxygenistein",
+      "formula": "C15H9O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:140306"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "2_4_5_7_tetrahydroxy_8_prenylisoflavone",
+      "name": "2',4',5,7-Tetrahydroxy-8-prenylisoflavone",
+      "short": "2',4',5,7-Tetrahydr…",
+      "formula": "C20H18O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:175549"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "kievitone",
+      "name": "kievitone",
+      "formula": "C20H20O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM3629"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_5_1_1",
+      "name": "dimethylallyltranstransferase",
+      "ec": [
+        "2.5.1.1"
+      ],
+      "xrefs": {
+        "uniprot": "P14324"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR205293",
+      "substrates": [
+        {
+          "metabolite": "2z_6e_10e_geranylgeranyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dimethylallyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2e_6e_farnesyl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR205293"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR205293"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "dimethylallyltranstransferase",
+      "ec": "2.5.1.1",
+      "substrates": [
+        {
+          "metabolite": "2_hydroxygenistein",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dimethylallyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_4_5_7_tetrahydroxy_8_prenylisoflavone",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR121916"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR121916"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR121917",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_4_5_7_tetrahydroxy_8_prenylisoflavone",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "kievitone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR121917"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR121917"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_2_hydroxygenistein_2-chloro-2-2-chloro-4-me-to-1r-2s-3-4-dichloro-6",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_hydroxygenistein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-chloro-2-2-chloro-4-me-to-1r-2s-3-4-dichloro-6"
+      },
+      "note": "Shares 2'-hydroxygenistein with 2-chloro-2-(2-chloro-4-me… to (1R,2S)-3,4-dichloro-6-me….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:140306"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_hydroxygenistein_5-hydroperoxy-epa-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_hydroxygenistein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-hydroperoxy-epa-to-h2o"
+      },
+      "note": "Shares 2'-hydroxygenistein with 5-hydroperoxy-EPA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:140306"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_hydroxygenistein_epiandrosterone-to-2-hydroxyestrone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_hydroxygenistein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "epiandrosterone-to-2-hydroxyestrone"
+      },
+      "note": "Shares 2'-hydroxygenistein with epiandrosterone to 2-hydroxyestrone….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:140306"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_hydroxygenistein_h-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_hydroxygenistein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-h2o"
+      },
+      "note": "Shares 2'-hydroxygenistein with H to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:140306"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_hydroxygenistein_yaequinolone-j1-to-luteone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_hydroxygenistein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "yaequinolone-j1-to-luteone"
+      },
+      "note": "Shares 2'-hydroxygenistein with Yaequinolone J1 to luteone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:140306"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_kievitone_hyperxanthone-e-to-kievitone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "kievitone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hyperxanthone-e-to-kievitone"
+      },
+      "note": "Shares kievitone with hyperxanthone E to kievitone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM3629"
+          }
+        ]
+      }
+    }
+  ]
+}

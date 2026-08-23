@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway methyl-sulfate-to-s-formylmycothiol "methyl sulfate to S-formylmycothiol" {
-  spacing 278
+  spacing 340
 
   spine at 0,0 {
     methyl_sulfate
@@ -18,57 +18,22 @@ pathway methyl-sulfate-to-s-formylmycothiol "methyl sulfate to S-formylmycothiol
     s_formylmycothiol
   }
 
-  branch from methanol side left {
-    methanol
-    <-> . +methyl_jasmonate +h2o +hplus
-    jasmonate
-  }
 
-  branch from methanol side right {
-    methanol
-    <-> . +methyl_arachidonate +h2o +hplus
-    arachidonate
-  }
 
-  branch from sulfate side left {
-    sulfate
-    <-> ec_1_14_11_77 [1.14.11.77] +pentyl_sulfate +akg +o2 +succinate +co2 +hplus
-    pentanal
-  }
 
-  branch from sulfate side right {
-    sulfate
-    <-> ec_1_14_11_77 [1.14.11.77] +hexyl_sulfate +akg +o2 +succinate +co2 +hplus
-    hexanal
-  }
 
-  branch from formaldehyde side left {
-    formaldehyde
-    <-> ec_1_14_99_48 [1.14.99.48] +ferroheme_b +hydrogen_donor +o2 +hplus +fe2 +hydrogen_acceptor +h2o
-    15_oxo_bilirubin
-  }
 
-  branch from formaldehyde side right {
-    formaldehyde
-    <-> ec_1_14_11_54 [1.14.11.54] +n1_methyladenosine_5_monophosphate_1 +akg +o2 +succinate +co2
-    adenosine_5_monophosphate_1
-  }
 
-  branch from hydrogen_donor side left {
-    hydrogen_donor
-    <-> ec_1_21_99_4 [1.21.99.4] +3_3_5_triiodo_l_thyronine +iodide +hydrogen_acceptor +hplus
-    l_thyroxine
-  }
 
-  branch from hydrogen_donor side right {
-    hydrogen_donor
-    <-> ec_1_5_99_3 [1.5.99.3] +l_pipecolic_acid +hydrogen_acceptor +hplus
-    s_1_piperideine_6_carboxylate
-  }
 
-  branch from s_hydroxymethyl_mycothiol side left {
-    s_hydroxymethyl_mycothiol
-    <-> ec_1_1_1_306 [1.1.1.306] +nadh +h +formate +mycothiol +h2o
-    nad
-  }
+
+
+
+
+
+
+
+
+
+
 }

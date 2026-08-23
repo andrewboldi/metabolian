@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cdp-l-ribitol-to-h "CDP-L-ribitol to H" {
-  spacing 188
+  spacing 242
 
   spine at 0,0 {
     cdp_l_ribitol
@@ -20,39 +20,17 @@ pathway cdp-l-ribitol-to-h "CDP-L-ribitol to H" {
     chol_p_galnac_chol_p_galnac_rib_ol_p_glc_aatgal
   }
 
-  branch from cmp side left {
-    cmp
-    <-> ec_2_7_8_5 [2.7.8.5] +phosphatidylglycerophosphate_dioctadec_11_enoyl +cdp_1_2_dioctadec_11_enoylglycerol
-    sn_glycerol_3_phosphate
-  }
 
-  branch from cmp side right {
-    cmp
-    <-> ec_3_6_1_53 [3.6.1.53] +phosphoethanolamine +h +h2o
-    cdp_ethanolamine
-  }
 
-  branch from h side left {
-    h
-    <-> ec_3_1_1_1 [3.1.1.1] +propanoate +glycerol_dipropionate +h2o
-    tripropionin
-  }
 
-  branch from h side right {
-    h
-    <-> ec_3_1_1_1 [3.1.1.1] +acetate +glycerol_1_2_diacetate +h2o
-    triacetin
-  }
 
-  branch from udp side left {
-    udp
-    <-> ec_2_4_1_17 [2.4.1.17] +5_androstane_3_17_diol_3_glucosiduronate +h +androstane_3_17_diol
-    udp_alpha_d_glucuronate
-  }
 
-  branch from udp side right {
-    udp
-    <-> . +h +alpha_cehc_glucuronide +udp_alpha_d_glucuronate
-    cehc
-  }
+
+
+
+
+
+
+
+
 }

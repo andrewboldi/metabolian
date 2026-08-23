@@ -91,46 +91,6 @@
       "xrefs": {
         "metanetx": "MNXM1132632"
       }
-    },
-    {
-      "id": "alpha_neu5ac_2_3_alpha_d_gal_1_2_beta_d_glc_1_3",
-      "name": "alpha-Neu5Ac-(2->3)-[alpha-D-Gal-(1->2)]-beta-D-Glc-(1->3)-alpha-D-GlcNAc-PP-Und",
-      "short": "alpha-Neu5Ac-(2->3)…",
-      "formula": "C86H139N2O30P2",
-      "charge": -3,
-      "xrefs": {
-        "metanetx": "MNXM1132711"
-      }
-    },
-    {
-      "id": "alpha_neu5ac_2_3_beta_d_glc_1_3_alpha_d_glcnac_p",
-      "name": "alpha-Neu5Ac-(2->3)-beta-D-Glc-(1->3)-alpha-D-GlcNAc-PP-Und",
-      "short": "alpha-Neu5Ac-(2->3)…",
-      "formula": "C80H129N2O25P2",
-      "charge": -3,
-      "xrefs": {
-        "metanetx": "MNXM1132710"
-      }
-    },
-    {
-      "id": "beta_d_gal_1_3_beta_d_galnac_1_4_alpha_d_gal_1_3",
-      "name": "beta-D-Gal-(1->3)-beta-D-GalNAc-(1->4)-alpha-D-Gal-(1->3)-alpha-D-GalNAc-PP-Und",
-      "short": "beta-D-Gal-(1->3)-b…",
-      "formula": "C83H136N2O27P2",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM1132745"
-      }
-    },
-    {
-      "id": "beta_d_galnac_1_4_alpha_d_gal_1_3_alpha_d_galnac",
-      "name": "beta-D-GalNAc-(1->4)-alpha-D-Gal-(1->3)-alpha-D-GalNAc-PP-Und",
-      "short": "beta-D-GalNAc-(1->4…",
-      "formula": "C77H126N2O22P2",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM1132744"
-      }
     }
   ],
   "enzymes": [],
@@ -260,87 +220,71 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "Reaction MNXR193644",
-      "substrates": [
-        {
-          "metabolite": "udp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "alpha_neu5ac_2_3_alpha_d_gal_1_2_beta_d_glc_1_3",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "udp_alpha_d_galactose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "alpha_neu5ac_2_3_beta_d_glc_1_3_alpha_d_glcnac_p",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR193644"
+      "id": "xt_beta_d_glc_1_3_alpha_d_galnac_pp_und_aldehydo-l-fucose-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "beta_d_glc_1_3_alpha_d_galnac_pp_und"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "aldehydo-l-fucose-to-nadph"
+      },
+      "note": "Shares beta-D-Glc-(1->3)-alpha-D-GalNAc-PP-Und with aldehydo-L-fucose to NADPH.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR193644"
+            "id": "MNXM1132632"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "Reaction MNXR193689",
-      "substrates": [
-        {
-          "metabolite": "udp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "beta_d_gal_1_3_beta_d_galnac_1_4_alpha_d_gal_1_3",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "udp_alpha_d_galactose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "beta_d_galnac_1_4_alpha_d_gal_1_3_alpha_d_galnac",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR193689"
+      "id": "xt_beta_d_glc_1_3_alpha_d_galnac_pp_und_gdp-to-d-mannose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "beta_d_glc_1_3_alpha_d_galnac_pp_und"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "gdp-to-d-mannose"
+      },
+      "note": "Shares beta-D-Glc-(1->3)-alpha-D-GalNAc-PP-Und with GDP to α-D-mannose….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR193689"
+            "id": "MNXM1132632"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_beta_d_glc_1_3_alpha_d_galnac_pp_und_udp-to-n-acetyl-d-galactosamin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "beta_d_glc_1_3_alpha_d_galnac_pp_und"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-n-acetyl-d-galactosamin"
+      },
+      "note": "Shares beta-D-Glc-(1->3)-alpha-D-GalNAc-PP-Und with UDP to N-acetyl-α-D-galactosamin….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1132632"
           }
         ]
       }

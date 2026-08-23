@@ -16,27 +16,27 @@ pathway ins-1-p-cer-c-to-fatty-acid-anion "Ins-1-P-Cer-C to fatty acid anion" {
     monoacylglycerol
   }
 
-  branch from dag side left {
-    dag
-    <-> . +man_1_6_ins_1_p_cer +1_phosphatidyl_1d_myo_inositol
-    ins_1_p_man_1_6_ins_1_p_cer
+  branch from gdp_d_mannose side left {
+    gdp_d_mannose
+    <-> . +inositol_1_phosphodihydroceramide +gdp +hplus
+    mannosylinositol_1_phosphodihydroceramide
   }
 
-  branch from dag side right {
-    dag
-    <-> . +1_phosphatidyl_1d_myo_inositol +n_acylsphingosine
-    n_acylsphingosine_1d_myo_inositol
+  branch from gdp_d_mannose side right {
+    gdp_d_mannose
+    <-> . +inositol_phosphoceramide +gdp +hplus
+    mannosylinositol_phosphorylceramide
   }
 
-  branch from fatty-acid side left {
-    fatty-acid
-    <-> . +n_fatty_acyl_l_phenylalanine +h2o
-    l_phenylalanine
+  branch from 1_phosphatidyl_1d_myo_inositol side left {
+    1_phosphatidyl_1d_myo_inositol
+    <-> . +atp +adp +hplus
+    1_phosphatidyl_1d_myo_inositol_5_phosphate
   }
 
-  branch from fatty-acid side right {
-    fatty-acid
-    <-> . +n_fatty_acyl_l_serine +h2o
-    serine
+  branch from 1_phosphatidyl_1d_myo_inositol side right {
+    1_phosphatidyl_1d_myo_inositol
+    <-> . +h2o +pi
+    1_phosphatidyl_1d_myo_inositol_4_phosphate
   }
 }

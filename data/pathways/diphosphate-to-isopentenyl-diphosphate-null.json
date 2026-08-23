@@ -90,109 +90,6 @@
       "xrefs": {
         "chebi": "CHEBI:129"
       }
-    },
-    {
-      "id": "1_deoxyxylonojirimycin",
-      "name": "1-deoxyxylonojirimycin",
-      "short": "1-deoxyxylonojirimy…",
-      "formula": "C5H12NO3",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM1107141"
-      }
-    },
-    {
-      "id": "adp",
-      "name": "ADP",
-      "formula": "C10H12N5O10P2",
-      "charge": -3,
-      "xrefs": {
-        "metanetx": "MNXM40333"
-      }
-    },
-    {
-      "id": "phosphate",
-      "name": "phosphate",
-      "formula": "HO4P",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM9"
-      }
-    },
-    {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM3"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "WATER"
-      }
-    },
-    {
-      "id": "alpha_d_glucose",
-      "name": "alpha-D-glucose",
-      "formula": "C6H12O6",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1105027"
-      }
-    },
-    {
-      "id": "di_trans_octa_cis_undecaprenyl_diphosphate",
-      "name": "di-trans,octa-cis-undecaprenyl diphosphate",
-      "short": "di-trans,octa-cis-u…",
-      "formula": "C55H89O7P2",
-      "charge": -3,
-      "xrefs": {
-        "metanetx": "MNXM1364683"
-      }
-    },
-    {
-      "id": "all_trans_decaprenyl_diphosphate",
-      "name": "all-trans-decaprenyl diphosphate",
-      "short": "all-trans-decapreny…",
-      "formula": "C50H81O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:60721"
-      }
-    },
-    {
-      "id": "1_hydroxy_2_methyl_2_e_butenyl_4_diphosphate",
-      "name": "1-hydroxy-2-methyl-2-(E)-butenyl 4-diphosphate",
-      "short": "1-hydroxy-2-methyl-…",
-      "formula": "C5H10O8P2",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM1370497"
-      }
-    },
-    {
-      "id": "nadph",
-      "name": "NADPH",
-      "formula": "C21H26N7O17P3",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM738702"
-      }
-    },
-    {
-      "id": "nadp",
-      "name": "NADP",
-      "formula": "C21H25N7O17P3",
-      "charge": -3,
-      "xrefs": {
-        "metanetx": "MNXM5"
-      }
     }
   ],
   "enzymes": [
@@ -215,20 +112,6 @@
       "name": "EC 2.5.1.11",
       "ec": [
         "2.5.1.11"
-      ]
-    },
-    {
-      "id": "ec_3_6_3_17",
-      "name": "EC 3.6.3.17",
-      "ec": [
-        "3.6.3.17"
-      ]
-    },
-    {
-      "id": "ec_1_17_1_2",
-      "name": "EC 1.17.1.2",
-      "ec": [
-        "1.17.1.2"
       ]
     }
   ],
@@ -404,201 +287,203 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "Reaction MNXR174683",
-      "ec": "3.6.3.17",
-      "substrates": [
-        {
-          "metabolite": "1_deoxyxylonojirimycin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_deoxyxylonojirimycin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_6_3_17"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR174683"
+      "id": "xt_all_trans_decaprenyl_diphosphate_udp-to-h-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_decaprenyl_diphosphate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-h-null"
+      },
+      "note": "Shares all-trans-Decaprenyl diphosphate with UDP to H.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR174683"
+            "id": "MNXM1371338"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "Reaction MNXR174684",
-      "ec": "3.6.3.17",
-      "substrates": [
-        {
-          "metabolite": "alpha_d_glucose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "alpha_d_glucose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_6_3_17"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "metanetx": "MNXR174684"
+      "id": "xt_all_trans_nonaprenyl_diphosphate_2-oxohepta-3-5-dienedioa-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_nonaprenyl_diphosphate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2-oxohepta-3-5-dienedioa-to-o2"
+      },
+      "note": "Shares all-trans-nonaprenyl diphosphate with 2-oxohepta--3,5-dienedioa… to O2.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR174684"
+            "id": "MNXM741170"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "Reaction MNXR195376",
-      "substrates": [
-        {
-          "metabolite": "diphosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "di_trans_octa_cis_undecaprenyl_diphosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "all_trans_decaprenyl_diphosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ipp",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "metanetx": "MNXR195376"
+      "id": "xt_all_trans_octaprenyl_diphosphate_co2-to-isopentenyl-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_octaprenyl_diphosphate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "co2-to-isopentenyl-diphosphate"
+      },
+      "note": "Shares all-trans-octaprenyl diphosphate with CO2 to isopentenyl diphosphate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR195376"
+            "id": "MNXM1372305"
           }
         ]
       }
     },
     {
-      "id": "r8",
-      "name": "Reaction MNXR195468",
-      "ec": "1.17.1.2",
-      "substrates": [
-        {
-          "metabolite": "1_hydroxy_2_methyl_2_e_butenyl_4_diphosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ipp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_17_1_2"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "metanetx": "MNXR195468"
+      "id": "xt_all_trans_heptaprenyl_diphosphate_beta-d-fructose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_heptaprenyl_diphosphate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-d-fructose-to-h2o"
+      },
+      "note": "Shares all-trans-heptaprenyl diphosphate with beta-D-fructose… to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR195468"
+            "id": "MNXM731634"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_heptaprenyl_diphosphate_heptaprenylglyceryl-to-tricarballylate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_heptaprenyl_diphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "heptaprenylglyceryl-to-tricarballylate"
+      },
+      "note": "Shares all-trans-heptaprenyl diphosphate with Heptaprenylglyceryl… to tricarballylate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM731634"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_heptaprenyl_diphosphate_udp-to-udp-alpha-d-glucose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_heptaprenyl_diphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-udp-alpha-d-glucose"
+      },
+      "note": "Shares all-trans-heptaprenyl diphosphate with UDP to UDP-alpha-D-glucose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM731634"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phellandrene_biotin-amide-to-4-hydroxy-5-methyl-6-pent",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phellandrene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "biotin-amide-to-4-hydroxy-5-methyl-6-pent"
+      },
+      "note": "Shares (−)-β-phellandrene with biotin amide to 4-hydroxy-5-methyl-6-pent….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:129"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phellandrene_ent-kaur-16-ene-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phellandrene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ent-kaur-16-ene-to-hydrogen-donor"
+      },
+      "note": "Shares (−)-β-phellandrene with ent-kaur-16-ene to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:129"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phellandrene_h-to-9r-10s-9-10-epoxy-9-10",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phellandrene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-9r-10s-9-10-epoxy-9-10"
+      },
+      "note": "Shares (−)-β-phellandrene with H to (9R,10S)-9,10-epoxy-9,10-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:129"
           }
         ]
       }

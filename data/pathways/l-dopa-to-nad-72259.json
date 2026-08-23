@@ -1,0 +1,568 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-dopa-to-nad-72259",
+  "name": "L-dopa to NAD",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from L-dopa zwitterion to NAD(+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:72259"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57504"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "ldopa",
+      "name": "3,4-Dihydroxy-L-phenylalanine (L-DOPA)",
+      "short": "3,4-Dihydroxy-L-phe…",
+      "formula": "C9H11NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57504"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "3_o_methyldopa",
+      "name": "3-O-methyldopa",
+      "formula": "C10H13NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:133668"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "2_oxoglutarate",
+      "name": "2-oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1368744"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "l_glutamate",
+      "name": "L-glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM741173"
+      }
+    },
+    {
+      "id": "vanilpyruvic_acid",
+      "name": "vanilpyruvic acid",
+      "formula": "C10H10O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM8118"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "vanillactic_acid",
+      "name": "Vanillactic acid",
+      "formula": "C10H12O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:88526"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "l_dopaquinone",
+      "name": "L-dopaquinone",
+      "formula": "C9H9NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57924"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_18_1",
+      "name": "tyrosinase",
+      "ec": [
+        "1.14.18.1"
+      ],
+      "xrefs": {
+        "uniprot": "P14679"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "L-dopa + S-adenosyl-L-methionine = 3-O-methyl-L-dopa + S-adenosyl-L-homocysteine + H(+)",
+      "equation": "L-dopa + S-adenosyl-L-methionine = 3-O-methyl-L-dopa + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "ldopa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_o_methyldopa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:72259"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:72259"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR116553",
+      "substrates": [
+        {
+          "metabolite": "3_o_methyldopa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_oxoglutarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "vanilpyruvic_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR116553"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR116553"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR116554",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "vanilpyruvic_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "vanillactic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR116554"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR116554"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "tyrosinase",
+      "equation": "2 L-dopa + O2 = 2 L-dopaquinone + 2 H2O",
+      "ec": "1.14.18.1",
+      "substrates": [
+        {
+          "metabolite": "ldopa",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_dopaquinone",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_18_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:34287"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34287"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3_o_methyldopa_dimethylselenoniopropanoa-to-acrylate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_o_methyldopa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dimethylselenoniopropanoa-to-acrylate"
+      },
+      "note": "Shares 3-O-methyldopa with dimethylselenoniopropanoa… to acrylate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133668"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_o_methyldopa_l-dopa-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_o_methyldopa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-dopa-to-nad"
+      },
+      "note": "Shares 3-O-methyldopa with L-dopa to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133668"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_o_methyldopa_tetradecyl-acetate-to-15-hydroxypalmitate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_o_methyldopa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "tetradecyl-acetate-to-15-hydroxypalmitate-null"
+      },
+      "note": "Shares 3-O-methyldopa with Tetradecyl acetate to 15-hydroxypalmitate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133668"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_vanilpyruvic_acid_l-dopa-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "vanilpyruvic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-dopa-to-nad"
+      },
+      "note": "Shares vanilpyruvic acid with L-dopa to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM8118"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_vanillactic_acid_l-dopa-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "vanillactic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-dopa-to-nad"
+      },
+      "note": "Shares Vanillactic acid with L-dopa to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:88526"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_dopaquinone_5-s-cysteinyldopa-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_dopaquinone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-s-cysteinyldopa-to-ammonium"
+      },
+      "note": "Shares L-dopaquinone with 5-S-cysteinyldopa to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57924"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_dopaquinone_5-s-cysteinyldopa-to-ammonium-77095",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_dopaquinone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-s-cysteinyldopa-to-ammonium-77095"
+      },
+      "note": "Shares L-dopaquinone with 5-S-cysteinyldopa to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57924"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_dopaquinone_l-dopa-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_dopaquinone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-dopa-to-nad"
+      },
+      "note": "Shares L-dopaquinone with L-dopa to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57924"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_dopaquinone_n-acetyl-9-o-acetylneuram-to-l-tyrosine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_dopaquinone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyl-9-o-acetylneuram-to-l-tyrosine"
+      },
+      "note": "Shares L-dopaquinone with N-acetyl-9-O-acetylneuram… to L-tyrosine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57924"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_dopaquinone_n-acetyl-9-o-acetylneuram-to-l-tyrosine-22600",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_dopaquinone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyl-9-o-acetylneuram-to-l-tyrosine-22600"
+      },
+      "note": "Shares L-dopaquinone with N-acetyl-9-O-acetylneuram… to L-tyrosine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57924"
+          }
+        ]
+      }
+    }
+  ]
+}

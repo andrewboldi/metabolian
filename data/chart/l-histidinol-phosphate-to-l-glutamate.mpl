@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-histidinol-phosphate-to-l-glutamate "L-histidinol phosphate to L-glutamate" {
-  spacing 196
+  spacing 238
 
   spine at 0,0 {
     l_histidinol_phosphate
@@ -42,13 +42,55 @@ pathway l-histidinol-phosphate-to-l-glutamate "L-histidinol phosphate to L-gluta
 
   branch from glutamate side left {
     glutamate
-    <-> ec_2_7_2_11 [2.7.2.11] +atp +adp
-    l_glutamyl_phosphate
+    <-> ec_2_6_1_9 [2.6.1.9] +l_histidinol_phosphate +akg
+    3_imidazol_4_yl_2_oxopropyl_phosphate
   }
 
   branch from glutamate side right {
     glutamate
-    <-> ec_2_6_1_5 [2.6.1.5] +tyrosine +akg
-    3_4_hydroxyphenyl_pyruvate
+    <-> ec_2_6_1_82 [2.6.1.82] +1_4_butanediammonium +akg
+    4_ammoniobutanal
+  }
+
+  branch from l_histidine side left {
+    l_histidine
+    <-> ec_1_14_99_52 [1.14.99.52] +cysteine +o2 +h2o
+    s_5_histidyl_cysteine_sulfoxide_dizwitterion
+  }
+
+  branch from l_histidine side right {
+    l_histidine
+    <-> ec_5_1_1_24 [5.1.1.24]
+    d_histidine
+  }
+
+  branch from akg side left {
+    akg
+    <-> ec_1_1_1_42 [1.1.1.42] +nadp +co2 +nadph
+    d_threo_isocitrate
+  }
+
+  branch from akg side right {
+    akg
+    <-> ec_1_5_1_19 [1.5.1.19] +d_nopalinate +nadp +h2o +nadph +hplus
+    arginine
+  }
+
+  branch from 3_imidazol_5_yl_pyruvate side left {
+    3_imidazol_5_yl_pyruvate
+    <-> . +oxobut +l_histidine
+    l_aminobutyrate
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> ec_2_3_1_1 [2.3.1.1] +acetyl_coa +coa +hplus
+    nag
+  }
+
+  branch from glutamate side left {
+    glutamate
+    <-> ec_2_6_1_42 [2.6.1.42] +valine +akg
+    kiv
   }
 }

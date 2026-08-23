@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-2-didecanoylglycerol-to-10-oxocaprate "1,2-didecanoylglycerol to 10-oxocaprate" {
-  spacing 232
+  spacing 262
 
   spine at 0,0 {
     1_2_didecanoylglycerol
@@ -30,13 +30,43 @@ pathway 1-2-didecanoylglycerol-to-10-oxocaprate "1,2-didecanoylglycerol to 10-ox
 
   branch from fmn side left {
     fmn
-    <-> . +17_estradiol +fmnh2 +o2 +h2o +hplus
-    16_hydroxyestradiol
+    <-> ec_1_14_14_177 [1.14.14.177] +methyl_ultra_long_chain_fatty_acid_anion +fmnh2 +o2 +h2o +hplus
+    hydroxy_ultra_long_chain_fatty_acid_anion
   }
 
   branch from fmn side right {
     fmn
-    <-> . +lipoxin_a4 +fmnh2 +o2 +h2o +hplus
-    20_hydroxylipoxin_a4
+    <-> . +nataloe_emodin +fmnh2 +o2 +h2o +hplus
+    cladofulvin
+  }
+
+  branch from fmnh2 side left {
+    fmnh2
+    <-> . +20_hete +o2 +fmn +h2o +hplus
+    8_9_epoxy_20_hydroxy_5z_11z_14z_icosatrienoate
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> . +arachidonate +o2 +fmn +h2o +hplus
+    8_9_eet
+  }
+
+  branch from 10_hydroxycaprate side left {
+    10_hydroxycaprate
+    <-> . +nadh +h +decanedioate +h2o
+    nad
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +asperaculane_e +fmnh2 +o2 +h2o +hplus
+    asperaculane_g
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> . +asperaculane_g +fmnh2 +o2 +co2 +h2o
+    aculene_d
   }
 }

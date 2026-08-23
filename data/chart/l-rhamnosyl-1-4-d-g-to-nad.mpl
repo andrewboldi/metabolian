@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-rhamnosyl-1-4-d-g-to-nad "α-L-rhamnosyl-(1→4)-β-D-g… to NAD" {
-  spacing 296
+  spacing 340
 
   spine at 0,0 {
     l_rhamnosyl_1_4_d_glucuronide
@@ -18,37 +18,97 @@ pathway l-rhamnosyl-1-4-d-g-to-nad "α-L-rhamnosyl-(1→4)-β-D-g… to NAD" {
 
   branch from h side left {
     h
-    <-> . +3_hydroxy_2_methyl_4_pyrone +dtdp
-    dtdp_3_4_didehydro_2_6_dideoxy_d_glucose
+    <-> . +ctp +beta_d_fructose_6_phosphate +diphosphate
+    cdp_d_fructose
   }
 
   branch from h side right {
     h
-    <-> . +20_oxo_5_o_mycaminosyltylactone +nadp +h2o +o2 +nadph
-    5_o_d_mycaminosyltylactone
+    <-> . +kaempferol_3_o_6_o_feruloyl_glucoside +coa +kaempferol_3_o_beta_d_glucoside
+    e_feruloyl_coa
   }
 
   branch from nadph side left {
     nadph
-    <-> . +8_8a_deoxyoleandolide +h +o2 +nadp +h2o
-    oleandolide
+    <-> . +14alpha_hydroxy_cholesta_4_7_diene_3_6_dione +h +nadp
+    14alpha_hydroxy_5beta_cholest_7_ene_3_6_dione
   }
 
   branch from nadph side right {
     nadph
-    <-> . +2_methylpropanoyl_coa +malonyl_coa +methylmalonyl_coa +h +nadp +6_8a_seco_6_8a_deoxy_5_oxoavermectin_2b_aglycone +coa +h2o
-    co2
+    <-> . +s_3_chloro_1_phenyl_1_propanol +nadp +h
+    3_chloro_1_phenyl_1_propanone
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_174 [1.1.1.174] +nadh +2_hydroxycyclohexan_1_one +h
-    cis_cyclohexane_1_2_diol
+    <-> ec_1_1_1_144 [1.1.1.144] +nadh +4r_perillyl_aldehyde +h
+    r_perillyl_alcohol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_14_12_26 [1.14.12.26] +nadh +h +1_2_4_trichlorobenzene +o2
-    1s_2r_3_4_6_trichlorocyclohexa_3_5_diene_1_2_di
+    <-> . +nadh +h +adonixanthin +o2 +h2o
+    2_3_2_3_tetrahydroxy_beta_beta_caroten_4_one
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +3_epiecdysone +h +nadph
+    3_dehydroecdysone
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_1_1_362 [1.1.1.362] +maggiemycin +h +nadph
+    epsilon_rhodomycinone
+  }
+
+  branch from h side left {
+    h
+    <-> . +3e_phytochromobilin
+    3z_phytochromobilin
+  }
+
+  branch from h side right {
+    h
+    <-> . +2e_3_2_4_dihydroxy_5_methoxyphenyl_prop_2_enoic
+    z_6_hydroxyferulate
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +2_oxoglutarate +h +l_ornithine +nadp +h2o
+    ornaline
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +n_3_hydroxybutan_2_yl_acetamide +nadp +h
+    n_3_oxobutan_2_yl_acetamide
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> . +3_methyl_pyrroline_5_carboxylate +h +nad
+    4_methyl_proline
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +co2 +4_4_hydroxyphenyl_2_oxobutanoate +nad
+    3_4_hydroxybenzyl_malate
+  }
+
+  branch from nad side left {
+    nad
+    <-> . +1_5_anhydro_d_fructose +nadh +h
+    1_5_anhydro_d_glucitol
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_14_13_24 [1.14.13.24] +nadh +3_hydroxy_4_methyl_benzoate +h +o2 +h2o
+    4_methylgentisate
   }
 }

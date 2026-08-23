@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-galnac-1-3-l-fuc-to-s-adenosyl-l-homocysteine "α-D-GalNAc-(1→3)-[α-L-Fuc… to S-adenosyl-L-homocysteine" {
-  spacing 326
+  spacing 340
 
   spine at 0,0 {
     d_galnac_1_3_l_fuc_1_2_d_gal_1_4_d_glcnac_1_3_d
@@ -20,69 +20,87 @@ pathway d-galnac-1-3-l-fuc-to-s-adenosyl-l-homocysteine "α-D-GalNAc-(1→3)-[α
     n_acetyl_8_o_methylneuraminate
   }
 
-  branch from l_fuc_1_2_d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_gl side left {
-    l_fuc_1_2_d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_gl
-    <-> . +d_galactosyl_1_4_n_acetyl_d_glucosaminyl_1_3_d +gdp +hplus
-    gdp_l_fucose
-  }
-
-  branch from n_acetyl_d_galactosamine side right {
+  branch from n_acetyl_d_galactosamine side left {
     n_acetyl_d_galactosamine
     <-> . +n_acetyl_galactosaminyl_1_3_l_fucosyl_1_2_d_gala +h2o
     l_fucosyl_1_2_d_galactosyl_1_4_n_acetyl_d_gluco
   }
 
-  branch from n_acetyl_d_galactosamine side left {
+  branch from n_acetyl_d_galactosamine side right {
     n_acetyl_d_galactosamine
-    <-> ec_3_2_1_49 [3.2.1.49] +l_fucosyl_1_2_d_galactoside +h2o
-    n_acetyl_d_galactosaminyl_1_3_l_fucosyl_1_2_d_ga
+    <-> ec_3_1_3_10 [3.1.3.10] +n_acetyl_alpha_d_galactosamine_1_phosphate +h2o
+    phosphate
   }
 
-  branch from d_galactosyl_1_4_n_acetyl_d_glucosaminyl_1_3_d side right {
+  branch from d_galactosyl_1_4_n_acetyl_d_glucosaminyl_1_3_d side left {
     d_galactosyl_1_4_n_acetyl_d_glucosaminyl_1_3_d
     <-> . +gdp_l_fucose +gdp +hplus
     l_fucp_1_3_d_galp_1_4_d_glcpnac_1_3_d_galp_1_4
   }
 
-  branch from l_fucopyranose side left {
-    l_fucopyranose
-    <-> . +myxol +h2o
-    myxol_2_fucoside
-  }
-
-  branch from l_fucopyranose side right {
-    l_fucopyranose
-    <-> ec_3_2_1_51 [3.2.1.51] +d_galactopyranose +h2o
-    l_fucp_1_6_d_galp
-  }
-
-  branch from n_acetylneuraminosyl_2_3_d_galactosyl_1_4_n_ace side left {
+  branch from n_acetylneuraminosyl_2_3_d_galactosyl_1_4_n_ace side right {
     n_acetylneuraminosyl_2_3_d_galactosyl_1_4_n_ace
     <-> . +gdp_l_fucose +gdp +hplus
     n_acetyl_neuraminosyl_2_3_d_galactosyl_1_4_l_fuc
   }
 
-  branch from cytidine_5_monophosphate side right {
-    cytidine_5_monophosphate
-    <-> . +n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace +cmp_n_acetyl_neuraminate +hplus
-    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace
-  }
-
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> . +n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace +cmp_n_acetyl_neuraminate +hplus
-    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace
+    <-> . +n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d +cmp_n_acetyl_neuraminate +hplus
+    n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_n
   }
 
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_174 [2.1.1.174] +guanosine_5_monophosphate_1 +sam +hplus
-    n2_methylguanosine_5_monophosphate_1
+  branch from cytidine_5_monophosphate side right {
+    cytidine_5_monophosphate
+    <-> . +n4_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_gal_1_4_d +cmp_n_acetyl_neuraminate +hplus
+    n4_neu5ac_2_3_d_gal_1_4_d_glcnac_1_2_d_man_1_3_n
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_176 [2.1.1.176] +cytidine_5_monophosphate_1 +sam +hplus
-    5_methylcytidine_5_monophosphate_1
+    <-> . +uridine_5_monophosphate_1 +sam +hplus
+    5_methyluridine_5_monophosphate_1
+  }
+
+  branch from sah side right {
+    sah
+    <-> . +1_hydroxy_6_methoxyphenazine_n10_oxide +sam
+    1_6_dimethoxyphenazine_n5_oxide
+  }
+
+  branch from n_acetyl_d_galactosamine side left {
+    n_acetyl_d_galactosamine
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
+    atp
+  }
+
+  branch from cmp_n_acetyl_neuraminate side right {
+    cmp_n_acetyl_neuraminate
+    <-> . +n4_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_4 +cytidine_5_monophosphate +hplus
+    n4_neu5ac_2_3_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d
+  }
+
+  branch from sam side left {
+    sam
+    <-> . +malonyl-coa +acetyl_coa +hplus +sah +co2 +coa +h2o
+    4_o_demethylbarbatate
+  }
+
+  branch from sam side right {
+    sam
+    <-> . +diosmetin_7_olate +sah
+    luteolin_4_7_dimethyl_ether
+  }
+
+  branch from sah side left {
+    sah
+    <-> . +scutellarein_7_olate_4_methyl_ether +sam
+    ladanein
+  }
+
+  branch from sah side right {
+    sah
+    <-> . +quercetin_7_olate +sam +hplus
+    rhamnetin_3_olate
   }
 }

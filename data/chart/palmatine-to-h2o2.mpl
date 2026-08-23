@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway palmatine-to-h2o2 "palmatine to H2O2" {
-  spacing 290
+  spacing 340
 
   spine at 0,0 {
     palmatine
@@ -16,11 +16,117 @@ pathway palmatine-to-h2o2 "palmatine to H2O2" {
     columbamine
   }
 
+  branch from h side left {
+    h
+    <-> . +l_dehydroascorbic_acid +7_hydroxy_d4_neuroprostane +h2o +l_ascorbate
+    7_hydroperoxy_h4_neuroprostane
+  }
 
+  branch from h side right {
+    h
+    <-> . +l_dehydroascorbic_acid +11_hydroxy_e4_neuroprostane +h2o +l_ascorbate
+    11_hydroperoxy_h4_neuroprostane
+  }
 
+  branch from o2 side left {
+    o2
+    <-> ec_1_14_16_7 [1.14.16.7] +l_m_tyrosine +4as_6r_4a_hydroxy_l_erythro_5_6_7_8_tetrahydrob +l_phenylalanine
+    6r_5_6_7_8_tetrahydrobiopterin
+  }
 
+  branch from o2 side right {
+    o2
+    <-> ec_1_14_14_1 [1.14.14.1] +n_hydroxy_phip +nadp +h2o +h +nadph
+    phip
+  }
 
+  branch from s_tetrahydrocolumbamine side left {
+    s_tetrahydrocolumbamine
+    <-> ec_1_14_19_68 [1.14.19.68] +h +o2 +nadph +nadp +h2o
+    s_canadine
+  }
 
+  branch from s_s_adenosyl_l_methionine side right {
+    s_s_adenosyl_l_methionine
+    <-> ec_2_1_1_212 [2.1.1.212] +s_adenosyl_l_homocysteine +h +2_7_dihydroxy_4_methoxyisoflavanone
+    2_4_7_trihydroxyisoflavanone
+  }
 
+  branch from s_s_adenosyl_l_methionine side left {
+    s_s_adenosyl_l_methionine
+    <-> ec_2_1_1_41 [2.1.1.41] +s_adenosyl_l_homocysteine +h +fecosterol
+    zymosterol
+  }
 
+  branch from h2o2 side right {
+    h2o2
+    <-> ec_1_1_3_15 [1.1.3.15] +2_hydroxybutanoate +o2
+    2_oxobutanoate
+  }
+
+  branch from h2o2 side left {
+    h2o2
+    <-> ec_1_2_3_1 [1.2.3.1] +5_hydroxyindol_3_yl_acetaldehyde +o2 +h2o +h
+    5_hydroxyindol_3_yl_acetate
+  }
+
+  branch from h2o2 side right {
+    h2o2
+    <-> ec_1_1_3_41 [1.1.3.41] +alpha_d_xylose +o2
+    xylitol
+  }
+
+  branch from h2o2 side left {
+    h2o2
+    <-> ec_1_2_3_1 [1.2.3.1] +9_cis_retinal +o2 +h2o +h
+    9_cis_retinoate
+  }
+
+  branch from h side right {
+    h
+    <-> . +l_dehydroascorbic_acid +11_hydroxy_d4_neuroprostane +h2o +11_hydroperoxy_h4_neuroprostane
+    l_ascorbate
+  }
+
+  branch from h side left {
+    h
+    <-> . +l_dehydroascorbic_acid +14_hydroxy_e4_neuroprostane +h2o +l_ascorbate
+    14_hydroperoxy_h4_neuroprostane
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_14_14_91 [1.14.14.91] +2_methoxy_4_hydroxycinnamate +nadp +h2o +h +nadph
+    3_2_methoxyphenyl_2_propenoic_acid
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_14_16_4 [1.14.16.4] +5_6_7_8_tetrahydrobiopterin +l_tryptophan +5_hydroxy_l_tryptophan +h2o
+    tetrahydrobiopterin_4a_carbinolamine
+  }
+
+  branch from s_adenosyl_l_homocysteine side right {
+    s_adenosyl_l_homocysteine
+    <-> . +11s_14s_cyclo_l_trp_l_phe +s_adenosyl_l_methionine +h
+    n_methyl_cyclo_l_trp_l_phe
+  }
+
+  branch from s_adenosyl_l_homocysteine side left {
+    s_adenosyl_l_homocysteine
+    <-> . +brassinin +h +s_adenosyl_l_methionine
+    indol_3_ylmethylcarbamodithiolate
+  }
+
+  branch from s_s_adenosyl_l_methionine side right {
+    s_s_adenosyl_l_methionine
+    <-> ec_2_1_1_49 [2.1.1.49] +s_adenosyl_l_homocysteine +h +n_methylserotonin
+    serotonin
+  }
+
+  branch from s_s_adenosyl_l_methionine side left {
+    s_s_adenosyl_l_methionine
+    <-> ec_2_1_1_107 [2.1.1.107] +s_adenosyl_l_homocysteine +precorrin_2 +h
+    uroporphyrinogen_iii
+  }
 }

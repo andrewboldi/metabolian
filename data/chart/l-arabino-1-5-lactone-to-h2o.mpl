@@ -16,75 +16,28 @@ pathway l-arabino-1-5-lactone-to-h2o "L-Arabino-1,5-lactone to H2O" {
     atp
   }
 
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_184 [1.1.1.184] +13_dihydrodaunorubicin +nadph
-    daunorubicin
-  }
 
-  branch from nadp side right {
-    nadp
-    <-> ec_1_3_1_20 [1.3.1.20] +ethyl_2_hydroxypropanoate +h +nadph
-    ethyl_pyruvate
-  }
 
-  branch from aldehydo_l_arabinose side left {
-    aldehydo_l_arabinose
-    <-> .
-    l_arabinopyranose
-  }
 
-  branch from aldehydo_l_arabinose side right {
-    aldehydo_l_arabinose
-    <-> ec_1_1_1_175 [1.1.1.175] +nadh +h +nad
-    l_arabinono_1_4_lactone
-  }
 
-  branch from l_arabinitol side left {
-    l_arabinitol
-    <-> ec_1_1_1_21 [1.1.1.21] +nadh +h +nad
-    l_lyxose
-  }
 
-  branch from l_arabinitol side right {
-    l_arabinitol
-    <-> ec_1_1_1_21 [1.1.1.21] +nadh +h +nad
-    alpha_l_arabinofuranose
-  }
 
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +tetradecanal +h
-    tetradecan_1_ol
-  }
 
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +3_methyl_2_butenal +h
-    prenol
-  }
 
-  branch from atp side left {
-    atp
-    <-> . +myo_inositol +h +adp
-    1d_myo_inositol_hexakisphosphate
-  }
 
-  branch from atp side right {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    fe
-  }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_3_2_1_21 [3.2.1.21] +4_methylumbelliferyl_beta_d_fucopyranoside +beta_d_fucose
-    4_methylumbelliferone
-  }
 
-  branch from h2o side right {
-    h2o
-    <-> ec_3_2_1_21 [3.2.1.21] +4_methylumbelliferyl_l_arabinoside +4_methylumbelliferone
-    alpha_l_arabinopyanose
-  }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

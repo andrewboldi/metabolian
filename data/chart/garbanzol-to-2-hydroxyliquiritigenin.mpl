@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway garbanzol-to-2-hydroxyliquiritigenin "garbanzol to 2-hydroxyliquiritigenin" {
-  spacing 234
+  spacing 312
 
   spine at 0,0 {
     garbanzol
@@ -18,14 +18,14 @@ pathway garbanzol-to-2-hydroxyliquiritigenin "garbanzol to 2-hydroxyliquiritigen
 
   branch from 2_oxoglutarate side left {
     2_oxoglutarate
-    <-> . +3_aminopropanesulfonic_acid +l_glutamate
-    3_oxopropane_1_sulfonate
+    <-> ec_1_14_11_13 [1.14.11.13] +gibberellin_a29 +co2 +h +succinate +o2
+    gibberellin_a20
   }
 
   branch from 2_oxoglutarate side right {
     2_oxoglutarate
-    <-> . +h +antibiotic_ji_20b +h2o2 +o2 +l_glutamate
-    geneticin_cation
+    <-> ec_2_6_1_34 [2.6.1.34] +udp_2_acetamido_4_amino_2_4_6_trideoxyglucose +h +l_glutamate
+    udp_2_acetamido_4_dehydro_2_6_dideoxy_beta_d_glu
   }
 
   branch from 2s_liquiritigenin side left {
@@ -42,55 +42,133 @@ pathway garbanzol-to-2-hydroxyliquiritigenin "garbanzol to 2-hydroxyliquiritigen
 
   branch from o2 side left {
     o2
-    <-> . +8_methyltetraphene_1_5_6_11_12_pentol +h2o2
-    dehydrorabelomycin
+    <-> . +2_4_5_trichlorophenoxy_acetate +2_4_5_trichlorophenol
+    glyoxylate
   }
 
   branch from o2 side right {
     o2
-    <-> . +h +dehydrorabelomycin
-    3_2_formyl_6_hydroxy_4_methylphenyl_8_hydroxy_1
+    <-> ec_1_14_12_12 [1.14.12.12] +ethylbenzene
+    1_phenylethanol
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_36 [1.1.1.36] +3_oxopentanoyl_coa +h +nadph
-    r_3_hydroxypentanoyl_coa
+    <-> ec_1_1_1_184 [1.1.1.184] +ethyl_3s_4_chloro_3_hydroxybutanoate +h +nadph
+    ethyl_4_chloroacetoacetate
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_393 [1.1.1.393] +glycyrrhetinate +h +nadph
-    3_oxoglycyrrhetinate
+    <-> ec_1_1_1_184 [1.1.1.184] +ethyl_2_hydroxybutanoate +h +nadph
+    ethyl_2_oxobutanoate
   }
 
   branch from licodione side left {
-    licodione
-    <-> ec_2_1_1_65 [2.1.1.65] +s_adenosyl_l_homocysteine +2_o_methyllicodione +h
-    s_adenosyl_l_methionine
-  }
-
-  branch from licodione side right {
     licodione
     <-> ec_1_14_13_87 [1.14.13.87] +nadh +2s_liquiritigenin +o2 +h2o
     nad
   }
 
-  branch from h2o side left {
-    h2o
-    <-> . +6_2_amino_2_carboxylatoethyl_1_2_3_4_tetrahydroq +h
-    2_amino_4_3_2_amino_2_carboxylatoethyl_6_oxocycl
-  }
-
   branch from h2o side right {
     h2o
-    <-> . +e_p_coumaroylagmatine +h2o2
-    hordatine_a
+    <-> . +n_valeraldoxime
+    pentanenitrile
   }
 
-  branch from 2_hydroxyliquiritigenin side left {
+  branch from h2o side left {
+    h2o
+    <-> ec_3_2_1_20 [3.2.1.20] +alpha_d_glucose +methanol
+    methyl_d_glucopyranoside
+  }
+
+  branch from 2_hydroxyliquiritigenin side right {
     2_hydroxyliquiritigenin
     <-> . +h
     licodione
+  }
+
+  branch from garbanzol side left {
+    garbanzol
+    <-> ec_1_14_13_21 [1.14.13.21] +h +o2 +nadph +nadp +h2o
+    trans_fustin
+  }
+
+  branch from co2 side right {
+    co2
+    <-> . +nyasol
+    4_coumaryl_4_coumarate
+  }
+
+  branch from co2 side left {
+    co2
+    <-> . +ubiquinol_2 +acetate +ubiquinone_2 +h2o
+    pyruvate
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> ec_4_1_3_30 [4.1.3.30] +pyruvate
+    2r_3s_2_methylcitrate
+  }
+
+  branch from succinate side left {
+    succinate
+    <-> ec_2_5_1_48 [2.5.1.48] +h +cystathionine +o_succinyl_l_homoserine
+    l_cysteine
+  }
+
+  branch from 2_oxoglutarate side right {
+    2_oxoglutarate
+    <-> ec_1_14_11_15 [1.14.11.15] +gibberellin_a4 +co2 +succinate +o2
+    gibberellin_a9
+  }
+
+  branch from 2_oxoglutarate side left {
+    2_oxoglutarate
+    <-> ec_1_14_11_13 [1.14.11.13] +gibberellin_a4 +o2 +co2 +succinate
+    gibberellin_a34
+  }
+
+  branch from 2s_liquiritigenin side right {
+    2s_liquiritigenin
+    <-> ec_1_14_13_136 [1.14.13.136] +h +o2 +nadph +nadp +h2o
+    2_4_7_trihydroxyisoflavanone
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +nadh +h +2_4_5_trichlorophenol +chloride +nad +h2o
+    2_5_dichlorohydroquinone
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_14_13_148 [1.14.13.148] +trimethylamine +nadh +nad +h2o
+    trimethylamine_n_oxide
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_1_1_184 [1.1.1.184] +methyl_4_chloro_3_hydroxybutanoate +nadp +h
+    methyl_4_chloro_3_oxobutanoate
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_1_1_184 [1.1.1.184] +methyl_2_chloro_3_hydroxybutanoate +nadp +h
+    methyl_2_chloro_3_oxobutanoate
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_1_1_1 [1.1.1.1] +acetoin +h +nadph
+    butane_2_3_diol
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_5_1_34 [1.5.1.34] +2_amino_4_hydroxy_6_7_dimethyldihydropteridine +h +nadph
+    6_7_dimethyltetrahydropterin
   }
 }

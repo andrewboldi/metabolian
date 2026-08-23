@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway z-4-hydroxyphenyl-acet-to-h2o "(Z)-(4-hydroxyphenyl)acet… to H2O" {
-  spacing 266
+  spacing 340
 
   spine at 0,0 {
     z_4_hydroxyphenyl_acetaldehyde_oxime
@@ -18,26 +18,26 @@ pathway z-4-hydroxyphenyl-acet-to-h2o "(Z)-(4-hydroxyphenyl)acet… to H2O" {
 
   branch from nadp side left {
     nadp
-    <-> . +dtdp_3_n_n_dimethylamino_4_oxo_2_3_6_trideoxy_l +h +nadph
-    dtdp_l_megosamine
+    <-> ec_1_14_99_34 [1.14.99.34] +7_o_methylluteone_epoxide +h2o +h +o2 +nadph
+    7_o_methylluteone
   }
 
   branch from nadp side right {
     nadp
-    <-> . +h +3_5_dihydroxy_3_4_7_trimethoxyflavone +o2 +nadph +h2o
-    2_hydroxy_3_7_4_trimethylquercetin
+    <-> . +baicalein +h2o +o2 +nadph
+    chrysin
   }
 
   branch from h2o side left {
     h2o
-    <-> . +3r_2_hydroxydihydrodaidzein
-    anhydroglycinol
+    <-> . +hydroxyspheroidene +o2
+    hydroxyspheroidenone
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_4_13_23 [3.4.13.23] +l_cys_ian +glycine
-    cys_ian_gly
+    <-> . +hemeo +o2
+    hemea
   }
 
   branch from z_1_l_cysteinylglycin_s_yl_n_hydroxy_2_4_hydrox side left {
@@ -56,5 +56,107 @@ pathway z-4-hydroxyphenyl-acet-to-h2o "(Z)-(4-hydroxyphenyl)acet… to H2O" {
     z_1_glutathion_s_yl_n_hydroxy_2_4_hydroxyphenyl
     <-> . +glutathione +h2o
     1_aci_nitro_2_4_hydroxyphenyl_ethane
+  }
+
+  branch from z_4_hydroxyphenyl_acetaldehyde_oxime side right {
+    z_4_hydroxyphenyl_acetaldehyde_oxime
+    <-> . +h +o2 +nadph +nadp +h2o
+    4_hydroxymandelonitrile
+  }
+
+  branch from h side left {
+    h
+    <-> ec_1_11_1_8 [1.11.1.8] +iodide +3_5_diiodo_l_tyrosine +diiodine
+    3_iodo_l_tyrosine
+  }
+
+  branch from h side right {
+    h
+    <-> . +l_dehydroascorbic_acid +7_hydroxy_e4_neuroprostane +h2o +l_ascorbate
+    7_hydroperoxy_h4_neuroprostane
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_10_3_12 [1.10.3.12] +menaquinol +h2o
+    menaquinone_2
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +menaquinol +menaquinone_2 +h2o
+    pmf
+  }
+
+  branch from l_cysteine side left {
+    l_cysteine
+    <-> . +pmf +pmf
+    cysteine
+  }
+
+  branch from l_cysteine side right {
+    l_cysteine
+    <-> ec_4_4_1_1 [4.4.1.1] +2_oxobutanoate +nh4 +h2o
+    d_cystathionine
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +o_5_oxidonitroso_4_oxocyclohex_2_en_1_ylidenenit +nadp
+    2_4_dinitrophenol
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +1_6_8_trihydroxy_1h_3h_cyclohepta_c_furan_5_one +o2 +nadp +h2o
+    stipitalide
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_3_1_111 [1.3.1.111] +h +geranylgeranyl_bacteriopheophytin +nadph
+    bacteriopheophytin_a
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_14_13_8 [1.14.13.8] +h +methimazole +o2 +nadph +h2o
+    methimazole_s_oxide
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +hydrogencarbonate +agmatine
+    l_arginine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +2_methoxy_6_all_trans_octaprenyl_phenol +o2
+    6_methoxy_2_all_trans_octaprenyl_1_4_benzoquinon
+  }
+
+  branch from glycine side left {
+    glycine
+    <-> ec_3_4_13_18 [3.4.13.18] +l_aspartate +h2o
+    gly_asp
+  }
+
+  branch from glycine side right {
+    glycine
+    <-> . +m_chloro_hippuric_acid +h2o +h
+    3_chlorobenzoate
+  }
+
+  branch from l_glutamate side left {
+    l_glutamate
+    <-> . +5_guanidino_2_oxopentanoate +h +arginine
+    2_oxoglutarate
+  }
+
+  branch from l_glutamate side right {
+    l_glutamate
+    <-> ec_2_6_1_27 [2.6.1.27] +3_5_hydroxyindol_3_yl_pyruvic_acid +2_oxoglutarate +h
+    5_hydroxy_l_tryptophan
   }
 }

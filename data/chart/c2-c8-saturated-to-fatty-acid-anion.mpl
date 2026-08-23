@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway c2-c8-saturated-to-fatty-acid-anion "C2-C8-saturated… to fatty acid anion" {
-  spacing 176
+  spacing 188
 
   spine at 0,0 {
     c2_c8_saturated_long_chain_fatty_acyl_pantethein
@@ -20,25 +20,37 @@ pathway c2-c8-saturated-to-fatty-acid-anion "C2-C8-saturated… to fatty acid an
 
   branch from fmn side left {
     fmn
-    <-> . +5_hepe +fmnh2 +o2 +h2o +hplus
-    5_20_dihepe
+    <-> . +6_methoxycoumarin +fmnh2 +o2 +h2o +hplus
+    scopoletin
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_30 [1.14.14.30] +2_methylpropanaminium +fmnh2 +o2 +h2o +hplus
-    n_hydroxy_2_methylpropanamine
+    <-> . +ganoderate_dm +fmnh2 +o2 +h2o +hplus
+    hainanate_a
   }
 
-  branch from fatty-acid side left {
-    fatty-acid
-    <-> . +1_2_diacyl_3_d_galactosyl_sn_glycerol +h2o +hplus
-    monoacyl_3_o_d_galactosyl_sn_glycerol
+  branch from fmnh2 side left {
+    fmnh2
+    <-> . +ganoderate_tr +o2 +fmn +h2o +hplus
+    ganoderate_jc
   }
 
-  branch from fatty-acid side right {
-    fatty-acid
-    <-> . +1_2_diacyl_sn_glycero_3_phosphoglycerol +h2o +hplus
-    2_acyl_sn_glycero_3_phosphoglycerol
+  branch from fmnh2 side right {
+    fmnh2
+    <-> . +22s_22_hydroxycampest_4_en_3_one +o2 +fmn +h2o +hplus
+    22r_23r_22_23_dihydroxycampest_4_en_3_one
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> . +cholesterol +fmnh2 +o2 +h2o +hplus
+    22s_22_hydroxycholesterol
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +5_cholestan_3_ol +fmnh2 +o2 +h2o +hplus
+    5_22s_22_hydroxycholestan_3_ol
   }
 }

@@ -22,21 +22,21 @@ pathway 3-d-ribofuranosyl-uric-to-5-o-phosphonato-d-ribo "3-(β-D-ribofuranosyl)
     purine_nucleobase
   }
 
-  branch from r1p side right {
-    r1p
-    <-> ec_2_4_2_1 [2.4.2.1] +inosine +pi
-    hypoxanthine
+  branch from 7_9_dihydro_1h_purine_2_6_8_3h_trione side right {
+    7_9_dihydro_1h_purine_2_6_8_3h_trione
+    <-> ec_1_7_3_3 [1.7.3.3] +o2 +h2o +h2o2 +allantoin
+    co2
   }
 
   branch from 7_9_dihydro_1h_purine_2_6_8_3h_trione side left {
     7_9_dihydro_1h_purine_2_6_8_3h_trione
-    <-> . +h +adp +phosphate +h2o
-    atp
+    <-> ec_2_4_2_16 [2.4.2.16] +alpha_d_ribose_1_phosphate +h +phosphate
+    urate_3_ribonucleoside
   }
 
   branch from 7_9_dihydro_1h_purine_2_6_8_3h_trione side right {
     7_9_dihydro_1h_purine_2_6_8_3h_trione
-    <-> ec_1_17_1_4 [1.17.1.4] +nadh +h +nad +h2o
-    6_8_dihydroxypurine
+    <-> . +o2 +h2o +co2 +s_allantoin
+    h2o2
   }
 }

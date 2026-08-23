@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-acyl-sn-glycerol-to-h2o "1-acyl-sn-glycerol to H2O" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     1_acyl_sn_glycerol
@@ -14,19 +14,7 @@ pathway 1-acyl-sn-glycerol-to-h2o "1-acyl-sn-glycerol to H2O" {
     1_phosphatidyl_1d_myo_inositol
     <-> . +1_acyl_sn_glycero_3_phosphoethanolamine +choline_alfoscerate -2_acyl_sn_glycero_3_phosphocholine
     2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate
-    <-> . +h +adp +phosphate -2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate -h2o
-    atp
-  }
-
-  branch from 1_phosphatidyl_1d_myo_inositol side left {
-    1_phosphatidyl_1d_myo_inositol
-    <-> . +atp +adp +hplus
-    1_phosphatidyl_1d_myo_inositol_5_phosphate
-  }
-
-  branch from 1_phosphatidyl_1d_myo_inositol side right {
-    1_phosphatidyl_1d_myo_inositol
-    <-> . +h2o +pi
-    1_phosphatidyl_1d_myo_inositol_4_phosphate
+    <-> ec_3_1_1_5 [3.1.1.5] +h +octadecanoate -h2o
+    2_octadecanoyl_sn_glycero_3_phosphoethanolamine
   }
 }

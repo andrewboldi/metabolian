@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 6-beta-hydroxy-lovastati-to-h2o "6'-beta-hydroxy-lovastati… to H2O" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     6_beta_hydroxy_lovastatin_lactone_form
@@ -14,29 +14,5 @@ pathway 6-beta-hydroxy-lovastati-to-h2o "6'-beta-hydroxy-lovastati… to H2O" {
     3_hydroxy_iso_delta_4_5_hydroxy_acid_form_of_lov
     <-> . +h +adp +phosphate -3_hydroxy_iso_delta_4_5_hydroxy_acid_form_of_lov -h2o
     atp
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
-    gly_gln
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +l_alanine +6_diazo_5_oxo_l_norleucyl_6_diazo_5_oxo_l_norleu +alazopeptin +h +amp
-    diphosphate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +aurodrosopterin +2_amino_6_acetyl_3_7_8_9_tetrahydro_3h_pyrimido
-    7_8_dihydrolumazine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +flaviolin +h +o2
-    naphthalene_1_3_6_8_tetrol
   }
 }

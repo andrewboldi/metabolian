@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-methyladenosine-to-5-amino-1-5-phosphonato "1-methyladenosine to 5-amino-1-(5-phosphonato-…" {
-  spacing 314
+  spacing 340
 
   spine at 0,0 {
     1_methyladenosine
@@ -60,27 +60,87 @@ pathway 1-methyladenosine-to-5-amino-1-5-phosphonato "1-methyladenosine to 5-ami
     2_5_6_triamino_4_hydroxypyrimidine
   }
 
-  branch from thf side right {
-    thf
-    <-> . +methylene_thf +dserine +h2o
-    hydroxymethyl_serine
+  branch from glutamate side right {
+    glutamate
+    <-> ec_2_6_1_2 [2.6.1.2] +akg +pyruvate
+    alanine
   }
 
   branch from glutamate side left {
     glutamate
-    <-> ec_2_6_1_27 [2.6.1.27] +l_tryptophan +akg
-    3_indol_3_yl_pyruvate
+    <-> . +l_kynurenine +akg
+    4_2_aminophenyl_2_4_dioxobutanoate
+  }
+
+  branch from air side right {
+    air
+    <-> ec_4_1_99_23 [4.1.99.23] +hydrogen_donor +sam +5_deoxyadenosine +formate +methionine +hydrogen_acceptor +nh3 +pi +hplus
+    5_hydroxybenzimidazole
+  }
+
+  branch from d_ribofuranose side left {
+    d_ribofuranose
+    <-> . +nadp +nadph +hplus
+    ribitol
+  }
+
+  branch from d_ribofuranose_5_phosphate side right {
+    d_ribofuranose_5_phosphate
+    <-> . +gmp +h2o
+    guanine
+  }
+
+  branch from d_ribofuranose_5_phosphate side left {
+    d_ribofuranose_5_phosphate
+    <-> .
+    r5p
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_3_5_5_2 [3.5.5.2] +ricinine +h2o
+    4_methoxy_1_methyl_2_oxo_1_2_dihydropyridine_3_c
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_3_5_1_86 [3.5.1.86] +r_mandelamide +h2o
+    r_mandelate
+  }
+
+  branch from glycine side right {
+    glycine
+    <-> ec_2_3_1_192 [2.3.1.192] +phenylacetyl_coa +coa +hplus
+    phenylacetylglycine
+  }
+
+  branch from glycine side left {
+    glycine
+    <-> ec_4_1_3_41 [4.1.3.41] +3s_3_hydroxy_d_aspartate
+    glyoxylate
+  }
+
+  branch from glutamine side right {
+    glutamine
+    <-> ec_2_7_3_13 [2.7.3.13] +atp +h2o +amp +pi +hplus
+    n5_phospho_l_glutamine
+  }
+
+  branch from glutamine side left {
+    glutamine
+    <-> .
+    d_glutamine
   }
 
   branch from glutamate side right {
     glutamate
-    <-> ec_2_6_1_52 [2.6.1.52] +pser +akg
-    php
+    <-> ec_2_6_1_1 [2.6.1.1] +aspartate +akg
+    oxaloacetate
   }
 
-  branch from air side left {
-    air
-    <-> ec_4_1_99_23 [4.1.99.23] +hydrogen_donor +sam +5_deoxyadenosine +formate +methionine +hydrogen_acceptor +nh3 +pi +hplus
-    5_hydroxybenzimidazole
+  branch from glutamate side left {
+    glutamate
+    <-> ec_2_6_1_80 [2.6.1.80] +s_s_s_nicotianamine_trizwitterion +akg
+    3_deamino_3_oxonicotianaminium
   }
 }

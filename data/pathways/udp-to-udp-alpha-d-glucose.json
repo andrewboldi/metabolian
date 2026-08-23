@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "udp-to-udp-alpha-d-glucose",
   "name": "UDP to UDP-alpha-D-glucose",
-  "category": "lipid-metabolism",
+  "category": "other",
   "summary": "A 3-step route from UDP to UDP-alpha-D-glucose, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -81,57 +81,117 @@
       }
     },
     {
-      "id": "phenyl_beta_d_glucopyranoside",
-      "name": "Phenyl beta-D-glucopyranoside",
-      "short": "Phenyl beta-D-gluco…",
-      "formula": "C12H16O6",
-      "charge": 0,
+      "id": "rac_4_hydroxy_4_o_beta_d_glucuronide_all_trans_r",
+      "name": "rac-4-hydroxy-4-O-(beta-D-glucuronide)-all-trans-retinyl acetate",
+      "short": "rac-4-hydroxy-4-O-(…",
+      "formula": "C28H39O9",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:8083"
+        "metanetx": "MNXM1560333"
       }
     },
     {
-      "id": "phenol",
-      "name": "phenol",
-      "formula": "C6H6O",
-      "charge": 0,
+      "id": "udp_alpha_d_glucuronate",
+      "name": "UDP-alpha-D-glucuronate",
+      "short": "UDP-alpha-D-glucuro…",
+      "formula": "C15H19N2O18P2",
+      "charge": -3,
       "xrefs": {
-        "metanetx": "MNXM320"
+        "metanetx": "MNXM1104890"
       }
     },
     {
-      "id": "sterol_3_beta_d_glucoside",
-      "name": "Sterol 3-beta-D-glucoside",
-      "short": "Sterol 3-beta-D-glu…",
-      "formula": "C23H38O6",
+      "id": "4_hydroxy_all_trans_retinyl_acetate",
+      "name": "4-hydroxy-all-trans-retinyl acetate",
+      "short": "4-hydroxy-all-trans…",
+      "formula": "C22H32O3",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM740646"
+        "metanetx": "MNXM729389"
       }
     },
     {
-      "id": "3beta_hydroxysterol",
-      "name": "3beta-Hydroxysterol",
-      "formula": "C17H28O",
+      "id": "4_oxo_9_cis_retinoyl_beta_glucuronide",
+      "name": "4-oxo-9-cis-retinoyl-beta-glucuronide",
+      "short": "4-oxo-9-cis-retinoy…",
+      "formula": "C26H33O9",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1560404"
+      }
+    },
+    {
+      "id": "4_oxo_9_cis_retinoate",
+      "name": "4-oxo-9-cis-retinoate",
+      "short": "4-oxo-9-cis-retinoa…",
+      "formula": "C20H25O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM163202"
+      }
+    },
+    {
+      "id": "diphosphate",
+      "name": "diphosphate",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM11"
+      }
+    },
+    {
+      "id": "all_trans_heptaprenyl_diphosphate",
+      "name": "all-trans-heptaprenyl diphosphate",
+      "short": "all-trans-heptapren…",
+      "formula": "C35H57O7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM731634"
+      }
+    },
+    {
+      "id": "farnesyl_diphosphate",
+      "name": "farnesyl diphosphate",
+      "formula": "C15H28O7P2",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM729150"
+        "metanetx": "MNXM1363834"
+      }
+    },
+    {
+      "id": "ipp",
+      "name": "Isopentenyl diphosphate (IPP)",
+      "short": "Isopentenyl PP (IPP)",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:128769"
+      }
+    },
+    {
+      "id": "cis_muurola_3_5_diene",
+      "name": "cis-muurola-3,5-diene",
+      "short": "cis-muurola-3,5-die…",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61687"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_2_4_1_35",
-      "name": "phenol beta-glucosyltransferase",
+      "id": "ec_2_5_1_30",
+      "name": "heptaprenyl diphosphate synthase",
       "ec": [
-        "2.4.1.35"
+        "2.5.1.30"
       ]
     },
     {
-      "id": "ec_2_4_1_173",
-      "name": "sterol 3beta-glucosyltransferase",
+      "id": "ec_4_2_3_67",
+      "name": "cis-muuroladiene synthase",
       "ec": [
-        "2.4.1.173"
+        "4.2.3.67"
       ]
     }
   ],
@@ -264,15 +324,14 @@
     },
     {
       "id": "r4",
-      "name": "phenol beta-glucosyltransferase",
-      "ec": "2.4.1.35",
+      "name": "Reaction MNXR206541",
       "substrates": [
         {
           "metabolite": "udp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "phenyl_beta_d_glucopyranoside",
+          "metabolite": "rac_4_hydroxy_4_o_beta_d_glucuronide_all_trans_r",
           "stoichiometry": 1
         },
         {
@@ -282,78 +341,333 @@
       ],
       "products": [
         {
-          "metabolite": "udp_alpha_d_glucose",
+          "metabolite": "udp_alpha_d_glucuronate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "phenol",
+          "metabolite": "4_hydroxy_all_trans_retinyl_acetate",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_4_1_35"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "metanetx": "MNXR152290"
+        "metanetx": "MNXR206541"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR152290"
+            "id": "MNXR206541"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "sterol 3beta-glucosyltransferase",
-      "ec": "2.4.1.173",
+      "name": "Reaction MNXR206543",
       "substrates": [
         {
           "metabolite": "udp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sterol_3_beta_d_glucoside",
+          "metabolite": "4_oxo_9_cis_retinoyl_beta_glucuronide",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "udp_alpha_d_glucose",
+          "metabolite": "udp_alpha_d_glucuronate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "3beta_hydroxysterol",
+          "metabolite": "4_oxo_9_cis_retinoate",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_4_1_173"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR152312"
+        "metanetx": "MNXR206543"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR152312"
+            "id": "MNXR206543"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "heptaprenyl diphosphate synthase",
+      "ec": "2.5.1.30",
+      "substrates": [
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "all_trans_heptaprenyl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "farnesyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ipp",
+          "stoichiometry": 4
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_30"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "metanetx": "MNXR198027"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198027"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "cis-muuroladiene synthase",
+      "ec": "4.2.3.67",
+      "substrates": [
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "cis_muurola_3_5_diene",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "farnesyl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_67"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "metanetx": "MNXR198040"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198040"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_sesaminol_2_o_d_gentiobioside_methylselenol-to-1-deoxy-d-xylulose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sesaminol_2_o_d_gentiobioside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "methylselenol-to-1-deoxy-d-xylulose"
+      },
+      "note": "Shares sesaminol 2-O-β-D-gentiobioside with methylselenol to 1-deoxy-D-xylulose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:145785"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_hydroxy_all_trans_retinyl_acetate_hesperidin-to-3-o-beta-glucosyl-2-ox",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_hydroxy_all_trans_retinyl_acetate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hesperidin-to-3-o-beta-glucosyl-2-ox"
+      },
+      "note": "Shares 4-hydroxy-all-trans-retinyl acetate with hesperidin to 3-(O-beta-glucosyl)-(2-ox….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM729389"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_oxo_9_cis_retinoate_1d-chiro-inositol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_oxo_9_cis_retinoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1d-chiro-inositol-to-h2o"
+      },
+      "note": "Shares 4-oxo-9-cis-retinoate with 1D-chiro-inositol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM163202"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_oxo_9_cis_retinoate_udp-to-nadp-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_oxo_9_cis_retinoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-nadp-null"
+      },
+      "note": "Shares 4-oxo-9-cis-retinoate with UDP to NADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM163202"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_heptaprenyl_diphosphate_beta-d-fructose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_heptaprenyl_diphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-d-fructose-to-h2o"
+      },
+      "note": "Shares all-trans-heptaprenyl diphosphate with beta-D-fructose… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM731634"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_heptaprenyl_diphosphate_diphosphate-to-isopentenyl-diphosphate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_heptaprenyl_diphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-isopentenyl-diphosphate-null"
+      },
+      "note": "Shares all-trans-heptaprenyl diphosphate with diphosphate to isopentenyl diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM731634"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_heptaprenyl_diphosphate_heptaprenylglyceryl-to-tricarballylate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_heptaprenyl_diphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "heptaprenylglyceryl-to-tricarballylate"
+      },
+      "note": "Shares all-trans-heptaprenyl diphosphate with Heptaprenylglyceryl… to tricarballylate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM731634"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cis_muurola_3_5_diene_uracil-5-carboxylate-to-o-s-butanoylpantetheine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cis_muurola_3_5_diene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "uracil-5-carboxylate-to-o-s-butanoylpantetheine"
+      },
+      "note": "Shares cis-muurola-3,5-diene with uracil-5-carboxylate to O-(S-butanoylpantetheine-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61687"
           }
         ]
       }

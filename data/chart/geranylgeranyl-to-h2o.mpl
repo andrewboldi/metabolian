@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway geranylgeranyl-to-h2o "geranylgeranyl… to H2O" {
-  spacing 216
+  spacing 276
 
   spine at 0,0 {
     geranylgeranyl_chlorophyll_a
@@ -22,49 +22,109 @@ pathway geranylgeranyl-to-h2o "geranylgeranyl… to H2O" {
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_21 [1.1.1.21] +4_methylphenylglyoxal +h +nadph
-    4_methylbenzoyl_methanol
+    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +11r_dihydroartemisinic_aldehyde
+    drimenol
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_19 [1.1.1.19] +pr01 +h +nadph
-    4_chlorobenzaldehyde
-  }
-
-  branch from chlorophyll_a side left {
-    chlorophyll_a
-    <-> ec_3_1_1_14 [3.1.1.14] +h +chlorophyllide_a +h2o
-    phytol
-  }
-
-  branch from h side right {
-    h
-    <-> . +glycidol +chloride
-    3_chloropropane_1_2_diol
+    <-> ec_1_1_1_71 [1.1.1.71] +2e_geranial +h +nadph
+    thujan_3_ol
   }
 
   branch from h side left {
     h
-    <-> ec_3_1_2_6 [3.1.2.6] +r_lactate +glutathione +h2o
-    lactoylglutathione
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
+    neoagarotriose
   }
 
-  branch from chlorophyllide_a side right {
-    chlorophyllide_a
-    <-> ec_4_99_1_10 [4.99.1.10] +mg +h
-    pheophorbide_a
+  branch from h side right {
+    h
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +neoagarohexaose +phosphate +neoagarohexaose +h2o
+    atp
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_1_1_1 [3.1.1.1] +ethanol +hexanoate +h
-    ethyl_hexanoate
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
+    neoagaropentaose
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_1_1_1 [3.1.1.1] +ethanol +h +pentanoate
-    ethyl_pentanoate
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
+    agarohexaose
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
+    agaropentaose
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
+    alpha_l_galactopyranose_6_sulfate_1_3_beta_d_gal
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_1_1_71 [1.1.1.71] +2e_geranial +h +nadp
+    r_terpineol
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_1_1_71 [1.1.1.71] +2e_geranial +h +nadp
+    thujan_3_ol
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_1_1_71 [1.1.1.71] +2e_geranial +h +nadph
+    1r_2s_4r_borneol
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_1_1_71 [1.1.1.71] +h +s_citronellal +nadph
+    neomenthol
+  }
+
+  branch from diphosphate side left {
+    diphosphate
+    <-> ec_2_7_7_76 [2.7.7.76] +ctp +moo3_molybdopterin_cofactor +h
+    cytidylyl_molybdenum_cofactor_trioxo
+  }
+
+  branch from diphosphate side right {
+    diphosphate
+    <-> . +3_amino_2_4_dihydroxybenzoate +atp +coa +amp
+    3_amino_2_4_dihydroxybenzoyl_coa
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_14_13_107 [1.14.13.107] +nadh +4r_limonene +h +4r_limonene_1alpha_2alpha_epoxide +h2o
+    nad
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_14_13_107 [1.14.13.107] +4r_limonene +h +nadph +nadp +h2o
+    4r_limonene_1_2_epoxide
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
+    neoagarooctaose
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
+    agaroheptaose
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 19-hydroxytestosterone-to-fmn "19-hydroxytestosterone to FMN" {
-  spacing 294
+  spacing 240
 
   spine at 0,0 {
     19_hydroxytestosterone
@@ -14,59 +14,5 @@ pathway 19-hydroxytestosterone-to-fmn "19-hydroxytestosterone to FMN" {
     androst_5_ene_3_17_diol
     <-> . +fmnh2 +o2 -fmn -h2o -hplus
     androst_5_ene_3_7_17_triol
-  }
-
-  branch from h side left {
-    h
-    <-> ec_1_4_3_16 [1.4.3.16] +l_aspartate +o2 +h2o2
-    iminoaspartate
-  }
-
-  branch from h side right {
-    h
-    <-> . +2e_geranyl_diphosphate +bergaptol +diphosphate
-    bergomottin
-  }
-
-  branch from o2 side left {
-    o2
-    <-> ec_1_4_3_16 [1.4.3.16] +l_aspartate +h2o2
-    iminoaspartate
-  }
-
-  branch from o2 side right {
-    o2
-    <-> ec_1_14_11_24 [1.14.11.24] +2_oxoglutarate +3_epi_3_hydroxy_2_deoxymugineic_acid +succinate +3_epi_3_hydroxymugineic_acid
-    co2
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> . +nadh +acetyl_coa +5z_8z_11z_14z_eicosatetraenoyl_coa +nadp +h2o2 +coa +o2 +nad +h2o
-    4z_7z_10z_13z_16z_docosapentaenoyl_coa
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> . +malonyl_coa +h +dodecanoate +o2 +co2 +nadp +coa +h2o
-    9e_tetradecenoic_acid
-  }
-
-  branch from androst_5_ene_3_17_diol side left {
-    androst_5_ene_3_17_diol
-    <-> . +nad +nadh +hplus
-    17_hydroxy_5_androsten_3_one
-  }
-
-  branch from nad side right {
-    nad
-    <-> . +nadh +thymine +h
-    dihydrothymine
-  }
-
-  branch from nad side left {
-    nad
-    <-> . +nadh +6r_5_10_methylene_5_6_7_8_tetrahydrofolate +h
-    5_methyltetrahydrofolic_acid
   }
 }

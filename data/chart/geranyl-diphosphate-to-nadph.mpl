@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway geranyl-diphosphate-to-nadph "geranyl diphosphate to NADPH" {
-  spacing 252
+  spacing 192
 
   spine at 0,0 {
     gpp
@@ -16,65 +16,5 @@ pathway geranyl-diphosphate-to-nadph "geranyl diphosphate to NADPH" {
     2_exo_hydroxy_1_8_cineole
     <-> ec_1_14_13_157 [1.14.13.157] +nadp +h2o -1_8_cineole -o2 -nadph
     h
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +fpp
-    1_10_aristolene
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +fpp
-    barbatene
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +kanamycin_a +phosphate +kanamycin_a
-    atp
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    kanamycin_b
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    4_5_methylenedioxy_6_hydroxyaurone
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    streptothricin_f
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +1s_1_2s_2_amino_4_methylpentanamido_ethyl_metho +2_oxoglutarate +co2 +succinate +h2o
-    1_2s_2_amino_4_methylpentanamido_ethenyl_methoxy
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +71_hydroxychlorophyllide_a2 +h +nadph +nadp +h2o
-    71_dihydroxychlorophyllide_a2
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> ec_1_3_1_75 [1.3.1.75] +divinyl_chlorophyllide_a +h +nadp
-    chlorophyllide_a
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> ec_1_1_1_119 [1.1.1.119] +alpha_d_glucose +nadp +h
-    d_glucono_1_5_lactone
   }
 }

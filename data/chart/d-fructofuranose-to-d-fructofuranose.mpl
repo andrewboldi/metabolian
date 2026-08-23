@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-fructofuranose-to-d-fructofuranose "β-D-fructofuranose… to β-D-fructofuranose…" {
-  spacing 174
+  spacing 168
 
   spine at 0,0 {
     d_fructofuranose_6_phosphate
@@ -16,11 +16,5 @@ pathway d-fructofuranose-to-d-fructofuranose "β-D-fructofuranose… to β-D-fru
     d_fructofuranose_1_phosphate
     <-> ec_2_7_1_56 [2.7.1.56] +atp -adp -hplus
     f16bp
-  }
-
-  branch from d_fructofuranose_1_phosphate side left {
-    d_fructofuranose_1_phosphate
-    <-> . +pyruvate +phosphoenolpyruvate
-    beta_d_fructose
   }
 }

@@ -1,0 +1,278 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "cobyrinate-to-nadph",
+  "name": "Cobyrinate to NADPH",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from Cobyrinate to NADPH, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR204465"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "cobyrinate",
+      "name": "Cobyrinate",
+      "formula": "C45H59CoN4O14",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1582164"
+      }
+    },
+    {
+      "id": "cobalt_precorrin_8",
+      "name": "cobalt-precorrin 8",
+      "formula": "C45H59CoN4O14",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1582182"
+      }
+    },
+    {
+      "id": "s_adenosyl_l_homocysteine",
+      "name": "S-adenosyl-L-homocysteine",
+      "short": "S-adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1102167"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "s_adenosyl_l_methionine",
+      "name": "S-adenosyl-L-methionine",
+      "short": "S-adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1363767"
+      }
+    },
+    {
+      "id": "cobalt_dihydro_precorrin_6",
+      "name": "cobalt-dihydro-precorrin 6",
+      "short": "cobalt-dihydro-prec…",
+      "formula": "C44H55CoN4O16",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1582165"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "cobalt_precorrin_6",
+      "name": "cobalt-precorrin 6",
+      "formula": "C44H53CoN4O16",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1582179"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR204465",
+      "substrates": [
+        {
+          "metabolite": "cobyrinate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cobalt_precorrin_8",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR204465"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR204465"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR204463",
+      "substrates": [
+        {
+          "metabolite": "s_adenosyl_l_homocysteine",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cobalt_precorrin_8",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_adenosyl_l_methionine",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "cobalt_dihydro_precorrin_6",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR204463"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR204463"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR204464",
+      "substrates": [
+        {
+          "metabolite": "cobalt_dihydro_precorrin_6",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cobalt_precorrin_6",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR204464"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR204464"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_cobyrinate_diphosphate-to-pyocyanine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cobyrinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-pyocyanine"
+      },
+      "note": "Shares Cobyrinate with diphosphate to pyocyanine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1582164"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cobalt_precorrin_6_s-adenosyl-l-homocysteine-to-cobalt-precorrin-3",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cobalt_precorrin_6"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-cobalt-precorrin-3"
+      },
+      "note": "Shares cobalt-precorrin 6 with S-adenosyl-L-homocysteine to cobalt-precorrin 3.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1582179"
+          }
+        ]
+      }
+    }
+  ]
+}

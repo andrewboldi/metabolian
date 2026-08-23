@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-alanine-to-h2o "D-alanine to H2O" {
-  spacing 236
+  spacing 248
 
   spine at 0,0 {
     d_alanine
@@ -18,13 +18,25 @@ pathway d-alanine-to-h2o "D-alanine to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> . +3_carbamoyl_2_phenylpropionic_acid
-    5_phenyl_1_3_oxazinane_2_4_dione
+    <-> . +d_glucuronate +norverapamil
+    norverapamil_glucuronide
   }
 
   branch from h2o side right {
     h2o
-    <-> . +3_hydroxyvalproic_acid
-    2_n_propyl_2_pentenoic_acid
+    <-> . +2_4_dihydroxyhept_2_enedioic_acid
+    cis_2_oxohept_3_enedioic_acid
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +h +adp +phosphate +atp
+    1_eicosadienoylglycerophosphocholine_delta_11_14
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +h +adp +phosphate +atp
+    1_eicosatrienoylglycerophosphocholine_delta_11_1
   }
 }

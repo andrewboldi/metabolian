@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 15-methylhexadecasphingan-to-1-z-alk-1-enyl-2-ac "15-methylhexadecasphingan… to 1-(Z)-alk-1-enyl-2-acyl-s…" {
-  spacing 312
+  spacing 282
 
   spine at 0,0 {
     15_methylhexadecasphinganine_1_phosphate
@@ -20,39 +20,9 @@ pathway 15-methylhexadecasphingan-to-1-z-alk-1-enyl-2-ac "15-methylhexadecasphin
     1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphoethano
   }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_209 [4.2.3.209] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    r_axinyssene
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_210 [4.2.3.210] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    lydicene
-  }
-
-  branch from cytidine_5_monophosphate side left {
-    cytidine_5_monophosphate
-    <-> . +n4_d_glcnac_1_2_d_man_1_3_d_gal_1_4_d_glcnac_1_2 +cmp_n_acetyl_neuraminate +hplus
-    n4_d_glcnac_1_2_d_man_1_3_neu5ac_2_3_d_gal_1_4_d
-  }
-
-  branch from cytidine_5_monophosphate side right {
-    cytidine_5_monophosphate
-    <-> . +n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d +cmp_n_acetyl_neuraminate +hplus
-    n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_n
-  }
-
-  branch from 1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine side left {
-    1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine
-    <-> . +oleoyl_coa +coa
-    1_z_alk_1_enyl_2_oleoyl_sn_glycero_3_phosphoetha
-  }
-
-  branch from 1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine side right {
-    1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine
-    <-> . +arachidonoyl_coa +coa
-    1_z_alk_1_enyl_2_arachidonoyl_sn_glycero_3_phosp
+  branch from 15_methylhexadecasphinganine_1_phosphate side left {
+    15_methylhexadecasphinganine_1_phosphate
+    <-> . +atp +adp +hplus
+    15_methylhexadecasphinganine
   }
 }

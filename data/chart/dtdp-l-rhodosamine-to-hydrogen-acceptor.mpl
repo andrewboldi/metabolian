@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dtdp-l-rhodosamine-to-hydrogen-acceptor "dTDP-β-L-rhodosamine to hydrogen acceptor" {
-  spacing 228
+  spacing 216
 
   spine at 0,0 {
     dtdp_l_rhodosamine
@@ -14,17 +14,5 @@ pathway dtdp-l-rhodosamine-to-hydrogen-acceptor "dTDP-β-L-rhodosamine to hydrog
     15_demethylaclacinomycin_t
     <-> . +hydrogen_donor +o2 -hydrogen_acceptor -co2 -h2o
     11_deoxy_rhodomycin
-  }
-
-  branch from hydrogen_acceptor side left {
-    hydrogen_acceptor
-    <-> . +cytidine_5_monophosphate_1 +3_disulfanyl_l_alanine +hydrogen_donor +atp +l_cysteine +amp +ppi +hplus
-    2_thiocytidine_5_monophosphate_1
-  }
-
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> . +all_trans_3_4_didehydro_13_14_dihydroretinol +hydrogen_donor
-    all_trans_3_4_didehydroretinol
   }
 }

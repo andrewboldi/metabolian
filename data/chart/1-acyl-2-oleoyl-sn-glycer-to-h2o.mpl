@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-acyl-2-oleoyl-sn-glycer-to-h2o "1-acyl-2-oleoyl-sn-glycer… to H2O" {
-  spacing 188
+  spacing 176
 
   spine at 0,0 {
     1_acyl_2_oleoyl_sn_glycero_3_phosphoserine
@@ -20,39 +20,27 @@ pathway 1-acyl-2-oleoyl-sn-glycer-to-h2o "1-acyl-2-oleoyl-sn-glycer… to H2O" {
     atp
   }
 
-  branch from 1_oleoyl_sn_glycero_3_phosphoserine side left {
-    1_oleoyl_sn_glycero_3_phosphoserine
-    <-> . +arachidonoyl_coa +coa
-    1_oleoyl_2_arachidonoyl_sn_glycero_3_phospho_l_s
+  branch from oleoyl_coa side left {
+    oleoyl_coa
+    <-> . +1_9z_octadecyl_3_oleoylglycerol +coa
+    1_9z_octadecenyl_2_3_dioleoylglycerol
   }
 
-  branch from 1_oleoyl_sn_glycero_3_phosphoserine side right {
-    1_oleoyl_sn_glycero_3_phosphoserine
-    <-> . +stearoyl_coa +coa
-    1_oleoyl_2_stearoyl_sn_glycero_3_phospho_l_serin
+  branch from oleoyl_coa side right {
+    oleoyl_coa
+    <-> . +1_2_dihexanoyl_sn_glycerol +coa
+    1_2_dihexanoyl_3_oleoyl_sn_glycerol
   }
 
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    validamycin_a
+  branch from linoleoyl_coa side left {
+    linoleoyl_coa
+    <-> . +fad +hplus +fadh2
+    2e_9z_12z_octadecatrienoyl_coa
   }
 
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    o_phosphoviomycin
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    viomycin
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_47 [3.6.3.47] +h +adp +phosphate +atp
-    docosanoyl_coa
+  branch from linoleoyl_coa side right {
+    linoleoyl_coa
+    <-> ec_1_14_19_3 [1.14.19.3] +fe2 +o2 +hplus +iron +h2o
+    linolenoyl_coa
   }
 }

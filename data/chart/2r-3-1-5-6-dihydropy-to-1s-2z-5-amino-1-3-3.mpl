@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2r-3-1-5-6-dihydropy-to-1s-2z-5-amino-1-3-3 "(2R)-3-{[1-(5,6-dihydropy… to (1S,2Z)-5-amino-1-(3-{3-[…" {
-  spacing 170
+  spacing 152
 
   spine at 0,0 {
     2r_3_1_5_6_dihydropyridin_2_yl_2_hydroxy_2_3_1e
@@ -14,23 +14,5 @@ pathway 2r-3-1-5-6-dihydropy-to-1s-2z-5-amino-1-3-3 "(2R)-3-{[1-(5,6-dihydropy�
     2_3_3_1e_prop_1_en_1_yl_oxiran_2_yl_oxiran_2_yl
     <-> . +fadh2 +h -1s_2z_5_amino_1_3_3_1e_prop_1_en_1_yl_oxiran_2
     fad
-  }
-
-  branch from n_acetyl_l_cysteine side left {
-    n_acetyl_l_cysteine
-    <-> ec_3_5_1_124 [3.5.1.124] +r_lactate +h +h2o
-    n_acetyl_s_1_hydroxy_2_oxopropyl_cysteine
-  }
-
-  branch from fad side right {
-    fad
-    <-> . +fadh2 +h +2_4_6_trichlorophenolate +o2 +chloride +h2o
-    2_6_dichloro_4_hydroxyphenolate
-  }
-
-  branch from fad side left {
-    fad
-    <-> . +aminopyrrolnitrin +h2o +fadh2 +h +o2 +chloride
-    monodechloroaminopyrrolnitrin
   }
 }

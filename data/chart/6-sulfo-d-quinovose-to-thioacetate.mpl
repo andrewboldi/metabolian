@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 6-sulfo-d-quinovose-to-thioacetate "6-sulfo-D-quinovose to thioacetate" {
-  spacing 240
+  spacing 216
 
   spine at 0,0 {
     6_sulfo_d_quinovose
@@ -16,29 +16,5 @@ pathway 6-sulfo-d-quinovose-to-thioacetate "6-sulfo-D-quinovose to thioacetate" 
     cis_1_2_dithiane_4_5_diol
     <-> ec_2_3_1_10 [2.3.1.10] +h2s +acetyl_coa -coa
     thioacetate
-  }
-
-  branch from 6_dehydro_d_glucose side left {
-    6_dehydro_d_glucose
-    <-> ec_1_14_14_181 [1.14.14.181] +fmnh2 +6_sulfo_d_quinovose +h +o2 +sulfite +h2o
-    fmn
-  }
-
-  branch from 6_dehydro_d_glucose side right {
-    6_dehydro_d_glucose
-    <-> ec_1_14_14_181 [1.14.14.181] +fadh2 +6_sulfo_d_quinovose +h +o2 +sulfite +h2o
-    fad
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> ec_1_14_14_186 [1.14.14.186] +tryptaminium +fmnh2 +o2 +h2o +hplus
-    serotonin
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    11_r_hete
   }
 }

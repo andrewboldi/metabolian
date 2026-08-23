@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway diphosphate-to-6-7-dihydro-12-epi-ltb4 "diphosphate to 6,7-dihydro-12-epi-LTB4" {
-  spacing 212
+  spacing 152
 
   spine at 0,0 {
     diphosphate
@@ -16,65 +16,5 @@ pathway diphosphate-to-6-7-dihydro-12-epi-ltb4 "diphosphate to 6,7-dihydro-12-ep
     nadp
     <-> . +h +10_11_dihydro_leukotriene_b4
     6_7_dihydro_12_epi_ltb4
-  }
-
-  branch from 10_11_dihydro_12_epi_leukotriene_b4 side left {
-    10_11_dihydro_12_epi_leukotriene_b4
-    <-> . +h +o2 +nadph +nadp +h2o
-    20_oh_10_11_dihydro_leukotriene_b4
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    aclacinomycin_a
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    megalomicin_a
-  }
-
-  branch from coa side right {
-    coa
-    <-> ec_6_2_1_3 [6.2.1.3] +hexadecanoate +atp +diphosphate +amp
-    hexadecanoyl_coa
-  }
-
-  branch from coa side left {
-    coa
-    <-> ec_6_2_1_1 [6.2.1.1] +propanoyl_amp +h +amp
-    propanoyl_coa
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> ec_2_3_1_41 [2.3.1.41] +hexadecanoate +co2 +nadp +coa +h2o +malonyl_coa +h
-    acetyl_coa
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> ec_1_1_1_330 [1.1.1.330] +s_3_hydroxyoctadecanoyl_coa +nadp +h
-    3_oxooctadecanoyl_coa
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_2_3_1_86 [2.3.1.86] +decanoyl_coa +co2 +coa +h2o +malonyl_coa +h +nadph
-    octanoyl_coa
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_2_3_1_86 [2.3.1.86] +dodecanoyl_coa +malonyl_coa +h +nadph +co2 +coa +h2o
-    tetradecanoyl_coa
-  }
-
-  branch from 6_7_dihydro_12_epi_ltb4 side right {
-    6_7_dihydro_12_epi_ltb4
-    <-> . +h +nadph +nadp
-    6_7_dihydro_5_oxo_12_epi_ltb4
   }
 }

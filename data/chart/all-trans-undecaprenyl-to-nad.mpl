@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway all-trans-undecaprenyl-to-nad "all-trans-undecaprenyl… to NAD" {
-  spacing 322
+  spacing 340
 
   spine at 0,0 {
     all_trans_undecaprenyl_diphosphate
@@ -18,69 +18,28 @@ pathway all-trans-undecaprenyl-to-nad "all-trans-undecaprenyl… to NAD" {
     menaquinol_11
   }
 
-  branch from 2_demethylmenaquinol_11 side left {
-    2_demethylmenaquinol_11
-    <-> ec_1_6_5_2 [1.6.5.2] +h +nadph +nadp
-    2_demethylmenaquinone_11
-  }
 
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_112 [4.2.3.112] +gpp +h2o
-    r_terpineol
-  }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_114 [4.2.3.114] +gpp
-    terpinene
-  }
 
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_291 [2.1.1.291] +r_reticulinium +sam +hplus
-    r_laudanine
-  }
 
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_300 [2.1.1.300] +pavine +sam +hplus
-    argemonine
-  }
 
-  branch from h side right {
-    h
-    <-> . +acetyl_coa +l_l_cystathionine +coa
-    n_acetyl_l_cystathionine
-  }
 
-  branch from h side left {
-    h
-    <-> . +acetyl_coa +l_cysteine +n_acetyl_l_cysteine
-    coa
-  }
 
-  branch from nadph side right {
-    nadph
-    <-> . +3_oxo_all_cis_6_9_12_15_18_tetracosapentaenoyl_c +h +nadp
-    3_s_hydroxy_tetracosa_9_12_15_18_21_all_cis_pent
-  }
 
-  branch from nadph side left {
-    nadph
-    <-> . +11z_14z_3_oxoicosa_11_14_dienoyl_coa +h +nadp
-    3s_hydroxy_eicosa_cis_cis_11_14_dienoyl_coa
-  }
 
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_42 [1.1.1.42] +s_oxalatosuccinate +nadh +h
-    isocitrate
-  }
 
-  branch from nad side left {
-    nad
-    <-> . +nadh +h +benzoate +acetate +h2o
-    e_cinnamate
-  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

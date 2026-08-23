@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-trisulfanyl-l-alanine-to-diphosphate "3-trisulfanyl-L-alanine to diphosphate" {
-  spacing 252
+  spacing 240
 
   spine at 0,0 {
     3_trisulfanyl_l_alanine
@@ -16,27 +16,15 @@ pathway 3-trisulfanyl-l-alanine-to-diphosphate "3-trisulfanyl-L-alanine to dipho
     l_cysteine
   }
 
-  branch from l_cysteine side left {
-    l_cysteine
-    <-> ec_4_4_1_29 [4.4.1.29] +s_3_2r_phycocyanobilin_l_cysteine_2
-    3e_phycocyanobilin
+  branch from uridine_5_monophosphate_1 side left {
+    uridine_5_monophosphate_1
+    <-> ec_5_4_99_12 [5.4.99.12]
+    pseudouridine_5_phosphate_1
   }
 
-  branch from l_cysteine side right {
-    l_cysteine
-    <-> ec_4_4_1_29 [4.4.1.29] +s_3_2r_phycoerythrobilin_l_cysteine_2
-    3e_phycoerythrobilin
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +2_cis_6_cis_farnesyl_diphosphate +h2o
-    6z_nerolidol
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +2_cis_6_trans_farnesyl_diphosphate
-    6r_7s_2_2_6_trimethyl_10_methylenebicyclo_5_4_0
+  branch from uridine_5_monophosphate_1 side right {
+    uridine_5_monophosphate_1
+    <-> . +nadp +nadph +hplus
+    5_6_dihydrouridine_5_monophosphate_1
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-oxo-2h-pyran-4-6-dicarb-to-5-chlorobenzoate-ci "2-oxo-2H-pyran-4,6-dicarb… to 5-chlorobenzoate-cis-3,4-…" {
-  spacing 212
+  spacing 188
 
   spine at 0,0 {
     2_oxo_2h_pyran_4_6_dicarboxylate
@@ -14,29 +14,5 @@ pathway 2-oxo-2h-pyran-4-6-dicarb-to-5-chlorobenzoate-ci "2-oxo-2H-pyran-4,6-dic
     o2
     <-> . +nadh +h +5_chloroprotocatechuate -5_chlorobenzoate_cis_3_4_diol
     nad
-  }
-
-  branch from o2 side left {
-    o2
-    <-> ec_1_14_13_90 [1.14.13.90] +nadh +all_trans_zeaxanthin +h +nad +h2o
-    all_trans_violaxanthin
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +h +18_hydroxyoleate +h2o2
-    18_oxooleic_acid
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_6e_farnesal +h
-    3r_6e_nerolidol
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_6e_farnesal +h
-    2_trans_6_cis_farnesol
   }
 }

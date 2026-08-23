@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-vinylglycine-to-coa "L-vinylglycine to CoA" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     l_vinylglycine
@@ -14,29 +14,5 @@ pathway l-vinylglycine-to-coa "L-vinylglycine to CoA" {
     l_homoserine
     <-> . +acetyl_coa -h -coa
     acetylhomoserine
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    tetracosatetraenoic_acid_n_6
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    tetracosapentaenoic_acid_n_6
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +4z_7z_10z_13z_16z_docosapentaenoyl_coa +h2o +h
-    docosa_4_7_10_13_16_pentaenoic_acid
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +diphosphate +10z_13z_16z_docosatrienoyl_coa +h +amp +10_13_16_docosatrienoic_acid
-    atp
   }
 }

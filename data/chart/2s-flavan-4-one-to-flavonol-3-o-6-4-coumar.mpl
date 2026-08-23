@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2s-flavan-4-one-to-flavonol-3-o-6-4-coumar "(2S)-flavan-4-one to flavonol 3-O-[6-(4-coumar…" {
-  spacing 298
+  spacing 328
 
   spine at 0,0 {
     2s_flavan_4_one
@@ -30,14 +30,14 @@ pathway 2s-flavan-4-one-to-flavonol-3-o-6-4-coumar "(2S)-flavan-4-one to flavono
 
   branch from succinate side right {
     succinate
-    <-> . +l_proline +akg +o2 +co2
-    trans_4_hydroxy_l_proline
+    <-> . +l_lysinium +akg +o2 +co2
+    4_hydroxy_l_lysine_1
   }
 
   branch from succinate side left {
     succinate
-    <-> . +2_4_dichlorophenoxy_acetate +akg +o2 +glyoxylate +co2
-    2_4_dichlorophenol
+    <-> . +l_argininium +akg +o2 +co2
+    3r_3_hydroxy_l_argininium
   }
 
   branch from flavonols side right {
@@ -48,19 +48,49 @@ pathway 2s-flavan-4-one-to-flavonol-3-o-6-4-coumar "(2S)-flavan-4-one to flavono
 
   branch from flavonol_3_o_d_glucoside side left {
     flavonol_3_o_d_glucoside
-    <-> ec_2_3_1_116 [2.3.1.116] +malonyl-coa +coa
-    flavonol_3_o_6_o_malonyl_d_glucoside
-  }
-
-  branch from flavonol_3_o_d_glucoside side right {
-    flavonol_3_o_d_glucoside
     <-> ec_2_4_1_159 [2.4.1.159] +udp_l_rhamnose +udp +hplus
     flavonol_3_o_l_rhamnosyl_1_6_d_glucoside_s
   }
 
-  branch from flavonol_3_o_d_glucosyl_1_2_d_glucosyl_1_2_d_glu side left {
-    flavonol_3_o_d_glucosyl_1_2_d_glucosyl_1_2_d_glu
-    <-> ec_2_3_1_173 [2.3.1.173] +trans_4_coumaroyl_coa +flavonol_3_o_6_4_coumaroyl_d_glucosyl_1_2_d_gluc
-    coa
+  branch from akg side right {
+    akg
+    <-> . +o2 +3r_3_hydroxy_l_argininium +succinate +co2
+    l_argininium
+  }
+
+  branch from akg side left {
+    akg
+    <-> . +fad +hplus +fadh2
+    r_2_hydroxyglutarate
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> . +pyruvate
+    3_hydroxybutane_1_2_3_tricarboxylate
+  }
+
+  branch from succinate side left {
+    succinate
+    <-> ec_1_14_11_60 [1.14.11.60] +scopoletin +akg +o2 +co2
+    fraxetin
+  }
+
+  branch from udp_d_glucose side right {
+    udp_d_glucose
+    <-> ec_2_4_1_115 [2.4.1.115] +anthocyanidin_betaine +hplus +udp
+    anthocyanidin_3_o_d_glucoside
+  }
+
+  branch from udp_d_glucose side left {
+    udp_d_glucose
+    <-> ec_2_4_1_160 [2.4.1.160] +pyridoxine +udp +hplus
+    5_o_d_glucosylpyridoxine
+  }
+
+  branch from 4_coumaroyl_coa side right {
+    4_coumaroyl_coa
+    <-> ec_2_3_1_219 [2.3.1.219] +4_coumaroyl_acetyl_coa +h2o +co2 +coa
+    bisdemethoxycurcumin
   }
 }

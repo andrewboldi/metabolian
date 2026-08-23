@@ -1,0 +1,441 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "fmnh2-to-formaldehyde",
+  "name": "FMNH2 to formaldehyde",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from FMNH2 to formaldehyde, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR198752"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1107623"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "sulfonyldimethane",
+      "name": "sulfonyldimethane",
+      "formula": "C2H6O2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:9349"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H21N4O9P",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364147"
+      }
+    },
+    {
+      "id": "formaldehyde",
+      "name": "formaldehyde",
+      "formula": "CH2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364673"
+      }
+    },
+    {
+      "id": "methanesulfinate",
+      "name": "methanesulfinate",
+      "formula": "CH3O2S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:133603"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "methanesulfonate",
+      "name": "methanesulfonate",
+      "formula": "CH3O3S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:25224"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "sulfite",
+      "name": "sulfite",
+      "formula": "O3S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:17359"
+      }
+    },
+    {
+      "id": "formaldehyde",
+      "name": "formaldehyde",
+      "formula": "CH2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16842"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_14_35",
+      "name": "dimethylsulfone monooxygenase",
+      "ec": [
+        "1.14.14.35"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_34",
+      "name": "methanesulfonate monooxygenase (FMNH2)",
+      "ec": [
+        "1.14.14.34"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "dimethylsulfone monooxygenase",
+      "ec": "1.14.14.35",
+      "substrates": [
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfonyldimethane",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methanesulfinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_35"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR198752"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198752"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR196822",
+      "substrates": [
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methanesulfinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methanesulfonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR196822"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196822"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "methanesulfonate monooxygenase (FMNH2)",
+      "equation": "methanesulfonate + FMNH2 + O2 = FMN + sulfite + formaldehyde + H2O + 2 H(+)",
+      "ec": "1.14.14.34",
+      "substrates": [
+        {
+          "metabolite": "methanesulfonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_34"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:29307"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:29307"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_sulfonyldimethane_but-1-en-3-ol-to-1-hydroxybutan-2-one",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sulfonyldimethane"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "but-1-en-3-ol-to-1-hydroxybutan-2-one"
+      },
+      "note": "Shares sulfonyldimethane with but-1-en-3-ol to 1-hydroxybutan-2-one.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:9349"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sulfonyldimethane_dimethyl-sulfoxide-to-formaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sulfonyldimethane"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dimethyl-sulfoxide-to-formaldehyde"
+      },
+      "note": "Shares sulfonyldimethane with dimethyl sulfoxide to formaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:9349"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sulfonyldimethane_dimethyl-sulfoxide-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sulfonyldimethane"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dimethyl-sulfoxide-to-h2o"
+      },
+      "note": "Shares sulfonyldimethane with dimethyl sulfoxide to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:9349"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_methanesulfinate_dimethyl-sulfoxide-to-formaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "methanesulfinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dimethyl-sulfoxide-to-formaldehyde"
+      },
+      "note": "Shares methanesulfinate with dimethyl sulfoxide to formaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133603"
+          }
+        ]
+      }
+    }
+  ]
+}

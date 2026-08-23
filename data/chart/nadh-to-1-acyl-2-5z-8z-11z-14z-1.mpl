@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-1-acyl-2-5z-8z-11z-14z-1 "NADH to 1-acyl-2-(5Z,8Z,11Z,14Z,1…" {
-  spacing 228
+  spacing 204
 
   spine at 0,0 {
     nadh
@@ -16,29 +16,5 @@ pathway nadh-to-1-acyl-2-5z-8z-11z-14z-1 "NADH to 1-acyl-2-(5Z,8Z,11Z,14Z,1…" 
     5z_8z_11z_14z_17z_icosapentaenoyl_coa
     <-> . +1_acyl_sn_glycero_3_phospho_1d_myo_inositol -coa
     1_acyl_2_5z_8z_11z_14z_17z_eicosapentaenoyl_sn_g
-  }
-
-  branch from 11z_14z_17z_icosatrienoyl_coa side left {
-    11z_14z_17z_icosatrienoyl_coa
-    <-> . +s_carnitine +coa
-    11z_14z_17z_icosa_11_14_17_trienoylcarnitine
-  }
-
-  branch from nad side right {
-    nad
-    <-> . +nadh +didemethylasterriquinone_d +h
-    hydrodidemethylasterriquinone_d
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_14_13_5 [1.14.13.5] +nadh +h +imidazole_4_acetate +o2 +h2o
-    4_oxo_4_5_dihydroimidazole_5_acetic_acid
-  }
-
-  branch from 5z_8z_11z_14z_17z_icosapentaenoyl_coa side right {
-    5z_8z_11z_14z_17z_icosapentaenoyl_coa
-    <-> . +o2 +h2o2
-    2e_5z_8z_11z_14z_17z_icosahexaenoyl_coa
   }
 }

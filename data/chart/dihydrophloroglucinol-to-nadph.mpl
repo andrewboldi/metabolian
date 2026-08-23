@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dihydrophloroglucinol-to-nadph "dihydrophloroglucinol to NADPH" {
-  spacing 264
+  spacing 324
 
   spine at 0,0 {
     dihydrophloroglucinol
@@ -30,14 +30,14 @@ pathway dihydrophloroglucinol-to-nadph "dihydrophloroglucinol to NADPH" {
 
   branch from lactate side left {
     lactate
-    <-> . +h2o +gtp +hplus
-    n2_1_hydroxy_2_oxopropyl_gtp
+    <-> . +h2o +gmp +hplus
+    n2_1_hydroxy_2_oxopropyl_gmp
   }
 
   branch from lactate side right {
     lactate
-    <-> . +h2o +gdp +hplus
-    n2_1_hydroxy_2_oxopropyl_gdp
+    <-> . +r_s_lactoylglutathione +h2o +h
+    glutathione
   }
 
   branch from l_argininium side left {
@@ -54,73 +54,133 @@ pathway dihydrophloroglucinol-to-nadph "dihydrophloroglucinol to NADPH" {
 
   branch from s_lactaldehyde side left {
     s_lactaldehyde
-    <-> ec_1_1_1_21 [1.1.1.21] +nadp +h +nadph
-    s_propane_1_2_diol
-  }
-
-  branch from s_lactaldehyde side right {
-    s_lactaldehyde
     <-> ec_1_1_1_21 [1.1.1.21] +nadh +h +nad
     methylglyoxal
   }
 
+  branch from s_lactaldehyde side right {
+    s_lactaldehyde
+    <-> ec_4_1_2_17 [4.1.2.17] +l_fucose_1_phosphate +h
+    dihydroxyacetone_phosphate
+  }
+
   branch from nad side left {
     nad
-    <-> . +nadh +h +2_2_bis_4_hydroxyphenyl_1_propanol +o2 +h2o
-    2_3_bis_4_hydroxyphenyl_1_2_propanediol
+    <-> ec_1_1_1_90 [1.1.1.90] +nadh +3_hydroxy_5_methylbenzaldehyde +h
+    3_hydroxymethyl_5_methylphenol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_14_13_84 [1.14.13.84] +nadh +h +4_hydroxyacetophenone
-    4_1_hydroxyethyl_phenol
+    <-> ec_1_14_12_18 [1.14.12.18] +nadh +4_bromodiphenyl_ether +h +o2
+    4_bromo_2_3_dihydrodiol_diphenyl_ether
   }
 
   branch from h2o side left {
     h2o
-    <-> . +tetrangulol
-    tetrangomycin
+    <-> ec_3_2_1_149 [3.2.1.149] +linalool +a_6_o_beta_d_xylopyranosyl_beta_d_glucopyranose
+    linalyl_beta_primeveroside
   }
 
   branch from h2o side right {
     h2o
-    <-> . +urdamycinone_f
-    aquayamycin
+    <-> ec_3_2_1_149 [3.2.1.149] +2_phenylethanol +a_6_o_beta_d_xylopyranosyl_beta_d_glucopyranose
+    2_phenylethyl_primeveroside
   }
 
   branch from h side left {
     h
-    <-> . +dtdp_l_oleandrose +avermectin_a2a_aglycone +avermectin_a2a_monosaccharide
-    dtdp
+    <-> . +udp_2_3_dideoxy_2_acetamido_3_acetamidino_alpha +h2o +nh4
+    udp_2_3_diacetamido_2_3_dideoxy_alpha_d_mannuron
   }
 
   branch from h side right {
     h
-    <-> . +dtdp_l_oleandrose +avermectin_a2a_monosaccharide +dtdp
-    avermectin_a2a
+    <-> . +dtdp_beta_l_4_epi_vancosamine +chloroorienticin_b +chloroeremomycin
+    dtdp
   }
 
   branch from o2 side left {
     o2
-    <-> . +h +nadph +4_1_hydroxyethyl_phenol +nadp +h2o
-    4_ethylphenol
+    <-> ec_1_14_20_6 [1.14.20.6] +2_oxoglutarate +r_naringenin +2s_3s_3_5_7_trihydroxy_2_4_hydroxyphenyl_2_3_di +succinate
+    co2
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_12_12 [1.14.12.12] +nadh +h +1_methylnaphthalene +nad
-    cis_1_2_dihydroxy_1_2_dihydro_8_methylnaphthalen
+    <-> . +2_amino_4_hydroxypteridine +h2o2
+    7_8_dihydropterin
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_362 [1.1.1.362] +auramycinone +nadp +h
-    auraviketone
+    <-> . +luteolin +h +o2 +nadp +h2o
+    hypolaetin
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_14_14_1 [1.14.14.1] +naphthalene +h +o2 +nadp +h2o
-    1s_2r_naphthalene_1_2_oxide
+    <-> . +4_sulfoacetophenone +h +o2 +nadp +h2o
+    4_sulfophenyl_acetate
+  }
+
+  branch from lactate side left {
+    lactate
+    <-> ec_1_1_1_27 [1.1.1.27] +nadh +h +nad
+    pyruvate
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_3_1_56 [1.3.1.56] +h +4_bromo_2_3_dihydrodiol_diphenyl_ether +nad
+    4_bromo_2_3_dihydroxydiphenyl_ether
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> ec_1_1_1_396 [1.1.1.396] +h +3_acetyl_3_devinylchlorophyllide_a +nad
+    3_devinyl_3_1_hydroxyethyl_chlorophyllide_a
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_4_1_327 [2.4.1.327] +aclacinomycin_n +dtdp +dtdp_beta_l_rhodinose
+    aclacinomycin_s
+  }
+
+  branch from h side left {
+    h
+    <-> . +5_hydroxymethyl_2_methyl_4_1h_pyrimidinone +5_2_hydroxyethyl_4_methylthiazole +h2o
+    oxythiamine
+  }
+
+  branch from s_lactaldehyde side right {
+    s_lactaldehyde
+    <-> ec_1_2_1_5 [1.2.1.5] +nadh +h +nad +h2o
+    r_lactate
+  }
+
+  branch from s_lactaldehyde side left {
+    s_lactaldehyde
+    <-> . +h +nadph +nadp +h2o
+    s_lactate
+  }
+
+  branch from nad side right {
+    nad
+    <-> . +nadh +butan_2_one +h +o2 +h2o
+    ethyl_acetate
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_14_13_69 [1.14.13.69] +nadh +2_methylprop_1_ene +h +o2 +h2o
+    2_2_dimethyloxirane
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_2_1_149 [3.2.1.149] +linalyl_beta_vicianoside +vicianose
+    linalool
   }
 }

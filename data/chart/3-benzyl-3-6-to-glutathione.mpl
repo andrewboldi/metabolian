@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-benzyl-3-6-to-glutathione "3-benzyl-3,6… to glutathione" {
-  spacing 208
+  spacing 256
 
   spine at 0,0 {
     3_benzyl_3_6_bis_cysteinyl_6_hydroxymethyl_diket
@@ -18,25 +18,73 @@ pathway 3-benzyl-3-6-to-glutathione "3-benzyl-3,6… to glutathione" {
 
   branch from h2o side left {
     h2o
-    <-> . +formate +l_isoglutamine
-    formylisoglutamine
+    <-> . +trp_gln_gln +l_tryptophan
+    l_glutamine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +2_methylpropanoate +h +acetate
-    4_methyl_3_oxopentanoate
+    <-> . +l_aspartate +glycine +l_tryptophan
+    tryptophanyl_glycyl_aspartate
   }
 
   branch from glutathione side left {
     glutathione
-    <-> ec_2_5_1_18 [2.5.1.18] +glutathione_episulfonium_ion +bromide
-    1_2_dibromoethane
+    <-> ec_2_5_1_18 [2.5.1.18] +h +bromide +2_glutathion_s_yl_3_4_nitrophenyl_propanoate
+    2_bromo_3_4_nitrophenyl_propanoate
   }
 
   branch from glutathione side right {
     glutathione
-    <-> ec_2_5_1_18 [2.5.1.18] +s_formylmethyl_glutathione +bromide
-    2_bromoacetaldehyde
+    <-> ec_3_4_17_25 [3.4.17.25] +glycine +h2o
+    gamma_l_glutamyl_l_cysteine
+  }
+
+  branch from glycine side left {
+    glycine
+    <-> . +propanoyl_coa +propionylglycine
+    coa
+  }
+
+  branch from glycine side right {
+    glycine
+    <-> . +l_cysteine +l_tyrosine +h2o
+    tyrosyl_cysteinyl_glycine
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +glycyl_l_leucine +l_tryptophan
+    tryptophanyl_glycyl_leucine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +glycyl_dl_phenylalanine +l_tryptophan
+    tryptophanyl_glycyl_phenylalanine
+  }
+
+  branch from 5_oxo_l_proline side left {
+    5_oxo_l_proline
+    <-> . +gama_l_glutamyl_l_alpha_aminobutyrate
+    2s_2_aminobutanoate
+  }
+
+  branch from 5_oxo_l_proline side right {
+    5_oxo_l_proline
+    <-> . +aldehydo_d_glucose +h2o
+    n_1_deoxy_d_fructos_1_yl_5_oxo_l_proline
+  }
+
+  branch from glutathione side left {
+    glutathione
+    <-> ec_2_5_1_18 [2.5.1.18] +3z_hex_3_en_1_ol
+    3_glutathion_s_yl_hexan_1_ol
+  }
+
+  branch from glutathione side right {
+    glutathione
+    <-> ec_2_5_1_18 [2.5.1.18] +dichloroacetate +s_alpha_chlorocarboxymethyl_glutathione
+    chloride
   }
 }

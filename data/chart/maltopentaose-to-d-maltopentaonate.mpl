@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway maltopentaose-to-d-maltopentaonate "maltopentaose to D-maltopentaonate" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     maltopentaose
@@ -16,29 +16,5 @@ pathway maltopentaose-to-d-maltopentaonate "maltopentaose to D-maltopentaonate" 
     d_maltopentaono_1_5_lactone
     <-> . +h2o -hplus
     d_maltopentaonate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_4_2_1_180 [4.2.1.180] +e_2_benzylidenesuccinyl_coa
-    r_s_hydroxy_phenyl_methyl_succinyl_coa
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_1_3_3_4 [1.3.3.4] +protoporphyrin_ix +o2
-    protoporphyrinogen_ix
-  }
-
-  branch from beta_d_fructose side left {
-    beta_d_fructose
-    <-> ec_5_3_1_5 [5.3.1.5]
-    beta_d_glucose
-  }
-
-  branch from beta_d_fructose side right {
-    beta_d_fructose
-    <-> .
-    alpha_d_glucose
   }
 }

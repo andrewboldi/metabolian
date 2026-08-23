@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-cholesten-7-12-24-tri-to-24s-7-24-dihydroxycho "4-Cholesten-7?,12?,24-Tri… to (24S)-7α,24-dihydroxychol…" {
-  spacing 212
+  spacing 152
 
   spine at 0,0 {
     4_cholesten_7_12_24_triol_3_one
@@ -14,65 +14,5 @@ pathway 4-cholesten-7-12-24-tri-to-24s-7-24-dihydroxycho "4-Cholesten-7?,12?,24-
     24s_7_24_dihydroxycholesterol
     <-> . +nad -nadh -hplus
     24s_7_24_dihydroxycholest_4_en_3_one
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
-    3s_3_3s_3_aminobutanoyl_amino_5_methylhexanoic
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_23 [3.6.3.23] +adp +n_acetyl_d_glucosaminyl_n_acetylmuramoyl_l_ala_d +phosphate +n_acetyl_d_glucosaminyl_n_acetylmuramoyl_l_ala_d +h2o
-    atp
-  }
-
-  branch from o2 side left {
-    o2
-    <-> ec_1_14_13_98 [1.14.13.98] +24s_24_hydroxycholesterol +nadp +h2o +h +nadph
-    cholesterol
-  }
-
-  branch from o2 side right {
-    o2
-    <-> ec_1_3_99_2 [1.3.99.2] +2e_2_methylbut_2_enoyl_coa +h2o
-    2s_2_methylbutanoyl_coa
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> ec_1_6_5_2 [1.6.5.2] +ubiquinol_9 +nadp +h
-    ubiquinone_9
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> ec_1_6_5_2 [1.6.5.2] +ubiquinone_1 +h +nadp
-    2_3_dimethoxy_5_methyl_6_3_methyl_2_buten_1_yl_1
-  }
-
-  branch from 24s_7_24_dihydroxycholesterol side left {
-    24s_7_24_dihydroxycholesterol
-    <-> . +nadh +h +nad
-    7alpha_24_dihydroxycholest_4_en_3_one
-  }
-
-  branch from 24s_7_24_dihydroxycholesterol side right {
-    24s_7_24_dihydroxycholesterol
-    <-> ec_1_1_1_181 [1.1.1.181] +nadh +h +nad
-    7alpha_24_dihydroxy_4_cholesten_3_one
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_2_1_5 [1.2.1.5] +nadh +h +6z_octadecenoate +h2o
-    cis_9_octadecenal
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_2_1_5 [1.2.1.5] +nadh +15z_tetracosenoate +h +h2o
-    15_tetracosenal
   }
 }

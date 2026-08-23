@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway diphosphate-to-3-hydroxypropanal-dimer "diphosphate to 3-hydroxypropanal dimer" {
-  spacing 272
+  spacing 188
 
   spine at 0,0 {
     diphosphate
@@ -18,89 +18,5 @@ pathway diphosphate-to-3-hydroxypropanal-dimer "diphosphate to 3-hydroxypropanal
     3_hydroxypropanal
     <-> .
     3_hydroxypropanal_dimer
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_4_22_40 [3.4.22.40] +bleomycin_a2 +h2o +nh4
-    deamido_bleomycin_a2
-  }
-
-  branch from h side right {
-    h
-    <-> . +2s_2_carboxyamino_3_methylamino_propanoate +l_bmaa
-    co2
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    alpha_d_glucosyl_1_3_n_n_diacetyl_alpha_d_bacill
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +n_glycylclavaminate +h +adp +phosphate +glycine
-    clavaminate
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +acetyl_coa +3_amino_4_hydroxyphenyl_methyl_arsinate
-    3_acetamido_4_hydroxyphenyl_methyl_arsinate
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +octanoyl_coa +ethanol
-    ethyl_octanoate
-  }
-
-  branch from nh4 side left {
-    nh4
-    <-> . +4_iminobutan_1_amine +h2o
-    4_aminobutanal
-  }
-
-  branch from nh4 side right {
-    nh4
-    <-> ec_4_4_1_11 [4.4.1.11] +trifluoromethanethiol +2_oxobutanoate +h2o
-    trifluoro_l_methionine
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_14_13_72 [1.14.13.72] +nadh +h +4_4_dimethyl_5alpha_cholest_7_en_3beta_ol +o2 +h2o
-    4_hydroxymethyl_4_methyl_5_cholest_7_en_3_ol
-  }
-
-  branch from nad side right {
-    nad
-    <-> . +nadh +5_2_carboxyethyl_4_6_dihydroxypicolinate +h2o
-    5_2_formylethyl_4_6_dihydroxypicolinate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +colibactin
-    colibactin_with_hydrolyzed_cyclopropane_groups
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +chlorophyllide_b2
-    71_dihydroxychlorophyllide_a2
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +4_bromophenol_2_3_epoxide +h2o +h +o2 +nadph
-    4_bromophenol
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +4_bromophenol_2_3_epoxide +h2o +h +4_bromophenol +nadph
-    o2
   }
 }

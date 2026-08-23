@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-lauroyl-1-2-dioleoyl-sn-to-diphosphate "N-lauroyl-1,2-dioleoyl-sn… to diphosphate" {
-  spacing 200
+  spacing 224
 
   spine at 0,0 {
     n_lauroyl_1_2_dioleoyl_sn_glycero_3_phosphoethan
@@ -18,26 +18,14 @@ pathway n-lauroyl-1-2-dioleoyl-sn-to-diphosphate "N-lauroyl-1,2-dioleoyl-sn… t
 
   branch from dodecanoate side left {
     dodecanoate
-    <-> . +3_d_galactosyl_1_6_d_galactosyl_1_2_didodecanoyl +h2o +hplus
-    3_d_galactosyl_1_6_d_galactosyl_monododecanoyl_s
+    <-> . +1_2_didodecanoyl_3_d_galactosyl_sn_glycerol +h2o +hplus
+    3_d_galactosyl_monododecanoyl_sn_glycerol
   }
 
   branch from dodecanoate side right {
     dodecanoate
-    <-> . +2_3_di_o_dodecanoyl_1_o_d_galactopyranosyl_sn_gl +h2o +hplus
-    1_d_galactosyl_monododecanoyl_sn_glycerol
-  }
-
-  branch from ethanolaminium side left {
-    ethanolaminium
-    <-> . +n_acyl_sphingosylphosphoethanolamine
-    n_acyl_sphingosyl_1_3_cyclicphosphate
-  }
-
-  branch from ethanolaminium side right {
-    ethanolaminium
-    <-> . +1_acyl_sn_glycero_3_phosphoethanolamine
-    1_acyl_sn_glycero_2_3_cyclic_phosphate
+    <-> . +h2o2 +h2o
+    2_hydroxydodecanoate
   }
 
   branch from lauroyl_coa side left {
@@ -54,13 +42,49 @@ pathway n-lauroyl-1-2-dioleoyl-sn-to-diphosphate "N-lauroyl-1,2-dioleoyl-sn… t
 
   branch from ppi side left {
     ppi
-    <-> . +linoleate +atp +coa +amp
-    linoleoyl_coa
+    <-> . +2_cis_6_cis_farnesyl_diphosphate
+    e_bisabolene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_125 [2.5.1.125] +2_o_3_dimethylflaviolin_7_olate +gpp +hplus
-    7_o_geranyl_2_o_3_dimethylflaviolin
+    <-> . +2_cis_6_cis_farnesyl_diphosphate
+    e_bisabolene
+  }
+
+  branch from dodecanoate side left {
+    dodecanoate
+    <-> . +nadp +h2o +nadph +hplus
+    dodecanal
+  }
+
+  branch from dodecanoate side right {
+    dodecanoate
+    <-> ec_1_13_11_92 [1.13.11.92] +o2
+    2r_2_hydroperoxydodecanoate
+  }
+
+  branch from lauroyl_coa side left {
+    lauroyl_coa
+    <-> . +1_oleoyl_sn_glycero_3_phosphate +coa
+    1_oleoyl_2_lauroyl_sn_glycero_3_phosphate
+  }
+
+  branch from lauroyl_coa side right {
+    lauroyl_coa
+    <-> . +1_hexadecanoyl_sn_glycero_3_phospho_d_myo_inosit +coa
+    1_palmitoyl_2_lauroyl_sn_glycero_3_phospho_1d_my
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +2_cis_6_cis_farnesyl_diphosphate
+    cis_farnesene
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +cis_farnesene
+    fpp
   }
 }

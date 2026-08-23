@@ -16,9 +16,9 @@ pathway s-2-hydroxymethylglutar-to-dimethylmaleate "(S)-2-hydroxymethylglutar…
     dimethylmaleate
   }
 
-  branch from dimethylmaleate side left {
-    dimethylmaleate
-    <-> ec_4_2_1_85 [4.2.1.85] +h2o
-    2r_3s_2_3_dimethylmalate
+  branch from s_2_hydroxymethylglutarate side left {
+    s_2_hydroxymethylglutarate
+    <-> ec_1_1_1_291 [1.1.1.291] +nad +nadh +hplus
+    2_formylglutarate
   }
 }

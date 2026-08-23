@@ -1,0 +1,573 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "5-10-methylenetetrahydrop-to-phosphate-null",
+  "name": "5,10-methylenetetrahydrop… to phosphate",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from 5,10-methylenetetrahydropteroyl tri-L-glutamate to phosphate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR172816"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "5_10_methylenetetrahydropteroyl_tri_l_glutamate",
+      "name": "5,10-methylenetetrahydropteroyl tri-L-glutamate",
+      "short": "5,10-methylenetetra…",
+      "formula": "C30H33N9O12",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1103531"
+      }
+    },
+    {
+      "id": "glycine",
+      "name": "glycine",
+      "formula": "C2H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM29"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "tetrahydropteroyltri_l_glutamate",
+      "name": "tetrahydropteroyltri-L-glutamate",
+      "short": "tetrahydropteroyltr…",
+      "formula": "C29H33N9O12",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1103841"
+      }
+    },
+    {
+      "id": "l_serine",
+      "name": "L-serine",
+      "formula": "C3H7NO3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM737787"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "6s_5_6_7_8_tetrahydrofolate",
+      "name": "(6S)-5,6,7,8-tetrahydrofolate",
+      "short": "5,6,7,8-tetrahydrof…",
+      "formula": "C19H21N7O6",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1103936"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "l_glutamate",
+      "name": "L-glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM741173"
+      }
+    },
+    {
+      "id": "thf_l_glutamate",
+      "name": "THF-L-glutamate",
+      "formula": "C24H30N8O9",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1104336"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_2_1",
+      "name": "glycine hydroxymethyltransferase",
+      "ec": [
+        "2.1.2.1"
+      ],
+      "xrefs": {
+        "uniprot": "P34896"
+      }
+    },
+    {
+      "id": "ec_6_3_2_17",
+      "name": "tetrahydrofolate synthase",
+      "ec": [
+        "6.3.2.17"
+      ],
+      "xrefs": {
+        "uniprot": "Q05932"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "glycine hydroxymethyltransferase",
+      "ec": "2.1.2.1",
+      "substrates": [
+        {
+          "metabolite": "5_10_methylenetetrahydropteroyl_tri_l_glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "tetrahydropteroyltri_l_glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_serine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_2_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR172816"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR172816"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR144771",
+      "substrates": [
+        {
+          "metabolite": "tetrahydropteroyltri_l_glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6s_5_6_7_8_tetrahydrofolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "l_glutamate",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR144771"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR144771"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "tetrahydrofolate synthase",
+      "ec": "6.3.2.17",
+      "substrates": [
+        {
+          "metabolite": "6s_5_6_7_8_tetrahydrofolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "thf_l_glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_3_2_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR143412"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR143412"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_5_10_methylenetetrahydropteroyl_tri_l_glutamate_2-oxoglutarate-to-nadph-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_10_methylenetetrahydropteroyl_tri_l_glutamate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-oxoglutarate-to-nadph-null"
+      },
+      "note": "Shares 5,10-methylenetetrahydropteroyl tri-L-glutamate with 2-oxoglutarate to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1103531"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_10_methylenetetrahydropteroyl_tri_l_glutamate_5-10-methylenetetrahydrop-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_10_methylenetetrahydropteroyl_tri_l_glutamate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-10-methylenetetrahydrop-to-phosphate"
+      },
+      "note": "Shares 5,10-methylenetetrahydropteroyl tri-L-glutamate with 5,10-methylenetetrahydrop… to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1103531"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tetrahydropteroyltri_l_glutamate_3-4-dihydroquinoxaline-2-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tetrahydropteroyltri_l_glutamate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-4-dihydroquinoxaline-2-to-h2o"
+      },
+      "note": "Shares tetrahydropteroyltri-L-glutamate with 3,4-dihydroquinoxaline-2-… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1103841"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tetrahydropteroyltri_l_glutamate_5-10-methylenetetrahydrop-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tetrahydropteroyltri_l_glutamate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-10-methylenetetrahydrop-to-phosphate"
+      },
+      "note": "Shares tetrahydropteroyltri-L-glutamate with 5,10-methylenetetrahydrop… to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1103841"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tetrahydropteroyltri_l_glutamate_r-lipoamide-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tetrahydropteroyltri_l_glutamate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-lipoamide-to-h2o"
+      },
+      "note": "Shares tetrahydropteroyltri-L-glutamate with (R)-lipoamide to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1103841"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tetrahydropteroyltri_l_glutamate_r-lipoamide-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tetrahydropteroyltri_l_glutamate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-lipoamide-to-h2o-null"
+      },
+      "note": "Shares tetrahydropteroyltri-L-glutamate with (R)-lipoamide to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1103841"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_thf_l_glutamate_2r-hydroxy-3-methylvale-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "thf_l_glutamate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2r-hydroxy-3-methylvale-to-h2o"
+      },
+      "note": "Shares THF-L-glutamate with (2R)-hydroxy-3-methylvale… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104336"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_thf_l_glutamate_2r-hydroxy-3-methylvale-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "thf_l_glutamate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2r-hydroxy-3-methylvale-to-h2o-null"
+      },
+      "note": "Shares THF-L-glutamate with (2R)-hydroxy-3-methylvale… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104336"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_thf_l_glutamate_3-4-dihydroquinoxaline-2-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "thf_l_glutamate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-4-dihydroquinoxaline-2-to-h2o"
+      },
+      "note": "Shares THF-L-glutamate with 3,4-dihydroquinoxaline-2-… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104336"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_thf_l_glutamate_5-10-methylenetetrahydrop-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "thf_l_glutamate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-10-methylenetetrahydrop-to-phosphate"
+      },
+      "note": "Shares THF-L-glutamate with 5,10-methylenetetrahydrop… to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104336"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_thf_l_glutamate_bacillithiol-fosfomycin-to-1-2-dihydroxyethylpho",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "thf_l_glutamate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "bacillithiol-fosfomycin-to-1-2-dihydroxyethylpho"
+      },
+      "note": "Shares THF-L-glutamate with bacillithiol-fosfomycin to 1,2-dihydroxyethylphospho….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104336"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_thf_l_glutamate_d-glucopyranose-to-1-o-galloyl-beta-d-glucose-nu",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "thf_l_glutamate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glucopyranose-to-1-o-galloyl-beta-d-glucose-nu"
+      },
+      "note": "Shares THF-L-glutamate with D-glucopyranose to 1-O-galloyl-beta-D-glucose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104336"
+          }
+        ]
+      }
+    }
+  ]
+}

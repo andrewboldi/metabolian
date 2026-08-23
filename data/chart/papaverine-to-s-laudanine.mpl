@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway papaverine-to-s-laudanine "papaverine to (S)-laudanine" {
-  spacing 220
+  spacing 196
 
   spine at 0,0 {
     papaverine
@@ -16,39 +16,15 @@ pathway papaverine-to-s-laudanine "papaverine to (S)-laudanine" {
     s_adenosyl_l_methionine
   }
 
-  branch from o2 side left {
-    o2
-    <-> ec_1_13_11_2 [1.13.11.2] +2_hydroxy_6_oxohexa_2_4_dienoic_acid
-    catechol
+  branch from h side left {
+    h
+    <-> ec_6_2_1_3 [6.2.1.3] +diphosphate +a_tetradecenoyl_coa_n_c14_1coa +amp +atp +coa
+    9e_tetradecenoic_acid
   }
 
-  branch from o2 side right {
-    o2
-    <-> . +h +tacrolimus +nadph +12_ht_or_m_vi_12_hydroxy_tacrolimus +h2o
-    nadp
-  }
-
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_244 [2.1.1.244] +n_terminal_l_prolyl_l_prolyl_l_lysyl_2 +sam +hplus
-    n_terminal_n_n_dimethyl_l_prolyl_l_prolyl_l_lysy
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +eburicol +sam +hplus
-    pneumocysterol
-  }
-
-  branch from s_adenosyl_l_methionine side left {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +cerivastatin_m31 +h2o
-    cerivastatin_m23
-  }
-
-  branch from s_adenosyl_l_methionine side right {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +o2 +tacrolimus
-    31_o_desmethyl_19_hydroxy_37_39_epoxy_tacrolimus
+  branch from h side right {
+    h
+    <-> . +diphosphate +a_tetradecenoyl_coa_n_c14_1coa +amp +9e_tetradecenoic_acid +atp +coa
+    pmf
   }
 }

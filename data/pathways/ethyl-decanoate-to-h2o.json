@@ -1,0 +1,533 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "ethyl-decanoate-to-h2o",
+  "name": "ethyl decanoate to H2O",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from ethyl decanoate to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR193979"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:87430"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "ethyl_decanoate",
+      "name": "ethyl decanoate",
+      "formula": "C12H24O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:87430"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "decanoyl_coa",
+      "name": "decanoyl-CoA",
+      "formula": "C31H50N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1092836"
+      }
+    },
+    {
+      "id": "ethanol",
+      "name": "ethanol",
+      "formula": "C2H6O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1108092"
+      }
+    },
+    {
+      "id": "s_adenosyl_l_methionine",
+      "name": "S-adenosyl-L-methionine",
+      "short": "S-adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1363767"
+      }
+    },
+    {
+      "id": "s_methyl_5_thioadenosine",
+      "name": "S-methyl-5'-thioadenosine",
+      "short": "S-methyl-5'-thioade…",
+      "formula": "C11H15N5O3S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1101977"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "3_aminotridec_2_en_4_one",
+      "name": "3-aminotridec-2-en-4-one",
+      "short": "3-aminotridec-2-en-…",
+      "formula": "C13H26NO",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM147768"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "l_homoserine",
+      "name": "L-homoserine",
+      "formula": "C4H9NO3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM353"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_3_1_2",
+      "name": "EC 3.3.1.2",
+      "ec": [
+        "3.3.1.2"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR193979",
+      "substrates": [
+        {
+          "metabolite": "ethyl_decanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "decanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ethanol",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR193979"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR193979"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR119966",
+      "substrates": [
+        {
+          "metabolite": "decanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "s_adenosyl_l_methionine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_methyl_5_thioadenosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_aminotridec_2_en_4_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR119966"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR119966"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR106423",
+      "ec": "3.3.1.2",
+      "substrates": [
+        {
+          "metabolite": "s_methyl_5_thioadenosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_homoserine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_adenosyl_l_methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_3_1_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR106423"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR106423"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_s_methyl_5_thioadenosine_delta24-25-sitosterol-to-cholesterol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_methyl_5_thioadenosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "delta24-25-sitosterol-to-cholesterol"
+      },
+      "note": "Shares S-methyl-5'-thioadenosine with Delta24-25-sitosterol to cholesterol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1101977"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_methyl_5_thioadenosine_diphosphate-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_methyl_5_thioadenosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-phosphate"
+      },
+      "note": "Shares S-methyl-5'-thioadenosine with diphosphate to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1101977"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_methyl_5_thioadenosine_n-formyl-l-methionyl-l-ar-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_methyl_5_thioadenosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-formyl-l-methionyl-l-ar-to-h2o"
+      },
+      "note": "Shares S-methyl-5'-thioadenosine with N-formyl-L-methionyl-L-ar… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1101977"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_methyl_5_thioadenosine_s-adenosyl-l-homocysteine-to-13-dihydrodaunorubi",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_methyl_5_thioadenosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-13-dihydrodaunorubi"
+      },
+      "note": "Shares S-methyl-5'-thioadenosine with S-adenosyl-L-homocysteine to 13-dihydrodaunorubicin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1101977"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_methyl_5_thioadenosine_s-methyl-5-thioadenosine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_methyl_5_thioadenosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-methyl-5-thioadenosine-to-h2o"
+      },
+      "note": "Shares S-methyl-5'-thioadenosine with S-methyl-5'-thioadenosine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1101977"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_methyl_5_thioadenosine_udp-to-quercetagetin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_methyl_5_thioadenosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-quercetagetin"
+      },
+      "note": "Shares S-methyl-5'-thioadenosine with UDP to quercetagetin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1101977"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_aminotridec_2_en_4_one_1-dodecanoyl-sn-glycerol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_aminotridec_2_en_4_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-dodecanoyl-sn-glycerol-to-h2o"
+      },
+      "note": "Shares 3-aminotridec-2-en-4-one with 1-dodecanoyl-sn-glycerol… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM147768"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_homoserine_diphosphate-to-l-methionine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_homoserine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-l-methionine"
+      },
+      "note": "Shares L-homoserine with diphosphate to L-methionine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM353"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_homoserine_gama-glutamylglutathione-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_homoserine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gama-glutamylglutathione-to-h2o"
+      },
+      "note": "Shares L-homoserine with Gama-glutamylglutathione to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM353"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_homoserine_l-canavanine-to-o-ureidohomoserine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_homoserine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-canavanine-to-o-ureidohomoserine"
+      },
+      "note": "Shares L-homoserine with L-canavanine to O-Ureidohomoserine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM353"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_homoserine_l-vinylglycine-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_homoserine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-vinylglycine-to-coa"
+      },
+      "note": "Shares L-homoserine with L-vinylglycine to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM353"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_homoserine_o-phospho-l-serine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_homoserine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "o-phospho-l-serine-to-h2o"
+      },
+      "note": "Shares L-homoserine with O-phospho-L-serine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM353"
+          }
+        ]
+      }
+    }
+  ]
+}

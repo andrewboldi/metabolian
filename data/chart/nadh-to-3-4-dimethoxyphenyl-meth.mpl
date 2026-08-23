@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-3-4-dimethoxyphenyl-meth "NADH to (3,4-dimethoxyphenyl)meth…" {
-  spacing 274
+  spacing 340
 
   spine at 0,0 {
     nadh
@@ -22,55 +22,127 @@ pathway nadh-to-3-4-dimethoxyphenyl-meth "NADH to (3,4-dimethoxyphenyl)meth…" 
 
   branch from nad side left {
     nad
-    <-> ec_1_14_13_236 [1.14.13.236] +nadh +h +o2 +4_methylphenol +h2o
-    4_methylcatechol
+    <-> ec_1_2_1_3 [1.2.1.3] +nadh +5_nitro_1_naphthoate +h +h2o
+    5_nitro_1_naphthaldehyde
   }
 
   branch from nad side right {
     nad
-    <-> . +s_oxalatosuccinate +nadh +h
-    d_threo_isocitrate
+    <-> ec_1_2_1_3 [1.2.1.3] +nadh +h +6_dimethylamino_2_naphthoic_acid +h2o
+    6_dimethylamino_2_naphthaldehyde
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_2_1_1_90 [2.1.1.90] +h +5_hydroxybenzimidazolylcobamide +methanol
-    co_methyl_co_5_hydroxybenzimidazolylcob_i_amide
+    <-> ec_1_17_3_2 [1.17.3.2] +alloxanthine +h2o2 +o2
+    allopurinol
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_1_4_42 [3.1.4.42] +h +sn_glycerol_3_phosphate
-    glycerol_1_2_cyclic_phosphate
+    <-> ec_1_17_3_2 [1.17.3.2] +oxoformycin_b +h2o2 +o2
+    formycin_b
   }
 
   branch from acetophenone side left {
-    acetophenone
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +nad
-    r_1_phenylethanol
-  }
-
-  branch from acetophenone side right {
     acetophenone
     <-> ec_1_14_12_12 [1.14.12.12] +nadh +h +o2 +nad +h2o
     1_phenylethanol
   }
 
-  branch from 2_hydroxyacetophenone side left {
-    2_hydroxyacetophenone
-    <-> ec_1_14_13_84 [1.14.13.84] +2_hydroxyphenyl_acetate +nadp +h2o +o2
-    nadph
-  }
-
-  branch from 3_4_dimethoxyphenyl_methanol side right {
-    3_4_dimethoxyphenyl_methanol
-    <-> ec_1_1_3_7 [1.1.3.7] +3_4_dimethoxybenzaldehyde +o2
-    h2o2
+  branch from acetophenone side right {
+    acetophenone
+    <-> ec_1_4_1_28 [1.4.1.28] +nadh +nh4 +nad +h2o
+    1_phenylethylamine
   }
 
   branch from 3_4_dimethoxyphenyl_methanol side left {
     3_4_dimethoxyphenyl_methanol
+    <-> ec_1_11_1_14 [1.11.1.14] +3_4_dimethoxybenzaldehyde +h2o
+    h2o2
+  }
+
+  branch from 3_4_dimethoxyphenyl_methanol side right {
+    3_4_dimethoxyphenyl_methanol
     <-> ec_1_1_99_36 [1.1.99.36] +ethanol +3_4_dimethoxybenzaldehyde
     acetaldehyde
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> ec_1_2_1_3 [1.2.1.3] +phenanthrene_9_carboxylate +h +nad +h2o
+    phenanthrene_9_carboxaldehyde
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_2_1_3 [1.2.1.3] +cl_75947_quinoline_3_carboxylic_acid +h +nad +h2o
+    quinoline_3_carboxaldehyde
+  }
+
+  branch from h side left {
+    h
+    <-> ec_4_3_1_24 [4.3.1.24] +3_coumaric_acid +nh4
+    dl_m_tyrosine
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_5_4_43 [3.5.4.43] +n_isopropylammelide +methylamine +h2o
+    6_hydroxy_4_n_isopropylamino_2_n_methylamino_1_3
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_14_13_8 [1.14.13.8] +benzydamine_n_oxide +nadp +h2o +h +benzydamine
+    nadph
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_14_13_8 [1.14.13.8] +methyl_p_tolyl_sulfide +h +nadph +nadp +h2o
+    methyl_4_tolyl_sulfoxide
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_2_1_3 [1.2.1.3] +nadh +h +quinoline_4_carboxylate +h2o
+    quinoline_4_carboxaldehyde
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_2_1_3 [1.2.1.3] +nadh +h +3_methoxybenzoate +h2o
+    3_methoxybenzaldehyde
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_4_21_4 [3.4.21.4] +coumarin_120 +z_arg_arg
+    z_arg_arg_nhmec
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_2_1_20 [3.2.1.20] +alpha_d_glucose +phenol
+    phenyl_alpha_d_glucoside
+  }
+
+  branch from 3_4_dimethoxybenzaldehyde side left {
+    3_4_dimethoxybenzaldehyde
+    <-> ec_1_1_99_36 [1.1.99.36] +2_phenyl_1_propanol +3_4_dimethoxyphenyl_methanol
+    2_phenylpropanal
+  }
+
+  branch from 3_4_dimethoxybenzaldehyde side right {
+    3_4_dimethoxybenzaldehyde
+    <-> ec_1_1_99_36 [1.1.99.36] +3_phenyl_1_propanol +3_4_dimethoxyphenyl_methanol
+    3_phenylpropanal
+  }
+
+  branch from 3_4_dimethoxyphenyl_methanol side left {
+    3_4_dimethoxyphenyl_methanol
+    <-> ec_1_1_99_36 [1.1.99.36] +3_4_dimethoxybenzaldehyde +cyclohexanol
+    cyclohexanone
   }
 }

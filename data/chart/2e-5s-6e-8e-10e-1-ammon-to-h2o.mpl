@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2e-5s-6e-8e-10e-1-ammon-to-h2o "(2E,5S,6E,8E,10E)-1-ammon… to H2O" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     2e_5s_6e_8e_10e_1_ammoniododeca_2_6_8_10_tetrae
@@ -14,29 +14,5 @@ pathway 2e-5s-6e-8e-10e-1-ammon-to-h2o "(2E,5S,6E,8E,10E)-1-ammon… to H2O" {
     fad
     <-> . +fadh2 +h +o2 +1e_3s_4z_7_amino_1_3_1e_prop_1_en_1_yl_oxiran_2 -fad -h2o
     1s_2z_5_amino_1_3_3_1e_prop_1_en_1_yl_oxiran_2
-  }
-
-  branch from fad side left {
-    fad
-    <-> . +25s_3_7_12_trihydroxy_5_cholestanoyl_coa +fadh2 +h
-    24e_3_7_12_trihydroxy_5_cholest_24_en_26_oyl_co
-  }
-
-  branch from fad side right {
-    fad
-    <-> . +fadh2 +h +5_chloro_l_tryptophan +l_tryptophan
-    chloride
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    10z_13z_16z_docosatrienoate
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +2e_nonadecenoyl_coenzyme_a
-    3_hydroxynonadecanoyl_coenzyme_a
   }
 }

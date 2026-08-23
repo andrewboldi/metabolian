@@ -2,14 +2,14 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "fe-to-h2o",
   "name": "Fe to H2O",
-  "category": "amino-acid-metabolism",
-  "summary": "A 3-step route from Fe(3+) to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "category": "other",
+  "summary": "A 3-step route from Fe(2+) to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
     "sources": [
       {
         "db": "MetaNetX",
-        "id": "MNXR97935"
+        "id": "MNXR115877"
       }
     ]
   },
@@ -18,19 +18,9 @@
       "id": "fe",
       "name": "Fe",
       "formula": "Fe",
-      "charge": 3,
+      "charge": 2,
       "xrefs": {
-        "metanetx": "MNXM1370984"
-      }
-    },
-    {
-      "id": "n_2_3_dihydroxybenzoyl_l_serine",
-      "name": "N-(2,3-dihydroxybenzoyl)-L-serine",
-      "short": "N-(2,3-dihydroxyben…",
-      "formula": "C10H10NO6",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM729151"
+        "metanetx": "MNXM1370983"
       }
     },
     {
@@ -43,12 +33,30 @@
       }
     },
     {
-      "id": "fe_enterobactin",
-      "name": "Fe-enterobactin",
-      "formula": "C30H21FeN3O15",
-      "charge": -3,
+      "id": "sulfate",
+      "name": "sulfate",
+      "formula": "O4S",
+      "charge": -2,
       "xrefs": {
-        "metanetx": "MNXM730707"
+        "metanetx": "MNXM58"
+      }
+    },
+    {
+      "id": "fe",
+      "name": "Fe",
+      "formula": "Fe",
+      "charge": 3,
+      "xrefs": {
+        "metanetx": "MNXM1370984"
+      }
+    },
+    {
+      "id": "sulfite",
+      "name": "sulfite",
+      "formula": "O3S",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM726339"
       }
     },
     {
@@ -61,186 +69,165 @@
       }
     },
     {
-      "id": "fmnh2",
-      "name": "FMNH2",
-      "formula": "C17H21N4O9P",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM1107623"
-      }
-    },
-    {
-      "id": "fmn",
-      "name": "FMN",
-      "formula": "C17H21N4O9P",
+      "id": "desferricoprogen",
+      "name": "desferricoprogen",
+      "formula": "C35H56N6O13",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM1364147"
+        "chebi": "CHEBI:83125"
       }
     },
     {
-      "id": "fe",
-      "name": "Fe",
-      "formula": "Fe",
-      "charge": 2,
-      "xrefs": {
-        "metanetx": "MNXM1370983"
-      }
-    },
-    {
-      "id": "enterobactin",
-      "name": "enterobactin",
-      "formula": "C30H26N3O15",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM883"
-      }
-    },
-    {
-      "id": "amp",
-      "name": "AMP",
-      "formula": "C10H12N5O7P",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM728294"
-      }
-    },
-    {
-      "id": "fad",
-      "name": "FAD",
-      "formula": "C27H33N9O15P2",
+      "id": "coprogen",
+      "name": "coprogen",
+      "formula": "C35H53FeN6O13",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM1364149"
+        "metanetx": "MNXM726881"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
       }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_3_6_1_18",
-      "name": "FAD diphosphatase",
-      "ec": [
-        "3.6.1.18"
-      ]
-    },
-    {
-      "id": "ec_3_6_1_9",
-      "name": "nucleotide diphosphatase",
-      "ec": [
-        "3.6.1.9"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
-      "name": "Reaction MNXR97935",
+      "name": "Reaction MNXR115877",
       "substrates": [
         {
           "metabolite": "fe",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
-          "metabolite": "n_2_3_dihydroxybenzoyl_l_serine",
-          "stoichiometry": 3
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "sulfate",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "h",
-          "stoichiometry": 3
+          "metabolite": "fe",
+          "stoichiometry": 2
         },
         {
-          "metabolite": "fe_enterobactin",
+          "metabolite": "sulfite",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 3
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 1,
       "xrefs": {
-        "metanetx": "MNXR97935"
+        "metanetx": "MNXR115877"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR97935"
+            "id": "MNXR115877"
           }
         ]
       }
     },
     {
       "id": "r2",
-      "name": "Reaction MNXR99544",
+      "name": "Reaction MNXR153269",
       "substrates": [
         {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 10
-        },
-        {
-          "metabolite": "fe_enterobactin",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "fmn",
+          "metabolite": "desferricoprogen",
           "stoichiometry": 1
         },
         {
           "metabolite": "fe",
-          "stoichiometry": 2
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 3
         },
         {
-          "metabolite": "enterobactin",
-          "stoichiometry": 2
+          "metabolite": "coprogen",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 2,
       "xrefs": {
-        "metanetx": "MNXR99544"
+        "metanetx": "MNXR153269"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR99544"
+            "id": "MNXR153269"
           }
         ]
       }
     },
     {
       "id": "r3",
-      "name": "FAD diphosphatase",
-      "ec": "3.6.1.18",
+      "name": "Reaction MNXR153267",
       "substrates": [
         {
-          "metabolite": "fmn",
+          "metabolite": "h",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h",
-          "stoichiometry": 2
+          "metabolite": "adp",
+          "stoichiometry": 1
         },
         {
-          "metabolite": "amp",
+          "metabolite": "coprogen",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "fad",
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coprogen",
           "stoichiometry": 1
         },
         {
@@ -248,22 +235,129 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_6_1_18"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 3,
       "xrefs": {
-        "metanetx": "MNXR198816"
+        "metanetx": "MNXR153267"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR198816"
+            "id": "MNXR153267"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_desferricoprogen_fmnh2-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "desferricoprogen"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fmnh2-to-nad"
+      },
+      "note": "Shares desferricoprogen with FMNH2 to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83125"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_desferricoprogen_nicotinate-beta-d-ribonuc-to-fe",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "desferricoprogen"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nicotinate-beta-d-ribonuc-to-fe"
+      },
+      "note": "Shares desferricoprogen with nicotinate beta-D-ribonuc… to Fe.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83125"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_desferricoprogen_udp-2-acetamido-4-amino-2-to-h",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "desferricoprogen"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-2-acetamido-4-amino-2-to-h"
+      },
+      "note": "Shares desferricoprogen with UDP-2-acetamido-4-amino-2… to H.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83125"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_coprogen_fmnh2-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coprogen"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fmnh2-to-nad"
+      },
+      "note": "Shares coprogen with FMNH2 to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM726881"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_coprogen_nicotinate-beta-d-ribonuc-to-fe",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coprogen"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nicotinate-beta-d-ribonuc-to-fe"
+      },
+      "note": "Shares coprogen with nicotinate beta-D-ribonuc… to Fe.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM726881"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway bufotenin-to-coa "bufotenin to CoA" {
-  spacing 212
+  spacing 218
 
   spine at 0,0 {
     bufotenin
@@ -16,51 +16,57 @@ pathway bufotenin-to-coa "bufotenin to CoA" {
     caffeoylserotonin
   }
 
-  branch from s_adenosyl_l_methionine side left {
-    s_adenosyl_l_methionine
-    <-> ec_2_1_1_201 [2.1.1.201] +s_adenosyl_l_homocysteine +h +6_methoxy_3_methyl_2_all_trans_polyprenyl_1_4_be
-    2_methoxy_6_all_trans_polyprenyl_1_4_benzoquinol
-  }
-
-  branch from s_adenosyl_l_methionine side right {
-    s_adenosyl_l_methionine
-    <-> ec_2_1_1_114 [2.1.1.114] +s_adenosyl_l_homocysteine +h +3_polyprenyl_4_hydroxy_5_methoxybenzoate
-    3_polyprenyl_4_5_dihydroxybenzoate
-  }
-
-  branch from serotonin side left {
-    serotonin
-    <-> . +5_hydroxyindol_3_yl_acetaldehyde +nh4 +h2o2 +o2 +h2o
-    pmf
-  }
-
-  branch from serotonin side right {
-    serotonin
-    <-> . +benzoyl_coa +h +coa
-    n_benzoylserotonin
-  }
-
   branch from h side left {
     h
-    <-> ec_3_1_1_38 [3.1.1.38] +triacetate +h2o
-    triacetate_lactone
+    <-> . +d_glucarate +h2o
+    compound_0286062
   }
 
   branch from h side right {
     h
-    <-> ec_3_1_1_25 [3.1.1.25] +4_hydroxybutanoate +h2o
-    gamma_butyrolactone
+    <-> . +adp +phosphate +atp +h2o
+    3r_4s_5s_6r_2_4e_2_amino_3_hydroxyoctadec_4_en
   }
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_205 [2.3.1.205] +fumigaclavine_a +acetyl_coa
-    fumigaclavine_b
+    <-> . +3s_hydroxydecanoyl_coa +s_carnitine
+    3_hydroxydecanoylcarnitine
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_235 [2.3.1.235] +malonyl_coa +h +co2 +h2o
-    tetracenomycin_f2
+    <-> . +dodecanoyl_coa +s_carnitine
+    o_lauroyl_l_carnitine
+  }
+
+  branch from h side left {
+    h
+    <-> . +l_aspartate +glycine +h2o
+    glycyl_aspartate
+  }
+
+  branch from h side right {
+    h
+    <-> . +glycyl_aspartate +adp +phosphate +glycyl_aspartate +h2o
+    atp
+  }
+
+  branch from trans_caffeoyl_coa side left {
+    trans_caffeoyl_coa
+    <-> . +2r_3s_piscidate +coa
+    cimicifugate_d
+  }
+
+  branch from coa side right {
+    coa
+    <-> . +2e_dodecenoyl_coa +s_carnitine
+    o_5z_dodecenoyl_carnitine
+  }
+
+  branch from coa side left {
+    coa
+    <-> . +2e_tetradecenoyl_coa +s_carnitine
+    5z_tetradecenoylcarnitine
   }
 }

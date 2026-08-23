@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway organohalogen-compound-to-adenosine-3-5-bismonop "organohalogen compound to adenosine 3',5'-bismonoph…" {
-  spacing 296
+  spacing 340
 
   spine at 0,0 {
     organohalogen_compound
@@ -28,14 +28,14 @@ pathway organohalogen-compound-to-adenosine-3-5-bismonop "organohalogen compound
 
   branch from glutamate side right {
     glutamate
-    <-> ec_2_6_1_65 [2.6.1.65] +6_acetamido_3_aminohexanoic_acid +akg
-    6_acetamido_3_oxohexanoate
+    <-> ec_5_4_3_9 [5.4.3.9]
+    isoglutamate
   }
 
   branch from glutamate side left {
     glutamate
-    <-> ec_2_6_1_3 [2.6.1.3] +cysteine +akg
-    mercaptopyruvate
+    <-> . +h2o +glycine
+    gly_glu
   }
 
   branch from s_substituted_l_cysteine side right {
@@ -46,49 +46,121 @@ pathway organohalogen-compound-to-adenosine-3-5-bismonop "organohalogen compound
 
   branch from glycine side left {
     glycine
-    <-> ec_2_3_1_29 [2.3.1.29] +acetyl_coa +coa
-    amino_oxobutanoate
+    <-> . +ala_gly +h2o
+    alanine
   }
 
   branch from glycine side right {
     glycine
-    <-> ec_3_5_1_58 [3.5.1.58] +n_benzyloxycarbonylglycinate +h2o +hplus +co2
-    benzyl_alcohol
+    <-> ec_1_13_11_78 [1.13.11.78] +o2 +pi +hplus
+    1r_2_amino_1_hydroxyethyl_phosphonate
   }
 
   branch from thiol side left {
-    thiol
-    <-> ec_2_1_1_9 [2.1.1.9] +sam +sah +hplus
-    methyl_sulfide
-  }
-
-  branch from thiol side right {
     thiol
     <-> ec_1_8_3_7 [1.8.3.7] +l_cysteine +o2 +l_3_oxoalanine +h2s +h2o +hplus
     organic_disulfide
   }
 
+  branch from thiol side right {
+    thiol
+    <-> . +thioester +h2o +hplus
+    carboxylic_acid_anion
+  }
+
   branch from nh3 side left {
     nh3
-    <-> ec_1_4_1_15 [1.4.1.15] +l_lysinium +nad +nadh +hplus
-    1_piperideine_2_carboxylic_acid
+    <-> . +tyraminium +o2 +h2o +h2o2
+    4_hydroxyphenyl_acetaldehyde
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_4_5_1_2 [4.5.1.2] +h2o +chloride +pyruvate +hplus
-    3_chloro_d_alanine
+    <-> . +5_methylcytosine +h2o +hplus
+    thymine
   }
 
   branch from adenosine_3_5_bismonophosphate side left {
     adenosine_3_5_bismonophosphate
-    <-> ec_2_8_2_32 [2.8.2.32] +5_scymnol +3_phosphonato_5_adenylyl_sulfate +hplus
-    5_scymnol_sulfate
+    <-> ec_2_8_2_n2 [2.8.2.n2] +thyroxine +3_phosphonato_5_adenylyl_sulfate +hplus
+    thyroxine_sulfate
   }
 
   branch from adenosine_3_5_bismonophosphate side right {
     adenosine_3_5_bismonophosphate
-    <-> ec_2_8_2_20 [2.8.2.20] +l_tyrosine +3_phosphonato_5_adenylyl_sulfate +hplus
-    l_tyrosine_o_sulfate_1
+    <-> ec_2_8_2_36 [2.8.2.36] +a41030a +3_phosphonato_5_adenylyl_sulfate +hplus
+    a47934
+  }
+
+  branch from gsh side left {
+    gsh
+    <-> ec_1_8_1_7 [1.8.1.7] +nadp +nadph +hplus
+    gssg
+  }
+
+  branch from gsh side right {
+    gsh
+    <-> ec_4_3_2_7 [4.3.2.7] +5_oxo_l_prolinate
+    cysgly
+  }
+
+  branch from glutamate side left {
+    glutamate
+    <-> ec_2_6_1_102 [2.6.1.102] +gdp_4_amino_4_6_dideoxy_d_mannose +akg
+    gdp_4_dehydro_6_deoxy_d_mannose
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> . +d_lysinium +akg
+    6_amino_2_oxohexanoic_acid
+  }
+
+  branch from glycine side left {
+    glycine
+    <-> . +icosanoate +h2o
+    n_icosanoylglycinate
+  }
+
+  branch from glycine side right {
+    glycine
+    <-> . +cerotate +h2o
+    n_hexacosanoylglycinate
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_1_4_1_23 [1.4.1.23] +valine +nad +h2o +nadh +hplus
+    kiv
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> . +pyridoxaminium +o2 +h2o +h2o2
+    pyridoxal
+  }
+
+  branch from 3_phosphonato_5_adenylyl_sulfate side left {
+    3_phosphonato_5_adenylyl_sulfate
+    <-> . +d_galactosyl_1_4_d_glucosyl_1_1_n_acylsphingosi +adenosine_3_5_bismonophosphate +hplus
+    1_3_o_sulfo_d_galactosyl_1_4_d_glucosyl_n_acylsp
+  }
+
+  branch from 3_phosphonato_5_adenylyl_sulfate side right {
+    3_phosphonato_5_adenylyl_sulfate
+    <-> ec_2_8_2_11 [2.8.2.11] +1_alkyl_2_acyl_3_d_galactosyl_sn_glycerol +adenosine_3_5_bismonophosphate +hplus
+    1_alkyl_2_acyl_3_3_o_sulfo_d_galactosyl_sn_glyce
+  }
+
+  branch from adenosine_3_5_bismonophosphate side left {
+    adenosine_3_5_bismonophosphate
+    <-> . +1_2_diacyl_3_d_galactosyl_sn_glycerol +3_phosphonato_5_adenylyl_sulfate +hplus
+    1_2_diacyl_3_3_o_sulfo_d_galactosyl_sn_glycerol
+  }
+
+  branch from adenosine_3_5_bismonophosphate side right {
+    adenosine_3_5_bismonophosphate
+    <-> . +galactosylceramide +3_phosphonato_5_adenylyl_sulfate +hplus
+    1_3_o_sulfonato_d_galactosyl_ceramide
   }
 }

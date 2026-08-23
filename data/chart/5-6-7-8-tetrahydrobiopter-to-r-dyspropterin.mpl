@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-6-7-8-tetrahydrobiopter-to-r-dyspropterin "5,6,7,8-tetrahydrobiopterâ€¦ to (R)-dyspropterin" {
-  spacing 324
+  spacing 312
 
   spine at 0,0 {
     5_6_7_8_tetrahydrobiopterin
@@ -14,17 +14,5 @@ pathway 5-6-7-8-tetrahydrobiopter-to-r-dyspropterin "5,6,7,8-tetrahydrobiopterâ€
     nadp
     <-> ec_1_1_1_325 [1.1.1.325] +6r_l_threo_tetrahydrobiopterin +nadp -nadph -hplus
     r_dyspropterin
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    palmitoleoyl_coa
-  }
-
-  branch from h side right {
-    h
-    <-> . +fe +adp +phosphate +fe +atp +h2o
-    citrate
   }
 }

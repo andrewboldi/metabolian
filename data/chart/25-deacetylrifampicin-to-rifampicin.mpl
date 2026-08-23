@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 25-deacetylrifampicin-to-rifampicin "25-Deacetylrifampicin to rifampicin" {
-  spacing 220
+  spacing 316
 
   spine at 0,0 {
     25_deacetylrifampicin
@@ -18,61 +18,157 @@ pathway 25-deacetylrifampicin-to-rifampicin "25-Deacetylrifampicin to rifampicin
 
   branch from h2o side left {
     h2o
-    <-> ec_3_1_1_81 [3.1.1.81] +n_hexanoyl_l_homoserine
-    n_2_oxooxolan_3_yl_hexanamide
+    <-> ec_3_6_3_47 [3.6.3.47] +h +adp +phosphate +atp
+    hexadecanoyl_coa
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_4_24_27 [3.4.24.27] +l_leucyl_l_alanine +phe_gly
-    phe_gly_leu_ala
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
+    beta_d_fructose
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_2_1_3 [1.2.1.3] +nadh +h +veratrate +h2o
-    3_4_dimethoxybenzaldehyde
+    <-> ec_1_1_1_62 [1.1.1.62] +nadh +h +5alpha_androstane_3_11_17_trione
+    11_oxo_5_dihydrotestosterone
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_2_1_3 [1.2.1.3] +nadh +5_bromo_1_naphthoate +h +h2o
-    5_bromo_1_naphthaldehyde
+    <-> . +nadh +h +3_oxopropane_1_sulfonate
+    3_hydroxypropane_1_sulfonate
   }
 
   branch from h side left {
     h
-    <-> ec_1_1_1_179 [1.1.1.179] +d_xylono_1_5_lactone +nadph +nadp
-    aldehydo_d_xylose
+    <-> ec_3_1_2_17 [3.1.2.17] +methylmalonyl_coa +h2o +coa
+    methylmalonate
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_184 [1.1.1.184] +testosterone +nadph +nadp
-    4_androstenediol
+    <-> ec_2_8_2_24 [2.8.2.24] +adenosine_3_5_bisphosphate +sinalbin +p_hydroxybenzyldesulphoglucosinolate
+    3_phosphoadenylyl_sulfate
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_1_3_17 [1.1.3.17] +betaine_aldehyde +h2o
-    choline
+    <-> ec_1_10_3_2 [1.10.3.2] +gossypol_6_6_dimethyl_ether +h2o
+    2_8_dihydroxy_4_isopropyl_3_methoxy_6_methyl_1_n
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_3_3_6 [1.3.3.6] +2e_9z_octadecadienoyl_coa +h2o2
-    9z_octadecenoyl_coa
+    <-> ec_1_14_13_124 [1.14.13.124] +e_phenylacetaldehyde_oxime +co2 +nadp +h2o +h +nadph
+    l_phenylalanine
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_184 [1.1.1.184] +4_hydroxynon_2_enal +nadp +h
-    e_4_oxonon_2_enal
+    <-> . +s_dihydrodaidzein +h +nadp
+    3r_4s_tetrahydrodaidzein
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_184 [1.1.1.184] +nadp +h +e_4_oxonon_2_enal
-    4_oxononanal
+    <-> . +emodin +h +nadp +h2o
+    chrysophanol
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_1_1_100 [3.1.1.100] +chlorophyllide_a +h2o +8_ethyl_12_methyl_3_vinylbacteriochlorophyllide +methanol
+    co2
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_2_1_161 [3.2.1.161] +d_apiofuranosyl_1_6_d_glucopyranose +dalnigrein +h2o
+    dalnigrein_7_o_beta_d_apiofuranosyl_1_6_beta_d_g
+  }
+
+  branch from acetate side left {
+    acetate
+    <-> ec_3_7_1_6 [3.7.1.6] +acetylpyruvate +h2o +h
+    pyruvate
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> ec_2_8_3_11 [2.8.3.11] +acetyl_coa +3s_citramalate
+    3s_citramalyl_coa
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_4_11_1 [3.4.11.1] +l_leucine
+    leucyl_leucine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_1_3_50 [3.1.3.50] +d_sorbitol +phosphate
+    d_mannitol_1_phosphate
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> ec_1_1_1_418 [1.1.1.418] +isoavenastenone +co2 +nad
+    24e_4alpha_carboxy_stigmasta_7_24_241_dien_3bet
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_6_5_2 [1.6.5.2] +h +plastoquinone_9 +nad
+    plastoquinol_9
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_13_12_14 [1.13.12.14] +71_hydroxychlorophyllide_a +h +nadph +nadp +h2o
+    chlorophyllide_b
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +9_cis_4_hydroxyretinoate +nadp +h2o +h +nadph
+    9_cis_retinoate
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_8_1_4 [1.8.1.4] +nadh +bisnorlipoic_acid +h
+    4_6_dimercaptohexanoic_acid
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_8_1_4 [1.8.1.4] +nadh +tetranorlipoic_acid +h
+    2_4_dimercaptobutanoic_acid
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +h +nadph +24_methylcholesta_5_24_dien_3_ol
+    24_epicampesterol
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +d_sorbitol_6_phosphate +h +nadph
+    l_sorbose_1_phosphate
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_1_1_120 [1.1.1.120] +alpha_d_galactose +nadp +h
+    d_galactono_1_5_lactone
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_3_1_75 [1.3.1.75] +divinyl_chlorophyllide_a +h +nadp
+    chlorophyllide_a
   }
 }

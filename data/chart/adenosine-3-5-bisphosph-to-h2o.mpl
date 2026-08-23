@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway adenosine-3-5-bisphosph-to-h2o "adenosine 3',5'-bisphosph… to H2O" {
-  spacing 324
+  spacing 340
 
   spine at 0,0 {
     adenosine_3_5_bisphosphate
@@ -18,73 +18,151 @@ pathway adenosine-3-5-bisphosph-to-h2o "adenosine 3',5'-bisphosph… to H2O" {
 
   branch from 3_phosphoadenylyl_sulfate side left {
     3_phosphoadenylyl_sulfate
-    <-> ec_2_8_2_25 [2.8.2.25] +adenosine_3_5_bisphosphate +isorhamnetin_3_sulfate +h
-    isorhamnetin
+    <-> . +adenosine_3_5_bisphosphate +24_epi_cathasterone_22_o_sulfate
+    24_epicathasterone
   }
 
   branch from 3_phosphoadenylyl_sulfate side right {
     3_phosphoadenylyl_sulfate
-    <-> . +adenosine_3_5_bisphosphate +isorhamnetin_3_4_bisulfate +h
-    isorhamnetin_3_sulfate
-  }
-
-  branch from 2_methoxyestrone side left {
-    2_methoxyestrone
-    <-> . +h +adp +phosphate +h2o
-    atp
-  }
-
-  branch from adenosine_3_5_bisphosphate side right {
-    adenosine_3_5_bisphosphate
-    <-> ec_2_8_2_1 [2.8.2.1] +5_hydroxytryptophol_sulfate +h +3_phosphoadenylyl_sulfate
-    5_hydroxytryptophol
+    <-> ec_2_8_2_1 [2.8.2.1] +adenosine_3_5_bisphosphate +6_sulfatoxymelatonin
+    6_hydroxymelatonin
   }
 
   branch from adenosine_3_5_bisphosphate side left {
     adenosine_3_5_bisphosphate
-    <-> . +22r_23r_28_homobrassinolide_22_sulfate +h +3_phosphoadenylyl_sulfate
-    28_homobrassinolide
+    <-> ec_2_8_2_25 [2.8.2.25] +kaempferol_3_o_sulfate +3_phosphoadenylyl_sulfate +h
+    kaempferol
   }
 
-  branch from h side right {
-    h
-    <-> . +co2 +7_oxoheptanoic_acid
-    2_oxosuberate
+  branch from adenosine_3_5_bisphosphate side right {
+    adenosine_3_5_bisphosphate
+    <-> ec_2_8_2_1 [2.8.2.1] +m_nitrophenyl_sulfate +3_phosphoadenylyl_sulfate
+    3_nitrophenol
   }
 
   branch from h side left {
     h
-    <-> ec_1_11_1_8 [1.11.1.8] +iodide +thyroglobulin_3_5_diiodotyrosine +diiodine
-    thyroglobulin_3_iodotyrosine
+    <-> . +2_chloro_2_2_4_dichloro_5_oxofuran_2_yl_acetate
+    2_3_5_trichloro_cis_cis_muconate
   }
 
-  branch from glucoalyssin side right {
-    glucoalyssin
-    <-> . +methanesulfonate +h +o2
-    glucobrassicanapin
+  branch from h side right {
+    h
+    <-> ec_5_5_1_7 [5.5.1.7] +2_chloro_4_methyl_cis_dienelactone
+    2_chloro_4_methyl_cis_cis_muconate
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_213 [1.1.1.213] +5_dihydrodeoxycorticosterone +h +nadph
-    5_alpha_thdoc
+    <-> ec_1_1_1_19 [1.1.1.19] +pr01 +h +nadph
+    4_chlorobenzaldehyde
   }
 
   branch from nadp side right {
     nadp
-    <-> . +h +o2 +nadph +1_2_3_4_tetrachlorobenzene
-    1r_2s_3_4_5_6_tetrachlorocyclohexa_3_5_diene_1
+    <-> ec_1_1_1_21 [1.1.1.21] +h +3_methylbenzaldehyde +nadph
+    3_methylbenzyl_alcohol
   }
 
   branch from h2o side left {
     h2o
-    <-> . +nadh +h +2_4_dinitrotoluene +nad
-    4_amino_2_nitrotoluene
+    <-> ec_3_2_1_20 [3.2.1.20] +maltopentaose +alpha_d_glucose
+    maltohexaose
   }
 
   branch from h2o side right {
     h2o
-    <-> . +nadh +h +4_amino_2_nitrotoluene +nad
-    2_4_diaminotoluene
+    <-> ec_3_1_1_1 [3.1.1.1] +propanoate +h +glycerol_dipropionate
+    tripropionin
+  }
+
+  branch from adenosine_3_5_bisphosphate side left {
+    adenosine_3_5_bisphosphate
+    <-> ec_2_8_2_1 [2.8.2.1] +2_hydroxy_5_nitrophenyl_hydrogen_sulfate +3_phosphoadenylyl_sulfate +h
+    4_nitrocatechol
+  }
+
+  branch from adenosine_3_5_bisphosphate side right {
+    adenosine_3_5_bisphosphate
+    <-> ec_2_8_2_28 [2.8.2.28] +quercetin_3_4_7_trissulfate +3_phosphoadenylyl_sulfate +h
+    quercetin_3_4_bissulfate
+  }
+
+  branch from 3_phosphoadenylyl_sulfate side left {
+    3_phosphoadenylyl_sulfate
+    <-> . +adenosine_3_5_bisphosphate +quercetin_3_7_3_4_tetra_o_sulfate
+    quercetin_3_4_7_trissulfate
+  }
+
+  branch from 3_phosphoadenylyl_sulfate side right {
+    3_phosphoadenylyl_sulfate
+    <-> . +adenosine_3_5_bisphosphate +h +brassinolide_22_o_sulfate
+    brassinolide
+  }
+
+  branch from 5_methylsulfanyl_pentyl_desulfoglucosinolate side left {
+    5_methylsulfanyl_pentyl_desulfoglucosinolate
+    <-> ec_2_4_1_195 [2.4.1.195] +udp +h +z_omega_methylsulfanyl_hexyl_thiohydroximate
+    udp_alpha_d_glucose
+  }
+
+  branch from h side right {
+    h
+    <-> . +trans_2_methyl_4_carboxylatomethylenebut_2_en_1 +chloride
+    2_2_chloro_2_5_dihydro_4_methyl_5_oxofuryl_aceta
+  }
+
+  branch from h side left {
+    h
+    <-> ec_5_5_1_7 [5.5.1.7] +2_2_chloro_2_5_dihydro_4_methyl_5_oxofuryl_aceta
+    4_chloro_2_methyl_cis_cis_muconate
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_14_14_1 [1.14.14.1] +4_4_dichloroindigo +h2o
+    4_chloroindole
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_1_3_7 [1.1.3.7] +3_4_dimethoxybenzaldehyde +h2o2
+    3_4_dimethoxyphenyl_methanol
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_1_1_21 [1.1.1.21] +3_cyanobenzaldehyde +h +nadp
+    3_cyanobenzyl_alcohol
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_1_1_21 [1.1.1.21] +3_bromobenzaldehyde +h +nadp
+    3_bromobenzyl_alcohol
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_1_1_21 [1.1.1.21] +2_ethylbutanal +h +nadph
+    2_ethylbutanol
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_1_1_21 [1.1.1.21] +compound_0066905 +h +nadph
+    p_fluorobenzyl_alcohol
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_4_22_40 [3.4.22.40] +l_histidine +2_naphthylamine
+    l_histidyl_beta_naphthylamide
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_4_11_4 [3.4.11.4] +ala_ala +glycine
+    gly_ala_ala
   }
 }

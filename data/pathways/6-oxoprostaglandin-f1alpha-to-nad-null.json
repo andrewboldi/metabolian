@@ -1,0 +1,471 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "6-oxoprostaglandin-f1alpha-to-nad-null",
+  "name": "6-oxoprostaglandin F1alpha to NAD",
+  "category": "other",
+  "summary": "A 3-step route from 6-oxoprostaglandin F1alpha to NAD(+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR205270"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "6_oxoprostaglandin_f1alpha",
+      "name": "6-oxoprostaglandin F1alpha",
+      "short": "6-oxoprostaglandin…",
+      "formula": "C20H34O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1103704"
+      }
+    },
+    {
+      "id": "prostaglandin_i2",
+      "name": "prostaglandin I2",
+      "formula": "C20H31O5",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1560735"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "prostaglandin_h2",
+      "name": "prostaglandin H2",
+      "formula": "C20H31O5",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM730289"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "prostaglandin_f2alpha",
+      "name": "prostaglandin F2alpha",
+      "short": "prostaglandin…",
+      "formula": "C20H33O5",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1364070"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR205270",
+      "substrates": [
+        {
+          "metabolite": "6_oxoprostaglandin_f1alpha",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "prostaglandin_i2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR205270"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR205270"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR206332",
+      "substrates": [
+        {
+          "metabolite": "prostaglandin_i2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "prostaglandin_h2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR206332"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR206332"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR158408",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "prostaglandin_h2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "prostaglandin_f2alpha",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR158408"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR158408"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_6_oxoprostaglandin_f1alpha_13-14-dihydro-15-keto-pgf-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_oxoprostaglandin_f1alpha"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "13-14-dihydro-15-keto-pgf-to-nadph"
+      },
+      "note": "Shares 6-oxoprostaglandin F1alpha with 13,14-dihydro-15-keto-PGF… to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1103704"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_oxoprostaglandin_f1alpha_13-14-dihydro-15-keto-pgf-to-nadph-50588",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_oxoprostaglandin_f1alpha"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "13-14-dihydro-15-keto-pgf-to-nadph-50588"
+      },
+      "note": "Shares 6-oxoprostaglandin F1alpha with 13,14-dihydro-15-keto-PGF… to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1103704"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_oxoprostaglandin_f1alpha_6-oxoprostaglandin-f1alpha-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_oxoprostaglandin_f1alpha"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-oxoprostaglandin-f1alpha-to-nad"
+      },
+      "note": "Shares 6-oxoprostaglandin F1alpha with 6-oxoprostaglandin F1alpha to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1103704"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_oxoprostaglandin_f1alpha_acetoin-to-butane-2-3-dione-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_oxoprostaglandin_f1alpha"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetoin-to-butane-2-3-dione-null"
+      },
+      "note": "Shares 6-oxoprostaglandin F1alpha with acetoin to butane-2,3-dione.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1103704"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_oxoprostaglandin_f1alpha_d-mannonate-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_oxoprostaglandin_f1alpha"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-mannonate-to-h2o-null"
+      },
+      "note": "Shares 6-oxoprostaglandin F1alpha with D-mannonate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1103704"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_oxoprostaglandin_f1alpha_h-to-amicoumacin-a-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_oxoprostaglandin_f1alpha"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-amicoumacin-a-null"
+      },
+      "note": "Shares 6-oxoprostaglandin F1alpha with H to amicoumacin A.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1103704"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_oxoprostaglandin_f1alpha_s-adenosyl-l-homocysteine-to-euphol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_oxoprostaglandin_f1alpha"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-euphol"
+      },
+      "note": "Shares 6-oxoprostaglandin F1alpha with S-adenosyl-L-homocysteine to Euphol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1103704"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_i2_13-14-dihydro-15-keto-pgf-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_i2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "13-14-dihydro-15-keto-pgf-to-nadph"
+      },
+      "note": "Shares prostaglandin I2 with 13,14-dihydro-15-keto-PGF… to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1560735"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_i2_13-14-dihydro-15-keto-pgf-to-nadph-50588",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_i2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "13-14-dihydro-15-keto-pgf-to-nadph-50588"
+      },
+      "note": "Shares prostaglandin I2 with 13,14-dihydro-15-keto-PGF… to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1560735"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_i2_6-oxoprostaglandin-f1alpha-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_i2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-oxoprostaglandin-f1alpha-to-nad"
+      },
+      "note": "Shares prostaglandin I2 with 6-oxoprostaglandin F1alpha to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1560735"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_f2alpha_13-14-dihydro-15-keto-pgf-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_f2alpha"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "13-14-dihydro-15-keto-pgf-to-nadph"
+      },
+      "note": "Shares prostaglandin F2alpha with 13,14-dihydro-15-keto-PGF… to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364070"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_f2alpha_13-14-dihydro-15-keto-pgf-to-nadph-50588",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_f2alpha"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "13-14-dihydro-15-keto-pgf-to-nadph-50588"
+      },
+      "note": "Shares prostaglandin F2alpha with 13,14-dihydro-15-keto-PGF… to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364070"
+          }
+        ]
+      }
+    }
+  ]
+}

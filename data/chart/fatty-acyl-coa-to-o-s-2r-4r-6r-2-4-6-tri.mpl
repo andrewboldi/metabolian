@@ -18,15 +18,15 @@ pathway fatty-acyl-coa-to-o-s-2r-4r-6r-2-4-6-tri "fatty acyl-CoA to O-(S-[2R,4R,
     o_s_2r_4r_6r_2_4_6_trimethyl_very_long_chain_fat
   }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_221 [4.2.3.221] +all_trans_hexaprenyl_diphosphate
-    macrophomene
+  branch from fatty_acyl_coa side left {
+    fatty_acyl_coa
+    <-> . +13_cis_retinol +coa
+    13_cis_retinyl_ester
   }
 
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_220 [4.2.3.220] +all_trans_hexaprenyl_diphosphate
-    talaropentaene
+  branch from fatty_acyl_coa side right {
+    fatty_acyl_coa
+    <-> . +9_cis_retinol +coa
+    9_cis_retinyl_ester
   }
 }

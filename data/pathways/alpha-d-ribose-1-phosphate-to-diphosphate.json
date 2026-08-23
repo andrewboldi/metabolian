@@ -1,0 +1,306 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "alpha-d-ribose-1-phosphate-to-diphosphate",
+  "name": "alpha-D-ribose 1-phosphate to diphosphate",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from alpha-D-ribose 1-phosphate to diphosphate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR144330"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "alpha_d_ribose_1_phosphate",
+      "name": "alpha-D-ribose 1-phosphate",
+      "short": "alpha-D-ribose 1-P",
+      "formula": "C5H9O8P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1103205"
+      }
+    },
+    {
+      "id": "aldehydo_d_ribose_5_phosphate",
+      "name": "aldehydo-D-ribose 5-phosphate",
+      "short": "aldehydo-D-ribose…",
+      "formula": "C5H9O8P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1363911"
+      }
+    },
+    {
+      "id": "utp",
+      "name": "UTP",
+      "formula": "C9H11N2O15P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1101474"
+      }
+    },
+    {
+      "id": "5_phospho_alpha_d_ribose_1_diphosphate",
+      "name": "5-phospho-alpha-D-ribose 1-diphosphate",
+      "short": "5-phospho-alpha-D-r…",
+      "formula": "C5H8O14P3",
+      "charge": -5,
+      "xrefs": {
+        "metanetx": "MNXM1104453"
+      }
+    },
+    {
+      "id": "ump",
+      "name": "UMP",
+      "formula": "C9H11N2O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1104823"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "1_2_amino_7_methyl_4_oxo_7_8_dihydro_3h_pteridi",
+      "name": "[1-(2-amino-7-methyl-4-oxo-7,8-dihydro-3H-pteridin-6-yl)]ethyl-(4-aminophenyl)-1-deoxy-D-ribitol",
+      "short": "[1-(2-amino-7-methy…",
+      "formula": "C20H28N6O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM10402"
+      }
+    },
+    {
+      "id": "1_2_amino_7_methyl_4_oxo_7_8_dihydro_3h_pteridi",
+      "name": "[1-(2-amino-7-methyl-4-oxo-7,8-dihydro-3H-pteridin-6-yl)]ethyl-(4-aminophenyl)-1-deoxy-5-[1-alpha -D- ribofuranosyl 5-phosphate]-D-ribitol",
+      "short": "[1-(2-amino-7-methy…",
+      "formula": "C25H35N6O12P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1101201"
+      }
+    },
+    {
+      "id": "diphosphate",
+      "name": "diphosphate",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM11"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_4_2_2",
+      "name": "phosphoglucomutase (alpha-D-glucose-1,6-bisphosphate-dependent)",
+      "ec": [
+        "5.4.2.2"
+      ],
+      "xrefs": {
+        "uniprot": "P36871"
+      }
+    },
+    {
+      "id": "ec_5_4_2_7",
+      "name": "phosphopentomutase",
+      "ec": [
+        "5.4.2.7"
+      ],
+      "xrefs": {
+        "uniprot": "Q96G03"
+      }
+    },
+    {
+      "id": "ec_2_7_6_1",
+      "name": "ribose-phosphate diphosphokinase",
+      "ec": [
+        "2.7.6.1"
+      ],
+      "xrefs": {
+        "uniprot": "P60891"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "phosphoglucomutase (alpha-D-glucose-1,6-bisphosphate-dependent)",
+      "ec": "5.4.2.2",
+      "substrates": [
+        {
+          "metabolite": "alpha_d_ribose_1_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aldehydo_d_ribose_5_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_2_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR144330"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR144330"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "ribose-phosphate diphosphokinase",
+      "ec": "2.7.6.1",
+      "substrates": [
+        {
+          "metabolite": "utp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "aldehydo_d_ribose_5_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_phospho_alpha_d_ribose_1_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ump",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_6_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR144417"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR144417"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR116269",
+      "substrates": [
+        {
+          "metabolite": "1_2_amino_7_methyl_4_oxo_7_8_dihydro_3h_pteridi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_phospho_alpha_d_ribose_1_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_2_amino_7_methyl_4_oxo_7_8_dihydro_3h_pteridi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR116269"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR116269"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_1_2_amino_7_methyl_4_oxo_7_8_dihydro_3h_pteridi_1-2-di-o-myristoyl-sn-gly-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_2_amino_7_methyl_4_oxo_7_8_dihydro_3h_pteridi"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-di-o-myristoyl-sn-gly-to-h2o"
+      },
+      "note": "Shares [1-(2-amino-7-methyl-4-oxo-7,8-dihydro-3H-pteridin-6-yl)]ethyl-(4-aminophenyl)-1-deoxy-D-ribitol with 1,2-di-O-myristoyl-sn-gly… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM10402"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_2_amino_7_methyl_4_oxo_7_8_dihydro_3h_pteridi_3-s-hydroxy-tetracosa-12-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_2_amino_7_methyl_4_oxo_7_8_dihydro_3h_pteridi"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-s-hydroxy-tetracosa-12-to-h2o-null"
+      },
+      "note": "Shares [1-(2-amino-7-methyl-4-oxo-7,8-dihydro-3H-pteridin-6-yl)]ethyl-(4-aminophenyl)-1-deoxy-5-[1-alpha -D- ribofuranosyl 5-phosphate]-D-ribitol with 3(S)-hydroxy-tetracosa-12… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1101201"
+          }
+        ]
+      }
+    }
+  ]
+}

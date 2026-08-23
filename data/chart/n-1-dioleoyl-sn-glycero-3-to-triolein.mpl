@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-1-dioleoyl-sn-glycero-3-to-triolein "N,1-dioleoyl-sn-glycero-3… to triolein" {
-  spacing 176
+  spacing 206
 
   spine at 0,0 {
     n_1_dioleoyl_sn_glycero_3_phosphoethanolamine
@@ -24,25 +24,55 @@ pathway n-1-dioleoyl-sn-glycero-3-to-triolein "N,1-dioleoyl-sn-glycero-3… to t
 
   branch from 1_oleoyl_sn_glycero_3_phosphate side left {
     1_oleoyl_sn_glycero_3_phosphate
-    <-> . +myristoyl_coa +coa
-    1_oleoyl_2_myristoyl_sn_glycero_3_phosphate
-  }
-
-  branch from 1_oleoyl_sn_glycero_3_phosphate side right {
-    1_oleoyl_sn_glycero_3_phosphate
     <-> . +arachidonoyl_coa +coa
     1_oleoyl_2_arachidonoyl_sn_glycero_3_phosphate
   }
 
+  branch from 1_oleoyl_sn_glycero_3_phosphate side right {
+    1_oleoyl_sn_glycero_3_phosphate
+    <-> . +nonadecanoyl_coa +coa
+    1_oleoyl_2_nonadecanoyl_sn_glycero_3_phosphate
+  }
+
   branch from 1_2_dioleoyl_sn_glycerol side left {
     1_2_dioleoyl_sn_glycerol
-    <-> . +myristoyl_coa +coa
-    1_2_dioleoyl_3_myristoyl_sn_glycerol
+    <-> . +stearoyl_coa +coa
+    1_2_dioleoyl_3_stearoyl_sn_glycerol
   }
 
   branch from 1_2_dioleoyl_sn_glycerol side right {
     1_2_dioleoyl_sn_glycerol
-    <-> . +lauroyl_coa +coa
-    1_2_dioleoyl_3_lauroyl_sn_glycerol
+    <-> . +1_oleoyl_2_stearoyl_sn_glycero_3_phosphoethanola +1_2_dioleoyl_3_stearoyl_sn_glycerol
+    1_oleoyl_sn_glycero_3_phosphoethanolamine
+  }
+
+  branch from 1_oleoyl_sn_glycero_3_phosphate side left {
+    1_oleoyl_sn_glycero_3_phosphate
+    <-> . +h2o +pi
+    1_oleoyl_sn_glycerol
+  }
+
+  branch from 1_oleoyl_sn_glycero_3_phosphate side right {
+    1_oleoyl_sn_glycero_3_phosphate
+    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoyl_coa +coa
+    1_oleoyl_2_4z_7z_10z_13z_16z_19z_docosahexaenoyl
+  }
+
+  branch from oleoyl_coa side left {
+    oleoyl_coa
+    <-> . +1_acyl_sn_glycero_3_phospho_1d_myo_inositol +coa
+    1_acyl_2_oleoyl_sn_glycero_3_phospho_1d_myo_inos
+  }
+
+  branch from oleoyl_coa side right {
+    oleoyl_coa
+    <-> . +1_tetradecanoyl_sn_glycero_3_phospho_1_sn_glycer +coa
+    1_myristoyl_2_oleoyl_sn_glycero_3_phosphatidylgl
+  }
+
+  branch from 1_2_dioleoyl_sn_glycerol side left {
+    1_2_dioleoyl_sn_glycerol
+    <-> ec_2_3_1_22 [2.3.1.22] +9z_octadecenoyl_coa +1_oleoyl_sn_glycerol
+    coa
   }
 }

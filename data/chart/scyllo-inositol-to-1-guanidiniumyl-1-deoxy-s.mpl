@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway scyllo-inositol-to-1-guanidiniumyl-1-deoxy-s "scyllo-inositol… to 1-guanidiniumyl-1-deoxy-s…" {
-  spacing 264
+  spacing 252
 
   spine at 0,0 {
     scyllo_inositol_1_phosphate
@@ -20,17 +20,5 @@ pathway scyllo-inositol-to-1-guanidiniumyl-1-deoxy-s "scyllo-inositol… to 1-gu
     1_guanidino_1_deoxy_scyllo_inositol_4_phosphate
     <-> ec_3_1_3_40 [3.1.3.40] +h2o -pi
     1_guanidiniumyl_1_deoxy_scyllo_inositol
-  }
-
-  branch from ornithine side left {
-    ornithine
-    <-> . +glyoxylate +glycine
-    5_amino_2_oxopentanoic_acid
-  }
-
-  branch from ornithine side right {
-    ornithine
-    <-> ec_3_5_3_27 [3.5.3.27] +arginine +h2o +hplus +co2
-    nh3
   }
 }

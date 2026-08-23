@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dtdp-4-amino-4-6-dideoxy-to-s-adenosyl-l-homocys "dTDP-4-amino-4,6-dideoxy-… to S-adenosyl-L-homocysteine" {
-  spacing 168
+  spacing 192
 
   spine at 0,0 {
     dtdp_4_amino_4_6_dideoxy_d_glucose
@@ -18,13 +18,37 @@ pathway dtdp-4-amino-4-6-dideoxy-to-s-adenosyl-l-homocys "dTDP-4-amino-4,6-dideo
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_191 [2.1.1.191] +cytidine_5_monophosphate_1 +sam +hplus
-    5_methylcytidine_5_monophosphate_1
+    <-> . +phloretate +sam
+    methyl_3_4_hydroxyphenyl_propionate
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_193 [2.1.1.193] +uridine_5_monophosphate_1 +sam +hplus
-    n3_methyluridine_5_monophosphate_1
+    <-> . +serotonin +sam +hplus
+    5_methoxytryptamine
+  }
+
+  branch from sam side left {
+    sam
+    <-> ec_2_1_1_300 [2.1.1.300] +s_scoulerine +sah
+    cyclanoline
+  }
+
+  branch from sam side right {
+    sam
+    <-> . +norreticuline +sah +hplus
+    reticuline
+  }
+
+  branch from sah side left {
+    sah
+    <-> . +heliamine +sam +hplus
+    n_methylheliamine
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_122 [2.1.1.122] +an_s_7_8_13_14_tetrahydroprotoberberine +sam
+    an_s_cis_n_methyl_7_8_13_14_tetrahydroprotoberbe
   }
 }

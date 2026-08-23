@@ -130,41 +130,30 @@
       }
     },
     {
-      "id": "3_phosphonato_5_adenylyl_sulfate",
-      "name": "3'-phosphonato-5'-adenylyl sulfate",
-      "short": "3'-phosphonato-5'-a…",
-      "formula": "C10H11N5O13P2S",
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:58339"
+        "chebi": "CHEBI:57288"
       }
     },
     {
-      "id": "dopamine_3_o_sulfate",
-      "name": "dopamine 3-O-sulfate",
-      "formula": "C8H11NO5S",
+      "id": "n_acetyltryptamine",
+      "name": "N-acetyltryptamine",
+      "formula": "C12H14N2O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:133524"
+        "chebi": "CHEBI:55515"
       }
     },
     {
-      "id": "adenosine_3_5_bismonophosphate",
-      "name": "adenosine 3',5'-bismonophosphate",
-      "short": "adenosine…",
-      "formula": "C10H11N5O10P2",
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:58343"
-      }
-    },
-    {
-      "id": "dopamine_4_o_sulfate",
-      "name": "dopamine 4-O-sulfate",
-      "formula": "C8H11NO5S",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:133529"
+        "chebi": "CHEBI:57287"
       }
     }
   ],
@@ -305,25 +294,25 @@
     },
     {
       "id": "r4",
-      "name": "dopamine + 3'-phosphoadenylyl sulfate = dopamine 3-O-sulfate + adenosine 3',5'-bisphosp...",
-      "equation": "dopamine + 3'-phosphoadenylyl sulfate = dopamine 3-O-sulfate + adenosine 3',5'-bisphosphate + H(+)",
+      "name": "tryptamine + acetyl-CoA = N-acetyltryptamine + CoA + H(+)",
+      "equation": "tryptamine + acetyl-CoA = N-acetyltryptamine + CoA + H(+)",
       "substrates": [
         {
-          "metabolite": "dopamine",
+          "metabolite": "tryptaminium",
           "stoichiometry": 1
         },
         {
-          "metabolite": "3_phosphonato_5_adenylyl_sulfate",
+          "metabolite": "acetyl_coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "dopamine_3_o_sulfate",
+          "metabolite": "n_acetyltryptamine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "adenosine_3_5_bismonophosphate",
+          "metabolite": "coa",
           "stoichiometry": 1
         },
         {
@@ -334,57 +323,126 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:67880"
+        "rhea": "RHEA:66196"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:67880"
+            "id": "RHEA:66196"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_o_s_alanyl_pantetheine_4_phosphoryl_l_serine_res_alanine-to-o-pantetheine-4-phospho",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "o_s_alanyl_pantetheine_4_phosphoryl_l_serine_res"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alanine-to-o-pantetheine-4-phospho"
+      },
+      "note": "Shares O-[S-(β-alanyl)pantetheine-4'-phosphoryl]-L-serine residue with β-alanine to O-(pantetheine-4'-phospho….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:192796"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "dopamine + 3'-phosphoadenylyl sulfate = dopamine 4-O-sulfate + adenosine 3',5'-bisphosp...",
-      "equation": "dopamine + 3'-phosphoadenylyl sulfate = dopamine 4-O-sulfate + adenosine 3',5'-bisphosphate + H(+)",
-      "substrates": [
-        {
-          "metabolite": "dopamine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "3_phosphonato_5_adenylyl_sulfate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "dopamine_4_o_sulfate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adenosine_3_5_bismonophosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:67884"
+      "id": "xt_o_s_alanyl_pantetheine_4_phosphoryl_l_serine_res_o-s-alanyl-pantethein-to-alanyl-l-argininium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "o_s_alanyl_pantetheine_4_phosphoryl_l_serine_res"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "o-s-alanyl-pantethein-to-alanyl-l-argininium"
+      },
+      "note": "Shares O-[S-(β-alanyl)pantetheine-4'-phosphoryl]-L-serine residue with O-[S-(β-alanyl)pantethein… to β-alanyl-L-argininium.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:67884"
+            "db": "ChEBI",
+            "id": "CHEBI:192796"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_alanyldopamine_r-alanopine-to-n6-r-s8-succinyldihydr",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_alanyldopamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-alanopine-to-n6-r-s8-succinyldihydr"
+      },
+      "note": "Shares N‐β‐alanyldopamine with (R)-β-alanopine to N6-[(R)-S8-succinyldihydr….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:192799"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_alanyl_tryptaminium_alanine-to-o-pantetheine-4-phospho",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "alanyl_tryptaminium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alanine-to-o-pantetheine-4-phospho"
+      },
+      "note": "Shares β-alanyl-tryptaminium with β-alanine to O-(pantetheine-4'-phospho….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:192794"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetyltryptamine_5-cholest-7-en-3-ol-to-coniferyl-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyltryptamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cholest-7-en-3-ol-to-coniferyl-acetate"
+      },
+      "note": "Shares N-acetyltryptamine with 5α-cholest-7-en-3β-ol to coniferyl acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:55515"
           }
         ]
       }

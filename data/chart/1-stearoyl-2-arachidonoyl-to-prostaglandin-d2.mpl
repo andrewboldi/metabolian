@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-stearoyl-2-arachidonoyl-to-prostaglandin-d2 "1-stearoyl-2-arachidonoyl… to prostaglandin D2…" {
-  spacing 158
+  spacing 164
 
   spine at 0,0 {
     1_stearoyl_2_arachidonoyl_sn_glycerol
@@ -22,5 +22,11 @@ pathway 1-stearoyl-2-arachidonoyl-to-prostaglandin-d2 "1-stearoyl-2-arachidonoyl
     prostaglandin_h2_2_glyceryl_ester
     <-> .
     prostaglandin_e2_2_glyceryl_ester
+  }
+
+  branch from 1_stearoyl_2_arachidonoyl_sn_glycerol side right {
+    1_stearoyl_2_arachidonoyl_sn_glycerol
+    <-> . +h2o +pi
+    1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphate
   }
 }

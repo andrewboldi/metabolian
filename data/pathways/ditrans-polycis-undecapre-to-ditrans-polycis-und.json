@@ -1,0 +1,554 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "ditrans-polycis-undecapre-to-ditrans-polycis-und",
+  "name": "ditrans,polycis-undecapre… to ditrans,polycis-undecapre…",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from ditrans,polycis-undecaprenyl diphosphate(3−) to ditrans,polycis-undecaprenyl phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:28094"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58405"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "ditrans_polycis_undecaprenyl_diphosphate",
+      "name": "ditrans,polycis-undecaprenyl diphosphate",
+      "short": "ditrans,polycis-und…",
+      "formula": "C55H89O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58405"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "ditrans_polycis_undecaprenyl_phosphate",
+      "name": "ditrans,polycis-undecaprenyl phosphate",
+      "short": "ditrans,polycis-und…",
+      "formula": "C55H89O4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:60392"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "alpha_kdo_2_4_alpha_kdo_2_6_4_p_l_ara4n_lipid_a",
+      "name": "alpha-Kdo-(2->4)-alpha-Kdo-(2->6)-[4-P-L-Ara4N]-lipid A",
+      "short": "alpha-Kdo-(2->4)-al…",
+      "formula": "C115H211N3O42P2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM10669"
+      }
+    },
+    {
+      "id": "4_amino_4_deoxy_l_arabinopyranosyl_ditrans_polyc",
+      "name": "4-amino-4-deoxy-α-L-arabinopyranosyl ditrans,polycis-undecaprenyl phosphate",
+      "short": "4-amino-4-deoxy-α-L…",
+      "formula": "C60H100NO7P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:60463"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_e_coli",
+      "name": "alpha-Kdo-(2->4)-alpha-Kdo-(2->6)-lipid A (E. coli)",
+      "short": "alpha-Kdo-(2->4)-al…",
+      "formula": "C110H196N2O39P2",
+      "charge": -6,
+      "xrefs": {
+        "metanetx": "MNXM730505"
+      }
+    },
+    {
+      "id": "kdo_2_lipid_a_6_e_coli",
+      "name": "(Kdo)2-lipid A(6−) (E. coli)",
+      "short": "(Kdo)2-lipid A(6−)…",
+      "formula": "C110H196N2O39P2",
+      "charge": -6,
+      "xrefs": {
+        "chebi": "CHEBI:58540"
+      }
+    },
+    {
+      "id": "l_ara4n_2_kdo_2_lipid_a",
+      "name": "(β-L-Ara4N)2-(KDO)2-lipid A",
+      "short": "(β-L-Ara4N)2-(KDO)2…",
+      "formula": "C120H218N4O45P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:71399"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_6_1_27",
+      "name": "undecaprenyl-diphosphate phosphatase",
+      "ec": [
+        "3.6.1.27"
+      ]
+    },
+    {
+      "id": "ec_2_4_2_43",
+      "name": "lipid IVA 4-amino-4-deoxy-L-arabinosyltransferase",
+      "ec": [
+        "2.4.2.43"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "undecaprenyl-diphosphate phosphatase",
+      "equation": "di-trans,octa-cis-undecaprenyl diphosphate + H2O = di-trans,octa-cis-undecaprenyl phosphate + phosphate + H(+)",
+      "ec": "3.6.1.27",
+      "substrates": [
+        {
+          "metabolite": "ditrans_polycis_undecaprenyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ditrans_polycis_undecaprenyl_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_27"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:28094"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28094"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "lipid IVA 4-amino-4-deoxy-L-arabinosyltransferase",
+      "ec": "2.4.2.43",
+      "substrates": [
+        {
+          "metabolite": "alpha_kdo_2_4_alpha_kdo_2_6_4_p_l_ara4n_lipid_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ditrans_polycis_undecaprenyl_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_amino_4_deoxy_l_arabinopyranosyl_ditrans_polyc",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_e_coli",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_2_43"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR196281"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196281"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "lipid IVA 4-amino-4-deoxy-L-arabinosyltransferase",
+      "equation": "2 4-amino-4-deoxy-alpha-L-arabinopyranosyl di-trans,octa-cis-undecaprenyl phosphate + alpha-Kdo-(2->4)-alpha-Kdo-(2->6)-lipid A (E. coli) = (beta-L-Ara4N)2-(Kdo)2-lipid A + 2 di-trans,octa-cis-undecaprenyl phosphate",
+      "ec": "2.4.2.43",
+      "substrates": [
+        {
+          "metabolite": "4_amino_4_deoxy_l_arabinopyranosyl_ditrans_polyc",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "kdo_2_lipid_a_6_e_coli",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_ara4n_2_kdo_2_lipid_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ditrans_polycis_undecaprenyl_phosphate",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_2_43"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:35371"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35371"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_ditrans_polycis_undecaprenyl_diphosphate_3-d-glucuronosyl-n2-6-dis-to-5-o-phosphonato-d-r",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ditrans_polycis_undecaprenyl_diphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-d-glucuronosyl-n2-6-dis-to-5-o-phosphonato-d-r"
+      },
+      "note": "Shares ditrans,polycis-undecaprenyl diphosphate with 3-D-glucuronosyl-N2,6-dis… to 5-O-phosphonato-α-D-ribof….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58405"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ditrans_polycis_undecaprenyl_diphosphate_udp-4-amino-4-deoxy-l-a-to-ctp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ditrans_polycis_undecaprenyl_diphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-4-amino-4-deoxy-l-a-to-ctp"
+      },
+      "note": "Shares ditrans,polycis-undecaprenyl diphosphate with UDP-4-amino-4-deoxy-β-L-a… to CTP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58405"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_alpha_kdo_2_4_alpha_kdo_2_6_4_p_l_ara4n_lipid_a_cdp-n-methyl-l-glucosamine-to-lipid-iib",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "alpha_kdo_2_4_alpha_kdo_2_6_4_p_l_ara4n_lipid_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cdp-n-methyl-l-glucosamine-to-lipid-iib"
+      },
+      "note": "Shares alpha-Kdo-(2->4)-alpha-Kdo-(2->6)-[4-P-L-Ara4N]-lipid A with CDP-N-methyl-L-glucosamine to lipid IIB.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM10669"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_amino_4_deoxy_l_arabinopyranosyl_ditrans_polyc_alpha-kdo-2-6-lipid-to-d-gal-1-3-l-fuc-1",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_amino_4_deoxy_l_arabinopyranosyl_ditrans_polyc"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-kdo-2-6-lipid-to-d-gal-1-3-l-fuc-1"
+      },
+      "note": "Shares 4-amino-4-deoxy-α-L-arabinopyranosyl ditrans,polycis-undecaprenyl phosphate with alpha-Kdo-(2->6)-lipid… to α-D-Gal-(1→3)-[α-L-Fuc-(1….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60463"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_amino_4_deoxy_l_arabinopyranosyl_ditrans_polyc_lipid-a-to-h",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_amino_4_deoxy_l_arabinopyranosyl_ditrans_polyc"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "lipid-a-to-h"
+      },
+      "note": "Shares 4-amino-4-deoxy-α-L-arabinopyranosyl ditrans,polycis-undecaprenyl phosphate with lipid A to H.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60463"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_amino_4_deoxy_l_arabinopyranosyl_ditrans_polyc_udp-4-amino-4-deoxy-l-a-to-ctp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_amino_4_deoxy_l_arabinopyranosyl_ditrans_polyc"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-4-amino-4-deoxy-l-a-to-ctp"
+      },
+      "note": "Shares 4-amino-4-deoxy-α-L-arabinopyranosyl ditrans,polycis-undecaprenyl phosphate with UDP-4-amino-4-deoxy-β-L-a… to CTP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60463"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_e_coli_3-8-dideoxy-8-oxo-alpha-d-to-adp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_e_coli"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-8-dideoxy-8-oxo-alpha-d-to-adp"
+      },
+      "note": "Shares alpha-Kdo-(2->4)-alpha-Kdo-(2->6)-lipid A (E. coli) with 3,8-dideoxy-8-oxo-alpha-D… to ADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM730505"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_e_coli_3-deoxy-d-manno-octuloson-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_e_coli"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-deoxy-d-manno-octuloson-to-h2o"
+      },
+      "note": "Shares alpha-Kdo-(2->4)-alpha-Kdo-(2->6)-lipid A (E. coli) with 3-deoxy-D-manno-octuloson… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM730505"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_e_coli_adp-d-glycero-d-manno-hep-to-adp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_e_coli"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "adp-d-glycero-d-manno-hep-to-adp"
+      },
+      "note": "Shares alpha-Kdo-(2->4)-alpha-Kdo-(2->6)-lipid A (E. coli) with ADP-D-glycero-D-manno-hep… to ADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM730505"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_e_coli_cdp-n-methyl-l-glucosamine-to-lipid-iib",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_e_coli"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cdp-n-methyl-l-glucosamine-to-lipid-iib"
+      },
+      "note": "Shares alpha-Kdo-(2->4)-alpha-Kdo-(2->6)-lipid A (E. coli) with CDP-N-methyl-L-glucosamine to lipid IIB.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM730505"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_e_coli_l-pyrrolysine-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_e_coli"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-pyrrolysine-to-diphosphate"
+      },
+      "note": "Shares alpha-Kdo-(2->4)-alpha-Kdo-(2->6)-lipid A (E. coli) with L-pyrrolysine to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM730505"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_e_coli_n-demethyl-desepoxymaytan-to-7a-hydroxy-o-carbam",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_e_coli"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-demethyl-desepoxymaytan-to-7a-hydroxy-o-carbam"
+      },
+      "note": "Shares alpha-Kdo-(2->4)-alpha-Kdo-(2->6)-lipid A (E. coli) with N-Demethyl-desepoxymaytan… to 7a-Hydroxy-o-carbamoyl-de….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM730505"
+          }
+        ]
+      }
+    }
+  ]
+}

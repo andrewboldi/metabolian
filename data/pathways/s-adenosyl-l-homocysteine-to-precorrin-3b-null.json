@@ -1,0 +1,496 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-adenosyl-l-homocysteine-to-precorrin-3b-null",
+  "name": "S-adenosyl-L-homocysteine to Precorrin 3B",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from S-adenosyl-L-homocysteine to Precorrin 3B, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR197751"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_adenosyl_l_homocysteine",
+      "name": "S-adenosyl-L-homocysteine",
+      "short": "S-adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1102167"
+      }
+    },
+    {
+      "id": "precorrin_6a",
+      "name": "Precorrin 6A",
+      "formula": "C44H46N4O16",
+      "charge": -8,
+      "xrefs": {
+        "metanetx": "MNXM1368321"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM26"
+      }
+    },
+    {
+      "id": "s_adenosyl_l_methionine",
+      "name": "S-adenosyl-L-methionine",
+      "short": "S-adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1363767"
+      }
+    },
+    {
+      "id": "precorrin_5",
+      "name": "precorrin-5",
+      "formula": "C45H47N4O17",
+      "charge": -7,
+      "xrefs": {
+        "metanetx": "MNXM729931"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "precorrin_4",
+      "name": "Precorrin 4",
+      "formula": "C44H44N4O17",
+      "charge": -8,
+      "xrefs": {
+        "metanetx": "MNXM1368135"
+      }
+    },
+    {
+      "id": "precorrin_3b",
+      "name": "Precorrin 3B",
+      "formula": "C43H43N4O17",
+      "charge": -7,
+      "xrefs": {
+        "metanetx": "MNXM1367115"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_152",
+      "name": "precorrin-6A synthase (deacetylating)",
+      "ec": [
+        "2.1.1.152"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_133",
+      "name": "precorrin-4 C(11)-methyltransferase",
+      "ec": [
+        "2.1.1.133"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_131",
+      "name": "precorrin-3B C(17)-methyltransferase",
+      "ec": [
+        "2.1.1.131"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "precorrin-6A synthase (deacetylating)",
+      "ec": "2.1.1.152",
+      "substrates": [
+        {
+          "metabolite": "s_adenosyl_l_homocysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "precorrin_6a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_adenosyl_l_methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "precorrin_5",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_152"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR197751"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197751"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "precorrin-4 C(11)-methyltransferase",
+      "ec": "2.1.1.133",
+      "substrates": [
+        {
+          "metabolite": "s_adenosyl_l_homocysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "precorrin_5",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_adenosyl_l_methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "precorrin_4",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_133"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR198160"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198160"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "precorrin-3B C(17)-methyltransferase",
+      "ec": "2.1.1.131",
+      "substrates": [
+        {
+          "metabolite": "s_adenosyl_l_homocysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "precorrin_4",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_adenosyl_l_methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "precorrin_3b",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_131"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR198546"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198546"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_precorrin_6a_diphosphate-to-precorrin-6b-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "precorrin_6a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-precorrin-6b-null"
+      },
+      "note": "Shares Precorrin 6A with diphosphate to precorrin-6B.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368321"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_precorrin_6a_s-adenosyl-l-homocysteine-to-precorrin-3b",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "precorrin_6a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-precorrin-3b"
+      },
+      "note": "Shares Precorrin 6A with S-adenosyl-L-homocysteine to Precorrin 3B.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368321"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_precorrin_6a_udp-to-nadp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "precorrin_6a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-nadp"
+      },
+      "note": "Shares Precorrin 6A with UDP to NADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368321"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_precorrin_5_s-adenosyl-l-homocysteine-to-precorrin-3b",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "precorrin_5"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-precorrin-3b"
+      },
+      "note": "Shares precorrin-5 with S-adenosyl-L-homocysteine to Precorrin 3B.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM729931"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_precorrin_4_s-adenosyl-l-homocysteine-to-precorrin-3b",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "precorrin_4"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-precorrin-3b"
+      },
+      "note": "Shares Precorrin 4 with S-adenosyl-L-homocysteine to Precorrin 3B.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368135"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_precorrin_3b_acetoin-to-nad-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "precorrin_3b"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetoin-to-nad-null"
+      },
+      "note": "Shares Precorrin 3B with acetoin to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1367115"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_precorrin_3b_alpha-d-galactose-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "precorrin_3b"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-galactose-to-h2o-null"
+      },
+      "note": "Shares Precorrin 3B with alpha-D-galactose… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1367115"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_precorrin_3b_chloroacetaldehyde-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "precorrin_3b"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "chloroacetaldehyde-to-nad"
+      },
+      "note": "Shares Precorrin 3B with chloroacetaldehyde to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1367115"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_precorrin_3b_h-to-4-methylcatechol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "precorrin_3b"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-4-methylcatechol"
+      },
+      "note": "Shares Precorrin 3B with H to 4-methylcatechol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1367115"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_precorrin_3b_s-adenosyl-l-homocysteine-to-precorrin-3b",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "precorrin_3b"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-precorrin-3b"
+      },
+      "note": "Shares Precorrin 3B with S-adenosyl-L-homocysteine to Precorrin 3B.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1367115"
+          }
+        ]
+      }
+    }
+  ]
+}

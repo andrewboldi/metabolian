@@ -1,0 +1,663 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "nadh-to-behenyl-oleate-null",
+  "name": "NADH to Behenyl oleate",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from NADH to Behenyl oleate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR132949"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "behenate",
+      "name": "behenate",
+      "formula": "C22H43O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:23858"
+      }
+    },
+    {
+      "id": "docosanal",
+      "name": "docosanal",
+      "formula": "C22H44O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM17381"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "docosan_1_ol",
+      "name": "docosan-1-ol",
+      "formula": "C22H46O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:31000"
+      }
+    },
+    {
+      "id": "oleoyl_coa",
+      "name": "oleoyl-CoA",
+      "formula": "C39H64N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57387"
+      }
+    },
+    {
+      "id": "behenyl_oleate",
+      "name": "Behenyl oleate",
+      "formula": "C40H78O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:165648"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "hexacosan_1_ol",
+      "name": "hexacosan-1-ol",
+      "formula": "C26H54O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28415"
+      }
+    },
+    {
+      "id": "1_o_hexacosyl_oleate",
+      "name": "1-O-hexacosyl oleate",
+      "formula": "C44H86O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:232009"
+      }
+    },
+    {
+      "id": "16_methylheptadecan_1_ol",
+      "name": "16-methylheptadecan-1-ol",
+      "short": "16-methylheptadecan…",
+      "formula": "C18H38O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:84911"
+      }
+    },
+    {
+      "id": "1_o_16_methylheptadecyl_oleate",
+      "name": "1-O-16-methylheptadecyl oleate",
+      "short": "1-O-16-methylheptad…",
+      "formula": "C36H70O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:232010"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_2_1_48",
+      "name": "long-chain-aldehyde dehydrogenase",
+      "ec": [
+        "1.2.1.48"
+      ],
+      "xrefs": {
+        "uniprot": "P43353"
+      }
+    },
+    {
+      "id": "ec_1_2_1_5",
+      "name": "aldehyde dehydrogenase [NAD(P)(+)]",
+      "ec": [
+        "1.2.1.5"
+      ],
+      "xrefs": {
+        "uniprot": "P30838"
+      }
+    },
+    {
+      "id": "ec_1_1_1_71",
+      "name": "alcohol dehydrogenase [NAD(P)(+)]",
+      "ec": [
+        "1.1.1.71"
+      ],
+      "xrefs": {
+        "uniprot": "P16152"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "long-chain-aldehyde dehydrogenase",
+      "ec": "1.2.1.48",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "behenate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "docosanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_48"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR132949"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR132949"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "alcohol dehydrogenase [NAD(P)(+)]",
+      "ec": "1.1.1.71",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "docosanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "docosan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_71"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR181428"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR181428"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "docosan-1-ol + (9Z)-octadecenoyl-CoA = 1-O-docosyl (9Z)-octadecenoate + CoA",
+      "equation": "docosan-1-ol + (9Z)-octadecenoyl-CoA = 1-O-docosyl (9Z)-octadecenoate + CoA",
+      "substrates": [
+        {
+          "metabolite": "docosan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oleoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "behenyl_oleate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:81783"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81783"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "hexacosan-1-ol + (9Z)-octadecenoyl-CoA = 1-O-hexacosyl (9Z)-octadecenoate + CoA",
+      "equation": "hexacosan-1-ol + (9Z)-octadecenoyl-CoA = 1-O-hexacosyl (9Z)-octadecenoate + CoA",
+      "substrates": [
+        {
+          "metabolite": "hexacosan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oleoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_o_hexacosyl_oleate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:81795"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81795"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "16-methylheptadecan-1-ol + (9Z)-octadecenoyl-CoA = 1-O-16-methylheptadecyl (9Z)-octadec...",
+      "equation": "16-methylheptadecan-1-ol + (9Z)-octadecenoyl-CoA = 1-O-16-methylheptadecyl (9Z)-octadecenoate + CoA",
+      "substrates": [
+        {
+          "metabolite": "16_methylheptadecan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oleoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_o_16_methylheptadecyl_oleate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:81803"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81803"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_docosanal_2-hydroperoxy-4-glucosy-to-s-adenosyl-l-homocyst",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "docosanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-hydroperoxy-4-glucosy-to-s-adenosyl-l-homocyst"
+      },
+      "note": "Shares docosanal with 2-[hydroperoxy-(4-glucosy… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM17381"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_docosanal_docosanoyl-coa-to-n-docosanoylglycinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "docosanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "docosanoyl-coa-to-n-docosanoylglycinate"
+      },
+      "note": "Shares docosanal with docosanoyl-CoA to N-docosanoylglycinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM17381"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_docosanal_docosanoyl-coa-to-n-docosanoylglycinate-81731",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "docosanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "docosanoyl-coa-to-n-docosanoylglycinate-81731"
+      },
+      "note": "Shares docosanal with docosanoyl-CoA to N-docosanoylglycinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM17381"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_docosanal_isorhamnetin-to-octadecanal-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "docosanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isorhamnetin-to-octadecanal-null"
+      },
+      "note": "Shares docosanal with isorhamnetin… to octadecanal.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM17381"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_docosanal_nadh-to-behenyl-oleate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "docosanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-behenyl-oleate"
+      },
+      "note": "Shares docosanal with NADH to Behenyl oleate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM17381"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_docosanal_nadh-to-e-dodec-2-enal",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "docosanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-e-dodec-2-enal"
+      },
+      "note": "Shares docosanal with NADH to (E)-dodec-2-enal.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM17381"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_docosanal_propanoate-to-h2o2-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "docosanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "propanoate-to-h2o2-null"
+      },
+      "note": "Shares docosanal with propanoate to H2O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM17381"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_docosan_1_ol_2-hydroperoxy-4-glucosy-to-s-adenosyl-l-homocyst",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "docosan_1_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-hydroperoxy-4-glucosy-to-s-adenosyl-l-homocyst"
+      },
+      "note": "Shares docosan-1-ol with 2-[hydroperoxy-(4-glucosy… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:31000"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_docosan_1_ol_docosanoyl-coa-to-n-docosanoylglycinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "docosan_1_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "docosanoyl-coa-to-n-docosanoylglycinate"
+      },
+      "note": "Shares docosan-1-ol with docosanoyl-CoA to N-docosanoylglycinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:31000"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_docosan_1_ol_docosanoyl-coa-to-n-docosanoylglycinate-81731",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "docosan_1_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "docosanoyl-coa-to-n-docosanoylglycinate-81731"
+      },
+      "note": "Shares docosan-1-ol with docosanoyl-CoA to N-docosanoylglycinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:31000"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_docosan_1_ol_nadh-to-behenyl-oleate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "docosan_1_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-behenyl-oleate"
+      },
+      "note": "Shares docosan-1-ol with NADH to Behenyl oleate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:31000"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_docosan_1_ol_propanoate-to-h2o2-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "docosan_1_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "propanoate-to-h2o2-null"
+      },
+      "note": "Shares docosan-1-ol with propanoate to H2O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:31000"
+          }
+        ]
+      }
+    }
+  ]
+}

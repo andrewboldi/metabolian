@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 9e-myristelaidoyl-coa-to-h2o "(9E)-myristelaidoyl-CoA to H2O" {
-  spacing 206
+  spacing 152
 
   spine at 0,0 {
     9e_myristelaidoyl_coa
@@ -12,63 +12,9 @@ pathway 9e-myristelaidoyl-coa-to-h2o "(9E)-myristelaidoyl-CoA to H2O" {
     9e_tetradecenoic_acid
     <-> ec_3_1_1_5 [3.1.1.5] +sn_glycerol_3_phosphate -h2o
     1_7z_tetradecenoyl_sn_glycero_3_phosphate
-    <-> . +9e_tetradecenoic_acid -h2o
-    1_2_di_7z_tetradecenoyl_sn_glycero_3_phosphate
-    <-> . +cmp +h -h2o
-    cdp_1_2_di_7z_tetradecenoyl_sn_glycerol
-  }
-
-  branch from 9e_tetradecenoic_acid side left {
-    9e_tetradecenoic_acid
-    <-> . +cholesterol +h2o
-    cholesteryl_myristelaidate
-  }
-
-  branch from 9e_tetradecenoic_acid side right {
-    9e_tetradecenoic_acid
-    <-> . +glycerophosphatidylethanolamine +h2o
-    2_7z_tetradecenoyl_sn_glycero_3_phosphoethanolam
-  }
-
-  branch from atp side left {
+    <-> ec_3_1_1_4 [3.1.1.4] +9e_tetradecenoic_acid +h -h2o
+    1_2_ditetradec_7_enoyl_sn_glycerol_3_phosphate
+    <-> . +h +adp +phosphate -1_2_ditetradec_7_enoyl_sn_glycerol_3_phosphate -h2o
     atp
-    <-> . +diphosphate +l_methionyl_adenylate +h
-    l_methionine
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +diphosphate +l_phenylalanyl_adenylate +h
-    l_phenylalanine
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +4_coumaroyl_coa +serotonin +h
-    n6_cis_p_coumaroylserotonin
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +serotonin +h +n6_cis_p_coumaroylserotonin
-    trans_4_coumaroyl_coa
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +2_oxoglutaramate +h
-    2_3_6_trihydroxypyridine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +2z_2_hydroxypent_2_enedioyl_coa +h
-    5_oxo_2_furoyl_coa
-  }
-
-  branch from 1_2_di_7z_tetradecenoyl_sn_glycero_3_phosphate side left {
-    1_2_di_7z_tetradecenoyl_sn_glycero_3_phosphate
-    <-> . +1_2_di_7z_tetradecenoyl_sn_glycerol +atp +h
-    adp
   }
 }

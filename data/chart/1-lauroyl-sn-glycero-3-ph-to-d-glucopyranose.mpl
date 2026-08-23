@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-lauroyl-sn-glycero-3-ph-to-d-glucopyranose "1-lauroyl-sn-glycero-3-phâ€¦ to D-glucopyranose" {
-  spacing 290
+  spacing 320
 
   spine at 0,0 {
     1_lauroyl_sn_glycero_3_phosphocholine
@@ -20,45 +20,75 @@ pathway 1-lauroyl-sn-glycero-3-ph-to-d-glucopyranose "1-lauroyl-sn-glycero-3-phâ
     sinapoyl_s_malate
   }
 
-  branch from 1_lauroyl_sn_glycerol_3_phosphate side left {
-    1_lauroyl_sn_glycerol_3_phosphate
-    <-> . +sn_glycerol_3_phosphate +coa
-    lauroyl_coa
+  branch from choline side left {
+    choline
+    <-> . +phosphatidylcholine +serine
+    3_sn_phosphatidyl_l_serine
   }
 
   branch from choline side right {
     choline
-    <-> . +1_arachidonoyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_arachidonoyl_sn_glycerol_3_phosphate
-  }
-
-  branch from choline side left {
-    choline
-    <-> . +1_z_alk_1_enyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_z_alk_1_enyl_sn_glycero_3_phosphate
-  }
-
-  branch from glucose side right {
-    glucose
-    <-> ec_3_2_1_206 [3.2.1.206] +oleuropein +h2o
-    oleuropein_aglycone
+    <-> . +1_myristoyl_sn_glycero_3_phosphocholine
+    1_myristoyl_sn_glycero_2_3_cyclic_phosphate
   }
 
   branch from glucose side left {
     glucose
-    <-> . +lithocholate_3_o_d_glucoside +h2o
-    lithocholate
+    <-> ec_3_2_1_220 [3.2.1.220] +ipecoside +h2o
+    ipecoside_aglycone
   }
 
-  branch from trans_sinapate side right {
-    trans_sinapate
-    <-> ec_2_4_1_299 [2.4.1.299] +cyanidin_3_o_d_glucoside +1_o_sinapoyl_d_glucose
-    cyanin_betaine
+  branch from glucose side right {
+    glucose
+    <-> ec_3_2_1_220 [3.2.1.220] +6_o_methyl_n_deacetylipecoside +h2o
+    6_o_methyl_n_deacetylipecoside_aglycone
   }
 
-  branch from trans_sinapate side left {
-    trans_sinapate
-    <-> . +udp_d_glucose +udp +hplus
-    4_o_d_glucosyl_trans_sinapate
+  branch from 1_lauroyl_sn_glycero_3_phosphocholine side left {
+    1_lauroyl_sn_glycero_3_phosphocholine
+    <-> . +arachidonoyl_coa +coa
+    1_lauroyl_2_arachidonoyl_sn_glycero_3_phosphocho
+  }
+
+  branch from choline side right {
+    choline
+    <-> . +1_hexadecanoyl_sn_glycero_3_phosphocholine
+    1_palmitoyl_sn_glycero_2_3_cyclic_phosphate
+  }
+
+  branch from choline side left {
+    choline
+    <-> . +1_o_acyl_sn_glycero_3_phosphocholine
+    1_acyl_sn_glycero_2_3_cyclic_phosphate
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> . +deacetylisoipecoside +h2o
+    n_deacetylisoipecoside_aglycone
+  }
+
+  branch from glucose side left {
+    glucose
+    <-> . +6_o_methyldeacetylisoipecoside +h2o
+    6_o_methyldeacetylisoipecoside_aglycone
+  }
+
+  branch from udp_d_glucose side right {
+    udp_d_glucose
+    <-> ec_2_4_1_238 [2.4.1.238] +delphinidin_3_o_d_glucoside_5_o_d_glucoside_beta +udp +hplus
+    delphinidin_3_3_5_tri_o_d_glucoside_betaine
+  }
+
+  branch from udp_d_glucose side left {
+    udp_d_glucose
+    <-> ec_2_4_1_296 [2.4.1.296] +anthocyanidin_3_o_2_o_4_coumaroyl_l_rhamnosyl_1 +udp +hplus
+    anthocyanidin_3_o_2_o_4_coumaroyl_l_rhamnosyl_1
+  }
+
+  branch from malate side right {
+    malate
+    <-> . +gtp +coa +gdp +pi
+    3s_3_carboxy_3_hydroxypropanoyl_coa
   }
 }

@@ -1,0 +1,432 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2r-3-phospho-glyceroyl-to-2r-3-phosphoglycerate",
+  "name": "(2R)-3-phospho-glyceroyl… to (2R)-3-phosphoglycerate",
+  "category": "other",
+  "summary": "A 3-step route from (2R)-3-phospho-glyceroyl phosphate to (2R)-3-phosphoglycerate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR95410"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2r_3_phospho_glyceroyl_phosphate",
+      "name": "(2R)-3-phospho-glyceroyl phosphate",
+      "short": "3-phospho-glyceroyl…",
+      "formula": "C3H4O10P2",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1364464"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "2r_3_phosphoglycerate",
+      "name": "(2R)-3-phosphoglycerate",
+      "short": "3-phosphoglycerate",
+      "formula": "C3H4O7P",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM727604"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "itp",
+      "name": "ITP",
+      "formula": "C10H11N4O14P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1103428"
+      }
+    },
+    {
+      "id": "idp",
+      "name": "IDP",
+      "formula": "C10H11N4O11P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1104559"
+      }
+    },
+    {
+      "id": "glyceric_acid_1_3_biphosphate",
+      "name": "Glyceric acid 1,3-biphosphate",
+      "short": "Glyceric acid…",
+      "formula": "C3H8O10P2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:89363"
+      }
+    },
+    {
+      "id": "d_glucose_6_phosphate",
+      "name": "D-glucose 6-phosphate",
+      "short": "D-glucose 6-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1364111"
+      }
+    },
+    {
+      "id": "glucose_1_6_bisphosphate",
+      "name": "glucose-1,6-bisphosphate",
+      "short": "glucose-1,6-bisphos…",
+      "formula": "C6H10O12P2",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM162819"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_6_1_7",
+      "name": "acylphosphatase",
+      "ec": [
+        "3.6.1.7"
+      ],
+      "xrefs": {
+        "uniprot": "P07311"
+      }
+    },
+    {
+      "id": "ec_2_7_2_10",
+      "name": "phosphoglycerate kinase (GTP)",
+      "ec": [
+        "2.7.2.10"
+      ]
+    },
+    {
+      "id": "ec_2_7_2_3",
+      "name": "phosphoglycerate kinase",
+      "ec": [
+        "2.7.2.3"
+      ],
+      "xrefs": {
+        "uniprot": "P00558"
+      }
+    },
+    {
+      "id": "ec_2_7_1_106",
+      "name": "glucose-1,6-bisphosphate synthase",
+      "ec": [
+        "2.7.1.106"
+      ],
+      "xrefs": {
+        "uniprot": "Q6PCE3"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "acylphosphatase",
+      "ec": "3.6.1.7",
+      "substrates": [
+        {
+          "metabolite": "2r_3_phospho_glyceroyl_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2r_3_phosphoglycerate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR95410"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR95410"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "phosphoglycerate kinase (GTP)",
+      "ec": "2.7.2.10",
+      "substrates": [
+        {
+          "metabolite": "itp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "2r_3_phosphoglycerate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "idp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glyceric_acid_1_3_biphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_2_10"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR191817"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR191817"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "glucose-1,6-bisphosphate synthase",
+      "ec": "2.7.1.106",
+      "substrates": [
+        {
+          "metabolite": "d_glucose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glyceric_acid_1_3_biphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glucose_1_6_bisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 5
+        },
+        {
+          "metabolite": "2r_3_phosphoglycerate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_106"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR144394"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR144394"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_2r_3_phospho_glyceroyl_phosphate_alpha-beta-dihydroxyethyl-to-r-lactaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2r_3_phospho_glyceroyl_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-beta-dihydroxyethyl-to-r-lactaldehyde"
+      },
+      "note": "Shares (2R)-3-phospho-glyceroyl phosphate with alpha,beta-Dihydroxyethyl… to (R)-lactaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364464"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2r_3_phospho_glyceroyl_phosphate_cmp-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2r_3_phospho_glyceroyl_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cmp-to-phosphate"
+      },
+      "note": "Shares (2R)-3-phospho-glyceroyl phosphate with CMP to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364464"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2r_3_phospho_glyceroyl_phosphate_glyceric-acid-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2r_3_phospho_glyceroyl_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "glyceric-acid-to-phosphate"
+      },
+      "note": "Shares (2R)-3-phospho-glyceroyl phosphate with Glyceric acid… to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364464"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2r_3_phospho_glyceroyl_phosphate_itp-to-d-glucopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2r_3_phospho_glyceroyl_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "itp-to-d-glucopyranose"
+      },
+      "note": "Shares (2R)-3-phospho-glyceroyl phosphate with ITP to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364464"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_glucose_1_6_bisphosphate_maltoheptaose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "glucose_1_6_bisphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "maltoheptaose-to-h2o"
+      },
+      "note": "Shares glucose-1,6-bisphosphate with maltoheptaose to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM162819"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_glucose_1_6_bisphosphate_s-adenosyl-l-homocysteine-to-adp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "glucose_1_6_bisphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-adp"
+      },
+      "note": "Shares glucose-1,6-bisphosphate with S-adenosyl-L-homocysteine to ADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM162819"
+          }
+        ]
+      }
+    }
+  ]
+}

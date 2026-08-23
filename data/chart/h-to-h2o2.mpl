@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway h-to-h2o2 "H to H2O2" {
-  spacing 236
+  spacing 200
 
   spine at 0,0 {
     h
@@ -14,41 +14,5 @@ pathway h-to-h2o2 "H to H2O2" {
     octacosan_1_ol
     <-> . +o2 -h2o2
     octacosanal
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_206 [1.1.1.206] +4_methylcyclohexanone +h +nadph
-    4_methylcyclohexan_1_ol
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +2_4_dimethyl_3_pentanone +h +nadph
-    compound_0286204
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_histidine +l_cysteine +l_arginine +h
-    his_arg_cys
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_histidine +l_serine +l_arginine
-    histidyl_arginyl_serine
-  }
-
-  branch from h2o2 side left {
-    h2o2
-    <-> ec_1_3_3_8 [1.3.3.8] +coptisine +h +o2
-    s_stylopine
-  }
-
-  branch from h2o2 side right {
-    h2o2
-    <-> ec_1_3_3_8 [1.3.3.8] +h +o2 +sinactine
-    epiberberine
   }
 }

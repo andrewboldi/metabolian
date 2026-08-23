@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dodecanoyl-coa-to-coa "dodecanoyl-CoA to CoA" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     dodecanoyl_coa
@@ -14,17 +14,5 @@ pathway dodecanoyl-coa-to-coa "dodecanoyl-CoA to CoA" {
     3_dodecanoyl_3_4_di_3_methylbutanoyl_sucrose
     <-> . +acetyl_coa -coa
     2_acetyl_3_dodecanoyl_3_4_di_3_methylbutanoyl_su
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +acetyl_coa +deacetyl_hectochlorin
-    hectochlorin
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +2_methylpropanoyl_coa +urauchimycin_b
-    antimycin_a7a
   }
 }

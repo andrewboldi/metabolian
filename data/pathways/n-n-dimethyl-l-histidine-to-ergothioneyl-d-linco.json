@@ -198,15 +198,6 @@
       }
     },
     {
-      "id": "cysteine",
-      "name": "L-Cysteine",
-      "formula": "C3H7NO2S",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:35235"
-      }
-    },
-    {
       "id": "ergothioneine_thione_form",
       "name": "ergothioneine thione form",
       "short": "ergothioneine…",
@@ -214,35 +205,6 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:82707"
-      }
-    },
-    {
-      "id": "alanine",
-      "name": "L-Alanine",
-      "formula": "C3H7NO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:57972"
-      }
-    },
-    {
-      "id": "cytidine_5_monophosphate_1",
-      "name": "cytidine 5'-monophosphate(1−)",
-      "short": "cytidine 5'-MP(1−)",
-      "formula": "C9H11N3O7P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:82748"
-      }
-    },
-    {
-      "id": "5_methylcytidine_5_monophosphate_1",
-      "name": "5-methylcytidine 5'-monophosphate(1−)",
-      "short": "5-methylcytidine…",
-      "formula": "C10H13N3O7P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:74483"
       }
     }
   ],
@@ -509,125 +471,301 @@
     },
     {
       "id": "r6",
-      "name": "hercynine + L-cysteine = ergothioneine (thione form) + L-alanine",
-      "equation": "hercynine + L-cysteine = ergothioneine (thione form) + L-alanine",
+      "name": "ergothioneine (thione form) + H(+) = ergothioneine",
+      "equation": "ergothioneine (thione form) + H(+) = ergothioneine",
       "substrates": [
-        {
-          "metabolite": "n_n_n_trimethyl_l_histidine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "cysteine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
         {
           "metabolite": "ergothioneine_thione_form",
           "stoichiometry": 1
         },
         {
-          "metabolite": "alanine",
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ergothioneine",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:85587"
+        "rhea": "RHEA:79043"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:85587"
+            "id": "RHEA:79043"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_n_n_dimethyl_l_histidine_r-h-to-hydrogen-acceptor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_n_dimethyl_l_histidine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-h-to-hydrogen-acceptor"
+      },
+      "note": "Shares Nα,Nα-dimethyl-L-histidine with R-H to hydrogen acceptor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57610"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "cytidine(50) in tRNA + S-adenosyl-L-methionine = 5-methylcytidine(50) in tRNA + S-adeno...",
-      "equation": "cytidine(50) in tRNA + S-adenosyl-L-methionine = 5-methylcytidine(50) in tRNA + S-adenosyl-L-homocysteine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "cytidine_5_monophosphate_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "5_methylcytidine_5_monophosphate_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:61488"
+      "id": "xt_n_n_n_trimethyl_l_histidine_l-histidine-to-hydrogen-acceptor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_n_n_trimethyl_l_histidine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "l-histidine-to-hydrogen-acceptor"
+      },
+      "note": "Shares Nα,Nα,Nα-trimethyl-L-histidine with L-histidine to hydrogen acceptor.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:61488"
+            "db": "ChEBI",
+            "id": "CHEBI:15781"
           }
         ]
       }
     },
     {
-      "id": "r8",
-      "name": "cytidine(72) in tRNA(Cys) + S-adenosyl-L-methionine = 5-methylcytidine(72) in tRNA(Cys)...",
-      "equation": "cytidine(72) in tRNA(Cys) + S-adenosyl-L-methionine = 5-methylcytidine(72) in tRNA(Cys) + S-adenosyl-L-homocysteine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "cytidine_5_monophosphate_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "5_methylcytidine_5_monophosphate_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "rhea": "RHEA:61584"
+      "id": "xt_n_n_n_trimethyl_l_histidine_s-2e-6e-farnesyl-l-cy-to-s-adenosyl-l-homocystei",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_n_n_trimethyl_l_histidine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2e-6e-farnesyl-l-cy-to-s-adenosyl-l-homocystei"
+      },
+      "note": "Shares Nα,Nα,Nα-trimethyl-L-histidine with S-[(2E,6E)-farnesyl]-L-cy… to S-adenosyl-L-homocysteine.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:61584"
+            "db": "ChEBI",
+            "id": "CHEBI:15781"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_n_n_trimethyl_l_histidine_selenophosphate-to-hydrogen-acceptor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_n_n_trimethyl_l_histidine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "selenophosphate-to-hydrogen-acceptor"
+      },
+      "note": "Shares Nα,Nα,Nα-trimethyl-L-histidine with selenophosphate to hydrogen acceptor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15781"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_glu_cys_3-aci-nitropropanoate-to-l-glutamyl-l-cysteinyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "glu_cys"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-aci-nitropropanoate-to-l-glutamyl-l-cysteinyl"
+      },
+      "note": "Shares γ-L-Glutamyl-L-cysteine with 3-aci-nitropropanoate to L-γ-glutamyl-L-cysteinyl-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58173"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_glu_cys_6-acetyl-2-amino-3-7-8-9-to-l-glutamate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "glu_cys"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-acetyl-2-amino-3-7-8-9-to-l-glutamate"
+      },
+      "note": "Shares γ-L-Glutamyl-L-cysteine with 6-acetyl-2-amino-3,7,8,9-… to L-glutamate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58173"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_glu_cys_glutamate-glutamine-metabolism",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "glu_cys"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "glutamate-glutamine-metabolism"
+      },
+      "note": "Shares γ-L-Glutamyl-L-cysteine with Glutamate and glutamine metabolism.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58173"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_glu_cys_glutathione-metabolism",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "glu_cys"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "glutathione-metabolism"
+      },
+      "note": "Shares γ-L-Glutamyl-L-cysteine with Glutathione synthesis and redox cycling.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58173"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_glu_cys_n-feruloylglycinate-to-2-e-o-feruloyl-d-galact",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "glu_cys"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-feruloylglycinate-to-2-e-o-feruloyl-d-galact"
+      },
+      "note": "Shares γ-L-Glutamyl-L-cysteine with N-feruloylglycinate to 2-(E)-O-feruloyl-D-galact….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58173"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hercynylcysteine_sulfoxide_l-histidine-to-hydrogen-acceptor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hercynylcysteine_sulfoxide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-histidine-to-hydrogen-acceptor"
+      },
+      "note": "Shares hercynylcysteine sulfoxide with L-histidine to hydrogen acceptor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:82706"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ergothioneine_l-histidine-to-hydrogen-acceptor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ergothioneine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-histidine-to-hydrogen-acceptor"
+      },
+      "note": "Shares ergothioneine with L-histidine to hydrogen acceptor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:134344"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ergothioneine_thione_form_ergothioneine-thione-form-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ergothioneine_thione_form"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ergothioneine-thione-form-to-succinate"
+      },
+      "note": "Shares ergothioneine thione form with ergothioneine thione form to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:82707"
           }
         ]
       }

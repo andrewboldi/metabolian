@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 6-hydroxytyphasterol-to-7-oxatyphasterol "6α-hydroxytyphasterol to 7-oxatyphasterol" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     6_hydroxytyphasterol
@@ -14,29 +14,5 @@ pathway 6-hydroxytyphasterol-to-7-oxatyphasterol "6α-hydroxytyphasterol to 7-ox
     nadp
     <-> . +7_oxateasterone
     7_oxatyphasterol
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +2_octaprenyl_6_hydroxyphenol +h2o +h +o2 +nadph
-    2_octaprenylphenol
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_7_1_6 [1.7.1.6] +para_dimethylamino_azobenzene +h +nadph +aniline
-    n_n_dimethyl_1_4_phenylenediamine
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_2_1_80 [3.2.1.80] +sucrose +beta_d_fructose
-    1_f_beta_d_fructosylsucrose
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +beta_d_fructose +neokestose
-    6g_6_kestotetraose
   }
 }

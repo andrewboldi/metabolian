@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway threo-3-methyl-l-aspartate-to-3-methylfumaryl-co "threo-3-methyl-L-aspartate to 3-methylfumaryl-CoA" {
-  spacing 268
+  spacing 304
 
   spine at 0,0 {
     threo_3_methyl_l_aspartate
@@ -16,51 +16,16 @@ pathway threo-3-methyl-l-aspartate-to-3-methylfumaryl-co "threo-3-methyl-L-aspar
     3_methylfumaryl_coa
   }
 
-  branch from mesaconate side left {
-    mesaconate
-    <-> ec_4_2_1_34 [4.2.1.34] +h2o
-    l_citramalate
-  }
 
-  branch from mesaconate side right {
-    mesaconate
-    <-> . +nh3
-    erythro_3_methyl_l_aspartate
-  }
 
-  branch from nh3 side left {
-    nh3
-    <-> ec_1_4_1_10 [1.4.1.10] +glycine +nad +h2o +nadh +hplus
-    glyoxylate
-  }
 
-  branch from nh3 side right {
-    nh3
-    <-> ec_1_4_3_5 [1.4.3.5] +o2 +h2o +plp +h2o2
-    pyridoxamine_5_phosphate
-  }
 
-  branch from mesaconyl_coa side left {
-    mesaconyl_coa
-    <-> ec_4_2_1_148 [4.2.1.148] +h2o
-    l_erythro_3_methylmalyl_coa
-  }
 
-  branch from succinate side right {
-    succinate
-    <-> ec_1_14_11_39 [1.14.11.39] +l_asparagine +akg +o2 +co2
-    3s_3_hydroxy_l_asparagine
-  }
 
-  branch from succinate side left {
-    succinate
-    <-> . +arginine +akg +o2 +co2
-    5_hydroxy_l_arginine
-  }
 
-  branch from 3_methylfumaryl_coa side right {
-    3_methylfumaryl_coa
-    <-> ec_4_2_1_153 [4.2.1.153] +h2o
-    3s_citramalyl_coa
-  }
+
+
+
+
+
 }

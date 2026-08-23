@@ -1,0 +1,442 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "hexadecanedioate-to-h2o-null",
+  "name": "hexadecanedioate to H2O",
+  "category": "other",
+  "summary": "A 3-step route from hexadecanedioate to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR122998"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "hexadecanedioate",
+      "name": "hexadecanedioate",
+      "formula": "C16H28O4",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM11807"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "16_oxohexadecanoate",
+      "name": "16-oxohexadecanoate",
+      "formula": "C16H29O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM6648"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "16_hydroxyhexadecanoate",
+      "name": "16-hydroxyhexadecanoate",
+      "short": "16-hydroxyhexadecan…",
+      "formula": "C16H31O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM2459"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "10_16_dihydroxyhexadecanoic_acid",
+      "name": "10,16-Dihydroxyhexadecanoic acid",
+      "short": "10,16-Dihydroxyhexa…",
+      "formula": "C16H32O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:692"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR122998",
+      "substrates": [
+        {
+          "metabolite": "hexadecanedioate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "16_oxohexadecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR122998"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR122998"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR122997",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "16_oxohexadecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "16_hydroxyhexadecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR122997"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR122997"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR112883",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "16_hydroxyhexadecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "10_16_dihydroxyhexadecanoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR112883"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR112883"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_hexadecanedioate_2-chloro-2-2-chloro-4-me-to-1r-2s-3-4-dichloro-6",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hexadecanedioate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-chloro-2-2-chloro-4-me-to-1r-2s-3-4-dichloro-6"
+      },
+      "note": "Shares hexadecanedioate with 2-chloro-2-(2-chloro-4-me… to (1R,2S)-3,4-dichloro-6-me….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM11807"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hexadecanedioate_gdp-2-acetamido-2-6-dideo-to-2-4-diacetamido-2-4",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hexadecanedioate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gdp-2-acetamido-2-6-dideo-to-2-4-diacetamido-2-4"
+      },
+      "note": "Shares hexadecanedioate with GDP-2-acetamido-2,6-dideo… to 2,4-diacetamido-2,4,6-tri….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM11807"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hexadecanedioate_h-to-heptanal-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hexadecanedioate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-heptanal-null"
+      },
+      "note": "Shares hexadecanedioate with H to heptanal.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM11807"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hexadecanedioate_hexadecanedioate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hexadecanedioate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hexadecanedioate-to-h2o"
+      },
+      "note": "Shares hexadecanedioate with hexadecanedioate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM11807"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hexadecanedioate_p-nitrophenyl-alpha-l-rha-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hexadecanedioate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "p-nitrophenyl-alpha-l-rha-to-h2o-null"
+      },
+      "note": "Shares hexadecanedioate with p-nitrophenyl-alpha-L-rha… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM11807"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_16_oxohexadecanoate_2-hydroperoxy-4-glucosy-to-s-adenosyl-l-homocyst",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "16_oxohexadecanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-hydroperoxy-4-glucosy-to-s-adenosyl-l-homocyst"
+      },
+      "note": "Shares 16-oxohexadecanoate with 2-[hydroperoxy-(4-glucosy… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM6648"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_16_oxohexadecanoate_8-hydroxy-2-deoxyguanosi-to-2-deoxyguanosine-nul",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "16_oxohexadecanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "8-hydroxy-2-deoxyguanosi-to-2-deoxyguanosine-nul"
+      },
+      "note": "Shares 16-oxohexadecanoate with 8-hydroxy-2'-deoxyguanosi… to 2'-deoxyguanosine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM6648"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_16_oxohexadecanoate_hexadecanedioate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "16_oxohexadecanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hexadecanedioate-to-h2o"
+      },
+      "note": "Shares 16-oxohexadecanoate with hexadecanedioate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM6648"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_10_16_dihydroxyhexadecanoic_acid_hexadecanedioate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "10_16_dihydroxyhexadecanoic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hexadecanedioate-to-h2o"
+      },
+      "note": "Shares 10,16-Dihydroxyhexadecanoic acid with hexadecanedioate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:692"
+          }
+        ]
+      }
+    }
+  ]
+}

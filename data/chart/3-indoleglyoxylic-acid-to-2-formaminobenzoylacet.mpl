@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-indoleglyoxylic-acid-to-2-formaminobenzoylacet "3-indoleglyoxylic acid to 2-Formaminobenzoylacetate" {
-  spacing 218
+  spacing 278
 
   spine at 0,0 {
     3_indoleglyoxylic_acid
@@ -24,26 +24,26 @@ pathway 3-indoleglyoxylic-acid-to-2-formaminobenzoylacet "3-indoleglyoxylic acid
 
   branch from h side right {
     h
-    <-> ec_3_5_1_4 [3.5.1.4] +4_nitroacetanilide +h2o +acetate
-    4_nitroaniline
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +udp_2_3_diacetamido_2_3_dideoxy_alpha_d_mannuron +phosphate +udp_2_3_diacetamido_2_3_dideoxy_alpha_d_mannuron +h2o
+    atp
   }
 
   branch from h side left {
     h
-    <-> ec_2_5_1_18 [2.5.1.18] +s_chloromethyl_glutathione +chloride +glutathione
-    dichloromethane
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
+    alpha_d_aldosyl_beta_d_fructoside
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_1_3_7 [1.1.3.7] +h2o2 +3_chlorobenzaldehyde
-    3_chlorophenyl_methanol
+    <-> ec_1_10_3_11 [1.10.3.11] +ubiquinone_8 +h2o
+    ubiquinol_8
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_1_3_7 [1.1.3.7] +compound_0066905 +h2o2
-    p_fluorobenzyl_alcohol
+    <-> ec_1_10_3_11 [1.10.3.11] +ubiquinol_10 +h2o
+    ubiquinone_10
   }
 
   branch from indol_3_yl_acetate side right {
@@ -60,13 +60,73 @@ pathway 3-indoleglyoxylic-acid-to-2-formaminobenzoylacet "3-indoleglyoxylic acid
 
   branch from h2o side right {
     h2o
-    <-> ec_1_2_3_1 [1.2.3.1] +n_2_dimethylaminoethyl_9_oxo_10h_acridine_4_carb +h2o2 +o2
-    n_2_dimethylaminoethyl_acridine_4_carboxamide
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
+    loliose
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_23 [3.2.1.23] +beta_d_galactose +2_naphthol
-    2_naphthyl_beta_d_galactopyranoside
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
+    beta_d_fructofuranosyl_alpha_d_mannopyranoside_6
+  }
+
+  branch from h2o2 side right {
+    h2o2
+    <-> . +co2 +heme +h2o +h
+    fe_coproporphyrin_iii
+  }
+
+  branch from h2o2 side left {
+    h2o2
+    <-> . +2_methylfumaryl_coa +o2
+    2s_methylsuccinyl_coa
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
+    isomaltose
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
+    1_f_alpha_d_galactosylraffinose
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_14_13_72 [1.14.13.72] +nadh +h +4_4_dimethyl_5alpha_cholest_7_en_3beta_ol +nad +h2o
+    4alpha_carboxy_4beta_methyl_5alpha_cholest_7_ene
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_14_13_137 [1.14.13.137] +indolin_2_one +nad +h2o +h +indole
+    nadh
+  }
+
+  branch from indol_3_yl_acetate side right {
+    indol_3_yl_acetate
+    <-> . +beta_d_glucose +h +h2o
+    1_o_indol_3_ylacetyl_beta_d_glucose
+  }
+
+  branch from indol_3_yl_acetate side left {
+    indol_3_yl_acetate
+    <-> . +l_glutamine +h2o
+    indol_3_yl_acetyl_l_glutamine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
+    stellariose
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
+    mediose
   }
 }

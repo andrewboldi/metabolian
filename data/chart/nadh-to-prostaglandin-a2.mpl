@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-prostaglandin-a2 "NADH to prostaglandin A2" {
-  spacing 266
+  spacing 254
 
   spine at 0,0 {
     nadh
@@ -16,18 +16,6 @@ pathway nadh-to-prostaglandin-a2 "NADH to prostaglandin A2" {
     prostaglandin_b2
     <-> .
     prostaglandin_a2
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_14_13_103 [1.14.13.103] +nadh +h +sophoraflavanone_b +o2 +h2o
-    leachianone_g
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_14_13_119 [1.14.13.119] +nadh +5_epi_aristolochene +h +o2 +h2o
-    capsidiol
   }
 
   branch from prostaglandin_b2 side left {

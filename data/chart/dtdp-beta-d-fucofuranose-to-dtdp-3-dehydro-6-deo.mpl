@@ -24,12 +24,6 @@ pathway dtdp-beta-d-fucofuranose-to-dtdp-3-dehydro-6-deo "dTDP-beta-D-fucofurano
 
   branch from dtdp_4_dehydro_6_deoxy_d_glucose side right {
     dtdp_4_dehydro_6_deoxy_d_glucose
-    <-> ec_5_1_3_27 [5.1.3.27]
-    dtdp_4_dehydro_6_deoxy_d_gulose
-  }
-
-  branch from dtdp_4_dehydro_6_deoxy_d_glucose side left {
-    dtdp_4_dehydro_6_deoxy_d_glucose
     <-> . +h2o
     dtdp_2_3_dehydro_2_6_dideoxy_4_keto_d_glucose
   }

@@ -121,63 +121,6 @@
       "xrefs": {
         "chebi": "CHEBI:33019"
       }
-    },
-    {
-      "id": "utp",
-      "name": "UTP",
-      "formula": "C9H11N2O15P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:46398"
-      }
-    },
-    {
-      "id": "udp_d_glycero_d_manno_heptose",
-      "name": "UDP-D-glycero-β-D-manno-heptose",
-      "short": "UDP-D-glycero-β-D-m…",
-      "formula": "C16H24N2O18P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:232884"
-      }
-    },
-    {
-      "id": "cyclic_a_3_5_pa_3_5_pa_3_5_p",
-      "name": "cyclic A(3'-5')pA(3'-5')pA(3'-5')p",
-      "short": "cyclic A(3'-5')pA(3…",
-      "formula": "C30H33N15O18P3",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:192523"
-      }
-    },
-    {
-      "id": "butyrolactone_ii",
-      "name": "butyrolactone II",
-      "formula": "C19H16O7",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:191395"
-      }
-    },
-    {
-      "id": "dmapp",
-      "name": "Dimethylallyl diphosphate (DMAPP)",
-      "short": "Dimethylallyl PP…",
-      "formula": "C5H9O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:57623"
-      }
-    },
-    {
-      "id": "butyrolactone_i",
-      "name": "butyrolactone I",
-      "formula": "C24H24O7",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:191397"
-      }
     }
   ],
   "enzymes": [
@@ -333,120 +276,49 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "D-glycero-beta-D-manno-heptose 1-phosphate + UTP + H(+) = UDP-D-glycero-beta-D-manno-he...",
-      "equation": "D-glycero-beta-D-manno-heptose 1-phosphate + UTP + H(+) = UDP-D-glycero-beta-D-manno-heptose + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "d_glycero_d_manno_heptose_1_phosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "utp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "udp_d_glycero_d_manno_heptose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:83319"
+      "id": "xt_d_glycero_d_manno_heptose_7_phosphate_sedoheptulose-to-2-oxoglutarate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glycero_d_manno_heptose_7_phosphate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "sedoheptulose-to-2-oxoglutarate"
+      },
+      "note": "Shares D-glycero-β-D-manno-heptose 7-phosphate with sedoheptulose to 2-oxoglutarate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:83319"
+            "db": "ChEBI",
+            "id": "CHEBI:60204"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "3 ATP = 3',3',3'-c-tri-AMP + 3 diphosphate",
-      "equation": "3 ATP = 3',3',3'-c-tri-AMP + 3 diphosphate",
-      "substrates": [
-        {
-          "metabolite": "atp",
-          "stoichiometry": 3
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "cyclic_a_3_5_pa_3_5_pa_3_5_p",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 3
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:72755"
+      "id": "xt_d_glycero_d_manno_heptose_1_phosphate_d-glycero-d-manno-hepto-to-l-d-hep-1-7-l-d-hep",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glycero_d_manno_heptose_1_phosphate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glycero-d-manno-hepto-to-l-d-hep-1-7-l-d-hep"
+      },
+      "note": "Shares D-glycero-β-D-manno-heptose 1-phosphate with D-glycero-β-D-manno-hepto… to L-α-D-Hep-(1→7)-L-α-D-Hep….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:72755"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "butyrolactone II + dimethylallyl diphosphate = butyrolactone I + diphosphate",
-      "equation": "butyrolactone II + dimethylallyl diphosphate = butyrolactone I + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "butyrolactone_ii",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "dmapp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "butyrolactone_i",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:72903"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:72903"
+            "db": "ChEBI",
+            "id": "CHEBI:61593"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5alpha-androstane-3alpha-to-h2o "5alpha-Androstane-3alpha,… to H2O" {
-  spacing 218
+  spacing 308
 
   spine at 0,0 {
     5alpha_androstane_3alpha_17alpha_diol
@@ -20,67 +20,157 @@ pathway 5alpha-androstane-3alpha-to-h2o "5alpha-Androstane-3alpha,… to H2O" {
 
   branch from h side left {
     h
-    <-> ec_1_14_14_25 [1.14.14.25] +testosterone +o2 +nadph +nadp +h2o
-    16_hydroxytestosterone
+    <-> . +2_hydroxy_3_oxobutyl_phosphate +formate
+    alpha_d_ribofuranose_5_phosphate
   }
 
   branch from h side right {
     h
-    <-> ec_3_5_2_16 [3.5.2.16] +n_carbamoyl_2_oxoglycine +h2o
-    parabanic_acid
-  }
-
-  branch from androsterone side left {
-    androsterone
-    <-> ec_2_4_1_17 [2.4.1.17] +udp +androsterone_3_glucosiduronic_acid
-    udp_alpha_d_glucuronate
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> ec_1_14_14_1 [1.14.14.1] +n_hydroxy_meiqx +nadp +h2o +h +o2
-    meiqx
+    <-> . +formate +alpha_d_ribofuranose_5_phosphate
+    1_deoxy_l_glycero_tetrulose_4_phosphate
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_14_14_1 [1.14.14.1] +n_hydroxy_iq +nadp +h2o +h +o2
-    3_methyl_3h_imidazo_4_5_f_quinolin_2_amine
+    <-> ec_1_1_1_119 [1.1.1.119] +alpha_d_glucose +nadp +h
+    d_glucono_1_4_lactone
   }
 
-  branch from nadp side right {
-    nadp
-    <-> ec_1_14_14_91 [1.14.14.91] +2_fluoro_trans_cinnamate +h +o2 +nadph +h2o
-    2_fluoro_4_hydroxycinnamate
+  branch from nadph side right {
+    nadph
+    <-> ec_1_1_1_120 [1.1.1.120] +d_galactopyranose +nadp +h
+    d_galactono_1_4_lactone
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_14_91 [1.14.14.91] +2_chloro_trans_cinnamate +h +o2 +nadph +h2o
-    2_chloro_4_hydroxycinnamate
+    <-> ec_1_1_1_120 [1.1.1.120] +h +d_galactono_1_4_lactone +nadph
+    alpha_d_galactose
   }
 
-  branch from h2o side right {
-    h2o
-    <-> ec_3_2_1_22 [3.2.1.22] +beta_d_galactose +alpha_d_galactose
-    galabiose
+  branch from nadp side right {
+    nadp
+    <-> ec_1_1_1_112 [1.1.1.112] +indan_1_one +h +nadph
+    indan_1_ol
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_4_11_10 [3.4.11.10] +l_phenylalanine_p_nitroanilide +l_phenylalanine
-    4_nitroaniline
+    <-> . +adonixanthin
+    4_4_dihydroxyzeaxanthin
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +fucoxanthinol
+    8_8_dihydroxy_trans_neoxanthin
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
+    sucrose
   }
 
   branch from atp side right {
     atp
     <-> . +h +adp +phosphate +h2o
-    thiamine
+    taurocholate
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_5_1_40 [1.5.1.40] +coenzyme_gamma_f420_2 +h +nadph
+    1_5_dihydrocoenzyme_f420
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_5_1_40 [1.5.1.40] +coenzyme_gamma_f420_2 +nadph +h
+    reduced_coenzyme_f420
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
+    alpha_alpha_trehalose
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_8_2_15 [2.8.2.15] +adenosine_3_5_bisphosphate +testosterone_sulfate +testosterone
+    3_phosphoadenylyl_sulfate
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +r_dihydrodaidzein +nadp +h
+    daidzein
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +z_but_2_enol +nadp +h
+    z_but_2_enal
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +dehydroascorbide
+    cyclic_2_3_o_oxalyl_l_threonate
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +triethylamine_n_oxide +nadp +h2o +h +nadph
+    triethylamine
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +4_4_diapolycopenedial
+    4_4_dihydroxy_4_4_diapolycopen_4_al
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_2_1_23 [3.2.1.23] +lactose +phosphate
+    lactose_6_phosphate
+  }
+
+  branch from adp side left {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    s_2_4_dinitrophenyl_glutathione
+  }
+
+  branch from adp side right {
+    adp
+    <-> . +heptosyl_heptosyl_kdo2_lipida +atp +h
+    phospho_heptosyl_heptosyl_kdo2_lipida
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> ec_3_2_1_23 [3.2.1.23] +lactose_6_phosphate +h2o
+    alpha_lactose
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_2_4_2_1 [2.4.2.1] +7h_purine +2_deoxy_alpha_d_ribose_1_phosphate
+    2_deoxynebularine
   }
 
   branch from atp side left {
     atp
-    <-> ec_6_3_2_12 [6.3.2.12] +6r_10_formyltetrahydrofolate +h +l_glutamate +adp +phosphate
-    6r_10_formyltetrahydropteroyldiglutamate
+    <-> . +h +adp +phosphate +h2o
+    polydextrose
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
+    melibiose
   }
 }

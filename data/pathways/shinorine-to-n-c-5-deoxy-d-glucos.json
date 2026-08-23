@@ -159,51 +159,6 @@
       }
     },
     {
-      "id": "shinorine",
-      "name": "shinorine",
-      "formula": "C13H18N2O8",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM1368603"
-      }
-    },
-    {
-      "id": "h",
-      "name": "H",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM1"
-      }
-    },
-    {
-      "id": "diphosphate",
-      "name": "diphosphate",
-      "formula": "HO7P2",
-      "charge": -3,
-      "xrefs": {
-        "metanetx": "MNXM11"
-      }
-    },
-    {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM3"
-      }
-    },
-    {
-      "id": "l_serine",
-      "name": "L-serine",
-      "formula": "C3H7NO3",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM737787"
-      }
-    },
-    {
       "id": "n_2_3_dihydroxybenzoyl_l_seryl_2_n_c_5_deoxy_d",
       "name": "[N-(2,3-dihydroxybenzoyl)-L-seryl]2-N-(C-5-[deoxy-β-D-glucosyl]-2,3-dihydroxybenzoyl)-L-serine",
       "short": "[N-(2,3-dihydroxybe…",
@@ -512,94 +467,6 @@
     },
     {
       "id": "r7",
-      "name": "Reaction MNXR196994",
-      "substrates": [
-        {
-          "metabolite": "shinorine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "amp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "mycosporine_glycine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_seryl_amp",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "metanetx": "MNXR196994"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR196994"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r8",
-      "name": "Reaction MNXR196995",
-      "substrates": [
-        {
-          "metabolite": "diphosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "shinorine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "amp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "mycosporine_glycine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_serine",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "metanetx": "MNXR196995"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR196995"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r9",
       "name": "apo-salmochelin esterase",
       "equation": "monoglucosyl-enterobactin + H2O = [N-(2,3-dihydroxybenzoyl)-L-seryl]2-N-(C-5-[deoxy-beta-D-glucosyl]-2,3-dihydroxybenzoyl)-L-serine + H(+)",
       "ec": "3.1.1.107",
@@ -629,7 +496,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 9,
+      "pathwayStep": 7,
       "xrefs": {
         "rhea": "RHEA:60412"
       },
@@ -644,7 +511,7 @@
       }
     },
     {
-      "id": "r10",
+      "id": "r8",
       "name": "apo-salmochelin esterase",
       "equation": "diglucosyl-enterobactin + H2O = N-(2,3-dihydroxybenzoyl)-L-seryl-[N-(C-5-[deoxy-beta-D-glucosyl]-2,3-dihydroxybenzoyl)-L-serine]2 + H(+)",
       "ec": "3.1.1.107",
@@ -674,7 +541,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 10,
+      "pathwayStep": 8,
       "xrefs": {
         "rhea": "RHEA:60416"
       },
@@ -684,6 +551,250 @@
           {
             "db": "Rhea",
             "id": "RHEA:60416"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_mycosporine_glycine_3-s-hydroxy-tetracosa-12-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "mycosporine_glycine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-s-hydroxy-tetracosa-12-to-h2o-null"
+      },
+      "note": "Shares mycosporine glycine with 3(S)-hydroxy-tetracosa-12… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM163851"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_mycosporine_glycine_adenosine-5-phospho-n-me-to-n-acetylimidazole",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "mycosporine_glycine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "adenosine-5-phospho-n-me-to-n-acetylimidazole"
+      },
+      "note": "Shares mycosporine glycine with Adenosine-5'-phospho-N-me… to N-acetylimidazole.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM163851"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_seryl_amp_1-monodecanoylglycerol-to-o-pantetheine-4-phosph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_seryl_amp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-monodecanoylglycerol-to-o-pantetheine-4-phosph"
+      },
+      "note": "Shares L-seryl-AMP with 1-monodecanoylglycerol to O-(pantetheine-4'-phospho….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61231"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_seryl_amp_adenosine-5-phospho-n-me-to-n-acetylimidazole",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_seryl_amp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "adenosine-5-phospho-n-me-to-n-acetylimidazole"
+      },
+      "note": "Shares L-seryl-AMP with Adenosine-5'-phospho-N-me… to N-acetylimidazole.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61231"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_seryl_amp_n-long-chain-acyl-ethano-to-o-s-2s-4s-6s-2-4-6-t",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_seryl_amp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-long-chain-acyl-ethano-to-o-s-2s-4s-6s-2-4-6-t"
+      },
+      "note": "Shares L-seryl-AMP with N-(long-chain-acyl)ethano… to O-(S-[2S,4S,6S]-2,4,6-tri….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61231"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_3_dihydroxybenzoyl_5_adenylate_anthranilate-to-o-s-2-3-dihydroxybenzoyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_3_dihydroxybenzoyl_5_adenylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "anthranilate-to-o-s-2-3-dihydroxybenzoyl"
+      },
+      "note": "Shares 2,3-dihydroxybenzoyl 5'-adenylate with anthranilate to O-[S-2,3-dihydroxybenzoyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57417"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_enterobactin_2-3-dihydroxy-n-benzoylse-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "enterobactin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3-dihydroxy-n-benzoylse-to-h2o"
+      },
+      "note": "Shares enterobactin with 2,3-dihydroxy-N-benzoylse… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77805"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_enterobactin_ent-copal-8-ol-diphosphate-to-l-cysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "enterobactin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ent-copal-8-ol-diphosphate-to-l-cysteine"
+      },
+      "note": "Shares enterobactin with ent-copal-8-ol diphosphate to L-cysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77805"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_enterobactin_ferrienterobactin-to-n-2-3-dihydroxybenzoyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "enterobactin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ferrienterobactin-to-n-2-3-dihydroxybenzoyl"
+      },
+      "note": "Shares enterobactin with ferrienterobactin to N-(2,3-dihydroxybenzoyl)-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77805"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_diglucosyl_enterobactin_2-amino-4-hydroxy-5-phosp-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "diglucosyl_enterobactin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-amino-4-hydroxy-5-phosp-to-phosphate"
+      },
+      "note": "Shares diglucosyl-enterobactin with 2-amino-4-hydroxy-5-phosp… to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:142959"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_triglucosyl_enterobactin_2-amino-4-hydroxy-5-phosp-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "triglucosyl_enterobactin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-amino-4-hydroxy-5-phosp-to-phosphate"
+      },
+      "note": "Shares triglucosyl-enterobactin with 2-amino-4-hydroxy-5-phosp… to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:142960"
           }
         ]
       }

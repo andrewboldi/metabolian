@@ -1,0 +1,438 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "h-to-2r-2-hydroxy-2-methylbu-null",
+  "name": "H to (2R)-2-hydroxy-2-methylbu…",
+  "category": "other",
+  "summary": "A 3-step route from H(+) to (2R)-2-hydroxy-2-methylbutanenitrile, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR182348"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "2s_2_methylbutanenitrile",
+      "name": "(2S)-2-methylbutanenitrile",
+      "short": "2-methylbutanenitri…",
+      "formula": "C5H9N",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:134630"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "2r_2_hydroxy_2_methylbutanenitrile",
+      "name": "(2R)-2-hydroxy-2-methylbutanenitrile",
+      "short": "2-hydroxy-2-methylb…",
+      "formula": "C5H9NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:60908"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "beta_d_glucose",
+      "name": "beta-D-glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364060"
+      }
+    },
+    {
+      "id": "lotaustralin",
+      "name": "Lotaustralin",
+      "formula": "C11H19NO6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:6542"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1102128"
+      }
+    },
+    {
+      "id": "udp_alpha_d_glucose",
+      "name": "UDP-alpha-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1364019"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_2_1_21",
+      "name": "beta-glucosidase",
+      "ec": [
+        "3.2.1.21"
+      ],
+      "xrefs": {
+        "uniprot": "Q9H227"
+      }
+    },
+    {
+      "id": "ec_2_4_1_63",
+      "name": "linamarin synthase",
+      "ec": [
+        "2.4.1.63"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR182348",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2s_2_methylbutanenitrile",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2r_2_hydroxy_2_methylbutanenitrile",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR182348"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR182348"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "beta-glucosidase",
+      "ec": "3.2.1.21",
+      "substrates": [
+        {
+          "metabolite": "beta_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2r_2_hydroxy_2_methylbutanenitrile",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "lotaustralin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR113424"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR113424"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "linamarin synthase",
+      "ec": "2.4.1.63",
+      "substrates": [
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "lotaustralin",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "udp_alpha_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2r_2_hydroxy_2_methylbutanenitrile",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_63"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR143689"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR143689"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_2s_2_methylbutanenitrile_h-to-2r-2-hydroxy-2-methylbu",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2s_2_methylbutanenitrile"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-2r-2-hydroxy-2-methylbu"
+      },
+      "note": "Shares (2S)-2-methylbutanenitrile with H to (2R)-2-hydroxy-2-methylbu….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:134630"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2s_2_methylbutanenitrile_n-fatty-acyl-l-isoleuci-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2s_2_methylbutanenitrile"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-fatty-acyl-l-isoleuci-to-fmn"
+      },
+      "note": "Shares (2S)-2-methylbutanenitrile with N-(fatty acyl)-L-isoleuci… to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:134630"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2s_2_methylbutanenitrile_n-fatty-acyl-l-isoleuci-to-fmn-64212",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2s_2_methylbutanenitrile"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-fatty-acyl-l-isoleuci-to-fmn-64212"
+      },
+      "note": "Shares (2S)-2-methylbutanenitrile with N-(fatty acyl)-L-isoleuci… to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:134630"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2r_2_hydroxy_2_methylbutanenitrile_ginsenoside-mc-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2r_2_hydroxy_2_methylbutanenitrile"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ginsenoside-mc-to-h2o"
+      },
+      "note": "Shares (2R)-2-hydroxy-2-methylbutanenitrile with ginsenoside Mc to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60908"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2r_2_hydroxy_2_methylbutanenitrile_h-to-2r-2-hydroxy-2-methylbu",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2r_2_hydroxy_2_methylbutanenitrile"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-2r-2-hydroxy-2-methylbu"
+      },
+      "note": "Shares (2R)-2-hydroxy-2-methylbutanenitrile with H to (2R)-2-hydroxy-2-methylbu….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60908"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2r_2_hydroxy_2_methylbutanenitrile_h-to-2s-3e-2-hydroxypent-3-e",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2r_2_hydroxy_2_methylbutanenitrile"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-2s-3e-2-hydroxypent-3-e"
+      },
+      "note": "Shares (2R)-2-hydroxy-2-methylbutanenitrile with H to (2S,3E)-2-hydroxypent-3-e….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60908"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2r_2_hydroxy_2_methylbutanenitrile_h-to-2s-3e-2-hydroxypent-3-e-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2r_2_hydroxy_2_methylbutanenitrile"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-2s-3e-2-hydroxypent-3-e-null"
+      },
+      "note": "Shares (2R)-2-hydroxy-2-methylbutanenitrile with H to (2S,3E)-2-hydroxypent-3-e….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60908"
+          }
+        ]
+      }
+    }
+  ]
+}

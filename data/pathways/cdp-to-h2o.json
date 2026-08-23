@@ -1,0 +1,464 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "cdp-to-h2o",
+  "name": "CDP to H2O",
+  "category": "nucleotide-metabolism",
+  "summary": "A 3-step route from CDP to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR97048"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "cdp",
+      "name": "CDP",
+      "formula": "C9H12N3O11P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1102191"
+      }
+    },
+    {
+      "id": "dgdp",
+      "name": "dGDP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM436"
+      }
+    },
+    {
+      "id": "cmp",
+      "name": "CMP",
+      "formula": "C9H12N3O8P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1103302"
+      }
+    },
+    {
+      "id": "dgtp",
+      "name": "dGTP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM344"
+      }
+    },
+    {
+      "id": "uridine",
+      "name": "uridine",
+      "formula": "C9H12N2O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1103104"
+      }
+    },
+    {
+      "id": "ump",
+      "name": "UMP",
+      "formula": "C9H11N2O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1104823"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "lipid_x_h_pylori",
+      "name": "lipid X (H. pylori)",
+      "formula": "C40H76NO12P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1560166"
+      }
+    },
+    {
+      "id": "udp_2_n_3r_3_hydroxyoctadecanoyl_3_o_3r_3_hydrox",
+      "name": "UDP-2-N-[(3R)-3-hydroxyoctadecanoyl]-3-O-[(3R)-3-hydroxyhexadecanoyl]-alpha-D-glucosamine",
+      "short": "UDP-2-N-[(3R)-3-hyd…",
+      "formula": "C49H87N3O20P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1559536"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_1_48",
+      "name": "uridine/cytidine kinase",
+      "ec": [
+        "2.7.1.48"
+      ],
+      "xrefs": {
+        "uniprot": "Q9HA47"
+      }
+    },
+    {
+      "id": "ec_3_6_1_54",
+      "name": "UDP-2,3-diacylglucosamine diphosphatase",
+      "ec": [
+        "3.6.1.54"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR97048",
+      "substrates": [
+        {
+          "metabolite": "cdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dgdp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cmp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dgtp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR97048"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR97048"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "uridine/cytidine kinase",
+      "ec": "2.7.1.48",
+      "substrates": [
+        {
+          "metabolite": "uridine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dgtp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ump",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dgdp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_48"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR190906"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR190906"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "UDP-2,3-diacylglucosamine diphosphatase",
+      "ec": "3.6.1.54",
+      "substrates": [
+        {
+          "metabolite": "ump",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "lipid_x_h_pylori",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "udp_2_n_3r_3_hydroxyoctadecanoyl_3_o_3r_3_hydrox",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_54"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR200609"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR200609"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_dgdp_beta-d-fructose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dgdp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-d-fructose-to-h2o"
+      },
+      "note": "Shares dGDP with beta-D-fructose… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM436"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dgdp_datp-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dgdp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "datp-to-diphosphate"
+      },
+      "note": "Shares dGDP with dATP to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM436"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dgdp_dcmp-to-dcdp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dgdp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dcmp-to-dcdp"
+      },
+      "note": "Shares dGDP with dCMP to dCDP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM436"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dgdp_dgtp-to-3s-citryl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dgdp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dgtp-to-3s-citryl-coa"
+      },
+      "note": "Shares dGDP with dGTP to (3S)-Citryl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM436"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dgdp_h-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dgdp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-diphosphate"
+      },
+      "note": "Shares dGDP with H to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM436"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dgdp_n4-acetyl-2-deoxycytidine-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dgdp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n4-acetyl-2-deoxycytidine-to-succinate"
+      },
+      "note": "Shares dGDP with N4-acetyl-2'-deoxycytidine to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM436"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dgdp_phytyl-phosphate-to-di-trans-poly-cis-undecap",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dgdp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phytyl-phosphate-to-di-trans-poly-cis-undecap"
+      },
+      "note": "Shares dGDP with phytyl phosphate to di-trans,poly-cis-Undecap….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM436"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lipid_x_h_pylori_l-homocysteine-to-r-4-hydroxymandelonitri",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lipid_x_h_pylori"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-homocysteine-to-r-4-hydroxymandelonitri"
+      },
+      "note": "Shares lipid X (H. pylori) with L-homocysteine to (R)-4-hydroxymandelonitri….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1560166"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_udp_2_n_3r_3_hydroxyoctadecanoyl_3_o_3r_3_hydrox_l-homocysteine-to-r-4-hydroxymandelonitri",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "udp_2_n_3r_3_hydroxyoctadecanoyl_3_o_3r_3_hydrox"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-homocysteine-to-r-4-hydroxymandelonitri"
+      },
+      "note": "Shares UDP-2-N-[(3R)-3-hydroxyoctadecanoyl]-3-O-[(3R)-3-hydroxyhexadecanoyl]-alpha-D-glucosamine with L-homocysteine to (R)-4-hydroxymandelonitri….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1559536"
+          }
+        ]
+      }
+    }
+  ]
+}

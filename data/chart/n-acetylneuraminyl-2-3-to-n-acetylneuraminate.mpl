@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-acetylneuraminyl-2-3-to-n-acetylneuraminate "α-N-acetylneuraminyl-(2→3… to N-acetylneuraminate" {
-  spacing 152
+  spacing 158
 
   spine at 0,0 {
     n_acetylneuraminyl_2_3_d_galactosyl_1_4_d_gluco
@@ -20,5 +20,11 @@ pathway n-acetylneuraminyl-2-3-to-n-acetylneuraminate "α-N-acetylneuraminyl-(2�
     neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac
     <-> . +h2o -n_acetylneuraminate
     d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4
+  }
+
+  branch from udp_d_galactose side left {
+    udp_d_galactose
+    <-> . +n4_d_glcnac_1_2_d_man_1_3_neu5ac_2_3_d_gal_1_4_d +udp +hplus
+    n4_d_gal_1_4_d_glcnac_1_2_d_man_1_3_neu5ac_2_3_d
   }
 }

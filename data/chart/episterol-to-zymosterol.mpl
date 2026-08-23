@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway episterol-to-zymosterol "episterol to zymosterol" {
-  spacing 200
+  spacing 188
 
   spine at 0,0 {
     episterol
@@ -14,17 +14,5 @@ pathway episterol-to-zymosterol "episterol to zymosterol" {
     ergosta_5_7_22_24_28_tetraen_3beta_ol
     <-> ec_5_3_3_5 [5.3.3.5] +s_adenosyl_l_homocysteine +h +h2o -o2 -zymosterol
     s_adenosyl_l_methionine
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_dehydroascorbic_acid +5_9_11_trihydroxyprosta_6e_14z_dien_1_oate +h +l_ascorbate
-    9_11_cycloperoxy_5_hydroperoxy_6e_14z_eicosadien
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_dehydroascorbic_acid +5_9_cyclo_6_8_12_trihydroxy_10e_14z_eicosadienoi +h +l_ascorbate
-    5_9_cyclo_6_8_cycloperoxy_12_hydroperoxy_10e_14z
   }
 }

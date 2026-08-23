@@ -1,0 +1,511 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "gtp-to-guanine-null",
+  "name": "GTP to guanine",
+  "category": "other",
+  "summary": "A 3-step route from GTP to guanine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR195003"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "gtp",
+      "name": "GTP",
+      "formula": "C10H12N5O14P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1103553"
+      }
+    },
+    {
+      "id": "methylphosphonate",
+      "name": "methylphosphonate",
+      "formula": "CH4O3P",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM19346"
+      }
+    },
+    {
+      "id": "alpha_d_ribose_1_methylphosphonate_5_triphosphat",
+      "name": "alpha-D-ribose 1-methylphosphonate 5-triphosphate",
+      "short": "alpha-D-ribose…",
+      "formula": "C6H11O16P4",
+      "charge": -5,
+      "xrefs": {
+        "metanetx": "MNXM13284"
+      }
+    },
+    {
+      "id": "guanine",
+      "name": "guanine",
+      "formula": "C5H5N5O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM733114"
+      }
+    },
+    {
+      "id": "aldehydo_2_deoxy_d_ribose",
+      "name": "aldehydo-2-deoxy-D-ribose",
+      "short": "aldehydo-2-deoxy-D-…",
+      "formula": "C5H10O4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1371288"
+      }
+    },
+    {
+      "id": "2_deoxyguanosine",
+      "name": "2'-deoxyguanosine",
+      "formula": "C10H13N5O4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM647"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "adenine",
+      "name": "adenine",
+      "formula": "C5H5N5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM168"
+      }
+    },
+    {
+      "id": "2_deoxyadenosine",
+      "name": "2'-deoxyadenosine",
+      "formula": "C10H13N5O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM625"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_8_37",
+      "name": "alpha-D-ribose 1-methylphosphonate 5-triphosphate synthase",
+      "ec": [
+        "2.7.8.37"
+      ]
+    },
+    {
+      "id": "ec_2_4_2_6",
+      "name": "nucleoside deoxyribosyltransferase",
+      "ec": [
+        "2.4.2.6"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "alpha-D-ribose 1-methylphosphonate 5-triphosphate synthase",
+      "ec": "2.7.8.37",
+      "substrates": [
+        {
+          "metabolite": "gtp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methylphosphonate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "alpha_d_ribose_1_methylphosphonate_5_triphosphat",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "guanine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_8_37"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR195003"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR195003"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR165001",
+      "substrates": [
+        {
+          "metabolite": "aldehydo_2_deoxy_d_ribose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "guanine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxyguanosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR165001"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR165001"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "nucleoside deoxyribosyltransferase",
+      "ec": "2.4.2.6",
+      "substrates": [
+        {
+          "metabolite": "adenine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_deoxyguanosine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxyadenosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "guanine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_2_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR131626"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR131626"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_methylphosphonate_gtp-to-guanine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "methylphosphonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gtp-to-guanine"
+      },
+      "note": "Shares methylphosphonate with GTP to guanine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM19346"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_alpha_d_ribose_1_methylphosphonate_5_triphosphat_gtp-to-guanine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "alpha_d_ribose_1_methylphosphonate_5_triphosphat"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gtp-to-guanine"
+      },
+      "note": "Shares alpha-D-ribose 1-methylphosphonate 5-triphosphate with GTP to guanine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM13284"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_aldehydo_2_deoxy_d_ribose_3-hydroxy-simvastatin-la-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aldehydo_2_deoxy_d_ribose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxy-simvastatin-la-to-h2o-null"
+      },
+      "note": "Shares aldehydo-2-deoxy-D-ribose with 3'-hydroxy-simvastatin-la… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371288"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_aldehydo_2_deoxy_d_ribose_5-chloro-5-deoxy-d-ribona-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aldehydo_2_deoxy_d_ribose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-chloro-5-deoxy-d-ribona-to-phosphate"
+      },
+      "note": "Shares aldehydo-2-deoxy-D-ribose with 5-chloro-5-deoxy-D-ribona… to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371288"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_aldehydo_2_deoxy_d_ribose_aldehydo-2-deoxy-d-ribose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aldehydo_2_deoxy_d_ribose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aldehydo-2-deoxy-d-ribose-to-h2o"
+      },
+      "note": "Shares aldehydo-2-deoxy-D-ribose with aldehydo-2-deoxy-D-ribose to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371288"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_aldehydo_2_deoxy_d_ribose_aldehydo-2-deoxy-d-ribose-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aldehydo_2_deoxy_d_ribose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aldehydo-2-deoxy-d-ribose-to-h2o-null"
+      },
+      "note": "Shares aldehydo-2-deoxy-D-ribose with aldehydo-2-deoxy-D-ribose to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371288"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_aldehydo_2_deoxy_d_ribose_gtp-to-guanine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aldehydo_2_deoxy_d_ribose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gtp-to-guanine"
+      },
+      "note": "Shares aldehydo-2-deoxy-D-ribose with GTP to guanine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371288"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_aldehydo_2_deoxy_d_ribose_r-demethyl-4-deoxygadus-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aldehydo_2_deoxy_d_ribose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-demethyl-4-deoxygadus-to-nad"
+      },
+      "note": "Shares aldehydo-2-deoxy-D-ribose with (R)-demethyl-4-deoxygadus… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371288"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxyguanosine_2-deoxyguanosine-to-2-hydroxy-3-oxopropanoate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxyguanosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-deoxyguanosine-to-2-hydroxy-3-oxopropanoate"
+      },
+      "note": "Shares 2'-deoxyguanosine with 2'-deoxyguanosine… to 2-hydroxy-3-oxopropanoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM647"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxyguanosine_2-deoxyguanosine-to-2-hydroxy-3-oxopropanoate-nu",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxyguanosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-deoxyguanosine-to-2-hydroxy-3-oxopropanoate-nu"
+      },
+      "note": "Shares 2'-deoxyguanosine with 2'-deoxyguanosine… to 2-hydroxy-3-oxopropanoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM647"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxyguanosine_8-hydroxy-2-deoxyguanosi-to-2-deoxyguanosine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxyguanosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "8-hydroxy-2-deoxyguanosi-to-2-deoxyguanosine"
+      },
+      "note": "Shares 2'-deoxyguanosine with 8-hydroxy-2'-deoxyguanosi… to 2'-deoxyguanosine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM647"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxyguanosine_8-hydroxy-2-deoxyguanosi-to-2-deoxyguanosine-nul",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxyguanosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "8-hydroxy-2-deoxyguanosi-to-2-deoxyguanosine-nul"
+      },
+      "note": "Shares 2'-deoxyguanosine with 8-hydroxy-2'-deoxyguanosi… to 2'-deoxyguanosine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM647"
+          }
+        ]
+      }
+    }
+  ]
+}

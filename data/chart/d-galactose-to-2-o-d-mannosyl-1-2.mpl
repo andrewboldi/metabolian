@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-galactose-to-2-o-d-mannosyl-1-2 "α-D-galactose to 2-O-[α-D-mannosyl-(1→2)-α…" {
-  spacing 322
+  spacing 340
 
   spine at 0,0 {
     d_galactose
@@ -24,20 +24,20 @@ pathway d-galactose-to-2-o-d-mannosyl-1-2 "α-D-galactose to 2-O-[α-D-mannosyl-
 
   branch from d_galactose_1_phosphate side left {
     d_galactose_1_phosphate
-    <-> . +udp_d_glucose +h2o +hplus
+    <-> . +udp_d_galactose +h2o +hplus
     ump
   }
 
   branch from g1p side right {
     g1p
-    <-> ec_2_4_1_20 [2.4.1.20] +cellobiose +pi
-    glucose
+    <-> ec_5_4_2_2 [5.4.2.2]
+    d_glucose_6_phosphate
   }
 
   branch from g1p side left {
     g1p
-    <-> ec_2_4_1_139 [2.4.1.139] +h2o +pi
-    maltose
+    <-> ec_2_4_1_7 [2.4.1.7] +sucrose +pi
+    d_fructofuranose
   }
 
   branch from udp_d_galactose side right {
@@ -48,31 +48,103 @@ pathway d-galactose-to-2-o-d-mannosyl-1-2 "α-D-galactose to 2-O-[α-D-mannosyl-
 
   branch from udp_d_galactose side left {
     udp_d_galactose
-    <-> ec_2_4_1_22 [2.4.1.22] +glucose +udp +hplus
-    lactose
+    <-> ec_2_4_1_87 [2.4.1.87] +d_galactosyl_1_4_n_acetyl_d_glucosaminide +udp +hplus
+    d_galactosyl_1_3_d_galactosyl_1_4_n_acetyl_d_gl
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_10 [4.2.3.10] +gpp +h2o
-    endo_fenchol
+    <-> ec_4_2_3_36 [4.2.3.36] +terpentedienyl_diphosphate
+    terpentetriene
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_6_1_1_6 [6.1.1.6] +amp_3_end_1 +l_lysinium +atp +amp
-    3_l_lysyl_adenylyl_1_group
+    <-> . +gpp
+    pinene
   }
 
-  branch from 2_o_d_glucopyranosyl_3_o_phosphonato_d_glycerate side right {
-    2_o_d_glucopyranosyl_3_o_phosphonato_d_glycerate
-    <-> ec_2_4_1_266 [2.4.1.266] +pg3 +adp +hplus
-    adp_d_glucoside
-  }
-
-  branch from 2_o_d_mannosyl_1_2_d_glucosyl_d_glycerate side left {
+  branch from 2_o_d_mannosyl_1_2_d_glucosyl_d_glycerate side right {
     2_o_d_mannosyl_1_2_d_glucosyl_d_glycerate
     <-> . +gdp_d_mannose +gdp +hplus
     2_o_d_glucopyranosyl_d_glycerate
+  }
+
+  branch from d_galactose side left {
+    d_galactose
+    <-> ec_5_1_3_3 [5.1.3.3]
+    d_galactose
+  }
+
+  branch from udp_d_glucose side right {
+    udp_d_glucose
+    <-> ec_2_4_1_209 [2.4.1.209] +cis_4_coumarate +udp +hplus
+    4_o_d_glucosyl_cis_p_coumarate
+  }
+
+  branch from udp_d_glucose side left {
+    udp_d_glucose
+    <-> ec_2_4_1_177 [2.4.1.177] +trans_cinnamate +udp
+    1_o_trans_cinnamoyl_d_glucopyranose
+  }
+
+  branch from g1p side right {
+    g1p
+    <-> . +maltohexaose +pi
+    maltopentaose
+  }
+
+  branch from g1p side left {
+    g1p
+    <-> ec_2_7_7_69 [2.7.7.69] +pi +gdp +hplus
+    gdp_d_glucose
+  }
+
+  branch from udp_d_galactose side right {
+    udp_d_galactose
+    <-> ec_2_4_1_37 [2.4.1.37] +l_fucosyl_1_2_d_galactoside +udp +hplus
+    d_galactosyl_1_3_l_fucosyl_1_2_d_galactoside
+  }
+
+  branch from udp_d_galactose side left {
+    udp_d_galactose
+    <-> ec_2_4_1_133 [2.4.1.133] +o3_d_xylosyl_l_serine +udp +hplus
+    o3_d_galactosyl_1_4_d_xylosyl_l_serine
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +gpp
+    pinene
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_6_1_1_27 [6.1.1.27] +amp_3_end_1 +pser +atp +amp
+    3_o_phosphonato_l_seryl_adenylyl_2_group
+  }
+
+  branch from pg3 side right {
+    pg3
+    <-> ec_3_7_1_28 [3.7.1.28] +3_oxoisoapionate_4_phosphate +h2o +hplus
+    glycolate
+  }
+
+  branch from pg3 side left {
+    pg3
+    <-> ec_2_7_7_106 [2.7.7.106] +gtp +hplus +ppi
+    3_r_glyceryl_diphospho_5_guanosine
+  }
+
+  branch from gdp_d_mannose side right {
+    gdp_d_mannose
+    <-> ec_1_1_1_132 [1.1.1.132] +nad +h2o +nadh +hplus
+    gdp_d_mannuronate
+  }
+
+  branch from gdp_d_mannose side left {
+    gdp_d_mannose
+    <-> ec_4_2_1_47 [4.2.1.47] +h2o
+    gdp_4_dehydro_6_deoxy_d_mannose
   }
 }

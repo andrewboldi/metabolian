@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway hydroxyheme-i-to-hydrogen-donor "Hydroxyheme I to hydrogen donor" {
-  spacing 182
+  spacing 152
 
   spine at 0,0 {
     hydroxyheme_i
@@ -14,35 +14,5 @@ pathway hydroxyheme-i-to-hydrogen-donor "Hydroxyheme I to hydrogen donor" {
     ferroheme_o
     <-> ec_1_17_99_9 [1.17.99.9] +hydrogen_acceptor +h2o -hydrogen_donor
     ferroheme_a
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_lysine +l_threonine +l_phenylalanine
-    phenylalanyl_threonyl_lysine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_leucine +l_tryptophan +l_phenylalanine
-    phenylalanyl_tryptophanyl_leucine
-  }
-
-  branch from ferroheme_o side left {
-    ferroheme_o
-    <-> . +h2o
-    ferroheme_ot
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_323 [1.1.1.323] +nadh +h +thujan_3_one
-    thujan_3_ol
-  }
-
-  branch from nad side left {
-    nad
-    <-> . +4_oxahomoadamantan_5_one +nadh +h +o2 +h2o
-    1_hydroxy_4_oxahomoadamantan_5_one
   }
 }

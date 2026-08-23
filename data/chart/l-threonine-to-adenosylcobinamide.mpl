@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-threonine-to-adenosylcobinamide "L-threonine to adenosylcobinamide…" {
-  spacing 218
+  spacing 212
 
   spine at 0,0 {
     threonine
@@ -14,11 +14,5 @@ pathway l-threonine-to-adenosylcobinamide "L-threonine to adenosylcobinamide…"
     r_1_ammoniopropan_2_yl_phosphate
     <-> ec_6_3_1_10 [6.3.1.10] +adenosylcobyrate +atp -adp -pi -hplus
     adenosylcobinamide_phosphate
-  }
-
-  branch from adenosylcobinamide_phosphate side left {
-    adenosylcobinamide_phosphate
-    <-> ec_2_7_1_156 [2.7.1.156] +atp +adp +hplus
-    adenosylcobinamide
   }
 }

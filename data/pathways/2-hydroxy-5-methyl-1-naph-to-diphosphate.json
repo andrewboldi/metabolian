@@ -158,100 +158,6 @@
       "xrefs": {
         "chebi": "CHEBI:33019"
       }
-    },
-    {
-      "id": "1_hydroxy_6_methoxyphenazine_n10_oxide",
-      "name": "1-hydroxy-6-methoxyphenazine N10-oxide",
-      "short": "1-hydroxy-6-methoxy…",
-      "formula": "C13H9N2O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:192368"
-      }
-    },
-    {
-      "id": "1_6_dimethoxyphenazine_n5_oxide",
-      "name": "1,6-dimethoxyphenazine N5-oxide",
-      "short": "1,6-dimethoxyphenaz…",
-      "formula": "C14H12N2O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:192369"
-      }
-    },
-    {
-      "id": "malonyl-coa",
-      "name": "Malonyl-CoA",
-      "formula": "C24H33N7O19P3S",
-      "charge": -5,
-      "xrefs": {
-        "chebi": "CHEBI:57384"
-      }
-    },
-    {
-      "id": "acetyl_coa",
-      "name": "Acetyl-CoA",
-      "formula": "C23H34N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57288"
-      }
-    },
-    {
-      "id": "4_o_demethylbarbatate",
-      "name": "4-O-demethylbarbatate",
-      "short": "4-O-demethylbarbata…",
-      "formula": "C18H17O7",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:192547"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16526"
-      }
-    },
-    {
-      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
-      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
-      "short": "2-trans,6-trans,10-…",
-      "formula": "C20H33O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58756"
-      }
-    },
-    {
-      "id": "penichrysol",
-      "name": "penichrysol",
-      "formula": "C20H34O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:177897"
-      }
-    },
-    {
-      "id": "l_lysinium",
-      "name": "L-lysinium",
-      "formula": "C6H15N2O2",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:32551"
-      }
-    },
-    {
-      "id": "l_lysyl_5_amp",
-      "name": "L-lysyl-5'-AMP",
-      "formula": "C16H27N7O8P",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:176581"
-      }
     }
   ],
   "enzymes": [
@@ -436,183 +342,27 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "1-hydroxy-6-methoxyphenazine N(10)-oxide + S-adenosyl-L-methionine = 1,6-dimethoxyphena...",
-      "equation": "1-hydroxy-6-methoxyphenazine N(10)-oxide + S-adenosyl-L-methionine = 1,6-dimethoxyphenazine N(5)-oxide + S-adenosyl-L-homocysteine",
-      "substrates": [
-        {
-          "metabolite": "1_hydroxy_6_methoxyphenazine_n10_oxide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_6_dimethoxyphenazine_n5_oxide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:72635"
+      "id": "xt_2_hydroxy_5_methyl_1_naphthoate_12-phosphonooxy-octadeca-to-4-hydroxy-6-11-hydro",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_hydroxy_5_methyl_1_naphthoate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "12-phosphonooxy-octadeca-to-4-hydroxy-6-11-hydro"
+      },
+      "note": "Shares 2-hydroxy-5-methyl-1-naphthoate with 12-(phosphonooxy)octadeca… to 4-hydroxy-6-(11-hydroxyhe….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:72635"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "6 malonyl-CoA + 2 acetyl-CoA + 2 S-adenosyl-L-methionine + 3 H(+) = 4-O-demethylbarbata...",
-      "equation": "6 malonyl-CoA + 2 acetyl-CoA + 2 S-adenosyl-L-methionine + 3 H(+) = 4-O-demethylbarbatate + 2 S-adenosyl-L-homocysteine + 6 CO2 + 8 CoA + H2O",
-      "substrates": [
-        {
-          "metabolite": "malonyl-coa",
-          "stoichiometry": 6
-        },
-        {
-          "metabolite": "acetyl_coa",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 3
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "4_o_demethylbarbatate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 6
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 8
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:72895"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:72895"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "(2E,6E,10E)-geranylgeranyl diphosphate + H2O = (+)-penichrysol + diphosphate",
-      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate + H2O = (+)-penichrysol + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "penichrysol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:78403"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:78403"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "L-lysine + ATP + H(+) = L-lysyl-5'-AMP + diphosphate",
-      "equation": "L-lysine + ATP + H(+) = L-lysyl-5'-AMP + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "l_lysinium",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "l_lysyl_5_amp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:78615"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:78615"
+            "db": "ChEBI",
+            "id": "CHEBI:82757"
           }
         ]
       }

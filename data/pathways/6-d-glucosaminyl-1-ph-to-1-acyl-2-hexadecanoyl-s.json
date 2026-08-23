@@ -124,22 +124,53 @@
       }
     },
     {
-      "id": "lauroyl_coa",
-      "name": "lauroyl-CoA",
-      "formula": "C33H54N7O17P3S",
-      "charge": -4,
+      "id": "2_palmitoyl_6_d_glucosaminy_1_1_2_diacyl_sn_glyc",
+      "name": "2-palmitoyl-6-α-D-glucosaminy-1-(1,2-diacyl-sn-glycero-3-phospho)-1D-myo-inositol",
+      "short": "2-palmitoyl-6-α-D-g…",
+      "formula": "C33H58NO18PR2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57375"
+        "chebi": "CHEBI:233165"
       }
     },
     {
-      "id": "1_acyl_2_dodecanoyl_sn_glycero_3_phosphate",
-      "name": "1-acyl-2-dodecanoyl-sn-glycero-3-phosphate",
-      "short": "1-acyl-2-dodecanoyl…",
-      "formula": "C16H28O8PR",
-      "charge": -2,
+      "id": "sphinga_4e_8e_dienine",
+      "name": "sphinga-4E,8E-dienine",
+      "short": "sphinga-4E,8E-dieni…",
+      "formula": "C18H36NO2",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:64865"
+        "chebi": "CHEBI:72758"
+      }
+    },
+    {
+      "id": "4e_8e_n_hexadecanoylsphinga_4_8_dienine",
+      "name": "(4E,8E)-N-hexadecanoylsphinga-4,8-dienine",
+      "short": "(4E,8E)-N-hexadecan…",
+      "formula": "C34H65NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:157623"
+      }
+    },
+    {
+      "id": "sphinga_4e_8z_dienine",
+      "name": "sphinga-(4E,8Z)-dienine",
+      "short": "sphinga-(4E,8Z)-die…",
+      "formula": "C18H36NO2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:157606"
+      }
+    },
+    {
+      "id": "4e_8z_n_hexadecanoylsphinga_4_8_dienine",
+      "name": "(4E,8Z)-N-hexadecanoylsphinga-4,8-dienine",
+      "short": "(4E,8Z)-N-hexadecan…",
+      "formula": "C34H65NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:157624"
       }
     }
   ],
@@ -149,7 +180,10 @@
       "name": "glycosylphosphatidylinositol phospholipase D",
       "ec": [
         "3.1.4.50"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P80108"
+      }
     }
   ],
   "reactions": [
@@ -282,21 +316,21 @@
     },
     {
       "id": "r4",
-      "name": "a 1-acyl-sn-glycero-3-phosphate + dodecanoyl-CoA = a 1-acyl-2-dodecanoyl-sn-glycero-3-p...",
-      "equation": "a 1-acyl-sn-glycero-3-phosphate + dodecanoyl-CoA = a 1-acyl-2-dodecanoyl-sn-glycero-3-phosphate + CoA",
+      "name": "a 6-(alpha-D-glucosaminyl)-1-(1,2-diacyl-sn-glycero-3-phospho)-1D-myo-inositol + hexade...",
+      "equation": "a 6-(alpha-D-glucosaminyl)-1-(1,2-diacyl-sn-glycero-3-phospho)-1D-myo-inositol + hexadecanoyl-CoA = a 2-hexadecanoyl-6-alpha-D-glucosaminy-1-(1,2-diacyl-sn-glycero-3-phospho)-1D-myo-inositol + CoA",
       "substrates": [
         {
-          "metabolite": "1_acyl_sn_glycerol_3_phosphate",
+          "metabolite": "6_d_glucosaminyl_1_phosphatidyl_1d_myo_inositol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "lauroyl_coa",
+          "metabolite": "palmitoyl_coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "1_acyl_2_dodecanoyl_sn_glycero_3_phosphate",
+          "metabolite": "2_palmitoyl_6_d_glucosaminy_1_1_2_diacyl_sn_glyc",
           "stoichiometry": 1
         },
         {
@@ -307,14 +341,212 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:44304"
+        "rhea": "RHEA:83759"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:44304"
+            "id": "RHEA:83759"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "sphinga-(4E,8E)-dienine + hexadecanoyl-CoA = N-hexadecanoylsphinga-(4E,8E)-dienine + Co...",
+      "equation": "sphinga-(4E,8E)-dienine + hexadecanoyl-CoA = N-hexadecanoylsphinga-(4E,8E)-dienine + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "sphinga_4e_8e_dienine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "palmitoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4e_8e_n_hexadecanoylsphinga_4_8_dienine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:65620"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65620"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "sphinga-(4E,8Z)-dienine + hexadecanoyl-CoA = N-hexadecanoylsphinga-(4E,8Z)-dienine + Co...",
+      "equation": "sphinga-(4E,8Z)-dienine + hexadecanoyl-CoA = N-hexadecanoylsphinga-(4E,8Z)-dienine + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "sphinga_4e_8z_dienine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "palmitoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4e_8z_n_hexadecanoylsphinga_4_8_dienine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:65624"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65624"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_6_d_glucosaminyl_1_phosphatidyl_1d_myo_inositol_6-n-acetyl-d-glucosami-to-cytidine-5-monophospha",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_d_glucosaminyl_1_phosphatidyl_1d_myo_inositol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-n-acetyl-d-glucosami-to-cytidine-5-monophospha"
+      },
+      "note": "Shares 6-(α-D-glucosaminyl)-1-phosphatidyl-1D-myo-inositol with 6-(N-acetyl-α-D-glucosami… to cytidine 5'-monophosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57997"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_d_glucosaminyl_1_phosphatidyl_1d_myo_inositol_n-arachidonoylsphingosine-to-n-acylsphingosine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_d_glucosaminyl_1_phosphatidyl_1d_myo_inositol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-arachidonoylsphingosine-to-n-acylsphingosine"
+      },
+      "note": "Shares 6-(α-D-glucosaminyl)-1-phosphatidyl-1D-myo-inositol with N-arachidonoylsphingosine to N-acylsphingosine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57997"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sphinga_4e_8e_dienine_fatty-acyl-coa-to-glycerol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sphinga_4e_8e_dienine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fatty-acyl-coa-to-glycerol"
+      },
+      "note": "Shares sphinga-4E,8E-dienine with fatty acyl-CoA to glycerol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:72758"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sphinga_4e_8e_dienine_n-lignoceroylsphingosine-to-n-2-hydroxytetracosa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sphinga_4e_8e_dienine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-lignoceroylsphingosine-to-n-2-hydroxytetracosa"
+      },
+      "note": "Shares sphinga-4E,8E-dienine with N-lignoceroylsphingosine-… to N-(2-hydroxytetracosanoyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:72758"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sphinga_4e_8z_dienine_3-hydroxyicosanoyl-coa-to-n-2-hydroxytetracosano",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sphinga_4e_8z_dienine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxyicosanoyl-coa-to-n-2-hydroxytetracosano"
+      },
+      "note": "Shares sphinga-(4E,8Z)-dienine with 3-hydroxyicosanoyl-CoA to N-(2-hydroxytetracosanoyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:157606"
           }
         ]
       }

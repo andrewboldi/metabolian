@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 11beta-hydroxyprogesterone-to-h2o "11Beta-Hydroxyprogesterone to H2O" {
-  spacing 324
+  spacing 246
 
   spine at 0,0 {
     11beta_hydroxyprogesterone
@@ -24,87 +24,9 @@ pathway 11beta-hydroxyprogesterone-to-h2o "11Beta-Hydroxyprogesterone to H2O" {
     androsterone_sulfate
   }
 
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_412 [1.1.1.412] +h +nadph +2r_2_decyl_3_oxotetradecanoate
-    2r_3s_2_decyl_3_hydroxytetradecanoate
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_3_1_111 [1.3.1.111] +h +geranylgeranyl_bacteriopheophytin +nadph
-    bacteriophaeophytin_a
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +thiostrepton +phosphate +thiostrepton
-    atp
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    l_tyrosyl_l_arginine
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
-    gamma_l_glutamyl_l_cysteinyl_beta_alanine
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
-    gly_glu
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +nitric_oxide
-    n2
-  }
-
-  branch from o2 side right {
-    o2
-    <-> ec_1_14_13_122 [1.14.13.122] +chlorophyllide_a +h +nadph +nadp +h2o
-    chlorophyllide_b
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> ec_1_1_1_115 [1.1.1.115] +h +d_ribonate +nadp +h2o
-    beta_d_ribopyranose
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> . +h +syringaresinol +nadp
-    5_5_dimethoxylariciresinol
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_2_1_5 [1.2.1.5] +nadh +r_lactate +h +h2o
-    s_lactaldehyde
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_6_5_2 [1.6.5.2] +ubiquinol_9 +nadh +h
-    ubiquinone_9
-  }
-
-  branch from acetaldehyde side left {
-    acetaldehyde
-    <-> .
-    r_acetoin
-  }
-
-  branch from acetaldehyde side right {
-    acetaldehyde
-    <-> ec_1_1_1_1 [1.1.1.1] +nadp +h +nadph
-    ethanol
+  branch from sulfate side left {
+    sulfate
+    <-> . +4_hydroxybenzyl_isothiocyanate
+    e_2_4_hydroxyphenyl_n_sulfonatooxy_ethenimidoth
   }
 }

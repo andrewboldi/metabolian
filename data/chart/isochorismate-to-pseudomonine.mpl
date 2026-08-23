@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway isochorismate-to-pseudomonine "isochorismate to pseudomonine" {
-  spacing 182
+  spacing 158
 
   spine at 0,0 {
     isochorismate
@@ -26,29 +26,5 @@ pathway isochorismate-to-pseudomonine "isochorismate to pseudomonine" {
     2_hydroxybenzoyl_amp
     <-> . +coa +amp +hplus
     2_hydroxybenzoyl_coa
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +3r_3_1h_indol_3_ylmethyl_3h_1_4_benzodiazepine +dmapp
-    2s_3r_11r_aszonalenin
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +3s_3_1h_indol_3_ylmethyl_3h_1_4_benzodiazepine +dmapp
-    2s_3r_11s_aszonalenin
-  }
-
-  branch from holo-acp side right {
-    holo-acp
-    <-> ec_2_3_1_293 [2.3.1.293] +ultra_long_chain_mono_unsaturated_fatty_acyl_pan +malonyl-acp +hplus +co2
-    ultra_long_chain_mono_unsaturated_3_oxoacyl_pant
-  }
-
-  branch from holo-acp side left {
-    holo-acp
-    <-> ec_2_3_1_129 [2.3.1.129] +o_s_3r_3_hydroxyacylpantetheine_4_phosphoryl_ser +udpglcnac
-    udp_3_o_3r_hydroxyacyl_n_acetyl_d_glucosamine
   }
 }

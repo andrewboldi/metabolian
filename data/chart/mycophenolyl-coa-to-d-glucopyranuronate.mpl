@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway mycophenolyl-coa-to-d-glucopyranuronate "mycophenolyl-CoA to D-glucopyranuronate" {
-  spacing 248
+  spacing 254
 
   spine at 0,0 {
     mycophenolyl_coa
@@ -22,9 +22,15 @@ pathway mycophenolyl-coa-to-d-glucopyranuronate "mycophenolyl-CoA to D-glucopyra
     mycophenolate_7_o_d_glucuronide
   }
 
-  branch from mycophenolate side right {
-    mycophenolate
-    <-> . +6_o_desmethylmycophenolate +sam +hplus
-    sah
+  branch from udp_d_glucuronate side right {
+    udp_d_glucuronate
+    <-> . +17_estradiol +udp +hplus
+    17_estradiol_3_o_d_glucuronide
+  }
+
+  branch from udp_d_glucuronate side left {
+    udp_d_glucuronate
+    <-> . +17_estradiol +udp +hplus
+    17_estradiol_17_glucosiduronate
   }
 }

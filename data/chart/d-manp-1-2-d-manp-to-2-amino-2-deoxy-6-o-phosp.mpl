@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-manp-1-2-d-manp-to-2-amino-2-deoxy-6-o-phosp "β-D-Manp-(1→2)-β-D-Manp-(… to 2-amino-2-deoxy-6-O-phosp…" {
-  spacing 340
+  spacing 338
 
   spine at 0,0 {
     d_manp_1_2_d_manp_1_2_d_manp
@@ -30,43 +30,37 @@ pathway d-manp-1-2-d-manp-to-2-amino-2-deoxy-6-o-phosp "β-D-Manp-(1→2)-β-D-M
 
   branch from d_mannose_1_phosphate side right {
     d_mannose_1_phosphate
-    <-> . +h2o +gmp +hplus
-    gdp_d_mannose
-  }
-
-  branch from d_mannose_1_phosphate side left {
-    d_mannose_1_phosphate
     <-> ec_2_7_7_69 [2.7.7.69] +gdp_l_galactose +gdp_d_mannose
     l_galactose_1_phosphate
   }
 
-  branch from d_mannopyranose side right {
+  branch from d_mannopyranose side left {
     d_mannopyranose
     <-> ec_1_1_1_255 [1.1.1.255] +nad +nadh +hplus
     d_mannitol
   }
 
-  branch from d_mannopyranose side left {
+  branch from d_mannopyranose side right {
     d_mannopyranose
     <-> ec_1_1_3_4 [1.1.3.4] +d_mannono_1_5_lactone +h2o2
     o2
   }
 
-  branch from d_fructofuranose_6_phosphate side right {
+  branch from d_fructofuranose_6_phosphate side left {
     d_fructofuranose_6_phosphate
     <-> ec_2_7_1_1 [2.7.1.1] +atp +adp +hplus
     d_fructofuranose
   }
 
-  branch from glutamate side left {
-    glutamate
-    <-> . +akg +plp
-    pyridoxamine_5_phosphate
+  branch from d_mannopyranose side right {
+    d_mannopyranose
+    <-> ec_3_2_1_22 [3.2.1.22] +d_galactopyranose +h2o
+    epimelibiose
   }
 
-  branch from glutamate side right {
-    glutamate
-    <-> ec_6_2_1_68 [6.2.1.68] +holo-acp +atp +amp +ppi
-    o_s_l_glutamyl_pantetheine_4_phosphoryl_serine_1
+  branch from d_mannopyranose side left {
+    d_mannopyranose
+    <-> .
+    glucose
   }
 }

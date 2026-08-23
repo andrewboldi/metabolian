@@ -149,6 +149,46 @@
       "xrefs": {
         "chebi": "CHEBI:57368"
       }
+    },
+    {
+      "id": "1_monolauroylglycerol",
+      "name": "1-monolauroylglycerol",
+      "short": "1-monolauroylglycer…",
+      "formula": "C15H30O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:75539"
+      }
+    },
+    {
+      "id": "1_lauroyl_2_oleoylglycerol",
+      "name": "1-lauroyl-2-oleoylglycerol",
+      "short": "1-lauroyl-2-oleoylg…",
+      "formula": "C33H62O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:75579"
+      }
+    },
+    {
+      "id": "1_monomyristoylglycerol",
+      "name": "1-monomyristoylglycerol",
+      "short": "1-monomyristoylglyc…",
+      "formula": "C17H34O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:75562"
+      }
+    },
+    {
+      "id": "1_myristoyl_2_oleoylglycerol",
+      "name": "1-myristoyl-2-oleoylglycerol",
+      "short": "1-myristoyl-2-oleoy…",
+      "formula": "C35H66O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:75582"
+      }
     }
   ],
   "enzymes": [],
@@ -348,6 +388,328 @@
           {
             "db": "Rhea",
             "id": "RHEA:77547"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "1-dodecanoylglycerol + (9Z)-octadecenoyl-CoA = 1-dodecanoyl-2-(9Z-octadecenoyl)-glycero...",
+      "equation": "1-dodecanoylglycerol + (9Z)-octadecenoyl-CoA = 1-dodecanoyl-2-(9Z-octadecenoyl)-glycerol + CoA",
+      "substrates": [
+        {
+          "metabolite": "1_monolauroylglycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oleoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_lauroyl_2_oleoylglycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:38115"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38115"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "1-tetradecanoylglycerol + (9Z)-octadecenoyl-CoA = 1-tetradecanoyl-2-(9Z-octadecenoyl)-g...",
+      "equation": "1-tetradecanoylglycerol + (9Z)-octadecenoyl-CoA = 1-tetradecanoyl-2-(9Z-octadecenoyl)-glycerol + CoA",
+      "substrates": [
+        {
+          "metabolite": "1_monomyristoylglycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oleoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_myristoyl_2_oleoylglycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:38119"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38119"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphoch_1-octadecanoyl-2-pentanoy-to-arachidonate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphoch"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-octadecanoyl-2-pentanoy-to-arachidonate"
+      },
+      "note": "Shares 1-stearoyl-2-arachidonoyl-sn-glycero-3-phosphocholine with 1-octadecanoyl-2-pentanoy… to arachidonate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74965"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphoch_1-oleoyl-2-stearoyl-sn-gl-to-1-o-oleoyl-sn-glyce",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphoch"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-oleoyl-2-stearoyl-sn-gl-to-1-o-oleoyl-sn-glyce"
+      },
+      "note": "Shares 1-stearoyl-2-arachidonoyl-sn-glycero-3-phosphocholine with 1-oleoyl-2-stearoyl-sn-gl… to 1-O-oleoyl-sn-glycero-3-p….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74965"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphoch_1-tetradecanoyl-2-5z-8z-to-ricinoleoyl-sn-glycer",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphoch"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-tetradecanoyl-2-5z-8z-to-ricinoleoyl-sn-glycer"
+      },
+      "note": "Shares 1-stearoyl-2-arachidonoyl-sn-glycero-3-phosphocholine with 1-tetradecanoyl-2-[(5Z,8Z… to ricinoleoyl-sn-glycero-3-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74965"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphoch_oligoglycosyl-1-4-d-g-to-cytidine-5-monophosphat",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphoch"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "oligoglycosyl-1-4-d-g-to-cytidine-5-monophosphat"
+      },
+      "note": "Shares 1-stearoyl-2-arachidonoyl-sn-glycero-3-phosphocholine with oligoglycosyl-(1→4)-β-D-g… to cytidine 5'-monophosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74965"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_arachidonoylglycerol_1-o-1-2-saturated-alkyl-to-di-sulfido-diiron",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_arachidonoylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-o-1-2-saturated-alkyl-to-di-sulfido-diiron"
+      },
+      "note": "Shares 1-arachidonoylglycerol with 1-O-(1,2-saturated-alkyl)… to di-μ-sulfido-diiron.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75612"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_monolauroylglycerol_1-o-1-2-saturated-alkyl-to-di-sulfido-diiron",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_monolauroylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-o-1-2-saturated-alkyl-to-di-sulfido-diiron"
+      },
+      "note": "Shares 1-monolauroylglycerol with 1-O-(1,2-saturated-alkyl)… to di-μ-sulfido-diiron.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75539"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_monolauroylglycerol_1-oleoylglycerol-to-oleate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_monolauroylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-oleoylglycerol-to-oleate"
+      },
+      "note": "Shares 1-monolauroylglycerol with 1-oleoylglycerol to oleate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75539"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_lauroyl_2_oleoylglycerol_1-2-dioleoyl-sn-glycero-3-to-1-butyryl-2-oleoyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_lauroyl_2_oleoylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-dioleoyl-sn-glycero-3-to-1-butyryl-2-oleoyl"
+      },
+      "note": "Shares 1-lauroyl-2-oleoylglycerol with 1,2-dioleoyl-sn-glycero-3… to 1-butyryl-2-oleoyl-sn-gly….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75579"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_monomyristoylglycerol_1-o-1-2-saturated-alkyl-to-di-sulfido-diiron",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_monomyristoylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-o-1-2-saturated-alkyl-to-di-sulfido-diiron"
+      },
+      "note": "Shares 1-monomyristoylglycerol with 1-O-(1,2-saturated-alkyl)… to di-μ-sulfido-diiron.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75562"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_monomyristoylglycerol_3-oleoyl-sn-glycerol-to-oleate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_monomyristoylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-oleoyl-sn-glycerol-to-oleate"
+      },
+      "note": "Shares 1-monomyristoylglycerol with 3-oleoyl-sn-glycerol to oleate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75562"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_myristoyl_2_oleoylglycerol_dioleoyl-phosphatidic-acid-to-1-octanoyl-2-oleoy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_myristoyl_2_oleoylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dioleoyl-phosphatidic-acid-to-1-octanoyl-2-oleoy"
+      },
+      "note": "Shares 1-myristoyl-2-oleoylglycerol with dioleoyl phosphatidic acid to 1-octanoyl-2-oleoyl-sn-gl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75582"
           }
         ]
       }

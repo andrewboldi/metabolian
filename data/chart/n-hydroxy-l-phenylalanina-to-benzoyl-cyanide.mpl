@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-hydroxy-l-phenylalanina-to-benzoyl-cyanide "N-hydroxy-L-phenylalaninaâ€¦ to benzoyl cyanide" {
-  spacing 240
+  spacing 216
 
   spine at 0,0 {
     n_hydroxy_l_phenylalaninate
@@ -16,29 +16,5 @@ pathway n-hydroxy-l-phenylalanina-to-benzoyl-cyanide "N-hydroxy-L-phenylalaninaâ
     r_mandelonitrile
     <-> ec_1_1_3_49 [1.1.3.49] +o2 -h2o2
     benzoyl_cyanide
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +6_hydroxy_28_norteasterone +fmnh2 +o2 +h2o +hplus
-    28_norteasterone
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +3_dehydro_6_deoxo_28_norteasterone +fmnh2 +o2 +h2o +hplus
-    6_dehydro_28_norteasterone
-  }
-
-  branch from r_mandelonitrile side left {
-    r_mandelonitrile
-    <-> ec_3_2_1_118 [3.2.1.118] +alpha_d_glucose +h2o
-    r_prunasin
-  }
-
-  branch from r_mandelonitrile side right {
-    r_mandelonitrile
-    <-> ec_3_2_1_118 [3.2.1.118] +beta_d_glucose +r_prunasin
-    h2o
   }
 }

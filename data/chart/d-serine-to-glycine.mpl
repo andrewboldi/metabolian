@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-serine-to-glycine "D-serine to glycine" {
-  spacing 152
+  spacing 158
 
   spine at 0,0 {
     dserine
@@ -14,5 +14,11 @@ pathway d-serine-to-glycine "D-serine to glycine" {
     ammonioacetaldehyde
     <-> . +nad +h2o -nadh -hplus
     glycine
+  }
+
+  branch from dserine side left {
+    dserine
+    <-> ec_3_1_3_3 [3.1.3.3] +h2o +pi
+    o_phosphonatooxy_d_serine
   }
 }

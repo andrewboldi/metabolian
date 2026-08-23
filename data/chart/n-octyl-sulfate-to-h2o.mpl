@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-octyl-sulfate-to-h2o "n-octyl sulfate to H2O" {
-  spacing 182
+  spacing 194
 
   spine at 0,0 {
     n_octyl_sulfate
@@ -22,27 +22,39 @@ pathway n-octyl-sulfate-to-h2o "n-octyl sulfate to H2O" {
     octan_1_ol
   }
 
-  branch from succinate side right {
-    succinate
-    <-> . +3_n4_etheno_2_deoxycytidine_5_monophosphate_1 +akg +o2 +h2o +glyoxal +co2
-    2_deoxycytidine_5_monophosphate_1
-  }
-
-  branch from succinate side left {
-    succinate
-    <-> . +3_n4_etheno_2_deoxycytidine_5_monophosphate_1 +akg +o2 +h2o +2_deoxycytidine_5_monophosphate_1 +co2
-    glyoxal
-  }
-
   branch from h2o side right {
     h2o
-    <-> . +4_hydroxy_1_pyrroline_2_carboxylate +h
-    2_oxo_4_hydroxy_5_aminovalerate
+    <-> ec_3_5_2_2 [3.5.2.2] +hydantoin +h
+    n_carbamoylglycine
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +1_ribosylimidazole_4_acetate +phosphate
-    1_5_phosphoribosyl_imidazole_4_acetate
+    <-> . +e_p_coumaroylagmatine +h2o2
+    hordatine_a
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_3_1_206 [2.3.1.206] +hexanoyl_coa +malonyl_coa +olivetol +coa
+    co2
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_3_1_206 [2.3.1.206] +hexanoyl_coa +malonyl_coa +co2 +coa
+    4_hydroxy_6_2_oxoheptyl_pyran_2_one
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +lesquerella_oil +h +dodecanoate
+    triglyceride_estolide
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_gl +nh4
+    und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig
   }
 }

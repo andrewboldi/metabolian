@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-7-dihydroxy-4-hydroxym-to-11-o-desmethylfendle "5,7-dihydroxy-4-(hydroxym… to 11'-O-desmethylfendlerol" {
-  spacing 188
+  spacing 164
 
   spine at 0,0 {
     5_7_dihydroxy_4_hydroxymethyl_6_methylphthalide
@@ -18,39 +18,15 @@ pathway 5-7-dihydroxy-4-hydroxym-to-11-o-desmethylfendle "5,7-dihydroxy-4-(hydro
     11_o_desmethylfendlerol
   }
 
-  branch from sah side left {
-    sah
-    <-> . +cytidine_5_monophosphate_1 +sam +hplus
-    5_methylcytidine_5_monophosphate_1
+  branch from fpp side left {
+    fpp
+    <-> ec_2_7_4_18 [2.7.4.18] +atp +adp
+    farnesyl_triphosphate
   }
 
-  branch from sah side right {
-    sah
-    <-> . +sam +5_methylcytidine_5_monophosphate_1 +hplus
-    cytidine_5_monophosphate_1
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    16_s_hete
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +leukotriene_b4 +fmnh2 +o2 +h2o +hplus
-    18_hydroxyleukotriene_b4
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +l_tryptophan +gpp
-    2s_3r_3_geranyl_2_3_dihydro_2_n_cyclo_l_tryptop
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +indole_3_butyrate +glutamine +atp +amp +hplus
-    n2_4_indol_3_yl_butanoyl_l_glutaminate
+  branch from fpp side right {
+    fpp
+    <-> . +nadph +o2 +hplus +nadp +h2o
+    2e_6e_10e_hydroxyfarnesyl_diphosphate
   }
 }

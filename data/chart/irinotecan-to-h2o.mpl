@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway irinotecan-to-h2o "irinotecan to H2O" {
-  spacing 182
+  spacing 254
 
   spine at 0,0 {
     irinotecan
@@ -24,25 +24,97 @@ pathway irinotecan-to-h2o "irinotecan to H2O" {
 
   branch from atp side right {
     atp
-    <-> ec_6_3_2_47 [6.3.2.47] +3_2r_3r_3_carbamoyloxiran_2_yl_carbonyl_amino_l +l_valine +h +adp +phosphate
-    dapdiamide_e
+    <-> . +h +adp +phosphate +h2o
+    12s_hydroperoxy_5z_8z_10e_14z_eicosatetraenoate
   }
 
   branch from atp side left {
     atp
-    <-> . +9z_12z_octadecadienoate +h +linoleyl_amp
-    diphosphate
+    <-> . +h +adp +phosphate +h2o
+    12_ht_or_m_vi_12_hydroxy_tacrolimus
   }
 
   branch from h2o side right {
     h2o
-    <-> . +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +z_omega_methylsulfanyl_pentyl_thiohydroximate
-    ser_gly
+    <-> ec_4_2_1_84 [4.2.1.84] +methylacrylonitrile
+    methacrylamide
   }
 
   branch from h2o side left {
     h2o
-    <-> . +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +ser_gly
-    z_omega_methylsulfanyl_hexyl_thiohydroximate
+    <-> ec_3_4_11_2 [3.4.11.2] +l_leucine +l_phenylalanine
+    leu_phe
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_4_11_2 [3.4.11.2] +dl_alanyl_dl_phenylalanine +l_phenylalanine
+    alanine
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_4_11_2 [3.4.11.2] +arg_phe +l_phenylalanine
+    arginine
+  }
+
+  branch from udp_d_glucuronate side right {
+    udp_d_glucuronate
+    <-> . +17_epiestriol +udp +hplus
+    17_epiestriol_3_o_d_glucuronide
+  }
+
+  branch from udp_d_glucuronate side left {
+    udp_d_glucuronate
+    <-> . +hyodeoxycholate +udp
+    hyodeoxycholic_acid_24_o_d_glucuronide
+  }
+
+  branch from h side right {
+    h
+    <-> ec_4_2_2_6 [4.2.2.6] +4_deoxy_l_threo_hex_4_enopyranuronate
+    4_4_deoxy_beta_d_gluc_4_enosyluronic_acid_d_gala
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_1_6_3 [3.1.6.3] +beta_d_glucose +sulfate +h2o
+    d_glucopyranose_6_sulfate
+  }
+
+  branch from adp side right {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    propane_1_3_diamine
+  }
+
+  branch from adp side left {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    15_31_o_didesmethyl_tacrolimus
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_4_2_3_27 [4.2.3.27] +prenyl_phosphate
+    isoprene
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +carbamoyl_phosphate +h
+    cyanate
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    15_dmt_or_m_iii_15_o_desmethyl_tacrolimus
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    15s_hydroperoxy_5z_8z_11z_13e_eicosatetraenoate
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway sphingomyelin-d18-1-to-n-tetracosenoylsphingosin "sphingomyelin d18:1 to N-tetracosenoylsphingosine" {
-  spacing 156
+  spacing 162
 
   spine at 0,0 {
     sphingomyelin
@@ -14,5 +14,11 @@ pathway sphingomyelin-d18-1-to-n-tetracosenoylsphingosin "sphingomyelin d18:1 to
     sphingosine
     <-> . +c24_1_coa -coa -hplus
     n_tetracosenoylsphingosine
+  }
+
+  branch from c24_1_coa side left {
+    c24_1_coa
+    <-> . +c17_sphingosine +coa +hplus
+    n_tetracosenoyl_c17_sphingosine
   }
 }

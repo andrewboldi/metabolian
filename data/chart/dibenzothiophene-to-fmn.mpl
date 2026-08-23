@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dibenzothiophene-to-fmn "dibenzothiophene to FMN" {
-  spacing 170
+  spacing 206
 
   spine at 0,0 {
     dibenzothiophene
@@ -20,19 +20,55 @@ pathway dibenzothiophene-to-fmn "dibenzothiophene to FMN" {
 
   branch from fmn side left {
     fmn
-    <-> . +12_hete +fmnh2 +o2 +h2o +hplus
-    12_20_dihete
+    <-> . +miltiradiene +fmnh2 +o2 +h2o +hplus
+    11_oxomiltiradiene
   }
 
   branch from fmn side right {
     fmn
-    <-> . +6_trans_leukotriene_b4 +fmnh2 +o2 +h2o +hplus
-    20_hydroxy_6_trans_leukotriene_b4
+    <-> . +miltiradiene +fmnh2 +o2 +h2o +hplus
+    miltiradien_20_al
   }
 
   branch from fmn_n5_oxide side left {
     fmn_n5_oxide
     <-> . +fmn_n5_peroxide +dibenzothiophene_5_5_dioxide
     2_hydroxybiphenyl_2_sulfinate
+  }
+
+  branch from fmn_n5_oxide side right {
+    fmn_n5_oxide
+    <-> . +fmn_n5_peroxide +uracil
+    z_3_ureidoacrylate
+  }
+
+  branch from fmnh2 side left {
+    fmnh2
+    <-> . +asperterpenoid_a +o2 +fmn +h2o +hplus
+    asperterpenoid_c
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> . +quiannulatene +o2 +fmn +h2o +hplus
+    quiannulatate
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> . +soppiline_b +fmnh2 +o2 +h2o +hplus
+    soppiline_c
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +terpinene +fmnh2 +o2 +h2o +hplus
+    carvacrol
+  }
+
+  branch from fmn_n5_oxide side left {
+    fmn_n5_oxide
+    <-> . +fmn_n5_peroxide +thymine
+    z_2_methylureidoacrylate
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-hexanoyl-2-acyl-sn-glyc-to-cytidine-5-monophos "1-hexanoyl-2-acyl-sn-glyc… to cytidine 5'-monophosphate" {
-  spacing 200
+  spacing 176
 
   spine at 0,0 {
     1_hexanoyl_2_acyl_sn_glycero_3_phosphocholine
@@ -14,29 +14,5 @@ pathway 1-hexanoyl-2-acyl-sn-glyc-to-cytidine-5-monophos "1-hexanoyl-2-acyl-sn-g
     1_caproyl_sn_glycero_3_phosphate
     <-> ec_2_7_8_24 [2.7.8.24] +cdp_diacylglycerol +choline -cytidine_5_monophosphate -hplus
     phosphatidylcholine
-  }
-
-  branch from fatty-acid side left {
-    fatty-acid
-    <-> . +primary_fatty_amide +h2o
-    nh3
-  }
-
-  branch from fatty-acid side right {
-    fatty-acid
-    <-> . +fatty_acid_taurine_conjugate +h2o
-    taurine
-  }
-
-  branch from cytidine_5_monophosphate side left {
-    cytidine_5_monophosphate
-    <-> ec_3_1_4_17 [3.1.4.17] +h2o +hplus
-    3_5_cyclic_cmp
-  }
-
-  branch from cytidine_5_monophosphate side right {
-    cytidine_5_monophosphate
-    <-> ec_2_4_99_14 [2.4.99.14] +a_kdo_2_lipid_iva +cmp_3_deoxy_d_manno_octulosonate +hplus
-    a_kdo_3_lipid_iva
   }
 }

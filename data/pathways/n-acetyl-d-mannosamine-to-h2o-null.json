@@ -1,0 +1,492 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n-acetyl-d-mannosamine-to-h2o-null",
+  "name": "N-acetyl-D-mannosamine to H2O",
+  "category": "other",
+  "summary": "A 3-step route from N-acetyl-D-mannosamine to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR152788"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:63153"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n_acetyl_d_mannosamine",
+      "name": "N-acetyl-D-mannosamine",
+      "short": "N-acetyl-D-mannosam…",
+      "formula": "C8H15NO6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:63153"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM23"
+      }
+    },
+    {
+      "id": "n_acetylneuraminate",
+      "name": "N-acetylneuraminate",
+      "formula": "C11H18NO9",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1106046"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1104266"
+      }
+    },
+    {
+      "id": "n_acetyl_7_o_acetylneuraminate",
+      "name": "N-acetyl-7-O-acetylneuraminate",
+      "short": "N-acetyl-7-O-acetyl…",
+      "formula": "C13H20NO10",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1369652"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "4_o_acetyl_n_acetylmannosamine",
+      "name": "4-O-acetyl-N-acetylmannosamine",
+      "short": "4-O-acetyl-N-acetyl…",
+      "formula": "C10H17NO7",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM147834"
+      }
+    },
+    {
+      "id": "phosphoenolpyruvate",
+      "name": "phosphoenolpyruvate",
+      "formula": "C3H2O6P",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM73"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_1_59",
+      "name": "N-acetylglucosamine kinase",
+      "ec": [
+        "2.7.1.59"
+      ],
+      "xrefs": {
+        "uniprot": "Q9UJ70"
+      }
+    },
+    {
+      "id": "ec_4_1_3_3",
+      "name": "N-acetylneuraminate lyase",
+      "ec": [
+        "4.1.3.3"
+      ],
+      "xrefs": {
+        "uniprot": "Q9BXD5"
+      }
+    },
+    {
+      "id": "ec_4_2_1_66",
+      "name": "cyanide hydratase",
+      "ec": [
+        "4.2.1.66"
+      ]
+    },
+    {
+      "id": "ec_5_1_3_8",
+      "name": "N-acylglucosamine 2-epimerase",
+      "ec": [
+        "5.1.3.8"
+      ],
+      "xrefs": {
+        "uniprot": "P51606"
+      }
+    },
+    {
+      "id": "ec_2_3_1_45",
+      "name": "N-acetylneuraminate 9-O-acetyltransferase",
+      "ec": [
+        "2.3.1.45"
+      ],
+      "xrefs": {
+        "uniprot": "Q96PB1"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "N-acetylglucosamine kinase",
+      "ec": "2.7.1.59",
+      "substrates": [
+        {
+          "metabolite": "n_acetyl_d_mannosamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetylneuraminate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_59"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR152788"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR152788"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N-acetylneuraminate 9-O-acetyltransferase",
+      "ec": "2.3.1.45",
+      "substrates": [
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_acetylneuraminate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_7_o_acetylneuraminate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_45"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR107183"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR107183"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR119523",
+      "substrates": [
+        {
+          "metabolite": "n_acetyl_7_o_acetylneuraminate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_o_acetyl_n_acetylmannosamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphoenolpyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR119523"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR119523"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_n_acetyl_7_o_acetylneuraminate_acetoacetyl-coa-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyl_7_o_acetylneuraminate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetoacetyl-coa-to-h2o"
+      },
+      "note": "Shares N-acetyl-7-O-acetylneuraminate with acetoacetyl-CoA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1369652"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetyl_7_o_acetylneuraminate_dtdp-4-amino-4-6-dideoxy-to-h-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyl_7_o_acetylneuraminate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-4-amino-4-6-dideoxy-to-h-null"
+      },
+      "note": "Shares N-acetyl-7-O-acetylneuraminate with DTDP-4-amino-4,6-dideoxy-… to H.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1369652"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetyl_7_o_acetylneuraminate_n-acetyl-beta-neuraminate-to-h-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyl_7_o_acetylneuraminate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyl-beta-neuraminate-to-h-null"
+      },
+      "note": "Shares N-acetyl-7-O-acetylneuraminate with N-acetyl-beta-neuraminate… to H.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1369652"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetyl_7_o_acetylneuraminate_n-acetyl-d-mannosamine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyl_7_o_acetylneuraminate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyl-d-mannosamine-to-h2o"
+      },
+      "note": "Shares N-acetyl-7-O-acetylneuraminate with N-acetyl-D-mannosamine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1369652"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetyl_7_o_acetylneuraminate_p-nitrophenyl-valerate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyl_7_o_acetylneuraminate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "p-nitrophenyl-valerate-to-h2o"
+      },
+      "note": "Shares N-acetyl-7-O-acetylneuraminate with p-Nitrophenyl valerate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1369652"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetyl_7_o_acetylneuraminate_triethanolamine-to-o-citryl-ethanolamine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyl_7_o_acetylneuraminate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "triethanolamine-to-o-citryl-ethanolamine"
+      },
+      "note": "Shares N-acetyl-7-O-acetylneuraminate with triethanolamine to O-citryl-ethanolamine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1369652"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_o_acetyl_n_acetylmannosamine_2-6-dimethylaniline-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_o_acetyl_n_acetylmannosamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-6-dimethylaniline-to-h2o-null"
+      },
+      "note": "Shares 4-O-acetyl-N-acetylmannosamine with 2,6-dimethylaniline to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM147834"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_o_acetyl_n_acetylmannosamine_n-acetyl-d-mannosamine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_o_acetyl_n_acetylmannosamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyl-d-mannosamine-to-h2o"
+      },
+      "note": "Shares 4-O-acetyl-N-acetylmannosamine with N-acetyl-D-mannosamine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM147834"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_o_acetyl_n_acetylmannosamine_premithramycin-b-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_o_acetyl_n_acetylmannosamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "premithramycin-b-to-nadph"
+      },
+      "note": "Shares 4-O-acetyl-N-acetylmannosamine with premithramycin B to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM147834"
+          }
+        ]
+      }
+    }
+  ]
+}

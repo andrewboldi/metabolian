@@ -1,0 +1,464 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "nadh-to-propionyl-coa-null",
+  "name": "NADH to propionyl-CoA",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from NADH to propionyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR192599"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "s_2_methyl_3_oxopropanoate",
+      "name": "(S)-2-methyl-3-oxopropanoate",
+      "short": "2-methyl-3-oxopropa…",
+      "formula": "C4H5O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1105058"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "r_3_hydroxyisobutyrate",
+      "name": "(R)-3-hydroxyisobutyrate",
+      "short": "3-hydroxyisobutyrate",
+      "formula": "C4H7O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:141211"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "r_methylmalonate_semialdehyde",
+      "name": "(R)-methylmalonate semialdehyde",
+      "short": "methylmalonate…",
+      "formula": "C4H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:141212"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "propionyl_coa",
+      "name": "Propionyl-CoA",
+      "formula": "C24H36N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57392"
+      }
+    },
+    {
+      "id": "hco3",
+      "name": "Bicarbonate (HCO3-)",
+      "formula": "CHO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17544"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_31",
+      "name": "3-hydroxyisobutyrate dehydrogenase",
+      "ec": [
+        "1.1.1.31"
+      ],
+      "xrefs": {
+        "uniprot": "P31937"
+      }
+    },
+    {
+      "id": "ec_1_1_1_35",
+      "name": "3-hydroxyacyl-CoA dehydrogenase",
+      "ec": [
+        "1.1.1.35"
+      ],
+      "xrefs": {
+        "uniprot": "Q08426"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3-hydroxyisobutyrate dehydrogenase",
+      "ec": "1.1.1.31",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "s_2_methyl_3_oxopropanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_3_hydroxyisobutyrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_31"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR192599"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR192599"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(R)-3-hydroxy-2-methylpropanoate + NAD(+) = (R)-2-methyl-3-oxopropanoate + NADH + H(+)",
+      "equation": "(R)-3-hydroxy-2-methylpropanoate + NAD(+) = (R)-2-methyl-3-oxopropanoate + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "r_3_hydroxyisobutyrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_methylmalonate_semialdehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:56972"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56972"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(R)-2-methyl-3-oxopropanoate + NAD(+) + CoA + H2O = propanoyl-CoA + hydrogencarbonate +...",
+      "equation": "(R)-2-methyl-3-oxopropanoate + NAD(+) + CoA + H2O = propanoyl-CoA + hydrogencarbonate + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "r_methylmalonate_semialdehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "propionyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hco3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:76623"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:76623"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_r_3_hydroxyisobutyrate_7-2-dihydroxy-4-5-meth-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_3_hydroxyisobutyrate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-2-dihydroxy-4-5-meth-to-h2o"
+      },
+      "note": "Shares (R)-3-hydroxyisobutyrate with 7,2'-dihydroxy-4',5'-meth… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:141211"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_3_hydroxyisobutyrate_acetoacetyl-coa-to-t-2-toxin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_3_hydroxyisobutyrate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetoacetyl-coa-to-t-2-toxin"
+      },
+      "note": "Shares (R)-3-hydroxyisobutyrate with acetoacetyl-CoA to T-2 toxin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:141211"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_3_hydroxyisobutyrate_nadh-to-propionyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_3_hydroxyisobutyrate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-propionyl-coa"
+      },
+      "note": "Shares (R)-3-hydroxyisobutyrate with NADH to propionyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:141211"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_3_hydroxyisobutyrate_s-ethyl-l-cysteine-to-o-succinyl-l-homoserine-nu",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_3_hydroxyisobutyrate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-ethyl-l-cysteine-to-o-succinyl-l-homoserine-nu"
+      },
+      "note": "Shares (R)-3-hydroxyisobutyrate with S-ethyl-L-cysteine to O-succinyl-L-homoserine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:141211"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_methylmalonate_semialdehyde_nadh-to-propionyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_methylmalonate_semialdehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-propionyl-coa"
+      },
+      "note": "Shares (R)-methylmalonate semialdehyde with NADH to propionyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:141212"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_methylmalonate_semialdehyde_s-2-methyl-3-oxopropano-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_methylmalonate_semialdehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2-methyl-3-oxopropano-to-h2o"
+      },
+      "note": "Shares (R)-methylmalonate semialdehyde with (S)-2-methyl-3-oxopropano… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:141212"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_methylmalonate_semialdehyde_s-2-methyl-3-oxopropano-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_methylmalonate_semialdehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2-methyl-3-oxopropano-to-h2o-null"
+      },
+      "note": "Shares (R)-methylmalonate semialdehyde with (S)-2-methyl-3-oxopropano… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:141212"
+          }
+        ]
+      }
+    }
+  ]
+}

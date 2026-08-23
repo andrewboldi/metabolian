@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway tachysterol-3-to-h2o "tachysterol 3 to H2O" {
-  spacing 188
+  spacing 260
 
   spine at 0,0 {
     tachysterol_3
@@ -30,25 +30,97 @@ pathway tachysterol-3-to-h2o "tachysterol 3 to H2O" {
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_85 [1.1.1.85] +nadh +co2 +h +2_oxo_7_methylthioheptanoic_acid
-    3_4_methylthio_butylmalic_acid
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +butan_2_one +h
+    2s_butan_2_ol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_85 [1.1.1.85] +nadh +co2 +h +2_oxo_8_methylthiooctanoic_acid
-    3_5_methylthio_pentylmalic_acid
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +4_methylpentanal
+    4_methylpentan_1_ol
   }
 
   branch from h2o side left {
     h2o
-    <-> . +pyrene_4_5_oxide
-    trans_4_5_dihydroxy_4_5_dihydropyrene
+    <-> . +h +7_8_epoxy_17r_hydroxy_docosahexaenoate
+    aspirin_triggered_resolvin_d2
   }
 
   branch from h2o side right {
     h2o
-    <-> . +benzo_a_pyrene_11_12_epoxide
-    benzo_a_pyrene_trans_11_12_dihydrodiol
+    <-> ec_1_13_11_34 [1.13.11.34] +4_s_hydroperoxy_17_r_hydroxydocosahexaenoic_acid +h
+    4_5_epoxy_17r_hydroxy_docosahexaenoate
+  }
+
+  branch from 7_dehydrocholesterol side left {
+    7_dehydrocholesterol
+    <-> . +h +o2 +nadph +7_ketocholesterol +h2o
+    nadp
+  }
+
+  branch from 7_dehydrocholesterol side right {
+    7_dehydrocholesterol
+    <-> ec_1_14_21_6 [1.14.21.6] +h2o2 +o2
+    lathosterol
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> ec_1_1_1_1 [1.1.1.1] +h +4_heptanone +nad
+    heptan_4_ol
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_1_1_1 [1.1.1.1] +h +3_methylbutan_2_one +nad
+    s_3_methylbutan_2_ol
+  }
+
+  branch from h side left {
+    h
+    <-> . +3_aminopropyl_dimethylsulfanium +co2
+    s_methyl_l_methionine
+  }
+
+  branch from h side right {
+    h
+    <-> . +s_adenosyl_l_homocysteine +chrysosplenetin +chrysosplenol_c
+    s_adenosyl_l_methionine
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_13_11_34 [1.13.11.34] +7s_17s_17_hydroxy_7_hydroperoxydocosahexaenoate
+    17s_hydroxy_4z_7z_10z_13z_15e_19z_docosahexaeno
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_13_11_34 [1.13.11.34] +h +17s_hydroxy_4z_7z_10z_13z_15e_19z_docosahexaeno
+    4_s_hydroperoxy_17_s_hydroxydocosahexaenoic_acid
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +2_octanone
+    2r_octan_2_ol
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +heptan_2_one
+    2s_2_heptanol
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +h +4_5_epoxy_17r_hydroxy_docosahexaenoate
+    aspirin_triggered_resolvin_d3
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +h +4_5_epoxy_17r_hydroxy_docosahexaenoate
+    aspirin_triggered_resolvin_d4
   }
 }

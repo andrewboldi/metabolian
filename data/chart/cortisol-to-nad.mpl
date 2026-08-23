@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cortisol-to-nad "cortisol to NAD" {
-  spacing 268
+  spacing 274
 
   spine at 0,0 {
     cortisol
@@ -14,5 +14,11 @@ pathway cortisol-to-nad "cortisol to NAD" {
     tetrahydrocortisol
     <-> ec_1_1_1_53 [1.1.1.53] +nadh +h -nad
     cortol
+  }
+
+  branch from cortisol side left {
+    cortisol
+    <-> ec_1_1_1_442 [1.1.1.442] +nad +nadh +hplus
+    20_dihydrocortisol
   }
 }

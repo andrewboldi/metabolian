@@ -118,108 +118,6 @@
       "xrefs": {
         "chebi": "CHEBI:28853"
       }
-    },
-    {
-      "id": "malonyl-coa",
-      "name": "Malonyl-CoA",
-      "formula": "C24H33N7O19P3S",
-      "charge": -5,
-      "xrefs": {
-        "chebi": "CHEBI:57384"
-      }
-    },
-    {
-      "id": "acetyl_coa",
-      "name": "Acetyl-CoA",
-      "formula": "C23H34N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57288"
-      }
-    },
-    {
-      "id": "3_methylorsellinate",
-      "name": "3-methylorsellinate",
-      "formula": "C9H9O4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:146372"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16526"
-      }
-    },
-    {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57287"
-      }
-    },
-    {
-      "id": "e_5_hydroxyferuloyl_coa",
-      "name": "(E)-5-hydroxyferuloyl-CoA",
-      "short": "5-hydroxyferuloyl-C…",
-      "formula": "C31H40N7O20P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:156249"
-      }
-    },
-    {
-      "id": "sinapoyl_coa",
-      "name": "sinapoyl-CoA",
-      "formula": "C32H42N7O20P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57393"
-      }
-    },
-    {
-      "id": "terpinene",
-      "name": "α-terpinene",
-      "formula": "C10H16",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:10334"
-      }
-    },
-    {
-      "id": "carvacrol",
-      "name": "carvacrol",
-      "formula": "C10H14O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:3440"
-      }
-    },
-    {
-      "id": "methyl_very_long_chain_fatty_acid_anion",
-      "name": "ω-methyl-very-long-chain fatty acid anion",
-      "short": "ω-methyl-very-long-…",
-      "formula": "C2H3O2R",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:176541"
-      }
-    },
-    {
-      "id": "hydroxy_very_long_chain_fatty_acid_anion",
-      "name": "ω-hydroxy-very-long-chain fatty acid anion",
-      "short": "ω-hydroxy-very-long…",
-      "formula": "C2H3O3R",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:176542"
-      }
     }
   ],
   "enzymes": [
@@ -383,203 +281,27 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "3 malonyl-CoA + acetyl-CoA + S-adenosyl-L-methionine + H(+) = 3-methylorsellinate + S-a...",
-      "equation": "3 malonyl-CoA + acetyl-CoA + S-adenosyl-L-methionine + H(+) = 3-methylorsellinate + S-adenosyl-L-homocysteine + 3 CO2 + 4 CoA",
-      "substrates": [
-        {
-          "metabolite": "malonyl-coa",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "acetyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_methylorsellinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 4
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:64500"
+      "id": "xt_xanthotoxol_7-demethylsuberosin-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "xanthotoxol"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "7-demethylsuberosin-to-fmn"
+      },
+      "note": "Shares xanthotoxol with 7-demethylsuberosin to FMN.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:64500"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "(E)-5-hydroxyferuloyl-CoA + S-adenosyl-L-methionine = (E)-sinapoyl-CoA + S-adenosyl-L-h...",
-      "equation": "(E)-5-hydroxyferuloyl-CoA + S-adenosyl-L-methionine = (E)-sinapoyl-CoA + S-adenosyl-L-homocysteine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "e_5_hydroxyferuloyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "sinapoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:64860"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:64860"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "alpha-terpinene + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = carvacrol + 2 oxidi...",
-      "equation": "alpha-terpinene + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = carvacrol + 2 oxidized [NADPH--hemoprotein reductase] + 3 H2O + 2 H(+)",
-      "substrates": [
-        {
-          "metabolite": "terpinene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "carvacrol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:67412"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:67412"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "an omega-methyl-very-long-chain fatty acid + reduced [NADPH--hemoprotein reductase] + O...",
-      "equation": "an omega-methyl-very-long-chain fatty acid + reduced [NADPH--hemoprotein reductase] + O2 = an omega-hydroxy-very-long-chain fatty acid + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "methyl_very_long_chain_fatty_acid_anion",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "hydroxy_very_long_chain_fatty_acid_anion",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:67952"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:67952"
+            "db": "ChEBI",
+            "id": "CHEBI:15709"
           }
         ]
       }

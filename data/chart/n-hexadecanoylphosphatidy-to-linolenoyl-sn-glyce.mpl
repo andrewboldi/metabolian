@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-hexadecanoylphosphatidy-to-linolenoyl-sn-glyce "N-hexadecanoylphosphatidy… to α-linolenoyl-sn-glycero-3…" {
-  spacing 218
+  spacing 200
 
   spine at 0,0 {
     n_hexadecanoylphosphatidylethanolamine
@@ -24,33 +24,15 @@ pathway n-hexadecanoylphosphatidy-to-linolenoyl-sn-glyce "N-hexadecanoylphosphat
     linolenoyl_sn_glycero_3_phosphocholine
   }
 
-  branch from fatty-acid side left {
-    fatty-acid
-    <-> . +n_fatty_acyl_l_asparagine +h2o
-    l_asparagine
+  branch from linolenoyl_coa side left {
+    linolenoyl_coa
+    <-> . +cholesterol +coa
+    cholesteryl_linolenate
   }
 
-  branch from fatty-acid side right {
-    fatty-acid
-    <-> . +n_fatty_acyl_l_tryptophan +h2o
-    l_tryptophan
-  }
-
-  branch from 2_monoglyceride side left {
-    2_monoglyceride
-    <-> . +palmitoyl_coa +coa
-    1_palmitoyl_2_acylglycerol
-  }
-
-  branch from dag side right {
-    dag
-    <-> . +3_sn_phosphatidyl_l_serine +h2o +hplus
-    pser
-  }
-
-  branch from dag side left {
-    dag
-    <-> . +2_acyl_6_d_mannosyl_1_6_d_mannosyl_1_4_d_glucosa +1_2_diacyl_sn_glycero_3_phosphoethanolamine
-    2_acyl_6_d_mannosyl_1_6_2_phosphoethanolamine_d
+  branch from linolenoyl_coa side right {
+    linolenoyl_coa
+    <-> ec_1_14_19_3 [1.14.19.3] +fe2 +o2 +hplus +iron +h2o
+    6z_9z_12z_15z_octadecatetraenoyl_coa
   }
 }

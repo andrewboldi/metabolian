@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 7-methyl-gtp-to-l-lysinium "7-methyl-GTP to L-lysinium" {
-  spacing 182
+  spacing 158
 
   spine at 0,0 {
     7_methyl_gtp
@@ -18,33 +18,9 @@ pathway 7-methyl-gtp-to-l-lysinium "7-methyl-GTP to L-lysinium" {
     5_5_triphosphoguanosine_purine_ribonucleotide_3
   }
 
-  branch from ppi side left {
-    ppi
-    <-> . +tobramycin +atp
-    4_adenylyltobramycin
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +kanamycin_a +ctp
-    4_cytidylylkanamycin_a
-  }
-
   branch from l_histidine side left {
     l_histidine
     <-> ec_3_9_1_3 [3.9.1.3] +h2o +pi
     n_phosphonato_l_histidine
-  }
-
-  branch from l_lysinium side right {
-    l_lysinium
-    <-> . +benzoyl_coa +coa +hplus
-    n6_benzoyl_l_lysine
-  }
-
-  branch from l_lysinium side left {
-    l_lysinium
-    <-> . +n6_benzoyl_l_lysine +nad +h2o +nicotinamide
-    2_o_benzoyl_adp_d_ribose
   }
 }

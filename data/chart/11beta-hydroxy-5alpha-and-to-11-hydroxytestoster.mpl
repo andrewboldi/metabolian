@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 11beta-hydroxy-5alpha-and-to-11-hydroxytestoster "11beta-hydroxy-5alpha-and… to 11β-hydroxytestosterone" {
-  spacing 340
+  spacing 288
 
   spine at 0,0 {
     11beta_hydroxy_5alpha_androstanedione
@@ -18,69 +18,15 @@ pathway 11beta-hydroxy-5alpha-and-to-11-hydroxytestoster "11beta-hydroxy-5alpha-
     nadp
   }
 
-  branch from h side left {
-    h
-    <-> ec_3_1_8_1 [3.1.8.1] +ethanol +dipropylsulfanylphosphinate +h2o
-    ethoprophos
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_1_8_1 [3.1.8.1] +ethanol +bis_sec_butylsulfanyl_phosphinate +h2o
-    cadusafos
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> . +caffeoyl_4_hydroxyphenyllactate +nadp +h2o +h +4_coumaroyl_4_hydroxyphenyllactate
-    o2
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> . +4_coumaroyl_3_4_dihydroxyphenyllactate +nadp +h2o +h +o2
-    4_coumaroyl_4_hydroxyphenyllactate
-  }
-
   branch from 11_hydroxytestosterone side left {
     11_hydroxytestosterone
     <-> . +nadph +hplus +nadp
     11_hydroxyandrost_4_ene_3_17_dione
   }
 
-  branch from nad side right {
-    nad
-    <-> . +nadh +h +r_acetoin
-    s_s_butane_2_3_diol
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_117 [1.1.1.117] +nadh +h +d_arabinono_1_4_lactone
-    d_arabinofuranose
-  }
-
   branch from 11_oxotestosterone side right {
     11_oxotestosterone
     <-> . +nadph +hplus +nadp
     adrenosterone
-  }
-
-  branch from 11_oxotestosterone side left {
-    11_oxotestosterone
-    <-> ec_1_3_1_22 [1.3.1.22] +nadp +h +nadph
-    11_oxo_5_dihydrotestosterone
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +geranylgeranyl_chlorophyll_a +h +nadph
-    dihydrogg_chl_a
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +h +dihydrogg_chl_a +nadph
-    tetrahydrogg_chl_a
   }
 }

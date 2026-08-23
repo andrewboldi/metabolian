@@ -1,0 +1,541 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-malate-to-h2o",
+  "name": "(S)-malate to H2O",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from (S)-malate to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR182013"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_malate",
+      "name": "(S)-malate",
+      "formula": "C4H4O5",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1107192"
+      }
+    },
+    {
+      "id": "2_phytyl_1_4_naphthoquinone",
+      "name": "2-phytyl-1,4-naphthoquinone",
+      "short": "2-phytyl-1,4-naphth…",
+      "formula": "C30H44O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:31087"
+      }
+    },
+    {
+      "id": "2_phytyl_1_4_dihydroxynaphthalene",
+      "name": "2-phytyl-1,4-dihydroxynaphthalene",
+      "short": "2-phytyl-1,4-dihydr…",
+      "formula": "C30H46O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:87844"
+      }
+    },
+    {
+      "id": "oxaloacetate",
+      "name": "oxaloacetate",
+      "formula": "C4H2O5",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM46"
+      }
+    },
+    {
+      "id": "3_dehydroquinate",
+      "name": "3-dehydroquinate",
+      "formula": "C7H9O6",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM736874"
+      }
+    },
+    {
+      "id": "l_quinate",
+      "name": "L-quinate",
+      "formula": "C7H11O6",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM736788"
+      }
+    },
+    {
+      "id": "pmf",
+      "name": "PMF",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM01"
+      }
+    },
+    {
+      "id": "e_caffeate",
+      "name": "(E)-caffeate",
+      "formula": "C9H7O4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1370997"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "chlorogenate",
+      "name": "chlorogenate",
+      "formula": "C16H17O9",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM727308"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_5_4",
+      "name": "malate dehydrogenase (quinone)",
+      "ec": [
+        "1.1.5.4"
+      ]
+    },
+    {
+      "id": "ec_1_1_5_8",
+      "name": "quinate/shikimate dehydrogenase (quinone)",
+      "ec": [
+        "1.1.5.8"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "malate dehydrogenase (quinone)",
+      "ec": "1.1.5.4",
+      "substrates": [
+        {
+          "metabolite": "s_malate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_phytyl_1_4_naphthoquinone",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_phytyl_1_4_dihydroxynaphthalene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oxaloacetate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_5_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR182013"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR182013"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "quinate/shikimate dehydrogenase (quinone)",
+      "ec": "1.1.5.8",
+      "substrates": [
+        {
+          "metabolite": "2_phytyl_1_4_dihydroxynaphthalene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_dehydroquinate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_phytyl_1_4_naphthoquinone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_quinate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_5_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR180982"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR180982"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR147952",
+      "substrates": [
+        {
+          "metabolite": "pmf",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "e_caffeate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_quinate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pmf",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "chlorogenate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR147952"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR147952"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_2_phytyl_1_4_naphthoquinone_1-4-naphthoquinone-2-carb-to-s-adenosyl-l-homocy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_phytyl_1_4_naphthoquinone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-4-naphthoquinone-2-carb-to-s-adenosyl-l-homocy"
+      },
+      "note": "Shares 2-phytyl-1,4-naphthoquinone with 1,4-naphthoquinone-2-carb… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:31087"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_phytyl_1_4_naphthoquinone_3-5-didehydroshikimate-to-fad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_phytyl_1_4_naphthoquinone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-5-didehydroshikimate-to-fad"
+      },
+      "note": "Shares 2-phytyl-1,4-naphthoquinone with 3,5-didehydroshikimate to FAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:31087"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_phytyl_1_4_naphthoquinone_beta-nicotinamide-to-3-demethylubiquinone-9",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_phytyl_1_4_naphthoquinone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-nicotinamide-to-3-demethylubiquinone-9"
+      },
+      "note": "Shares 2-phytyl-1,4-naphthoquinone with beta-nicotinamide… to 3-demethylubiquinone-9.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:31087"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_phytyl_1_4_dihydroxynaphthalene_1-4-naphthoquinone-2-carb-to-s-adenosyl-l-homocy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_phytyl_1_4_dihydroxynaphthalene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-4-naphthoquinone-2-carb-to-s-adenosyl-l-homocy"
+      },
+      "note": "Shares 2-phytyl-1,4-dihydroxynaphthalene with 1,4-naphthoquinone-2-carb… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87844"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_phytyl_1_4_dihydroxynaphthalene_3-5-didehydroshikimate-to-fad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_phytyl_1_4_dihydroxynaphthalene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-5-didehydroshikimate-to-fad"
+      },
+      "note": "Shares 2-phytyl-1,4-dihydroxynaphthalene with 3,5-didehydroshikimate to FAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87844"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_phytyl_1_4_dihydroxynaphthalene_beta-nicotinamide-to-3-demethylubiquinone-9",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_phytyl_1_4_dihydroxynaphthalene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-nicotinamide-to-3-demethylubiquinone-9"
+      },
+      "note": "Shares 2-phytyl-1,4-dihydroxynaphthalene with beta-nicotinamide… to 3-demethylubiquinone-9.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87844"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_dehydroquinate_1-4-dinitrobenzene-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_dehydroquinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-4-dinitrobenzene-to-ammonium"
+      },
+      "note": "Shares 3-dehydroquinate with 1,4-dinitrobenzene to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM736874"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_dehydroquinate_2-amino-4-hydroxy-5-phosp-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_dehydroquinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-amino-4-hydroxy-5-phosp-to-phosphate"
+      },
+      "note": "Shares 3-dehydroquinate with 2-amino-4-hydroxy-5-phosp… to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM736874"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_dehydroquinate_4-aminophenol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_dehydroquinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-aminophenol-to-h2o"
+      },
+      "note": "Shares 3-dehydroquinate with 4-aminophenol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM736874"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_dehydroquinate_5-dehydroshikimate-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_dehydroquinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-dehydroshikimate-to-nadph"
+      },
+      "note": "Shares 3-dehydroquinate with 5-Dehydroshikimate to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM736874"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_dehydroquinate_menaquinone-4-to-formaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_dehydroquinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "menaquinone-4-to-formaldehyde"
+      },
+      "note": "Shares 3-dehydroquinate with menaquinone-4 to formaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM736874"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_dehydroquinate_ubiquinone-0-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_dehydroquinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ubiquinone-0-to-h2o"
+      },
+      "note": "Shares 3-dehydroquinate with ubiquinone-0 to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM736874"
+          }
+        ]
+      }
+    }
+  ]
+}

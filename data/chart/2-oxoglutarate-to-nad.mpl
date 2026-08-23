@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-oxoglutarate-to-nad "2-oxoglutarate to NAD" {
-  spacing 210
+  spacing 192
 
   spine at 0,0 {
     2_oxoglutarate
@@ -14,23 +14,5 @@ pathway 2-oxoglutarate-to-nad "2-oxoglutarate to NAD" {
     dtdp_4_dehydro_beta_l_rhamnose
     <-> ec_1_1_1_133 [1.1.1.133] +nadh +h -nad
     dtdp_beta_l_rhamnose
-  }
-
-  branch from l_glutamate side left {
-    l_glutamate
-    <-> . +l_leucine +l_tryptophan +h2o
-    tryptophanyl_glutamyl_leucine
-  }
-
-  branch from l_glutamate side right {
-    l_glutamate
-    <-> . +tryptophanyl_glutamyl_tyrosine +h2o +l_tyrosine
-    l_tryptophan
-  }
-
-  branch from s_adenosyl_l_methionine side left {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +2_decaprenyl_6_methoxy_3_methyl_1_4_benzoquinone
-    2_decaprenyl_6_methoxy_1_4_benzoquinone
   }
 }

@@ -1,0 +1,366 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2z-6e-10e-geranylgerany-to-diphosphate-null",
+  "name": "(2Z,6E,10E)-geranylgerany… to diphosphate",
+  "category": "other",
+  "summary": "A 3-step route from (2Z,6E,10E)-geranylgeranyl diphosphate to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR205849"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2z_6e_10e_geranylgeranyl_diphosphate",
+      "name": "(2Z,6E,10E)-geranylgeranyl diphosphate",
+      "short": "(2Z,6E,10E)-geranyl…",
+      "formula": "C20H33O7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1102546"
+      }
+    },
+    {
+      "id": "ipp",
+      "name": "Isopentenyl diphosphate (IPP)",
+      "short": "Isopentenyl PP (IPP)",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:128769"
+      }
+    },
+    {
+      "id": "diphosphate",
+      "name": "diphosphate",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM11"
+      }
+    },
+    {
+      "id": "all_trans_undecaprenyl_diphosphate",
+      "name": "all-trans-undecaprenyl diphosphate",
+      "short": "all-trans-undecapre…",
+      "formula": "C55H89O7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1364681"
+      }
+    },
+    {
+      "id": "all_trans_decaprenyl_diphosphate",
+      "name": "all-trans-decaprenyl diphosphate",
+      "short": "all-trans-decapreny…",
+      "formula": "C50H81O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:60721"
+      }
+    },
+    {
+      "id": "1_4_dihydroxy_2_naphthoate",
+      "name": "1,4-dihydroxy-2-naphthoate",
+      "short": "1,4-dihydroxy-2-nap…",
+      "formula": "C11H7O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:11173"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "2_demethylmenaquinol_10",
+      "name": "2-demethylmenaquinol-10",
+      "short": "2-demethylmenaquino…",
+      "formula": "C60H88O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:84546"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_5_1_74",
+      "name": "1,4-dihydroxy-2-naphthoate polyprenyltransferase",
+      "ec": [
+        "2.5.1.74"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR205849",
+      "substrates": [
+        {
+          "metabolite": "2z_6e_10e_geranylgeranyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ipp",
+          "stoichiometry": 7
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 7
+        },
+        {
+          "metabolite": "all_trans_undecaprenyl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR205849"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR205849"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR179324",
+      "substrates": [
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "all_trans_undecaprenyl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "all_trans_decaprenyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ipp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR179324"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR179324"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "1,4-dihydroxy-2-naphthoate polyprenyltransferase",
+      "equation": "all-trans-decaprenyl diphosphate + 1,4-dihydroxy-2-naphthoate + H(+) = 2-demethylmenaquinol-10 + CO2 + diphosphate",
+      "ec": "2.5.1.74",
+      "substrates": [
+        {
+          "metabolite": "all_trans_decaprenyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_4_dihydroxy_2_naphthoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_demethylmenaquinol_10",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_74"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:44808"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44808"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_2_demethylmenaquinol_10_2-demethylmenaquinone-10-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_demethylmenaquinol_10"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-demethylmenaquinone-10-to-nad"
+      },
+      "note": "Shares 2-demethylmenaquinol-10 with 2-demethylmenaquinone-10 to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84546"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_demethylmenaquinol_10_2-demethylmenaquinone-10-to-nad-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_demethylmenaquinol_10"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-demethylmenaquinone-10-to-nad-null"
+      },
+      "note": "Shares 2-demethylmenaquinol-10 with 2-demethylmenaquinone-10 to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84546"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_demethylmenaquinol_10_2z-6e-10e-geranylgerany-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_demethylmenaquinol_10"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2z-6e-10e-geranylgerany-to-diphosphate"
+      },
+      "note": "Shares 2-demethylmenaquinol-10 with (2Z,6E,10E)-geranylgerany… to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84546"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_demethylmenaquinol_10_acetoacetyl-coa-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_demethylmenaquinol_10"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetoacetyl-coa-to-h2o-null"
+      },
+      "note": "Shares 2-demethylmenaquinol-10 with acetoacetyl-CoA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84546"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_demethylmenaquinol_10_chloroacetaldehyde-to-nad-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_demethylmenaquinol_10"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "chloroacetaldehyde-to-nad-null"
+      },
+      "note": "Shares 2-demethylmenaquinol-10 with chloroacetaldehyde to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84546"
+          }
+        ]
+      }
+    }
+  ]
+}

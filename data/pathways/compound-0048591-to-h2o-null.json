@@ -1,0 +1,314 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "compound-0048591-to-h2o-null",
+  "name": "compound 0048591 to H2O",
+  "category": "other",
+  "summary": "A 3-step route from compound 0048591 to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR205816"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "compound_0048591",
+      "name": "compound 0048591",
+      "formula": "C13H17O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1372316"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "carboxyibuprofen",
+      "name": "carboxyibuprofen",
+      "formula": "C13H16O4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM153165"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "d_glucuronate",
+      "name": "D-glucuronate",
+      "formula": "C6H9O7",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1105765"
+      }
+    },
+    {
+      "id": "s_carboxy_ibuprofen_glucuronide",
+      "name": "S-carboxy ibuprofen glucuronide",
+      "short": "S-carboxy…",
+      "formula": "C19H22O10",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1560573"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR205816",
+      "substrates": [
+        {
+          "metabolite": "compound_0048591",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "carboxyibuprofen",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR205816"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR205816"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR204381",
+      "substrates": [
+        {
+          "metabolite": "d_glucuronate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "carboxyibuprofen",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_carboxy_ibuprofen_glucuronide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR204381"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR204381"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR204378",
+      "substrates": [
+        {
+          "metabolite": "s_carboxy_ibuprofen_glucuronide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_carboxy_ibuprofen_glucuronide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR204378"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR204378"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_compound_0048591_compound-0048591-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "compound_0048591"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "compound-0048591-to-h2o"
+      },
+      "note": "Shares compound 0048591 with compound 0048591 to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1372316"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_carboxyibuprofen_udp-to-triiodothyronine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "carboxyibuprofen"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-triiodothyronine"
+      },
+      "note": "Shares carboxyibuprofen with UDP to triiodothyronine….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM153165"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_carboxy_ibuprofen_glucuronide_udp-to-triiodothyronine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_carboxy_ibuprofen_glucuronide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-triiodothyronine"
+      },
+      "note": "Shares S-carboxy ibuprofen glucuronide with UDP to triiodothyronine….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1560573"
+          }
+        ]
+      }
+    }
+  ]
+}

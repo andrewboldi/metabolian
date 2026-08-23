@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-hydroxy-5-pregnan-20-to-testosterone-acetate "3β-hydroxy-5α-pregnan-20-… to testosterone acetate" {
-  spacing 260
+  spacing 272
 
   spine at 0,0 {
     3_hydroxy_5_pregnan_20_one
@@ -26,5 +26,17 @@ pathway 3-hydroxy-5-pregnan-20-to-testosterone-acetate "3β-hydroxy-5α-pregnan-
     progesterone
     <-> . +nad +nadh +hplus
     20r_20_hydroxypregn_4_en_3_one
+  }
+
+  branch from progesterone side left {
+    progesterone
+    <-> . +nadph +hplus +nadp
+    4_pregnen_3_ol_20_one
+  }
+
+  branch from progesterone side right {
+    progesterone
+    <-> . +nadph +hplus +nadp
+    5_pregnane_3_20_dione
   }
 }

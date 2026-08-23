@@ -34,9 +34,9 @@ pathway phenylglyoxylyl-coa-to-cis-cis-muconate "phenylglyoxylyl-CoA to cis,cis-
     alanine
   }
 
-  branch from cis_cis_muconate side left {
-    cis_cis_muconate
-    <-> ec_5_5_1_1 [5.5.1.1] +hplus
-    s_5_oxo_2_5_dihydro_2_furylacetate
+  branch from benzaldehyde side left {
+    benzaldehyde
+    <-> . +benzylaminium +nad +h2o +nadh +hplus
+    nh3
   }
 }

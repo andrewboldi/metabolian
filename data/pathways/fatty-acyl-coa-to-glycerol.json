@@ -121,34 +121,6 @@
       }
     },
     {
-      "id": "udp_d_glucose",
-      "name": "UDP-α-D-glucose",
-      "formula": "C15H22N2O17P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:58885"
-      }
-    },
-    {
-      "id": "d_glucosyl_1_1_n_acylsphinganine",
-      "name": "β-D-glucosyl-(1↔1')-N-acylsphinganine",
-      "short": "β-D-glucosyl-(1↔1')…",
-      "formula": "C25H48NO8R",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:82919"
-      }
-    },
-    {
-      "id": "udp",
-      "name": "UDP",
-      "formula": "C9H11N2O12P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58223"
-      }
-    },
-    {
       "id": "fe2",
       "name": "Ferrous iron (Fe2+)",
       "formula": "Fe",
@@ -193,6 +165,55 @@
       "xrefs": {
         "chebi": "CHEBI:15377"
       }
+    },
+    {
+      "id": "n_acyl_sphing_14z_enine",
+      "name": "N-acyl-sphing-14Z-enine",
+      "short": "N-acyl-sphing-14Z-e…",
+      "formula": "C19H36NO3R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:195278"
+      }
+    },
+    {
+      "id": "sphinga_4e_8e_dienine",
+      "name": "sphinga-4E,8E-dienine",
+      "short": "sphinga-4E,8E-dieni…",
+      "formula": "C18H36NO2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:72758"
+      }
+    },
+    {
+      "id": "n_acyl_sphinga_4_8_dienine",
+      "name": "N-acyl-sphinga-4,8-dienine",
+      "short": "N-acyl-sphinga-4,8-…",
+      "formula": "C19H34NO3R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:195273"
+      }
+    },
+    {
+      "id": "1_deoxysphinganine",
+      "name": "1-deoxysphinganine",
+      "formula": "C18H40NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:67109"
+      }
+    },
+    {
+      "id": "n_acyl_1_deoxysphinganine",
+      "name": "N-acyl-1-deoxysphinganine",
+      "short": "N-acyl-1-deoxysphin…",
+      "formula": "C19H38NO2R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:67111"
+      }
     }
   ],
   "enzymes": [
@@ -201,7 +222,10 @@
       "name": "sphingolipid C4-monooxygenase",
       "ec": [
         "1.14.18.5"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q6QHC5"
+      }
     }
   ],
   "reactions": [
@@ -328,49 +352,6 @@
     },
     {
       "id": "r4",
-      "name": "an N-acylsphinganine + UDP-alpha-D-glucose = an N-acyl-beta-D-glucosyl-(1<->1')-sphinga...",
-      "equation": "an N-acylsphinganine + UDP-alpha-D-glucose = an N-acyl-beta-D-glucosyl-(1<->1')-sphinganine + UDP + H(+)",
-      "substrates": [
-        {
-          "metabolite": "dihydroceramide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp_d_glucose",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "d_glucosyl_1_1_n_acylsphinganine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:43360"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:43360"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
       "name": "sphingolipid C4-monooxygenase",
       "equation": "an N-acylsphinganine + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = an N-acyl-(4R)-4-hydroxysphinganine + 2 Fe(III)-[cytochrome b5] + H2O",
       "ec": "1.14.18.5",
@@ -412,7 +393,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
         "rhea": "RHEA:46364"
       },
@@ -422,6 +403,409 @@
           {
             "db": "Rhea",
             "id": "RHEA:46364"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "an N-acylsphinganine + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = an N-acylsphing-14Z-eni...",
+      "equation": "an N-acylsphinganine + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = an N-acylsphing-14Z-enine + 2 Fe(III)-[cytochrome b5] + 2 H2O",
+      "substrates": [
+        {
+          "metabolite": "dihydroceramide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acyl_sphing_14z_enine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:76563"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:76563"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "sphinga-(4E,8E)-dienine + a fatty acyl-CoA = an N-acyl-sphinga-4,8-dienine + CoA + H(+)",
+      "equation": "sphinga-(4E,8E)-dienine + a fatty acyl-CoA = an N-acyl-sphinga-4,8-dienine + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "sphinga_4e_8e_dienine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fatty_acyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acyl_sphinga_4_8_dienine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:76539"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:76539"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "1-deoxysphinganine + a fatty acyl-CoA = N-acyl-1-deoxysphinganine + CoA + H(+)",
+      "equation": "1-deoxysphinganine + a fatty acyl-CoA = N-acyl-1-deoxysphinganine + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1_deoxysphinganine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fatty_acyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acyl_1_deoxysphinganine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:76675"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:76675"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_dihydroceramide_1-lauroyl-sn-glycero-3-ph-to-d-glucopyranose-411",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dihydroceramide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-lauroyl-sn-glycero-3-ph-to-d-glucopyranose-411"
+      },
+      "note": "Shares Dihydroceramide with 1-lauroyl-sn-glycero-3-ph… to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:31488"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dihydroceramide_2-hydroxyhexacosanoyl-coa-to-carboxylic-acid-ani",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dihydroceramide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-hydroxyhexacosanoyl-coa-to-carboxylic-acid-ani"
+      },
+      "note": "Shares Dihydroceramide with 2-hydroxyhexacosanoyl-CoA to carboxylic acid anion.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:31488"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dihydroceramide_3-dehydrosphinganinium-to-fatty-acid-anion",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dihydroceramide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-dehydrosphinganinium-to-fatty-acid-anion"
+      },
+      "note": "Shares Dihydroceramide with 3-dehydrosphinganinium to fatty acid anion.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:31488"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dihydroceramide_isethionate-to-3-sulfonatopyruvate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dihydroceramide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isethionate-to-3-sulfonatopyruvate"
+      },
+      "note": "Shares Dihydroceramide with isethionate to 3-sulfonatopyruvate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:31488"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dihydroceramide_n-arachidonoyl-1-oleoyl-s-to-9z-17-hydroxyoctade",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dihydroceramide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-arachidonoyl-1-oleoyl-s-to-9z-17-hydroxyoctade"
+      },
+      "note": "Shares Dihydroceramide with N-arachidonoyl-1-oleoyl-s… to (9Z)-17-hydroxyoctadec-9-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:31488"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dihydroceramide_sphingolipid-metabolism",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dihydroceramide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sphingolipid-metabolism"
+      },
+      "note": "Shares Dihydroceramide with Sphingolipid metabolism.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:31488"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_triacyl_sn_glycerol_1-2-diacyl-sn-glycero-3-p-to-s-adenosyl-l-homocy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "triacyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-diacyl-sn-glycero-3-p-to-s-adenosyl-l-homocy"
+      },
+      "note": "Shares triacyl-sn-glycerol with 1,2-diacyl-sn-glycero-3-p… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64615"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_triacyl_sn_glycerol_1-3-diacyl-2-linoleoylgly-to-triacyl-sn-glycerol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "triacyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-3-diacyl-2-linoleoylgly-to-triacyl-sn-glycerol"
+      },
+      "note": "Shares triacyl-sn-glycerol with 1,3-diacyl-2-linoleoylgly… to triacyl-sn-glycerol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64615"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_triacyl_sn_glycerol_1-palmitoyl-2-azelaoyl-sn-to-fatty-acid-anion",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "triacyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-palmitoyl-2-azelaoyl-sn-to-fatty-acid-anion"
+      },
+      "note": "Shares triacyl-sn-glycerol with 1-palmitoyl-2-azelaoyl-sn… to fatty acid anion.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64615"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_triacyl_sn_glycerol_2-acyl-6-d-mannosyl-1-to-sn-glycerol-3-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "triacyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-acyl-6-d-mannosyl-1-to-sn-glycerol-3-phosphate"
+      },
+      "note": "Shares triacyl-sn-glycerol with 2-acyl-6-[α-D-mannosyl-(1… to sn-glycerol 3-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64615"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_triacyl_sn_glycerol_2-hydroxyhexacosanoyl-coa-to-carboxylic-acid-ani",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "triacyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-hydroxyhexacosanoyl-coa-to-carboxylic-acid-ani"
+      },
+      "note": "Shares triacyl-sn-glycerol with 2-hydroxyhexacosanoyl-CoA to carboxylic acid anion.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64615"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_triacyl_sn_glycerol_2-monoglyceride-to-glycerol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "triacyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-monoglyceride-to-glycerol"
+      },
+      "note": "Shares triacyl-sn-glycerol with 2-monoglyceride to glycerol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64615"
           }
         ]
       }

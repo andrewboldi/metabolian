@@ -1,0 +1,498 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "pentadecanoate-to-3-hydroxypentadecanoyl-null",
+  "name": "pentadecanoate to 3-Hydroxypentadecanoyl…",
+  "category": "other",
+  "summary": "A 3-step route from pentadecanoate to 3-Hydroxypentadecanoyl Coenzyme A, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR158265"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "pentadecanoate",
+      "name": "pentadecanoate",
+      "formula": "C15H29O2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM12597"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "pentadecanoyl_coa",
+      "name": "pentadecanoyl-CoA",
+      "formula": "C36H60N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:74309"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H30N9O15P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57692"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "trans_2_pentadecenoyl_coa",
+      "name": "trans-2-pentadecenoyl-CoA",
+      "short": "trans-2-pentadeceno…",
+      "formula": "C36H58N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:77545"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58307"
+      }
+    },
+    {
+      "id": "3_hydroxypentadecanoyl_coenzyme_a",
+      "name": "3-Hydroxypentadecanoyl Coenzyme A",
+      "short": "3-Hydroxypentadecan…",
+      "formula": "C36H60N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM744544"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR158265",
+      "substrates": [
+        {
+          "metabolite": "pentadecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pentadecanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR158265"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR158265"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "pentadecanoyl-CoA + FAD + H(+) = (2E)-pentadecenoyl-CoA + FADH2",
+      "equation": "pentadecanoyl-CoA + FAD + H(+) = (2E)-pentadecenoyl-CoA + FADH2",
+      "substrates": [
+        {
+          "metabolite": "pentadecanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_2_pentadecenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:40851"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40851"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR158633",
+      "substrates": [
+        {
+          "metabolite": "trans_2_pentadecenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_hydroxypentadecanoyl_coenzyme_a",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR158633"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR158633"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_pentadecanoate_2-hydroxy-n-methyl-5-oxop-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pentadecanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-hydroxy-n-methyl-5-oxop-to-h2o"
+      },
+      "note": "Shares pentadecanoate with 2-hydroxy-N-methyl-5-oxop… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM12597"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pentadecanoate_dimethylselenoniopropanoa-to-acrylate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pentadecanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dimethylselenoniopropanoa-to-acrylate"
+      },
+      "note": "Shares pentadecanoate with dimethylselenoniopropanoa… to acrylate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM12597"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pentadecanoate_gdp-to-nadph-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pentadecanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gdp-to-nadph-null"
+      },
+      "note": "Shares pentadecanoate with GDP to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM12597"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pentadecanoate_p-nitrophenyl-alpha-l-rha-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pentadecanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "p-nitrophenyl-alpha-l-rha-to-h2o-null"
+      },
+      "note": "Shares pentadecanoate with p-nitrophenyl-alpha-L-rha… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM12597"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pentadecanoate_pentadecanoate-to-3-hydroxypentadecanoyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pentadecanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "pentadecanoate-to-3-hydroxypentadecanoyl"
+      },
+      "note": "Shares pentadecanoate with pentadecanoate to 3-Hydroxypentadecanoyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM12597"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_2_pentadecenoyl_coa_co2-to-16-hydroxy-hentriaconta-3-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_2_pentadecenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "co2-to-16-hydroxy-hentriaconta-3-null"
+      },
+      "note": "Shares trans-2-pentadecenoyl-CoA with CO2 to 16-hydroxy-hentriaconta-3….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77545"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_2_pentadecenoyl_coa_pentadecanoate-to-3-hydroxypentadecanoyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_2_pentadecenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "pentadecanoate-to-3-hydroxypentadecanoyl"
+      },
+      "note": "Shares trans-2-pentadecenoyl-CoA with pentadecanoate to 3-Hydroxypentadecanoyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77545"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_2_pentadecenoyl_coa_pentadecanoyl-coa-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_2_pentadecenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "pentadecanoyl-coa-to-h2o"
+      },
+      "note": "Shares trans-2-pentadecenoyl-CoA with pentadecanoyl-CoA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77545"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_2_pentadecenoyl_coa_pentadecanoyl-coa-to-h2o-48204",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_2_pentadecenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "pentadecanoyl-coa-to-h2o-48204"
+      },
+      "note": "Shares trans-2-pentadecenoyl-CoA with pentadecanoyl-CoA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77545"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_hydroxypentadecanoyl_coenzyme_a_2-5-dichloro-4-methyl-muc-to-1r-2s-3-6-dichloro",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_hydroxypentadecanoyl_coenzyme_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-5-dichloro-4-methyl-muc-to-1r-2s-3-6-dichloro"
+      },
+      "note": "Shares 3-Hydroxypentadecanoyl Coenzyme A with 2,5-dichloro-4-methyl-muc… to (1R,2S)-3,6-dichloro-4-me….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM744544"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_hydroxypentadecanoyl_coenzyme_a_2e-4e-undeca-2-4-dieno-to-nad-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_hydroxypentadecanoyl_coenzyme_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2e-4e-undeca-2-4-dieno-to-nad-null"
+      },
+      "note": "Shares 3-Hydroxypentadecanoyl Coenzyme A with (2E, 4E)-undeca-2,4-dieno… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM744544"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_hydroxypentadecanoyl_coenzyme_a_pentadecanoate-to-3-hydroxypentadecanoyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_hydroxypentadecanoyl_coenzyme_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "pentadecanoate-to-3-hydroxypentadecanoyl"
+      },
+      "note": "Shares 3-Hydroxypentadecanoyl Coenzyme A with pentadecanoate to 3-Hydroxypentadecanoyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM744544"
+          }
+        ]
+      }
+    }
+  ]
+}

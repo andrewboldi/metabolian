@@ -98,93 +98,9 @@
       "xrefs": {
         "metanetx": "MNXM818439"
       }
-    },
-    {
-      "id": "r_lactate",
-      "name": "(R)-lactate",
-      "formula": "C3H5O3",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM1371362"
-      }
-    },
-    {
-      "id": "n_acetyl_s_1_hydroxy_2_oxopropyl_cysteine",
-      "name": "N-Acetyl-S-(1-hydroxy-2-oxopropyl)cysteine",
-      "short": "N-Acetyl-S-(1-hydro…",
-      "formula": "C8H13NO5S",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM819694"
-      }
-    },
-    {
-      "id": "2_4_6_trichlorophenolate",
-      "name": "2,4,6-trichlorophenolate",
-      "short": "2,4,6-trichlorophen…",
-      "formula": "C6H2Cl3O",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:140426"
-      }
-    },
-    {
-      "id": "o2",
-      "name": "O2",
-      "formula": "O2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM735438"
-      }
-    },
-    {
-      "id": "2_6_dichloro_4_hydroxyphenolate",
-      "name": "2,6-dichloro-4-hydroxyphenolate",
-      "short": "2,6-dichloro-4-hydr…",
-      "formula": "C6H3Cl2O2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:141024"
-      }
-    },
-    {
-      "id": "chloride",
-      "name": "chloride",
-      "formula": "Cl",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM735978"
-      }
-    },
-    {
-      "id": "aminopyrrolnitrin",
-      "name": "aminopyrrolnitrin",
-      "formula": "C10H8Cl2N2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:85786"
-      }
-    },
-    {
-      "id": "monodechloroaminopyrrolnitrin",
-      "name": "monodechloroaminopyrrolnitrin",
-      "short": "monodechloroaminopy…",
-      "formula": "C10H9ClN2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:85785"
-      }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_3_5_1_124",
-      "name": "protein deglycase",
-      "ec": [
-        "3.5.1.124"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -295,159 +211,93 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "protein deglycase",
-      "ec": "3.5.1.124",
-      "substrates": [
-        {
-          "metabolite": "r_lactate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "n_acetyl_l_cysteine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n_acetyl_s_1_hydroxy_2_oxopropyl_cysteine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_5_1_124"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR172225"
+      "id": "xt_2r_3_1_5_6_dihydropyridin_2_yl_2_hydroxy_2_3_1e_secalciferol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2r_3_1_5_6_dihydropyridin_2_yl_2_hydroxy_2_3_1e"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "secalciferol-to-h2o"
+      },
+      "note": "Shares (2R)-3-{[1-(5,6-dihydropyridin-2-yl)-2-hydroxy-2-{3-[(1E)-prop-1-en-1-yl]oxiran-2-yl}ethyl]sulfanyl}-2-acetamidopropanoate with secalciferol to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR172225"
+            "id": "MNXM818436"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "Reaction MNXR187814",
-      "substrates": [
-        {
-          "metabolite": "fadh2",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "2_4_6_trichlorophenolate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "fad",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "2_6_dichloro_4_hydroxyphenolate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "chloride",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR187814"
+      "id": "xt_n_acetyl_l_cysteine_2-azaniumyl-4-5-dihydroxy-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyl_l_cysteine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2-azaniumyl-4-5-dihydroxy-to-nad"
+      },
+      "note": "Shares N-acetyl-L-cysteine with 2-azaniumyl-4,5-dihydroxy… to NAD.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR187814"
+            "id": "MNXM98606"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "Reaction MNXR191406",
-      "substrates": [
-        {
-          "metabolite": "aminopyrrolnitrin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fad",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "fadh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "monodechloroaminopyrrolnitrin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "chloride",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "metanetx": "MNXR191406"
+      "id": "xt_n_acetyl_l_cysteine_gdp-3-dehydro-6-deoxy-alp-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyl_l_cysteine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "gdp-3-dehydro-6-deoxy-alp-to-nadph"
+      },
+      "note": "Shares N-acetyl-L-cysteine with GDP-3-dehydro-6-deoxy-alp… to NADPH.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR191406"
+            "id": "MNXM98606"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1s_2z_5_amino_1_3_3_1e_prop_1_en_1_yl_oxiran_2_2e-5s-6e-8e-10e-1-ammon-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1s_2z_5_amino_1_3_3_1e_prop_1_en_1_yl_oxiran_2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2e-5s-6e-8e-10e-1-ammon-to-h2o"
+      },
+      "note": "Shares (1S,2Z)-5-amino-1-(3-{3-[(1E)-prop-1-en-1-yl]oxiran-2-yl}oxiran-2-yl)pent-2-en-1-ol with (2E,5S,6E,8E,10E)-1-ammon… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM818439"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway h-to-meso-zeaxanthin "H to meso-zeaxanthin" {
-  spacing 200
+  spacing 188
 
   spine at 0,0 {
     h
@@ -16,27 +16,15 @@ pathway h-to-meso-zeaxanthin "H to meso-zeaxanthin" {
     meso_zeaxanthin
   }
 
-  branch from nadp side left {
-    nadp
-    <-> . +h +o2 +nadph +cyclosporin_a_metabolite_m18 +h2o
-    cyclosporin_a_metabolite_m26
+  branch from 6_r_beta_epsilon_carotene side left {
+    6_r_beta_epsilon_carotene
+    <-> ec_5_5_1_18 [5.5.1.18]
+    gamma_carotene
   }
 
-  branch from nadp side right {
-    nadp
-    <-> . +h +o2 +nadph +cyclosporin_a_metabolite_m21 +h2o
-    cyclosporin_a_metabolite_m13
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +ent_kaur_15_en_17_oate +o2
-    ent_kaur_15_en_19_al_17_oate
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +3_oxooctanoyl_coa +trans_4_coumaroyl_coa +co2 +coa
-    1_4_hydroxyphenyl_1_decene_3_5_dione
+  branch from 6_r_beta_epsilon_carotene side right {
+    6_r_beta_epsilon_carotene
+    <-> ec_5_5_1_19 [5.5.1.19]
+    delta_carotene
   }
 }

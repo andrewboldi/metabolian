@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway casomorphin-7-human-to-2-methylbutanal "β-casomorphin-7 (human) to 2-methylbutanal" {
-  spacing 240
+  spacing 222
 
   spine at 0,0 {
     casomorphin_7_human
@@ -16,27 +16,9 @@ pathway casomorphin-7-human-to-2-methylbutanal "β-casomorphin-7 (human) to 2-me
     2_methylbutanal
   }
 
-  branch from glutamate side left {
-    glutamate
-    <-> . +l_m_tyrosine +akg
-    3_hydroxyphenylpyruvate
-  }
-
-  branch from glutamate side right {
-    glutamate
-    <-> . +dmapp +ppi
-    prekainate
-  }
-
   branch from 2_methylbutanal side left {
     2_methylbutanal
-    <-> . +2_methylbutan_1_aminium +nad +h2o +nadh +hplus
-    nh3
-  }
-
-  branch from 2_methylbutanal side right {
-    2_methylbutanal
-    <-> . +nadp +h2o +nh3 +nadph +hplus
-    2_methylbutan_1_aminium
+    <-> . +nadp +nadph +hplus
+    2_methylbutan_1_ol
   }
 }

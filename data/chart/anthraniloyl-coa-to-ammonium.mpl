@@ -22,38 +22,38 @@ pathway anthraniloyl-coa-to-ammonium "anthraniloyl-CoA to ammonium" {
 
   branch from co2 side left {
     co2
-    <-> . +malonyl_coa +anthraniloyl_coa +h +coa
-    2_methyl_4_quinolinol
+    <-> ec_2_3_1_235 [2.3.1.235] +malonyl_coa +h +coa +h2o
+    tetracenomycin_f2
   }
 
   branch from co2 side right {
     co2
-    <-> ec_4_1_1_56 [4.1.1.56] +3_oxopalmitic_acid
-    2_pentadecanone
+    <-> ec_4_1_1_68 [4.1.1.68] +2_hydroxyhepta_2_4_dienedioic_acid
+    5_carboxy_2_oxohept_3_enedioate
   }
 
   branch from coa side left {
     coa
-    <-> . +malonyl_coa +2_naphthyl_d_glucoside
-    2_naphthol_6_o_malonylglucoside
+    <-> ec_2_3_1_79 [2.3.1.79] +acetyl_coa +d_maltose
+    acetyl_maltose
   }
 
   branch from coa side right {
     coa
-    <-> . +malonyl_coa +1_naphthyl_d_glucoside
-    1_naphthol_6_o_malonylglucoside
+    <-> ec_2_3_1_76 [2.3.1.76] +hexadecanoyl_coa +retinol
+    all_trans_retinyl_hexadecanoate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_4_11_2 [3.4.11.2] +glycine +s_4_hydroxy_nonenal_3_yl_l_cysteine
-    s_4_hydroxy_nonenal_3_yl_l_cysteinylglycine
+    <-> ec_4_2_1_22 [4.2.1.22] +l_homocysteine +l_serine
+    d_cystathionine
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_149 [3.2.1.149] +linalool +a_6_o_beta_d_xylopyranosyl_beta_d_glucopyranose
-    linalyl_beta_primeveroside
+    <-> ec_3_1_1_19 [3.1.1.19] +d_glucuronate +h
+    d_glucurono_6_2_lactone
   }
 
   branch from 2_heptyl_3_hydroxy_4_quinolone side left {
@@ -62,27 +62,45 @@ pathway anthraniloyl-coa-to-ammonium "anthraniloyl-CoA to ammonium" {
     nad
   }
 
-  branch from anthranilate side right {
-    anthranilate
-    <-> ec_1_14_14_8 [1.14.14.8] +fadh2 +o2 +fad +h2o +hplus
-    3_hydroxyanthranilate
+  branch from anthraniloyl_coa side right {
+    anthraniloyl_coa
+    <-> . +malonyl_coa +h +co2 +coa
+    4_hydroxy_2_quinolone
   }
 
-  branch from anthranilate side left {
-    anthranilate
-    <-> . +acetyl_coa +coa
-    n_acetylanthranilate
+  branch from co2 side left {
+    co2
+    <-> . +acetyl_coa +malonyl_coa +h +nadph +nadp +coa +h2o
+    6_hydroxymellein
   }
 
-  branch from nh3 side right {
-    nh3
-    <-> . +1_cyclohexylethanaminium +nadp +h2o +nadph +hplus
-    1_cyclohexylethanone
+  branch from co2 side right {
+    co2
+    <-> ec_4_1_1_77 [4.1.1.77] +2_hydroxy_cis_hex_2_4_dienoate
+    2_oxo_5_methyl_cis_muconate
   }
 
-  branch from nh3 side left {
-    nh3
-    <-> . +d_argininium +o2 +h2o +h2o2
-    5_guanidino_2_oxopentanoic_acid
+  branch from coa side left {
+    coa
+    <-> ec_2_3_1_126 [2.3.1.126] +trans_caffeoyl_coa +isocitrate
+    2_e_caffeoyl_d_threo_isocitrate
+  }
+
+  branch from coa side right {
+    coa
+    <-> ec_2_3_1_107 [2.3.1.107] +acetyl_coa +h +deacetylvindoline
+    vindoline
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +d_glucono_1_5_lactone +h +d_gluconate
+    pmf
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +d_glucono_1_5_lactone +d_gluconate
+    h
   }
 }

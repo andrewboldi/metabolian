@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-11z-docosenoyl-glycer-to-h2o "1-(11Z-Docosenoyl)-Glycer… to H2O" {
-  spacing 200
+  spacing 152
 
   spine at 0,0 {
     1_11z_docosenoyl_glycero_3_phosphate
@@ -14,53 +14,5 @@ pathway 1-11z-docosenoyl-glycer-to-h2o "1-(11Z-Docosenoyl)-Glycer… to H2O" {
     cetoleic_acid
     <-> . +coa -h2o
     11z_docosenoyl_coa
-  }
-
-  branch from sn_glycerol_3_phosphate side left {
-    sn_glycerol_3_phosphate
-    <-> . +heptadecanoyl_coa +coa
-    1_heptadecanoyl_glycero_3_phosphate
-  }
-
-  branch from sn_glycerol_3_phosphate side right {
-    sn_glycerol_3_phosphate
-    <-> . +10z_heptadecenoyl_coa +coa
-    1_acylglycerol_3p_10_heptade
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
-    symplostatin_1
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
-    scyptolin_a
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +acetyl_coa +malonyl_coa +h +1_4_5_10_13_pentahydroxy_delta2_3_protoilludene +melledonol +h2o
-    co2
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +acetyl_coa +z_octadec_11_enol
-    z_octadec_11_enyl_acetate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    schizopeptin_791
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    gramicidin_b
   }
 }

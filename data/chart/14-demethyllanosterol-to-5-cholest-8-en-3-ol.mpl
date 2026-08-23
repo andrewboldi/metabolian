@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 14-demethyllanosterol-to-5-cholest-8-en-3-ol "14-demethyllanosterol to 5α-cholest-8-en-3β-ol" {
-  spacing 206
+  spacing 218
 
   spine at 0,0 {
     tmas
@@ -84,5 +84,17 @@ pathway 14-demethyllanosterol-to-5-cholest-8-en-3-ol "14-demethyllanosterol to 5
     4_formyl_5_cholest_8_en_3_ol
     <-> ec_1_14_13_72 [1.14.13.72] +o2 +nadp +3_hydroxy_5_cholest_8_ene_4_carboxylate +h2o
     nadph
+  }
+
+  branch from tmas side right {
+    tmas
+    <-> . +fe2 +o2 +hplus +iron +h2o
+    methylzymosterol_carboxylate
+  }
+
+  branch from 4_methyl_5_cholest_8_en_3_ol side left {
+    4_methyl_5_cholest_8_en_3_ol
+    <-> ec_1_3_1_70 [1.3.1.70] +h +nadph +nadp
+    4alpha_methyl_cholesta_8_14_dienol
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-aminobenzoate-to-h2o "4-aminobenzoate to H2O" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     4_aminobenzoate
@@ -14,17 +14,5 @@ pathway 4-aminobenzoate-to-h2o "4-aminobenzoate to H2O" {
     udp_alpha_d_glucose
     <-> ec_3_1_1_1 [3.1.1.1] +ethanol +h +4_aminobenzoate -h2o
     benzocaine
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_alanine +l_2_amino_4_methoxy_trans_but_3_enoic_acid
-    l_alanyl_2s_3e_amino_4_methoxy_but_3_enoyl_l_ala
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +13s_hydroperoxy_9z_11e_octadecadienoate
-    omega5z_etheroleate
   }
 }

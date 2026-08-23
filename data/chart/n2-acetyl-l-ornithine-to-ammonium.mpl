@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n2-acetyl-l-ornithine-to-ammonium "N2-acetyl-L-ornithine to ammonium" {
-  spacing 258
+  spacing 270
 
   spine at 0,0 {
     n2_acetyl_l_ornithine
@@ -20,26 +20,14 @@ pathway n2-acetyl-l-ornithine-to-ammonium "N2-acetyl-L-ornithine to ammonium" {
 
   branch from ornithine side left {
     ornithine
-    <-> ec_3_5_3_1 [3.5.3.1] +arginine +h2o
-    urea
+    <-> ec_1_14_13_196 [1.14.13.196] +nadh +o2 +nad +h2o
+    n5_hydroxy_l_ornithine
   }
 
   branch from ornithine side right {
     ornithine
-    <-> ec_3_5_3_25 [3.5.3.25] +n5_hydroxyamino_imino_methyl_l_ornithinium +h2o
-    hydroxyurea
-  }
-
-  branch from acetate side left {
-    acetate
-    <-> . +n_acetylsphingosine +h2o
-    sphingosine
-  }
-
-  branch from acetate side right {
-    acetate
-    <-> . +dihydroprecondylocarpine_acetate +hplus
-    catharanthine
+    <-> ec_2_1_4_3 [2.1.4.3] +l_lysinium +arginine
+    l_homoarginine
   }
 
   branch from d_ornithinium side left {
@@ -62,13 +50,37 @@ pathway n2-acetyl-l-ornithine-to-ammonium "N2-acetyl-L-ornithine to ammonium" {
 
   branch from nh3 side right {
     nh3
-    <-> ec_6_3_4_16 [6.3.4.16] +hco3 +atp +adp +pi +hplus
-    carbamoyl_p
+    <-> ec_3_5_1_100 [3.5.1.100] +r_piperazin_4_ium_2_carboxamide +h2o
+    r_piperazine_2_carboxylic_acid
   }
 
   branch from nh3 side left {
     nh3
-    <-> ec_1_4_1_1 [1.4.1.1] +nad +h2o +pyruvate +nadh +hplus
-    alanine
+    <-> ec_3_5_1_101 [3.5.1.101] +s_piperazin_4_ium_2_carboxamide +h2o
+    s_piperazine_2_carboxylic_acid
+  }
+
+  branch from ornithine side right {
+    ornithine
+    <-> . +isoleucine +l_asparagine +l_histidine +l_lysinium +leucine +cysteine +aspartate +l_phenylalanine +glutamate +atp +amp +ppi +h2o +hplus
+    bacitracin_a
+  }
+
+  branch from ornithine side left {
+    ornithine
+    <-> . +alanine +arginine
+    3_guanidinopropanoic_acid
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_3_5_1_100 [3.5.1.100] +r_nipecotamide +h2o
+    r_nipecotic_acid
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_4_3_1_27 [4.3.1.27] +3r_3_hydroxy_d_aspartate
+    oxaloacetate
   }
 }

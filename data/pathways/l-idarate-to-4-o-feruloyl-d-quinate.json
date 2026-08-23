@@ -101,6 +101,25 @@
       "xrefs": {
         "chebi": "CHEBI:231591"
       }
+    },
+    {
+      "id": "5_dehydro_4_deoxy_d_glucarate",
+      "name": "5-dehydro-4-deoxy-D-glucarate",
+      "short": "5-dehydro-4-deoxy-D…",
+      "formula": "C6H6O7",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM854"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
     }
   ],
   "enzymes": [
@@ -123,6 +142,13 @@
       "name": "chlorogenate caffeoyltransferase",
       "ec": [
         "2.3.1.324"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_40",
+      "name": "glucarate dehydratase",
+      "ec": [
+        "4.2.1.40"
       ]
     }
   ],
@@ -285,6 +311,312 @@
           {
             "db": "Rhea",
             "id": "RHEA:82243"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "glucarate dehydratase",
+      "ec": "4.2.1.40",
+      "substrates": [
+        {
+          "metabolite": "l_idarate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_dehydro_4_deoxy_d_glucarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_40"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR133639"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR133639"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_d_glucarate_l-gulono-1-4-lactone-to-d-fructofuranuronate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glucarate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-gulono-1-4-lactone-to-d-fructofuranuronate"
+      },
+      "note": "Shares D-glucarate with L-gulono-1,4-lactone to D-fructofuranuronate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:30612"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glucarate_oroxylin-a-7-o-d-glucur-to-2-hydroxy-3-oxopropan",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glucarate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "oroxylin-a-7-o-d-glucur-to-2-hydroxy-3-oxopropan"
+      },
+      "note": "Shares D-glucarate with oroxylin A 7-O-β-D-glucur… to 2-hydroxy-3-oxopropanoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:30612"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_chlorogenate_quinate-to-3-2-carboxylatoethenyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "chlorogenate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "quinate-to-3-2-carboxylatoethenyl"
+      },
+      "note": "Shares chlorogenate with (−)-quinate to 3-(2-carboxylatoethenyl)-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57644"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_quinate_2r-2-o-phosphonato-3-su-to-3-dehydroquinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "quinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2r-2-o-phosphonato-3-su-to-3-dehydroquinate"
+      },
+      "note": "Shares (−)-quinate with (2R)-2-O-phosphonato-3-su… to 3-dehydroquinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29751"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_quinate_l-rhamnofuranose-to-3-carboxy-cis-cis-muconate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "quinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-rhamnofuranose-to-3-carboxy-cis-cis-muconate"
+      },
+      "note": "Shares (−)-quinate with L-rhamnofuranose to 3-carboxy-cis,cis-muconate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29751"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_quinate_quinate-to-3-2-carboxylatoethenyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "quinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "quinate-to-3-2-carboxylatoethenyl"
+      },
+      "note": "Shares (−)-quinate with (−)-quinate to 3-(2-carboxylatoethenyl)-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29751"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_quinate_s-2-halocarboxylic-to-l-glutamyl-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "quinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2-halocarboxylic-to-l-glutamyl-phosphate"
+      },
+      "note": "Shares (−)-quinate with (S)-2-halocarboxylic… to L-γ-glutamyl phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29751"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_feruloyl_coa_coniferyl-aldehyde-to-scopolin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_feruloyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "coniferyl-aldehyde-to-scopolin"
+      },
+      "note": "Shares trans-feruloyl-CoA with coniferyl aldehyde to scopolin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87305"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_feruloyl_coa_dihydroferulate-to-n-feruloyltyramine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_feruloyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dihydroferulate-to-n-feruloyltyramine"
+      },
+      "note": "Shares trans-feruloyl-CoA with dihydroferulate to N-feruloyltyramine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87305"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_feruloyl_coa_dihydroferuloyl-coa-to-guaiacol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_feruloyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dihydroferuloyl-coa-to-guaiacol"
+      },
+      "note": "Shares trans-feruloyl-CoA with dihydroferuloyl-CoA to guaiacol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87305"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_feruloyl_coa_n-aryl-1-2-dipalmitoyl-sn-to-16-feruloyloxypalmi",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_feruloyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-aryl-1-2-dipalmitoyl-sn-to-16-feruloyloxypalmi"
+      },
+      "note": "Shares trans-feruloyl-CoA with N-aryl-1,2-dipalmitoyl-sn… to 16-feruloyloxypalmitate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87305"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_feruloyl_coa_n-feruloylglycinate-to-2-e-o-feruloyl-d-galact",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_feruloyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-feruloylglycinate-to-2-e-o-feruloyl-d-galact"
+      },
+      "note": "Shares trans-feruloyl-CoA with N-feruloylglycinate to 2-(E)-O-feruloyl-D-galact….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87305"
           }
         ]
       }

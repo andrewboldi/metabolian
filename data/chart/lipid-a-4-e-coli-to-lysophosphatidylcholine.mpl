@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway lipid-a-4-e-coli-to-lysophosphatidylcholine "lipid A(4−) (E. coli) to lysophosphatidylcholine…" {
-  spacing 304
+  spacing 292
 
   spine at 0,0 {
     lipid_a_4_e_coli
@@ -24,63 +24,51 @@ pathway lipid-a-4-e-coli-to-lysophosphatidylcholine "lipid A(4−) (E. coli) to 
     lysophosphatidylcholine_16_0
   }
 
-  branch from dag side left {
-    dag
-    <-> . +n_acylphytosphingosine +1_2_diacyl_sn_glycero_3_phosphoethanolamine
-    n_acylphytosphingosine_1_phosphoethanolamine
-  }
-
-  branch from dag side right {
-    dag
-    <-> . +dihydroceramide +phosphatidylcholine
-    n_acylsphinganine_1_phosphocholine
-  }
-
-  branch from 1_acyl_sn_glycerol side left {
-    1_acyl_sn_glycerol
-    <-> . +acyl_coa +coa
-    1_3_diacyl_sn_glycerol
-  }
-
-  branch from 1_acyl_sn_glycerol side right {
-    1_acyl_sn_glycerol
-    <-> . +1_acyl_sn_glycero_3_phospho_1d_myo_inositol +h2o +hplus
-    1d_myo_inositol_1_phosphate
-  }
-
-  branch from sterol side left {
-    sterol
-    <-> ec_2_4_1_173 [2.4.1.173] +udp_d_glucose +udp +hplus
-    sterol_3_d_glucoside
+  branch from fatty-acid side left {
+    fatty-acid
+    <-> . +3_d_galactosyl_1_6_d_galactosyl_1_2_diacyl_sn_gl +h2o +hplus
+    1_acyl_3_o_d_galactosyl_1_6_d_galactosyl_sn_glyc
   }
 
   branch from fatty-acid side right {
     fatty-acid
-    <-> . +3_d_galactosyl_1_2_bis_long_chain_acyl_sn_glycer +h2o +hplus
-    3_d_galactosyl_mono_long_chain_acyl_sn_glycerol
+    <-> . +3_d_galactosyl_1_6_d_galactosyl_1_2_diacyl_sn_gl +h2o +hplus
+    2_acyl_3_o_d_galactosyl_1_6_d_galactosyl_sn_glyc
+  }
+
+  branch from 1_2_diacyl_sn_glycero_3_phosphoethanolamine side left {
+    1_2_diacyl_sn_glycero_3_phosphoethanolamine
+    <-> ec_4_1_1_65 [4.1.1.65] +hplus +co2
+    3_sn_phosphatidyl_l_serine
+  }
+
+  branch from 1_2_diacyl_sn_glycero_3_phosphoethanolamine side right {
+    1_2_diacyl_sn_glycero_3_phosphoethanolamine
+    <-> . +2_monolysocardiolipin +1_acyl_sn_glycero_3_phosphoethanolamine
+    cardiolipin
   }
 
   branch from fatty-acid side left {
     fatty-acid
-    <-> . +3_d_galactosyl_1_6_d_galactosyl_1_2_bis_long_cha +h2o +hplus
-    3_d_galactosyl_1_6_d_galactosyl_mono_long_chain
+    <-> . +2_o_acyl_3_o_d_galactosyl_sn_glycerol +h2o +hplus
+    3_o_d_galactopyranosyl_sn_glycerol
   }
 
-  branch from 1_o_acyl_sn_glycero_3_phosphocholine side right {
-    1_o_acyl_sn_glycero_3_phosphocholine
-    <-> . +1_alkyl_2_acetyl_sn_glycerol +phosphatidylcholine
-    1_alkyl_2_acetyl_3_acyl_sn_glycerol
+  branch from fatty-acid side right {
+    fatty-acid
+    <-> . +h2o +3_o_d_galactopyranosyl_sn_glycerol +hplus
+    1_acyl_3_o_d_galactosyl_sn_glycerol
   }
 
-  branch from 1_o_acyl_sn_glycero_3_phosphocholine side left {
-    1_o_acyl_sn_glycero_3_phosphocholine
-    <-> . +1_3_o_alkylglycerol +phosphatidylcholine
-    1_alkyl_3_acylglycerol
+  branch from palmitoyl_coa side left {
+    palmitoyl_coa
+    <-> . +cholesterol +coa
+    cholesteryl_palmitate
   }
 
-  branch from lysophosphatidylcholine_16_0 side right {
-    lysophosphatidylcholine_16_0
-    <-> . +1_2_dihexadecanoyl_sn_glycero_3_phosphocholine +h2o +hplus
-    palmitate
+  branch from palmitoyl_coa side right {
+    palmitoyl_coa
+    <-> . +hexadecasphinganine +coa +hplus
+    n_palmitoylhexadecasphinganine
   }
 }

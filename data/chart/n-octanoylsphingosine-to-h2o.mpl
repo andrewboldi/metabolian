@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-octanoylsphingosine-to-h2o "N-octanoylsphingosine… to H2O" {
-  spacing 206
+  spacing 230
 
   spine at 0,0 {
     n_octanoylsphingosine_1_phosphate
@@ -24,13 +24,37 @@ pathway n-octanoylsphingosine-to-h2o "N-octanoylsphingosine… to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> . +h +adp +phosphate +atp
-    propanoyl_coa
+    <-> ec_4_2_1_169 [4.2.1.169] +8_ethyl_12_methylbacteriochlorophyllide_d +8_ethyl_12_methyl_3_vinylbacteriochlorophyllide
+    h
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +adp +phosphate +atp
-    choloyl_coa
+    <-> ec_4_2_1_169 [4.2.1.169] +8_12_diethyl_3_vinylbacteriochlorophyllide_d +h
+    8_12_diethylbacteriochlorophyllide_d
+  }
+
+  branch from l_homoserine_lactone side right {
+    l_homoserine_lactone
+    <-> ec_3_5_1_97 [3.5.1.97] +bhb +h2o
+    hai_1
+  }
+
+  branch from l_homoserine_lactone side left {
+    l_homoserine_lactone
+    <-> ec_3_5_1_97 [3.5.1.97] +n_3_oxododecanoyl_l_homoserine_lactone +h2o
+    3_oxododecanoate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_4_2_1_169 [4.2.1.169] +12_ethyl_8_propyl_3_vinylbacteriochlorophyllide +h
+    12_ethyl_8_propylbacteriochlorophyllide_d
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_4_2_1_169 [4.2.1.169] +12_ethyl_8_isobutyl_3_vinylbacteriochlorophyllid +h
+    12_ethyl_8_isobutylbacteriochlorophyllide_d
   }
 }

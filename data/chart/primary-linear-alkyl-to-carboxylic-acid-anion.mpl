@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway primary-linear-alkyl-to-carboxylic-acid-anion "primary linear alkyl… to carboxylic acid anion" {
-  spacing 216
+  spacing 204
 
   spine at 0,0 {
     primary_linear_alkyl_sulfate_ester
@@ -14,17 +14,5 @@ pathway primary-linear-alkyl-to-carboxylic-acid-anion "primary linear alkyl… t
     aldehyde
     <-> ec_1_2_3_1 [1.2.3.1] +o2 +h2o -h2o2 -hplus
     carboxylic_acid_anion
-  }
-
-  branch from hydrogen_donor side left {
-    hydrogen_donor
-    <-> . +cannabinerolate +hydrogen_acceptor
-    cannabichromenate
-  }
-
-  branch from hydrogen_donor side right {
-    hydrogen_donor
-    <-> . +r_malate +hydrogen_acceptor
-    oxaloacetate
   }
 }

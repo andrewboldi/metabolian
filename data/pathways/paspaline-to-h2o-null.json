@@ -1,0 +1,448 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "paspaline-to-h2o-null",
+  "name": "Paspaline to H2O",
+  "category": "other",
+  "summary": "A 3-step route from Paspaline to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR150819"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:181371"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "paspaline",
+      "name": "Paspaline",
+      "formula": "C28H39NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:181371"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "terpendole_e",
+      "name": "Terpendole E",
+      "formula": "C28H39NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138863"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "13_desoxyterpendole_i",
+      "name": "13-Desoxyterpendole I",
+      "short": "13-Desoxyterpendole…",
+      "formula": "C27H35NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:181951"
+      }
+    },
+    {
+      "id": "formate",
+      "name": "formate",
+      "formula": "CHO2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM39"
+      }
+    },
+    {
+      "id": "terpendole_i",
+      "name": "Terpendole I",
+      "formula": "C27H35NO5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:144412"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR150819",
+      "substrates": [
+        {
+          "metabolite": "paspaline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "terpendole_e",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR150819"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR150819"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR113725",
+      "substrates": [
+        {
+          "metabolite": "terpendole_e",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 4
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "13_desoxyterpendole_i",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 5
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR113725"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR113725"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR113717",
+      "substrates": [
+        {
+          "metabolite": "13_desoxyterpendole_i",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "terpendole_i",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR113717"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR113717"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_paspaline_3-geranylgeranylindole-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "paspaline"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-geranylgeranylindole-to-h2o"
+      },
+      "note": "Shares Paspaline with 3-Geranylgeranylindole to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:181371"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_paspaline_3-geranylgeranylindole-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "paspaline"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-geranylgeranylindole-to-h2o-null"
+      },
+      "note": "Shares Paspaline with 3-Geranylgeranylindole to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:181371"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_paspaline_paspaline-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "paspaline"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "paspaline-to-h2o"
+      },
+      "note": "Shares Paspaline with Paspaline to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:181371"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_terpendole_e_paspaline-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "terpendole_e"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "paspaline-to-h2o"
+      },
+      "note": "Shares Terpendole E with Paspaline to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:138863"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_13_desoxyterpendole_i_paspaline-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "13_desoxyterpendole_i"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "paspaline-to-h2o"
+      },
+      "note": "Shares 13-Desoxyterpendole I with Paspaline to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:181951"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_terpendole_i_3-deoxo-4b-deoxypaxilline-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "terpendole_i"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-deoxo-4b-deoxypaxilline-to-diphosphate"
+      },
+      "note": "Shares Terpendole I with 3-Deoxo-4b-deoxypaxilline to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:144412"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_terpendole_i_3-deoxo-4b-deoxypaxilline-to-diphosphate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "terpendole_i"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-deoxo-4b-deoxypaxilline-to-diphosphate-null"
+      },
+      "note": "Shares Terpendole I with 3-Deoxo-4b-deoxypaxilline to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:144412"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_terpendole_i_paspaline-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "terpendole_i"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "paspaline-to-h2o"
+      },
+      "note": "Shares Terpendole I with Paspaline to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:144412"
+          }
+        ]
+      }
+    }
+  ]
+}

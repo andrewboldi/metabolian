@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway r-dihydrolipoate-to-n6-r-s8-acetyldihydrol "(R)-dihydrolipoate to N6-[(R)-S8-acetyldihydrol…" {
-  spacing 264
+  spacing 240
 
   spine at 0,0 {
     r_dihydrolipoate
@@ -14,29 +14,5 @@ pathway r-dihydrolipoate-to-n6-r-s8-acetyldihydrol "(R)-dihydrolipoate to N6-[(R
     n6_r_lipoyl_l_lysine
     <-> ec_1_2_4_1 [1.2.4.1] +pyruvate +hplus -co2
     n6_r_s8_acetyldihydrolipoyl_l_lysine
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_191 [4.2.3.191] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    cycloaraneosene
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +very_long_chain_fatty_acid_anion +atp +coa +amp
-    very_long_chain_fatty_acyl_coa
-  }
-
-  branch from n6_r_lipoyl_l_lysine side left {
-    n6_r_lipoyl_l_lysine
-    <-> ec_3_5_1_138 [3.5.1.138] +h2o +l_lysinium
-    r_lipoate
-  }
-
-  branch from n6_r_lipoyl_l_lysine side right {
-    n6_r_lipoyl_l_lysine
-    <-> . +l_4_hydroxy_2_oxoglutarate +hplus +co2
-    n6_r_s8_3s_3_carboxy_3_hydroxypropanoyl_dihydrol
   }
 }

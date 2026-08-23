@@ -60,4 +60,10 @@ pathway 2-amino-2-deoxy-d-gluconi-to-2-dehydro-3-deoxy-d "2-amino-2-deoxy-D-gluc
 
 
 
+
+
+
+
+
+
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n1-s-3-amino-3-carboxy-to-ammonium "N1-[(S)-3-amino-3-carboxy… to ammonium" {
-  spacing 260
+  spacing 230
 
   spine at 0,0 {
     n1_s_3_amino_3_carboxypropyl_agmatine
@@ -20,37 +20,7 @@ pathway n1-s-3-amino-3-carboxy-to-ammonium "N1-[(S)-3-amino-3-carboxy… to ammo
 
   branch from n1_aminopropylagmatine side left {
     n1_aminopropylagmatine
-    <-> ec_2_5_1_104 [2.5.1.104] +s_adenosylmethioninaminium +agmatinium +hplus
-    5_s_methyl_5_thioadenosine
-  }
-
-  branch from n1_aminopropylagmatine side right {
-    n1_aminopropylagmatine
     <-> ec_3_6_3_31 [3.6.3.31] +h +adp +phosphate +h2o
     atp
-  }
-
-  branch from spermidine side left {
-    spermidine
-    <-> . +s_adenosylmethioninaminium +5_s_methyl_5_thioadenosine +hplus
-    n4_aminopropylspermidine
-  }
-
-  branch from spermidine side right {
-    spermidine
-    <-> ec_2_5_1_128 [2.5.1.128] +s_adenosylmethioninaminium +5_s_methyl_5_thioadenosine +hplus
-    n4_bis_aminopropyl_spermidine
-  }
-
-  branch from nh3 side left {
-    nh3
-    <-> . +pentan_3_aminium +nadp +h2o +nadph +hplus
-    pentan_3_one
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +hexan_3_aminium +nadp +h2o +nadph +hplus
-    3_hexanone
   }
 }

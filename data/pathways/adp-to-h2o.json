@@ -78,23 +78,23 @@
       }
     },
     {
-      "id": "2_3_bis_3_hydroxytetradecanoyl_beta_d_glucosamin",
-      "name": "2,3-Bis(3-hydroxytetradecanoyl)-beta-D-glucosaminyl 1-phosphate",
-      "short": "2,3-Bis(3-hydroxyte…",
-      "formula": "C34H64NO12P",
+      "id": "lipid_x_vibrio_cholerae_serogroup_o1_el_tor",
+      "name": "lipid X (Vibrio cholerae serogroup O1 El Tor)",
+      "short": "lipid X (Vibrio…",
+      "formula": "C32H60NO12P",
       "charge": -2,
       "xrefs": {
-        "metanetx": "MNXM1560663"
+        "metanetx": "MNXM1559797"
       }
     },
     {
-      "id": "udp_2_3_bis_3_hydroxytetradecanoyl_glucosamine",
-      "name": "UDP-2,3-bis(3-hydroxytetradecanoyl)glucosamine",
-      "short": "UDP-2,3-bis(3-hydro…",
-      "formula": "C43H75N3O20P2",
+      "id": "udp_2_n_3r_3_hydroxytetradecanoyl_3_o_3r_3_hydro",
+      "name": "UDP-2-N-[(3R)-3-hydroxytetradecanoyl]-3-O-[(3R)-3-hydroxydodecanoyl]-alpha-D-glucosamine",
+      "short": "UDP-2-N-[(3R)-3-hyd…",
+      "formula": "C41H71N3O20P2",
       "charge": -2,
       "xrefs": {
-        "metanetx": "MNXM727269"
+        "metanetx": "MNXM1559798"
       }
     },
     {
@@ -113,6 +113,16 @@
       "name": "uridine/cytidine kinase",
       "ec": [
         "2.7.1.48"
+      ],
+      "xrefs": {
+        "uniprot": "Q9HA47"
+      }
+    },
+    {
+      "id": "ec_3_6_1_54",
+      "name": "UDP-2,3-diacylglucosamine diphosphatase",
+      "ec": [
+        "3.6.1.54"
       ]
     }
   ],
@@ -205,14 +215,15 @@
     },
     {
       "id": "r3",
-      "name": "Reaction MNXR207070",
+      "name": "UDP-2,3-diacylglucosamine diphosphatase",
+      "ec": "3.6.1.54",
       "substrates": [
         {
           "metabolite": "ump",
           "stoichiometry": 1
         },
         {
-          "metabolite": "2_3_bis_3_hydroxytetradecanoyl_beta_d_glucosamin",
+          "metabolite": "lipid_x_vibrio_cholerae_serogroup_o1_el_tor",
           "stoichiometry": 1
         },
         {
@@ -222,7 +233,7 @@
       ],
       "products": [
         {
-          "metabolite": "udp_2_3_bis_3_hydroxytetradecanoyl_glucosamine",
+          "metabolite": "udp_2_n_3r_3_hydroxytetradecanoyl_3_o_3r_3_hydro",
           "stoichiometry": 1
         },
         {
@@ -230,17 +241,134 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_54"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 3,
       "xrefs": {
-        "metanetx": "MNXR207070"
+        "metanetx": "MNXR199892"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR207070"
+            "id": "MNXR199892"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_dudp_dioleoyl-phosphatidic-acid-to-5-methyldeoxycytid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dudp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dioleoyl-phosphatidic-acid-to-5-methyldeoxycytid"
+      },
+      "note": "Shares dUDP with dioleoyl phosphatidic acid to 5-methyldeoxycytidine….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM572"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dutp_co2-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dutp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "co2-to-o2"
+      },
+      "note": "Shares dUTP with CO2 to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM452"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dutp_dioleoyl-phosphatidic-acid-to-5-methyldeoxycytid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dutp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dioleoyl-phosphatidic-acid-to-5-methyldeoxycytid"
+      },
+      "note": "Shares dUTP with dioleoyl phosphatidic acid to 5-methyldeoxycytidine….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM452"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lipid_x_vibrio_cholerae_serogroup_o1_el_tor_isorhamnetin-to-octadecanal",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lipid_x_vibrio_cholerae_serogroup_o1_el_tor"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isorhamnetin-to-octadecanal"
+      },
+      "note": "Shares lipid X (Vibrio cholerae serogroup O1 El Tor) with isorhamnetin… to octadecanal.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1559797"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_udp_2_n_3r_3_hydroxytetradecanoyl_3_o_3r_3_hydro_isorhamnetin-to-octadecanal",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "udp_2_n_3r_3_hydroxytetradecanoyl_3_o_3r_3_hydro"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isorhamnetin-to-octadecanal"
+      },
+      "note": "Shares UDP-2-N-[(3R)-3-hydroxytetradecanoyl]-3-O-[(3R)-3-hydroxydodecanoyl]-alpha-D-glucosamine with isorhamnetin… to octadecanal.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1559798"
           }
         ]
       }

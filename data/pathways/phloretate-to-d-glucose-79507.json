@@ -1,0 +1,422 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "phloretate-to-d-glucose-79507",
+  "name": "phloretate to β-D-glucose",
+  "category": "other",
+  "summary": "A 3-step route from phloretate to β-D-glucose, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:79507"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:16331"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "phloretate",
+      "name": "phloretate",
+      "formula": "C9H9O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16331"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "trans_4_coumarate",
+      "name": "trans-4-coumarate",
+      "formula": "C9H7O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:12876"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "1_o_4_coumaroyl_d_glucose",
+      "name": "1-O-(4-coumaroyl)-β-D-glucose",
+      "short": "1-O-(4-coumaroyl)-β…",
+      "formula": "C15H18O8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:71498"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "cyanidin_3_o_6_o_glucosyl_2_o_xylosylgalactoside",
+      "name": "cyanidin 3-O-(6-O-glucosyl-2-O-xylosylgalactoside) betaine",
+      "short": "cyanidin 3-O-(6-O-g…",
+      "formula": "C32H38O20",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77771"
+      }
+    },
+    {
+      "id": "cyanidin_3_o_6_o_6_o_4_coumaroyl_d_glucosyl_2_o",
+      "name": "cyanidin 3-O-{6-O-[6-O-(4-coumaroyl)-β-D-glucosyl]-2-O-β-D-xylosyl-β-D-galactoside}",
+      "short": "cyanidin 3-O-{6-O-[…",
+      "formula": "C41H43O22",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77931"
+      }
+    },
+    {
+      "id": "d_glucose",
+      "name": "β-D-glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15903"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_3_1_213",
+      "name": "cyanidin 3-O-(6-O-glucosyl-2-O-xylosylgalactoside) 6'''-O-",
+      "ec": [
+        "2.3.1.213"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "phloretate + NAD(+) = (E)-4-coumarate + NADH + H(+)",
+      "equation": "phloretate + NAD(+) = (E)-4-coumarate + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "phloretate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_4_coumarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:79507"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79507"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(E)-4-coumarate + UDP-alpha-D-glucose = 1-O-[(E)-4-coumaroyl]-beta-D-glucose + UDP",
+      "equation": "(E)-4-coumarate + UDP-alpha-D-glucose = 1-O-[(E)-4-coumaroyl]-beta-D-glucose + UDP",
+      "substrates": [
+        {
+          "metabolite": "trans_4_coumarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_o_4_coumaroyl_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:57472"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57472"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "cyanidin 3-O-(6-O-glucosyl-2-O-xylosylgalactoside) 6'''-O-",
+      "equation": "cyanidin 3-O-(6-O-glucosyl-2-O-xylosylgalactoside) betaine + 1-O-[(E)-4-coumaroyl]-beta-D-glucose = cyanidin 3-O-[6-O-(6-O-4-hydroxycinnamoyl-beta-D-glucosyl)-2-O-beta-D-xylosyl-beta-D-galactoside] + beta-D-glucose + H(+)",
+      "ec": "2.3.1.213",
+      "substrates": [
+        {
+          "metabolite": "cyanidin_3_o_6_o_glucosyl_2_o_xylosylgalactoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_o_4_coumaroyl_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cyanidin_3_o_6_o_6_o_4_coumaroyl_d_glucosyl_2_o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_213"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:35399"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35399"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_phloretate_2r-2-hydroxy-4-methyls-to-diphosphate-70327",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phloretate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2r-2-hydroxy-4-methyls-to-diphosphate-70327"
+      },
+      "note": "Shares phloretate with (2R)-2-hydroxy-4-(methyls… to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16331"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phloretate_dtdp-4-amino-4-6-dideoxy-to-s-adenosyl-l-homocys",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phloretate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-4-amino-4-6-dideoxy-to-s-adenosyl-l-homocys"
+      },
+      "note": "Shares phloretate with dTDP-4-amino-4,6-dideoxy-… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16331"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phloretate_phloretate-to-d-glucose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phloretate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phloretate-to-d-glucose"
+      },
+      "note": "Shares phloretate with phloretate to β-D-glucose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16331"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phloretate_phloretin-to-4-o-d-glucosyl-trans-4",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phloretate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phloretin-to-4-o-d-glucosyl-trans-4"
+      },
+      "note": "Shares phloretate with phloretin to 4-O-β-D-glucosyl-trans-4-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16331"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phloretate_phloretin-to-4-o-d-glucosyl-trans-4-23396",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phloretate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phloretin-to-4-o-d-glucosyl-trans-4-23396"
+      },
+      "note": "Shares phloretate with phloretin to 4-O-β-D-glucosyl-trans-4-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16331"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cyanidin_3_o_6_o_glucosyl_2_o_xylosylgalactoside_phloretate-to-d-glucose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cyanidin_3_o_6_o_glucosyl_2_o_xylosylgalactoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phloretate-to-d-glucose"
+      },
+      "note": "Shares cyanidin 3-O-(6-O-glucosyl-2-O-xylosylgalactoside) betaine with phloretate to β-D-glucose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77771"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cyanidin_3_o_6_o_6_o_4_coumaroyl_d_glucosyl_2_o_phloretate-to-d-glucose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cyanidin_3_o_6_o_6_o_4_coumaroyl_d_glucosyl_2_o"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phloretate-to-d-glucose"
+      },
+      "note": "Shares cyanidin 3-O-{6-O-[6-O-(4-coumaroyl)-β-D-glucosyl]-2-O-β-D-xylosyl-β-D-galactoside} with phloretate to β-D-glucose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77931"
+          }
+        ]
+      }
+    }
+  ]
+}

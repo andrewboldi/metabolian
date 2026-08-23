@@ -114,62 +114,6 @@
       }
     },
     {
-      "id": "ornithine",
-      "name": "L-Ornithine",
-      "formula": "C5H13N2O2",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:46911"
-      }
-    },
-    {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:15379"
-      }
-    },
-    {
-      "id": "5_amino_2_oxopentanoic_acid",
-      "name": "5-amino-2-oxopentanoic acid",
-      "short": "5-amino-2-oxopentan…",
-      "formula": "C5H9NO3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:58802"
-      }
-    },
-    {
-      "id": "h2o2",
-      "name": "Hydrogen peroxide",
-      "formula": "H2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16240"
-      }
-    },
-    {
-      "id": "l_cystine",
-      "name": "L-cystine",
-      "formula": "C6H12N2O4S2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:35491"
-      }
-    },
-    {
-      "id": "2r_2_ammonio_2_carboxylatoethyl_disulfanyl_oxop",
-      "name": "(2R)-2-ammonio-2-carboxylatoethyl-disulfanyl-oxopropanoate",
-      "short": "2-ammonio-2-carboxy…",
-      "formula": "C6H8NO5S2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:144484"
-      }
-    },
-    {
       "id": "2_keto_3_deoxy_l_galactonate",
       "name": "2-keto-3-deoxy-L-galactonate",
       "short": "2-keto-3-deoxy-L-ga…",
@@ -353,100 +297,6 @@
     },
     {
       "id": "r5",
-      "name": "L-ornithine + O2 + H2O = 5-amino-2-oxopentanoate + H2O2 + NH4(+)",
-      "equation": "L-ornithine + O2 + H2O = 5-amino-2-oxopentanoate + H2O2 + NH4(+)",
-      "substrates": [
-        {
-          "metabolite": "ornithine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "5_amino_2_oxopentanoic_acid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:61276"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:61276"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "L-cystine + O2 + H2O = (2R)-2-amino-2-carboxylatoethyl-disulfanyl-oxopropanoate + H2O2 ...",
-      "equation": "L-cystine + O2 + H2O = (2R)-2-amino-2-carboxylatoethyl-disulfanyl-oxopropanoate + H2O2 + NH4(+)",
-      "substrates": [
-        {
-          "metabolite": "l_cystine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2r_2_ammonio_2_carboxylatoethyl_disulfanyl_oxop",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:61284"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:61284"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
       "name": "2-dehydro-3-deoxy-L-galactonate 5-dehydrogenase",
       "equation": "2-dehydro-3-deoxy-L-galactonate + NAD(+) = 3-deoxy-D-glycero-2,5-hexodiulosonate + NADH + H(+)",
       "ec": "1.1.1.389",
@@ -480,7 +330,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:47988"
       },
@@ -490,6 +340,184 @@
           {
             "db": "Rhea",
             "id": "RHEA:47988"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_2_amino_2_deoxy_d_gluconic_acid_2-amino-2-deoxy-d-gluconi-to-2-dehydro-3-deoxy-d",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_amino_2_deoxy_d_gluconic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-amino-2-deoxy-d-gluconi-to-2-dehydro-3-deoxy-d"
+      },
+      "note": "Shares 2-amino-2-deoxy-D-gluconic acid with 2-amino-2-deoxy-D-gluconi… to 2-dehydro-3-deoxy-D-arabi….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58269"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_dehydro_3_deoxy_d_gluconate_2-amino-2-deoxy-d-gluconi-to-2-dehydro-3-deoxy-d",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_dehydro_3_deoxy_d_gluconate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-amino-2-deoxy-d-gluconi-to-2-dehydro-3-deoxy-d"
+      },
+      "note": "Shares 2-dehydro-3-deoxy-D-gluconate with 2-amino-2-deoxy-D-gluconi… to 2-dehydro-3-deoxy-D-arabi….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57990"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_dehydro_3_deoxy_d_gluconate_aldehydo-d-glucose-to-4s-5s-4-5-dihydroxy-2-6",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_dehydro_3_deoxy_d_gluconate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aldehydo-d-glucose-to-4s-5s-4-5-dihydroxy-2-6"
+      },
+      "note": "Shares 2-dehydro-3-deoxy-D-gluconate with aldehydo-D-glucose to (4S,5S)-4,5-dihydroxy-2,6….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57990"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_dehydro_3_deoxy_d_gluconate_d-gluconate-to-2-hydroxy-3-oxopropanoate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_dehydro_3_deoxy_d_gluconate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-gluconate-to-2-hydroxy-3-oxopropanoate"
+      },
+      "note": "Shares 2-dehydro-3-deoxy-D-gluconate with D-gluconate to 2-hydroxy-3-oxopropanoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57990"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_deoxy_d_glycero_hexo_2_5_diulosonate_l-rhamnosyl-1-4-d-glu-to-3-deoxy-d-glycero-hexo",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_deoxy_d_glycero_hexo_2_5_diulosonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-rhamnosyl-1-4-d-glu-to-3-deoxy-d-glycero-hexo"
+      },
+      "note": "Shares 3-deoxy-D-glycero-hexo-2,5-diulosonate with α-L-rhamnosyl-(1→4)-D-glu… to 3-deoxy-D-glycero-hexo-2,….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29071"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_keto_3_deoxy_l_galactonate_3-6-anhydro-l-galactofura-to-l-glyceraldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_keto_3_deoxy_l_galactonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-6-anhydro-l-galactofura-to-l-glyceraldehyde"
+      },
+      "note": "Shares 2-keto-3-deoxy-L-galactonate with 3,6-anhydro-L-galactofura… to L-glyceraldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75545"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_keto_3_deoxy_l_galactonate_acetylacetone-to-dehydro-coenzyme-f420-0",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_keto_3_deoxy_l_galactonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetylacetone-to-dehydro-coenzyme-f420-0"
+      },
+      "note": "Shares 2-keto-3-deoxy-L-galactonate with acetylacetone to dehydro coenzyme F420-0.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75545"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_keto_3_deoxy_l_galactonate_l-galactonate-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_keto_3_deoxy_l_galactonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-galactonate-to-nad"
+      },
+      "note": "Shares 2-keto-3-deoxy-L-galactonate with L-galactonate to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75545"
           }
         ]
       }

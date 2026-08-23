@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-hydroxychalcone-to-h2o "2'-hydroxychalcone to H2O" {
-  spacing 216
+  spacing 282
 
   spine at 0,0 {
     2_hydroxychalcone
@@ -30,26 +30,26 @@ pathway 2-hydroxychalcone-to-h2o "2'-hydroxychalcone to H2O" {
 
   branch from co2 side left {
     co2
-    <-> ec_4_1_1_95 [4.1.1.95] +4_aminobutyryl_acp
-    gamma_l_glutamyl_acp
+    <-> ec_3_5_1_6 [3.5.1.6] +3_ureidoisobutyric_acid +h +h2o +3_aminoisobutanoic_acid
+    nh4
   }
 
   branch from co2 side right {
     co2
-    <-> . +phenanthrene_4_carboxylate
-    phenanthrene_4_5_dicarboxylate
+    <-> ec_1_14_11_17 [1.14.11.17] +2_oxoglutarate +3_n_morpholino_propanesulfonate +o2 +h +succinate +sulfite
+    3_n_morpholino_propanal
   }
 
   branch from succinate side left {
     succinate
-    <-> . +2_oxoglutarate +oa_6129_a +o2 +co2
-    oa_6129_b2
+    <-> ec_1_14_11_17 [1.14.11.17] +2_oxoglutarate +1_pentanesulfonate +o2 +co2 +sulfite +pentanal
+    h
   }
 
   branch from succinate side right {
     succinate
-    <-> . +2_oxoglutarate +2_3_dihydrothienamycin +o2 +co2 +h2o
-    thienamycin
+    <-> . +n_succinyl_l_methionine +h2o +h
+    l_methionine
   }
 
   branch from 2_3_dihydroflavon_3_ol side left {
@@ -66,13 +66,79 @@ pathway 2-hydroxychalcone-to-h2o "2'-hydroxychalcone to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> . +5_5_dehydrodivanillate +h +o2 +nadph +nadp +5_6_6_trihydroxy_5_methoxy_biphenyl_3_3_dicarbox
-    formaldehyde
+    <-> ec_3_2_1_20 [3.2.1.20] +maltoheptaose +maltohexaose
+    beta_d_glucose
   }
 
   branch from h2o side right {
     h2o
-    <-> . +nadh +3_nitrophenol +h +nad
-    3_hydroxyaminophenol
+    <-> ec_1_2_3_1 [1.2.3.1] +n_2_dimethylaminoethyl_9_oxo_10h_acridine_4_carb +h2o2 +o2
+    n_2_dimethylaminoethyl_acridine_4_carboxamide
+  }
+
+  branch from 2s_flavanone side left {
+    2s_flavanone
+    <-> . +h +o2 +nadph +nadp +h2o
+    3_5_dihydroxyflavanone
+  }
+
+  branch from 2_oxoglutarate side right {
+    2_oxoglutarate
+    <-> ec_2_6_1_21 [2.6.1.21] +l_alanine +d_glutamate
+    pyruvate
+  }
+
+  branch from 2_oxoglutarate side left {
+    2_oxoglutarate
+    <-> . +d_alanine +pyruvate
+    l_glutamate
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_1_3_7 [1.1.3.7] +pr01 +h2o2
+    4_chlorobenzaldehyde
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_5_3_16 [1.5.3.16] +n_n_bis_3_aminopropyl_trans_2_butene_1_4_diamine +h +h2o +h2o2 +3_aminopropanal
+    trans_n_3_aminopropyl_but_2_ene_1_4_diamine
+  }
+
+  branch from co2 side right {
+    co2
+    <-> ec_4_1_1_74 [4.1.1.74] +4_bromobenzaldehyde
+    4_bromobenzoylformate
+  }
+
+  branch from co2 side left {
+    co2
+    <-> ec_4_1_1_74 [4.1.1.74] +compound_0066905
+    4_fluorobenzoylformate
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> . +l_histidine +h +h2o
+    n_succinyl_l_histidine
+  }
+
+  branch from succinate side left {
+    succinate
+    <-> . +succinylserine +h2o +h
+    l_serine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_2_1_23 [3.2.1.23] +beta_d_galactose +2_naphthol
+    2_naphthyl_beta_d_galactopyranoside
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_1_2_6 [3.1.2.6] +r_lactate +h +glutathione
+    lactoylglutathione
   }
 }

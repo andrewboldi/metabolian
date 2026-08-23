@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway o-d-mannosyl-l-threon-to-n-acetyl-d-galactosamin "O-(α-D-mannosyl)-L-threon… to N-acetyl-β-D-galactosamin…" {
-  spacing 304
+  spacing 334
 
   spine at 0,0 {
     o_d_mannosyl_l_threonine
@@ -14,5 +14,35 @@ pathway o-d-mannosyl-l-threon-to-n-acetyl-d-galactosamin "O-(α-D-mannosyl)-L-th
     n_acetyl_d_galactosaminyl_1_3_n_acetyl_d_glucosa
     <-> ec_2_7_1_183 [2.7.1.183] +atp -adp -hplus
     n_acetyl_d_galactosaminyl_1_3_n_acetyl_d_glucosa
+  }
+
+  branch from o_d_mannosyl_l_threonine side left {
+    o_d_mannosyl_l_threonine
+    <-> . +udpglcnac +udp +hplus
+    n_acetyl_d_glucosaminyl_1_2_d_mannosyl_l_threoni
+  }
+
+  branch from udpglcnac side right {
+    udpglcnac
+    <-> ec_1_1_1_374 [1.1.1.374] +nad +nadh +hplus
+    udp_2_acetamido_2_deoxy_3_dehydro_d_glucopyranos
+  }
+
+  branch from udpglcnac side left {
+    udpglcnac
+    <-> ec_2_4_1_255 [2.4.1.255] +l_threonine +udp +hplus
+    o_n_acetyl_d_glucosaminyl_l_threonine
+  }
+
+  branch from udp_n_acetyl_d_galactosamine side right {
+    udp_n_acetyl_d_galactosamine
+    <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +udp +hplus
+    n_acetyl_d_galactosaminyl_1_4_n_acetyl_neuramino
+  }
+
+  branch from udp_n_acetyl_d_galactosamine side left {
+    udp_n_acetyl_d_galactosamine
+    <-> . +n_glycoloylneuraminosyl_2_3_d_galactosyl_1_4_n +udp +hplus
+    n_acetyl_d_galactosaminyl_1_4_n_glycoloylneurami
   }
 }

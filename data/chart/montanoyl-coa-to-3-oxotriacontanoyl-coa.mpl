@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway montanoyl-coa-to-3-oxotriacontanoyl-coa "montanoyl-CoA to 3-oxotriacontanoyl-CoA" {
-  spacing 152
+  spacing 158
 
   spine at 0,0 {
     montanoyl_coa
@@ -14,5 +14,11 @@ pathway montanoyl-coa-to-3-oxotriacontanoyl-coa "montanoyl-CoA to 3-oxotriaconta
     r_3_hydroxytriacontanoyl_coa
     <-> . +nad -nadh -hplus
     3_oxotriacontanoyl_coa
+  }
+
+  branch from montanoyl_coa side left {
+    montanoyl_coa
+    <-> . +o2 +h2o2
+    trans_2_octacosenoyl_coa
   }
 }

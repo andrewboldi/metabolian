@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-ornithinium-to-h2o "D-ornithinium to H2O" {
-  spacing 196
+  spacing 172
 
   spine at 0,0 {
     d_ornithinium
@@ -14,29 +14,5 @@ pathway d-ornithinium-to-h2o "D-ornithinium to H2O" {
     staphyloferrin_a
     <-> . +h +adp +phosphate -staphyloferrin_a -h2o
     atp
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    sch_57871_glucuronide
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    siroheme
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +h +succinate +2s_6s_2_6_diaminopimelate
-    n_succinyl_l_l_2_6_diaminopimelate
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    simvastatin_acyl_glucuronide
   }
 }

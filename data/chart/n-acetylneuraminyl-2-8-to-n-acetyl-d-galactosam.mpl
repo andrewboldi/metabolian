@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-acetylneuraminyl-2-8-to-n-acetyl-d-galactosam "α-N-acetylneuraminyl-(2→8… to N-acetyl-β-D-galactosamine" {
-  spacing 164
+  spacing 176
 
   spine at 0,0 {
     n_acetylneuraminyl_2_8_n_acetylneuraminyl_2_3_d
@@ -18,13 +18,25 @@ pathway n-acetylneuraminyl-2-8-to-n-acetyl-d-galactosam "α-N-acetylneuraminyl-(
 
   branch from n_acetyl_d_galactosamine side left {
     n_acetyl_d_galactosamine
-    <-> ec_3_2_1_179 [3.2.1.179] +d_4_deoxy_4_glcpa_1_3_d_galpnac +h2o
-    5_dehydro_4_deoxy_d_glucuronate
+    <-> ec_3_2_1_179 [3.2.1.179] +4_deoxy_4_d_glcpa2s_1_3_d_galpnac +h2o
+    5_dehydro_4_deoxy_2_o_sulfo_d_glucuronic_acid
   }
 
   branch from n_acetyl_d_galactosamine side right {
     n_acetyl_d_galactosamine
-    <-> ec_3_2_1_179 [3.2.1.179] +4_deoxy_4_d_glcpa2s_1_3_d_galpnac +h2o
-    5_dehydro_4_deoxy_2_o_sulfo_d_glucuronic_acid
+    <-> ec_3_2_1_179 [3.2.1.179] +d_4_deoxy_4_glcpa_1_3_d_glcpnac +h2o
+    5_dehydro_4_deoxy_d_glucuronate
+  }
+
+  branch from n_acetyl_d_galactosamine side left {
+    n_acetyl_d_galactosamine
+    <-> . +n_acetyl_d_galactosaminyl_1_3_d_galactosyl_1_4_d +h2o
+    d_galactosyl_1_4_d_galactosyl_1_4_d_glucosylcer
+  }
+
+  branch from n_acetyl_d_galactosamine side right {
+    n_acetyl_d_galactosamine
+    <-> . +n_acetyl_d_galactosaminyl_1_4_d_3_sulfogalactosy +h2o
+    d_3_sulfogalactosyl_1_4_d_glucosyl_1_1_ceramide
   }
 }

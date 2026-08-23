@@ -4,101 +4,15 @@
 # edit the generator, not this file.
 
 pathway diphosphate-to-nadph-null "diphosphate to NADPH" {
-  spacing 236
+  spacing 180
 
   spine at 0,0 {
     diphosphate
-    <-> ec_6_2_1_7 [6.2.1.7] +amp +3alpha_7alpha_12alpha_trihydroxy_5beta_cholestan -atp -coa -25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol
+    <-> . +3_methyl_2_oxobutanoyl_adenylate -atp -kiv
     h
-    <-> ec_1_14_13_15 [1.14.13.15] +nadp +25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol +h2o -o2 -nadph
-    25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h -nad
-    25r_5beta_cholestane_3alpha_7alpha_12alpha_26_t
-    <-> . +nadp -25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol -nadph
+    <-> ec_1_1_1_27 [1.1.1.27] +nadh +kiv -nad
+    2_hydroxy_3_methylbutyric_acid
+    <-> ec_1_1_1_169 [1.1.1.169] +nadp -kiv -nadph
     h
-  }
-
-  branch from h side left {
-    h
-    <-> . +co2 +2e_4z_2_hydroxy_6_oxohexa_2_4_dienoate
-    3_carboxy_2_hydroxymuconate_semialdehyde
-  }
-
-  branch from h side right {
-    h
-    <-> ec_1_14_13_52 [1.14.13.52] +formononetin +o2 +nadph +nadp +h2o
-    calycosin
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    ferric_2_3_dihydroxybenzoylserine
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    fe_iii_hydroxamate
-  }
-
-  branch from coa side left {
-    coa
-    <-> ec_2_3_1_185 [2.3.1.185] +acetyl_coa +tropine
-    acetylpseudotropine
-  }
-
-  branch from coa side right {
-    coa
-    <-> ec_2_3_1_186 [2.3.1.186] +pseudotropine +h +acetylpseudotropine
-    acetyl_coa
-  }
-
-  branch from 25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol side left {
-    25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol
-    <-> . +nadh +h +nad +h2o
-    3alpha_7alpha_12alpha_trihydroxy_5beta_cholestan
-  }
-
-  branch from 25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol side right {
-    25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol
-    <-> . +h2o
-    5beta_cholestane_3alpha_7alpha_12alpha_27_27_pen
-  }
-
-  branch from o2 side left {
-    o2
-    <-> ec_1_13_11_52 [1.13.11.52] +melatonin
-    n_gamma_acetyl_n_2_formyl_5_methoxykynurenamine
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +nitrite
-    nitrate
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> ec_1_1_1_252 [1.1.1.252] +1_3_8_trihydroxynaphthalene +h +nadp
-    vermelone
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> ec_1_3_3_9 [1.3.3.9] +loganin +h +o2 +nadp +h2o
-    secologanin
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_145 [1.1.1.145] +nadh +h +3_oxo_delta5_steroid
-    3beta_hydroxy_delta5_steroid
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_174 [1.1.1.174] +nadh +2_hydroxycyclohexan_1_one +h
-    cyclohexane_1_2_diol
   }
 }

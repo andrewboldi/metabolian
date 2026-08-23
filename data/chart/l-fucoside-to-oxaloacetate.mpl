@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-fucoside-to-oxaloacetate "α-L-fucoside to oxaloacetate" {
-  spacing 312
+  spacing 340
 
   spine at 0,0 {
     l_fucoside
@@ -28,26 +28,26 @@ pathway l-fucoside-to-oxaloacetate "α-L-fucoside to oxaloacetate" {
 
   branch from l_fucopyranose side left {
     l_fucopyranose
-    <-> .
-    aldehydo_l_fucose
-  }
-
-  branch from l_fucopyranose side right {
-    l_fucopyranose
     <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
     atp
   }
 
+  branch from l_fucopyranose side right {
+    l_fucopyranose
+    <-> . +myxol +h2o
+    myxol_2_fucoside
+  }
+
   branch from alcohol side left {
     alcohol
-    <-> ec_3_1_4_46 [3.1.4.46] +sn_glycerophosphodiester +h2o +hplus
-    sn_glycerol_3_phosphate
+    <-> ec_3_1_1_48 [3.1.1.48] +n5_acyl_l_ornithine_ester +h2o +hplus
+    n5_acyl_l_ornithine
   }
 
   branch from alcohol side right {
     alcohol
-    <-> ec_3_1_1_48 [3.1.1.48] +n5_acyl_l_ornithine_ester +h2o +hplus
-    n5_acyl_l_ornithine
+    <-> ec_3_2_1_149 [3.2.1.149] +6_o_d_xylopyranosyl_d_glucopyranoside +h2o
+    d_xylp_1_6_d_glcp
   }
 
   branch from l_fucono_1_5_lactone side left {
@@ -88,13 +88,67 @@ pathway l-fucoside-to-oxaloacetate "α-L-fucoside to oxaloacetate" {
 
   branch from oxaloacetate side left {
     oxaloacetate
-    <-> ec_5_3_2_2 [5.3.2.2]
-    enol_oxaloacetate
+    <-> ec_2_6_1_35 [2.6.1.35] +glycine +glyoxylate
+    aspartate
   }
 
   branch from oxaloacetate side right {
     oxaloacetate
-    <-> ec_2_3_3_2 [2.3.3.2] +lauroyl_coa +h2o +coa +hplus
-    2s_3s_2_hydroxytridecane_1_2_3_tricarboxylate
+    <-> ec_4_1_1_49 [4.1.1.49] +atp +adp +co2
+    phosphonatoenolpyruvate
+  }
+
+  branch from l_fucopyranose side left {
+    l_fucopyranose
+    <-> ec_3_2_1_51 [3.2.1.51] +d_galactopyranose +h2o
+    l_fucp_1_6_d_galp
+  }
+
+  branch from l_fucopyranose side right {
+    l_fucopyranose
+    <-> ec_3_2_1_51 [3.2.1.51] +n_acetyl_d_hexosamine +h2o
+    l_fucp_1_3_d_glcpnac
+  }
+
+  branch from alcohol side left {
+    alcohol
+    <-> ec_3_2_1_85 [3.2.1.85] +6_phospho_d_galactoside +h2o
+    d_galactopyranose_6_phosphate
+  }
+
+  branch from alcohol side right {
+    alcohol
+    <-> ec_1_11_1_26 [1.11.1.26] +nadh +hplus +nad +h2o
+    peroxol
+  }
+
+  branch from lactate side left {
+    lactate
+    <-> . +h2o +pi
+    2_phosphonato_l_lactate
+  }
+
+  branch from oxaloacetate side right {
+    oxaloacetate
+    <-> . +aspartate +o2 +h2o +h2o2
+    nh3
+  }
+
+  branch from oxaloacetate side left {
+    oxaloacetate
+    <-> ec_4_3_1_20 [4.3.1.20] +nh3
+    3r_3_hydroxy_l_aspartate
+  }
+
+  branch from malate side right {
+    malate
+    <-> . +ubiquinone_8 +oxaloacetate
+    ubiquinol_8
+  }
+
+  branch from malate side left {
+    malate
+    <-> ec_2_8_3_22 [2.8.3.22] +succinyl_coa +3s_3_carboxy_3_hydroxypropanoyl_coa
+    succinate
   }
 }

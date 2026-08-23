@@ -24,9 +24,9 @@ pathway 1d-myo-inositol-to-1d-myo-inositol-11856 "1D-myo-inositol… to 1D-myo-i
     myo_inositol_1_3_4_6_tetrakisphosphate
   }
 
-  branch from 1d_myo_inositol_1_3_4_trisphosphate side right {
-    1d_myo_inositol_1_3_4_trisphosphate
-    <-> . +h2o +pi
-    1d_myo_inositol_1_3_biphosphate
+  branch from 1d_myo_inositol_1_4_5_6_tetrakisphosphate side right {
+    1d_myo_inositol_1_4_5_6_tetrakisphosphate
+    <-> . +atp +adp +hplus
+    1d_myo_inositol_1_4_5_trisphosphate
   }
 }

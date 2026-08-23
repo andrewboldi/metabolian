@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n1-n12-diacetylsperminium-to-ammonium "N1,N12-diacetylsperminium to ammonium" {
-  spacing 212
+  spacing 248
 
   spine at 0,0 {
     n1_n12_diacetylsperminium
@@ -20,14 +20,14 @@ pathway n1-n12-diacetylsperminium-to-ammonium "N1,N12-diacetylsperminium to ammo
 
   branch from 1_4_butanediammonium side left {
     1_4_butanediammonium
-    <-> ec_2_1_3_6 [2.1.3.6] +carbamoyl_p +pi +hplus
-    n_carbamoylputrescinium
+    <-> . +acetyl_coa +coa +hplus
+    n_acetylputrescinium
   }
 
   branch from 1_4_butanediammonium side right {
     1_4_butanediammonium
-    <-> . +acetyl_coa +coa +hplus
-    n_acetylputrescinium
+    <-> . +5_phosphomethyl_dump_3 +pi
+    5_n_putrescinyl_dtmp_1
   }
 
   branch from trimethylenediaminium side left {
@@ -44,13 +44,49 @@ pathway n1-n12-diacetylsperminium-to-ammonium "N1,N12-diacetylsperminium to ammo
 
   branch from nh3 side left {
     nh3
-    <-> . +pyrazinecarboxamide +h2o
-    pyrazine_2_carboxylate
+    <-> . +n_carbamoyl_l_tryptophanate +h2o +hplus +co2
+    l_tryptophan
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_1_4_3_21 [1.4.3.21] +3_nitrotyramine +o2 +h2o +h2o2
-    4_hydroxy_3_nitrophenylacetaldehyde
+    <-> . +n_carbamoyl_l_alaninate +h2o +hplus +co2
+    alanine
+  }
+
+  branch from 1_4_butanediammonium side left {
+    1_4_butanediammonium
+    <-> ec_1_14_13_252 [1.14.13.252] +nadph +o2 +nadp +h2o
+    n_hydroxyputrescine
+  }
+
+  branch from spermidine side right {
+    spermidine
+    <-> ec_2_3_1_57 [2.3.1.57] +acetyl_coa +coa +hplus
+    n8_acetylspermidinium
+  }
+
+  branch from spermidine side left {
+    spermidine
+    <-> . +s_adenosylmethioninaminium +5_s_methyl_5_thioadenosine +hplus
+    n4_aminopropylspermidine
+  }
+
+  branch from trimethylenediaminium side right {
+    trimethylenediaminium
+    <-> ec_1_5_1_43 [1.5.1.43] +carboxynorspermidine +nadp +h2o +nadph +hplus
+    l_aspartic_acid_4_semialdehyde
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_1_4_1_28 [1.4.1.28] +two_alkyl_ammonium_ion +nad +h2o +nadh +hplus
+    ketone
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_1_4_1_28 [1.4.1.28] +nadp +h2o +ketone +nadph +hplus
+    two_alkyl_ammonium_ion
   }
 }

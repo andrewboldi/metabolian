@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway scutellarein-to-succinate "scutellarein to succinate" {
-  spacing 194
+  spacing 152
 
   spine at 0,0 {
     scutellarein
@@ -18,47 +18,5 @@ pathway scutellarein-to-succinate "scutellarein to succinate" {
     8_hydroxysalvigenin
     <-> . +akg +o2 -formaldehyde -succinate -co2
     pilosin
-  }
-
-  branch from scutellarein_7_methyl_ether side left {
-    scutellarein_7_methyl_ether
-    <-> . +genkwanin +fmnh2 +o2 +h2o
-    fmn
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +guanosine_5_monophosphate_1 +sam +hplus
-    2_o_methylguanosine_5_monophosphate_1
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +sam +2_o_methylguanosine_5_monophosphate_1 +hplus
-    guanosine_5_monophosphate_1
-  }
-
-  branch from ladanein side right {
-    ladanein
-    <-> . +sam +sah
-    scutellarein_7_olate_4_methyl_ether
-  }
-
-  branch from 8_hydroxysalvigenin side left {
-    8_hydroxysalvigenin
-    <-> . +s_adenosyl_l_homocysteine +h +gardenin_b
-    s_adenosyl_l_methionine
-  }
-
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
-    <-> . +stearoyl_coa +di_sulfido_diiron +o2 +hplus +h2o
-    oleoyl_coa
-  }
-
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
-    <-> . +all_trans_retinol +di_sulfido_diiron +o2 +hplus +h2o
-    all_trans_3_hydroxyretinol
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-rhamnofuranose-to-3-carboxy-cis-cis-muconate "L-rhamnofuranose to 3-carboxy-cis,cis-muconate" {
-  spacing 336
+  spacing 340
 
   spine at 0,0 {
     l_rhamnofuranose
@@ -34,14 +34,14 @@ pathway l-rhamnofuranose-to-3-carboxy-cis-cis-muconate "L-rhamnofuranose to 3-ca
 
   branch from methylglyoxal side left {
     methylglyoxal
-    <-> . +l_cysteine
-    s_1_hydroxy_2_oxopropyl_l_cysteine
+    <-> . +dgtp
+    n2_1_hydroxy_2_oxopropyl_dgtp
   }
 
   branch from methylglyoxal side right {
     methylglyoxal
-    <-> . +dgtp
-    n2_1_hydroxy_2_oxopropyl_dgtp
+    <-> . +gtp
+    n2_1_hydroxy_2_oxopropyl_gtp
   }
 
   branch from 2_amino_2_3_7_trideoxy_d_lyxo_hept_6_ulosonic_ac side left {
@@ -58,14 +58,14 @@ pathway l-rhamnofuranose-to-3-carboxy-cis-cis-muconate "L-rhamnofuranose to 3-ca
 
   branch from nh3 side left {
     nh3
-    <-> ec_1_4_3_14 [1.4.3.14] +l_lysinium +o2 +h2o +h2o2
-    6_amino_2_oxohexanoic_acid
+    <-> ec_4_3_1_17 [4.3.1.17] +pyruvate
+    serine
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_3_5_4_20 [3.5.4.20] +pyrithiamine +h2o +hplus
-    1_4_hydroxy_2_methylpyrimid_5_ylmethyl_3_2_hydro
+    <-> ec_4_1_99_1 [4.1.99.1] +l_tryptophan +h2o +pyruvate
+    1h_indole
   }
 
   branch from 3_dehydroshikimate side left {
@@ -90,5 +90,41 @@ pathway l-rhamnofuranose-to-3-carboxy-cis-cis-muconate "L-rhamnofuranose to 3-ca
     3_carboxy_cis_cis_muconate
     <-> ec_5_5_1_2 [5.5.1.2] +hplus
     2_carboxylatomethyl_5_oxo_2_5_dihydro_2_furoate
+  }
+
+  branch from methylglyoxal side left {
+    methylglyoxal
+    <-> . +gdp
+    n2_1_hydroxy_2_oxopropyl_gdp
+  }
+
+  branch from methylglyoxal side right {
+    methylglyoxal
+    <-> . +gmp
+    n2_1_hydroxy_2_oxopropyl_gmp
+  }
+
+  branch from l_aspartic_acid_4_semialdehyde side left {
+    l_aspartic_acid_4_semialdehyde
+    <-> ec_1_1_1_3 [1.1.1.3] +nadp +nadph +hplus
+    l_homoserine
+  }
+
+  branch from l_aspartic_acid_4_semialdehyde side right {
+    l_aspartic_acid_4_semialdehyde
+    <-> ec_1_5_1_43 [1.5.1.43] +carboxyspermidine +nadp +h2o +nadph +hplus
+    1_4_butanediammonium
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_3_5_3_6 [3.5.3.6] +arginine +h2o
+    citrulline
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_1_7_1_10 [1.7.1.10] +nad +h2o +nadh +hplus
+    hydroxylamine
   }
 }

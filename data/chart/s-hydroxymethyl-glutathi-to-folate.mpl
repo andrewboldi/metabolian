@@ -22,27 +22,27 @@ pathway s-hydroxymethyl-glutathi-to-folate "S-(hydroxymethyl)glutathi… to fola
     folate
   }
 
-  branch from formate side left {
-    formate
-    <-> . +primary_fluorescent_chlorophyll_catabolite +fmnh2 +o2 +fmn +hplus
-    primary_fluorescent_dioxobilin_type_chlorophyll
-  }
-
-  branch from formate side right {
-    formate
-    <-> . +eburicol +fmnh2 +o2 +fmn +h2o +hplus
-    4_4_24_trimethyl_5alpha_cholesta_8_14_24_28_trie
-  }
-
   branch from gsh side left {
     gsh
-    <-> ec_3_1_2_6 [3.1.2.6] +s_2_hydroxyacyl_glutathione +h2o +hplus
-    2_hydroxy_carboxylate
+    <-> ec_1_14_14_45 [1.14.14.45] +e_indol_3_ylacetaldehyde_oxime +fmnh2 +o2 +fmn +h2o +hplus
+    e_1_glutathion_s_yl_2_indol_3_yl_acetohydroxima
   }
 
   branch from gsh side right {
     gsh
-    <-> ec_1_8_3_3 [1.8.3.3] +o2 +h2o2
-    gssg
+    <-> ec_1_14_14_45 [1.14.14.45] +e_phenylacetaldehyde_oxime +fmnh2 +o2 +fmn +h2o +hplus
+    z_1_glutathione_s_yl_2_phenylacetohydroximate
+  }
+
+  branch from gsh side left {
+    gsh
+    <-> . +z_1_glutathione_s_yl_2_phenylacetohydroximate +h2o
+    1_aci_nitro_2_phenyl_ethane
+  }
+
+  branch from gsh side right {
+    gsh
+    <-> . +chlorohydroquinone +gssg +chloride +hplus
+    quinol
   }
 }

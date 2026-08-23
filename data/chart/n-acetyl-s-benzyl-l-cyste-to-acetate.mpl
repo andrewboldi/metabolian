@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-acetyl-s-benzyl-l-cyste-to-acetate "N-acetyl-S-benzyl-L-cyste… to acetate" {
-  spacing 158
+  spacing 152
 
   spine at 0,0 {
     n_acetyl_s_benzyl_l_cysteine
@@ -16,11 +16,5 @@ pathway n-acetyl-s-benzyl-l-cyste-to-acetate "N-acetyl-S-benzyl-L-cyste… to ac
     n_acetyl_l_cysteinate
     <-> . +h2o -acetate
     cysteine
-  }
-
-  branch from cysteine side left {
-    cysteine
-    <-> . +pyruvate +alanine
-    mercaptopyruvate
   }
 }

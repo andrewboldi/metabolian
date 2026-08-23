@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "l-2-4-diazaniumylbutyrate-to-hypoxanthine",
   "name": "L-2,4-diazaniumylbutyrate to hypoxanthine",
-  "category": "amino-acid-metabolism",
+  "category": "other",
   "summary": "A 4-step route from L-2,4-diazaniumylbutyrate to hypoxanthine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -141,36 +141,6 @@
       "xrefs": {
         "chebi": "CHEBI:17368"
       }
-    },
-    {
-      "id": "n1_methylpseudouridine_5_monophosphate_1",
-      "name": "N1-methylpseudouridine 5'-monophosphate(1−)",
-      "short": "N1-methylpseudourid…",
-      "formula": "C10H12N2O8P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:74890"
-      }
-    },
-    {
-      "id": "sam",
-      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
-      "short": "S-Adenosyl-L-methio…",
-      "formula": "C15H23N6O5S",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:59789"
-      }
-    },
-    {
-      "id": "n1_methyl_n3_3s_3_amino_3_carboxypropyl_pseudour",
-      "name": "N1-methyl-N3-[(3S)-3-amino-3-carboxypropyl]-pseudouridine 5'-phosphate(1−)",
-      "short": "N1-methyl-N3-[(3S)-…",
-      "formula": "C14H19N3O10P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:146234"
-      }
     }
   ],
   "enzymes": [
@@ -200,13 +170,6 @@
       "name": "S-methyl-5'-thioinosine phosphorylase",
       "ec": [
         "2.4.2.44"
-      ]
-    },
-    {
-      "id": "ec_2_5_1_157",
-      "name": "rRNA small subunit aminocarboxypropyltransferase",
-      "ec": [
-        "2.5.1.157"
       ]
     }
   ],
@@ -398,95 +361,137 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "N(1)-methylpseudouridine(1248) in human 18S rRNA + S-adenosyl-L-methionine = N(1)-methy...",
-      "equation": "N(1)-methylpseudouridine(1248) in human 18S rRNA + S-adenosyl-L-methionine = N(1)-methyl-N(3)-[(3S)-3-amino-3-carboxypropyl]pseudouridine(1248) in human 18S rRNA + S-methyl-5'-thioadenosine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "n1_methylpseudouridine_5_monophosphate_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n1_methyl_n3_3s_3_amino_3_carboxypropyl_pseudour",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "5_s_methyl_5_thioadenosine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:63292"
+      "id": "xt_l_2_4_diazaniumylbutyrate_2s-2-acetamido-4-aminob-to-2s-4s-4-hydroxy-2-3",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_2_4_diazaniumylbutyrate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2s-2-acetamido-4-aminob-to-2s-4s-4-hydroxy-2-3"
+      },
+      "note": "Shares L-2,4-diazaniumylbutyrate with (2S)-2-acetamido-4-aminob… to (2S,4S)-4-hydroxy-2,3,4,5….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:63292"
+            "db": "ChEBI",
+            "id": "CHEBI:58761"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "rRNA small subunit aminocarboxypropyltransferase",
-      "equation": "an N(1)-methylpseudouridine in rRNA + S-adenosyl-L-methionine = N(1)-methyl-N(3)-[(3S)-3-amino-3-carboxypropyl]pseudouridine in rRNA + S-methyl-5'-thioadenosine + H(+)",
-      "ec": "2.5.1.157",
-      "substrates": [
-        {
-          "metabolite": "n1_methylpseudouridine_5_monophosphate_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n1_methyl_n3_3s_3_amino_3_carboxypropyl_pseudour",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "5_s_methyl_5_thioadenosine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_5_1_157"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:63296"
+      "id": "xt_l_2_4_diazaniumylbutyrate_hydroxymalonate-to-decarboxy-3-dehydropresph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_2_4_diazaniumylbutyrate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "hydroxymalonate-to-decarboxy-3-dehydropresph"
+      },
+      "note": "Shares L-2,4-diazaniumylbutyrate with hydroxymalonate to decarboxy 3-dehydropresph….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:63296"
+            "db": "ChEBI",
+            "id": "CHEBI:58761"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_2_4_diazaniumylbutyrate_l-2-4-diazaniumylbutyrate-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_2_4_diazaniumylbutyrate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-2-4-diazaniumylbutyrate-to-succinate"
+      },
+      "note": "Shares L-2,4-diazaniumylbutyrate with L-2,4-diazaniumylbutyrate to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58761"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_bis_3_azaniumylpropyl_azanium_nadh-to-diphosphate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "bis_3_azaniumylpropyl_azanium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-diphosphate-null"
+      },
+      "note": "Shares bis(3-azaniumylpropyl)azanium with NADH to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57920"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_methyl_5_thio_d_ribose_1_phosphate_4-coumaroyl-coa-to-di-sulfido-diiron",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_methyl_5_thio_d_ribose_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-coumaroyl-coa-to-di-sulfido-diiron"
+      },
+      "note": "Shares S-methyl-5-thio-α-D-ribose 1-phosphate with 4-coumaroyl-CoA to di-μ-sulfido-diiron.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58533"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_methyl_5_thio_d_ribose_1_phosphate_s-adenosylmethioninaminium-to-s-methyl-5-thio-d",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_methyl_5_thio_d_ribose_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosylmethioninaminium-to-s-methyl-5-thio-d"
+      },
+      "note": "Shares S-methyl-5-thio-α-D-ribose 1-phosphate with S-adenosylmethioninaminium to S-methyl-5-thio-α-D-ribos….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58533"
           }
         ]
       }

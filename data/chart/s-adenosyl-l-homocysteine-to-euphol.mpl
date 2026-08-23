@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-adenosyl-l-homocysteine-to-euphol "S-adenosyl-L-homocysteine to Euphol" {
-  spacing 206
+  spacing 260
 
   spine at 0,0 {
     s_adenosyl_l_homocysteine
@@ -18,57 +18,111 @@ pathway s-adenosyl-l-homocysteine-to-euphol "S-adenosyl-L-homocysteine to Euphol
     euphol
   }
 
-  branch from s_adenosyl_l_methionine side left {
-    s_adenosyl_l_methionine
-    <-> ec_2_1_1_163 [2.1.1.163] +s_adenosyl_l_homocysteine +h +menaquinol
-    demethylmenaquinol
-  }
-
-  branch from s_adenosyl_l_methionine side right {
-    s_adenosyl_l_methionine
-    <-> ec_2_1_1_144 [2.1.1.144] +s_adenosyl_l_homocysteine +e_3_carboxy_2_pentenedioate_6_methyl_ester
-    trans_aconitate
-  }
-
-  branch from squalene side left {
-    squalene
-    <-> ec_2_5_1_21 [2.5.1.21] +diphosphate +h +nadp +nadph
-    farnesyl_diphosphate
-  }
-
-  branch from s_2_3_epoxysqualene side right {
+  branch from s_2_3_epoxysqualene side left {
     s_2_3_epoxysqualene
     <-> .
     multiflorenol
   }
 
-  branch from s_2_3_epoxysqualene side left {
+  branch from s_2_3_epoxysqualene side right {
     s_2_3_epoxysqualene
     <-> .
     isoarborinol
   }
 
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_144 [1.1.1.144] +nadh +h +4s_perillyl_aldehyde
-    s_perillyl_alcohol
-  }
-
   branch from nad side left {
     nad
-    <-> ec_1_1_1_221 [1.1.1.221] +nadh +h +dehydrovomifoliol
-    vomifoliol
+    <-> . +6_oxoprostaglandin_e1 +nadh +h
+    6_oxoprostaglandin_f1alpha
   }
 
-  branch from h2o side right {
-    h2o
-    <-> ec_1_1_1_312 [1.1.1.312] +2_hydroxy_5_carboxymethylmuconate_semialdehyde +nadp +h +nadph
-    2z_4e_5_hydroxypenta_2_4_diene_1_2_5_tricarboxy
+  branch from nad side right {
+    nad
+    <-> . +nadh +6_oxoprostaglandin_f1alpha +h +h2o2 +o2 +h2o
+    prostaglandin_f1alpha
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_107 [3.2.1.107] +5r_5_d_galactosyloxy_l_lysine_1 +glucose
-    5r_5_d_glucosyl_1_2_d_galactosyl_oxy_l_lysine_1
+    <-> . +h +adp +phosphate +atp
+    all_cis_7_10_13_16_19_docosapentaenoate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +9z_12z_15z_18z_21z_tetracosapentaenoyl_coa +coa
+    9_12_15_18_21_tetracosapentaenoic_acid
+  }
+
+  branch from h side left {
+    h
+    <-> . +beta_d_mannose_6_phosphate +adp +atp
+    d_mannopyranose
+  }
+
+  branch from h side right {
+    h
+    <-> . +9_12_15_18_21_tetracosapentaenoic_acid +adp +phosphate +9_12_15_18_21_tetracosapentaenoic_acid +h2o
+    atp
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> . +3alpha_7alpha_dihydroxy_24_oxo_5beta_cholestanoy +h +nad
+    3alpha_7alpha_24_trihydroxy_5beta_cholestanoyl_c
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +h +3_oxoheptadecanoyl_coenzyme_a +nad
+    3_hydroxyheptadecanoyl_coa
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +3alpha_7alpha_12alpha_trihydroxy_5beta_cholest_2 +h2o2 +h
+    3alpha_7alpha_12alpha_trihydroxy_5beta_cholestan
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +24e_3_7_dihydroxy_5_cholest_24_en_26_oyl_coa +h2o2
+    25s_3alpha_7alpha_dihydroxy_5beta_cholestanoyl
+  }
+
+  branch from s_2_3_epoxysqualene side left {
+    s_2_3_epoxysqualene
+    <-> .
+    bauerenol
+  }
+
+  branch from s_2_3_epoxysqualene side right {
+    s_2_3_epoxysqualene
+    <-> ec_5_4_99_51 [5.4.99.51]
+    baccharis_oxide
+  }
+
+  branch from nad side left {
+    nad
+    <-> . +nadh +h +3_oxopentadecanoyl_coenzyme_a
+    3_hydroxypentadecanoyl_coa
+  }
+
+  branch from nad side right {
+    nad
+    <-> . +nadh +h +3_oxoundecanoyl_coenzyme_a
+    3_hydroxyundecanoyl_coa
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +6z_9z_12z_15z_18z_21z_tetracosahexaenoyl_coa +h +6z_9z_12z_15z_18z_21z_tetracosahexaenoate
+    coa
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +h +adp +phosphate +atp
+    6z_9z_12z_15z_18z_21z_tetracosahexaenoate
   }
 }

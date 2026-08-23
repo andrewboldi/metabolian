@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-gluconic-acid-to-h2o "L-gluconic acid to H2O" {
-  spacing 188
+  spacing 152
 
   spine at 0,0 {
     l_gluconic_acid
@@ -14,41 +14,5 @@ pathway l-gluconic-acid-to-h2o "L-gluconic acid to H2O" {
     l_glucopyranose
     <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate -l_glucopyranose -h2o
     atp
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_2_1_10 [3.2.1.10] +alpha_d_glucose
-    d_maltose
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_2_1_20 [3.2.1.20] +alpha_d_glucose
-    nigerose
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_14 [1.1.1.14] +nadh +keto_d_fructose +h
-    d_mannitol
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_124 [1.1.1.124] +nadh +d_fructofuranose +h
-    d_sorbitol
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_16 [3.6.3.16] +h +adp +phosphate +h2o
-    arsenous_acid
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_2_7_4_21 [2.7.4.21] +1d_myo_inositol_1_3_4_5_6_pentakisphosphate +h +adp
-    diphosphoinositol_tetrakisphosphate
   }
 }

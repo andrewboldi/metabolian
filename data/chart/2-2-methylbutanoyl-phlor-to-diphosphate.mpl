@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-2-methylbutanoyl-phlor-to-diphosphate "2-(2-methylbutanoyl)phlor… to diphosphate" {
-  spacing 272
+  spacing 260
 
   spine at 0,0 {
     2_2_methylbutanoyl_phloroglucinol
@@ -14,17 +14,5 @@ pathway 2-2-methylbutanoyl-phlor-to-diphosphate "2-(2-methylbutanoyl)phlor… to
     deoxyadlupulone
     <-> ec_2_5_1_137 [2.5.1.137] +dmapp -ppi -hplus
     adlupulone
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +fpp +h2o
-    palustrol
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +fpp +h2o
-    selina_6_en_4_ol
   }
 }

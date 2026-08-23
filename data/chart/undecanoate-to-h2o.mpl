@@ -36,133 +36,157 @@ pathway undecanoate-to-h2o "undecanoate to H2O" {
 
   branch from undecanoyl_coa side left {
     undecanoyl_coa
-    <-> . +nadh +acetyl_coa +fadh2 +h +fad +coa +nad +h2o
-    tridecanoyl_coa
-  }
-
-  branch from undecanoyl_coa side right {
-    undecanoyl_coa
     <-> . +acetyl_coa +coa
     3_oxotridecanoyl_coenzyme_a
   }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_94 [4.2.3.94] +fpp
-    curcumene
-  }
-
   branch from ppi side right {
     ppi
-    <-> ec_3_1_7_10 [3.1.7.10] +geranylgeranyl_diphosphate +h2o
-    13e_labda_7_13_dien_15_ol
+    <-> . +peregrinol_diphosphate +h2o
+    viteagnusin_d
   }
 
-  branch from trans_2_undecenoyl_coa side left {
+  branch from ppi side left {
+    ppi
+    <-> . +peregrinol_diphosphate
+    labd_13_16_14_diene_9_ol
+  }
+
+  branch from trans_2_undecenoyl_coa side right {
     trans_2_undecenoyl_coa
     <-> . +h +h2o
     3_hydroxyundecanoyl_coa
   }
 
-  branch from 3e_undec_3_enoyl_coa side right {
+  branch from 3e_undec_3_enoyl_coa side left {
     3e_undec_3_enoyl_coa
     <-> ec_1_3_1_124 [1.3.1.124] +h +nadph +nadp
     2e_4e_undeca_2_4_dienoyl_coa
   }
 
-  branch from h side left {
-    h
-    <-> . +rac_5_6_epoxy_retinoyl_beta_d_glucuronide +udp +rac_5_6_epoxy_retinoate
-    udp_alpha_d_glucuronate
-  }
-
   branch from h side right {
     h
-    <-> . +udp +4_oxo_9_cis_retinoyl_beta_glucuronide +udp_alpha_d_glucuronate
-    4_oxo_9_cis_retinoate
+    <-> . +dtdp_l_oleandrose +avermectin_a2a_aglycone +avermectin_a2a_monosaccharide
+    dtdp
   }
 
-  branch from nadph side left {
-    nadph
-    <-> . +8z_11z_14z_17z_3_oxoicosatetraenoyl_coa +h +nadp
-    3s_8z_11z_14z_17z_3_hydroxyicosatetraenoyl_coa
+  branch from h side left {
+    h
+    <-> . +dtdp_l_oleandrose +avermectin_a2a_monosaccharide +dtdp
+    avermectin_a2a
   }
 
   branch from nadph side right {
     nadph
-    <-> . +h +7z_10z_13z_16z_19z_3_oxodocosapentaenoyl_coa +nadp
-    3_s_hydroxy_docosa_7_10_13_16_19_all_cis_pentaen
+    <-> ec_1_14_14_1 [1.14.14.1] +9z_12z_octadecadienoate +h +o2 +nadp +h2o
+    vernolate
   }
 
-  branch from o2 side left {
-    o2
-    <-> . +coa_18_cooh_16e_dinor_lte5 +h2o2
-    coa_omega_cooh_dinor_lte4
+  branch from nadph side left {
+    nadph
+    <-> ec_1_14_14_1 [1.14.14.1] +h +bromobenzene +o2 +nadp +h2o
+    bromobenzene_3_4_oxide
   }
 
   branch from o2 side right {
     o2
-    <-> . +benzo_a_pyrene_2_3_oxide +nadp +h2o +h +nadph
-    benzo_a_pyrene
+    <-> ec_1_14_14_1 [1.14.14.1] +h +bromobenzene +nadph +nadp +h2o
+    bromobenzene_2_3_oxide
   }
 
-  branch from coa side left {
-    coa
-    <-> . +acetyl_coa +l_asparagine
-    n_acetyl_l_asparagine
+  branch from o2 side left {
+    o2
+    <-> ec_1_14_14_1 [1.14.14.1] +h +benzo_a_pyrene +nadph +nadp +h2o
+    benzo_a_pyrene_7_8_oxide
   }
 
   branch from coa side right {
     coa
-    <-> . +3_methylbut_2_enoyl_coa +glycine
-    3_methylcrotonyl_glycine
+    <-> . +6z_9z_12z_15z_18z_tetracosapentaenoyl_coa +r_carnitine
+    tetracosapentaenoyl_carnitine
   }
 
-  branch from nad side left {
-    nad
-    <-> ec_1_6_1_1 [1.6.1.1] +nadh +nadp +nadph
-    pmf
+  branch from coa side left {
+    coa
+    <-> . +9z_12z_15z_18z_tetracosatetraenoyl_coa +r_carnitine
+    tetracosatetraenoyl_carnitine
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_14_18_2 [1.14.18.2] +nadh +n_glycoloylneuraminic_acid +h +o2 +h2o
-    n_acetyl_neuraminic_acid
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +1_naphthaldehyde
+    1_naphthyl_methanol
   }
 
-  branch from h2o side left {
-    h2o
-    <-> . +2e_9z_12z_15z_18z_21z_tetracosahexaenoyl_coa
-    3_s_hydroxy_tetracosa_9_12_15_18_21_all_cis_pent
+  branch from nad side left {
+    nad
+    <-> ec_1_3_1_29 [1.3.1.29] +nadh +h +1_2_dihydroxy_7_hydroxymethylnaphthalene
+    cis_1_2_dihydroxy_1_2_dihydro_7_hydroxymethylnap
   }
 
   branch from h2o side right {
     h2o
-    <-> . +3_s_hydroxy_tetracosa_12_15_18_21_all_cis_tetrae
-    2e_9z_12z_15z_18z_tetracosapentaenoyl_coa
+    <-> ec_3_3_2_9 [3.3.2.9] +1_2_dihydronaphthalene_1_2_diol
+    1r_2s_naphthalene_1_2_oxide
   }
 
-  branch from 10z_heptadecenoyl_coa side left {
+  branch from h2o side left {
+    h2o
+    <-> ec_3_3_2_9 [3.3.2.9] +1_2_dihydronaphthalene_1_2_diol
+    1s_2r_naphthalene_1_2_oxide
+  }
+
+  branch from 10z_heptadecenoyl_coa side right {
     10z_heptadecenoyl_coa
     <-> . +nadp +h2o +h +o2 +nadph
     heptadecanoyl_coa
   }
 
-  branch from 10z_heptadecenoyl_coa side right {
+  branch from 10z_heptadecenoyl_coa side left {
     10z_heptadecenoyl_coa
     <-> . +r_carnitine +coa
     heptadecenoylcarnitine_7
   }
 
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_36 [3.6.3.36] +h +adp +phosphate +h2o
-    taurine
-  }
-
   branch from atp side right {
     atp
-    <-> . +h +adp +phosphate +h2o
-    taurocholate
+    <-> . +diphosphate +n_indol_3_ylacetyl_glycine +amp +indol_3_yl_acetate
+    glycine
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +diphosphate +indol_3_yl_acetyl_l_isoleucine +h +amp +l_isoleucine
+    indol_3_yl_acetate
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    syn_isopimara_7_15_diene
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +6_hydroxydeoxybrevianamide_e +dmapp
+    notoamide_s
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_14_14_1 [1.14.14.1] +h +benzo_a_pyrene +o2 +nadph +h2o
+    benzo_a_pyrene_4_5_oxide
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_14_14_1 [1.14.14.1] +benzo_a_pyrene_diol_epoxide_i +h2o +h +o2 +nadph
+    benzo_a_pyrene_7_8_diol
+  }
+
+  branch from h side right {
+    h
+    <-> . +dtdp_l_oleandrose +avermectin_a1a_aglycone +dtdp
+    avermectin_a1a_monosaccharide
   }
 }

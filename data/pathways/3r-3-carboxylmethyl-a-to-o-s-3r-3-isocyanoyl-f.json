@@ -158,43 +158,6 @@
       "xrefs": {
         "chebi": "CHEBI:456215"
       }
-    },
-    {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:175763"
-      }
-    },
-    {
-      "id": "cadinene",
-      "name": "δ-cadinene",
-      "formula": "C15H24",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:140564"
-      }
-    },
-    {
-      "id": "neryl_diphosphate",
-      "name": "neryl diphosphate",
-      "formula": "C10H17O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:57665"
-      }
-    },
-    {
-      "id": "1_8_cineole",
-      "name": "1,8-cineole",
-      "formula": "C10H18O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:27961"
-      }
     }
   ],
   "enzymes": [],
@@ -382,77 +345,93 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "(2E,6E)-farnesyl diphosphate = delta-cadinene + diphosphate",
-      "equation": "(2E,6E)-farnesyl diphosphate = delta-cadinene + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "fpp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "cadinene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:56556"
+      "id": "xt_3r_3_carboxylmethyl_amino_fatty_acid_3r-3-carboxylmethyl-a-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3r_3_carboxylmethyl_amino_fatty_acid"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "3r-3-carboxylmethyl-a-to-diphosphate"
+      },
+      "note": "Shares (3R)-3-[(carboxylmethyl)amino]fatty acid with (3R)-3-[(carboxylmethyl)a… to diphosphate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:56556"
+            "db": "ChEBI",
+            "id": "CHEBI:193080"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "neryl diphosphate + H2O = 1,8-cineole + diphosphate",
-      "equation": "neryl diphosphate + H2O = 1,8-cineole + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "neryl_diphosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_8_cineole",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:56632"
+      "id": "xt_3r_3_carboxylmethyl_amino_fatty_acid_l-prolinylglycine-to-l-glutamate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3r_3_carboxylmethyl_amino_fatty_acid"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "l-prolinylglycine-to-l-glutamate"
+      },
+      "note": "Shares (3R)-3-[(carboxylmethyl)amino]fatty acid with L-prolinylglycine to L-glutamate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:56632"
+            "db": "ChEBI",
+            "id": "CHEBI:193080"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3r_3_isocyanyl_fatty_acid_anion_3r-3-carboxylmethyl-a-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3r_3_isocyanyl_fatty_acid_anion"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3r-3-carboxylmethyl-a-to-diphosphate"
+      },
+      "note": "Shares (3R)-3-isocyanyl-fatty acid anion with (3R)-3-[(carboxylmethyl)a… to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:193084"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_o_s_3r_3_isocyanoyl_fatty_acyl_pantetheine_4_pho_3r-3-carboxylmethyl-a-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "o_s_3r_3_isocyanoyl_fatty_acyl_pantetheine_4_pho"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3r-3-carboxylmethyl-a-to-diphosphate"
+      },
+      "note": "Shares O-[S-((3R)-3-isocyanoyl-fatty acyl)pantetheine-4'-phosphoryl]-L-serine(1−) with (3R)-3-[(carboxylmethyl)a… to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:194105"
           }
         ]
       }

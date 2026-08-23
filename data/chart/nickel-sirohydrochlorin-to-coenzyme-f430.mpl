@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nickel-sirohydrochlorin-to-coenzyme-f430 "nickel-sirohydrochlorin to coenzyme F430" {
-  spacing 296
+  spacing 278
 
   spine at 0,0 {
     nickel_sirohydrochlorin
@@ -14,18 +14,6 @@ pathway nickel-sirohydrochlorin-to-coenzyme-f430 "nickel-sirohydrochlorin to coe
     15_173_seco_f430_173_acid
     <-> ec_6_4_1_9 [6.4.1.9] +atp -adp -pi
     coenzyme_f430
-  }
-
-  branch from glutamate side left {
-    glutamate
-    <-> . +atp +hplus +ppi
-    l_glutamyl_amp
-  }
-
-  branch from glutamate side right {
-    glutamate
-    <-> . +s_2e_6e_10e_geranylgeranyl_l_glutathione +h2o
-    s_2e_6e_10e_geranylgeranyl_l_cysteinylglycine
   }
 
   branch from 15_173_seco_f430_173_acid side left {
@@ -40,15 +28,9 @@ pathway nickel-sirohydrochlorin-to-coenzyme-f430 "nickel-sirohydrochlorin to coe
     coenzyme_f430
   }
 
-  branch from hydrogen_acceptor side left {
-    hydrogen_acceptor
-    <-> . +betaenone_c +hydrogen_donor
-    betaenone_b
-  }
-
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> . +protoporphyrinogen9 +hydrogen_donor
-    protoporphyrin9
+  branch from nickel_sirohydrochlorin side left {
+    nickel_sirohydrochlorin
+    <-> ec_4_99_1_11 [4.99.1.11] +hplus +nickel
+    sirohydrochlorin
   }
 }

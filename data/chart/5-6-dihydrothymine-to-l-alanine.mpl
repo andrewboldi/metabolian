@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-6-dihydrothymine-to-l-alanine "5,6-dihydrothymine to L-alanine" {
-  spacing 300
+  spacing 330
 
   spine at 0,0 {
     5_6_dihydrothymine
@@ -18,25 +18,55 @@ pathway 5-6-dihydrothymine-to-l-alanine "5,6-dihydrothymine to L-alanine" {
 
   branch from nh3 side left {
     nh3
-    <-> . +2z_10z_3_hydroxy_5_17_dioxo_4_5_secoestra_2_10 +h2o +hplus
-    pyridinestrone_3_carboxylate
+    <-> . +d_histidine +o2 +h2o +h2o2
+    3_imidazol_5_yl_pyruvate
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_2_3_2_13 [2.3.2.13] +l_glutamine +l_lysinium
-    n6_glutamyl_lysine
+    <-> . +d_isoleucine +o2 +h2o +h2o2
+    r_3_methyl_2_oxovalerate
   }
 
   branch from alanine side left {
     alanine
-    <-> . +ala_asp +h2o
-    aspartate
+    <-> . +n_formyl_l_methionyl_l_alaninate +h2o
+    n_formyl_l_methioninate
   }
 
   branch from alanine side right {
     alanine
-    <-> . +ala_gln +h2o
-    glutamine
+    <-> . +n_acetyl_l_alanyl_l_alaninate +h2o
+    n_acetyl_l_alaninate
+  }
+
+  branch from 5_6_dihydrothymine side left {
+    5_6_dihydrothymine
+    <-> ec_1_3_1_2 [1.3.1.2] +nadp +nadph +hplus
+    thymine
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> . +d_threonine +o2 +h2o +h2o2
+    s_3_hydroxy_2_oxobutanoate
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> . +n_methylhistaminium +o2 +h2o +h2o2
+    1_methylimidazole_4_acetaldehyde
+  }
+
+  branch from alanine side right {
+    alanine
+    <-> . +3_l_alanyl_adenylyl_zwitterionic_group +h2o +hplus
+    amp_3_end_1
+  }
+
+  branch from alanine side left {
+    alanine
+    <-> . +sam +sah +hplus
+    n_methyl_l_alanine
   }
 }

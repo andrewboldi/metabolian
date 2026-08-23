@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-nadph-null "NADH to NADPH" {
-  spacing 212
+  spacing 296
 
   spine at 0,0 {
     nadh
@@ -18,61 +18,145 @@ pathway nadh-to-nadph-null "NADH to NADPH" {
 
   branch from nad side left {
     nad
-    <-> ec_1_3_1_52 [1.3.1.52] +nadh +2e_2_methylbut_2_enoyl_coa +h
-    2s_2_methylbutanoyl_coa
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
+    1s_2s_4s_dihydrocarveol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_218 [1.1.1.218] +nadh +h +hydrocodone
-    dihydrocodeine
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +1s_2s_4s_dihydrocarveol
+    2e_geranial
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_13_11_34 [1.13.11.34] +7_s_hydroperoxy_17_r_hydroxydocosahexaenoic_acid +h
-    7_8_epoxy_17r_hydroxy_docosahexaenoate
+    <-> ec_3_2_2_8 [3.2.2.8] +cytidine +cytosine
+    beta_d_ribofuranose
   }
 
   branch from h2o side right {
     h2o
-    <-> . +h +7_8_epoxy_17r_hydroxy_docosahexaenoate
-    aspirin_triggered_resolvin_d1
+    <-> ec_3_2_1_22 [3.2.1.22] +alpha_d_galactose +d_sorbitol
+    d_galp_1_6_d_glc_oh
   }
 
   branch from h side left {
     h
-    <-> . +7_8_epoxy_17r_hydroxy_docosahexaenoate +h2o
-    aspirin_triggered_resolvin_d2
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +beta_d_glucuronate +phosphate +beta_d_glucuronate +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> ec_1_13_11_34 [1.13.11.34] +4_s_hydroperoxy_17_r_hydroxydocosahexaenoic_acid +h2o
-    4_5_epoxy_17r_hydroxy_docosahexaenoate
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    alpha_d_glucosamine
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_14_1 [1.14.14.1] +h +progesterone +nadph +nadp +h2o
-    16alpha_hydroxyprogesterone
+    <-> . +all_trans_zeaxanthin +nadp +h2o +h +nadph
+    cryptoxanthin
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_14_1 [1.14.14.1] +4_4_dichloroindigo +h2o
-    4_chloroindole
+    <-> ec_1_14_99_33 [1.14.99.33] +9z_12z_octadecadienoate +h +nadph +nadp +h2o
+    crepenynate
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_2_1_49 [1.2.1.49] +glyoxal +nadp +h2o +h
-    glyoxylate
+    <-> ec_1_1_1_117 [1.1.1.117] +d_arabinofuranose +nadp +h
+    d_arabinono_1_4_lactone
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_218 [1.1.1.218] +ethylmorphinone +h +nadp
-    ethylmorphine
+    <-> ec_1_1_1_117 [1.1.1.117] +h +d_arabinono_1_4_lactone +nadp
+    d_arabinofuranose
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> ec_1_1_1_71 [1.1.1.71] +h +phellandral +nad
+    dihydrocarveol
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_1_1_71 [1.1.1.71] +h +phellandral +nad
+    1s_2s_4r_isodihydrocarveol
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    beta_d_glucosamine
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    n_acetyl_d_glucosamine
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
+    neodihydrocarveol
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
+    1s_2r_4r_neoisodihydrocarveol
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_2_1_125 [3.2.1.125] +beta_d_glucose +vomilenine
+    raucaffricine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_2_1_125 [3.2.1.125] +vomilenine +raucaffricine
+    alpha_d_glucose
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_1_1_117 [1.1.1.117] +h +nadph +d_arabinono_1_4_lactone
+    d_arabinopyranose
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_3_1_77 [1.3.1.77] +gallocatechin +h +nadph
+    ephdine
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_10_3_2 [1.10.3.2] +o_benzosemiquinone +h2o
+    catechol
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +gibberellin_a4 +nadph +nadp +h2o
+    16alpha_17_epoxy_gibberellin_a4
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_3_1_77 [1.3.1.77] +pelargonidin +h +nadp
+    afzelechin
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_1_1_71 [1.1.1.71] +menthol +nadp +h
+    s_citronellal
   }
 }

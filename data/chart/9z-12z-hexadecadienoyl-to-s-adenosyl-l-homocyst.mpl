@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 9z-12z-hexadecadienoyl-to-s-adenosyl-l-homocyst "(9Z,12Z)-hexadecadienoyl-… to S-adenosyl-L-homocysteine" {
-  spacing 284
+  spacing 260
 
   spine at 0,0 {
     9z_12z_hexadecadienoyl_coa
@@ -14,29 +14,5 @@ pathway 9z-12z-hexadecadienoyl-to-s-adenosyl-l-homocyst "(9Z,12Z)-hexadecadienoy
     co2
     <-> ec_2_1_1_n7 [2.1.1.n7] +5_pentadeca_8_11_14_trien_1_yl_resorcinol +sam -sah -hplus
     5_pentadeca_8_11_14_trien_1_yl_resorcinol_monome
-  }
-
-  branch from co2 side left {
-    co2
-    <-> . +3_hydroxykynurenamine
-    3_hydroxy_l_kynurenine
-  }
-
-  branch from co2 side right {
-    co2
-    <-> . +l_xylonate +h2o
-    2_3_dioxo_l_gulonate
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +2e_hexadecenoyl_coa +sn_glycerol_3_phosphate
-    1_9z_hexadecenoyl_glycero_3_phosphate
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +succinyl_coa +benzoyl_coa
-    2_succinylbenzoyl_coa
   }
 }

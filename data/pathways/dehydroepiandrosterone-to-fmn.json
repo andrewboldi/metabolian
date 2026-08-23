@@ -149,80 +149,6 @@
       "xrefs": {
         "chebi": "CHEBI:799"
       }
-    },
-    {
-      "id": "udp_d_glucose",
-      "name": "UDP-α-D-glucose",
-      "formula": "C15H22N2O17P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:58885"
-      }
-    },
-    {
-      "id": "dehydroepiandrosterone_3_d_glucoside",
-      "name": "dehydroepiandrosterone 3-β-D-glucoside",
-      "short": "dehydroepiandroster…",
-      "formula": "C25H38O7",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:145051"
-      }
-    },
-    {
-      "id": "udp",
-      "name": "UDP",
-      "formula": "C9H11N2O12P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58223"
-      }
-    },
-    {
-      "id": "11_hydroxyandrost_4_ene_3_17_dione",
-      "name": "11α-hydroxyandrost-4-ene-3,17-dione",
-      "short": "11α-hydroxyandrost-…",
-      "formula": "C19H26O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:235536"
-      }
-    },
-    {
-      "id": "6_methoxycoumarin",
-      "name": "6-methoxycoumarin",
-      "formula": "C10H8O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:178005"
-      }
-    },
-    {
-      "id": "scopoletin",
-      "name": "scopoletin",
-      "formula": "C10H8O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:17488"
-      }
-    },
-    {
-      "id": "ganoderate_dm",
-      "name": "ganoderate DM",
-      "formula": "C30H43O4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:178026"
-      }
-    },
-    {
-      "id": "hainanate_a",
-      "name": "hainanate A",
-      "formula": "C30H43O5",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:178027"
-      }
     }
   ],
   "enzymes": [
@@ -231,21 +157,20 @@
       "name": "steryl-sulfatase",
       "ec": [
         "3.1.6.2"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P08842"
+      }
     },
     {
       "id": "ec_1_1_1_145",
       "name": "3beta-hydroxy-Delta(5)-steroid dehydrogenase",
       "ec": [
         "1.1.1.145"
-      ]
-    },
-    {
-      "id": "ec_1_14_14_197",
-      "name": "progesterone 11alpha-monooxygenase",
-      "ec": [
-        "1.14.14.197"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P14060"
+      }
     }
   ],
   "reactions": [
@@ -479,205 +404,269 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r6",
-      "name": "3beta-hydroxyandrost-5-en-17-one + UDP-alpha-D-glucose = dehydroepiandrosterone 3-beta-...",
-      "equation": "3beta-hydroxyandrost-5-en-17-one + UDP-alpha-D-glucose = dehydroepiandrosterone 3-beta-D-glucoside + UDP + H(+)",
-      "substrates": [
-        {
-          "metabolite": "dehydroepiandrosterone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp_d_glucose",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "dehydroepiandrosterone_3_d_glucoside",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:61812"
+      "id": "xt_dehydroepiandrosterone_sulfate_17-estradiol-to-sulfate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dehydroepiandrosterone_sulfate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "17-estradiol-to-sulfate"
+      },
+      "note": "Shares dehydroepiandrosterone sulfate with 17α-estradiol to sulfate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:61812"
+            "db": "ChEBI",
+            "id": "CHEBI:57905"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "progesterone 11alpha-monooxygenase",
-      "equation": "androst-4-ene-3,17-dione + reduced [NADPH--hemoprotein reductase] + O2 = 11alpha-hydroxyandrost-4-ene-3,17-dione + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "ec": "1.14.14.197",
-      "substrates": [
-        {
-          "metabolite": "androst_4_ene_3_17_dione",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "11_hydroxyandrost_4_ene_3_17_dione",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_197"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:86095"
+      "id": "xt_dehydroepiandrosterone_sulfate_leukotriene-c4-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dehydroepiandrosterone_sulfate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "leukotriene-c4-to-hydrogen-donor"
+      },
+      "note": "Shares dehydroepiandrosterone sulfate with leukotriene C4 to hydrogen donor.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:86095"
+            "db": "ChEBI",
+            "id": "CHEBI:57905"
           }
         ]
       }
     },
     {
-      "id": "r8",
-      "name": "6-methoxycoumarin + reduced [NADPH--hemoprotein reductase] + O2 = scopoletin + oxidized...",
-      "equation": "6-methoxycoumarin + reduced [NADPH--hemoprotein reductase] + O2 = scopoletin + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "6_methoxycoumarin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "scopoletin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "rhea": "RHEA:68564"
+      "id": "xt_dehydroepiandrosterone_17-estradiol-to-sulfate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dehydroepiandrosterone"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "17-estradiol-to-sulfate"
+      },
+      "note": "Shares dehydroepiandrosterone with 17α-estradiol to sulfate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:68564"
+            "db": "ChEBI",
+            "id": "CHEBI:28689"
           }
         ]
       }
     },
     {
-      "id": "r9",
-      "name": "ganoderate DM + reduced [NADPH--hemoprotein reductase] + O2 = hainanate A + oxidized [N...",
-      "equation": "ganoderate DM + reduced [NADPH--hemoprotein reductase] + O2 = hainanate A + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "ganoderate_dm",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "hainanate_a",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 9,
-      "xrefs": {
-        "rhea": "RHEA:68732"
+      "id": "xt_dehydroepiandrosterone_17-hydroxypregnenolone-to-7-hydroxydehydroepiand",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dehydroepiandrosterone"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "17-hydroxypregnenolone-to-7-hydroxydehydroepiand"
+      },
+      "note": "Shares dehydroepiandrosterone with 17α-hydroxypregnenolone to 7β-hydroxydehydroepiandro….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:68732"
+            "db": "ChEBI",
+            "id": "CHEBI:28689"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dehydroepiandrosterone_leukotriene-c4-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dehydroepiandrosterone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "leukotriene-c4-to-hydrogen-donor"
+      },
+      "note": "Shares dehydroepiandrosterone with leukotriene C4 to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28689"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dehydroepiandrosterone_petunidin-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dehydroepiandrosterone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "petunidin-to-h2o"
+      },
+      "note": "Shares dehydroepiandrosterone with petunidin to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28689"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dehydroepiandrosterone_testosterone-to-androst-5-ene-3-17-diol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dehydroepiandrosterone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "testosterone-to-androst-5-ene-3-17-diol"
+      },
+      "note": "Shares dehydroepiandrosterone with testosterone to androst-5-ene-3β,17β-diol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28689"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_androst_5_ene_3_17_dione_s-1-2-dichlorovinyl-glut-to-dichloroacetyl-chlor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "androst_5_ene_3_17_dione"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-1-2-dichlorovinyl-glut-to-dichloroacetyl-chlor"
+      },
+      "note": "Shares androst-5-ene-3,17-dione with S-(1,2-Dichlorovinyl)glut… to dichloroacetyl chloride.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83865"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_androst_4_ene_3_17_dione_17-hydroxy-5-androsten-3-to-epietiocholanolone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "androst_4_ene_3_17_dione"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "17-hydroxy-5-androsten-3-to-epietiocholanolone"
+      },
+      "note": "Shares androst-4-ene-3,17-dione with 17β-hydroxy-5-androsten-3… to epietiocholanolone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16422"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_androst_4_ene_3_17_dione_20s-17-20-dihydroxypreg-to-hydrogen-acceptor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "androst_4_ene_3_17_dione"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "20s-17-20-dihydroxypreg-to-hydrogen-acceptor"
+      },
+      "note": "Shares androst-4-ene-3,17-dione with (20S)-17,20-dihydroxypreg… to hydrogen acceptor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16422"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_androst_4_ene_3_17_dione_20s-17-20-dihydroxypreg-to-testolate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "androst_4_ene_3_17_dione"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "20s-17-20-dihydroxypreg-to-testolate"
+      },
+      "note": "Shares androst-4-ene-3,17-dione with (20S)-17,20-dihydroxypreg… to testolate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16422"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_androst_4_ene_3_17_dione_3-oxo-23-24-bisnorchol-4-to-9-hydroxyandrost-4-e",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "androst_4_ene_3_17_dione"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-oxo-23-24-bisnorchol-4-to-9-hydroxyandrost-4-e"
+      },
+      "note": "Shares androst-4-ene-3,17-dione with 3-oxo-23,24-bisnorchol-4-… to 9α-hydroxyandrost-4-en-3,….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16422"
           }
         ]
       }

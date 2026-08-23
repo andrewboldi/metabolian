@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5r-5-hydroxy-l-lysine-1-to-d-glucopyranose "(5R)-5-hydroxy-L-lysine(1… to D-glucopyranose" {
-  spacing 268
+  spacing 292
 
   spine at 0,0 {
     5r_5_hydroxy_l_lysine_1
@@ -14,5 +14,29 @@ pathway 5r-5-hydroxy-l-lysine-1-to-d-glucopyranose "(5R)-5-hydroxy-L-lysine(1…
     5r_5_d_glucosyl_1_2_d_galactosyl_oxy_l_lysine_1
     <-> ec_3_2_1_107 [3.2.1.107] +h2o -glucose
     5r_5_d_galactosyloxy_l_lysine_1
+  }
+
+  branch from 5r_5_hydroxy_l_lysine_1 side left {
+    5r_5_hydroxy_l_lysine_1
+    <-> . +l_methionine +h2o2 +h2o +hplus
+    s_5r_5_hydroxy_l_lysyl_l_methionine_sulfilimine
+  }
+
+  branch from 5r_5_hydroxy_l_lysine_1 side right {
+    5r_5_hydroxy_l_lysine_1
+    <-> . +hypobromite +s_5r_5_hydroxy_l_lysyl_l_methionine_sulfilimine +bromide +h2o +hplus
+    l_methionine
+  }
+
+  branch from udp_d_galactose side left {
+    udp_d_galactose
+    <-> . +d_galactosyl_1_4_d_glucosyl_1_1_ceramide +udp +hplus
+    d_gal_1_3_d_gal_1_4_d_glc_1_1_cer
+  }
+
+  branch from udp_d_galactose side right {
+    udp_d_galactose
+    <-> . +l_fuc_1_2_d_gal_1_3_d_glcnac_1_4_neu5ac_2_3_d_g +udp +hplus
+    d_galactosyl_1_3_l_fucosyl_1_2_d_galactosyl_1_3
   }
 }

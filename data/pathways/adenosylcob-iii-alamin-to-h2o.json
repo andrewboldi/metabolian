@@ -1,0 +1,394 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "adenosylcob-iii-alamin-to-h2o",
+  "name": "adenosylcob(III)alamin to H2O",
+  "category": "nucleotide-metabolism",
+  "summary": "A 3-step route from adenosylcob(III)alamin to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR199038"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "adenosylcob_iii_alamin",
+      "name": "adenosylcob(III)alamin",
+      "short": "adenosylcob(III)ala…",
+      "formula": "C72H100CoN18O17P",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1104551"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "adenosylcob_iii_inamide_phosphate",
+      "name": "adenosylcob(III)inamide phosphate",
+      "short": "adenosylcob(III)ina…",
+      "formula": "C58H83CoN16O14P",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1104880"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "ribazole",
+      "name": "α-ribazole",
+      "formula": "C14H18N2O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:10329"
+      }
+    },
+    {
+      "id": "adenosine",
+      "name": "adenosine",
+      "formula": "C10H13N5O4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1105760"
+      }
+    },
+    {
+      "id": "coalpha_alpha_adenin_7_yl_cobeta_adenosylcobamid",
+      "name": "Coalpha-[alpha-(adenin-7-yl)]-Cobeta-adenosylcobamide",
+      "short": "Coalpha-[alpha-(ade…",
+      "formula": "C68H94CoN21O17P",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM160653"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "coalpha_alpha_adenin_9_yl_cobeta_adenosylcobamid",
+      "name": "Coalpha-[alpha-(adenin-9-yl)]-Cobeta-adenosylcobamide 5'-phosphate",
+      "short": "Coalpha-[alpha-(ade…",
+      "formula": "C68H93CoN21O20P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM818837"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_3_73",
+      "name": "adenosylcobalamin/alpha-ribazole phosphatase",
+      "ec": [
+        "3.1.3.73"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR199038",
+      "substrates": [
+        {
+          "metabolite": "adenosylcob_iii_alamin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "adenosylcob_iii_inamide_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ribazole",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR199038"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR199038"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR199326",
+      "substrates": [
+        {
+          "metabolite": "adenosylcob_iii_inamide_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adenosine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "coalpha_alpha_adenin_7_yl_cobeta_adenosylcobamid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR199326"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR199326"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "adenosylcobalamin/alpha-ribazole phosphatase",
+      "ec": "3.1.3.73",
+      "substrates": [
+        {
+          "metabolite": "coalpha_alpha_adenin_7_yl_cobeta_adenosylcobamid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "coalpha_alpha_adenin_9_yl_cobeta_adenosylcobamid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_3_73"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR184249"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR184249"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_adenosylcob_iii_alamin_dtdp-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "adenosylcob_iii_alamin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-to-h2o-null"
+      },
+      "note": "Shares adenosylcob(III)alamin with dTDP to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104551"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_adenosylcob_iii_alamin_n-5-phosphonato-d-ribo-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "adenosylcob_iii_alamin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-5-phosphonato-d-ribo-to-h2o"
+      },
+      "note": "Shares adenosylcob(III)alamin with N-(5-phosphonato-β-D-ribo… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104551"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ribazole_3-24r-24-r-fucosterol-to-cobamamide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ribazole"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-24r-24-r-fucosterol-to-cobamamide"
+      },
+      "note": "Shares α-ribazole with (3β,24R,24'R)-fucosterol… to cobamamide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:10329"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ribazole_l-serine-phosphoethanolam-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ribazole"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-serine-phosphoethanolam-to-h2o"
+      },
+      "note": "Shares α-ribazole with L-serine-phosphoethanolam… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:10329"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ribazole_pyridine-3-4-diol-to-cobamamide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ribazole"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "pyridine-3-4-diol-to-cobamamide"
+      },
+      "note": "Shares α-ribazole with pyridine-3,4-diol to cobamamide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:10329"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_coalpha_alpha_adenin_7_yl_cobeta_adenosylcobamid_butanal-to-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coalpha_alpha_adenin_7_yl_cobeta_adenosylcobamid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "butanal-to-acetate"
+      },
+      "note": "Shares Coalpha-[alpha-(adenin-7-yl)]-Cobeta-adenosylcobamide with butanal to acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM160653"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_coalpha_alpha_adenin_9_yl_cobeta_adenosylcobamid_nicotinate-beta-d-ribonuc-to-5-o-phosphono-d-rib",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coalpha_alpha_adenin_9_yl_cobeta_adenosylcobamid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nicotinate-beta-d-ribonuc-to-5-o-phosphono-d-rib"
+      },
+      "note": "Shares Coalpha-[alpha-(adenin-9-yl)]-Cobeta-adenosylcobamide 5'-phosphate with nicotinate beta-D-ribonuc… to 5-O-phosphono-β-D-ribofur….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM818837"
+          }
+        ]
+      }
+    }
+  ]
+}

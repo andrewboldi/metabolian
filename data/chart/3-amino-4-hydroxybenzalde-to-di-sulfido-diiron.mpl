@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-amino-4-hydroxybenzalde-to-di-sulfido-diiron "3-amino-4-hydroxybenzalde… to di-μ-sulfido-diiron" {
-  spacing 248
+  spacing 242
 
   spine at 0,0 {
     3_amino_4_hydroxybenzaldehyde
@@ -16,15 +16,9 @@ pathway 3-amino-4-hydroxybenzalde-to-di-sulfido-diiron "3-amino-4-hydroxybenzald
     di_sulfido_diiron
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
-    <-> ec_1_14_19_43 [1.14.19.43] +1_acyl_2_palmitoylglycerolipid +o2 +hplus +di_sulfido_diiron +h2o
-    1_acyl_2_3e_hexadec_3_enoyl_glycerolipid
-  }
-
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
-    <-> ec_1_14_19_27 [1.14.19.27] +1_acyl_2_palmitoylglycerolipid +o2 +hplus +di_sulfido_diiron +h2o
-    1_acyl_2_palmitoleoylglycerolipid
+  branch from 3_amino_4_hydroxybenzaldehyde side left {
+    3_amino_4_hydroxybenzaldehyde
+    <-> . +acetyl_coa +coa +hplus
+    3_acetylamino_4_hydroxybenzaldehyde
   }
 }

@@ -1,0 +1,352 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-malate-to-bacillithiol-33383",
+  "name": "(S)-malate to bacillithiol",
+  "category": "other",
+  "summary": "A 3-step route from (S)-malate(2−) to bacillithiol(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:33383"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:15589"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "malate",
+      "name": "L-Malate ((S)-malate)",
+      "short": "L-Malate ((S)-malat…",
+      "formula": "C4H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:15589"
+      }
+    },
+    {
+      "id": "udpglcnac",
+      "name": "UDP-N-acetyl-α-D-glucosamine (UDP-GlcNAc)",
+      "short": "UDP-N-acetyl-α-D-gl…",
+      "formula": "C17H25N3O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57705"
+      }
+    },
+    {
+      "id": "s_malyl_n_acetyl_d_glucosaminide",
+      "name": "(S)-malyl N-acetyl-α-D-glucosaminide",
+      "short": "malyl N-acetyl-α-D-…",
+      "formula": "C12H17NO10",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:64870"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "s_malyl_d_glucosaminide",
+      "name": "(S)-malyl α-D-glucosaminide",
+      "short": "malyl α-D-glucosami…",
+      "formula": "C10H16NO9",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64871"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "Acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30089"
+      }
+    },
+    {
+      "id": "cysteine",
+      "name": "L-Cysteine",
+      "formula": "C3H7NO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:35235"
+      }
+    },
+    {
+      "id": "bacillithiol",
+      "name": "bacillithiol",
+      "formula": "C13H21N2O10S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64876"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(S)-malate + UDP-N-acetyl-alpha-D-glucosamine = (S)-malyl N-acetyl-alpha-D-glucosaminid...",
+      "equation": "(S)-malate + UDP-N-acetyl-alpha-D-glucosamine = (S)-malyl N-acetyl-alpha-D-glucosaminide + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "malate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udpglcnac",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_malyl_n_acetyl_d_glucosaminide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:33383"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33383"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(S)-malyl N-acetyl-alpha-D-glucosaminide + H2O = (S)-malyl alpha-D-glucosaminide + acetate",
+      "equation": "(S)-malyl N-acetyl-alpha-D-glucosaminide + H2O = (S)-malyl alpha-D-glucosaminide + acetate",
+      "substrates": [
+        {
+          "metabolite": "s_malyl_n_acetyl_d_glucosaminide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_malyl_d_glucosaminide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:33411"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33411"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(S)-malyl alpha-D-glucosaminide + L-cysteine = bacillithiol + H2O",
+      "equation": "(S)-malyl alpha-D-glucosaminide + L-cysteine = bacillithiol + H2O",
+      "substrates": [
+        {
+          "metabolite": "s_malyl_d_glucosaminide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cysteine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "bacillithiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:33427"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33427"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_s_malyl_n_acetyl_d_glucosaminide_s-malate-to-bacillithiol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_malyl_n_acetyl_d_glucosaminide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-malate-to-bacillithiol"
+      },
+      "note": "Shares (S)-malyl N-acetyl-α-D-glucosaminide with (S)-malate to bacillithiol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64870"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_malyl_d_glucosaminide_bacillithiol-fosfomycin-to-1-2-dihydroxyethylpho",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_malyl_d_glucosaminide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "bacillithiol-fosfomycin-to-1-2-dihydroxyethylpho"
+      },
+      "note": "Shares (S)-malyl α-D-glucosaminide with bacillithiol-fosfomycin to 1,2-dihydroxyethylphospho….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64871"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_malyl_d_glucosaminide_o-acetyl-l-homoserine-to-l-cysteine-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_malyl_d_glucosaminide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "o-acetyl-l-homoserine-to-l-cysteine-null"
+      },
+      "note": "Shares (S)-malyl α-D-glucosaminide with O-acetyl-L-homoserine to L-cysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64871"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_malyl_d_glucosaminide_s-malate-to-bacillithiol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_malyl_d_glucosaminide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-malate-to-bacillithiol"
+      },
+      "note": "Shares (S)-malyl α-D-glucosaminide with (S)-malate to bacillithiol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64871"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_bacillithiol_s-malate-to-bacillithiol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "bacillithiol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-malate-to-bacillithiol"
+      },
+      "note": "Shares bacillithiol with (S)-malate to bacillithiol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64876"
+          }
+        ]
+      }
+    }
+  ]
+}

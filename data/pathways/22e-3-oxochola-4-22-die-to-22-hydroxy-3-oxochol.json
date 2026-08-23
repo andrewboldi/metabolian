@@ -120,64 +120,6 @@
       "xrefs": {
         "metanetx": "MNXM9905"
       }
-    },
-    {
-      "id": "2_c_methyl_d_erythritol_2_4_cyclic_diphosphate",
-      "name": "2-C-methyl-D-erythritol 2,4-cyclic diphosphate",
-      "short": "2-C-methyl-D-erythr…",
-      "formula": "C5H10O9P2",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM1168"
-      }
-    },
-    {
-      "id": "1_hydroxy_2_methyl_2_e_butenyl_4_diphosphate",
-      "name": "1-hydroxy-2-methyl-2-(E)-butenyl 4-diphosphate",
-      "short": "1-hydroxy-2-methyl-…",
-      "formula": "C5H10O8P2",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM1370497"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "WATER"
-      }
-    },
-    {
-      "id": "2e_4_hydroxy_3_methylbut_2_enyl_diphosphate",
-      "name": "(2E)-4-hydroxy-3-methylbut-2-enyl diphosphate",
-      "short": "4-hydroxy-3-methylb…",
-      "formula": "C5H9O8P2",
-      "charge": -3,
-      "xrefs": {
-        "metanetx": "MNXM1370498"
-      }
-    },
-    {
-      "id": "acetyl_coa",
-      "name": "acetyl-CoA",
-      "formula": "C23H34N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM1104266"
-      }
-    },
-    {
-      "id": "3_23_dioxo_23_24_bisnorchol_4_ene",
-      "name": "3,23-dioxo-23,24-bisnorchol-4-ene",
-      "short": "3,23-dioxo-23,24-bi…",
-      "formula": "C22H32O2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1132341"
-      }
     }
   ],
   "enzymes": [
@@ -186,7 +128,10 @@
       "name": "3-hydroxyacyl-CoA dehydrogenase",
       "ec": [
         "1.1.1.35"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q08426"
+      }
     }
   ],
   "reactions": [
@@ -315,125 +260,115 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "Reaction MNXR195504",
-      "substrates": [
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "2_c_methyl_d_erythritol_2_4_cyclic_diphosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_hydroxy_2_methyl_2_e_butenyl_4_diphosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR195504"
+      "id": "xt_22e_3_oxochola_4_22_dien_24_oyl_coa_3-oxocholan-24-oyl-coa-to-3-oxo-chol-4-ene-22r-h",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "22e_3_oxochola_4_22_dien_24_oyl_coa"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "3-oxocholan-24-oyl-coa-to-3-oxo-chol-4-ene-22r-h"
+      },
+      "note": "Shares (22E)-3-oxochola-4,22-dien-24-oyl-CoA with 3-oxocholan-24-oyl-CoA to 3-oxo-chol-4-ene-(22R)-hy….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR195504"
+            "db": "ChEBI",
+            "id": "CHEBI:136759"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "Reaction MNXR195505",
-      "substrates": [
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "2_c_methyl_d_erythritol_2_4_cyclic_diphosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2e_4_hydroxy_3_methylbut_2_enyl_diphosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR195505"
+      "id": "xt_22e_3_oxochola_4_22_dien_24_oyl_coa_cmp-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "22e_3_oxochola_4_22_dien_24_oyl_coa"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "cmp-to-phosphate"
+      },
+      "note": "Shares (22E)-3-oxochola-4,22-dien-24-oyl-CoA with CMP to phosphate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR195505"
+            "db": "ChEBI",
+            "id": "CHEBI:136759"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "Reaction MNXR193156",
-      "substrates": [
-        {
-          "metabolite": "acetyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "3_23_dioxo_23_24_bisnorchol_4_ene",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "22_hydroxy_3_oxochol_4_en_24_oyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "metanetx": "MNXR193156"
+      "id": "xt_3_22_dioxochol_4_en_24_oyl_coa_3-oxo-23-24-bisnorchol-4-to-9-hydroxy-3-oxo-23-2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_22_dioxochol_4_en_24_oyl_coa"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "3-oxo-23-24-bisnorchol-4-to-9-hydroxy-3-oxo-23-2"
+      },
+      "note": "Shares 3,22-dioxochol-4-en-24-oyl-CoA with 3-oxo-23,24-bisnorchol-4-… to 9α-hydroxy-3-oxo-23,24-bi….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:86014"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_22_hydroxy_3_oxochol_4_en_24_oyl_coa_cmp-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "22_hydroxy_3_oxochol_4_en_24_oyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cmp-to-phosphate"
+      },
+      "note": "Shares 22-hydroxy-3-oxochol-4-en-24-oyl-CoA with CMP to phosphate.",
+      "provenance": {
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR193156"
+            "id": "MNXM9905"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_22_hydroxy_3_oxochol_4_en_24_oyl_coa_undecaprenyl-diphospho-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "22_hydroxy_3_oxochol_4_en_24_oyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "undecaprenyl-diphospho-to-coa"
+      },
+      "note": "Shares 22-hydroxy-3-oxochol-4-en-24-oyl-CoA with Undecaprenyl-diphospho… to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM9905"
           }
         ]
       }

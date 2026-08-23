@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-hydroxypropyl-com-to-formaldehyde "2-hydroxypropyl-CoM to formaldehyde" {
-  spacing 282
+  spacing 312
 
   spine at 0,0 {
     2_hydroxypropyl_com
@@ -24,43 +24,73 @@ pathway 2-hydroxypropyl-com-to-formaldehyde "2-hydroxypropyl-CoM to formaldehyde
 
   branch from h side left {
     h
-    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_5z_17z_3_hydroxyhexatriacontadienoylpante +nadp +nadph
-    o_s_5z_17z_3_oxohexatriacontadienoylpantetheine
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +l_mannose +phosphate +l_mannose +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_15z_27z_3_hydroxyhexatetracontadienoylpan +nadp +nadph
-    o_s_15z_27z_3_oxohexatetracontadienoylpantethein
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    2h_pyran_2_one
   }
 
   branch from glutathione side left {
     glutathione
-    <-> . +2r_2_glutathion_s_yl_3_hydroxy_1_4_hydroxy_3_me +glutathione_disulfide
-    3_hydroxy_1_4_hydroxy_3_methoxyphenyl_propan_1_o
+    <-> ec_2_5_1_18 [2.5.1.18] +h +chloride +4_glutathion_s_yl_fenclorim
+    fenclorim
   }
 
   branch from glutathione side right {
     glutathione
-    <-> ec_2_5_1_18 [2.5.1.18] +e_4_hydroxynon_2_enal
-    3_glutathion_s_yl_4_hydroxynonanal
+    <-> . +h +glyoxylate +chloride +h2o
+    s_alpha_chlorocarboxymethyl_glutathione
   }
 
-  branch from gsh side left {
-    gsh
-    <-> . +3_glutathion_s_yl_4_hydroxynonanal
-    e_4_hydroxynon_2_enal
+  branch from h side left {
+    h
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    l_streptose
   }
 
-  branch from sah side right {
-    sah
-    <-> . +4_hydroxy_17_estradiol +sam +hplus
-    4_methoxy_17_estradiol
+  branch from h side right {
+    h
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    d_lyxopyranose
   }
 
-  branch from sah side left {
-    sah
-    <-> . +4_hydroxyestrone +sam +hplus
-    4_methoxyestrone
+  branch from dimethyl_sulfide side left {
+    dimethyl_sulfide
+    <-> ec_1_8_5_3 [1.8.5.3] +menaquinone_2 +h2o +dimethyl_sulfoxide
+    menaquinol
+  }
+
+  branch from dimethyl_sulfide side right {
+    dimethyl_sulfide
+    <-> ec_4_4_1_42 [4.4.1.42] +l_homoserine_lactone
+    s_methyl_l_methionine
+  }
+
+  branch from glutathione_disulfide side left {
+    glutathione_disulfide
+    <-> ec_1_11_1_12 [1.11.1.12] +8_s_hete +h2o +h +glutathione
+    8s_hydroperoxy_5z_9e_11z_14z_eicosatetraenoate
+  }
+
+  branch from glutathione_disulfide side right {
+    glutathione_disulfide
+    <-> ec_1_11_1_12 [1.11.1.12] +7s_hydroxy_4z_8e_10z_13z_16z_19z_docosahexaenoat +h2o +glutathione
+    7_hydroperoxy_4z_8e_10z_13z_16z_19z_docosahexaen
+  }
+
+  branch from glutathione side left {
+    glutathione
+    <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa +h2o
+    1_methylsulfanyl_5_aci_nitropentane
+  }
+
+  branch from glutathione side right {
+    glutathione
+    <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa +h2o
+    5_methylthiopentanonitrile_oxide
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-4-dihydroxybenzoate-to-caffeoyltryptamine "3,4-dihydroxybenzoate to Caffeoyltryptamine" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     3_4_dihydroxybenzoate
@@ -14,29 +14,5 @@ pathway 3-4-dihydroxybenzoate-to-caffeoyltryptamine "3,4-dihydroxybenzoate to Ca
     caffeoyl_coa
     <-> . +tryptamine -coa -caffeoyltryptamine
     h
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_aspartate +l_arginine +l_tyrosine
-    tyrosyl_aspartyl_arginine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_leucine +l_arginine +l_tyrosine
-    tyrosyl_leucyl_arginine
-  }
-
-  branch from h side left {
-    h
-    <-> . +l_threonine +atp +7_mercaptoheptanoic_acid +adp +phosphate
-    7_mercaptoheptanoylthreonine
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_1_1_112 [3.1.1.112] +acetate +isobutanol +h2o
-    isobutyl_acetate
   }
 }

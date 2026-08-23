@@ -4,93 +4,15 @@
 # edit the generator, not this file.
 
 pathway nadh-to-h2o2-null "NADH to H2O2" {
-  spacing 230
+  spacing 200
 
   spine at 0,0 {
     nadh
-    <-> . +acetoacetyl_coa +fadh2 +h -fad -nad -h2o
-    butanoyl_coa
-    <-> . +4_hydroxybutanoate -butanoate
-    4_hydroxybutanoyl_coa
-    <-> ec_1_3_3_6 [1.3.3.6] +o2 -h2o2
-    4_hydroxycrotonyl_coa
-  }
-
-  branch from butanoyl_coa side left {
-    butanoyl_coa
-    <-> ec_3_6_3_47 [3.6.3.47] +h +adp +phosphate +h2o
-    atp
-  }
-
-  branch from butanoyl_coa side right {
-    butanoyl_coa
-    <-> . +h +phosphate +atp +h2o
-    adp
-  }
-
-  branch from fad side left {
-    fad
-    <-> . +z_tetradec_7_enoyl_coa +h2o +fadh2 +h
-    3_hydroxy_tetradecenoyl_7_coenzyme_a
-  }
-
-  branch from fad side right {
-    fad
-    <-> . +tetradecanoyl_coa +h2o +fadh2 +h
-    3s_hydroxytetradecanoyl_coa
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_14_13_7 [1.14.13.7] +nadh +h +riboflavin
-    4a_5_dihydroriboflavin
-  }
-
-  branch from nad side right {
-    nad
-    <-> . +nadh +h +2_methyl_3_ketovaleric_acid
-    2_methyl_3_hydroxyvaleric_acid
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +h +mycinamicin_v +o2 +nadph +mycinamicin_ii
-    nadp
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +mycinamicin_v +o2 +nadph +nadp
-    mycinamicin_ii
-  }
-
-  branch from 4_hydroxybutanoyl_coa side left {
-    4_hydroxybutanoyl_coa
-    <-> ec_4_2_1_120 [4.2.1.120] +h2o
-    vinylacetyl_coa
-  }
-
-  branch from butanoate side right {
-    butanoate
-    <-> ec_1_2_1_5 [1.2.1.5] +nadh +h +nad +h2o
-    z_but_2_enol
-  }
-
-  branch from butanoate side left {
-    butanoate
-    <-> ec_3_7_1_7 [3.7.1.7] +nonane_4_6_dione +h2o +h
-    pentan_2_one
-  }
-
-  branch from h2o2 side right {
-    h2o2
-    <-> . +s_adenosyl_l_homocysteine +h +o2 +nadph +fluvastatin +nadp +n_desisopropyl_fluvastatin
-    s_adenosyl_l_methionine
-  }
-
-  branch from h2o2 side left {
-    h2o2
-    <-> . +2e_4z_7z_decatrienoyl_coa +o2
-    4z_7z_decadienoyl_coa
+    <-> ec_1_2_1_5 [1.2.1.5] +h +dotriacontanoate -nad -h2o
+    dotriacontanal
+    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph -nadp
+    dotriacontan_1_ol
+    <-> . +o2 -h2o2
+    dotriacontanal
   }
 }

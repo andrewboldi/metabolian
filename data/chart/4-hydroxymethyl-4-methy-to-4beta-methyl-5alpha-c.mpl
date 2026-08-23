@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-hydroxymethyl-4-methy-to-4beta-methyl-5alpha-c "4α-hydroxymethyl-4β-methy… to 4beta-methyl-5alpha-chole…" {
-  spacing 308
+  spacing 284
 
   spine at 0,0 {
     4_hydroxymethyl_4_methyl_5_cholest_7_en_3_ol
@@ -14,29 +14,5 @@ pathway 4-hydroxymethyl-4-methy-to-4beta-methyl-5alpha-c "4α-hydroxymethyl-4β-
     co2
     <-> . +4alpha_methyl_5alpha_cholest_7_en_3_one
     4beta_methyl_5alpha_cholest_7_en_3_one
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    mtyr
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +l_alanine_d_glutamate_meso_2_6_diaminoheptanedio +phosphate +l_alanine_d_glutamate_meso_2_6_diaminoheptanedio +h2o
-    atp
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +tryptophanyl_methionyl_valine +l_methionine +l_tryptophan
-    l_valine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_leucine +l_proline +l_tryptophan
-    tryptophanyl_prolyl_leucine
   }
 }

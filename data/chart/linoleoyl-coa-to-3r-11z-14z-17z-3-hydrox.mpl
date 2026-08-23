@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway linoleoyl-coa-to-3r-11z-14z-17z-3-hydrox "linoleoyl-CoA to (3R,11Z,14Z,17Z)-3-hydrox…" {
-  spacing 244
+  spacing 232
 
   spine at 0,0 {
     linoleoyl_coa
@@ -14,17 +14,5 @@ pathway linoleoyl-coa-to-3r-11z-14z-17z-3-hydrox "linoleoyl-CoA to (3R,11Z,14Z,1
     11z_14z_17z_3_oxoicosatrienoyl_coa
     <-> ec_1_1_1_100 [1.1.1.100] +nadh +h -3r_11z_14z_17z_3_hydroxyicosatrienoyl_coa
     nad
-  }
-
-  branch from linolenoyl_coa side left {
-    linolenoyl_coa
-    <-> . +1_2_dihexanoylglycerol +coa
-    1_2_caproyl_3_linolenoylglycerol
-  }
-
-  branch from linolenoyl_coa side right {
-    linolenoyl_coa
-    <-> . +fad +hplus +fadh2
-    2e_9z_12z_15z_octadecatetraenoyl_coa
   }
 }

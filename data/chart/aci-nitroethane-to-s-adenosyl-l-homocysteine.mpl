@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway aci-nitroethane-to-s-adenosyl-l-homocysteine "aci-nitroethane to S-adenosyl-L-homocysteine" {
-  spacing 188
+  spacing 254
 
   spine at 0,0 {
     aci_nitroethane
@@ -19,36 +19,102 @@ pathway aci-nitroethane-to-s-adenosyl-l-homocysteine "aci-nitroethane to S-adeno
   branch from fmn side left {
     fmn
     <-> . +all_cis_5_8_11_14_17_icosapentaenoate +fmnh2 +o2 +h2o +hplus
-    17_s_18_r_eetetr
+    5z_8z_11z_17z_14_15_epoxyicosatetraenoate
   }
 
   branch from fmn side right {
     fmn
-    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +fmnh2 +o2 +h2o +hplus
-    19_hepe
+    <-> . +e_phenylacetaldehyde_oxime +fmnh2 +o2 +h2o +hplus
+    1_aci_nitro_2_phenyl_ethane
   }
 
   branch from nitrite side left {
     nitrite
-    <-> ec_1_14_12_23 [1.14.12.23] +4_nitrotoluene +nadh +o2 +nad
-    4_methylcatechol
+    <-> . +pentaerythritol_tetranitrate +nadph +nadp
+    pentrinitrol
   }
 
   branch from nitrite side right {
     nitrite
-    <-> ec_1_14_12_23 [1.14.12.23] +1_chloro_3_nitrobenzene +nadh +o2 +nad
-    4_chlorocatechol
+    <-> . +pentrinitrol +nadph +nadp
+    pentaerythritol_dinitrate
   }
 
   branch from sah side left {
     sah
-    <-> . +phosphoethanolamine +sam +hplus
-    phosphocholine
+    <-> . +dtdp_4_methylammonio_2_3_4_6_tetradeoxy_d_glucos +sam +hplus
+    dtdp_d_forosamine
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_175 [2.1.1.175] +tricetin +sam +hplus
-    3_5_di_o_methyltricetin
+    <-> . +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
+  }
+
+  branch from fmnh2 side left {
+    fmnh2
+    <-> . +linoleate +o2 +fmn +h2o +hplus
+    9z_12z_11_hydroxyoctadecadienoate
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> . +arachidonate +o2 +fmn +h2o +hplus
+    7_hete
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    13_hete
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    10_hete
+  }
+
+  branch from nitrite side left {
+    nitrite
+    <-> . +2_4_6_trinitrotoluene +gsh +hplus
+    2_glutathionyl_4_6_dinitrotoluene
+  }
+
+  branch from dopamine side right {
+    dopamine
+    <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
+    dopamine_3_o_sulfate
+  }
+
+  branch from dopamine side left {
+    dopamine
+    <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
+    dopamine_4_o_sulfate
+  }
+
+  branch from sam side right {
+    sam
+    <-> . +5_methylcytidine_5_monophosphate_1 +sah +hplus
+    cytidine_5_monophosphate_1
+  }
+
+  branch from sam side left {
+    sam
+    <-> ec_2_1_1_337 [2.1.1.337] +s_reticulinium +sah +hplus
+    s_tembetarine
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_337 [2.1.1.337] +s_corytuberine +sam
+    s_magnoflorine
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_337 [2.1.1.337] +s_glaucine +sam +hplus
+    s_1_2_9_10_tetramethoxy_6_methylaporphine
   }
 }

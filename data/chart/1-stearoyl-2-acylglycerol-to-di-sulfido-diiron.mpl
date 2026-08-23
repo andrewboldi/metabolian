@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-stearoyl-2-acylglycerol-to-di-sulfido-diiron "1-stearoyl 2-acylglycerol… to di-μ-sulfido-diiron" {
-  spacing 264
+  spacing 252
 
   spine at 0,0 {
     1_stearoyl_2_acylglycerolipid
@@ -16,17 +16,5 @@ pathway 1-stearoyl-2-acylglycerol-to-di-sulfido-diiron "1-stearoyl 2-acylglycero
     1_linolenoyl_2_acylglycerolipid
     <-> ec_1_14_19_36 [1.14.19.36] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
     1_6z_9z_12z_15z_octadec_6_9_12_15_tetraenoyl_2_a
-  }
-
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
-    <-> . +epothilone_d +di_sulfido_diiron +o2 +hplus +h2o
-    epothilone_b
-  }
-
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
-    <-> ec_1_14_15_17 [1.14.15.17] +pheophorbide_a +di_sulfido_diiron +o2 +hplus
-    red_chlorophyll_catabolite
   }
 }

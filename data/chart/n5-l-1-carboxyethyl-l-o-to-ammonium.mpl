@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n5-l-1-carboxyethyl-l-o-to-ammonium "N5-(L-1-carboxyethyl)-L-o… to ammonium" {
-  spacing 248
+  spacing 272
 
   spine at 0,0 {
     n5_l_1_carboxyethyl_l_ornithine_dizwitterion
@@ -16,39 +16,12 @@ pathway n5-l-1-carboxyethyl-l-o-to-ammonium "N5-(L-1-carboxyethyl)-L-o… to amm
     ornithine
   }
 
-  branch from ornithine side left {
-    ornithine
-    <-> ec_1_14_13_195 [1.14.13.195] +nadph +o2 +nadp +h2o
-    n5_hydroxy_l_ornithine
-  }
 
-  branch from ornithine side right {
-    ornithine
-    <-> ec_2_1_4_3 [2.1.4.3] +l_lysinium +arginine
-    l_homoarginine
-  }
 
-  branch from citrulline side left {
-    citrulline
-    <-> . +arginine +nadh +o2 +hplus +nad +h2o
-    no
-  }
 
-  branch from citrulline side right {
-    citrulline
-    <-> . +n5_hydroxyamino_imino_methyl_l_ornithinium +fmnh2 +o2 +no +h2o +hplus
-    fmn
-  }
 
-  branch from nh3 side left {
-    nh3
-    <-> ec_3_5_4_26 [3.5.4.26] +2_5_diamino_4_hydroxy_6_5_phosphonatoribosylamin +h2o +hplus
-    5_amino_6_5_phospho_d_ribosylamino_uracil
-  }
 
-  branch from nh3 side right {
-    nh3
-    <-> ec_3_5_5_6 [3.5.5.6] +3_5_dibromo_4_oxidobenzonitrile +h2o
-    3_5_dibromo_4_oxidobenzoate
-  }
+
+
+
 }

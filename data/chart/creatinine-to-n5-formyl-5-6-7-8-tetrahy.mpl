@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway creatinine-to-n5-formyl-5-6-7-8-tetrahy "creatinine to N5-formyl-5,6,7,8-tetrahy…" {
-  spacing 290
+  spacing 332
 
   spine at 0,0 {
     creatinine
@@ -26,43 +26,85 @@ pathway creatinine-to-n5-formyl-5-6-7-8-tetrahy "creatinine to N5-formyl-5,6,7,8
 
   branch from nh3 side left {
     nh3
-    <-> ec_1_4_1_2 [1.4.1.2] +glutamate +nad +h2o +nadh +hplus
-    akg
+    <-> ec_4_1_99_2 [4.1.99.2] +tyrosine +h2o +pyruvate
+    phenol
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_4_3_1_13 [4.3.1.13] +h2o +hplus +pyruvate +co2
-    o_carbamoyl_l_serine
-  }
-
-  branch from sarcosine side left {
-    sarcosine
-    <-> ec_2_1_1_20 [2.1.1.20] +glycine +sam +hplus
-    sah
-  }
-
-  branch from formaldehyde side right {
-    formaldehyde
-    <-> ec_1_14_13_178 [1.14.13.178] +theophylline +nadph +o2 +hplus +nadp +h2o
-    3_methyl_7h_xanthine
+    <-> ec_3_5_4_36 [3.5.4.36] +cytidine_5_monophosphate_1 +h2o +hplus
+    uridine_5_monophosphate_1
   }
 
   branch from formaldehyde side left {
     formaldehyde
-    <-> ec_1_14_13_178 [1.14.13.178] +nadh +o2 +hplus +3_methyl_7h_xanthine +nad +h2o
-    theophylline
+    <-> ec_1_14_11_53 [1.14.11.53] +n6_methyladenosine_5_monophosphate_1 +akg +o2 +succinate +co2
+    adenosine_5_monophosphate_1
   }
 
-  branch from glycine side right {
-    glycine
-    <-> ec_2_1_4_1 [2.1.4.1] +arginine +ornithine
-    guanidinoacetic_acid
+  branch from formaldehyde side right {
+    formaldehyde
+    <-> . +n1_methyladenosine_5_monophosphate_1 +akg +o2 +adenosine_5_monophosphate_1 +co2
+    succinate
   }
 
   branch from glycine side left {
     glycine
-    <-> ec_1_5_1_22 [1.5.1.22] +nad +h2o +pyruvate +nadh +hplus
-    n_carboxylatomethyl_d_alanine
+    <-> ec_2_3_1_29 [2.3.1.29] +acetyl_coa +coa
+    amino_oxobutanoate
+  }
+
+  branch from glycine side right {
+    glycine
+    <-> ec_3_5_1_58 [3.5.1.58] +n_benzyloxycarbonylglycinate +h2o +hplus +co2
+    benzyl_alcohol
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_3_5_4_26 [3.5.4.26] +2_5_diamino_4_hydroxy_6_5_phosphonatoribosylamin +h2o +hplus
+    5_amino_6_5_phospho_d_ribosylamino_uracil
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_3_5_5_6 [3.5.5.6] +3_5_dibromo_4_oxidobenzonitrile +h2o
+    3_5_dibromo_4_oxidobenzoate
+  }
+
+  branch from formaldehyde side left {
+    formaldehyde
+    <-> . +5_5_dehydrodivanillate +nadh +o2 +hplus +nad +h2o
+    5_6_6_trihydroxy_5_methoxy_biphenyl_3_3_dicarbox
+  }
+
+  branch from formaldehyde side right {
+    formaldehyde
+    <-> . +3_6_dichloro_2_methoxybenzoate +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    3_6_dichlorosalicylate
+  }
+
+  branch from glycine side left {
+    glycine
+    <-> ec_3_5_3_2 [3.5.3.2] +guanidinoacetic_acid +h2o
+    urea
+  }
+
+  branch from glycine side right {
+    glycine
+    <-> ec_2_6_1_44 [2.6.1.44] +alanine +pyruvate
+    glyoxylate
+  }
+
+  branch from 5_6_7_8_tetrahydromethanopterin side left {
+    5_6_7_8_tetrahydromethanopterin
+    <-> ec_6_3_2_33 [6.3.2.33] +glutamate +atp +adp +pi +hplus
+    5_6_7_8_tetrahydrosarcinapterin
+  }
+
+  branch from 5_6_7_8_tetrahydromethanopterin side right {
+    5_6_7_8_tetrahydromethanopterin
+    <-> ec_1_5_1_47 [1.5.1.47] +nadp +nadph +hplus
+    7_8_dihydromethanopterin
   }
 }

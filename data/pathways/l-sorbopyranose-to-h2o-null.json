@@ -1,0 +1,427 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-sorbopyranose-to-h2o-null",
+  "name": "α-L-sorbopyranose to H2O",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from α-L-sorbopyranose to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR107125"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:10295"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_sorbopyranose",
+      "name": "α-L-sorbopyranose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:10295"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "5_dehydro_d_fructose",
+      "name": "5-dehydro-D-fructose",
+      "formula": "C6H10O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM855"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "keto_d_fructose",
+      "name": "keto-D-fructose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1363863"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "alpha_d_glucose",
+      "name": "alpha-D-glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1105027"
+      }
+    },
+    {
+      "id": "6_o_alpha_d_glucopyranosyl_beta_d_fructofuranose",
+      "name": "6-O-alpha-D-glucopyranosyl-beta-D-fructofuranose",
+      "short": "6-O-alpha-D-glucopy…",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM731238"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_123",
+      "name": "sorbose 5-dehydrogenase (NADP(+))",
+      "ec": [
+        "1.1.1.123"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_14",
+      "name": "L-iditol 2-dehydrogenase",
+      "ec": [
+        "1.1.1.14"
+      ],
+      "xrefs": {
+        "uniprot": "Q00796"
+      }
+    },
+    {
+      "id": "ec_3_2_1_20",
+      "name": "alpha-glucosidase",
+      "ec": [
+        "3.2.1.20"
+      ],
+      "xrefs": {
+        "uniprot": "Q8TET4"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "sorbose 5-dehydrogenase (NADP(+))",
+      "ec": "1.1.1.123",
+      "substrates": [
+        {
+          "metabolite": "l_sorbopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_dehydro_d_fructose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_123"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR107125"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR107125"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "L-iditol 2-dehydrogenase",
+      "ec": "1.1.1.14",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_dehydro_d_fructose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "keto_d_fructose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR172724"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR172724"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "alpha-glucosidase",
+      "ec": "3.2.1.20",
+      "substrates": [
+        {
+          "metabolite": "alpha_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "keto_d_fructose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_o_alpha_d_glucopyranosyl_beta_d_fructofuranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR130717"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR130717"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_5_dehydro_d_fructose_alpha-d-glucose-to-keto-d-fructose-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_dehydro_d_fructose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-glucose-to-keto-d-fructose-null"
+      },
+      "note": "Shares 5-dehydro-D-fructose with alpha-D-glucose… to keto-D-fructose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM855"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_dehydro_d_fructose_h-to-bacteriopheophytin-a",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_dehydro_d_fructose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-bacteriopheophytin-a"
+      },
+      "note": "Shares 5-dehydro-D-fructose with H to bacteriopheophytin a.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM855"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_dehydro_d_fructose_keto-d-fructose-to-5-dehydro-d-fructose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_dehydro_d_fructose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "keto-d-fructose-to-5-dehydro-d-fructose"
+      },
+      "note": "Shares 5-dehydro-D-fructose with keto-D-fructose to 5-dehydro-D-fructose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM855"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_dehydro_d_fructose_keto-d-fructose-to-5-dehydro-d-fructose-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_dehydro_d_fructose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "keto-d-fructose-to-5-dehydro-d-fructose-null"
+      },
+      "note": "Shares 5-dehydro-D-fructose with keto-D-fructose to 5-dehydro-D-fructose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM855"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_dehydro_d_fructose_l-sorbopyranose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_dehydro_d_fructose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-sorbopyranose-to-h2o"
+      },
+      "note": "Shares 5-dehydro-D-fructose with α-L-sorbopyranose to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM855"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_o_alpha_d_glucopyranosyl_beta_d_fructofuranose_l-sorbopyranose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_o_alpha_d_glucopyranosyl_beta_d_fructofuranose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-sorbopyranose-to-h2o"
+      },
+      "note": "Shares 6-O-alpha-D-glucopyranosyl-beta-D-fructofuranose with α-L-sorbopyranose to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM731238"
+          }
+        ]
+      }
+    }
+  ]
+}

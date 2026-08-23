@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-timnodonyl-carnitine "NADH to Timnodonyl carnitine" {
-  spacing 212
+  spacing 152
 
   spine at 0,0 {
     nadh
@@ -16,65 +16,5 @@ pathway nadh-to-timnodonyl-carnitine "NADH to Timnodonyl carnitine" {
     5z_8z_11z_14z_17z_eicosapentaenoyl_coa
     <-> . +r_carnitine -timnodonyl_carnitine
     coa
-  }
-
-  branch from coa side left {
-    coa
-    <-> ec_2_3_1_74 [2.3.1.74] +malonyl_coa +4_coumaroyl_coa +h +co2
-    4_coumaroyltriacetic_acid_lactone
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +malonyl_coa +trans_4_coumaroyl_coa +h +4_coumaroyltriacetic_acid_lactone
-    co2
-  }
-
-  branch from nad side left {
-    nad
-    <-> . +6_oxoprostaglandin_e1 +nadh +h
-    6_oxoprostaglandin_f1
-  }
-
-  branch from nad side right {
-    nad
-    <-> . +nadh +6_oxoprostaglandin_f1 +h +h2o2 +o2 +h2o
-    prostaglandin_f1alpha
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +2_6_dihydroxypseudooxynicotine
-    2_6_dihydroxy_n_methylmyosmine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +2_4_6_6_tetranitro_2_4_azoxytoluene +2_hydroxylamino_4_6_dinitrotoluene +o2
-    4_hydroxylamino_2_6_dinitrotoluene
-  }
-
-  branch from 5z_8z_11z_14z_17z_eicosapentaenoyl_coa side left {
-    5z_8z_11z_14z_17z_eicosapentaenoyl_coa
-    <-> . +sn_glycerol_3_phosphate +coa
-    1_5z_8z_11z_14z_17z_eicosapentaenoyl_glycero_3_p
-  }
-
-  branch from 5z_8z_11z_14z_17z_eicosapentaenoyl_coa side right {
-    5z_8z_11z_14z_17z_eicosapentaenoyl_coa
-    <-> . +s_carnitine +coa
-    timnodonyl_carnitine
-  }
-
-  branch from fad side left {
-    fad
-    <-> . +nadh +acetyl_coa +fadh2 +h +coa +nad +h2o
-    7z_octadec_7_enoyl_coa
-  }
-
-  branch from fad side right {
-    fad
-    <-> . +nadh +acetyl_coa +fadh2 +h +coa +nad +h2o
-    linoelaidyl_coenzyme_a
   }
 }

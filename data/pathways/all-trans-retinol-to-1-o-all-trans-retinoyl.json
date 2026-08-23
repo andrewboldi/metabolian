@@ -135,6 +135,46 @@
       "xrefs": {
         "chebi": "CHEBI:58223"
       }
+    },
+    {
+      "id": "aldosterone_hemiacetal",
+      "name": "aldosterone hemiacetal",
+      "short": "aldosterone…",
+      "formula": "C21H28O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:30834"
+      }
+    },
+    {
+      "id": "aldosterone_hemiacetal_18_glucuronide",
+      "name": "aldosterone hemiacetal 18-β-glucuronide",
+      "short": "aldosterone…",
+      "formula": "C27H35O11",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:193596"
+      }
+    },
+    {
+      "id": "8_epi_prostaglandin_f2",
+      "name": "8-epi-prostaglandin F2α",
+      "short": "8-epi-prostaglandin…",
+      "formula": "C20H33O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77768"
+      }
+    },
+    {
+      "id": "8_iso_prostaglandin_f2_glucuronide",
+      "name": "8-iso-prostaglandin F2α-glucuronide",
+      "short": "8-iso-prostaglandin…",
+      "formula": "C26H40O11",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:229786"
+      }
     }
   ],
   "enzymes": [
@@ -143,7 +183,10 @@
       "name": "NADP-retinol dehydrogenase",
       "ec": [
         "1.1.1.300"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "O60218"
+      }
     }
   ],
   "reactions": [
@@ -282,6 +325,292 @@
           {
             "db": "Rhea",
             "id": "RHEA:55768"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "aldosterone hemiacetal + UDP-alpha-D-glucuronate = aldosterone hemiacetal 18-beta-glucu...",
+      "equation": "aldosterone hemiacetal + UDP-alpha-D-glucuronate = aldosterone hemiacetal 18-beta-glucuronide + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "aldosterone_hemiacetal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucuronate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aldosterone_hemiacetal_18_glucuronide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:74563"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:74563"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "8-iso-prostaglandin F2alpha + UDP-alpha-D-glucuronate = 8-iso-prostaglandin F2alpha-glu...",
+      "equation": "8-iso-prostaglandin F2alpha + UDP-alpha-D-glucuronate = 8-iso-prostaglandin F2alpha-glucuronide + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "8_epi_prostaglandin_f2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucuronate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "8_iso_prostaglandin_f2_glucuronide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:79907"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79907"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_all_trans_retinal_20s-17-20-dihydroxypreg-to-testolate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "20s-17-20-dihydroxypreg-to-testolate"
+      },
+      "note": "Shares all-trans-retinal with (20S)-17,20-dihydroxypreg… to testolate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17898"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinal_all-trans-retinyl-to-4-d-glucopyranuronosyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "all-trans-retinyl-to-4-d-glucopyranuronosyl"
+      },
+      "note": "Shares all-trans-retinal with all-trans-retinyl… to 4-(β-D-glucopyranuronosyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17898"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinal_carotene-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "carotene-to-fmn"
+      },
+      "note": "Shares all-trans-retinal with β-carotene to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17898"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinal_s-adenosyl-l-homocysteine-to-8-apo-caroten-8-al",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-8-apo-caroten-8-al"
+      },
+      "note": "Shares all-trans-retinal with S-adenosyl-L-homocysteine to 8'-apo-β,ψ-caroten-8'-al.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17898"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinoate_all-trans-retinyl-to-4-d-glucopyranuronosyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "all-trans-retinyl-to-4-d-glucopyranuronosyl"
+      },
+      "note": "Shares all-trans-retinoate with all-trans-retinyl… to 4-(β-D-glucopyranuronosyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:35291"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinoate_carotene-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "carotene-to-fmn"
+      },
+      "note": "Shares all-trans-retinoate with β-carotene to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:35291"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinoate_dammarenediol-ii-to-d-glucopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dammarenediol-ii-to-d-glucopyranose"
+      },
+      "note": "Shares all-trans-retinoate with dammarenediol-II to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:35291"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinoate_epiandrosterone-to-2-hydroxyestrone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "epiandrosterone-to-2-hydroxyestrone"
+      },
+      "note": "Shares all-trans-retinoate with epiandrosterone to 2-hydroxyestrone….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:35291"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_aldosterone_hemiacetal_20-dihydrocorticosterone-to-5-dihydroaldosterone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aldosterone_hemiacetal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "20-dihydrocorticosterone-to-5-dihydroaldosterone"
+      },
+      "note": "Shares aldosterone hemiacetal with 20β-dihydrocorticosterone to 5β-dihydroaldosterone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:30834"
           }
         ]
       }

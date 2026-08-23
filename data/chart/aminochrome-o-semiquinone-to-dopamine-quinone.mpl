@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway aminochrome-o-semiquinone-to-dopamine-quinone "Aminochrome o-semiquinone to dopamine quinone" {
-  spacing 212
+  spacing 254
 
   spine at 0,0 {
     aminochrome_o_semiquinone
@@ -18,38 +18,38 @@ pathway aminochrome-o-semiquinone-to-dopamine-quinone "Aminochrome o-semiquinone
 
   branch from h side left {
     h
-    <-> ec_2_5_1_18 [2.5.1.18] +3_4_dihydro_3_hydroxy_4_s_glutathionyl_bromobenz +glutathione
-    bromobenzene_3_4_oxide
+    <-> . +co2 +c33_phthiodiolenone_a
+    c34_carboxyphthiodiolenone
   }
 
   branch from h side right {
     h
-    <-> ec_2_5_1_18 [2.5.1.18] +2_3_dihydro_2_s_glutathionyl_3_hydroxy_bromobenz +glutathione
-    bromobenzene_2_3_oxide
+    <-> . +co2 +c31_phthiodiolenone_a
+    c32_carboxyphthiodiolenone
   }
 
   branch from nadph side left {
     nadph
-    <-> . +h +2_nitrobenzoate +nadp +h2o
-    2_hydroxylaminobenzoic_acid
+    <-> . +c36_phenolphthiodiolenone_a +h +nadp
+    c36_phenolphthiodiolone_a
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_246 [1.1.1.246] +h +sophorol +nadp +h2o
-    maackiain
+    <-> . +c36_phenolphthiodiolone_a +h +nadp
+    c36_phenolphthiotriol_a
   }
 
   branch from nadp side left {
     nadp
-    <-> . +thiobenzamide_s_oxide +h2o +h +o2 +nadph
-    thiobenzamide
+    <-> ec_1_3_1_111 [1.3.1.111] +h +geranylgeranyl_bacteriochlorophyllide_b +nadph
+    bacteriochlorophyll_b
   }
 
   branch from nadp side right {
     nadp
-    <-> . +thiobenzamide_s_oxide +h +o2 +nadph +h2o
-    thiobenzamide_s_s_dioxide
+    <-> . +dtdp_3_amino_4_dehydro_2_3_6_trideoxy_beta_l_glu +h +nadph
+    dtdp_beta_l_daunosamine
   }
 
   branch from leukoaminochrome side left {
@@ -66,13 +66,55 @@ pathway aminochrome-o-semiquinone-to-dopamine-quinone "Aminochrome o-semiquinone
 
   branch from dopamine_quinone side left {
     dopamine_quinone
-    <-> . +5_s_glutathionyl_dopamine
-    glutathione
+    <-> . +5_s_cysteinyl_dopamine
+    l_cysteine
   }
 
   branch from dopamine_quinone side right {
     dopamine_quinone
-    <-> . +5_s_cysteinyl_dopamine
-    l_cysteine
+    <-> . +h +l_cysteine
+    5_s_cysteinyldopamine
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +lycorine +h2o +h +o2 +nadph
+    caranine
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_14_13_237 [1.14.13.237] +glucoiberverin +h +o2 +nadph +h2o
+    glucoiberin
+  }
+
+  branch from h side left {
+    h
+    <-> . +dtdp_beta_l_rhamnose +methylparaben +4_o_alpha_l_rhamnopyranosyl_hydroxybenzoate_meth
+    dtdp
+  }
+
+  branch from h side right {
+    h
+    <-> . +dtdp_beta_l_rhamnose +p_hbad_i +dtdp
+    o_methyl_4_o_alpha_l_rhamnopyranosyl_1_3_2_o_met
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_1_1_348 [1.1.1.348] +h +sophorol +nadp
+    3r_4r_2_hydroxy_4_5_methylenedioxyisoflavan_4_7
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_3_1_21 [1.3.1.21] +5_dehydroavenasterol +h +nadp
+    isofucosterol
+  }
+
+  branch from leukoaminochrome side left {
+    leukoaminochrome
+    <-> . +nadh +h +dopaminechrome_keto_form
+    nad
   }
 }

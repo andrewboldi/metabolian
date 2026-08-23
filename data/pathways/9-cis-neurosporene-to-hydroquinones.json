@@ -79,6 +79,43 @@
       "xrefs": {
         "chebi": "CHEBI:48716"
       }
+    },
+    {
+      "id": "menaquinone_2",
+      "name": "menaquinone-2",
+      "formula": "C21H24O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM89812"
+      }
+    },
+    {
+      "id": "menaquinol",
+      "name": "Menaquinol",
+      "formula": "C21H26O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM736186"
+      }
+    },
+    {
+      "id": "hydroxyspirilloxanthin",
+      "name": "Hydroxyspirilloxanthin",
+      "short": "Hydroxyspirilloxant…",
+      "formula": "C41H58O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:80150"
+      }
+    },
+    {
+      "id": "rhodovibrin",
+      "name": "Rhodovibrin",
+      "formula": "C41H60O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:80149"
+      }
     }
   ],
   "enzymes": [
@@ -87,6 +124,13 @@
       "name": "EC 1.14.99.30",
       "ec": [
         "1.14.99.30"
+      ]
+    },
+    {
+      "id": "ec_1_12_5_1",
+      "name": "hydrogen:quinone oxidoreductase",
+      "ec": [
+        "1.12.5.1"
       ]
     }
   ],
@@ -235,6 +279,258 @@
           {
             "db": "Rhea",
             "id": "RHEA:30959"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "hydrogen:quinone oxidoreductase",
+      "ec": "1.12.5.1",
+      "substrates": [
+        {
+          "metabolite": "h2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "menaquinone_2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "menaquinol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_12_5_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR135201"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR135201"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "Reaction MNXR135580",
+      "substrates": [
+        {
+          "metabolite": "h2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydroxyspirilloxanthin",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "rhodovibrin",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "metanetx": "MNXR135580"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR135580"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_7_9_9_tri_cis_neurosporene_4r-5r-4-5-dihydroxycycl-to-l-1-4-dithiothreitol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_9_9_tri_cis_neurosporene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4r-5r-4-5-dihydroxycycl-to-l-1-4-dithiothreitol"
+      },
+      "note": "Shares 7,9,9'-tri-cis-neurosporene with (4R,5R)-4,5-dihydroxycycl… to L-1,4-dithiothreitol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62463"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_9_9_tri_cis_neurosporene_7-7-9-9-tetra-cis-lycop-to-2-demethylmenaquinol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_9_9_tri_cis_neurosporene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-7-9-9-tetra-cis-lycop-to-2-demethylmenaquinol"
+      },
+      "note": "Shares 7,9,9'-tri-cis-neurosporene with 7,7',9,9'-tetra-cis-lycop… to 2-demethylmenaquinol-8.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62463"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_9_9_tri_cis_neurosporene_7-7-9-9-tetra-cis-lycop-to-7-9-9-tri-cis-neurosp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_9_9_tri_cis_neurosporene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-7-9-9-tetra-cis-lycop-to-7-9-9-tri-cis-neurosp"
+      },
+      "note": "Shares 7,9,9'-tri-cis-neurosporene with 7,7',9,9'-tetra-cis-lycop… to 7,9,9'-tri-cis-neurospore….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62463"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_9_9_tri_cis_neurosporene_7-7-9-9-tetra-cis-lycop-to-n1-citryl-n3-oct-2-en",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_9_9_tri_cis_neurosporene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-7-9-9-tetra-cis-lycop-to-n1-citryl-n3-oct-2-en"
+      },
+      "note": "Shares 7,9,9'-tri-cis-neurosporene with 7,7',9,9'-tetra-cis-lycop… to N1-citryl-N3-oct-2-enoyl-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62463"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_9_9_tri_cis_neurosporene_ubiquinol-9-to-1-d-ribofuranosyl-1-4",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_9_9_tri_cis_neurosporene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ubiquinol-9-to-1-d-ribofuranosyl-1-4"
+      },
+      "note": "Shares 7,9,9'-tri-cis-neurosporene with ubiquinol-9 to 1-(β-D-ribofuranosyl)-1,4….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62463"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_9_9_tri_cis_neurosporene_ubiquinol-9-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_9_9_tri_cis_neurosporene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ubiquinol-9-to-coa"
+      },
+      "note": "Shares 7,9,9'-tri-cis-neurosporene with ubiquinol-9 to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62463"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hydroxyspirilloxanthin_ethionamide-to-sulfate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxyspirilloxanthin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ethionamide-to-sulfate"
+      },
+      "note": "Shares Hydroxyspirilloxanthin with ethionamide to sulfate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:80150"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_rhodovibrin_ethionamide-to-sulfate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "rhodovibrin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ethionamide-to-sulfate"
+      },
+      "note": "Shares Rhodovibrin with ethionamide to sulfate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:80149"
           }
         ]
       }

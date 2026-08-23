@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway ureidoisobutyric-acid-to-s-3-amino-2-methylpropa "Ureidoisobutyric acid to (S)-3-amino-2-methylpropa…" {
-  spacing 284
+  spacing 236
 
   spine at 0,0 {
     ureidoisobutyric_acid
@@ -14,53 +14,5 @@ pathway ureidoisobutyric-acid-to-s-3-amino-2-methylpropa "Ureidoisobutyric acid 
     2_methyl_3_oxopropanoate
     <-> ec_2_6_1_18 [2.6.1.18] +l_alanine -s_3_amino_2_methylpropanoate
     pyruvate
-  }
-
-  branch from co2 side left {
-    co2
-    <-> ec_4_1_1_65 [4.1.1.65] +pe_20_2_11z_14z_18_2_9z_12z
-    ps_20_2_11z_14z_18_2_9z_12z
-  }
-
-  branch from co2 side right {
-    co2
-    <-> ec_4_1_1_65 [4.1.1.65] +pe_20_2_11z_14z_18_3_9z_12z_15z
-    ps_20_2_11z_14z_18_3_9z_12z_15z
-  }
-
-  branch from nh4 side left {
-    nh4
-    <-> . +2_hydroxy_5_chloromuconate +h +h2o
-    2e_4e_2_amino_5_chlorohexa_2_4_dienedioate
-  }
-
-  branch from nh4 side right {
-    nh4
-    <-> . +dtdp_3_dehydro_4_6_dideoxy_alpha_d_glucose
-    dtdp_4_amino_4_6_dideoxy_alpha_d_glucose
-  }
-
-  branch from l_glutamate side left {
-    l_glutamate
-    <-> ec_3_4_19_13 [3.4.19.13] +4_n_s_cysteinylglycylacetyl_amino_phenylarsonous +h +h2o
-    s_2_4_dihydroxyarsino_phenylamino_2_oxoethyl_glu
-  }
-
-  branch from l_glutamate side right {
-    l_glutamate
-    <-> . +h +methanopterin +h2o
-    sarcinapterin
-  }
-
-  branch from pyruvate side left {
-    pyruvate
-    <-> . +phylloquinone +r_lactate
-    phylloquinol
-  }
-
-  branch from pyruvate side right {
-    pyruvate
-    <-> . +ubiquinol_9 +r_lactate
-    ubiquinone_9
   }
 }

@@ -119,81 +119,9 @@
       "xrefs": {
         "chebi": "CHEBI:57856"
       }
-    },
-    {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "WATER"
-      }
-    },
-    {
-      "id": "proatranorin_vi",
-      "name": "proatranorin VI",
-      "formula": "C18H17O9",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM1559583"
-      }
-    },
-    {
-      "id": "3_4_7_trihydroxyisoflavone_7_olate",
-      "name": "3',4',7-trihydroxyisoflavone-7-olate",
-      "short": "3',4',7-trihydroxyi…",
-      "formula": "C15H9O5",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:232098"
-      }
-    },
-    {
-      "id": "7_4_dihydroxy_3_methoxyisoflavone_7_olate",
-      "name": "7,4'-dihydroxy-3'-methoxyisoflavone-7-olate",
-      "short": "7,4'-dihydroxy-3'-m…",
-      "formula": "C16H11O5",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:232099"
-      }
-    },
-    {
-      "id": "trans_resveratrol",
-      "name": "trans-resveratrol",
-      "formula": "C14H12O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:45713"
-      }
-    },
-    {
-      "id": "4_o_methyl_trans_resveratrol",
-      "name": "4'-O-methyl-trans-resveratrol",
-      "short": "4'-O-methyl-trans-r…",
-      "formula": "C15H14O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:232084"
-      }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_2_1_1_398",
-      "name": "isoflavone 3'-O-methyltransferase",
-      "ec": [
-        "2.1.1.398"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_399",
-      "name": "resveratrol 4'-O-methyltransferase",
-      "ec": [
-        "2.1.1.399"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -335,135 +263,115 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "Reaction MNXR199517",
-      "substrates": [
-        {
-          "metabolite": "proatranorin_iii",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "proatranorin_vi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR199517"
+      "id": "xt_4_o_demethylbarbatate_4-o-demethylbarbatate-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_o_demethylbarbatate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "4-o-demethylbarbatate-to-fmn"
+      },
+      "note": "Shares 4-O-demethylbarbatate with 4-O-demethylbarbatate to FMN.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR199517"
+            "db": "ChEBI",
+            "id": "CHEBI:192547"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "isoflavone 3'-O-methyltransferase",
-      "equation": "3',4',7-trihydroxyisoflavone + S-adenosyl-L-methionine = 7,4'-dihydroxy-3'-methoxyisoflavone-7-olate + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.398",
-      "substrates": [
-        {
-          "metabolite": "3_4_7_trihydroxyisoflavone_7_olate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "7_4_dihydroxy_3_methoxyisoflavone_7_olate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_1_398"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:82183"
+      "id": "xt_4_o_demethylbarbatate_d-galnac-1-3-l-fuc-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_o_demethylbarbatate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "d-galnac-1-3-l-fuc-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares 4-O-demethylbarbatate with α-D-GalNAc-(1→3)-[α-L-Fuc… to S-adenosyl-L-homocysteine.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:82183"
+            "db": "ChEBI",
+            "id": "CHEBI:192547"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "resveratrol 4'-O-methyltransferase",
-      "equation": "trans-resveratrol + S-adenosyl-L-methionine = 4'-O-methyl-trans-resveratrol + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.399",
-      "substrates": [
-        {
-          "metabolite": "trans_resveratrol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "4_o_methyl_trans_resveratrol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_1_399"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:82187"
+      "id": "xt_proatranorin_iii_sn-glycero-3-phosphoethan-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "proatranorin_iii"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "sn-glycero-3-phosphoethan-to-h2o"
+      },
+      "note": "Shares proatranorin III with sn-glycero-3-phosphoethan… to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:82187"
+            "db": "ChEBI",
+            "id": "CHEBI:192550"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_atranorin_4-o-demethylbarbatate-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "atranorin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-o-demethylbarbatate-to-fmn"
+      },
+      "note": "Shares Atranorin with 4-O-demethylbarbatate to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:144119"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_atranorin_sn-glycero-3-phosphoethan-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "atranorin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sn-glycero-3-phosphoethan-to-h2o"
+      },
+      "note": "Shares Atranorin with sn-glycero-3-phosphoethan… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:144119"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway h-to-3-o-d-xyl-1-3-d-g "H to 3-O-{β-D-Xyl-(1→3)-[β-D-G…" {
-  spacing 328
+  spacing 340
 
   spine at 0,0 {
     h
@@ -28,87 +28,28 @@ pathway h-to-3-o-d-xyl-1-3-d-g "H to 3-O-{β-D-Xyl-(1→3)-[β-D-G…" {
     udp_alpha_d_xylose
   }
 
-  branch from rutin side left {
-    rutin
-    <-> ec_2_4_2_35 [2.4.2.35] +udp +h +udp_alpha_d_xylose
-    quercetin_3_2g_xylosylrutinoside
-  }
 
-  branch from rutin side right {
-    rutin
-    <-> ec_2_4_1_159 [2.4.1.159] +udp +h +udp_beta_l_rhamnose
-    quercetin_3_o_beta_d_glucofuranoside
-  }
 
-  branch from h2o side left {
-    h2o
-    <-> . +20_hydroxy_13_14_epoxy_prefusarin +nadp +h +o2 +nadph
-    20_hydroxy_prefusarin
-  }
 
-  branch from h2o side right {
-    h2o
-    <-> . +20_hydroxy_13_14_epoxy_prefusarin +h +o2 +nadph +nadp
-    20_hydroxy_fusarin
-  }
 
-  branch from udp_beta_l_rhamnose side left {
-    udp_beta_l_rhamnose
-    <-> . +udp +h +isovitexin_2_o_rhamnoside
-    isovitexin
-  }
 
-  branch from udp_beta_l_rhamnose side right {
-    udp_beta_l_rhamnose
-    <-> . +udp +quercetin_3_o_d_glucopyranoside
-    quercetin_3_o_d_glucopyranosyl_7_o_l_rhamnopyran
-  }
 
-  branch from quercetin_3_o_d_glucopyranoside side left {
-    quercetin_3_o_d_glucopyranoside
-    <-> . +udp_d_glucose +udp +hplus
-    quercetin_7_olate
-  }
 
-  branch from quercetin_3_o_d_glucopyranoside side right {
-    quercetin_3_o_d_glucopyranoside
-    <-> . +malonyl-coa +coa
-    quercetin_3_o_6_o_malonyl_d_glucoside
-  }
 
-  branch from h side left {
-    h
-    <-> ec_2_7_1_190 [2.7.1.190] +gdp +netilmycin_2_phosphate +netilmicin
-    gtp
-  }
 
-  branch from h side right {
-    h
-    <-> . +9_n_hydroxy_l_tryptophan +nadp +h2o +nadph +l_tryptophan
-    o2
-  }
 
-  branch from nadph side left {
-    nadph
-    <-> .
-    2_hydro_nadp
-  }
 
-  branch from nadph side right {
-    nadph
-    <-> .
-    6_hydro_nadp
-  }
 
-  branch from udp_alpha_d_xylose side left {
-    udp_alpha_d_xylose
-    <-> . +udp +isovitexin
-    isovitexin_7_o_xyloside
-  }
 
-  branch from udp_alpha_d_xylose side right {
-    udp_alpha_d_xylose
-    <-> ec_2_4_2_40 [2.4.2.40] +udp +h +o_beta_d_xylosylzeatin
-    trans_zeatin
-  }
+
+
+
+
+
+
+
+
+
+
+
 }

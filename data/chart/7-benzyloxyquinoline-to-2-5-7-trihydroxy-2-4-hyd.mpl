@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 7-benzyloxyquinoline-to-2-5-7-trihydroxy-2-4-hyd "7-Benzyloxyquinoline to 2,5,7-trihydroxy-2-(4-hyd…" {
-  spacing 226
+  spacing 310
 
   spine at 0,0 {
     7_benzyloxyquinoline
@@ -24,69 +24,153 @@ pathway 7-benzyloxyquinoline-to-2-5-7-trihydroxy-2-4-hyd "7-Benzyloxyquinoline t
     udp_alpha_d_glucose
   }
 
-  branch from benzaldehyde side left {
-    benzaldehyde
-    <-> ec_4_1_2_10 [4.1.2.10] +r_mandelonitrile +h
-    cyanide
-  }
-
-  branch from benzaldehyde side right {
-    benzaldehyde
-    <-> ec_4_1_2_47 [4.1.2.47] +cyanide +h
-    s_mandelonitrile
-  }
-
   branch from nadp side left {
     nadp
-    <-> ec_1_14_14_55 [1.14.14.55] +testosterone +h +o2 +nadph +h2o
-    15beta_hydroxytestosterone
+    <-> . +4s_8r_2_19_dihydroxy_7_9_dioxapentacyclo_10_8_0 +h +o2 +nadph +h2o
+    4s_8r_2_20_dihydroxy_7_9_13_trioxapentacyclo_10
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_14_55 [1.14.14.55] +testosterone +h +o2 +nadph +h2o
-    1_hydroxytestosterone
+    <-> . +tuberculostearic_acid +h +nadph
+    10_methylene_octadecanoic_acid
   }
 
   branch from h2o side left {
     h2o
-    <-> . +propionaldoxime
-    propionitrile
+    <-> ec_3_2_1_214 [3.2.1.214] +sophorose
+    3r_4s_5s_6r_3_2s_3r_4s_5s_6r_3_2s_3r_4s_5s_6r_4
   }
 
   branch from h2o side right {
     h2o
-    <-> . +n_valeraldoxime
-    pentanenitrile
+    <-> ec_3_2_1_214 [3.2.1.214] +d_glcp_1_2_d_glcp_1_2_d_glcp +sophorose
+    beta_1_2_glucopentaose
   }
 
   branch from c_glucosyl_2_hydroxyflavanone side left {
-    c_glucosyl_2_hydroxyflavanone
-    <-> . +h2o
-    isovitexin
-  }
-
-  branch from c_glucosyl_2_hydroxyflavanone side right {
     c_glucosyl_2_hydroxyflavanone
     <-> . +udp +h +udp_alpha_d_glucose
     3_5_di_c_glucosyl_2_4_4_6_tetrahydroxydibenzoylm
   }
 
+  branch from c_glucosyl_2_hydroxyflavanone side right {
+    c_glucosyl_2_hydroxyflavanone
+    <-> .
+    6_c_glucosyl_2_hydroxynaringenin
+  }
+
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +kaempferol_3_o_rhamnoside_7_o_glucoside
-    afzelin
+    <-> . +udp +bisdemalonylsalvianin +h
+    pelargonidin_3_o_6_caffeoyl_beta_d_glucoside
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +quercetin_3_7_di_o_d_glucoside
-    quercetin_3_o_d_glucopyranoside
+    <-> . +udp +delphinidin_3_o_sophoroside +h
+    mirtillin
   }
 
   branch from 2_5_7_trihydroxy_2_4_hydroxyphenyl_2_3_dihydro_4 side left {
     2_5_7_trihydroxy_2_4_hydroxyphenyl_2_3_dihydro_4
     <-> .
     2_4_4_6_tetrahydroxydibenzoylmethane
+  }
+
+  branch from h side right {
+    h
+    <-> . +9z_hexadecenoate
+    palmitelaidic_acid
+  }
+
+  branch from h side left {
+    h
+    <-> . +precolibactin_16a +n_myristoyl_d_asparagine +h2o
+    precolibactin_1491
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +2s_2_amino_3_3z_indol_3_ylidene_propanoate +h2o2
+    l_tryptophan
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +2z_4e_2_8_dihydroxy_8_methyl_6_oxonona_2_4_dien +h
+    3_2_hydroxy_2_methylpropyl_benzene_1_2_diol
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +11s_16s_7_oxo_ent_kauran_11_16_epoxy_19_oate +h +nadp
+    7r_11s_16s_7_hydroxy_ent_kauran_11_16_epoxy_19
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_3_1_22 [1.3.1.22] +11_oxo_5_dihydrotestosterone +nadp +h
+    11_oxotestosterone
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_3_1_22 [1.3.1.22] +h +adrenosterone +nadph
+    5alpha_androstane_3_11_17_trione
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_1_1_64 [1.1.1.64] +h +5alpha_androstane_3_11_17_trione +nadph
+    11_oxo_5_dihydrotestosterone
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +precolibactin_1491 +unstable_precolibactin_intermediate
+    n_myristoyl_d_asparagine
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +precolibactin_16a +h
+    unstable_precolibactin_intermediate
+  }
+
+  branch from beta_d_glucose side right {
+    beta_d_glucose
+    <-> ec_1_1_5_2 [1.1.5.2] +ubiquinol_7 +d_glucono_1_5_lactone
+    ubiquinone_7
+  }
+
+  branch from beta_d_glucose side left {
+    beta_d_glucose
+    <-> ec_3_2_1_21 [3.2.1.21] +h2o
+    d_cellobiose
+  }
+
+  branch from udp side right {
+    udp
+    <-> ec_2_4_1_238 [2.4.1.238] +delphinidin_3_o_6_o_malonyl_beta_glucoside_3_o_b +h +udp_alpha_d_glucose
+    delphinidin_3_o_6_o_malonyl_beta_d_glucoside
+  }
+
+  branch from udp side left {
+    udp
+    <-> . +chalcone_2_o_glucoside +h +udp_alpha_d_glucose
+    2_4_4_6_tetrahydroxychalcone
+  }
+
+  branch from udp_alpha_d_glucose side right {
+    udp_alpha_d_glucose
+    <-> . +udp +betanin +h
+    betanidin
+  }
+
+  branch from udp_alpha_d_glucose side left {
+    udp_alpha_d_glucose
+    <-> . +udp +h +betanidin
+    gomphrenin_i
   }
 }

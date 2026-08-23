@@ -148,26 +148,6 @@
       }
     },
     {
-      "id": "d_glucosyl_n_dodecanoyl_sphingosine",
-      "name": "β-D-glucosyl-N-(dodecanoyl)sphingosine",
-      "short": "β-D-glucosyl-N-(dod…",
-      "formula": "C36H69NO8",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:76297"
-      }
-    },
-    {
-      "id": "cholesteryl_d_glucoside",
-      "name": "cholesteryl β-D-glucoside",
-      "short": "cholesteryl…",
-      "formula": "C33H56O6",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:17495"
-      }
-    },
-    {
       "id": "sphing_4_enine",
       "name": "sphing-4-enine",
       "formula": "C18H37NO2",
@@ -204,24 +184,6 @@
       }
     },
     {
-      "id": "9_hydroxylaurate",
-      "name": "9-hydroxylaurate",
-      "formula": "C12H23O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:167543"
-      }
-    },
-    {
-      "id": "8_hydroxylaurate",
-      "name": "8-hydroxylaurate",
-      "formula": "C12H23O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:167541"
-      }
-    },
-    {
       "id": "o2",
       "name": "O2",
       "formula": "O2",
@@ -249,30 +211,59 @@
       }
     },
     {
-      "id": "arachidonate",
-      "name": "arachidonate",
-      "formula": "C20H31O2",
-      "charge": -1,
+      "id": "arachidonoyl_coa",
+      "name": "arachidonoyl-CoA",
+      "formula": "C41H62N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:32395"
+        "chebi": "CHEBI:57368"
       }
     },
     {
-      "id": "10_hete",
-      "name": "10-HETE",
-      "formula": "C20H31O3",
-      "charge": -1,
+      "id": "cholesteryl_arachidonate",
+      "name": "cholesteryl arachidonate",
+      "short": "cholesteryl…",
+      "formula": "C47H76O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:133345"
+        "chebi": "CHEBI:82751"
       }
     },
     {
-      "id": "12_r_hete",
-      "name": "12(R)-HETE",
-      "formula": "C20H31O3",
-      "charge": -1,
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:83343"
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "dehydrocholesterol_7",
+      "name": "7-Dehydrocholesterol (provitamin D3)",
+      "short": "7-Dehydrocholestero…",
+      "formula": "C27H44O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17759"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
       }
     }
   ],
@@ -282,6 +273,16 @@
       "name": "ceramidase",
       "ec": [
         "3.5.1.23"
+      ],
+      "xrefs": {
+        "uniprot": "Q8TDN7"
+      }
+    },
+    {
+      "id": "ec_1_14_19_21",
+      "name": "cholesterol 7-desaturase",
+      "ec": [
+        "1.14.19.21"
       ]
     }
   ],
@@ -460,45 +461,6 @@
     },
     {
       "id": "r5",
-      "name": "beta-D-glucosyl-N-dodecanoylsphing-4-enine + cholesterol = N-dodecanoylsphing-4-enine +...",
-      "equation": "beta-D-glucosyl-N-dodecanoylsphing-4-enine + cholesterol = N-dodecanoylsphing-4-enine + cholesteryl 3-beta-D-glucoside",
-      "substrates": [
-        {
-          "metabolite": "d_glucosyl_n_dodecanoyl_sphingosine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "cholesterol",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n_dodecanoylsphingosine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "cholesteryl_d_glucoside",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:70307"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:70307"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
       "name": "ceramidase",
       "ec": "3.5.1.23",
       "substrates": [
@@ -531,7 +493,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
         "metanetx": "MNXR197269"
       },
@@ -546,109 +508,7 @@
       }
     },
     {
-      "id": "r7",
-      "name": "dodecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 9-hydroxydodecanoate + oxid...",
-      "equation": "dodecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 9-hydroxydodecanoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "dodecanoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "9_hydroxylaurate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:66872"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:66872"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r8",
-      "name": "dodecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 8-hydroxydodecanoate + oxid...",
-      "equation": "dodecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 8-hydroxydodecanoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "dodecanoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "8_hydroxylaurate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "rhea": "RHEA:66888"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:66888"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r9",
+      "id": "r6",
       "name": "Reaction MNXR175994",
       "substrates": [
         {
@@ -683,7 +543,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 9,
+      "pathwayStep": 6,
       "xrefs": {
         "metanetx": "MNXR175994"
       },
@@ -698,85 +558,60 @@
       }
     },
     {
-      "id": "r10",
-      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = 10-hy...",
-      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = 10-hydroxy-(5Z,8Z,11Z,14Z)-eicosatetraenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "id": "r7",
+      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoyl-CoA + cholesterol = cholesteryl (5Z,8Z,11Z,14Z)-eicosa...",
+      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoyl-CoA + cholesterol = cholesteryl (5Z,8Z,11Z,14Z)-eicosatetraenoate + CoA",
       "substrates": [
         {
-          "metabolite": "arachidonate",
+          "metabolite": "arachidonoyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
+          "metabolite": "cholesterol",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "10_hete",
+          "metabolite": "cholesteryl_arachidonate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "coa",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 10,
+      "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:52296"
+        "rhea": "RHEA:42816"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:52296"
+            "id": "RHEA:42816"
           }
         ]
       }
     },
     {
-      "id": "r11",
-      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = (12R)...",
-      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = (12R)-hydroxy-(5Z,8Z,10E,14Z)-eicosatetraenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "id": "r8",
+      "name": "cholesterol 7-desaturase",
+      "equation": "cholesterol + NADPH + O2 + H(+) = 7-dehydrocholesterol + NADP(+) + 2 H2O",
+      "ec": "1.14.19.21",
       "substrates": [
         {
-          "metabolite": "arachidonate",
+          "metabolite": "cholesterol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fmnh2",
+          "metabolite": "nadph",
           "stoichiometry": 1
         },
         {
           "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "12_r_hete",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
           "stoichiometry": 1
         },
         {
@@ -784,17 +619,236 @@
           "stoichiometry": 1
         }
       ],
+      "products": [
+        {
+          "metabolite": "dehydrocholesterol_7",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_21"
+        }
+      ],
       "reversibility": "reversible",
-      "pathwayStep": 11,
+      "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:52300"
+        "rhea": "RHEA:45024"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:52300"
+            "id": "RHEA:45024"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_cholesteryl_d_galactoside_phosphatidylcholine-to-n-acylsphingosine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cholesteryl_d_galactoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phosphatidylcholine-to-n-acylsphingosine"
+      },
+      "note": "Shares cholesteryl β-D-galactoside with phosphatidylcholine to N-acylsphingosine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:189066"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_dodecanoylsphingosine_d-glucosyl-n-oleoyl-sp-to-n-octadecanoylsphingo",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_dodecanoylsphingosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glucosyl-n-oleoyl-sp-to-n-octadecanoylsphingo"
+      },
+      "note": "Shares N-dodecanoylsphingosine with β-D-glucosyl-N-(oleoyl)sp… to N-octadecanoylsphingosine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:72956"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cholesteryl_arachidonate_1-palmitoyl-2-6z-9z-12z-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cholesteryl_arachidonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-palmitoyl-2-6z-9z-12z-to-h2o"
+      },
+      "note": "Shares cholesteryl arachidonate with 1-palmitoyl-2-[(6Z,9Z,12Z… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:82751"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cholesteryl_arachidonate_dihydrocarveol-to-5s-6-hydroxy-5-isoprope",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cholesteryl_arachidonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dihydrocarveol-to-5s-6-hydroxy-5-isoprope"
+      },
+      "note": "Shares cholesteryl arachidonate with (+)-dihydrocarveol to (5S)-6-Hydroxy-5-isoprope….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:82751"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dehydrocholesterol_7_3-oxooleoyl-coa-to-11z-octadecenoyl-choles",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dehydrocholesterol_7"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-oxooleoyl-coa-to-11z-octadecenoyl-choles"
+      },
+      "note": "Shares 7-Dehydrocholesterol (provitamin D3) with 3-oxooleoyl-CoA to (11Z-octadecenoyl)-choles….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17759"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dehydrocholesterol_7_5-cholest-7-en-3-ol-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dehydrocholesterol_7"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cholest-7-en-3-ol-to-fmn"
+      },
+      "note": "Shares 7-Dehydrocholesterol (provitamin D3) with 5α-cholest-7-en-3β-ol to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17759"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dehydrocholesterol_7_cellobiose-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dehydrocholesterol_7"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cellobiose-to-hydrogen-donor"
+      },
+      "note": "Shares 7-Dehydrocholesterol (provitamin D3) with cellobiose to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17759"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dehydrocholesterol_7_cholesterol-biosynthesis",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dehydrocholesterol_7"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cholesterol-biosynthesis"
+      },
+      "note": "Shares 7-Dehydrocholesterol (provitamin D3) with Cholesterol biosynthesis (mevalonate pathway).",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17759"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dehydrocholesterol_7_s-2e-6e-farnesyl-l-cy-to-s-adenosyl-l-homocystei",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dehydrocholesterol_7"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2e-6e-farnesyl-l-cy-to-s-adenosyl-l-homocystei"
+      },
+      "note": "Shares 7-Dehydrocholesterol (provitamin D3) with S-[(2E,6E)-farnesyl]-L-cy… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17759"
           }
         ]
       }

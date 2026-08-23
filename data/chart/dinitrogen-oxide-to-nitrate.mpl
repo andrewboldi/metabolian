@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dinitrogen-oxide-to-nitrate "dinitrogen oxide to nitrate" {
-  spacing 298
+  spacing 292
 
   spine at 0,0 {
     dinitrogen_oxide
@@ -14,11 +14,5 @@ pathway dinitrogen-oxide-to-nitrate "dinitrogen oxide to nitrate" {
     peroxynitrite
     <-> .
     nitrate
-  }
-
-  branch from peroxynitrite side left {
-    peroxynitrite
-    <-> . +5_nitro_gama_tocopherol +h2o +gamma_tocopherol
-    h
   }
 }

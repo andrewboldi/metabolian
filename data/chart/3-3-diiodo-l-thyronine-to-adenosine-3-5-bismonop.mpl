@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-3-diiodo-l-thyronine-to-adenosine-3-5-bismonop "3,3'-diiodo-L-thyronine to adenosine 3',5'-bismonoph…" {
-  spacing 164
+  spacing 200
 
   spine at 0,0 {
     3_3_diiodo_l_thyronine
@@ -18,13 +18,49 @@ pathway 3-3-diiodo-l-thyronine-to-adenosine-3-5-bismonop "3,3'-diiodo-L-thyronin
 
   branch from adenosine_3_5_bismonophosphate side left {
     adenosine_3_5_bismonophosphate
-    <-> ec_2_8_2_11 [2.8.2.11] +1_alkyl_2_acyl_3_d_galactosyl_sn_glycerol +3_phosphonato_5_adenylyl_sulfate +hplus
-    1_alkyl_2_acyl_3_3_o_sulfo_d_galactosyl_sn_glyce
+    <-> . +6z_octenoyl_coa +h2o +hplus
+    s_6z_octenoyl_4_phosphopantetheine
   }
 
   branch from adenosine_3_5_bismonophosphate side right {
     adenosine_3_5_bismonophosphate
-    <-> . +butyryl_coa +h2o +hplus
-    s_butyryl_4_phosphopantetheine
+    <-> . +linolenoyl_coa +h2o +hplus
+    s_9z_12z_15z_octadecatrienoyl_4_phosphopantethei
+  }
+
+  branch from 3_3_diiodo_l_thyronine side left {
+    3_3_diiodo_l_thyronine
+    <-> . +3_3_5_triiodo_l_thyronine +nadph +nadp
+    iodide
+  }
+
+  branch from 3_3_diiodo_l_thyronine side right {
+    3_3_diiodo_l_thyronine
+    <-> . +3_3_5_triiodo_l_thyronine +nadph +iodide
+    nadp
+  }
+
+  branch from 3_phosphonato_5_adenylyl_sulfate side left {
+    3_phosphonato_5_adenylyl_sulfate
+    <-> . +taurocholate +adenosine_3_5_bismonophosphate +hplus
+    taurocholate_7_sulfate
+  }
+
+  branch from 3_phosphonato_5_adenylyl_sulfate side right {
+    3_phosphonato_5_adenylyl_sulfate
+    <-> . +taurochenodeoxycholate +adenosine_3_5_bismonophosphate +hplus
+    taurochenodeoxycholate_7_sulfate
+  }
+
+  branch from adenosine_3_5_bismonophosphate side left {
+    adenosine_3_5_bismonophosphate
+    <-> . +linoleoyl_coa +h2o +hplus
+    s_9z_12z_octadecadienoyl_4_phosphopantetheine
+  }
+
+  branch from adenosine_3_5_bismonophosphate side right {
+    adenosine_3_5_bismonophosphate
+    <-> . +palmitoleoyl_coa +h2o +hplus
+    s_9z_hexadecenoyl_4_phosphopantetheine
   }
 }

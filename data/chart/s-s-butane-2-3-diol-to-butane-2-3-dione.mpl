@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-s-butane-2-3-diol-to-butane-2-3-dione "(S,S)-butane-2,3-diol to butane-2,3-dione" {
-  spacing 242
+  spacing 248
 
   spine at 0,0 {
     s_s_butane_2_3_diol
@@ -32,5 +32,11 @@ pathway s-s-butane-2-3-diol-to-butane-2-3-dione "(S,S)-butane-2,3-diol to butane
     butane_2_3_dione
     <-> . +nadp +nadph +hplus
     acetoin
+  }
+
+  branch from r_acetoin side right {
+    r_acetoin
+    <-> . +nad +nadh +hplus
+    meso_butane_2_3_diol
   }
 }

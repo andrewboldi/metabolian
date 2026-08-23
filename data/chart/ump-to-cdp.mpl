@@ -26,49 +26,85 @@ pathway ump-to-cdp "UMP to CDP" {
 
   branch from all_trans_undecaprenyl_phosphate side left {
     all_trans_undecaprenyl_phosphate
-    <-> ec_3_6_1_27 [3.6.1.27] +undecaprenyl_diphosphate +h2o +h
-    phosphate
+    <-> ec_2_4_1_54 [2.4.1.54] +gdp +d_mannosyl_di_trans_octa_cis_undecaprenyl_phosph
+    gdp_alpha_d_mannose
   }
 
   branch from all_trans_undecaprenyl_phosphate side right {
     all_trans_undecaprenyl_phosphate
-    <-> ec_3_6_1_27 [3.6.1.27] +h2o +h +phosphate
-    di_trans_octa_cis_undecaprenyl_diphosphate
+    <-> ec_2_7_8_30 [2.7.8.30] +udp +4_deoxy_4_formamido_alpha_l_arabinopyranosyl_di
+    udp_4_deoxy_4_formamido_beta_l_arabinose
   }
 
   branch from h side left {
     h
-    <-> ec_2_5_1_18 [2.5.1.18] +1_nitro_7_hydroxy_8_glutathionyl_7_8_dihydronaph +1_nitronaphthalene_7_8_oxide
-    glutathione
+    <-> . +s_adenosyl_l_homocysteine +8_o_methylfusarubinaldehyde +fusarubinaldehyde
+    s_adenosyl_l_methionine
   }
 
   branch from h side right {
     h
-    <-> ec_2_5_1_18 [2.5.1.18] +1_nitro_7_glutathionyl_8_hydroxy_7_8_dihydronaph +glutathione
-    1_nitronaphthalene_7_8_oxide
+    <-> . +8_o_methyl_13_carboxynorjavanicin
+    8_o_methyl_fusarubinlactone
   }
 
   branch from ump side left {
     ump
-    <-> . +udp +gdp
-    gtp
+    <-> . +udp_n_acetyl_alpha_d_galactosamine +glc_galnac_p_gro_p_mannac_glcnac_pp_undecaprenol +h
+    galnac_p_glc_galnac_p_gro_p_mannac_glcnac_pp_und
   }
 
   branch from ump side right {
     ump
-    <-> . +udp_n_acetyl_alpha_d_galactosamine +gro_p_beta_d_mannac_1_4_alpha_d_glcnac_pp_und +h
-    galnac_p_gro_p_mannac_glcnac_pp_undecaprenol
+    <-> ec_2_7_1_77 [2.7.1.77] +uridine +cmp
+    cytidine
   }
 
   branch from d_mannopyranosyl_1_3_d_galactopyranosyl_diphosp side left {
     d_mannopyranosyl_1_3_d_galactopyranosyl_diphosp
-    <-> ec_2_4_1_379 [2.4.1.379] +gdp +h +alpha_d_gal_pp_und
-    gdp_alpha_d_mannose
+    <-> ec_2_4_1_379 [2.4.1.379] +gdp +h +gdp_alpha_d_mannose
+    alpha_d_gal_pp_und
   }
 
-  branch from cdp side right {
-    cdp
-    <-> . +nad +nadp +hplus
-    ctp
+  branch from ump side right {
+    ump
+    <-> ec_2_7_1_48 [2.7.1.48] +utp +uridine +h
+    udp
+  }
+
+  branch from ump side left {
+    ump
+    <-> ec_2_7_1_48 [2.7.1.48] +uridine +itp +h
+    idp
+  }
+
+  branch from all_trans_undecaprenyl_phosphate side right {
+    all_trans_undecaprenyl_phosphate
+    <-> ec_3_6_1_27 [3.6.1.27] +undecaprenyl_diphosphate +h2o +h
+    phosphate
+  }
+
+  branch from h side left {
+    h
+    <-> ec_1_13_11_4 [1.13.11.4] +2e_3_methyl_4_6_dioxohept_2_enedioate +o2
+    4_methylgentisate
+  }
+
+  branch from h side right {
+    h
+    <-> . +s_adenosyl_l_homocysteine +chondrochloren_b +s_adenosyl_l_methionine
+    chondrochloren_a
+  }
+
+  branch from udp_alpha_d_galactose side left {
+    udp_alpha_d_galactose
+    <-> . +udp +beta_d_galactosyl_chenodeoxycholate
+    chenodeoxycholate
+  }
+
+  branch from udp_alpha_d_galactose side right {
+    udp_alpha_d_galactose
+    <-> . +udp +fagopyritol_b1 +h
+    1d_chiro_inositol
   }
 }

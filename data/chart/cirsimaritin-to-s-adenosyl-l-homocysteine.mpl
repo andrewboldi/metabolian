@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cirsimaritin-to-s-adenosyl-l-homocysteine "cirsimaritin to S-adenosyl-L-homocysteine" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     cirsimaritin
@@ -14,29 +14,5 @@ pathway cirsimaritin-to-s-adenosyl-l-homocysteine "cirsimaritin to S-adenosyl-L-
     s_adenosyl_l_methionine
     <-> . +scutellarein_7_methyl_ether +sam -sah -hplus
     cirsimaritin
-  }
-
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_399 [2.1.1.399] +piceatannol +sam +hplus
-    rhapontigenin
-  }
-
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_399 [2.1.1.399] +isorhapontigenin +sam +hplus
-    4_o_methylisorhapontigenin
-  }
-
-  branch from s_adenosyl_l_methionine side left {
-    s_adenosyl_l_methionine
-    <-> ec_2_1_1_276 [2.1.1.276] +s_adenosyl_l_homocysteine +methyl_gibberellin_a4 +h
-    gibberellin_a4
-  }
-
-  branch from s_adenosyl_l_methionine side right {
-    s_adenosyl_l_methionine
-    <-> ec_2_1_1_276 [2.1.1.276] +s_adenosyl_l_homocysteine +h +gibberellin_a4
-    methyl_gibberellin_a4
   }
 }

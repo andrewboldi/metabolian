@@ -1,0 +1,503 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "acetyl-coa-to-e-5-6-dihydro-4-hydroxy-null",
+  "name": "acetyl-CoA to (E)-5,6-dihydro-4-hydroxy…",
+  "category": "other",
+  "summary": "A 3-step route from acetyl-CoA to (E)-5,6-dihydro-4-hydroxy-6-(styryl)pyran-2-one, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR200473"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "acetyl_coa",
+      "name": "acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1104266"
+      }
+    },
+    {
+      "id": "4e_3_oxo_5_phenylpent_4_enoyl_coa",
+      "name": "(4E)-3-oxo-5-phenylpent-4-enoyl-CoA",
+      "short": "3-oxo-5-phenylpent-…",
+      "formula": "C32H40N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1560114"
+      }
+    },
+    {
+      "id": "6e_3_5_dioxo_7_phenylhept_6_enoyl_coa",
+      "name": "(6E)-3,5-dioxo-7-phenylhept-6-enoyl-CoA",
+      "short": "3,5-dioxo-7-phenylh…",
+      "formula": "C34H42N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1560115"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "e_4_hydroxy_6_styryl_pyran_2_one",
+      "name": "(E)-4-hydroxy-6-(styryl)pyran-2-one",
+      "short": "4-hydroxy-6-(styryl…",
+      "formula": "C13H10O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM819574"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "e_5_6_dihydro_4_hydroxy_6_styryl_pyran_2_one",
+      "name": "(E)-5,6-dihydro-4-hydroxy-6-(styryl)pyran-2-one",
+      "short": "5,6-dihydro-4-hydro…",
+      "formula": "C13H12O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM819575"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_3_1_16",
+      "name": "acetyl-CoA C-acyltransferase",
+      "ec": [
+        "2.3.1.16"
+      ],
+      "xrefs": {
+        "uniprot": "P55084"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "acetyl-CoA C-acyltransferase",
+      "ec": "2.3.1.16",
+      "substrates": [
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4e_3_oxo_5_phenylpent_4_enoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6e_3_5_dioxo_7_phenylhept_6_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_16"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR200473"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR200473"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR200474",
+      "substrates": [
+        {
+          "metabolite": "6e_3_5_dioxo_7_phenylhept_6_enoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "e_4_hydroxy_6_styryl_pyran_2_one",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR200474"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR200474"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR165174",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "e_4_hydroxy_6_styryl_pyran_2_one",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "e_5_6_dihydro_4_hydroxy_6_styryl_pyran_2_one",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR165174"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR165174"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_4e_3_oxo_5_phenylpent_4_enoyl_coa_3-o-feruloyl-d-quinic-acid-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4e_3_oxo_5_phenylpent_4_enoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-o-feruloyl-d-quinic-acid-to-fmn"
+      },
+      "note": "Shares (4E)-3-oxo-5-phenylpent-4-enoyl-CoA with 3-O-feruloyl-D-quinic acid to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1560114"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4e_3_oxo_5_phenylpent_4_enoyl_coa_acetyl-coa-to-e-5-6-dihydro-4-hydroxy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4e_3_oxo_5_phenylpent_4_enoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetyl-coa-to-e-5-6-dihydro-4-hydroxy"
+      },
+      "note": "Shares (4E)-3-oxo-5-phenylpent-4-enoyl-CoA with acetyl-CoA to (E)-5,6-dihydro-4-hydroxy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1560114"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4e_3_oxo_5_phenylpent_4_enoyl_coa_co2-to-pyruvate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4e_3_oxo_5_phenylpent_4_enoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "co2-to-pyruvate-null"
+      },
+      "note": "Shares (4E)-3-oxo-5-phenylpent-4-enoyl-CoA with CO2 to pyruvate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1560114"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6e_3_5_dioxo_7_phenylhept_6_enoyl_coa_acetyl-coa-to-e-5-6-dihydro-4-hydroxy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6e_3_5_dioxo_7_phenylhept_6_enoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetyl-coa-to-e-5-6-dihydro-4-hydroxy"
+      },
+      "note": "Shares (6E)-3,5-dioxo-7-phenylhept-6-enoyl-CoA with acetyl-CoA to (E)-5,6-dihydro-4-hydroxy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1560115"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_4_hydroxy_6_styryl_pyran_2_one_acetyl-coa-to-e-5-6-dihydro-4-hydroxy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_4_hydroxy_6_styryl_pyran_2_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetyl-coa-to-e-5-6-dihydro-4-hydroxy"
+      },
+      "note": "Shares (E)-4-hydroxy-6-(styryl)pyran-2-one with acetyl-CoA to (E)-5,6-dihydro-4-hydroxy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM819574"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_4_hydroxy_6_styryl_pyran_2_one_bufotenin-to-coa-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_4_hydroxy_6_styryl_pyran_2_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "bufotenin-to-coa-null"
+      },
+      "note": "Shares (E)-4-hydroxy-6-(styryl)pyran-2-one with bufotenin to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM819574"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_4_hydroxy_6_styryl_pyran_2_one_co2-to-coenzyme-m-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_4_hydroxy_6_styryl_pyran_2_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "co2-to-coenzyme-m-null"
+      },
+      "note": "Shares (E)-4-hydroxy-6-(styryl)pyran-2-one with CO2 to coenzyme M.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM819574"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_4_hydroxy_6_styryl_pyran_2_one_malonyl-coa-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_4_hydroxy_6_styryl_pyran_2_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "malonyl-coa-to-h2o"
+      },
+      "note": "Shares (E)-4-hydroxy-6-(styryl)pyran-2-one with malonyl-CoA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM819574"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_4_hydroxy_6_styryl_pyran_2_one_s-adenosyl-l-homocysteine-to-o-methyl-4-o-alpha",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_4_hydroxy_6_styryl_pyran_2_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-o-methyl-4-o-alpha"
+      },
+      "note": "Shares (E)-4-hydroxy-6-(styryl)pyran-2-one with S-adenosyl-L-homocysteine to O-methyl-4-O-[alpha-L-rha….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM819574"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_5_6_dihydro_4_hydroxy_6_styryl_pyran_2_one_5-deoxyadenosine-to-hop-22-29-ene-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_5_6_dihydro_4_hydroxy_6_styryl_pyran_2_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-deoxyadenosine-to-hop-22-29-ene-null"
+      },
+      "note": "Shares (E)-5,6-dihydro-4-hydroxy-6-(styryl)pyran-2-one with 5'-deoxyadenosine to hop-22(29)-ene.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM819575"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_5_6_dihydro_4_hydroxy_6_styryl_pyran_2_one_acetyl-coa-to-e-5-6-dihydro-4-hydroxy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_5_6_dihydro_4_hydroxy_6_styryl_pyran_2_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetyl-coa-to-e-5-6-dihydro-4-hydroxy"
+      },
+      "note": "Shares (E)-5,6-dihydro-4-hydroxy-6-(styryl)pyran-2-one with acetyl-CoA to (E)-5,6-dihydro-4-hydroxy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM819575"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_5_6_dihydro_4_hydroxy_6_styryl_pyran_2_one_methylselenol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_5_6_dihydro_4_hydroxy_6_styryl_pyran_2_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "methylselenol-to-h2o"
+      },
+      "note": "Shares (E)-5,6-dihydro-4-hydroxy-6-(styryl)pyran-2-one with methylselenol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM819575"
+          }
+        ]
+      }
+    }
+  ]
+}

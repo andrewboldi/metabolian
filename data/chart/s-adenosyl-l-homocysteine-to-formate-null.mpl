@@ -4,15 +4,21 @@
 # edit the generator, not this file.
 
 pathway s-adenosyl-l-homocysteine-to-formate-null "S-adenosyl-L-homocysteine to formate" {
-  spacing 152
+  spacing 158
 
   spine at 0,0 {
     s_adenosyl_l_homocysteine
-    <-> . +mk_8 +h -2_demethylmenaquinone_8
+    <-> . +menaquinone_8 +h -2_demethylmenaquinone_8
     s_adenosyl_l_methionine
     <-> ec_1_6_5_3 [1.6.5.3] +pmf +nadh +h +2_demethylmenaquinone_8 -2_demethylmenaquinol_8 -nad
     pmf
     <-> ec_1_1_5_6 [1.1.5.6] +co2 +2_demethylmenaquinol_8 -2_demethylmenaquinone_8 -formate
     h
+  }
+
+  branch from menaquinone_8 side left {
+    menaquinone_8
+    <-> . +nadh +hplus +nad
+    menaquinol_8
   }
 }

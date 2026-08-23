@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3r-8z-11z-14z-3-hydroxy-to-8z-11z-14z-3-oxoicos "(3R,8Z,11Z,14Z)-3-hydroxy… to (8Z,11Z,14Z)-3-oxoicosa-8…" {
-  spacing 158
+  spacing 152
 
   spine at 0,0 {
     3r_8z_11z_14z_3_hydroxyicosatrienoyl_coa
@@ -14,11 +14,5 @@ pathway 3r-8z-11z-14z-3-hydroxy-to-8z-11z-14z-3-oxoicos "(3R,8Z,11Z,14Z)-3-hydro
     linolenoyl_coa
     <-> . +malonyl-coa +hplus -co2 -coa
     8z_11z_14z_3_oxoicosa_8_11_14_trienoyl_coa
-  }
-
-  branch from linolenoyl_coa side left {
-    linolenoyl_coa
-    <-> ec_1_14_19_3 [1.14.19.3] +fe2 +o2 +hplus +iron +h2o
-    linoleoyl_coa
   }
 }

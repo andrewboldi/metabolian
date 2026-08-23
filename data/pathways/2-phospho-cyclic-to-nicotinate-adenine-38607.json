@@ -1,0 +1,497 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-phospho-cyclic-to-nicotinate-adenine-38607",
+  "name": "2'-phospho-cyclic… to nicotinate-adenine…",
+  "category": "redox-detox",
+  "summary": "A 3-step route from 2'-phospho-cyclic ADP-ribose(3−) to nicotinate-adenine dinucleotide phosphate(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:38607"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:75970"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_phospho_cyclic_adp_ribose",
+      "name": "2'-phospho-cyclic ADP-ribose",
+      "short": "2'-phospho-cyclic…",
+      "formula": "C15H19N5O16P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:75970"
+      }
+    },
+    {
+      "id": "nicotinate",
+      "name": "nicotinate",
+      "formula": "C6H4NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:32544"
+      }
+    },
+    {
+      "id": "nicotinate_adenine_dinucleotide_phosphate",
+      "name": "nicotinate-adenine dinucleotide phosphate",
+      "short": "nicotinate-adenine…",
+      "formula": "C21H23N6O18P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:75967"
+      }
+    },
+    {
+      "id": "g6p",
+      "name": "D-Glucose 6-phosphate",
+      "short": "D-Glucose 6-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:61548"
+      }
+    },
+    {
+      "id": "naadph",
+      "name": "NAADPH",
+      "formula": "C21H24N6O18P3",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:235461"
+      }
+    },
+    {
+      "id": "6pgl",
+      "name": "6-Phospho-D-glucono-1,5-lactone",
+      "short": "6-Phospho-D-glucono…",
+      "formula": "C6H9O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57955"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2'-phospho-cyclic ADP-ribose + nicotinate = NAADP(+)",
+      "equation": "2'-phospho-cyclic ADP-ribose + nicotinate = NAADP(+)",
+      "substrates": [
+        {
+          "metabolite": "2_phospho_cyclic_adp_ribose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nicotinate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nicotinate_adenine_dinucleotide_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:38607"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38607"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "NAADP(+) + D-glucose 6-phosphate = NAADPH + 6-phospho-D-glucono-1,5-lactone + H(+)",
+      "equation": "NAADP(+) + D-glucose 6-phosphate = NAADPH + 6-phospho-D-glucono-1,5-lactone + H(+)",
+      "substrates": [
+        {
+          "metabolite": "nicotinate_adenine_dinucleotide_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "g6p",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "naadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "6pgl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:86243"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:86243"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "NAADPH + O2 + H(+) = NAADP(+) + H2O2",
+      "equation": "NAADPH + O2 + H(+) = NAADP(+) + H2O2",
+      "substrates": [
+        {
+          "metabolite": "naadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nicotinate_adenine_dinucleotide_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:86235"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:86235"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_2_phospho_cyclic_adp_ribose_2-phospho-cyclic-to-nicotinate-adenine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_phospho_cyclic_adp_ribose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-phospho-cyclic-to-nicotinate-adenine"
+      },
+      "note": "Shares 2'-phospho-cyclic ADP-ribose with 2'-phospho-cyclic… to nicotinate-adenine….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75970"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_phospho_cyclic_adp_ribose_phylloquinone-to-adp-d-ribose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_phospho_cyclic_adp_ribose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phylloquinone-to-adp-d-ribose"
+      },
+      "note": "Shares 2'-phospho-cyclic ADP-ribose with phylloquinone to ADP-D-ribose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75970"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_phospho_cyclic_adp_ribose_phylloquinone-to-adp-d-ribose-16745",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_phospho_cyclic_adp_ribose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phylloquinone-to-adp-d-ribose-16745"
+      },
+      "note": "Shares 2'-phospho-cyclic ADP-ribose with phylloquinone to ADP-D-ribose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75970"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nicotinate_adenine_dinucleotide_phosphate_2-phospho-cyclic-to-nicotinate-adenine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nicotinate_adenine_dinucleotide_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-phospho-cyclic-to-nicotinate-adenine"
+      },
+      "note": "Shares nicotinate-adenine dinucleotide phosphate with 2'-phospho-cyclic… to nicotinate-adenine….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75967"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nicotinate_adenine_dinucleotide_phosphate_phylloquinone-to-adp-d-ribose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nicotinate_adenine_dinucleotide_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phylloquinone-to-adp-d-ribose"
+      },
+      "note": "Shares nicotinate-adenine dinucleotide phosphate with phylloquinone to ADP-D-ribose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75967"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nicotinate_adenine_dinucleotide_phosphate_phylloquinone-to-adp-d-ribose-16745",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nicotinate_adenine_dinucleotide_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phylloquinone-to-adp-d-ribose-16745"
+      },
+      "note": "Shares nicotinate-adenine dinucleotide phosphate with phylloquinone to ADP-D-ribose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75967"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_naadph_2-phospho-cyclic-to-nicotinate-adenine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "naadph"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-phospho-cyclic-to-nicotinate-adenine"
+      },
+      "note": "Shares NAADPH with 2'-phospho-cyclic… to nicotinate-adenine….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:235461"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6pgl_2-phospho-cyclic-to-nicotinate-adenine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6pgl"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-phospho-cyclic-to-nicotinate-adenine"
+      },
+      "note": "Shares 6-Phospho-D-glucono-1,5-lactone with 2'-phospho-cyclic… to nicotinate-adenine….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57955"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6pgl_cellobiose-to-mycothione",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6pgl"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cellobiose-to-mycothione"
+      },
+      "note": "Shares 6-Phospho-D-glucono-1,5-lactone with cellobiose to mycothione.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57955"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6pgl_cellobiose-to-mycothione-21944",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6pgl"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cellobiose-to-mycothione-21944"
+      },
+      "note": "Shares 6-Phospho-D-glucono-1,5-lactone with cellobiose to mycothione.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57955"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6pgl_maltose-6-phosphate-to-hapalindole-h",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6pgl"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "maltose-6-phosphate-to-hapalindole-h"
+      },
+      "note": "Shares 6-Phospho-D-glucono-1,5-lactone with α-maltose 6'-phosphate to hapalindole H.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57955"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6pgl_maltose-6-phosphate-to-hapalindole-h-20421",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6pgl"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "maltose-6-phosphate-to-hapalindole-h-20421"
+      },
+      "note": "Shares 6-Phospho-D-glucono-1,5-lactone with α-maltose 6'-phosphate to hapalindole H.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57955"
+          }
+        ]
+      }
+    }
+  ]
+}

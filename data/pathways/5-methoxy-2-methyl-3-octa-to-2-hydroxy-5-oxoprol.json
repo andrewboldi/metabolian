@@ -128,53 +128,6 @@
       "xrefs": {
         "chebi": "CHEBI:141483"
       }
-    },
-    {
-      "id": "apelin_17",
-      "name": "apelin-17",
-      "formula": "C96H162N34O20S",
-      "charge": 6,
-      "xrefs": {
-        "chebi": "CHEBI:147421"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "Water",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:15377"
-      }
-    },
-    {
-      "id": "apelin_16",
-      "name": "apelin-16",
-      "formula": "C87H153N33O19S",
-      "charge": 6,
-      "xrefs": {
-        "chebi": "CHEBI:147422"
-      }
-    },
-    {
-      "id": "n_dha_l_phenylalanine",
-      "name": "N-DHA-L-phenylalanine",
-      "short": "N-DHA-L-phenylalani…",
-      "formula": "C31H40NO3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:149701"
-      }
-    },
-    {
-      "id": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
-      "name": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate",
-      "short": "(4Z,7Z,10Z,13Z,16Z,…",
-      "formula": "C22H31O2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:77016"
-      }
     }
   ],
   "enzymes": [
@@ -183,7 +136,10 @@
       "name": "glutamine--phenylpyruvate transaminase",
       "ec": [
         "2.6.1.64"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q16773"
+      }
     }
   ],
   "reactions": [
@@ -317,81 +273,137 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "apelin-17 + H2O = apelin-16 + L-phenylalanine",
-      "equation": "apelin-17 + H2O = apelin-16 + L-phenylalanine",
-      "substrates": [
-        {
-          "metabolite": "apelin_17",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "apelin_16",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_phenylalanine",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:63608"
+      "id": "xt_5_methoxy_2_methyl_3_octaprenylhydroquinone_4-hydroxy-3-octaprenylben-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_methoxy_2_methyl_3_octaprenylhydroquinone"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxy-3-octaprenylben-to-h2o"
+      },
+      "note": "Shares 5-methoxy-2-methyl-3-octaprenylhydroquinone with 4-hydroxy-3-octaprenylben… to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:63608"
+            "db": "ChEBI",
+            "id": "CHEBI:60656"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "N-(4Z,7Z,10Z,13Z,16Z,19Z-docosahexaenoyl)-L-phenylalanine + H2O = (4Z,7Z,10Z,13Z,16Z,19...",
-      "equation": "N-(4Z,7Z,10Z,13Z,16Z,19Z-docosahexaenoyl)-L-phenylalanine + H2O = (4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate + L-phenylalanine",
-      "substrates": [
-        {
-          "metabolite": "n_dha_l_phenylalanine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_phenylalanine",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:64132"
+      "id": "xt_1s_4s_prephenate_1s-4s-prephenate-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1s_4s_prephenate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1s-4s-prephenate-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares (1s,4s)-prephenate with (1s,4s)-prephenate to S-adenosyl-L-homocysteine.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:64132"
+            "db": "ChEBI",
+            "id": "CHEBI:29934"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1s_4s_prephenate_2-azaniumyl-2-deoxyisocho-to-enol-phenylpyruvate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1s_4s_prephenate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-azaniumyl-2-deoxyisocho-to-enol-phenylpyruvate"
+      },
+      "note": "Shares (1s,4s)-prephenate with 2-azaniumyl-2-deoxyisocho… to enol-phenylpyruvate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29934"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1s_4s_prephenate_l-arogenate-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1s_4s_prephenate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-arogenate-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares (1s,4s)-prephenate with L-arogenate to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29934"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1s_4s_prephenate_l-arogenate-to-trans-3-methylglutaconyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1s_4s_prephenate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-arogenate-to-trans-3-methylglutaconyl"
+      },
+      "note": "Shares (1s,4s)-prephenate with L-arogenate to trans-3-methylglutaconyl-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29934"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_demethylubiquinol_8_4-hydroxy-3-octaprenylben-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_demethylubiquinol_8"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxy-3-octaprenylben-to-h2o"
+      },
+      "note": "Shares 3-demethylubiquinol-8 with 4-hydroxy-3-octaprenylben… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61705"
           }
         ]
       }

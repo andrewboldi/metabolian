@@ -18,18 +18,6 @@ pathway 3-d-galactosyl-1-6-to-s-3-acetyloctanal "3-[α-D-galactosyl-(1→6)-β�
     s_3_acetyloctanal
   }
 
-  branch from octanoate side left {
-    octanoate
-    <-> ec_2_3_1_85 [2.3.1.85] +decanoate +co2 +nadp +coa +h2o +h +nadph
-    malonyl_coa
-  }
-
-  branch from octanoate side right {
-    octanoate
-    <-> ec_2_3_1_85 [2.3.1.85] +acetyl_coa +malonyl_coa +h +nadph +nadp +coa +h2o
-    co2
-  }
-
   branch from octanal side left {
     octanal
     <-> . +nadp +nadph +hplus
@@ -38,14 +26,14 @@ pathway 3-d-galactosyl-1-6-to-s-3-acetyloctanal "3-[α-D-galactosyl-(1→6)-β�
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_142 [4.2.3.142] +fpp
-    7_epi_zingiberene
+    <-> . +2_cis_6_cis_farnesyl_diphosphate +h2o
+    6z_nerolidol
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_109 [2.5.1.109] +brevianamide_f +dmapp
-    deoxybrevianamide_e
+    <-> . +2_cis_6_trans_farnesyl_diphosphate
+    6r_7s_himachala_9_11_diene
   }
 
   branch from e_oct_2_enal side right {
@@ -58,5 +46,17 @@ pathway 3-d-galactosyl-1-6-to-s-3-acetyloctanal "3-[α-D-galactosyl-(1→6)-β�
     e_oct_2_enal
     <-> . +nadp +h2o +nadph +hplus
     2e_oct_2_enoate
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +2_cis_6_trans_farnesyl_diphosphate
+    6r_7s_2_2_6_trimethyl_10_methylenebicyclo_5_4_0
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +2_cis_6_trans_farnesyl_diphosphate
+    z_bisabolene
   }
 }

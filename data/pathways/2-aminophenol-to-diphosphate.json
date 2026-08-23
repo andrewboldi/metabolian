@@ -128,32 +128,13 @@
       }
     },
     {
-      "id": "all_trans_pentaprenyl_diphosphate",
-      "name": "all-trans-pentaprenyl diphosphate",
-      "short": "all-trans-pentapren…",
-      "formula": "C25H41O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:57907"
-      }
-    },
-    {
-      "id": "astellatene",
-      "name": "(−)-astellatene",
-      "formula": "C25H40",
+      "id": "2_aminophenoxazin_3_one",
+      "name": "2-aminophenoxazin-3-one",
+      "short": "2-aminophenoxazin-3…",
+      "formula": "C12H8N2O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:191388"
-      }
-    },
-    {
-      "id": "preaspterpenacid_acid_i",
-      "name": "preaspterpenacid acid I",
-      "short": "preaspterpenacid…",
-      "formula": "C25H42O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:191389"
+        "chebi": "CHEBI:17293"
       }
     }
   ],
@@ -163,6 +144,13 @@
       "name": "2-aminophenol 1,6-dioxygenase",
       "ec": [
         "1.13.11.74"
+      ]
+    },
+    {
+      "id": "ec_1_10_3_4",
+      "name": "o-aminophenol oxidase",
+      "ec": [
+        "1.10.3.4"
       ]
     }
   ],
@@ -304,74 +292,179 @@
     },
     {
       "id": "r4",
-      "name": "(2E,6E,10E,14E)-geranylfarnesyl diphosphate = (-)-astellatene + diphosphate",
-      "equation": "(2E,6E,10E,14E)-geranylfarnesyl diphosphate = (-)-astellatene + diphosphate",
+      "name": "o-aminophenol oxidase",
+      "equation": "4 2-aminophenol + 3 O2 = 2 2-aminophenoxazin-3-one + 6 H2O",
+      "ec": "1.10.3.4",
       "substrates": [
         {
-          "metabolite": "all_trans_pentaprenyl_diphosphate",
-          "stoichiometry": 1
+          "metabolite": "2_aminophenol",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 3
         }
       ],
       "products": [
         {
-          "metabolite": "astellatene",
-          "stoichiometry": 1
+          "metabolite": "2_aminophenoxazin_3_one",
+          "stoichiometry": 2
         },
         {
-          "metabolite": "ppi",
-          "stoichiometry": 1
+          "metabolite": "h2o",
+          "stoichiometry": 6
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_10_3_4"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:71991"
+        "rhea": "RHEA:40963"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:71991"
+            "id": "RHEA:40963"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_2_aminophenol_5-6-dihydrouridine-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_aminophenol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-6-dihydrouridine-to-hydrogen-donor"
+      },
+      "note": "Shares 2-aminophenol with 5,6-dihydrouridine… to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18112"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "(2E,6E,10E,14E)-geranylfarnesyl diphosphate + H2O = preaspterpenacid acid I + diphosphate",
-      "equation": "(2E,6E,10E,14E)-geranylfarnesyl diphosphate + H2O = preaspterpenacid acid I + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "all_trans_pentaprenyl_diphosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "preaspterpenacid_acid_i",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:71995"
+      "id": "xt_2_aminophenol_n-phenylhydroxylamine-to-di-sulfido-diiron",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_aminophenol"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "n-phenylhydroxylamine-to-di-sulfido-diiron"
+      },
+      "note": "Shares 2-aminophenol with N-phenylhydroxylamine to di-μ-sulfido-diiron.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:71995"
+            "db": "ChEBI",
+            "id": "CHEBI:18112"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_aminomuconic_6_semialdehyde_cis-cis-2-ammonio-3-3-ox-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_aminomuconic_6_semialdehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cis-cis-2-ammonio-3-3-ox-to-ammonium"
+      },
+      "note": "Shares 2-aminomuconic 6-semialdehyde with cis,cis-2-ammonio-3-(3-ox… to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77634"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_formylpyridine_3-methylpyrrole-2-4-dicar-to-novobiocic-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_formylpyridine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-methylpyrrole-2-4-dicar-to-novobiocic-acid"
+      },
+      "note": "Shares 2-formylpyridine with 3-Methylpyrrole-2,4-dicar… to novobiocic acid.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:73012"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_formylpyridine_gdp-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_formylpyridine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gdp-to-h2o"
+      },
+      "note": "Shares 2-formylpyridine with GDP to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:73012"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_aminophenoxazin_3_one_5-6-dihydrouridine-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_aminophenoxazin_3_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-6-dihydrouridine-to-hydrogen-donor"
+      },
+      "note": "Shares 2-aminophenoxazin-3-one with 5,6-dihydrouridine… to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17293"
           }
         ]
       }

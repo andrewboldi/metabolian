@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-ala-d-glu-meso-dap-d-to-h2o "L-Ala-γ-D-Glu-meso-Dap-D-… to H2O" {
-  spacing 290
+  spacing 320
 
   spine at 0,0 {
     l_ala_d_glu_meso_dap_d_ala
@@ -24,14 +24,14 @@ pathway l-ala-d-glu-meso-dap-d-to-h2o "L-Ala-γ-D-Glu-meso-Dap-D-… to H2O" {
 
   branch from d_alanine side right {
     d_alanine
-    <-> ec_5_1_1_1 [5.1.1.1]
-    alanine
+    <-> . +plp +pyruvate
+    pyridoxamine_5_phosphate
   }
 
   branch from d_alanine side left {
     d_alanine
-    <-> ec_3_4_13_22 [3.4.13.22] +h2o
-    d_alanyl_d_alanine
+    <-> . +atp +hplus +ppi
+    d_alanyl_amp
   }
 
   branch from l_alanyl_d_glutamate side right {
@@ -48,13 +48,43 @@ pathway l-ala-d-glu-meso-dap-d-to-h2o "L-Ala-γ-D-Glu-meso-Dap-D-… to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> . +h +sulfate +3_3_diiodo_l_thyronine
-    3_3_diiodo_l_thyronine_sulfate
+    <-> . +5_s_12_r_dihydroxy_eicosa_2_8_trans_6_14_cis_tet
+    3_s_5_s_12_r_trihydroxy_eicosa_8_trans_6_14_cis
   }
 
   branch from h2o side left {
     h2o
-    <-> . +2r_2_amino_3_4_3_iodo_4_sulfooxy_phenoxy_phenyl +sulfate +3_monoiodo_l_thyronine
+    <-> . +leukotriene_a5
+    5_12_dihydroxy_6e_ltb5
+  }
+
+  branch from l_alanyl_d_glutamate side right {
+    l_alanyl_d_glutamate
+    <-> . +l_alanyl_d_glutamyl_meso_2_6_diaminoheptanedioat +h2o +meso_2_6_diaminopimelate
     h
+  }
+
+  branch from l_lysine side left {
+    l_lysine
+    <-> . +2_oxoglutarate +6_amino_2_oxohexanoate
+    l_glutamate
+  }
+
+  branch from l_lysine side right {
+    l_lysine
+    <-> . +l_tyrosine +h +h2o
+    lys_tyr
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +5_s_6_s_epoxy_15_r_hepe +h
+    15_epi_lipoxin_b5
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +5_s_6_s_epoxy_15_r_hepe
+    15_epi_lipoxin_a5
   }
 }

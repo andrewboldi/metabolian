@@ -27,10 +27,4 @@ pathway 1d-myo-inositol-to-acetate "1D-myo-inositol… to acetate" {
     <-> ec_4_1_1_88 [4.1.1.88] +hplus -co2
     acetate
   }
-
-  branch from malonate side left {
-    malonate
-    <-> . +h2o +coa +hplus
-    malonyl-coa
-  }
 }

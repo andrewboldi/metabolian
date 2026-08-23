@@ -160,22 +160,30 @@
       }
     },
     {
-      "id": "pi",
-      "name": "Orthophosphate (Pi)",
-      "formula": "HO4P",
+      "id": "udp_d_galactose",
+      "name": "UDP-α-D-galactose",
+      "formula": "C15H22N2O17P2",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:43474"
+        "chebi": "CHEBI:66914"
       }
     },
     {
-      "id": "g1p",
-      "name": "alpha-D-Glucose 1-phosphate (Cori ester)",
-      "short": "alpha-D-Glucose…",
-      "formula": "C6H11O9P",
-      "charge": -2,
+      "id": "loliose",
+      "name": "loliose",
+      "formula": "C18H32O16",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58601"
+        "chebi": "CHEBI:50661"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
       }
     },
     {
@@ -196,6 +204,96 @@
       "xrefs": {
         "chebi": "CHEBI:58043"
       }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "d_mannitol",
+      "name": "D-mannitol",
+      "formula": "C6H14O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16899"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "5_dehydro_d_fructose",
+      "name": "5-dehydro-D-fructose",
+      "formula": "C6H10O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17011"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "trehalulose",
+      "name": "trehalulose",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:79284"
+      }
+    },
+    {
+      "id": "6_kestotriose",
+      "name": "6-kestotriose",
+      "formula": "C18H32O16",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64833"
+      }
+    },
+    {
+      "id": "d_glucose",
+      "name": "β-D-glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15903"
+      }
     }
   ],
   "enzymes": [
@@ -211,14 +309,20 @@
       "name": "nucleoside-diphosphate kinase",
       "ec": [
         "2.7.4.6"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q5EBM0"
+      }
     },
     {
       "id": "ec_2_7_4_10",
       "name": "nucleoside-triphosphate--adenylate kinase",
       "ec": [
         "2.7.4.10"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q9UIJ7"
+      }
     },
     {
       "id": "ec_2_4_1_245",
@@ -235,10 +339,10 @@
       ]
     },
     {
-      "id": "ec_2_4_1_7",
-      "name": "sucrose phosphorylase",
+      "id": "ec_2_4_1_n2",
+      "name": "loliose synthase",
       "ec": [
-        "2.4.1.7"
+        "2.4.1.n2"
       ]
     },
     {
@@ -246,6 +350,23 @@
       "name": "apyrase",
       "ec": [
         "3.6.1.5"
+      ],
+      "xrefs": {
+        "uniprot": "P49961"
+      }
+    },
+    {
+      "id": "ec_1_1_1_67",
+      "name": "mannitol 2-dehydrogenase",
+      "ec": [
+        "1.1.1.67"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_124",
+      "name": "fructose 5-dehydrogenase (NADP(+))",
+      "ec": [
+        "1.1.1.124"
       ]
     }
   ],
@@ -520,45 +641,49 @@
     },
     {
       "id": "r7",
-      "name": "sucrose phosphorylase",
-      "equation": "sucrose + phosphate = D-fructose + alpha-D-glucose 1-phosphate",
-      "ec": "2.4.1.7",
+      "name": "loliose synthase",
+      "equation": "sucrose + UDP-alpha-D-galactose = loliose + UDP + H(+)",
+      "ec": "2.4.1.n2",
       "substrates": [
         {
           "metabolite": "sucrose",
           "stoichiometry": 1
         },
         {
-          "metabolite": "pi",
+          "metabolite": "udp_d_galactose",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "d_fructofuranose",
+          "metabolite": "loliose",
           "stoichiometry": 1
         },
         {
-          "metabolite": "g1p",
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_4_1_7"
+          "enzyme": "ec_2_4_1_n2"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:24048"
+        "rhea": "RHEA:25670"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:24048"
+            "id": "RHEA:25670"
           }
         ]
       }
@@ -608,6 +733,442 @@
           {
             "db": "Rhea",
             "id": "RHEA:36795"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "mannitol 2-dehydrogenase",
+      "equation": "D-mannitol + NAD(+) = D-fructose + NADH + H(+)",
+      "ec": "1.1.1.67",
+      "substrates": [
+        {
+          "metabolite": "d_mannitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_fructofuranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_67"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:12084"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12084"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "fructose 5-dehydrogenase (NADP(+))",
+      "equation": "D-fructose + NADP(+) = 5-dehydro-D-fructose + NADPH + H(+)",
+      "ec": "1.1.1.124",
+      "substrates": [
+        {
+          "metabolite": "d_fructofuranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_dehydro_d_fructose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_124"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:14069"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14069"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "isomaltulose synthase",
+      "equation": "sucrose = trehalulose",
+      "ec": "5.4.99.11",
+      "substrates": [
+        {
+          "metabolite": "sucrose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trehalulose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_99_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:32951"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32951"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "2 sucrose = 6-kestotriose + beta-D-glucose",
+      "equation": "2 sucrose = 6-kestotriose + beta-D-glucose",
+      "substrates": [
+        {
+          "metabolite": "sucrose",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_kestotriose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:33251"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33251"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_ndp_d_glucose_ndp-d-glucose-to-2-hydroxy-3-oxosuccinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ndp_d_glucose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ndp-d-glucose-to-2-hydroxy-3-oxosuccinate"
+      },
+      "note": "Shares NDP-α-D-glucose with NDP-α-D-glucose to 2-hydroxy-3-oxosuccinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76533"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nucleoside_5_diphosphate_chlorophyll-to-2-4-divinyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nucleoside_5_diphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "chlorophyll-to-2-4-divinyl"
+      },
+      "note": "Shares nucleoside 5'-diphosphate with chlorophyll to 2,4-divinyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57930"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nucleoside_5_diphosphate_dioleoyl-phosphatidic-acid-to-5-methyldeoxycytid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nucleoside_5_diphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dioleoyl-phosphatidic-acid-to-5-methyldeoxycytid"
+      },
+      "note": "Shares nucleoside 5'-diphosphate with dioleoyl phosphatidic acid to 5-methyldeoxycytidine….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57930"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nucleoside_5_diphosphate_ndp-d-glucose-to-2-hydroxy-3-oxosuccinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nucleoside_5_diphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ndp-d-glucose-to-2-hydroxy-3-oxosuccinate"
+      },
+      "note": "Shares nucleoside 5'-diphosphate with NDP-α-D-glucose to 2-hydroxy-3-oxosuccinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57930"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nucleoside_5_diphosphate_nucleoside-5-triphoshate-to-nucleoside-5-triphos",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nucleoside_5_diphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nucleoside-5-triphoshate-to-nucleoside-5-triphos"
+      },
+      "note": "Shares nucleoside 5'-diphosphate with nucleoside 5'-triphoshate to nucleoside 5'-triphoshate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57930"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nucleoside_5_diphosphate_nucleoside-5-triphoshate-to-ribonucleoside",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nucleoside_5_diphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nucleoside-5-triphoshate-to-ribonucleoside"
+      },
+      "note": "Shares nucleoside 5'-diphosphate with nucleoside 5'-triphoshate to ribonucleoside.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57930"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sucrose_d-fructofuranose-to-d-glucose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sucrose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-fructofuranose-to-d-glucose"
+      },
+      "note": "Shares sucrose with D-fructofuranose to β-D-glucose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17992"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sucrose_d-galactose-to-2-o-d-mannosyl-1-2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sucrose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-galactose-to-2-o-d-mannosyl-1-2"
+      },
+      "note": "Shares sucrose with α-D-galactose to 2-O-[α-D-mannosyl-(1→2)-α….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17992"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sucrose_laminarabiose-to-d-glucose-6-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sucrose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "laminarabiose-to-d-glucose-6-phosphate"
+      },
+      "note": "Shares sucrose with laminarabiose to β-D-glucose 6-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17992"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sucrose_maltose-to-d-glucose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sucrose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "maltose-to-d-glucose"
+      },
+      "note": "Shares sucrose with α-maltose to α-D-glucose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17992"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sucrose_myo-inositol-phosphate-to-planteose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sucrose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "myo-inositol-phosphate-to-planteose"
+      },
+      "note": "Shares sucrose with myo-inositol phosphate to planteose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17992"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sucrose_sucrose-6f-phosphate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sucrose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sucrose-6f-phosphate-to-h2o"
+      },
+      "note": "Shares sucrose with sucrose 6F-phosphate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17992"
           }
         ]
       }

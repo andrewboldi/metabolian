@@ -191,6 +191,65 @@
       "xrefs": {
         "metanetx": "MNXM1364019"
       }
+    },
+    {
+      "id": "n_acetyl_d_galactosaminyl_1_3_d_galactosyl_1_4_d",
+      "name": "N-acetyl-β-D-galactosaminyl-(1→3)-α-D-galactosyl-(1→4)-β-D-galactosyl-(1→4)-β-D-glucosyl-(1↔1')-ceramide",
+      "short": "N-acetyl-β-D-galact…",
+      "formula": "C30H50N2O23R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:88167"
+      }
+    },
+    {
+      "id": "d_galnac_1_3_d_galnac_1_3_d_gal_1_4_d_gal_1_4_d",
+      "name": "α-D-GalNAc-(1→3)-β-D-GalNAc-(1→3)-α-D-Gal-(1→4)-β-D-Gal-(1→4)-β-D-Glc-(1↔1')-Cer",
+      "short": "α-D-GalNAc-(1→3)-β-…",
+      "formula": "C38H63N3O28R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:90400"
+      }
+    },
+    {
+      "id": "d_galactosyl_1_4_d_galactosyl_1_4_d_glucosyl_1",
+      "name": "α-D-galactosyl-(1→4)-β-D-galactosyl-(1→4)-β-D-glucosyl-(1↔1)-ceramide",
+      "short": "α-D-galactosyl-(1→4…",
+      "formula": "C22H37NO18R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:88154"
+      }
+    },
+    {
+      "id": "delphinidin_3_o_6_o_malonyl_d_glucoside",
+      "name": "delphinidin 3-O-(6''-O-malonyl)-β-D-glucoside",
+      "short": "delphinidin…",
+      "formula": "C24H20O15",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:77887"
+      }
+    },
+    {
+      "id": "delphinidin_5_olate_3_o_6_o_carboxylatoacetyl_d",
+      "name": "delphinidin-5-olate 3-O-(6''-O-carboxylatoacetyl)-β-D-glucoside-3'-O-β-D-glucoside",
+      "short": "delphinidin-5-olate…",
+      "formula": "C30H31O20",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58913"
+      }
+    },
+    {
+      "id": "ternatin_c5",
+      "name": "ternatin C5",
+      "formula": "C36H40O25",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58912"
+      }
     }
   ],
   "enzymes": [
@@ -552,6 +611,418 @@
           {
             "db": "MetaNetX",
             "id": "MNXR143847"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "a globoside Gb4Cer + UDP-N-acetyl-alpha-D-galactosamine = a globoside IV3GalNAc-Gb4Cer ...",
+      "equation": "a globoside Gb4Cer + UDP-N-acetyl-alpha-D-galactosamine = a globoside IV3GalNAc-Gb4Cer + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "n_acetyl_d_galactosaminyl_1_3_d_galactosyl_1_4_d",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_n_acetyl_d_galactosamine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_galnac_1_3_d_galnac_1_3_d_gal_1_4_d_gal_1_4_d",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:56568"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56568"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "a globoside Gb3Cer + UDP-N-acetyl-alpha-D-galactosamine = a globoside Gb4Cer + UDP + H(+)",
+      "equation": "a globoside Gb3Cer + UDP-N-acetyl-alpha-D-galactosamine = a globoside Gb4Cer + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "d_galactosyl_1_4_d_galactosyl_1_4_d_glucosyl_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_n_acetyl_d_galactosamine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_d_galactosaminyl_1_3_d_galactosyl_1_4_d",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:56576"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56576"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "delphinidin 3-O-(6''-O-malonyl)-beta-D-glucoside + UDP-alpha-D-glucose = delphinidin 3-...",
+      "equation": "delphinidin 3-O-(6''-O-malonyl)-beta-D-glucoside + UDP-alpha-D-glucose = delphinidin 3-O-(6''-O-malonyl)-beta-D-glucoside-3'-O-beta-D-glucoside + UDP",
+      "substrates": [
+        {
+          "metabolite": "delphinidin_3_o_6_o_malonyl_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "delphinidin_5_olate_3_o_6_o_carboxylatoacetyl_d",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:26498"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26498"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "delphinidin 3-O-(6''-O-malonyl)-beta-D-glucoside-3'-O-beta-D-glucoside + UDP-alpha-D-gl...",
+      "equation": "delphinidin 3-O-(6''-O-malonyl)-beta-D-glucoside-3'-O-beta-D-glucoside + UDP-alpha-D-glucose = ternatin C5 + UDP + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "delphinidin_5_olate_3_o_6_o_carboxylatoacetyl_d",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ternatin_c5",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:26502"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26502"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_udp_n_n_diacetylbacillosamine_ditrans-octacis-undecapre-to-udp-n-n-diacetylbac",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "udp_n_n_diacetylbacillosamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ditrans-octacis-undecapre-to-udp-n-n-diacetylbac"
+      },
+      "note": "Shares UDP-N,N'-diacetylbacillosamine with ditrans,octacis-undecapre… to UDP-N,N'-diacetylbacillos….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:67134"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_udp_n_n_diacetylbacillosamine_udp-2-acetamido-4-azanium-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "udp_n_n_diacetylbacillosamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-2-acetamido-4-azanium-to-diphosphate"
+      },
+      "note": "Shares UDP-N,N'-diacetylbacillosamine with UDP-2-acetamido-4-azanium… to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:67134"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_alpha_d_galactosyl_1_3_n_n_diacetyl_alpha_d_baci_z-indol-3-yl-n-sulfo-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "alpha_d_galactosyl_1_3_n_n_diacetyl_alpha_d_baci"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "z-indol-3-yl-n-sulfo-to-h2o"
+      },
+      "note": "Shares alpha-D-galactosyl-(1->3)-N,N'-diacetyl-alpha-D-bacillosaminyl-diphospho-di-trans,octa-cis-undecaprenol with (Z)-(indol-3-yl)-N-(sulfo… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM97555"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_alpha_d_glucosyl_1_3_n_n_diacetyl_alpha_d_bacill_4-chlorophenyl-phosphate-to-l-erythro-3-methylma",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "alpha_d_glucosyl_1_3_n_n_diacetyl_alpha_d_bacill"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-chlorophenyl-phosphate-to-l-erythro-3-methylma"
+      },
+      "note": "Shares alpha-D-glucosyl-(1->3)-N,N'-diacetyl-alpha-D-bacillosaminyl-diphospho-di-trans,octa-cis-undecaprenol with 4-Chlorophenyl phosphate to L-erythro-3-Methylmalyl-C….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM97559"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetyl_d_galactosaminyl_1_3_d_galactosyl_1_4_d_d-galnac-1-3-d-galn-to-d-galactosyl-1-4-d",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyl_d_galactosaminyl_1_3_d_galactosyl_1_4_d"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-galnac-1-3-d-galn-to-d-galactosyl-1-4-d"
+      },
+      "note": "Shares N-acetyl-β-D-galactosaminyl-(1→3)-α-D-galactosyl-(1→4)-β-D-galactosyl-(1→4)-β-D-glucosyl-(1↔1')-ceramide with α-D-GalNAc-(1→3)-β-D-GalN… to α-D-galactosyl-(1→4)-β-D-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:88167"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_galnac_1_3_d_galnac_1_3_d_gal_1_4_d_gal_1_4_d_d-galnac-1-3-d-galn-to-d-galactosyl-1-4-d",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_galnac_1_3_d_galnac_1_3_d_gal_1_4_d_gal_1_4_d"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-galnac-1-3-d-galn-to-d-galactosyl-1-4-d"
+      },
+      "note": "Shares α-D-GalNAc-(1→3)-β-D-GalNAc-(1→3)-α-D-Gal-(1→4)-β-D-Gal-(1→4)-β-D-Glc-(1↔1')-Cer with α-D-GalNAc-(1→3)-β-D-GalN… to α-D-galactosyl-(1→4)-β-D-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:90400"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_galactosyl_1_4_d_galactosyl_1_4_d_glucosyl_1_d-galnac-1-3-d-galn-to-d-galactosyl-1-4-d",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_galactosyl_1_4_d_galactosyl_1_4_d_glucosyl_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-galnac-1-3-d-galn-to-d-galactosyl-1-4-d"
+      },
+      "note": "Shares α-D-galactosyl-(1→4)-β-D-galactosyl-(1→4)-β-D-glucosyl-(1↔1)-ceramide with α-D-GalNAc-(1→3)-β-D-GalN… to α-D-galactosyl-(1→4)-β-D-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:88154"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_galactosyl_1_4_d_galactosyl_1_4_d_glucosyl_1_lipid-a-4-e-coli-to-fatty-acyl-monophosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_galactosyl_1_4_d_galactosyl_1_4_d_glucosyl_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "lipid-a-4-e-coli-to-fatty-acyl-monophosphate"
+      },
+      "note": "Shares α-D-galactosyl-(1→4)-β-D-galactosyl-(1→4)-β-D-glucosyl-(1↔1)-ceramide with lipid A(4−) (E. coli) to fatty acyl monophosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:88154"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_galactosyl_1_4_d_galactosyl_1_4_d_glucosyl_1_udp-to-soyasaponin-i",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_galactosyl_1_4_d_galactosyl_1_4_d_glucosyl_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-soyasaponin-i"
+      },
+      "note": "Shares α-D-galactosyl-(1→4)-β-D-galactosyl-(1→4)-β-D-glucosyl-(1↔1)-ceramide with UDP to soyasaponin I.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:88154"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_delphinidin_3_o_6_o_malonyl_d_glucoside_1-oleoyl-2-stearoyl-sn-gl-to-9z-18-hydroxyoctade",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "delphinidin_3_o_6_o_malonyl_d_glucoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-oleoyl-2-stearoyl-sn-gl-to-9z-18-hydroxyoctade"
+      },
+      "note": "Shares delphinidin 3-O-(6''-O-malonyl)-β-D-glucoside with 1-oleoyl-2-stearoyl-sn-gl… to (9Z)-18-hydroxyoctadec-9-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77887"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ternatin_c5_1-oleoyl-2-stearoyl-sn-gl-to-9z-18-hydroxyoctade",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ternatin_c5"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-oleoyl-2-stearoyl-sn-gl-to-9z-18-hydroxyoctade"
+      },
+      "note": "Shares ternatin C5 with 1-oleoyl-2-stearoyl-sn-gl… to (9Z)-18-hydroxyoctadec-9-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58912"
           }
         ]
       }

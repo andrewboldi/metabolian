@@ -1,0 +1,572 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "o-succinyl-l-homoserinate-to-propionyl-coa-20397",
+  "name": "O-succinyl-L-homoserinate to propionyl-CoA",
+  "category": "other",
+  "summary": "A 3-step route from O-succinyl-L-homoserinate(1−) to propionyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:20397"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57661"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "o_succinyl_l_homoserinate",
+      "name": "O-succinyl-L-homoserinate",
+      "short": "O-succinyl-L-homose…",
+      "formula": "C8H12NO6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57661"
+      }
+    },
+    {
+      "id": "cysteine",
+      "name": "L-Cysteine",
+      "formula": "C3H7NO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:35235"
+      }
+    },
+    {
+      "id": "cystathionine",
+      "name": "L-Cystathionine",
+      "formula": "C7H14N2O4S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58161"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "oxobut",
+      "name": "2-Oxobutanoate",
+      "formula": "C4H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16763"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "propionyl_coa",
+      "name": "Propionyl-CoA",
+      "formula": "C24H36N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57392"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_5_1_48",
+      "name": "cystathionine gamma-synthase",
+      "ec": [
+        "2.5.1.48"
+      ]
+    },
+    {
+      "id": "ec_4_4_1_1",
+      "name": "cystathionine gamma-lyase",
+      "ec": [
+        "4.4.1.1"
+      ],
+      "xrefs": {
+        "uniprot": "P32929"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "cystathionine gamma-synthase",
+      "equation": "O-succinyl-L-homoserine + L-cysteine = L,L-cystathionine + succinate + H(+)",
+      "ec": "2.5.1.48",
+      "substrates": [
+        {
+          "metabolite": "o_succinyl_l_homoserinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cysteine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cystathionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_48"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:20397"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20397"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "cystathionine gamma-lyase",
+      "equation": "L,L-cystathionine + H2O = 2-oxobutanoate + L-cysteine + NH4(+)",
+      "ec": "4.4.1.1",
+      "substrates": [
+        {
+          "metabolite": "cystathionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "oxobut",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_4_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:14005"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14005"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "2-oxobutanoate + NAD(+) + CoA = propanoyl-CoA + CO2 + NADH",
+      "equation": "2-oxobutanoate + NAD(+) + CoA = propanoyl-CoA + CO2 + NADH",
+      "substrates": [
+        {
+          "metabolite": "oxobut",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "propionyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:33223"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33223"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_o_succinyl_l_homoserinate_2-deoxymugineate-to-succinyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "o_succinyl_l_homoserinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-deoxymugineate-to-succinyl-coa"
+      },
+      "note": "Shares O-succinyl-L-homoserinate with 2'-deoxymugineate to succinyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57661"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_o_succinyl_l_homoserinate_2-deoxymugineate-to-succinyl-coa-12200",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "o_succinyl_l_homoserinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-deoxymugineate-to-succinyl-coa-12200"
+      },
+      "note": "Shares O-succinyl-L-homoserinate with 2'-deoxymugineate to succinyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57661"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_o_succinyl_l_homoserinate_ethyl-methyl-sulfide-to-n-acetyl-l-methionine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "o_succinyl_l_homoserinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ethyl-methyl-sulfide-to-n-acetyl-l-methionine"
+      },
+      "note": "Shares O-succinyl-L-homoserinate with ethyl methyl sulfide to N-acetyl-L-methionine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57661"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_o_succinyl_l_homoserinate_ethyl-methyl-sulfide-to-n-acetyl-l-methionine-81",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "o_succinyl_l_homoserinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ethyl-methyl-sulfide-to-n-acetyl-l-methionine-81"
+      },
+      "note": "Shares O-succinyl-L-homoserinate with ethyl methyl sulfide to N-acetyl-L-methionine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57661"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_o_succinyl_l_homoserinate_o-succinyl-l-homoserinate-to-propionyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "o_succinyl_l_homoserinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "o-succinyl-l-homoserinate-to-propionyl-coa"
+      },
+      "note": "Shares O-succinyl-L-homoserinate with O-succinyl-L-homoserinate to propionyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57661"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cystathionine_2-methylpropanal-oxime-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cystathionine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-methylpropanal-oxime-to-ammonium"
+      },
+      "note": "Shares L-Cystathionine with 2-methylpropanal oxime to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58161"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cystathionine_2-methylpropanal-oxime-to-ammonium-10996",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cystathionine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-methylpropanal-oxime-to-ammonium-10996"
+      },
+      "note": "Shares L-Cystathionine with 2-methylpropanal oxime to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58161"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cystathionine_l-cystathionine-to-sulfite",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cystathionine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-cystathionine-to-sulfite"
+      },
+      "note": "Shares L-Cystathionine with L-cystathionine… to sulfite.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58161"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cystathionine_l-cystathionine-to-sulfite-43020",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cystathionine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-cystathionine-to-sulfite-43020"
+      },
+      "note": "Shares L-Cystathionine with L-cystathionine… to sulfite.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58161"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cystathionine_l-homocysteinyl-amp-to-l-cysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cystathionine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-homocysteinyl-amp-to-l-cysteine"
+      },
+      "note": "Shares L-Cystathionine with L-homocysteinyl-AMP to L-cysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58161"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cystathionine_l-homocysteinyl-amp-to-l-cysteine-83883",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cystathionine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-homocysteinyl-amp-to-l-cysteine-83883"
+      },
+      "note": "Shares L-Cystathionine with L-homocysteinyl-AMP to L-cysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58161"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cystathionine_o-succinyl-l-homoserinate-to-propionyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cystathionine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "o-succinyl-l-homoserinate-to-propionyl-coa"
+      },
+      "note": "Shares L-Cystathionine with O-succinyl-L-homoserinate to propionyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58161"
+          }
+        ]
+      }
+    }
+  ]
+}

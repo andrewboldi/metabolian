@@ -1,0 +1,377 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-glucopyranose-to-malonate-null",
+  "name": "D-glucopyranose to malonate",
+  "category": "other",
+  "summary": "A 3-step route from D-glucopyranose to malonate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR144019"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:4167"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "glucose",
+      "name": "D-Glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4167"
+      }
+    },
+    {
+      "id": "biochanin_a",
+      "name": "biochanin A",
+      "formula": "C16H11O5",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1728"
+      }
+    },
+    {
+      "id": "biochanin_a_7_o_beta_d_glucoside",
+      "name": "biochanin A 7-O-beta-D-glucoside",
+      "short": "biochanin A…",
+      "formula": "C22H21O10",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1371469"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "malonyl_coa",
+      "name": "malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "metanetx": "MNXM1106093"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "diphosphate",
+      "name": "diphosphate",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM11"
+      }
+    },
+    {
+      "id": "biochanin_a_7_o_beta_d_glucoside_6_o_malonate",
+      "name": "biochanin A 7-O-beta-D-glucoside 6''-O-malonate",
+      "short": "biochanin A…",
+      "formula": "C25H22O13",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1369210"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM728294"
+      }
+    },
+    {
+      "id": "malonate",
+      "name": "malonate",
+      "formula": "C3H2O4",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM730881"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_3_1_115",
+      "name": "isoflavone-7-O-beta-glucoside 6''-O-malonyltransferase",
+      "ec": [
+        "2.3.1.115"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR144019",
+      "substrates": [
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "biochanin_a",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "biochanin_a_7_o_beta_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR144019"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR144019"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "isoflavone-7-O-beta-glucoside 6''-O-malonyltransferase",
+      "ec": "2.3.1.115",
+      "substrates": [
+        {
+          "metabolite": "malonyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "biochanin_a_7_o_beta_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "biochanin_a_7_o_beta_d_glucoside_6_o_malonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_115"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR176827"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR176827"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR121739",
+      "substrates": [
+        {
+          "metabolite": "biochanin_a_7_o_beta_d_glucoside_6_o_malonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "biochanin_a_7_o_beta_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "malonate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR121739"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR121739"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_biochanin_a_7_o_beta_d_glucoside_beta-fabatriose-to-soyasapogenol-b-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "biochanin_a_7_o_beta_d_glucoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-fabatriose-to-soyasapogenol-b-null"
+      },
+      "note": "Shares biochanin A 7-O-beta-D-glucoside with beta-Fabatriose to soyasapogenol B….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371469"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_biochanin_a_7_o_beta_d_glucoside_d-glucopyranose-to-1-o-galloyl-beta-d-glucose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "biochanin_a_7_o_beta_d_glucoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glucopyranose-to-1-o-galloyl-beta-d-glucose"
+      },
+      "note": "Shares biochanin A 7-O-beta-D-glucoside with D-glucopyranose to 1-O-galloyl-beta-D-glucose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371469"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_biochanin_a_7_o_beta_d_glucoside_d-glucopyranose-to-malonate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "biochanin_a_7_o_beta_d_glucoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glucopyranose-to-malonate"
+      },
+      "note": "Shares biochanin A 7-O-beta-D-glucoside with D-glucopyranose to malonate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371469"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_biochanin_a_7_o_beta_d_glucoside_6_o_malonate_d-glucopyranose-to-malonate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "biochanin_a_7_o_beta_d_glucoside_6_o_malonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glucopyranose-to-malonate"
+      },
+      "note": "Shares biochanin A 7-O-beta-D-glucoside 6''-O-malonate with D-glucopyranose to malonate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1369210"
+          }
+        ]
+      }
+    }
+  ]
+}

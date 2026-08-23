@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway glycerylphosphocholine-to-1-arachidonoyl-2-oleo "β-glycerylphosphocholine to 1-arachidonoyl-2-oleoylgl…" {
-  spacing 164
+  spacing 176
 
   spine at 0,0 {
     glycerylphosphocholine
@@ -26,5 +26,17 @@ pathway glycerylphosphocholine-to-1-arachidonoyl-2-oleo "β-glycerylphosphocholi
     1_arachidonoyl_2_oleoylglycerol
     <-> . +arachidonoyl_coa +coa
     2_oleoylglycerol
+  }
+
+  branch from oleoyl_coa side left {
+    oleoyl_coa
+    <-> . +1_monolauroylglycerol +coa
+    1_lauroyl_2_oleoylglycerol
+  }
+
+  branch from oleoyl_coa side right {
+    oleoyl_coa
+    <-> . +1_monomyristoylglycerol +coa
+    1_myristoyl_2_oleoylglycerol
   }
 }

@@ -4,69 +4,111 @@
 # edit the generator, not this file.
 
 pathway h-to-o2-null "H to O2" {
-  spacing 310
+  spacing 268
 
   spine at 0,0 {
     h
-    <-> ec_1_2_1_5 [1.2.1.5] +dotriacontanoate +nadph -nadp -h2o
-    dotriacontanal
-    <-> . +h -carbon_monoxide
-    hentriacontane
-    <-> ec_1_13_11_48 [1.13.11.48] +n_acetylanthranilate +carbon_monoxide -o2
-    3_hydroxy_2_methyl_1h_quinolin_4_one
-  }
-
-  branch from dotriacontanal side left {
-    dotriacontanal
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +nad
-    dotriacontan_1_ol
-  }
-
-  branch from nadp side right {
+    <-> . +3_epi_6_deoxocathasterone +o2 +nadph -6_deoxotyphasterol -h2o
     nadp
-    <-> . +h +1r_4r_camphor +nadph
-    1r_2s_4r_borneol
+    <-> ec_1_14_14_179 [1.14.14.179] +6_deoxotyphasterol +fmnh2 +o2 -fmn -h2o -hplus
+    typhasterol
+    <-> . +h2o -o2
+    6_deoxotyphasterol
   }
 
   branch from nadp side left {
     nadp
-    <-> . +1s_4s_camphor +h +nadph
-    1s_2r_4s_borneol
+    <-> . +7_aminonitrazepam +h2o +h +nadph
+    nitrazepam
   }
 
-  branch from h2o side right {
-    h2o
-    <-> . +l_histidine +l_aspartate
-    histidyl_aspartate
+  branch from nadp side right {
+    nadp
+    <-> . +h2o +h +nitrazepam +nadph
+    7_aminonitrazepam
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_histidine +l_cysteine
-    histidyl_cystyl_cysteine
+    <-> . +n_acetyl_d_galactosamine +trihexosyl_ceramide
+    globoside
   }
 
-  branch from carbon_monoxide side right {
-    carbon_monoxide
-    <-> . +h +triacontanal
-    nonacosane
-  }
-
-  branch from carbon_monoxide side left {
-    carbon_monoxide
-    <-> . +fadh2 +co2 +h +h2o
-    fad
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +2z_4e_2_hydroxyhexa_2_4_dienedioate +h +chloride +h2o
-    3_chlorocatechol
+  branch from h2o side right {
+    h2o
+    <-> . +14_15_eet
+    14_15_dihydroxy_5z_8z_11z_eicosatrienoate
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_3_3_8 [1.3.3.8] +s_cheilanthifoline +h +dehydrocheilanthifoline
-    h2o2
+    <-> . +alpha_d_ribose_1_phosphate +e_5_2_bromovinyl_uracil +phosphate
+    brivudine
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +3beta_hydroxy_5_cholestene_27_oate +h +nadph +nadp +h2o
+    3beta_7alpha_dihydroxy_5_cholestenoate
+  }
+
+  branch from h side left {
+    h
+    <-> . +nonadecanoyl_coa +sn_glycerol_3_phosphate +coa
+    lysopa_19_0_0_0
+  }
+
+  branch from h side right {
+    h
+    <-> . +eicosanoyl_coa +sn_glycerol_3_phosphate +coa
+    1_arachidoylglycerol_3_phosphate
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +h +gamma_tocopherol +nadph +nadp +h2o
+    13_hydroxy_gama_tocopherol
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +h +nadph +3beta_7alpha_dihydroxy_5_cholestenoate +nadp +h2o
+    25r_cholest_5_en_3beta_7alpha_26_triol
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +olsalazine +nadp
+    mesalaminate
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +precorrin_6a +h +nadp
+    precorrin_6b
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +h +nadph +prontosil +sulfanilamide
+    benzene_1_2_4_triamine
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26 +h +nadph +h2o
+    25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +glutathione_disulfide +5_r_hete +h +5s_hydroperoxy_6e_8z_11z_14z_eicosatetraenoate
+    glutathione
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +10_hydroxy_11s_12s_epoxy_5z_8z_14z_eicosatrienoi
+    10_11s_12r_trihydroxy_5z_8z_14z_eicosatrienoate
   }
 }

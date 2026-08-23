@@ -1,0 +1,389 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-lactoyl-amp-to-acetate-80275",
+  "name": "(S)-lactoyl-AMP to acetate",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from (S)-lactoyl-AMP(1−) to acetate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:80275"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:231470"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_lactoyl_amp",
+      "name": "(S)-lactoyl-AMP",
+      "formula": "C13H17N5O9P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:231470"
+      }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H13N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:29969"
+      }
+    },
+    {
+      "id": "n6_s_lactoyl_l_lysine",
+      "name": "N6-[(S)-lactoyl]-L-lysine",
+      "short": "N6-[(S)-lactoyl]-L-…",
+      "formula": "C9H16N2O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:231527"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "lactate",
+      "name": "L-Lactate",
+      "formula": "C3H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16651"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "Acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30089"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_13_12_4",
+      "name": "lactate 2-monooxygenase",
+      "ec": [
+        "1.13.12.4"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(S)-lactoyl-AMP + L-lysyl-[protein] = N(6)-[(S)-lactoyl]-L-lysyl-[protein] + AMP + 2 H(+)",
+      "equation": "(S)-lactoyl-AMP + L-lysyl-[protein] = N(6)-[(S)-lactoyl]-L-lysyl-[protein] + AMP + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "s_lactoyl_amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_s_lactoyl_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:80275"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:80275"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N(6)-[(S)-lactoyl]-L-lysyl-[protein] + H2O = (S)-lactate + L-lysyl-[protein]",
+      "equation": "N(6)-[(S)-lactoyl]-L-lysyl-[protein] + H2O = (S)-lactate + L-lysyl-[protein]",
+      "substrates": [
+        {
+          "metabolite": "n6_s_lactoyl_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "lactate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:81387"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81387"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "lactate 2-monooxygenase",
+      "equation": "(S)-lactate + O2 = acetate + CO2 + H2O",
+      "ec": "1.13.12.4",
+      "substrates": [
+        {
+          "metabolite": "lactate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_12_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:16513"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16513"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_s_lactoyl_amp_l-fucoside-to-oxaloacetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_lactoyl_amp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-fucoside-to-oxaloacetate"
+      },
+      "note": "Shares (S)-lactoyl-AMP with α-L-fucoside to oxaloacetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:231470"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_lactoyl_amp_l-fucoside-to-oxaloacetate-12288",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_lactoyl_amp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-fucoside-to-oxaloacetate-12288"
+      },
+      "note": "Shares (S)-lactoyl-AMP with α-L-fucoside to oxaloacetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:231470"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_lactoyl_amp_s-lactoyl-amp-to-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_lactoyl_amp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-lactoyl-amp-to-acetate"
+      },
+      "note": "Shares (S)-lactoyl-AMP with (S)-lactoyl-AMP to acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:231470"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n6_s_lactoyl_l_lysine_propanoate-to-l-lysinium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n6_s_lactoyl_l_lysine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "propanoate-to-l-lysinium"
+      },
+      "note": "Shares N6-[(S)-lactoyl]-L-lysine with propanoate to L-lysinium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:231527"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n6_s_lactoyl_l_lysine_propanoate-to-l-lysinium-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n6_s_lactoyl_l_lysine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "propanoate-to-l-lysinium-null"
+      },
+      "note": "Shares N6-[(S)-lactoyl]-L-lysine with propanoate to L-lysinium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:231527"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n6_s_lactoyl_l_lysine_s-lactoyl-amp-to-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n6_s_lactoyl_l_lysine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-lactoyl-amp-to-acetate"
+      },
+      "note": "Shares N6-[(S)-lactoyl]-L-lysine with (S)-lactoyl-AMP to acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:231527"
+          }
+        ]
+      }
+    }
+  ]
+}

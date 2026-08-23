@@ -1,0 +1,432 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "cmp-2-trimethylaminoethyl-to-glycine-betaine-nul",
+  "name": "CMP-2-trimethylaminoethyl… to glycine betaine",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from CMP-2-trimethylaminoethylphosphonate to glycine betaine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR190828"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:3281"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "cmp_2_trimethylaminoethylphosphonate",
+      "name": "CMP-2-trimethylaminoethylphosphonate",
+      "short": "CMP-2-trimethylamin…",
+      "formula": "C14H27N4O10P2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:3281"
+      }
+    },
+    {
+      "id": "diphosphate",
+      "name": "diphosphate",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM11"
+      }
+    },
+    {
+      "id": "ctp",
+      "name": "CTP",
+      "formula": "C9H12N3O14P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1103718"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "2_trimethylamino_ethyl_phosphonate",
+      "name": "[2-(trimethylamino)ethyl]phosphonate",
+      "short": "[2-(trimethylamino)…",
+      "formula": "C5H14NO3P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:149625"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "1r_1_hydroxy_2_trimethylamino_ethyl_phosphonate",
+      "name": "[(1R)-1-hydroxy-2-(trimethylamino)ethyl]phosphonate",
+      "short": "[(1R)-1-hydroxy-2-(…",
+      "formula": "C5H14NO4P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:149626"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "betaine",
+      "name": "Glycine betaine",
+      "formula": "C5H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17750"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_7_15",
+      "name": "choline-phosphate cytidylyltransferase",
+      "ec": [
+        "2.7.7.15"
+      ],
+      "xrefs": {
+        "uniprot": "P49585"
+      }
+    },
+    {
+      "id": "ec_1_14_11_72",
+      "name": "[2-(trimethylamino)ethyl]phosphonate dioxygenase",
+      "ec": [
+        "1.14.11.72"
+      ]
+    },
+    {
+      "id": "ec_1_13_11_90",
+      "name": "[1-hydroxy-2-(trimethylamino)ethyl]phosphonate dioxygenase (glycine-",
+      "ec": [
+        "1.13.11.90"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "choline-phosphate cytidylyltransferase",
+      "ec": "2.7.7.15",
+      "substrates": [
+        {
+          "metabolite": "cmp_2_trimethylaminoethylphosphonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ctp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "2_trimethylamino_ethyl_phosphonate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_7_15"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR190828"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR190828"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "[2-(trimethylamino)ethyl]phosphonate dioxygenase",
+      "equation": "[2-(trimethylamino)ethyl]phosphonate + 2-oxoglutarate + O2 = [(1R)-1-hydroxy-2-(trimethylamino)ethyl]phosphonate + succinate + CO2",
+      "ec": "1.14.11.72",
+      "substrates": [
+        {
+          "metabolite": "2_trimethylamino_ethyl_phosphonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1r_1_hydroxy_2_trimethylamino_ethyl_phosphonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_72"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:11380"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11380"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "[1-hydroxy-2-(trimethylamino)ethyl]phosphonate dioxygenase (glycine-",
+      "equation": "[(1R)-1-hydroxy-2-(trimethylamino)ethyl]phosphonate + O2 = glycine betaine + phosphate + 2 H(+)",
+      "ec": "1.13.11.90",
+      "substrates": [
+        {
+          "metabolite": "1r_1_hydroxy_2_trimethylamino_ethyl_phosphonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "betaine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_90"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:63192"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63192"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_cmp_2_trimethylaminoethylphosphonate_cmp-2-trimethylaminoethyl-to-glycine-betaine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cmp_2_trimethylaminoethylphosphonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cmp-2-trimethylaminoethyl-to-glycine-betaine"
+      },
+      "note": "Shares CMP-2-trimethylaminoethylphosphonate with CMP-2-trimethylaminoethyl… to glycine betaine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:3281"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_trimethylamino_ethyl_phosphonate_1r-1-hydroxy-2-trimet-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_trimethylamino_ethyl_phosphonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1r-1-hydroxy-2-trimet-to-succinate"
+      },
+      "note": "Shares [2-(trimethylamino)ethyl]phosphonate with [(1R)-1-Hydroxy-2-(trimet… to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:149625"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_trimethylamino_ethyl_phosphonate_1r-1-hydroxy-2-trimet-to-succinate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_trimethylamino_ethyl_phosphonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1r-1-hydroxy-2-trimet-to-succinate-null"
+      },
+      "note": "Shares [2-(trimethylamino)ethyl]phosphonate with [(1R)-1-Hydroxy-2-(trimet… to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:149625"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_trimethylamino_ethyl_phosphonate_cmp-2-trimethylaminoethyl-to-glycine-betaine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_trimethylamino_ethyl_phosphonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cmp-2-trimethylaminoethyl-to-glycine-betaine"
+      },
+      "note": "Shares [2-(trimethylamino)ethyl]phosphonate with CMP-2-trimethylaminoethyl… to glycine betaine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:149625"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1r_1_hydroxy_2_trimethylamino_ethyl_phosphonate_cmp-2-trimethylaminoethyl-to-glycine-betaine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1r_1_hydroxy_2_trimethylamino_ethyl_phosphonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cmp-2-trimethylaminoethyl-to-glycine-betaine"
+      },
+      "note": "Shares [(1R)-1-hydroxy-2-(trimethylamino)ethyl]phosphonate with CMP-2-trimethylaminoethyl… to glycine betaine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:149626"
+          }
+        ]
+      }
+    }
+  ]
+}

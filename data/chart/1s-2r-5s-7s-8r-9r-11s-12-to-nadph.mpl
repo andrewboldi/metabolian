@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1s-2r-5s-7s-8r-9r-11s-12-to-nadph "(1S,2R,5S,7S,8R,9R,11S,12… to NADPH" {
-  spacing 230
+  spacing 296
 
   spine at 0,0 {
     1s_2r_5s_7s_8r_9r_11s_12s_15s_7_2_hydroxypropan
@@ -20,79 +20,145 @@ pathway 1s-2r-5s-7s-8r-9r-11s-12-to-nadph "(1S,2R,5S,7S,8R,9R,11S,12… to NADPH
 
   branch from nadp side left {
     nadp
-    <-> ec_1_3_1_10 [1.3.1.10] +h +o_s_2e_tetradecenoylpantetheine_4_phosphoryl_ser +nadph
-    o_s_tetradecanoylpantetheine_4_phosphoryl_serine
+    <-> . +indoxyl +h +nadph +h2o
+    indole
   }
 
   branch from nadp side right {
     nadp
-    <-> . +2_methoxy_5_methyl_6_all_trans_hexaprenyl_1_4_be +o2 +nadph +h2o
-    3_demethylubiquinone_6
+    <-> . +losartan +h +o2 +nadph +h2o
+    losartan_m1
   }
 
   branch from h2o side left {
     h2o
-    <-> . +dihydrosanguinarine
-    6_hydroxyprotopine
+    <-> . +14_15_eet
+    14_15_dihydroxy_5z_8z_11z_eicosatrienoate
   }
 
   branch from h2o side right {
     h2o
-    <-> . +4_3_methylbut_2_enyl_l_tryptophan
-    elymoclavine
-  }
-
-  branch from lolitrem_e side left {
-    lolitrem_e
-    <-> . +nadp +h2o +h +o2 +nadph
-    20_21_diprenylterpendole_j
-  }
-
-  branch from diphosphate side right {
-    diphosphate
-    <-> ec_4_2_3_32 [4.2.3.32] +abieta_8_14_12_diene
-    ent_copalyl_diphosphate
+    <-> . +10_hydroxy_11s_12s_epoxy_5z_8z_14z_eicosatrienoi
+    10_11s_12r_trihydroxy_5z_8z_14z_eicosatrienoate
   }
 
   branch from diphosphate side left {
     diphosphate
-    <-> ec_4_2_3_32 [4.2.3.32] +ent_copalyl_diphosphate
-    palustradiene
+    <-> . +10_11_dihydro_ltb4_coa +amp +coa +10_11_dihydro_leukotriene_b4
+    atp
   }
 
-  branch from h side right {
-    h
-    <-> ec_1_1_1_213 [1.1.1.213] +nadh +5beta_pregnan_3_20_dione +nad
-    3_hydroxy_5_pregnan_20_one
+  branch from diphosphate side right {
+    diphosphate
+    <-> . +3_7_24thca_coenzyme_a +amp +h +atp +coa
+    3_7_24_trihydroxy_5_cholestan_26_oic_acid
   }
 
   branch from h side left {
     h
-    <-> ec_1_14_21_3 [1.14.21.3] +s_coclaurine +r_n_methylcoclaurine +o2 +nadph +nadp +h2o
-    2_norberbamunine
+    <-> . +lysopa_21_0_0_0 +coa +heneicosanoyl_coenzyme_a
+    sn_glycerol_3_phosphate
   }
 
-  branch from o2 side right {
-    o2
-    <-> ec_1_14_21_3 [1.14.21.3] +h +nadp +guattegaumerine +h2o +nadph
-    r_n_methylcoclaurine
+  branch from h side right {
+    h
+    <-> . +13z_16z_19z_docosa_13_16_19_trienoyl_coa +sn_glycerol_3_phosphate +coa
+    1_acylglycerol_3p_13_16_19_doco
   }
 
   branch from o2 side left {
     o2
-    <-> . +nadh +h +p_cymene +nad +h2o
-    4_isopropylbenzyl_alcohol
+    <-> . +2e_13z_icosadienoyl_coa +h2o2
+    13z_icosenoyl_coa
   }
 
-  branch from nadph side right {
-    nadph
-    <-> ec_1_8_1_15 [1.8.1.15] +h +mycothione +nadp
-    mycothiol
+  branch from o2 side right {
+    o2
+    <-> . +2e_11z_octadecadienoyl_coa +h2o2
+    11e_octadecenoyl_coa
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_14_13_71 [1.14.13.71] +s_3_hydroxy_n_methylcoclaurine +nadp +h2o +h +o2
-    s_n_methylcoclaurine
+    <-> . +losartan +h +o2 +nadp +h2o
+    losartan_m2
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +losartan +h +o2 +nadp +h2o
+    losartan_m5
+  }
+
+  branch from h side left {
+    h
+    <-> . +10z_13z_16z_docosatrienoyl_coa +sn_glycerol_3_phosphate +coa
+    1_acylglycerol_3p_10_13_16_docosa
+  }
+
+  branch from h side right {
+    h
+    <-> . +prostaglandin_e2 +h2o
+    5_trans_pga2
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +4_oxo_4_pyridin_3_yl_butanal +h
+    4_oxo_4_pyridin_3_yl_butanoate
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +5_3_pyridyl_2_hydroxytetrahydrofuran
+    gamma_hydroxy_3_pyridinebutanoate
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +6r_5_10_methylene_5_6_7_8_tetrahydrofolate +h +nadp
+    5_methyltetrahydrofolic_acid
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +5_10_methylenetetrahydromethanopterin +nadp
+    5_10_methenyl_5_6_7_8_tetrahydromethanopterin
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +neoprontosil +h +nh4 +nadph +h2o
+    sulfanilamide
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +nitric_oxide +l_citrulline +h +h2o +o2 +nadph
+    n_omega_hydroxy_l_arginine
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +prostaglandin_pge2_glyceryl_ester +h +glycerol
+    prostaglandin_e2
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +3alpha_7alpha_12alpha_trihydroxy_5beta_cholest_2 +h
+    24_r_25_r_varanoyl_coa
+  }
+
+  branch from diphosphate side left {
+    diphosphate
+    <-> . +h +amp +nad +atp +nh4
+    deamino_nad
+  }
+
+  branch from diphosphate side right {
+    diphosphate
+    <-> . +9z_12z_octadecadienoate +atp +coa +amp
+    9e_12e_octadecadienoyl_coa
   }
 }

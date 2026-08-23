@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-hederagenin "UDP to hederagenin…" {
-  spacing 188
+  spacing 212
 
   spine at 0,0 {
     udp
@@ -16,39 +16,63 @@ pathway udp-to-hederagenin "UDP to hederagenin…" {
     udp
   }
 
-  branch from udp_beta_l_rhamnose side left {
-    udp_beta_l_rhamnose
-    <-> ec_2_4_1_159 [2.4.1.159] +udp +h +flavonol_3_o_alpha_l_rhamnosyl_1_6_beta_d_glucos
-    flavonol_3_o_beta_d_glucoside
-  }
-
-  branch from udp_beta_l_rhamnose side right {
-    udp_beta_l_rhamnose
-    <-> ec_2_4_1_236 [2.4.1.236] +udp +apigenin_7_o_neohesperidoside
-    apigenin_7_o_beta_d_glucoside
-  }
-
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +h +quercetin_3_7_di_o_d_glucoside
-    quercetin_7_o_beta_d_glucoside
+    <-> . +udp +h +glucoevatromonoside
+    evatromonoside
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +quercetin_3_gentiotrioside +h
-    quercetin_3_gentiobioside
+    <-> . +udp +tuberonic_acid_glucoside
+    tuberonate
   }
 
   branch from udp side left {
     udp
-    <-> ec_2_4_1_17 [2.4.1.17] +h +4_methylumbelliferone_d_glucuronide +4_methylumbelliferone
-    udp_alpha_d_glucuronate
+    <-> . +h +gitoxigenin_3_o_beta_d_quinovoside +gitoxigenin
+    udp_alpha_d_quinovose
   }
 
   branch from udp side right {
     udp
-    <-> ec_2_4_1_17 [2.4.1.17] +curcumin_beta_d_glucuronide +udp_alpha_d_glucuronate
-    curcumin
+    <-> ec_2_4_1_17 [2.4.1.17] +p_nitrophenyl_beta_d_glucuronide +h +4_nitrophenol
+    udp_alpha_d_glucuronate
+  }
+
+  branch from udp side left {
+    udp
+    <-> ec_2_4_1_22 [2.4.1.22] +h +beta_lactose +alpha_d_glucose
+    udp_alpha_d_galactose
+  }
+
+  branch from udp side right {
+    udp
+    <-> ec_2_7_1_11 [2.7.1.11] +utp +beta_d_fructose_6_phosphate +h
+    beta_d_fructose_1_6_bisphosphate
+  }
+
+  branch from h side left {
+    h
+    <-> . +adp +1_heptadecanoylglycerophosphoethanolamine_c17_0 +phosphate +1_heptadecanoylglycerophosphoethanolamine_c17_0 +h2o
+    atp
+  }
+
+  branch from h side right {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    1_eicosatrienoylglycerophosphoethanolamine_delta
+  }
+
+  branch from udp_alpha_d_glucose side left {
+    udp_alpha_d_glucose
+    <-> ec_2_4_1_173 [2.4.1.173] +udp +h +solasodine_3_o_beta_d_glucoside
+    solasodine
+  }
+
+  branch from udp_alpha_d_glucose side right {
+    udp_alpha_d_glucose
+    <-> ec_2_4_1_271 [2.4.1.271] +udp +bis_beta_d_gentiobiosyl_crocetin +h
+    crocetin
   }
 }

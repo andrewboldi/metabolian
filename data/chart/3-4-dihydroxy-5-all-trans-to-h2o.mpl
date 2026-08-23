@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-4-dihydroxy-5-all-trans-to-h2o "3,4-dihydroxy-5-all-trans… to H2O" {
-  spacing 316
+  spacing 280
 
   spine at 0,0 {
     3_4_dihydroxy_5_all_trans_heptaprenylbenzoate
@@ -19,9 +19,4 @@ pathway 3-4-dihydroxy-5-all-trans-to-h2o "3,4-dihydroxy-5-all-trans… to H2O" {
     <-> . +h +o2 +nadph -3_demethylubiquinol_7 -h2o
     nadp
   }
-
-
-
-
-
 }

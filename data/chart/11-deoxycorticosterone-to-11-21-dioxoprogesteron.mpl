@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 11-deoxycorticosterone-to-11-21-dioxoprogesteron "11-deoxycorticosterone to 11,21-dioxoprogesterone" {
-  spacing 158
+  spacing 170
 
   spine at 0,0 {
     11_deoxycorticosterone
@@ -20,5 +20,17 @@ pathway 11-deoxycorticosterone-to-11-21-dioxoprogesteron "11-deoxycorticosterone
     corticosterone
     <-> . +nadph +hplus +nadp
     20_dihydrocorticosterone
+  }
+
+  branch from 11_deoxycorticosterone side right {
+    11_deoxycorticosterone
+    <-> ec_5_3_1_21 [5.3.1.21]
+    20_hydroxy_3_oxopregn_4_en_21_al
+  }
+
+  branch from 11_deoxycorticosterone side left {
+    11_deoxycorticosterone
+    <-> . +nadph +hplus +nadp
+    5_dihydrodeoxycorticosterone
   }
 }

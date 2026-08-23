@@ -138,6 +138,16 @@
       "xrefs": {
         "chebi": "CHEBI:57945"
       }
+    },
+    {
+      "id": "all_trans_4_4_diapophytofluene",
+      "name": "all-trans-4,4'-diapophytofluene",
+      "short": "all-trans-4,4'-diap…",
+      "formula": "C30H46",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62740"
+      }
     }
   ],
   "enzymes": [
@@ -289,6 +299,205 @@
           {
             "db": "Rhea",
             "id": "RHEA:42384"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "15-cis-4,4'-diapophytoene + FAD + H(+) = all-trans-4,4'-diapophytofluene + FADH2",
+      "equation": "15-cis-4,4'-diapophytoene + FAD + H(+) = all-trans-4,4'-diapophytofluene + FADH2",
+      "substrates": [
+        {
+          "metabolite": "15_cis_4_4_diapophytoene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "all_trans_4_4_diapophytofluene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:31395"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31395"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_15_cis_4_4_diapophytoene_2-3-dihydroxyindole-to-2-amino-5-oxocyclohex-1-e",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "15_cis_4_4_diapophytoene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3-dihydroxyindole-to-2-amino-5-oxocyclohex-1-e"
+      },
+      "note": "Shares 15-cis-4,4'-diapophytoene with 2,3-dihydroxyindole to 2-amino-5-oxocyclohex-1-e….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62738"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_15_cis_4_4_diapophytoene_6r-isopiperitenone-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "15_cis_4_4_diapophytoene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6r-isopiperitenone-to-nad"
+      },
+      "note": "Shares 15-cis-4,4'-diapophytoene with (6R)-isopiperitenone to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62738"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_15_cis_4_4_diapophytoene_all-trans-4-4-diapophyto-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "15_cis_4_4_diapophytoene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "all-trans-4-4-diapophyto-to-hydrogen-donor"
+      },
+      "note": "Shares 15-cis-4,4'-diapophytoene with all-trans-4,4'-diapophyto… to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62738"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_4_diaponeurosporene_all-trans-4-4-diapophyto-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_4_diaponeurosporene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "all-trans-4-4-diapophyto-to-hydrogen-donor"
+      },
+      "note": "Shares 4,4'-diaponeurosporene with all-trans-4,4'-diapophyto… to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62743"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_4_diaponeurosporene_fadh2-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_4_diaponeurosporene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fadh2-to-h2o"
+      },
+      "note": "Shares 4,4'-diaponeurosporene with FADH2 to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62743"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_4_diaponeurosporenal_nadh-to-e-dodec-2-enal",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_4_diaponeurosporenal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-e-dodec-2-enal"
+      },
+      "note": "Shares 4,4'-diaponeurosporenal with NADH to (E)-dodec-2-enal.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:79065"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_4_4_diapophytofluene_all-trans-4-4-diapophyto-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_4_4_diapophytofluene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "all-trans-4-4-diapophyto-to-hydrogen-donor"
+      },
+      "note": "Shares all-trans-4,4'-diapophytofluene with all-trans-4,4'-diapophyto… to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62740"
           }
         ]
       }

@@ -85,6 +85,34 @@
       "xrefs": {
         "chebi": "CHEBI:84142"
       }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "3_diphospho_1d_myo_inositol_1_2_4_5_tetrakisphos",
+      "name": "3-diphospho-1D-myo-inositol 1,2,4,5-tetrakisphosphate",
+      "short": "3-diphospho-1D-myo-…",
+      "formula": "C6H7O24P6",
+      "charge": -11,
+      "xrefs": {
+        "chebi": "CHEBI:194087"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
     }
   ],
   "enzymes": [],
@@ -241,6 +269,113 @@
           {
             "db": "Rhea",
             "id": "RHEA:68324"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "1D-myo-inositol 1,2,3,4,5-pentakisphosphate + ATP = 3-diphospho-1D-myo-inositol 1,2,4,5...",
+      "equation": "1D-myo-inositol 1,2,3,4,5-pentakisphosphate + ATP = 3-diphospho-1D-myo-inositol 1,2,4,5-tetrakisphosphate + ADP",
+      "substrates": [
+        {
+          "metabolite": "1d_myo_inositol_1_2_3_4_5_pentakisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_diphospho_1d_myo_inositol_1_2_4_5_tetrakisphos",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:74847"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:74847"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_1d_myo_inositol_1_2_3_4_5_pentakisphosphate_5-diphospho-1d-myo-inosit-to-1-5-bis-diphospho-1",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1d_myo_inositol_1_2_3_4_5_pentakisphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-diphospho-1d-myo-inosit-to-1-5-bis-diphospho-1"
+      },
+      "note": "Shares 1D-myo-inositol 1,2,3,4,5-pentakisphosphate with 5-diphospho-1D-myo-inosit… to 1,5-bis(diphospho)-1D-myo….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:177294"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1d_myo_inositol_2_phosphate_1d-myo-inositol-to-1d-myo-inositol-77111",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1d_myo_inositol_2_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1d-myo-inositol-to-1d-myo-inositol-77111"
+      },
+      "note": "Shares 1D-myo-inositol 2-phosphate with 1D-myo-inositol… to 1D-myo-inositol….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84142"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1d_myo_inositol_2_phosphate_1d-myo-inositol-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1d_myo_inositol_2_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1d-myo-inositol-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares 1D-myo-inositol 2-phosphate with 1D-myo-inositol… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84142"
           }
         ]
       }

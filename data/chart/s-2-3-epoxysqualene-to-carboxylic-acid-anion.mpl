@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-2-3-epoxysqualene-to-carboxylic-acid-anion "(S)-2,3-epoxysqualene to carboxylic acid anion" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     epoxysqualene
@@ -14,5 +14,17 @@ pathway s-2-3-epoxysqualene-to-carboxylic-acid-anion "(S)-2,3-epoxysqualene to c
     lanosteryl_ester
     <-> . +h2o -carboxylic_acid_anion -hplus
     lanosterol
+  }
+
+  branch from epoxysqualene side left {
+    epoxysqualene
+    <-> ec_5_4_99_32 [5.4.99.32]
+    17z_protosta_17_20_24_dien_3_ol
+  }
+
+  branch from epoxysqualene side right {
+    epoxysqualene
+    <-> ec_5_4_99_33 [5.4.99.33]
+    cucurbitadienol
   }
 }

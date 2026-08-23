@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway quinate-to-3-2-carboxylatoethenyl "(−)-quinate to 3-(2-carboxylatoethenyl)-…" {
-  spacing 172
+  spacing 166
 
   spine at 0,0 {
     quinate
@@ -17,12 +17,6 @@ pathway quinate-to-3-2-carboxylatoethenyl "(−)-quinate to 3-(2-carboxylatoethe
   }
 
   branch from trans_caffeate side left {
-    trans_caffeate
-    <-> . +h2o +pyruvate +hplus
-    e_caffeoylpyruvate
-  }
-
-  branch from trans_caffeate side right {
     trans_caffeate
     <-> . +hplus +co2
     3_4_dihydroxystyrene

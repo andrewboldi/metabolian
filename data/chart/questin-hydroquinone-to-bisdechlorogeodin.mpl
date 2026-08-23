@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway questin-hydroquinone-to-bisdechlorogeodin "questin hydroquinone to (−)-bisdechlorogeodin" {
-  spacing 284
+  spacing 278
 
   spine at 0,0 {
     questin_hydroquinone
@@ -28,15 +28,9 @@ pathway questin-hydroquinone-to-bisdechlorogeodin "questin hydroquinone to (−)
     dihydrogeodin
   }
 
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_337 [2.1.1.337] +s_corytuberine +sam
-    s_magnoflorine
-  }
-
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_337 [2.1.1.337] +s_glaucine +sam +hplus
-    s_1_2_9_10_tetramethoxy_6_methylaporphine
+  branch from questin_hydroquinone side left {
+    questin_hydroquinone
+    <-> ec_1_1_1_443 [1.1.1.443] +nadp +nadph +hplus
+    questin_2_olate
   }
 }

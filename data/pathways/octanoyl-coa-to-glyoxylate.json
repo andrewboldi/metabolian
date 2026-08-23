@@ -128,9 +128,65 @@
       "xrefs": {
         "chebi": "CHEBI:36655"
       }
+    },
+    {
+      "id": "2_o_d_glucopyranosyl_1_6_d_glucopyranosyl_d_glyc",
+      "name": "2-O-[α-D-glucopyranosyl-(1→6)-α-D-glucopyranosyl]-D-glycerate",
+      "short": "2-O-[α-D-glucopyran…",
+      "formula": "C15H25O14",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:141056"
+      }
+    },
+    {
+      "id": "2_o_6_o_octanoyl_d_glucopyranosyl_1_6_d_glucopyr",
+      "name": "2-O-[6-O-octanoyl-α-D-glucopyranosyl-(1→6)-α-D-glucopyranosyl]-D-glycerate",
+      "short": "2-O-[6-O-octanoyl-α…",
+      "formula": "C23H39O15",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:141058"
+      }
+    },
+    {
+      "id": "trans_oct_2_enoyl_coa",
+      "name": "trans-oct-2-enoyl-CoA",
+      "short": "trans-oct-2-enoyl-C…",
+      "formula": "C29H44N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:62242"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_2_3_1_273",
+      "name": "diglucosylglycerate octanoyltransferase",
+      "ec": [
+        "2.3.1.273"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -253,6 +309,184 @@
           {
             "db": "Rhea",
             "id": "RHEA:58616"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "diglucosylglycerate octanoyltransferase",
+      "equation": "(2R)-2-O-[alpha-D-glucopyranosyl-(1->6)-alpha-D-glucopyranosyl]-glycerate + octanoyl-CoA = (2R)-2-O-[6-O-octanoyl-alpha-D-glucopyranosyl-(1->6)-alpha-D-glucopyranosyl]-glycerate + CoA",
+      "ec": "2.3.1.273",
+      "substrates": [
+        {
+          "metabolite": "2_o_d_glucopyranosyl_1_6_d_glucopyranosyl_d_glyc",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "octanoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_o_6_o_octanoyl_d_glucopyranosyl_1_6_d_glucopyr",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_273"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:56868"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56868"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(2E)-octenoyl-CoA + NADH + H(+) = octanoyl-CoA + NAD(+)",
+      "equation": "(2E)-octenoyl-CoA + NADH + H(+) = octanoyl-CoA + NAD(+)",
+      "substrates": [
+        {
+          "metabolite": "trans_oct_2_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "octanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:63232"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63232"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_trans_oct_2_enoyl_coa_dioleoyl-phosphatidic-acid-to-1-octanoyl-2-oleoy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_oct_2_enoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dioleoyl-phosphatidic-acid-to-1-octanoyl-2-oleoy"
+      },
+      "note": "Shares trans-oct-2-enoyl-CoA with dioleoyl phosphatidic acid to 1-octanoyl-2-oleoyl-sn-gl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62242"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_oct_2_enoyl_coa_s-3-hydroxyoctanoyl-coa-to-3-oxooctanoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_oct_2_enoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-3-hydroxyoctanoyl-coa-to-3-oxooctanoyl-coa"
+      },
+      "note": "Shares trans-oct-2-enoyl-CoA with (S)-3-hydroxyoctanoyl-CoA to 3-oxooctanoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62242"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_oct_2_enoyl_coa_trans-3-cis-5-octadienoyl-to-octanoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_oct_2_enoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-3-cis-5-octadienoyl-to-octanoyl-coa"
+      },
+      "note": "Shares trans-oct-2-enoyl-CoA with trans-3-cis-5-octadienoyl… to octanoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62242"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_oct_2_enoyl_coa_trioctanoin-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_oct_2_enoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trioctanoin-to-diphosphate"
+      },
+      "note": "Shares trans-oct-2-enoyl-CoA with trioctanoin to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62242"
           }
         ]
       }

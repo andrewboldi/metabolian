@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway piceatannol-to-h2o "piceatannol to H2O" {
-  spacing 264
+  spacing 240
 
   spine at 0,0 {
     piceatannol
@@ -16,39 +16,15 @@ pathway piceatannol-to-h2o "piceatannol to H2O" {
     nadp
   }
 
-  branch from o2 side left {
-    o2
-    <-> ec_1_13_11_39 [1.13.11.39] +2_hydroxy_6_oxo_6_4_chlorophenyl_hexa_2_4_dienoa
-    4_chlorobiphenyl_2_3_diol
+  branch from piceatannol side left {
+    piceatannol
+    <-> . +o2
+    trans_resveratrol
   }
 
-  branch from o2 side right {
-    o2
-    <-> ec_1_13_11_39 [1.13.11.39] +h +4_chlorobiphenyl_2_3_diol
-    2_hydroxy_6_oxo_6_4_chlorophenyl_hexa_2_4_dienoa
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_3_1_77 [1.3.1.77] +pelargonidin +h +nadph
-    epiafzelechin
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_3_1_77 [1.3.1.77] +h +nadph +epiafzelechin
-    pelargonidin
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_3_2_9 [3.3.2.9] +4_1_5_4_methoxyphenyl_1_3_4_oxadiazole_2_carbon
-    2_4_1_5_4_methoxyphenyl_1_3_4_oxadiazole_2_yl_ox
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +6_dehydro_scb2 +phosphate
-    3s_4r_4_octanoyl_5_oxooxolan_3_yl_methyl_phosph
+  branch from piceatannol side right {
+    piceatannol
+    <-> . +o2 +h2o
+    piceatannolquinone
   }
 }

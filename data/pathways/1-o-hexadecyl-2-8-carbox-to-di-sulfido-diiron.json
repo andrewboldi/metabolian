@@ -120,65 +120,6 @@
       "xrefs": {
         "chebi": "CHEBI:33737"
       }
-    },
-    {
-      "id": "1_palmitoyl_2_azelaoyl_sn_glycero_3_phosphocholi",
-      "name": "1-palmitoyl-2-azelaoyl-sn-glycero-3-phosphocholine",
-      "short": "1-palmitoyl-2-azela…",
-      "formula": "C33H63NO10P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:78207"
-      }
-    },
-    {
-      "id": "1_hexadecanoyl_sn_glycero_3_phosphocholine",
-      "name": "1-hexadecanoyl-sn-glycero-3-phosphocholine",
-      "short": "1-hexadecanoyl-sn-g…",
-      "formula": "C24H50NO7P",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:72998"
-      }
-    },
-    {
-      "id": "cryptoxanthin",
-      "name": "β-cryptoxanthin",
-      "formula": "C40H56O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:10362"
-      }
-    },
-    {
-      "id": "3s_5r_6s_cryptoxanthin_5_6_epoxide",
-      "name": "(3S,5R,6S)-β-cryptoxanthin 5,6-epoxide",
-      "short": "(3S,5R,6S)-β-crypto…",
-      "formula": "C40H56O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:91143"
-      }
-    },
-    {
-      "id": "20s_23_dihydroxyvitamin_d3",
-      "name": "(20S,23)-dihydroxyvitamin D3",
-      "short": "(20S,23)-dihydroxyv…",
-      "formula": "C27H44O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:91306"
-      }
-    },
-    {
-      "id": "20s_23_24_trihydroxyvitamin_d3",
-      "name": "(20S,23,24)-trihydroxyvitamin D3",
-      "short": "(20S,23,24)-trihydr…",
-      "formula": "C27H44O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:91307"
-      }
     }
   ],
   "enzymes": [
@@ -333,148 +274,247 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "1-hexadecanoyl-2-nonadioyl-sn-glycero-3-phosphocholine + H2O = nonanedioate + 1-hexadec...",
-      "equation": "1-hexadecanoyl-2-nonadioyl-sn-glycero-3-phosphocholine + H2O = nonanedioate + 1-hexadecanoyl-sn-glycero-3-phosphocholine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "1_palmitoyl_2_azelaoyl_sn_glycero_3_phosphocholi",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "azelaate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "1_hexadecanoyl_sn_glycero_3_phosphocholine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:41388"
+      "id": "xt_azelaate_1-palmitoyl-2-valeroyl-sn-to-o-s-3r-hydroxyhepta",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "azelaate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1-palmitoyl-2-valeroyl-sn-to-o-s-3r-hydroxyhepta"
+      },
+      "note": "Shares azelaate with 1-palmitoyl-2-valeroyl-sn… to O-[S-(3R)-hydroxyheptanoy….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:41388"
+            "db": "ChEBI",
+            "id": "CHEBI:78208"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "beta-cryptoxanthin + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = (5R,6S)-5,6-epoxi-...",
-      "equation": "beta-cryptoxanthin + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = (5R,6S)-5,6-epoxi-beta-cryptoxanthin + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
-      "substrates": [
-        {
-          "metabolite": "cryptoxanthin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3s_5r_6s_cryptoxanthin_5_6_epoxide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:49316"
+      "id": "xt_lysophosphatidylcholine_o_16_0_0_0_1-hexadecyl-2-butanoyl-sn-to-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lysophosphatidylcholine_o_16_0_0_0"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1-hexadecyl-2-butanoyl-sn-to-acetate"
+      },
+      "note": "Shares lysophosphatidylcholine O-16:0/0:0 with 1-hexadecyl-2-butanoyl-sn… to acetate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:49316"
+            "db": "ChEBI",
+            "id": "CHEBI:64496"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "20S,23-dihydroxycholecalciferol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = 20S,23,24-tri...",
-      "equation": "20S,23-dihydroxycholecalciferol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = 20S,23,24-trihydroxycholecalciferol + 2 oxidized [adrenodoxin] + H2O",
-      "substrates": [
-        {
-          "metabolite": "20s_23_dihydroxyvitamin_d3",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "20s_23_24_trihydroxyvitamin_d3",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:49392"
+      "id": "xt_lysophosphatidylcholine_o_16_0_0_0_1-hexadecyl-2-glutaryl-sn-to-arachidonate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lysophosphatidylcholine_o_16_0_0_0"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1-hexadecyl-2-glutaryl-sn-to-arachidonate"
+      },
+      "note": "Shares lysophosphatidylcholine O-16:0/0:0 with 1-hexadecyl-2-glutaryl-sn… to arachidonate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:49392"
+            "db": "ChEBI",
+            "id": "CHEBI:64496"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lysophosphatidylcholine_o_16_0_0_0_1-hexadecyl-2-propionyl-s-to-1-hexadecyl-sn-glyc",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lysophosphatidylcholine_o_16_0_0_0"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-hexadecyl-2-propionyl-s-to-1-hexadecyl-sn-glyc"
+      },
+      "note": "Shares lysophosphatidylcholine O-16:0/0:0 with 1-hexadecyl-2-propionyl-s… to 1-hexadecyl-sn-glycero-3-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64496"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lysophosphatidylcholine_o_16_0_0_0_1-hexadecyl-2-succinyl-sn-to-n-oleoyl-l-phenylal",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lysophosphatidylcholine_o_16_0_0_0"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-hexadecyl-2-succinyl-sn-to-n-oleoyl-l-phenylal"
+      },
+      "note": "Shares lysophosphatidylcholine O-16:0/0:0 with 1-hexadecyl-2-succinyl-sn… to N-oleoyl-L-phenylalaninate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64496"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lysophosphatidylcholine_o_16_0_0_0_1-o-palmityl-2-acetyl-sn-to-1-hexadecyl-2-hexade",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lysophosphatidylcholine_o_16_0_0_0"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-o-palmityl-2-acetyl-sn-to-1-hexadecyl-2-hexade"
+      },
+      "note": "Shares lysophosphatidylcholine O-16:0/0:0 with 1-O-palmityl-2-acetyl-sn-… to 1-hexadecyl-2-hexadecanoy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64496"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lysophosphatidylcholine_o_16_0_0_0_1-stearoyl-2-arachidonoyl-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lysophosphatidylcholine_o_16_0_0_0"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-stearoyl-2-arachidonoyl-to-h2o"
+      },
+      "note": "Shares lysophosphatidylcholine O-16:0/0:0 with 1-stearoyl-2-arachidonoyl… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64496"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lysophosphatidylcholine_o_16_0_0_0_2-o-acetyl-1-o-hexadecyl-to-acyl-sn-glycero-3-ph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lysophosphatidylcholine_o_16_0_0_0"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-o-acetyl-1-o-hexadecyl-to-acyl-sn-glycero-3-ph"
+      },
+      "note": "Shares lysophosphatidylcholine O-16:0/0:0 with 2-O-acetyl-1-O-hexadecyl-… to acyl-sn-glycero-3-phospho….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64496"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_hexadecyl_sn_glycero_3_phosphate_1-hexadecyl-2-propionyl-s-to-1-hexadecyl-sn-glyc",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_hexadecyl_sn_glycero_3_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-hexadecyl-2-propionyl-s-to-1-hexadecyl-sn-glyc"
+      },
+      "note": "Shares 1-hexadecyl-sn-glycero-3-phosphate with 1-hexadecyl-2-propionyl-s… to 1-hexadecyl-sn-glycero-3-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77580"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_hexadecyl_sn_glycero_3_phosphate_4-methylumbelliferyl-to-ctp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_hexadecyl_sn_glycero_3_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-methylumbelliferyl-to-ctp"
+      },
+      "note": "Shares 1-hexadecyl-sn-glycero-3-phosphate with 4-methylumbelliferyl… to CTP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77580"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_hexadecyl_sn_glycero_3_phosphate_methyl-group-to-1-hexadecyl-sn-glycero-3",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_hexadecyl_sn_glycero_3_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "methyl-group-to-1-hexadecyl-sn-glycero-3"
+      },
+      "note": "Shares 1-hexadecyl-sn-glycero-3-phosphate with methyl group to 1-hexadecyl-sn-glycero-3-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77580"
           }
         ]
       }

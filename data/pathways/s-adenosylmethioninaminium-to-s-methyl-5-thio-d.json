@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "s-adenosylmethioninaminium-to-s-methyl-5-thio-d",
   "name": "S-adenosylmethioninaminium to S-methyl-5-thio-α-D-ribos…",
-  "category": "amino-acid-metabolism",
+  "category": "other",
   "summary": "A 3-step route from S-adenosylmethioninaminium to S-methyl-5-thio-α-D-ribose 1-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -120,83 +120,6 @@
       "xrefs": {
         "chebi": "CHEBI:456216"
       }
-    },
-    {
-      "id": "d_histidine",
-      "name": "D-histidine",
-      "formula": "C6H9N3O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:142967"
-      }
-    },
-    {
-      "id": "sam",
-      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
-      "short": "S-Adenosyl-L-methio…",
-      "formula": "C15H23N6O5S",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:59789"
-      }
-    },
-    {
-      "id": "n_3s_3_amino_3_carboxypropyl_d_histidine_dizwitt",
-      "name": "N-[(3S)-3-amino-3-carboxypropyl]-D-histidine dizwitterion",
-      "short": "N-[(3S)-3-amino-3-c…",
-      "formula": "C10H16N4O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:141808"
-      }
-    },
-    {
-      "id": "uridine_5_monophosphate_1",
-      "name": "uridine 5'-monophosphate(1−)",
-      "short": "uridine 5'-MP(1−)",
-      "formula": "C9H10N2O8P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:65315"
-      }
-    },
-    {
-      "id": "3_3_amino_3_carboxypropyl_uridine_5_phosphate_1",
-      "name": "3-(3-amino-3-carboxypropyl)uridine 5'-phosphate(1−)",
-      "short": "3-(3-amino-3-carbox…",
-      "formula": "C13H17N3O10P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:82930"
-      }
-    },
-    {
-      "id": "sinapoyl_coa",
-      "name": "sinapoyl-CoA",
-      "formula": "C32H42N7O20P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57393"
-      }
-    },
-    {
-      "id": "n1_n8_bis_sinapoyl_spermidine",
-      "name": "N1,N8-bis(sinapoyl)-spermidine",
-      "short": "N1,N8-bis(sinapoyl)…",
-      "formula": "C29H40N3O8",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:85006"
-      }
-    },
-    {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57287"
-      }
     }
   ],
   "enzymes": [
@@ -205,7 +128,10 @@
       "name": "spermidine synthase",
       "ec": [
         "2.5.1.16"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P19623"
+      }
     },
     {
       "id": "ec_3_2_2_9",
@@ -226,27 +152,6 @@
       "name": "S-methyl-5-thioribose kinase",
       "ec": [
         "2.7.1.100"
-      ]
-    },
-    {
-      "id": "ec_2_5_1_152",
-      "name": "D-histidine 2-aminobutanoyltransferase",
-      "ec": [
-        "2.5.1.152"
-      ]
-    },
-    {
-      "id": "ec_2_5_1_25",
-      "name": "tRNA-uridine aminocarboxypropyltransferase",
-      "ec": [
-        "2.5.1.25"
-      ]
-    },
-    {
-      "id": "ec_2_3_1_248",
-      "name": "spermidine disinapoyl transferase",
-      "ec": [
-        "2.3.1.248"
       ]
     }
   ],
@@ -393,150 +298,49 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "D-histidine 2-aminobutanoyltransferase",
-      "equation": "D-histidine + S-adenosyl-L-methionine = (2S)-2-amino-4-{[(1R)-1-carboxy-2-(1H-imidazol-4-yl)ethyl]amino}butanoate + S-methyl-5'-thioadenosine + H(+)",
-      "ec": "2.5.1.152",
-      "substrates": [
-        {
-          "metabolite": "d_histidine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n_3s_3_amino_3_carboxypropyl_d_histidine_dizwitt",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "5_s_methyl_5_thioadenosine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_5_1_152"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:59088"
+      "id": "xt_s_methyl_5_thio_d_ribose_1_phosphate_4-coumaroyl-coa-to-di-sulfido-diiron",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_methyl_5_thio_d_ribose_1_phosphate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "4-coumaroyl-coa-to-di-sulfido-diiron"
+      },
+      "note": "Shares S-methyl-5-thio-α-D-ribose 1-phosphate with 4-coumaroyl-CoA to di-μ-sulfido-diiron.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:59088"
+            "db": "ChEBI",
+            "id": "CHEBI:58533"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "tRNA-uridine aminocarboxypropyltransferase",
-      "equation": "a uridine in tRNA + S-adenosyl-L-methionine = a 3-[(3S)-3-amino-3-carboxypropyl]uridine in tRNA + S-methyl-5'-thioadenosine + H(+)",
-      "ec": "2.5.1.25",
-      "substrates": [
-        {
-          "metabolite": "uridine_5_monophosphate_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_3_amino_3_carboxypropyl_uridine_5_phosphate_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "5_s_methyl_5_thioadenosine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_5_1_25"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:62432"
+      "id": "xt_s_methyl_5_thio_d_ribose_1_phosphate_l-2-4-diazaniumylbutyrate-to-hypoxanthine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_methyl_5_thio_d_ribose_1_phosphate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "l-2-4-diazaniumylbutyrate-to-hypoxanthine"
+      },
+      "note": "Shares S-methyl-5-thio-α-D-ribose 1-phosphate with L-2,4-diazaniumylbutyrate to hypoxanthine.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:62432"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "spermidine disinapoyl transferase",
-      "equation": "2 (E)-sinapoyl-CoA + spermidine = N(1),N(8)-bis[(E)-sinapoyl]-spermidine + 2 CoA + 2 H(+)",
-      "ec": "2.3.1.248",
-      "substrates": [
-        {
-          "metabolite": "sinapoyl_coa",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "spermidine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n1_n8_bis_sinapoyl_spermidine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_3_1_248"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:45168"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:45168"
+            "db": "ChEBI",
+            "id": "CHEBI:58533"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-cheilanthifoline-to-fmn "(S)-cheilanthifoline to FMN" {
-  spacing 280
+  spacing 256
 
   spine at 0,0 {
     s_cheilanthifoline
@@ -16,29 +16,5 @@ pathway s-cheilanthifoline-to-fmn "(S)-cheilanthifoline to FMN" {
     protopine
     <-> ec_1_14_14_98 [1.14.14.98] +fmnh2 +o2 -fmn -h2o -hplus
     6_hydroxyprotopine
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +quiannulatene +fmnh2 +o2 +h2o +hplus
-    quiannulatate
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +tetradecanoate +fmnh2 +o2 +h2o +hplus
-    12_hydroxymyristate
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +n_terminal_amino_acid_1 +sam +hplus
-    n_terminal_trimethyl_amino_acid_1
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +malonyl-coa +acetyl_coa +sam +hplus +co2 +coa
-    5_methylorsellinate
   }
 }

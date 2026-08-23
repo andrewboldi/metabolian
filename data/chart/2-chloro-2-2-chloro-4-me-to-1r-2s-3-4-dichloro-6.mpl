@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-chloro-2-2-chloro-4-me-to-1r-2s-3-4-dichloro-6 "2-chloro-2-(2-chloro-4-me… to (1R,2S)-3,4-dichloro-6-me…" {
-  spacing 262
+  spacing 310
 
   spine at 0,0 {
     2_chloro_2_2_chloro_4_methyl_5_oxofuran_2_yl_ace
@@ -18,14 +18,14 @@ pathway 2-chloro-2-2-chloro-4-me-to-1r-2s-3-4-dichloro-6 "2-chloro-2-(2-chloro-4
 
   branch from h side left {
     h
-    <-> . +co2 +r_phenylhexane_2_5_dione +trans_benzylideneacetone
-    pyruvate
+    <-> ec_1_1_1_5 [1.1.1.5] +actn +nadp +nadph
+    diacetyl
   }
 
   branch from h side right {
     h
-    <-> . +co2 +3_2_hydroxyphenyl_1_phenylpentane_1_4_dione +pyruvate
-    2_hydroxychalcone
+    <-> ec_3_1_1_81 [3.1.1.81] +n_butyryl_l_homoserine +h2o
+    a_s_butyr_amido_r_butyrolactone
   }
 
   branch from 2_3_dichloro_5_methyl_muconate side left {
@@ -36,25 +36,73 @@ pathway 2-chloro-2-2-chloro-4-me-to-1r-2s-3-4-dichloro-6 "2-chloro-2-(2-chloro-4
 
   branch from o2 side right {
     o2
-    <-> . +2_6_oxo_1_oxaspiro_2_5_octa_4_glucosyl_6_hydroxy +h2o2
-    6_hydroxy_2_4_glucosyl_phenoxymethylene_benzofur
+    <-> ec_1_14_13_88 [1.14.13.88] +tricetin +nadp +h2o +h +apigenin
+    nadph
   }
 
   branch from o2 side left {
     o2
-    <-> . +7_2_dihydroxy_4_5_methylenedioxyisoflavan +h +nadph +nadp +h2o
-    10_2_dihydroxy_4_5_methylenedioxy_isoflav_8_ene
+    <-> ec_1_13_11_36 [1.13.11.36] +5_amino_4_chloro_2_2_3_dihydroxyphenyl_pyridazin
+    5_amino_4_chloro_2_5_hydroxymuconoyl_3_2h_pyrida
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_14_13_223 [1.14.13.223] +nadh +o_s_3_hydroxy_4_methylanthraniloyl_pantetheine_4 +h +o2 +h2o
-    o_s_3_5_dihydroxy_4_methylanthraniloyl_pantethei
+    <-> . +octanoyl_coa +coa +o2 +h2o +nadh +acetyl_coa +h +h2o2
+    hexanoyl_coa
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +butan_2_one +h +o2 +h2o
-    ethyl_acetate
+    <-> . +nadh +hexadecanedioate +h +h2o
+    16_hydroxyhexadecanoate
+  }
+
+  branch from h side right {
+    h
+    <-> ec_1_1_1_330 [1.1.1.330] +3_oxotetracosanoyl_coa +nadph +nadp
+    3_hydroxytetracosanoyl_coa
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_2_1_20 [3.2.1.20] +alpha_d_galactose +4_nitrophenol +h2o
+    4_nitrophenyl_d_galactoside
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_14_13_89 [1.14.13.89] +2_hydroxygenistein +nadp +h2o +h +nadph
+    genistein
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_14_13_89 [1.14.13.89] +h +isoflavone +nadph +2_hydroxyisoflavone +h2o
+    nadp
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +h +11_dehydrothromboxane_b2 +nad
+    thromboxane_b2
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> . +acetyl_coa +h +h2o2 +coa +o2 +nad +h2o
+    9z_12z_15z_18z_21z_tetracosapentaenoyl_coa
+  }
+
+  branch from nad side right {
+    nad
+    <-> . +nadh +h +3_hydroxytetracosanoyl_coa
+    3_oxotetracosanoyl_coa
+  }
+
+  branch from nad side left {
+    nad
+    <-> . +nadh +3_oxodocosanoyl_coa +h
+    3_hydroxydocosanoyl_coa
   }
 }

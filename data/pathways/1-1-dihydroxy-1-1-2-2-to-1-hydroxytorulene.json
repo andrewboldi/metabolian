@@ -130,43 +130,6 @@
       "xrefs": {
         "metanetx": "MNXM1363767"
       }
-    },
-    {
-      "id": "all_cis_5_8_11_14_17_icosapentaenoate",
-      "name": "all-cis-5,8,11,14,17-icosapentaenoate",
-      "short": "all-cis-5,8,11,14,1…",
-      "formula": "C20H29O2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:58562"
-      }
-    },
-    {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:15379"
-      }
-    },
-    {
-      "id": "15_s_hepe",
-      "name": "15(S)-HEPE",
-      "formula": "C20H29O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:132087"
-      }
-    },
-    {
-      "id": "18_s_hepe",
-      "name": "18(S)-HEPE",
-      "formula": "C20H29O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:132083"
-      }
     }
   ],
   "enzymes": [
@@ -405,97 +368,137 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r6",
-      "name": "(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoate + AH2 + O2 = (15S)-hydroxy-(5Z,8Z,11Z,13E,17Z)-ei...",
-      "equation": "(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoate + AH2 + O2 = (15S)-hydroxy-(5Z,8Z,11Z,13E,17Z)-eicosapentaenoate + A + H2O",
-      "substrates": [
-        {
-          "metabolite": "all_cis_5_8_11_14_17_icosapentaenoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_donor",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "15_s_hepe",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_acceptor",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:50196"
+      "id": "xt_1_1_dihydroxy_1_1_2_2_tetrahydrolycopene_ethylbenzene-to-3-oxo-3-phenylpropionate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_1_dihydroxy_1_1_2_2_tetrahydrolycopene"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "ethylbenzene-to-3-oxo-3-phenylpropionate"
+      },
+      "note": "Shares 1,1'-dihydroxy-1,1',2,2'-tetrahydrolycopene with ethylbenzene to 3-oxo-3-phenylpropionate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:50196"
+            "db": "ChEBI",
+            "id": "CHEBI:63065"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoate + AH2 + O2 = (18S)-hydroxy-(5Z,8Z,11Z,14Z,16E)-ei...",
-      "equation": "(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoate + AH2 + O2 = (18S)-hydroxy-(5Z,8Z,11Z,14Z,16E)-eicosapentaenoate + A + H2O",
-      "substrates": [
-        {
-          "metabolite": "all_cis_5_8_11_14_17_icosapentaenoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_donor",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "18_s_hepe",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_acceptor",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:50200"
+      "id": "xt_rhodopin_s-adenosyl-l-homocysteine-to-8-apo-caroten-8-al",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "rhodopin"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-8-apo-caroten-8-al"
+      },
+      "note": "Shares rhodopin with S-adenosyl-L-homocysteine to 8'-apo-β,ψ-caroten-8'-al.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:50200"
+            "db": "ChEBI",
+            "id": "CHEBI:35331"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_hydroxytorulene_r-reticulinium-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_hydroxytorulene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-reticulinium-to-hydrogen-donor"
+      },
+      "note": "Shares 1'-hydroxytorulene with (R)-reticulinium to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:80134"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_hydroxy_carotene_ethionamide-to-sulfate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_hydroxy_carotene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ethionamide-to-sulfate"
+      },
+      "note": "Shares 1'-hydroxy-γ-carotene with ethionamide to sulfate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:80133"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_hydroxy_carotene_r-reticulinium-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_hydroxy_carotene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-reticulinium-to-hydrogen-donor"
+      },
+      "note": "Shares 1'-hydroxy-γ-carotene with (R)-reticulinium to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:80133"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_anhydrorhodovibrin_ethionamide-to-sulfate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "anhydrorhodovibrin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ethionamide-to-sulfate"
+      },
+      "note": "Shares Anhydrorhodovibrin with ethionamide to sulfate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:80148"
           }
         ]
       }

@@ -8,7 +8,7 @@ pathway 2-monoglyceride-to-1-o-alkyl-2-o-arachidonoy "2-monoglyceride to 1-O-alk
 
   spine at 0,0 {
     2_monoglyceride
-    <-> . +phosphatidylcholine -2_acyl_sn_glycero_3_phosphocholine
+    <-> . +phosphatidylcholine -1_o_acyl_sn_glycero_3_phosphocholine
     1_2_diglyceride
     <-> . +2_acyl_1_alkyl_sn_glycero_3_phosphocholine -triglyceride
     1_alkyl_sn_glycero_3_phosphocholine

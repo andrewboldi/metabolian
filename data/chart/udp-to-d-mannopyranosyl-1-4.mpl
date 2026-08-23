@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-d-mannopyranosyl-1-4 "UDP to β-D-mannopyranosyl-(1→4)-…" {
-  spacing 326
+  spacing 284
 
   spine at 0,0 {
     udp
@@ -16,47 +16,5 @@ pathway udp-to-d-mannopyranosyl-1-4 "UDP to β-D-mannopyranosyl-(1→4)-…" {
     dtdp
     <-> ec_2_4_1_383 [2.4.1.383] +l_rhamnopyranosyl_1_3_d_galactopyranosyl_diphos +gdp_d_mannose -gdp -hplus
     d_mannopyranosyl_1_4_l_rhamnopyranosyl_1_3_d_ga
-  }
-
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> ec_2_4_1_360 [2.4.1.360] +udp +1_3_4_dihydroxyphenyl_3_3_c_glucosyl_2_4_6_trihy +h
-    1_3_4_dihydroxyphenyl_3_2_4_6_trihydroxyphenyl_p
-  }
-
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> . +udp +1_3_4_dihydroxyphenyl_3_3_c_glucosyl_2_4_6_trihy +h
-    1_3_4_dihydroxyphenyl_3_2_4_6_trihydroxyphenyl_p
-  }
-
-  branch from dtdp side left {
-    dtdp
-    <-> . +dtdp_l_oleandrose +avermectin_b2b_monosaccharide +h
-    avermectin_b2b
-  }
-
-  branch from dtdp side right {
-    dtdp
-    <-> . +dtdp_l_oleandrose +avermectin_a2b_aglycone +h
-    avermectin_a2b_monosaccharide
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    9e_tetradecenoic_acid
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    thromboxane_b2
-  }
-
-  branch from d_mannopyranosyl_1_4_l_rhamnopyranosyl_1_3_d_ga side left {
-    d_mannopyranosyl_1_4_l_rhamnopyranosyl_1_3_d_ga
-    <-> ec_2_4_1_60 [2.4.1.60] +cdp +alpha_d_tyv_1_3_beta_d_man_1_4_alpha_l_rha_1_3_a +h
-    cdp_3_6_dideoxy_d_mannose
   }
 }

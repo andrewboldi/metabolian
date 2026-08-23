@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2s-liquiritigenin-to-h2o "(2S)-liquiritigenin to H2O" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     2s_liquiritigenin
@@ -14,29 +14,5 @@ pathway 2s-liquiritigenin-to-h2o "(2S)-liquiritigenin to H2O" {
     2_6_7_4_tetrahydroxyisoflavanone
     <-> . -h2o
     4_6_7_trihydroxyisoflavone
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +12_s_hete +h +nadph
-    12_oxo_ete
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +h +13_14_dihydro_15_keto_pgf1 +nadph
-    13_14_dihydro_pgf1alpha
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +1r_5as_6r_1_4_5_5a_6_9_hexahydrophenazine_1_6_d +h
-    1r_5as_6r_4a_hydroxy_1_4_4a_5_5a_6_9_10a_octahy
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +1r_5as_6r_4a_hydroxy_1_4_4a_5_5a_6_9_10a_octahy
-    1r_6r_1_2_5_5a_6_7_hexahydrophenazine_1_6_dicar
   }
 }

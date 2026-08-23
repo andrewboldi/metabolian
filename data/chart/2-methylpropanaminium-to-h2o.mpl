@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-methylpropanaminium-to-h2o "2-methylpropanaminium to H2O" {
-  spacing 226
+  spacing 196
 
   spine at 0,0 {
     2_methylpropanaminium
@@ -14,35 +14,5 @@ pathway 2-methylpropanaminium-to-h2o "2-methylpropanaminium to H2O" {
     butan_1_ol
     <-> ec_3_1_1_2 [3.1.1.2] +propanoate +h -h2o
     butyl_propionate
-  }
-
-  branch from isobutyraldehyde side left {
-    isobutyraldehyde
-    <-> ec_1_1_1_1 [1.1.1.1] +h +nadph +nadp
-    isobutanol
-  }
-
-  branch from nad side right {
-    nad
-    <-> . +nadh +2_octaprenyl_6_hydroxyphenol +h +adp +phosphate +atp +h2o
-    2_octaprenylphenol
-  }
-
-  branch from nad side left {
-    nad
-    <-> . +nadh +9_cis_retinal +h
-    9_cis_retinol
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +5_4_hydroxy_3_methoxyphenyl_4_hydroxymethyl_oxol
-    4_4_hydroxy_3_methoxyphenyl_tetrahydro_3h_furo_3
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_8_1_5 [3.8.1.5] +h +chloride +2_3_4_5_6_pentachlorocyclohexanol
-    gamma_hexachlorocyclohexane
   }
 }

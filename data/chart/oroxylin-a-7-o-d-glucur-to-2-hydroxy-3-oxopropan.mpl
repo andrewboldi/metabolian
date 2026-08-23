@@ -24,21 +24,21 @@ pathway oroxylin-a-7-o-d-glucur-to-2-hydroxy-3-oxopropan "oroxylin A 7-O-β-D-gl
     2_o_sinapoyl_d_glucarate
   }
 
-  branch from 5_dehydro_4_deoxy_d_glucarate side right {
-    5_dehydro_4_deoxy_d_glucarate
-    <-> ec_5_5_1_27 [5.5.1.27] +hplus
-    d_glucaro_1_4_lactone
-  }
-
-  branch from 2_hydroxy_3_oxopropanoate side left {
+  branch from 2_hydroxy_3_oxopropanoate side right {
     2_hydroxy_3_oxopropanoate
     <-> ec_4_1_2_20 [4.1.2.20] +pyruvate
     2_dehydro_3_deoxy_d_glucarate
   }
 
-  branch from 2_hydroxy_3_oxopropanoate side right {
+  branch from 2_hydroxy_3_oxopropanoate side left {
     2_hydroxy_3_oxopropanoate
     <-> ec_4_1_1_54 [4.1.1.54] +hplus +co2
     dihydroxyfumarate
+  }
+
+  branch from 2_hydroxy_3_oxopropanoate side right {
+    2_hydroxy_3_oxopropanoate
+    <-> ec_1_1_1_60 [1.1.1.60] +nad +nadh +hplus
+    d_glycerate
   }
 }

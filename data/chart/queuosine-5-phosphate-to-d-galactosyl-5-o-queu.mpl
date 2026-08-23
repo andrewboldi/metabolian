@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway queuosine-5-phosphate-to-d-galactosyl-5-o-queu "queuosine 5'-phosphate to β-D-galactosyl-5''-O-queu…" {
-  spacing 236
+  spacing 254
 
   spine at 0,0 {
     queuosine_5_phosphate
@@ -14,5 +14,23 @@ pathway queuosine-5-phosphate-to-d-galactosyl-5-o-queu "queuosine 5'-phosphate t
     queuosine_5_phosphate_1
     <-> . +udp_d_galactose -udp -hplus
     d_galactosyl_5_o_queuosine_5_phosphate_1
+  }
+
+  branch from guanosine_5_monophosphate_1 side left {
+    guanosine_5_monophosphate_1
+    <-> . +n2_1_hydroxy_2_oxopropyl_gmp_1 +h2o +hplus
+    lactate
+  }
+
+  branch from udp_d_galactose side right {
+    udp_d_galactose
+    <-> . +1_2_diacyl_3_o_d_glucosyl_sn_glycerol +udp +hplus
+    d_galactopyranosyl_1_2_d_glucopyranosyl_1_3_1_2
+  }
+
+  branch from udp_d_galactose side left {
+    udp_d_galactose
+    <-> ec_2_4_1_86 [2.4.1.86] +n_acetyl_d_glucosaminide +udp +hplus
+    d_galactosyl_1_3_n_acetyl_d_glucosaminide
   }
 }

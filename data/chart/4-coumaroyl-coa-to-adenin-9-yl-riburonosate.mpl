@@ -22,63 +22,28 @@ pathway 4-coumaroyl-coa-to-adenin-9-yl-riburonosate "4-coumaroyl-CoA to adenin-9
     adenin_9_yl_riburonosate
   }
 
-  branch from isoliquiritigenin side left {
-    isoliquiritigenin
-    <-> . +h2o2 +h2o
-    2_hydroperoxy_4_hydroxyphenyl_methyl_6_hydroxy_1
-  }
 
-  branch from isoliquiritigenin side right {
-    isoliquiritigenin
-    <-> . +h +o2 +nadph +butein +h2o
-    nadp
-  }
 
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_69 [2.1.1.69] +bergaptol +sam
-    5_methoxypsoralen
-  }
 
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_121 [2.1.1.121] +6_o_methylnorlaudanosolinium +sam +hplus
-    nororientalinium
-  }
 
-  branch from s_s_adenosyl_l_methionine side left {
-    s_s_adenosyl_l_methionine
-    <-> ec_2_1_1_49 [2.1.1.49] +s_adenosyl_l_homocysteine +h +7_8_dichloro_2_methyl_1_2_3_4_tetrahydroisoquino
-    7_8_dichloro_1_2_3_4_tetrahydroisoquinoline
-  }
 
-  branch from s_s_adenosyl_l_methionine side right {
-    s_s_adenosyl_l_methionine
-    <-> ec_2_1_1_49 [2.1.1.49] +s_adenosyl_l_homocysteine +h +n_methylaniline
-    aniline
-  }
 
-  branch from adenosine side left {
-    adenosine
-    <-> ec_3_5_4_4 [3.5.4.4] +h2o +hplus +nh3
-    inosine
-  }
 
-  branch from adenosine side right {
-    adenosine
-    <-> ec_2_5_1_153 [2.5.1.153] +tuberculosinyl_diphosphate +hplus +ppi
-    1_tuberculosinyladenosine
-  }
 
-  branch from methionine side left {
-    methionine
-    <-> ec_1_1_98_7 [1.1.98.7] +l_serine +sam +5_deoxyadenosine +hplus
-    l_3_oxoalanine
-  }
 
-  branch from methionine side right {
-    methionine
-    <-> ec_2_1_1_280 [2.1.1.280] +s_methyl_l_methionine +l_selenocysteine +hplus
-    se_methyl_l_selenocysteine
-  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

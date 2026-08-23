@@ -1,0 +1,540 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-mannitol-to-h2o-null",
+  "name": "D-mannitol to H2O",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from D-mannitol to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR197807"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_mannitol",
+      "name": "D-mannitol",
+      "formula": "C6H14O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1104590"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "keto_d_fructose",
+      "name": "keto-D-fructose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1363863"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "melibiose",
+      "name": "melibiose",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1103965"
+      }
+    },
+    {
+      "id": "raffinose",
+      "name": "raffinose",
+      "formula": "C18H32O16",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1108339"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "alpha_d_galactose",
+      "name": "alpha-D-galactose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364486"
+      }
+    },
+    {
+      "id": "stachyose",
+      "name": "stachyose",
+      "formula": "C24H42O21",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM729340"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_138",
+      "name": "mannitol 2-dehydrogenase (NADP(+))",
+      "ec": [
+        "1.1.1.138"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_21",
+      "name": "aldose reductase",
+      "ec": [
+        "1.1.1.21"
+      ],
+      "xrefs": {
+        "uniprot": "P15121"
+      }
+    },
+    {
+      "id": "ec_1_1_1_287",
+      "name": "D-arabinitol dehydrogenase (NADP(+))",
+      "ec": [
+        "1.1.1.287"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_67",
+      "name": "mannitol 2-dehydrogenase",
+      "ec": [
+        "1.1.1.67"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_26",
+      "name": "beta-fructofuranosidase",
+      "ec": [
+        "3.2.1.26"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_22",
+      "name": "alpha-galactosidase",
+      "ec": [
+        "3.2.1.22"
+      ],
+      "xrefs": {
+        "uniprot": "P06280"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "mannitol 2-dehydrogenase (NADP(+))",
+      "ec": "1.1.1.138",
+      "substrates": [
+        {
+          "metabolite": "d_mannitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "keto_d_fructose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_138"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR197807"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197807"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "beta-fructofuranosidase",
+      "ec": "3.2.1.26",
+      "substrates": [
+        {
+          "metabolite": "melibiose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "keto_d_fructose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "raffinose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_26"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR146227"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR146227"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "alpha-galactosidase",
+      "ec": "3.2.1.22",
+      "substrates": [
+        {
+          "metabolite": "raffinose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alpha_d_galactose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "stachyose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_22"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR197688"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197688"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_d_mannitol_4-2z-2-methylimino-et-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_mannitol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-2z-2-methylimino-et-to-h2o"
+      },
+      "note": "Shares D-mannitol with 4-[(2Z)-2-(methylimino)et… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104590"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_mannitol_d-fructofuranose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_mannitol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-fructofuranose-to-h2o"
+      },
+      "note": "Shares D-mannitol with D-fructofuranose to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104590"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_mannitol_d-mannitol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_mannitol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-mannitol-to-h2o"
+      },
+      "note": "Shares D-mannitol with D-mannitol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104590"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_mannitol_diphosphate-to-6-oxoparomamine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_mannitol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-6-oxoparomamine"
+      },
+      "note": "Shares D-mannitol with diphosphate to 6'-oxoparomamine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104590"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_mannitol_enterobacterial-common-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_mannitol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "enterobacterial-common-to-h2o"
+      },
+      "note": "Shares D-mannitol with (enterobacterial common… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104590"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_mannitol_h-to-bacteriopheophytin-a",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_mannitol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-bacteriopheophytin-a"
+      },
+      "note": "Shares D-mannitol with H to bacteriopheophytin a.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104590"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_mannitol_l-alanine-to-2-propylpiperidine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_mannitol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-alanine-to-2-propylpiperidine"
+      },
+      "note": "Shares D-mannitol with L-alanine to 2-propylpiperidine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104590"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_stachyose_myo-inositol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "stachyose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "myo-inositol-to-h2o"
+      },
+      "note": "Shares stachyose with myo-inositol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM729340"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_stachyose_myo-inositol-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "stachyose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "myo-inositol-to-h2o-null"
+      },
+      "note": "Shares stachyose with myo-inositol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM729340"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_stachyose_myo-inositol-to-myo-inositol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "stachyose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "myo-inositol-to-myo-inositol"
+      },
+      "note": "Shares stachyose with myo-inositol to myo-inositol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM729340"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_stachyose_raffinose-to-stachyose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "stachyose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "raffinose-to-stachyose"
+      },
+      "note": "Shares stachyose with raffinose to stachyose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM729340"
+          }
+        ]
+      }
+    }
+  ]
+}

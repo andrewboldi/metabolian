@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway kanamycin-b-to-kanamycin-a-3-phosphate "kanamycin B to kanamycin A 3'-phosphate" {
-  spacing 192
+  spacing 186
 
   spine at 0,0 {
     kanamycin_b
@@ -20,11 +20,5 @@ pathway kanamycin-b-to-kanamycin-a-3-phosphate "kanamycin B to kanamycin A 3'-ph
     kanamycin_a
     <-> . +carbamoyl_adenylate +amp +hplus
     6_o_carbamoylkanamycin_a
-  }
-
-  branch from kanamycin_a side right {
-    kanamycin_a
-    <-> . +atp +ppi
-    4_adenylylkanamycin_a
   }
 }

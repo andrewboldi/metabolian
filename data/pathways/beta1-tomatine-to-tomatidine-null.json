@@ -1,0 +1,552 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "beta1-tomatine-to-tomatidine-null",
+  "name": "beta1-tomatine to tomatidine",
+  "category": "other",
+  "summary": "A 4-step route from beta1-tomatine to tomatidine(1+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR165278"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "beta1_tomatine",
+      "name": "beta1-tomatine",
+      "formula": "C45H75NO17",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM119757"
+      }
+    },
+    {
+      "id": "alpha_d_xylose",
+      "name": "alpha-D-xylose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM146363"
+      }
+    },
+    {
+      "id": "tomatine",
+      "name": "tomatine",
+      "formula": "C50H83NO21",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:9630"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "lycotetraose",
+      "name": "lycotetraose",
+      "formula": "C23H40O20",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM530983"
+      }
+    },
+    {
+      "id": "tomatidine",
+      "name": "tomatidine",
+      "formula": "C27H46NO2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:166999"
+      }
+    },
+    {
+      "id": "d_galactopyranose",
+      "name": "D-galactopyranose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4139"
+      }
+    },
+    {
+      "id": "tomatidine_galactoside",
+      "name": "tomatidine galactoside",
+      "short": "tomatidine…",
+      "formula": "C33H55NO7",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM683690"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1102128"
+      }
+    },
+    {
+      "id": "udp_alpha_d_galactose",
+      "name": "UDP-alpha-D-galactose",
+      "short": "UDP-alpha-D-galacto…",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1104754"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR165278",
+      "substrates": [
+        {
+          "metabolite": "beta1_tomatine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alpha_d_xylose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "tomatine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR165278"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR165278"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR165277",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "tomatine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "lycotetraose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "tomatidine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR165277"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR165277"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR165281",
+      "substrates": [
+        {
+          "metabolite": "d_galactopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "tomatidine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "tomatidine_galactoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR165281"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR165281"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Reaction MNXR165330",
+      "substrates": [
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "tomatidine_galactoside",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "udp_alpha_d_galactose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "tomatidine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR165330"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR165330"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_beta1_tomatine_7-2-dihydroxy-4-5-meth-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "beta1_tomatine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-2-dihydroxy-4-5-meth-to-h2o"
+      },
+      "note": "Shares beta1-tomatine with 7,2'-dihydroxy-4',5'-meth… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM119757"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_beta1_tomatine_7-2-dihydroxy-4-5-meth-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "beta1_tomatine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-2-dihydroxy-4-5-meth-to-h2o-null"
+      },
+      "note": "Shares beta1-tomatine with 7,2'-dihydroxy-4',5'-meth… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM119757"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_beta1_tomatine_beta-d-glucose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "beta1_tomatine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-d-glucose-to-h2o"
+      },
+      "note": "Shares beta1-tomatine with beta-D-glucose to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM119757"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_beta1_tomatine_beta1-tomatine-to-tomatidine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "beta1_tomatine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta1-tomatine-to-tomatidine"
+      },
+      "note": "Shares beta1-tomatine with beta1-tomatine to tomatidine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM119757"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tomatine_beta-d-glucose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tomatine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-d-glucose-to-h2o"
+      },
+      "note": "Shares tomatine with beta-D-glucose to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:9630"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tomatine_beta1-tomatine-to-tomatidine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tomatine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta1-tomatine-to-tomatidine"
+      },
+      "note": "Shares tomatine with beta1-tomatine to tomatidine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:9630"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lycotetraose_beta1-tomatine-to-tomatidine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lycotetraose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta1-tomatine-to-tomatidine"
+      },
+      "note": "Shares lycotetraose with beta1-tomatine to tomatidine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM530983"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tomatidine_beta1-tomatine-to-tomatidine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tomatidine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta1-tomatine-to-tomatidine"
+      },
+      "note": "Shares tomatidine with beta1-tomatine to tomatidine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:166999"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tomatidine_tomatid-5-en-3-one-to-tomatidine-3-o-d-glucop",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tomatidine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "tomatid-5-en-3-one-to-tomatidine-3-o-d-glucop"
+      },
+      "note": "Shares tomatidine with tomatid-5-en-3-one to tomatidine 3-O-β-D-glucop….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:166999"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tomatidine_tomatid-5-en-3-one-to-tomatidine-3-o-d-glucop-nu",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tomatidine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "tomatid-5-en-3-one-to-tomatidine-3-o-d-glucop-nu"
+      },
+      "note": "Shares tomatidine with tomatid-5-en-3-one to tomatidine 3-O-β-D-glucop….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:166999"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tomatidine_galactoside_beta-d-glucose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tomatidine_galactoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-d-glucose-to-h2o"
+      },
+      "note": "Shares tomatidine galactoside with beta-D-glucose to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM683690"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tomatidine_galactoside_beta1-tomatine-to-tomatidine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tomatidine_galactoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta1-tomatine-to-tomatidine"
+      },
+      "note": "Shares tomatidine galactoside with beta1-tomatine to tomatidine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM683690"
+          }
+        ]
+      }
+    }
+  ]
+}

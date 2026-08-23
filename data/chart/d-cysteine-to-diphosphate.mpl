@@ -16,15 +16,15 @@ pathway d-cysteine-to-diphosphate "D-cysteine to diphosphate" {
     2_thiouridine_5_phosphate_1
   }
 
-  branch from l_cysteine side left {
-    l_cysteine
-    <-> ec_4_4_1_30 [4.4.1.30] +s_3_2r_phycocyanobilin_l_cysteine_2
-    3e_phycocyanobilin
+  branch from uridine_5_monophosphate_1 side left {
+    uridine_5_monophosphate_1
+    <-> ec_5_4_99_19 [5.4.99.19]
+    pseudouridine_5_phosphate_1
   }
 
-  branch from l_cysteine side right {
-    l_cysteine
-    <-> ec_4_4_1_31 [4.4.1.31] +3e_phycocyanobilin
-    s_3_2r_phycoviolobilin_l_cysteine_2
+  branch from uridine_5_monophosphate_1 side right {
+    uridine_5_monophosphate_1
+    <-> ec_1_3_1_91 [1.3.1.91] +nadp +nadph +hplus
+    5_6_dihydrouridine_5_monophosphate_1
   }
 }

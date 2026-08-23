@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-2-3-trichloropropane-to-1-3-dichloropropan-2-o "1,2,3-Trichloropropane to 1,3-dichloropropan-2-ol" {
-  spacing 180
+  spacing 216
 
   spine at 0,0 {
     1_2_3_trichloropropane
@@ -18,25 +18,61 @@ pathway 1-2-3-trichloropropane-to-1-3-dichloropropan-2-o "1,2,3-Trichloropropane
 
   branch from h side left {
     h
-    <-> ec_1_2_1_3 [1.2.1.3] +nadh +3_methoxybenzoate +nad +h2o
-    3_methoxybenzaldehyde
+    <-> ec_3_5_1_51 [3.5.1.51] +4_aminobutanoate +coa +h2o
+    4_aminobutanoyl_coa
   }
 
   branch from h side right {
     h
-    <-> ec_1_2_1_3 [1.2.1.3] +nadh +o_toluate +nad +h2o
-    2_methylbenzaldehyde
+    <-> . +n6_tuberculosinyladenosine
+    1_tuberculosinyladenosine
   }
 
   branch from chloride side left {
     chloride
-    <-> ec_3_8_1_5 [3.8.1.5] +compound_0047511 +h2o +h
-    butan_1_ol
+    <-> . +maleylacetate +h
+    5_chloro_3_oxoadipate
   }
 
   branch from chloride side right {
     chloride
-    <-> . +nadh +h +o2 +2_4_5_trichlorophenol +nad +h2o
-    2_5_dichlorohydroquinone
+    <-> . +h +5_chloro_3_oxoadipate
+    maleylacetate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_5_1_74 [3.5.1.74] +taurine +ursodeoxycholate
+    tauroursodeoxycholate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +co2 +n_o_dimethylhydroxylamine +4_chloroaniline
+    monolinuron
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_4_11_7 [3.4.11.7] +l_aspartate +methyl_l_phenylalaninate +h2o
+    aspartame
+  }
+
+  branch from h side right {
+    h
+    <-> . +3_amino_2_4_dihydroxybenzoylsulfanide +platensicyl_coa +coa
+    thioplatensimycin
+  }
+
+  branch from chloride side left {
+    chloride
+    <-> . +4_glutathion_s_yl_2_5_6_trichloroisophthalonitri +h +glutathione
+    chlorothalonil
+  }
+
+  branch from chloride side right {
+    chloride
+    <-> . +4_glutathion_s_yl_2_5_6_trichloroisophthalonitri +glutathione +h
+    4_6_bis_glutathion_s_yl_2_5_dichloroisophthaloni
   }
 }

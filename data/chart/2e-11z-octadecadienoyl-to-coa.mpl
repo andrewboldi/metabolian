@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2e-11z-octadecadienoyl-to-coa "(2E,11Z)-octadecadienoyl-… to CoA" {
-  spacing 170
+  spacing 158
 
   spine at 0,0 {
     2e_11z_octadecadienoyl_coa
@@ -20,19 +20,7 @@ pathway 2e-11z-octadecadienoyl-to-coa "(2E,11Z)-octadecadienoyl-… to CoA" {
 
   branch from 11z_3_oxooctadecenoyl_coa side left {
     11z_3_oxooctadecenoyl_coa
-    <-> . +malonyl-coa +hplus +co2 +coa
+    <-> . +coa +acetyl_coa
     palmitoleoyl_coa
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +9e_tetradecenoic_acid +h2o
-    a_tetradecenoyl_coa_n_c14_1coa
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +hexanoyl_coa +diphosphate +amp +hexanoate +atp
-    pmf
   }
 }

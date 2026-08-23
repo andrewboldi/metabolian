@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-hexadecanoyl-2-9z-12z-to-h2o "1-hexadecanoyl-2-(9Z,12Z-… to H2O" {
-  spacing 200
+  spacing 194
 
   spine at 0,0 {
     1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
@@ -24,45 +24,39 @@ pathway 1-hexadecanoyl-2-9z-12z-to-h2o "1-hexadecanoyl-2-(9Z,12Z-… to H2O" {
     1_2_di_9z_12z_octadecadienoyl_sn_glycero_3_phosp
   }
 
-  branch from 2_linoleoyl_sn_glycero_3_phosphocholine side right {
-    2_linoleoyl_sn_glycero_3_phosphocholine
-    <-> ec_3_1_1_5 [3.1.1.5] +sn_glycerol_3_phosphocholine +h +h2o
-    9z_12z_octadecadienoate
+  branch from linoleate side right {
+    linoleate
+    <-> . +1_2_3_trilinoleoylglycerol +h2o +hplus
+    dilinoleoylglycerol
   }
 
   branch from linoleate side left {
     linoleate
-    <-> . +1_2_3_trilinoleoylglycerol +h2o +hplus
-    2_3_dilinoleoyl_sn_glycerol
+    <-> . +o2
+    9_hpode
+  }
+
+  branch from stearoyl_coa side right {
+    stearoyl_coa
+    <-> . +c17_sphingosine +coa +hplus
+    n_octadecanoyl_c17_sphingosine
+  }
+
+  branch from stearoyl_coa side left {
+    stearoyl_coa
+    <-> . +1_2_dihexanoylglycerol +coa
+    1_2_dicaproyl_3_stearoylglycerol
   }
 
   branch from linoleate side right {
     linoleate
-    <-> . +h2o +coa +hplus
-    linoleoyl_coa
+    <-> ec_1_13_11_92 [1.13.11.92] +o2
+    2r_9z_12z_2_hydroperoxyoctadecadienoate
   }
 
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    thiolactomycin
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    myxothiazol
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    polymyxin_b1
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    borrelidin
+  branch from linoleate side left {
+    linoleate
+    <-> . +h2o
+    12z_10_hydroxyoctadec_12_enoate
   }
 }

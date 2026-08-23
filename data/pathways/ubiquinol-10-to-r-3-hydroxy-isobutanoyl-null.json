@@ -1,0 +1,379 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "ubiquinol-10-to-r-3-hydroxy-isobutanoyl-null",
+  "name": "ubiquinol-10 to (R)-3-hydroxy-isobutanoyl…",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from ubiquinol-10 to (R)-3-hydroxy-isobutanoyl-CoA, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR182172"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:64183"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "ubiquinol_10",
+      "name": "ubiquinol-10",
+      "formula": "C59H92O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64183"
+      }
+    },
+    {
+      "id": "1_3_7_trimethyluric_acid",
+      "name": "1,3,7-Trimethyluric acid",
+      "short": "1,3,7-Trimethyluric…",
+      "formula": "C8H10N4O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1368926"
+      }
+    },
+    {
+      "id": "ubiquinone_10",
+      "name": "ubiquinone-10",
+      "formula": "C59H90O4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364539"
+      }
+    },
+    {
+      "id": "caffeine",
+      "name": "caffeine",
+      "formula": "C8H10N4O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM680"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "2_methylpropanoyl_coa",
+      "name": "2-methylpropanoyl-CoA",
+      "short": "2-methylpropanoyl-C…",
+      "formula": "C25H38N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1104531"
+      }
+    },
+    {
+      "id": "2_methylpropenoyl_coa",
+      "name": "2-methylpropenoyl-CoA",
+      "short": "2-methylpropenoyl-C…",
+      "formula": "C25H36N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1104781"
+      }
+    },
+    {
+      "id": "r_3_hydroxy_isobutanoyl_coa",
+      "name": "(R)-3-hydroxy-isobutanoyl-CoA",
+      "short": "3-hydroxy-isobutano…",
+      "formula": "C25H38N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM726149"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_17_5_2",
+      "name": "caffeine dehydrogenase",
+      "ec": [
+        "1.17.5.2"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_17",
+      "name": "enoyl-CoA hydratase",
+      "ec": [
+        "4.2.1.17"
+      ],
+      "xrefs": {
+        "uniprot": "P40939"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "caffeine dehydrogenase",
+      "ec": "1.17.5.2",
+      "substrates": [
+        {
+          "metabolite": "ubiquinol_10",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_3_7_trimethyluric_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ubiquinone_10",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "caffeine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_17_5_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR182172"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR182172"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR163346",
+      "substrates": [
+        {
+          "metabolite": "2_methylpropanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ubiquinone_10",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_methylpropenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ubiquinol_10",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR163346"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR163346"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "enoyl-CoA hydratase",
+      "ec": "4.2.1.17",
+      "substrates": [
+        {
+          "metabolite": "2_methylpropenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_3_hydroxy_isobutanoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR151688"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR151688"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_2_methylpropenoyl_coa_2-methylpropanoyl-coa-to-n-gamma-glutamyl-s-tran",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_methylpropenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-methylpropanoyl-coa-to-n-gamma-glutamyl-s-tran"
+      },
+      "note": "Shares 2-methylpropenoyl-CoA with 2-methylpropanoyl-CoA to N-gamma-Glutamyl-S-trans-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104781"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_methylpropenoyl_coa_s-trans-1-propenyl-l-cyst-to-z-propanethial-s-ox",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_methylpropenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-trans-1-propenyl-l-cyst-to-z-propanethial-s-ox"
+      },
+      "note": "Shares 2-methylpropenoyl-CoA with S-trans-1-propenyl-L-cyst… to (Z)-propanethial S-oxide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104781"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_methylpropenoyl_coa_secalciferol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_methylpropenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "secalciferol-to-h2o"
+      },
+      "note": "Shares 2-methylpropenoyl-CoA with secalciferol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104781"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_methylpropenoyl_coa_ubiquinol-10-to-r-3-hydroxy-isobutanoyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_methylpropenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ubiquinol-10-to-r-3-hydroxy-isobutanoyl"
+      },
+      "note": "Shares 2-methylpropenoyl-CoA with ubiquinol-10 to (R)-3-hydroxy-isobutanoyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104781"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_3_hydroxy_isobutanoyl_coa_acetoacetyl-coa-to-t-2-toxin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_3_hydroxy_isobutanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetoacetyl-coa-to-t-2-toxin"
+      },
+      "note": "Shares (R)-3-hydroxy-isobutanoyl-CoA with acetoacetyl-CoA to T-2 toxin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM726149"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_3_hydroxy_isobutanoyl_coa_ubiquinol-10-to-r-3-hydroxy-isobutanoyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_3_hydroxy_isobutanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ubiquinol-10-to-r-3-hydroxy-isobutanoyl"
+      },
+      "note": "Shares (R)-3-hydroxy-isobutanoyl-CoA with ubiquinol-10 to (R)-3-hydroxy-isobutanoyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM726149"
+          }
+        ]
+      }
+    }
+  ]
+}

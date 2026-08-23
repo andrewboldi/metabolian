@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3s-3-hydroxydocosanoyl-to-2-hydroxybehenate "(3S)-3-hydroxydocosanoyl-â€¦ to 2-hydroxybehenate" {
-  spacing 182
+  spacing 218
 
   spine at 0,0 {
     3s_3_hydroxydocosanoyl_coa
@@ -20,31 +20,67 @@ pathway 3s-3-hydroxydocosanoyl-to-2-hydroxybehenate "(3S)-3-hydroxydocosanoyl-â€
 
   branch from fad side left {
     fad
-    <-> ec_1_14_14_9 [1.14.14.9] +fadh2 +h +o2 +l_tyrosine +h2o
-    l_dopa
+    <-> ec_1_1_99_1 [1.1.99.1] +fadh2 +h +glycine_betaine +h2o
+    betaine_aldehyde
   }
 
   branch from fad side right {
     fad
-    <-> ec_1_1_99_13 [1.1.99.13] +alpha_lactose +fadh2 +h
-    3_ketolactose
+    <-> . +fadh2 +iminoaspartate +h
+    l_aspartate
   }
 
   branch from docosanoyl_coa side left {
     docosanoyl_coa
-    <-> ec_2_3_1_198 [2.3.1.198] +2_docosanoyl_sn_glycero_3_phosphate +coa
-    sn_glycerol_3_phosphate
+    <-> ec_3_6_3_47 [3.6.3.47] +h +adp +phosphate +h2o
+    atp
   }
 
   branch from docosanoyl_coa side right {
     docosanoyl_coa
-    <-> . +nadh +eicosanoyl_coa +acetyl_coa +h +h2o2 +o2 +nad +h2o
+    <-> . +lysopa_22_0_0_0 +coa +h
+    sn_glycerol_3_phosphate
+  }
+
+  branch from fadh2 side left {
+    fadh2
+    <-> . +h +fe_iii_enterobactin +fad +enterobactin
+    fe
+  }
+
+  branch from fadh2 side right {
+    fadh2
+    <-> . +nadh +acetyl_coa +diphosphate +h +amp +fad +atp +coa +nad +h2o
+    tetradecanoate
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_3_1_80 [2.3.1.80] +acetyl_coa +s_4_hydroxy_nonenal_3_yl_l_cysteine +4_hydroxy_2_nonenal_n_acetyl_l_cysteine
     coa
   }
 
-  branch from behenate side left {
-    behenate
-    <-> . +h +adp +phosphate +h2o
-    atp
+  branch from h side right {
+    h
+    <-> ec_2_3_1_188 [2.3.1.188] +16_sinapoyloxypalmitic_acid +coa +e_sinapoyl_coa
+    16_hydroxyhexadecanoate
+  }
+
+  branch from fad side left {
+    fad
+    <-> . +fadh2 +6_carboxyhex_2_enoyl_coa +h
+    6_carboxyhexanoyl_coa
+  }
+
+  branch from fad side right {
+    fad
+    <-> . +l_glutamate_5_semialdehyde +fadh2 +h +h2o
+    l_proline
+  }
+
+  branch from docosanoyl_coa side left {
+    docosanoyl_coa
+    <-> . +s_carnitine +coa
+    o_behenoylcarnitine
   }
 }

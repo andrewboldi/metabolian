@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-propane-1-2-diol-to-enolaldehyde "(S)-propane-1,2-diol to enolaldehyde" {
-  spacing 232
+  spacing 220
 
   spine at 0,0 {
     s_propane_1_2_diol
@@ -14,17 +14,5 @@ pathway s-propane-1-2-diol-to-enolaldehyde "(S)-propane-1,2-diol to enolaldehyde
     methylglyoxal
     <-> .
     enolaldehyde
-  }
-
-  branch from h side left {
-    h
-    <-> . +alpha_d_glucosamine_6_phosphate
-    glucosamine_1p
-  }
-
-  branch from h side right {
-    h
-    <-> . +5_trans_prostaglandin_d2
-    prostaglandin_h2
   }
 }

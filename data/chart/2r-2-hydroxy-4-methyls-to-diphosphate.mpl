@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2r-2-hydroxy-4-methyls-to-diphosphate "(2R)-2-hydroxy-4-(methyls… to diphosphate" {
-  spacing 264
+  spacing 240
 
   spine at 0,0 {
     2r_2_hydroxy_4_methylsulfanyl_butanoate
@@ -14,29 +14,5 @@ pathway 2r-2-hydroxy-4-methyls-to-diphosphate "(2R)-2-hydroxy-4-(methyls… to d
     aromatic_2_oxo_monocarboxylic_acid_anion
     <-> ec_2_5_1_6 [2.5.1.6] +methionine +atp +h2o -pi -ppi
     sam
-  }
-
-  branch from sam side left {
-    sam
-    <-> ec_4_1_1_50 [4.1.1.50] +hplus +co2
-    s_adenosylmethioninaminium
-  }
-
-  branch from sam side right {
-    sam
-    <-> ec_2_1_1_287 [2.1.1.287] +adenosine_5_monophosphate_1 +sah +hplus
-    n1_methyladenosine_5_monophosphate_1
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_183 [4.2.3.183] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
-    nezukol
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_184 [4.2.3.184] +fpp +h2o
-    5_hydroxy_gurjunene
   }
 }

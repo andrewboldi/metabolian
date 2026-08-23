@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway hyperxanthone-e-to-kievitone "hyperxanthone E to kievitone" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     hyperxanthone_e
@@ -14,29 +14,5 @@ pathway hyperxanthone-e-to-kievitone "hyperxanthone E to kievitone" {
     dimethylallyl_diphosphate
     <-> . +dalbergioidin -kievitone
     diphosphate
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
-    alpha_l_galactopyranose_6_sulfate_1_3_beta_d_gal
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_18 [3.6.3.18] +adp +neoagarooctaose +phosphate +neoagarooctaose +h2o
-    atp
-  }
-
-  branch from diphosphate side left {
-    diphosphate
-    <-> ec_6_2_1_2 [6.2.1.2] +4_hydroxy_valeric_acid +atp +coa +h +4_hydroxypentanoyl_coa
-    amp
-  }
-
-  branch from diphosphate side right {
-    diphosphate
-    <-> . +amp +acinetoferrin +atp +n3_oct_2_enoyl_n3_hydroxy_1_3_diaminopropane
-    n1_citryl_n3_oct_2_enoyl_n3_hydroxy_1_3_diaminop
   }
 }

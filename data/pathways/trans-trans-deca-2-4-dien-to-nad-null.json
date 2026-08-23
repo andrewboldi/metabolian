@@ -1,0 +1,423 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "trans-trans-deca-2-4-dien-to-nad-null",
+  "name": "trans,trans-deca-2,4-dien… to NAD",
+  "category": "other",
+  "summary": "A 3-step route from trans,trans-deca-2,4-dienoyl-CoA(4−) to NAD(+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR157315"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:62244"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "trans_trans_deca_2_4_dienoyl_coa",
+      "name": "trans,trans-deca-2,4-dienoyl-CoA",
+      "short": "trans,trans-deca-2,…",
+      "formula": "C31H46N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:62244"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "H2O2",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM732620"
+      }
+    },
+    {
+      "id": "4e_decenoyl_coa",
+      "name": "(4E)-decenoyl-CoA",
+      "formula": "C31H48N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:234369"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1104266"
+      }
+    },
+    {
+      "id": "3_oxolaur_6_cis_enoyl_coa",
+      "name": "3-oxolaur-6-cis-enoyl-CoA",
+      "short": "3-oxolaur-6-cis-eno…",
+      "formula": "C33H50N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM166245"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "3s_3_hydroxydodec_cis_6_enoyl_coa",
+      "name": "(3S)-3-hydroxydodec-cis-6-enoyl-CoA",
+      "short": "3-hydroxydodec-cis-…",
+      "formula": "C33H52N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM733852"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR157315",
+      "substrates": [
+        {
+          "metabolite": "trans_trans_deca_2_4_dienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4e_decenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR157315"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR157315"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR162465",
+      "substrates": [
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4e_decenoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_oxolaur_6_cis_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR162465"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR162465"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR103517",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_oxolaur_6_cis_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3s_3_hydroxydodec_cis_6_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR103517"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR103517"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_trans_trans_deca_2_4_dienoyl_coa_cis-dec-3-enoyl-coa-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_trans_deca_2_4_dienoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cis-dec-3-enoyl-coa-to-coa"
+      },
+      "note": "Shares trans,trans-deca-2,4-dienoyl-CoA with cis-dec-3-enoyl-CoA to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62244"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_trans_deca_2_4_dienoyl_coa_cis-dec-3-enoyl-coa-to-coa-77195",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_trans_deca_2_4_dienoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cis-dec-3-enoyl-coa-to-coa-77195"
+      },
+      "note": "Shares trans,trans-deca-2,4-dienoyl-CoA with cis-dec-3-enoyl-CoA to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62244"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_trans_deca_2_4_dienoyl_coa_trans-trans-deca-2-4-dien-to-3-hydroxydecanoyl-c",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_trans_deca_2_4_dienoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-trans-deca-2-4-dien-to-3-hydroxydecanoyl-c"
+      },
+      "note": "Shares trans,trans-deca-2,4-dienoyl-CoA with trans,trans-deca-2,4-dien… to 3-hydroxydecanoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62244"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_trans_deca_2_4_dienoyl_coa_trans-trans-deca-2-4-dien-to-3s-3-hydroxydodec-c",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_trans_deca_2_4_dienoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-trans-deca-2-4-dien-to-3s-3-hydroxydodec-c"
+      },
+      "note": "Shares trans,trans-deca-2,4-dienoyl-CoA with trans,trans-deca-2,4-dien… to (3S)-3-hydroxydodec-cis-6….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62244"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_trans_deca_2_4_dienoyl_coa_trans-trans-deca-2-4-dien-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_trans_deca_2_4_dienoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-trans-deca-2-4-dien-to-nad"
+      },
+      "note": "Shares trans,trans-deca-2,4-dienoyl-CoA with trans,trans-deca-2,4-dien… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62244"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_oxolaur_6_cis_enoyl_coa_trans-trans-deca-2-4-dien-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_oxolaur_6_cis_enoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-trans-deca-2-4-dien-to-nad"
+      },
+      "note": "Shares 3-oxolaur-6-cis-enoyl-CoA with trans,trans-deca-2,4-dien… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM166245"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3s_3_hydroxydodec_cis_6_enoyl_coa_trans-trans-deca-2-4-dien-to-3s-3-hydroxydodec-c",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3s_3_hydroxydodec_cis_6_enoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-trans-deca-2-4-dien-to-3s-3-hydroxydodec-c"
+      },
+      "note": "Shares (3S)-3-hydroxydodec-cis-6-enoyl-CoA with trans,trans-deca-2,4-dien… to (3S)-3-hydroxydodec-cis-6….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM733852"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3s_3_hydroxydodec_cis_6_enoyl_coa_trans-trans-deca-2-4-dien-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3s_3_hydroxydodec_cis_6_enoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-trans-deca-2-4-dien-to-nad"
+      },
+      "note": "Shares (3S)-3-hydroxydodec-cis-6-enoyl-CoA with trans,trans-deca-2,4-dien… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM733852"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -4,15 +4,15 @@
 # edit the generator, not this file.
 
 pathway d-mannitol-to-h2o "D-mannitol to H2O" {
-  spacing 200
+  spacing 156
 
   spine at 0,0 {
     d_mannitol
-    <-> ec_1_1_1_138 [1.1.1.138] +nadp -h -nadph
-    keto_d_fructose
-    <-> ec_3_2_1_26 [3.2.1.26] +melibiose -h2o
-    raffinose
-    <-> ec_3_2_1_22 [3.2.1.22] +alpha_d_galactose -h2o
-    stachyose
+    <-> ec_1_1_1_21 [1.1.1.21] +nadp -h -nadph
+    d_mannopyranose
+    <-> ec_3_2_1_163 [3.2.1.163] -h2o
+    d_manp_1_6_d_manp
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate -d_manp_1_6_d_manp -h2o
+    atp
   }
 }

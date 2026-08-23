@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-2-2-trilinoleoyl-1-mo-to-tetralinoleoyl-cardio "1,2,2'-trilinoleoyl-1'-mo… to tetralinoleoyl cardiolipin" {
-  spacing 194
+  spacing 242
 
   spine at 0,0 {
     1_2_2_trilinoleoyl_1_monolysocardiolipin
@@ -30,14 +30,14 @@ pathway 1-2-2-trilinoleoyl-1-mo-to-tetralinoleoyl-cardio "1,2,2'-trilinoleoyl-1'
 
   branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side left {
     1_hexadecanoyl_sn_glycero_3_phosphocholine
-    <-> . +octanoyl_coa +coa
-    1_palmitoyl_2_capryloyl_sn_glycero_3_phosphochol
+    <-> . +1_palmitoyl_2_acyl_sn_glycero_3_phosphocholine +24s_24_hydroxycholesterol
+    24s_24_hydroxycholesterol_ester
   }
 
   branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side right {
     1_hexadecanoyl_sn_glycero_3_phosphocholine
-    <-> . +myristoyl_coa +coa
-    1_palmitoyl_2_myristoyl_sn_glycero_3_phosphochol
+    <-> . +24s_24_hydroxycholesterol +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
+    24s_24_hydroxycholesterol_3_linoleoate
   }
 
   branch from 1_1_2_trilinoleoyl_2_oleoyl_cardiolipin side left {
@@ -56,5 +56,53 @@ pathway 1-2-2-trilinoleoyl-1-mo-to-tetralinoleoyl-cardio "1,2,2'-trilinoleoyl-1'
     trilinoleoyl_2_monolysocardiolipin
     <-> . +1_2_di_9z_12z_octadecadienoyl_sn_glycero_3_phosp +tetralinoleoyl_cardiolipin
     1_linoleoyl_sn_glycero_3_phosphocholine
+  }
+
+  branch from 1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce side right {
+    1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
+    <-> . +1_hexadecanoyl_sn_glycero_3_phosphocholine +1_hexadecanoyl_sn_glycero_3_phosphoethanolamine
+    1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
+  }
+
+  branch from 1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce side left {
+    1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
+    <-> . +cholesterol +1_hexadecanoyl_sn_glycero_3_phosphocholine
+    cholesteryl_linoleate
+  }
+
+  branch from tetralinoleoyl_cardiolipin side right {
+    tetralinoleoyl_cardiolipin
+    <-> . +1_myristoyl_sn_glycero_3_phosphocholine +trilinoleoyl_2_monolysocardiolipin
+    1_tetradecanoyl_2_9z_12z_octadecadienoyl_sn_glyc
+  }
+
+  branch from tetralinoleoyl_cardiolipin side left {
+    tetralinoleoyl_cardiolipin
+    <-> . +1_nonadecanoyl_sn_glycero_3_phosphocholine +trilinoleoyl_2_monolysocardiolipin
+    1_nonadecanoyl_2_linoleoyl_sn_glycero_3_phosphoc
+  }
+
+  branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side right {
+    1_hexadecanoyl_sn_glycero_3_phosphocholine
+    <-> . +1_2_distearoyl_sn_glycero_3_phosphocholine +1_stearoyl_sn_glycero_3_phosphocholine
+    1_hexadecanoyl_2_octadecanoyl_sn_glycero_3_phosp
+  }
+
+  branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side left {
+    1_hexadecanoyl_sn_glycero_3_phosphocholine
+    <-> . +1_2_dioleoyl_sn_glycero_3_phosphoethanolamine +1_2_dihexadecanoyl_sn_glycero_3_phosphocholine +hplus
+    n_palmitoyl_1_2_dioleoyl_sn_glycero_3_phosphoeth
+  }
+
+  branch from linoleoyl_coa side right {
+    linoleoyl_coa
+    <-> . +1_hexadecanoyl_sn_glycero_3_phospho_d_myo_inosit +coa
+    1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
+  }
+
+  branch from linoleoyl_coa side left {
+    linoleoyl_coa
+    <-> . +nadph +hplus +nadp +coa
+    9z_12z_octadecadien_1_ol
   }
 }

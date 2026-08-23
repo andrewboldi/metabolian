@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-adenosyl-l-homocysteine-to-e-caffeyl-aldehyde "S-adenosyl-L-homocysteine to (E)-caffeyl aldehyde" {
-  spacing 230
+  spacing 314
 
   spine at 0,0 {
     s_adenosyl_l_homocysteine
@@ -18,26 +18,26 @@ pathway s-adenosyl-l-homocysteine-to-e-caffeyl-aldehyde "S-adenosyl-L-homocystei
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +chrysosplenetin +h
-    chrysosplenol_c
+    <-> . +s_adenosyl_l_homocysteine +h +stigmasterol
+    desmosterol
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +dtdp_l_oleandrose +s_adenosyl_l_homocysteine +h
-    dtdp_l_olivose
+    <-> ec_3_13_1_8 [3.13.1.8] +h +l_methionine +h2o
+    adenosine
   }
 
   branch from e_coniferol side left {
     e_coniferol
-    <-> . +h +o2 +nadph +e_5_hydroxyconiferyl_alcohol +h2o
-    nadp
+    <-> ec_3_2_1_126 [3.2.1.126] +beta_d_glucose +h2o
+    4_o_beta_d_glucosyl_e_coniferol
   }
 
   branch from e_coniferol side right {
     e_coniferol
-    <-> ec_3_2_1_126 [3.2.1.126] +beta_d_glucose +h2o
-    4_o_beta_d_glucosyl_e_coniferol
+    <-> ec_1_10_3_2 [1.10.3.2] +coniferyl_alcohol_radical +h2o
+    o2
   }
 
   branch from e_coniferaldehyde side left {
@@ -48,25 +48,109 @@ pathway s-adenosyl-l-homocysteine-to-e-caffeyl-aldehyde "S-adenosyl-L-homocystei
 
   branch from h2o side right {
     h2o
-    <-> ec_3_1_1_83 [3.1.1.83] +6_isopropenyl_3_methyloxepan_2_one +h
-    a_6_hydroxy_5_isopropenyl_2_methylhexanoate
+    <-> . +l_valine +glycine +l_arginine
+    valyl_arginyl_glycine
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_3_2_8 [3.3.2.8] +1s_2s_4r_limonene_1_2_diol
-    4r_limonene_1alpha_2alpha_epoxide
+    <-> . +l_histidine +l_asparagine +l_valine
+    valyl_histidyl_asparagine
   }
 
   branch from e_caffeyl_aldehyde side right {
     e_caffeyl_aldehyde
-    <-> ec_1_2_1_44 [1.2.1.44] +caffeoyl_coa +nadph +h +nadp
-    coa
+    <-> ec_1_2_1_44 [1.2.1.44] +caffeoyl_coa +nadph +h +coa
+    nadp
   }
 
   branch from e_caffeyl_aldehyde side left {
     e_caffeyl_aldehyde
-    <-> . +2e_4z_5e_2_hydroxy_7_oxo_2_oxoethylidene_hepta +h
-    o2
+    <-> . +h +o2
+    2e_4z_5e_2_hydroxy_7_oxo_2_oxoethylidene_hepta
+  }
+
+  branch from s_adenosyl_l_homocysteine side right {
+    s_adenosyl_l_homocysteine
+    <-> ec_2_1_1_142 [2.1.1.142] +24_methylenecycloartanol +h +9beta_19_cyclolanost_24_en_3beta_ol
+    s_s_adenosyl_l_methionine
+  }
+
+  branch from s_adenosyl_l_homocysteine side left {
+    s_adenosyl_l_homocysteine
+    <-> ec_2_1_1_56 [2.1.1.56] +n_7_methyl_gtp +s_s_adenosyl_l_methionine
+    gtp
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_2_1_167 [3.2.1.167] +baicalein +beta_d_glucuronate +h2o
+    baicalin
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_2_1_175 [3.2.1.175] +alpha_d_glucose +2_cis_abscisate +h2o
+    abscisic_acid_d_glucopyranosyl_ester
+  }
+
+  branch from s_adenosyl_l_methionine side right {
+    s_adenosyl_l_methionine
+    <-> ec_2_1_1_6 [2.1.1.6] +s_adenosyl_l_homocysteine +vanillylmandelate +h
+    r_3_4_dihydroxymandelate
+  }
+
+  branch from s_adenosyl_l_methionine side left {
+    s_adenosyl_l_methionine
+    <-> . +s_adenosyl_l_homocysteine +n_methylwelwitindolinone_c_isothiocyanate +h
+    welwitindolinone_c_isothiocyanate
+  }
+
+  branch from e_coniferol side right {
+    e_coniferol
+    <-> ec_1_11_1_7 [1.11.1.7] +h2o +h2o2
+    coniferyl_alcohol_radical
+  }
+
+  branch from e_coniferol side left {
+    e_coniferol
+    <-> ec_3_2_1_126 [3.2.1.126] +4_o_beta_d_glucosyl_e_coniferol +h2o
+    alpha_d_glucose
+  }
+
+  branch from h2o2 side right {
+    h2o2
+    <-> . +hexacosan_1_ol +o2
+    hexacosanal
+  }
+
+  branch from h2o2 side left {
+    h2o2
+    <-> . +tetracosan_1_ol +o2
+    tetracosanal
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +l_leucine +l_valine +l_phenylalanine
+    valyl_leucyl_phenylalanine
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +l_lysine +l_valine +l_tyrosine
+    valyl_lysyl_tyrosine
+  }
+
+  branch from e_caffeyl_aldehyde side right {
+    e_caffeyl_aldehyde
+    <-> . +h +o2
+    2e_4z_5e_2_hydroxy_7_oxo_2_oxoethylidene_hepta
+  }
+
+  branch from e_caffeyl_aldehyde side left {
+    e_caffeyl_aldehyde
+    <-> . +h +o2
+    2e_4z_6e_5_formyl_2_hydroxy_8_oxoocta_2_4_6_tri
   }
 }

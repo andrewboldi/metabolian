@@ -1,0 +1,522 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "trans-sinapate-to-6-o-sinapoyl-d-glucono-1",
+  "name": "trans-sinapate to 6-O-sinapoyl-D-glucono-1,…",
+  "category": "other",
+  "summary": "A 3-step route from trans-sinapate to 6-O-sinapoyl-D-glucono-1,5-lactone, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:72603"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:30023"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "trans_sinapate",
+      "name": "trans-sinapate",
+      "formula": "C11H11O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30023"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "trans_sinapoyl_amp",
+      "name": "trans-sinapoyl-AMP",
+      "formula": "C21H23N5O11P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:192469"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "sinapoyl_coa",
+      "name": "sinapoyl-CoA",
+      "formula": "C32H42N7O20P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57393"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "d_glucono_1_5_lactone",
+      "name": "D-glucono-1,5-lactone",
+      "short": "D-glucono-1,5-lacto…",
+      "formula": "C6H10O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16217"
+      }
+    },
+    {
+      "id": "6_o_sinapoyl_d_glucono_1_5_lactone",
+      "name": "6-O-sinapoyl-D-glucono-1,5-lactone",
+      "short": "6-O-sinapoyl-D-gluc…",
+      "formula": "C17H20O10",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:60076"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_3_1_132",
+      "name": "glucarolactone O-hydroxycinnamoyltransferase",
+      "ec": [
+        "2.3.1.132"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(E)-sinapate + ATP + H(+) = (E)-sinapoyl-AMP + diphosphate",
+      "equation": "(E)-sinapate + ATP + H(+) = (E)-sinapoyl-AMP + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "trans_sinapate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_sinapoyl_amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:72603"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:72603"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(E)-sinapoyl-AMP + CoA = (E)-sinapoyl-CoA + AMP + H(+)",
+      "equation": "(E)-sinapoyl-AMP + CoA = (E)-sinapoyl-CoA + AMP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "trans_sinapoyl_amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sinapoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:72607"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:72607"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "glucarolactone O-hydroxycinnamoyltransferase",
+      "equation": "(E)-sinapoyl-CoA + D-glucono-1,5-lactone = 6-O-[(E)-sinapoyl]-D-glucono-1,5-lactone + CoA",
+      "ec": "2.3.1.132",
+      "substrates": [
+        {
+          "metabolite": "sinapoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_glucono_1_5_lactone",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_o_sinapoyl_d_glucono_1_5_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_132"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:14261"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14261"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_trans_sinapate_1-lauroyl-sn-glycero-3-ph-to-d-glucopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_sinapate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-lauroyl-sn-glycero-3-ph-to-d-glucopyranose"
+      },
+      "note": "Shares trans-sinapate with 1-lauroyl-sn-glycero-3-ph… to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:30023"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_sinapate_cyanidin-3-o-d-glucoside-to-sinapoyltartronate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_sinapate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cyanidin-3-o-d-glucoside-to-sinapoyltartronate"
+      },
+      "note": "Shares trans-sinapate with cyanidin 3-O-β-D-glucoside to sinapoyltartronate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:30023"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_sinapate_diphosphate-to-4-o-d-glucosyl-trans-si",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_sinapate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-4-o-d-glucosyl-trans-si"
+      },
+      "note": "Shares trans-sinapate with diphosphate to 4-O-β-D-glucosyl-trans-si….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:30023"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sinapoyl_coa_27-o-demethylrifamycin-sv-to-rifamycin-sv",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sinapoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "27-o-demethylrifamycin-sv-to-rifamycin-sv"
+      },
+      "note": "Shares sinapoyl-CoA with 27-O-demethylrifamycin SV to rifamycin SV….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57393"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sinapoyl_coa_carboxyspermidine-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sinapoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "carboxyspermidine-to-succinate"
+      },
+      "note": "Shares sinapoyl-CoA with carboxyspermidine to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57393"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sinapoyl_coa_cyanidin-3-o-d-glucoside-to-sinapoyltartronate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sinapoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cyanidin-3-o-d-glucoside-to-sinapoyltartronate"
+      },
+      "note": "Shares sinapoyl-CoA with cyanidin 3-O-β-D-glucoside to sinapoyltartronate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57393"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sinapoyl_coa_oroxylin-a-7-o-d-glucur-to-2-hydroxy-3-oxopropan",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sinapoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "oroxylin-a-7-o-d-glucur-to-2-hydroxy-3-oxopropan"
+      },
+      "note": "Shares sinapoyl-CoA with oroxylin A 7-O-β-D-glucur… to 2-hydroxy-3-oxopropanoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57393"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glucono_1_5_lactone_3-s-strictosidinium-to-4-21-dehydrogeissoschizin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glucono_1_5_lactone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-s-strictosidinium-to-4-21-dehydrogeissoschizin"
+      },
+      "note": "Shares D-glucono-1,5-lactone with 3α(S)-strictosidinium to 4,21-dehydrogeissoschizine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16217"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glucono_1_5_lactone_5-cholestan-3-one-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glucono_1_5_lactone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cholestan-3-one-to-hydrogen-donor"
+      },
+      "note": "Shares D-glucono-1,5-lactone with 5β-cholestan-3-one to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16217"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glucono_1_5_lactone_phenylthioacetohydroximate-to-benzyl-thiocyanate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glucono_1_5_lactone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phenylthioacetohydroximate-to-benzyl-thiocyanate"
+      },
+      "note": "Shares D-glucono-1,5-lactone with phenylthioacetohydroximate to benzyl thiocyanate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16217"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glucono_1_5_lactone_phosphate-monoester-to-6-phospho-2-dehydro-d-glu",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glucono_1_5_lactone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phosphate-monoester-to-6-phospho-2-dehydro-d-glu"
+      },
+      "note": "Shares D-glucono-1,5-lactone with phosphate monoester… to 6-phospho-2-dehydro-D-glu….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16217"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glucono_1_5_lactone_s-2-halocarboxylic-to-l-glutamyl-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glucono_1_5_lactone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2-halocarboxylic-to-l-glutamyl-phosphate"
+      },
+      "note": "Shares D-glucono-1,5-lactone with (S)-2-halocarboxylic… to L-γ-glutamyl phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16217"
+          }
+        ]
+      }
+    }
+  ]
+}

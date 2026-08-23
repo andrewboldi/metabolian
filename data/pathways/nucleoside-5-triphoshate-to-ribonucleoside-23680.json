@@ -1,0 +1,333 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "nucleoside-5-triphoshate-to-ribonucleoside-23680",
+  "name": "nucleoside 5'-triphoshate to ribonucleoside",
+  "category": "other",
+  "summary": "A 3-step route from nucleoside 5'-triphoshate(4−) to ribonucleoside, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:23680"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:61557"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "nucleoside_5_triphoshate",
+      "name": "nucleoside 5'-triphoshate",
+      "short": "nucleoside…",
+      "formula": "C5H8O13P3R",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:61557"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "nucleoside_5_diphosphate",
+      "name": "nucleoside 5'-diphosphate",
+      "short": "nucleoside 5'-PP",
+      "formula": "C5H8O10P2R",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57930"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nucleoside_5_monophosphate",
+      "name": "nucleoside 5'-monophosphate",
+      "short": "nucleoside 5'-MP",
+      "formula": "C5H8O7PR",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58043"
+      }
+    },
+    {
+      "id": "ribonucleoside",
+      "name": "ribonucleoside",
+      "formula": "C5H9O4R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18254"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_6_1_15",
+      "name": "nucleoside-triphosphate phosphatase",
+      "ec": [
+        "3.6.1.15"
+      ],
+      "xrefs": {
+        "uniprot": "Q92484"
+      }
+    },
+    {
+      "id": "ec_3_6_1_6",
+      "name": "nucleoside diphosphate phosphatase",
+      "ec": [
+        "3.6.1.6"
+      ],
+      "xrefs": {
+        "uniprot": "Q8WVQ1"
+      }
+    },
+    {
+      "id": "ec_3_1_3_5",
+      "name": "5'-nucleotidase",
+      "ec": [
+        "3.1.3.5"
+      ],
+      "xrefs": {
+        "uniprot": "Q9BXI3"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "nucleoside-triphosphate phosphatase",
+      "equation": "a ribonucleoside 5'-triphosphate + H2O = a ribonucleoside 5'-diphosphate + phosphate + H(+)",
+      "ec": "3.6.1.15",
+      "substrates": [
+        {
+          "metabolite": "nucleoside_5_triphoshate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nucleoside_5_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_15"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:23680"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23680"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "nucleoside diphosphate phosphatase",
+      "equation": "a ribonucleoside 5'-diphosphate + H2O = a ribonucleoside 5'-phosphate + phosphate + H(+)",
+      "ec": "3.6.1.6",
+      "substrates": [
+        {
+          "metabolite": "nucleoside_5_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nucleoside_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:36799"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36799"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "5'-nucleotidase",
+      "equation": "a ribonucleoside 5'-phosphate + H2O = a ribonucleoside + phosphate",
+      "ec": "3.1.3.5",
+      "substrates": [
+        {
+          "metabolite": "nucleoside_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ribonucleoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_3_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:12484"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12484"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_ribonucleoside_5-end-5-hydroxy-deoxyri-to-2-deoxynucleoside",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ribonucleoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-end-5-hydroxy-deoxyri-to-2-deoxynucleoside"
+      },
+      "note": "Shares ribonucleoside with 5'-end 5'-hydroxy-deoxyri… to 2'-deoxynucleoside….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18254"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ribonucleoside_5-end-5-hydroxy-deoxyri-to-2-deoxynucleoside-813",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ribonucleoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-end-5-hydroxy-deoxyri-to-2-deoxynucleoside-813"
+      },
+      "note": "Shares ribonucleoside with 5'-end 5'-hydroxy-deoxyri… to 2'-deoxynucleoside….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18254"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ribonucleoside_nucleoside-5-triphoshate-to-ribonucleoside",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ribonucleoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nucleoside-5-triphoshate-to-ribonucleoside"
+      },
+      "note": "Shares ribonucleoside with nucleoside 5'-triphoshate to ribonucleoside.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18254"
+          }
+        ]
+      }
+    }
+  ]
+}

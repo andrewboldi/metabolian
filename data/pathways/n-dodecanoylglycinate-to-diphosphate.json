@@ -147,52 +147,6 @@
       "xrefs": {
         "chebi": "CHEBI:33019"
       }
-    },
-    {
-      "id": "amikacin",
-      "name": "amikacin",
-      "formula": "C22H47N5O13",
-      "charge": 4,
-      "xrefs": {
-        "chebi": "CHEBI:84739"
-      }
-    },
-    {
-      "id": "gtp",
-      "name": "GTP",
-      "formula": "C10H12N5O14P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:37565"
-      }
-    },
-    {
-      "id": "4_guanylylamikacin",
-      "name": "4'-guanylylamikacin",
-      "formula": "C32H58N10O20P",
-      "charge": 3,
-      "xrefs": {
-        "chebi": "CHEBI:233257"
-      }
-    },
-    {
-      "id": "itp",
-      "name": "ITP",
-      "formula": "C10H11N4O14P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:61402"
-      }
-    },
-    {
-      "id": "4_inosinylylamikacin",
-      "name": "4'-inosinylylamikacin",
-      "short": "4'-inosinylylamikac…",
-      "formula": "C32H57N9O20P",
-      "charge": 3,
-      "xrefs": {
-        "chebi": "CHEBI:233259"
-      }
     }
   ],
   "enzymes": [],
@@ -360,81 +314,49 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "amikacin + GTP = 4'-guanylylamikacin + diphosphate",
-      "equation": "amikacin + GTP = 4'-guanylylamikacin + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "amikacin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "gtp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "4_guanylylamikacin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:83727"
+      "id": "xt_n_dodecanoylglycinate_l-allothreonine-to-acetaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_dodecanoylglycinate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "l-allothreonine-to-acetaldehyde"
+      },
+      "note": "Shares N-dodecanoylglycinate with L-allothreonine to acetaldehyde.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:83727"
+            "db": "ChEBI",
+            "id": "CHEBI:142678"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "amikacin + ITP = 4'-inosinylylamikacin + diphosphate",
-      "equation": "amikacin + ITP = 4'-inosinylylamikacin + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "amikacin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "itp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "4_inosinylylamikacin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:83731"
+      "id": "xt_dodecanoyl_amp_dodecanoyl-amp-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dodecanoyl_amp"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "dodecanoyl-amp-to-fmn"
+      },
+      "note": "Shares dodecanoyl-AMP with dodecanoyl-AMP to FMN.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:83731"
+            "db": "ChEBI",
+            "id": "CHEBI:83623"
           }
         ]
       }

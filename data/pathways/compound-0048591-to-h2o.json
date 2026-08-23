@@ -1,0 +1,402 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "compound-0048591-to-h2o",
+  "name": "compound 0048591 to H2O",
+  "category": "lipid-metabolism",
+  "summary": "A 3-step route from compound 0048591 to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR205815"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "compound_0048591",
+      "name": "compound 0048591",
+      "formula": "C13H17O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1372316"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "ibuprofen",
+      "name": "ibuprofen",
+      "formula": "C13H18O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM724821"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "d_glucuronate",
+      "name": "D-glucuronate",
+      "formula": "C6H9O7",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1105765"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "ibuprofen_acyl_glucuronide",
+      "name": "Ibuprofen acyl glucuronide",
+      "short": "Ibuprofen acyl…",
+      "formula": "C19H26O8",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM744753"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR205815",
+      "substrates": [
+        {
+          "metabolite": "compound_0048591",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ibuprofen",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR205815"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR205815"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR205810",
+      "substrates": [
+        {
+          "metabolite": "d_glucuronate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ibuprofen",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ibuprofen_acyl_glucuronide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR205810"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR205810"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR158952",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ibuprofen_acyl_glucuronide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ibuprofen_acyl_glucuronide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR158952"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR158952"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_compound_0048591_compound-0048591-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "compound_0048591"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "compound-0048591-to-h2o-null"
+      },
+      "note": "Shares compound 0048591 with compound 0048591 to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1372316"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ibuprofen_diphosphate-to-phosphate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ibuprofen"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-phosphate-null"
+      },
+      "note": "Shares ibuprofen with diphosphate to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM724821"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ibuprofen_taurine-conjugate-of-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ibuprofen"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "taurine-conjugate-of-to-h2o"
+      },
+      "note": "Shares ibuprofen with Taurine conjugate of… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM724821"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ibuprofen_udp-to-triiodothyronine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ibuprofen"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-triiodothyronine"
+      },
+      "note": "Shares ibuprofen with UDP to triiodothyronine….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM724821"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ibuprofen_acyl_glucuronide_s-adenosyl-l-homocysteine-to-alpha-d-man-1-3-alp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ibuprofen_acyl_glucuronide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-alpha-d-man-1-3-alp"
+      },
+      "note": "Shares Ibuprofen acyl glucuronide with S-adenosyl-L-homocysteine to [alpha-D-Man-(1->3)-alpha….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM744753"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ibuprofen_acyl_glucuronide_udp-to-triiodothyronine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ibuprofen_acyl_glucuronide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-triiodothyronine"
+      },
+      "note": "Shares Ibuprofen acyl glucuronide with UDP to triiodothyronine….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM744753"
+          }
+        ]
+      }
+    }
+  ]
+}

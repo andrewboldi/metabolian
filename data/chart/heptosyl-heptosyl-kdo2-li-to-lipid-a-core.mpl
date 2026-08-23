@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway heptosyl-heptosyl-kdo2-li-to-lipid-a-core "Heptosyl-heptosyl-kdo2-li… to lipid A-core" {
-  spacing 270
+  spacing 258
 
   spine at 0,0 {
     heptosyl_heptosyl_kdo2_lipida
@@ -32,45 +32,33 @@ pathway heptosyl-heptosyl-kdo2-li-to-lipid-a-core "Heptosyl-heptosyl-kdo2-li… 
     lipid_a_core
   }
 
-  branch from adp_l_glycero_d_manno_heptose side left {
-    adp_l_glycero_d_manno_heptose
-    <-> . +l_serine +adp +hplus
-    o_l_glycero_d_manno_heptosyl_l_serine
-  }
-
-  branch from adp_l_glycero_d_manno_heptose side right {
-    adp_l_glycero_d_manno_heptose
-    <-> . +galactosyl_glucosyl_3_heptosyl_3_kdo2_lipid_a_bi +h +adp
-    core_oligosaccharide_lipid_a_e_coli_k_12_core_ty
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +acetaminophen_mercapturate_conjugate_n_acetyl_cy +phosphate +acetaminophen_mercapturate_conjugate_n_acetyl_cy +h2o
-    atp
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    acetaminophen_mercapturate_conjugate_n_acetyl_cy
-  }
-
-  branch from heptosyl_kdo_2_lipid_a side left {
-    heptosyl_kdo_2_lipid_a
-    <-> . +adp_l_glycero_d_manno_heptose +h +adp
-    heptosyl_heptosyl_kdo2_lipida
-  }
-
-  branch from heptosyl_kdo_2_lipid_a side right {
-    heptosyl_kdo_2_lipid_a
-    <-> . +heptosyl_heptosyl_kdo2_lipida +h +adp
-    adp_l_glycero_d_manno_heptose
-  }
-
   branch from heptosyl_2_kdo_2_lipid_a side left {
     heptosyl_2_kdo_2_lipid_a
     <-> ec_2_7_1_235 [2.7.1.235] +atp +adp +hplus
     l_d_hep_1_3_4_o_phospho_l_d_hep_1_5_kdo_2_4_kdo
+  }
+
+  branch from udp_d_glucose side right {
+    udp_d_glucose
+    <-> . +mogroside_iiia +udp +hplus
+    mogroside_ivx
+  }
+
+  branch from udp_d_glucose side left {
+    udp_d_glucose
+    <-> . +mogroside_ivx +udp +hplus
+    mogroside_vx
+  }
+
+  branch from udp_d_galactose side right {
+    udp_d_galactose
+    <-> . +delphinidin +udp +hplus
+    delphinidin_3_o_d_galactoside
+  }
+
+  branch from udp_d_galactose side left {
+    udp_d_galactose
+    <-> . +pelargonidin +udp
+    pelargonidin_3_o_d_galactoside_betaine
   }
 }

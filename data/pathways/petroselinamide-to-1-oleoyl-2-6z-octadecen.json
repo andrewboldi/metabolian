@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "petroselinamide-to-1-oleoyl-2-6z-octadecen",
   "name": "petroselinamide to 1-oleoyl-2-(6Z)-octadecen…",
-  "category": "amino-acid-metabolism",
+  "category": "other",
   "summary": "A 3-step route from petroselinamide to 1-oleoyl-2-(6Z)-octadecenoyl-sn-glycero-3-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -119,116 +119,9 @@
       "xrefs": {
         "chebi": "CHEBI:75124"
       }
-    },
-    {
-      "id": "chorismate",
-      "name": "chorismate",
-      "formula": "C10H8O6",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:29748"
-      }
-    },
-    {
-      "id": "glutamine",
-      "name": "L-Glutamine",
-      "formula": "C5H10N2O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:58359"
-      }
-    },
-    {
-      "id": "4_amino_4_deoxychorismate",
-      "name": "4-amino-4-deoxychorismate",
-      "short": "4-amino-4-deoxychor…",
-      "formula": "C10H10NO5",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:58406"
-      }
-    },
-    {
-      "id": "glutamate",
-      "name": "L-Glutamate",
-      "formula": "C5H8NO4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:29985"
-      }
-    },
-    {
-      "id": "2_azaniumyl_2_deoxyisochorismate",
-      "name": "2-azaniumyl-2-deoxyisochorismate",
-      "short": "2-azaniumyl-2-deoxy…",
-      "formula": "C10H10NO5",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:58792"
-      }
-    },
-    {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:175763"
-      }
-    },
-    {
-      "id": "isoafricanol",
-      "name": "(+)-isoafricanol",
-      "formula": "C15H26O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:137522"
-      }
-    },
-    {
-      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
-      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
-      "short": "2-trans,6-trans,10-…",
-      "formula": "C20H33O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58756"
-      }
-    },
-    {
-      "id": "spiroviolene",
-      "name": "(−)-spiroviolene",
-      "formula": "C20H32",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:137523"
-      }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_2_6_1_123",
-      "name": "4-amino-4-deoxychorismate synthase (2-amino-4-deoxychorismate-forming)",
-      "ec": [
-        "2.6.1.123"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_157",
-      "name": "(+)-isoafricanol synthase",
-      "ec": [
-        "4.2.3.157"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_158",
-      "name": "(-)-spiroviolene synthase",
-      "ec": [
-        "4.2.3.158"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -354,189 +247,27 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "4-amino-4-deoxychorismate synthase (2-amino-4-deoxychorismate-forming)",
-      "equation": "chorismate + 2 L-glutamine + H2O = 4-amino-4-deoxychorismate + 2 L-glutamate + NH4(+)",
-      "ec": "2.6.1.123",
-      "substrates": [
-        {
-          "metabolite": "chorismate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glutamine",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "4_amino_4_deoxychorismate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glutamate",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_6_1_123"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:69528"
+      "id": "xt_6z_octadecenoyl_coa_6z-octadecenoyl-coa-to-palmitoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6z_octadecenoyl_coa"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "6z-octadecenoyl-coa-to-palmitoyl-coa"
+      },
+      "note": "Shares (6Z)-octadecenoyl-CoA with (6Z)-octadecenoyl-CoA to palmitoyl-CoA.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:69528"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "(2S)-2-amino-4-deoxychorismate + L-glutamine + H2O = 4-amino-4-deoxychorismate + L-glut...",
-      "equation": "(2S)-2-amino-4-deoxychorismate + L-glutamine + H2O = 4-amino-4-deoxychorismate + L-glutamate + NH4(+)",
-      "substrates": [
-        {
-          "metabolite": "2_azaniumyl_2_deoxyisochorismate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glutamine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "4_amino_4_deoxychorismate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glutamate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:69568"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:69568"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "(+)-isoafricanol synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate + H2O = (+)-isoafricanol + diphosphate",
-      "ec": "4.2.3.157",
-      "substrates": [
-        {
-          "metabolite": "fpp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "isoafricanol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_157"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:53616"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:53616"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "(-)-spiroviolene synthase",
-      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate = (-)-spiroviolene + diphosphate",
-      "ec": "4.2.3.158",
-      "substrates": [
-        {
-          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "spiroviolene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_158"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:53620"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:53620"
+            "db": "ChEBI",
+            "id": "CHEBI:75123"
           }
         ]
       }

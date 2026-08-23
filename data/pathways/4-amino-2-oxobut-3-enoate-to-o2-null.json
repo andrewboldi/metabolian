@@ -1,0 +1,493 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "4-amino-2-oxobut-3-enoate-to-o2-null",
+  "name": "4-amino-2-oxobut-3-enoate to O2",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from 4-amino-2-oxobut-3-enoate to O2, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR200204"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "4_amino_2_oxobut_3_enoate",
+      "name": "4-amino-2-oxobut-3-enoate",
+      "short": "4-amino-2-oxobut-3-…",
+      "formula": "C4H5NO3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1206732"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "formylpyruvate",
+      "name": "Formylpyruvate",
+      "formula": "C4H4O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:5159"
+      }
+    },
+    {
+      "id": "nh4",
+      "name": "NH4",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM729302"
+      }
+    },
+    {
+      "id": "formamide",
+      "name": "formamide",
+      "formula": "CH3NO",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1231"
+      }
+    },
+    {
+      "id": "4_formamido_2_oxobut_3_enoate",
+      "name": "4-formamido-2-oxobut-3-enoate",
+      "short": "4-formamido-2-oxobu…",
+      "formula": "C5H4NO4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1559965"
+      }
+    },
+    {
+      "id": "3_hydroxy_4h_pyrid_4_one",
+      "name": "3-hydroxy-4H-pyrid-4-one",
+      "short": "3-hydroxy-4H-pyrid-…",
+      "formula": "C5H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM722775"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR200204",
+      "substrates": [
+        {
+          "metabolite": "4_amino_2_oxobut_3_enoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "formylpyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh4",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR200204"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR200204"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR200201",
+      "substrates": [
+        {
+          "metabolite": "formamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formylpyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_formamido_2_oxobut_3_enoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR200201"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR200201"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR200200",
+      "substrates": [
+        {
+          "metabolite": "4_formamido_2_oxobut_3_enoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_hydroxy_4h_pyrid_4_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR200200"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR200200"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_4_amino_2_oxobut_3_enoate_2e-2-hydroxypenta-2-4-d-to-1-fluorocyclohexadie",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_amino_2_oxobut_3_enoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2e-2-hydroxypenta-2-4-d-to-1-fluorocyclohexadie"
+      },
+      "note": "Shares 4-amino-2-oxobut-3-enoate with (2E)-2-hydroxypenta-2,4-d… to 1-Fluorocyclohexadiene-ci….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1206732"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_amino_2_oxobut_3_enoate_4-amino-2-oxobut-3-enoate-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_amino_2_oxobut_3_enoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-amino-2-oxobut-3-enoate-to-o2"
+      },
+      "note": "Shares 4-amino-2-oxobut-3-enoate with 4-amino-2-oxobut-3-enoate to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1206732"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_amino_2_oxobut_3_enoate_4-methylheptan-3-ol-to-4as-10br-oxomaritidine-nu",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_amino_2_oxobut_3_enoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-methylheptan-3-ol-to-4as-10br-oxomaritidine-nu"
+      },
+      "note": "Shares 4-amino-2-oxobut-3-enoate with 4-Methylheptan-3-ol to (4aS,10bR)-oxomaritidine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1206732"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_formylpyruvate_4-amino-2-oxobut-3-enoate-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "formylpyruvate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-amino-2-oxobut-3-enoate-to-o2"
+      },
+      "note": "Shares Formylpyruvate with 4-amino-2-oxobut-3-enoate to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:5159"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_formylpyruvate_co2-to-pyruvate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "formylpyruvate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "co2-to-pyruvate-null"
+      },
+      "note": "Shares Formylpyruvate with CO2 to pyruvate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:5159"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_formylpyruvate_n-acetyl-beta-neuraminate-to-h",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "formylpyruvate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyl-beta-neuraminate-to-h"
+      },
+      "note": "Shares Formylpyruvate with N-acetyl-beta-neuraminate… to H.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:5159"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_formamide_4-amino-2-oxobut-3-enoate-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "formamide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-amino-2-oxobut-3-enoate-to-o2"
+      },
+      "note": "Shares formamide with 4-amino-2-oxobut-3-enoate to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1231"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_formamide_gamma-l-glutamyl-s-meth-to-fmn-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "formamide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gamma-l-glutamyl-s-meth-to-fmn-null"
+      },
+      "note": "Shares formamide with gamma-L-glutamyl-(S)-meth… to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1231"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_formamido_2_oxobut_3_enoate_2e-2-hydroxypenta-2-4-d-to-1-fluorocyclohexadie",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_formamido_2_oxobut_3_enoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2e-2-hydroxypenta-2-4-d-to-1-fluorocyclohexadie"
+      },
+      "note": "Shares 4-formamido-2-oxobut-3-enoate with (2E)-2-hydroxypenta-2,4-d… to 1-Fluorocyclohexadiene-ci….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1559965"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_formamido_2_oxobut_3_enoate_4-amino-2-oxobut-3-enoate-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_formamido_2_oxobut_3_enoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-amino-2-oxobut-3-enoate-to-o2"
+      },
+      "note": "Shares 4-formamido-2-oxobut-3-enoate with 4-amino-2-oxobut-3-enoate to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1559965"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_formamido_2_oxobut_3_enoate_4-methylheptan-3-ol-to-4as-10br-oxomaritidine-nu",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_formamido_2_oxobut_3_enoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-methylheptan-3-ol-to-4as-10br-oxomaritidine-nu"
+      },
+      "note": "Shares 4-formamido-2-oxobut-3-enoate with 4-Methylheptan-3-ol to (4aS,10bR)-oxomaritidine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1559965"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_hydroxy_4h_pyrid_4_one_25s-3alpha-7alpha-12alp-to-nad-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_hydroxy_4h_pyrid_4_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "25s-3alpha-7alpha-12alp-to-nad-null"
+      },
+      "note": "Shares 3-hydroxy-4H-pyrid-4-one with (25S)-3alpha,7alpha,12alp… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM722775"
+          }
+        ]
+      }
+    }
+  ]
+}

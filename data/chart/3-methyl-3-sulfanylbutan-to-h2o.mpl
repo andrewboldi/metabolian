@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-methyl-3-sulfanylbutan-to-h2o "3-methyl-3-sulfanylbutan-… to H2O" {
-  spacing 248
+  spacing 236
 
   spine at 0,0 {
     3_methyl_3_sulfanylbutan_1_ol
@@ -16,27 +16,15 @@ pathway 3-methyl-3-sulfanylbutan-to-h2o "3-methyl-3-sulfanylbutan-… to H2O" {
     gamma_glutamylfelinylglycine
   }
 
-  branch from felinine side left {
-    felinine
-    <-> ec_2_3_1_80 [2.3.1.80] +acetyl_coa +n_acetylfelinine
-    coa
+  branch from 2_aminoprop_2_enoate side left {
+    2_aminoprop_2_enoate
+    <-> . +6_chloro_2_phenyl_4_sulfanylpyrimidine
+    s_fenclorimyl_l_cysteine
   }
 
-  branch from felinine side right {
-    felinine
-    <-> ec_4_4_1_13 [4.4.1.13] +3_methyl_3_sulfanylbutan_1_ol +nh4 +h2o
-    pyruvate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    13z_docosenoate
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    cetoleic_acid
+  branch from 2_aminoprop_2_enoate side right {
+    2_aminoprop_2_enoate
+    <-> . +4_mercapto_4_methylpentan_2_one
+    s_4_oxo_2_methylpentan_2_yl_l_cysteine
   }
 }

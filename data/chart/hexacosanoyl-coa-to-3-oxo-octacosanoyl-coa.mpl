@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway hexacosanoyl-coa-to-3-oxo-octacosanoyl-coa "hexacosanoyl-CoA to 3-oxo-octacosanoyl-CoA" {
-  spacing 152
+  spacing 158
 
   spine at 0,0 {
     hexacosanoyl_coa
@@ -14,5 +14,11 @@ pathway hexacosanoyl-coa-to-3-oxo-octacosanoyl-coa "hexacosanoyl-CoA to 3-oxo-oc
     r_3_hydroxyoctacosanoyl_coa
     <-> . +nad -nadh -hplus
     3_oxo_octacosanoyl_coa
+  }
+
+  branch from hexacosanoyl_coa side left {
+    hexacosanoyl_coa
+    <-> . +fad +hplus +fadh2
+    trans_2_hexacosenoyl_coa
   }
 }

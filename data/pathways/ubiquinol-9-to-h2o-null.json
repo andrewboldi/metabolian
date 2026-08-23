@@ -1,0 +1,533 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "ubiquinol-9-to-h2o-null",
+  "name": "ubiquinol-9 to H2O",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from ubiquinol-9 to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR182395"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:84424"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "ubiquinol_9",
+      "name": "ubiquinol-9",
+      "formula": "C54H84O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:84424"
+      }
+    },
+    {
+      "id": "3_dehydroshikimate",
+      "name": "3-dehydroshikimate",
+      "formula": "C7H7O5",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM611"
+      }
+    },
+    {
+      "id": "ubiquinone_9",
+      "name": "ubiquinone-9",
+      "formula": "C54H82O4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1363635"
+      }
+    },
+    {
+      "id": "shikimate",
+      "name": "shikimate",
+      "formula": "C7H9O5",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM602"
+      }
+    },
+    {
+      "id": "trans_4_coumaroyl_coa",
+      "name": "trans-4-coumaroyl-CoA",
+      "short": "trans-4-coumaroyl-C…",
+      "formula": "C30H38N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:85008"
+      }
+    },
+    {
+      "id": "trans_4_coumaroylshikimate",
+      "name": "trans-4-coumaroylshikimate",
+      "short": "trans-4-coumaroylsh…",
+      "formula": "C16H15O7",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM2787"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "5_o_e_caffeoyl_shikimate",
+      "name": "5-O-[(E)-caffeoyl]-shikimate",
+      "short": "5-O-[(E)-caffeoyl]-…",
+      "formula": "C16H15O8",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM4499"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_5_8",
+      "name": "quinate/shikimate dehydrogenase (quinone)",
+      "ec": [
+        "1.1.5.8"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_133",
+      "name": "shikimate O-hydroxycinnamoyltransferase",
+      "ec": [
+        "2.3.1.133"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_36",
+      "name": "EC 1.14.13.36",
+      "ec": [
+        "1.14.13.36"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "quinate/shikimate dehydrogenase (quinone)",
+      "ec": "1.1.5.8",
+      "substrates": [
+        {
+          "metabolite": "ubiquinol_9",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_dehydroshikimate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ubiquinone_9",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "shikimate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_5_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR182395"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR182395"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "shikimate O-hydroxycinnamoyltransferase",
+      "ec": "2.3.1.133",
+      "substrates": [
+        {
+          "metabolite": "trans_4_coumaroyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "shikimate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_4_coumaroylshikimate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_133"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR195685"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR195685"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR149638",
+      "ec": "1.14.13.36",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "trans_4_coumaroylshikimate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_o_e_caffeoyl_shikimate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_36"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR149638"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR149638"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3_dehydroshikimate_3-5-dehydroshikimate-to-pulcherrimin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_dehydroshikimate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-5-dehydroshikimate-to-pulcherrimin"
+      },
+      "note": "Shares 3-dehydroshikimate with 3,5-Dehydroshikimate to pulcherrimin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM611"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_dehydroshikimate_3-5-didehydroshikimate-to-fad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_dehydroshikimate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-5-didehydroshikimate-to-fad"
+      },
+      "note": "Shares 3-dehydroshikimate with 3,5-didehydroshikimate to FAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM611"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_dehydroshikimate_4r-5r-4-5-dihydroxycycl-to-l-1-4-dithiothreitol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_dehydroshikimate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4r-5r-4-5-dihydroxycycl-to-l-1-4-dithiothreitol"
+      },
+      "note": "Shares 3-dehydroshikimate with (4R,5R)-4,5-dihydroxycycl… to L-1,4-dithiothreitol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM611"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_dehydroshikimate_5-dehydroshikimate-to-2-demethylmenaquinol-8",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_dehydroshikimate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-dehydroshikimate-to-2-demethylmenaquinol-8"
+      },
+      "note": "Shares 3-dehydroshikimate with 5-Dehydroshikimate to 2-demethylmenaquinol-8.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM611"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_shikimate_3-5-dehydroshikimate-to-pulcherrimin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "shikimate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-5-dehydroshikimate-to-pulcherrimin"
+      },
+      "note": "Shares shikimate with 3,5-Dehydroshikimate to pulcherrimin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM602"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_shikimate_3-5-didehydroshikimate-to-fad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "shikimate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-5-didehydroshikimate-to-fad"
+      },
+      "note": "Shares shikimate with 3,5-didehydroshikimate to FAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM602"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_shikimate_4r-5r-4-5-dihydroxycycl-to-l-1-4-dithiothreitol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "shikimate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4r-5r-4-5-dihydroxycycl-to-l-1-4-dithiothreitol"
+      },
+      "note": "Shares shikimate with (4R,5R)-4,5-dihydroxycycl… to L-1,4-dithiothreitol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM602"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_shikimate_5-dehydroshikimate-to-2-demethylmenaquinol-8",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "shikimate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-dehydroshikimate-to-2-demethylmenaquinol-8"
+      },
+      "note": "Shares shikimate with 5-Dehydroshikimate to 2-demethylmenaquinol-8.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM602"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_o_e_caffeoyl_shikimate_4r-5r-4-5-dihydroxycycl-to-l-1-4-dithiothreitol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_o_e_caffeoyl_shikimate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4r-5r-4-5-dihydroxycycl-to-l-1-4-dithiothreitol"
+      },
+      "note": "Shares 5-O-[(E)-caffeoyl]-shikimate with (4R,5R)-4,5-dihydroxycycl… to L-1,4-dithiothreitol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM4499"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_o_e_caffeoyl_shikimate_5-dehydroshikimate-to-2-demethylmenaquinol-8",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_o_e_caffeoyl_shikimate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-dehydroshikimate-to-2-demethylmenaquinol-8"
+      },
+      "note": "Shares 5-O-[(E)-caffeoyl]-shikimate with 5-Dehydroshikimate to 2-demethylmenaquinol-8.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM4499"
+          }
+        ]
+      }
+    }
+  ]
+}

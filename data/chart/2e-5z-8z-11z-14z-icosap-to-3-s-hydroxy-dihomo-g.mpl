@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2e-5z-8z-11z-14z-icosap-to-3-s-hydroxy-dihomo-g "(2E,5Z,8Z,11Z,14Z)-icosap… to 3(S)-Hydroxy-Dihomo-Gama-…" {
-  spacing 170
+  spacing 152
 
   spine at 0,0 {
     2e_5z_8z_11z_14z_icosapentaenoyl_coa
@@ -18,23 +18,5 @@ pathway 2e-5z-8z-11z-14z-icosap-to-3-s-hydroxy-dihomo-g "(2E,5Z,8Z,11Z,14Z)-icos
     2e_8z_11z_14z_icosatetraenoyl_coa
     <-> . +h2o
     3_s_hydroxy_dihomo_gama_linolenoyl_coenzyme_a
-  }
-
-  branch from 2_trans_cis_cis_cis_cis_4_8_11_14_eicosapentaeno side left {
-    2_trans_cis_cis_cis_cis_4_8_11_14_eicosapentaeno
-    <-> . +5z_8z_11z_14z_eicosatetraenoyl_coa +o2
-    h2o2
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_1_1_25 [1.1.1.25] +3_5_dehydroshikimate +nadph
-    3_dehydroshikimate
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +h +nadph +3_dehydroshikimate
-    3_5_didehydroshikimate
   }
 }

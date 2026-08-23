@@ -1,0 +1,619 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n4-acetylcytidine-to-d-ribose-1-5-bisphospha-629",
+  "name": "N4-acetylcytidine to α-D-ribose 1,5-bisphospha…",
+  "category": "nucleotide-metabolism",
+  "summary": "A 3-step route from N4-acetylcytidine to α-D-ribose 1,5-bisphosphate(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:62932"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:70989"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n4_acetylcytidine",
+      "name": "N4-acetylcytidine",
+      "formula": "C11H15N3O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:70989"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "cytidine",
+      "name": "cytidine",
+      "formula": "C9H13N3O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17562"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "Acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30089"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "cytosine",
+      "name": "cytosine",
+      "formula": "C4H5N3O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16040"
+      }
+    },
+    {
+      "id": "r1p",
+      "name": "alpha-D-Ribose 1-phosphate",
+      "short": "alpha-D-Ribose 1-P",
+      "formula": "C5H9O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57720"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "d_ribose_1_5_bisphosphate",
+      "name": "α-D-ribose 1,5-bisphosphate",
+      "short": "α-D-ribose…",
+      "formula": "C5H8O11P2",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:68688"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "n4_acetylcytidine_5_monophosphate",
+      "name": "N4-acetylcytidine 5'-monophosphate",
+      "short": "N4-acetylcytidine…",
+      "formula": "C11H14N3O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:149643"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_135",
+      "name": "N(4)-acetylcytidine amidohydrolase",
+      "ec": [
+        "3.5.1.135"
+      ]
+    },
+    {
+      "id": "ec_2_4_2_2",
+      "name": "pyrimidine-nucleoside phosphorylase",
+      "ec": [
+        "2.4.2.2"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_212",
+      "name": "alpha-D-ribose-1-phosphate 5-kinase (ADP)",
+      "ec": [
+        "2.7.1.212"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "N(4)-acetylcytidine amidohydrolase",
+      "equation": "N(4)-acetylcytidine + H2O = cytidine + acetate + H(+)",
+      "ec": "3.5.1.135",
+      "substrates": [
+        {
+          "metabolite": "n4_acetylcytidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cytidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_135"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:62932"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62932"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "pyrimidine-nucleoside phosphorylase",
+      "equation": "cytidine + phosphate = cytosine + alpha-D-ribose 1-phosphate",
+      "ec": "2.4.2.2",
+      "substrates": [
+        {
+          "metabolite": "cytidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cytosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "r1p",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_2_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:52540"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52540"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "alpha-D-ribose-1-phosphate 5-kinase (ADP)",
+      "equation": "alpha-D-ribose 1-phosphate + ADP = alpha-D-ribose 1,5-bisphosphate + AMP + H(+)",
+      "ec": "2.7.1.212",
+      "substrates": [
+        {
+          "metabolite": "r1p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_ribose_1_5_bisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_212"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:49416"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49416"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "N(4)-acetylcytidine + ATP = N(4)-acetylcytidine 5'-phosphate + ADP + H(+)",
+      "equation": "N(4)-acetylcytidine + ATP = N(4)-acetylcytidine 5'-phosphate + ADP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "n4_acetylcytidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n4_acetylcytidine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:63924"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63924"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_n4_acetylcytidine_n4-acetylcytidine-to-d-ribose-1-5-bisphospha",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n4_acetylcytidine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n4-acetylcytidine-to-d-ribose-1-5-bisphospha"
+      },
+      "note": "Shares N4-acetylcytidine with N4-acetylcytidine to α-D-ribose 1,5-bisphospha….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:70989"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cytidine_2-3-cyclic-cmp-to-cytidine-5-monophosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cytidine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3-cyclic-cmp-to-cytidine-5-monophosphate"
+      },
+      "note": "Shares cytidine with 2',3'-cyclic CMP to cytidine 5'-monophosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17562"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cytidine_2-3-cyclic-cmp-to-cytidine-5-monophosphate-41956",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cytidine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3-cyclic-cmp-to-cytidine-5-monophosphate-41956"
+      },
+      "note": "Shares cytidine with 2',3'-cyclic CMP to cytidine 5'-monophosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17562"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cytidine_2-3-cyclic-cmp-to-d-ribofuranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cytidine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3-cyclic-cmp-to-d-ribofuranose"
+      },
+      "note": "Shares cytidine with 2',3'-cyclic CMP to D-ribofuranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17562"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cytidine_2-3-cyclic-cmp-to-d-ribofuranose-27882",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cytidine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3-cyclic-cmp-to-d-ribofuranose-27882"
+      },
+      "note": "Shares cytidine with 2',3'-cyclic CMP to D-ribofuranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17562"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cytidine_2-amino-2-deoxy-d-gluconi-to-2-dehydro-3-deoxy-d",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cytidine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-amino-2-deoxy-d-gluconi-to-2-dehydro-3-deoxy-d"
+      },
+      "note": "Shares cytidine with 2-amino-2-deoxy-D-gluconi… to 2-dehydro-3-deoxy-D-arabi….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17562"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cytidine_n-acetylneuraminyl-2-3-to-cytidine-5-monophosph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cytidine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetylneuraminyl-2-3-to-cytidine-5-monophosph"
+      },
+      "note": "Shares cytidine with α-N-acetylneuraminyl-(2→3… to cytidine 5'-monophosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17562"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cytidine_n4-acetylcytidine-to-d-ribose-1-5-bisphospha",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cytidine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n4-acetylcytidine-to-d-ribose-1-5-bisphospha"
+      },
+      "note": "Shares cytidine with N4-acetylcytidine to α-D-ribose 1,5-bisphospha….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17562"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cytosine_2-3-cyclic-cmp-to-d-ribofuranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cytosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3-cyclic-cmp-to-d-ribofuranose"
+      },
+      "note": "Shares cytosine with 2',3'-cyclic CMP to D-ribofuranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16040"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cytosine_2-3-cyclic-cmp-to-d-ribofuranose-27882",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cytosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3-cyclic-cmp-to-d-ribofuranose-27882"
+      },
+      "note": "Shares cytosine with 2',3'-cyclic CMP to D-ribofuranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16040"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cytosine_2-c-methyl-d-erythritol-to-pseudouridine-5-phosp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cytosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-c-methyl-d-erythritol-to-pseudouridine-5-phosp"
+      },
+      "note": "Shares cytosine with 2-C-methyl-D-erythritol… to pseudouridine 5'-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16040"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cytosine_aldehydo-d-galactose-to-acetyl-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cytosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aldehydo-d-galactose-to-acetyl-phosphate"
+      },
+      "note": "Shares cytosine with aldehydo-D-galactose… to acetyl phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16040"
+          }
+        ]
+      }
+    }
+  ]
+}

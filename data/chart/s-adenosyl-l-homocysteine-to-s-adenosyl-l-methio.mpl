@@ -4,27 +4,81 @@
 # edit the generator, not this file.
 
 pathway s-adenosyl-l-homocysteine-to-s-adenosyl-l-methio "S-adenosyl-L-homocysteine to S-adenosyl-L-methionine" {
-  spacing 232
+  spacing 326
 
   spine at 0,0 {
     s_adenosyl_l_homocysteine
-    <-> ec_2_1_1_38 [2.1.1.38] +h +n_acetylpuromycin -n_acetyl_o_demethylpuromycin
+    <-> ec_2_1_1_285 [2.1.1.285] +novclobiocin_104 +h -novclobiocin_105
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +n_acetyl_o_demethylpuromycin -s_adenosyl_l_methionine
-    n_acetyl_n6_o_didemethylpuromycin
-    <-> . +s_adenosyl_l_homocysteine +h -s_adenosyl_l_methionine
-    n_acetyl_n6_n6_o_tridemethylpuromycin
+    <-> ec_2_4_1_302 [2.4.1.302] +dtdp +h +novclobiocin_105 -dtdp_4_o_demethyl_beta_l_noviose
+    chlorobiocic_acid
+    <-> . +s_adenosyl_l_homocysteine +h +dtdp_4_o_demethyl_beta_l_noviose -s_adenosyl_l_methionine
+    dtdp_beta_l_rhamnose
   }
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> ec_3_13_1_8 [3.13.1.8] +adenosine +h +l_methionine
-    h2o
+    <-> ec_2_1_1_142 [2.1.1.142] +s_adenosyl_l_homocysteine +h +24r_24_methylcycloart_25_en_3beta_ol
+    cycloartenol
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +n_methylwelwitindolinone_c_isothiocyanate +h
-    welwitindolinone_c_isothiocyanate
+    <-> . +s_adenosyl_l_homocysteine +ajmaline
+    norajmaline
+  }
+
+  branch from chlorobiocic_acid side left {
+    chlorobiocic_acid
+    <-> . +3_dimethylallyl_4_hydroxybenzoate +h +3_amino_4_7_dihydroxy_8_chlorocoumarin
+    h2o
+  }
+
+  branch from dtdp_beta_l_rhamnose side right {
+    dtdp_beta_l_rhamnose
+    <-> . +h
+    dtdp_l_dihydrostreptose
+  }
+
+  branch from dtdp_beta_l_rhamnose side left {
+    dtdp_beta_l_rhamnose
+    <-> . +nadh +dtdp_4_dehydro_6_deoxy_alpha_d_glucose +h
+    nad
+  }
+
+  branch from s_adenosyl_l_homocysteine side right {
+    s_adenosyl_l_homocysteine
+    <-> . +h +ajmaline +s_adenosyl_l_methionine
+    norajmaline
+  }
+
+  branch from s_adenosyl_l_homocysteine side left {
+    s_adenosyl_l_homocysteine
+    <-> ec_2_1_1_150 [2.1.1.150] +h +7_methoxyisoflavone +s_adenosyl_l_methionine
+    7_hydroxyisoflavone
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_1_1_73 [3.1.1.73] +e_4_coumaric_acid_methyl_ester +h2o +methanol
+    4_coumarate
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_4_1_38 [2.4.1.38] +udp +n_acetyllactosamine +n_acetyl_beta_d_glucosamine
+    udp_alpha_d_galactose
+  }
+
+  branch from s_adenosyl_l_methionine side right {
+    s_adenosyl_l_methionine
+    <-> ec_2_1_1_210 [2.1.1.210] +s_adenosyl_l_homocysteine +h +3_4_dihydrospheroidene
+    1_hydroxy_all_trans_1_2_dihydro_neurosporene
+  }
+
+  branch from s_adenosyl_l_methionine side left {
+    s_adenosyl_l_methionine
+    <-> ec_2_1_1_196 [2.1.1.196] +s_adenosyl_l_homocysteine +co2 +co_precorrin_7
+    cobalt_precorrin_6b
   }
 }

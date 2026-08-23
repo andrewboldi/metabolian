@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n2-acetyl-l-ornithine-to-d-ribulose "N2-acetyl-L-ornithine to D-ribulose" {
-  spacing 336
+  spacing 340
 
   spine at 0,0 {
     n2_acetyl_l_ornithine
@@ -32,50 +32,38 @@ pathway n2-acetyl-l-ornithine-to-d-ribulose "N2-acetyl-L-ornithine to D-ribulose
 
   branch from citrulline side left {
     citrulline
-    <-> . +n5_hydroxyamino_imino_methyl_l_ornithinium +nadh +o2 +nad +h2o +hplus
-    no
+    <-> . +l_cysteine +n5_hydroxyamino_imino_methyl_l_ornithinium +o2 +h2o +hplus
+    s_nitroso_l_cysteine
   }
 
   branch from citrulline side right {
     citrulline
-    <-> ec_1_14_14_47 [1.14.14.47] +fmnh2 +arginine +o2 +no +h2o +hplus
-    fmn
-  }
-
-  branch from acetate side left {
-    acetate
-    <-> . +3_hydroxy_3_4_hydroxyphenyl_propanoate
-    4_hydroxybenzaldehyde
-  }
-
-  branch from acetate side right {
-    acetate
-    <-> . +ac_o_9_sialylglycoconjugate_anion +h2o +hplus
-    sialylglycoconjugate_anion
+    <-> . +arginine +nadph +o2 +s_nitroso_l_cysteine +nadp +h2o
+    l_cysteine
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_56 [4.2.3.56] +fpp
-    humulene
+    <-> ec_4_2_3_78 [4.2.3.78] +fpp
+    chamigrene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_56 [4.2.3.56] +fpp
-    sibirene
+    <-> ec_4_2_3_86 [4.2.3.86] +fpp
+    7_epi_selinene
   }
 
   branch from arginine side left {
     arginine
-    <-> ec_4_1_1_19 [4.1.1.19] +hplus +co2
-    agmatinium
+    <-> . +nadh +o2 +hplus +nad +h2o
+    n5_hydroxyamino_imino_methyl_l_ornithinium
   }
 
   branch from arginine side right {
     arginine
-    <-> ec_5_1_1_9 [5.1.1.9]
-    d_argininium
+    <-> ec_1_4_1_25 [1.4.1.25] +nad +h2o +nh3 +nadh +hplus
+    5_guanidino_2_oxopentanoic_acid
   }
 
   branch from n3_fumaroyl_s_2_3_diaminopropanoate side left {
@@ -86,14 +74,14 @@ pathway n2-acetyl-l-ornithine-to-d-ribulose "N2-acetyl-L-ornithine to D-ribulose
 
   branch from phosphonatoenolpyruvate side right {
     phosphonatoenolpyruvate
-    <-> ec_2_5_1_56 [2.5.1.56] +n_acetyl_d_mannosamine +h2o +pi
-    n_acetylneuraminate
+    <-> ec_2_7_1_40 [2.7.1.40] +datp +pyruvate +hplus
+    dadp
   }
 
   branch from phosphonatoenolpyruvate side left {
     phosphonatoenolpyruvate
-    <-> ec_2_7_7_105 [2.7.7.105] +gtp +hplus +ppi
-    enolpyruvoyl_2_diphospho_5_guanosine
+    <-> . +dgtp +pyruvate +hplus
+    dgdp
   }
 
   branch from 3_deoxy_d_manno_oct_2_ulosonate side right {
@@ -112,5 +100,89 @@ pathway n2-acetyl-l-ornithine-to-d-ribulose "N2-acetyl-L-ornithine to D-ribulose
     d_arabinopyranose
     <-> ec_4_1_2_23 [4.1.2.23] +pyruvate
     3_deoxy_d_manno_octulosonate
+  }
+
+  branch from carbamoyl_p side left {
+    carbamoyl_p
+    <-> ec_2_1_3_6 [2.1.3.6] +1_4_butanediammonium +pi +hplus
+    n_carbamoylputrescinium
+  }
+
+  branch from carbamoyl_p side right {
+    carbamoyl_p
+    <-> ec_2_1_3_5 [2.1.3.5] +oxamate +pi
+    oxalurate
+  }
+
+  branch from citrulline side left {
+    citrulline
+    <-> . +arginine +adp +pi +hplus +atp
+    nh3
+  }
+
+  branch from aspartate side right {
+    aspartate
+    <-> ec_1_4_3_16 [1.4.3.16] +o2 +h2o2
+    iminoaspartate
+  }
+
+  branch from aspartate side left {
+    aspartate
+    <-> . +ala_asp +h2o
+    alanine
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_76 [4.2.3.76] +fpp
+    selinene
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_77 [4.2.3.77] +fpp
+    germacrene_d
+  }
+
+  branch from arginine side right {
+    arginine
+    <-> ec_2_1_1_381 [2.1.1.381] +sam +sah +hplus
+    2s_2_ammonio_5_iminio_methylamino_methyl_amino
+  }
+
+  branch from arginine side left {
+    arginine
+    <-> ec_6_2_1_63 [6.2.1.63] +holo-acp +atp +amp +ppi
+    o_s_l_arginyl_pantetheine_4_phosphoryl_serine_1
+  }
+
+  branch from 3_amino_l_alanine side right {
+    3_amino_l_alanine
+    <-> ec_6_3_2_54 [6.3.2.54] +citrate +atp +amp +ppi
+    2_l_alanin_3_ylcarbamoyl_methyl_2_hydroxybutaned
+  }
+
+  branch from oxaloacetate side left {
+    oxaloacetate
+    <-> ec_4_1_3_34 [4.1.3.34] +acetyl_coa
+    3s_citryl_coa
+  }
+
+  branch from oxaloacetate side right {
+    oxaloacetate
+    <-> ec_2_3_3_8 [2.3.3.8] +acetyl_coa +adp +pi +atp +coa
+    citrate
+  }
+
+  branch from phosphonatoenolpyruvate side left {
+    phosphonatoenolpyruvate
+    <-> ec_2_7_1_40 [2.7.1.40] +ctp +pyruvate +hplus
+    cdp
+  }
+
+  branch from phosphonatoenolpyruvate side right {
+    phosphonatoenolpyruvate
+    <-> ec_2_7_1_40 [2.7.1.40] +itp +pyruvate +hplus
+    idp
   }
 }

@@ -103,44 +103,6 @@
       "xrefs": {
         "chebi": "CHEBI:16583"
       }
-    },
-    {
-      "id": "4_maleylacetoacetate",
-      "name": "4-maleylacetoacetate",
-      "formula": "C8H6O6",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM1372022"
-      }
-    },
-    {
-      "id": "3_5_dioxooctanedioic_acid",
-      "name": "3,5-dioxooctanedioic acid",
-      "short": "3,5-dioxooctanedioi…",
-      "formula": "C8H10O6",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:87999"
-      }
-    },
-    {
-      "id": "4_fumarylacetoacetate",
-      "name": "4-fumarylacetoacetate",
-      "short": "4-fumarylacetoaceta…",
-      "formula": "C8H6O6",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM1372023"
-      }
-    },
-    {
-      "id": "r_acetoin",
-      "name": "(R)-acetoin",
-      "formula": "C4H8O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:15686"
-      }
     }
   ],
   "enzymes": [
@@ -149,7 +111,10 @@
       "name": "(R,R)-butanediol dehydrogenase",
       "ec": [
         "1.1.1.4"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q00796"
+      }
     },
     {
       "id": "ec_1_1_1_304",
@@ -299,130 +264,203 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "Reaction MNXR162791",
-      "substrates": [
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "4_maleylacetoacetate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 3
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_5_dioxooctanedioic_acid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR162791"
+      "id": "xt_acetoin_4-2-iminoethyl-phenol-to-2-4-hydroxyphenyl-ethan",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acetoin"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "4-2-iminoethyl-phenol-to-2-4-hydroxyphenyl-ethan"
+      },
+      "note": "Shares acetoin with 4-(2-iminoethyl)phenol to 2-(4-hydroxyphenyl)ethanol.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR162791"
+            "id": "MNXM1092472"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "Reaction MNXR162792",
-      "substrates": [
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "4_fumarylacetoacetate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 3
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_5_dioxooctanedioic_acid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR162792"
+      "id": "xt_acetoin_6-acetamido-2-oxohexanoate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acetoin"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "6-acetamido-2-oxohexanoate-to-h2o"
+      },
+      "note": "Shares acetoin with 6-acetamido-2-oxohexanoate to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR162792"
+            "id": "MNXM1092472"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "(R,S)-butane-2,3-diol + NAD(+) = (R)-acetoin + NADH + H(+)",
-      "equation": "(R,S)-butane-2,3-diol + NAD(+) = (R)-acetoin + NADH + H(+)",
-      "substrates": [
-        {
-          "metabolite": "meso_butane_2_3_diol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "r_acetoin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:75423"
+      "id": "xt_acetoin_9-10-dihydroxybenzo-a-pyr-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acetoin"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "9-10-dihydroxybenzo-a-pyr-to-h2o"
+      },
+      "note": "Shares acetoin with 9,10-Dihydroxybenzo[a]pyr… to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:75423"
+            "db": "MetaNetX",
+            "id": "MNXM1092472"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_acetoin_acetoin-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acetoin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetoin-to-nad"
+      },
+      "note": "Shares acetoin with acetoin to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1092472"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_acetoin_garbanzol-to-2-hydroxyliquiritigenin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acetoin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "garbanzol-to-2-hydroxyliquiritigenin"
+      },
+      "note": "Shares acetoin with garbanzol to 2-hydroxyliquiritigenin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1092472"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_meso_butane_2_3_diol_1-chlorohexane-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "meso_butane_2_3_diol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-chlorohexane-to-h2o"
+      },
+      "note": "Shares meso-butane-2,3-diol with 1-Chlorohexane to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75460"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_meso_butane_2_3_diol_s-s-butane-2-3-diol-to-butane-2-3-dione",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "meso_butane_2_3_diol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-s-butane-2-3-diol-to-butane-2-3-dione"
+      },
+      "note": "Shares meso-butane-2,3-diol with (S,S)-butane-2,3-diol to butane-2,3-dione.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75460"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_acetoin_s-s-butane-2-3-diol-to-butane-2-3-dione",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_acetoin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-s-butane-2-3-diol-to-butane-2-3-dione"
+      },
+      "note": "Shares (S)-acetoin with (S,S)-butane-2,3-diol to butane-2,3-dione.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15687"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_butane_2_3_dione_s-s-butane-2-3-diol-to-butane-2-3-dione",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "butane_2_3_dione"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-s-butane-2-3-diol-to-butane-2-3-dione"
+      },
+      "note": "Shares butane-2,3-dione with (S,S)-butane-2,3-diol to butane-2,3-dione.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16583"
           }
         ]
       }

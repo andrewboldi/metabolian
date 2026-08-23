@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway propanoate-to-d-threonine "propanoate to D-threonine" {
-  spacing 212
+  spacing 290
 
   spine at 0,0 {
     propanoate
@@ -18,61 +18,139 @@ pathway propanoate-to-d-threonine "propanoate to D-threonine" {
 
   branch from h2o side left {
     h2o
-    <-> ec_3_4_14_5 [3.4.14.5] +glycyl_l_proline_2_naphthylamide +2_naphthylamine
-    gly_pro
+    <-> . +13s_hydroperoxy_9z_11e_octadecadienoate
+    11z_etheroleate
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_182 [3.2.1.182] +dimboa +beta_d_glucose
-    dimboa_beta_d_glucoside
-  }
-
-  branch from 2_oxobutanoate side left {
-    2_oxobutanoate
-    <-> ec_1_4_3_2 [1.4.3.2] +nh4 +h2o2 +o2 +h2o
-    2s_2_aminobutanoate
-  }
-
-  branch from 2_oxobutanoate side right {
-    2_oxobutanoate
-    <-> ec_4_4_1_1 [4.4.1.1] +nh4 +l_cysteine +h2o
-    d_cystathionine
+    <-> . +2_amino_5_oxohexanoate
+    1_pyrroline_2_methyl_5_carboxylate
   }
 
   branch from h side left {
     h
-    <-> ec_1_14_13_208 [1.14.13.208] +benzoyl_coa +o2 +nadph +2_3_dihydroxy_2_3_dihydrobenzoyl_coa
-    nadp
+    <-> ec_3_1_2_20 [3.1.2.20] +firefly_d_luciferin +coa +h2o
+    d_firefly_luciferyl_coa
   }
 
   branch from h side right {
     h
-    <-> ec_1_14_14_25 [1.14.14.25] +24s_24_hydroxycholesterol +o2 +nadph +nadp +h2o
-    dihydroxycholesterol
+    <-> ec_2_3_3_20 [2.3.3.20] +tetradecanoyl_coa +h2o +2r_2_dodecyl_3_oxohexadecanoate
+    coa
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_14_1 [1.14.14.1] +diclofenac +h +nadph +nadp +h2o
-    4_hydroxydiclofenac
+    <-> ec_1_14_13_122 [1.14.13.122] +chlorophyllide_a +h +nadph +nadp +h2o
+    chlorophyllide_b
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_14_25 [1.14.14.25] +testosterone +h +nadph +nadp +h2o
-    2_hydroxytestosterone
+    <-> ec_1_5_3_22 [1.5.3.22] +coenzyme_gamma_f420_2 +h2o
+    1_5_dihydrocoenzyme_f420
   }
 
   branch from phosphate side left {
     phosphate
-    <-> . +l_glutamate_5_semialdehyde +h +nad +d_alpha_glutamyl_phosphate
-    nadh
+    <-> ec_3_1_3_73 [3.1.3.73] +5_methylbenzimidazolyl_cobamide_5_phosphate +h2o
+    5_methylbenzimidazolyl_cobamide
   }
 
   branch from phosphate side right {
     phosphate
-    <-> . +l_glutamate_5_semialdehyde +h +nadp +d_alpha_glutamyl_phosphate
-    nadph
+    <-> ec_3_1_3_73 [3.1.3.73] +coalpha_alpha_5_hydroxybenzimidazolyl_cobeta_ade +h2o
+    coalpha_alpha_5_hydroxybenzimidazolyl_cobeta_ade
+  }
+
+  branch from propanoate side left {
+    propanoate
+    <-> ec_4_1_3_32 [4.1.3.32] +pyruvate
+    2r_3s_2_3_dimethylmalate
+  }
+
+  branch from h side right {
+    h
+    <-> . +alpha_d_glucosamine_6_phosphate +pyruvate +phosphoenolpyruvate
+    beta_d_glucosamine
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_2_2_14 [3.2.2.14] +alpha_d_ribofuranose_5_phosphate +nicotinamide +h2o
+    beta_nicotinamide_d_ribonucleotide
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> . +6_dehydro_scb3 +h2o
+    3s_4r_4_6_methyloctanoyl_5_oxooxolan_3_yl_methy
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +myo_inositol +h2o
+    1d_myo_inositol_hexakisphosphate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +deoxyflexixanthin
+    dihydroxydeoxyflexixanthin
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +3_1h_indol_3_yl_propanoate_cation_radical +indole_3_propanoate
+    hydrogen_oxide
+  }
+
+  branch from co2 side right {
+    co2
+    <-> ec_4_1_1_114 [4.1.1.114] +3z_6z_9z_12z_15z_19z_22z_25z_28z_hentriaconta_3
+    3_3z_6z_9z_12z_pentadeca_3_6_9_12_tetraen_1_yl_4
+  }
+
+  branch from co2 side left {
+    co2
+    <-> . +coelenterazine_disulfonate_dioxetanone
+    oxidized_watasenia_luciferin
+  }
+
+  branch from h2o2 side right {
+    h2o2
+    <-> ec_1_13_99_3 [1.13.99.3] +co2 +2r_2_hydroxy_2_indol_3_yl_acetaldehyde +nh4 +h +o2 +h2o
+    l_tryptophan
+  }
+
+  branch from h2o2 side left {
+    h2o2
+    <-> ec_1_7_3_5 [1.7.3.5] +nitrite +3_oxopropanoate +h +o2 +h2o
+    3_nitropropanoate
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_5_3_22 [1.5.3.22] +coenzyme_gamma_f420_2 +h2o +h
+    reduced_coenzyme_f420
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_14_13_190 [1.14.13.190] +h +nadph +miltiradiene +nadp +h2o
+    ferruginol
+  }
+
+  branch from nh4 side right {
+    nh4
+    <-> . +colibactin +h +h2o
+    precolibactin_16b
+  }
+
+  branch from nh4 side left {
+    nh4
+    <-> . +hydrogen_acetylphosphonate +phosphate +h +h2o
+    1_amino_2_phosphorylethylphosphonate
   }
 }

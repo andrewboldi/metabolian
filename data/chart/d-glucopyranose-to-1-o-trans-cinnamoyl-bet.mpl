@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-glucopyranose-to-1-o-trans-cinnamoyl-bet "D-glucopyranose to 1-O-(trans-cinnamoyl)-bet…" {
-  spacing 232
+  spacing 256
 
   spine at 0,0 {
     glucose
@@ -16,10 +16,75 @@ pathway d-glucopyranose-to-1-o-trans-cinnamoyl-bet "D-glucopyranose to 1-O-(tran
     ethanol
   }
 
+  branch from 1_o_trans_cinnamoyl_beta_d_glucose side left {
+    1_o_trans_cinnamoyl_beta_d_glucose
+    <-> ec_2_3_1_152 [2.3.1.152] +beta_d_glucose +methyl_trans_cinnamate
+    methanol
+  }
 
+  branch from 1_o_trans_cinnamoyl_beta_d_glucose side right {
+    1_o_trans_cinnamoyl_beta_d_glucose
+    <-> ec_2_3_1_152 [2.3.1.152] +alpha_d_glucose +methanol
+    methyl_trans_cinnamate
+  }
 
+  branch from glucose side left {
+    glucose
+    <-> ec_1_1_3_10 [1.1.3.10] +2_dehydro_d_glucose +2_6_dimethyl_1_4_benzenediol
+    2_6_dimethyl_1_4_benzoquinone
+  }
 
+  branch from glucose side right {
+    glucose
+    <-> ec_1_1_3_10 [1.1.3.10] +2_dehydro_d_glucose +toluquinol
+    2_methyl_1_4_benzoquinone
+  }
 
+  branch from ethanol side left {
+    ethanol
+    <-> ec_3_1_1_1 [3.1.1.1] +l_phenylalanine +h2o
+    ethyl_l_phenylalaninate
+  }
 
+  branch from ethanol side right {
+    ethanol
+    <-> ec_3_1_1_1 [3.1.1.1] +h +n_acetyl_l_phenylalanine +h2o
+    n_acetyl_l_phenylalanine_ethyl_ester
+  }
 
+  branch from glucose side left {
+    glucose
+    <-> ec_1_1_3_10 [1.1.3.10] +2_dehydro_d_glucose +compound_0045496
+    tetrafluoro_1_4_benzoquinone
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> ec_3_2_1_21 [3.2.1.21] +pyridoxine +h2o
+    5_o_beta_d_glucosylpyridoxine
+  }
+
+  branch from ethanol side left {
+    ethanol
+    <-> ec_3_4_21_62 [3.4.21.62] +n_acetyl_l_tyrosine +h2o
+    ethyl_n_acetyl_l_tyrosinate
+  }
+
+  branch from ethanol side right {
+    ethanol
+    <-> ec_3_4_16_5 [3.4.16.5] +n_benzoyl_l_tyrosine +h2o
+    ethyl_n_benzoyl_l_tyrosinate
+  }
+
+  branch from alpha_d_glucose side left {
+    alpha_d_glucose
+    <-> ec_3_2_1_20 [3.2.1.20] +h2o
+    2_alpha_d_glucosyl_d_glucose
+  }
+
+  branch from alpha_d_glucose side right {
+    alpha_d_glucose
+    <-> ec_3_2_1_20 [3.2.1.20] +maltoheptaose +h2o
+    maltohexaose
+  }
 }

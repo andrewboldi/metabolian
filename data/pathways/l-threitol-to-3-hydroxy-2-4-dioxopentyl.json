@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "l-threitol-to-3-hydroxy-2-4-dioxopentyl",
   "name": "L-threitol to 3-hydroxy-2,4-dioxopentyl…",
-  "category": "nucleotide-metabolism",
+  "category": "other",
   "summary": "A 4-step route from L-threitol to 3-hydroxy-2,4-dioxopentyl phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -155,72 +155,6 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:16526"
-      }
-    },
-    {
-      "id": "s_reticulinium",
-      "name": "(S)-reticulinium",
-      "formula": "C19H24NO4",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:57873"
-      }
-    },
-    {
-      "id": "akg",
-      "name": "2-Oxoglutarate",
-      "formula": "C5H4O5",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:16810"
-      }
-    },
-    {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:15379"
-      }
-    },
-    {
-      "id": "s_6_o_demethylreticuline",
-      "name": "(S)-6-O-demethylreticuline",
-      "short": "6-O-demethylreticul…",
-      "formula": "C18H22NO4",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:194502"
-      }
-    },
-    {
-      "id": "succinate",
-      "name": "Succinate",
-      "formula": "C4H4O4",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:30031"
-      }
-    },
-    {
-      "id": "n1_methyladenosine_5_monophosphate_1",
-      "name": "N1-methyladenosine 5'-monophosphate(1−)",
-      "short": "N1-methyladenosine…",
-      "formula": "C11H13N5O6P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:74491"
-      }
-    },
-    {
-      "id": "adenosine_5_monophosphate_1",
-      "name": "adenosine 5'-monophosphate(1−)",
-      "short": "adenosine 5'-MP(1−)",
-      "formula": "C10H11N5O6P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:74411"
       }
     }
   ],
@@ -477,105 +411,115 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r6",
-      "name": "(S)-reticuline + 2-oxoglutarate + O2 = (S)-6-O-demethylreticuline + formaldehyde + succ...",
-      "equation": "(S)-reticuline + 2-oxoglutarate + O2 = (S)-6-O-demethylreticuline + formaldehyde + succinate + CO2",
-      "substrates": [
-        {
-          "metabolite": "s_reticulinium",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "s_6_o_demethylreticuline",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "formaldehyde",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "succinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:76027"
+      "id": "xt_l_erythrulose_d-apiose-to-d-fructofuranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_erythrulose"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "d-apiose-to-d-fructofuranose"
+      },
+      "note": "Shares L-erythrulose with D-apiose to β-D-fructofuranose….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:76027"
+            "db": "ChEBI",
+            "id": "CHEBI:27913"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "N(1)-methyladenosine(58) in tRNA + 2-oxoglutarate + O2 = adenosine(58) in tRNA + formal...",
-      "equation": "N(1)-methyladenosine(58) in tRNA + 2-oxoglutarate + O2 = adenosine(58) in tRNA + formaldehyde + succinate + CO2",
-      "substrates": [
-        {
-          "metabolite": "n1_methyladenosine_5_monophosphate_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "adenosine_5_monophosphate_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "formaldehyde",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "succinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:79019"
+      "id": "xt_l_erythrulose_1_phosphate_erythritol-to-d-erythrulose-4-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_erythrulose_1_phosphate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "erythritol-to-d-erythrulose-4-phosphate"
+      },
+      "note": "Shares L-erythrulose 1-phosphate with erythritol to D-erythrulose 4-phosphate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:79019"
+            "db": "ChEBI",
+            "id": "CHEBI:58002"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_hydroxy_2_4_dioxopentyl_phosphate_dihydrophloroglucinol-to-3-hydroxy-2-4-dioxopent",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_hydroxy_2_4_dioxopentyl_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dihydrophloroglucinol-to-3-hydroxy-2-4-dioxopent"
+      },
+      "note": "Shares 3-hydroxy-2,4-dioxopentyl phosphate with dihydrophloroglucinol to 3-hydroxy-2,4-dioxopentyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84359"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_oxoisoapionate_4_phosphate_d-apiose-to-d-fructofuranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_oxoisoapionate_4_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-apiose-to-d-fructofuranose"
+      },
+      "note": "Shares 3-oxoisoapionate 4-phosphate with D-apiose to β-D-fructofuranose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:141357"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_oxoisoapionate_4_phosphate_d-galactose-to-2-o-d-mannosyl-1-2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_oxoisoapionate_4_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-galactose-to-2-o-d-mannosyl-1-2"
+      },
+      "note": "Shares 3-oxoisoapionate 4-phosphate with α-D-galactose to 2-O-[α-D-mannosyl-(1→2)-α….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:141357"
           }
         ]
       }

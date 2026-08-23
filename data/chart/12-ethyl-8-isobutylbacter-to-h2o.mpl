@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 12-ethyl-8-isobutylbacter-to-h2o "12-ethyl-8-isobutylbacter… to H2O" {
-  spacing 200
+  spacing 152
 
   spine at 0,0 {
     12_ethyl_8_isobutylbacteriochlorophyll_e
@@ -14,53 +14,5 @@ pathway 12-ethyl-8-isobutylbacter-to-h2o "12-ethyl-8-isobutylbacter… to H2O" {
     12_ethyl_71_71_dihydroxy_8_isobutylbacteriochlor
     <-> . +5_deoxyadenosine +h +l_methionine -s_adenosyl_l_methionine -h2o
     12_ethyl_71_hydroxy_8_isobutylbacteriochlorophyl
-  }
-
-  branch from 2e_6e_farnesyl_diphosphate side left {
-    2e_6e_farnesyl_diphosphate
-    <-> ec_4_2_3_204 [4.2.3.204] +diphosphate +h2o
-    valerianol
-  }
-
-  branch from 2e_6e_farnesyl_diphosphate side right {
-    2e_6e_farnesyl_diphosphate
-    <-> . +diphosphate
-    alpha_selinene
-  }
-
-  branch from h side left {
-    h
-    <-> . +l_lysine +l_valine +l_phenylalanine +h2o
-    lys_val_phe
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +midazolam +phosphate +midazolam +h2o
-    atp
-  }
-
-  branch from s_adenosyl_l_methionine side left {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +3_2_aminoethyl_sulfanyl_6_methyl_7_oxo_1_azabicy +h
-    5s_3_2_aminoethylsulfanyl_7_oxo_1_azabicyclo_3
-  }
-
-  branch from s_adenosyl_l_methionine side right {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +3_2_aminoethyl_sulfanyl_6_ethyl_7_oxo_1_azabicyc +h
-    3_2_aminoethyl_sulfanyl_6_methyl_7_oxo_1_azabicy
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_aspartate +l_isoleucine
-    isolecyl_aspartate
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_proline +l_lysine +l_isoleucine
-    isolecyl_prolyl_lysine
   }
 }

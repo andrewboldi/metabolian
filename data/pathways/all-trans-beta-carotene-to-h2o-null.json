@@ -1,0 +1,445 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "all-trans-beta-carotene-to-h2o-null",
+  "name": "all-trans-beta-carotene to H2O",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from all-trans-beta-carotene to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR120096"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "all_trans_beta_carotene",
+      "name": "all-trans-beta-carotene",
+      "short": "all-trans-beta-caro…",
+      "formula": "C40H56",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1108250"
+      }
+    },
+    {
+      "id": "plastoquinone_9",
+      "name": "plastoquinone-9",
+      "formula": "C53H80O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM732531"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "echinenone",
+      "name": "echinenone",
+      "formula": "C40H54O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4746"
+      }
+    },
+    {
+      "id": "plastoquinol_9",
+      "name": "plastoquinol-9",
+      "formula": "C53H82O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM6387"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "canthaxanthin",
+      "name": "canthaxanthin",
+      "formula": "C40H52O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:3362"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "2_2_dihydroxycanthaxanthin",
+      "name": "2,2'-dihydroxycanthaxanthin",
+      "short": "2,2'-dihydroxycanth…",
+      "formula": "C40H52O4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM147701"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_99_63",
+      "name": "beta-carotene 4-ketolase",
+      "ec": [
+        "1.14.99.63"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR120096",
+      "substrates": [
+        {
+          "metabolite": "all_trans_beta_carotene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "plastoquinone_9",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "echinenone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "plastoquinol_9",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR120096"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR120096"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "beta-carotene 4-ketolase",
+      "equation": "echinenone + 2 AH2 + 2 O2 = canthaxanthin + 2 A + 3 H2O",
+      "ec": "1.14.99.63",
+      "substrates": [
+        {
+          "metabolite": "echinenone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "canthaxanthin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_99_63"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:55664"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55664"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR120093",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "canthaxanthin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_2_dihydroxycanthaxanthin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR120093"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR120093"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_canthaxanthin_4-hydroxyechinenone-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "canthaxanthin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxyechinenone-to-h2o"
+      },
+      "note": "Shares canthaxanthin with 4'-hydroxyechinenone to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:3362"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_canthaxanthin_4-hydroxyechinenone-to-h2o-45268",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "canthaxanthin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxyechinenone-to-h2o-45268"
+      },
+      "note": "Shares canthaxanthin with 4'-hydroxyechinenone to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:3362"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_canthaxanthin_all-trans-beta-carotene-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "canthaxanthin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "all-trans-beta-carotene-to-h2o"
+      },
+      "note": "Shares canthaxanthin with all-trans-beta-carotene to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:3362"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_2_dihydroxycanthaxanthin_4-hydroxyechinenone-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_2_dihydroxycanthaxanthin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxyechinenone-to-h2o"
+      },
+      "note": "Shares 2,2'-dihydroxycanthaxanthin with 4'-hydroxyechinenone to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM147701"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_2_dihydroxycanthaxanthin_4-hydroxyechinenone-to-h2o-45268",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_2_dihydroxycanthaxanthin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxyechinenone-to-h2o-45268"
+      },
+      "note": "Shares 2,2'-dihydroxycanthaxanthin with 4'-hydroxyechinenone to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM147701"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_2_dihydroxycanthaxanthin_all-trans-beta-carotene-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_2_dihydroxycanthaxanthin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "all-trans-beta-carotene-to-h2o"
+      },
+      "note": "Shares 2,2'-dihydroxycanthaxanthin with all-trans-beta-carotene to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM147701"
+          }
+        ]
+      }
+    }
+  ]
+}

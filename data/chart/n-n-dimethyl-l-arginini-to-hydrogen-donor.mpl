@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-n-dimethyl-l-arginini-to-hydrogen-donor "Nω,Nω-dimethyl-L-arginini… to hydrogen donor" {
-  spacing 310
+  spacing 340
 
   spine at 0,0 {
     n_n_dimethyl_l_argininium
@@ -18,15 +18,159 @@ pathway n-n-dimethyl-l-arginini-to-hydrogen-donor "Nω,Nω-dimethyl-L-arginini�
     formaldehyde
   }
 
+  branch from citrulline side left {
+    citrulline
+    <-> . +n5_hydroxyamino_imino_methyl_l_ornithinium +nadh +o2 +nad +h2o +hplus
+    no
+  }
 
+  branch from citrulline side right {
+    citrulline
+    <-> . +nadh +o2 +hplus +no +nad +h2o
+    arginine
+  }
 
+  branch from methylamine side left {
+    methylamine
+    <-> ec_1_4_1_17 [1.4.1.17] +nadp +h2o +pyruvate +nadph +hplus
+    n_methyl_l_alanine
+  }
 
+  branch from methylamine side right {
+    methylamine
+    <-> . +carbaryl +h2o +hplus +co2
+    1_naphthol
+  }
 
+  branch from formaldehyde side left {
+    formaldehyde
+    <-> . +n6_n6_dimethyl_l_lysine_1 +akg +o2 +succinate +co2
+    l_lysinium
+  }
 
+  branch from formaldehyde side right {
+    formaldehyde
+    <-> . +n6_methyl_l_lysinium +akg +o2 +l_lysinium +co2
+    succinate
+  }
 
+  branch from nh3 side left {
+    nh3
+    <-> . +3_oxocyclopentanecarbonitrile +h2o
+    3_oxocyclopentanecarboxylate
+  }
 
+  branch from nh3 side right {
+    nh3
+    <-> . +methyl_3_cyano_2_phenylpropanoate +h2o
+    4_methoxy_4_oxo_3_phenylbutanoate
+  }
 
+  branch from glutamate side left {
+    glutamate
+    <-> ec_2_6_1_103 [2.6.1.103] +s_3_5_dihydroxyphenylglycine +akg
+    3_5_dihydroxyphenylglyoxylate
+  }
 
+  branch from glutamate side right {
+    glutamate
+    <-> ec_2_6_1_106 [2.6.1.106] +dtdp_3_azaniumyl_3_4_6_trideoxy_d_glucose +akg
+    dtdp_3_dehydro_4_6_dideoxy_d_glucose
+  }
 
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> ec_1_14_99_58 [1.14.99.58] +ferroheme_b +o2 +hplus +carbon_monoxide +fe2 +hydrogen_acceptor +h2o
+    biliverdin
+  }
 
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> ec_1_14_99_57 [1.14.99.57] +ferroheme_b +o2 +hplus +fe2 +hydrogen_acceptor +h2o
+    mycobilin_a
+  }
+
+  branch from n_n_dimethyl_l_argininium side left {
+    n_n_dimethyl_l_argininium
+    <-> . +pyruvate +alanine
+    5_3_3_dimethylguanidino_2_oxopentanoate
+  }
+
+  branch from n_n_dimethyl_l_argininium side right {
+    n_n_dimethyl_l_argininium
+    <-> . +glyoxylate +5_3_3_dimethylguanidino_2_oxopentanoate
+    glycine
+  }
+
+  branch from citrulline side left {
+    citrulline
+    <-> ec_1_14_14_47 [1.14.14.47] +fmnh2 +arginine +o2 +no +h2o +hplus
+    fmn
+  }
+
+  branch from citrulline side right {
+    citrulline
+    <-> . +fmnh2 +o2 +fmn +no +h2o +hplus
+    n5_hydroxyamino_imino_methyl_l_ornithinium
+  }
+
+  branch from methylamine side left {
+    methylamine
+    <-> ec_3_5_1_137 [3.5.1.137] +carbofuran +h2o +hplus +co2
+    2_2_dimethyl_2_3_dihydro_1_benzofuran_7_ol
+  }
+
+  branch from methylamine side right {
+    methylamine
+    <-> ec_1_4_2_3 [1.4.2.3] +pseudooxynicotinium +iron +h2o +fe2 +hplus
+    4_oxo_4_pyridin_3_yl_butanal
+  }
+
+  branch from formaldehyde side left {
+    formaldehyde
+    <-> . +akg +o2 +l_lysinium +succinate +co2
+    n6_methyl_l_lysinium
+  }
+
+  branch from formaldehyde side right {
+    formaldehyde
+    <-> . +3_methyldeoxycytidine_5_monophosphate_zwitterion +akg +o2 +succinate +co2 +hplus
+    2_deoxycytidine_5_monophosphate_1
+  }
+
+  branch from glutamate side left {
+    glutamate
+    <-> ec_2_6_1_107 [2.6.1.107] +2s_3s_methylphenylalanine +akg
+    3s_3_methyl_2_oxo_3_phenylpropanoate
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> ec_6_3_2_42 [6.3.2.42] +n_acetyl_l_aspartate +atp +adp +pi +hplus
+    ac_asp_glu_glu
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> . +pyrazinecarboxamide +h2o
+    pyrazine_2_carboxylate
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_1_4_3_21 [1.4.3.21] +3_nitrotyramine +o2 +h2o +h2o2
+    4_hydroxy_3_nitrophenylacetaldehyde
+  }
+
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> ec_1_14_99_57 [1.14.99.57] +ferroheme_b +hydrogen_donor +o2 +hplus +fe2 +h2o
+    mycobilin_b
+  }
+
+  branch from hydrogen_acceptor side right {
+    hydrogen_acceptor
+    <-> . +2_arachidonoyl_sn_glycero_3_phosphoethanolamine +hydrogen_donor +o2 +h2o
+    2_11r_hydroxy_5z_8z_12e_14z_icosatetraenoyl_sn_g
+  }
 }

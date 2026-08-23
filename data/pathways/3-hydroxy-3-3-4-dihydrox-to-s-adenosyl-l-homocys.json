@@ -121,44 +121,6 @@
       "xrefs": {
         "chebi": "CHEBI:57856"
       }
-    },
-    {
-      "id": "kaempferol_oxoanion",
-      "name": "kaempferol oxoanion",
-      "formula": "C15H9O6",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:58573"
-      }
-    },
-    {
-      "id": "3_o_methylkaempferol_7_olate",
-      "name": "3-O-methylkaempferol 7-olate",
-      "short": "3-O-methylkaempfero…",
-      "formula": "C16H11O6",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:194073"
-      }
-    },
-    {
-      "id": "myricetin",
-      "name": "myricetin",
-      "formula": "C15H9O8",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:58395"
-      }
-    },
-    {
-      "id": "3_o_methylmyricetin_7_olate",
-      "name": "3-O-methylmyricetin 7-olate",
-      "short": "3-O-methylmyricetin…",
-      "formula": "C16H11O8",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:194072"
-      }
     }
   ],
   "enzymes": [],
@@ -287,89 +249,247 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "kaempferol + S-adenosyl-L-methionine = 3-O-methylkaempferol + S-adenosyl-L-homocysteine...",
-      "equation": "kaempferol + S-adenosyl-L-methionine = 3-O-methylkaempferol + S-adenosyl-L-homocysteine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "kaempferol_oxoanion",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_o_methylkaempferol_7_olate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:74743"
+      "id": "xt_3_hydroxy_3_3_4_dihydroxyphenyl_propanoyl_coa_capsiconiate-to-trans-caffeoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_hydroxy_3_3_4_dihydroxyphenyl_propanoyl_coa"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "capsiconiate-to-trans-caffeoyl-coa"
+      },
+      "note": "Shares 3-hydroxy-3-(3,4-dihydroxyphenyl)propanoyl-CoA with capsiconiate to trans-caffeoyl-CoA.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:74743"
+            "db": "ChEBI",
+            "id": "CHEBI:145752"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "myricetin + S-adenosyl-L-methionine = 3-O-methylmyricetin + S-adenosyl-L-homocysteine +...",
-      "equation": "myricetin + S-adenosyl-L-methionine = 3-O-methylmyricetin + S-adenosyl-L-homocysteine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "myricetin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_o_methylmyricetin_7_olate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:74747"
+      "id": "xt_3_4_dihydroxybenzaldehyde_3-4-dihydroxybenzoate-to-caffeoyltryptamine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_4_dihydroxybenzaldehyde"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "3-4-dihydroxybenzoate-to-caffeoyltryptamine"
+      },
+      "note": "Shares 3,4-dihydroxybenzaldehyde with 3,4-dihydroxybenzoate to Caffeoyltryptamine.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:74747"
+            "db": "ChEBI",
+            "id": "CHEBI:50205"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_4_dihydroxybenzaldehyde_4-methylheptan-3-ol-to-4as-10br-oxomaritidine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_4_dihydroxybenzaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-methylheptan-3-ol-to-4as-10br-oxomaritidine"
+      },
+      "note": "Shares 3,4-dihydroxybenzaldehyde with 4-Methylheptan-3-ol to (4aS,10bR)-oxomaritidine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:50205"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_4_dihydroxybenzaldehyde_capsiconiate-to-trans-caffeoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_4_dihydroxybenzaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "capsiconiate-to-trans-caffeoyl-coa"
+      },
+      "note": "Shares 3,4-dihydroxybenzaldehyde with capsiconiate to trans-caffeoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:50205"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_4_dihydroxybenzaldehyde_norcraugsodine-to-o-pantetheine-4-phospho",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_4_dihydroxybenzaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "norcraugsodine-to-o-pantetheine-4-phospho"
+      },
+      "note": "Shares 3,4-dihydroxybenzaldehyde with Norcraugsodine to O-(pantetheine-4'-phospho….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:50205"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_4_dihydroxybenzaldehyde_piceatannol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_4_dihydroxybenzaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "piceatannol-to-h2o"
+      },
+      "note": "Shares 3,4-dihydroxybenzaldehyde with piceatannol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:50205"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_vanillate_3-3-dimethoxystilbene-4-to-4-carboxy-2-hydroxy-c",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "vanillate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-3-dimethoxystilbene-4-to-4-carboxy-2-hydroxy-c"
+      },
+      "note": "Shares vanillate with 3,3'-dimethoxystilbene-4,… to 4-carboxy-2-hydroxy-cis,c….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16632"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_vanillate_dihydroferuloyl-coa-to-guaiacol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "vanillate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dihydroferuloyl-coa-to-guaiacol"
+      },
+      "note": "Shares vanillate with dihydroferuloyl-CoA to guaiacol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16632"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_vanillate_gdp-4-amino-4-6-dideoxy-to-2-deoxy-5-hydroxymeth",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "vanillate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gdp-4-amino-4-6-dideoxy-to-2-deoxy-5-hydroxymeth"
+      },
+      "note": "Shares vanillate with GDP-4-amino-4,6-dideoxy-α… to 2'-deoxy-5-hydroxymethyl-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16632"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_vanillate_vanillyl-alcohol-to-trimethylamine-n-oxide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "vanillate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "vanillyl-alcohol-to-trimethylamine-n-oxide"
+      },
+      "note": "Shares vanillate with vanillyl alcohol to trimethylamine N-oxide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16632"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_vanillate_veratrate-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "vanillate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "veratrate-to-coa"
+      },
+      "note": "Shares vanillate with veratrate to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16632"
           }
         ]
       }

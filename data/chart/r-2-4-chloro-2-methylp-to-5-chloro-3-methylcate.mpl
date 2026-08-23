@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway r-2-4-chloro-2-methylp-to-5-chloro-3-methylcate "(R)-2-(4-chloro-2-methylp… to 5-chloro-3-methylcatechol" {
-  spacing 294
+  spacing 306
 
   spine at 0,0 {
     r_2_4_chloro_2_methylphenoxy_propanoate
@@ -20,55 +20,67 @@ pathway r-2-4-chloro-2-methylp-to-5-chloro-3-methylcate "(R)-2-(4-chloro-2-methy
 
   branch from 4_chloro_2_methylphenol side left {
     4_chloro_2_methylphenol
-    <-> . +4_chloro_2_methylphenoxy_acetate +akg +o2 +succinate +co2
-    glyoxylate
-  }
-
-  branch from 4_chloro_2_methylphenol side right {
-    4_chloro_2_methylphenol
     <-> ec_1_14_13_20 [1.14.13.20] +h +o2 +nadph +5_chloro_3_methylcatechol +h2o
     nadp
   }
 
-  branch from succinate side left {
-    succinate
-    <-> ec_1_14_20_14 [1.14.20.14] +12_epi_fischerindole_u +chloride +akg +o2 +hplus +co2 +h2o
-    12_epi_fischerindole_g
-  }
-
-  branch from succinate side right {
-    succinate
-    <-> ec_1_14_11_63 [1.14.11.63] +l_lysinium +akg +o2 +co2
-    3s_3_hydroxy_l_lysine_1
-  }
-
-  branch from 4_chloro_2_methyl_cis_cis_muconate side left {
+  branch from 4_chloro_2_methyl_cis_cis_muconate side right {
     4_chloro_2_methyl_cis_cis_muconate
     <-> . +hplus
     2_2_chloro_2_5_dihydro_4_methyl_5_oxofuryl_aceta
   }
 
-  branch from 4_chloro_2_methyl_cis_cis_muconate side right {
+  branch from 4_chloro_2_methyl_cis_cis_muconate side left {
     4_chloro_2_methyl_cis_cis_muconate
     <-> . +chloride
     cis_2_methyl_4_carboxylatomethylenebut_2_en_1_4
   }
 
+  branch from o2 side right {
+    o2
+    <-> . +2_hexaprenyl_6_methoxyphenol +h2o
+    2_methoxy_6_all_trans_hexaprenyl_1_4_benzoquinon
+  }
+
   branch from o2 side left {
     o2
-    <-> . +h +nadph +lithocholate +nadp +h2o
-    deoxycholate
+    <-> . +deacetylcephalosporin_c +co2 +succinate +h2o +penicillin_n
+    2_oxoglutarate
+  }
+
+  branch from 5_chloro_3_methylcatechol side right {
+    5_chloro_3_methylcatechol
+    <-> ec_1_3_1_119 [1.3.1.119] +1r_2s_5_chloro_3_methylcyclohexa_3_5_diene_1_2 +nad +h
+    nadh
+  }
+
+  branch from 4_chloro_2_methyl_cis_cis_muconate side left {
+    4_chloro_2_methyl_cis_cis_muconate
+    <-> . +chloride
+    trans_2_methyl_4_carboxylatomethylenebut_2_en_1
+  }
+
+  branch from h side right {
+    h
+    <-> ec_1_1_1_50 [1.1.1.50] +21_hydroxy_5beta_pregnane_3_11_20_trione +nadph +nadp
+    3alpha_21_dihydroxy_5beta_pregnane_11_20_dione
+  }
+
+  branch from h side left {
+    h
+    <-> ec_1_1_1_53 [1.1.1.53] +nadh +3alpha_21_dihydroxy_5beta_pregnane_11_20_dione +nad
+    3alpha_20alpha_21_trihydroxy_5beta_pregnane_11_o
   }
 
   branch from o2 side right {
     o2
-    <-> . +5_oxo_12_r_hydroxy_eicosa_8e_10e_14z_trienoyl_co +h2o2
-    5_oxo_12_r_hydroxy_eicosa_2e_8e_10e_14z_tetraeno
+    <-> ec_1_14_12_18 [1.14.12.18] +nadh +h +4_chlorobiphenyl +nad
+    1s_2r_3_4_chlorophenyl_cyclohexa_3_5_diene_1_2
   }
 
-  branch from 5_chloro_3_methylcatechol side left {
-    5_chloro_3_methylcatechol
-    <-> ec_1_3_1_119 [1.3.1.119] +1r_2s_5_chloro_3_methylcyclohexa_3_5_diene_1_2 +nad +h
-    nadh
+  branch from o2 side left {
+    o2
+    <-> ec_1_14_12_18 [1.14.12.18] +h +nadph +1s_2r_3_4_chlorophenyl_cyclohexa_3_5_diene_1_2 +nadp
+    4_chlorobiphenyl
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-solasod-3-one "UDP to solasod-3-one" {
-  spacing 252
+  spacing 276
 
   spine at 0,0 {
     udp
@@ -16,63 +16,87 @@ pathway udp-to-solasod-3-one "UDP to solasod-3-one" {
     nadp
   }
 
-  branch from solasodine side left {
-    solasodine
-    <-> . +h2o
-    26_amino_furostanol
-  }
-
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> ec_2_7_7_23 [2.7.7.23] +utp +d_glucopyranose_1_phosphate +h
-    diphosphate
-  }
-
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> ec_2_4_1_117 [2.4.1.117] +udp +dolichyl_beta_d_glucosyl_phosphate_human_uterine +h
-    dolichol_phosphate_human_uterine_homolog
+  branch from h side left {
+    h
+    <-> ec_3_1_1_80 [3.1.1.80] +17_o_acetylajmaline +h2o +ajmaline
+    acetate
   }
 
   branch from h side right {
     h
-    <-> . +l_lathyrine +co2 +h2o +l_serine
-    2_amino_4_carboxypyrimidine
-  }
-
-  branch from h side left {
-    h
-    <-> . +m_chloro_hippuric_acid +h2o +3_chlorobenzoate
-    glycine
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> . +5z_9e_14z_8xi_11r_12s_11_12_epoxy_8_hydroxyicos +o2 +nadp +h2o
-    20_oh_hepoxilin_a3
+    <-> ec_2_3_1_172 [2.3.1.172] +malonyl_coa +cyanidin_3_o_6_o_para_coumaroyl_glucoside_5_o_gl +coa
+    malonylshisonin
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_104 [1.1.1.104] +4_oxo_l_proline +h +nadp
-    trans_4_hydroxy_l_proline
+    <-> . +nitrite +hydroxybenzoquinone +nadp +h2o +o2
+    4_nitrocatechol
   }
 
-  branch from nadp side right {
-    nadp
-    <-> ec_1_14_13_86 [1.14.13.86] +h +4_7_dihydroxyflavone +o2 +nadph +h2o
-    2_4_7_trihydroxyisoflavanone
+  branch from nadph side right {
+    nadph
+    <-> . +methyl_propenyl_ketone +h +nadp
+    pentan_2_one
   }
 
   branch from nadp side left {
     nadp
-    <-> . +10_2_dihydroxy_4_methoxy_isoflav_8_ene_7_one +h2o +h +nadph +vestitol
-    o2
+    <-> ec_1_2_1_5 [1.2.1.5] +2e_geranial +h2o +h +nadph
+    geranate
   }
 
-  branch from solasod_3_one side right {
-    solasod_3_one
-    <-> . +nadp +nadph
-    soladulcidine
+  branch from nadp side right {
+    nadp
+    <-> . +deoxymupirocin_c +h +nadph
+    deoxymupirocin_f
+  }
+
+  branch from udp side left {
+    udp
+    <-> . +keratan_sulfate_ii_biosynthesis_precursor_10 +h +keratan_sulfate_ii_biosynthesis_precursor_9
+    udp_alpha_d_galactose
+  }
+
+  branch from udp side right {
+    udp
+    <-> . +losartan_2_n_d_glucuronide +h +losartan
+    udp_alpha_d_glucuronate
+  }
+
+  branch from h side left {
+    h
+    <-> . +glucose +lampranthin_ii +1_o_feruloyl_d_glucose
+    betanin
+  }
+
+  branch from h side right {
+    h
+    <-> . +lupanine
+    17_oxosparteine
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +h +nadph +deoxymupirocin_f
+    deoxymupirocin_c
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +mupirocin_c1 +h +nadph
+    mupirocin_f1
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +h +nadp +mupirocin_f1
+    mupirocin_c1
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_14_13_106 [1.14.13.106] +h +epi_isozizaene +o2 +nadp +h2o
+    5s_albaflavenol
   }
 }

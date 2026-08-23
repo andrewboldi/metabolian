@@ -97,74 +97,6 @@
       "xrefs": {
         "metanetx": "MNXM6128"
       }
-    },
-    {
-      "id": "12_s_hete",
-      "name": "12(S)-HETE",
-      "formula": "C20H32O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:34146"
-      }
-    },
-    {
-      "id": "12_oxo_ete",
-      "name": "12-oxo-ETE",
-      "formula": "C20H30O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:34151"
-      }
-    },
-    {
-      "id": "13_14_dihydro_15_keto_pgf1",
-      "name": "13,14-dihydro-15-keto-PGF1α",
-      "short": "13,14-dihydro-15-ke…",
-      "formula": "C20H35O5",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:133411"
-      }
-    },
-    {
-      "id": "13_14_dihydro_pgf1alpha",
-      "name": "13,14-Dihydro PGF1alpha",
-      "short": "13,14-Dihydro…",
-      "formula": "C20H38O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:172589"
-      }
-    },
-    {
-      "id": "1r_5as_6r_1_4_5_5a_6_9_hexahydrophenazine_1_6_d",
-      "name": "(1R,5aS,6R)-1,4,5,5a,6,9-hexahydrophenazine-1,6-dicarboxylate",
-      "short": "(1R,5aS,6R)-1,4,5,5…",
-      "formula": "C14H12N2O4",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:131971"
-      }
-    },
-    {
-      "id": "1r_5as_6r_4a_hydroxy_1_4_4a_5_5a_6_9_10a_octahy",
-      "name": "(1R,5aS,6R)-4a-Hydroxy-1,4,4a,5,5a,6,9,10a-octahydrophenazine-1,6-dicarboxylate",
-      "short": "(1R,5aS,6R)-4a-Hydr…",
-      "formula": "C14H16N2O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:176942"
-      }
-    },
-    {
-      "id": "1r_6r_1_2_5_5a_6_7_hexahydrophenazine_1_6_dicar",
-      "name": "(1R,6R)-1,2,5,5a,6,7-hexahydrophenazine-1,6-dicarboxylate",
-      "short": "(1R,6R)-1,2,5,5a,6,…",
-      "formula": "C14H13N2O4",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM1372573"
-      }
     }
   ],
   "enzymes": [
@@ -316,163 +248,27 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "Reaction MNXR200040",
-      "substrates": [
-        {
-          "metabolite": "12_s_hete",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "12_oxo_ete",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR200040"
+      "id": "xt_2s_liquiritigenin_garbanzol-to-2-hydroxyliquiritigenin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2s_liquiritigenin"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "garbanzol-to-2-hydroxyliquiritigenin"
+      },
+      "note": "Shares (2S)-liquiritigenin with garbanzol to 2-hydroxyliquiritigenin.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR200040"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "Reaction MNXR200056",
-      "substrates": [
-        {
-          "metabolite": "h",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "13_14_dihydro_15_keto_pgf1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "13_14_dihydro_pgf1alpha",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR200056"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR200056"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "Reaction MNXR196437",
-      "substrates": [
-        {
-          "metabolite": "1r_5as_6r_1_4_5_5a_6_9_hexahydrophenazine_1_6_d",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1r_5as_6r_4a_hydroxy_1_4_4a_5_5a_6_9_10a_octahy",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "metanetx": "MNXR196437"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR196437"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "Reaction MNXR196438",
-      "substrates": [
-        {
-          "metabolite": "1r_6r_1_2_5_5a_6_7_hexahydrophenazine_1_6_dicar",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1r_5as_6r_4a_hydroxy_1_4_4a_5_5a_6_9_10a_octahy",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "metanetx": "MNXR196438"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR196438"
+            "id": "MNXM1370925"
           }
         ]
       }

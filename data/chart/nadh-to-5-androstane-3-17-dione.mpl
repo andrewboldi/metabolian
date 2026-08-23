@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-5-androstane-3-17-dione "NADH to 5α-androstane-3,17-dione" {
-  spacing 324
+  spacing 288
 
   spine at 0,0 {
     nadh
@@ -16,46 +16,10 @@ pathway nadh-to-5-androstane-3-17-dione "NADH to 5α-androstane-3,17-dione" {
     5_androstane_3_17_dione
   }
 
-  branch from 3_17_dihydroxy_5_pregnan_20_one side left {
-    3_17_dihydroxy_5_pregnan_20_one
-    <-> ec_1_1_1_357 [1.1.1.357] +5alpha_pregnan_17alpha_ol_3_20_dione +h +nadph
-    nadp
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +hexacosanal
-    hexacosan_1_ol
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +triacontanal
-    triacontan_1_ol
-  }
-
-  branch from androsterone side right {
+  branch from androsterone side left {
     androsterone
     <-> . +nad +nadh +hplus
     5_androstane_3_17_diol
-  }
-
-  branch from androsterone side left {
-    androsterone
-    <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
-    androsterone_sulfate
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +eriodictyol +fmnh2 +o2 +h2o +hplus
-    2s_dihydrotricetin
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +fmnh2 +o2 +2s_dihydrotricetin +h2o +hplus
-    s_naringenin
   }
 
   branch from 5_androstane_3_17_dione side right {

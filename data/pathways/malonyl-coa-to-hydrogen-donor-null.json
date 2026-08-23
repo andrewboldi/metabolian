@@ -1,0 +1,582 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "malonyl-coa-to-hydrogen-donor-null",
+  "name": "malonyl-CoA to hydrogen donor",
+  "category": "other",
+  "summary": "A 4-step route from malonyl-CoA to hydrogen donor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR196734"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "malonyl_coa",
+      "name": "malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "metanetx": "MNXM1106093"
+      }
+    },
+    {
+      "id": "3_5_dioxodecanoyl_coa",
+      "name": "3,5-dioxodecanoyl-CoA",
+      "short": "3,5-dioxodecanoyl-C…",
+      "formula": "C31H46N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1372598"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "3_5_7_trioxododecanoyl_coa",
+      "name": "3,5,7-Trioxododecanoyl-CoA",
+      "short": "3,5,7-Trioxododecan…",
+      "formula": "C33H48N7O20P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1372581"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "olivetolate",
+      "name": "olivetolate",
+      "formula": "C12H15O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:66950"
+      }
+    },
+    {
+      "id": "neryl_diphosphate",
+      "name": "neryl diphosphate",
+      "formula": "C10H17O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57665"
+      }
+    },
+    {
+      "id": "cannabinerolate",
+      "name": "cannabinerolate",
+      "formula": "C22H31O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:66961"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "cannabichromenate",
+      "name": "cannabichromenate",
+      "formula": "C22H29O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:167554"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_4_1_26",
+      "name": "olivetolic acid cyclase",
+      "ec": [
+        "4.4.1.26"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR196734",
+      "substrates": [
+        {
+          "metabolite": "malonyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_5_dioxodecanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_5_7_trioxododecanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR196734"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196734"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "olivetolic acid cyclase",
+      "ec": "4.4.1.26",
+      "substrates": [
+        {
+          "metabolite": "3_5_7_trioxododecanoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "olivetolate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_4_1_26"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR196334"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196334"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "olivetolate + neryl diphosphate = cannabinerolate + diphosphate",
+      "equation": "olivetolate + neryl diphosphate = cannabinerolate + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "olivetolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "neryl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cannabinerolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:34131"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34131"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "cannabinerolate + A = cannabichromenate + AH2",
+      "equation": "cannabinerolate + A = cannabichromenate + AH2",
+      "substrates": [
+        {
+          "metabolite": "cannabinerolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cannabichromenate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:66904"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:66904"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3_5_dioxodecanoyl_coa_9s-13s-15z-12-oxophyto-to-9-hydroxy-12-oxo-15-z",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_5_dioxodecanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "9s-13s-15z-12-oxophyto-to-9-hydroxy-12-oxo-15-z"
+      },
+      "note": "Shares 3,5-dioxodecanoyl-CoA with (9S,13S,15Z)-12-oxophyto-… to 9-Hydroxy-12-oxo-15(Z)-oc….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1372598"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_5_dioxodecanoyl_coa_malonyl-coa-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_5_dioxodecanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "malonyl-coa-to-hydrogen-donor"
+      },
+      "note": "Shares 3,5-dioxodecanoyl-CoA with malonyl-CoA to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1372598"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_5_dioxodecanoyl_coa_udp-to-coa-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_5_dioxodecanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-coa-null"
+      },
+      "note": "Shares 3,5-dioxodecanoyl-CoA with UDP to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1372598"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_5_dioxodecanoyl_coa_udp-to-flavonol-3-o-6-o-malonyl-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_5_dioxodecanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-flavonol-3-o-6-o-malonyl-null"
+      },
+      "note": "Shares 3,5-dioxodecanoyl-CoA with UDP to Flavonol 3-O-(6-O-malonyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1372598"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_5_7_trioxododecanoyl_coa_biphenyl-2-3-diol-to-nadp-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_5_7_trioxododecanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "biphenyl-2-3-diol-to-nadp-null"
+      },
+      "note": "Shares 3,5,7-Trioxododecanoyl-CoA with biphenyl-2,3-diol to NADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1372581"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_5_7_trioxododecanoyl_coa_h-to-cobalt-dihydrosirohydroch",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_5_7_trioxododecanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-cobalt-dihydrosirohydroch"
+      },
+      "note": "Shares 3,5,7-Trioxododecanoyl-CoA with H to cobalt-dihydrosirohydroch….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1372581"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_5_7_trioxododecanoyl_coa_malonyl-coa-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_5_7_trioxododecanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "malonyl-coa-to-hydrogen-donor"
+      },
+      "note": "Shares 3,5,7-Trioxododecanoyl-CoA with malonyl-CoA to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1372581"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_5_7_trioxododecanoyl_coa_microperfuranone-to-2-phenylethanol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_5_7_trioxododecanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "microperfuranone-to-2-phenylethanol"
+      },
+      "note": "Shares 3,5,7-Trioxododecanoyl-CoA with (−)-microperfuranone to 2-phenylethanol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1372581"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_5_7_trioxododecanoyl_coa_udp-to-coa-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_5_7_trioxododecanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-coa-null"
+      },
+      "note": "Shares 3,5,7-Trioxododecanoyl-CoA with UDP to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1372581"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_olivetolate_d-alpha-phenylglycine-to-n-hydroxysuccinimide-nu",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "olivetolate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-alpha-phenylglycine-to-n-hydroxysuccinimide-nu"
+      },
+      "note": "Shares olivetolate with D-alpha-phenylglycine to N-hydroxysuccinimide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:66950"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_olivetolate_malonyl-coa-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "olivetolate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "malonyl-coa-to-hydrogen-donor"
+      },
+      "note": "Shares olivetolate with malonyl-CoA to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:66950"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_olivetolate_olivetolate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "olivetolate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "olivetolate-to-h2o"
+      },
+      "note": "Shares olivetolate with olivetolate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:66950"
+          }
+        ]
+      }
+    }
+  ]
+}

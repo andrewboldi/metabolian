@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway acetyl-coa-to-9s-13s-1a-1b-dinor-10-1 "acetyl-CoA to (9S,13S)-1a,1b-dinor-10,1…" {
-  spacing 292
+  spacing 232
 
   spine at 0,0 {
     acetyl_coa
@@ -24,65 +24,5 @@ pathway acetyl-coa-to-9s-13s-1a-1b-dinor-10-1 "acetyl-CoA to (9S,13S)-1a,1b-dino
     trans_2_enoyl_opc6_coa
     <-> ec_1_3_3_6 [1.3.3.6] +h2o2 -o2 -9s_13s_1a_1b_dinor_10_11_dihydro_12_oxo_15_phyt
     h
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +acetyl_coa +alpha_d_gal_1_6_alpha_d_gal_1_4_beta_d_glc_1_3_a
-    alpha_d_gal_1_6_alpha_d_gal_1_4_beta_d_glc_1_3_a
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +acetyl_coa +beta_d_galf_1_3_alpha_d_gal_pp_und
-    2_o_acetyl_beta_d_galf_1_3_alpha_d_gal_pp_und
-  }
-
-  branch from nad side left {
-    nad
-    <-> . +nadh +2_hydroxy_5_methylquinone +h
-    2_4_5_trihydroxytoluene
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_333 [1.1.1.333] +nadh +trans_octacis_decaprenylphospho_beta_d_erythro_p +h
-    trans_octacis_decaprenylphospho_beta_d_arabinofu
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    hexadecanoyl_coa
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_47 [3.6.3.47] +hexadecanoyl_coa +h +adp +phosphate +hexadecanoyl_coa
-    atp
-  }
-
-  branch from o2 side left {
-    o2
-    <-> ec_1_13_11_2 [1.13.11.2] +5_chloro_2_hydroxymuconic_semialdehyde
-    4_chlorocatechol
-  }
-
-  branch from o2 side right {
-    o2
-    <-> ec_1_13_11_2 [1.13.11.2] +h +4_chlorocatechol
-    5_chloro_2_hydroxymuconic_semialdehyde
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    octadecanoyl_coa
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
-    beta_d_fructose
   }
 }

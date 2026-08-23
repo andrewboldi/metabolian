@@ -110,6 +110,25 @@
       "xrefs": {
         "chebi": "CHEBI:57287"
       }
+    },
+    {
+      "id": "c17_sphingosine",
+      "name": "C17 sphingosine",
+      "formula": "C17H36NO2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:74166"
+      }
+    },
+    {
+      "id": "n_tetracosenoyl_c17_sphingosine",
+      "name": "N-tetracosenoyl-C17-sphingosine",
+      "short": "N-tetracosenoyl-C17…",
+      "formula": "C41H79NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:74185"
+      }
     }
   ],
   "enzymes": [
@@ -118,7 +137,10 @@
       "name": "sphingomyelin deacylase",
       "ec": [
         "3.5.1.109"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q13510"
+      }
     }
   ],
   "reactions": [
@@ -249,6 +271,271 @@
           {
             "db": "Rhea",
             "id": "RHEA:37123"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "tetracosenoyl-CoA + heptadecasphing-4-enine = N-tetracosenoyl-heptadecasphing-4-enine +...",
+      "equation": "tetracosenoyl-CoA + heptadecasphing-4-enine = N-tetracosenoyl-heptadecasphing-4-enine + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "c24_1_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "c17_sphingosine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_tetracosenoyl_c17_sphingosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:36743"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36743"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_sphingomyelin_1-2-diacyl-sn-glycero-3-p-to-s-adenosyl-l-homocy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sphingomyelin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-diacyl-sn-glycero-3-p-to-s-adenosyl-l-homocy"
+      },
+      "note": "Shares Sphingomyelin with 1,2-diacyl-sn-glycero-3-p… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17636"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sphingomyelin_1-lauroyl-sn-glycero-3-ph-to-d-glucopyranose-411",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sphingomyelin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-lauroyl-sn-glycero-3-ph-to-d-glucopyranose-411"
+      },
+      "note": "Shares Sphingomyelin with 1-lauroyl-sn-glycero-3-ph… to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17636"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sphingomyelin_1-oleoyl-2-acyl-sn-3-glyc-to-1-2-diacyl-sn-glyce",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sphingomyelin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-oleoyl-2-acyl-sn-3-glyc-to-1-2-diacyl-sn-glyce"
+      },
+      "note": "Shares Sphingomyelin with 1-oleoyl-2-acyl-sn-3-glyc… to 1,2-diacyl-sn-glycero-3-p….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17636"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sphingomyelin_phosphatidylcholine-to-n-acylsphingosine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sphingomyelin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phosphatidylcholine-to-n-acylsphingosine"
+      },
+      "note": "Shares Sphingomyelin with phosphatidylcholine to N-acylsphingosine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17636"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sphingomyelin_sphingolipid-metabolism",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sphingomyelin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sphingolipid-metabolism"
+      },
+      "note": "Shares Sphingomyelin with Sphingolipid metabolism.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17636"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sphingosine_1_phosphocholine_n-hexanoyl-sphing-4-enine-to-sphingosine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sphingosine_1_phosphocholine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-hexanoyl-sphing-4-enine-to-sphingosine"
+      },
+      "note": "Shares sphingosine-1-phosphocholine with N-(hexanoyl)sphing-4-enine to sphingosine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58906"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_c24_1_coa_1-behenoylglycerol-to-n-docosanoylsphinganine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "c24_1_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-behenoylglycerol-to-n-docosanoylsphinganine"
+      },
+      "note": "Shares C24:1-CoA with 1-behenoylglycerol to N-docosanoylsphinganine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74146"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_c17_sphingosine_1-hexadecanoyl-2-9z-12z-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "c17_sphingosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-hexadecanoyl-2-9z-12z-to-h2o"
+      },
+      "note": "Shares C17 sphingosine with 1-hexadecanoyl-2-(9Z,12Z-… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74166"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_c17_sphingosine_2-saturated-fatty-acid-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "c17_sphingosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-saturated-fatty-acid-to-diphosphate"
+      },
+      "note": "Shares C17 sphingosine with 2-saturated fatty acid… to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74166"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_c17_sphingosine_3-hydroxyicosanoyl-coa-to-n-2-hydroxytetracosano",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "c17_sphingosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxyicosanoyl-coa-to-n-2-hydroxytetracosano"
+      },
+      "note": "Shares C17 sphingosine with 3-hydroxyicosanoyl-CoA to N-(2-hydroxytetracosanoyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74166"
           }
         ]
       }

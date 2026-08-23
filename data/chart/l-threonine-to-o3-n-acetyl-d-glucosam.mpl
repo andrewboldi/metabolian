@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-threonine-to-o3-n-acetyl-d-glucosam "L-threonine to O3-[N-acetyl-β-D-glucosam…" {
-  spacing 288
+  spacing 294
 
   spine at 0,0 {
     l_threonine
@@ -14,5 +14,11 @@ pathway l-threonine-to-o3-n-acetyl-d-glucosam "L-threonine to O3-[N-acetyl-β-D-
     n_acetyl_d_glucosaminyl_1_3_n_acetyl_d_galactosa
     <-> ec_2_4_1_148 [2.4.1.148] +udpglcnac -udp -hplus
     o3_n_acetyl_d_glucosaminyl_1_3_n_acetyl_d_glucos
+  }
+
+  branch from l_threonine side left {
+    l_threonine
+    <-> ec_2_7_11_18 [2.7.11.18] +atp +adp +hplus
+    o_phosphonato_l_threonine_2
   }
 }

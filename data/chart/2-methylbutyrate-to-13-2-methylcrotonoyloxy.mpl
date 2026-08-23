@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-methylbutyrate-to-13-2-methylcrotonoyloxy "2-methylbutyrate to 13-(2-methylcrotonoyloxy)…" {
-  spacing 268
+  spacing 262
 
   spine at 0,0 {
     2_methylbutyrate
@@ -28,18 +28,6 @@ pathway 2-methylbutyrate-to-13-2-methylcrotonoyloxy "2-methylbutyrate to 13-(2-m
     ethyl_2_methylbutyrate
   }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_225 [4.2.3.225] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    cattleyene
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_229 [4.2.3.229] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    ent_beyerene
-  }
-
   branch from tiglyl_coa side left {
     tiglyl_coa
     <-> . +h2o
@@ -50,5 +38,11 @@ pathway 2-methylbutyrate-to-13-2-methylcrotonoyloxy "2-methylbutyrate to 13-(2-m
     tiglyl_coa
     <-> . +fad +hplus +fadh2
     mbutyryl_coa
+  }
+
+  branch from 2_methylbutanoyl_coa side left {
+    2_methylbutanoyl_coa
+    <-> . +hexan_1_ol +coa
+    hexyl_2_methylbutanoate
   }
 }

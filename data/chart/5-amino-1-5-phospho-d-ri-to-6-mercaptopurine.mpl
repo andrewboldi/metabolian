@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-amino-1-5-phospho-d-ri-to-6-mercaptopurine "5-amino-1-(5-phospho-D-ri… to 6-Mercaptopurine…" {
-  spacing 170
+  spacing 206
 
   spine at 0,0 {
     5_amino_1_5_phospho_d_ribosyl_imidazole_4_thioca
@@ -24,13 +24,49 @@ pathway 5-amino-1-5-phospho-d-ri-to-6-mercaptopurine "5-amino-1-(5-phospho-D-ri�
 
   branch from adp side right {
     adp
-    <-> ec_2_7_4_10 [2.7.4.10] +utp +amp
-    udp
+    <-> . +1d_myo_inositol_1_4_5_6_tetrakisphosphate +atp +h
+    1d_myo_inositol_1_2_4_5_6_pentakisphosphate
   }
 
   branch from adp side left {
     adp
-    <-> ec_2_7_2_13 [2.7.2.13] +h +atp +l_glutamate
-    l_alpha_glutamyl_phosphate
+    <-> . +1d_myo_inositol_1_3_4_6_tetrakisphosphate +atp +h
+    1d_myo_inositol_1_2_3_4_6_pentakisphosphate
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_5_1_97 [3.5.1.97] +n_3_oxohexanoyl_l_homoserine_lactone +h2o +l_homoserine_lactone
+    3_oxohexanoic_acid
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_5_1_97 [3.5.1.97] +3_oxooctanoic_acid +l_homoserine_lactone +h2o
+    3_oxo_n_3s_2_oxotetrahydrofuran_3_yl_octanamide
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +diphosphate +n_acetyldemethylphosphinothricin_adenylate +h
+    n_acetyl_demethyl_l_phosphinothricin
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +l_alanine +indol_3_yl_acetate +diphosphate +amp
+    n_indole_3_acetyl_l_alanine
+  }
+
+  branch from adp side right {
+    adp
+    <-> ec_2_7_1_140 [2.7.1.140] +h +1d_myo_inositol_1_2_3_4_6_pentakisphosphate +atp
+    1d_myo_inositol_hexakisphosphate
+  }
+
+  branch from adp side left {
+    adp
+    <-> . +1d_myo_inositol_3_4_bisphosphate +h +atp
+    1d_myo_inositol_3_phosphate
   }
 }

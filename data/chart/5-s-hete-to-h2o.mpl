@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-s-hete-to-h2o "5(S)-HETE to H2O" {
-  spacing 200
+  spacing 158
 
   spine at 0,0 {
     5_s_hete
@@ -16,51 +16,9 @@ pathway 5-s-hete-to-h2o "5(S)-HETE to H2O" {
     atp
   }
 
-  branch from 5_s_15_s_dihete side left {
-    5_s_15_s_dihete
-    <-> . +nadp +6e_8z_11z_13e_15s_15_hydroxy_5_oxoicosatetraeno
-    nadph
-  }
-
-  branch from 5_s_15_s_dihete side right {
-    5_s_15_s_dihete
-    <-> . +h +o2
-    5_r_hete
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +2_3z_indol_3_ylidene_acetaldehyde +h2o2
-    indole_3_acetaldehyde
-  }
-
-  branch from o2 side right {
-    o2
-    <-> ec_1_13_99_3 [1.13.99.3] +indole_3_methanol +h2o2 +h2o
-    skatole
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_47 [3.6.3.47] +h +adp +phosphate +h2o
-    octanoyl_coa
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_47 [3.6.3.47] +h +adp +phosphate +h2o
-    2_carboxyhexacosanoyl_coa
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +trichloroethene
-    2_2_2_trichloroethanol
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +2s_2_hydroxy_3_4_dioxopentyl_phosphate
-    3_4_4_trihydroxy_5_phosphooxypentan_2_one
+  branch from 5_s_hete side left {
+    5_s_hete
+    <-> . +o2
+    5s_hydroxy_15s_hydroperoxy_6e_8z_11z_13e_icosat
   }
 }

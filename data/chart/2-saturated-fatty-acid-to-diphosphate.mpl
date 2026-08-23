@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-saturated-fatty-acid-to-diphosphate "2-saturated fatty acid… to diphosphate" {
-  spacing 188
+  spacing 236
 
   spine at 0,0 {
     2_saturated_fatty_acid_anion
@@ -18,14 +18,14 @@ pathway 2-saturated-fatty-acid-to-diphosphate "2-saturated fatty acid… to diph
 
   branch from fatty-acid side left {
     fatty-acid
-    <-> . +1_2_diacyl_sn_glycero_3_phosphoethanolamine +h2o +hplus
-    1_acyl_sn_glycero_3_phosphoethanolamine
+    <-> . +n_fatty_acyl_l_phenylalanine +h2o
+    l_phenylalanine
   }
 
   branch from fatty-acid side right {
     fatty-acid
-    <-> . +2_monolysocardiolipin +h2o +hplus
-    2_2_dilysocardiolipin
+    <-> . +n_fatty_acyl_l_serine +h2o
+    serine
   }
 
   branch from fatty_acyl_coa side left {
@@ -42,13 +42,61 @@ pathway 2-saturated-fatty-acid-to-diphosphate "2-saturated fatty acid… to diph
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_80 [4.2.3.80] +fpp
-    longipinene
+    <-> ec_4_2_3_189 [4.2.3.189] +peregrinol_diphosphate
+    9_13_r_epoxylabd_14_ene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_96 [2.5.1.96] +fpp
-    15_cis_4_4_diapophytoene
+    <-> ec_4_2_3_190 [4.2.3.190] +copal_8_ol_diphosphate
+    13r_manoyl_oxide
+  }
+
+  branch from 2_saturated_fatty_acid_anion side left {
+    2_saturated_fatty_acid_anion
+    <-> . +fe2 +o2 +hplus +iron +h2o
+    2_hydroxy_fatty_acid_anion
+  }
+
+  branch from 2_saturated_fatty_acid_anion side right {
+    2_saturated_fatty_acid_anion
+    <-> ec_1_13_11_92 [1.13.11.92] +o2
+    2r_2_hydroperoxy_fatty_acid_anion
+  }
+
+  branch from fatty-acid side left {
+    fatty-acid
+    <-> . +n_fatty_acyl_l_tryptophan +h2o
+    l_tryptophan
+  }
+
+  branch from fatty-acid side right {
+    fatty-acid
+    <-> . +n_fatty_acyl_l_tyrosine +h2o
+    tyrosine
+  }
+
+  branch from fatty_acyl_coa side left {
+    fatty_acyl_coa
+    <-> . +c20_phytosphingosine +coa +hplus
+    c20_phytoceramide
+  }
+
+  branch from fatty_acyl_coa side right {
+    fatty_acyl_coa
+    <-> . +c17_sphingosine +coa +hplus
+    n_acylheptadecasphingosine
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_191 [4.2.3.191] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    cycloaraneosene
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +very_long_chain_fatty_acid_anion +atp +coa +amp
+    very_long_chain_fatty_acyl_coa
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway palustradiene-diol-to-abietate "palustradiene-diol to abietate" {
-  spacing 280
+  spacing 316
 
   spine at 0,0 {
     palustradiene_diol
@@ -28,67 +28,103 @@ pathway palustradiene-diol-to-abietate "palustradiene-diol to abietate" {
 
   branch from palustradienal side right {
     palustradienal
-    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +nadp
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +nad
     palustradienol
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_20 [3.2.1.20] +isomaltotriose +isomaltose
-    alpha_d_glucose
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +barbamide +phosphate +barbamide
+    atp
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_4_11_1 [3.4.11.1] +l_leucine +glycylglycine
-    leu_gly_gly
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    curacin_a
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_21 [1.1.1.21] +compound_0066905 +h +nadph
-    p_fluorobenzyl_alcohol
+    <-> ec_1_1_1_71 [1.1.1.71] +neoabietadienal +h +nadph
+    isopimara_7_15_dienol
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_21 [1.1.1.21] +compound_0063751 +h +nadph
-    p_chlorophenylglyoxal
+    <-> ec_1_1_1_71 [1.1.1.71] +h +dehydroabietadienal +nadph
+    dehydroabietadienol
   }
 
   branch from abietol side left {
-    abietol
-    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +nadp
-    neoabietadienal
-  }
-
-  branch from abietol side right {
     abietol
     <-> ec_1_1_1_71 [1.1.1.71] +nadh +neoabietadienal +h
     nad
   }
 
-  branch from fmn side left {
-    fmn
-    <-> ec_1_14_14_81 [1.14.14.81] +3_5_unsubstituted_flavanone +fmnh2 +o2 +h2o +hplus
-    3_5_dihydroxyflavanone
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> ec_1_14_14_64 [1.14.14.64] +amyrin +fmnh2 +o2 +h2o +hplus
-    daturadiol
-  }
-
-  branch from abietal side left {
+  branch from abietal side right {
     abietal
     <-> ec_1_1_1_71 [1.1.1.71] +h +levopimaradienol +nad
     nadh
   }
 
-  branch from abietal side right {
+  branch from abietal side left {
     abietal
-    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +nadp
-    isopimara_7_15_dienol
+    <-> ec_1_2_1_5 [1.2.1.5] +nadh +h +nad +h2o
+    5z_7e_9e_14z_17z_icosapentaenoate
+  }
+
+  branch from palustradienal side right {
+    palustradienal
+    <-> ec_1_2_1_5 [1.2.1.5] +h +nadph +nadp +h2o
+    5z_8z_11z_14z_17z_eicosapentaenoate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    curacin_b
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    aeruginosin_98_b
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    aeruginosin_a
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    microginin_690
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_1_1_71 [1.1.1.71] +h +nadp +isopimara_7_15_dienol
+    isopimara_7_15_dienal
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_1_1_71 [1.1.1.71] +r_linalool +nadp +h
+    2e_geranial
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_1_1_71 [1.1.1.71] +2e_geranial +h +nadph
+    s_linalool
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_2_1_5 [1.2.1.5] +h +5z_7e_9e_14z_17z_icosapentaenoate +nadph +h2o
+    levopimaradienal
   }
 }

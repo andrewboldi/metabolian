@@ -104,44 +104,6 @@
       "xrefs": {
         "chebi": "CHEBI:33019"
       }
-    },
-    {
-      "id": "2_cis_6_trans_farnesyl_diphosphate",
-      "name": "2-cis,6-trans-farnesyl diphosphate",
-      "short": "2-cis,6-trans-farne…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:162247"
-      }
-    },
-    {
-      "id": "z_bisabolene",
-      "name": "(Z)-γ-bisabolene",
-      "formula": "C15H24",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:49238"
-      }
-    },
-    {
-      "id": "all_trans_pentaprenyl_diphosphate",
-      "name": "all-trans-pentaprenyl diphosphate",
-      "short": "all-trans-pentapren…",
-      "formula": "C25H41O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:57907"
-      }
-    },
-    {
-      "id": "variecoladiene",
-      "name": "variecoladiene",
-      "formula": "C25H40",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:230481"
-      }
     }
   ],
   "enzymes": [
@@ -150,7 +112,10 @@
       "name": "3-deoxy-D-glycero-D-galacto-nononate 9-phosphate synthase",
       "ec": [
         "2.5.1.132"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q9NR45"
+      }
     },
     {
       "id": "ec_3_1_3_103",
@@ -306,73 +271,27 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "(2Z,6E)-farnesyl diphosphate = (Z)-gamma-bisabolene + diphosphate",
-      "equation": "(2Z,6E)-farnesyl diphosphate = (Z)-gamma-bisabolene + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "2_cis_6_trans_farnesyl_diphosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "z_bisabolene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:79463"
+      "id": "xt_aldehydo_d_mannose_6_phosphate_petunidin-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aldehydo_d_mannose_6_phosphate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "petunidin-to-h2o"
+      },
+      "note": "Shares aldehydo-D-mannose 6-phosphate with petunidin to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:79463"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "(2E,6E,10E,14E)-geranylfarnesyl diphosphate = variecoladiene + diphosphate",
-      "equation": "(2E,6E,10E,14E)-geranylfarnesyl diphosphate = variecoladiene + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "all_trans_pentaprenyl_diphosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "variecoladiene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:79687"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:79687"
+            "db": "ChEBI",
+            "id": "CHEBI:231735"
           }
         ]
       }

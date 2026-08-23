@@ -1,0 +1,618 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-allantoin-to-oxalurate-17029",
+  "name": "(S)-(+)-allantoin to oxalurate",
+  "category": "energy-metabolism",
+  "summary": "A 4-step route from (S)-(+)-allantoin to oxalurate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:17029"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:15678"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_allantoin",
+      "name": "(S)-(+)-allantoin",
+      "formula": "C4H6N4O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15678"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "allantoate",
+      "name": "allantoate",
+      "formula": "C4H7N4O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17536"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "s_2_ureidoglycine",
+      "name": "(S)-2-ureidoglycine",
+      "formula": "C3H7N3O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59947"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "ureidoglycolate",
+      "name": "(−)-ureidoglycolate",
+      "formula": "C3H5N2O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57296"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "oxalurate",
+      "name": "oxalurate",
+      "formula": "C3H3N2O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57824"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_2_5",
+      "name": "allantoinase",
+      "ec": [
+        "3.5.2.5"
+      ]
+    },
+    {
+      "id": "ec_3_5_3_9",
+      "name": "allantoate deiminase",
+      "ec": [
+        "3.5.3.9"
+      ]
+    },
+    {
+      "id": "ec_3_5_3_26",
+      "name": "(S)-ureidoglycine aminohydrolase",
+      "ec": [
+        "3.5.3.26"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_154",
+      "name": "ureidoglycolate dehydrogenase [NAD(P)(+)]",
+      "ec": [
+        "1.1.1.154"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_350",
+      "name": "ureidoglycolate dehydrogenase (NAD(+))",
+      "ec": [
+        "1.1.1.350"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "allantoinase",
+      "equation": "(S)-allantoin + H2O = allantoate + H(+)",
+      "ec": "3.5.2.5",
+      "substrates": [
+        {
+          "metabolite": "s_allantoin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "allantoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_2_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:17029"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17029"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "allantoate deiminase",
+      "equation": "allantoate + H2O + 2 H(+) = (S)-2-ureidoglycine + NH4(+) + CO2",
+      "ec": "3.5.3.9",
+      "substrates": [
+        {
+          "metabolite": "allantoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_2_ureidoglycine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_3_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:27485"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27485"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(S)-ureidoglycine aminohydrolase",
+      "equation": "(S)-2-ureidoglycine + H2O = (S)-ureidoglycolate + NH4(+)",
+      "ec": "3.5.3.26",
+      "substrates": [
+        {
+          "metabolite": "s_2_ureidoglycine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ureidoglycolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_3_26"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:25241"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25241"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "ureidoglycolate dehydrogenase [NAD(P)(+)]",
+      "equation": "(S)-ureidoglycolate + NAD(+) = N-carbamoyl-2-oxoglycine + NADH + H(+)",
+      "ec": "1.1.1.154",
+      "substrates": [
+        {
+          "metabolite": "ureidoglycolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "oxalurate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_154"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:15329"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15329"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_s_allantoin_3-5-unsubstituted-to-r-allantoin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_allantoin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-5-unsubstituted-to-r-allantoin"
+      },
+      "note": "Shares (S)-(+)-allantoin with 3',5'-unsubstituted… to (R)-(−)-allantoin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15678"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_allantoin_3-5-unsubstituted-to-r-allantoin-10592",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_allantoin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-5-unsubstituted-to-r-allantoin-10592"
+      },
+      "note": "Shares (S)-(+)-allantoin with 3',5'-unsubstituted… to (R)-(−)-allantoin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15678"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_allantoin_s-allantoin-to-oxalurate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_allantoin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-allantoin-to-oxalurate"
+      },
+      "note": "Shares (S)-(+)-allantoin with (S)-(+)-allantoin to oxalurate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15678"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_allantoate_allantoin-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "allantoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "allantoin-to-ammonium"
+      },
+      "note": "Shares allantoate with allantoin to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17536"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_allantoate_allantoin-to-ammonium-30819",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "allantoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "allantoin-to-ammonium-30819"
+      },
+      "note": "Shares allantoate with allantoin to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17536"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_allantoate_s-allantoin-to-oxalurate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "allantoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-allantoin-to-oxalurate"
+      },
+      "note": "Shares allantoate with (S)-(+)-allantoin to oxalurate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17536"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_2_ureidoglycine_allantoin-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_2_ureidoglycine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "allantoin-to-ammonium"
+      },
+      "note": "Shares (S)-2-ureidoglycine with allantoin to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:59947"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_2_ureidoglycine_allantoin-to-ammonium-30819",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_2_ureidoglycine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "allantoin-to-ammonium-30819"
+      },
+      "note": "Shares (S)-2-ureidoglycine with allantoin to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:59947"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_2_ureidoglycine_benzoylagmatinium-to-glycine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_2_ureidoglycine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "benzoylagmatinium-to-glycine"
+      },
+      "note": "Shares (S)-2-ureidoglycine with benzoylagmatinium to glycine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:59947"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_2_ureidoglycine_n-acetyl-d-galactosamin-to-glyoxylate-15621",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_2_ureidoglycine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyl-d-galactosamin-to-glyoxylate-15621"
+      },
+      "note": "Shares (S)-2-ureidoglycine with N-acetyl-α-D-galactosamin… to glyoxylate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:59947"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_2_ureidoglycine_s-2-ureidoglycine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_2_ureidoglycine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2-ureidoglycine-to-h2o"
+      },
+      "note": "Shares (S)-2-ureidoglycine with (S)-2-ureidoglycine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:59947"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_2_ureidoglycine_s-2-ureidoglycine-to-h2o-33871",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_2_ureidoglycine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2-ureidoglycine-to-h2o-33871"
+      },
+      "note": "Shares (S)-2-ureidoglycine with (S)-2-ureidoglycine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:59947"
+          }
+        ]
+      }
+    }
+  ]
+}

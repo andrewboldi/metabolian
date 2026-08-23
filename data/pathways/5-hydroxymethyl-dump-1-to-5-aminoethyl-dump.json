@@ -165,89 +165,6 @@
       "xrefs": {
         "chebi": "CHEBI:16526"
       }
-    },
-    {
-      "id": "serine",
-      "name": "L-Serine",
-      "formula": "C3H7NO3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:33384"
-      }
-    },
-    {
-      "id": "5_o_l_seryl_dtmp_1",
-      "name": "5-O-(L-seryl)-dTMP(1−)",
-      "short": "5-O-(L-seryl)-dTMP(…",
-      "formula": "C13H17N3O10P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:190922"
-      }
-    },
-    {
-      "id": "1_4_butanediammonium",
-      "name": "1,4-butanediammonium",
-      "formula": "C4H14N2",
-      "charge": 2,
-      "xrefs": {
-        "chebi": "CHEBI:326268"
-      }
-    },
-    {
-      "id": "5_n_putrescinyl_dtmp_1",
-      "name": "5-Nα-putrescinyl-dTMP(1+)",
-      "short": "5-Nα-putrescinyl-dT…",
-      "formula": "C14H24N4O7P",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:190920"
-      }
-    },
-    {
-      "id": "linoleate",
-      "name": "linoleate",
-      "formula": "C18H31O2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:30245"
-      }
-    },
-    {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:15379"
-      }
-    },
-    {
-      "id": "9_r_hode",
-      "name": "9(R)-HODE",
-      "formula": "C18H31O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:77895"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "Water",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:15377"
-      }
-    },
-    {
-      "id": "13_s_hode",
-      "name": "13(S)-HODE",
-      "formula": "C18H31O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:90850"
-      }
     }
   ],
   "enzymes": [],
@@ -427,175 +344,71 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "5-phosphomethyl-dUMP in DNA + L-serine = 5-O-(L-seryl)-dTMP in DNA + phosphate",
-      "equation": "5-phosphomethyl-dUMP in DNA + L-serine = 5-O-(L-seryl)-dTMP in DNA + phosphate",
-      "substrates": [
-        {
-          "metabolite": "5_phosphomethyl_dump_3",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "serine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "5_o_l_seryl_dtmp_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:71567"
+      "id": "xt_5_phosphomethyl_dump_3_1-stearoyl-2-10-hydroxyo-to-l-serine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_phosphomethyl_dump_3"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1-stearoyl-2-10-hydroxyo-to-l-serine"
+      },
+      "note": "Shares 5-phosphomethyl-dUMP(3−) with 1-stearoyl,2-(10-hydroxyo… to L-serine.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:71567"
+            "db": "ChEBI",
+            "id": "CHEBI:190918"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "5-phosphomethyl-dUMP in DNA + putrescine = 5-N(alpha)-putrescinyl-dTMP in DNA + phosphate",
-      "equation": "5-phosphomethyl-dUMP in DNA + putrescine = 5-N(alpha)-putrescinyl-dTMP in DNA + phosphate",
-      "substrates": [
-        {
-          "metabolite": "5_phosphomethyl_dump_3",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "1_4_butanediammonium",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "5_n_putrescinyl_dtmp_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:71575"
+      "id": "xt_5_phosphomethyl_dump_3_n1-n12-diacetylsperminium-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_phosphomethyl_dump_3"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "n1-n12-diacetylsperminium-to-ammonium"
+      },
+      "note": "Shares 5-phosphomethyl-dUMP(3−) with N1,N12-diacetylsperminium to ammonium.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:71575"
+            "db": "ChEBI",
+            "id": "CHEBI:190918"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "(9Z,12Z)-octadecadienoate + AH2 + O2 = (9R)-hydroxy-(10E,12Z)-octadecadienoate + A + H2O",
-      "equation": "(9Z,12Z)-octadecadienoate + AH2 + O2 = (9R)-hydroxy-(10E,12Z)-octadecadienoate + A + H2O",
-      "substrates": [
-        {
-          "metabolite": "linoleate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_donor",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "9_r_hode",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_acceptor",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:75447"
+      "id": "xt_5_n_glycyl_dtmp_1_cellobiose-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_n_glycyl_dtmp_1"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "cellobiose-to-hydrogen-donor"
+      },
+      "note": "Shares 5-Nα-glycyl-dTMP(1−) with cellobiose to hydrogen donor.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:75447"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r8",
-      "name": "(9Z,12Z)-octadecadienoate + AH2 + O2 = (13S)-hydroxy-(9Z,11E)-octadecadienoate + A + H2O",
-      "equation": "(9Z,12Z)-octadecadienoate + AH2 + O2 = (13S)-hydroxy-(9Z,11E)-octadecadienoate + A + H2O",
-      "substrates": [
-        {
-          "metabolite": "linoleate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_donor",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "13_s_hode",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_acceptor",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "rhea": "RHEA:75451"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:75451"
+            "db": "ChEBI",
+            "id": "CHEBI:190919"
           }
         ]
       }

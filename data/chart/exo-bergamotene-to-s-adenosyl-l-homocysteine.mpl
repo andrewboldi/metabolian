@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway exo-bergamotene-to-s-adenosyl-l-homocysteine "(+)-exo-β-bergamotene to S-adenosyl-L-homocysteine" {
-  spacing 326
+  spacing 314
 
   spine at 0,0 {
     exo_bergamotene
@@ -20,17 +20,5 @@ pathway exo-bergamotene-to-s-adenosyl-l-homocysteine "(+)-exo-β-bergamotene to 
     5_dehydrofumagillol
     <-> ec_1_1_1_437 [1.1.1.437] +nadp +nadph +hplus
     fumagillol
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +3_desmethyl_okaramine_b +sam +hplus
-    okaramine_b
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +guanosine_5_monophosphate_1 +sam +hplus
-    n2_methylguanosine_5_monophosphate_1
   }
 }

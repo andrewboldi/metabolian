@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-gal-1-4-d-glcnac-to-d-gal-1-4-d-glcnac "β-D-Gal-(1→4)-β-D-GlcNAc-… to β-D-Gal-(1→4)-β-D-GlcNAc-…" {
-  spacing 158
+  spacing 176
 
   spine at 0,0 {
     d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_glc_1_1_cer
@@ -16,9 +16,27 @@ pathway d-gal-1-4-d-glcnac-to-d-gal-1-4-d-glcnac "β-D-Gal-(1→4)-β-D-GlcNAc-�
     d_gal_1_4_d_glcnac_1_3_d_gal_1_4_l_fuc_1_3_d_gl
   }
 
-  branch from d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_glcnac_1_3_d side left {
-    d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_glcnac_1_3_d
-    <-> . +gdp_l_fucose +gdp +hplus
-    d_gal_1_4_l_fuc_1_3_d_glcnac_1_3_d_gal_1_4_d_gl
+  branch from udpglcnac side left {
+    udpglcnac
+    <-> . +3_o_d_gal_1_3_d_gal_1_4_d_glcnac_1_6_d_galnac_l +udp +hplus
+    3_o_d_glcnac_1_4_d_gal_1_3_d_glcnac_1_4_d_gal_1
+  }
+
+  branch from udpglcnac side right {
+    udpglcnac
+    <-> . +o3_d_galactosyl_1_3_n_acetyl_d_glucosaminyl_1_6 +udp +hplus
+    3_o_d_glcnac_1_4_d_gal_1_3_d_glcnac_1_6_d_galnac
+  }
+
+  branch from gdp_l_fucose side left {
+    gdp_l_fucose
+    <-> . +n_acetyl_neuraminosyl_2_3_d_galactosyl_1_4_n_ace +gdp +hplus
+    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_4_l_fuc
+  }
+
+  branch from gdp_l_fucose side right {
+    gdp_l_fucose
+    <-> . +neup5ac_2_3_d_galp_1_4_d_glcpnac_1_3_d_galp_1_4 +gdp +hplus
+    neup5ac_2_3_d_galp_1_4_l_fucp_1_3_d_glcpnac_1_3
   }
 }

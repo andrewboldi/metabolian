@@ -154,54 +154,6 @@
       "xrefs": {
         "chebi": "CHEBI:76455"
       }
-    },
-    {
-      "id": "1_2_dihexanoylglycerol",
-      "name": "1,2-dihexanoylglycerol",
-      "short": "1,2-dihexanoylglyce…",
-      "formula": "C15H28O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:177077"
-      }
-    },
-    {
-      "id": "1_2_caproyl_3_linolenoylglycerol",
-      "name": "1,2-caproyl-3-α-linolenoylglycerol",
-      "short": "1,2-caproyl-3-α-lin…",
-      "formula": "C33H56O6",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:177088"
-      }
-    },
-    {
-      "id": "fad",
-      "name": "FAD",
-      "formula": "C27H30N9O15P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:57692"
-      }
-    },
-    {
-      "id": "2e_9z_12z_15z_octadecatetraenoyl_coa",
-      "name": "(2E,9Z,12Z,15Z)-octadecatetraenoyl-CoA",
-      "short": "(2E,9Z,12Z,15Z)-oct…",
-      "formula": "C39H58N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:233840"
-      }
-    },
-    {
-      "id": "fadh2",
-      "name": "FADH2",
-      "formula": "C27H33N9O15P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:58307"
-      }
     }
   ],
   "enzymes": [
@@ -210,7 +162,10 @@
       "name": "3-oxoacyl-[acyl-carrier-protein] reductase",
       "ec": [
         "1.1.1.100"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q8N4T8"
+      }
     }
   ],
   "reactions": [
@@ -355,85 +310,203 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "1,2-dihexanoylglycerol + (9Z,12Z,15Z)-octadecatrienoyl-CoA = 1,2-dihexanoyl-3-(9Z,12Z,1...",
-      "equation": "1,2-dihexanoylglycerol + (9Z,12Z,15Z)-octadecatrienoyl-CoA = 1,2-dihexanoyl-3-(9Z,12Z,15Z-octadecatrienoyl)-glycerol + CoA",
-      "substrates": [
-        {
-          "metabolite": "1_2_dihexanoylglycerol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "linolenoyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_2_caproyl_3_linolenoylglycerol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:68216"
+      "id": "xt_linolenoyl_coa_1-acyl-2-oleoyl-sn-glycer-to-1-acyl-2-linoleoyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "linolenoyl_coa"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1-acyl-2-oleoyl-sn-glycer-to-1-acyl-2-linoleoyl"
+      },
+      "note": "Shares α-linolenoyl-CoA with 1-acyl-2-oleoyl-sn-glycer… to 1-acyl-2-linoleoyl-sn-gly….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:68216"
+            "db": "ChEBI",
+            "id": "CHEBI:74034"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "(9Z,12Z,15Z)-octadecatrienoyl-CoA + oxidized [electron-transfer flavoprotein] + H(+) = ...",
-      "equation": "(9Z,12Z,15Z)-octadecatrienoyl-CoA + oxidized [electron-transfer flavoprotein] + H(+) = (2E,9Z,12Z,15Z)-octadecatetraenoyl-CoA + reduced [electron-transfer flavoprotein]",
-      "substrates": [
-        {
-          "metabolite": "linolenoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fad",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2e_9z_12z_15z_octadecatetraenoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fadh2",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:84595"
+      "id": "xt_linolenoyl_coa_1-oleoyl-2-stearoyl-sn-gl-to-1-o-oleoyl-sn-glyce",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "linolenoyl_coa"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1-oleoyl-2-stearoyl-sn-gl-to-1-o-oleoyl-sn-glyce"
+      },
+      "note": "Shares α-linolenoyl-CoA with 1-oleoyl-2-stearoyl-sn-gl… to 1-O-oleoyl-sn-glycero-3-p….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:84595"
+            "db": "ChEBI",
+            "id": "CHEBI:74034"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_linolenoyl_coa_2e-9z-12z-15z-octadecat-to-1-2-dicaproyl-3-7z-1",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "linolenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2e-9z-12z-15z-octadecat-to-1-2-dicaproyl-3-7z-1"
+      },
+      "note": "Shares α-linolenoyl-CoA with (2E,9Z,12Z,15Z)-octadecat… to 1,2-dicaproyl-3-(7Z,10Z,1….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74034"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_linolenoyl_coa_3-3-diiodo-l-thyronine-to-adenosine-3-5-bismonop",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "linolenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-3-diiodo-l-thyronine-to-adenosine-3-5-bismonop"
+      },
+      "note": "Shares α-linolenoyl-CoA with 3,3'-diiodo-L-thyronine to adenosine 3',5'-bismonoph….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74034"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_linolenoyl_coa_alaninium-amide-to-d-pantetheine-4-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "linolenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alaninium-amide-to-d-pantetheine-4-phosphate"
+      },
+      "note": "Shares α-linolenoyl-CoA with β-alaninium amide to D-pantetheine 4'-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74034"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_linolenoyl_coa_linolenoyl-coa-to-3-oxo-6z-9z-12z-15z-oct",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "linolenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "linolenoyl-coa-to-3-oxo-6z-9z-12z-15z-oct"
+      },
+      "note": "Shares α-linolenoyl-CoA with α-linolenoyl-CoA to 3-oxo-(6Z,9Z,12Z,15Z)-oct….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74034"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_linolenoyl_coa_n-hexadecanoylphosphatidy-to-linolenoyl-sn-glyce",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "linolenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-hexadecanoylphosphatidy-to-linolenoyl-sn-glyce"
+      },
+      "note": "Shares α-linolenoyl-CoA with N-hexadecanoylphosphatidy… to α-linolenoyl-sn-glycero-3….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74034"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_11z_14z_17z_3_oxoicosatrienoyl_coa_11z-14z-17z-3-oxoicosat-to-13z-16z-19z-docosatr",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11z_14z_17z_3_oxoicosatrienoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "11z-14z-17z-3-oxoicosat-to-13z-16z-19z-docosatr"
+      },
+      "note": "Shares (11Z,14Z,17Z)-3-oxoicosatrienoyl-CoA with (11Z,14Z,17Z)-3-oxoicosat… to 13Z,16Z,19Z-Docosatrienoy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74054"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3r_11z_14z_17z_3_hydroxyicosatrienoyl_coa_11z-14z-17z-3-oxoicosat-to-13z-16z-19z-docosatr",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3r_11z_14z_17z_3_hydroxyicosatrienoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "11z-14z-17z-3-oxoicosat-to-13z-16z-19z-docosatr"
+      },
+      "note": "Shares (3R,11Z,14Z,17Z)-3-hydroxyicosatrienoyl-CoA with (11Z,14Z,17Z)-3-oxoicosat… to 13Z,16Z,19Z-Docosatrienoy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76455"
           }
         ]
       }

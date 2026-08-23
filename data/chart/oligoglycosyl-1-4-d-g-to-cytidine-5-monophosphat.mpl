@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway oligoglycosyl-1-4-d-g-to-cytidine-5-monophosphat "oligoglycosyl-(1→4)-β-D-g… to cytidine 5'-monophosphate" {
-  spacing 248
+  spacing 278
 
   spine at 0,0 {
     oligoglycosyl_1_4_d_glucosyl_1_1_ceramide
@@ -32,25 +32,55 @@ pathway oligoglycosyl-1-4-d-g-to-cytidine-5-monophosphat "oligoglycosyl-(1→4)-
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> ec_2_7_8_48 [2.7.8.48] +cdp_ethanolamine +n_acylsphingosine +hplus
-    n_acylsphingosine_1_phosphoethanolamine
+    <-> ec_2_4_3_7 [2.4.3.7] +n_acetyl_neuraminyl_2_3_d_galactosyl_1_3_n_acety +cmp_n_acetyl_neuraminate +hplus
+    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace
   }
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> ec_2_4_99_15 [2.4.99.15] +kdo_2_lipid_iva +cmp_3_deoxy_d_manno_octulosonate +hplus
-    kdo_3_lipid_iva
+    <-> . +cdp_choline +1_2_dioleoyl_sn_glycerol +hplus
+    1_2_dioleoyl_sn_glycero_3_phosphocholine
   }
 
   branch from cdp side left {
     cdp
-    <-> . +h2o +pi +hplus
+    <-> . +nad +nadp +hplus
     ctp
   }
 
-  branch from cdp side right {
-    cdp
-    <-> . +phytyl_phosphate +ctp
-    phytyl_diphosphate
+  branch from n_acylsphingoid side right {
+    n_acylsphingoid
+    <-> . +galactosylceramide +h2o
+    d_galactopyranose
+  }
+
+  branch from n_acylsphingoid side left {
+    n_acylsphingoid
+    <-> . +d_glucosylceramide +h2o
+    glucose
+  }
+
+  branch from cdp_ethanolamine side right {
+    cdp_ethanolamine
+    <-> . +1_2_di_palmitoleoyl_2_sn_glycerol +cytidine_5_monophosphate +hplus
+    1_2_di_9z_hexadecenoyl_sn_glycero_3_phosphoethan
+  }
+
+  branch from cdp_ethanolamine side left {
+    cdp_ethanolamine
+    <-> . +1_palmityl_2_arachidonoyl_sn_glycerol +cytidine_5_monophosphate +hplus
+    1_o_palmityl_2_arachidonoyl_sn_glycero_3_phospho
+  }
+
+  branch from cytidine_5_monophosphate side right {
+    cytidine_5_monophosphate
+    <-> . +1_stearoyl_2_arachidonoyl_sn_glycerol +cdp_choline +hplus
+    1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphoch
+  }
+
+  branch from cytidine_5_monophosphate side left {
+    cytidine_5_monophosphate
+    <-> . +1_palmityl_2_arachidonoyl_sn_glycerol +cdp_choline +hplus
+    1_o_hexadecyl_2_arachidonoyl_sn_glycero_3_phosph
   }
 }

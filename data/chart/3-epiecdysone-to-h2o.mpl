@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-epiecdysone-to-h2o "3-Epiecdysone to H2O" {
-  spacing 328
+  spacing 340
 
   spine at 0,0 {
     3_epiecdysone
@@ -18,61 +18,115 @@ pathway 3-epiecdysone-to-h2o "3-Epiecdysone to H2O" {
 
   branch from nadh side left {
     nadh
-    <-> . +5_dehydro_l_gluconate +h +nad
-    l_gluconic_acid
+    <-> ec_1_14_13_90 [1.14.13.90] +all_trans_zeaxanthin +h +o2 +nad +h2o
+    all_trans_antheraxanthin
   }
 
   branch from nadh side right {
     nadh
-    <-> . +all_trans_zeaxanthin +h +o2 +nad +h2o
-    nostoxanthin
+    <-> ec_1_6_5_2 [1.6.5.2] +h +menaquinone_2 +nad
+    menaquinol
   }
 
   branch from h side left {
     h
-    <-> . +o_citryl_l_serine +o_citryl_ethanolamine
-    co2
+    <-> ec_4_2_1_22 [4.2.1.22] +mercaptoethanol +l_cysteine +s_2_hydroxyethyl_l_cysteine
+    hydrogen_sulfide
   }
 
   branch from h side right {
     h
-    <-> . +ctp +glycerol_2_phosphate +cdp_2_glycerol
-    diphosphate
+    <-> ec_3_2_1_18 [3.2.1.18] +n_acetylneuraminate +4_methylumbelliferone +h2o
+    2_4_methylumbelliferyl_alpha_d_n_acetylneuramini
   }
 
   branch from 3_dehydroecdysone side left {
-    3_dehydroecdysone
-    <-> . +3_epiecdysone +nadp +h
-    nadph
-  }
-
-  branch from 3_dehydroecdysone side right {
     3_dehydroecdysone
     <-> . +h +nadph +ecdysone
     nadp
   }
 
-  branch from nad side left {
-    nad
-    <-> . +nadh +all_trans_beta_carotene +h +o2 +h2o
-    2s_2_s_dihydroxy_all_trans_beta_carotene
-  }
-
   branch from nad side right {
     nad
-    <-> . +nadh +d_xylonate +h +h2o
-    aldehydo_d_xylose
+    <-> . +nadh +h +octane +o2 +h2o
+    octan_1_ol
   }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_3_4_19_16 [3.4.19.16] +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +l_glutamate
-    z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa
+  branch from nad side left {
+    nad
+    <-> . +nadh +h +acetate +glycine +h2o
+    l_threonine
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_4_19_16 [3.4.19.16] +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +l_glutamate
-    z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa
+    <-> ec_3_3_1_1 [3.3.1.1] +l_homocysteine +3_deazaadenosine
+    3_deazaadenosylhomocysteine
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_5_1_11 [3.5.1.11] +d_alpha_phenylglycine +methanol
+    d_phenylglycine_methyl_ester
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_3_99_10 [1.3.99.10] +nadh +3_methylbut_2_enoyl_coa +h
+    3_methylbutanoyl_coa
+  }
+
+  branch from nad side left {
+    nad
+    <-> . +nadh +h +4_methylsulfanyl_2_oxobutanoate +formate +phosphate +h2o
+    5_methylsulfanyl_2_3_dioxopentyl_phosphate
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +h +dihydrokalafungin +nad
+    dihydrokalafungin_dihydroquinone_form
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> . +h +3e_3_1r_5r_6s_5_hydroxy_7_oxabicyclo_4_1_0_hept +nad
+    3_1r_2s_5r_6s_5_hydroxy_7_oxabicyclo_4_1_0_hepta
+  }
+
+  branch from h side right {
+    h
+    <-> ec_1_2_1_3 [1.2.1.3] +propanoate +4_nitrophenol +h2o
+    4_nitrophenyl_propanoate
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_4_11_2 [3.4.11.2] +l_lysine +phenylalanyl_lysine +h2o
+    lys_phe_lys
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> . +l_glutamate_5_semialdehyde +h +nadp +d_alpha_glutamyl_phosphate
+    nadph
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +guanosine +h +h2o
+    gtp
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +l_leucine +l_methionine
+    leu_met
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_5_1_14 [3.5.1.14] +n_acetyl_l_glutamate +l_glutamate
+    acetate
   }
 }

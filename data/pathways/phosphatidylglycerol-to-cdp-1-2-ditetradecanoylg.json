@@ -1,0 +1,485 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "phosphatidylglycerol-to-cdp-1-2-ditetradecanoylg",
+  "name": "Phosphatidylglycerol… to CDP-1,2-ditetradecanoylgl…",
+  "category": "other",
+  "summary": "A 3-step route from Phosphatidylglycerol (ditetradecanoyl, n-C14:0) to CDP-1,2-ditetradecanoylglycerol, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR96782"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "phosphatidylglycerol_ditetradecanoyl_n_c14_0",
+      "name": "Phosphatidylglycerol (ditetradecanoyl, n-C14:0)",
+      "short": "Phosphatidylglycero…",
+      "formula": "C34H66O10P",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM737417"
+      }
+    },
+    {
+      "id": "cardiolipin_tetratetradecanoyl_n_c14_0",
+      "name": "Cardiolipin (tetratetradecanoyl, n-C14:0)",
+      "short": "Cardiolipin…",
+      "formula": "C65H124O17P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM740794"
+      }
+    },
+    {
+      "id": "glycerol",
+      "name": "glycerol",
+      "formula": "C3H8O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM89612"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "dimyristoyl_phosphatidic_acid",
+      "name": "dimyristoyl phosphatidic acid",
+      "short": "dimyristoyl…",
+      "formula": "C31H61O8P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62085"
+      }
+    },
+    {
+      "id": "ctp",
+      "name": "CTP",
+      "formula": "C9H12N3O14P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1103718"
+      }
+    },
+    {
+      "id": "diphosphate",
+      "name": "diphosphate",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM11"
+      }
+    },
+    {
+      "id": "cdp_1_2_ditetradecanoylglycerol",
+      "name": "CDP-1,2-ditetradecanoylglycerol",
+      "short": "CDP-1,2-ditetradeca…",
+      "formula": "C40H71N3O15P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM736328"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_7_41",
+      "name": "phosphatidate cytidylyltransferase",
+      "ec": [
+        "2.7.7.41"
+      ],
+      "xrefs": {
+        "uniprot": "Q92903"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR96782",
+      "substrates": [
+        {
+          "metabolite": "phosphatidylglycerol_ditetradecanoyl_n_c14_0",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cardiolipin_tetratetradecanoyl_n_c14_0",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycerol",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR96782"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR96782"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR96775",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cardiolipin_tetratetradecanoyl_n_c14_0",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dimyristoyl_phosphatidic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphatidylglycerol_ditetradecanoyl_n_c14_0",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR96775"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR96775"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "phosphatidate cytidylyltransferase",
+      "ec": "2.7.7.41",
+      "substrates": [
+        {
+          "metabolite": "ctp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dimyristoyl_phosphatidic_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cdp_1_2_ditetradecanoylglycerol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_7_41"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR153302"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR153302"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_phosphatidylglycerol_ditetradecanoyl_n_c14_0_1-tetradecanoyl-sn-glycer-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phosphatidylglycerol_ditetradecanoyl_n_c14_0"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-tetradecanoyl-sn-glycer-to-h2o"
+      },
+      "note": "Shares Phosphatidylglycerol (ditetradecanoyl, n-C14:0) with 1-tetradecanoyl-sn-glycer… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM737417"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phosphatidylglycerol_ditetradecanoyl_n_c14_0_glycerophosphatidylethano-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phosphatidylglycerol_ditetradecanoyl_n_c14_0"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "glycerophosphatidylethano-to-h2o"
+      },
+      "note": "Shares Phosphatidylglycerol (ditetradecanoyl, n-C14:0) with glycerophosphatidylethano… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM737417"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phosphatidylglycerol_ditetradecanoyl_n_c14_0_sn-glycero-3-phospho-1-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phosphatidylglycerol_ditetradecanoyl_n_c14_0"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sn-glycero-3-phospho-1-to-h2o"
+      },
+      "note": "Shares Phosphatidylglycerol (ditetradecanoyl, n-C14:0) with sn-glycero-3-phospho-(1'-… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM737417"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dimyristoyl_phosphatidic_acid_3-hydroxy-3-phenylpropion-to-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dimyristoyl_phosphatidic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxy-3-phenylpropion-to-acetate"
+      },
+      "note": "Shares dimyristoyl phosphatidic acid with 3-hydroxy-3-phenylpropion… to acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62085"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dimyristoyl_phosphatidic_acid_co2-to-pyruvate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dimyristoyl_phosphatidic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "co2-to-pyruvate"
+      },
+      "note": "Shares dimyristoyl phosphatidic acid with CO2 to pyruvate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62085"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dimyristoyl_phosphatidic_acid_myristoylated-ferribactin-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dimyristoyl_phosphatidic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "myristoylated-ferribactin-to-h2o"
+      },
+      "note": "Shares dimyristoyl phosphatidic acid with myristoylated ferribactin to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62085"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dimyristoyl_phosphatidic_acid_p-nitrophenyl-to-2-hexadecanoyl-1-tetradec",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dimyristoyl_phosphatidic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "p-nitrophenyl-to-2-hexadecanoyl-1-tetradec"
+      },
+      "note": "Shares dimyristoyl phosphatidic acid with p-Nitrophenyl… to 2-hexadecanoyl-1-tetradec….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62085"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dimyristoyl_phosphatidic_acid_tetradecanoyl-coa-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dimyristoyl_phosphatidic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "tetradecanoyl-coa-to-h2o"
+      },
+      "note": "Shares dimyristoyl phosphatidic acid with tetradecanoyl-CoA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62085"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cdp_1_2_ditetradecanoylglycerol_24-methylidenelophenol-to-avenasterol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cdp_1_2_ditetradecanoylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "24-methylidenelophenol-to-avenasterol"
+      },
+      "note": "Shares CDP-1,2-ditetradecanoylglycerol with 24-methylidenelophenol to avenasterol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM736328"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cdp_1_2_ditetradecanoylglycerol_lipid-a-to-h",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cdp_1_2_ditetradecanoylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "lipid-a-to-h"
+      },
+      "note": "Shares CDP-1,2-ditetradecanoylglycerol with lipid A to H.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM736328"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cdp_1_2_ditetradecanoylglycerol_myristoylated-ferribactin-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cdp_1_2_ditetradecanoylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "myristoylated-ferribactin-to-h2o"
+      },
+      "note": "Shares CDP-1,2-ditetradecanoylglycerol with myristoylated ferribactin to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM736328"
+          }
+        ]
+      }
+    }
+  ]
+}

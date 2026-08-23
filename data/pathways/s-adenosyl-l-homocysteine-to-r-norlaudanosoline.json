@@ -1,0 +1,410 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-adenosyl-l-homocysteine-to-r-norlaudanosoline",
+  "name": "S-adenosyl-L-homocysteine to (R)-norlaudanosoline",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from S-adenosyl-L-homocysteine to (R)-norlaudanosoline, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR163455"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_adenosyl_l_homocysteine",
+      "name": "S-adenosyl-L-homocysteine",
+      "short": "S-adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1102167"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "s_6_o_methylnorprotosinomenine",
+      "name": "(S)-6-O-methylnorprotosinomenine",
+      "short": "6-O-methylnorprotos…",
+      "formula": "C19H24NO4",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM814664"
+      }
+    },
+    {
+      "id": "s_adenosyl_l_methionine",
+      "name": "S-adenosyl-L-methionine",
+      "short": "S-adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1363767"
+      }
+    },
+    {
+      "id": "s_norreticuline",
+      "name": "(S)-norreticuline",
+      "formula": "C18H22NO4",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:143273"
+      }
+    },
+    {
+      "id": "s_6_o_methylnorlaudanosoline",
+      "name": "(S)-6-O-methylnorlaudanosoline",
+      "short": "6-O-methylnorlaudan…",
+      "formula": "C17H19NO4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM2340"
+      }
+    },
+    {
+      "id": "s_s_adenosyl_l_methionine",
+      "name": "(S)-S-adenosyl-L-methionine",
+      "short": "S-adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:142094"
+      }
+    },
+    {
+      "id": "r_norlaudanosoline",
+      "name": "(R)-norlaudanosoline",
+      "formula": "C16H17NO4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM31670"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_116",
+      "name": "3'-hydroxy-N-methyl-(S)-coclaurine 4'-O-methyltransferase",
+      "ec": [
+        "2.1.1.116"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_121",
+      "name": "6-O-methylnorlaudanosoline 5'-O-methyltransferase",
+      "ec": [
+        "2.1.1.121"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_128",
+      "name": "(RS)-norcoclaurine 6-O-methyltransferase",
+      "ec": [
+        "2.1.1.128"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR163455",
+      "substrates": [
+        {
+          "metabolite": "s_adenosyl_l_homocysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "s_6_o_methylnorprotosinomenine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_adenosyl_l_methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "s_norreticuline",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR163455"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR163455"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "3'-hydroxy-N-methyl-(S)-coclaurine 4'-O-methyltransferase",
+      "ec": "2.1.1.116",
+      "substrates": [
+        {
+          "metabolite": "s_adenosyl_l_homocysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "s_norreticuline",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_adenosyl_l_methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "s_6_o_methylnorlaudanosoline",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_116"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR197929"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197929"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(RS)-norcoclaurine 6-O-methyltransferase",
+      "ec": "2.1.1.128",
+      "substrates": [
+        {
+          "metabolite": "s_adenosyl_l_homocysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "s_6_o_methylnorlaudanosoline",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_s_adenosyl_l_methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "r_norlaudanosoline",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_128"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR131596"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR131596"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_s_6_o_methylnorprotosinomenine_6-methylthioguanosine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_6_o_methylnorprotosinomenine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-methylthioguanosine-to-h2o"
+      },
+      "note": "Shares (S)-6-O-methylnorprotosinomenine with 6-Methylthioguanosine… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM814664"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_norreticuline_peonidin-to-r-norreticuline",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_norreticuline"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "peonidin-to-r-norreticuline"
+      },
+      "note": "Shares (S)-norreticuline with peonidin to (R)-norreticuline.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:143273"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_6_o_methylnorlaudanosoline_1-6-didemethyltoxoflavin-to-s-adenosyl-l-methion",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_6_o_methylnorlaudanosoline"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-6-didemethyltoxoflavin-to-s-adenosyl-l-methion"
+      },
+      "note": "Shares (S)-6-O-methylnorlaudanosoline with 1,6-didemethyltoxoflavin to S-adenosyl-L-methionine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2340"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_6_o_methylnorlaudanosoline_5-end-n7-methyl-to-e-2-methylgeranyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_6_o_methylnorlaudanosoline"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-end-n7-methyl-to-e-2-methylgeranyl"
+      },
+      "note": "Shares (S)-6-O-methylnorlaudanosoline with 5'-end (N7-methyl… to (E)-2-methylgeranyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2340"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_6_o_methylnorlaudanosoline_s-adenosyl-l-homocysteine-to-luteolin-glucoside",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_6_o_methylnorlaudanosoline"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-luteolin-glucoside"
+      },
+      "note": "Shares (S)-6-O-methylnorlaudanosoline with S-adenosyl-L-homocysteine to Luteolin glucoside.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2340"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_6_o_methylnorlaudanosoline_s-adenosyl-l-homocysteine-to-nadp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_6_o_methylnorlaudanosoline"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-nadp"
+      },
+      "note": "Shares (S)-6-O-methylnorlaudanosoline with S-adenosyl-L-homocysteine to NADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2340"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_6_o_methylnorlaudanosoline_s-adenosyl-l-homocysteine-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_6_o_methylnorlaudanosoline"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-nadph"
+      },
+      "note": "Shares (S)-6-O-methylnorlaudanosoline with S-adenosyl-L-homocysteine to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2340"
+          }
+        ]
+      }
+    }
+  ]
+}

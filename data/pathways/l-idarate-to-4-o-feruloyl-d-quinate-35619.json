@@ -1,0 +1,625 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-idarate-to-4-o-feruloyl-d-quinate-35619",
+  "name": "L-idarate to 4-O-feruloyl-D-quinate",
+  "category": "other",
+  "summary": "A 3-step route from L-idarate(2−) to 4-O-feruloyl-D-quinate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:35619"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:21332"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_idarate",
+      "name": "L-idarate",
+      "formula": "C6H8O8",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:21332"
+      }
+    },
+    {
+      "id": "d_glucarate",
+      "name": "D-glucarate",
+      "formula": "C6H8O8",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30612"
+      }
+    },
+    {
+      "id": "chlorogenate",
+      "name": "chlorogenate",
+      "formula": "C16H17O9",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57644"
+      }
+    },
+    {
+      "id": "2_o_caffeoylglucarate",
+      "name": "2-O-caffeoylglucarate",
+      "short": "2-O-caffeoylglucara…",
+      "formula": "C15H14O11",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58157"
+      }
+    },
+    {
+      "id": "quinate",
+      "name": "(−)-quinate",
+      "formula": "C7H11O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29751"
+      }
+    },
+    {
+      "id": "trans_feruloyl_coa",
+      "name": "trans-feruloyl-CoA",
+      "formula": "C31H40N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:87305"
+      }
+    },
+    {
+      "id": "4_o_feruloyl_d_quinate",
+      "name": "4-O-feruloyl-D-quinate",
+      "short": "4-O-feruloyl-D-quin…",
+      "formula": "C17H19O9",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:60078"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "3_5_di_o_caffeoyl_quinate",
+      "name": "3,5-di-O-caffeoyl quinate",
+      "short": "3,5-di-O-caffeoyl…",
+      "formula": "C25H23O12",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:231591"
+      }
+    },
+    {
+      "id": "5_dehydro_4_deoxy_d_glucarate",
+      "name": "5-dehydro-4-deoxy-D-glucarate",
+      "short": "5-dehydro-4-deoxy-D…",
+      "formula": "C6H6O7",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM854"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_3_1_98",
+      "name": "chlorogenate--glucarate O-hydroxycinnamoyltransferase",
+      "ec": [
+        "2.3.1.98"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_99",
+      "name": "quinate O-hydroxycinnamoyltransferase",
+      "ec": [
+        "2.3.1.99"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_324",
+      "name": "chlorogenate caffeoyltransferase",
+      "ec": [
+        "2.3.1.324"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_40",
+      "name": "glucarate dehydratase",
+      "ec": [
+        "4.2.1.40"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "L-idarate = D-glucarate",
+      "equation": "L-idarate = D-glucarate",
+      "substrates": [
+        {
+          "metabolite": "l_idarate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glucarate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:35619"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35619"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "chlorogenate--glucarate O-hydroxycinnamoyltransferase",
+      "equation": "chlorogenate + D-glucarate = 2-O-caffeoylglucarate + L-quinate",
+      "ec": "2.3.1.98",
+      "substrates": [
+        {
+          "metabolite": "chlorogenate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_glucarate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_o_caffeoylglucarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "quinate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_98"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:23204"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23204"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "quinate O-hydroxycinnamoyltransferase",
+      "equation": "L-quinate + (E)-feruloyl-CoA = 4-O-feruloyl-D-quinate + CoA",
+      "ec": "2.3.1.99",
+      "substrates": [
+        {
+          "metabolite": "quinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "trans_feruloyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_o_feruloyl_d_quinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_99"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:15021"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15021"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "chlorogenate caffeoyltransferase",
+      "equation": "2 chlorogenate = 3,5-di-O-caffeoyl quinate + L-quinate",
+      "ec": "2.3.1.324",
+      "substrates": [
+        {
+          "metabolite": "chlorogenate",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_5_di_o_caffeoyl_quinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "quinate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_324"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:82243"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82243"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "glucarate dehydratase",
+      "ec": "4.2.1.40",
+      "substrates": [
+        {
+          "metabolite": "l_idarate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_dehydro_4_deoxy_d_glucarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_40"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR133639"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR133639"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_l_idarate_l-idarate-to-4-o-feruloyl-d-quinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_idarate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-idarate-to-4-o-feruloyl-d-quinate"
+      },
+      "note": "Shares L-idarate with L-idarate to 4-O-feruloyl-D-quinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:21332"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glucarate_l-gulono-1-4-lactone-to-d-fructofuranuronate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glucarate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-gulono-1-4-lactone-to-d-fructofuranuronate"
+      },
+      "note": "Shares D-glucarate with L-gulono-1,4-lactone to D-fructofuranuronate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:30612"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glucarate_l-gulono-1-4-lactone-to-d-fructofuranuronate-189",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glucarate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-gulono-1-4-lactone-to-d-fructofuranuronate-189"
+      },
+      "note": "Shares D-glucarate with L-gulono-1,4-lactone to D-fructofuranuronate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:30612"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glucarate_l-idarate-to-4-o-feruloyl-d-quinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glucarate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-idarate-to-4-o-feruloyl-d-quinate"
+      },
+      "note": "Shares D-glucarate with L-idarate to 4-O-feruloyl-D-quinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:30612"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glucarate_oroxylin-a-7-o-d-glucur-to-2-hydroxy-3-oxopropan",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glucarate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "oroxylin-a-7-o-d-glucur-to-2-hydroxy-3-oxopropan"
+      },
+      "note": "Shares D-glucarate with oroxylin A 7-O-β-D-glucur… to 2-hydroxy-3-oxopropanoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:30612"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_chlorogenate_l-idarate-to-4-o-feruloyl-d-quinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "chlorogenate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-idarate-to-4-o-feruloyl-d-quinate"
+      },
+      "note": "Shares chlorogenate with L-idarate to 4-O-feruloyl-D-quinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57644"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_chlorogenate_quinate-to-3-2-carboxylatoethenyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "chlorogenate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "quinate-to-3-2-carboxylatoethenyl"
+      },
+      "note": "Shares chlorogenate with (−)-quinate to 3-(2-carboxylatoethenyl)-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57644"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_chlorogenate_quinate-to-3-2-carboxylatoethenyl-82247",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "chlorogenate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "quinate-to-3-2-carboxylatoethenyl-82247"
+      },
+      "note": "Shares chlorogenate with (−)-quinate to 3-(2-carboxylatoethenyl)-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57644"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_o_caffeoylglucarate_l-idarate-to-4-o-feruloyl-d-quinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_o_caffeoylglucarate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-idarate-to-4-o-feruloyl-d-quinate"
+      },
+      "note": "Shares 2-O-caffeoylglucarate with L-idarate to 4-O-feruloyl-D-quinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58157"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_o_feruloyl_d_quinate_l-idarate-to-4-o-feruloyl-d-quinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_o_feruloyl_d_quinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-idarate-to-4-o-feruloyl-d-quinate"
+      },
+      "note": "Shares 4-O-feruloyl-D-quinate with L-idarate to 4-O-feruloyl-D-quinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60078"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_5_di_o_caffeoyl_quinate_l-idarate-to-4-o-feruloyl-d-quinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_5_di_o_caffeoyl_quinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-idarate-to-4-o-feruloyl-d-quinate"
+      },
+      "note": "Shares 3,5-di-O-caffeoyl quinate with L-idarate to 4-O-feruloyl-D-quinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:231591"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_dehydro_4_deoxy_d_glucarate_co2-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_dehydro_4_deoxy_d_glucarate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "co2-to-nad"
+      },
+      "note": "Shares 5-dehydro-4-deoxy-D-glucarate with CO2 to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM854"
+          }
+        ]
+      }
+    }
+  ]
+}

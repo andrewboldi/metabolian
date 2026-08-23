@@ -22,34 +22,22 @@ pathway gdp-to-l-ascorbate "GDP to L-ascorbate" {
     ascorbate
   }
 
-  branch from gdp_l_gulose side left {
-    gdp_l_gulose
-    <-> ec_5_1_3_18 [5.1.3.18]
-    gdp_d_mannose
+  branch from phosphate side left {
+    phosphate
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +lividomycin_b +lividomycin_b +h2o
+    atp
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_2_5_1_56 [2.5.1.56] +n_propanoylmannosamine +h +phosphoenolpyruvate +h2o
-    n_propanoylneuraminate
-  }
-
-  branch from phosphate side left {
-    phosphate
-    <-> ec_1_20_1_1 [1.20.1.1] +h +nadph +phosphite +h2o
-    nadp
-  }
-
-  branch from l_galactopyranose side right {
-    l_galactopyranose
-    <-> ec_1_1_1_122 [1.1.1.122] +nad +nadh +hplus
-    l_galactono_1_5_lactone
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +atp +h2o
+    paromomycin_ii
   }
 
   branch from l_galactopyranose side left {
     l_galactopyranose
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
-    atp
+    <-> ec_1_1_1_122 [1.1.1.122] +nad +nadh +hplus
+    l_galactono_1_5_lactone
   }
 
   branch from l_galactono_1_4_lactone side right {
@@ -66,13 +54,55 @@ pathway gdp-to-l-ascorbate "GDP to L-ascorbate" {
 
   branch from ascorbate side right {
     ascorbate
-    <-> . +hplus
-    l_xylo_hex_3_ulonolactone
+    <-> . +h2o2 +h2o
+    mdha
   }
 
   branch from ascorbate side left {
     ascorbate
-    <-> . +antheraxanthin +l_dehydroascorbate +h2o
+    <-> ec_1_23_5_1 [1.23.5.1] +all_trans_violaxanthin +l_dehydroascorbate +h2o
     zeaxanthin
+  }
+
+  branch from gdp side right {
+    gdp
+    <-> . +lacto_n_fucopentaose_v +h +beta_d_gal_1_3_beta_d_glcnac_1_3_beta_d_gal_1_4
+    gdp_beta_l_fucose
+  }
+
+  branch from gdp side left {
+    gdp
+    <-> . +difucosyllacto_n_tetraose_1 +h +gdp_beta_l_fucose
+    lacto_n_fucopentaose_i
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    5_ribosylparomamine
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    2_n_acetyl_6_deamino_6_hydroxyparomomycin_ii
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +atp +h2o
+    6_deamino_6_hydroxyparomomycin_ii
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +atp +h2o
+    6_deamino_6_oxoparomomycin_ii
+  }
+
+  branch from ascorbate side right {
+    ascorbate
+    <-> ec_1_11_2_8 [1.11.2.8] +l_tryptophan +o2 +l_dehydroascorbate +h2o
+    5_hydroxy_l_tryptophan
   }
 }

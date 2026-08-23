@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway trans-cyclohexane-1-2-diol-to-6-oxohexanoate "trans-cyclohexane-1,2-diol to 6-oxohexanoate" {
-  spacing 212
+  spacing 206
 
   spine at 0,0 {
     trans_cyclohexane_1_2_diol
@@ -20,11 +20,5 @@ pathway trans-cyclohexane-1-2-diol-to-6-oxohexanoate "trans-cyclohexane-1,2-diol
     2_hydroxycyclohexan_1_one
     <-> . +2_aminocyclohexan_1_ol +nad +h2o +nadh +hplus
     nh3
-  }
-
-  branch from 6_oxohexanoate side right {
-    6_oxohexanoate
-    <-> . +n_1_deoxy_d_fructopyranos_1_yl_l_6_aminohexanoat +o2 +h2o +h2o2
-    1_deoxy_d_fructos_1_yl_amine
   }
 }

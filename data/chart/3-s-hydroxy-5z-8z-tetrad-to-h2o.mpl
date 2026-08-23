@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-s-hydroxy-5z-8z-tetrad-to-h2o "3(S)-hydroxy-5Z,8Z-tetrad… to H2O" {
-  spacing 200
+  spacing 152
 
   spine at 0,0 {
     3_s_hydroxy_5z_8z_tetradecadienoyl_coa
@@ -18,53 +18,5 @@ pathway 3-s-hydroxy-5z-8z-tetrad-to-h2o "3(S)-hydroxy-5Z,8Z-tetrad… to H2O" {
     coa
     <-> . +h +adp +9z_12z_octadecadienoyl_coa +phosphate -9z_12z_octadecadienoyl_coa -h2o
     atp
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    1_nonadecanoylglycerophosphocholine_sn1_lpc_19_0
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    1_eicosenoylglycerophosphocholine_delta_11_sn1_l
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    1_dihomo_linolenoylglycerophosphocholine_20_3_de
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    1_eicosapentenoylglycerophosphocholine_delta_5_8
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +13z_3_oxoicosenoyl_coa +acetyl_coa
-    11e_octadecenoyl_coa
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +9e_myristelaidoyl_coa +cholesterol
-    cholesteryl_myristelaidate
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    1_docosatetraenoylglycerophosphocholine_delta_7
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    1_docosapentenoylglycerophosphocholine_delta_4_7
   }
 }

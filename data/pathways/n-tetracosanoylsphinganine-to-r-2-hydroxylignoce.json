@@ -110,43 +110,6 @@
       "xrefs": {
         "chebi": "CHEBI:75935"
       }
-    },
-    {
-      "id": "sphinganine",
-      "name": "Sphinganine",
-      "formula": "C18H40NO2",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:57817"
-      }
-    },
-    {
-      "id": "stearoyl_coa",
-      "name": "stearoyl-CoA",
-      "formula": "C39H66N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57394"
-      }
-    },
-    {
-      "id": "n_octadecanoyl_4_hydroxysphinganine",
-      "name": "N-octadecanoyl-4-hydroxysphinganine",
-      "short": "N-octadecanoyl-4-hy…",
-      "formula": "C36H73NO4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:67035"
-      }
-    },
-    {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57287"
-      }
     }
   ],
   "enzymes": [],
@@ -291,97 +254,203 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "sphinganine + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = (4R)-hydroxysphinganine + 2 Fe(I...",
-      "equation": "sphinganine + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = (4R)-hydroxysphinganine + 2 Fe(III)-[cytochrome b5] + H2O",
-      "substrates": [
-        {
-          "metabolite": "sphinganine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fe2",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "phytosphingosine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "iron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:33519"
+      "id": "xt_n_tetracosanoylsphinganine_1-2-diacyl-sn-glycerol-to-1-2-diacyl-sn-glycerol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_tetracosanoylsphinganine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-diacyl-sn-glycerol-to-1-2-diacyl-sn-glycerol"
+      },
+      "note": "Shares N-tetracosanoylsphinganine with 1,2-diacyl-sn-glycerol… to 1,2-diacyl-sn-glycerol….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:33519"
+            "db": "ChEBI",
+            "id": "CHEBI:52961"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "(4R)-hydroxysphinganine + octadecanoyl-CoA = N-octadecanoyl-(4R)-hydroxysphinganine + C...",
-      "equation": "(4R)-hydroxysphinganine + octadecanoyl-CoA = N-octadecanoyl-(4R)-hydroxysphinganine + CoA + H(+)",
-      "substrates": [
-        {
-          "metabolite": "phytosphingosine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "stearoyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n_octadecanoyl_4_hydroxysphinganine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:64000"
+      "id": "xt_n_tetracosanoylsphinganine_3-hydroxyicosanoyl-coa-to-n-2-hydroxytetracosano",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_tetracosanoylsphinganine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxyicosanoyl-coa-to-n-2-hydroxytetracosano"
+      },
+      "note": "Shares N-tetracosanoylsphinganine with 3-hydroxyicosanoyl-CoA to N-(2-hydroxytetracosanoyl….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:64000"
+            "db": "ChEBI",
+            "id": "CHEBI:52961"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_tetracosanoylsphinganine_n-hexanoyldihydroceramide-to-2s-3e-2-hydroxyhept",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_tetracosanoylsphinganine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-hexanoyldihydroceramide-to-2s-3e-2-hydroxyhept"
+      },
+      "note": "Shares N-tetracosanoylsphinganine with N-hexanoyldihydroceramide to (2S,3E)-2-hydroxyhept-3-e….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:52961"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_tetracosanoylphytosphingosine_n-lignoceroylsphingosine-to-n-2-hydroxytetracosa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_tetracosanoylphytosphingosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-lignoceroylsphingosine-to-n-2-hydroxytetracosa"
+      },
+      "note": "Shares N-tetracosanoylphytosphingosine with N-lignoceroylsphingosine-… to N-(2-hydroxytetracosanoyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:52979"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tetracosanoate_1-oleoyl-2-arachidonoyl-s-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tetracosanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-oleoyl-2-arachidonoyl-s-to-hydrogen-donor"
+      },
+      "note": "Shares tetracosanoate with 1-oleoyl-2-arachidonoyl-s… to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:31014"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tetracosanoate_3-hydroxyicosanoyl-coa-to-n-2-hydroxytetracosano",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tetracosanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxyicosanoyl-coa-to-n-2-hydroxytetracosano"
+      },
+      "note": "Shares tetracosanoate with 3-hydroxyicosanoyl-CoA to N-(2-hydroxytetracosanoyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:31014"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tetracosanoate_n-hexanoyldihydroceramide-to-2s-3e-2-hydroxyhept",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tetracosanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-hexanoyldihydroceramide-to-2s-3e-2-hydroxyhept"
+      },
+      "note": "Shares tetracosanoate with N-hexanoyldihydroceramide to (2S,3E)-2-hydroxyhept-3-e….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:31014"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tetracosanoate_n-lignoceroylsphingosine-to-n-2-hydroxytetracosa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tetracosanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-lignoceroylsphingosine-to-n-2-hydroxytetracosa"
+      },
+      "note": "Shares tetracosanoate with N-lignoceroylsphingosine-… to N-(2-hydroxytetracosanoyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:31014"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tetracosanoate_tetracosanoyl-coa-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tetracosanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "tetracosanoyl-coa-to-fmn"
+      },
+      "note": "Shares tetracosanoate with tetracosanoyl-CoA to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:31014"
           }
         ]
       }

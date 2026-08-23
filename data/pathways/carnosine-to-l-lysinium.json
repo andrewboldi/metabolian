@@ -107,33 +107,6 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
-    },
-    {
-      "id": "cadaverine",
-      "name": "cadaverine",
-      "formula": "C5H16N2",
-      "charge": 2,
-      "xrefs": {
-        "chebi": "CHEBI:58384"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16526"
-      }
-    },
-    {
-      "id": "d_lysinium",
-      "name": "D-lysinium",
-      "formula": "C6H15N2O2",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:32557"
-      }
     }
   ],
   "enzymes": [
@@ -149,35 +122,30 @@
       "name": "beta-Ala-His dipeptidase",
       "ec": [
         "3.4.13.20"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q96KN2"
+      }
     },
     {
       "id": "ec_6_3_2_11",
       "name": "carnosine synthase",
       "ec": [
         "6.3.2.11"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "A5YM72"
+      }
     },
     {
       "id": "ec_3_4_13_4",
       "name": "Xaa-Arg dipeptidase",
       "ec": [
         "3.4.13.4"
-      ]
-    },
-    {
-      "id": "ec_4_1_1_18",
-      "name": "lysine decarboxylase",
-      "ec": [
-        "4.1.1.18"
-      ]
-    },
-    {
-      "id": "ec_5_1_1_5",
-      "name": "lysine racemase",
-      "ec": [
-        "5.1.1.5"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q8IYS1"
+      }
     }
   ],
   "reactions": [
@@ -327,85 +295,27 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "lysine decarboxylase",
-      "equation": "L-lysine + H(+) = cadaverine + CO2",
-      "ec": "4.1.1.18",
-      "substrates": [
-        {
-          "metabolite": "l_lysinium",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "cadaverine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_1_1_18"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:22352"
+      "id": "xt_carnosine_n-acetyl-alaninate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "carnosine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyl-alaninate-to-h2o"
+      },
+      "note": "Shares carnosine with N-acetyl-β-alaninate to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:22352"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "lysine racemase",
-      "equation": "L-lysine = D-lysine",
-      "ec": "5.1.1.5",
-      "substrates": [
-        {
-          "metabolite": "l_lysinium",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "d_lysinium",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_5_1_1_5"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:22864"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:22864"
+            "db": "ChEBI",
+            "id": "CHEBI:57485"
           }
         ]
       }

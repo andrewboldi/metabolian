@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 6-r-hydroxy-tetradeca-2e-to-h2o "6(R)-hydroxy-tetradeca-2E… to H2O" {
-  spacing 206
+  spacing 152
 
   spine at 0,0 {
     6_r_hydroxy_tetradeca_2e_4e_8z_trienoate
@@ -16,59 +16,5 @@ pathway 6-r-hydroxy-tetradeca-2e-to-h2o "6(R)-hydroxy-tetradeca-2E… to H2O" {
     3_s_8_s_dihydroxy_6e_10z_hexadecadienoate
     <-> . -h2o
     8_s_hydroxy_hexadeca_2e_6e_10z_trienoate
-  }
-
-  branch from o2 side left {
-    o2
-    <-> ec_1_10_3_2 [1.10.3.2] +gossypol +h2o
-    hemigossypol
-  }
-
-  branch from o2 side right {
-    o2
-    <-> ec_1_10_3_2 [1.10.3.2] +gossypol_6_6_dimethyl_ether +h2o
-    2_8_dihydroxy_4_isopropyl_3_methoxy_6_methyl_1_n
-  }
-
-  branch from coa side left {
-    coa
-    <-> ec_3_1_2_20 [3.1.2.20] +h +firefly_d_luciferin +h2o
-    d_firefly_luciferyl_coa
-  }
-
-  branch from coa side right {
-    coa
-    <-> ec_2_3_3_20 [2.3.3.20] +tetradecanoyl_coa +h2o +h
-    2r_2_dodecyl_3_oxohexadecanoate
-  }
-
-  branch from nad side left {
-    nad
-    <-> . +nadh +h +1r_4s_fenchone
-    1s_2s_4r_endo_fenchol
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_2_1_5 [1.2.1.5] +nadh +s_malate +h +h2o
-    3r_3_hydroxy_4_oxobutanoate
-  }
-
-  branch from 8_s_hydroxy_hexadeca_2e_6e_10z_trienoate side left {
-    8_s_hydroxy_hexadeca_2e_6e_10z_trienoate
-    <-> . +8_s_hydroxy_hexadeca_2e_4e_6e_10z_tetraenoate +h +nadph
-    nadp
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    8_methyltetraphene_1_5_6_11_12_pentol
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +dehydrorabelomycin +phosphate +dehydrorabelomycin
-    atp
   }
 }

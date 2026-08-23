@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-mannopyranose-to-h2o "D-mannopyranose to H2O" {
-  spacing 170
+  spacing 158
 
   spine at 0,0 {
     d_mannopyranose
@@ -14,18 +14,6 @@ pathway d-mannopyranose-to-h2o "D-mannopyranose to H2O" {
     d_man_1_3_d_man_1_3_d_man_1_6_d_man_1_6_d_man_1
     <-> . +d_mannopyranose -h2o
     man9glcnac_periplasm
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    agarohexaose
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +agaropentaose +phosphate +agaropentaose
-    atp
   }
 
   branch from man9glcnac_periplasm side left {

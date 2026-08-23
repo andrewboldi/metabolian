@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-hydroxy-2-oxopentanoate-to-biphenyl-2-2-3-3-te "5-hydroxy-2-oxopentanoate to biphenyl-2,2',3,3'-tetraol" {
-  spacing 258
+  spacing 228
 
   spine at 0,0 {
     5_hydroxy_2_oxopentanoate
@@ -14,35 +14,5 @@ pathway 5-hydroxy-2-oxopentanoate-to-biphenyl-2-2-3-3-te "5-hydroxy-2-oxopentano
     2_hydroxy_6_oxo_6_2_3_dihydroxyphenyl_hexa_2_4_d
     <-> . +h -biphenyl_2_2_3_3_tetraol
     o2
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_2_1_105 [3.2.1.105] +alpha_d_glucose +strictosidine_aglycone
-    3alpha_s_strictosidine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_2_1_126 [3.2.1.126] +beta_d_glucose +trans_p_coumaryl_alcohol
-    4_hydroxycinnamyl_alcohol_4_d_glucoside
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +trimethylamine +3r_3_hydroxy_4_oxobutanoate +nadp +h2o +h +nadph
-    carnitine
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +trimethylamine +3r_3_hydroxy_4_oxobutanoate +nad +h2o +h +carnitine
-    nadh
-  }
-
-  branch from biphenyl_2_2_3_3_tetraol side left {
-    biphenyl_2_2_3_3_tetraol
-    <-> . +h +o2
-    2z_2e_2_hydroxy_6_oxo_6_2_3_dihydroxyphenyl_hex
   }
 }

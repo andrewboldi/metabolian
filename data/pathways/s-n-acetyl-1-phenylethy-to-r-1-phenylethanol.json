@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "s-n-acetyl-1-phenylethy-to-r-1-phenylethanol",
   "name": "(S)-N-acetyl-1-phenylethy… to (R)-1-phenylethanol",
-  "category": "amino-acid-metabolism",
+  "category": "other",
   "summary": "A 3-step route from (S)-N-acetyl-1-phenylethylamine to (R)-1-phenylethanol, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -118,69 +118,6 @@
       "xrefs": {
         "chebi": "CHEBI:58349"
       }
-    },
-    {
-      "id": "ala_thr",
-      "name": "Ala-Thr",
-      "formula": "C7H14N2O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:74390"
-      }
-    },
-    {
-      "id": "threonine",
-      "name": "L-Threonine",
-      "formula": "C4H9NO3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:57926"
-      }
-    },
-    {
-      "id": "anticapsin",
-      "name": "anticapsin",
-      "formula": "C9H13NO4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:84310"
-      }
-    },
-    {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:30616"
-      }
-    },
-    {
-      "id": "bacilysin",
-      "name": "bacilysin",
-      "formula": "C12H18N2O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:84311"
-      }
-    },
-    {
-      "id": "adp",
-      "name": "ADP",
-      "formula": "C10H12N5O10P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:456216"
-      }
-    },
-    {
-      "id": "pi",
-      "name": "Orthophosphate (Pi)",
-      "formula": "HO4P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:43474"
-      }
     }
   ],
   "enzymes": [
@@ -189,13 +126,6 @@
       "name": "(S)-N-acetyl-1-phenylethylamine hydrolase",
       "ec": [
         "3.5.1.85"
-      ]
-    },
-    {
-      "id": "ec_6_3_2_49",
-      "name": "L-alanine--L-anticapsin ligase",
-      "ec": [
-        "6.3.2.49"
       ]
     }
   ],
@@ -326,99 +256,71 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "L-alanyl-L-threonine + H2O = L-threonine + L-alanine",
-      "equation": "L-alanyl-L-threonine + H2O = L-threonine + L-alanine",
-      "substrates": [
-        {
-          "metabolite": "ala_thr",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "threonine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "alanine",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:37299"
+      "id": "xt_1s_1_phenylethanaminium_ethylbenzene-to-3-oxo-3-phenylpropionate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1s_1_phenylethanaminium"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "ethylbenzene-to-3-oxo-3-phenylpropionate"
+      },
+      "note": "Shares (1S)-1-phenylethanaminium with ethylbenzene to 3-oxo-3-phenylpropionate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:37299"
+            "db": "ChEBI",
+            "id": "CHEBI:141108"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "L-alanine--L-anticapsin ligase",
-      "equation": "L-anticapsin + L-alanine + ATP = bacilysin + ADP + phosphate + H(+)",
-      "ec": "6.3.2.49",
-      "substrates": [
-        {
-          "metabolite": "anticapsin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "alanine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "bacilysin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pi",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_6_3_2_49"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:44332"
+      "id": "xt_acetophenone_ethylbenzene-to-3-oxo-3-phenylpropionate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acetophenone"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "ethylbenzene-to-3-oxo-3-phenylpropionate"
+      },
+      "note": "Shares acetophenone with ethylbenzene to 3-oxo-3-phenylpropionate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:44332"
+            "db": "ChEBI",
+            "id": "CHEBI:27632"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_acetophenone_r-n-acetyl-1-phenylethy-to-2s-2-hydroxy-2-pheny",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acetophenone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-n-acetyl-1-phenylethy-to-2s-2-hydroxy-2-pheny"
+      },
+      "note": "Shares acetophenone with (R)-N-acetyl-1-phenylethy… to (2S)-2-hydroxy-2-phenylpr….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:27632"
           }
         ]
       }

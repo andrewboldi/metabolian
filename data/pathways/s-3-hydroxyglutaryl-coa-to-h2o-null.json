@@ -1,0 +1,474 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-3-hydroxyglutaryl-coa-to-h2o-null",
+  "name": "(S)-3-hydroxyglutaryl-CoA to H2O",
+  "category": "other",
+  "summary": "A 3-step route from (S)-3-hydroxyglutaryl-CoA(5−) to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR203945"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:177916"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_3_hydroxyglutaryl_coa",
+      "name": "(S)-3-hydroxyglutaryl-CoA",
+      "short": "3-hydroxyglutaryl-C…",
+      "formula": "C26H37N7O20P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:177916"
+      }
+    },
+    {
+      "id": "glutaconyl_coenzyme_a",
+      "name": "Glutaconyl Coenzyme A",
+      "short": "Glutaconyl…",
+      "formula": "C26H35N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "metanetx": "MNXM1560617"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "trans_glutaconate",
+      "name": "trans-glutaconate",
+      "formula": "C5H4O4",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM733969"
+      }
+    },
+    {
+      "id": "2e_glutaconyl_coa",
+      "name": "(2E)-glutaconyl-CoA",
+      "formula": "C26H35N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "metanetx": "MNXM725881"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR203945",
+      "substrates": [
+        {
+          "metabolite": "s_3_hydroxyglutaryl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glutaconyl_coenzyme_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR203945"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR203945"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR204956",
+      "substrates": [
+        {
+          "metabolite": "glutaconyl_coenzyme_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "trans_glutaconate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR204956"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR204956"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR157835",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "trans_glutaconate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2e_glutaconyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR157835"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR157835"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_s_3_hydroxyglutaryl_coa_2-furoyl-coa-to-hydrogen-donor-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_3_hydroxyglutaryl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-furoyl-coa-to-hydrogen-donor-null"
+      },
+      "note": "Shares (S)-3-hydroxyglutaryl-CoA with 2-furoyl-CoA to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:177916"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_3_hydroxyglutaryl_coa_2-o-glutaroyl-1-o-palmito-to-crotonoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_3_hydroxyglutaryl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-o-glutaroyl-1-o-palmito-to-crotonoyl-coa"
+      },
+      "note": "Shares (S)-3-hydroxyglutaryl-CoA with 2-O-glutaroyl-1-O-palmito… to crotonoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:177916"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_3_hydroxyglutaryl_coa_2-o-glutaroyl-1-o-palmito-to-crotonoyl-coa-41159",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_3_hydroxyglutaryl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-o-glutaroyl-1-o-palmito-to-crotonoyl-coa-41159"
+      },
+      "note": "Shares (S)-3-hydroxyglutaryl-CoA with 2-O-glutaroyl-1-O-palmito… to crotonoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:177916"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_3_hydroxyglutaryl_coa_3-hydroxy-3-phenylpropion-to-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_3_hydroxyglutaryl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxy-3-phenylpropion-to-acetate"
+      },
+      "note": "Shares (S)-3-hydroxyglutaryl-CoA with 3-hydroxy-3-phenylpropion… to acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:177916"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_3_hydroxyglutaryl_coa_s-3-hydroxyglutaryl-coa-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_3_hydroxyglutaryl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-3-hydroxyglutaryl-coa-to-h2o"
+      },
+      "note": "Shares (S)-3-hydroxyglutaryl-CoA with (S)-3-hydroxyglutaryl-CoA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:177916"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_glutaconyl_coenzyme_a_acetoacetyl-coa-to-2e-glutaconyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "glutaconyl_coenzyme_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetoacetyl-coa-to-2e-glutaconyl-coa"
+      },
+      "note": "Shares Glutaconyl Coenzyme A with acetoacetyl-CoA to (2E)-glutaconyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1560617"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_glutaconyl_coenzyme_a_acetoacetyl-coa-to-2e-glutaconyl-coa-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "glutaconyl_coenzyme_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetoacetyl-coa-to-2e-glutaconyl-coa-null"
+      },
+      "note": "Shares Glutaconyl Coenzyme A with acetoacetyl-CoA to (2E)-glutaconyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1560617"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_glutaconyl_coenzyme_a_s-3-hydroxyglutaryl-coa-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "glutaconyl_coenzyme_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-3-hydroxyglutaryl-coa-to-h2o"
+      },
+      "note": "Shares Glutaconyl Coenzyme A with (S)-3-hydroxyglutaryl-CoA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1560617"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_glutaconate_acetoacetyl-coa-to-2e-glutaconyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_glutaconate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetoacetyl-coa-to-2e-glutaconyl-coa"
+      },
+      "note": "Shares trans-glutaconate with acetoacetyl-CoA to (2E)-glutaconyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM733969"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_glutaconate_acetoacetyl-coa-to-2e-glutaconyl-coa-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_glutaconate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetoacetyl-coa-to-2e-glutaconyl-coa-null"
+      },
+      "note": "Shares trans-glutaconate with acetoacetyl-CoA to (2E)-glutaconyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM733969"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_glutaconate_butanoyl-coa-to-2e-glutaconyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_glutaconate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "butanoyl-coa-to-2e-glutaconyl-coa"
+      },
+      "note": "Shares trans-glutaconate with butanoyl-CoA to (2E)-glutaconyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM733969"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_glutaconate_butanoyl-coa-to-2e-glutaconyl-coa-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_glutaconate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "butanoyl-coa-to-2e-glutaconyl-coa-null"
+      },
+      "note": "Shares trans-glutaconate with butanoyl-CoA to (2E)-glutaconyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM733969"
+          }
+        ]
+      }
+    }
+  ]
+}

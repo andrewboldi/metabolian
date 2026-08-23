@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3s-3-hydroxytetracosano-to-fmn "(3S)-3-hydroxytetracosano… to FMN" {
-  spacing 212
+  spacing 224
 
   spine at 0,0 {
     3s_3_hydroxytetracosanoyl_coa
@@ -36,26 +36,26 @@ pathway 3s-3-hydroxytetracosano-to-fmn "(3S)-3-hydroxytetracosano… to FMN" {
 
   branch from tetracosanoyl_coa side left {
     tetracosanoyl_coa
-    <-> . +sphinga_4e_8z_dienine +coa +hplus
-    4e_8z_n_tetracosanoylsphinga_4_8_dienine
+    <-> . +4_hydroxysphing_8_enine +coa +hplus
+    4r_8e_n_tetracosanoyl_4_hydroxysphing_8_enine
   }
 
   branch from tetracosanoyl_coa side right {
     tetracosanoyl_coa
-    <-> . +sphingoid_base +coa +hplus
-    n_tetracosanoyl_sphingoid_base
+    <-> . +ketosphinganine +coa +hplus
+    n_tetracosanoyl_3_ketodihydrosphingosine
   }
 
   branch from hexacosanoyl_coa side left {
     hexacosanoyl_coa
-    <-> . +c20_phytosphingosine +coa +hplus
-    n_hexacosanoyl_c20_4_hydroxysphinganine
+    <-> . +hco3 +atp +adp +pi +hplus
+    2_carboxyhexacosanoyl_coa
   }
 
   branch from hexacosanoyl_coa side right {
     hexacosanoyl_coa
-    <-> . +hco3 +atp +adp +pi +hplus
-    2_carboxyhexacosanoyl_coa
+    <-> . +nadph +hplus +nadp +coa
+    hexacosan_1_ol
   }
 
   branch from n_hexacosanoylsphinganine side left {
@@ -72,25 +72,37 @@ pathway 3s-3-hydroxytetracosano-to-fmn "(3S)-3-hydroxytetracosano… to FMN" {
 
   branch from phytosphingosine side left {
     phytosphingosine
-    <-> ec_2_7_1_91 [2.7.1.91] +atp +adp +hplus
-    phytosphingosine_1_phosphate
+    <-> . +icosanoyl_coa +coa +hplus
+    n_eicosanoyl_4_hydroxysphinganine
   }
 
-  branch from phytosphingosine side right {
-    phytosphingosine
-    <-> . +n_arachidonoylphytosphingosine +h2o
-    arachidonate
+  branch from tetracosanoyl_coa side right {
+    tetracosanoyl_coa
+    <-> . +nadph +hplus +nadp +coa
+    tetracosan_1_ol
   }
 
-  branch from fmn side left {
-    fmn
-    <-> . +testosterone +fmnh2 +o2 +h2o +hplus
-    16_hydroxytestosterone
+  branch from malonyl-coa side left {
+    malonyl-coa
+    <-> . +16_hydroxyhexadecanoyl_coa +hplus +co2 +coa
+    4_hydroxy_6_17_hydroxy_2_oxoheptadecyl_pyran_2_o
   }
 
-  branch from fmn side right {
-    fmn
-    <-> . +17_hydroxy_5_androstan_3_one +fmnh2 +o2 +h2o +hplus
-    18_hydroxy_5_dihydrotestosterone
+  branch from malonyl-coa side right {
+    malonyl-coa
+    <-> . +9_decenoyl_coa +hplus +co2 +coa
+    4_hydroxy_6_2_oxoundec_10_en_1_yl_pyran_2_one
+  }
+
+  branch from hexacosanoyl_coa side left {
+    hexacosanoyl_coa
+    <-> . +fumonisin_b1 +coa +hplus
+    n_hexacosanoyl_fumonisin_b1
+  }
+
+  branch from hexacosanoyl_coa side right {
+    hexacosanoyl_coa
+    <-> . +acetyl_coa +coa
+    3_oxo_octacosanoyl_coa
   }
 }

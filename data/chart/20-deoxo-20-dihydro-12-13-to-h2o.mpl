@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 20-deoxo-20-dihydro-12-13-to-h2o "20-deoxo-20-dihydro-12,13… to H2O" {
-  spacing 176
+  spacing 236
 
   spine at 0,0 {
     20_deoxo_20_dihydro_12_13_deepoxyrosamicin
@@ -18,25 +18,85 @@ pathway 20-deoxo-20-dihydro-12-13-to-h2o "20-deoxo-20-dihydro-12,13… to H2O" {
 
   branch from nadp side left {
     nadp
-    <-> ec_1_3_1_94 [1.3.1.94] +h +di_trans_poly_cis_polyprenol_c80 +nadph
-    c80_dolichol
+    <-> . +h +o2 +n_hydroxy_l_dihomomethioninate +nadph +h2o
+    n_n_dihydroxy_l_dihomomethioninate
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_274 [1.1.1.274] +ethyl_2r_methyl_3s_hydroxybutanoate +h +nadph
-    ethyl_2_methylacetoacetate
+    <-> . +n_hydroxy_l_trihomomethioninate +h2o +o2 +nadph
+    l_trihomomethionine
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_86 [3.2.1.86] +beta_d_glucose_6_phosphate +methanol
-    methyl_beta_d_glucoside_6_phosphate
+    <-> . +2_hydroxy_2_1h_indol_3_yl_acetonitrile
+    dehydro_indole_3_yl_acetonitrile
   }
 
   branch from h2o side right {
     h2o
-    <-> . +o_s_3r_19z_31z_3_hydroxypentacontadienoylpanteth
-    o_s_2e_19z_31z_pentacontatrienoylpantetheine_4_p
+    <-> . +propanoate +gamma_l_glutamyl_l_orornithine_delta_lactam
+    n_propanoyl_gamma_l_glutamyl_l_orornithine_delta
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    16_0_18_3_ps
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_9z_hexadecenoyl_2_9z_12z_15z_octadecatrienoyl
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +h +n_hydroxy_l_trihomomethioninate +nadph +nadp +h2o
+    n_n_dihydroxy_l_trihomomethioninate
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +h +n_hydroxy_l_tetrahomomethioninate +nadph +nadp +h2o
+    n_n_dihydroxy_l_tetrahomomethioninate
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +nadp +n_hydroxy_l_hexahomomethioninate +h2o +o2
+    l_hexahomomethionine
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_14_13_81 [1.14.13.81] +h +o2 +mg_protoporphyrin_ix_13_monomethyl_ester +nadp +h2o
+    divinylprotochlorophyllide
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +co2 +9z_tricosene +h2o +h +o2 +nadph
+    15_tetracosenal
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_14_13_121 [1.14.13.121] +h +vetispiradiene +o2 +nadph +h2o
+    solavetivone
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +3_hydroxypropanal
+    acrolein
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +3_hydroxypropanal
+    3_hydroxypropanal_hydrate
   }
 }

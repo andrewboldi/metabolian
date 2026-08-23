@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-dehydro-d-glucose-6-pho-to-3-amino-3-deoxy-6-o "3-dehydro-D-glucose-6-pho… to 3-amino-3-deoxy-6-O-phosp…" {
-  spacing 288
+  spacing 276
 
   spine at 0,0 {
     3_dehydro_d_glucose_6_phosphate
@@ -14,17 +14,5 @@ pathway 3-dehydro-d-glucose-6-pho-to-3-amino-3-deoxy-6-o "3-dehydro-D-glucose-6-
     3_amino_3_deoxy_d_glucopyranose
     <-> ec_2_7_1_179 [2.7.1.179] +atp -adp -hplus
     3_amino_3_deoxy_6_o_phosphono_d_glucopyranose
-  }
-
-  branch from akg side left {
-    akg
-    <-> . +fad +hplus +fadh2
-    r_2_hydroxyglutarate
-  }
-
-  branch from akg side right {
-    akg
-    <-> . +pseudopaline +nad +h2o +nadh +hplus
-    n_3s_3_amino_3_carboxypropyl_l_histidine_dizwitt
   }
 }

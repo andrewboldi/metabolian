@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 8-amino-8-demethylribofla-to-adp "8-amino-8-demethylribofla… to ADP" {
-  spacing 206
+  spacing 266
 
   spine at 0,0 {
     8_amino_8_demethylriboflavin
@@ -16,57 +16,21 @@ pathway 8-amino-8-demethylribofla-to-adp "8-amino-8-demethylribofla… to ADP" {
     roseoflavin_5_phosphate
   }
 
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_188 [2.1.1.188] +guanosine_5_monophosphate_1 +sam +hplus
-    n1_methylguanosine_5_monophosphate_1
-  }
 
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_190 [2.1.1.190] +uridine_5_monophosphate_1 +sam +hplus
-    5_methyluridine_5_monophosphate_1
-  }
 
-  branch from roseoflavin side left {
-    roseoflavin
-    <-> . +atp +adp
-    8_demethyl_8_dimethylamino_riboflavin_5_phosphat
-  }
 
-  branch from roseoflavin side right {
-    roseoflavin
-    <-> ec_2_1_1_343 [2.1.1.343] +s_adenosyl_l_homocysteine +h +8_amino_8_demethylriboflavin
-    s_adenosyl_l_methionine
-  }
 
-  branch from roseoflavin_5_phosphate side left {
-    roseoflavin_5_phosphate
-    <-> ec_2_7_7_2 [2.7.7.2] +roseoflavin_adenine_dinucleotide +h +atp
-    diphosphate
-  }
 
-  branch from h side right {
-    h
-    <-> . +inner_core_oligosaccharide_lipid_a_with_kdo_iii +dtdp_beta_l_rhamnose +inner_core_oligosaccharide_lipid_a_e_coli
-    dtdp
-  }
 
-  branch from h side left {
-    h
-    <-> . +2s_homocitric_acid +h2o
-    cis_homoaconitate
-  }
 
-  branch from adp side right {
-    adp
-    <-> . +h +phosphate +atp +h2o
-    thioglycolate
-  }
 
-  branch from adp side left {
-    adp
-    <-> ec_7_6_2_15 [7.6.2.15] +h +phosphate +atp +h2o
-    thiamine
-  }
+
+
+
+
+
+
+
+
+
 }

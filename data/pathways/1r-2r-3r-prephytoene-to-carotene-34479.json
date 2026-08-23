@@ -1,0 +1,401 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1r-2r-3r-prephytoene-to-carotene-34479",
+  "name": "(1R,2R,3R)-prephytoene… to ε-carotene",
+  "category": "energy-metabolism",
+  "summary": "A 4-step route from (1R,2R,3R)-prephytoene diphosphate(3−) to ε-carotene, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:34479"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58011"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1r_2r_3r_prephytoene_diphosphate",
+      "name": "(1R,2R,3R)-prephytoene diphosphate",
+      "short": "(1R,2R,3R)-prephyto…",
+      "formula": "C40H65O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58011"
+      }
+    },
+    {
+      "id": "15_cis_phytoene",
+      "name": "15-cis-phytoene",
+      "formula": "C40H64",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27787"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "lycopene",
+      "name": "lycopene",
+      "formula": "C40H56",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15948"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "carotene",
+      "name": "δ-carotene",
+      "formula": "C40H56",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27705"
+      }
+    },
+    {
+      "id": "carotene",
+      "name": "ε-carotene",
+      "formula": "C40H56",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:32549"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_3_99_31",
+      "name": "phytoene desaturase (lycopene-forming)",
+      "ec": [
+        "1.3.99.31"
+      ]
+    },
+    {
+      "id": "ec_5_5_1_18",
+      "name": "lycopene epsilon-cyclase",
+      "ec": [
+        "5.5.1.18"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(1R,2R,3R)-prephytoene diphosphate = 15-cis-phytoene + diphosphate",
+      "equation": "(1R,2R,3R)-prephytoene diphosphate = 15-cis-phytoene + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "1r_2r_3r_prephytoene_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "15_cis_phytoene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:34479"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34479"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "phytoene desaturase (lycopene-forming)",
+      "equation": "15-cis-phytoene + 4 A = all-trans-lycopene + 4 AH2",
+      "ec": "1.3.99.31",
+      "substrates": [
+        {
+          "metabolite": "15_cis_phytoene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 4
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "lycopene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 4
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_99_31"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:15585"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15585"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "lycopene epsilon-cyclase",
+      "equation": "all-trans-lycopene = delta-carotene",
+      "ec": "5.5.1.18",
+      "substrates": [
+        {
+          "metabolite": "lycopene",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "carotene",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_5_1_18"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:53124"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53124"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "lycopene epsilon-cyclase",
+      "equation": "delta-carotene = epsilon-carotene",
+      "ec": "5.5.1.18",
+      "substrates": [
+        {
+          "metabolite": "carotene",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "carotene",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_5_1_18"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:53128"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53128"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_1r_2r_3r_prephytoene_diphosphate_1-palmitoyl-2-valeroyl-sn-to-o-s-3r-hydroxyhepta",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1r_2r_3r_prephytoene_diphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-palmitoyl-2-valeroyl-sn-to-o-s-3r-hydroxyhepta"
+      },
+      "note": "Shares (1R,2R,3R)-prephytoene diphosphate with 1-palmitoyl-2-valeroyl-sn… to O-[S-(3R)-hydroxyheptanoy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58011"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1r_2r_3r_prephytoene_diphosphate_1r-2r-3r-prephytoene-to-2e-6e-10e-geranylgerany",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1r_2r_3r_prephytoene_diphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1r-2r-3r-prephytoene-to-2e-6e-10e-geranylgerany"
+      },
+      "note": "Shares (1R,2R,3R)-prephytoene diphosphate with (1R,2R,3R)-prephytoene… to (2E,6E,10E)-geranylgerany….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58011"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1r_2r_3r_prephytoene_diphosphate_1r-2r-3r-prephytoene-to-carotene",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1r_2r_3r_prephytoene_diphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1r-2r-3r-prephytoene-to-carotene"
+      },
+      "note": "Shares (1R,2R,3R)-prephytoene diphosphate with (1R,2R,3R)-prephytoene… to ε-carotene.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58011"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1r_2r_3r_prephytoene_diphosphate_5-cholestan-3-one-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1r_2r_3r_prephytoene_diphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cholestan-3-one-to-hydrogen-donor"
+      },
+      "note": "Shares (1R,2R,3R)-prephytoene diphosphate with 5β-cholestan-3-one to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58011"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1r_2r_3r_prephytoene_diphosphate_5-cholestan-3-one-to-hydrogen-donor-11524",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1r_2r_3r_prephytoene_diphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cholestan-3-one-to-hydrogen-donor-11524"
+      },
+      "note": "Shares (1R,2R,3R)-prephytoene diphosphate with 5β-cholestan-3-one to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58011"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_carotene_1r-2r-3r-prephytoene-to-carotene",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "carotene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1r-2r-3r-prephytoene-to-carotene"
+      },
+      "note": "Shares δ-carotene with (1R,2R,3R)-prephytoene… to ε-carotene.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:27705"
+          }
+        ]
+      }
+    }
+  ]
+}

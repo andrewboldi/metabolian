@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-apiitol-to-nitrate "D-apiitol to nitrate" {
-  spacing 308
+  spacing 340
 
   spine at 0,0 {
     d_apiitol
@@ -44,26 +44,26 @@ pathway d-apiitol-to-nitrate "D-apiitol to nitrate" {
 
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_41 [2.5.1.41] +sn_glycerol_1_phosphate +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    sn_3_o_geranylgeranyl_glycerol_1_phosphate
+    <-> ec_2_5_1_88 [2.5.1.88] +2_cis_6_trans_farnesyl_diphosphate +ipp
+    ditrans_polycis_tetradecaprenyl_diphosphate
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_2_7_7_38 [2.7.7.38] +3_deoxy_d_manno_oct_2_ulosonate +ctp
-    cmp_3_deoxy_d_manno_octulosonate
+    <-> ec_2_5_1_89 [2.5.1.89] +geranylgeranyl_diphosphate +ipp
+    tri_trans_poly_cis_undecaprenyl_diphosphate
   }
 
   branch from succinate side left {
     succinate
-    <-> ec_1_14_11_43 [1.14.11.43] +s_2_4_chloro_2_methylphenoxy_propanoate +akg +o2 +pyruvate +co2
-    4_chloro_2_methylphenol
+    <-> ec_1_14_11_30 [1.14.11.30] +l_asparagine +akg +o2 +co2
+    3s_3_hydroxy_l_asparagine
   }
 
   branch from succinate side right {
     succinate
-    <-> ec_1_14_11_42 [1.14.11.42] +7_3s_3_amino_3_carboxypropyl_wyosine_5_monophosp +akg +o2 +co2
-    7_2_hydroxy_3_amino_3_carboxypropyl_wyosine_5_mo
+    <-> ec_1_14_11_n4 [1.14.11.n4] +akg +o2 +3s_3_hydroxy_l_asparagine +co2
+    l_asparagine
   }
 
   branch from urea side left {
@@ -74,8 +74,8 @@ pathway d-apiitol-to-nitrate "D-apiitol to nitrate" {
 
   branch from urea side right {
     urea
-    <-> ec_3_5_3_14 [3.5.3.14] +n_amidino_l_aspartate +h2o
-    aspartate
+    <-> ec_3_5_3_17 [3.5.3.17] +3_guanidinopropanoic_acid +h2o
+    alanine
   }
 
   branch from ubiquinol_8 side left {
@@ -86,31 +86,115 @@ pathway d-apiitol-to-nitrate "D-apiitol to nitrate" {
 
   branch from ubiquinol_8 side right {
     ubiquinol_8
-    <-> ec_1_3_5_2 [1.3.5.2] +dihydroorotate +ubiquinone_8
-    orotate
-  }
-
-  branch from ubiquinone_8 side left {
-    ubiquinone_8
-    <-> ec_1_6_5_3 [1.6.5.3] +nadh +h +ubiquinol_8 +nad
+    <-> ec_1_6_5_3 [1.6.5.3] +nadh +ubiquinone_8 +h +nad
     pmf
   }
 
-  branch from ubiquinone_8 side right {
+  branch from ubiquinone_8 side left {
     ubiquinone_8
     <-> ec_1_6_5_3 [1.6.5.3] +pmf +nadh +h +pmf +ubiquinol_8
     nad
   }
 
+  branch from ubiquinone_8 side right {
+    ubiquinone_8
+    <-> . +pmf +nadh +h +pmf +ubiquinol_8 +nad
+    na
+  }
+
   branch from nitrite side left {
     nitrite
-    <-> ec_1_7_1_4 [1.7.1.4] +nad +h2o +nadh +hplus
-    nh3
+    <-> ec_1_14_13_167 [1.14.13.167] +4_nitrophenolate +nadph +o2 +hplus +nadp +h2o
+    quinone
   }
 
   branch from nitrite side right {
     nitrite
-    <-> ec_1_7_3_1 [1.7.3.1] +secondary_nitroalkane +o2 +h2o +h2o2 +hplus
-    ketone
+    <-> ec_1_7_2_6 [1.7.2.6] +iron +h2o +fe2 +hplus
+    hydroxylamine
+  }
+
+  branch from arginine side left {
+    arginine
+    <-> ec_1_13_12_1 [1.13.12.1] +o2 +co2 +h2o
+    4_guanidiniumylbutanamide
+  }
+
+  branch from arginine side right {
+    arginine
+    <-> ec_1_5_1_11 [1.5.1.11] +nad +h2o +pyruvate +nadh +hplus
+    d_octopine_dizwitterion
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_2_5_1_30 [2.5.1.30] +ipp +fpp
+    all_trans_heptaprenyl_diphosphate
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_2_5_1_90 [2.5.1.90] +ipp +fpp
+    all_trans_octaprenyl_diphosphate
+  }
+
+  branch from akg side left {
+    akg
+    <-> . +fad +hplus +fadh2
+    2_hydroxyglutarate
+  }
+
+  branch from akg side right {
+    akg
+    <-> . +fad +hplus +fadh2
+    s_2_hydroxyglutarate
+  }
+
+  branch from succinate side left {
+    succinate
+    <-> . +l_aspartate +akg +o2 +co2
+    3s_3_hydroxy_l_aspartate
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> ec_1_14_11_n4 [1.14.11.n4] +akg +o2 +3s_3_hydroxy_l_aspartate +co2
+    l_aspartate
+  }
+
+  branch from urea side left {
+    urea
+    <-> ec_3_5_3_17 [3.5.3.17] +taurocyamine +h2o
+    taurine
+  }
+
+  branch from ubiquinone_8 side right {
+    ubiquinone_8
+    <-> . +thiosulfate +ubiquinol_8
+    tetrathionate
+  }
+
+  branch from ubiquinone_8 side left {
+    ubiquinone_8
+    <-> ec_1_6_5_3 [1.6.5.3] +pmf +h +pmf +ubiquinol_8 +nad
+    nadh
+  }
+
+  branch from ubiquinol_8 side right {
+    ubiquinol_8
+    <-> ec_1_2_2_1 [1.2.2.1] +ubiquinone_8 +h +formate
+    co2
+  }
+
+  branch from ubiquinol_8 side left {
+    ubiquinol_8
+    <-> . +hexadecanoate +ubiquinone_8 +atp +coa +nad +h2o +nadh +diphosphate +h +amp
+    acetyl_coa
+  }
+
+  branch from nitrite side right {
+    nitrite
+    <-> . +fe2 +o2 +hplus +iron +h2o
+    nitroxyl
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-valine-to-2s-2-hydroxy-3-methylbu "D-valine to (2S)-2-hydroxy-3-methylbu…" {
-  spacing 252
+  spacing 246
 
   spine at 0,0 {
     d_valine
@@ -16,39 +16,33 @@ pathway d-valine-to-2s-2-hydroxy-3-methylbu "D-valine to (2S)-2-hydroxy-3-methyl
     2s_2_hydroxy_3_methylbutanenitrile
   }
 
-  branch from kiv side left {
-    kiv
-    <-> . +diphosphate +3_methyl_2_oxobutanoyl_adenylate +atp
-    h
-  }
-
-  branch from kiv side right {
-    kiv
-    <-> . +nadh +2_methylpropanoate +co2 +h +h2o
-    nad
-  }
-
-  branch from nh3 side left {
-    nh3
-    <-> . +1s_3_methyl_cyclohexylammonium +nad +h2o +nadh +hplus
-    3_methylcyclohexanone
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +nadp +h2o +3_methylcyclohexanone +nadph +hplus
-    1s_3_methyl_cyclohexylammonium
-  }
-
   branch from isobutyraldehyde side left {
     isobutyraldehyde
-    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +butan_2_ol
-    nadp
+    <-> ec_1_2_1_5 [1.2.1.5] +nadh +h +butanoate +h2o
+    nad
   }
 
   branch from isobutyraldehyde side right {
     isobutyraldehyde
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +nad
-    butan_2_ol
+    <-> ec_4_1_2_10 [4.1.2.10] +cyanide +h
+    r_2_hydroxy_3_methybutanenitrile
+  }
+
+  branch from isobutyraldehyde side left {
+    isobutyraldehyde
+    <-> ec_1_1_1_1 [1.1.1.1] +h +nadph +nadp
+    isobutanol
+  }
+
+  branch from hydrogen_cyanide side right {
+    hydrogen_cyanide
+    <-> . +2_oxohexane
+    2s_2_hydroxy_2_methylhexanenitrile
+  }
+
+  branch from hydrogen_cyanide side left {
+    hydrogen_cyanide
+    <-> . +heptan_2_one
+    2s_2_hydroxy_2_methylheptanenitrile
   }
 }

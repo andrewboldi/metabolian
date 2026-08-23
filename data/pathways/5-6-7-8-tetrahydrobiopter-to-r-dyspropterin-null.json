@@ -1,0 +1,477 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "5-6-7-8-tetrahydrobiopter-to-r-dyspropterin-null",
+  "name": "5,6,7,8-tetrahydrobiopter… to (R)-dyspropterin",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 5,6,7,8-tetrahydrobiopterin to (R)-dyspropterin, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR151771"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "5_6_7_8_tetrahydrobiopterin",
+      "name": "5,6,7,8-tetrahydrobiopterin",
+      "short": "5,6,7,8-tetrahydrob…",
+      "formula": "C9H15N5O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364258"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "6r_6_lactoyl_5_6_7_8_tetrahydropterin",
+      "name": "(6R)-6-lactoyl-5,6,7,8-tetrahydropterin",
+      "short": "6-lactoyl-5,6,7,8-t…",
+      "formula": "C9H13N5O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1902"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "6r_l_threo_tetrahydrobiopterin",
+      "name": "(6R)-L-threo-tetrahydrobiopterin",
+      "short": "L-threo-tetrahydrob…",
+      "formula": "C9H15N5O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64241"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "r_dyspropterin",
+      "name": "(R)-dyspropterin",
+      "formula": "C9H11N5O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:136564"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_153",
+      "name": "sepiapterin reductase (L-erythro-7,8-dihydrobiopterin forming)",
+      "ec": [
+        "1.1.1.153"
+      ],
+      "xrefs": {
+        "uniprot": "P35270"
+      }
+    },
+    {
+      "id": "ec_1_1_1_325",
+      "name": "sepiapterin reductase (L-threo-7,8-dihydrobiopterin forming)",
+      "ec": [
+        "1.1.1.325"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "sepiapterin reductase (L-erythro-7,8-dihydrobiopterin forming)",
+      "ec": "1.1.1.153",
+      "substrates": [
+        {
+          "metabolite": "5_6_7_8_tetrahydrobiopterin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6r_6_lactoyl_5_6_7_8_tetrahydropterin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_153"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR151771"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR151771"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "sepiapterin reductase (L-threo-7,8-dihydrobiopterin forming)",
+      "ec": "1.1.1.325",
+      "substrates": [
+        {
+          "metabolite": "6r_6_lactoyl_5_6_7_8_tetrahydropterin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "6r_l_threo_tetrahydrobiopterin",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_325"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR117952"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR117952"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "sepiapterin reductase (L-threo-7,8-dihydrobiopterin forming)",
+      "equation": "L-threo-tetrahydrobiopterin + 2 NADP(+) = 6-pyruvoyl-5,6,7,8-tetrahydropterin + 2 NADPH + 2 H(+)",
+      "ec": "1.1.1.325",
+      "substrates": [
+        {
+          "metabolite": "6r_l_threo_tetrahydrobiopterin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_dyspropterin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_325"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:32623"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32623"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_6r_6_lactoyl_5_6_7_8_tetrahydropterin_5-6-7-8-tetrahydrobiopter-to-r-dyspropterin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6r_6_lactoyl_5_6_7_8_tetrahydropterin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-6-7-8-tetrahydrobiopter-to-r-dyspropterin"
+      },
+      "note": "Shares (6R)-6-lactoyl-5,6,7,8-tetrahydropterin with 5,6,7,8-tetrahydrobiopter… to (R)-dyspropterin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1902"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6r_6_lactoyl_5_6_7_8_tetrahydropterin_drosopterin-to-6-1-hydroxy-2-oxopropy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6r_6_lactoyl_5_6_7_8_tetrahydropterin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "drosopterin-to-6-1-hydroxy-2-oxopropy"
+      },
+      "note": "Shares (6R)-6-lactoyl-5,6,7,8-tetrahydropterin with drosopterin to 6-(1'-Hydroxy-2'-oxopropy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1902"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6r_6_lactoyl_5_6_7_8_tetrahydropterin_drosopterin-to-6-1-hydroxy-2-oxopropy-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6r_6_lactoyl_5_6_7_8_tetrahydropterin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "drosopterin-to-6-1-hydroxy-2-oxopropy-null"
+      },
+      "note": "Shares (6R)-6-lactoyl-5,6,7,8-tetrahydropterin with drosopterin to 6-(1'-Hydroxy-2'-oxopropy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1902"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6r_l_threo_tetrahydrobiopterin_5-6-7-8-tetrahydrobiopter-to-r-dyspropterin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6r_l_threo_tetrahydrobiopterin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-6-7-8-tetrahydrobiopter-to-r-dyspropterin"
+      },
+      "note": "Shares (6R)-L-threo-tetrahydrobiopterin with 5,6,7,8-tetrahydrobiopter… to (R)-dyspropterin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64241"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_dyspropterin_5-6-7-8-tetrahydrobiopter-to-r-dyspropterin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_dyspropterin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-6-7-8-tetrahydrobiopter-to-r-dyspropterin"
+      },
+      "note": "Shares (R)-dyspropterin with 5,6,7,8-tetrahydrobiopter… to (R)-dyspropterin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:136564"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_dyspropterin_5-hydroxy-d-tryptophan-to-r-dyspropterin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_dyspropterin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-hydroxy-d-tryptophan-to-r-dyspropterin"
+      },
+      "note": "Shares (R)-dyspropterin with 5-hydroxy-D-tryptophan to (R)-dyspropterin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:136564"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_dyspropterin_5-hydroxy-d-tryptophan-to-r-dyspropterin-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_dyspropterin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-hydroxy-d-tryptophan-to-r-dyspropterin-null"
+      },
+      "note": "Shares (R)-dyspropterin with 5-hydroxy-D-tryptophan to (R)-dyspropterin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:136564"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_dyspropterin_6-acetyl-2-amino-3-7-8-9-to-l-glutamate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_dyspropterin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-acetyl-2-amino-3-7-8-9-to-l-glutamate"
+      },
+      "note": "Shares (R)-dyspropterin with 6-acetyl-2-amino-3,7,8,9-… to L-glutamate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:136564"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_dyspropterin_6-acetyl-2-amino-3-7-8-9-to-l-glutamate-10720",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_dyspropterin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-acetyl-2-amino-3-7-8-9-to-l-glutamate-10720"
+      },
+      "note": "Shares (R)-dyspropterin with 6-acetyl-2-amino-3,7,8,9-… to L-glutamate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:136564"
+          }
+        ]
+      }
+    }
+  ]
+}

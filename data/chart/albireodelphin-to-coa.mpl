@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway albireodelphin-to-coa "Albireodelphin to CoA" {
-  spacing 302
+  spacing 284
 
   spine at 0,0 {
     albireodelphin
@@ -14,23 +14,5 @@ pathway albireodelphin-to-coa "Albireodelphin to CoA" {
     udp_alpha_d_glucose
     <-> ec_2_3_1_153 [2.3.1.153] +trans_4_coumaroyl_coa +delphin -coa
     delphinidin_3_o_beta_d_glucoside_5_o_6_coumaroyl
-  }
-
-  branch from trans_caffeoyl_coa side left {
-    trans_caffeoyl_coa
-    <-> . +albireodelphin +coa
-    gentiodelphin
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +acetyl_coa +3_dodecanoyl_3_2_methylbutanoyl_4_3_methylbutano
-    2_acetyl_3_dodecanoyl_3_2_methylbutanoyl_4_3_met
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +3_methylbutanoyl_coa +3_2_methylbutanoyl_3_4_di_3_methylbutanoyl_sucro
-    3_2_methylbutanoyl_3_4_6_tri_3_methylbutanoyl_su
   }
 }

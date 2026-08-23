@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway gypenoside-xvii-to-h2o "gypenoside XVII to H2O" {
-  spacing 188
+  spacing 152
 
   spine at 0,0 {
     gypenoside_xvii
@@ -14,41 +14,5 @@ pathway gypenoside-xvii-to-h2o "gypenoside XVII to H2O" {
     ginsenoside_rd
     <-> . +beta_d_glucose -h2o
     ginsenoside_rb1
-  }
-
-  branch from glucose side left {
-    glucose
-    <-> ec_3_2_1_108 [3.2.1.108] +alpha_lactose +h2o
-    beta_d_galactose
-  }
-
-  branch from glucose side right {
-    glucose
-    <-> ec_2_3_1_79 [2.3.1.79] +acetyl_coa +coa
-    6_o_acetyl_beta_d_glucose
-  }
-
-  branch from ginsenoside_f2 side left {
-    ginsenoside_f2
-    <-> ec_3_2_1_193 [3.2.1.193] +glucose +h2o
-    3beta_12beta_3_12_dihydroxydammar_24_en_20_yl_b
-  }
-
-  branch from ginsenoside_f2 side right {
-    ginsenoside_f2
-    <-> . +udp +h +3beta_12beta_3_12_dihydroxydammar_24_en_20_yl_b
-    udp_alpha_d_glucose
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +3_hydroxypropanal
-    acrolein
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +3_hydroxypropanal
-    3_hydroxypropanal_hydrate
   }
 }

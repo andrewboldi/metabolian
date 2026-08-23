@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway o-phosphonato-l-serine-to-ammonium "O-phosphonato-L-serine to ammonium" {
-  spacing 304
+  spacing 292
 
   spine at 0,0 {
     pser
@@ -14,17 +14,5 @@ pathway o-phosphonato-l-serine-to-ammonium "O-phosphonato-L-serine to ammonium" 
     3_amino_l_alanine
     <-> ec_4_3_1_15 [4.3.1.15] +h2o +hplus -pyruvate
     nh3
-  }
-
-  branch from akg side left {
-    akg
-    <-> ec_6_3_2_65 [6.3.2.65] +udp_2_acetamido_4_amino_2_4_6_trideoxy_d_galacto +atp +adp +pi +hplus
-    udp_yelosamine
-  }
-
-  branch from akg side right {
-    akg
-    <-> . +udp_4_ammonio_d_fucose +atp +adp +pi +hplus
-    udp_yelose
   }
 }

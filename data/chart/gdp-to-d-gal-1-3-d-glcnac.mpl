@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway gdp-to-d-gal-1-3-d-glcnac "GDP to α-D-Gal-(1→3)-α-D-GlcNAc-…" {
-  spacing 170
+  spacing 158
 
   spine at 0,0 {
     gdp
@@ -20,17 +20,5 @@ pathway gdp-to-d-gal-1-3-d-glcnac "GDP to α-D-Gal-(1→3)-α-D-GlcNAc-…" {
     gdp_l_colitose
     <-> ec_1_1_1_356 [1.1.1.356] +nad +nadh +hplus
     gdp_4_dehydro_3_6_dideoxy_d_mannose
-  }
-
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> . +udp +luteolinidin_5_o_glucoside +h
-    2_3_4_dihydroxyphenyl_5_hydroxychromen_7_one
-  }
-
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> . +udp +apigeninidin_5_o_beta_d_glucoside +h
-    apigeninidin
   }
 }

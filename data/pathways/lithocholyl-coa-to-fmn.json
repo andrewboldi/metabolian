@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "lithocholyl-coa-to-fmn",
   "name": "lithocholyl-CoA to FMN",
-  "category": "nucleotide-metabolism",
+  "category": "energy-metabolism",
   "summary": "A 3-step route from lithocholyl-CoA(4−) to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -139,12 +139,12 @@
       }
     },
     {
-      "id": "nad",
-      "name": "NAD+",
-      "formula": "C21H26N7O14P2",
-      "charge": -1,
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:57540"
+        "chebi": "CHEBI:58349"
       }
     },
     {
@@ -158,78 +158,12 @@
       }
     },
     {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57945"
-      }
-    },
-    {
-      "id": "3_phosphonato_5_adenylyl_sulfate",
-      "name": "3'-phosphonato-5'-adenylyl sulfate",
-      "short": "3'-phosphonato-5'-a…",
-      "formula": "C10H11N5O13P2S",
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:58339"
-      }
-    },
-    {
-      "id": "taurochenodeoxycholate_7_sulfate",
-      "name": "taurochenodeoxycholate 7-sulfate",
-      "short": "taurochenodeoxychol…",
-      "formula": "C26H43NO9S2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:172396"
-      }
-    },
-    {
-      "id": "adenosine_3_5_bismonophosphate",
-      "name": "adenosine 3',5'-bismonophosphate",
-      "short": "adenosine…",
-      "formula": "C10H11N5O10P2",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:58343"
-      }
-    },
-    {
-      "id": "hancockiamide_b",
-      "name": "Hancockiamide B",
-      "formula": "C31H34N2O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:221688"
-      }
-    },
-    {
-      "id": "hancockiamide_c",
-      "name": "Hancockiamide C",
-      "formula": "C31H32N2O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:221693"
-      }
-    },
-    {
-      "id": "hancockiamide_d",
-      "name": "hancockiamide D",
-      "formula": "C20H27N2O3",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:231787"
-      }
-    },
-    {
-      "id": "hancockiamide_h",
-      "name": "hancockiamide H",
-      "formula": "C20H25N2O3",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:231794"
+        "chebi": "CHEBI:57783"
       }
     }
   ],
@@ -384,15 +318,15 @@
     },
     {
       "id": "r4",
-      "name": "taurochenodeoxycholate + NAD(+) = 7-oxotaurolithocholate + NADH + H(+)",
-      "equation": "taurochenodeoxycholate + NAD(+) = 7-oxotaurolithocholate + NADH + H(+)",
+      "name": "taurochenodeoxycholate + NADP(+) = 7-oxotaurolithocholate + NADPH + H(+)",
+      "equation": "taurochenodeoxycholate + NADP(+) = 7-oxotaurolithocholate + NADPH + H(+)",
       "substrates": [
         {
           "metabolite": "taurochenodeoxycholate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nad",
+          "metabolite": "nadp",
           "stoichiometry": 1
         }
       ],
@@ -402,7 +336,7 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadh",
+          "metabolite": "nadph",
           "stoichiometry": 1
         },
         {
@@ -413,159 +347,280 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:53824"
+        "rhea": "RHEA:65060"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:53824"
+            "id": "RHEA:65060"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_lithocholyl_coa_allocholate-to-7-oxolithocholate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lithocholyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "allocholate-to-7-oxolithocholate"
+      },
+      "note": "Shares lithocholyl-CoA with allocholate to 7-oxolithocholate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87438"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "taurochenodeoxycholate + 3'-phosphoadenylyl sulfate = taurochenodeoxycholate 7-sulfate ...",
-      "equation": "taurochenodeoxycholate + 3'-phosphoadenylyl sulfate = taurochenodeoxycholate 7-sulfate + adenosine 3',5'-bisphosphate + H(+)",
-      "substrates": [
-        {
-          "metabolite": "taurochenodeoxycholate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "3_phosphonato_5_adenylyl_sulfate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "taurochenodeoxycholate_7_sulfate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adenosine_3_5_bismonophosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:67568"
+      "id": "xt_lithocholyl_coa_glycolithocholate-to-7-12-dioxolithocholate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lithocholyl_coa"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "glycolithocholate-to-7-12-dioxolithocholate"
+      },
+      "note": "Shares lithocholyl-CoA with glycolithocholate to 7,12-dioxolithocholate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:67568"
+            "db": "ChEBI",
+            "id": "CHEBI:87438"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "hancockiamide B + reduced [NADPH--hemoprotein reductase] + O2 = hancockiamide C + oxidi...",
-      "equation": "hancockiamide B + reduced [NADPH--hemoprotein reductase] + O2 = hancockiamide C + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "hancockiamide_b",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "hancockiamide_c",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:81127"
+      "id": "xt_lithocholyl_coa_nadh-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lithocholyl_coa"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-fmn"
+      },
+      "note": "Shares lithocholyl-CoA with NADH to FMN.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:81127"
+            "db": "ChEBI",
+            "id": "CHEBI:87438"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "hancockiamide D + reduced [NADPH--hemoprotein reductase] + O2 = hancockiamide H + oxidi...",
-      "equation": "hancockiamide D + reduced [NADPH--hemoprotein reductase] + O2 = hancockiamide H + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "hancockiamide_d",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "hancockiamide_h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:81131"
+      "id": "xt_lithocholyl_coa_ursodeoxycholate-to-isolithocholate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lithocholyl_coa"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "ursodeoxycholate-to-isolithocholate"
+      },
+      "note": "Shares lithocholyl-CoA with ursodeoxycholate to isolithocholate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:81131"
+            "db": "ChEBI",
+            "id": "CHEBI:87438"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_chenodeoxycholate_allocholate-to-7-oxolithocholate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "chenodeoxycholate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "allocholate-to-7-oxolithocholate"
+      },
+      "note": "Shares Chenodeoxycholic acid (chenodeoxycholate) with allocholate to 7-oxolithocholate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:36234"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_chenodeoxycholate_chenodeoxycholate-3-o-d-to-adenosine-3-5-bismono",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "chenodeoxycholate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "chenodeoxycholate-3-o-d-to-adenosine-3-5-bismono"
+      },
+      "note": "Shares Chenodeoxycholic acid (chenodeoxycholate) with chenodeoxycholate-3-O-β-D… to adenosine 3',5'-bismonoph….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:36234"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_chenodeoxycholate_chenodeoxycholate-to-7-oxotaurodeoxycholate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "chenodeoxycholate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "chenodeoxycholate-to-7-oxotaurodeoxycholate"
+      },
+      "note": "Shares Chenodeoxycholic acid (chenodeoxycholate) with chenodeoxycholate to 7-oxotaurodeoxycholate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:36234"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_chenodeoxycholate_octane-to-2-6-dihydroxynicotinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "chenodeoxycholate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "octane-to-2-6-dihydroxynicotinate"
+      },
+      "note": "Shares Chenodeoxycholic acid (chenodeoxycholate) with octane to 2,6-dihydroxynicotinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:36234"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_chenodeoxycholate_r-n-methylcoclaurinium-to-indigoidine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "chenodeoxycholate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-n-methylcoclaurinium-to-indigoidine"
+      },
+      "note": "Shares Chenodeoxycholic acid (chenodeoxycholate) with (R)-N-methylcoclaurinium to indigoidine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:36234"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_chenodeoxycholate_taurochenodeoxycholate-to-chenodeoxycholate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "chenodeoxycholate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "taurochenodeoxycholate-to-chenodeoxycholate"
+      },
+      "note": "Shares Chenodeoxycholic acid (chenodeoxycholate) with taurochenodeoxycholate to chenodeoxycholate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:36234"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_chenodeoxycholoyl_coa_d-allothreonine-to-l-methionine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "chenodeoxycholoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-allothreonine-to-l-methionine"
+      },
+      "note": "Shares Chenodeoxycholoyl-CoA with D-allothreonine to L-methionine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62989"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_chenodeoxycholoyl_coa_taurochenodeoxycholate-to-chenodeoxycholate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "chenodeoxycholoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "taurochenodeoxycholate-to-chenodeoxycholate"
+      },
+      "note": "Shares Chenodeoxycholoyl-CoA with taurochenodeoxycholate to chenodeoxycholate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62989"
           }
         ]
       }

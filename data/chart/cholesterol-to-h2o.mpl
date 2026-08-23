@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cholesterol-to-h2o "cholesterol to H2O" {
-  spacing 216
+  spacing 210
 
   spine at 0,0 {
     cholesterol
@@ -16,15 +16,9 @@ pathway cholesterol-to-h2o "cholesterol to H2O" {
     cholesteryl_linoleate
   }
 
-  branch from cholesteryl_linoleate side left {
-    cholesteryl_linoleate
-    <-> . +cholesterol +coa
-    linoleoyl_coa
-  }
-
-  branch from cholesteryl_linoleate side right {
-    cholesteryl_linoleate
-    <-> . +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +cholesterol
-    1_hexadecanoyl_sn_glycero_3_phosphocholine
+  branch from cholesterol side left {
+    cholesterol
+    <-> . +palmitoleoyl_coa +coa
+    cholesteryl_palmitoleate
   }
 }

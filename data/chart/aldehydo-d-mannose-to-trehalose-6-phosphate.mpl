@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway aldehydo-d-mannose-to-trehalose-6-phosphate "aldehydo-D-mannose to α,α-trehalose 6-phosphate" {
-  spacing 328
+  spacing 304
 
   spine at 0,0 {
     aldehydo_d_mannose
@@ -20,29 +20,5 @@ pathway aldehydo-d-mannose-to-trehalose-6-phosphate "aldehydo-D-mannose to α,α
     g6p
     <-> ec_2_4_1_15 [2.4.1.15] +udp_d_glucose -udp -hplus
     trehalose_6_phosphate
-  }
-
-  branch from d_mannopyranose side left {
-    d_mannopyranose
-    <-> ec_3_2_1_137 [3.2.1.137] +s_cerevisiae_mannan_fragment +h2o
-    s_cerevisiae_mannan_fragment_with_alpha_1_2_mann
-  }
-
-  branch from d_mannopyranose side right {
-    d_mannopyranose
-    <-> . +h2o
-    d_manp_1_2_d_manp
-  }
-
-  branch from glucose side left {
-    glucose
-    <-> ec_3_2_1_126 [3.2.1.126] +trans_sinapyl_alcohol +h2o
-    syringin
-  }
-
-  branch from glucose side right {
-    glucose
-    <-> ec_3_2_1_126 [3.2.1.126] +trans_p_coumaryl_alcohol +h2o
-    4_hydroxycinnamyl_alcohol_4_d_glucoside
   }
 }

@@ -18,85 +18,157 @@ pathway geranylgeranyl-to-h2o-null "Geranylgeranyl… to H2O" {
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_13_85 [1.14.13.85] +6as_11as_2_dimethylallyl_3_6a_9_trihydroxyptero +h +o2 +nadph +h2o
-    glyceollin_i
+    <-> . +tirandamycin_f +h2o +o2 +nadph
+    tirandamycin_c
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_13_41 [1.14.13.41] +z_4_hydroxyphenyl_acetaldehyde_oxime +co2 +h2o +h +o2 +nadph
-    n_hydroxy_l_tyrosine
-  }
-
-  branch from 7r_8z_bacteriochlorophyll_b side left {
-    7r_8z_bacteriochlorophyll_b
-    <-> . +h +nadph +nadp
-    geranylgeranyl_bacteriochlorophyllide_b
-  }
-
-  branch from 7r_8z_bacteriochlorophyll_b side right {
-    7r_8z_bacteriochlorophyll_b
-    <-> . +h +nadph +nadp
-    tetrahydrogeranylgeranyl_bacteriochlorophyllide
+    <-> . +tetracenomycin_c +h +nadph
+    4_dehydro_tetracenomycin_c
   }
 
   branch from h side left {
     h
-    <-> ec_3_1_1_17 [3.1.1.17] +l_arabino_1_5_lactone +h2o
-    l_arabinonate
+    <-> . +flucytosine +h2o +nh4
+    5_fu
   }
 
   branch from h side right {
     h
-    <-> ec_4_1_1_5 [4.1.1.5] +2s_2_acetolactate +co2
-    actn
-  }
-
-  branch from 2e_6e_10e_geranylgeranyl_diphosphate side left {
-    2e_6e_10e_geranylgeranyl_diphosphate
-    <-> . +diphosphate +undecaprenyl_diphosphate +h
-    ipp
-  }
-
-  branch from 2e_6e_10e_geranylgeranyl_diphosphate side right {
-    2e_6e_10e_geranylgeranyl_diphosphate
-    <-> . +geranylgeranyl_chlorophyll_a +diphosphate
-    chlorophyllide_a
+    <-> ec_2_3_3_19 [2.3.3.19] +acetyl_coa +3_phosphonopyruvate +h2o +coa
+    r_2_phosphomethyl_malate
   }
 
   branch from nadph side left {
     nadph
-    <-> . +h2 +h +cinchoninone +cinchonine +nadp
-    cinchonidine
+    <-> . +norcraugsodine +h +nadp
+    norbelladine
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_14_99_34 [1.14.99.34] +7_o_methylluteone_epoxide +nadp +h2o +h +o2
-    7_o_methylluteone
+    <-> . +h +2_4_6_trihydroxybenzophenone +o2 +nadp +h2o
+    2_3_4_6_tetrahydroxybenzophenone
   }
 
   branch from atp side left {
     atp
-    <-> ec_2_7_3_10 [2.7.3.10] +h +adp +phosphoagmatine
-    agmatine
+    <-> . +diphosphate +3_amino_5_hydroxybenzoyl_adenylate +h
+    3_amino_5_hydroxybenzoate
   }
 
   branch from atp side right {
     atp
-    <-> ec_2_7_1_119 [2.7.1.119] +h +hygromycin_b +adp
-    7_o_phosphohygromycin
+    <-> . +diphosphate +l_tryrosyl_adenylate +h
+    l_tyrosine
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_1_1_57 [3.1.1.57] +2_oxo_2h_pyran_4_6_dicarboxylate +h
-    4_carboxy_2_hydroxyhexa_2_4_dienedioate
+    <-> ec_3_1_1_23 [3.1.1.23] +9z_octadecenoate +h +glycerol
+    1_oleoyl_sn_glycerol
   }
 
   branch from h2o side right {
     h2o
-    <-> . +5alpha_cholestane_3beta_5_6beta_triol
-    5_6beta_epoxy_5alpha_cholestan_3beta_ol
+    <-> . +z_2_aminobutenoic_acid
+    l_threonine
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_5_4_3 [3.5.4.3] +7_8_dihydrolumazine +nh4 +h2o
+    7_8_dihydropterin
+  }
+
+  branch from h side right {
+    h
+    <-> . +nh4 +7_8_dihydropterin +h2o
+    7_8_dihydrolumazine
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +h +2_3_4_6_tetrahydroxybenzophenone +o2 +nadp +h2o
+    gentisein
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +h +2_3_4_6_tetrahydroxybenzophenone +o2 +nadp +h2o
+    1_3_5_trihydroxyxanthone
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +bellidin +h2o +h +nadph +1_3_5_trihydroxyxanthone
+    o2
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +h2o +o2 +nadph +1_3_5_trihydroxyxanthone
+    1_3_5_6_tetrahydroxyxanthone
+  }
+
+  branch from diphosphate side left {
+    diphosphate
+    <-> . +2e_geranyl_diphosphate +5_hydroxyanthrotainin
+    previridicatumtoxin
+  }
+
+  branch from diphosphate side right {
+    diphosphate
+    <-> ec_2_5_1_96 [2.5.1.96] +h +presqualene_diphosphate
+    farnesyl_diphosphate
+  }
+
+  branch from adp side left {
+    adp
+    <-> . +4_guanidinobutanoate +atp +coa +phosphate
+    4_guanidinobutanoyl_coa
+  }
+
+  branch from adp side right {
+    adp
+    <-> . +h +5_phenylpentanoyl_coa +phosphate +atp +coa
+    5_phenylpentanoic_acid
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> ec_2_4_2_2 [2.4.2.2] +2_deoxy_alpha_d_ribose_1_phosphate +thymine
+    thymidine
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> . +dihydroneopterin_phosphate +h2o
+    dihydroneopterin
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +diphosphate +2r_2_4_dihydroxybutanoyl_coa +amp +coa
+    2r_2_4_dihydroxybutanoate
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +diphosphate +2s_4_propylidenepyrrolidine_2_carboxy_adenylate +h
+    2s_4_propylidenepyrrolidine_2_carboxylate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +drosopterin +7_8_dihydropterin
+    2_amino_6_acetyl_3_7_8_9_tetrahydro_3h_pyrimido
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +aurodrosopterin +2_amino_6_acetyl_3_7_8_9_tetrahydro_3h_pyrimido
+    7_8_dihydrolumazine
   }
 }

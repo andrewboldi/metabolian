@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway atrochrysone-to-s-adenosyl-l-homocysteine "atrochrysone to S-adenosyl-L-homocysteine" {
-  spacing 210
+  spacing 168
 
   spine at 0,0 {
     atrochrysone
@@ -14,47 +14,5 @@ pathway atrochrysone-to-s-adenosyl-l-homocysteine "atrochrysone to S-adenosyl-L-
     emodin
     <-> ec_2_1_1_283 [2.1.1.283] +sam -sah -hplus
     questin_2_olate
-  }
-
-  branch from emodin_anthrone side left {
-    emodin_anthrone
-    <-> . +o2 +h2o
-    emodin_dianthrone
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_proline +l_threonine +l_tryptophan
-    pro_trp_thr
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_proline +l_valine +l_glutamine
-    prolyl_valyl_glutamine
-  }
-
-  branch from emodin side right {
-    emodin
-    <-> . +sam +sah
-    physcion
-  }
-
-  branch from questin_2_olate side left {
-    questin_2_olate
-    <-> ec_1_1_1_443 [1.1.1.443] +nadp +nadph +hplus
-    questin_hydroquinone
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +guanosine_5_monophosphate_1 +sam
-    n7_methylguanosine_5_phosphate_zwitterion
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +sam +n7_methylguanosine_5_phosphate_zwitterion
-    guanosine_5_monophosphate_1
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway geranyl-diphosphate-to-myrcene "geranyl diphosphate to β-myrcene" {
-  spacing 220
+  spacing 214
 
   spine at 0,0 {
     gpp
@@ -22,11 +22,5 @@ pathway geranyl-diphosphate-to-myrcene "geranyl diphosphate to β-myrcene" {
     geraniol
     <-> ec_1_1_1_347 [1.1.1.347] +nad +nadh +hplus
     geranial
-  }
-
-  branch from geraniol side right {
-    geraniol
-    <-> . +palmitoyl_coa +coa
-    2e_geranyl_hexadecanoate
   }
 }

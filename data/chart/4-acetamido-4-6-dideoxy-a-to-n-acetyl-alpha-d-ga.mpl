@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-acetamido-4-6-dideoxy-a-to-n-acetyl-alpha-d-ga "4-Acetamido-4,6-dideoxy-a… to N-Acetyl-alpha-D-galactos…" {
-  spacing 340
+  spacing 336
 
   spine at 0,0 {
     4_acetamido_4_6_dideoxy_alpha_d_galactosyl_1_4_n
@@ -14,17 +14,5 @@ pathway 4-acetamido-4-6-dideoxy-a-to-n-acetyl-alpha-d-ga "4-Acetamido-4,6-dideox
     udp_n_acetyl_alpha_d_mannosaminouronate
     <-> ec_5_1_3_26 [5.1.3.26] +n_acetyl_d_glucosaminyldiphosphoundecaprenol
     n_acetyl_alpha_d_galactosaminyl_diphospho_ditran
-  }
-
-  branch from n_acetyl_d_glucosaminyldiphosphoundecaprenol side left {
-    n_acetyl_d_glucosaminyldiphosphoundecaprenol
-    <-> ec_2_4_1_343 [2.4.1.343] +udp +alpha_d_gal_1_3_alpha_d_glcnac_diphospho_ditrans +h
-    udp_alpha_d_galactose
-  }
-
-  branch from n_acetyl_d_glucosaminyldiphosphoundecaprenol side right {
-    n_acetyl_d_glucosaminyldiphosphoundecaprenol
-    <-> ec_2_4_1_305 [2.4.1.305] +udp +beta_d_glc_1_3_alpha_d_glcnac_diphospho_ditrans +h
-    udp_alpha_d_glucose
   }
 }

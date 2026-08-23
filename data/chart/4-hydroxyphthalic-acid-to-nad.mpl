@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-hydroxyphthalic-acid-to-nad "4-hydroxyphthalic acid to NAD" {
-  spacing 280
+  spacing 340
 
   spine at 0,0 {
     4_hydroxyphthalic_acid
@@ -18,73 +18,157 @@ pathway 4-hydroxyphthalic-acid-to-nad "4-hydroxyphthalic acid to NAD" {
 
   branch from 3_hydroxybenzoate side left {
     3_hydroxybenzoate
-    <-> . +h +chloride +h2o
-    3_chlorobenzoate
+    <-> ec_1_14_13_24 [1.14.13.24] +h +o2 +nadph +nadp +h2o
+    2_5_dihydroxybenzoate
   }
 
   branch from 3_hydroxybenzoate side right {
     3_hydroxybenzoate
-    <-> ec_3_1_2_20 [3.1.2.20] +h +coa +h2o
-    3_hydroxybenzoyl_coa
+    <-> ec_3_5_2_6 [3.5.2.6] +h +phenylacetylglycine +h2o
+    3_phenylacetyl_glycyl_oxybenzoic_acid
   }
 
   branch from co2 side left {
     co2
-    <-> . +tabtoxin_biosynthesis_intermediate_4
-    tabtoxin_biosynthesis_intermediate_3
+    <-> . +tetracenomycin_d1 +h
+    tetracenomycin_d3
   }
 
   branch from co2 side right {
     co2
-    <-> ec_1_14_13_1 [1.14.13.1] +nadh +5_methylsalicylate +h +o2 +nad +h2o
-    4_methylcatechol
+    <-> . +tetracenomycin_b1
+    tetracenomycin_b3
   }
 
   branch from h side left {
     h
-    <-> . +nadh +5_chloro_2_hydroxy_p_benzoquinone +nad
-    5_chloro_1_2_4_trihydroxybenzene
+    <-> ec_1_2_3_1 [1.2.3.1] +citral +2_6_dichloroindophenol +h2o +reduced_2_6_dichlorophenolindophenol
+    geranate
   }
 
   branch from h side right {
     h
-    <-> . +holyrine_a +dtdp +dtdp_l_ristosamine
-    k_252c
+    <-> ec_3_6_1_53 [3.6.1.53] +cmp +phosphoethanolamine +h2o
+    cdp_ethanolamine
   }
 
   branch from nadp side left {
     nadp
-    <-> . +nocardicin_a +h2o +o2 +nadph
-    nocardicin_c_dizwitterion
+    <-> ec_1_14_13_84 [1.14.13.84] +4_aminoacetophenone +o2 +nadph +h2o
+    4_aminophenyl_acetate
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_2_1_96 [1.2.1.96] +4_hydroxy_3_methylbenzaldehyde +h2o +h +nadph
-    4_hydroxy_3_methylbenzoic_acid
+    <-> ec_1_14_13_84 [1.14.13.84] +3_hydroxyphenylacetate +h2o +o2 +nadph
+    compound_0039020
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_5_2_1 [3.5.2.1] +5_methylbarbituric_acid
-    3_oxo_3_ureidoisobutyrate
+    <-> ec_3_4_11_19 [3.4.11.19] +d_alanine +d_alanyl_d_alanine
+    d_alanyl_d_alanyl_d_alanine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_threonine +tabtoxinine_lactam
-    tabtoxin
+    <-> ec_3_4_11_19 [3.4.11.19] +d_alanine +4_nitroaniline
+    d_alanine_p_nitroanilide
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +benzenesulfonic_acid +o2 +h +catechol
-    sulfite
+    <-> ec_1_2_1_48 [1.2.1.48] +nadh +9z_12z_octadecadienoate +h +h2o
+    a_linoleate_group
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_2_1_3 [1.2.1.3] +4_formylbenzoate +h2o +nadh +h
-    terephthalate
+    <-> ec_1_2_1_48 [1.2.1.48] +nadh +2_butenoic_acid +h +h2o
+    crotonaldehyde
+  }
+
+  branch from co2 side left {
+    co2
+    <-> . +tetralin
+    5_6_7_8_tetrahydro_2_naphthoic_acid
+  }
+
+  branch from co2 side right {
+    co2
+    <-> ec_1_14_13_41 [1.14.13.41] +z_4_hydroxyphenyl_acetaldehyde_oxime +h2o +h
+    n_n_dihydroxy_l_tyrosine
+  }
+
+  branch from h side left {
+    h
+    <-> . +alpha_d_ribose_1_phosphate +h2o
+    ribose_1_3_cyclic_phosphate
+  }
+
+  branch from h side right {
+    h
+    <-> ec_1_14_13_84 [1.14.13.84] +phenyl_butyrate +nadp +h2o +o2 +nadph
+    butyrophenone
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_14_13_84 [1.14.13.84] +isobutyrophenone +h +o2 +nadp +h2o
+    phenyl_isobutyrate
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_14_13_84 [1.14.13.84] +1h_pyrrol_2_yl_acetate +nadp +h2o +h +o2
+    2_acetylpyrrole
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_14_13_84 [1.14.13.84] +4_methylacetophenone +h +o2 +nadph +h2o
+    tolylacetate
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_14_13_84 [1.14.13.84] +4_methoxyacetophenone +h +o2 +nadph +h2o
+    4_methoxyphenylacetic_acid
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_2_1_21 [3.2.1.21] +beta_d_glucose +octan_1_ol
+    octyl_beta_d_glucose
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_2_1_21 [3.2.1.21] +beta_d_glucose +heptan_1_ol
+    n_heptyl_beta_d_glucoside
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> ec_1_2_1_48 [1.2.1.48] +9z_hexadecenoate +h +nad +h2o
+    9z_hexadecenal
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_2_1_3 [1.2.1.3] +2_4_dinitrobenzoate +h +nad +h2o
+    2_4_dinitrobenzaldehyde
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_2_1_3 [1.2.1.3] +nadh +5_bromo_1_naphthoate +h +h2o
+    5_bromo_1_naphthaldehyde
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_2_1_3 [1.2.1.3] +nadh +5_methoxyindole_2_carboxylic_acid +h +h2o
+    5_methoxyindole_3_carbaldehyde
   }
 }

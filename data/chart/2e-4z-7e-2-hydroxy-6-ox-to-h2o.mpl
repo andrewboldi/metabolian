@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2e-4z-7e-2-hydroxy-6-ox-to-h2o "(2E,4Z,7E)-2-hydroxy-6-ox… to H2O" {
-  spacing 200
+  spacing 290
 
   spine at 0,0 {
     2e_4z_7e_2_hydroxy_6_oxonona_2_4_7_trienedioate
@@ -36,37 +36,127 @@ pathway 2e-4z-7e-2-hydroxy-6-ox-to-h2o "(2E,4Z,7E)-2-hydroxy-6-ox… to H2O" {
 
   branch from oxaloacetate side left {
     oxaloacetate
-    <-> ec_4_1_3_34 [4.1.3.34] +acetyl_coa
-    3s_citryl_coa
+    <-> . +d_aspartate +nad +h2o +nadh +hplus
+    nh3
   }
 
   branch from oxaloacetate side right {
     oxaloacetate
-    <-> ec_2_3_3_8 [2.3.3.8] +acetyl_coa +adp +pi +atp +coa
-    citrate
+    <-> . +n_n_dimethyl_l_argininium +aspartate
+    5_3_3_dimethylguanidino_2_oxopentanoate
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +3_hydroxykynurenine_o_beta_d_glucoside +h +nh4
-    4_2_amino_3_hydroxyphenyl_4_oxobutanoic_acid_o_g
+    <-> . +nadh +h +18_20_dioxo_20_coa_leukotriene_b4
+    20_coa_20_oxo_18r_hydroxyleucotriene_b4
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +7alpha_hydroxycholest_4_en_3_one
-    26_hydroxycholesterol
+    <-> ec_1_6_1_2 [1.6.1.2] +nadh +nadp +nadph
+    pmf
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_32 [3.6.3.32] +h +adp +phosphate +atp
-    l_proline_betaine
+    <-> . +13_14_epoxy_retinol
+    13_14_dihydroxy_retinol
   }
 
   branch from h2o side right {
     h2o
-    <-> . +h +adp +prostaglandin_e1 +phosphate +prostaglandin_e1
-    atp
+    <-> . +nitrite +h +hypochlorous_acid
+    nitryl_chloride
+  }
+
+  branch from 2e_4z_7e_2_hydroxy_6_oxonona_2_4_7_trienedioate side left {
+    2e_4z_7e_2_hydroxy_6_oxonona_2_4_7_trienedioate
+    <-> ec_1_13_11_16 [1.13.11.16] +h +o2
+    2e_3_2_3_dihydroxyphenyl_prop_2_enoate
+  }
+
+  branch from cysteine side right {
+    cysteine
+    <-> . +mercaptopyruvate +l_kynurenine
+    4_2_aminophenyl_2_4_dioxobutanoate
+  }
+
+  branch from cysteine side left {
+    cysteine
+    <-> ec_1_8_3_5 [1.8.3.5] +s_2e_6e_10e_geranylgeranyl_l_cysteine +o2 +h2o +h2o2
+    2e_6e_10e_geranylgeranial
+  }
+
+  branch from oxaloacetate side right {
+    oxaloacetate
+    <-> . +alanine +pyruvate
+    aspartate
+  }
+
+  branch from oxaloacetate side left {
+    oxaloacetate
+    <-> . +trans_dec_2_enoyl_coa +hplus +coa +h2o
+    4_octa_1_enyl_2_5_dioxo_2_5_dihydro_3_furanyl_a
+  }
+
+  branch from 3_amino_4_hydroxybenzoate side right {
+    3_amino_4_hydroxybenzoate
+    <-> ec_4_1_99_20 [4.1.99.20] +pi +h2o +hplus
+    2_azaniumyl_4_5_dihydroxy_6_oxo_7_phosphonatooxy
+  }
+
+  branch from 3_amino_4_hydroxybenzoate side left {
+    3_amino_4_hydroxybenzoate
+    <-> . +acetyl_coa +coa
+    3_acetamido_4_hydroxybenzoate
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_6_1_1 [1.6.1.1] +pmf +nadp +pmf +nad
+    nadph
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> ec_1_14_18_2 [1.14.18.2] +n_glycoloylneuraminate +h +o2 +nad +h2o
+    n_acetyl_beta_neuraminate
+  }
+
+  branch from h side right {
+    h
+    <-> . +rac_5_6_epoxy_retinoyl_beta_d_glucuronide +udp +rac_5_6_epoxy_retinoate
+    udp_alpha_d_glucuronate
+  }
+
+  branch from h side left {
+    h
+    <-> . +udp +9_cis_retinoyl_d_glucuronide +udp_alpha_d_glucuronate
+    9_cis_retinoate
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_42 [1.1.1.42] +s_oxalatosuccinate +nadh +h
+    isocitrate
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_203 [1.1.1.203] +nadh +galactarate +h +h2o
+    beta_d_galacturonate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +d_glucuronate +cehc
+    gama_cehc_glucuronide
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +h +w_carboxy_leukotriene_b4
+    20_trihydroxy_leukotriene_b4
   }
 }

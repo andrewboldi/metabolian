@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-3-hydroxyoctanoyl-coa-to-3-oxooctanoyl-coa "(S)-3-hydroxyoctanoyl-CoA to 3-oxooctanoyl-CoA" {
-  spacing 164
+  spacing 170
 
   spine at 0,0 {
     s_3_hydroxyoctanoyl_coa
@@ -26,5 +26,11 @@ pathway s-3-hydroxyoctanoyl-coa-to-3-oxooctanoyl-coa "(S)-3-hydroxyoctanoyl-CoA 
     trans_oct_2_enoyl_coa
     <-> .
     cis_3_octenoyl_coa
+  }
+
+  branch from trans_oct_2_enoyl_coa side left {
+    trans_oct_2_enoyl_coa
+    <-> . +h2o
+    3_hydroxyoctanoyl_coa
   }
 }

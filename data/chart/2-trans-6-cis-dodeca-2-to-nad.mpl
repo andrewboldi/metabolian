@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-trans-6-cis-dodeca-2-to-nad "(2-trans,6-cis)-dodeca-2,… to NAD" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     2_trans_6_cis_dodeca_2_6_dienoyl_coa
@@ -14,29 +14,5 @@ pathway 2-trans-6-cis-dodeca-2-to-nad "(2-trans,6-cis)-dodeca-2,… to NAD" {
     3_oxo_cis_8_tetradecenoyl_coa
     <-> . +nadh +h -nad
     3s_3_hydroxy_cis_8_tetradecenoyl_coenzyme_a
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    1_dihomo_linolenoylglycerophosphoethanolamine_20
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +1_2_distearoylphosphatidylethanolamine +phosphate +1_2_distearoylphosphatidylethanolamine +h2o
-    atp
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +3_oxo_10_s_hydroxy_octadeca_6e_8e_12z_trienoyl_c +h2o +h
-    3_oxo_10_s_hydroxy_octadeca_6e_8e_12z_trienoate
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +acetyl_coa +3_oxo_10_s_hydroxy_octadeca_6e_8e_12z_trienoate
-    8_r_hydroxy_hexadeca_4e_6e_10z_trienoate
   }
 }

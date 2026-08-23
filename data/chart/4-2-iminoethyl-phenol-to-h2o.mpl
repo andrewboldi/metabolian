@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-2-iminoethyl-phenol-to-h2o "4-(2-iminoethyl)phenol to H2O" {
-  spacing 256
+  spacing 328
 
   spine at 0,0 {
     4_2_iminoethyl_phenol
@@ -16,91 +16,163 @@ pathway 4-2-iminoethyl-phenol-to-h2o "4-(2-iminoethyl)phenol to H2O" {
     h
     <-> ec_1_14_18_1 [1.14.18.1] +nadh +tyramine +o2 -nad -h2o
     dopamine
-    <-> . +pyruvate -h2o
-    salsolinol_1_carboxylate
+    <-> . +h2o2 -h2o
+    dopamine_quinone
   }
 
   branch from h side left {
     h
-    <-> ec_2_3_1_280 [2.3.1.280] +acetyl_coa +3_aminopropyl_phosphonic_acid +coa
-    2_acetamidopropyl_phosphonate
+    <-> . +trp_met_arg +h2o +l_arginine +l_tryptophan
+    l_methionine
   }
 
   branch from h side right {
     h
-    <-> ec_2_7_8_46 [2.7.8.46] +cdp_l_ribitol +gro_p_beta_d_mannac_1_4_alpha_d_glcnac_pp_und +rib_ol_p_gro_p_mannac_glcnac_pp_undecaprenol
-    cmp
+    <-> . +adp +20_hydroxy_5z_8z_11z_14z_eicosatetraenoate +phosphate +20_hydroxy_5z_8z_11z_14z_eicosatetraenoate +h2o
+    atp
   }
 
   branch from tyramine side left {
     tyramine
-    <-> . +h +2_phenylethylamine +o2 +nadph +h2o
-    nadp
+    <-> . +p_beta_aminoethyl_phenoxy_methyl_2_aminomethyl_f +phosphate
+    5_ammoniomethyl_3_furyl_methyl_phosphate
   }
 
   branch from tyramine side right {
     tyramine
-    <-> . +n_benzoyltyramine +h +coa
-    benzoyl_coa
+    <-> ec_2_8_2_1 [2.8.2.1] +adenosine_3_5_bisphosphate +sulfuric_acid_4_2_aminoethyl_phenyl_ester +h
+    3_phosphoadenylyl_sulfate
   }
 
   branch from l_ascorbate side left {
     l_ascorbate
-    <-> . +l_dehydroascorbic_acid +14_hydroxy_e4_neuroprostane +h2o +h
-    14_hydroperoxy_h4_neuroprostane
+    <-> ec_7_2_1_3 [7.2.1.3] +monodehydro_l_ascorbate_radical +fe +h
+    fe
   }
 
   branch from l_ascorbate side right {
     l_ascorbate
-    <-> . +l_dehydroascorbic_acid +h2o +h +14_hydroperoxy_h4_neuroprostane
-    14_hydroxy_d4_neuroprostane
+    <-> ec_1_10_99_3 [1.10.99.3] +l_dehydroascorbic_acid +all_trans_zeaxanthin +h2o +h
+    all_trans_violaxanthin
   }
 
   branch from o2 side left {
     o2
-    <-> . +h +isopimara_7_15_diene +nadph +nadp +h2o
-    isopimara_7_15_dienol
+    <-> . +1s_2s_1_2_dihydronaphthalene_1_2_diol +h +nadph +1_2_dihydroxy_3_4_epoxy_1_2_3_4_tetrahydronaphth +h2o
+    nadp
   }
 
   branch from o2 side right {
     o2
-    <-> . +h +3r_6e_nerolidol +nadph +nadp +e_4_8_dimethyl_1_3_7_nonatriene +h2o
-    buten_2_one
+    <-> ec_1_14_13_129 [1.14.13.129] +nadh +h +echinenone +nad +h2o
+    3_hydroxyechinenone
   }
 
   branch from dopamine side left {
     dopamine
-    <-> . +udp +h +dopamine_3_o_glucuronide
-    udp_alpha_d_glucuronate
+    <-> . +7_o_demethylcephaeline +h2o +h
+    protoemetine
   }
 
   branch from dopamine side right {
     dopamine
-    <-> . +dopamine_glucuronide +h +udp_alpha_d_glucuronate
-    udp
+    <-> . +7_o_demethylcephaeline +h2o
+    protoemetine
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_396 [1.1.1.396] +nadh +h +bacteriochlorophyllide_a
-    3_deacetyl_3_1_hydroxyethyl_bacteriochlorophylli
+    <-> ec_1_2_1_27 [1.2.1.27] +propanoate +nadh +co2 +h +h2o
+    2_methyl_3_oxopropanoate
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_2_1_32 [1.2.1.32] +nadh +h +2z_4e_2_amino_5_methyl_muconate +h2o
-    2z_4e_2_amino_5_methyl_muconate_semialdehyde
+    <-> ec_1_1_1_37 [1.1.1.37] +nadh +h +3_phenylpyruvate
+    s_3_phenyllactate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +2_2_methylsulfanyl_hexyl_maleate +h
-    3_6_methylthio_hexylmalic_acid
+    <-> . +l_leucine +l_proline +l_arginine
+    prolyl_leucyl_arginine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +2_2_methylsulfanyl_heptyl_maleate +h
-    2_7_methylthio_heptylmalic_acid
+    <-> . +l_proline +l_lysine
+    prolyl_lysyl_proline
+  }
+
+  branch from h side left {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    25r_5beta_cholestane_3alpha_7alpha_26_triol
+  }
+
+  branch from h side right {
+    h
+    <-> . +9z_12z_octadecadienoate +cholesterol +h2o
+    1_linoleoyl_cholesterol_cholesterol_ester_18_2_d
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +l_proline +l_arginine
+    prolyl_prolyl_arginine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +l_proline
+    prolyl_prolyl_proline
+  }
+
+  branch from l_dehydroascorbic_acid side left {
+    l_dehydroascorbic_acid
+    <-> . +h2o
+    dehydroascorbate_bicyclic_form
+  }
+
+  branch from l_dehydroascorbic_acid side right {
+    l_dehydroascorbic_acid
+    <-> ec_1_11_1_11 [1.11.1.11] +h +l_ascorbate
+    monodehydro_l_ascorbate_radical
+  }
+
+  branch from tyramine side left {
+    tyramine
+    <-> . +trans_n_p_coumaroyl_tyramine +h +coa
+    4_coumaroyl_coa
+  }
+
+  branch from tyramine side right {
+    tyramine
+    <-> ec_2_3_1_110 [2.3.1.110] +trans_n_p_coumaroyl_tyramine +h +coa
+    trans_4_coumaroyl_coa
+  }
+
+  branch from l_ascorbate side left {
+    l_ascorbate
+    <-> ec_7_2_1_3 [7.2.1.3] +monodehydro_l_ascorbate_radical +h +fe
+    fe
+  }
+
+  branch from l_ascorbate side right {
+    l_ascorbate
+    <-> ec_1_10_99_3 [1.10.99.3] +l_dehydroascorbic_acid +all_trans_zeaxanthin +h2o +h
+    all_trans_antheraxanthin
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_14_13_112 [1.14.13.112] +22s_22_hydroxycampesterol +h +nadph +nadp +h2o
+    22r_23r_22_23_dihydroxycampesterol
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_14_13_112 [1.14.13.112] +22s_22_hydroxycampest_4_en_3_one +h +nadph +nadp +h2o
+    22r_23r_22_23_dihydroxycampest_4_en_3_one
   }
 }

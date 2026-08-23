@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-acetyltyramine-to-h2o "N-acetyltyramine to H2O" {
-  spacing 212
+  spacing 176
 
   spine at 0,0 {
     n_acetyltyramine
@@ -16,41 +16,5 @@ pathway n-acetyltyramine-to-h2o "N-acetyltyramine to H2O" {
     n_n_dimethyltyraminium
     <-> . +o2 -h2o
     n_n_dimethyldopaminequinone
-  }
-
-  branch from tyraminium side left {
-    tyraminium
-    <-> . +butyryl_coa +coa +hplus
-    n_butanoyltyramine
-  }
-
-  branch from tyraminium side right {
-    tyraminium
-    <-> . +hexanoyl_coa +coa +hplus
-    n_hexanoyltyramine
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +rs_isococlaurinium +sam +hplus
-    rs_7_o_methylcoclaurinium
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +s_norprotosinomenium +sam +hplus
-    s_6_o_methylnorprotosinomenium
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +asphodelin_a
-    coumestrol
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_2_1_22 [3.2.1.22] +melibiose +beta_d_glucose
-    beta_d_galactose
   }
 }

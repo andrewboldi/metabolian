@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway chenodeoxycholoyl-coa-to-h2o "chenodeoxycholoyl-CoA to H2O" {
-  spacing 224
+  spacing 152
 
   spine at 0,0 {
     chenodeoxycholoyl_coa
@@ -14,77 +14,5 @@ pathway chenodeoxycholoyl-coa-to-h2o "chenodeoxycholoyl-CoA to H2O" {
     h
     <-> . +adp +chenodeoxycholate +phosphate -chenodeoxycholate -h2o
     atp
-  }
-
-  branch from coa side left {
-    coa
-    <-> ec_2_3_1_7 [2.3.1.7] +acetyl_coa +s_carnitine
-    o_acetyl_r_carnitine
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +4z_7z_10z_13z_hexadecatetraenoyl_coa
-    hentriaconta_3_6_9_12_19_22_25_28_octaene_16_one
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
-    nostopeptolide_a2
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
-    nostopeptolide_a1
-  }
-
-  branch from glycine side left {
-    glycine
-    <-> ec_3_4_13_23 [3.4.13.23] +3_sulfanylhexan_1_ol_l_cysteine +h2o
-    s_1_hydroxyhexan_3_yl_l_cysteinylglycine
-  }
-
-  branch from glycine side right {
-    glycine
-    <-> ec_3_4_17_25 [3.4.17.25] +s_benzyl_gamma_glutamylcysteine +h2o
-    s_benzyl_glutatione
-  }
-
-  branch from chenodeoxycholate side left {
-    chenodeoxycholate
-    <-> . +hyocholic_acid_gamma_muricholate +nadp +h2o +h +nadph
-    o2
-  }
-
-  branch from chenodeoxycholate side right {
-    chenodeoxycholate
-    <-> . +adenosine_3_5_bisphosphate +sulfochenodeoxycholate +h
-    3_phosphoadenylyl_sulfate
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
-    nostocyclopeptide_a1
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
-    nostocyclopeptide_a2
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    nostocyclopeptide_a3
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    barbamide
   }
 }

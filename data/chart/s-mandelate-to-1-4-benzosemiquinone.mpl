@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-mandelate-to-1-4-benzosemiquinone "(S)-mandelate to 1,4-benzosemiquinone" {
-  spacing 282
+  spacing 276
 
   spine at 0,0 {
     s_mandelate
@@ -34,20 +34,8 @@ pathway s-mandelate-to-1-4-benzosemiquinone "(S)-mandelate to 1,4-benzosemiquino
 
   branch from 4_hydroxybenzaldehyde side left {
     4_hydroxybenzaldehyde
-    <-> . +4_hydroxybenzoate +atp +nadph +hplus +amp +nadp
-    ppi
-  }
-
-  branch from 4_hydroxybenzoate side right {
-    4_hydroxybenzoate
-    <-> ec_6_2_1_50 [6.2.1.50] +holo-acp +atp +amp +ppi
-    o_s_4_hydroxybenzoyl_pantetheine_4_phosphoryl_se
-  }
-
-  branch from 4_hydroxybenzoate side left {
-    4_hydroxybenzoate
-    <-> ec_1_14_19_55 [1.14.19.55] +bromide +nadph +o2 +hplus +co2 +nadp +h2o
-    2_4_dibromophenol
+    <-> . +trans_resveratrol +o2
+    3_5_dihydroxybenzaldehyde
   }
 
   branch from quinol side right {
@@ -56,9 +44,15 @@ pathway s-mandelate-to-1-4-benzosemiquinone "(S)-mandelate to 1,4-benzosemiquino
     quinone
   }
 
-  branch from quinol side left {
-    quinol
-    <-> . +chlorohydroquinone +gsh +chloride +hplus
-    gssg
+  branch from sapropterin side left {
+    sapropterin
+    <-> ec_1_5_1_33 [1.5.1.33] +nadp +nadph +hplus
+    l_erythro_biopterin
+  }
+
+  branch from sapropterin side right {
+    sapropterin
+    <-> ec_1_14_16_1 [1.14.16.1] +l_phenylalanine +o2 +tyrosine
+    4a_hydroxy_l_erythro_5_6_7_8_tetrahydrobiopterin
   }
 }

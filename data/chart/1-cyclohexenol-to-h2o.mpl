@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-cyclohexenol-to-h2o "1-cyclohexenol to H2O" {
-  spacing 238
+  spacing 304
 
   spine at 0,0 {
     1_cyclohexenol
@@ -18,67 +18,133 @@ pathway 1-cyclohexenol-to-h2o "1-cyclohexenol to H2O" {
 
   branch from h side left {
     h
-    <-> . +3_oxopropanoate +bromide +h2o
-    trans_3_bromoacrylic_acid
+    <-> . +nitrite +pyrrolomycin_c
+    pyrrolomycin_g
   }
 
   branch from h side right {
     h
-    <-> ec_3_1_1_73 [3.1.1.73] +e_4_coumaric_acid_methyl_ester +h2o +methanol
-    4_coumarate
-  }
-
-  branch from cyclohex_2_enone side left {
-    cyclohex_2_enone
-    <-> ec_1_1_1_184 [1.1.1.184] +nadh +h +nad
-    cyclohex_2_en_1_ol
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> . +1_chloroethenyl_oxirane +nadp +h2o +h +o2
-    chloroprene
+    <-> ec_1_3_1_71 [1.3.1.71] +fucosterol +nadph +nadp
+    clionasterol
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_14_14_55 [1.14.14.55] +2_hydroxynevirapine +nadp +h2o +h +o2
-    11_cyclopropyl_5_11_dihydro_4_methyl_6h_dipyrido
+    <-> ec_1_3_1_21 [1.3.1.21] +fucosterol +nadp +h
+    5_dehydroisoavenasterol
   }
 
-  branch from cyclohexanone side right {
-    cyclohexanone
-    <-> ec_1_1_1_184 [1.1.1.184] +h +nadph +nadp
-    cyclohexanol
-  }
-
-  branch from cyclohexanone side left {
-    cyclohexanone
-    <-> ec_1_1_99_36 [1.1.99.36] +3_4_dimethoxybenzaldehyde +cyclohexanol
-    3_4_dimethoxyphenyl_methanol
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_121 [1.1.1.121] +nadh +h +d_fucono_1_4_lactone
-    d_fucopyranose
+  branch from nadph side right {
+    nadph
+    <-> ec_1_1_1_270 [1.1.1.270] +isoavenastenone +h +nadp
+    isoavenasterol
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_2_1_3 [1.2.1.3] +nadh +4_hydroxynon_2_enoic_acid +h +h2o
-    4_hydroxynon_2_enal
+    <-> ec_1_6_5_3 [1.6.5.3] +nadh +mk_8 +h +menaquinol_8
+    pmf
   }
 
-  branch from h2o side right {
-    h2o
-    <-> ec_1_11_1_14 [1.11.1.14] +3_4_dimethoxybenzaldehyde +3_4_dimethoxyphenyl_methanol
-    h2o2
+  branch from nad side right {
+    nad
+    <-> . +nadh +2_octaprenyl_6_hydroxyphenol +h +adp +phosphate +atp +h2o
+    2_octaprenylphenol
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_2_3_2_2 [2.3.2.2] +l_alpha_methyl_gamma_glutamyl_l_alpha_aminobutyr +2s_2_aminobutanoate
-    l_alpha_methyl_glutamate
+    <-> . +17_hydroxy_1_oxo_2_3_seco_androstan_3_oic_acid
+    17_hydroxyandrostan_1_3_dione
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +1_17_dioxo_2_3_seco_androsta_4_en_3_oyl_coa
+    4_hydroxy_1_17_dioxo_2_3_seco_androstan_3_oyl_co
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_1_1_238 [1.1.1.238] +12_epideoxycholic_acid +h +nadph
+    12_dehydrodeoxycholate
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +3_amino_4_hydroxyphenyl_arsonate +h2o +h +nadph
+    roxarsone
+  }
+
+  branch from h side left {
+    h
+    <-> . +acetyl_coa +n_glycylclavaminate +coa
+    n_acetylglycylclavaminate
+  }
+
+  branch from h side right {
+    h
+    <-> . +p_gingivalis_kdo2_lipid_a_3_deacylated_4_dephosp +3r_3_hydroxy_13_methyltetradecanoate +h2o
+    p_gingivalis_kdo2_lipid_a_penta_acylated_4_depho
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +3_amino_4_hydroxyphenyl_arsonous_acid +nadp +h2o +h
+    roxarsone_iii
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +r_dihydroglycitein +nadp +h
+    glycitein
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> . +3_all_trans_octaprenyl_benzene_1_2_diol +h +adp +phosphate +atp +nad +h2o
+    2_all_trans_octaprenylphenol
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +9_cis_retinal +h +nad
+    9_cis_retinol
+  }
+
+  branch from nad side left {
+    nad
+    <-> . +nadh +9_13_cis_retinoic_acid +h +h2o
+    9_cis_retinal
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_93 [1.1.1.93] +nadh +2r_2_hydroxy_3_oxosuccinic_acid +h
+    2r_3r_tartrate
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +pmf +plastoquinol_9 +pmf +h2o
+    plastoquinone_9
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_13_11_11 [1.13.11.11] +1_methyl_l_tryptophan
+    n_formyl_methyl_l_kynurenine
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +tricholomic_acid
+    3r_3_n5_dihydroxy_l_glutamine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_1_1_1 [3.1.1.1] +methyl_l_phenylalaninate +l_phenylalanine
+    methanol
   }
 }

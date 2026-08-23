@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway diphosphate-to-3-hydroxyethylbacteriochl "diphosphate to 3-Hydroxyethylbacteriochl…" {
-  spacing 224
+  spacing 272
 
   spine at 0,0 {
     diphosphate
@@ -18,39 +18,87 @@ pathway diphosphate-to-3-hydroxyethylbacteriochl "diphosphate to 3-Hydroxyethylb
     3_hydroxyethylbacteriochlorophyllide_a
   }
 
-  branch from 2e_6e_10e_geranylgeranyl_diphosphate side left {
-    2e_6e_10e_geranylgeranyl_diphosphate
-    <-> . +diphosphate +h2o
-    beta_cembratriene_ol
-  }
-
-  branch from 2e_6e_10e_geranylgeranyl_diphosphate side right {
-    2e_6e_10e_geranylgeranyl_diphosphate
-    <-> ec_4_2_3_158 [4.2.3.158] +diphosphate
-    spiroviolene
-  }
-
   branch from nad side left {
     nad
-    <-> . +nadh +alpha_pinene +h +o2 +h2o
-    alpha_pinene_oxide
+    <-> . +nadh +2e_4z_deca_2_4_dienoyl_coa +h
+    3e_decenoyl_coa
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_3_1_87 [1.3.1.87] +nadh +h +3_2_3_dihydroxyphenyl_propanoate
-    3_5s_6r_5_6_dihydroxycyclohexa_1_3_dienyl_propan
+    <-> . +nadh +acetyl_coa +fadh2 +h +5z_8z_11z_icosatrienoyl_coa +coa +h2o
+    fad
   }
 
   branch from h2o side left {
     h2o
-    <-> . +diphosphate +h +3_dehydro_amp
-    3_dehydro_atp
+    <-> . +3_hydroxyheptanoyl_coa +h
+    2e_hept_2_enoyl_coa
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_1_1_78 [3.1.1.78] +polyneuridine_aldehyde +methanol +16_epivellosimine
-    co2
+    <-> . +2e_6z_9z_12z_octadecatetraenoyl_coa
+    3_s_hydroxy_6z_9z_12z_octadecatrienoyl_coa
+  }
+
+  branch from diphosphate side left {
+    diphosphate
+    <-> . +h +amp +11z_octadecenoyl_coa +atp +coa
+    trans_vaccenic_acid
+  }
+
+  branch from diphosphate side right {
+    diphosphate
+    <-> . +amp +4_2r_3s_4r_5r_5_6_amino_9h_purin_9_yl_4_hydroxy +h +coa +4_hydroxyphenylacetate
+    atp
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> . +8z_11z_14z_3_oxoicosa_8_11_14_trienoyl_coa +h +nad
+    3_icosa_8_11_14_trienoyl_coa
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +h +3_s_hydroxy_6z_9z_12z_octadecatrienoyl_coa +nad
+    3_oxo_6z_9z_12z_octadecatrienoyl_coa
+  }
+
+  branch from nad side left {
+    nad
+    <-> . +nadh +neoprontosil +h +nh4 +h2o
+    sulfanilamide
+  }
+
+  branch from nad side right {
+    nad
+    <-> . +nadh +olsalazine
+    mesalaminate
+  }
+
+  branch from h side left {
+    h
+    <-> . +s_carnitine +tridecanoyl_coa +coa
+    acar_13_0
+  }
+
+  branch from h side right {
+    h
+    <-> . +s_carnitine +7z_octadec_7_enoyl_coa +coa
+    octadecenoylcarnitine_11
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +9e_tetradecenoic_acid +cholesterol
+    cholesteryl_myristelaidate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +13z_docosenoate +h +cholesterol
+    cholest_5_en_3b_yl_13z_docosenoate
   }
 }

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "2-hydroxyethylphosphonic-to-hydrogen-donor",
   "name": "2-hydroxyethylphosphonic… to hydrogen donor",
-  "category": "amino-acid-metabolism",
+  "category": "energy-metabolism",
   "summary": "A 3-step route from 2-hydroxyethylphosphonic acid(1−) to hydrogen donor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -99,90 +99,6 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:16526"
-      }
-    },
-    {
-      "id": "8_s_15_s_dihpete",
-      "name": "8(S),15(S)-DiHPETE",
-      "formula": "C20H31O6",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:133899"
-      }
-    },
-    {
-      "id": "8_s_15_s_dihete",
-      "name": "8(S),15(S)-DiHETE",
-      "formula": "C20H31O4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:133903"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "Water",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:15377"
-      }
-    },
-    {
-      "id": "malonyl-coa",
-      "name": "Malonyl-CoA",
-      "formula": "C24H33N7O19P3S",
-      "charge": -5,
-      "xrefs": {
-        "chebi": "CHEBI:57384"
-      }
-    },
-    {
-      "id": "acetyl_coa",
-      "name": "Acetyl-CoA",
-      "formula": "C23H34N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57288"
-      }
-    },
-    {
-      "id": "sam",
-      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
-      "short": "S-Adenosyl-L-methio…",
-      "formula": "C15H23N6O5S",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:59789"
-      }
-    },
-    {
-      "id": "dehydroprobetaenone_i",
-      "name": "dehydroprobetaenone I",
-      "short": "dehydroprobetaenone…",
-      "formula": "C21H34O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:145061"
-      }
-    },
-    {
-      "id": "sah",
-      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
-      "short": "S-Adenosyl-L-homocy…",
-      "formula": "C14H20N6O5S",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:57856"
-      }
-    },
-    {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57287"
       }
     }
   ],
@@ -356,113 +272,93 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "(8S,15S)-dihydroperoxy-(5Z,9E,11Z,13E)-eicosatetraenoate + 2 AH2 = (8S,15S)-dihydroxy-(...",
-      "equation": "(8S,15S)-dihydroperoxy-(5Z,9E,11Z,13E)-eicosatetraenoate + 2 AH2 = (8S,15S)-dihydroxy-(5Z,9E,11Z,13E)-eicosatetraenoate + 2 A + 2 H2O",
-      "substrates": [
-        {
-          "metabolite": "8_s_15_s_dihpete",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_donor",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "8_s_15_s_dihete",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_acceptor",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:51120"
+      "id": "xt_2_hydroxyethylphosphonic_acid_2-hydroxyethylphosphonic-to-1r-2s-epoxypropylpho",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_hydroxyethylphosphonic_acid"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2-hydroxyethylphosphonic-to-1r-2s-epoxypropylpho"
+      },
+      "note": "Shares 2-hydroxyethylphosphonic acid with 2-hydroxyethylphosphonic… to (1R,2S)-epoxypropylphosph….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:51120"
+            "db": "ChEBI",
+            "id": "CHEBI:60991"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "7 malonyl-CoA + acetyl-CoA + 10 AH2 + 5 S-adenosyl-L-methionine + 2 H(+) = dehydroprobe...",
-      "equation": "7 malonyl-CoA + acetyl-CoA + 10 AH2 + 5 S-adenosyl-L-methionine + 2 H(+) = dehydroprobetaenone I + 10 A + 5 S-adenosyl-L-homocysteine + 7 CO2 + 8 CoA + 6 H2O",
-      "substrates": [
-        {
-          "metabolite": "malonyl-coa",
-          "stoichiometry": 7
-        },
-        {
-          "metabolite": "acetyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_donor",
-          "stoichiometry": 10
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 5
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "dehydroprobetaenone_i",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_acceptor",
-          "stoichiometry": 10
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 5
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 7
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 8
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 6
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:51348"
+      "id": "xt_2_hydroxyethylphosphonic_acid_2-hydroxyethylphosphonic-to-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_hydroxyethylphosphonic_acid"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2-hydroxyethylphosphonic-to-acetate"
+      },
+      "note": "Shares 2-hydroxyethylphosphonic acid with 2-hydroxyethylphosphonic… to acetate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:51348"
+            "db": "ChEBI",
+            "id": "CHEBI:60991"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_hydroxyethylphosphonic_acid_2-hydroxyethylphosphonic-to-d-ribose-1-5-bisphos",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_hydroxyethylphosphonic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-hydroxyethylphosphonic-to-d-ribose-1-5-bisphos"
+      },
+      "note": "Shares 2-hydroxyethylphosphonic acid with 2-hydroxyethylphosphonic… to α-D-ribose 1,5-bisphospha….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60991"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hydroxymethylphosphonate_deoxycylindrospermopsin-to-s-succinyl-l-cysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxymethylphosphonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "deoxycylindrospermopsin-to-s-succinyl-l-cysteine"
+      },
+      "note": "Shares hydroxymethylphosphonate with deoxycylindrospermopsin to S-succinyl-L-cysteine(2−).",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:71199"
           }
         ]
       }

@@ -38,62 +38,62 @@ pathway s-adenosyl-l-homocysteine-to-fmn "S-adenosyl-L-homocysteine to FMN" {
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +7_hydroxy_4_5_dimethoxyisoflavone +s_adenosyl_l_homocysteine
-    calycosin
+    <-> ec_2_1_1_107 [2.1.1.107] +s_adenosyl_l_homocysteine +precorrin_2 +h
+    precorrin_1
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +chrysosplenol_c
-    3_4_5_6_tetrahydroxy_3_7_dimethoxyflavone
+    <-> . +s_adenosyl_l_homocysteine +h +methoxyneurosporene
+    1_hydroxy_all_trans_1_2_dihydro_neurosporene
   }
 
   branch from h side left {
     h
-    <-> . +methylenecyclopropyl_pyruvic_acid +co2
-    2_oxo_3_carboxy_4_5_cyclopropylhex_5_enoate
+    <-> ec_3_1_1_53 [3.1.1.53] +n_acetyl_beta_neuraminate +acetate +h2o
+    n_acetyl_4_o_acetylneuraminate
   }
 
   branch from h side right {
     h
-    <-> . +o2 +nadph +4_hydroxy_3_all_trans_heptaprenylbenzoic_acid +nadp +h2o
-    3_4_dihydroxy_5_all_trans_heptaprenylbenzoic_aci
+    <-> ec_3_1_1_53 [3.1.1.53] +n_acetyl_alpha_neuraminate +acetate +h2o
+    n_acetyl_9_o_acetylneuraminate
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_13_48 [1.14.13.48] +4s_limonene +h +nadph +nadp +h2o
-    cis_carveol
+    <-> ec_1_14_13_144 [1.14.13.144] +h +stemod_13_17_ene +nadph +nadp +h2o
+    syn_stemoden_19_oate
   }
 
   branch from o2 side right {
     o2
-    <-> . +h +2_chloro_4_methyl_cis_cis_muconate
-    3_chloro_5_methylcatechol
+    <-> ec_1_14_13_150 [1.14.13.150] +1e_4e_8e_humulene +h +nadph +nadp +h2o
+    8_hydroxy_humulene
   }
 
   branch from nadph side left {
     nadph
-    <-> . +versicolorin_a +h +nadp
-    versicolorin_b
+    <-> ec_1_1_1_323 [1.1.1.323] +h +thujan_3_one +nadp
+    thujan_3_ol
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_hydroxyhexadecanoylpantetheine_4_phosphor +nadp +h
-    o_s_3_oxohexadecanoylpantetheine_4_phosphoryl_se
+    <-> ec_1_5_1_33 [1.5.1.33] +l_erythro_biopterin +h +nadp
+    6r_5_6_7_8_tetrahydrobiopterin
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_3_1_10 [1.3.1.10] +nadh +o_s_2e_19z_31z_pentacontatrienoylpantetheine_4_p +h
-    o_s_19z_31z_pentacontadienoylpantetheine_4_phosp
+    <-> . +nadh +all_trans_beta_carotene +h +o2 +all_trans_retinal +h2o
+    11_cis_retinal
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_3_1_10 [1.3.1.10] +nadh +o_s_2e_5z_tetracosadienoylpantetheine_4_phosphor +h
-    o_s_5z_tetracosenoylpantetheine_4_phosphoryl_l_s
+    <-> ec_1_1_1_316 [1.1.1.316] +nadh +l_galactono_1_4_lactone +h
+    l_galactose
   }
 
   branch from pluviatolide side left {
@@ -102,33 +102,93 @@ pathway s-adenosyl-l-homocysteine-to-fmn "S-adenosyl-L-homocysteine to FMN" {
     hinokinin
   }
 
-  branch from fmn side right {
-    fmn
-    <-> . +prostaglandin_i2 +fmnh2 +o2 +h2o +hplus
-    19_hydroxyprostaglandin_i2
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +thromboxane_a2 +fmnh2 +o2 +h2o +hplus
-    18_hydroxythromboxane_a2
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +5_n7_methyl_5_triphosphoguanosine_2_o_methyl_pur +sam +hplus
-    5_n7_methyl_5_triphosphoguanosine_2_o_methyl_pur
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +cytidine_5_monophosphate_1 +sam +hplus
-    5_methylcytidine_5_monophosphate_1
-  }
-
   branch from deoxypodophyllotoxin side right {
     deoxypodophyllotoxin
     <-> . +h +o2 +nadph +nadp +h2o
     peltatin
+  }
+
+  branch from s_adenosyl_l_homocysteine side left {
+    s_adenosyl_l_homocysteine
+    <-> ec_2_1_1_291 [2.1.1.291] +s_reticuline +s_adenosyl_l_methionine +h
+    laudanine
+  }
+
+  branch from s_adenosyl_l_homocysteine side right {
+    s_adenosyl_l_homocysteine
+    <-> ec_2_1_1_231 [2.1.1.231] +h +4_methoxyflavanone +s_adenosyl_l_methionine
+    4_hydroxyflavanone
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_1_1_53 [3.1.1.53] +acetate +n_acetyl_9_o_acetylneuraminate +h2o
+    n_acetyl_beta_neuraminate
+  }
+
+  branch from h side right {
+    h
+    <-> ec_1_2_7_4 [1.2.7.4] +5_6_7_8_tetrahydromethanopterin +acetyl_coa +carbon_monoxide +coa
+    5_methyl_5_6_7_8_tetrahydromethanopterin
+  }
+
+  branch from s_adenosyl_l_methionine side left {
+    s_adenosyl_l_methionine
+    <-> ec_2_1_1_276 [2.1.1.276] +s_adenosyl_l_homocysteine +methyl_gibberellin_a4 +h
+    gibberellin_a4
+  }
+
+  branch from s_adenosyl_l_methionine side right {
+    s_adenosyl_l_methionine
+    <-> ec_2_1_1_276 [2.1.1.276] +s_adenosyl_l_homocysteine +h +gibberellin_a4
+    methyl_gibberellin_a4
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +h +4_hydroxyphenylacetonitrile +o2 +nadph +h2o
+    s_4_hydroxymandelonitrile
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_14_13_54 [1.14.13.54] +h +an_oxosteroid +o2 +nadph +h2o
+    steroid_esters
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +tyrosyl_tyrosine
+    l_tyrosine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +l_valine +l_methionine +l_tyrosine
+    tyrosyl_valyl_methionine
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_14_13_99 [1.14.13.99] +h +24r_24_hydroxycholesterol +nadph +nadp +h2o
+    24r_7_24_dihydroxycholesterol
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_14_21_8 [1.14.21.8] +h +pratensein +nadph +nadp +h2o
+    5_hydroxypseudobaptigenin
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +5_hydroxymethylfurfural +h +nadp
+    2_5_furandimethanol
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +2_phenylacetonitrile_oxide +h +nadp +h2o
+    z_phenylacetaldehyde_oxime
   }
 }

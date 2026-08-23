@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway neoabietadienal-to-h2o "neoabietadienal to H2O" {
-  spacing 244
+  spacing 196
 
   spine at 0,0 {
     neoabietadienal
@@ -14,53 +14,5 @@ pathway neoabietadienal-to-h2o "neoabietadienal to H2O" {
     h
     <-> . +abietal +o2 +nadph -abieta_7_13_dien_18_oate -h2o
     nadp
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +precorrin_6a +h +nadph
-    precorrin_6b
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +h +nadph +prontosil +sulfanilamide
-    benzene_1_2_4_triamine
-  }
-
-  branch from h side left {
-    h
-    <-> ec_1_13_11_39 [1.13.11.39] +biphenyl_2_3_diol +o2
-    2_hydroxy_6_oxo_6_phenylhexa_2_4_dienoate
-  }
-
-  branch from h side right {
-    h
-    <-> ec_4_1_1_34 [4.1.1.34] +lyxulose +co2
-    3_dehydro_l_gulonate
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> . +12_oxo_c_ltb3 +h +nadp
-    11_12_dihydro_12r_hydroxyleukotriene_c4
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> . +3beta_hydroxy_5_cholestene_27_oate +h +o2 +nadp +h2o
-    3beta_7alpha_dihydroxy_5_cholestenoate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +alpha_d_glucose +o2
-    co2
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_2_1_24 [3.2.1.24] +d_mannopyranose +h +4_nitrophenol
-    4_nitrophenyl_alpha_d_mannopyranoside
   }
 }

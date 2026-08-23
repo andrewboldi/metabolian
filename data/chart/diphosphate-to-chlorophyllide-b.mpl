@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway diphosphate-to-chlorophyllide-b "diphosphate to chlorophyllide b" {
-  spacing 206
+  spacing 248
 
   spine at 0,0 {
     diphosphate
@@ -18,55 +18,97 @@ pathway diphosphate-to-chlorophyllide-b "diphosphate to chlorophyllide b" {
 
   branch from 2e_6e_10e_geranylgeranyl_diphosphate side left {
     2e_6e_10e_geranylgeranyl_diphosphate
-    <-> ec_4_2_3_149 [4.2.3.149] +diphosphate +h2o
-    r_nephthenol
-  }
-
-  branch from 2e_6e_10e_geranylgeranyl_diphosphate side right {
-    2e_6e_10e_geranylgeranyl_diphosphate
-    <-> ec_4_2_3_150 [4.2.3.150] +diphosphate
-    r_cembrene_a
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_2_1_56 [3.2.1.56] +4_deoxy_beta_l_erythro_hex_4_enopyranuronosyl_1 +n_sulfo_d_glucosamine
-    4_deoxy_l_threo_hex_4_enopyranuronate
+    <-> ec_2_5_1_89 [2.5.1.89] +diphosphate +tri_trans_poly_cis_undecaprenyl_diphosphate
+    ipp
   }
 
   branch from h2o side right {
     h2o
-    <-> . +n_acetyl_d_galactosamine +4_deoxy_l_threo_hex_4_enopyranuronate
-    4_deoxy_beta_d_gluc_4_enuronosyl_1_4_n_acetyl_d
+    <-> . +l_proline +l_lysine +l_aspartate
+    aspartyl_prolyl_lysine
   }
 
-  branch from diphosphate side left {
-    diphosphate
-    <-> . +phellandrene
-    neryl_diphosphate
+  branch from h2o side left {
+    h2o
+    <-> . +l_asparagine +l_aspartate +l_valine
+    aspartyl_valyl_asparagine
   }
 
   branch from diphosphate side right {
     diphosphate
-    <-> . +neryl_diphosphate
-    4s_limonene
+    <-> ec_4_2_3_32 [4.2.3.32] +ent_abieta_8_14_12_diene
+    ent_copalyl_diphosphate
   }
 
-  branch from h side left {
-    h
-    <-> . +glucose +4_4_5_5_6_6_hexahydroxydiphenate +h2o
-    pedunculagin
+  branch from diphosphate side left {
+    diphosphate
+    <-> . +borneol +h +h2o
+    bornyl_diphosphate
   }
 
   branch from h side right {
     h
-    <-> ec_1_2_1_84 [1.2.1.84] +9z_11e_tetradec_9_11_dienoyl_coa +nadph +nadp +coa
-    9z_11e_tetradecadien_1_ol
+    <-> . +adp +phosphate +atp +h2o
+    17_estradiol_3_o_d_glucuronide
+  }
+
+  branch from h side left {
+    h
+    <-> . +adp +estrone +phosphate +estrone +h2o
+    atp
+  }
+
+  branch from chlorophyllide_b side right {
+    chlorophyllide_b
+    <-> . +h2o
+    71_dihydroxychlorophyllide_a
+  }
+
+  branch from diphosphate side left {
+    diphosphate
+    <-> . +utp +h +glucose_1_p
+    udp_alpha_d_glucose
+  }
+
+  branch from diphosphate side right {
+    diphosphate
+    <-> ec_3_1_7_10 [3.1.7.10] +2z_6e_10e_geranylgeranyl_diphosphate +h2o
+    13e_labda_7_13_dien_15_ol
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +l_asparagine +l_cysteine +l_methionine
+    cystyl_asparaginyl_methionine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +l_aspartate +l_cysteine +l_phenylalanine
+    cystyl_aspartyl_phenylalanine
   }
 
   branch from chlorophyllide_b side left {
     chlorophyllide_b
-    <-> . +h2o
-    71_dihydroxychlorophyllide_a
+    <-> . +o2 +h2o
+    chlorophyllide_a
+  }
+
+  branch from chlorophyllide_b side right {
+    chlorophyllide_b
+    <-> ec_1_1_1_294 [1.1.1.294] +71_hydroxychlorophyllide_a +nadp +h
+    nadph
+  }
+
+  branch from h side left {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    estrone_3_sulfate
+  }
+
+  branch from h side right {
+    h
+    <-> . +estrone_3_sulfate +phosphate +atp +estrone_3_sulfate +h2o
+    adp
   }
 }

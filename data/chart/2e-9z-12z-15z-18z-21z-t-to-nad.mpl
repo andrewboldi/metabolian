@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2e-9z-12z-15z-18z-21z-t-to-nad "(2E,9Z,12Z,15Z,18Z,21Z)-t… to NAD" {
-  spacing 244
+  spacing 232
 
   spine at 0,0 {
     2e_9z_12z_15z_18z_21z_tetracosahexaenoyl_coa
@@ -14,17 +14,5 @@ pathway 2e-9z-12z-15z-18z-21z-t-to-nad "(2E,9Z,12Z,15Z,18Z,21Z)-t… to NAD" {
     h
     <-> ec_1_1_1_211 [1.1.1.211] +nadh +6z_9z_12z_15z_18z_3_oxotetracosapentaenoyl_coa -nad
     6z_9z_12z_15z_18z_3_hydroxytetracosapenta_6_9_1
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    1_docosapentenoylglycerophosphocholine_delta_7_1
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    pc_16_1_9e_0_0
   }
 }

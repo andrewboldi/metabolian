@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-dolichyl-hexadecanoate "UDP to dolichyl hexadecanoate" {
-  spacing 274
+  spacing 316
 
   spine at 0,0 {
     udp
@@ -16,57 +16,99 @@ pathway udp-to-dolichyl-hexadecanoate "UDP to dolichyl hexadecanoate" {
     coa
   }
 
-  branch from dolichyl_phosphate side left {
-    dolichyl_phosphate
-    <-> ec_3_1_4_49 [3.1.4.49] +alpha_d_mannopyranose +h2o
-    dolichyl_beta_d_mannosyl_phosphate
-  }
-
-  branch from udp_alpha_d_xylose side right {
-    udp_alpha_d_xylose
-    <-> . +udp +eugenol_beta_primeveroside +h
-    eugenyl_o_beta_d_glucopyranoside
-  }
-
-  branch from udp_alpha_d_xylose side left {
-    udp_alpha_d_xylose
-    <-> ec_2_4_2_51 [2.4.2.51] +udp +delphinidin_3_o_beta_d_sambubioside +h
-    delphinidin_3_o_d_glucoside_betaine
+  branch from h side left {
+    h
+    <-> . +dimethylmercury +methane
+    methylmercury
   }
 
   branch from h side right {
     h
-    <-> ec_1_3_1_96 [1.3.1.96] +diphosphate +squalene +nadp +nadph
-    presqualene_diphosphate
-  }
-
-  branch from h side left {
-    h
-    <-> ec_1_14_13_90 [1.14.13.90] +all_trans_zeaxanthin +o2 +nadph +nadp +h2o
-    all_trans_antheraxanthin
-  }
-
-  branch from phosphate side right {
-    phosphate
-    <-> ec_3_1_3_63 [3.1.3.63] +2_carboxy_d_arabinitol +h2o
-    2_carboxy_d_arabinitol_1_phosphate
+    <-> . +2_4_dimethylaminophenyl_diazenylbenzoate +nadph +n_n_dimethyl_1_4_phenylenediamine +nadp
+    anthranilate
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_1_20_1_1 [1.20.1.1] +nadh +h +nad +h2o
-    phosphite
+    <-> . +h +adp +atp +h2o
+    cerivastatin
   }
 
-  branch from coa side right {
-    coa
-    <-> ec_2_3_1_107 [2.3.1.107] +acetyl_coa +h +deacetylvindoline
-    vindoline
+  branch from phosphate side right {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    cerivastatin_m1
   }
 
   branch from coa side left {
     coa
-    <-> ec_2_3_3_13 [2.3.3.13] +acetyl_coa +h +2_oxopentanoate +h2o
-    2_propylmalate
+    <-> . +succinyl_coa +a_cyclic_beta_1_2_glucan
+    a_succinylated_cyclic_beta_1_2_glucan
+  }
+
+  branch from coa side right {
+    coa
+    <-> . +acetyl_coa +deacetyl_hectochlorin
+    hectochlorin
+  }
+
+  branch from h side left {
+    h
+    <-> . +3r_3_tetradecanoyloxy_octadecanoate +alpha_d_kdo_2_6_tetra_acylated_lipid_a_h_pylori +h2o
+    alpha_d_kdo_2_6_4_dephospho_1_petn_lipid_a_h_pyl
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_4_99_12 [2.4.99.12] +cmp +alpha_kdo_2_6_lipid_iva_h_pylori +lipid_iva_h_pylori
+    cmp_3_deoxy_alpha_d_manno_octulosonic_acid
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_7_1_1_3 [7.1.1.3] +plastoquinol_9 +o2 +plastoquinone_9
+    pmf
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_2_1_215 [3.2.1.215] +alpha_d_galp_1_3_l_araf +alpha_l_rha_1_3_beta_d_glca_1_6_alpha_l_araf_1_4
+    alpha_d_gal_1_3_alpha_l_araf_1_3_alpha_l_araf_1
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    cerivastatin_m23
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    cerivastatin_m1_glucuronide
+  }
+
+  branch from hexadecanoyl_coa side left {
+    hexadecanoyl_coa
+    <-> . +s_carnitine +coa
+    o_hexadecanoyl_r_carnitine
+  }
+
+  branch from hexadecanoyl_coa side right {
+    hexadecanoyl_coa
+    <-> . +nadh +h +o2 +nad +h2o
+    9z_hexadecenoyl_coa
+  }
+
+  branch from coa side left {
+    coa
+    <-> . +2_methylpropanoyl_coa +urauchimycin_b
+    antimycin_a7a
+  }
+
+  branch from coa side right {
+    coa
+    <-> . +acetyl_coa +3_aminopropyl_l_aspartyl_1_amino_phosphoryl_5_a
+    5_o_3_acetylaminopropoxy_l_alpha_aspartyl_amino
   }
 }

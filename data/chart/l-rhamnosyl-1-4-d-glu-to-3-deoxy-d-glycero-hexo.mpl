@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-rhamnosyl-1-4-d-glu-to-3-deoxy-d-glycero-hexo "α-L-rhamnosyl-(1→4)-D-glu… to 3-deoxy-D-glycero-hexo-2,…" {
-  spacing 284
+  spacing 308
 
   spine at 0,0 {
     l_rhamnosyl_1_4_d_glucuronate
@@ -18,14 +18,14 @@ pathway l-rhamnosyl-1-4-d-glu-to-3-deoxy-d-glycero-hexo "α-L-rhamnosyl-(1→4)-
 
   branch from 4_deoxy_l_threo_hex_4_enopyranuronate side left {
     4_deoxy_l_threo_hex_4_enopyranuronate
-    <-> ec_3_2_1_179 [3.2.1.179] +n_acetyl_d_galactosamine +h2o
-    beta_d_4_deoxy_delta_4_glcpa_1_3_beta_d_galpnac
+    <-> . +4_deoxy_l_threo_hex_4_enopyranosiduronate_alpha +h2o
+    alpha_l_rhamnopyranose_3_sulfate
   }
 
   branch from 4_deoxy_l_threo_hex_4_enopyranuronate side right {
     4_deoxy_l_threo_hex_4_enopyranuronate
-    <-> ec_3_2_1_179 [3.2.1.179] +d_glcp_1_4_l_rhap_1_3_d_glcp +h2o
-    d_4_glcpa_1_4_d_glcp_1_4_l_rhap_1_3_d_glcp
+    <-> ec_3_2_1_56 [3.2.1.56] +4_deoxy_beta_l_erythro_hex_4_enopyranuronosyl_1 +h2o
+    n_sulfo_d_glucosamine
   }
 
   branch from 5_dehydro_4_deoxy_d_glucuronate side left {
@@ -38,5 +38,29 @@ pathway l-rhamnosyl-1-4-d-glu-to-3-deoxy-d-glycero-hexo "α-L-rhamnosyl-(1→4)-
     5_dehydro_4_deoxy_d_glucuronate
     <-> ec_3_2_1_179 [3.2.1.179] +d_4_glcpa_1_4_d_glcp_1_4_l_rhap_1_3_d_glcp +h2o
     d_glcp_1_4_l_rhap_1_3_d_glcp
+  }
+
+  branch from 4_deoxy_l_threo_hex_4_enopyranuronate side left {
+    4_deoxy_l_threo_hex_4_enopyranuronate
+    <-> . +n_acetyl_d_galactosamine +h2o
+    4_deoxy_beta_d_gluc_4_enuronosyl_1_4_n_acetyl_d
+  }
+
+  branch from 4_deoxy_l_threo_hex_4_enopyranuronate side right {
+    4_deoxy_l_threo_hex_4_enopyranuronate
+    <-> ec_3_2_1_180 [3.2.1.180] +4_deoxy_beta_d_gluc_4_enuronosyl_1_3_n_acetyl_d +h2o
+    n_acetyl_d_glucosamine_6_sulfate
+  }
+
+  branch from 5_dehydro_4_deoxy_d_glucuronate side left {
+    5_dehydro_4_deoxy_d_glucuronate
+    <-> ec_3_2_1_180 [3.2.1.180] +d_4_deoxy_4_glcpa_1_3_d_galpnac6s +h2o
+    n_acetyl_d_galactosamine_6_sulfate
+  }
+
+  branch from 5_dehydro_4_deoxy_d_glucuronate side right {
+    5_dehydro_4_deoxy_d_glucuronate
+    <-> ec_3_2_1_179 [3.2.1.179] +d_4_deoxy_4_glcpa_1_3_d_galpnac +h2o
+    n_acetyl_d_galactosamine
   }
 }

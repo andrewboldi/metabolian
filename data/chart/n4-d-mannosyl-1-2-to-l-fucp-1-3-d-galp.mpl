@@ -20,14 +20,14 @@ pathway n4-d-mannosyl-1-2-to-l-fucp-1-3-d-galp "N4-[α-D-mannosyl-(1→2)-α-…
 
   branch from ump side left {
     ump
-    <-> ec_4_1_1_23 [4.1.1.23] +hplus +co2
-    omp
+    <-> . +udpglcnac +h2o +hplus
+    n_acetyl_d_glucosamine_1_phosphate
   }
 
   branch from ump side right {
     ump
-    <-> ec_2_7_8_18 [2.7.8.18] +udpglcnac +udp_d_galactose +hplus
-    udp_n_acetyl_6_d_galactose_1_phosphonato_d_gluco
+    <-> . +udp_d_glucose +h2o +hplus
+    g1p
   }
 
   branch from n_acetyl_d_glucosamine side left {
@@ -36,9 +36,51 @@ pathway n4-d-mannosyl-1-2-to-l-fucp-1-3-d-galp "N4-[α-D-mannosyl-(1→2)-α-…
     n_acetyl_d_glucosamine_6_phosphate
   }
 
-  branch from n_acetyl_d_glucosamine side right {
-    n_acetyl_d_glucosamine
-    <-> . +n4_d_glcnac_1_2_d_man_1_3_d_man_1_6_d_man_1_4_d +h2o
-    n4_d_manp_1_3_d_manp_1_6_d_manp_1_4_d_glcpnac_1
+  branch from udpglcnac side right {
+    udpglcnac
+    <-> ec_1_1_1_136 [1.1.1.136] +nad +h2o +nadh +hplus
+    udp_2_acetamido_2_deoxy_d_glucuronate
+  }
+
+  branch from udpglcnac side left {
+    udpglcnac
+    <-> ec_2_4_1_138 [2.4.1.138] +d_manp_1_3_d_manp_1_2_d_manp_1_2_d_manp +udp +hplus
+    d_glcpnac_1_2_d_manp_1_3_d_manp_1_2_d_manp_1_2
+  }
+
+  branch from ump side right {
+    ump
+    <-> . +udp_d_glucuronate +h2o +hplus
+    1_phosphonato_d_glucuronate
+  }
+
+  branch from ump side left {
+    ump
+    <-> . +udp_n_acetyl_d_galactosamine +h2o +hplus
+    n_acetyl_d_galactosamine_1_phosphate
+  }
+
+  branch from udp_d_galactose side right {
+    udp_d_galactose
+    <-> ec_2_4_1_234 [2.4.1.234] +kaempferol_oxoanion +udp +hplus
+    kaempferol_3_o_d_galactoside
+  }
+
+  branch from udp_d_galactose side left {
+    udp_d_galactose
+    <-> ec_2_4_1_179 [2.4.1.179] +d_galactosyl_1_4_d_glucoside +udp +hplus
+    d_galactosyl_1_3_d_galactosyl_1_4_d_glucoside
+  }
+
+  branch from gdp_l_fucose side right {
+    gdp_l_fucose
+    <-> ec_2_4_1_152 [2.4.1.152] +d_galactosyl_1_4_n_acetyl_d_glucosaminide +gdp +hplus
+    d_galactosyl_1_4_l_fucosyl_1_3_n_acetyl_d_gluco
+  }
+
+  branch from gdp_l_fucose side left {
+    gdp_l_fucose
+    <-> ec_1_1_1_271 [1.1.1.271] +nadp +nadph +hplus
+    gdp_4_dehydro_6_deoxy_d_mannose
   }
 }

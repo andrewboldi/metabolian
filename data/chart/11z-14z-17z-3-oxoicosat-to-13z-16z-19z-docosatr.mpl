@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 11z-14z-17z-3-oxoicosat-to-13z-16z-19z-docosatr "(11Z,14Z,17Z)-3-oxoicosat… to 13Z,16Z,19Z-Docosatrienoy…" {
-  spacing 206
+  spacing 158
 
   spine at 0,0 {
     11z_14z_17z_3_oxoicosatrienoyl_coa
@@ -30,53 +30,5 @@ pathway 11z-14z-17z-3-oxoicosat-to-13z-16z-19z-docosatr "(11Z,14Z,17Z)-3-oxoicos
     11z_14z_17z_icosatrienoyl_coa
     <-> ec_1_14_19_37 [1.14.19.37] +fe2 +o2 +hplus +iron +h2o
     5z_11z_14z_17z_icosatetraenoyl_coa
-  }
-
-  branch from 11z_14z_17z_icosatrienoyl_coa side right {
-    11z_14z_17z_icosatrienoyl_coa
-    <-> . +sn_glycerol_3_phosphate +coa
-    1_acylglycerol_3p_11_14_17_eico
-  }
-
-  branch from 13z_16z_19z_3_oxodocosatrienoyl_coa side left {
-    13z_16z_19z_3_oxodocosatrienoyl_coa
-    <-> . +h +nadph +nadp
-    3_s_hydroxy_docosa_13_16_19_all_cis_trienoyl_coe
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_1_1_424 [1.1.1.424] +d_xylopyranose +h +nadph
-    d_xylono_1_4_lactone
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +malonyl_coa +methylmalonyl_coa +h +nadph +coa +protomycinolide_iv +h2o
-    co2
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    enviomycin
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +bambermycin +phosphate +bambermycin
-    atp
-  }
-
-  branch from coa side right {
-    coa
-    <-> ec_2_3_1_168 [2.3.1.168] +2_methylpropanoyl_coa +r_dihydrolipoamide
-    s_8_2_methylpropanoyl_dihydrolipoamide
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +acetyl_coa +2_oxoglutarate +h
-    trans_homoaconitate
   }
 }

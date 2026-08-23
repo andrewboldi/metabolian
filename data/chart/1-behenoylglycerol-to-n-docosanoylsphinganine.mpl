@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-behenoylglycerol-to-n-docosanoylsphinganine "1-behenoylglycerol to N-docosanoylsphinganine" {
-  spacing 188
+  spacing 218
 
   spine at 0,0 {
     1_behenoylglycerol
@@ -18,20 +18,8 @@ pathway 1-behenoylglycerol-to-n-docosanoylsphinganine "1-behenoylglycerol to N-d
 
   branch from behenate side left {
     behenate
-    <-> . +n_docosanoyltaurine +h2o
-    taurine
-  }
-
-  branch from behenate side right {
-    behenate
-    <-> . +h +o2 +nadph +22_hydroxydocosanoate +h2o
-    nadp
-  }
-
-  branch from docosanoyl_coa side left {
-    docosanoyl_coa
-    <-> . +ketosphinganine +coa +hplus
-    n_docosanoyl_3_ketodihydrosphingosine
+    <-> . +h +adp +phosphate +h2o
+    atp
   }
 
   branch from docosanoyl_coa side right {
@@ -40,15 +28,57 @@ pathway 1-behenoylglycerol-to-n-docosanoylsphinganine "1-behenoylglycerol to N-d
     3_oxotetracosanoyl_coa
   }
 
-  branch from ppi side left {
-    ppi
-    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +atp +coa +amp
-    4z_7z_10z_13z_16z_19z_docosahexaenoyl_coa
+  branch from docosanoyl_coa side left {
+    docosanoyl_coa
+    <-> . +o2 +h2o2
+    trans_2_docosenoyl_coa
   }
 
   branch from ppi side right {
     ppi
-    <-> . +linolenate +atp +coa +amp
-    linolenoyl_coa
+    <-> . +pre_putrebactin +atp +amp +hplus
+    putrebactin
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +2_cis_6_trans_farnesyl_diphosphate
+    z_bisabolene
+  }
+
+  branch from docosanoyl_coa side right {
+    docosanoyl_coa
+    <-> . +nadh +acetyl_coa +h +h2o2 +coa +o2 +nad +h2o
+    tetracosanoyl_coa
+  }
+
+  branch from docosanoyl_coa side left {
+    docosanoyl_coa
+    <-> . +r_carnitine +coa
+    o_behenoylcarnitine
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +all_trans_pentaprenyl_diphosphate
+    variecoladiene
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +gpp
+    camphene
+  }
+
+  branch from sphinganine side right {
+    sphinganine
+    <-> . +c24_1_coa +coa +hplus
+    c24_1_sphinganine
+  }
+
+  branch from sphinganine side left {
+    sphinganine
+    <-> . +c26_1_coa +coa +hplus
+    c26_1_sphinganine
   }
 }

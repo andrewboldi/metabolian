@@ -8,7 +8,7 @@ pathway 8z-11z-14z-eicosatrieno-to-3-s-hydroxy-6z-9z-12 "(8Z,11Z,14Z)-eicosatrie
 
   spine at 0,0 {
     8z_11z_14z_eicosatrienoyl_coa
-    <-> . +co2 +nadp +coa +h2o -malonyl_coa -h -nadph
+    <-> . +co2 +nadp +coa +h2o -malonyl_coa -h -o2 -nadph
     6z_9z_12z_octadecatrienoyl_coa
     <-> . +fad -h -2e_6z_9z_12z_octadecatetraenoyl_coa
     fadh2

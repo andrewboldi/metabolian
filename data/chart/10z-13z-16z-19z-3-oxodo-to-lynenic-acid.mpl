@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 10z-13z-16z-19z-3-oxodo-to-lynenic-acid "(10Z,13Z,16Z,19Z)-3-oxodo… to lynenic acid" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     10z_13z_16z_19z_3_oxodocosatetraenoyl_coa
@@ -16,29 +16,5 @@ pathway 10z-13z-16z-19z-3-oxodo-to-lynenic-acid "(10Z,13Z,16Z,19Z)-3-oxodo… to
     all_cis_10_13_16_19_docosatetraenoyl_coa
     <-> . +h2o -lynenic_acid
     coa
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    1_pentadecanoylglycerophosphoethanolamine_c15_0
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    1_hexadecenoylglycerophosphoethanolamine_c16_1_p
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +erucoyl_coa +cholesterol
-    cholest_5_en_3b_yl_13z_docosenoate
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +15z_tetracosenoyl_coa +cholesterol
-    cholest_5_en_3beta_yl_15z_tetracosenoate
   }
 }

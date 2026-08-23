@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-acetyl-d-galactosamin-to-h2o-14869 "N-acetyl-α-D-galactosamin… to H2O" {
-  spacing 182
+  spacing 152
 
   spine at 0,0 {
     n_acetyl_d_galactosaminyl_1_3_l_fucosyl_1_2_d_ga
@@ -14,35 +14,5 @@ pathway n-acetyl-d-galactosamin-to-h2o-14869 "N-acetyl-α-D-galactosamin… to H
     2_ammonio_2_deoxy_d_galactopyranose
     <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate -2_ammonio_2_deoxy_d_galactopyranose -h2o
     atp
-  }
-
-  branch from l_fucosyl_1_2_d_galactoside side left {
-    l_fucosyl_1_2_d_galactoside
-    <-> ec_2_4_1_37 [2.4.1.37] +udp_d_galactose +udp +hplus
-    d_galactosyl_1_3_l_fucosyl_1_2_d_galactoside
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +l_rhamnulose_1_phosphate +h +adp
-    l_rhamnulose
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    rosuvastatin
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +neocasomorphin +l_isoleucine
-    neocasomorphin_1_5
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +apelin_13 +l_phenylalanine
-    apelin_1_12
   }
 }

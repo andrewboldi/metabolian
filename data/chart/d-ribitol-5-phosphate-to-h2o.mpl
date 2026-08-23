@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-ribitol-5-phosphate-to-h2o "D-ribitol 5-phosphate to H2O" {
-  spacing 256
+  spacing 328
 
   spine at 0,0 {
     d_ribitol_5_phosphate
@@ -22,37 +22,109 @@ pathway d-ribitol-5-phosphate-to-h2o "D-ribitol 5-phosphate to H2O" {
 
   branch from alpha_d_ribulose side left {
     alpha_d_ribulose
-    <-> ec_1_1_1_56 [1.1.1.56] +nadh +h +nad
-    ribitol
+    <-> ec_5_3_1_3 [5.3.1.3]
+    aldehydo_d_arabinose
   }
 
   branch from alpha_d_ribulose side right {
     alpha_d_ribulose
-    <-> ec_5_3_1_3 [5.3.1.3]
-    d_arabinopyranose
+    <-> ec_5_3_1_20 [5.3.1.20]
+    aldehydo_d_ribose
   }
 
   branch from atp side left {
     atp
     <-> . +h +adp +phosphate +h2o
-    d_manp_1_4_d_manp_1_4_d_manp_1_4_d_manp
+    prostaglandin_e2
   }
 
   branch from atp side right {
     atp
-    <-> ec_7_4_2_11 [7.4.2.11] +h +adp +phosphate +h2o
-    d_methionine
+    <-> ec_3_6_3_22 [3.6.3.22] +h +adp +phosphate +h2o
+    l_proline
   }
 
   branch from h2o side left {
     h2o
-    <-> . +2_methylfumaryl_coa +pyruvate
-    acetyl_coa
+    <-> . +3_hydroxyicosanoyl_coa
+    trans_2_icosenoyl_coa
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_22 [3.6.3.22] +h +adp +phosphate +atp
-    l_methionine
+    <-> . +2r_2_amino_3_4_3_iodo_4_sulfooxy_phenoxy_phenyl +h +3_monoiodo_l_thyronine
+    sulfate
+  }
+
+  branch from h side left {
+    h
+    <-> . +fadh2 +protoporphyrin_ix +protoporphyrinogen_ix
+    fad
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_7_8_8 [2.7.8.8] +cmp +phosphatidylserine_didodecanoyl_n_c12_0 +l_serine
+    cdp_1_2_didodecanoylglycerol
+  }
+
+  branch from adp side left {
+    adp
+    <-> . +fructosylglycine +atp +h
+    fructoseglycine_ketone_3_phosphate
+  }
+
+  branch from adp side right {
+    adp
+    <-> . +d_glucitol_3_phosphate +h +atp
+    d_sorbitol
+  }
+
+  branch from alpha_d_ribulose side left {
+    alpha_d_ribulose
+    <-> ec_2_7_1_16 [2.7.1.16] +atp +h +adp
+    d_ribulose_5_phosphate
+  }
+
+  branch from alpha_d_ribulose side right {
+    alpha_d_ribulose
+    <-> ec_1_1_1_56 [1.1.1.56] +nadh +h +nad
+    ribitol
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +diphosphate +amp +2r_pristanoyl_coa +coa
+    2_6_10_14_tetramethylpentadecanoate
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +6_7_dihydro_5_oxo_12_epi_ltb4 +coa +5_oxo_12_s_hydroxy_eicosa_8e_10e_14z_trienoyl_co +h +amp
+    diphosphate
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +2_5z_8z_11z_14z_eicosatetraenoyl_glycerol +h2o
+    2_arachidonoyl_sn_glycero_3_phosphate
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    d_ribose
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g +beta_d_fructose
+    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +beta_casomorphin_1_6 +l_isoleucine
+    casomorphin
   }
 }

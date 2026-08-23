@@ -151,6 +151,46 @@
       "xrefs": {
         "chebi": "CHEBI:85302"
       }
+    },
+    {
+      "id": "n_caproyl_1_palmitoyl_2_linoleoyl_sn_glycero_3_p",
+      "name": "N-caproyl-1-palmitoyl-2-linoleoyl-sn-glycero-3-phosphoethanolamine",
+      "short": "N-caproyl-1-palmito…",
+      "formula": "C45H83NO9P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:85297"
+      }
+    },
+    {
+      "id": "n_hexanoyl_ethanolamine",
+      "name": "N-(hexanoyl)ethanolamine",
+      "short": "N-(hexanoyl)ethanol…",
+      "formula": "C8H17NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:85303"
+      }
+    },
+    {
+      "id": "n_butyryl_1_palmitoyl_2_linoleoyl_sn_glycero_3_p",
+      "name": "N-butyryl-1-palmitoyl-2-linoleoyl-sn-glycero-3-phosphoethanolamine",
+      "short": "N-butyryl-1-palmito…",
+      "formula": "C43H79NO9P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:85298"
+      }
+    },
+    {
+      "id": "n_butanoyl_ethanolamine",
+      "name": "N-(butanoyl)ethanolamine",
+      "short": "N-(butanoyl)ethanol…",
+      "formula": "C6H13NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:85304"
+      }
     }
   ],
   "enzymes": [],
@@ -358,6 +398,160 @@
           {
             "db": "Rhea",
             "id": "RHEA:45612"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "N-hexanoyl-1-hexadecanoyl-2-(9Z,12Z-octadecadienoyl)-sn-glycero-3-phosphoethanolamine +...",
+      "equation": "N-hexanoyl-1-hexadecanoyl-2-(9Z,12Z-octadecadienoyl)-sn-glycero-3-phosphoethanolamine + H2O = N-hexanoyl ethanolamine + 1-hexadecanoyl-2-(9Z,12Z-octadecadienoyl)-sn-glycero-3-phosphate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "n_caproyl_1_palmitoyl_2_linoleoyl_sn_glycero_3_p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_hexanoyl_ethanolamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:45616"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45616"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "N-butanoyl-1-hexadecanoyl-2-(9Z,12Z-octadecadienoyl)-sn-glycero-3-phosphoethanolamine +...",
+      "equation": "N-butanoyl-1-hexadecanoyl-2-(9Z,12Z-octadecadienoyl)-sn-glycero-3-phosphoethanolamine + H2O = N-butanoyl ethanolamine + 1-hexadecanoyl-2-(9Z,12Z-octadecadienoyl)-sn-glycero-3-phosphate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "n_butyryl_1_palmitoyl_2_linoleoyl_sn_glycero_3_p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_butanoyl_ethanolamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:45620"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45620"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce_gdp-2-acetamido-2-deoxy-b-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gdp-2-acetamido-2-deoxy-b-to-h2o"
+      },
+      "note": "Shares 1-hexadecanoyl-2-(9Z,12Z-octadecadienoyl)-sn-glycero-3-phosphate with GDP-2-acetamido-2-deoxy-b… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:72860"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce_n-hexadecanoyl-1-2-dihexa-to-1-2-dipalmitoyl-3-p",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-hexadecanoyl-1-2-dihexa-to-1-2-dipalmitoyl-3-p"
+      },
+      "note": "Shares 1-hexadecanoyl-2-(9Z,12Z-octadecadienoyl)-sn-glycero-3-phosphate with N-hexadecanoyl-1,2-dihexa… to 1,2-dipalmitoyl-3-palmito….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:72860"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce_palmitoleoyl-ethanolamide-to-1-hexadecanoyl-2-9z",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "palmitoleoyl-ethanolamide-to-1-hexadecanoyl-2-9z"
+      },
+      "note": "Shares 1-hexadecanoyl-2-(9Z,12Z-octadecadienoyl)-sn-glycero-3-phosphate with palmitoleoyl ethanolamide to 1-hexadecanoyl-2-[(9Z)-he….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:72860"
           }
         ]
       }

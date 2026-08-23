@@ -1,0 +1,354 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-hydroxyindolin-2-one-to-o2",
+  "name": "3-hydroxyindolin-2-one to O2",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 3-hydroxyindolin-2-one to O2, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR195629"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_hydroxyindolin_2_one",
+      "name": "3-hydroxyindolin-2-one",
+      "short": "3-hydroxyindolin-2-…",
+      "formula": "C8H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1367396"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "anthranilate",
+      "name": "anthranilate",
+      "formula": "C7H6NO2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM188"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "2e_2_hydroxypenta_2_4_dienoate",
+      "name": "(2E)-2-hydroxypenta-2,4-dienoate",
+      "short": "2-hydroxypenta-2,4-…",
+      "formula": "C5H5O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1107795"
+      }
+    },
+    {
+      "id": "2_hydroxy_6_oxo_2_aminophenyl_hexa_2_4_dienoate",
+      "name": "2-Hydroxy-6-oxo-(2'-aminophenyl)-hexa-2,4-dienoate",
+      "short": "2-Hydroxy-6-oxo-(2'…",
+      "formula": "C12H11NO4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1369205"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "2_aminobiphenyl_2_3_diol",
+      "name": "2'-aminobiphenyl-2,3-diol",
+      "short": "2'-aminobiphenyl-2,…",
+      "formula": "C12H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM2173"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_13_11_23",
+      "name": "2,3-dihydroxyindole 2,3-dioxygenase",
+      "ec": [
+        "1.13.11.23"
+      ]
+    },
+    {
+      "id": "ec_3_7_1_13",
+      "name": "2-hydroxy-6-oxo-6-(2-aminophenyl)hexa-2,4-dienoate hydrolase",
+      "ec": [
+        "3.7.1.13"
+      ]
+    },
+    {
+      "id": "ec_1_13_11_39",
+      "name": "biphenyl-2,3-diol 1,2-dioxygenase",
+      "ec": [
+        "1.13.11.39"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2,3-dihydroxyindole 2,3-dioxygenase",
+      "ec": "1.13.11.23",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxyindolin_2_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "anthranilate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_23"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR195629"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR195629"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2-hydroxy-6-oxo-6-(2-aminophenyl)hexa-2,4-dienoate hydrolase",
+      "ec": "3.7.1.13",
+      "substrates": [
+        {
+          "metabolite": "2e_2_hydroxypenta_2_4_dienoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "anthranilate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxy_6_oxo_2_aminophenyl_hexa_2_4_dienoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_7_1_13"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR197371"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197371"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "biphenyl-2,3-diol 1,2-dioxygenase",
+      "ec": "1.13.11.39",
+      "substrates": [
+        {
+          "metabolite": "2_hydroxy_6_oxo_2_aminophenyl_hexa_2_4_dienoate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_aminobiphenyl_2_3_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_39"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR197373"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197373"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3_hydroxyindolin_2_one_isatin-to-2r-dimboa-glucoside",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_hydroxyindolin_2_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isatin-to-2r-dimboa-glucoside"
+      },
+      "note": "Shares 3-hydroxyindolin-2-one with isatin to (2R)-DIMBOA glucoside.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1367396"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_hydroxyindolin_2_one_n-3-aminopropyl-hydroxyl-to-h2o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_hydroxyindolin_2_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-3-aminopropyl-hydroxyl-to-h2o2"
+      },
+      "note": "Shares 3-hydroxyindolin-2-one with N-(3-aminopropyl)hydroxyl… to H2O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1367396"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_hydroxyindolin_2_one_nadh-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_hydroxyindolin_2_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-nadph"
+      },
+      "note": "Shares 3-hydroxyindolin-2-one with NADH to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1367396"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_aminobiphenyl_2_3_diol_h-to-4-methylcatechol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_aminobiphenyl_2_3_diol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-4-methylcatechol"
+      },
+      "note": "Shares 2'-aminobiphenyl-2,3-diol with H to 4-methylcatechol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2173"
+          }
+        ]
+      }
+    }
+  ]
+}

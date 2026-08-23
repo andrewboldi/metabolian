@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway di-sulfido-diiron-to-r-2-2-3-trimethyl-5-ox "di-μ-sulfido-diiron to [(R)-2,2,3-trimethyl-5-ox…" {
-  spacing 220
+  spacing 208
 
   spine at 0,0 {
     di_sulfido_diiron
@@ -16,17 +16,5 @@ pathway di-sulfido-diiron-to-r-2-2-3-trimethyl-5-ox "di-μ-sulfido-diiron to [(R
     5_oxo_1_2_campholide
     <-> ec_1_14_14_108 [1.14.14.108] -hplus
     r_2_2_3_trimethyl_5_oxocyclopent_3_en_1_yl_acet
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +ferruginol +fmnh2 +o2 +h2o +hplus
-    pisiferate
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +asperterpenoid_a +fmnh2 +o2 +h2o +hplus
-    asperterpenoid_c
   }
 }

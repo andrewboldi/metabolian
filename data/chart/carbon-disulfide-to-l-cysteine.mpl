@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway carbon-disulfide-to-l-cysteine "carbon disulfide to L-cysteine" {
-  spacing 256
+  spacing 244
 
   spine at 0,0 {
     carbon_disulfide
@@ -14,17 +14,5 @@ pathway carbon-disulfide-to-l-cysteine "carbon disulfide to L-cysteine" {
     sulfur_atom
     <-> . +l_alanine
     l_cysteine
-  }
-
-  branch from l_cysteine side left {
-    l_cysteine
-    <-> . +cmp +h +n_r_4_phosphopantothenoyl_l_cysteine
-    r_4_phosphopantothenoyl_cytidylate
-  }
-
-  branch from l_cysteine side right {
-    l_cysteine
-    <-> . +nadh +h +7_oxoheptanoic_acid +l_serine +nad
-    7_mercaptoheptanoic_acid
   }
 }

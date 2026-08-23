@@ -1,0 +1,540 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "hexanedioyl-coa-to-3-oxoadipyl-coa",
+  "name": "hexanedioyl-CoA to 3-oxoadipyl-CoA",
+  "category": "other",
+  "summary": "A 3-step route from hexanedioyl-CoA to 3-oxoadipyl-CoA(5−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR152453"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "hexanedioyl_coa",
+      "name": "hexanedioyl-CoA",
+      "formula": "C27H39N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "metanetx": "MNXM1104115"
+      }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H33N9O15P2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364149"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1105762"
+      }
+    },
+    {
+      "id": "z_2_3_dehydroadipyl_coa",
+      "name": "(Z)-2,3-dehydroadipyl-CoA",
+      "short": "2,3-dehydroadipyl-C…",
+      "formula": "C27H37N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:67261"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "3s_hydroxyadipyl_coa",
+      "name": "(3S)-hydroxyadipyl-CoA",
+      "short": "hydroxyadipyl-CoA",
+      "formula": "C27H39N7O20P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:132183"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "3_oxoadipyl_coa",
+      "name": "3-oxoadipyl-CoA",
+      "formula": "C27H37N7O20P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57348"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "e_2_3_didehydroadipoyl_coa",
+      "name": "(E)-2,3-didehydroadipoyl-CoA",
+      "short": "2,3-didehydroadipoy…",
+      "formula": "C27H37N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:195329"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_2_1_17",
+      "name": "enoyl-CoA hydratase",
+      "ec": [
+        "4.2.1.17"
+      ],
+      "xrefs": {
+        "uniprot": "P40939"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR152453",
+      "substrates": [
+        {
+          "metabolite": "hexanedioyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "z_2_3_dehydroadipyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR152453"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR152453"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "enoyl-CoA hydratase",
+      "ec": "4.2.1.17",
+      "substrates": [
+        {
+          "metabolite": "z_2_3_dehydroadipyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3s_hydroxyadipyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR152451"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR152451"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(3S)-3-hydroxyadipyl-CoA + NAD(+) = 3-oxoadipyl-CoA + NADH + H(+)",
+      "equation": "(3S)-3-hydroxyadipyl-CoA + NAD(+) = 3-oxoadipyl-CoA + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "3s_hydroxyadipyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_oxoadipyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:34851"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34851"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "enoyl-CoA hydratase",
+      "equation": "(3S)-3-hydroxyadipyl-CoA = (E)-2,3-didehydroadipoyl-CoA + H2O",
+      "ec": "4.2.1.17",
+      "substrates": [
+        {
+          "metabolite": "3s_hydroxyadipyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "e_2_3_didehydroadipoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:76647"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:76647"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_hexanedioyl_coa_3-8-dideoxy-8-oxo-alpha-d-to-adp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hexanedioyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-8-dideoxy-8-oxo-alpha-d-to-adp"
+      },
+      "note": "Shares hexanedioyl-CoA with 3,8-dideoxy-8-oxo-alpha-D… to ADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104115"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hexanedioyl_coa_adenosine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hexanedioyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "adenosine-to-h2o"
+      },
+      "note": "Shares hexanedioyl-CoA with adenosine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104115"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hexanedioyl_coa_nadh-to-3-oxo-5-6-didehydrosubery",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hexanedioyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-3-oxo-5-6-didehydrosubery"
+      },
+      "note": "Shares hexanedioyl-CoA with NADH to 3-oxo-5,6-didehydrosubery….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104115"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hexanedioyl_coa_propanoate-to-h2o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hexanedioyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "propanoate-to-h2o2"
+      },
+      "note": "Shares hexanedioyl-CoA with propanoate to H2O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104115"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_z_2_3_dehydroadipyl_coa_2-butenoic-acid-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "z_2_3_dehydroadipyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-butenoic-acid-to-coa"
+      },
+      "note": "Shares (Z)-2,3-dehydroadipyl-CoA with 2-butenoic acid to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:67261"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3s_hydroxyadipyl_coa_3-s-hydroxy-tetracosa-12-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3s_hydroxyadipyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-s-hydroxy-tetracosa-12-to-h2o"
+      },
+      "note": "Shares (3S)-hydroxyadipyl-CoA with 3(S)-hydroxy-tetracosa-12… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:132183"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3s_hydroxyadipyl_coa_4-nitrosoamino-1-3-pyr-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3s_hydroxyadipyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-nitrosoamino-1-3-pyr-to-phosphate"
+      },
+      "note": "Shares (3S)-hydroxyadipyl-CoA with 4-(Nitrosoamino)-1-(3-pyr… to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:132183"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_oxoadipyl_coa_2-deoxymugineate-to-succinyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_oxoadipyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-deoxymugineate-to-succinyl-coa"
+      },
+      "note": "Shares 3-oxoadipyl-CoA with 2'-deoxymugineate to succinyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57348"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_oxoadipyl_coa_s-5-oxo-2-5-dihydro-2-f-to-nitrite",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_oxoadipyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-5-oxo-2-5-dihydro-2-f-to-nitrite"
+      },
+      "note": "Shares 3-oxoadipyl-CoA with (S)-5-oxo-2,5-dihydro-2-f… to nitrite.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57348"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_2_3_didehydroadipoyl_coa_nadh-to-3-oxo-5-6-didehydrosubery",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_2_3_didehydroadipoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-3-oxo-5-6-didehydrosubery"
+      },
+      "note": "Shares (E)-2,3-didehydroadipoyl-CoA with NADH to 3-oxo-5,6-didehydrosubery….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:195329"
+          }
+        ]
+      }
+    }
+  ]
+}

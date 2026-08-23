@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway mg-13-1-oxoprotoporphyri-to-mg-protoporphyrin-ix "Mg-13(1)-oxoprotoporphyri… to Mg-protoporphyrin IX" {
-  spacing 324
+  spacing 312
 
   spine at 0,0 {
     mg_13_1_oxoprotoporphyrin_13_monomethyl_ester
@@ -14,17 +14,5 @@ pathway mg-13-1-oxoprotoporphyri-to-mg-protoporphyrin-ix "Mg-13(1)-oxoprotoporph
     s_adenosyl_l_methionine
     <-> ec_2_1_1_11 [2.1.1.11] +s_adenosyl_l_homocysteine +magnesium_protoporphyrin_ix_13_monomethyl_ester -s_adenosyl_l_methionine
     mg_protoporphyrin_ix
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_21 [3.6.3.21] +h +adp +l_cystine +phosphate +l_cystine
-    atp
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    l_l_cystathionine
   }
 }

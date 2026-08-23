@@ -138,34 +138,6 @@
       "xrefs": {
         "chebi": "CHEBI:30031"
       }
-    },
-    {
-      "id": "carbamoyl_p",
-      "name": "Carbamoyl phosphate",
-      "formula": "CH2NO5P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:58228"
-      }
-    },
-    {
-      "id": "n2_3_carboxylatopropionyl_l_citrullinate",
-      "name": "N2-(3-carboxylatopropionyl)-L-citrullinate",
-      "short": "N2-(3-carboxylatopr…",
-      "formula": "C10H15N3O6",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:58862"
-      }
-    },
-    {
-      "id": "pi",
-      "name": "Orthophosphate (Pi)",
-      "formula": "HO4P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:43474"
-      }
     }
   ],
   "enzymes": [
@@ -195,13 +167,6 @@
       "name": "succinylglutamate desuccinylase",
       "ec": [
         "3.5.1.96"
-      ]
-    },
-    {
-      "id": "ec_2_1_3_11",
-      "name": "N-succinylornithine carbamoyltransferase",
-      "ec": [
-        "2.1.3.11"
       ]
     }
   ],
@@ -401,52 +366,71 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "N-succinylornithine carbamoyltransferase",
-      "equation": "N(2)-succinyl-L-ornithine + carbamoyl phosphate = N(2)-succinyl-L-citrulline + phosphate + H(+)",
-      "ec": "2.1.3.11",
-      "substrates": [
-        {
-          "metabolite": "n2_succinyl_l_ornithinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "carbamoyl_p",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n2_3_carboxylatopropionyl_l_citrullinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pi",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_3_11"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:25884"
+      "id": "xt_n2_3_carboxylatopropionyl_l_arginine_2-deoxymugineate-to-succinyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n2_3_carboxylatopropionyl_l_arginine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2-deoxymugineate-to-succinyl-coa"
+      },
+      "note": "Shares N2-(3-carboxylatopropionyl)-L-arginine with 2'-deoxymugineate to succinyl-CoA.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:25884"
+            "db": "ChEBI",
+            "id": "CHEBI:58241"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n2_succinyl_l_ornithinate_n5-l-1-carboxyethyl-l-o-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n2_succinyl_l_ornithinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n5-l-1-carboxyethyl-l-o-to-ammonium"
+      },
+      "note": "Shares N2-succinyl-L-ornithinate with N5-(L-1-carboxyethyl)-L-o… to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58514"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n2_succinyl_l_ornithinate_s-atropinium-to-succinyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n2_succinyl_l_ornithinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-atropinium-to-succinyl-coa"
+      },
+      "note": "Shares N2-succinyl-L-ornithinate with (S)-atropinium to succinyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58514"
           }
         ]
       }

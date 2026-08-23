@@ -4,27 +4,15 @@
 # edit the generator, not this file.
 
 pathway d-glucopyranose-to-h2o-null "D-glucopyranose to H2O" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     glucose
-    <-> ec_3_2_1_191 [3.2.1.191] +3beta_12beta_3_12_dihydroxydammar_24_en_20_yl_b -h2o
-    ginsenoside_rd
-    <-> . +udp +h -ginsenoside_f2
-    udp_alpha_d_glucose
-    <-> . +glucose +ginsenoside_f2 -h2o
-    ginsenoside_rb1
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    11_dehydrothromboxane_b2
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    e_4_hydroxynon_2_enal
+    <-> . +d_glucopyranose_1_phosphate -phosphate
+    alpha_alpha_trehalose
+    <-> . +trehalose_cis_methoxy_di_mycolate
+    trehalose_cis_methoxy_mono_mycolate
+    <-> . +h +adp +phosphate -trehalose_cis_methoxy_mono_mycolate -h2o
+    atp
   }
 }

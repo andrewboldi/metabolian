@@ -124,44 +124,6 @@
       "xrefs": {
         "chebi": "CHEBI:58147"
       }
-    },
-    {
-      "id": "gdp_4_dehydro_alpha_d_rhamnose",
-      "name": "GDP-4-dehydro-alpha-D-rhamnose",
-      "short": "GDP-4-dehydro-alpha…",
-      "formula": "C16H21N5O15P2",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM1104155"
-      }
-    },
-    {
-      "id": "gdp_l_fucose",
-      "name": "GDP-L-fucose",
-      "formula": "C16H25N5O15P2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1364175"
-      }
-    },
-    {
-      "id": "5_fu",
-      "name": "5-FU",
-      "formula": "C4H3FN2O2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1368742"
-      }
-    },
-    {
-      "id": "5_6_dihydro_5_fluorouracil",
-      "name": "5,6-Dihydro-5-fluorouracil",
-      "short": "5,6-Dihydro-5-fluor…",
-      "formula": "C4H5FN2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:80624"
-      }
     }
   ],
   "enzymes": [
@@ -170,20 +132,6 @@
       "name": "ketol-acid reductoisomerase (NADP(+))",
       "ec": [
         "1.1.1.86"
-      ]
-    },
-    {
-      "id": "ec_1_1_1_271",
-      "name": "GDP-L-fucose synthase",
-      "ec": [
-        "1.1.1.271"
-      ]
-    },
-    {
-      "id": "ec_1_3_1_2",
-      "name": "dihydropyrimidine dehydrogenase (NADP(+))",
-      "ec": [
-        "1.3.1.2"
       ]
     }
   ],
@@ -317,99 +265,247 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "GDP-L-fucose synthase",
-      "ec": "1.1.1.271",
-      "substrates": [
-        {
-          "metabolite": "gdp_4_dehydro_alpha_d_rhamnose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "gdp_l_fucose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_1_1_271"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR198693"
+      "id": "xt_2_oxopentanoate_2-hydroxypentanoate-to-s-2-methylpropanoyl-dih",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxopentanoate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2-hydroxypentanoate-to-s-2-methylpropanoyl-dih"
+      },
+      "note": "Shares 2-oxopentanoate with 2-hydroxypentanoate to S-(2-methylpropanoyl)-dih….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR198693"
+            "id": "MNXM4302"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "dihydropyrimidine dehydrogenase (NADP(+))",
-      "ec": "1.3.1.2",
-      "substrates": [
-        {
-          "metabolite": "5_fu",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "5_6_dihydro_5_fluorouracil",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_3_1_2"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR198861"
+      "id": "xt_2_oxopentanoate_2e-4e-undeca-2-4-dieno-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxopentanoate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2e-4e-undeca-2-4-dieno-to-nad"
+      },
+      "note": "Shares 2-oxopentanoate with (2E, 4E)-undeca-2,4-dieno… to NAD.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR198861"
+            "id": "MNXM4302"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_oxopentanoate_3-s-hydroxy-tetracosa-12-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxopentanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-s-hydroxy-tetracosa-12-to-h2o-null"
+      },
+      "note": "Shares 2-oxopentanoate with 3(S)-hydroxy-tetracosa-12… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM4302"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_oxopentanoate_4-hydroxymethylcatechol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxopentanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxymethylcatechol-to-h2o"
+      },
+      "note": "Shares 2-oxopentanoate with 4-hydroxymethylcatechol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM4302"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_oxopentanoate_acetyl-coa-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxopentanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetyl-coa-to-succinate"
+      },
+      "note": "Shares 2-oxopentanoate with acetyl-CoA to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM4302"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_oxopentanoate_epiandrosterone-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxopentanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "epiandrosterone-to-nad"
+      },
+      "note": "Shares 2-oxopentanoate with epiandrosterone to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM4302"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_oxopentanoate_z-indol-3-yl-n-sulfo-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxopentanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "z-indol-3-yl-n-sulfo-to-h2o"
+      },
+      "note": "Shares 2-oxopentanoate with (Z)-(indol-3-yl)-N-(sulfo… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM4302"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_oxopentanoate_2-aminopentanenitrile-to-kynurenate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxopentanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-aminopentanenitrile-to-kynurenate"
+      },
+      "note": "Shares 2-oxopentanoate with 2-aminopentanenitrile to kynurenate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28644"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_oxopentanoate_2s-2-1r-1-carboxyla-to-butyryl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxopentanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2s-2-1r-1-carboxyla-to-butyryl-coa"
+      },
+      "note": "Shares 2-oxopentanoate with (2S)-2-{[(1R)-1-carboxyla… to butyryl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28644"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_2_aminopentanoic_acid_2-aminopentanenitrile-to-kynurenate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_2_aminopentanoic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-aminopentanenitrile-to-kynurenate"
+      },
+      "note": "Shares L-2-aminopentanoic acid with 2-aminopentanenitrile to kynurenate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58441"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_2_aminopentanoic_acid_2s-2-1r-1-carboxyla-to-butyryl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_2_aminopentanoic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2s-2-1r-1-carboxyla-to-butyryl-coa"
+      },
+      "note": "Shares L-2-aminopentanoic acid with (2S)-2-{[(1R)-1-carboxyla… to butyryl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58441"
           }
         ]
       }

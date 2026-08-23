@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-4-6-trinitrotoluene-to-2-amino-4-6-dinitrotolu "2,4,6-trinitrotoluene… to 2-amino-4,6-dinitrotoluen…" {
-  spacing 188
+  spacing 200
 
   spine at 0,0 {
     2_4_6_trinitrotoluene_radical
@@ -42,15 +42,27 @@ pathway 2-4-6-trinitrotoluene-to-2-amino-4-6-dinitrotolu "2,4,6-trinitrotoluene�
     2_hydroxylamino_4_6_dinitrotoluene_3c_d_glucosid
   }
 
-  branch from 2_amino_4_6_dinitrotoluene side left {
-    2_amino_4_6_dinitrotoluene
-    <-> . +nadh +h +2_hydroxylamino_4_6_dinitrotoluene +h2o
-    nad
+  branch from 2_hydroxylamino_4_6_dinitrotoluene side left {
+    2_hydroxylamino_4_6_dinitrotoluene
+    <-> . +4_4_6_6_tetranitro_2_2_azoxytoluene +h2o
+    o2
   }
 
-  branch from 2_amino_4_6_dinitrotoluene side right {
-    2_amino_4_6_dinitrotoluene
-    <-> . +nadh +h +nad +h2o
-    2_6_diamino_4_nitrotoluene
+  branch from 2_hydroxylamino_4_6_dinitrotoluene side right {
+    2_hydroxylamino_4_6_dinitrotoluene
+    <-> . +h2o +o2
+    4_4_6_6_tetranitro_2_2_azoxytoluene
+  }
+
+  branch from udp_d_glucose side left {
+    udp_d_glucose
+    <-> . +16_17_didehydropregnenolone +udp +hplus
+    16_17_didehydropregnenolone_3_d_glucoside
+  }
+
+  branch from udp_d_glucose side right {
+    udp_d_glucose
+    <-> . +pregnenolone +udp +hplus
+    pregnenolone_3_d_glucoside
   }
 }

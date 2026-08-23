@@ -1,0 +1,411 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "fe-to-nadph-null",
+  "name": "Fe to NADPH",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from Fe(3+) to NADPH, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR97935"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "fe",
+      "name": "Fe",
+      "formula": "Fe",
+      "charge": 3,
+      "xrefs": {
+        "metanetx": "MNXM1370984"
+      }
+    },
+    {
+      "id": "n_2_3_dihydroxybenzoyl_l_serine",
+      "name": "N-(2,3-dihydroxybenzoyl)-L-serine",
+      "short": "N-(2,3-dihydroxyben…",
+      "formula": "C10H10NO6",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM729151"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "fe_enterobactin",
+      "name": "Fe-enterobactin",
+      "formula": "C30H21FeN3O15",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM730707"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1105762"
+      }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H33N9O15P2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364149"
+      }
+    },
+    {
+      "id": "fe",
+      "name": "Fe",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "metanetx": "MNXM1370983"
+      }
+    },
+    {
+      "id": "enterobactin",
+      "name": "enterobactin",
+      "formula": "C30H26N3O15",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM883"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR97935",
+      "substrates": [
+        {
+          "metabolite": "fe",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_2_3_dihydroxybenzoyl_l_serine",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "fe_enterobactin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR97935"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR97935"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR99543",
+      "substrates": [
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 10
+        },
+        {
+          "metabolite": "fe_enterobactin",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "enterobactin",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR99543"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR99543"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR157449",
+      "substrates": [
+        {
+          "metabolite": "fe",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "enterobactin",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 9
+        },
+        {
+          "metabolite": "fe_enterobactin",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR157449"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR157449"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_fe_enterobactin_2-3-dihydroxy-n-benzoylse-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "fe_enterobactin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3-dihydroxy-n-benzoylse-to-h2o"
+      },
+      "note": "Shares Fe-enterobactin with 2,3-dihydroxy-N-benzoylse… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM730707"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_fe_enterobactin_2-3-dihydroxy-n-benzoylse-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "fe_enterobactin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3-dihydroxy-n-benzoylse-to-h2o-null"
+      },
+      "note": "Shares Fe-enterobactin with 2,3-dihydroxy-N-benzoylse… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM730707"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_fe_enterobactin_2-5-diamino-6-ribosylamin-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "fe_enterobactin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-5-diamino-6-ribosylamin-to-h2o-null"
+      },
+      "note": "Shares Fe-enterobactin with 2,5-diamino-6-ribosylamin… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM730707"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_fe_enterobactin_3r-hydroxytetradecanoate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "fe_enterobactin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3r-hydroxytetradecanoate-to-h2o"
+      },
+      "note": "Shares Fe-enterobactin with (3R)-hydroxytetradecanoate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM730707"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_fe_enterobactin_4-nitrosoamino-1-3-pyr-to-phosphate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "fe_enterobactin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-nitrosoamino-1-3-pyr-to-phosphate-null"
+      },
+      "note": "Shares Fe-enterobactin with 4-(Nitrosoamino)-1-(3-pyr… to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM730707"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_fe_enterobactin_fe-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "fe_enterobactin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fe-to-nadph"
+      },
+      "note": "Shares Fe-enterobactin with Fe to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM730707"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_fe_enterobactin_ferrioxamine-b-to-diphosphate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "fe_enterobactin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ferrioxamine-b-to-diphosphate-null"
+      },
+      "note": "Shares Fe-enterobactin with ferrioxamine B to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM730707"
+          }
+        ]
+      }
+    }
+  ]
+}

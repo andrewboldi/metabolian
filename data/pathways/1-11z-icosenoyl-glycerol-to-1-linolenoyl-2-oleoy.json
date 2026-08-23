@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "1-11z-icosenoyl-glycerol-to-1-linolenoyl-2-oleoy",
   "name": "1-(11Z-icosenoyl)glycerol to 1-α-linolenoyl-2-oleoylgl…",
-  "category": "other",
+  "category": "lipid-metabolism",
   "summary": "A 3-step route from 1-(11Z-icosenoyl)glycerol to 1-α-linolenoyl-2-oleoylglycerol, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -140,9 +140,102 @@
       "xrefs": {
         "chebi": "CHEBI:197408"
       }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "1_octadecanoyl_sn_glycero_3_phospho_1_sn_glycero",
+      "name": "1-octadecanoyl-sn-glycero-3-phospho-(1'-sn-glycerol)",
+      "short": "1-octadecanoyl-sn-g…",
+      "formula": "C24H48O9P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:72827"
+      }
+    },
+    {
+      "id": "1_octadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph",
+      "name": "1-octadecanoyl-2-(9Z-octadecenoyl)-sn-glycero-3-phospho-(1'-sn-glycerol)",
+      "short": "1-octadecanoyl-2-(9…",
+      "formula": "C42H80O10P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:72845"
+      }
+    },
+    {
+      "id": "1_acyl_sn_glycero_3_phosphoethanolamine",
+      "name": "1-acyl-sn-glycero-3-phosphoethanolamine",
+      "short": "1-acyl-sn-glycero-3…",
+      "formula": "C6H13NO7PR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64381"
+      }
+    },
+    {
+      "id": "1_acyl_2_oleoyl_sn_glycero_3_phosphoethanolamine",
+      "name": "1-acyl-2-oleoyl-sn-glycero-3-phosphoethanolamine",
+      "short": "1-acyl-2-oleoyl-sn-…",
+      "formula": "C24H45NO8PR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:75238"
+      }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_3_6_3_1",
+      "name": "EC 3.6.3.1",
+      "ec": [
+        "3.6.3.1"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -343,6 +436,384 @@
           {
             "db": "Rhea",
             "id": "RHEA:77595"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "Reaction MNXR174569",
+      "ec": "3.6.3.1",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_stearoyl_2_linolenoyl_sn_glycero_3_phosphochol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_stearoyl_2_linolenoyl_sn_glycero_3_phosphochol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_3_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "metanetx": "MNXR174569"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR174569"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "1-octadecanoyl-sn-glycero-3-phospho-(1'-sn-glycerol) + (9Z)-octadecenoyl-CoA = 1-octade...",
+      "equation": "1-octadecanoyl-sn-glycero-3-phospho-(1'-sn-glycerol) + (9Z)-octadecenoyl-CoA = 1-octadecanoyl-2-(9Z-octadecenoyl)-sn-glycero-3-phospho-(1'-sn-glycerol) + CoA",
+      "substrates": [
+        {
+          "metabolite": "1_octadecanoyl_sn_glycero_3_phospho_1_sn_glycero",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oleoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_octadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:37647"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37647"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "a 1-acyl-sn-glycero-3-phosphoethanolamine + (9Z)-octadecenoyl-CoA = 1-acyl-2-(9Z)-octad...",
+      "equation": "a 1-acyl-sn-glycero-3-phosphoethanolamine + (9Z)-octadecenoyl-CoA = 1-acyl-2-(9Z)-octadecenoyl-sn-glycero-3-phosphoethanolamine + CoA",
+      "substrates": [
+        {
+          "metabolite": "1_acyl_sn_glycero_3_phosphoethanolamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oleoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_acyl_2_oleoyl_sn_glycero_3_phosphoethanolamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:37731"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37731"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_gondoate_n-11z-icosenoylsphingos-to-n-15z-tetracosenoylsp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "gondoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-11z-icosenoylsphingos-to-n-15z-tetracosenoylsp"
+      },
+      "note": "Shares gondoate with N-(11Z)-icosenoylsphingos… to N-(15Z)-tetracosenoylsphi….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:32426"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_gondoate_n-dodecanoylphytosphingos-to-n-2-hydroxyhexacosa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "gondoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-dodecanoylphytosphingos-to-n-2-hydroxyhexacosa"
+      },
+      "note": "Shares gondoate with N-dodecanoylphytosphingos… to N-(2-hydroxyhexacosanyl)-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:32426"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_gondoate_urethane-to-acetaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "gondoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "urethane-to-acetaldehyde"
+      },
+      "note": "Shares gondoate with urethane to acetaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:32426"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_stearoyl_2_linolenoyl_sn_glycero_3_phosphochol_1-stearoyl-2-linolenoy-to-15z-12-oxophyto-10-15",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_stearoyl_2_linolenoyl_sn_glycero_3_phosphochol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-stearoyl-2-linolenoy-to-15z-12-oxophyto-10-15"
+      },
+      "note": "Shares 1-stearoyl-2-(α-linolenoyl)-sn-glycero-3-phosphocholine with 1-stearoyl-2-(α-linolenoy… to (15Z)-12-oxophyto-10,15-d….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78022"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_linolenoylglycerol_1-oleoyl-2-arachidonoyl-s-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_linolenoylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-oleoyl-2-arachidonoyl-s-to-hydrogen-donor"
+      },
+      "note": "Shares 1-α-linolenoylglycerol with 1-oleoyl-2-arachidonoyl-s… to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75610"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_octadecanoyl_sn_glycero_3_phospho_1_sn_glycero_1-octadecanoyl-2-hexanoyl-to-1-stearoyl-sn-glyce",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_octadecanoyl_sn_glycero_3_phospho_1_sn_glycero"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-octadecanoyl-2-hexanoyl-to-1-stearoyl-sn-glyce"
+      },
+      "note": "Shares 1-octadecanoyl-sn-glycero-3-phospho-(1'-sn-glycerol) with 1-octadecanoyl-2-hexanoyl… to 1-stearoyl-sn-glycero-3-p….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:72827"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_octadecanoyl_sn_glycero_3_phospho_1_sn_glycero_pa-0-0-18-0-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_octadecanoyl_sn_glycero_3_phospho_1_sn_glycero"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "pa-0-0-18-0-to-h2o"
+      },
+      "note": "Shares 1-octadecanoyl-sn-glycero-3-phospho-(1'-sn-glycerol) with PA(0:0/18:0) to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:72827"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_octadecanoyl_sn_glycero_3_phospho_1_sn_glycero_pmf-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_octadecanoyl_sn_glycero_3_phospho_1_sn_glycero"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "pmf-to-h2o"
+      },
+      "note": "Shares 1-octadecanoyl-sn-glycero-3-phospho-(1'-sn-glycerol) with PMF to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:72827"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_octadecanoyl_sn_glycero_3_phospho_1_sn_glycero_trans-3-cis-8-11-14-eicos-to-hydrogen-acceptor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_octadecanoyl_sn_glycero_3_phospho_1_sn_glycero"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-3-cis-8-11-14-eicos-to-hydrogen-acceptor"
+      },
+      "note": "Shares 1-octadecanoyl-sn-glycero-3-phospho-(1'-sn-glycerol) with Trans-3-Cis-8,11,14-Eicos… to hydrogen acceptor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:72827"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_octadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph_1-octadecanoyl-2-hexanoyl-to-1-stearoyl-sn-glyce",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_octadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-octadecanoyl-2-hexanoyl-to-1-stearoyl-sn-glyce"
+      },
+      "note": "Shares 1-octadecanoyl-2-(9Z-octadecenoyl)-sn-glycero-3-phospho-(1'-sn-glycerol) with 1-octadecanoyl-2-hexanoyl… to 1-stearoyl-sn-glycero-3-p….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:72845"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_octadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph_1-oleoyl-2-stearoyl-sn-gl-to-1-o-oleoyl-sn-glyce",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_octadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-oleoyl-2-stearoyl-sn-gl-to-1-o-oleoyl-sn-glyce"
+      },
+      "note": "Shares 1-octadecanoyl-2-(9Z-octadecenoyl)-sn-glycero-3-phospho-(1'-sn-glycerol) with 1-oleoyl-2-stearoyl-sn-gl… to 1-O-oleoyl-sn-glycero-3-p….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:72845"
           }
         ]
       }

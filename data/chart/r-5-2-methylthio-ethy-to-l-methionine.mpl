@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway r-5-2-methylthio-ethy-to-l-methionine "(R)-5-[2-(methylthio)ethy… to L-methionine" {
-  spacing 176
+  spacing 158
 
   spine at 0,0 {
     r_5_2_methylthio_ethyl_hydantoin
@@ -20,27 +20,9 @@ pathway r-5-2-methylthio-ethy-to-l-methionine "(R)-5-[2-(methylthio)ethy… to L
     4_2_aminophenyl_2_4_dioxobutanoate
   }
 
-  branch from nh3 side left {
-    nh3
-    <-> . +4_phenylbutan_2_aminium +nad +h2o +nadh +hplus
-    4_phenylbutan_2_one
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +3_5_dimethylcyclohexan_1_aminium +nadp +h2o +nadph +hplus
-    3_5_dimethylcyclohexanone
-  }
-
-  branch from 4_2_aminophenyl_2_4_dioxobutanoate side left {
-    4_2_aminophenyl_2_4_dioxobutanoate
-    <-> . +l_kynurenine +oxaloacetate
-    aspartate
-  }
-
-  branch from 4_2_aminophenyl_2_4_dioxobutanoate side right {
-    4_2_aminophenyl_2_4_dioxobutanoate
-    <-> . +keto_phenylpyruvate +l_kynurenine
-    l_phenylalanine
+  branch from r_5_2_methylthio_ethyl_hydantoin side left {
+    r_5_2_methylthio_ethyl_hydantoin
+    <-> . +h2o +hplus
+    n_carbamoyl_d_methioninate
   }
 }

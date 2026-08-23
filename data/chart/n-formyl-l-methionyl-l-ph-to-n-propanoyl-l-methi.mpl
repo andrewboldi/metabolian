@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-formyl-l-methionyl-l-ph-to-n-propanoyl-l-methi "N-formyl-L-methionyl-L-ph… to N-propanoyl-L-methioninate" {
-  spacing 200
+  spacing 188
 
   spine at 0,0 {
     n_formyl_l_methionyl_l_phenylalaninate
@@ -24,19 +24,7 @@ pathway n-formyl-l-methionyl-l-ph-to-n-propanoyl-l-methi "N-formyl-L-methionyl-L
 
   branch from n_formyl_l_methioninate side right {
     n_formyl_l_methioninate
-    <-> . +n_formyl_l_methionyl_l_alaninate +h2o
-    alanine
-  }
-
-  branch from l_phenylalanine side left {
-    l_phenylalanine
-    <-> ec_1_14_16_7 [1.14.16.7] +sapropterin +o2 +4a_hydroxy_l_erythro_5_6_7_8_tetrahydrobiopterin
-    l_m_tyrosine
-  }
-
-  branch from l_phenylalanine side right {
-    l_phenylalanine
-    <-> . +arachidonate +h2o
-    n_arachidonoyl_l_phenylalaninate
+    <-> . +n_formyl_l_methionyl_l_alanyl_l_serinate +h2o
+    ala_ser
   }
 }

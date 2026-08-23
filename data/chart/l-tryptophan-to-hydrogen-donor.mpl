@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-tryptophan-to-hydrogen-donor "L-tryptophan to hydrogen donor" {
-  spacing 196
+  spacing 208
 
   spine at 0,0 {
     l_tryptophan
@@ -14,5 +14,17 @@ pathway l-tryptophan-to-hydrogen-donor "L-tryptophan to hydrogen donor" {
     3z_5s_3_1_oxidoethylidene_5_4_3_methylbut_2_en
     <-> ec_1_21_99_1 [1.21.99.1] +hydrogen_acceptor -hydrogen_donor
     cyclopiazonate
+  }
+
+  branch from l_tryptophan side left {
+    l_tryptophan
+    <-> ec_1_11_2_8 [1.11.2.8] +h2o2 +h2o
+    5_hydroxy_l_tryptophan
+  }
+
+  branch from l_tryptophan side right {
+    l_tryptophan
+    <-> . +fadh2 +o2 +fad +h2o +hplus
+    l_oxindolylalanine
   }
 }

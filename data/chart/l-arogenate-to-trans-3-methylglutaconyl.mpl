@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-arogenate-to-trans-3-methylglutaconyl "L-arogenate to trans-3-methylglutaconyl-…" {
-  spacing 306
+  spacing 340
 
   spine at 0,0 {
     l_arogenate
@@ -42,26 +42,26 @@ pathway l-arogenate-to-trans-3-methylglutaconyl "L-arogenate to trans-3-methylgl
 
   branch from aspartate side left {
     aspartate
-    <-> ec_5_1_1_13 [5.1.1.13]
-    d_aspartate
+    <-> ec_1_4_1_29 [1.4.1.29] +nad +nadh +hplus
+    iminoaspartate
   }
 
   branch from aspartate side right {
     aspartate
-    <-> ec_4_1_1_11 [4.1.1.11] +hplus +co2
-    alanine
+    <-> . +nad +h2o +nadh +hplus
+    l_aspartic_acid_4_semialdehyde
   }
 
   branch from 3_4_hydroxyphenyl_pyruvate side left {
     3_4_hydroxyphenyl_pyruvate
-    <-> . +tyrosine +o2 +h2o +h2o2
-    nh3
+    <-> . +atp +h2o +amp +ppi +hplus
+    2s_2_4_hydoxybenzyl_3_4_hydroxyphenyl_2_furonol
   }
 
   branch from 3_4_hydroxyphenyl_pyruvate side right {
     3_4_hydroxyphenyl_pyruvate
-    <-> . +atp +h2o +amp +ppi +hplus
-    2s_2_4_hydoxybenzyl_3_4_hydroxyphenyl_2_furonol
+    <-> ec_6_4_1_10 [6.4.1.10] +atp +amp +ppi +hplus
+    atromentin
   }
 
   branch from homogentisate side left {
@@ -84,14 +84,14 @@ pathway l-arogenate-to-trans-3-methylglutaconyl "L-arogenate to trans-3-methylgl
 
   branch from acetoacetyl_coa side right {
     acetoacetyl_coa
-    <-> ec_2_3_1_194 [2.3.1.194] +acetyl_coa +hplus +co2 +coa
-    malonyl-coa
+    <-> . +nad +nadh +hplus
+    hydroxybutyryl_coa
   }
 
   branch from acetoacetyl_coa side left {
     acetoacetyl_coa
-    <-> . +nad +nadh +hplus
-    hydroxybutyryl_coa
+    <-> ec_1_1_1_36 [1.1.1.36] +nadp +nadph +hplus
+    r_3_hydroxybutanoyl_coa
   }
 
   branch from butyrate side right {
@@ -106,15 +106,81 @@ pathway l-arogenate-to-trans-3-methylglutaconyl "L-arogenate to trans-3-methylgl
     1_hexadecanoyl_sn_glycero_3_phosphocholine
   }
 
-  branch from hmg_coa side right {
-    hmg_coa
-    <-> ec_1_1_1_34 [1.1.1.34] +nadp +coa +nadph +hplus
-    mevalonate
-  }
-
-  branch from methylglutaconyl_coa side left {
+  branch from methylglutaconyl_coa side right {
     methylglutaconyl_coa
     <-> ec_6_4_1_4 [6.4.1.4] +hco3 +atp +adp +pi +hplus
     methylcrotonyl_coa
+  }
+
+  branch from l_arogenate side left {
+    l_arogenate
+    <-> ec_4_2_1_91 [4.2.1.91] +hplus +co2 +h2o
+    l_phenylalanine
+  }
+
+  branch from l_arogenate side right {
+    l_arogenate
+    <-> ec_1_3_1_78 [1.3.1.78] +nadp +co2 +nadph
+    tyrosine
+  }
+
+  branch from oxaloacetate side left {
+    oxaloacetate
+    <-> ec_1_1_1_37 [1.1.1.37] +nad +nadh +hplus
+    malate
+  }
+
+  branch from oxaloacetate side right {
+    oxaloacetate
+    <-> . +r_malate +hydrogen_acceptor
+    hydrogen_donor
+  }
+
+  branch from 1s_4s_prephenate side left {
+    1s_4s_prephenate
+    <-> . +2_methoxy_6_all_trans_octaprenyl_phenol +hydrogen_acceptor +hplus +keto_phenylpyruvate +hydrogen_donor +co2
+    6_methoxy_2_octaprenylhydroquinone
+  }
+
+  branch from aspartate side right {
+    aspartate
+    <-> ec_6_3_4_25 [6.3.4.25] +2_deoxyguanosine_5_monophosphate +atp +adp +pi +hplus
+    2s_2_amino_2_deoxyadenylo_succinate
+  }
+
+  branch from aspartate side left {
+    aspartate
+    <-> . +nadph +o2 +nadp +h2o
+    n_hydroxy_l_aspartate
+  }
+
+  branch from 3_4_hydroxyphenyl_pyruvate side right {
+    3_4_hydroxyphenyl_pyruvate
+    <-> . +l_kynurenine +tyrosine +h2o
+    kynurenate
+  }
+
+  branch from 3_4_hydroxyphenyl_pyruvate side left {
+    3_4_hydroxyphenyl_pyruvate
+    <-> . +l_kynurenine +tyrosine
+    4_2_aminophenyl_2_4_dioxobutanoate
+  }
+
+  branch from acetoacetate side right {
+    acetoacetate
+    <-> ec_2_8_3_9 [2.8.3.9] +acetoacetyl_coa +2_methylpropanoate
+    2_methylpropanoyl_coa
+  }
+
+  branch from acetoacetate side left {
+    acetoacetate
+    <-> ec_2_8_3_9 [2.8.3.9] +acetoacetyl_coa +chloroacetate +h
+    chloroacetyl_coa
+  }
+
+  branch from butyryl_coa side right {
+    butyryl_coa
+    <-> ec_2_3_1_19 [2.3.1.19] +pi +coa
+    butyryl_p
   }
 }

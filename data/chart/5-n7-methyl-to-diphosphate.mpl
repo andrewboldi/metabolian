@@ -30,9 +30,9 @@ pathway 5-n7-methyl-to-diphosphate "5'-(N7-methyl… to diphosphate" {
     5_end_phospho_guanosine_2
   }
 
-  branch from 5_end_ribonucleotide_2 side left {
-    5_end_ribonucleotide_2
-    <-> . +5_end_n_acetyl_d_glucosamine_diphospho_uridyl_ri +h2o +hplus
-    udpglcnac
+  branch from n2_n2_n7_trimethylguanosine_diphosphate side left {
+    n2_n2_n7_trimethylguanosine_diphosphate
+    <-> . +5_end_n2_n2_n7_trimethyl_5_triphosphoguanosine_a +h2o +hplus
+    5_end_phospho_adenosine_2
   }
 }

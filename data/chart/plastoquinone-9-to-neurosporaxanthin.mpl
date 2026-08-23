@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway plastoquinone-9-to-neurosporaxanthin "plastoquinone-9 to neurosporaxanthin" {
-  spacing 274
+  spacing 280
 
   spine at 0,0 {
     plastoquinone_9
@@ -26,69 +26,75 @@ pathway plastoquinone-9-to-neurosporaxanthin "plastoquinone-9 to neurosporaxanth
     neurosporaxanthin
   }
 
-  branch from 9_9_di_cis_carotene side left {
+  branch from 9_9_15_tri_cis_carotene side left {
+    9_9_15_tri_cis_carotene
+    <-> ec_1_3_5_5 [1.3.5.5] +a_plastoquinone +15_9_di_cis_phytofluene
+    a_plastoquinol
+  }
+
+  branch from 9_9_di_cis_carotene side right {
     9_9_di_cis_carotene
-    <-> ec_1_3_5_6 [1.3.5.6] +7_7_9_9_tetra_cis_lycopene +phylloquinol
-    phylloquinone
+    <-> ec_1_3_5_6 [1.3.5.6] +7_7_9_9_tetra_cis_lycopene +ubiquinol_8
+    ubiquinone_8
   }
 
-  branch from 7_7_9_9_tetra_cis_lycopene side right {
-    7_7_9_9_tetra_cis_lycopene
-    <-> . +phylloquinol +phylloquinone
-    7_9_9_tri_cis_neurosporene
-  }
-
-  branch from 7_7_9_9_tetra_cis_lycopene side left {
-    7_7_9_9_tetra_cis_lycopene
-    <-> . +ubiquinol_9 +7_9_9_tri_cis_neurosporene
-    ubiquinone_9
-  }
-
-  branch from hydroquinones side right {
-    hydroquinones
-    <-> . +dca_cl +1_4_benzoquinones +h2o +hplus
-    dca_cc
-  }
-
-  branch from hydroquinones side left {
-    hydroquinones
-    <-> . +l_methionine +1_4_benzoquinones +h2o
-    l_methionine_s_s_oxide
-  }
-
-  branch from all_trans_3_4_didehydrolycopene side right {
+  branch from all_trans_3_4_didehydrolycopene side left {
     all_trans_3_4_didehydrolycopene
     <-> . +h2
     all_trans_lycopene
   }
 
-  branch from hydrogen_donor side left {
-    hydrogen_donor
-    <-> . +5_s_hete +o2 +hydrogen_acceptor +h2o
-    5_s_15_r_dihete
-  }
-
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +o2 +hydrogen_acceptor +h2o
-    17_r_hdohe
+    <-> . +3_3_diiodothyronamine +iodide +hydrogen_acceptor +hplus
+    3_3_5_triiodothyronamine
   }
 
-  branch from torulene side left {
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> . +3_iodothyronamine +iodide +hydrogen_acceptor +hplus
+    3_3_diiodothyronamine
+  }
+
+  branch from torulene side right {
     torulene
     <-> . +4_ketotorulene +h2o
     o2
   }
 
-  branch from 3_methylbut_2_enal side right {
+  branch from 3_methylbut_2_enal side left {
     3_methylbut_2_enal
     <-> . +nadp +nadph +hplus
     prenol
   }
 
-  branch from neurosporaxanthin side left {
+  branch from neurosporaxanthin side right {
     neurosporaxanthin
     <-> .
     apo_4_lycopenoate
+  }
+
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> . +thyronamine +iodide +hplus +hydrogen_donor
+    3_iodothyronamine
+  }
+
+  branch from hydrogen_acceptor side right {
+    hydrogen_acceptor
+    <-> . +3_iodothyronamine +iodide +hplus +hydrogen_donor
+    3_5_diiodothyronamine
+  }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> . +3_iodothyronamine +hydrogen_acceptor +hplus +3_3_diiodothyronamine
+    iodide
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> . +3_3_diiodo_l_thyronine_sulfate +iodide +hydrogen_acceptor +hplus
+    3_3_5_triiodo_l_thyronine_sulfate
   }
 }

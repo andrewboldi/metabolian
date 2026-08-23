@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-h2o "NADH to H2O" {
-  spacing 288
+  spacing 340
 
   spine at 0,0 {
     nadh
@@ -24,14 +24,14 @@ pathway nadh-to-h2o "NADH to H2O" {
 
   branch from nad side right {
     nad
-    <-> . +5_hydroxymethylfurfural +nadh +h
-    2_5_furandimethanol
+    <-> ec_1_1_1_51 [1.1.1.51] +nadh +isatin +h
+    2_3_dihydroxyindole
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_213 [1.1.1.213] +nadh +h +3_oxosteroid
-    3alpha_hydroxysteroid
+    <-> ec_1_1_1_51 [1.1.1.51] +nadh +6_tert_butyl_2_3_epoxy_5_cyclohexene_1_4_dione +h
+    6_tert_butyl_2_3_epoxy_4_hydroxy_5_cyclohexene_1
   }
 
   branch from 5alpha_androstan_3_17_dione side right {
@@ -42,25 +42,109 @@ pathway nadh-to-h2o "NADH to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> . +3_deoxo_4b_deoxypaxilline +h +o2 +nadph +nadp
-    beta_pc_m6
+    <-> ec_1_11_1_1 [1.11.1.1] +nadh +h +h2o2
+    alpha_nad
   }
 
   branch from h2o side right {
     h2o
-    <-> . +r_mandelonitrile +nadp +h +o2 +nadph
-    z_phenylacetaldehyde_oxime
+    <-> ec_1_11_1_1 [1.11.1.1] +deamido_nad +h2o2
+    nicotinamide_hypoxanthine_dinucleotide
   }
 
   branch from atp side left {
     atp
-    <-> . +diphosphate +pre_alcaligin +h +amp
-    3_4_amino_3_hydroxybutyl_hydroxy_carbamoyl_propa
+    <-> ec_6_6_1_1 [6.6.1.1] +protoporphyrin_ix +mg +h2o +h +adp +phosphate
+    mg_protoporphyrin_ix
   }
 
   branch from atp side right {
     atp
-    <-> . +diphosphate +alcaligin +h +amp
-    pre_alcaligin
+    <-> ec_6_6_1_1 [6.6.1.1] +protoporphyrin +mg +h2o +h +adp +phosphate
+    mg_protoporphyrin_ix
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> ec_1_1_1_51 [1.1.1.51] +h +pentane_2_3_dione +nad
+    2_3_pentanediol
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_1_1_51 [1.1.1.51] +diacetyl +h +nad
+    butane_2_3_diol
+  }
+
+  branch from h side left {
+    h
+    <-> ec_1_1_1_2 [1.1.1.2] +nadph +1_2_naphthoquinone +nadp
+    naphthalene_1_2_diol
+  }
+
+  branch from h side right {
+    h
+    <-> ec_1_1_1_10 [1.1.1.10] +nadph +2_3_dihydroxyindole +nadp
+    isatin
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_51 [1.1.1.51] +nadh +h +5beta_pregnan_3_20_dione
+    5_pregnan_20_ol_3_one
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_51 [1.1.1.51] +nadh +h +5_pregnan_20_ol_3_one
+    pregnanediol
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_4_14_5 [3.4.14.5] +his_pro +l_tyrosine
+    his_pro_tyr
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_4_14_5 [3.4.14.5] +l_alanine +gly_pro
+    gly_pro_ala
+  }
+
+  branch from adp side left {
+    adp
+    <-> . +adp_l_glycero_d_manno_heptose +h +glucosyl_glucosyl_galactosyl_glucosyl_inner_core
+    core_oligosaccharide_lipid_a
+  }
+
+  branch from adp side right {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    l_prolylglycine
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> ec_3_1_3_36 [3.1.3.36] +3_o_methylfluorescein +h +h2o
+    3_o_methylfluorescein_6_phosphate
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_3_1_3_48 [3.1.3.48] +2_chloro_4_nitrophenol +h +h2o
+    2_chloro_4_nitrophenyl_phosphate
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    l_prolinylglycine
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    puromycin
   }
 }

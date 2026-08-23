@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway gallate-to-2s-2-hydroxy-4-oxobutan "gallate to (2S)-2-hydroxy-4-oxobutan…" {
-  spacing 164
+  spacing 158
 
   spine at 0,0 {
     gallate
@@ -17,12 +17,6 @@ pathway gallate-to-2s-2-hydroxy-4-oxobutan "gallate to (2S)-2-hydroxy-4-oxobutan
   }
 
   branch from 2z_4_oxobut_2_ene_1_2_4_tricarboxylate side left {
-    2z_4_oxobut_2_ene_1_2_4_tricarboxylate
-    <-> ec_5_3_3_10 [5.3.3.10]
-    4_carboxy_2_hydroxy_cis_cis_muconate
-  }
-
-  branch from 2z_4_oxobut_2_ene_1_2_4_tricarboxylate side right {
     2z_4_oxobut_2_ene_1_2_4_tricarboxylate
     <-> ec_5_3_3_10 [5.3.3.10]
     4_carboxy_2_hydroxyhexa_2_4_dienedioate

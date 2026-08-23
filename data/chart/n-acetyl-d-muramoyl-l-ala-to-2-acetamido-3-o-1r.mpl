@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-acetyl-d-muramoyl-l-ala-to-2-acetamido-3-o-1r "N-acetyl-D-muramoyl-L-ala… to 2-acetamido-3-O-[(1R)-1-c…" {
-  spacing 248
+  spacing 260
 
   spine at 0,0 {
     n_acetyl_d_muramoyl_l_alaninate
@@ -18,13 +18,25 @@ pathway n-acetyl-d-muramoyl-l-ala-to-2-acetamido-3-o-1r "N-acetyl-D-muramoyl-L-a
 
   branch from alanine side left {
     alanine
-    <-> ec_2_6_1_115 [2.6.1.115] +2e_5s_6e_8e_10e_1_ammoniododeca_2_6_8_10_tetrae +pyruvate
-    2e_5s_6e_8e_10e_5_hydroxydodeca_2_6_8_10_tetrae
+    <-> . +3_phenylpropylaminium +pyruvate
+    3_phenylpropanal
   }
 
   branch from alanine side right {
     alanine
-    <-> ec_2_6_1_99 [2.6.1.99] +l_tryptophan +pyruvate
-    3_indol_3_yl_pyruvate
+    <-> . +3_hydroxy_l_kynurenine +pyruvate +h2o
+    xanthurenate
+  }
+
+  branch from alanine side left {
+    alanine
+    <-> . +3_hydroxy_l_kynurenine +pyruvate
+    4_2_amino_3_hydroxyphenyl_2_4_dioxobutanoate
+  }
+
+  branch from alanine side right {
+    alanine
+    <-> . +l_tryptophan +atp +adp +pi +hplus
+    cyclo_l_tryptophyl_l_alanyl
   }
 }

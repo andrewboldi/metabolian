@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-glcp-1-4-d-galp-to-cdp-4-dehydro-6-deoxy-d-g "β-D-Glcp-(1→4)-D-Galp to CDP-4-dehydro-6-deoxy-D-g…" {
-  spacing 260
+  spacing 248
 
   spine at 0,0 {
     d_glcp_1_4_d_galp
@@ -16,8 +16,27 @@ pathway d-glcp-1-4-d-galp-to-cdp-4-dehydro-6-deoxy-d-g "β-D-Glcp-(1→4)-D-Galp
     cdp_4_dehydro_6_deoxy_d_glucose
   }
 
+  branch from d_galactopyranose side left {
+    d_galactopyranose
+    <-> ec_3_2_1_159 [3.2.1.159] +3_6_anhydro_l_galactopyranose +h2o
+    neoagarobiose
+  }
 
+  branch from d_galactopyranose side right {
+    d_galactopyranose
+    <-> .
+    aldehydo_d_galactose
+  }
 
+  branch from d_galactopyranose side left {
+    d_galactopyranose
+    <-> ec_2_7_1_1 [2.7.1.1] +alpha_d_galactose_6_phosphate +adp +atp
+    h
+  }
 
-
+  branch from d_galactopyranose side right {
+    d_galactopyranose
+    <-> ec_3_2_1_23 [3.2.1.23] +glucose +h2o
+    allolactose
+  }
 }

@@ -1,0 +1,494 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "7-8-dihydroneopterin-to-1-4-benzoquinones-45332",
+  "name": "7,8-dihydroneopterin to 1,4-benzoquinones",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 7,8-dihydroneopterin to 1,4-benzoquinones, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:45332"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:17001"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "7_8_dihydroneopterin",
+      "name": "7,8-dihydroneopterin",
+      "formula": "C9H13N5O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17001"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "7_8_dihydroxanthopterin",
+      "name": "7,8-dihydroxanthopterin",
+      "short": "7,8-dihydroxanthopt…",
+      "formula": "C6H7N5O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:85130"
+      }
+    },
+    {
+      "id": "glycolaldehyde",
+      "name": "glycolaldehyde",
+      "formula": "C2H4O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17071"
+      }
+    },
+    {
+      "id": "formate",
+      "name": "Formate",
+      "formula": "CHO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15740"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "1_4_benzoquinones",
+      "name": "1,4-benzoquinones",
+      "formula": "C6O2R4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:132124"
+      }
+    },
+    {
+      "id": "hydroquinones",
+      "name": "hydroquinones",
+      "formula": "C6H2O2R4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:24646"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_13_11_81",
+      "name": "7,8-dihydroneopterin oxygenase",
+      "ec": [
+        "1.13.11.81"
+      ]
+    },
+    {
+      "id": "ec_1_17_5_3",
+      "name": "formate dehydrogenase-N",
+      "ec": [
+        "1.17.5.3"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "7,8-dihydroneopterin oxygenase",
+      "equation": "7,8-dihydroneopterin + O2 = 7,8-dihydroxanthopterin + glycolaldehyde + formate + H(+)",
+      "ec": "1.13.11.81",
+      "substrates": [
+        {
+          "metabolite": "7_8_dihydroneopterin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_8_dihydroxanthopterin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycolaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_81"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:45332"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45332"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "formate dehydrogenase-N",
+      "equation": "a quinone + formate + H(+) = a quinol + CO2",
+      "ec": "1.17.5.3",
+      "substrates": [
+        {
+          "metabolite": "1_4_benzoquinones",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hydroquinones",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_17_5_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:48592"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48592"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "2 a quinol + O2 = 2 a quinone + 2 H2O",
+      "equation": "2 a quinol + O2 = 2 a quinone + 2 H2O",
+      "substrates": [
+        {
+          "metabolite": "hydroquinones",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_4_benzoquinones",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:55376"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55376"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_7_8_dihydroneopterin_7-8-dihydroneopterin-to-1-4-benzoquinones",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_8_dihydroneopterin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-8-dihydroneopterin-to-1-4-benzoquinones"
+      },
+      "note": "Shares 7,8-dihydroneopterin with 7,8-dihydroneopterin to 1,4-benzoquinones.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17001"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_8_dihydroneopterin_7-8-dihydroneopterin-to-5-dehydro-d-gluconate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_8_dihydroneopterin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-8-dihydroneopterin-to-5-dehydro-d-gluconate"
+      },
+      "note": "Shares 7,8-dihydroneopterin with 7,8-dihydroneopterin to 5-dehydro-D-gluconate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17001"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_8_dihydroneopterin_7-8-dihydroneopterin-to-5-dehydro-d-gluconate-45",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_8_dihydroneopterin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-8-dihydroneopterin-to-5-dehydro-d-gluconate-45"
+      },
+      "note": "Shares 7,8-dihydroneopterin with 7,8-dihydroneopterin to 5-dehydro-D-gluconate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17001"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_8_dihydroneopterin_7-8-dihydroneopterin-to-7-8-dihydropteroate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_8_dihydroneopterin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-8-dihydroneopterin-to-7-8-dihydropteroate"
+      },
+      "note": "Shares 7,8-dihydroneopterin with 7,8-dihydroneopterin to 7,8-dihydropteroate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17001"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_8_dihydroneopterin_7-8-dihydroneopterin-to-7-8-dihydropteroate-2530",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_8_dihydroneopterin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-8-dihydroneopterin-to-7-8-dihydropteroate-2530"
+      },
+      "note": "Shares 7,8-dihydroneopterin with 7,8-dihydroneopterin to 7,8-dihydropteroate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17001"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_8_dihydroneopterin_7-8-dihydroneopterin-to-dihydrofolate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_8_dihydroneopterin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-8-dihydroneopterin-to-dihydrofolate"
+      },
+      "note": "Shares 7,8-dihydroneopterin with 7,8-dihydroneopterin to dihydrofolate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17001"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_8_dihydroneopterin_7-8-dihydroneopterin-to-dihydrofolate-10540",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_8_dihydroneopterin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-8-dihydroneopterin-to-dihydrofolate-10540"
+      },
+      "note": "Shares 7,8-dihydroneopterin with 7,8-dihydroneopterin to dihydrofolate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17001"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_8_dihydroxanthopterin_7-8-dihydroneopterin-to-1-4-benzoquinones",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_8_dihydroxanthopterin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-8-dihydroneopterin-to-1-4-benzoquinones"
+      },
+      "note": "Shares 7,8-dihydroxanthopterin with 7,8-dihydroneopterin to 1,4-benzoquinones.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:85130"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_8_dihydroxanthopterin_7-8-dihydroneopterin-to-5-dehydro-d-gluconate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_8_dihydroxanthopterin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-8-dihydroneopterin-to-5-dehydro-d-gluconate"
+      },
+      "note": "Shares 7,8-dihydroxanthopterin with 7,8-dihydroneopterin to 5-dehydro-D-gluconate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:85130"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_8_dihydroxanthopterin_7-8-dihydroneopterin-to-5-dehydro-d-gluconate-45",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_8_dihydroxanthopterin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-8-dihydroneopterin-to-5-dehydro-d-gluconate-45"
+      },
+      "note": "Shares 7,8-dihydroxanthopterin with 7,8-dihydroneopterin to 5-dehydro-D-gluconate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:85130"
+          }
+        ]
+      }
+    }
+  ]
+}

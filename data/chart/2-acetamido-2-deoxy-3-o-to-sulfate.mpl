@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-acetamido-2-deoxy-3-o-to-sulfate "2-acetamido-2-deoxy-3-O-(… to sulfate" {
-  spacing 214
+  spacing 226
 
   spine at 0,0 {
     2_acetamido_2_deoxy_3_o_4_deoxy_l_threo_hex_4_en
@@ -32,5 +32,17 @@ pathway 2-acetamido-2-deoxy-3-o-to-sulfate "2-acetamido-2-deoxy-3-O-(… to sulf
     5_adenylyl_sulfate
     <-> ec_3_1_3_7 [3.1.3.7] +h2o +pi
     3_phosphonato_5_adenylyl_sulfate
+  }
+
+  branch from sulfate side right {
+    sulfate
+    <-> ec_3_1_6_3 [3.1.6.3] +d_glucopyranose_6_sulfate +h2o +hplus
+    glucose
+  }
+
+  branch from sulfate side left {
+    sulfate
+    <-> ec_3_1_6_17 [3.1.6.17] +r_2_o_sulfonatolactate +h2o +hplus
+    dlactate
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3e-2-oxopent-3-enoate-to-o2 "(3E)-2-oxopent-3-enoate to O2" {
-  spacing 210
+  spacing 186
 
   spine at 0,0 {
     3e_2_oxopent_3_enoate
@@ -16,33 +16,9 @@ pathway 3e-2-oxopent-3-enoate-to-o2 "(3E)-2-oxopent-3-enoate to O2" {
     3_isopropylcatechol
   }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +l_rhodinose +phosphate +l_rhodinose
-    atp
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    beta_d_fucose
-  }
-
-  branch from 3_isopropylcatechol side left {
-    3_isopropylcatechol
-    <-> . +o2
-    7_methyl_2_hydroxy_6_oxoocta_2_4_dienoate
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +strictosamide
-    strictosamide_ketolactam
-  }
-
-  branch from o2 side left {
-    o2
-    <-> ec_1_14_13_236 [1.14.13.236] +nadh +h +4_fluorophenol +nad +h2o
-    4_fluorocatechol
+  branch from 3e_2_oxopent_3_enoate side left {
+    3e_2_oxopent_3_enoate
+    <-> ec_5_3_2_6 [5.3.2.6]
+    2z_2_hydroxypenta_2_4_dienoate
   }
 }

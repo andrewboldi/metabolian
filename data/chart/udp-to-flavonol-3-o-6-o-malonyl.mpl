@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-flavonol-3-o-6-o-malonyl "UDP to Flavonol 3-O-(6-O-malonyl…" {
-  spacing 280
+  spacing 304
 
   spine at 0,0 {
     udp
@@ -16,27 +16,51 @@ pathway udp-to-flavonol-3-o-6-o-malonyl "UDP to Flavonol 3-O-(6-O-malonyl…" {
     coa
   }
 
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> . +udp +h +glucoevatromonoside
-    evatromonoside
-  }
-
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> . +utp +h +glucose_1_p
-    diphosphate
-  }
-
   branch from coa side left {
     coa
-    <-> . +glycosyl_4_4_diaponeurosporenoate +12_methyltetradecanoyl_coa
-    staphyloxanthin
+    <-> . +s_carnitine +3_hydroxyoctadecenoylcoa
+    3_hydroxy_octadecenoyl_carnitine
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_65 [2.3.1.65] +chenodeoxycholoyl_coa +glycine +h
-    glycochenodeoxycholate
+    <-> . +3s_hydroxyoctadecanoyl_coa +s_carnitine
+    3_hydroxyoctadecanoylcarnitine
+  }
+
+  branch from h side left {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    nicotinamide
+  }
+
+  branch from h side right {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    n_desmethyl_rosuvastatin
+  }
+
+  branch from malonyl_coa side left {
+    malonyl_coa
+    <-> . +7z_10z_13z_16z_19z_docosapentaenoyl_coa +h +coa +6z_9z_12z_15z_18z_3_oxotetracosapentaenoyl_coa
+    co2
+  }
+
+  branch from malonyl_coa side right {
+    malonyl_coa
+    <-> . +8z_11z_14z_eicosatrienoyl_coa +co2 +nadp +coa +h2o +h +nadph
+    6z_9z_12z_octadecatrienoyl_coa
+  }
+
+  branch from coa side left {
+    coa
+    <-> . +5z_8z_11z_14z_eicosatetraenoyl_coa +s_carnitine
+    arachidonoyl_l_carnitine
+  }
+
+  branch from coa side right {
+    coa
+    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoyl_coa +s_carnitine
+    cervonyl_carnitine
   }
 }

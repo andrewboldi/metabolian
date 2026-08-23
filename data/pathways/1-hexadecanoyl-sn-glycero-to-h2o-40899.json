@@ -1,0 +1,472 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1-hexadecanoyl-sn-glycero-to-h2o-40899",
+  "name": "1-hexadecanoyl-sn-glycero… to H2O",
+  "category": "other",
+  "summary": "A 3-step route from 1-hexadecanoyl-sn-glycero-3-phosphoethanolamine zwitterion to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:40899"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:73004"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1_hexadecanoyl_sn_glycero_3_phosphoethanolamine",
+      "name": "1-hexadecanoyl-sn-glycero-3-phosphoethanolamine",
+      "short": "1-hexadecanoyl-sn-g…",
+      "formula": "C21H44NO7P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:73004"
+      }
+    },
+    {
+      "id": "1_hexadecanoyl_sn_glycero_3_phosphocholine",
+      "name": "1-hexadecanoyl-sn-glycero-3-phosphocholine",
+      "short": "1-hexadecanoyl-sn-g…",
+      "formula": "C24H50NO7P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:72998"
+      }
+    },
+    {
+      "id": "1_2_dihexadecanoyl_sn_glycero_3_phosphoethanolam",
+      "name": "1,2-dihexadecanoyl-sn-glycero-3-phosphoethanolamine",
+      "short": "1,2-dihexadecanoyl-…",
+      "formula": "C37H74NO8P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:73005"
+      }
+    },
+    {
+      "id": "choline_alfoscerate",
+      "name": "choline alfoscerate",
+      "formula": "C8H20NO6P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16870"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "phosphatidylserine_dihexadecanoyl_n_c16_0",
+      "name": "Phosphatidylserine (dihexadecanoyl, n-C16:0)",
+      "short": "Phosphatidylserine…",
+      "formula": "C38H72NO10P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM734047"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_1_1_65",
+      "name": "phosphatidylserine decarboxylase",
+      "ec": [
+        "4.1.1.65"
+      ],
+      "xrefs": {
+        "uniprot": "Q9UG56"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "1-hexadecanoyl-sn-glycero-3-phosphoethanolamine + 1-hexadecanoyl-sn-glycero-3-phosphoch...",
+      "equation": "1-hexadecanoyl-sn-glycero-3-phosphoethanolamine + 1-hexadecanoyl-sn-glycero-3-phosphocholine = 1,2-dihexadecanoyl-sn-glycero-3-phosphoethanolamine + sn-glycerol 3-phosphocholine",
+      "substrates": [
+        {
+          "metabolite": "1_hexadecanoyl_sn_glycero_3_phosphoethanolamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_hexadecanoyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_2_dihexadecanoyl_sn_glycero_3_phosphoethanolam",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "choline_alfoscerate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:40899"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40899"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "phosphatidylserine decarboxylase",
+      "ec": "4.1.1.65",
+      "substrates": [
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_2_dihexadecanoyl_sn_glycero_3_phosphoethanolam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "phosphatidylserine_dihexadecanoyl_n_c16_0",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_65"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR146144"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR146144"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR103221",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphatidylserine_dihexadecanoyl_n_c16_0",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphatidylserine_dihexadecanoyl_n_c16_0",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR103221"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR103221"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_1_2_dihexadecanoyl_sn_glycero_3_phosphoethanolam_1-hexadecanoyl-sn-glycero-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_2_dihexadecanoyl_sn_glycero_3_phosphoethanolam"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-hexadecanoyl-sn-glycero-to-h2o"
+      },
+      "note": "Shares 1,2-dihexadecanoyl-sn-glycero-3-phosphoethanolamine with 1-hexadecanoyl-sn-glycero… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:73005"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_2_dihexadecanoyl_sn_glycero_3_phosphoethanolam_2-acyl-6-d-mannosyl-1-to-sn-glycerol-3-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_2_dihexadecanoyl_sn_glycero_3_phosphoethanolam"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-acyl-6-d-mannosyl-1-to-sn-glycerol-3-phosphate"
+      },
+      "note": "Shares 1,2-dihexadecanoyl-sn-glycero-3-phosphoethanolamine with 2-acyl-6-[α-D-mannosyl-(1… to sn-glycerol 3-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:73005"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_2_dihexadecanoyl_sn_glycero_3_phosphoethanolam_2-aminoethyl-phosphonate-to-hexadecanoate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_2_dihexadecanoyl_sn_glycero_3_phosphoethanolam"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-aminoethyl-phosphonate-to-hexadecanoate"
+      },
+      "note": "Shares 1,2-dihexadecanoyl-sn-glycero-3-phosphoethanolamine with (2-aminoethyl)phosphonate to hexadecanoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:73005"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_2_dihexadecanoyl_sn_glycero_3_phosphoethanolam_2-aminoethyl-phosphonate-to-hexadecanoate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_2_dihexadecanoyl_sn_glycero_3_phosphoethanolam"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-aminoethyl-phosphonate-to-hexadecanoate-null"
+      },
+      "note": "Shares 1,2-dihexadecanoyl-sn-glycero-3-phosphoethanolamine with (2-aminoethyl)phosphonate to hexadecanoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:73005"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_2_dihexadecanoyl_sn_glycero_3_phosphoethanolam_glycerophosphatidylethano-to-1-2-dihexadecanoyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_2_dihexadecanoyl_sn_glycero_3_phosphoethanolam"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "glycerophosphatidylethano-to-1-2-dihexadecanoyl"
+      },
+      "note": "Shares 1,2-dihexadecanoyl-sn-glycero-3-phosphoethanolamine with glycerophosphatidylethano… to 1,2-dihexadecanoyl-sn-gly….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:73005"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_2_dihexadecanoyl_sn_glycero_3_phosphoethanolam_hexadecanoate-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_2_dihexadecanoyl_sn_glycero_3_phosphoethanolam"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hexadecanoate-to-h2o-null"
+      },
+      "note": "Shares 1,2-dihexadecanoyl-sn-glycero-3-phosphoethanolamine with hexadecanoate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:73005"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phosphatidylserine_dihexadecanoyl_n_c16_0_1-carboxyvinyl-to-nadph-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phosphatidylserine_dihexadecanoyl_n_c16_0"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-carboxyvinyl-to-nadph-null"
+      },
+      "note": "Shares Phosphatidylserine (dihexadecanoyl, n-C16:0) with 1-carboxyvinyl… to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM734047"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phosphatidylserine_dihexadecanoyl_n_c16_0_1-hexadecanoyl-sn-glycero-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phosphatidylserine_dihexadecanoyl_n_c16_0"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-hexadecanoyl-sn-glycero-to-h2o"
+      },
+      "note": "Shares Phosphatidylserine (dihexadecanoyl, n-C16:0) with 1-hexadecanoyl-sn-glycero… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM734047"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phosphatidylserine_dihexadecanoyl_n_c16_0_calicheamicin-gamma-1-i-to-h",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phosphatidylserine_dihexadecanoyl_n_c16_0"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "calicheamicin-gamma-1-i-to-h"
+      },
+      "note": "Shares Phosphatidylserine (dihexadecanoyl, n-C16:0) with Calicheamicin gamma(1)I to H.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM734047"
+          }
+        ]
+      }
+    }
+  ]
+}

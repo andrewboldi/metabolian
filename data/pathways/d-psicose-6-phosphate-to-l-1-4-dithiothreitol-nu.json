@@ -1,0 +1,506 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-psicose-6-phosphate-to-l-1-4-dithiothreitol-nu",
+  "name": "D-psicose 6-phosphate to L-1,4-dithiothreitol",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from D-psicose 6-phosphate(2−) to L-1,4-dithiothreitol, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR151592"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:61519"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_psicose_6_phosphate",
+      "name": "D-psicose 6-phosphate",
+      "short": "D-psicose 6-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:61519"
+      }
+    },
+    {
+      "id": "beta_d_fructose_6_phosphate",
+      "name": "beta-D-fructose 6-phosphate",
+      "short": "beta-D-fructose 6-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1107898"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "dadp",
+      "name": "dADP",
+      "formula": "C10H12N5O9P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM735047"
+      }
+    },
+    {
+      "id": "d_fructofuranose",
+      "name": "D-fructofuranose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:37721"
+      }
+    },
+    {
+      "id": "datp",
+      "name": "dATP",
+      "formula": "C10H12N5O12P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM286"
+      }
+    },
+    {
+      "id": "4r_5r_1_2_dithiane_4_5_diol",
+      "name": "(4R,5R)-1,2-dithiane-4,5-diol",
+      "short": "(4R,5R)-1,2-dithian…",
+      "formula": "C4H8O2S2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1105777"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "l_1_4_dithiothreitol",
+      "name": "L-1,4-dithiothreitol",
+      "formula": "C4H10O2S2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735884"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_1_1",
+      "name": "hexokinase",
+      "ec": [
+        "2.7.1.1"
+      ],
+      "xrefs": {
+        "uniprot": "Q2TB90"
+      }
+    },
+    {
+      "id": "ec_1_17_4_2",
+      "name": "ribonucleoside-triphosphate reductase (thioredoxin)",
+      "ec": [
+        "1.17.4.2"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR151592",
+      "substrates": [
+        {
+          "metabolite": "d_psicose_6_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "beta_d_fructose_6_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR151592"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR151592"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "hexokinase",
+      "ec": "2.7.1.1",
+      "substrates": [
+        {
+          "metabolite": "beta_d_fructose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_fructofuranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "datp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR106836"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR106836"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "ribonucleoside-triphosphate reductase (thioredoxin)",
+      "ec": "1.17.4.2",
+      "substrates": [
+        {
+          "metabolite": "4r_5r_1_2_dithiane_4_5_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "datp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_1_4_dithiothreitol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_17_4_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR131179"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR131179"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_d_psicose_6_phosphate_aldehydo-d-allose-to-5-hydroxyisouric-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_psicose_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aldehydo-d-allose-to-5-hydroxyisouric-acid"
+      },
+      "note": "Shares D-psicose 6-phosphate with aldehydo-D-allose to 5-hydroxyisouric acid.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61519"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_psicose_6_phosphate_aldehydo-d-allose-to-5-hydroxyisouric-acid-14805",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_psicose_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aldehydo-d-allose-to-5-hydroxyisouric-acid-14805"
+      },
+      "note": "Shares D-psicose 6-phosphate with aldehydo-D-allose to 5-hydroxyisouric acid.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61519"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_psicose_6_phosphate_d-psicose-6-phosphate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_psicose_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-psicose-6-phosphate-to-h2o"
+      },
+      "note": "Shares D-psicose 6-phosphate with D-psicose 6-phosphate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61519"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_psicose_6_phosphate_d-psicose-6-phosphate-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_psicose_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-psicose-6-phosphate-to-h2o-null"
+      },
+      "note": "Shares D-psicose 6-phosphate with D-psicose 6-phosphate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61519"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_psicose_6_phosphate_d-psicose-6-phosphate-to-l-1-4-dithiothreitol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_psicose_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-psicose-6-phosphate-to-l-1-4-dithiothreitol"
+      },
+      "note": "Shares D-psicose 6-phosphate with D-psicose 6-phosphate to L-1,4-dithiothreitol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61519"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4r_5r_1_2_dithiane_4_5_diol_1-6-didemethyltoxoflavin-to-s-adenosyl-l-methion",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4r_5r_1_2_dithiane_4_5_diol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-6-didemethyltoxoflavin-to-s-adenosyl-l-methion"
+      },
+      "note": "Shares (4R,5R)-1,2-dithiane-4,5-diol with 1,6-didemethyltoxoflavin to S-adenosyl-L-methionine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1105777"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4r_5r_1_2_dithiane_4_5_diol_4r-5r-4-5-dihydroxycycl-to-l-1-4-dithiothreitol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4r_5r_1_2_dithiane_4_5_diol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4r-5r-4-5-dihydroxycycl-to-l-1-4-dithiothreitol"
+      },
+      "note": "Shares (4R,5R)-1,2-dithiane-4,5-diol with (4R,5R)-4,5-dihydroxycycl… to L-1,4-dithiothreitol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1105777"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4r_5r_1_2_dithiane_4_5_diol_d-psicose-6-phosphate-to-l-1-4-dithiothreitol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4r_5r_1_2_dithiane_4_5_diol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-psicose-6-phosphate-to-l-1-4-dithiothreitol"
+      },
+      "note": "Shares (4R,5R)-1,2-dithiane-4,5-diol with D-psicose 6-phosphate to L-1,4-dithiothreitol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1105777"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_1_4_dithiothreitol_1-6-didemethyltoxoflavin-to-s-adenosyl-l-methion",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_1_4_dithiothreitol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-6-didemethyltoxoflavin-to-s-adenosyl-l-methion"
+      },
+      "note": "Shares L-1,4-dithiothreitol with 1,6-didemethyltoxoflavin to S-adenosyl-L-methionine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM735884"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_1_4_dithiothreitol_4r-5r-4-5-dihydroxycycl-to-l-1-4-dithiothreitol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_1_4_dithiothreitol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4r-5r-4-5-dihydroxycycl-to-l-1-4-dithiothreitol"
+      },
+      "note": "Shares L-1,4-dithiothreitol with (4R,5R)-4,5-dihydroxycycl… to L-1,4-dithiothreitol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM735884"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_1_4_dithiothreitol_d-psicose-6-phosphate-to-l-1-4-dithiothreitol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_1_4_dithiothreitol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-psicose-6-phosphate-to-l-1-4-dithiothreitol"
+      },
+      "note": "Shares L-1,4-dithiothreitol with D-psicose 6-phosphate to L-1,4-dithiothreitol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM735884"
+          }
+        ]
+      }
+    }
+  ]
+}

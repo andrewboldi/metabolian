@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "cmp-2-trimethylaminoethyl-to-glycine-betaine",
   "name": "CMP-2-trimethylaminoethyl… to glycine betaine",
-  "category": "amino-acid-metabolism",
+  "category": "energy-metabolism",
   "summary": "A 3-step route from CMP-2-trimethylaminoethylphosphonate to glycine betaine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -137,111 +137,6 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
-    },
-    {
-      "id": "1_2_dioctadecanoyl_sn_glycerol_3_phosphate",
-      "name": "1,2-dioctadecanoyl-sn-glycerol-3-phosphate",
-      "short": "1,2-dioctadecanoyl-…",
-      "formula": "C39H75O8P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:82921"
-      }
-    },
-    {
-      "id": "1_2_dioctadecanoyl_sn_glycero_3_cytidine_5_dipho",
-      "name": "1,2-dioctadecanoyl-sn-glycero-3-cytidine 5'-diphosphate",
-      "short": "1,2-dioctadecanoyl-…",
-      "formula": "C48H89N3O15P2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:104121"
-      }
-    },
-    {
-      "id": "cdp",
-      "name": "CDP",
-      "formula": "C9H12N3O11P2",
-      "charge": -3,
-      "xrefs": {
-        "metanetx": "MNXM1102191"
-      }
-    },
-    {
-      "id": "4_amino_2_methyl_5_phosphooxymethyl_pyrimidine",
-      "name": "4-amino-2-methyl-5-(phosphooxymethyl)pyrimidine",
-      "short": "4-amino-2-methyl-5-…",
-      "formula": "C6H8N3O4P",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM1104391"
-      }
-    },
-    {
-      "id": "4_amino_5_hydroxymethyl_2_methylpyrimidine",
-      "name": "4-amino-5-hydroxymethyl-2-methylpyrimidine",
-      "short": "4-amino-5-hydroxyme…",
-      "formula": "C6H9N3O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1104899"
-      }
-    },
-    {
-      "id": "adp",
-      "name": "ADP",
-      "formula": "C10H12N5O10P2",
-      "charge": -3,
-      "xrefs": {
-        "metanetx": "MNXM40333"
-      }
-    },
-    {
-      "id": "1_docosahexenoylglycerophosphocholine_delta_4_7",
-      "name": "1-Docosahexenoylglycerophosphocholine (Delta 4, 7, 10, 13, 16, 19), Sn1-Lpc (22:6)",
-      "short": "1-Docosahexenoylgly…",
-      "formula": "C30H51NO7P",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM744818"
-      }
-    },
-    {
-      "id": "phosphate",
-      "name": "phosphate",
-      "formula": "HO4P",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM9"
-      }
-    },
-    {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM3"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "WATER"
-      }
-    },
-    {
-      "id": "2_linoleoylglycerophosphocholine",
-      "name": "2-Linoleoylglycerophosphocholine",
-      "short": "2-Linoleoylglycerop…",
-      "formula": "C27H53NO7P",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM744807"
-      }
     }
   ],
   "enzymes": [
@@ -250,7 +145,10 @@
       "name": "choline-phosphate cytidylyltransferase",
       "ec": [
         "2.7.7.15"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P49585"
+      }
     },
     {
       "id": "ec_1_14_11_72",
@@ -264,13 +162,6 @@
       "name": "[1-hydroxy-2-(trimethylamino)ethyl]phosphonate dioxygenase (glycine-",
       "ec": [
         "1.13.11.90"
-      ]
-    },
-    {
-      "id": "ec_2_7_7_41",
-      "name": "phosphatidate cytidylyltransferase",
-      "ec": [
-        "2.7.7.41"
       ]
     }
   ],
@@ -424,193 +315,27 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "phosphatidate cytidylyltransferase",
-      "ec": "2.7.7.41",
-      "substrates": [
-        {
-          "metabolite": "ctp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "1_2_dioctadecanoyl_sn_glycerol_3_phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "diphosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "1_2_dioctadecanoyl_sn_glycero_3_cytidine_5_dipho",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_7_7_41"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR181964"
+      "id": "xt_2_trimethylamino_ethyl_phosphonate_1r-1-hydroxy-2-trimet-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_trimethylamino_ethyl_phosphonate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1r-1-hydroxy-2-trimet-to-succinate"
+      },
+      "note": "Shares [2-(trimethylamino)ethyl]phosphonate with [(1R)-1-Hydroxy-2-(trimet… to succinate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR181964"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "Reaction MNXR189584",
-      "substrates": [
-        {
-          "metabolite": "cdp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "4_amino_2_methyl_5_phosphooxymethyl_pyrimidine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "ctp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "4_amino_5_hydroxymethyl_2_methylpyrimidine",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR189584"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR189584"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "Reaction MNXR160373",
-      "substrates": [
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "1_docosahexenoylglycerophosphocholine_delta_4_7",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "1_docosahexenoylglycerophosphocholine_delta_4_7",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "metanetx": "MNXR160373"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR160373"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "Reaction MNXR160374",
-      "substrates": [
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "2_linoleoylglycerophosphocholine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "2_linoleoylglycerophosphocholine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "metanetx": "MNXR160374"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR160374"
+            "db": "ChEBI",
+            "id": "CHEBI:149625"
           }
         ]
       }

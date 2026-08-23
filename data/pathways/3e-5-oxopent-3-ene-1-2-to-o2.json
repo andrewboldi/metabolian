@@ -1,0 +1,524 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3e-5-oxopent-3-ene-1-2-to-o2",
+  "name": "(3E)-5-oxopent-3-ene-1,2,… to O2",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from (3E)-5-oxopent-3-ene-1,2,5-tricarboxylic acid to O2, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR204029"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:47963"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3e_5_oxopent_3_ene_1_2_5_tricarboxylic_acid",
+      "name": "(3E)-5-oxopent-3-ene-1,2,5-tricarboxylic acid",
+      "short": "5-oxopent-3-ene-1,2…",
+      "formula": "C8H8O7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:47963"
+      }
+    },
+    {
+      "id": "2z_4e_5_hydroxypenta_2_4_diene_1_2_5_tricarboxy",
+      "name": "(2Z,4E)-5-hydroxypenta-2,4-diene-1,2,5-tricarboxylic acid",
+      "short": "(2Z,4E)-5-hydroxype…",
+      "formula": "C8H8O7",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM727083"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "2_hydroxy_5_carboxymethylmuconate_semialdehyde",
+      "name": "2-Hydroxy-5-carboxymethylmuconate semialdehyde",
+      "short": "2-Hydroxy-5-carboxy…",
+      "formula": "C8H8O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364427"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "3_4_dihydroxyphenylacetate",
+      "name": "3,4-dihydroxyphenylacetate",
+      "short": "3,4-dihydroxyphenyl…",
+      "formula": "C8H7O4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM645"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_312",
+      "name": "2-hydroxy-4-carboxymuconate semialdehyde hemiacetal dehydrogenase",
+      "ec": [
+        "1.1.1.312"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_60",
+      "name": "5-carboxymethyl-2-hydroxymuconic-semialdehyde dehydrogenase",
+      "ec": [
+        "1.2.1.60"
+      ]
+    },
+    {
+      "id": "ec_1_13_11_15",
+      "name": "3,4-dihydroxyphenylacetate 2,3-dioxygenase",
+      "ec": [
+        "1.13.11.15"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR204029",
+      "substrates": [
+        {
+          "metabolite": "3e_5_oxopent_3_ene_1_2_5_tricarboxylic_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2z_4e_5_hydroxypenta_2_4_diene_1_2_5_tricarboxy",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR204029"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR204029"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2-hydroxy-4-carboxymuconate semialdehyde hemiacetal dehydrogenase",
+      "ec": "1.1.1.312",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2z_4e_5_hydroxypenta_2_4_diene_1_2_5_tricarboxy",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxy_5_carboxymethylmuconate_semialdehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_312"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR152686"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR152686"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3,4-dihydroxyphenylacetate 2,3-dioxygenase",
+      "ec": "1.13.11.15",
+      "substrates": [
+        {
+          "metabolite": "2_hydroxy_5_carboxymethylmuconate_semialdehyde",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_4_dihydroxyphenylacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_15"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR198768"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198768"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3e_5_oxopent_3_ene_1_2_5_tricarboxylic_acid_ent-kaur-16-en-19-al-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3e_5_oxopent_3_ene_1_2_5_tricarboxylic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ent-kaur-16-en-19-al-to-h2o"
+      },
+      "note": "Shares (3E)-5-oxopent-3-ene-1,2,5-tricarboxylic acid with ent-kaur-16-en-19-al to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:47963"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2z_4e_5_hydroxypenta_2_4_diene_1_2_5_tricarboxy_nadh-to-5-carboxy-2-oxohept-3-ene",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2z_4e_5_hydroxypenta_2_4_diene_1_2_5_tricarboxy"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-5-carboxy-2-oxohept-3-ene"
+      },
+      "note": "Shares (2Z,4E)-5-hydroxypenta-2,4-diene-1,2,5-tricarboxylic acid with NADH to 5-Carboxy-2-oxohept-3-ene….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM727083"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2z_4e_5_hydroxypenta_2_4_diene_1_2_5_tricarboxy_nadh-to-nad-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2z_4e_5_hydroxypenta_2_4_diene_1_2_5_tricarboxy"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-nad-null"
+      },
+      "note": "Shares (2Z,4E)-5-hydroxypenta-2,4-diene-1,2,5-tricarboxylic acid with NADH to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM727083"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2z_4e_5_hydroxypenta_2_4_diene_1_2_5_tricarboxy_nadh-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2z_4e_5_hydroxypenta_2_4_diene_1_2_5_tricarboxy"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-nadph"
+      },
+      "note": "Shares (2Z,4E)-5-hydroxypenta-2,4-diene-1,2,5-tricarboxylic acid with NADH to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM727083"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_hydroxy_5_carboxymethylmuconate_semialdehyde_nadh-to-5-carboxy-2-oxohept-3-ene",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_hydroxy_5_carboxymethylmuconate_semialdehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-5-carboxy-2-oxohept-3-ene"
+      },
+      "note": "Shares 2-Hydroxy-5-carboxymethylmuconate semialdehyde with NADH to 5-Carboxy-2-oxohept-3-ene….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364427"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_4_dihydroxyphenylacetate_3-oxo-24-ethyl-26-al-chol-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_4_dihydroxyphenylacetate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-oxo-24-ethyl-26-al-chol-to-nadph"
+      },
+      "note": "Shares 3,4-dihydroxyphenylacetate with 3-oxo-24-ethyl-26-al-chol… to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM645"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_4_dihydroxyphenylacetate_5-deoxyadenosine-to-hop-22-29-ene",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_4_dihydroxyphenylacetate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-deoxyadenosine-to-hop-22-29-ene"
+      },
+      "note": "Shares 3,4-dihydroxyphenylacetate with 5'-deoxyadenosine to hop-22(29)-ene.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM645"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_4_dihydroxyphenylacetate_d-threo-3-methylmalic-acid-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_4_dihydroxyphenylacetate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-threo-3-methylmalic-acid-to-o2"
+      },
+      "note": "Shares 3,4-dihydroxyphenylacetate with D-threo-3-methylmalic acid to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM645"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_4_dihydroxyphenylacetate_h-to-4-methylcatechol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_4_dihydroxyphenylacetate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-4-methylcatechol"
+      },
+      "note": "Shares 3,4-dihydroxyphenylacetate with H to 4-methylcatechol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM645"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_4_dihydroxyphenylacetate_nadh-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_4_dihydroxyphenylacetate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-nadph"
+      },
+      "note": "Shares 3,4-dihydroxyphenylacetate with NADH to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM645"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_4_dihydroxyphenylacetate_s-reticuline-to-h2o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_4_dihydroxyphenylacetate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-reticuline-to-h2o2"
+      },
+      "note": "Shares 3,4-dihydroxyphenylacetate with (S)-reticuline to H2O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM645"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_4_dihydroxyphenylacetate_udp-to-3beta-14beta-dihydroxy-5b",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_4_dihydroxyphenylacetate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-3beta-14beta-dihydroxy-5b"
+      },
+      "note": "Shares 3,4-dihydroxyphenylacetate with UDP to 3beta,14beta-dihydroxy-5b….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM645"
+          }
+        ]
+      }
+    }
+  ]
+}

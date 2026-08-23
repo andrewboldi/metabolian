@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway gdp-2-acetamido-2-deoxy-b-to-h2o "GDP-2-acetamido-2-deoxy-b… to H2O" {
-  spacing 200
+  spacing 284
 
   spine at 0,0 {
     gdp_2_acetamido_2_deoxy_beta_mannuronate
@@ -18,49 +18,133 @@ pathway gdp-2-acetamido-2-deoxy-b-to-h2o "GDP-2-acetamido-2-deoxy-b… to H2O" {
 
   branch from gdp side left {
     gdp
-    <-> ec_2_7_1_3 [2.7.1.3] +d_fructofuranose_1_phosphate +h +keto_d_fructose
+    <-> . +5_6_7_8_tetrahydrosarcinapterin +h +phosphate +5_6_7_8_tetrahydromethanopterin +l_glutamate
     gtp
   }
 
   branch from gdp side right {
     gdp
-    <-> ec_2_7_1_81 [2.7.1.81] +5r_5_phosphooxy_l_lysine +gtp
-    threo_5_hydroxy_l_lysine
+    <-> ec_6_2_1_4 [6.2.1.4] +itaconyl_coa +phosphate +gtp +coa
+    itaconate
   }
 
   branch from h side left {
     h
-    <-> . +gdp_guluronate
-    gdp_d_mannuronate
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    pc_18_3_9z_12z_15z_18_2_9z_12z
   }
 
   branch from h side right {
     h
-    <-> ec_5_5_1_7 [5.5.1.7] +2_chloromuconolactone
-    2e_4z_2_chloromuconate
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_9z_octadecenoyl_2_9z_12z_15z_octadecatrienoyl
   }
 
   branch from h2o side left {
     h2o
-    <-> . +glucose +s_4_hydroxymandelonitrile
-    dhurrin
+    <-> . +l_valine +l_tryptophan
+    valyl_tryptophanyl_valine
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_2_3_1_86 [2.3.1.86] +o_s_3r_hydroxyoctadecanoylpantetheine_4_phosphor
-    o_s_2e_octadecenoylpantetheine_4_phosphoryl_seri
+    <-> . +l_valine
+    valyl_valine
   }
 
   branch from atp side left {
     atp
-    <-> ec_6_3_2_1 [6.3.2.1] +diphosphate +pantoyltaurine +amp +r_pantoate
-    taurine
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    pc_18_2_9z_12z_18_3_9z_12z_15z
   }
 
   branch from atp side right {
     atp
-    <-> ec_6_3_2_1 [6.3.2.1] +diphosphate +pantoylglycine +amp +r_pantoate
-    glycine
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph
+  }
+
+  branch from gdp side left {
+    gdp
+    <-> ec_2_7_1_36 [2.7.1.36] +h +r_5_phosphomevalonate +gtp
+    r_mevalonate
+  }
+
+  branch from gdp side right {
+    gdp
+    <-> ec_2_7_1_21 [2.7.1.21] +h +dtmp +gtp
+    thymidine
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_palmitoyl_2_9z_12z_15z_octadecatrienoyl_sn_gly
+  }
+
+  branch from l_threonine side left {
+    l_threonine
+    <-> ec_3_5_1_14 [3.5.1.14] +n_acetyl_l_glutamate +h +h2o
+    pyruvate
+  }
+
+  branch from l_threonine side right {
+    l_threonine
+    <-> . +diphosphate +tabtoxin +h +amp +atp
+    tabtoxinine_lactam
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +4_dephosphorylated_1_petn_kdo_lipid_a +r_3_tetradecanoyloxy_hexadecanoic_acid
+    h_pylori_kdo_lipid_a
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_4_2_1_139 [4.2.1.139] +pterocarpan
+    4r_4_2_dihydroxyisoflavan
+  }
+
+  branch from adp side left {
+    adp
+    <-> ec_3_6_3_1 [3.6.3.1] +h +phosphate +atp +h2o
+    1_2_dipalmitoyl_sn_glycero_3_phospho_1_sn_glycer
+  }
+
+  branch from adp side right {
+    adp
+    <-> ec_3_6_3_1 [3.6.3.1] +h +phosphate +atp +h2o
+    16_0_t16_1_pg
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +atp +h2o
+    18_0_t16_1_pg
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +atp +h2o
+    1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    18_3_16_3_pa
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    1_stearoyl_2_linoleoyl_sn_glycero_3_phosphate
   }
 }

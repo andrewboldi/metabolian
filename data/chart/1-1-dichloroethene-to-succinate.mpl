@@ -22,18 +22,6 @@ pathway 1-1-dichloroethene-to-succinate "1,1-dichloroethene to succinate" {
     2_deoxyadenosine_5_monophosphate_1
   }
 
-  branch from hydrogen_acceptor side left {
-    hydrogen_acceptor
-    <-> . +5_n_glycyl_dtmp_1 +h2o +glyoxylate +hydrogen_donor
-    5_aminomethyl_dump_zwitterion
-  }
-
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> . +malate +malonyl-coa +acetyl_coa +hydrogen_donor +sam +nadph +hplus +sah +co2 +nadp +coa +h2o
-    trihazone_a
-  }
-
   branch from 2_chlorooxirane side left {
     2_chlorooxirane
     <-> ec_1_14_13_69 [1.14.13.69] +nadh +h +chloroethene +o2 +h2o
@@ -42,14 +30,14 @@ pathway 1-1-dichloroethene-to-succinate "1,1-dichloroethene to succinate" {
 
   branch from fmn side right {
     fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    11_12_eet
+    <-> ec_1_14_14_197 [1.14.14.197] +testosterone +fmnh2 +o2 +h2o +hplus
+    11alpha_17beta_dihydroxyandrost_4_en_3_one
   }
 
   branch from fmn side left {
     fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    12_hete
+    <-> ec_1_14_14_197 [1.14.14.197] +11_deoxycorticosterone +fmnh2 +o2 +h2o +hplus
+    11_hydroxycorticosterone
   }
 
   branch from 1_n6_etheno_2_deoxyadenosine_5_monophosphate_1 side right {
@@ -70,27 +58,39 @@ pathway 1-1-dichloroethene-to-succinate "1,1-dichloroethene to succinate" {
     s_1_hydroxy_2_oxoethyl_l_cysteine
   }
 
-  branch from succinate side left {
-    succinate
-    <-> . +trihazone_a +akg +o2 +hplus +co2 +h2o
-    trihazone_d
+  branch from fmnh2 side left {
+    fmnh2
+    <-> . +11_deoxycorticosterone +o2 +fmn +h2o +hplus
+    6_hydroxy_11_deoxycorticosterone
   }
 
-  branch from succinate side right {
-    succinate
-    <-> . +5_methylcytidine_5_monophosphate_1 +akg +o2 +co2
-    5_hydroxymethylcytidine_5_monophosphate_1
+  branch from fmnh2 side right {
+    fmnh2
+    <-> . +luteolin_7_olate +o2 +fmn +h2o +hplus
+    tricetin
   }
 
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_242 [2.1.1.242] +guanosine_5_monophosphate_1 +sam +hplus
-    n2_methylguanosine_5_monophosphate_1
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_108 [1.14.14.108] +fmnh2 +idramantone +o2 +1_hydroxy_4_oxahomoadamantan_5_one +h2o
+    h
   }
 
-  branch from sah side right {
-    sah
-    <-> . +l_glutamine +sam +hplus
-    n5_methyl_l_glutamine
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_5 [1.14.14.5] +fmnh2 +3_n_morpholino_propanesulfonate +o2 +h +sulfite +h2o
+    3_n_morpholino_propanal
+  }
+
+  branch from glyoxal side left {
+    glyoxal
+    <-> . +dgtp
+    n2_1_hydroxy_2_oxoethyl_dgtp
+  }
+
+  branch from glyoxal side right {
+    glyoxal
+    <-> . +gtp
+    n2_1_hydroxy_2_oxoethyl_gtp
   }
 }

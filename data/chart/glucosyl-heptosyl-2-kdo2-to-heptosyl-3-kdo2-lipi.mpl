@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway glucosyl-heptosyl-2-kdo2-to-heptosyl-3-kdo2-lipi "glucosyl-(heptosyl)2-Kdo2… to (heptosyl)3-Kdo2-lipid…" {
-  spacing 274
+  spacing 232
 
   spine at 0,0 {
     glucosyl_heptosyl_2_kdo2_lipid_a
@@ -14,47 +14,5 @@ pathway glucosyl-heptosyl-2-kdo2-to-heptosyl-3-kdo2-lipi "glucosyl-(heptosyl)2-K
     glucosyl_heptosyl_3_kdo2_lipid_a_phosphate_e_col
     <-> . +udp +h -heptosyl_3_kdo2_lipid_a_phosphate_e_coli
     udp_alpha_d_glucose
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_tetracosanoyl_2_9z_12z_15z_octadecatrienoyl_sn
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_15z_tetracosenoyl_2_9z_12z_octadecadienoyl_sn
-  }
-
-  branch from adp side left {
-    adp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +phosphate +atp +h2o
-    24_1_18_3_pe
-  }
-
-  branch from adp side right {
-    adp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +phosphate +atp +h2o
-    ps_20_0_18_1_9z
-  }
-
-  branch from glucosyl_heptosyl_3_kdo2_lipid_a_phosphate_e_col side left {
-    glucosyl_heptosyl_3_kdo2_lipid_a_phosphate_e_col
-    <-> ec_2_4_1_17 [2.4.1.17] +udp +h +glucosyl_heptosyl_3_glucosyluronate_kdo2_lipid_a
-    udp_alpha_d_glucuronate
-  }
-
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> . +udp +ansamitocinoside_p3 +h
-    n_demethylansamitocin_p_3
-  }
-
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> . +udp +2_3_bis_o_sesterterpanyl_sn_glycero_1_phospho_1 +h
-    2_3_bis_o_sesterterpanyl_sn_glycero_1_phospho_1
   }
 }

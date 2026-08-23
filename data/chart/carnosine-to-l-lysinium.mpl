@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway carnosine-to-l-lysinium "carnosine to L-lysinium" {
-  spacing 180
+  spacing 168
 
   spine at 0,0 {
     carnosine
@@ -14,17 +14,5 @@ pathway carnosine-to-l-lysinium "carnosine to L-lysinium" {
     alanyl_l_lysinium
     <-> ec_3_4_13_4 [3.4.13.4] +h2o -l_lysinium
     alanine
-  }
-
-  branch from l_lysinium side left {
-    l_lysinium
-    <-> ec_4_1_1_18 [4.1.1.18] +hplus +co2
-    cadaverine
-  }
-
-  branch from l_lysinium side right {
-    l_lysinium
-    <-> ec_5_1_1_5 [5.1.1.5]
-    d_lysinium
   }
 }

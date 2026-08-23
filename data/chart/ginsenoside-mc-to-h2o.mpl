@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway ginsenoside-mc-to-h2o "ginsenoside Mc to H2O" {
-  spacing 182
+  spacing 224
 
   spine at 0,0 {
     ginsenoside_mc
@@ -24,14 +24,14 @@ pathway ginsenoside-mc-to-h2o "ginsenoside Mc to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> . +dca_cl
-    dehydrodiconiferyl_acid_aldehyde_gem_diol
+    <-> . +l_asparagine +l_methionine +l_phenylalanine
+    phenylalanyl_asparaginyl_methionine
   }
 
   branch from h2o side left {
     h2o
-    <-> . +dca_cl
-    dehydrodiconiferyl_acid_gem_diol
+    <-> . +l_aspartate +l_phenylalanine
+    phenylalanyl_aspartate
   }
 
   branch from l_arabinofuranose side right {
@@ -44,5 +44,47 @@ pathway ginsenoside-mc-to-h2o "ginsenoside Mc to H2O" {
     l_arabinofuranose
     <-> ec_1_1_1_46 [1.1.1.46] +nadh +l_arabinono_1_4_lactone +h
     nad
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> ec_2_4_1_25 [2.4.1.25] +d_glcp_1_4_d_glcp_1_4_d_glcp +d_maltose
+    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp
+  }
+
+  branch from glucose side left {
+    glucose
+    <-> ec_3_2_1_21 [3.2.1.21] +2r_2_hydroxy_2_methylbutanenitrile +h2o
+    lotaustralin
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +l_glutamine +l_phenylalanine
+    phenylalanyl_glutaminyl_phenylalanine
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +l_leucine +l_aspartate +l_phenylalanine
+    phenylalanyl_leucyl_aspartate
+  }
+
+  branch from l_arabinofuranose side right {
+    l_arabinofuranose
+    <-> ec_5_3_1_5 [5.3.1.5]
+    3s_4s_2_hydroxymethyl_oxolane_2_3_4_triol
+  }
+
+  branch from ginsenoside_f2 side left {
+    ginsenoside_f2
+    <-> ec_3_2_1_193 [3.2.1.193] +glucose +h2o
+    ginsenoside_rb1
+  }
+
+  branch from ginsenoside_f2 side right {
+    ginsenoside_f2
+    <-> ec_3_2_1_195 [3.2.1.195] +h2o +glucose
+    gypenoside_xvii
   }
 }

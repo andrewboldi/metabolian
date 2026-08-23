@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1d-myo-inositol-to-s-adenosyl-l-homocysteine "1D-myo-inositol… to S-adenosyl-L-homocysteine" {
-  spacing 260
+  spacing 236
 
   spine at 0,0 {
     1d_myo_inositol_1_2_3_4_5_pentakisphosphate
@@ -20,29 +20,5 @@ pathway 1d-myo-inositol-to-s-adenosyl-l-homocysteine "1D-myo-inositol… to S-ad
     myo_inositol
     <-> ec_2_1_1_39 [2.1.1.39] +sam -sah -hplus
     1d_3_o_methyl_myo_inositol
-  }
-
-  branch from phosphate side left {
-    phosphate
-    <-> . +h +adp +ursodeoxycholate +ursodeoxycholate +h2o
-    atp
-  }
-
-  branch from phosphate side right {
-    phosphate
-    <-> . +h +adp +atp +h2o
-    tauroursodeoxycholate
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +n_terminal_glycyl_l_lysyl_l_glutamate_1 +sam +hplus
-    n_terminal_n_n_n_trimethyl_l_glycyl_l_lysyl_l_gl
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +5_end_phopshomethylribonucleoside_1 +sam
-    5_end_bisphopshomethylribonucleoside
   }
 }

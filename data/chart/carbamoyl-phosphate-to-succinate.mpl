@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway carbamoyl-phosphate-to-succinate "carbamoyl phosphate to succinate" {
-  spacing 212
+  spacing 308
 
   spine at 0,0 {
     carbamoyl_phosphate
@@ -18,61 +18,157 @@ pathway carbamoyl-phosphate-to-succinate "carbamoyl phosphate to succinate" {
 
   branch from phosphate side left {
     phosphate
-    <-> . +beta_l_gulose_1_phosphate +h2o
-    l_gulopyranose
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +1_linoleoyl_sn_glycero_3_phosphoethanolamine +1_linoleoyl_sn_glycero_3_phosphoethanolamine +h2o
+    atp
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_1_3_29 [3.1.3.29] +lyxose +h2o
-    d_ribulose_5_phosphate
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +atp +h2o
+    lysope_18_3_9z_12z_15z_0_0
   }
 
   branch from h side left {
     h
-    <-> . +l_glyceraldehyde_3_phosphate +nadph +sn_glycerol_3_phosphate
-    nadp
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    2_hexadecanoyl_sn_glycero_3_phospho_1_sn_glycero
   }
 
   branch from h side right {
     h
-    <-> ec_2_5_1_18 [2.5.1.18] +bromoacetate +glutathione +bromide
-    2_s_glutathionyl_acetate
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    2_16_1_lysophosphatidylglycerol
   }
 
   branch from h2o side left {
     h2o
-    <-> . +o_s_3r_9z_3_hydroxyoctacosenoylpantetheine_4_pho
-    o_s_2e_9z_octacosadienoylpantetheine_4_phosphory
+    <-> ec_1_13_11_34 [1.13.11.34] +5_s_hydroperoxy_18_r_hydroxy_6e_8z_11z_14z_16e_i
+    7e_9e_11z_14z_18r_16e_5s_6s_5_6_epoxyicosa_15_h
   }
 
   branch from h2o side right {
     h2o
-    <-> . +o_s_3r_5z_3_hydroxytetracosenoylpantetheine_4_ph
-    o_s_2e_5z_tetracosadienoylpantetheine_4_phosphor
+    <-> . +ferroheme_op2
+    ferroheme_op1
   }
 
   branch from co2 side left {
     co2
-    <-> . +protoanemonin +chloride
-    r_2_chloro_5_oxo_2_5_dihydro_2_furyl_acetate
+    <-> . +acetyl_coa +malonyl_coa +h +6_2_4_dihydroxy_6_methylphenyl_4_hydroxypyran_2 +h2o
+    coa
   }
 
   branch from co2 side right {
     co2
-    <-> ec_4_1_1_64 [4.1.1.64] +l_alanine +acetone +h +2_aminoisobutanoic_acid
-    pyruvate
+    <-> . +malonyl_coa +2_hydroxybenzoyl_coa +h +coa
+    3_oxomelilotoyl_coa
   }
 
   branch from succinate side left {
     succinate
-    <-> ec_3_5_1_3 [3.5.1.3] +2_methylbutanedioic_acid +h2o +h
-    methanol
+    <-> ec_1_14_20_14 [1.14.20.14] +ambiguine_d +co2 +h2o +2_oxoglutarate +h +o2 +chloride
+    ambiguine_j
   }
 
   branch from succinate side right {
     succinate
-    <-> ec_1_14_11_17 [1.14.11.17] +2_oxoglutarate +3_n_morpholino_propanesulfonate +o2 +co2 +h +sulfite
-    3_n_morpholino_propanal
+    <-> . +ambiguine_d +co2 +h2o +2_oxoglutarate +h +o2 +chloride
+    ambiguine_j
+  }
+
+  branch from carbamoyl_phosphate side left {
+    carbamoyl_phosphate
+    <-> . +ansamitocinoside_p3 +phosphate
+    4_carbamoyl_ansamitocinoside_p3
+  }
+
+  branch from carbamoyl_phosphate side right {
+    carbamoyl_phosphate
+    <-> . +l_ornithine +h +phosphate
+    l_citrulline
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +atp +h2o
+    1_9z_octadecenoyl_sn_glycero_3_phospho_1_sn_glyc
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +atp +h2o
+    pg_18_2_9z_12z_0_0
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    pg_18_3_9z_12z_15z_0_0
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_9z_12z_15z_octadecatrienoyl_2_hexadecanoyl_sn
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +ferroheme_o
+    ferroheme_ot
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +2_deoxy_d_ribonic_acid
+    2_deoxy_ribono_1_5_lactone
+  }
+
+  branch from 2_oxoglutarate side left {
+    2_oxoglutarate
+    <-> ec_1_14_20_9 [1.14.20.9] +2s_3_4_hydroxyphenyl_2_isocyanopropanoate +o2 +co2 +succinate +h2o
+    2e_3_4_hydroxyphenyl_2_isocyanoprop_2_enoate
+  }
+
+  branch from 2_oxoglutarate side right {
+    2_oxoglutarate
+    <-> ec_1_14_20_10 [1.14.20.10] +2s_3_4_hydroxyphenyl_2_isocyanopropanoate +h +o2 +co2 +succinate +h2o
+    e_4_2_isocyanovinyl_phenol
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_14_13_124 [1.14.13.124] +co2 +n_benzylformamide +nadp +h2o +h +l_phenylalanine
+    nadph
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +5_epi_aristolochene +h +nadph +1_deoxycapsidiol +h2o
+    nadp
+  }
+
+  branch from co2 side left {
+    co2
+    <-> . +n_benzylformamide +h2o +h
+    n_n_dihydroxy_l_phenylalanine
+  }
+
+  branch from co2 side right {
+    co2
+    <-> . +h2 +h +h2o
+    carbon_monoxide
+  }
+
+  branch from succinate side left {
+    succinate
+    <-> . +1s_1_2s_2_amino_4_methylpentanamido_ethyl_metho +2_oxoglutarate +o2 +co2 +h2o
+    1_2s_2_amino_4_methylpentanamido_ethenyl_methoxy
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> . +7s_11s_16s_7_hydroxy_ent_kauran_11_16_epoxy_19 +co2 +2_oxoglutarate +o2
+    11s_16s_ent_kauran_11_16_epoxy_19_oate
   }
 }

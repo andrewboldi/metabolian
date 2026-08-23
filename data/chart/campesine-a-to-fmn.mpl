@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway campesine-a-to-fmn "campesine A to FMN" {
-  spacing 158
+  spacing 152
 
   spine at 0,0 {
     campesine_a
@@ -14,11 +14,5 @@ pathway campesine-a-to-fmn "campesine A to FMN" {
     campesine_d
     <-> . +fmnh2 +o2 -fmn -h2o -hplus
     campesine_g
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +alanine +sam +hplus
-    n_methyl_l_alanine
   }
 }

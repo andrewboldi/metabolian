@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-4-naphthoquinone-2-carb-to-s-adenosyl-l-homocy "1,4-naphthoquinone-2-carb… to S-adenosyl-L-homocysteine" {
-  spacing 290
+  spacing 320
 
   spine at 0,0 {
     1_4_naphthoquinone_2_carboxylate
@@ -18,43 +18,73 @@ pathway 1-4-naphthoquinone-2-carb-to-s-adenosyl-l-homocy "1,4-naphthoquinone-2-c
 
   branch from 2_phytyl_1_4_naphthoquinone side left {
     2_phytyl_1_4_naphthoquinone
-    <-> ec_1_14_18_3 [1.14.18.3] +2_phytyl_1_4_dihydroxynaphthalene +o2 +methane +h2o
-    methanol
-  }
-
-  branch from 2_phytyl_1_4_naphthoquinone side right {
-    2_phytyl_1_4_naphthoquinone
     <-> ec_1_1_5_3 [1.1.5.3] +2_phytyl_1_4_dihydroxynaphthalene +dihydroxyacetone_phosphate
     sn_glycerol_3_phosphate
   }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_139 [4.2.3.139] +fpp
-    valerena_4_7_11_diene
-  }
-
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_138 [4.2.3.138] +fpp +h2o
-    epi_bisabolol
+    <-> . +gpp
+    thujene
   }
 
-  branch from phyllohydroquinone side left {
+  branch from ppi side left {
+    ppi
+    <-> . +fpp
+    elemene
+  }
+
+  branch from phyllohydroquinone side right {
     phyllohydroquinone
     <-> . +nadh +hplus +nad
     phylloquinone
   }
 
+  branch from sah side left {
+    sah
+    <-> . +esculetin +sam +hplus
+    isoscopoletin
+  }
+
   branch from sah side right {
     sah
-    <-> ec_2_1_1_168 [2.1.1.168] +uridine_5_monophosphate_1 +sam +hplus
-    2_o_methyluridine_5_monophosphate_1
+    <-> . +esculetin +sam +hplus
+    scopoletin
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +fpp
+    germacrene_d
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +2_cis_6_cis_farnesyl_diphosphate
+    germacrene_c
+  }
+
+  branch from sam side left {
+    sam
+    <-> . +isoscopoletin +sah +hplus
+    scoparone
+  }
+
+  branch from sam side right {
+    sam
+    <-> . +7_8_dihydroxycoumarin +sah +hplus
+    7_hydroxy_8_methoxycoumarin
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_170 [2.1.1.170] +guanosine_5_monophosphate_1 +sam
-    n7_methylguanosine_5_phosphate_zwitterion
+    <-> . +2_deoxycytidine_5_monophosphate_1 +sam +atp +h2o +adp +pi +hplus
+    5_methyl_dcmp_1
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_380 [2.1.1.380] +3_amino_2_4_dihydroxybenzoate +sam +hplus
+    3_amino_2_hydroxy_4_methoxybenzoate
   }
 }

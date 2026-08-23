@@ -122,6 +122,46 @@
       "xrefs": {
         "chebi": "CHEBI:57287"
       }
+    },
+    {
+      "id": "22_methyltricosan_1_ol",
+      "name": "22-methyltricosan-1-ol",
+      "short": "22-methyltricosan-1…",
+      "formula": "C24H50O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:84916"
+      }
+    },
+    {
+      "id": "1_o_22_methyltricosyl_oleate",
+      "name": "1-O-22-methyltricosyl oleate",
+      "short": "1-O-22-methyltricos…",
+      "formula": "C42H82O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:232013"
+      }
+    },
+    {
+      "id": "24_methylpentacosan_1_ol",
+      "name": "24-methylpentacosan-1-ol",
+      "short": "24-methylpentacosan…",
+      "formula": "C26H54O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:84917"
+      }
+    },
+    {
+      "id": "1_o_24_methylpentacosyl_oleate",
+      "name": "1-O-24-methylpentacosyl oleate",
+      "short": "1-O-24-methylpentac…",
+      "formula": "C44H86O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:232014"
+      }
     }
   ],
   "enzymes": [],
@@ -243,6 +283,350 @@
           {
             "db": "Rhea",
             "id": "RHEA:37135"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "22-methyltricosan-1-ol + (9Z)-octadecenoyl-CoA = 1-O-22-methyltricosyl (9Z)-octadecenoa...",
+      "equation": "22-methyltricosan-1-ol + (9Z)-octadecenoyl-CoA = 1-O-22-methyltricosyl (9Z)-octadecenoate + CoA",
+      "substrates": [
+        {
+          "metabolite": "22_methyltricosan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oleoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_o_22_methyltricosyl_oleate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:81815"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81815"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "24-methylpentacosan-1-ol + (9Z)-octadecenoyl-CoA = 1-O-24-methylpentacosyl (9Z)-octadec...",
+      "equation": "24-methylpentacosan-1-ol + (9Z)-octadecenoyl-CoA = 1-O-24-methylpentacosyl (9Z)-octadecenoate + CoA",
+      "substrates": [
+        {
+          "metabolite": "24_methylpentacosan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oleoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_o_24_methylpentacosyl_oleate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:81819"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81819"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_1_2_di_9z_12z_octadecadienoyl_sn_glycero_3_phosp_1-2-2-trilinoleoyl-1-mo-to-tetralinoleoyl-cardio",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_2_di_9z_12z_octadecadienoyl_sn_glycero_3_phosp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-2-trilinoleoyl-1-mo-to-tetralinoleoyl-cardio"
+      },
+      "note": "Shares 1,2-di-[(9Z,12Z)-octadecadienoyl]-sn-glycero-3-phosphocholine with 1,2,2'-trilinoleoyl-1'-mo… to tetralinoleoyl cardiolipin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:42027"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_2_di_9z_12z_octadecadienoyl_sn_glycero_3_phosp_1-2-di-9z-12z-octadeca-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_2_di_9z_12z_octadecadienoyl_sn_glycero_3_phosp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-di-9z-12z-octadeca-to-h2o"
+      },
+      "note": "Shares 1,2-di-[(9Z,12Z)-octadecadienoyl]-sn-glycero-3-phosphocholine with 1,2-di-[(9Z,12Z)-octadeca… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:42027"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_2_di_9z_12z_octadecadienoyl_sn_glycero_3_phosp_1-2-di-palmitoleoyl-2-sn-to-10-hydroxyoctadecano",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_2_di_9z_12z_octadecadienoyl_sn_glycero_3_phosp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-di-palmitoleoyl-2-sn-to-10-hydroxyoctadecano"
+      },
+      "note": "Shares 1,2-di-[(9Z,12Z)-octadecadienoyl]-sn-glycero-3-phosphocholine with 1,2-di-palmitoleoyl-2-sn-… to 10-hydroxyoctadecanoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:42027"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_2_di_9z_12z_octadecadienoyl_sn_glycero_3_phosp_1-2-dilinoleoyl-sn-glycer-to-glycerol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_2_di_9z_12z_octadecadienoyl_sn_glycero_3_phosp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-dilinoleoyl-sn-glycer-to-glycerol"
+      },
+      "note": "Shares 1,2-di-[(9Z,12Z)-octadecadienoyl]-sn-glycero-3-phosphocholine with 1,2-dilinoleoyl-sn-glycer… to glycerol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:42027"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_2_di_9z_12z_octadecadienoyl_sn_glycero_3_phosp_1-hexadecanoyl-2-9z-12z-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_2_di_9z_12z_octadecadienoyl_sn_glycero_3_phosp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-hexadecanoyl-2-9z-12z-to-h2o"
+      },
+      "note": "Shares 1,2-di-[(9Z,12Z)-octadecadienoyl]-sn-glycero-3-phosphocholine with 1-hexadecanoyl-2-(9Z,12Z-… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:42027"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_2_di_9z_12z_octadecadienoyl_sn_glycero_3_phosp_4-deoxy-2-o-sulfo-beta-l-to-n-sulfo-d-glucosamin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_2_di_9z_12z_octadecadienoyl_sn_glycero_3_phosp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-deoxy-2-o-sulfo-beta-l-to-n-sulfo-d-glucosamin"
+      },
+      "note": "Shares 1,2-di-[(9Z,12Z)-octadecadienoyl]-sn-glycero-3-phosphocholine with 4-deoxy-2-O-sulfo-beta-L-… to N-sulfo-D-glucosamine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:42027"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_oleoyl_2_linoleoyl_sn_glycero_3_phosphocholine_3-palmitoyl-sn-glycerol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_oleoyl_2_linoleoyl_sn_glycero_3_phosphocholine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-palmitoyl-sn-glycerol-to-h2o"
+      },
+      "note": "Shares 1-oleoyl-2-linoleoyl-sn-glycero-3-phosphocholine with 3-palmitoyl-sn-glycerol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74670"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_linoleoyl_sn_glycero_3_phosphocholine_1-2-2-trilinoleoyl-1-mo-to-tetralinoleoyl-cardio",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_linoleoyl_sn_glycero_3_phosphocholine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-2-trilinoleoyl-1-mo-to-tetralinoleoyl-cardio"
+      },
+      "note": "Shares 1-linoleoyl-sn-glycero-3-phosphocholine with 1,2,2'-trilinoleoyl-1'-mo… to tetralinoleoyl cardiolipin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28733"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_linoleoyl_sn_glycero_3_phosphocholine_1-2-di-9z-12z-octadeca-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_linoleoyl_sn_glycero_3_phosphocholine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-di-9z-12z-octadeca-to-h2o"
+      },
+      "note": "Shares 1-linoleoyl-sn-glycero-3-phosphocholine with 1,2-di-[(9Z,12Z)-octadeca… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28733"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_linoleoyl_sn_glycero_3_phosphocholine_1-2-di-palmitoleoyl-2-sn-to-10-hydroxyoctadecano",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_linoleoyl_sn_glycero_3_phosphocholine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-di-palmitoleoyl-2-sn-to-10-hydroxyoctadecano"
+      },
+      "note": "Shares 1-linoleoyl-sn-glycero-3-phosphocholine with 1,2-di-palmitoleoyl-2-sn-… to 10-hydroxyoctadecanoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28733"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_linoleoyl_sn_glycero_3_phosphocholine_1-2-dilinoleoyl-sn-glycer-to-glycerol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_linoleoyl_sn_glycero_3_phosphocholine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-dilinoleoyl-sn-glycer-to-glycerol"
+      },
+      "note": "Shares 1-linoleoyl-sn-glycero-3-phosphocholine with 1,2-dilinoleoyl-sn-glycer… to glycerol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28733"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_linoleoyl_sn_glycero_3_phosphate_1-arachidonoyl-2-palmitoy-to-choline",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_linoleoyl_sn_glycero_3_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-arachidonoyl-2-palmitoy-to-choline"
+      },
+      "note": "Shares 1-linoleoyl-sn-glycero-3-phosphate with 1-arachidonoyl-2-palmitoy… to choline.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74547"
           }
         ]
       }

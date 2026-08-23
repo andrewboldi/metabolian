@@ -18,38 +18,38 @@ pathway 4alpha-carboxy-5alpha-cho-to-nadp "4alpha-carboxy-5alpha-cho… to NADP"
 
   branch from nadh side left {
     nadh
-    <-> ec_1_14_13_230 [1.14.13.230] +h +pentane +o2 +nad +h2o
-    pentan_1_ol
+    <-> ec_1_1_1_415 [1.1.1.415] +h +narcotoline +nad
+    narcotoline_hemiacetal
   }
 
   branch from nadh side right {
     nadh
-    <-> . +butanal +o2 +nad +h2o
-    butanoate
+    <-> . +h +1_1_dichloro_2_4_chloro_2_3_dihydroxyphenyl_2_4 +nad
+    cis_3_2_2_dichloro_1_4_chlorophenyl_vinyl_6_chlo
   }
 
   branch from co2 side left {
     co2
-    <-> . +hinokiresinol
-    4_coumaryl_4_coumarate
+    <-> . +malonyl_coa +h +heneicosanoyl_coenzyme_a +3_oxotricosanoyl_coenzyme_a
+    coa
   }
 
   branch from co2 side right {
     co2
-    <-> . +4_coumaryl_4_coumarate
-    7r_trans_hinokiresinol
+    <-> . +4_6_dioxoheptanoic_acid
+    3_5_dioxooctanedioic_acid
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_2_1_84 [1.2.1.84] +h +11e_tetradecen_1_ol +coa +nadph
-    trans_tetradec_11_enoyl_coa
+    <-> . +nonadecanoyl_coa +h +nadph
+    2e_nonadecenoyl_coenzyme_a
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_2_1_84 [1.2.1.84] +tetradecanoyl_coa +h +nadph +coa
-    tetradecan_1_ol
+    <-> . +h +nadph +3_oxoheneicosanoyl_coenzyme_a
+    3_hydroxyheneicosanoyl_coenzyme_a
   }
 
   branch from 5alpha_cholesta_7_24_dien_3beta_ol side left {
@@ -62,5 +62,77 @@ pathway 4alpha-carboxy-5alpha-cho-to-nadp "4alpha-carboxy-5alpha-cho… to NADP"
     5alpha_cholesta_7_24_dien_3beta_ol
     <-> ec_1_14_21_6 [1.14.21.6] +nadh +h +o2 +nad +h2o
     7_dehydrodesmosterol
+  }
+
+  branch from nad side left {
+    nad
+    <-> . +nadh +aurachin_b +h +o2 +h2o
+    aurachin_b_epoxide
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_14_13_246 [1.14.13.246] +nadh +h +o2 +3beta_hydroxy_4_4_dimethylsteroid +h2o
+    3beta_hydroxy_4alpha_methylsteroid_4beta_carboxy
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> ec_1_1_1_417 [1.1.1.417] +co2 +h +3beta_hydroxy_4alpha_methylsteroid_4beta_carboxy +nad
+    4alpha_methyl_3_oxosteroid
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_1_1_170 [1.1.1.170] +co2 +h +3_oxosteroid +nad
+    3beta_hydroxysteroid_4alpha_carboxylate
+  }
+
+  branch from co2 side left {
+    co2
+    <-> ec_1_14_14_42 [1.14.14.42] +an_omega_methylsulfanyl_e_alkanal_oxime +h2o +h
+    an_l_n_n_dihydroxypolyhomomethionine
+  }
+
+  branch from co2 side right {
+    co2
+    <-> . +urea_1_carboxylate +h
+    1_3_dicarboxyurea
+  }
+
+  branch from h side left {
+    h
+    <-> . +tetradecanoyl_coa +fad +h2o +fadh2
+    3s_hydroxytetradecanoyl_coa
+  }
+
+  branch from h side right {
+    h
+    <-> . +fadh2 +3_hydroxyhexadecenoyl_coenzyme_a +fad +h2o
+    9z_hexadecenoyl_coa
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +h +2e_henicosenoyl_coa +nadp
+    heneicosanoyl_coenzyme_a
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +9e_myristelaidoyl_coa +nadp +h2o +h +o2
+    tetradecanoyl_coa
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +5z_tetradecenoyl_coa +h2o +tetradecanoyl_coa +h +nadph
+    o2
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +7z_hexadecenoyl_coa +h2o +h +o2 +nadph
+    hexadecanoyl_coa
   }
 }

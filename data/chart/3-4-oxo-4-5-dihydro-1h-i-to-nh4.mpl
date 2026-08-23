@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-4-oxo-4-5-dihydro-1h-i-to-nh4 "3-(4-oxo-4,5-dihydro-1H-i… to NH4" {
-  spacing 268
+  spacing 232
 
   spine at 0,0 {
     3_4_oxo_4_5_dihydro_1h_imidazol_5_yl_propanoic_a
@@ -14,41 +14,5 @@ pathway 3-4-oxo-4-5-dihydro-1h-i-to-nh4 "3-(4-oxo-4,5-dihydro-1H-i… to NH4" {
     5_formiminotetrahydrofolate
     <-> ec_4_3_1_4 [4.3.1.4] +h -nh4
     6r_5_10_methenyltetrahydrofolate
-  }
-
-  branch from h side left {
-    h
-    <-> . +s_adenosyl_l_homocysteine +cerivastatin_m31 +h2o +cerivastatin_m23
-    s_adenosyl_l_methionine
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    dextrin
-  }
-
-  branch from l_glutamate side left {
-    l_glutamate
-    <-> . +atp +pentaglutamyl_folate +hexaglutamyl_folate +phosphate
-    adp
-  }
-
-  branch from l_glutamate side right {
-    l_glutamate
-    <-> . +h +pentaglutamyl_folate +h2o
-    hexaglutamyl_folate
-  }
-
-  branch from nh4 side left {
-    nh4
-    <-> . +3_4_hydroxyphenyl_pyruvate
-    l_dopa
-  }
-
-  branch from nh4 side right {
-    nh4
-    <-> . +5_amino_6_5_phospho_d_ribosylamino_uracil +h +h2o
-    2_5_diamino_6_ribosylamino_4_3h_pyrimidinone_5_p
   }
 }

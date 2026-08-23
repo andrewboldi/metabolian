@@ -18,25 +18,79 @@ pathway 3-hydroxy-16-methoxy-2-3-to-vindolinium "3-hydroxy-16-methoxy-2,3-… to
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_115 [2.1.1.115] +1_benzyl_1_2_3_4_tetrahydroisoquinolin_2_ium +sam +hplus
-    1_benzyl_2_methyl_1_2_3_4_tetrahydroisoquinolini
+    <-> ec_2_1_1_16 [2.1.1.16] +1_acyl_2_z_9_10_enoyl_sn_glycero_3_phospholipid +sam +hplus
+    1_acyl_2_10_methylenealkanoyl_sn_3_glycerophosph
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_142 [2.1.1.142] +cycloartenol +sam +hplus
-    cyclolaudenol
+    <-> ec_2_1_1_76 [2.1.1.76] +quercetin_7_olate +sam +hplus
+    3_4_5_trihydroxy_3_methoxyflavon_7_olate
   }
 
   branch from succinate side left {
     succinate
-    <-> ec_1_14_11_4 [1.14.11.4] +l_lysinium +akg +o2 +co2
-    5r_5_hydroxy_l_lysine_1
+    <-> ec_2_8_3_5 [2.8.3.5] +3_oxo_monocarboxylic_acid_anion +succinyl_coa
+    3_oxoacyl_coa
   }
 
   branch from succinate side right {
     succinate
-    <-> ec_1_14_11_2 [1.14.11.2] +l_proline +akg +o2 +co2
-    trans_4_hydroxy_l_proline
+    <-> ec_1_14_11_20 [1.14.11.20] +3_hydroxy_16_methoxy_2_3_dihydrotabersoninium +akg +o2 +co2
+    11_o_demethyl_17_o_deacetylvindolinium
+  }
+
+  branch from 3_hydroxy_16_methoxy_2_3_dihydrotabersoninium side left {
+    3_hydroxy_16_methoxy_2_3_dihydrotabersoninium
+    <-> ec_1_1_99_41 [1.1.99.41] +hydrogen_acceptor +hydrogen_donor
+    3r_1_2_didehydro_3_hydroxy_16_methoxy_2_3_dihyd
+  }
+
+  branch from sam side right {
+    sam
+    <-> ec_2_1_1_97 [2.1.1.97] +3_hydroxyanthranilate +sah +hplus
+    3_hydroxy_4_methylanthranilate
+  }
+
+  branch from sam side left {
+    sam
+    <-> ec_2_1_1_6 [2.1.1.6] +catechols +sah +hplus
+    guaiacols
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_150 [2.1.1.150] +7_hydroxyisoflavones +sam +hplus
+    7_methoxyisoflavones
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_9 [2.1.1.9] +thiol +sam +hplus
+    methyl_sulfide
+  }
+
+  branch from akg side right {
+    akg
+    <-> ec_2_2_1_5 [2.2.1.5] +glyoxylate +hplus +co2
+    2_hydroxy_3_oxoadipate
+  }
+
+  branch from akg side left {
+    akg
+    <-> ec_2_6_1_5 [2.6.1.5] +tyrosine +glutamate
+    3_4_hydroxyphenyl_pyruvate
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> ec_1_14_11_39 [1.14.11.39] +l_asparagine +akg +o2 +co2
+    3s_3_hydroxy_l_asparagine
+  }
+
+  branch from succinate side left {
+    succinate
+    <-> ec_1_14_11_32 [1.14.11.32] +codeine +akg +o2 +formaldehyde +co2
+    morphine
   }
 }

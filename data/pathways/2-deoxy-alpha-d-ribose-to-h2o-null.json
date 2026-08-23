@@ -1,0 +1,526 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-deoxy-alpha-d-ribose-to-h2o-null",
+  "name": "2-deoxy-alpha-D-ribose… to H2O",
+  "category": "other",
+  "summary": "A 3-step route from 2-deoxy-alpha-D-ribose 1-phosphate to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR198002"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_deoxy_alpha_d_ribose_1_phosphate",
+      "name": "2-deoxy-alpha-D-ribose 1-phosphate",
+      "short": "2-deoxy-alpha-D-rib…",
+      "formula": "C5H9O7P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1108138"
+      }
+    },
+    {
+      "id": "5_fu",
+      "name": "5-FU",
+      "formula": "C4H3FN2O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1368742"
+      }
+    },
+    {
+      "id": "floxuridine",
+      "name": "floxuridine",
+      "formula": "C9H11FN2O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:60761"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "5_fluorodeoxyuridine_monophosphate",
+      "name": "5-fluorodeoxyuridine monophosphate",
+      "short": "5-fluorodeoxyuridin…",
+      "formula": "C9H12FN2O8P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:2129"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "diphosphate",
+      "name": "diphosphate",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM11"
+      }
+    },
+    {
+      "id": "5_fluorodeoxyuridine_triphosphate",
+      "name": "5-Fluorodeoxyuridine triphosphate",
+      "short": "5-Fluorodeoxyuridin…",
+      "formula": "C9H14FN2O14P3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM814680"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_2_4",
+      "name": "thymidine phosphorylase",
+      "ec": [
+        "2.4.2.4"
+      ],
+      "xrefs": {
+        "uniprot": "P19971"
+      }
+    },
+    {
+      "id": "ec_3_6_1_23",
+      "name": "dUTP diphosphatase",
+      "ec": [
+        "3.6.1.23"
+      ],
+      "xrefs": {
+        "uniprot": "P33316"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "thymidine phosphorylase",
+      "ec": "2.4.2.4",
+      "substrates": [
+        {
+          "metabolite": "2_deoxy_alpha_d_ribose_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_fu",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "floxuridine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_2_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR198002"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198002"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR133927",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "floxuridine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_fluorodeoxyuridine_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR133927"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR133927"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "dUTP diphosphatase",
+      "ec": "3.6.1.23",
+      "substrates": [
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "5_fluorodeoxyuridine_monophosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_fluorodeoxyuridine_triphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_23"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR163527"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR163527"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_5_fu_2-deoxy-alpha-d-ribose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_fu"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-deoxy-alpha-d-ribose-to-h2o"
+      },
+      "note": "Shares 5-FU with 2-deoxy-alpha-D-ribose… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368742"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_fu_adenosine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_fu"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "adenosine-to-h2o"
+      },
+      "note": "Shares 5-FU with adenosine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368742"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_fu_d-xylulose-1-phosphate-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_fu"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-xylulose-1-phosphate-to-phosphate"
+      },
+      "note": "Shares 5-FU with D-Xylulose 1-phosphate to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368742"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_fu_dihydroneopterin-to-l-xylulose-1-phosphate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_fu"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dihydroneopterin-to-l-xylulose-1-phosphate-null"
+      },
+      "note": "Shares 5-FU with Dihydroneopterin… to L-Xylulose 1-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368742"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_fu_diphosphate-to-o-pantetheine-4-phospho-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_fu"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-o-pantetheine-4-phospho-null"
+      },
+      "note": "Shares 5-FU with diphosphate to O-(pantetheine-4'-phospho….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368742"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_fu_geranylgeranyl-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_fu"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "geranylgeranyl-to-h2o-null"
+      },
+      "note": "Shares 5-FU with Geranylgeranyl… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368742"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_floxuridine_2-deoxy-alpha-d-ribose-to-5-fluorodeoxyuridine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "floxuridine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-deoxy-alpha-d-ribose-to-5-fluorodeoxyuridine"
+      },
+      "note": "Shares floxuridine with 2-deoxy-alpha-D-ribose… to 5-Fluorodeoxyuridine….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60761"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_floxuridine_2-deoxy-alpha-d-ribose-to-5-fluorodeoxyuridine-n",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "floxuridine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-deoxy-alpha-d-ribose-to-5-fluorodeoxyuridine-n"
+      },
+      "note": "Shares floxuridine with 2-deoxy-alpha-D-ribose… to 5-Fluorodeoxyuridine….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60761"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_floxuridine_2-deoxy-alpha-d-ribose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "floxuridine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-deoxy-alpha-d-ribose-to-h2o"
+      },
+      "note": "Shares floxuridine with 2-deoxy-alpha-D-ribose… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60761"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_fluorodeoxyuridine_monophosphate_2-deoxy-alpha-d-ribose-to-5-fluorodeoxyuridine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_fluorodeoxyuridine_monophosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-deoxy-alpha-d-ribose-to-5-fluorodeoxyuridine"
+      },
+      "note": "Shares 5-fluorodeoxyuridine monophosphate with 2-deoxy-alpha-D-ribose… to 5-Fluorodeoxyuridine….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:2129"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_fluorodeoxyuridine_monophosphate_2-deoxy-alpha-d-ribose-to-5-fluorodeoxyuridine-n",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_fluorodeoxyuridine_monophosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-deoxy-alpha-d-ribose-to-5-fluorodeoxyuridine-n"
+      },
+      "note": "Shares 5-fluorodeoxyuridine monophosphate with 2-deoxy-alpha-D-ribose… to 5-Fluorodeoxyuridine….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:2129"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_fluorodeoxyuridine_monophosphate_2-deoxy-alpha-d-ribose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_fluorodeoxyuridine_monophosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-deoxy-alpha-d-ribose-to-h2o"
+      },
+      "note": "Shares 5-fluorodeoxyuridine monophosphate with 2-deoxy-alpha-D-ribose… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:2129"
+          }
+        ]
+      }
+    }
+  ]
+}

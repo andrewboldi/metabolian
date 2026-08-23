@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway but-1-en-3-ol-to-1-hydroxybutan-2-one "but-1-en-3-ol to 1-hydroxybutan-2-one" {
-  spacing 224
+  spacing 290
 
   spine at 0,0 {
     but_1_en_3_ol
@@ -18,14 +18,14 @@ pathway but-1-en-3-ol-to-1-hydroxybutan-2-one "but-1-en-3-ol to 1-hydroxybutan-2
 
   branch from h side left {
     h
-    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_17z_29z_3_hydroxyoctatetracontadienoylpan +nadp +nadph
-    o_s_17z_29z_3_oxooctatetracontadienoylpantethein
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +d_olivose +phosphate +d_olivose +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_5z_3_hydroxytetracosenoylpantetheine_4_ph +nadp +nadph
-    o_s_5z_3_oxotetracosenoylpantetheine_4_phosphory
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    l_digitoxose
   }
 
   branch from butan_2_ol side left {
@@ -42,25 +42,91 @@ pathway but-1-en-3-ol-to-1-hydroxybutan-2-one "but-1-en-3-ol to 1-hydroxybutan-2
 
   branch from o2 side left {
     o2
-    <-> ec_1_13_11_34 [1.13.11.34] +7_s_hydroperoxy_17_r_hydroxydocosahexaenoic_acid +h
-    17_r_hdohe
+    <-> ec_1_13_11_52 [1.13.11.52] +d_tryptophan
+    n_formyl_l_kynurenine
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_13_11_34 [1.13.11.34] +h +17_r_hdohe
-    4_s_hydroperoxy_17_r_hydroxydocosahexaenoic_acid
+    <-> . +emodin_anthrone +h2o
+    emodin_dianthrone
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_17z_3_hydroxyhexatriacontenoylpantetheine +nadp +h
-    o_s_17z_3_oxohexatriacontenoylpantetheine_4_phos
+    <-> ec_1_14_13_115 [1.14.13.115] +h +o2 +r_columbianetin +acetone +nadp +h2o
+    angelicin
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_19z_31z_3_hydroxypentacontadienoylpanteth +nadp +h
-    o_s_19z_31z_3_oxopentacontadienoylpantetheine_4
+    <-> . +h +o2 +dimethyl_sulfoxide +nadp +h2o
+    sulfonyldimethane
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +gibberellin_a1 +h2o +h +o2 +nadph
+    gibberellin_a4
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +4_hydroxy_3_all_trans_hexaprenyl_benzoate +h +o2 +nadph +h2o
+    3_4_dihydroxy_5_all_trans_hexaprenyl_benzoate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_2_1_22 [3.2.1.22] +myo_inositol +alpha_d_galactose
+    alpha_d_galactosyl_1_3_1d_myo_inositol
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_2_1_22 [3.2.1.22] +alpha_d_mannopyranose +alpha_d_galactose
+    epimelibiose
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    d_arabinofuranose
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    alpha_l_arabinofuranose
+  }
+
+  branch from butan_2_ol side left {
+    butan_2_ol
+    <-> ec_1_1_1_71 [1.1.1.71] +z_but_2_enol +h +nad
+    nadh
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_14_13_70 [1.14.13.70] +h +nadph +lanost_8_ene_3_30_diol +nadp +h2o
+    3_hydroxylanost_8_en_32_al
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_14_13_70 [1.14.13.70] +h +lanosterol +nadph +nadp +h2o
+    32_hydroxylanosterol
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_14_13_70 [1.14.13.70] +h +32_hydroxylanosterol +o2 +nadp +h2o
+    4_4_dimethyl_14a_formyl_5alpha_cholesta_8_24_die
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_14_15_6 [1.14.15.6] +20r_22r_20_22_dihydroxycholesterol +h +o2 +nadp +4_methylpentanal +h2o
+    pregnenolone
   }
 }

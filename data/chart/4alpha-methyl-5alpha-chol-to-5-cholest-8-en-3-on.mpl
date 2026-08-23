@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4alpha-methyl-5alpha-chol-to-5-cholest-8-en-3-on "4alpha-methyl-5alpha-chol… to 5α-cholest-8-en-3-one" {
-  spacing 190
+  spacing 184
 
   spine at 0,0 {
     4alpha_methyl_5alpha_cholest_7_en_3beta_ol
@@ -18,19 +18,13 @@ pathway 4alpha-methyl-5alpha-chol-to-5-cholest-8-en-3-on "4alpha-methyl-5alpha-c
 
   branch from 4_methyl_5_cholest_8_en_3_ol side left {
     4_methyl_5_cholest_8_en_3_ol
-    <-> ec_1_3_1_70 [1.3.1.70] +h +4alpha_methyl_cholesta_8_14_dienol +nadph
+    <-> ec_1_14_13_72 [1.14.13.72] +h +o2 +nadph +3_hydroxy_5_cholest_8_ene_4_carboxylate +h2o
     nadp
   }
 
   branch from 4_methyl_5_cholest_8_en_3_ol side right {
     4_methyl_5_cholest_8_en_3_ol
-    <-> ec_1_14_13_72 [1.14.13.72] +h +o2 +nadph +nadp +3_hydroxy_5_cholest_8_ene_4_carboxylate
-    h2o
-  }
-
-  branch from 3_hydroxy_5_cholest_8_ene_4_carboxylate side left {
-    3_hydroxy_5_cholest_8_ene_4_carboxylate
-    <-> ec_1_14_13_72 [1.14.13.72] +nadh +h +o2 +4_methyl_5_cholest_8_en_3_ol +h2o
+    <-> ec_1_14_13_72 [1.14.13.72] +nadh +h +o2 +3_hydroxy_5_cholest_8_ene_4_carboxylate +h2o
     nad
   }
 }

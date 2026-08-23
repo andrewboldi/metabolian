@@ -102,45 +102,9 @@
       "xrefs": {
         "chebi": "CHEBI:193517"
       }
-    },
-    {
-      "id": "o2",
-      "name": "O2",
-      "formula": "O2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM735438"
-      }
-    },
-    {
-      "id": "3s_3_2_methyl_3_3_methylbut_2_en_1_yl_oxiran_2",
-      "name": "(3S)-3-[2-Methyl-3-(3-methylbut-2-en-1-yl)oxiran-2-yl]-4-methylidenecyclohexan-1-one",
-      "short": "3-[2-Methyl-3-(3-me…",
-      "formula": "C15H22O2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1556154"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "WATER"
-      }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_1_14_14_184",
-      "name": "5-dehydro-6-demethoxyfumagillol synthase",
-      "ec": [
-        "1.14.14.184"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -282,47 +246,93 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "5-dehydro-6-demethoxyfumagillol synthase",
-      "ec": "1.14.14.184",
-      "substrates": [
-        {
-          "metabolite": "5r_hydroxy_trans_bergamotene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3s_3_2_methyl_3_3_methylbut_2_en_1_yl_oxiran_2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_184"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR199181"
+      "id": "xt_exo_bergamotene_1-octadecanoyl-2-octanoyl-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "exo_bergamotene"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1-octadecanoyl-2-octanoyl-to-diphosphate"
+      },
+      "note": "Shares (+)-exo-β-bergamotene with 1-octadecanoyl-2-octanoyl… to diphosphate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR199181"
+            "db": "ChEBI",
+            "id": "CHEBI:193166"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_exo_bergamotene_exo-bergamotene-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "exo_bergamotene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "exo-bergamotene-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares (+)-exo-β-bergamotene with (+)-exo-β-bergamotene to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:193166"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5r_hydroxy_trans_bergamotene_h-to-2-hydroxyacetophenone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5r_hydroxy_trans_bergamotene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-2-hydroxyacetophenone"
+      },
+      "note": "Shares (5R)-hydroxy-β-trans-bergamotene with H to 2-hydroxyacetophenone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:193167"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_dehydro_6_demethoxyfumagillol_exo-bergamotene-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_dehydro_6_demethoxyfumagillol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "exo-bergamotene-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares 5-dehydro-6-demethoxyfumagillol with (+)-exo-β-bergamotene to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:193517"
           }
         ]
       }

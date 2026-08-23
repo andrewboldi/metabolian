@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-2-diheptadecanoyl-sn-gl-to-9z-12z-pentadecadie "1,2-diheptadecanoyl-sn-gl… to (9Z,12Z)-pentadecadienoyl…" {
-  spacing 246
+  spacing 252
 
   spine at 0,0 {
     1_2_diheptadecanoyl_sn_glycero_3_phosphoethanola
@@ -28,38 +28,14 @@ pathway 1-2-diheptadecanoyl-sn-gl-to-9z-12z-pentadecadie "1,2-diheptadecanoyl-sn
 
   branch from 1_2_dihexadecanoyl_sn_glycero_3_phosphocholine side left {
     1_2_dihexadecanoyl_sn_glycero_3_phosphocholine
-    <-> . +1_2_dioleoyl_sn_glycero_3_phosphoethanolamine +1_hexadecanoyl_sn_glycero_3_phosphocholine +hplus
-    n_palmitoyl_1_2_dioleoyl_sn_glycero_3_phosphoeth
+    <-> . +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +1_hexadecanoyl_sn_glycero_3_phosphocholine
+    2_linoleoyl_sn_glycero_3_phosphocholine
   }
 
-  branch from 1_2_dihexadecanoyl_sn_glycero_3_phosphocholine side right {
-    1_2_dihexadecanoyl_sn_glycero_3_phosphocholine
-    <-> . +1_2_diheptanoyl_sn_glycero_3_phosphocholine +1_heptanoyl_2_hexadecanoyl_sn_glycero_3_phosphoc
-    1_hexadecanoyl_2_heptanoyl_sn_glycero_3_phosphoc
-  }
-
-  branch from palmitate side left {
-    palmitate
-    <-> . +1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph +h2o +hplus
-    2_oleoyl_sn_glycero_3_phosphoethanolamine
-  }
-
-  branch from palmitate side right {
-    palmitate
-    <-> . +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +h2o +hplus
-    2_linoleoyl_sn_glycero_3_phosphoethanolamine
-  }
-
-  branch from r_2_hydroxyhexadecanoate side left {
+  branch from r_2_hydroxyhexadecanoate side right {
     r_2_hydroxyhexadecanoate
     <-> ec_1_2_1_3 [1.2.1.3] +nadh +h +nad +h2o
     r_2_hydroxyhexadecanal
-  }
-
-  branch from pentadecanoyl_coa side right {
-    pentadecanoyl_coa
-    <-> . +fad +hplus +fadh2
-    trans_2_pentadecenoyl_coa
   }
 
   branch from pentadecanoyl_coa side left {
@@ -68,15 +44,45 @@ pathway 1-2-diheptadecanoyl-sn-gl-to-9z-12z-pentadecadie "1,2-diheptadecanoyl-sn
     coa
   }
 
-  branch from ppi side right {
-    ppi
-    <-> ec_2_7_7_86 [2.7.7.86] +gtp +atp
-    2_3_cgamp
+  branch from pentadecanoyl_coa side right {
+    pentadecanoyl_coa
+    <-> . +cholesterol +coa
+    cholest_5_en_3b_yl_pentadecanoate
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_6_1_2_2 [6.1.2.2] +tobramycin +carbamoyl_p +atp +h2o +amp +pi +hplus
-    nebramycin_5
+    <-> . +fpp
+    aristolene
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +fpp
+    1_10_aristolene
+  }
+
+  branch from pentadecanoyl_coa side left {
+    pentadecanoyl_coa
+    <-> . +sn_glycerol_3_phosphate +coa
+    1_pentadecanoyl_glycero_3_phosphate
+  }
+
+  branch from pentadecanoyl_coa side right {
+    pentadecanoyl_coa
+    <-> . +s_carnitine +coa
+    o_pentadecanoylcarnitine
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +fpp
+    barbatene
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +fpp +h2o
+    discoidol
   }
 }

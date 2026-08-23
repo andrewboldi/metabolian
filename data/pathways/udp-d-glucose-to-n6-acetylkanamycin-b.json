@@ -145,25 +145,6 @@
       "xrefs": {
         "chebi": "CHEBI:57287"
       }
-    },
-    {
-      "id": "2_deamino_2_hydroxyneamine",
-      "name": "2'-deamino-2'-hydroxyneamine",
-      "short": "2'-deamino-2'-hydro…",
-      "formula": "C12H28N3O7",
-      "charge": 3,
-      "xrefs": {
-        "chebi": "CHEBI:67213"
-      }
-    },
-    {
-      "id": "kanamycin_a",
-      "name": "kanamycin A",
-      "formula": "C18H40N4O11",
-      "charge": 4,
-      "xrefs": {
-        "chebi": "CHEBI:58214"
-      }
     }
   ],
   "enzymes": [
@@ -362,52 +343,137 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "2'-deamino-2'-hydroxyneamine 1-alpha-D-kanosaminyltransferase",
-      "equation": "2'-deamino-2'-hydroxyneamine + UDP-alpha-D-kanosamine = kanamycin A + UDP + H(+)",
-      "ec": "2.4.1.301",
-      "substrates": [
-        {
-          "metabolite": "2_deamino_2_hydroxyneamine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp_d_kanosamine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "kanamycin_a",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_4_1_301"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:35795"
+      "id": "xt_udp_d_kanosamine_2-deamino-2-hydroxyneam-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "udp_d_kanosamine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2-deamino-2-hydroxyneam-to-h2o"
+      },
+      "note": "Shares UDP-α-D-kanosamine with 2'-deamino-2'-hydroxyneam… to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:35795"
+            "db": "ChEBI",
+            "id": "CHEBI:71964"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_udp_d_kanosamine_2-deoxy-scyllo-inosamine-to-kanamycin-c",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "udp_d_kanosamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-deoxy-scyllo-inosamine-to-kanamycin-c"
+      },
+      "note": "Shares UDP-α-D-kanosamine with 2-deoxy-scyllo-inosamine to kanamycin C.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:71964"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_neamine_1-8-diazacyclotetradecane-to-adipate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "neamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-8-diazacyclotetradecane-to-adipate"
+      },
+      "note": "Shares neamine with 1,8-diazacyclotetradecane… to adipate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:65076"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_neamine_1-lauroyl-sn-glycero-3-ph-to-d-glucopyranose-411",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "neamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-lauroyl-sn-glycero-3-ph-to-d-glucopyranose-411"
+      },
+      "note": "Shares neamine with 1-lauroyl-sn-glycero-3-ph… to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:65076"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_neamine_2r-3s-3-isopropylmalate-to-neomycin-c",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "neamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2r-3s-3-isopropylmalate-to-neomycin-c"
+      },
+      "note": "Shares neamine with (2R,3S)-3-isopropylmalate to neomycin C.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:65076"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_kanamycin_b_kanamycin-b-to-kanamycin-a-3-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "kanamycin_b"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "kanamycin-b-to-kanamycin-a-3-phosphate"
+      },
+      "note": "Shares kanamycin B with kanamycin B to kanamycin A 3'-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58549"
           }
         ]
       }

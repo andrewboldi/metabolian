@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway maltopentaose-to-diphosphate "α-maltopentaose to diphosphate" {
-  spacing 252
+  spacing 240
 
   spine at 0,0 {
     maltopentaose
@@ -14,17 +14,5 @@ pathway maltopentaose-to-diphosphate "α-maltopentaose to diphosphate" {
     maltotriose
     <-> ec_2_7_7_9 [2.7.7.9] +g1p +utp +hplus -ppi
     udp_d_glucose
-  }
-
-  branch from udp_d_glucose side left {
-    udp_d_glucose
-    <-> ec_2_4_1_210 [2.4.1.210] +limonin +h2o +udp +hplus
-    limonin_17_d_glucoside
-  }
-
-  branch from udp_d_glucose side right {
-    udp_d_glucose
-    <-> ec_2_4_1_172 [2.4.1.172] +salicyl_alcohol +udp +hplus
-    salicin
   }
 }

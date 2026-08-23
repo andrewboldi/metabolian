@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dammarenediol-ii-to-d-glucopyranose "dammarenediol-II to D-glucopyranose" {
-  spacing 264
+  spacing 330
 
   spine at 0,0 {
     dammarenediol_ii
@@ -20,51 +20,21 @@ pathway dammarenediol-ii-to-d-glucopyranose "dammarenediol-II to D-glucopyranose
     ginsenoside_f1
   }
 
-  branch from 20s_protopanaxadiol side left {
-    20s_protopanaxadiol
-    <-> ec_1_14_13_184 [1.14.13.184] +protopanaxatriol +nadp +h2o +o2 +nadph
-    h
-  }
 
-  branch from fmn side right {
-    fmn
-    <-> . +testosterone +fmnh2 +o2 +h2o +hplus
-    16_hydroxytestosterone
-  }
 
-  branch from fmn side left {
-    fmn
-    <-> . +hydroxycholesterol_7a +fmnh2 +o2 +h2o +hplus
-    24s_7_24_dihydroxycholesterol
-  }
 
-  branch from protopanaxatriol side right {
-    protopanaxatriol
-    <-> ec_2_4_1_367 [2.4.1.367] +udp_d_glucose +udp +hplus
-    20s_ginsenoside_rh1
-  }
 
-  branch from protopanaxatriol side left {
-    protopanaxatriol
-    <-> . +glucose +20s_ginsenoside_rh1
-    h2o
-  }
 
-  branch from ginsenoside_f1 side right {
-    ginsenoside_f1
-    <-> ec_3_2_1_194 [3.2.1.194] +glucose +d_xylopyranose +h2o
-    ginsenoside_r1
-  }
 
-  branch from glucose side left {
-    glucose
-    <-> ec_4_2_99_23 [4.2.99.23] +6_tuliposide_b
-    tulipalin_b
-  }
 
-  branch from glucose side right {
-    glucose
-    <-> ec_3_2_1_188 [3.2.1.188] +avenacoside_b +h2o
-    26_desglucoavenacoside_b
-  }
+
+
+
+
+
+
+
+
+
+
 }

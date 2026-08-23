@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway kynuramine-to-quinoline-3-4-diol "kynuramine to quinoline-3,4-diol" {
-  spacing 212
+  spacing 200
 
   spine at 0,0 {
     kynuramine
@@ -14,17 +14,5 @@ pathway kynuramine-to-quinoline-3-4-diol "kynuramine to quinoline-3,4-diol" {
     quinolin_4_ol
     <-> ec_1_14_13_62 [1.14.13.62] +nadh +o2 +hplus -nad -h2o
     quinoline_3_4_diol
-  }
-
-  branch from nh3 side left {
-    nh3
-    <-> . +l_glutamine +serotonin
-    n_2_5_hydroxy_1h_indol_3_yl_ethyl_l_glutamine
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +l_glutamine +dopamine
-    n_2_3_4_dihydroxyphenyl_ethyl_l_glutamine
   }
 }

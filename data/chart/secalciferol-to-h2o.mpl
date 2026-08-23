@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway secalciferol-to-h2o "secalciferol to H2O" {
-  spacing 224
+  spacing 308
 
   spine at 0,0 {
     secalciferol
@@ -16,75 +16,159 @@ pathway secalciferol-to-h2o "secalciferol to H2O" {
     23s_23_25_26_trihydroxycalciol
   }
 
-  branch from h side left {
-    h
-    <-> ec_1_13_11_4 [1.13.11.4] +3_bromo_4_hydroxy_6_oxo_hepta_2_4_dienedioic_aci +o2
-    3_bromogentisate
+  branch from calcidiol side left {
+    calcidiol
+    <-> . +h +o2 +nadph +nadp +h2o
+    23s_25_dihydroxyvitamin_d3
   }
 
   branch from h side right {
     h
-    <-> . +d_tryptophan +nh4 +h2o
-    d_tryptophanamide
+    <-> . +acetyl_coa +mesalaminate +coa
+    n_acetyl_5_aminosalicylic_acid
   }
 
-  branch from o2 side left {
-    o2
-    <-> ec_1_4_3_21 [1.4.3.21] +mafenide +h +h2o +nh4 +h2o2
-    4_formylbenzenesulfonamide
+  branch from h side left {
+    h
+    <-> ec_2_3_1_156 [2.3.1.156] +malonyl_coa +2s_2_methylbutanoyl_coa +coa +2_2_methylbutanoyl_phloroglucinol
+    co2
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_1_3_9 [1.1.3.9] +methyl_alpha_d_galacto_hexodialdopyranoside +h2o2
-    methyl_alpha_d_galactoside
+    <-> ec_1_14_13_99 [1.14.13.99] +24s_24_hydroxycholesterol +h +nadph +nadp +h2o
+    24s_7_24_dihydroxycholesterol
   }
 
-  branch from nadph side left {
-    nadph
-    <-> ec_1_1_1_324 [1.1.1.324] +6e_8_hydroxygeraniol +nadp +h +6e_8_oxogeraniol
-    6e_8_hydroxygeranial
+  branch from o2 side left {
+    o2
+    <-> ec_1_3_99_2 [1.3.99.2] +2_methylpropanoyl_coa +h2o
+    2_methylpropenoyl_coa
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_324 [1.1.1.324] +e_hept_2_enal +h +nadp
-    trans_2_heptenol
+    <-> ec_1_1_1_330 [1.1.1.330] +3s_hydroxyoctadecanoyl_coa +nadp +h
+    3_oxooctadecanoyl_coa
   }
 
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_209 [1.1.1.209] +testosterone +h +nadph
-    androst_4_ene_3alpha_17beta_diol
+  branch from nadph side left {
+    nadph
+    <-> ec_1_14_19_1 [1.14.19.1] +hexadecanoyl_coa +h +o2 +nadp +h2o
+    9z_hexadecenoyl_coa
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_209 [1.1.1.209] +androstenediol_3_sulfate +h +nadph
-    dehydroepiandrosterone_3_sulfate
+    <-> ec_2_3_1_86 [2.3.1.86] +decanoyl_coa +co2 +coa +h2o +malonyl_coa +h +nadph
+    octanoyl_coa
   }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_3_7_1_8 [3.7.1.8] +2_hydroxy_3_chloro_6_oxo_6_phenylhexa_2_4_dienoa +h +2_hydroxy_3_chloropenta_2_4_dienoate
-    benzoate
+  branch from nadp side left {
+    nadp
+    <-> ec_2_3_1_86 [2.3.1.86] +dodecanoyl_coa +malonyl_coa +h +nadph +co2 +coa +h2o
+    tetradecanoyl_coa
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_3_2_6 [3.3.2.6] +l_lysine +h +4_nitroaniline
-    l_lysine_p_nitroanilide
+    <-> . +12_ethyl_8_isobutylbacteriochlorophyllide_d
+    12_ethyl_8_isobutyl_3_vinylbacteriochlorophyllid
   }
 
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_210 [1.1.1.210] +nadh +h +5beta_androstane_3_17_dione
-    epietiocholanolone
+  branch from h2o side left {
+    h2o
+    <-> . +ferroheme_a
+    hydroxyferroheme_i
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_328 [1.1.1.328] +nadh +h +2_6_dichloroindophenol
-    reduced_2_6_dichlorophenolindophenol
+    <-> ec_1_1_1_18 [1.1.1.18] +nadh +5_dehydro_2_deoxy_d_gluconate +h
+    myo_inositol
+  }
+
+  branch from nad side left {
+    nad
+    <-> . +nadh +acetyl_coa +h +coa
+    ethanol
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_2_3_1_86 [2.3.1.86] +tetradecanoyl_coa +malonyl_coa +h +nadph +co2 +coa +h2o
+    hexadecanoyl_coa
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_2_3_1_86 [2.3.1.86] +octadecanoyl_coa +co2 +coa +h2o +hexadecanoyl_coa +h +nadph
+    malonyl_coa
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_1_3_73 [3.1.3.73] +5_methoxy_6_methylbenzimidazolyl_cobamide_5_phos +phosphate
+    5_methoxy_6_methylbenzimidazolyl_cobamide
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_1_3_73 [3.1.3.73] +coalpha_alpha_2_methyladenin_9_yl_cobeta_adenosy +phosphate
+    coalpha_alpha_2_methyladenin_7_yl_cobeta_adenosy
+  }
+
+  branch from h side right {
+    h
+    <-> . +lisdexamfetamine +h2o +s_amphetamine
+    l_lysine
+  }
+
+  branch from h side left {
+    h
+    <-> . +2r_3_1_5_6_dihydropyridin_2_yl_2_hydroxy_2_3_1e
+    n_3r_6_5_6_dihydropyridin_2_yl_7_hydroxy_8_2e_1
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_14_13_15 [1.14.13.15] +3alpha_7alpha_dihydroxy_5beta_cholestan_26_oic_a +nadp +h2o +h +nadph
+    25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +nitric_oxide
+    n2
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_2_3_1_86 [2.3.1.86] +octanoyl_coa +co2 +nadp +coa +h2o +malonyl_coa +h
+    acetyl_coa
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_1_1_42 [1.1.1.42] +s_oxalatosuccinate +h +nadp
+    isocitrate
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_1_1_112 [1.1.1.112] +indan_1_one +h +nad
+    indan_1_ol
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> ec_1_1_1_294 [1.1.1.294] +chlorophyll_b +h +nad
+    71_hydroxychlorophyll_a
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_6e_farnesal +h
+    2z_6e_farnesol
   }
 }

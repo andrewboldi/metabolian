@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-cystathionine-to-sulfite "L-cystathionine… to sulfite" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     cystathionine
@@ -14,17 +14,5 @@ pathway l-cystathionine-to-sulfite "L-cystathionine… to sulfite" {
     l_homolanthionine_dizwitterion
     <-> . +h2s +nad +h2o -nadh -hplus
     sulfite
-  }
-
-  branch from 2_ammonioprop_2_enoate side left {
-    2_ammonioprop_2_enoate
-    <-> . +3_sulfanylhexan_1_ol_l_cysteine
-    3_mercaptohexanol
-  }
-
-  branch from 2_ammonioprop_2_enoate side right {
-    2_ammonioprop_2_enoate
-    <-> . +s_4_hydroxy_3_methylbutan_2_yl_l_cysteine
-    2_methyl_3_sulfanylbutan_1_ol
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway h-to-2s-3e-2-hydroxypent-3-e "H to (2S,3E)-2-hydroxypent-3-e…" {
-  spacing 272
+  spacing 200
 
   spine at 0,0 {
     h
@@ -21,15 +21,4 @@ pathway h-to-2s-3e-2-hydroxypent-3-e "H to (2S,3E)-2-hydroxypent-3-e…" {
     <-> . +hydrogen_cyanide
     2s_3e_2_hydroxypent_3_enenitrile
   }
-
-
-
-
-
-
-
-
-
-
-
 }

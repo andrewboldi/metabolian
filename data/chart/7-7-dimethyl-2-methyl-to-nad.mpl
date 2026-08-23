@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 7-7-dimethyl-2-methyl-to-nad "(-)-7,7-Dimethyl-2-methyl… to NAD" {
-  spacing 232
+  spacing 184
 
   spine at 0,0 {
     7_7_dimethyl_2_methylenebicyclo_2_2_1_heptane
@@ -14,53 +14,5 @@ pathway 7-7-dimethyl-2-methyl-to-nad "(-)-7,7-Dimethyl-2-methyl… to NAD" {
     fenchone
     <-> ec_1_1_1_322 [1.1.1.322] +nadh +h -nad
     1s_2s_4r_endo_fenchol
-  }
-
-  branch from 1s_2s_4r_endo_fenchol side left {
-    1s_2s_4r_endo_fenchol
-    <-> ec_1_1_1_71 [1.1.1.71] +nadp +h +nadph
-    phellandral
-  }
-
-  branch from 1s_2s_4r_endo_fenchol side right {
-    1s_2s_4r_endo_fenchol
-    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +nadp
-    2e_geranial
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    5_hepe
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +18_r_hepe +phosphate +18_r_hepe +h2o
-    atp
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> . +formaldehyde +h +sarcosine +nadp +h2o
-    n_n_dimethylglycine
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> . +3_3_5_triiodo_l_thyronine +iodide +nadp
-    l_thyroxine
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_14_13_246 [1.14.13.246] +nadh +h +4_4_dimethyl_5alpha_cholest_7_en_3beta_ol +o2 +h2o
-    3_hydroxy_4_methyl_5_cholest_7_ene_4_carboxylic
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_14_13_246 [1.14.13.246] +nadh +h +3beta_4alpha_5alpha_4_4_dimethylcholest_8_en_3 +o2 +h2o
-    4beta_carboxy_4alpha_methyl_5alpha_cholesta_8_en
   }
 }

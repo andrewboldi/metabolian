@@ -121,6 +121,87 @@
       "xrefs": {
         "chebi": "CHEBI:61289"
       }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1107623"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H21N4O9P",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364147"
+      }
+    },
+    {
+      "id": "6_dehydro_d_glucose",
+      "name": "6-dehydro-D-glucose",
+      "formula": "C6H10O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:190013"
+      }
+    },
+    {
+      "id": "sulfite",
+      "name": "sulfite",
+      "formula": "O3S",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM726339"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1105762"
+      }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H33N9O15P2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364149"
+      }
     }
   ],
   "enzymes": [
@@ -157,6 +238,13 @@
       "name": "3-sulfolactaldehyde dehydrogenase",
       "ec": [
         "1.2.1.97"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_181",
+      "name": "sulfoquinovose monooxygenase",
+      "ec": [
+        "1.14.14.181"
       ]
     }
   ],
@@ -386,6 +474,392 @@
           {
             "db": "Rhea",
             "id": "RHEA:47932"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "sulfoquinovose monooxygenase",
+      "ec": "1.14.14.181",
+      "substrates": [
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "6_sulfo_d_quinovose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "6_dehydro_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_181"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "metanetx": "MNXR199120"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR199120"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "sulfoquinovose monooxygenase",
+      "ec": "1.14.14.181",
+      "substrates": [
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "6_sulfo_d_quinovose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "6_dehydro_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_181"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "metanetx": "MNXR199680"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR199680"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_6_sulfo_d_quinovose_6-sulfo-d-quinovose-to-d-fructofuranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_sulfo_d_quinovose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-sulfo-d-quinovose-to-d-fructofuranose"
+      },
+      "note": "Shares 6-sulfo-D-quinovose with 6-sulfo-D-quinovose to D-fructofuranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77132"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_sulfo_d_quinovose_6-sulfo-d-quinovose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_sulfo_d_quinovose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-sulfo-d-quinovose-to-h2o"
+      },
+      "note": "Shares 6-sulfo-D-quinovose with 6-sulfo-D-quinovose to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77132"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_sulfo_d_quinovose_6-sulfo-d-quinovose-to-l-cysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_sulfo_d_quinovose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-sulfo-d-quinovose-to-l-cysteine"
+      },
+      "note": "Shares 6-sulfo-D-quinovose with 6-sulfo-D-quinovose to L-cysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77132"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_sulfo_d_quinovose_6-sulfo-d-quinovose-to-thioacetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_sulfo_d_quinovose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-sulfo-d-quinovose-to-thioacetate"
+      },
+      "note": "Shares 6-sulfo-D-quinovose with 6-sulfo-D-quinovose to thioacetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77132"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_3_sulfolactaldehyde_6-sulfo-d-fucose-to-l-3-sulfolactaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_3_sulfolactaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-sulfo-d-fucose-to-l-3-sulfolactaldehyde"
+      },
+      "note": "Shares L-3-sulfolactaldehyde with 6-sulfo-D-fucose to L-3-sulfolactaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:90109"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_3_sulfolactaldehyde_6-sulfo-d-quinovose-to-d-fructofuranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_3_sulfolactaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-sulfo-d-quinovose-to-d-fructofuranose"
+      },
+      "note": "Shares L-3-sulfolactaldehyde with 6-sulfo-D-quinovose to D-fructofuranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:90109"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_3_sulfolactaldehyde_aldehydo-d-galactose-to-acetyl-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_3_sulfolactaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aldehydo-d-galactose-to-acetyl-phosphate"
+      },
+      "note": "Shares L-3-sulfolactaldehyde with aldehydo-D-galactose… to acetyl phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:90109"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_3_sulfolactaldehyde_isethionate-to-3-sulfonatopyruvate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_3_sulfolactaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isethionate-to-3-sulfonatopyruvate"
+      },
+      "note": "Shares L-3-sulfolactaldehyde with isethionate to 3-sulfonatopyruvate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:90109"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_3_sulfonatolactate_isethionate-to-3-sulfonatopyruvate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_3_sulfonatolactate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isethionate-to-3-sulfonatopyruvate"
+      },
+      "note": "Shares (S)-3-sulfonatolactate with isethionate to 3-sulfonatopyruvate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61289"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_dehydro_d_glucose_6-sulfo-d-quinovose-to-l-cysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_dehydro_d_glucose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-sulfo-d-quinovose-to-l-cysteine"
+      },
+      "note": "Shares 6-dehydro-D-glucose with 6-sulfo-D-quinovose to L-cysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:190013"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_dehydro_d_glucose_6-sulfo-d-quinovose-to-thioacetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_dehydro_d_glucose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-sulfo-d-quinovose-to-thioacetate"
+      },
+      "note": "Shares 6-dehydro-D-glucose with 6-sulfo-D-quinovose to thioacetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:190013"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_dehydro_d_glucose_dammarenediol-ii-to-d-glucopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_dehydro_d_glucose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dammarenediol-ii-to-d-glucopyranose"
+      },
+      "note": "Shares 6-dehydro-D-glucose with dammarenediol-II to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:190013"
           }
         ]
       }

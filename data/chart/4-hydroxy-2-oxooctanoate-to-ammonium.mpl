@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-hydroxy-2-oxooctanoate-to-ammonium "4-Hydroxy-2-oxooctanoate to ammonium" {
-  spacing 264
+  spacing 288
 
   spine at 0,0 {
     4_hydroxy_2_oxooctanoate
@@ -24,73 +24,97 @@ pathway 4-hydroxy-2-oxooctanoate-to-ammonium "4-Hydroxy-2-oxooctanoate to ammoni
 
   branch from h side left {
     h
-    <-> ec_3_4_24_27 [3.4.24.27] +l_leucyl_l_alanine +n_benzyloxycarbonylglycine +h2o
-    benzyloxycarbonyl_gly_leu_ala
+    <-> . +n_acetyl_d_mannosamine +phosphoenolpyruvate +pyruvate
+    n_acetyl_d_mannosamine_6_phosphate
   }
 
   branch from h side right {
     h
-    <-> ec_1_14_14_1 [1.14.14.1] +fenthion_sulfoxide +o2 +nadph +nadp +h2o
-    fenthion_sulfone
+    <-> . +adp +phosphate +atp +h2o
+    aerobactin
   }
 
   branch from pyruvate side left {
     pyruvate
-    <-> . +d_alanine +2_oxoglutarate
-    l_glutamate
+    <-> ec_4_1_3_3 [4.1.3.3] +n_acetyl_d_mannosamine
+    n_acetyl_beta_neuraminate
   }
 
   branch from pyruvate side right {
     pyruvate
-    <-> . +co2 +h
-    enol_oxaloacetate
-  }
-
-  branch from pentanal side left {
-    pentanal
-    <-> ec_1_1_1_2 [1.1.1.2] +pentan_1_ol +nadp +h
-    nadph
-  }
-
-  branch from pentanal side right {
-    pentanal
-    <-> ec_1_13_12_16 [1.13.12.16] +nitrite +h +n_pentyl_nitrite
-    o2
+    <-> . +d_fructofuranose_1_phosphate +phosphoenolpyruvate
+    beta_d_fructose
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_2_1_48 [1.2.1.48] +nadh +9z_hexadecenoate +h +h2o
-    9z_hexadecenal
+    <-> . +nadh +11s_16s_7_oxo_ent_kauran_11_16_epoxy_19_oate +h
+    7s_11s_16s_7_hydroxy_ent_kauran_11_16_epoxy_19
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_2_1_3 [1.2.1.3] +nadh +2_4_dinitrobenzoate +h +h2o
-    2_4_dinitrobenzaldehyde
+    <-> ec_1_1_1_35 [1.1.1.35] +nadh +3_oxo_homoplatensic_coa +h
+    3s_3_hydroxy_homoplatensic_coa
   }
 
-  branch from 5_3_3_dimethylguanidino_2_oxopentanoate side left {
-    5_3_3_dimethylguanidino_2_oxopentanoate
-    <-> . +n_n_dimethyl_l_argininium +pyruvate
-    alanine
+  branch from h side left {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    aerobactin
   }
 
-  branch from 5_3_3_dimethylguanidino_2_oxopentanoate side right {
-    5_3_3_dimethylguanidino_2_oxopentanoate
-    <-> . +n_n_dimethyl_l_argininium +oxaloacetate
-    aspartate
+  branch from h side right {
+    h
+    <-> ec_3_6_3_33 [3.6.3.33] +adp +phosphate +atp +h2o
+    cbl
   }
 
-  branch from nh3 side left {
-    nh3
-    <-> . +d_allothreonine +o2 +h2o +h2o2
-    r_3_hydroxy_2_oxobutanoate
+  branch from pyruvate side left {
+    pyruvate
+    <-> . +d_sorbitol_6_phosphate +phosphoenolpyruvate
+    d_sorbitol
   }
 
-  branch from nh3 side right {
-    nh3
-    <-> . +d_asparagine +o2 +h2o +h2o2
-    2_oxosuccinamate
+  branch from pyruvate side right {
+    pyruvate
+    <-> . +menaquinol_9 +s_lactate
+    menaquinone_9
+  }
+
+  branch from co2 side left {
+    co2
+    <-> ec_4_1_1_114 [4.1.1.114] +11z_tricos_11_ene
+    3_decyl_4_undecyloxetan_2_one
+  }
+
+  branch from co2 side right {
+    co2
+    <-> ec_4_1_1_114 [4.1.1.114] +9z_nonadec_9_ene
+    4_nonyl_3_octyl_oxetan_2_one
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> ec_1_1_1_35 [1.1.1.35] +3_oxopentanoyl_coa +h +nad
+    s_3_hydroxypentanoyl_coa
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_1_1_1 [1.1.1.1] +r_3_hydroxybutanal +h +nad
+    r_butane_1_3_diol
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_2_1_42 [1.2.1.42] +nadh +octadecanoyl_coa +h +coa
+    octadecanal
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_239 [1.1.1.239] +nadh +h +adrenosterone
+    11_oxotestosterone
   }
 }

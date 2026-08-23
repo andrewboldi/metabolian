@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-hexaprenyl-6-hydroxyphe-to-s-adenosyl-l-homocy "2-hexaprenyl-6-hydroxyphe… to S-adenosyl-L-homocysteine" {
-  spacing 298
+  spacing 322
 
   spine at 0,0 {
     2_hexaprenyl_6_hydroxyphenol
@@ -16,45 +16,69 @@ pathway 2-hexaprenyl-6-hydroxyphe-to-s-adenosyl-l-homocy "2-hexaprenyl-6-hydroxy
     all_trans_5_methoxy_2_methyl_3_hexaprenylhydroqu
   }
 
-  branch from 2_hexaprenyl_6_methoxyphenol side left {
-    2_hexaprenyl_6_methoxyphenol
-    <-> . +o2 +h2o
-    2_methoxy_6_all_trans_hexaprenyl_1_4_benzoquinon
+  branch from sah side left {
+    sah
+    <-> . +taxifolin +sam +hplus
+    taxifolin_4_methyl_ether
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_297 [2.1.1.297] +l_glutamine +sam +hplus
-    n5_methyl_l_glutamine
+    <-> . +taxifolin +sam +hplus
+    dihydroisorhamnetin
   }
 
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_187 [2.1.1.187] +guanosine_5_monophosphate_1 +sam +hplus
-    n1_methylguanosine_5_monophosphate_1
-  }
-
-  branch from all_trans_6_methoxy_2_hexaprenylhydroquinone side right {
+  branch from all_trans_6_methoxy_2_hexaprenylhydroquinone side left {
     all_trans_6_methoxy_2_hexaprenylhydroquinone
     <-> ec_1_6_5_2 [1.6.5.2] +2_methoxy_6_all_trans_hexaprenyl_1_4_benzoquinon +h +nadph
     nadp
   }
 
-  branch from all_trans_6_methoxy_2_hexaprenylhydroquinone side left {
+  branch from all_trans_6_methoxy_2_hexaprenylhydroquinone side right {
     all_trans_6_methoxy_2_hexaprenylhydroquinone
     <-> ec_1_6_5_2 [1.6.5.2] +nadh +2_methoxy_6_all_trans_hexaprenyl_1_4_benzoquinon +h
     nad
   }
 
-  branch from all_trans_5_methoxy_2_methyl_3_hexaprenylhydroqu side right {
+  branch from all_trans_5_methoxy_2_methyl_3_hexaprenylhydroqu side left {
     all_trans_5_methoxy_2_methyl_3_hexaprenylhydroqu
     <-> ec_1_6_5_2 [1.6.5.2] +h +nadph +nadp
     2_methoxy_5_methyl_6_all_trans_hexaprenyl_1_4_be
   }
 
-  branch from all_trans_5_methoxy_2_methyl_3_hexaprenylhydroqu side left {
+  branch from all_trans_5_methoxy_2_methyl_3_hexaprenylhydroqu side right {
     all_trans_5_methoxy_2_methyl_3_hexaprenylhydroqu
     <-> ec_1_6_5_2 [1.6.5.2] +2_methoxy_5_methyl_6_all_trans_hexaprenyl_1_4_be +h +nad
     nadh
+  }
+
+  branch from 2_hexaprenyl_6_hydroxyphenol side left {
+    2_hexaprenyl_6_hydroxyphenol
+    <-> . +nadp +h2o +h +o2 +nadph
+    2_hexaprenylphenol
+  }
+
+  branch from sam side right {
+    sam
+    <-> . +tryptaminium +sah +hplus
+    n_methyltryptaminium
+  }
+
+  branch from sam side left {
+    sam
+    <-> . +n_methyltryptaminium +sah +hplus
+    n_n_dimethyltryptaminium
+  }
+
+  branch from sah side right {
+    sah
+    <-> . +l_lysinium +sam +hplus
+    n6_n6_dimethyl_l_lysinium
+  }
+
+  branch from sah side left {
+    sah
+    <-> . +3_4_5_trihydroxy_3_methoxyflavon_7_olate +sam +hplus
+    3_3_o_dimethylquercetin
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-s-cysteinyldopa-to-ammonium "5-S-cysteinyldopa to ammonium" {
-  spacing 288
+  spacing 264
 
   spine at 0,0 {
     5_s_cysteinyldopa
@@ -40,57 +40,33 @@ pathway 5-s-cysteinyldopa-to-ammonium "5-S-cysteinyldopa to ammonium" {
     4_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem
   }
 
-  branch from dopamine side right {
-    dopamine
-    <-> . +acetyl_coa +coa +hplus
-    n_acetyldopamine
-  }
-
-  branch from dopamine side left {
-    dopamine
-    <-> . +o2 +h2o
-    dopamine_quinone
-  }
-
   branch from norepinephrine side right {
-    norepinephrine
-    <-> . +sam +sah +hplus
-    normetanephrine
-  }
-
-  branch from norepinephrine side left {
     norepinephrine
     <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
     r_noradrenaline_4_o_sulfate
   }
 
-  branch from epinephrine side right {
+  branch from epinephrine side left {
     epinephrine
     <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
     r_adrenaline_4_o_sulfate
   }
 
-  branch from sah side left {
-    sah
-    <-> . +ribonucleotide +sam +hplus
-    2_o_methylribonucleotide_1
+  branch from 5_s_cysteinyldopa side right {
+    5_s_cysteinyldopa
+    <-> . +h +h2o
+    1_4_benzothiazinyl_alanine
   }
 
-  branch from sah side right {
-    sah
-    <-> . +adenosine_5_monophosphate_1 +sam +hplus
-    n1_methyladenosine_5_monophosphate_1
+  branch from ascorbate side left {
+    ascorbate
+    <-> . +antheraxanthin +l_dehydroascorbate +h2o
+    zeaxanthin
   }
 
-  branch from nh3 side left {
-    nh3
-    <-> . +2s_butan_2_aminium +nad +h2o +nadh +hplus
-    butan_2_one
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +pentan_2_aminium +nad +h2o +nadh +hplus
-    pentan_2_one
+  branch from ascorbate side right {
+    ascorbate
+    <-> ec_1_11_1_11 [1.11.1.11] +h2o2 +h2o
+    l_dehydroascorbate
   }
 }

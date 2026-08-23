@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-6-methylsulfanyl-hexyl-g "NADH to 6-(methylsulfanyl)hexyl-g…" {
-  spacing 330
+  spacing 340
 
   spine at 0,0 {
     nadh
@@ -20,79 +20,157 @@ pathway nadh-to-6-methylsulfanyl-hexyl-g "NADH to 6-(methylsulfanyl)hexyl-g…" 
 
   branch from phenol side left {
     phenol
-    <-> ec_3_1_1_1 [3.1.1.1] +phenylthioacetate +h2o
-    thioacetate
+    <-> ec_4_2_2_13 [4.2.2.13] +1_5_anhydro_d_fructose
+    phenyl_alpha_d_glucoside
   }
 
   branch from phenol side right {
     phenol
-    <-> ec_3_2_1_20 [3.2.1.20] +alpha_d_glucose +h2o
-    phenyl_alpha_d_glucoside
+    <-> ec_2_4_1_35 [2.4.1.35] +udp +phenyl_beta_d_glucopyranoside +h
+    udp_alpha_d_glucose
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +adonixanthin +o2 +h2o
-    2_3_2_3_tetrahydroxy_beta_beta_caroten_4_one
+    <-> . +nadh +h +o_xylene +o2 +h2o
+    2_methylbenzyl_alcohol
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +3_methyl_pyrroline_5_carboxylate +h
-    4_methyl_proline
+    <-> . +nadh +h +1_1_dichloro_2_2_bis_4_chlorophenyl_ethylene +o2
+    cis_3_2_2_dichloro_1_4_chlorophenyl_vinyl_6_chlo
   }
 
   branch from h2o side left {
     h2o
-    <-> . +glucose +7_8_dihydroxycoumarin
-    daphnin
+    <-> ec_3_2_2_14 [3.2.2.14] +aldehydo_d_ribose_5_phosphate +h +nicotinamide
+    beta_nicotinamide_d_ribonucleotide
   }
 
   branch from h2o side right {
     h2o
-    <-> . +glucose +7_8_dihydroxycoumarin
-    daphnetin_8_glucoside
+    <-> ec_3_5_4_19 [3.5.4.19] +1_5_phospho_beta_d_ribosyl_5_5_phospho_beta_d_ri +h
+    1_5_phosphoribosyl_amp
   }
 
   branch from 3_phosphoadenylyl_sulfate side left {
     3_phosphoadenylyl_sulfate
-    <-> . +adenosine_3_5_bisphosphate +24_epi_cathasterone_22_o_sulfate
-    24_epicathasterone
+    <-> . +adenosine_3_5_bisphosphate +glucoerucin
+    4_methylthiobutyl_desulfoglucosinolate
   }
 
   branch from 3_phosphoadenylyl_sulfate side right {
     3_phosphoadenylyl_sulfate
-    <-> ec_2_8_2_1 [2.8.2.1] +adenosine_3_5_bisphosphate +6_sulfatoxymelatonin
-    6_hydroxymelatonin
+    <-> ec_2_8_2_38 [2.8.2.38] +adenosine_3_5_bisphosphate +h +4_methylthiobutyl_desulfoglucosinolate
+    glucoerucin
   }
 
   branch from adenosine_3_5_bisphosphate side left {
     adenosine_3_5_bisphosphate
-    <-> ec_2_8_2_1 [2.8.2.1] +s_equol_4_sulfate +h +3_phosphoadenylyl_sulfate
-    equol
+    <-> ec_2_8_2_36 [2.8.2.36] +a_47934 +3_phosphoadenylyl_sulfate
+    desulfo_a47934
   }
 
   branch from adenosine_3_5_bisphosphate side right {
     adenosine_3_5_bisphosphate
-    <-> ec_2_8_2_25 [2.8.2.25] +kaempferol_3_o_sulfate +3_phosphoadenylyl_sulfate +h
-    kaempferol
+    <-> . +paracetamol_sulfate +3_phosphoadenylyl_sulfate
+    4_acetamidophenol
   }
 
   branch from h side left {
     h
-    <-> . +5_hydroxymethyl_2_methyl_4_1h_pyrimidinone +5_2_hydroxyethyl_4_methylthiazole +h2o
-    oxythiamine
+    <-> . +udp +glc_aatgal_pp_undecaprenol +udp_alpha_d_glucose
+    2_acetamido_4_amino_2_4_6_trideoxy_alpha_d_galac
   }
 
   branch from h side right {
     h
-    <-> ec_3_1_1_95 [3.1.1.95] +15_demethoxy_epsilon_rhodomycinone +methanol +h2o
-    epsilon_rhodomycinone
+    <-> . +udp +glc_galnac_p_gro_p_mannac_glcnac_pp_undecaprenol +udp_alpha_d_glucose
+    galnac_p_gro_p_mannac_glcnac_pp_undecaprenol
   }
 
-  branch from 6_methylsulfanyl_hexyl_glucosinolate side left {
-    6_methylsulfanyl_hexyl_glucosinolate
-    <-> ec_1_14_13_237 [1.14.13.237] +6_methylsulfinyl_hexyl_glucosinolate +nadp +h2o +h +o2
-    nadph
+  branch from nadh side left {
+    nadh
+    <-> ec_1_8_1_15 [1.8.1.15] +h +mycothione +nad
+    mycothiol
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +alpha_pinene +h +o2 +nad +h2o
+    alpha_pinene_oxide
+  }
+
+  branch from benzene side left {
+    benzene
+    <-> . +co2 +h
+    benzoate
+  }
+
+  branch from h side right {
+    h
+    <-> . +udp +glc_galnac_p_glc_galnac_p_gro_p_mannac_glcnac_pp +udp_alpha_d_glucose
+    galnac_p_glc_galnac_p_gro_p_mannac_glcnac_pp_und
+  }
+
+  branch from h side left {
+    h
+    <-> . +udp +trans_zeatin_7_n_glucoside +udp_alpha_d_glucose
+    trans_zeatin
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_14_13_56 [1.14.13.56] +dihydrosanguinarine +h +nadph +nadp +h2o
+    10_hydroxydihydrosanguinarine
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_14_13_57 [1.14.13.57] +dihydrochelirubine +h +nadph +nadp +h2o
+    12_hydroxydihydrochelirubine
+  }
+
+  branch from phenol side right {
+    phenol
+    <-> ec_1_11_1_7 [1.11.1.7] +phenoxy_radical +h2o
+    h2o2
+  }
+
+  branch from phenol side left {
+    phenol
+    <-> . +2z_4e_2_hydroxy_6_oxo_6_phenoxyhexa_2_4_dienoat
+    2_pyrone_6_carboxylate
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_122 [1.1.1.122] +nadh +l_galactono_1_4_lactone +h
+    alpha_l_galactose
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_2_1_85 [1.2.1.85] +nadh +h +2e_4z_2_hydroxymuconate +h2o
+    2e_4z_2_hydroxy_6_oxohexa_2_4_dienoate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_1_31 [3.6.1.31] +diphosphate +h +1_5_phosphoribosyl_amp
+    1_5_phosphoribosyl_atp
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_4_4_1_21 [4.4.1.21] +d_ribose +l_homocysteine
+    s_ribosyl_l_homocysteine
+  }
+
+  branch from sulfate side right {
+    sulfate
+    <-> ec_1_8_2_1 [1.8.2.1] +ferrocytochrome_c +h +ferricytochrome_c +h2o
+    sulfite
   }
 }

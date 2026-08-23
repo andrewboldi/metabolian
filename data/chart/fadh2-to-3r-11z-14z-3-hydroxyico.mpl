@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway fadh2-to-3r-11z-14z-3-hydroxyico "FADH2 to (3R,11Z,14Z)-3-hydroxyico…" {
-  spacing 158
+  spacing 152
 
   spine at 0,0 {
     fadh2
@@ -14,11 +14,5 @@ pathway fadh2-to-3r-11z-14z-3-hydroxyico "FADH2 to (3R,11Z,14Z)-3-hydroxyico…"
     co2
     <-> . +11z_14z_3_oxoicosa_11_14_dienoyl_coa +nadph +hplus -nadp
     3r_11z_14z_3_hydroxyicosadienoyl_coa
-  }
-
-  branch from 11z_14z_3_oxoicosa_11_14_dienoyl_coa side left {
-    11z_14z_3_oxoicosa_11_14_dienoyl_coa
-    <-> . +malonyl-coa +hplus +co2 +coa
-    linoleoyl_coa
   }
 }

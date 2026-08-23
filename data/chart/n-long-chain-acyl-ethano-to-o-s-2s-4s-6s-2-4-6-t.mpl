@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-long-chain-acyl-ethano-to-o-s-2s-4s-6s-2-4-6-t "N-(long-chain-acyl)ethano… to O-(S-[2S,4S,6S]-2,4,6-tri…" {
-  spacing 270
+  spacing 324
 
   spine at 0,0 {
     n_long_chain_acyl_ethanolamine
@@ -15,6 +15,15 @@ pathway n-long-chain-acyl-ethano-to-o-s-2s-4s-6s-2-4-6-t "N-(long-chain-acyl)eth
     <-> ec_2_3_1_252 [2.3.1.252] +holo-acp +s_methylmalonyl_coa +nadph +hplus -co2 -nadp -coa -h2o
     o_s_2s_4s_6s_2_4_6_trimethyl_very_long_chain_fat
   }
+
+
+
+
+
+
+
+
+
 
 
 

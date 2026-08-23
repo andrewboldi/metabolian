@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-hydroxy-1-phenylpropan-to-norephedrine "1-hydroxy-1-phenylpropan-… to (+)-norephedrine" {
-  spacing 220
+  spacing 172
 
   spine at 0,0 {
     1_hydroxy_1_phenylpropan_2_one
@@ -14,53 +14,5 @@ pathway 1-hydroxy-1-phenylpropan-to-norephedrine "1-hydroxy-1-phenylpropan-… t
     1r_2s_ephedrine
     <-> . +s_adenosyl_l_homocysteine -norephedrine
     s_adenosyl_l_methionine
-  }
-
-  branch from h side left {
-    h
-    <-> . +9z_12z_octadecadienoate +cholesterol +h2o
-    1_linoleoyl_cholesterol_cholesterol_ester_18_2_d
-  }
-
-  branch from h side right {
-    h
-    <-> . +5_dehydro_l_gluconate
-    d_tagaturonate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_proline
-    prolyl_prolyl_proline
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_proline +l_lysine +l_tryptophan
-    prolyl_tryptophanyl_lysine
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_14_13_129 [1.14.13.129] +nadh +h +cryptoxanthin +o2 +h2o
-    all_trans_zeaxanthin
-  }
-
-  branch from nad side right {
-    nad
-    <-> . +nadh +3_keto_beta_d_galactose +h
-    beta_d_galactose
-  }
-
-  branch from s_adenosyl_l_methionine side left {
-    s_adenosyl_l_methionine
-    <-> ec_2_1_1_43 [2.1.1.43] +s_adenosyl_l_homocysteine +protein_n6_n6_n6_trimethyl_l_lysine
-    protein_n6_n6_dimethyl_l_lysine
-  }
-
-  branch from s_adenosyl_l_methionine side right {
-    s_adenosyl_l_methionine
-    <-> ec_2_1_1_25 [2.1.1.25] +s_adenosyl_l_homocysteine +h +hva
-    3_4_dihydroxyphenylacetate
   }
 }

@@ -21,10 +21,4 @@ pathway cdp-to-cdp "CDP to CDP" {
     <-> ec_1_1_1_342 [1.1.1.342] +nadp +nadph +hplus
     cdp_4_dehydro_3_6_dideoxy_d_glucose
   }
-
-  branch from cdp_3_6_dideoxy_d_glucose side right {
-    cdp_3_6_dideoxy_d_glucose
-    <-> . +nadh +h +cdp_4_dehydro_3_6_dideoxy_d_glucose
-    nad
-  }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-acetylneuraminyl-2-3-to-d-glucopyranose "α-N-acetylneuraminyl-(2→3… to D-glucopyranose" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     n_acetylneuraminyl_2_3_d_galactosyl_1_4_d_gluco
@@ -13,18 +13,6 @@ pathway n-acetylneuraminyl-2-3-to-d-glucopyranose "α-N-acetylneuraminyl-(2→3�
     <-> . +h2o -n_acylsphingoid
     lactose
     <-> ec_3_2_1_108 [3.2.1.108] +h2o -glucose
-    d_galactose
-  }
-
-  branch from lactose side left {
-    lactose
-    <-> . +d_galactosyl_1_4_d_glucosyl_1_1_n_acylsphingosi +h2o
-    n_acylsphingosine
-  }
-
-  branch from d_galactose side right {
-    d_galactose
-    <-> ec_5_1_3_3 [5.1.3.3]
     d_galactose
   }
 }

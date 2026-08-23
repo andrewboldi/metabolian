@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway raffinose-to-stachyose "raffinose to stachyose" {
-  spacing 188
+  spacing 206
 
   spine at 0,0 {
     raffinose
@@ -30,14 +30,14 @@ pathway raffinose-to-stachyose "raffinose to stachyose" {
 
   branch from 1d_4_o_methyl_myo_inositol side left {
     1d_4_o_methyl_myo_inositol
-    <-> . +nadh +h +4_o_methyl_d_myo_inosose
-    nad
+    <-> .
+    5d_5_o_methyl_chiro_inositol
   }
 
   branch from 1d_4_o_methyl_myo_inositol side right {
     1d_4_o_methyl_myo_inositol
-    <-> .
-    5d_5_o_methyl_chiro_inositol
+    <-> . +d_galactosylononitol +galactinol
+    myo_inositol
   }
 
   branch from verbascose side left {
@@ -50,5 +50,23 @@ pathway raffinose-to-stachyose "raffinose to stachyose" {
     verbascose
     <-> . +myo_inositol +stachyose
     alpha_d_galactosyl_1_3_1d_myo_inositol
+  }
+
+  branch from raffinose side left {
+    raffinose
+    <-> . +mediose
+    sucrose
+  }
+
+  branch from raffinose side right {
+    raffinose
+    <-> ec_2_4_1_166 [2.4.1.166] +sucrose
+    1f_alpha_d_galactosylraffinose
+  }
+
+  branch from ajugose side left {
+    ajugose
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
+    h
   }
 }

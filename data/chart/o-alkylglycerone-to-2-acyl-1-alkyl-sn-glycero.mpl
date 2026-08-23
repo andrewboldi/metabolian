@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway o-alkylglycerone-to-2-acyl-1-alkyl-sn-glycero "O-alkylglycerone to 2-acyl-1-alkyl-sn-glycero…" {
-  spacing 284
+  spacing 326
 
   spine at 0,0 {
     o_alkylglycerone
@@ -38,25 +38,67 @@ pathway o-alkylglycerone-to-2-acyl-1-alkyl-sn-glycero "O-alkylglycerone to 2-acy
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> . +n_acyl_d_galactosylsphingosine +cmp_n_acetyl_neuraminate +hplus
-    n_acetyl_neuraminosyl_2_3_d_galactosylceramide
+    <-> . +l_serine +cdp_choline +hplus
+    o_phosphocholine_l_serine
   }
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> . +neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac +cmp_n_acetyl_neuraminate +hplus
-    neu5ac_2_3_d_gal_1_3_neu5ac_2_6_d_galnac_1_4_ne
+    <-> . +monosialyl_gb5 +cmp_n_acetyl_neuraminate +hplus
+    disialosyl_gb5
   }
 
   branch from fatty-acid side left {
     fatty-acid
-    <-> ec_3_1_1_13 [3.1.1.13] +cholesteryl_ester +h2o +hplus
-    cholesterol
+    <-> . +3_d_galactosyl_1_6_d_galactosyl_1_2_bis_long_cha +h2o +hplus
+    3_d_galactosyl_1_6_d_galactosyl_2_mono_long_chai
   }
 
   branch from fatty-acid side right {
     fatty-acid
-    <-> . +1_acyl_2_hexadecenoyl_sn_glycero_3_phosphate +h2o +hplus
-    2_16_1_lysophosphatidate
+    <-> . +3_d_galactosyl_1_2_bis_long_chain_acyl_sn_glycer +h2o +hplus
+    3_d_galactosyl_2_mono_long_chain_acyl_sn_glycero
+  }
+
+  branch from acyl_coa side left {
+    acyl_coa
+    <-> ec_2_3_3_20 [2.3.3.20] +2_saturated_acyl_coa +h2o +coa +hplus
+    r_2_alkyl_3_oxoalkanoate
+  }
+
+  branch from acyl_coa side right {
+    acyl_coa
+    <-> . +l_cysteine +coa
+    s_acyl_l_cysteine
+  }
+
+  branch from 1_alkyl_2_acyl_sn_glycerol side left {
+    1_alkyl_2_acyl_sn_glycerol
+    <-> . +phosphatidylcholine +1_alkyl_2_3_diacyl_sn_glycerol
+    1_o_acyl_sn_glycero_3_phosphocholine
+  }
+
+  branch from cytidine_5_monophosphate side right {
+    cytidine_5_monophosphate
+    <-> . +o3_d_galactosyl_1_3_n_acetyl_d_galactosaminyl_l +cmp_n_acetyl_neuraminate +hplus
+    o3_n_acetyl_neuraminyl_2_3_d_galactosyl_1_3_n_ac
+  }
+
+  branch from cytidine_5_monophosphate side left {
+    cytidine_5_monophosphate
+    <-> . +d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4 +cmp_n_acetyl_neuraminate +hplus
+    d_galactosyl_1_3_n_acetyl_neuraminosyl_2_6_n_ac
+  }
+
+  branch from fatty-acid side right {
+    fatty-acid
+    <-> . +3_d_galactosyl_1_2_bis_long_chain_acyl_sn_glycer +h2o +hplus
+    3_d_galactosyl_mono_long_chain_acyl_sn_glycerol
+  }
+
+  branch from fatty-acid side left {
+    fatty-acid
+    <-> . +3_d_galactosyl_1_6_d_galactosyl_1_2_bis_long_cha +h2o +hplus
+    3_d_galactosyl_1_6_d_galactosyl_mono_long_chain
   }
 }

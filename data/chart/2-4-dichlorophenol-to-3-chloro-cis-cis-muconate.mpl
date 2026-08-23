@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-4-dichlorophenol-to-3-chloro-cis-cis-muconate "2,4-dichlorophenol to 3-chloro-cis,cis-muconate" {
-  spacing 164
+  spacing 170
 
   spine at 0,0 {
     2_4_dichlorophenol
@@ -26,5 +26,11 @@ pathway 2-4-dichlorophenol-to-3-chloro-cis-cis-muconate "2,4-dichlorophenol to 3
     4_chlorocatechol
     <-> . +nadh +o2 +hplus +co2 +nad +h2o
     4_chlorosalicylate
+  }
+
+  branch from 2_4_dichlorophenol side left {
+    2_4_dichlorophenol
+    <-> . +nadh +o2 +hplus +nad +h2o
+    3_5_dichlorocatechol
   }
 }

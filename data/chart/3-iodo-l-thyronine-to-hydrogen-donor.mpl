@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-iodo-l-thyronine-to-hydrogen-donor "3'-iodo-L-thyronine to hydrogen donor" {
-  spacing 164
+  spacing 188
 
   spine at 0,0 {
     3_iodo_l_thyronine
@@ -20,13 +20,37 @@ pathway 3-iodo-l-thyronine-to-hydrogen-donor "3'-iodo-L-thyronine to hydrogen do
 
   branch from adenosine_3_5_bismonophosphate side left {
     adenosine_3_5_bismonophosphate
-    <-> . +hexanoyl_coa +h2o +hplus
-    s_hexanoyl_4_phosphopantetheine
+    <-> . +9z_myristoleoyl_coa +h2o +hplus
+    s_9z_tetradecenoyl_4_phosphopantetheine
   }
 
   branch from adenosine_3_5_bismonophosphate side right {
     adenosine_3_5_bismonophosphate
-    <-> . +octanoyl_coa +h2o +hplus
-    s_octanoyl_4_phosphopantetheine
+    <-> . +muricholate +3_phosphonato_5_adenylyl_sulfate +hplus
+    muricholate_7_sulfate
+  }
+
+  branch from 3_phosphonato_5_adenylyl_sulfate side left {
+    3_phosphonato_5_adenylyl_sulfate
+    <-> . +tauro_muricholate +adenosine_3_5_bismonophosphate +hplus
+    tauro_muricholate_7_sulfate
+  }
+
+  branch from 3_phosphonato_5_adenylyl_sulfate side right {
+    3_phosphonato_5_adenylyl_sulfate
+    <-> . +o3_n_acetyl_d_glucosaminyl_1_3_d_galactosyl_1_3 +adenosine_3_5_bismonophosphate +hplus
+    o3_6_o_sulfo_n_acetyl_d_glucosaminyl_1_3_d_galac
+  }
+
+  branch from adenosine_3_5_bismonophosphate side left {
+    adenosine_3_5_bismonophosphate
+    <-> . +o3_n_acetyl_d_glucosaminyl_1_3_d_galactosyl_1_3 +3_phosphonato_5_adenylyl_sulfate +hplus
+    o3_6_o_sulfo_n_acetyl_d_glucosaminyl_1_3_d_galac
+  }
+
+  branch from adenosine_3_5_bismonophosphate side right {
+    adenosine_3_5_bismonophosphate
+    <-> . +o3_d_galactosyl_1_3_n_acetyl_d_glucosaminyl_1_6 +3_phosphonato_5_adenylyl_sulfate +hplus
+    o3_d_galactosyl_1_3_6_o_sulfo_n_acetyl_d_glucosa
   }
 }

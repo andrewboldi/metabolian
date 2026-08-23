@@ -25,22 +25,4 @@ pathway udp-n-acetyl-d-muramate-to-ammonium "UDP-N-acetyl-α-D-muramate to ammon
     <-> ec_1_4_3_19 [1.4.3.19] +d_alanine +o2 +h2o -pyruvate -h2o2
     nh3
   }
-
-  branch from ppi side left {
-    ppi
-    <-> . +4_methoxybenzoate +atp +nadph +hplus +amp +nadp
-    p_methoxybenzaldehyde
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +fpp
-    cadinene
-  }
-
-  branch from udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_meso side left {
-    udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_meso
-    <-> . +l_alanine +udp_n_acetyl_alpha_d_muramoyl_l_alanyl_gamma_d_g
-    h2o
-  }
 }

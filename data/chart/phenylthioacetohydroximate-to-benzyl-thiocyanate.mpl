@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway phenylthioacetohydroximate-to-benzyl-thiocyanate "phenylthioacetohydroximate to benzyl thiocyanate" {
-  spacing 290
+  spacing 340
 
   spine at 0,0 {
     phenylthioacetohydroximate
@@ -22,14 +22,14 @@ pathway phenylthioacetohydroximate-to-benzyl-thiocyanate "phenylthioacetohydroxi
 
   branch from adenosine_3_5_bismonophosphate side left {
     adenosine_3_5_bismonophosphate
-    <-> ec_2_8_2_14 [2.8.2.14] +glycolithocholate +3_phosphonato_5_adenylyl_sulfate +hplus
-    sulfoglycolithocholate
+    <-> ec_2_8_2_9 [2.8.2.9] +methyl_l_tyrosinate +3_phosphonato_5_adenylyl_sulfate +hplus
+    l_tyrosine_methyl_ester_4_sulfate
   }
 
   branch from adenosine_3_5_bismonophosphate side right {
     adenosine_3_5_bismonophosphate
-    <-> ec_2_8_2_19 [2.8.2.19] +d_glucosyl_1_6_d_glucosyl_1_6_d_glucosyl_1_3_1 +3_phosphonato_5_adenylyl_sulfate +hplus
-    6_o_sulfonato_d_glc_1_6_d_glc_1_6_d_glc_1_3_1_o
+    <-> ec_2_8_2_10 [2.8.2.10] +renilla_luciferin +3_phosphonato_5_adenylyl_sulfate +hplus
+    renilla_luciferyl_sulfate
   }
 
   branch from z_phenyl_n_sulfonatooxy_methanimidothioate side left {
@@ -40,25 +40,85 @@ pathway phenylthioacetohydroximate-to-benzyl-thiocyanate "phenylthioacetohydroxi
 
   branch from glucose side right {
     glucose
-    <-> . +avenacoside_a +h2o
-    26_desglucoavenacoside_a
+    <-> ec_1_1_1_47 [1.1.1.47] +nadp +nadph +hplus
+    d_glucono_1_5_lactone
   }
 
   branch from glucose side left {
     glucose
-    <-> ec_3_2_1_117 [3.2.1.117] +r_amygdalin +h2o
-    r_prunasin
+    <-> ec_3_2_1_42 [3.2.1.42] +h2o +gdp +hplus
+    gdp_d_glucose
   }
 
   branch from sulfate side right {
     sulfate
-    <-> ec_1_14_11_77 [1.14.11.77] +2_ethylhexyl_sulfate +akg +o2 +succinate +co2 +hplus
-    2_ethylhexanal
+    <-> ec_1_14_11_77 [1.14.11.77] +pentyl_sulfate +akg +o2 +succinate +co2 +hplus
+    pentanal
   }
 
   branch from sulfate side left {
     sulfate
-    <-> ec_1_14_11_77 [1.14.11.77] +primary_linear_alkyl_sulfate_ester +akg +o2 +succinate +co2 +hplus
-    aldehyde
+    <-> ec_1_14_11_77 [1.14.11.77] +hexyl_sulfate +akg +o2 +succinate +co2 +hplus
+    hexanal
+  }
+
+  branch from udp_d_glucose side right {
+    udp_d_glucose
+    <-> ec_2_4_1_104 [2.4.1.104] +7_8_dihydroxycoumarin +udp +hplus
+    daphnin
+  }
+
+  branch from udp_d_glucose side left {
+    udp_d_glucose
+    <-> ec_2_4_1_193 [2.4.1.193] +25s_5_spirostan_3_ol +udp +hplus
+    25s_5_spirostan_3_yl_d_glucoside
+  }
+
+  branch from 3_phosphonato_5_adenylyl_sulfate side right {
+    3_phosphonato_5_adenylyl_sulfate
+    <-> ec_2_8_2_11 [2.8.2.11] +n_acyl_d_galactosylsphingosine +adenosine_3_5_bismonophosphate +hplus
+    d_galactosylceramide_sulfate
+  }
+
+  branch from 3_phosphonato_5_adenylyl_sulfate side left {
+    3_phosphonato_5_adenylyl_sulfate
+    <-> ec_2_8_2_28 [2.8.2.28] +quercetin_3_3_bissulfate +adenosine_3_5_bismonophosphate +hplus
+    quercetin_3_3_7_trissulfate
+  }
+
+  branch from adenosine_3_5_bismonophosphate side right {
+    adenosine_3_5_bismonophosphate
+    <-> ec_2_8_2_26 [2.8.2.26] +quercetin_3_sulfate +3_phosphonato_5_adenylyl_sulfate +hplus
+    quercetin_3_3_bissulfate
+  }
+
+  branch from adenosine_3_5_bismonophosphate side left {
+    adenosine_3_5_bismonophosphate
+    <-> ec_2_8_2_3 [2.8.2.3] +primary_ammonium_ion +3_phosphonato_5_adenylyl_sulfate +hplus
+    sulfamate
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> ec_2_7_1_41 [2.7.1.41] +d_glucopyranose_1_phosphate
+    d_glucose_1_6_bisphosphate
+  }
+
+  branch from glucose side left {
+    glucose
+    <-> ec_3_2_1_118 [3.2.1.118] +r_prunasin +h2o
+    mandelonitrile
+  }
+
+  branch from sulfate side right {
+    sulfate
+    <-> ec_1_14_11_77 [1.14.11.77] +nonyl_sulfate +akg +o2 +succinate +co2 +hplus
+    nonanal
+  }
+
+  branch from sulfate side left {
+    sulfate
+    <-> ec_1_14_11_77 [1.14.11.77] +decyl_sulfate +akg +o2 +succinate +co2 +hplus
+    decanal
   }
 }

@@ -107,15 +107,6 @@
       "xrefs": {
         "chebi": "CHEBI:15361"
       }
-    },
-    {
-      "id": "l_galactonate",
-      "name": "L-galactonate",
-      "formula": "C6H11O7",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:53071"
-      }
     }
   ],
   "enzymes": [
@@ -138,13 +129,6 @@
       "name": "L-threo-3-deoxy-hexylosonate aldolase",
       "ec": [
         "4.1.2.54"
-      ]
-    },
-    {
-      "id": "ec_4_2_1_146",
-      "name": "L-galactonate dehydratase",
-      "ec": [
-        "4.2.1.146"
       ]
     }
   ],
@@ -309,44 +293,203 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "L-galactonate dehydratase",
-      "equation": "L-galactonate = 2-dehydro-3-deoxy-L-galactonate + H2O",
-      "ec": "4.2.1.146",
-      "substrates": [
-        {
-          "metabolite": "l_galactonate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_keto_3_deoxy_l_galactonate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_1_146"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:38103"
+      "id": "xt_3_6_anhydro_l_galactofuranose_udp-n-acetylgalactosamine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_6_anhydro_l_galactofuranose"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-n-acetylgalactosamine-to-h2o"
+      },
+      "note": "Shares 3,6-anhydro-L-galactofuranose with UDP-N-acetylgalactosamine… to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:38103"
+            "db": "MetaNetX",
+            "id": "MNXM36133"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_6_anhydro_l_galactopyranose_d-glcp-1-4-d-galp-to-cdp-4-dehydro-6-deoxy-d-g",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_6_anhydro_l_galactopyranose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glcp-1-4-d-galp-to-cdp-4-dehydro-6-deoxy-d-g"
+      },
+      "note": "Shares 3,6-anhydro-α-L-galactopyranose with β-D-Glcp-(1→4)-D-Galp to CDP-4-dehydro-6-deoxy-D-g….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83433"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_6_anhydro_l_galactopyranose_dihydrodemethylsterigmato-to-8-o-methyldihydrost",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_6_anhydro_l_galactopyranose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dihydrodemethylsterigmato-to-8-o-methyldihydrost"
+      },
+      "note": "Shares 3,6-anhydro-α-L-galactopyranose with dihydrodemethylsterigmato… to 8-O-methyldihydrosterigma….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83433"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_6_anhydro_l_galactopyranose_diphosphate-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_6_anhydro_l_galactopyranose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-phosphate"
+      },
+      "note": "Shares 3,6-anhydro-α-L-galactopyranose with diphosphate to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83433"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_6_anhydro_l_galactopyranose_propanoate-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_6_anhydro_l_galactopyranose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "propanoate-to-o2"
+      },
+      "note": "Shares 3,6-anhydro-α-L-galactopyranose with propanoate to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83433"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_keto_3_deoxy_l_galactonate_2-amino-2-deoxy-d-gluconi-to-3-deoxy-d-glycero-h",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_keto_3_deoxy_l_galactonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-amino-2-deoxy-d-gluconi-to-3-deoxy-d-glycero-h"
+      },
+      "note": "Shares 2-keto-3-deoxy-L-galactonate with 2-amino-2-deoxy-D-gluconi… to 3-deoxy-D-glycero-hexo-2,….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75545"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_keto_3_deoxy_l_galactonate_acetylacetone-to-dehydro-coenzyme-f420-0",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_keto_3_deoxy_l_galactonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetylacetone-to-dehydro-coenzyme-f420-0"
+      },
+      "note": "Shares 2-keto-3-deoxy-L-galactonate with acetylacetone to dehydro coenzyme F420-0.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75545"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_keto_3_deoxy_l_galactonate_l-galactonate-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_keto_3_deoxy_l_galactonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-galactonate-to-nad"
+      },
+      "note": "Shares 2-keto-3-deoxy-L-galactonate with L-galactonate to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75545"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_glyceraldehyde_oleoyl-sn-glycero-3-phosp-to-3s-4s-5s-3-4-5-6-te",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_glyceraldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "oleoyl-sn-glycero-3-phosp-to-3s-4s-5s-3-4-5-6-te"
+      },
+      "note": "Shares L-glyceraldehyde with oleoyl-sn-glycero-3-phosp… to (3S,4S,5S)-3,4,5,6-tetrah….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:27975"
           }
         ]
       }

@@ -1,0 +1,440 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "z-n-sulfonatooxy-prop-to-glucoiberin",
+  "name": "(Z)-N-(sulfonatooxy)prop-… to glucoiberin",
+  "category": "other",
+  "summary": "A 3-step route from (Z)-N-(sulfonatooxy)prop-2-enimidothioate to glucoiberin, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:69272"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:183062"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "z_n_sulfonatooxy_prop_2_enimidothioate",
+      "name": "(Z)-N-(sulfonatooxy)prop-2-enimidothioate",
+      "short": "N-(sulfonatooxy)pro…",
+      "formula": "C4H5NO4S2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:183062"
+      }
+    },
+    {
+      "id": "allyl_isothiocyanate",
+      "name": "allyl isothiocyanate",
+      "formula": "C4H5NS",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:73224"
+      }
+    },
+    {
+      "id": "sulfate",
+      "name": "sulfate",
+      "formula": "O4S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16189"
+      }
+    },
+    {
+      "id": "beta_d_glucose",
+      "name": "beta-D-glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364060"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "sulfate",
+      "name": "sulfate",
+      "formula": "O4S",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM58"
+      }
+    },
+    {
+      "id": "sinigrin",
+      "name": "sinigrin",
+      "formula": "C10H16NO9S2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1371102"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "methanesulfonate",
+      "name": "methanesulfonate",
+      "formula": "CH3O3S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:25224"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "glucoiberin",
+      "name": "glucoiberin",
+      "formula": "C11H20NO10S3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM740885"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_2_1_147",
+      "name": "thioglucosidase",
+      "ec": [
+        "3.2.1.147"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(Z)-N-(sulfonatooxy)prop-2-enimidothioate = allyl isothiocyanate + sulfate",
+      "equation": "(Z)-N-(sulfonatooxy)prop-2-enimidothioate = allyl isothiocyanate + sulfate",
+      "substrates": [
+        {
+          "metabolite": "z_n_sulfonatooxy_prop_2_enimidothioate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "allyl_isothiocyanate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:69272"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69272"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "thioglucosidase",
+      "ec": "3.2.1.147",
+      "substrates": [
+        {
+          "metabolite": "beta_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "allyl_isothiocyanate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sinigrin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_147"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR131604"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR131604"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR121627",
+      "substrates": [
+        {
+          "metabolite": "sinigrin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methanesulfonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucoiberin",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR121627"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR121627"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_z_n_sulfonatooxy_prop_2_enimidothioate_1-monoacetin-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "z_n_sulfonatooxy_prop_2_enimidothioate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-monoacetin-to-h2o"
+      },
+      "note": "Shares (Z)-N-(sulfonatooxy)prop-2-enimidothioate with 1-Monoacetin to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:183062"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_z_n_sulfonatooxy_prop_2_enimidothioate_17-estradiol-to-sulfate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "z_n_sulfonatooxy_prop_2_enimidothioate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "17-estradiol-to-sulfate"
+      },
+      "note": "Shares (Z)-N-(sulfonatooxy)prop-2-enimidothioate with 17α-estradiol to sulfate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:183062"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_z_n_sulfonatooxy_prop_2_enimidothioate_3-d-glucuronosyl-n2-6-dis-to-5-o-phosphonato-d-r",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "z_n_sulfonatooxy_prop_2_enimidothioate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-d-glucuronosyl-n2-6-dis-to-5-o-phosphonato-d-r"
+      },
+      "note": "Shares (Z)-N-(sulfonatooxy)prop-2-enimidothioate with 3-D-glucuronosyl-N2,6-dis… to 5-O-phosphonato-α-D-ribof….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:183062"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_z_n_sulfonatooxy_prop_2_enimidothioate_3r-4r-7-2-dihydroxy-4-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "z_n_sulfonatooxy_prop_2_enimidothioate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3r-4r-7-2-dihydroxy-4-to-coa"
+      },
+      "note": "Shares (Z)-N-(sulfonatooxy)prop-2-enimidothioate with (3R,4R)-7,2'-dihydroxy-4'… to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:183062"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_z_n_sulfonatooxy_prop_2_enimidothioate_methyl-sulfate-to-s-formylmycothiol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "z_n_sulfonatooxy_prop_2_enimidothioate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "methyl-sulfate-to-s-formylmycothiol"
+      },
+      "note": "Shares (Z)-N-(sulfonatooxy)prop-2-enimidothioate with methyl sulfate to S-formylmycothiol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:183062"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sinigrin_1-monoacetin-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sinigrin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-monoacetin-to-h2o"
+      },
+      "note": "Shares sinigrin with 1-Monoacetin to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371102"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_glucoiberin_5-s-glutathionyl-aminochr-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "glucoiberin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-s-glutathionyl-aminochr-to-o2"
+      },
+      "note": "Shares glucoiberin with 5-S-glutathionyl-aminochr… to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM740885"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_glucoiberin_aminochrome-o-semiquinone-to-dopamine-quinone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "glucoiberin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aminochrome-o-semiquinone-to-dopamine-quinone"
+      },
+      "note": "Shares glucoiberin with Aminochrome o-semiquinone to dopamine quinone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM740885"
+          }
+        ]
+      }
+    }
+  ]
+}

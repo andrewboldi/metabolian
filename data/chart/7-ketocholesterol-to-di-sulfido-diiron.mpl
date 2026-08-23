@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 7-ketocholesterol-to-di-sulfido-diiron "7-ketocholesterol to di-μ-sulfido-diiron" {
-  spacing 152
+  spacing 158
 
   spine at 0,0 {
     7_ketocholesterol
@@ -14,5 +14,11 @@ pathway 7-ketocholesterol-to-di-sulfido-diiron "7-ketocholesterol to di-μ-sulfi
     25r_3_hydroxycholest_5_en_7_one_26_al
     <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
     25r_3_hydroxycholest_5_en_7_one_26_oate
+  }
+
+  branch from 7_ketocholesterol side left {
+    7_ketocholesterol
+    <-> . +nadph +hplus +nadp
+    7_hydroxycholesterol
   }
 }

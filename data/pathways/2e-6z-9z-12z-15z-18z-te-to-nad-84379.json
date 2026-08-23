@@ -1,0 +1,306 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2e-6z-9z-12z-15z-18z-te-to-nad-84379",
+  "name": "(2E,6Z,9Z,12Z,15Z,18Z)-te… to NAD",
+  "category": "other",
+  "summary": "A 3-step route from (2E,6Z,9Z,12Z,15Z,18Z)-tetracosahexaenoyl-CoA(4−) to NAD(+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:84379"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:76364"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2e_6z_9z_12z_15z_18z_tetracosahexaenoyl_coa",
+      "name": "(2E,6Z,9Z,12Z,15Z,18Z)-tetracosahexaenoyl-CoA",
+      "short": "(2E,6Z,9Z,12Z,15Z,1…",
+      "formula": "C45H66N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:76364"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "3r_6z_9z_12z_15z_18z_3_hydroxytetracosapentaeno",
+      "name": "(3R,6Z,9Z,12Z,15Z,18Z)-3-hydroxytetracosapentaenoyl-CoA",
+      "short": "(3R,6Z,9Z,12Z,15Z,1…",
+      "formula": "C45H68N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:233764"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "6z_9z_12z_15z_18z_3_oxotetracosapentaenoyl_coa",
+      "name": "(6Z,9Z,12Z,15Z,18Z)-3-oxotetracosapentaenoyl-CoA",
+      "short": "(6Z,9Z,12Z,15Z,18Z)…",
+      "formula": "C45H66N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:76367"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(2E,6Z,9Z,12Z,15Z,18Z)-tetracosahexaenoyl-CoA + H2O = (3R)-hydroxy-(6Z,9Z,12Z,15Z,18Z)-...",
+      "equation": "(2E,6Z,9Z,12Z,15Z,18Z)-tetracosahexaenoyl-CoA + H2O = (3R)-hydroxy-(6Z,9Z,12Z,15Z,18Z)-tetracosapentaenoyl-CoA",
+      "substrates": [
+        {
+          "metabolite": "2e_6z_9z_12z_15z_18z_tetracosahexaenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3r_6z_9z_12z_15z_18z_3_hydroxytetracosapentaeno",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:84379"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84379"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(3R)-hydroxy-(6Z,9Z,12Z,15Z,18Z)-tetracosapentaenoyl-CoA + NAD(+) = 3-oxo-(6Z,9Z,12Z,15...",
+      "equation": "(3R)-hydroxy-(6Z,9Z,12Z,15Z,18Z)-tetracosapentaenoyl-CoA + NAD(+) = 3-oxo-(6Z,9Z,12Z,15Z,18Z)-tetracosapentaenoyl-CoA + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "3r_6z_9z_12z_15z_18z_3_hydroxytetracosapentaeno",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6z_9z_12z_15z_18z_3_oxotetracosapentaenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:84383"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84383"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR150117",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "6z_9z_12z_15z_18z_3_oxotetracosapentaenoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3r_6z_9z_12z_15z_18z_3_hydroxytetracosapentaeno",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR150117"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR150117"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3r_6z_9z_12z_15z_18z_3_hydroxytetracosapentaeno_2e-6z-9z-12z-15z-18z-te-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3r_6z_9z_12z_15z_18z_3_hydroxytetracosapentaeno"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2e-6z-9z-12z-15z-18z-te-to-nad"
+      },
+      "note": "Shares (3R,6Z,9Z,12Z,15Z,18Z)-3-hydroxytetracosapentaenoyl-CoA with (2E,6Z,9Z,12Z,15Z,18Z)-te… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:233764"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3r_6z_9z_12z_15z_18z_3_hydroxytetracosapentaeno_d-xylp-1-6-d-glcp-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3r_6z_9z_12z_15z_18z_3_hydroxytetracosapentaeno"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-xylp-1-6-d-glcp-to-h2o"
+      },
+      "note": "Shares (3R,6Z,9Z,12Z,15Z,18Z)-3-hydroxytetracosapentaenoyl-CoA with α-D-Xylp-(1→6)-D-Glcp to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:233764"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3r_6z_9z_12z_15z_18z_3_hydroxytetracosapentaeno_esculin-to-h-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3r_6z_9z_12z_15z_18z_3_hydroxytetracosapentaeno"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "esculin-to-h-null"
+      },
+      "note": "Shares (3R,6Z,9Z,12Z,15Z,18Z)-3-hydroxytetracosapentaenoyl-CoA with esculin to H.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:233764"
+          }
+        ]
+      }
+    }
+  ]
+}

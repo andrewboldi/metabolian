@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dihydroprecondylocarpine-to-3-epoxy-16-methoxy-2 "dihydroprecondylocarpine… to 3-epoxy-16-methoxy-2,3-di…" {
-  spacing 236
+  spacing 284
 
   spine at 0,0 {
     dihydroprecondylocarpine_acetate
@@ -20,39 +20,87 @@ pathway dihydroprecondylocarpine-to-3-epoxy-16-methoxy-2 "dihydroprecondylocarpi
     3_epoxy_16_methoxy_2_3_dihydrotabersonine
   }
 
-  branch from tabersoninium side left {
-    tabersoninium
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    r_19_hydroxytabersonine
+  branch from fmn side left {
+    fmn
+    <-> . +32_hydroxylanosterol +fmnh2 +o2 +h2o +hplus
+    4_4_dimethyl_14a_formyl_5alpha_cholesta_8_24_die
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_16 [1.14.14.16] +progesterone +fmnh2 +o2 +h2o +hplus
-    11_deoxycorticosterone
+    <-> . +methyl_medium_chain_fatty_acid_anion +fmnh2 +o2 +h2o +hplus
+    hydroxy_medium_chain_fatty_acid_anion
   }
 
-  branch from fmn side left {
-    fmn
-    <-> . +1_o_oleoyl_sn_glycero_3_phosphocholine +fmnh2 +o2 +h2o +hplus
-    1_o_8_hydroxyoleoyl_sn_glycero_3_phosphocholine
-  }
-
-  branch from 16_methoxytabersoninium side right {
+  branch from 16_methoxytabersoninium side left {
     16_methoxytabersoninium
     <-> . +h2o
     3r_3_hydroxy_16_methoxy_2_3_dihydrotabersonine
   }
 
+  branch from sah side right {
+    sah
+    <-> . +uridine_5_monophosphate_1 +sam +hplus
+    n3_methyluridine_5_monophosphate_1
+  }
+
   branch from sah side left {
     sah
-    <-> ec_2_1_1_211 [2.1.1.211] +uridine_5_monophosphate_1 +sam +hplus
-    2_o_methyluridine_5_monophosphate_1
+    <-> . +deacetylisoipecoside +sam +hplus
+    7_o_methyldeacetylisoipecoside
+  }
+
+  branch from dihydroprecondylocarpine_acetate side right {
+    dihydroprecondylocarpine_acetate
+    <-> ec_1_3_1_128 [1.3.1.128] +nadp +nadph +hplus
+    precondylocarpine_acetate
+  }
+
+  branch from fmnh2 side left {
+    fmnh2
+    <-> . +all_trans_4_hydroxyretinoate +o2 +fmn +h2o +hplus
+    all_trans_4_oxoretinoate
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> ec_1_14_14_97 [1.14.14.97] +s_cis_n_methyltetrahydrothalifendine +o2 +fmn +h2o +hplus
+    7_hydroxy_8_methoxy_11_methyl_17_19_dioxa_11_aza
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> . +2_hydroxymethyl_3_pentylphenol +fmnh2 +o2 +h2o +hplus
+    8s_annullatin_e
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +decane +fmnh2 +o2 +h2o +hplus
+    decan_3_ol
+  }
+
+  branch from sam side left {
+    sam
+    <-> . +guanosine_5_monophosphate_1 +sah +hplus
+    n2_n2_dimethylguanosine_5_monophosphate_1
+  }
+
+  branch from sam side right {
+    sam
+    <-> . +citreorosein +sah +hplus
+    questinol
+  }
+
+  branch from sah side left {
+    sah
+    <-> . +n_methyl_4_hydroxy_3_5_dimethoxyphenethylaminium +sam +hplus
+    n_methylmescalinium
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_213 [2.1.1.213] +guanosine_5_monophosphate_1 +sam +hplus
-    n2_n2_dimethylguanosine_5_monophosphate_1
+    <-> . +guanosine_5_monophosphate_1 +sam +hplus
+    2_o_methylguanosine_5_monophosphate_1
   }
 }

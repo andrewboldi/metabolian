@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n2-4-aminobutanoyl-l-or-to-succinyl-coa "N2-(4-aminobutanoyl)-L-or… to succinyl-CoA" {
-  spacing 300
+  spacing 264
 
   spine at 0,0 {
     n2_4_aminobutanoyl_l_ornithine
@@ -14,41 +14,5 @@ pathway n2-4-aminobutanoyl-l-or-to-succinyl-coa "N2-(4-aminobutanoyl)-L-or… to
     4_oxobutanoate
     <-> ec_1_2_1_76 [1.2.1.76] +nadp +coa -nadph -hplus
     succinyl_coa
-  }
-
-  branch from ornithine side left {
-    ornithine
-    <-> . +taurine +arginine
-    taurocyamine
-  }
-
-  branch from ornithine side right {
-    ornithine
-    <-> . +pyruvate +alanine
-    5_amino_2_oxopentanoic_acid
-  }
-
-  branch from glycine side left {
-    glycine
-    <-> . +palmitoleoyl_coa +coa +hplus
-    n_9z_hexadecenoyl_glycinate
-  }
-
-  branch from glycine side right {
-    glycine
-    <-> . +5_10_methylenetetrahydrosulfopterin +h2o +serine
-    tetrahydrosulfopterin
-  }
-
-  branch from succinyl_coa side left {
-    succinyl_coa
-    <-> . +serine +coa
-    o_succinyl_l_serinate
-  }
-
-  branch from succinyl_coa side right {
-    succinyl_coa
-    <-> . +h2o +adenosine_3_5_bismonophosphate +hplus
-    s_succinyl_4_phosphopantetheine
   }
 }

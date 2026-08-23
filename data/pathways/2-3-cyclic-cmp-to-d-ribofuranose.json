@@ -89,33 +89,6 @@
       "xrefs": {
         "chebi": "CHEBI:47013"
       }
-    },
-    {
-      "id": "ribitol",
-      "name": "ribitol",
-      "formula": "C5H12O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:15963"
-      }
-    },
-    {
-      "id": "nadp",
-      "name": "NADP+",
-      "formula": "C21H25N7O17P3",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58349"
-      }
-    },
-    {
-      "id": "nadph",
-      "name": "NADPH",
-      "formula": "C21H26N7O17P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57783"
-      }
     }
   ],
   "enzymes": [
@@ -263,46 +236,203 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "ribitol + NADP(+) = D-ribose + NADPH + H(+)",
-      "equation": "ribitol + NADP(+) = D-ribose + NADPH + H(+)",
-      "substrates": [
-        {
-          "metabolite": "ribitol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "d_ribofuranose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:59932"
+      "id": "xt_2_3_cyclic_cmp_2-3-cyclic-cmp-to-cytidine-5-monophosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_3_cyclic_cmp"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3-cyclic-cmp-to-cytidine-5-monophosphate"
+      },
+      "note": "Shares 2',3'-cyclic CMP with 2',3'-cyclic CMP to cytidine 5'-monophosphate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:59932"
+            "db": "ChEBI",
+            "id": "CHEBI:60877"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cytidine_2-3-cyclic-cmp-to-cytidine-5-monophosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cytidine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3-cyclic-cmp-to-cytidine-5-monophosphate"
+      },
+      "note": "Shares cytidine with 2',3'-cyclic CMP to cytidine 5'-monophosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17562"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cytidine_2-amino-2-deoxy-d-gluconi-to-2-dehydro-3-deoxy-d",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cytidine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-amino-2-deoxy-d-gluconi-to-2-dehydro-3-deoxy-d"
+      },
+      "note": "Shares cytidine with 2-amino-2-deoxy-D-gluconi… to 2-dehydro-3-deoxy-D-arabi….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17562"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cytidine_n-acetylneuraminyl-2-3-to-cytidine-5-monophosph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cytidine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetylneuraminyl-2-3-to-cytidine-5-monophosph"
+      },
+      "note": "Shares cytidine with α-N-acetylneuraminyl-(2→3… to cytidine 5'-monophosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17562"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cytidine_n4-acetylcytidine-to-d-ribose-1-5-bisphospha",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cytidine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n4-acetylcytidine-to-d-ribose-1-5-bisphospha"
+      },
+      "note": "Shares cytidine with N4-acetylcytidine to α-D-ribose 1,5-bisphospha….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17562"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cytosine_2-c-methyl-d-erythritol-to-pseudouridine-5-phosp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cytosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-c-methyl-d-erythritol-to-pseudouridine-5-phosp"
+      },
+      "note": "Shares cytosine with 2-C-methyl-D-erythritol… to pseudouridine 5'-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16040"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cytosine_aldehydo-d-galactose-to-acetyl-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cytosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aldehydo-d-galactose-to-acetyl-phosphate"
+      },
+      "note": "Shares cytosine with aldehydo-D-galactose… to acetyl phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16040"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cytosine_n-acetyl-d-galactosamin-to-glyoxylate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cytosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyl-d-galactosamin-to-glyoxylate"
+      },
+      "note": "Shares cytosine with N-acetyl-α-D-galactosamin… to glyoxylate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16040"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cytosine_n4-acetylcytidine-to-d-ribose-1-5-bisphospha",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cytosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n4-acetylcytidine-to-d-ribose-1-5-bisphospha"
+      },
+      "note": "Shares cytosine with N4-acetylcytidine to α-D-ribose 1,5-bisphospha….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16040"
           }
         ]
       }

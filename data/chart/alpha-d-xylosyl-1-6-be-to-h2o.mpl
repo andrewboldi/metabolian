@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway alpha-d-xylosyl-1-6-be-to-h2o "alpha-D-xylosyl-(1->6)-be… to H2O" {
-  spacing 308
+  spacing 340
 
   spine at 0,0 {
     alpha_d_xylosyl_1_6_beta_d_glucosyl_1_4_beta_d_g
@@ -18,25 +18,97 @@ pathway alpha-d-xylosyl-1-6-be-to-h2o "alpha-D-xylosyl-(1->6)-be… to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> . +carbonyl_sulfide
-    carbonothioic_o_o_acid
+    <-> ec_4_2_1_40 [4.2.1.40] +d_glucarate
+    2_dehydro_3_deoxy_d_glucarate
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_4_2_1_84 [4.2.1.84] +propionamide
-    propionitrile
+    <-> . +71_dihydroxychlorophyllide_a +nadp +h +o2 +nadph
+    71_hydroxychlorophyllide_a
   }
 
   branch from atp side left {
     atp
-    <-> . +l_alanine +indol_3_yl_acetate +n_indole_3_acetyl_l_alanine +amp
-    diphosphate
+    <-> . +h +adp +phosphate +h2o
+    am1c9_cyclosporine
   }
 
   branch from atp side right {
     atp
-    <-> . +l_leucine +indol_3_yl_acetate +diphosphate +amp
-    n_indole_3_acetyl_l_leucine
+    <-> . +h +adp +phosphate +h2o
+    cyclosporin_a_metabolite_m18
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +3_hydroxyvalproic_acid
+    2_n_propyl_2_pentenoic_acid
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +diphosphate +1r_2s_4r_borneol
+    bornyl_diphosphate
+  }
+
+  branch from d_galactopyranose side left {
+    d_galactopyranose
+    <-> . +melibiose +h2o
+    beta_d_glucose
+  }
+
+  branch from d_galactopyranose side right {
+    d_galactopyranose
+    <-> ec_3_2_1_23 [3.2.1.23] +h +4_nitrophenol +h2o
+    4_nitrophenyl_d_galactoside
+  }
+
+  branch from h side left {
+    h
+    <-> ec_1_1_1_2 [1.1.1.2] +beta_d_galacturonate +nadph +l_galactonate
+    nadp
+  }
+
+  branch from h side right {
+    h
+    <-> ec_4_2_99_20 [4.2.99.20] +5_enolpyruvoyl_6_hydroxy_2_succinyl_cyclohex_3_e +2_succinyl_6_hydroxycyclohexa_2_4_diene_1_carbox
+    pyruvate
+  }
+
+  branch from adp side left {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    am1c_glucuronide_cyclosporine
+  }
+
+  branch from adp side right {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    cyclosporin_a_metabolite_m21
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +aldehydo_d_ribose_5_phosphate +h2o
+    aldehydo_d_ribose
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_3_1_3_10 [3.1.3.10] +n_acetyl_alpha_d_galactosamine_1_phosphate +h2o
+    n_acetyl_d_galactosamine
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    cyclosporin_a_metabolite_m1
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    androst_4_ene_3_17_dione
   }
 }

@@ -1,0 +1,569 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-manp-1-3-d-manp-to-h2o-null",
+  "name": "α-D-Manp-(1→3)-α-D-Manp to H2O",
+  "category": "other",
+  "summary": "A 4-step route from α-D-Manp-(1→3)-α-D-Manp to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR200232"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:61663"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_manp_1_3_d_manp",
+      "name": "α-D-Manp-(1→3)-α-D-Manp",
+      "short": "α-D-Manp-(1→3)-α-D-…",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61663"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "beta_d_mannose",
+      "name": "beta-D-mannose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM731842"
+      }
+    },
+    {
+      "id": "dolichyl_phosphate",
+      "name": "dolichyl phosphate",
+      "formula": "C25H45O4P",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1107957"
+      }
+    },
+    {
+      "id": "dolichyl_beta_d_mannosyl_phosphate",
+      "name": "dolichyl beta-D-mannosyl phosphate",
+      "short": "dolichyl beta-D-man…",
+      "formula": "C31H55O9P",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM733595"
+      }
+    },
+    {
+      "id": "gdp",
+      "name": "GDP",
+      "formula": "C10H12N5O11P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1103285"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "gdp_alpha_d_mannose",
+      "name": "GDP-alpha-D-mannose",
+      "formula": "C16H23N5O16P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1104188"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "dolichyl_diphosphate",
+      "name": "dolichyl diphosphate",
+      "formula": "C25H46O7P2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM726930"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_4_49",
+      "name": "dolichylphosphate-mannose phosphodiesterase",
+      "ec": [
+        "3.1.4.49"
+      ]
+    },
+    {
+      "id": "ec_3_6_1_43",
+      "name": "dolichyldiphosphatase",
+      "ec": [
+        "3.6.1.43"
+      ],
+      "xrefs": {
+        "uniprot": "Q86YN1"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR200232",
+      "substrates": [
+        {
+          "metabolite": "d_manp_1_3_d_manp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "beta_d_mannose",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR200232"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR200232"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "dolichylphosphate-mannose phosphodiesterase",
+      "ec": "3.1.4.49",
+      "substrates": [
+        {
+          "metabolite": "dolichyl_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "beta_d_mannose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dolichyl_beta_d_mannosyl_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_4_49"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR173183"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR173183"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR136056",
+      "substrates": [
+        {
+          "metabolite": "gdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dolichyl_beta_d_mannosyl_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gdp_alpha_d_mannose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dolichyl_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR136056"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR136056"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "dolichyldiphosphatase",
+      "ec": "3.6.1.43",
+      "substrates": [
+        {
+          "metabolite": "dolichyl_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dolichyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_43"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR147121"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR147121"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_d_manp_1_3_d_manp_d-manp-1-3-d-manp-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_manp_1_3_d_manp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-manp-1-3-d-manp-to-h2o"
+      },
+      "note": "Shares α-D-Manp-(1→3)-α-D-Manp with α-D-Manp-(1→3)-α-D-Manp to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61663"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_manp_1_3_d_manp_d-manp-1-3-d-manp-to-methyl-com",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_manp_1_3_d_manp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-manp-1-3-d-manp-to-methyl-com"
+      },
+      "note": "Shares α-D-Manp-(1→3)-α-D-Manp with α-D-Manp-(1→3)-α-D-Manp to methyl-CoM.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61663"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_manp_1_3_d_manp_d-manp-1-3-d-manp-to-methyl-com-28262",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_manp_1_3_d_manp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-manp-1-3-d-manp-to-methyl-com-28262"
+      },
+      "note": "Shares α-D-Manp-(1→3)-α-D-Manp with α-D-Manp-(1→3)-α-D-Manp to methyl-CoM.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61663"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_manp_1_3_d_manp_laminaritriose-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_manp_1_3_d_manp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "laminaritriose-to-h2o-null"
+      },
+      "note": "Shares α-D-Manp-(1→3)-α-D-Manp with laminaritriose to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61663"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_manp_1_3_d_manp_s-adenosyl-l-homocysteine-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_manp_1_3_d_manp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-coa"
+      },
+      "note": "Shares α-D-Manp-(1→3)-α-D-Manp with S-adenosyl-L-homocysteine to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61663"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dolichyl_phosphate_arginine-4-nitroanilide-to-phosphate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dolichyl_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "arginine-4-nitroanilide-to-phosphate-null"
+      },
+      "note": "Shares dolichyl phosphate with Arginine-4-nitroanilide to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1107957"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dolichyl_phosphate_d-manp-1-3-d-manp-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dolichyl_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-manp-1-3-d-manp-to-h2o"
+      },
+      "note": "Shares dolichyl phosphate with α-D-Manp-(1→3)-α-D-Manp to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1107957"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dolichyl_phosphate_gdp-to-udp-alpha-d-glucose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dolichyl_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gdp-to-udp-alpha-d-glucose"
+      },
+      "note": "Shares dolichyl phosphate with GDP to UDP-alpha-D-glucose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1107957"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dolichyl_phosphate_gdp-to-udp-alpha-d-glucose-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dolichyl_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gdp-to-udp-alpha-d-glucose-null"
+      },
+      "note": "Shares dolichyl phosphate with GDP to UDP-alpha-D-glucose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1107957"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dolichyl_phosphate_udp-to-d-galf-1-5-d-galf",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dolichyl_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-d-galf-1-5-d-galf"
+      },
+      "note": "Shares dolichyl phosphate with UDP to [β-D-Galf-(1→5)-β-D-Galf-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1107957"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dolichyl_phosphate_udp-to-dolichyl-hexadecanoate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dolichyl_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-dolichyl-hexadecanoate"
+      },
+      "note": "Shares dolichyl phosphate with UDP to dolichyl hexadecanoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1107957"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dolichyl_phosphate_udp-to-dolichyl-hexadecanoate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dolichyl_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-dolichyl-hexadecanoate-null"
+      },
+      "note": "Shares dolichyl phosphate with UDP to dolichyl hexadecanoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1107957"
+          }
+        ]
+      }
+    }
+  ]
+}

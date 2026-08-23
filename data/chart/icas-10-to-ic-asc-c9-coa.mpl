@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway icas-10-to-ic-asc-c9-coa "icas#10 to IC-asc-ΔC9-CoA" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     icas_10
@@ -14,17 +14,5 @@ pathway icas-10-to-ic-asc-c9-coa "icas#10 to IC-asc-ΔC9-CoA" {
     ic_asc_c9_coa
     <-> . +o2 -h2o2
     ic_asc_c9_coa
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_163 [4.2.3.163] +fpp +h2o
-    corvol_ether_b
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_171 [4.2.3.171] +fpp +h2o
-    corvol_ether_a
   }
 }

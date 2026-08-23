@@ -1,0 +1,474 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "itp-to-carbamate",
+  "name": "ITP to carbamate",
+  "category": "other",
+  "summary": "A 4-step route from ITP to carbamate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR173181"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "itp",
+      "name": "ITP",
+      "formula": "C10H11N4O14P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1103428"
+      }
+    },
+    {
+      "id": "beta_d_mannose",
+      "name": "beta-D-mannose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM731842"
+      }
+    },
+    {
+      "id": "idp",
+      "name": "IDP",
+      "formula": "C10H11N4O11P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1104559"
+      }
+    },
+    {
+      "id": "alpha_d_mannose_6_phosphate",
+      "name": "alpha-D-mannose 6-phosphate",
+      "short": "alpha-D-mannose 6-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1364108"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "dadp",
+      "name": "dADP",
+      "formula": "C10H12N5O9P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM735047"
+      }
+    },
+    {
+      "id": "datp",
+      "name": "dATP",
+      "formula": "C10H12N5O12P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM286"
+      }
+    },
+    {
+      "id": "d_mannopyranose",
+      "name": "D-mannopyranose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4208"
+      }
+    },
+    {
+      "id": "carbamoyl_phosphate",
+      "name": "carbamoyl phosphate",
+      "formula": "CH2NO5P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM138"
+      }
+    },
+    {
+      "id": "carbamate",
+      "name": "carbamate",
+      "formula": "CH2NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:13941"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_1_1",
+      "name": "hexokinase",
+      "ec": [
+        "2.7.1.1"
+      ],
+      "xrefs": {
+        "uniprot": "Q2TB90"
+      }
+    },
+    {
+      "id": "ec_2_7_2_2",
+      "name": "carbamate kinase",
+      "ec": [
+        "2.7.2.2"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "hexokinase",
+      "ec": "2.7.1.1",
+      "substrates": [
+        {
+          "metabolite": "itp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "beta_d_mannose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "idp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alpha_d_mannose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR173181"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR173181"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "hexokinase",
+      "ec": "2.7.1.1",
+      "substrates": [
+        {
+          "metabolite": "alpha_d_mannose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "datp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "beta_d_mannose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR173186"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR173186"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "hexokinase",
+      "ec": "2.7.1.1",
+      "substrates": [
+        {
+          "metabolite": "d_mannopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "datp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "alpha_d_mannose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dadp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR146780"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR146780"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "carbamate kinase",
+      "ec": "2.7.2.2",
+      "substrates": [
+        {
+          "metabolite": "carbamoyl_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "datp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "carbamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_2_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR134168"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR134168"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_beta_d_mannose_4-2z-2-methylimino-et-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "beta_d_mannose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-2z-2-methylimino-et-to-h2o"
+      },
+      "note": "Shares beta-D-mannose with 4-[(2Z)-2-(methylimino)et… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM731842"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_beta_d_mannose_d-fructofuranose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "beta_d_mannose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-fructofuranose-to-h2o"
+      },
+      "note": "Shares beta-D-mannose with D-fructofuranose to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM731842"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_beta_d_mannose_d-mannopyranose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "beta_d_mannose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-mannopyranose-to-h2o"
+      },
+      "note": "Shares beta-D-mannose with D-mannopyranose to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM731842"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_beta_d_mannose_d-manp-1-3-d-manp-to-d-mannopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "beta_d_mannose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-manp-1-3-d-manp-to-d-mannopyranose"
+      },
+      "note": "Shares beta-D-mannose with α-D-Manp-(1→3)-[α-D-Manp-… to D-mannopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM731842"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_beta_d_mannose_d-manp-1-3-d-manp-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "beta_d_mannose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-manp-1-3-d-manp-to-h2o"
+      },
+      "note": "Shares beta-D-mannose with α-D-Manp-(1→3)-α-D-Manp to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM731842"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_beta_d_mannose_diphosphate-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "beta_d_mannose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-phosphate"
+      },
+      "note": "Shares beta-D-mannose with diphosphate to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM731842"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_beta_d_mannose_udp-to-gdp-beta-l-galactose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "beta_d_mannose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-gdp-beta-l-galactose"
+      },
+      "note": "Shares beta-D-mannose with UDP to GDP-beta-L-galactose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM731842"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,518 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "epicatechin-to-nadph-null",
+  "name": "(+)-epicatechin to NADPH",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from (+)-epicatechin to NADPH, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR197514"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:76125"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "epicatechin",
+      "name": "(+)-epicatechin",
+      "formula": "C15H14O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:76125"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "idb_1027",
+      "name": "IdB 1027",
+      "formula": "C15H9O6",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1372543"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "epicatechin",
+      "name": "(-)-epicatechin",
+      "formula": "C15H14O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1371117"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "cyanidin",
+      "name": "cyanidin",
+      "formula": "C15H9O6",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1372542"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_3_1_77",
+      "name": "anthocyanidin reductase [(2R,3R)-flavan-3-ol-forming]",
+      "ec": [
+        "1.3.1.77"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR197514",
+      "substrates": [
+        {
+          "metabolite": "epicatechin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "idb_1027",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR197514"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197514"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "anthocyanidin reductase [(2R,3R)-flavan-3-ol-forming]",
+      "ec": "1.3.1.77",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "idb_1027",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "epicatechin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_1_77"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR181019"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR181019"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "anthocyanidin reductase [(2R,3R)-flavan-3-ol-forming]",
+      "ec": "1.3.1.77",
+      "substrates": [
+        {
+          "metabolite": "epicatechin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cyanidin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_1_77"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR197375"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197375"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_epicatechin_catechin-to-catechin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "epicatechin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "catechin-to-catechin"
+      },
+      "note": "Shares (+)-epicatechin with (+)-catechin to (−)-catechin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76125"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_epicatechin_catechin-to-catechin-10616",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "epicatechin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "catechin-to-catechin-10616"
+      },
+      "note": "Shares (+)-epicatechin with (+)-catechin to (−)-catechin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76125"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_epicatechin_epicatechin-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "epicatechin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "epicatechin-to-nadph"
+      },
+      "note": "Shares (+)-epicatechin with (+)-epicatechin to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76125"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_epicatechin_aldehydo-d-ribose-to-d-sedoheptulose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "epicatechin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aldehydo-d-ribose-to-d-sedoheptulose"
+      },
+      "note": "Shares (-)-epicatechin with aldehydo-D-ribose… to D-sedoheptulose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371117"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_epicatechin_diaminobutyryl-citryl-eth-to-amp-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "epicatechin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diaminobutyryl-citryl-eth-to-amp-null"
+      },
+      "note": "Shares (-)-epicatechin with diaminobutyryl-citryl-eth… to AMP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371117"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_epicatechin_divinyl-chlorophyllide-a-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "epicatechin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "divinyl-chlorophyllide-a-to-h2o-null"
+      },
+      "note": "Shares (-)-epicatechin with divinyl chlorophyllide a to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371117"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_epicatechin_l-pyrrolysine-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "epicatechin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-pyrrolysine-to-diphosphate"
+      },
+      "note": "Shares (-)-epicatechin with L-pyrrolysine to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371117"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_epicatechin_mangiferin-to-fmn-75255",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "epicatechin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "mangiferin-to-fmn-75255"
+      },
+      "note": "Shares (-)-epicatechin with mangiferin to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371117"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_epicatechin_z-glucosinolate-to-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "epicatechin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "z-glucosinolate-to-acetate"
+      },
+      "note": "Shares (-)-epicatechin with (Z)-glucosinolate to acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371117"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cyanidin_catechin-to-catechin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cyanidin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "catechin-to-catechin"
+      },
+      "note": "Shares cyanidin with (+)-catechin to (−)-catechin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1372542"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cyanidin_catechin-to-catechin-10616",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cyanidin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "catechin-to-catechin-10616"
+      },
+      "note": "Shares cyanidin with (+)-catechin to (−)-catechin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1372542"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cyanidin_d-glucopyranose-to-h",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cyanidin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glucopyranose-to-h"
+      },
+      "note": "Shares cyanidin with D-glucopyranose to H.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1372542"
+          }
+        ]
+      }
+    }
+  ]
+}

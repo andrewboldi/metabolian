@@ -110,34 +110,6 @@
       "xrefs": {
         "chebi": "CHEBI:17453"
       }
-    },
-    {
-      "id": "propionyl_coa",
-      "name": "Propionyl-CoA",
-      "formula": "C24H36N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57392"
-      }
-    },
-    {
-      "id": "hco3",
-      "name": "Bicarbonate (HCO3-)",
-      "formula": "CHO3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:17544"
-      }
-    },
-    {
-      "id": "s_methylmalonyl_coa",
-      "name": "(S)-Methylmalonyl-CoA",
-      "short": "Methylmalonyl-CoA",
-      "formula": "C25H35N7O19P3S",
-      "charge": -5,
-      "xrefs": {
-        "chebi": "CHEBI:57327"
-      }
     }
   ],
   "enzymes": [
@@ -146,14 +118,10 @@
       "name": "3-hydroxyisobutyrate dehydrogenase",
       "ec": [
         "1.1.1.31"
-      ]
-    },
-    {
-      "id": "ec_3_1_2_17",
-      "name": "(S)-methylmalonyl-CoA hydrolase",
-      "ec": [
-        "3.1.2.17"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P31937"
+      }
     }
   ],
   "reactions": [
@@ -330,107 +298,115 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "(S)-2-methyl-3-oxopropanoate + NAD(+) + CoA + H2O = propanoyl-CoA + hydrogencarbonate +...",
-      "equation": "(S)-2-methyl-3-oxopropanoate + NAD(+) + CoA + H2O = propanoyl-CoA + hydrogencarbonate + NADH + H(+)",
-      "substrates": [
-        {
-          "metabolite": "mmsa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "propionyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hco3",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:76627"
+      "id": "xt_methacrylyl_coa_isobutyryl-coa-to-l-lysinium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "methacrylyl_coa"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "isobutyryl-coa-to-l-lysinium"
+      },
+      "note": "Shares Methacrylyl-CoA with isobutyryl-CoA to L-lysinium.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:76627"
+            "db": "ChEBI",
+            "id": "CHEBI:62500"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "(S)-methylmalonyl-CoA hydrolase",
-      "equation": "(S)-methylmalonyl-CoA + H2O = methylmalonate + CoA + H(+)",
-      "ec": "3.1.2.17",
-      "substrates": [
-        {
-          "metabolite": "s_methylmalonyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "methylmalonate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_1_2_17"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:17345"
+      "id": "xt_mmsa_3-mercaptopropionate-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "mmsa"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "3-mercaptopropionate-to-ammonium"
+      },
+      "note": "Shares (S)-Methylmalonate semialdehyde with 3-mercaptopropionate to ammonium.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:17345"
+            "db": "ChEBI",
+            "id": "CHEBI:62413"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_mmsa_5-methyltetrahydropteroyl-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "mmsa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-methyltetrahydropteroyl-to-ammonium"
+      },
+      "note": "Shares (S)-Methylmalonate semialdehyde with 5-methyltetrahydropteroyl… to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62413"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_mmsa_r-mevalonate-to-propionyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "mmsa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-mevalonate-to-propionyl-coa"
+      },
+      "note": "Shares (S)-Methylmalonate semialdehyde with (R)-mevalonate to propionyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62413"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_methylmalonate_n-long-chain-acyl-ethano-to-o-s-2s-4s-6s-2-4-6-t",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "methylmalonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-long-chain-acyl-ethano-to-o-s-2s-4s-6s-2-4-6-t"
+      },
+      "note": "Shares methylmalonate with N-(long-chain-acyl)ethano… to O-(S-[2S,4S,6S]-2,4,6-tri….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17453"
           }
         ]
       }

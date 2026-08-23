@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway r-3-4-hydroxyphenyl-la-to-s-adenosyl-l-homocyst "(R)-3-(4-hydroxyphenyl)la… to S-adenosyl-L-homocysteine" {
-  spacing 288
+  spacing 264
 
   spine at 0,0 {
     r_3_4_hydroxyphenyl_lactate
@@ -20,29 +20,5 @@ pathway r-3-4-hydroxyphenyl-la-to-s-adenosyl-l-homocyst "(R)-3-(4-hydroxyphenyl)
     8_desmethylnovobiocic_acid
     <-> ec_2_1_1_284 [2.1.1.284] +sam -sah -hplus
     novobiocic_acid
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +pppa_2_5_pg
-    3_2_cgamp
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +l_tryptophan +fpp
-    2s_3r_3_farnesyl_2_3_dihydro_2_n_cyclo_l_trypto
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +cytidine_5_monophosphate_1 +sam +hplus
-    5_methylcytidine_5_monophosphate_1
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +sam +5_methylcytidine_5_monophosphate_1 +hplus
-    cytidine_5_monophosphate_1
   }
 }

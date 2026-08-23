@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadp-to-h2o "NADP to H2O" {
-  spacing 268
+  spacing 196
 
   spine at 0,0 {
     nadp
@@ -14,77 +14,5 @@ pathway nadp-to-h2o "NADP to H2O" {
     abietol
     <-> . +h +o2 +nadph -nadp -h2o
     abieta_7_13_dien_18_18_diol
-  }
-
-  branch from levopimaradienal side left {
-    levopimaradienal
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +nad
-    palustradienol
-  }
-
-  branch from levopimaradienal side right {
-    levopimaradienal
-    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +nadp
-    isopimara_7_15_dienol
-  }
-
-  branch from o2 side left {
-    o2
-    <-> ec_1_14_11_70 [1.14.11.70] +2_oxoglutarate +deoxycylindrospermopsin +succinate +7_epi_cylindrospermopsin
-    co2
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +fadh2 +h +bromide +o_s_5_bromopyrrole_2_carbonyl_pantetheine_4_phos +o_s_4_5_dibromopyrrole_2_carbonyl_pantetheine_4 +h2o
-    fad
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> . +n_hydroxyhistamine +nadp +h2o +o2
-    histamine
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> . +17_o_acetylnorajmaline +nadp +h
-    20alphas_19_20_dihydrovomilenine
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_418 [1.1.1.418] +nadh +co2 +h +lathosterone
-    3beta_hydroxy_5alpha_cholest_7_ene_4alpha_carbox
-  }
-
-  branch from nad side right {
-    nad
-    <-> . +nadh +h +2_deoxy_3_dehydro_d_ribonate
-    2_deoxy_d_ribonic_acid
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +h +nadph +11r_dihydroartemisinic_aldehyde
-    11r_dihydroartemisinic_alcohol
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_1_1_270 [1.1.1.270] +h +nadph +31_norcycloartanone
-    31_norcycloartanol
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +h +adp +31_o_desmethyl_19_hydroxy_37_39_epoxy_tacrolimus +phosphate +31_o_desmethyl_19_hydroxy_37_39_epoxy_tacrolimus
-    atp
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    17_estradiol_3_o_d_glucuronide
   }
 }

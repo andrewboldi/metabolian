@@ -1,0 +1,317 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "butan-1-ol-to-h2o-64632",
+  "name": "butan-1-ol to H2O",
+  "category": "other",
+  "summary": "A 3-step route from butan-1-ol to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:64632"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:28885"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "butan_1_ol",
+      "name": "butan-1-ol",
+      "formula": "C4H10O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28885"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "butyl_acetate",
+      "name": "butyl acetate",
+      "formula": "C6H12O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:31328"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM26"
+      }
+    },
+    {
+      "id": "butan_1_ol",
+      "name": "butan-1-ol",
+      "formula": "C4H10O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM3230"
+      }
+    },
+    {
+      "id": "4_aminobenzoate",
+      "name": "4-aminobenzoate",
+      "formula": "C7H6NO2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM421"
+      }
+    },
+    {
+      "id": "butamben",
+      "name": "butamben",
+      "formula": "C11H15NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:3231"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_1_1",
+      "name": "carboxylesterase",
+      "ec": [
+        "3.1.1.1"
+      ],
+      "xrefs": {
+        "uniprot": "P23141"
+      }
+    },
+    {
+      "id": "ec_3_1_1_2",
+      "name": "arylesterase",
+      "ec": [
+        "3.1.1.2"
+      ],
+      "xrefs": {
+        "uniprot": "P27169"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "butan-1-ol + acetyl-CoA = butyl acetate + CoA",
+      "equation": "butan-1-ol + acetyl-CoA = butyl acetate + CoA",
+      "substrates": [
+        {
+          "metabolite": "butan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "butyl_acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:64632"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64632"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "carboxylesterase",
+      "ec": "3.1.1.1",
+      "substrates": [
+        {
+          "metabolite": "butyl_acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "butan_1_ol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR129833"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR129833"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "carboxylesterase",
+      "ec": "3.1.1.1",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "butan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4_aminobenzoate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "butamben",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR130866"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR130866"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_butyl_acetate_butan-1-ol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "butyl_acetate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "butan-1-ol-to-h2o"
+      },
+      "note": "Shares butyl acetate with butan-1-ol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:31328"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_butamben_butan-1-ol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "butamben"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "butan-1-ol-to-h2o"
+      },
+      "note": "Shares butamben with butan-1-ol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:3231"
+          }
+        ]
+      }
+    }
+  ]
+}

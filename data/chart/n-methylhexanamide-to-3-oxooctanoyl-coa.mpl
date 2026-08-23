@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-methylhexanamide-to-3-oxooctanoyl-coa "N-methylhexanamide to 3-oxooctanoyl-CoA" {
-  spacing 212
+  spacing 236
 
   spine at 0,0 {
     n_methylhexanamide
@@ -28,40 +28,28 @@ pathway n-methylhexanamide-to-3-oxooctanoyl-coa "N-methylhexanamide to 3-oxoocta
     aliphatic_alcohol
   }
 
-  branch from methylamine side left {
-    methylamine
-    <-> ec_1_4_2_3 [1.4.2.3] +pseudooxynicotinium +iron +h2o +fe2 +hplus
-    4_oxo_4_pyridin_3_yl_butanal
-  }
-
-  branch from methylamine side right {
-    methylamine
-    <-> ec_1_5_3_27 [1.5.3.27] +2_methylaminoethyl_phosphonate +o2 +h2o +h2o2
-    phosphonoacetaldehyde
-  }
-
   branch from hexanoyl_coa side left {
-    hexanoyl_coa
-    <-> ec_2_3_1_206 [2.3.1.206] +malonyl-coa +hplus +co2 +coa
-    3_5_7_trioxododecanoyl_coa
-  }
-
-  branch from hexanoyl_coa side right {
     hexanoyl_coa
     <-> . +1_hexadecanoyl_sn_glycero_3_phosphocholine +coa
     1_palmitoyl_2_hexanoyl_sn_glycero_3_phosphocholi
   }
 
+  branch from hexanoyl_coa side right {
+    hexanoyl_coa
+    <-> . +o2 +h2o2
+    trans_hex_2_enoyl_coa
+  }
+
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_32 [4.2.3.32] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    abieta_8_14_12_diene
+    <-> ec_4_2_3_89 [4.2.3.89] +fpp
+    caryophyllene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_33 [4.2.3.33] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    stemar_13_ene
+    <-> ec_4_2_3_90 [4.2.3.90] +fpp
+    5_epi_selinene
   }
 
   branch from 3_oxooctanoyl_coa side left {
@@ -74,5 +62,41 @@ pathway n-methylhexanamide-to-3-oxooctanoyl-coa "N-methylhexanamide to 3-oxoocta
     3_oxooctanoyl_coa
     <-> . +nadp +nadph +hplus
     r_3_hydroxyoctanoyl_coa
+  }
+
+  branch from hexanoate side left {
+    hexanoate
+    <-> . +o2 +h2o +h2o2 +hplus
+    hexanal
+  }
+
+  branch from hexanoate side right {
+    hexanoate
+    <-> . +n6_hexanoyl_l_lysine +h2o
+    l_lysinium
+  }
+
+  branch from hexanoyl_coa side left {
+    hexanoyl_coa
+    <-> . +malonyl-coa +hplus +co2 +coa
+    4_hydroxy_6_pentylpyran_2_one
+  }
+
+  branch from hexanoyl_coa side right {
+    hexanoyl_coa
+    <-> . +carnitine +coa
+    o_hexanoyl_l_carnitine
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_91 [4.2.3.91] +fpp +h2o
+    cubebol
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_92 [4.2.3.92] +fpp
+    cadinene
   }
 }

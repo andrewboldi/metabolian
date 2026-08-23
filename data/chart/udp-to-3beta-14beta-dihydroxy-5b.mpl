@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-3beta-14beta-dihydroxy-5b "UDP to 3beta,14beta-dihydroxy-5b…" {
-  spacing 218
+  spacing 200
 
   spine at 0,0 {
     udp
@@ -18,69 +18,51 @@ pathway udp-to-3beta-14beta-dihydroxy-5b "UDP to 3beta,14beta-dihydroxy-5b…" {
     h
   }
 
-  branch from digiproside side left {
-    digiproside
-    <-> . +h2o +digitoxigenin
-    d_fucopyranose
-  }
-
-  branch from digiproside side right {
-    digiproside
-    <-> . +h2o +digitoxigenin
-    aldehydo_d_fucose
-  }
-
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> . +udp +h +purpurea_glycoside_a
-    digitoxin
-  }
-
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> . +udp +h +purpurea_glycoside_b
-    gitoxin
-  }
-
-  branch from udp_alpha_d_fucopyranose side left {
-    udp_alpha_d_fucopyranose
-    <-> . +udp +h +digitoxigenin
-    digitoxigenin_3beta_yl_beta_d_quinovoside
-  }
-
-  branch from udp_alpha_d_fucopyranose side right {
-    udp_alpha_d_fucopyranose
-    <-> ec_2_7_7_64 [2.7.7.64] +utp +h +l_fuculose_1_phosphate
-    diphosphate
-  }
-
-  branch from digitoxigenin side left {
-    digitoxigenin
-    <-> ec_2_4_1_173 [2.4.1.173] +udp +h +udp_alpha_d_glucose
-    digitoxigenin_3beta_yl_beta_d_glucoside
-  }
-
-  branch from digitoxigenin side right {
-    digitoxigenin
-    <-> . +udp +h +udp_alpha_d_glucose
-    3_o_beta_d_glucoside_digitoxigenin
-  }
-
   branch from h side left {
     h
-    <-> . +dtdp_3_amino_4_dehydro_2_3_6_trideoxy_beta_l_glu +2_oxoglutarate +l_glutamate
-    dtdp_3_4_dioxo_2_6_dideoxy_l_glucose
+    <-> ec_4_2_1_103 [4.2.1.103] +cyclohexyl_isocyanide +h2o
+    n_cyclohexylformamide
   }
 
   branch from h side right {
     h
-    <-> . +2_oxoglutarate +o2 +gibberellin_a15_2_diacid_form +co2 +1r_2s_3s_4s_5s_8r_9r_12r_5_hydroxy_8_hydroxymet
-    succinate
+    <-> ec_1_13_11_15 [1.13.11.15] +5_carboxymethyl_2_hydroxymuconic_semialdehyde +o2
+    3_4_dihydroxyphenylacetate
   }
 
-  branch from 3beta_14beta_dihydroxy_5beta_pregnane_20_one_21 side left {
-    3beta_14beta_dihydroxy_5beta_pregnane_20_one_21
-    <-> . +malonyl_coa +3beta_14beta_21_trihydroxy_5beta_pregnane_20_one
-    coa
+  branch from h side left {
+    h
+    <-> ec_3_6_1_67 [3.6.1.67] +diphosphate +dihydroneopterin_phosphate +h2o
+    7_8_dihydroneopterin_3_triphosphate
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_5_1_31 [2.5.1.31] +diphosphate +di_trans_poly_cis_undecaprenyl_diphosphate +ipp
+    2e_6e_farnesyl_diphosphate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_4_2_1_85 [4.2.1.85] +2r_3s_2_3_dimethylmalate
+    dimethylmaleate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_2_1_126 [3.2.1.126] +glucose +trans_sinapyl_alcohol
+    syringin
+  }
+
+  branch from co2 side left {
+    co2
+    <-> . +2_oxoglutarate +22_26_dihydroxycholesterol +o2 +succinate
+    16alpha_22_26_trihydroxycholesterol
+  }
+
+  branch from co2 side right {
+    co2
+    <-> ec_2_3_1_74 [2.3.1.74] +4_1_methylpyrrolidin_2_yl_3_oxobutanoate +coa +1_methylpyrrolinium +h +h2o
+    malonyl_coa
   }
 }

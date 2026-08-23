@@ -126,42 +126,6 @@
       "xrefs": {
         "chebi": "CHEBI:29985"
       }
-    },
-    {
-      "id": "n_nervonoyltaurine",
-      "name": "N-nervonoyltaurine",
-      "formula": "C26H50NO4S",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:146198"
-      }
-    },
-    {
-      "id": "15z_tetracosenoate",
-      "name": "(15Z)-tetracosenoate",
-      "formula": "C24H45O2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:32392"
-      }
-    },
-    {
-      "id": "n_tricosanoyltaurine",
-      "name": "N-tricosanoyltaurine",
-      "formula": "C25H50NO4S",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:146197"
-      }
-    },
-    {
-      "id": "tricosanoate",
-      "name": "tricosanoate",
-      "formula": "C23H45O2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:79007"
-      }
     }
   ],
   "enzymes": [
@@ -170,14 +134,20 @@
       "name": "sulfinoalanine decarboxylase",
       "ec": [
         "4.1.1.29"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q9Y600"
+      }
     },
     {
       "id": "ec_1_14_13_8",
       "name": "flavin-containing monooxygenase",
       "ec": [
         "1.14.13.8"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q01740"
+      }
     },
     {
       "id": "ec_2_6_1_55",
@@ -334,81 +304,181 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "N-(15Z-tetracosenoyl)-taurine + H2O = (15Z)-tetracosenoate + taurine",
-      "equation": "N-(15Z-tetracosenoyl)-taurine + H2O = (15Z)-tetracosenoate + taurine",
-      "substrates": [
-        {
-          "metabolite": "n_nervonoyltaurine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "15z_tetracosenoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "taurine",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:63160"
+      "id": "xt_3_sulfino_l_alanine_3-sulfino-l-alanine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_sulfino_l_alanine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "3-sulfino-l-alanine-to-h2o"
+      },
+      "note": "Shares 3-sulfino-L-alanine with 3-sulfino-L-alanine to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:63160"
+            "db": "ChEBI",
+            "id": "CHEBI:61085"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "N-tricosanoyl-taurine + H2O = tricosanoate + taurine",
-      "equation": "N-tricosanoyl-taurine + H2O = tricosanoate + taurine",
-      "substrates": [
-        {
-          "metabolite": "n_tricosanoyltaurine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "tricosanoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "taurine",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:63164"
+      "id": "xt_3_sulfino_l_alanine_d-arabinitol-to-fmnh2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_sulfino_l_alanine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "d-arabinitol-to-fmnh2"
+      },
+      "note": "Shares 3-sulfino-L-alanine with D-arabinitol to FMNH2.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:63164"
+            "db": "ChEBI",
+            "id": "CHEBI:61085"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_sulfino_l_alanine_ent-copal-8-ol-diphosphate-to-l-cysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_sulfino_l_alanine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ent-copal-8-ol-diphosphate-to-l-cysteine"
+      },
+      "note": "Shares 3-sulfino-L-alanine with ent-copal-8-ol diphosphate to L-cysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61085"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sulfonatoacetaldehyde_2r-2-o-phosphonato-3-su-to-sulfoacetyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sulfonatoacetaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2r-2-o-phosphonato-3-su-to-sulfoacetyl-coa"
+      },
+      "note": "Shares sulfonatoacetaldehyde with (2R)-2-O-phosphonato-3-su… to sulfoacetyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58246"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sulfonatoacetaldehyde_6-deoxy-6-sulfo-d-fructof-to-d-xylulose-5-phosph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sulfonatoacetaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-deoxy-6-sulfo-d-fructof-to-d-xylulose-5-phosph"
+      },
+      "note": "Shares sulfonatoacetaldehyde with 6-deoxy-6-sulfo-D-fructof… to D-xylulose 5-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58246"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sulfonatoacetaldehyde_d-arabinitol-to-fmnh2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sulfonatoacetaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-arabinitol-to-fmnh2"
+      },
+      "note": "Shares sulfonatoacetaldehyde with D-arabinitol to FMNH2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58246"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sulfonatoacetaldehyde_n-carbamoyl-d-amino-to-acyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sulfonatoacetaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-carbamoyl-d-amino-to-acyl-coa"
+      },
+      "note": "Shares sulfonatoacetaldehyde with N-carbamoyl-D-α-amino… to acyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58246"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sulfonatoacetaldehyde_tauropinate-to-sulfoacetyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sulfonatoacetaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "tauropinate-to-sulfoacetyl-coa"
+      },
+      "note": "Shares sulfonatoacetaldehyde with tauropinate to sulfoacetyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58246"
           }
         ]
       }

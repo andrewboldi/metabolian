@@ -1,0 +1,521 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-2-ureidoglycine-to-h2o-33871",
+  "name": "(S)-2-ureidoglycine to H2O",
+  "category": "other",
+  "summary": "A 3-step route from (S)-2-ureidoglycine zwitterion to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:33871"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:59947"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_2_ureidoglycine",
+      "name": "(S)-2-ureidoglycine",
+      "formula": "C3H7N3O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59947"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "urea",
+      "name": "Urea",
+      "formula": "CH4N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16199"
+      }
+    },
+    {
+      "id": "glyoxylate",
+      "name": "Glyoxylate",
+      "formula": "C2HO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36655"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "carbamate",
+      "name": "carbamate",
+      "formula": "CH2NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:13941"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "z_2_methyl_3_aminoperacrylic_acid",
+      "name": "(Z)-2-methyl-3-aminoperacrylic acid",
+      "short": "2-methyl-3-aminoper…",
+      "formula": "C4H7NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:63250"
+      }
+    },
+    {
+      "id": "z_2_methylureidoperacrylic_acid",
+      "name": "(Z)-2-methylureidoperacrylic acid",
+      "short": "2-methylureidoperac…",
+      "formula": "C5H8N2O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:63249"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_110",
+      "name": "ureidoacrylate amidohydrolase",
+      "ec": [
+        "3.5.1.110"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(S)-2-ureidoglycine + H2O = urea + glyoxylate + NH4(+)",
+      "equation": "(S)-2-ureidoglycine + H2O = urea + glyoxylate + NH4(+)",
+      "substrates": [
+        {
+          "metabolite": "s_2_ureidoglycine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "urea",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glyoxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:33871"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33871"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "urea + H2O = carbamate + NH4(+)",
+      "equation": "urea + H2O = carbamate + NH4(+)",
+      "substrates": [
+        {
+          "metabolite": "urea",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "carbamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:25342"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25342"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "ureidoacrylate amidohydrolase",
+      "ec": "3.5.1.110",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "z_2_methyl_3_aminoperacrylic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "carbamate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "z_2_methylureidoperacrylic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_110"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR150704"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR150704"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_s_2_ureidoglycine_allantoin-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_2_ureidoglycine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "allantoin-to-ammonium"
+      },
+      "note": "Shares (S)-2-ureidoglycine with allantoin to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:59947"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_2_ureidoglycine_allantoin-to-ammonium-30819",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_2_ureidoglycine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "allantoin-to-ammonium-30819"
+      },
+      "note": "Shares (S)-2-ureidoglycine with allantoin to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:59947"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_2_ureidoglycine_benzoylagmatinium-to-glycine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_2_ureidoglycine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "benzoylagmatinium-to-glycine"
+      },
+      "note": "Shares (S)-2-ureidoglycine with benzoylagmatinium to glycine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:59947"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_2_ureidoglycine_n-acetyl-d-galactosamin-to-glyoxylate-15621",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_2_ureidoglycine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyl-d-galactosamin-to-glyoxylate-15621"
+      },
+      "note": "Shares (S)-2-ureidoglycine with N-acetyl-α-D-galactosamin… to glyoxylate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:59947"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_2_ureidoglycine_s-2-ureidoglycine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_2_ureidoglycine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2-ureidoglycine-to-h2o"
+      },
+      "note": "Shares (S)-2-ureidoglycine with (S)-2-ureidoglycine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:59947"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_2_ureidoglycine_s-allantoin-to-oxalurate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_2_ureidoglycine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-allantoin-to-oxalurate"
+      },
+      "note": "Shares (S)-2-ureidoglycine with (S)-(+)-allantoin to oxalurate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:59947"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_2_ureidoglycine_s-allantoin-to-oxalurate-17029",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_2_ureidoglycine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-allantoin-to-oxalurate-17029"
+      },
+      "note": "Shares (S)-2-ureidoglycine with (S)-(+)-allantoin to oxalurate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:59947"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_z_2_methyl_3_aminoperacrylic_acid_2-hydroxy-n-methyl-5-oxop-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "z_2_methyl_3_aminoperacrylic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-hydroxy-n-methyl-5-oxop-to-h2o-null"
+      },
+      "note": "Shares (Z)-2-methyl-3-aminoperacrylic acid with 2-hydroxy-N-methyl-5-oxop… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:63250"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_z_2_methyl_3_aminoperacrylic_acid_n-demethyl-desepoxymaytan-to-7a-hydroxy-o-carbam",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "z_2_methyl_3_aminoperacrylic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-demethyl-desepoxymaytan-to-7a-hydroxy-o-carbam"
+      },
+      "note": "Shares (Z)-2-methyl-3-aminoperacrylic acid with N-Demethyl-desepoxymaytan… to 7a-Hydroxy-o-carbamoyl-de….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:63250"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_z_2_methyl_3_aminoperacrylic_acid_s-2-ureidoglycine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "z_2_methyl_3_aminoperacrylic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2-ureidoglycine-to-h2o"
+      },
+      "note": "Shares (Z)-2-methyl-3-aminoperacrylic acid with (S)-2-ureidoglycine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:63250"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_z_2_methylureidoperacrylic_acid_2-hydroxy-n-methyl-5-oxop-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "z_2_methylureidoperacrylic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-hydroxy-n-methyl-5-oxop-to-h2o-null"
+      },
+      "note": "Shares (Z)-2-methylureidoperacrylic acid with 2-hydroxy-N-methyl-5-oxop… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:63249"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_z_2_methylureidoperacrylic_acid_fmn-n5-oxide-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "z_2_methylureidoperacrylic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fmn-n5-oxide-to-o2"
+      },
+      "note": "Shares (Z)-2-methylureidoperacrylic acid with FMN-N5-oxide to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:63249"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,528 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "campesterol-to-fmn-69835",
+  "name": "campesterol to FMN",
+  "category": "other",
+  "summary": "A 3-step route from campesterol to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:69835"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:28623"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "campesterol",
+      "name": "campesterol",
+      "formula": "C28H48O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28623"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "22s_22_hydroxycampesterol",
+      "name": "(22S)-22-hydroxycampesterol",
+      "short": "22-hydroxycampester…",
+      "formula": "C28H48O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:72331"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "22r_23r_22_23_dihydroxycampesterol",
+      "name": "(22R,23R)-22,23-dihydroxycampesterol",
+      "short": "(22R,23R)-22,23-dih…",
+      "formula": "C28H48O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:80401"
+      }
+    },
+    {
+      "id": "22r_23r_22_23_dihydroxycampest_4_en_3_one",
+      "name": "(22R,23R)-22,23-dihydroxycampest-4-en-3-one",
+      "short": "(22R,23R)-22,23-dih…",
+      "formula": "C28H46O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:80402"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "campesterol + reduced [NADPH--hemoprotein reductase] + O2 = (22S)-22-hydroxycampesterol...",
+      "equation": "campesterol + reduced [NADPH--hemoprotein reductase] + O2 = (22S)-22-hydroxycampesterol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "campesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "22s_22_hydroxycampesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:69835"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69835"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(22S)-22-hydroxycampesterol + reduced [NADPH--hemoprotein reductase] + O2 = (22R,23R)-2...",
+      "equation": "(22S)-22-hydroxycampesterol + reduced [NADPH--hemoprotein reductase] + O2 = (22R,23R)-22,23-dihydroxycampesterol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "22s_22_hydroxycampesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "22r_23r_22_23_dihydroxycampesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:69827"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69827"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(22R,23R)-22,23-dihydroxycampesterol + reduced [NADPH--hemoprotein reductase] + O2 = (2...",
+      "equation": "(22R,23R)-22,23-dihydroxycampesterol + reduced [NADPH--hemoprotein reductase] + O2 = (22R,23R)-22,23-dihydroxycampest-4-en-3-one + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "22r_23r_22_23_dihydroxycampesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "22r_23r_22_23_dihydroxycampest_4_en_3_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:69979"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69979"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_campesterol_1-2-3-6-tetrakis-o-galloy-to-cornusiin-e",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "campesterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-3-6-tetrakis-o-galloy-to-cornusiin-e"
+      },
+      "note": "Shares campesterol with 1,2,3,6-tetrakis-O-galloy… to cornusiin E.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28623"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_campesterol_campesterol-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "campesterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "campesterol-to-fmn"
+      },
+      "note": "Shares campesterol with campesterol to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28623"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_campesterol_cellobiose-to-mycothione-21944",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "campesterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cellobiose-to-mycothione-21944"
+      },
+      "note": "Shares campesterol with cellobiose to mycothione.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28623"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_campesterol_udp-to-quercetin-3-o-6-o-caffe-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "campesterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-quercetin-3-o-6-o-caffe-null"
+      },
+      "note": "Shares campesterol with UDP to quercetin 3-O-[(6-O-caffe….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28623"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_campesterol_veratrate-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "campesterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "veratrate-to-coa"
+      },
+      "note": "Shares campesterol with veratrate to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28623"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_22s_22_hydroxycampesterol_1s-bornane-2-5-dione-to-delta2-5-3-4-4-trimethy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "22s_22_hydroxycampesterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1s-bornane-2-5-dione-to-delta2-5-3-4-4-trimethy"
+      },
+      "note": "Shares (22S)-22-hydroxycampesterol with (1S)-bornane-2,5-dione to Delta2,5-3,4,4-trimethylp….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:72331"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_22s_22_hydroxycampesterol_4-2-iminoethyl-phenol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "22s_22_hydroxycampesterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-2-iminoethyl-phenol-to-h2o"
+      },
+      "note": "Shares (22S)-22-hydroxycampesterol with 4-(2-iminoethyl)phenol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:72331"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_22s_22_hydroxycampesterol_5-campestan-3-one-to-campesterol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "22s_22_hydroxycampesterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-campestan-3-one-to-campesterol"
+      },
+      "note": "Shares (22S)-22-hydroxycampesterol with 5α-campestan-3-one to campesterol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:72331"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_22s_22_hydroxycampesterol_5-campestan-3-one-to-campesterol-54416",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "22s_22_hydroxycampesterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-campestan-3-one-to-campesterol-54416"
+      },
+      "note": "Shares (22S)-22-hydroxycampesterol with 5α-campestan-3-one to campesterol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:72331"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_22s_22_hydroxycampesterol_campesterol-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "22s_22_hydroxycampesterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "campesterol-to-fmn"
+      },
+      "note": "Shares (22S)-22-hydroxycampesterol with campesterol to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:72331"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_22s_22_hydroxycampesterol_phaseollin-to-coa-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "22s_22_hydroxycampesterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phaseollin-to-coa-null"
+      },
+      "note": "Shares (22S)-22-hydroxycampesterol with (-)-Phaseollin to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:72331"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_22r_23r_22_23_dihydroxycampesterol_4-2-iminoethyl-phenol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "22r_23r_22_23_dihydroxycampesterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-2-iminoethyl-phenol-to-h2o"
+      },
+      "note": "Shares (22R,23R)-22,23-dihydroxycampesterol with 4-(2-iminoethyl)phenol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:80401"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -139,6 +139,15 @@
       }
     },
     {
+      "id": "alpha_d_ribulose",
+      "name": "alpha-D-ribulose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1371691"
+      }
+    },
+    {
       "id": "alpha_d_arabinopyranose_1_phosphate",
       "name": "alpha-D-Arabinopyranose 1-phosphate",
       "short": "alpha-D-Arabinopyra…",
@@ -173,6 +182,24 @@
       "charge": -4,
       "xrefs": {
         "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
       }
     }
   ],
@@ -231,6 +258,16 @@
       "name": "D-threo-aldose 1-dehydrogenase",
       "ec": [
         "1.1.1.122"
+      ],
+      "xrefs": {
+        "uniprot": "Q9BPX1"
+      }
+    },
+    {
+      "id": "ec_5_3_1_3",
+      "name": "D-arabinose isomerase",
+      "ec": [
+        "5.3.1.3"
       ]
     }
   ],
@@ -507,6 +544,42 @@
     },
     {
       "id": "r7",
+      "name": "D-arabinose isomerase",
+      "ec": "5.3.1.3",
+      "substrates": [
+        {
+          "metabolite": "alpha_d_ribulose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_arabinopyranose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_1_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "metanetx": "MNXR198290"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198290"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
       "name": "Reaction MNXR199015",
       "substrates": [
         {
@@ -533,7 +606,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 8,
       "xrefs": {
         "metanetx": "MNXR199015"
       },
@@ -543,6 +616,322 @@
           {
             "db": "MetaNetX",
             "id": "MNXR199015"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "Reaction MNXR95934",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_arabinopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_arabinopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "metanetx": "MNXR95934"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR95934"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_d_arabinitol_d-arabinitol-to-fmnh2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_arabinitol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-arabinitol-to-fmnh2"
+      },
+      "note": "Shares D-arabinitol with D-arabinitol to FMNH2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18333"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_arabinitol_d-arabinitol-to-glyoxylate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_arabinitol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-arabinitol-to-glyoxylate"
+      },
+      "note": "Shares D-arabinitol with D-arabinitol to glyoxylate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18333"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_arabinopyranose_d-arabinose-5-phosphate-to-dehydro-d-arabinono-1",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_arabinopyranose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-arabinose-5-phosphate-to-dehydro-d-arabinono-1"
+      },
+      "note": "Shares D-arabinopyranose with D-arabinose 5-phosphate to dehydro-D-arabinono-1,4-l….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:46994"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_arabinopyranose_d-erythro-ascorbate-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_arabinopyranose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-erythro-ascorbate-to-diphosphate"
+      },
+      "note": "Shares D-arabinopyranose with D-erythro-Ascorbate to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:46994"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_arabinopyranose_n2-acetyl-l-ornithine-to-d-ribulose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_arabinopyranose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n2-acetyl-l-ornithine-to-d-ribulose"
+      },
+      "note": "Shares D-arabinopyranose with N2-acetyl-L-ornithine to D-ribulose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:46994"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_arabinono_1_4_lactone_d-arabinose-5-phosphate-to-dehydro-d-arabinono-1",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_arabinono_1_4_lactone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-arabinose-5-phosphate-to-dehydro-d-arabinono-1"
+      },
+      "note": "Shares D-arabinono-1,4-lactone with D-arabinose 5-phosphate to dehydro-D-arabinono-1,4-l….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16292"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_dehydro_3_deoxy_d_arabinonate_2-amino-2-deoxy-d-gluconi-to-2-dehydro-3-deoxy-d",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_dehydro_3_deoxy_d_arabinonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-amino-2-deoxy-d-gluconi-to-2-dehydro-3-deoxy-d"
+      },
+      "note": "Shares 2-dehydro-3-deoxy-D-arabinonate with 2-amino-2-deoxy-D-gluconi… to 2-dehydro-3-deoxy-D-arabi….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16699"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_dehydro_3_deoxy_d_arabinonate_xylitol-to-glycolaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_dehydro_3_deoxy_d_arabinonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "xylitol-to-glycolaldehyde"
+      },
+      "note": "Shares 2-dehydro-3-deoxy-D-arabinonate with xylitol to glycolaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16699"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_5_dioxopentanoate_d-galacturonate-to-2-oxoglutarate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_5_dioxopentanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-galacturonate-to-2-oxoglutarate"
+      },
+      "note": "Shares 2,5-dioxopentanoate with β-D-galacturonate to 2-oxoglutarate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58136"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_5_dioxopentanoate_l-arabinopyranose-to-2-oxoglutarate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_5_dioxopentanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-arabinopyranose-to-2-oxoglutarate"
+      },
+      "note": "Shares 2,5-dioxopentanoate with α-L-arabinopyranose to 2-oxoglutarate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58136"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_5_dioxopentanoate_trans-4-hydroxy-l-proline-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_5_dioxopentanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-4-hydroxy-l-proline-to-ammonium"
+      },
+      "note": "Shares 2,5-dioxopentanoate with trans-4-hydroxy-L-proline to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58136"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_arabinono_1_5_lactone_n2-acetyl-l-ornithine-to-d-ribulose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_arabinono_1_5_lactone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n2-acetyl-l-ornithine-to-d-ribulose"
+      },
+      "note": "Shares D-arabinono-1,5-lactone with N2-acetyl-L-ornithine to D-ribulose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:194242"
           }
         ]
       }

@@ -113,13 +113,13 @@
       }
     },
     {
-      "id": "7_hydroxy_3_oxochol_4_en_24_oate",
-      "name": "7α-hydroxy-3-oxochol-4-en-24-oate",
-      "short": "7α-hydroxy-3-oxocho…",
+      "id": "7beta_hydroxy_3_oxochol_4_enate",
+      "name": "7beta-hydroxy-3-oxochol-4-enate",
+      "short": "7beta-hydroxy-3-oxo…",
       "formula": "C24H35O4",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:87747"
+        "metanetx": "MNXM1132314"
       }
     },
     {
@@ -129,26 +129,6 @@
       "charge": -1,
       "xrefs": {
         "metanetx": "MNXM1371683"
-      }
-    },
-    {
-      "id": "7_hydroxy_3_oxochol_24_oyl_coa",
-      "name": "7β-hydroxy-3-oxochol-24-oyl-CoA",
-      "short": "7β-hydroxy-3-oxocho…",
-      "formula": "C45H68N7O19P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:140637"
-      }
-    },
-    {
-      "id": "7beta_hydroxy_3_oxochol_4_enate",
-      "name": "7beta-hydroxy-3-oxochol-4-enate",
-      "short": "7beta-hydroxy-3-oxo…",
-      "formula": "C24H35O4",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM1132314"
       }
     }
   ],
@@ -165,13 +145,6 @@
       "name": "bile acid CoA-transferase",
       "ec": [
         "2.8.3.25"
-      ]
-    },
-    {
-      "id": "ec_1_3_1_116",
-      "name": "7beta-hydroxy-3-oxochol-24-oyl-CoA 4-desaturase",
-      "ec": [
-        "1.3.1.116"
       ]
     }
   ],
@@ -304,7 +277,7 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "7_hydroxy_3_oxochol_4_en_24_oate",
+          "metabolite": "7beta_hydroxy_3_oxochol_4_enate",
           "stoichiometry": 1
         }
       ],
@@ -326,99 +299,6 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "metanetx": "MNXR193049"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR193049"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "7beta-hydroxy-3-oxochol-24-oyl-CoA 4-desaturase",
-      "equation": "7beta-hydroxy-3-oxochol-24-oyl-CoA + NAD(+) = 7beta-hydroxy-3-oxochol-4-en-24-oyl-CoA + NADH + H(+)",
-      "ec": "1.3.1.116",
-      "substrates": [
-        {
-          "metabolite": "7_hydroxy_3_oxochol_24_oyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "7_hydroxy_3_oxochol_4_en_24_oyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_3_1_116"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:56668"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:56668"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "bile acid CoA-transferase",
-      "ec": "2.8.3.25",
-      "substrates": [
-        {
-          "metabolite": "choloyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "7beta_hydroxy_3_oxochol_4_enate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "cholate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "7_hydroxy_3_oxochol_4_en_24_oyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_8_3_25"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
         "metanetx": "MNXR193053"
       },
       "provenance": {
@@ -427,6 +307,272 @@
           {
             "db": "MetaNetX",
             "id": "MNXR193053"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3_oxochenodeoxycholoyl_coa_taurochenodeoxycholate-to-chenodeoxycholate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_oxochenodeoxycholoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "taurochenodeoxycholate-to-chenodeoxycholate"
+      },
+      "note": "Shares 3-oxochenodeoxycholoyl-CoA with taurochenodeoxycholate to chenodeoxycholate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:136698"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_hydroxy_3_oxochol_4_en_24_oyl_coa_7-hydroxy-3-oxochol-4-en-to-isolithocholate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_hydroxy_3_oxochol_4_en_24_oyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-hydroxy-3-oxochol-4-en-to-isolithocholate"
+      },
+      "note": "Shares 7α-hydroxy-3-oxochol-4-en-24-oyl-CoA with 7α-hydroxy-3-oxochol-4-en… to isolithocholate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:140636"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_oxochol_4_6_dien_24_oyl_coa_3-oxocholan-24-oyl-coa-to-3-oxo-chol-4-ene-22r-h",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_oxochol_4_6_dien_24_oyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-oxocholan-24-oyl-coa-to-3-oxo-chol-4-ene-22r-h"
+      },
+      "note": "Shares 3-oxochol-4,6-dien-24-oyl-CoA with 3-oxocholan-24-oyl-CoA to 3-oxo-chol-4-ene-(22R)-hy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:140634"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_hydroxy_3_oxochol_4_en_24_oyl_coa_nadh-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_hydroxy_3_oxochol_4_en_24_oyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-fmn"
+      },
+      "note": "Shares 7β-hydroxy-3-oxochol-4-en-24-oyl-CoA with NADH to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:140638"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_choloyl_coa_7-hydroxy-3-oxochol-4-en-to-isolithocholate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "choloyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-hydroxy-3-oxochol-4-en-to-isolithocholate"
+      },
+      "note": "Shares choloyl-CoA with 7α-hydroxy-3-oxochol-4-en… to isolithocholate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104082"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_choloyl_coa_ergosteryl-palmitate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "choloyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ergosteryl-palmitate-to-h2o"
+      },
+      "note": "Shares choloyl-CoA with ergosteryl palmitate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104082"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_choloyl_coa_glycodeoxycholate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "choloyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "glycodeoxycholate-to-h2o"
+      },
+      "note": "Shares choloyl-CoA with glycodeoxycholate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104082"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_choloyl_coa_h-to-bacteriopheophytin-a",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "choloyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-bacteriopheophytin-a"
+      },
+      "note": "Shares choloyl-CoA with H to bacteriopheophytin a.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104082"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7beta_hydroxy_3_oxochol_4_enate_7-hydroxy-3-oxochol-4-en-to-isolithocholate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7beta_hydroxy_3_oxochol_4_enate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-hydroxy-3-oxochol-4-en-to-isolithocholate"
+      },
+      "note": "Shares 7beta-hydroxy-3-oxochol-4-enate with 7α-hydroxy-3-oxochol-4-en… to isolithocholate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1132314"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cholate_7-12-26-trihydroxy-5-c-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cholate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-12-26-trihydroxy-5-c-to-nad"
+      },
+      "note": "Shares cholate with 7α,12α,26-trihydroxy-5β-c… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371683"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cholate_7-hydroxy-3-oxochol-4-en-to-isolithocholate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cholate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-hydroxy-3-oxochol-4-en-to-isolithocholate"
+      },
+      "note": "Shares cholate with 7α-hydroxy-3-oxochol-4-en… to isolithocholate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371683"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cholate_dtdp-4-amino-4-6-dideoxy-to-murnac-l-ala-d-isogl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cholate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-4-amino-4-6-dideoxy-to-murnac-l-ala-d-isogl"
+      },
+      "note": "Shares cholate with dTDP-4-amino-4,6-dideoxy-… to MurNAc-L-Ala-D-isoglutami….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371683"
           }
         ]
       }

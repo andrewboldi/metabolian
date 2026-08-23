@@ -138,35 +138,6 @@
       "xrefs": {
         "chebi": "CHEBI:16240"
       }
-    },
-    {
-      "id": "sn_glycerol_3_phosphate",
-      "name": "sn-glycerol 3-phosphate",
-      "short": "sn-glycerol 3-P",
-      "formula": "C3H7O6P",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM66"
-      }
-    },
-    {
-      "id": "1_acylglycerol_3p_13_docose",
-      "name": "1-Acylglycerol-3P-13-Docose",
-      "short": "1-Acylglycerol-3P-1…",
-      "formula": "C25H47O7P",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM1560489"
-      }
-    },
-    {
-      "id": "coa",
-      "name": "CoA",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM727276"
-      }
     }
   ],
   "enzymes": [],
@@ -334,41 +305,159 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "Reaction MNXR205101",
-      "substrates": [
-        {
-          "metabolite": "erucoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sn_glycerol_3_phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_acylglycerol_3p_13_docose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR205101"
+      "id": "xt_3r_15z_3_hydroxytetracosenoyl_coa_n-11z-icosenoylsphingos-to-n-15z-tetracosenoylsp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3r_15z_3_hydroxytetracosenoyl_coa"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "n-11z-icosenoylsphingos-to-n-15z-tetracosenoylsp"
+      },
+      "note": "Shares (3R,15Z)-3-hydroxytetracosenoyl-CoA with N-(11Z)-icosenoylsphingos… to N-(15Z)-tetracosenoylsphi….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR205101"
+            "db": "ChEBI",
+            "id": "CHEBI:76392"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_15z_3_oxotetracosenoyl_coa_1-erucoylglycerol-to-n-13z-docosenoyl-sphin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "15z_3_oxotetracosenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-erucoylglycerol-to-n-13z-docosenoyl-sphin"
+      },
+      "note": "Shares (15Z)-3-oxotetracosenoyl-CoA with 1-erucoylglycerol to N-[(13Z)-docosenoyl]sphin….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74071"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_15z_3_oxotetracosenoyl_coa_formononetin-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "15z_3_oxotetracosenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "formononetin-to-coa"
+      },
+      "note": "Shares (15Z)-3-oxotetracosenoyl-CoA with formononetin to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74071"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_15z_3_oxotetracosenoyl_coa_n-11z-icosenoylsphingos-to-n-15z-tetracosenoylsp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "15z_3_oxotetracosenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-11z-icosenoylsphingos-to-n-15z-tetracosenoylsp"
+      },
+      "note": "Shares (15Z)-3-oxotetracosenoyl-CoA with N-(11Z)-icosenoylsphingos… to N-(15Z)-tetracosenoylsphi….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74071"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2e_13z_docosadienoyl_coa_1-erucoylglycerol-to-n-13z-docosenoyl-sphin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2e_13z_docosadienoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-erucoylglycerol-to-n-13z-docosenoyl-sphin"
+      },
+      "note": "Shares (2E,13Z)-docosadienoyl-CoA with 1-erucoylglycerol to N-[(13Z)-docosenoyl]sphin….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76391"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2e_13z_docosadienoyl_coa_n-11z-icosenoylsphingos-to-n-15z-tetracosenoylsp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2e_13z_docosadienoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-11z-icosenoylsphingos-to-n-15z-tetracosenoylsp"
+      },
+      "note": "Shares (2E,13Z)-docosadienoyl-CoA with N-(11Z)-icosenoylsphingos… to N-(15Z)-tetracosenoylsphi….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76391"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2e_13z_docosadienoyl_coa_ubiquinone-0-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2e_13z_docosadienoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ubiquinone-0-to-h2o"
+      },
+      "note": "Shares (2E,13Z)-docosadienoyl-CoA with ubiquinone-0 to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76391"
           }
         ]
       }

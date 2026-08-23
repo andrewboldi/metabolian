@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway butane-to-butyryl-coa "butane to butyryl-CoA" {
-  spacing 208
+  spacing 220
 
   spine at 0,0 {
     butane
@@ -18,25 +18,37 @@ pathway butane-to-butyryl-coa "butane to butyryl-CoA" {
 
   branch from butan_1_ol side left {
     butan_1_ol
-    <-> . +propionyl_coa +coa
-    butyl_propionate
+    <-> . +2_methylsulfanyl_acetyl_coa +coa
+    butyl_2_methylsulfanyl_acetate
   }
 
   branch from butan_1_ol side right {
     butan_1_ol
-    <-> . +2_methylsulfanyl_acetyl_coa +coa
-    butyl_2_methylsulfanyl_acetate
+    <-> . +butyryl_coa +coa
+    butyl_butanoate
   }
 
   branch from butyryl_coa side left {
     butyryl_coa
     <-> ec_4_1_1_94 [4.1.1.94] +hplus +co2
-    s_ethylmalonyl_coa
+    r_ethylmalonyl_coa
   }
 
   branch from butyryl_coa side right {
     butyryl_coa
-    <-> . +o2 +h2o2
-    crotonoyl_coa
+    <-> . +hexan_1_ol +coa
+    hexyl_butyrate
+  }
+
+  branch from butyryl_coa side left {
+    butyryl_coa
+    <-> . +2_methylbutan_1_ol +coa
+    2_methylbutyl_butanoate
+  }
+
+  branch from butyryl_coa side right {
+    butyryl_coa
+    <-> . +propan_1_ol +coa
+    propyl_butyrate
   }
 }

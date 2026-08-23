@@ -32,19 +32,61 @@ pathway nadh-to-4-carboxy-2-hydroxy-cis-c "NADH to 4-carboxy-2-hydroxy-cis,c…"
 
   branch from nad side left {
     nad
-    <-> ec_1_3_1_32 [1.3.1.32] +5_methylmaleylacetate +chloride +nadh
-    2_chloro_5_methylmaleylacetate
+    <-> ec_1_1_1_50 [1.1.1.50] +nadh +1_ketoacenaphthalene +h
+    1_acenaphthalenol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_4_1_20 [1.4.1.20] +nadh +3_4_hydroxyphenyl_pyruvate +h +nh4 +h2o
-    l_tyrosine
+    <-> ec_1_1_1_239 [1.1.1.239] +nadh +h +5beta_androstane_3_17_dione
+    5_dihydrotestosterone
   }
 
   branch from 4_carboxy_2_hydroxy_cis_cis_muconate side left {
     4_carboxy_2_hydroxy_cis_cis_muconate
     <-> ec_4_2_1_83 [4.2.1.83] +h2o
     2_hydroxy_4_oxobutane_1_2_4_tricarboxylate
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_1_1_239 [1.1.1.239] +h +estrone_3_sulfate +nad
+    17_estradiol_3_sulfate
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> ec_1_1_1_150 [1.1.1.150] +21_dehydrocorticosterone +h +nad
+    corticosterone
+  }
+
+  branch from 2_oxo_2h_pyran_4_6_dicarboxylate side right {
+    2_oxo_2h_pyran_4_6_dicarboxylate
+    <-> ec_3_1_1_57 [3.1.1.57] +h2o +h
+    4_carboxy_2_hydroxyhexa_2_4_dienedioate
+  }
+
+  branch from h side left {
+    h
+    <-> . +r_2_chloro_1_phenylethanol +chloride
+    s_styrene_oxide
+  }
+
+  branch from h side right {
+    h
+    <-> . +epibromohydrin +bromide
+    2_3_dibromo_1_propanol
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_213 [1.1.1.213] +nadh +4_5beta_dihydrocortisone +h
+    urocortisone
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_1 [1.1.1.1] +s_nitrosoglutathione +nadh +h
+    sulfinamide_glutathione
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway diphosphate-to-precorrin-6b "diphosphate to precorrin-6B" {
-  spacing 236
+  spacing 290
 
   spine at 0,0 {
     diphosphate
@@ -18,87 +18,141 @@ pathway diphosphate-to-precorrin-6b "diphosphate to precorrin-6B" {
     precorrin_6b
   }
 
-  branch from hydrogenobyrinate side left {
-    hydrogenobyrinate
-    <-> ec_6_3_5_9 [6.3.5.9] +hydrogenobyrinate_diamide +h +adp +l_glutamate +l_glutamine +atp +h2o
-    phosphate
+  branch from l_glutamine side left {
+    l_glutamine
+    <-> . +phenylalanyl_glutaminyl_phenylalanine +h2o
+    l_phenylalanine
   }
 
   branch from l_glutamine side right {
     l_glutamine
-    <-> . +l_histidine +l_lysine +h +h2o
-    gln_his_lys
+    <-> . +phenylalanyl_tyrosinyl_glutamine +h2o +l_phenylalanine
+    l_tyrosine
   }
 
-  branch from l_glutamine side left {
-    l_glutamine
-    <-> . +l_lysine +h +h2o
-    gln_lys_lys
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    11_dehydrothromboxane_b2
   }
 
   branch from atp side right {
     atp
     <-> . +h +adp +phosphate +h2o
-    d_allose
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +1_6_anhydrous_n_acetylmuramate +h2o +adp
-    n_acetylmuramate_6_phosphate
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_1_14_13_49 [1.14.13.49] +4s_limonene +h +o2 +nadph +s_perillyl_alcohol
-    nadp
+    e_4_hydroxynon_2_enal
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_14_14_25 [1.14.14.25] +24s_24_hydroxycholesterol +nadp +h +o2 +nadph
-    cholesterol
+    <-> . +prefumagillin_aldehyde +o2 +nadph +nadp
+    fumagillin
   }
 
-  branch from h side right {
-    h
-    <-> ec_1_14_13_95 [1.14.13.95] +7alpha_hydroxycholest_4_en_3_one +o2 +nadph +nadp +h2o
-    7alpha_12alpha_dihydroxycholest_4_en_3_one
+  branch from h2o side right {
+    h2o
+    <-> ec_3_1_1_4 [3.1.1.4] +5z_8z_11z_14z_eicosatetraenoate +ps_14_0_0_0
+    1_tetradecanoyl_2_5z_8z_11z_14z_eicosatetraenoyl
   }
 
   branch from h side left {
     h
-    <-> ec_1_2_4_1 [1.2.4.1] +r_lipoamide +pyruvate +co2
-    r_s_6_acetyldihydrolipoamide
+    <-> ec_3_1_1_4 [3.1.1.4] +1_hexadecyl_2_4z_7z_10z_13z_16z_19z_docosahexaen +h2o +4z_7z_10z_13z_16z_19z_docosahexaenoate
+    1_o_hexadecyl_sn_glycero_3_phosphocholine
   }
 
-  branch from precorrin_8x side right {
-    precorrin_8x
-    <-> ec_5_4_99_61 [5.4.99.61] +h
-    hydrogenobyrinate
+  branch from h side right {
+    h
+    <-> . +glycine_betaine +h2o2 +o2
+    betaine_aldehyde_hydrate
   }
 
-  branch from s_adenosyl_l_methionine side left {
-    s_adenosyl_l_methionine
-    <-> ec_2_1_1_42 [2.1.1.42] +s_adenosyl_l_homocysteine +3_methoxyflavone +h
-    3_hydroxyflavone
+  branch from diphosphate side left {
+    diphosphate
+    <-> ec_4_2_3_189 [4.2.3.189] +13r_9_13_epoxylabd_14_ene
+    peregrinol_diphosphate
   }
 
-  branch from s_adenosyl_l_methionine side right {
-    s_adenosyl_l_methionine
-    <-> ec_2_1_1_316 [2.1.1.316] +s_adenosyl_l_homocysteine +h +mitomycin_b
-    7_demethylmitomycin_b
+  branch from diphosphate side right {
+    diphosphate
+    <-> . +chlorophyll_a +h +e_3_7_11_15_tetramethylhexadec_2_en_1_yl_diphos
+    chlorophyllide
   }
 
-  branch from precorrin_6b side left {
-    precorrin_6b
-    <-> . +nadh +precorrin_6a +h
-    nad
+  branch from h side left {
+    h
+    <-> . +erinacine_c +nadp +nadph
+    erinacine_b
   }
 
-  branch from precorrin_6b side right {
-    precorrin_6b
-    <-> ec_1_3_1_54 [1.3.1.54] +h +nadph +nadp
-    precorrin_6a
+  branch from h side right {
+    h
+    <-> . +2r_3s_tartrate +co2
+    r_glycerate
+  }
+
+  branch from adp side left {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    9_10_dhome
+  }
+
+  branch from adp side right {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    12_13_dihydroxyoleic_acid
+  }
+
+  branch from l_glutamate side left {
+    l_glutamate
+    <-> . +tryptophanyl_glutamyl_tyrosine +h2o +l_tyrosine
+    l_tryptophan
+  }
+
+  branch from l_glutamate side right {
+    l_glutamate
+    <-> . +tyrosyl_arginyl_glutamate +h2o +l_tyrosine
+    l_arginine
+  }
+
+  branch from l_glutamine side left {
+    l_glutamine
+    <-> . +h2o +l_tryptophan +l_tyrosine
+    tryptophanyl_tyrosyl_glutamine
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    11_z_14_z_eicosadienoic_acid
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    20_hydroxy_6_trans_leukotriene_b4
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_1_1_4 [3.1.1.4] +5z_8z_11z_14z_eicosatetraenoate +pg_20_4_5z_8z_11z_14z_0_0
+    1_2_di_5z_8z_11z_14z_eicosatetraenoyl_sn_glycero
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +erinacine_b
+    erinacine_t
+  }
+
+  branch from co2 side right {
+    co2
+    <-> . +cannabinol
+    cannabinolic_acid
+  }
+
+  branch from co2 side left {
+    co2
+    <-> . +2e_octenoyl_coa +nadph +nadp
+    hexylmalonyl_coa
   }
 }

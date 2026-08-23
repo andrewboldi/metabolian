@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway aliphatic-primary-amide-to-acyl-coa "aliphatic primary amide to acyl-CoA" {
-  spacing 200
+  spacing 248
 
   spine at 0,0 {
     aliphatic_primary_amide
@@ -20,49 +20,97 @@ pathway aliphatic-primary-amide-to-acyl-coa "aliphatic primary amide to acyl-CoA
 
   branch from carboxylic_acid_anion side left {
     carboxylic_acid_anion
-    <-> ec_3_1_1_1 [3.1.1.1] +carboxylic_ester +h2o +hplus
-    alcohol
+    <-> . +3_sn_phosphatidyl_l_serine +h2o +hplus
+    sn_glycero_3_phosphoserine
   }
 
   branch from carboxylic_acid_anion side right {
     carboxylic_acid_anion
-    <-> ec_3_1_2_7 [3.1.2.7] +s_acylglutathionate +h2o +hplus
-    gsh
+    <-> . +1_phosphatidyl_1d_myo_inositol +h2o +hplus
+    1_sn_glycero_3_o_phosphonato_1d_myo_inositol
   }
 
   branch from nh3 side left {
     nh3
-    <-> ec_3_5_1_67 [3.5.1.67] +4_methylene_l_glutamine +h2o
-    4_methylene_l_glutamate
+    <-> ec_1_4_3_11 [1.4.3.11] +glutamate +o2 +h2o +h2o2
+    akg
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_3_5_4_6 [3.5.4.6] +amp +h2o +hplus
-    imp
+    <-> ec_1_4_1_7 [1.4.1.7] +serine +nad +h2o +nadh +hplus
+    3_hydroxypyruvate
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_13 [4.2.3.13] +fpp
-    cadinene
+    <-> . +fpp
+    selinene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_11 [4.2.3.11] +gpp +h2o
-    sabinene_hydrate
+    <-> ec_4_2_3_71 [4.2.3.71] +fpp
+    1e_4e_germacrene_b
   }
 
   branch from acyl_coa side left {
     acyl_coa
-    <-> ec_2_3_1_125 [2.3.1.125] +1_alkyl_2_acetyl_sn_glycerol +coa
-    1_alkyl_2_acetyl_3_acyl_sn_glycerol
+    <-> ec_2_3_1_n6 [2.3.1.n6] +1_acyl_sn_glycero_3_phosphoserine +coa
+    3_sn_phosphatidyl_l_serine
   }
 
   branch from acyl_coa side right {
     acyl_coa
-    <-> ec_2_3_1_185 [2.3.1.185] +tropinium +coa +hplus
-    o_acyltropine
+    <-> . +1_acyl_sn_glycero_3_phospho_1d_myo_inositol +coa
+    1_phosphatidyl_1d_myo_inositol
+  }
+
+  branch from carboxylic_acid_anion side left {
+    carboxylic_acid_anion
+    <-> . +n_acyl_15_methylhexadecasphinganine +h2o
+    15_methylhexadecasphinganine
+  }
+
+  branch from carboxylic_acid_anion side right {
+    carboxylic_acid_anion
+    <-> ec_3_5_1_114 [3.5.1.114] +n_acyl_aromatic_l_amino_acid_anion +h2o
+    aromatic_l_amino_acid
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_4_3_1_24 [4.3.1.24] +l_phenylalanine
+    trans_cinnamate
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_1_4_1_20 [1.4.1.20] +l_phenylalanine +nad +h2o +nadh +hplus
+    keto_phenylpyruvate
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +fpp
+    guaia_6_9_diene
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +fpp
+    germacrene_a
+  }
+
+  branch from acyl_coa side left {
+    acyl_coa
+    <-> . +1_acyl_sn_glycero_3_phospho_1_sn_glycerol +coa
+    1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol
+  }
+
+  branch from acyl_coa side right {
+    acyl_coa
+    <-> ec_2_3_1_198 [2.3.1.198] +sn_glycerol_3_phosphate +coa
+    2_acyl_sn_glycero_3_phosphate
   }
 }

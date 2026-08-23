@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway guanosine-5-monophosphat-to-succinate "guanosine 5'-monophosphat… to succinate" {
-  spacing 260
+  spacing 248
 
   spine at 0,0 {
     guanosine_5_monophosphate_1
@@ -14,17 +14,5 @@ pathway guanosine-5-monophosphat-to-succinate "guanosine 5'-monophosphat… to s
     n2_n2_dimethylguanosine_5_monophosphate_1
     <-> . +akg +o2 -formaldehyde -succinate -co2
     guanosine_5_monophosphate_1
-  }
-
-  branch from guanosine_5_monophosphate_1 side left {
-    guanosine_5_monophosphate_1
-    <-> . +glyoxal
-    n2_1_hydroxy_2_oxoethyl_gmp_1
-  }
-
-  branch from guanosine_5_monophosphate_1 side right {
-    guanosine_5_monophosphate_1
-    <-> . +n2_1_hydroxy_2_oxopropyl_gmp_1 +h2o +hplus
-    lactate
   }
 }

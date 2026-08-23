@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-oxo-2s-methylisocapry-to-nad "3-Oxo-(2S)-Methylisocapry… to NAD" {
-  spacing 194
+  spacing 188
 
   spine at 0,0 {
     3_oxo_2s_methylisocapryloyl_coenzyme_a
@@ -16,45 +16,39 @@ pathway 3-oxo-2s-methylisocapry-to-nad "3-Oxo-(2S)-Methylisocapry… to NAD" {
     3_s_hydroxy_2_s_6_dimethyl_heptanoyl_coa
   }
 
-  branch from propanoyl_coa side left {
-    propanoyl_coa
-    <-> ec_2_3_1_26 [2.3.1.26] +cholesterol +coa
-    propionyl_cholesterol
-  }
-
-  branch from propanoyl_coa side right {
-    propanoyl_coa
-    <-> ec_2_3_1_84 [2.3.1.84] +ethanol +coa
-    ethyl_propionate
-  }
-
   branch from coa side left {
     coa
-    <-> . +13z_icosenoyl_coa +h2o
-    z_icos_13_enoic_acid
+    <-> . +s_carnitine +trans_9_octadecenoyl_coa
+    9e_octadec_9_enoylcarnitine
   }
 
   branch from coa side right {
     coa
-    <-> . +8z_11z_icosadienoyl_coa +h2o
-    8_11_eicosadienoic_acid
+    <-> . +nonadecanoyl_coa +s_carnitine
+    o_nonadecanoylcarnitine
   }
 
-  branch from 3_s_hydroxy_2_s_6_dimethyl_heptanoyl_coa side left {
-    3_s_hydroxy_2_s_6_dimethyl_heptanoyl_coa
-    <-> . +h2o
-    2_6_dimethyl_trans_2_heptenoyl_coa
+  branch from coa side left {
+    coa
+    <-> . +s_carnitine +13z_icosenoyl_coa
+    eicosenoylcarnitine_7
   }
 
-  branch from nad side right {
-    nad
-    <-> . +nadh +acetyl_coa +fadh2 +h +fad +coa +h2o
-    cis_cis_cis_10_13_16_docosatrienoyl_coa
+  branch from coa side right {
+    coa
+    <-> . +11z_eicosenoyl_coa +s_carnitine
+    9z_icos_9_enoylcarnitine
   }
 
-  branch from nad side left {
-    nad
-    <-> . +nadh +acetyl_coa +fadh2 +h +fad +coa +h2o
-    5z_8z_11z_14z_17z_eicosapentaenoyl_coa
+  branch from h side left {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    a_tetradecenoyl_coa_n_c14_1coa
+  }
+
+  branch from h side right {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    9z_hexadecenoyl_coa
   }
 }

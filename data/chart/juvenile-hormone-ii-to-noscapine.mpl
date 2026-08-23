@@ -22,87 +22,26 @@ pathway juvenile-hormone-ii-to-noscapine "juvenile hormone II to (−)-noscapine
     noscapine
   }
 
-  branch from methanol side left {
-    methanol
-    <-> . +primary_fluorescent_dioxobilin_type_chlorophyll +h2o +hplus
-    o134_desmethyl_primary_fluorescent_dioxobilin_ty
-  }
 
-  branch from methanol side right {
-    methanol
-    <-> . +h2o +chloride +hplus
-    chloromethane
-  }
 
-  branch from methyl_anthranilate side left {
-    methyl_anthranilate
-    <-> ec_2_1_1_277 [2.1.1.277] +sam +sah
-    anthranilate
-  }
 
-  branch from s_s_adenosyl_l_methionine side right {
-    s_s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +veratrole
-    guaiacol
-  }
 
-  branch from s_s_adenosyl_l_methionine side left {
-    s_s_adenosyl_l_methionine
-    <-> ec_2_1_1_128 [2.1.1.128] +s_adenosyl_l_homocysteine +h +s_6_o_methylnorlaudanosoline
-    r_norlaudanosoline
-  }
 
-  branch from anthranilate side right {
-    anthranilate
-    <-> . +o_aminobenzaldehyde +o2 +nadph +h2o
-    nadp
-  }
 
-  branch from anthranilate side left {
-    anthranilate
-    <-> . +fumiquinazoline_f +diphosphate +h +amp +h2o +atp +l_tryptophan
-    l_alanine
-  }
 
-  branch from 3_o_acetylpapaveroxine side right {
-    3_o_acetylpapaveroxine
-    <-> ec_3_1_1_105 [3.1.1.105] +h2o +acetate +papaveroxine
-    h
-  }
 
-  branch from 3_o_acetylpapaveroxine side left {
-    3_o_acetylpapaveroxine
-    <-> ec_2_1_1_352 [2.1.1.352] +s_adenosyl_l_homocysteine +h +3_o_acetyl_4_o_demethylpapaveroxine
-    s_adenosyl_l_methionine
-  }
 
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_97 [2.1.1.97] +3_hydroxyanthranilate +sam +hplus
-    3_hydroxy_4_methylanthranilate
-  }
 
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_6 [2.1.1.6] +catechols +sam +hplus
-    guaiacols
-  }
 
-  branch from noscapine_hemiacetal side right {
-    noscapine_hemiacetal
-    <-> .
-    papaveroxine
-  }
 
-  branch from acetate side left {
-    acetate
-    <-> . +n_acetylserotonin +h2o
-    serotonin
-  }
 
-  branch from acetate side right {
-    acetate
-    <-> . +n_acetyltryptamine +h2o
-    tryptaminium
-  }
+
+
+
+
+
+
+
+
+
 }

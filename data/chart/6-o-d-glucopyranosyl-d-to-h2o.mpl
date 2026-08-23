@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 6-o-d-glucopyranosyl-d-to-h2o "6-O-α-D-glucopyranosyl-D-… to H2O" {
-  spacing 252
+  spacing 216
 
   spine at 0,0 {
     6_o_d_glucopyranosyl_d_fructofuranose
@@ -20,41 +20,5 @@ pathway 6-o-d-glucopyranosyl-d-to-h2o "6-O-α-D-glucopyranosyl-D-… to H2O" {
     d_fructofuranosyl_d_mannopyranoside
     <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate -d_fructofuranosyl_d_mannopyranoside -h2o
     atp
-  }
-
-  branch from d_fructofuranose side left {
-    d_fructofuranose
-    <-> ec_5_3_1_7 [5.3.1.7]
-    beta_d_mannose
-  }
-
-  branch from d_fructofuranose side right {
-    d_fructofuranose
-    <-> ec_2_7_1_1 [2.7.1.1] +h +atp +adp
-    6_o_phosphonohexopyranose
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_2_7_1_1 [2.7.1.1] +h +adp +6_o_phosphonohexopyranose
-    beta_d_fructopyranose
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_2_7_1_1 [2.7.1.1] +h +adp +6_o_phosphonohexopyranose
-    alpha_d_mannopyranose
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_1_3_27 [3.1.3.27] +h +1_2_dioctadecanoyl_sn_glycero_3_phospho_1_sn_gly +phosphate
-    pg_18_0_18_0
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_1_3_27 [3.1.3.27] +pgp_16_1_9z_16_1_9z +h +phosphate
-    phosphatidylglycerol_dihexadec_9_enoyl_n_c16_1
   }
 }

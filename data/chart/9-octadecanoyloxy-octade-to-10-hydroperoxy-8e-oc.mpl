@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 9-octadecanoyloxy-octade-to-10-hydroperoxy-8e-oc "9-(octadecanoyloxy)octade… to 10-hydroperoxy-8E-octadec…" {
-  spacing 194
+  spacing 206
 
   spine at 0,0 {
     9_octadecanoyloxy_octadecanoate
@@ -32,14 +32,14 @@ pathway 9-octadecanoyloxy-octade-to-10-hydroperoxy-8e-oc "9-(octadecanoyloxy)oct
 
   branch from octadecanoate side left {
     octadecanoate
-    <-> . +n_octadecanoyl_4_hydroxysphinganine +h2o
-    phytosphingosine
+    <-> . +13_octadecanoyloxy_octadecanoate +h2o +hplus
+    13_hydroxyoctadecanoate
   }
 
   branch from octadecanoate side right {
     octadecanoate
-    <-> . +ethyl_octadecanoate +h2o +hplus
-    ethanol
+    <-> . +1_hexadecanoyl_2_octadecanoyl_sn_glycero_3_phosp +h2o +hplus
+    1_hexadecanoyl_sn_glycero_3_phosphocholine
   }
 
   branch from 9_9z_octadecenoyloxy_octadecanoate side left {
@@ -48,15 +48,27 @@ pathway 9-octadecanoyloxy-octade-to-10-hydroperoxy-8e-oc "9-(octadecanoyloxy)oct
     2_oleoylglycerol
   }
 
-  branch from 9_9z_octadecenoyloxy_octadecanoate side right {
-    9_9z_octadecenoyloxy_octadecanoate
-    <-> . +1_palmitoyl_2_3_dioleoyl_sn_glycerol +9_hydroxyoctadecanoate
-    1_palmitoyl_3_oleoyl_sn_glycerol
+  branch from 9_hydroxyoctadecanoate side right {
+    9_hydroxyoctadecanoate
+    <-> . +1_2_3_trilinoleoylglycerol +9_9z_12z_octadecadienoyloxy_octadecanoate
+    1_3_dilinoleoylglycerol
   }
 
-  branch from 10_hydroperoxy_8e_octadecenoate side left {
-    10_hydroperoxy_8e_octadecenoate
-    <-> . +1_palmitoyl_2_10_hydroperoxy_8e_octadecenoyl_sn +h2o +hplus
-    1_hexadecanoyl_sn_glycero_3_phosphocholine
+  branch from 9_hydroxyoctadecanoate side left {
+    9_hydroxyoctadecanoate
+    <-> . +1_2_3_tripalmitoleoylglycerol +9_9z_hexadecenoyloxy_octadecanoate
+    1_3_dipalmitoleoylglycerol
+  }
+
+  branch from octadecanoate side right {
+    octadecanoate
+    <-> . +1_octadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +h2o +hplus
+    2_linoleoyl_sn_glycero_3_phosphocholine
+  }
+
+  branch from octadecanoate side left {
+    octadecanoate
+    <-> . +n_stearoyl_l_phenylalanine +h2o
+    l_phenylalanine
   }
 }

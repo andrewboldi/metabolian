@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway sinapyl-p-coumarate-to-h2o "Sinapyl p-coumarate to H2O" {
-  spacing 218
+  spacing 158
 
   spine at 0,0 {
     sinapyl_p_coumarate
@@ -16,69 +16,9 @@ pathway sinapyl-p-coumarate-to-h2o "Sinapyl p-coumarate to H2O" {
     aureusidin
   }
 
-  branch from 4_coumaroyl_coa side left {
-    4_coumaroyl_coa
-    <-> . +2_o_p_coumaroyl_glyceride +coa
-    glycerol
-  }
-
-  branch from 4_coumaroyl_coa side right {
-    4_coumaroyl_coa
-    <-> ec_1_2_1_44 [1.2.1.44] +h +nadph +nadp +coa
-    e_4_coumaraldehyde
-  }
-
-  branch from sinapyl_alcohol side left {
-    sinapyl_alcohol
-    <-> . +acetyl_coa +coa
-    trans_sinapyl_actetate
-  }
-
-  branch from co2 side right {
-    co2
-    <-> . +3z_5_chloro_2_oxopent_3_enoate +h
-    3z_2_chloro_5_oxohex_3_enedioate
-  }
-
-  branch from co2 side left {
-    co2
-    <-> . +2_keto_4_pentenoate +h
-    3z_2_oxohex_3_enedioate
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +acetyl_coa +2_methylpropanoyl_coa
-    3_oxoisohexanoyl_coa
-  }
-
-  branch from coa side left {
-    coa
-    <-> ec_2_3_1_5 [2.3.1.5] +acetyl_coa +hydrazine
-    acetohydrazide
-  }
-
-  branch from 2_4_4_6_tetrahydroxychalcone side right {
+  branch from 2_4_4_6_tetrahydroxychalcone side left {
     2_4_4_6_tetrahydroxychalcone
     <-> ec_5_5_1_6 [5.5.1.6]
     r_naringenin
-  }
-
-  branch from 2_4_4_6_tetrahydroxychalcone side left {
-    2_4_4_6_tetrahydroxychalcone
-    <-> . +udp +phlorizin_chalcone +h
-    udp_alpha_d_glucose
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_threonine +l_isoleucine +l_tryptophan
-    tryptophanyl_threonyl_isoleucine
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_threonine +l_tryptophan +l_tyrosine
-    tryptophanyl_threonyl_tyrosine
   }
 }

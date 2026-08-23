@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dibenzothiophene-to-biphenyl-2-3-diol "dibenzothiophene to biphenyl-2,3-diol" {
-  spacing 244
+  spacing 268
 
   spine at 0,0 {
     dibenzothiophene
@@ -20,13 +20,37 @@ pathway dibenzothiophene-to-biphenyl-2-3-diol "dibenzothiophene to biphenyl-2,3-
 
   branch from fmn side left {
     fmn
-    <-> . +5_hete +fmnh2 +o2 +h2o +hplus
-    5_20_dihete
+    <-> . +testosterone +fmnh2 +o2 +h2o +hplus
+    2_hydroxytestosterone
   }
 
   branch from fmn side right {
     fmn
-    <-> . +8_hete +fmnh2 +o2 +h2o +hplus
-    8_20_dihete
+    <-> . +casbene +fmnh2 +o2 +h2o +hplus
+    4_hydroxycasbene
+  }
+
+  branch from fmnh2 side left {
+    fmnh2
+    <-> . +4_hydroxycasbene +o2 +fmn +h2o +hplus
+    4_8_dihydroxycasbene
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> . +c21_steroid +o2 +fmn +h2o +hplus
+    21_hydroxy_c21_steroid
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_19 [1.14.14.19] +c21_steroid +fmnh2 +o2 +h2o +hplus
+    17_hydroxy_c21_steroid
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +lathosterone +fmnh2 +o2 +h2o +hplus
+    25s_7_dafachronate
   }
 }

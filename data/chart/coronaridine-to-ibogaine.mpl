@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway coronaridine-to-ibogaine "(−)-coronaridine to ibogaine" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     coronaridine
@@ -16,29 +16,5 @@ pathway coronaridine-to-ibogaine "(−)-coronaridine to ibogaine" {
     de_ester_voacangine
     <-> . +hplus -co2
     ibogaine
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +11_deoxycorticosterone +fmnh2 +o2 +h2o +hplus
-    6_hydroxy_11_deoxycorticosterone
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +luteolin_7_olate +fmnh2 +o2 +h2o +hplus
-    tricetin
-  }
-
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_300 [2.1.1.300] +s_scoulerine +sam
-    cyclanoline
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +norreticuline +sam +hplus
-    reticuline
   }
 }

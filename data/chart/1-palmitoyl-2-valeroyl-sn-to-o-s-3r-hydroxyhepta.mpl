@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-palmitoyl-2-valeroyl-sn-to-o-s-3r-hydroxyhepta "1-palmitoyl-2-valeroyl-sn… to O-[S-(3R)-hydroxyheptanoy…" {
-  spacing 194
+  spacing 218
 
   spine at 0,0 {
     1_palmitoyl_2_valeroyl_sn_glycero_3_phosphocholi
@@ -22,43 +22,67 @@ pathway 1-palmitoyl-2-valeroyl-sn-to-o-s-3r-hydroxyhepta "1-palmitoyl-2-valeroyl
 
   branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side left {
     1_hexadecanoyl_sn_glycero_3_phosphocholine
-    <-> . +lauroyl_coa +coa
-    1_palmitoyl_2_lauroyl_sn_glycero_3_phosphocholin
+    <-> . +1_palmitoyl_2_10_hydroperoxy_8e_octadecenoyl_sn +h2o +hplus
+    10_hydroperoxy_8e_octadecenoate
   }
 
   branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side right {
     1_hexadecanoyl_sn_glycero_3_phosphocholine
-    <-> . +acetyl_coa +coa
-    1_palmitoyl_2_acetyl_sn_glycero_3_phosphocholine
-  }
-
-  branch from pentanal side left {
-    pentanal
-    <-> . +pentan_1_aminium +nadp +h2o +nadph +hplus
-    nh3
-  }
-
-  branch from pentanal side right {
-    pentanal
-    <-> . +hydrogen_cyanide
-    2s_2_hydroxyhexanenitrile
+    <-> . +1_hexadecanoyl_2_9_oxononanoyl_sn_glycero_3_phos +h2o +hplus
+    9_oxononanoate
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_102 [4.2.3.102] +fpp
-    sesquithujene
+    <-> . +ttp +h2o +hplus
+    tmp
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_101 [4.2.3.101] +fpp
-    7_epi_sesquithujene
+    <-> . +7_methyl_gtp +h2o +hplus
+    7_methylguanosine_5_phosphate
   }
 
   branch from pentanoyl_coa side left {
     pentanoyl_coa
     <-> . +o2 +h2o2
     2e_pentenoyl_coa
+  }
+
+  branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side right {
+    1_hexadecanoyl_sn_glycero_3_phosphocholine
+    <-> . +1_hexadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex +h2o +hplus
+    4z_7z_10z_13z_16z_19z_docosahexaenoate
+  }
+
+  branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side left {
+    1_hexadecanoyl_sn_glycero_3_phosphocholine
+    <-> . +1_palmitoyl_2_azelaoyl_sn_glycero_3_phosphocholi +h2o +hplus
+    azelaate
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +nadh +hplus +nad
+    lycopaoctaene
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +nadh +hplus +lycopaoctaene +nad
+    1r_2r_3r_prephytoene_diphosphate
+  }
+
+  branch from malonyl-acp side right {
+    malonyl-acp
+    <-> . +palmitoyl_coa +hplus +co2 +coa
+    o_s_3_oxooctadecanoylpantetheine_4_phosphoryl_se
+  }
+
+  branch from malonyl-acp side left {
+    malonyl-acp
+    <-> ec_2_3_1_294 [2.3.1.294] +ultra_long_chain_di_unsaturated_fatty_acyl_pante +hplus +holo-acp +co2
+    ultra_long_chain_di_unsaturated_3_oxoacyl_pantet
   }
 }

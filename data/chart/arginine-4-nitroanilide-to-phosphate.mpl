@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway arginine-4-nitroanilide-to-phosphate "Arginine-4-nitroanilide to phosphate" {
-  spacing 234
+  spacing 294
 
   spine at 0,0 {
     arginine_4_nitroanilide
@@ -20,79 +20,139 @@ pathway arginine-4-nitroanilide-to-phosphate "Arginine-4-nitroanilide to phospha
 
   branch from 4_nitroaniline side left {
     4_nitroaniline
-    <-> ec_3_3_2_6 [3.3.2.6] +l_proline +h2o
-    prolyl_p_nitroanilide
+    <-> ec_4_3_3_1 [4.3.3.1] +5_d_5_6_5_c_hydroxymethyl_2_6_dihydroxycyclohex
+    4_nitrophenyl_3_ketovalidamine
   }
 
   branch from 4_nitroaniline side right {
     4_nitroaniline
-    <-> ec_3_4_11_10 [3.4.11.10] +h2o +glycine
-    glycine_p_nitroanilide
+    <-> ec_4_3_3_1 [4.3.3.1] +4_nitrophenyl_3_ketovalidamine
+    5d_5_6_5_c_hydroxymethyl_2_6_dihydroxy_2_cyclohe
   }
 
   branch from arginine side left {
     arginine
-    <-> ec_3_4_11_2 [3.4.11.2] +arg_phe +h2o
-    l_phenylalanine
-  }
-
-  branch from arginine side right {
-    arginine
-    <-> . +5_guanidino_2_oxopentanoate +l_glutamate +h
-    2_oxoglutarate
-  }
-
-  branch from glycylglycine side left {
-    glycylglycine
-    <-> . +l_arginine +h2o
-    arginyl_glycyl_glycine
+    <-> ec_3_4_11_1 [3.4.11.1] +l_leucine +h2o
+    arg_leu
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_23 [3.2.1.23] +beta_d_galactose +methanol
-    methyl_beta_d_galactoside
+    <-> . +15_15_dihydroxy_carotene
+    carotene_15_15_epoxide
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_20 [3.2.1.20] +maltoheptaose +maltohexaose
-    alpha_d_glucose
+    <-> . +citrate +n_3_aminopropyl_n_hydroxyacetamide +h
+    schizokinen
   }
 
   branch from h side right {
     h
-    <-> ec_4_6_1_2 [4.6.1.2] +thiopyrophosphate +3_5_cyclic_gmp
-    guanosine_5_gamma_thio_triphosphate
+    <-> . +2z_3_3_4_dioxocyclohexa_1_5_dien_1_yl_prop_2_en +h2o
+    3_4_6_dihydroxy_3_oxocyclohexa_1_4_dien_1_yl_acr
   }
 
   branch from h side left {
     h
-    <-> ec_3_5_4_5 [3.5.4.5] +cytarabine +h2o +nh4
-    spongouridin
+    <-> . +3_4_6_dihydroxy_3_oxocyclohexa_1_4_dien_1_yl_acr
+    3_4_6_trihydroxy_cis_cinnamate
   }
 
   branch from adp side right {
     adp
-    <-> ec_3_6_3_41 [3.6.3.41] +h +phosphate +atp +h2o
-    heme
+    <-> ec_2_4_1_245 [2.4.1.245] +adp_alpha_d_glucose +aldehydo_d_glucose +h
+    alpha_alpha_trehalose
+  }
+
+  branch from adp side left {
+    adp
+    <-> ec_3_6_3_1 [3.6.3.1] +h +phosphate +atp +h2o
+    1_palmitoleoyl_sn_glycerol_3_phosphate
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> . +l_galactose +h2o
+    beta_l_galactose_1_phosphate
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> ec_3_6_3_47 [3.6.3.47] +h +adp +atp +h2o
+    butanoyl_coa
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +2_4_substituted_furan_phosphate
+    phosphate_ester_of_dihydrofuran
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +acetyl_coa +trans_homoaconitate +coa
+    pentane_1_2_3_5_tetracarboxylic_acid
+  }
+
+  branch from h side right {
+    h
+    <-> . +cis_caffeic_acid
+    e_caffeate
+  }
+
+  branch from h side left {
+    h
+    <-> . +s_usnate +h2o
+    hydratedusnate
+  }
+
+  branch from glycine side right {
+    glycine
+    <-> . +3_hydroxyhexadecanoyl_coa +n_3_hydroxy_1_oxohexadecyl_glycine
+    coa
+  }
+
+  branch from glycine side left {
+    glycine
+    <-> ec_2_3_1_13 [2.3.1.13] +3_methylbutanoyl_coa +coa
+    n_isovalerylglycine
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_3_6_3_47 [3.6.3.47] +h +adp +phosphate +h2o
+    decanoyl_coa
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_3_6_3_47 [3.6.3.47] +h +adp +phosphate +h2o
+    2_carboxyhexacosanoyl_coa
+  }
+
+  branch from adp side right {
+    adp
+    <-> ec_3_6_3_47 [3.6.3.47] +h +phosphate +atp +h2o
+    dodecanoyl_coa
   }
 
   branch from adp side left {
     adp
     <-> . +h +phosphate +atp +h2o
-    9z_octadecenoyl_coa
+    arsenate
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_1_3_2 [3.1.3.2] +4_methyl_umbelliferyl_phosphate +h2o
-    4_methylumbelliferone
+    <-> . +h +adp +atp +h2o
+    n_acetyl_beta_d_glucosamine
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_3_1_3_36 [3.1.3.36] +3_o_methylfluorescein +h +h2o
-    3_o_methylfluorescein_6_phosphate
+    <-> . +h +adp +atp +h2o
+    pmf
   }
 }

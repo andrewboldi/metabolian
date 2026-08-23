@@ -131,22 +131,50 @@
       }
     },
     {
-      "id": "3_l_seryl_adenylyl_1_group",
-      "name": "3'-(L-seryl)adenylyl(1−) group",
-      "short": "3'-(L-seryl)adenyly…",
-      "formula": "C13H17N6O8P",
-      "charge": -1,
+      "id": "n5_hydroxyamino_imino_methyl_l_ornithinium",
+      "name": "N5-[(hydroxyamino)(imino)methyl]-L-ornithinium",
+      "short": "N5-[(hydroxyamino)(…",
+      "formula": "C6H15N4O3",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:78533"
+        "chebi": "CHEBI:60107"
       }
     },
     {
-      "id": "serine",
-      "name": "L-Serine",
-      "formula": "C3H7NO3",
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29033"
+      }
+    },
+    {
+      "id": "iron",
+      "name": "iron",
+      "formula": "Fe",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:29034"
+      }
+    },
+    {
+      "id": "neurotensin_1_8_dizwitterion",
+      "name": "neurotensin (1-8) dizwitterion",
+      "short": "neurotensin (1-8)…",
+      "formula": "C46H71N13O14",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:33384"
+        "chebi": "CHEBI:147393"
+      }
+    },
+    {
+      "id": "neurotensin_1_7",
+      "name": "neurotensin (1-7)",
+      "formula": "C40H58N9O13",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:147394"
       }
     }
   ],
@@ -156,14 +184,20 @@
       "name": "peptidyl-tRNA hydrolase",
       "ec": [
         "3.1.1.29"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q14197"
+      }
     },
     {
       "id": "ec_3_5_1_14",
       "name": "N-acyl-aliphatic-L-amino acid amidohydrolase",
       "ec": [
         "3.5.1.14"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q03154"
+      }
     },
     {
       "id": "ec_6_3_2_48",
@@ -327,50 +361,58 @@
     },
     {
       "id": "r4",
-      "name": "L-seryl-tRNA(Lys) + H2O = tRNA(Lys) + L-serine",
-      "equation": "L-seryl-tRNA(Lys) + H2O = tRNA(Lys) + L-serine",
+      "name": "N(omega)-hydroxy-L-arginine + 2 Fe(II)-[cytochrome b5] + 2 H(+) = L-arginine + 2 Fe(III...",
+      "equation": "N(omega)-hydroxy-L-arginine + 2 Fe(II)-[cytochrome b5] + 2 H(+) = L-arginine + 2 Fe(III)-[cytochrome b5] + H2O",
       "substrates": [
         {
-          "metabolite": "3_l_seryl_adenylyl_1_group",
+          "metabolite": "n5_hydroxyamino_imino_methyl_l_ornithinium",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
-          "stoichiometry": 1
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "amp_3_end_1",
+          "metabolite": "arginine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "serine",
+          "metabolite": "iron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:74215"
+        "rhea": "RHEA:61644"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:74215"
+            "id": "RHEA:61644"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "L-seryl-tRNA(Thr) + H2O = tRNA(Thr) + L-serine",
-      "equation": "L-seryl-tRNA(Thr) + H2O = tRNA(Thr) + L-serine",
+      "name": "neurotensin-(1-8) + H2O = neurotensin-(1-7) + L-arginine",
+      "equation": "neurotensin-(1-8) + H2O = neurotensin-(1-7) + L-arginine",
       "substrates": [
         {
-          "metabolite": "3_l_seryl_adenylyl_1_group",
+          "metabolite": "neurotensin_1_8_dizwitterion",
           "stoichiometry": 1
         },
         {
@@ -380,25 +422,269 @@
       ],
       "products": [
         {
-          "metabolite": "amp_3_end_1",
+          "metabolite": "neurotensin_1_7",
           "stoichiometry": 1
         },
         {
-          "metabolite": "serine",
+          "metabolite": "arginine",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:74219"
+        "rhea": "RHEA:63572"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:74219"
+            "id": "RHEA:63572"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_l_amino_acid_4-5-didehydrojasmonate-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_amino_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-5-didehydrojasmonate-to-diphosphate"
+      },
+      "note": "Shares L-α-amino acid with 4,5-didehydrojasmonate to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:59869"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_amino_acid_n-carbamoyl-l-amino-to-n-acetyl-d-amino-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_amino_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-carbamoyl-l-amino-to-n-acetyl-d-amino-acid"
+      },
+      "note": "Shares L-α-amino acid with N-carbamoyl-L-α-amino… to N-acetyl-D-amino acid….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:59869"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_amino_acid_n-methyl-l-amino-acid-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_amino_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-methyl-l-amino-acid-to-ammonium"
+      },
+      "note": "Shares L-α-amino acid with N-methyl-L-α-amino acid to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:59869"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_amino_acid_r-2-halocarboxylic-to-2-2-methylthio-ethylmale",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_amino_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-2-halocarboxylic-to-2-2-methylthio-ethylmale"
+      },
+      "note": "Shares L-α-amino acid with (R)-2-halocarboxylic… to 2-(2-methylthio)ethylmale….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:59869"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_amino_acid_s-2-halocarboxylic-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_amino_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2-halocarboxylic-to-ammonium"
+      },
+      "note": "Shares L-α-amino acid with (S)-2-halocarboxylic… to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:59869"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_amino_acid_s-2-halocarboxylic-to-l-glutamyl-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_amino_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2-halocarboxylic-to-l-glutamyl-phosphate"
+      },
+      "note": "Shares L-α-amino acid with (S)-2-halocarboxylic… to L-γ-glutamyl phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:59869"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n5_hydroxyamino_imino_methyl_l_ornithinium_amino-acid-ester-to-l-argininium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n5_hydroxyamino_imino_methyl_l_ornithinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "amino-acid-ester-to-l-argininium"
+      },
+      "note": "Shares N5-[(hydroxyamino)(imino)methyl]-L-ornithinium with α-amino acid ester to L-argininium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60107"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n5_hydroxyamino_imino_methyl_l_ornithinium_fmnh2-to-di-sulfido-diiron",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n5_hydroxyamino_imino_methyl_l_ornithinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fmnh2-to-di-sulfido-diiron"
+      },
+      "note": "Shares N5-[(hydroxyamino)(imino)methyl]-L-ornithinium with FMNH2 to di-μ-sulfido-diiron.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60107"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n5_hydroxyamino_imino_methyl_l_ornithinium_n-n-dimethyl-l-arginini-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n5_hydroxyamino_imino_methyl_l_ornithinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-n-dimethyl-l-arginini-to-hydrogen-donor"
+      },
+      "note": "Shares N5-[(hydroxyamino)(imino)methyl]-L-ornithinium with Nω,Nω-dimethyl-L-arginini… to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60107"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n5_hydroxyamino_imino_methyl_l_ornithinium_n2-acetyl-l-ornithine-to-d-ribulose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n5_hydroxyamino_imino_methyl_l_ornithinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n2-acetyl-l-ornithine-to-d-ribulose"
+      },
+      "note": "Shares N5-[(hydroxyamino)(imino)methyl]-L-ornithinium with N2-acetyl-L-ornithine to D-ribulose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60107"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n5_hydroxyamino_imino_methyl_l_ornithinium_s-mandelate-to-n2-n5-dibenzoyl-l-ornithi",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n5_hydroxyamino_imino_methyl_l_ornithinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-mandelate-to-n2-n5-dibenzoyl-l-ornithi"
+      },
+      "note": "Shares N5-[(hydroxyamino)(imino)methyl]-L-ornithinium with (S)-mandelate to N2,N5-dibenzoyl-L-ornithi….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60107"
           }
         ]
       }

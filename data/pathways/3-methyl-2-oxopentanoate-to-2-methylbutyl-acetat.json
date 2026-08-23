@@ -107,26 +107,6 @@
       }
     },
     {
-      "id": "butyryl_coa",
-      "name": "Butyryl-CoA (butanoyl-CoA)",
-      "short": "Butyryl-CoA…",
-      "formula": "C25H38N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57371"
-      }
-    },
-    {
-      "id": "2_methylbutyl_butanoate",
-      "name": "2-methylbutyl butanoate",
-      "short": "2-methylbutyl…",
-      "formula": "C9H18O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:156490"
-      }
-    },
-    {
       "id": "hexanoyl_coa",
       "name": "hexanoyl-CoA",
       "formula": "C27H42N7O17P3S",
@@ -159,14 +139,20 @@
       "name": "alcohol dehydrogenase",
       "ec": [
         "1.1.1.1"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P07327"
+      }
     },
     {
       "id": "ec_1_1_1_2",
       "name": "alcohol dehydrogenase (NADP(+))",
       "ec": [
         "1.1.1.2"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P14550"
+      }
     }
   ],
   "reactions": [
@@ -303,45 +289,6 @@
     },
     {
       "id": "r4",
-      "name": "2-methylbutan-1-ol + butanoyl-CoA = 2-methylbutyl butanoate + CoA",
-      "equation": "2-methylbutan-1-ol + butanoyl-CoA = 2-methylbutyl butanoate + CoA",
-      "substrates": [
-        {
-          "metabolite": "2_methylbutan_1_ol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "butyryl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_methylbutyl_butanoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:65464"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:65464"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
       "name": "2-methylbutan-1-ol + hexanoyl-CoA = 2-methylbutyl hexanoate + CoA",
       "equation": "2-methylbutan-1-ol + hexanoyl-CoA = 2-methylbutyl hexanoate + CoA",
       "substrates": [
@@ -365,7 +312,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
         "rhea": "RHEA:65532"
       },
@@ -375,6 +322,52 @@
           {
             "db": "Rhea",
             "id": "RHEA:65532"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_2_methylbutan_1_ol_butane-to-butyryl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_methylbutan_1_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "butane-to-butyryl-coa"
+      },
+      "note": "Shares 2-methylbutan-1-ol with butane to butyryl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:48945"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_methylbutan_1_ol_casomorphin-7-human-to-2-methylbutanal",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_methylbutan_1_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "casomorphin-7-human-to-2-methylbutanal"
+      },
+      "note": "Shares 2-methylbutan-1-ol with β-casomorphin-7 (human) to 2-methylbutanal.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:48945"
           }
         ]
       }

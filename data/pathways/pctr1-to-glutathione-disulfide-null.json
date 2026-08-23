@@ -1,0 +1,477 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "pctr1-to-glutathione-disulfide-null",
+  "name": "PCTR1 to glutathione disulfide",
+  "category": "redox-detox",
+  "summary": "A 3-step route from PCTR1 to glutathione disulfide(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR199705"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "pctr1",
+      "name": "PCTR1",
+      "formula": "C32H45N3O9S",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1130516"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "16s_17s_epoxy_4z_7z_10z_12e_14e_19z_docosahexae",
+      "name": "(16S,17S)-epoxy-(4Z,7Z,10Z,12E,14E,19Z)-docosahexaenoic acid",
+      "short": "(16S,17S)-epoxy-(4Z…",
+      "formula": "C22H30O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:140225"
+      }
+    },
+    {
+      "id": "glutathione",
+      "name": "glutathione",
+      "formula": "C10H16N3O6S",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM490899"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "4z_7z_10z_13z_15e_17s_19z_17_hydroperoxydocosah",
+      "name": "(4Z,7Z,10Z,13Z,15E,17S,19Z)-17-hydroperoxydocosahexaenoate",
+      "short": "(4Z,7Z,10Z,13Z,15E,…",
+      "formula": "C22H31O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:133795"
+      }
+    },
+    {
+      "id": "gsh",
+      "name": "Glutathione (reduced, GSH)",
+      "short": "Glutathione…",
+      "formula": "C10H16N3O6S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57925"
+      }
+    },
+    {
+      "id": "17s_hdha",
+      "name": "(17S)-HDHA",
+      "formula": "C22H31O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:195403"
+      }
+    },
+    {
+      "id": "gssg",
+      "name": "Glutathione disulfide (oxidized, GSSG)",
+      "short": "Glutathione…",
+      "formula": "C20H30N6O12S2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58297"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
+      "name": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate",
+      "short": "(4Z,7Z,10Z,13Z,16Z,…",
+      "formula": "C22H31O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77016"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_4_1_20",
+      "name": "leukotriene-C4 synthase",
+      "ec": [
+        "4.4.1.20"
+      ],
+      "xrefs": {
+        "uniprot": "Q03013"
+      }
+    },
+    {
+      "id": "ec_1_13_11_33",
+      "name": "arachidonate 15-lipoxygenase",
+      "ec": [
+        "1.13.11.33"
+      ],
+      "xrefs": {
+        "uniprot": "P18054"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "leukotriene-C4 synthase",
+      "ec": "4.4.1.20",
+      "substrates": [
+        {
+          "metabolite": "pctr1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "16s_17s_epoxy_4z_7z_10z_12e_14e_19z_docosahexae",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutathione",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_4_1_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR199705"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR199705"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "arachidonate 15-lipoxygenase",
+      "ec": "1.13.11.33",
+      "substrates": [
+        {
+          "metabolite": "16s_17s_epoxy_4z_7z_10z_12e_14e_19z_docosahexae",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4z_7z_10z_13z_15e_17s_19z_17_hydroperoxydocosah",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_33"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR199706"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR199706"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(17S)-hydroperoxy-(4Z,7Z,10Z,13Z,15E,19Z)-docosahexaenoate + 2 glutathione = (17S)-hydr...",
+      "equation": "(17S)-hydroperoxy-(4Z,7Z,10Z,13Z,15E,19Z)-docosahexaenoate + 2 glutathione = (17S)-hydroxy-(4Z,7Z,10Z,13Z,15E,19Z)-docosahexaenoate + glutathione disulfide + H2O",
+      "substrates": [
+        {
+          "metabolite": "4z_7z_10z_13z_15e_17s_19z_17_hydroperoxydocosah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gsh",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "17s_hdha",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gssg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:76715"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:76715"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate + O2 = (17S)-hydroperoxy-(4Z,7Z,10Z,13Z,15E,19...",
+      "equation": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate + O2 = (17S)-hydroperoxy-(4Z,7Z,10Z,13Z,15E,19Z)-docosahexaenoate",
+      "substrates": [
+        {
+          "metabolite": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4z_7z_10z_13z_15e_17s_19z_17_hydroperoxydocosah",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:50840"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50840"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_pctr1_pctr1-to-glutathione-disulfide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pctr1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "pctr1-to-glutathione-disulfide"
+      },
+      "note": "Shares PCTR1 with PCTR1 to glutathione disulfide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1130516"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_16s_17s_epoxy_4z_7z_10z_12e_14e_19z_docosahexae_d-mannonate-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "16s_17s_epoxy_4z_7z_10z_12e_14e_19z_docosahexae"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-mannonate-to-h2o-null"
+      },
+      "note": "Shares (16S,17S)-epoxy-(4Z,7Z,10Z,12E,14E,19Z)-docosahexaenoic acid with D-mannonate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:140225"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_16s_17s_epoxy_4z_7z_10z_12e_14e_19z_docosahexae_nh4-to-2-oxoglutarate-pyoverdine-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "16s_17s_epoxy_4z_7z_10z_12e_14e_19z_docosahexae"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nh4-to-2-oxoglutarate-pyoverdine-null"
+      },
+      "note": "Shares (16S,17S)-epoxy-(4Z,7Z,10Z,12E,14E,19Z)-docosahexaenoic acid with NH4 to 2-oxoglutarate-pyoverdine….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:140225"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_16s_17s_epoxy_4z_7z_10z_12e_14e_19z_docosahexae_pctr1-to-glutathione-disulfide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "16s_17s_epoxy_4z_7z_10z_12e_14e_19z_docosahexae"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "pctr1-to-glutathione-disulfide"
+      },
+      "note": "Shares (16S,17S)-epoxy-(4Z,7Z,10Z,12E,14E,19Z)-docosahexaenoic acid with PCTR1 to glutathione disulfide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:140225"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4z_7z_10z_13z_15e_17s_19z_17_hydroperoxydocosah_glutathione-disulfide-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4z_7z_10z_13z_15e_17s_19z_17_hydroperoxydocosah"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "glutathione-disulfide-to-h2o"
+      },
+      "note": "Shares (4Z,7Z,10Z,13Z,15E,17S,19Z)-17-hydroperoxydocosahexaenoate with glutathione disulfide to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133795"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4z_7z_10z_13z_15e_17s_19z_17_hydroperoxydocosah_pctr1-to-glutathione-disulfide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4z_7z_10z_13z_15e_17s_19z_17_hydroperoxydocosah"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "pctr1-to-glutathione-disulfide"
+      },
+      "note": "Shares (4Z,7Z,10Z,13Z,15E,17S,19Z)-17-hydroperoxydocosahexaenoate with PCTR1 to glutathione disulfide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133795"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_17s_hdha_pctr1-to-glutathione-disulfide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "17s_hdha"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "pctr1-to-glutathione-disulfide"
+      },
+      "note": "Shares (17S)-HDHA with PCTR1 to glutathione disulfide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:195403"
+          }
+        ]
+      }
+    }
+  ]
+}

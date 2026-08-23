@@ -1,0 +1,393 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2e-2-hydroxypenta-2-4-d-to-h2o",
+  "name": "(2E)-2-hydroxypenta-2,4-d… to H2O",
+  "category": "other",
+  "summary": "A 3-step route from (2E)-2-hydroxypenta-2,4-dienoate to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR196030"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2e_2_hydroxypenta_2_4_dienoate",
+      "name": "(2E)-2-hydroxypenta-2,4-dienoate",
+      "short": "2-hydroxypenta-2,4-…",
+      "formula": "C5H5O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1107795"
+      }
+    },
+    {
+      "id": "phthalate",
+      "name": "phthalate",
+      "formula": "C8H4O4",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1245"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "2_hydroxy_6_oxo_6_2_carboxyphenyl_hexa_2_4_dieno",
+      "name": "2-Hydroxy-6-oxo-6-(2-carboxyphenyl)-hexa-2,4-dienoate",
+      "short": "2-Hydroxy-6-oxo-6-(…",
+      "formula": "C13H10O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:80407"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "2_3_dihydroxy_2_carboxybiphenyl",
+      "name": "2,3-Dihydroxy-2'-carboxybiphenyl",
+      "short": "2,3-Dihydroxy-2'-ca…",
+      "formula": "C13H10O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:80406"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "1_10_dihydro_1_10_dihydroxyfluoren_9_one",
+      "name": "1,10-dihydro-1,10-dihydroxyfluoren-9-one",
+      "short": "1,10-dihydro-1,10-d…",
+      "formula": "C13H10O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:191235"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR196030",
+      "substrates": [
+        {
+          "metabolite": "2e_2_hydroxypenta_2_4_dienoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phthalate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxy_6_oxo_6_2_carboxyphenyl_hexa_2_4_dieno",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR196030"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196030"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR196027",
+      "substrates": [
+        {
+          "metabolite": "2_hydroxy_6_oxo_6_2_carboxyphenyl_hexa_2_4_dieno",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_3_dihydroxy_2_carboxybiphenyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR196027"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196027"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR121634",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_3_dihydroxy_2_carboxybiphenyl",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_10_dihydro_1_10_dihydroxyfluoren_9_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR121634"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR121634"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_phthalate_1-octadecanoyl-2-nonanoyl-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phthalate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-octadecanoyl-2-nonanoyl-to-h2o"
+      },
+      "note": "Shares phthalate with 1-octadecanoyl-2-nonanoyl… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1245"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phthalate_5-dehydroshikimate-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phthalate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-dehydroshikimate-to-nadph"
+      },
+      "note": "Shares phthalate with 5-Dehydroshikimate to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1245"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phthalate_all-trans-dodecaprenyl-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phthalate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "all-trans-dodecaprenyl-to-nad"
+      },
+      "note": "Shares phthalate with all-trans-dodecaprenyl… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1245"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phthalate_ergothioneine-thione-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phthalate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ergothioneine-thione-to-h2o"
+      },
+      "note": "Shares phthalate with ergothioneine (thione… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1245"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phthalate_nadh-to-s-2-hydroxyoctanenitrile",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phthalate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-s-2-hydroxyoctanenitrile"
+      },
+      "note": "Shares phthalate with NADH to (S)-2-Hydroxyoctanenitrile.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1245"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_3_dihydroxy_2_carboxybiphenyl_3-o-methylkaempferol-to-butein",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_3_dihydroxy_2_carboxybiphenyl"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-o-methylkaempferol-to-butein"
+      },
+      "note": "Shares 2,3-Dihydroxy-2'-carboxybiphenyl with 3-O-methylkaempferol to butein.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:80406"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_10_dihydro_1_10_dihydroxyfluoren_9_one_all-trans-tridecaprenyl-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_10_dihydro_1_10_dihydroxyfluoren_9_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "all-trans-tridecaprenyl-to-nad"
+      },
+      "note": "Shares 1,10-dihydro-1,10-dihydroxyfluoren-9-one with all-trans-tridecaprenyl… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:191235"
+          }
+        ]
+      }
+    }
+  ]
+}

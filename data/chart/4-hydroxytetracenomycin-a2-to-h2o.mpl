@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-hydroxytetracenomycin-a2-to-h2o "4-hydroxytetracenomycin A2 to H2O" {
-  spacing 294
+  spacing 340
 
   spine at 0,0 {
     4_hydroxytetracenomycin_a2
@@ -18,57 +18,21 @@ pathway 4-hydroxytetracenomycin-a2-to-h2o "4-hydroxytetracenomycin A2 to H2O" {
     tetracenomycin_a2_epoxyquinone
   }
 
-  branch from h side left {
-    h
-    <-> ec_1_1_1_218 [1.1.1.218] +nadh +codeinone +nad
-    codeine
-  }
 
-  branch from h side right {
-    h
-    <-> ec_1_1_1_149 [1.1.1.149] +2_hydroxycyclohexan_1_one +nadp +nadph
-    cyclohexan_1_2_dione
-  }
 
-  branch from tetracenomycin_a2 side left {
-    tetracenomycin_a2
-    <-> . +nadp +h2o +h +o2 +nadph
-    tetracenomycin_c
-  }
 
-  branch from o2 side right {
-    o2
-    <-> ec_1_1_3_7 [1.1.3.7] +2e_4e_2_4_hexadien_1_ol +e_e_2_4_hexadienal
-    h2o2
-  }
 
-  branch from o2 side left {
-    o2
-    <-> ec_1_1_3_7 [1.1.3.7] +3_fluorobenzyl_alcohol +h2o2
-    3_fluorobenzaldehyde
-  }
 
-  branch from nadph side right {
-    nadph
-    <-> ec_1_1_1_218 [1.1.1.218] +h +hydrocodone +nadp
-    dihydrocodeine
-  }
 
-  branch from nadph side left {
-    nadph
-    <-> ec_1_8_4_2 [1.8.4.2] +mercaptoethanol +nadp +h
-    2_2_dithiodiethanol
-  }
 
-  branch from h2o side right {
-    h2o
-    <-> ec_4_2_1_80 [4.2.1.80] +4_hydroxy_2_oxopentanoic_acid
-    2_hydroxypenta_2_4_dienoic_acid
-  }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_3_2_1_20 [3.2.1.20] +maltopentaose +alpha_d_glucose
-    maltohexaose
-  }
+
+
+
+
+
+
+
+
+
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-8-methylthiooctyl "UDP to 8-Methylthiooctyl…" {
-  spacing 258
+  spacing 252
 
   spine at 0,0 {
     udp
@@ -16,11 +16,5 @@ pathway udp-to-8-methylthiooctyl "UDP to 8-Methylthiooctyl…" {
     3_phosphoadenylyl_sulfate
     <-> ec_2_8_2_38 [2.8.2.38] +deoxydesulfoglucohirsutin -8_methylthiooctyl_glucosinolate
     adenosine_3_5_bisphosphate
-  }
-
-  branch from 3_phosphoadenylyl_sulfate side left {
-    3_phosphoadenylyl_sulfate
-    <-> . +adenosine_3_5_bisphosphate +keratan_sulfate_ii_core_2_linked +h
-    keratan_sulfate_ii_biosynthesis_precursor_10
   }
 }

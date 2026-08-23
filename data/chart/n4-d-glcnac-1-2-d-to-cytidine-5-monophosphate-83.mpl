@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n4-d-glcnac-1-2-d-to-cytidine-5-monophosphate-83 "N4-{β-D-GlcNAc-(1→2)-α-D-… to cytidine 5'-monophosphate" {
-  spacing 158
+  spacing 152
 
   spine at 0,0 {
     n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_4_d_gal_1_4
@@ -14,11 +14,5 @@ pathway n4-d-glcnac-1-2-d-to-cytidine-5-monophosphate-83 "N4-{β-D-GlcNAc-(1→2
     n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d
     <-> . +cmp_n_acetyl_neuraminate -cytidine_5_monophosphate -hplus
     n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d
-  }
-
-  branch from n4_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_4 side left {
-    n4_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_4
-    <-> . +udp_d_galactose +udp +hplus
-    n4_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_gal_1_4_d
   }
 }

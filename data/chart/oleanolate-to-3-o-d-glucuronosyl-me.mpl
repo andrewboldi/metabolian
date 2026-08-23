@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway oleanolate-to-3-o-d-glucuronosyl-me "oleanolate to 3-O-(β-D-glucuronosyl)-me…" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     oleanolate
@@ -14,5 +14,17 @@ pathway oleanolate-to-3-o-d-glucuronosyl-me "oleanolate to 3-O-(β-D-glucuronosy
     medicagenate
     <-> . +udp_d_glucuronate -udp -hplus
     3_o_d_glucuronosyl_medicagenate
+  }
+
+  branch from udp_d_glucuronate side left {
+    udp_d_glucuronate
+    <-> . +zolasartan +udp
+    zolarsartan_1_n_d_glucuronide
+  }
+
+  branch from udp_d_glucuronate side right {
+    udp_d_glucuronate
+    <-> . +zolasartan +udp
+    zolarsartan_2_n_d_glucuronide
   }
 }

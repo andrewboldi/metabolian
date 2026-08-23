@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-arabinopyranose-to-h2o "L-arabinopyranose to H2O" {
-  spacing 246
+  spacing 240
 
   spine at 0,0 {
     l_arabinopyranose
@@ -14,11 +14,5 @@ pathway l-arabinopyranose-to-h2o "L-arabinopyranose to H2O" {
     alpha_l_arabinofuranose
     <-> ec_3_2_1_55 [3.2.1.55] +h +4_nitrophenol -h2o
     p_nitrophenyl_alpha_l_arabinofuranoside
-  }
-
-  branch from 3s_4s_2_hydroxymethyl_oxolane_2_3_4_triol side left {
-    3s_4s_2_hydroxymethyl_oxolane_2_3_4_triol
-    <-> ec_5_3_1_5 [5.3.1.5]
-    l_ribose
   }
 }

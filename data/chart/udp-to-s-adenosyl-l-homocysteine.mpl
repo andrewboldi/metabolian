@@ -4,43 +4,41 @@
 # edit the generator, not this file.
 
 pathway udp-to-s-adenosyl-l-homocysteine "UDP to S-adenosyl-L-homocysteine" {
-  spacing 228
+  spacing 176
 
   spine at 0,0 {
     udp
-    <-> . +h +methylsalicylate_2_o_beta_d_glucopyranosyl_1_2_o -gaultherin
+    <-> . +kaempferide_3_o_beta_d_glucopyranosyl_1_2_alpha +h -udp_alpha_d_glucose
+    kaempferide_3_o_alpha_l_rhamnosyl_1_6_beta_d_glu
+    <-> . +udp +h -kaempferide_3_o_glucoside
+    udp_beta_l_rhamnose
+    <-> . +udp +kaempferide_3_o_glucoside +h -kaempferide
     udp_alpha_d_glucose
-    <-> . +udp +h +gaultherin -2_methoxycarbonylphenyl_beta_d_glucopyranoside
-    udp_alpha_d_xylose
-    <-> . +udp +h +2_methoxycarbonylphenyl_beta_d_glucopyranoside -udp_alpha_d_glucose
-    methyl_salicylate
-    <-> . +h2o -methanol -hplus
-    salicylate
-    <-> ec_2_1_1_274 [2.1.1.274] +sam -sah
-    methyl_salicylate
+    <-> . +kaempferide +sam -sah -hplus
+    7_4_o_dimethylkaempferol_3_olate
   }
 
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> . +udp +alpha_d_glc_1_2_beta_d_glc_1_3_alpha_d_glcnac_pp +h
-    d_glc_1_3_d_glcnac_diphospho_ditrans_octacis_un
+  branch from udp side left {
+    udp
+    <-> . +12_hydroxy_13_o_d_glucuronoside_octadec_9z_enoat +h +12_13_dihydroxyoleic_acid
+    udp_alpha_d_glucuronate
   }
 
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> . +udp +beta_glc_1_4_kdo_2_4_kdo_2_6_lipid_a_brucella +h
-    alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_brucella
+  branch from udp side right {
+    udp
+    <-> . +9_hydroxy_10_o_d_glucuronoside_12z_octadecenoate +h +udp_alpha_d_glucuronate
+    9_10_dhome
   }
 
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_348 [2.1.1.348] +adenosine_5_monophosphate_1 +sam +hplus
-    n6_methyladenosine_5_monophosphate_1
+  branch from h side left {
+    h
+    <-> ec_2_8_2_36 [2.8.2.36] +adenosine_3_5_bisphosphate +a47934 +desulfo_a47934
+    3_phosphoadenylyl_sulfate
   }
 
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_67 [2.1.1.67] +tioguanine +sam +hplus
-    6_methylthioguanine
+  branch from h side right {
+    h
+    <-> ec_2_8_2_36 [2.8.2.36] +adenosine_3_5_bisphosphate +a47934 +3_phosphoadenylyl_sulfate
+    desulfo_a47934
   }
 }

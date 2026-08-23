@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-hexadecanoyl-sn-glycero-to-1-palmitoyl-2-linol "1-hexadecanoyl-sn-glycero… to 1-palmitoyl-2-linoleoyl-s…" {
-  spacing 164
+  spacing 176
 
   spine at 0,0 {
     1_hexadecanoyl_sn_glycero_3_phosphoethanolamine
@@ -26,5 +26,17 @@ pathway 1-hexadecanoyl-sn-glycero-to-1-palmitoyl-2-linol "1-hexadecanoyl-sn-glyc
     1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
     <-> . +n_capryloyl_1_palmitoyl_2_linoleoyl_sn_glycero_3 +h2o +hplus
     n_octanoyl_ethanolamine
+  }
+
+  branch from 1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce side left {
+    1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
+    <-> . +n_caproyl_1_palmitoyl_2_linoleoyl_sn_glycero_3_p +h2o +hplus
+    n_hexanoyl_ethanolamine
+  }
+
+  branch from 1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce side right {
+    1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
+    <-> . +n_butyryl_1_palmitoyl_2_linoleoyl_sn_glycero_3_p +h2o +hplus
+    n_butanoyl_ethanolamine
   }
 }

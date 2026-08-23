@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-hexadecanoyl-2-4z-7z-1-to-1-octadecanoyl-2-4z "1-hexadecanoyl-2-(4Z,7Z,1… to 1-octadecanoyl-2-(4Z,7Z,1…" {
-  spacing 170
+  spacing 176
 
   spine at 0,0 {
     1_hexadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex
@@ -20,21 +20,27 @@ pathway 1-hexadecanoyl-2-4z-7z-1-to-1-octadecanoyl-2-4z "1-hexadecanoyl-2-(4Z,7Z
     1_octadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex
   }
 
-  branch from sah side left {
-    sah
-    <-> . +gtp +sam
-    7_methyl_gtp
+  branch from n_acetylsphingosine side left {
+    n_acetylsphingosine
+    <-> . +1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol +1_acyl_sn_glycero_3_phospho_1_sn_glycerol
+    1_o_acyl_n_acetylsphingosine
   }
 
-  branch from sah side right {
-    sah
-    <-> . +cytidine_5_monophosphate_1 +sam +hplus
-    5_methylcytidine_5_monophosphate_1
+  branch from n_acetylsphingosine side right {
+    n_acetylsphingosine
+    <-> ec_3_1_3_76 [3.1.3.76] +phosphate +h2o
+    n_acetyl_sphing_4_enine_1_phosphate
   }
 
-  branch from 1_hexadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex side left {
-    1_hexadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex
-    <-> . +h2o +1_hexadecanoyl_sn_glycero_3_phosphocholine +hplus
-    4z_7z_10z_13z_16z_19z_docosahexaenoate
+  branch from stearoyl_coa side left {
+    stearoyl_coa
+    <-> . +o2 +h2o2
+    trans_2_octadecenoyl_coa
+  }
+
+  branch from stearoyl_coa side right {
+    stearoyl_coa
+    <-> . +1_o_palmityl_2_acetyl_sn_glycerol +coa
+    1_palmityl_2_acetyl_3_stearoyl_sn_glycerol
   }
 }

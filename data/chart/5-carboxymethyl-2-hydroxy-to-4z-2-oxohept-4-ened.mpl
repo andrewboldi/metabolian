@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-carboxymethyl-2-hydroxy-to-4z-2-oxohept-4-ened "5-Carboxymethyl-2-hydroxy… to (4Z)-2-oxohept-4-enedioate" {
-  spacing 340
+  spacing 324
 
   spine at 0,0 {
     5_carboxymethyl_2_hydroxymuconic_semialdehyde
@@ -16,29 +16,5 @@ pathway 5-carboxymethyl-2-hydroxy-to-4z-2-oxohept-4-ened "5-Carboxymethyl-2-hydr
     2z_4z_2_hydroxyhepta_2_4_dienedioate
     <-> .
     4z_2_oxohept_4_enedioate
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> . +prostaglandin_d2 +nadp
-    pgk2
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> . +nadp +pgk2
-    prostaglandin_e2
-  }
-
-  branch from h side left {
-    h
-    <-> ec_2_3_1_211 [2.3.1.211] +malonyl_coa +trans_4_coumaroyl_coa +h2o +co2 +coa
-    bisdemethoxycurcumin
-  }
-
-  branch from h side right {
-    h
-    <-> ec_2_3_1_212 [2.3.1.212] +malonyl_coa +trans_4_coumaroyl_coa +h2o +co2 +coa
-    4_hydroxycinnamoylmethane
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway aldehydo-d-ribose-to-l-lysinium "aldehydo-D-ribose… to L-lysinium" {
-  spacing 192
+  spacing 180
 
   spine at 0,0 {
     r5p
@@ -16,17 +16,5 @@ pathway aldehydo-d-ribose-to-l-lysinium "aldehydo-D-ribose… to L-lysinium" {
     n6_3_o_phospho_d_ribulosyl_l_lysinium
     <-> . +h2o -l_lysinium -pi
     s_4_5_dihydroxy_2_oxopentanal
-  }
-
-  branch from l_lysinium side left {
-    l_lysinium
-    <-> . +l_methionine +h2o2 +h2o +hplus
-    s_l_lysyl_l_methionine_sulfilimine
-  }
-
-  branch from l_lysinium side right {
-    l_lysinium
-    <-> . +hypobromite +s_l_lysyl_l_methionine_sulfilimine +bromide +h2o +hplus
-    l_methionine
   }
 }

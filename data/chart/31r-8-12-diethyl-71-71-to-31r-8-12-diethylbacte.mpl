@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 31r-8-12-diethyl-71-71-to-31r-8-12-diethylbacte "(31R)-8,12-diethyl-71,71-… to (31R)-8,12-diethylbacteri…" {
-  spacing 276
+  spacing 252
 
   spine at 0,0 {
     31r_8_12_diethyl_71_71_dihydroxybacteriochlorop
@@ -14,29 +14,5 @@ pathway 31r-8-12-diethyl-71-71-to-31r-8-12-diethylbacte "(31R)-8,12-diethyl-71,7
     31r_8_12_diethylbacteriochlorophyllide_c
     <-> ec_2_1_1_333 [2.1.1.333] +s_adenosyl_l_homocysteine +h -31r_8_12_diethylbacteriochlorophyllide_d
     s_adenosyl_l_methionine
-  }
-
-  branch from s_adenosyl_l_methionine side left {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +o2 +nadph +rosuvastatin +h2o2 +n_desmethyl_rosuvastatin
-    nadp
-  }
-
-  branch from s_adenosyl_l_methionine side right {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +n_6_n_6_n_6_trimethyl_l_lysine +h
-    l_lysine
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +4_hydroxymidazolam +h +o2 +nadph +nadp
-    1_4_dihydroxymidazolam
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +o2 +nadph +nadp +1_4_dihydroxymidazolam
-    1_hydroxymidazolam
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-hydroxyisobutanoyl-coa-to-r-acetoacetylcarniti "2-hydroxyisobutanoyl-CoA to (R)-acetoacetylcarnitine" {
-  spacing 206
+  spacing 218
 
   spine at 0,0 {
     2_hydroxyisobutanoyl_coa
@@ -20,5 +20,17 @@ pathway 2-hydroxyisobutanoyl-coa-to-r-acetoacetylcarniti "2-hydroxyisobutanoyl-C
     hydroxybutyryl_coa
     <-> ec_5_1_2_3 [5.1.2.3]
     r_3_hydroxybutanoyl_coa
+  }
+
+  branch from carnitine side right {
+    carnitine
+    <-> ec_2_3_1_7 [2.3.1.7] +acetyl_coa +coa
+    o_acetyl_l_carnitine
+  }
+
+  branch from carnitine side left {
+    carnitine
+    <-> . +hexadecanedioyl_coa +coa
+    o_hexadecanedioyl_l_carnitine
   }
 }

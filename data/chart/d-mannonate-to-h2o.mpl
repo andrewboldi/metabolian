@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-mannonate-to-h2o "D-mannonate to H2O" {
-  spacing 230
+  spacing 272
 
   spine at 0,0 {
     d_mannonate
@@ -16,15 +16,123 @@ pathway d-mannonate-to-h2o "D-mannonate to H2O" {
     h
   }
 
+  branch from nadh side left {
+    nadh
+    <-> ec_1_1_1_21 [1.1.1.21] +h +3_fluorobenzaldehyde +nad
+    3_fluorobenzyl_alcohol
+  }
 
+  branch from nadh side right {
+    nadh
+    <-> ec_1_1_1_21 [1.1.1.21] +3_bromobenzaldehyde +h +nad
+    3_bromobenzyl_alcohol
+  }
 
+  branch from d_mannopyranuronic_acid side left {
+    d_mannopyranuronic_acid
+    <-> . +h +nadph +isohexonic_acid
+    nadp
+  }
 
+  branch from d_mannopyranuronic_acid side right {
+    d_mannopyranuronic_acid
+    <-> . +h +adp +phosphate +h2o
+    atp
+  }
 
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_21 [1.1.1.21] +nadh +3_cyanobenzaldehyde +h
+    3_cyanobenzyl_alcohol
+  }
 
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_21 [1.1.1.21] +nadh +h +4_chlorobenzaldehyde
+    pr01
+  }
 
+  branch from h side left {
+    h
+    <-> . +mycothiol_bimane_conjugate +bromide +mycothiol
+    monobromobimane
+  }
 
+  branch from h side right {
+    h
+    <-> . +cdp_n_n_dimethylethanolamine +diphosphate +n_n_dimethylethanolamine_phosphate
+    ctp
+  }
 
+  branch from 2_dehydro_3_deoxy_d_gluconate side left {
+    2_dehydro_3_deoxy_d_gluconate
+    <-> ec_4_1_2_55 [4.1.2.55] +glyceraldehyde
+    pyruvate
+  }
 
+  branch from 2_dehydro_3_deoxy_d_gluconate side right {
+    2_dehydro_3_deoxy_d_gluconate
+    <-> . +h +nadph +nadp
+    5_dehydro_4_deoxy_d_glucuronate
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> ec_3_2_1_3 [3.2.1.3] +d_glcp_1_4_d_glcp_1_4_d_glcp +beta_d_glucose
+    d_maltose
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> ec_3_2_1_20 [3.2.1.20] +maltopentaose +beta_d_glucose
+    maltohexaose
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_21 [1.1.1.21] +nadh +compound_0066905 +h
+    p_fluorobenzyl_alcohol
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_1 [1.1.1.1] +4_methoxybenzyl_alcohol +nadh +h
+    4_methoxybenzaldehyde
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> ec_1_1_1_21 [1.1.1.21] +4_bromobenzaldehyde +h +nad
+    4_bromobenzyl_alcohol
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_1_1_21 [1.1.1.21] +h +3_methoxybenzaldehyde +nad
+    3_methoxybenzyl_alcohol
+  }
+
+  branch from h side left {
+    h
+    <-> . +2_hydroxynicotine
+    pseudooxynicotine
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_7_8_44 [2.7.8.44] +cmp +gro_p_beta_d_mannac_1_4_alpha_d_glcnac_pp_und +cdp_glycerol
+    n_acetyl_d_mannosaminyl_1_4_n_acetyl_d_glucosami
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_2_1_3 [3.2.1.3] +d_maltose
+    beta_d_glucose
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_2_1_20 [3.2.1.20] +maltopentaose +beta_d_glucose
+    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp
+  }
 }

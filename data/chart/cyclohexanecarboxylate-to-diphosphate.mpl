@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cyclohexanecarboxylate-to-diphosphate "cyclohexanecarboxylate to diphosphate" {
-  spacing 298
+  spacing 274
 
   spine at 0,0 {
     cyclohexanecarboxylate
@@ -22,33 +22,9 @@ pathway cyclohexanecarboxylate-to-diphosphate "cyclohexanecarboxylate to diphosp
     4_hydroxybenzoyl_coa
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
-    <-> . +1_linoleoyl_2_acyl_3_d_galactosyl_sn_glycerol +di_sulfido_diiron +o2 +hplus +h2o
-    1_linolenoyl_2_acyl_3_d_galactosyl_sn_glycerol
-  }
-
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
-    <-> . +cortisol +di_sulfido_diiron +o2 +hplus +h2o
-    18_hydroxycortisol
-  }
-
   branch from 4_oxocyclohexanecarboxylate side left {
     4_oxocyclohexanecarboxylate
     <-> ec_1_1_1_438 [1.1.1.438] +nad +nadh +hplus
     cis_4_hydroxycyclohexane_1_carboxylate
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +5_methyl_ctp +h2o +hplus
-    5_methyl_cmp
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +ttp +h2o +hplus
-    tmp
   }
 }

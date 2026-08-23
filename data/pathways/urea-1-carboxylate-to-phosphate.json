@@ -1,0 +1,308 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "urea-1-carboxylate-to-phosphate",
+  "name": "urea-1-carboxylate to phosphate",
+  "category": "other",
+  "summary": "A 3-step route from urea-1-carboxylate to phosphate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR164572"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "urea_1_carboxylate",
+      "name": "urea-1-carboxylate",
+      "formula": "C2H3N2O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1122"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "carbamate",
+      "name": "carbamate",
+      "formula": "CH2NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:13941"
+      }
+    },
+    {
+      "id": "utp",
+      "name": "UTP",
+      "formula": "C9H11N2O15P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1101474"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1102128"
+      }
+    },
+    {
+      "id": "carbamoyl_phosphate",
+      "name": "carbamoyl phosphate",
+      "formula": "CH2NO5P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM138"
+      }
+    },
+    {
+      "id": "ansamitocinoside_p_3",
+      "name": "Ansamitocinoside P-3",
+      "formula": "C37H51ClN2O14",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM10716"
+      }
+    },
+    {
+      "id": "4_o_carbamoyl_ansamitocinoside_p_3",
+      "name": "4''-O-Carbamoyl ansamitocinoside P-3",
+      "short": "4''-O-Carbamoyl…",
+      "formula": "C38H52ClN3O15",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:144408"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_2_2",
+      "name": "carbamate kinase",
+      "ec": [
+        "2.7.2.2"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR164572",
+      "substrates": [
+        {
+          "metabolite": "urea_1_carboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "carbamate",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR164572"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR164572"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "carbamate kinase",
+      "ec": "2.7.2.2",
+      "substrates": [
+        {
+          "metabolite": "utp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "carbamate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "carbamoyl_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_2_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR129409"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR129409"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR113259",
+      "substrates": [
+        {
+          "metabolite": "ansamitocinoside_p_3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "carbamoyl_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_o_carbamoyl_ansamitocinoside_p_3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR113259"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR113259"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_urea_1_carboxylate_4alpha-carboxy-5alpha-cho-to-nadp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "urea_1_carboxylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4alpha-carboxy-5alpha-cho-to-nadp"
+      },
+      "note": "Shares urea-1-carboxylate with 4alpha-carboxy-5alpha-cho… to NADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1122"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_urea_1_carboxylate_7-8-dihydro-8-oxoguanine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "urea_1_carboxylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-8-dihydro-8-oxoguanine-to-h2o"
+      },
+      "note": "Shares urea-1-carboxylate with 7,8-dihydro-8-oxoguanine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1122"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ansamitocinoside_p_3_trans-sinapyl-alcohol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ansamitocinoside_p_3"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-sinapyl-alcohol-to-h2o"
+      },
+      "note": "Shares Ansamitocinoside P-3 with trans-sinapyl alcohol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM10716"
+          }
+        ]
+      }
+    }
+  ]
+}

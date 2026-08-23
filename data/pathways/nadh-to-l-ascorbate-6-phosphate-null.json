@@ -1,0 +1,431 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "nadh-to-l-ascorbate-6-phosphate-null",
+  "name": "NADH to L-ascorbate-6-phosphate",
+  "category": "other",
+  "summary": "A 3-step route from NADH to L-ascorbate-6-phosphate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR182188"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "2_5_didehydro_d_gluconate",
+      "name": "2,5-didehydro-D-gluconate",
+      "short": "2,5-didehydro-D-glu…",
+      "formula": "C6H7O7",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM936"
+      }
+    },
+    {
+      "id": "2_dehydro_l_idonate",
+      "name": "2-dehydro-L-idonate",
+      "formula": "C6H9O7",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM2177"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "l_ascorbate",
+      "name": "L-ascorbate",
+      "formula": "C6H7O6",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM727871"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "phosphoenolpyruvate",
+      "name": "phosphoenolpyruvate",
+      "formula": "C3H2O6P",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM73"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM23"
+      }
+    },
+    {
+      "id": "l_ascorbate_6_phosphate",
+      "name": "L-ascorbate-6-phosphate",
+      "short": "L-ascorbate-6-P",
+      "formula": "C6H7O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM733261"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR182188",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_5_didehydro_d_gluconate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_dehydro_l_idonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR182188"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR182188"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR140243",
+      "substrates": [
+        {
+          "metabolite": "2_dehydro_l_idonate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_ascorbate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR140243"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR140243"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR151648",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_ascorbate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphoenolpyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_ascorbate_6_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR151648"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR151648"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_2_5_didehydro_d_gluconate_cis-beta-d-glucosyl-2-hyd-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_5_didehydro_d_gluconate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cis-beta-d-glucosyl-2-hyd-to-h2o-null"
+      },
+      "note": "Shares 2,5-didehydro-D-gluconate with cis-beta-D-glucosyl-2-hyd… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM936"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_5_didehydro_d_gluconate_loganin-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_5_didehydro_d_gluconate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "loganin-to-h2o"
+      },
+      "note": "Shares 2,5-didehydro-D-gluconate with loganin to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM936"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_5_didehydro_d_gluconate_nadh-to-l-ascorbate-6-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_5_didehydro_d_gluconate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-l-ascorbate-6-phosphate"
+      },
+      "note": "Shares 2,5-didehydro-D-gluconate with NADH to L-ascorbate-6-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM936"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_5_didehydro_d_gluconate_phaseollin-to-coa-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_5_didehydro_d_gluconate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phaseollin-to-coa-null"
+      },
+      "note": "Shares 2,5-didehydro-D-gluconate with (-)-Phaseollin to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM936"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_5_didehydro_d_gluconate_s-adenosyl-l-homocysteine-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_5_didehydro_d_gluconate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-nadph"
+      },
+      "note": "Shares 2,5-didehydro-D-gluconate with S-adenosyl-L-homocysteine to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM936"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_dehydro_l_idonate_nadh-to-l-ascorbate-6-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_dehydro_l_idonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-l-ascorbate-6-phosphate"
+      },
+      "note": "Shares 2-dehydro-L-idonate with NADH to L-ascorbate-6-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2177"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_ascorbate_6_phosphate_1-carboxyvinyl-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_ascorbate_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-carboxyvinyl-to-nadph"
+      },
+      "note": "Shares L-ascorbate-6-phosphate with 1-carboxyvinyl… to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM733261"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_ascorbate_6_phosphate_kaempferol-3-o-4-o-4-co-to-h-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_ascorbate_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "kaempferol-3-o-4-o-4-co-to-h-null"
+      },
+      "note": "Shares L-ascorbate-6-phosphate with kaempferol 3-O-(4″-O-4-co… to H.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM733261"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_ascorbate_6_phosphate_nadh-to-l-ascorbate-6-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_ascorbate_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-l-ascorbate-6-phosphate"
+      },
+      "note": "Shares L-ascorbate-6-phosphate with NADH to L-ascorbate-6-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM733261"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway h-to-4-methylcatechol "H to 4-methylcatechol" {
-  spacing 314
+  spacing 340
 
   spine at 0,0 {
     h
@@ -20,26 +20,14 @@ pathway h-to-4-methylcatechol "H to 4-methylcatechol" {
 
   branch from nh4 side left {
     nh4
-    <-> ec_4_3_1_24 [4.3.1.24] +2_chloro_trans_cinnamate
-    2_chloro_l_phenylalanine
+    <-> ec_4_3_1_23 [4.3.1.23] +4_coumarate
+    l_tyrosine
   }
 
   branch from nh4 side right {
     nh4
-    <-> ec_4_3_1_24 [4.3.1.24] +3_chloro_trans_cinnamate
-    3_chloro_l_phenylalanine
-  }
-
-  branch from e_5_methyl_2_oxo_3_hex_3_enedioate side left {
-    e_5_methyl_2_oxo_3_hex_3_enedioate
-    <-> ec_4_1_1_77 [4.1.1.77] +4e_2_oxo_hex_4_enoate +h
-    co2
-  }
-
-  branch from e_5_methyl_2_oxo_3_hex_3_enedioate side right {
-    e_5_methyl_2_oxo_3_hex_3_enedioate
-    <-> ec_4_1_1_77 [4.1.1.77] +co2 +h
-    cis_2_oxohex_4_enoic_acid
+    <-> . +2_hydroxy_5_chloromuconate +h +h2o
+    2z_4z_2_amino_5_chlorohexa_2_4_dienedioate
   }
 
   branch from 2_hydroxy_5_methyl_cis_cis_muconic_acid side left {
@@ -50,61 +38,127 @@ pathway h-to-4-methylcatechol "H to 4-methylcatechol" {
 
   branch from 2_hydroxy_5_methyl_cis_cis_muconic_semialdehyde side right {
     2_hydroxy_5_methyl_cis_cis_muconic_semialdehyde
-    <-> ec_3_7_1_9 [3.7.1.9] +h +trans_2_oxohex_4_enoate +h2o
-    formate
+    <-> ec_3_7_1_9 [3.7.1.9] +h +formate +h2o
+    2_hydroxy_cis_hex_2_4_dienoate
   }
 
   branch from 2_hydroxy_5_methyl_cis_cis_muconic_semialdehyde side left {
     2_hydroxy_5_methyl_cis_cis_muconic_semialdehyde
     <-> ec_3_7_1_9 [3.7.1.9] +h +formate +h2o
-    2_hydroxy_cis_hex_2_4_dienoate
+    cis_2_oxohex_4_enoic_acid
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_2_99_5 [1.2.99.5] +nadh +co2 +methanofuran +h2o
-    n_formylmethanofuran
+    <-> . +nadh +7alpha_24_dihydroxycholest_4_en_3_one +h
+    24s_7_24_dihydroxycholesterol
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +dihydrokalafungin
-    dihydrokalafungin_dihydroquinone_form
+    <-> ec_1_1_1_181 [1.1.1.181] +nadh +h +24s_7_24_dihydroxycholesterol
+    7alpha_24_dihydroxy_4_cholesten_3_one
   }
 
   branch from h2o side right {
     h2o
-    <-> . +hemeo +o2
-    hemea
+    <-> . +n_acetyl_d_hexosamine +n_acetyl_beta_d_glucosamine_6_phosphate
+    diacetylchitobiose_6_phosphate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_10_3_12 [1.10.3.12] +o2 +menaquinol
-    menaquinone_2
+    <-> . +2_hydroxycyclohepta_1_4_6_triene_1_carboxylate +h +coa
+    2_hydroxycyclohepta_1_4_6_triene_1_carboxyl_coa
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_13_8 [1.14.13.8] +1_methyl_4_phenyl_1_2_3_6_tetrahydropyridine +methane +methanol
-    1_methyl_4_phenyl_1_2_3_6_tetrahydropyridine_n_o
+    <-> . +2_octaprenyl_6_methoxyphenol
+    2_octaprenyl_6_methoxy_1_4_benzoquinol
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_12_12 [1.14.12.12] +ethylbenzene
-    1_phenylethanol
+    <-> . +2_methoxy_6_all_trans_octaprenyl_phenol
+    6_methoxy_2_octaprenylhydroquinone
   }
 
   branch from 4_methylcatechol side right {
     4_methylcatechol
-    <-> . +h +o2
-    2_hydroxy_6_oxo_hept_2_4_dienoate
-  }
-
-  branch from 4_methylcatechol side left {
-    4_methylcatechol
     <-> ec_1_13_11_2 [1.13.11.2] +h +o2
     2z_4e_2_hydroxy_5_methyl_6_oxohexa_2_4_dienoate
+  }
+
+  branch from h side left {
+    h
+    <-> . +coa +2_hydroxycyclohepta_1_4_6_triene_1_carboxyl_coa +h2o
+    2_hydroxycyclohepta_1_4_6_triene_1_carboxylate
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_2_1_147 [3.2.1.147] +4_methoxyglucobrassicin +h2o +glucose
+    4_methoxy_3_indolylmethyl_glucosinolate_aglycone
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +4_methoxyglucobrassicin +glucose +h
+    4_methoxy_3_indolylmethyl_glucosinolate_aglycone
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_7_1_8 [3.7.1.8] +2z_2_hydroxypenta_2_4_dienoate +h +benzoate
+    hpk
+  }
+
+  branch from nh4 side left {
+    nh4
+    <-> ec_3_5_99_11 [3.5.99.11] +2z_4e_2_aminomuconate +h +h2o
+    2_oxohex_3_enedioic_acid
+  }
+
+  branch from nh4 side right {
+    nh4
+    <-> ec_3_5_4_1 [3.5.4.1] +uracil +h +h2o
+    cytosine
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> ec_1_14_13_3 [1.14.13.3] +3_hydroxyphenylacetate +h +o2 +nad +h2o
+    3_4_dihydroxyphenylacetate
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_4_1_21 [1.4.1.21] +iminoaspartate +h +nad
+    l_aspartate
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_4_1_21 [1.4.1.21] +nadh +h +l_aspartate
+    iminoaspartate
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_3_1_1 [1.3.1.1] +nadh +uracil +h
+    5_6_dihydrouracil
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +precorrin_3a +h
+    precorrin_3b
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_13_11_39 [1.13.11.39] +2_hydroxy_6_oxo_2_aminophenyl_hexa_2_4_dienoate +h
+    2_aminobiphenyl_2_3_diol
   }
 }

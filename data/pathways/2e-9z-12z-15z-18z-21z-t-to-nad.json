@@ -111,52 +111,6 @@
       "xrefs": {
         "metanetx": "MNXM8"
       }
-    },
-    {
-      "id": "1_docosapentenoylglycerophosphocholine_delta_7_1",
-      "name": "1-Docosapentenoylglycerophosphocholine (Delta 7, 10, 13, 16, 19), Sn1-Lpc (22:5)-W3",
-      "short": "1-Docosapentenoylgl…",
-      "formula": "C30H53NO7P",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM1560712"
-      }
-    },
-    {
-      "id": "adp",
-      "name": "ADP",
-      "formula": "C10H12N5O10P2",
-      "charge": -3,
-      "xrefs": {
-        "metanetx": "MNXM40333"
-      }
-    },
-    {
-      "id": "phosphate",
-      "name": "phosphate",
-      "formula": "HO4P",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM9"
-      }
-    },
-    {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM3"
-      }
-    },
-    {
-      "id": "pc_16_1_9e_0_0",
-      "name": "PC(16:1(9E)/0:0)",
-      "formula": "C24H48NO7P",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1511681"
-      }
     }
   ],
   "enzymes": [
@@ -165,7 +119,10 @@
       "name": "long-chain-3-hydroxyacyl-CoA dehydrogenase",
       "ec": [
         "1.1.1.211"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P40939"
+      }
     }
   ],
   "reactions": [
@@ -292,103 +249,159 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "Reaction MNXR206268",
-      "substrates": [
-        {
-          "metabolite": "1_docosapentenoylglycerophosphocholine_delta_7_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_docosapentenoylglycerophosphocholine_delta_7_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR206268"
+      "id": "xt_2e_9z_12z_15z_18z_21z_tetracosahexaenoyl_coa_1-11z-14z-eicosadienoyl-to-2e-8z-11z-14z-17z-20z",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2e_9z_12z_15z_18z_21z_tetracosahexaenoyl_coa"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1-11z-14z-eicosadienoyl-to-2e-8z-11z-14z-17z-20z"
+      },
+      "note": "Shares (2E,9Z,12Z,15Z,18Z,21Z)-tetracosahexaenoyl-CoA with 1-(11Z,14Z-eicosadienoyl)… to (2E,8Z,11Z,14Z,17Z,20Z,23….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR206268"
+            "db": "ChEBI",
+            "id": "CHEBI:76464"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "Reaction MNXR206280",
-      "substrates": [
-        {
-          "metabolite": "pc_16_1_9e_0_0",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "pc_16_1_9e_0_0",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR206280"
+      "id": "xt_2e_9z_12z_15z_18z_21z_tetracosahexaenoyl_coa_1d-chiro-inositol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2e_9z_12z_15z_18z_21z_tetracosahexaenoyl_coa"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1d-chiro-inositol-to-h2o"
+      },
+      "note": "Shares (2E,9Z,12Z,15Z,18Z,21Z)-tetracosahexaenoyl-CoA with 1D-chiro-inositol to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76464"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6z_9z_12z_15z_18z_3_oxotetracosapentaenoyl_coa_2e-6z-9z-12z-15z-18z-te-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6z_9z_12z_15z_18z_3_oxotetracosapentaenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2e-6z-9z-12z-15z-18z-te-to-nad"
+      },
+      "note": "Shares (6Z,9Z,12Z,15Z,18Z)-3-oxotetracosapentaenoyl-CoA with (2E,6Z,9Z,12Z,15Z,18Z)-te… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76367"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6z_9z_12z_15z_18z_3_oxotetracosapentaenoyl_coa_6z-9z-12z-15z-18z-tetra-to-hydrogen-acceptor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6z_9z_12z_15z_18z_3_oxotetracosapentaenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6z-9z-12z-15z-18z-tetra-to-hydrogen-acceptor"
+      },
+      "note": "Shares (6Z,9Z,12Z,15Z,18Z)-3-oxotetracosapentaenoyl-CoA with (6Z,9Z,12Z,15Z,18Z)-tetra… to hydrogen acceptor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76367"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6z_9z_12z_15z_18z_3_oxotetracosapentaenoyl_coa_divinyl-chlorophyllide-a-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6z_9z_12z_15z_18z_3_oxotetracosapentaenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "divinyl-chlorophyllide-a-to-h2o"
+      },
+      "note": "Shares (6Z,9Z,12Z,15Z,18Z)-3-oxotetracosapentaenoyl-CoA with divinyl chlorophyllide a to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76367"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6z_9z_12z_15z_18z_3_oxotetracosapentaenoyl_coa_udp-to-flavonol-3-o-6-o-malonyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6z_9z_12z_15z_18z_3_oxotetracosapentaenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-flavonol-3-o-6-o-malonyl"
+      },
+      "note": "Shares (6Z,9Z,12Z,15Z,18Z)-3-oxotetracosapentaenoyl-CoA with UDP to Flavonol 3-O-(6-O-malonyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76367"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6z_9z_12z_15z_18z_3_hydroxytetracosapenta_6_9_1_d-xylp-1-6-d-glcp-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6z_9z_12z_15z_18z_3_hydroxytetracosapenta_6_9_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-xylp-1-6-d-glcp-to-h2o"
+      },
+      "note": "Shares (6Z,9Z,12Z,15Z,18Z)-3-Hydroxytetracosapenta-6,9,12,15,18-enoyl-CoA with α-D-Xylp-(1→6)-D-Glcp to H2O.",
+      "provenance": {
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR206280"
+            "id": "MNXM730604"
           }
         ]
       }

@@ -1,0 +1,418 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "butyl-sulfate-to-butanoyl-phosphate-65720",
+  "name": "butyl sulfate to butanoyl phosphate",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from butyl sulfate(1−) to butanoyl phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:65720"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:157686"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "butyl_sulfate",
+      "name": "butyl sulfate",
+      "formula": "C4H9O4S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:157686"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "butanal",
+      "name": "butanal",
+      "formula": "C4H8O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15743"
+      }
+    },
+    {
+      "id": "sulfate",
+      "name": "sulfate",
+      "formula": "O4S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16189"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "butyrate",
+      "name": "Butyrate",
+      "formula": "C4H7O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17968"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "butyryl_p",
+      "name": "Butanoyl phosphate",
+      "formula": "C4H7O5P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58079"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_11_77",
+      "name": "alkyl sulfatase",
+      "ec": [
+        "1.14.11.77"
+      ]
+    },
+    {
+      "id": "ec_2_7_2_7",
+      "name": "butyrate kinase",
+      "ec": [
+        "2.7.2.7"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "alkyl sulfatase",
+      "equation": "butyl sulfate + 2-oxoglutarate + O2 = butanal + sulfate + succinate + CO2 + H(+)",
+      "ec": "1.14.11.77",
+      "substrates": [
+        {
+          "metabolite": "butyl_sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "butanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_77"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:65720"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65720"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "butanal + NAD(+) + H2O = butanoate + NADH + 2 H(+)",
+      "equation": "butanal + NAD(+) + H2O = butanoate + NADH + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "butanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "butyrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:69088"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69088"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "butyrate kinase",
+      "equation": "butanoate + ATP = butanoyl phosphate + ADP",
+      "ec": "2.7.2.7",
+      "substrates": [
+        {
+          "metabolite": "butyrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "butyryl_p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_2_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:13585"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13585"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_butyl_sulfate_butyl-sulfate-to-butanoyl-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "butyl_sulfate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "butyl-sulfate-to-butanoyl-phosphate"
+      },
+      "note": "Shares butyl sulfate with butyl sulfate to butanoyl phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:157686"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_butyryl_p_butyl-sulfate-to-butanoyl-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "butyryl_p"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "butyl-sulfate-to-butanoyl-phosphate"
+      },
+      "note": "Shares Butanoyl phosphate with butyl sulfate to butanoyl phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58079"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_butyryl_p_l-arogenate-to-trans-3-methylglutaconyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "butyryl_p"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-arogenate-to-trans-3-methylglutaconyl"
+      },
+      "note": "Shares Butanoyl phosphate with L-arogenate to trans-3-methylglutaconyl-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58079"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_butyryl_p_l-arogenate-to-trans-3-methylglutaconyl-20445",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "butyryl_p"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-arogenate-to-trans-3-methylglutaconyl-20445"
+      },
+      "note": "Shares Butanoyl phosphate with L-arogenate to trans-3-methylglutaconyl-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58079"
+          }
+        ]
+      }
+    }
+  ]
+}

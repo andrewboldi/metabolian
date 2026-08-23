@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway alpha-beta-dihydroxyethyl-to-s-8-succinyldihydro "alpha,beta-Dihydroxyethyl… to S(8)-succinyldihydrolipoa…" {
-  spacing 318
+  spacing 340
 
   spine at 0,0 {
     alpha_beta_dihydroxyethyl_tpp
@@ -18,26 +18,26 @@ pathway alpha-beta-dihydroxyethyl-to-s-8-succinyldihydro "alpha,beta-Dihydroxyet
 
   branch from h side left {
     h
-    <-> . +3_chloro_5_fluorocatechol +o2
-    2_chloro_4_fluoromuconate
+    <-> ec_3_8_1_5 [3.8.1.5] +3_bromo_1_propanol +h2o +bromide
+    propane_1_3_diol
   }
 
   branch from h side right {
     h
-    <-> . +4_chloro_2_fluoromuconate +o2
-    3_chloro_6_fluorocatechol
+    <-> ec_1_1_1_121 [1.1.1.121] +nadh +d_fucono_1_4_lactone +nad
+    d_fucopyranose
   }
 
   branch from thiamine_diphosphate side left {
     thiamine_diphosphate
-    <-> ec_1_2_4_2 [1.2.4.2] +r_lipoamide +3_carboxy_1_hydroxypropylthiamine_diphosphate +h
-    s_succinyl_dihydrolipoamide
+    <-> ec_2_2_1_1 [2.2.1.1] +alpha_beta_dihydroxyethyl_tpp +alpha_d_ribofuranose_5_phosphate +h
+    d_sedoheptulose_7_phosphate
   }
 
   branch from thiamine_diphosphate side right {
     thiamine_diphosphate
-    <-> . +thiamine_triphosphate +h2o +h +phosphate
-    pmf
+    <-> . +co2 +4_carboxy_1_hydroxybutyryl_thpp +h
+    2_oxoadipate
   }
 
   branch from dihydroxyacetone side left {
@@ -54,19 +54,79 @@ pathway alpha-beta-dihydroxyethyl-to-s-8-succinyldihydro "alpha,beta-Dihydroxyet
 
   branch from co2 side left {
     co2
-    <-> ec_1_14_12_13 [1.14.12.13] +nadh +2_bromobenzoate +h +o2 +bromide +nad
-    catechol
+    <-> ec_2_3_1_94 [2.3.1.94] +methylmalonyl_coa +propanoyl_coa +h +nadph +nadp +coa +h2o
+    6_deoxyerythronolide_b
   }
 
   branch from co2 side right {
     co2
-    <-> . +7_7_dimethyl_2_methylenebicyclo_2_2_1_heptane +o2 +h2o
-    alpha_fenchocamphorone
+    <-> . +pyruvate +h
+    enol_oxaloacetate
   }
 
-  branch from s_8_succinyldihydrolipoamide side left {
-    s_8_succinyldihydrolipoamide
-    <-> ec_2_3_1_61 [2.3.1.61] +succinyl_coa +r_dihydrolipoamide +h
-    coa
+  branch from formaldehyde side left {
+    formaldehyde
+    <-> . +tryptamine +h +h2o
+    2_3_4_9_tetrahydro_1h_pyrido_3_4_b_indole
+  }
+
+  branch from formaldehyde side right {
+    formaldehyde
+    <-> ec_1_5_3_2 [1.5.3.2] +h2o2 +l_tryptophan +o2 +h2o
+    3_1h_indol_3_yl_2_methylamino_propanoic_acid
+  }
+
+  branch from h side left {
+    h
+    <-> ec_1_4_1_2 [1.4.1.2] +nadh +4_methylsulfanyl_2_oxobutanoate +nh4 +nad +h2o
+    l_methionine
+  }
+
+  branch from h side right {
+    h
+    <-> ec_1_4_1_2 [1.4.1.2] +nadh +2_oxohexanoate +nh4 +nad +h2o
+    l_2_aminohexanoate
+  }
+
+  branch from thiamine_diphosphate side left {
+    thiamine_diphosphate
+    <-> . +r_lipoamide +2_methyl_1_hydroxypropylthiamine_diphosphate +h
+    s_8_2_methylpropanoyl_dihydrolipoamide
+  }
+
+  branch from 2_oxoglutarate side right {
+    2_oxoglutarate
+    <-> ec_2_6_1_13 [2.6.1.13] +s_1_pyrroline_5_carboxylate +h +l_glutamate +h2o
+    l_ornithine
+  }
+
+  branch from 2_oxoglutarate side left {
+    2_oxoglutarate
+    <-> ec_1_14_11_13 [1.14.11.13] +gibberellin_a29 +co2 +succinate +o2
+    gibberellin_a20
+  }
+
+  branch from co2 side right {
+    co2
+    <-> . +3_hydroxypyruvate +h
+    dihydroxyfumarate
+  }
+
+  branch from co2 side left {
+    co2
+    <-> . +chromopyrrolate +nadh +h +o2 +nad +h2o
+    k_252c
+  }
+
+  branch from r_lipoamide side right {
+    r_lipoamide
+    <-> ec_1_2_4_2 [1.2.4.2] +2_oxoglutarate +h +co2
+    s_succinyl_dihydrolipoamide
+  }
+
+  branch from r_lipoamide side left {
+    r_lipoamide
+    <-> . +s_3_methyl_2_oxopentanoate +h +co2
+    s_8_2_methylbutanoyl_dihydrolipoamide
   }
 }

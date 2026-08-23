@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-hydroxy-simvastatin-la-to-h2o "3'-hydroxy-simvastatin-la… to H2O" {
-  spacing 182
+  spacing 236
 
   spine at 0,0 {
     3_hydroxy_simvastatin_lactone_form
@@ -16,33 +16,87 @@ pathway 3-hydroxy-simvastatin-la-to-h2o "3'-hydroxy-simvastatin-la… to H2O" {
     atp
   }
 
-  branch from 6_beta_hydroxy_simvastatin_lactone side left {
-    6_beta_hydroxy_simvastatin_lactone
-    <-> . +h +simvastatin +o2 +nadph +h2o
-    nadp
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    sm_d18_1_17_0_sphingomyelin
   }
 
   branch from atp side right {
     atp
     <-> . +h +adp +phosphate +h2o
-    2_hydroxy_atorvastatin_acyl_glucuronide
+    sm_d18_1_18_1_sphingomyelin
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +5_nitro_gama_tocopherol +h +gamma_tocopherol
+    peroxynitrite
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +20_20_dihydroxyleukotriene_b4
+    20_oxo_leukotriene_b4
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +lipoxin_b4 +h
+    5_6_ep_15s_hete
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +2s_6r_10r_trimethyl_2e_hendecenoyl_coa
+    3_r_hydroxy_2s_6r_10_trimethyl_hendecanoyl_coa
+  }
+
+  branch from h side left {
+    h
+    <-> . +12_13_dihydroxyoleic_acid +h2o
+    vernolate
+  }
+
+  branch from h side right {
+    h
+    <-> . +3_oxo_10_r_hydroxy_octadeca_6e_8e_12z_trienoyl_c +h2o +3_oxo_10_s_hydroxy_octadeca_6e_8e_12z_trienoate
+    coa
+  }
+
+  branch from adp side left {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    sm_d18_1_18_0_sphingomyelin
+  }
+
+  branch from adp side right {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    sm_d18_1_20_1_sphingomyelin
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    sm_d18_1_20_0_sphingomyelin
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    sm_d18_1_21_0_sphingomyelin
   }
 
   branch from atp side left {
     atp
     <-> . +h +adp +phosphate +h2o
-    ortho_hydroxyatorvastatin
+    sm_d18_1_22_1_sphingomyelin
   }
 
-  branch from h2o side right {
-    h2o
-    <-> ec_1_14_14_149 [1.14.14.149] +3_deoxycapsidiol +nadp +h +o2 +nadph
-    5_epi_aristolochene
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_1_14_14_149 [1.14.14.149] +3_deoxycapsidiol +h +o2 +nadph +nadp
-    capsidiol
+  branch from atp side right {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    sm_d18_1_22_0_sphingomyelin
   }
 }

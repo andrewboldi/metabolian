@@ -4,39 +4,15 @@
 # edit the generator, not this file.
 
 pathway alpha-d-glucose-to-betalamic-acid "alpha-D-glucose to betalamic acid" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     alpha_d_glucose
-    <-> . +lampranthin_ii -1_o_feruloyl_d_glucose
-    betanin
-    <-> . +udp +h -betanidin
-    udp_alpha_d_glucose
-    <-> . +betanidin +h +h2o -betalamic_acid
-    leucodopachrome
-  }
-
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> . +udp +pelargonidin_5_o_beta_d_glucoside_3_o_beta_d_sam +h
-    pelargonidin_3_o_beta_d_sambubioside
-  }
-
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> ec_2_4_1_295 [2.4.1.295] +udp +delphinidin_5_o_d_glucoside_3_o_d_sambubioside +h
-    delphinidin_3_o_d_sambubioside
-  }
-
-  branch from betanidin side left {
-    betanidin
-    <-> ec_1_11_1_7 [1.11.1.7] +betanidin_quinone +h2o +h
-    h2o2
-  }
-
-  branch from betanidin side right {
-    betanidin
-    <-> . +udp +h +udp_alpha_d_glucose
-    gomphrenin_i
+    <-> . +celosianin_ii -1_o_feruloyl_d_glucose
+    amaranthin
+    <-> . +udp +h -betanin
+    udp_alpha_d_glucuronate
+    <-> . +betanin +h +h2o -betalamic_acid
+    cyclodopa_5_d_glucoside
   }
 }

@@ -1,0 +1,419 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-iodothyronamine-to-hydrogen-donor-83803",
+  "name": "3'-iodothyronamine to hydrogen donor",
+  "category": "other",
+  "summary": "A 3-step route from 3'-iodothyronamine(1+) to hydrogen donor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:83803"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:233339"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_iodothyronamine",
+      "name": "3'-iodothyronamine",
+      "formula": "C14H15INO2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:233339"
+      }
+    },
+    {
+      "id": "iodide",
+      "name": "iodide",
+      "formula": "I",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16382"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3_5_diiodothyronamine",
+      "name": "3',5'-diiodothyronamine",
+      "short": "3',5'-diiodothyrona…",
+      "formula": "C14H14I2NO2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:233342"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "3_3_5_triiodothyronamine",
+      "name": "3,3',5'-triiodothyronamine",
+      "short": "3,3',5'-triiodothyr…",
+      "formula": "C14H13I3NO2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:233343"
+      }
+    },
+    {
+      "id": "3_3_5_5_tetraiodothyronamine",
+      "name": "3,3',5,5'-tetraiodothyronamine",
+      "short": "3,3',5,5'-tetraiodo…",
+      "formula": "C14H12I4NO2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:233344"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3'-iodothyronamine + iodide + A + H(+) = 3',5'-diiodothyronamine + AH2",
+      "equation": "3'-iodothyronamine + iodide + A + H(+) = 3',5'-diiodothyronamine + AH2",
+      "substrates": [
+        {
+          "metabolite": "3_iodothyronamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iodide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_5_diiodothyronamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:83803"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:83803"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "3',5'-diiodothyronamine + iodide + A + H(+) = 3,3',5'-triiodothyronamine + AH2",
+      "equation": "3',5'-diiodothyronamine + iodide + A + H(+) = 3,3',5'-triiodothyronamine + AH2",
+      "substrates": [
+        {
+          "metabolite": "3_5_diiodothyronamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iodide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_3_5_triiodothyronamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:83799"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:83799"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3,3',5'-triiodothyronamine + iodide + A + H(+) = 3,3',5,5'-tetraiodothyronamine + AH2",
+      "equation": "3,3',5'-triiodothyronamine + iodide + A + H(+) = 3,3',5,5'-tetraiodothyronamine + AH2",
+      "substrates": [
+        {
+          "metabolite": "3_3_5_triiodothyronamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iodide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_3_5_5_tetraiodothyronamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:83807"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:83807"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3_iodothyronamine_1-1-dihydroxy-1-1-2-2-to-1-hydroxytorulene-31611",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_iodothyronamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-1-dihydroxy-1-1-2-2-to-1-hydroxytorulene-31611"
+      },
+      "note": "Shares 3'-iodothyronamine with 1,1'-dihydroxy-1,1',2,2'-… to 1'-hydroxytorulene.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:233339"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_iodothyronamine_3-iodothyronamine-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_iodothyronamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-iodothyronamine-to-hydrogen-donor"
+      },
+      "note": "Shares 3'-iodothyronamine with 3'-iodothyronamine to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:233339"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_iodothyronamine_plastoquinone-9-to-neurosporaxanthin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_iodothyronamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "plastoquinone-9-to-neurosporaxanthin"
+      },
+      "note": "Shares 3'-iodothyronamine with plastoquinone-9 to neurosporaxanthin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:233339"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_5_diiodothyronamine_3-iodothyronamine-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_5_diiodothyronamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-iodothyronamine-to-hydrogen-donor"
+      },
+      "note": "Shares 3',5'-diiodothyronamine with 3'-iodothyronamine to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:233342"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_3_5_triiodothyronamine_1-1-dihydroxy-1-1-2-2-to-1-hydroxytorulene-31611",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_3_5_triiodothyronamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-1-dihydroxy-1-1-2-2-to-1-hydroxytorulene-31611"
+      },
+      "note": "Shares 3,3',5'-triiodothyronamine with 1,1'-dihydroxy-1,1',2,2'-… to 1'-hydroxytorulene.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:233343"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_3_5_triiodothyronamine_1-2-dichloroethane-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_3_5_triiodothyronamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-dichloroethane-to-hydrogen-donor"
+      },
+      "note": "Shares 3,3',5'-triiodothyronamine with 1,2-dichloroethane to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:233343"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_3_5_triiodothyronamine_3-iodothyronamine-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_3_5_triiodothyronamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-iodothyronamine-to-hydrogen-donor"
+      },
+      "note": "Shares 3,3',5'-triiodothyronamine with 3'-iodothyronamine to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:233343"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_3_5_5_tetraiodothyronamine_3-iodothyronamine-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_3_5_5_tetraiodothyronamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-iodothyronamine-to-hydrogen-donor"
+      },
+      "note": "Shares 3,3',5,5'-tetraiodothyronamine with 3'-iodothyronamine to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:233344"
+          }
+        ]
+      }
+    }
+  ]
+}

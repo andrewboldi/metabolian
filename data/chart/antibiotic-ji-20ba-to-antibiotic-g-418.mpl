@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway antibiotic-ji-20ba-to-antibiotic-g-418 "Antibiotic JI-20Ba to Antibiotic G-418" {
-  spacing 182
+  spacing 242
 
   spine at 0,0 {
     antibiotic_ji_20ba
@@ -24,25 +24,85 @@ pathway antibiotic-ji-20ba-to-antibiotic-g-418 "Antibiotic JI-20Ba to Antibiotic
 
   branch from l_glutamate side right {
     l_glutamate
-    <-> ec_3_4_11_7 [3.4.11.7] +s_trans_1_propenyl_l_cysteine +h +h2o
-    n_gamma_glutamyl_s_trans_1_propenyl_cysteine
+    <-> . +l_histidine +l_cysteine +h2o
+    cystyl_glutamyl_histidine
   }
 
   branch from l_glutamate side left {
     l_glutamate
-    <-> ec_3_4_11_7 [3.4.11.7] +gamma_l_glutamyl_s_allyl_l_cysteine +h2o
-    s_allylcysteine
+    <-> . +l_cysteine +l_tryptophan +h2o
+    cystyl_glutamyl_tryptophan
   }
 
   branch from fad side right {
     fad
-    <-> . +fadh2 +iminoaspartate +h
+    <-> . +fadh2 +h +ubiquinone_2
+    ubiquinol_2
+  }
+
+  branch from fad side left {
+    fad
+    <-> ec_1_3_8_1 [1.3.8.1] +fadh2 +acryloyl_coa +h
+    propanoyl_coa
+  }
+
+  branch from 2_oxoglutarate side right {
+    2_oxoglutarate
+    <-> . +22r_22_26_dihydroxycholesterol +o2 +succinate +16alpha_22_26_trihydroxycholesterol
+    co2
+  }
+
+  branch from 2_oxoglutarate side left {
+    2_oxoglutarate
+    <-> ec_1_1_1_42 [1.1.1.42] +co2 +nadph +nadp
+    d_erythro_isocitrate
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_4_1_85 [2.4.1.85] +udp +hexyl_glucoside +hexan_1_ol
+    udp_alpha_d_glucose
+  }
+
+  branch from h side left {
+    h
+    <-> ec_1_1_2_3 [1.1.2.3] +ferrocyanide +3_phenylpyruvate +ferricyanide
+    s_3_phenyllactate
+  }
+
+  branch from l_glutamate side right {
+    l_glutamate
+    <-> . +l_proline +l_glutamine +h2o
+    glutaminyl_prolyl_glutamate
+  }
+
+  branch from l_glutamate side left {
+    l_glutamate
+    <-> . +l_glutamine +l_tryptophan +h2o
+    glutaminyl_tryptophanyl_glutamate
+  }
+
+  branch from fadh2 side right {
+    fadh2
+    <-> ec_1_3_3_6 [1.3.3.6] +6z_9z_12z_15z_18z_21z_tetracosahexaenoyl_coa +fad +h
+    2e_6z_9z_12z_15z_18z_21z_tetracosaheptaenoyl_co
+  }
+
+  branch from fadh2 side left {
+    fadh2
+    <-> ec_1_3_3_6 [1.3.3.6] +2e_6z_9z_12z_15z_18z_tetracosahexaenoyl_coa +h +fad
+    6z_9z_12z_15z_18z_tetracosapentaenoyl_coa
+  }
+
+  branch from fad side right {
+    fad
+    <-> ec_1_4_3_16 [1.4.3.16] +fadh2 +iminoaspartate +h
     l_aspartate
   }
 
   branch from fad side left {
     fad
-    <-> . +fadh2 +h +menaquinone_2 +menaquinol
-    pmf
+    <-> . +fadh2 +h +l_aspartate
+    iminoaspartate
   }
 }

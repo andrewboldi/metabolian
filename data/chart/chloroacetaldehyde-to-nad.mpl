@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway chloroacetaldehyde-to-nad "chloroacetaldehyde to NAD" {
-  spacing 256
+  spacing 292
 
   spine at 0,0 {
     chloroacetaldehyde
@@ -12,55 +12,91 @@ pathway chloroacetaldehyde-to-nad "chloroacetaldehyde to NAD" {
     2_chloroethanol
     <-> . +myo_inositol +pyrroloquinoline_quinone -pyrroloquinoline_quinol -2d_2_3_5_4_6_pentahydroxycyclohexanone
     h
-    <-> ec_1_1_1_369 [1.1.1.369] +nadh +2d_2_3_5_4_6_pentahydroxycyclohexanone -nad
-    inositol
+    <-> ec_1_1_1_18 [1.1.1.18] +nadh +2d_2_3_5_4_6_pentahydroxycyclohexanone -nad
+    myo_inositol
   }
 
   branch from h side left {
     h
-    <-> ec_1_1_1_10 [1.1.1.10] +l_threose +nadph +nadp
-    d_threitol
+    <-> ec_2_3_1_153 [2.3.1.153] +delphinidin_3_glucoside_5_caffoyl_glucoside +coa +delphinidin_3_5_bis_o_beta_d_glucoside
+    trans_caffeoyl_coa
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_10 [1.1.1.10] +3_4_hexanedione +nadph +nadp
-    4_hydroxyhexan_3_one
+    <-> . +geranoyl_coa
+    trans_geranyl_coa
   }
 
-  branch from 2d_2_3_5_4_6_pentahydroxycyclohexanone side left {
-    2d_2_3_5_4_6_pentahydroxycyclohexanone
-    <-> ec_1_1_1_369 [1.1.1.369] +nad +nadh +hplus
-    1d_chiro_inositol
+  branch from myo_inositol side left {
+    myo_inositol
+    <-> . +galactopinitol_a +5d_5_o_methyl_chiro_inositol
+    galactinol
   }
 
-  branch from 2d_2_3_5_4_6_pentahydroxycyclohexanone side right {
-    2d_2_3_5_4_6_pentahydroxycyclohexanone
-    <-> ec_2_6_1_50 [2.6.1.50] +2_oxoglutaramate +1_amino_1_deoxy_scyllo_inositol
-    l_glutamine
-  }
-
-  branch from inositol side left {
-    inositol
-    <-> ec_3_1_4_2 [3.1.4.2] +sn_glycero_3_phospho_1d_myo_inositol +h2o +h
-    sn_glycerol_3_phosphate
-  }
-
-  branch from inositol side right {
-    inositol
-    <-> ec_1_1_1_370 [1.1.1.370] +nadh +h +nad
-    l_epi_2_inosose
+  branch from myo_inositol side right {
+    myo_inositol
+    <-> . +galactopinitol_a +5d_5_o_methyl_chiro_inositol
+    alpha_d_galactosyl_1_3_1d_myo_inositol
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +3_methylcyclohexanone +h
-    3_methylcyclohexanol
+    <-> . +nadh +3_5_dihydroxy_1_4_naphthoquinone +h
+    naphthalene_1_2_4_8_tetrol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +3_methylbutan_2_one
-    3_methyl_2_butanol
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +4_hydroxyretinal +h
+    all_trans_4_hydroxyretinol
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_8_2_38 [2.8.2.38] +adenosine_3_5_bisphosphate +glucoiberverin +3_methylthiopropyl_desulfoglucosinolate
+    3_phosphoadenylyl_sulfate
+  }
+
+  branch from h side right {
+    h
+    <-> . +hexanoyl_coa +malonyl_coa +trans_4_coumaroyl_coa +h2o +co2 +coa
+    1_4_hydroxyphenyl_1_decene_3_5_dione
+  }
+
+  branch from myo_inositol side left {
+    myo_inositol
+    <-> . +ciceritol +galactinol
+    galactopinitol_a
+  }
+
+  branch from myo_inositol side right {
+    myo_inositol
+    <-> . +alpha_d_galactosyl_1_3_1d_myo_inositol +galactopinitol_a
+    ciceritol
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> ec_1_14_13_83 [1.14.13.83] +precorrin_3a +h +o2 +nad +h2o
+    precorrin_3b
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +didemethylasterriquinone_d +h +nad
+    hydrodidemethylasterriquinone_d
+  }
+
+  branch from nad side left {
+    nad
+    <-> . +nadh +didemethylasterriquinone_d +h
+    hydrodidemethylasterriquinone_d
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_14_13_5 [1.14.13.5] +nadh +h +imidazole_4_acetate +o2 +h2o
+    4_oxo_4_5_dihydroimidazole_5_acetic_acid
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-11r-hydroxy-5z-8z-1-to-diphosphate "2-[(11R)-hydroxy-(5Z,8Z,1… to diphosphate" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     2_11r_hydroxy_5z_8z_12e_14z_icosatetraenoyl_sn_g
@@ -14,17 +14,5 @@ pathway 2-11r-hydroxy-5z-8z-1-to-diphosphate "2-[(11R)-hydroxy-(5Z,8Z,1… to di
     11_oxo_ete
     <-> . +atp +coa -amp -ppi
     11_oxo_ete_coa
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +fpp
-    isosativene
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +fpp
-    z_e_farnesene
   }
 }

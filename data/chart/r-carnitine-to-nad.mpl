@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway r-carnitine-to-nad "(R)-carnitine to NAD" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     r_carnitine
@@ -14,17 +14,5 @@ pathway r-carnitine-to-nad "(R)-carnitine to NAD" {
     e_4_trimethylammonio_but_2_enoyl_coa
     <-> . +nadh +h -nad
     butyrobetainyl_coa
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +tyrosyl_phenylalanyl_tyrosine +l_tyrosine
-    l_phenylalanine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +tyrosyl_tryptophanyl_phenylalanine +l_phenylalanine +l_tyrosine
-    l_tryptophan
   }
 }

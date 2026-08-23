@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway gdp-4-amino-4-6-dideoxy-to-2-deoxy-5-hydroxymeth "GDP-4-amino-4,6-dideoxy-α… to 2'-deoxy-5-hydroxymethyl-…" {
-  spacing 286
+  spacing 310
 
   spine at 0,0 {
     gdp_4_amino_4_6_dideoxy_d_mannose
@@ -22,33 +22,57 @@ pathway gdp-4-amino-4-6-dideoxy-to-2-deoxy-5-hydroxymeth "GDP-4-amino-4,6-dideox
     adp
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
-    <-> ec_1_14_19_61 [1.14.19.61] +dihydrorhizobitoxine +o2 +hplus +di_sulfido_diiron +h2o
-    rhizobitoxine
-  }
-
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
-    <-> . +julichrome_q6 +o2 +hplus +di_sulfido_diiron +h2o
-    julichrome_q6_6
-  }
-
-  branch from 5_hydroxymethyldeoxycytidylate side left {
-    5_hydroxymethyldeoxycytidylate
-    <-> . +h2o +hplus +nh3
-    5_hydroxymethyluridine_2_deoxy_5_phosphate
+  branch from adp side left {
+    adp
+    <-> . +3s_3_isopropenyl_6_oxoheptanoyl_coa +phosphate +h +atp +coa
+    3s_3_isopropenyl_6_oxoheptanoate
   }
 
   branch from adp side right {
     adp
-    <-> . +cyclopropanecarboxylic_acid +h +atp +coa +phosphate
-    cyclopropanecarboxyl_coa
+    <-> . +p_1_p_3_bis_5_adenosyl_triphosphate +h +atp
+    diphosphate
+  }
+
+  branch from gdp_4_amino_4_6_dideoxy_d_mannose side left {
+    gdp_4_amino_4_6_dideoxy_d_mannose
+    <-> ec_2_3_1_227 [2.3.1.227] +acetyl_coa +coa +hplus
+    gdp_n_acetyl_d_perosamine
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_8_2_1 [2.8.2.1] +adenosine_3_5_bisphosphate +n_acetyl_serotonin_sulfate +n_acetylserotonin
+    3_phosphoadenylyl_sulfate
+  }
+
+  branch from h side left {
+    h
+    <-> . +cis_enol_3_oxomelilotoyl_coa +4_hydroxycoumarin
+    coa
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +diphosphate +indole_3_acetyl_l_valine +amp +indol_3_yl_acetate
+    l_valine
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +diphosphate +indole_3_acetyl_l_phenylalanine +amp +l_phenylalanine
+    indol_3_yl_acetate
+  }
+
+  branch from adp side right {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    alpha_alpha_trehalose_6_alpha_mycolate
   }
 
   branch from adp side left {
     adp
-    <-> . +h +atp +10s_juvenile_hormone_iii_diol
-    10s_juvenile_hormone_iii_diol_phosphate
+    <-> ec_2_7_1_101 [2.7.1.101] +d_tagatofuranose_6_phosphate +h +atp
+    d_tagatofuranose
   }
 }

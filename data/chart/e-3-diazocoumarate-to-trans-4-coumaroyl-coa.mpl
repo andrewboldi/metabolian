@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway e-3-diazocoumarate-to-trans-4-coumaroyl-coa "(E)-3-diazocoumarate to trans-4-coumaroyl-CoA" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     e_3_diazocoumarate
@@ -14,17 +14,5 @@ pathway e-3-diazocoumarate-to-trans-4-coumaroyl-coa "(E)-3-diazocoumarate to tra
     trans_4_coumaroyl_amp
     <-> . +coa -amp -hplus
     trans_4_coumaroyl_coa
-  }
-
-  branch from trans_4_coumaroyl_coa side left {
-    trans_4_coumaroyl_coa
-    <-> ec_2_3_1_64 [2.3.1.64] +agmatine +h +coa
-    e_p_coumaroylagmatine
-  }
-
-  branch from trans_4_coumaroyl_coa side right {
-    trans_4_coumaroyl_coa
-    <-> ec_2_3_1_133 [2.3.1.133] +l_quinate +trans_5_o_4_coumaroyl_d_quinate
-    coa
   }
 }

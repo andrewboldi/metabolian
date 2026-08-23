@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway thymidine-3-monophosphate-to-succinate "thymidine 3'-monophosphate to succinate" {
-  spacing 170
+  spacing 158
 
   spine at 0,0 {
     thymidine_3_monophosphate
@@ -22,17 +22,5 @@ pathway thymidine-3-monophosphate-to-succinate "thymidine 3'-monophosphate to su
     thymine
     <-> ec_1_3_1_1 [1.3.1.1] +nad +nadh +hplus
     5_6_dihydrothymine
-  }
-
-  branch from succinate side right {
-    succinate
-    <-> ec_1_14_20_12 [1.14.20.12] +2s_3_1h_indol_3_yl_2_isocyanopropanoate +akg +o2 +hplus +co2 +h2o
-    3_e_2_isocyanovinyl_indole
-  }
-
-  branch from succinate side left {
-    succinate
-    <-> ec_1_14_11_73 [1.14.11.73] +l_argininium +akg +o2 +co2
-    3r_3_hydroxy_l_argininium
   }
 }

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "amyrin-to-fmn",
   "name": "β-amyrin to FMN",
-  "category": "lipid-metabolism",
+  "category": "energy-metabolism",
   "summary": "A 3-step route from β-amyrin to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -97,45 +97,6 @@
       "charge": -1,
       "xrefs": {
         "chebi": "CHEBI:17573"
-      }
-    },
-    {
-      "id": "32_hydroxylanosterol",
-      "name": "32-Hydroxylanosterol",
-      "formula": "C30H50O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:166806"
-      }
-    },
-    {
-      "id": "4_4_dimethyl_14a_formyl_5alpha_cholesta_8_24_die",
-      "name": "4,4-Dimethyl-14a-formyl-5alpha-cholesta-8,24-dien-3beta-ol",
-      "short": "4,4-Dimethyl-14a-fo…",
-      "formula": "C30H48O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:166681"
-      }
-    },
-    {
-      "id": "methyl_medium_chain_fatty_acid_anion",
-      "name": "ω-methyl-medium-chain fatty acid anion",
-      "short": "ω-methyl-medium-cha…",
-      "formula": "C2H3O2R",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:194240"
-      }
-    },
-    {
-      "id": "hydroxy_medium_chain_fatty_acid_anion",
-      "name": "ω-hydroxy-medium-chain fatty acid anion",
-      "short": "ω-hydroxy-medium-ch…",
-      "formula": "C2H3O3R",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:194241"
       }
     },
     {
@@ -336,108 +297,6 @@
     },
     {
       "id": "r4",
-      "name": "32-hydroxylanosterol + reduced [NADPH--hemoprotein reductase] + O2 = 32-oxolanosterol +...",
-      "equation": "32-hydroxylanosterol + reduced [NADPH--hemoprotein reductase] + O2 = 32-oxolanosterol + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "32_hydroxylanosterol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "4_4_dimethyl_14a_formyl_5alpha_cholesta_8_24_die",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:75107"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:75107"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "an omega-methyl-medium-chain fatty acid + reduced [NADPH--hemoprotein reductase] + O2 =...",
-      "equation": "an omega-methyl-medium-chain fatty acid + reduced [NADPH--hemoprotein reductase] + O2 = an omega-hydroxy-medium-chain fatty acid + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "methyl_medium_chain_fatty_acid_anion",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "hydroxy_medium_chain_fatty_acid_anion",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:75279"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:75279"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
       "name": "glycyrrhizinate beta-glucuronidase",
       "equation": "glycyrrhizin + H2O = 2-(beta-D-glucuronosyl)-D-glucuronate + glycyrrhetinate",
       "ec": "3.2.1.128",
@@ -467,7 +326,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 4,
       "xrefs": {
         "rhea": "RHEA:17369"
       },
@@ -477,6 +336,140 @@
           {
             "db": "Rhea",
             "id": "RHEA:17369"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_11_hydroxy_amyrin_7-2-dihydroxy-4-5-meth-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11_hydroxy_amyrin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-2-dihydroxy-4-5-meth-to-h2o"
+      },
+      "note": "Shares 11α-hydroxy-β-amyrin with 7,2'-dihydroxy-4',5'-meth… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:63177"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_11_oxo_amyrin_4-nitroso-2-6-dinitrotolu-to-4-amino-2-6-dinitro",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11_oxo_amyrin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-nitroso-2-6-dinitrotolu-to-4-amino-2-6-dinitro"
+      },
+      "note": "Shares 11-oxo-β-amyrin with 4-nitroso-2,6-dinitrotolu… to 4-amino-2,6-dinitrotoluen….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:63184"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_11_oxo_amyrin_6-demethylsterigmatocystin-to-acetylene",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11_oxo_amyrin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-demethylsterigmatocystin-to-acetylene"
+      },
+      "note": "Shares 11-oxo-β-amyrin with 6-demethylsterigmatocystin to acetylene.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:63184"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_11_oxo_amyrin_7-2-dihydroxy-4-5-meth-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11_oxo_amyrin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-2-dihydroxy-4-5-meth-to-h2o"
+      },
+      "note": "Shares 11-oxo-β-amyrin with 7,2'-dihydroxy-4',5'-meth… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:63184"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_11_oxo_amyrin_amyrin-to-fmn-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11_oxo_amyrin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "amyrin-to-fmn-null"
+      },
+      "note": "Shares 11-oxo-β-amyrin with β-amyrin to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:63184"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_glycyrrhetinate_amyrin-to-fmn-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "glycyrrhetinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "amyrin-to-fmn-null"
+      },
+      "note": "Shares glycyrrhetinate with β-amyrin to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17573"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-4-dihydroquinoxaline-2-to-h2o "3,4-dihydroquinoxaline-2-… to H2O" {
-  spacing 224
+  spacing 308
 
   spine at 0,0 {
     3_4_dihydroquinoxaline_2_carboxylate
@@ -26,73 +26,157 @@ pathway 3-4-dihydroquinoxaline-2-to-h2o "3,4-dihydroquinoxaline-2-… to H2O" {
 
   branch from h side left {
     h
-    <-> . +mycothiol_bimane_conjugate +bromide +mycothiol
-    monobromobimane
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    22_1_18_3_ps
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_19z_3_hydroxyoctatriacontenoylpantetheine +nadp +nadph
-    o_s_19z_3_oxooctatriacontenoylpantetheine_4_phos
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_tetracosanoyl_2_9z_octadecenoyl_sn_glycero_3_p
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_3_1_10 [1.3.1.10] +nadh +o_s_2e_5z_17z_hexatriacontatrienoylpantetheine_4 +h
-    o_s_5z_17z_hexatriacontadienoylpantetheine_4_pho
+    <-> ec_1_14_13_129 [1.14.13.129] +nadh +all_trans_beta_carotene +h +o2 +h2o
+    cryptoxanthin
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_3_1_10 [1.3.1.10] +nadh +o_s_2e_11z_23z_dotetracontatrienoylpantetheine_4 +h
-    o_s_11z_23z_dotetracontadienoylpantetheine_4_pho
+    <-> ec_1_14_13_129 [1.14.13.129] +nadh +h +cryptoxanthin +o2 +h2o
+    all_trans_zeaxanthin
   }
 
   branch from fad side left {
     fad
-    <-> ec_1_3_5_1 [1.3.5.1] +fadh2 +ubiquinone_6 +h
-    ubiquinol_6
+    <-> . +fadh2 +h +7_dehydrodesmosterol
+    desmosterol
   }
 
   branch from fad side right {
     fad
-    <-> . +fadh2 +ubiquinone_8 +h
-    ubiquinol_8
+    <-> . +fadh2 +co2 +h +h2o
+    carbon_monoxide
   }
 
   branch from h2o side left {
     h2o
-    <-> . +o_s_3r_13z_3_hydroxydotriacontenoylpantetheine_4
-    o_s_2e_13z_dotriacontadienoylpantetheine_4_phosp
+    <-> ec_3_5_3_6 [3.5.3.6] +d_arginine +nh4
+    d_citrulline
   }
 
   branch from h2o side right {
     h2o
-    <-> . +o_s_3r_13z_25z_3_hydroxytetratetracontadienoylpa
-    o_s_2e_13z_25z_tetratetracontatrienoylpantethein
+    <-> ec_3_5_3_6 [3.5.3.6] +l_homoarginine +2_amino_6_ureidohexanoic_acid
+    nh4
   }
 
   branch from l_glutamate side left {
     l_glutamate
-    <-> ec_6_3_2_18 [6.3.2.18] +diphosphate +h +n_alpha_gamma_l_glutamylhistamine +amp +histamine
-    atp
+    <-> ec_6_3_2_17 [6.3.2.17] +5_10_methylenetetrahydropteroyl_penta_l_glutamat +h +adp +phosphate +atp
+    5_10_methylenetetrahydropteroyl_tetra_l_glutamat
   }
 
   branch from l_glutamate side right {
     l_glutamate
-    <-> ec_6_3_2_17 [6.3.2.17] +h +adp +10_formyl_tetrahydrofolate_tri_l_glutamate +phosphate +atp
-    6r_10_formyltetrahydropteroyldiglutamate
+    <-> ec_6_3_2_17 [6.3.2.17] +tetrahydropteroyltri_l_glutamate +h +adp +phosphate +atp
+    thf_l_glutamate
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_11z_3_hydroxytriacontenoylpantetheine_4_p +h +nadph
-    o_s_11z_3_oxotriacontenoylpantetheine_4_phosphor
+    <-> . +levopiramadiene_diol +h2o +h +o2 +nadph
+    levopimaradienol
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_13z_25z_3_hydroxytetratetracontadienoylpa +h +nadph
-    o_s_13z_25z_3_oxotetratetracontadienoylpantethei
+    <-> . +dehydroabietadiene_diol +h2o +h +dehydroabietadienol +nadph
+    o2
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_2_1_23 [3.2.1.23] +beta_d_galactose +d_gluconate
+    lactobionate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_2_1_23 [3.2.1.23] +beta_d_galactose +keto_d_fructose
+    lactulose
+  }
+
+  branch from co2 side left {
+    co2
+    <-> ec_4_1_1_65 [4.1.1.65] +r_1_2_distearoylphosphatidylethanolamine
+    1_2_distearoyl_sn_glycero_3_phosphoserine
+  }
+
+  branch from co2 side right {
+    co2
+    <-> ec_4_1_1_65 [4.1.1.65] +1_hexadecanoyl_2_z_octadec_9_enoyl_sn_glycero_3 +h
+    1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    24_0_18_2_ps
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    24_0_18_3_ps
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> . +3_keto_beta_d_galactose +h +nad
+    beta_d_galactose
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +h +adp +o2 +phosphate +nad +h2o
+    atp
+  }
+
+  branch from nad side left {
+    nad
+    <-> . +nadh +h +r_acetoin
+    s_s_butane_2_3_diol
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_117 [1.1.1.117] +nadh +h +d_arabinono_1_4_lactone
+    d_arabinofuranose
+  }
+
+  branch from fadh2 side left {
+    fadh2
+    <-> . +aminopyrrolnitrin +fad +h2o +h +o2 +chloride
+    monodechloroaminopyrrolnitrin
+  }
+
+  branch from fadh2 side right {
+    fadh2
+    <-> ec_1_1_99_21 [1.1.99.21] +l_sorbopyranose +h +fad
+    d_sorbitol
+  }
+
+  branch from fad side left {
+    fad
+    <-> ec_1_1_99_13 [1.1.99.13] +sucrose +fadh2 +h
+    3_dehydro_alpha_d_glucosyl_beta_d_fructofuranosi
+  }
+
+  branch from fad side right {
+    fad
+    <-> ec_1_5_99_3 [1.5.99.3] +fadh2 +h +l_1_piperideine_6_carboxylate
+    l_pipecolate
   }
 }

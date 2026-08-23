@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway coproporphyrinogen-iii-to-2-4-divinyl "coproporphyrinogen III to 2,4-divinyl…" {
-  spacing 256
+  spacing 244
 
   spine at 0,0 {
     coproporphyrinogen3
@@ -22,17 +22,5 @@ pathway coproporphyrinogen-iii-to-2-4-divinyl "coproporphyrinogen III to 2,4-div
     magnesium_131_oxoprotoporphyrin_13_monomethyl_es
     <-> . +nadph +o2 -nadp -h2o
     2_4_divinyl_protochlorophyllide_a
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +ribonucleotide +sam +hplus
-    2_o_methylribonucleotide_1
-  }
-
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_371 [2.1.1.371] +l_lysinium +sam +hplus
-    n6_n6_dimethyl_l_lysine_1
   }
 }

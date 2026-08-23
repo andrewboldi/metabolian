@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway isoamyl-acetate-to-isovalerate "isoamyl acetate to isovalerate" {
-  spacing 176
+  spacing 164
 
   spine at 0,0 {
     isoamyl_acetate
@@ -14,17 +14,5 @@ pathway isoamyl-acetate-to-isovalerate "isoamyl acetate to isovalerate" {
     3_methylbutanal
     <-> . +nad +h2o -nadh -hplus
     isovalerate
-  }
-
-  branch from isoamylol side left {
-    isoamylol
-    <-> . +palmitoyl_coa +coa
-    3_methylbutyl_hexadecanoate
-  }
-
-  branch from isovalerate side right {
-    isovalerate
-    <-> . +h2o +coa +hplus
-    isovaleryl_coa
   }
 }

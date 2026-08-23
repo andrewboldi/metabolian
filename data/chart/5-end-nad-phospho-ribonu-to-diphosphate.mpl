@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-end-nad-phospho-ribonu-to-diphosphate "5'-end NAD-phospho-ribonu… to diphosphate" {
-  spacing 282
+  spacing 264
 
   spine at 0,0 {
     5_end_nad_phospho_ribonucleoside
@@ -18,42 +18,6 @@ pathway 5-end-nad-phospho-ribonu-to-diphosphate "5'-end NAD-phospho-ribonu… to
     ppi
   }
 
-  branch from 5_end_phospho_adenosine_phospho_ribonucleoside_3 side left {
-    5_end_phospho_adenosine_phospho_ribonucleoside_3
-    <-> . +5_fad_phosphoribonucleoside_2 +h2o +hplus
-    fmn
-  }
-
-  branch from nmn side right {
-    nmn
-    <-> . +h2o +pi
-    n_ribosylnicotinamide
-  }
-
-  branch from nmn side left {
-    nmn
-    <-> . +nadp +h2o +hplus
-    adenosine_2_5_bisphosphate
-  }
-
-  branch from nicotinate_d_ribonucleotide side right {
-    nicotinate_d_ribonucleotide
-    <-> . +h2o +pi
-    d_ribosylnicotinate
-  }
-
-  branch from nh3 side left {
-    nh3
-    <-> . +l_glutamine +norepinephrine
-    n_2r_2_3_4_dihydroxyphenyl_2_hydroxyethyl_l_glut
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +l_glutamine +histaminium
-    n_2_1h_imidazol_4_yl_ethyl_l_glutamine
-  }
-
   branch from deamido_nad side left {
     deamido_nad
     <-> ec_2_7_1_236 [2.7.1.236] +atp +adp +hplus
@@ -62,13 +26,31 @@ pathway 5-end-nad-phospho-ribonu-to-diphosphate "5'-end NAD-phospho-ribonu… to
 
   branch from ppi side right {
     ppi
-    <-> . +8_9_eet +atp +coa +amp
-    8_9_epoxy_5z_11z_14z_icosatrienoyl_coa
+    <-> . +amikacin +utp
+    4_uridylylamikacin
   }
 
   branch from ppi side left {
     ppi
-    <-> . +11_12_eet +atp +coa +amp
-    11_12_epoxy_5z_8z_14z_icosatrienoyl_coa
+    <-> . +l_tyrosine +utp
+    uridylyl_l_tyrosine_1
+  }
+
+  branch from 5_end_nad_phospho_ribonucleoside side right {
+    5_end_nad_phospho_ribonucleoside
+    <-> . +h2o +nad +hplus
+    5_end_ribonucleotide_2
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +fpp +h2o
+    longiborneol
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +n6_hydroxy_datp +h2o +hplus
+    n6_hydroxy_damp
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway diphosphate-to-h2o "diphosphate to H2O" {
-  spacing 200
+  spacing 278
 
   spine at 0,0 {
     diphosphate
@@ -16,10 +16,129 @@ pathway diphosphate-to-h2o "diphosphate to H2O" {
     4_2_5_carboxy_2_hydroxy_3_methoxyphenyl_2_oxoeth
   }
 
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    11s_12r_eet
+  }
 
+  branch from atp side right {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    14_15_epoxy_5z_8z_11z_eicosatrienoate
+  }
 
+  branch from l_glutamate side left {
+    l_glutamate
+    <-> . +l_leucine +l_arginine +h2o
+    glutaminyl_arginyl_leucine
+  }
 
+  branch from l_glutamate side right {
+    l_glutamate
+    <-> . +l_leucine +l_asparagine +h2o
+    glutaminyl_asparaginyl_leucine
+  }
 
+  branch from 5_carboxyvanillic_acid side left {
+    5_carboxyvanillic_acid
+    <-> . +4_methylene_2_oxoglutarate +h +h2o
+    4_2_5_carboxy_2_hydroxy_3_methoxyphenyl_2_oxoeth
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> ec_3_2_1_21 [3.2.1.21] +glucose
+    beta_cellobiose
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> ec_3_2_1_20 [3.2.1.20] +melibiose +d_galactose
+    glucose
+  }
+
+  branch from diphosphate side right {
+    diphosphate
+    <-> ec_4_2_3_32 [4.2.3.32] +palustradiene
+    ent_copalyl_diphosphate
+  }
+
+  branch from diphosphate side left {
+    diphosphate
+    <-> . +1_2_amino_7_methyl_4_oxo_7_8_dihydro_3h_pteridi +s_2_hydroxyglutarate
+    7_8_dihydromethanopterin
+  }
+
+  branch from h side right {
+    h
+    <-> . +4_hydroxy_2_oxoheptanedioate +h2o
+    2_hydroxyhepta_2_4_dienedioic_acid
+  }
+
+  branch from h side left {
+    h
+    <-> . +red_chlorophyll_catabolite +h2o
+    epoxypheophorbide_a
+  }
+
+  branch from amp side right {
+    amp
+    <-> . +11z_14z_eicosadienoate +atp +coa +diphosphate
+    11z_14z_icosadienoyl_coa
+  }
+
+  branch from amp side left {
+    amp
+    <-> . +cis_cis_cis_10_13_16_docosatrienoyl_coa +diphosphate +atp +coa
+    10z_13z_16z_docosatrienoate
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    9r_10s_9_10_epome
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    vernolate
+  }
+
+  branch from l_glutamate side right {
+    l_glutamate
+    <-> . +h2o
+    glutamyl_glutamate
+  }
+
+  branch from l_glutamate side left {
+    l_glutamate
+    <-> . +l_lysine +l_isoleucine +h2o
+    glutamyl_isoleucyl_lysine
+  }
+
+  branch from co2 side right {
+    co2
+    <-> ec_1_2_2_1 [1.2.2.1] +ubiquinone_6 +h +formate
+    ubiquinol_6
+  }
+
+  branch from co2 side left {
+    co2
+    <-> . +2s_2_acetolactate +h +o2 +h2o
+    diacetyl
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_2_1_22 [3.2.1.22] +polydextrose +glucose
+    d_galactose
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +4_hydroxy_2_oxoheptanedioate
+    2z_4z_2_hydroxyhepta_2_4_dienedioate
+  }
 }

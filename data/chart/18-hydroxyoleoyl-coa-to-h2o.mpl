@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 18-hydroxyoleoyl-coa-to-h2o "18-hydroxyoleoyl-CoA to H2O" {
-  spacing 268
+  spacing 196
 
   spine at 0,0 {
     18_hydroxyoleoyl_coa
@@ -16,77 +16,5 @@ pathway 18-hydroxyoleoyl-coa-to-h2o "18-hydroxyoleoyl-CoA to H2O" {
     octadec_9_ene_1_18_dioic_acid
     <-> . +h +nadph -18_oxooleic_acid -h2o
     nadp
-  }
-
-  branch from h side left {
-    h
-    <-> . +cmp +alpha_8eleg5rhb7ac_2_3_alpha_l_fucnam_1_3_alpha +cmp_beta_7_acetamido_3_5_7_9_tetradeoxy_5_r_3_hy
-    alpha_l_fucnam_1_3_alpha_d_glcnac_pp_undecapreno
-  }
-
-  branch from h side right {
-    h
-    <-> . +udp_n_acetyl_alpha_d_galactosamine +beta_d_man_1_4_beta_d_glc_1_3_alpha_d_galnac_pp +alpha_d_galnac_1_3_beta_d_man_1_4_beta_d_glc_1_3
-    udp
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> . +pelargonidin +h +nadp
-    afzelechin
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> ec_1_3_1_112 [1.3.1.112] +pelargonidin +h +nadp
-    epiafzelechin
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    sphingomyelin_33_1
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_7_6_2_3 [7.6.2.3] +h +adp +phosphate +h2o
-    arsenic_trypanothione
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +ethyl_decanoate +ethanol
-    decanoyl_coa
-  }
-
-  branch from coa side right {
-    coa
-    <-> ec_2_3_1_87 [2.3.1.87] +coa_s_acetyl_tryptamine +bromide +h
-    2_bromo_n_2_1h_indol_3_yl_ethyl_acetamide
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +h +nadph +epiafzelechin
-    pelargonidin
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +2_ethyl_4_hydroxy_2_methyl_3_2h_furanone +h +nadph
-    2e_2_ethylidene_4_hydroxy_5_methyl_3_2h_furanon
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_1_1_1 [3.1.1.1] +methyl_l_phenylalaninate +l_phenylalanine
-    methanol
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_4_2_1_17 [4.2.1.17] +homoplatensic_4_enyl_coa
-    3s_3_hydroxy_homoplatensic_coa
   }
 }

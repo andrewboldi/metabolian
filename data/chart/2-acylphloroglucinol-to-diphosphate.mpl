@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-acylphloroglucinol-to-diphosphate "2-acylphloroglucinol to diphosphate" {
-  spacing 272
+  spacing 302
 
   spine at 0,0 {
     2_acylphloroglucinol
@@ -18,13 +18,43 @@ pathway 2-acylphloroglucinol-to-diphosphate "2-acylphloroglucinol to diphosphate
 
   branch from ppi side left {
     ppi
-    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
-    ent_manool
+    <-> . +3r_3_1h_indol_3_ylmethyl_3h_1_4_benzodiazepine +dmapp
+    2s_3r_11r_aszonalenin
   }
 
   branch from ppi side right {
     ppi
-    <-> . +hexadecanedioate +atp +coa +amp
-    hexadecanedioyl_coa
+    <-> . +3s_3_1h_indol_3_ylmethyl_3h_1_4_benzodiazepine +dmapp
+    2s_3r_11s_aszonalenin
+  }
+
+  branch from 2_acylphloroglucinol side left {
+    2_acylphloroglucinol
+    <-> ec_2_4_1_358 [2.4.1.358] +udp_d_glucose +udp
+    2_acylphloroglucinol_1_o_d_glucoside
+  }
+
+  branch from dmapp side right {
+    dmapp
+    <-> . +preechinulin +ppi
+    tardioxopiperazine_b
+  }
+
+  branch from dmapp side left {
+    dmapp
+    <-> . +preechinulin +ppi
+    tardioxopiperazine_a
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +tardioxopiperazine_a +dmapp
+    echinulin
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +tardioxopiperazine_a +dmapp
+    variecolorin_l
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-hydrogen-donor "UDP to hydrogen donor" {
-  spacing 188
+  spacing 158
 
   spine at 0,0 {
     udp
@@ -18,39 +18,9 @@ pathway udp-to-hydrogen-donor "UDP to hydrogen donor" {
     11_o_acetylcyathin_a3
   }
 
-  branch from cyathatriol side left {
-    cyathatriol
-    <-> . +nadp +h +nadph
-    cyathin_a3
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +peregrinol +fmnh2 +o2 +h2o +hplus
-    labd_13z_ene_9_15_16_triol
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> ec_1_14_14_177 [1.14.14.177] +methyl_ultra_long_chain_fatty_acid_anion +fmnh2 +o2 +h2o +hplus
-    hydroxy_ultra_long_chain_fatty_acid_anion
-  }
-
-  branch from 11_o_acetylcyathatriol side right {
-    11_o_acetylcyathatriol
-    <-> . +udp_d_xylose +udp +hplus
-    erinacine_q
-  }
-
-  branch from 11_o_acetylcyathatriol side left {
-    11_o_acetylcyathatriol
-    <-> . +udp_d_glucose +udp +hplus
-    erinacine_q2
-  }
-
-  branch from 11_o_acetylcyathin_a3 side right {
+  branch from 11_o_acetylcyathin_a3 side left {
     11_o_acetylcyathin_a3
-    <-> . +11_o_acetylcyathatriol +nadp +h
-    nadph
+    <-> . +acetyl_coa +coa
+    cyathin_a3
   }
 }

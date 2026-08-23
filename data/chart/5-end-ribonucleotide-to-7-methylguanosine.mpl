@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-end-ribonucleotide-to-7-methylguanosine "5'-end ribonucleotide… to 7-methylguanosine" {
-  spacing 334
+  spacing 304
 
   spine at 0,0 {
     5_end_ribonucleotide_5_triphosphate_4
@@ -18,35 +18,5 @@ pathway 5-end-ribonucleotide-to-7-methylguanosine "5'-end ribonucleotide… to 7
     5_end_ribonucleoside_5_diphosphate_3
     <-> ec_3_1_3_91 [3.1.3.91] +7_methylguanosine_5_phosphate +h2o -pi
     7_methylguanosine
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_173 [4.2.3.173] +fpp +h2o
-    cadinol
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_174 [4.2.3.174] +fpp +h2o
-    2e_6e_hedycaryol
-  }
-
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_229 [2.1.1.229] +5_carboxymethyl_uridine_5_monophosphate_2 +sam
-    5_2_methoxy_2_oxoethyl_uridine_5_monophosphate
-  }
-
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_230 [2.1.1.230] +adenosine_5_monophosphate_1 +sam +hplus
-    2_o_methyladenosine_5_monophosphate_1
-  }
-
-  branch from 7_methylguanosine_5_phosphate side left {
-    7_methylguanosine_5_phosphate
-    <-> . +h2o +ppi +hplus
-    7_methyl_gtp
   }
 }

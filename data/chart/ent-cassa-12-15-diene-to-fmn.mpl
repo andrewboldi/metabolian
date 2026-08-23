@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway ent-cassa-12-15-diene-to-fmn "ent-cassa-12,15-diene to FMN" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     ent_cassa_12_15_diene
@@ -14,17 +14,5 @@ pathway ent-cassa-12-15-diene-to-fmn "ent-cassa-12,15-diene to FMN" {
     ent_cassa_12_15_dien_2_one
     <-> . +fmnh2 +o2 -fmn -h2o -hplus
     ent_3_hydroxycassa_12_15_dien_2_one
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +testosterone +fmnh2 +o2 +h2o +hplus
-    15_hydroxytestosterone
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +progesterone +fmnh2 +o2 +h2o +hplus
-    15alpha_hydroxyprogesterone
   }
 }

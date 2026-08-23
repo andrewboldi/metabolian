@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-monolinolein-to-glycerol "1-monolinolein to glycerol" {
-  spacing 210
+  spacing 228
 
   spine at 0,0 {
     1_monolinolein
@@ -18,19 +18,37 @@ pathway 1-monolinolein-to-glycerol "1-monolinolein to glycerol" {
 
   branch from linoleate side left {
     linoleate
-    <-> ec_1_13_11_61 [1.13.11.61] +o2
-    9_r_hpode
+    <-> . +1_2_3_trilinoleoylglycerol +h2o +hplus
+    2_3_dilinoleoyl_sn_glycerol
   }
 
   branch from linoleate side right {
     linoleate
-    <-> ec_1_13_11_62 [1.13.11.62] +o2
-    8e_10r_12z_10_hydroperoxy_8_12_octadecadienoate
+    <-> . +h2o +coa +hplus
+    linoleoyl_coa
   }
 
-  branch from d_glyceraldehyde side left {
-    d_glyceraldehyde
-    <-> . +pyruvate
-    2_keto_3_deoxy_l_galactonate
+  branch from 1_monolinolein side left {
+    1_monolinolein
+    <-> . +oleoyl_coa +coa
+    1_linoleoyl_2_oleoylglycerol
+  }
+
+  branch from 1_monolinolein side right {
+    1_monolinolein
+    <-> . +oleoyl_coa +coa
+    1_oleoyl_3_linoleoylglycerol
+  }
+
+  branch from linoleate side left {
+    linoleate
+    <-> . +1_stearoyl_2_linoleoyl_sn_glycerol +h2o +hplus
+    1_stearoyl_sn_glycerol
+  }
+
+  branch from linoleate side right {
+    linoleate
+    <-> . +1_stearoyl_2_linoleoyl_sn_glycero_3_phospho_l_se +h2o +hplus
+    1_stearoyl_sn_glycero_3_phosphoserine
   }
 }

@@ -1,0 +1,535 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "6-2-2-4-dihydroxy-6-met-to-aloesone-null",
+  "name": "6-[2-(2,4-dihydroxy-6-met… to aloesone",
+  "category": "other",
+  "summary": "A 4-step route from 6-[2-(2,4-dihydroxy-6-methylphenyl)-2-oxoethyl]-4-hydroxy-pyran-2-one to aloesone, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR116491"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:74295"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "6_2_2_4_dihydroxy_6_methylphenyl_2_oxoethyl_4_hy",
+      "name": "6-[2-(2,4-dihydroxy-6-methylphenyl)-2-oxoethyl]-4-hydroxy-pyran-2-one",
+      "short": "6-[2-(2,4-dihydroxy…",
+      "formula": "C14H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:74295"
+      }
+    },
+    {
+      "id": "heptaketide_pyrone_intermediate",
+      "name": "heptaketide pyrone intermediate",
+      "short": "heptaketide pyrone…",
+      "formula": "C14H11O6",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM11804"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "aloesone",
+      "name": "aloesone",
+      "formula": "C13H12O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59878"
+      }
+    },
+    {
+      "id": "aldehydo_d_glucose",
+      "name": "aldehydo-D-glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364062"
+      }
+    },
+    {
+      "id": "aloesin",
+      "name": "Aloesin",
+      "formula": "C19H22O9",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:2608"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1102128"
+      }
+    },
+    {
+      "id": "udp_alpha_d_glucose",
+      "name": "UDP-alpha-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1364019"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR116491",
+      "substrates": [
+        {
+          "metabolite": "6_2_2_4_dihydroxy_6_methylphenyl_2_oxoethyl_4_hy",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "heptaketide_pyrone_intermediate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR116491"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR116491"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR116492",
+      "substrates": [
+        {
+          "metabolite": "heptaketide_pyrone_intermediate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "aloesone",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR116492"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR116492"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR175818",
+      "substrates": [
+        {
+          "metabolite": "aldehydo_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "aloesone",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aloesin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR175818"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR175818"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Reaction MNXR196562",
+      "substrates": [
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "aloesin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "udp_alpha_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "aloesone",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR196562"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196562"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_6_2_2_4_dihydroxy_6_methylphenyl_2_oxoethyl_4_hy_5-cis-lycopene-to-h2o-68444",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_2_2_4_dihydroxy_6_methylphenyl_2_oxoethyl_4_hy"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cis-lycopene-to-h2o-68444"
+      },
+      "note": "Shares 6-[2-(2,4-dihydroxy-6-methylphenyl)-2-oxoethyl]-4-hydroxy-pyran-2-one with 5-cis-lycopene to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74295"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_2_2_4_dihydroxy_6_methylphenyl_2_oxoethyl_4_hy_6-2-2-4-dihydroxy-6-met-to-aloesone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_2_2_4_dihydroxy_6_methylphenyl_2_oxoethyl_4_hy"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-2-2-4-dihydroxy-6-met-to-aloesone"
+      },
+      "note": "Shares 6-[2-(2,4-dihydroxy-6-methylphenyl)-2-oxoethyl]-4-hydroxy-pyran-2-one with 6-[2-(2,4-dihydroxy-6-met… to aloesone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74295"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_2_2_4_dihydroxy_6_methylphenyl_2_oxoethyl_4_hy_n-acetyl-d-6-sulfogalac-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_2_2_4_dihydroxy_6_methylphenyl_2_oxoethyl_4_hy"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyl-d-6-sulfogalac-to-h2o"
+      },
+      "note": "Shares 6-[2-(2,4-dihydroxy-6-methylphenyl)-2-oxoethyl]-4-hydroxy-pyran-2-one with N-acetyl-β-D-6-sulfogalac… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74295"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_heptaketide_pyrone_intermediate_6-2-2-4-dihydroxy-6-met-to-aloesone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "heptaketide_pyrone_intermediate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-2-2-4-dihydroxy-6-met-to-aloesone"
+      },
+      "note": "Shares heptaketide pyrone intermediate with 6-[2-(2,4-dihydroxy-6-met… to aloesone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM11804"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_aloesone_2z-4e-2-aminomuconate-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aloesone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2z-4e-2-aminomuconate-to-h2o-null"
+      },
+      "note": "Shares aloesone with (2Z,4E)-2-aminomuconate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:59878"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_aloesone_6-2-2-4-dihydroxy-6-met-to-aloesone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aloesone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-2-2-4-dihydroxy-6-met-to-aloesone"
+      },
+      "note": "Shares aloesone with 6-[2-(2,4-dihydroxy-6-met… to aloesone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:59878"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_aloesone_6-o-cis-methoxy-mycolyl-t-to-atp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aloesone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-o-cis-methoxy-mycolyl-t-to-atp"
+      },
+      "note": "Shares aloesone with 6-O-cis-methoxy-mycolyl-t… to ATP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:59878"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_aloesone_maltoheptaose-to-d-glucopyranose-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aloesone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "maltoheptaose-to-d-glucopyranose-null"
+      },
+      "note": "Shares aloesone with maltoheptaose to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:59878"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_aloesone_udp-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aloesone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-coa"
+      },
+      "note": "Shares aloesone with UDP to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:59878"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_aloesone_udp-to-flavonol-3-o-6-o-malonyl-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aloesone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-flavonol-3-o-6-o-malonyl-null"
+      },
+      "note": "Shares aloesone with UDP to Flavonol 3-O-(6-O-malonyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:59878"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_aloesin_6-2-2-4-dihydroxy-6-met-to-aloesone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aloesin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-2-2-4-dihydroxy-6-met-to-aloesone"
+      },
+      "note": "Shares Aloesin with 6-[2-(2,4-dihydroxy-6-met… to aloesone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:2608"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_aloesin_6-o-cis-methoxy-mycolyl-t-to-atp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aloesin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-o-cis-methoxy-mycolyl-t-to-atp"
+      },
+      "note": "Shares Aloesin with 6-O-cis-methoxy-mycolyl-t… to ATP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:2608"
+          }
+        ]
+      }
+    }
+  ]
+}

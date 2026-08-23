@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-terminal-l-seryl-l-prol-to-s-adenosyl-l-homocy "N-terminal L-seryl-L-prol… to S-adenosyl-L-homocysteine" {
-  spacing 236
+  spacing 260
 
   spine at 0,0 {
     n_terminal_l_seryl_l_prolyl_l_lysyl_2
@@ -18,13 +18,37 @@ pathway n-terminal-l-seryl-l-prol-to-s-adenosyl-l-homocy "N-terminal L-seryl-L-p
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_200 [2.1.1.200] +cytidine_5_monophosphate_1 +sam +hplus
-    2_o_methylcytidine_5_monophosphate_1
+    <-> ec_2_1_1_395 [2.1.1.395] +7_o_demethylcephaeline +sam +hplus
+    cephaeline
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_200 [2.1.1.200] +uridine_5_monophosphate_1 +sam +hplus
-    2_o_methyluridine_5_monophosphate_1
+    <-> ec_2_1_1_396 [2.1.1.396] +cephaeline +sam +hplus
+    emetine
+  }
+
+  branch from sam side left {
+    sam
+    <-> . +deacetylisoipecoside +sah +hplus
+    6_o_methyldeacetylisoipecoside
+  }
+
+  branch from sam side right {
+    sam
+    <-> . +7_o_methyldeacetylisoipecoside +sah +hplus
+    6_7_o_o_dimethyldeacetylisoipecoside
+  }
+
+  branch from sah side left {
+    sah
+    <-> . +rs_isococlaurinium +sam +hplus
+    rs_7_o_methylcoclaurinium
+  }
+
+  branch from sah side right {
+    sah
+    <-> . +s_norprotosinomenium +sam +hplus
+    s_6_o_methylnorprotosinomenium
   }
 }

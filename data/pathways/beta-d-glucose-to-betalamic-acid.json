@@ -1,0 +1,509 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "beta-d-glucose-to-betalamic-acid",
+  "name": "beta-D-glucose to betalamic acid",
+  "category": "other",
+  "summary": "A 3-step route from beta-D-glucose to betalamic acid, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR173593"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "beta_d_glucose",
+      "name": "beta-D-glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364060"
+      }
+    },
+    {
+      "id": "lampranthin_ii",
+      "name": "Lampranthin II",
+      "formula": "C34H32N2O16",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1371043"
+      }
+    },
+    {
+      "id": "betanin",
+      "name": "Betanin",
+      "formula": "C24H24N2O13",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1371652"
+      }
+    },
+    {
+      "id": "1_o_feruloyl_d_glucose",
+      "name": "1-O-feruloyl-β-D-glucose",
+      "short": "1-O-feruloyl-β-D-gl…",
+      "formula": "C16H20O9",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:81321"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1102128"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "udp_alpha_d_glucose",
+      "name": "UDP-alpha-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1364019"
+      }
+    },
+    {
+      "id": "betanidin",
+      "name": "Betanidin",
+      "formula": "C18H14N2O8",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1371738"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "leucodopachrome",
+      "name": "leucodopachrome",
+      "formula": "C9H9NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:231766"
+      }
+    },
+    {
+      "id": "betalamic_acid",
+      "name": "betalamic acid",
+      "formula": "C9H9NO5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM732452"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR173593",
+      "substrates": [
+        {
+          "metabolite": "beta_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "lampranthin_ii",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "betanin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_o_feruloyl_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR173593"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR173593"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR198260",
+      "substrates": [
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "betanin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "udp_alpha_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "betanidin",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR198260"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198260"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR196217",
+      "substrates": [
+        {
+          "metabolite": "betanidin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "leucodopachrome",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "betalamic_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR196217"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196217"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_lampranthin_ii_3-keto-beta-d-galactose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lampranthin_ii"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-keto-beta-d-galactose-to-h2o"
+      },
+      "note": "Shares Lampranthin II with 3-keto-beta-D-galactose to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371043"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lampranthin_ii_alpha-d-glucose-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lampranthin_ii"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-glucose-to-nad"
+      },
+      "note": "Shares Lampranthin II with alpha-D-glucose to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371043"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_betanin_3-keto-beta-d-galactose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "betanin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-keto-beta-d-galactose-to-h2o"
+      },
+      "note": "Shares Betanin with 3-keto-beta-D-galactose to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371652"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_betanin_alpha-d-glucose-to-betalamic-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "betanin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-glucose-to-betalamic-acid"
+      },
+      "note": "Shares Betanin with alpha-D-glucose to betalamic acid.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371652"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_betanin_alpha-d-glucose-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "betanin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-glucose-to-nad"
+      },
+      "note": "Shares Betanin with alpha-D-glucose to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371652"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_betanin_panose-to-1-o-acetylmaltose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "betanin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "panose-to-1-o-acetylmaltose"
+      },
+      "note": "Shares Betanin with panose to 1-O-acetylmaltose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371652"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_betanidin_2-descarboxy-betanidin-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "betanidin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-descarboxy-betanidin-to-h2o"
+      },
+      "note": "Shares Betanidin with 2-Descarboxy-betanidin to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371738"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_betanidin_beta-fabatriose-to-soyasapogenol-b",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "betanidin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-fabatriose-to-soyasapogenol-b"
+      },
+      "note": "Shares Betanidin with beta-Fabatriose to soyasapogenol B….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371738"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_betanidin_r-demethyl-4-deoxygadus-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "betanidin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-demethyl-4-deoxygadus-to-nad"
+      },
+      "note": "Shares Betanidin with (R)-demethyl-4-deoxygadus… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371738"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_leucodopachrome_5-s-glutathionyl-aminochr-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "leucodopachrome"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-s-glutathionyl-aminochr-to-o2"
+      },
+      "note": "Shares leucodopachrome with 5-S-glutathionyl-aminochr… to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:231766"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_leucodopachrome_5-s-glutathionyl-dopachro-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "leucodopachrome"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-s-glutathionyl-dopachro-to-h2o"
+      },
+      "note": "Shares leucodopachrome with 5-S-glutathionyl-dopachro… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:231766"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_leucodopachrome_beta-d-glucose-to-leucodopachrome",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "leucodopachrome"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-d-glucose-to-leucodopachrome"
+      },
+      "note": "Shares leucodopachrome with beta-D-glucose to leucodopachrome.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:231766"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-valyl-adenylate-to-h2o "(L-valyl)adenylate to H2O" {
-  spacing 188
+  spacing 152
 
   spine at 0,0 {
     l_valyl_adenylate
@@ -14,41 +14,5 @@ pathway l-valyl-adenylate-to-h2o "(L-valyl)adenylate to H2O" {
     h
     <-> ec_3_6_3_22 [3.6.3.22] +adp +d_valine +phosphate -d_valine -h2o
     atp
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
-    beta_d_galactose
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
-    beta_d_glucose
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
-    d_gulopyranose
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
-    d_idopyranose
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    l_fuculose
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    l_galactose
   }
 }

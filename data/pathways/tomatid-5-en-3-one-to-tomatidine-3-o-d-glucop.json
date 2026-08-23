@@ -115,50 +115,22 @@
       }
     },
     {
-      "id": "n_hydroxy_l_dihomomethioninate",
-      "name": "N-hydroxy-L-dihomomethioninate",
-      "short": "N-hydroxy-L-dihomom…",
-      "formula": "C7H14NO3S",
+      "id": "4_2_4_dihydroxy_6_nonylbenzoyloxy_2_hydroxy_6_no",
+      "name": "4-(2,4-dihydroxy-6-nonylbenzoyloxy)-2-hydroxy-6-nonylbenzoate",
+      "short": "4-(2,4-dihydroxy-6-…",
+      "formula": "C32H45O7",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:134664"
+        "chebi": "CHEBI:232028"
       }
     },
     {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "WATER"
-      }
-    },
-    {
-      "id": "l_dihomomethionine",
-      "name": "L-dihomomethionine",
-      "formula": "C7H15NO2S",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:134632"
-      }
-    },
-    {
-      "id": "o2",
-      "name": "O2",
-      "formula": "O2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM735438"
-      }
-    },
-    {
-      "id": "n_n_dihydroxy_l_dihomomethioninate",
-      "name": "N,N-dihydroxy-L-dihomomethioninate",
-      "short": "N,N-dihydroxy-L-dih…",
-      "formula": "C7H14NO4S",
+      "id": "exophillate",
+      "name": "exophillate",
+      "formula": "C38H55O12",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:134665"
+        "chebi": "CHEBI:232029"
       }
     }
   ],
@@ -323,96 +295,133 @@
     },
     {
       "id": "r5",
-      "name": "Reaction MNXR176559",
+      "name": "exophillate aglycone + UDP-alpha-D-glucose = exophillate + UDP + H(+)",
+      "equation": "exophillate aglycone + UDP-alpha-D-glucose = exophillate + UDP + H(+)",
       "substrates": [
         {
-          "metabolite": "nadp",
+          "metabolite": "4_2_4_dihydroxy_6_nonylbenzoyloxy_2_hydroxy_6_no",
           "stoichiometry": 1
         },
         {
-          "metabolite": "n_hydroxy_l_dihomomethioninate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "udp_d_glucose",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "l_dihomomethionine",
+          "metabolite": "exophillate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "o2",
+          "metabolite": "udp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadph",
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR176559"
+        "rhea": "RHEA:82179"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
+            "db": "Rhea",
+            "id": "RHEA:82179"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_tomatid_5_en_3_one_3-hydroxy-7-ethoxycoumarin-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tomatid_5_en_3_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxy-7-ethoxycoumarin-to-o2"
+      },
+      "note": "Shares tomatid-5-en-3-one with 3-Hydroxy-7-ethoxycoumarin to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
             "db": "MetaNetX",
-            "id": "MNXR176559"
+            "id": "MNXM1132322"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "Reaction MNXR176560",
-      "substrates": [
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "n_hydroxy_l_dihomomethioninate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "n_n_dihydroxy_l_dihomomethioninate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "metanetx": "MNXR176560"
+      "id": "xt_tomatid_4_en_3_one_fungisterol-to-4alpha-carboxy-ergosta-8",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tomatid_4_en_3_one"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "fungisterol-to-4alpha-carboxy-ergosta-8"
+      },
+      "note": "Shares tomatid-4-en-3-one with fungisterol to 4alpha-carboxy-ergosta-8,….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR176560"
+            "id": "MNXM819448"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tomatidine_beta1-tomatine-to-tomatidine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tomatidine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta1-tomatine-to-tomatidine"
+      },
+      "note": "Shares tomatidine with beta1-tomatine to tomatidine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:166999"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_exophillate_n-acetyl-d-glucosaminyl-to-d-gal-1-3-d-glcnac",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "exophillate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyl-d-glucosaminyl-to-d-gal-1-3-d-glcnac"
+      },
+      "note": "Shares exophillate with N-acetyl-β-D-glucosaminyl… to β-D-Gal-(1→3)-β-D-GlcNAc-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:232029"
           }
         ]
       }

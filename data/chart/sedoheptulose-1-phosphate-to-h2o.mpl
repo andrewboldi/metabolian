@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway sedoheptulose-1-phosphate-to-h2o "sedoheptulose 1-phosphate to H2O" {
-  spacing 256
+  spacing 184
 
   spine at 0,0 {
     sedoheptulose_1_phosphate
@@ -16,77 +16,5 @@ pathway sedoheptulose-1-phosphate-to-h2o "sedoheptulose 1-phosphate to H2O" {
     h
     <-> ec_3_6_3_17 [3.6.3.17] +adp +l_erythrulose +phosphate -l_erythrulose -h2o
     atp
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    pg_18_0_18_0
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_2_di_9z_octadecenoyl_sn_glycero_3_phosphocholi
-  }
-
-  branch from dihydroxyacetone_phosphate side left {
-    dihydroxyacetone_phosphate
-    <-> ec_1_1_5_3 [1.1.5.3] +ubiquinone_6 +sn_glycerol_3_phosphate
-    ubiquinol_6
-  }
-
-  branch from dihydroxyacetone_phosphate side right {
-    dihydroxyacetone_phosphate
-    <-> ec_4_1_2_13 [4.1.2.13] +sedoheptulose_1_phosphate +h
-    d_erythrose
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_270 [1.1.1.270] +31_norcycloartenol +h +nadph
-    31_norcycloartenone
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +trans_p_coumaryl_alcohol +h +nadph +h2o
-    trans_anol
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> . +hexadecanoate +adp +nadp +coa +phosphate +h +atp +h2o
-    acetyl_coa
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> . +brassicasterol +h +nadp
-    24_epicampesterol
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    1_2_di_9z_12z_octadecadienoyl_sn_glycero_3_phosp
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    1_9z_octadec_9_enoyl_2_hexadecanoyl_sn_glycero_3
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_glutamine +l_tryptophan +l_tyrosine
-    trp_tyr_gln
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_tryptophan +l_tyrosine
-    tryptophanyl_tyrosyl_tyrosine
   }
 }

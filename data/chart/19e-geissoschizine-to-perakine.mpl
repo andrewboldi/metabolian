@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 19e-geissoschizine-to-perakine "(19E)-geissoschizine to perakine" {
-  spacing 206
+  spacing 242
 
   spine at 0,0 {
     19e_geissoschizine
@@ -22,19 +22,55 @@ pathway 19e-geissoschizine-to-perakine "(19E)-geissoschizine to perakine" {
 
   branch from fmn side left {
     fmn
-    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +fmnh2 +o2 +h2o +hplus
-    21_hdohe
+    <-> . +cordypyrone_a +fmnh2 +o2 +h2o +hplus
+    cordypyrone_b
   }
 
   branch from fmn side right {
     fmn
-    <-> . +5z_8z_11z_icosatrienoate +fmnh2 +o2 +h2o +hplus
-    20_hetre
+    <-> ec_1_14_14_183 [1.14.14.183] +taxusin +fmnh2 +o2 +h2o +hplus
+    2_hydroxytaxusin
   }
 
   branch from perakine side left {
     perakine
     <-> ec_1_1_1_317 [1.1.1.317] +nadp +nadph +hplus
     raucaffrinoline
+  }
+
+  branch from 19e_geissoschizine side right {
+    19e_geissoschizine
+    <-> ec_1_14_14_187 [1.14.14.187] +fmnh2 +o2 +fmn +h2o +hplus
+    rhazimal
+  }
+
+  branch from 19e_geissoschizine side left {
+    19e_geissoschizine
+    <-> . +nadph +hplus +nadp
+    16r_19e_isositsirikine
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> ec_1_14_14_182 [1.14.14.182] +2_hydroxytaxusin +o2 +fmn +h2o +hplus
+    2_7_dihydroxytaxusin
+  }
+
+  branch from fmnh2 side left {
+    fmnh2
+    <-> ec_1_14_14_183 [1.14.14.183] +o2 +2_7_dihydroxytaxusin +fmn +h2o +hplus
+    7_hydroxytaxusin
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +preaspterpenacid_acid_i +fmnh2 +o2 +h2o +hplus
+    preaspterpenacid_acid_ii
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> . +cholesterol +fmnh2 +o2 +h2o +hplus
+    16s_22s_dihydroxycholesterol
   }
 }

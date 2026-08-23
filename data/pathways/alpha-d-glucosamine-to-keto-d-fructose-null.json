@@ -1,0 +1,275 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "alpha-d-glucosamine-to-keto-d-fructose-null",
+  "name": "alpha-D-glucosamine… to keto-D-fructose…",
+  "category": "other",
+  "summary": "A 3-step route from alpha-D-glucosamine 6-phosphate to keto-D-fructose 6-phosphate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR132703"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "alpha_d_glucosamine_6_phosphate",
+      "name": "alpha-D-glucosamine 6-phosphate",
+      "short": "alpha-D-glucosamine…",
+      "formula": "C6H13NO8P",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1104065"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "nh4",
+      "name": "NH4",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM729302"
+      }
+    },
+    {
+      "id": "keto_d_fructose_6_phosphate",
+      "name": "keto-D-fructose 6-phosphate",
+      "short": "keto-D-fructose 6-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM89629"
+      }
+    },
+    {
+      "id": "itp",
+      "name": "ITP",
+      "formula": "C10H11N4O14P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1103428"
+      }
+    },
+    {
+      "id": "idp",
+      "name": "IDP",
+      "formula": "C10H11N4O11P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1104559"
+      }
+    },
+    {
+      "id": "beta_d_fructose_1_6_bisphosphate",
+      "name": "beta-D-fructose 1,6-bisphosphate",
+      "short": "beta-D-fructose…",
+      "formula": "C6H10O12P2",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1364229"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "gdp",
+      "name": "GDP",
+      "formula": "C10H12N5O11P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1103285"
+      }
+    },
+    {
+      "id": "gtp",
+      "name": "GTP",
+      "formula": "C10H12N5O14P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1103553"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_99_6",
+      "name": "glucosamine-6-phosphate deaminase",
+      "ec": [
+        "3.5.99.6"
+      ],
+      "xrefs": {
+        "uniprot": "P46926"
+      }
+    },
+    {
+      "id": "ec_2_7_1_11",
+      "name": "6-phosphofructokinase",
+      "ec": [
+        "2.7.1.11"
+      ],
+      "xrefs": {
+        "uniprot": "P17858"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "glucosamine-6-phosphate deaminase",
+      "ec": "3.5.99.6",
+      "substrates": [
+        {
+          "metabolite": "alpha_d_glucosamine_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nh4",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "keto_d_fructose_6_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_99_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR132703"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR132703"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "6-phosphofructokinase",
+      "ec": "2.7.1.11",
+      "substrates": [
+        {
+          "metabolite": "itp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "keto_d_fructose_6_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "idp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "beta_d_fructose_1_6_bisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR132678"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR132678"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "6-phosphofructokinase",
+      "ec": "2.7.1.11",
+      "substrates": [
+        {
+          "metabolite": "gdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "beta_d_fructose_1_6_bisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gtp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "keto_d_fructose_6_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR133444"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR133444"
+          }
+        ]
+      }
+    }
+  ]
+}

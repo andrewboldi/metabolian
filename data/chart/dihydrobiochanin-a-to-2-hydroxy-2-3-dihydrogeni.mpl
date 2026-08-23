@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dihydrobiochanin-a-to-2-hydroxy-2-3-dihydrogeni "dihydrobiochanin-A to 2-hydroxy-2,3-dihydrogeni…" {
-  spacing 194
+  spacing 152
 
   spine at 0,0 {
     dihydrobiochanin_a
@@ -14,47 +14,5 @@ pathway dihydrobiochanin-a-to-2-hydroxy-2-3-dihydrogeni "dihydrobiochanin-A to 2
     2_5_7_trihydroxy_4_methoxyisoflavanone
     <-> . +s_adenosyl_l_homocysteine +h -2_hydroxy_2_3_dihydrogenistein
     s_adenosyl_l_methionine
-  }
-
-  branch from biochanin_a side left {
-    biochanin_a
-    <-> . +beta_d_glucose +h2o
-    biochanin_a_7_o_beta_d_glucoside
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +1_2_distearoyl_sn_glycero_3_phosphocholine +phosphate +1_2_distearoyl_sn_glycero_3_phosphocholine +h2o
-    atp
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
-    duvoglustat
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> ec_1_1_1_71 [1.1.1.71] +h +11r_dihydroartemisinic_aldehyde +nadp
-    drimenol
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> ec_1_1_1_71 [1.1.1.71] +2e_geranial +h +nadp
-    thujan_3_ol
-  }
-
-  branch from s_adenosyl_l_methionine side right {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +1_dehydro_6_gingerdione +h
-    1_3_4_dihydroxyphenyl_1_decene_3_5_dione
-  }
-
-  branch from s_adenosyl_l_methionine side left {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +6_dehydrogingerdione +h
-    1e_3z_1_3_4_dihydroxyphenyl_3_hydroxydeca_1_3_d
   }
 }

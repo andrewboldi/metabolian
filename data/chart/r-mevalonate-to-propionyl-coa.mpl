@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway r-mevalonate-to-propionyl-coa "(R)-mevalonate to propionyl-CoA" {
-  spacing 308
+  spacing 340
 
   spine at 0,0 {
     mevalonate
@@ -26,45 +26,81 @@ pathway r-mevalonate-to-propionyl-coa "(R)-mevalonate to propionyl-CoA" {
     acetoacetate
   }
 
-  branch from hmg_coa side right {
-    hmg_coa
-    <-> ec_2_8_3_13 [2.8.3.13] +3_hydroxy_3_methylglutarate +malonyl-coa
-    malonate
+  branch from succinate side right {
+    succinate
+    <-> . +trans_3_hydroxy_l_proline +akg +o2 +co2
+    3s_3_4_dihydroxy_l_proline
   }
 
   branch from succinate side left {
     succinate
-    <-> ec_1_14_11_41 [1.14.11.41] +arginine +akg +o2 +co2
-    3s_3_hydroxy_l_arginine
-  }
-
-  branch from succinate side right {
-    succinate
-    <-> ec_1_14_11_43 [1.14.11.43] +s_dichlorprop +akg +o2 +pyruvate +co2
-    2_4_dichlorophenol
-  }
-
-  branch from succinyl_coa side left {
-    succinyl_coa
-    <-> ec_2_3_1_174 [2.3.1.174] +acetyl_coa +coa
-    3_oxoadipyl_coa
+    <-> ec_1_14_11_79 [1.14.11.79] +l_histidine +akg +o2 +co2
+    3s_3_hydroxy_l_histidine
   }
 
   branch from succinyl_coa side right {
     succinyl_coa
-    <-> ec_2_3_1_46 [2.3.1.46] +l_homoserine +coa
-    o_succinyl_l_homoserinate
+    <-> ec_2_8_3_28 [2.8.3.28] +indole_3_acetate +succinate
+    indol_3_ylacetyl_coa
   }
 
-  branch from propionyl_coa side left {
-    propionyl_coa
-    <-> ec_6_4_1_3 [6.4.1.3] +hco3 +atp +adp +pi +hplus
-    s_methylmalonyl_coa
+  branch from succinyl_coa side left {
+    succinyl_coa
+    <-> . +2_oxindole_3_acetate +succinate
+    2_oxoindol_3_yl_acetyl_coa
   }
 
   branch from propionyl_coa side right {
     propionyl_coa
-    <-> ec_2_3_3_5 [2.3.3.5] +oxaloacetate +h2o +coa +hplus
-    2s_3s_2_methylcitrate
+    <-> . +hplus +co2
+    r_methylmalonyl_coa
+  }
+
+  branch from propionyl_coa side left {
+    propionyl_coa
+    <-> ec_2_3_1_222 [2.3.1.222] +pi +coa
+    propanoyl_phosphate
+  }
+
+  branch from mevalonate side right {
+    mevalonate
+    <-> . +nad +nadh +hplus
+    r_mevaldate
+  }
+
+  branch from succinyl_coa side left {
+    succinyl_coa
+    <-> . +2_aminophenyl_succinate +succinate
+    2_2_aminophenyl_succinyl_coa
+  }
+
+  branch from succinyl_coa side right {
+    succinyl_coa
+    <-> . +2_aminophenyl_succinate +succinate
+    3_2_aminophenyl_succinyl_coa
+  }
+
+  branch from succinate side left {
+    succinate
+    <-> . +l_asparagine +akg +o2 +co2
+    3s_3_hydroxy_l_asparagine
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> ec_1_14_11_n4 [1.14.11.n4] +akg +o2 +3s_3_hydroxy_l_histidine +co2
+    l_histidine
+  }
+
+  branch from propionyl_coa side left {
+    propionyl_coa
+    <-> . +acetyl_coa +coa
+    maa_coa
+  }
+
+  branch from propionyl_coa side right {
+    propionyl_coa
+    <-> . +nad +coa +co2 +nadh
+    mmsa
   }
 }

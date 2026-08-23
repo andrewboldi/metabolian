@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-oxo-4-aminobutyrate-to-h2o "2-Oxo-4-aminobutyrate to H2O" {
-  spacing 236
+  spacing 308
 
   spine at 0,0 {
     2_oxo_4_aminobutyrate
@@ -18,85 +18,157 @@ pathway 2-oxo-4-aminobutyrate-to-h2o "2-Oxo-4-aminobutyrate to H2O" {
 
   branch from o2 side left {
     o2
-    <-> ec_1_13_12_16 [1.13.12.16] +nitrite +h +hexanal
-    1_nitrohexane
+    <-> ec_1_13_11_39 [1.13.11.39] +2_hydroxy_6_oxo_6_4_chlorophenyl_hexa_2_4_dienoa +h
+    4_chlorobiphenyl_2_3_diol
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_1_3_15 [1.1.3.15] +3_chlorolactic_acid +h +h2o2
-    compound_0039890
+    <-> . +6_oxo_2_hydroxy_7_4_chlorophenyl_3_8_8_trichloro +h
+    1_1_dichloro_2_4_chloro_2_3_dihydroxyphenyl_2_4
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_alanine +l_valine
-    ala_val
+    <-> . +2_oxocyclohexane_1_carbonyl_coa +h
+    6_carboxyhexanoyl_coa
   }
 
   branch from h2o side right {
     h2o
-    <-> . +phenylalanyl_phenylalanine
-    l_phenylalanine
+    <-> ec_3_7_1_21 [3.7.1.21] +6_oxo_2_hydroxycyclohexane_1_carboxyl_coa +h
+    3_hydroxy_6_carboxyhexanoyl_coa
   }
 
   branch from diphosphate side left {
     diphosphate
-    <-> . +beta_amorphene
-    2e_6e_farnesyl_diphosphate
+    <-> ec_2_5_1_31 [2.5.1.31] +di_trans_poly_cis_decaprenyl_diphosphate +ipp
+    di_trans_poly_cis_nonaprenyl_diphosphate
   }
 
   branch from diphosphate side right {
     diphosphate
-    <-> . +2e_6e_farnesyl_diphosphate
-    beta_muurolene
+    <-> ec_4_2_3_76 [4.2.3.76] +h +selinene
+    farnesyl_diphosphate
   }
 
   branch from h side left {
     h
-    <-> ec_1_1_1_12 [1.1.1.12] +nadh +keto_d_sorbose +nad
-    l_glucitol
+    <-> ec_2_3_1_115 [2.3.1.115] +malonyl_coa +apiin +coa
+    malonylapiin
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_184 [1.1.1.184] +nadh +indan_1_one +nad
-    r_indan_1_ol
+    <-> ec_2_3_1_115 [2.3.1.115] +apiin +coa +malonylapiin
+    malonyl_coa
   }
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_57 [2.3.1.57] +acetyl_coa +spermine +h
-    n_1_n_12_diacetylspermine
+    <-> ec_2_3_1_7 [2.3.1.7] +r_carnitine +glycolyl_coa
+    o_glycolyl_l_carnitine
   }
 
   branch from coa side right {
     coa
-    <-> . +malonyl_coa +h +h2o +6_carboxyhexanoyl_coa +o2
-    co2
+    <-> . +acetyl_coa +beta_d_glc_1_4_beta_d_glc_1_3_alpha_d_gal_diphos
+    6_o_acetyl_beta_d_glc_1_4_beta_d_glc_1_3_alpha_d
   }
 
   branch from amp side left {
     amp
-    <-> ec_6_2_1_7 [6.2.1.7] +3alpha_7alpha_12alpha_trihydroxy_5beta_cholestan +diphosphate +atp +coa
-    25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol
+    <-> ec_6_2_1_12 [6.2.1.12] +diphosphate +4_coumaroyl_coa +atp +coa
+    4_coumarate
   }
 
   branch from amp side right {
     amp
-    <-> . +diphosphate +3r_3_isopropenyl_6_oxoheptanoyl_coa +h +atp +coa
-    3r_3_isopropenyl_6_oxoheptanoate
+    <-> ec_6_2_1_12 [6.2.1.12] +diphosphate +caffeoyl_coa +h +atp +coa
+    e_caffeate
   }
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
-    phosphatidylglycerophosphate_dioctadecanoyl_n_c1
+    <-> ec_6_3_5_13 [6.3.5.13] +glcnac_1_4_mur2ac_oyl_l_ala_gamma_d_glu_l_lys_d +h +nh4 +adp +phosphate
+    undecaprenyl_diphospho_n_acetylmuramoyl_n_acetyl
   }
 
   branch from atp side right {
     atp
-    <-> . +h +adp +phosphate +h2o
-    l_prolylglycine
+    <-> . +beta_d_glcnac_1_4_mur2ac_oyl_l_ala_gamma_d_glu_l +nh4 +h +adp +phosphate
+    beta_d_glcnac_1_4_mur2ac_oyl_l_ala_d_isoglutamin
+  }
+
+  branch from nh4 side left {
+    nh4
+    <-> . +2_5_diamino_6_1_d_ribitylamino_pyrimidin_4_3h_on +h +h2o
+    5_amino_6_5_phosphoribitylaminouracil
+  }
+
+  branch from nh4 side right {
+    nh4
+    <-> . +2z_4z_2_hydroxy_5_carboxymuconate_6_semialdehyd +h +h2o
+    2z_4z_2_amino_5_formylhexa_2_4_dienedioate
+  }
+
+  branch from h2o2 side left {
+    h2o2
+    <-> ec_1_17_3_2 [1.17.3.2] +1_methyl_7h_xanthine +o2 +h2o
+    1_methyluric_acid
+  }
+
+  branch from h2o2 side right {
+    h2o2
+    <-> ec_1_17_3_2 [1.17.3.2] +1_methyl_7h_xanthine +o2 +h2o
+    1_methyluric_acid
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +h +1_1_dichloro_2_4_chloro_2_3_dihydroxyphenyl_2_4
+    6_oxo_2_hydroxy_7_4_chlorophenyl_3_8_8_trichloro
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +2e_4z_3_8_8_8_tetrachloro_7_4_chlorophenyl_2_hy +h
+    2_3_dihydroxy_ddt
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +dialdehyde_11678 +h
+    4_21_dehydrocorynantheine_aldehyde
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +dialdehyde
+    4_21_dehydrocorynantheine_aldehyde
+  }
+
+  branch from tetradecanoyl_coa side left {
+    tetradecanoyl_coa
+    <-> . +s_carnitine +coa
+    o_tetradecanoyl_r_carnitine
+  }
+
+  branch from tetradecanoyl_coa side right {
+    tetradecanoyl_coa
+    <-> ec_1_14_19_1 [1.14.19.1] +h +o2 +nadph +nadp +h2o
+    a_tetradecenoyl_coa_n_c14_1coa
+  }
+
+  branch from l_lysine side left {
+    l_lysine
+    <-> . +aldehydo_d_glucose +h +h2o
+    n1_1_deoxy_d_fructos_1_yl_l_lysine
+  }
+
+  branch from l_lysine side right {
+    l_lysine
+    <-> . +l_arginine +h2o
+    arginyl_arginyl_lysine
   }
 }

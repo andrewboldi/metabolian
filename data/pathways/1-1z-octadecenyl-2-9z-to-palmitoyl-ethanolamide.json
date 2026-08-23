@@ -114,6 +114,43 @@
       "xrefs": {
         "chebi": "CHEBI:71464"
       }
+    },
+    {
+      "id": "1_o_octadecyl_2_oleoyl_sn_glycero_3_phosphoethan",
+      "name": "1-O-octadecyl-2-oleoyl-sn-glycero-3-phosphoethanolamine",
+      "short": "1-O-octadecyl-2-ole…",
+      "formula": "C41H82NO7P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:145178"
+      }
+    },
+    {
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29033"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "iron",
+      "name": "iron",
+      "formula": "Fe",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:29034"
+      }
     }
   ],
   "enzymes": [],
@@ -243,6 +280,323 @@
           {
             "db": "Rhea",
             "id": "RHEA:53184"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "1-O-octadecyl-2-(9Z-octadecenoyl)-sn-glycero-3-phosphoethanolamine + 2 Fe(II)-[cytochro...",
+      "equation": "1-O-octadecyl-2-(9Z-octadecenoyl)-sn-glycero-3-phosphoethanolamine + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = 1-(1Z-octadecenyl)-2-(9Z-octadecenoyl)-sn-glycero-3-phosphoethanolamine + 2 Fe(III)-[cytochrome b5] + 2 H2O",
+      "substrates": [
+        {
+          "metabolite": "1_o_octadecyl_2_oleoyl_sn_glycero_3_phosphoethan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_1z_octadecenyl_2_9z_octadecenoyl_sn_glycero_3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:61956"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61956"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_1_1z_octadecenyl_2_9z_octadecenoyl_sn_glycero_3_1-saturated-to-1-z-alk-1-enyl-2-acyl-s",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_1z_octadecenyl_2_9z_octadecenoyl_sn_glycero_3"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-saturated-to-1-z-alk-1-enyl-2-acyl-s"
+      },
+      "note": "Shares 1-(1Z-octadecenyl)-2-(9Z-octadecenoyl)-sn-glycero-3-phosphoethanolamine with 1-(α,β-saturated… to 1-(Z)-alk-1-enyl-2-acyl-s….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78340"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_hexadecanoyl_1_1z_octadecenoyl_2_oleoyl_sn_gly_n-hexadecanoyl-1-2-dihexa-to-1-2-dipalmitoyl-3-p",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_hexadecanoyl_1_1z_octadecenoyl_2_oleoyl_sn_gly"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-hexadecanoyl-1-2-dihexa-to-1-2-dipalmitoyl-3-p"
+      },
+      "note": "Shares N-hexadecanoyl-1-[(1Z)-octadecenoyl]-2-oleoyl-sn-glycero-3-phosphoethanolamine with N-hexadecanoyl-1,2-dihexa… to 1,2-dipalmitoyl-3-palmito….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:138663"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_palmitoyl_sn_glycero_3_phosphocholine_1-2-diheptadecanoyl-sn-gl-to-9z-12z-pentadecadie",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_palmitoyl_sn_glycero_3_phosphocholine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-diheptadecanoyl-sn-gl-to-9z-12z-pentadecadie"
+      },
+      "note": "Shares 2-palmitoyl-sn-glycero-3-phosphocholine with 1,2-diheptadecanoyl-sn-gl… to (9Z,12Z)-pentadecadienoyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76078"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_palmitoyl_sn_glycero_3_phosphocholine_1-3-dioleoyl-2-palmitoylg-to-8e-10s-10-hydropero",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_palmitoyl_sn_glycero_3_phosphocholine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-3-dioleoyl-2-palmitoylg-to-8e-10s-10-hydropero"
+      },
+      "note": "Shares 2-palmitoyl-sn-glycero-3-phosphocholine with 1,3-dioleoyl-2-palmitoylg… to (8E,10S)-10-hydroperoxy-8….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76078"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_palmitoyl_sn_glycero_3_phosphocholine_1-octadecanoyl-2-octanoyl-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_palmitoyl_sn_glycero_3_phosphocholine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-octadecanoyl-2-octanoyl-to-diphosphate"
+      },
+      "note": "Shares 2-palmitoyl-sn-glycero-3-phosphocholine with 1-octadecanoyl-2-octanoyl… to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76078"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_palmitoyl_sn_glycero_3_phosphocholine_1-oleoyl-2-palmitoyl-sn-g-to-9z-hexadecenoyl-sn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_palmitoyl_sn_glycero_3_phosphocholine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-oleoyl-2-palmitoyl-sn-g-to-9z-hexadecenoyl-sn"
+      },
+      "note": "Shares 2-palmitoyl-sn-glycero-3-phosphocholine with 1-oleoyl-2-palmitoyl-sn-g… to [(9Z)-hexadecenoyl]-sn-gl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76078"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_palmitoyl_sn_glycero_3_phosphocholine_h-to-2-palmitoyl-sn-glycero-3",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_palmitoyl_sn_glycero_3_phosphocholine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-2-palmitoyl-sn-glycero-3"
+      },
+      "note": "Shares 2-palmitoyl-sn-glycero-3-phosphocholine with H to 2-palmitoyl-sn-glycero-3-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76078"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_palmitoyl_sn_glycero_3_phosphocholine_lipid-a-4-e-coli-to-sn-glycerol-3-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_palmitoyl_sn_glycero_3_phosphocholine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "lipid-a-4-e-coli-to-sn-glycerol-3-phosphate"
+      },
+      "note": "Shares 2-palmitoyl-sn-glycero-3-phosphocholine with lipid A(4−) (E. coli) to sn-glycerol 3-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76078"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_1z_octadecenyl_sn_glycero_3_phosphate_1-1z-octadecenyl-sn-gly-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_1z_octadecenyl_sn_glycero_3_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-1z-octadecenyl-sn-gly-to-ammonium"
+      },
+      "note": "Shares 1-(1Z-octadecenyl)-sn-glycero-3-phosphate with 1-(1Z-octadecenyl)-sn-gly… to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:137017"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_palmitoyl_ethanolamide_1-2-dioleoylglycerol-to-cytidine-5-monophosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "palmitoyl_ethanolamide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-dioleoylglycerol-to-cytidine-5-monophosphate"
+      },
+      "note": "Shares palmitoyl ethanolamide with 1,2-dioleoylglycerol to cytidine 5'-monophosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:71464"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_palmitoyl_ethanolamide_n-1-dipalmitoyl-2-linoleo-to-l-glutamylethanolam",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "palmitoyl_ethanolamide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-1-dipalmitoyl-2-linoleo-to-l-glutamylethanolam"
+      },
+      "note": "Shares palmitoyl ethanolamide with N,1-dipalmitoyl-2-linoleo… to γ-L-glutamylethanolamide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:71464"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_palmitoyl_ethanolamide_n-hexadecanoyl-1-2-dihexa-to-1-2-dipalmitoyl-3-p",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "palmitoyl_ethanolamide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-hexadecanoyl-1-2-dihexa-to-1-2-dipalmitoyl-3-p"
+      },
+      "note": "Shares palmitoyl ethanolamide with N-hexadecanoyl-1,2-dihexa… to 1,2-dipalmitoyl-3-palmito….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:71464"
           }
         ]
       }

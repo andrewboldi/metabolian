@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-3-dioleoyl-2-palmitoylg-to-8e-10s-10-hydropero "1,3-dioleoyl-2-palmitoylg… to (8E,10S)-10-hydroperoxy-8…" {
-  spacing 198
+  spacing 240
 
   spine at 0,0 {
     1_3_dioleoyl_2_palmitoylglycerol
@@ -20,14 +20,14 @@ pathway 1-3-dioleoyl-2-palmitoylg-to-8e-10s-10-hydropero "1,3-dioleoyl-2-palmito
 
   branch from palmitate side left {
     palmitate
-    <-> . +1_hexadecanoyl_sn_glycero_3_phosphocholine +h2o +hplus
-    choline_alfoscerate
+    <-> . +1_hexadecanoyl_sn_glycero_3_phosphoethanolamine +h2o +hplus
+    2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate
   }
 
   branch from palmitate side right {
     palmitate
-    <-> . +1_palmitoyl_2_acyl_sn_glycero_3_phosphocholine +h2o +hplus
-    2_acyl_sn_glycero_3_phosphocholine
+    <-> . +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +h2o +hplus
+    2_linoleoyl_sn_glycero_3_phosphocholine
   }
 
   branch from triolein side left {
@@ -38,25 +38,67 @@ pathway 1-3-dioleoyl-2-palmitoylg-to-8e-10s-10-hydropero "1,3-dioleoyl-2-palmito
 
   branch from glycerol side right {
     glycerol
-    <-> . +1_monomyristoylglycerol +h2o +hplus
-    tetradecanoate
+    <-> . +15_deoxy_12_14_prostaglandin_j2_2_glyceryl_ester +h2o +hplus
+    15_deoxy_12_14_prostaglandin_j2
   }
 
   branch from glycerol side left {
     glycerol
-    <-> . +1_monolauroylglycerol +h2o +hplus
-    dodecanoate
+    <-> ec_3_1_3_21 [3.1.3.21] +h2o +pi
+    sn_glycerol_1_phosphate
   }
 
   branch from oleate side right {
     oleate
-    <-> . +1_palmitoyl_2_3_dioleoyl_sn_glycerol +h2o +hplus
-    1_palmitoyl_3_oleoyl_sn_glycerol
+    <-> . +1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph +h2o +hplus
+    1_hexadecanoyl_sn_glycero_3_phosphocholine
   }
 
   branch from oleate side left {
     oleate
-    <-> . +1_2_dioleoylglycerol +h2o +hplus
-    2_oleoylglycerol
+    <-> . +1_oleoyl_2_palmitoyl_sn_glycero_3_phosphocholine +h2o +hplus
+    2_palmitoyl_sn_glycero_3_phosphocholine
+  }
+
+  branch from palmitate side right {
+    palmitate
+    <-> . +1_3_dipalmitoyl_2_oleoylglycerol +h2o +hplus
+    1_palmitoyl_2_oleoylglycerol
+  }
+
+  branch from palmitate side left {
+    palmitate
+    <-> . +1_palmitoyl_2_oleoyl_3_stearoyl_sn_glycerol +h2o +hplus
+    2_oleoyl_3_stearoyl_sn_glycerol
+  }
+
+  branch from 1_oleoylglycerol side right {
+    1_oleoylglycerol
+    <-> . +h2o +oleate +hplus
+    1_2_dioleoylglycerol
+  }
+
+  branch from glycerol side left {
+    glycerol
+    <-> . +1_icosanoylglycerol +h2o +hplus
+    icosanoate
+  }
+
+  branch from glycerol side right {
+    glycerol
+    <-> . +prostaglandin_e2_1_glyceryl_ester +h2o +hplus
+    prostaglandin_e2
+  }
+
+  branch from oleate side left {
+    oleate
+    <-> . +h2o +coa +hplus
+    oleoyl_coa
+  }
+
+  branch from oleate side right {
+    oleate
+    <-> . +1_oleoyl_sn_glycero_3_phosphoserine +h2o +hplus
+    sn_glycero_3_phosphoserine
   }
 }

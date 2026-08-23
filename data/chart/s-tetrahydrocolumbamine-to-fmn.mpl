@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-tetrahydrocolumbamine-to-fmn "(S)-tetrahydrocolumbamine to FMN" {
-  spacing 286
+  spacing 262
 
   spine at 0,0 {
     s_tetrahydrocolumbamine
@@ -20,29 +20,5 @@ pathway s-tetrahydrocolumbamine-to-fmn "(S)-tetrahydrocolumbamine to FMN" {
     s_canadine
     <-> ec_1_3_3_8 [1.3.3.8] +o2 +hplus +h2o2
     berberine
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +ganoderate_tr +fmnh2 +o2 +h2o +hplus
-    ganoderate_jc
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +22s_22_hydroxycampest_4_en_3_one +fmnh2 +o2 +h2o +hplus
-    22r_23r_22_23_dihydroxycampest_4_en_3_one
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +g5_ppp5_m2_aaca_mrna +sam
-    m7g5_ppp5_m2_aaca_mrna
-  }
-
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_374 [2.1.1.374] +3_bromo_2_heptyl_1_hydroxy_4_1h_quinolinone +sam +hplus
-    3_bromo_2_heptyl_1_methoxy_4_1h_quinolinone
   }
 }

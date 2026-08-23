@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway pelargonidin-to-coa "pelargonidin… to CoA" {
-  spacing 306
+  spacing 276
 
   spine at 0,0 {
     pelargonidin_3_o_beta_d_caffeoyl_sambubioside
@@ -14,35 +14,5 @@ pathway pelargonidin-to-coa "pelargonidin… to CoA" {
     udp_alpha_d_xylose
     <-> ec_2_3_1_215 [2.3.1.215] +pelargonidin_3_o_d_glucoside_betaine +trans_caffeoyl_coa +h -coa
     pelargonidin_3_o_6_caffeoyl_beta_d_glucoside
-  }
-
-  branch from pelargonidin_3_o_d_sambubioside side left {
-    pelargonidin_3_o_d_sambubioside
-    <-> . +trans_4_coumaroyl_coa +h +coa
-    pelargonidin_3_o_beta_d_4_coumaroyl_sambubioside
-  }
-
-  branch from trans_caffeoyl_coa side right {
-    trans_caffeoyl_coa
-    <-> . +coa +amp +hplus
-    trans_caffeoyl_amp
-  }
-
-  branch from trans_caffeoyl_coa side left {
-    trans_caffeoyl_coa
-    <-> . +2r_3s_piscidate +coa
-    cimicifugate_d
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +2_methylpropanoyl_coa +2_4_di_2_methyl_butanoyl_3_5_methyl_hexanoyl_suc
-    2_4_di_2_methyl_butanoyl_3_5_methyl_hexanoyl_6_i
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +2s_2_methylbutanoyl_coa +2_4_di_2_methyl_butanoyl_3_5_methyl_hexanoyl_suc
-    2_4_6_tri_2_methyl_butanoyl_3_5_methyl_hexanoyl
   }
 }

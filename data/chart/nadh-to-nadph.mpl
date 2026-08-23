@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-nadph "NADH to NADPH" {
-  spacing 194
+  spacing 284
 
   spine at 0,0 {
     nadh
@@ -18,14 +18,14 @@ pathway nadh-to-nadph "NADH to NADPH" {
 
   branch from nad side left {
     nad
-    <-> ec_1_14_13_24 [1.14.13.24] +nadh +3_hydroxy_4_methyl_benzoate +h +o2 +h2o
-    4_methylgentisate
+    <-> ec_1_2_1_32 [1.2.1.32] +nadh +h +2e_4z_2_hydroxymuconate +h2o
+    2_hydroxymuconic_semialdehyde
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +2_5_xylenol +h +o2 +h2o
-    5_hydroxymethyl_2_methylphenol
+    <-> ec_1_14_13_3 [1.14.13.3] +nadh +h +4_hydroxyphenylacetate +o2 +h2o
+    3_4_dihydroxyphenylacetate
   }
 
   branch from dtdp_alpha_d_glucose side left {
@@ -34,27 +34,117 @@ pathway nadh-to-nadph "NADH to NADPH" {
     dtdp_d_galactose
   }
 
-  branch from h2o side right {
-    h2o
-    <-> . +glucose +20s_ginsenoside_rh1
-    ginsenoside_rf
+  branch from dtdp_alpha_d_glucose side right {
+    dtdp_alpha_d_glucose
+    <-> ec_2_7_7_24 [2.7.7.24] +diphosphate +h +dttp
+    d_glucopyranose_1_phosphate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +notoginsenoside_fe +glucose
-    ginsenoside_rc
+    <-> . +15_stemmadenine
+    catharanthine
   }
 
-  branch from nadph side right {
-    nadph
-    <-> ec_1_3_1_93 [1.3.1.93] +2e_11z_14r_17z_14_hydroxy_icosa_2_11_17_trienoy +h +nadp
-    auricoloyl_coa
+  branch from h2o side right {
+    h2o
+    <-> . +minovincinine
+    tabersonine
   }
 
   branch from nadph side left {
     nadph
-    <-> . +gdp_6_deoxy_4_keto_d_arabino_heptose +h +nadp
-    gdp_6_deoxy_d_altro_heptose
+    <-> ec_1_14_13_96 [1.14.13.96] +h +5beta_cholestane_3alpha_7alpha_diol +o2 +nadp +h2o
+    5beta_cholestane_3alpha_7alpha_12alpha_triol
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_14_13_97 [1.14.13.97] +taurohyocholate +nadp +h2o +h +o2
+    taurochenodeoxycholate
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> . +h +13_oxo_9z_11e_octadecadienoate +nad
+    13s_hydroxy_9z_11e_octadecadienoate
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_1_1_158 [1.1.1.158] +h +udp_n_acetyl_3_o_1_carboxyvinyl_alpha_d_glucosam +nad
+    udp_n_acetyl_alpha_d_muramate
+  }
+
+  branch from co2 side left {
+    co2
+    <-> ec_4_1_1_96 [4.1.1.96] +spermidine +h
+    carboxyspermidine
+  }
+
+  branch from co2 side right {
+    co2
+    <-> . +3_methylcatechol +nadh +h +nad
+    1_6_dihydroxy_5_methylcyclohexa_2_4_dienecarboxy
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_7_1_1 [2.7.1.1] +itp +hexopyranose +6_o_phosphonohexopyranose
+    idp
+  }
+
+  branch from h side right {
+    h
+    <-> ec_5_1_1_14 [5.1.1.14] +isonocardicin_a
+    nocardicin_b
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_14_13_127 [1.14.13.127] +nadh +2e_3_3_hydroxyphenyl_prop_2_enoate +h +o2 +h2o
+    caffeic_acid
+  }
+
+  branch from nad side right {
+    nad
+    <-> . +nadh +2z_4e_5_hydroxypenta_2_4_diene_1_2_5_tricarboxy +h +h2o
+    2_hydroxy_5_carboxymethylmuconate_semialdehyde
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +protoemetine +tryptamine +h
+    deoxytubulosine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +protoemetine
+    ankorine
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_14_13_88 [1.14.13.88] +h +o2 +3_hydroxyflavanone +nadph +h2o
+    3_5_dihydroxyflavanone
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_14_13_137 [1.14.13.137] +indolin_2_one +h2o +h +o2 +nadph
+    indole
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_14_13_138 [1.14.13.138] +indolin_2_one +h +o2 +nadp +h2o
+    3_hydroxyindolin_2_one
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +e_5_hydroxyferulate +nadp +h2o +h +o2
+    e_ferulate
   }
 }

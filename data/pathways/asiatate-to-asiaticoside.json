@@ -91,6 +91,45 @@
       "xrefs": {
         "chebi": "CHEBI:79928"
       }
+    },
+    {
+      "id": "3_hydroxy_16_17_epoxypregnenolone",
+      "name": "3β-hydroxy-16α,17α-epoxypregnenolone",
+      "short": "3β-hydroxy-16α,17α-…",
+      "formula": "C21H30O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:145045"
+      }
+    },
+    {
+      "id": "3_hydroxy_16_17_epoxypregnenolone_3_d_glucoside",
+      "name": "3β-hydroxy-16α,17α-epoxypregnenolone 3-β-D-glucoside",
+      "short": "3β-hydroxy-16α,17α-…",
+      "formula": "C27H40O8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:145046"
+      }
+    },
+    {
+      "id": "indole_3_butyrate",
+      "name": "indole-3-butyrate",
+      "formula": "C12H12NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:143274"
+      }
+    },
+    {
+      "id": "4_indol_3_yl_butanoyl_d_glucose",
+      "name": "4-(indol-3-yl)butanoyl-β-D-glucose",
+      "short": "4-(indol-3-yl)butan…",
+      "formula": "C18H23NO7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:145927"
+      }
     }
   ],
   "enzymes": [],
@@ -216,6 +255,134 @@
           {
             "db": "Rhea",
             "id": "RHEA:84959"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "3beta-hydroxy-16alpha,17alpha-epoxypregnenolone + UDP-alpha-D-glucose = 3beta-hydroxy-1...",
+      "equation": "3beta-hydroxy-16alpha,17alpha-epoxypregnenolone + UDP-alpha-D-glucose = 3beta-hydroxy-16alpha,17alpha-epoxypregnenolone 3-beta-D-glucoside + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxy_16_17_epoxypregnenolone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_hydroxy_16_17_epoxypregnenolone_3_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:61940"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61940"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(indol-3-yl)butanoate + UDP-alpha-D-glucose = 4-(indol-3-yl)butanoyl-beta-D-glucose + UDP",
+      "equation": "(indol-3-yl)butanoate + UDP-alpha-D-glucose = 4-(indol-3-yl)butanoyl-beta-D-glucose + UDP",
+      "substrates": [
+        {
+          "metabolite": "indole_3_butyrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_indol_3_yl_butanoyl_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:62708"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62708"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_indole_3_butyrate_ent-copal-8-ol-diphosphate-to-l-cysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "indole_3_butyrate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ent-copal-8-ol-diphosphate-to-l-cysteine"
+      },
+      "note": "Shares indole-3-butyrate with ent-copal-8-ol diphosphate to L-cysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:143274"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_indole_3_butyrate_precorrin-6y-to-cob-ii-yrinic-acid-a-c",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "indole_3_butyrate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "precorrin-6y-to-cob-ii-yrinic-acid-a-c"
+      },
+      "note": "Shares indole-3-butyrate with precorrin-6Y to cob(II)yrinic acid a,c….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:143274"
           }
         ]
       }

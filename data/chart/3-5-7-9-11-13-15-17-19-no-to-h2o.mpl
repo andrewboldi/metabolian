@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-5-7-9-11-13-15-17-19-no-to-h2o "3,5,7,9,11,13,15,17,19-no… to H2O" {
-  spacing 188
+  spacing 152
 
   spine at 0,0 {
     3_5_7_9_11_13_15_17_19_nonaoxoicosanoate
@@ -15,9 +15,4 @@ pathway 3-5-7-9-11-13-15-17-19-no-to-h2o "3,5,7,9,11,13,15,17,19-no… to H2O" {
     <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate -rabelomycin -h2o
     atp
   }
-
-
-
-
-
 }

@@ -34,14 +34,14 @@ pathway 5-end-purine-to-s-adenosyl-l-homocysteine "5'-end purine… to S-adenosy
 
   branch from ppi side right {
     ppi
-    <-> ec_6_2_1_14 [6.2.1.14] +pimelate +atp +coa +amp
-    pimeloyl_coa
+    <-> ec_2_7_7_11 [2.7.7.11] +d_xylose_1_phosphate +utp +hplus
+    udp_d_xylose
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_8 [4.2.3.8] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    casbene
+    <-> ec_2_7_7_42 [2.7.7.42] +l_tyrosine +atp
+    o_adenyl_l_tyrosine_1
   }
 
   branch from 5_n7_methyl_5_triphosphoguanosine_purine_ribonuc side right {
@@ -52,14 +52,14 @@ pathway 5-end-purine-to-s-adenosyl-l-homocysteine "5'-end purine… to S-adenosy
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_67 [2.1.1.67] +mercaptopurine +sam +hplus
-    6_methylthiopurine
+    <-> ec_2_1_1_55 [2.1.1.55] +adenosine_5_monophosphate_1 +sam +hplus
+    n6_methyladenosine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_77 [2.1.1.77] +l_isoaspartate +sam
-    l_isoaspartate_methyl_ester
+    <-> ec_2_1_1_113 [2.1.1.113] +2_deoxycytidine_5_monophosphate_1 +sam +hplus
+    n4_methyl_dcmp_1
   }
 
   branch from adenosine side left {
@@ -100,7 +100,73 @@ pathway 5-end-purine-to-s-adenosyl-l-homocysteine "5'-end purine… to S-adenosy
 
   branch from dimethyl_sulfide side left {
     dimethyl_sulfide
+    <-> ec_1_14_13_245 [1.14.13.245] +nadh +o2 +hplus +nad +h2o
+    dimethyl_sulfoxide
+  }
+
+  branch from dimethyl_sulfide side right {
+    dimethyl_sulfide
     <-> . +hydrogen_donor +methanethiol +hydrogen_acceptor
     methane
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_2_5_1_10 [2.5.1.10] +ipp +gpp
+    fpp
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_6_1_1_20 [6.1.1.20] +amp_3_end_1 +l_phenylalanine +atp +amp +hplus
+    3_l_phenylalanyl_adenylyl_1_group
+  }
+
+  branch from sam side left {
+    sam
+    <-> ec_2_5_1_43 [2.5.1.43] +5_s_methyl_5_thioadenosine +hplus
+    s_s_s_nicotianamine_trizwitterion
+  }
+
+  branch from sam side right {
+    sam
+    <-> ec_2_1_1_87 [2.1.1.87] +pyridine +sah
+    n_methylpyridinium
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_106 [2.1.1.106] +l_tryptophan +sam +hplus
+    2_methyl_l_tryptophan
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_105 [2.1.1.105] +n_benzoyl_4_hydroxyanthranilate +sam +hplus
+    n_benzoyl_4_methoxyanthranilate
+  }
+
+  branch from adenosine side left {
+    adenosine
+    <-> . +inosine +amp
+    imp
+  }
+
+  branch from thf side right {
+    thf
+    <-> . +methylene_thf +dserine +h2o
+    hydroxymethyl_serine
+  }
+
+  branch from methionine side left {
+    methionine
+    <-> ec_1_1_99_38 [1.1.99.38] +2_deoxy_scyllo_inosamine +sam +5_deoxyadenosine +hplus
+    3_ammonio_2_3_dideoxy_scyllo_inosose
+  }
+
+  branch from methionine side right {
+    methionine
+    <-> ec_2_8_4_5 [2.8.4.5] +n6_l_threonylcarbamoyladenine_5_monophosphate_2 +thiol_group +hydrogen_donor +sam +h_group +5_deoxyadenosine +hydrogen_acceptor +sah +hplus
+    2_methylthio_n6_l_threonylcarbamoyladenine_5_mon
   }
 }

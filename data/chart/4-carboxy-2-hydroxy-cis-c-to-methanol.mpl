@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-carboxy-2-hydroxy-cis-c-to-methanol "4-carboxy-2-hydroxy-cis,c… to methanol" {
-  spacing 212
+  spacing 170
 
   spine at 0,0 {
     4_carboxy_2_hydroxy_cis_cis_muconate
@@ -18,63 +18,21 @@ pathway 4-carboxy-2-hydroxy-cis-c-to-methanol "4-carboxy-2-hydroxy-cis,c… to m
     3_4_5_trihydroxybenzoate
   }
 
-  branch from h side left {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_palmitoyl_2_9z_12z_15z_octadecatrienoyl_sn_gly
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_aspartate +l_arginine +l_tyrosine
-    tyrosyl_aspartyl_arginine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_glutamate +l_tyrosine
-    tyrosyl_glutamate
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +all_trans_beta_carotene +h +nadph +cryptoxanthin +h2o
-    nadp
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +all_trans_zeaxanthin +nadp +h2o +h +nadph
-    cryptoxanthin
-  }
-
   branch from 3_4_5_trihydroxybenzoate side left {
-    3_4_5_trihydroxybenzoate
-    <-> . +h
-    3_5_dehydroshikimate
-  }
-
-  branch from 3_4_5_trihydroxybenzoate side right {
     3_4_5_trihydroxybenzoate
     <-> .
     3_5_didehydroshikimate
   }
 
-  branch from methanol side left {
-    methanol
-    <-> ec_1_14_18_3 [1.14.18.3] +phylloquinone +h2o +o2 +methane
-    phylloquinol
+  branch from 4_carboxy_2_hydroxy_cis_cis_muconate side right {
+    4_carboxy_2_hydroxy_cis_cis_muconate
+    <-> ec_5_3_3_10 [5.3.3.10]
+    2z_4_oxobut_2_ene_1_2_4_tricarboxylate
   }
 
-  branch from methanol side right {
-    methanol
-    <-> ec_1_14_18_3 [1.14.18.3] +ubiquinol_9 +o2 +methane +h2o
-    ubiquinone_9
+  branch from 4_carboxy_2_hydroxy_cis_cis_muconate side left {
+    4_carboxy_2_hydroxy_cis_cis_muconate
+    <-> .
+    4_carboxy_2_hydroxyhexa_2_4_dienedioate
   }
 }

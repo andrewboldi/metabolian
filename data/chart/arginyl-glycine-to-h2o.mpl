@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway arginyl-glycine-to-h2o "Arginyl-Glycine to H2O" {
-  spacing 252
+  spacing 340
 
   spine at 0,0 {
     arginyl_glycine
@@ -20,61 +20,157 @@ pathway arginyl-glycine-to-h2o "Arginyl-Glycine to H2O" {
 
   branch from glycine side left {
     glycine
-    <-> . +nadh +h +acetate +nad +h2o
-    l_threonine
+    <-> ec_3_4_11_1 [3.4.11.1] +l_leucine +h2o
+    glycyl_l_leucine
   }
 
   branch from glycine side right {
     glycine
-    <-> . +acetyl_coa +h2 +l_threonine
-    coa
-  }
-
-  branch from arginine side left {
-    arginine
-    <-> ec_3_4_11_1 [3.4.11.1] +l_leucine +h2o
-    arg_leu
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_1_1_20 [3.1.1.20] +methyl_3_4_5_trihydroxybenzoate +h +methanol
-    3_4_5_trihydroxybenzoate
+    <-> . +atp +glycyl_l_leucine +h +adp +phosphate
+    l_leucine
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_1_1_1 [3.1.1.1] +dexmethylphenidate +methanol
-    ritalinic_acid
+    <-> . +4_21_dehydrogeissoschizine
+    strictosidine_aglycone
   }
 
-  branch from beta_alanine side right {
-    beta_alanine
-    <-> ec_1_2_1_3 [1.2.1.3] +h +nadph +3_aminopropanal +h2o
-    nadp
+  branch from h2o side right {
+    h2o
+    <-> ec_4_4_1_4 [4.4.1.4] +ethylsulfenate +pyruvate +nh4
+    ethiin
   }
 
   branch from atp side left {
     atp
-    <-> . +3_methylbut_2_enoyl_coa +co2 +h2o +h +adp +phosphate
-    3_methyl_2e_glutaconyl_coa
+    <-> . +h +adp +phosphate +h2o
+    1_f_beta_d_fructosylsucrose
   }
 
   branch from atp side right {
     atp
-    <-> . +d_ribose +h +adp +phosphate +h2o
-    beta_d_ribopyranose
+    <-> . +h +adp +phosphate +h2o
+    4_amino_4_deoxy_l_arabinopyranose
   }
 
   branch from l_arginine side left {
     l_arginine
-    <-> .
-    3s_beta_arginine
+    <-> . +h +ornithine +h2o
+    urea
   }
 
   branch from l_arginine side right {
     l_arginine
-    <-> ec_3_4_17_12 [3.4.17.12] +leu_enkephalin_arg +h +h2o
-    leu_enkephalin
+    <-> ec_3_4_11_9 [3.4.11.9] +des_arg1_bradykinin +h +h2o
+    bradykinin
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +dalcochinin +aldehydo_d_glucose
+    dalcochinin_8_o_beta_glucoside
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +2s_2_hydroxy_3_4_dioxopentyl_phosphate
+    3_4_4_trihydroxy_5_phosphooxypentan_2_one
+  }
+
+  branch from glycine side left {
+    glycine
+    <-> ec_3_4_11_1 [3.4.11.1] +l_leucine +h2o
+    leu_gly
+  }
+
+  branch from glycine side right {
+    glycine
+    <-> . +myristoyl_d_asparaginyl_butan_2_aminyl_malonyl_1 +h2o
+    myristoyl_d_asparaginyl_butan_2_aminyl_malonyl_1
+  }
+
+  branch from h side left {
+    h
+    <-> . +indole_carboxyl_tetrahydro_thiazole +h2o
+    s_indole_l_cysteine
+  }
+
+  branch from h side right {
+    h
+    <-> . +terpinene
+    alpha_terpinyl_cation
+  }
+
+  branch from diphosphate side left {
+    diphosphate
+    <-> ec_6_2_1_12 [6.2.1.12] +5_hydroxyferuloyl_coa +amp +h +atp +coa
+    5_hydroxyferulic_acid
+  }
+
+  branch from diphosphate side right {
+    diphosphate
+    <-> ec_4_2_3_48 [4.2.3.48] +h +3s_6e_nerolidol +h2o
+    farnesyl_diphosphate
+  }
+
+  branch from amp side left {
+    amp
+    <-> . +coelenterazine_disulfonate_dioxetanone +h +adenylylcoelenterazine_disulfonate +h2o
+    o2
+  }
+
+  branch from amp side right {
+    amp
+    <-> . +coelenterazine_disulfonate_dioxetanone +h +o2 +h2o
+    adenylylcoelenterazine_disulfonate
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    6_kestotriose
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    neokestose
+  }
+
+  branch from l_arginine side left {
+    l_arginine
+    <-> . +d_octopine +nadp +h2o +h +nadph
+    pyruvate
+  }
+
+  branch from l_arginine side right {
+    l_arginine
+    <-> . +nadh +4_5_dehydro_l_arginine +h
+    nad
+  }
+
+  branch from adp side left {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    aldehydo_d_apiose
+  }
+
+  branch from adp side right {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    alpha_maltose_6_phosphate
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    d_arabinitol
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    2_amino_2_deoxy_d_mannopyranose
   }
 }

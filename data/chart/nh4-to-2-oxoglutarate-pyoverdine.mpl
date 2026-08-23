@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nh4-to-2-oxoglutarate-pyoverdine "NH4 to 2-oxoglutarate-pyoverdine…" {
-  spacing 188
+  spacing 152
 
   spine at 0,0 {
     nh4
@@ -14,41 +14,5 @@ pathway nh4-to-2-oxoglutarate-pyoverdine "NH4 to 2-oxoglutarate-pyoverdine…" {
     o2
     <-> . +2_oxoglutarate +glutamate_pyoverdine_i -2_oxoglutarate_pyoverdine_i
     l_glutamate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_alanine +l_leucine +l_asparagine
-    alanyl_asparaginyl_leucine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_alanine +l_lysine +glycine +ala_gly_lys
-    h
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +2s_2_acetolactate +h +co2 +h2o
-    diacetyl
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +ubiquinone_6 +h2o
-    ubiquinol_6
-  }
-
-  branch from l_glutamate side left {
-    l_glutamate
-    <-> . +l_asparagine +l_aspartate +h2o
-    aspartyl_asparaginyl_glutamate
-  }
-
-  branch from l_glutamate side right {
-    l_glutamate
-    <-> . +l_proline +l_aspartate +h2o
-    aspartyl_glutamyl_proline
   }
 }

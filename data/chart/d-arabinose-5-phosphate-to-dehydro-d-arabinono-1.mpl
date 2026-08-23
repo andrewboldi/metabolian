@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-arabinose-5-phosphate-to-dehydro-d-arabinono-1 "D-arabinose 5-phosphate to dehydro-D-arabinono-1,4-l…" {
-  spacing 250
+  spacing 292
 
   spine at 0,0 {
     d_arabinose_5_phosphate
@@ -32,19 +32,61 @@ pathway d-arabinose-5-phosphate-to-dehydro-d-arabinono-1 "D-arabinose 5-phosphat
 
   branch from atp side left {
     atp
-    <-> . +diphosphate +h +amp +n_indole_3_acetyl_l_aspartate +indol_3_yl_acetate
-    l_aspartate
+    <-> . +1_6_anhydrous_n_acetylmuramate +h2o +adp
+    n_acetylmuramate_6_phosphate
   }
 
   branch from atp side right {
     atp
-    <-> . +diphosphate +indole_3_acetyl_l_glutamic_acid +amp +h +l_glutamate
-    indol_3_yl_acetate
+    <-> . +h +na +adp +phosphate +na +h2o
+    20s_hydroxypregn_4_en_3_one
   }
 
-  branch from d_arabinopyranose side left {
+  branch from d_arabinose_5_phosphate side left {
+    d_arabinose_5_phosphate
+    <-> .
+    d_arabinofuranose_5_phosphate
+  }
+
+  branch from d_arabinose_5_phosphate side right {
+    d_arabinose_5_phosphate
+    <-> . +h +adp +atp
     d_arabinopyranose
-    <-> . +h +adp +atp +h2o
+  }
+
+  branch from h side left {
+    h
+    <-> ec_5_5_1_7 [5.5.1.7] +chloride +3_chloro_2_methyl_dienelactone
+    3_5_dichloro_2_methylmuconolactone
+  }
+
+  branch from h side right {
+    h
+    <-> ec_1_14_13_107 [1.14.13.107] +o2 +nadph +limonene +limonene_1_2_epoxide +h2o
+    nadp
+  }
+
+  branch from adp side left {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    pmf
+  }
+
+  branch from adp side right {
+    adp
+    <-> . +pmf +h +pmf +atp +h2o
     phosphate
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    atorvastatin_acid
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    atorvastatin_lactone
   }
 }

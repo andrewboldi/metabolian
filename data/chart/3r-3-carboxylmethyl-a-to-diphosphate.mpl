@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3r-3-carboxylmethyl-a-to-diphosphate "(3R)-3-[(carboxylmethyl)a… to diphosphate" {
-  spacing 340
+  spacing 332
 
   spine at 0,0 {
     3r_3_carboxylmethyl_amino_fatty_acid
@@ -16,27 +16,15 @@ pathway 3r-3-carboxylmethyl-a-to-diphosphate "(3R)-3-[(carboxylmethyl)a… to di
     an_isonitrile_lipopeptide
   }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_2_5_1_142 [2.5.1.142] +ipp +dmapp
-    nerylneryl_diphosphate
+  branch from l_lysinium side left {
+    l_lysinium
+    <-> . +dynorphin_a_1_13 +h2o
+    dynorphin_a_1_12
   }
 
-  branch from ppi side right {
-    ppi
-    <-> . +l_cysteinate_group +carbamoyl_p +atp +h2o +amp +pi +hplus
-    c_terminal_s_carbamoyl_l_cysteinate
-  }
-
-  branch from holo-acp side left {
-    holo-acp
-    <-> . +l_tryptophyl_amp +amp
-    o_s_l_tryptophyl_pantetheine_4_phosphoryl_l_seri
-  }
-
-  branch from holo-acp side right {
-    holo-acp
-    <-> . +l_alanyl_amp +amp +hplus
-    o_s_l_alanyl_pantetheine_4_phosphoryl_l_serine_r
+  branch from l_lysinium side right {
+    l_lysinium
+    <-> ec_2_3_1_306 [2.3.1.306] +acetyl_coa +coa +hplus
+    n6_acetyl_l_lysine
   }
 }

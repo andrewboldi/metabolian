@@ -104,16 +104,6 @@
       "xrefs": {
         "chebi": "CHEBI:178049"
       }
-    },
-    {
-      "id": "13_14_dihydro_15_oxoprostaglandin_e1",
-      "name": "13,14-dihydro-15-oxoprostaglandin E1",
-      "short": "13,14-dihydro-15-ox…",
-      "formula": "C20H33O5",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:133408"
-      }
     }
   ],
   "enzymes": [
@@ -122,14 +112,20 @@
       "name": "thromboxane-A synthase",
       "ec": [
         "5.3.99.5"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q96SQ9"
+      }
     },
     {
       "id": "ec_1_1_1_197",
       "name": "15-hydroxyprostaglandin dehydrogenase (NADP(+))",
       "ec": [
         "1.1.1.197"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P16152"
+      }
     }
   ],
   "reactions": [
@@ -326,46 +322,159 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r6",
-      "name": "13,14-dihydro-15-oxo-prostaglandin E1 + NADP(+) = 15-oxoprostaglandin E1 + NADPH + H(+)",
-      "equation": "13,14-dihydro-15-oxo-prostaglandin E1 + NADP(+) = 15-oxoprostaglandin E1 + NADPH + H(+)",
-      "substrates": [
-        {
-          "metabolite": "13_14_dihydro_15_oxoprostaglandin_e1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "15_dehydro_prostaglandin_e1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:50584"
+      "id": "xt_thromboxane_a1_maltoheptaose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "thromboxane_a1"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "maltoheptaose-to-h2o"
+      },
+      "note": "Shares thromboxane A1 with maltoheptaose to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:50584"
+            "db": "MetaNetX",
+            "id": "MNXM1559882"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_h1_8z-11z-14z-eicosatrieno-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_h1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "8z-11z-14z-eicosatrieno-to-fmn"
+      },
+      "note": "Shares prostaglandin H1 with (8Z,11Z,14Z)-eicosatrieno… to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:90793"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_e1_isethionate-to-3-sulfonatopyruvate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_e1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isethionate-to-3-sulfonatopyruvate"
+      },
+      "note": "Shares prostaglandin E1 with isethionate to 3-sulfonatopyruvate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57397"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_e1_nadh-to-15-dehydro-prostaglandin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_e1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-15-dehydro-prostaglandin"
+      },
+      "note": "Shares prostaglandin E1 with NADH to 15-dehydro-prostaglandin….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57397"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_15_dehydro_prostaglandin_e1_nadh-to-15-dehydro-prostaglandin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "15_dehydro_prostaglandin_e1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-15-dehydro-prostaglandin"
+      },
+      "note": "Shares 15-dehydro-prostaglandin E1 with NADH to 15-dehydro-prostaglandin….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57401"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_a1_isethionate-to-3-sulfonatopyruvate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_a1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isethionate-to-3-sulfonatopyruvate"
+      },
+      "note": "Shares prostaglandin A1 with isethionate to 3-sulfonatopyruvate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57398"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_a1_prostaglandin-a1-to-15-o-d-glucuronosyl-p",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_a1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "prostaglandin-a1-to-15-o-d-glucuronosyl-p"
+      },
+      "note": "Shares prostaglandin A1 with prostaglandin A1 to 15-O-(β-D-glucuronosyl)-p….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57398"
           }
         ]
       }

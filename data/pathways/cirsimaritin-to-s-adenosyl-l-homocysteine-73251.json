@@ -1,0 +1,417 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "cirsimaritin-to-s-adenosyl-l-homocysteine-73251",
+  "name": "cirsimaritin to S-adenosyl-L-homocysteine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from cirsimaritin to S-adenosyl-L-homocysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:73251"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:81337"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "cirsimaritin",
+      "name": "cirsimaritin",
+      "formula": "C17H14O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:81337"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "salvigenin",
+      "name": "salvigenin",
+      "formula": "C18H16O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:192703"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "s_adenosyl_l_homocysteine",
+      "name": "S-adenosyl-L-homocysteine",
+      "short": "S-adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1102167"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "s_adenosyl_l_methionine",
+      "name": "S-adenosyl-L-methionine",
+      "short": "S-adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1363767"
+      }
+    },
+    {
+      "id": "scutellarein_7_methyl_ether",
+      "name": "scutellarein 7-methyl ether",
+      "short": "scutellarein…",
+      "formula": "C16H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:192701"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "cirsimaritin + S-adenosyl-L-methionine = salvigenin + S-adenosyl-L-homocysteine + H(+)",
+      "equation": "cirsimaritin + S-adenosyl-L-methionine = salvigenin + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "cirsimaritin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "salvigenin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:73251"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:73251"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR118892",
+      "substrates": [
+        {
+          "metabolite": "s_adenosyl_l_homocysteine",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "salvigenin",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_adenosyl_l_methionine",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "scutellarein_7_methyl_ether",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR118892"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR118892"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "scutellarein 7-methyl ether + S-adenosyl-L-methionine = cirsimaritin + S-adenosyl-L-hom...",
+      "equation": "scutellarein 7-methyl ether + S-adenosyl-L-methionine = cirsimaritin + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "scutellarein_7_methyl_ether",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cirsimaritin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:73243"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:73243"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_cirsimaritin_cirsimaritin-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cirsimaritin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cirsimaritin-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares cirsimaritin with cirsimaritin to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:81337"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_salvigenin_cirsimaritin-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "salvigenin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cirsimaritin-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares salvigenin with cirsimaritin to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:192703"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_salvigenin_scutellarein-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "salvigenin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "scutellarein-to-succinate"
+      },
+      "note": "Shares salvigenin with scutellarein to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:192703"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_salvigenin_scutellarein-to-succinate-73079",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "salvigenin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "scutellarein-to-succinate-73079"
+      },
+      "note": "Shares salvigenin with scutellarein to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:192703"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_scutellarein_7_methyl_ether_2r-2-hydroxy-4-methyls-to-h2o-64468",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "scutellarein_7_methyl_ether"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2r-2-hydroxy-4-methyls-to-h2o-64468"
+      },
+      "note": "Shares scutellarein 7-methyl ether with (2R)-2-hydroxy-4-(methyls… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:192701"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_scutellarein_7_methyl_ether_cirsimaritin-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "scutellarein_7_methyl_ether"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cirsimaritin-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares scutellarein 7-methyl ether with cirsimaritin to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:192701"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_scutellarein_7_methyl_ether_scutellarein-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "scutellarein_7_methyl_ether"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "scutellarein-to-succinate"
+      },
+      "note": "Shares scutellarein 7-methyl ether with scutellarein to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:192701"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_scutellarein_7_methyl_ether_scutellarein-to-succinate-73079",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "scutellarein_7_methyl_ether"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "scutellarein-to-succinate-73079"
+      },
+      "note": "Shares scutellarein 7-methyl ether with scutellarein to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:192701"
+          }
+        ]
+      }
+    }
+  ]
+}

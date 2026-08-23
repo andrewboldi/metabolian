@@ -1,0 +1,301 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "pmf-to-3-sulfolactic-acid",
+  "name": "PMF to 3-sulfolactic acid",
+  "category": "other",
+  "summary": "A 3-step route from PMF to 3-sulfolactic acid, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR145790"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "pmf",
+      "name": "PMF",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM01"
+      }
+    },
+    {
+      "id": "nitrite",
+      "name": "nitrite",
+      "formula": "NO2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM107"
+      }
+    },
+    {
+      "id": "menaquinone_8",
+      "name": "menaquinone-8",
+      "formula": "C51H72O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:44027"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "menaquinol_8",
+      "name": "menaquinol-8",
+      "formula": "C51H74O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61684"
+      }
+    },
+    {
+      "id": "nitrate",
+      "name": "nitrate",
+      "formula": "NO3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM732398"
+      }
+    },
+    {
+      "id": "thiosulfate",
+      "name": "thiosulfate",
+      "formula": "HO3S2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1094289"
+      }
+    },
+    {
+      "id": "hydrogen_sulfide",
+      "name": "hydrogen sulfide",
+      "formula": "HS",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1366460"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "sulfite",
+      "name": "sulfite",
+      "formula": "O3S",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM726339"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM23"
+      }
+    },
+    {
+      "id": "3_sulfolactic_acid",
+      "name": "3-sulfolactic acid",
+      "formula": "C3H6O6S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:38023"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_4_1_24",
+      "name": "(2R)-sulfolactate sulfo-lyase",
+      "ec": [
+        "4.4.1.24"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR145790",
+      "substrates": [
+        {
+          "metabolite": "pmf",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nitrite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "menaquinone_8",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pmf",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "menaquinol_8",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nitrate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR145790"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR145790"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR179256",
+      "substrates": [
+        {
+          "metabolite": "thiosulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "menaquinol_8",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hydrogen_sulfide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "menaquinone_8",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "sulfite",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR179256"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR179256"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(2R)-sulfolactate sulfo-lyase",
+      "ec": "4.4.1.24",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfite",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_sulfolactic_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_4_1_24"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR150015"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR150015"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3_sulfolactic_acid_lipid-a-to-h",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_sulfolactic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "lipid-a-to-h"
+      },
+      "note": "Shares 3-sulfolactic acid with lipid A to H.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:38023"
+          }
+        ]
+      }
+    }
+  ]
+}

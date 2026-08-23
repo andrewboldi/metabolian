@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-n-acetyl-d-glucosam-to-nadph "UDP-N-acetyl-α-D-glucosam… to NADPH" {
-  spacing 300
+  spacing 288
 
   spine at 0,0 {
     udpglcnac
@@ -14,17 +14,5 @@ pathway udp-n-acetyl-d-glucosam-to-nadph "UDP-N-acetyl-α-D-glucosam… to NADPH
     udp_2_acetamido_2_6_dideoxy_l_talose
     <-> ec_1_1_1_367 [1.1.1.367] +nadp -h -nadph
     udp_2_acetamido_2_6_dideoxy_l_lyxo_hex_4_ulose
-  }
-
-  branch from h side left {
-    h
-    <-> . +prostaglandin_pge2_1_glyceryl_ester +h2o +glycerol
-    prostaglandin_e2
-  }
-
-  branch from h side right {
-    h
-    <-> . +l_dehydroascorbic_acid +7_hydroxy_e4_neuroprostane +h2o +l_ascorbate
-    7_hydroperoxy_h4_neuroprostane
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-kynurenine-to-6-imino-5-oxocyclohexa-1 "L-kynurenine to 6-imino-5-oxocyclohexa-1,…" {
-  spacing 210
+  spacing 180
 
   spine at 0,0 {
     l_kynurenine
@@ -14,35 +14,5 @@ pathway l-kynurenine-to-6-imino-5-oxocyclohexa-1 "L-kynurenine to 6-imino-5-oxoc
     3_hydroxyanthranilate
     <-> ec_1_10_3_5 [1.10.3.5] +o2 -h2o2
     6_imino_5_oxocyclohexa_1_3_diene_1_carboxylate
-  }
-
-  branch from 3_hydroxy_l_kynurenine side left {
-    3_hydroxy_l_kynurenine
-    <-> . +oxaloacetate +aspartate
-    4_2_amino_3_hydroxyphenyl_2_4_dioxobutanoate
-  }
-
-  branch from 3_hydroxy_l_kynurenine side right {
-    3_hydroxy_l_kynurenine
-    <-> . +keto_phenylpyruvate +4_2_amino_3_hydroxyphenyl_2_4_dioxobutanoate
-    l_phenylalanine
-  }
-
-  branch from 3_hydroxyanthranilate side left {
-    3_hydroxyanthranilate
-    <-> ec_1_13_11_6 [1.13.11.6] +o2
-    cis_cis_2_ammonio_3_3_oxoprop_1_enyl_but_2_enedi
-  }
-
-  branch from alanine side right {
-    alanine
-    <-> . +l_asparagine +pyruvate
-    2_oxosuccinamate
-  }
-
-  branch from alanine side left {
-    alanine
-    <-> . +l_tryptophan +atp +adp +pi +hplus
-    cyclo_l_tryptophyl_l_alanyl
   }
 }

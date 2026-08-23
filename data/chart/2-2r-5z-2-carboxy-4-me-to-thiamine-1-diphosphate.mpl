@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-2r-5z-2-carboxy-4-me-to-thiamine-1-diphosphate "2-[(2R,5Z)-2-carboxy-4-me… to thiamine(1+) diphosphate" {
-  spacing 220
+  spacing 202
 
   spine at 0,0 {
     2_2r_5z_2_carboxy_4_methylthiazol_5_2h_ylidene_e
@@ -22,39 +22,21 @@ pathway 2-2r-5z-2-carboxy-4-me-to-thiamine-1-diphosphate "2-[(2R,5Z)-2-carboxy-4
     s_2_acetyl_2_hydroxybutanoate
   }
 
-  branch from 2_2_carboxy_4_methylthiazol_5_yl_ethyl_phosphate side left {
-    2_2_carboxy_4_methylthiazol_5_yl_ethyl_phosphate
-    <-> ec_2_7_1_50 [2.7.1.50] +5_2_hydroxyethyl_4_methyl_1_3_thiazole_2_carboxy +atp +adp
-    h
-  }
-
-  branch from 2_2_carboxy_4_methylthiazol_5_yl_ethyl_phosphate side right {
-    2_2_carboxy_4_methylthiazol_5_yl_ethyl_phosphate
-    <-> . +diphosphate +co2 +thiamine_phosphate +h
-    2_methyl_4_amino_5_hydroxymethylpyrimidine_dipho
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +2s_4r_4_hydroxy_4_methylglutamate +malonyl-coa +sam +atp +nadph +hplus +amp +sah +co2 +nadp +coa +h2o
-    5s_5_2r_2_carboxylato_2_hydroxy_2_methylethyl_2
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +2_oxo_atp +h2o +hplus
-    2_oxo_amp
-  }
-
-  branch from thiamine side left {
-    thiamine
-    <-> ec_1_1_3_23 [1.1.3.23] +o2 +h2o +h2o2 +hplus
-    thiaminium_carboxylate_betaine
-  }
-
-  branch from thiamine_1_diphosphate side right {
+  branch from thiamine_1_diphosphate side left {
     thiamine_1_diphosphate
     <-> . +adp +amp
     thiamine_1_triphosphate
+  }
+
+  branch from 2s_2_hydroxy_2_methyl_3_oxobutanoate side right {
+    2s_2_hydroxy_2_methyl_3_oxobutanoate
+    <-> ec_1_1_1_86 [1.1.1.86] +nadp +nadph +hplus
+    r_2_3_dihydroxy_3_methylbutanoate
+  }
+
+  branch from 2s_2_hydroxy_2_methyl_3_oxobutanoate side left {
+    2s_2_hydroxy_2_methyl_3_oxobutanoate
+    <-> .
+    3_hydroxy_3_methyl_2_oxobutanoate
   }
 }

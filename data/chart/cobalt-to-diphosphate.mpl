@@ -21,4 +21,16 @@ pathway cobalt-to-diphosphate "cobalt to diphosphate" {
     <-> . +h2s +atp -amp -ppi
     5_methyl_2_thiouridine_5_phosphate_1
   }
+
+  branch from uridine_5_monophosphate_1 side left {
+    uridine_5_monophosphate_1
+    <-> ec_5_4_99_21 [5.4.99.21]
+    pseudouridine_5_phosphate_1
+  }
+
+  branch from uridine_5_monophosphate_1 side right {
+    uridine_5_monophosphate_1
+    <-> ec_1_3_1_90 [1.3.1.90] +nadp +nadph +hplus
+    5_6_dihydrouridine_5_monophosphate_1
+  }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway mogroside-iii-a1-to-mogroside-vi "mogroside III-A1 to mogroside VI" {
-  spacing 170
+  spacing 194
 
   spine at 0,0 {
     mogroside_iii_a1
@@ -32,5 +32,29 @@ pathway mogroside-iii-a1-to-mogroside-vi "mogroside III-A1 to mogroside VI" {
     mogroside_v
     <-> . +udp_d_glucose +udp +hplus
     mogroside_iv
+  }
+
+  branch from udp_d_glucose side right {
+    udp_d_glucose
+    <-> . +sitosterol +udp +hplus
+    daucosterol
+  }
+
+  branch from udp_d_glucose side left {
+    udp_d_glucose
+    <-> . +brassicasterol +udp +hplus
+    brassicasterol_3_d_glucoside
+  }
+
+  branch from siamenoside_i side right {
+    siamenoside_i
+    <-> . +udp_d_glucose +udp +hplus
+    isomogroside_v
+  }
+
+  branch from siamenoside_i side left {
+    siamenoside_i
+    <-> . +udp_d_glucose +udp +hplus
+    mogroside_vx
   }
 }

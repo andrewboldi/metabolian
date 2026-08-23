@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-oleoyl-l-leucinate-to-amp-3-end-1 "N-oleoyl-L-leucinate to AMP 3'-end(1−)" {
-  spacing 238
+  spacing 220
 
   spine at 0,0 {
     n_oleoyl_l_leucinate
@@ -16,45 +16,27 @@ pathway n-oleoyl-l-leucinate-to-amp-3-end-1 "N-oleoyl-L-leucinate to AMP 3'-end(
     l_leucyl_l_lysyl_2_group
   }
 
-  branch from leucine side left {
-    leucine
-    <-> ec_2_1_4_4 [2.1.4.4] +arginine +ornithine
-    n_amidino_l_leucine
-  }
-
-  branch from leucine side right {
-    leucine
-    <-> . +n_carbamoyl_l_leucinate +h2o +hplus +co2
-    nh3
-  }
-
-  branch from 3_l_leucyl_adenylyl_zwitterionic_group side left {
-    3_l_leucyl_adenylyl_zwitterionic_group
-    <-> . +acetyl_coa +coa +hplus
-    3_n_acetyl_l_leucyl_adenylyl
+  branch from ppi side left {
+    ppi
+    <-> . +streptidine +atp
+    6_o_adenylylstreptidine
   }
 
   branch from ppi side right {
     ppi
-    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
-    copalol
+    <-> ec_4_6_1_26 [4.6.1.26] +utp
+    3_5_cyclic_ump
   }
 
   branch from ppi side left {
     ppi
-    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
-    manool
+    <-> . +fpp
+    ylangene
   }
 
-  branch from amp_3_end_1 side right {
-    amp_3_end_1
-    <-> ec_3_1_1_96 [3.1.1.96] +3_d_tryptophyl_adenylyl_1_group +h2o
-    d_tryptophan
-  }
-
-  branch from amp_3_end_1 side left {
-    amp_3_end_1
-    <-> . +3_l_threonyl_adenylyl_1_group +h2o
-    threonine
+  branch from ppi side right {
+    ppi
+    <-> . +all_trans_pentaprenyl_diphosphate
+    fusoxypene_a
   }
 }

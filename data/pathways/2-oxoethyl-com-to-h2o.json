@@ -104,110 +104,6 @@
       "xrefs": {
         "metanetx": "WATER"
       }
-    },
-    {
-      "id": "n6_tuberculosinyladenosine",
-      "name": "N6-Tuberculosinyladenosine",
-      "short": "N6-Tuberculosinylad…",
-      "formula": "C30H45N5O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:211941"
-      }
-    },
-    {
-      "id": "1_tuberculosinyladenosine",
-      "name": "1-tuberculosinyladenosine",
-      "short": "1-tuberculosinylade…",
-      "formula": "C30H46N5O4",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:85603"
-      }
-    },
-    {
-      "id": "l_aspartate",
-      "name": "L-aspartate",
-      "formula": "C4H6NO4",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM1364497"
-      }
-    },
-    {
-      "id": "methyl_l_phenylalaninate",
-      "name": "methyl L-phenylalaninate",
-      "short": "methyl L-phenylalan…",
-      "formula": "C10H13NO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:49339"
-      }
-    },
-    {
-      "id": "aspartame",
-      "name": "aspartame",
-      "formula": "C14H18N2O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:195544"
-      }
-    },
-    {
-      "id": "4_bromo_3_chloroaniline",
-      "name": "4-bromo-3-chloroaniline",
-      "short": "4-bromo-3-chloroani…",
-      "formula": "C6H5BrClN",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1132318"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM13"
-      }
-    },
-    {
-      "id": "n_o_dimethylhydroxylamine",
-      "name": "N,O-dimethylhydroxylamine",
-      "short": "N,O-dimethylhydroxy…",
-      "formula": "C2H7NO",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM149119"
-      }
-    },
-    {
-      "id": "chlorbromuron",
-      "name": "Chlorbromuron",
-      "formula": "C9H10BrClN2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:3608"
-      }
-    },
-    {
-      "id": "4_bromoaniline",
-      "name": "4-bromoaniline",
-      "formula": "C6H6BrN",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM681054"
-      }
-    },
-    {
-      "id": "metobromuron",
-      "name": "Metobromuron",
-      "formula": "C9H11BrN2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:81964"
-      }
     }
   ],
   "enzymes": [
@@ -216,13 +112,6 @@
       "name": "2-hydroxypropyl-CoM lyase",
       "ec": [
         "4.4.1.23"
-      ]
-    },
-    {
-      "id": "ec_3_4_11_7",
-      "name": "glutamyl aminopeptidase",
-      "ec": [
-        "3.4.11.7"
       ]
     }
   ],
@@ -350,169 +239,225 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "Reaction MNXR193132",
-      "substrates": [
-        {
-          "metabolite": "n6_tuberculosinyladenosine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_tuberculosinyladenosine",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR193132"
+      "id": "xt_2_oxoethyl_com_nadh-to-2-chloroethanol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxoethyl_com"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-2-chloroethanol"
+      },
+      "note": "Shares 2-oxoethyl-CoM with NADH to 2-chloroethanol.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR193132"
+            "id": "MNXM163659"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "glutamyl aminopeptidase",
-      "ec": "3.4.11.7",
-      "substrates": [
-        {
-          "metabolite": "l_aspartate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "methyl_l_phenylalaninate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "aspartame",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_4_11_7"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR193228"
+      "id": "xt_2_chlorooxirane_1-1-dichloroethene-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_chlorooxirane"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1-1-dichloroethene-to-succinate"
+      },
+      "note": "Shares 2-chlorooxirane with 1,1-dichloroethene to succinate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR193228"
+            "db": "ChEBI",
+            "id": "CHEBI:29129"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "Reaction MNXR193080",
-      "substrates": [
-        {
-          "metabolite": "4_bromo_3_chloroaniline",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "n_o_dimethylhydroxylamine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "chlorbromuron",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "metanetx": "MNXR193080"
+      "id": "xt_coenzyme_m_2-hydroxy-n-methyl-5-oxop-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coenzyme_m"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2-hydroxy-n-methyl-5-oxop-to-h2o"
+      },
+      "note": "Shares coenzyme M with 2-hydroxy-N-methyl-5-oxop… to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR193080"
+            "id": "MNXM399"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "Reaction MNXR193081",
-      "substrates": [
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "n_o_dimethylhydroxylamine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "4_bromoaniline",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "metobromuron",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "metanetx": "MNXR193081"
+      "id": "xt_coenzyme_m_2-hydroxypropyl-com-to-formaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coenzyme_m"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2-hydroxypropyl-com-to-formaldehyde"
+      },
+      "note": "Shares coenzyme M with 2-hydroxypropyl-CoM to formaldehyde.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR193081"
+            "id": "MNXM399"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_coenzyme_m_co2-to-coenzyme-m",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coenzyme_m"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "co2-to-coenzyme-m"
+      },
+      "note": "Shares coenzyme M with CO2 to coenzyme M.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM399"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_coenzyme_m_guaiacylglycerol-guaiac-to-hydroquinone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coenzyme_m"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "guaiacylglycerol-guaiac-to-hydroquinone"
+      },
+      "note": "Shares coenzyme M with guaiacylglycerol-β-guaiac… to hydroquinone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM399"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_coenzyme_m_n-5-phosphonato-d-ribo-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coenzyme_m"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-5-phosphonato-d-ribo-to-h2o"
+      },
+      "note": "Shares coenzyme M with N-(5-phosphonato-β-D-ribo… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM399"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_coenzyme_m_nadh-to-2-chloroethanol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coenzyme_m"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-2-chloroethanol"
+      },
+      "note": "Shares coenzyme M with NADH to 2-chloroethanol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM399"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_coenzyme_m_r-2-hydroxy-3-methylbut-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coenzyme_m"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-2-hydroxy-3-methylbut-to-h2o"
+      },
+      "note": "Shares coenzyme M with (R)-2-hydroxy-3-methylbut… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM399"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sulfoethylcysteine_nadh-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sulfoethylcysteine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-nad"
+      },
+      "note": "Shares sulfoethylcysteine with NADH to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM5937"
           }
         ]
       }

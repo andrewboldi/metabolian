@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-s-strictosidinium-to-4-21-dehydrogeissoschizin "3α(S)-strictosidinium to 4,21-dehydrogeissoschizine" {
-  spacing 254
+  spacing 272
 
   spine at 0,0 {
     3_s_strictosidinium
@@ -18,14 +18,14 @@ pathway 3-s-strictosidinium-to-4-21-dehydrogeissoschizin "3α(S)-strictosidinium
 
   branch from glucose side left {
     glucose
-    <-> ec_2_7_1_147 [2.7.1.147] +adp +amp +hplus
-    g6p
+    <-> ec_2_4_1_22 [2.4.1.22] +udp_d_galactose +udp +hplus
+    lactose
   }
 
   branch from glucose side right {
     glucose
-    <-> ec_3_2_1_104 [3.2.1.104] +cholesteryl_d_glucoside +h2o
-    cholesterol
+    <-> . +avenacoside_a +h2o
+    26_desglucoavenacoside_a
   }
 
   branch from cathenamine side left {
@@ -44,5 +44,23 @@ pathway 3-s-strictosidinium-to-4-21-dehydrogeissoschizin "3α(S)-strictosidinium
     4_21_dehydrogeissoschizine
     <-> ec_1_3_1_36 [1.3.1.36] +nadp +nadph
     19e_geissoschizine
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> ec_3_2_1_117 [3.2.1.117] +r_amygdalin +h2o
+    r_prunasin
+  }
+
+  branch from glucose side left {
+    glucose
+    <-> ec_1_1_1_47 [1.1.1.47] +nad +nadh +hplus
+    d_glucono_1_5_lactone
+  }
+
+  branch from cathenamine side right {
+    cathenamine
+    <-> . +h
+    4_21_dehydrogeissoschizine
   }
 }

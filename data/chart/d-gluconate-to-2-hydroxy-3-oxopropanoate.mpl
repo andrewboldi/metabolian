@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-gluconate-to-2-hydroxy-3-oxopropanoate "D-gluconate to 2-hydroxy-3-oxopropanoate" {
-  spacing 224
+  spacing 230
 
   spine at 0,0 {
     d_gluconate
@@ -16,5 +16,11 @@ pathway d-gluconate-to-2-hydroxy-3-oxopropanoate "D-gluconate to 2-hydroxy-3-oxo
     d_glycerate
     <-> ec_1_1_1_60 [1.1.1.60] +nadp -nadph -hplus
     2_hydroxy_3_oxopropanoate
+  }
+
+  branch from d_gluconate side left {
+    d_gluconate
+    <-> . +fad +hplus +fadh2
+    2_dehydro_d_gluconate
   }
 }

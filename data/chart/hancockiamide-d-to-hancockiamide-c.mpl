@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway hancockiamide-d-to-hancockiamide-c "hancockiamide D to Hancockiamide C" {
-  spacing 188
+  spacing 158
 
   spine at 0,0 {
     hancockiamide_d
@@ -20,35 +20,5 @@ pathway hancockiamide-d-to-hancockiamide-c "hancockiamide D to Hancockiamide C" 
     hancockiamide_a
     <-> . +acetyl_coa +coa +hplus
     hancockiamide_b
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> ec_6_2_1_60 [6.2.1.60] +pseudomonate_c +atp +coa +amp
-    pseudomonoyl_coa_c
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_201 [4.2.3.201] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    hydropyrene
-  }
-
-  branch from hancockiamide_g side right {
-    hancockiamide_g
-    <-> . +trans_cinnamate +atp +amp +ppi
-    hancockiamide_h
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +lathosterol +fmnh2 +o2 +h2o +hplus
-    cholestanol_7_8_epoxide
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +testosterone +fmnh2 +o2 +h2o +hplus
-    1_hydroxytestosterone
   }
 }

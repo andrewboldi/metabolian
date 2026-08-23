@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway bilirubin-to-d-glucopyranuronate "bilirubin to D-glucopyranuronate" {
-  spacing 152
+  spacing 176
 
   spine at 0,0 {
     bilirubin
@@ -14,5 +14,29 @@ pathway bilirubin-to-d-glucopyranuronate "bilirubin to D-glucopyranuronate" {
     4z_15z_bilirubin_ix_c8_c12_d_bisglucuronoside
     <-> . +h2o -d_glucopyranuronate -hplus
     4z_15z_bilirubin_ix_c12_d_glucuronoside
+  }
+
+  branch from bilirubin side left {
+    bilirubin
+    <-> ec_1_3_1_24 [1.3.1.24] +nad +nadh +hplus
+    biliverdin
+  }
+
+  branch from bilirubin side right {
+    bilirubin
+    <-> . +mono_glucosyluronic_acid_bilirubin
+    bis_glucosyluronate_bilirubin
+  }
+
+  branch from udp_d_glucuronate side left {
+    udp_d_glucuronate
+    <-> . +losartan +udp
+    losartan_2_n_d_glucuronide
+  }
+
+  branch from udp_d_glucuronate side right {
+    udp_d_glucuronate
+    <-> . +candesartan +udp
+    candesartan_o_d_glucuronoside
   }
 }

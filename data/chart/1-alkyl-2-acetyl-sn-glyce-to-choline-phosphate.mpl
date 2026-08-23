@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-alkyl-2-acetyl-sn-glyce-to-choline-phosphate "1-alkyl-2-acetyl-sn-glyce… to choline phosphate" {
-  spacing 260
+  spacing 248
 
   spine at 0,0 {
     1_alkyl_2_acetyl_sn_glycerol
@@ -14,17 +14,5 @@ pathway 1-alkyl-2-acetyl-sn-glyce-to-choline-phosphate "1-alkyl-2-acetyl-sn-glyc
     1_alkyl_sn_glycero_3_phosphocholine
     <-> . +h2o -phosphocholine -hplus
     1_o_alkyl_sn_glycerol
-  }
-
-  branch from cytidine_5_monophosphate side left {
-    cytidine_5_monophosphate
-    <-> . +n4_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_gal_1_4_d +cmp_n_acetyl_neuraminate +hplus
-    n4_neu5ac_2_3_d_gal_1_4_d_glcnac_1_2_d_man_1_3_n
-  }
-
-  branch from cytidine_5_monophosphate side right {
-    cytidine_5_monophosphate
-    <-> . +n4_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_4 +cmp_n_acetyl_neuraminate +hplus
-    n4_neu5ac_2_3_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d
   }
 }

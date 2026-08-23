@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway isomaltotriose-to-h2o "Isomaltotriose to H2O" {
-  spacing 188
+  spacing 212
 
   spine at 0,0 {
     isomaltotriose
@@ -20,13 +20,37 @@ pathway isomaltotriose-to-h2o "Isomaltotriose to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> ec_1_11_1_21 [1.11.1.21] +nadh +h +tert_butyl_hydroperoxide +nad
-    tert_butanol
+    <-> . +h +adp +alpha_cyclodextrin +phosphate +alpha_cyclodextrin
+    atp
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_11_2_1 [1.11.2.1] +naphthalene +h2o2
-    1_naphthol
+    <-> . +h +adp +phosphate +atp
+    cyclodextrin
+  }
+
+  branch from alpha_d_glucose side left {
+    alpha_d_glucose
+    <-> ec_2_7_1_1 [2.7.1.1] +h +atp +6_o_phosphonohexopyranose
+    adp
+  }
+
+  branch from alpha_d_glucose side right {
+    alpha_d_glucose
+    <-> ec_3_2_1_108 [3.2.1.108] +lactose +h2o
+    d_galactopyranose
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +h +adp +phosphate +atp
+    amylopectin
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +h +adp +phosphate +atp
+    l_sorbosone_1_4_lactone
   }
 }

@@ -1,0 +1,584 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "trans-cyclohexane-1-2-diol-to-6-oxohexanoate-181",
+  "name": "trans-cyclohexane-1,2-diol to 6-oxohexanoate",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from trans-cyclohexane-1,2-diol to 6-oxohexanoate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:18141"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:16931"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "trans_cyclohexane_1_2_diol",
+      "name": "trans-cyclohexane-1,2-diol",
+      "short": "trans-cyclohexane-1…",
+      "formula": "C6H12O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16931"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "2_hydroxycyclohexan_1_one",
+      "name": "2-hydroxycyclohexan-1-one",
+      "short": "2-hydroxycyclohexan…",
+      "formula": "C6H10O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17878"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "6_hydroxyhexano_6_lactone",
+      "name": "6-hydroxyhexano-6-lactone",
+      "short": "6-hydroxyhexano-6-l…",
+      "formula": "C6H10O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17075"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "6_oxohexanoate",
+      "name": "6-oxohexanoate",
+      "formula": "C6H9O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:18322"
+      }
+    },
+    {
+      "id": "2_aminocyclohexan_1_ol",
+      "name": "2-aminocyclohexan-1-ol",
+      "short": "2-aminocyclohexan-1…",
+      "formula": "C6H14NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:195500"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_174",
+      "name": "cyclohexane-1,2-diol dehydrogenase",
+      "ec": [
+        "1.1.1.174"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "cyclohexane-1,2-diol dehydrogenase",
+      "equation": "trans-cyclohexane-1,2-diol + NAD(+) = 2-hydroxycyclohexan-1-one + NADH + H(+)",
+      "ec": "1.1.1.174",
+      "substrates": [
+        {
+          "metabolite": "trans_cyclohexane_1_2_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxycyclohexan_1_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_174"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:18141"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18141"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2-hydroxycyclohexan-1-one + NADPH + O2 + H(+) = 6-hydroxyhexan-6-olide + NADP(+) + H2O",
+      "equation": "2-hydroxycyclohexan-1-one + NADPH + O2 + H(+) = 6-hydroxyhexan-6-olide + NADP(+) + H2O",
+      "substrates": [
+        {
+          "metabolite": "2_hydroxycyclohexan_1_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_hydroxyhexano_6_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:10648"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10648"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "6-hydroxyhexan-6-olide = 6-oxohexanoate + H(+)",
+      "equation": "6-hydroxyhexan-6-olide = 6-oxohexanoate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "6_hydroxyhexano_6_lactone",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_oxohexanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:25168"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25168"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "2-aminocyclohexanol + NAD(+) + H2O = 2-hydroxycyclohexan-1-one + NH4(+) + NADH + H(+)",
+      "equation": "2-aminocyclohexanol + NAD(+) + H2O = 2-hydroxycyclohexan-1-one + NH4(+) + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "2_aminocyclohexan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxycyclohexan_1_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:77019"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77019"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_trans_cyclohexane_1_2_diol_trans-cyclohexane-1-2-diol-to-6-oxohexanoate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_cyclohexane_1_2_diol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-cyclohexane-1-2-diol-to-6-oxohexanoate"
+      },
+      "note": "Shares trans-cyclohexane-1,2-diol with trans-cyclohexane-1,2-diol to 6-oxohexanoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16931"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_hydroxycyclohexan_1_one_1-8-diazacyclotetradecane-to-adipate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_hydroxycyclohexan_1_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-8-diazacyclotetradecane-to-adipate"
+      },
+      "note": "Shares 2-hydroxycyclohexan-1-one with 1,8-diazacyclotetradecane… to adipate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17878"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_hydroxycyclohexan_1_one_1-8-diazacyclotetradecane-to-adipate-16225",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_hydroxycyclohexan_1_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-8-diazacyclotetradecane-to-adipate-16225"
+      },
+      "note": "Shares 2-hydroxycyclohexan-1-one with 1,8-diazacyclotetradecane… to adipate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17878"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_hydroxycyclohexan_1_one_trans-cyclohexane-1-2-diol-to-6-oxohexanoate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_hydroxycyclohexan_1_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-cyclohexane-1-2-diol-to-6-oxohexanoate"
+      },
+      "note": "Shares 2-hydroxycyclohexan-1-one with trans-cyclohexane-1,2-diol to 6-oxohexanoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17878"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_hydroxyhexano_6_lactone_trans-cyclohexane-1-2-diol-to-6-oxohexanoate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_hydroxyhexano_6_lactone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-cyclohexane-1-2-diol-to-6-oxohexanoate"
+      },
+      "note": "Shares 6-hydroxyhexano-6-lactone with trans-cyclohexane-1,2-diol to 6-oxohexanoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17075"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_oxohexanoate_1-8-diazacyclotetradecane-to-adipate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_oxohexanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-8-diazacyclotetradecane-to-adipate"
+      },
+      "note": "Shares 6-oxohexanoate with 1,8-diazacyclotetradecane… to adipate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18322"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_oxohexanoate_1-8-diazacyclotetradecane-to-adipate-16225",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_oxohexanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-8-diazacyclotetradecane-to-adipate-16225"
+      },
+      "note": "Shares 6-oxohexanoate with 1,8-diazacyclotetradecane… to adipate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18322"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_oxohexanoate_cyclohexylsulfamate-to-6-oxohexanoate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_oxohexanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cyclohexylsulfamate-to-6-oxohexanoate"
+      },
+      "note": "Shares 6-oxohexanoate with cyclohexylsulfamate to 6-oxohexanoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18322"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_oxohexanoate_cyclohexylsulfamate-to-6-oxohexanoate-18481",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_oxohexanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cyclohexylsulfamate-to-6-oxohexanoate-18481"
+      },
+      "note": "Shares 6-oxohexanoate with cyclohexylsulfamate to 6-oxohexanoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18322"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_oxohexanoate_trans-cyclohexane-1-2-diol-to-6-oxohexanoate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_oxohexanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-cyclohexane-1-2-diol-to-6-oxohexanoate"
+      },
+      "note": "Shares 6-oxohexanoate with trans-cyclohexane-1,2-diol to 6-oxohexanoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18322"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_aminocyclohexan_1_ol_trans-cyclohexane-1-2-diol-to-6-oxohexanoate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_aminocyclohexan_1_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-cyclohexane-1-2-diol-to-6-oxohexanoate"
+      },
+      "note": "Shares 2-aminocyclohexan-1-ol with trans-cyclohexane-1,2-diol to 6-oxohexanoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:195500"
+          }
+        ]
+      }
+    }
+  ]
+}

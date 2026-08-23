@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-kaempferol-3-o-beta-d-glu "UDP to kaempferol 3-O-beta-D-glu…" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     udp
@@ -14,29 +14,5 @@ pathway udp-to-kaempferol-3-o-beta-d-glu "UDP to kaempferol 3-O-beta-D-glu…" {
     kaempferol_3_o_d_glucopyranosyl_7_o_l_rhamnopyra
     <-> . +udp -kaempferol_3_o_beta_d_glucoside
     udp_beta_l_rhamnose
-  }
-
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> . +4_o_beta_d_glucosyl_indol_3_yl_formamide +udp +h
-    n_4_hydroxy_1h_indol_3_yl_formamide
-  }
-
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> . +udp +h +medicagenate_28_o_beta_d_glucoside
-    medicagenic_acid
-  }
-
-  branch from dtdp side left {
-    dtdp
-    <-> . +beta_d_gal_1_4_alpha_d_glc_1_4_alpha_d_galnac_1 +dtdp_3_acetamido_3_6_dideoxy_d_galactopyranose +h
-    alpha_d_fuc3nac_1_4_beta_d_gal_1_4_alpha_d_glc_1
-  }
-
-  branch from dtdp side right {
-    dtdp
-    <-> . +dtdp_beta_l_rhamnose +alpha_d_glcnac_1_4_beta_d_gal_1_3_galnac_pp_und +h
-    alpha_l_rha_1_4_alpha_d_glcnac_1_4_beta_d_gal_1
   }
 }

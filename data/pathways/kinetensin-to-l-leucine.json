@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "kinetensin-to-l-leucine",
   "name": "kinetensin to L-leucine",
-  "category": "amino-acid-metabolism",
+  "category": "other",
   "summary": "A 3-step route from kinetensin(2+) to L-leucine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -101,32 +101,49 @@
       }
     },
     {
-      "id": "3_hydroxy_l_kynurenine",
-      "name": "3-hydroxy-L-kynurenine",
-      "short": "3-hydroxy-L-kynuren…",
-      "formula": "C10H12N2O4",
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58125"
+        "metanetx": "WATER"
       }
     },
     {
-      "id": "xanthurenate",
-      "name": "xanthurenate",
-      "formula": "C10H6NO4",
-      "charge": -1,
+      "id": "l_leucine",
+      "name": "L-leucine",
+      "formula": "C6H13NO2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:71201"
+        "metanetx": "MNXM1106761"
       }
     },
     {
-      "id": "4_2_amino_3_hydroxyphenyl_2_4_dioxobutanoate",
-      "name": "4-(2-amino-3-hydroxyphenyl)-2,4-dioxobutanoate",
-      "short": "4-(2-amino-3-hydrox…",
-      "formula": "C10H8NO5",
-      "charge": -1,
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:157756"
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "kinetensin_1_3",
+      "name": "Kinetensin 1-3",
+      "formula": "C15H30N6O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:174809"
+      }
+    },
+    {
+      "id": "d_arginyl_l_histidyl_d_prolyl_d_tyrosyl_l_phenyl",
+      "name": "D-Arginyl-L-histidyl-D-prolyl-D-tyrosyl-L-phenylalanine",
+      "short": "D-Arginyl-L-histidy…",
+      "formula": "C35H46N10O7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:177829"
       }
     }
   ],
@@ -143,14 +160,10 @@
       "name": "branched-chain-amino-acid transaminase",
       "ec": [
         "2.6.1.42"
-      ]
-    },
-    {
-      "id": "ec_2_6_1_7",
-      "name": "kynurenine--oxoglutarate transaminase",
-      "ec": [
-        "2.6.1.7"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P54687"
+      }
     }
   ],
   "reactions": [
@@ -279,88 +292,70 @@
     },
     {
       "id": "r4",
-      "name": "kynurenine--oxoglutarate transaminase",
-      "equation": "3-hydroxy-L-kynurenine + 2-oxoglutarate = xanthurenate + L-glutamate + H2O",
-      "ec": "2.6.1.7",
+      "name": "Reaction MNXR162467",
       "substrates": [
         {
-          "metabolite": "3_hydroxy_l_kynurenine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "xanthurenate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glutamate",
+          "metabolite": "kinetensin",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
-      "catalysts": [
+      "products": [
         {
-          "enzyme": "ec_2_6_1_7"
+          "metabolite": "l_leucine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "kinetensin_1_3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_arginyl_l_histidyl_d_prolyl_d_tyrosyl_l_phenyl",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:65884"
+        "metanetx": "MNXR162467"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:65884"
+            "db": "MetaNetX",
+            "id": "MNXR162467"
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "3-hydroxy-L-kynurenine + 2-oxoglutarate = 4-(2-amino-3-hydroxyphenyl)-2,4-dioxobutanoat...",
-      "equation": "3-hydroxy-L-kynurenine + 2-oxoglutarate = 4-(2-amino-3-hydroxyphenyl)-2,4-dioxobutanoate + L-glutamate",
-      "substrates": [
-        {
-          "metabolite": "3_hydroxy_l_kynurenine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "4_2_amino_3_hydroxyphenyl_2_4_dioxobutanoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glutamate",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:65888"
+      "id": "xt_kinetensin_tocopherol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "kinetensin"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "tocopherol-to-h2o"
+      },
+      "note": "Shares kinetensin with γ-tocopherol to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:65888"
+            "db": "ChEBI",
+            "id": "CHEBI:147364"
           }
         ]
       }

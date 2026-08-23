@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-2-diheptadecanoyl-sn-gl-to-8-r-hpome "1,2-diheptadecanoyl-sn-gl… to 8(R)-HPOME" {
-  spacing 182
+  spacing 164
 
   spine at 0,0 {
     1_2_diheptadecanoyl_sn_glycero_3_phosphoethanola
@@ -18,33 +18,15 @@ pathway 1-2-diheptadecanoyl-sn-gl-to-8-r-hpome "1,2-diheptadecanoyl-sn-gl… to 
     8_r_hpome
   }
 
-  branch from 1_o_oleoyl_sn_glycero_3_phosphocholine side left {
-    1_o_oleoyl_sn_glycero_3_phosphocholine
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    1_o_9r_10s_epoxystearoyl_sn_glycero_3_phosphocho
+  branch from oleoyl_coa side left {
+    oleoyl_coa
+    <-> . +linolenoyl_sn_glycero_3_phosphate +coa
+    1_linolenoyl_2_oleoyl_sn_glycero_3_phosphate
   }
 
-  branch from 1_o_oleoyl_sn_glycero_3_phosphocholine side right {
-    1_o_oleoyl_sn_glycero_3_phosphocholine
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    1_o_9s_10r_epoxystearoyl_sn_glycero_3_phosphocho
-  }
-
-  branch from 1_2_dioleoyl_sn_glycero_3_phosphocholine side left {
-    1_2_dioleoyl_sn_glycero_3_phosphocholine
-    <-> . +2_palmitoylglycerol +oleoyl_sn_glycero_3_phosphocholine
-    1_oleoyl_2_palmitoylglycerol
-  }
-
-  branch from 1_2_dioleoyl_sn_glycero_3_phosphocholine side right {
-    1_2_dioleoyl_sn_glycero_3_phosphocholine
-    <-> . +1_2_di_o_myristoyl_sn_glycero_3_phosphocholine +1_2_dioleoyl_sn_glycerol
-    1_2_ditetradecanoyl_sn_glycerol
-  }
-
-  branch from oleoyl_sn_glycero_3_phosphocholine side left {
-    oleoyl_sn_glycero_3_phosphocholine
-    <-> . +1_2_dioleoyl_sn_glycero_3_phosphocholine +n_acetylsphingosine
-    1_o_oleoyl_n_acetylsphingosine
+  branch from oleoyl_coa side right {
+    oleoyl_coa
+    <-> . +1_icosanoyl_sn_glycero_3_phosphate +coa
+    1_icosanoyl_2_oleoyl_sn_glycero_3_phosphate
   }
 }

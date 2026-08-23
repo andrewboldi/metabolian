@@ -22,27 +22,27 @@ pathway h2o2-to-2e-7z-10z-hexadecatrien "H2O2 to (2E,7Z,10Z)-hexadecatrien…" {
     2e_7z_10z_hexadecatrienoyl_coa
   }
 
-  branch from o2 side left {
-    o2
-    <-> ec_1_13_11_63 [1.13.11.63] +retinal
-    all_trans_beta_carotene
-  }
-
-  branch from o2 side right {
-    o2
-    <-> ec_1_13_11_2 [1.13.11.2] +h +2e_4z_2_hydroxy_6_oxohexa_2_4_dienoate
-    catechol
-  }
-
   branch from coa side left {
     coa
-    <-> . +glycoursodeoxycholate +h +ursodeoxycholoyl_coa
-    glycine
+    <-> . +4z_7z_10z_13z_16z_docosapentaenoyl_coa +sn_glycerol_3_phosphate
+    1_acylglycerol_3p_4_7_10_13_16_docosa
   }
 
   branch from coa side right {
     coa
-    <-> . +7z_hexadecenoyl_coa +h2o
-    7_palmitoleic_acid
+    <-> . +13z_16z_docosadienoyl_coa +sn_glycerol_3_phosphate
+    1_13z_16z_docosadienoyl_glycero_3_phosphate
+  }
+
+  branch from coa side left {
+    coa
+    <-> . +10z_heptadecenoyl_coa +s_carnitine
+    heptadecenoylcarnitine_7
+  }
+
+  branch from coa side right {
+    coa
+    <-> . +9z_heptadecenoyl_coa +s_carnitine
+    heptadecenoylcarnitine_8
   }
 }

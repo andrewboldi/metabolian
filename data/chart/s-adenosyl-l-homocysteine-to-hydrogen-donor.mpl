@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-adenosyl-l-homocysteine-to-hydrogen-donor "S-adenosyl-L-homocysteine to hydrogen donor" {
-  spacing 178
+  spacing 160
 
   spine at 0,0 {
     s_adenosyl_l_homocysteine
@@ -14,23 +14,5 @@ pathway s-adenosyl-l-homocysteine-to-hydrogen-donor "S-adenosyl-L-homocysteine t
     1_1_dihydroxyneurosporene
     <-> . +hydrogen_acceptor -hydrogen_donor
     1_hydroxy_demethylspheroidene
-  }
-
-  branch from s_adenosyl_l_methionine side left {
-    s_adenosyl_l_methionine
-    <-> ec_2_1_1_295 [2.1.1.295] +s_adenosyl_l_homocysteine +h +plastoquinol_9
-    2_methyl_6_solanyl_1_4_benzoquinol
-  }
-
-  branch from s_adenosyl_l_methionine side right {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +methyl_gibberellin_a34 +h
-    gibberellin_a34
-  }
-
-  branch from 1_hydroxyneurosporene side left {
-    1_hydroxyneurosporene
-    <-> ec_4_2_1_131 [4.2.1.131] +h2o
-    all_trans_neurosporene
   }
 }

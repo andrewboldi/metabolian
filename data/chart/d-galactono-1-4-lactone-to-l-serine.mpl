@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-galactono-1-4-lactone-to-l-serine "D-galactono-1,4-lactone to L-serine" {
-  spacing 268
+  spacing 250
 
   spine at 0,0 {
     d_galactono_1_4_lactone
@@ -26,23 +26,5 @@ pathway d-galactono-1-4-lactone-to-l-serine "D-galactono-1,4-lactone to L-serine
     d_galactonate
     <-> . +h2o +hplus
     d_galactono_1_5_lactone
-  }
-
-  branch from d_galactonate side right {
-    d_galactonate
-    <-> ec_1_1_3_9 [1.1.3.9] +d_galactose +o2 +h2o +h2o2
-    h
-  }
-
-  branch from serine side left {
-    serine
-    <-> ec_2_7_1_226 [2.7.1.226] +adp +amp +hplus
-    pser
-  }
-
-  branch from serine side right {
-    serine
-    <-> . +thr_ser +h2o
-    threonine
   }
 }

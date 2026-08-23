@@ -4,15 +4,15 @@
 # edit the generator, not this file.
 
 pathway nadh-to-coa-null "NADH to CoA" {
-  spacing 204
+  spacing 152
 
   spine at 0,0 {
     nadh
-    <-> . +acetyl_coa +fadh2 +h -fad -coa -nad -h2o
-    butanoyl_coa
-    <-> . +nadh +acetyl_coa +fadh2 +h -fad -coa -nad -h2o
-    hexanoyl_coa
-    <-> ec_2_3_1_206 [2.3.1.206] +malonyl_coa +h -olivetol -coa
-    co2
+    <-> . +acetyl_coa +h +h2o2 +5_tetradecenoyl_coenzyme_a -coa -o2 -nad -h2o
+    7_hexadecenoyl_coa
+    <-> . +nadh +acetyl_coa +h2o2 -h -coa -o2 -nad -h2o
+    9z_octadecenoyl_coa
+    <-> . +diphosphate +amp -atp -coa
+    9z_octadecenoate
   }
 }

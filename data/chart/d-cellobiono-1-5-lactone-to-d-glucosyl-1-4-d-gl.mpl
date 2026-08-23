@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-cellobiono-1-5-lactone-to-d-glucosyl-1-4-d-gl "D-cellobiono-1,5-lactone to β-D-glucosyl-(1→4)-β-D-gl…" {
-  spacing 234
+  spacing 258
 
   spine at 0,0 {
     d_cellobiono_1_5_lactone
@@ -18,31 +18,55 @@ pathway d-cellobiono-1-5-lactone-to-d-glucosyl-1-4-d-gl "D-cellobiono-1,5-lacton
 
   branch from d_cellobiose side left {
     d_cellobiose
-    <-> ec_2_4_1_20 [2.4.1.20] +glucose +d_glucopyranose_1_phosphate
-    phosphate
+    <-> . +glucose +d_glucose_6_phosphate +h +adp +h2o
+    atp
   }
 
   branch from d_cellobiose side right {
     d_cellobiose
-    <-> ec_3_2_1_74 [3.2.1.74] +h2o
-    alpha_d_glucose
-  }
-
-  branch from 1_4_benzoquinone side left {
-    1_4_benzoquinone
-    <-> ec_1_11_1_16 [1.11.1.16] +hydroquinone +h2o
-    h2o2
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_alanine
-    ala_ala
+    <-> . +6_phospho_beta_d_glucosyl_1_4_beta_d_glucose +pyruvate +phosphoenolpyruvate
+    h
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_4_16_4 [3.4.16.4] +d_alanine +ac_2_l_lys_d_ala
-    ac_2_l_lys_d_ala_d_ala
+    <-> . +16_methoxytabersonine
+    3r_3_hydroxy_16_methoxy_2_3_dihydrotabersonine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +methyl_1r_12s_20r_12_ethyl_14_oxa_8_17_diazahexa +nadp +o2 +nadph
+    tabersonine
+  }
+
+  branch from d_cellobiose side left {
+    d_cellobiose
+    <-> . +h +phosphate +atp +h2o
+    adp
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> ec_2_4_1_10 [2.4.1.10] +sucrose +6_kestotriose
+    6_6_kestotetraose
+  }
+
+  branch from glucose side left {
+    glucose
+    <-> . +sucrose +6_kestotriose
+    6_6_kestotetraose
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +lochnericine +nadp +h +tabersonine +nadph
+    o2
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +4_isopropenyl_2_oxocyclohexane_1_carbonyl_coa
+    3_isopropenylpimelyl_coa
   }
 }

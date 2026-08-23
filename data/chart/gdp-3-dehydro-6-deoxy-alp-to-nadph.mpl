@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway gdp-3-dehydro-6-deoxy-alp-to-nadph "GDP-3-dehydro-6-deoxy-alp… to NADPH" {
-  spacing 206
+  spacing 260
 
   spine at 0,0 {
     gdp_3_dehydro_6_deoxy_alpha_d_mannose
@@ -24,49 +24,103 @@ pathway gdp-3-dehydro-6-deoxy-alp-to-nadph "GDP-3-dehydro-6-deoxy-alp… to NADP
 
   branch from gdp_l_fucose side right {
     gdp_l_fucose
-    <-> ec_2_4_1_69 [2.4.1.69] +gdp +h +methyl_2_alpha_l_fucopyranosyl_beta_d_galactosid
-    methyl_beta_d_galactoside
-  }
-
-  branch from gdp_l_fucose side left {
-    gdp_l_fucose
     <-> ec_2_7_7_30 [2.7.7.30] +gtp +beta_l_fucose_1_phosphate +h
     diphosphate
   }
 
-  branch from nad side right {
-    nad
-    <-> ec_1_3_1_119 [1.3.1.119] +nadh +3_4_5_trichlorocatechol +h
-    1r_2s_3_4_5_trichlorocyclohexa_3_5_diene_1_2_di
-  }
-
   branch from nad side left {
     nad
-    <-> ec_1_14_12_26 [1.14.12.26] +1r_2s_5_chloro_3_methylcyclohexa_3_5_diene_1_2 +nadh +h +3_chlorotoluene
-    o2
+    <-> ec_1_1_1_323 [1.1.1.323] +nadh +h +thujan_3_one
+    thujan_3_ol
   }
 
-  branch from h side right {
-    h
-    <-> . +dihydrogeranylgeranyl_bacteriochlorophyll_a +nadph +nadp
-    tetrahydrogeranylgeranyl_bacteriochlorophyll_a
+  branch from nad side right {
+    nad
+    <-> ec_1_2_1_5 [1.2.1.5] +nadh +hexacosanoate +h +h2o
+    hexacosanal
   }
 
   branch from h side left {
     h
-    <-> . +4_hydroxylaminotoluene +nadp +h2o +nadph
-    4_nitrotoluene
+    <-> ec_3_5_1_124 [3.5.1.124] +r_lactate +n_acetyl_l_cysteine +h2o
+    n_acetyl_s_1_hydroxy_2_oxopropyl_cysteine
   }
 
-  branch from nadph side right {
-    nadph
-    <-> . +tetrahydrogeranylgeranyl_bacteriochlorophyll_a +nadp
-    bacteriochlorophyll_a
+  branch from h side right {
+    h
+    <-> ec_2_5_1_47 [2.5.1.47] +thiosulfate +l_cysteine +s_sulfo_l_cysteine
+    hydrogen_sulfide
   }
 
   branch from nadph side left {
     nadph
-    <-> . +h +1_chloro_4_nitrosobenzene +nadp
-    1_chloro_4_hydroxylaminobenzene
+    <-> . +9r_10r_dihydroxyoctadecanoate +h +o2 +nadp +h2o
+    9_10_18_trihydroxyoctadecanoic_acid
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +9s_10s_9_10_dihydroxyoctadecanoate +h +o2 +nadp +9_10_18_trihydroxyoctadecanoic_acid
+    h2o
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> ec_1_1_1_175 [1.1.1.175] +l_arabinono_1_4_lactone +h +nad
+    aldehydo_l_arabinose
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +linalool +h +o2 +nad +h2o
+    6e_8_hydroxylinalool
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_5_1_47 [2.5.1.47] +thiosulfate +3_cyano_l_alanine +s_sulfo_l_cysteine
+    cyanide
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_3_1_51 [2.3.1.51] +dioleoyl_phosphatidic_acid +coa +1_9z_octadecenoyl_sn_glycero_3_phosphate
+    9z_octadecenoyl_coa
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_21_4_1 [1.21.4.1] +nadh +d_proline +h
+    5_aminopentanoate
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_14_13_162 [1.14.13.162] +nadh +1r_4r_bornane_2_5_dione +h +o2 +h2o
+    1r_4r_5_oxo_1_2_campholide
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_14_13_126 [1.14.13.126] +calcitriol +h +o2 +nadph +h2o
+    calcitetrol
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_14_13_120 [1.14.13.120] +germacra_1_10_4_11_13_trien_12_oate +h +o2 +nadph +h2o
+    costunolide
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_14_13_121 [1.14.13.121] +solavetivol +nadp +h2o +h +o2
+    vetispiradiene
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_14_13_121 [1.14.13.121] +solavetivol +h +o2 +nadp +h2o
+    solavetivone
   }
 }

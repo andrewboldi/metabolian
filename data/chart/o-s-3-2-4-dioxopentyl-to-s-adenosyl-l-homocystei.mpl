@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway o-s-3-2-4-dioxopentyl-to-s-adenosyl-l-homocystei "O-(S-3-(2,4-dioxopentyl)-… to S-adenosyl-L-homocysteine" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     o_s_3_2_4_dioxopentyl_3_6_8_9_tetrahydroxy_1_oxo
@@ -14,17 +14,5 @@ pathway o-s-3-2-4-dioxopentyl-to-s-adenosyl-l-homocystei "O-(S-3-(2,4-dioxopenty
     3_acetyl_4a_6_7_9_12a_pentahydroxy_4_5_dioxo_1_4
     <-> . +sam -sah -hplus
     tan_1612
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +heliamine +sam +hplus
-    n_methylheliamine
-  }
-
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_122 [2.1.1.122] +an_s_7_8_13_14_tetrahydroprotoberberine +sam
-    an_s_cis_n_methyl_7_8_13_14_tetrahydroprotoberbe
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 9-hydroxy-aurachin-d-to-nerolidyl-diphosphate "9'-hydroxy-aurachin D to nerolidyl diphosphate" {
-  spacing 206
+  spacing 284
 
   spine at 0,0 {
     9_hydroxy_aurachin_d
@@ -18,55 +18,133 @@ pathway 9-hydroxy-aurachin-d-to-nerolidyl-diphosphate "9'-hydroxy-aurachin D to 
 
   branch from h side left {
     h
-    <-> . +diphosphate +31r_8_12_diethylbacteriochlorophyll_c +2e_6e_farnesyl_diphosphate
-    31r_8_12_diethylbacteriochlorophyllide_c
+    <-> ec_7_6_2_11 [7.6.2.11] +adp +spermine +phosphate +spermine +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> . +diphosphate +12_ethyl_8_propylbacteriochlorophyll_c +2e_6e_farnesyl_diphosphate
-    12_ethyl_8_propylbacteriochlorophyllide_c
+    <-> . +adp +phosphate +atp +h2o
+    paracetamol_sulfate
   }
 
   branch from o2 side left {
     o2
-    <-> . +bergaptol +nadp +h2o +nadph
-    psoralen
+    <-> ec_1_13_11_16 [1.13.11.16] +h +compound_0054366
+    2_hydroxyhexa_2_4_dienoic_acid_6_carboxymethyles
   }
 
   branch from o2 side right {
     o2
-    <-> . +h +abieta_8_14_12_diene +nadph +nadp +h2o
-    levopimaradienol
+    <-> ec_1_1_3_42 [1.1.3.42] +prosolanapyrone_ii +h2o2
+    solanapyrone_a
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_348 [1.1.1.348] +h +3r_2_hydroxydihydrodaidzein +nadp
-    3r_4r_7_2_4_trihydroxyisoflavanol
+    <-> . +h +isopropylbenzaldehyde +nadp
+    2_isopropylbenzyl_alcohol
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_2_1_4 [1.2.1.4] +s_malate +h +nadp +h2o
-    3r_3_hydroxy_4_oxobutanoate
+    <-> . +flucloxacillin +h +o2 +nadp +h2o
+    5_hydroxymethylflucloxacillin
+  }
+
+  branch from 2e_6e_farnesyl_diphosphate side left {
+    2e_6e_farnesyl_diphosphate
+    <-> . +31r_8_12_diethylbacteriochlorophyll_c +diphosphate +h
+    31r_8_12_diethylbacteriochlorophyllide_c
+  }
+
+  branch from 2e_6e_farnesyl_diphosphate side right {
+    2e_6e_farnesyl_diphosphate
+    <-> ec_2_5_1_141 [2.5.1.141] +diphosphate +ferroheme_o +h2o
+    heme
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_1_1_119 [1.1.1.119] +d_glucono_1_4_lactone +h +nadph
+    beta_d_glucose
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_1_1_200 [1.1.1.200] +beta_d_glucose_6_phosphate +h +nadph
+    d_mannitol_1_phosphate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +l_glutamine +l_phenylalanine +l_tyrosine
+    phenylalanyl_tyrosinyl_glutamine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +l_lysine +l_phenylalanine +l_tyrosine
+    phenylalanyl_tyrosinyl_lysine
+  }
+
+  branch from h side left {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    tacrolimus
+  }
+
+  branch from h side right {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    d_tagaturonate
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_1_3_10 [1.1.3.10] +h2o2 +beta_d_glucose
+    2_dehydro_d_glucose
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_1_3_10 [1.1.3.10] +2_dehydro_d_glucose +h2o2
+    alpha_d_glucose
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_1_1_21 [1.1.1.21] +beta_d_galactose +h +nadp
+    galactitol
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_1_1_120 [1.1.1.120] +beta_d_galactose +nadp +h
+    d_galactono_1_5_lactone
+  }
+
+  branch from diphosphate side left {
+    diphosphate
+    <-> ec_2_7_7_64 [2.7.7.64] +utp +h +l_fuculose_1_phosphate
+    udp_alpha_d_fucopyranose
+  }
+
+  branch from diphosphate side right {
+    diphosphate
+    <-> ec_2_7_7_64 [2.7.7.64] +utp +h +beta_l_galactose_1_phosphate
+    udp_alpha_d_galactose
   }
 
   branch from 2e_6e_farnesyl_diphosphate side left {
     2e_6e_farnesyl_diphosphate
     <-> . +diphosphate
-    eudesma_4_11_diene
+    alpha_amorphene
   }
 
   branch from 2e_6e_farnesyl_diphosphate side right {
     2e_6e_farnesyl_diphosphate
-    <-> . +diphosphate
-    seychellene
-  }
-
-  branch from nerolidyl_diphosphate side left {
-    nerolidyl_diphosphate
-    <-> . +diphosphate +h
-    trichodiene
+    <-> . +12_ethyl_8_isobutylbacteriochlorophyll_c +diphosphate +h
+    12_ethyl_8_isobutylbacteriochlorophyllide_c
   }
 }

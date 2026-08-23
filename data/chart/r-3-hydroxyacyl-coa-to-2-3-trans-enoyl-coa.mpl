@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway r-3-hydroxyacyl-coa-to-2-3-trans-enoyl-coa "(R)-3-hydroxyacyl-CoA to 2,3-trans-enoyl CoA" {
-  spacing 226
+  spacing 232
 
   spine at 0,0 {
     r_3_hydroxyacyl_coa
@@ -32,5 +32,11 @@ pathway r-3-hydroxyacyl-coa-to-2-3-trans-enoyl-coa "(R)-3-hydroxyacyl-CoA to 2,3
     3_substituted_propionyl_coa
     <-> ec_1_3_1_8 [1.3.1.8] +nadp +nadph +hplus
     2_3_dehydroacyl_coa
+  }
+
+  branch from r_3_hydroxyacyl_coa side right {
+    r_3_hydroxyacyl_coa
+    <-> ec_1_1_1_36 [1.1.1.36] +nadp +nadph +hplus
+    3_oxoacyl_coa
   }
 }

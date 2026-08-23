@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cis-indole-2-3-dihydrodiol-to-1s-2r-1-c-indol-3 "cis-indole-2,3-dihydrodiol to (1S,2R)-1-C-(indol-3-yl)g…" {
-  spacing 232
+  spacing 196
 
   spine at 0,0 {
     cis_indole_2_3_dihydrodiol
@@ -16,41 +16,5 @@ pathway cis-indole-2-3-dihydrodiol-to-1s-2r-1-c-indol-3 "cis-indole-2,3-dihydrod
     indole
     <-> ec_4_1_2_8 [4.1.2.8] +glyceraldehyde_3_phosphate -1s_2r_1_c_indol_3_yl_glycerol_3_phosphate
     h
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    chloramphenicol_3_glucuronide
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    clopidogrel_acyl_beta_d_glucuronide
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +4z_7z_10z_13z_16z_docosapentaenoyl_coa +h2o2
-    2_4_7_10_13_16_docosahexenoylcoa
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +iminoglycine +h2o2
-    glycine
-  }
-
-  branch from h side left {
-    h
-    <-> . +diphosphate +chlorophyll_a +e_3_7_11_15_tetramethylhexadec_2_en_1_yl_diphos
-    chlorophyllide
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    carboxy_gliclazide
   }
 }

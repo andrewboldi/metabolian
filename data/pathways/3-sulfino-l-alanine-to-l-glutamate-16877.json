@@ -1,0 +1,487 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-sulfino-l-alanine-to-l-glutamate-16877",
+  "name": "3-sulfino-L-alanine to L-glutamate",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 3-sulfino-L-alanine(1−) to L-glutamate(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:16877"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:61085"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_sulfino_l_alanine",
+      "name": "3-sulfino-L-alanine",
+      "formula": "C3H6NO4S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:61085"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "hypotaurine",
+      "name": "hypotaurine",
+      "formula": "C2H7NO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57853"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "taurine",
+      "name": "Taurine",
+      "formula": "C2H7NO3S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:507393"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "sulfonatoacetaldehyde",
+      "name": "sulfonatoacetaldehyde",
+      "short": "sulfonatoacetaldehy…",
+      "formula": "C2H3O4S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58246"
+      }
+    },
+    {
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29985"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_1_1_29",
+      "name": "sulfinoalanine decarboxylase",
+      "ec": [
+        "4.1.1.29"
+      ],
+      "xrefs": {
+        "uniprot": "Q9Y600"
+      }
+    },
+    {
+      "id": "ec_1_14_13_8",
+      "name": "flavin-containing monooxygenase",
+      "ec": [
+        "1.14.13.8"
+      ],
+      "xrefs": {
+        "uniprot": "Q01740"
+      }
+    },
+    {
+      "id": "ec_2_6_1_55",
+      "name": "taurine--2-oxoglutarate transaminase",
+      "ec": [
+        "2.6.1.55"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "sulfinoalanine decarboxylase",
+      "equation": "3-sulfino-L-alanine + H(+) = hypotaurine + CO2",
+      "ec": "4.1.1.29",
+      "substrates": [
+        {
+          "metabolite": "3_sulfino_l_alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hypotaurine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_29"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:16877"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16877"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "flavin-containing monooxygenase",
+      "equation": "hypotaurine + NADPH + O2 + H(+) = taurine + NADP(+) + H2O",
+      "ec": "1.14.13.8",
+      "substrates": [
+        {
+          "metabolite": "hypotaurine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "taurine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:69819"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69819"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "taurine--2-oxoglutarate transaminase",
+      "equation": "taurine + 2-oxoglutarate = sulfoacetaldehyde + L-glutamate",
+      "ec": "2.6.1.55",
+      "substrates": [
+        {
+          "metabolite": "taurine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sulfonatoacetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_55"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:16353"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16353"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3_sulfino_l_alanine_3-sulfino-l-alanine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_sulfino_l_alanine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-sulfino-l-alanine-to-h2o"
+      },
+      "note": "Shares 3-sulfino-L-alanine with 3-sulfino-L-alanine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61085"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_sulfino_l_alanine_3-sulfino-l-alanine-to-h2o-70295",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_sulfino_l_alanine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-sulfino-l-alanine-to-h2o-70295"
+      },
+      "note": "Shares 3-sulfino-L-alanine with 3-sulfino-L-alanine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61085"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_sulfino_l_alanine_3-sulfino-l-alanine-to-l-glutamate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_sulfino_l_alanine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-sulfino-l-alanine-to-l-glutamate"
+      },
+      "note": "Shares 3-sulfino-L-alanine with 3-sulfino-L-alanine to L-glutamate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61085"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_sulfino_l_alanine_d-arabinitol-to-fmnh2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_sulfino_l_alanine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-arabinitol-to-fmnh2"
+      },
+      "note": "Shares 3-sulfino-L-alanine with D-arabinitol to FMNH2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61085"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_sulfino_l_alanine_d-arabinitol-to-fmnh2-11868",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_sulfino_l_alanine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-arabinitol-to-fmnh2-11868"
+      },
+      "note": "Shares 3-sulfino-L-alanine with D-arabinitol to FMNH2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61085"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_sulfino_l_alanine_ent-copal-8-ol-diphosphate-to-l-cysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_sulfino_l_alanine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ent-copal-8-ol-diphosphate-to-l-cysteine"
+      },
+      "note": "Shares 3-sulfino-L-alanine with ent-copal-8-ol diphosphate to L-cysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61085"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_sulfino_l_alanine_ent-copal-8-ol-diphosphate-to-l-cysteine-18721",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_sulfino_l_alanine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ent-copal-8-ol-diphosphate-to-l-cysteine-18721"
+      },
+      "note": "Shares 3-sulfino-L-alanine with ent-copal-8-ol diphosphate to L-cysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61085"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hypotaurine_3-sulfino-l-alanine-to-l-glutamate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hypotaurine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-sulfino-l-alanine-to-l-glutamate"
+      },
+      "note": "Shares hypotaurine with 3-sulfino-L-alanine to L-glutamate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57853"
+          }
+        ]
+      }
+    }
+  ]
+}

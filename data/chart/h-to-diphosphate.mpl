@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway h-to-diphosphate "H to diphosphate" {
-  spacing 284
+  spacing 320
 
   spine at 0,0 {
     h
@@ -20,14 +20,14 @@ pathway h-to-diphosphate "H to diphosphate" {
 
   branch from dgtp side left {
     dgtp
-    <-> ec_3_6_1_19 [3.6.1.19] +diphosphate +h +amp
+    <-> . +h +2_deoxyguanosine +phosphate
     h2o
   }
 
   branch from dgtp side right {
     dgtp
-    <-> ec_3_6_1_15 [3.6.1.15] +h +phosphate +h2o
-    adp
+    <-> ec_1_17_4_2 [1.17.4.2] +gtp +dihydrolipoic_acid +h +h2o
+    r_lipoate
   }
 
   branch from 2_deoxyuridine side left {
@@ -62,19 +62,55 @@ pathway h-to-diphosphate "H to diphosphate" {
 
   branch from geranylgeranyl_diphosphate side right {
     geranylgeranyl_diphosphate
-    <-> . +ppi
-    araneosene
+    <-> . +atp +adp
+    geranylgeranyl_triphosphate
   }
 
-  branch from ppi side left {
-    ppi
-    <-> . +l_tryptophan +atp
-    l_tryptophyl_amp
+  branch from h side left {
+    h
+    <-> . +s_adenosyl_l_homocysteine +aucuparin +noraucuparin
+    s_adenosyl_l_methionine
   }
 
-  branch from ppi side right {
-    ppi
-    <-> . +peregrinol_diphosphate +h2o
-    viteagnusin_d
+  branch from h side right {
+    h
+    <-> . +gdp +d_mannosyl_phosphomycoketide +phosphomycoketide_c32
+    gdp_alpha_d_mannose
+  }
+
+  branch from dump side left {
+    dump
+    <-> ec_2_1_1_148 [2.1.1.148] +6r_5_10_methylene_5_6_7_8_tetrahydrofolate +fadh2 +h +fad +dtmp
+    6s_5_6_7_8_tetrahydrofolate
+  }
+
+  branch from dump side right {
+    dump
+    <-> ec_2_1_1_45 [2.1.1.45] +6r_5_10_methylene_5_6_7_8_tetrahydrofolate +fmnh2 +h +6s_5_6_7_8_tetrahydrofolate +dtmp
+    fmn
+  }
+
+  branch from dgtp side left {
+    dgtp
+    <-> . +fmnh2 +h +fmn +h2o
+    gtp
+  }
+
+  branch from dgtp side right {
+    dgtp
+    <-> ec_3_6_1_19 [3.6.1.19] +h +amp +h2o
+    diphosphate
+  }
+
+  branch from l_cysteine side left {
+    l_cysteine
+    <-> . +s_nitroso_coenzyme_a +coa
+    s_nitroso_l_cysteine
+  }
+
+  branch from l_cysteine side right {
+    l_cysteine
+    <-> . +s_nitroso_l_cysteine +coa
+    s_nitroso_coenzyme_a
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway carotene-to-fmn "β-carotene to FMN" {
-  spacing 204
+  spacing 192
 
   spine at 0,0 {
     carotene
@@ -16,17 +16,5 @@ pathway carotene-to-fmn "β-carotene to FMN" {
     s_all_trans_4_hydroxyretinoate
     <-> . +fmnh2 +o2 -fmn -h2o -hplus
     4s_4_16_dihydroxyretinoate
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +decane +fmnh2 +o2 +h2o +hplus
-    decan_3_ol
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +dodecane +fmnh2 +o2 +h2o +hplus
-    dodecan_5_ol
   }
 }

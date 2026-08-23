@@ -1,0 +1,465 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "hygromycin-c-to-adp-null",
+  "name": "hygromycin C to ADP",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from hygromycin C to ADP, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR199828"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "hygromycin_c",
+      "name": "hygromycin C",
+      "formula": "C20H42N3O13",
+      "charge": 3,
+      "xrefs": {
+        "metanetx": "MNXM1559732"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "3_n_methyltalamine",
+      "name": "3-N-methyltalamine",
+      "formula": "C13H28N2O8",
+      "charge": 2,
+      "xrefs": {
+        "metanetx": "MNXM1559733"
+      }
+    },
+    {
+      "id": "adp_6_amino_6_deoxy_d_glycero_alpha_d_galacto_he",
+      "name": "ADP-6''-amino-6''-deoxy-D-glycero-alpha-D-galacto-heptose",
+      "short": "ADP-6''-amino-6''-d…",
+      "formula": "C17H27N6O15P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1559734"
+      }
+    },
+    {
+      "id": "3_n_methylgalacamine",
+      "name": "3-N-methylgalacamine",
+      "formula": "C13H28N2O8",
+      "charge": 2,
+      "xrefs": {
+        "metanetx": "MNXM1559735"
+      }
+    },
+    {
+      "id": "2_epi_hygromycin_c",
+      "name": "2'-epi-hygromycin C",
+      "formula": "C20H42N3O13",
+      "charge": 3,
+      "xrefs": {
+        "metanetx": "MNXM1559736"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR199828",
+      "substrates": [
+        {
+          "metabolite": "hygromycin_c",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_n_methyltalamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp_6_amino_6_deoxy_d_glycero_alpha_d_galacto_he",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR199828"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR199828"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR199829",
+      "substrates": [
+        {
+          "metabolite": "3_n_methyltalamine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_n_methylgalacamine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR199829"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR199829"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR199830",
+      "substrates": [
+        {
+          "metabolite": "adp_6_amino_6_deoxy_d_glycero_alpha_d_galacto_he",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_n_methylgalacamine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_epi_hygromycin_c",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR199830"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR199830"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_hygromycin_c_hygromycin-c-to-adp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hygromycin_c"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hygromycin-c-to-adp"
+      },
+      "note": "Shares hygromycin C with hygromycin C to ADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1559732"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_n_methyltalamine_5-methoxybenzimidazole-to-6-hydroxynicotinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_n_methyltalamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-methoxybenzimidazole-to-6-hydroxynicotinate"
+      },
+      "note": "Shares 3-N-methyltalamine with 5-Methoxybenzimidazole to 6-hydroxynicotinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1559733"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_n_methyltalamine_hygromycin-c-to-adp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_n_methyltalamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hygromycin-c-to-adp"
+      },
+      "note": "Shares 3-N-methyltalamine with hygromycin C to ADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1559733"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_n_methyltalamine_loganin-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_n_methyltalamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "loganin-to-h2o-null"
+      },
+      "note": "Shares 3-N-methyltalamine with loganin to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1559733"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_adp_6_amino_6_deoxy_d_glycero_alpha_d_galacto_he_2-oxoglutarate-to-d-sedoheptulose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "adp_6_amino_6_deoxy_d_glycero_alpha_d_galacto_he"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-oxoglutarate-to-d-sedoheptulose"
+      },
+      "note": "Shares ADP-6''-amino-6''-deoxy-D-glycero-alpha-D-galacto-heptose with 2-oxoglutarate to D-sedoheptulose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1559734"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_adp_6_amino_6_deoxy_d_glycero_alpha_d_galacto_he_2-oxoglutarate-to-d-sedoheptulose-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "adp_6_amino_6_deoxy_d_glycero_alpha_d_galacto_he"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-oxoglutarate-to-d-sedoheptulose-null"
+      },
+      "note": "Shares ADP-6''-amino-6''-deoxy-D-glycero-alpha-D-galacto-heptose with 2-oxoglutarate to D-sedoheptulose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1559734"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_adp_6_amino_6_deoxy_d_glycero_alpha_d_galacto_he_hygromycin-c-to-adp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "adp_6_amino_6_deoxy_d_glycero_alpha_d_galacto_he"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hygromycin-c-to-adp"
+      },
+      "note": "Shares ADP-6''-amino-6''-deoxy-D-glycero-alpha-D-galacto-heptose with hygromycin C to ADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1559734"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_n_methylgalacamine_5-methoxybenzimidazole-to-6-hydroxynicotinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_n_methylgalacamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-methoxybenzimidazole-to-6-hydroxynicotinate"
+      },
+      "note": "Shares 3-N-methylgalacamine with 5-Methoxybenzimidazole to 6-hydroxynicotinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1559735"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_n_methylgalacamine_beta-fabatriose-to-soyasapogenol-b",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_n_methylgalacamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-fabatriose-to-soyasapogenol-b"
+      },
+      "note": "Shares 3-N-methylgalacamine with beta-Fabatriose to soyasapogenol B….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1559735"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_n_methylgalacamine_hygromycin-c-to-adp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_n_methylgalacamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hygromycin-c-to-adp"
+      },
+      "note": "Shares 3-N-methylgalacamine with hygromycin C to ADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1559735"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_n_methylgalacamine_loganin-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_n_methylgalacamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "loganin-to-h2o-null"
+      },
+      "note": "Shares 3-N-methylgalacamine with loganin to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1559735"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_epi_hygromycin_c_hygromycin-c-to-adp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_epi_hygromycin_c"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hygromycin-c-to-adp"
+      },
+      "note": "Shares 2'-epi-hygromycin C with hygromycin C to ADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1559736"
+          }
+        ]
+      }
+    }
+  ]
+}

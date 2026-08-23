@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 6-d-glucosaminyl-1-ph-to-1-acyl-2-hexadecanoyl-s "6-(α-D-glucosaminyl)-1-ph… to 1-acyl-2-hexadecanoyl-sn-…" {
-  spacing 246
+  spacing 258
 
   spine at 0,0 {
     6_d_glucosaminyl_1_phosphatidyl_1d_myo_inositol
@@ -16,9 +16,21 @@ pathway 6-d-glucosaminyl-1-ph-to-1-acyl-2-hexadecanoyl-s "6-(α-D-glucosaminyl)-
     1_acyl_2_hexadecanoyl_sn_glycero_3_phosphate
   }
 
-  branch from 1_acyl_sn_glycerol_3_phosphate side left {
-    1_acyl_sn_glycerol_3_phosphate
-    <-> . +lauroyl_coa +coa
-    1_acyl_2_dodecanoyl_sn_glycero_3_phosphate
+  branch from 6_d_glucosaminyl_1_phosphatidyl_1d_myo_inositol side left {
+    6_d_glucosaminyl_1_phosphatidyl_1d_myo_inositol
+    <-> . +palmitoyl_coa +coa
+    2_palmitoyl_6_d_glucosaminy_1_1_2_diacyl_sn_glyc
+  }
+
+  branch from palmitoyl_coa side right {
+    palmitoyl_coa
+    <-> . +sphinga_4e_8e_dienine +coa +hplus
+    4e_8e_n_hexadecanoylsphinga_4_8_dienine
+  }
+
+  branch from palmitoyl_coa side left {
+    palmitoyl_coa
+    <-> . +sphinga_4e_8z_dienine +coa +hplus
+    4e_8z_n_hexadecanoylsphinga_4_8_dienine
   }
 }

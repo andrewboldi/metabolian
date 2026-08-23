@@ -311,6 +311,136 @@
       "xrefs": {
         "chebi": "CHEBI:57665"
       }
+    },
+    {
+      "id": "hco3",
+      "name": "Bicarbonate (HCO3-)",
+      "formula": "CHO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17544"
+      }
+    },
+    {
+      "id": "carbamoyl_p",
+      "name": "Carbamoyl phosphate",
+      "formula": "CH2NO5P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58228"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "phosphoramidate",
+      "name": "phosphoramidate",
+      "formula": "H2NO3P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:29920"
+      }
+    },
+    {
+      "id": "d_hexose",
+      "name": "D-hexose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4194"
+      }
+    },
+    {
+      "id": "d_hexose_1_phosphate",
+      "name": "α-D-hexose 1-phosphate",
+      "short": "α-D-hexose 1-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57734"
+      }
+    },
+    {
+      "id": "aspartate",
+      "name": "L-Aspartate",
+      "formula": "C4H6NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29991"
+      }
+    },
+    {
+      "id": "l_asparagine",
+      "name": "L-asparagine",
+      "formula": "C4H8N2O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58048"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "germacrene_d",
+      "name": "(−)-germacrene D",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:49044"
+      }
+    },
+    {
+      "id": "2_hydroxy_3_oxopropanoate",
+      "name": "2-hydroxy-3-oxopropanoate",
+      "short": "2-hydroxy-3-oxoprop…",
+      "formula": "C3H3O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57978"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "butyryl_coa",
+      "name": "Butyryl-CoA (butanoyl-CoA)",
+      "short": "Butyryl-CoA…",
+      "formula": "C25H38N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57371"
+      }
+    },
+    {
+      "id": "3_ethylmalate",
+      "name": "3-ethylmalate",
+      "formula": "C6H8O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57425"
+      }
     }
   ],
   "enzymes": [
@@ -333,7 +463,10 @@
       "name": "double-stranded RNA adenine deaminase",
       "ec": [
         "3.5.4.37"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P55265"
+      }
     },
     {
       "id": "ec_3_5_4_23",
@@ -354,6 +487,48 @@
       "name": "dimethylallylcistransferase",
       "ec": [
         "2.5.1.28"
+      ]
+    },
+    {
+      "id": "ec_2_7_2_2",
+      "name": "carbamate kinase",
+      "ec": [
+        "2.7.2.2"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_62",
+      "name": "phosphoramidate--hexose phosphotransferase",
+      "ec": [
+        "2.7.1.62"
+      ]
+    },
+    {
+      "id": "ec_6_3_1_1",
+      "name": "aspartate--ammonia ligase",
+      "ec": [
+        "6.3.1.1"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_75",
+      "name": "(-)-germacrene D synthase",
+      "ec": [
+        "4.2.3.75"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_47",
+      "name": "tartronate-semialdehyde synthase",
+      "ec": [
+        "4.1.1.47"
+      ]
+    },
+    {
+      "id": "ec_2_3_3_7",
+      "name": "3-ethylmalate synthase",
+      "ec": [
+        "2.3.3.7"
       ]
     }
   ],
@@ -871,6 +1046,574 @@
           {
             "db": "Rhea",
             "id": "RHEA:11328"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "carbamate kinase",
+      "equation": "hydrogencarbonate + NH4(+) + ATP = carbamoyl phosphate + ADP + H2O + H(+)",
+      "ec": "2.7.2.2",
+      "substrates": [
+        {
+          "metabolite": "hco3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "carbamoyl_p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_2_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:10152"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10152"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r13",
+      "name": "phosphoramidate--hexose phosphotransferase",
+      "equation": "phosphoramidate + a D-hexose + H(+) = alpha-D-hexose 1-phosphate + NH4(+)",
+      "ec": "2.7.1.62",
+      "substrates": [
+        {
+          "metabolite": "phosphoramidate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_hexose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_hexose_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_62"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 13,
+      "xrefs": {
+        "rhea": "RHEA:10972"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10972"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r14",
+      "name": "aspartate--ammonia ligase",
+      "equation": "L-aspartate + NH4(+) + ATP = L-asparagine + AMP + diphosphate + H(+)",
+      "ec": "6.3.1.1",
+      "substrates": [
+        {
+          "metabolite": "aspartate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_asparagine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_3_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 14,
+      "xrefs": {
+        "rhea": "RHEA:11372"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11372"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r15",
+      "name": "(-)-germacrene D synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (-)-germacrene D + diphosphate",
+      "ec": "4.2.3.75",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "germacrene_d",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_75"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 15,
+      "xrefs": {
+        "rhea": "RHEA:12016"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12016"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r16",
+      "name": "tartronate-semialdehyde synthase",
+      "equation": "2 glyoxylate + H(+) = 2-hydroxy-3-oxopropanoate + CO2",
+      "ec": "4.1.1.47",
+      "substrates": [
+        {
+          "metabolite": "glyoxylate",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxy_3_oxopropanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_47"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 16,
+      "xrefs": {
+        "rhea": "RHEA:10136"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10136"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r17",
+      "name": "3-ethylmalate synthase",
+      "equation": "butanoyl-CoA + glyoxylate + H2O = 3-ethylmalate + CoA + H(+)",
+      "ec": "2.3.3.7",
+      "substrates": [
+        {
+          "metabolite": "butyryl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glyoxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_ethylmalate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_3_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 17,
+      "xrefs": {
+        "rhea": "RHEA:10500"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10500"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_valerate_1-octadecanoyl-2-pentanoy-to-arachidonate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "valerate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-octadecanoyl-2-pentanoy-to-arachidonate"
+      },
+      "note": "Shares valerate with 1-octadecanoyl-2-pentanoy… to arachidonate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:31011"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_valerate_1-palmitoyl-2-valeroyl-sn-to-o-s-3r-hydroxyhepta",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "valerate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-palmitoyl-2-valeroyl-sn-to-o-s-3r-hydroxyhepta"
+      },
+      "note": "Shares valerate with 1-palmitoyl-2-valeroyl-sn… to O-[S-(3R)-hydroxyheptanoy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:31011"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pentanoyl_coa_1-octadecanoyl-2-pentanoy-to-arachidonate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pentanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-octadecanoyl-2-pentanoy-to-arachidonate"
+      },
+      "note": "Shares pentanoyl-CoA with 1-octadecanoyl-2-pentanoy… to arachidonate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57389"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pentanoyl_coa_1-palmitoyl-2-valeroyl-sn-to-o-s-3r-hydroxyhepta",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pentanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-palmitoyl-2-valeroyl-sn-to-o-s-3r-hydroxyhepta"
+      },
+      "note": "Shares pentanoyl-CoA with 1-palmitoyl-2-valeroyl-sn… to O-[S-(3R)-hydroxyheptanoy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57389"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pentanal_1-octadecanoyl-2-pentanoy-to-arachidonate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pentanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-octadecanoyl-2-pentanoy-to-arachidonate"
+      },
+      "note": "Shares pentanal with 1-octadecanoyl-2-pentanoy… to arachidonate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84069"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pentanal_1-palmitoyl-2-valeroyl-sn-to-o-s-3r-hydroxyhepta",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pentanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-palmitoyl-2-valeroyl-sn-to-o-s-3r-hydroxyhepta"
+      },
+      "note": "Shares pentanal with 1-palmitoyl-2-valeroyl-sn… to O-[S-(3R)-hydroxyheptanoy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84069"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pentanal_5-formimidoyltetrahydrofo-to-hydrogen-cyanide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pentanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-formimidoyltetrahydrofo-to-hydrogen-cyanide"
+      },
+      "note": "Shares pentanal with 5-formimidoyltetrahydrofo… to hydrogen cyanide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84069"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pentanal_ala-leu-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pentanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ala-leu-to-ammonium"
+      },
+      "note": "Shares pentanal with Ala-Leu to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84069"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pentanal_phenylthioacetohydroximate-to-benzyl-thiocyanate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pentanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phenylthioacetohydroximate-to-benzyl-thiocyanate"
+      },
+      "note": "Shares pentanal with phenylthioacetohydroximate to benzyl thiocyanate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84069"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_inosine_5_phosphate_1_cyclohexylsulfamate-to-6-oxohexanoate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "inosine_5_phosphate_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cyclohexylsulfamate-to-6-oxohexanoate"
+      },
+      "note": "Shares inosine 5'-phosphate(1−) with cyclohexylsulfamate to 6-oxohexanoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:82852"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_inosine_5_phosphate_1_erythro-5-hydroxy-l-lysin-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "inosine_5_phosphate_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "erythro-5-hydroxy-l-lysin-to-succinate"
+      },
+      "note": "Shares inosine 5'-phosphate(1−) with erythro-5-hydroxy-L-lysin… to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:82852"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2e_pentenoyl_coa_1-5-anhydro-d-fructose-to-d-cellotrionate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2e_pentenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-5-anhydro-d-fructose-to-d-cellotrionate"
+      },
+      "note": "Shares (2E)-pentenoyl-CoA with 1,5-anhydro-D-fructose to D-cellotrionate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:86160"
           }
         ]
       }

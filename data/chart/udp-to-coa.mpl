@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-coa "UDP to CoA" {
-  spacing 292
+  spacing 328
 
   spine at 0,0 {
     udp
@@ -16,39 +16,75 @@ pathway udp-to-coa "UDP to CoA" {
     quercetin_3_o_6_o_malonyl_d_glucoside
   }
 
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> . +udp +16_alpha_hydroxygypsogenate_28_beta_d_glucoside
-    16_hydroxygypsogenate
-  }
-
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> . +udp +h +medicagenate_23_o_beta_d_glucoside
-    medicagenic_acid
-  }
-
   branch from h side left {
     h
-    <-> ec_1_17_1_8 [1.17.1.8] +nadh +2_3_dihydrodipicolinate +nad
-    2_3_4_5_tetrahydrodipicolinate
+    <-> ec_1_13_11_39 [1.13.11.39] +2z_4e_2_hydroxy_6_oxo_4_bromophenoxy_hexa_2_4_d +o2
+    4_bromo_2_3_dihydroxydiphenyl_ether
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_146 [1.1.1.146] +nadh +3alpha_21_dihydroxy_5beta_pregnane_11_20_dione +nad
-    tetrahydrocorticosterone
+    <-> . +2z_4e_2_hydroxy_6_oxo_4_bromophenoxy_hexa_2_4_d +4_bromo_2_3_dihydroxydiphenyl_ether
+    o2
   }
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_51 [2.3.1.51] +1_11z_octadecenoyl_sn_glycero_3_phosphate +h +11z_octadecenoyl_coa
-    pa_18_1_11z_18_1_11z
+    <-> . +acetyl_coa +3_amino_4_hydroxyphenyl_methyl_arsinate
+    3_acetamido_4_hydroxyphenyl_methyl_arsinate
   }
 
   branch from coa side right {
     coa
-    <-> . +2e_hexadecenoyl_coa +l_serine +3_dehydrosphingosine
+    <-> ec_2_3_1_87 [2.3.1.87] +acetyl_coa +alpha_methyltryptamine
+    n_acetyl_alpha_methyltryptamine
+  }
+
+  branch from udp side left {
+    udp
+    <-> . +alpha_d_glca_1_6_alpha_d_glc_1_2_alpha_l_rha_1_3 +h +alpha_d_glc_1_2_alpha_l_rha_1_3_alpha_l_rha_1_3
+    udp_alpha_d_glucuronate
+  }
+
+  branch from udp side right {
+    udp
+    <-> . +alpha_d_gal_1_3_beta_d_mannac_1_3_alpha_l_fucnac +h +beta_d_mannac_1_3_alpha_l_fucnac_1_3_alpha_d_gal
+    udp_alpha_d_galactose
+  }
+
+  branch from h side left {
+    h
+    <-> . +2_4_6_trioxohexanoate +o2
+    benzene_1_2_4_triol
+  }
+
+  branch from h side right {
+    h
+    <-> . +benzene_1_2_4_triol +o2
+    2_4_6_trioxohexanoate
+  }
+
+  branch from malonyl_coa side left {
+    malonyl_coa
+    <-> . +h +coa +aloesone +h2o
     co2
+  }
+
+  branch from malonyl_coa side right {
+    malonyl_coa
+    <-> . +acetyl_coa +h +co2 +coa +h2o
+    aloesone
+  }
+
+  branch from coa side left {
+    coa
+    <-> ec_2_3_1_93 [2.3.1.93] +2e_2_methylbut_2_enoyl_coa +13_hydroxylupanine
+    13_2_methylcrotonoyl_oxylupanine
+  }
+
+  branch from coa side right {
+    coa
+    <-> ec_2_3_1_93 [2.3.1.93] +2e_2_methylbut_2_enoyl_coa +13_hydroxylupanine
+    13alpha_tigloyloxylupanine
   }
 }

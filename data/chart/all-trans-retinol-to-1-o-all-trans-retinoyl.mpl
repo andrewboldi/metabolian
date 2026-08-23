@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway all-trans-retinol-to-1-o-all-trans-retinoyl "all-trans-retinol to 1-O-(all-trans-retinoyl)-…" {
-  spacing 168
+  spacing 180
 
   spine at 0,0 {
     all_trans_retinol
@@ -14,5 +14,17 @@ pathway all-trans-retinol-to-1-o-all-trans-retinoyl "all-trans-retinol to 1-O-(a
     all_trans_retinoate
     <-> . +udp_d_glucuronate -udp
     1_o_all_trans_retinoyl_d_glucuronate
+  }
+
+  branch from udp_d_glucuronate side left {
+    udp_d_glucuronate
+    <-> . +aldosterone_hemiacetal +udp +hplus
+    aldosterone_hemiacetal_18_glucuronide
+  }
+
+  branch from udp_d_glucuronate side right {
+    udp_d_glucuronate
+    <-> . +8_epi_prostaglandin_f2 +udp +hplus
+    8_iso_prostaglandin_f2_glucuronide
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway tirucalla-7-24-dien-3-ol-to-succinate "tirucalla-7,24-dien-3β-ol to succinate" {
-  spacing 158
+  spacing 164
 
   spine at 0,0 {
     tirucalla_7_24_dien_3_ol
@@ -40,5 +40,11 @@ pathway tirucalla-7-24-dien-3-ol-to-succinate "tirucalla-7,24-dien-3β-ol to suc
     7_8_epoxymelianol
     <-> .
     protoglabretal
+  }
+
+  branch from tirucalla_7_24_dien_3_ol side right {
+    tirucalla_7_24_dien_3_ol
+    <-> ec_5_4_99_56 [5.4.99.56]
+    epoxysqualene
   }
 }

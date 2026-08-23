@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway butyl-sulfate-to-butanoyl-phosphate "butyl sulfate to butanoyl phosphate" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     butyl_sulfate
@@ -14,29 +14,5 @@ pathway butyl-sulfate-to-butanoyl-phosphate "butyl sulfate to butanoyl phosphate
     butyrate
     <-> ec_2_7_2_7 [2.7.2.7] +atp -adp
     butyryl_p
-  }
-
-  branch from sulfate side left {
-    sulfate
-    <-> . +sulfosungeidine_f +hplus
-    sungeidine_a
-  }
-
-  branch from sulfate side right {
-    sulfate
-    <-> . +sulfosungeidine_e +hplus
-    sungeidine_b
-  }
-
-  branch from succinate side left {
-    succinate
-    <-> . +2_oxindole_3_acetate +succinyl_coa
-    2_oxoindol_3_yl_acetyl_coa
-  }
-
-  branch from succinate side right {
-    succinate
-    <-> . +2_aminophenyl_succinate +succinyl_coa
-    2_2_aminophenyl_succinyl_coa
   }
 }

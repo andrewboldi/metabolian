@@ -9,7 +9,7 @@
     "sources": [
       {
         "db": "MetaNetX",
-        "id": "MNXR198609"
+        "id": "MNXR198608"
       }
     ]
   },
@@ -25,12 +25,12 @@
       }
     },
     {
-      "id": "menaquinone_8",
-      "name": "menaquinone-8",
+      "id": "mk_8",
+      "name": "MK-8",
       "formula": "C51H72O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:44027"
+        "chebi": "CHEBI:205208"
       }
     },
     {
@@ -63,21 +63,21 @@
       }
     },
     {
-      "id": "pmf",
-      "name": "PMF",
-      "formula": "H",
-      "charge": 1,
+      "id": "thiosulfate",
+      "name": "thiosulfate",
+      "formula": "HO3S2",
+      "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM01"
+        "metanetx": "MNXM1094289"
       }
     },
     {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
+      "id": "tetrathionate",
+      "name": "tetrathionate",
+      "formula": "O6S4",
       "charge": -2,
       "xrefs": {
-        "metanetx": "MNXM10"
+        "chebi": "CHEBI:15226"
       }
     },
     {
@@ -88,15 +88,6 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:61873"
-      }
-    },
-    {
-      "id": "nad",
-      "name": "NAD",
-      "formula": "C21H26N7O14P2",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM8"
       }
     },
     {
@@ -122,13 +113,6 @@
   ],
   "enzymes": [
     {
-      "id": "ec_1_6_5_3",
-      "name": "EC 1.6.5.3",
-      "ec": [
-        "1.6.5.3"
-      ]
-    },
-    {
       "id": "ec_1_3_5_6",
       "name": "9,9'-di-cis-zeta-carotene desaturase",
       "ec": [
@@ -139,14 +123,14 @@
   "reactions": [
     {
       "id": "r1",
-      "name": "Reaction MNXR198609",
+      "name": "Reaction MNXR198608",
       "substrates": [
         {
           "metabolite": "s_adenosyl_l_homocysteine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "menaquinone_8",
+          "metabolite": "mk_8",
           "stoichiometry": 1
         },
         {
@@ -167,70 +151,52 @@
       "reversibility": "reversible",
       "pathwayStep": 1,
       "xrefs": {
-        "metanetx": "MNXR198609"
+        "metanetx": "MNXR198608"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR198609"
+            "id": "MNXR198608"
           }
         ]
       }
     },
     {
       "id": "r2",
-      "name": "Reaction MNXR101875",
-      "ec": "1.6.5.3",
+      "name": "Reaction MNXR104780",
       "substrates": [
         {
-          "metabolite": "pmf",
-          "stoichiometry": 14
-        },
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 5
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 5
+          "metabolite": "thiosulfate",
+          "stoichiometry": 2
         },
         {
           "metabolite": "2_demethylmenaquinone_8",
-          "stoichiometry": 5
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "pmf",
-          "stoichiometry": 14
+          "metabolite": "tetrathionate",
+          "stoichiometry": 1
         },
         {
           "metabolite": "2_demethylmenaquinol_8",
-          "stoichiometry": 5
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 5
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_6_5_3"
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 2,
       "xrefs": {
-        "metanetx": "MNXR101875"
+        "metanetx": "MNXR104780"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR101875"
+            "id": "MNXR104780"
           }
         ]
       }
@@ -275,6 +241,140 @@
           {
             "db": "MetaNetX",
             "id": "MNXR182202"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_tetrathionate_beta-nicotinamide-to-3-demethylubiquinone-9",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tetrathionate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-nicotinamide-to-3-demethylubiquinone-9"
+      },
+      "note": "Shares tetrathionate with beta-nicotinamide… to 3-demethylubiquinone-9.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15226"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tetrathionate_coenzyme-q10-to-glutathionate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tetrathionate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "coenzyme-q10-to-glutathionate"
+      },
+      "note": "Shares tetrathionate with coenzyme Q10 to glutathionate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15226"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tetrathionate_d-apiitol-to-nitrate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tetrathionate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-apiitol-to-nitrate"
+      },
+      "note": "Shares tetrathionate with D-apiitol to nitrate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15226"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tetrathionate_s-5-oxo-2-5-dihydro-2-f-to-nitrite",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tetrathionate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-5-oxo-2-5-dihydro-2-f-to-nitrite"
+      },
+      "note": "Shares tetrathionate with (S)-5-oxo-2,5-dihydro-2-f… to nitrite.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15226"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tetrathionate_sulfo-aldehydes-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tetrathionate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sulfo-aldehydes-to-h2o"
+      },
+      "note": "Shares tetrathionate with Sulfo-Aldehydes to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15226"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tetrathionate_trithionate-to-menadiol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tetrathionate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trithionate-to-menadiol"
+      },
+      "note": "Shares tetrathionate with trithionate to menadiol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15226"
           }
         ]
       }

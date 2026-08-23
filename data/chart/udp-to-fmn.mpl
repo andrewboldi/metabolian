@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-fmn "UDP to FMN" {
-  spacing 288
+  spacing 240
 
   spine at 0,0 {
     udp
@@ -22,30 +22,6 @@ pathway udp-to-fmn "UDP to FMN" {
     6_hydroxyandrost_4_ene_3_17_dione
   }
 
-  branch from udp_alpha_d_glucuronate side left {
-    udp_alpha_d_glucuronate
-    <-> . +udp +demethyl_5_6_7_8_tetrahydrocyanopterin +h
-    6_hydroxymethylpterin_beta_galactoside
-  }
-
-  branch from udp_alpha_d_glucuronate side right {
-    udp_alpha_d_glucuronate
-    <-> . +udp +1_hydroxy_s_ibuprofen_glucuronide +h
-    1_hydroxyibuprofen
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_3_1_32 [1.3.1.32] +nadh +2_bromomaleylacetate +bromide
-    maleylacetate
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_15 [1.1.1.15] +nadh +l_fructofuranose +h
-    l_glucitol
-  }
-
   branch from 5_dihydrotestosterone side left {
     5_dihydrotestosterone
     <-> . +nadph +hplus +nadp
@@ -56,29 +32,5 @@ pathway udp-to-fmn "UDP to FMN" {
     5_dihydrotestosterone
     <-> . +nadph +hplus +nadp
     5_androstane_3_17_diol
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    l_methionine_s_oxide
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    l_methionine_s_s_oxide
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> . +tirandamycin_f +h +o2 +nadp +h2o
-    tirandamycin_e
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> . +tirandamycin_f +h +o2 +nadp +h2o
-    tirandamycin_e
   }
 }

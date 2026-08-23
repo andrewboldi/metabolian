@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway a-2-3-di-o-phytanyl-sn-gl-to-sulfate "a 2,3-di-O-phytanyl-sn-gl… to sulfate" {
-  spacing 272
+  spacing 236
 
   spine at 0,0 {
     a_2_3_di_o_phytanyl_sn_glycerophospholipid
@@ -18,41 +18,5 @@ pathway a-2-3-di-o-phytanyl-sn-gl-to-sulfate "a 2,3-di-O-phytanyl-sn-gl… to su
     sulfite
     <-> ec_1_8_5_6 [1.8.5.6] +1_4_benzoquinones +h2o -sulfate
     hydroquinones
-  }
-
-  branch from hydrogen_acceptor side left {
-    hydrogen_acceptor
-    <-> . +coniferin +hydrogen_donor
-    coniferaldehyde_d_glucoside
-  }
-
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> . +urobilinogen +hydrogen_donor
-    bilirubin
-  }
-
-  branch from nh3 side left {
-    nh3
-    <-> . +2_deoxyguanosine +h2o +hplus
-    2_deoxyxanthosine
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +2s_2_aminobutan_1_ol +nad +h2o +nadh +hplus
-    1_hydroxybutan_2_one
-  }
-
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
-    <-> . +1_acyl_2_linoleoyl_3_d_galactosyl_1_6_d_galactos +o2 +hplus +di_sulfido_diiron +h2o
-    1_acyl_2_linolenoyl_3_d_galactosyl_1_6_d_galacto
-  }
-
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
-    <-> . +1_linoleoyl_2_acyl_3_d_galactosyl_1_6_d_galactos +o2 +hplus +di_sulfido_diiron +h2o
-    1_linolenoyl_2_acyl_3_d_galactosyl_1_6_d_galacto
   }
 }

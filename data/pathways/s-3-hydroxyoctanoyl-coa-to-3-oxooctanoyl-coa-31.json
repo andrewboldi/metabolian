@@ -1,0 +1,612 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-3-hydroxyoctanoyl-coa-to-3-oxooctanoyl-coa-31",
+  "name": "(S)-3-hydroxyoctanoyl-CoA to 3-oxooctanoyl-CoA",
+  "category": "other",
+  "summary": "A 3-step route from (S)-3-hydroxyoctanoyl-CoA(4−) to 3-oxooctanoyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:31199"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:62617"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_3_hydroxyoctanoyl_coa",
+      "name": "(S)-3-hydroxyoctanoyl-CoA",
+      "short": "3-hydroxyoctanoyl-C…",
+      "formula": "C29H46N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:62617"
+      }
+    },
+    {
+      "id": "trans_oct_2_enoyl_coa",
+      "name": "trans-oct-2-enoyl-CoA",
+      "short": "trans-oct-2-enoyl-C…",
+      "formula": "C29H44N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:62242"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "r_3_hydroxyoctanoyl_coa",
+      "name": "(R)-3-hydroxyoctanoyl-CoA",
+      "short": "3-hydroxyoctanoyl-C…",
+      "formula": "C29H46N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:74279"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "3_oxooctanoyl_coa",
+      "name": "3-oxooctanoyl-CoA",
+      "formula": "C29H44N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:62619"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "octanoyl_coa",
+      "name": "octanoyl-CoA",
+      "formula": "C29H46N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57386"
+      }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H30N9O15P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57692"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58307"
+      }
+    },
+    {
+      "id": "cis_3_octenoyl_coa",
+      "name": "cis-3-octenoyl-CoA",
+      "formula": "C29H44N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:85640"
+      }
+    },
+    {
+      "id": "3_hydroxyoctanoyl_coa",
+      "name": "3-hydroxyoctanoyl-CoA",
+      "short": "3-hydroxyoctanoyl-C…",
+      "formula": "C29H46N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:86040"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(3S)-hydroxyoctanoyl-CoA = (2E)-octenoyl-CoA + H2O",
+      "equation": "(3S)-hydroxyoctanoyl-CoA = (2E)-octenoyl-CoA + H2O",
+      "substrates": [
+        {
+          "metabolite": "s_3_hydroxyoctanoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_oct_2_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:31199"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31199"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(2E)-octenoyl-CoA + H2O = (3R)-hydroxyoctanoyl-CoA",
+      "equation": "(2E)-octenoyl-CoA + H2O = (3R)-hydroxyoctanoyl-CoA",
+      "substrates": [
+        {
+          "metabolite": "trans_oct_2_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_3_hydroxyoctanoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:40187"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40187"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(3R)-hydroxyoctanoyl-CoA + NAD(+) = 3-oxooctanoyl-CoA + NADH + H(+)",
+      "equation": "(3R)-hydroxyoctanoyl-CoA + NAD(+) = 3-oxooctanoyl-CoA + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "r_3_hydroxyoctanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_oxooctanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:40191"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40191"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "octanoyl-CoA + FAD + H(+) = (2E)-octenoyl-CoA + FADH2",
+      "equation": "octanoyl-CoA + FAD + H(+) = (2E)-octenoyl-CoA + FADH2",
+      "substrates": [
+        {
+          "metabolite": "octanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_oct_2_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:30943"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30943"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(3Z)-octenoyl-CoA = (2E)-octenoyl-CoA",
+      "equation": "(3Z)-octenoyl-CoA = (2E)-octenoyl-CoA",
+      "substrates": [
+        {
+          "metabolite": "cis_3_octenoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_oct_2_enoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:46044"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46044"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "(2E)-octenoyl-CoA + H2O = 3-hydroxyoctanoyl-CoA",
+      "equation": "(2E)-octenoyl-CoA + H2O = 3-hydroxyoctanoyl-CoA",
+      "substrates": [
+        {
+          "metabolite": "trans_oct_2_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_hydroxyoctanoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:46348"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46348"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_s_3_hydroxyoctanoyl_coa_n-methylhexanamide-to-3-oxooctanoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_3_hydroxyoctanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-methylhexanamide-to-3-oxooctanoyl-coa"
+      },
+      "note": "Shares (S)-3-hydroxyoctanoyl-CoA with N-methylhexanamide to 3-oxooctanoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62617"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_3_hydroxyoctanoyl_coa_n-methylhexanamide-to-3-oxooctanoyl-coa-20081",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_3_hydroxyoctanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-methylhexanamide-to-3-oxooctanoyl-coa-20081"
+      },
+      "note": "Shares (S)-3-hydroxyoctanoyl-CoA with N-methylhexanamide to 3-oxooctanoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62617"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_3_hydroxyoctanoyl_coa_s-3-hydroxyoctanoyl-coa-to-3-oxooctanoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_3_hydroxyoctanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-3-hydroxyoctanoyl-coa-to-3-oxooctanoyl-coa"
+      },
+      "note": "Shares (S)-3-hydroxyoctanoyl-CoA with (S)-3-hydroxyoctanoyl-CoA to 3-oxooctanoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62617"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_3_hydroxyoctanoyl_coa_n-methylhexanamide-to-3-oxooctanoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_3_hydroxyoctanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-methylhexanamide-to-3-oxooctanoyl-coa"
+      },
+      "note": "Shares (R)-3-hydroxyoctanoyl-CoA with N-methylhexanamide to 3-oxooctanoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74279"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_3_hydroxyoctanoyl_coa_n-methylhexanamide-to-3-oxooctanoyl-coa-20081",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_3_hydroxyoctanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-methylhexanamide-to-3-oxooctanoyl-coa-20081"
+      },
+      "note": "Shares (R)-3-hydroxyoctanoyl-CoA with N-methylhexanamide to 3-oxooctanoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74279"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_3_hydroxyoctanoyl_coa_s-3-hydroxyoctanoyl-coa-to-3-oxooctanoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_3_hydroxyoctanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-3-hydroxyoctanoyl-coa-to-3-oxooctanoyl-coa"
+      },
+      "note": "Shares (R)-3-hydroxyoctanoyl-CoA with (S)-3-hydroxyoctanoyl-CoA to 3-oxooctanoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74279"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_oxooctanoyl_coa_n-methylhexanamide-to-3-oxooctanoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_oxooctanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-methylhexanamide-to-3-oxooctanoyl-coa"
+      },
+      "note": "Shares 3-oxooctanoyl-CoA with N-methylhexanamide to 3-oxooctanoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62619"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_oxooctanoyl_coa_n-methylhexanamide-to-3-oxooctanoyl-coa-20081",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_oxooctanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-methylhexanamide-to-3-oxooctanoyl-coa-20081"
+      },
+      "note": "Shares 3-oxooctanoyl-CoA with N-methylhexanamide to 3-oxooctanoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62619"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_oxooctanoyl_coa_s-3-hydroxyoctanoyl-coa-to-3-oxooctanoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_oxooctanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-3-hydroxyoctanoyl-coa-to-3-oxooctanoyl-coa"
+      },
+      "note": "Shares 3-oxooctanoyl-CoA with (S)-3-hydroxyoctanoyl-CoA to 3-oxooctanoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62619"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cis_3_octenoyl_coa_s-3-hydroxyoctanoyl-coa-to-3-oxooctanoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cis_3_octenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-3-hydroxyoctanoyl-coa-to-3-oxooctanoyl-coa"
+      },
+      "note": "Shares cis-3-octenoyl-CoA with (S)-3-hydroxyoctanoyl-CoA to 3-oxooctanoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:85640"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_hydroxyoctanoyl_coa_s-3-hydroxyoctanoyl-coa-to-3-oxooctanoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_hydroxyoctanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-3-hydroxyoctanoyl-coa-to-3-oxooctanoyl-coa"
+      },
+      "note": "Shares 3-hydroxyoctanoyl-CoA with (S)-3-hydroxyoctanoyl-CoA to 3-oxooctanoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:86040"
+          }
+        ]
+      }
+    }
+  ]
+}

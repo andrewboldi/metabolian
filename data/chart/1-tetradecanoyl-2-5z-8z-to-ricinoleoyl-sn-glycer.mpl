@@ -18,37 +18,37 @@ pathway 1-tetradecanoyl-2-5z-8z-to-ricinoleoyl-sn-glycer "1-tetradecanoyl-2-[(5Z
 
   branch from 2_arachidonoyl_sn_glycero_3_phosphocholine side left {
     2_arachidonoyl_sn_glycero_3_phosphocholine
-    <-> . +1_2_di_o_arachidonoyl_sn_glycero_3_phosphocholin +1_2_dioleoyl_sn_glycero_3_phosphoethanolamine +hplus
-    n_arachidonoyl_1_2_dioleoyl_sn_glycero_3_phospho
-  }
-
-  branch from 2_arachidonoyl_sn_glycero_3_phosphocholine side right {
-    2_arachidonoyl_sn_glycero_3_phosphocholine
     <-> . +stearoyl_coa +coa
     1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphoch
   }
 
-  branch from tetradecanoate side left {
-    tetradecanoate
-    <-> . +1_tetradecanoyl_2_4z_7z_10z_13z_16z_19z_docosahe +h2o +hplus
-    2_4z_7z_10z_13z_16z_19z_docosahexaenoyl_sn_glyce
-  }
-
-  branch from tetradecanoate side right {
-    tetradecanoate
-    <-> . +1_2_di_o_myristoyl_sn_glycero_3_phosphocholine +h2o +hplus
-    2_tetradecanoyl_sn_glycero_3_phosphocholine
+  branch from arachidonate side right {
+    arachidonate
+    <-> . +1_heptadecanoyl_2_arachidonoyl_sn_glycero_3_phos +h2o +hplus
+    1_heptadecanoyl_sn_glycero_3_phosphoserine
   }
 
   branch from arachidonate side left {
     arachidonate
-    <-> . +1_1z_hexadecenyl_2_arachidonoyl_sn_glycero_3_pho +h2o +hplus
-    1_1z_hexadecenyl_sn_glycero_3_phosphocholine
+    <-> . +1_heptadecanoyl_2_arachidonoyl_sn_glycero_3_phos +h2o +hplus
+    1_heptadecanoyl_sn_glycero_3_phosphocholine
   }
 
   branch from arachidonate side right {
     arachidonate
-    <-> . +1_octadecanoyl_2_arachidonoyl_sn_glycero_3_phosp +h2o +hplus
-    1_octadecanoyl_sn_glycero_3_phospho_d_myo_inosit
+    <-> . +1_heptadecanoyl_2_arachidonoyl_sn_glycero_3_phos +h2o +hplus
+    1_heptadecanoyl_sn_glycero_3_phosphoethanolamine
+  }
+
+  branch from arachidonate side left {
+    arachidonate
+    <-> . +n_arachidonoylsphinganine +h2o
+    sphinganine
+  }
+
+  branch from 9z_12r_12_hydroxyoctadec_9_enoyl_coa side right {
+    9z_12r_12_hydroxyoctadec_9_enoyl_coa
+    <-> . +sn_1_2_diricinolein +coa
+    triricinolein
   }
 }

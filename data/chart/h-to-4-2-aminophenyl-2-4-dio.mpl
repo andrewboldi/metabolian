@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway h-to-4-2-aminophenyl-2-4-dio "H to 4-(2-aminophenyl)-2,4-dio…" {
-  spacing 224
+  spacing 212
 
   spine at 0,0 {
     h
@@ -14,17 +14,5 @@ pathway h-to-4-2-aminophenyl-2-4-dio "H to 4-(2-aminophenyl)-2,4-dio…" {
     2_oxopentanoate
     <-> . +l_kynurenine -4_2_aminophenyl_2_4_dioxobutanoate
     l_2_aminopentanoic_acid
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_271 [1.1.1.271] +gdp_4_dehydro_alpha_d_rhamnose +h +nadph
-    gdp_l_fucose
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_3_1_2 [1.3.1.2] +5_fu +h +nadph
-    5_6_dihydro_5_fluorouracil
   }
 }

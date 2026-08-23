@@ -1,0 +1,359 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "7-7-9-9-tetra-cis-lycop-to-2-demethylmenaquinol",
+  "name": "7,7',9,9'-tetra-cis-lycop… to 2-demethylmenaquinol-8",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 7,7',9,9'-tetra-cis-lycopene to 2-demethylmenaquinol-8, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR182156"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:62466"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "7_7_9_9_tetra_cis_lycopene",
+      "name": "7,7',9,9'-tetra-cis-lycopene",
+      "short": "7,7',9,9'-tetra-cis…",
+      "formula": "C40H56",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62466"
+      }
+    },
+    {
+      "id": "2_demethylmenaquinol_8",
+      "name": "2-demethylmenaquinol-8",
+      "short": "2-demethylmenaquino…",
+      "formula": "C50H72O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61873"
+      }
+    },
+    {
+      "id": "7_9_9_tri_cis_neurosporene",
+      "name": "7,9,9'-tri-cis-neurosporene",
+      "short": "7,9,9'-tri-cis-neur…",
+      "formula": "C40H58",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62463"
+      }
+    },
+    {
+      "id": "2_demethylmenaquinone_8",
+      "name": "2-demethylmenaquinone-8",
+      "short": "2-demethylmenaquino…",
+      "formula": "C50H70O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:48455"
+      }
+    },
+    {
+      "id": "9_9_di_cis_carotene",
+      "name": "9,9'-di-cis-ζ-carotene",
+      "short": "9,9'-di-cis-ζ-carot…",
+      "formula": "C40H60",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:48716"
+      }
+    },
+    {
+      "id": "pmf",
+      "name": "PMF",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM01"
+      }
+    },
+    {
+      "id": "h2",
+      "name": "H2",
+      "formula": "H2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1108018"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_18_99_1",
+      "name": "EC 1.18.99.1",
+      "ec": [
+        "1.18.99.1"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR182156",
+      "substrates": [
+        {
+          "metabolite": "7_7_9_9_tetra_cis_lycopene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_demethylmenaquinol_8",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_9_9_tri_cis_neurosporene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_demethylmenaquinone_8",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR182156"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR182156"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR182151",
+      "substrates": [
+        {
+          "metabolite": "7_9_9_tri_cis_neurosporene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_demethylmenaquinol_8",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_demethylmenaquinone_8",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "9_9_di_cis_carotene",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR182151"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR182151"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR100755",
+      "ec": "1.18.99.1",
+      "substrates": [
+        {
+          "metabolite": "pmf",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_demethylmenaquinone_8",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pmf",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "2_demethylmenaquinol_8",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_18_99_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR100755"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR100755"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_7_9_9_tri_cis_neurosporene_4r-5r-4-5-dihydroxycycl-to-l-1-4-dithiothreitol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_9_9_tri_cis_neurosporene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4r-5r-4-5-dihydroxycycl-to-l-1-4-dithiothreitol"
+      },
+      "note": "Shares 7,9,9'-tri-cis-neurosporene with (4R,5R)-4,5-dihydroxycycl… to L-1,4-dithiothreitol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62463"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_9_9_tri_cis_neurosporene_7-7-9-9-tetra-cis-lycop-to-7-9-9-tri-cis-neurosp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_9_9_tri_cis_neurosporene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-7-9-9-tetra-cis-lycop-to-7-9-9-tri-cis-neurosp"
+      },
+      "note": "Shares 7,9,9'-tri-cis-neurosporene with 7,7',9,9'-tetra-cis-lycop… to 7,9,9'-tri-cis-neurospore….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62463"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_9_9_tri_cis_neurosporene_7-7-9-9-tetra-cis-lycop-to-n1-citryl-n3-oct-2-en",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_9_9_tri_cis_neurosporene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-7-9-9-tetra-cis-lycop-to-n1-citryl-n3-oct-2-en"
+      },
+      "note": "Shares 7,9,9'-tri-cis-neurosporene with 7,7',9,9'-tetra-cis-lycop… to N1-citryl-N3-oct-2-enoyl-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62463"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_9_9_tri_cis_neurosporene_9-cis-neurosporene-to-hydroquinones",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_9_9_tri_cis_neurosporene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "9-cis-neurosporene-to-hydroquinones"
+      },
+      "note": "Shares 7,9,9'-tri-cis-neurosporene with 9'-cis-neurosporene to hydroquinones.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62463"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_9_9_tri_cis_neurosporene_ubiquinol-9-to-1-d-ribofuranosyl-1-4",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_9_9_tri_cis_neurosporene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ubiquinol-9-to-1-d-ribofuranosyl-1-4"
+      },
+      "note": "Shares 7,9,9'-tri-cis-neurosporene with ubiquinol-9 to 1-(β-D-ribofuranosyl)-1,4….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62463"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_9_9_tri_cis_neurosporene_ubiquinol-9-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_9_9_tri_cis_neurosporene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ubiquinol-9-to-coa"
+      },
+      "note": "Shares 7,9,9'-tri-cis-neurosporene with ubiquinol-9 to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62463"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway deoxyribonucleotide-2-d-to-3-end-deoxyribonucleo "deoxyribonucleotide-(2'-d… to 3'-end deoxyribonucleotid…" {
-  spacing 258
+  spacing 246
 
   spine at 0,0 {
     deoxyribonucleotide_2_deoxyribose_deoxyribonucle
@@ -18,20 +18,8 @@ pathway deoxyribonucleotide-2-d-to-3-end-deoxyribonucleo "deoxyribonucleotide-(2
 
   branch from 5_end_2_deoxyribonucleotide_2 side left {
     5_end_2_deoxyribonucleotide_2
-    <-> . +5_end_2_deoxyribose_deoxyribonucleotide +hplus
-    2e_4s_4_hydroxypenten_2_al_5_phosphate
-  }
-
-  branch from 5_end_2_deoxyribonucleotide_2 side right {
-    5_end_2_deoxyribonucleotide_2
     <-> . +h2o +pi
     5_end_2_deoxyribonucleoside
-  }
-
-  branch from 3_end_deoxyribonucleotide_3_phosphate_3 side left {
-    3_end_deoxyribonucleotide_3_phosphate_3
-    <-> . +3_end_2_deoxyribonucleotide_3_l_tyrosyl_phosphat +h2o +hplus
-    tyrosine
   }
 
   branch from 3_end_deoxyribonucleotide_1 side right {

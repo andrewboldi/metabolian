@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-4-hydroxymandelate-to-2-hydroxyacetophenone "(S)-4-hydroxymandelate to 2-hydroxyacetophenone" {
-  spacing 274
+  spacing 340
 
   spine at 0,0 {
     s_4_hydroxymandelate
@@ -18,69 +18,159 @@ pathway s-4-hydroxymandelate-to-2-hydroxyacetophenone "(S)-4-hydroxymandelate to
     nadp
   }
 
-  branch from s_mandelate side left {
-    s_mandelate
-    <-> ec_1_1_99_31 [1.1.99.31] +fmnh2 +h +phenylglyoxylate
-    fmn
+  branch from o2 side left {
+    o2
+    <-> . +8_r_hydroxy_hexadeca_4e_6e_10z_trienoate +h2o2
+    8_s_hydroxy_hexadeca_2e_4e_6e_10z_tetraenoate
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_14_45 [1.14.14.45] +1_aci_nitro_2_1h_indol_3_yl_ethane +nadp +h2o +h +nadph
-    e_indol_3_yl_acetaldehyde_oxime
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +s_reticuline +nadph +nadp +h2o
-    s_corytuberine
-  }
-
-  branch from h2o2 side right {
-    h2o2
-    <-> . +s_adenosyl_l_homocysteine +h +o2 +nadph +cerivastatin_m23 +nadp +cerivastatin_m24
-    s_adenosyl_l_methionine
+    <-> . +9_10_12_13_diepoxyoctadecanoate
+    1_hydroperoxy_8_carboxyoctyl_3_4_epoxynon_2e_eny
   }
 
   branch from h2o2 side left {
     h2o2
-    <-> . +s_adenosyl_l_homocysteine +h +o2 +nadph +cerivastatin +s_adenosyl_l_methionine +nadp
-    cerivastatin_m1
+    <-> . +7_8_epoxy_8alpha_hydroperoxytocopherone +h2o
+    5_6_epoxy_alpha_tocopheryl_quinone
   }
 
-  branch from nad side right {
-    nad
-    <-> . +nadh +2z_4e_5_hydroxypenta_2_4_diene_1_2_5_tricarboxy +h +h2o
-    2_hydroxy_5_carboxymethylmuconate_semialdehyde
+  branch from h2o2 side right {
+    h2o2
+    <-> . +4alpha_5_epoxy_8alpha_hydroperoxytocopherone +h2o
+    2_3_epoxy_alpha_tocopheryl_quinone
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_3_99_3 [1.3.99.3] +nadh +2e_tetradecenoyl_coa +h
-    tetradecanoyl_coa
+    <-> . +nadh +6r_5_10_methylene_5_6_7_8_tetrahydrofolate +h
+    5_methyltetrahydrofolic_acid
   }
 
-  branch from h2o side right {
-    h2o
-    <-> . +glutathionylspermidine +glutathione
-    trypanothione
+  branch from nad side right {
+    nad
+    <-> . +nadh +h +2_dehydro_d_gluconate
+    d_gluconate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +diphosphate +1r_2s_4r_borneol
-    bornyl_diphosphate
+    <-> . +h +adp +phosphate +atp
+    pc_16_1_9e_0_0
   }
 
-  branch from nadp side right {
-    nadp
-    <-> ec_1_14_13_103 [1.14.13.103] +h +sophoraflavanone_b +o2 +nadph +h2o
-    leachianone_g
+  branch from h2o side right {
+    h2o
+    <-> . +h +adp +phosphate +atp
+    1_pentadecanoylglycerophosphoethanolamine_c15_0
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_13_107 [1.14.13.107] +4r_limonene +h +o2 +nadph +h2o
-    4r_limonene_1_2_epoxide
+    <-> ec_1_2_1_19 [1.2.1.19] +h +pyruvate +nadph +h2o
+    methylglyoxal
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_1_1_50 [1.1.1.50] +1_2_dihydronaphthalene_1_2_diol +h +nadph
+    naphthalene_1_2_diol
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +10_11_dihydro_ltb4_coa +h2o2
+    5_s_12_r_dihydroxy_eicosa_2_8_trans_6_14_cis_tet
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +h +5_s_15_s_dihete
+    5_r_hete
+  }
+
+  branch from h2o2 side left {
+    h2o2
+    <-> . +18e_20_oxo_20_coa_lte4 +h +o2
+    coa_20_cooh_lte4
+  }
+
+  branch from h2o2 side right {
+    h2o2
+    <-> . +coa_18_cooh_16e_dinor_lte5 +h +o2
+    coa_omega_cooh_dinor_lte4
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> . +h +4_hydroxy_3_all_trans_decaprenyl_benzoate +o2 +nad +h2o
+    3_4_dihydroxy_5_all_trans_decaprenyl_benzoate
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_2_1_5 [1.2.1.5] +h +hva +nad +h2o
+    4_hydroxy_3_methoxyphenyl_acetaldehyde
+  }
+
+  branch from h side left {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    1_hexadecenoylglycerophosphoethanolamine_c16_1_p
+  }
+
+  branch from h side right {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    1_eicosatrienoylglycerophosphoethanolamine_delta
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_21 [1.1.1.21] +nadh +h +3_methylbenzaldehyde
+    3_methylbenzyl_alcohol
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_213 [1.1.1.213] +nadh +h +dihydroxy_5b_cholestan_3_one_7a12a
+    5beta_cholestane_3alpha_7alpha_12alpha_triol
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +h +adp +phosphate +atp
+    2_linoleoylglycerophosphoethanolamine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +h +adp +phosphate +atp
+    1_dihomo_linolenoylglycerophosphoethanolamine_20
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +5z_8z_11z_14z_eicosatetraenoyl_coa +malonyl_coa +h +co2 +nadp +coa +h2o
+    7z_10z_13z_16z_docosatetraenoyl_coa
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +7z_10z_13z_16z_19z_docosapentaenoyl_coa +co2 +nadp +coa +h2o +malonyl_coa +h +o2
+    5z_8z_11z_14z_17z_eicosapentaenoyl_coa
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +7z_10z_13z_16z_19z_docosapentaenoyl_coa +co2 +coa +h2o +5z_8z_11z_14z_17z_eicosapentaenoyl_coa +h +nadph
+    malonyl_coa
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +nadh +acetyl_coa +h +h2o2 +coa +o2 +nadph +nad +h2o
+    a_tetradecenoyl_coa_n_c14_1coa
   }
 }

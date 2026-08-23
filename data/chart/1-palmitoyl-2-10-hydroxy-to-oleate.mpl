@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-palmitoyl-2-10-hydroxy-to-oleate "1-palmitoyl-2-(10-hydroxy… to oleate" {
-  spacing 164
+  spacing 176
 
   spine at 0,0 {
     1_palmitoyl_2_10_hydroxyoctadecanoyl_sn_glycero
@@ -26,5 +26,17 @@ pathway 1-palmitoyl-2-10-hydroxy-to-oleate "1-palmitoyl-2-(10-hydroxy… to olea
     1_palmitoyl_sn_glycero_3_phosphoserine
     <-> . +arachidonoyl_coa +coa
     1_palmitoyl_2_arachidonoyl_sn_glycero3_phosphose
+  }
+
+  branch from oleoyl_coa side left {
+    oleoyl_coa
+    <-> . +1_acyl_sn_glycero_3_phosphoserine +coa
+    1_acyl_2_oleoyl_sn_glycero_3_phosphoserine
+  }
+
+  branch from oleoyl_coa side right {
+    oleoyl_coa
+    <-> ec_1_14_19_n4 [1.14.19.n4] +nadph +o2 +hplus +nadp +h2o
+    stearoyl_coa
   }
 }

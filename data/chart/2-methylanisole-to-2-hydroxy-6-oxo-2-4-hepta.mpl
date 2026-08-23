@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-methylanisole-to-2-hydroxy-6-oxo-2-4-hepta "2-methylanisole to 2-hydroxy-6-oxo-2,4-hepta…" {
-  spacing 192
+  spacing 168
 
   spine at 0,0 {
     2_methylanisole
@@ -14,30 +14,6 @@ pathway 2-methylanisole-to-2-hydroxy-6-oxo-2-4-hepta "2-methylanisole to 2-hydro
     3_methylcatechol
     <-> . +o2 -hplus
     2_hydroxy_6_oxo_2_4_heptadienoate
-  }
-
-  branch from o_cresol side left {
-    o_cresol
-    <-> ec_1_14_13_243 [1.14.13.243] +nadh +o2 +hplus +nad +h2o
-    toluene
-  }
-
-  branch from o_cresol side right {
-    o_cresol
-    <-> . +2_methylphenoxy_acetate +akg +o2 +succinate +co2
-    glyoxylate
-  }
-
-  branch from formaldehyde side left {
-    formaldehyde
-    <-> . +n6_n6_dimethyl_l_lysine_1 +akg +o2 +succinate +co2
-    n6_methyl_l_lysinium
-  }
-
-  branch from formaldehyde side right {
-    formaldehyde
-    <-> . +n6_n6_dimethyl_l_lysine_1 +akg +o2 +n6_methyl_l_lysinium +co2
-    succinate
   }
 
   branch from 3_methylcatechol side left {

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway butan-2-one-to-h2o "butan-2-one to H2O" {
-  spacing 224
+  spacing 236
 
   spine at 0,0 {
     butan_2_one
@@ -16,27 +16,39 @@ pathway butan-2-one-to-h2o "butan-2-one to H2O" {
     neolinustatin
   }
 
-  branch from lotaustralin side left {
-    lotaustralin
-    <-> ec_3_2_1_21 [3.2.1.21] +neolinustatin +h2o
-    beta_d_glucose
-  }
-
-  branch from lotaustralin side right {
-    lotaustralin
-    <-> ec_3_2_1_21 [3.2.1.21] +glucose +h2o
-    2r_2_hydroxy_2_methylbutanenitrile
-  }
-
   branch from h2o side left {
     h2o
-    <-> ec_4_2_1_113 [4.2.1.113] +2_succinylbenzoate +h
-    2_succinyl_6_hydroxycyclohexa_2_4_diene_1_carbox
+    <-> . +h +adp +phosphate +atp
+    trans_vaccenic_acid
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_14_13_36 [1.14.13.36] +h +trans_5_o_4_coumaroyl_d_quinate +o2 +nadph +chlorogenate
-    nadp
+    <-> . +linoelaidic_acid +coa
+    linoelaidyl_coenzyme_a
+  }
+
+  branch from glucose side left {
+    glucose
+    <-> . +beta_d_fructose +d_sorbitol
+    d_glucono_1_5_lactone
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> . +ubiquinone_8 +d_glucono_1_5_lactone
+    ubiquinol_8
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +5z_8z_11z_icosatrienoyl_coa +coa +5z_8z_11z_eicosatrienoate
+    h
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +7z_10z_13z_16z_19z_docosapentaenoyl_coa +h +coa
+    all_cis_7_10_13_16_19_docosapentaenoate
   }
 }

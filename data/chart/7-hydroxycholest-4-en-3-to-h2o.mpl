@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 7-hydroxycholest-4-en-3-to-h2o "7α-hydroxycholest-4-en-3-… to H2O" {
-  spacing 284
+  spacing 260
 
   spine at 0,0 {
     c7a_hydroxy_4_cholesten_3_one
@@ -14,29 +14,5 @@ pathway 7-hydroxycholest-4-en-3-to-h2o "7α-hydroxycholest-4-en-3-… to H2O" {
     nadp
     <-> . +h +5beta_cholestane_3alpha_7alpha_diol +o2 +nadph -nadp -h2o
     5beta_cholestane_3alpha_7alpha_27_triol
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_206 [1.1.1.206] +quinuclidinone +h +nadph
-    quinuclidin_2_ol
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_1_1_206 [1.1.1.206] +8_thiabicyclo_3_2_1_octan_3_ol +h +nadph
-    8_thiabicyclo_3_2_1_octane_3_one
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +h +3_4_6_trihydroxy_cis_cinnamate
-    esculetin
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +s_usnate +h
-    hydratedusnate
   }
 }

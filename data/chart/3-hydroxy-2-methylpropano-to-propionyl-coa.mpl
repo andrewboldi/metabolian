@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-hydroxy-2-methylpropano-to-propionyl-coa "3-hydroxy-2-methylpropano… to propionyl-CoA" {
-  spacing 310
+  spacing 322
 
   spine at 0,0 {
     3_hydroxy_2_methylpropanoyl_coa
@@ -24,13 +24,25 @@ pathway 3-hydroxy-2-methylpropano-to-propionyl-coa "3-hydroxy-2-methylpropano…
 
   branch from propionyl_coa side right {
     propionyl_coa
-    <-> ec_1_3_1_84 [1.3.1.84] +nadp +nadph +hplus
+    <-> . +fad +hplus +fadh2
     acryloyl_coa
   }
 
   branch from propionyl_coa side left {
     propionyl_coa
-    <-> . +hplus +co2
-    r_methylmalonyl_coa
+    <-> . +hco3 +atp +adp +pi +hplus
+    methylmalonyl_coa
+  }
+
+  branch from propionyl_coa side right {
+    propionyl_coa
+    <-> . +carnitine +coa
+    o_propanoyl_l_carnitine
+  }
+
+  branch from propionyl_coa side left {
+    propionyl_coa
+    <-> . +myristoyl_coa +coa
+    2_methyl_3_oxopalmitoyl_coa
   }
 }

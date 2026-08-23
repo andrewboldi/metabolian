@@ -1,0 +1,366 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "z-4-hydroxyphenyl-acet-to-hydrogen-cyanide-5072",
+  "name": "(Z)-(4-hydroxyphenyl)acet… to hydrogen cyanide",
+  "category": "other",
+  "summary": "A 3-step route from (Z)-(4-hydroxyphenyl)acetaldehyde oxime to hydrogen cyanide, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:50728"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:15667"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "z_4_hydroxyphenyl_acetaldehyde_oxime",
+      "name": "(Z)-(4-hydroxyphenyl)acetaldehyde oxime",
+      "short": "(4-hydroxyphenyl)ac…",
+      "formula": "C8H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15667"
+      }
+    },
+    {
+      "id": "4_hydroxyphenyl_acetonitrile",
+      "name": "(4-hydroxyphenyl)acetonitrile",
+      "short": "(4-hydroxyphenyl)ac…",
+      "formula": "C8H7NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16667"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "s_4_hydroxymandelonitrile",
+      "name": "(S)-4-hydroxymandelonitrile",
+      "short": "4-hydroxymandelonit…",
+      "formula": "C8H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16660"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "4_hydroxybenzaldehyde",
+      "name": "4-hydroxybenzaldehyde",
+      "short": "4-hydroxybenzaldehy…",
+      "formula": "C7H6O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17597"
+      }
+    },
+    {
+      "id": "hydrogen_cyanide",
+      "name": "hydrogen cyanide",
+      "formula": "CHN",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18407"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_1_2_11",
+      "name": "hydroxymandelonitrile lyase",
+      "ec": [
+        "4.1.2.11"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(Z)-(4-hydroxyphenyl)acetaldehyde oxime = 4-hydroxyphenylacetonitrile + H2O",
+      "equation": "(Z)-(4-hydroxyphenyl)acetaldehyde oxime = 4-hydroxyphenylacetonitrile + H2O",
+      "substrates": [
+        {
+          "metabolite": "z_4_hydroxyphenyl_acetaldehyde_oxime",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxyphenyl_acetonitrile",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:50728"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50728"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "4-hydroxyphenylacetonitrile + reduced [NADPH--hemoprotein reductase] + O2 = (S)-4-hydro...",
+      "equation": "4-hydroxyphenylacetonitrile + reduced [NADPH--hemoprotein reductase] + O2 = (S)-4-hydroxymandelonitrile + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "4_hydroxyphenyl_acetonitrile",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_4_hydroxymandelonitrile",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:50732"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50732"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "hydroxymandelonitrile lyase",
+      "equation": "(S)-4-hydroxymandelonitrile = 4-hydroxybenzaldehyde + hydrogen cyanide",
+      "ec": "4.1.2.11",
+      "substrates": [
+        {
+          "metabolite": "s_4_hydroxymandelonitrile",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxybenzaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_cyanide",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_2_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:15977"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15977"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_z_4_hydroxyphenyl_acetaldehyde_oxime_n-n-dihydroxy-l-tyrosinate-to-s-4-hydroxymandelo",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "z_4_hydroxyphenyl_acetaldehyde_oxime"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-n-dihydroxy-l-tyrosinate-to-s-4-hydroxymandelo"
+      },
+      "note": "Shares (Z)-(4-hydroxyphenyl)acetaldehyde oxime with N,N-dihydroxy-L-tyrosinate to (S)-4-hydroxymandelonitri….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15667"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_z_4_hydroxyphenyl_acetaldehyde_oxime_z-4-hydroxyphenyl-acet-to-hydrogen-cyanide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "z_4_hydroxyphenyl_acetaldehyde_oxime"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "z-4-hydroxyphenyl-acet-to-hydrogen-cyanide"
+      },
+      "note": "Shares (Z)-(4-hydroxyphenyl)acetaldehyde oxime with (Z)-(4-hydroxyphenyl)acet… to hydrogen cyanide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15667"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_hydroxyphenyl_acetonitrile_z-4-hydroxyphenyl-acet-to-hydrogen-cyanide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_hydroxyphenyl_acetonitrile"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "z-4-hydroxyphenyl-acet-to-hydrogen-cyanide"
+      },
+      "note": "Shares (4-hydroxyphenyl)acetonitrile with (Z)-(4-hydroxyphenyl)acet… to hydrogen cyanide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16667"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_4_hydroxymandelonitrile_n-n-dihydroxy-l-tyrosinate-to-s-4-hydroxymandelo",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_4_hydroxymandelonitrile"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-n-dihydroxy-l-tyrosinate-to-s-4-hydroxymandelo"
+      },
+      "note": "Shares (S)-4-hydroxymandelonitrile with N,N-dihydroxy-L-tyrosinate to (S)-4-hydroxymandelonitri….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16660"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_4_hydroxymandelonitrile_z-4-hydroxyphenyl-acet-to-hydrogen-cyanide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_4_hydroxymandelonitrile"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "z-4-hydroxyphenyl-acet-to-hydrogen-cyanide"
+      },
+      "note": "Shares (S)-4-hydroxymandelonitrile with (Z)-(4-hydroxyphenyl)acet… to hydrogen cyanide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16660"
+          }
+        ]
+      }
+    }
+  ]
+}

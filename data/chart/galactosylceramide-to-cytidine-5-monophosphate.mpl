@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway galactosylceramide-to-cytidine-5-monophosphate "galactosylceramide to cytidine 5'-monophosphate" {
-  spacing 194
+  spacing 230
 
   spine at 0,0 {
     galactosylceramide
@@ -18,9 +18,81 @@ pathway galactosylceramide-to-cytidine-5-monophosphate "galactosylceramide to cy
     neu5ac_2_8_neu5ac_2_3_d_gal_1_1_ceramide
   }
 
+  branch from d_galactopyranose side left {
+    d_galactopyranose
+    <-> ec_1_1_1_21 [1.1.1.21] +nadp +nadph +hplus
+    galactitol
+  }
 
+  branch from d_galactopyranose side right {
+    d_galactopyranose
+    <-> ec_1_1_1_359 [1.1.1.359] +nad +nadh +hplus
+    d_galactono_1_5_lactone
+  }
 
+  branch from galactosylceramide side left {
+    galactosylceramide
+    <-> . +udp_d_galactose +udp +hplus
+    d_galactosyl_1_4_d_galactosyl_1_1_ceramide
+  }
 
+  branch from cytidine_5_monophosphate side right {
+    cytidine_5_monophosphate
+    <-> . +ganglioside_gd3 +cmp_n_acetyl_9_o_acetylneuraminate +hplus
+    n_acetyl_9_o_acetylneuraminosyl_2_8_n_acetyl_ne
+  }
 
+  branch from cytidine_5_monophosphate side left {
+    cytidine_5_monophosphate
+    <-> . +cmp_n_acetyl_9_o_acetylneuraminate +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +hplus
+    n_acetyl_9_o_acetylneuraminosyl_2_3_d_galactosy
+  }
 
+  branch from d_galactopyranose side right {
+    d_galactopyranose
+    <-> ec_2_7_1_204 [2.7.1.204] +n_phosphonato_l_histidine +l_histidine
+    d_galactopyranose_6_phosphate
+  }
+
+  branch from d_galactopyranose side left {
+    d_galactopyranose
+    <-> . +d_galactosyl_n_octadecanoylsphingosine +h2o
+    n_octadecanoylsphingosine
+  }
+
+  branch from udp_d_galactose side right {
+    udp_d_galactose
+    <-> . +n_2_hydroxyacyl_sphinganine +udp +hplus
+    n_2_hydroxyacyl_d_galactosylsphinganine
+  }
+
+  branch from udp_d_galactose side left {
+    udp_d_galactose
+    <-> . +2_2_hydroxyacyl_sphingosine +udp +hplus
+    n_2_hydroxyacyl_d_galactosylsphingosine
+  }
+
+  branch from cmp_n_acetyl_neuraminate side right {
+    cmp_n_acetyl_neuraminate
+    <-> ec_2_3_1_45 [2.3.1.45] +acetyl_coa +coa
+    cmp_n_acetyl_9_o_acetylneuraminate
+  }
+
+  branch from cmp_n_acetyl_neuraminate side left {
+    cmp_n_acetyl_neuraminate
+    <-> . +d_galactosyl_1_4_n_acetyl_d_6_sulfooxy_glucosam +cytidine_5_monophosphate +hplus
+    n_acetyl_neuraminosyl_2_6_d_galactosyl_1_4_6_o_s
+  }
+
+  branch from cytidine_5_monophosphate side right {
+    cytidine_5_monophosphate
+    <-> . +cmp_n_acetyl_9_o_acetylneuraminate +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +hplus
+    n_acetyl_9_o_acetylneuraminosyl_2_3_d_galactosy
+  }
+
+  branch from cytidine_5_monophosphate side left {
+    cytidine_5_monophosphate
+    <-> . +d_galactosyl_1_4_n_acetyl_d_6_sulfooxy_glucosam +cmp_n_acetyl_neuraminate +hplus
+    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_4_n_ace
+  }
 }

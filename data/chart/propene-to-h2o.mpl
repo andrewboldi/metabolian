@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway propene-to-h2o "propene to H2O" {
-  spacing 272
+  spacing 332
 
   spine at 0,0 {
     propene
@@ -44,56 +44,56 @@ pathway propene-to-h2o "propene to H2O" {
 
   branch from propionate side right {
     propionate
-    <-> . +propionamide +h2o
-    nh3
+    <-> . +n_propanoyltaurine +h2o
+    taurine
   }
 
   branch from 2_oxobutanoate side left {
-    2_oxobutanoate
-    <-> ec_1_2_4_4 [1.2.4.4] +co2 +2_alpha_hydroxypropyl_thiamine_diphosphate +h
-    thiamine_diphosphate
-  }
-
-  branch from 2_oxobutanoate side right {
     2_oxobutanoate
     <-> ec_2_5_1_48 [2.5.1.48] +h2o +nh4 +phosphate
     o_phospho_l_homoserine
   }
 
+  branch from 2_oxobutanoate side right {
+    2_oxobutanoate
+    <-> ec_2_6_1_7 [2.6.1.7] +aminobutyric_acid +pyruvate
+    alanine
+  }
+
   branch from h side left {
     h
-    <-> . +adp +phosphate +atp +h2o
-    glycine_betaine
+    <-> ec_7_4_2_10 [7.4.2.10] +adp +glutathione +phosphate +glutathione +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
-    glycerol_2_phosphate
+    <-> . +l_alanine +glutathione +cysgly
+    gamma_glu_ala
   }
 
   branch from o2 side left {
+    o2
+    <-> . +taurine
+    hypotaurine
+  }
+
+  branch from o2 side right {
     o2
     <-> . +nadh +9z_12z_octadecadienoate +h +nad +h2o
     6z_9z_12z_octadecatrienoate
   }
 
-  branch from o2 side right {
-    o2
-    <-> . +h +melatonin +nadph +6_hydroxymelatonin +h2o
-    nadp
-  }
-
   branch from phosphate side left {
     phosphate
-    <-> ec_3_6_3_20 [3.6.3.20] +h +adp +sn_glycerol_3_phosphate +sn_glycerol_3_phosphate +h2o
-    atp
+    <-> . +h +adp +atp +h2o
+    1_hexanesulfonic_acid
   }
 
   branch from phosphate side right {
     phosphate
     <-> . +h +adp +atp +h2o
-    glycine
+    hg
   }
 
   branch from o_succinyl_l_homoserine side left {
@@ -110,13 +110,73 @@ pathway propene-to-h2o "propene to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> ec_3_4_11_1 [3.4.11.1] +glycine
-    glycylglycine
+    <-> . +h +adp +phosphate +atp
+    histamine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +glycine +sarcosine
-    glycylsarcosine
+    <-> ec_3_6_3_21 [3.6.3.21] +h +adp +phosphate +atp
+    l_histidine
+  }
+
+  branch from propanal side left {
+    propanal
+    <-> . +propan_1_aminium +nad +h2o +nadh +hplus
+    nh3
+  }
+
+  branch from propanal side right {
+    propanal
+    <-> . +hydrogen_cyanide
+    2s_2_hydroxybutanenitrile
+  }
+
+  branch from co2 side left {
+    co2
+    <-> ec_1_2_4_1 [1.2.4.1] +hetpp +h +thiamine_diphosphate
+    pyruvate
+  }
+
+  branch from co2 side right {
+    co2
+    <-> ec_1_2_2_2 [1.2.2.2] +ubiquinone_8 +pyruvate +h2o +acetate
+    ubiquinol_8
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_6_3_10 [3.6.3.10] +h +adp +phosphate +atp
+    k
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +2_oxoglutarate +nh4
+    4_oxoglutaramate
+  }
+
+  branch from 2_oxobutanoate side left {
+    2_oxobutanoate
+    <-> ec_1_4_3_2 [1.4.3.2] +nh4 +h2o2 +o2 +h2o
+    2s_2_aminobutanoate
+  }
+
+  branch from 2_oxobutanoate side right {
+    2_oxobutanoate
+    <-> ec_1_1_99_31 [1.1.99.31] +fmnh2 +h +fmn
+    2_hydroxybutanoate
+  }
+
+  branch from h side left {
+    h
+    <-> ec_1_5_1_12 [1.5.1.12] +nadh +3r_5s_1_pyrroline_3_hydroxy_5_carboxylate +nad
+    trans_4_hydroxy_l_proline
+  }
+
+  branch from h side right {
+    h
+    <-> ec_1_11_1_8 [1.11.1.8] +3_5_diiodo_l_tyrosine +h2o2 +2_aminoprop_2_enoate +h2o
+    l_thyroxine
   }
 }

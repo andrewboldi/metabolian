@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-octadecanoyl-2-15-hydr-to-1-o-oleoyl-n-acetyls "1-octadecanoyl-2-(15-hydr… to 1-O-oleoyl-N-acetylsphing…" {
-  spacing 194
+  spacing 212
 
   spine at 0,0 {
     1_octadecanoyl_2_15_hydroxy_5z_8z_11z_13e_eicosa
@@ -32,31 +32,49 @@ pathway 1-octadecanoyl-2-15-hydr-to-1-o-oleoyl-n-acetyls "1-octadecanoyl-2-(15-h
 
   branch from 5z_8z_11z_13e_15_hete side left {
     5z_8z_11z_13e_15_hete
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    15_20_dhete
-  }
-
-  branch from 5z_8z_11z_13e_15_hete side right {
-    5z_8z_11z_13e_15_hete
     <-> . +udp_d_glucuronate +udp +hplus
     15_o_d_glucuronosyl_5z_8z_11z_14z_eicosatetraeno
   }
 
-  branch from 1_stearoyl_2_oleoyl_sn_glycero_3_phosphoethanola side left {
+  branch from 1_stearoyl_2_oleoyl_sn_glycero_3_phosphoethanola side right {
     1_stearoyl_2_oleoyl_sn_glycero_3_phosphoethanola
     <-> ec_4_1_1_65 [4.1.1.65] +co2 +1_stearoyl_2_oleoyl_sn_glycero_3_phosphoserine
     h
-  }
-
-  branch from 1_stearoyl_2_oleoyl_sn_glycero_3_phosphoserine side right {
-    1_stearoyl_2_oleoyl_sn_glycero_3_phosphoserine
-    <-> . +n_acetylsphingosine +2_oleoyl_sn_glycero_3_phosphoserine
-    1_o_stearoyl_n_acetylsphingosine
   }
 
   branch from 1_stearoyl_2_oleoyl_sn_glycero_3_phosphoserine side left {
     1_stearoyl_2_oleoyl_sn_glycero_3_phosphoserine
     <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +atp
     h2o
+  }
+
+  branch from 1_stearoyl_sn_glycero_3_phosphoethanolamine side right {
+    1_stearoyl_sn_glycero_3_phosphoethanolamine
+    <-> ec_3_1_1_4 [3.1.1.4] +5z_8z_11z_14z_eicosatetraenoate +h +h2o
+    1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphoet
+  }
+
+  branch from oleoyl_coa side left {
+    oleoyl_coa
+    <-> . +1_monopalmitoylglycerol +coa
+    1_palmitoyl_2_oleoylglycerol
+  }
+
+  branch from oleoyl_coa side right {
+    oleoyl_coa
+    <-> . +1_monostearoylglycerol +coa
+    1_stearoyl_2_oleoylglycerol
+  }
+
+  branch from n_acetylsphingosine side left {
+    n_acetylsphingosine
+    <-> . +3_sn_phosphatidyl_l_serine +1_o_acyl_n_acetylsphingosine
+    2_acyl_sn_glycero_3_phosphoserine
+  }
+
+  branch from n_acetylsphingosine side right {
+    n_acetylsphingosine
+    <-> . +1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol +1_o_acyl_n_acetylsphingosine
+    2_acyl_sn_glycero_3_phospho_1_sn_glycerol
   }
 }

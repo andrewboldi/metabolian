@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-6-7-9-tetrahydroxy-3-me-to-herqueinone "3,6,7,9-tetrahydroxy-3-me… to herqueinone" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     3_6_7_9_tetrahydroxy_3_methyl_2_3_dihydro_1h_nap
@@ -18,29 +18,5 @@ pathway 3-6-7-9-tetrahydroxy-3-me-to-herqueinone "3,6,7,9-tetrahydroxy-3-me… t
     deoxyherqueinone
     <-> . +nadph +o2 +hplus -nadp -h2o
     herqueinone
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +2_cis_6_cis_farnesyl_diphosphate
-    acoradiene
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +acoradiene
-    fpp
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +adenosine_5_monophosphate_1 +sam +hplus
-    n6_methyladenosine_5_monophosphate_1
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +2_o_methyladenosine_5_monophosphate_1 +sam +hplus
-    n6_methyl_2_o_methyladenosine_monophosphate_1
   }
 }

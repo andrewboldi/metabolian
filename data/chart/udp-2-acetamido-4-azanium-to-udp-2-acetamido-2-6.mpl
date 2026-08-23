@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-2-acetamido-4-azanium-to-udp-2-acetamido-2-6 "UDP-2-acetamido-4-azanium… to UDP-2-acetamido-2,6-dideo…" {
-  spacing 246
+  spacing 228
 
   spine at 0,0 {
     udp_2_acetamido_4_azaniumyl_2_4_6_trideoxy_d_glu
@@ -18,29 +18,11 @@ pathway udp-2-acetamido-4-azanium-to-udp-2-acetamido-2-6 "UDP-2-acetamido-4-azan
 
   branch from udp_2_acetamido_2_6_dideoxy_d_xylo_hex_4_ulose side left {
     udp_2_acetamido_2_6_dideoxy_d_xylo_hex_4_ulose
-    <-> ec_4_2_1_135 [4.2.1.135] +h2o
-    udpglcnac
-  }
-
-  branch from udp_2_acetamido_2_6_dideoxy_d_xylo_hex_4_ulose side right {
-    udp_2_acetamido_2_6_dideoxy_d_xylo_hex_4_ulose
     <-> ec_1_1_1_426 [1.1.1.426] +nadp +nadph +hplus
     udp_n_acetyl_d_quinovosamine
   }
 
-  branch from glutamate side left {
-    glutamate
-    <-> ec_6_3_4_24 [6.3.4.24] +tyraminium +atp +adp +pi +hplus
-    glutamyltyramine
-  }
-
-  branch from glutamate side right {
-    glutamate
-    <-> . +n_l_glutamyl_l_alaninol +h2o
-    s_2_aminopropan_1_ol
-  }
-
-  branch from udp_2_acetamido_2_6_dideoxy_l_lyxo_hex_4_ulose side left {
+  branch from udp_2_acetamido_2_6_dideoxy_l_lyxo_hex_4_ulose side right {
     udp_2_acetamido_2_6_dideoxy_l_lyxo_hex_4_ulose
     <-> . +udp_2_acetamido_2_6_dideoxy_beta_l_mannose +nadp +nadph
     h

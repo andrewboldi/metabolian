@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway myo-inositol-to-h2o "myo-inositol to H2O" {
-  spacing 234
+  spacing 174
 
   spine at 0,0 {
     myo_inositol
@@ -20,81 +20,21 @@ pathway myo-inositol-to-h2o "myo-inositol to H2O" {
     atp
   }
 
-  branch from galactinol side left {
-    galactinol
-    <-> . +myo_inositol +5d_5_o_methyl_chiro_inositol
-    galactopinitol_a
+  branch from d_fructofuranose side left {
+    d_fructofuranose
+    <-> . +sucrose +isomaltose
+    6_alpha_maltosylglucose
   }
 
-  branch from galactinol side right {
-    galactinol
-    <-> . +myo_inositol +galactopinitol_a
-    ciceritol
+  branch from d_fructofuranose side right {
+    d_fructofuranose
+    <-> . +sucrose +isomaltose
+    isomaltotriose
   }
 
-  branch from 5d_5_o_methyl_chiro_inositol side left {
-    5d_5_o_methyl_chiro_inositol
-    <-> . +myo_inositol +galactopinitol_a
-    alpha_d_galactosyl_1_3_1d_myo_inositol
-  }
-
-  branch from myo_inositol side right {
-    myo_inositol
-    <-> . +5_dehydro_2_deoxy_d_gluconate +h +nadph
-    nadp
-  }
-
-  branch from myo_inositol side left {
-    myo_inositol
-    <-> . +h +nadph +nadp
-    scyllo_inosose
-  }
-
-  branch from 2r_3r_4s_5s_6r_6_2s_3r_4s_5r_6r_3_4_5_trihydrox side right {
-    2r_3r_4s_5s_6r_6_2s_3r_4s_5r_6r_3_4_5_trihydrox
-    <-> ec_3_2_1_22 [3.2.1.22] +melibiose +h2o
-    alpha_d_galactose
-  }
-
-  branch from 2r_3r_4s_5s_6r_6_2s_3r_4s_5r_6r_3_4_5_trihydrox side left {
-    2r_3r_4s_5s_6r_6_2s_3r_4s_5r_6r_3_4_5_trihydrox
-    <-> ec_3_2_1_22 [3.2.1.22] +melibiose +h2o
-    beta_d_galactose
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +ferroheme_op2
-    ferroheme_op1
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +2_deoxy_d_ribonic_acid
-    2_deoxy_ribono_1_5_lactone
-  }
-
-  branch from raffinose side right {
-    raffinose
-    <-> ec_2_4_1_166 [2.4.1.166] +sucrose
-    3f_alpha_d_galactosylraffinose
-  }
-
-  branch from raffinose side left {
-    raffinose
-    <-> . +sucrose +stellariose
-    1_f_alpha_d_galactosylraffinose
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    2_16_1_lysophosphatidylglycerol
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    1_9z_octadecenoyl_sn_glycero_3_phospho_1_sn_glyc
+  branch from sucrose side left {
+    sucrose
+    <-> ec_5_4_99_11 [5.4.99.11]
+    trehalulose
   }
 }

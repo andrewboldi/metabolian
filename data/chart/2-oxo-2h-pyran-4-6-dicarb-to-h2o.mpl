@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-oxo-2h-pyran-4-6-dicarb-to-h2o "2-oxo-2H-pyran-4,6-dicarb… to H2O" {
-  spacing 194
+  spacing 158
 
   spine at 0,0 {
     2_oxo_2h_pyran_4_6_dicarboxylate
@@ -20,41 +20,5 @@ pathway 2-oxo-2h-pyran-4-6-dicarb-to-h2o "2-oxo-2H-pyran-4,6-dicarb… to H2O" {
     1e_4_oxobut_1_ene_1_2_4_tricarboxylate
     <-> ec_5_3_3_10 [5.3.3.10]
     4_carboxy_2_hydroxyhexa_2_4_dienedioate
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +11_dehydrothromboxane_b2 +phosphate +11_dehydrothromboxane_b2 +h2o
-    atp
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    4_hydroxynon_2_enal
-  }
-
-  branch from methanol side right {
-    methanol
-    <-> ec_3_1_1_1 [3.1.1.1] +acibenzolar +h2o
-    acibenzolar_s_methyl
-  }
-
-  branch from methanol side left {
-    methanol
-    <-> ec_3_1_1_1 [3.1.1.1] +h +jasmonic_acid_anion +h2o
-    methyl_jasmonate
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_histidine +l_proline +l_aspartate
-    aspartyl_histidyl_proline
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_lysine +l_aspartate +l_glutamate
-    aspartyl_lysyl_glutamate
   }
 }

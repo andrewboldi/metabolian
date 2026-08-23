@@ -1,0 +1,519 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "trans-4-hydroxy-l-proline-to-ammonium-21152",
+  "name": "trans-4-hydroxy-L-proline to ammonium",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from trans-4-hydroxy-L-proline zwitterion to ammonium, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:21152"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58375"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "trans_4_hydroxy_l_proline",
+      "name": "trans-4-hydroxy-L-proline",
+      "short": "trans-4-hydroxy-L-p…",
+      "formula": "C5H9NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58375"
+      }
+    },
+    {
+      "id": "cis_4_hydroxy_d_proline",
+      "name": "cis-4-hydroxy-D-proline",
+      "short": "cis-4-hydroxy-D-pro…",
+      "formula": "C5H9NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57690"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "4_hydroxy_1_pyrroline_2_carboxylate",
+      "name": "4-hydroxy-1-pyrroline-2-carboxylate",
+      "short": "4-hydroxy-1-pyrroli…",
+      "formula": "C5H6NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57745"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2_5_dioxopentanoate",
+      "name": "2,5-dioxopentanoate",
+      "formula": "C5H5O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58136"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_1_1_8",
+      "name": "4-hydroxyproline epimerase",
+      "ec": [
+        "5.1.1.8"
+      ]
+    },
+    {
+      "id": "ec_3_5_4_22",
+      "name": "1-pyrroline-4-hydroxy-2-carboxylate deaminase",
+      "ec": [
+        "3.5.4.22"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "4-hydroxyproline epimerase",
+      "equation": "trans-4-hydroxy-L-proline = cis-4-hydroxy-D-proline",
+      "ec": "5.1.1.8",
+      "substrates": [
+        {
+          "metabolite": "trans_4_hydroxy_l_proline",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cis_4_hydroxy_d_proline",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_1_1_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:21152"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21152"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "cis-4-hydroxy-D-proline + A = 4-hydroxy-1-pyrroline-2-carboxylate + AH2 + H(+)",
+      "equation": "cis-4-hydroxy-D-proline + A = 4-hydroxy-1-pyrroline-2-carboxylate + AH2 + H(+)",
+      "substrates": [
+        {
+          "metabolite": "cis_4_hydroxy_d_proline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxy_1_pyrroline_2_carboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:36559"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36559"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "1-pyrroline-4-hydroxy-2-carboxylate deaminase",
+      "equation": "4-hydroxy-1-pyrroline-2-carboxylate + H2O + H(+) = 2,5-dioxopentanoate + NH4(+)",
+      "ec": "3.5.4.22",
+      "substrates": [
+        {
+          "metabolite": "4_hydroxy_1_pyrroline_2_carboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_5_dioxopentanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_4_22"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:10560"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10560"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_trans_4_hydroxy_l_proline_coenzyme-q10-to-glutathionate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_4_hydroxy_l_proline"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "coenzyme-q10-to-glutathionate"
+      },
+      "note": "Shares trans-4-hydroxy-L-proline with coenzyme Q10 to glutathionate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58375"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_4_hydroxy_l_proline_coenzyme-q10-to-glutathionate-38359",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_4_hydroxy_l_proline"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "coenzyme-q10-to-glutathionate-38359"
+      },
+      "note": "Shares trans-4-hydroxy-L-proline with coenzyme Q10 to glutathionate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58375"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_4_hydroxy_l_proline_l-proline-to-erythro-4-hydroxy-l-gluta",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_4_hydroxy_l_proline"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-proline-to-erythro-4-hydroxy-l-gluta"
+      },
+      "note": "Shares trans-4-hydroxy-L-proline with L-proline to erythro-4-hydroxy-L-gluta….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58375"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_4_hydroxy_l_proline_l-proline-to-erythro-4-hydroxy-l-gluta-51508",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_4_hydroxy_l_proline"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-proline-to-erythro-4-hydroxy-l-gluta-51508"
+      },
+      "note": "Shares trans-4-hydroxy-L-proline with L-proline to erythro-4-hydroxy-L-gluta….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58375"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_4_hydroxy_l_proline_trans-4-hydroxy-l-proline-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_4_hydroxy_l_proline"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-4-hydroxy-l-proline-to-ammonium"
+      },
+      "note": "Shares trans-4-hydroxy-L-proline with trans-4-hydroxy-L-proline to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58375"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_4_hydroxy_l_proline_trans-4-hydroxy-l-proline-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_4_hydroxy_l_proline"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-4-hydroxy-l-proline-to-succinate"
+      },
+      "note": "Shares trans-4-hydroxy-L-proline with trans-4-hydroxy-L-proline to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58375"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_4_hydroxy_l_proline_trans-4-hydroxy-l-proline-to-succinate-54644",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_4_hydroxy_l_proline"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-4-hydroxy-l-proline-to-succinate-54644"
+      },
+      "note": "Shares trans-4-hydroxy-L-proline with trans-4-hydroxy-L-proline to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58375"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cis_4_hydroxy_d_proline_l-proline-betaine-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cis_4_hydroxy_d_proline"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-proline-betaine-to-hydrogen-donor"
+      },
+      "note": "Shares cis-4-hydroxy-D-proline with L-proline betaine to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57690"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cis_4_hydroxy_d_proline_l-proline-betaine-to-hydrogen-donor-19357",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cis_4_hydroxy_d_proline"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-proline-betaine-to-hydrogen-donor-19357"
+      },
+      "note": "Shares cis-4-hydroxy-D-proline with L-proline betaine to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57690"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cis_4_hydroxy_d_proline_trans-4-hydroxy-l-proline-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cis_4_hydroxy_d_proline"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-4-hydroxy-l-proline-to-ammonium"
+      },
+      "note": "Shares cis-4-hydroxy-D-proline with trans-4-hydroxy-L-proline to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57690"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_hydroxy_1_pyrroline_2_carboxylate_trans-4-hydroxy-l-proline-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_hydroxy_1_pyrroline_2_carboxylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-4-hydroxy-l-proline-to-ammonium"
+      },
+      "note": "Shares 4-hydroxy-1-pyrroline-2-carboxylate with trans-4-hydroxy-L-proline to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57745"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_5_dioxopentanoate_d-arabinitol-to-2-5-dioxopentanoate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_5_dioxopentanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-arabinitol-to-2-5-dioxopentanoate"
+      },
+      "note": "Shares 2,5-dioxopentanoate with D-arabinitol to 2,5-dioxopentanoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58136"
+          }
+        ]
+      }
+    }
+  ]
+}

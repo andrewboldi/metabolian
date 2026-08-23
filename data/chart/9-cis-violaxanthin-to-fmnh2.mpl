@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 9-cis-violaxanthin-to-fmnh2 "9-cis-violaxanthin to FMNH2" {
-  spacing 244
+  spacing 268
 
   spine at 0,0 {
     9_cis_violaxanthin
@@ -46,25 +46,49 @@ pathway 9-cis-violaxanthin-to-fmnh2 "9-cis-violaxanthin to FMNH2" {
 
   branch from fmn side left {
     fmn
-    <-> . +valine +fmnh2 +o2 +h2o +hplus
-    n_hydroxy_l_valinate
+    <-> ec_1_14_14_124 [1.14.14.124] +dihydromonacolin_l_carboxylate +fmnh2 +o2 +h2o +hplus
+    monacolin_l_carboxylate
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_134 [1.14.14.134] +sophoradiol +fmnh2 +o2 +h2o +hplus
-    soyasapogenol_b
+    <-> ec_1_14_14_126 [1.14.14.126] +amyrin +fmnh2 +o2 +h2o +hplus
+    oleanolate
   }
 
   branch from fmnh2 side left {
     fmnh2
-    <-> ec_1_14_14_10 [1.14.14.10] +nitrilotriacetate +o2 +fmn +glyoxylate +h2o
-    ammoniodiacetate
+    <-> . +epiandrosterone +o2 +fmn +h2o +hplus
+    3_5_7_3_7_dihydroxyandrostan_17_one
   }
 
   branch from fmnh2 side right {
     fmnh2
-    <-> ec_1_14_99_46 [1.14.99.46] +thymine +nadh +o2 +fmn +nad +h2o +hplus
-    z_2_methylureidoacrylate
+    <-> . +1_ethyl_fatty_acid_anion +o2 +fmn +h2o +hplus
+    1_hydroxy_fatty_acid_anion
+  }
+
+  branch from fmnh2 side left {
+    fmnh2
+    <-> ec_1_14_14_129 [1.14.14.129] +linoleoyl_coa +o2 +fmn +h2o +hplus
+    9z_12z_18_hydroxyoctadecadienoyl_coa
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> ec_1_14_14_130 [1.14.14.130] +dodecanoate +o2 +fmn +h2o +hplus
+    7_hydroxylaurate
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> . +3_17_dihydroxy_9_10_secoandrosta_1_3_5_10_triene +fmnh2 +o2 +h2o +hplus
+    3_4_17_trihydroxy_9_10_secoandrosta_1_3_5_10_tri
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +4_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
+    4_7_dihydroxycholesterol
   }
 }

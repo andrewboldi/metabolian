@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-4-methyl-pentanoyl-coa "NADH to 4-methyl-pentanoyl-CoA" {
-  spacing 188
+  spacing 152
 
   spine at 0,0 {
     nadh
@@ -14,41 +14,5 @@ pathway nadh-to-4-methyl-pentanoyl-coa "NADH to 4-methyl-pentanoyl-CoA" {
     4_methyl_trans_2_pentenoyl_coa
     <-> . +fadh2 +h -4_methyl_pentanoyl_coa
     fad
-  }
-
-  branch from nad side left {
-    nad
-    <-> . +nadh +13z_3_oxoicosenoyl_coa +h
-    13z_3_hydroxyicos_13_enoyl_coa
-  }
-
-  branch from nad side right {
-    nad
-    <-> . +nadh +acetyl_coa +fadh2 +h +fad +coa +h2o
-    5z_8z_11z_icosatrienoyl_coa
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_1_1_45 [3.1.1.45] +maleylacetate +h
-    cis_4_carboxymethylenebut_2_en_4_olide
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_1_1_45 [3.1.1.45] +maleylacetate +h
-    trans_4_carboxymethylenebut_2_en_4_olide
-  }
-
-  branch from fad side left {
-    fad
-    <-> . +z_tetradec_7_enoyl_coa +fadh2 +h
-    e_z_tetradeca_2_7_dienoyl_coa
-  }
-
-  branch from fad side right {
-    fad
-    <-> . +fadh2 +e_z_dodeca_2_5_dienoyl_coa +h
-    cis_dodec_5_enoyl_coa
   }
 }

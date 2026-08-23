@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-hydroxyechinenone-to-h2o "4'-hydroxyechinenone to H2O" {
-  spacing 182
+  spacing 158
 
   spine at 0,0 {
     4_hydroxyechinenone
@@ -22,29 +22,5 @@ pathway 4-hydroxyechinenone-to-h2o "4'-hydroxyechinenone to H2O" {
     canthaxanthin
     <-> .
     3_4_3_4_tetradehydroisozeaxanthin
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_35 [1.1.1.35] +nadh +3_oxo_homoplatensic_coa +h
-    3s_3_hydroxy_homoplatensic_coa
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_35 [1.1.1.35] +nadh +3_oxopentanoyl_coa +h
-    s_3_hydroxypentanoyl_coa
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +oleandomycin +beta_d_glucose
-    glucosyl_oleandomycin
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +15_15_dihydroxy_carotene
-    carotene_15_15_epoxide
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n4-n-acetyl-d-glucosam-to-n-acetyl-d-glucosamine "N4-(β-N-acetyl-D-glucosam… to N-acetyl-D-glucosamine…" {
-  spacing 284
+  spacing 320
 
   spine at 0,0 {
     n4_n_acetyl_d_glucosaminyl_l_asparagine
@@ -32,14 +32,14 @@ pathway n4-n-acetyl-d-glucosam-to-n-acetyl-d-glucosamine "N4-(β-N-acetyl-D-gluc
 
   branch from l_asparagine side left {
     l_asparagine
-    <-> ec_6_3_1_4 [6.3.1.4] +nh3 +atp +adp +pi +hplus
-    aspartate
+    <-> .
+    d_asparagine
   }
 
   branch from l_asparagine side right {
     l_asparagine
-    <-> ec_4_2_1_65 [4.2.1.65] +h2o
-    3_cyano_l_alanine
+    <-> . +o2 +h2o +h2o2 +nh3
+    2_oxosuccinamate
   }
 
   branch from n_acetyl_d_glucosamine_6_phosphate side left {
@@ -56,13 +56,49 @@ pathway n4-n-acetyl-d-glucosam-to-n-acetyl-d-glucosamine "N4-(β-N-acetyl-D-gluc
 
   branch from acetate side left {
     acetate
-    <-> ec_2_8_3_19 [2.8.3.19] +oxalate +acetyl_coa
-    oxalyl_coa
+    <-> . +1_hexadecyl_2_acetyl_sn_glycero_3_phosphoethanol +h2o +hplus
+    1_hexadecyl_sn_glycero_3_phosphoethanolamine
   }
 
   branch from acetate side right {
     acetate
-    <-> . +1_o_palmityl_2_acetyl_sn_glycerol +h2o +hplus
-    1_o_hexadecyl_sn_glycerol
+    <-> . +2_hydroxyglutarate +acetyl_coa
+    2_hydroxyglutaryl_coa
+  }
+
+  branch from n4_n_acetyl_d_glucosaminyl_l_asparagine side left {
+    n4_n_acetyl_d_glucosaminyl_l_asparagine
+    <-> ec_3_5_1_26 [3.5.1.26] +h2o +aspartate +hplus
+    n_acetyl_d_glucosaminylamine
+  }
+
+  branch from n_acetyl_d_glucosamine side right {
+    n_acetyl_d_glucosamine
+    <-> . +n4_d_glcnac_1_2_d_man_1_3_d_man_1_6_d_man_1_4_d +h2o
+    n4_d_manp_1_3_d_manp_1_6_d_manp_1_4_d_glcpnac_1
+  }
+
+  branch from l_asparagine side left {
+    l_asparagine
+    <-> . +n_oleoyl_l_asparagine +h2o
+    oleate
+  }
+
+  branch from l_asparagine side right {
+    l_asparagine
+    <-> . +n_fatty_acyl_l_asparagine +h2o
+    fatty-acid
+  }
+
+  branch from acetate side left {
+    acetate
+    <-> . +triacetin +h2o +hplus
+    diacetin
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> . +n_acetylcadaverine +h2o
+    cadaverine
   }
 }

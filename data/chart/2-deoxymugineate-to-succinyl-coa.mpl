@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-deoxymugineate-to-succinyl-coa "2'-deoxymugineate to succinyl-CoA" {
-  spacing 232
+  spacing 274
 
   spine at 0,0 {
     2_deoxymugineate
@@ -18,25 +18,67 @@ pathway 2-deoxymugineate-to-succinyl-coa "2'-deoxymugineate to succinyl-CoA" {
 
   branch from succinate side left {
     succinate
-    <-> ec_1_14_11_25 [1.14.11.25] +2_deoxymugineate +akg +o2 +co2 +hplus
-    3_epi_3_hydroxy_2_deoxymugineate
+    <-> . +arginine +akg +o2 +co2
+    5_hydroxy_l_arginine
   }
 
   branch from succinate side right {
     succinate
-    <-> ec_1_14_11_28 [1.14.11.28] +l_proline +akg +o2 +co2
-    cis_3_hydroxy_l_proline
+    <-> ec_1_14_11_56 [1.14.11.56] +l_proline +akg +o2 +co2
+    cis_4_hydroxy_l_proline
   }
 
   branch from succinyl_coa side left {
     succinyl_coa
-    <-> ec_2_3_1_37 [2.3.1.37] +glycine +hplus +co2 +coa
-    ala
+    <-> ec_2_3_1_109 [2.3.1.109] +arginine +coa +hplus
+    n2_3_carboxylatopropionyl_l_arginine
   }
 
   branch from succinyl_coa side right {
     succinyl_coa
-    <-> ec_2_3_1_109 [2.3.1.109] +arginine +coa +hplus
-    n2_3_carboxylatopropionyl_l_arginine
+    <-> ec_2_3_1_117 [2.3.1.117] +s_2_3_4_5_tetrahydrodipicolinate +h2o +coa
+    l_2_succinylamino_6_oxoheptanedioate
+  }
+
+  branch from 2_deoxymugineate side left {
+    2_deoxymugineate
+    <-> ec_1_1_1_285 [1.1.1.285] +nadp +nadph +hplus
+    3_deamino_3_oxonicotianaminium
+  }
+
+  branch from akg side right {
+    akg
+    <-> ec_2_6_1_49 [2.6.1.49] +ldopa +glutamate
+    3_4_dihydroxyphenylpyruvate
+  }
+
+  branch from akg side left {
+    akg
+    <-> ec_1_4_1_13 [1.4.1.13] +glutamate +nadp +nadph +hplus
+    glutamine
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> ec_1_14_11_40 [1.14.11.40] +l_enduracididine +akg +o2 +co2
+    3s_3_hydroxy_l_enduracididine
+  }
+
+  branch from succinate side left {
+    succinate
+    <-> ec_1_14_11_41 [1.14.11.41] +arginine +akg +o2 +co2
+    3s_3_hydroxy_l_arginine
+  }
+
+  branch from succinyl_coa side right {
+    succinyl_coa
+    <-> ec_2_3_1_174 [2.3.1.174] +acetyl_coa +coa
+    3_oxoadipyl_coa
+  }
+
+  branch from succinyl_coa side left {
+    succinyl_coa
+    <-> ec_2_3_1_46 [2.3.1.46] +l_homoserine +coa
+    o_succinyl_l_homoserinate
   }
 }

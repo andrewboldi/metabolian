@@ -1,0 +1,406 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-methylbutanoyl-phosphate-to-l-methionine-null",
+  "name": "2-methylbutanoyl phosphate to L-methionine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 4-step route from 2-methylbutanoyl phosphate to L-methionine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR193418"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_methylbutanoyl_phosphate",
+      "name": "2-methylbutanoyl phosphate",
+      "short": "2-methylbutanoyl P",
+      "formula": "C5H9O5P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1132479"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "2_methylbutanoate",
+      "name": "2-methylbutanoate",
+      "formula": "C5H9O2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM9859"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "s_3_methyl_2_oxopentanoate",
+      "name": "(S)-3-methyl-2-oxopentanoate",
+      "short": "3-methyl-2-oxopenta…",
+      "formula": "C6H9O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1363845"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "l_methionine",
+      "name": "L-methionine",
+      "formula": "C5H11NO2S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM738804"
+      }
+    },
+    {
+      "id": "4_methylsulfanyl_2_oxobutanoate",
+      "name": "4-methylsulfanyl-2-oxobutanoate",
+      "short": "4-methylsulfanyl-2-…",
+      "formula": "C5H7O3S",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM276"
+      }
+    },
+    {
+      "id": "l_isoleucine",
+      "name": "L-isoleucine",
+      "formula": "C6H13NO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM728337"
+      }
+    },
+    {
+      "id": "l_leucine",
+      "name": "L-leucine",
+      "formula": "C6H13NO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1106761"
+      }
+    },
+    {
+      "id": "4_methyl_2_oxopentanoate",
+      "name": "4-methyl-2-oxopentanoate",
+      "short": "4-methyl-2-oxopenta…",
+      "formula": "C6H9O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM404"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_2_14",
+      "name": "branched-chain-fatty-acid kinase",
+      "ec": [
+        "2.7.2.14"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_42",
+      "name": "branched-chain-amino-acid transaminase",
+      "ec": [
+        "2.6.1.42"
+      ],
+      "xrefs": {
+        "uniprot": "P54687"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "branched-chain-fatty-acid kinase",
+      "ec": "2.7.2.14",
+      "substrates": [
+        {
+          "metabolite": "2_methylbutanoyl_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_methylbutanoate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_2_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR193418"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR193418"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR205834",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_methylbutanoate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_3_methyl_2_oxopentanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR205834"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR205834"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "branched-chain-amino-acid transaminase",
+      "ec": "2.6.1.42",
+      "substrates": [
+        {
+          "metabolite": "s_3_methyl_2_oxopentanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_methionine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_methylsulfanyl_2_oxobutanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_isoleucine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_42"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR131407"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR131407"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "branched-chain-amino-acid transaminase",
+      "ec": "2.6.1.42",
+      "substrates": [
+        {
+          "metabolite": "l_leucine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4_methylsulfanyl_2_oxobutanoate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_methyl_2_oxopentanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_methionine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_42"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR131405"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR131405"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_2_methylbutanoyl_phosphate_2-methylbutanoyl-phosphate-to-l-methionine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_methylbutanoyl_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-methylbutanoyl-phosphate-to-l-methionine"
+      },
+      "note": "Shares 2-methylbutanoyl phosphate with 2-methylbutanoyl phosphate to L-methionine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1132479"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_methylbutanoate_2-methylbutanoyl-phosphate-to-l-methionine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_methylbutanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-methylbutanoyl-phosphate-to-l-methionine"
+      },
+      "note": "Shares 2-methylbutanoate with 2-methylbutanoyl phosphate to L-methionine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM9859"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -121,53 +121,6 @@
       "xrefs": {
         "chebi": "CHEBI:16526"
       }
-    },
-    {
-      "id": "glyoxal",
-      "name": "glyoxal",
-      "formula": "C2H2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:34779"
-      }
-    },
-    {
-      "id": "n2_1_hydroxy_2_oxoethyl_gmp_1",
-      "name": "N2-(1-hydroxy-2-oxoethyl)-GMP(1−)",
-      "short": "N2-(1-hydroxy-2-oxo…",
-      "formula": "C12H13N5O9P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:141581"
-      }
-    },
-    {
-      "id": "n2_1_hydroxy_2_oxopropyl_gmp_1",
-      "name": "N2-(1-hydroxy-2-oxopropyl)-GMP(1−)",
-      "short": "N2-(1-hydroxy-2-oxo…",
-      "formula": "C13H15N5O9P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:141580"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "Water",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:15377"
-      }
-    },
-    {
-      "id": "lactate",
-      "name": "lactate",
-      "formula": "C3H5O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:24996"
-      }
     }
   ],
   "enzymes": [
@@ -322,81 +275,203 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "a guanosine in RNA + glyoxal = an N(2)-(1-hydroxy-2-oxoethyl)-guanosine in RNA",
-      "equation": "a guanosine in RNA + glyoxal = an N(2)-(1-hydroxy-2-oxoethyl)-guanosine in RNA",
-      "substrates": [
-        {
-          "metabolite": "guanosine_5_monophosphate_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glyoxal",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n2_1_hydroxy_2_oxoethyl_gmp_1",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:57280"
+      "id": "xt_n2_methylguanosine_5_monophosphate_1_4-chlorobenzoate-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n2_methylguanosine_5_monophosphate_1"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "4-chlorobenzoate-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares N2-methylguanosine 5'-monophosphate(1−) with 4-chlorobenzoate to S-adenosyl-L-homocysteine.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:57280"
+            "db": "ChEBI",
+            "id": "CHEBI:74481"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "an N(2)-(1-hydroxy-2-oxopropyl)-guanosine in RNA + H2O = a guanosine in RNA + lactate +...",
-      "equation": "an N(2)-(1-hydroxy-2-oxopropyl)-guanosine in RNA + H2O = a guanosine in RNA + lactate + H(+)",
-      "substrates": [
-        {
-          "metabolite": "n2_1_hydroxy_2_oxopropyl_gmp_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "guanosine_5_monophosphate_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "lactate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:57288"
+      "id": "xt_n2_methylguanosine_5_monophosphate_1_4-methoxybenzoate-to-formaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n2_methylguanosine_5_monophosphate_1"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "4-methoxybenzoate-to-formaldehyde"
+      },
+      "note": "Shares N2-methylguanosine 5'-monophosphate(1−) with 4-methoxybenzoate to formaldehyde.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:57288"
+            "db": "ChEBI",
+            "id": "CHEBI:74481"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n2_methylguanosine_5_monophosphate_1_7-ammoniomethyl-7-deazagu-to-d-mannosyl-4-o-queu",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n2_methylguanosine_5_monophosphate_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-ammoniomethyl-7-deazagu-to-d-mannosyl-4-o-queu"
+      },
+      "note": "Shares N2-methylguanosine 5'-monophosphate(1−) with 7-ammoniomethyl-7-deazagu… to α-D-mannosyl-4''-O-queuos….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74481"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n2_methylguanosine_5_monophosphate_1_cobalt-precorrin-2-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n2_methylguanosine_5_monophosphate_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cobalt-precorrin-2-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares N2-methylguanosine 5'-monophosphate(1−) with cobalt-precorrin-2 to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74481"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n2_methylguanosine_5_monophosphate_1_l-arogenate-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n2_methylguanosine_5_monophosphate_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-arogenate-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares N2-methylguanosine 5'-monophosphate(1−) with L-arogenate to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74481"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n2_methylguanosine_5_monophosphate_1_n-acetyl-alaninate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n2_methylguanosine_5_monophosphate_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyl-alaninate-to-h2o"
+      },
+      "note": "Shares N2-methylguanosine 5'-monophosphate(1−) with N-acetyl-β-alaninate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74481"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n2_methylguanosine_5_monophosphate_1_n-terminal-glycyl-l-lysyl-to-s-adenosyl-l-homocy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n2_methylguanosine_5_monophosphate_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-terminal-glycyl-l-lysyl-to-s-adenosyl-l-homocy"
+      },
+      "note": "Shares N2-methylguanosine 5'-monophosphate(1−) with N-terminal glycyl-L-lysyl… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74481"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n2_n2_dimethylguanosine_5_monophosphate_1_dihydroprecondylocarpine-to-3-epoxy-16-methoxy-2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n2_n2_dimethylguanosine_5_monophosphate_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dihydroprecondylocarpine-to-3-epoxy-16-methoxy-2"
+      },
+      "note": "Shares N2,N2-dimethylguanosine 5'-monophosphate(1−) with dihydroprecondylocarpine… to 3-epoxy-16-methoxy-2,3-di….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74513"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n2_n2_dimethylguanosine_5_monophosphate_1_l-arogenate-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n2_n2_dimethylguanosine_5_monophosphate_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-arogenate-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares N2,N2-dimethylguanosine 5'-monophosphate(1−) with L-arogenate to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74513"
           }
         ]
       }

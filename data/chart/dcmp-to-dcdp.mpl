@@ -12,7 +12,7 @@ pathway dcmp-to-dcdp "dCMP to dCDP" {
     dcdp
     <-> . +udp -dctp
     ump
-    <-> . +dcmp +dctp
-    dcdp
+    <-> . +dctp +amp -dcdp
+    adp
   }
 }

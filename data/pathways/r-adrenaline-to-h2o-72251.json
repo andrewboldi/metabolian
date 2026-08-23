@@ -1,0 +1,527 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "r-adrenaline-to-h2o-72251",
+  "name": "(R)-adrenaline to H2O",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from (R)-adrenaline(1+) to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:72251"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:71406"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "epinephrine",
+      "name": "L-Adrenaline (epinephrine)",
+      "short": "L-Adrenaline…",
+      "formula": "C9H14NO3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:71406"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "metanephrine",
+      "name": "L-Metanephrine",
+      "formula": "C10H16NO3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:189646"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "s_adenosyl_l_homocysteine",
+      "name": "S-adenosyl-L-homocysteine",
+      "short": "S-adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1102167"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "s_s_adenosyl_l_methionine",
+      "name": "(S)-S-adenosyl-L-methionine",
+      "short": "S-adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:142094"
+      }
+    },
+    {
+      "id": "r_adrenaline",
+      "name": "(R)-adrenaline",
+      "formula": "C9H14NO3",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM31772"
+      }
+    },
+    {
+      "id": "formaldehyde",
+      "name": "formaldehyde",
+      "formula": "CH2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364673"
+      }
+    },
+    {
+      "id": "n_methyl_4_6_7_trihydroxy_1_2_3_4_tetrahydroisoq",
+      "name": "N-methyl-4,6,7-trihydroxy-1,2,3,4-tetrahydroisoquinoline",
+      "short": "N-methyl-4,6,7-trih…",
+      "formula": "C10H13NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:173958"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_6",
+      "name": "catechol O-methyltransferase",
+      "ec": [
+        "2.1.1.6"
+      ],
+      "xrefs": {
+        "uniprot": "P21964"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(R)-adrenaline + S-adenosyl-L-methionine = (R)-metanephrine + S-adenosyl-L-homocysteine...",
+      "equation": "(R)-adrenaline + S-adenosyl-L-methionine = (R)-metanephrine + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "epinephrine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "metanephrine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:72251"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:72251"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "catechol O-methyltransferase",
+      "ec": "2.1.1.6",
+      "substrates": [
+        {
+          "metabolite": "s_adenosyl_l_homocysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "metanephrine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_s_adenosyl_l_methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "r_adrenaline",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR198516"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198516"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR103618",
+      "substrates": [
+        {
+          "metabolite": "formaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "r_adrenaline",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_methyl_4_6_7_trihydroxy_1_2_3_4_tetrahydroisoq",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR103618"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR103618"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_epinephrine_5-s-cysteinyldopa-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "epinephrine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-s-cysteinyldopa-to-ammonium"
+      },
+      "note": "Shares L-Adrenaline (epinephrine) with 5-S-cysteinyldopa to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:71406"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_epinephrine_5-s-cysteinyldopa-to-ammonium-77095",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "epinephrine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-s-cysteinyldopa-to-ammonium-77095"
+      },
+      "note": "Shares L-Adrenaline (epinephrine) with 5-S-cysteinyldopa to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:71406"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_epinephrine_r-adrenaline-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "epinephrine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-adrenaline-to-h2o"
+      },
+      "note": "Shares L-Adrenaline (epinephrine) with (R)-adrenaline to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:71406"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_metanephrine_4-2z-2-methylimino-et-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "metanephrine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-2z-2-methylimino-et-to-h2o"
+      },
+      "note": "Shares L-Metanephrine with 4-[(2Z)-2-(methylimino)et… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:189646"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_metanephrine_4-2z-2-methylimino-et-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "metanephrine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-2z-2-methylimino-et-to-h2o-null"
+      },
+      "note": "Shares L-Metanephrine with 4-[(2Z)-2-(methylimino)et… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:189646"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_metanephrine_r-adrenaline-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "metanephrine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-adrenaline-to-h2o"
+      },
+      "note": "Shares L-Metanephrine with (R)-adrenaline to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:189646"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_adrenaline_31r-8-12-diethylbacteri-to-h-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_adrenaline"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "31r-8-12-diethylbacteri-to-h-null"
+      },
+      "note": "Shares (R)-adrenaline with (31R)-8,12-diethylbacteri… to H.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM31772"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_adrenaline_alpha-d-galactose-to-d-galactopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_adrenaline"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-galactose-to-d-galactopyranose"
+      },
+      "note": "Shares (R)-adrenaline with Alpha D galactose to D-galactopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM31772"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_adrenaline_d-xylp-1-6-d-glcp-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_adrenaline"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-xylp-1-6-d-glcp-to-h2o"
+      },
+      "note": "Shares (R)-adrenaline with α-D-Xylp-(1→6)-D-Glcp to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM31772"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_adrenaline_r-adrenaline-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_adrenaline"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-adrenaline-to-h2o"
+      },
+      "note": "Shares (R)-adrenaline with (R)-adrenaline to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM31772"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_methyl_4_6_7_trihydroxy_1_2_3_4_tetrahydroisoq_r-adrenaline-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_methyl_4_6_7_trihydroxy_1_2_3_4_tetrahydroisoq"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-adrenaline-to-h2o"
+      },
+      "note": "Shares N-methyl-4,6,7-trihydroxy-1,2,3,4-tetrahydroisoquinoline with (R)-adrenaline to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:173958"
+          }
+        ]
+      }
+    }
+  ]
+}

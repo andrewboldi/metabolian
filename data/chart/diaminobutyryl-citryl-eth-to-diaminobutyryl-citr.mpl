@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway diaminobutyryl-citryl-eth-to-diaminobutyryl-citr "diaminobutyryl-citryl-eth… to diaminobutyryl-citryl-eth…" {
-  spacing 212
+  spacing 272
 
   spine at 0,0 {
     diaminobutyryl_citryl_ethanolamino_alpha_ketoglu
@@ -18,61 +18,121 @@ pathway diaminobutyryl-citryl-eth-to-diaminobutyryl-citr "diaminobutyryl-citryl-
 
   branch from diphosphate side left {
     diphosphate
-    <-> . +alpha_patchoulene
-    2e_6e_farnesyl_diphosphate
+    <-> ec_4_2_3_140 [4.2.3.140] +cis_abienol
+    copal_8_ol_diphosphate
   }
 
   branch from diphosphate side right {
     diphosphate
-    <-> . +terpinene
-    neryl_diphosphate
+    <-> ec_4_2_3_133 [4.2.3.133] +alpha_copaene
+    2e_6e_farnesyl_diphosphate
   }
 
   branch from h side left {
     h
-    <-> . +3_methyl_pyrroline_5_carboxylate +h2o
-    5_5_dihydroxy_leucine
+    <-> . +l_aspartate +nadph +nadp +h2o
+    l_aspartate_4_semialdehyde
   }
 
   branch from h side right {
     h
-    <-> . +echinocandin_c +nadp +h2o +o2 +nadph
-    echinocandin_d
+    <-> . +d_glucuronate +atorvastatin_acid +h2o
+    atorvastatin_ether_glucuronide_g1
   }
 
   branch from amp side left {
     amp
-    <-> ec_6_2_1_33 [6.2.1.33] +diphosphate +4_iodobenzoyl_coa +atp +coa
-    4_iodobenzoate
+    <-> . +4_phenylbutyric_acid +atp +coa +diphosphate +h
+    4_phenylbutanoyl_coa
   }
 
   branch from amp side right {
     amp
-    <-> ec_3_6_1_21 [3.6.1.21] +alpha_d_ribose_1_phosphate +h +h2o
-    adp_beta_d_ribose
+    <-> . +diphosphate +8_phenyldecanoyl_coa +atp +10_phenyldecanoate
+    coa
   }
 
   branch from 2_oxoglutarate side left {
     2_oxoglutarate
-    <-> . +gibberellin_a28 +o2 +co2 +h +succinate
-    2betaoh_gibberellin28
+    <-> . +nadh +co2 +nad
+    d_threo_isocitrate
   }
 
   branch from 2_oxoglutarate side right {
     2_oxoglutarate
-    <-> . +gibberellin_a4 +co2 +h +succinate +nadph +nadp +o2
-    gibberellin_a36
+    <-> . +o2 +gibberellin_a44_closed_lactone_form +succinate +gibberellin_a38
+    co2
   }
 
   branch from atp side left {
     atp
     <-> . +h +adp +phosphate +h2o
-    selenate
+    deoxycholic_acid_3_glucuronide
   }
 
   branch from atp side right {
     atp
     <-> . +h +adp +phosphate +h2o
-    selenite
+    n_desisopropyl_fluvastatin
+  }
+
+  branch from 2_oxoglutarate side left {
+    2_oxoglutarate
+    <-> ec_2_5_1_64 [2.5.1.64] +h +isochorismate +co2 +pyruvate
+    1s_6r_2_succinyl_6_hydroxycyclohexa_2_4_diene_1
+  }
+
+  branch from 2_oxoglutarate side right {
+    2_oxoglutarate
+    <-> ec_2_6_1_2 [2.6.1.2] +alanine +l_glutamate
+    pyruvate
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    dehydroepiandrosterone_3_sulfate
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    3beta_hydroxyandrost_5_en_17_one
+  }
+
+  branch from diphosphate side left {
+    diphosphate
+    <-> ec_4_2_3_133 [4.2.3.133] +2e_6e_farnesyl_diphosphate
+    alpha_copaene
+  }
+
+  branch from diphosphate side right {
+    diphosphate
+    <-> . +5_phospho_alpha_d_ribose_1_diphosphate +nh4
+    5_phospho_beta_d_ribosylamine
+  }
+
+  branch from h side left {
+    h
+    <-> . +d_glucuronate +atorvastatin_lactone
+    atorvastatin_acyl_glucuronide_g2
+  }
+
+  branch from h side right {
+    h
+    <-> . +d_glucuronate +atorvastatin_lactone +h2o
+    atorvastatin_lactone_ether_glucuronide_g3
+  }
+
+  branch from amp side left {
+    amp
+    <-> ec_6_2_1_7 [6.2.1.7] +25s_3alpha_7alpha_12alpha_trihydroxy_5beta_chol +diphosphate +atp +coa
+    25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol
+  }
+
+  branch from amp side right {
+    amp
+    <-> . +nadh +acetyl_coa +fadh2 +diphosphate +h +atp +dodecanoate +coa +nad +h2o
+    fad
   }
 }

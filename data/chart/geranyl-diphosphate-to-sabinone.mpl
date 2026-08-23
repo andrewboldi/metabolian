@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway geranyl-diphosphate-to-sabinone "geranyl diphosphate to (+)-sabinone" {
-  spacing 180
+  spacing 168
 
   spine at 0,0 {
     gpp
@@ -14,17 +14,5 @@ pathway geranyl-diphosphate-to-sabinone "geranyl diphosphate to (+)-sabinone" {
     cis_sabinol
     <-> ec_1_1_1_228 [1.1.1.228] +nad -nadh -hplus
     sabinone
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +fpp
-    maaliene
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +fpp
-    aristolene
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-hydroxy-l-kynurenine-to-diphosphate "3-hydroxy-L-kynurenine to diphosphate" {
-  spacing 300
+  spacing 264
 
   spine at 0,0 {
     3_hydroxy_l_kynurenine
@@ -14,41 +14,5 @@ pathway 3-hydroxy-l-kynurenine-to-diphosphate "3-hydroxy-L-kynurenine to diphosp
     3_hydroxy_4_methylanthranilate
     <-> ec_2_7_7_97 [2.7.7.97] +atp +hplus -ppi
     2_amino_3_hydroxy_4_methylbenzoyl_amp
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +tryptaminium +sam +hplus
-    n_methyltryptaminium
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +n_methyltryptaminium +sam +hplus
-    n_n_dimethyltryptaminium
-  }
-
-  branch from alanine side left {
-    alanine
-    <-> . +cholate +h2o
-    l_alanocholate
-  }
-
-  branch from alanine side right {
-    alanine
-    <-> . +taurocholate +l_alanocholate
-    taurine
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +kanamycin_a +utp
-    4_uridylylkanamycin_a
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +kanamycin_a +datp
-    4_2_deoxyadenylyl_kanamycin_a
   }
 }

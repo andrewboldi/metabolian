@@ -150,6 +150,44 @@
       }
     },
     {
+      "id": "5z_8z_11z_13e_15_hete",
+      "name": "(5Z,8Z,11Z,13E)-15-HETE",
+      "short": "(5Z,8Z,11Z,13E)-15-…",
+      "formula": "C20H31O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78832"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "15_hydroxy_5z_8z_11z_13e_icosatetraenoyl_coa",
+      "name": "15-hydroxy-(5Z,8Z,11Z,13E)-icosatetraenoyl-CoA",
+      "short": "15-hydroxy-(5Z,8Z,1…",
+      "formula": "C41H62N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:136409"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
       "id": "fpp",
       "name": "trans,trans-Farnesyl diphosphate (FPP)",
       "short": "trans,trans-Farnesy…",
@@ -160,21 +198,40 @@
       }
     },
     {
-      "id": "7_epi_selinene",
-      "name": "(−)-7-epi-α-selinene",
+      "id": "eremophilene",
+      "name": "(+)-eremophilene",
       "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:62224"
+        "chebi": "CHEBI:137562"
       }
     },
     {
-      "id": "selinene",
-      "name": "(+)-δ-selinene",
-      "formula": "C15H24",
+      "id": "isoafricanol",
+      "name": "(+)-isoafricanol",
+      "formula": "C15H26O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:49279"
+        "chebi": "CHEBI:137522"
+      }
+    },
+    {
+      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
+      "short": "2-trans,6-trans,10-…",
+      "formula": "C20H33O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58756"
+      }
+    },
+    {
+      "id": "spiroviolene",
+      "name": "(−)-spiroviolene",
+      "formula": "C20H32",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:137523"
       }
     }
   ],
@@ -208,17 +265,24 @@
       ]
     },
     {
-      "id": "ec_4_2_3_86",
-      "name": "7-epi-alpha-selinene synthase",
+      "id": "ec_4_2_3_164",
+      "name": "(+)-eremophilene synthase",
       "ec": [
-        "4.2.3.86"
+        "4.2.3.164"
       ]
     },
     {
-      "id": "ec_4_2_3_76",
-      "name": "(+)-delta-selinene synthase",
+      "id": "ec_4_2_3_157",
+      "name": "(+)-isoafricanol synthase",
       "ec": [
-        "4.2.3.76"
+        "4.2.3.157"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_158",
+      "name": "(-)-spiroviolene synthase",
+      "ec": [
+        "4.2.3.158"
       ]
     }
   ],
@@ -417,18 +481,29 @@
     },
     {
       "id": "r5",
-      "name": "7-epi-alpha-selinene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = (-)-7-epi-alpha-selinene + diphosphate",
-      "ec": "4.2.3.86",
+      "name": "15-hydroxy-(5Z,8Z,11Z,13E)-eicosatetraenoate + ATP + CoA = 15-hydroxy-(5Z,8Z,11Z,13E)-e...",
+      "equation": "15-hydroxy-(5Z,8Z,11Z,13E)-eicosatetraenoate + ATP + CoA = 15-hydroxy-(5Z,8Z,11Z,13E)-eicosatetraenoyl-CoA + AMP + diphosphate",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "5z_8z_11z_13e_15_hete",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "7_epi_selinene",
+          "metabolite": "15_hydroxy_5z_8z_11z_13e_icosatetraenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
           "stoichiometry": 1
         },
         {
@@ -436,31 +511,26 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_86"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:30383"
+        "rhea": "RHEA:52116"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:30383"
+            "id": "RHEA:52116"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "(+)-delta-selinene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = (+)-delta-selinene + diphosphate",
-      "ec": "4.2.3.76",
+      "name": "(+)-eremophilene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (+)-eremophilene + diphosphate",
+      "ec": "4.2.3.164",
       "substrates": [
         {
           "metabolite": "fpp",
@@ -469,7 +539,7 @@
       ],
       "products": [
         {
-          "metabolite": "selinene",
+          "metabolite": "eremophilene",
           "stoichiometry": 1
         },
         {
@@ -479,20 +549,196 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_76"
+          "enzyme": "ec_4_2_3_164"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:30423"
+        "rhea": "RHEA:52804"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:30423"
+            "id": "RHEA:52804"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "(+)-isoafricanol synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = (+)-isoafricanol + diphosphate",
+      "ec": "4.2.3.157",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "isoafricanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_157"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:53616"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53616"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "(-)-spiroviolene synthase",
+      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate = (-)-spiroviolene + diphosphate",
+      "ec": "4.2.3.158",
+      "substrates": [
+        {
+          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "spiroviolene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_158"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:53620"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53620"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_udp_4_amino_4_6_dideoxy_l_n_acetyl_l_altrosamine_cis-3-4-leucopelargonidin-to-s-adenosyl-l-homocy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "udp_4_amino_4_6_dideoxy_l_n_acetyl_l_altrosamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cis-3-4-leucopelargonidin-to-s-adenosyl-l-homocy"
+      },
+      "note": "Shares UDP-4-amino-4,6-dideoxy-L-N-acetyl-β-L-altrosamine with cis-3,4-leucopelargonidin to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:63389"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_udp_4_amino_4_6_dideoxy_l_n_acetyl_l_altrosamine_udp-4-amino-4-6-dideoxy-l-to-h",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "udp_4_amino_4_6_dideoxy_l_n_acetyl_l_altrosamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-4-amino-4-6-dideoxy-l-to-h"
+      },
+      "note": "Shares UDP-4-amino-4,6-dideoxy-L-N-acetyl-β-L-altrosamine with UDP-4-amino-4,6-dideoxy-L… to H.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:63389"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5z_8z_11z_13e_15_hete_1-octadecanoyl-2-15-hydr-to-1-o-oleoyl-n-acetyls",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5z_8z_11z_13e_15_hete"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-octadecanoyl-2-15-hydr-to-1-o-oleoyl-n-acetyls"
+      },
+      "note": "Shares (5Z,8Z,11Z,13E)-15-HETE with 1-octadecanoyl-2-(15-hydr… to 1-O-oleoyl-N-acetylsphing….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78832"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5z_8z_11z_13e_15_hete_n-aryl-1-2-dipalmitoyl-sn-to-16-feruloyloxypalmi",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5z_8z_11z_13e_15_hete"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-aryl-1-2-dipalmitoyl-sn-to-16-feruloyloxypalmi"
+      },
+      "note": "Shares (5Z,8Z,11Z,13E)-15-HETE with N-aryl-1,2-dipalmitoyl-sn… to 16-feruloyloxypalmitate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78832"
           }
         ]
       }

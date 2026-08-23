@@ -1,0 +1,437 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "glutathione-disulfide-to-h2o-null",
+  "name": "glutathione disulfide to H2O",
+  "category": "redox-detox",
+  "summary": "A 3-step route from glutathione disulfide to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR200089"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "glutathione_disulfide",
+      "name": "glutathione disulfide",
+      "short": "glutathione…",
+      "formula": "C20H30N6O12S2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1371191"
+      }
+    },
+    {
+      "id": "4s_hdohe",
+      "name": "4S-HDoHE",
+      "formula": "C22H31O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1559930"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "4s_hpdha",
+      "name": "(4S)-HpDHA",
+      "formula": "C22H31O4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1559889"
+      }
+    },
+    {
+      "id": "glutathione",
+      "name": "glutathione",
+      "formula": "C10H16N3O6S",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM490899"
+      }
+    },
+    {
+      "id": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
+      "name": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate",
+      "short": "(4Z,7Z,10Z,13Z,16Z,…",
+      "formula": "C22H31O2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM7161"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_11_1_12",
+      "name": "phospholipid-hydroperoxide glutathione peroxidase",
+      "ec": [
+        "1.11.1.12"
+      ],
+      "xrefs": {
+        "uniprot": "P07203"
+      }
+    },
+    {
+      "id": "ec_1_13_11_34",
+      "name": "arachidonate 5-lipoxygenase",
+      "ec": [
+        "1.13.11.34"
+      ],
+      "xrefs": {
+        "uniprot": "P09917"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "phospholipid-hydroperoxide glutathione peroxidase",
+      "ec": "1.11.1.12",
+      "substrates": [
+        {
+          "metabolite": "glutathione_disulfide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4s_hdohe",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4s_hpdha",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutathione",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_11_1_12"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR200089"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR200089"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "arachidonate 5-lipoxygenase",
+      "ec": "1.13.11.34",
+      "substrates": [
+        {
+          "metabolite": "4s_hpdha",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_34"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR200088"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR200088"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR155128",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR155128"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR155128"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_4z_7z_10z_13z_16z_19z_docosahexaenoate_22-6-cholesteryl-ester-to-1-hexadecanoyl-sn-glyc",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4z_7z_10z_13z_16z_19z_docosahexaenoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "22-6-cholesteryl-ester-to-1-hexadecanoyl-sn-glyc"
+      },
+      "note": "Shares (4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate with 22:6 Cholesteryl ester to 1-hexadecanoyl-sn-glycero….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM7161"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4z_7z_10z_13z_16z_19z_docosahexaenoate_co2-to-arachidonate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4z_7z_10z_13z_16z_19z_docosahexaenoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "co2-to-arachidonate"
+      },
+      "note": "Shares (4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate with CO2 to arachidonate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM7161"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4z_7z_10z_13z_16z_19z_docosahexaenoate_diphosphate-to-precorrin-6b",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4z_7z_10z_13z_16z_19z_docosahexaenoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-precorrin-6b"
+      },
+      "note": "Shares (4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate with diphosphate to precorrin-6B.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM7161"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4z_7z_10z_13z_16z_19z_docosahexaenoate_l-dehydroascorbic-acid-to-4z-7z-10z-13z-15e-17r",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4z_7z_10z_13z_16z_19z_docosahexaenoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-dehydroascorbic-acid-to-4z-7z-10z-13z-15e-17r"
+      },
+      "note": "Shares (4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate with L-dehydroascorbic acid to (4Z,7Z,10Z,13Z,15E,17R,19….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM7161"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4z_7z_10z_13z_16z_19z_docosahexaenoate_l-dehydroascorbic-acid-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4z_7z_10z_13z_16z_19z_docosahexaenoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-dehydroascorbic-acid-to-h2o"
+      },
+      "note": "Shares (4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate with L-dehydroascorbic acid to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM7161"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4z_7z_10z_13z_16z_19z_docosahexaenoate_l-dehydroascorbic-acid-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4z_7z_10z_13z_16z_19z_docosahexaenoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-dehydroascorbic-acid-to-h2o-null"
+      },
+      "note": "Shares (4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate with L-dehydroascorbic acid to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM7161"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4z_7z_10z_13z_16z_19z_docosahexaenoate_triacontanoate-to-hexatriacontanoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4z_7z_10z_13z_16z_19z_docosahexaenoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "triacontanoate-to-hexatriacontanoyl-coa"
+      },
+      "note": "Shares (4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate with triacontanoate to hexatriacontanoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM7161"
+          }
+        ]
+      }
+    }
+  ]
+}

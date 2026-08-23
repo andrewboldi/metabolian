@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway alpha-d-ribose-to-phosphate "alpha-D-ribose to phosphate" {
-  spacing 232
+  spacing 208
 
   spine at 0,0 {
     alpha_d_ribose
@@ -14,29 +14,5 @@ pathway alpha-d-ribose-to-phosphate "alpha-D-ribose to phosphate" {
     nebularine
     <-> ec_2_7_1_143 [2.7.1.143] +diphosphate +h -phosphate
     6_deoxyinosine_5_phosphate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +chi_chi_caroten_18_oate +h +chi_chi_caroten_18_ol
-    o2
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +synechoxanthin +o2
-    18_hydroxy_chi_chi_caroten_18_oic_acid
-  }
-
-  branch from phosphate side left {
-    phosphate
-    <-> ec_3_6_1_52 [3.6.1.52] +1d_myo_inositol_1_3_4_5_6_pentakisphosphate +h +h2o
-    a_diphospho_1d_myo_inositol_tetrakisphosphate
-  }
-
-  branch from phosphate side right {
-    phosphate
-    <-> ec_3_6_1_52 [3.6.1.52] +1d_myo_inositol_1_3_4_5_6_pentakisphosphate +h +h2o
-    diphospho_1d_myo_inositol_tetrakisphosph
   }
 }

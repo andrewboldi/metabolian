@@ -128,52 +128,6 @@
       "xrefs": {
         "chebi": "CHEBI:43474"
       }
-    },
-    {
-      "id": "hexadecanoate",
-      "name": "hexadecanoate",
-      "formula": "C16H31O2",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM108"
-      }
-    },
-    {
-      "id": "2_hexadecanoyl_sn_glycero_3_phospho_1_sn_glycero",
-      "name": "2-hexadecanoyl-sn-glycero-3-phospho-(1'-sn-glycerol)",
-      "short": "2-hexadecanoyl-sn-g…",
-      "formula": "C22H44O9P",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM34740"
-      }
-    },
-    {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM3"
-      }
-    },
-    {
-      "id": "diphosphate",
-      "name": "diphosphate",
-      "formula": "HO7P2",
-      "charge": -3,
-      "xrefs": {
-        "metanetx": "MNXM11"
-      }
-    },
-    {
-      "id": "amp",
-      "name": "AMP",
-      "formula": "C10H12N5O7P",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM728294"
-      }
     }
   ],
   "enzymes": [],
@@ -301,53 +255,269 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "Reaction MNXR94774",
-      "substrates": [
-        {
-          "metabolite": "hexadecanoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "2_hexadecanoyl_sn_glycero_3_phospho_1_sn_glycero",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "diphosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "amp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "dipalmitoyl_phosphatidylglycerol",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR94774"
+      "id": "xt_cardiolipin_tetrahexadecanoyl_n_c16_0_hexadecanoate-to-dipalmitoyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cardiolipin_tetrahexadecanoyl_n_c16_0"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "hexadecanoate-to-dipalmitoyl"
+      },
+      "note": "Shares Cardiolipin (tetrahexadecanoyl, n-C16:0) with hexadecanoate to dipalmitoyl….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR94774"
+            "id": "MNXM736425"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dipalmitoyl_phosphatidylglycerol_glycerophosphatidylethano-to-1-2-dihexadecanoyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dipalmitoyl_phosphatidylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "glycerophosphatidylethano-to-1-2-dihexadecanoyl"
+      },
+      "note": "Shares dipalmitoyl phosphatidylglycerol with glycerophosphatidylethano… to 1,2-dihexadecanoyl-sn-gly….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60724"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dipalmitoyl_phosphatidylglycerol_hexadecanoate-to-cdp-1-2-dihexadec-9-enoyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dipalmitoyl_phosphatidylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hexadecanoate-to-cdp-1-2-dihexadec-9-enoyl"
+      },
+      "note": "Shares dipalmitoyl phosphatidylglycerol with hexadecanoate to CDP-1,2-dihexadec-9-enoyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60724"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dipalmitoyl_phosphatidylglycerol_hexadecanoate-to-dipalmitoyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dipalmitoyl_phosphatidylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hexadecanoate-to-dipalmitoyl"
+      },
+      "note": "Shares dipalmitoyl phosphatidylglycerol with hexadecanoate to dipalmitoyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60724"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dipalmitoyl_phosphatidylglycerol_hexadecanoate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dipalmitoyl_phosphatidylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hexadecanoate-to-h2o"
+      },
+      "note": "Shares dipalmitoyl phosphatidylglycerol with hexadecanoate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60724"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dipalmitoyl_phosphatidylglycerol_sn-glycero-3-phospho-1-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dipalmitoyl_phosphatidylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sn-glycero-3-phospho-1-to-h2o-null"
+      },
+      "note": "Shares dipalmitoyl phosphatidylglycerol with sn-glycero-3-phospho-(1'-… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60724"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1d_myo_inositol_3_phosphate_1-2-dioleoylglycerol-to-cytidine-5-monophosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1d_myo_inositol_3_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-dioleoylglycerol-to-cytidine-5-monophosphate"
+      },
+      "note": "Shares 1D-myo-inositol 3-phosphate with 1,2-dioleoylglycerol to cytidine 5'-monophosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58401"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1d_myo_inositol_3_phosphate_1d-myo-inositol-to-cytidine-5-monophosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1d_myo_inositol_3_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1d-myo-inositol-to-cytidine-5-monophosphate"
+      },
+      "note": "Shares 1D-myo-inositol 3-phosphate with 1D-myo-inositol… to cytidine 5'-monophosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58401"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1d_myo_inositol_3_phosphate_1d-myo-inositol-to-d-glucopyranuronate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1d_myo_inositol_3_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1d-myo-inositol-to-d-glucopyranuronate"
+      },
+      "note": "Shares 1D-myo-inositol 3-phosphate with 1D-myo-inositol… to D-glucopyranuronate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58401"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1d_myo_inositol_3_phosphate_2-amino-2-deoxy-d-gluconi-to-2-dehydro-3-deoxy-d",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1d_myo_inositol_3_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-amino-2-deoxy-d-gluconi-to-2-dehydro-3-deoxy-d"
+      },
+      "note": "Shares 1D-myo-inositol 3-phosphate with 2-amino-2-deoxy-D-gluconi… to 2-dehydro-3-deoxy-D-arabi….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58401"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1d_myo_inositol_3_phosphate_cdp-diacylglycerol-to-1-phosphatidyl-1d-myo-ino",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1d_myo_inositol_3_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cdp-diacylglycerol-to-1-phosphatidyl-1d-myo-ino"
+      },
+      "note": "Shares 1D-myo-inositol 3-phosphate with CDP-diacylglycerol to 1-phosphatidyl-1D-myo-ino….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58401"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1d_myo_inositol_3_phosphate_cellobiose-to-mycothione",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1d_myo_inositol_3_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cellobiose-to-mycothione"
+      },
+      "note": "Shares 1D-myo-inositol 3-phosphate with cellobiose to mycothione.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58401"
           }
         ]
       }

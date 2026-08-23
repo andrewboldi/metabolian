@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1e-4s-5e-7r-germacra-1-to-diphosphate "(1E,4S,5E,7R)-germacra-1(… to diphosphate" {
-  spacing 188
+  spacing 152
 
   spine at 0,0 {
     1e_4s_5e_7r_germacra_1_10_5_dien_11_ol
@@ -14,41 +14,5 @@ pathway 1e-4s-5e-7r-germacra-1-to-diphosphate "(1E,4S,5E,7R)-germacra-1(… to d
     2e_6e_farnesyl_diphosphate
     <-> . +31r_8_12_diethylbacteriochlorophyllide_e +h -diphosphate
     31r_8_12_diethylbacteriochlorophyll_e
-  }
-
-  branch from 2e_6e_farnesyl_diphosphate side left {
-    2e_6e_farnesyl_diphosphate
-    <-> . +diphosphate
-    alpha_amorphene
-  }
-
-  branch from 2e_6e_farnesyl_diphosphate side right {
-    2e_6e_farnesyl_diphosphate
-    <-> ec_4_2_3_56 [4.2.3.56] +diphosphate
-    1e_6e_humulene
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    premithramycin_a3
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    premithramycin_a3
-  }
-
-  branch from diphosphate side left {
-    diphosphate
-    <-> . +adenylylcoelenterazine_disulfonate +watasenia_luciferin
-    atp
-  }
-
-  branch from diphosphate side right {
-    diphosphate
-    <-> . +d_firefly_luciferyl_adenylate +h +atp
-    firefly_d_luciferin
   }
 }

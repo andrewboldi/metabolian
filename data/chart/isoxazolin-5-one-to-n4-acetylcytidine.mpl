@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway isoxazolin-5-one-to-n4-acetylcytidine "isoxazolin-5-one to N4-acetylcytidine…" {
-  spacing 272
+  spacing 290
 
   spine at 0,0 {
     isoxazolin_5_one
@@ -18,25 +18,43 @@ pathway isoxazolin-5-one-to-n4-acetylcytidine "isoxazolin-5-one to N4-acetylcyti
 
   branch from acetyl_amp side left {
     acetyl_amp
-    <-> ec_3_6_1_20 [3.6.1.20] +h2o +acetate +amp
-    h
-  }
-
-  branch from acetyl_amp side right {
-    acetyl_amp
     <-> ec_6_2_1_1 [6.2.1.1] +coa +h +amp
     acetyl_coa
   }
 
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_133 [4.2.3.133] +fpp
+    copaene
+  }
+
   branch from ppi side left {
     ppi
-    <-> ec_6_2_1_36 [6.2.1.36] +3_hydroxypropionate +atp +coa +amp
-    3_hydroxypropanoyl_coa
+    <-> ec_2_5_1_100 [2.5.1.100] +fumigaclavine_a +dmapp
+    fumigaclavine_c
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_46 [4.2.3.46] +fpp
-    e_e_farnesene
+    <-> ec_2_7_7_84 [2.7.7.84] +atp
+    pppa2_p5_a2_p5_a
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_140 [4.2.3.140] +copal_8_ol_diphosphate
+    cis_abienol
+  }
+
+  branch from cytidine_5_monophosphate_1 side right {
+    cytidine_5_monophosphate_1
+    <-> ec_2_1_1_204 [2.1.1.204] +sam +sah +hplus
+    5_methylcytidine_5_monophosphate_1
+  }
+
+  branch from cytidine_5_monophosphate_1 side left {
+    cytidine_5_monophosphate_1
+    <-> ec_2_1_1_207 [2.1.1.207] +sam +sah +hplus
+    2_o_methylcytidine_5_monophosphate_1
   }
 }

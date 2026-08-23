@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 17-hydroxy-5-androsten-3-to-epietiocholanolone "17β-hydroxy-5-androsten-3… to epietiocholanolone" {
-  spacing 246
+  spacing 240
 
   spine at 0,0 {
     17_hydroxy_5_androsten_3_one
@@ -18,21 +18,15 @@ pathway 17-hydroxy-5-androsten-3-to-epietiocholanolone "17β-hydroxy-5-androsten
     epietiocholanolone
   }
 
-  branch from testosterone side left {
-    testosterone
-    <-> . +udp_d_glucuronate +udp +hplus
-    testosterone_17_o_d_glucuronide
-  }
-
-  branch from testosterone side right {
-    testosterone
-    <-> ec_1_14_14_197 [1.14.14.197] +fmnh2 +o2 +fmn +h2o +hplus
-    11alpha_17beta_dihydroxyandrost_4_en_3_one
-  }
-
   branch from 5_androstane_3_17_dione side left {
     5_androstane_3_17_dione
     <-> ec_1_1_1_152 [1.1.1.152] +nad +nadh +hplus
     3_hydroxy_5_androstan_17_one
+  }
+
+  branch from 17_hydroxy_5_androsten_3_one side right {
+    17_hydroxy_5_androsten_3_one
+    <-> . +nad +nadh +hplus
+    androst_5_ene_3_17_diol
   }
 }

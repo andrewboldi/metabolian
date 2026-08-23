@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-iodo-l-thyronine-to-l-glutamate "3-iodo-L-thyronine to L-glutamate" {
-  spacing 188
+  spacing 176
 
   spine at 0,0 {
     3_iodo_l_thyronine
@@ -14,17 +14,5 @@ pathway 3-iodo-l-thyronine-to-l-glutamate "3-iodo-L-thyronine to L-glutamate" {
     3_3_5_triiodo_l_thyronine
     <-> ec_2_6_1_26 [2.6.1.26] +akg -glutamate
     3_5_3_triiodothyropyruvate
-  }
-
-  branch from glutamate side left {
-    glutamate
-    <-> . +spermine +atp +adp +pi +hplus
-    l_glutamylspermine
-  }
-
-  branch from glutamate side right {
-    glutamate
-    <-> . +cadaverine +atp +adp +pi +hplus
-    l_glutamylcadaverine
   }
 }

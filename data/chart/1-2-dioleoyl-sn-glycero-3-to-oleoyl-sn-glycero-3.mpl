@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-2-dioleoyl-sn-glycero-3-to-oleoyl-sn-glycero-3 "1,2-dioleoyl-sn-glycero-3… to oleoyl-sn-glycero-3-phosp…" {
-  spacing 170
+  spacing 164
 
   spine at 0,0 {
     1_2_dioleoyl_sn_glycero_3_phospho_n_methylethano
@@ -16,21 +16,15 @@ pathway 1-2-dioleoyl-sn-glycero-3-to-oleoyl-sn-glycero-3 "1,2-dioleoyl-sn-glycer
     1_palmityl_2_acetyl_3_oleoyl_sn_glycerol
   }
 
-  branch from sah side left {
-    sah
-    <-> . +3_4_dihydroxyflavone_7_olate +sam +hplus
-    4_hydroxy_3_methoxyflavone_7_olate
+  branch from 1_o_palmityl_2_acetyl_sn_glycerol side left {
+    1_o_palmityl_2_acetyl_sn_glycerol
+    <-> . +lauroyl_coa +coa
+    1_palmityl_2_acetyl_3_lauroyl_sn_glycerol
   }
 
-  branch from sah side right {
-    sah
-    <-> . +3_4_8_trihydroxyflavone_7_olate +sam +hplus
-    3_4_dihydroxy_8_methoxyflavone_7_olate
-  }
-
-  branch from 1_palmityl_2_acetyl_3_oleoyl_sn_glycerol side left {
-    1_palmityl_2_acetyl_3_oleoyl_sn_glycerol
-    <-> . +1_o_palmityl_2_acetyl_sn_glycerol +coa
-    oleoyl_coa
+  branch from 1_o_palmityl_2_acetyl_sn_glycerol side right {
+    1_o_palmityl_2_acetyl_sn_glycerol
+    <-> . +atp +adp +hplus
+    1_palmityl_2_acetyl_sn_glycero_3_phosphate
   }
 }

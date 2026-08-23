@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway glutarate-to-h2o "glutarate to H2O" {
-  spacing 250
+  spacing 298
 
   spine at 0,0 {
     glutarate
@@ -16,45 +16,93 @@ pathway glutarate-to-h2o "glutarate to H2O" {
     5_valerolactone
   }
 
-  branch from 5_oxopentanoate side left {
-    5_oxopentanoate
-    <-> ec_1_2_1_26 [1.2.1.26] +glutaraldehyde +nadp +h2o +h
-    nadph
-  }
-
-  branch from 5_oxopentanoate side right {
-    5_oxopentanoate
-    <-> ec_1_2_1_26 [1.2.1.26] +nadh +h +nad +h2o
-    glutaraldehyde
-  }
-
   branch from nad side left {
     nad
-    <-> . +nadh +h +3_methylphenol +o2 +h2o
-    3_hydroxybenzyl_alcohol
+    <-> . +butanal +nadh +o2 +h2o
+    butanoate
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_2_1_28 [1.2.1.28] +3_hydroxybenzoate +nadh +h +h2o
-    3_hydroxybenzaldehyde
+    <-> ec_1_1_1_35 [1.1.1.35] +nadh +z_3_oxotetradec_7_enoyl_coa +h
+    3s_7z_3_hydroxytetradec_7_enoyl_coa
   }
 
   branch from h2o side left {
     h2o
-    <-> . +trichloroacetaldehyde
-    chloral_hydrate
+    <-> ec_1_21_98_2 [1.21.98.2] +3_4_bis_7_chloroindol_3_yl_2_5_diiminiohexanedio +2_iminio_3_7_chloroindol_3_yl_propionate
+    h2o2
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_3_2_10 [3.3.2.10] +h +5_6_eet
-    5_6_dhet
+    <-> . +lyngbyatoxin_a +h +o2 +nadph +nadp
+    lyngbyatoxin_c
   }
 
   branch from 5_hydroxypentanoate side left {
     5_hydroxypentanoate
     <-> ec_3_1_1_25 [3.1.1.25] +h +h2o
     valerolactone
+  }
+
+  branch from glutarate side right {
+    glutarate
+    <-> ec_3_5_1_3 [3.5.1.3] +h +nh4 +h2o
+    glutaramic_acid
+  }
+
+  branch from glutarate side left {
+    glutarate
+    <-> ec_2_8_3_12 [2.8.3.12] +acetyl_coa +acetate
+    glutaryl_coa
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_1_1_35 [1.1.1.35] +z_3_oxododec_5_enoyl_coa +h +nad
+    s_z_3_hydroxydodec_5_enoyl_coa
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> ec_1_2_1_3 [1.2.1.3] +h +3_phosphooxypyruvate +nad +h2o
+    2_3_dioxopropyl_phosphate
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_7_1_190 [2.7.1.190] +dibekacin +gtp +dibekacin_2_phosphate
+    gdp
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_7_1_190 [2.7.1.190] +arbekacin +gtp +gdp
+    arbekacin_2_phosphate
+  }
+
+  branch from nad side right {
+    nad
+    <-> . +nadh +3_carboxy_10_methylsulfanyl_2_oxodecanoate +h
+    3_7_methylthio_heptylmalic_acid
+  }
+
+  branch from nad side left {
+    nad
+    <-> . +nadh +3_carboxy_9_methylsulfanyl_2_oxononanoate +h
+    3_6_methylthio_hexylmalic_acid
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +isotrichotriol
+    trichotriol
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +trichotriol
+    3_hydroxytrichothecene
   }
 }

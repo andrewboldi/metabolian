@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-galactonate-to-nad "L-galactonate to NAD" {
-  spacing 176
+  spacing 170
 
   spine at 0,0 {
     l_galactonate
@@ -16,15 +16,9 @@ pathway l-galactonate-to-nad "L-galactonate to NAD" {
     d_altronate
   }
 
-  branch from nad side left {
-    nad
-    <-> . +nadh +bacteriochlorophyllide_b +h
-    3_deacetyl_3_1_hydroxyethyl_bacteriochlorophylli
-  }
-
-  branch from nad side right {
-    nad
-    <-> . +nadh +h +7_8_dihydroisojusticidin_b
-    7_8_7_8_tetrahydroisojusticidin_b
+  branch from l_galactonate side left {
+    l_galactonate
+    <-> ec_4_2_1_146 [4.2.1.146] +h2o
+    2_keto_3_deoxy_l_galactonate
   }
 }

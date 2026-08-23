@@ -117,6 +117,35 @@
       "xrefs": {
         "chebi": "CHEBI:58223"
       }
+    },
+    {
+      "id": "zolasartan",
+      "name": "zolasartan",
+      "formula": "C24H18BrClN6O3",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:149524"
+      }
+    },
+    {
+      "id": "zolarsartan_1_n_d_glucuronide",
+      "name": "zolarsartan-1-N-β-D-glucuronide",
+      "short": "zolarsartan-1-N-β-D…",
+      "formula": "C30H26BrClN6O9",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:149527"
+      }
+    },
+    {
+      "id": "zolarsartan_2_n_d_glucuronide",
+      "name": "zolarsartan-2-N-β-D-glucuronide",
+      "short": "zolarsartan-2-N-β-D…",
+      "formula": "C30H26BrClN6O9",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:149528"
+      }
     }
   ],
   "enzymes": [],
@@ -262,6 +291,240 @@
           {
             "db": "Rhea",
             "id": "RHEA:85079"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "zolasartan + UDP-alpha-D-glucuronate = zolarsartan-1-N-beta-D-glucuronide + UDP",
+      "equation": "zolasartan + UDP-alpha-D-glucuronate = zolarsartan-1-N-beta-D-glucuronide + UDP",
+      "substrates": [
+        {
+          "metabolite": "zolasartan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucuronate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "zolarsartan_1_n_d_glucuronide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:63744"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63744"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "zolasartan + UDP-alpha-D-glucuronate = zolarsartan-2-N-beta-D-glucuronide + UDP",
+      "equation": "zolasartan + UDP-alpha-D-glucuronate = zolarsartan-2-N-beta-D-glucuronide + UDP",
+      "substrates": [
+        {
+          "metabolite": "zolasartan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucuronate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "zolarsartan_2_n_d_glucuronide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:63748"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63748"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_oleanolate_9-cis-violaxanthin-to-fmnh2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "oleanolate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "9-cis-violaxanthin-to-fmnh2"
+      },
+      "note": "Shares oleanolate with 9-cis-violaxanthin to FMNH2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:82828"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_oleanolate_amyrin-to-fmn-43072",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "oleanolate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "amyrin-to-fmn-43072"
+      },
+      "note": "Shares oleanolate with β-amyrin to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:82828"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_oleanolate_dammarenediol-ii-to-ginsenoside-c-k",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "oleanolate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dammarenediol-ii-to-ginsenoside-c-k"
+      },
+      "note": "Shares oleanolate with dammarenediol-II to ginsenoside C-K.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:82828"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_oleanolate_n-stearoyl-1-oleoyl-sn-gl-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "oleanolate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-stearoyl-1-oleoyl-sn-gl-to-fmn"
+      },
+      "note": "Shares oleanolate with N-stearoyl-1-oleoyl-sn-gl… to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:82828"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_oleanolate_oleanolate-to-gypsogenin-28-d-glucosi",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "oleanolate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "oleanolate-to-gypsogenin-28-d-glucosi"
+      },
+      "note": "Shares oleanolate with oleanolate to gypsogenin 28-β-D-glucosi….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:82828"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_oleanolate_oleanolate-to-quillaic-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "oleanolate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "oleanolate-to-quillaic-acid"
+      },
+      "note": "Shares oleanolate with oleanolate to quillaic acid….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:82828"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_zolasartan_bilirubin-to-d-glucopyranuronate-79067",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "zolasartan"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "bilirubin-to-d-glucopyranuronate-79067"
+      },
+      "note": "Shares zolasartan with bilirubin to D-glucopyranuronate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:149524"
           }
         ]
       }

@@ -56,6 +56,16 @@
       }
     },
     {
+      "id": "1_2_diacyl_sn_glycero_3_phosphoethanolamine",
+      "name": "1,2-diacyl-sn-glycero-3-phosphoethanolamine",
+      "short": "1,2-diacyl-sn-glyce…",
+      "formula": "C7H12NO8PR2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64612"
+      }
+    },
+    {
       "id": "triglyceride",
       "name": "triglyceride",
       "formula": "C6H5O6R3",
@@ -65,13 +75,13 @@
       }
     },
     {
-      "id": "1_o_acyl_sn_glycero_3_phosphocholine",
-      "name": "1-O-acyl-sn-glycero-3-phosphocholine",
-      "short": "1-O-acyl-sn-glycero…",
-      "formula": "C9H19NO7PR",
+      "id": "1_acyl_sn_glycero_3_phosphoethanolamine",
+      "name": "1-acyl-sn-glycero-3-phosphoethanolamine",
+      "short": "1-acyl-sn-glycero-3…",
+      "formula": "C6H13NO7PR",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58168"
+        "chebi": "CHEBI:64381"
       }
     },
     {
@@ -146,15 +156,15 @@
     },
     {
       "id": "r2",
-      "name": "a 1,2-diacylglycerol + a 1,2-diacyl-sn-glycero-3-phosphocholine = a triacylglycerol + a...",
-      "equation": "a 1,2-diacylglycerol + a 1,2-diacyl-sn-glycero-3-phosphocholine = a triacylglycerol + a 1-acyl-sn-glycero-3-phosphocholine",
+      "name": "a 1,2-diacylglycerol + a 1,2-diacyl-sn-glycero-3-phosphoethanolamine = a triacylglycero...",
+      "equation": "a 1,2-diacylglycerol + a 1,2-diacyl-sn-glycero-3-phosphoethanolamine = a triacylglycerol + a 1-acyl-sn-glycero-3-phosphoethanolamine",
       "substrates": [
         {
           "metabolite": "1_2_diglyceride",
           "stoichiometry": 1
         },
         {
-          "metabolite": "phosphatidylcholine",
+          "metabolite": "1_2_diacyl_sn_glycero_3_phosphoethanolamine",
           "stoichiometry": 1
         }
       ],
@@ -164,21 +174,21 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "1_o_acyl_sn_glycero_3_phosphocholine",
+          "metabolite": "1_acyl_sn_glycero_3_phosphoethanolamine",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 2,
       "xrefs": {
-        "rhea": "RHEA:77743"
+        "rhea": "RHEA:77747"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:77743"
+            "id": "RHEA:77747"
           }
         ]
       }
@@ -218,6 +228,250 @@
           {
             "db": "Rhea",
             "id": "RHEA:78067"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_acyl_sn_glycero_3_phosphocholine_1-2-diacyl-sn-glycero-3-p-to-1-acyl-2-hexadecano",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acyl_sn_glycero_3_phosphocholine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-diacyl-sn-glycero-3-p-to-1-acyl-2-hexadecano"
+      },
+      "note": "Shares acyl-sn-glycero-3-phosphocholine with 1,2-diacyl-sn-glycero-3-p… to 1-acyl-2-hexadecanoyl-sn-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84465"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_acyl_sn_glycero_3_phosphocholine_1-alkyl-2-acetylglycerol-to-monoacylglycerol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acyl_sn_glycero_3_phosphocholine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-alkyl-2-acetylglycerol-to-monoacylglycerol"
+      },
+      "note": "Shares acyl-sn-glycero-3-phosphocholine with 1-alkyl-2-acetylglycerol to monoacylglycerol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84465"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_acyl_sn_glycero_3_phosphocholine_1-alkyl-sn-glycero-3-phos-to-1-alkyl-sn-glycerol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acyl_sn_glycero_3_phosphocholine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-alkyl-sn-glycero-3-phos-to-1-alkyl-sn-glycerol"
+      },
+      "note": "Shares acyl-sn-glycero-3-phosphocholine with 1-alkyl-sn-glycero-3-phos… to 1-alkyl-sn-glycerol….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84465"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_acyl_sn_glycero_3_phosphocholine_1-oleoyl-2-acyl-sn-3-glyc-to-1-2-diacyl-sn-glyce",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acyl_sn_glycero_3_phosphocholine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-oleoyl-2-acyl-sn-3-glyc-to-1-2-diacyl-sn-glyce"
+      },
+      "note": "Shares acyl-sn-glycero-3-phosphocholine with 1-oleoyl-2-acyl-sn-3-glyc… to 1,2-diacyl-sn-glycero-3-p….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84465"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_acyl_sn_glycero_3_phosphocholine_1-saturated-to-1-z-alk-1-enyl-2-acyl-s",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acyl_sn_glycero_3_phosphocholine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-saturated-to-1-z-alk-1-enyl-2-acyl-s"
+      },
+      "note": "Shares acyl-sn-glycero-3-phosphocholine with 1-(α,β-saturated… to 1-(Z)-alk-1-enyl-2-acyl-s….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84465"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_acyl_sn_glycero_3_phosphocholine_2-o-acetyl-1-o-hexadecyl-to-acyl-sn-glycero-3-ph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acyl_sn_glycero_3_phosphocholine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-o-acetyl-1-o-hexadecyl-to-acyl-sn-glycero-3-ph"
+      },
+      "note": "Shares acyl-sn-glycero-3-phosphocholine with 2-O-acetyl-1-O-hexadecyl-… to acyl-sn-glycero-3-phospho….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84465"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_acyl_sn_glycero_3_phosphocholine_n-acylphosphatidylethanol-to-acyl-sn-glycero-3-p",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acyl_sn_glycero_3_phosphocholine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acylphosphatidylethanol-to-acyl-sn-glycero-3-p"
+      },
+      "note": "Shares acyl-sn-glycero-3-phosphocholine with N-acylphosphatidylethanol… to acyl-sn-glycero-3-phospho….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84465"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinyl_ester_1-2-diglyceride-to-hexadecanoate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinyl_ester"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-diglyceride-to-hexadecanoate"
+      },
+      "note": "Shares all-trans-retinyl ester with 1,2-diglyceride to hexadecanoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:63410"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinyl_ester_all-trans-7-8-dihydroreti-to-11-cis-retinoate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinyl_ester"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "all-trans-7-8-dihydroreti-to-11-cis-retinoate"
+      },
+      "note": "Shares all-trans-retinyl ester with all-trans-7,8-dihydroreti… to 11-cis-retinoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:63410"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinyl_ester_lipid-iia-to-1-2-diacyl-sn-glycero-3-p",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinyl_ester"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "lipid-iia-to-1-2-diacyl-sn-glycero-3-p"
+      },
+      "note": "Shares all-trans-retinyl ester with lipid IIA to 1,2-diacyl-sn-glycero-3-p….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:63410"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinyl_ester_o-s-fatty-acylpantethein-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinyl_ester"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "o-s-fatty-acylpantethein-to-h2o"
+      },
+      "note": "Shares all-trans-retinyl ester with O-(S-fatty acylpantethein… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:63410"
           }
         ]
       }

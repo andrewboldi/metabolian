@@ -20,63 +20,45 @@ pathway 2-hydroxyethylphosphonic-to-d-ribose-1-5-bisphos "2-hydroxyethylphosphon
     d_ribose_1_5_bisphosphate
   }
 
-  branch from methylphosphonate side left {
-    methylphosphonate
-    <-> ec_1_14_11_71 [1.14.11.71] +akg +o2 +succinate +co2
-    hydroxymethylphosphonate
-  }
-
-  branch from d_ribose_1_methylphosphonate_5_phosphate side right {
+  branch from d_ribose_1_methylphosphonate_5_phosphate side left {
     d_ribose_1_methylphosphonate_5_phosphate
     <-> ec_4_7_1_1 [4.7.1.1] +5_phosphonato_d_ribose_cyclic_1_2_phosphate
     methane
   }
 
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_163 [4.2.3.163] +fpp +h2o
+    corvol_ether_b
+  }
+
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_80 [2.5.1.80] +dmapp +l_tryptophan
-    7_3_methylbut_2_enyl_l_tryptophan
+    <-> ec_4_2_3_171 [4.2.3.171] +fpp +h2o
+    corvol_ether_a
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_6_3_2_14 [6.3.2.14] +2_3_dihydroxybenzoate +serine +atp +amp +hplus
-    enterobactin
+    <-> ec_4_2_3_165 [4.2.3.165] +fpp
+    1r_4r_5s_guaia_6_10_14_diene
   }
 
-  branch from 5_deoxyadenosine side left {
-    5_deoxyadenosine
-    <-> ec_5_3_99_13 [5.3.99.13] +2_deoxyadenosine_5_monophosphate +sam +methionine +hplus
-    4_phospho_dehydrooxetanocin
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_168 [4.2.3.168] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    3e_7e_dolathalia_3_7_11_triene
   }
 
-  branch from 5_deoxyadenosine side right {
-    5_deoxyadenosine
-    <-> . +2_deoxyadenosine_5_monophosphate +hydrogen_acceptor +4_phospho_dehydrooxetanocin +hydrogen_donor
-    5_deoxyadenosin_5_yl_radical
+  branch from sam side right {
+    sam
+    <-> . +5_end_ribonucleotide_2 +sah
+    5_end_bisphopshomethylribonucleoside
   }
 
-  branch from methionine side left {
-    methionine
-    <-> . +cytidine_5_hydroxy_2_hydroxyethyl_phosphonoyl_ph +methylcobalamin +sam +cob_iii_alamin +5_deoxyadenosine
-    cytidine_5_hydroxy_s_2_hydroxypropyl_phosphonoyl
-  }
-
-  branch from methionine side right {
-    methionine
-    <-> . +2r_3r_5r_2_s_pantetheinyl_carbapenam_3_carboxyl +methylcobalamin +sam +cob_iii_alamin +5_deoxyadenosine
-    2r_3r_5s_6r_6_methyl_2_s_pantetheinyl_carbapena
-  }
-
-  branch from hydrogen_acceptor side left {
-    hydrogen_acceptor
-    <-> . +arachidonate +hydrogen_donor +o2 +h2o
-    15_r_hete
-  }
-
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> . +linoleate +hydrogen_donor +o2 +h2o
-    13_hode
+  branch from sam side left {
+    sam
+    <-> . +5_end_ribonucleotide_2 +sah
+    5_end_phopshomethylribonucleoside_1
   }
 }

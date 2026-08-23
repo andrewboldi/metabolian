@@ -18,9 +18,9 @@ pathway 6-d-glucose-1-phospho-to-acetaldehyde "6-(α-D-glucose-1-phospho)… to 
     5_s_6_s_c_glycyluridine
   }
 
-  branch from uridine_5_aldehyde side left {
-    uridine_5_aldehyde
-    <-> . +5_s_6_s_c_glycyluridine
-    glycine
+  branch from threonine side left {
+    threonine
+    <-> . +h2o
+    thr_thr
   }
 }

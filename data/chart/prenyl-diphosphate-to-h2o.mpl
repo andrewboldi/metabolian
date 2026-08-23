@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway prenyl-diphosphate-to-h2o "prenyl diphosphate to H2O" {
-  spacing 224
+  spacing 212
 
   spine at 0,0 {
     dmapp
@@ -20,27 +20,15 @@ pathway prenyl-diphosphate-to-h2o "prenyl diphosphate to H2O" {
     pyrethrin_i
   }
 
-  branch from ppi side left {
-    ppi
-    <-> . +2_cis_6_cis_farnesyl_diphosphate
-    bisabolene
+  branch from z_s_pyrethrolone side left {
+    z_s_pyrethrolone
+    <-> . +r_r_chrysanthemoyl_coa +coa
+    pyrethrin_i
   }
 
-  branch from ppi side right {
-    ppi
-    <-> . +bisabolene
-    fpp
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +neomycin_b +phosphate +neomycin_b
-    atp
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    ribostamycin
+  branch from z_s_pyrethrolone side right {
+    z_s_pyrethrolone
+    <-> . +1r_3r_pyrethroyl_coa +coa
+    pyrethrin_ii
   }
 }

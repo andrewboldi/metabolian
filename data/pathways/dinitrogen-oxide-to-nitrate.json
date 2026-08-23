@@ -98,43 +98,6 @@
       "xrefs": {
         "chebi": "CHEBI:17632"
       }
-    },
-    {
-      "id": "5_nitro_gama_tocopherol",
-      "name": "5-nitro-gama-tocopherol",
-      "short": "5-nitro-gama-tocoph…",
-      "formula": "C28H47NO4",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1560429"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "WATER"
-      }
-    },
-    {
-      "id": "h",
-      "name": "H",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM1"
-      }
-    },
-    {
-      "id": "gamma_tocopherol",
-      "name": "gamma-tocopherol",
-      "formula": "C28H48O2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM733034"
-      }
     }
   ],
   "enzymes": [
@@ -265,45 +228,137 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "Reaction MNXR206592",
-      "substrates": [
-        {
-          "metabolite": "5_nitro_gama_tocopherol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "peroxynitrite",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "gamma_tocopherol",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR206592"
+      "id": "xt_dinitrogen_oxide_dinitrogen-oxide-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dinitrogen_oxide"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "dinitrogen-oxide-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares dinitrogen oxide with dinitrogen oxide to S-adenosyl-L-homocysteine.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR206592"
+            "db": "ChEBI",
+            "id": "CHEBI:17045"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dinitrogen_oxide_hydrazine-to-nitrate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dinitrogen_oxide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hydrazine-to-nitrate"
+      },
+      "note": "Shares dinitrogen oxide with hydrazine to nitrate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17045"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_superoxide_2-4-6-trinitrotoluene-to-2-amino-4-6-dinitrotolu",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "superoxide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-4-6-trinitrotoluene-to-2-amino-4-6-dinitrotolu"
+      },
+      "note": "Shares superoxide with 2,4,6-trinitrotoluene… to 2-amino-4,6-dinitrotoluen….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18421"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_superoxide_trithionate-to-menadiol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "superoxide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trithionate-to-menadiol"
+      },
+      "note": "Shares superoxide with trithionate to menadiol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18421"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_peroxynitrite_24-methylidenelophenol-to-avenasterol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "peroxynitrite"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "24-methylidenelophenol-to-avenasterol"
+      },
+      "note": "Shares peroxynitrite with 24-methylidenelophenol to avenasterol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:25941"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_peroxynitrite_3-hydroxy-simvastatin-la-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "peroxynitrite"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxy-simvastatin-la-to-h2o"
+      },
+      "note": "Shares peroxynitrite with 3'-hydroxy-simvastatin-la… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:25941"
           }
         ]
       }

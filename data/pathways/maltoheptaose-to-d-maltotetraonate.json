@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "maltoheptaose-to-d-maltotetraonate",
   "name": "maltoheptaose to D-maltotetraonate",
-  "category": "redox-detox",
+  "category": "lipid-metabolism",
   "summary": "A 3-step route from maltoheptaose to D-maltotetraonate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -102,32 +102,58 @@
       }
     },
     {
-      "id": "d_glcp_1_4_d_glcp_1_4_d_glcp",
-      "name": "α-D-Glcp-(1→4)-α-D-Glcp-(1→4)-D-Glcp",
-      "short": "α-D-Glcp-(1→4)-α-D-…",
-      "formula": "C18H32O16",
+      "id": "ginsenoside_mx",
+      "name": "ginsenoside Mx",
+      "formula": "C41H70O12",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:140999"
+        "metanetx": "MNXM1368235"
       }
     },
     {
-      "id": "d_maltose",
-      "name": "D-maltose",
-      "formula": "C12H22O11",
+      "id": "ginsenoside_c_mx1",
+      "name": "ginsenoside C-Mx1",
+      "formula": "C47H80O17",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM1106000"
+        "metanetx": "MNXM148259"
       }
     },
     {
-      "id": "d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g",
-      "name": "α-D-Glcp-(1→4)-α-D-Glcp-(1→4)-α-D-Glcp-(1→4)-α-D-Glcp-(1→4)-D-Glcp",
-      "short": "α-D-Glcp-(1→4)-α-D-…",
-      "formula": "C30H52O26",
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:143181"
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "avenacin_a_2",
+      "name": "avenacin A-2",
+      "formula": "C54H80O21",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1368264"
+      }
+    },
+    {
+      "id": "des_acyl_avenacin_a",
+      "name": "des-acyl avenacin A",
+      "formula": "C47H76O20",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM146544"
+      }
+    },
+    {
+      "id": "benzoyl_d_glucoside",
+      "name": "benzoyl-β-D-glucoside",
+      "short": "benzoyl-β-D-glucosi…",
+      "formula": "C13H16O7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:141410"
       }
     }
   ],
@@ -137,28 +163,10 @@
       "name": "4-alpha-glucanotransferase",
       "ec": [
         "2.4.1.25"
-      ]
-    },
-    {
-      "id": "ec_2_4_1_8",
-      "name": "maltose phosphorylase",
-      "ec": [
-        "2.4.1.8"
-      ]
-    },
-    {
-      "id": "ec_3_2_1_20",
-      "name": "alpha-glucosidase",
-      "ec": [
-        "3.2.1.20"
-      ]
-    },
-    {
-      "id": "ec_4_2_1_131",
-      "name": "carotenoid 1,2-hydratase",
-      "ec": [
-        "4.2.1.131"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P35573"
+      }
     }
   ],
   "reactions": [
@@ -282,88 +290,254 @@
     },
     {
       "id": "r4",
-      "name": "4-alpha-glucanotransferase",
-      "ec": "2.4.1.25",
+      "name": "Reaction MNXR196816",
       "substrates": [
         {
-          "metabolite": "d_glcp_1_4_d_glcp_1_4_d_glcp",
+          "metabolite": "glucose",
           "stoichiometry": 1
         },
         {
-          "metabolite": "d_maltose",
+          "metabolite": "ginsenoside_mx",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp",
+          "metabolite": "ginsenoside_c_mx1",
           "stoichiometry": 1
         },
         {
-          "metabolite": "glucose",
+          "metabolite": "h2o",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_4_1_25"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "metanetx": "MNXR183627"
+        "metanetx": "MNXR196816"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR183627"
+            "id": "MNXR196816"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "4-alpha-glucanotransferase",
-      "ec": "2.4.1.25",
+      "name": "Reaction MNXR196873",
       "substrates": [
         {
-          "metabolite": "d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g",
+          "metabolite": "glucose",
           "stoichiometry": 1
         },
         {
-          "metabolite": "glucose",
+          "metabolite": "avenacin_a_2",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp",
+          "metabolite": "des_acyl_avenacin_a",
           "stoichiometry": 1
         },
         {
-          "metabolite": "d_maltose",
+          "metabolite": "benzoyl_d_glucoside",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_4_1_25"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR185422"
+        "metanetx": "MNXR196873"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR185422"
+            "id": "MNXR196873"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_ginsenoside_mx_2-dehydro-d-glucose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ginsenoside_mx"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-dehydro-d-glucose-to-h2o"
+      },
+      "note": "Shares ginsenoside Mx with 2-Dehydro-D-glucose to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368235"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ginsenoside_c_mx1_2-dehydro-d-glucose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ginsenoside_c_mx1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-dehydro-d-glucose-to-h2o"
+      },
+      "note": "Shares ginsenoside C-Mx1 with 2-Dehydro-D-glucose to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM148259"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ginsenoside_c_mx1_z-glucosinolate-to-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ginsenoside_c_mx1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "z-glucosinolate-to-acetate"
+      },
+      "note": "Shares ginsenoside C-Mx1 with (Z)-glucosinolate to acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM148259"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_des_acyl_avenacin_a_4-hydroxy-4-methylnitros-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "des_acyl_avenacin_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxy-4-methylnitros-to-h2o"
+      },
+      "note": "Shares des-acyl avenacin A with 4-Hydroxy-4-(methylnitros… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM146544"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_des_acyl_avenacin_a_cyanidin-3-o-6-o-p-coum-to-e-5-hydroxyconiferyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "des_acyl_avenacin_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cyanidin-3-o-6-o-p-coum-to-e-5-hydroxyconiferyl"
+      },
+      "note": "Shares des-acyl avenacin A with cyanidin 3-O-[6-O-(p-coum… to (E)-5-hydroxyconiferyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM146544"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_des_acyl_avenacin_a_maltoheptaose-to-d-glucopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "des_acyl_avenacin_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "maltoheptaose-to-d-glucopyranose"
+      },
+      "note": "Shares des-acyl avenacin A with maltoheptaose to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM146544"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_benzoyl_d_glucoside_cis-beta-d-glucosyl-2-hyd-to-3-6-7-4-tetramethyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "benzoyl_d_glucoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cis-beta-d-glucosyl-2-hyd-to-3-6-7-4-tetramethyl"
+      },
+      "note": "Shares benzoyl-β-D-glucoside with cis-beta-D-glucosyl-2-hyd… to 3,6,7,4'-tetramethylquerc….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:141410"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_benzoyl_d_glucoside_maltoheptaose-to-d-glucopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "benzoyl_d_glucoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "maltoheptaose-to-d-glucopyranose"
+      },
+      "note": "Shares benzoyl-β-D-glucoside with maltoheptaose to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:141410"
           }
         ]
       }

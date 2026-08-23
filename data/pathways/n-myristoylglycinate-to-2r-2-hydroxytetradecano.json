@@ -1,0 +1,335 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n-myristoylglycinate-to-2r-2-hydroxytetradecano",
+  "name": "N-myristoylglycinate to (2R)-2-hydroxytetradecano…",
+  "category": "redox-detox",
+  "summary": "A 4-step route from N-myristoylglycinate to (2R)-2-hydroxytetradecanoate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:58544"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:86500"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n_myristoylglycinate",
+      "name": "N-myristoylglycinate",
+      "formula": "C16H30NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:86500"
+      }
+    },
+    {
+      "id": "ascorbate",
+      "name": "L-Ascorbate (vitamin C)",
+      "short": "L-Ascorbate…",
+      "formula": "C6H7O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:38290"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "n_tetradecanoyl_2s_hydroxyglycinate",
+      "name": "N-tetradecanoyl-(2S)-hydroxyglycinate",
+      "short": "N-tetradecanoyl-(2S…",
+      "formula": "C16H30NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:142694"
+      }
+    },
+    {
+      "id": "mdha",
+      "name": "Monodehydroascorbate (ascorbate radical)",
+      "short": "Monodehydroascorbat…",
+      "formula": "C6H6O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:59513"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "myristamide",
+      "name": "myristamide",
+      "formula": "C14H29NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:137125"
+      }
+    },
+    {
+      "id": "glyoxylate",
+      "name": "Glyoxylate",
+      "formula": "C2HO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36655"
+      }
+    },
+    {
+      "id": "tetradecanoate",
+      "name": "tetradecanoate",
+      "formula": "C14H27O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30807"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "2r_2_hydroxytetradecanoate",
+      "name": "(2R)-2-hydroxytetradecanoate",
+      "short": "2-hydroxytetradecan…",
+      "formula": "C14H27O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:85636"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_11_2_4",
+      "name": "fatty-acid peroxygenase",
+      "ec": [
+        "1.11.2.4"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "N-tetradecanoylglycine + 2 L-ascorbate + O2 = N-tetradecanoyl-(2S)-hydroxyglycine + 2 m...",
+      "equation": "N-tetradecanoylglycine + 2 L-ascorbate + O2 = N-tetradecanoyl-(2S)-hydroxyglycine + 2 monodehydro-L-ascorbate radical + H2O",
+      "substrates": [
+        {
+          "metabolite": "n_myristoylglycinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ascorbate",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_tetradecanoyl_2s_hydroxyglycinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "mdha",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:58544"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58544"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N-tetradecanoyl-(2S)-hydroxyglycine = tetradecamide + glyoxylate",
+      "equation": "N-tetradecanoyl-(2S)-hydroxyglycine = tetradecamide + glyoxylate",
+      "substrates": [
+        {
+          "metabolite": "n_tetradecanoyl_2s_hydroxyglycinate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "myristamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glyoxylate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:58632"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58632"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "tetradecamide + H2O = tetradecanoate + NH4(+)",
+      "equation": "tetradecamide + H2O = tetradecanoate + NH4(+)",
+      "substrates": [
+        {
+          "metabolite": "myristamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "tetradecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:62992"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62992"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "fatty-acid peroxygenase",
+      "equation": "tetradecanoate + H2O2 = (2R)-hydroxytetradecanoate + H2O",
+      "ec": "1.11.2.4",
+      "substrates": [
+        {
+          "metabolite": "tetradecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2r_2_hydroxytetradecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_11_2_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:46028"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46028"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_n_myristoylglycinate_l-allothreonine-to-acetaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_myristoylglycinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-allothreonine-to-acetaldehyde"
+      },
+      "note": "Shares N-myristoylglycinate with L-allothreonine to acetaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:86500"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-hydroxyethylphosphonic-to-hydrogen-donor "2-hydroxyethylphosphonic… to hydrogen donor" {
-  spacing 228
+  spacing 216
 
   spine at 0,0 {
     2_hydroxyethylphosphonic_acid
@@ -14,17 +14,5 @@ pathway 2-hydroxyethylphosphonic-to-hydrogen-donor "2-hydroxyethylphosphonic… 
     formate
     <-> ec_1_17_98_4 [1.17.98.4] +hydrogen_acceptor +hplus -co2
     hydrogen_donor
-  }
-
-  branch from hydrogen_donor side left {
-    hydrogen_donor
-    <-> . +8_s_15_s_dihpete +hydrogen_acceptor +h2o
-    8_s_15_s_dihete
-  }
-
-  branch from hydrogen_donor side right {
-    hydrogen_donor
-    <-> . +malonyl-coa +acetyl_coa +sam +hplus +hydrogen_acceptor +sah +co2 +coa +h2o
-    dehydroprobetaenone_i
   }
 }

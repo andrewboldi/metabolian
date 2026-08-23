@@ -15,40 +15,4 @@ pathway isopentenyl-diphosphate-to-h2o "isopentenyl diphosphate to H2O" {
     <-> . +h +o2 +nadph -alpha_santal_10_en_12_ol -h2o
     nadp
   }
-
-  branch from ppi side left {
-    ppi
-    <-> . +harmol +dmapp
-    6_3_dimethylallyl_harmol
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +3s_3_1h_indol_3_ylmethyl_3h_1_4_benzodiazepine +dmapp
-    2r_3s_11s_aszonalenin
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +h +nadph +24_methylcholesta_5_24_dien_3_ol
-    24_epicampesterol
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_2_1_13 [1.2.1.13] +glyceric_acid_1_3_biphosphate +nadph +h +phosphate
-    d_glyceraldehyde_3_phosphate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +gentamicin_x2_cation +phosphate +gentamicin_x2_cation
-    atp
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    antibiotic_ji_20a
-  }
 }

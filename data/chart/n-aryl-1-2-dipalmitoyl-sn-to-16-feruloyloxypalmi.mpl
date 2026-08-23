@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-aryl-1-2-dipalmitoyl-sn-to-16-feruloyloxypalmi "N-aryl-1,2-dipalmitoyl-sn… to 16-feruloyloxypalmitate" {
-  spacing 280
+  spacing 286
 
   spine at 0,0 {
     n_aryl_1_2_dipalmitoyl_sn_glycero_3_phosphoethan
@@ -16,39 +16,9 @@ pathway n-aryl-1-2-dipalmitoyl-sn-to-16-feruloyloxypalmi "N-aryl-1,2-dipalmitoyl
     16_feruloyloxypalmitate
   }
 
-  branch from palmitate side left {
-    palmitate
-    <-> . +1_o_palmitoyl_2_o_5_oxovaleryl_sn_glycero_3_phos +h2o +hplus
-    2_5_oxovaleroyl_sn_glycero_3_phosphocholine
-  }
 
-  branch from palmitate side right {
-    palmitate
-    <-> . +1_hexadecanoyl_2_9_oxononanoyl_sn_glycero_3_phos +h2o +hplus
-    2_9_oxononanoyl_sn_glycero_3_phosphocholine
-  }
 
-  branch from 16_hydroxyhexadecanoate side left {
-    16_hydroxyhexadecanoate
-    <-> . +udp_d_glucose +udp +hplus
-    16_d_glucopyranosyloxy_hexadecanoate
-  }
 
-  branch from 16_hydroxyhexadecanoate side right {
-    16_hydroxyhexadecanoate
-    <-> . +nad +nadh +hplus
-    16_oxohexadecanoate
-  }
 
-  branch from fmn side left {
-    fmn
-    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +fmnh2 +o2 +h2o +hplus
-    4z_7z_10z_13z_19z_16_17_epoxydocosapentaenoate
-  }
 
-  branch from fmn side right {
-    fmn
-    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +fmnh2 +o2 +h2o +hplus
-    4z_7z_10z_16z_19z_13_14_epoxydocosapentaenoate
-  }
 }

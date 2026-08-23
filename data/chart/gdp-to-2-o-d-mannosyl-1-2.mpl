@@ -15,22 +15,4 @@ pathway gdp-to-2-o-d-mannosyl-1-2 "GDP to 2-O-(β-D-mannosyl-(1→2)-β…" {
     <-> ec_2_4_1_361 [2.4.1.361] +gdp_d_mannose -gdp -hplus
     2_o_d_mannosyl_1_2_d_mannosyl_bis_myo_inositol_1
   }
-
-  branch from gdp_alpha_d_mannose side left {
-    gdp_alpha_d_mannose
-    <-> . +gdp +beta_d_man_1_2_alpha_d_man_1_2_alpha_d_man_1_3_a +h
-    d_mannosyl_1_3_d_mannosyl_1_3_d_mannosyl_1_3_n
-  }
-
-  branch from gdp_alpha_d_mannose side right {
-    gdp_alpha_d_mannose
-    <-> . +gdp +p_gingivalis_capped_core_i_lipid_a_penta_acylate +h
-    p_gingivalis_uncapped_core_i_lipid_a_penta_acyla
-  }
-
-  branch from bis_myo_inositol_1_3_phosphate side left {
-    bis_myo_inositol_1_3_phosphate
-    <-> . +gdp_d_mannose +gdp +hplus
-    2_o_d_mannosyl_bis_myo_inositol_1_3_phosphate
-  }
 }

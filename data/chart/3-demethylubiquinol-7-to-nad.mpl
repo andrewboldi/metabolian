@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-demethylubiquinol-7-to-nad "3-demethylubiquinol-7 to NAD" {
-  spacing 282
+  spacing 228
 
   spine at 0,0 {
     3_demethylubiquinol_7
@@ -14,59 +14,5 @@ pathway 3-demethylubiquinol-7-to-nad "3-demethylubiquinol-7 to NAD" {
     ubiquinone_7
     <-> ec_1_6_5_2 [1.6.5.2] +nadh +h -nad
     ubiquinol_7
-  }
-
-  branch from ubiquinol_7 side left {
-    ubiquinol_7
-    <-> ec_1_1_5_2 [1.1.5.2] +d_glucono_1_5_lactone +ubiquinone_7
-    beta_d_glucose
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +kaempferol_oxoanion +sam +hplus
-    kaempferol_3_olate_7_methyl_ether
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +4_8_dihydroxyflavone_7_olate +sam
-    4_8_dihydroxy_7_methoxyflavone
-  }
-
-  branch from h side right {
-    h
-    <-> . +alpha_d_glucosamine_6_phosphate +beta_d_glucosamine +h2o
-    beta_d_glucosaminyl_1_4_beta_d_glucosamine_6_pho
-  }
-
-  branch from h side left {
-    h
-    <-> . +2z_4e_5_amino_2_formylhexa_2_4_dienedioate +h2o
-    isocinchomeronic_acid
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> . +acetyl_coa +malonyl_coa +h +co2 +nadp +coa +h2o
-    7_methylmellein
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> . +cdp_4_dehydro_6_deoxy_alpha_d_gulose +h +nadp
-    cdp_6_deoxy_alpha_d_gulose
-  }
-
-  branch from nad side right {
-    nad
-    <-> . +nadh +3alpha_7alpha_dihydroxy_5beta_cholestan_26_oic_a +h +h2o
-    25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_121 [1.1.1.121] +nadh +h +d_galactono_1_5_lactone
-    alpha_d_galactose
   }
 }

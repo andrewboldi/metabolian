@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway atrazine-to-2-deoxy-d-ribose "atrazine to 2-deoxy-D-ribose…" {
-  spacing 226
+  spacing 292
 
   spine at 0,0 {
     atrazine
@@ -18,14 +18,14 @@ pathway atrazine-to-2-deoxy-d-ribose "atrazine to 2-deoxy-D-ribose…" {
 
   branch from acetaldehyde side left {
     acetaldehyde
-    <-> . +h +diethylamine_n_oxide
-    ethylamine
+    <-> ec_1_1_5_5 [1.1.5.5] +ubiquinol_9 +ubiquinone_9
+    ethanol
   }
 
   branch from acetaldehyde side right {
     acetaldehyde
-    <-> ec_1_2_3_1 [1.2.3.1] +h +acetate +h2o2 +o2
-    h2o
+    <-> ec_1_1_5_5 [1.1.5.5] +ethanol +ubiquinone_10
+    ubiquinol_10
   }
 
   branch from 2_deoxy_alpha_d_ribopyranose side left {
@@ -36,25 +36,91 @@ pathway atrazine-to-2-deoxy-d-ribose "atrazine to 2-deoxy-D-ribose…" {
 
   branch from 2_deoxy_alpha_d_ribopyranose side right {
     2_deoxy_alpha_d_ribopyranose
-    <-> . +h +2_deoxy_d_ribose_5_phosphate +h2o
-    phosphate
+    <-> . +h +phosphate +2_deoxy_d_ribose_5_phosphate
+    h2o
   }
 
   branch from adp side left {
     adp
-    <-> ec_2_7_1_172 [2.7.1.172] +h +n6_3_o_phospho_d_ribulosyl_l_lysinium +atp
-    n6_d_ribulosyl_l_lysinium
+    <-> . +h +phosphate +atp +h2o
+    d_ribopyranose
   }
 
   branch from adp side right {
     adp
-    <-> . +4_aminobenzoyl_coa +phosphate +atp +coa
-    4_aminobenzoate
+    <-> ec_6_3_2_7 [6.3.2.7] +l_lysine +h +atp +udp_n_acetyl_alpha_d_muramoyl_l_alanyl_d_glutama +phosphate
+    udp_n_acetylmuramoyl_l_alanyl_alpha_d_glutamyl_l
   }
 
-  branch from 2_deoxy_d_ribose_5_phosphate side left {
-    2_deoxy_d_ribose_5_phosphate
-    <-> ec_2_7_1_106 [2.7.1.106] +2_deoxy_d_ribose_1_5_bisphosphate +h +2r_3_phosphoglycerate
-    glyceric_acid_1_3_biphosphate
+  branch from o2 side left {
+    o2
+    <-> ec_1_14_13_208 [1.14.13.208] +benzoyl_coa +h +nadph +2_3_dihydroxy_2_3_dihydrobenzoyl_coa
+    nadp
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_14_14_25 [1.14.14.25] +24s_24_hydroxycholesterol +h +nadph +nadp +h2o
+    dihydroxycholesterol
+  }
+
+  branch from acetaldehyde side left {
+    acetaldehyde
+    <-> . +h2o
+    1_1_ethanediol
+  }
+
+  branch from acetaldehyde side right {
+    acetaldehyde
+    <-> ec_2_3_1_190 [2.3.1.190] +nadh +acetyl_coa +h +coa +nad
+    r_acetoin
+  }
+
+  branch from d_glyceraldehyde side left {
+    d_glyceraldehyde
+    <-> . +glyceraldehyde_3_phosphate +h2o +h
+    phosphate
+  }
+
+  branch from d_glyceraldehyde side right {
+    d_glyceraldehyde
+    <-> . +d_tagatofuranose_6_phosphate
+    dihydroxyacetone_phosphate
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_2_1_1 [3.2.1.1] +maltoheptaose +4_nitrophenol +h2o
+    p_nitrophenylmaltoheptaoside
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_1_1_3 [3.1.1.3] +2_methylpropanoate +4_nitro_3_trifluoromethyl_phenylamine +h2o
+    flutamide
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_2_7_3_10 [2.7.3.10] +h +adp +phosphoagmatine
+    agmatine
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_6_4_1_5 [6.4.1.5] +hydrogencarbonate +geranoyl_coa +h +adp +phosphate
+    3_4_methylpent_3_en_1_yl_pent_2_enedioyl_coa
+  }
+
+  branch from adp side left {
+    adp
+    <-> ec_2_7_1_119 [2.7.1.119] +h +atp +hygromycin_b
+    7_o_phosphohygromycin
+  }
+
+  branch from adp side right {
+    adp
+    <-> ec_2_7_1_119 [2.7.1.119] +h +7_o_phosphohygromycin +atp
+    hygromycin_b
   }
 }

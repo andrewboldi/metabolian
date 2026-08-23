@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway coproporphyrinogen-iii-to-ammonium "coproporphyrinogen III to ammonium" {
-  spacing 204
+  spacing 168
 
   spine at 0,0 {
     coproporphyrinogen3
@@ -18,41 +18,5 @@ pathway coproporphyrinogen-iii-to-ammonium "coproporphyrinogen III to ammonium" 
     iminoaspartate
     <-> . +h2o -nh3
     oxaloacetate
-  }
-
-  branch from nh4 side left {
-    nh4
-    <-> . +indolmycin_b +h
-    2r_4e_2_amino_5_2s_3r_2_hydroxy_3_1h_indol_3_yl
-  }
-
-  branch from nh4 side right {
-    nh4
-    <-> ec_4_4_1_13 [4.4.1.13] +4_mercapto_4_methyl_2_pentanol +pyruvate +h2o
-    s_4_hydroxy_2_methylpentan_2_yl_l_cysteine
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    arbekacin
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    6_hydroxyneomycin_c
-  }
-
-  branch from oxaloacetate side left {
-    oxaloacetate
-    <-> . +propionyl_coa +h2o +coa +hplus
-    2_methylcitrate
-  }
-
-  branch from oxaloacetate side right {
-    oxaloacetate
-    <-> ec_4_1_1_32 [4.1.1.32] +itp +phosphonatoenolpyruvate +co2
-    idp
   }
 }

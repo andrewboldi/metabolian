@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-decanoyl-sn-glycero-3-p-to-formaldehyde "1-decanoyl-sn-glycero-3-p… to formaldehyde" {
-  spacing 220
+  spacing 184
 
   spine at 0,0 {
     1_decanoyl_sn_glycero_3_phosphocholine
@@ -18,41 +18,5 @@ pathway 1-decanoyl-sn-glycero-3-p-to-formaldehyde "1-decanoyl-sn-glycero-3-p… 
     trimethylammonium
     <-> ec_1_5_8_2 [1.5.8.2] +fad +h2o +hplus -fadh2 -formaldehyde
     dimethylaminium
-  }
-
-  branch from choline side left {
-    choline
-    <-> . +1_hexadecanoyl_sn_glycero_3_phosphocholine
-    1_palmitoyl_sn_glycero_2_3_cyclic_phosphate
-  }
-
-  branch from choline side right {
-    choline
-    <-> . +1_o_acyl_sn_glycero_3_phosphocholine
-    1_acyl_sn_glycero_2_3_cyclic_phosphate
-  }
-
-  branch from glyoxylate side left {
-    glyoxylate
-    <-> . +glyphosate +o2 +h2o +h2o2 +hplus
-    aminomethyl_phosphonate
-  }
-
-  branch from glyoxylate side right {
-    glyoxylate
-    <-> . +5_methyl_dcmp_1 +ascorbate +o2 +co2
-    8s_9s_5_glyceryldeoxycytidine_5_monophosphate_1
-  }
-
-  branch from formaldehyde side left {
-    formaldehyde
-    <-> . +s_nicotinium +fmnh2 +o2 +fmn +h2o +hplus
-    s_nornicotine
-  }
-
-  branch from formaldehyde side right {
-    formaldehyde
-    <-> . +s_scoulerine +akg +o2 +succinate +co2
-    s_3_o_demethylscoulerine
   }
 }

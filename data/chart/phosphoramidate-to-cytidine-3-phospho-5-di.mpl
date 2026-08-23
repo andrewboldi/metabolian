@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway phosphoramidate-to-cytidine-3-phospho-5-di "phosphoramidate to cytidine 3'-phospho-5'-di…" {
-  spacing 334
+  spacing 292
 
   spine at 0,0 {
     phosphoramidate
@@ -16,47 +16,5 @@ pathway phosphoramidate-to-cytidine-3-phospho-5-di "phosphoramidate to cytidine 
     cytidine_5_diphosphoramidate
     <-> ec_2_7_1_224 [2.7.1.224] +atp -adp -hplus
     cytidine_3_phospho_5_diphosphoramidate
-  }
-
-  branch from n5_phospho_l_glutamine side left {
-    n5_phospho_l_glutamine
-    <-> ec_2_7_3_13 [2.7.3.13] +atp +h2o +amp +pi +hplus
-    glutamine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +cholesterol +7z_10z_13z_16z_19z_docosapentaenoate
-    cholesteryl_7z_10z_13z_16z_19z_docosapentaenoate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_1_1_13 [3.1.1.13] +cholesteryl_4z_7z_10z_13z_16z_19z_docosahexaenoa +h +cholesterol
-    4z_7z_10z_13z_16z_19z_docosahexaenoate
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +2_methylvalerate +atp +coa +amp
-    2_methylpentanoyl_coa
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +2s_4s_4_hydroxy_4_methylglutamate +malonyl-coa +sam +atp +nadph +hplus +amp +sah +co2 +nadp +coa +h2o
-    5s_5_2s_2_carboxylato_2_hydroxy_2_methylethyl_2
-  }
-
-  branch from glutamate side right {
-    glutamate
-    <-> . +n6_hydroxy_l_lysine +atp +amp +ppi +hplus
-    1_l_glutamo_2_n6_l_lysinohydrazine
-  }
-
-  branch from glutamate side left {
-    glutamate
-    <-> . +n6_hydroxy_l_lysine +atp +amp +ppi
-    o_glutamyl_n6_hydroxy_l_lysine
   }
 }

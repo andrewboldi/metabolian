@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-o-1-2-saturated-alkyl-to-di-sulfido-diiron "1-O-(1,2-saturated-alkyl)… to di-μ-sulfido-diiron" {
-  spacing 242
+  spacing 278
 
   spine at 0,0 {
     1_o_1_2_saturated_alkyl_sn_glycerol
@@ -24,37 +24,73 @@ pathway 1-o-1-2-saturated-alkyl-to-di-sulfido-diiron "1-O-(1,2-saturated-alkyl)�
 
   branch from glycerol side right {
     glycerol
-    <-> . +1_acyl_sn_glycerol
-    dag
+    <-> . +1_monomyristoylglycerol +h2o +hplus
+    tetradecanoate
   }
 
   branch from glycerol side left {
     glycerol
-    <-> . +2_palmitoylglycerol +h2o +hplus
-    palmitate
-  }
-
-  branch from carboxylic_acid_anion side right {
-    carboxylic_acid_anion
-    <-> . +h2o +coa +hplus
-    acyl_coa
-  }
-
-  branch from carboxylic_acid_anion side left {
-    carboxylic_acid_anion
-    <-> . +n6_acyl_l_lysine +h2o
-    l_lysinium
+    <-> . +1_monolauroylglycerol +h2o +hplus
+    dodecanoate
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_14_19_35 [1.14.19.35] +linoleoyl_containing_glycerolipid +o2 +hplus +di_sulfido_diiron +h2o
-    linolenoyl_containing_glycerolipid
+    <-> . +o_s_decanoylpantetheine_4_phosphoryl_serine_1 +o2 +hplus +di_sulfido_diiron +h2o
+    o_s_dec_9_enoylpantetheine_4_phosphoryl_serine_1
   }
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_14_19_35 [1.14.19.35] +7z_10z_hexadecadienoyl_containing_glycerolipid +o2 +hplus +di_sulfido_diiron +h2o
-    7z_10z_13z_hexadecatrienoyl_containing_glycerol
+    <-> . +o_s_dec_9_enoylpantetheine_4_phosphoryl_serine_1 +o2 +hplus +di_sulfido_diiron +h2o
+    o_s_dec_9_ynoylpantetheine_4_phosphoryl_serine_1
+  }
+
+  branch from sapropterin side right {
+    sapropterin
+    <-> ec_1_14_16_7 [1.14.16.7] +l_phenylalanine +o2 +4a_hydroxy_l_erythro_5_6_7_8_tetrahydrobiopterin
+    l_m_tyrosine
+  }
+
+  branch from sapropterin side left {
+    sapropterin
+    <-> . +nadp +nadph +hplus
+    6r_6_lactoyl_5_6_7_8_tetrahydropterin
+  }
+
+  branch from glycerol side right {
+    glycerol
+    <-> . +1_arachidonoylglycerol +h2o +hplus
+    arachidonate
+  }
+
+  branch from glycerol side left {
+    glycerol
+    <-> . +prostaglandin_d2_1_glyceryl_ester +h2o +hplus
+    prostaglandin_d2
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> . +1_acyl_2_linoleoyl_3_d_galactosyl_1_6_d_galactos +di_sulfido_diiron +o2 +hplus +h2o
+    1_acyl_2_linolenoyl_3_d_galactosyl_1_6_d_galacto
+  }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> . +1_linoleoyl_2_acyl_3_d_galactosyl_1_6_d_galactos +di_sulfido_diiron +o2 +hplus +h2o
+    1_linolenoyl_2_acyl_3_d_galactosyl_1_6_d_galacto
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> . +1_linoleoyl_2_acyl_3_d_galactosyl_sn_glycerol +o2 +hplus +di_sulfido_diiron +h2o
+    1_linolenoyl_2_acyl_3_d_galactosyl_sn_glycerol
+  }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> . +cortisol +o2 +hplus +di_sulfido_diiron +h2o
+    18_hydroxycortisol
   }
 }

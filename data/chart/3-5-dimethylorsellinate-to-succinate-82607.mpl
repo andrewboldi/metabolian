@@ -38,9 +38,9 @@ pathway 3-5-dimethylorsellinate-to-succinate-82607 "3,5-dimethylorsellinate to s
     anditomin
   }
 
-  branch from andilesin_c side left {
-    andilesin_c
-    <-> . +anditomin +co2 +succinate +h2o +o2
-    2_oxoglutarate
+  branch from ascorbate side left {
+    ascorbate
+    <-> ec_7_2_1_3 [7.2.1.3] +iron +fe2 +hplus
+    mdha
   }
 }

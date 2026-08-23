@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-galactosyl-1-6-glucosy "UDP to galactosyl-(1->6)-glucosy…" {
-  spacing 276
+  spacing 264
 
   spine at 0,0 {
     udp
@@ -14,17 +14,5 @@ pathway udp-to-galactosyl-1-6-glucosy "UDP to galactosyl-(1->6)-glucosy…" {
     udp_alpha_d_galactose
     <-> ec_2_4_1_44 [2.4.1.44] +udp +galactosyl_1_3_galactosyl_1_6_glucosyl_1_3_hepto +h -udp_alpha_d_galactose
     galactosyl_1_6_glucosyl_1_3_heptosyl_3_kdo2_lipi
-  }
-
-  branch from udp_alpha_d_galactose side left {
-    udp_alpha_d_galactose
-    <-> ec_2_4_1_38 [2.4.1.38] +udp +beta_d_gal_1_4_beta_d_glcnac_1_3_beta_d_gal_1_4 +h
-    beta_d_glcnac_1_3_beta_d_gal_1_4_alpha_l_fuc_1_3
-  }
-
-  branch from udp_alpha_d_galactose side right {
-    udp_alpha_d_galactose
-    <-> . +udp +keratan_sulfate_ii_biosynthesis_precursor_10 +h
-    keratan_sulfate_ii_biosynthesis_precursor_9
   }
 }

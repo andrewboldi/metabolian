@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 6s-5-formyltetrahydrofo-to-d-glucopyranose "(6S)-5-formyltetrahydrofo… to D-glucopyranose" {
-  spacing 240
+  spacing 228
 
   spine at 0,0 {
     6s_5_formyltetrahydrofolate
@@ -18,17 +18,5 @@ pathway 6s-5-formyltetrahydrofo-to-d-glucopyranose "(6S)-5-formyltetrahydrofo…
     1_o_galloyl_d_glucose
     <-> ec_2_3_1_90 [2.3.1.90] -glucose
     1_6_bis_o_galloyl_d_glucose
-  }
-
-  branch from glucose side left {
-    glucose
-    <-> ec_3_2_1_20 [3.2.1.20] +h2o
-    nigerose
-  }
-
-  branch from glucose side right {
-    glucose
-    <-> ec_3_2_1_21 [3.2.1.21] +cellobiosan +h2o
-    levoglucosan
   }
 }

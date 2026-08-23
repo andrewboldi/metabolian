@@ -20,37 +20,109 @@ pathway 24-methylidenelophenol-to-episterol-ester "24-methylidenelophenol to epi
 
   branch from nadh side left {
     nadh
-    <-> . +acetyl_coa +h +coa +nad
-    oxirane
+    <-> . +5_chloro_2_hydroxy_p_benzoquinone +h +nad
+    5_chloro_1_2_4_trihydroxybenzene
   }
 
   branch from nadh side right {
     nadh
-    <-> ec_1_3_1_19 [1.3.1.19] +h +3_vinylcatechol +nad
-    cis_3_ethenylcyclohexa_3_5_diene_1_2_diol
+    <-> . +3_oxoribostamycin +h +nad
+    ribostamycin
   }
 
   branch from co2 side left {
     co2
-    <-> . +5_aminoimidazole_4_carboxylic_acid +nh4 +h +h2o
-    5_ureidoimidazole_4_carboxylic_acid
+    <-> . +phenanthrene_4_carboxylate
+    phenanthrene_4_5_dicarboxylate
   }
 
   branch from co2 side right {
     co2
-    <-> . +3_imidazol_5_yl_pyruvate +h
-    imidazole_4_acetaldehyde
+    <-> . +4_chrysenecarboxylate
+    4_5_chrysenedicarboxylate
   }
 
   branch from nadp side left {
     nadp
-    <-> . +h +o2 +nadph +toluene +h2o
-    3_methylphenol
+    <-> . +3_deoxo_4b_deoxypaxilline +h +o2 +nadph +h2o
+    beta_pc_m6
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_13_7 [1.14.13.7] +3_methylcatechol +h2o +h +3_methylphenol +nadph
-    o2
+    <-> ec_1_1_1_213 [1.1.1.213] +h +3_oxosteroid +nadph
+    3alpha_hydroxysteroid
+  }
+
+  branch from nad side left {
+    nad
+    <-> . +nadh +benzenesulfonic_acid +o2 +h +catechol
+    sulfite
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_2_1_3 [1.2.1.3] +4_formylbenzoate +h2o +nadh +h
+    terephthalate
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> . +s_oxalatosuccinate +h +nad
+    d_threo_isocitrate
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +4_4a_dihydroxy_dihydro_dibenzo_p_dioxin +nad +h +o2
+    dibenzo_p_dioxin
+  }
+
+  branch from co2 side left {
+    co2
+    <-> . +4_5_chrysenedicarboxylate
+    5_chrysenecarboxylate
+  }
+
+  branch from co2 side right {
+    co2
+    <-> . +2_oxoglutarate +oa_6129_a +o2 +oa_6129_b2
+    succinate
+  }
+
+  branch from h side left {
+    h
+    <-> . +r_mandelonitrile +nadp +h2o +o2 +nadph
+    z_phenylacetaldehyde_oxime
+  }
+
+  branch from h side right {
+    h
+    <-> ec_1_14_14_45 [1.14.14.45] +e_phenylacetaldehyde_oxime +o2 +l_cysteine +nadph +nadp +h2o
+    s_phenylacetothiohydroximoyl_l_cysteine
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_14_14_45 [1.14.14.45] +h +e_4_hydroxyphenylacetaldehyde_oxime +o2 +l_cysteine +nadp +h2o
+    s_hydroxyphenylacetothiohydroximoyl_l_cysteine
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +h +mycinamicin_viii +o2 +nadp +h2o
+    mycinamicin_vii
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +mycinamicin_iv +o2 +nadph +h2o
+    mycinamicin_v
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +nocardicin_a +h2o +o2 +nadph
+    nocardicin_c_dizwitterion
   }
 }

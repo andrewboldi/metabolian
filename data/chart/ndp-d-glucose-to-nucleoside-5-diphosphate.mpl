@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway ndp-d-glucose-to-nucleoside-5-diphosphate "NDP-α-D-glucose to nucleoside 5'-diphosphate" {
-  spacing 258
+  spacing 282
 
   spine at 0,0 {
     ndp_d_glucose
@@ -36,13 +36,37 @@ pathway ndp-d-glucose-to-nucleoside-5-diphosphate "NDP-α-D-glucose to nucleosid
 
   branch from sucrose side right {
     sucrose
-    <-> ec_2_4_1_7 [2.4.1.7] +pi +d_fructofuranose
-    g1p
+    <-> ec_2_4_1_n2 [2.4.1.n2] +udp_d_galactose +udp +hplus
+    loliose
   }
 
   branch from nucleoside_5_triphoshate side left {
     nucleoside_5_triphoshate
     <-> ec_3_6_1_5 [3.6.1.5] +h2o +pi +hplus
     nucleoside_5_monophosphate
+  }
+
+  branch from d_fructofuranose side right {
+    d_fructofuranose
+    <-> ec_1_1_1_67 [1.1.1.67] +nad +nadh +hplus
+    d_mannitol
+  }
+
+  branch from d_fructofuranose side left {
+    d_fructofuranose
+    <-> ec_1_1_1_124 [1.1.1.124] +nadp +nadph +hplus
+    5_dehydro_d_fructose
+  }
+
+  branch from sucrose side right {
+    sucrose
+    <-> ec_5_4_99_11 [5.4.99.11]
+    trehalulose
+  }
+
+  branch from sucrose side left {
+    sucrose
+    <-> . +d_glucose
+    6_kestotriose
   }
 }

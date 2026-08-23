@@ -164,6 +164,35 @@
       "xrefs": {
         "chebi": "CHEBI:58223"
       }
+    },
+    {
+      "id": "prunetin_5_olate",
+      "name": "prunetin-5-olate",
+      "formula": "C16H11O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:147403"
+      }
+    },
+    {
+      "id": "prunetin_4_o_d_glucuronide",
+      "name": "prunetin-4'-O-β-D-glucuronide",
+      "short": "prunetin-4'-O-β-D-g…",
+      "formula": "C22H19O11",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:147404"
+      }
+    },
+    {
+      "id": "prunetin_5_o_d_glucuronide",
+      "name": "prunetin-5-O-β-D-glucuronide",
+      "short": "prunetin-5-O-β-D-gl…",
+      "formula": "C22H19O11",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:147405"
+      }
     }
   ],
   "enzymes": [
@@ -172,14 +201,20 @@
       "name": "all-trans-retinol dehydrogenase (NAD(+))",
       "ec": [
         "1.1.1.105"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P00325"
+      }
     },
     {
       "id": "ec_1_2_1_36",
       "name": "retinal dehydrogenase",
       "ec": [
         "1.2.1.36"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P00352"
+      }
     }
   ],
   "reactions": [
@@ -418,6 +453,350 @@
           {
             "db": "Rhea",
             "id": "RHEA:55776"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "prunetin + UDP-alpha-D-glucuronate = prunetin-4'-O-beta-D-glucuronide + UDP",
+      "equation": "prunetin + UDP-alpha-D-glucuronate = prunetin-4'-O-beta-D-glucuronide + UDP",
+      "substrates": [
+        {
+          "metabolite": "prunetin_5_olate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucuronate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "prunetin_4_o_d_glucuronide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:63588"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63588"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "prunetin + UDP-alpha-D-glucuronate = prunetin-5-O-beta-D-glucuronide + UDP",
+      "equation": "prunetin + UDP-alpha-D-glucuronate = prunetin-5-O-beta-D-glucuronide + UDP",
+      "substrates": [
+        {
+          "metabolite": "prunetin_5_olate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucuronate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "prunetin_5_o_d_glucuronide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:63612"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63612"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_all_trans_retinyl_palmitate_1-2-diglyceride-to-hexadecanoate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinyl_palmitate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-diglyceride-to-hexadecanoate"
+      },
+      "note": "Shares all-trans-retinyl palmitate with 1,2-diglyceride to hexadecanoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17616"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinyl_palmitate_lipid-a-4-e-coli-to-sn-glycerol-3-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinyl_palmitate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "lipid-a-4-e-coli-to-sn-glycerol-3-phosphate"
+      },
+      "note": "Shares all-trans-retinyl palmitate with lipid A(4−) (E. coli) to sn-glycerol 3-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17616"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinyl_palmitate_methyl-group-to-1-hexadecyl-sn-glycero-3",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinyl_palmitate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "methyl-group-to-1-hexadecyl-sn-glycero-3"
+      },
+      "note": "Shares all-trans-retinyl palmitate with methyl group to 1-hexadecyl-sn-glycero-3-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17616"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinal_20s-17-20-dihydroxypreg-to-testolate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "20s-17-20-dihydroxypreg-to-testolate"
+      },
+      "note": "Shares all-trans-retinal with (20S)-17,20-dihydroxypreg… to testolate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17898"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinal_all-trans-retinol-to-1-o-all-trans-retinoyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "all-trans-retinol-to-1-o-all-trans-retinoyl"
+      },
+      "note": "Shares all-trans-retinal with all-trans-retinol to 1-O-(all-trans-retinoyl)-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17898"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinal_carotene-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "carotene-to-fmn"
+      },
+      "note": "Shares all-trans-retinal with β-carotene to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17898"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinal_s-adenosyl-l-homocysteine-to-8-apo-caroten-8-al",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-8-apo-caroten-8-al"
+      },
+      "note": "Shares all-trans-retinal with S-adenosyl-L-homocysteine to 8'-apo-β,ψ-caroten-8'-al.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17898"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinoate_all-trans-retinol-to-1-o-all-trans-retinoyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "all-trans-retinol-to-1-o-all-trans-retinoyl"
+      },
+      "note": "Shares all-trans-retinoate with all-trans-retinol to 1-O-(all-trans-retinoyl)-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:35291"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinoate_carotene-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "carotene-to-fmn"
+      },
+      "note": "Shares all-trans-retinoate with β-carotene to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:35291"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinoate_dammarenediol-ii-to-d-glucopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dammarenediol-ii-to-d-glucopyranose"
+      },
+      "note": "Shares all-trans-retinoate with dammarenediol-II to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:35291"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinoate_epiandrosterone-to-2-hydroxyestrone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "epiandrosterone-to-2-hydroxyestrone"
+      },
+      "note": "Shares all-trans-retinoate with epiandrosterone to 2-hydroxyestrone….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:35291"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_4_hydroxyretinoate_dihydroprecondylocarpine-to-3-epoxy-16-methoxy-2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_4_hydroxyretinoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dihydroprecondylocarpine-to-3-epoxy-16-methoxy-2"
+      },
+      "note": "Shares all-trans-4-hydroxyretinoate with dihydroprecondylocarpine… to 3-epoxy-16-methoxy-2,3-di….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:134178"
           }
         ]
       }

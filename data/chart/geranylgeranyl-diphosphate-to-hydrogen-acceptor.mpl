@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway geranylgeranyl-diphosphate-to-hydrogen-acceptor "geranylgeranyl diphosphate to hydrogen acceptor" {
-  spacing 220
+  spacing 208
 
   spine at 0,0 {
     geranylgeranyl_diphosphate
@@ -14,17 +14,5 @@ pathway geranylgeranyl-diphosphate-to-hydrogen-acceptor "geranylgeranyl diphosph
     cyclooctat_9_en_5_7_diol
     <-> ec_1_14_99_62 [1.14.99.62] +hydrogen_donor +o2 -hydrogen_acceptor -h2o
     cyclooctatin
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_218 [4.2.3.218] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    variediene
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_219 [4.2.3.219] +all_trans_pentaprenyl_diphosphate
-    r_2e_cericerene
   }
 }

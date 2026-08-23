@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-7-dimethyluric-acid-to-formaldehyde "1,7-Dimethyluric acid to formaldehyde" {
-  spacing 224
+  spacing 188
 
   spine at 0,0 {
     1_7_dimethyluric_acid
@@ -16,41 +16,5 @@ pathway 1-7-dimethyluric-acid-to-formaldehyde "1,7-Dimethyluric acid to formalde
     theobromine
     <-> ec_1_14_13_179 [1.14.13.179] +nadh +o2 +hplus -formaldehyde -nad -h2o
     7_methylxanthine
-  }
-
-  branch from o2 side left {
-    o2
-    <-> ec_1_14_18_3 [1.14.18.3] +ubiquinol_10 +methane +methanol +h2o
-    ubiquinone_10
-  }
-
-  branch from o2 side right {
-    o2
-    <-> ec_1_10_3_11 [1.10.3.11] +ubiquinone_10 +h2o
-    ubiquinol_10
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_valine
-    valyl_valine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +4_dephosphorylated_1_petn_kdo_lipid_a +r_3_tetradecanoyloxy_hexadecanoic_acid
-    h_pylori_kdo_lipid_a
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +cytidine_5_monophosphate_1 +sam +hplus
-    n3_methylcytidine_5_monophosphate_1
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +sam +n3_methylcytidine_5_monophosphate_1 +hplus
-    cytidine_5_monophosphate_1
   }
 }

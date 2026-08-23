@@ -1,0 +1,498 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "6-phospho-d-murnac-1-4-to-n-acetyl-d-glucosamine",
+  "name": "6-phospho-β-D-MurNAc-(1→4… to N-acetyl-D-glucosamine…",
+  "category": "other",
+  "summary": "A 3-step route from 6-phospho-β-D-MurNAc-(1→4)-D-GlcNAc(3−) to N-acetyl-D-glucosamine 6-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:66780"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:167477"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "6_phospho_d_murnac_1_4_d_glcnac",
+      "name": "6-phospho-β-D-MurNAc-(1→4)-D-GlcNAc",
+      "short": "6-phospho-β-D-MurNA…",
+      "formula": "C19H30N2O16P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:167477"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "n_acetylmuramate_6_phosphate",
+      "name": "N-acetylmuramate 6-phosphate",
+      "short": "N-acetylmuramate 6-P",
+      "formula": "C11H17NO11P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58722"
+      }
+    },
+    {
+      "id": "n_acetyl_d_glucosamine",
+      "name": "N-acetyl-D-glucosamine",
+      "short": "N-acetyl-D-glucosam…",
+      "formula": "C8H15NO6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:506227"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "n_acetyl_d_glucosamine_1_phosphate",
+      "name": "N-acetyl-α-D-glucosamine 1-phosphate",
+      "short": "N-acetyl-α-D-glucos…",
+      "formula": "C8H14NO9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57776"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "n_acetyl_d_glucosamine_6_phosphate",
+      "name": "N-acetyl-D-glucosamine 6-phosphate",
+      "short": "N-acetyl-D-glucosam…",
+      "formula": "C8H14NO9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57513"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_1_162",
+      "name": "N-acetylhexosamine 1-kinase",
+      "ec": [
+        "2.7.1.162"
+      ]
+    },
+    {
+      "id": "ec_5_4_2_3",
+      "name": "phosphoacetylglucosamine mutase",
+      "ec": [
+        "5.4.2.3"
+      ],
+      "xrefs": {
+        "uniprot": "O95394"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "6-phospho-N-acetyl-beta-D-muramate-(1->4)-N-acetyl-D-glucosamine + H2O = N-acetyl-D-mur...",
+      "equation": "6-phospho-N-acetyl-beta-D-muramate-(1->4)-N-acetyl-D-glucosamine + H2O = N-acetyl-D-muramate 6-phosphate + N-acetyl-D-glucosamine",
+      "substrates": [
+        {
+          "metabolite": "6_phospho_d_murnac_1_4_d_glcnac",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetylmuramate_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_acetyl_d_glucosamine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:66780"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:66780"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N-acetylhexosamine 1-kinase",
+      "equation": "N-acetyl-D-glucosamine + ATP = N-acetyl-alpha-D-glucosamine 1-phosphate + ADP + H(+)",
+      "ec": "2.7.1.162",
+      "substrates": [
+        {
+          "metabolite": "n_acetyl_d_glucosamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_d_glucosamine_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_162"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:53724"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53724"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "phosphoacetylglucosamine mutase",
+      "equation": "N-acetyl-alpha-D-glucosamine 1-phosphate = N-acetyl-D-glucosamine 6-phosphate",
+      "ec": "5.4.2.3",
+      "substrates": [
+        {
+          "metabolite": "n_acetyl_d_glucosamine_1_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_d_glucosamine_6_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_2_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:23804"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23804"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_6_phospho_d_murnac_1_4_d_glcnac_n-acetyl-d-mannosamine-to-methanol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_phospho_d_murnac_1_4_d_glcnac"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyl-d-mannosamine-to-methanol"
+      },
+      "note": "Shares 6-phospho-β-D-MurNAc-(1→4)-D-GlcNAc with N-acetyl-D-mannosamine to methanol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:167477"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetylmuramate_6_phosphate_1-6-anhydro-n-acetyl-mu-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetylmuramate_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-6-anhydro-n-acetyl-mu-to-diphosphate"
+      },
+      "note": "Shares N-acetylmuramate 6-phosphate with 1,6-anhydro-N-acetyl-β-mu… to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58722"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetylmuramate_6_phosphate_n-acetyl-d-muramoyl-l-ala-to-2-acetamido-3-o-1r",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetylmuramate_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyl-d-muramoyl-l-ala-to-2-acetamido-3-o-1r"
+      },
+      "note": "Shares N-acetylmuramate 6-phosphate with N-acetyl-D-muramoyl-L-ala… to 2-acetamido-3-O-[(1R)-1-c….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58722"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetyl_d_glucosamine_1_phosphate_d-glucosamine-to-5-o-phosphonato-d-ribof",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyl_d_glucosamine_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glucosamine-to-5-o-phosphonato-d-ribof"
+      },
+      "note": "Shares N-acetyl-α-D-glucosamine 1-phosphate with α-D-glucosamine… to 5-O-phosphonato-α-D-ribof….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57776"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetyl_d_glucosamine_1_phosphate_n-acetyl-d-mannosamine-to-n-acetyl-d-glucosamino",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyl_d_glucosamine_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyl-d-mannosamine-to-n-acetyl-d-glucosamino"
+      },
+      "note": "Shares N-acetyl-α-D-glucosamine 1-phosphate with N-acetyl-D-mannosamine to N-acetyl-D-glucosamino-1,….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57776"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetyl_d_glucosamine_1_phosphate_n4-d-mannosyl-1-2-to-l-fucp-1-3-d-galp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyl_d_glucosamine_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n4-d-mannosyl-1-2-to-l-fucp-1-3-d-galp"
+      },
+      "note": "Shares N-acetyl-α-D-glucosamine 1-phosphate with N4-[α-D-mannosyl-(1→2)-α-… to α-L-Fucp-(1→3)-[β-D-Galp-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57776"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetyl_d_glucosamine_6_phosphate_1-6-anhydro-n-acetyl-mu-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyl_d_glucosamine_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-6-anhydro-n-acetyl-mu-to-diphosphate"
+      },
+      "note": "Shares N-acetyl-D-glucosamine 6-phosphate with 1,6-anhydro-N-acetyl-β-mu… to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57513"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetyl_d_glucosamine_6_phosphate_n-monoacetylchitobiose-6-to-s-adenosyl-l-homocys",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyl_d_glucosamine_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-monoacetylchitobiose-6-to-s-adenosyl-l-homocys"
+      },
+      "note": "Shares N-acetyl-D-glucosamine 6-phosphate with N'-monoacetylchitobiose-6… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57513"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetyl_d_glucosamine_6_phosphate_n4-d-mannosyl-1-2-to-l-fucp-1-3-d-galp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyl_d_glucosamine_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n4-d-mannosyl-1-2-to-l-fucp-1-3-d-galp"
+      },
+      "note": "Shares N-acetyl-D-glucosamine 6-phosphate with N4-[α-D-mannosyl-(1→2)-α-… to α-L-Fucp-(1→3)-[β-D-Galp-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57513"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetyl_d_glucosamine_6_phosphate_n4-n-acetyl-d-glucosam-to-n-acetyl-d-glucosamine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyl_d_glucosamine_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n4-n-acetyl-d-glucosam-to-n-acetyl-d-glucosamine"
+      },
+      "note": "Shares N-acetyl-D-glucosamine 6-phosphate with N4-(β-N-acetyl-D-glucosam… to N-acetyl-D-glucosamine….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57513"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetyl_d_glucosamine_6_phosphate_o-n-acetyl-d-glucosami-to-d-glucopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyl_d_glucosamine_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "o-n-acetyl-d-glucosami-to-d-glucopyranose"
+      },
+      "note": "Shares N-acetyl-D-glucosamine 6-phosphate with O-(N-acetyl-β-D-glucosami… to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57513"
+          }
+        ]
+      }
+    }
+  ]
+}

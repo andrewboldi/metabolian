@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-methylpropanal-oxime-to-ammonium "2-methylpropanal oxime to ammonium" {
-  spacing 256
+  spacing 316
 
   spine at 0,0 {
     2_methylpropanal_oxime
@@ -22,26 +22,26 @@ pathway 2-methylpropanal-oxime-to-ammonium "2-methylpropanal oxime to ammonium" 
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_79 [2.1.1.79] +1_acyl_2_z_9_10_enoyl_sn_glycero_3_phospholipid +sam +hplus
-    1_acyl_2_9_10_methyleneacyl_sn_glycero_3_phospho
+    <-> ec_2_1_1_144 [2.1.1.144] +trans_aconitate +sam
+    2e_3_methoxycarbonyl_pent_2_enedioate
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_28 [2.1.1.28] +phenylethanolaminium +sam +hplus
-    n_methylphenylethanolaminium
+    <-> ec_2_1_1_108 [2.1.1.108] +6_hydroxymellein +sam +hplus
+    6_methoxymellein
   }
 
   branch from nh3 side left {
     nh3
-    <-> ec_3_5_5_4 [3.5.5.4] +3_cyano_l_alanine +h2o
-    aspartate
+    <-> ec_3_5_1_4 [3.5.1.4] +n_acylammonia +h2o
+    monocarboxylic_acid_anion
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_2_3_2_7 [2.3.2.7] +hydroxylamine +l_asparagine +hplus
-    l_aspartylhydroxamic_acid
+    <-> ec_4_3_1_6 [4.3.1.6] +alanyl_coa
+    acryloyl_coa
   }
 
   branch from inosine side left {
@@ -66,5 +66,65 @@ pathway 2-methylpropanal-oxime-to-ammonium "2-methylpropanal oxime to ammonium" 
     cystathionine
     <-> ec_2_5_1_160 [2.5.1.160] +cysteine +pi
     o_phosphonato_l_homoserine
+  }
+
+  branch from sam side left {
+    sam
+    <-> ec_2_1_1_118 [2.1.1.118] +columbamine +sah +hplus
+    palmatine
+  }
+
+  branch from sam side right {
+    sam
+    <-> ec_4_1_1_50 [4.1.1.50] +hplus +co2
+    s_adenosylmethioninaminium
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_181 [2.1.1.181] +adenosine_5_monophosphate_1 +sam +hplus
+    n6_methyladenosine_5_monophosphate_1
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_88 [2.1.1.88] +gossypetin +sam +hplus
+    3_4_5_7_pentahydroxy_8_methoxyflavon_3_olate
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_4_3_1_16 [4.3.1.16] +3s_3_hydroxy_l_aspartate
+    oxaloacetate
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_1_4_3_1 [1.4.3.1] +o2 +h2o +oxaloacetate +h2o2
+    d_aspartate
+  }
+
+  branch from inosine side left {
+    inosine
+    <-> . +o2 +h2o
+    5_dehydroinosine
+  }
+
+  branch from inosine side right {
+    inosine
+    <-> ec_2_4_2_1 [2.4.2.1] +pi +hypoxanthine
+    r1p
+  }
+
+  branch from serine side left {
+    serine
+    <-> ec_5_1_1_18 [5.1.1.18]
+    dserine
+  }
+
+  branch from serine side right {
+    serine
+    <-> ec_2_3_1_50 [2.3.1.50] +palmitoyl_coa +hplus +co2 +coa
+    ketosphinganine
   }
 }

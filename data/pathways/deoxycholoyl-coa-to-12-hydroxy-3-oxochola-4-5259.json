@@ -1,0 +1,635 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "deoxycholoyl-coa-to-12-hydroxy-3-oxochola-4-5259",
+  "name": "deoxycholoyl-CoA to 12α-hydroxy-3-oxochola-4,…",
+  "category": "energy-metabolism",
+  "summary": "A 4-step route from deoxycholoyl-CoA(4−) to 12α-hydroxy-3-oxochola-4,6-dien-24-oate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:52592"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58810"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "deoxycholoyl_coa",
+      "name": "deoxycholoyl-CoA",
+      "formula": "C45H70N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58810"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "3_oxodeoxycholoyl_coa",
+      "name": "3-oxodeoxycholoyl-CoA",
+      "short": "3-oxodeoxycholoyl-C…",
+      "formula": "C45H68N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:136701"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "12_hydroxy_3_oxochol_4_en_24_oyl_coa",
+      "name": "12α-hydroxy-3-oxochol-4-en-24-oyl-CoA",
+      "short": "12α-hydroxy-3-oxoch…",
+      "formula": "C45H66N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:140635"
+      }
+    },
+    {
+      "id": "12_hydroxy_3_oxochola_4_6_dien_24_oyl_coa",
+      "name": "12α-hydroxy-3-oxochola-4,6-dien-24-oyl-CoA",
+      "short": "12α-hydroxy-3-oxoch…",
+      "formula": "C45H64N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:132978"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "12_hydroxy_3_oxochola_4_6_dien_24_oate",
+      "name": "12α-hydroxy-3-oxochola-4,6-dien-24-oate",
+      "short": "12α-hydroxy-3-oxoch…",
+      "formula": "C24H33O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58804"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "7_12_dihydroxy_3_oxochol_4_en_24_oate",
+      "name": "7α,12α-dihydroxy-3-oxochol-4-en-24-oate",
+      "short": "7α,12α-dihydroxy-3-…",
+      "formula": "C24H35O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58803"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_395",
+      "name": "3alpha-hydroxybile acid CoA 3-dehydrogenase",
+      "ec": [
+        "1.1.1.395"
+      ]
+    },
+    {
+      "id": "ec_1_3_1_114",
+      "name": "3-dehydro-bile acid Delta(4,6)-reductase",
+      "ec": [
+        "1.3.1.114"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3alpha-hydroxybile acid CoA 3-dehydrogenase",
+      "equation": "deoxycholoyl-CoA + NAD(+) = 12alpha-hydroxy-3-oxocholan-24-oyl-CoA + NADH + H(+)",
+      "ec": "1.1.1.395",
+      "substrates": [
+        {
+          "metabolite": "deoxycholoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_oxodeoxycholoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_395"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:52592"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52592"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "3-dehydro-bile acid Delta(4,6)-reductase",
+      "equation": "12alpha-hydroxy-3-oxocholan-24-oyl-CoA + NAD(+) = 12alpha-hydroxy-3-oxochol-4-en-24-oyl-CoA + NADH + H(+)",
+      "ec": "1.3.1.114",
+      "substrates": [
+        {
+          "metabolite": "3_oxodeoxycholoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "12_hydroxy_3_oxochol_4_en_24_oyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_1_114"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:56652"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56652"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3-dehydro-bile acid Delta(4,6)-reductase",
+      "equation": "12alpha-hydroxy-3-oxochol-4-en-24-oyl-CoA + NAD(+) = 12alpha-hydroxy-3-oxochola-4,6-dien-24-oyl-CoA + NADH + H(+)",
+      "ec": "1.3.1.114",
+      "substrates": [
+        {
+          "metabolite": "12_hydroxy_3_oxochol_4_en_24_oyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "12_hydroxy_3_oxochola_4_6_dien_24_oyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_1_114"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:56656"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56656"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "12alpha-hydroxy-3-oxochola-4,6-dien-24-oyl-CoA + H2O = 12alpha-hydroxy-3-oxochola-4,6-d...",
+      "equation": "12alpha-hydroxy-3-oxochola-4,6-dien-24-oyl-CoA + H2O = 12alpha-hydroxy-3-oxochola-4,6-dien-24-oate + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "12_hydroxy_3_oxochola_4_6_dien_24_oyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "12_hydroxy_3_oxochola_4_6_dien_24_oate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:74311"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:74311"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "7alpha,12alpha-dihydroxy-3-oxochol-4-en-24-oate = 12alpha-hydroxy-3-oxochola-4,6-dien-2...",
+      "equation": "7alpha,12alpha-dihydroxy-3-oxochol-4-en-24-oate = 12alpha-hydroxy-3-oxochola-4,6-dien-24-oate + H2O",
+      "substrates": [
+        {
+          "metabolite": "7_12_dihydroxy_3_oxochol_4_en_24_oate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "12_hydroxy_3_oxochola_4_6_dien_24_oate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:65352"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65352"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_deoxycholoyl_coa_allocholate-to-3-12-dihydroxy-5-chola",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "deoxycholoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "allocholate-to-3-12-dihydroxy-5-chola"
+      },
+      "note": "Shares deoxycholoyl-CoA with allocholate to 3β,12α-dihydroxy-5β-chola….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58810"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_deoxycholoyl_coa_allocholate-to-3-12-dihydroxy-5-chola-53760",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "deoxycholoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "allocholate-to-3-12-dihydroxy-5-chola-53760"
+      },
+      "note": "Shares deoxycholoyl-CoA with allocholate to 3β,12α-dihydroxy-5β-chola….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58810"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_deoxycholoyl_coa_deoxycholoyl-coa-to-12-hydroxy-3-oxochola-4",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "deoxycholoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "deoxycholoyl-coa-to-12-hydroxy-3-oxochola-4"
+      },
+      "note": "Shares deoxycholoyl-CoA with deoxycholoyl-CoA to 12α-hydroxy-3-oxochola-4,….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58810"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_deoxycholoyl_coa_muricholate-to-3-12-dihydroxy-5-chola",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "deoxycholoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "muricholate-to-3-12-dihydroxy-5-chola"
+      },
+      "note": "Shares deoxycholoyl-CoA with β-muricholate to 3β,12α-dihydroxy-5β-chola….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58810"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_deoxycholoyl_coa_muricholate-to-3-12-dihydroxy-5-chola-53784",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "deoxycholoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "muricholate-to-3-12-dihydroxy-5-chola-53784"
+      },
+      "note": "Shares deoxycholoyl-CoA with β-muricholate to 3β,12α-dihydroxy-5β-chola….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58810"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_deoxycholoyl_coa_taurodeoxycholate-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "deoxycholoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "taurodeoxycholate-to-diphosphate"
+      },
+      "note": "Shares deoxycholoyl-CoA with taurodeoxycholate to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58810"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_deoxycholoyl_coa_taurodeoxycholate-to-diphosphate-47556",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "deoxycholoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "taurodeoxycholate-to-diphosphate-47556"
+      },
+      "note": "Shares deoxycholoyl-CoA with taurodeoxycholate to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58810"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_oxodeoxycholoyl_coa_3-oxodeoxycholoyl-coa-to-12-hydroxy-3-oxochola-4",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_oxodeoxycholoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-oxodeoxycholoyl-coa-to-12-hydroxy-3-oxochola-4"
+      },
+      "note": "Shares 3-oxodeoxycholoyl-CoA with 3-oxodeoxycholoyl-CoA to 12α-hydroxy-3-oxochola-4,….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:136701"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_oxodeoxycholoyl_coa_deoxycholoyl-coa-to-12-hydroxy-3-oxochola-4",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_oxodeoxycholoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "deoxycholoyl-coa-to-12-hydroxy-3-oxochola-4"
+      },
+      "note": "Shares 3-oxodeoxycholoyl-CoA with deoxycholoyl-CoA to 12α-hydroxy-3-oxochola-4,….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:136701"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_12_hydroxy_3_oxochol_4_en_24_oyl_coa_acetoacetyl-coa-to-t-2-toxin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "12_hydroxy_3_oxochol_4_en_24_oyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetoacetyl-coa-to-t-2-toxin"
+      },
+      "note": "Shares 12α-hydroxy-3-oxochol-4-en-24-oyl-CoA with acetoacetyl-CoA to T-2 toxin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:140635"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_12_hydroxy_3_oxochol_4_en_24_oyl_coa_deoxycholoyl-coa-to-12-hydroxy-3-oxochola-4",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "12_hydroxy_3_oxochol_4_en_24_oyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "deoxycholoyl-coa-to-12-hydroxy-3-oxochola-4"
+      },
+      "note": "Shares 12α-hydroxy-3-oxochol-4-en-24-oyl-CoA with deoxycholoyl-CoA to 12α-hydroxy-3-oxochola-4,….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:140635"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_12_hydroxy_3_oxochol_4_en_24_oyl_coa_h-to-4-methylcatechol-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "12_hydroxy_3_oxochol_4_en_24_oyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-4-methylcatechol-null"
+      },
+      "note": "Shares 12α-hydroxy-3-oxochol-4-en-24-oyl-CoA with H to 4-methylcatechol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:140635"
+          }
+        ]
+      }
+    }
+  ]
+}

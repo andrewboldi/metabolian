@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-hexadecanoylsphingosine-to-palmitoyl-coa "N-hexadecanoylsphingosine… to palmitoyl-CoA" {
-  spacing 258
+  spacing 270
 
   spine at 0,0 {
     n_hexadecanoylsphingosine_1_phosphocholine
@@ -32,32 +32,20 @@ pathway n-hexadecanoylsphingosine-to-palmitoyl-coa "N-hexadecanoylsphingosine…
 
   branch from n_hexadecanoylsphingosine side right {
     n_hexadecanoylsphingosine
-    <-> . +d_glucosyl_n_hexadecanoylsphingosine +h2o
-    d_glucose
+    <-> . +n_hexadecanoyl_d_galactosylsphingosine +h2o
+    d_galactose
   }
 
   branch from palmitate side left {
     palmitate
-    <-> . +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +h2o +hplus
-    2_linoleoyl_sn_glycero_3_phosphocholine
+    <-> . +s_palmitoyl_n_acetylcysteamine +h2o +hplus
+    n_acetylcysteamine
   }
 
   branch from palmitate side right {
     palmitate
-    <-> . +1_palmitoyl_2_oleoyl_3_stearoyl_sn_glycerol +h2o +hplus
-    2_oleoyl_3_stearoyl_sn_glycerol
-  }
-
-  branch from phosphoethanolamine side left {
-    phosphoethanolamine
-    <-> ec_3_1_4_62 [3.1.4.62] +1_2_diacyl_sn_glycero_3_phosphoethanolamine +h2o +hplus
-    dag
-  }
-
-  branch from phosphoethanolamine side right {
-    phosphoethanolamine
-    <-> . +1_2_dioleoyl_sn_glycero_3_phosphoethanolamine +h2o +hplus
-    1_2_dioleoyl_sn_glycerol
+    <-> . +s_palmitoyl_n_acetylcysteine_methyl_ester +h2o +hplus
+    n_acetylcysteine_methyl_ester
   }
 
   branch from trans_hexadecenoyl_coa side left {
@@ -68,25 +56,49 @@ pathway n-hexadecanoylsphingosine-to-palmitoyl-coa "N-hexadecanoylsphingosine…
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_131 [4.2.3.131] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    miltiradiene
+    <-> . +2_cis_6_cis_farnesyl_diphosphate
+    acoradiene
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_132 [4.2.3.132] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    neoabietadiene
+    <-> . +2_cis_6_cis_farnesyl_diphosphate
+    acoradiene
   }
 
   branch from palmitoyl_coa side right {
     palmitoyl_coa
-    <-> ec_2_3_1_139 [2.3.1.139] +ecdysone +coa
-    ecdysone_palmitate
+    <-> . +1_2_hexadecanediol +coa
+    2_hydroxypalmityl_palmitate
   }
 
   branch from palmitoyl_coa side left {
     palmitoyl_coa
-    <-> . +1_tetradecanoyl_sn_glycero_3_phospho_1_sn_glycer +coa
-    2_hexadecanoyl_1_tetradecanoyl_sn_glycero_3_phos
+    <-> . +1_2_hexadecanediol +coa
+    2_palmitoyloxypalmityl_palmitate
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +acoradiene
+    fpp
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +2_cis_6_cis_farnesyl_diphosphate
+    bisabolene
+  }
+
+  branch from palmitoyl_coa side right {
+    palmitoyl_coa
+    <-> . +2_monolysocardiolipin +coa
+    2_palmitoylcardiolipin
+  }
+
+  branch from palmitoyl_coa side left {
+    palmitoyl_coa
+    <-> . +1_o_palmityl_2_acetyl_sn_glycerol +coa
+    1_palmityl_2_acetyl_3_palmitoyl_sn_glycerol
   }
 }

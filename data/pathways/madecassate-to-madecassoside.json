@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "madecassate-to-madecassoside",
   "name": "madecassate to madecassoside",
-  "category": "other",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from madecassate to madecassoside, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -90,6 +90,43 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:66651"
+      }
+    },
+    {
+      "id": "l_threonine",
+      "name": "L-threonine",
+      "formula": "C4H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:30013"
+      }
+    },
+    {
+      "id": "d_glucosyl_l_threonyl",
+      "name": "α-D-glucosyl-L-threonyl",
+      "short": "α-D-glucosyl-L-thre…",
+      "formula": "C10H17NO7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:156085"
+      }
+    },
+    {
+      "id": "phloretin",
+      "name": "phloretin",
+      "formula": "C15H14O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17276"
+      }
+    },
+    {
+      "id": "trilobatin",
+      "name": "trilobatin",
+      "formula": "C21H24O10",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:145829"
       }
     }
   ],
@@ -216,6 +253,160 @@
           {
             "db": "Rhea",
             "id": "RHEA:84963"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "L-threonyl-[protein] + UDP-alpha-D-glucose = 3-O-(alpha-D-glucosyl)-L-threonyl-[protein...",
+      "equation": "L-threonyl-[protein] + UDP-alpha-D-glucose = 3-O-(alpha-D-glucosyl)-L-threonyl-[protein] + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "l_threonine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glucosyl_l_threonyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:64684"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64684"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "phloretin + UDP-alpha-D-glucose = trilobatin + UDP + H(+)",
+      "equation": "phloretin + UDP-alpha-D-glucose = trilobatin + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "phloretin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trilobatin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:65148"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65148"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_phloretin_phloretin-to-4-o-d-glucosyl-trans-4",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phloretin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phloretin-to-4-o-d-glucosyl-trans-4"
+      },
+      "note": "Shares phloretin with phloretin to 4-O-β-D-glucosyl-trans-4-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17276"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phloretin_toluene-4-sulfonate-to-1-3-4-dihydroxybenzoyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phloretin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "toluene-4-sulfonate-to-1-3-4-dihydroxybenzoyl"
+      },
+      "note": "Shares phloretin with toluene-4-sulfonate to 1-(3,4-dihydroxybenzoyl)-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17276"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phloretin_trehalose-6-mycolate-to-6-o-acetyl-d-glucose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phloretin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trehalose-6-mycolate-to-6-o-acetyl-d-glucose"
+      },
+      "note": "Shares phloretin with α,α'-trehalose 6-mycolate to 6-O-acetyl-β-D-glucose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17276"
           }
         ]
       }

@@ -1,0 +1,548 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1-alkyl-2-acetyl-sn-glyce-to-choline-phosphate-3",
+  "name": "1-alkyl-2-acetyl-sn-glyce… to choline phosphate",
+  "category": "nucleotide-metabolism",
+  "summary": "A 3-step route from 1-alkyl-2-acetyl-sn-glycerol to choline phosphate(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:36183"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:16291"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1_alkyl_2_acetyl_sn_glycerol",
+      "name": "1-alkyl-2-acetyl-sn-glycerol",
+      "short": "1-alkyl-2-acetyl-sn…",
+      "formula": "C5H9O4R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16291"
+      }
+    },
+    {
+      "id": "cdp_choline",
+      "name": "CDP-choline",
+      "formula": "C14H25N4O11P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58779"
+      }
+    },
+    {
+      "id": "2_acetyl_1_alkyl_sn_glycero_3_phosphocholine",
+      "name": "2-acetyl-1-alkyl-sn-glycero-3-phosphocholine",
+      "short": "2-acetyl-1-alkyl-sn…",
+      "formula": "C10H21NO7PR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:36707"
+      }
+    },
+    {
+      "id": "cytidine_5_monophosphate",
+      "name": "cytidine 5'-monophosphate",
+      "short": "cytidine 5'-MP",
+      "formula": "C9H12N3O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:60377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "1_alkyl_sn_glycero_3_phosphocholine",
+      "name": "1-alkyl-sn-glycero-3-phosphocholine",
+      "short": "1-alkyl-sn-glycero-…",
+      "formula": "C8H19NO6PR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:30909"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "Acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30089"
+      }
+    },
+    {
+      "id": "1_o_alkyl_sn_glycerol",
+      "name": "1-O-alkyl-sn-glycerol",
+      "short": "1-O-alkyl-sn-glycer…",
+      "formula": "C3H7O3R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15850"
+      }
+    },
+    {
+      "id": "phosphocholine",
+      "name": "Phosphocholine",
+      "formula": "C5H13NO4P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:295975"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_8_2",
+      "name": "diacylglycerol cholinephosphotransferase",
+      "ec": [
+        "2.7.8.2"
+      ],
+      "xrefs": {
+        "uniprot": "Q9Y6K0"
+      }
+    },
+    {
+      "id": "ec_3_1_1_47",
+      "name": "1-alkyl-2-acetylglycerophosphocholine esterase",
+      "ec": [
+        "3.1.1.47"
+      ],
+      "xrefs": {
+        "uniprot": "P04180"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "diacylglycerol cholinephosphotransferase",
+      "equation": "a 1-O-alkyl-2-acetyl-sn-glycerol + CDP-choline = a 1-O-alkyl-2-acetyl-sn-glycero-3-phosphocholine + CMP + H(+)",
+      "ec": "2.7.8.2",
+      "substrates": [
+        {
+          "metabolite": "1_alkyl_2_acetyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cdp_choline",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_acetyl_1_alkyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cytidine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_8_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:36183"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36183"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "1-alkyl-2-acetylglycerophosphocholine esterase",
+      "equation": "a 1-O-alkyl-2-acetyl-sn-glycero-3-phosphocholine + H2O = a 1-O-alkyl-sn-glycero-3-phosphocholine + acetate + H(+)",
+      "ec": "3.1.1.47",
+      "substrates": [
+        {
+          "metabolite": "2_acetyl_1_alkyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_alkyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_47"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:17777"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17777"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "a 1-O-alkyl-sn-glycero-3-phosphocholine + H2O = a 1-O-alkyl-sn-glycerol + phosphocholin...",
+      "equation": "a 1-O-alkyl-sn-glycero-3-phosphocholine + H2O = a 1-O-alkyl-sn-glycerol + phosphocholine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1_alkyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_o_alkyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:36083"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36083"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_1_alkyl_2_acetyl_sn_glycerol_1-alkyl-2-acetyl-sn-glyce-to-choline-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_alkyl_2_acetyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-alkyl-2-acetyl-sn-glyce-to-choline-phosphate"
+      },
+      "note": "Shares 1-alkyl-2-acetyl-sn-glycerol with 1-alkyl-2-acetyl-sn-glyce… to choline phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16291"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_alkyl_2_acetyl_sn_glycerol_1-alkyl-sn-glycero-3-phos-to-1-alkyl-sn-glycerol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_alkyl_2_acetyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-alkyl-sn-glycero-3-phos-to-1-alkyl-sn-glycerol"
+      },
+      "note": "Shares 1-alkyl-2-acetyl-sn-glycerol with 1-alkyl-sn-glycero-3-phos… to 1-alkyl-sn-glycerol….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16291"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_alkyl_2_acetyl_sn_glycerol_1-o-alkyl-2-o-arachidonoy-to-1-alkyl-sn-glycero",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_alkyl_2_acetyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-o-alkyl-2-o-arachidonoy-to-1-alkyl-sn-glycero"
+      },
+      "note": "Shares 1-alkyl-2-acetyl-sn-glycerol with 1-O-alkyl-2-O-arachidonoy… to 1-alkyl-sn-glycero-3-phos….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16291"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_alkyl_2_acetyl_sn_glycerol_aliphatic-aldoxime-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_alkyl_2_acetyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aliphatic-aldoxime-to-diphosphate"
+      },
+      "note": "Shares 1-alkyl-2-acetyl-sn-glycerol with aliphatic aldoxime to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16291"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_alkyl_2_acetyl_sn_glycerol_aliphatic-aldoxime-to-diphosphate-11316",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_alkyl_2_acetyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aliphatic-aldoxime-to-diphosphate-11316"
+      },
+      "note": "Shares 1-alkyl-2-acetyl-sn-glycerol with aliphatic aldoxime to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16291"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_alkyl_2_acetyl_sn_glycerol_lipid-iia-to-1-2-diacyl-sn-glycero-3-p-46872",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_alkyl_2_acetyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "lipid-iia-to-1-2-diacyl-sn-glycero-3-p-46872"
+      },
+      "note": "Shares 1-alkyl-2-acetyl-sn-glycerol with lipid IIA to 1,2-diacyl-sn-glycero-3-p….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16291"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_acetyl_1_alkyl_sn_glycero_3_phosphocholine_1-alkyl-2-acetyl-sn-glyce-to-choline-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_acetyl_1_alkyl_sn_glycero_3_phosphocholine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-alkyl-2-acetyl-sn-glyce-to-choline-phosphate"
+      },
+      "note": "Shares 2-acetyl-1-alkyl-sn-glycero-3-phosphocholine with 1-alkyl-2-acetyl-sn-glyce… to choline phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:36707"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_acetyl_1_alkyl_sn_glycero_3_phosphocholine_1-o-alkyl-2-o-arachidonoy-to-1-alkyl-sn-glycero",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_acetyl_1_alkyl_sn_glycero_3_phosphocholine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-o-alkyl-2-o-arachidonoy-to-1-alkyl-sn-glycero"
+      },
+      "note": "Shares 2-acetyl-1-alkyl-sn-glycero-3-phosphocholine with 1-O-alkyl-2-O-arachidonoy… to 1-alkyl-sn-glycero-3-phos….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:36707"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_o_alkyl_sn_glycerol_1-alkyl-2-acetyl-sn-glyce-to-choline-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_o_alkyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-alkyl-2-acetyl-sn-glyce-to-choline-phosphate"
+      },
+      "note": "Shares 1-O-alkyl-sn-glycerol with 1-alkyl-2-acetyl-sn-glyce… to choline phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15850"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_o_alkyl_sn_glycerol_1-alkyl-2-acyl-sn-glycerol-to-1-o-alkyl-sn-glyce",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_o_alkyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-alkyl-2-acyl-sn-glycerol-to-1-o-alkyl-sn-glyce"
+      },
+      "note": "Shares 1-O-alkyl-sn-glycerol with 1-alkyl-2-acyl-sn-glycerol to 1-O-alkyl-sn-glycerol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15850"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_o_alkyl_sn_glycerol_1-alkyl-2-acyl-sn-glycerol-to-fatty-acid-anion",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_o_alkyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-alkyl-2-acyl-sn-glycerol-to-fatty-acid-anion"
+      },
+      "note": "Shares 1-O-alkyl-sn-glycerol with 1-alkyl-2-acyl-sn-glycerol to fatty acid anion.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15850"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_o_alkyl_sn_glycerol_1-alkyl-2-acyl-sn-glycerol-to-fatty-acid-anion-4",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_o_alkyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-alkyl-2-acyl-sn-glycerol-to-fatty-acid-anion-4"
+      },
+      "note": "Shares 1-O-alkyl-sn-glycerol with 1-alkyl-2-acyl-sn-glycerol to fatty acid anion.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15850"
+          }
+        ]
+      }
+    }
+  ]
+}

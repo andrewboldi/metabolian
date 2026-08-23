@@ -104,72 +104,67 @@
       }
     },
     {
-      "id": "udp_4_amino_4_deoxy_l_arabinopyranose",
-      "name": "UDP-4-amino-4-deoxy-β-L-arabinopyranose",
-      "short": "UDP-4-amino-4-deoxy…",
-      "formula": "C14H22N3O15P2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:58708"
-      }
-    },
-    {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:30616"
-      }
-    },
-    {
-      "id": "udp_aravonose",
-      "name": "UDP-aravonose",
-      "formula": "C19H24N3O19P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:232304"
-      }
-    },
-    {
-      "id": "adp",
-      "name": "ADP",
-      "formula": "C10H12N5O10P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:456216"
-      }
-    },
-    {
-      "id": "pi",
-      "name": "Orthophosphate (Pi)",
-      "formula": "HO4P",
+      "id": "gdp_6_deoxy_d_talose",
+      "name": "GDP-6-deoxy-α-D-talose",
+      "short": "GDP-6-deoxy-α-D-tal…",
+      "formula": "C16H23N5O15P2",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:43474"
+        "chebi": "CHEBI:57638"
       }
     },
     {
-      "id": "udp_4_amino_4_6_dideoxy_l_n_acetyl_l_altrosamine",
-      "name": "UDP-4-amino-4,6-dideoxy-L-N-acetyl-β-L-altrosamine",
-      "short": "UDP-4-amino-4,6-did…",
-      "formula": "C17H27N4O15P2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:63389"
-      }
-    },
-    {
-      "id": "udp_solosamine",
-      "name": "UDP-solosamine",
-      "formula": "C22H29N4O19P2",
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:232305"
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "gdp_6_deoxy_d_mannose",
+      "name": "GDP-6-deoxy-α-D-mannose",
+      "short": "GDP-6-deoxy-α-D-man…",
+      "formula": "C16H23N5O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58224"
       }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_135",
+      "name": "GDP-6-deoxy-D-talose 4-dehydrogenase",
+      "ec": [
+        "1.1.1.135"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_187",
+      "name": "GDP-4-dehydro-D-rhamnose reductase",
+      "ec": [
+        "1.1.1.187"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_281",
+      "name": "GDP-4-dehydro-6-deoxy-D-mannose reductase",
+      "ec": [
+        "1.1.1.281"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -294,33 +289,26 @@
     },
     {
       "id": "r4",
-      "name": "UDP-4-amino-4-deoxy-beta-L-arabinose + 2-oxoglutarate + ATP = UDP-aravonose + ADP + pho...",
-      "equation": "UDP-4-amino-4-deoxy-beta-L-arabinose + 2-oxoglutarate + ATP = UDP-aravonose + ADP + phosphate + H(+)",
+      "name": "GDP-6-deoxy-D-talose 4-dehydrogenase",
+      "equation": "GDP-6-deoxy-alpha-D-talose + NADP(+) = GDP-4-dehydro-alpha-D-rhamnose + NADPH + H(+)",
+      "ec": "1.1.1.135",
       "substrates": [
         {
-          "metabolite": "udp_4_amino_4_deoxy_l_arabinopyranose",
+          "metabolite": "gdp_6_deoxy_d_talose",
           "stoichiometry": 1
         },
         {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
+          "metabolite": "nadp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "udp_aravonose",
+          "metabolite": "gdp_4_dehydro_6_deoxy_d_mannose",
           "stoichiometry": 1
         },
         {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pi",
+          "metabolite": "nadph",
           "stoichiometry": 1
         },
         {
@@ -328,50 +316,48 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_135"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:82779"
+        "rhea": "RHEA:10724"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:82779"
+            "id": "RHEA:10724"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "UDP-4-amino-4,6-dideoxy-N-acetyl-beta-L-altrosamine + 2-oxoglutarate + ATP = UDP-solosa...",
-      "equation": "UDP-4-amino-4,6-dideoxy-N-acetyl-beta-L-altrosamine + 2-oxoglutarate + ATP = UDP-solosamine + ADP + phosphate + H(+)",
+      "name": "GDP-4-dehydro-D-rhamnose reductase",
+      "equation": "GDP-alpha-D-rhamnose + NADP(+) = GDP-4-dehydro-alpha-D-rhamnose + NADPH + H(+)",
+      "ec": "1.1.1.187",
       "substrates": [
         {
-          "metabolite": "udp_4_amino_4_6_dideoxy_l_n_acetyl_l_altrosamine",
+          "metabolite": "gdp_6_deoxy_d_mannose",
           "stoichiometry": 1
         },
         {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
+          "metabolite": "nadp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "udp_solosamine",
+          "metabolite": "gdp_4_dehydro_6_deoxy_d_mannose",
           "stoichiometry": 1
         },
         {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pi",
+          "metabolite": "nadph",
           "stoichiometry": 1
         },
         {
@@ -379,17 +365,244 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_187"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:82783"
+        "rhea": "RHEA:13829"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:82783"
+            "id": "RHEA:13829"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_gdp_4_dehydro_6_deoxy_d_mannose_d-galactose-to-2-o-d-mannosyl-1-2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "gdp_4_dehydro_6_deoxy_d_mannose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-galactose-to-2-o-d-mannosyl-1-2"
+      },
+      "note": "Shares GDP-4-dehydro-6-deoxy-α-D-mannose with α-D-galactose to 2-O-[α-D-mannosyl-(1→2)-α….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57964"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_gdp_4_dehydro_6_deoxy_d_mannose_gdp-to-d-rhamnosyl-1-3-n-ace",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "gdp_4_dehydro_6_deoxy_d_mannose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gdp-to-d-rhamnosyl-1-3-n-ace"
+      },
+      "note": "Shares GDP-4-dehydro-6-deoxy-α-D-mannose with GDP to α-D-rhamnosyl-(1→3)-N-ace….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57964"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_gdp_4_dehydro_6_deoxy_d_mannose_leukotriene-c4-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "gdp_4_dehydro_6_deoxy_d_mannose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "leukotriene-c4-to-hydrogen-donor"
+      },
+      "note": "Shares GDP-4-dehydro-6-deoxy-α-D-mannose with leukotriene C4 to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57964"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_gdp_4_dehydro_6_deoxy_d_mannose_n4-d-mannosyl-1-2-to-l-fucp-1-3-d-galp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "gdp_4_dehydro_6_deoxy_d_mannose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n4-d-mannosyl-1-2-to-l-fucp-1-3-d-galp"
+      },
+      "note": "Shares GDP-4-dehydro-6-deoxy-α-D-mannose with N4-[α-D-mannosyl-(1→2)-α-… to α-L-Fucp-(1→3)-[β-D-Galp-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57964"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_gdp_4_dehydro_6_deoxy_d_mannose_organohalogen-compound-to-adenosine-3-5-bismonop",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "gdp_4_dehydro_6_deoxy_d_mannose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "organohalogen-compound-to-adenosine-3-5-bismonop"
+      },
+      "note": "Shares GDP-4-dehydro-6-deoxy-α-D-mannose with organohalogen compound to adenosine 3',5'-bismonoph….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57964"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_gdp_4_dehydro_3_6_dideoxy_d_mannose_gdp-to-d-gal-1-3-d-glcnac",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "gdp_4_dehydro_3_6_dideoxy_d_mannose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gdp-to-d-gal-1-3-d-glcnac"
+      },
+      "note": "Shares GDP-4-dehydro-3,6-dideoxy-α-D-mannose with GDP to α-D-Gal-(1→3)-α-D-GlcNAc-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:73931"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_gdp_4_dehydro_3_6_dideoxy_d_mannose_gdp-to-d-mannosyl-1-3-n-acet",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "gdp_4_dehydro_3_6_dideoxy_d_mannose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gdp-to-d-mannosyl-1-3-n-acet"
+      },
+      "note": "Shares GDP-4-dehydro-3,6-dideoxy-α-D-mannose with GDP to α-D-mannosyl-(1→3)-N-acet….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:73931"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_gdp_4_dehydro_3_6_dideoxy_d_mannose_leukotriene-c4-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "gdp_4_dehydro_3_6_dideoxy_d_mannose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "leukotriene-c4-to-hydrogen-donor"
+      },
+      "note": "Shares GDP-4-dehydro-3,6-dideoxy-α-D-mannose with leukotriene C4 to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:73931"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_gdp_6_deoxy_d_mannose_gdp-to-d-rhamnosyl-1-3-n-ace",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "gdp_6_deoxy_d_mannose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gdp-to-d-rhamnosyl-1-3-n-ace"
+      },
+      "note": "Shares GDP-6-deoxy-α-D-mannose with GDP to α-D-rhamnosyl-(1→3)-N-ace….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58224"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_gdp_6_deoxy_d_mannose_lipid-a-to-h",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "gdp_6_deoxy_d_mannose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "lipid-a-to-h"
+      },
+      "note": "Shares GDP-6-deoxy-α-D-mannose with lipid A to H.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58224"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-end-triphospho-adenosi-to-s-adenosyl-l-homocys "5'-end triphospho-adenosi… to S-adenosyl-L-homocysteine" {
-  spacing 188
+  spacing 182
 
   spine at 0,0 {
     5_end_triphospho_adenosine_4
@@ -18,39 +18,33 @@ pathway 5-end-triphospho-adenosi-to-s-adenosyl-l-homocys "5'-end triphospho-aden
     5_end_n7_methyl_5_triphospho_guanosine_2_o_methy
   }
 
-  branch from 5_end_diphospho_adenosine_3 side left {
-    5_end_diphospho_adenosine_3
-    <-> . +n_5_guanylyl_l_lysine_1 +hplus +5_end_5_triphospho_guanosine_adenosine_3
-    l_lysinium
+  branch from ppi side left {
+    ppi
+    <-> . +tobramycin +atp
+    4_adenylyltobramycin
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_6_1_17 [4.6.1.17] +8s_3_8_cyclo_7_8_dihydroguanosine_5_triphosphat
-    precursor_z
+    <-> . +kanamycin_a +gtp
+    4_guanylylkanamycin_a
   }
 
-  branch from ppi side left {
-    ppi
-    <-> . +suberate +atp +coa +amp
-    octanedioyl_coa
-  }
-
-  branch from 5_end_n7_methyl_5_triphospho_guanosine_adenosine side right {
+  branch from 5_end_n7_methyl_5_triphospho_guanosine_adenosine side left {
     5_end_n7_methyl_5_triphospho_guanosine_adenosine
     <-> . +h2o +7_methylguanosine_5_diphosphate +hplus
     5_end_phospho_adenosine_2
   }
 
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_220 [2.1.1.220] +adenosine_5_monophosphate_1 +sam +hplus
-    n1_methyladenosine_5_monophosphate_1
+  branch from ppi side right {
+    ppi
+    <-> . +kanamycin_a +itp
+    4_inosinylylkanamycin_a
   }
 
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_221 [2.1.1.221] +guanosine_5_monophosphate_1 +sam +hplus
-    n1_methylguanosine_5_monophosphate_1
+  branch from ppi side left {
+    ppi
+    <-> . +kanamycin_a +utp
+    4_uridylylkanamycin_a
   }
 }

@@ -110,43 +110,22 @@
       }
     },
     {
-      "id": "bacteriochlorophyllide_b",
-      "name": "bacteriochlorophyllide b",
-      "short": "bacteriochlorophyll…",
-      "formula": "C35H33MgN4O6",
+      "id": "2_keto_3_deoxy_l_galactonate",
+      "name": "2-keto-3-deoxy-L-galactonate",
+      "short": "2-keto-3-deoxy-L-ga…",
+      "formula": "C6H9O6",
       "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM1100703"
+        "chebi": "CHEBI:75545"
       }
     },
     {
-      "id": "3_deacetyl_3_1_hydroxyethyl_bacteriochlorophylli",
-      "name": "3-deacetyl-3-(1-hydroxyethyl)-bacteriochlorophyllide g",
-      "short": "3-deacetyl-3-(1-hyd…",
-      "formula": "C35H35MgN4O6",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM1100717"
-      }
-    },
-    {
-      "id": "7_8_dihydroisojusticidin_b",
-      "name": "7(8)-dihydroisojusticidin B",
-      "short": "7(8)-dihydroisojust…",
-      "formula": "C21H18O6",
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM818893"
-      }
-    },
-    {
-      "id": "7_8_7_8_tetrahydroisojusticidin_b",
-      "name": "7(8),7'(8')-tetrahydroisojusticidin B",
-      "short": "7(8),7'(8')-tetrahy…",
-      "formula": "C21H20O6",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM818892"
+        "chebi": "CHEBI:15377"
       }
     }
   ],
@@ -170,6 +149,13 @@
       "name": "tagaturonate reductase",
       "ec": [
         "1.1.1.58"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_146",
+      "name": "L-galactonate dehydratase",
+      "ec": [
+        "4.2.1.146"
       ]
     }
   ],
@@ -309,84 +295,307 @@
     },
     {
       "id": "r4",
-      "name": "Reaction MNXR186382",
+      "name": "L-galactonate dehydratase",
+      "equation": "L-galactonate = 2-dehydro-3-deoxy-L-galactonate + H2O",
+      "ec": "4.2.1.146",
       "substrates": [
         {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "bacteriochlorophyllide_b",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
+          "metabolite": "l_galactonate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3_deacetyl_3_1_hydroxyethyl_bacteriochlorophylli",
+          "metabolite": "2_keto_3_deoxy_l_galactonate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nad",
+          "metabolite": "h2o",
           "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_146"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "metanetx": "MNXR186382"
+        "rhea": "RHEA:38103"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR186382"
+            "db": "Rhea",
+            "id": "RHEA:38103"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_l_galactonate_gdp-to-l-ascorbate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_galactonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gdp-to-l-ascorbate"
+      },
+      "note": "Shares L-galactonate with GDP to L-ascorbate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:53071"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "Reaction MNXR187134",
-      "substrates": [
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "7_8_dihydroisojusticidin_b",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "7_8_7_8_tetrahydroisojusticidin_b",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR187134"
+      "id": "xt_l_galactonate_nadh-to-keto-d-fructuronate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_galactonate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-keto-d-fructuronate"
+      },
+      "note": "Shares L-galactonate with NADH to keto-D-fructuronate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:53071"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_aldehydo_d_galacturonate_beta-d-galacturonate-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aldehydo_d_galacturonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-d-galacturonate-to-nad"
+      },
+      "note": "Shares aldehydo-D-galacturonate with beta-D-galacturonate to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:12952"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_aldehydo_d_galacturonate_nadh-to-keto-d-fructuronate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aldehydo_d_galacturonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-keto-d-fructuronate"
+      },
+      "note": "Shares aldehydo-D-galacturonate with NADH to keto-D-fructuronate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:12952"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_tagaturonate_3-8-dideoxy-8-oxo-alpha-d-to-adp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_tagaturonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-8-dideoxy-8-oxo-alpha-d-to-adp"
+      },
+      "note": "Shares D-Tagaturonate with 3,8-dideoxy-8-oxo-alpha-D… to ADP.",
+      "provenance": {
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR187134"
+            "id": "MNXM728349"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_tagaturonate_4-formylbenzoate-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_tagaturonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-formylbenzoate-to-nad"
+      },
+      "note": "Shares D-Tagaturonate with 4-formylbenzoate to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM728349"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_tagaturonate_9-hydroxy-aurachin-d-to-nerolidyl-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_tagaturonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "9-hydroxy-aurachin-d-to-nerolidyl-diphosphate"
+      },
+      "note": "Shares D-Tagaturonate with 9'-hydroxy-aurachin D to nerolidyl diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM728349"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_tagaturonate_d-mannonate-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_tagaturonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-mannonate-to-h2o-null"
+      },
+      "note": "Shares D-Tagaturonate with D-mannonate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM728349"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_tagaturonate_dtdp-l-evernosamine-to-dtdp-3-amino-2-3-6-trideo",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_tagaturonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-l-evernosamine-to-dtdp-3-amino-2-3-6-trideo"
+      },
+      "note": "Shares D-Tagaturonate with dTDP-β-L-evernosamine to dTDP-3-amino-2,3,6-trideo….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM728349"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_keto_3_deoxy_l_galactonate_2-amino-2-deoxy-d-gluconi-to-3-deoxy-d-glycero-h",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_keto_3_deoxy_l_galactonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-amino-2-deoxy-d-gluconi-to-3-deoxy-d-glycero-h"
+      },
+      "note": "Shares 2-keto-3-deoxy-L-galactonate with 2-amino-2-deoxy-D-gluconi… to 3-deoxy-D-glycero-hexo-2,….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75545"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_keto_3_deoxy_l_galactonate_3-6-anhydro-l-galactofura-to-l-glyceraldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_keto_3_deoxy_l_galactonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-6-anhydro-l-galactofura-to-l-glyceraldehyde"
+      },
+      "note": "Shares 2-keto-3-deoxy-L-galactonate with 3,6-anhydro-L-galactofura… to L-glyceraldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75545"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_keto_3_deoxy_l_galactonate_acetylacetone-to-dehydro-coenzyme-f420-0",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_keto_3_deoxy_l_galactonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetylacetone-to-dehydro-coenzyme-f420-0"
+      },
+      "note": "Shares 2-keto-3-deoxy-L-galactonate with acetylacetone to dehydro coenzyme F420-0.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75545"
           }
         ]
       }

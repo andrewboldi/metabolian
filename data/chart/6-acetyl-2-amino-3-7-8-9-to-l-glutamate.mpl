@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 6-acetyl-2-amino-3-7-8-9-to-l-glutamate "6-acetyl-2-amino-3,7,8,9-… to L-glutamate" {
-  spacing 298
+  spacing 340
 
   spine at 0,0 {
     6_acetyl_2_amino_3_7_8_9_tetrahydropyrimido_4_5
@@ -22,105 +22,28 @@ pathway 6-acetyl-2-amino-3-7-8-9-to-l-glutamate "6-acetyl-2-amino-3,7,8,9-… to
     archaeosine_5_phosphate_zwitterionic
   }
 
-  branch from r_dyspropterin side left {
-    r_dyspropterin
-    <-> ec_1_1_1_220 [1.1.1.220] +nadp +nadph +hplus
-    6r_6_lactoyl_5_6_7_8_tetrahydropterin
-  }
 
-  branch from r_dyspropterin side right {
-    r_dyspropterin
-    <-> ec_4_2_3_12 [4.2.3.12] +7_8_dihydroneopterin_3_triphosphate +hplus
-    triphosphate
-  }
 
-  branch from gsh side left {
-    gsh
-    <-> ec_6_3_2_3 [6.3.2.3] +glycine +atp +adp +pi +hplus
-    glu_cys
-  }
 
-  branch from gsh side right {
-    gsh
-    <-> ec_1_8_1_10 [1.8.1.10] +nadp +coa +nadph +hplus
-    coa_glutathione
-  }
 
-  branch from 5_6_7_8_tetrahydropterin_6_carboxylate side left {
-    5_6_7_8_tetrahydropterin_6_carboxylate
-    <-> ec_4_1_2_50 [4.1.2.50] +h2o +triphosphate +acetaldehyde +hplus
-    7_8_dihydroneopterin_3_triphosphate
-  }
 
-  branch from 5_6_7_8_tetrahydropterin_6_carboxylate side right {
-    5_6_7_8_tetrahydropterin_6_carboxylate
-    <-> . +h2o +acetaldehyde +hplus
-    l_sepiapterin
-  }
 
-  branch from acetaldehyde side left {
-    acetaldehyde
-    <-> ec_4_1_2_42 [4.1.2.42] +d_threonine
-    glycine
-  }
 
-  branch from acetaldehyde side right {
-    acetaldehyde
-    <-> ec_4_1_2_36 [4.1.2.36] +lactate
-    formate
-  }
 
-  branch from nh3 side left {
-    nh3
-    <-> ec_1_14_12_1 [1.14.12.1] +anthranilate +nadh +o2 +hplus +co2 +nad
-    catechol
-  }
 
-  branch from nh3 side right {
-    nh3
-    <-> ec_4_2_1_104 [4.2.1.104] +hco3 +hplus +co2
-    cyanate
-  }
 
-  branch from 7_cyano_7_deazaguanine side left {
-    7_cyano_7_deazaguanine
-    <-> ec_1_7_1_13 [1.7.1.13] +nadp +nadph +hplus
-    7_ammoniomethyl_7_deazaguanine
-  }
 
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_27 [4.2.3.27] +dmapp
-    isoprene
-  }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_4_6_1_2 [4.6.1.2] +gtp
-    3_5_cyclic_gmp
-  }
 
-  branch from guanine side right {
-    guanine
-    <-> ec_2_4_2_1 [2.4.2.1] +guanosine +pi
-    r1p
-  }
 
-  branch from guanine side left {
-    guanine
-    <-> . +guanosine +h2o
-    d_ribofuranose
-  }
 
-  branch from glutamate side right {
-    glutamate
-    <-> ec_2_6_1_17 [2.6.1.17] +n_3_carboxylatopropionyl_ll_2_6_diaminopimelate +akg
-    l_2_succinylamino_6_oxoheptanedioate
-  }
 
-  branch from glutamate side left {
-    glutamate
-    <-> ec_1_4_7_1 [1.4.7.1] +di_sulfido_diiron +glutamine +akg +hplus
-    di_sulfido_diiron
-  }
+
+
+
+
+
+
+
+
 }

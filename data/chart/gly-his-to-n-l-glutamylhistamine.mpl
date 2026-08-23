@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway gly-his-to-n-l-glutamylhistamine "Gly-His to Nα-γ-L-glutamylhistamine" {
-  spacing 216
+  spacing 192
 
   spine at 0,0 {
     gly_his
@@ -14,29 +14,5 @@ pathway gly-his-to-n-l-glutamylhistamine "Gly-His to Nα-γ-L-glutamylhistamine"
     histaminium
     <-> ec_6_3_2_18 [6.3.2.18] +glutamate +atp -adp -pi -hplus
     n_l_glutamylhistamine
-  }
-
-  branch from l_histidine side left {
-    l_histidine
-    <-> . +cholate +h2o
-    l_histidocholate
-  }
-
-  branch from l_histidine side right {
-    l_histidine
-    <-> . +taurocholate +l_histidocholate
-    taurine
-  }
-
-  branch from glycine side left {
-    glycine
-    <-> . +myristoyl_coa +coa +hplus
-    n_myristoylglycinate
-  }
-
-  branch from glycine side right {
-    glycine
-    <-> . +lauroyl_coa +coa +hplus
-    n_dodecanoylglycinate
   }
 }

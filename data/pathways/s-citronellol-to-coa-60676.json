@@ -1,0 +1,486 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-citronellol-to-coa-60676",
+  "name": "(S)-(−)-citronellol to CoA",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from (S)-(−)-citronellol to CoA, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:60676"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:88"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_citronellol",
+      "name": "(S)-(−)-citronellol",
+      "formula": "C10H20O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:88"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "s_citronellal",
+      "name": "(S)-(−)-citronellal",
+      "formula": "C10H18O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:368"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "menthol",
+      "name": "(-)-menthol",
+      "formula": "C10H20O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1346"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1104266"
+      }
+    },
+    {
+      "id": "menthyl_acetate",
+      "name": "(-)-Menthyl acetate",
+      "formula": "C12H22O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:104"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_71",
+      "name": "alcohol dehydrogenase [NAD(P)(+)]",
+      "ec": [
+        "1.1.1.71"
+      ],
+      "xrefs": {
+        "uniprot": "P16152"
+      }
+    },
+    {
+      "id": "ec_2_3_1_69",
+      "name": "monoterpenol O-acetyltransferase",
+      "ec": [
+        "2.3.1.69"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(S)-(-)-citronellol + NAD(+) = (S)-(-)-citronellal + NADH + H(+)",
+      "equation": "(S)-(-)-citronellol + NAD(+) = (S)-(-)-citronellal + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "s_citronellol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_citronellal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:60676"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:60676"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "alcohol dehydrogenase [NAD(P)(+)]",
+      "ec": "1.1.1.71",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "s_citronellal",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "menthol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_71"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR181042"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR181042"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "monoterpenol O-acetyltransferase",
+      "ec": "2.3.1.69",
+      "substrates": [
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "menthol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "menthyl_acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_69"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR112071"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR112071"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_s_citronellol_s-citronellol-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_citronellol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-citronellol-to-coa"
+      },
+      "note": "Shares (S)-(−)-citronellol with (S)-(−)-citronellol to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:88"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_citronellol_s-citronellol-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_citronellol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-citronellol-to-nadph"
+      },
+      "note": "Shares (S)-(−)-citronellol with (S)-(−)-citronellol to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:88"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_citronellol_s-citronellol-to-nadph-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_citronellol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-citronellol-to-nadph-null"
+      },
+      "note": "Shares (S)-(−)-citronellol with (S)-(−)-citronellol to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:88"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_menthol_5alpha-androstane-3alpha-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "menthol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5alpha-androstane-3alpha-to-h2o-null"
+      },
+      "note": "Shares (-)-menthol with 5alpha-Androstane-3alpha,… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1346"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_menthol_nadh-to-nadph-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "menthol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-nadph-null"
+      },
+      "note": "Shares (-)-menthol with NADH to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1346"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_menthol_s-citronellol-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "menthol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-citronellol-to-coa"
+      },
+      "note": "Shares (-)-menthol with (S)-(−)-citronellol to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1346"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_menthol_s-citronellol-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "menthol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-citronellol-to-nadph"
+      },
+      "note": "Shares (-)-menthol with (S)-(−)-citronellol to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1346"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_menthol_s-citronellol-to-nadph-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "menthol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-citronellol-to-nadph-null"
+      },
+      "note": "Shares (-)-menthol with (S)-(−)-citronellol to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1346"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_menthyl_acetate_s-citronellol-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "menthyl_acetate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-citronellol-to-coa"
+      },
+      "note": "Shares (-)-Menthyl acetate with (S)-(−)-citronellol to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:104"
+          }
+        ]
+      }
+    }
+  ]
+}

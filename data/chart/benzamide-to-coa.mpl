@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway benzamide-to-coa "benzamide to CoA" {
-  spacing 278
+  spacing 332
 
   spine at 0,0 {
     benzamide
@@ -20,103 +20,157 @@ pathway benzamide-to-coa "benzamide to CoA" {
 
   branch from benzoate side left {
     benzoate
-    <-> . +h +o2 +nadph +1_hydroxy_6_oxocyclohex_2_ene_1_carboxylate
-    nadp
+    <-> ec_3_7_1_8 [3.7.1.8] +2_hydroxy_3_chloro_6_oxo_6_phenylhexa_2_4_dienoa +h2o +h
+    2_hydroxy_3_chloropenta_2_4_dienoate
   }
 
   branch from benzoate side right {
     benzoate
-    <-> ec_1_14_13_84 [1.14.13.84] +nadp +h2o +o2 +nadph
-    benzaldehyde
+    <-> ec_3_7_1_3 [3.7.1.3] +l_alanine +h +h2o
+    betamipron
   }
 
   branch from nh4 side left {
     nh4
-    <-> . +und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_gl +h2o
-    und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig
+    <-> . +d_phenylalaninamide +h +h2o
+    d_phenylalanine
   }
 
   branch from nh4 side right {
     nh4
-    <-> . +3_dimethylselenopropanal +h2o2 +o2 +h2o
-    dimethylselenopropanoate_amine
+    <-> . +d_tyrosinamide +h +h2o
+    d_tyrosine
   }
 
   branch from benzoyl_coa side left {
     benzoyl_coa
-    <-> . +4_hydroxybutylglucosinolate +coa
-    4_benzoyloxybutylglucosinolate
+    <-> . +tryptamine +h +coa
+    n_benzoyltryptamine
   }
 
   branch from benzoyl_coa side right {
     benzoyl_coa
-    <-> . +xi_progoitrin +coa
-    2_benzoyloxy_3_butenylglucosinolate
+    <-> . +serotonin +h +coa
+    n_benzoylserotonin
   }
 
   branch from succinate side left {
     succinate
-    <-> . +s_1_pyrroline_5_carboxylate +co2 +guanidine +ethene +h2o +h +o2 +l_arginine
-    2_oxoglutarate
+    <-> . +2_oxoglutarate +h +o2 +gibberellin_a15_2_diacid_form +1r_2s_3s_4s_5s_8r_9r_12r_5_hydroxy_8_hydroxymet
+    co2
   }
 
   branch from succinate side right {
     succinate
-    <-> . +l_leucine +2_oxoglutarate +o2 +4_hydroxy_l_leucine
-    co2
+    <-> ec_1_3_5_1 [1.3.5.1] +menaquinone_2 +fumarate
+    menaquinol
   }
 
   branch from coa side left {
     coa
-    <-> . +s_malate +trans_caffeoyl_coa +h
-    caffeoylmalic_acid
+    <-> . +methylmalonate +h +h2o
+    r_methylmalonyl_coa
   }
 
   branch from coa side right {
     coa
-    <-> . +acetyl_coa +h +n_hydroxycadaverine
-    n_hydroxy_n_acetylcadaverine
+    <-> . +nadh +acetyl_coa +h +nadp +h2o2 +o2 +nadph +nad +h2o
+    9z_octadecenoyl_coa
   }
 
   branch from benzoylacetyl_coa side left {
-    benzoylacetyl_coa
-    <-> ec_1_1_1_35 [1.1.1.35] +nadh +h +nad
-    s_3_hydroxy_3_phenylpropanoyl_coa
-  }
-
-  branch from benzoylacetyl_coa side right {
     benzoylacetyl_coa
     <-> . +s_3_hydroxy_3_phenylpropanoyl_coa +h +nadp
     nadph
   }
 
-  branch from h side left {
-    h
-    <-> . +dtdp +calicheamicin_t0 +calicheamicinone
-    dtdp_4_hydroxyamino_4_6_dideoxy_alpha_d_glucose
-  }
-
   branch from h side right {
     h
-    <-> . +dtdp +4_deoxy_4_thio_alpha_d_digitoxosyl_calicheamicin +dtdp_4_deoxy_4_thio_alpha_d_digitoxose
-    calicheamicin_t0
+    <-> ec_3_4_11_21 [3.4.11.21] +l_aspartate +angiotensin_iii +h2o
+    angiotensin_ii
   }
 
-  branch from 3_oxo_3_phenylpropionate side left {
-    3_oxo_3_phenylpropionate
-    <-> ec_6_4_1_8 [6.4.1.8] +co2 +h
-    acetophenone
+  branch from h side left {
+    h
+    <-> ec_4_1_2_44 [4.1.2.44] +3z_6_oxohex_3_enoyl_coa +formate +h2o
+    2_3_dihydroxy_2_3_dihydrobenzoyl_coa
   }
 
   branch from atp side right {
     atp
-    <-> ec_6_2_1_2 [6.2.1.2] +diphosphate +7_hydroxylauroyl_coa +amp +coa
-    7_hydroxylaurate
+    <-> ec_6_3_2_16 [6.3.2.16] +d_alanine +alanyl_poly_glycerolphosphate +h +d_alanyl_l_alanyl_poly_glycerol_phosphate +phosphate
+    adp
   }
 
   branch from atp side left {
     atp
-    <-> . +diphosphate +amp +r_r_chrysanthemoyl_coa +coa
-    r_r_chrysanthemate
+    <-> ec_6_3_2_16 [6.3.2.16] +d_alanine +alanyl_poly_glycerolphosphate +h +adp +phosphate
+    d_alanyl_alanyl_poly_glycerolphosphate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_3_2_6 [3.3.2.6] +l_proline +4_nitroaniline
+    prolyl_p_nitroanilide
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_2_1_81 [3.2.1.81] +neoagarobiose
+    neoagarotetraose
+  }
+
+  branch from benzoate side right {
+    benzoate
+    <-> ec_3_7_1_8 [3.7.1.8] +2e_2_hydroxypenta_2_4_dienoate +h +h2o
+    2_hydroxy_6_oxo_6_phenylhexa_2_4_dienoate
+  }
+
+  branch from benzoate side left {
+    benzoate
+    <-> ec_3_7_1_8 [3.7.1.8] +2e_2_hydroxypenta_2_4_dienoate +h +h2o
+    2_hydroxy_6_oxo_6_phenylhexa_2_4_dienoate
+  }
+
+  branch from nh4 side right {
+    nh4
+    <-> . +d_tryptophan +h +h2o
+    d_tryptophanamide
+  }
+
+  branch from nh4 side left {
+    nh4
+    <-> ec_1_4_3_21 [1.4.3.21] +compound_0066903 +h2o2 +h +o2 +h2o
+    4_methoxyphenylethylamine
+  }
+
+  branch from succinyl_coa side right {
+    succinyl_coa
+    <-> ec_6_2_1_4 [6.2.1.4] +8_azaguanosine_5_diphosphate +phosphate +h +succinate +coa
+    8_azaguanosine_5_triphosphate
+  }
+
+  branch from succinyl_coa side left {
+    succinyl_coa
+    <-> . +nadh +co2 +coa +nad
+    2_oxoglutarate
+  }
+
+  branch from benzoyl_coa side right {
+    benzoyl_coa
+    <-> . +n_benzoyltyramine +h +coa
+    tyramine
+  }
+
+  branch from benzoyl_coa side left {
+    benzoyl_coa
+    <-> . +salicyl_alcohol +coa
+    salicyl_benzoate
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> ec_4_1_3_30 [4.1.3.30] +pyruvate
+    2_methylcitrate
   }
 }

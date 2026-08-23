@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-1-2-dichlorovinyl-glut-to-dichloroacetyl-chlor "S-(1,2-Dichlorovinyl)glut… to dichloroacetyl chloride" {
-  spacing 236
+  spacing 320
 
   spine at 0,0 {
     s_1_2_dichlorovinyl_glutathione
@@ -18,49 +18,133 @@ pathway s-1-2-dichlorovinyl-glut-to-dichloroacetyl-chlor "S-(1,2-Dichlorovinyl)g
 
   branch from trichloroethene side left {
     trichloroethene
-    <-> . +o2 +h
-    trichloroacetate
-  }
-
-  branch from trichloroethene side right {
-    trichloroethene
-    <-> . +o2 +nadph +h +nadp +chloride
-    dichloroacetate
-  }
-
-  branch from glutathione side left {
-    glutathione
-    <-> . +s_pgj2_glutathione
-    prostaglandin_j2
+    <-> . +h2o
+    2_2_2_trichloroethanol
   }
 
   branch from glutathione side right {
     glutathione
-    <-> . +prostaglandin_a2
-    s_pga2_glutathione
+    <-> ec_2_5_1_18 [2.5.1.18] +indol_3_ylmethylisothiocyanate_glutathione
+    indolylmethylisothiocyanate
   }
 
-  branch from nadp side left {
-    nadp
-    <-> . +22_hydroxy_docosanoyl_coa +h +nadph
-    22_oxo_docosanoyl_coa
+  branch from glutathione side left {
+    glutathione
+    <-> . +3_hydroxykynurenine_o_beta_d_glucoside +h2o
+    glutathionyl_3_hydroxykynurenine_glucoside
   }
 
   branch from nadp side right {
     nadp
-    <-> . +h +nadph +22_oxo_docosanoyl_coa +h2o
-    22_carboxy_docosanoyl_coa
+    <-> ec_1_1_1_184 [1.1.1.184] +indan_1_one +h +nadph
+    r_indan_1_ol
   }
 
-  branch from h2o side left {
-    h2o
-    <-> . +holyrine_b
-    o_demethyl_n_demethyl_staurosporine
+  branch from nadp side left {
+    nadp
+    <-> ec_1_1_1_1 [1.1.1.1] +butan_2_one +h +nadph
+    2s_butan_2_ol
   }
 
   branch from h2o side right {
     h2o
-    <-> . +melatonin +h2o2
-    n_gamma_acetyl_n_2_formyl_5_methoxykynurenamine
+    <-> ec_3_4_24_27 [3.4.24.27] +l_leucyl_l_alanine +phe_gly
+    phe_gly_leu_ala
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_4_24_27 [3.4.24.27] +leu_gly_pro +z_gly_pro
+    z_gly_pro_leu_gly_pro
+  }
+
+  branch from dichloroacetyl_chloride side right {
+    dichloroacetyl_chloride
+    <-> . +h +chloride +h2o
+    dichloroacetate
+  }
+
+  branch from chloride side left {
+    chloride
+    <-> . +trans_4_carboxymethylenebut_2_en_4_olide
+    5_chloromuconolactone
+  }
+
+  branch from chloride side right {
+    chloride
+    <-> . +trans_4_carboxymethylenebut_2_en_4_olide
+    r_2_chloro_5_oxo_2_5_dihydro_2_furyl_acetate
+  }
+
+  branch from glutathione side left {
+    glutathione
+    <-> . +5z_9e_14z_8xi_11r_12s_11_12_epoxy_8_hydroxyicos +h
+    11_s_15_s_dihydroxy_14_r_s_glutathionyl_5_z_8_z
+  }
+
+  branch from glutathione side right {
+    glutathione
+    <-> ec_2_3_2_2 [2.3.2.2] +l_alanine +h +cysgly
+    gamma_glu_ala
+  }
+
+  branch from h side left {
+    h
+    <-> ec_4_2_2_13 [4.2.2.13] +1_5_anhydro_d_fructose +2_4_dinitrophenol
+    2_4_dinitrophenyl_alpha_d_glucopyranoside
+  }
+
+  branch from h side right {
+    h
+    <-> ec_1_1_1_145 [1.1.1.145] +androst_5_ene_3_17_dione +nadph +nadp
+    3beta_hydroxyandrost_5_en_17_one
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +malonyl_coa +nadp +h2o +nadph
+    3_oxopropanoyl_coa
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_14_14_1 [1.14.14.1] +h +androst_4_ene_3_17_dione +nadph +nadp +h2o
+    19_hydroxyandrost_4_ene_3_17_dione
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_1_1_184 [1.1.1.184] +1_4_nitrophenyl_ethanol +nadp +h
+    4_nitroacetophenone
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_1_1_184 [1.1.1.184] +cyclohex_2_en_1_ol +nadp +h
+    cyclohex_2_enone
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_1_1_184 [1.1.1.184] +h +nadph +cyclohexanone
+    cyclohexanol
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_1_1_184 [1.1.1.184] +h +trichloroacetate +nadph
+    chloral_hydrate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_4_21_26 [3.4.21.26] +coumarin_120 +z_gly_pro
+    z_gly_pro_amc
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_1_1_19 [3.1.1.19] +d_glucurono_3_6_lactone
+    alpha_d_glucuronic_acid
   }
 }

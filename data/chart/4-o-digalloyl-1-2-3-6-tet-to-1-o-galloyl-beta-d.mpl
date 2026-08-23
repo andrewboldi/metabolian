@@ -28,37 +28,61 @@ pathway 4-o-digalloyl-1-2-3-6-tet-to-1-o-galloyl-beta-d "4-O-digalloyl-1,2,3,6-t
 
   branch from h side left {
     h
-    <-> ec_2_3_1_24 [2.3.1.24] +9z_octadecenoyl_coa +sphing_4_enine +coa
-    n_oleoyl_d_sphingosine
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    obyanamide
   }
 
   branch from h side right {
     h
-    <-> ec_2_3_1_24 [2.3.1.24] +hexanoyl_coa +sphing_4_enine +coa
-    n_hexanoyl_d_erythro_sphingosine
-  }
-
-  branch from 1_2_3_4_6_pentakis_o_galloyl_beta_d_glucose side left {
-    1_2_3_4_6_pentakis_o_galloyl_beta_d_glucose
-    <-> . +beta_d_glucose +h +1_o_galloyl_beta_d_glucose
-    3_o_digalloyl_1_2_4_6_tetra_o_beta_d_galloylgluc
-  }
-
-  branch from 1_o_galloyl_beta_d_glucose side right {
-    1_o_galloyl_beta_d_glucose
-    <-> . +beta_d_glucose +2_o_digalloyl_1_3_4_6_tetra_o_beta_d_galloylgluc
-    2_3_o_digalloyl_1_4_6_tri_o_beta_d_galloylglucos
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +nostocyclamide +phosphate +nostocyclamide +h2o
+    atp
   }
 
   branch from glucose side left {
     glucose
-    <-> ec_1_1_3_10 [1.1.3.10] +2_dehydro_d_glucose +tetrabromohydroquinone
-    tetrabromo_1_4_benzoquinone
+    <-> ec_2_3_1_72 [2.3.1.72] +myo_inositol +1_o_indol_3_ylacetyl_beta_d_glucose
+    indole_3_acetyl_myo_inositol
   }
 
   branch from glucose side right {
     glucose
-    <-> ec_1_1_3_10 [1.1.3.10] +2_dehydro_d_glucose +2_6_dimethyl_1_4_benzenediol
-    2_6_dimethyl_1_4_benzoquinone
+    <-> ec_3_2_1_182 [3.2.1.182] +dimboa +h +h2o
+    dimboa_beta_d_glucoside
+  }
+
+  branch from glucose side left {
+    glucose
+    <-> ec_5_3_1_5 [5.3.1.5]
+    d_fructofuranose
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> ec_2_7_1_1 [2.7.1.1] +itp +d_glucose_6_phosphate +h
+    idp
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    nostocyclamide_m
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    raocyclamide_a
+  }
+
+  branch from beta_d_glucose side left {
+    beta_d_glucose
+    <-> ec_5_3_1_5 [5.3.1.5]
+    d_fructofuranose
+  }
+
+  branch from beta_d_glucose side right {
+    beta_d_glucose
+    <-> ec_1_1_99_28 [1.1.99.28] +d_fructofuranose +d_sorbitol
+    d_glucono_1_5_lactone
   }
 }

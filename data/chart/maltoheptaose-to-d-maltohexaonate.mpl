@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway maltoheptaose-to-d-maltohexaonate "maltoheptaose to D-maltohexaonate" {
-  spacing 176
+  spacing 170
 
   spine at 0,0 {
     maltoheptaose
@@ -16,27 +16,21 @@ pathway maltoheptaose-to-d-maltohexaonate "maltoheptaose to D-maltohexaonate" {
     d_maltohexaonate
   }
 
-  branch from d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g side left {
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
-    <-> . +d_maltose +beta_d_glucose
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
-  }
-
-  branch from d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g side right {
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
-    <-> .
-    1_4_alpha_d_glucan
-  }
-
   branch from glucose side left {
     glucose
     <-> .
-    alpha_d_glucose
+    aldehydo_d_glucose
   }
 
-  branch from glucose side right {
-    glucose
-    <-> . +maltoheptaose +h2o
-    maltononaose
+  branch from h2o side right {
+    h2o
+    <-> ec_4_2_1_9 [4.2.1.9] +2r_3r_2_3_dihydroxy_3_methylpentanoate
+    r_3_methyl_2_oxopentanoate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +h +adp +phosphate +atp
+    l_djenkolic_acid
   }
 }

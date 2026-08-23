@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-2-dichloroethane-to-hydrogen-donor "1,2-dichloroethane to hydrogen donor" {
-  spacing 208
+  spacing 244
 
   spine at 0,0 {
     1_2_dichloroethane
@@ -28,43 +28,79 @@ pathway 1-2-dichloroethane-to-hydrogen-donor "1,2-dichloroethane to hydrogen don
 
   branch from chloroacetate side right {
     chloroacetate
-    <-> . +h +chloride +h2o
-    chloroacetyl_chloride
+    <-> . +h +succinate +h2o
+    2_chloro_3_oxoadipic_acid
   }
 
   branch from glycolate side left {
     glycolate
-    <-> . +h2o +dgtp +hplus
-    n2_1_hydroxy_2_oxoethyl_dgtp
-  }
-
-  branch from glycolate side right {
-    glycolate
-    <-> . +h2o +gtp +hplus
-    n2_1_hydroxy_2_oxoethyl_gtp
-  }
-
-  branch from glyoxylate side left {
-    glyoxylate
-    <-> ec_4_1_3_13 [4.1.3.13] +3_oxalomalate
-    oxaloacetate
+    <-> . +h2o +gmp +hplus
+    n2_1_hydroxy_2_oxoethyl_gmp
   }
 
   branch from glyoxylate side right {
     glyoxylate
-    <-> ec_2_6_1_112 [2.6.1.112] +s_2_ureidoglycine +glycine
-    oxalurate
+    <-> . +l_phenylalanine +glycine
+    keto_phenylpyruvate
   }
 
-  branch from hydrogen_donor side left {
-    hydrogen_donor
-    <-> . +3_substituted_propionyl_coa +hydrogen_acceptor
-    2_3_dehydroacyl_coa
+  branch from glyoxylate side left {
+    glyoxylate
+    <-> . +l_tryptophan +glycine
+    3_indol_3_yl_pyruvate
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> . +5_s_hete +o2 +hydrogen_acceptor +h2o
-    5_s_11_r_dihete
+    <-> . +2_4_6_trinitrotoluene +gsh +hydrogen_acceptor +h2o
+    s_2_4_dinitro_6_hydroxylaminotoluyl_glutathione
+  }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> . +5_deoxyadenosin_5_yl_radical +2_deoxyadenosine_5_monophosphate +hydrogen_acceptor +5_deoxyadenosine
+    4_phospho_dehydrooxetanocin
+  }
+
+  branch from chloroacetate side right {
+    chloroacetate
+    <-> . +h +chloride +h2o
+    chloroacetyl_chloride
+  }
+
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> . +3_iodo_l_thyronine +iodide +hplus +hydrogen_donor
+    3_5_diiodo_l_thyronine
+  }
+
+  branch from hydrogen_acceptor side right {
+    hydrogen_acceptor
+    <-> . +3_amino_5_6_7_7a_tetrahydro_1h_pyrrolizin_1_one +hydrogen_donor
+    3_amino_5_6_7_7a_tetrahydro_1h_pyrrolizin_1_ol
+  }
+
+  branch from glyoxylate side left {
+    glyoxylate
+    <-> . +n_n_dimethyl_l_argininium +glycine
+    5_3_3_dimethylguanidino_2_oxopentanoate
+  }
+
+  branch from glyoxylate side right {
+    glyoxylate
+    <-> . +2s_2_ammonio_5_iminio_methylamino_methyl_amino +glycine
+    5_3_methylguanidino_2_oxopentanoate
+  }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> . +l_thyronine +iodide +hydrogen_acceptor +hplus
+    3_iodo_l_thyronine
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> . +3_3_diiodothyronamine +iodide +hydrogen_acceptor +hplus
+    3_3_5_triiodothyronamine
   }
 }

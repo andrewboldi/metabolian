@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-2-4-diazaniumylbutyrate-to-hypoxanthine "L-2,4-diazaniumylbutyrate to hypoxanthine" {
-  spacing 224
+  spacing 212
 
   spine at 0,0 {
     l_2_4_diazaniumylbutyrate
@@ -16,17 +16,5 @@ pathway l-2-4-diazaniumylbutyrate-to-hypoxanthine "L-2,4-diazaniumylbutyrate to 
     5_s_methyl_5_thioinosine
     <-> ec_2_4_2_44 [2.4.2.44] +pi -hypoxanthine
     s_methyl_5_thio_d_ribose_1_phosphate
-  }
-
-  branch from 5_s_methyl_5_thioadenosine side left {
-    5_s_methyl_5_thioadenosine
-    <-> . +n1_methylpseudouridine_5_monophosphate_1 +sam +hplus
-    n1_methyl_n3_3s_3_amino_3_carboxypropyl_pseudour
-  }
-
-  branch from 5_s_methyl_5_thioadenosine side right {
-    5_s_methyl_5_thioadenosine
-    <-> ec_2_5_1_157 [2.5.1.157] +sam +n1_methyl_n3_3s_3_amino_3_carboxypropyl_pseudour +hplus
-    n1_methylpseudouridine_5_monophosphate_1
   }
 }

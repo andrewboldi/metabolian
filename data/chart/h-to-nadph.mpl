@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway h-to-nadph "H to NADPH" {
-  spacing 340
+  spacing 320
 
   spine at 0,0 {
     h
@@ -14,65 +14,5 @@ pathway h-to-nadph "H to NADPH" {
     2_deoxy_d_glucose
     <-> ec_1_1_1_179 [1.1.1.179] +nadp -2_deoxy_d_glucono_1_5_lactone -nadph
     h
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +h +adp +13_16_19_docosatrienoic_acid +phosphate +13_16_19_docosatrienoic_acid
-    atp
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    all_cis_docosa_7_10_13_16_tetraenoic_acid
-  }
-
-  branch from 2_deoxy_d_glucose side left {
-    2_deoxy_d_glucose
-    <-> ec_2_7_1_1 [2.7.1.1] +h +atp +2_deoxy_d_glucose_6_phosphate
-    adp
-  }
-
-  branch from 2_deoxy_d_glucose side right {
-    2_deoxy_d_glucose
-    <-> ec_2_7_1_1 [2.7.1.1] +h +phosphate +h2o
-    2_deoxy_d_glucose_6_phosphate
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_8_1_4 [1.8.1.4] +nadh +s_lipoic_acid +h
-    s_dihydrolipoic_acid
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_8_1_4 [1.8.1.4] +nadh +h +1_2_diselenolane_3_pentanoic_acid
-    6_8_diselenyloctanoic_acid
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    tetracosatetraenoic_acid_n_6
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    6z_9z_12z_15z_18z_tetracosapentaenoate
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> . +malonyl_coa +2s_2_methylbutanoyl_coa +h +r_methylmalonyl_coa +nadp +6_8a_seco_6_8a_deoxy_5_oxoavermectin_1a_aglycone +coa +h2o
-    co2
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> . +2_methylpropanoyl_coa +malonyl_coa +h +r_methylmalonyl_coa +co2 +nadp +coa +h2o
-    6_8a_seco_6_8a_deoxy_5_oxoavermectin_2b_aglycone
   }
 }

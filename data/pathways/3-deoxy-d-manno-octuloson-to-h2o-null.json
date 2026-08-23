@@ -1,0 +1,472 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-deoxy-d-manno-octuloson-to-h2o-null",
+  "name": "3-deoxy-D-manno-octuloson… to H2O",
+  "category": "lipid-metabolism",
+  "summary": "A 3-step route from 3-deoxy-D-manno-octulosonate to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR163918"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_deoxy_d_manno_octulosonate",
+      "name": "3-deoxy-D-manno-octulosonate",
+      "short": "3-deoxy-D-manno-oct…",
+      "formula": "C8H13O8",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM734869"
+      }
+    },
+    {
+      "id": "3_deoxy_alpha_d_manno_oct_2_ulosonate",
+      "name": "3-deoxy-alpha-D-manno-oct-2-ulosonate",
+      "short": "3-deoxy-alpha-D-man…",
+      "formula": "C8H13O8",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM734870"
+      }
+    },
+    {
+      "id": "kdo_lipid_a",
+      "name": "Kdo-lipid A",
+      "formula": "C102H185N2O32P2",
+      "charge": -5,
+      "xrefs": {
+        "metanetx": "MNXM18817"
+      }
+    },
+    {
+      "id": "alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_e_coli",
+      "name": "alpha-Kdo-(2->4)-alpha-Kdo-(2->6)-lipid A (E. coli)",
+      "short": "alpha-Kdo-(2->4)-al…",
+      "formula": "C110H196N2O39P2",
+      "charge": -6,
+      "xrefs": {
+        "metanetx": "MNXM730505"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_2_1_144",
+      "name": "3-deoxyoctulosonase",
+      "ec": [
+        "3.2.1.144"
+      ]
+    },
+    {
+      "id": "ec_3_6_3_39",
+      "name": "EC 3.6.3.39",
+      "ec": [
+        "3.6.3.39"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR163918",
+      "substrates": [
+        {
+          "metabolite": "3_deoxy_d_manno_octulosonate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_deoxy_alpha_d_manno_oct_2_ulosonate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR163918"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR163918"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "3-deoxyoctulosonase",
+      "ec": "3.2.1.144",
+      "substrates": [
+        {
+          "metabolite": "kdo_lipid_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_deoxy_alpha_d_manno_oct_2_ulosonate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_e_coli",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_144"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR117223"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR117223"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR101082",
+      "ec": "3.6.3.39",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_e_coli",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_e_coli",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_3_39"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR101082"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR101082"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3_deoxy_alpha_d_manno_oct_2_ulosonate_3-deoxy-d-manno-octuloson-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_deoxy_alpha_d_manno_oct_2_ulosonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-deoxy-d-manno-octuloson-to-h2o"
+      },
+      "note": "Shares 3-deoxy-alpha-D-manno-oct-2-ulosonate with 3-deoxy-D-manno-octuloson… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM734870"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_deoxy_alpha_d_manno_oct_2_ulosonate_3-geranylgeranylindole-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_deoxy_alpha_d_manno_oct_2_ulosonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-geranylgeranylindole-to-fmn"
+      },
+      "note": "Shares 3-deoxy-alpha-D-manno-oct-2-ulosonate with 3-Geranylgeranylindole to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM734870"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_deoxy_alpha_d_manno_oct_2_ulosonate_3-geranylgeranylindole-to-fmn-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_deoxy_alpha_d_manno_oct_2_ulosonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-geranylgeranylindole-to-fmn-null"
+      },
+      "note": "Shares 3-deoxy-alpha-D-manno-oct-2-ulosonate with 3-Geranylgeranylindole to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM734870"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_deoxy_alpha_d_manno_oct_2_ulosonate_d-cellobiono-1-5-lactone-to-d-cellotetraonate-nu",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_deoxy_alpha_d_manno_oct_2_ulosonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-cellobiono-1-5-lactone-to-d-cellotetraonate-nu"
+      },
+      "note": "Shares 3-deoxy-alpha-D-manno-oct-2-ulosonate with D-cellobiono-1,5-lactone to D-cellotetraonate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM734870"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_deoxy_alpha_d_manno_oct_2_ulosonate_udp-to-gdp-beta-l-galactose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_deoxy_alpha_d_manno_oct_2_ulosonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-gdp-beta-l-galactose"
+      },
+      "note": "Shares 3-deoxy-alpha-D-manno-oct-2-ulosonate with UDP to GDP-beta-L-galactose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM734870"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_kdo_lipid_a_3-8-dideoxy-8-oxo-alpha-d-to-adp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "kdo_lipid_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-8-dideoxy-8-oxo-alpha-d-to-adp"
+      },
+      "note": "Shares Kdo-lipid A with 3,8-dideoxy-8-oxo-alpha-D… to ADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM18817"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_kdo_lipid_a_3-8-dideoxy-8-oxo-alpha-d-to-adp-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "kdo_lipid_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-8-dideoxy-8-oxo-alpha-d-to-adp-null"
+      },
+      "note": "Shares Kdo-lipid A with 3,8-dideoxy-8-oxo-alpha-D… to ADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM18817"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_kdo_lipid_a_3-deoxy-d-manno-octuloson-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "kdo_lipid_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-deoxy-d-manno-octuloson-to-h2o"
+      },
+      "note": "Shares Kdo-lipid A with 3-deoxy-D-manno-octuloson… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM18817"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_kdo_lipid_a_methylenecyclopropyl-p-to-atp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "kdo_lipid_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "methylenecyclopropyl-p-to-atp"
+      },
+      "note": "Shares Kdo-lipid A with β-(methylenecyclopropyl)p… to ATP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM18817"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_kdo_lipid_a_nadh-to-s-2-hydroxyoctanenitrile-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "kdo_lipid_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-s-2-hydroxyoctanenitrile-null"
+      },
+      "note": "Shares Kdo-lipid A with NADH to (S)-2-Hydroxyoctanenitrile.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM18817"
+          }
+        ]
+      }
+    }
+  ]
+}

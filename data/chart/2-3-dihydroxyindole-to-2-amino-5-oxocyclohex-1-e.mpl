@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-3-dihydroxyindole-to-2-amino-5-oxocyclohex-1-e "2,3-dihydroxyindole to 2-amino-5-oxocyclohex-1-e…" {
-  spacing 240
+  spacing 252
 
   spine at 0,0 {
     2_3_dihydroxyindole
@@ -18,37 +18,49 @@ pathway 2-3-dihydroxyindole-to-2-amino-5-oxocyclohex-1-e "2,3-dihydroxyindole to
 
   branch from anthranilate side left {
     anthranilate
-    <-> ec_2_3_1_113 [2.3.1.113] +malonyl-coa +coa
-    n_malonylanthranilate
+    <-> ec_4_1_1_24 [4.1.1.24] +hplus +co2
+    aniline
   }
 
   branch from anthranilate side right {
     anthranilate
-    <-> ec_4_1_3_27 [4.1.3.27] +chorismate +glutamine +pyruvate +hplus
-    glutamate
-  }
-
-  branch from anthraniloyl_coa side left {
-    anthraniloyl_coa
-    <-> ec_2_3_1_262 [2.3.1.262] +malonyl-coa +hplus +co2 +coa
-    2_aminobenzoylacetyl_coa
-  }
-
-  branch from anthraniloyl_coa side right {
-    anthraniloyl_coa
-    <-> . +l_cysteine +coa
-    s_anthraniloyl_l_cysteine
+    <-> ec_1_14_14_8 [1.14.14.8] +fadh2 +o2 +fad +h2o +hplus
+    3_hydroxyanthranilate
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_120 [4.2.3.120] +gpp
-    pinene
+    <-> ec_4_2_3_80 [4.2.3.80] +fpp
+    longipinene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_113 [4.2.3.113] +gpp
-    terpinolene
+    <-> ec_2_5_1_96 [2.5.1.96] +fpp
+    15_cis_4_4_diapophytoene
+  }
+
+  branch from anthranilate side left {
+    anthranilate
+    <-> ec_3_7_1_13 [3.7.1.13] +2e_4e_6_2_aminophenyl_2_hydroxy_6_oxohexa_2_4_d +h2o +hplus
+    2e_2_hydroxypenta_2_4_dienoate
+  }
+
+  branch from anthranilate side right {
+    anthranilate
+    <-> . +acetyl_coa +coa
+    n_acetylanthranilate
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +15_cis_4_4_diapophytoene
+    presqualene_pp
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_3_6_1_55 [3.6.1.55] +8_oxo_dgtp +h2o +hplus
+    8_oxo_dgmp
   }
 }

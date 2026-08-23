@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-o-palmityl-2-acetyl-sn-to-1-hexadecyl-2-hexade "1-O-palmityl-2-acetyl-sn-… to 1-hexadecyl-2-hexadecanoy…" {
-  spacing 164
+  spacing 188
 
   spine at 0,0 {
     1_o_palmityl_2_acetyl_sn_glycerol
@@ -16,15 +16,39 @@ pathway 1-o-palmityl-2-acetyl-sn-to-1-hexadecyl-2-hexade "1-O-palmityl-2-acetyl-
     1_hexadecyl_2_hexadecanoyl_sn_glycero_3_phosphoc
   }
 
-  branch from cytidine_5_monophosphate side left {
-    cytidine_5_monophosphate
-    <-> . +d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_glc_1_1_cer +cmp_n_acetyl_neuraminate +hplus
-    d_galactosyl_1_3_n_acetyl_neuraminosyl_2_6_n_ac
+  branch from 1_o_palmityl_2_acetyl_sn_glycerol side left {
+    1_o_palmityl_2_acetyl_sn_glycerol
+    <-> . +linoleoyl_coa +coa
+    1_palmityl_2_acetyl_3_linoleoyl_sn_glycerol
   }
 
-  branch from cytidine_5_monophosphate side right {
-    cytidine_5_monophosphate
-    <-> . +gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac_2_3_gal_1 +cmp_n_acetyl_neuraminate +hplus
-    d_galactosyl_1_3_n_acetyl_neuraminosyl_2_6_n_ac
+  branch from 1_o_palmityl_2_acetyl_sn_glycerol side right {
+    1_o_palmityl_2_acetyl_sn_glycerol
+    <-> . +oleoyl_coa +coa
+    1_palmityl_2_acetyl_3_oleoyl_sn_glycerol
+  }
+
+  branch from 1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine side left {
+    1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine
+    <-> ec_3_3_2_2 [3.3.2.2] +h2o +2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate
+    ch2_containing_aldehyde
+  }
+
+  branch from 1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine side right {
+    1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine
+    <-> . +oleoyl_coa +coa
+    1_z_alk_1_enyl_2_oleoyl_sn_glycero_3_phosphoetha
+  }
+
+  branch from palmitoyl_coa side left {
+    palmitoyl_coa
+    <-> . +nonan_1_ol +coa
+    nonyl_palmitate
+  }
+
+  branch from palmitoyl_coa side right {
+    palmitoyl_coa
+    <-> . +octadecan_1_ol +coa
+    stearyl_palmitate
   }
 }

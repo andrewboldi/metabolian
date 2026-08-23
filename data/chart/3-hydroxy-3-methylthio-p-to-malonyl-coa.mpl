@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-hydroxy-3-methylthio-p-to-malonyl-coa "3-hydroxy-3-(methylthio)p… to malonyl-CoA" {
-  spacing 288
+  spacing 276
 
   spine at 0,0 {
     3_hydroxy_3_methylthio_propanoyl_coa
@@ -14,17 +14,5 @@ pathway 3-hydroxy-3-methylthio-p-to-malonyl-coa "3-hydroxy-3-(methylthio)p… to
     3_oxopropanoate
     <-> ec_1_2_1_75 [1.2.1.75] +nadp +coa -nadph -hplus
     malonyl-coa
-  }
-
-  branch from malonyl-coa side left {
-    malonyl-coa
-    <-> ec_2_3_1_172 [2.3.1.172] +pelargonidin_3_o_6_o_caffeoyl_d_glucoside_5_o_d +coa
-    4_demalonylsalvianin
-  }
-
-  branch from malonyl-coa side right {
-    malonyl-coa
-    <-> ec_2_3_1_159 [2.3.1.159] +n_methylanthraniloyl_coa +hplus +co2 +coa +h2o
-    1_3_dihydroxy_n_methylacridone
   }
 }

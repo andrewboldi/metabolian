@@ -18,13 +18,13 @@ pathway tricarballylate-to-d-erythro-isocitrate "tricarballylate to D-erythro-is
 
   branch from d_threo_isocitrate side left {
     d_threo_isocitrate
-    <-> ec_4_2_1_3 [4.2.1.3]
-    citrate
-  }
-
-  branch from d_threo_isocitrate side right {
-    d_threo_isocitrate
     <-> . +nadp +nadph +hplus
     s_oxalatosuccinate
+  }
+
+  branch from tricarballylate side right {
+    tricarballylate
+    <-> ec_3_1_1_87 [3.1.1.87] +fumonisin_b1 +h2o +hplus
+    2s_3s_5r_10r_12s_14s_15r_16r_2_amino_12_16_dime
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway c-terminal-gly-l-val-l-ty-to-nicotinamide "C-terminal Gly-L-Val-L-Ty… to nicotinamide" {
-  spacing 340
+  spacing 332
 
   spine at 0,0 {
     c_terminal_gly_l_val_l_tyr_1
@@ -18,18 +18,6 @@ pathway c-terminal-gly-l-val-l-ty-to-nicotinamide "C-terminal Gly-L-Val-L-Ty… 
     c_terminal_o_adp_d_ribosyl_glycine_2
   }
 
-  branch from hydrogen_acceptor side left {
-    hydrogen_acceptor
-    <-> ec_1_17_99_10 [1.17.99.10] +dehydrocholesterol_7 +h2o +hydrogen_donor
-    cholesta_5_7_dien_3_25_diol
-  }
-
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> ec_1_17_99_10 [1.17.99.10] +3_oxocholestane +h2o +hydrogen_donor
-    25_hydroxy_3_oxocholestane
-  }
-
   branch from glycino_1_group side left {
     glycino_1_group
     <-> . +gly_gly +h2o
@@ -40,17 +28,5 @@ pathway c-terminal-gly-l-val-l-ty-to-nicotinamide "C-terminal Gly-L-Val-L-Ty… 
     3_amino_5_4_hydroxyphenyl_methyl_4_4_dimethylpyr
     <-> . +o2 +h2o2 +hplus
     5_4_hydroxyphenyl_methyl_3_imino_4_4_dimethylpyr
-  }
-
-  branch from nicotinamide side left {
-    nicotinamide
-    <-> . +n6_hexadecanoyl_l_lysine +nad +h2o +l_lysinium
-    2_o_hexadecanoyl_adp_d_ribose
-  }
-
-  branch from nicotinamide side right {
-    nicotinamide
-    <-> . +n6_lauroyl_l_lysine +nad +h2o +l_lysinium
-    2_o_dodecanoyl_adp_d_ribose
   }
 }

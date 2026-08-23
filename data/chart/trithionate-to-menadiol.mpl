@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway trithionate-to-menadiol "trithionate to menadiol" {
-  spacing 324
+  spacing 340
 
   spine at 0,0 {
     trithionate
@@ -26,16 +26,16 @@ pathway trithionate-to-menadiol "trithionate to menadiol" {
     menadiol
   }
 
-  branch from sulfate side left {
-    sulfate
-    <-> . +z_3_hydroxypropyl_n_sulfonatooxy_methanimidothi
-    3_hydroxypropyl_isothiocyanate
+  branch from trioxidosulfanidosulfate side left {
+    trioxidosulfanidosulfate
+    <-> ec_2_8_5_2 [2.8.5.2] +3_disulfanyl_l_alanine +iron +fe2 +hplus
+    s_2_sulfodisulfanyl_l_cysteine_1
   }
 
-  branch from sulfate side right {
-    sulfate
-    <-> . +z_4_methylsufinylbutyl_n_sulfonatooxy_methanimi
-    sulforaphane
+  branch from trioxidosulfanidosulfate side right {
+    trioxidosulfanidosulfate
+    <-> ec_2_8_5_2 [2.8.5.2] +l_cysteine +iron +fe2 +hplus
+    s_sulfosulfanyl_l_cysteine_1
   }
 
   branch from 6_decylubiquinol side left {
@@ -52,14 +52,14 @@ pathway trithionate-to-menadiol "trithionate to menadiol" {
 
   branch from tetrathionate side left {
     tetrathionate
-    <-> . +thiosulfate +2_demethylmenaquinone_8
-    2_demethylmenaquinol_8
+    <-> ec_1_8_5_2 [1.8.5.2] +thiosulfate +phylloquinone
+    phylloquinol
   }
 
   branch from tetrathionate side right {
     tetrathionate
-    <-> . +thiosulfate +ubiquinone_8
-    ubiquinol_8
+    <-> ec_1_8_5_2 [1.8.5.2] +thiosulfate +2_demethylmenaquinone_8
+    2_demethylmenaquinol_8
   }
 
   branch from s_dihydroorotate side left {
@@ -106,31 +106,79 @@ pathway trithionate-to-menadiol "trithionate to menadiol" {
 
   branch from menadione side right {
     menadione
+    <-> ec_1_10_5_1 [1.10.5.1] +beta_nicotinamide_d_riboside +menadiol +1_d_ribofuranosyl_1_4_dihydronicotinamide
+    h
+  }
+
+  branch from menadione side left {
+    menadione
     <-> ec_1_3_5_3 [1.3.5.3] +protoporphyrin_ix +menadiol
     protoporphyrinogen_ix
   }
 
-  branch from o2 side left {
-    o2
-    <-> . +nadh +uracil +h +nad
-    ureidoperacrylic_acid
-  }
-
   branch from o2 side right {
     o2
-    <-> . +co2 +3_hydroxyisovaleric_acid +4_methyl_2_oxopentanoate
-    h
+    <-> . +fadh2 +5z_8z_11z_14z_eicosatetraenoate +h +5_6_eet +h2o
+    fad
   }
 
-  branch from superoxide side left {
+  branch from o2 side left {
+    o2
+    <-> . +fadh2 +5z_8z_11z_14z_eicosatetraenoate +h +fad +h2o
+    11s_12r_eet
+  }
+
+  branch from superoxide side right {
     superoxide
     <-> . +chromium +nadph +o2 +nadp +hplus
     chromium
   }
 
-  branch from superoxide side right {
+  branch from superoxide side left {
     superoxide
     <-> . +nadh +o2 +chromium +nad +hplus
     chromium
+  }
+
+  branch from tetrathionate side right {
+    tetrathionate
+    <-> ec_1_8_5_2 [1.8.5.2] +thiosulfate +ubiquinone_8
+    ubiquinol_8
+  }
+
+  branch from tetrathionate side left {
+    tetrathionate
+    <-> ec_1_8_5_2 [1.8.5.2] +thiosulfate +ubiquinone_10
+    ubiquinol_10
+  }
+
+  branch from orotate side right {
+    orotate
+    <-> ec_1_3_5_2 [1.3.5.2] +ubiquinol_7 +s_dihydroorotate
+    ubiquinone_7
+  }
+
+  branch from orotate side left {
+    orotate
+    <-> ec_1_3_5_2 [1.3.5.2] +plastoquinol_9 +s_dihydroorotate
+    plastoquinone_9
+  }
+
+  branch from ubiquinone_6 side right {
+    ubiquinone_6
+    <-> ec_1_6_99_3 [1.6.99.3] +h +ubiquinol_6 +nad
+    nadh
+  }
+
+  branch from ubiquinone_6 side left {
+    ubiquinone_6
+    <-> ec_1_3_5_1 [1.3.5.1] +succinate +ubiquinol_6
+    fumarate
+  }
+
+  branch from ubiquinol_6 side right {
+    ubiquinol_6
+    <-> ec_1_3_5_1 [1.3.5.1] +ubiquinone_6 +h +fad
+    fadh2
   }
 }

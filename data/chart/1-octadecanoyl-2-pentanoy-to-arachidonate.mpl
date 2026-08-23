@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-octadecanoyl-2-pentanoy-to-arachidonate "1-octadecanoyl-2-pentanoy… to arachidonate" {
-  spacing 200
+  spacing 230
 
   spine at 0,0 {
     1_octadecanoyl_2_pentanoyl_sn_glycero_3_phosphoc
@@ -16,51 +16,15 @@ pathway 1-octadecanoyl-2-pentanoy-to-arachidonate "1-octadecanoyl-2-pentanoy… 
     1_stearoyl_sn_glycero_3_phosphocholine
   }
 
-  branch from valerate side left {
-    valerate
-    <-> . +h2o +coa +hplus
-    pentanoyl_coa
-  }
 
-  branch from valerate side right {
-    valerate
-    <-> . +nadp +h2o +nadph +hplus
-    pentanal
-  }
 
-  branch from 1_stearoyl_sn_glycero_3_phosphocholine side left {
-    1_stearoyl_sn_glycero_3_phosphocholine
-    <-> . +1_2_distearoyl_sn_glycero_3_phosphocholine +1_hexadecanoyl_sn_glycero_3_phosphocholine
-    1_hexadecanoyl_2_octadecanoyl_sn_glycero_3_phosp
-  }
 
-  branch from 1_stearoyl_sn_glycero_3_phosphocholine side right {
-    1_stearoyl_sn_glycero_3_phosphocholine
-    <-> . +1_stearoyl_2_palmitoyl_sn_glycero_3_phosphocholi +h2o +hplus
-    palmitate
-  }
 
-  branch from 1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphoch side left {
-    1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphoch
-    <-> . +n_acetylsphingosine +1_stearoyl_sn_glycero_3_phosphocholine
-    1_o_arachidonoyl_n_acetylsphingosine
-  }
 
-  branch from 1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphoch side right {
-    1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphoch
-    <-> . +o2
-    1_stearoyl_2_15_hydroperoxyarachidonoyl_sn_glyce
-  }
 
-  branch from arachidonate side left {
-    arachidonate
-    <-> . +o2
-    9_r_hpete
-  }
 
-  branch from arachidonate side right {
-    arachidonate
-    <-> . +1_arachidonyl_2_palmityl_sn_glycero_3_phosphocho +h2o +hplus
-    2_hexadecyl_sn_glycero_3_phosphocholine
-  }
+
+
+
+
 }

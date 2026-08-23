@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 7-9-10-trihydroxy-3-2-ox-to-m-viriditoxin "7,9,10-trihydroxy-3-(2-ox… to (M)-viriditoxin" {
-  spacing 170
+  spacing 158
 
   spine at 0,0 {
     7_9_10_trihydroxy_3_2_oxopropyl_1h_benzo_g_isoch
@@ -16,18 +16,6 @@ pathway 7-9-10-trihydroxy-3-2-ox-to-m-viriditoxin "7,9,10-trihydroxy-3-(2-ox… 
     semiviriditoxin
     <-> . +o2 -h2o
     m_viriditoxin
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +3_4_5_o_trimethylmyricetin_3_7_diolate +sam
-    3_3_4_5_o_tetramethylmyricetin_7_olate
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +serotonin +sam +hplus
-    5_methoxytryptamine
   }
 
   branch from semiviriditoxin side left {

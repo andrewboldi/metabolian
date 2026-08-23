@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1d-myo-inositol-to-cytidine-5-monophosphate "1D-myo-inositol… to cytidine 5'-monophosphate" {
-  spacing 284
+  spacing 266
 
   spine at 0,0 {
     1d_myo_inositol_1_4_bisphosphate
@@ -20,27 +20,9 @@ pathway 1d-myo-inositol-to-cytidine-5-monophosphate "1D-myo-inositol… to cytid
     bis_1l_myo_inositol_3_1_phosphate_1_phosphate
   }
 
-  branch from ppi side left {
-    ppi
-    <-> . +gpp
-    limonene
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +gpp
-    thujene
-  }
-
-  branch from cytidine_5_monophosphate side left {
-    cytidine_5_monophosphate
-    <-> . +ganglioside_gd3 +cmp_n_acetyl_9_o_acetylneuraminate +hplus
-    n_acetyl_9_o_acetylneuraminosyl_2_8_n_acetyl_ne
-  }
-
-  branch from cytidine_5_monophosphate side right {
-    cytidine_5_monophosphate
-    <-> . +cmp_n_acetyl_9_o_acetylneuraminate +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +hplus
-    n_acetyl_9_o_acetylneuraminosyl_2_3_d_galactosy
+  branch from 1d_myo_inositol_1_4_bisphosphate side left {
+    1d_myo_inositol_1_4_bisphosphate
+    <-> ec_3_1_3_56 [3.1.3.56] +h2o +pi
+    1d_myo_inositol_1_4_5_trisphosphate
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway butanal-to-acetate "butanal to acetate" {
-  spacing 206
+  spacing 230
 
   spine at 0,0 {
     butanal
@@ -20,55 +20,79 @@ pathway butanal-to-acetate "butanal to acetate" {
 
   branch from o2 side left {
     o2
-    <-> . +leukotriene_b4
-    5s_hydroxy_6e_8z_11z_14z_eicosatetraenoate
+    <-> ec_1_5_3_25 [1.5.3.25] +n_1_deoxy_d_fructos_1_yl_l_valine +h2o +d_glucosone +h2o2
+    l_valine
   }
 
   branch from o2 side right {
     o2
-    <-> . +ubiquinol_2 +ubiquinone_2 +h2o
-    pmf
-  }
-
-  branch from butan_1_aminium side left {
-    butan_1_aminium
-    <-> ec_3_5_1_91 [3.5.1.91] +formate +h2o
-    n_butylformamide
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_4_11_4 [3.4.11.4] +glycine +gly_phe
-    gly_gly_phe
+    <-> . +n_1_deoxy_d_fructos_1_yl_l_valine +h +h2o2
+    3_methyl_2_e_3s_4r_5r_3_4_5_6_tetrahydroxy_2_oxo
   }
 
   branch from h2o side left {
     h2o
-    <-> . +glycine +glycyl_dl_phenylalanine
-    gly_gly_phe
+    <-> ec_4_3_1_33 [4.3.1.33] +e_2_aminoethenylphosphonate +h
+    1r_2_amino_1_hydroxyethyl_phosphonate
   }
 
-  branch from nh3 side right {
-    nh3
-    <-> . +n_methylhistaminium +o2 +h2o +h2o2
-    1_methylimidazole_4_acetaldehyde
-  }
-
-  branch from nh3 side left {
-    nh3
-    <-> . +cordycepin +h2o +hplus
-    3_deoxyinosine
-  }
-
-  branch from butyryl_coa side right {
-    butyryl_coa
-    <-> . +carnitine +coa
-    o_butanoyl_l_carnitine
+  branch from h2o side right {
+    h2o
+    <-> ec_3_5_1_90 [3.5.1.90] +2r_2_adenine_3_phospho_1_aminopropane +adenosylcob_iii_yrate +h
+    coalpha_alpha_adenin_7_yl_cobeta_adenosylcobamid
   }
 
   branch from butyryl_coa side left {
     butyryl_coa
-    <-> . +nad +nadh +hplus
-    crotonoyl_coa
+    <-> . +l_serine +coa
+    o_butyryl_l_serine
+  }
+
+  branch from nh4 side right {
+    nh4
+    <-> . +agropine +h2o +mannopine
+    h
+  }
+
+  branch from nh4 side left {
+    nh4
+    <-> . +l_citrulline +h2o
+    l_arginine
+  }
+
+  branch from h2o2 side right {
+    h2o2
+    <-> ec_1_5_3_26 [1.5.3.26] +s_2_amino_6_oxohexanoate +1_deoxy_d_fructos_1_yl_amine +o2 +h2o
+    n_6_d_fructosyl_l_lysine
+  }
+
+  branch from h2o2 side left {
+    h2o2
+    <-> . +h +n_6_d_fructosyl_l_lysine +o2
+    2s_6e_2_amino_6_3s_4r_5r_3_4_5_6_tetrahydroxy_2
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +nitric_oxide
+    nitrous_oxide
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +n_demethyl_desepoxyansamitocin_p_3 +h +nadph +n_demethylansamitocin_p_3 +h2o
+    nadp
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +s_4_hydroxy_2_oxopentanoate +h
+    4_methyl_2_oxobutyrolactone
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +nitrite +5_oxo_l_lysine
+    6_diazo_5_oxo_l_norleucine
   }
 }

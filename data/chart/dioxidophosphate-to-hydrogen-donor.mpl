@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dioxidophosphate-to-hydrogen-donor "dioxidophosphate to hydrogen donor" {
-  spacing 182
+  spacing 158
 
   spine at 0,0 {
     dioxidophosphate
@@ -16,33 +16,9 @@ pathway dioxidophosphate-to-hydrogen-donor "dioxidophosphate to hydrogen donor" 
     hydrogen_donor
   }
 
-  branch from succinate side left {
-    succinate
-    <-> . +3_methyldodecanoyl_coa +akg +o2 +co2
-    2_hydroxy_3_methyldodecanoyl_coa
-  }
-
-  branch from succinate side right {
-    succinate
-    <-> ec_1_14_11_58 [1.14.11.58] +n2_3r_3_2_saturated_acyloxy_acyl_l_ornithine +akg +o2 +co2
-    n2_3r_3_2_hydroxyacyloxy_acyl_l_ornithine
-  }
-
   branch from h2 side left {
     h2
     <-> ec_1_12_98_3 [1.12.98.3] +methanophenazine
     dihydromethanophenazine
-  }
-
-  branch from hydrogen_donor side right {
-    hydrogen_donor
-    <-> . +5s_hydroperoxy_18s_hydroxy_6e_8z_11z_14z_16e_ic +hydrogen_acceptor +h2o
-    18s_resolvin_e2
-  }
-
-  branch from hydrogen_donor side left {
-    hydrogen_donor
-    <-> ec_1_14_99_58 [1.14.99.58] +ferroheme_b +o2 +hplus +carbon_monoxide +fe2 +hydrogen_acceptor +h2o
-    biliverdin
   }
 }

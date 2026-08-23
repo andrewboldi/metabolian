@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-naphthyl-beta-d-xylopyr-to-2-naphthol "2-Naphthyl-beta-D-xylopyr… to 2-naphthol" {
-  spacing 200
+  spacing 242
 
   spine at 0,0 {
     2_naphthyl_beta_d_xylopyranoside
@@ -30,25 +30,67 @@ pathway 2-naphthyl-beta-d-xylopyr-to-2-naphthol "2-Naphthyl-beta-D-xylopyr… to
 
   branch from beta_d_xylose side left {
     beta_d_xylose
-    <-> ec_3_2_1_21 [3.2.1.21] +4_methylumbelliferyl_beta_d_xylopyranoside +h2o
-    4_methylumbelliferone
-  }
-
-  branch from beta_d_xylose side right {
-    beta_d_xylose
     <-> .
     d_xylopyranose
   }
 
+  branch from beta_d_xylose side right {
+    beta_d_xylose
+    <-> ec_3_2_1_37 [3.2.1.37] +h2o
+    d_xylobiose
+  }
+
   branch from adenosine_3_5_bismonophosphate side left {
     adenosine_3_5_bismonophosphate
-    <-> . +3_7_12_trihydroxy_5_cholestan_26_oyl_coa +h2o +hplus
-    s_3_7_12_trihydroxy_5_cholestan_26_oyl_4_phospho
+    <-> . +estriol_17_o_d_glucuronide +3_phosphonato_5_adenylyl_sulfate +hplus
+    estriol_17_o_3_sulfo_d_glucuronide
   }
 
   branch from adenosine_3_5_bismonophosphate side right {
     adenosine_3_5_bismonophosphate
-    <-> . +acyl_coa +h2o +hplus
-    s_acyl_4_phosphopantetheine
+    <-> . +etiocholan_3_ol_17_one_3_o_d_glucuronide +3_phosphonato_5_adenylyl_sulfate +hplus
+    etiocholan_3_ol_17_one_3_o_3_sulfo_d_glucuronide
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +3_hydroxypropenoate +propynoate
+    h
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_2_1_164 [3.2.1.164] +d_galactopyranose +d_galp_1_6_d_galp
+    3r_4s_5r_6r_6_2r_3r_4s_5r_6r_3_4_5_trihydroxy_6
+  }
+
+  branch from beta_d_xylose side left {
+    beta_d_xylose
+    <-> ec_3_2_1_37 [3.2.1.37] +h2o +d_xylobiose
+    d_xylp_1_4_d_xylp_1_4_d_xylp
+  }
+
+  branch from 3_phosphonato_5_adenylyl_sulfate side right {
+    3_phosphonato_5_adenylyl_sulfate
+    <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +adenosine_3_5_bismonophosphate +hplus
+    8_o_sulfo_n_acetylneuraminosyl_2_3_d_galactosyl
+  }
+
+  branch from 3_phosphonato_5_adenylyl_sulfate side left {
+    3_phosphonato_5_adenylyl_sulfate
+    <-> . +3_hydroxy_5_cholenoate +adenosine_3_5_bismonophosphate +hplus
+    3_sulfo_5_cholenoate
+  }
+
+  branch from adenosine_3_5_bismonophosphate side right {
+    adenosine_3_5_bismonophosphate
+    <-> . +coa_disulfide +h2o +hplus
+    4_phosphopantetheinyl_coa_disulfide
+  }
+
+  branch from adenosine_3_5_bismonophosphate side left {
+    adenosine_3_5_bismonophosphate
+    <-> . +d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4 +3_phosphonato_5_adenylyl_sulfate +hplus
+    d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4
   }
 }

@@ -4,75 +4,21 @@
 # edit the generator, not this file.
 
 pathway 6r-5-10-methylene-5-6-7-to-h2o "(6R)-5,10-methylene-5,6,7… to H2O" {
-  spacing 212
+  spacing 270
 
   spine at 0,0 {
     6r_5_10_methylene_5_6_7_8_tetrahydrofolate
-    <-> . +sapropterin +h -tetrahydrobiopterin_4a_carbinolamine
-    5_methyltetrahydrofolic_acid
-    <-> . +s_adenosyl_l_homocysteine -s_adenosyl_l_methionine -h
-    6s_5_6_7_8_tetrahydrofolate
-    <-> . +atp +l_glutamate -pentaglutamyl_folate_thf -adp -phosphate -h2o
-    h
+    <-> ec_1_5_1_20 [1.5.1.20] +menadiol -menadione
+    6s_5_methyl_5_6_7_8_tetrahydrofolate
+    <-> ec_1_10_5_1 [1.10.5.1] +n_methyldihydronicotinamide +h +menadione -menadiol
+    1_methylnicotinamide
+    <-> . +h +adp +phosphate -1_methylnicotinamide -h2o
+    atp
   }
 
-  branch from 5_methyltetrahydrofolic_acid side left {
-    5_methyltetrahydrofolic_acid
-    <-> . +6s_5_6_7_8_tetrahydrofolate +h +l_methionine
-    l_homocysteine
-  }
-
-  branch from 6s_5_6_7_8_tetrahydrofolate side right {
-    6s_5_6_7_8_tetrahydrofolate
-    <-> ec_2_1_5_1 [2.1.5.1] +6r_5_10_methylene_5_6_7_8_tetrahydrofolate +sesamin_dicatechol
-    sesamin_monocatechol
-  }
-
-  branch from h side left {
-    h
-    <-> . +13z_16z_19z_docosa_13_16_19_trienoyl_coa +sn_glycerol_3_phosphate +coa
-    1_acylglycerol_3p_13_16_19_doco
-  }
-
-  branch from h side right {
-    h
-    <-> . +10z_13z_16z_docosatrienoyl_coa +sn_glycerol_3_phosphate +coa
-    1_acylglycerol_3p_10_13_16_docosa
-  }
-
-  branch from adp side left {
-    adp
-    <-> . +h +phosphate +atp +h2o
-    ibuprofen_acyl_glucuronide
-  }
-
-  branch from adp side right {
-    adp
-    <-> . +h +phosphate +atp +h2o
-    ibuprofen
-  }
-
-  branch from phosphate side left {
-    phosphate
-    <-> . +h +adp +atp +h2o
-    isochenodeoxycholate
-  }
-
-  branch from phosphate side right {
-    phosphate
-    <-> . +h +adp +atp +h2o
-    indomethacin_glucuronide
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +adrenic_acid +h +cholesterol
-    ce_22_4_7z_10z_13z_16z
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +carboline
-    l_tryptophan
+  branch from menadiol side left {
+    menadiol
+    <-> . +nadh +hplus +nad
+    menadione
   }
 }

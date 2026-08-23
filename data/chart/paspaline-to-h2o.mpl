@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway paspaline-to-h2o "Paspaline to H2O" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     paspaline
@@ -14,29 +14,5 @@ pathway paspaline-to-h2o "Paspaline to H2O" {
     13_desoxyterpendole_i
     <-> . +h +o2 +nadph -nadp -h2o
     terpendole_i
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +h +o2 +nadph +cyclosporin_a_metabolite_m17 +h2o
-    cyclosporin_a_metabolite_m8
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +h +o2 +nadph +cyclosporin_a_metabolite_m8 +h2o
-    cyclosporin_a_metabolite_m1
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +3s_3_hydroxy_l_arginine +h +guanidine
-    s_1_pyrroline_5_carboxylate
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +ent_kauran_17_oate +o2
-    ent_kaur_19_al_17_oate
   }
 }

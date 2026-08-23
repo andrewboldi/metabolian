@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway h-to-amicoumacin-a "H to amicoumacin A" {
-  spacing 186
+  spacing 156
 
   spine at 0,0 {
     h
@@ -16,35 +16,5 @@ pathway h-to-amicoumacin-a "H to amicoumacin A" {
     amicoumacin_a_2_phosphate
     <-> ec_3_1_3_107 [3.1.3.107] +h2o -pi
     amicoumacin_a
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    am1c9_cyclosporine
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    cyclosporin_a_metabolite_m18
-  }
-
-  branch from ai_77_b side left {
-    ai_77_b
-    <-> . +h +h2o
-    amicoumacin_c
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    am1c_glucuronide_cyclosporine
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +cyclosporin_a +h +o2 +nadph +cyclosporin_a_metabolite_m17
-    nadp
   }
 }

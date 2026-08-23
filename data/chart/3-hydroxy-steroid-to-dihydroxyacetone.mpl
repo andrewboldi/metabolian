@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-hydroxy-steroid-to-dihydroxyacetone "3β-hydroxy steroid to dihydroxyacetone" {
-  spacing 270
+  spacing 324
 
   spine at 0,0 {
     3_hydroxy_steroid
@@ -18,45 +18,99 @@ pathway 3-hydroxy-steroid-to-dihydroxyacetone "3β-hydroxy steroid to dihydroxya
     dihydroxyacetone
   }
 
-  branch from diglyceride side left {
+  branch from 3_hydroxysterol_ester side left {
+    3_hydroxysterol_ester
+    <-> . +3_hydroxy_steroid +triglyceride
+    1_3_diglyceride
+  }
+
+  branch from diglyceride side right {
     diglyceride
     <-> ec_2_3_1_296 [2.3.1.296] +hydroxy_ultra_long_chain_fatty_acylceramide +linoleoyl_containing_1_2_3_triacyl_sn_glycerol
     linoleoyloxy_o_ultra_long_chain_acylceramide
   }
 
-  branch from diglyceride side right {
+  branch from diglyceride side left {
     diglyceride
     <-> . +n_hydroxyoctacosanoyl_sphingosine +linoleoyl_containing_1_2_3_triacyl_sn_glycerol
     n_linoleoyloxy_octacosanoyl_sphingosine
   }
 
-  branch from monoacylglycerol side left {
+  branch from monoacylglycerol side right {
     monoacylglycerol
     <-> . +h2o +fatty-acid +hplus
     1_3_diacyl_sn_glycerol
   }
 
-  branch from fatty-acid side right {
-    fatty-acid
-    <-> ec_3_1_1_52 [3.1.1.52] +1_phosphatidyl_1d_myo_inositol +h2o +hplus
-    1_acyl_sn_glycero_3_phospho_1d_myo_inositol
-  }
-
   branch from fatty-acid side left {
     fatty-acid
-    <-> ec_3_1_1_32 [3.1.1.32] +phosphatidylcholine +h2o +hplus
-    2_acyl_sn_glycero_3_phosphocholine
+    <-> . +1_acyl_2_hexadecenoyl_sn_glycero_3_phosphate +h2o +hplus
+    2_16_1_lysophosphatidate
   }
 
-  branch from glycerol side right {
-    glycerol
-    <-> . +1_oleoylglycerol +h2o +hplus
-    oleate
+  branch from fatty-acid side right {
+    fatty-acid
+    <-> ec_3_1_1_111 [3.1.1.111] +3_sn_phosphatidyl_l_serine +h2o +hplus
+    2_acyl_sn_glycero_3_phosphoserine
   }
 
   branch from glycerol side left {
     glycerol
-    <-> . +h2o +oleate +hplus
-    2_oleoylglycerol
+    <-> . +2_oleoylglycerol +h2o +hplus
+    oleate
+  }
+
+  branch from glycerol side right {
+    glycerol
+    <-> . +1_acyl_sn_glycerol
+    dag
+  }
+
+  branch from 3_hydroxy_steroid side left {
+    3_hydroxy_steroid
+    <-> ec_1_1_1_270 [1.1.1.270] +nadp +nadph +hplus
+    3_oxo_steroid
+  }
+
+  branch from triglyceride side right {
+    triglyceride
+    <-> . +1_2_diacyl_3_d_galactosyl_sn_glycerol +1_2_diglyceride
+    1_acyl_3_o_d_galactosyl_sn_glycerol
+  }
+
+  branch from diglyceride side left {
+    diglyceride
+    <-> . +n_hydroxydotriacontanoyl_sphingosine +linoleoyl_containing_1_2_3_triacyl_sn_glycerol
+    n_linoleoyloxydotricontanoyl_sphingosine
+  }
+
+  branch from diglyceride side right {
+    diglyceride
+    <-> . +n_hydroxydotriacontenoyl_sphingosine +linoleoyl_containing_1_2_3_triacyl_sn_glycerol
+    n_linoleoyloxy_dotriacontenoyl_sphingosine
+  }
+
+  branch from fatty-acid side left {
+    fatty-acid
+    <-> . +1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol +h2o +hplus
+    1_acyl_sn_glycero_3_phospho_1_sn_glycerol
+  }
+
+  branch from fatty-acid side right {
+    fatty-acid
+    <-> . +1_2_diacyl_sn_glycero_3_phosphoethanolamine +h2o +hplus
+    1_acyl_sn_glycero_3_phosphoethanolamine
+  }
+
+  branch from glycerol side left {
+    glycerol
+    <-> . +1_monopalmitoylglycerol +h2o +hplus
+    palmitate
+  }
+
+  branch from glycerol side right {
+    glycerol
+    <-> . +h2o +palmitate +hplus
+    2_palmitoylglycerol
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway coenzyme-q10-to-sulfate "coenzyme Q10 to sulfate" {
-  spacing 188
+  spacing 182
 
   spine at 0,0 {
     coenzyme_q10
@@ -18,37 +18,31 @@ pathway coenzyme-q10-to-sulfate "coenzyme Q10 to sulfate" {
 
   branch from ubiquinol_10 side left {
     ubiquinol_10
-    <-> . +alpha_tocopheryl_quinone +alpha_tocopheryl_hydroquinone
-    ubiquinone_10
+    <-> . +2e_hexadecenoyl_coa +ubiquinone_10
+    hexadecanoyl_coa
   }
 
   branch from ubiquinol_10 side right {
     ubiquinol_10
-    <-> . +dihydroxyacetone_phosphate +ubiquinone_10
-    sn_glycerol_3_phosphate
+    <-> . +2e_2_methylbut_2_enoyl_coa +ubiquinone_10
+    2s_2_methylbutanoyl_coa
   }
 
   branch from gsh side left {
-    gsh
-    <-> . +1_aci_nitro_2_phenyl_ethane +h2o
-    z_1_glutathione_s_yl_2_phenylacetohydroximate
-  }
-
-  branch from gsh side right {
     gsh
     <-> . +nad +nadh +hplus
     gssg
   }
 
-  branch from sulfate side left {
-    sulfate
-    <-> . +1_alkyl_2_acyl_3_3_o_sulfo_d_galactosyl_sn_glyce +h2o +hplus
-    1_alkyl_2_acyl_3_d_galactosyl_sn_glycerol
+  branch from ubiquinol_10 side right {
+    ubiquinol_10
+    <-> . +3_methylbut_2_enoyl_coa +ubiquinone_10
+    3_methylbutanoyl_coa
   }
 
-  branch from sulfate side right {
-    sulfate
-    <-> . +1_3_o_sulfonato_d_galactosyl_ceramide +h2o +hplus
-    galactosylceramide
+  branch from ubiquinol_10 side left {
+    ubiquinol_10
+    <-> . +2e_tetradecenoyl_coa +ubiquinone_10
+    tetradecanoyl_coa
   }
 }

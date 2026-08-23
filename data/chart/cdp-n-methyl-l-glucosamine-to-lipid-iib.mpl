@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cdp-n-methyl-l-glucosamine-to-lipid-iib "CDP-N-methyl-L-glucosamine to lipid IIB" {
-  spacing 338
+  spacing 340
 
   spine at 0,0 {
     cdp_n_methyl_l_glucosamine
@@ -22,79 +22,103 @@ pathway cdp-n-methyl-l-glucosamine-to-lipid-iib "CDP-N-methyl-L-glucosamine to l
 
   branch from cdp side left {
     cdp
-    <-> ec_2_7_1_108 [2.7.1.108] +dolichyl_phosphate +ctp +h
-    di_trans_poly_cis_dolichol
+    <-> ec_2_4_1_13 [2.4.1.13] +sucrose +h +cdp_alpha_d_glucose
+    beta_d_fructopyranose
   }
 
   branch from cdp side right {
     cdp
-    <-> ec_2_7_1_108 [2.7.1.108] +h +c80_dolichol_phosphate +ctp
-    c80_dolichol
+    <-> ec_2_4_1_60 [2.4.1.60] +alpha_d_tyv_1_3_beta_d_man_1_4_alpha_l_rha_1_3_a +h +cdp_3_6_dideoxy_d_mannose
+    d_mannopyranosyl_1_4_l_rhamnopyranosyl_1_3_d_ga
   }
 
   branch from h side left {
     h
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +butan_2_one +nad
-    2s_butan_2_ol
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    rifamycin_sv
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +4_methylpentanal +nad
-    4_methylpentan_1_ol
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +gramicidin_s +phosphate +gramicidin_s +h2o
+    atp
   }
 
   branch from dihydrostreptomycin_6_phosphate side left {
     dihydrostreptomycin_6_phosphate
-    <-> ec_2_7_1_88 [2.7.1.88] +dihydrostreptomycin_3_alpha_6_bisphosphate +h +adp
-    atp
+    <-> ec_2_7_1_88 [2.7.1.88] +h +adp +atp
+    dihydrostreptomycin_3_alpha_6_bisphosphate
   }
 
   branch from ctp side right {
     ctp
-    <-> ec_2_7_7_41 [2.7.7.41] +dimyristoyl_phosphatidic_acid +h +cdp_1_2_ditetradecanoylglycerol
+    <-> ec_2_7_7_38 [2.7.7.38] +3_deoxy_d_manno_octulosonate +cmp_3_deoxy_beta_d_manno_octulosonate
     diphosphate
   }
 
   branch from ctp side left {
     ctp
-    <-> ec_2_7_7_41 [2.7.7.41] +1_2_ditetradec_7_enoyl_sn_glycerol_3_phosphate +diphosphate
-    cdp_1_2_ditetradec_7_enoylglycerol
+    <-> ec_2_7_7_38 [2.7.7.38] +h +3_deoxy_d_manno_octulosonate +diphosphate
+    cmp_3_deoxy_alpha_d_manno_octulosonic_acid
   }
 
   branch from di_trans_poly_cis_undecaprenyl_phosphate side right {
     di_trans_poly_cis_undecaprenyl_phosphate
-    <-> ec_2_7_1_66 [2.7.1.66] +di_trans_poly_cis_undecaprenol +h +atp
-    adp
-  }
-
-  branch from di_trans_poly_cis_undecaprenyl_phosphate side left {
-    di_trans_poly_cis_undecaprenyl_phosphate
-    <-> ec_3_6_1_27 [3.6.1.27] +di_trans_poly_cis_undecaprenyl_diphosphate +h2o +h
-    phosphate
-  }
-
-  branch from undecaprenyl_phosphate_alpha_l_ara4n side right {
-    undecaprenyl_phosphate_alpha_l_ara4n
-    <-> . +undecaprenyl_phosphate_alpha_l_ara4fn +h2o +h
-    formate
-  }
-
-  branch from undecaprenyl_phosphate_alpha_l_ara4n side left {
-    undecaprenyl_phosphate_alpha_l_ara4n
-    <-> ec_2_4_2_43 [2.4.2.43] +alpha_kdo_2_4_alpha_kdo_2_6_lipid_iva_e_coli +h +di_trans_poly_cis_undecaprenyl_phosphate
-    l_ara4n_kdo_2_lipid_iva
-  }
-
-  branch from alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_e_coli side right {
-    alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_e_coli
-    <-> . +hexadecanoate +h +h2o
-    hepta_acylated_kdo_2_lipid_a
+    <-> ec_2_7_4_29 [2.7.4.29] +di_trans_poly_cis_undecaprenyl_diphosphate +alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_e_coli +h
+    kdo_2_lipid_a_1_diphosphate_7_e_coli
   }
 
   branch from alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_e_coli side left {
     alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_e_coli
-    <-> . +h +h2o +r_3_tetradecanoyloxy_tetradecanoic_acid
-    3_o_deacylated_kdo2_lipid_a
+    <-> . +h +adp +phosphate +atp
+    h2o
+  }
+
+  branch from cdp side right {
+    cdp
+    <-> . +adp +ctp
+    amp
+  }
+
+  branch from cdp side left {
+    cdp
+    <-> . +ctp
+    cmp
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    destruxin_b
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    concanamycin_a
+  }
+
+  branch from udp side right {
+    udp
+    <-> . +udp_4_acetamido_4_6_dideoxy_alpha_l_galactose +e_4_2_isocyanovinyl_phenol +h
+    n_2s_3s_4r_5s_6r_4_5_dihydroxy_6_4_e_2_isocyanoe
+  }
+
+  branch from udp side left {
+    udp
+    <-> . +2_acetamido_4_d_alanylamino_2_4_6_trideoxy_d_man +h +h2o
+    udp_2_acetamido_4_d_alanylamino_2_4_6_trideoxy_a
+  }
+
+  branch from ctp side right {
+    ctp
+    <-> ec_2_7_7_67 [2.7.7.67] +2_3_bis_o_sesterterpanyl_sn_glycerol_1_phosphate +h +diphosphate
+    cdp_2_3_bis_o_sesterterpanyl_sn_glycerol
+  }
+
+  branch from ctp side left {
+    ctp
+    <-> ec_2_7_7_39 [2.7.7.39] +h +sn_glycerol_1_phosphate +diphosphate
+    2s_cdp_glycerol
   }
 }

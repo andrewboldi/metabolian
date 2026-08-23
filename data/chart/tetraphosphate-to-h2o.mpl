@@ -4,63 +4,111 @@
 # edit the generator, not this file.
 
 pathway tetraphosphate-to-h2o "tetraphosphate to H2O" {
-  spacing 228
+  spacing 264
 
   spine at 0,0 {
     tetraphosphate
-    <-> ec_2_7_1_23 [2.7.1.23] +nad -triphosphate -nadp
+    <-> ec_3_1_3_2 [3.1.3.2] +h2o -triphosphate -phosphate
     h
-    <-> ec_2_5_1_17 [2.5.1.17] +adenosylcobinamide +triphosphate -h -cobinamide
-    atp
-    <-> ec_3_6_3_33 [3.6.3.33] +h +adp +cobinamide +phosphate -atp -h2o
-    cobinamide
+    <-> ec_6_2_1_12 [6.2.1.12] +p_1_p_4_bis_5_adenosyl_tetraphosphate +triphosphate -atp
+    adenosine_5_tetraphosphate
+    <-> ec_3_6_1_14 [3.6.1.14] +h +phosphate -h2o
+    adenosine_5_pentaphosphate
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_2_dihexadecanoyl_sn_glycero_3_phospho_l_serine
+    <-> ec_2_3_1_51 [2.3.1.51] +octadecanoyl_coa +1_hexadecanoyl_sn_glycero_3_phospho_d_myo_inosit +coa
+    1_palmitoyl_2_stearoyl_phosphatidylinositol
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    r_1_2_distearoylphosphatidylethanolamine
+    <-> ec_2_3_1_51 [2.3.1.51] +1_hexadecanoyl_sn_glycero_3_phospho_d_myo_inosit +hexadecanoyl_coa +coa
+    1_2_dipalmitoyl_phosphatidylinositol
   }
 
-  branch from nadp side left {
-    nadp
-    <-> ec_1_14_15_5 [1.14.15.5] +18_hydroxycorticosterone +h2o +h +o2 +nadph
-    corticosterone
+  branch from phosphate side left {
+    phosphate
+    <-> ec_3_1_3_76 [3.1.3.76] +1_octadecyllysophosphatidic_cid +h2o +h
+    batilol
   }
 
-  branch from nadp side right {
-    nadp
-    <-> ec_1_14_15_5 [1.14.15.5] +18_hydroxycorticosterone +h +o2 +nadph +h2o
-    aldosterone
+  branch from phosphate side right {
+    phosphate
+    <-> ec_3_1_3_76 [3.1.3.76] +2_2_bi_benzothiazole_6_ol +h +h2o
+    attophos
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    1_2_dioctadecanoyl_sn_glycero_3_phospho_1_sn_gly
+    <-> ec_3_6_3_41 [3.6.3.41] +h +adp +phosphate +h2o
+    heme_b
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    1_2_dihexadecanoyl_sn_glycero_3_phospho_1_sn_gly
+    <-> ec_2_7_3_5 [2.7.3.5] +n_phospho_d_lombricine +adp +h
+    d_lombricine
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_proline +l_valine +l_tryptophan
-    tryptophanyl_prolyl_valine
+    <-> ec_3_2_1_20 [3.2.1.20] +alpha_d_glucose +d_sorbitol
+    maltitol
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_serine +l_tryptophan +l_tyrosine
-    tryptophanyl_seryl_tyrosine
+    <-> ec_3_3_2_10 [3.3.2.10] +1_3_diphenyl_1_2_propanediol
+    2_benzyl_3_phenyloxirane
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_5_2_2 [3.5.2.2] +n_carbamoylnorvaline
+    5_propylhydantoin
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_4_11_1 [3.4.11.1] +met_leu_gly +l_methionine
+    leu_gly
+  }
+
+  branch from h side left {
+    h
+    <-> . +co2 +ethanolamine
+    d_serine
+  }
+
+  branch from h side right {
+    h
+    <-> ec_4_1_1_65 [4.1.1.65] +co2 +dioleoyl_phosphatidylethanolamine
+    1_2_di_9z_octadecenoyl_sn_glycero_3_phospho_l_se
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +aldehydo_d_glucose +h2o
+    aldehydo_d_glucose_6_phosphate
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_2_5_1_72 [2.5.1.72] +iminoaspartate +dihydroxyacetone_phosphate +h +h2o
+    quinolinate
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_2_7_3_5 [2.7.3.5] +h +adp +d_lombricine
+    n_phospho_l_lombricine
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_6_3_2_47 [6.3.2.47] +2s_3_3_carbamoyloxiranylcarbonylamino_2_aminopr +l_valine +h +adp +phosphate
+    n_beta_epoxysuccinamoyl_diaminopropionyl_valine
   }
 }

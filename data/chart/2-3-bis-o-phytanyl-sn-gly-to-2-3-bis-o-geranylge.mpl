@@ -18,45 +18,69 @@ pathway 2-3-bis-o-phytanyl-sn-gly-to-2-3-bis-o-geranylge "2,3-bis-O-phytanyl-sn-
     2_3_bis_o_geranylgeranyl_sn_glycero_3_phosphoeth
   }
 
-  branch from 2_3_bis_o_geranylgeranyl_sn_glycerol_1_phosphate side left {
-    2_3_bis_o_geranylgeranyl_sn_glycerol_1_phosphate
-    <-> . +2_3_bis_o_phytanyl_sn_glycerol_1_phosphate +hydrogen_acceptor
-    hydrogen_donor
-  }
-
-  branch from cdp_2_3_bis_o_geranylgeranyl_sn_glycerol side right {
-    cdp_2_3_bis_o_geranylgeranyl_sn_glycerol
-    <-> . +hydrogen_donor +hydrogen_acceptor
-    cdp_2_3_bis_o_phytanyl_sn_glycerol
-  }
-
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_226 [4.2.3.226] +2_cis_6_trans_farnesyl_diphosphate
-    2_epi_prezizaene
+    <-> ec_4_2_3_181 [4.2.3.181] +fpp
+    selina_4_15_7_11_diene
   }
 
   branch from ppi side right {
     ppi
-    <-> . +2_cis_6_trans_farnesyl_diphosphate
-    curcumene
-  }
-
-  branch from 2_3_bis_o_geranylgeranyl_sn_glycero_3_phospho_l side left {
-    2_3_bis_o_geranylgeranyl_sn_glycero_3_phospho_l
-    <-> . +hydrogen_donor +hydrogen_acceptor
-    2_3_bis_o_phytanyl_sn_glycero_3_phospho_l_serine
-  }
-
-  branch from cytidine_5_monophosphate side right {
-    cytidine_5_monophosphate
-    <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +cmp_n_acetyl_neuraminate +hplus
-    neu5ac_2_8_neu5ac_2_3_d_gal_1_3_d_galnac_1_4_d
+    <-> ec_4_2_3_180 [4.2.3.180] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    pseudolaratriene
   }
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> . +n_acetyl_neuraminosyl_2_3_d_galactosylceramide +cmp_n_acetyl_neuraminate +hplus
-    neu5ac_2_8_neu5ac_2_3_d_gal_1_1_n_acylsphingosi
+    <-> ec_2_4_99_14 [2.4.99.14] +a_kdo_2_lipid_iva +cmp_3_deoxy_d_manno_octulosonate +hplus
+    a_kdo_3_lipid_iva
+  }
+
+  branch from cytidine_5_monophosphate side right {
+    cytidine_5_monophosphate
+    <-> ec_2_4_99_15 [2.4.99.15] +a_kdo_3_lipid_iva +cmp_3_deoxy_d_manno_octulosonate +hplus
+    an_kdo_2_8_kdo_2_4_kdo_2_4_kdo_2_6_lipid_iva
+  }
+
+  branch from 2_3_bis_o_phytanyl_sn_glycerol_1_phosphate side left {
+    2_3_bis_o_phytanyl_sn_glycerol_1_phosphate
+    <-> ec_2_7_7_67 [2.7.7.67] +ctp +h +cdp_2_3_bis_o_phytanyl_sn_glycerol
+    diphosphate
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_2_7_7_108 [2.7.7.108] +l_tyrosine +atp
+    o_adenyl_l_tyrosine_1
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_2_7_7_108 [2.7.7.108] +l_threonine +atp
+    o_adenyl_l_threonine_1
+  }
+
+  branch from serine side right {
+    serine
+    <-> . +lauroyl_coa +hplus +co2 +coa
+    3_dehydrotetradecasphinganine
+  }
+
+  branch from serine side left {
+    serine
+    <-> . +1_oleoyl_sn_glycero_3_phosphoserine +h2o +hplus
+    1_oleoyl_sn_glycero_3_phosphate
+  }
+
+  branch from cytidine_5_monophosphate side right {
+    cytidine_5_monophosphate
+    <-> ec_2_4_99_15 [2.4.99.15] +a_kdo_2_lipid_iva +cmp_3_deoxy_d_manno_octulosonate +hplus
+    an_kdo_2_4_kdo_2_4_kdo_2_6_lipid_iva
+  }
+
+  branch from cytidine_5_monophosphate side left {
+    cytidine_5_monophosphate
+    <-> . +n_acetylneuraminyl_2_3_d_galactosyl_1_4_n_acety +cmp_n_acetyl_neuraminate +hplus
+    n_acetylneuraminyl_2_8_n_acetylneuraminyl_2_3_d
   }
 }

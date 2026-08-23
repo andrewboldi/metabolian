@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway hexadecanoate-ester-to-trans-hexadec-2-enal "hexadecanoate ester to trans-hexadec-2-enal" {
-  spacing 174
+  spacing 162
 
   spine at 0,0 {
     hexadecanoate_ester
@@ -14,18 +14,6 @@ pathway hexadecanoate-ester-to-trans-hexadec-2-enal "hexadecanoate ester to tran
     hexadecanal
     <-> ec_1_3_1_27 [1.3.1.27] +nadp -nadph -hplus
     hexadecenal
-  }
-
-  branch from palmitate side left {
-    palmitate
-    <-> . +1_hexadecanoyl_2_5z_8z_11z_14z_icosatetraenoyl_s +h2o +hplus
-    2_arachidonoyl_sn_glycero_3_phosphoethanolamine
-  }
-
-  branch from palmitate side right {
-    palmitate
-    <-> . +1_palmitoyl_sn_glycero_3_phosphoserine +h2o +hplus
-    sn_glycero_3_phosphoserine
   }
 
   branch from hexadecanal side left {

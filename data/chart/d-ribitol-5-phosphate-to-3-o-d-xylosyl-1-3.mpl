@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-ribitol-5-phosphate-to-3-o-d-xylosyl-1-3 "D-ribitol 5-phosphate to 3-O-[α-D-xylosyl-(1→3)-β-…" {
-  spacing 274
+  spacing 334
 
   spine at 0,0 {
     d_ribitol_5_phosphate
@@ -30,14 +30,14 @@ pathway d-ribitol-5-phosphate-to-3-o-d-xylosyl-1-3 "D-ribitol 5-phosphate to 3-O
 
   branch from ppi side right {
     ppi
-    <-> ec_2_7_7_11 [2.7.7.11] +utp +hplus +udp_d_xylose
-    d_xylose_1_phosphate
+    <-> ec_4_2_3_25 [4.2.3.25] +gpp +h2o
+    s_linalool
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_2_7_7_42 [2.7.7.42] +l_tyrosine +atp
-    o_adenyl_l_tyrosine_1
+    <-> ec_6_1_1_3 [6.1.1.3] +amp_3_end_1 +threonine +atp +amp +hplus
+    3_l_threonyl_adenylyl_1_group
   }
 
   branch from cytidine_5_monophosphate side right {
@@ -48,7 +48,67 @@ pathway d-ribitol-5-phosphate-to-3-o-d-xylosyl-1-3 "D-ribitol 5-phosphate to 3-O
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> ec_2_4_3_1 [2.4.3.1] +d_galactosyl_1_4_d_glucosyl_1_1_n_acylsphingosi +cmp_n_acetyl_neuraminate +hplus
-    n_acetylneuraminyl_2_6_d_galactosyl_1_4_d_gluco
+    <-> ec_2_4_3_4 [2.4.3.4] +d_galactosyl_1_3_n_acetyl_d_galactosaminide +cmp_n_acetyl_neuraminate +hplus
+    n_acetyl_neuraminyl_2_3_d_galactosyl_1_3_n_acety
+  }
+
+  branch from ctp side right {
+    ctp
+    <-> ec_6_3_4_2 [6.3.4.2] +utp +glutamine +atp +h2o +adp +pi +hplus
+    glutamate
+  }
+
+  branch from ctp side left {
+    ctp
+    <-> . +h2o +pi +hplus
+    cdp
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_2_7_7_65 [2.7.7.65] +gtp
+    c_di_gmp
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_6_2_1_37 [6.2.1.37] +3_hydroxybenzoate +atp +coa +amp
+    3_hydroxybenzoyl_coa
+  }
+
+  branch from cytidine_5_monophosphate side right {
+    cytidine_5_monophosphate
+    <-> ec_3_6_1_16 [3.6.1.16] +2r_cdp_glycerol +h2o +hplus
+    sn_glycerol_3_phosphate
+  }
+
+  branch from cytidine_5_monophosphate side left {
+    cytidine_5_monophosphate
+    <-> ec_3_6_1_53 [3.6.1.53] +cdp_choline +h2o +hplus
+    phosphocholine
+  }
+
+  branch from udp_d_xylose side right {
+    udp_d_xylose
+    <-> ec_2_4_2_61 [2.4.2.61] +3_o_d_ribitylphospho_2_3_n_acetyl_d_galactosamin +udp +hplus
+    3_o_d_xylosyl_1_4_d_ribitylphospho_2_3_n_acetyl
+  }
+
+  branch from udp_d_xylose side left {
+    udp_d_xylose
+    <-> ec_2_4_2_35 [2.4.2.35] +flavonol_3_o_glycoside +udp +hplus
+    flavonol_3_o_d_xylosyl_1_2_d_glycoside_s
+  }
+
+  branch from udp_d_glucuronate side right {
+    udp_d_glucuronate
+    <-> ec_5_1_3_6 [5.1.3.6]
+    udp_d_galacturonate
+  }
+
+  branch from udp_d_glucuronate side left {
+    udp_d_glucuronate
+    <-> ec_2_4_1_17 [2.4.1.17] +glucuronate_acceptor +udp +hplus
+    d_glucuronoside
   }
 }

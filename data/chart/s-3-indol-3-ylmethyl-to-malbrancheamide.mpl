@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-3-indol-3-ylmethyl-to-malbrancheamide "(S)-3-(indol-3-ylmethyl)-… to (+)-malbrancheamide" {
-  spacing 188
+  spacing 176
 
   spine at 0,0 {
     s_3_indol_3_ylmethyl_6_7_8_8a_tetrahydropyrrolo
@@ -20,18 +20,6 @@ pathway s-3-indol-3-ylmethyl-to-malbrancheamide "(S)-3-(indol-3-ylmethyl)-… to
     malbrancheamide
   }
 
-  branch from ppi side left {
-    ppi
-    <-> . +n6_hydroxy_datp +h2o +hplus
-    n6_hydroxy_damp
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +fpp
-    sterpurene
-  }
-
   branch from premalbrancheamide side left {
     premalbrancheamide
     <-> . +fadh2 +chloride +o2 +fad +h2o
@@ -44,15 +32,15 @@ pathway s-3-indol-3-ylmethyl-to-malbrancheamide "(S)-3-(indol-3-ylmethyl)-… to
     isomalbrancheamide_b
   }
 
-  branch from malbrancheamide side left {
-    malbrancheamide
-    <-> . +fadh2 +h +o2 +chloride +malbrancheamide_b +h2o
-    fad
+  branch from premalbrancheamide side left {
+    premalbrancheamide
+    <-> . +bromide +fadh2 +o2 +fad +h2o
+    malbrancheamide_c
   }
 
-  branch from malbrancheamide side right {
-    malbrancheamide
-    <-> . +fadh2 +h +o2 +chloride +isomalbrancheamide_b +fad
-    h2o
+  branch from premalbrancheamide side right {
+    premalbrancheamide
+    <-> . +bromide +fadh2 +o2 +fad +h2o
+    isomalbrancheamide_c
   }
 }

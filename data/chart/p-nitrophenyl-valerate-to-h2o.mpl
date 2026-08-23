@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway p-nitrophenyl-valerate-to-h2o "p-Nitrophenyl valerate to H2O" {
-  spacing 258
+  spacing 312
 
   spine at 0,0 {
     p_nitrophenyl_valerate
@@ -12,113 +12,165 @@ pathway p-nitrophenyl-valerate-to-h2o "p-Nitrophenyl valerate to H2O" {
     h
     <-> ec_2_8_3_8 [2.8.3.8] +acetyl_coa +pentanoate -acetate
     pentanoyl_coa
-    <-> . +acetyl_coa -3_oxoheptanoyl_coenzyme_a
-    coa
-    <-> . +nadh +h +3_oxoheptanoyl_coenzyme_a -nad
-    3_hydroxy_heptanoyl_coa
-    <-> . +nadh +acetyl_coa +h +h2o2 -coa -o2 -nad -h2o
-    3r_hydroxynonanoyl_coa
+    <-> . +nadh +acetyl_coa +fadh2 +h -fad -coa -nad -h2o
+    heptanoyl_coa
+    <-> ec_2_3_1_295 [2.3.1.295] +malonyl_coa +s_methylmalonyl_coa +h +nadph -c32_mycoketide_coa -nadp -coa -h2o
+    co2
   }
 
   branch from h side left {
     h
-    <-> ec_1_1_1_239 [1.1.1.239] +nadh +estrone_3_sulfate +nad
-    17_estradiol_3_sulfate
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +cephradine +phosphate +cephradine +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_150 [1.1.1.150] +nadh +21_dehydrocorticosterone +nad
-    corticosterone
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    fosmidomycin
   }
 
   branch from pentanoate side left {
     pentanoate
-    <-> ec_1_2_98_1 [1.2.98.1] +pentan_1_ol +h +h2o
-    pentanal
-  }
-
-  branch from pentanoate side right {
-    pentanoate
-    <-> ec_2_7_2_14 [2.7.2.14] +pentanoyl_phosphate +adp
-    atp
-  }
-
-  branch from 4_nitrophenol side left {
-    4_nitrophenol
-    <-> ec_3_1_1_13 [3.1.1.13] +hexadecanoate +h +h2o
-    p_nitrophenyl_palmitate
-  }
-
-  branch from 4_nitrophenol side right {
-    4_nitrophenol
-    <-> ec_3_2_1_1 [3.2.1.1] +maltoheptaose +h +h2o
-    p_nitrophenylmaltoheptaoside
-  }
-
-  branch from acetate side left {
-    acetate
-    <-> ec_3_1_1_3 [3.1.1.3] +2_aminofluorene +h +h2o
-    2_acetamidofluorene
+    <-> ec_2_7_2_14 [2.7.2.14] +adp +atp
+    pentanoyl_phosphate
   }
 
   branch from acetate side right {
     acetate
-    <-> ec_3_1_1_3 [3.1.1.3] +h +4_ethoxyaniline +h2o
-    phenacetin
+    <-> ec_2_8_3_10 [2.8.3.10] +acetyl_coa +citrate +h
+    3s_citryl_coa
+  }
+
+  branch from acetate side left {
+    acetate
+    <-> . +deoxynivalenol +h +h2o
+    3_acetyldeoxynivalenol
+  }
+
+  branch from heptanoyl_coa side right {
+    heptanoyl_coa
+    <-> . +acetyl_coa +h +coa
+    3_oxononanoyl_coa
+  }
+
+  branch from fad side left {
+    fad
+    <-> . +fadh2 +h +o2 +chloride +isomalbrancheamide_b +h2o
+    malbrancheamide
+  }
+
+  branch from fad side right {
+    fad
+    <-> . +fadh2 +h +o2 +chloride +premalbrancheamide +h2o
+    isomalbrancheamide_b
   }
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_29 [2.3.1.29] +propanoyl_coa +glycine
-    2_amino_4_oxopentanoic_acid
+    <-> ec_2_3_1_79 [2.3.1.79] +acetyl_coa +alpha_maltose
+    acetyl_maltose
   }
 
   branch from coa side right {
     coa
-    <-> ec_3_1_2_20 [3.1.2.20] +2_methylbut_2_enoyl_coenzyme_a +h2o +h
-    2_methylbut_2_enoic_acid
-  }
-
-  branch from 3_oxoheptanoyl_coenzyme_a side left {
-    3_oxoheptanoyl_coenzyme_a
-    <-> . +nadh +h +nad
-    3_hydroxyheptanoyl_coa
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_8 [1.1.1.8] +nadh +4_hydroxy_3_oxobutylphosphonate
-    3_4_dihydroxybutylphosphonate
+    <-> ec_2_3_1_44 [2.3.1.44] +acetyl_coa +n_acetyl_alpha_neuraminate
+    n_acetyl_4_o_acetylneuraminate
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_213 [1.1.1.213] +nadh +4_5beta_dihydrocortisone +h
-    urocortisone
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +levopimaradienal
+    isopimara_7_15_dienol
   }
 
-  branch from o2 side right {
-    o2
-    <-> ec_1_17_3_2 [1.17.3.2] +guanosine +h2o +h2o2
-    8_hydroxyguanosine
-  }
-
-  branch from o2 side left {
-    o2
-    <-> ec_1_17_3_2 [1.17.3.2] +alloxanthine +h2o2 +h2o
-    allopurinol
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_2_1_22 [3.2.1.22] +alpha_d_galactose +3_nitrophenol
-    m_nitrophenyl_alpha_d_galactoside
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +neoabietadienal +h
+    palustradienol
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_20 [3.2.1.20] +alpha_d_glucose
-    2_alpha_d_glucosyl_d_glucose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    indolmycin
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    dihydrokalafungin
+  }
+
+  branch from co2 side left {
+    co2
+    <-> ec_4_1_1_65 [4.1.1.65] +pe_20_1_11z_18_3_9z_12z_15z
+    ps_20_1_11z_18_3_9z_12z_15z
+  }
+
+  branch from co2 side right {
+    co2
+    <-> ec_4_1_1_65 [4.1.1.65] +pe_20_2_11z_14z_18_2_9z_12z
+    ps_20_2_11z_14z_18_2_9z_12z
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_14_13_8 [1.14.13.8] +1_phenylpropan_2_amine +h +o2 +nadph +h2o
+    n_1_phenylpropan_2_yl_hydroxylamine
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +h +o2 +nadph +5_methyl_n_4_nitrophenyl_thiophene_2_carboxamide +h2o
+    5_methyl_n_4_nitrophenyl_1_oxo_1lambda4_thiophen
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    actinorhodin_intermediate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    deacetoxycephalosporin_c
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    enviomycin
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    bambermycin
+  }
+
+  branch from acetyl_coa side left {
+    acetyl_coa
+    <-> ec_2_3_1_44 [2.3.1.44] +n_acetyl_4_o_acetylneuraminate +coa
+    n_acetyl_beta_neuraminate
+  }
+
+  branch from acetyl_coa side right {
+    acetyl_coa
+    <-> ec_2_3_1_45 [2.3.1.45] +n_acetyl_alpha_neuraminate +coa
+    n_acetyl_7_o_acetylneuraminate
+  }
+
+  branch from acetate side left {
+    acetate
+    <-> . +deoxynivalenol +h +h2o
+    15_acetyldeoxynivalenol
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> . +nivalenol +h +h2o
+    4_acetylnivalenol
   }
 }

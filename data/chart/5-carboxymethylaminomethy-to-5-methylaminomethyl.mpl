@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-carboxymethylaminomethy-to-5-methylaminomethyl "5-carboxymethylaminomethy… to 5-methylaminomethyl-2-sel…" {
-  spacing 328
+  spacing 286
 
   spine at 0,0 {
     5_carboxymethylaminomethyl_2_thiouridine_5_phosp
@@ -20,51 +20,9 @@ pathway 5-carboxymethylaminomethy-to-5-methylaminomethyl "5-carboxymethylaminome
     5_methylaminomethyl_2_selenouridine_5_monophosph
   }
 
-  branch from glyoxylate side left {
-    glyoxylate
-    <-> . +l_phenylalanine +glycine
-    keto_phenylpyruvate
-  }
-
-  branch from glyoxylate side right {
-    glyoxylate
-    <-> . +l_tryptophan +glycine
-    3_indol_3_yl_pyruvate
-  }
-
-  branch from hydrogen_donor side left {
-    hydrogen_donor
-    <-> . +linoleate +o2 +hydrogen_acceptor +h2o
-    13_r_hode
-  }
-
-  branch from hydrogen_donor side right {
-    hydrogen_donor
-    <-> . +linoleate +o2 +hydrogen_acceptor +h2o
-    9_s_hode
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +cytidine_5_monophosphate_1 +sam +hplus
-    5_methylcytidine_5_monophosphate_1
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +guanosine_5_monophosphate_1 +sam +hplus
-    2_o_methylguanosine_5_monophosphate_1
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_189 [4.2.3.189] +peregrinol_diphosphate
-    9_13_r_epoxylabd_14_ene
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_190 [4.2.3.190] +copal_8_ol_diphosphate
-    13r_manoyl_oxide
+  branch from gpp side left {
+    gpp
+    <-> . +atp +adp
+    geranyl_triphosphate
   }
 }

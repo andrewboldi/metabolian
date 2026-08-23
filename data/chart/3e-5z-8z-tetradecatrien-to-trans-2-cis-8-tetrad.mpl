@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3e-5z-8z-tetradecatrien-to-trans-2-cis-8-tetrad "(3E,5Z,8Z)-Tetradecatrien… to Trans-2-Cis-8-Tetradecadi…" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     3e_5z_8z_tetradecatrienoyl_coenzyme_a
@@ -14,17 +14,5 @@ pathway 3e-5z-8z-tetradecatrien-to-trans-2-cis-8-tetrad "(3E,5Z,8Z)-Tetradecatri
     nadp
     <-> . +trans_3_cis_8_tetradecadienoyl_coenzyme_a
     trans_2_cis_8_tetradecadienoyl_coenzyme_a
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +h +tocotrienol +o2 +nadph +h2o
-    13_hydroxy_gamma_tocotrienol
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +all_trans_4_hydroxyretinoate +h +o2 +nadph +h2o
-    all_trans_4_oxoretinoate
   }
 }

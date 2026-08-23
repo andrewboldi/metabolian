@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway z-indol-3-yl-n-sulfo-to-h2o "(Z)-(indol-3-yl)-N-(sulfo… to H2O" {
-  spacing 244
+  spacing 322
 
   spine at 0,0 {
     z_indol_3_yl_n_sulfonatooxy_methanimidothioate
@@ -26,26 +26,14 @@ pathway z-indol-3-yl-n-sulfo-to-h2o "(Z)-(indol-3-yl)-N-(sulfo… to H2O" {
 
   branch from sulfur_atom side right {
     sulfur_atom
-    <-> ec_1_13_11_18 [1.13.11.18] +o2 +h2o +h
-    sulfite
+    <-> ec_3_2_1_147 [3.2.1.147] +beta_d_glucose +indol_3_yl_acetonitrile +h +sulfate +h2o
+    z_glucobrassicin
   }
 
   branch from sulfur_atom side left {
     sulfur_atom
-    <-> . +h +sulfite
-    thiosulfate
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +2_aminopentan_1_ol +nad +h2o +nadh +hplus
-    1_hydroxy_2_pentanone
-  }
-
-  branch from nh3 side left {
-    nh3
-    <-> . +s_isoleucinol +nad +h2o +nadh +hplus
-    3s_1_hydroxy_3_methylpentan_2_one
+    <-> ec_3_2_1_147 [3.2.1.147] +indol_3_yl_acetonitrile +h +sulfate +z_glucobrassicin +h2o
+    alpha_d_glucose
   }
 
   branch from 1h_indole_3_acetic_acid_2_3_dihydro_3_hydroxy_2 side right {
@@ -54,27 +42,117 @@ pathway z-indol-3-yl-n-sulfo-to-h2o "(Z)-(indol-3-yl)-N-(sulfo… to H2O" {
     indol_3_yl_acetate
   }
 
-  branch from nad side left {
-    nad
-    <-> ec_1_14_13_69 [1.14.13.69] +nadh +h +propene +o2 +h2o
-    r_1_2_epoxypropane
+  branch from 1h_indole_3_acetic_acid_2_3_dihydro_3_hydroxy_2 side left {
+    1h_indole_3_acetic_acid_2_3_dihydro_3_hydroxy_2
+    <-> . +nadh +h +o2 +nad +h2o
+    2_oxindole_3_acetate
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_14_13_69 [1.14.13.69] +nadh +h +propene +o2 +h2o
-    s_1_2_epoxypropane
+    <-> . +nadh +5_cis_7_trans_3_oxo_tetradecadienoyl_coa +h
+    3r_hydroxy_5_cis_7_trans_tetradecadienoyl_coa
   }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_3_5_5_1 [3.5.5.1] +benzoate +nh4
-    benzonitrile
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_85 [1.1.1.85] +nadh +co2 +2_oxopentanoate
+    3_ethylmalate
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_4_2_1_84 [4.2.1.84] +benzonitrile
-    benzamide
+    <-> . +3_4_dihydroxybenzoate +2_4_6_trihydroxybenzoic_acid
+    2_3_4_dihydroxybenzoyloxy_4_6_dihydroxybenzoate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_2_1_52 [3.2.1.52] +n_acetyl_d_hexosamine +n_n_diacetylchitobiose
+    n_n_n_triacetylchitotriose
+  }
+
+  branch from z_indol_3_yl_n_sulfonatooxy_methanimidothioate side right {
+    z_indol_3_yl_n_sulfonatooxy_methanimidothioate
+    <-> ec_3_2_1_147 [3.2.1.147] +h +z_glucobrassicin +h2o
+    glucose
+  }
+
+  branch from z_indol_3_yl_n_sulfonatooxy_methanimidothioate side left {
+    z_indol_3_yl_n_sulfonatooxy_methanimidothioate
+    <-> . +indolylmethylisothiocyanate
+    sulfate
+  }
+
+  branch from sulfur_atom side right {
+    sulfur_atom
+    <-> . +4r_5s_dethiobiotin
+    4_5_secobiotin
+  }
+
+  branch from sulfur_atom side left {
+    sulfur_atom
+    <-> . +arsenous_acid +h
+    sulfanylarsonate
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +h +cortisol +nad
+    20alpha_hydroxycortisol
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> . +3_sulfanylpropanoate +nad +h
+    3_3_disulfanediyldipropanoate
+  }
+
+  branch from h side right {
+    h
+    <-> . +9z_12z_octadecadienoate +h2o2 +z_z_1_8_11_heptadecatriene +h2o
+    co2
+  }
+
+  branch from h side left {
+    h
+    <-> . +udp +beta_d_galactosyl_1_4_alpha_d_galactosyl_1_3_n_n +alpha_d_galactosyl_1_3_n_n_diacetyl_alpha_d_baci
+    udp_alpha_d_galactose
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_13_11_65 [1.13.11.65] +all_trans_beta_carotene +all_trans_retinal
+    11_cis_retinal
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +o_methylandrocymbine +h2o
+    n_formyldemecolcine
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_2_1_87 [1.2.1.87] +nadh +h +r_lactoyl_coa +r_lactaldehyde
+    coa
+  }
+
+  branch from nad side left {
+    nad
+    <-> . +dehydrodiconiferyl_alcohol +nadh +h
+    dehydrodiconiferyl_aldehyde
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +3_oxocholest_4_24_dien_26_oyl_coa
+    24_hydroxy_3_oxocholest_4_en_26_oyl_coa
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +3_oxo_24_isopropanoyl_cholest_4_24_dien_26_oyl_c +3_24_dioxo_cholest_4_en_26_oate
+    propanoyl_coa
   }
 }

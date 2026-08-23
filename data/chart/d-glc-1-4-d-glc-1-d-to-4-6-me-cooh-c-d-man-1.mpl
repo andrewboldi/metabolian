@@ -17,4 +17,28 @@ pathway d-glc-1-4-d-glc-1-d-to-4-6-me-cooh-c-d-man-1 "β-D-Glc-(1→4)-α-D-Glc-
     <-> ec_2_5_1_95 [2.5.1.95] +phosphonatoenolpyruvate -pi
     4_6_me_cooh_c_d_man_1_4_d_glca_1_2_d_man_1_3_d_g
   }
+
+  branch from gdp_d_mannose side left {
+    gdp_d_mannose
+    <-> . +inositol_phosphophytoceramide_t18_0 +gdp +hplus
+    man_1_6_ins_1_p_cer_t18_0
+  }
+
+  branch from gdp_d_mannose side right {
+    gdp_d_mannose
+    <-> ec_2_4_1_346 [2.4.1.346] +2_o_d_mannopyranosyl_1_phosphatidyl_1d_myo_inosi +gdp +hplus
+    2_6_o_bis_d_mannopyranosyl_1_phosphatidyl_1d_myo
+  }
+
+  branch from udp_d_glucuronate side left {
+    udp_d_glucuronate
+    <-> ec_2_4_1_253 [2.4.1.253] +baicalein +udp
+    baicalin
+  }
+
+  branch from udp_d_glucuronate side right {
+    udp_d_glucuronate
+    <-> ec_2_4_1_253 [2.4.1.253] +scutellarein +udp
+    scutellarin
+  }
 }

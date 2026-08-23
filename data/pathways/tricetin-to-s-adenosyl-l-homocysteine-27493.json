@@ -1,0 +1,487 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "tricetin-to-s-adenosyl-l-homocysteine-27493",
+  "name": "tricetin to S-adenosyl-L-homocysteine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from tricetin(1-) to S-adenosyl-L-homocysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:27493"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:60045"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "tricetin",
+      "name": "tricetin",
+      "formula": "C15H9O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:60045"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "3_o_methyltricetin",
+      "name": "3'-O-methyltricetin",
+      "formula": "C16H11O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:60014"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3_5_di_o_methyltricetin",
+      "name": "3',5'-di-O-methyltricetin",
+      "short": "3',5'-di-O-methyltr…",
+      "formula": "C17H13O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:60016"
+      }
+    },
+    {
+      "id": "3_4_5_o_trimethyltricetin",
+      "name": "3',4',5'-O-trimethyltricetin",
+      "short": "3',4',5'-O-trimethy…",
+      "formula": "C18H15O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:60020"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "tricetin + S-adenosyl-L-methionine = 3'-O-methyltricetin + S-adenosyl-L-homocysteine + ...",
+      "equation": "tricetin + S-adenosyl-L-methionine = 3'-O-methyltricetin + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "tricetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_o_methyltricetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:27493"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27493"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "3'-O-methyltricetin + S-adenosyl-L-methionine = 3',5'-di-O-methyltricetin + S-adenosyl-...",
+      "equation": "3'-O-methyltricetin + S-adenosyl-L-methionine = 3',5'-di-O-methyltricetin + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "3_o_methyltricetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_5_di_o_methyltricetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:27497"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27497"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3',5'-di-O-methyltricetin + S-adenosyl-L-methionine = 3',4',5'-O-trimethyltricetin + S-...",
+      "equation": "3',5'-di-O-methyltricetin + S-adenosyl-L-methionine = 3',4',5'-O-trimethyltricetin + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "3_5_di_o_methyltricetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_4_5_o_trimethyltricetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:27501"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27501"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_tricetin_1-1-dichloroethene-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tricetin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-1-dichloroethene-to-succinate"
+      },
+      "note": "Shares tricetin with 1,1-dichloroethene to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60045"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tricetin_5-cholest-7-en-3-ol-to-ergosta-5-7-22-24-28-tet",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tricetin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cholest-7-en-3-ol-to-ergosta-5-7-22-24-28-tet"
+      },
+      "note": "Shares tricetin with 5α-cholest-7-en-3β-ol to ergosta-5,7,22,24(28)-tet….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60045"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tricetin_d-galactosyl-n-dodecan-to-fmn-70255",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tricetin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-galactosyl-n-dodecan-to-fmn-70255"
+      },
+      "note": "Shares tricetin with β-D-galactosyl-N-(dodecan… to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60045"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tricetin_dtdp-l-mycarose-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tricetin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-l-mycarose-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares tricetin with dTDP-β-L-mycarose to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60045"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tricetin_l-glutamine-to-methyl-com-16441",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tricetin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-glutamine-to-methyl-com-16441"
+      },
+      "note": "Shares tricetin with L-glutamine to methyl-CoM.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60045"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tricetin_tricetin-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tricetin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "tricetin-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares tricetin with tricetin to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60045"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_o_methyltricetin_tricetin-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_o_methyltricetin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "tricetin-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares 3'-O-methyltricetin with tricetin to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60014"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_5_di_o_methyltricetin_dtdp-l-mycarose-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_5_di_o_methyltricetin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-l-mycarose-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares 3',5'-di-O-methyltricetin with dTDP-β-L-mycarose to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60016"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_5_di_o_methyltricetin_l-glutamine-to-methyl-com-16441",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_5_di_o_methyltricetin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-glutamine-to-methyl-com-16441"
+      },
+      "note": "Shares 3',5'-di-O-methyltricetin with L-glutamine to methyl-CoM.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60016"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_5_di_o_methyltricetin_tricetin-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_5_di_o_methyltricetin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "tricetin-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares 3',5'-di-O-methyltricetin with tricetin to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60016"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_4_5_o_trimethyltricetin_5-cholest-7-en-3-ol-to-ergosta-5-7-22-24-28-tet",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_4_5_o_trimethyltricetin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cholest-7-en-3-ol-to-ergosta-5-7-22-24-28-tet"
+      },
+      "note": "Shares 3',4',5'-O-trimethyltricetin with 5α-cholest-7-en-3β-ol to ergosta-5,7,22,24(28)-tet….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60020"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_4_5_o_trimethyltricetin_l-glutamine-to-methyl-com-16441",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_4_5_o_trimethyltricetin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-glutamine-to-methyl-com-16441"
+      },
+      "note": "Shares 3',4',5'-O-trimethyltricetin with L-glutamine to methyl-CoM.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60020"
+          }
+        ]
+      }
+    }
+  ]
+}

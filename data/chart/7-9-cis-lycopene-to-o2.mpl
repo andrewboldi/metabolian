@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 7-9-cis-lycopene-to-o2 "7',9'-cis-lycopene to O2" {
-  spacing 164
+  spacing 176
 
   spine at 0,0 {
     7_9_cis_lycopene
@@ -18,13 +18,25 @@ pathway 7-9-cis-lycopene-to-o2 "7',9'-cis-lycopene to O2" {
 
   branch from o2 side left {
     o2
-    <-> . +2_oxoglutarate +5_hydroxy_leucine +5_5_dihydroxy_leucine +succinate
-    co2
+    <-> ec_1_13_11_63 [1.13.11.63] +retinal
+    all_trans_beta_carotene
   }
 
   branch from o2 side right {
     o2
-    <-> . +2_oxoglutarate +l_homotyrosine +co2 +succinate
-    3_hydroxy_l_homotyrosine
+    <-> . +pravastatin_sodium +h +nadph +3_s_hydroxy_pravastatin +h2o
+    nadp
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +4_hydroxymidazolam +nadp +h2o +midazolam +nadph
+    h
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +hexanoate +h +nadph +nadp +h2o
+    5_hydroxyhexanoic_acid
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-chloro-5-deoxy-d-ribona-to-phosphate "5-chloro-5-deoxy-D-ribona… to phosphate" {
-  spacing 236
+  spacing 308
 
   spine at 0,0 {
     5_chloro_5_deoxy_d_ribonate
@@ -26,14 +26,14 @@ pathway 5-chloro-5-deoxy-d-ribona-to-phosphate "5-chloro-5-deoxy-D-ribona… to 
 
   branch from h2o side right {
     h2o
-    <-> . +methylsulfanol
-    methanesulfinylsulfanyl_methane
+    <-> . +o2 +cyclosporin_a_metabolite_m18
+    am1ac_cyclosporine
   }
 
   branch from h2o side left {
     h2o
-    <-> . +s_ethyl_ethanesulfinothioate
-    ethylsulfenate
+    <-> . +l_alanine +l_arginine +l_phenylalanine
+    arginyl_alanine_phenylalanine
   }
 
   branch from 5_chloro_5_deoxy_d_ribose side right {
@@ -44,25 +44,97 @@ pathway 5-chloro-5-deoxy-d-ribona-to-phosphate "5-chloro-5-deoxy-D-ribona… to 
 
   branch from nad side left {
     nad
-    <-> ec_1_14_13_69 [1.14.13.69] +nadh +h +but_1_ene +o2 +h2o
-    1_2_epoxybutane
+    <-> . +ubiquinol_9 +nadh +ubiquinone_9 +h
+    pmf
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_14_13_69 [1.14.13.69] +nadh +h +o2 +trans_but_2_ene +h2o
-    trans_2r_3r_epoxybutane
+    <-> . +nadh +2_octaprenyl_3_methyl_6_methoxy_1_4_benzoquinol +h +o2 +h2o
+    2_octaprenyl_3_methyl_5_hydroxy_6_methoxy_1_4_be
   }
 
   branch from phosphate side left {
     phosphate
-    <-> . +aldehydo_d_mannose +h2o
-    aldehydo_d_mannose_6_phosphate
+    <-> . +h +adp +atp +h2o
+    dehydro_gliclazide
   }
 
   branch from phosphate side right {
     phosphate
-    <-> . +aldehydo_d_mannose +h2o
-    alpha_d_mannose_1_phosphate
+    <-> . +h +adp +atp +h2o
+    n_n_dimethylglycine
+  }
+
+  branch from h side left {
+    h
+    <-> . +brassicasterol +nadp +ergosterol
+    nadph
+  }
+
+  branch from h side right {
+    h
+    <-> . +d_glucuronate +cerivastatin_m1 +h2o
+    cerivastatin_m1_glucuronide
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +l_lysine +l_arginine
+    arginyl_arginyl_lysine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +l_arginine
+    arginyl_arginine
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> . +protoporphyrin_ix +h +nad
+    protoporphyrinogen_ix
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +h +3_oxopristanoyl_coa +nad
+    3_r_hydroxy_pristanoyl_coenzyme_a
+  }
+
+  branch from nad side left {
+    nad
+    <-> . +nadh +3_oxo_all_cis_6_9_12_15_18_tetracosapentaenoyl_c +h
+    3_s_hydroxy_tetracosa_6_9_12_15_18_all_cis_penta
+  }
+
+  branch from nad side right {
+    nad
+    <-> . +nadh +3_oxo_2s_methylisocapryloyl_coenzyme_a +h
+    3_s_hydroxy_2_s_6_dimethyl_heptanoyl_coa
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    dodecanedioate
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    dopamine_3_o_glucuronide
+  }
+
+  branch from adenine side left {
+    adenine
+    <-> . +aldehydo_2_deoxy_d_ribose +h2o
+    2_deoxyadenosine
+  }
+
+  branch from adenine side right {
+    adenine
+    <-> . +adenosine +h2o
+    beta_d_ribopyranose
   }
 }

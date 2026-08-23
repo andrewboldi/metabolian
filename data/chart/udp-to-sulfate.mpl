@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-sulfate "UDP to sulfate" {
-  spacing 180
+  spacing 156
 
   spine at 0,0 {
     udp
@@ -14,29 +14,5 @@ pathway udp-to-sulfate "UDP to sulfate" {
     3_phosphoadenylyl_sulfate
     <-> ec_2_7_1_25 [2.7.1.25] +diphosphate +adp -sulfate
     atp
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    d_glucosyl_1_4_d_mannose
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    midazolam_glucuronide
-  }
-
-  branch from sulfate side left {
-    sulfate
-    <-> . +benzylglucosinolate_aglycone
-    benzyl_thiocyanate
-  }
-
-  branch from sulfate side right {
-    sulfate
-    <-> . +benzylglucosinolate_aglycone
-    benzyl_isothiocyanate
   }
 }

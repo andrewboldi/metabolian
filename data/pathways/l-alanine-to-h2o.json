@@ -1,0 +1,465 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-alanine-to-h2o",
+  "name": "L-alanine to H2O",
+  "category": "other",
+  "summary": "A 3-step route from L-alanine to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR182466"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_alanine",
+      "name": "L-alanine",
+      "formula": "C3H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1105732"
+      }
+    },
+    {
+      "id": "2_5_methylsulfanyl_oxopentanoate",
+      "name": "2-(5-methylsulfanyl)oxopentanoate",
+      "short": "2-(5-methylsulfanyl…",
+      "formula": "C6H9O3S",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM2791"
+      }
+    },
+    {
+      "id": "l_homomethionine",
+      "name": "L-homomethionine",
+      "formula": "C6H13NO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50708"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM23"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "4_methylthiobutanaldoxime",
+      "name": "4-Methylthiobutanaldoxime",
+      "short": "4-Methylthiobutanal…",
+      "formula": "C5H11NOS",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM722851"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "l_cysteine",
+      "name": "L-cysteine",
+      "formula": "C3H7NO2S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM738068"
+      }
+    },
+    {
+      "id": "s_4_methylthiobutylthiohydroximoyl_l_cysteine",
+      "name": "S-(4-Methylthiobutylthiohydroximoyl)-L-cysteine",
+      "short": "S-(4-Methylthiobuty…",
+      "formula": "C8H16N2O3S2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:80983"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR182466",
+      "substrates": [
+        {
+          "metabolite": "l_alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_5_methylsulfanyl_oxopentanoate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_homomethionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR182466"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR182466"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR151928",
+      "substrates": [
+        {
+          "metabolite": "l_homomethionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "4_methylthiobutanaldoxime",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR151928"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR151928"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR151930",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4_methylthiobutanaldoxime",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_4_methylthiobutylthiohydroximoyl_l_cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR151930"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR151930"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_2_5_methylsulfanyl_oxopentanoate_3-s-hydroxy-tetracosa-12-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_5_methylsulfanyl_oxopentanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-s-hydroxy-tetracosa-12-to-h2o"
+      },
+      "note": "Shares 2-(5-methylsulfanyl)oxopentanoate with 3(S)-hydroxy-tetracosa-12… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2791"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_5_methylsulfanyl_oxopentanoate_co2-to-pyruvate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_5_methylsulfanyl_oxopentanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "co2-to-pyruvate"
+      },
+      "note": "Shares 2-(5-methylsulfanyl)oxopentanoate with CO2 to pyruvate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2791"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_5_methylsulfanyl_oxopentanoate_r-2-halocarboxylic-to-2-2-methylthio-ethylmale",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_5_methylsulfanyl_oxopentanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-2-halocarboxylic-to-2-2-methylthio-ethylmale"
+      },
+      "note": "Shares 2-(5-methylsulfanyl)oxopentanoate with (R)-2-halocarboxylic… to 2-(2-methylthio)ethylmale….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2791"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_homomethionine_co2-to-pyruvate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_homomethionine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "co2-to-pyruvate"
+      },
+      "note": "Shares L-homomethionine with CO2 to pyruvate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:50708"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_homomethionine_gdp-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_homomethionine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gdp-to-nadph"
+      },
+      "note": "Shares L-homomethionine with GDP to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:50708"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_methylthiobutanaldoxime_z-1-glutathion-s-yl-n-to-n-n-dihydroxyhomomethi",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_methylthiobutanaldoxime"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "z-1-glutathion-s-yl-n-to-n-n-dihydroxyhomomethi"
+      },
+      "note": "Shares 4-Methylthiobutanaldoxime with (Z)-1-(glutathion-S-yl)-N… to N,N-dihydroxyhomomethioni….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM722851"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_4_methylthiobutylthiohydroximoyl_l_cysteine_s-2-chloropropanoate-to-chloride",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_4_methylthiobutylthiohydroximoyl_l_cysteine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2-chloropropanoate-to-chloride"
+      },
+      "note": "Shares S-(4-Methylthiobutylthiohydroximoyl)-L-cysteine with (S)-2-chloropropanoate to chloride.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:80983"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_4_methylthiobutylthiohydroximoyl_l_cysteine_z-1-glutathion-s-yl-n-to-l-serine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_4_methylthiobutylthiohydroximoyl_l_cysteine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "z-1-glutathion-s-yl-n-to-l-serine"
+      },
+      "note": "Shares S-(4-Methylthiobutylthiohydroximoyl)-L-cysteine with (Z)-1-(glutathion-S-yl)-N… to L-serine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:80983"
+          }
+        ]
+      }
+    }
+  ]
+}

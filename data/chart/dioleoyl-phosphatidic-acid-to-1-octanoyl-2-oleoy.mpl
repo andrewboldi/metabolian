@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dioleoyl-phosphatidic-acid-to-1-octanoyl-2-oleoy "dioleoyl phosphatidic acid to 1-octanoyl-2-oleoyl-sn-gl…" {
-  spacing 220
+  spacing 268
 
   spine at 0,0 {
     dioleoyl_phosphatidic_acid
@@ -18,49 +18,97 @@ pathway dioleoyl-phosphatidic-acid-to-1-octanoyl-2-oleoy "dioleoyl phosphatidic 
 
   branch from h side left {
     h
-    <-> ec_2_3_1_60 [2.3.1.60] +acetyl_coa +tobramycin +coa
-    n3_acetyltobramycin
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    clavulanate
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_239 [1.1.1.239] +nadh +5beta_androstane_3_17_dione +nad
-    5_dihydrotestosterone
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    phenazine_1_carboxylate
   }
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
-    arsenobetaine
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    2_hydroxyphenazine
   }
 
   branch from atp side right {
     atp
-    <-> ec_6_2_1_3 [6.2.1.3] +decanoate +coa +diphosphate +amp
-    decanoyl_coa
-  }
-
-  branch from 1_2_dioleoyl_sn_glycerol side left {
-    1_2_dioleoyl_sn_glycerol
-    <-> . +stearoyl_coa +coa
-    1_2_dioleoyl_3_stearoyl_sn_glycerol
-  }
-
-  branch from 1_2_dioleoyl_sn_glycerol side right {
-    1_2_dioleoyl_sn_glycerol
-    <-> . +1_oleoyl_2_stearoyl_sn_glycero_3_phosphoethanola +1_2_dioleoyl_3_stearoyl_sn_glycerol
-    1_oleoyl_sn_glycero_3_phosphoethanolamine
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    piericidin_a
   }
 
   branch from 2_oleoylglycerol side left {
     2_oleoylglycerol
-    <-> . +oleoyl_coa +coa
-    1_2_dioleoylglycerol
+    <-> . +atp +adp +hplus
+    2_oleoyl_sn_glycero_3_phosphate
   }
 
   branch from 2_oleoylglycerol side right {
     2_oleoylglycerol
-    <-> . +atp +adp +hplus
-    2_oleoyl_sn_glycero_3_phosphate
+    <-> . +myristoyl_coa +coa
+    1_myristoyl_2_oleoylglycerol
+  }
+
+  branch from adp side left {
+    adp
+    <-> ec_3_6_3_44 [3.6.3.44] +h +phosphate +atp +h2o
+    thiolactomycin
+  }
+
+  branch from adp side right {
+    adp
+    <-> ec_3_6_3_44 [3.6.3.44] +h +phosphate +atp +h2o
+    myxothiazol
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    polymyxin_b1
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    borrelidin
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    amiclenomycin
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    penem_cgp31608
+  }
+
+  branch from 2_oleoylglycerol side left {
+    2_oleoylglycerol
+    <-> . +palmitoyl_coa +coa
+    1_palmitoyl_2_oleoylglycerol
+  }
+
+  branch from 2_oleoylglycerol side right {
+    2_oleoylglycerol
+    <-> . +stearoyl_coa +coa
+    1_stearoyl_2_oleoylglycerol
+  }
+
+  branch from octanoyl_coa side left {
+    octanoyl_coa
+    <-> . +fad +hplus +fadh2
+    trans_oct_2_enoyl_coa
+  }
+
+  branch from octanoyl_coa side right {
+    octanoyl_coa
+    <-> . +2_o_d_glucosyl_1_6_d_glucosyl_d_glycerate +coa
+    2_o_6_o_octanoyl_d_glucosyl_1_6_d_glucosyl_d_gly
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-deoxypentalenate-to-h2o "1-deoxypentalenate to H2O" {
-  spacing 306
+  spacing 340
 
   spine at 0,0 {
     1_deoxypentalenate
@@ -22,18 +22,6 @@ pathway 1-deoxypentalenate-to-h2o "1-deoxypentalenate to H2O" {
     atp
   }
 
-  branch from succinate side left {
-    succinate
-    <-> . +3_methylnonanoyl_coa +akg +o2 +co2
-    2_hydroxy_3_methylnonanoyl_coa
-  }
-
-  branch from succinate side right {
-    succinate
-    <-> . +3_methylundecanoyl_coa +akg +o2 +co2
-    2_hydroxy_3_methylundecanoyl_coa
-  }
-
   branch from pentalenolactone_f side left {
     pentalenolactone_f
     <-> . +h +o2 +nadph +pentalenolactone +h2o
@@ -42,37 +30,121 @@ pathway 1-deoxypentalenate-to-h2o "1-deoxypentalenate to H2O" {
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_14_19_23 [1.14.19.23] +oleoyl_containing_glycerolipid +di_sulfido_diiron +o2 +hplus +h2o
-    linoleoyl_containing_glycerolipid
+    <-> . +acetochlor +di_sulfido_diiron +o2 +hplus +ethyl_formate +h2o
+    n_2_ethyl_6_methylphenyl_2_chloroacetamide
   }
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> . +di_sulfido_diiron +cholesterol +o2 +hplus +h2o
-    25r_cholest_5_ene_3_26_diol
+    <-> . +5_cholestan_3_ol +di_sulfido_diiron +o2 +hplus +h2o
+    25r_26_hydroxycholestanol
   }
 
   branch from atp side right {
     atp
-    <-> . +h +adp +phosphate +h2o
-    d_ribose
+    <-> . +nadh +3_dehydro_atp +h
+    nad
   }
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
-    phytanoyl_coa
+    <-> ec_6_2_1_32 [6.2.1.32] +diphosphate +n_methylanthraniloyl_coa +amp +coa
+    n_methylanthranilate
   }
 
   branch from h2o side right {
     h2o
-    <-> . +prostaglandin_pge2_1_glyceryl_ester +h +glycerol
-    prostaglandin_e2
+    <-> ec_3_1_4_43 [3.1.4.43] +1d_myo_inositol_1_phosphate +h
+    1d_myo_inositol_1_2_cyclic_phosphate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +prostaglandin_pge2_3_glyceryl_ester +h +prostaglandin_e2
-    glycerol
+    <-> ec_4_1_2_34 [4.1.2.34] +2_formylbenzoate +h +pyruvate
+    trans_2_carboxybenzylidenepyruvic_acid
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_14_19_61 [1.14.19.61] +dihydrorhizobitoxine +o2 +hplus +di_sulfido_diiron +h2o
+    rhizobitoxine
+  }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> . +julichrome_q6 +o2 +hplus +di_sulfido_diiron +h2o
+    julichrome_q6_6
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> . +stearoyl_coa +di_sulfido_diiron +o2 +hplus +h2o
+    oleoyl_coa
+  }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> . +all_trans_retinol +di_sulfido_diiron +o2 +hplus +h2o
+    all_trans_3_hydroxyretinol
+  }
+
+  branch from h side right {
+    h
+    <-> ec_1_2_5_2 [1.2.5.2] +propynoate +pyrroloquinoline_quinol +pyrroloquinoline_quinone +h2o
+    prop_2_ynal
+  }
+
+  branch from h side left {
+    h
+    <-> . +l_threo_3_methylmalic_acid +h2o
+    mesaconate
+  }
+
+  branch from adp side right {
+    adp
+    <-> . +h +atp +10s_juvenile_hormone_iii_diol
+    10s_juvenile_hormone_iii_diol_phosphate
+  }
+
+  branch from adp side left {
+    adp
+    <-> ec_6_3_1_9 [6.3.1.9] +h +glutathionylspermine +phosphate +atp +glutathione
+    spermine
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> . +h +1_ribosylimidazole_4_acetate +h2o
+    1_5_phosphoribosyl_imidazole_4_acetate
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +h +4_amino_3_4_dideoxy_d_arabino_heptulosonate_7_ph +phosphoenolpyruvate +h2o
+    iminoerythrose_4_phosphate
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_6_3_1_9 [6.3.1.9] +glutathione +glutathionylspermine +adp +phosphate
+    bis_glutathionyl_spermine
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_6_3_1_9 [6.3.1.9] +h +adp +glutathionylaminopropylcadaverine +phosphate +aminopropylcadaverine
+    glutathione
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +3_beta_d_galactosyl_sn_glycerol +glycerol
+    aldehydo_d_galactose
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +2_methylfumaryl_coa +mesaconate +h
+    coa
   }
 }

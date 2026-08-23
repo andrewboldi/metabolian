@@ -186,42 +186,6 @@
       "xrefs": {
         "chebi": "CHEBI:4167"
       }
-    },
-    {
-      "id": "nigerose",
-      "name": "nigerose",
-      "formula": "C12H22O11",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:7570"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "WATER"
-      }
-    },
-    {
-      "id": "cellobiosan",
-      "name": "cellobiosan",
-      "formula": "C12H20O10",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1132171"
-      }
-    },
-    {
-      "id": "levoglucosan",
-      "name": "levoglucosan",
-      "formula": "C6H10O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:30997"
-      }
     }
   ],
   "enzymes": [
@@ -230,7 +194,10 @@
       "name": "5-formyltetrahydrofolate cyclo-ligase",
       "ec": [
         "6.3.3.2"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P49914"
+      }
     },
     {
       "id": "ec_2_1_1_341",
@@ -251,20 +218,6 @@
       "name": "beta-glucogallin O-galloyltransferase",
       "ec": [
         "2.3.1.90"
-      ]
-    },
-    {
-      "id": "ec_3_2_1_20",
-      "name": "alpha-glucosidase",
-      "ec": [
-        "3.2.1.20"
-      ]
-    },
-    {
-      "id": "ec_3_2_1_21",
-      "name": "beta-glucosidase",
-      "ec": [
-        "3.2.1.21"
       ]
     }
   ],
@@ -495,87 +448,269 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r6",
-      "name": "alpha-glucosidase",
-      "ec": "3.2.1.20",
-      "substrates": [
-        {
-          "metabolite": "glucose",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "nigerose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_2_1_20"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "metanetx": "MNXR192331"
+      "id": "xt_6s_5_formyltetrahydrofolate_6s-5-formyltetrahydrofo-to-l-serine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6s_5_formyltetrahydrofolate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "6s-5-formyltetrahydrofo-to-l-serine"
+      },
+      "note": "Shares (6S)-5-formyltetrahydrofolate with (6S)-5-formyltetrahydrofo… to L-serine.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR192331"
+            "db": "ChEBI",
+            "id": "CHEBI:57457"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "beta-glucosidase",
-      "ec": "3.2.1.21",
-      "substrates": [
-        {
-          "metabolite": "cellobiosan",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "glucose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "levoglucosan",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_2_1_21"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "metanetx": "MNXR192837"
+      "id": "xt_6s_5_formyltetrahydrofolate_6s-5-methyltetrahydrofo-to-6s-5-formyltetrahydr",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6s_5_formyltetrahydrofolate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "6s-5-methyltetrahydrofo-to-6s-5-formyltetrahydr"
+      },
+      "note": "Shares (6S)-5-formyltetrahydrofolate with (6S)-5-methyltetrahydrofo… to (6S)-5-formyltetrahydrofo….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR192837"
+            "db": "ChEBI",
+            "id": "CHEBI:57457"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_methenyl_thf_5-formimidoyltetrahydrofo-to-6s-5-6-7-8-tetrahyd",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "methenyl_thf"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-formimidoyltetrahydrofo-to-6s-5-6-7-8-tetrahyd"
+      },
+      "note": "Shares 5,10-Methenyltetrahydrofolate with 5-formimidoyltetrahydrofo… to (6S)-5,6,7,8-tetrahydrofo….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57455"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_methenyl_thf_6s-5-methyltetrahydrofo-to-6s-5-formyltetrahydr",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "methenyl_thf"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6s-5-methyltetrahydrofo-to-6s-5-formyltetrahydr"
+      },
+      "note": "Shares 5,10-Methenyltetrahydrofolate with (6S)-5-methyltetrahydrofo… to (6S)-5-formyltetrahydrofo….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57455"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_methenyl_thf_r-alanopine-to-n6-r-s8-succinyldihydr",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "methenyl_thf"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-alanopine-to-n6-r-s8-succinyldihydr"
+      },
+      "note": "Shares 5,10-Methenyltetrahydrofolate with (R)-β-alanopine to N6-[(R)-S8-succinyldihydr….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57455"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n1_5_phospho_d_ribosyl_glycinamide_1-methyladenosine-to-5-amino-1-5-phosphonato",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n1_5_phospho_d_ribosyl_glycinamide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-methyladenosine-to-5-amino-1-5-phosphonato"
+      },
+      "note": "Shares N1-(5-phospho-β-D-ribosyl)glycinamide with 1-methyladenosine to 5-amino-1-(5-phosphonato-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:143788"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n1_5_phospho_d_ribosyl_glycinamide_3-4-oxo-4-5-dihydro-1h-i-to-n2-formyl-n1-5-phosp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n1_5_phospho_d_ribosyl_glycinamide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-4-oxo-4-5-dihydro-1h-i-to-n2-formyl-n1-5-phosp"
+      },
+      "note": "Shares N1-(5-phospho-β-D-ribosyl)glycinamide with 3-(4-oxo-4,5-dihydro-1H-i… to N2-formyl-N1-(5-phospho-β….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:143788"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n2_formyl_n1_5_phospho_d_ribosyl_glycinamide_1-methyladenosine-to-5-amino-1-5-phosphonato",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n2_formyl_n1_5_phospho_d_ribosyl_glycinamide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-methyladenosine-to-5-amino-1-5-phosphonato"
+      },
+      "note": "Shares N2-formyl-N1-(5-phospho-β-D-ribosyl)glycinamide with 1-methyladenosine to 5-amino-1-(5-phosphonato-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:147286"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n2_formyl_n1_5_phospho_d_ribosyl_glycinamide_3-4-oxo-4-5-dihydro-1h-i-to-n2-formyl-n1-5-phosp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n2_formyl_n1_5_phospho_d_ribosyl_glycinamide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-4-oxo-4-5-dihydro-1h-i-to-n2-formyl-n1-5-phosp"
+      },
+      "note": "Shares N2-formyl-N1-(5-phospho-β-D-ribosyl)glycinamide with 3-(4-oxo-4,5-dihydro-1H-i… to N2-formyl-N1-(5-phospho-β….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:147286"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_o_methylgallate_cobalt-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_o_methylgallate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cobalt-to-diphosphate"
+      },
+      "note": "Shares 3-O-methylgallate with cobalt to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:19950"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_o_methylgallate_syringaldehyde-to-methanol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_o_methylgallate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "syringaldehyde-to-methanol"
+      },
+      "note": "Shares 3-O-methylgallate with syringaldehyde to methanol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:19950"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_gallate_digallate-to-nadp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "gallate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "digallate-to-nadp"
+      },
+      "note": "Shares gallate with digallate to NADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16918"
           }
         ]
       }

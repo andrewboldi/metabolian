@@ -1,0 +1,544 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "spermine-dialdehyde-to-2s-2-hydroxybut-3-eneni-6",
+  "name": "spermine dialdehyde to (2S)-2-hydroxybut-3-eneni…",
+  "category": "other",
+  "summary": "A 3-step route from spermine dialdehyde(2+) to (2S)-2-hydroxybut-3-enenitrile, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:69156"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:180902"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "spermine_dialdehyde",
+      "name": "spermine dialdehyde",
+      "formula": "C10H22N2O2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:180902"
+      }
+    },
+    {
+      "id": "4_ammoniobutyl_3_oxopropyl_azanium",
+      "name": "(4-ammoniobutyl)(3-oxopropyl)azanium",
+      "short": "(4-ammoniobutyl)(3-…",
+      "formula": "C7H18N2O",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:183796"
+      }
+    },
+    {
+      "id": "acrolein",
+      "name": "acrolein",
+      "formula": "C3H4O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15368"
+      }
+    },
+    {
+      "id": "1_4_butanediammonium",
+      "name": "1,4-butanediammonium",
+      "formula": "C4H14N2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:326268"
+      }
+    },
+    {
+      "id": "hydrogen_cyanide",
+      "name": "hydrogen cyanide",
+      "formula": "CHN",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18407"
+      }
+    },
+    {
+      "id": "2s_2_hydroxybut_3_enenitrile",
+      "name": "(2S)-2-hydroxybut-3-enenitrile",
+      "short": "2-hydroxybut-3-enen…",
+      "formula": "C4H5NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:197356"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "putreanine",
+      "name": "putreanine",
+      "formula": "C7H17N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:180912"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "spermine dialdehyde = N-(4-aminobutyl)-3-aminopropanal + acrolein",
+      "equation": "spermine dialdehyde = N-(4-aminobutyl)-3-aminopropanal + acrolein",
+      "substrates": [
+        {
+          "metabolite": "spermine_dialdehyde",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_ammoniobutyl_3_oxopropyl_azanium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acrolein",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:69156"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69156"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N-(4-aminobutyl)-3-aminopropanal = acrolein + putrescine",
+      "equation": "N-(4-aminobutyl)-3-aminopropanal = acrolein + putrescine",
+      "substrates": [
+        {
+          "metabolite": "4_ammoniobutyl_3_oxopropyl_azanium",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acrolein",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_4_butanediammonium",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:69140"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69140"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "acrolein + hydrogen cyanide = (2S)-2-hydroxybut-3-enenitrile",
+      "equation": "acrolein + hydrogen cyanide = (2S)-2-hydroxybut-3-enenitrile",
+      "substrates": [
+        {
+          "metabolite": "acrolein",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_cyanide",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2s_2_hydroxybut_3_enenitrile",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:77411"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77411"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "N-(4-aminobutyl)-3-aminopropanal + NAD(+) + H2O = N-(2-carboxyethyl)putrescine + NADH +...",
+      "equation": "N-(4-aminobutyl)-3-aminopropanal + NAD(+) + H2O = N-(2-carboxyethyl)putrescine + NADH + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "4_ammoniobutyl_3_oxopropyl_azanium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "putreanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:69164"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69164"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_spermine_dialdehyde_guaiacylglycerol-guaiac-to-hydroquinone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "spermine_dialdehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "guaiacylglycerol-guaiac-to-hydroquinone"
+      },
+      "note": "Shares spermine dialdehyde with guaiacylglycerol-β-guaiac… to hydroquinone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:180902"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_spermine_dialdehyde_spermine-dialdehyde-to-2s-2-hydroxybut-3-eneni",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "spermine_dialdehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "spermine-dialdehyde-to-2s-2-hydroxybut-3-eneni"
+      },
+      "note": "Shares spermine dialdehyde with spermine dialdehyde to (2S)-2-hydroxybut-3-eneni….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:180902"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_ammoniobutyl_3_oxopropyl_azanium_manganese-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_ammoniobutyl_3_oxopropyl_azanium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "manganese-to-h2o"
+      },
+      "note": "Shares (4-ammoniobutyl)(3-oxopropyl)azanium with manganese to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:183796"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_ammoniobutyl_3_oxopropyl_azanium_manganese-to-h2o-22776",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_ammoniobutyl_3_oxopropyl_azanium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "manganese-to-h2o-22776"
+      },
+      "note": "Shares (4-ammoniobutyl)(3-oxopropyl)azanium with manganese to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:183796"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_ammoniobutyl_3_oxopropyl_azanium_s-alkyl-l-cysteine-s-oxide-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_ammoniobutyl_3_oxopropyl_azanium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-alkyl-l-cysteine-s-oxide-to-ammonium"
+      },
+      "note": "Shares (4-ammoniobutyl)(3-oxopropyl)azanium with S-alkyl-L-cysteine S-oxide to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:183796"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_ammoniobutyl_3_oxopropyl_azanium_spermine-dialdehyde-to-2s-2-hydroxybut-3-eneni",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_ammoniobutyl_3_oxopropyl_azanium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "spermine-dialdehyde-to-2s-2-hydroxybut-3-eneni"
+      },
+      "note": "Shares (4-ammoniobutyl)(3-oxopropyl)azanium with spermine dialdehyde to (2S)-2-hydroxybut-3-eneni….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:183796"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_acrolein_d-citramalate-to-acrylate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acrolein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-citramalate-to-acrylate"
+      },
+      "note": "Shares acrolein with D-citramalate to acrylate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15368"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_acrolein_d-citramalate-to-acrylate-22332",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acrolein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-citramalate-to-acrylate-22332"
+      },
+      "note": "Shares acrolein with D-citramalate to acrylate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15368"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_acrolein_spermine-dialdehyde-to-2s-2-hydroxybut-3-eneni",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acrolein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "spermine-dialdehyde-to-2s-2-hydroxybut-3-eneni"
+      },
+      "note": "Shares acrolein with spermine dialdehyde to (2S)-2-hydroxybut-3-eneni….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15368"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_acrolein_spermine-to-1-pyrrolinium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acrolein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "spermine-to-1-pyrrolinium"
+      },
+      "note": "Shares acrolein with spermine to 1-pyrrolinium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15368"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_acrolein_spermine-to-1-pyrrolinium-69148",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acrolein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "spermine-to-1-pyrrolinium-69148"
+      },
+      "note": "Shares acrolein with spermine to 1-pyrrolinium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15368"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2s_2_hydroxybut_3_enenitrile_spermine-dialdehyde-to-2s-2-hydroxybut-3-eneni",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2s_2_hydroxybut_3_enenitrile"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "spermine-dialdehyde-to-2s-2-hydroxybut-3-eneni"
+      },
+      "note": "Shares (2S)-2-hydroxybut-3-enenitrile with spermine dialdehyde to (2S)-2-hydroxybut-3-eneni….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:197356"
+          }
+        ]
+      }
+    }
+  ]
+}

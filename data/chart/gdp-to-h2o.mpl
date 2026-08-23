@@ -4,45 +4,173 @@
 # edit the generator, not this file.
 
 pathway gdp-to-h2o "GDP to H2O" {
-  spacing 182
+  spacing 316
 
   spine at 0,0 {
     gdp
-    <-> . +astaxanthin_dirhamnoside +h -all_trans_3s_3_s_astaxanthin
-    gdp_alpha_d_rhamnose
-    <-> . +nadh +h +all_trans_3s_3_s_astaxanthin +o2 -nad -h2o
-    2r_3s_3_s_2_3_3_trihydroxy_beta_beta_carotene_4
-    <-> . +nadh +h +o2 -nad -h2o
-    2r_2_r_3s_3_s_2_2_3_3_tetrahydroxy_beta_beta_ca
+    <-> . +h +alpha_d_mannosylchitobiosyldiphosphodolichol -n_n_diacetylchitobiosyldiphosphodolichol
+    gdp_alpha_d_mannose
+    <-> .
+    gdp_alpha_d_glucose
+    <-> . +l_galactose_1_phosphate -h -gdp_beta_l_galactose
+    d_glucopyranose_1_phosphate
+    <-> ec_3_6_1_9 [3.6.1.9] +cmp +h -h2o
+    cdp_alpha_d_glucose
   }
 
-  branch from all_trans_3s_3_s_astaxanthin side left {
-    all_trans_3s_3_s_astaxanthin
-    <-> . +h2o
-    4_4_dihydroxyadonixanthin
+  branch from gdp_alpha_d_mannose side left {
+    gdp_alpha_d_mannose
+    <-> ec_2_4_1_83 [2.4.1.83] +gdp +dolichyl_phosphate_d_mannose +h
+    dolichol_phosphate_human_uterine_homolog
   }
 
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_21 [1.1.1.21] +nadh +h +3_chlorobenzaldehyde
-    3_chlorophenyl_methanol
+  branch from gdp_alpha_d_mannose side right {
+    gdp_alpha_d_mannose
+    <-> ec_2_4_1_32 [2.4.1.32] +gdp +h +glucomannan_longer_by_one_mannose_unit
+    glucomannan
   }
 
-  branch from nad side left {
-    nad
-    <-> ec_1_2_1_28 [1.2.1.28] +nadh +h +3_chlorobenzoate +h2o
-    3_chlorobenzaldehyde
+  branch from gdp_alpha_d_glucose side left {
+    gdp_alpha_d_glucose
+    <-> ec_3_2_1_42 [3.2.1.42] +gdp +h +h2o
+    beta_d_glucose
   }
 
-  branch from h2o side right {
-    h2o
-    <-> . +4_hydroxy_2_keto_5_methyl_6_oxo_3_hexenoate +2_methyl_3_oxopropanoate
-    pyruvate
+  branch from gdp_alpha_d_glucose side right {
+    gdp_alpha_d_glucose
+    <-> ec_2_7_7_13 [2.7.7.13] +gtp +d_glucopyranose_1_phosphate +h
+    diphosphate
+  }
+
+  branch from d_glucopyranose_1_phosphate side left {
+    d_glucopyranose_1_phosphate
+    <-> ec_2_4_1_1 [2.4.1.1] +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g +phosphate
+    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp
+  }
+
+  branch from d_glucopyranose_1_phosphate side right {
+    d_glucopyranose_1_phosphate
+    <-> ec_2_4_1_1 [2.4.1.1] +phosphate +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp
+    maltopentaose
+  }
+
+  branch from h side left {
+    h
+    <-> ec_1_1_1_2 [1.1.1.2] +2_pyridinylmethanol +nadp +nadph
+    2_formylpyridine
+  }
+
+  branch from h side right {
+    h
+    <-> ec_1_1_1_21 [1.1.1.21] +1_naphthaldehyde +nadph +1_naphthyl_methanol
+    nadp
+  }
+
+  branch from gdp_beta_l_galactose side left {
+    gdp_beta_l_galactose
+    <-> . +l_galactose_1_phosphate +diphosphate +h
+    gtp
+  }
+
+  branch from gdp_beta_l_galactose side right {
+    gdp_beta_l_galactose
+    <-> ec_2_7_7_69 [2.7.7.69] +gdp +l_galactose_1_phosphate +h
+    phosphate
+  }
+
+  branch from cdp_alpha_d_glucose side left {
+    cdp_alpha_d_glucose
+    <-> ec_2_7_7_33 [2.7.7.33] +d_glucopyranose_1_phosphate +h +diphosphate
+    ctp
+  }
+
+  branch from cdp_alpha_d_glucose side right {
+    cdp_alpha_d_glucose
+    <-> ec_2_4_1_13 [2.4.1.13] +cdp +sucrose +h
+    beta_d_fructose
   }
 
   branch from h2o side left {
     h2o
-    <-> . +5_methyl_picolinate
-    2z_4e_2_amino_5_methyl_muconate_semialdehyde
+    <-> . +ala_gly_gly +alanine
+    glycylglycine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +ala_gly +glycine
+    gly_ala_gly
+  }
+
+  branch from gdp side left {
+    gdp
+    <-> ec_2_7_2_2 [2.7.2.2] +carbamoyl_phosphate +gtp
+    carbamate
+  }
+
+  branch from gdp side right {
+    gdp
+    <-> ec_2_7_1_81 [2.7.1.81] +5r_5_phosphooxy_l_lysine +gtp
+    threo_5_hydroxy_l_lysine
+  }
+
+  branch from h side left {
+    h
+    <-> ec_1_1_1_2 [1.1.1.2] +2_formylbenzoate +nadph +nadp
+    2_hydroxymethyl_benzoic_acid
+  }
+
+  branch from h side right {
+    h
+    <-> ec_1_1_1_184 [1.1.1.184] +4_pyridinecarboxaldehyde +nadph +nadp
+    4_pyridinemethanol
+  }
+
+  branch from gdp_alpha_d_mannose side left {
+    gdp_alpha_d_mannose
+    <-> ec_2_4_1_361 [2.4.1.361] +gdp +h +2_o_beta_d_mannosyl_1_2_beta_d_mannosyl_bis_myo
+    bis_myo_inositol_1_3_phosphate
+  }
+
+  branch from gdp_alpha_d_mannose side right {
+    gdp_alpha_d_mannose
+    <-> . +alpha_d_man_1_3_alpha_d_man_1_6_beta_d_man_1_4_b +gdp +h
+    alpha_d_man_1_6_beta_d_man_1_4_beta_d_glcnac_1_4
+  }
+
+  branch from gdp_alpha_d_glucose side left {
+    gdp_alpha_d_glucose
+    <-> . +gdp +h +phosphate
+    glucose_1_p
+  }
+
+  branch from gdp_alpha_d_glucose side right {
+    gdp_alpha_d_glucose
+    <-> ec_2_4_1_13 [2.4.1.13] +gdp +h +beta_d_fructose
+    sucrose
+  }
+
+  branch from l_galactose_1_phosphate side left {
+    l_galactose_1_phosphate
+    <-> ec_3_1_3_93 [3.1.3.93] +h2o +h +phosphate
+    alpha_l_galactose
+  }
+
+  branch from d_glucopyranose_1_phosphate side right {
+    d_glucopyranose_1_phosphate
+    <-> ec_2_4_1_1 [2.4.1.1] +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g +phosphate
+    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
+  }
+
+  branch from d_glucopyranose_1_phosphate side left {
+    d_glucopyranose_1_phosphate
+    <-> ec_2_4_1_20 [2.4.1.20] +glucose +phosphate
+    d_cellobiose
+  }
+
+  branch from gdp_beta_l_galactose side right {
+    gdp_beta_l_galactose
+    <-> . +h +l_galactose +phosphate +h2o
+    gmp
   }
 }

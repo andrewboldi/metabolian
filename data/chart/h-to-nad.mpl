@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway h-to-nad "H to NAD" {
-  spacing 218
+  spacing 308
 
   spine at 0,0 {
     h
@@ -28,67 +28,157 @@ pathway h-to-nad "H to NAD" {
 
   branch from h2o side left {
     h2o
-    <-> . +l_leucine +h +o2 +nadph +nadp +3_methylbutyraldehyde_oxime
-    co2
+    <-> . +di_trans_poly_cis_polyprenyl_diphosphate_c80 +diphosphate
+    di_trans_poly_cis_polyprenol_c80
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_4_4_1_13 [4.4.1.13] +pyruvate +4_methylthiobutylthiohydroximate +nh4
-    s_4_methylthiobutylthiohydroximoyl_l_cysteine
+    <-> ec_3_2_1_183 [3.2.1.183] +udp +n_acetyl_d_mannosamine +h
+    udp_n_acetyl_alpha_d_glucosamine
   }
 
   branch from coa side left {
     coa
-    <-> . +acetyl_coa +13_sophorosyloxydocosanoic_acid +h
-    13_o_2_beta_d_glucopyranosyl_beta_d_glucopyranos
+    <-> . +e_cinnamoyl_coa +serotonin +h
+    cinnamoylserotonin
   }
 
   branch from coa side right {
     coa
-    <-> . +acetyl_coa +h +13_o_2_beta_d_glucopyranosyl_beta_d_glucopyranos
-    13_sophorosyloxydocosanoate_6_6_diacetate
+    <-> ec_2_3_1_110 [2.3.1.110] +e_cinnamoyl_coa +tyramine +h
+    n_trans_cinnamoyltyramine
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_3_1_25 [1.3.1.25] +nadh +co2 +h +4_fluorocatechol
-    4_fluorocyclohexadiene_cis_cis_1_2_diol_1_carbox
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +s_2_methylbutanal +h
+    s_2_methylbutan_1_ol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_1 [1.1.1.1] +alcophosphamide +nadh +h
-    aldophosphamide
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +norcamphor +h
+    trans_bicyclo_2_2_1_heptanol
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_10_3_4 [1.10.3.4] +2_aminophenol +h2o
-    6_iminocyclohexa_2_4_dienone
+    <-> . +2_oxoglutarate +2_chloro_4_methyl_phenoxyacetate +succinate +glyoxylate +2_chloro_4_methylphenol
+    co2
   }
 
   branch from o2 side right {
     o2
-    <-> . +nadh +h +1_2_3_4_tetrachlorobenzene +nad
-    1r_2s_3_4_5_6_tetrachlorocyclohexa_3_5_diene_1
+    <-> . +2_carboxymuconate +h
+    2_3_dihydroxybenzoate
   }
 
   branch from atp side left {
     atp
-    <-> . +diphosphate +n_benzoyl_l_glutamate +h +amp +l_glutamate
-    benzoate
+    <-> . +h +adp +phosphate +h2o
+    l_lanthionine_dizwitterion
   }
 
   branch from atp side right {
     atp
-    <-> . +diphosphate +n_4_hydroxybenzoyl_l_glutamate +h +amp +l_glutamate
-    4_hydroxybenzoate
+    <-> . +h +adp +phosphate +h2o
+    cold_adapted_kdo_2_lipid_a
   }
 
   branch from 20_cooh_leukotriene_e4 side left {
     20_cooh_leukotriene_e4
     <-> . +diphosphate +amp +h +atp +coa
     coa_20_cooh_lte4
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_3_1_110 [2.3.1.110] +n_trans_sinapoyltyramine +coa +e_sinapoyl_coa
+    tyramine
+  }
+
+  branch from h side left {
+    h
+    <-> . +s_adenosyl_l_homocysteine +beta_peltatin_a_methyl_ether +s_adenosyl_l_methionine
+    peltatin
+  }
+
+  branch from coa side right {
+    coa
+    <-> . +4_1_methyl_2_pyrrolidinyl_3_oxobutanoyl_coa +acetyl_coa
+    1_methylpyrrolidine_2_acetyl_coa
+  }
+
+  branch from coa side left {
+    coa
+    <-> ec_2_3_1_75 [2.3.1.75] +eicosanoyl_coa +dodecan_1_ol
+    dodecyl_icosanoate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_1_3_5 [3.1.3.5] +bis_4_nitrophenyl_phosphate +h +4_nitrophenol
+    4_nitrophenyl_phosphate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_2_1_86 [3.2.1.86] +beta_d_glucose_6_phosphate +methanol
+    methyl_beta_d_glucoside_6_phosphate
+  }
+
+  branch from acetyl_coa side right {
+    acetyl_coa
+    <-> . +1_methylpyrrolidine_2_acetyl_coa
+    1_methylpyrrolinium
+  }
+
+  branch from acetyl_coa side left {
+    acetyl_coa
+    <-> . +n6_n6_o_tridemethylpuromycin +h +coa
+    n_acetyl_n6_n6_o_tridemethylpuromycin
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_1_1_1 [1.1.1.1] +4_methylcyclohexanone +h +nad
+    cis_4_methylcyclohexanol
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> ec_1_1_1_1 [1.1.1.1] +h +3_methylbutan_2_one +nad
+    r_3_methylbutan_2_ol
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +2_oxohexane
+    s_2_hexanol
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +heptan_2_one
+    heptan_2_ol
+  }
+
+  branch from h2o2 side right {
+    h2o2
+    <-> . +mycothiol +h2o
+    mycothione
+  }
+
+  branch from h2o2 side left {
+    h2o2
+    <-> ec_1_2_3_1 [1.2.3.1] +nicotine_delta1_5_iminium_ion +o2 +h2o +h
+    cotinine
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +h +5_deoxy_dihydrokalafungin +h2o
+    dihydrokalafungin
   }
 }

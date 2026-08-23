@@ -1,0 +1,520 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "myristoylated-ferribactin-to-h2o-null",
+  "name": "myristoylated ferribactin to H2O",
+  "category": "other",
+  "summary": "A 3-step route from myristoylated ferribactin to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR192824"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "myristoylated_ferribactin",
+      "name": "myristoylated ferribactin",
+      "short": "myristoylated…",
+      "formula": "C70H116N18O22",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM149116"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "tetradecanoate",
+      "name": "tetradecanoate",
+      "formula": "C14H27O2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM314"
+      }
+    },
+    {
+      "id": "ferribactin",
+      "name": "ferribactin",
+      "formula": "C56H91N18O21",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM727040"
+      }
+    },
+    {
+      "id": "1_tetradecanoyl_sn_glycerol_3_phosphate",
+      "name": "1-tetradecanoyl-sn-glycerol 3-phosphate",
+      "short": "1-tetradecanoyl-sn-…",
+      "formula": "C17H33O7P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1371573"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "dimyristoyl_phosphatidic_acid",
+      "name": "dimyristoyl phosphatidic acid",
+      "short": "dimyristoyl…",
+      "formula": "C31H61O8P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62085"
+      }
+    },
+    {
+      "id": "cmp",
+      "name": "CMP",
+      "formula": "C9H12N3O8P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1103302"
+      }
+    },
+    {
+      "id": "cdp_1_2_ditetradecanoylglycerol",
+      "name": "CDP-1,2-ditetradecanoylglycerol",
+      "short": "CDP-1,2-ditetradeca…",
+      "formula": "C40H71N3O15P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM736328"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_1_4",
+      "name": "phospholipase A2",
+      "ec": [
+        "3.1.1.4"
+      ],
+      "xrefs": {
+        "uniprot": "Q8WU67"
+      }
+    },
+    {
+      "id": "ec_3_6_1_26",
+      "name": "CDP-diacylglycerol diphosphatase",
+      "ec": [
+        "3.6.1.26"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR192824",
+      "substrates": [
+        {
+          "metabolite": "myristoylated_ferribactin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "tetradecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ferribactin",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR192824"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR192824"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "phospholipase A2",
+      "ec": "3.1.1.4",
+      "substrates": [
+        {
+          "metabolite": "1_tetradecanoyl_sn_glycerol_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "tetradecanoate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dimyristoyl_phosphatidic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR102990"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR102990"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "CDP-diacylglycerol diphosphatase",
+      "ec": "3.6.1.26",
+      "substrates": [
+        {
+          "metabolite": "cmp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dimyristoyl_phosphatidic_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cdp_1_2_ditetradecanoylglycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_26"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR153146"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR153146"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_myristoylated_ferribactin_2-oxo-4-aminobutyrate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "myristoylated_ferribactin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-oxo-4-aminobutyrate-to-h2o"
+      },
+      "note": "Shares myristoylated ferribactin with 2-Oxo-4-aminobutyrate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM149116"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_myristoylated_ferribactin_2-oxo-4-aminobutyrate-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "myristoylated_ferribactin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-oxo-4-aminobutyrate-to-h2o-null"
+      },
+      "note": "Shares myristoylated ferribactin with 2-Oxo-4-aminobutyrate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM149116"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_myristoylated_ferribactin_myristoylated-ferribactin-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "myristoylated_ferribactin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "myristoylated-ferribactin-to-h2o"
+      },
+      "note": "Shares myristoylated ferribactin with myristoylated ferribactin to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM149116"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ferribactin_diaminobutyryl-citryl-eth-to-amp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ferribactin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diaminobutyryl-citryl-eth-to-amp"
+      },
+      "note": "Shares ferribactin with diaminobutyryl-citryl-eth… to AMP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM727040"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ferribactin_diaminobutyryl-citryl-eth-to-amp-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ferribactin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diaminobutyryl-citryl-eth-to-amp-null"
+      },
+      "note": "Shares ferribactin with diaminobutyryl-citryl-eth… to AMP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM727040"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ferribactin_myristoylated-ferribactin-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ferribactin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "myristoylated-ferribactin-to-h2o"
+      },
+      "note": "Shares ferribactin with myristoylated ferribactin to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM727040"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_tetradecanoyl_sn_glycerol_3_phosphate_2-furoyl-coa-to-hydrogen-donor-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_tetradecanoyl_sn_glycerol_3_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-furoyl-coa-to-hydrogen-donor-null"
+      },
+      "note": "Shares 1-tetradecanoyl-sn-glycerol 3-phosphate with 2-furoyl-CoA to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371573"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_tetradecanoyl_sn_glycerol_3_phosphate_3-hydroxy-3-phenylpropion-to-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_tetradecanoyl_sn_glycerol_3_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxy-3-phenylpropion-to-acetate"
+      },
+      "note": "Shares 1-tetradecanoyl-sn-glycerol 3-phosphate with 3-hydroxy-3-phenylpropion… to acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371573"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_tetradecanoyl_sn_glycerol_3_phosphate_adenosine-5-phospho-n-me-to-n-acetylimidazole",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_tetradecanoyl_sn_glycerol_3_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "adenosine-5-phospho-n-me-to-n-acetylimidazole"
+      },
+      "note": "Shares 1-tetradecanoyl-sn-glycerol 3-phosphate with Adenosine-5'-phospho-N-me… to N-acetylimidazole.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371573"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_tetradecanoyl_sn_glycerol_3_phosphate_benzene-to-4-methylcatechol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_tetradecanoyl_sn_glycerol_3_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "benzene-to-4-methylcatechol"
+      },
+      "note": "Shares 1-tetradecanoyl-sn-glycerol 3-phosphate with benzene to 4-methylcatechol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371573"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_tetradecanoyl_sn_glycerol_3_phosphate_benzene-to-4-methylcatechol-13813",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_tetradecanoyl_sn_glycerol_3_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "benzene-to-4-methylcatechol-13813"
+      },
+      "note": "Shares 1-tetradecanoyl-sn-glycerol 3-phosphate with benzene to 4-methylcatechol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371573"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_tetradecanoyl_sn_glycerol_3_phosphate_diphosphate-to-2s-2-hydroxy-4-phenylbu",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_tetradecanoyl_sn_glycerol_3_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-2s-2-hydroxy-4-phenylbu"
+      },
+      "note": "Shares 1-tetradecanoyl-sn-glycerol 3-phosphate with diphosphate to (2S)-2-hydroxy-4-phenylbu….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371573"
+          }
+        ]
+      }
+    }
+  ]
+}

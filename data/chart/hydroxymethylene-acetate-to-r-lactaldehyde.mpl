@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway hydroxymethylene-acetate-to-r-lactaldehyde "hydroxymethylene acetate to (R)-lactaldehyde" {
-  spacing 248
+  spacing 188
 
   spine at 0,0 {
     hydroxymethylene_acetate
@@ -14,65 +14,5 @@ pathway hydroxymethylene-acetate-to-r-lactaldehyde "hydroxymethylene acetate to 
     propane_1_2_diol
     <-> ec_1_1_1_2 [1.1.1.2] +nadp -nadph -r_lactaldehyde
     h
-  }
-
-  branch from hydroxyacetone side left {
-    hydroxyacetone
-    <-> ec_2_7_1_29 [2.7.1.29] +atp +h +adp
-    hydroxyacetone_phosphate
-  }
-
-  branch from hydroxyacetone side right {
-    hydroxyacetone
-    <-> . +h +o2 +nadph +nadp +h2o
-    methylglyoxal
-  }
-
-  branch from h side left {
-    h
-    <-> . +2s_2_carboxyamino_3_methylamino_propanoate +h2o
-    1_methyl_2_oxoimidazolidine_4_carboxylate
-  }
-
-  branch from h side right {
-    h
-    <-> . +dehydrotomatidine +h2o
-    26_amino_furostanol
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +2_formylindan_1_one +indan_1_one
-    co2
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +2_formyl_1_indanone +h +co2
-    indan_1_one
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> . +4_demethylpremithracinone +nadp +h2o +h +o2
-    4s_2_acetyl_3_4_8_10_11_12_hexahydroxy_1_4_dihy
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> . +4_demethylpremithracinone +nadp +h2o +h +o2
-    4s_2_acetyl_3_4_8_10_11_12_hexahydroxy_1_4_dihy
-  }
-
-  branch from nad side left {
-    nad
-    <-> . +nicotinamide
-    cyclic_adp_ribose
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_12 [1.1.1.12] +nadh +lyxulose +h
-    l_arabinitol
   }
 }

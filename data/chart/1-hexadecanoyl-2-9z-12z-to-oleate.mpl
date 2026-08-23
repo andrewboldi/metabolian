@@ -16,15 +16,15 @@ pathway 1-hexadecanoyl-2-9z-12z-to-oleate "1-hexadecanoyl-2-(9Z,12Z-… to oleat
     1_hexadecanoyl_sn_glycero_3_phosphoethanolamine
   }
 
-  branch from linoleate side left {
-    linoleate
-    <-> ec_1_13_11_92 [1.13.11.92] +o2
-    2r_9z_12z_2_hydroperoxyoctadecadienoate
+  branch from oleoyl_coa side left {
+    oleoyl_coa
+    <-> . +18_methylnonadecan_1_ol +coa
+    1_o_18_methylnonadecanyl_oleate
   }
 
-  branch from linoleate side right {
-    linoleate
-    <-> . +h2o
-    12z_10_hydroxyoctadec_12_enoate
+  branch from oleoyl_coa side right {
+    oleoyl_coa
+    <-> . +20_methylhenicosan_1_ol +coa
+    1_o_20_methylhenicosyl_oleate
   }
 }

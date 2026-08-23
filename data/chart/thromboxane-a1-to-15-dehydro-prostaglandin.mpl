@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway thromboxane-a1-to-15-dehydro-prostaglandin "thromboxane A1 to 15-dehydro-prostaglandin…" {
-  spacing 270
+  spacing 264
 
   spine at 0,0 {
     thromboxane_a1
@@ -26,11 +26,5 @@ pathway thromboxane-a1-to-15-dehydro-prostaglandin "thromboxane A1 to 15-dehydro
     prostaglandin_e1
     <-> . +nadph +hplus +nadp
     prostaglandin_f1
-  }
-
-  branch from 15_dehydro_prostaglandin_e1 side left {
-    15_dehydro_prostaglandin_e1
-    <-> . +nadp +nadph +hplus
-    13_14_dihydro_15_oxoprostaglandin_e1
   }
 }

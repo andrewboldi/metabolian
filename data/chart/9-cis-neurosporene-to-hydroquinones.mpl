@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 9-cis-neurosporene-to-hydroquinones "9'-cis-neurosporene to hydroquinones" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     9_cis_neurosporene
@@ -16,5 +16,17 @@ pathway 9-cis-neurosporene-to-hydroquinones "9'-cis-neurosporene to hydroquinone
     9_9_di_cis_carotene
     <-> . +1_4_benzoquinones -hydroquinones
     7_9_9_tri_cis_neurosporene
+  }
+
+  branch from h2 side left {
+    h2
+    <-> ec_1_12_5_1 [1.12.5.1] +menaquinone_2
+    menaquinol
+  }
+
+  branch from h2 side right {
+    h2
+    <-> . +hydroxyspirilloxanthin
+    rhodovibrin
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 6-o-cis-keto-mycolyl-treh-to-atp "6-O-cis-keto-mycolyl-treh… to ATP" {
-  spacing 322
+  spacing 340
 
   spine at 0,0 {
     6_o_cis_keto_mycolyl_trehalose_6_phosphate
@@ -18,43 +18,97 @@ pathway 6-o-cis-keto-mycolyl-treh-to-atp "6-O-cis-keto-mycolyl-treh… to ATP" {
 
   branch from beta_d_glucose_6_phosphate side left {
     beta_d_glucose_6_phosphate
-    <-> ec_1_1_1_200 [1.1.1.200] +h +nadph +d_mannitol_1_phosphate
-    nadp
+    <-> ec_5_1_3_15 [5.1.3.15]
+    d_glucose_6_phosphate
   }
 
   branch from beta_d_glucose_6_phosphate side right {
     beta_d_glucose_6_phosphate
-    <-> . +phosphate
-    2_deoxy_scyllo_inosose
-  }
-
-  branch from gdp_alpha_d_glucose side left {
-    gdp_alpha_d_glucose
-    <-> ec_3_2_1_42 [3.2.1.42] +gdp +alpha_d_glucose +h
-    h2o
-  }
-
-  branch from beta_d_glucose side right {
-    beta_d_glucose
-    <-> ec_3_2_1_21 [3.2.1.21] +h2o
-    beta_d_glucosyl_1_3_d_glucose
+    <-> .
+    1d_myo_inositol_1_phosphate
   }
 
   branch from beta_d_glucose side left {
     beta_d_glucose
-    <-> ec_3_2_1_21 [3.2.1.21] +h2o +beta_d_glucosyl_1_3_d_glucose
-    laminaritriose
+    <-> . +4_coumaroylamaranthin +1_o_4_coumaroyl_d_glucose
+    amaranthin
   }
 
-  branch from atp side right {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    w
+  branch from beta_d_glucose side right {
+    beta_d_glucose
+    <-> . +4_methoxyglucobrassicin +h2o +h
+    4_methoxy_3_indolylmethyl_glucosinolate_aglycone
   }
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
-    butyro_betaine
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    ribostamycin
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    3_deamino_3_hydroxykanamycin_c
+  }
+
+  branch from gdp side left {
+    gdp
+    <-> ec_2_4_1_393 [2.4.1.393] +alpha_d_mannosyl_1_4_3_o_methyl_alpha_d_mannosyl +h +3_o_methyl_alpha_d_mannosyl_1_4_3_1_o_3_o_dimet
+    gdp_alpha_d_mannose
+  }
+
+  branch from gdp side right {
+    gdp
+    <-> ec_2_4_1_152 [2.4.1.152] +lacto_n_fucopentaose_iii +h +gdp_beta_l_fucose
+    d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_glc
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    apramycin
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    nebramycin_iv
+  }
+
+  branch from adp side left {
+    adp
+    <-> ec_3_6_3_44 [3.6.3.44] +h +phosphate +atp +h2o
+    3_deoxycarbamoylkanamycin_c
+  }
+
+  branch from adp side right {
+    adp
+    <-> ec_3_6_3_44 [3.6.3.44] +h +phosphate +atp +h2o
+    dibekacin
+  }
+
+  branch from beta_d_glucose side left {
+    beta_d_glucose
+    <-> .
+    aldehydo_d_glucose
+  }
+
+  branch from beta_d_glucose side right {
+    beta_d_glucose
+    <-> . +melibiose +h2o
+    aldehydo_d_galactose
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    arbekacin
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    1r_2r_3s_4r_6s_4_6_diamino_3_hydroxy_2_d_mannop
   }
 }

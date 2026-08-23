@@ -118,41 +118,48 @@
       }
     },
     {
-      "id": "31_hydroxy_l_isoleucine",
-      "name": "31-hydroxy-L-isoleucine",
-      "short": "31-hydroxy-L-isoleu…",
-      "formula": "C6H13NO3",
-      "charge": 0,
+      "id": "2_oxoglutarate",
+      "name": "2-oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:149627"
+        "metanetx": "MNXM1368744"
       }
     },
     {
-      "id": "4s_31_4_dihydroxy_l_isoleucine",
-      "name": "(4S)-31,4-dihydroxy-L-isoleucine",
-      "short": "31,4-dihydroxy-L-is…",
-      "formula": "C6H13NO4",
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:149628"
+        "metanetx": "MNXM735438"
       }
     },
     {
-      "id": "preaustinoid_a1",
-      "name": "preaustinoid A1",
-      "formula": "C26H36O7",
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:69026"
+        "metanetx": "MNXM13"
       }
     },
     {
-      "id": "berkeleyone_b",
-      "name": "berkeleyone B",
-      "formula": "C26H34O7",
-      "charge": 0,
+      "id": "succinate",
+      "name": "succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:69025"
+        "metanetx": "MNXM25"
+      }
+    },
+    {
+      "id": "gibberellin_a97",
+      "name": "Gibberellin A97",
+      "formula": "C20H26O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:175681"
       }
     }
   ],
@@ -169,13 +176,6 @@
       "name": "gibberellin 2beta-dioxygenase",
       "ec": [
         "1.14.11.13"
-      ]
-    },
-    {
-      "id": "ec_1_14_11_75",
-      "name": "3(1)-hydroxy-L-isoleucine 4-dioxygenase",
-      "ec": [
-        "1.14.11.75"
       ]
     }
   ],
@@ -390,16 +390,14 @@
     },
     {
       "id": "r5",
-      "name": "3(1)-hydroxy-L-isoleucine 4-dioxygenase",
-      "equation": "3(1)-hydroxy-L-isoleucine + 2-oxoglutarate + O2 = (4S)-3(1),4-dihydroxy-L-isoleucine + succinate + CO2",
-      "ec": "1.14.11.75",
+      "name": "Reaction MNXR123072",
       "substrates": [
         {
-          "metabolite": "31_hydroxy_l_isoleucine",
+          "metabolite": "2_oxoglutarate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "akg",
+          "metabolite": "gibberellin_a53",
           "stoichiometry": 1
         },
         {
@@ -409,7 +407,7 @@
       ],
       "products": [
         {
-          "metabolite": "4s_31_4_dihydroxy_l_isoleucine",
+          "metabolite": "co2",
           "stoichiometry": 1
         },
         {
@@ -417,77 +415,133 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "co2",
+          "metabolite": "gibberellin_a97",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_11_75"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:63876"
+        "metanetx": "MNXR123072"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:63876"
+            "db": "MetaNetX",
+            "id": "MNXR123072"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_gibberellin_a53_deoxycylindrospermopsin-to-s-succinyl-l-cysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "gibberellin_a53"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "deoxycylindrospermopsin-to-s-succinyl-l-cysteine"
+      },
+      "note": "Shares gibberellin A53 with deoxycylindrospermopsin to S-succinyl-L-cysteine(2−).",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:143954"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "preaustinoid A1 + 2-oxoglutarate + O2 = berkeleyone B + succinate + CO2 + H2O",
-      "equation": "preaustinoid A1 + 2-oxoglutarate + O2 = berkeleyone B + succinate + CO2 + H2O",
-      "substrates": [
-        {
-          "metabolite": "preaustinoid_a1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "berkeleyone_b",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "succinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:65184"
+      "id": "xt_gibberellin_a53_gibberellin-a53-to-succinate-60800",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "gibberellin_a53"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "gibberellin-a53-to-succinate-60800"
+      },
+      "note": "Shares gibberellin A53 with gibberellin A53 to succinate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:65184"
+            "db": "ChEBI",
+            "id": "CHEBI:143954"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_gibberellin_a20_1r-2r-cyclohexa-3-5-die-to-norsalsolinol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "gibberellin_a20"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1r-2r-cyclohexa-3-5-die-to-norsalsolinol"
+      },
+      "note": "Shares gibberellin A20 with (1R,2R)-cyclohexa-3,5-die… to norsalsolinol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58526"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_gibberellin_a1_1r-2r-cyclohexa-3-5-die-to-norsalsolinol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "gibberellin_a1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1r-2r-cyclohexa-3-5-die-to-norsalsolinol"
+      },
+      "note": "Shares gibberellin A1 with (1R,2R)-cyclohexa-3,5-die… to norsalsolinol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58524"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_gibberellin_a19_gibberellin-a53-to-succinate-60800",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "gibberellin_a19"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gibberellin-a53-to-succinate-60800"
+      },
+      "note": "Shares gibberellin A19 with gibberellin A53 to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58587"
           }
         ]
       }

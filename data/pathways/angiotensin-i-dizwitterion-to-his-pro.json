@@ -93,9 +93,39 @@
       "xrefs": {
         "chebi": "CHEBI:147379"
       }
+    },
+    {
+      "id": "his_leu",
+      "name": "His-Leu",
+      "formula": "C12H20N4O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:147392"
+      }
+    },
+    {
+      "id": "ile5_angiotensin_ii_dizwitterion",
+      "name": "Ile5-angiotensin II dizwitterion",
+      "short": "Ile5-angiotensin…",
+      "formula": "C50H71N13O12",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58506"
+      }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_3_4_15_1",
+      "name": "peptidyl-dipeptidase A",
+      "ec": [
+        "3.4.15.1"
+      ],
+      "xrefs": {
+        "uniprot": "P12821"
+      }
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -210,6 +240,141 @@
           {
             "db": "Rhea",
             "id": "RHEA:63552"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "peptidyl-dipeptidase A",
+      "equation": "angiotensin I + H2O = L-histidyl-L-leucine + angiotensin II",
+      "ec": "3.4.15.1",
+      "substrates": [
+        {
+          "metabolite": "angiotensin_i_dizwitterion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "his_leu",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ile5_angiotensin_ii_dizwitterion",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_4_15_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:63560"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63560"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_angiotensin_i_dizwitterion_fmnh2-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "angiotensin_i_dizwitterion"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fmnh2-to-h2o"
+      },
+      "note": "Shares angiotensin I dizwitterion with FMNH2 to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:147350"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_angiotensin_i_dizwitterion_octanoyl-coa-to-2r-3s-homoisocitrate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "angiotensin_i_dizwitterion"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "octanoyl-coa-to-2r-3s-homoisocitrate"
+      },
+      "note": "Shares angiotensin I dizwitterion with octanoyl-CoA to (2R,3S)-homoisocitrate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:147350"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ile5_angiotensin_ii_1_7_dizwitterion_3-4-hydroxycyclohex-2-en-to-s-adenosyl-l-homocys",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ile5_angiotensin_ii_1_7_dizwitterion"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-4-hydroxycyclohex-2-en-to-s-adenosyl-l-homocys"
+      },
+      "note": "Shares Ile5-angiotensin II (1-7) dizwitterion with 3-(4-hydroxycyclohex-2-en… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58922"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ile5_angiotensin_ii_dizwitterion_3-4-hydroxycyclohex-2-en-to-s-adenosyl-l-homocys",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ile5_angiotensin_ii_dizwitterion"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-4-hydroxycyclohex-2-en-to-s-adenosyl-l-homocys"
+      },
+      "note": "Shares Ile5-angiotensin II dizwitterion with 3-(4-hydroxycyclohex-2-en… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58506"
           }
         ]
       }

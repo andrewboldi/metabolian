@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway hygromycin-c-to-adp "hygromycin C to ADP" {
-  spacing 188
+  spacing 152
 
   spine at 0,0 {
     hygromycin_c
@@ -14,41 +14,5 @@ pathway hygromycin-c-to-adp "hygromycin C to ADP" {
     3_n_methylgalacamine
     <-> . +adp_6_amino_6_deoxy_d_glycero_alpha_d_galacto_he -h -adp
     2_epi_hygromycin_c
-  }
-
-  branch from 3_n_methyltalamine side left {
-    3_n_methyltalamine
-    <-> . +s_adenosyl_l_homocysteine +h +talamine
-    s_adenosyl_l_methionine
-  }
-
-  branch from 3_n_methylgalacamine side right {
-    3_n_methylgalacamine
-    <-> . +s_adenosyl_l_homocysteine +h +s_adenosyl_l_methionine
-    galacamine
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
-    alpha_maltose
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_18 [3.6.3.18] +adp +d_galp_1_6_d_galp +phosphate +d_galp_1_6_d_galp +h2o
-    atp
-  }
-
-  branch from adp side left {
-    adp
-    <-> ec_3_6_3_18 [3.6.3.18] +h +phosphate +atp +h2o
-    trigalacturonate
-  }
-
-  branch from adp side right {
-    adp
-    <-> ec_3_6_3_18 [3.6.3.18] +h +phosphate +atp +h2o
-    udp_2_3_diacetamido_2_3_dideoxy_d_glucuronic_aci
   }
 }

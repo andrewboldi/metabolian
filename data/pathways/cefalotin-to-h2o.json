@@ -1,0 +1,322 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "cefalotin-to-h2o",
+  "name": "cefalotin to H2O",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from cefalotin(1-) to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR129406"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "cefalotin",
+      "name": "cefalotin",
+      "formula": "C16H15N2O6S2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM16613"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "7_aminocephalosporanic_acid",
+      "name": "7β-aminocephalosporanic acid",
+      "short": "7β-aminocephalospor…",
+      "formula": "C10H12N2O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:2255"
+      }
+    },
+    {
+      "id": "thien_2_ylacetate",
+      "name": "thien-2-ylacetate",
+      "formula": "C6H5O2S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:32403"
+      }
+    },
+    {
+      "id": "7_amino_8_oxo_3_pyridin_1_ium_1_ylmethyl_5_thia",
+      "name": "7-Amino-8-oxo-3-(pyridin-1-ium-1-ylmethyl)-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylate",
+      "short": "7-Amino-8-oxo-3-(py…",
+      "formula": "C13H13N3O3S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM166663"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "cefaloridine",
+      "name": "cefaloridine",
+      "formula": "C19H17N3O4S2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM45946"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_11",
+      "name": "penicillin amidase",
+      "ec": [
+        "3.5.1.11"
+      ]
+    },
+    {
+      "id": "ec_3_6_3_44",
+      "name": "EC 3.6.3.44",
+      "ec": [
+        "3.6.3.44"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "penicillin amidase",
+      "ec": "3.5.1.11",
+      "substrates": [
+        {
+          "metabolite": "cefalotin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_aminocephalosporanic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "thien_2_ylacetate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR129406"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR129406"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "penicillin amidase",
+      "ec": "3.5.1.11",
+      "substrates": [
+        {
+          "metabolite": "7_amino_8_oxo_3_pyridin_1_ium_1_ylmethyl_5_thia",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "thien_2_ylacetate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cefaloridine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR129399"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR129399"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR175162",
+      "ec": "3.6.3.44",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cefaloridine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cefaloridine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_3_44"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR175162"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR175162"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_cefalotin_2-oxoglutarate-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cefalotin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-oxoglutarate-to-nadph"
+      },
+      "note": "Shares cefalotin with 2-oxoglutarate to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM16613"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_aminocephalosporanic_acid_acetyl-coa-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_aminocephalosporanic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetyl-coa-to-nadph"
+      },
+      "note": "Shares 7β-aminocephalosporanic acid with acetyl-CoA to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:2255"
+          }
+        ]
+      }
+    }
+  ]
+}

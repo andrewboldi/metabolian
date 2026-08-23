@@ -1,0 +1,567 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-2-3-epoxysqualene-to-fmn-82723",
+  "name": "(S)-2,3-epoxysqualene to FMN",
+  "category": "other",
+  "summary": "A 3-step route from (S)-2,3-epoxysqualene to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:82723"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:15441"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "epoxysqualene",
+      "name": "(S)-2,3-Epoxysqualene (2,3-oxidosqualene)",
+      "short": "2,3-Epoxysqualene…",
+      "formula": "C30H50O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15441"
+      }
+    },
+    {
+      "id": "isomotiol",
+      "name": "isomotiol",
+      "formula": "C30H50O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:232471"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "3_o_d_glucopyranosyl_isomotiol",
+      "name": "3-O-(β-D-glucopyranosyl)-isomotiol",
+      "short": "3-O-(β-D-glucopyran…",
+      "formula": "C36H60O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:232474"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "2_deacetoxyfuscoatroside",
+      "name": "2-deacetoxyfuscoatroside",
+      "short": "2-deacetoxyfuscoatr…",
+      "formula": "C36H59O8",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:232478"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "arabidiol",
+      "name": "arabidiol",
+      "formula": "C30H52O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62417"
+      }
+    },
+    {
+      "id": "lupan_3_20_diol",
+      "name": "lupan-3β,20-diol",
+      "formula": "C30H52O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62735"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_2_1_124",
+      "name": "arabidiol synthase",
+      "ec": [
+        "4.2.1.124"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_128",
+      "name": "lupan-3beta,20-diol synthase",
+      "ec": [
+        "4.2.1.128"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(S)-2,3-epoxysqualene = isomotiol",
+      "equation": "(S)-2,3-epoxysqualene = isomotiol",
+      "substrates": [
+        {
+          "metabolite": "epoxysqualene",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "isomotiol",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:82723"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82723"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "isomotiol + UDP-alpha-D-glucose = 3-O-(beta-D-glucopyranosyl)-isomotiol + UDP + H(+)",
+      "equation": "isomotiol + UDP-alpha-D-glucose = 3-O-(beta-D-glucopyranosyl)-isomotiol + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "isomotiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_o_d_glucopyranosyl_isomotiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:82735"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82735"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3-O-(beta-D-glucopyranosyl)-isomotiol + 2 reduced [NADPH--hemoprotein reductase] + 2 O2...",
+      "equation": "3-O-(beta-D-glucopyranosyl)-isomotiol + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = 2-deacetoxyfuscoatroside + 2 oxidized [NADPH--hemoprotein reductase] + 2 H2O + 3 H(+)",
+      "substrates": [
+        {
+          "metabolite": "3_o_d_glucopyranosyl_isomotiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deacetoxyfuscoatroside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 3
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:82747"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82747"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "arabidiol synthase",
+      "equation": "arabidiol = (S)-2,3-epoxysqualene + H2O",
+      "ec": "4.2.1.124",
+      "substrates": [
+        {
+          "metabolite": "arabidiol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "epoxysqualene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_124"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:31035"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31035"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "lupan-3beta,20-diol synthase",
+      "equation": "lupan-3beta,20-diol = (S)-2,3-epoxysqualene + H2O",
+      "ec": "4.2.1.128",
+      "substrates": [
+        {
+          "metabolite": "lupan_3_20_diol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "epoxysqualene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_128"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:31351"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31351"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_isomotiol_campestanol-to-fmn-69831",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isomotiol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "campestanol-to-fmn-69831"
+      },
+      "note": "Shares isomotiol with campestanol to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:232471"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_isomotiol_isomotiol-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isomotiol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isomotiol-to-fmn"
+      },
+      "note": "Shares isomotiol with isomotiol to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:232471"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_isomotiol_isomotiol-to-fmn-82727",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isomotiol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isomotiol-to-fmn-82727"
+      },
+      "note": "Shares isomotiol with isomotiol to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:232471"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_isomotiol_n-fatty-acyl-l-isoleuci-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isomotiol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-fatty-acyl-l-isoleuci-to-fmn"
+      },
+      "note": "Shares isomotiol with N-(fatty acyl)-L-isoleuci… to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:232471"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_isomotiol_s-2-3-epoxysqualene-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isomotiol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2-3-epoxysqualene-to-fmn"
+      },
+      "note": "Shares isomotiol with (S)-2,3-epoxysqualene to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:232471"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_o_d_glucopyranosyl_isomotiol_s-2-3-epoxysqualene-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_o_d_glucopyranosyl_isomotiol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2-3-epoxysqualene-to-fmn"
+      },
+      "note": "Shares 3-O-(β-D-glucopyranosyl)-isomotiol with (S)-2,3-epoxysqualene to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:232474"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deacetoxyfuscoatroside_s-2-3-epoxysqualene-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deacetoxyfuscoatroside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2-3-epoxysqualene-to-fmn"
+      },
+      "note": "Shares 2-deacetoxyfuscoatroside with (S)-2,3-epoxysqualene to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:232478"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_arabidiol_s-2-3-epoxysqualene-to-onocerin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "arabidiol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2-3-epoxysqualene-to-onocerin"
+      },
+      "note": "Shares arabidiol with (S)-2,3-epoxysqualene to α-onocerin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62417"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lupan_3_20_diol_s-2-3-epoxysqualene-to-onocerin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lupan_3_20_diol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2-3-epoxysqualene-to-onocerin"
+      },
+      "note": "Shares lupan-3β,20-diol with (S)-2,3-epoxysqualene to α-onocerin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62735"
+          }
+        ]
+      }
+    }
+  ]
+}

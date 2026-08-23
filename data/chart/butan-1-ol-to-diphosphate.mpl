@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway butan-1-ol-to-diphosphate "butan-1-ol to diphosphate" {
-  spacing 240
+  spacing 216
 
   spine at 0,0 {
     butan_1_ol
@@ -14,29 +14,5 @@ pathway butan-1-ol-to-diphosphate "butan-1-ol to diphosphate" {
     butyrate
     <-> . +atp +coa -amp -ppi
     butyryl_coa
-  }
-
-  branch from butyryl_coa side left {
-    butyryl_coa
-    <-> . +hco3 +atp +adp +pi +hplus
-    s_ethylmalonyl_coa
-  }
-
-  branch from butyryl_coa side right {
-    butyryl_coa
-    <-> ec_4_1_1_94 [4.1.1.94] +hplus +co2
-    r_ethylmalonyl_coa
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +fpp
-    silphinene
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +5_end_ribonucleotide_5_triphosphate_4 +h2o +hplus
-    5_end_ribonucleotide_2
   }
 }

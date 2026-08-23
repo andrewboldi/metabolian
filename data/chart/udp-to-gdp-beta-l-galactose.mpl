@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-gdp-beta-l-galactose "UDP to GDP-beta-L-galactose" {
-  spacing 292
+  spacing 298
 
   spine at 0,0 {
     udp
@@ -18,51 +18,57 @@ pathway udp-to-gdp-beta-l-galactose "UDP to GDP-beta-L-galactose" {
     gdp_beta_l_galactose
   }
 
-  branch from udp_alpha_d_xylose side left {
-    udp_alpha_d_xylose
-    <-> . +udp +delphinidin_3_o_beta_d_sambubioside +h
-    mirtillin
-  }
-
-  branch from udp_alpha_d_xylose side right {
-    udp_alpha_d_xylose
-    <-> . +udp +erinacine_w +h
-    erinacol
-  }
-
-  branch from c80_dolichol_phosphate side left {
-    c80_dolichol_phosphate
-    <-> ec_3_1_4_48 [3.1.4.48] +glucose +h +h2o
-    a_dolichyl_beta_d_glucosyl_phosphate
-  }
-
-  branch from c80_dolichol_phosphate side right {
-    c80_dolichol_phosphate
-    <-> ec_3_1_4_48 [3.1.4.48] +h +a_dolichyl_beta_d_glucosyl_phosphate +h2o
-    beta_d_glucose
-  }
-
   branch from h2o side left {
     h2o
-    <-> ec_4_4_1_21 [4.4.1.21] +d_ribose +l_homocysteine
-    s_5_deoxy_d_ribos_5_yl_l_homocysteine
+    <-> . +beta_l_arap_1_3_l_araf +alpha_l_araf_1_4_beta_d_gal_1_6_d_gal
+    beta_l_arap_1_3_alpha_l_araf_1_3_alpha_l_araf_1
   }
 
   branch from h2o side right {
     h2o
-    <-> . +formate +undecaprenyl_phosphate_4_amino_4_deoxy_l_arabino
-    undecaprenyl_phosphate_4_amino_4_formyl_l_arabin
+    <-> . +alpha_d_kdo_2_6_petn_lipid_a_h_pylori +3_deoxy_alpha_d_manno_oct_2_ulosonate
+    alpha_d_kdo_2_4_alpha_d_kdo_2_6_1_petn_lipid_a_h
   }
 
   branch from gdp_alpha_d_mannose side left {
     gdp_alpha_d_mannose
-    <-> . +gdp +alpha_d_man_1_3_beta_d_glcnac_1_4_alpha_d_glcnac +h
-    beta_d_glcnac_1_4_alpha_d_glcnac_pp_undecaprenol
+    <-> . +d_mannose_1_phosphate +h +h2o
+    gmp
   }
 
-  branch from gdp_alpha_d_mannose side right {
-    gdp_alpha_d_mannose
-    <-> . +gdp +beta_d_man_1_4_alpha_d_man_1_3_beta_d_glcnac_1_4 +h
-    alpha_d_man_1_3_beta_d_glcnac_1_4_alpha_d_glcnac
+  branch from aldehydo_d_mannose side right {
+    aldehydo_d_mannose
+    <-> .
+    beta_d_mannose
+  }
+
+  branch from aldehydo_d_mannose side left {
+    aldehydo_d_mannose
+    <-> ec_5_3_1_7 [5.3.1.7]
+    keto_d_fructose
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_4_99_13 [2.4.99.13] +cmp +alpha_kdo_2_4_alpha_kdo_2_6_lipid_iva_h_pylori +alpha_kdo_2_6_lipid_iva_h_pylori
+    cmp_3_deoxy_alpha_d_manno_octulosonic_acid
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_4_99_12 [2.4.99.12] +cmp +alpha_kdo_2_6_lipid_iva_vibrio_cholerae_serogrou +cmp_3_deoxy_alpha_d_manno_octulosonic_acid
+    lipid_iva_vibrio_cholerae_serogroup_o1_el_tor
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +d_glucuronate +1_hydroxyibuprofen
+    1_hydroxy_s_ibuprofen_glucuronide
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +d_glucuronate +1_hydroxymidazolam +h
+    1_oh_midazolam_glucuronide
   }
 }

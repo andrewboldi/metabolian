@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-4-amino-5-oxopentanoi-to-3-n-acetyl-l-glutami "(S)-4-amino-5-oxopentanoi… to 3'-(N-acetyl-L-glutaminyl…" {
-  spacing 274
+  spacing 316
 
   spine at 0,0 {
     s_4_amino_5_oxopentanoic_acid
@@ -24,13 +24,55 @@ pathway s-4-amino-5-oxopentanoi-to-3-n-acetyl-l-glutami "(S)-4-amino-5-oxopentan
 
   branch from glutamate side right {
     glutamate
-    <-> ec_6_3_2_2 [6.3.2.2] +cysteine +atp +adp +pi +hplus
-    glu_cys
+    <-> ec_6_3_5_6 [6.3.5.6] +3_l_aspartate_adenylyl_1_group +glutamine +atp +h2o +adp +pi +hplus
+    3_l_asparaginyl_adenylyl_1_group
   }
 
   branch from glutamate side left {
     glutamate
-    <-> ec_2_6_1_75 [2.6.1.75] +s_4_bromophenyl_l_cysteine +akg
-    4_bromophenylsulfanyl_pyruvate
+    <-> ec_2_7_2_11 [2.7.2.11] +atp +adp
+    l_glutamyl_phosphate
+  }
+
+  branch from s_4_amino_5_oxopentanoic_acid side right {
+    s_4_amino_5_oxopentanoic_acid
+    <-> ec_5_4_3_8 [5.4.3.8]
+    ala
+  }
+
+  branch from amp_3_end_1 side left {
+    amp_3_end_1
+    <-> . +3_l_alanyl_adenylyl_zwitterionic_group +h2o +hplus
+    alanine
+  }
+
+  branch from amp_3_end_1 side right {
+    amp_3_end_1
+    <-> ec_6_1_1_2 [6.1.1.2] +l_tryptophan +atp +amp +ppi +hplus
+    3_l_tryptophyl_adenylyl_1_group
+  }
+
+  branch from glutamine side left {
+    glutamine
+    <-> ec_2_3_2_14 [2.3.2.14] +d_alanine +nh3
+    l_glutamyl_d_alaninate
+  }
+
+  branch from glutamine side right {
+    glutamine
+    <-> ec_6_3_5_1 [6.3.5.1] +atp +h2o +glutamate +amp +ppi +nad +hplus
+    deamido_nad
+  }
+
+  branch from glutamate side left {
+    glutamate
+    <-> ec_2_6_1_72 [2.6.1.72] +d_4_hydroxyphenylglycine +akg
+    4_hydroxyphenylglyoxylate
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> ec_2_6_1_52 [2.6.1.52] +4_phosphonatooxy_l_threonine +akg
+    r_3_hydroxy_2_oxo_4_phosphonatoooxy_butanoate
   }
 }

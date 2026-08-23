@@ -16,15 +16,15 @@ pathway gdp-4-dehydro-6-deoxy-d-to-ammonium "GDP-4-dehydro-6-deoxy-α-D… to am
     gdp_4_dehydro_3_6_dideoxy_d_mannose
   }
 
-  branch from akg side left {
-    akg
-    <-> . +udp_4_amino_4_deoxy_l_arabinopyranose +atp +adp +pi +hplus
-    udp_aravonose
+  branch from gdp_4_dehydro_6_deoxy_d_mannose side left {
+    gdp_4_dehydro_6_deoxy_d_mannose
+    <-> ec_1_1_1_135 [1.1.1.135] +nadp +nadph +hplus
+    gdp_6_deoxy_d_talose
   }
 
-  branch from akg side right {
-    akg
-    <-> . +udp_4_amino_4_6_dideoxy_l_n_acetyl_l_altrosamine +atp +adp +pi +hplus
-    udp_solosamine
+  branch from gdp_4_dehydro_6_deoxy_d_mannose side right {
+    gdp_4_dehydro_6_deoxy_d_mannose
+    <-> ec_1_1_1_187 [1.1.1.187] +nadp +nadph +hplus
+    gdp_6_deoxy_d_mannose
   }
 }

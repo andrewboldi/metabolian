@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway r-dihydrogenistein-to-amp "(R)-dihydrogenistein to AMP" {
-  spacing 340
+  spacing 280
 
   spine at 0,0 {
     r_dihydrogenistein
@@ -14,89 +14,5 @@ pathway r-dihydrogenistein-to-amp "(R)-dihydrogenistein to AMP" {
     genistein_7_o_d_glucoside
     <-> ec_2_3_1_115 [2.3.1.115] +malonyl_coa +h +atp +h2o -malonylgenistin -coa -amp
     diphosphate
-  }
-
-  branch from genistein side left {
-    genistein
-    <-> ec_2_1_1_150 [2.1.1.150] +s_adenosyl_l_homocysteine +h +prunetin_5_olate
-    s_adenosyl_l_methionine
-  }
-
-  branch from genistein side right {
-    genistein
-    <-> . +atp +h2o +h +amp +phosphate
-    genistein_7_o_phosphate
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_2_1_167 [3.2.1.167] +baicalein +beta_d_glucuronate +h2o
-    baicalin
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_2_1_175 [3.2.1.175] +alpha_d_glucose +2_cis_abscisate +h2o
-    abscisic_acid_d_glucopyranosyl_ester
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> . +h +n_hydroxy_l_isoleucine +o2 +nadp +h2o
-    n_n_dihydroxy_l_isoleucine
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> ec_1_14_13_115 [1.14.13.115] +h +o2 +r_columbianetin +acetone +nadp +h2o
-    angelicin
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_lysine +l_isoleucine +l_tryptophan
-    tryptophanyl_isoleucyl_lysine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_isoleucine +l_tryptophan
-    trp_ile_trp
-  }
-
-  branch from diphosphate side left {
-    diphosphate
-    <-> . +13e_labdene_8alpha_15_diol +h2o
-    copal_8_ol_diphosphate
-  }
-
-  branch from diphosphate side right {
-    diphosphate
-    <-> ec_4_2_3_51 [4.2.3.51] +phellandrene
-    neryl_diphosphate
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +r_carnitine +11z_octadecenoyl_coa
-    car_18_1_11e
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +3_oxo_4_r_8_dimethyl_nonanoyl_coenzyme_a +2r_2_6_dimethylheptanoyl_coa
-    acetyl_coa
-  }
-
-  branch from amp side left {
-    amp
-    <-> ec_6_3_2_52 [6.3.2.52] +diphosphate +jasmonoyl_l_isoleucine +atp +jasmonate
-    l_isoleucine
-  }
-
-  branch from amp side right {
-    amp
-    <-> ec_6_2_1_1 [6.2.1.1] +acetyl_coa +diphosphate +atp +coa
-    acetate
   }
 }

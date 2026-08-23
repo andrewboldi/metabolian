@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-dehydro-l-gluconate-to-nad "5-dehydro-L-gluconate to NAD" {
-  spacing 172
+  spacing 160
 
   spine at 0,0 {
     5_dehydro_l_gluconate
@@ -14,17 +14,5 @@ pathway 5-dehydro-l-gluconate-to-nad "5-dehydro-L-gluconate to NAD" {
     scyllo_inosose
     <-> ec_1_1_1_18 [1.1.1.18] +nadh +h -nad
     inositol
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    carbamazepine_n_glucuronide
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +12s_hhtre +phosphate +12s_hhtre
-    atp
   }
 }

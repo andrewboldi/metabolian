@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 10z-13z-16z-19z-docosat-to-h2o "(10Z,13Z,16Z,19Z)-docosat… to H2O" {
-  spacing 230
+  spacing 308
 
   spine at 0,0 {
     10z_13z_16z_19z_docosatetraenoyl_coa
@@ -26,73 +26,151 @@ pathway 10z-13z-16z-19z-docosat-to-h2o "(10Z,13Z,16Z,19Z)-docosat… to H2O" {
 
   branch from malonyl_coa side right {
     malonyl_coa
-    <-> ec_2_3_1_21 [2.3.1.21] +r_carnitine +h +coa
-    o_malonyl_l_carnitine
+    <-> . +methylmalonyl_coa +2s_2_methylbutanoyl_coa +h +nadph +co2 +6_8a_seco_6_8a_deoxy_5_oxoavermectin_1a_aglycone +coa +h2o
+    nadp
   }
 
   branch from malonyl_coa side left {
     malonyl_coa
-    <-> . +8_8a_deoxyoleandolide +co2 +nadp +coa +h2o +h +nadph
-    methylmalonyl_coa
+    <-> . +2_methylpropanoyl_coa +methylmalonyl_coa +h +nadph +co2 +nadp +coa +h2o
+    6_8a_seco_6_8a_deoxy_5_oxoavermectin_2b_aglycone
   }
 
   branch from h side right {
     h
-    <-> . +4_oxoisotretinoin
-    all_trans_4_oxoretinoate
+    <-> ec_1_1_1_50 [1.1.1.50] +5beta_dihydroaldosterone +nadph +nadp
+    3alpha_11beta_21_trihydroxy_20_oxo_5beta_pregnan
   }
 
   branch from h side left {
     h
-    <-> . +udp +3_5_3_5_tetraiodothyroacetate_beta_d_glucuronosi +3_3_5_5_tetraiodothyroacetic_acid
-    udp_alpha_d_glucuronate
+    <-> ec_1_1_1_50 [1.1.1.50] +nadh +5beta_dihydrocorticosterone +nad
+    tetrahydrocorticosterone
   }
 
   branch from all_cis_10_13_16_19_docosatetraenoyl_coa side right {
-    all_cis_10_13_16_19_docosatetraenoyl_coa
-    <-> . +trans_cis_cis_cis_cis_2_10_13_16_19_docosapentae +h +nadph
-    nadp
-  }
-
-  branch from all_cis_10_13_16_19_docosatetraenoyl_coa side left {
     all_cis_10_13_16_19_docosatetraenoyl_coa
     <-> . +r_carnitine +coa
     10z_13z_16z_19z_docosatetraenoylcarnitine
   }
 
+  branch from all_cis_10_13_16_19_docosatetraenoyl_coa side left {
+    all_cis_10_13_16_19_docosatetraenoyl_coa
+    <-> . +nadh +acetyl_coa +fadh2 +h +coa +nad +h2o
+    fad
+  }
+
   branch from atp side right {
     atp
-    <-> ec_3_6_3_21 [3.6.3.21] +h +adp +phosphate +h2o
-    l_serine
+    <-> ec_6_3_1_9 [6.3.1.9] +glutathione +glutathionylaminopropylcadaverine +homotrypanothione +phosphate
+    adp
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_31 [3.6.3.31] +h +adp +phosphate +h2o
-    spermidine
+    <-> . +l_alanine +n_acetyl_demethyl_l_phosphinothricin +h2o +diphosphate +h +amp
+    n_acetyldemethylphosphinothricin_tripeptide
   }
 
   branch from coa side right {
     coa
-    <-> . +acetyl_coa +n_1_acetylspermine +h
-    n_1_n_12_diacetylspermine
+    <-> . +acetyl_coa +3_s_10_r_oh_octadeca_6_trans_4_12_cis_trienoyl_c
+    3_oxo_5_s_12_r_dihydroxy_eicosa_8_trans_6_14_cis
   }
 
   branch from coa side left {
     coa
-    <-> . +n_acetyl_l_alaninate +h +l_alanine
-    acetyl_coa
+    <-> . +acetyl_coa +18_coa_18_oxo_dinorleukotriene_b4
+    18_20_dioxo_20_coa_leukotriene_b4
   }
 
   branch from h2o side right {
     h2o
-    <-> . +6_hydroxytetrahydro_beta_carboline +h +serotonin
-    formaldehyde
+    <-> . +5_6beta_epoxy_5beta_cholestane
+    5alpha_cholestan_5alpha_6beta_diol
   }
 
   branch from h2o side left {
     h2o
-    <-> . +formaldehyde +r_noradrenaline +h
-    4_6_7_trihydroxy_1_2_3_4_tetrahydroisoquinoline
+    <-> . +5alpha_cholestan_5alpha_6beta_diol
+    5_6alpha_epoxy_5alpha_cholestane
+  }
+
+  branch from malonyl-coa side right {
+    malonyl-coa
+    <-> ec_2_3_1_260 [2.3.1.260] +o_s_malonamoylpantetheine_4_phosphoryl_serine_1 +hplus +co2 +coa
+    o_s_18_carbamoyl_3_5_7_9_11_13_15_17_octaoxoocta
+  }
+
+  branch from malonyl-coa side left {
+    malonyl-coa
+    <-> ec_2_3_1_233 [2.3.1.233] +hplus +co2 +coa +h2o
+    naphthalene_1_3_6_8_tetrol
+  }
+
+  branch from co2 side right {
+    co2
+    <-> . +5_aminoimidazole_4_carboxylic_acid +nh4 +h +h2o
+    5_ureidoimidazole_4_carboxylic_acid
+  }
+
+  branch from co2 side left {
+    co2
+    <-> . +3_imidazol_5_yl_pyruvate +h
+    imidazole_4_acetaldehyde
+  }
+
+  branch from coa side right {
+    coa
+    <-> . +6z_9z_12z_15z_octadecatetraenoyl_coa +r_carnitine
+    stearidonyl_carnitine
+  }
+
+  branch from coa side left {
+    coa
+    <-> . +9z_12z_15z_18z_21z_tetracosapentaenoyl_coa +r_carnitine
+    tetracosapentaenoyl_carnitine
+  }
+
+  branch from malonyl_coa side right {
+    malonyl_coa
+    <-> . +2_methylpropanoyl_coa +methylmalonyl_coa +h +nadph +co2 +nadp +coa +h2o
+    6_8a_seco_6_8a_deoxy_5_oxoavermectin_1b_aglycon
+  }
+
+  branch from malonyl_coa side left {
+    malonyl_coa
+    <-> ec_2_3_1_115 [2.3.1.115] +glycitin +h +coa
+    malonylglycitin
+  }
+
+  branch from h side right {
+    h
+    <-> ec_1_1_1_146 [1.1.1.146] +nadph +nadp +tetrahydrocorticosterone
+    3alpha_21_dihydroxy_5beta_pregnane_11_20_dione
+  }
+
+  branch from h side left {
+    h
+    <-> ec_1_1_1_50 [1.1.1.50] +nadh +21_hydroxy_5beta_pregnane_3_11_20_trione +3alpha_21_dihydroxy_5beta_pregnane_11_20_dione
+    nad
+  }
+
+  branch from diphosphate side right {
+    diphosphate
+    <-> ec_4_2_3_32 [4.2.3.32] +palustradiene
+    copalyl_diphosphate
+  }
+
+  branch from diphosphate side left {
+    diphosphate
+    <-> ec_2_5_1_31 [2.5.1.31] +2z_6e_10e_geranylgeranyl_diphosphate +h +ipp
+    ditrans_polycis_pentaprenyl_diphosphate
+  }
+
+  branch from amp side right {
+    amp
+    <-> . +malonyl_coa +h +l_glutamine +atp +h2o +diphosphate +l_glutamate
+    malonamoyl_coa
   }
 }

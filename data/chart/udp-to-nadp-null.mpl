@@ -4,57 +4,15 @@
 # edit the generator, not this file.
 
 pathway udp-to-nadp-null "UDP to NADP" {
-  spacing 214
+  spacing 152
 
   spine at 0,0 {
     udp
-    <-> . +h +gentisate_5_o_beta_d_xylopyranoside -2_5_dihydroxybenzoate
-    udp_alpha_d_xylose
-    <-> ec_1_2_1_29 [1.2.1.29] +h +h2o2 +2_5_dihydroxybenzoate -o2 -h2o
-    2_5_dihydroxybenzaldehyde
+    <-> . +all_trans_retinoyl_1_o_beta_d_glucuronate -9_cis_retinoate
+    udp_alpha_d_glucuronate
+    <-> . +9_cis_retinoate +h +o2 +nadph -nadp -h2o
+    4_oxo_9_cis_retinoate
     <-> . +h +nadph -nadp
-    gentisyl_alcohol
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +n_hexahydrocyclopenta_c_pyrrol_2_1h_yl_amino_car +h2o
-    carboxy_gliclazide
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +h +nadph +cerivastatin +nadp +h2o
-    cerivastatin_m23
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +h +adp +cyclosporin_a_metabolite_m1 +phosphate +cyclosporin_a_metabolite_m1
-    atp
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    androst_4_ene_3_17_dione
-  }
-
-  branch from gentisyl_alcohol side left {
-    gentisyl_alcohol
-    <-> . +3_hydroxybenzyl_alcohol +fmnh2 +o2 +h2o +hplus
-    fmn
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +brassicasterol +h +nadph
-    ergosterol
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +h +nadph +2e_4z_7z_decatrienoyl_coa
-    3_7_decadienoyl_coenzyme_a
+    9_cis_4_oxo_13_14_dihydro_retinoate
   }
 }

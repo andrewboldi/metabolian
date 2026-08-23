@@ -1,0 +1,494 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "r-lipoate-to-n6-r-s8-ammoniomethyld-12913",
+  "name": "(R)-lipoate to N6-[(R)-S8-ammoniomethyld…",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from (R)-lipoate to N6-[(R)-S8-ammoniomethyldihydrolipoyl]-L-lysine(1+) residue, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:12913"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:83088"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "r_lipoate",
+      "name": "(R)-lipoate",
+      "formula": "C8H13O2S2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:83088"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "r_lipoyl_amp",
+      "name": "(R)-lipoyl-AMP",
+      "formula": "C18H25N5O8PS2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:83091"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H13N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:29969"
+      }
+    },
+    {
+      "id": "n6_r_lipoyl_l_lysine",
+      "name": "N6-[(R)-lipoyl]-L-lysine",
+      "short": "N6-[(R)-lipoyl]-L-l…",
+      "formula": "C14H24N2O2S2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:83099"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "glycine",
+      "name": "Glycine",
+      "formula": "C2H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57305"
+      }
+    },
+    {
+      "id": "n6_r_s8_ammoniomethyldihydrolipoyl_l_lysine_1",
+      "name": "N6-[(R)-S8-ammoniomethyldihydrolipoyl]-L-lysine(1+)",
+      "short": "N6-[(R)-S8-ammoniom…",
+      "formula": "C15H30N3O2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:83143"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_4_4_2",
+      "name": "glycine dehydrogenase (aminomethyl-transferring)",
+      "ec": [
+        "1.4.4.2"
+      ],
+      "xrefs": {
+        "uniprot": "P23378"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(R)-lipoate + ATP + H(+) = (R)-lipoyl-5'-AMP + diphosphate",
+      "equation": "(R)-lipoate + ATP + H(+) = (R)-lipoyl-5'-AMP + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "r_lipoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_lipoyl_amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:12913"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12913"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(R)-lipoyl-5'-AMP + L-lysyl-[lipoyl-carrier protein] = N(6)-[(R)-lipoyl]-L-lysyl-[lipoy...",
+      "equation": "(R)-lipoyl-5'-AMP + L-lysyl-[lipoyl-carrier protein] = N(6)-[(R)-lipoyl]-L-lysyl-[lipoyl-carrier protein] + AMP + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "r_lipoyl_amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_r_lipoyl_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:20473"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20473"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "glycine dehydrogenase (aminomethyl-transferring)",
+      "equation": "N(6)-[(R)-lipoyl]-L-lysyl-[glycine-cleavage complex H protein] + glycine + H(+) = N(6)-[(R)-S(8)-aminomethyldihydrolipoyl]-L-lysyl-[glycine-cleavage complex H protein] + CO2",
+      "ec": "1.4.4.2",
+      "substrates": [
+        {
+          "metabolite": "n6_r_lipoyl_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_r_s8_ammoniomethyldihydrolipoyl_l_lysine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_4_4_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:24304"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24304"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_r_lipoate_alaninium-amide-to-d-pantetheine-4-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_lipoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alaninium-amide-to-d-pantetheine-4-phosphate"
+      },
+      "note": "Shares (R)-lipoate with β-alaninium amide to D-pantetheine 4'-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83088"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_lipoate_aldehydo-d-glucose-to-4s-5s-4-5-dihydroxy-2-6",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_lipoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aldehydo-d-glucose-to-4s-5s-4-5-dihydroxy-2-6"
+      },
+      "note": "Shares (R)-lipoate with aldehydo-D-glucose to (4S,5S)-4,5-dihydroxy-2,6….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83088"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_lipoate_aldehydo-d-glucose-to-4s-5s-4-5-dihydroxy-2-6-15",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_lipoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aldehydo-d-glucose-to-4s-5s-4-5-dihydroxy-2-6-15"
+      },
+      "note": "Shares (R)-lipoate with aldehydo-D-glucose to (4S,5S)-4,5-dihydroxy-2,6….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83088"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_lipoate_r-alanopine-to-n6-r-s8-succinyldihydr",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_lipoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-alanopine-to-n6-r-s8-succinyldihydr"
+      },
+      "note": "Shares (R)-lipoate with (R)-β-alanopine to N6-[(R)-S8-succinyldihydr….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83088"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_lipoate_r-alanopine-to-n6-r-s8-succinyldihydr-21684",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_lipoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-alanopine-to-n6-r-s8-succinyldihydr-21684"
+      },
+      "note": "Shares (R)-lipoate with (R)-β-alanopine to N6-[(R)-S8-succinyldihydr….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83088"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_lipoate_r-lipoate-to-n6-r-s8-ammoniomethyld",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_lipoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-lipoate-to-n6-r-s8-ammoniomethyld"
+      },
+      "note": "Shares (R)-lipoate with (R)-lipoate to N6-[(R)-S8-ammoniomethyld….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83088"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_lipoyl_amp_r-lipoate-to-n6-r-s8-ammoniomethyld",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_lipoyl_amp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-lipoate-to-n6-r-s8-ammoniomethyld"
+      },
+      "note": "Shares (R)-lipoyl-AMP with (R)-lipoate to N6-[(R)-S8-ammoniomethyld….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83091"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n6_r_s8_ammoniomethyldihydrolipoyl_l_lysine_1_r-alanopine-to-n6-r-s8-succinyldihydr",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n6_r_s8_ammoniomethyldihydrolipoyl_l_lysine_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-alanopine-to-n6-r-s8-succinyldihydr"
+      },
+      "note": "Shares N6-[(R)-S8-ammoniomethyldihydrolipoyl]-L-lysine(1+) with (R)-β-alanopine to N6-[(R)-S8-succinyldihydr….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83143"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n6_r_s8_ammoniomethyldihydrolipoyl_l_lysine_1_r-alanopine-to-n6-r-s8-succinyldihydr-21684",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n6_r_s8_ammoniomethyldihydrolipoyl_l_lysine_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-alanopine-to-n6-r-s8-succinyldihydr-21684"
+      },
+      "note": "Shares N6-[(R)-S8-ammoniomethyldihydrolipoyl]-L-lysine(1+) with (R)-β-alanopine to N6-[(R)-S8-succinyldihydr….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83143"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n6_r_s8_ammoniomethyldihydrolipoyl_l_lysine_1_r-lipoate-to-n6-r-s8-ammoniomethyld",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n6_r_s8_ammoniomethyldihydrolipoyl_l_lysine_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-lipoate-to-n6-r-s8-ammoniomethyld"
+      },
+      "note": "Shares N6-[(R)-S8-ammoniomethyldihydrolipoyl]-L-lysine(1+) with (R)-lipoate to N6-[(R)-S8-ammoniomethyld….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83143"
+          }
+        ]
+      }
+    }
+  ]
+}

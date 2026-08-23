@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-hydroxy-17beta-estradiol-to-h2o "4-hydroxy-17beta-estradiol to H2O" {
-  spacing 244
+  spacing 316
 
   spine at 0,0 {
     4_hydroxy_17beta_estradiol
@@ -18,14 +18,14 @@ pathway 4-hydroxy-17beta-estradiol-to-h2o "4-hydroxy-17beta-estradiol to H2O" {
 
   branch from h side left {
     h
-    <-> ec_2_5_1_18 [2.5.1.18] +1r_glutathionyl_2r_hydroxy_1_2_dihydronaphthale +glutathione
-    1s_2r_naphthalene_1_2_oxide
+    <-> ec_2_7_1_190 [2.7.1.190] +gdp +amikacin_2_phosphate +amikacin
+    gtp
   }
 
   branch from h side right {
     h
-    <-> ec_2_5_1_18 [2.5.1.18] +1s_hydroxy_2s_glutathionyl_1_2_dihydronaphthale +1s_2r_naphthalene_1_2_oxide
-    glutathione
+    <-> ec_2_7_1_190 [2.7.1.190] +gdp +sisomicin_2_phosphate +gtp
+    sisomicin
   }
 
   branch from 17beta_estradiol side left {
@@ -42,61 +42,133 @@ pathway 4-hydroxy-17beta-estradiol-to-h2o "4-hydroxy-17beta-estradiol to H2O" {
 
   branch from o2 side left {
     o2
-    <-> . +h +nadph +typhasterol +nadp +h2o
-    castasterone
+    <-> . +2_6_oxo_1_oxaspiro_2_5_octa_4_glucosyl_6_hydroxy +h2o2
+    6_hydroxy_2_4_glucosyl_phenoxymethylene_benzofur
   }
 
   branch from o2 side right {
     o2
-    <-> . +h +6_deoxotyphasterol +nadph +nadp +h2o
-    6_deoxocastasterone
+    <-> . +l_leucine +2_oxoglutarate +5_hydroxy_leucine +succinate
+    co2
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_289 [1.1.1.289] +l_sorbopyranose +h +nadp
-    d_sorbitol
+    <-> . +c31_phthiodiolone_a +h +nadp
+    c31_phthiotriol
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_3_1_77 [1.3.1.77] +3_hydroxy_2_phenylchromenylium +h +nadp
-    2r_3r_flavan_3_ol
+    <-> . +c33_phthiodiolone_a +h +nadp
+    c33_phthiotriol_a
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_3_1_19 [1.3.1.19] +nadh +phthalate +h
-    1_2_dihydrophthalic_acid
+    <-> . +nadh +3_carboxy_8_methylsulfanyl_2_oxooctanoate +h
+    3_5_methylthio_pentylmalic_acid
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_14_12_12 [1.14.12.12] +nadh +h +anthracene +o2
-    anthracene_cis_1_2_dihydrodiol
+    <-> . +nadh +3_carboxy_7_methylsulfanyl_2_oxoheptanoate +h
+    3_4_methylthio_butylmalic_acid
   }
 
   branch from h2o side left {
     h2o
-    <-> . +glutathione_episulfonium_ion +h
-    s_2_hydroxyethyl_glutathione
+    <-> . +isotrichodiol
+    12_13_epoxytrichothec_9_ene
   }
 
   branch from h2o side right {
     h2o
-    <-> . +2_s_glutathionyl_acetyl_glutathione +h +glutathione
-    2_s_glutathionyl_acetate
+    <-> ec_1_10_3_4 [1.10.3.4] +3_hydroxy_4_methyl_anthranilate_pentapeptide_lac +o2
+    actinomycin_d
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_48 [3.6.3.48] +h +adp +phosphate +h2o
-    whwlqlkpgqpmy
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
+    glycyl_l_leucine
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_53 [3.6.3.53] +h +adp +phosphate +h2o
-    ag
+    <-> . +4r_5s_dethiobiotin +hydrogen_sulfide +nad +h2o +nadh +h +biotin +amp
+    diphosphate
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +c31_phthiodiolenone_a +h +nadph
+    c31_phthiodiolone_a
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +c33_phthiodiolenone_a +h +nadph
+    c33_phthiodiolone_a
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +l_alanine +h +3_hydroxy_4_methylanthranilate
+    3_hydroxy_4_methyl_d_kynurenine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_1_10_3_4 [1.10.3.4] +actinocin +o2
+    3_hydroxy_4_methylanthranilate
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_7_1_190 [2.7.1.190] +gdp +netilmycin_2_phosphate +gtp
+    netilmicin
+  }
+
+  branch from h side right {
+    h
+    <-> . +s_adenosyl_l_homocysteine +fusarubinaldehyde +6_o_demethylfusarubinaldehyde
+    s_adenosyl_l_methionine
+  }
+
+  branch from 17beta_estradiol side left {
+    17beta_estradiol
+    <-> . +d_glucuronate +h2o
+    17_estradiol_3_o_d_glucuronide
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +2_oxoglutarate +5_hydroxy_leucine +co2 +succinate
+    5_5_dihydroxy_leucine
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +2_oxoglutarate +l_homotyrosine +co2 +succinate
+    3_hydroxy_l_homotyrosine
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +c34_phenolphthiodiolone_a +h +nadp
+    c34_phenolphthiotriol_a
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +c34_phenolphthiodiolenone_a +h +nadp
+    c34_phenolphthiodiolone_a
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +3_ethyl_2_oxosuccinate +h +nad
+    3_ethylmalate
   }
 }

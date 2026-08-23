@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway r-2-hydroxy-4-methylpen-to-malonyl-coa "(R)-2-hydroxy-4-methylpen… to malonyl-CoA" {
-  spacing 322
+  spacing 340
 
   spine at 0,0 {
     r_2_hydroxy_4_methylpentanoate
@@ -74,5 +74,35 @@ pathway r-2-hydroxy-4-methylpen-to-malonyl-coa "(R)-2-hydroxy-4-methylpen… to 
     malonyl-coa
     <-> . +acetyl_coa +hplus +co2 +coa +h2o
     3_6_7_9_tetrahydroxy_3_methyl_2_3_dihydro_1h_nap
+  }
+
+  branch from isovaleryl_coa side right {
+    isovaleryl_coa
+    <-> .
+    pivaloyl_coa
+  }
+
+  branch from isovaleryl_coa side left {
+    isovaleryl_coa
+    <-> . +akg +o2 +succinate +co2
+    2_hydroxyisovaleryl_coa
+  }
+
+  branch from biotinyl_l_lysine side right {
+    biotinyl_l_lysine
+    <-> . +l_lysinium +amp +hplus
+    biotinyl_5_amp
+  }
+
+  branch from malonyl-coa side left {
+    malonyl-coa
+    <-> ec_2_3_1_171 [2.3.1.171] +anthocyanidin_3_o_d_glucoside +coa
+    anthocyanidin_3_o_6_o_malonyl_d_glucoside_betain
+  }
+
+  branch from malonyl-coa side right {
+    malonyl-coa
+    <-> ec_2_3_1_113 [2.3.1.113] +anthranilate +coa
+    n_malonylanthranilate
   }
 }

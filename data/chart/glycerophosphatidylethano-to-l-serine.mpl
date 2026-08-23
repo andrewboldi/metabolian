@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway glycerophosphatidylethano-to-l-serine "glycerophosphatidylethano… to L-serine" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     glycerophosphatidylethanolamine
@@ -16,29 +16,5 @@ pathway glycerophosphatidylethano-to-l-serine "glycerophosphatidylethano… to L
     1_2_di_7z_tetradecenoyl_sn_glycero_3_phosphoseri
     <-> . +cmp +h -l_serine
     cdp_1_2_di_7z_tetradecenoyl_sn_glycerol
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_leucine +l_methionine +l_arginine
-    methionyl_arginyl_leucine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +methionyl_phenylalanyl_arginine +l_arginine +l_phenylalanine
-    l_methionine
-  }
-
-  branch from h side left {
-    h
-    <-> . +nitrite +ferrocytochrome_c +nh4 +h2o
-    ferricytochrome_c
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    norverapamil_glucuronide
   }
 }

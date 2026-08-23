@@ -99,64 +99,6 @@
       "xrefs": {
         "metanetx": "MNXM1364060"
       }
-    },
-    {
-      "id": "alpha_d_glucose",
-      "name": "alpha-D-glucose",
-      "formula": "C6H12O6",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1105027"
-      }
-    },
-    {
-      "id": "trans_p_coumaryl_alcohol",
-      "name": "trans-p-coumaryl alcohol",
-      "short": "trans-p-coumaryl…",
-      "formula": "C9H10O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:64555"
-      }
-    },
-    {
-      "id": "4_hydroxycinnamyl_alcohol_4_d_glucoside",
-      "name": "4-Hydroxycinnamyl alcohol 4-D-glucoside",
-      "short": "4-Hydroxycinnamyl…",
-      "formula": "C15H20O7",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1370794"
-      }
-    },
-    {
-      "id": "z_indol_3_ylacetaldehyde_oxime",
-      "name": "(Z)-indol-3-ylacetaldehyde oxime",
-      "short": "indol-3-ylacetaldeh…",
-      "formula": "C10H10N2O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:48577"
-      }
-    },
-    {
-      "id": "indol_3_yl_acetonitrile",
-      "name": "(indol-3-yl)acetonitrile",
-      "short": "(indol-3-yl)acetoni…",
-      "formula": "C10H8N2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1746"
-      }
-    },
-    {
-      "id": "mandelonitrile",
-      "name": "mandelonitrile",
-      "formula": "C8H7NO",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1106178"
-      }
     }
   ],
   "enzymes": [
@@ -172,27 +114,6 @@
       "name": "amygdalin beta-glucosidase",
       "ec": [
         "3.2.1.117"
-      ]
-    },
-    {
-      "id": "ec_3_2_1_126",
-      "name": "coniferin beta-glucosidase",
-      "ec": [
-        "3.2.1.126"
-      ]
-    },
-    {
-      "id": "ec_4_99_1_6",
-      "name": "EC 4.99.1.6",
-      "ec": [
-        "4.99.1.6"
-      ]
-    },
-    {
-      "id": "ec_3_2_1_118",
-      "name": "prunasin beta-glucosidase",
-      "ec": [
-        "3.2.1.118"
       ]
     }
   ],
@@ -326,131 +247,269 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "coniferin beta-glucosidase",
-      "ec": "3.2.1.126",
-      "substrates": [
-        {
-          "metabolite": "alpha_d_glucose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "trans_p_coumaryl_alcohol",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "4_hydroxycinnamyl_alcohol_4_d_glucoside",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_2_1_126"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR192153"
+      "id": "xt_r_mandelonitrile_2-phenylacetamide-to-s-mandelonitrile",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_mandelonitrile"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2-phenylacetamide-to-s-mandelonitrile"
+      },
+      "note": "Shares (R)-mandelonitrile with 2-phenylacetamide to (S)-mandelonitrile.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR192153"
+            "db": "ChEBI",
+            "id": "CHEBI:18450"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "Reaction MNXR192155",
-      "ec": "4.99.1.6",
-      "substrates": [
-        {
-          "metabolite": "z_indol_3_ylacetaldehyde_oxime",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "indol_3_yl_acetonitrile",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_99_1_6"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR192155"
+      "id": "xt_r_mandelonitrile_24-methylidenelophenol-to-episterol-ester",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_mandelonitrile"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "24-methylidenelophenol-to-episterol-ester"
+      },
+      "note": "Shares (R)-mandelonitrile with 24-methylidenelophenol to episterol ester.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR192155"
+            "db": "ChEBI",
+            "id": "CHEBI:18450"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "prunasin beta-glucosidase",
-      "ec": "3.2.1.118",
-      "substrates": [
-        {
-          "metabolite": "mandelonitrile",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "beta_d_glucose",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "r_prunasin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_2_1_118"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "metanetx": "MNXR192543"
+      "id": "xt_r_mandelonitrile_3-hydroxy-3-phenylpropion-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_mandelonitrile"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxy-3-phenylpropion-to-h2o"
+      },
+      "note": "Shares (R)-mandelonitrile with 3-hydroxy-3-phenylpropion… to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18450"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_mandelonitrile_n-hydroxy-l-phenylalanina-to-benzoyl-cyanide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_mandelonitrile"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-hydroxy-l-phenylalanina-to-benzoyl-cyanide"
+      },
+      "note": "Shares (R)-mandelonitrile with N-hydroxy-L-phenylalanina… to benzoyl cyanide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18450"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_mandelonitrile_trans-sinapyl-alcohol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_mandelonitrile"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-sinapyl-alcohol-to-h2o"
+      },
+      "note": "Shares (R)-mandelonitrile with trans-sinapyl alcohol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18450"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_beta_d_glcp_1_6_beta_d_glcp_beta-d-ribosylnicotinate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "beta_d_glcp_1_6_beta_d_glcp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-d-ribosylnicotinate-to-h2o"
+      },
+      "note": "Shares beta-D-Glcp-(1->6)-beta-D-Glcp with beta-D-ribosylnicotinate to H2O.",
+      "provenance": {
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR192543"
+            "id": "MNXM1107960"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_beta_d_glcp_1_6_beta_d_glcp_e-2-methylpropanal-oxime-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "beta_d_glcp_1_6_beta_d_glcp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "e-2-methylpropanal-oxime-to-h2o"
+      },
+      "note": "Shares beta-D-Glcp-(1->6)-beta-D-Glcp with (E)-2-methylpropanal oxime to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1107960"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_beta_d_glcp_1_6_beta_d_glcp_h-to-nad-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "beta_d_glcp_1_6_beta_d_glcp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-nad-null"
+      },
+      "note": "Shares beta-D-Glcp-(1->6)-beta-D-Glcp with H to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1107960"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_beta_d_glcp_1_6_beta_d_glcp_ndp-d-glucose-to-2-hydroxy-3-oxosuccinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "beta_d_glcp_1_6_beta_d_glcp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ndp-d-glucose-to-2-hydroxy-3-oxosuccinate"
+      },
+      "note": "Shares beta-D-Glcp-(1->6)-beta-D-Glcp with NDP-α-D-glucose to 2-hydroxy-3-oxosuccinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1107960"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_amygdalin_maltoheptaose-to-d-glucopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_amygdalin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "maltoheptaose-to-d-glucopyranose"
+      },
+      "note": "Shares (R)-amygdalin with maltoheptaose to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM735862"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_prunasin_2-phenylacetamide-to-s-mandelonitrile",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_prunasin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-phenylacetamide-to-s-mandelonitrile"
+      },
+      "note": "Shares (R)-prunasin with 2-phenylacetamide to (S)-mandelonitrile.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM731718"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_prunasin_maltoheptaose-to-d-glucopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_prunasin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "maltoheptaose-to-d-glucopyranose"
+      },
+      "note": "Shares (R)-prunasin with maltoheptaose to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM731718"
           }
         ]
       }

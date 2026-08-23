@@ -28,37 +28,97 @@ pathway 1s-bornane-2-5-dione-to-delta2-5-3-4-4-trimethy "(1S)-bornane-2,5-dione 
 
   branch from fmn side right {
     fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    14s_15r_eet
+    <-> ec_1_14_19_79 [1.14.19.79] +22s_22_hydroxycampesterol +fmnh2 +o2 +h2o +hplus
+    22s_22_hydroxycampest_4_en_3_one
   }
 
   branch from fmn side left {
     fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    14r_15s_eet
+    <-> ec_1_14_19_79 [1.14.19.79] +6_deoxoteasterone +fmnh2 +o2 +h2o +hplus
+    3_dehydro_6_deoxoteasterone
   }
 
   branch from ppi side right {
     ppi
-    <-> . +nonadecanoate +atp +coa +amp
-    nonadecanoyl_coa
+    <-> ec_4_2_3_215 [4.2.3.215] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    araneosene
   }
 
   branch from ppi side left {
     ppi
-    <-> . +2_methylhexadecanoate +atp +coa +amp
-    2_methylhexadecanoyl_coa
+    <-> ec_4_2_3_216 [4.2.3.216] +all_trans_pentaprenyl_diphosphate
+    somaliensene_a
   }
 
   branch from h side right {
     h
-    <-> . +adp +7alpha_hydroxycholest_4_en_3_one +phosphate +7alpha_hydroxycholest_4_en_3_one +h2o
-    atp
+    <-> ec_1_14_14_1 [1.14.14.1] +aflatoxin_m1 +o2 +nadph +nadp +h2o
+    aflatoxin_m1_8_9_epoxide
   }
 
   branch from h side left {
     h
-    <-> . +adp +phosphate +atp +h2o
-    7alpha_12alpha_dihydroxycholest_4_en_3_one
+    <-> ec_1_14_14_1 [1.14.14.1] +aflatoxin_b1_endo_8_9_oxide +nadp +h2o +o2 +nadph
+    lsm_36909
+  }
+
+  branch from 1s_bornane_2_5_dione side right {
+    1s_bornane_2_5_dione
+    <-> ec_1_1_1_327 [1.1.1.327] +nadh +h +1s_4s_5r_5_hydroxycamphor
+    nad
+  }
+
+  branch from 1s_bornane_2_5_dione side left {
+    1s_bornane_2_5_dione
+    <-> . +nadh +h +o2 +nad +h2o
+    1r_4r_5_oxo_1_2_campholide
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> ec_1_14_14_179 [1.14.14.179] +6_deoxocastasterone +o2 +fmn +h2o +hplus
+    castasterone
+  }
+
+  branch from fmnh2 side left {
+    fmnh2
+    <-> ec_1_14_14_179 [1.14.14.179] +3_dehydro_6_deoxoteasterone +o2 +fmn +h2o +hplus
+    3_dehydroteasterone
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_179 [1.14.14.179] +6_deoxoteasterone +fmnh2 +o2 +h2o +hplus
+    teasterone
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_178 [1.14.14.178] +a_c27_steroid +fmnh2 +o2 +h2o +hplus
+    a_22s_22_hydroxy_c27_steroid
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_217 [4.2.3.217] +all_trans_pentaprenyl_diphosphate
+    somaliensene_b
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_218 [4.2.3.218] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    variediene
+  }
+
+  branch from h side right {
+    h
+    <-> ec_1_14_14_1 [1.14.14.1] +4_hydroxymethyl_nitrosoamino_1_3_pyridinyl_1_but +nadp +h2o +o2 +nadph
+    4_n_nitrosomethylamino_1_3_pyridyl_butan_1_one
+  }
+
+  branch from h side left {
+    h
+    <-> ec_1_14_14_1 [1.14.14.1] +alpha_3_hydroxymethyl_nitrosoamino_propyl_3_pyri +nadp +h2o +o2 +nadph
+    4_methylnitrosamino_1_3_pyridyl_1_butanol
   }
 }

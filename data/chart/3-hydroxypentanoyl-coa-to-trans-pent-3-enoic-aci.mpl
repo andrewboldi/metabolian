@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-hydroxypentanoyl-coa-to-trans-pent-3-enoic-aci "3-hydroxypentanoyl-CoA to trans-pent-3-enoic acid" {
-  spacing 230
+  spacing 182
 
   spine at 0,0 {
     3_hydroxypentanoyl_coa
@@ -16,57 +16,9 @@ pathway 3-hydroxypentanoyl-coa-to-trans-pent-3-enoic-aci "3-hydroxypentanoyl-CoA
     atp
   }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_3_1_1_40 [3.1.1.40] +h +orsellinate +isoevernic_acid
-    umbilicaric_acid
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_1_5_3_25 [1.5.3.25] +n_1_deoxy_d_fructos_1_yl_l_valine +o2 +d_glucosone +h2o2
-    l_valine
-  }
-
   branch from 3_pentenoyl_coa side left {
     3_pentenoyl_coa
     <-> .
     2e_pentenoyl_coa
-  }
-
-  branch from phosphate side right {
-    phosphate
-    <-> . +h +adp +atp +h2o
-    2s_2_isopropyl_3_oxosuccinate
-  }
-
-  branch from phosphate side left {
-    phosphate
-    <-> . +h +adp +atp +h2o
-    3_s_hydroxy_pravastatin_tetranor
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    3_s_hydroxy_pravastatin
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    3_hydroxy_carbamazepine_glucuronide
-  }
-
-  branch from coa side right {
-    coa
-    <-> ec_2_3_1_16 [2.3.1.16] +acetyl_coa +3_oxo_5_phenylpentanoyl_coa
-    3_5_dioxo_7_phenylheptanoyl_coa
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +3_5_dioxo_7_phenylheptanoyl_coa
-    4_hydroxy_6_penethyl_pyran_2_one
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-acetate "UDP to acetate" {
-  spacing 234
+  spacing 228
 
   spine at 0,0 {
     udp
@@ -14,11 +14,5 @@ pathway udp-to-acetate "UDP to acetate" {
     zeatin
     <-> ec_2_5_1_50 [2.5.1.50] +o_acetyl_l_serine -acetate -hplus
     l_lupinic_acid
-  }
-
-  branch from zeatin side left {
-    zeatin
-    <-> ec_1_3_1_69 [1.3.1.69] +nadp +nadph +hplus
-    dihydrozeatin
   }
 }

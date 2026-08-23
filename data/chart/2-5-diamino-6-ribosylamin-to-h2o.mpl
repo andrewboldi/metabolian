@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-5-diamino-6-ribosylamin-to-h2o "2,5-diamino-6-ribosylamin… to H2O" {
-  spacing 340
+  spacing 314
 
   spine at 0,0 {
     2_5_diamino_6_ribosylamino_4_3h_pyrimidinone_5_t
@@ -18,81 +18,9 @@ pathway 2-5-diamino-6-ribosylamin-to-h2o "2,5-diamino-6-ribosylamin… to H2O" {
     7_8_dihydroneopterin_2_3_cyclic_phosphate
   }
 
-  branch from h2o side left {
-    h2o
-    <-> . +l_alanine +l_leucine +l_arginine
-    leucyl_alanyl_arginine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_leucine +l_asparagine +l_aspartate
-    leucyl_asparaginyl_aspartate
-  }
-
-  branch from 2_5_diamino_6_hydroxy_4_5_phosphoribosylamino_py side left {
-    2_5_diamino_6_hydroxy_4_5_phosphoribosylamino_py
-    <-> ec_3_5_4_25 [3.5.4.25] +h2o +diphosphate +h +formate
-    gtp
-  }
-
-  branch from 2_5_diamino_6_hydroxy_4_5_phosphoribosylamino_py side right {
-    2_5_diamino_6_hydroxy_4_5_phosphoribosylamino_py
-    <-> ec_3_5_4_26 [3.5.4.26] +h +h2o +nh4
-    5_amino_6_5_phosphoribosylaminouracil
-  }
-
-  branch from diphosphate side left {
-    diphosphate
-    <-> . +h +simvastatin +amp +atp
-    simvastatin_hydroxy_acid
-  }
-
-  branch from diphosphate side right {
-    diphosphate
-    <-> ec_4_2_3_190 [4.2.3.190] +manoyl_oxide
-    copal_8_ol_diphosphate
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    n_carbamoylputrescine
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +n_desmethyl_rosuvastatin +phosphate +n_desmethyl_rosuvastatin +h2o
-    atp
-  }
-
-  branch from formate side left {
-    formate
-    <-> ec_1_1_5_6 [1.1.5.6] +phylloquinone +h +co2
-    phylloquinol
-  }
-
-  branch from formate side right {
-    formate
-    <-> ec_1_1_5_6 [1.1.5.6] +ubiquinol_9 +co2 +h
-    ubiquinone_9
-  }
-
-  branch from dihydroneopterin_phosphate side left {
-    dihydroneopterin_phosphate
-    <-> . +h2o +phosphate
-    dihydroneopterin
-  }
-
-  branch from dihydroneopterin_phosphate side right {
-    dihydroneopterin_phosphate
-    <-> ec_3_6_1_67 [3.6.1.67] +diphosphate +h +h2o
-    7_8_dihydroneopterin_3_triphosphate
-  }
-
-  branch from 7_8_dihydroneopterin_2_3_cyclic_phosphate side left {
-    7_8_dihydroneopterin_2_3_cyclic_phosphate
-    <-> . +h +h2o
-    7_8_dihydro_d_neopterin_2_phosphate
+  branch from 2_5_diamino_6_ribosylamino_4_3h_pyrimidinone_5_t side left {
+    2_5_diamino_6_ribosylamino_4_3h_pyrimidinone_5_t
+    <-> ec_3_5_4_16 [3.5.4.16]
+    2_5_diamino_6_5_triphosphoryl_3_4_trihydroxy_2_o
   }
 }

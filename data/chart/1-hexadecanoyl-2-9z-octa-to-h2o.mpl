@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-hexadecanoyl-2-9z-octa-to-h2o "1-hexadecanoyl-2-(9Z-octa… to H2O" {
-  spacing 188
+  spacing 164
 
   spine at 0,0 {
     1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph
@@ -16,39 +16,15 @@ pathway 1-hexadecanoyl-2-9z-octa-to-h2o "1-hexadecanoyl-2-(9Z-octa… to H2O" {
     atp
   }
 
-  branch from 2_oleoyl_sn_glycero_3_phosphoethanolamine side left {
-    2_oleoyl_sn_glycero_3_phosphoethanolamine
-    <-> . +1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph +coa
-    palmitoyl_coa
+  branch from stearoyl_coa side left {
+    stearoyl_coa
+    <-> . +ketosphinganine +coa +hplus
+    n_stearoyl_3_ketodihydrosphingosine
   }
 
-  branch from 2_oleoyl_sn_glycero_3_phosphoethanolamine side right {
-    2_oleoyl_sn_glycero_3_phosphoethanolamine
-    <-> . +oleoyl_coa +coa
-    1_2_dioleoyl_sn_glycero_3_phosphoethanolamine
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    amiclenomycin
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    penem_cgp31608
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    cephradine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    fosmidomycin
+  branch from stearoyl_coa side right {
+    stearoyl_coa
+    <-> . +acetyl_coa +coa
+    3_oxoicosanoyl_coa
   }
 }

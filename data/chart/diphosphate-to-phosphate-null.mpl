@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway diphosphate-to-phosphate-null "diphosphate to phosphate" {
-  spacing 264
+  spacing 300
 
   spine at 0,0 {
     diphosphate
@@ -16,75 +16,111 @@ pathway diphosphate-to-phosphate-null "diphosphate to phosphate" {
     h
   }
 
-  branch from presqualene_diphosphate side left {
-    presqualene_diphosphate
-    <-> ec_2_5_1_96 [2.5.1.96] +diphosphate +h
-    15_cis_4_4_diapophytoene
-  }
-
-  branch from presqualene_diphosphate side right {
-    presqualene_diphosphate
-    <-> ec_4_2_3_156 [4.2.3.156] +diphosphate +h +h2o
-    r_12_hydroxysqualene
-  }
-
   branch from nadph side left {
     nadph
-    <-> ec_1_14_13_56 [1.14.13.56] +dihydrosanguinarine +h +o2 +nadp +h2o
-    10_hydroxydihydrosanguinarine
+    <-> . +pgh3 +nadp +h2o +h +o2
+    5z_8z_11z_14z_17z_eicosapentaenoate
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_14_13_57 [1.14.13.57] +dihydrochelirubine +h +o2 +nadp +h2o
-    12_hydroxydihydrochelirubine
-  }
-
-  branch from 2e_6e_farnesyl_diphosphate side left {
-    2e_6e_farnesyl_diphosphate
-    <-> . +diphosphate
-    z_e_farnesene
-  }
-
-  branch from 2e_6e_farnesyl_diphosphate side right {
-    2e_6e_farnesyl_diphosphate
-    <-> ec_4_2_3_21 [4.2.3.21] +diphosphate
-    vetispiradiene
+    <-> . +ferricytochrome_c +h +nadp
+    ferrocytochrome_c
   }
 
   branch from h side left {
     h
-    <-> ec_2_6_3_1 [2.6.3.1] +pyruvate +acetone_oxime +pyruvate_oxime
-    acetone
+    <-> . +adp +phosphate +atp +h2o
+    tetracosatetraenoic_acid_n_6
   }
 
   branch from h side right {
     h
-    <-> ec_4_5_1_2 [4.5.1.2] +s_carboxymethyl_d_cysteine +chloride +3_chloro_d_alanine
-    thioglycolate
-  }
-
-  branch from 2e_6e_farnesol side left {
-    2e_6e_farnesol
-    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +nadp
-    11r_dihydroartemisinic_aldehyde
-  }
-
-  branch from 2e_6e_farnesol side right {
-    2e_6e_farnesol
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +11r_dihydroartemisinic_aldehyde
-    nad
+    <-> . +6z_9z_12z_15z_18z_tetracosapentaenoyl_coa +h2o +coa
+    tetracosapentaenoic_acid_n_6
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_3_1_3_45 [3.1.3.45] +h +3_deoxy_d_manno_octulosonate +h2o
-    8_phospho_3_deoxy_d_manno_oct_2_ulosonic_acid
+    <-> . +tetracosapentaenoic_acid_n_6 +h +adp +tetracosapentaenoic_acid_n_6 +h2o
+    atp
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_2_5_1_54 [2.5.1.54] +h +phosphoenolpyruvate +h2o +8_phospho_3_deoxy_d_manno_oct_2_ulosonic_acid
-    d_arabinose_5_phosphate
+    <-> . +h +adp +atp +h2o
+    10_13_16_docosatrienoic_acid
+  }
+
+  branch from diphosphate side left {
+    diphosphate
+    <-> . +10z_13z_16z_docosatrienoyl_coa +h +amp +atp +10_13_16_docosatrienoic_acid
+    coa
+  }
+
+  branch from diphosphate side right {
+    diphosphate
+    <-> . +6_7_dihydro_5_oxo_leukotriene_b4 +atp +coa +amp
+    5_oxo_12_r_hydroxy_eicosa_8e_10e_14z_trienoyl_co
+  }
+
+  branch from h side left {
+    h
+    <-> . +4z_7z_10z_13z_16z_docosapentaenoyl_coa +h2o +coa
+    docosa_4_7_10_13_16_pentaenoic_acid
+  }
+
+  branch from h side right {
+    h
+    <-> . +7z_octadec_7_enoyl_coa +sn_glycerol_3_phosphate +coa
+    1_acylglycerol_3p_7_octade
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +malonyl_coa +h +nadph +h2o
+    malonyl_coa_semialdehyde
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +h +malonyl_coa_semialdehyde +nadph
+    3_hydroxypropanoyl_coa
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +24e_3_7_dihydroxy_5_cholest_24_en_26_oyl_coa +h +nadp +h2o +o2
+    3alpha_7alpha_24_trihydroxy_5beta_cholestanoyl_c
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +2_hydroxyibuprofen +nadp +h2o +o2
+    ibuprofen
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +coa +10_13_16_docosatrienoic_acid
+    10z_13z_16z_docosatrienoyl_coa
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +n_acetyl_d_galactosamine +trihexosyl_ceramide
+    globoside
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    13z_icosenoyl_coa
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    hesperetin_3_o_glucuronide
   }
 }

@@ -112,6 +112,46 @@
       "xrefs": {
         "chebi": "CHEBI:142148"
       }
+    },
+    {
+      "id": "methyl_8_n_acetyl_neuraminosyl_2_3_d_galactosyl",
+      "name": "methyl 8-{[N-acetyl-α-neuraminosyl-(2→3)-β-D-galactosyl-(1→4)-N-acetyl-β-D-glucosaminyl]oxy}nonanoate",
+      "short": "methyl 8-{[N-acetyl…",
+      "formula": "C35H59N2O21",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:145939"
+      }
+    },
+    {
+      "id": "methyl_8_n_acetyl_neuraminosyl_2_3_d_galactosyl",
+      "name": "methyl 8-{[N-acetyl-α-neuraminosyl-(2→3)-β-D-galactosyl-(1→4)-[α-L-fucosyl-(1→3)]-N-acetyl-β-D-glucosaminyl]oxy}nonanoate",
+      "short": "methyl 8-{[N-acetyl…",
+      "formula": "C41H69N2O25",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:145940"
+      }
+    },
+    {
+      "id": "methyl_8_d_galactosyl_1_3_n_acetyl_d_glucosamyl",
+      "name": "methyl 8-{[β-D-galactosyl-(1→3)-N-acetyl-β-D-glucosamyl]oxy}nonanoate",
+      "short": "methyl 8-{[β-D-gala…",
+      "formula": "C24H43NO13",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:145976"
+      }
+    },
+    {
+      "id": "methyl_8_d_galactosyl_1_3_l_fucosyl_1_4_n_acetyl",
+      "name": "methyl 8-{[β-D-galactosyl-(1→3)-[α-L-fucosyl-(1→4)]-N-acetyl-β-D-glucosaminyl]oxy}nonanoate",
+      "short": "methyl 8-{[β-D-gala…",
+      "formula": "C30H53NO17",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:145977"
+      }
     }
   ],
   "enzymes": [],
@@ -241,6 +281,248 @@
           {
             "db": "Rhea",
             "id": "RHEA:79983"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "methyl 8-{[N-acetyl-alpha-neuraminosyl-(2->3)-beta-D-galactosyl-(1->4)-N-acetyl-beta-D-...",
+      "equation": "methyl 8-{[N-acetyl-alpha-neuraminosyl-(2->3)-beta-D-galactosyl-(1->4)-N-acetyl-beta-D-glucosaminyl]oxy}nonanoate + GDP-beta-L-fucose = methyl 8-{[N-acetyl-alpha-neuraminosyl-(2->3)-beta-D-galactosyl-(1->4)-[alpha-L-fucosyl-(1->3)]-N-acetyl-beta-D-glucosaminyl]oxy}nonanoate + GDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "methyl_8_n_acetyl_neuraminosyl_2_3_d_galactosyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gdp_l_fucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methyl_8_n_acetyl_neuraminosyl_2_3_d_galactosyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:62840"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62840"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "methyl 8-{[beta-D-galactosyl-(1->3)-N-acetyl-beta-D-glucosamyl]oxy}nonanoate + GDP-beta...",
+      "equation": "methyl 8-{[beta-D-galactosyl-(1->3)-N-acetyl-beta-D-glucosamyl]oxy}nonanoate + GDP-beta-L-fucose = methyl 8-{[beta-D-galactosyl-(1->3)-[alpha-L-fucosyl-(1->4)]-N-acetyl-beta-D-glucosaminyl]oxy}nonanoate + GDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "methyl_8_d_galactosyl_1_3_n_acetyl_d_glucosamyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gdp_l_fucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methyl_8_d_galactosyl_1_3_l_fucosyl_1_4_n_acetyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:62848"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62848"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_glc_1_1_cer_2-demethylmenaquinone-9-to-adenosine-3-5-bismono",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_glc_1_1_cer"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-demethylmenaquinone-9-to-adenosine-3-5-bismono"
+      },
+      "note": "Shares β-D-Gal-(1→3)-β-D-GalNAc-(1→4)-β-D-Gal-(1→4)-β-D-Glc-(1↔1')-Cer with 2-demethylmenaquinone-9 to adenosine 3',5'-bismonoph….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:27938"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_glc_1_1_cer_d-gal-1-3-d-galnac-to-d-gal-1-3-d-galnac",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_glc_1_1_cer"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-gal-1-3-d-galnac-to-d-gal-1-3-d-galnac"
+      },
+      "note": "Shares β-D-Gal-(1→3)-β-D-GalNAc-(1→4)-β-D-Gal-(1→4)-β-D-Glc-(1↔1')-Cer with β-D-Gal-(1→3)-β-D-GalNAc-… to β-D-Gal-(1→3)-β-D-GalNAc-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:27938"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_glc_1_1_cer_n-acetyl-9-o-acetylneuram-to-l-tyrosine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_glc_1_1_cer"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyl-9-o-acetylneuram-to-l-tyrosine"
+      },
+      "note": "Shares β-D-Gal-(1→3)-β-D-GalNAc-(1→4)-β-D-Gal-(1→4)-β-D-Glc-(1↔1')-Cer with N-acetyl-9-O-acetylneuram… to L-tyrosine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:27938"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_glc_1_1_cer_n-acetylneuraminosyl-2-to-cytidine-5-monophosph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_glc_1_1_cer"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetylneuraminosyl-2-to-cytidine-5-monophosph"
+      },
+      "note": "Shares β-D-Gal-(1→3)-β-D-GalNAc-(1→4)-β-D-Gal-(1→4)-β-D-Glc-(1↔1')-Cer with α-N-acetylneuraminosyl-(2… to cytidine 5'-monophosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:27938"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_glc_1_1_cer_n4-d-glcnac-1-2-d-to-n4-d-glcnac-1-2-d",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_glc_1_1_cer"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n4-d-glcnac-1-2-d-to-n4-d-glcnac-1-2-d"
+      },
+      "note": "Shares β-D-Gal-(1→3)-β-D-GalNAc-(1→4)-β-D-Gal-(1→4)-β-D-Glc-(1↔1')-Cer with N4-{β-D-GlcNAc-(1→2)-α-D-… to N4-{β-D-GlcNAc-(1→2)-[β-D….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:27938"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_glc_1_1_cer_trehalose-to-sl1278",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_glc_1_1_cer"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trehalose-to-sl1278"
+      },
+      "note": "Shares β-D-Gal-(1→3)-β-D-GalNAc-(1→4)-β-D-Gal-(1→4)-β-D-Glc-(1↔1')-Cer with α,α-trehalose to SL1278.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:27938"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_glc_1_1_cer_trioctanoin-to-1-2-dioctanoyl-sn-glycerol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_glc_1_1_cer"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trioctanoin-to-1-2-dioctanoyl-sn-glycerol"
+      },
+      "note": "Shares β-D-Gal-(1→3)-β-D-GalNAc-(1→4)-β-D-Gal-(1→4)-β-D-Glc-(1↔1')-Cer with trioctanoin to 1,2-dioctanoyl-sn-glycerol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:27938"
           }
         ]
       }

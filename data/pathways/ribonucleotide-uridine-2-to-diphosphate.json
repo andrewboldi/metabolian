@@ -158,45 +158,6 @@
       "xrefs": {
         "chebi": "CHEBI:43474"
       }
-    },
-    {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:175763"
-      }
-    },
-    {
-      "id": "selina_4_15_7_11_diene",
-      "name": "selina-4(15),7(11)-diene",
-      "short": "selina-4(15),7(11)-…",
-      "formula": "C15H24",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:138051"
-      }
-    },
-    {
-      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
-      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
-      "short": "2-trans,6-trans,10-…",
-      "formula": "C20H33O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58756"
-      }
-    },
-    {
-      "id": "pseudolaratriene",
-      "name": "pseudolaratriene",
-      "formula": "C20H32",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:138050"
-      }
     }
   ],
   "enzymes": [
@@ -205,21 +166,10 @@
       "name": "RNA 3'-terminal-phosphate cyclase (ATP)",
       "ec": [
         "6.5.1.4"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_181",
-      "name": "selina-4(15),7(11)-diene synthase",
-      "ec": [
-        "4.2.3.181"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_180",
-      "name": "pseudolaratriene synthase",
-      "ec": [
-        "4.2.3.180"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "O00442"
+      }
     }
   ],
   "reactions": [
@@ -458,85 +408,203 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r7",
-      "name": "selina-4(15),7(11)-diene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = selina-4(15),7(11)-diene + diphosphate",
-      "ec": "4.2.3.181",
-      "substrates": [
-        {
-          "metabolite": "fpp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "selina_4_15_7_11_diene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_181"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:54112"
+      "id": "xt_3_end_ribonucleotide_2_3_cyclic_phosphate_2_3-end-pnpgpcpcpa-5-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_end_ribonucleotide_2_3_cyclic_phosphate_2"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "3-end-pnpgpcpcpa-5-to-diphosphate"
+      },
+      "note": "Shares 3'-end ribonucleotide 2',3'-cyclic phosphate(2−) with 3'-end pNpGpCpCpA(5−) to diphosphate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:54112"
+            "db": "ChEBI",
+            "id": "CHEBI:83064"
           }
         ]
       }
     },
     {
-      "id": "r8",
-      "name": "pseudolaratriene synthase",
-      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate = pseudolaratriene + diphosphate",
-      "ec": "4.2.3.180",
-      "substrates": [
-        {
-          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "pseudolaratriene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_180"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "rhea": "RHEA:54116"
+      "id": "xt_3_end_ribonucleotide_2_3_cyclic_phosphate_2_n-5-guanosyl-phosphono-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_end_ribonucleotide_2_3_cyclic_phosphate_2"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "n-5-guanosyl-phosphono-to-diphosphate"
+      },
+      "note": "Shares 3'-end ribonucleotide 2',3'-cyclic phosphate(2−) with Nπ-(5'-guanosyl-phosphono… to diphosphate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:54116"
+            "db": "ChEBI",
+            "id": "CHEBI:83064"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_end_ribonucleotide_3_phosphate_3_3-end-pnpgpcpcpa-5-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_end_ribonucleotide_3_phosphate_3"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-end-pnpgpcpcpa-5-to-diphosphate"
+      },
+      "note": "Shares 3'-end ribonucleotide 3'-phosphate(3−) with 3'-end pNpGpCpCpA(5−) to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83062"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_end_ribonucleotide_3_phosphate_3_5-end-ribonucleotide-2-to-5-end-ribonucleoside",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_end_ribonucleotide_3_phosphate_3"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-end-ribonucleotide-2-to-5-end-ribonucleoside"
+      },
+      "note": "Shares 3'-end ribonucleotide 3'-phosphate(3−) with 5'-end ribonucleotide(2−) to 5'-end ribonucleoside.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83062"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_end_ribonucleotide_3_phosphate_3_n-5-guanosyl-phosphono-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_end_ribonucleotide_3_phosphate_3"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-5-guanosyl-phosphono-to-diphosphate"
+      },
+      "note": "Shares 3'-end ribonucleotide 3'-phosphate(3−) with Nπ-(5'-guanosyl-phosphono… to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83062"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_end_ribonucleotide_1_1-6-anhydro-n-acetyl-mu-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_end_ribonucleotide_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-6-anhydro-n-acetyl-mu-to-diphosphate"
+      },
+      "note": "Shares 3'-end ribonucleotide(1−) with 1,6-anhydro-N-acetyl-β-mu… to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74896"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_end_ribonucleotide_1_3-end-pnpgpcpcpa-5-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_end_ribonucleotide_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-end-pnpgpcpcpa-5-to-diphosphate"
+      },
+      "note": "Shares 3'-end ribonucleotide(1−) with 3'-end pNpGpCpCpA(5−) to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74896"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_end_ribonucleotide_1_5-end-nad-phospho-ribonu-to-diphosphate-60880",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_end_ribonucleotide_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-end-nad-phospho-ribonu-to-diphosphate-60880"
+      },
+      "note": "Shares 3'-end ribonucleotide(1−) with 5'-end NAD-phospho-ribonu… to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74896"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_end_ribonucleotide_1_trans-isoeugenol-to-arsenite",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_end_ribonucleotide_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-isoeugenol-to-arsenite"
+      },
+      "note": "Shares 3'-end ribonucleotide(1−) with trans-isoeugenol to arsenite.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74896"
           }
         ]
       }

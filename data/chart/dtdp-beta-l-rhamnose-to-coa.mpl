@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dtdp-beta-l-rhamnose-to-coa "dTDP-beta-L-rhamnose to CoA" {
-  spacing 188
+  spacing 212
 
   spine at 0,0 {
     dtdp_beta_l_rhamnose
@@ -16,39 +16,63 @@ pathway dtdp-beta-l-rhamnose-to-coa "dTDP-beta-L-rhamnose to CoA" {
     beta_l_rha_1_6_beta_d_glc_1_6_alpha_d_glc_1_4_be
   }
 
-  branch from dtdp side left {
-    dtdp
-    <-> . +beta_d_ribf_1_4_alpha_d_galnac_1_3_alpha_d_glcna +dtdp_4_deoxy_4_n_acetyl_l_seryl_amino_alpha_d_qu +h
-    beta_d_qui4n_l_serac_1_3_beta_d_ribf_1_4_alpha_d
-  }
-
-  branch from dtdp side right {
-    dtdp
-    <-> . +alpha_d_glcnac_1_3_alpha_l_quinac_1_3_alpha_d_gl +dtdp_4_deoxy_4_s_3_hydroxybutanoyl_d_alanyl_amin +h
-    beta_d_qui4n_d_ala_shb_1_6_alpha_d_glcnac_1_3_al
-  }
-
   branch from h side left {
     h
-    <-> ec_1_2_1_84 [1.2.1.84] +11z_tetradecenol +nadp +coa +nadph
-    cis_tetradec_11_enoyl_coa
+    <-> . +adp +phosphate +atp +h2o
+    eicosanoate
   }
 
   branch from h side right {
     h
-    <-> ec_1_2_1_84 [1.2.1.84] +9z_myristoleoyl_coa +nadph +nadp +coa
-    9z_tetradecen_1_ol
+    <-> . +adp +5z_8z_11z_14z_17z_eicosapentaenoate +phosphate +5z_8z_11z_14z_17z_eicosapentaenoate +h2o
+    atp
   }
 
   branch from coa side left {
     coa
-    <-> . +isorhamnetin_3_o_6_o_4_coumaroyl_glucoside +trans_4_coumaroyl_coa
-    isorhamnetin_3_o_3_6_o_di_4_coumaroyl_glucoside
+    <-> . +r_carnitine +malonyl_coa +h
+    o_malonyl_d_carnitine
   }
 
   branch from coa side right {
     coa
-    <-> . +isorhamnetin_3_o_6_o_feruloyl_glucoside +trans_4_coumaroyl_coa
-    isorhamnetin_3_o_3_o_4_coumaroyl_6_o_feruloyl_gl
+    <-> . +glutaryl_coa +r_carnitine +h
+    glutarylcarnitine
+  }
+
+  branch from h side left {
+    h
+    <-> . +decanoyl_coa +fad +h2o +fadh2
+    3s_hydroxydecanoyl_coa
+  }
+
+  branch from h side right {
+    h
+    <-> . +z_tetradec_7_enoyl_coa +fad +h2o +3_hydroxy_tetradecenoyl_7_coenzyme_a
+    fadh2
+  }
+
+  branch from acetyl_coa side left {
+    acetyl_coa
+    <-> . +tridecanoyl_coa +coa
+    3_oxopentadecanoyl_coenzyme_a
+  }
+
+  branch from acetyl_coa side right {
+    acetyl_coa
+    <-> . +heptanoyl_coa +coa
+    3_oxononanoyl_coenzyme_a
+  }
+
+  branch from coa side left {
+    coa
+    <-> . +3_hydroxyisovaleryl_coa +r_carnitine
+    3_hydroxyisovalerylcarnitine
+  }
+
+  branch from coa side right {
+    coa
+    <-> ec_2_3_1_65 [2.3.1.65] +h +tauroursodeoxycholate +ursodeoxycholoyl_coa
+    taurine
   }
 }

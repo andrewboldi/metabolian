@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway long-chain-fatty-acyl-coa-to-long-chain-fatty-ac "long-chain fatty acyl-CoA to long-chain fatty acyl-CoA" {
-  spacing 262
+  spacing 256
 
   spine at 0,0 {
     long_chain_fatty_acyl_coa
@@ -14,11 +14,5 @@ pathway long-chain-fatty-acyl-coa-to-long-chain-fatty-ac "long-chain fatty acyl-
     long_chain_fatty_aldehyde
     <-> ec_1_2_1_50 [1.2.1.50] +nadp +coa -nadph -hplus
     long_chain_fatty_acyl_coa
-  }
-
-  branch from long_chain_fatty_acyl_coa side left {
-    long_chain_fatty_acyl_coa
-    <-> . +acetyl_coa +coa
-    long_chain_3_oxo_fatty_acyl_coa
   }
 }

@@ -24,61 +24,121 @@ pathway diphosphate-to-phosphate "diphosphate to phosphate" {
 
   branch from h2o side left {
     h2o
-    <-> ec_1_13_11_34 [1.13.11.34] +4_s_hydroperoxy_17_s_hydroxydocosahexaenoic_acid +h
-    4_5_epoxy_17s_hydroxy_docosahexaenoate
+    <-> ec_3_2_1_126 [3.2.1.126] +beta_d_glucose +trans_p_coumaryl_alcohol
+    4_hydroxycinnamyl_alcohol_4_d_glucoside
   }
 
   branch from h2o side right {
     h2o
-    <-> . +4_5_epoxy_17s_hydroxy_docosahexaenoate +h
-    resolvin_d3
+    <-> ec_3_2_1_74 [3.2.1.74] +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g +beta_d_cellohexaose
+    beta_d_glucose
   }
 
   branch from atp side left {
     atp
-    <-> ec_2_7_1_1 [2.7.1.1] +2_5_anhydro_d_mannitol +h +adp
-    2_5_anhydro_d_mannitol_6_phosphate
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
+    n_acetyl_beta_d_galactosamine
   }
 
   branch from atp side right {
     atp
-    <-> ec_2_7_1_40 [2.7.1.40] +2_oxobutanoate +h +adp
-    3_methylphosphoenolpyruvate
-  }
-
-  branch from glyoxylate side left {
-    glyoxylate
-    <-> . +l_lysinium +glycine
-    6_amino_2_oxohexanoic_acid
-  }
-
-  branch from glyoxylate side right {
-    glyoxylate
-    <-> . +5_7_dibromo_l_tryptophan +o2 +nh3
-    5_7_dibromo_indole_3_carbaldehyde
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
+    beta_d_mannose
   }
 
   branch from adenine side left {
     adenine
-    <-> . +ribosylhopane +h2o
-    adenosylhopane
+    <-> . +hydrogen_oxide +h2o
+    isoguanine
   }
 
   branch from adenine side right {
     adenine
-    <-> . +adenosylhopane +h2o
-    ribosyl_hopane
+    <-> ec_3_2_2_16 [3.2.2.16] +s_methyl_5_thioadenosine +h2o
+    aldehydo_s_methyl_5_thio_d_ribose
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_2_1_3_6 [2.1.3.6] +carbamoyl_phosphate +spermine +h
-    n_carbamoylspermine
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +atp +h2o
+    levoglucosan
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_6_1_7 [3.6.1.7] +h +butanoate +h2o
-    butanoyl_phosphate
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +atp +h2o
+    l_rhodinose
+  }
+
+  branch from diphosphate side left {
+    diphosphate
+    <-> ec_6_2_1_1 [6.2.1.1] +propanoate +h +atp
+    propanoyl_amp
+  }
+
+  branch from diphosphate side right {
+    diphosphate
+    <-> ec_2_7_7_43 [2.7.7.43] +ctp +n_acetyl_beta_neuraminate
+    cmp_n_acetyl_beta_neuraminate
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    beta_d_fucose
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    l_galactopyranose
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_2_1_74 [3.2.1.74] +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g +beta_d_cellohexaose
+    alpha_d_glucose
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_2_1_22 [3.2.1.22] +melibiose +alpha_d_galactose
+    2r_3r_4s_5s_6r_6_2s_3r_4s_5r_6r_3_4_5_trihydrox
+  }
+
+  branch from adenine side left {
+    adenine
+    <-> ec_1_17_3_2 [1.17.3.2] +o2 +h2o +h2o2
+    8_oxoadenine
+  }
+
+  branch from adenine side right {
+    adenine
+    <-> . +5_deoxyadenosine +h2o
+    5_deoxyribose
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
+    3_6_anhydro_l_galactopyranose
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
+    n_acetyl_d_mannosamine
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +atp +h2o
+    alpha_d_mannopyranose
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +atp +h2o
+    4_o_methyl_d_glucuronate
   }
 }

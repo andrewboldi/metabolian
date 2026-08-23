@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-citronellol-to-nadph "(S)-(−)-citronellol to NADPH" {
-  spacing 232
+  spacing 196
 
   spine at 0,0 {
     s_citronellol
@@ -14,41 +14,5 @@ pathway s-citronellol-to-nadph "(S)-(−)-citronellol to NADPH" {
     menthol
     <-> ec_1_1_1_71 [1.1.1.71] +nadp -r_citronellal -nadph
     h
-  }
-
-  branch from h side left {
-    h
-    <-> ec_2_8_2_36 [2.8.2.36] +adenosine_3_5_bisphosphate +a47934 +desulfo_a47934
-    3_phosphoadenylyl_sulfate
-  }
-
-  branch from h side right {
-    h
-    <-> ec_2_8_2_36 [2.8.2.36] +adenosine_3_5_bisphosphate +a47934 +3_phosphoadenylyl_sulfate
-    desulfo_a47934
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> . +6_alpha_hydroxy_taxol_6_alpha_hydroxy_paclitaxel +nadp +h2o +h +o2
-    paclitaxel
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> . +1r_5r_alpha_pinene +h +o2 +nadp +h2o
-    alpha_pinene_oxide
-  }
-
-  branch from nad side left {
-    nad
-    <-> . +nadh +3_oxo_cis_cis_5_8_tetradecadienoyl_coa +h
-    3_s_hydroxy_5z_8z_tetradecadienoyl_coa
-  }
-
-  branch from nad side right {
-    nad
-    <-> . +nadh +h +8_dehydrocholesterol +o2 +h2o
-    27alpha_hydroxy_8_dehydrocholesterol
   }
 }

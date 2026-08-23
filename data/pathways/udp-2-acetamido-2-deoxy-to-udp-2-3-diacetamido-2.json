@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "udp-2-acetamido-2-deoxy-to-udp-2-3-diacetamido-2",
   "name": "UDP-2-acetamido-2-deoxy-α… to UDP-2,3-diacetamido-2,3-d…",
-  "category": "amino-acid-metabolism",
+  "category": "energy-metabolism",
   "summary": "A 4-step route from UDP-2-acetamido-2-deoxy-α-D-glucuronate(3−) to UDP-2,3-diacetamido-2,3-dideoxy-α-D-mannuronate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -132,59 +132,22 @@
       }
     },
     {
-      "id": "r_2_hydroxyglutarate",
-      "name": "(R)-2-hydroxyglutarate",
-      "short": "2-hydroxyglutarate",
-      "formula": "C5H6O5",
+      "id": "udp_n_acetyl_d_xylosamine",
+      "name": "UDP-N-acetyl-α-D-xylosamine",
+      "short": "UDP-N-acetyl-α-D-xy…",
+      "formula": "C16H23N3O16P2",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:15801"
+        "chebi": "CHEBI:231888"
       }
     },
     {
-      "id": "nadp",
-      "name": "NADP+",
-      "formula": "C21H25N7O17P3",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58349"
-      }
-    },
-    {
-      "id": "nadph",
-      "name": "NADPH",
-      "formula": "C21H26N7O17P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57783"
-      }
-    },
-    {
-      "id": "pseudopaline",
-      "name": "pseudopaline",
-      "formula": "C15H20N4O8",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:143198"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "Water",
-      "formula": "H2O",
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:15377"
-      }
-    },
-    {
-      "id": "n_3s_3_amino_3_carboxypropyl_l_histidine_dizwitt",
-      "name": "N-[(3S)-3-amino-3-carboxypropyl]-L-histidine dizwitterion",
-      "short": "N-[(3S)-3-amino-3-c…",
-      "formula": "C10H16N4O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:143196"
+        "chebi": "CHEBI:16526"
       }
     }
   ],
@@ -215,6 +178,13 @@
       "name": "UDP-2,3-diacetamido-2,3-dideoxyglucuronic acid 2-epimerase",
       "ec": [
         "5.1.3.23"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_128",
+      "name": "UDP-N-acetyl-alpha-D-glucosaminuronate decarboxylase",
+      "ec": [
+        "4.1.1.128"
       ]
     }
   ],
@@ -401,94 +371,69 @@
     },
     {
       "id": "r5",
-      "name": "(R)-2-hydroxyglutarate + NADP(+) = 2-oxoglutarate + NADPH + H(+)",
-      "equation": "(R)-2-hydroxyglutarate + NADP(+) = 2-oxoglutarate + NADPH + H(+)",
+      "name": "UDP-N-acetyl-alpha-D-glucosaminuronate decarboxylase",
+      "equation": "UDP-2-acetamido-2-deoxy-alpha-D-glucuronate + H(+) = UDP-N-acetyl-alpha-D-xylosamine + CO2",
+      "ec": "4.1.1.128",
       "substrates": [
         {
-          "metabolite": "r_2_hydroxyglutarate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
+          "metabolite": "udp_2_acetamido_2_deoxy_d_glucuronate",
           "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
           "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "udp_n_acetyl_d_xylosamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_128"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:51192"
+        "rhea": "RHEA:81487"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:51192"
+            "id": "RHEA:81487"
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r6",
-      "name": "pseudopaline + NADP(+) + H2O = (2S)-2-amino-4-{[(1S)-1-carboxy-2-(1H-imidazol-4-yl)ethy...",
-      "equation": "pseudopaline + NADP(+) + H2O = (2S)-2-amino-4-{[(1S)-1-carboxy-2-(1H-imidazol-4-yl)ethyl]amino}butanoate + 2-oxoglutarate + NADPH + H(+)",
-      "substrates": [
-        {
-          "metabolite": "pseudopaline",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n_3s_3_amino_3_carboxypropyl_l_histidine_dizwitt",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:59784"
+      "id": "xt_udp_2_acetamido_2_deoxy_d_glucuronate_n4-d-mannosyl-1-2-to-l-fucp-1-3-d-galp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "udp_2_acetamido_2_deoxy_d_glucuronate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "n4-d-mannosyl-1-2-to-l-fucp-1-3-d-galp"
+      },
+      "note": "Shares UDP-2-acetamido-2-deoxy-α-D-glucuronate with N4-[α-D-mannosyl-(1→2)-α-… to α-L-Fucp-(1→3)-[β-D-Galp-….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:59784"
+            "db": "ChEBI",
+            "id": "CHEBI:65040"
           }
         ]
       }

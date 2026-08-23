@@ -30,16 +30,28 @@ pathway r-2-hydroxy-3-methylbut-to-h2o "(R)-2-hydroxy-3-methylbut… to H2O" {
     5_formyl_5_6_7_8_tetrahydromethanopterin
   }
 
-  branch from 2_dehydropantoate side right {
+  branch from 5_6_7_8_tetrahydromethanopterin side right {
+    5_6_7_8_tetrahydromethanopterin
+    <-> ec_2_1_1_86 [2.1.1.86] +methyl_coenzyme_m +5_methyl_5_6_7_8_tetrahydromethanopterin
+    coenzyme_m
+  }
+
+  branch from 2_dehydropantoate side left {
     2_dehydropantoate
     <-> ec_1_1_1_169 [1.1.1.169] +nadh +h +nad
     s_pantoate
   }
 
-  branch from co side left {
-    co
-    <-> . +co2 +h2o
-    h2
+  branch from 5_methyl_5_6_7_8_tetrahydromethanopterin side right {
+    5_methyl_5_6_7_8_tetrahydromethanopterin
+    <-> ec_1_5_98_2 [1.5.98.2] +5_10_methylenetetrahydromethanopterin +reduced_coenzyme_f420 +h
+    coenzyme_gamma_f420_2
+  }
+
+  branch from 5_methyl_5_6_7_8_tetrahydromethanopterin side left {
+    5_methyl_5_6_7_8_tetrahydromethanopterin
+    <-> ec_2_1_1_86 [2.1.1.86] +5_6_7_8_tetrahydromethanopterin +methyl_coenzyme_m +coenzyme_m
+    na
   }
 
   branch from co side right {
@@ -48,106 +60,106 @@ pathway r-2-hydroxy-3-methylbut-to-h2o "(R)-2-hydroxy-3-methylbut… to H2O" {
     chloride
   }
 
-  branch from coa side left {
-    coa
-    <-> ec_2_3_1_115 [2.3.1.115] +malonyl_coa +glycitin +h
-    malonylglycitin
+  branch from co side left {
+    co
+    <-> . +h +o2 +alpha_hydroxyheme +h2o
+    verdoheme
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_115 [2.3.1.115] +malonyl_coa +daidzein_7_o_beta_d_glucoside +h
-    malonyldaidzin
+    <-> . +4_sinapoyloxybutylglucosinolate +e_sinapoyl_coa
+    4_hydroxybutylglucosinolate
   }
 
-  branch from h side left {
-    h
-    <-> . +dtdp +100_1 +urdamycinone_b
-    dtdp_beta_l_rhodinose
+  branch from coa side left {
+    coa
+    <-> . +2_sinapoyloxy_3_butenylglucosinolate +e_sinapoyl_coa
+    xi_progoitrin
   }
 
   branch from h side right {
     h
-    <-> ec_1_3_1_29 [1.3.1.29] +nadh +8_methylnaphthalene_1_2_diol +nad
-    cis_1_2_dihydroxy_1_2_dihydro_8_methylnaphthalen
+    <-> . +fe +h2o2 +h2o
+    feo_oh_monomer
   }
 
-  branch from heme_b side left {
+  branch from h side left {
+    h
+    <-> . +acetyl_coa +2r_3s_trans_coutaric_acid +coa
+    2_o_acetyl_3_o_trans_coutarate
+  }
+
+  branch from heme_b side right {
     heme_b
     <-> ec_2_5_1_141 [2.5.1.141] +diphosphate +ferroheme_op2 +h2o
     2e_6e_10e_geranylgeranyl_diphosphate
   }
 
-  branch from heme_b side right {
+  branch from heme_b side left {
     heme_b
     <-> . +ferroheme_o +diphosphate +h +h2o
     farnesyl_diphosphate
   }
 
-  branch from o2 side left {
-    o2
-    <-> . +2_hydroxy_8_methylchromene_2_carboxylate
-    8_methylnaphthalene_1_2_diol
-  }
-
   branch from o2 side right {
     o2
-    <-> . +nadh +h +1_naphthoate +nad
-    cis_1_2_dihydroxy_1_2_dihydro_8_carboxynaphthale
+    <-> . +4_sulfanylbutanoate +h2o
+    4_oxo_4_sulfanylbutanoate
   }
 
-  branch from nadph side left {
-    nadph
-    <-> . +1_2_dihydronaphthalene_1_2_diol +h +o2 +nadp +h2o
-    1_2_dihydroxy_3_4_epoxy_1_2_3_4_tetrahydronaphth
+  branch from o2 side left {
+    o2
+    <-> ec_1_5_3_12 [1.5.3.12] +dihydrochelerythrine +h +h2o2
+    chelerythrine
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_14_14_1 [1.14.14.1] +h +1_nitronaphthalene +o2 +nadp +h2o
-    1_nitronaphthalene_7_8_oxide
+    <-> . +lambertine +nadp
+    berberine
   }
 
-  branch from fe side left {
-    fe
-    <-> . +h2o2 +h2o +h
-    feo_oh_monomer
+  branch from nadph side left {
+    nadph
+    <-> . +lambertine +h +nadp
+    r_canadine
   }
 
   branch from fe side right {
     fe
-    <-> ec_1_14_14_18 [1.14.14.18] +hematobiliverdin +nadp +co +h2o +h +o2 +nadph
-    hematoheme
+    <-> ec_4_99_1_1 [4.99.1.1] +h +heme
+    protoporphyrin
   }
 
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +1_naphthaldehyde
-    1_naphthyl_methanol
+  branch from fe side left {
+    fe
+    <-> ec_4_99_1_4 [4.99.1.4] +siroheme +h
+    sirohydrochlorin
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +1_naphthoate +h2o
-    1_naphthaldehyde
+    <-> ec_1_14_13_69 [1.14.13.69] +nadh +h +isoprene +o2 +h2o
+    3r_3_4_epoxy_3_methylbut_1_ene
   }
 
-  branch from h2o side left {
-    h2o
-    <-> . +nadh +h +2_methylnaphthalene +o2 +nad
-    2_naphthyl_methanol
+  branch from nad side left {
+    nad
+    <-> ec_1_14_13_69 [1.14.13.69] +nadh +h +styrene +o2 +h2o
+    r_styrene_oxide
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_14_13_1 [1.14.13.1] +nadh +h +4_methylsalicylic_acid +o2 +nad +4_methylcatechol
-    co2
+    <-> . +luteolin_7_o_beta_d_glucuronosyl_1_2_beta_d_gluc +beta_d_glucuronate
+    luteolin_7_o_beta_d_glucuronide
   }
 
-  branch from heme side left {
-    heme
-    <-> ec_4_99_1_1 [4.99.1.1] +fe +h
-    protoporphyrin
+  branch from h2o side left {
+    h2o
+    <-> ec_3_2_1_31 [3.2.1.31] +beta_d_glucuronate +luteolin_7_o_beta_d_glucuronide
+    luteolin
   }
 
   branch from heme side right {
@@ -156,15 +168,21 @@ pathway r-2-hydroxy-3-methylbut-to-h2o "(R)-2-hydroxy-3-methylbut… to H2O" {
     2e_6e_farnesyl_diphosphate
   }
 
-  branch from atp side left {
-    atp
-    <-> . +l_threonine +tabtoxinine_lactam +h +adp +phosphate
-    tabtoxin
+  branch from heme side left {
+    heme
+    <-> . +c15817
+    l_cysteine
   }
 
   branch from atp side right {
     atp
-    <-> . +diphosphate +6_methylsalicylyl_coa +amp +h +coa
-    6_methylsalicylate
+    <-> ec_6_3_2_1 [6.3.2.1] +diphosphate +pantoyl_adenylate +h
+    r_pantoate
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_6_3_2_1 [6.3.2.1] +diphosphate +pantoyltaurine +amp +r_pantoate
+    taurine
   }
 }

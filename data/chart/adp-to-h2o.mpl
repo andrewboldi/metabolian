@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway adp-to-h2o "ADP to H2O" {
-  spacing 156
+  spacing 220
 
   spine at 0,0 {
     adp
@@ -12,7 +12,7 @@ pathway adp-to-h2o "ADP to H2O" {
     dutp
     <-> ec_2_7_1_48 [2.7.1.48] +uridine -h -dudp
     ump
-    <-> . +2_3_bis_3_hydroxytetradecanoyl_beta_d_glucosamin +h -h2o
-    udp_2_3_bis_3_hydroxytetradecanoyl_glucosamine
+    <-> ec_3_6_1_54 [3.6.1.54] +lipid_x_vibrio_cholerae_serogroup_o1_el_tor +h -h2o
+    udp_2_n_3r_3_hydroxytetradecanoyl_3_o_3r_3_hydro
   }
 }

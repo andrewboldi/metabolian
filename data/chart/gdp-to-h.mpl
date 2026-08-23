@@ -4,69 +4,17 @@
 # edit the generator, not this file.
 
 pathway gdp-to-h "GDP to H" {
-  spacing 206
+  spacing 152
 
   spine at 0,0 {
     gdp
-    <-> . +beta_d_man_1_4_alpha_d_gal_1_4_alpha_l_rha_1_3_g +h -alpha_d_gal_1_4_alpha_l_rha_1_3_glcnac_pp_undeca
-    gdp_alpha_d_mannose
-    <-> . +udp +alpha_d_gal_1_4_alpha_l_rha_1_3_glcnac_pp_undeca +h -alpha_l_rha_1_3_alpha_d_glcnac_pp_und
-    udp_alpha_d_galactose
-    <-> . +udp_n_acetyl_alpha_d_galactosamine +alpha_l_rha_1_3_alpha_d_glcnac_pp_und -beta_d_galnac_1_4_alpha_l_rha_1_3_alpha_d_glcnac -h
-    udp
-  }
-
-  branch from gdp_alpha_d_mannose side left {
-    gdp_alpha_d_mannose
-    <-> . +gtp +d_mannose_1_phosphate +h
-    diphosphate
-  }
-
-  branch from gdp_alpha_d_mannose side right {
-    gdp_alpha_d_mannose
-    <-> . +gdp +d_mannose_1_phosphate +h
-    phosphate
-  }
-
-  branch from udp_alpha_d_galactose side left {
-    udp_alpha_d_galactose
-    <-> ec_2_4_1_241 [2.4.1.241] +udp +h +1_18_1_2_18_1_digalactosyldiacylglycerol
-    1_18_1_2_18_1_monogalactosyldiacylglycerol
-  }
-
-  branch from udp_alpha_d_galactose side right {
-    udp_alpha_d_galactose
-    <-> ec_2_4_1_241 [2.4.1.241] +udp +h +1_18_0_2_18_3_digalactosyldiacylglycerol
-    1_18_0_2_18_3_monogalactosyldiacylglycerol
-  }
-
-  branch from udp side left {
-    udp
-    <-> . +rosuvastatin_glucuronide +rosuvastatin
-    udp_alpha_d_glucuronate
-  }
-
-  branch from udp side right {
-    udp
-    <-> . +simvastatin_acyl_glucuronide +udp_alpha_d_glucuronate
-    simvastatin_hydroxy_acid
-  }
-
-  branch from beta_d_galnac_1_4_alpha_l_rha_1_3_alpha_d_glcnac side left {
-    beta_d_galnac_1_4_alpha_l_rha_1_3_alpha_d_glcnac
-    <-> . +udp +alpha_d_galf_1_4_beta_d_galnac_1_4_alpha_l_rha_1 +h
-    udp_d_galactofuranose
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_2_1_144 [3.2.1.144] +3_deoxy_d_manno_octulosonate +1_petn_kdo_lipid_a +h2o
-    1_petn_kdo2_lipid_a
-  }
-
-  branch from h side left {
-    h
-    <-> ec_5_4_99_67 [5.4.99.67] +4_amino_4_deoxychorismate
-    4_amino_4_deoxyprephenate
+    <-> . +h +alpha_l_fuc_1_3_alpha_d_glc_pp_und -gdp_beta_l_fucose
+    alpha_d_glc_pp_und
+    <-> . +dtdp_beta_l_rhamnose -beta_l_rha_1_4_alpha_d_glc_pp_und -h
+    dtdp
+    <-> . +dtdp_beta_l_rhamnose +beta_l_rha_1_4_alpha_d_glc_pp_und -dtdp -h
+    alpha_l_rha_1_3_beta_l_rha_1_4_alpha_d_glc_pp_un
+    <-> . +dtdp_beta_l_rhamnose -alpha_l_rha_1_3_alpha_l_rha_1_3_beta_l_rha_1_4_a -h
+    dtdp
   }
 }

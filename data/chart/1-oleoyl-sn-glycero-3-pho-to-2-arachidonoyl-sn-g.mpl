@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-oleoyl-sn-glycero-3-pho-to-2-arachidonoyl-sn-g "1-oleoyl-sn-glycero-3-pho… to 2-arachidonoyl-sn-glycero…" {
-  spacing 200
+  spacing 218
 
   spine at 0,0 {
     1_oleoyl_sn_glycero_3_phospho_d_myo_inositol
@@ -30,28 +30,16 @@ pathway 1-oleoyl-sn-glycero-3-pho-to-2-arachidonoyl-sn-g "1-oleoyl-sn-glycero-3-
     fatty-acid
   }
 
-  branch from oleate side left {
-    oleate
-    <-> . +n_oleoylphytosphingosine +h2o
-    phytosphingosine
-  }
-
-  branch from oleate side right {
-    oleate
-    <-> . +n_9z_octadecenoyl_sphinganine +h2o
-    sphinganine
-  }
-
   branch from 1d_myo_inositol_1_phosphate side left {
     1d_myo_inositol_1_phosphate
-    <-> . +1_phosphatidyl_1d_myo_inositol +h2o +hplus
-    dag
+    <-> . +inositol_phosphophytoceramide_t18_0 +h2o +hplus
+    n_acylphytosphingosine
   }
 
   branch from 1d_myo_inositol_1_phosphate side right {
     1d_myo_inositol_1_phosphate
-    <-> . +inositol_phosphophytoceramide_t18_0 +h2o +hplus
-    n_acylphytosphingosine
+    <-> . +h2o +pi
+    1d_myo_inositol_1_3_biphosphate
   }
 
   branch from 2_arachidonoyl_sn_glycero_3_phosphate side left {
@@ -64,5 +52,35 @@ pathway 1-oleoyl-sn-glycero-3-pho-to-2-arachidonoyl-sn-g "1-oleoyl-sn-glycero-3-
     2_arachidonoyl_sn_glycero_3_phosphate
     <-> . +1_2_diarachidonoyl_sn_glycero_3_phosphate +h2o +hplus
     arachidonate
+  }
+
+  branch from arachidonoyl_coa side left {
+    arachidonoyl_coa
+    <-> . +1_octadecanoyl_sn_glycero_3_phospho_d_myo_inosit +coa
+    1_octadecanoyl_2_arachidonoyl_sn_glycero_3_phosp
+  }
+
+  branch from arachidonoyl_coa side right {
+    arachidonoyl_coa
+    <-> . +fe2 +o2 +hplus +iron +h2o
+    5z_8z_11z_14z_17z_icosapentaenoyl_coa
+  }
+
+  branch from 1d_myo_inositol_1_phosphate side left {
+    1d_myo_inositol_1_phosphate
+    <-> . +1_acyl_sn_glycero_3_phospho_1d_myo_inositol +h2o +hplus
+    1_acyl_sn_glycerol
+  }
+
+  branch from 1d_myo_inositol_1_phosphate side right {
+    1d_myo_inositol_1_phosphate
+    <-> . +1_hexadecanoyl_sn_glycero_3_phospho_d_myo_inosit +h2o +hplus
+    1_hexadecanoyl_sn_glycerol
+  }
+
+  branch from 2_arachidonoyl_sn_glycero_3_phosphate side left {
+    2_arachidonoyl_sn_glycero_3_phosphate
+    <-> . +h2o +octadecanoate +hplus
+    1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphate
   }
 }

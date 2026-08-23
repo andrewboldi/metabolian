@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway r-adrenaline-to-h2o "(R)-adrenaline to H2O" {
-  spacing 218
+  spacing 176
 
   spine at 0,0 {
     epinephrine
@@ -14,47 +14,5 @@ pathway r-adrenaline-to-h2o "(R)-adrenaline to H2O" {
     s_s_adenosyl_l_methionine
     <-> . +formaldehyde +r_adrenaline -h -h2o
     n_methyl_4_6_7_trihydroxy_1_2_3_4_tetrahydroisoq
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +dopamine +sam +hplus
-    4_methoxytyraminium
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +4_hydroxy_3_5_dimethoxyphenethylaminium +sam +hplus
-    mescalinium
-  }
-
-  branch from r_adrenaline side left {
-    r_adrenaline
-    <-> . +h +adp +phosphate +h2o
-    atp
-  }
-
-  branch from h side right {
-    h
-    <-> . +eicosanal +carbon_monoxide
-    nonadecane
-  }
-
-  branch from h side left {
-    h
-    <-> ec_2_7_1_1 [2.7.1.1] +beta_d_galactose +atp +6_o_phosphonohexopyranose
-    adp
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_1_15 [3.6.1.15] +h +phosphate +atp
-    dgdp
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    beta_nicotinamide_d_riboside
   }
 }

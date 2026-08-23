@@ -182,31 +182,12 @@
       }
     },
     {
-      "id": "2_cis_6_cis_farnesyl_diphosphate",
-      "name": "2-cis,6-cis-farnesyl diphosphate",
-      "short": "2-cis,6-cis-farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
+      "id": "phytanate",
+      "name": "phytanate",
+      "formula": "C20H39O2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:60374"
-      }
-    },
-    {
-      "id": "germacrene_c",
-      "name": "germacrene C",
-      "formula": "C15H24",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:61478"
-      }
-    },
-    {
-      "id": "germacrene_a",
-      "name": "germacrene A",
-      "formula": "C15H24",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:36517"
+        "chebi": "CHEBI:37257"
       }
     }
   ],
@@ -216,14 +197,20 @@
       "name": "phytanoyl-CoA dioxygenase",
       "ec": [
         "1.14.11.18"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "O14832"
+      }
     },
     {
       "id": "ec_4_1_2_63",
       "name": "2-hydroxyacyl-CoA lyase",
       "ec": [
         "4.1.2.63"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q9UJ83"
+      }
     }
   ],
   "reactions": [
@@ -460,70 +447,221 @@
     },
     {
       "id": "r6",
-      "name": "(2Z,6Z)-farnesyl diphosphate = germacrene C + diphosphate",
-      "equation": "(2Z,6Z)-farnesyl diphosphate = germacrene C + diphosphate",
+      "name": "phytanoyl-CoA + H2O = 3,7,11,15-tetramethylhexadecanoate + CoA + H(+)",
+      "equation": "phytanoyl-CoA + H2O = 3,7,11,15-tetramethylhexadecanoate + CoA + H(+)",
       "substrates": [
         {
-          "metabolite": "2_cis_6_cis_farnesyl_diphosphate",
+          "metabolite": "phytanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "germacrene_c",
+          "metabolite": "phytanate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "ppi",
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:68772"
+        "rhea": "RHEA:40419"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:68772"
+            "id": "RHEA:40419"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_phytanoyl_coa_5-cholestan-3-one-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phytanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cholestan-3-one-to-hydrogen-donor"
+      },
+      "note": "Shares phytanoyl-CoA with 5β-cholestan-3-one to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57391"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "(2Z,6Z)-farnesyl diphosphate = germacrene A + diphosphate",
-      "equation": "(2Z,6Z)-farnesyl diphosphate = germacrene A + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "2_cis_6_cis_farnesyl_diphosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "germacrene_a",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:68776"
+      "id": "xt_formyl_coa_2-hydroxyisobutanoyl-coa-to-2-oxopropyl-com",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "formyl_coa"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2-hydroxyisobutanoyl-coa-to-2-oxopropyl-com"
+      },
+      "note": "Shares formyl-CoA with 2-hydroxyisobutanoyl-CoA to 2-oxopropyl-CoM.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:68776"
+            "db": "ChEBI",
+            "id": "CHEBI:57376"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_formyl_coa_3-methyl-fatty-acid-anion-to-2-methyl-fatty-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "formyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-methyl-fatty-acid-anion-to-2-methyl-fatty-acid"
+      },
+      "note": "Shares formyl-CoA with 3-methyl fatty acid anion to 2-methyl fatty acid anion.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57376"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_formyl_coa_3-methylpalmitoyl-coa-to-n3-carboxylatoformyl-l",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "formyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-methylpalmitoyl-coa-to-n3-carboxylatoformyl-l"
+      },
+      "note": "Shares formyl-CoA with 3-methylpalmitoyl-CoA to N3-(carboxylatoformyl)-L-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57376"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_formyl_coa_6-o-acetyl-d-glucose-to-formyl-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "formyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-o-acetyl-d-glucose-to-formyl-phosphate"
+      },
+      "note": "Shares formyl-CoA with 6-O-acetyl-D-glucose to formyl phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57376"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_formyl_coa_oxaloacetate-to-formyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "formyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "oxaloacetate-to-formyl-coa"
+      },
+      "note": "Shares formyl-CoA with oxaloacetate to formyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57376"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_formyl_coa_r-2-hydroxy-long-chain-to-long-chain-fatty-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "formyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-2-hydroxy-long-chain-to-long-chain-fatty-acid"
+      },
+      "note": "Shares formyl-CoA with (R)-2-hydroxy-long-chain-… to long-chain fatty acid….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57376"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phytanate_5-cholestan-3-one-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phytanate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cholestan-3-one-to-hydrogen-donor"
+      },
+      "note": "Shares phytanate with 5β-cholestan-3-one to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:37257"
           }
         ]
       }

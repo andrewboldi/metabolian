@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway glycine-to-n-caffeoylputrescinium "glycine to N-caffeoylputrescinium" {
-  spacing 264
+  spacing 258
 
   spine at 0,0 {
     glycine
@@ -18,15 +18,9 @@ pathway glycine-to-n-caffeoylputrescinium "glycine to N-caffeoylputrescinium" {
     n_caffeoylputrescinium
   }
 
-  branch from ornithine side left {
-    ornithine
-    <-> ec_2_1_4_5 [2.1.4.5] +arginine
-    n_amidino_l_arginine
-  }
-
-  branch from ornithine side right {
-    ornithine
-    <-> ec_2_1_4_4 [2.1.4.4] +cysteine +arginine
-    n_amidino_l_cysteine
+  branch from fmnh2 side left {
+    fmnh2
+    <-> ec_1_5_1_38 [1.5.1.38] +nadp +nadph +hplus
+    fmn
   }
 }

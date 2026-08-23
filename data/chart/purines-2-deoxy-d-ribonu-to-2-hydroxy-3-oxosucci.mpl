@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway purines-2-deoxy-d-ribonu-to-2-hydroxy-3-oxosucci "purines 2'-deoxy-D-ribonu… to 2-hydroxy-3-oxosuccinate" {
-  spacing 312
+  spacing 306
 
   spine at 0,0 {
     purines_2_deoxy_d_ribonucleoside
@@ -40,31 +40,25 @@ pathway purines-2-deoxy-d-ribonu-to-2-hydroxy-3-oxosucci "purines 2'-deoxy-D-rib
     5_end_2_deoxyribonucleotide_2
   }
 
-  branch from pg3 side right {
-    pg3
-    <-> ec_2_7_7_106 [2.7.7.106] +gtp +hplus +ppi
-    3_r_glyceryl_diphospho_5_guanosine
-  }
-
-  branch from d_glycerate side left {
+  branch from d_glycerate side right {
     d_glycerate
     <-> ec_4_1_1_73 [4.1.1.73] +hplus +co2
     l_tartrate
   }
 
-  branch from d_glycerate side right {
+  branch from d_glycerate side left {
     d_glycerate
-    <-> ec_1_1_1_60 [1.1.1.60] +nad +nadh +hplus
-    2_hydroxy_3_oxopropanoate
+    <-> ec_2_7_1_165 [2.7.1.165] +atp +adp +hplus
+    pg2
   }
 
-  branch from 2_hydroxy_3_oxosuccinate side left {
+  branch from 2_hydroxy_3_oxosuccinate side right {
     2_hydroxy_3_oxosuccinate
     <-> ec_1_1_1_93 [1.1.1.93] +nad +nadh +hplus
     meso_tartrate
   }
 
-  branch from 2_hydroxy_3_oxosuccinate side right {
+  branch from 2_hydroxy_3_oxosuccinate side left {
     2_hydroxy_3_oxosuccinate
     <-> ec_1_1_1_93 [1.1.1.93] +nad +nadh +hplus
     2_3_dihydroxybutanedioate

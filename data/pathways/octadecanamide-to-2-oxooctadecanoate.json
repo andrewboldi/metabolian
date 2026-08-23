@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "octadecanamide-to-2-oxooctadecanoate",
   "name": "octadecanamide to 2-oxooctadecanoate",
-  "category": "amino-acid-metabolism",
+  "category": "redox-detox",
   "summary": "A 3-step route from octadecanamide to 2-oxooctadecanoate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -128,51 +128,6 @@
       }
     },
     {
-      "id": "n_acetylputrescinium",
-      "name": "N-acetylputrescinium",
-      "formula": "C6H15N2O",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:58263"
-      }
-    },
-    {
-      "id": "4_acetamidobutanal",
-      "name": "4-acetamidobutanal",
-      "formula": "C6H11NO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:7386"
-      }
-    },
-    {
-      "id": "h2o2",
-      "name": "Hydrogen peroxide",
-      "formula": "H2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16240"
-      }
-    },
-    {
-      "id": "dserine",
-      "name": "D-Serine",
-      "formula": "C3H7NO3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:35247"
-      }
-    },
-    {
-      "id": "3_hydroxypyruvate",
-      "name": "3-hydroxypyruvate",
-      "formula": "C3H3O4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:17180"
-      }
-    },
-    {
       "id": "s_2_hydroxyoctadecanoate",
       "name": "(S)-2-hydroxyoctadecanoate",
       "short": "2-hydroxyoctadecano…",
@@ -190,6 +145,15 @@
       "charge": -1,
       "xrefs": {
         "chebi": "CHEBI:76724"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
       }
     }
   ],
@@ -351,100 +315,6 @@
     },
     {
       "id": "r4",
-      "name": "N-acetylputrescine + O2 + H2O = 4-acetamidobutanal + H2O2 + NH4(+)",
-      "equation": "N-acetylputrescine + O2 + H2O = 4-acetamidobutanal + H2O2 + NH4(+)",
-      "substrates": [
-        {
-          "metabolite": "n_acetylputrescinium",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "4_acetamidobutanal",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:70283"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:70283"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "D-serine + O2 + H2O = 3-hydroxypyruvate + H2O2 + NH4(+)",
-      "equation": "D-serine + O2 + H2O = 3-hydroxypyruvate + H2O2 + NH4(+)",
-      "substrates": [
-        {
-          "metabolite": "dserine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_hydroxypyruvate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:70951"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:70951"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
       "name": "(S)-2-hydroxy-fatty-acid dehydrogenase",
       "equation": "(S)-2-hydroxyoctadecanoate + NAD(+) = 2-oxooctadecanoate + NADH + H(+)",
       "ec": "1.1.1.99",
@@ -478,7 +348,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 4,
       "xrefs": {
         "rhea": "RHEA:11384"
       },
@@ -493,7 +363,7 @@
       }
     },
     {
-      "id": "r7",
+      "id": "r5",
       "name": "2-hydroxyoctadecanoate + O2 = 2-oxooctadecanoate + H2O2",
       "equation": "2-hydroxyoctadecanoate + O2 = 2-oxooctadecanoate + H2O2",
       "substrates": [
@@ -517,7 +387,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:68964"
       },

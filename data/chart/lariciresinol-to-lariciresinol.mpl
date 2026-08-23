@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway lariciresinol-to-lariciresinol "(+)-lariciresinol to (+)-lariciresinol" {
-  spacing 184
+  spacing 172
 
   spine at 0,0 {
     lariciresinol
@@ -16,17 +16,5 @@ pathway lariciresinol-to-lariciresinol "(+)-lariciresinol to (+)-lariciresinol" 
     secoisolariciresinol
     <-> ec_1_23_1_2 [1.23.1.2] +nadp -nadph -hplus
     lariciresinol
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_49 [1.1.1.49] +6_phospho_d_glucono_1_5_lactone +h +nadph
-    alpha_d_glucose_6_phosphate
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_16_1_5 [1.16.1.5] +vitamin_b12r +h +h2o +nadph
-    aquacobalamin
   }
 }

@@ -1,0 +1,396 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "sulfo-aldehydes-to-o2-null",
+  "name": "Sulfo-Aldehydes to O2",
+  "category": "other",
+  "summary": "A 3-step route from Sulfo-Aldehydes to O2, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR197418"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "sulfo_aldehydes",
+      "name": "Sulfo-Aldehydes",
+      "formula": "C6H4O7S",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1368209"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "2_oxohex_3_enedioic_acid",
+      "name": "2-oxohex-3-enedioic acid",
+      "short": "2-oxohex-3-enedioic…",
+      "formula": "C6H6O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64927"
+      }
+    },
+    {
+      "id": "sulfite",
+      "name": "sulfite",
+      "formula": "O3S",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM726339"
+      }
+    },
+    {
+      "id": "chloride",
+      "name": "chloride",
+      "formula": "Cl",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM735978"
+      }
+    },
+    {
+      "id": "5_chlorocarbonyl_2_hydroxy_penta_2_4_dienate",
+      "name": "5-chlorocarbonyl-2-hydroxy-penta-2,4-dienate",
+      "short": "5-chlorocarbonyl-2-…",
+      "formula": "C6H4ClO4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM726121"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "3_chlorocatechol",
+      "name": "3-chlorocatechol",
+      "formula": "C6H5ClO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM2934"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR197418",
+      "substrates": [
+        {
+          "metabolite": "sulfo_aldehydes",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_oxohex_3_enedioic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfite",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR197418"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197418"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR187049",
+      "substrates": [
+        {
+          "metabolite": "2_oxohex_3_enedioic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "chloride",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_chlorocarbonyl_2_hydroxy_penta_2_4_dienate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR187049"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR187049"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR175766",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_chlorocarbonyl_2_hydroxy_penta_2_4_dienate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_chlorocatechol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR175766"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR175766"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_sulfo_aldehydes_3-methylbut-2-enoyl-coa-to-3-methylglutaric-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sulfo_aldehydes"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-methylbut-2-enoyl-coa-to-3-methylglutaric-acid"
+      },
+      "note": "Shares Sulfo-Aldehydes with 3-methylbut-2-enoyl-CoA to 3-methylglutaric acid.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368209"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sulfo_aldehydes_biphenyl-2-3-diol-to-nadp-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sulfo_aldehydes"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "biphenyl-2-3-diol-to-nadp-null"
+      },
+      "note": "Shares Sulfo-Aldehydes with biphenyl-2,3-diol to NADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368209"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sulfo_aldehydes_sulfo-aldehydes-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sulfo_aldehydes"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sulfo-aldehydes-to-h2o"
+      },
+      "note": "Shares Sulfo-Aldehydes with Sulfo-Aldehydes to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368209"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sulfo_aldehydes_sulfo-aldehydes-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sulfo_aldehydes"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sulfo-aldehydes-to-h2o-null"
+      },
+      "note": "Shares Sulfo-Aldehydes with Sulfo-Aldehydes to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368209"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sulfo_aldehydes_sulfo-aldehydes-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sulfo_aldehydes"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sulfo-aldehydes-to-o2"
+      },
+      "note": "Shares Sulfo-Aldehydes with Sulfo-Aldehydes to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368209"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_chlorocarbonyl_2_hydroxy_penta_2_4_dienate_2-2-4-dichloro-5-oxofura-to-3-5-dichloro-2-methy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_chlorocarbonyl_2_hydroxy_penta_2_4_dienate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-2-4-dichloro-5-oxofura-to-3-5-dichloro-2-methy"
+      },
+      "note": "Shares 5-chlorocarbonyl-2-hydroxy-penta-2,4-dienate with 2-(2,4-dichloro-5-oxofura… to 3,5-Dichloro-2-methylmuco….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM726121"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_chlorocarbonyl_2_hydroxy_penta_2_4_dienate_nadh-to-2-chloroethanol-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_chlorocarbonyl_2_hydroxy_penta_2_4_dienate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-2-chloroethanol-null"
+      },
+      "note": "Shares 5-chlorocarbonyl-2-hydroxy-penta-2,4-dienate with NADH to 2-chloroethanol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM726121"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_chlorocarbonyl_2_hydroxy_penta_2_4_dienate_sulfo-aldehydes-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_chlorocarbonyl_2_hydroxy_penta_2_4_dienate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sulfo-aldehydes-to-o2"
+      },
+      "note": "Shares 5-chlorocarbonyl-2-hydroxy-penta-2,4-dienate with Sulfo-Aldehydes to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM726121"
+          }
+        ]
+      }
+    }
+  ]
+}

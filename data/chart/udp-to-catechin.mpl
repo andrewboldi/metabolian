@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-catechin "UDP to (−)-catechin" {
-  spacing 224
+  spacing 212
 
   spine at 0,0 {
     udp
@@ -14,17 +14,5 @@ pathway udp-to-catechin "UDP to (−)-catechin" {
     idb_1027
     <-> . +h +nadph -catechin
     nadp
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +2e_geranial +h +nadph
-    r_terpineol
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +2e_geranial +h +nadph
-    thujan_3_ol
   }
 }

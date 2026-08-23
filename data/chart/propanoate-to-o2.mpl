@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway propanoate-to-o2 "propanoate to O2" {
-  spacing 326
+  spacing 340
 
   spine at 0,0 {
     propanoate
@@ -16,45 +16,123 @@ pathway propanoate-to-o2 "propanoate to O2" {
     heptanedioate
   }
 
-  branch from deamido_nad side left {
-    deamido_nad
-    <-> ec_3_6_1_22 [3.6.1.22] +h2o +h +amp
-    nicotinate_beta_d_ribonucleotide
+  branch from h2o side left {
+    h2o
+    <-> . +16_17_dihydro_16alpha_17_dihydroxy_gibberellin_a
+    16alpha_17_epoxy_gibberellin_a9
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_21 [3.2.1.21] +beta_d_glucose +octan_1_ol
-    octyl_beta_d_glucose
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_5_1_1 [3.5.1.1] +methionyl_asparagine +h +nh4
-    l_methionyl_l_aspartate
-  }
-
-  branch from oxaloacetate side right {
-    oxaloacetate
-    <-> ec_1_2_4_2 [1.2.4.2] +nadh +malonyl_coa +co2 +nad
-    coa
+    <-> . +h +allyl_alcohol +formate
+    vinyl_acetate
   }
 
   branch from oxaloacetate side left {
     oxaloacetate
-    <-> . +s_malate +ubiquinone_2
-    ubiquinol_2
+    <-> ec_1_1_5_4 [1.1.5.4] +s_malate +ubiquinone_10
+    ubiquinol_10
   }
 
-  branch from o2 side right {
-    o2
-    <-> ec_1_14_13_84 [1.14.13.84] +4_aminoacetophenone +nadph +nadp +h2o
-    4_aminophenyl_acetate
+  branch from oxaloacetate side right {
+    oxaloacetate
+    <-> ec_2_3_3_1 [2.3.3.1] +2r_3s_2_methylcitrate +h +coa +h2o
+    propanoyl_coa
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_13_84 [1.14.13.84] +3_hydroxyphenylacetate +nadp +h2o +nadph
-    compound_0039020
+    <-> ec_1_14_13_8 [1.14.13.8] +h +nadph +n_1_phenylpropan_2_yl_hydroxylamine +e_n_1_phenylpropan_2_ylidene_hydroxylamine +h2o
+    nadp
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +h +alpha_hydroxyheme +verdoheme +h2o
+    carbon_monoxide
+  }
+
+  branch from propanoate side left {
+    propanoate
+    <-> ec_3_1_1_2 [3.1.1.2] +h +methanol +h2o
+    methyl_propionate
+  }
+
+  branch from propanoate side right {
+    propanoate
+    <-> . +2e_2_hydroxypenta_2_4_dienoate +h +h2o
+    2_hydroxy_6_oxo_octa_2_4_dienoate
+  }
+
+  branch from h side left {
+    h
+    <-> . +alpha_d_glucosamine_6_phosphate +beta_d_glucosamine +h2o
+    beta_d_glucosaminyl_1_4_beta_d_glucosamine_6_pho
+  }
+
+  branch from h side right {
+    h
+    <-> . +2z_4e_5_amino_2_formylhexa_2_4_dienedioate +h2o
+    isocinchomeronic_acid
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_2_1_159 [3.2.1.159] +beta_d_galactose +3_6_anhydro_l_galactopyranose
+    neoagarobiose
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +heptadecane +h +formate
+    octadecanal
+  }
+
+  branch from s_malate side left {
+    s_malate
+    <-> ec_2_3_1_92 [2.3.1.92] +alpha_d_glucose +sinapoyl_s_malate
+    1_o_trans_sinapoyl_beta_d_glucose
+  }
+
+  branch from s_malate side right {
+    s_malate
+    <-> ec_1_2_1_5 [1.2.1.5] +nadh +h +nad +h2o
+    3r_3_hydroxy_4_oxobutanoate
+  }
+
+  branch from oxaloacetate side left {
+    oxaloacetate
+    <-> ec_1_1_5_4 [1.1.5.4] +s_malate +menaquinone_9
+    menaquinol_9
+  }
+
+  branch from oxaloacetate side right {
+    oxaloacetate
+    <-> ec_2_3_3_2 [2.3.3.2] +dodecanoyl_coa +h2o +h +coa
+    2s_3s_2_hydroxytridecane_1_2_3_tricarboxylate
+  }
+
+  branch from pyruvate side left {
+    pyruvate
+    <-> . +trans_trans_2_4_dihydroxy_5_methyl_6_oxo_2_4_hex +h2o +h
+    2_methyl_3_oxopropanoate
+  }
+
+  branch from pyruvate side right {
+    pyruvate
+    <-> ec_4_4_1_4 [4.4.1.4] +nh4 +e_prop_1_en_1_so_peroxol +h2o
+    s_1_propenyl_l_cysteine_sulfoxide
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +h +15r_hydroxy_5z_8z_11z_13e_eicosatetraenoate
+    15_epi_lipoxin_b4
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +h +itatartarate
+    2_hydroxyparaconate
   }
 }

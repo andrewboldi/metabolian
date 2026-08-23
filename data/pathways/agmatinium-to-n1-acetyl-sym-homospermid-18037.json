@@ -1,0 +1,530 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "agmatinium-to-n1-acetyl-sym-homospermid-18037",
+  "name": "agmatinium to N1-acetyl-sym-homospermid…",
+  "category": "other",
+  "summary": "A 4-step route from agmatinium(2+) to N1-acetyl-sym-homospermidinium(2+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:18037"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58145"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "agmatinium",
+      "name": "agmatinium",
+      "formula": "C5H16N4",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:58145"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "n_carbamoylputrescinium",
+      "name": "N-carbamoylputrescinium",
+      "short": "N-carbamoylputresci…",
+      "formula": "C5H14N3O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58318"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "1_4_butanediammonium",
+      "name": "1,4-butanediammonium",
+      "formula": "C4H14N2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:326268"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "sym_homospermidinium",
+      "name": "sym-homospermidinium",
+      "formula": "C8H24N3",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:57811"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "n1_acetyl_sym_homospermidinium",
+      "name": "N1-acetyl-sym-homospermidinium",
+      "short": "N1-acetyl-sym-homos…",
+      "formula": "C10H25N3O",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:230463"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_3_12",
+      "name": "agmatine deiminase",
+      "ec": [
+        "3.5.3.12"
+      ]
+    },
+    {
+      "id": "ec_3_5_1_53",
+      "name": "N-carbamoylputrescine amidase",
+      "ec": [
+        "3.5.1.53"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_44",
+      "name": "homospermidine synthase",
+      "ec": [
+        "2.5.1.44"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "agmatine deiminase",
+      "equation": "agmatine + H2O = N-carbamoylputrescine + NH4(+)",
+      "ec": "3.5.3.12",
+      "substrates": [
+        {
+          "metabolite": "agmatinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_carbamoylputrescinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_3_12"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:18037"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18037"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N-carbamoylputrescine amidase",
+      "equation": "N-carbamoylputrescine + H2O + 2 H(+) = putrescine + NH4(+) + CO2",
+      "ec": "3.5.1.53",
+      "substrates": [
+        {
+          "metabolite": "n_carbamoylputrescinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_4_butanediammonium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_53"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:22284"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22284"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "homospermidine synthase",
+      "equation": "2 putrescine = sym-homospermidine + NH4(+)",
+      "ec": "2.5.1.44",
+      "substrates": [
+        {
+          "metabolite": "1_4_butanediammonium",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sym_homospermidinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_44"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:18645"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18645"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "sym-homospermidine + acetyl-CoA = N(1)-acetyl-sym-homospermidine + CoA + H(+)",
+      "equation": "sym-homospermidine + acetyl-CoA = N(1)-acetyl-sym-homospermidine + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "sym_homospermidinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n1_acetyl_sym_homospermidinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:79551"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79551"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_n_carbamoylputrescinium_agmatinium-to-n1-acetyl-sym-homospermid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_carbamoylputrescinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "agmatinium-to-n1-acetyl-sym-homospermid"
+      },
+      "note": "Shares N-carbamoylputrescinium with agmatinium to N1-acetyl-sym-homospermid….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58318"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_carbamoylputrescinium_n2-acetyl-l-ornithine-to-d-ribulose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_carbamoylputrescinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n2-acetyl-l-ornithine-to-d-ribulose"
+      },
+      "note": "Shares N-carbamoylputrescinium with N2-acetyl-L-ornithine to D-ribulose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58318"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_carbamoylputrescinium_n2-acetyl-l-ornithine-to-d-ribulose-18609",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_carbamoylputrescinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n2-acetyl-l-ornithine-to-d-ribulose-18609"
+      },
+      "note": "Shares N-carbamoylputrescinium with N2-acetyl-L-ornithine to D-ribulose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58318"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sym_homospermidinium_agmatinium-to-n1-acetyl-sym-homospermid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sym_homospermidinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "agmatinium-to-n1-acetyl-sym-homospermid"
+      },
+      "note": "Shares sym-homospermidinium with agmatinium to N1-acetyl-sym-homospermid….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57811"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sym_homospermidinium_n1-n12-diacetylsperminium-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sym_homospermidinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n1-n12-diacetylsperminium-to-ammonium"
+      },
+      "note": "Shares sym-homospermidinium with N1,N12-diacetylsperminium to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57811"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sym_homospermidinium_n1-n12-diacetylsperminium-to-ammonium-25868",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sym_homospermidinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n1-n12-diacetylsperminium-to-ammonium-25868"
+      },
+      "note": "Shares sym-homospermidinium with N1,N12-diacetylsperminium to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57811"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sym_homospermidinium_sym-homospermidinium-to-1-formylpyrrolizidine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sym_homospermidinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sym-homospermidinium-to-1-formylpyrrolizidine"
+      },
+      "note": "Shares sym-homospermidinium with sym-homospermidinium to 1-formylpyrrolizidine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57811"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sym_homospermidinium_sym-homospermidinium-to-1-formylpyrrolizidine-77",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sym_homospermidinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sym-homospermidinium-to-1-formylpyrrolizidine-77"
+      },
+      "note": "Shares sym-homospermidinium with sym-homospermidinium to 1-formylpyrrolizidine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57811"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n1_acetyl_sym_homospermidinium_agmatinium-to-n1-acetyl-sym-homospermid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n1_acetyl_sym_homospermidinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "agmatinium-to-n1-acetyl-sym-homospermid"
+      },
+      "note": "Shares N1-acetyl-sym-homospermidinium with agmatinium to N1-acetyl-sym-homospermid….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:230463"
+          }
+        ]
+      }
+    }
+  ]
+}

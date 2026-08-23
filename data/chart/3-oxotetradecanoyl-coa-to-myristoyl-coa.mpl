@@ -22,27 +22,27 @@ pathway 3-oxotetradecanoyl-coa-to-myristoyl-coa "3-oxotetradecanoyl-CoA to myris
     3_oxotetradecanoyl_coa
   }
 
-  branch from nadp side right {
-    nadp
-    <-> ec_1_14_13_124 [1.14.13.124] +h +n_hydroxy_l_phenylalanine +o2 +nadph +h2o
-    n_n_dihydroxy_l_phenylalanine
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_14_13_125 [1.14.13.125] +h +n_hydroxy_l_tryptophan +o2 +nadph +h2o
-    n_n_dihydroxy_l_tryptophan
-  }
-
   branch from myristoyl_coa side right {
     myristoyl_coa
-    <-> . +sphinganine +coa +hplus
-    n_tetradecanoylsphinganine
+    <-> . +1_oleoyl_sn_glycero_3_phosphoethanolamine +coa
+    1_oleoyl_2_myristoyl_sn_glycero_3_phosphoethanol
   }
 
   branch from myristoyl_coa side left {
     myristoyl_coa
-    <-> . +1_o_palmityl_2_acetyl_sn_glycerol +coa
-    1_palmityl_2_acetyl_3_myristoyl_sn_glycerol
+    <-> . +1_heptadecanoyl_sn_glycero_3_phosphate +coa
+    1_heptadecanoyl_2_myristoyl_sn_glycero_3_phospha
+  }
+
+  branch from myristoyl_coa side right {
+    myristoyl_coa
+    <-> . +9_cis_retinol +coa
+    9_cis_retinyl_tetradecanoate
+  }
+
+  branch from myristoyl_coa side left {
+    myristoyl_coa
+    <-> . +13_cis_retinol +coa
+    13_cis_retinyl_tetradecanoate
   }
 }

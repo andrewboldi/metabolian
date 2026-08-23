@@ -1,0 +1,336 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "nitrite-to-h2o-null",
+  "name": "nitrite to H2O",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from nitrite to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR195519"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "nitrite",
+      "name": "nitrite",
+      "formula": "NO2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM107"
+      }
+    },
+    {
+      "id": "menaquinone_8",
+      "name": "menaquinone-8",
+      "formula": "C51H72O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:44027"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "menaquinol_8",
+      "name": "menaquinol-8",
+      "formula": "C51H74O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61684"
+      }
+    },
+    {
+      "id": "nitrate",
+      "name": "nitrate",
+      "formula": "NO3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM732398"
+      }
+    },
+    {
+      "id": "glyoxylate",
+      "name": "glyoxylate",
+      "formula": "C2HO3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM69"
+      }
+    },
+    {
+      "id": "glycolate",
+      "name": "glycolate",
+      "formula": "C2H3O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM222"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "glycolaldehyde",
+      "name": "glycolaldehyde",
+      "formula": "C2H4O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM734590"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_7_99_4",
+      "name": "EC 1.7.99.4",
+      "ec": [
+        "1.7.99.4"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_19",
+      "name": "aminobutyraldehyde dehydrogenase",
+      "ec": [
+        "1.2.1.19"
+      ],
+      "xrefs": {
+        "uniprot": "P00352"
+      }
+    },
+    {
+      "id": "ec_1_2_1_21",
+      "name": "glycolaldehyde dehydrogenase",
+      "ec": [
+        "1.2.1.21"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_4",
+      "name": "aldehyde dehydrogenase (NADP(+))",
+      "ec": [
+        "1.2.1.4"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR195519",
+      "ec": "1.7.99.4",
+      "substrates": [
+        {
+          "metabolite": "nitrite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "menaquinone_8",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "menaquinol_8",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nitrate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_7_99_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR195519"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR195519"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR195445",
+      "substrates": [
+        {
+          "metabolite": "menaquinol_8",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glyoxylate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "menaquinone_8",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycolate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR195445"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR195445"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "aminobutyraldehyde dehydrogenase",
+      "ec": "1.2.1.19",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "glycolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycolaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_19"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR130120"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR130120"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_glycolate_co2-to-ubiquinone-8",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "glycolate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "co2-to-ubiquinone-8"
+      },
+      "note": "Shares glycolate with CO2 to ubiquinone-8.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM222"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_glycolate_nitrite-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "glycolate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nitrite-to-nad"
+      },
+      "note": "Shares glycolate with nitrite to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM222"
+          }
+        ]
+      }
+    }
+  ]
+}

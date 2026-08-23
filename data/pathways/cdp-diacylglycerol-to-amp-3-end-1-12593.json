@@ -1,0 +1,541 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "cdp-diacylglycerol-to-amp-3-end-1-12593",
+  "name": "CDP-diacylglycerol to AMP 3'-end(1−)",
+  "category": "nucleotide-metabolism",
+  "summary": "A 3-step route from CDP-diacylglycerol(2−) to AMP 3'-end(1−) residue, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:12593"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58332"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "cdp_diacylglycerol",
+      "name": "CDP-diacylglycerol",
+      "formula": "C14H17N3O15P2R2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58332"
+      }
+    },
+    {
+      "id": "sn_glycerol_3_phosphate",
+      "name": "sn-glycerol 3-phosphate",
+      "short": "sn-glycerol 3-P",
+      "formula": "C3H7O6P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57597"
+      }
+    },
+    {
+      "id": "1_3_sn_phosphatidyl_sn_glycerol_3_phosphate",
+      "name": "1-(3-sn-phosphatidyl)-sn-glycerol 3-phosphate",
+      "short": "1-(3-sn-phosphatidy…",
+      "formula": "C8H11O13P2R2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:60110"
+      }
+    },
+    {
+      "id": "cytidine_5_monophosphate",
+      "name": "cytidine 5'-monophosphate",
+      "short": "cytidine 5'-MP",
+      "formula": "C9H12N3O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:60377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol",
+      "name": "1,2-diacyl-sn-glycero-3-phospho-(1'-sn-glycerol)",
+      "short": "1,2-diacyl-sn-glyce…",
+      "formula": "C8H12O10PR2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64716"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "3_l_alanyl_adenylyl_zwitterionic_group",
+      "name": "3'-(L-alanyl)adenylyl zwitterionic group",
+      "short": "3'-(L-alanyl)adenyl…",
+      "formula": "C13H18N6O7P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:78497"
+      }
+    },
+    {
+      "id": "1_2_diacyl_sn_glycero_3_phospho_1_3_o_l_alanyl_s",
+      "name": "1,2-diacyl-sn-glycero-3-phospho-1'-(3'-O-L-alanyl)-sn-glycerol",
+      "short": "1,2-diacyl-sn-glyce…",
+      "formula": "C11H18NO11PR2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:75793"
+      }
+    },
+    {
+      "id": "amp_3_end_1",
+      "name": "AMP 3'-end(1−)",
+      "formula": "C10H12N5O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78442"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_8_5",
+      "name": "CDP-diacylglycerol--glycerol-3-phosphate 1-phosphatidyltransferase",
+      "ec": [
+        "2.7.8.5"
+      ],
+      "xrefs": {
+        "uniprot": "Q32NB8"
+      }
+    },
+    {
+      "id": "ec_3_1_3_27",
+      "name": "phosphatidylglycerophosphatase",
+      "ec": [
+        "3.1.3.27"
+      ],
+      "xrefs": {
+        "uniprot": "Q8WUK0"
+      }
+    },
+    {
+      "id": "ec_2_3_2_11",
+      "name": "alanylphosphatidylglycerol synthase",
+      "ec": [
+        "2.3.2.11"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "CDP-diacylglycerol--glycerol-3-phosphate 1-phosphatidyltransferase",
+      "equation": "a CDP-1,2-diacyl-sn-glycerol + sn-glycerol 3-phosphate = a 1,2-diacyl-sn-glycero-3-phospho-(1'-sn-glycero-3'-phosphate) + CMP + H(+)",
+      "ec": "2.7.8.5",
+      "substrates": [
+        {
+          "metabolite": "cdp_diacylglycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sn_glycerol_3_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_3_sn_phosphatidyl_sn_glycerol_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cytidine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_8_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:12593"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12593"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "phosphatidylglycerophosphatase",
+      "equation": "a 1,2-diacyl-sn-glycero-3-phospho-(1'-sn-glycero-3'-phosphate) + H2O = a 1,2-diacyl-sn-glycero-3-phospho-(1'-sn-glycerol) + phosphate",
+      "ec": "3.1.3.27",
+      "substrates": [
+        {
+          "metabolite": "1_3_sn_phosphatidyl_sn_glycerol_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_3_27"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:33751"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33751"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "alanylphosphatidylglycerol synthase",
+      "equation": "L-alanyl-tRNA(Ala) + a 1,2-diacyl-sn-glycero-3-phospho-(1'-sn-glycerol) = a 1,2-diacyl-sn-glycero-3-phospho-1'-(3'-O-L-alanyl)-sn-glycerol + tRNA(Ala)",
+      "ec": "2.3.2.11",
+      "substrates": [
+        {
+          "metabolite": "3_l_alanyl_adenylyl_zwitterionic_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_2_diacyl_sn_glycero_3_phospho_1_3_o_l_alanyl_s",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp_3_end_1",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_2_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:20489"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20489"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_cdp_diacylglycerol_1-hexanoyl-2-acyl-sn-glyc-to-cytidine-5-monophos",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cdp_diacylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-hexanoyl-2-acyl-sn-glyc-to-cytidine-5-monophos"
+      },
+      "note": "Shares CDP-diacylglycerol with 1-hexanoyl-2-acyl-sn-glyc… to cytidine 5'-monophosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58332"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cdp_diacylglycerol_4-methylumbelliferyl-to-ctp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cdp_diacylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-methylumbelliferyl-to-ctp"
+      },
+      "note": "Shares CDP-diacylglycerol with 4-methylumbelliferyl… to CTP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58332"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cdp_diacylglycerol_4-methylumbelliferyl-to-ctp-12208",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cdp_diacylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-methylumbelliferyl-to-ctp-12208"
+      },
+      "note": "Shares CDP-diacylglycerol with 4-methylumbelliferyl… to CTP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58332"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cdp_diacylglycerol_cdp-diacylglycerol-to-1-phosphatidyl-1d-myo-ino",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cdp_diacylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cdp-diacylglycerol-to-1-phosphatidyl-1d-myo-ino"
+      },
+      "note": "Shares CDP-diacylglycerol with CDP-diacylglycerol to 1-phosphatidyl-1D-myo-ino….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58332"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cdp_diacylglycerol_cdp-diacylglycerol-to-amp-3-end-1",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cdp_diacylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cdp-diacylglycerol-to-amp-3-end-1"
+      },
+      "note": "Shares CDP-diacylglycerol with CDP-diacylglycerol to AMP 3'-end(1−).",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58332"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cdp_diacylglycerol_d-ribitol-5-phosphate-to-3-o-d-xylosyl-1-3",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cdp_diacylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-ribitol-5-phosphate-to-3-o-d-xylosyl-1-3"
+      },
+      "note": "Shares CDP-diacylglycerol with D-ribitol 5-phosphate to 3-O-[α-D-xylosyl-(1→3)-β-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58332"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cdp_diacylglycerol_d-ribitol-5-phosphate-to-3-o-d-xylosyl-1-3-12456",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cdp_diacylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-ribitol-5-phosphate-to-3-o-d-xylosyl-1-3-12456"
+      },
+      "note": "Shares CDP-diacylglycerol with D-ribitol 5-phosphate to 3-O-[α-D-xylosyl-(1→3)-β-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58332"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_3_sn_phosphatidyl_sn_glycerol_3_phosphate_1-3-sn-phosphatidyl-sn-to-cardiolipin-ketone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_3_sn_phosphatidyl_sn_glycerol_3_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-3-sn-phosphatidyl-sn-to-cardiolipin-ketone"
+      },
+      "note": "Shares 1-(3-sn-phosphatidyl)-sn-glycerol 3-phosphate with 1-(3-sn-phosphatidyl)-sn-… to cardiolipin ketone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60110"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_3_sn_phosphatidyl_sn_glycerol_3_phosphate_1-3-sn-phosphatidyl-sn-to-cardiolipin-ketone-340",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_3_sn_phosphatidyl_sn_glycerol_3_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-3-sn-phosphatidyl-sn-to-cardiolipin-ketone-340"
+      },
+      "note": "Shares 1-(3-sn-phosphatidyl)-sn-glycerol 3-phosphate with 1-(3-sn-phosphatidyl)-sn-… to cardiolipin ketone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60110"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_3_sn_phosphatidyl_sn_glycerol_3_phosphate_cdp-diacylglycerol-to-amp-3-end-1",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_3_sn_phosphatidyl_sn_glycerol_3_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cdp-diacylglycerol-to-amp-3-end-1"
+      },
+      "note": "Shares 1-(3-sn-phosphatidyl)-sn-glycerol 3-phosphate with CDP-diacylglycerol to AMP 3'-end(1−).",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60110"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_2_diacyl_sn_glycero_3_phospho_1_3_o_l_alanyl_s_cdp-diacylglycerol-to-amp-3-end-1",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_2_diacyl_sn_glycero_3_phospho_1_3_o_l_alanyl_s"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cdp-diacylglycerol-to-amp-3-end-1"
+      },
+      "note": "Shares 1,2-diacyl-sn-glycero-3-phospho-1'-(3'-O-L-alanyl)-sn-glycerol with CDP-diacylglycerol to AMP 3'-end(1−).",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75793"
+          }
+        ]
+      }
+    }
+  ]
+}

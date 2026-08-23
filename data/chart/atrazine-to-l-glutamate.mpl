@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway atrazine-to-l-glutamate "atrazine to L-glutamate" {
-  spacing 290
+  spacing 320
 
   spine at 0,0 {
     atrazine
@@ -56,21 +56,51 @@ pathway atrazine-to-l-glutamate "atrazine to L-glutamate" {
     nad
   }
 
-  branch from isopropylamine side left {
-    isopropylamine
-    <-> . +hydroxyatrazine +h +h2o
-    n_ethylammelide
+  branch from l_glutamate side left {
+    l_glutamate
+    <-> . +xanthurenate_8_o_beta_d_glucoside +h2o +3_hydroxykynurenine_o_beta_d_glucoside +h
+    2_oxoglutarate
   }
 
   branch from l_glutamate side right {
     l_glutamate
-    <-> ec_3_6_3_21 [3.6.3.21] +h +adp +phosphate +h2o
+    <-> . +leukotriene_c5 +h2o +leukotriene_d5
+    h
+  }
+
+  branch from glutamate side left {
+    glutamate
+    <-> ec_2_6_1_27 [2.6.1.27] +l_tryptophan +akg
+    3_indol_3_yl_pyruvate
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> ec_2_6_1_52 [2.6.1.52] +pser +akg
+    php
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +h +adp +phosphate +atp
+    glutathione_disulfide
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +h +adp +glutathione +phosphate +glutathione
     atp
   }
 
   branch from l_glutamate side left {
     l_glutamate
-    <-> ec_3_6_3_21 [3.6.3.21] +adp +phosphate +atp +h2o
-    h
+    <-> ec_2_3_2_2 [2.3.2.2] +3_cyano_l_alanine +h +h2o
+    glutamyl_cyanoalanine
+  }
+
+  branch from l_glutamate side right {
+    l_glutamate
+    <-> ec_2_3_2_2 [2.3.2.2] +gamma_glutamyl_beta_aminopropiononitrile +co2 +h2o +h
+    3_cyano_l_alanine
   }
 }

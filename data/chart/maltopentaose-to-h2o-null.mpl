@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway maltopentaose-to-h2o-null "maltopentaose to H2O" {
-  spacing 208
+  spacing 172
 
   spine at 0,0 {
     maltopentaose
@@ -16,41 +16,5 @@ pathway maltopentaose-to-h2o-null "maltopentaose to H2O" {
     beta_d_cellohexaose
     <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate -beta_d_cellohexaose -h2o
     atp
-  }
-
-  branch from glucose side left {
-    glucose
-    <-> ec_3_2_1_62 [3.2.1.62] +phlorizin +h2o
-    phloretin
-  }
-
-  branch from glucose side right {
-    glucose
-    <-> ec_3_2_1_62 [3.2.1.62] +luteolin +h2o
-    luteolin_7_o_beta_d_glucoside
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_4_2_3_10 [4.2.3.10] +2e_geranyl_diphosphate +endo_fenchol
-    diphosphate
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_4_2_1_94 [4.2.1.94] +1_3_8_naphthalenetriol
-    scytalone
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +diphosphate +l_norvalyl_adenylate +h
-    l_2_aminopentanoate
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +diphosphate +lysergic_acid_adenylate +h
-    6_methyl_9_10_didehydroergoline_8_carboxylic_aci
   }
 }

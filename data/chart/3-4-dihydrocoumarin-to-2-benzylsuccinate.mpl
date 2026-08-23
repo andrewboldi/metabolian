@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-4-dihydrocoumarin-to-2-benzylsuccinate "3,4-dihydrocoumarin to 2-benzylsuccinate" {
-  spacing 298
+  spacing 340
 
   spine at 0,0 {
     3_4_dihydrocoumarin
@@ -42,14 +42,14 @@ pathway 3-4-dihydrocoumarin-to-2-benzylsuccinate "3,4-dihydrocoumarin to 2-benzy
 
   branch from succinate side right {
     succinate
-    <-> ec_1_14_11_16 [1.14.11.16] +l_aspartate +akg +o2 +co2
-    3_hydroxy_l_aspartate
+    <-> ec_3_1_2_3 [3.1.2.3] +h2o +coa +hplus
+    succinyl_coa
   }
 
   branch from succinate side left {
     succinate
-    <-> ec_3_1_2_3 [3.1.2.3] +h2o +coa +hplus
-    succinyl_coa
+    <-> ec_2_8_3_15 [2.8.3.15] +r_2_benzylsuccinate +succinyl_coa
+    r_2_benzylsuccinyl_coa
   }
 
   branch from fumarate side right {
@@ -66,13 +66,73 @@ pathway 3-4-dihydrocoumarin-to-2-benzylsuccinate "3,4-dihydrocoumarin to 2-benzy
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> ec_1_97_1_9 [1.97.1.9] +selenite +hydrogen_acceptor +h2o
-    selenate
+    <-> ec_1_1_99_31 [1.1.99.31] +s_mandelate +hydrogen_acceptor
+    phenylglyoxylate
   }
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> ec_1_14_99_23 [1.14.99.23] +3_hydroxybenzoate +o2 +hydrogen_acceptor +h2o
-    2_3_dihydroxybenzoate
+    <-> ec_1_4_99_5 [1.4.99.5] +glycine +hydrogen_acceptor +co2
+    hydrogen_cyanide
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> ec_1_14_11_4 [1.14.11.4] +l_lysinium +akg +o2 +co2
+    5r_5_hydroxy_l_lysine_1
+  }
+
+  branch from succinate side left {
+    succinate
+    <-> ec_1_14_11_2 [1.14.11.2] +l_proline +akg +o2 +co2
+    trans_4_hydroxy_l_proline
+  }
+
+  branch from hydrogen_acceptor side right {
+    hydrogen_acceptor
+    <-> ec_1_14_99_59 [1.14.99.59] +tryptaminium +hydrogen_donor +o2 +h2o
+    4_hydroxytryptamine
+  }
+
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> ec_1_1_99_26 [1.1.99.26] +3_hydroxycyclohexanone +hydrogen_donor
+    cyclohexane_1_3_dione
+  }
+
+  branch from fumarate side right {
+    fumarate
+    <-> ec_4_3_1_1 [4.3.1.1] +aspartate
+    nh3
+  }
+
+  branch from fumarate side left {
+    fumarate
+    <-> . +n_acetyl_s_2_succino_l_cysteine
+    n_acetyl_l_cysteinate
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> ec_1_97_1_1 [1.97.1.1] +chlorate +hydrogen_acceptor +h2o
+    chlorite
+  }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> ec_1_3_99_18 [1.3.99.18] +quinaldate +hydrogen_acceptor +h2o
+    kynurenate
+  }
+
+  branch from toluene side right {
+    toluene
+    <-> ec_1_14_13_243 [1.14.13.243] +nadh +o2 +hplus +nad +h2o
+    o_cresol
+  }
+
+  branch from toluene side left {
+    toluene
+    <-> ec_1_14_13_236 [1.14.13.236] +nadh +o2 +hplus +nad +h2o
+    p_cresol
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 9z-12z-octadecadienoate-to-h2o "(9Z,12Z)-octadecadienoate to H2O" {
-  spacing 268
+  spacing 202
 
   spine at 0,0 {
     9z_12z_octadecadienoate
@@ -18,14 +18,9 @@ pathway 9z-12z-octadecadienoate-to-h2o "(9Z,12Z)-octadecadienoate to H2O" {
     cholesteryl_linolenate
   }
 
-
-
-
-
-
-
-
-
-
-
+  branch from 9z_12z_octadecadienoate side left {
+    9z_12z_octadecadienoate
+    <-> . +cumene_hydroperoxide +2_phenylpropan_2_ol
+    vernolate
+  }
 }

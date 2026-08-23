@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-3-dimethoxystilbene-4-to-4-carboxy-2-hydroxy-c "3,3'-dimethoxystilbene-4,… to 4-carboxy-2-hydroxy-cis,c…" {
-  spacing 216
+  spacing 204
 
   spine at 0,0 {
     3_3_dimethoxystilbene_4_4_diol
@@ -16,17 +16,5 @@ pathway 3-3-dimethoxystilbene-4-to-4-carboxy-2-hydroxy-c "3,3'-dimethoxystilbene
     3_4_dihydroxybenzoate
     <-> ec_1_13_11_8 [1.13.11.8] +o2 -hplus
     4_carboxy_2_hydroxy_cis_cis_muconate_6_semialdeh
-  }
-
-  branch from formaldehyde side left {
-    formaldehyde
-    <-> ec_1_14_15_38 [1.14.15.38] +3_3_4_substituted_phenyl_1_1_dimethylurea +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
-    a_1_methyl_3_phenylurea
-  }
-
-  branch from formaldehyde side right {
-    formaldehyde
-    <-> . +metoxuron +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
-    3_3_chloro_4_methoxylphenyl_1_methylurea
   }
 }

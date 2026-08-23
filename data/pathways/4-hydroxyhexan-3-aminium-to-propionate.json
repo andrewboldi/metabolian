@@ -117,88 +117,6 @@
       "xrefs": {
         "chebi": "CHEBI:16240"
       }
-    },
-    {
-      "id": "d_aspartate",
-      "name": "D-aspartate",
-      "formula": "C4H6NO4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:29990"
-      }
-    },
-    {
-      "id": "oxaloacetate",
-      "name": "Oxaloacetate",
-      "formula": "C4H2O5",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:16452"
-      }
-    },
-    {
-      "id": "2r_butan_2_aminium",
-      "name": "(2R)-butan-2-aminium",
-      "formula": "C4H12N",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:195455"
-      }
-    },
-    {
-      "id": "butan_2_one",
-      "name": "butan-2-one",
-      "formula": "C4H8O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:28398"
-      }
-    },
-    {
-      "id": "propan_1_ol",
-      "name": "propan-1-ol",
-      "formula": "C3H8O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:28831"
-      }
-    },
-    {
-      "id": "nadp",
-      "name": "NADP+",
-      "formula": "C21H25N7O17P3",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58349"
-      }
-    },
-    {
-      "id": "nadph",
-      "name": "NADPH",
-      "formula": "C21H26N7O17P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57783"
-      }
-    },
-    {
-      "id": "hydrogen_cyanide",
-      "name": "hydrogen cyanide",
-      "formula": "CHN",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:18407"
-      }
-    },
-    {
-      "id": "2s_2_hydroxybutanenitrile",
-      "name": "(2S)-2-hydroxybutanenitrile",
-      "short": "2-hydroxybutanenitr…",
-      "formula": "C4H7NO",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:197352"
-      }
     }
   ],
   "enzymes": [
@@ -345,183 +263,247 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "D-aspartate + NAD(+) + H2O = oxaloacetate + NH4(+) + NADH + H(+)",
-      "equation": "D-aspartate + NAD(+) + H2O = oxaloacetate + NH4(+) + NADH + H(+)",
-      "substrates": [
-        {
-          "metabolite": "d_aspartate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "oxaloacetate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:76819"
+      "id": "xt_propanal_1-palmitoyl-2-propionyl-s-to-propionyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "propanal"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1-palmitoyl-2-propionyl-s-to-propionyl-coa"
+      },
+      "note": "Shares propanal with 1-palmitoyl-2-propionyl-s… to propionyl-CoA.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:76819"
+            "db": "ChEBI",
+            "id": "CHEBI:17153"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "(R)-sec-butylamine + NAD(+) + H2O = butan-2-one + NH4(+) + NADH + H(+)",
-      "equation": "(R)-sec-butylamine + NAD(+) + H2O = butan-2-one + NH4(+) + NADH + H(+)",
-      "substrates": [
-        {
-          "metabolite": "2r_butan_2_aminium",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "butan_2_one",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:76847"
+      "id": "xt_propanal_2r-3s-2-3-dimethylmalate-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "propanal"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2r-3s-2-3-dimethylmalate-to-diphosphate"
+      },
+      "note": "Shares propanal with (2R,3S)-2,3-dimethylmalate to diphosphate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:76847"
+            "db": "ChEBI",
+            "id": "CHEBI:17153"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "1-propanol + NADP(+) = propanal + NADPH + H(+)",
-      "equation": "1-propanol + NADP(+) = propanal + NADPH + H(+)",
-      "substrates": [
-        {
-          "metabolite": "propan_1_ol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "propanal",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:64712"
+      "id": "xt_propanal_d-citramalate-to-acrylate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "propanal"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "d-citramalate-to-acrylate"
+      },
+      "note": "Shares propanal with D-citramalate to acrylate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:64712"
+            "db": "ChEBI",
+            "id": "CHEBI:17153"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "propanal + hydrogen cyanide = (2S)-2-hydroxybutanenitrile",
-      "equation": "propanal + hydrogen cyanide = (2S)-2-hydroxybutanenitrile",
-      "substrates": [
-        {
-          "metabolite": "propanal",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_cyanide",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2s_2_hydroxybutanenitrile",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:77395"
+      "id": "xt_propanal_propan-1-ol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "propanal"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "propan-1-ol-to-h2o"
+      },
+      "note": "Shares propanal with propan-1-ol to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:77395"
+            "db": "ChEBI",
+            "id": "CHEBI:17153"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_propanal_propene-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "propanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "propene-to-h2o"
+      },
+      "note": "Shares propanal with propene to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17153"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_propionate_1-hexadecyl-2-propionyl-s-to-1-hexadecyl-sn-glyc",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "propionate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-hexadecyl-2-propionyl-s-to-1-hexadecyl-sn-glyc"
+      },
+      "note": "Shares Propionate with 1-hexadecyl-2-propionyl-s… to 1-hexadecyl-sn-glycero-3-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17272"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_propionate_1-palmitoyl-2-propionyl-s-to-propionyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "propionate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-palmitoyl-2-propionyl-s-to-propionyl-coa"
+      },
+      "note": "Shares Propionate with 1-palmitoyl-2-propionyl-s… to propionyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17272"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_propionate_2r-3s-2-3-dimethylmalate-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "propionate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2r-3s-2-3-dimethylmalate-to-diphosphate"
+      },
+      "note": "Shares Propionate with (2R,3S)-2,3-dimethylmalate to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17272"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_propionate_propene-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "propionate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "propene-to-h2o"
+      },
+      "note": "Shares Propionate with propene to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17272"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_propionate_r-mevalonate-to-propionyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "propionate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-mevalonate-to-propionyl-coa"
+      },
+      "note": "Shares Propionate with (R)-mevalonate to propionyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17272"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_propionate_scfa-microbiome-metabolism",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "propionate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "scfa-microbiome-metabolism"
+      },
+      "note": "Shares Propionate with Short-chain fatty acid production by gut microbiota.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17272"
           }
         ]
       }

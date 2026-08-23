@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-galacturonate-to-2-oxoglutarate "β-D-galacturonate to 2-oxoglutarate" {
-  spacing 252
+  spacing 264
 
   spine at 0,0 {
     d_galacturonate
@@ -34,25 +34,37 @@ pathway d-galacturonate-to-2-oxoglutarate "β-D-galacturonate to 2-oxoglutarate"
 
   branch from 5_dehydro_4_deoxy_d_glucarate side left {
     5_dehydro_4_deoxy_d_glucarate
-    <-> ec_4_2_1_42 [4.2.1.42] +h2o
-    galactarate
-  }
-
-  branch from 5_dehydro_4_deoxy_d_glucarate side right {
-    5_dehydro_4_deoxy_d_glucarate
     <-> ec_4_2_1_156 [4.2.1.156] +h2o
     l_altrarate
   }
 
+  branch from 5_dehydro_4_deoxy_d_glucarate side right {
+    5_dehydro_4_deoxy_d_glucarate
+    <-> ec_5_5_1_27 [5.5.1.27] +hplus
+    d_glucaro_1_4_lactone
+  }
+
   branch from akg side left {
     akg
-    <-> . +l_kynurenine +glutamate
-    4_2_aminophenyl_2_4_dioxobutanoate
+    <-> . +1_n2_etheno_2_deoxyguanosine_5_monophosphate_1 +o2 +h2o +glyoxal +succinate +co2
+    2_deoxyguanosine_5_monophosphate_1
   }
 
   branch from akg side right {
     akg
-    <-> ec_2_6_1_1 [2.6.1.1] +aspartate +glutamate
-    oxaloacetate
+    <-> . +trihazone_a +o2 +hplus +succinate +co2 +h2o
+    trihazone_d
+  }
+
+  branch from akg side left {
+    akg
+    <-> . +d_glutamate +nad +h2o +nadh +hplus
+    nh3
+  }
+
+  branch from akg side right {
+    akg
+    <-> . +4_hydroxy_methyl_phosphoryl_2_oxobutanoate +glutamate
+    glufosinate_p
   }
 }

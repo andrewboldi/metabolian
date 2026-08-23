@@ -164,52 +164,6 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
-    },
-    {
-      "id": "isoavenastenone",
-      "name": "isoavenastenone",
-      "formula": "C29H46O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1132779"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM13"
-      }
-    },
-    {
-      "id": "24e_4alpha_carboxy_stigmasta_7_24_241_dien_3bet",
-      "name": "(24E)-4alpha-carboxy-stigmasta-7,24(241)-dien-3beta-ol",
-      "short": "4alpha-carboxy-stig…",
-      "formula": "C30H47O3",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM1132785"
-      }
-    },
-    {
-      "id": "plastoquinone_9",
-      "name": "plastoquinone-9",
-      "formula": "C53H80O2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM732531"
-      }
-    },
-    {
-      "id": "plastoquinol_9",
-      "name": "plastoquinol-9",
-      "formula": "C53H82O2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM6387"
-      }
     }
   ],
   "enzymes": [
@@ -225,20 +179,6 @@
       "name": "dissimilatory dimethyldisulfide reductase",
       "ec": [
         "1.8.1.21"
-      ]
-    },
-    {
-      "id": "ec_1_1_1_418",
-      "name": "plant 3beta-hydroxysteroid-4alpha-carboxylate 3-dehydrogenase",
-      "ec": [
-        "1.1.1.418"
-      ]
-    },
-    {
-      "id": "ec_1_6_5_2",
-      "name": "NAD(P)H dehydrogenase (quinone)",
-      "ec": [
-        "1.6.5.2"
       ]
     }
   ],
@@ -421,99 +361,93 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "plant 3beta-hydroxysteroid-4alpha-carboxylate 3-dehydrogenase",
-      "ec": "1.1.1.418",
-      "substrates": [
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "isoavenastenone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "24e_4alpha_carboxy_stigmasta_7_24_241_dien_3bet",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_1_1_418"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR193733"
+      "id": "xt_s_methyl_5_thio_d_ribulose_1_phosphate_4-coumaroyl-coa-to-di-sulfido-diiron",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_methyl_5_thio_d_ribulose_1_phosphate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "4-coumaroyl-coa-to-di-sulfido-diiron"
+      },
+      "note": "Shares S-methyl-5-thio-D-ribulose 1-phosphate with 4-coumaroyl-CoA to di-μ-sulfido-diiron.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR193733"
+            "db": "ChEBI",
+            "id": "CHEBI:58548"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "NAD(P)H dehydrogenase (quinone)",
-      "ec": "1.6.5.2",
-      "substrates": [
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "plastoquinone_9",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "plastoquinol_9",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_6_5_2"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "metanetx": "MNXR193949"
+      "id": "xt_ethene_1-8-diazacyclotetradecane-to-adipate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ethene"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1-8-diazacyclotetradecane-to-adipate"
+      },
+      "note": "Shares ethene with 1,8-diazacyclotetradecane… to adipate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR193949"
+            "db": "ChEBI",
+            "id": "CHEBI:18153"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ethene_l-cys-ian-to-nadp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ethene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-cys-ian-to-nadp"
+      },
+      "note": "Shares ethene with L-Cys(IAN) to NADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18153"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ethene_trichloroethene-to-hydrogen-acceptor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ethene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trichloroethene-to-hydrogen-acceptor"
+      },
+      "note": "Shares ethene with trichloroethene to hydrogen acceptor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18153"
           }
         ]
       }

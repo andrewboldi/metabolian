@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway h-to-herquline-a "H to herquline A" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     h
@@ -22,29 +22,5 @@ pathway h-to-herquline-a "H to herquline A" {
     herquline_c
     <-> .
     herquline_a
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> ec_1_14_14_171 [1.14.14.171] +amyrin +fmnh2 +o2 +h2o +hplus
-    16_hydroxy_amyrin
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> ec_1_14_14_162 [1.14.14.162] +flavanones +fmnh2 +o2 +h2o +hplus
-    2_hydroxyflavanones
-  }
-
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_353 [2.1.1.353] +demethyldeoxyspectinabilin +sam
-    deoxyspectinabilin
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +s_reticulinium +sam +hplus
-    s_codamine
   }
 }

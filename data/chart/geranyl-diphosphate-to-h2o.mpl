@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway geranyl-diphosphate-to-h2o "geranyl diphosphate to H2O" {
-  spacing 188
+  spacing 152
 
   spine at 0,0 {
     gpp
@@ -14,41 +14,5 @@ pathway geranyl-diphosphate-to-h2o "geranyl diphosphate to H2O" {
     6e_8_hydroxylinalool
     <-> ec_1_14_13_151 [1.14.13.151] +nadh +h +o2 -nad -h2o
     6e_8_oxolinalool
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +fpp
-    elemene
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +fpp
-    germacrene_d
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_306 [1.1.1.306] +nadh +h +s_formylbacillithiol
-    s_hydroxymethyl_bacillithiol
-  }
-
-  branch from nad side right {
-    nad
-    <-> . +nadh +h +amarouciaxanthin_a
-    fucoxanthinol
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    3_deamino_3_hydroxykanamycin_c
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +tobramycin +phosphate +tobramycin
-    atp
   }
 }

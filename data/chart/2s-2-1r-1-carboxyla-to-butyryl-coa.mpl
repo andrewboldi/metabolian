@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2s-2-1r-1-carboxyla-to-butyryl-coa "(2S)-2-{[(1R)-1-carboxyla… to butyryl-CoA" {
-  spacing 188
+  spacing 212
 
   spine at 0,0 {
     2s_2_1r_1_carboxylatoethyl_azaniumyl_pentanoate
@@ -26,14 +26,14 @@ pathway 2s-2-1r-1-carboxyla-to-butyryl-coa "(2S)-2-{[(1R)-1-carboxyla… to buty
 
   branch from nh3 side right {
     nh3
-    <-> . +ctp +h2o +hplus
-    utp
+    <-> . +s_4_hydroxy_3_methylbutan_2_yl_l_cysteine +h2o +pyruvate
+    2_methyl_3_sulfanylbutan_1_ol
   }
 
   branch from nh3 side left {
     nh3
-    <-> . +tyraminium +o2 +h2o +h2o2
-    4_hydroxyphenyl_acetaldehyde
+    <-> . +3_sulfanylpentan_1_ol_l_cysteine +h2o +pyruvate
+    3_mercaptopentanol
   }
 
   branch from butanal side right {
@@ -44,13 +44,37 @@ pathway 2s-2-1r-1-carboxyla-to-butyryl-coa "(2S)-2-{[(1R)-1-carboxyla… to buty
 
   branch from butyryl_coa side left {
     butyryl_coa
-    <-> . +fad +hplus +fadh2
+    <-> . +o2 +h2o2
     crotonoyl_coa
   }
 
   branch from butyryl_coa side right {
     butyryl_coa
-    <-> . +acetyl_coa +coa
-    3_oxohexanoyl_coa
+    <-> . +carnitine +coa
+    o_butanoyl_l_carnitine
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> . +s_ethyl_l_cysteine +h2o +pyruvate
+    ethanethiol
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_1_4_1_18 [1.4.1.18] +l_lysinium +nadp +nadph +hplus
+    s_1_piperideine_6_carboxylate
+  }
+
+  branch from butyryl_coa side left {
+    butyryl_coa
+    <-> ec_1_3_1_109 [1.3.1.109] +di_sulfido_diiron +nad +crotonoyl_coa +nadh
+    di_sulfido_diiron
+  }
+
+  branch from butyryl_coa side right {
+    butyryl_coa
+    <-> . +hco3 +atp +adp +pi +hplus
+    s_ethylmalonyl_coa
   }
 }

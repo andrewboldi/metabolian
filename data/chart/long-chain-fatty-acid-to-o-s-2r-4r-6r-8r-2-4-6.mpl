@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway long-chain-fatty-acid-to-o-s-2r-4r-6r-8r-2-4-6 "long-chain fatty acid… to O-(S-[2R,4R,6R,8R]-2,4,6,…" {
-  spacing 298
+  spacing 340
 
   spine at 0,0 {
     long_chain_fatty_acid_ethyl_ester
@@ -48,13 +48,55 @@ pathway long-chain-fatty-acid-to-o-s-2r-4r-6r-8r-2-4-6 "long-chain fatty acid…
 
   branch from ppi side right {
     ppi
-    <-> ec_6_3_5_1 [6.3.5.1] +deamido_nad +glutamine +atp +h2o +amp +nad +hplus
-    glutamate
+    <-> ec_4_2_3_57 [4.2.3.57] +fpp
+    caryophyllene
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_6_1_1_3 [6.1.1.3] +amp_3_end_1 +threonine +atp +amp +hplus
-    3_l_threonyl_adenylyl_1_group
+    <-> ec_4_2_3_59 [4.2.3.59] +fpp
+    e_bisabolene
+  }
+
+  branch from ethanol side right {
+    ethanol
+    <-> . +ethyl_oleate +h2o +hplus
+    oleate
+  }
+
+  branch from ethanol side left {
+    ethanol
+    <-> . +ethyl_palmitoleate +h2o +hplus
+    palmitoleate
+  }
+
+  branch from holo-acp side right {
+    holo-acp
+    <-> . +o_s_fatty_acylpantetheine_4_phosphoryl_l_serine +h2o +hplus
+    fatty-acid
+  }
+
+  branch from holo-acp side left {
+    holo-acp
+    <-> ec_6_2_1_47 [6.2.1.47] +medium_chain_fatty_acid_anion +atp +amp +ppi
+    o_s_medium_chain_fatty_acyl_pantetheine_4_phosph
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_60 [4.2.3.60] +fpp
+    germacrene_c
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_3_6_1_9 [3.6.1.9] +datp +h2o +hplus
+    2_deoxyadenosine_5_monophosphate
+  }
+
+  branch from r_methylmalonyl_coa side right {
+    r_methylmalonyl_coa
+    <-> ec_5_1_99_1 [5.1.99.1]
+    s_methylmalonyl_coa
   }
 }

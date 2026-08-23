@@ -86,54 +86,6 @@
       "xrefs": {
         "chebi": "CHEBI:144096"
       }
-    },
-    {
-      "id": "rhamnetin_3_olate",
-      "name": "rhamnetin-3-olate",
-      "formula": "C16H11O7",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:192706"
-      }
-    },
-    {
-      "id": "l_lysinium",
-      "name": "L-lysinium",
-      "formula": "C6H13N2O",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:29969"
-      }
-    },
-    {
-      "id": "n6_n6_n6_trimethyl_l_lysine",
-      "name": "N6,N6,N6-trimethyl-L-lysine",
-      "short": "N6,N6,N6-trimethyl-…",
-      "formula": "C9H19N2O",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:61961"
-      }
-    },
-    {
-      "id": "2r_2_hydroxy_4_methylsulfanyl_butanoate",
-      "name": "(2R)-2-hydroxy-4-(methylsulfanyl)butanoate",
-      "short": "2-hydroxy-4-(methyl…",
-      "formula": "C5H9O3S",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:155852"
-      }
-    },
-    {
-      "id": "2r_4_dimethylsulfaniumyl_2_hydroxybutanoate",
-      "name": "(2R)-4-(dimethylsulfaniumyl)-2-hydroxybutanoate",
-      "short": "4-(dimethylsulfaniu…",
-      "formula": "C6H12O3S",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:155853"
-      }
     }
   ],
   "enzymes": [
@@ -149,20 +101,6 @@
       "name": "3,7-dimethylquercetin 4'-O-methyltransferase",
       "ec": [
         "2.1.1.83"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_372",
-      "name": "[histone H4]-lysine(20) N-trimethyltransferase",
-      "ec": [
-        "2.1.1.372"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_373",
-      "name": "2-hydroxy-4-(methylsulfanyl)butanoate S-methyltransferase",
-      "ec": [
-        "2.1.1.373"
       ]
     }
   ],
@@ -307,140 +245,71 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "rhamnetin + S-adenosyl-L-methionine = 3',4',5-trihydroxy-3,7-dimethoxyflavone + S-adeno...",
-      "equation": "rhamnetin + S-adenosyl-L-methionine = 3',4',5-trihydroxy-3,7-dimethoxyflavone + S-adenosyl-L-homocysteine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "rhamnetin_3_olate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_4_5_trihydroxy_3_7_dimethoxyflavone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:74763"
+      "id": "xt_3_4_5_trihydroxy_3_methoxyflavon_7_olate_2-hexaprenyl-6-hydroxyphe-to-s-adenosyl-l-homocy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_4_5_trihydroxy_3_methoxyflavon_7_olate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2-hexaprenyl-6-hydroxyphe-to-s-adenosyl-l-homocy"
+      },
+      "note": "Shares 3',4',5-trihydroxy-3-methoxyflavon-7-olate with 2-hexaprenyl-6-hydroxyphe… to S-adenosyl-L-homocysteine.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:74763"
+            "db": "ChEBI",
+            "id": "CHEBI:57928"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "[histone H4]-lysine(20) N-trimethyltransferase",
-      "equation": "L-lysyl(20)-[histone H4] + 3 S-adenosyl-L-methionine = N(6),N(6),N(6)-trimethyl-L-lysyl(20)-[histone H4] + 3 S-adenosyl-L-homocysteine + 3 H(+)",
-      "ec": "2.1.1.372",
-      "substrates": [
-        {
-          "metabolite": "l_lysinium",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 3
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n6_n6_n6_trimethyl_l_lysine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 3
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_1_372"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:64456"
+      "id": "xt_3_4_5_trihydroxy_3_methoxyflavon_7_olate_3-hydroxy-16-methoxy-2-3-to-vindolinium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_4_5_trihydroxy_3_methoxyflavon_7_olate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxy-16-methoxy-2-3-to-vindolinium"
+      },
+      "note": "Shares 3',4',5-trihydroxy-3-methoxyflavon-7-olate with 3-hydroxy-16-methoxy-2,3-… to vindolinium.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:64456"
+            "db": "ChEBI",
+            "id": "CHEBI:57928"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "2-hydroxy-4-(methylsulfanyl)butanoate S-methyltransferase",
-      "equation": "(2R)-2-hydroxy-4-(methylsulfanyl)butanoate + S-adenosyl-L-methionine = (2R)-4-(dimethylsulfaniumyl)-2-hydroxybutanoate + S-adenosyl-L-homocysteine",
-      "ec": "2.1.1.373",
-      "substrates": [
-        {
-          "metabolite": "2r_2_hydroxy_4_methylsulfanyl_butanoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2r_4_dimethylsulfaniumyl_2_hydroxybutanoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_1_373"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:64472"
+      "id": "xt_3_4_5_trihydroxy_3_7_dimethoxyflavone_8-amino-8-demethylribofla-to-adp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_4_5_trihydroxy_3_7_dimethoxyflavone"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "8-amino-8-demethylribofla-to-adp"
+      },
+      "note": "Shares 3',4',5-trihydroxy-3,7-dimethoxyflavone with 8-amino-8-demethylribofla… to ADP.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:64472"
+            "db": "ChEBI",
+            "id": "CHEBI:77710"
           }
         ]
       }

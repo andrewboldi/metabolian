@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-4-4-6-tetrahydroxych-to-s-adenosyl-l-homocyste "2',4,4',6'-tetrahydroxych… to S-adenosyl-L-homocysteine" {
-  spacing 260
+  spacing 236
 
   spine at 0,0 {
     2_4_4_6_tetrahydroxychalcone
@@ -14,29 +14,5 @@ pathway 2-4-4-6-tetrahydroxych-to-s-adenosyl-l-homocyste "2',4,4',6'-tetrahydrox
     xanthohumol
     <-> ec_2_1_1_339 [2.1.1.339] +sam -sah -hplus
     4_o_methylxanthohumol
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +fpp
-    barbatene
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +fpp
-    sativene
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +taxifolin +sam +hplus
-    taxifolin_4_methyl_ether
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +taxifolin +sam +hplus
-    dihydroisorhamnetin
   }
 }

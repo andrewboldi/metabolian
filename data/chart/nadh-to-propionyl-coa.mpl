@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-propionyl-coa "NADH to propionyl-CoA" {
-  spacing 212
+  spacing 200
 
   spine at 0,0 {
     nadh
@@ -14,17 +14,5 @@ pathway nadh-to-propionyl-coa "NADH to propionyl-CoA" {
     r_methylmalonate_semialdehyde
     <-> . +nad +coa +h2o -hco3 -nadh -hplus
     propionyl_coa
-  }
-
-  branch from nad side left {
-    nad
-    <-> . +nadh +acetyl_coa +octadecanoyl_coa +h +h2o2 +coa +o2 +h2o
-    eicosanoyl_coa
-  }
-
-  branch from nad side right {
-    nad
-    <-> . +nadh +6z_9z_12z_octadecatrienoyl_coa +acetyl_coa +fadh2 +h +fad +coa +h2o
-    8z_11z_14z_eicosatrienoyl_coa
   }
 }

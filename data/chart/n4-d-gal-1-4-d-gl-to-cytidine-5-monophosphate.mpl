@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n4-d-gal-1-4-d-gl-to-cytidine-5-monophosphate "N4-{[β-D-Gal-(1→4)-β-D-Gl… to cytidine 5'-monophosphate" {
-  spacing 164
+  spacing 158
 
   spine at 0,0 {
     n4_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_gal_1_4_d
@@ -24,15 +24,9 @@ pathway n4-d-gal-1-4-d-gl-to-cytidine-5-monophosphate "N4-{[β-D-Gal-(1→4)-β-
     n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_n
   }
 
-  branch from adenosine_3_5_bismonophosphate side left {
-    adenosine_3_5_bismonophosphate
-    <-> . +4_isopropylphenol +3_phosphonato_5_adenylyl_sulfate +hplus
-    4_isopropylphenyl_sulfate
-  }
-
-  branch from adenosine_3_5_bismonophosphate side right {
-    adenosine_3_5_bismonophosphate
-    <-> . +bisphenol_a +3_phosphonato_5_adenylyl_sulfate +hplus
-    bisphenol_a_sulfate
+  branch from n4_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_gal_1_4_d side left {
+    n4_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_gal_1_4_d
+    <-> . +h2o +n_2r_3r_4r_5s_6r_5_2s_3s_4s_5r_6r_4_2s_3s_4s_5s
+    n4_d_glcnac_l_asparaginyl
   }
 }

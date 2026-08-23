@@ -99,59 +99,40 @@
       }
     },
     {
-      "id": "troglitazone_glucuronide",
-      "name": "Troglitazone Glucuronide",
-      "short": "Troglitazone…",
-      "formula": "C30H33NO11S",
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
       "charge": -2,
       "xrefs": {
-        "metanetx": "MNXM1560769"
+        "chebi": "CHEBI:57945"
       }
     },
     {
-      "id": "adp",
-      "name": "ADP",
-      "formula": "C10H12N5O10P2",
-      "charge": -3,
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
       "xrefs": {
-        "metanetx": "MNXM40333"
+        "chebi": "CHEBI:15378"
       }
     },
     {
-      "id": "phosphate",
-      "name": "phosphate",
-      "formula": "HO4P",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM9"
-      }
-    },
-    {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM3"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "WATER"
-      }
-    },
-    {
-      "id": "telmisartan_glucuronide",
-      "name": "Telmisartan Glucuronide",
-      "short": "Telmisartan…",
-      "formula": "C39H37N4O8",
+      "id": "10_11_dihydro_12_oxoleukotriene_b4",
+      "name": "10,11-dihydro-12-oxoleukotriene B4",
+      "short": "10,11-dihydro-12-ox…",
+      "formula": "C20H31O4",
       "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM1560774"
+        "chebi": "CHEBI:133319"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
       }
     }
   ],
@@ -161,7 +142,10 @@
       "name": "15-oxoprostaglandin 13-reductase",
       "ec": [
         "1.3.1.48"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q14914"
+      }
     }
   ],
   "reactions": [
@@ -291,100 +275,309 @@
     },
     {
       "id": "r4",
-      "name": "Reaction MNXR206966",
+      "name": "12-oxo-leukotriene B4 + NADH + H(+) = 12-oxo-(5S)-hydroxy-(6Z,8E,14Z)-eicosatrienoate +...",
+      "equation": "12-oxo-leukotriene B4 + NADH + H(+) = 12-oxo-(5S)-hydroxy-(6Z,8E,14Z)-eicosatrienoate + NAD(+)",
       "substrates": [
         {
-          "metabolite": "troglitazone_glucuronide",
+          "metabolite": "12_dehydro_leukotriene_b4",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h",
+          "metabolite": "nadh",
           "stoichiometry": 1
         },
         {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "troglitazone_glucuronide",
+          "metabolite": "10_11_dihydro_12_oxoleukotriene_b4",
           "stoichiometry": 1
         },
         {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "nad",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "metanetx": "MNXR206966"
+        "rhea": "RHEA:52428"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR206966"
+            "db": "Rhea",
+            "id": "RHEA:52428"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_12_dehydro_leukotriene_b4_4-chlorobenzoate-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "12_dehydro_leukotriene_b4"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-chlorobenzoate-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares 12-dehydro-leukotriene B4 with 4-chlorobenzoate to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133309"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "Reaction MNXR206988",
-      "substrates": [
-        {
-          "metabolite": "telmisartan_glucuronide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "telmisartan_glucuronide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR206988"
+      "id": "xt_12_dehydro_leukotriene_b4_glycine-to-monochlorobimane",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "12_dehydro_leukotriene_b4"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "glycine-to-monochlorobimane"
+      },
+      "note": "Shares 12-dehydro-leukotriene B4 with glycine to monochlorobimane.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133309"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_12_dehydro_leukotriene_b4_leukotriene-c4-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "12_dehydro_leukotriene_b4"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "leukotriene-c4-to-hydrogen-donor"
+      },
+      "note": "Shares 12-dehydro-leukotriene B4 with leukotriene C4 to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133309"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_12_dehydro_leukotriene_b4_peroxol-to-2-3-5-trichloro-6-glutat",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "12_dehydro_leukotriene_b4"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "peroxol-to-2-3-5-trichloro-6-glutat"
+      },
+      "note": "Shares 12-dehydro-leukotriene B4 with peroxol to 2,3,5-trichloro-6-(glutat….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133309"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_12_dehydro_leukotriene_b4_tocopherol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "12_dehydro_leukotriene_b4"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "tocopherol-to-h2o"
+      },
+      "note": "Shares 12-dehydro-leukotriene B4 with γ-tocopherol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133309"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_leukotriene_b4_1-2-dihydroxy-3-keto-5-me-to-3-5-dioxo-6-4-5-7-t",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "leukotriene_b4"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-dihydroxy-3-keto-5-me-to-3-5-dioxo-6-4-5-7-t"
+      },
+      "note": "Shares leukotriene B4 with 1,2-dihydroxy-3-keto-5-me… to 3,5-dioxo-6-[4,5,7-trihyd….",
+      "provenance": {
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR206988"
+            "id": "MNXM1368516"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_leukotriene_b4_12-hydroxyeicosatetraenoa-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "leukotriene_b4"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "12-hydroxyeicosatetraenoa-to-h2o"
+      },
+      "note": "Shares leukotriene B4 with 12-hydroxyeicosatetraenoa… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368516"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_leukotriene_b4_4-hydroxymethylcatechol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "leukotriene_b4"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxymethylcatechol-to-h2o"
+      },
+      "note": "Shares leukotriene B4 with 4-hydroxymethylcatechol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368516"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_leukotriene_b4_leukotriene-b4-to-5s-6r-dihydroxy-15s-h",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "leukotriene_b4"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "leukotriene-b4-to-5s-6r-dihydroxy-15s-h"
+      },
+      "note": "Shares leukotriene B4 with leukotriene B4 to (5S,6R)-dihydroxy-(15S)-h….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368516"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_oxo_12_s_hydroxy_eicosa_6e_8z_10e_14z_tetraeno_2e-4z-2-hydroxy-6-oxono-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_oxo_12_s_hydroxy_eicosa_6e_8z_10e_14z_tetraeno"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2e-4z-2-hydroxy-6-oxono-to-o2"
+      },
+      "note": "Shares 5-oxo-12(S)-hydroxy-eicosa-6E,8Z,10E,14Z-tetraenoate with (2E,4Z)-2-hydroxy-6-oxono… to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM162741"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_oxo_6_trans_leukotriene_b4_2-oxohepta-3-5-dienedioa-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_oxo_6_trans_leukotriene_b4"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-oxohepta-3-5-dienedioa-to-o2"
+      },
+      "note": "Shares 5-Oxo-6-trans-leukotriene B4 with 2-oxohepta--3,5-dienedioa… to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:192149"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_oxo_6_trans_leukotriene_b4_ent-kaur-16-en-19-al-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_oxo_6_trans_leukotriene_b4"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ent-kaur-16-en-19-al-to-h2o"
+      },
+      "note": "Shares 5-Oxo-6-trans-leukotriene B4 with ent-kaur-16-en-19-al to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:192149"
           }
         ]
       }

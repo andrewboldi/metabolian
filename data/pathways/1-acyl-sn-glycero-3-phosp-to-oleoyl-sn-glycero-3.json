@@ -114,6 +114,46 @@
       "xrefs": {
         "chebi": "CHEBI:57287"
       }
+    },
+    {
+      "id": "1_10z_heptadecenoyl_sn_glycero_3_phosphoethanola",
+      "name": "1-(10Z-heptadecenoyl)-sn-glycero-3-phosphoethanolamine",
+      "short": "1-(10Z-heptadecenoy…",
+      "formula": "C22H44NO7P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:149768"
+      }
+    },
+    {
+      "id": "1_10z_heptadecenoyl_2_9z_octadecenoyl_sn_glycero",
+      "name": "1-(10Z-heptadecenoyl)-2-(9Z-octadecenoyl)-sn-glycero-3-phosphoethanolamine",
+      "short": "1-(10Z-heptadecenoy…",
+      "formula": "C40H76NO8P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:156344"
+      }
+    },
+    {
+      "id": "1_2_dihexanoylglycerol",
+      "name": "1,2-dihexanoylglycerol",
+      "short": "1,2-dihexanoylglyce…",
+      "formula": "C15H28O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:177077"
+      }
+    },
+    {
+      "id": "1_2_dicaproyl_3_oleoylglycerol",
+      "name": "1,2-dicaproyl-3-oleoylglycerol",
+      "short": "1,2-dicaproyl-3-ole…",
+      "formula": "C33H60O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:177087"
+      }
     }
   ],
   "enzymes": [],
@@ -231,6 +271,218 @@
           {
             "db": "Rhea",
             "id": "RHEA:62104"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "1-(10Z-heptadecenoyl)-sn-glycero-3-phosphoethanolamine + (9Z)-octadecenoyl-CoA = 1-(10Z...",
+      "equation": "1-(10Z-heptadecenoyl)-sn-glycero-3-phosphoethanolamine + (9Z)-octadecenoyl-CoA = 1-(10Z-heptadecenoyl)-2-(9Z-octadecenoyl)-sn-glycero-3-phosphoethanolamine + CoA",
+      "substrates": [
+        {
+          "metabolite": "1_10z_heptadecenoyl_sn_glycero_3_phosphoethanola",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oleoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_10z_heptadecenoyl_2_9z_octadecenoyl_sn_glycero",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:65136"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65136"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "1,2-dihexanoylglycerol + (9Z)-octadecenoyl-CoA = 1,2-dihexanoyl-3-(9Z-octadecenoyl)-gly...",
+      "equation": "1,2-dihexanoylglycerol + (9Z)-octadecenoyl-CoA = 1,2-dihexanoyl-3-(9Z-octadecenoyl)-glycerol + CoA",
+      "substrates": [
+        {
+          "metabolite": "1_2_dihexanoylglycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oleoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_2_dicaproyl_3_oleoylglycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:68212"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:68212"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_1_10z_heptadecenoyl_sn_glycero_3_phosphoethanola_1-2-dioleoylglycerol-to-1-oleoyl-2-arachidonoyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_10z_heptadecenoyl_sn_glycero_3_phosphoethanola"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-dioleoylglycerol-to-1-oleoyl-2-arachidonoyl"
+      },
+      "note": "Shares 1-(10Z-heptadecenoyl)-sn-glycero-3-phosphoethanolamine with 1,2-dioleoylglycerol to 1-oleoyl-2-arachidonoyl-s….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:149768"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_10z_heptadecenoyl_sn_glycero_3_phosphoethanola_n-acetylsphingosine-to-linoleate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_10z_heptadecenoyl_sn_glycero_3_phosphoethanola"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetylsphingosine-to-linoleate"
+      },
+      "note": "Shares 1-(10Z-heptadecenoyl)-sn-glycero-3-phosphoethanolamine with N-acetylsphingosine to linoleate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:149768"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_10z_heptadecenoyl_sn_glycero_3_phosphoethanola_pa-0-0-18-0-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_10z_heptadecenoyl_sn_glycero_3_phosphoethanola"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "pa-0-0-18-0-to-h2o"
+      },
+      "note": "Shares 1-(10Z-heptadecenoyl)-sn-glycero-3-phosphoethanolamine with PA(0:0/18:0) to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:149768"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_2_dihexanoylglycerol_1-hexadecanoyl-2-9z-12z-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_2_dihexanoylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-hexadecanoyl-2-9z-12z-to-h2o"
+      },
+      "note": "Shares 1,2-dihexanoylglycerol with 1-hexadecanoyl-2-(9Z,12Z-… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:177077"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_2_dihexanoylglycerol_1-hexadecanoyl-sn-glycer-to-di-sulfido-diiron",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_2_dihexanoylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-hexadecanoyl-sn-glycer-to-di-sulfido-diiron"
+      },
+      "note": "Shares 1,2-dihexanoylglycerol with 1-hexadecanoyl-sn--glycer… to di-μ-sulfido-diiron.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:177077"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_2_dihexanoylglycerol_2e-9z-12z-15z-octadecat-to-1-2-dicaproyl-3-7z-1",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_2_dihexanoylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2e-9z-12z-15z-octadecat-to-1-2-dicaproyl-3-7z-1"
+      },
+      "note": "Shares 1,2-dihexanoylglycerol with (2E,9Z,12Z,15Z)-octadecat… to 1,2-dicaproyl-3-(7Z,10Z,1….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:177077"
           }
         ]
       }

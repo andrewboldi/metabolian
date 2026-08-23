@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway phytanoyl-coa-to-pristanate "phytanoyl-CoA to pristanate" {
-  spacing 176
+  spacing 170
 
   spine at 0,0 {
     phytanoyl_coa
@@ -20,15 +20,9 @@ pathway phytanoyl-coa-to-pristanate "phytanoyl-CoA to pristanate" {
     pristanate
   }
 
-  branch from ppi side left {
-    ppi
-    <-> . +2_cis_6_cis_farnesyl_diphosphate
-    germacrene_c
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +2_cis_6_cis_farnesyl_diphosphate
-    germacrene_a
+  branch from phytanoyl_coa side left {
+    phytanoyl_coa
+    <-> . +h2o +coa +hplus
+    phytanate
   }
 }

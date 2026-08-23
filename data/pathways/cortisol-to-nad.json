@@ -108,6 +108,33 @@
       "xrefs": {
         "chebi": "CHEBI:3898"
       }
+    },
+    {
+      "id": "20_dihydrocortisol",
+      "name": "20β-dihydrocortisol",
+      "formula": "C21H32O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:139311"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
     }
   ],
   "enzymes": [
@@ -123,6 +150,16 @@
       "name": "3alpha(or 20beta)-hydroxysteroid dehydrogenase",
       "ec": [
         "1.1.1.53"
+      ],
+      "xrefs": {
+        "uniprot": "Q04828"
+      }
+    },
+    {
+      "id": "ec_1_1_1_442",
+      "name": "20beta-hydroxysteroid dehydrogenase",
+      "ec": [
+        "1.1.1.442"
       ]
     }
   ],
@@ -262,6 +299,255 @@
           {
             "db": "MetaNetX",
             "id": "MNXR109151"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "20beta-hydroxysteroid dehydrogenase",
+      "equation": "20beta-dihydrocortisol + NAD(+) = cortisol + NADH + H(+)",
+      "ec": "1.1.1.442",
+      "substrates": [
+        {
+          "metabolite": "20_dihydrocortisol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cortisol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_442"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:86103"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:86103"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_cortisol_1-o-1-2-saturated-alkyl-to-di-sulfido-diiron",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cortisol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-o-1-2-saturated-alkyl-to-di-sulfido-diiron"
+      },
+      "note": "Shares Cortisol (hydrocortisone) with 1-O-(1,2-saturated-alkyl)… to di-μ-sulfido-diiron.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17650"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cortisol_17-21-dihydroxy-5-pregna-to-nadp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cortisol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "17-21-dihydroxy-5-pregna-to-nadp"
+      },
+      "note": "Shares Cortisol (hydrocortisone) with 17,21-dihydroxy-5β-pregna… to NADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17650"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cortisol_20-dihydro-11-deoxycorti-to-adenosine-3-5-bismon",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cortisol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "20-dihydro-11-deoxycorti-to-adenosine-3-5-bismon"
+      },
+      "note": "Shares Cortisol (hydrocortisone) with 20β-dihydro-11-deoxycorti… to adenosine 3',5'-bismonoph….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17650"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cortisol_catecholamine-metabolism",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cortisol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "catecholamine-metabolism"
+      },
+      "note": "Shares Cortisol (hydrocortisone) with Catecholamine biosynthesis and degradation.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17650"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cortisol_dammarenediol-ii-to-d-glucopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cortisol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dammarenediol-ii-to-d-glucopyranose"
+      },
+      "note": "Shares Cortisol (hydrocortisone) with dammarenediol-II to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17650"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cortisol_urea-cycle",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cortisol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "urea-cycle"
+      },
+      "note": "Shares Cortisol (hydrocortisone) with Urea cycle (Krebs–Henseleit ornithine cycle).",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17650"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_dihydrocortisol_3-geranylgeranylindole-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_dihydrocortisol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-geranylgeranylindole-to-h2o"
+      },
+      "note": "Shares 5β-dihydrocortisol with 3-Geranylgeranylindole to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:732"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tetrahydrocortisol_3-geranylgeranylindole-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tetrahydrocortisol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-geranylgeranylindole-to-h2o"
+      },
+      "note": "Shares tetrahydrocortisol with 3-Geranylgeranylindole to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM735651"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_20_dihydrocortisol_20-dihydro-11-deoxycorti-to-adenosine-3-5-bismon",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "20_dihydrocortisol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "20-dihydro-11-deoxycorti-to-adenosine-3-5-bismon"
+      },
+      "note": "Shares 20β-dihydrocortisol with 20β-dihydro-11-deoxycorti… to adenosine 3',5'-bismonoph….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:139311"
           }
         ]
       }

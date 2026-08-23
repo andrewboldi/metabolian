@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-acetyl-beta-neuraminate-to-h2o "N-acetyl-beta-neuraminate… to H2O" {
-  spacing 288
+  spacing 216
 
   spine at 0,0 {
     n_acetyl_beta_neuraminate_9_phosphate
@@ -14,77 +14,5 @@ pathway n-acetyl-beta-neuraminate-to-h2o "N-acetyl-beta-neuraminate… to H2O" {
     cmp_n_acetyl_beta_neuraminate
     <-> ec_1_14_18_2 [1.14.18.2] +nadh +h +o2 -nad -h2o
     cmp_n_glycoloyl_beta_neuraminate
-  }
-
-  branch from n_acetyl_alpha_neuraminate side left {
-    n_acetyl_alpha_neuraminate
-    <-> ec_2_5_1_56 [2.5.1.56] +phosphoenolpyruvate +h2o +phosphate
-    n_acetyl_d_mannosamine
-  }
-
-  branch from n_acetyl_alpha_neuraminate side right {
-    n_acetyl_alpha_neuraminate
-    <-> ec_2_3_1_44 [2.3.1.44] +acetyl_coa +coa
-    n_acetyl_4_o_acetylneuraminate
-  }
-
-  branch from phosphate side left {
-    phosphate
-    <-> . +h +adp +atp +h2o
-    9r_10s_9_10_epome
-  }
-
-  branch from phosphate side right {
-    phosphate
-    <-> . +h +adp +vernolate +vernolate +h2o
-    atp
-  }
-
-  branch from cmp_n_acetyl_beta_neuraminate side left {
-    cmp_n_acetyl_beta_neuraminate
-    <-> . +cmp +alpha_neu5ac_2_3_alpha_l_fucnam_1_3_alpha_d_glcn +h
-    alpha_l_fucnam_1_3_alpha_d_glcnac_pp_undecapreno
-  }
-
-  branch from cmp_n_acetyl_beta_neuraminate side right {
-    cmp_n_acetyl_beta_neuraminate
-    <-> . +cmp +alpha_neu5ac_2_3_beta_d_glc_1_3_alpha_d_galnac_p +h
-    beta_d_glc_1_3_alpha_d_galnac_pp_und
-  }
-
-  branch from diphosphate side left {
-    diphosphate
-    <-> . +h +lovastatin +amp +atp
-    7_2_6_dimethyl_8_2_methyl_1_oxobutoxy_1_2_6_7_8
-  }
-
-  branch from diphosphate side right {
-    diphosphate
-    <-> . +h +amp +11z_octadecenoyl_coa +atp +vaccenic_acid
-    coa
-  }
-
-  branch from nad side left {
-    nad
-    <-> . +nadh +h +1_1_dichloro_2_4_chloro_2_3_dihydroxyphenyl_2_4
-    cis_3_2_2_dichloro_1_4_chlorophenyl_vinyl_6_chlo
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_14_13_246 [1.14.13.246] +nadh +h +o2 +3beta_hydroxy_4_4_dimethylsteroid +h2o
-    3beta_hydroxy_4alpha_methylsteroid_4beta_carboxy
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_asparagine +l_aspartate +l_phenylalanine
-    asparaginyl_phenylalanyl_aspartate
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_asparagine +l_cysteine +l_phenylalanine
-    asparaginyl_phenylalanyl_cysteine
   }
 }

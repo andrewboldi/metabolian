@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4e-7e-10e-hexadeca-4-7-to-h2o2 "(4E,7E,10E)-hexadeca-4,7,… to H2O2" {
-  spacing 218
+  spacing 158
 
   spine at 0,0 {
     4e_7e_10e_hexadeca_4_7_10_trienoyl_coa
@@ -20,69 +20,9 @@ pathway 4e-7e-10e-hexadeca-4-7-to-h2o2 "(4E,7E,10E)-hexadeca-4,7,… to H2O2" {
     2_4_7_10_hexadecatetraenoylcoa
   }
 
-  branch from h side left {
-    h
-    <-> ec_3_6_3_31 [3.6.3.31] +adp +caldopentamine +phosphate +caldopentamine +h2o
-    atp
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_33 [3.6.3.33] +adp +phosphate +atp +h2o
-    5_methoxybenzimidazolylcobamide
-  }
-
-  branch from h2o2 side left {
-    h2o2
-    <-> ec_1_11_1_11 [1.11.1.11] +l_dehydroascorbic_acid +h2o +h
-    l_ascorbate
-  }
-
-  branch from h2o2 side right {
-    h2o2
-    <-> ec_1_7_3_5 [1.7.3.5] +nitrite +3_oxopropanoate +h +o2 +h2o
-    3_nitropropanoate
-  }
-
   branch from 3z_7z_10z_hexadecatrienoyl_coa side left {
     3z_7z_10z_hexadecatrienoyl_coa
     <-> .
     trans_cis_cis_2_7_10_hexadecatrienoyl_coa
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +h +nadph +6_dehydro_scb3
-    scb3
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_412 [1.1.1.412] +h +nadph +2r_2_dodecyl_3_oxohexadecanoate
-    2r_3s_2_dodecyl_3_hydroxyhexadecanoate
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> . +h +mupirocin_f1 +nadp
-    pseudomonate_a
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> . +geranylgeranyl_bacteriochlorophyllide_b +h +nadp
-    dihydrogeranylgeranyl_bacteriochlorophyllide_b
-  }
-
-  branch from fad side right {
-    fad
-    <-> . +fadh2 +ochratoxin_b +h +o2 +chloride +h2o
-    ochratoxin_a
-  }
-
-  branch from fad side left {
-    fad
-    <-> . +fadh2 +2_4_5_dichloro_1h_pyrrole_2_carbonyl_phenol +h +o2 +chloride +h2o
-    pyrrolomycin_c
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway kinetensin-to-l-leucine "kinetensin to L-leucine" {
-  spacing 164
+  spacing 158
 
   spine at 0,0 {
     kinetensin
@@ -16,15 +16,9 @@ pathway kinetensin-to-l-leucine "kinetensin to L-leucine" {
     leucine
   }
 
-  branch from glutamate side left {
-    glutamate
-    <-> ec_2_6_1_7 [2.6.1.7] +3_hydroxy_l_kynurenine +akg +h2o
-    xanthurenate
-  }
-
-  branch from glutamate side right {
-    glutamate
-    <-> . +3_hydroxy_l_kynurenine +akg
-    4_2_amino_3_hydroxyphenyl_2_4_dioxobutanoate
+  branch from kinetensin side left {
+    kinetensin
+    <-> . +h2o +h +kinetensin_1_3 +d_arginyl_l_histidyl_d_prolyl_d_tyrosyl_l_phenyl
+    l_leucine
   }
 }

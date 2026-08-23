@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3s-13z-3-hydroxydocosen-to-11z-3-oxoicosa-11-en "(3S,13Z)-3-hydroxydocosen… to (11Z)-3-oxoicosa-11-enoyl…" {
-  spacing 170
+  spacing 158
 
   spine at 0,0 {
     3s_13z_3_hydroxydocosenoyl_coa
@@ -28,17 +28,5 @@ pathway 3s-13z-3-hydroxydocosen-to-11z-3-oxoicosa-11-en "(3S,13Z)-3-hydroxydocos
     13z_3_oxodocosenoyl_coa
     <-> . +nad +nadh +hplus
     3r_13z_3_hydroxydocosenoyl_coa
-  }
-
-  branch from 11z_3_oxoicosa_11_enoyl_coa side right {
-    11z_3_oxoicosa_11_enoyl_coa
-    <-> . +malonyl-coa +hplus +co2 +coa
-    oleoyl_coa
-  }
-
-  branch from 11z_3_oxoicosa_11_enoyl_coa side left {
-    11z_3_oxoicosa_11_enoyl_coa
-    <-> . +nadh +h +nad
-    3_hydroxyicos_11_enoyl_coa
   }
 }

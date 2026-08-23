@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway geranyl-diphosphate-to-1-6-6-trimethyl-2-7-dioxa "geranyl diphosphate to 1,6,6-trimethyl-2,7-dioxa…" {
-  spacing 228
+  spacing 204
 
   spine at 0,0 {
     gpp
@@ -16,29 +16,5 @@ pathway geranyl-diphosphate-to-1-6-6-trimethyl-2-7-dioxa "geranyl diphosphate to
     6_oxocineole
     <-> ec_1_14_13_51 [1.14.13.51] +nadph +o2 +hplus -nadp -h2o
     1_6_6_trimethyl_2_7_dioxabicyclo_3_2_2_nonan_3_o
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +neoechinulin_b_anion +dmapp
-    isoechinulin_b_anion
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +gpp
-    4e_6e_2_6_dimethylocta_2_4_6_triene
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +dodecanoate +fmnh2 +o2 +h2o +hplus
-    5_hydroxylaurate
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +tetradecanoate +fmnh2 +o2 +h2o +hplus
-    7_hydroxymyristate
   }
 }

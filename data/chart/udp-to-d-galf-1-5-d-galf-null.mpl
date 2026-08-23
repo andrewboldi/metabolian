@@ -15,16 +15,4 @@ pathway udp-to-d-galf-1-5-d-galf-null "UDP to β-D-Galf-(1→5)-β-D-Galf-(…" 
     <-> . +udp_d_galactofuranose -udp -hplus
     d_galf_1_5_d_galf_1_4_l_rhap_1_3_d_glcpnac_1_di
   }
-
-  branch from udp_d_galactofuranose side left {
-    udp_d_galactofuranose
-    <-> ec_5_4_99_9 [5.4.99.9]
-    udp_d_galactose
-  }
-
-  branch from udp_d_galactofuranose side right {
-    udp_d_galactofuranose
-    <-> . +udp +alpha_d_galf_1_4_alpha_d_gal_1_3_beta_d_mannac_1 +h
-    alpha_d_gal_1_3_beta_d_mannac_1_6_beta_d_galf_1
-  }
 }

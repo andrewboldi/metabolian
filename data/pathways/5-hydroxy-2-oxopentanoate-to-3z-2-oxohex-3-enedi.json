@@ -1,0 +1,584 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "5-hydroxy-2-oxopentanoate-to-3z-2-oxohex-3-enedi",
+  "name": "5-hydroxy-2-oxopentanoate to (3Z)-2-oxohex-3-enedioate",
+  "category": "energy-metabolism",
+  "summary": "A 5-step route from 5-hydroxy-2-oxopentanoate to (3Z)-2-oxohex-3-enedioate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR197536"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "5_hydroxy_2_oxopentanoate",
+      "name": "5-hydroxy-2-oxopentanoate",
+      "short": "5-hydroxy-2-oxopent…",
+      "formula": "C5H7O4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM10310"
+      }
+    },
+    {
+      "id": "2_keto_4_pentenoate",
+      "name": "2-keto-4-pentenoate",
+      "formula": "C5H5O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1364413"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "2_oxohex_3_enedioic_acid",
+      "name": "2-oxohex-3-enedioic acid",
+      "short": "2-oxohex-3-enedioic…",
+      "formula": "C6H6O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64927"
+      }
+    },
+    {
+      "id": "1_2_3_trihydroxybenzene",
+      "name": "1,2,3-trihydroxybenzene",
+      "short": "1,2,3-trihydroxyben…",
+      "formula": "C6H6O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1775"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "2e_4z_2_hydroxymuconate",
+      "name": "(2E,4Z)-2-hydroxymuconate",
+      "short": "(2E,4Z)-2-hydroxymu…",
+      "formula": "C6H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:64016"
+      }
+    },
+    {
+      "id": "3z_2_oxohex_3_enedioate",
+      "name": "(3Z)-2-oxohex-3-enedioate",
+      "short": "2-oxohex-3-enedioate",
+      "formula": "C6H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:64011"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_1_1_77",
+      "name": "2-oxo-3-hexenedioate decarboxylase",
+      "ec": [
+        "4.1.1.77"
+      ]
+    },
+    {
+      "id": "ec_1_13_11_35",
+      "name": "pyrogallol 1,2-oxygenase",
+      "ec": [
+        "1.13.11.35"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR197536",
+      "substrates": [
+        {
+          "metabolite": "5_hydroxy_2_oxopentanoate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_keto_4_pentenoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR197536"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197536"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2-oxo-3-hexenedioate decarboxylase",
+      "ec": "4.1.1.77",
+      "substrates": [
+        {
+          "metabolite": "2_keto_4_pentenoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_oxohex_3_enedioic_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_77"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR175209"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR175209"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "pyrogallol 1,2-oxygenase",
+      "ec": "1.13.11.35",
+      "substrates": [
+        {
+          "metabolite": "2_oxohex_3_enedioic_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_2_3_trihydroxybenzene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_35"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR197259"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197259"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Reaction MNXR176613",
+      "substrates": [
+        {
+          "metabolite": "1_2_3_trihydroxybenzene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "2e_4z_2_hydroxymuconate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR176613"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR176613"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(2E,4Z)-2-hydroxyhexa-2,4-dienedioate = (3Z)-2-oxohex-3-enedioate",
+      "equation": "(2E,4Z)-2-hydroxyhexa-2,4-dienedioate = (3Z)-2-oxohex-3-enedioate",
+      "substrates": [
+        {
+          "metabolite": "2e_4z_2_hydroxymuconate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3z_2_oxohex_3_enedioate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:32207"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32207"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_5_hydroxy_2_oxopentanoate_5-hydroxy-2-oxopentanoate-to-biphenyl-2-2-3-3-te",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_hydroxy_2_oxopentanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-hydroxy-2-oxopentanoate-to-biphenyl-2-2-3-3-te"
+      },
+      "note": "Shares 5-hydroxy-2-oxopentanoate with 5-hydroxy-2-oxopentanoate to biphenyl-2,2',3,3'-tetraol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM10310"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_oxohex_3_enedioic_acid_1-3-5-trihydroxybenzene-to-s-8-glutaryldihydroli",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxohex_3_enedioic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-3-5-trihydroxybenzene-to-s-8-glutaryldihydroli"
+      },
+      "note": "Shares 2-oxohex-3-enedioic acid with 1,3,5-trihydroxybenzene to S(8)-glutaryldihydrolipoa….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64927"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_oxohex_3_enedioic_acid_2-deoxyguanosine-to-2-hydroxy-3-oxopropanoate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxohex_3_enedioic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-deoxyguanosine-to-2-hydroxy-3-oxopropanoate"
+      },
+      "note": "Shares 2-oxohex-3-enedioic acid with 2'-deoxyguanosine… to 2-hydroxy-3-oxopropanoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64927"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_oxohex_3_enedioic_acid_ergothioneine-thione-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxohex_3_enedioic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ergothioneine-thione-to-h2o"
+      },
+      "note": "Shares 2-oxohex-3-enedioic acid with ergothioneine (thione… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64927"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_oxohex_3_enedioic_acid_h-to-4-methylcatechol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxohex_3_enedioic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-4-methylcatechol"
+      },
+      "note": "Shares 2-oxohex-3-enedioic acid with H to 4-methylcatechol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64927"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_oxohex_3_enedioic_acid_r-demethyl-4-deoxygadus-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxohex_3_enedioic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-demethyl-4-deoxygadus-to-nad"
+      },
+      "note": "Shares 2-oxohex-3-enedioic acid with (R)-demethyl-4-deoxygadus… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64927"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_oxohex_3_enedioic_acid_sulfo-aldehydes-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxohex_3_enedioic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sulfo-aldehydes-to-o2"
+      },
+      "note": "Shares 2-oxohex-3-enedioic acid with Sulfo-Aldehydes to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64927"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_2_3_trihydroxybenzene_1-3-5-trihydroxybenzene-to-s-8-glutaryldihydroli",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_2_3_trihydroxybenzene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-3-5-trihydroxybenzene-to-s-8-glutaryldihydroli"
+      },
+      "note": "Shares 1,2,3-trihydroxybenzene with 1,3,5-trihydroxybenzene to S(8)-glutaryldihydrolipoa….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1775"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_2_3_trihydroxybenzene_2-3-dihydroxy-n-benzoylse-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_2_3_trihydroxybenzene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3-dihydroxy-n-benzoylse-to-nadph"
+      },
+      "note": "Shares 1,2,3-trihydroxybenzene with 2,3-dihydroxy-N-benzoylse… to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1775"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_2_3_trihydroxybenzene_2e-2-hydroxypenta-2-4-d-to-tert-butoxymethanol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_2_3_trihydroxybenzene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2e-2-hydroxypenta-2-4-d-to-tert-butoxymethanol"
+      },
+      "note": "Shares 1,2,3-trihydroxybenzene with (2E)-2-hydroxypenta-2,4-d… to tert-butoxymethanol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1775"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3z_2_oxohex_3_enedioate_bacillithiol-fosfomycin-to-1-2-dihydroxyethylpho",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3z_2_oxohex_3_enedioate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "bacillithiol-fosfomycin-to-1-2-dihydroxyethylpho"
+      },
+      "note": "Shares (3Z)-2-oxohex-3-enedioate with bacillithiol-fosfomycin to 1,2-dihydroxyethylphospho….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64011"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3z_2_oxohex_3_enedioate_n-3-aminopropyl-hydroxyl-to-h2o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3z_2_oxohex_3_enedioate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-3-aminopropyl-hydroxyl-to-h2o2"
+      },
+      "note": "Shares (3Z)-2-oxohex-3-enedioate with N-(3-aminopropyl)hydroxyl… to H2O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64011"
+          }
+        ]
+      }
+    }
+  ]
+}

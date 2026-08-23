@@ -17,40 +17,4 @@ pathway 4-6-ch3-coo-c-d-man-beta-to-d-glc-beta-1-4-glc-a "4,6-CH3(COO-)C-D-Man-b
     <-> ec_2_4_1_252 [2.4.1.252] +gdp +d_man_alpha_1_3_d_glc_beta_1_4_d_glc_alpha_1_dip +h -d_glc_beta_1_4_glc_alpha_1_diphospho_ditrans_oct
     gdp_alpha_d_mannose
   }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +1_stearoyl_2_linolenoyl_sn_glycero_3_phosphochol +phosphate +1_stearoyl_2_linolenoyl_sn_glycero_3_phosphochol +h2o
-    atp
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_hexadecanoyl_2_z_octadec_9_enoyl_sn_glycero_3
-  }
-
-  branch from phosphoenolpyruvate side left {
-    phosphoenolpyruvate
-    <-> . +beta_d_fructose_6_phosphate +pyruvate
-    beta_d_fructose
-  }
-
-  branch from phosphoenolpyruvate side right {
-    phosphoenolpyruvate
-    <-> . +alpha_d_glucosamine_6_phosphate +pyruvate +h
-    beta_d_glucosamine
-  }
-
-  branch from udp_alpha_d_glucuronate side left {
-    udp_alpha_d_glucuronate
-    <-> . +udp +beta_d_glca_1_4_beta_d_glca_1_3_alpha_d_galnac_1 +h
-    beta_d_glca_1_3_alpha_d_galnac_1_6_alpha_d_galna
-  }
-
-  branch from udp_alpha_d_glucuronate side right {
-    udp_alpha_d_glucuronate
-    <-> . +udp +beta_d_glca_1_4_3_o_acetyl_alpha_l_fuc_1_3_beta +h
-    3_o_acetyl_alpha_l_fuc_1_3_beta_d_ribf_1_4_alpha
-  }
 }

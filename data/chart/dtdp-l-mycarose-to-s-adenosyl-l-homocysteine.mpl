@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dtdp-l-mycarose-to-s-adenosyl-l-homocysteine "dTDP-β-L-mycarose to S-adenosyl-L-homocysteine" {
-  spacing 244
+  spacing 280
 
   spine at 0,0 {
     dtdp_l_mycarose
@@ -30,13 +30,49 @@ pathway dtdp-l-mycarose-to-s-adenosyl-l-homocysteine "dTDP-β-L-mycarose to S-ad
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_106 [2.1.1.106] +l_tryptophan +sam +hplus
-    2_methyl_l_tryptophan
+    <-> ec_2_1_1_231 [2.1.1.231] +4_hydroxyflavanones +sam +hplus
+    4_methoxyflavanones
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_105 [2.1.1.105] +n_benzoyl_4_hydroxyanthranilate +sam +hplus
-    n_benzoyl_4_methoxyanthranilate
+    <-> ec_2_1_1_240 [2.1.1.240] +trans_resveratrol +sam +hplus
+    pterostilbene
+  }
+
+  branch from dtdp side left {
+    dtdp
+    <-> ec_2_4_1_327 [2.4.1.327] +dtdp_2_deoxy_l_fucose +aclacinomycin_t +hplus
+    aclacinomycin_s
+  }
+
+  branch from dtdp side right {
+    dtdp
+    <-> ec_2_4_1_327 [2.4.1.327] +dtdp_2_deoxy_l_fucose +aclacinomycin_s +hplus
+    2_deoxy_l_fucosylaclacinomycin_s
+  }
+
+  branch from sam side left {
+    sam
+    <-> . +pterostilbene +sah +hplus
+    3_methoxy_4_5_dihydroxy_trans_stilbene
+  }
+
+  branch from sam side right {
+    sam
+    <-> . +3_methoxy_4_5_dihydroxy_trans_stilbene +sah +hplus
+    trans_resveratrol
+  }
+
+  branch from sah side left {
+    sah
+    <-> . +phosphoethanolamine +sam +hplus
+    phosphocholine
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_175 [2.1.1.175] +tricetin +sam +hplus
+    3_5_di_o_methyltricetin
   }
 }

@@ -105,90 +105,6 @@
       "xrefs": {
         "chebi": "CHEBI:167609"
       }
-    },
-    {
-      "id": "n6_2_methylpropenoyl_l_lysine",
-      "name": "N6-(2-methylpropenoyl)-L-lysine",
-      "short": "N6-(2-methylpropeno…",
-      "formula": "C10H16N2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:233147"
-      }
-    },
-    {
-      "id": "nad",
-      "name": "NAD+",
-      "formula": "C21H26N7O14P2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:57540"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "Water",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:15377"
-      }
-    },
-    {
-      "id": "2_o_methacrylyl_adp_d_ribose",
-      "name": "2''-O-methacrylyl-ADP-D-ribose",
-      "short": "2''-O-methacrylyl-A…",
-      "formula": "C19H25N5O15P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:234234"
-      }
-    },
-    {
-      "id": "nicotinamide",
-      "name": "nicotinamide",
-      "formula": "C6H6N2O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:17154"
-      }
-    },
-    {
-      "id": "n6_methyl_l_lysinium",
-      "name": "N6-methyl-L-lysinium",
-      "formula": "C7H15N2O",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:61929"
-      }
-    },
-    {
-      "id": "7_o_demethylcephaeline",
-      "name": "7'-O-demethylcephaeline",
-      "short": "7'-O-demethylcephae…",
-      "formula": "C27H38N2O4",
-      "charge": 2,
-      "xrefs": {
-        "chebi": "CHEBI:231589"
-      }
-    },
-    {
-      "id": "cephaeline",
-      "name": "cephaeline",
-      "formula": "C28H40N2O4",
-      "charge": 2,
-      "xrefs": {
-        "chebi": "CHEBI:231587"
-      }
-    },
-    {
-      "id": "emetine",
-      "name": "emetine",
-      "formula": "C29H42N2O4",
-      "charge": 2,
-      "xrefs": {
-        "chebi": "CHEBI:149548"
-      }
     }
   ],
   "enzymes": [
@@ -197,21 +113,10 @@
       "name": "methyltransferase cap1",
       "ec": [
         "2.1.1.57"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_395",
-      "name": "7'-O-demethylcephaeline methyltransferase",
-      "ec": [
-        "2.1.1.395"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_396",
-      "name": "cephaeline 6'-O-methyltransferase",
-      "ec": [
-        "2.1.1.396"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q8N1G2"
+      }
     }
   ],
   "reactions": [
@@ -345,191 +250,247 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "N(6)-methacrylyl-L-lysyl-[protein] + NAD(+) + H2O = 2''-O-methacrylyl-ADP-D-ribose + ni...",
-      "equation": "N(6)-methacrylyl-L-lysyl-[protein] + NAD(+) + H2O = 2''-O-methacrylyl-ADP-D-ribose + nicotinamide + L-lysyl-[protein]",
-      "substrates": [
-        {
-          "metabolite": "n6_2_methylpropenoyl_l_lysine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_o_methacrylyl_adp_d_ribose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nicotinamide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_lysinium",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:85159"
+      "id": "xt_n_5_guanylyl_l_lysine_1_7-methyl-gtp-to-l-lysinium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_5_guanylyl_l_lysine_1"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "7-methyl-gtp-to-l-lysinium"
+      },
+      "note": "Shares Nε-(5'-guanylyl)-L-lysine(1−) with 7-methyl-GTP to L-lysinium.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:85159"
+            "db": "ChEBI",
+            "id": "CHEBI:138294"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "L-lysyl(56)-[histone H3] + S-adenosyl-L-methionine = N(6)-methyl-L-lysyl(56)-[histone H...",
-      "equation": "L-lysyl(56)-[histone H3] + S-adenosyl-L-methionine = N(6)-methyl-L-lysyl(56)-[histone H3] + S-adenosyl-L-homocysteine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "l_lysinium",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n6_methyl_l_lysinium",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:85519"
+      "id": "xt_n_5_guanylyl_l_lysine_1_7r-7-4-carboxylatobuta-to-s-adenosyl-l-homocyst",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_5_guanylyl_l_lysine_1"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "7r-7-4-carboxylatobuta-to-s-adenosyl-l-homocyst"
+      },
+      "note": "Shares Nε-(5'-guanylyl)-L-lysine(1−) with (7R)-7-(4-carboxylatobuta… to S-adenosyl-L-homocysteine.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:85519"
+            "db": "ChEBI",
+            "id": "CHEBI:138294"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "7'-O-demethylcephaeline methyltransferase",
-      "equation": "7'-O-demethylcephaeline + S-adenosyl-L-methionine = cephaeline + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.395",
-      "substrates": [
-        {
-          "metabolite": "7_o_demethylcephaeline",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "cephaeline",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_1_395"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:80555"
+      "id": "xt_n_5_guanylyl_l_lysine_1_vinylacetyl-coa-to-norsolorinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_5_guanylyl_l_lysine_1"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "vinylacetyl-coa-to-norsolorinate"
+      },
+      "note": "Shares Nε-(5'-guanylyl)-L-lysine(1−) with vinylacetyl-CoA to norsolorinate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:80555"
+            "db": "ChEBI",
+            "id": "CHEBI:138294"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "cephaeline 6'-O-methyltransferase",
-      "equation": "cephaeline + S-adenosyl-L-methionine = emetine + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.396",
-      "substrates": [
-        {
-          "metabolite": "cephaeline",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "emetine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_1_396"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:80659"
+      "id": "xt_5_end_ribonucleoside_5_diphosphate_3_5-end-ribonucleotide-to-7-methylguanosine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_end_ribonucleoside_5_diphosphate_3"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "5-end-ribonucleotide-to-7-methylguanosine"
+      },
+      "note": "Shares 5'-end ribonucleoside 5'-diphosphate(3−) with 5'-end ribonucleotide… to 7-methylguanosine.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:80659"
+            "db": "ChEBI",
+            "id": "CHEBI:167616"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_end_ribonucleoside_5_diphosphate_3_5-n7-methyl-to-5-end-ribonucleoside",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_end_ribonucleoside_5_diphosphate_3"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-n7-methyl-to-5-end-ribonucleoside"
+      },
+      "note": "Shares 5'-end ribonucleoside 5'-diphosphate(3−) with 5'-(N7-methyl… to 5'-end ribonucleoside….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:167616"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_5_triphosphoguanosine_ribonucleotide_3_5-5-triphosphoguanosin-to-s-s-adenosyl-l-methion",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_5_triphosphoguanosine_ribonucleotide_3"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-5-triphosphoguanosin-to-s-s-adenosyl-l-methion"
+      },
+      "note": "Shares 5'-(5'-triphosphoguanosine)-(ribonucleotide)(3−) with 5'-(5'-triphosphoguanosin… to (S)-S-adenosyl-L-methioni….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:167617"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_5_triphosphoguanosine_ribonucleotide_3_5-end-ribonucleotide-to-7-methylguanosine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_5_triphosphoguanosine_ribonucleotide_3"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-end-ribonucleotide-to-7-methylguanosine"
+      },
+      "note": "Shares 5'-(5'-triphosphoguanosine)-(ribonucleotide)(3−) with 5'-end ribonucleotide… to 7-methylguanosine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:167617"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_n7_methyl_5_triphosphoguanosine_ribonucleoside_5-5-triphosphoguanosin-to-s-s-adenosyl-l-methion",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_n7_methyl_5_triphosphoguanosine_ribonucleoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-5-triphosphoguanosin-to-s-s-adenosyl-l-methion"
+      },
+      "note": "Shares 5'-(N7-methyl 5'-triphosphoguanosine)-ribonucleoside(2−) with 5'-(5'-triphosphoguanosin… to (S)-S-adenosyl-L-methioni….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:156461"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_n7_methyl_5_triphosphoguanosine_ribonucleoside_5-end-ribonucleotide-to-7-methylguanosine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_n7_methyl_5_triphosphoguanosine_ribonucleoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-end-ribonucleotide-to-7-methylguanosine"
+      },
+      "note": "Shares 5'-(N7-methyl 5'-triphosphoguanosine)-ribonucleoside(2−) with 5'-end ribonucleotide… to 7-methylguanosine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:156461"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_n7_methyl_5_triphosphoguanosine_ribonucleoside_5-n7-methyl-to-5-end-ribonucleoside",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_n7_methyl_5_triphosphoguanosine_ribonucleoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-n7-methyl-to-5-end-ribonucleoside"
+      },
+      "note": "Shares 5'-(N7-methyl 5'-triphosphoguanosine)-ribonucleoside(2−) with 5'-(N7-methyl… to 5'-end ribonucleoside….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:156461"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_n7_methyl_5_triphosphoguanosine_ribonucleoside_5-n7-methyl-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_n7_methyl_5_triphosphoguanosine_ribonucleoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-n7-methyl-to-diphosphate"
+      },
+      "note": "Shares 5'-(N7-methyl 5'-triphosphoguanosine)-ribonucleoside(2−) with 5'-(N7-methyl… to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:156461"
           }
         ]
       }

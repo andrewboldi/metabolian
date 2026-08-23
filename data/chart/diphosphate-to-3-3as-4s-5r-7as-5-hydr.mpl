@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway diphosphate-to-3-3as-4s-5r-7as-5-hydr "diphosphate to 3-[(3aS,4S,5R,7aS)-5-hydr…" {
-  spacing 236
+  spacing 188
 
   spine at 0,0 {
     diphosphate
@@ -14,53 +14,5 @@ pathway diphosphate-to-3-3as-4s-5r-7as-5-hydr "diphosphate to 3-[(3aS,4S,5R,7aS)
     3_3as_4s_5r_7as_5_hydroxy_7a_methyl_1_oxo_octahy
     <-> ec_1_1_1_35 [1.1.1.35] +nadh +h -3_3as_4s_5r_7as_5_hydroxy_7a_methyl_1_oxo_octahy
     nad
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +2_undecylpyrrole +4_methoxy_2_2_bipyrrole_5_carboxaldehyde +h +adp +phosphate
-    undecylprodigiosin
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_6_3_2_2 [6.3.2.2] +l_alanine +l_glutamate +h +adp +phosphate
-    gamma_l_glutamyl_d_alanine
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +11z_eicosenoyl_coa +cholesterol
-    cholesteryl_11z_icosenoate
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +8z_11z_14z_eicosatrienoyl_coa +cholesterol
-    cholesteryl_all_cis_icosa_8_11_14_trienoate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_histidine +l_proline
-    prolyl_histidine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_leucine +l_proline +l_arginine
-    prolyl_leucyl_arginine
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_316 [1.1.1.316] +nadh +l_galactono_1_4_lactone +h
-    l_galactose
-  }
-
-  branch from nad side right {
-    nad
-    <-> . +nadh +h +o2 +3_chlorotoluene +h2o
-    3_chlorophenyl_methanol
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway epiandrosterone-to-2-hydroxyestrone "epiandrosterone to 2-hydroxyestrone…" {
-  spacing 312
+  spacing 318
 
   spine at 0,0 {
     epiandrosterone
@@ -26,57 +26,63 @@ pathway epiandrosterone-to-2-hydroxyestrone "epiandrosterone to 2-hydroxyestrone
     androsterone
   }
 
-  branch from androst_4_ene_3_17_dione side right {
-    androst_4_ene_3_17_dione
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    16_hydroxyandrost_4_ene_3_17_dione
-  }
-
-  branch from androst_4_ene_3_17_dione side left {
-    androst_4_ene_3_17_dione
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    15_hydroxyandrost_4_ene_3_17_dione
-  }
-
-  branch from hydrogen_donor side right {
-    hydrogen_donor
-    <-> . +tetrahydroalstonine +hydrogen_acceptor +fmnh2 +o2 +fmn +h2o +hplus
-    alstonine
-  }
-
-  branch from hydrogen_donor side left {
-    hydrogen_donor
-    <-> . +ajmalicine +hydrogen_acceptor +fmnh2 +o2 +fmn +h2o +hplus
-    serpentine
-  }
-
-  branch from estrone side right {
-    estrone
-    <-> . +udp_d_glucuronate +udp +hplus
-    estrone_3_o_d_glucuronide
+  branch from fmn side right {
+    fmn
+    <-> . +11_hydroxycucurbitadienol +fmnh2 +o2 +h2o +hplus
+    11_oxocucurbitadienol
   }
 
   branch from fmn side left {
     fmn
-    <-> . +4_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
-    4_24s_dihydroxycholesterol
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +22r_22_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
-    7_22r_dihydroxycholesterol
-  }
-
-  branch from 2_hydroxyestrone side left {
-    2_hydroxyestrone
-    <-> . +sam +sah +hplus
-    2_hydroxy_3_o_methyl_estrone
+    <-> . +all_trans_retinoate +fmnh2 +o2 +h2o +hplus
+    5_6_epoxyretinoate
   }
 
   branch from 2_hydroxyestrone side right {
     2_hydroxyestrone
-    <-> ec_1_14_14_1 [1.14.14.1] +nadh +h +estrone +o2 +h2o
-    nad
+    <-> . +h +adp +phosphate +h2o
+    atp
+  }
+
+  branch from epiandrosterone side left {
+    epiandrosterone
+    <-> . +udp_d_glucose +udp +hplus
+    epiandrosterone_3_d_glucoside
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> ec_1_14_14_73 [1.14.14.73] +albendazole +o2 +fmn +h2o +hplus
+    albendazole_s_oxide
+  }
+
+  branch from fmnh2 side left {
+    fmnh2
+    <-> ec_1_14_14_73 [1.14.14.73] +fenbendazole +o2 +fmn +h2o +hplus
+    oxfendazole
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_90 [1.14.14.90] +genistein +fmnh2 +o2 +h2o +hplus
+    2_hydroxygenistein
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_74 [1.14.14.74] +albendazole +fmnh2 +o2 +h2o +hplus
+    hydroxyalbendazole
+  }
+
+  branch from udp_d_glucuronate side right {
+    udp_d_glucuronate
+    <-> ec_2_4_1_253 [2.4.1.253] +wogonin +udp
+    wogonin_7_o_d_glucuronate
+  }
+
+  branch from udp_d_glucuronate side left {
+    udp_d_glucuronate
+    <-> ec_2_4_1_262 [2.4.1.262] +soyasapogenol_a +udp +hplus
+    soyasapogenol_a_3_o_glucuronate
   }
 }

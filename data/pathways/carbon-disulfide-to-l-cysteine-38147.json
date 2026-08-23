@@ -1,0 +1,402 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "carbon-disulfide-to-l-cysteine-38147",
+  "name": "carbon disulfide to L-cysteine",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from carbon disulfide to L-cysteine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:38147"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:23012"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "carbon_disulfide",
+      "name": "carbon disulfide",
+      "formula": "CS2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:23012"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "carbonyl_sulfide",
+      "name": "carbonyl sulfide",
+      "formula": "COS",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16573"
+      }
+    },
+    {
+      "id": "h2s",
+      "name": "Hydrogen sulfide (H2S)",
+      "short": "Hydrogen sulfide…",
+      "formula": "HS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29919"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "sulfur_atom",
+      "name": "sulfur atom",
+      "formula": "S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:26833"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "l_alanine",
+      "name": "L-alanine",
+      "formula": "C3H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1105732"
+      }
+    },
+    {
+      "id": "l_cysteine",
+      "name": "L-cysteine",
+      "formula": "C3H7NO2S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM738068"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_8_1_18",
+      "name": "NAD(P)H sulfur oxidoreductase (CoA-dependent)",
+      "ec": [
+        "1.8.1.18"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "carbon disulfide + H2O = carbonyl sulfide + hydrogen sulfide + H(+)",
+      "equation": "carbon disulfide + H2O = carbonyl sulfide + hydrogen sulfide + H(+)",
+      "substrates": [
+        {
+          "metabolite": "carbon_disulfide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "carbonyl_sulfide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2s",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:38147"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38147"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "NAD(P)H sulfur oxidoreductase (CoA-dependent)",
+      "equation": "hydrogen sulfide + NAD(+) = sulfur + NADH",
+      "ec": "1.8.1.18",
+      "substrates": [
+        {
+          "metabolite": "h2s",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sulfur_atom",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_8_1_18"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:36599"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36599"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR138195",
+      "substrates": [
+        {
+          "metabolite": "l_alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfur_atom",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_cysteine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR138195"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR138195"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_carbon_disulfide_carbon-disulfide-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "carbon_disulfide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "carbon-disulfide-to-h2o"
+      },
+      "note": "Shares carbon disulfide with carbon disulfide to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:23012"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_carbon_disulfide_carbon-disulfide-to-h2o-38143",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "carbon_disulfide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "carbon-disulfide-to-h2o-38143"
+      },
+      "note": "Shares carbon disulfide with carbon disulfide to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:23012"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_carbon_disulfide_carbon-disulfide-to-l-cysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "carbon_disulfide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "carbon-disulfide-to-l-cysteine"
+      },
+      "note": "Shares carbon disulfide with carbon disulfide to L-cysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:23012"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_carbon_disulfide_nadh-to-coa-18-cooh-15e-dinor-lte4",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "carbon_disulfide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-coa-18-cooh-15e-dinor-lte4"
+      },
+      "note": "Shares carbon disulfide with NADH to CoA-18-COOH-15E-dinor-LTE4.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:23012"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_carbonyl_sulfide_6-sulfo-d-quinovose-to-l-cysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "carbonyl_sulfide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-sulfo-d-quinovose-to-l-cysteine"
+      },
+      "note": "Shares carbonyl sulfide with 6-sulfo-D-quinovose to L-cysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16573"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_carbonyl_sulfide_6-sulfo-d-quinovose-to-l-cysteine-77779",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "carbonyl_sulfide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-sulfo-d-quinovose-to-l-cysteine-77779"
+      },
+      "note": "Shares carbonyl sulfide with 6-sulfo-D-quinovose to L-cysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16573"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_carbonyl_sulfide_carbon-disulfide-to-l-cysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "carbonyl_sulfide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "carbon-disulfide-to-l-cysteine"
+      },
+      "note": "Shares carbonyl sulfide with carbon disulfide to L-cysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16573"
+          }
+        ]
+      }
+    }
+  ]
+}

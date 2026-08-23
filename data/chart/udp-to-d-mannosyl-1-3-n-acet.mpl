@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-d-mannosyl-1-3-n-acet "UDP to α-D-mannosyl-(1→3)-N-acet…" {
-  spacing 188
+  spacing 152
 
   spine at 0,0 {
     udp
@@ -16,41 +16,5 @@ pathway udp-to-d-mannosyl-1-3-n-acet "UDP to α-D-mannosyl-(1→3)-N-acet…" {
     udp_alpha_d_galactose
     <-> . +gdp +alpha_d_man_1_2_alpha_d_man_1_3_alpha_d_galnac_p +h -d_mannosyl_1_3_n_acetyl_d_galctosaminyl_1_dipho
     gdp_alpha_d_mannose
-  }
-
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> ec_2_4_1_13 [2.4.1.13] +udp +sucrose +h
-    keto_d_fructose
-  }
-
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> ec_2_4_1_188 [2.4.1.188] +udp +beta_d_glucosyl_1_4_n_acetyl_d_glucosaminyldipho +h
-    n_acetyl_d_glucosaminyldiphosphoundecaprenol
-  }
-
-  branch from udp_alpha_d_glucuronate side left {
-    udp_alpha_d_glucuronate
-    <-> . +udp +h +isourolithin_a_3_o_glucuronide
-    isourolithin_a
-  }
-
-  branch from udp_alpha_d_glucuronate side right {
-    udp_alpha_d_glucuronate
-    <-> . +udp +urolithin_b_3_o_glucuronide
-    urolithin_b
-  }
-
-  branch from udp_alpha_d_galactose side left {
-    udp_alpha_d_galactose
-    <-> . +udp +beta_d_qui3nac_1_3_beta_d_ribf_1_4_alpha_d_gal_1 +h
-    beta_d_qui3nac_1_3_beta_d_ribf_1_4_beta_d_gal_1
-  }
-
-  branch from udp_alpha_d_galactose side right {
-    udp_alpha_d_galactose
-    <-> . +udp +beta_d_gal_1_4_alpha_d_glc_1_4_alpha_d_galnac_1 +h
-    alpha_d_glc_1_4_alpha_d_galnac_1_3_alpha_d_galna
   }
 }

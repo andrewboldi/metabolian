@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway lithocholyl-coa-to-fmn "lithocholyl-CoA to FMN" {
-  spacing 252
+  spacing 234
 
   spine at 0,0 {
     lithocholyl_coa
@@ -18,25 +18,7 @@ pathway lithocholyl-coa-to-fmn "lithocholyl-CoA to FMN" {
 
   branch from taurochenodeoxycholate side left {
     taurochenodeoxycholate
-    <-> . +nad +nadh +hplus
+    <-> . +nadp +nadph +hplus
     7_oxotaurolithocholate
-  }
-
-  branch from taurochenodeoxycholate side right {
-    taurochenodeoxycholate
-    <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
-    taurochenodeoxycholate_7_sulfate
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +hancockiamide_b +fmnh2 +o2 +h2o +hplus
-    hancockiamide_c
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +hancockiamide_d +fmnh2 +o2 +h2o +hplus
-    hancockiamide_h
   }
 }

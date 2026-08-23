@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway delta24-25-sitosterol-to-cholesterol "Delta24-25-sitosterol to cholesterol" {
-  spacing 264
+  spacing 336
 
   spine at 0,0 {
     delta24_25_sitosterol
@@ -20,85 +20,157 @@ pathway delta24-25-sitosterol-to-cholesterol "Delta24-25-sitosterol to cholester
 
   branch from nadp side left {
     nadp
-    <-> ec_1_2_1_47 [1.2.1.47] +h +nadph +4_trimethylamino_butanoate +h2o
-    4_trimethylamino_butanal
+    <-> ec_1_1_1_71 [1.1.1.71] +dihydrocarveol +h +nadph
+    2e_geranial
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_15_15 [1.14.15.15] +h +o2 +epidihydrocholesterin +nadph +h2o
-    5beta_cholestane_3alpha_26_diol
+    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +phellandral
+    1s_2s_4r_isodihydrocarveol
   }
 
   branch from h side left {
     h
-    <-> ec_1_1_1_188 [1.1.1.188] +nadh +9_10_phenanthroquinone +nad
-    phenanthrene_9_10_diol
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +isopropyl_d_galactopyranoside +phosphate +isopropyl_d_galactopyranoside +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +5beta_pregnan_3_20_dione +nad
-    3beta_hydroxy_5beta_pregnane_20_one
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    2_deoxy_2_fluoro_beta_d_galactose
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_2 [1.1.1.2] +4_phenylbutan_2_one +h +nadp
-    s_4_phenyl_2_butanol
+    <-> ec_1_1_1_71 [1.1.1.71] +h +phellandral +nadp
+    neodihydrocarveol
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_2 [1.1.1.2] +s_1_phenyl_2_propanol +nadp +h
-    phenylacetone
-  }
-
-  branch from stigmasterol side left {
-    stigmasterol
-    <-> . +s_adenosyl_l_homocysteine +h +desmosterol
-    s_adenosyl_l_methionine
-  }
-
-  branch from s_s_adenosyl_l_methionine side right {
-    s_s_adenosyl_l_methionine
-    <-> ec_2_1_1_300 [2.1.1.300] +s_adenosyl_l_homocysteine +h +argemonine
-    pavine
+    <-> ec_1_1_1_71 [1.1.1.71] +h +phellandral +nadp
+    1s_2r_4r_neoisodihydrocarveol
   }
 
   branch from s_s_adenosyl_l_methionine side left {
     s_s_adenosyl_l_methionine
-    <-> ec_2_1_1_267 [2.1.1.267] +s_adenosyl_l_homocysteine +h +isorhamnetin
-    quercetin
+    <-> ec_2_6_1_62 [2.6.1.62] +7r_8s_7_8_diammoniononanoate +s_adenosyl_4_methylsulfanyl_2_oxobutanoate
+    8s_8_amino_7_oxononanoate
   }
 
-  branch from desmosterol side right {
-    desmosterol
-    <-> . +fadh2 +h +fad
-    7_dehydrodesmosterol
+  branch from s_s_adenosyl_l_methionine side right {
+    s_s_adenosyl_l_methionine
+    <-> ec_4_4_1_14 [4.4.1.14] +1_aminocyclopropane_1_carboxylate +h
+    s_methyl_5_thioadenosine
   }
 
   branch from fad side left {
     fad
-    <-> ec_1_6_6_9 [1.6.6.9] +trimethylamine +h2o +fadh2 +h
-    trimethylamine_n_oxide
+    <-> . +fadh2 +2e_5_methylhexa_2_4_dienoyl_coa +h
+    5_methylhex_4_enoyl_coa
   }
 
   branch from fad side right {
     fad
-    <-> . +nadh +acetyl_coa +fadh2 +diphosphate +h +amp +salicylate +atp +coa +nad +h2o
-    3_2_hydroxyphenyl_propanoate
+    <-> . +fadh2 +h +5_methylhex_4_enoyl_coa
+    2e_5_methylhexa_2_4_dienoyl_coa
   }
 
   branch from cholesterol side left {
     cholesterol
-    <-> . +udp +h +cholesteryl_alpha_d_glucoside
-    udp_alpha_d_glucose
+    <-> ec_1_14_13_98 [1.14.13.98] +24s_24_hydroxycholesterol +nadp +h2o +h +nadph
+    o2
   }
 
   branch from cholesterol side right {
     cholesterol
-    <-> . +h +o2 +nadph +nadp +h2o
-    cholest_5_en_3beta_22r_diol
+    <-> ec_1_14_15_6 [1.14.15.6] +h +o2 +nadph +nadp +h2o
+    22r_22_hydroxycholesterol
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    2_aminogalactopyranose
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    d_galactal
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_1_1_71 [1.1.1.71] +h +phellandral +nadp
+    isodihydrocarveol
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_1_1_71 [1.1.1.71] +h +phellandral +nadp
+    neoisodihydrocarveol
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +phellandral
+    neodihydrocarveol
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +11r_dihydroartemisinic_aldehyde
+    presilphiperfolan_8_ol
+  }
+
+  branch from s_adenosyl_l_homocysteine side left {
+    s_adenosyl_l_homocysteine
+    <-> . +h +13_o_desmethyl_tacrolimus_13_dmt_or_m_i +13_15_o_didesmethyl_tacrolimus
+    s_adenosyl_l_methionine
+  }
+
+  branch from s_adenosyl_l_homocysteine side right {
+    s_adenosyl_l_homocysteine
+    <-> . +15_dmt_or_m_iii_15_o_desmethyl_tacrolimus +h +s_adenosyl_l_methionine
+    15_31_o_didesmethyl_tacrolimus
+  }
+
+  branch from s_s_adenosyl_l_methionine side left {
+    s_s_adenosyl_l_methionine
+    <-> ec_4_1_1_19 [4.1.1.19] +co2 +h
+    s_adenosyl_3_methylsulfanyl_propylamine
+  }
+
+  branch from fadh2 side right {
+    fadh2
+    <-> ec_1_8_99_2 [1.8.99.2] +adenosine_5_phosphosulfate +fad +amp
+    sulfite
+  }
+
+  branch from fadh2 side left {
+    fadh2
+    <-> ec_1_1_98_3 [1.1.98.3] +trans_octacis_decaprenylphospho_beta_d_erythro_p +h +fad
+    trans_octacis_decaprenylphospho_beta_d_ribofuran
+  }
+
+  branch from fad side right {
+    fad
+    <-> . +fadh2 +7_hydroxy_3_isocyanochromen_2_one +h +o2 +h2o
+    paerucumarin
+  }
+
+  branch from fad side left {
+    fad
+    <-> . +fadh2 +7_hydroxy_3_isocyanochromen_2_one +h +o2 +h2o
+    6_7_dihydroxy_3_isocyanochromen_2_one
+  }
+
+  branch from cholesterol side right {
+    cholesterol
+    <-> ec_1_3_1_22 [1.3.1.22] +h +nadph +nadp
+    5_cholestan_3_ol
   }
 }

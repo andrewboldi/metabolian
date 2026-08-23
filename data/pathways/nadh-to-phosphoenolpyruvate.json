@@ -1,0 +1,466 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "nadh-to-phosphoenolpyruvate",
+  "name": "NADH to phosphoenolpyruvate",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from NADH to phosphoenolpyruvate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR195067"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "s_malyl_coa",
+      "name": "(S)-malyl-CoA",
+      "formula": "C25H35N7O20P3S",
+      "charge": -5,
+      "xrefs": {
+        "metanetx": "MNXM730062"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "4_hydroxy_2_oxoglutarate",
+      "name": "4-hydroxy-2-oxoglutarate",
+      "short": "4-hydroxy-2-oxoglut…",
+      "formula": "C5H4O6",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM894"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "l_aspartate",
+      "name": "L-aspartate",
+      "formula": "C4H6NO4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1364497"
+      }
+    },
+    {
+      "id": "4s_4_hydroxy_l_glutamate",
+      "name": "(4S)-4-hydroxy-L-glutamate",
+      "short": "4-hydroxy-L-glutama…",
+      "formula": "C5H8NO5",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1371442"
+      }
+    },
+    {
+      "id": "oxaloacetate",
+      "name": "oxaloacetate",
+      "formula": "C4H2O5",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM46"
+      }
+    },
+    {
+      "id": "xtp",
+      "name": "XTP",
+      "formula": "C10H11N4O15P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1102152"
+      }
+    },
+    {
+      "id": "xdp",
+      "name": "XDP",
+      "formula": "C10H11N4O12P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM4133"
+      }
+    },
+    {
+      "id": "phosphoenolpyruvate",
+      "name": "phosphoenolpyruvate",
+      "formula": "C3H2O6P",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM73"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_2_4_1",
+      "name": "pyruvate dehydrogenase (acetyl-transferring)",
+      "ec": [
+        "1.2.4.1"
+      ],
+      "xrefs": {
+        "uniprot": "P29803"
+      }
+    },
+    {
+      "id": "ec_1_8_1_4",
+      "name": "dihydrolipoyl dehydrogenase",
+      "ec": [
+        "1.8.1.4"
+      ],
+      "xrefs": {
+        "uniprot": "P09622"
+      }
+    },
+    {
+      "id": "ec_2_3_1_61",
+      "name": "dihydrolipoyllysine-residue succinyltransferase",
+      "ec": [
+        "2.3.1.61"
+      ],
+      "xrefs": {
+        "uniprot": "P36957"
+      }
+    },
+    {
+      "id": "ec_4_1_1_32",
+      "name": "phosphoenolpyruvate carboxykinase (GTP)",
+      "ec": [
+        "4.1.1.32"
+      ],
+      "xrefs": {
+        "uniprot": "P35558"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "pyruvate dehydrogenase (acetyl-transferring)",
+      "ec": "1.2.4.1",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "s_malyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4_hydroxy_2_oxoglutarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_4_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR195067"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR195067"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR97909",
+      "substrates": [
+        {
+          "metabolite": "l_aspartate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4_hydroxy_2_oxoglutarate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4s_4_hydroxy_l_glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oxaloacetate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR97909"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR97909"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "phosphoenolpyruvate carboxykinase (GTP)",
+      "ec": "4.1.1.32",
+      "substrates": [
+        {
+          "metabolite": "xtp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oxaloacetate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "xdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphoenolpyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_32"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR134027"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR134027"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_s_malyl_coa_n-n-diacetylchitotriose-to-n-n-n-triacetylchitot",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_malyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-n-diacetylchitotriose-to-n-n-n-triacetylchitot"
+      },
+      "note": "Shares (S)-malyl-CoA with N,N''-diacetylchitotriose to N,N',N''-triacetylchitotr….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM730062"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_hydroxy_2_oxoglutarate_d-aspartate-to-trans-4-hydroxy-l-proline",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_hydroxy_2_oxoglutarate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-aspartate-to-trans-4-hydroxy-l-proline"
+      },
+      "note": "Shares 4-hydroxy-2-oxoglutarate with D-aspartate to trans-4-hydroxy-L-proline.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM894"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4s_4_hydroxy_l_glutamate_4r-4-hydroxy-2-oxogluta-to-trans-4-hydroxy-l-pr",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4s_4_hydroxy_l_glutamate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4r-4-hydroxy-2-oxogluta-to-trans-4-hydroxy-l-pr"
+      },
+      "note": "Shares (4S)-4-hydroxy-L-glutamate with (4R)-4-hydroxy-2-oxogluta… to trans-4-hydroxy-L-proline.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371442"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4s_4_hydroxy_l_glutamate_d-aspartate-to-trans-4-hydroxy-l-proline",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4s_4_hydroxy_l_glutamate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-aspartate-to-trans-4-hydroxy-l-proline"
+      },
+      "note": "Shares (4S)-4-hydroxy-L-glutamate with D-aspartate to trans-4-hydroxy-L-proline.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371442"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_xtp_4-hydroxymethylcatechol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "xtp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxymethylcatechol-to-h2o"
+      },
+      "note": "Shares XTP with 4-hydroxymethylcatechol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1102152"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_xtp_dtdp-4-amino-4-6-dideoxy-to-murnac-l-ala-d-isogl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "xtp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-4-amino-4-6-dideoxy-to-murnac-l-ala-d-isogl"
+      },
+      "note": "Shares XTP with dTDP-4-amino-4,6-dideoxy-… to MurNAc-L-Ala-D-isoglutami….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1102152"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_xdp_4-hydroxymethylcatechol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "xdp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxymethylcatechol-to-h2o"
+      },
+      "note": "Shares XDP with 4-hydroxymethylcatechol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM4133"
+          }
+        ]
+      }
+    }
+  ]
+}

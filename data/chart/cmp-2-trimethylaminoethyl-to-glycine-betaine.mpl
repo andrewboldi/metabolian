@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cmp-2-trimethylaminoethyl-to-glycine-betaine "CMP-2-trimethylaminoethylâ€¦ to glycine betaine" {
-  spacing 340
+  spacing 336
 
   spine at 0,0 {
     cmp_2_trimethylaminoethylphosphonate
@@ -14,29 +14,5 @@ pathway cmp-2-trimethylaminoethyl-to-glycine-betaine "CMP-2-trimethylaminoethylâ
     1r_1_hydroxy_2_trimethylamino_ethyl_phosphonate
     <-> ec_1_13_11_90 [1.13.11.90] +o2 -pi -hplus
     betaine
-  }
-
-  branch from ctp side left {
-    ctp
-    <-> ec_2_7_7_41 [2.7.7.41] +h +1_2_dioctadecanoyl_sn_glycerol_3_phosphate +diphosphate
-    1_2_dioctadecanoyl_sn_glycero_3_cytidine_5_dipho
-  }
-
-  branch from ctp side right {
-    ctp
-    <-> . +cdp +4_amino_2_methyl_5_phosphooxymethyl_pyrimidine +h
-    4_amino_5_hydroxymethyl_2_methylpyrimidine
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +1_docosahexenoylglycerophosphocholine_delta_4_7 +phosphate +1_docosahexenoylglycerophosphocholine_delta_4_7 +h2o
-    atp
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    2_linoleoylglycerophosphocholine
   }
 }

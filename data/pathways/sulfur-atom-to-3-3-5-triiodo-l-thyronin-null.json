@@ -1,0 +1,562 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "sulfur-atom-to-3-3-5-triiodo-l-thyronin-null",
+  "name": "sulfur atom to 3,3',5-triiodo-L-thyronin…",
+  "category": "nucleotide-metabolism",
+  "summary": "A 3-step route from sulfur atom to 3,3',5-triiodo-L-thyronine sulfate(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR195751"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:26833"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "sulfur_atom",
+      "name": "sulfur atom",
+      "formula": "S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:26833"
+      }
+    },
+    {
+      "id": "glucose",
+      "name": "D-Glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4167"
+      }
+    },
+    {
+      "id": "indol_3_yl_acetonitrile",
+      "name": "(indol-3-yl)acetonitrile",
+      "short": "(indol-3-yl)acetoni…",
+      "formula": "C10H8N2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1746"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "sulfate",
+      "name": "sulfate",
+      "formula": "O4S",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM58"
+      }
+    },
+    {
+      "id": "glucobrassicin",
+      "name": "glucobrassicin",
+      "formula": "C16H20N2O9S2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1370104"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "adenosine_3_5_bisphosphate",
+      "name": "adenosine 3',5'-bisphosphate",
+      "short": "adenosine…",
+      "formula": "C10H11N5O10P2",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1103458"
+      }
+    },
+    {
+      "id": "3_phosphoadenylyl_sulfate",
+      "name": "3'-phosphoadenylyl sulfate",
+      "short": "3'-phosphoadenylyl…",
+      "formula": "C10H11N5O13P2S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1104555"
+      }
+    },
+    {
+      "id": "z_indolylmethyl_desulfoglucosinolate",
+      "name": "(Z)-indolylmethyl desulfoglucosinolate",
+      "short": "indolylmethyl…",
+      "formula": "C16H20N2O6S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:136527"
+      }
+    },
+    {
+      "id": "3_3_5_triiodo_l_thyronine",
+      "name": "3,3',5'-triiodo-L-thyronine",
+      "short": "3,3',5'-triiodo-L-t…",
+      "formula": "C15H12I3NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:11684"
+      }
+    },
+    {
+      "id": "3_3_5_triiodo_l_thyronine_sulfate",
+      "name": "3,3',5-triiodo-L-thyronine sulfate",
+      "short": "3,3',5-triiodo-L-th…",
+      "formula": "C15H11I3NO7S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:176511"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_2_1_147",
+      "name": "thioglucosidase",
+      "ec": [
+        "3.2.1.147"
+      ]
+    },
+    {
+      "id": "ec_2_8_2_24",
+      "name": "aromatic desulfoglucosinolate sulfotransferase",
+      "ec": [
+        "2.8.2.24"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "thioglucosidase",
+      "ec": "3.2.1.147",
+      "substrates": [
+        {
+          "metabolite": "sulfur_atom",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "indol_3_yl_acetonitrile",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "sulfate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glucobrassicin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_147"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR195751"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR195751"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "aromatic desulfoglucosinolate sulfotransferase",
+      "ec": "2.8.2.24",
+      "substrates": [
+        {
+          "metabolite": "adenosine_3_5_bisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucobrassicin",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_phosphoadenylyl_sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "z_indolylmethyl_desulfoglucosinolate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_2_24"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR150170"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR150170"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR158835",
+      "substrates": [
+        {
+          "metabolite": "3_3_5_triiodo_l_thyronine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_phosphoadenylyl_sulfate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "adenosine_3_5_bisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_3_5_triiodo_l_thyronine_sulfate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR158835"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR158835"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_glucobrassicin_sulfur-atom-to-3-3-5-triiodo-l-thyronin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "glucobrassicin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sulfur-atom-to-3-3-5-triiodo-l-thyronin"
+      },
+      "note": "Shares glucobrassicin with sulfur atom to 3,3',5-triiodo-L-thyronin….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1370104"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_z_indolylmethyl_desulfoglucosinolate_3-iodo-l-thyronine-to-hydrogen-donor-82899",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "z_indolylmethyl_desulfoglucosinolate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-iodo-l-thyronine-to-hydrogen-donor-82899"
+      },
+      "note": "Shares (Z)-indolylmethyl desulfoglucosinolate with 3'-iodo-L-thyronine to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:136527"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_z_indolylmethyl_desulfoglucosinolate_dammarenediol-ii-to-ginsenoside-c-k-59044",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "z_indolylmethyl_desulfoglucosinolate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dammarenediol-ii-to-ginsenoside-c-k-59044"
+      },
+      "note": "Shares (Z)-indolylmethyl desulfoglucosinolate with dammarenediol-II to ginsenoside C-K.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:136527"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_z_indolylmethyl_desulfoglucosinolate_n-tetradecanoylsphingosine-to-adenosine-3-5-bism",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "z_indolylmethyl_desulfoglucosinolate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-tetradecanoylsphingosine-to-adenosine-3-5-bism"
+      },
+      "note": "Shares (Z)-indolylmethyl desulfoglucosinolate with N-tetradecanoylsphingosine to adenosine 3',5'-bismonoph….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:136527"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_z_indolylmethyl_desulfoglucosinolate_sulfur-atom-to-3-3-5-triiodo-l-thyronin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "z_indolylmethyl_desulfoglucosinolate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sulfur-atom-to-3-3-5-triiodo-l-thyronin"
+      },
+      "note": "Shares (Z)-indolylmethyl desulfoglucosinolate with sulfur atom to 3,3',5-triiodo-L-thyronin….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:136527"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_z_indolylmethyl_desulfoglucosinolate_trans-sinapyl-alcohol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "z_indolylmethyl_desulfoglucosinolate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-sinapyl-alcohol-to-h2o"
+      },
+      "note": "Shares (Z)-indolylmethyl desulfoglucosinolate with trans-sinapyl alcohol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:136527"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_3_5_triiodo_l_thyronine_2s-3r-4s-5s-6s-6-4-4-to-3-3-5-triiodo-d-thyroni",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_3_5_triiodo_l_thyronine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2s-3r-4s-5s-6s-6-4-4-to-3-3-5-triiodo-d-thyroni"
+      },
+      "note": "Shares 3,3',5'-triiodo-L-thyronine with (2S,3R,4S,5S,6S)-6-(4-{4-… to 3,3',5'-triiodo-D-thyroni….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:11684"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_3_5_triiodo_l_thyronine_3-3-diiodo-l-thyronine-to-adenosine-3-5-bismonop",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_3_5_triiodo_l_thyronine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-3-diiodo-l-thyronine-to-adenosine-3-5-bismonop"
+      },
+      "note": "Shares 3,3',5'-triiodo-L-thyronine with 3,3'-diiodo-L-thyronine to adenosine 3',5'-bismonoph….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:11684"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_3_5_triiodo_l_thyronine_3-iodo-l-thyronine-to-hydrogen-donor-83779",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_3_5_triiodo_l_thyronine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-iodo-l-thyronine-to-hydrogen-donor-83779"
+      },
+      "note": "Shares 3,3',5'-triiodo-L-thyronine with 3'-iodo-L-thyronine to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:11684"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_3_5_triiodo_l_thyronine_sulfur-atom-to-3-3-5-triiodo-l-thyronin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_3_5_triiodo_l_thyronine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sulfur-atom-to-3-3-5-triiodo-l-thyronin"
+      },
+      "note": "Shares 3,3',5'-triiodo-L-thyronine with sulfur atom to 3,3',5-triiodo-L-thyronin….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:11684"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_3_5_triiodo_l_thyronine_sulfate_3-iodo-l-thyronine-to-hydrogen-donor-83779",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_3_5_triiodo_l_thyronine_sulfate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-iodo-l-thyronine-to-hydrogen-donor-83779"
+      },
+      "note": "Shares 3,3',5-triiodo-L-thyronine sulfate with 3'-iodo-L-thyronine to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:176511"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_3_5_triiodo_l_thyronine_sulfate_sulfur-atom-to-3-3-5-triiodo-l-thyronin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_3_5_triiodo_l_thyronine_sulfate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sulfur-atom-to-3-3-5-triiodo-l-thyronin"
+      },
+      "note": "Shares 3,3',5-triiodo-L-thyronine sulfate with sulfur atom to 3,3',5-triiodo-L-thyronin….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:176511"
+          }
+        ]
+      }
+    }
+  ]
+}

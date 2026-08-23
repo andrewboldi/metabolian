@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4z-7z-10z-hexadecatrien-to-coa "(4Z,7Z,10Z)-hexadecatrien… to CoA" {
-  spacing 232
+  spacing 160
 
   spine at 0,0 {
     4z_7z_10z_hexadecatrienoyl_coa
@@ -16,77 +16,5 @@ pathway 4z-7z-10z-hexadecatrien-to-coa "(4Z,7Z,10Z)-hexadecatrien… to CoA" {
     6z_9z_12z_octadecatrienoyl_coa
     <-> ec_2_3_1_26 [2.3.1.26] +cholesterol -coa
     cholesteryl_linolenate
-  }
-
-  branch from fad side left {
-    fad
-    <-> . +fadh2 +5_chloro_2_hydroxy_p_benzoquinone +h
-    5_chloro_1_2_4_trihydroxybenzene
-  }
-
-  branch from fad side right {
-    fad
-    <-> . +fadh2 +h +5_chloro_1_2_4_trihydroxybenzene
-    5_chlorohydroxyquinone
-  }
-
-  branch from 6z_9z_12z_octadecatrienoyl_coa side left {
-    6z_9z_12z_octadecatrienoyl_coa
-    <-> . +fad +fadh2 +h
-    2e_6z_9z_12z_octadecatetraenoyl_coa
-  }
-
-  branch from 6z_9z_12z_octadecatrienoyl_coa side right {
-    6z_9z_12z_octadecatrienoyl_coa
-    <-> . +o2 +2e_6z_9z_12z_octadecatetraenoyl_coa
-    h2o2
-  }
-
-  branch from coa side left {
-    coa
-    <-> ec_6_2_1_3 [6.2.1.3] +6e_9_methyldec_6_enoate +atp +adp +phosphate
-    6e_9_methyldec_6_enoyl_coa
-  }
-
-  branch from coa side right {
-    coa
-    <-> ec_6_2_1_3 [6.2.1.3] +8_methylnonanoyl_coa +h +adp +phosphate +atp
-    8_methyl_nonanoic_acid
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_3_1_1 [1.3.1.1] +nadh +thymine +h
-    5_6_dihydrothymine
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_92 [1.1.1.92] +nadh +oxaloglycolate +h +co2
-    r_glycerate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +3s_4r_4_6_methylheptanoyl_5_oxooxolan_3_yl_meth +phosphate
-    3r_4r_4_hydroxymethyl_3_6_methylheptanoyl_oxola
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +phoenicoxanthin
-    3_4_4_trihydroxyechinenone
-  }
-
-  branch from cholesteryl_linolenate side left {
-    cholesteryl_linolenate
-    <-> . +cholesterol +coa
-    linolenoyl_coa
-  }
-
-  branch from cholesteryl_linolenate side right {
-    cholesteryl_linolenate
-    <-> . +1_palmitoyl_2_9z_12z_15z_octadecatrienoyl_sn_gly +cholesterol
-    1_hexadecanoyl_sn_glycero_3_phosphocholine
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 20s-17-20-dihydroxypreg-to-testolate "(20S)-17,20-dihydroxypreg… to testolate" {
-  spacing 250
+  spacing 298
 
   spine at 0,0 {
     20s_17_20_dihydroxypregn_4_en_3_one
@@ -26,37 +26,85 @@ pathway 20s-17-20-dihydroxypreg-to-testolate "(20S)-17,20-dihydroxypreg… to te
 
   branch from androst_4_ene_3_17_dione side right {
     androst_4_ene_3_17_dione
-    <-> . +testosterone +hydrogen_acceptor
-    hydrogen_donor
-  }
-
-  branch from androst_4_ene_3_17_dione side left {
-    androst_4_ene_3_17_dione
     <-> ec_1_14_15_19 [1.14.15.19] +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
     1_hydroxyandrost_4_ene_3_17_dione
   }
 
+  branch from androst_4_ene_3_17_dione side left {
+    androst_4_ene_3_17_dione
+    <-> . +nadph +hplus +nadp
+    5_androstane_3_17_dione
+  }
+
   branch from acetate side right {
     acetate
-    <-> . +16_17_dihydroxypregnenolone +fmnh2 +o2 +fmn +h2o +hplus
-    16_hydroxydehydroepiandrosterone
+    <-> . +n_acetyl_l_leucinate +h2o
+    leucine
   }
 
   branch from acetate side left {
     acetate
-    <-> . +1_o_acetyl_adp_d_ribose +h2o +hplus
-    adp_d_ribose
+    <-> . +pyrrolizixenacetamide +h2o +hplus
+    3_amino_5_6_7_7a_tetrahydro_1h_pyrrolizin_1_one
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_38 [1.14.14.38] +valine +fmnh2 +o2 +co2 +h2o +hplus
-    e_2_methylpropanal_oxime
+    <-> ec_1_14_14_79 [1.14.14.79] +4z_7z_10z_13z_16z_19z_docosahexaenoate +fmnh2 +o2 +h2o +hplus
+    4z_7z_10z_13z_16z_19z_22_hydroxydocosahexaenoat
   }
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_158 [1.14.14.158] +carotene +fmnh2 +o2 +h2o +hplus
-    cryptoxanthin
+    <-> ec_1_14_14_33 [1.14.14.33] +edta +fmnh2 +o2 +glyoxylate +h2o +hplus
+    ethylenediaminediacetate
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> ec_1_14_14_123 [1.14.14.123] +3_hydroxy_ent_sandaracopimaradiene +o2 +fmn +h2o +hplus
+    oryzalexin_d
+  }
+
+  branch from fmnh2 side left {
+    fmnh2
+    <-> ec_1_14_14_78 [1.14.14.78] +phylloquinone +o2 +fmn +h2o +hplus
+    hydroxyphylloquinone
+  }
+
+  branch from androst_4_ene_3_17_dione side right {
+    androst_4_ene_3_17_dione
+    <-> ec_1_3_99_4 [1.3.99.4] +hydrogen_acceptor +hydrogen_donor
+    androsta_1_4_diene_3_17_dione
+  }
+
+  branch from androst_4_ene_3_17_dione side left {
+    androst_4_ene_3_17_dione
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    16_hydroxyandrost_4_ene_3_17_dione
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> . +n_acetyl_d_glucosaminyl_1_4_n_acetyl_d_muramate +h2o
+    n_acetyl_d_glucosaminyl_1_4_d_muramate_zwitterio
+  }
+
+  branch from acetate side left {
+    acetate
+    <-> . +n_acetyl_d_glucosaminyl_1_4_1_6_anhydro_n_acetyl +h2o
+    n_acetyl_d_glucosaminyl_1_4_1_6_anhydro_d_muramy
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_78 [1.14.14.78] +menaquinone_4 +fmnh2 +o2 +h2o +hplus
+    hydroxymenaquinone_4
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> . +all_trans_retinol +fmnh2 +o2 +h2o +hplus
+    all_trans_retinal
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-1-deoxy-d-fructopyra-to-hydrogen-donor "N-(1-deoxy-β-D-fructopyra… to hydrogen donor" {
-  spacing 278
+  spacing 242
 
   spine at 0,0 {
     n_1_deoxy_d_fructopyranos_1_yl_amine
@@ -16,45 +16,9 @@ pathway n-1-deoxy-d-fructopyra-to-hydrogen-donor "N-(1-deoxy-β-D-fructopyra… 
     carboxylic_acid_anion
   }
 
-  branch from 2_dehydro_d_glucopyranose side left {
-    2_dehydro_d_glucopyranose
-    <-> . +n_1_deoxy_d_fructopyranos_1_yl_glycine_betaine +o2 +h2o +h2o2
-    glycine
-  }
-
-  branch from 2_dehydro_d_glucopyranose side right {
-    2_dehydro_d_glucopyranose
-    <-> . +n_1_deoxy_d_fructopyranos_1_yl_l_alanine_betaine +o2 +h2o +h2o2
-    alanine
-  }
-
   branch from aldehyde side left {
     aldehyde
     <-> ec_1_1_2_8 [1.1.2.8] +iron +fe2 +hplus
     primary_alcohol
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +3_aminobutan_1_ol +nad +h2o +nadh +hplus
-    4_hydroxybutan_2_one
-  }
-
-  branch from nh3 side left {
-    nh3
-    <-> . +5_hydroxypentan_2_aminium +nad +h2o +nadh +hplus
-    5_hydroxypentan_2_one
-  }
-
-  branch from hydrogen_donor side right {
-    hydrogen_donor
-    <-> . +holo-acp +malonyl-coa +acetyl_coa +nadph +hplus +hydrogen_acceptor +co2 +nadp +coa +h2o
-    o_s_3r_hydroxyoctadeca_4_10_dienoylpantetheine_4
-  }
-
-  branch from hydrogen_donor side left {
-    hydrogen_donor
-    <-> . +3_iodo_l_thyronine +iodide +hydrogen_acceptor +hplus
-    3_5_diiodo_l_thyronine
   }
 }

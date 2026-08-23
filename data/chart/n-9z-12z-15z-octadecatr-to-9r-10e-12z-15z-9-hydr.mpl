@@ -18,39 +18,39 @@ pathway n-9z-12z-15z-octadecatr-to-9r-10e-12z-15z-9-hydr "N-(9Z,12Z,15Z)-octadec
     9r_10e_12z_15z_9_hydroperoxyoctadeca_10_12_15_t
   }
 
-  branch from glyoxylate side left {
-    glyoxylate
-    <-> . +3_hydroxy_l_kynurenine +glycine
-    4_2_amino_3_hydroxyphenyl_2_4_dioxobutanoate
-  }
-
-  branch from glyoxylate side right {
-    glyoxylate
-    <-> . +l_asparagine +glycine
-    2_oxosuccinamate
-  }
-
   branch from linolenate side left {
     linolenate
     <-> . +o2
-    9z_11e_13r_15z_13_hydroperoxyoctadecatrienoate
+    9z_11s_12z_15z_11_hydroperoxyoctadecatrienoate
   }
 
   branch from linolenate side right {
     linolenate
     <-> . +o2
-    9s_10e_12z_15z_9_hydroperoxyoctadeca_10_12_15_t
+    9z_11e_15z_13_hydroperoxyoctadecatrienoate
   }
 
-  branch from nh3 side left {
-    nh3
-    <-> . +5_4_hydroxyphenyl_methyl_3_imino_4_4_dimethylpyr +h2o +hplus
-    premycofactocin
+  branch from ascorbate side left {
+    ascorbate
+    <-> . +iron +fe2 +hplus
+    l_dehydroascorbate
   }
 
-  branch from nh3 side right {
-    nh3
-    <-> . +2_deoxyadenosine_5_monophosphate_1 +acetyl_coa +hydrogen_donor +o2 +hydrogen_acceptor +coa +h2o +hplus
-    n6_methylcarbamoyl_2_deoxyadenosine_5_monophosph
+  branch from ascorbate side right {
+    ascorbate
+    <-> ec_1_3_3_12 [1.3.3.12] +o2 +h2o2 +hplus
+    l_galactono_1_4_lactone
+  }
+
+  branch from linolenate side left {
+    linolenate
+    <-> . +o2
+    10r_hpotre
+  }
+
+  branch from linolenate side right {
+    linolenate
+    <-> . +o2
+    8r_hpotre
   }
 }

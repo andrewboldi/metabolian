@@ -182,51 +182,6 @@
       "xrefs": {
         "chebi": "CHEBI:43474"
       }
-    },
-    {
-      "id": "3_nitropropanoate",
-      "name": "3-nitropropanoate",
-      "formula": "C3H4NO4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:59899"
-      }
-    },
-    {
-      "id": "hydrogen_acceptor",
-      "name": "hydrogen acceptor",
-      "formula": "A",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:13193"
-      }
-    },
-    {
-      "id": "nitrite",
-      "name": "nitrite",
-      "formula": "NO2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:16301"
-      }
-    },
-    {
-      "id": "hydrogen_donor",
-      "name": "hydrogen donor",
-      "formula": "H2A",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:17499"
-      }
-    },
-    {
-      "id": "prop_2_ynal",
-      "name": "prop-2-ynal",
-      "formula": "C3H2O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:27976"
-      }
     }
   ],
   "enzymes": [
@@ -520,101 +475,269 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r7",
-      "name": "3-nitropropanoate + A + H2O = 3-oxopropanoate + nitrite + AH2 + H(+)",
-      "equation": "3-nitropropanoate + A + H2O = 3-oxopropanoate + nitrite + AH2 + H(+)",
-      "substrates": [
-        {
-          "metabolite": "3_nitropropanoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_acceptor",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_oxopropanoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nitrite",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_donor",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:81399"
+      "id": "xt_propane_1_3_diol_propane-1-3-diol-to-malonyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "propane_1_3_diol"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "propane-1-3-diol-to-malonyl-coa"
+      },
+      "note": "Shares propane-1,3-diol with propane-1,3-diol to malonyl-CoA.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:81399"
+            "db": "ChEBI",
+            "id": "CHEBI:16109"
           }
         ]
       }
     },
     {
-      "id": "r8",
-      "name": "prop-2-ynal + NAD(+) + H2O = propynoate + NADH + 2 H(+)",
-      "equation": "prop-2-ynal + NAD(+) + H2O = propynoate + NADH + 2 H(+)",
-      "substrates": [
-        {
-          "metabolite": "prop_2_ynal",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "propynoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "rhea": "RHEA:30879"
+      "id": "xt_3_hydroxypropanal_1-oleoyl-2-linoleoyl-sn-g-to-3-hydroxypropanal",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_hydroxypropanal"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1-oleoyl-2-linoleoyl-sn-g-to-3-hydroxypropanal"
+      },
+      "note": "Shares 3-hydroxypropanal with 1-oleoyl-2-linoleoyl-sn-g… to 3-hydroxypropanal.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:30879"
+            "db": "ChEBI",
+            "id": "CHEBI:17871"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_hydroxypropanal_propane-1-3-diol-to-malonyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_hydroxypropanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "propane-1-3-diol-to-malonyl-coa"
+      },
+      "note": "Shares 3-hydroxypropanal with propane-1,3-diol to malonyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17871"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_hydroxypropionate_benzoylagmatinium-to-glycine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_hydroxypropionate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "benzoylagmatinium-to-glycine"
+      },
+      "note": "Shares 3-hydroxypropionate with benzoylagmatinium to glycine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16510"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_hydroxypropionate_propane-1-3-diol-to-malonyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_hydroxypropionate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "propane-1-3-diol-to-malonyl-coa"
+      },
+      "note": "Shares 3-hydroxypropionate with propane-1,3-diol to malonyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16510"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_oxopropanoate_1d-myo-inositol-to-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_oxopropanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1d-myo-inositol-to-acetate"
+      },
+      "note": "Shares 3-oxopropanoate with 1D-myo-inositol… to acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:33190"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_oxopropanoate_3-aci-nitropropanoate-to-l-glutamyl-l-cysteinyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_oxopropanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-aci-nitropropanoate-to-l-glutamyl-l-cysteinyl"
+      },
+      "note": "Shares 3-oxopropanoate with 3-aci-nitropropanoate to L-γ-glutamyl-L-cysteinyl-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:33190"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_oxopropanoate_3-hydroxy-3-methylthio-p-to-malonyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_oxopropanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxy-3-methylthio-p-to-malonyl-coa"
+      },
+      "note": "Shares 3-oxopropanoate with 3-hydroxy-3-(methylthio)p… to malonyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:33190"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_oxopropanoate_dihydrophloroglucinol-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_oxopropanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dihydrophloroglucinol-to-nadph"
+      },
+      "note": "Shares 3-oxopropanoate with dihydrophloroglucinol to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:33190"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_oxopropanoate_propane-1-3-diol-to-malonyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_oxopropanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "propane-1-3-diol-to-malonyl-coa"
+      },
+      "note": "Shares 3-oxopropanoate with propane-1,3-diol to malonyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:33190"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_oxopropanoate_prostaglandin-h2-to-acetaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_oxopropanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "prostaglandin-h2-to-acetaldehyde"
+      },
+      "note": "Shares 3-oxopropanoate with prostaglandin H2 to acetaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:33190"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_oxopropanoate_s-5-oxo-2-5-dihydro-2-f-to-nitrite",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_oxopropanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-5-oxo-2-5-dihydro-2-f-to-nitrite"
+      },
+      "note": "Shares 3-oxopropanoate with (S)-5-oxo-2,5-dihydro-2-f… to nitrite.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:33190"
           }
         ]
       }

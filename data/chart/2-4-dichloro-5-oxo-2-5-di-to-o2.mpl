@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-4-dichloro-5-oxo-2-5-di-to-o2 "2,4-dichloro-5-oxo-2,5-di… to O2" {
-  spacing 224
+  spacing 278
 
   spine at 0,0 {
     2_4_dichloro_5_oxo_2_5_dihydro_2_furylacetate
@@ -20,14 +20,14 @@ pathway 2-4-dichloro-5-oxo-2-5-di-to-o2 "2,4-dichloro-5-oxo-2,5-di… to O2" {
 
   branch from chloride side left {
     chloride
-    <-> ec_3_8_1_5 [3.8.1.5] +h +trans_3_chloroprop_2_en_1_ol +h2o
-    e_1_3_dichloropropene
+    <-> ec_4_5_1_4 [4.5.1.4] +2e_2_hydroxypenta_2_4_dienoate +h +nh4 +h2o
+    l_2_amino_4_chloropent_4_enoate
   }
 
   branch from chloride side right {
     chloride
-    <-> ec_3_8_1_5 [3.8.1.5] +h +cis_3_chloroprop_2_en_1_ol +h2o
-    z_1_3_dichloropropene
+    <-> ec_3_8_1_5 [3.8.1.5] +h +trans_3_chloroprop_2_en_1_ol +h2o
+    e_1_3_dichloropropene
   }
 
   branch from 6_chlorobenzene_1_2_4_triol side left {
@@ -44,13 +44,67 @@ pathway 2-4-dichloro-5-oxo-2-5-di-to-o2 "2,4-dichloro-5-oxo-2,5-di… to O2" {
 
   branch from o2 side left {
     o2
-    <-> . +antipyrine +h +nadph +nadp +methanol
-    edaravone
+    <-> . +nadh +uracil +h +nad
+    ureidoperacrylic_acid
   }
 
   branch from o2 side right {
     o2
-    <-> . +5_hydroxyomeprazole +nadp +h2o +h +nadph
-    5_methoxy_2_4_methoxy_3_5_dimethylpyridin_2_yl_m
+    <-> . +co2 +3_hydroxyisovaleric_acid +h
+    4_methyl_2_oxopentanoate
+  }
+
+  branch from 2_4_dichloro_5_oxo_2_5_dihydro_2_furylacetate side left {
+    2_4_dichloro_5_oxo_2_5_dihydro_2_furylacetate
+    <-> . +chloride +hplus
+    trans_2_chloro_4_carboxylatomethylenebut_2_en_1
+  }
+
+  branch from chloride side right {
+    chloride
+    <-> ec_3_8_1_5 [3.8.1.5] +h +cis_3_chloroprop_2_en_1_ol +h2o
+    z_1_3_dichloropropene
+  }
+
+  branch from chloride side left {
+    chloride
+    <-> . +3_oxopropanoate +h +h2o
+    trans_3_chloroacrylic_acid
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_2 [3.6.3.2] +adp +mg +phosphate +mg +h2o
+    atp
+  }
+
+  branch from h side left {
+    h
+    <-> . +1d_myo_inositol_3_4_bisphosphate +adp +atp
+    1d_myo_inositol_4_phosphate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +2_methylfumaryl_coa
+    3s_citramalyl_coa
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +1d_myo_inositol_1_4_bisphosphate +phosphate
+    1d_myo_inositol_1_phosphate
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +13_cis_retinal +h +nadph +nadp +h2o
+    4_oh_13_cis_retinal
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +11_cis_retinal +h +nadph +nadp +h2o
+    4_oh_9_cis_retinal
   }
 }

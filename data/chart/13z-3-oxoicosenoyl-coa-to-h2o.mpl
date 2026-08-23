@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 13z-3-oxoicosenoyl-coa-to-h2o "(13Z)-3-oxoicosenoyl-CoA to H2O" {
-  spacing 212
+  spacing 152
 
   spine at 0,0 {
     13z_3_oxoicosenoyl_coa
@@ -18,65 +18,5 @@ pathway 13z-3-oxoicosenoyl-coa-to-h2o "(13Z)-3-oxoicosenoyl-CoA to H2O" {
     z_icos_13_enoic_acid
     <-> . +h +adp +phosphate -z_icos_13_enoic_acid -h2o
     atp
-  }
-
-  branch from 2e_13z_icosadienoyl_coa side left {
-    2e_13z_icosadienoyl_coa
-    <-> . +h +h2o
-    13z_3_hydroxyicos_13_enoyl_coa
-  }
-
-  branch from 2e_13z_icosadienoyl_coa side right {
-    2e_13z_icosadienoyl_coa
-    <-> . +h2o2 +13z_icosenoyl_coa
-    o2
-  }
-
-  branch from 13z_icosenoyl_coa side left {
-    13z_icosenoyl_coa
-    <-> . +sn_glycerol_3_phosphate +coa
-    1_acylglycerol_3p_13_eicose
-  }
-
-  branch from 13z_icosenoyl_coa side right {
-    13z_icosenoyl_coa
-    <-> . +s_carnitine +coa
-    eicosenoylcarnitine_7
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    oleandomycin
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    rifamycin_b
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +6_7_dihydro_5_oxo_leukotriene_b4 +atp +diphosphate +amp
-    5_oxo_12_r_hydroxy_eicosa_8e_10e_14z_trienoyl_co
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +atp +diphosphate +5_oxo_12_r_hydroxy_eicosa_8e_10e_14z_trienoyl_co +h +amp
-    6_7_dihydro_5_oxo_12_epi_ltb4
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    streptomycin
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    tuberactinomycin_a
   }
 }

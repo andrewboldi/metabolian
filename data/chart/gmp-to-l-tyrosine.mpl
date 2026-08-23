@@ -4,57 +4,15 @@
 # edit the generator, not this file.
 
 pathway gmp-to-l-tyrosine "GMP to L-tyrosine" {
-  spacing 340
+  spacing 188
 
   spine at 0,0 {
     gmp
     <-> ec_2_7_8_28 [2.7.8.28] +dehydro_coenzyme_f420_0 -h -enolpyruvoyl_2_diphospho_5_guanosine
     7_8_didemethyl_8_hydroxy_5_deazariboflavin
-    <-> ec_4_3_1_32 [4.3.1.32] +5_deoxyadenosine +nh4 +l_methionine -5_amino_5_4_hydroxybenzyl_6_d_ribitylimino_5_6_d
-    s_adenosyl_l_methionine
-    <-> ec_2_5_1_147 [2.5.1.147] +5_deoxyadenosine +5_amino_5_4_hydroxybenzyl_6_d_ribitylimino_5_6_d +dehydroglycine +h +l_methionine -s_adenosyl_l_methionine -l_tyrosine
+    <-> . +h +oxalate +nh4 +nadph -3_4_hydroxyphenyl_pyruvate -nadp -h2o
     4_1_d_ribitylamino_5_aminouracil
-  }
-
-  branch from 7_8_didemethyl_8_hydroxy_5_deazariboflavin side left {
-    7_8_didemethyl_8_hydroxy_5_deazariboflavin
-    <-> ec_2_7_8_28 [2.7.8.28] +gmp +3pg_factor_420_0 +h
-    3_r_glyceryl_diphospho_5_guanosine
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +tacrolimus +phosphate +tacrolimus +h2o
-    atp
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    d_tagaturonate
-  }
-
-  branch from s_adenosyl_l_methionine side right {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +crotonosine
-    4_r_10_11_dihydroxy_5_azaspiro_cyclohexane_1_2
-  }
-
-  branch from s_adenosyl_l_methionine side left {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +mitomycin_b
-    6_demethylmitomycin_b
-  }
-
-  branch from l_tyrosine side right {
-    l_tyrosine
-    <-> . +l_glutamine +l_phenylalanine +h2o
-    phenylalanyl_tyrosinyl_glutamine
-  }
-
-  branch from l_tyrosine side left {
-    l_tyrosine
-    <-> . +l_lysine +l_phenylalanine +h2o
-    phenylalanyl_tyrosinyl_lysine
+    <-> ec_2_6_1_12 [2.6.1.12] +l_alanine +3_4_hydroxyphenyl_pyruvate -l_tyrosine
+    pyruvate
   }
 }

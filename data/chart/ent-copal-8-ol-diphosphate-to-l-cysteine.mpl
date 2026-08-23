@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway ent-copal-8-ol-diphosphate-to-l-cysteine "ent-copal-8-ol diphosphate to L-cysteine" {
-  spacing 252
+  spacing 312
 
   spine at 0,0 {
     ent_copal_8_ol_diphosphate
@@ -18,26 +18,26 @@ pathway ent-copal-8-ol-diphosphate-to-l-cysteine "ent-copal-8-ol diphosphate to 
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_56 [4.2.3.56] +fpp
-    longifolene
+    <-> ec_4_2_3_54 [4.2.3.54] +2_cis_6_cis_farnesyl_diphosphate
+    endo_bergamotene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_56 [4.2.3.56] +fpp
-    himachalene
+    <-> ec_2_5_1_80 [2.5.1.80] +dmapp +l_tryptophan
+    7_3_methylbut_2_enyl_l_tryptophan
   }
 
   branch from pser side left {
     pser
-    <-> ec_6_1_1_27 [6.1.1.27] +amp_3_end_1 +atp +amp +ppi
-    3_o_phosphonato_l_seryl_adenylyl_2_group
+    <-> ec_2_8_5_1 [2.8.5.1] +trioxidosulfanidosulfate +pi
+    s_sulfo_l_cysteinate
   }
 
   branch from pser side right {
     pser
-    <-> ec_2_8_5_1 [2.8.5.1] +trioxidosulfanidosulfate +pi
-    s_sulfo_l_cysteinate
+    <-> . +hplus +co2
+    phosphoethanolamine
   }
 
   branch from cysteine side left {
@@ -48,7 +48,67 @@ pathway ent-copal-8-ol-diphosphate-to-l-cysteine "ent-copal-8-ol diphosphate to 
 
   branch from cysteine side right {
     cysteine
-    <-> ec_4_4_1_1 [4.4.1.1] +h2o +h2s +pyruvate +hplus
-    nh3
+    <-> . +h2s +hplus
+    2_ammonioprop_2_enoate
+  }
+
+  branch from ent_copal_8_ol_diphosphate side left {
+    ent_copal_8_ol_diphosphate
+    <-> ec_4_2_1_173 [4.2.1.173] +h2o
+    2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_6_3_2_14 [6.3.2.14] +2_3_dihydroxybenzoate +serine +atp +amp +hplus
+    enterobactin
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_84 [4.2.3.84] +fpp +h2o
+    10_epi_eudesmol
+  }
+
+  branch from serine side right {
+    serine
+    <-> . +nadp +nadph +hplus
+    l_3_oxoalanine
+  }
+
+  branch from serine side left {
+    serine
+    <-> ec_4_2_1_50 [4.2.1.50] +1h_pyrazole +h2o
+    3_pyrazol_1_yl_l_alanine
+  }
+
+  branch from pser side right {
+    pser
+    <-> . +3_sn_phosphatidyl_l_serine +h2o +hplus
+    dag
+  }
+
+  branch from h2s side left {
+    h2s
+    <-> ec_6_2_2_1 [6.2.2.1] +glycine +atp +adp +pi
+    thioglycine
+  }
+
+  branch from h2s side right {
+    h2s
+    <-> . +cysteine +hplus
+    l_lanthionine_dizwitterion
+  }
+
+  branch from cysteine side left {
+    cysteine
+    <-> .
+    d_cysteine
+  }
+
+  branch from cysteine side right {
+    cysteine
+    <-> . +indole_3_butyrate +atp +amp +ppi +hplus
+    n_4_indol_3_yl_butanoyl_l_cysteinate
   }
 }

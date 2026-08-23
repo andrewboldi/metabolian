@@ -4,11 +4,11 @@
 # edit the generator, not this file.
 
 pathway diphosphate-to-s-adenosyl-l-homocysteine "diphosphate to S-adenosyl-L-homocysteine" {
-  spacing 340
+  spacing 268
 
   spine at 0,0 {
     diphosphate
-    <-> . +all_trans_undecaprenyl_diphosphate -ipp
+    <-> . +3_decaprenyl_4_hydroxybenzoate -4_hydroxybenzoate
     all_trans_decaprenyl_diphosphate
     <-> ec_2_5_1_39 [2.5.1.39] +4_hydroxybenzoate -ppi
     4_hydroxy_3_all_trans_decaprenylbenzoate
@@ -28,19 +28,15 @@ pathway diphosphate-to-s-adenosyl-l-homocysteine "diphosphate to S-adenosyl-L-ho
     ubiquinol_10
   }
 
+  branch from 3_demethylubiquinol_10 side left {
+    3_demethylubiquinol_10
+    <-> . +nadph +hplus +nadp
+    3_demethylubiquinone_10
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  branch from ubiquinol_10 side right {
+    ubiquinol_10
+    <-> . +nadph +hplus +nadp
+    coenzyme_q10
+  }
 }

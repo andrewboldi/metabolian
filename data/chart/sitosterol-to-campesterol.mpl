@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway sitosterol-to-campesterol "sitosterol to campesterol" {
-  spacing 200
+  spacing 152
 
   spine at 0,0 {
     sitosterol
@@ -14,53 +14,5 @@ pathway sitosterol-to-campesterol "sitosterol to campesterol" {
     sitosterol
     <-> . +s_adenosyl_l_homocysteine +h -campesterol
     s_adenosyl_l_methionine
-  }
-
-  branch from h side left {
-    h
-    <-> ec_2_7_1_1 [2.7.1.1] +beta_d_glucose +atp +6_o_phosphonohexopyranose
-    adp
-  }
-
-  branch from h side right {
-    h
-    <-> ec_2_7_1_1 [2.7.1.1] +d_tagatopyranose +atp +adp
-    6_o_phosphonohexopyranose
-  }
-
-  branch from o2 side left {
-    o2
-    <-> ec_1_13_11_11 [1.13.11.11] +1_methyl_l_tryptophan
-    n_formyl_methyl_l_kynurenine
-  }
-
-  branch from o2 side right {
-    o2
-    <-> ec_1_13_11_52 [1.13.11.52] +5_methoxy_n_formylkynurenine
-    5_methoxy_dl_tryptophan
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> . +methyl_1r_12s_20r_12_ethyl_14_oxa_8_17_diazahexa +nadp +h2o +o2
-    tabersonine
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> . +nadp +h2o +h +tabersonine +o2
-    lochnericine
-  }
-
-  branch from s_adenosyl_l_methionine side left {
-    s_adenosyl_l_methionine
-    <-> ec_2_1_1_210 [2.1.1.210] +s_adenosyl_l_homocysteine +h +spheroidene
-    demethylspheroidene
-  }
-
-  branch from s_adenosyl_l_methionine side right {
-    s_adenosyl_l_methionine
-    <-> ec_2_1_1_231 [2.1.1.231] +s_adenosyl_l_homocysteine +h +4_methoxyflavanone
-    4_hydroxyflavanone
   }
 }

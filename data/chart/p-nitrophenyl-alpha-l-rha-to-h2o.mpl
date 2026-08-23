@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway p-nitrophenyl-alpha-l-rha-to-h2o "p-nitrophenyl-alpha-L-rha… to H2O" {
-  spacing 310
+  spacing 340
 
   spine at 0,0 {
     p_nitrophenyl_alpha_l_rhamnopyranoside
@@ -18,73 +18,33 @@ pathway p-nitrophenyl-alpha-l-rha-to-h2o "p-nitrophenyl-alpha-L-rha… to H2O" {
     d_glcp_1_3_l_rhap
     <-> ec_2_4_1_282 [2.4.1.282] +pi -l_rhamnopyranose
     d_glucose_1_phosphate
-    <-> ec_3_2_1_194 [3.2.1.194] +glucose +l_rhamnopyranose +ginsenoside_f1 -h2o
-    20s_ginsenoside_re
-  }
-
-  branch from h side left {
-    h
-    <-> ec_1_13_11_74 [1.13.11.74] +2_amino_5_methylphenol +o2
-    2z_4e_2_amino_5_methyl_muconate_semialdehyde
-  }
-
-  branch from h side right {
-    h
-    <-> . +s_adenosyl_l_homocysteine +7_hydroxy_2_4_5_trimethoxyisoflavone +2_7_dihydroxy_4_5_dimethoxyisoflavone
-    s_adenosyl_l_methionine
-  }
-
-  branch from beta_l_rhamnose side left {
-    beta_l_rhamnose
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
+    <-> ec_3_2_1_172 [3.2.1.172] +l_rhamnopyranose +4_deoxy_l_threo_hex_4_enopyranuronate -h2o
+    2_o_4_deoxy_beta_l_threo_hex_4_enopyranuronosyl
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate -2_o_4_deoxy_beta_l_threo_hex_4_enopyranuronosyl -h2o
     atp
   }
 
-  branch from beta_l_rhamnose side right {
-    beta_l_rhamnose
-    <-> ec_3_2_1_40 [3.2.1.40] +tilianin +h2o
-    linarin
-  }
 
-  branch from 4_nitrophenol side left {
-    4_nitrophenol
-    <-> ec_3_1_3_5 [3.1.3.5] +bis_4_nitrophenyl_phosphate +h2o +h
-    4_nitrophenyl_phosphate
-  }
 
-  branch from 4_nitrophenol side right {
-    4_nitrophenol
-    <-> ec_3_1_1_1 [3.1.1.1] +h +butanoate +h2o
-    p_nitrophenyl_butyrate
-  }
 
-  branch from d_glcp_1_3_l_rhap side left {
-    d_glcp_1_3_l_rhap
-    <-> ec_3_6_3_18 [3.6.3.18] +h +phosphate +atp +h2o
-    adp
-  }
 
-  branch from phosphate side right {
-    phosphate
-    <-> ec_3_1_3_12 [3.1.3.12] +6_o_cis_keto_mycolyl_trehalose_6_phosphate +h2o
-    trehalose_cis_keto_mono_mycolate
-  }
 
-  branch from phosphate side left {
-    phosphate
-    <-> ec_3_1_3_12 [3.1.3.12] +6_o_trans_keto_mycolyl_trehalose_6_phosphate +h2o
-    trehalose_trans_keto_mono_mycolate
-  }
 
-  branch from h2o side right {
-    h2o
-    <-> . +desoxyhemigossypol_6_methyl_ether +o2 +2_8_dihydroxy_4_isopropyl_3_methoxy_6_methyl_1_n
-    h2o2
-  }
 
-  branch from h2o side left {
-    h2o
-    <-> . +n_beta_d_glucosyl_indol_3_yl_acetyl_l_aspartate +n_beta_d_glucosyl_indol_3_yl_acetate
-    l_aspartate
-  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

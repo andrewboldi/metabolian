@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway lumisterol-3-to-di-sulfido-diiron "lumisterol 3 to di-μ-sulfido-diiron" {
-  spacing 206
+  spacing 176
 
   spine at 0,0 {
     lumisterol_3
@@ -30,35 +30,5 @@ pathway lumisterol-3-to-di-sulfido-diiron "lumisterol 3 to di-μ-sulfido-diiron"
     calcidiol
     <-> . +udp_d_glucuronate +udp +hplus
     calcidiol_3_o_d_glucuronate
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +testosterone +fmnh2 +o2 +h2o +hplus
-    11_hydroxytestosterone
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +9s_10r_epoxyoctadecanoate +fmnh2 +o2 +h2o +hplus
-    9s_10r_9_10_epoxy_18_hydroxyoctadecanoate
-  }
-
-  branch from calcitriol side left {
-    calcitriol
-    <-> . +udp_d_glucuronate +udp +hplus
-    calcitriol_25_o_d_glucuronate
-  }
-
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
-    <-> . +2_22_25_trideoxyecdysone +di_sulfido_diiron +o2 +hplus +h2o
-    2_22_dideoxyecdysone
-  }
-
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
-    <-> . +2_22_dideoxyecdysone +di_sulfido_diiron +o2 +hplus +h2o
-    22_deoxyecdysone
   }
 }

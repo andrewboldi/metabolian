@@ -147,9 +147,37 @@
       "xrefs": {
         "chebi": "CHEBI:189050"
       }
+    },
+    {
+      "id": "20_hydroxy_3_oxopregn_4_en_21_al",
+      "name": "20-hydroxy-3-oxopregn-4-en-21-al",
+      "short": "20-hydroxy-3-oxopre…",
+      "formula": "C21H30O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15690"
+      }
+    },
+    {
+      "id": "5_dihydrodeoxycorticosterone",
+      "name": "5β-dihydrodeoxycorticosterone",
+      "short": "5β-dihydrodeoxycort…",
+      "formula": "C21H32O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:86384"
+      }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_5_3_1_21",
+      "name": "corticosteroid side-chain-isomerase",
+      "ec": [
+        "5.3.1.21"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -327,6 +355,220 @@
           {
             "db": "Rhea",
             "id": "RHEA:70219"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "corticosteroid side-chain-isomerase",
+      "equation": "21-hydroxyprogesterone = 20-hydroxy-3-oxopregn-4-en-21-al",
+      "ec": "5.3.1.21",
+      "substrates": [
+        {
+          "metabolite": "11_deoxycorticosterone",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "20_hydroxy_3_oxopregn_4_en_21_al",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_1_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:17861"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17861"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "21-hydroxyprogesterone + NADPH + H(+) = 5beta-dihydrodeoxycorticosterone + NADP(+)",
+      "equation": "21-hydroxyprogesterone + NADPH + H(+) = 5beta-dihydrodeoxycorticosterone + NADP(+)",
+      "substrates": [
+        {
+          "metabolite": "11_deoxycorticosterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_dihydrodeoxycorticosterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:46668"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46668"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_11_deoxycorticosterone_1-1-dichloroethene-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11_deoxycorticosterone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-1-dichloroethene-to-succinate"
+      },
+      "note": "Shares 11-deoxycorticosterone with 1,1-dichloroethene to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16973"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_11_deoxycorticosterone_4-coumaroyl-coa-to-di-sulfido-diiron",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11_deoxycorticosterone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-coumaroyl-coa-to-di-sulfido-diiron"
+      },
+      "note": "Shares 11-deoxycorticosterone with 4-coumaroyl-CoA to di-μ-sulfido-diiron.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16973"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_11_deoxycorticosterone_formononetin-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11_deoxycorticosterone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "formononetin-to-coa"
+      },
+      "note": "Shares 11-deoxycorticosterone with formononetin to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16973"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_corticosterone_20-dihydrocorticosterone-to-5-dihydroaldosterone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "corticosterone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "20-dihydrocorticosterone-to-5-dihydroaldosterone"
+      },
+      "note": "Shares corticosterone with 20β-dihydrocorticosterone to 5β-dihydroaldosterone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16827"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_11_dehydrocorticosterone_20-dihydrocorticosterone-to-5-dihydroaldosterone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11_dehydrocorticosterone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "20-dihydrocorticosterone-to-5-dihydroaldosterone"
+      },
+      "note": "Shares 11-dehydrocorticosterone with 20β-dihydrocorticosterone to 5β-dihydroaldosterone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78600"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_20_dihydrocorticosterone_20-dihydrocorticosterone-to-5-dihydroaldosterone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "20_dihydrocorticosterone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "20-dihydrocorticosterone-to-5-dihydroaldosterone"
+      },
+      "note": "Shares 20β-dihydrocorticosterone with 20β-dihydrocorticosterone to 5β-dihydroaldosterone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:189050"
           }
         ]
       }

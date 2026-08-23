@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-chloronitrobenzene-to-2-amino-5-chloro-cis-cis "4-Chloronitrobenzene to 2-amino-5-chloro-cis,cis-…" {
-  spacing 246
+  spacing 288
 
   spine at 0,0 {
     4_chloronitrobenzene
@@ -18,31 +18,73 @@ pathway 4-chloronitrobenzene-to-2-amino-5-chloro-cis-cis "4-Chloronitrobenzene t
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_21 [1.1.1.21] +4_phenylphenylglyoxal +h +nadph
-    4_phenylbenzoyl_methanol
+    <-> ec_1_6_5_2 [1.6.5.2] +demethylmenaquinone_7 +h +nadph
+    2_demethylmenaquinol_7
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_2 [1.1.1.2] +2_pyridinylmethanol +h +nadph
-    2_formylpyridine
+    <-> ec_1_6_5_2 [1.6.5.2] +h +plastoquinone_9 +nadph
+    plastoquinol_9
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_4_14_5 [3.4.14.5] +l_alanine +gly_pro
-    gly_pro_ala
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +n_acetyl_d_glucosaminyl_n_acetylmuramoyl_l_alany +phosphate +n_acetyl_d_glucosaminyl_n_acetylmuramoyl_l_alany
+    atp
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_4_13_9 [3.4.13.9] +l_leucine +l_proline
-    leucyl_proline
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    met_ala
   }
 
-  branch from 2_amino_5_chloro_cis_cis_muconate_6_semialdehyde side left {
-    2_amino_5_chloro_cis_cis_muconate_6_semialdehyde
-    <-> . +nadh +h +2e_4e_2_amino_5_chlorohexa_2_4_dienedioate +h2o
-    nad
+  branch from h side left {
+    h
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    gly_asn
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    ala_thr
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_6_5_2 [1.6.5.2] +ubiquinol_9 +nadp +h
+    ubiquinone_9
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_6_5_2 [1.6.5.2] +ubiquinone_1 +h +nadp
+    2_3_dimethoxy_5_methyl_6_3_methyl_2_buten_1_yl_1
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +3_sulfopropanoic_acid +nadph +h2o
+    3_oxopropane_1_sulfonate
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +hexanoyl_coa +h +nadph +hexanal
+    coa
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    thiostrepton
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    l_tyrosyl_l_arginine
   }
 }

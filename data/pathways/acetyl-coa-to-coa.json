@@ -1,0 +1,280 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "acetyl-coa-to-coa",
+  "name": "acetyl-CoA to CoA",
+  "category": "other",
+  "summary": "A 3-step route from acetyl-CoA to CoA, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR200475"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "acetyl_coa",
+      "name": "acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1104266"
+      }
+    },
+    {
+      "id": "3_phenylpropanoyl_coa",
+      "name": "3-phenylpropanoyl-CoA",
+      "short": "3-phenylpropanoyl-C…",
+      "formula": "C30H40N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM8128"
+      }
+    },
+    {
+      "id": "3_oxo_5_phenylpentanoyl_coa",
+      "name": "3-oxo-5-phenylpentanoyl-CoA",
+      "short": "3-oxo-5-phenylpenta…",
+      "formula": "C32H42N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1560116"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "3_5_dioxo_7_phenylheptanoyl_coa",
+      "name": "3,5-dioxo-7-phenylheptanoyl-CoA",
+      "short": "3,5-dioxo-7-phenylh…",
+      "formula": "C34H44N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1560117"
+      }
+    },
+    {
+      "id": "4_hydroxy_6_penethyl_pyran_2_one",
+      "name": "4-hydroxy-6-(penethyl)pyran-2-one",
+      "short": "4-hydroxy-6-(peneth…",
+      "formula": "C13H12O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1560118"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_3_1_16",
+      "name": "acetyl-CoA C-acyltransferase",
+      "ec": [
+        "2.3.1.16"
+      ],
+      "xrefs": {
+        "uniprot": "P55084"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "acetyl-CoA C-acyltransferase",
+      "ec": "2.3.1.16",
+      "substrates": [
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_phenylpropanoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_oxo_5_phenylpentanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_16"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR200475"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR200475"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "acetyl-CoA C-acyltransferase",
+      "ec": "2.3.1.16",
+      "substrates": [
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_oxo_5_phenylpentanoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_5_dioxo_7_phenylheptanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_16"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR200476"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR200476"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR200477",
+      "substrates": [
+        {
+          "metabolite": "3_5_dioxo_7_phenylheptanoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxy_6_penethyl_pyran_2_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR200477"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR200477"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3_phenylpropanoyl_coa_5-s-glutathionyl-dopachro-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_phenylpropanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-s-glutathionyl-dopachro-to-h2o"
+      },
+      "note": "Shares 3-phenylpropanoyl-CoA with 5-S-glutathionyl-dopachro… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM8128"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_phenylpropanoyl_coa_diphosphate-to-2s-2-hydroxy-4-phenylbu",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_phenylpropanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-2s-2-hydroxy-4-phenylbu"
+      },
+      "note": "Shares 3-phenylpropanoyl-CoA with diphosphate to (2S)-2-hydroxy-4-phenylbu….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM8128"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_hydroxy_6_penethyl_pyran_2_one_r-lipoamide-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_hydroxy_6_penethyl_pyran_2_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-lipoamide-to-h2o"
+      },
+      "note": "Shares 4-hydroxy-6-(penethyl)pyran-2-one with (R)-lipoamide to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1560118"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway mannobiose-to-diphosphate "mannobiose to diphosphate" {
-  spacing 248
+  spacing 236
 
   spine at 0,0 {
     mannobiose
@@ -14,17 +14,5 @@ pathway mannobiose-to-diphosphate "mannobiose to diphosphate" {
     d_mannose_1_phosphate
     <-> ec_2_7_7_13 [2.7.7.13] +gtp +hplus -ppi
     gdp_d_mannose
-  }
-
-  branch from gdp_d_mannose side left {
-    gdp_d_mannose
-    <-> . +ins_1_p_cer_d18_0_24_0 +gdp +hplus
-    man_ins_1_p_cer_d18_0_24_0
-  }
-
-  branch from gdp_d_mannose side right {
-    gdp_d_mannose
-    <-> . +inositol_phosphophytoceramide_t18_0 +gdp +hplus
-    man_1_6_ins_1_p_cer_t18_0
   }
 }

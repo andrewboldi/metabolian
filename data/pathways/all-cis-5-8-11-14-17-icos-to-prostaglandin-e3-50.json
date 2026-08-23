@@ -1,0 +1,590 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "all-cis-5-8-11-14-17-icos-to-prostaglandin-e3-50",
+  "name": "all-cis-5,8,11,14,17-icos… to prostaglandin E3",
+  "category": "other",
+  "summary": "A 3-step route from all-cis-5,8,11,14,17-icosapentaenoate to prostaglandin E3(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:50444"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58562"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "all_cis_5_8_11_14_17_icosapentaenoate",
+      "name": "all-cis-5,8,11,14,17-icosapentaenoate",
+      "short": "all-cis-5,8,11,14,1…",
+      "formula": "C20H29O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58562"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "prostaglandin_g3",
+      "name": "prostaglandin G3",
+      "formula": "C20H29O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:133133"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "prostaglandin_h3",
+      "name": "prostaglandin H3",
+      "formula": "C20H29O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:133134"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "prostaglandin_e3",
+      "name": "prostaglandin E3",
+      "formula": "C20H29O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:133132"
+      }
+    },
+    {
+      "id": "prostaglandin_d3",
+      "name": "prostaglandin D3",
+      "formula": "C20H29O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:132149"
+      }
+    },
+    {
+      "id": "5z_7e_9e_14z_17z_icosapentaenoate",
+      "name": "(5Z,7E,9E,14Z,17Z)-icosapentaenoate",
+      "short": "(5Z,7E,9E,14Z,17Z)-…",
+      "formula": "C20H29O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:60025"
+      }
+    },
+    {
+      "id": "12_hpepe",
+      "name": "12-HPEPE",
+      "formula": "C20H29O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78078"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_3_3_13",
+      "name": "polyenoic fatty acid isomerase",
+      "ec": [
+        "5.3.3.13"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoate + 2 O2 = prostaglandin G3",
+      "equation": "(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoate + 2 O2 = prostaglandin G3",
+      "substrates": [
+        {
+          "metabolite": "all_cis_5_8_11_14_17_icosapentaenoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "prostaglandin_g3",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:50444"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50444"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "prostaglandin G3 + AH2 = prostaglandin H3 + A + H2O",
+      "equation": "prostaglandin G3 + AH2 = prostaglandin H3 + A + H2O",
+      "substrates": [
+        {
+          "metabolite": "prostaglandin_g3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "prostaglandin_h3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:50448"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50448"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "prostaglandin H3 = prostaglandin E3",
+      "equation": "prostaglandin H3 = prostaglandin E3",
+      "substrates": [
+        {
+          "metabolite": "prostaglandin_h3",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "prostaglandin_e3",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:50452"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50452"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "prostaglandin H3 = prostaglandin D3",
+      "equation": "prostaglandin H3 = prostaglandin D3",
+      "substrates": [
+        {
+          "metabolite": "prostaglandin_h3",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "prostaglandin_d3",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:50456"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50456"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "polyenoic fatty acid isomerase",
+      "equation": "(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoate = (5Z,7E,9E,14Z,17Z)-icosapentaenoate",
+      "ec": "5.3.3.13",
+      "substrates": [
+        {
+          "metabolite": "all_cis_5_8_11_14_17_icosapentaenoate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5z_7e_9e_14z_17z_icosapentaenoate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_3_13"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:14889"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14889"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoate + O2 = (5Z,7Z,8Z,10E,14Z,17Z)-12-hydroperoxyeicos...",
+      "equation": "(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoate + O2 = (5Z,7Z,8Z,10E,14Z,17Z)-12-hydroperoxyeicosapentaenoate",
+      "substrates": [
+        {
+          "metabolite": "all_cis_5_8_11_14_17_icosapentaenoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "12_hpepe",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:41344"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41344"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_prostaglandin_g3_all-cis-5-8-11-14-17-icos-to-prostaglandin-e3",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_g3"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "all-cis-5-8-11-14-17-icos-to-prostaglandin-e3"
+      },
+      "note": "Shares prostaglandin G3 with all-cis-5,8,11,14,17-icos… to prostaglandin E3.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133133"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_h3_3-methylbutanol-to-s-citronellate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_h3"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-methylbutanol-to-s-citronellate-null"
+      },
+      "note": "Shares prostaglandin H3 with 3-methylbutanol to (S)-citronellate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133134"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_h3_all-cis-5-8-11-14-17-icos-to-prostaglandin-e3",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_h3"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "all-cis-5-8-11-14-17-icos-to-prostaglandin-e3"
+      },
+      "note": "Shares prostaglandin H3 with all-cis-5,8,11,14,17-icos… to prostaglandin E3.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133134"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_h3_alpha-kdo-2-6-lipid-to-d-gal-1-3-l-fuc-1",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_h3"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-kdo-2-6-lipid-to-d-gal-1-3-l-fuc-1"
+      },
+      "note": "Shares prostaglandin H3 with alpha-Kdo-(2->6)-lipid… to α-D-Gal-(1→3)-[α-L-Fuc-(1….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133134"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_e3_25s-3alpha-7alpha-12alp-to-nad-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_e3"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "25s-3alpha-7alpha-12alp-to-nad-null"
+      },
+      "note": "Shares prostaglandin E3 with (25S)-3alpha,7alpha,12alp… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133132"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_e3_all-cis-5-8-11-14-17-icos-to-prostaglandin-e3",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_e3"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "all-cis-5-8-11-14-17-icos-to-prostaglandin-e3"
+      },
+      "note": "Shares prostaglandin E3 with all-cis-5,8,11,14,17-icos… to prostaglandin E3.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133132"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_e3_glyceric-acid-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_e3"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "glyceric-acid-to-nad"
+      },
+      "note": "Shares prostaglandin E3 with Glyceric acid… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133132"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_d3_all-cis-5-8-11-14-17-icos-to-prostaglandin-e3",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_d3"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "all-cis-5-8-11-14-17-icos-to-prostaglandin-e3"
+      },
+      "note": "Shares prostaglandin D3 with all-cis-5,8,11,14,17-icos… to prostaglandin E3.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:132149"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_d3_all-trans-retinol-to-11-cis-retinal",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_d3"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "all-trans-retinol-to-11-cis-retinal"
+      },
+      "note": "Shares prostaglandin D3 with all-trans-retinol to 11-cis-retinal.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:132149"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5z_7e_9e_14z_17z_icosapentaenoate_all-cis-5-8-11-14-17-icos-to-prostaglandin-e3",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5z_7e_9e_14z_17z_icosapentaenoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "all-cis-5-8-11-14-17-icos-to-prostaglandin-e3"
+      },
+      "note": "Shares (5Z,7E,9E,14Z,17Z)-icosapentaenoate with all-cis-5,8,11,14,17-icos… to prostaglandin E3.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60025"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_12_hpepe_all-cis-5-8-11-14-17-icos-to-prostaglandin-e3",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "12_hpepe"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "all-cis-5-8-11-14-17-icos-to-prostaglandin-e3"
+      },
+      "note": "Shares 12-HPEPE with all-cis-5,8,11,14,17-icos… to prostaglandin E3.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78078"
+          }
+        ]
+      }
+    }
+  ]
+}

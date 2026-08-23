@@ -125,90 +125,6 @@
       "xrefs": {
         "metanetx": "MNXM727276"
       }
-    },
-    {
-      "id": "bisnorlipoic_acid",
-      "name": "Bisnorlipoic acid",
-      "formula": "C6H10O2S2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1133008"
-      }
-    },
-    {
-      "id": "4_6_dimercaptohexanoic_acid",
-      "name": "4,6-Dimercaptohexanoic acid",
-      "short": "4,6-Dimercaptohexan…",
-      "formula": "C6H12O2S2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1133009"
-      }
-    },
-    {
-      "id": "tetranorlipoic_acid",
-      "name": "Tetranorlipoic acid",
-      "formula": "C4H6O2S2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1133011"
-      }
-    },
-    {
-      "id": "2_4_dimercaptobutanoic_acid",
-      "name": "2,4-Dimercaptobutanoic acid",
-      "short": "2,4-Dimercaptobutan…",
-      "formula": "C4H8O2S2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1133010"
-      }
-    },
-    {
-      "id": "nordihydrocapsaicin",
-      "name": "Nordihydrocapsaicin",
-      "formula": "C17H27NO3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:174101"
-      }
-    },
-    {
-      "id": "vanillylamine",
-      "name": "vanillylamine",
-      "formula": "C8H12NO2",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:149596"
-      }
-    },
-    {
-      "id": "7_methyloctanoyl_coa",
-      "name": "7-methyloctanoyl-CoA",
-      "formula": "C30H52N7O17P3S",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:140734"
-      }
-    },
-    {
-      "id": "4e_6_methylhept_4_enoyl_coa",
-      "name": "(4E)-6-methylhept-4-enoyl-CoA",
-      "short": "6-methylhept-4-enoy…",
-      "formula": "C29H44N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM1132334"
-      }
-    },
-    {
-      "id": "dinorcapsaicin",
-      "name": "Dinorcapsaicin",
-      "formula": "C16H23NO3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:172515"
-      }
     }
   ],
   "enzymes": [
@@ -217,27 +133,16 @@
       "name": "alcohol dehydrogenase [NAD(P)(+)]",
       "ec": [
         "1.1.1.71"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P16152"
+      }
     },
     {
       "id": "ec_2_3_1_69",
       "name": "monoterpenol O-acetyltransferase",
       "ec": [
         "2.3.1.69"
-      ]
-    },
-    {
-      "id": "ec_1_8_1_4",
-      "name": "dihydrolipoyl dehydrogenase",
-      "ec": [
-        "1.8.1.4"
-      ]
-    },
-    {
-      "id": "ec_2_3_2_35",
-      "name": "capsaicin synthase",
-      "ec": [
-        "2.3.2.35"
       ]
     }
   ],
@@ -376,195 +281,203 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "dihydrolipoyl dehydrogenase",
-      "ec": "1.8.1.4",
-      "substrates": [
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "bisnorlipoic_acid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "4_6_dimercaptohexanoic_acid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_8_1_4"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR194766"
+      "id": "xt_s_citronellol_s-citronellol-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_citronellol"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "s-citronellol-to-nadph"
+      },
+      "note": "Shares (S)-(−)-citronellol with (S)-(−)-citronellol to NADPH.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR194766"
+            "db": "ChEBI",
+            "id": "CHEBI:88"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "dihydrolipoyl dehydrogenase",
-      "ec": "1.8.1.4",
-      "substrates": [
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "tetranorlipoic_acid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_4_dimercaptobutanoic_acid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_8_1_4"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR194767"
+      "id": "xt_s_citronellal_3-methylbutanol-to-s-citronellate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_citronellal"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "3-methylbutanol-to-s-citronellate"
+      },
+      "note": "Shares (S)-(−)-citronellal with 3-methylbutanol to (S)-citronellate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR194767"
+            "db": "ChEBI",
+            "id": "CHEBI:368"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "capsaicin synthase",
-      "ec": "2.3.2.35",
-      "substrates": [
-        {
-          "metabolite": "h",
-          "stoichiometry": 5
-        },
-        {
-          "metabolite": "nordihydrocapsaicin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "vanillylamine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "7_methyloctanoyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_3_2_35"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "metanetx": "MNXR192898"
+      "id": "xt_s_citronellal_3e-nonenoyl-coa-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_citronellal"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "3e-nonenoyl-coa-to-nad"
+      },
+      "note": "Shares (S)-(−)-citronellal with (3E)-nonenoyl-CoA to NAD.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR192898"
+            "db": "ChEBI",
+            "id": "CHEBI:368"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "capsaicin synthase",
-      "ec": "2.3.2.35",
-      "substrates": [
-        {
-          "metabolite": "4e_6_methylhept_4_enoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "vanillylamine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "dinorcapsaicin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_3_2_35"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "metanetx": "MNXR192899"
+      "id": "xt_s_citronellal_5-chloro-trans-dienelacto-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_citronellal"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "5-chloro-trans-dienelacto-to-nad"
+      },
+      "note": "Shares (S)-(−)-citronellal with 5-chloro-trans-dienelacto… to NAD.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:368"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_citronellal_beta-d-ribosylnicotinate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_citronellal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-d-ribosylnicotinate-to-h2o"
+      },
+      "note": "Shares (S)-(−)-citronellal with beta-D-ribosylnicotinate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:368"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_citronellal_geranylgeranyl-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_citronellal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "geranylgeranyl-to-h2o"
+      },
+      "note": "Shares (S)-(−)-citronellal with geranylgeranyl… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:368"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_citronellal_nadh-to-nadph-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_citronellal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-nadph-null"
+      },
+      "note": "Shares (S)-(−)-citronellal with NADH to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:368"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_menthol_nadh-to-nadph-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "menthol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-nadph-null"
+      },
+      "note": "Shares (-)-menthol with NADH to NADPH.",
+      "provenance": {
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR192899"
+            "id": "MNXM1346"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_menthol_s-citronellol-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "menthol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-citronellol-to-nadph"
+      },
+      "note": "Shares (-)-menthol with (S)-(−)-citronellol to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1346"
           }
         ]
       }

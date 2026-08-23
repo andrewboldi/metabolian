@@ -137,6 +137,70 @@
       "xrefs": {
         "chebi": "CHEBI:17499"
       }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "5_hydroxy_l_tryptophan",
+      "name": "5-hydroxy-L-tryptophan",
+      "short": "5-hydroxy-L-tryptop…",
+      "formula": "C11H12N2O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58266"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58307"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "l_oxindolylalanine",
+      "name": "L-oxindolylalanine",
+      "formula": "C11H12N2O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:234550"
+      }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H30N9O15P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57692"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
     }
   ],
   "enzymes": [
@@ -145,6 +209,13 @@
       "name": "beta-cyclopiazonate dehydrogenase",
       "ec": [
         "1.21.99.1"
+      ]
+    },
+    {
+      "id": "ec_1_11_2_8",
+      "name": "L-tryptophan 5-peroxygenase",
+      "ec": [
+        "1.11.2.8"
       ]
     }
   ],
@@ -280,6 +351,170 @@
           {
             "db": "Rhea",
             "id": "RHEA:14525"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "L-tryptophan 5-peroxygenase",
+      "equation": "L-tryptophan + H2O2 = 5-hydroxy-L-tryptophan + H2O",
+      "ec": "1.11.2.8",
+      "substrates": [
+        {
+          "metabolite": "l_tryptophan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_hydroxy_l_tryptophan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_11_2_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:84771"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84771"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "L-tryptophan + FADH2 + O2 = L-oxindolylalanine + FAD + H2O + H(+)",
+      "equation": "L-tryptophan + FADH2 + O2 = L-oxindolylalanine + FAD + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "l_tryptophan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_oxindolylalanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:85799"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:85799"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_5_hydroxy_l_tryptophan_gdp-to-l-ascorbate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_hydroxy_l_tryptophan"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gdp-to-l-ascorbate"
+      },
+      "note": "Shares 5-hydroxy-L-tryptophan with GDP to L-ascorbate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58266"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_hydroxy_l_tryptophan_l-erythro-biopterin-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_hydroxy_l_tryptophan"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-erythro-biopterin-to-succinate"
+      },
+      "note": "Shares 5-hydroxy-L-tryptophan with L-erythro-biopterin to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58266"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_oxindolylalanine_isophthalate-to-n-benzoylanthranilate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_oxindolylalanine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isophthalate-to-n-benzoylanthranilate"
+      },
+      "note": "Shares L-oxindolylalanine with isophthalate to N-benzoylanthranilate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:234550"
           }
         ]
       }

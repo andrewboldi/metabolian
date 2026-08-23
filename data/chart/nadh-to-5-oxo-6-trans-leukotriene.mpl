@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-5-oxo-6-trans-leukotriene "NADH to 5-Oxo-6-trans-leukotriene…" {
-  spacing 204
+  spacing 198
 
   spine at 0,0 {
     nadh
@@ -16,15 +16,9 @@ pathway nadh-to-5-oxo-6-trans-leukotriene "NADH to 5-Oxo-6-trans-leukotriene…"
     5_oxo_6_trans_leukotriene_b4
   }
 
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    troglitazone_glucuronide
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    telmisartan_glucuronide
+  branch from 12_dehydro_leukotriene_b4 side left {
+    12_dehydro_leukotriene_b4
+    <-> . +nadh +hplus +nad
+    10_11_dihydro_12_oxoleukotriene_b4
   }
 }

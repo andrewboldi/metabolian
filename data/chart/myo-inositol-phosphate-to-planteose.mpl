@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway myo-inositol-phosphate-to-planteose "myo-inositol phosphate to planteose" {
-  spacing 286
+  spacing 280
 
   spine at 0,0 {
     myo_inositol_phosphate
@@ -20,18 +20,6 @@ pathway myo-inositol-phosphate-to-planteose "myo-inositol phosphate to planteose
     planteose
   }
 
-  branch from myo_inositol side left {
-    myo_inositol
-    <-> ec_3_1_3_25 [3.1.3.25] +h2o +pi
-    1d_myo_inositol_6_phosphate
-  }
-
-  branch from myo_inositol side right {
-    myo_inositol
-    <-> . +nad +nadh +hplus
-    myo_inosose_5
-  }
-
   branch from raffinose side left {
     raffinose
     <-> . +h2o +sucrose
@@ -40,13 +28,19 @@ pathway myo-inositol-phosphate-to-planteose "myo-inositol phosphate to planteose
 
   branch from sucrose side right {
     sucrose
-    <-> ec_2_4_1_n2 [2.4.1.n2] +udp_d_galactose +udp +hplus
-    loliose
+    <-> ec_2_7_1_211 [2.7.1.211] +n_phosphonato_l_histidine +l_histidine
+    sucrose_6g_phosphate
   }
 
-  branch from sucrose side left {
-    sucrose
-    <-> ec_5_4_99_11 [5.4.99.11]
-    trehalulose
+  branch from udp_d_galactose side left {
+    udp_d_galactose
+    <-> ec_2_4_1_303 [2.4.1.303] +n_acetyl_d_glucosaminyl_1_diphospho_ditrans_poly +udp +hplus
+    d_gal_1_3_d_glcnac_diphospho_ditrans_octacis_un
+  }
+
+  branch from udp_d_galactose side right {
+    udp_d_galactose
+    <-> ec_2_4_1_304 [2.4.1.304] +n_acetyl_d_glucosaminyl_1_diphospho_ditrans_poly +udp +hplus
+    d_gal_1_4_d_glcnac_diphospho_ditrans_octacis_un
   }
 }

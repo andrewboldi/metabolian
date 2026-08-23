@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "udp-to-hydrogen-donor",
   "name": "UDP to hydrogen donor",
-  "category": "lipid-metabolism",
+  "category": "other",
   "summary": "A 4-step route from UDP to hydrogen donor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -170,15 +170,6 @@
       }
     },
     {
-      "id": "nadp",
-      "name": "NADP",
-      "formula": "C21H25N7O17P3",
-      "charge": -3,
-      "xrefs": {
-        "metanetx": "MNXM5"
-      }
-    },
-    {
       "id": "cyathin_a3",
       "name": "cyathin A3",
       "formula": "C20H30O3",
@@ -186,110 +177,9 @@
       "xrefs": {
         "chebi": "CHEBI:3985"
       }
-    },
-    {
-      "id": "nadph",
-      "name": "NADPH",
-      "formula": "C21H26N7O17P3",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM738702"
-      }
-    },
-    {
-      "id": "peregrinol",
-      "name": "peregrinol",
-      "formula": "C20H36O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:145550"
-      }
-    },
-    {
-      "id": "labd_13z_ene_9_15_16_triol",
-      "name": "labd-13Z-ene-9,15,16-triol",
-      "short": "labd-13Z-ene-9,15,1…",
-      "formula": "C20H36O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:145552"
-      }
-    },
-    {
-      "id": "methyl_ultra_long_chain_fatty_acid_anion",
-      "name": "ω-methyl-ultra-long-chain fatty acid anion",
-      "short": "ω-methyl-ultra-long…",
-      "formula": "C2H3O2R",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:147293"
-      }
-    },
-    {
-      "id": "hydroxy_ultra_long_chain_fatty_acid_anion",
-      "name": "ω-hydroxy-ultra-long-chain fatty acid anion",
-      "short": "ω-hydroxy-ultra-lon…",
-      "formula": "C2H3O3R",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:147288"
-      }
-    },
-    {
-      "id": "udp_d_xylose",
-      "name": "UDP-α-D-xylose",
-      "formula": "C14H20N2O16P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57632"
-      }
-    },
-    {
-      "id": "erinacine_q",
-      "name": "erinacine Q",
-      "formula": "C27H42O8",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:194357"
-      }
-    },
-    {
-      "id": "udp",
-      "name": "UDP",
-      "formula": "C9H11N2O12P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58223"
-      }
-    },
-    {
-      "id": "udp_d_glucose",
-      "name": "UDP-α-D-glucose",
-      "formula": "C15H22N2O17P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:58885"
-      }
-    },
-    {
-      "id": "erinacine_q2",
-      "name": "erinacine Q2",
-      "formula": "C28H44O9",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:194356"
-      }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_1_14_14_177",
-      "name": "ultra-long-chain fatty acid omega-hydroxylase",
-      "ec": [
-        "1.14.14.177"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -464,250 +354,15 @@
     },
     {
       "id": "r5",
-      "name": "Reaction MNXR200112",
+      "name": "cyathin A3 + acetyl-CoA = 11-O-acetylcyathin A3 + CoA",
+      "equation": "cyathin A3 + acetyl-CoA = 11-O-acetylcyathin A3 + CoA",
       "substrates": [
-        {
-          "metabolite": "cyathatriol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
         {
           "metabolite": "cyathin_a3",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR200112"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR200112"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "peregrinol + reduced [NADPH--hemoprotein reductase] + O2 = labd-13Z-ene-9,15,16-triol +...",
-      "equation": "peregrinol + reduced [NADPH--hemoprotein reductase] + O2 = labd-13Z-ene-9,15,16-triol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "peregrinol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "labd_13z_ene_9_15_16_triol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:62192"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:62192"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "ultra-long-chain fatty acid omega-hydroxylase",
-      "equation": "an omega-methyl-ultra-long-chain fatty acid + reduced [NADPH--hemoprotein reductase] + O2 = an omega-hydroxy-ultra-long-chain fatty acid + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "ec": "1.14.14.177",
-      "substrates": [
-        {
-          "metabolite": "methyl_ultra_long_chain_fatty_acid_anion",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "hydroxy_ultra_long_chain_fatty_acid_anion",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_177"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:63376"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:63376"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r8",
-      "name": "11-O-acetylcyathatriol + UDP-alpha-D-xylose = erinacine Q + UDP + H(+)",
-      "equation": "11-O-acetylcyathatriol + UDP-alpha-D-xylose = erinacine Q + UDP + H(+)",
-      "substrates": [
-        {
-          "metabolite": "11_o_acetylcyathatriol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp_d_xylose",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "erinacine_q",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "rhea": "RHEA:75583"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:75583"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r9",
-      "name": "11-O-acetylcyathatriol + UDP-alpha-D-glucose = erinacine Q2 + UDP + H(+)",
-      "equation": "11-O-acetylcyathatriol + UDP-alpha-D-glucose = erinacine Q2 + UDP + H(+)",
-      "substrates": [
-        {
-          "metabolite": "11_o_acetylcyathatriol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp_d_glucose",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "erinacine_q2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 9,
-      "xrefs": {
-        "rhea": "RHEA:75587"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:75587"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r10",
-      "name": "Reaction MNXR200120",
-      "substrates": [
-        {
-          "metabolite": "11_o_acetylcyathatriol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
+          "metabolite": "acetyl_coa",
           "stoichiometry": 1
         }
       ],
@@ -717,25 +372,221 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
+          "metabolite": "coa",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 10,
+      "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR200120"
+        "rhea": "RHEA:75571"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR200120"
+            "db": "Rhea",
+            "id": "RHEA:75571"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_cyathadiol_2-trans-6-trans-10-trans-to-fmn-75147",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cyathadiol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-trans-6-trans-10-trans-to-fmn-75147"
+      },
+      "note": "Shares cyathadiol with 2-trans,6-trans,10-trans-… to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:194346"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cyathatriol_3-hydroxy-5-steroid-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cyathatriol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxy-5-steroid-to-hydrogen-donor"
+      },
+      "note": "Shares cyathatriol with 3β-hydroxy-Δ5-steroid to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:194349"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cyathatriol_prephytoene-diphosphate-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cyathatriol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "prephytoene-diphosphate-to-diphosphate"
+      },
+      "note": "Shares cyathatriol with prephytoene diphosphate to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:194349"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_11_o_acetylcyathatriol_fadh2-to-o-d-glucosyl-trans-zeat",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11_o_acetylcyathatriol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fadh2-to-o-d-glucosyl-trans-zeat"
+      },
+      "note": "Shares 11-O-acetylcyathatriol with FADH2 to O-β-D-glucosyl-trans-zeat….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:194354"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_11_o_acetylcyathatriol_prephytoene-diphosphate-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11_o_acetylcyathatriol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "prephytoene-diphosphate-to-diphosphate"
+      },
+      "note": "Shares 11-O-acetylcyathatriol with prephytoene diphosphate to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:194354"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_11_o_acetylcyathatriol_udp-l-arabinofuranose-to-o-d-xylosylzeatin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11_o_acetylcyathatriol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-l-arabinofuranose-to-o-d-xylosylzeatin"
+      },
+      "note": "Shares 11-O-acetylcyathatriol with UDP-β-L-arabinofuranose to O-β-D-xylosylzeatin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:194354"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_11_o_acetylcyathin_a3_prephytoene-diphosphate-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11_o_acetylcyathin_a3"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "prephytoene-diphosphate-to-diphosphate"
+      },
+      "note": "Shares 11-O-acetylcyathin A3 with prephytoene diphosphate to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:194355"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cyathin_a3_3-hydroxy-5-steroid-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cyathin_a3"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxy-5-steroid-to-hydrogen-donor"
+      },
+      "note": "Shares cyathin A3 with 3β-hydroxy-Δ5-steroid to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:3985"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cyathin_a3_prephytoene-diphosphate-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cyathin_a3"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "prephytoene-diphosphate-to-diphosphate"
+      },
+      "note": "Shares cyathin A3 with prephytoene diphosphate to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:3985"
           }
         ]
       }

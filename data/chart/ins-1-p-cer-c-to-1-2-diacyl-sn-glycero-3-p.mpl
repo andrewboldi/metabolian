@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway ins-1-p-cer-c-to-1-2-diacyl-sn-glycero-3-p "Ins-1-P-Cer-C to 1,2-diacyl-sn-glycero-3-p…" {
-  spacing 288
+  spacing 264
 
   spine at 0,0 {
     ins_1_p_cer_c
@@ -18,29 +18,5 @@ pathway ins-1-p-cer-c-to-1-2-diacyl-sn-glycero-3-p "Ins-1-P-Cer-C to 1,2-diacyl-
     1_acyl_sn_glycero_3_phosphoethanolamine
     <-> ec_2_3_1_n7 [2.3.1.n7] +acyl_coa -coa
     1_2_diacyl_sn_glycero_3_phosphoethanolamine
-  }
-
-  branch from fatty-acid side left {
-    fatty-acid
-    <-> . +d_glucosylceramide +h2o
-    d_glucosylsphingoid_base
-  }
-
-  branch from fatty-acid side right {
-    fatty-acid
-    <-> . +2_2_lysobisphosphatidate +h2o +hplus
-    a_3_acyl_sn_glycero_1_phospho_1_sn_glycerol
-  }
-
-  branch from 1_2_diacyl_sn_glycero_3_phosphoethanolamine side left {
-    1_2_diacyl_sn_glycero_3_phosphoethanolamine
-    <-> . +c_terminal_amino_acid_phosphatidylethanolamine_a +h2o
-    c_terminal_amino_acid_glycine
-  }
-
-  branch from 1_2_diacyl_sn_glycero_3_phosphoethanolamine side right {
-    1_2_diacyl_sn_glycero_3_phosphoethanolamine
-    <-> . +fatty_acyl_coa +coa
-    2_acyl_sn_glycero_3_phosphoethanolamine
   }
 }

@@ -83,36 +83,6 @@
       "xrefs": {
         "chebi": "CHEBI:18254"
       }
-    },
-    {
-      "id": "nucleoside_3_5_bisphosphate",
-      "name": "nucleoside 3',5'-bisphosphate",
-      "short": "nucleoside…",
-      "formula": "C5H7O10P2R",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:83402"
-      }
-    },
-    {
-      "id": "3_end_ribonucleotidyl_ribonucleotide_2",
-      "name": "3'-end ribonucleotidyl-ribonucleotide(2−)",
-      "short": "3'-end ribonucleoti…",
-      "formula": "C10H15O12P2R2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:197502"
-      }
-    },
-    {
-      "id": "3_end_ribonucleotide_1",
-      "name": "3'-end ribonucleotide(1−)",
-      "short": "3'-end ribonucleoti…",
-      "formula": "C5H8O6PR",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:74896"
-      }
     }
   ],
   "enzymes": [
@@ -121,28 +91,30 @@
       "name": "nucleoside-triphosphate phosphatase",
       "ec": [
         "3.6.1.15"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q92484"
+      }
     },
     {
       "id": "ec_3_6_1_6",
       "name": "nucleoside diphosphate phosphatase",
       "ec": [
         "3.6.1.6"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q8WVQ1"
+      }
     },
     {
       "id": "ec_3_1_3_5",
       "name": "5'-nucleotidase",
       "ec": [
         "3.1.3.5"
-      ]
-    },
-    {
-      "id": "ec_3_1_3_97",
-      "name": "3',5'-nucleoside bisphosphate phosphatase",
-      "ec": [
-        "3.1.3.97"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q9BXI3"
+      }
     }
   ],
   "reactions": [
@@ -288,91 +260,269 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "3',5'-nucleoside bisphosphate phosphatase",
-      "equation": "a ribonucleoside 3',5'-bisphosphate + H2O = a ribonucleoside 5'-phosphate + phosphate",
-      "ec": "3.1.3.97",
-      "substrates": [
-        {
-          "metabolite": "nucleoside_3_5_bisphosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "nucleoside_5_monophosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_1_3_97"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:43532"
+      "id": "xt_nucleoside_5_triphoshate_5-end-ribonucleotide-2-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nucleoside_5_triphoshate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "5-end-ribonucleotide-2-to-diphosphate"
+      },
+      "note": "Shares nucleoside 5'-triphoshate with 5'-end ribonucleotide(2−) to diphosphate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:43532"
+            "db": "ChEBI",
+            "id": "CHEBI:61557"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "a 3'-end ribonucleotidyl-ribonucleotide-RNA + H2O = a 3'-end ribonucleotide-RNA + a rib...",
-      "equation": "a 3'-end ribonucleotidyl-ribonucleotide-RNA + H2O = a 3'-end ribonucleotide-RNA + a ribonucleoside 5'-phosphate + H(+)",
-      "substrates": [
-        {
-          "metabolite": "3_end_ribonucleotidyl_ribonucleotide_2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_end_ribonucleotide_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nucleoside_5_monophosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:77763"
+      "id": "xt_nucleoside_5_triphoshate_5-n7-methyl-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nucleoside_5_triphoshate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "5-n7-methyl-to-diphosphate"
+      },
+      "note": "Shares nucleoside 5'-triphoshate with 5'-(N7-methyl… to diphosphate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:77763"
+            "db": "ChEBI",
+            "id": "CHEBI:61557"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nucleoside_5_triphoshate_chlorophyll-to-2-4-divinyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nucleoside_5_triphoshate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "chlorophyll-to-2-4-divinyl"
+      },
+      "note": "Shares nucleoside 5'-triphoshate with chlorophyll to 2,4-divinyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61557"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nucleoside_5_triphoshate_dioleoyl-phosphatidic-acid-to-5-methyldeoxycytid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nucleoside_5_triphoshate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dioleoyl-phosphatidic-acid-to-5-methyldeoxycytid"
+      },
+      "note": "Shares nucleoside 5'-triphoshate with dioleoyl phosphatidic acid to 5-methyldeoxycytidine….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61557"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nucleoside_5_triphoshate_ndp-d-glucose-to-nucleoside-5-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nucleoside_5_triphoshate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ndp-d-glucose-to-nucleoside-5-diphosphate"
+      },
+      "note": "Shares nucleoside 5'-triphoshate with NDP-α-D-glucose to nucleoside 5'-diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61557"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nucleoside_5_triphoshate_nucleoside-5-triphoshate-to-nucleoside-5-triphos",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nucleoside_5_triphoshate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nucleoside-5-triphoshate-to-nucleoside-5-triphos"
+      },
+      "note": "Shares nucleoside 5'-triphoshate with nucleoside 5'-triphoshate to nucleoside 5'-triphoshate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61557"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nucleoside_5_triphoshate_oxamate-to-2-deoxyribonucleoside",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nucleoside_5_triphoshate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "oxamate-to-2-deoxyribonucleoside"
+      },
+      "note": "Shares nucleoside 5'-triphoshate with oxamate to 2'-deoxyribonucleoside….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61557"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nucleoside_5_diphosphate_chlorophyll-to-2-4-divinyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nucleoside_5_diphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "chlorophyll-to-2-4-divinyl"
+      },
+      "note": "Shares nucleoside 5'-diphosphate with chlorophyll to 2,4-divinyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57930"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nucleoside_5_diphosphate_dioleoyl-phosphatidic-acid-to-5-methyldeoxycytid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nucleoside_5_diphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dioleoyl-phosphatidic-acid-to-5-methyldeoxycytid"
+      },
+      "note": "Shares nucleoside 5'-diphosphate with dioleoyl phosphatidic acid to 5-methyldeoxycytidine….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57930"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nucleoside_5_diphosphate_ndp-d-glucose-to-2-hydroxy-3-oxosuccinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nucleoside_5_diphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ndp-d-glucose-to-2-hydroxy-3-oxosuccinate"
+      },
+      "note": "Shares nucleoside 5'-diphosphate with NDP-α-D-glucose to 2-hydroxy-3-oxosuccinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57930"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nucleoside_5_diphosphate_ndp-d-glucose-to-nucleoside-5-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nucleoside_5_diphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ndp-d-glucose-to-nucleoside-5-diphosphate"
+      },
+      "note": "Shares nucleoside 5'-diphosphate with NDP-α-D-glucose to nucleoside 5'-diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57930"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nucleoside_5_diphosphate_nucleoside-5-triphoshate-to-nucleoside-5-triphos",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nucleoside_5_diphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nucleoside-5-triphoshate-to-nucleoside-5-triphos"
+      },
+      "note": "Shares nucleoside 5'-diphosphate with nucleoside 5'-triphoshate to nucleoside 5'-triphoshate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57930"
           }
         ]
       }

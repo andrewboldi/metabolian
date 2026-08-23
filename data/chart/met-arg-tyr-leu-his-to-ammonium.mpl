@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway met-arg-tyr-leu-his-to-ammonium "Met-Arg-Tyr-Leu-His to ammonium" {
-  spacing 204
+  spacing 156
 
   spine at 0,0 {
     met_arg_tyr_leu_his
@@ -14,53 +14,5 @@ pathway met-arg-tyr-leu-his-to-ammonium "Met-Arg-Tyr-Leu-His to ammonium" {
     3_nitro_l_tyrosine
     <-> ec_4_3_1_3 [4.3.1.3] +l_histidine -nh3
     trans_urocanate
-  }
-
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
-    <-> . +11_deoxycorticosterone +di_sulfido_diiron +o2 +hplus +h2o
-    19_hydroxy_11_deoxycorticosterone
-  }
-
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
-    <-> . +19_hydroxy_11_deoxycorticosterone +di_sulfido_diiron +o2 +hplus +h2o
-    19_oxo_deoxycorticosterone
-  }
-
-  branch from l_histidine side left {
-    l_histidine
-    <-> . +glycocholate +glycine
-    l_histidocholate
-  }
-
-  branch from arginine side right {
-    arginine
-    <-> . +fe2 +hplus +iron +h2o
-    n5_hydroxyamino_imino_methyl_l_ornithinium
-  }
-
-  branch from arginine side left {
-    arginine
-    <-> . +atp +hplus +ppi
-    l_arginyl_amp
-  }
-
-  branch from trans_urocanate side right {
-    trans_urocanate
-    <-> ec_4_2_1_49 [4.2.1.49] +h2o
-    3_4_oxo_4_5_dihydro_1h_imidazol_5_yl_propanoate
-  }
-
-  branch from nh3 side left {
-    nh3
-    <-> . +s_leucinol +nad +h2o +nadh +hplus
-    1_hydroxy_4_methylpentan_2_one
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +d_glutamate +nad +h2o +nadh +hplus
-    akg
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-methylbutanoyl-phosphate-to-coa "3-methylbutanoyl phosphate to CoA" {
-  spacing 276
+  spacing 192
 
   spine at 0,0 {
     3_methylbutanoyl_phosphate
@@ -14,89 +14,5 @@ pathway 3-methylbutanoyl-phosphate-to-coa "3-methylbutanoyl phosphate to CoA" {
     3_methylbutanoyl_coa
     <-> . +malonyl_coa +h -6_isobutyl_4_hydroxy_2_pyrone -coa
     co2
-  }
-
-  branch from 3_methylbutanoate side left {
-    3_methylbutanoate
-    <-> . +l_leucine +h2o +co2 +nh4
-    4_methylpentanoate
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +h +adp +l_glutamyl_l_glutamate_2 +phosphate +l_glutamate
-    l_glutamic_acid
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +4_phenylbutyric_acid +coa +h +amp +4_phenylbutanoyl_coa
-    diphosphate
-  }
-
-  branch from 3_methylbutanoyl_coa side right {
-    3_methylbutanoyl_coa
-    <-> . +4_3_methylbutanoyl_sucrose +coa
-    3_4_di_3_methylbutanoyl_sucrose
-  }
-
-  branch from 3_methylbutanoyl_coa side left {
-    3_methylbutanoyl_coa
-    <-> . +4_3_methylbutanoyl_sucrose +coa
-    2_4_di_3_methylbutanoyl_sucrose
-  }
-
-  branch from adp side right {
-    adp
-    <-> ec_7_5_2_11 [7.5.2.11] +h +phosphate +atp +h2o
-    aldehydo_d_galactose
-  }
-
-  branch from adp side left {
-    adp
-    <-> . +h +phosphate +atp +h2o
-    ribazole
-  }
-
-  branch from phosphate side right {
-    phosphate
-    <-> . +h +1_dephospho_kdo2_lipid_a +h2o
-    h_pylori_kdo2_lipid_a
-  }
-
-  branch from phosphate side left {
-    phosphate
-    <-> . +h +4_dephosphorylated_1_petn_kdo_lipid_a +h2o
-    1_petn_kdo_lipid_a
-  }
-
-  branch from co2 side right {
-    co2
-    <-> . +2_5_dihydroxypyridine +h
-    3_6_dihydroxypicolinate
-  }
-
-  branch from co2 side left {
-    co2
-    <-> . +3_methylbutyraldehyde_oxime +h2o +h
-    n_n_dihydroxy_l_leucine
-  }
-
-  branch from 6_isobutyl_4_hydroxy_2_pyrone side right {
-    6_isobutyl_4_hydroxy_2_pyrone
-    <-> . +malonyl_coa +co2 +coa
-    5_methyl_3_oxohexanoyl_coa
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +tetradecanoyl_coa +1_myristoyl_sn_glycero_3_phosphoethanolamine
-    phosphatidylethanolamine_ditetradecanoyl_n_c14_0
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +3_o_methyldopa +acetyl_coa
-    n_acetylvanilalanine
   }
 }

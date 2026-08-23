@@ -16,51 +16,51 @@ pathway chenodeoxycholoyl-coa-to-3-7-dihydroxy-24-oxo-5 "chenodeoxycholoyl-CoA t
     dhca_24oxo_coa
   }
 
-  branch from 24e_3_7_dihydroxy_5_cholest_24_en_26_oyl_coa side left {
-    24e_3_7_dihydroxy_5_cholest_24_en_26_oyl_coa
-    <-> . +h2o2 +o2
-    25s_3alpha_7alpha_dihydroxy_5beta_cholestanoyl
-  }
-
-  branch from 24e_3_7_dihydroxy_5_cholest_24_en_26_oyl_coa side right {
-    24e_3_7_dihydroxy_5_cholest_24_en_26_oyl_coa
-    <-> . +h +h2o
-    3alpha_7alpha_24_trihydroxy_5beta_cholestanoyl_c
-  }
-
-  branch from co2 side left {
-    co2
-    <-> . +nyasol
-    4_coumaryl_4_coumarate
-  }
-
-  branch from co2 side right {
-    co2
-    <-> . +4_aminoimidazole
-    5_aminoimidazole_4_carboxylic_acid
-  }
-
   branch from coa side left {
     coa
-    <-> . +henicosanoic_acid +atp +h +amp +heneicosanoyl_coenzyme_a
-    diphosphate
+    <-> . +s_carnitine +8z_11z_icosadienoyl_coa
+    8z_11z_icosa_8_11_dienoylcarnitine
   }
 
   branch from coa side right {
     coa
-    <-> . +henicosanoic_acid +h2o
-    heneicosanoyl_coenzyme_a
+    <-> . +s_carnitine +5z_8z_11z_icosatrienoyl_coa
+    icosa_5_8_11_trienoylcarnitine
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_4_3_1_15 [4.3.1.15] +h +3_aminoalanine +nh4
-    pyruvate
+    <-> . +beta_d_fructose_6_phosphate +phosphate
+    beta_d_fructose
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_26 [3.2.1.26] +d_fructofuranose +d_glucose_6_phosphate
-    sucrose_6g_phosphate
+    <-> . +9e_tetradecenoic_acid +coa
+    a_tetradecenoyl_coa_n_c14_1coa
+  }
+
+  branch from coa side left {
+    coa
+    <-> . +s_carnitine +heneicosanoyl_coenzyme_a
+    heneicosanoylcarnitine
+  }
+
+  branch from coa side right {
+    coa
+    <-> . +erucoyl_coa +s_carnitine
+    13z_docos_13_enoylcarnitine
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +h +adp +phosphate +atp
+    fe
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +fe +h +adp +phosphate +fe +atp
+    citrate
   }
 }

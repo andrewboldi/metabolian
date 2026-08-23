@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 19-hydroxytestosterone-to-hydrogen-acceptor "19-hydroxytestosterone to hydrogen acceptor" {
-  spacing 204
+  spacing 180
 
   spine at 0,0 {
     19_hydroxytestosterone
@@ -14,29 +14,5 @@ pathway 19-hydroxytestosterone-to-hydrogen-acceptor "19-hydroxytestosterone to h
     17_estradiol
     <-> ec_1_14_99_11 [1.14.99.11] +hydrogen_donor +o2 -hydrogen_acceptor -h2o
     6_hydroxy_17_estradiol
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +dodecan_1_ol +fmnh2 +o2 +h2o +hplus
-    1_4_dodecanediol
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +dodecan_1_ol +fmnh2 +o2 +h2o +hplus
-    1_3_dodecanediol
-  }
-
-  branch from 17_estradiol side left {
-    17_estradiol
-    <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
-    17_estradiol_3_sulfate
-  }
-
-  branch from 17_estradiol side right {
-    17_estradiol
-    <-> . +udp_d_glucuronate +udp +hplus
-    17_estradiol_3_o_d_glucuronide
   }
 }

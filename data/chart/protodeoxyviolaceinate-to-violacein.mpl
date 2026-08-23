@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway protodeoxyviolaceinate-to-violacein "protodeoxyviolaceinate to violacein" {
-  spacing 214
+  spacing 226
 
   spine at 0,0 {
     protodeoxyviolaceinate
@@ -20,5 +20,17 @@ pathway protodeoxyviolaceinate-to-violacein "protodeoxyviolaceinate to violacein
     protoviolaceinate
     <-> ec_1_14_13_217 [1.14.13.217] +o2 +hplus +co2 +h2o
     proviolacein
+  }
+
+  branch from protodeoxyviolaceinate side right {
+    protodeoxyviolaceinate
+    <-> ec_1_14_13_224 [1.14.13.224] +nadh +o2 +hplus +nad +h2o
+    deoxyviolaceinate
+  }
+
+  branch from protodeoxyviolaceinate side left {
+    protodeoxyviolaceinate
+    <-> ec_1_14_13_224 [1.14.13.224] +nadh +o2 +hplus +co2 +nad +h2o
+    deoxyviolacein
   }
 }

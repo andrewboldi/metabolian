@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway aklavinone-to-s-adenosyl-l-homocysteine "aklavinone to S-adenosyl-L-homocysteine" {
-  spacing 188
+  spacing 206
 
   spine at 0,0 {
     aklavinone
@@ -20,27 +20,45 @@ pathway aklavinone-to-s-adenosyl-l-homocysteine "aklavinone to S-adenosyl-L-homo
     10_hydroxy_13_deoxydaunorubicin_1
   }
 
-  branch from hydrogen_acceptor side left {
-    hydrogen_acceptor
-    <-> ec_1_14_99_57 [1.14.99.57] +ferroheme_b +hydrogen_donor +o2 +hplus +fe2 +h2o
-    mycobilin_b
-  }
-
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> ec_1_1_99_41 [1.1.99.41] +3_hydroxy_16_methoxy_2_3_dihydrotabersoninium +hydrogen_donor
-    3r_1_2_didehydro_3_hydroxy_16_methoxy_2_3_dihyd
-  }
-
   branch from sah side left {
     sah
-    <-> . +gibberellin_a1 +sam
-    gibberellin_a1_methyl_ester
+    <-> . +guanosine_5_monophosphate_1 +sam
+    n7_methylguanosine_5_phosphate_zwitterion
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_275 [2.1.1.275] +gibberellin_a3 +sam
-    gibberellin_a3_methyl_ester
+    <-> . +5_hydroxyuridine_5_phosphate_1 +sam +hplus
+    5_methoxyuridine_5_phosphate_1
+  }
+
+  branch from aklavinone side left {
+    aklavinone
+    <-> ec_1_1_1_362 [1.1.1.362] +nadp +nadph +hplus
+    aklaviketone
+  }
+
+  branch from sam side right {
+    sam
+    <-> . +l_methionine +sah
+    s_methyl_l_methionine_1
+  }
+
+  branch from sam side left {
+    sam
+    <-> . +cytidine_5_monophosphate_1 +sah +hplus
+    n3_methylcytidine_5_monophosphate_1
+  }
+
+  branch from sah side right {
+    sah
+    <-> . +sam +n3_methylcytidine_5_monophosphate_1 +hplus
+    cytidine_5_monophosphate_1
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_398 [2.1.1.398] +quercetin_7_olate +sam +hplus
+    isorhamnetin
   }
 }

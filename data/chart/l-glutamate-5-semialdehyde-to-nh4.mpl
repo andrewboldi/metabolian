@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-glutamate-5-semialdehyde-to-nh4 "L-glutamate 5-semialdehyde to NH4" {
-  spacing 194
+  spacing 248
 
   spine at 0,0 {
     l_glutamate_5_semialdehyde
@@ -16,45 +16,99 @@ pathway l-glutamate-5-semialdehyde-to-nh4 "L-glutamate 5-semialdehyde to NH4" {
     indolmycin_b
   }
 
-  branch from h side left {
-    h
-    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_15z_3_hydroxytetratriacontenoylpantethein +nadp +nadph
-    o_s_15z_3_oxotetratriacontenoylpantetheine_4_pho
+  branch from 2s_2_amino_5_iminopentanoate side left {
+    2s_2_amino_5_iminopentanoate
+    <-> . +n_demethylindolmycin +h
+    2r_4e_2_amino_5_2s_3r_2_hydroxy_3_1h_indol_3_yl
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_7z_3_hydroxyhexacosenoylpantetheine_4_pho +nadp +nadph
-    o_s_7z_3_oxohexacosenoylpantetheine_4_phosphoryl
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    l_fructofuranose
   }
 
-  branch from h2o side left {
-    h2o
-    <-> . +o_s_3r_5z_17z_3_hydroxyhexatriacontadienoylpante
-    o_s_2e_5z_17z_hexatriacontatrienoylpantetheine_4
+  branch from h side left {
+    h
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +beta_l_fructofuranose +phosphate +beta_l_fructofuranose +h2o
+    atp
   }
 
   branch from h2o side right {
     h2o
-    <-> . +o_s_3r_15z_27z_3_hydroxyhexatetracontadienoylpan
-    o_s_2e_15z_27z_hexatetracontatrienoylpantetheine
+    <-> ec_3_2_1_10 [3.2.1.10] +sucrose +beta_d_glucose
+    d_fructofuranose
   }
 
-  branch from 2r_4e_2_amino_5_2s_3r_2_hydroxy_3_1h_indol_3_yl side left {
+  branch from h2o side left {
+    h2o
+    <-> ec_3_2_1_10 [3.2.1.10] +sucrose +d_fructofuranose
+    alpha_d_glucose
+  }
+
+  branch from 2r_4e_2_amino_5_2s_3r_2_hydroxy_3_1h_indol_3_yl side right {
     2r_4e_2_amino_5_2s_3r_2_hydroxy_3_1h_indol_3_yl
     <-> . +indolmycenate +4_5_dehydro_l_arginine +atp +h +amp
     diphosphate
   }
 
+  branch from nh4 side left {
+    nh4
+    <-> . +beta_d_glcnac_1_4_mur2ac_oyl_l_ala_gamma_d_glu_l +h2o
+    beta_d_glcnac_1_4_mur2ac_oyl_l_ala_d_isoglutamin
+  }
+
   branch from nh4 side right {
     nh4
-    <-> ec_3_5_1_4 [3.5.1.4] +benzamide +h +hydroxylamine
-    benzhydroxamic_acid
+    <-> . +homoisoalliin +h2o +e_but_1_en_1_so_peroxol
+    pyruvate
+  }
+
+  branch from l_glutamate_5_semialdehyde side left {
+    l_glutamate_5_semialdehyde
+    <-> ec_2_6_1_13 [2.6.1.13] +l_methionine +l_ornithine
+    4_methylsulfanyl_2_oxobutanoate
+  }
+
+  branch from l_glutamate_5_semialdehyde side right {
+    l_glutamate_5_semialdehyde
+    <-> ec_2_6_1_13 [2.6.1.13] +l_alanine +pyruvate
+    l_ornithine
   }
 
   branch from nh4 side left {
     nh4
-    <-> ec_3_5_1_4 [3.5.1.4] +valerylhydroxamic_acid +h +hydroxylamine
-    pentanamide
+    <-> ec_2_1_1_21 [2.1.1.21] +n_methyl_l_glutamate +h2o
+    n_5_methyl_l_glutamine
+  }
+
+  branch from nh4 side right {
+    nh4
+    <-> . +2_hydroxy_5_chloromuconate +h +h2o
+    2e_4e_2_amino_5_chlorohexa_2_4_dienedioate
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    neuraminic_acid
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    l_mannose
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_2_1_122 [3.2.1.122] +beta_d_glucose_6_phosphate +beta_d_glucose
+    alpha_alpha_trehalose_6_phosphate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_2_1_122 [3.2.1.122] +alpha_maltose_6_phosphate +beta_d_glucose
+    beta_d_glucose_6_phosphate
   }
 }

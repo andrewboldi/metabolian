@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-octadecanoyl-2-octanoyl-to-diphosphate "1-octadecanoyl-2-octanoyl… to diphosphate" {
-  spacing 194
+  spacing 224
 
   spine at 0,0 {
     1_octadecanoyl_2_octanoyl_sn_glycero_3_phosphoch
@@ -22,45 +22,75 @@ pathway 1-octadecanoyl-2-octanoyl-to-diphosphate "1-octadecanoyl-2-octanoyl… t
     stearoyl_coa
   }
 
-  branch from 1_stearoyl_sn_glycero_3_phosphocholine side left {
-    1_stearoyl_sn_glycero_3_phosphocholine
-    <-> . +1_1z_octadecenyl_sn_glycero_3_phosphoethanolamin +1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphoch
-    1_1z_octadecenyl_2_arachidonoyl_sn_glycero_3_pho
-  }
-
-  branch from octadecanoate side right {
-    octadecanoate
-    <-> . +1_octadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +h2o +hplus
-    2_linoleoyl_sn_glycero_3_phosphocholine
-  }
-
-  branch from octadecanoate side left {
-    octadecanoate
-    <-> . +n_stearoyl_l_phenylalanine +h2o
-    l_phenylalanine
-  }
-
-  branch from stearoyl_coa side right {
-    stearoyl_coa
-    <-> . +serine +hplus +co2 +coa
-    c20_3_dehydrosphinganine
-  }
-
   branch from stearoyl_coa side left {
     stearoyl_coa
     <-> . +1_hexadecanoyl_sn_glycero_3_phospho_d_myo_inosit +coa
     1_hexadecanoyl_2_octadecanoyl_sn_glycero_3_phosp
   }
 
-  branch from ppi side right {
-    ppi
-    <-> ec_6_1_2_2 [6.1.2.2] +kanamycin_a +carbamoyl_p +atp +h2o +amp +pi +hplus
-    6_o_carbamoylkanamycin_a
+  branch from stearoyl_coa side right {
+    stearoyl_coa
+    <-> . +1_hexadecanoyl_sn_glycero_3_phospho_1_sn_glycero +coa
+    1_hexadecanoyl_2_octadecanoyl_sn_glycero_3_phosp
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_147 [4.2.3.147] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    pimara_8_14_15_diene
+    <-> . +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    talarodiene
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_211 [4.2.3.211] +fpp
+    exo_bergamotene
+  }
+
+  branch from palmitoyl_coa side left {
+    palmitoyl_coa
+    <-> . +tetradecan_1_ol +coa
+    myristyl_palmitate
+  }
+
+  branch from palmitoyl_coa side right {
+    palmitoyl_coa
+    <-> . +1_heptadecanoyl_sn_glycero_3_phosphate +coa
+    1_heptadecanoyl_2_palmitoyl_sn_glycero_3_phospha
+  }
+
+  branch from 1_2_dioleoyl_sn_glycero_3_phosphoethanolamine side left {
+    1_2_dioleoyl_sn_glycero_3_phosphoethanolamine
+    <-> . +1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph +1_hexadecanoyl_sn_glycero_3_phosphocholine +hplus
+    n_1_2_trioleoyl_sn_glycero_3_phosphoethanolamine
+  }
+
+  branch from 1_2_dioleoyl_sn_glycero_3_phosphoethanolamine side right {
+    1_2_dioleoyl_sn_glycero_3_phosphoethanolamine
+    <-> . +oleoyl_coa +coa
+    2_oleoyl_sn_glycero_3_phosphoethanolamine
+  }
+
+  branch from stearoyl_coa side left {
+    stearoyl_coa
+    <-> ec_1_2_1_84 [1.2.1.84] +nadph +hplus +nadp +coa
+    octadecan_1_ol
+  }
+
+  branch from stearoyl_coa side right {
+    stearoyl_coa
+    <-> . +1_oleoyl_sn_glycero_3_phosphoserine +coa
+    1_oleoyl_2_stearoyl_sn_glycero_3_phospho_l_serin
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +2e_enoyl_fatty_acid_anion +atp +hplus
+    2e_2_fatty_enoyladenylate
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_207 [4.2.3.207] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +h2o
+    neoverrucosan_5_ol
   }
 }

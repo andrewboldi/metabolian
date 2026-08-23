@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-alanine-to-2-propylpiperidine "L-alanine to 2-propylpiperidine" {
-  spacing 212
+  spacing 278
 
   spine at 0,0 {
     l_alanine
@@ -18,26 +18,26 @@ pathway l-alanine-to-2-propylpiperidine "L-alanine to 2-propylpiperidine" {
 
   branch from pyruvate side left {
     pyruvate
-    <-> . +hydroxylamine +h2o
-    pyruvic_oxime
+    <-> . +2_o_6_phospho_d_mannosyl_d_glycerate +phosphoenolpyruvate
+    2r_2_o_alpha_d_mannosyl_glycerate
   }
 
   branch from pyruvate side right {
     pyruvate
-    <-> . +nitrite +h +pyruvic_oxime
-    o2
+    <-> . +d_mannitol +phosphoenolpyruvate
+    d_mannitol_1_phosphate
   }
 
   branch from h side left {
     h
-    <-> . +2_chloro_2_2_chloro_4_methyl_5_oxofuran_2_yl_ace +5_chloro_2_methyl_dienelactone
-    chloride
+    <-> . +adp +acetaminophen_mercapturate_conjugate_n_acetyl_cy +phosphate +acetaminophen_mercapturate_conjugate_n_acetyl_cy +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> . +cis_2_methyl_4_carboxylatomethylenebut_2_en_1_4 +chloride
-    2_2_chloro_2_5_dihydro_4_methyl_5_oxofuryl_aceta
+    <-> . +adp +phosphate +atp +h2o
+    acetaminophen_mercapturate_conjugate_n_acetyl_cy
   }
 
   branch from gamma_coniceine side left {
@@ -48,31 +48,97 @@ pathway l-alanine-to-2-propylpiperidine "L-alanine to 2-propylpiperidine" {
 
   branch from h2o side right {
     h2o
-    <-> . +isotrichodiol
-    12_13_epoxytrichothec_9_ene
+    <-> . +glycine +l_isoleucine +l_arginine
+    isolecyl_glycyl_arginine
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_10_3_4 [1.10.3.4] +3_hydroxy_4_methyl_anthranilate_pentapeptide_lac +o2
-    actinomycin_d
+    <-> . +l_proline +l_lysine +l_isoleucine
+    isolecyl_prolyl_lysine
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_2_3_1_287 [2.3.1.287] +s_methylmalonyl_coa +h +o_s_hexadecanoylpantetheine_4_phosphoryl_serine +nadph +o_s_c37_phthioceranylpantetheine_4_phosphoryl_l +coa +h2o
-    co2
+    <-> . +2_undecylpyrrole +h2o +h +nadph
+    4_keto_2_undecylpyrroline
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_2_3_1_292 [2.3.1.292] +o_s_docosanoylpantetheine_4_phosphoryl_l_serine +malonyl_coa +s_methylmalonyl_coa +h +nadph +co2 +coa +h2o
-    o_s_c34_carboxyphthiodiolenoneylpantetheine_4_ph
+    <-> ec_1_1_1_21 [1.1.1.21] +sapropterin +h +nadph
+    6_1_hydroxy_2_oxopropyl_tetrahydropterin
   }
 
-  branch from 2_propylpiperidine side right {
-    2_propylpiperidine
-    <-> . +s_adenosyl_l_homocysteine +methylconiine
-    s_adenosyl_l_methionine
+  branch from l_alanine side right {
+    l_alanine
+    <-> . +l_leucine +l_arginine +h2o
+    leucyl_alanyl_arginine
+  }
+
+  branch from l_alanine side left {
+    l_alanine
+    <-> . +l_lysine +l_phenylalanine +h2o
+    phenylalanyl_lysyl_alanine
+  }
+
+  branch from pyruvate side right {
+    pyruvate
+    <-> . +sucrose +phosphoenolpyruvate
+    sucrose_6_f_phosphate
+  }
+
+  branch from pyruvate side left {
+    pyruvate
+    <-> . +succinate_semialdehyde +isochorismate
+    1r_6r_6_hydroxy_2_succinyl_cyclohexa_2_4_diene
+  }
+
+  branch from h side right {
+    h
+    <-> . +2s_methylsuccinyl_coa +h2o +coa
+    2_methylbutanedioic_acid
+  }
+
+  branch from h side left {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    n_hexahydrocyclopenta_c_pyrrol_2_1h_yl_amino_car
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +l_isoleucine +l_serine +l_arginine
+    isolecyl_seryl_arginine
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +l_isoleucine +l_tryptophan +l_tyrosine
+    isolecyl_tryptophanyl_tyrosine
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_1_1_348 [1.1.1.348] +h +3r_2_hydroxyisoflavanone +nadp
+    4r_4_2_dihydroxyisoflavan
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_1_1_270 [1.1.1.270] +h +3_oxosteroid +nadp
+    3beta_hydroxysteroid
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +delta_anaerubin +h +nadph
+    anaerobilin
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +h +nadph +anaerobilin
+    beta_anaerubin
   }
 }

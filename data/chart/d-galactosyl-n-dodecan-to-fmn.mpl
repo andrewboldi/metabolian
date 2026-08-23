@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-galactosyl-n-dodecan-to-fmn "β-D-galactosyl-N-(dodecan… to FMN" {
-  spacing 200
+  spacing 182
 
   spine at 0,0 {
     d_galactosyl_n_dodecanoyl_sphingosine
@@ -24,43 +24,25 @@ pathway d-galactosyl-n-dodecan-to-fmn "β-D-galactosyl-N-(dodecan… to FMN" {
 
   branch from n_dodecanoylsphingosine side right {
     n_dodecanoylsphingosine
-    <-> . +d_glucosyl_n_dodecanoyl_sphingosine +cholesterol
-    cholesteryl_d_glucoside
-  }
-
-  branch from n_dodecanoylsphingosine side left {
-    n_dodecanoylsphingosine
     <-> ec_3_5_1_23 [3.5.1.23] +sphing_4_enine +h +dodecanoate
     h2o
   }
 
-  branch from dodecanoate side right {
-    dodecanoate
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    9_hydroxylaurate
-  }
-
-  branch from dodecanoate side left {
-    dodecanoate
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    8_hydroxylaurate
-  }
-
-  branch from 11_hydroxylaurate side right {
+  branch from 11_hydroxylaurate side left {
     11_hydroxylaurate
     <-> . +h +dodecanoate +o2 +nadph +h2o
     nadp
   }
 
-  branch from fmn side left {
-    fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    10_hete
+  branch from cholesterol side right {
+    cholesterol
+    <-> . +arachidonoyl_coa +coa
+    cholesteryl_arachidonate
   }
 
-  branch from fmn side right {
-    fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    12_r_hete
+  branch from cholesterol side left {
+    cholesterol
+    <-> ec_1_14_19_21 [1.14.19.21] +nadph +o2 +hplus +nadp +h2o
+    dehydrocholesterol_7
   }
 }

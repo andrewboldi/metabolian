@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway o-methyl-l-tyrosine-to-h2o "O-methyl-L-tyrosine to H2O" {
-  spacing 220
+  spacing 262
 
   spine at 0,0 {
     o_methyl_l_tyrosine
@@ -26,30 +26,6 @@ pathway o-methyl-l-tyrosine-to-h2o "O-methyl-L-tyrosine to H2O" {
     co2
   }
 
-  branch from sah side right {
-    sah
-    <-> . +guanosine_5_monophosphate_1 +sam +hplus
-    2_o_methylguanosine_5_monophosphate_1
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +cytidine_5_monophosphate_1 +sam +hplus
-    5_methylcytidine_5_monophosphate_1
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +ipp +fpp
-    all_trans_nonaprenyl_diphosphate
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +all_trans_pentaprenyl_diphosphate +ipp
-    tetra_trans_hexa_cis_undecaprenyl_diphosphate
-  }
-
   branch from yaequinolone_a2 side right {
     yaequinolone_a2
     <-> . +s_adenosyl_l_homocysteine +quinolinone_a +h
@@ -58,25 +34,91 @@ pathway o-methyl-l-tyrosine-to-h2o "O-methyl-L-tyrosine to H2O" {
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_12_10 [1.14.12.10] +h +benzoate +o2 +nadph
-    1r_6s_1_6_dihydroxycyclohexa_2_4_diene_1_carbox
+    <-> . +8_8a_deoxyoleandolide +co2 +coa +h2o +s_methylmalonyl_coa +h +nadph
+    acetyl_coa
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_2_1_28 [1.2.1.28] +h +o_toluate +nadph +h2o
-    2_methylbenzaldehyde
+    <-> . +h +dtdp_4_dehydro_2_6_dideoxy_d_glucose +nadph
+    dtdp_d_olivose
   }
 
   branch from h2o side left {
     h2o
-    <-> . +2_2_bis_4_chlorophenyl_ethanol
-    unsym_bis_4_chlorophenyl_ethylene
+    <-> . +gdp_2_acetamido_2_6_dideoxy_alpha_d_xylo_hexos_4
+    gdp_n_acetyl_d_glucosamine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +4_hydroxy_9_fluorenone
-    3_4_dihydroxy_3_4_dihydro_9_fluorenone
+    <-> ec_3_2_1_179 [3.2.1.179] +4_deoxy_l_threo_hex_4_enopyranuronate +d_glcp_1_4_l_rhap_1_3_d_glcp
+    d_4_glcpa_1_4_d_glcp_1_4_l_rhap_1_3_d_glcp
+  }
+
+  branch from o_methyl_l_tyrosine side left {
+    o_methyl_l_tyrosine
+    <-> . +s_adenosyl_l_homocysteine +h +s_adenosyl_l_methionine
+    l_tyrosine
+  }
+
+  branch from h side right {
+    h
+    <-> . +4_1e_3_carboxy_3_oxoprop_1_en_1_yl_2_3_dihydro_1
+    4z_4_2e_3_carboxylato_3_hydroxyprop_2_en_1_ylid
+  }
+
+  branch from h side left {
+    h
+    <-> . +2_3_dioxo_l_gulonate
+    dehydroascorbate_bicyclic_form
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +3_dimethylselenopropanal +nh4 +h2o2 +h2o
+    dimethylselenopropanoate_amine
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +8_8a_deoxyoleandolide +h2o
+    oleandolide
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +dtdp_4_dehydro_3_c_methyl_2_6_dideoxy_alpha_d_gl +h +nadp
+    dtdp_beta_d_mycarose
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +h +s_nicotine +nadp
+    3_6_dihydronicotine
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +acetyl_coa +malonyl_coa +h +nadph +co2 +5z_8z_11z_14z_17z_eicosapentaenoate +h2o
+    coa
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +h +o2 +nadph +ethylamine +acetaldehyde +h2o
+    nh4
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_4_11_25 [3.4.11.25] +3s_3_3s_3_aminobutanoyl_amino_5_methylhexanoic +3r_beta_leucine
+    beta_homovaline_beta_homoalanine_beta_homoleucin
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_2_1_158 [3.2.1.158] +agarotriose +neoagarotriose
+    agarohexaose
   }
 }

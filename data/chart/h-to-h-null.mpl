@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway h-to-h-null "H to H" {
-  spacing 194
+  spacing 248
 
   spine at 0,0 {
     h
@@ -16,45 +16,99 @@ pathway h-to-h-null "H to H" {
     avermectin_b2b
   }
 
-  branch from avermectin_b2b_aglycone side left {
-    avermectin_b2b_aglycone
-    <-> . +dtdp_l_oleandrose +dtdp +h
-    avermectin_b2b_monosaccharide
+  branch from nadp side left {
+    nadp
+    <-> . +n_nitrosomethanamine +formaldehyde +h2o +h +o2 +nadph
+    n_nitrosodimethylamine
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_13_7 [1.14.13.7] +h +o2 +nadph +2_chlorophenol +h2o
-    3_chlorocatechol
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_14_13_7 [1.14.13.7] +h +3_chlorophenol +o2 +nadph +3_chlorocatechol
-    h2o
-  }
-
-  branch from dtdp side right {
-    dtdp
-    <-> . +dtdp_beta_l_4_epi_vancosamine +chloroorienticin_b +h
-    chloroeremomycin
+    <-> . +hydroxymephenytoin +h2o +h +o2 +nadph
+    mephenytoin
   }
 
   branch from dtdp side left {
     dtdp
-    <-> . +20_deoxo_20_dihydro_12_13_deepoxyrosamicin +h +tylactone
-    dtdp_alpha_d_desosamine
+    <-> ec_2_7_1_48 [2.7.1.48] +cmp +h +dttp
+    cytidine
   }
 
-  branch from h side right {
-    h
-    <-> . +adenosine_5_phosphosulfate +glutathione +amp
-    s_sulfoglutathione
+  branch from dtdp side right {
+    dtdp
+    <-> ec_2_7_1_48 [2.7.1.48] +uridine +dttp +h
+    ump
   }
 
   branch from h side left {
     h
-    <-> . +4_4a_dihydroxy_dihydro_dibenzo_p_dioxin
-    2_2_3_trihydroxydiphenyl_ether
+    <-> ec_3_1_4_41 [3.1.4.41] +1_9z_octadecenoyl_sn_glycero_3_phosphate +choline +h2o
+    2_hydroxy_2_hydroxy_3_z_octadec_9_enoyl_oxypropo
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_5_2_16 [3.5.2.16] +n_carbamoyl_2_oxoglycine +h2o
+    parabanic_acid
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_5_1_18 [2.5.1.18] +s_2_4_dinitrophenyl_glutathione +bromide +glutathione
+    2_4_dinitrobromobenzene
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_5_1_18 [2.5.1.18] +s_2_4_dinitrophenyl_glutathione +iodide +glutathione
+    2_4_dinitroiodobenzene
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_14_14_1 [1.14.14.1] +fenthion_sulfoxide +nadp +h2o +h +o2
+    fenthion
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_14_14_1 [1.14.14.1] +fenthion_sulfoxide +h +o2 +nadp +h2o
+    fenthion_sulfone
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_1_1_179 [1.1.1.179] +d_xylono_1_5_lactone +h +nadph
+    aldehydo_d_xylose
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_1_1_184 [1.1.1.184] +testosterone +h +nadph
+    4_androstenediol
+  }
+
+  branch from dtdp_l_oleandrose side left {
+    dtdp_l_oleandrose
+    <-> . +avermectin_a2b_monosaccharide +dtdp +h
+    avermectin_a2b
+  }
+
+  branch from dtdp_l_oleandrose side right {
+    dtdp_l_oleandrose
+    <-> . +avermectin_a2b_monosaccharide +dtdp +h
+    avermectin_a2b
+  }
+
+  branch from dtdp side left {
+    dtdp
+    <-> . +dtdp_3_acetamido_3_6_dideoxy_alpha_d_glucose +beta_d_ribf_1_4_beta_d_gal_1_3_alpha_d_galnac_di +h
+    beta_d_qui3nac_1_3_beta_d_ribf_1_4_beta_d_gal_1
+  }
+
+  branch from dtdp side right {
+    dtdp
+    <-> . +beta_d_ribf_1_4_alpha_d_galnac_1_3_alpha_d_glcna +dtdp_4_deoxy_4_n_acetyl_l_seryl_amino_alpha_d_qu +h
+    beta_d_qui4n_l_serac_1_3_beta_d_ribf_1_4_alpha_d
   }
 }

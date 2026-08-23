@@ -1,0 +1,363 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2e-2-hydroxypenta-2-4-d-to-nad-null",
+  "name": "(2E)-2-hydroxypenta-2,4-d… to NAD",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from (2E)-2-hydroxypenta-2,4-dienoate to NAD(+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR197944"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2e_2_hydroxypenta_2_4_dienoate",
+      "name": "(2E)-2-hydroxypenta-2,4-dienoate",
+      "short": "2-hydroxypenta-2,4-…",
+      "formula": "C5H5O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1107795"
+      }
+    },
+    {
+      "id": "4_chlorobenzoate",
+      "name": "4-chlorobenzoate",
+      "formula": "C7H4ClO2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1459"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "2_hydroxy_6_oxo_6_4_chlorophenyl_hexa_2_4_dienoa",
+      "name": "2-Hydroxy-6-oxo-6-(4'-chlorophenyl)-hexa-2,4-dienoate",
+      "short": "2-Hydroxy-6-oxo-6-(…",
+      "formula": "C12H9ClO4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364472"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "4_chlorobiphenyl_2_3_diol",
+      "name": "4'-chlorobiphenyl-2,3-diol",
+      "short": "4'-chlorobiphenyl-2…",
+      "formula": "C12H9ClO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM6854"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "1s_2r_3_4_chlorophenyl_cyclohexa_3_5_diene_1_2",
+      "name": "(1S,2R)-3-(4-chlorophenyl)cyclohexa-3,5-diene-1,2-diol",
+      "short": "(1S,2R)-3-(4-chloro…",
+      "formula": "C12H11ClO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM5360"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_7_1_8",
+      "name": "2,6-dioxo-6-phenylhexa-3-enoate hydrolase",
+      "ec": [
+        "3.7.1.8"
+      ]
+    },
+    {
+      "id": "ec_1_13_11_39",
+      "name": "biphenyl-2,3-diol 1,2-dioxygenase",
+      "ec": [
+        "1.13.11.39"
+      ]
+    },
+    {
+      "id": "ec_1_3_1_56",
+      "name": "cis-2,3-dihydrobiphenyl-2,3-diol dehydrogenase",
+      "ec": [
+        "1.3.1.56"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2,6-dioxo-6-phenylhexa-3-enoate hydrolase",
+      "ec": "3.7.1.8",
+      "substrates": [
+        {
+          "metabolite": "2e_2_hydroxypenta_2_4_dienoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4_chlorobenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxy_6_oxo_6_4_chlorophenyl_hexa_2_4_dienoa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_7_1_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR197944"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197944"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "biphenyl-2,3-diol 1,2-dioxygenase",
+      "ec": "1.13.11.39",
+      "substrates": [
+        {
+          "metabolite": "2_hydroxy_6_oxo_6_4_chlorophenyl_hexa_2_4_dienoa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_chlorobiphenyl_2_3_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_39"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR195815"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR195815"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "cis-2,3-dihydrobiphenyl-2,3-diol dehydrogenase",
+      "ec": "1.3.1.56",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4_chlorobiphenyl_2_3_diol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1s_2r_3_4_chlorophenyl_cyclohexa_3_5_diene_1_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_1_56"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR109417"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR109417"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_4_chlorobenzoate_co2-to-anapheline",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_chlorobenzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "co2-to-anapheline"
+      },
+      "note": "Shares 4-chlorobenzoate with CO2 to Anapheline.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1459"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_chlorobenzoate_udp-to-nadp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_chlorobenzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-nadp"
+      },
+      "note": "Shares 4-chlorobenzoate with UDP to NADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1459"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_chlorobiphenyl_2_3_diol_2-oxo-4-aminobutyrate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_chlorobiphenyl_2_3_diol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-oxo-4-aminobutyrate-to-h2o"
+      },
+      "note": "Shares 4'-chlorobiphenyl-2,3-diol with 2-Oxo-4-aminobutyrate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM6854"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1s_2r_3_4_chlorophenyl_cyclohexa_3_5_diene_1_2_r-2-4-chloro-2-methylp-to-5-chloro-3-methylcate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1s_2r_3_4_chlorophenyl_cyclohexa_3_5_diene_1_2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-2-4-chloro-2-methylp-to-5-chloro-3-methylcate"
+      },
+      "note": "Shares (1S,2R)-3-(4-chlorophenyl)cyclohexa-3,5-diene-1,2-diol with (R)-2-(4-chloro-2-methylp… to 5-chloro-3-methylcatechol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM5360"
+          }
+        ]
+      }
+    }
+  ]
+}

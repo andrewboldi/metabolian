@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-allantoin-to-oxalurate "(S)-(+)-allantoin to oxalurate" {
-  spacing 234
+  spacing 228
 
   spine at 0,0 {
     s_allantoin
@@ -16,11 +16,5 @@ pathway s-allantoin-to-oxalurate "(S)-(+)-allantoin to oxalurate" {
     ureidoglycolate
     <-> ec_1_1_1_154 [1.1.1.154] +nad -nadh -hplus
     oxalurate
-  }
-
-  branch from oxalurate side left {
-    oxalurate
-    <-> ec_2_1_3_5 [2.1.3.5] +carbamoyl_p +pi
-    oxamate
   }
 }

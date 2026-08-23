@@ -1,0 +1,644 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "nadh-to-but-3-enoic-acid-null",
+  "name": "NADH to but-3-enoic acid",
+  "category": "energy-metabolism",
+  "summary": "A 4-step route from NADH to but-3-enoic acid, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR134030"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "acrolein",
+      "name": "acrolein",
+      "formula": "C3H4O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM2345"
+      }
+    },
+    {
+      "id": "allyl_alcohol",
+      "name": "allyl alcohol",
+      "formula": "C3H6O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM3212"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "formate",
+      "name": "formate",
+      "formula": "CHO2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM39"
+      }
+    },
+    {
+      "id": "but_3_enoic_acid",
+      "name": "but-3-enoic acid",
+      "formula": "C4H6O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:35897"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "acetoacetyl_coa",
+      "name": "acetoacetyl-CoA",
+      "formula": "C25H36N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1103802"
+      }
+    },
+    {
+      "id": "vinylacetyl_coa",
+      "name": "vinylacetyl-CoA",
+      "formula": "C25H36N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM2159"
+      }
+    },
+    {
+      "id": "acetoacetate",
+      "name": "Acetoacetate",
+      "formula": "C4H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:13705"
+      }
+    },
+    {
+      "id": "diphosphate",
+      "name": "diphosphate",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM11"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM728294"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_21",
+      "name": "aldose reductase",
+      "ec": [
+        "1.1.1.21"
+      ],
+      "xrefs": {
+        "uniprot": "P15121"
+      }
+    },
+    {
+      "id": "ec_2_8_3_9",
+      "name": "butyrate--acetoacetate CoA-transferase",
+      "ec": [
+        "2.8.3.9"
+      ]
+    },
+    {
+      "id": "ec_6_2_1_1",
+      "name": "acetate--CoA ligase",
+      "ec": [
+        "6.2.1.1"
+      ],
+      "xrefs": {
+        "uniprot": "Q9NUB1"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "aldose reductase",
+      "ec": "1.1.1.21",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acrolein",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "allyl_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR134030"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR134030"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR143825",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "allyl_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "but_3_enoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR143825"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR143825"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "butyrate--acetoacetate CoA-transferase",
+      "ec": "2.8.3.9",
+      "substrates": [
+        {
+          "metabolite": "acetoacetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "but_3_enoic_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "vinylacetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetoacetate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_3_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR144331"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR144331"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "acetate--CoA ligase",
+      "ec": "6.2.1.1",
+      "substrates": [
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "vinylacetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "but_3_enoic_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_2_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR144482"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR144482"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_acrolein_1-chlorohexane-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acrolein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-chlorohexane-to-h2o"
+      },
+      "note": "Shares acrolein with 1-Chlorohexane to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2345"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_acrolein_1-chlorohexane-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acrolein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-chlorohexane-to-h2o-null"
+      },
+      "note": "Shares acrolein with 1-Chlorohexane to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2345"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_acrolein_20-deoxo-20-dihydro-12-13-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acrolein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "20-deoxo-20-dihydro-12-13-to-h2o"
+      },
+      "note": "Shares acrolein with 20-deoxo-20-dihydro-12,13… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2345"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_acrolein_6-o-trans-methoxy-mycolyl-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acrolein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-o-trans-methoxy-mycolyl-to-h2o-null"
+      },
+      "note": "Shares acrolein with 6-O-trans-methoxy-mycolyl… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2345"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_acrolein_nadh-to-but-3-enoic-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acrolein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-but-3-enoic-acid"
+      },
+      "note": "Shares acrolein with NADH to but-3-enoic acid.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2345"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_acrolein_r-s-lactoylglutathione-to-l-alaninol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acrolein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-s-lactoylglutathione-to-l-alaninol"
+      },
+      "note": "Shares acrolein with (R)-S-lactoylglutathione to L-alaninol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2345"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_acrolein_r-s-lactoylglutathione-to-l-alaninol-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acrolein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-s-lactoylglutathione-to-l-alaninol-null"
+      },
+      "note": "Shares acrolein with (R)-S-lactoylglutathione to L-alaninol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2345"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_allyl_alcohol_1-chlorohexane-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "allyl_alcohol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-chlorohexane-to-h2o"
+      },
+      "note": "Shares allyl alcohol with 1-Chlorohexane to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM3212"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_allyl_alcohol_1-chlorohexane-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "allyl_alcohol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-chlorohexane-to-h2o-null"
+      },
+      "note": "Shares allyl alcohol with 1-Chlorohexane to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM3212"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_allyl_alcohol_nadh-to-but-3-enoic-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "allyl_alcohol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-but-3-enoic-acid"
+      },
+      "note": "Shares allyl alcohol with NADH to but-3-enoic acid.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM3212"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_allyl_alcohol_propanoate-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "allyl_alcohol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "propanoate-to-o2"
+      },
+      "note": "Shares allyl alcohol with propanoate to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM3212"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_but_3_enoic_acid_nadh-to-but-3-enoic-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "but_3_enoic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-but-3-enoic-acid"
+      },
+      "note": "Shares but-3-enoic acid with NADH to but-3-enoic acid.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:35897"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -18,9 +18,9 @@ pathway isovitexin-7-olate-to-apiin "isovitexin-7-olate to apiin" {
     apiin
   }
 
-  branch from apigenin_7_o_d_glucoside side left {
-    apigenin_7_o_d_glucoside
-    <-> . +malonyl-coa +coa
-    apigenin_7_o_6_o_malonyl_d_glucoside
+  branch from udp_d_apiose side left {
+    udp_d_apiose
+    <-> . +hplus +co2
+    udp_d_glucuronate
   }
 }

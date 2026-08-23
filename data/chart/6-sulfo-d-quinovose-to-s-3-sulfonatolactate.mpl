@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 6-sulfo-d-quinovose-to-s-3-sulfonatolactate "6-sulfo-D-quinovose to (S)-3-sulfonatolactate" {
-  spacing 252
+  spacing 264
 
   spine at 0,0 {
     6_sulfo_d_quinovose
@@ -18,5 +18,17 @@ pathway 6-sulfo-d-quinovose-to-s-3-sulfonatolactate "6-sulfo-D-quinovose to (S)-
     l_3_sulfolactaldehyde
     <-> ec_1_2_1_97 [1.2.1.97] +nad +h2o -nadh -hplus
     s_3_sulfonatolactate
+  }
+
+  branch from 6_sulfo_d_quinovose side left {
+    6_sulfo_d_quinovose
+    <-> ec_1_14_14_181 [1.14.14.181] +fmnh2 +h +o2 +6_dehydro_d_glucose +sulfite +h2o
+    fmn
+  }
+
+  branch from 6_sulfo_d_quinovose side right {
+    6_sulfo_d_quinovose
+    <-> ec_1_14_14_181 [1.14.14.181] +fadh2 +h +o2 +6_dehydro_d_glucose +sulfite +h2o
+    fad
   }
 }

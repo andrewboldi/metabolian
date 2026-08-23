@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway ent-photinus-luciferin-to-ent-photinus-luciferin "ent-Photinus luciferin to ent-Photinus luciferin" {
-  spacing 248
+  spacing 194
 
   spine at 0,0 {
     ent_photinus_luciferin
@@ -20,59 +20,5 @@ pathway ent-photinus-luciferin-to-ent-photinus-luciferin "ent-Photinus luciferin
     l_firefly_luciferyl_coa
     <-> .
     d_firefly_luciferyl_coa
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +17z_hexacosenoate +atp +coa +amp
-    17z_hexacosenoyl_coa
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +fpp
-    gurjunene
-  }
-
-  branch from coa side right {
-    coa
-    <-> ec_2_3_2_35 [2.3.2.35] +9_methyldecanoyl_coa +vanillylamine +h
-    homodihydrocapsaicin
-  }
-
-  branch from coa side left {
-    coa
-    <-> ec_2_3_2_35 [2.3.2.35] +7_methyloct_6_enoyl_coa +vanillylamine +h
-    norcapsaicin
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    l_iditol
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    beta_cyclodextrin
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    alpha_cyclodextrin
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    cyclodextrin
-  }
-
-  branch from ent_photinus_luciferin side right {
-    ent_photinus_luciferin
-    <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
-    firefly_l_sulfoluciferin
   }
 }

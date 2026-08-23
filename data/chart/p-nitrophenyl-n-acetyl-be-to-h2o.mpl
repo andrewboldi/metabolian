@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway p-nitrophenyl-n-acetyl-be-to-h2o "p-Nitrophenyl-N-acetyl-be… to H2O" {
-  spacing 252
+  spacing 300
 
   spine at 0,0 {
     p_nitrophenyl_n_acetyl_beta_d_glucosaminide
@@ -18,73 +18,121 @@ pathway p-nitrophenyl-n-acetyl-be-to-h2o "p-Nitrophenyl-N-acetyl-be… to H2O" {
 
   branch from h side left {
     h
-    <-> ec_1_1_1_145 [1.1.1.145] +androst_5_ene_3_17_dione +nadph +3beta_hydroxyandrost_5_en_17_one
-    nadp
+    <-> ec_2_3_1_95 [2.3.1.95] +malonyl_coa +trans_4_coumaroyl_coa +coa +trans_resveratrol
+    co2
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_184 [1.1.1.184] +1_4_nitrophenyl_ethanol +nadp +nadph
-    4_nitroacetophenone
+    <-> ec_2_3_1_64 [2.3.1.64] +trans_4_coumaroyl_coa +agmatine +coa
+    e_p_coumaroylagmatine
   }
 
   branch from n_acetyl_beta_d_glucosamine side left {
     n_acetyl_beta_d_glucosamine
-    <-> ec_3_2_1_52 [3.2.1.52] +h2o
-    n_n_diacetylchitobiose
+    <-> ec_3_2_2_11 [3.2.2.11] +l_asparagine +h2o
+    n_4_beta_n_acetyl_d_glucosaminyl_l_asparagine
   }
 
   branch from n_acetyl_beta_d_glucosamine side right {
     n_acetyl_beta_d_glucosamine
-    <-> ec_3_5_1_33 [3.5.1.33] +h +acetate +h2o
-    beta_d_glucosamine
-  }
-
-  branch from 4_nitrophenol side left {
-    4_nitrophenol
-    <-> ec_3_2_1_31 [3.2.1.31] +h +beta_d_glucuronate +h2o
-    p_nitrophenyl_beta_d_glucuronide
-  }
-
-  branch from 4_nitrophenol side right {
-    4_nitrophenol
-    <-> ec_3_2_1_20 [3.2.1.20] +alpha_d_galactose +h +h2o
-    4_nitrophenyl_d_galactoside
-  }
-
-  branch from n_acetyl_d_mannosamine side left {
-    n_acetyl_d_mannosamine
-    <-> ec_4_1_3_3 [4.1.3.3] +n_acetylneuraminate
-    pyruvate
-  }
-
-  branch from n_acetyl_d_mannosamine side right {
-    n_acetyl_d_mannosamine
-    <-> ec_2_5_1_56 [2.5.1.56] +n_acetylneuraminate +phosphate +h2o
-    phosphoenolpyruvate
+    <-> ec_3_2_1_52 [3.2.1.52] +glcnac_1_6_anhmurnac +h2o
+    1_6_anhydro_n_acetyl_beta_muramate
   }
 
   branch from atp side left {
     atp
-    <-> ec_6_6_1_1 [6.6.1.1] +protoporphyrin_ix +mg +h2o +h +adp +phosphate
-    mg_protoporphyrin_ix
+    <-> . +h +adp +phosphate +h2o
+    heme_b
   }
 
   branch from atp side right {
     atp
-    <-> ec_6_6_1_1 [6.6.1.1] +protoporphyrin +mg +h2o +h +adp +phosphate
-    mg_protoporphyrin_ix
+    <-> ec_6_3_1_12 [6.3.1.12] +d_aspartate +beta_d_glcnac_1_4_mur2ac_oyl_l_ala_d_isoglutamin +h +adp +phosphate
+    n_acetylmuramoyl_l_alanyl_d_isoglutaminyl_n_beta
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_5_1_14 [3.5.1.14] +l_proline +h +acetate
-    n_acetyl_l_proline
+    <-> ec_3_7_1_10 [3.7.1.10] +dihydroresorcinol
+    5_oxohexanoate
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_5_1_11 [3.5.1.11] +d_4_hydroxyphenylglycine_methyl_ester +methanol
-    d_4_hydroxyphenylglycine
+    <-> ec_3_5_1_66 [3.5.1.66] +2_hydroxymethyl_3_acetamidomethylene_succinate +co2 +h +2_hydroxymethyl_4_oxobutanoate +nh4
+    acetate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +6_oxo_2_hydroxy_7_4_chlorophenyl_3_8_8_trichloro +h +2_4_chlorophenyl_3_3_dichloropropenoate
+    2_hydroxy_3_chloropenta_2_4_dienoate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +6_oxo_2_hydroxy_7_4_chlorophenyl_3_8_8_trichloro +2_4_chlorophenyl_3_3_dichloropropenoate
+    2_hydroxy_3_chloropenta_2_4_dienoate
+  }
+
+  branch from h side left {
+    h
+    <-> . +4_coumaroyl_coa +agmatine +e_p_coumaroylagmatine
+    coa
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_3_1_133 [2.3.1.133] +caffeoyl_coa +l_quinate +coa
+    chlorogenate
+  }
+
+  branch from n_acetyl_beta_d_glucosamine side left {
+    n_acetyl_beta_d_glucosamine
+    <-> . +n_acetyl_beta_d_glucosamine_6_phosphate +h2o
+    diacetylchitobiose_6_phosphate
+  }
+
+  branch from n_acetyl_beta_d_glucosamine side right {
+    n_acetyl_beta_d_glucosamine
+    <-> . +n_acetyl_beta_d_muramate_6_phosphate +h2o
+    n_acetylmuramic_acid_6_phosphate_n_acetylglucosa
+  }
+
+  branch from adp side left {
+    adp
+    <-> . +1d_myo_inositol_1_3_4_5_6_pentakisphosphate +atp
+    a_diphospho_1d_myo_inositol_tetrakisphosphate
+  }
+
+  branch from adp side right {
+    adp
+    <-> ec_2_7_4_21 [2.7.4.21] +1d_myo_inositol_1_3_4_5_6_pentakisphosphate +h +atp
+    diphospho_1d_myo_inositol_tetrakisphosph
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> ec_3_6_1_58 [3.6.1.58] +8_oxo_dgmp +h +h2o
+    8_oxo_dgdp
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_3_6_1_52 [3.6.1.52] +h +a_diphospho_1d_myo_inositol_tetrakisphosphate +h2o
+    1d_myo_inositol_1_3_4_5_6_pentakisphosphate
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +indolmycenate +4_5_dehydro_l_arginine +2r_4e_2_amino_5_2s_3r_2_hydroxy_3_1h_indol_3_yl +h +amp
+    diphosphate
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +l_ascorbic_acid_2_phosphate +adp +h
+    l_ascorbate
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-nitrophenol-to-nh4 "3-nitrophenol to NH4" {
-  spacing 198
+  spacing 180
 
   spine at 0,0 {
     3_nitrophenol
@@ -14,23 +14,5 @@ pathway 3-nitrophenol-to-nh4 "3-nitrophenol to NH4" {
     aminohydroquinone
     <-> . +h +h2o -nh4
     benzene_1_2_4_triol
-  }
-
-  branch from benzene_1_2_4_triol side left {
-    benzene_1_2_4_triol
-    <-> . +2_4_6_trioxohexanoate +h
-    o2
-  }
-
-  branch from nh4 side right {
-    nh4
-    <-> ec_4_4_1_13 [4.4.1.13] +pyruvate +6_chloro_2_phenyl_4_sulfanylpyrimidine +h2o
-    s_fenclorimyl_l_cysteine
-  }
-
-  branch from nh4 side left {
-    nh4
-    <-> ec_4_4_1_13 [4.4.1.13] +4_mercapto_4_methylpentan_2_one +pyruvate +h2o
-    s_4_oxo_2_methylpentan_2_yl_l_cysteine
   }
 }

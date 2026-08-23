@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 12-phosphonooxy-octadeca-to-4-hydroxy-6-11-hydro "12-(phosphonooxy)octadeca… to 4-hydroxy-6-(11-hydroxyhe…" {
-  spacing 182
+  spacing 200
 
   spine at 0,0 {
     12_phosphonooxy_octadecanoate
@@ -18,31 +18,49 @@ pathway 12-phosphonooxy-octadeca-to-4-hydroxy-6-11-hydro "12-(phosphonooxy)octad
 
   branch from 12_hydroxyoctadecanoate side left {
     12_hydroxyoctadecanoate
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    12_18_dihydroxyoctadecanoate
+    <-> . +12_octadecanoyloxy_octadecanoate +h2o +hplus
+    octadecanoate
   }
 
-  branch from 12_hydroxyoctadecanoate side right {
-    12_hydroxyoctadecanoate
-    <-> . +12_pahsa +h2o +hplus
-    palmitate
-  }
-
-  branch from 12_hydroxyoctadecanoyl_coa side left {
+  branch from 12_hydroxyoctadecanoyl_coa side right {
     12_hydroxyoctadecanoyl_coa
     <-> . +malonyl-coa +hplus +co2 +coa
     4_hydroxy_6_13_hydroxy_2_oxononadecyl_pyran_2_on
   }
 
+  branch from ppi side left {
+    ppi
+    <-> . +o_adenyl_l_tyrosine_1 +atp
+    o_5_adenyl_5_3_adenyl_l_tyrosine_2
+  }
+
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_122 [4.2.3.122] +gpp
-    pinene
+    <-> . +o_5_adenyl_5_3_adenyl_l_tyrosine_2 +atp
+    o_5_adenyl_5_3_adenyl_5_3_adenyl_l_tyrosine_3
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_105 [4.2.3.105] +gpp
-    tricyclene
+    <-> . +fpp +h2o
+    acorenol
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +fpp +h2o
+    koraiol
+  }
+
+  branch from malonyl-coa side left {
+    malonyl-coa
+    <-> ec_2_3_1_237 [2.3.1.237] +acetyl_coa +nadph +hplus +co2 +nadp +coa +h2o
+    2_hydroxy_5_methyl_1_naphthoate
+  }
+
+  branch from malonyl-coa side right {
+    malonyl-coa
+    <-> . +lauroyl_coa +hplus +co2 +coa
+    4_hydroxy_6_2_oxotridecyl_pyran_2_one
   }
 }

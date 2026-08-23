@@ -4,39 +4,15 @@
 # edit the generator, not this file.
 
 pathway itp-to-h2o "ITP to H2O" {
-  spacing 204
+  spacing 172
 
   spine at 0,0 {
     itp
     <-> ec_2_7_1_1 [2.7.1.1] +d_mannopyranose -alpha_d_mannose_6_phosphate -h
     idp
-    <-> ec_5_3_1_8 [5.3.1.8] +alpha_d_mannose_6_phosphate
-    keto_d_fructose_6_phosphate
-    <-> . +l_lysine +h -h2o
-    glucoselysine_6_phosphate
-  }
-
-  branch from h side left {
-    h
-    <-> ec_5_5_1_23 [5.5.1.23] +name
-    auraviketone
-  }
-
-  branch from h side right {
-    h
-    <-> . +2_hydroxy_6_oxo_6_2_carboxyphenyl_hexa_2_4_dieno +o2
-    2_3_dihydroxy_2_carboxybiphenyl
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +hexanoyl_coa +malonyl_coa +e_feruloyl_coa +h +co2 +coa
-    6_dehydrogingerdione
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_2_3_1_219 [2.3.1.219] +trans_4_coumaroyl_coa +p_coumaroyl_diketide_coa +co2 +h +coa
-    1e_4z_6e_5_hydroxy_1_7_bis_4_hydroxyphenyl_hept
+    <-> ec_3_2_1_170 [3.2.1.170] +r_glycerate +alpha_d_mannose_6_phosphate +h -h2o
+    2_alpha_d_mannosyl_6_phosphate_d_glycerate
+    <-> . +pyruvate +phosphate -2_alpha_d_mannosyl_6_phosphate_d_glycerate -h2o
+    phosphoenolpyruvate
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway carboxyspermidine-to-succinate "carboxyspermidine to succinate" {
-  spacing 322
+  spacing 292
 
   spine at 0,0 {
     carboxyspermidine
@@ -28,61 +28,31 @@ pathway carboxyspermidine-to-succinate "carboxyspermidine to succinate" {
 
   branch from spermidine side right {
     spermidine
-    <-> ec_2_3_1_57 [2.3.1.57] +acetyl_coa +coa +hplus
-    n8_acetylspermidinium
+    <-> ec_2_5_1_128 [2.5.1.128] +s_adenosylmethioninaminium +5_s_methyl_5_thioadenosine +hplus
+    n4_bis_aminopropyl_spermidine
   }
 
-  branch from trimethylenediaminium side left {
-    trimethylenediaminium
-    <-> ec_1_5_1_43 [1.5.1.43] +carboxynorspermidine +nadp +h2o +nadph +hplus
-    l_aspartic_acid_4_semialdehyde
-  }
-
-  branch from hydrogen_donor side right {
-    hydrogen_donor
-    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +o2 +hydrogen_acceptor +h2o
-    11_r_hepe
-  }
-
-  branch from hydrogen_donor side left {
-    hydrogen_donor
-    <-> . +arachidonate +o2 +hydrogen_acceptor +h2o
-    11_r_hete
-  }
-
-  branch from 4_oxobutanoate side right {
+  branch from 4_oxobutanoate side left {
     4_oxobutanoate
     <-> ec_1_1_1_61 [1.1.1.61] +nad +nadh +hplus
     4_hydroxybutyrate
   }
 
-  branch from 4_oxobutanoate side left {
+  branch from 4_oxobutanoate side right {
     4_oxobutanoate
     <-> ec_4_1_2_52 [4.1.2.52] +pyruvate
     4_hydroxy_2_oxoheptanedioate
   }
 
-  branch from glutamate side right {
-    glutamate
-    <-> ec_2_6_1_110 [2.6.1.110] +dtdp_4_ammonio_2_3_4_6_tetradeoxy_d_glucose +akg
-    dtdp_4_dehydro_2_3_6_trideoxy_d_glucose
+  branch from spermidine side left {
+    spermidine
+    <-> ec_2_3_1_248 [2.3.1.248] +sinapoyl_coa +coa +hplus
+    n1_n8_bis_sinapoyl_spermidine
   }
 
-  branch from glutamate side left {
-    glutamate
-    <-> ec_2_6_1_111 [2.6.1.111] +l_3_aminobutanoyl_coa +akg
-    acetoacetyl_coa
-  }
-
-  branch from succinate side right {
-    succinate
-    <-> . +hexanoyl_coa +akg +o2 +co2
-    2_hydroxyhexanoyl_coa
-  }
-
-  branch from succinate side left {
-    succinate
-    <-> . +butyryl_coa +akg +o2 +co2
-    2_hydroxybutanoyl_coa
+  branch from spermidine side right {
+    spermidine
+    <-> ec_2_3_1_249 [2.3.1.249] +trans_4_coumaroyl_coa +coa +hplus
+    n1_n8_bis_coumaroyl_spermidine
   }
 }

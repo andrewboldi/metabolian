@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 24-methylenecycloartanol-to-nadp "24-methylenecycloartanol to NADP" {
-  spacing 320
+  spacing 308
 
   spine at 0,0 {
     24_methylenecycloartanol
@@ -14,17 +14,5 @@ pathway 24-methylenecycloartanol-to-nadp "24-methylenecycloartanol to NADP" {
     cycloeucalenone
     <-> ec_1_1_1_270 [1.1.1.270] +h +nadph -nadp
     cycloeucalenol
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_13_11_30 [1.13.11.30] +stizolobinic_acid +nadph
-    5_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_13_11_30 [1.13.11.30] +stizolobinic_acid +nadph
-    5_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem
   }
 }

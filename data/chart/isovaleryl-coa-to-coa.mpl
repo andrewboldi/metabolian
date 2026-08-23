@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway isovaleryl-coa-to-coa "isovaleryl-CoA to CoA" {
-  spacing 176
+  spacing 158
 
   spine at 0,0 {
     isovaleryl_coa
@@ -16,27 +16,9 @@ pathway isovaleryl-coa-to-coa "isovaleryl-CoA to CoA" {
     co2
   }
 
-  branch from s_carnitine side left {
-    s_carnitine
-    <-> . +atp +coa +adp +pi
-    s_carnitinyl_coa
-  }
-
-  branch from s_carnitine side right {
-    s_carnitine
-    <-> .
-    r_carnitine
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +3s_3_hydroxydodecanoyl_coa +r_carnitine
-    3_hydroxydodecanoylcarnitine
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +3s_hydroxytetradecanoyl_coa +r_carnitine
-    3_hydroxytetradecanoylcarnitine
+  branch from carnitine side left {
+    carnitine
+    <-> . +5e_tetradecenoyl_coa +coa
+    5e_tetradecenoyl_l_carnitine
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-hydroxymethylfurfural-to-furan-2-5-dicarboxyla "5-hydroxymethylfurfural to furan-2,5-dicarboxylate" {
-  spacing 226
+  spacing 274
 
   spine at 0,0 {
     5_hydroxymethylfurfural
@@ -26,25 +26,73 @@ pathway 5-hydroxymethylfurfural-to-furan-2-5-dicarboxyla "5-hydroxymethylfurfura
 
   branch from o2 side right {
     o2
-    <-> . +5_s_6_s_epoxy_15_r_hydroxyeicosatetraenoate +h2o
-    15_r_hydroxy_5z_8z_11z_13e_eicosatetraenoate
+    <-> ec_1_1_3_23 [1.1.3.23] +h +thiamine_acetate +h2o2 +h2o
+    thiamine_1_aldehyde
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_14_1 [1.14.14.1] +h +estrone +nadph +nadp +h2o
-    16alpha_hydroxyestrone
+    <-> ec_1_1_3_13 [1.1.3.13] +formaldehyde +h2o2
+    methanol
   }
 
   branch from h2o side right {
     h2o
-    <-> . +maltodecaose +beta_d_fructose
-    maltononaose
+    <-> . +h +adp +phosphate +atp
+    9z_12z_octadecadienoate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +maltodecaose +maltononaose
-    glucose
+    <-> . +h +adp +phosphate +atp
+    9e_octadecenoate
+  }
+
+  branch from h side right {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    9z_hexadecenoate
+  }
+
+  branch from h side left {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    8z_11z_14z_eicosatrienoate
+  }
+
+  branch from h2o2 side right {
+    h2o2
+    <-> ec_1_1_3_6 [1.1.3.6] +cholesterol +o2
+    cholest_4_en_3_one
+  }
+
+  branch from h2o2 side left {
+    h2o2
+    <-> ec_1_1_99_9 [1.1.99.9] +isopyridoxal +o2
+    pyridoxine
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +beta_d_glucosamine +h2o +h2o2
+    2_amino_2_deoxy_d_gluconate
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +3_hydroxy_3_methyloxindole +co2 +h
+    indol_3_yl_acetate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +h +adp +phosphate +atp
+    decanoate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +h +adp +phosphate +atp
+    tetradecanoate
   }
 }

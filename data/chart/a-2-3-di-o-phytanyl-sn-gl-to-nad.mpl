@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway a-2-3-di-o-phytanyl-sn-gl-to-nad "a 2,3-di-O-phytanyl-sn-gl… to NAD" {
-  spacing 240
+  spacing 252
 
   spine at 0,0 {
     a_2_3_di_o_phytanyl_sn_glycerophospholipid
@@ -18,39 +18,51 @@ pathway a-2-3-di-o-phytanyl-sn-gl-to-nad "a 2,3-di-O-phytanyl-sn-gl… to NAD" {
     3_methylthiopropanol
   }
 
-  branch from hydrogen_acceptor side left {
-    hydrogen_acceptor
-    <-> . +2s_9s_annullatin_h +hydrogen_donor
-    2s_9s_annullatin_d
-  }
-
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> . +trans_sinapyl_alcohol +hydrogen_donor
-    e_sinapaldehyde
-  }
-
-  branch from glycine side left {
-    glycine
-    <-> . +linoleoyl_coa +coa +hplus
-    n_linoleoylglycine
-  }
-
-  branch from glycine side right {
-    glycine
-    <-> . +l_glutamate +atp +adp +pi +hplus
-    glycyl_l_glutamate_1
-  }
-
   branch from nad side left {
     nad
-    <-> . +nadh +h +streptomycin_6_phosphate
-    dihydrostreptomycin_6_phosphate
+    <-> . +nadh +all_trans_beta_carotene +h +o2 +h2o
+    2s_2_s_dihydroxy_all_trans_beta_carotene
   }
 
   branch from nad side right {
     nad
-    <-> . +1_hydroxy_2_naphthoate +nadh +h +h2o
-    1_hydroxy_2_naphthaldehyde
+    <-> . +nadh +d_xylonate +h +h2o
+    aldehydo_d_xylose
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> . +2_benzyl_3_oxobutanedioate +h +nad
+    3_benzylmalic_acid
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +5z_tetradecenoyl_coa +acetyl_coa +h +h2o2 +coa +o2 +nad +h2o
+    9z_octadecenoyl_coa
+  }
+
+  branch from h side left {
+    h
+    <-> . +4_o_oxalyl_l_threonate +h2o
+    cyclic_3_4_o_oxalyl_l_threonate
+  }
+
+  branch from h side right {
+    h
+    <-> . +co2 +5_hydroxy_4_oxopentanoate
+    2_hydroxy_3_oxoadipate
+  }
+
+  branch from nad side left {
+    nad
+    <-> . +nadh +acetyl_coa +6_trans_tridecenoyl_coa +h +h2o2 +coa +o2 +h2o
+    10_trans_heptadecenoyl_coa
+  }
+
+  branch from nad side right {
+    nad
+    <-> . +nadh +acetyl_coa +5_cis_7_trans_tetradecadienoyl_coa +h +h2o2 +coa +o2 +h2o
+    9z_11e_octadecadienoyl_coa
   }
 }

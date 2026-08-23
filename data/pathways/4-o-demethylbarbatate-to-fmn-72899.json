@@ -1,0 +1,490 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "4-o-demethylbarbatate-to-fmn-72899",
+  "name": "4-O-demethylbarbatate to FMN",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from 4-O-demethylbarbatate to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:72899"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:192547"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "4_o_demethylbarbatate",
+      "name": "4-O-demethylbarbatate",
+      "short": "4-O-demethylbarbata…",
+      "formula": "C18H17O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:192547"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "proatranorin_i",
+      "name": "proatranorin I",
+      "formula": "C19H20O7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:192548"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "proatranorin_iv",
+      "name": "proatranorin IV",
+      "formula": "C19H20O8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:192556"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "atranorin",
+      "name": "Atranorin",
+      "formula": "C19H18O8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:144119"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "4-O-demethylbarbatate + S-adenosyl-L-methionine = proatranorin I + S-adenosyl-L-homocys...",
+      "equation": "4-O-demethylbarbatate + S-adenosyl-L-methionine = proatranorin I + S-adenosyl-L-homocysteine",
+      "substrates": [
+        {
+          "metabolite": "4_o_demethylbarbatate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "proatranorin_i",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:72899"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:72899"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "proatranorin I + reduced [NADPH--hemoprotein reductase] + O2 = proatranorin IV + oxidiz...",
+      "equation": "proatranorin I + reduced [NADPH--hemoprotein reductase] + O2 = proatranorin IV + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "proatranorin_i",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "proatranorin_iv",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:72927"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:72927"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "proatranorin IV + reduced [NADPH--hemoprotein reductase] + O2 = atranorin + oxidized [N...",
+      "equation": "proatranorin IV + reduced [NADPH--hemoprotein reductase] + O2 = atranorin + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "proatranorin_iv",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "atranorin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:72931"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:72931"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_4_o_demethylbarbatate_4-o-demethylbarbatate-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_o_demethylbarbatate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-o-demethylbarbatate-to-fmn"
+      },
+      "note": "Shares 4-O-demethylbarbatate with 4-O-demethylbarbatate to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:192547"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_o_demethylbarbatate_4-o-demethylbarbatate-to-s-adenosyl-l-homocystei",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_o_demethylbarbatate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-o-demethylbarbatate-to-s-adenosyl-l-homocystei"
+      },
+      "note": "Shares 4-O-demethylbarbatate with 4-O-demethylbarbatate to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:192547"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_o_demethylbarbatate_d-galnac-1-3-l-fuc-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_o_demethylbarbatate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-galnac-1-3-l-fuc-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares 4-O-demethylbarbatate with α-D-GalNAc-(1→3)-[α-L-Fuc… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:192547"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_o_demethylbarbatate_neurotensin-to-s-adenosyl-l-homocysteine-63540",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_o_demethylbarbatate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "neurotensin-to-s-adenosyl-l-homocysteine-63540"
+      },
+      "note": "Shares 4-O-demethylbarbatate with neurotensin to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:192547"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_proatranorin_i_4-o-demethylbarbatate-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "proatranorin_i"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-o-demethylbarbatate-to-fmn"
+      },
+      "note": "Shares proatranorin I with 4-O-demethylbarbatate to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:192548"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_proatranorin_iv_4-o-demethylbarbatate-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "proatranorin_iv"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-o-demethylbarbatate-to-fmn"
+      },
+      "note": "Shares proatranorin IV with 4-O-demethylbarbatate to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:192556"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_atranorin_4-o-demethylbarbatate-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "atranorin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-o-demethylbarbatate-to-fmn"
+      },
+      "note": "Shares Atranorin with 4-O-demethylbarbatate to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:144119"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_atranorin_4-o-demethylbarbatate-to-s-adenosyl-l-homocystei",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "atranorin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-o-demethylbarbatate-to-s-adenosyl-l-homocystei"
+      },
+      "note": "Shares Atranorin with 4-O-demethylbarbatate to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:144119"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_atranorin_s-adenosyl-l-homocysteine-to-prostreptovaricin-n",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "atranorin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-prostreptovaricin-n"
+      },
+      "note": "Shares Atranorin with S-adenosyl-L-homocysteine to prostreptovaricin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:144119"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_atranorin_sn-glycero-3-phosphoethan-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "atranorin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sn-glycero-3-phosphoethan-to-h2o"
+      },
+      "note": "Shares Atranorin with sn-glycero-3-phosphoethan… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:144119"
+          }
+        ]
+      }
+    }
+  ]
+}

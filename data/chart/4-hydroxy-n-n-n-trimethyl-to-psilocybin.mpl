@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-hydroxy-n-n-n-trimethyl-to-psilocybin "4-hydroxy-N,N,N-trimethyl… to psilocybin" {
-  spacing 198
+  spacing 252
 
   spine at 0,0 {
     4_hydroxy_n_n_n_trimethyltryptamine
@@ -18,33 +18,87 @@ pathway 4-hydroxy-n-n-n-trimethyl-to-psilocybin "4-hydroxy-N,N,N-trimethyl… to
     psilocybin
   }
 
-  branch from psilocybin side left {
-    psilocybin
-    <-> . +baeocystin +sam +hplus
-    sah
+  branch from s_adenosyl_l_methionine side left {
+    s_adenosyl_l_methionine
+    <-> ec_2_1_1_88 [2.1.1.88] +s_adenosyl_l_homocysteine +h +sexangularetin
+    herbacetin
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +o_methylandrocymbine
-    isoandrocymbine
-  }
-
-  branch from s_adenosyl_l_methionine side left {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +kreysigine +h
-    floramultine
-  }
-
-  branch from phosphate side right {
-    phosphate
-    <-> . +h +4_amino_3_4_dideoxy_d_arabino_heptulosonate_7_ph +phosphoenolpyruvate +h2o
-    iminoerythrose_4_phosphate
+    <-> . +s_adenosyl_l_homocysteine +limocitrin
+    3_3_4_5_7_pentahydroxy_8_methoxyflavone
   }
 
   branch from phosphate side left {
     phosphate
-    <-> . +aminodhq
-    4_amino_3_4_dideoxy_d_arabino_heptulosonate_7_ph
+    <-> ec_3_1_3_4 [3.1.3.4] +h +dg_18_0_16_0_0_0 +h2o
+    2r_2_palmitoyloxy_3_phosphonooxy_propyl_stearat
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_3_1_3_4 [3.1.3.4] +1_18_hydroxyoeoyl_2_18_hydroxy_linoleoyl_sn_glyc +h2o
+    1_18_hydroxyoeoyl_2_18_hydroxy_lioleoyl_sn_glyce
+  }
+
+  branch from s_adenosyl_l_homocysteine side left {
+    s_adenosyl_l_homocysteine
+    <-> . +fusicocca_1_10_14_diene_16_hydroxymethyl_3_8beta +h +s_adenosyl_l_methionine
+    fusicocca_1_10_14_diene_3_8beta_16_triol
+  }
+
+  branch from s_adenosyl_l_homocysteine side right {
+    s_adenosyl_l_homocysteine
+    <-> . +gliotoxin +h +s_adenosyl_l_methionine
+    n_desmethyl_gliotoxin
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_4_1_252 [2.4.1.252] +gdp +alpha_d_man_1_3_beta_d_glc_1_4_alpha_d_glc_pp_un +beta_d_glc_1_4_alpha_d_glc_pp_und
+    gdp_alpha_d_mannose
+  }
+
+  branch from h side right {
+    h
+    <-> . +dtdp_4_dehydro_2_6_dideoxy_d_glucose
+    dtdp_4_dehydro_2_6_dideoxy_beta_l_glucose
+  }
+
+  branch from s_adenosyl_l_methionine side left {
+    s_adenosyl_l_methionine
+    <-> . +5_hydroxymethyl_cytosine +s_adenosyl_l_homocysteine +h
+    bacimethrin
+  }
+
+  branch from s_adenosyl_l_methionine side right {
+    s_adenosyl_l_methionine
+    <-> . +s_adenosyl_l_homocysteine +l_leucyl_arginomycin +h
+    l_leucyl_demethylarginomycin
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_3_2_10 [3.3.2.10] +15_16_dihode
+    15_16_epode
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_3_2_10 [3.3.2.10] +9_10_epode
+    9_10_dihode
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +2_3_bis_o_geranylgeranyl_sn_glycero_1_phospho_3 +h2o
+    2_3_bis_o_geranylgeranyl_sn_glycero_1_phospho_3
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> . +diphosphate +pyruvate +h
+    phosphoenolpyruvate
   }
 }

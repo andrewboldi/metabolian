@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-1-deoxy-d-fructopyra-to-3-n-acetyl-l-valyl-ade "N-(1-deoxy-β-D-fructopyra… to 3'-(N-acetyl-L-valyl)aden…" {
-  spacing 188
+  spacing 158
 
   spine at 0,0 {
     n_1_deoxy_d_fructopyranos_1_yl_l_valine_betaine
@@ -16,39 +16,9 @@ pathway n-1-deoxy-d-fructopyra-to-3-n-acetyl-l-valyl-ade "N-(1-deoxy-β-D-fructo
     3_n_acetyl_l_valyl_adenylyl
   }
 
-  branch from 2_dehydro_d_glucopyranose side left {
-    2_dehydro_d_glucopyranose
-    <-> . +2s_3_4_hydroxyphenyl_2_e_2r_3s_4r_5r_2_3_4_5_te +h2o +hplus
-    tyrosine
-  }
-
-  branch from 2_dehydro_d_glucopyranose side right {
-    2_dehydro_d_glucopyranose
-    <-> . +n_1_deoxy_d_fructopyranos_1_yl_l_phenylalanine_b +o2 +h2o +h2o2
-    l_phenylalanine
-  }
-
   branch from valine side left {
     valine
-    <-> ec_6_3_2_47 [6.3.2.47] +n3_fumaramoyl_s_2_3_diaminopropanoic_acid +atp +adp +pi +hplus
-    dapdiamide_a
-  }
-
-  branch from valine side right {
-    valine
-    <-> ec_6_3_2_47 [6.3.2.47] +3_amino_n_trans_3_carbamoyloxirane_2_carbonyl_l +atp +adp +pi +hplus
-    dapdiamide_e
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_197 [4.2.3.197] +fpp +h2o
-    7_epi_ent_eudesmane_5_11_diol
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_199 [4.2.3.199] +fpp
-    5_epi_eremophilene
+    <-> . +valacyclovir +h2o +hplus
+    acyclovir
   }
 }

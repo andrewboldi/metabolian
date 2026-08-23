@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway c-terminal-l-amino-acyl-to-l-tyrosine "C-terminal L-α-amino-acyl… to L-tyrosine" {
-  spacing 208
+  spacing 226
 
   spine at 0,0 {
     c_terminal_l_amino_acyl_l_glutamyl_l_glutamyl_l
@@ -18,25 +18,43 @@ pathway c-terminal-l-amino-acyl-to-l-tyrosine "C-terminal L-α-amino-acyl… to 
 
   branch from l_phenylalanine side left {
     l_phenylalanine
-    <-> ec_5_4_3_10 [5.4.3.10]
-    r_3_ammonio_3_phenylpropanoate
+    <-> . +n_dha_l_phenylalanine +h2o
+    4z_7z_10z_13z_16z_19z_docosahexaenoate
   }
 
   branch from l_phenylalanine side right {
     l_phenylalanine
-    <-> ec_5_4_3_11 [5.4.3.11]
-    s_3_ammonio_3_phenylpropanoate
+    <-> . +n_1_deoxy_d_fructopyranos_1_yl_l_phenylalanine_b +o2 +h2o +h2o2
+    2_dehydro_d_glucopyranose
   }
 
   branch from tyrosine side left {
     tyrosine
-    <-> ec_1_3_1_78 [1.3.1.78] +nadp +co2 +nadph
-    l_arogenate
+    <-> . +chloride +nadp +nadph
+    3_chloro_l_tyrosine
   }
 
   branch from tyrosine side right {
     tyrosine
-    <-> ec_5_4_3_6 [5.4.3.6]
-    3_amino_3_4_hydroxyphenyl_propanoic_acid
+    <-> . +bromide +nadp +nadph
+    3_bromo_l_tyrosine
+  }
+
+  branch from l_phenylalanine side left {
+    l_phenylalanine
+    <-> . +h2o +hplus +2_dehydro_d_glucopyranose
+    2s_3_phenyl_2_e_2r_3s_4r_5r_2_3_4_5_tetrahydrox
+  }
+
+  branch from tyrosine side right {
+    tyrosine
+    <-> . +o2 +h2o +2_dehydro_d_glucopyranose +h2o2
+    n_1_deoxy_d_fructopyranos_1_yl_l_tyrosine_betain
+  }
+
+  branch from tyrosine side left {
+    tyrosine
+    <-> . +h2o +hplus +2_dehydro_d_glucopyranose
+    2s_3_4_hydroxyphenyl_2_e_2r_3s_4r_5r_2_3_4_5_te
   }
 }

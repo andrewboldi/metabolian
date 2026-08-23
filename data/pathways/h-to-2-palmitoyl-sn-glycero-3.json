@@ -179,23 +179,42 @@
       }
     },
     {
-      "id": "myristoyl_coa",
-      "name": "Myristoyl-CoA (tetradecanoyl-CoA)",
-      "short": "Myristoyl-CoA…",
-      "formula": "C35H58N7O17P3S",
-      "charge": -4,
+      "id": "1_o_palmitylglycerol",
+      "name": "1-O-palmitylglycerol",
+      "formula": "C19H40O3",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57385"
+        "chebi": "CHEBI:76061"
       }
     },
     {
-      "id": "1_oleoyl_2_myristoyl_sn_glycero_3_phosphoethanol",
-      "name": "1-oleoyl-2-myristoyl-sn-glycero-3-phosphoethanolamine",
-      "short": "1-oleoyl-2-myristoy…",
-      "formula": "C37H72NO8P",
+      "id": "1_o_palmityl_3_oleoylglycerol",
+      "name": "1-O-palmityl-3-oleoylglycerol",
+      "short": "1-O-palmityl-3-oleo…",
+      "formula": "C37H72O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:78814"
+        "chebi": "CHEBI:76062"
+      }
+    },
+    {
+      "id": "1_monooctanoylglycerol",
+      "name": "1-monooctanoylglycerol",
+      "short": "1-monooctanoylglyce…",
+      "formula": "C11H22O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:85241"
+      }
+    },
+    {
+      "id": "1_capryloyl_3_oleoylglycerol",
+      "name": "1-capryloyl-3-oleoylglycerol",
+      "short": "1-capryloyl-3-oleoy…",
+      "formula": "C29H54O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:197405"
       }
     }
   ],
@@ -205,7 +224,10 @@
       "name": "L-serine-phosphatidylethanolamine phosphatidyltransferase",
       "ec": [
         "2.7.8.29"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P48651"
+      }
     }
   ],
   "reactions": [
@@ -424,21 +446,21 @@
     },
     {
       "id": "r6",
-      "name": "1-(9Z-octadecenoyl)-sn-glycero-3-phosphoethanolamine + tetradecanoyl-CoA = 1-(9Z)-octad...",
-      "equation": "1-(9Z-octadecenoyl)-sn-glycero-3-phosphoethanolamine + tetradecanoyl-CoA = 1-(9Z)-octadecenoyl-2-tetradecanoyl-sn-glycero-3-phosphoethanolamine + CoA",
+      "name": "1-O-hexadecylglycerol + (9Z)-octadecenoyl-CoA = 1-O-hexadecyl-3-(9Z)-octadecenoylglycer...",
+      "equation": "1-O-hexadecylglycerol + (9Z)-octadecenoyl-CoA = 1-O-hexadecyl-3-(9Z)-octadecenoylglycerol + CoA",
       "substrates": [
         {
-          "metabolite": "1_oleoyl_sn_glycero_3_phosphoethanolamine",
+          "metabolite": "1_o_palmitylglycerol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "myristoyl_coa",
+          "metabolite": "oleoyl_coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "1_oleoyl_2_myristoyl_sn_glycero_3_phosphoethanol",
+          "metabolite": "1_o_palmityl_3_oleoylglycerol",
           "stoichiometry": 1
         },
         {
@@ -449,14 +471,319 @@
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:42240"
+        "rhea": "RHEA:77575"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:42240"
+            "id": "RHEA:77575"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "1-octanoylglycerol + (9Z)-octadecenoyl-CoA = 1-octanoyl-3-(9Z-octadecenoyl)-glycerol + CoA",
+      "equation": "1-octanoylglycerol + (9Z)-octadecenoyl-CoA = 1-octanoyl-3-(9Z-octadecenoyl)-glycerol + CoA",
+      "substrates": [
+        {
+          "metabolite": "1_monooctanoylglycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oleoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_capryloyl_3_oleoylglycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:77579"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77579"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_pe_20_1_11z_18_3_9z_12z_15z_p-nitrophenyl-valerate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pe_20_1_11z_18_3_9z_12z_15z"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "p-nitrophenyl-valerate-to-h2o"
+      },
+      "note": "Shares PE(20:1(11Z)/18:3(9Z,12Z,15Z)) with p-Nitrophenyl valerate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:170653"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pe_20_1_11z_18_3_9z_12z_15z_udp-2-4-diacetamido-2-4-6-to-cmp-5-7-diacetamido",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pe_20_1_11z_18_3_9z_12z_15z"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-2-4-diacetamido-2-4-6-to-cmp-5-7-diacetamido"
+      },
+      "note": "Shares PE(20:1(11Z)/18:3(9Z,12Z,15Z)) with UDP-2,4-diacetamido-2,4,6… to CMP-5,7-diacetamido-3,5,7….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:170653"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ethanolamine_2-aminoethyl-phosphonate-to-hexadecanoate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ethanolamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-aminoethyl-phosphonate-to-hexadecanoate"
+      },
+      "note": "Shares ethanolamine with (2-aminoethyl)phosphonate to hexadecanoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM218"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ethanolamine_sn-glycero-3-phosphoethan-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ethanolamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sn-glycero-3-phosphoethan-to-h2o"
+      },
+      "note": "Shares ethanolamine with sn-glycero-3-phosphoethan… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM218"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ethanolamine_tetraphosphate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ethanolamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "tetraphosphate-to-h2o"
+      },
+      "note": "Shares ethanolamine with tetraphosphate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM218"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ethanolamine_triethanolamine-to-o-citryl-ethanolamine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ethanolamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "triethanolamine-to-o-citryl-ethanolamine"
+      },
+      "note": "Shares ethanolamine with triethanolamine to O-citryl-ethanolamine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM218"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ps_20_1_11z_18_3_9z_12z_15z_5-methoxybenzimidazole-to-6-hydroxynicotinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ps_20_1_11z_18_3_9z_12z_15z"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-methoxybenzimidazole-to-6-hydroxynicotinate"
+      },
+      "note": "Shares PS(20:1(11Z)/18:3(9Z,12Z,15Z)) with 5-Methoxybenzimidazole to 6-hydroxynicotinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:170702"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ps_20_1_11z_18_3_9z_12z_15z_p-nitrophenyl-valerate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ps_20_1_11z_18_3_9z_12z_15z"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "p-nitrophenyl-valerate-to-h2o"
+      },
+      "note": "Shares PS(20:1(11Z)/18:3(9Z,12Z,15Z)) with p-Nitrophenyl valerate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:170702"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_oleoyl_2_linoleoyl_sn_glycero_3_phospho_l_seri_1-acyl-2-oleoyl-sn-glycer-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_oleoyl_2_linoleoyl_sn_glycero_3_phospho_l_seri"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-acyl-2-oleoyl-sn-glycer-to-h2o"
+      },
+      "note": "Shares 1-oleoyl-2-linoleoyl-sn-glycero-3-phospho-L-serine with 1-acyl-2-oleoyl-sn-glycer… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74892"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_oleoyl_2_linoleoyl_sn_glycero_3_phosphoethanol_1-hexanoyl-2-acyl-sn-glyc-to-linoleoyl-sn-glycer",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_oleoyl_2_linoleoyl_sn_glycero_3_phosphoethanol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-hexanoyl-2-acyl-sn-glyc-to-linoleoyl-sn-glycer"
+      },
+      "note": "Shares 1-oleoyl-2-linoleoyl-sn-glycero-3-phosphoethanolamine with 1-hexanoyl-2-acyl-sn-glyc… to linoleoyl-sn-glycero-3-ph….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74977"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_oleoyl_2_linoleoyl_sn_glycero_3_phosphoethanol_gdp-to-d-mannose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_oleoyl_2_linoleoyl_sn_glycero_3_phosphoethanol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gdp-to-d-mannose"
+      },
+      "note": "Shares 1-oleoyl-2-linoleoyl-sn-glycero-3-phosphoethanolamine with GDP to α-D-mannose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74977"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_2_dioleoyl_3_linoleoyl_sn_glycerol_1-palmitoyl-2-3-dioleoyl-to-oleate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_2_dioleoyl_3_linoleoyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-palmitoyl-2-3-dioleoyl-to-oleate"
+      },
+      "note": "Shares 1,2-dioleoyl-3-linoleoyl-sn-glycerol with 1-palmitoyl-2,3-dioleoyl-… to oleate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77683"
           }
         ]
       }

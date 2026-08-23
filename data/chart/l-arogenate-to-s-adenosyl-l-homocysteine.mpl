@@ -22,40 +22,28 @@ pathway l-arogenate-to-s-adenosyl-l-homocysteine "L-arogenate to S-adenosyl-L-ho
     r_r_2_3_dimethyl_6_phytylhydroquinone
   }
 
-  branch from 1s_4s_prephenate side left {
-    1s_4s_prephenate
-    <-> . +2_methoxy_6_all_trans_octaprenyl_phenol +hydrogen_acceptor +hplus +keto_phenylpyruvate +hydrogen_donor +co2
-    6_methoxy_2_octaprenylhydroquinone
+  branch from glutamate side left {
+    glutamate
+    <-> ec_6_3_2_61 [6.3.2.61] +l_glutamyl_l_glutamate_2 +atp +adp +pi +hplus
+    l_glutamyl_l_glutamyl_l_glutamate_3
   }
 
   branch from glutamate side right {
     glutamate
-    <-> ec_2_6_1_5 [2.6.1.5] +l_phenylalanine +akg
-    keto_phenylpyruvate
-  }
-
-  branch from glutamate side left {
-    glutamate
-    <-> ec_6_3_4_2 [6.3.4.2] +utp +glutamine +atp +h2o +adp +pi +hplus
-    ctp
-  }
-
-  branch from 3_4_hydroxyphenyl_pyruvate side right {
-    3_4_hydroxyphenyl_pyruvate
-    <-> ec_6_4_1_10 [6.4.1.10] +atp +amp +ppi +hplus
-    atromentin
+    <-> ec_6_3_2_62 [6.3.2.62] +atp +l_glutamyl_l_glutamyl_l_glutamate_3 +adp +pi +hplus
+    l_glutamyl_l_glutamate_2
   }
 
   branch from 3_4_hydroxyphenyl_pyruvate side left {
     3_4_hydroxyphenyl_pyruvate
-    <-> . +l_kynurenine +tyrosine +h2o
-    kynurenate
+    <-> . +tyrosine +glyoxylate
+    glycine
   }
 
-  branch from 4_hydroxyphenylacetate side right {
-    4_hydroxyphenylacetate
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    dopac
+  branch from 3_4_hydroxyphenyl_pyruvate side right {
+    3_4_hydroxyphenyl_pyruvate
+    <-> . +d_tyrosine +o2 +h2o +h2o2
+    nh3
   }
 
   branch from r_r_2_methyl_6_phytylhydroquinone side left {
@@ -66,14 +54,14 @@ pathway l-arogenate-to-s-adenosyl-l-homocysteine "L-arogenate to S-adenosyl-L-ho
 
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_88 [2.5.1.88] +2_cis_6_trans_farnesyl_diphosphate +ipp
-    ditrans_polycis_tetradecaprenyl_diphosphate
+    <-> ec_4_2_3_144 [4.2.3.144] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +h2o
+    geranyllinalool
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_89 [2.5.1.89] +geranylgeranyl_diphosphate +ipp
-    tri_trans_poly_cis_undecaprenyl_diphosphate
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    z_biformene
   }
 
   branch from r_r_2_3_dimethyl_6_phytylhydroquinone side right {
@@ -84,13 +72,73 @@ pathway l-arogenate-to-s-adenosyl-l-homocysteine "L-arogenate to S-adenosyl-L-ho
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_328 [2.1.1.328] +n_demethylindolmycin +sam +hplus
-    indolmycin
+    <-> ec_2_1_1_213 [2.1.1.213] +guanosine_5_monophosphate_1 +sam +hplus
+    n2_n2_dimethylguanosine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_103 [2.1.1.103] +n_methylethanolaminium_phosphate +sam +hplus
-    n_n_dimethylethanolamine_phosphate
+    <-> ec_2_1_1_214 [2.1.1.214] +guanosine_5_monophosphate_1 +sam +hplus
+    n2_methylguanosine_5_monophosphate_1
+  }
+
+  branch from akg side left {
+    akg
+    <-> . +udp_4_ammonio_d_fucose +atp +adp +pi +hplus
+    udp_yelose
+  }
+
+  branch from akg side right {
+    akg
+    <-> . +udp_4_amino_4_deoxy_l_arabinopyranose +atp +adp +pi +hplus
+    udp_aravonose
+  }
+
+  branch from glutamate side left {
+    glutamate
+    <-> . +spermidine +atp +adp +pi +hplus
+    l_glutamylspermidine
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> . +spermine +atp +adp +pi +hplus
+    l_glutamylspermine
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
+    copalol
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
+    manool
+  }
+
+  branch from sam side left {
+    sam
+    <-> ec_2_1_1_216 [2.1.1.216] +n2_n2_dimethylguanosine_5_monophosphate_1 +sah +hplus
+    guanosine_5_monophosphate_1
+  }
+
+  branch from sam side right {
+    sam
+    <-> ec_2_1_1_217 [2.1.1.217] +adenosine_5_monophosphate_1 +sah +hplus
+    n1_methyladenosine_5_monophosphate_1
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_218 [2.1.1.218] +sam +n1_methyladenosine_5_monophosphate_1 +hplus
+    adenosine_5_monophosphate_1
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_221 [2.1.1.221] +guanosine_5_monophosphate_1 +sam +hplus
+    n1_methylguanosine_5_monophosphate_1
   }
 }

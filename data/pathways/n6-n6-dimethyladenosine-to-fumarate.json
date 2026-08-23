@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "n6-n6-dimethyladenosine-to-fumarate",
   "name": "N6,N6-dimethyladenosine to fumarate",
-  "category": "nucleotide-metabolism",
+  "category": "other",
   "summary": "A 4-step route from N6,N6-dimethyladenosine to fumarate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -155,43 +155,6 @@
       "xrefs": {
         "chebi": "CHEBI:456215"
       }
-    },
-    {
-      "id": "inosine",
-      "name": "Inosine",
-      "formula": "C10H12N4O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:17596"
-      }
-    },
-    {
-      "id": "gmp",
-      "name": "Guanosine 5'-monophosphate (GMP)",
-      "short": "Guanosine 5'-MP…",
-      "formula": "C10H12N5O8P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:58115"
-      }
-    },
-    {
-      "id": "guanosine",
-      "name": "Guanosine",
-      "formula": "C10H13N5O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16750"
-      }
-    },
-    {
-      "id": "itp",
-      "name": "ITP",
-      "formula": "C10H11N4O14P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:61402"
-      }
     }
   ],
   "enzymes": [
@@ -200,14 +163,20 @@
       "name": "adenylosuccinate synthase",
       "ec": [
         "6.3.4.4"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q8N142"
+      }
     },
     {
       "id": "ec_4_3_2_2",
       "name": "adenylosuccinate lyase",
       "ec": [
         "4.3.2.2"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P30566"
+      }
     }
   ],
   "reactions": [
@@ -394,85 +363,269 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "inosine + GMP = guanosine + IMP",
-      "equation": "inosine + GMP = guanosine + IMP",
-      "substrates": [
-        {
-          "metabolite": "inosine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "gmp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "guanosine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "imp",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:69584"
+      "id": "xt_dimethylaminium_1-decanoyl-sn-glycero-3-p-to-formaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dimethylaminium"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1-decanoyl-sn-glycero-3-p-to-formaldehyde"
+      },
+      "note": "Shares dimethylaminium with 1-decanoyl-sn-glycero-3-p… to formaldehyde.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:69584"
+            "db": "ChEBI",
+            "id": "CHEBI:58040"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "ITP + 2 H2O = IMP + 2 phosphate + 2 H(+)",
-      "equation": "ITP + 2 H2O = IMP + 2 phosphate + 2 H(+)",
-      "substrates": [
-        {
-          "metabolite": "itp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "imp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pi",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:77735"
+      "id": "xt_dimethylaminium_2-aminoethyl-phosphonic-to-coniferyl-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dimethylaminium"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2-aminoethyl-phosphonic-to-coniferyl-acetate"
+      },
+      "note": "Shares dimethylaminium with (2-aminoethyl)phosphonic… to coniferyl acetate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:77735"
+            "db": "ChEBI",
+            "id": "CHEBI:58040"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dimethylaminium_guaiacylglycerol-guaiac-to-hydroquinone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dimethylaminium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "guaiacylglycerol-guaiac-to-hydroquinone"
+      },
+      "note": "Shares dimethylaminium with guaiacylglycerol-β-guaiac… to hydroquinone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58040"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dimethylaminium_menaquinone-4-to-formaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dimethylaminium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "menaquinone-4-to-formaldehyde"
+      },
+      "note": "Shares dimethylaminium with menaquinone-4 to formaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58040"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dimethylaminium_n-n-dimethyl-l-arginini-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dimethylaminium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-n-dimethyl-l-arginini-to-hydrogen-donor"
+      },
+      "note": "Shares dimethylaminium with Nω,Nω-dimethyl-L-arginini… to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58040"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dimethylaminium_n-n-dimethylformamide-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dimethylaminium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-n-dimethylformamide-to-ammonium"
+      },
+      "note": "Shares dimethylaminium with N,N-dimethylformamide to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58040"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_imp_1-methyladenosine-to-5-amino-1-5-phosphonato",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "imp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-methyladenosine-to-5-amino-1-5-phosphonato"
+      },
+      "note": "Shares Inosine 5'-monophosphate (IMP) with 1-methyladenosine to 5-amino-1-(5-phosphonato-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58053"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_imp_2-acetamido-2-deoxy-3-o-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "imp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-acetamido-2-deoxy-3-o-to-ammonium"
+      },
+      "note": "Shares Inosine 5'-monophosphate (IMP) with 2-acetamido-2-deoxy-3-O-(… to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58053"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_imp_2-methylpropanal-oxime-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "imp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-methylpropanal-oxime-to-ammonium"
+      },
+      "note": "Shares Inosine 5'-monophosphate (IMP) with 2-methylpropanal oxime to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58053"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_imp_5-end-purine-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "imp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-end-purine-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares Inosine 5'-monophosphate (IMP) with 5'-end purine… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58053"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_imp_aldehydo-d-allose-to-5-hydroxyisouric-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "imp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aldehydo-d-allose-to-5-hydroxyisouric-acid"
+      },
+      "note": "Shares Inosine 5'-monophosphate (IMP) with aldehydo-D-allose to 5-hydroxyisouric acid.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58053"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_imp_n-acetylneuraminyl-2-3-to-cytidine-5-monophosph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "imp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetylneuraminyl-2-3-to-cytidine-5-monophosph"
+      },
+      "note": "Shares Inosine 5'-monophosphate (IMP) with α-N-acetylneuraminyl-(2→3… to cytidine 5'-monophosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58053"
           }
         ]
       }

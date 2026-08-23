@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 16z-19z-22z-25z-28z-31z-to-18z-21z-24z-27z-30z "(16Z,19Z,22Z,25Z,28Z,31Z)… to (18Z,21Z,24Z,27Z,30Z,33Z)…" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     16z_19z_22z_25z_28z_31z_tetratriacontahexaenoyl
@@ -16,5 +16,17 @@ pathway 16z-19z-22z-25z-28z-31z-to-18z-21z-24z-27z-30z "(16Z,19Z,22Z,25Z,28Z,31Z
     2e_18z_21z_24z_27z_30z_33z_hexatriacontaheptaen
     <-> . +nadph +hplus -nadp
     18z_21z_24z_27z_30z_33z_hexatriacontahexaenoyl
+  }
+
+  branch from malonyl-coa side left {
+    malonyl-coa
+    <-> . +acetyl_coa +hplus +co2 +coa +h2o
+    o_orsellinate_depsidate
+  }
+
+  branch from malonyl-coa side right {
+    malonyl-coa
+    <-> . +cyanidin_3_o_6_o_4_o_d_glucosyl_p_coumaroyl_2_o +coa
+    cyanidin_3_o_6_o_4_o_d_glucosyl_p_coumaroyl_2_o
   }
 }

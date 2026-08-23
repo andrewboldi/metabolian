@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-cholestan-3-one-to-hydrogen-donor "5β-cholestan-3-one to hydrogen donor" {
-  spacing 266
+  spacing 326
 
   spine at 0,0 {
     5_cholestan_3_one
@@ -54,25 +54,85 @@ pathway 5-cholestan-3-one-to-hydrogen-donor "5β-cholestan-3-one to hydrogen don
 
   branch from ppi side right {
     ppi
-    <-> ec_6_1_1_16 [6.1.1.16] +amp_3_end_1 +cysteine +atp +amp
-    3_l_cysteinyl_adenylyl_zwitterionic_group
+    <-> ec_6_2_1_24 [6.2.1.24] +phytanate +atp +coa +amp
+    phytanoyl_coa
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_7 [4.2.3.7] +fpp
-    pentalenene
+    <-> ec_3_1_7_1 [3.1.7.1] +dmapp +h2o
+    prenol
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> ec_1_1_99_26 [1.1.99.26] +3_hydroxycyclohexanone +hydrogen_acceptor
-    cyclohexane_1_3_dione
+    <-> . +linoleate +o2 +hydrogen_acceptor +h2o
+    crepenynate
   }
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> ec_1_97_1_1 [1.97.1.1] +chlorate +hydrogen_acceptor +h2o
-    chlorite
+    <-> ec_1_3_99_6 [1.3.99.6] +3_oxo_5_steroid +hydrogen_acceptor
+    3_oxo_4_steroid
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_14_15_4 [1.14.15.4] +steroid +o2 +hplus +di_sulfido_diiron +h2o
+    11_hydroxy_steroid
+  }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> ec_1_3_7_4 [1.3.7.4] +di_sulfido_diiron +biliverdin +hplus
+    3z_phytochromobilin
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_2_7_3 [1.2.7.3] +akg +coa +di_sulfido_diiron +co2 +hplus
+    succinyl_coa
+  }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> ec_1_7_7_1 [1.7.7.1] +nh3 +h2o +di_sulfido_diiron +hplus
+    nitrite
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_2_5_1_69 [2.5.1.69] +dmapp
+    r_lavandulyl_diphosphate
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    1r_2r_3r_prephytoene_diphosphate
+  }
+
+  branch from hydrogen_acceptor side right {
+    hydrogen_acceptor
+    <-> ec_1_1_99_35 [1.1.99.35] +glucose +hydrogen_donor
+    d_glucono_1_5_lactone
+  }
+
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> ec_1_1_99_32 [1.1.99.32] +l_sorbopyranose +hydrogen_donor
+    l_xylo_hexos_2_ulose
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> . +stearoyl_coa +o2 +hydrogen_acceptor +h2o
+    oleoyl_coa
+  }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> ec_1_3_99_n1 [1.3.99.n1] +3_hydroxybenzoyl_coa +atp +h2o +hydrogen_acceptor +adp +pi +hplus
+    3_hydroxycyclohexa_1_5_diene_1_carbonyl_coa
   }
 }

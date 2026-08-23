@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway terminolate-to-asiaticoside-b "terminolate to Asiaticoside B" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     terminolate
@@ -14,5 +14,17 @@ pathway terminolate-to-asiaticoside-b "terminolate to Asiaticoside B" {
     terminolic_acid_28_o_d_glucosyl_1_6_d_glucoside
     <-> . +udp_l_rhamnose -udp -hplus
     asiaticoside_b
+  }
+
+  branch from udp_d_glucose side left {
+    udp_d_glucose
+    <-> ec_2_4_1_185 [2.4.1.185] +s_naringenin +udp +hplus
+    naringenin_7_o_d_glucoside
+  }
+
+  branch from udp_d_glucose side right {
+    udp_d_glucose
+    <-> . +tigogenin +udp +hplus
+    tigogenin_3_o_d_glucopyranoside
   }
 }

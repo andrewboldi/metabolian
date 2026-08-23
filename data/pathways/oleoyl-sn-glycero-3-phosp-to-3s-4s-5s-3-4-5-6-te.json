@@ -127,46 +127,6 @@
       "xrefs": {
         "chebi": "CHEBI:231435"
       }
-    },
-    {
-      "id": "1_1z_hexadecenyl_2_9z_octadecenoyl_sn_glycero_3",
-      "name": "1-[(1Z)-hexadecenyl]-2-[(9Z)-octadecenoyl]-sn-glycero-3-phosphocholine",
-      "short": "1-[(1Z)-hexadecenyl…",
-      "formula": "C42H82NO7P",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:86232"
-      }
-    },
-    {
-      "id": "1_1z_hexadecenyl_sn_glycero_3_phosphocholine",
-      "name": "1-(1Z-hexadecenyl)-sn-glycero-3-phosphocholine",
-      "short": "1-(1Z-hexadecenyl)-…",
-      "formula": "C24H50NO6P",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:73850"
-      }
-    },
-    {
-      "id": "1_oleoyl_2_7z_10z_13z_16z_19z_docosapentaenoyl_s",
-      "name": "1-oleoyl-2-(7Z,10Z,13Z,16Z,19Z-docosapentaenoyl)-sn-glycero-3-phospho-1D-myo-inositol",
-      "short": "1-oleoyl-2-(7Z,10Z,…",
-      "formula": "C49H82O13P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:195484"
-      }
-    },
-    {
-      "id": "2_7z_10z_13z_16z_19z_docosapentaenoyl_sn_glycero",
-      "name": "2-(7Z,10Z,13Z,16Z,19Z-docosapentaenoyl)-sn-glycero-3-phospho-1D-myo-inositol",
-      "short": "2-(7Z,10Z,13Z,16Z,1…",
-      "formula": "C31H50O12P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:195486"
-      }
     }
   ],
   "enzymes": [
@@ -175,7 +135,10 @@
       "name": "D/L-glyceraldehyde reductase",
       "ec": [
         "1.1.1.372"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P14550"
+      }
     }
   ],
   "reactions": [
@@ -344,89 +307,93 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "1-O-(1Z-hexadecenyl)-2-(9Z-octadecenoyl)-sn-glycero-3-phosphocholine + H2O = 1-(1Z-hexa...",
-      "equation": "1-O-(1Z-hexadecenyl)-2-(9Z-octadecenoyl)-sn-glycero-3-phosphocholine + H2O = 1-(1Z-hexadecenyl)-sn-glycero-3-phosphocholine + (9Z)-octadecenoate + H(+)",
-      "substrates": [
-        {
-          "metabolite": "1_1z_hexadecenyl_2_9z_octadecenoyl_sn_glycero_3",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_1z_hexadecenyl_sn_glycero_3_phosphocholine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "oleate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:67156"
+      "id": "xt_monooleoylglycerol_1-oleoyl-sn-glycerol-to-oleate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "monooleoylglycerol"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1-oleoyl-sn-glycerol-to-oleate"
+      },
+      "note": "Shares monooleoylglycerol with 1-oleoyl-sn-glycerol to oleate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:67156"
+            "db": "ChEBI",
+            "id": "CHEBI:75937"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "1-(9Z-octadecenoyl)-2-(7Z,10Z,13Z,16Z,19Z-docosapentaenoyl)-sn-glycero-3-phospho-1D-myo...",
-      "equation": "1-(9Z-octadecenoyl)-2-(7Z,10Z,13Z,16Z,19Z-docosapentaenoyl)-sn-glycero-3-phospho-1D-myo-inositol + H2O = 2-(7Z,10Z,13Z,16Z,19Z-docosapentaenoyl)-sn-glycero-3-phospho-1D-myo-inositol + (9Z)-octadecenoate + H(+)",
-      "substrates": [
-        {
-          "metabolite": "1_oleoyl_2_7z_10z_13z_16z_19z_docosapentaenoyl_s",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_7z_10z_13z_16z_19z_docosapentaenoyl_sn_glycero",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "oleate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:76971"
+      "id": "xt_monooleoylglycerol_1-oleoylglycerol-to-oleate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "monooleoylglycerol"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1-oleoylglycerol-to-oleate"
+      },
+      "note": "Shares monooleoylglycerol with 1-oleoylglycerol to oleate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:76971"
+            "db": "ChEBI",
+            "id": "CHEBI:75937"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_monooleoylglycerol_3-oleoyl-sn-glycerol-to-oleate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "monooleoylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-oleoyl-sn-glycerol-to-oleate"
+      },
+      "note": "Shares monooleoylglycerol with 3-oleoyl-sn-glycerol to oleate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75937"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_glyceraldehyde_3-6-anhydro-l-galactofura-to-l-glyceraldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_glyceraldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-6-anhydro-l-galactofura-to-l-glyceraldehyde"
+      },
+      "note": "Shares L-glyceraldehyde with 3,6-anhydro-L-galactofura… to L-glyceraldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:27975"
           }
         ]
       }

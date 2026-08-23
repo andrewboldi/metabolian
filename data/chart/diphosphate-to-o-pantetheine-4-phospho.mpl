@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway diphosphate-to-o-pantetheine-4-phospho "diphosphate to O-(pantetheine-4'-phospho…" {
-  spacing 218
+  spacing 176
 
   spine at 0,0 {
     diphosphate
@@ -22,69 +22,27 @@ pathway diphosphate-to-o-pantetheine-4-phospho "diphosphate to O-(pantetheine-4'
     n1_3_4_dihydroxybenzoyl_n8_n_8_citryl_bis_spermi
   }
 
-  branch from atp side left {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    n_5_hydroxyhexahydrocyclopenta_c_pyrrol_2_1h_yl
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    7_beta_oh_gliclazide_glucuronide
-  }
-
   branch from coa side left {
     coa
-    <-> . +erucoyl_coa +diphosphate +amp +atp
-    13z_docosenoate
+    <-> . +9z_12z_15z_octadecatrienoyl_coa +s_carnitine
+    linolenoylcarnitine
   }
 
   branch from coa side right {
     coa
-    <-> . +tricosanoyl_coa +diphosphate +amp +atp
-    tricosanoate
+    <-> . +s_carnitine +11z_14z_17z_icosatrienoyl_coa
+    11z_14z_17z_icosa_11_14_17_trienoylcarnitine
   }
 
-  branch from 4_hydroxyamino_benzoate side left {
-    4_hydroxyamino_benzoate
-    <-> . +h +4_aminobenzoate +o2 +nadph +h2o
-    nadp
+  branch from coa side left {
+    coa
+    <-> . +s_carnitine +11z_14z_icosadienoyl_coa
+    11z_14z_eicosadienoylcarnitine
   }
 
-  branch from nh3 side right {
-    nh3
-    <-> . +n_carbamoylglycinate +h2o +hplus +co2
-    glycine
-  }
-
-  branch from nh3 side left {
-    nh3
-    <-> . +n_carbamoyl_l_tyrosinate +h2o +hplus +co2
-    tyrosine
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +o_adenyl_l_tyrosine_1 +atp
-    o_5_adenyl_5_3_adenyl_l_tyrosine_2
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +o_5_adenyl_5_3_adenyl_l_tyrosine_2 +atp
-    o_5_adenyl_5_3_adenyl_5_3_adenyl_l_tyrosine_3
-  }
-
-  branch from holo-acp side right {
-    holo-acp
-    <-> . +malonyl-coa +acetyl_coa +hplus +co2 +coa
-    o_s_3_5_7_9_11_13_hexaoxotetradecanoyl_pantethei
-  }
-
-  branch from holo-acp side left {
-    holo-acp
-    <-> . +malonyl-coa +acetyl_coa +hplus +co2 +coa
-    o_s_3_5_7_9_11_pentaoxododecanoyl_pantetheine_4
+  branch from coa side right {
+    coa
+    <-> . +13z_16z_docosadienoyl_coa +s_carnitine
+    13z_16z_docosadienoylcarnitine
   }
 }

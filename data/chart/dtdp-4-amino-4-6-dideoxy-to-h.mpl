@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dtdp-4-amino-4-6-dideoxy-to-h "DTDP-4-amino-4,6-dideoxy-… to H" {
-  spacing 312
+  spacing 340
 
   spine at 0,0 {
     dtdp_4_amino_4_6_dideoxy_d_galactose
@@ -20,61 +20,97 @@ pathway dtdp-4-amino-4-6-dideoxy-to-h "DTDP-4-amino-4,6-dideoxy-… to H" {
 
   branch from l_glutamate side left {
     l_glutamate
-    <-> ec_2_6_1_13 [2.6.1.13] +s_1_pyrroline_5_carboxylate +h +h2o +2_oxoglutarate
-    l_ornithine
+    <-> ec_2_6_1_1 [2.6.1.1] +2_oxoglutarate +l_cysteate
+    3_sulfopyruvate
   }
 
   branch from l_glutamate side right {
     l_glutamate
-    <-> ec_3_4_17_11 [3.4.17.11] +4_2_amino_4_hydroxypteridin_6_yl_methyl_amino_be +h2o
-    folate
+    <-> . +h +adp +heptaglutamyl_folate_dhf +phosphate +atp
+    haxglutamyl_folate_dhf
   }
 
   branch from 2_oxoglutarate side left {
     2_oxoglutarate
-    <-> ec_1_14_11_13 [1.14.11.13] +gibberellin_a29 +co2 +succinate +o2
-    gibberellin_a20
+    <-> ec_1_14_11_32 [1.14.11.32] +formaldehyde +neomorphine +co2 +succinate +o2
+    neopine
   }
 
   branch from 2_oxoglutarate side right {
     2_oxoglutarate
-    <-> ec_1_14_11_13 [1.14.11.13] +gibberellin_a29 +co2 +h +succinate +gibberellin_a20
-    o2
+    <-> ec_1_5_1_19 [1.5.1.19] +l_asparagine +h +nadph +nadp +h2o
+    succinamopine
   }
 
   branch from h side left {
     h
-    <-> ec_1_14_12_19 [1.14.12.19] +nadh +3_phenylpropanoate +o2 +nad
-    3_5s_6r_5_6_dihydroxycyclohexa_1_3_dienyl_propan
+    <-> . +2r_2_hydroxy_3_oxosuccinic_acid
+    dihydroxyfumarate
   }
 
   branch from h side right {
     h
-    <-> ec_3_5_4_19 [3.5.4.19] +1_5_phospho_beta_d_ribosyl_5_5_phospho_beta_d_ri +h2o
-    1_5_phosphoribosyl_amp
+    <-> ec_4_1_1_54 [4.1.1.54] +co2 +2r_tartronate_semialdehyde
+    2s_2_hydroxy_3_oxosuccinic_acid
   }
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_76 [2.3.1.76] +hexadecanoyl_coa +retinol
-    all_trans_retinyl_hexadecanoate
+    <-> ec_2_3_1_172 [2.3.1.172] +malonyl_coa +shisonin
+    malonylshisonin
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_126 [2.3.1.126] +trans_caffeoyl_coa +isocitrate
-    2_e_caffeoyl_d_threo_isocitrate
+    <-> . +r_3_phenyllactoyl_coa +tropine
+    r_littorine
   }
 
-  branch from dtdp side left {
-    dtdp
-    <-> . +dtdp_beta_l_rhamnose +alpha_d_glcl_1_4_beta_d_gal_1_3_alpha_d_galnac_d +h
-    alpha_l_rha_1_4_alpha_d_glc_1_4_beta_d_gal_1_3_g
+  branch from l_glutamate side left {
+    l_glutamate
+    <-> . +6r_10_formyltetrahydrofolate +atp +h +adp +phosphate
+    10_formyltetrahydrofolate_glu_5
   }
 
-  branch from dtdp side right {
-    dtdp
-    <-> . +alpha_d_glc_1_4_alpha_d_galnac_1_3_alpha_d_glcna +dtdp_3_acetamido_3_6_dideoxy_d_galactopyranose +h
-    beta_d_fucnac_1_6_alpha_d_glc_1_4_alpha_d_galnac
+  branch from l_glutamate side right {
+    l_glutamate
+    <-> . +h +10_formyltetrahydrofolate_glu_6 +adp +phosphate +10_formyltetrahydrofolate_glu_5
+    atp
+  }
+
+  branch from acetyl_coa side left {
+    acetyl_coa
+    <-> . +rhamanosyl_n_acetylglucosamyl_undecaprenyl_dipho +coa
+    o_acetyl_rhamanosyl_n_acetylglucosamyl_undecapre
+  }
+
+  branch from acetyl_coa side right {
+    acetyl_coa
+    <-> . +cucurbitacin_d +coa
+    cucurbitacin_b
+  }
+
+  branch from h side left {
+    h
+    <-> ec_4_1_1_54 [4.1.1.54] +2r_2_hydroxy_3_oxosuccinic_acid +2r_tartronate_semialdehyde
+    co2
+  }
+
+  branch from h side right {
+    h
+    <-> . +furaquinocin_c
+    6_linalyl_2_o_3_dimethylflaviolin_7_olate
+  }
+
+  branch from coa side left {
+    coa
+    <-> . +acetyl_coa +cucurbitacin_i
+    cucurbitacin_e
+  }
+
+  branch from coa side right {
+    coa
+    <-> . +acetyl_coa +deacetylcucurbitacin_c
+    cucurbitacin_c
   }
 }

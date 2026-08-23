@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-aminophenol-to-l-glutamate "2-aminophenol to L-glutamate" {
-  spacing 336
+  spacing 340
 
   spine at 0,0 {
     2_aminophenol
@@ -34,109 +34,145 @@ pathway 2-aminophenol-to-l-glutamate "2-aminophenol to L-glutamate" {
 
   branch from h side left {
     h
-    <-> ec_2_7_8_23 [2.7.8.23] +co2 +3_hydrohydroxyphosphoryl_pyruvate
-    carboxyphosphonopyruvate
+    <-> ec_3_5_1_4 [3.5.1.4] +butanamide +hydroxylamine +nh4
+    butyrylhydroxamic_acid
   }
 
   branch from h side right {
     h
-    <-> . +nadph +tetrachlorocatechol +1r_2s_3_4_5_6_tetrachlorocyclohexa_3_5_diene_1
-    nadp
+    <-> ec_3_5_1_4 [3.5.1.4] +benzamide +hydroxylamine +nh4
+    benzhydroxamic_acid
   }
 
   branch from anthranilate side left {
     anthranilate
-    <-> ec_2_7_7_55 [2.7.7.55] +diphosphate +n_adenylylanthranilic_acid +h
-    atp
+    <-> . +udp +beta_glucopyranosyl_anthranilate
+    udp_alpha_d_glucose
   }
 
   branch from anthranilate side right {
     anthranilate
-    <-> ec_1_7_1_6 [1.7.1.6] +methyl_red +h +nadph +nadp
+    <-> ec_1_7_1_6 [1.7.1.6] +nadh +methyl_red +h +nad
     n_n_dimethyl_1_4_phenylenediamine
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +phenanthrene_4_carboxylate +h +o2
-    cis_3_4_phenanthrenedihydrodiol_4_carboxylate
+    <-> ec_1_1_1_328 [1.1.1.328] +nadh +duroquinone +h
+    durohydroquinone
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +o2 +2_4_dichlorotoluene
-    4_6_dichloro_3_methyl_cis_1_2_dihydroxycyclohexa
+    <-> ec_1_11_1_1 [1.11.1.1] +nadh +2_5_dimethyl_1_4_benzoquinone +h
+    compound_0069549
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +4_amino_2_nitrotoluene +nadph +nadp
-    2_4_diaminotoluene
+    <-> ec_3_5_1_3 [3.5.1.3] +ethanol +2_oxoglutarate +h
+    gamma_ethyl_alpha_ketoglutarate
   }
 
   branch from h2o side right {
     h2o
-    <-> . +7_9_12_octaketide_intermediate_2
-    7_9_12_octaketide_intermediate_3
-  }
-
-  branch from chorismate side left {
-    chorismate
-    <-> . +h +pyruvate +l_glutamate +l_glutamine
-    4_aminobenzoate
-  }
-
-  branch from chorismate side right {
-    chorismate
-    <-> . +pyruvate
-    salicylate
+    <-> ec_3_2_1_20 [3.2.1.20] +d_glcp_1_4_d_glcp_1_4_d_glcp +beta_d_glucose
+    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp
   }
 
   branch from nh4 side left {
     nh4
-    <-> . +2_oxo_4_hydroxy_5_aminovalerate
-    2_5_dioxopentanoate
+    <-> ec_3_5_1_4 [3.5.1.4] +valerylhydroxamic_acid +h +hydroxylamine
+    pentanamide
   }
 
   branch from nh4 side right {
     nh4
-    <-> . +4_aminocatechol +h +h2o
-    benzene_1_2_4_triol
+    <-> ec_3_5_1_4 [3.5.1.4] +h +acetamide +hydroxylamine
+    acetohydroxamic_acid
   }
 
   branch from diphosphate side left {
     diphosphate
-    <-> ec_4_2_3_32 [4.2.3.32] +palustradiene
-    copalyl_diphosphate
+    <-> . +13_epi_manoyl_oxide
+    copal_8_ol_diphosphate
   }
 
   branch from diphosphate side right {
     diphosphate
-    <-> ec_4_2_3_43 [4.2.3.43] +fusicocca_2_10_14_diene
-    2e_6e_10e_geranylgeranyl_diphosphate
+    <-> . +sclarene
+    copalyl_diphosphate
   }
 
   branch from pyruvate side left {
     pyruvate
-    <-> . +formaldehyde +h +co2
-    hydroxyacetone
+    <-> ec_4_1_1_64 [4.1.1.64] +l_alanine +co2 +acetone +h
+    2_aminoisobutanoic_acid
   }
 
   branch from pyruvate side right {
     pyruvate
-    <-> . +h +fumarate +h2o
-    3_maleylpyruvate
+    <-> ec_4_4_1_1 [4.4.1.1] +cysteamine +nh4 +h2o
+    l_thialysinium
   }
 
   branch from l_glutamate side left {
     l_glutamate
-    <-> ec_2_6_1_22 [2.6.1.22] +s_2_methyl_3_oxopropanoate +s_3_amino_2_methylpropanoate
-    2_oxoglutarate
+    <-> . +2_oxoglutarate +3r_beta_leucine
+    4_methyl_3_oxopentanoate
   }
 
   branch from l_glutamate side right {
     l_glutamate
-    <-> ec_2_6_1_118 [2.6.1.118] +c_terminal_l_glutamyl_l_2_aminoadipate_semialdeh +2_oxoglutarate
-    c_terminal_l_glutamyl_l_lysine_1_group
+    <-> ec_2_3_2_2 [2.3.2.2] +h +4_nitroaniline +h2o
+    gamma_glutamyl_p_nitroanilide
+  }
+
+  branch from 2_aminophenol side left {
+    2_aminophenol
+    <-> ec_1_13_11_74 [1.13.11.74] +o2
+    2z_4e_2_amino_6_oxohexa_2_4_dienoate
+  }
+
+  branch from co2 side right {
+    co2
+    <-> . +protoanemonin +chloride
+    r_2_chloro_5_oxo_2_5_dihydro_2_furyl_acetate
+  }
+
+  branch from co2 side left {
+    co2
+    <-> ec_5_5_1_1 [5.5.1.1] +fluoride +h +protoanemonin
+    3_fluoro_cis_cis_muconate
+  }
+
+  branch from 3_hydroxyanthranilate side right {
+    3_hydroxyanthranilate
+    <-> . +nadh +h +nad
+    5s_6s_6_amino_5_hydroxycyclohexa_1_3_diene_1_ca
+  }
+
+  branch from 3_hydroxyanthranilate side left {
+    3_hydroxyanthranilate
+    <-> . +o2
+    cis_cis_2_amino_3_3_oxoprop_1_enyl_but_2_enedioa
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_5_1_3 [3.5.1.3] +2_methylbutanedioic_acid +h2o +methanol
+    succinate
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_5_1_18 [2.5.1.18] +s_n_benzylthiocarbamoyl_glutathione +glutathione
+    benzyl_isothiocyanate
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_1_1_8 [1.1.1.8] +4_hydroxy_3_oxobutylphosphonate +nad
+    3_4_dihydroxybutylphosphonate
   }
 }

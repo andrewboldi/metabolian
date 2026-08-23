@@ -109,6 +109,88 @@
       "xrefs": {
         "chebi": "CHEBI:16526"
       }
+    },
+    {
+      "id": "3_oxopropane_1_sulfonate",
+      "name": "3-oxopropane-1-sulfonate",
+      "short": "3-oxopropane-1-sulf…",
+      "formula": "C3H5O4S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:176528"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "acetone",
+      "name": "acetone",
+      "formula": "C3H6O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM398"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM728294"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
     }
   ],
   "enzymes": [
@@ -117,6 +199,20 @@
       "name": "(2S)-3-sulfopropanediol sulfolyase",
       "ec": [
         "4.4.1.41"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_177",
+      "name": "(2S)-3-sulfopropanediol dehydratase",
+      "ec": [
+        "4.2.1.177"
+      ]
+    },
+    {
+      "id": "ec_6_4_1_6",
+      "name": "acetone carboxylase",
+      "ec": [
+        "6.4.1.6"
       ]
     }
   ],
@@ -248,6 +344,373 @@
           {
             "db": "Rhea",
             "id": "RHEA:54524"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(2S)-3-sulfopropanediol dehydratase",
+      "equation": "(2S)-3-sulfopropanediol = 3-oxopropane-1-sulfonate + H2O",
+      "ec": "4.2.1.177",
+      "substrates": [
+        {
+          "metabolite": "2s_3_sulfopropanediol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_oxopropane_1_sulfonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_177"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:68600"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:68600"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "acetone carboxylase",
+      "ec": "6.4.1.6",
+      "substrates": [
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetoacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_4_1_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR191275"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR191275"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_2s_3_sulfopropanediol_5-cis-lycopene-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2s_3_sulfopropanediol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cis-lycopene-to-h2o"
+      },
+      "note": "Shares (2S)-3-sulfopropanediol with 5-cis-lycopene to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:176527"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2s_3_sulfopropanediol_isethionate-to-3-sulfonatopyruvate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2s_3_sulfopropanediol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isethionate-to-3-sulfonatopyruvate"
+      },
+      "note": "Shares (2S)-3-sulfopropanediol with isethionate to 3-sulfonatopyruvate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:176527"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hydroxyacetone_2-aminopropan-1-ol-to-s-lactaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxyacetone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-aminopropan-1-ol-to-s-lactaldehyde"
+      },
+      "note": "Shares hydroxyacetone with 2-aminopropan-1-ol to (S)-lactaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:27957"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hydroxyacetone_d-ribitol-5-phosphate-to-h2o-19925",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxyacetone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-ribitol-5-phosphate-to-h2o-19925"
+      },
+      "note": "Shares hydroxyacetone with D-ribitol 5-phosphate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:27957"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hydroxyacetone_dihydrophloroglucinol-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxyacetone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dihydrophloroglucinol-to-nadph"
+      },
+      "note": "Shares hydroxyacetone with dihydrophloroglucinol to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:27957"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hydroxyacetone_maltose-6-phosphate-to-hapalindole-h",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxyacetone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "maltose-6-phosphate-to-hapalindole-h"
+      },
+      "note": "Shares hydroxyacetone with α-maltose 6'-phosphate to hapalindole H.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:27957"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_methylglyoxal_6-acetyl-2-amino-3-7-8-9-to-l-glutamate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "methylglyoxal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-acetyl-2-amino-3-7-8-9-to-l-glutamate"
+      },
+      "note": "Shares Methylglyoxal with 6-acetyl-2-amino-3,7,8,9-… to L-glutamate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17158"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_methylglyoxal_6-o-methyl-dgmp-1-to-di-sulfido-diiron",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "methylglyoxal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-o-methyl-dgmp-1-to-di-sulfido-diiron"
+      },
+      "note": "Shares Methylglyoxal with 6-O-methyl dGMP(1−) to di-μ-sulfido-diiron.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17158"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_methylglyoxal_acetylacetone-to-dehydro-coenzyme-f420-0",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "methylglyoxal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetylacetone-to-dehydro-coenzyme-f420-0"
+      },
+      "note": "Shares Methylglyoxal with acetylacetone to dehydro coenzyme F420-0.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17158"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_methylglyoxal_deacetylipecoside-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "methylglyoxal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "deacetylipecoside-to-hydrogen-donor"
+      },
+      "note": "Shares Methylglyoxal with deacetylipecoside to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17158"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_methylglyoxal_dihydrophloroglucinol-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "methylglyoxal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dihydrophloroglucinol-to-nadph"
+      },
+      "note": "Shares Methylglyoxal with dihydrophloroglucinol to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17158"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_methylglyoxal_glutathione-metabolism",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "methylglyoxal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "glutathione-metabolism"
+      },
+      "note": "Shares Methylglyoxal with Glutathione synthesis and redox cycling.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17158"
           }
         ]
       }

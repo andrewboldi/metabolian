@@ -142,39 +142,31 @@
       }
     },
     {
-      "id": "hco3",
-      "name": "Bicarbonate (HCO3-)",
-      "formula": "CHO3",
-      "charge": -1,
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17544"
+        "metanetx": "WATER"
       }
     },
     {
-      "id": "carbamate",
-      "name": "carbamate",
-      "formula": "CH2NO2",
-      "charge": -1,
+      "id": "3_phenylpropionaldoxim",
+      "name": "3-Phenylpropionaldoxim",
+      "short": "3-Phenylpropionaldo…",
+      "formula": "C9H11NO",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:13941"
+        "chebi": "CHEBI:179672"
       }
     },
     {
-      "id": "1_carboxybiuret",
-      "name": "1-carboxybiuret",
-      "formula": "C3H4N3O4",
-      "charge": -1,
+      "id": "3_phenylpropanamide",
+      "name": "3-Phenylpropanamide",
+      "formula": "C9H11NO",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:142864"
-      }
-    },
-    {
-      "id": "1_3_dicarboxyurea",
-      "name": "1,3-dicarboxyurea",
-      "formula": "C3H2N2O5",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:142865"
+        "metanetx": "MNXM819769"
       }
     }
   ],
@@ -201,10 +193,10 @@
       ]
     },
     {
-      "id": "ec_3_5_1_131",
-      "name": "1-carboxybiuret hydrolase",
+      "id": "ec_4_2_1_65",
+      "name": "3-cyanoalanine hydratase",
       "ec": [
-        "3.5.1.131"
+        "4.2.1.65"
       ]
     }
   ],
@@ -397,55 +389,45 @@
     },
     {
       "id": "r5",
-      "name": "hydrogencarbonate + NH4(+) = carbamate + H2O + H(+)",
-      "equation": "hydrogencarbonate + NH4(+) = carbamate + H2O + H(+)",
+      "name": "Reaction MNXR133011",
       "substrates": [
         {
-          "metabolite": "hco3",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "carbamate",
+          "metabolite": "3_phenylpropionitrile",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
           "stoichiometry": 1
-        },
+        }
+      ],
+      "products": [
         {
-          "metabolite": "hplus",
+          "metabolite": "3_phenylpropionaldoxim",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:57716"
+        "metanetx": "MNXR133011"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:57716"
+            "db": "MetaNetX",
+            "id": "MNXR133011"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "1-carboxybiuret hydrolase",
-      "equation": "1-carboxybiuret + H2O = urea-1,3-dicarboxylate + NH4(+)",
-      "ec": "3.5.1.131",
+      "name": "3-cyanoalanine hydratase",
+      "ec": "4.2.1.65",
       "substrates": [
         {
-          "metabolite": "1_carboxybiuret",
+          "metabolite": "3_phenylpropionitrile",
           "stoichiometry": 1
         },
         {
@@ -455,30 +437,138 @@
       ],
       "products": [
         {
-          "metabolite": "1_3_dicarboxyurea",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
+          "metabolite": "3_phenylpropanamide",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_5_1_131"
+          "enzyme": "ec_4_2_1_65"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:58900"
+        "metanetx": "MNXR172845"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:58900"
+            "db": "MetaNetX",
+            "id": "MNXR172845"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3_phenylpropionitrile_sulfo-aldehydes-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_phenylpropionitrile"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sulfo-aldehydes-to-h2o"
+      },
+      "note": "Shares 3-phenylpropionitrile with Sulfo-Aldehydes to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:85426"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_phenylpropionate_3-phenylpropionate-to-adenosine-3-5-bismonoph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_phenylpropionate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-phenylpropionate-to-adenosine-3-5-bismonoph"
+      },
+      "note": "Shares 3-phenylpropionate with 3-phenylpropionate to adenosine 3',5'-bismonoph….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:51057"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_phenylpropionate_3-phenylpropionate-to-pentan-2-one",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_phenylpropionate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-phenylpropionate-to-pentan-2-one"
+      },
+      "note": "Shares 3-phenylpropionate with 3-phenylpropionate to pentan-2-one.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:51057"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_phenylpropionate_3-phenylpropionate-to-trans-d-glucosyl-2-hydr",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_phenylpropionate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-phenylpropionate-to-trans-d-glucosyl-2-hydr"
+      },
+      "note": "Shares 3-phenylpropionate with 3-phenylpropionate to trans-β-D-glucosyl-2-hydr….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:51057"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_2_3_dihydroxyphenyl_propanoate_3-4-dihydrocoumarin-to-2-benzylsuccinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_2_3_dihydroxyphenyl_propanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-4-dihydrocoumarin-to-2-benzylsuccinate"
+      },
+      "note": "Shares 3-(2,3-dihydroxyphenyl)propanoate with 3,4-dihydrocoumarin to 2-benzylsuccinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:46951"
           }
         ]
       }

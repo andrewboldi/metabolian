@@ -1,0 +1,518 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "thiouracil-to-o2-null",
+  "name": "Thiouracil to O2",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from Thiouracil to O2, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR198321"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "thiouracil",
+      "name": "Thiouracil",
+      "formula": "C4H4N2OS",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1363651"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "hydrogen_sulfide",
+      "name": "hydrogen sulfide",
+      "formula": "HS",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1366460"
+      }
+    },
+    {
+      "id": "uracil",
+      "name": "Uracil",
+      "formula": "C4H4N2O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1368457"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1107623"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H21N4O9P",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364147"
+      }
+    },
+    {
+      "id": "ureidoperacrylic_acid",
+      "name": "ureidoperacrylic acid",
+      "short": "ureidoperacrylic…",
+      "formula": "C4H6N2O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59889"
+      }
+    },
+    {
+      "id": "4_oxahomoadamantan_5_one",
+      "name": "4-oxahomoadamantan-5-one",
+      "short": "4-oxahomoadamantan-…",
+      "formula": "C10H14O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:20462"
+      }
+    },
+    {
+      "id": "adamantanone",
+      "name": "adamantanone",
+      "formula": "C10H14O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM10588"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_99_46",
+      "name": "pyrimidine monooxygenase",
+      "ec": [
+        "1.14.99.46"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR198321",
+      "substrates": [
+        {
+          "metabolite": "thiouracil",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hydrogen_sulfide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "uracil",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR198321"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198321"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "pyrimidine monooxygenase",
+      "ec": "1.14.99.46",
+      "substrates": [
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "uracil",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ureidoperacrylic_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_99_46"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR192277"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR192277"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR196538",
+      "substrates": [
+        {
+          "metabolite": "4_oxahomoadamantan_5_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "adamantanone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR196538"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196538"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_thiouracil_thiouracil-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "thiouracil"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "thiouracil-to-o2"
+      },
+      "note": "Shares Thiouracil with Thiouracil to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1363651"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_oxahomoadamantan_5_one_3-epi-6-deoxocathasterone-to-nadp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_oxahomoadamantan_5_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-epi-6-deoxocathasterone-to-nadp"
+      },
+      "note": "Shares 4-oxahomoadamantan-5-one with 3-epi-6-deoxocathasterone to NADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:20462"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_oxahomoadamantan_5_one_3-epi-6-deoxocathasterone-to-nadp-27321",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_oxahomoadamantan_5_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-epi-6-deoxocathasterone-to-nadp-27321"
+      },
+      "note": "Shares 4-oxahomoadamantan-5-one with 3-epi-6-deoxocathasterone to NADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:20462"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_oxahomoadamantan_5_one_4-oxahomoadamantan-5-one-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_oxahomoadamantan_5_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-oxahomoadamantan-5-one-to-h2o"
+      },
+      "note": "Shares 4-oxahomoadamantan-5-one with 4-oxahomoadamantan-5-one to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:20462"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_oxahomoadamantan_5_one_4-oxahomoadamantan-5-one-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_oxahomoadamantan_5_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-oxahomoadamantan-5-one-to-h2o-null"
+      },
+      "note": "Shares 4-oxahomoadamantan-5-one with 4-oxahomoadamantan-5-one to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:20462"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_oxahomoadamantan_5_one_thiouracil-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_oxahomoadamantan_5_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "thiouracil-to-o2"
+      },
+      "note": "Shares 4-oxahomoadamantan-5-one with Thiouracil to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:20462"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_adamantanone_3-epi-6-deoxocathasterone-to-nadp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "adamantanone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-epi-6-deoxocathasterone-to-nadp"
+      },
+      "note": "Shares adamantanone with 3-epi-6-deoxocathasterone to NADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM10588"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_adamantanone_3-epi-6-deoxocathasterone-to-nadp-27321",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "adamantanone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-epi-6-deoxocathasterone-to-nadp-27321"
+      },
+      "note": "Shares adamantanone with 3-epi-6-deoxocathasterone to NADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM10588"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_adamantanone_4-oxahomoadamantan-5-one-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "adamantanone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-oxahomoadamantan-5-one-to-h2o"
+      },
+      "note": "Shares adamantanone with 4-oxahomoadamantan-5-one to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM10588"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_adamantanone_4-oxahomoadamantan-5-one-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "adamantanone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-oxahomoadamantan-5-one-to-h2o-null"
+      },
+      "note": "Shares adamantanone with 4-oxahomoadamantan-5-one to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM10588"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_adamantanone_thiouracil-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "adamantanone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "thiouracil-to-o2"
+      },
+      "note": "Shares adamantanone with Thiouracil to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM10588"
+          }
+        ]
+      }
+    }
+  ]
+}

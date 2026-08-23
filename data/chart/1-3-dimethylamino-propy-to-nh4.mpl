@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-3-dimethylamino-propy-to-nh4 "1-[3-(dimethylamino)propy… to NH4" {
-  spacing 212
+  spacing 152
 
   spine at 0,0 {
     1_3_dimethylamino_propyl_1_4_fluorophenyl_1_3_di
@@ -14,65 +14,5 @@ pathway 1-3-dimethylamino-propy-to-nh4 "1-[3-(dimethylamino)propy… to NH4" {
     methylamine
     <-> ec_3_5_1_3 [3.5.1.3] +2_oxoglutaramate -nh4
     n_methyl_2_oxoglutaramate
-  }
-
-  branch from h side left {
-    h
-    <-> . +adenosine_3_5_bisphosphate +sulfochenodeoxycholate +chenodeoxycholate
-    3_phosphoadenylyl_sulfate
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +z_z_z_7_10_13_hexadecatrienoic_acid +phosphate +z_z_z_7_10_13_hexadecatrienoic_acid +h2o
-    atp
-  }
-
-  branch from formate side left {
-    formate
-    <-> ec_2_8_3_18 [2.8.3.18] +acetyl_coa +formyl_coa
-    acetate
-  }
-
-  branch from formate side right {
-    formate
-    <-> ec_1_13_11_54 [1.13.11.54] +h +2_oxopentanoate +o2
-    1_2_dihydroxyhex_1_en_3_one
-  }
-
-  branch from demethylcitalopram side left {
-    demethylcitalopram
-    <-> . +h +formate +o2
-    didemethylcitalopram
-  }
-
-  branch from methylamine side right {
-    methylamine
-    <-> ec_3_5_1_137 [3.5.1.137] +2z_2_hydroxyimino_n_n_dimethyl_2_methylsulfanyl +co2 +h +h2o
-    oxamyl
-  }
-
-  branch from h2o2 side left {
-    h2o2
-    <-> . +isonicotinoylradical +diazenium +h2o +h
-    isoniazide
-  }
-
-  branch from h2o2 side right {
-    h2o2
-    <-> . +2_hydroxy_2_1h_indol_3_yl_acetonitrile +o2
-    indole_3_carbonyl_nitrile
-  }
-
-  branch from nh4 side left {
-    nh4
-    <-> ec_3_5_1_131 [3.5.1.131] +3_oxo_3_ureidopropanoate +h2o
-    1_carboxymalonamate
-  }
-
-  branch from nh4 side right {
-    nh4
-    <-> ec_3_5_1_131 [3.5.1.131] +1_carboxynitrourea +h2o
-    1_nitrobiuret
   }
 }

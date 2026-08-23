@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-hydroxy-l-kynurenine-to-h2o "5-hydroxy-L-kynurenine to H2O" {
-  spacing 220
+  spacing 298
 
   spine at 0,0 {
     5_hydroxy_l_kynurenine
@@ -18,49 +18,127 @@ pathway 5-hydroxy-l-kynurenine-to-h2o "5-hydroxy-L-kynurenine to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> ec_4_2_1_83 [4.2.1.83] +2s_2_hydroxy_4_oxobutane_1_2_4_tricarboxylate
-    1e_4_oxobut_1_ene_1_2_4_tricarboxylate
+    <-> ec_3_2_1_22 [3.2.1.22] +sucrose +alpha_d_galactose
+    raffinose
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_4_2_1_80 [4.2.1.80] +trans_2_oxohex_4_enoate
-    s_4_hydroxy_2_oxohexanoate
+    <-> ec_1_5_1_24 [1.5.1.24] +n5_l_1_carboxyethyl_l_ornithine +nadp +h +nadph +l_ornithine
+    pyruvate
   }
 
   branch from 5_hydroxytryptophan side left {
-    5_hydroxytryptophan
-    <-> . +5_6_7_8_tetrahydrobiopterin +o2 +l_tryptophan +h2o
-    tetrahydrobiopterin_4a_carbinolamine
-  }
-
-  branch from 5_hydroxytryptophan side right {
     5_hydroxytryptophan
     <-> ec_4_1_1_28 [4.1.1.28] +serotonin +h
     co2
   }
 
-  branch from o2 side left {
-    o2
-    <-> ec_1_14_12_12 [1.14.12.12] +ethylbenzene
-    s_1_phenylethanol
-  }
-
   branch from o2 side right {
     o2
-    <-> . +superoxide +ferricytochrome_c
-    ferrocytochrome_c
+    <-> . +6_2_amino_2_carboxylatoethyl_1_2_3_4_tetrahydroq
+    6_2_amino_2_carboxylatoethyl_7_hydroxy_8_oxo_1_2
   }
 
-  branch from atp side left {
-    atp
-    <-> ec_6_3_2_29 [6.3.2.29] +l_aspartate +l_asp_4_l_arg_n +adp +phosphate
-    l_asp_4_l_arg_n_l_asp
+  branch from o2 side left {
+    o2
+    <-> . +6_2_amino_2_carboxylatoethyl_1_2_3_4_tetrahydroq
+    3a_2_amino_2_carboxyethyl_4_5_dioxo_4_5_6_7_8_9
   }
 
   branch from atp side right {
     atp
-    <-> ec_6_3_2_30 [6.3.2.30] +h +adp +l_asp_4_l_arg_n_1 +phosphate +l_asp_4_l_arg_n_l_asp
-    l_arginine
+    <-> . +diphosphate +lysergic_acid_adenylate +h
+    6_methyl_9_10_didehydroergoline_8_carboxylic_aci
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_2_7_1_130 [2.7.1.130] +lipid_a_disaccharide_vibrio_cholerae_serogroup_o +h +adp
+    lipid_iva_vibrio_cholerae_serogroup_o1_el_tor
+  }
+
+  branch from h side right {
+    h
+    <-> ec_1_3_1_27 [1.3.1.27] +2_hexadecenal +nadph +nadp
+    hexadecanal
+  }
+
+  branch from h side left {
+    h
+    <-> ec_4_2_3_9 [4.2.3.9] +diphosphate +aristolochene
+    farnesyl_diphosphate
+  }
+
+  branch from formate side right {
+    formate
+    <-> ec_3_7_1_9 [3.7.1.9] +2_keto_4_pentenoate +h +h2o
+    2_hydroxymuconic_semialdehyde
+  }
+
+  branch from formate side left {
+    formate
+    <-> ec_1_2_2_1 [1.2.2.1] +menaquinol_8 +co2 +mk_8 +h
+    pmf
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +indoxyl +nadp +h +o2 +nadph
+    indole
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +indolin_3_one +nadp +h +indole +o2
+    nadph
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +holomycin +h2o2
+    dithioholomycin
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +7_methyl_2_hydroxy_6_oxoocta_2_4_dienoate
+    3_isopropylcatechol
+  }
+
+  branch from adp side right {
+    adp
+    <-> ec_2_7_1_166 [2.7.1.166] +alpha_kdo_2_6_lipid_iva_vibrio_cholerae_serogrou +atp +h
+    4_o_phospho_alpha_kdo_2_6_lipid_iva_vibrio_chole
+  }
+
+  branch from adp side left {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    iron_iii_vibriobactin
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    iron_iii_2_3_dihydroxybenzoylserine_2_complex
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    bis_l_histidinate_nickel_ii
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_7_5_2_3 [7.5.2.3] +h +adp +phosphate +h2o
+    a_cyclic_beta_1_2_glucan
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_7_5_2_14 [7.5.2.14] +h +adp +phosphate +h2o
+    helicobacter_pylori_o_antigen
   }
 }

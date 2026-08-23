@@ -130,6 +130,34 @@
       "xrefs": {
         "chebi": "CHEBI:74229"
       }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "7_methylmellein",
+      "name": "7-methylmellein",
+      "formula": "C11H12O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:192524"
+      }
+    },
+    {
+      "id": "2_2_4_dihydroxy_6_oxidobenzoyl_5_hydroxy_3_methy",
+      "name": "2-(2,4-dihydroxy-6-oxidobenzoyl)-5-hydroxy-3-methylbenzenolate",
+      "short": "2-(2,4-dihydroxy-6-…",
+      "formula": "C14H10O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:193062"
+      }
     }
   ],
   "enzymes": [],
@@ -298,6 +326,206 @@
           {
             "db": "Rhea",
             "id": "RHEA:39491"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "4 malonyl-CoA + acetyl-CoA + 5 NADPH + 9 H(+) = 7-methylmellein + 3 CO2 + 5 NADP(+) + 5...",
+      "equation": "4 malonyl-CoA + acetyl-CoA + 5 NADPH + 9 H(+) = 7-methylmellein + 3 CO2 + 5 NADP(+) + 5 CoA + 4 H2O",
+      "substrates": [
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 5
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 9
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_methylmellein",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 5
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 5
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 4
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:72767"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:72767"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "6 malonyl-CoA + acetyl-CoA + 4 H(+) = 2-(2,4-dihydroxy-6-oxidobenzoyl)-5-hydroxy-3-meth...",
+      "equation": "6 malonyl-CoA + acetyl-CoA + 4 H(+) = 2-(2,4-dihydroxy-6-oxidobenzoyl)-5-hydroxy-3-methylbenzenolate + 6 CO2 + 7 CoA + H2O",
+      "substrates": [
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 6
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 4
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_2_4_dihydroxy_6_oxidobenzoyl_5_hydroxy_3_methy",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 6
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 7
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:73915"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:73915"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_9z_12z_15z_18z_21z_tetracosapentaenoyl_coa_1-11z-14z-eicosadienoyl-to-2e-8z-11z-14z-17z-20z",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9z_12z_15z_18z_21z_tetracosapentaenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-11z-14z-eicosadienoyl-to-2e-8z-11z-14z-17z-20z"
+      },
+      "note": "Shares (9Z,12Z,15Z,18Z,21Z)-tetracosapentaenoyl-CoA with 1-(11Z,14Z-eicosadienoyl)… to (2E,8Z,11Z,14Z,17Z,20Z,23….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74083"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_11z_14z_17z_20z_23z_hexacosapentaenoyl_coa_11z-14z-17z-20z-23z-hex-to-19z-22z-25z-28z-31z",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11z_14z_17z_20z_23z_hexacosapentaenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "11z-14z-17z-20z-23z-hex-to-19z-22z-25z-28z-31z"
+      },
+      "note": "Shares (11Z,14Z,17Z,20Z,23Z)-hexacosapentaenoyl-CoA with (11Z,14Z,17Z,20Z,23Z)-hex… to (19Z,22Z,25Z,28Z,31Z)-tet….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74229"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_methylmellein_7-methylmellein-to-l-phenylalanine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_methylmellein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-methylmellein-to-l-phenylalanine"
+      },
+      "note": "Shares 7-methylmellein with 7-methylmellein to L-phenylalanine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:192524"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_2_4_dihydroxy_6_oxidobenzoyl_5_hydroxy_3_methy_1r-5as-6r-1-4-5-5a-6-9-to-s-adenosyl-l-homocyst",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_2_4_dihydroxy_6_oxidobenzoyl_5_hydroxy_3_methy"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1r-5as-6r-1-4-5-5a-6-9-to-s-adenosyl-l-homocyst"
+      },
+      "note": "Shares 2-(2,4-dihydroxy-6-oxidobenzoyl)-5-hydroxy-3-methylbenzenolate with (1R,5aS,6R)-1,4,5,5a,6,9-… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:193062"
           }
         ]
       }

@@ -1,0 +1,387 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "hydroxyheme-i-to-hydrogen-donor-null",
+  "name": "Hydroxyheme I to hydrogen donor",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from Hydroxyheme I to hydrogen donor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR192770"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "hydroxyheme_i",
+      "name": "Hydroxyheme I",
+      "formula": "C49H58FeN4O7",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1130099"
+      }
+    },
+    {
+      "id": "ferroheme_a",
+      "name": "ferroheme a",
+      "formula": "C49H56FeN4O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:36163"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "ferroheme_o",
+      "name": "ferroheme o",
+      "formula": "C49H56FeN4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:60530"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "ferroheme_a",
+      "name": "ferroheme a",
+      "formula": "C49H54FeN4O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:61715"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_17_99_9",
+      "name": "heme a synthase",
+      "ec": [
+        "1.17.99.9"
+      ],
+      "xrefs": {
+        "uniprot": "Q7KZN9"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "heme a synthase",
+      "ec": "1.17.99.9",
+      "substrates": [
+        {
+          "metabolite": "hydroxyheme_i",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ferroheme_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_17_99_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR192770"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR192770"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR145184",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "ferroheme_a",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ferroheme_o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR145184"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR145184"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "heme a synthase",
+      "equation": "Fe(II)-heme o + 2 A + H2O = Fe(II)-heme a + 2 AH2",
+      "ec": "1.17.99.9",
+      "substrates": [
+        {
+          "metabolite": "ferroheme_o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ferroheme_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_17_99_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:63388"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63388"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_hydroxyheme_i_hydroxyheme-i-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxyheme_i"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hydroxyheme-i-to-hydrogen-donor"
+      },
+      "note": "Shares Hydroxyheme I with Hydroxyheme I to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1130099"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ferroheme_a_2-oxohepta-3-5-dienedioa-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ferroheme_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-oxohepta-3-5-dienedioa-to-o2"
+      },
+      "note": "Shares ferroheme a with 2-oxohepta--3,5-dienedioa… to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:36163"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ferroheme_a_9-hydroxygeraniol-to-2e-geraniol-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ferroheme_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "9-hydroxygeraniol-to-2e-geraniol-null"
+      },
+      "note": "Shares ferroheme a with 9-Hydroxygeraniol to (2E)-geraniol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:36163"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ferroheme_a_hydroxyheme-i-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ferroheme_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hydroxyheme-i-to-hydrogen-donor"
+      },
+      "note": "Shares ferroheme a with Hydroxyheme I to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:36163"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ferroheme_a_ferroheme-b-to-ferroheme-a",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ferroheme_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ferroheme-b-to-ferroheme-a"
+      },
+      "note": "Shares ferroheme a with ferroheme b to ferroheme a.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61715"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ferroheme_a_ferroheme-b-to-ferroheme-a-28070",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ferroheme_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ferroheme-b-to-ferroheme-a-28070"
+      },
+      "note": "Shares ferroheme a with ferroheme b to ferroheme a.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61715"
+          }
+        ]
+      }
+    }
+  ]
+}

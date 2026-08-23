@@ -142,72 +142,6 @@
       "xrefs": {
         "chebi": "CHEBI:57540"
       }
-    },
-    {
-      "id": "16_methylsulfonyloxyhexadecanoic_acid",
-      "name": "16-Methylsulfonyloxyhexadecanoic acid",
-      "short": "16-Methylsulfonylox…",
-      "formula": "C17H34O5S",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1133087"
-      }
-    },
-    {
-      "id": "4_nitrophenol",
-      "name": "4-nitrophenol",
-      "formula": "C6H4NO3",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM526"
-      }
-    },
-    {
-      "id": "p_nitrophenyl_16_methyl_sulfone_ester_hexadecano",
-      "name": "p-Nitrophenyl (16-methyl sulfone ester) hexadecanoate",
-      "short": "p-Nitrophenyl…",
-      "formula": "C23H37NO7S",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1133088"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "WATER"
-      }
-    },
-    {
-      "id": "2_2_bi_benzothiazole_6_ol",
-      "name": "2,2'-Bi[benzothiazole]-6-ol",
-      "short": "2,2'-Bi[benzothiazo…",
-      "formula": "C14H8N2OS2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1133090"
-      }
-    },
-    {
-      "id": "phosphate",
-      "name": "phosphate",
-      "formula": "HO4P",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM9"
-      }
-    },
-    {
-      "id": "attophos",
-      "name": "Attophos",
-      "formula": "C14H9N2O4PS2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1133091"
-      }
     }
   ],
   "enzymes": [
@@ -223,35 +157,30 @@
       "name": "ribosyldihydronicotinamide dehydrogenase (quinone)",
       "ec": [
         "1.10.5.1"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P16083"
+      }
     },
     {
       "id": "ec_2_7_1_22",
       "name": "ribosylnicotinamide kinase",
       "ec": [
         "2.7.1.22"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q9NWW6"
+      }
     },
     {
       "id": "ec_2_7_7_1",
       "name": "nicotinamide-nucleotide adenylyltransferase",
       "ec": [
         "2.7.7.1"
-      ]
-    },
-    {
-      "id": "ec_3_1_1_74",
-      "name": "cutinase",
-      "ec": [
-        "3.1.1.74"
-      ]
-    },
-    {
-      "id": "ec_3_1_3_76",
-      "name": "lipid-phosphate phosphatase",
-      "ec": [
-        "3.1.3.76"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q9HAN9"
+      }
     }
   ],
   "reactions": [
@@ -449,99 +378,225 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "cutinase",
-      "ec": "3.1.1.74",
-      "substrates": [
-        {
-          "metabolite": "16_methylsulfonyloxyhexadecanoic_acid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "4_nitrophenol",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "p_nitrophenyl_16_methyl_sulfone_ester_hexadecano",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_1_1_74"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR195230"
+      "id": "xt_1_4_benzoquinone_2-dehydro-d-glucose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_4_benzoquinone"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2-dehydro-d-glucose-to-h2o"
+      },
+      "note": "Shares 1,4-benzoquinone with 2-Dehydro-D-glucose to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR195230"
+            "id": "MNXM740100"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "lipid-phosphate phosphatase",
-      "ec": "3.1.3.76",
-      "substrates": [
-        {
-          "metabolite": "2_2_bi_benzothiazole_6_ol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "attophos",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_1_3_76"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "metanetx": "MNXR195246"
+      "id": "xt_1_4_benzoquinone_4-aminophenol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_4_benzoquinone"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "4-aminophenol-to-h2o"
+      },
+      "note": "Shares 1,4-benzoquinone with 4-aminophenol to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR195246"
+            "id": "MNXM740100"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_4_benzoquinone_beta-d-fructose-to-2-amino-3-2-5-dihydroxy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_4_benzoquinone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-d-fructose-to-2-amino-3-2-5-dihydroxy"
+      },
+      "note": "Shares 1,4-benzoquinone with beta-D-fructose… to 2-amino-3-[(2,5-dihydroxy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM740100"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_4_benzoquinone_d-cellobiono-1-5-lactone-to-d-glucosyl-1-4-d-gl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_4_benzoquinone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-cellobiono-1-5-lactone-to-d-glucosyl-1-4-d-gl"
+      },
+      "note": "Shares 1,4-benzoquinone with D-cellobiono-1,5-lactone to β-D-glucosyl-(1→4)-β-D-gl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM740100"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_4_benzoquinone_fmnh2-to-o2-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_4_benzoquinone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fmnh2-to-o2-null"
+      },
+      "note": "Shares 1,4-benzoquinone with FMNH2 to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM740100"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_4_benzoquinone_trithionate-to-menadiol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_4_benzoquinone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trithionate-to-menadiol"
+      },
+      "note": "Shares 1,4-benzoquinone with trithionate to menadiol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM740100"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_ribosylnicotinamide_2-amino-2-deoxy-d-gluconi-to-2-dehydro-3-deoxy-d",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_ribosylnicotinamide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-amino-2-deoxy-d-gluconi-to-2-dehydro-3-deoxy-d"
+      },
+      "note": "Shares N-ribosylnicotinamide with 2-amino-2-deoxy-D-gluconi… to 2-dehydro-3-deoxy-D-arabi….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15927"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_ribosylnicotinamide_monosaccharide-1-phosphate-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_ribosylnicotinamide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "monosaccharide-1-phosphate-to-phosphate"
+      },
+      "note": "Shares N-ribosylnicotinamide with monosaccharide 1-phosphate to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15927"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nmn_5-end-nad-phospho-ribonu-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nmn"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-end-nad-phospho-ribonu-to-diphosphate"
+      },
+      "note": "Shares NMN− with 5'-end NAD-phospho-ribonu… to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:14649"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nmn_monosaccharide-1-phosphate-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nmn"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "monosaccharide-1-phosphate-to-phosphate"
+      },
+      "note": "Shares NMN− with monosaccharide 1-phosphate to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:14649"
           }
         ]
       }

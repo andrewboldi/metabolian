@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway tetradecanedioate-to-3-oxooctanedioyl-coa "tetradecanedioate to 3-oxooctanedioyl-CoA" {
-  spacing 212
+  spacing 248
 
   spine at 0,0 {
     tetradecanedioate
@@ -50,19 +50,19 @@ pathway tetradecanedioate-to-3-oxooctanedioyl-coa "tetradecanedioate to 3-oxooct
 
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_153 [2.5.1.153] +tuberculosinyl_diphosphate +h2o
-    tuberculosinol
+    <-> . +6_1s_5s_4_oxo_5_2z_pent_2_en_1_yl_cyclopent_2_en +atp +coa +amp
+    9s_13s_1a_1b_dinor_12_oxo_10_15_phytodienoyl_co
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_153 [2.5.1.153] +tuberculosinyl_diphosphate +h2o
-    13r_edaxadiene
+    <-> ec_4_2_3_195 [4.2.3.195] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    rhizathalene_a
   }
 
   branch from dodecanedioyl_coa side right {
     dodecanedioyl_coa
-    <-> . +atp +coa +amp +ppi
+    <-> . +h2o +coa +hplus
     dodecanedioate
   }
 
@@ -74,31 +74,67 @@ pathway tetradecanedioate-to-3-oxooctanedioyl-coa "tetradecanedioate to 3-oxooct
 
   branch from decanedioyl_coa side right {
     decanedioyl_coa
-    <-> . +atp +coa +amp +ppi
-    sebacate
+    <-> . +nadh +octanedioyl_coa +acetyl_coa +h +h2o2 +coa +nad +h2o
+    o2
   }
 
   branch from decanedioyl_coa side left {
     decanedioyl_coa
-    <-> . +s_3_hydroxydecanedioyl_coa +h2o2 +h2o
-    o2
+    <-> . +s_carnitine +h +coa
+    o_sebacoylcarnitine
   }
 
   branch from octanedioyl_coa side right {
     octanedioyl_coa
-    <-> . +h2o +coa +hplus
-    suberate
+    <-> . +o2 +h2o +s_3_hydroxyoctanedioyl_coa
+    h2o2
   }
 
   branch from octanedioyl_coa side left {
     octanedioyl_coa
-    <-> . +o2 +h2o +s_3_hydroxyoctanedioyl_coa
-    h2o2
+    <-> . +h +glycine +coa
+    suberylglycine
   }
 
   branch from s_3_hydroxyoctanedioyl_coa side right {
     s_3_hydroxyoctanedioyl_coa
     <-> . +h +h2o +coa
     3_hydroxysuberic_acid
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +all_trans_pentaprenyl_diphosphate +ipp
+    tetra_trans_hexa_cis_undecaprenyl_diphosphate
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_2_5_1_142 [2.5.1.142] +ipp +dmapp
+    nerylneryl_diphosphate
+  }
+
+  branch from dodecanedioyl_coa side left {
+    dodecanedioyl_coa
+    <-> . +r_carnitine +h +coa
+    4s_4_11_carboxyundecanoyl_oxy_4_trimethylammoni
+  }
+
+  branch from dodecanedioyl_coa side right {
+    dodecanedioyl_coa
+    <-> . +s_carnitine +h +coa
+    o_dodecanedioylcarnitine
+  }
+
+  branch from decanedioyl_coa side left {
+    decanedioyl_coa
+    <-> . +h +o_sebacoylcarnitine +coa
+    r_carnitine
+  }
+
+  branch from octanedioyl_coa side right {
+    octanedioyl_coa
+    <-> . +s_carnitine +coa
+    o_suberoylcarnitine
   }
 }

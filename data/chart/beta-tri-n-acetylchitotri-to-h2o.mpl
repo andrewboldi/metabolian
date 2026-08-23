@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway beta-tri-n-acetylchitotri-to-h2o "beta-tri-N-acetylchitotri… to H2O" {
-  spacing 224
+  spacing 284
 
   spine at 0,0 {
     beta_tri_n_acetylchitotriose
@@ -24,31 +24,91 @@ pathway beta-tri-n-acetylchitotri-to-h2o "beta-tri-N-acetylchitotri… to H2O" {
 
   branch from n_n_diacetylchitobiose side right {
     n_n_diacetylchitobiose
-    <-> ec_3_2_1_14 [3.2.1.14] +h2o
-    aldehydo_n_acetyl_d_glucosamine
+    <-> . +h2o
+    chitin
   }
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
-    d_ribopyranose
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
+    l_alanyl_l_aspartate
   }
 
   branch from atp side right {
     atp
-    <-> ec_6_3_2_7 [6.3.2.7] +l_lysine +h +udp_n_acetyl_alpha_d_muramoyl_l_alanyl_d_glutama +adp +phosphate
-    udp_n_acetylmuramoyl_l_alanyl_alpha_d_glutamyl_l
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
+    gly_met
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_leucine +l_leucyl_l_alanine
-    leu_leu_ala
+    <-> . +pheophytin_b +phytol
+    pheide_b
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_1_1_1 [3.1.1.1] +3_2_2_dichlorovinyl_2_2_dimethylcyclopropanecarb +3_phenoxyphenyl_methanol
-    cis_permethrin
+    <-> . +17_hydroxy_3_oxopregn_4_en_20_carboxy_coa
+    3_oxo_23_24_bisnorchol_4_17_20_dien_22_oyl_coa
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +5_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem +h
+    muscaflavin
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +muscaflavin +h
+    5_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem
+  }
+
+  branch from h side left {
+    h
+    <-> . +all_trans_undecaprenyl_diphosphate +xanthan_dimer
+    beta_d_man_1_4_beta_d_glca_1_2_alpha_d_man_1_3_b
+  }
+
+  branch from h side right {
+    h
+    <-> . +3_5_dehydroshikimate
+    3_4_5_trihydroxybenzoate
+  }
+
+  branch from adp side left {
+    adp
+    <-> ec_3_6_3_23 [3.6.3.23] +h +phosphate +atp +h2o
+    ala_gln
+  }
+
+  branch from adp side right {
+    adp
+    <-> ec_3_6_3_23 [3.6.3.23] +h +phosphate +atp +h2o
+    ala_gly
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +7_8_dihydroneopterin_2_phosphate +h2o
+    7_8_dihydroneopterin
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> . +7_8_dihydro_d_neopterin_2_phosphate +h2o
+    dihydroneopterin
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
+    gly_gln
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_6_2_1_72 [6.2.1.72] +diphosphate +l_seryl_adenylate +h
+    l_serine
   }
 }

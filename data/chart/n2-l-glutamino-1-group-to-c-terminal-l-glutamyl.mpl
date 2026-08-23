@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n2-l-glutamino-1-group-to-c-terminal-l-glutamyl "N2-L-glutamino(1−) group to C-terminal-γ-L-glutamyl-L…" {
-  spacing 314
+  spacing 320
 
   spine at 0,0 {
     n2_l_glutamino_1_group
@@ -24,25 +24,31 @@ pathway n2-l-glutamino-1-group-to-c-terminal-l-glutamyl "N2-L-glutamino(1−) gr
 
   branch from nh3 side right {
     nh3
-    <-> ec_2_7_2_2 [2.7.2.2] +hco3 +atp +adp +h2o +hplus
-    carbamoyl_p
+    <-> ec_3_5_1_57 [3.5.1.57] +l_tryptophanamide +h2o
+    l_tryptophan
   }
 
   branch from nh3 side left {
     nh3
-    <-> ec_2_7_1_62 [2.7.1.62] +phosphoramidate +d_hexose +hplus
-    d_hexose_1_phosphate
+    <-> ec_2_7_3_8 [2.7.3.8] +atp +adp +hplus
+    phosphoramidate
   }
 
-  branch from c_terminal_l_glutamyl_l_2_aminoadipate_3_group side right {
-    c_terminal_l_glutamyl_l_2_aminoadipate_3_group
-    <-> ec_2_7_2_17 [2.7.2.17] +atp +c_terminal_l_glutamyl_l_2_aminoadipate_6_phospha
-    adp
-  }
-
-  branch from c_terminal_l_glutamyl_l_2_aminoadipate_6_phospha side left {
+  branch from c_terminal_l_glutamyl_l_2_aminoadipate_6_phospha side right {
     c_terminal_l_glutamyl_l_2_aminoadipate_6_phospha
     <-> ec_1_2_1_103 [1.2.1.103] +pi +nadp +nadph +hplus
     c_terminal_l_glutamyl_l_2_aminoadipate_semialdeh
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_1_14_12_1 [1.14.12.1] +anthranilate +nadh +o2 +hplus +co2 +nad
+    catechol
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_4_2_1_104 [4.2.1.104] +hco3 +hplus +co2
+    cyanate
   }
 }

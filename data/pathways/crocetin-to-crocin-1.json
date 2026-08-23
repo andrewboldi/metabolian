@@ -92,6 +92,54 @@
       "xrefs": {
         "chebi": "CHEBI:79068"
       }
+    },
+    {
+      "id": "d_gentiobiosyl_crocetin",
+      "name": "β-D-gentiobiosyl crocetin",
+      "short": "β-D-gentiobiosyl…",
+      "formula": "C32H43O14",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:62770"
+      }
+    },
+    {
+      "id": "coniferol",
+      "name": "coniferol",
+      "formula": "C10H12O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17745"
+      }
+    },
+    {
+      "id": "coniferin",
+      "name": "coniferin",
+      "formula": "C16H22O8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16220"
+      }
+    },
+    {
+      "id": "pelargonidin_3_o_rutinoside_betaine",
+      "name": "pelargonidin 3-O-rutinoside betaine",
+      "short": "pelargonidin…",
+      "formula": "C27H30O14",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:60048"
+      }
+    },
+    {
+      "id": "pelargonidin_3_o_rutinoside_5_o_d_glucoside_beta",
+      "name": "pelargonidin 3-O-rutinoside 5-O-β-D-glucoside betaine",
+      "short": "pelargonidin…",
+      "formula": "C33H40O19",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:60001"
+      }
     }
   ],
   "enzymes": [
@@ -107,6 +155,20 @@
       "name": "beta-D-glucosyl crocetin beta-1,6-glucosyltransferase",
       "ec": [
         "2.4.1.330"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_111",
+      "name": "coniferyl-alcohol glucosyltransferase",
+      "ec": [
+        "2.4.1.111"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_116",
+      "name": "cyanidin 3-O-rutinoside 5-O-glucosyltransferase",
+      "ec": [
+        "2.4.1.116"
       ]
     }
   ],
@@ -295,6 +357,309 @@
           {
             "db": "Rhea",
             "id": "RHEA:38859"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "beta-D-glucosyl crocetin beta-1,6-glucosyltransferase",
+      "equation": "beta-D-glucosyl crocetin + UDP-alpha-D-glucose = beta-D-gentiobiosyl crocetin + UDP + H(+)",
+      "ec": "2.4.1.330",
+      "substrates": [
+        {
+          "metabolite": "d_glucosyl_crocetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_gentiobiosyl_crocetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_330"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:42388"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42388"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "coniferyl-alcohol glucosyltransferase",
+      "equation": "(E)-coniferol + UDP-alpha-D-glucose = 4-O-(beta-D-glucosyl)-(E)-coniferol + UDP + H(+)",
+      "ec": "2.4.1.111",
+      "substrates": [
+        {
+          "metabolite": "coniferol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "coniferin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_111"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:23944"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23944"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "cyanidin 3-O-rutinoside 5-O-glucosyltransferase",
+      "equation": "pelargonidin 3-O-rutinoside + UDP-alpha-D-glucose = pelargonidin 3-O-rutinoside 5-O-beta-D-glucoside + UDP + H(+)",
+      "ec": "2.4.1.116",
+      "substrates": [
+        {
+          "metabolite": "pelargonidin_3_o_rutinoside_betaine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pelargonidin_3_o_rutinoside_5_o_d_glucoside_beta",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_116"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:24861"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24861"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_d_gentiobiosyl_d_glucosyl_crocetin_d-gentiobiosyl-crocetin-to-beta-d-glucosyl-croc",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_gentiobiosyl_d_glucosyl_crocetin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-gentiobiosyl-crocetin-to-beta-d-glucosyl-croc"
+      },
+      "note": "Shares β-D-gentiobiosyl β-D-glucosyl crocetin with β-D-gentiobiosyl crocetin to beta-D-glucosyl crocetin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62771"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_gentiobiosyl_crocetin_d-gentiobiosyl-crocetin-to-beta-d-glucosyl-croc",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_gentiobiosyl_crocetin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-gentiobiosyl-crocetin-to-beta-d-glucosyl-croc"
+      },
+      "note": "Shares β-D-gentiobiosyl crocetin with β-D-gentiobiosyl crocetin to beta-D-glucosyl crocetin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62770"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_coniferol_5-cholest-7-en-3-ol-to-coniferyl-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coniferol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cholest-7-en-3-ol-to-coniferyl-acetate"
+      },
+      "note": "Shares coniferol with 5α-cholest-7-en-3β-ol to coniferyl acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17745"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_coniferol_coniferin-to-e-ferulate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coniferol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "coniferin-to-e-ferulate"
+      },
+      "note": "Shares coniferol with coniferin to (E)-ferulate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17745"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_coniferol_coniferol-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coniferol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "coniferol-to-diphosphate"
+      },
+      "note": "Shares coniferol with coniferol to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17745"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_coniferin_7-ammoniomethyl-7-deazagu-to-d-mannosyl-4-o-queu",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coniferin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-ammoniomethyl-7-deazagu-to-d-mannosyl-4-o-queu"
+      },
+      "note": "Shares coniferin with 7-ammoniomethyl-7-deazagu… to α-D-mannosyl-4''-O-queuos….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16220"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_coniferin_coniferin-to-e-ferulate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coniferin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "coniferin-to-e-ferulate"
+      },
+      "note": "Shares coniferin with coniferin to (E)-ferulate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16220"
           }
         ]
       }

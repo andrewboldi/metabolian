@@ -119,63 +119,6 @@
       "xrefs": {
         "chebi": "CHEBI:58358"
       }
-    },
-    {
-      "id": "3_3_4_substituted_phenyl_1_1_dimethylurea",
-      "name": "3-(3,4-substituted-phenyl)-1,1-dimethylurea",
-      "short": "3-(3,4-substituted-…",
-      "formula": "C9H10N2OR2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:157693"
-      }
-    },
-    {
-      "id": "di_sulfido_diiron",
-      "name": "di-μ-sulfido-diiron",
-      "formula": "Fe2S2",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:33738"
-      }
-    },
-    {
-      "id": "a_1_methyl_3_phenylurea",
-      "name": "a 1-methyl-3-phenylurea",
-      "short": "a 1-methyl-3-phenyl…",
-      "formula": "C8H8N2OR2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:157694"
-      }
-    },
-    {
-      "id": "di_sulfido_diiron",
-      "name": "di-μ-sulfido-diiron",
-      "formula": "Fe2S2",
-      "charge": 2,
-      "xrefs": {
-        "chebi": "CHEBI:33737"
-      }
-    },
-    {
-      "id": "metoxuron",
-      "name": "metoxuron",
-      "formula": "C10H13ClN2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:6907"
-      }
-    },
-    {
-      "id": "3_3_chloro_4_methoxylphenyl_1_methylurea",
-      "name": "3-(3-chloro-4-methoxylphenyl)-1-methylurea",
-      "short": "3-(3-chloro-4-metho…",
-      "formula": "C9H11ClN2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:157702"
-      }
     }
   ],
   "enzymes": [
@@ -205,13 +148,6 @@
       "name": "protocatechuate 4,5-dioxygenase",
       "ec": [
         "1.13.11.8"
-      ]
-    },
-    {
-      "id": "ec_1_14_15_38",
-      "name": "N,N-dimethyl phenylurea N-demethylase",
-      "ec": [
-        "1.14.15.38"
       ]
     }
   ],
@@ -415,119 +351,115 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "N,N-dimethyl phenylurea N-demethylase",
-      "equation": "a 1,1-dimethyl-3-phenylurea + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = a 1-methyl-3-phenylurea + formaldehyde + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
-      "ec": "1.14.15.38",
-      "substrates": [
-        {
-          "metabolite": "3_3_4_substituted_phenyl_1_1_dimethylurea",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "a_1_methyl_3_phenylurea",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "formaldehyde",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_15_38"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:65768"
+      "id": "xt_vanillate_3-hydroxy-3-3-4-dihydrox-to-s-adenosyl-l-homocys",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "vanillate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxy-3-3-4-dihydrox-to-s-adenosyl-l-homocys"
+      },
+      "note": "Shares vanillate with 3-hydroxy-3-(3,4-dihydrox… to S-adenosyl-L-homocysteine.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:65768"
+            "db": "ChEBI",
+            "id": "CHEBI:16632"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "metoxuron + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = 3-(3-chloro-4-methoxylpheny...",
-      "equation": "metoxuron + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = 3-(3-chloro-4-methoxylphenyl)-1-methylurea + formaldehyde + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
-      "substrates": [
-        {
-          "metabolite": "metoxuron",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_3_chloro_4_methoxylphenyl_1_methylurea",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "formaldehyde",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:65780"
+      "id": "xt_vanillate_dihydroferuloyl-coa-to-guaiacol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "vanillate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "dihydroferuloyl-coa-to-guaiacol"
+      },
+      "note": "Shares vanillate with dihydroferuloyl-CoA to guaiacol.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:65780"
+            "db": "ChEBI",
+            "id": "CHEBI:16632"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_vanillate_gdp-4-amino-4-6-dideoxy-to-2-deoxy-5-hydroxymeth",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "vanillate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gdp-4-amino-4-6-dideoxy-to-2-deoxy-5-hydroxymeth"
+      },
+      "note": "Shares vanillate with GDP-4-amino-4,6-dideoxy-α… to 2'-deoxy-5-hydroxymethyl-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16632"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_vanillate_vanillyl-alcohol-to-trimethylamine-n-oxide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "vanillate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "vanillyl-alcohol-to-trimethylamine-n-oxide"
+      },
+      "note": "Shares vanillate with vanillyl alcohol to trimethylamine N-oxide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16632"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_vanillate_veratrate-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "vanillate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "veratrate-to-coa"
+      },
+      "note": "Shares vanillate with veratrate to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16632"
           }
         ]
       }

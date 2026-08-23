@@ -191,104 +191,9 @@
       "xrefs": {
         "chebi": "CHEBI:145880"
       }
-    },
-    {
-      "id": "amyrin",
-      "name": "β-amyrin",
-      "formula": "C30H50O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:10352"
-      }
-    },
-    {
-      "id": "16_hydroxy_amyrin",
-      "name": "16α-hydroxy-β-amyrin",
-      "formula": "C30H50O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:140655"
-      }
-    },
-    {
-      "id": "flavanones",
-      "name": "flavanones",
-      "formula": "C15H2O2R10",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:28863"
-      }
-    },
-    {
-      "id": "2_hydroxyflavanones",
-      "name": "2-hydroxyflavanones",
-      "formula": "C15H2O3R10",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:141992"
-      }
-    },
-    {
-      "id": "demethyldeoxyspectinabilin",
-      "name": "demethyldeoxyspectinabilin",
-      "short": "demethyldeoxyspecti…",
-      "formula": "C27H30NO5",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:142872"
-      }
-    },
-    {
-      "id": "deoxyspectinabilin",
-      "name": "deoxyspectinabilin",
-      "formula": "C28H33NO5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:142843"
-      }
-    },
-    {
-      "id": "s_reticulinium",
-      "name": "(S)-reticulinium",
-      "formula": "C19H24NO4",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:57873"
-      }
-    },
-    {
-      "id": "s_codamine",
-      "name": "(S)-codamine",
-      "formula": "C20H26NO4",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:143148"
-      }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_1_14_14_171",
-      "name": "beta-amyrin 16alpha-hydroxylase",
-      "ec": [
-        "1.14.14.171"
-      ]
-    },
-    {
-      "id": "ec_1_14_14_162",
-      "name": "flavanone 2-hydroxylase",
-      "ec": [
-        "1.14.14.162"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_353",
-      "name": "demethylluteothin O-methyltransferase",
-      "ec": [
-        "2.1.1.353"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -577,205 +482,49 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r8",
-      "name": "beta-amyrin 16alpha-hydroxylase",
-      "equation": "beta-amyrin + reduced [NADPH--hemoprotein reductase] + O2 = 16alpha-hydroxy-beta-amyrin + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "ec": "1.14.14.171",
-      "substrates": [
-        {
-          "metabolite": "amyrin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "16_hydroxy_amyrin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_171"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "rhea": "RHEA:56708"
+      "id": "xt_l_tyrosinal_n-acetyl-9-o-acetylneuram-to-l-tyrosine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_tyrosinal"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyl-9-o-acetylneuram-to-l-tyrosine"
+      },
+      "note": "Shares L-tyrosinal with N-acetyl-9-O-acetylneuram… to L-tyrosine.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:56708"
+            "db": "ChEBI",
+            "id": "CHEBI:141668"
           }
         ]
       }
     },
     {
-      "id": "r9",
-      "name": "flavanone 2-hydroxylase",
-      "equation": "a flavanone + reduced [NADPH--hemoprotein reductase] + O2 = a 2-hydroxyflavanone + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "ec": "1.14.14.162",
-      "substrates": [
-        {
-          "metabolite": "flavanones",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_hydroxyflavanones",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_162"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 9,
-      "xrefs": {
-        "rhea": "RHEA:57584"
+      "id": "xt_s_s_2_5_di_p_hydroxybenzyl_piperazine_s-s-2-5-di-p-hydroxybe-to-fr901483",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_s_2_5_di_p_hydroxybenzyl_piperazine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "s-s-2-5-di-p-hydroxybe-to-fr901483"
+      },
+      "note": "Shares (S,S)-2,5-di-(p-hydroxybenzyl)piperazine with (S,S)-2,5-di-(p-hydroxybe… to (−)-FR901483.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:57584"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r10",
-      "name": "demethylluteothin O-methyltransferase",
-      "equation": "demethyldeoxyspectinabilin + S-adenosyl-L-methionine = deoxyspectinabilin + S-adenosyl-L-homocysteine",
-      "ec": "2.1.1.353",
-      "substrates": [
-        {
-          "metabolite": "demethyldeoxyspectinabilin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "deoxyspectinabilin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_1_353"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 10,
-      "xrefs": {
-        "rhea": "RHEA:59068"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:59068"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r11",
-      "name": "(S)-reticuline + S-adenosyl-L-methionine = (S)-codamine + S-adenosyl-L-homocysteine + H(+)",
-      "equation": "(S)-reticuline + S-adenosyl-L-methionine = (S)-codamine + S-adenosyl-L-homocysteine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "s_reticulinium",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "s_codamine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 11,
-      "xrefs": {
-        "rhea": "RHEA:59532"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:59532"
+            "db": "ChEBI",
+            "id": "CHEBI:145882"
           }
         ]
       }

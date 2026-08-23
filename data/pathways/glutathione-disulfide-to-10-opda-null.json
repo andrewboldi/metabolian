@@ -1,0 +1,439 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "glutathione-disulfide-to-10-opda-null",
+  "name": "glutathione disulfide to 10-OPDA",
+  "category": "redox-detox",
+  "summary": "A 3-step route from glutathione disulfide to 10-OPDA, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR200066"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "glutathione_disulfide",
+      "name": "glutathione disulfide",
+      "short": "glutathione…",
+      "formula": "C20H30N6O12S2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1371191"
+      }
+    },
+    {
+      "id": "9_hotre",
+      "name": "9-HOTrE",
+      "formula": "C18H30O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:72625"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "9s_hydroperoxy_10e_12z_15z_octadecatrienoate",
+      "name": "(9S)-hydroperoxy-(10E,12Z,15Z)-octadecatrienoate",
+      "short": "hydroperoxy-(10E,12…",
+      "formula": "C18H29O4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM2302"
+      }
+    },
+    {
+      "id": "glutathione",
+      "name": "glutathione",
+      "formula": "C10H16N3O6S",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM490899"
+      }
+    },
+    {
+      "id": "9_10_eot",
+      "name": "9,10-EOT",
+      "formula": "C18H28O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:80445"
+      }
+    },
+    {
+      "id": "10_opda",
+      "name": "10-OPDA",
+      "formula": "C18H28O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:80446"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_11_1_12",
+      "name": "phospholipid-hydroperoxide glutathione peroxidase",
+      "ec": [
+        "1.11.1.12"
+      ],
+      "xrefs": {
+        "uniprot": "P07203"
+      }
+    },
+    {
+      "id": "ec_4_2_1_92",
+      "name": "hydroperoxide dehydratase",
+      "ec": [
+        "4.2.1.92"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "phospholipid-hydroperoxide glutathione peroxidase",
+      "ec": "1.11.1.12",
+      "substrates": [
+        {
+          "metabolite": "glutathione_disulfide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "9_hotre",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "9s_hydroperoxy_10e_12z_15z_octadecatrienoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutathione",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_11_1_12"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR200066"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR200066"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "hydroperoxide dehydratase",
+      "ec": "4.2.1.92",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "9s_hydroperoxy_10e_12z_15z_octadecatrienoate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "9_10_eot",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_92"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR111448"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR111448"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR111449",
+      "substrates": [
+        {
+          "metabolite": "9_10_eot",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "10_opda",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR111449"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR111449"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_9_hotre_glutathione-disulfide-to-10-opda",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9_hotre"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "glutathione-disulfide-to-10-opda"
+      },
+      "note": "Shares 9-HOTrE with glutathione disulfide to 10-OPDA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:72625"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_9s_hydroperoxy_10e_12z_15z_octadecatrienoate_9-10-dihydroxybenzo-a-pyr-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9s_hydroperoxy_10e_12z_15z_octadecatrienoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "9-10-dihydroxybenzo-a-pyr-to-h2o"
+      },
+      "note": "Shares (9S)-hydroperoxy-(10E,12Z,15Z)-octadecatrienoate with 9,10-Dihydroxybenzo[a]pyr… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2302"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_9s_hydroperoxy_10e_12z_15z_octadecatrienoate_9-10-epoxy-10-12z-octadec-to-e-non-2-enoate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9s_hydroperoxy_10e_12z_15z_octadecatrienoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "9-10-epoxy-10-12z-octadec-to-e-non-2-enoate"
+      },
+      "note": "Shares (9S)-hydroperoxy-(10E,12Z,15Z)-octadecatrienoate with 9,10-epoxy-10,12Z-octadec… to (E)-non-2-enoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2302"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_9s_hydroperoxy_10e_12z_15z_octadecatrienoate_9-10-epoxy-10-12z-octadec-to-e-non-2-enoate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9s_hydroperoxy_10e_12z_15z_octadecatrienoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "9-10-epoxy-10-12z-octadec-to-e-non-2-enoate-null"
+      },
+      "note": "Shares (9S)-hydroperoxy-(10E,12Z,15Z)-octadecatrienoate with 9,10-epoxy-10,12Z-octadec… to (E)-non-2-enoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2302"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_9s_hydroperoxy_10e_12z_15z_octadecatrienoate_d-glycero-alpha-d-manno-h-to-nadp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9s_hydroperoxy_10e_12z_15z_octadecatrienoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glycero-alpha-d-manno-h-to-nadp"
+      },
+      "note": "Shares (9S)-hydroperoxy-(10E,12Z,15Z)-octadecatrienoate with D-glycero-alpha-D-manno-h… to NADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2302"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_9s_hydroperoxy_10e_12z_15z_octadecatrienoate_glutathione-disulfide-to-10-opda",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9s_hydroperoxy_10e_12z_15z_octadecatrienoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "glutathione-disulfide-to-10-opda"
+      },
+      "note": "Shares (9S)-hydroperoxy-(10E,12Z,15Z)-octadecatrienoate with glutathione disulfide to 10-OPDA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2302"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_9s_hydroperoxy_10e_12z_15z_octadecatrienoate_petiveriin-to-diiodine-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9s_hydroperoxy_10e_12z_15z_octadecatrienoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "petiveriin-to-diiodine-null"
+      },
+      "note": "Shares (9S)-hydroperoxy-(10E,12Z,15Z)-octadecatrienoate with petiveriin to diiodine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2302"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_9_10_eot_glutathione-disulfide-to-10-opda",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9_10_eot"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "glutathione-disulfide-to-10-opda"
+      },
+      "note": "Shares 9,10-EOT with glutathione disulfide to 10-OPDA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:80445"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_10_opda_glutathione-disulfide-to-10-opda",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "10_opda"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "glutathione-disulfide-to-10-opda"
+      },
+      "note": "Shares 10-OPDA with glutathione disulfide to 10-OPDA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:80446"
+          }
+        ]
+      }
+    }
+  ]
+}

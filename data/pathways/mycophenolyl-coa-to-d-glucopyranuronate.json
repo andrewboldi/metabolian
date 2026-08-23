@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "mycophenolyl-coa-to-d-glucopyranuronate",
   "name": "mycophenolyl-CoA to D-glucopyranuronate",
-  "category": "amino-acid-metabolism",
+  "category": "lipid-metabolism",
   "summary": "A 3-step route from mycophenolyl-CoA(4−) to D-glucopyranuronate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -111,33 +111,32 @@
       }
     },
     {
-      "id": "6_o_desmethylmycophenolate",
-      "name": "6-O-desmethylmycophenolate",
-      "short": "6-O-desmethylmycoph…",
-      "formula": "C16H17O6",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:231832"
-      }
-    },
-    {
-      "id": "sam",
-      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
-      "short": "S-Adenosyl-L-methio…",
-      "formula": "C15H23N6O5S",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:59789"
-      }
-    },
-    {
-      "id": "sah",
-      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
-      "short": "S-Adenosyl-L-homocy…",
-      "formula": "C14H20N6O5S",
+      "id": "17_estradiol",
+      "name": "17β-estradiol",
+      "formula": "C18H24O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57856"
+        "chebi": "CHEBI:16469"
+      }
+    },
+    {
+      "id": "17_estradiol_3_o_d_glucuronide",
+      "name": "17β-estradiol 3-O-(β-D-glucuronide)",
+      "short": "17β-estradiol…",
+      "formula": "C24H31O8",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:136641"
+      }
+    },
+    {
+      "id": "17_estradiol_17_glucosiduronate",
+      "name": "17β-estradiol 17-glucosiduronate",
+      "short": "17β-estradiol…",
+      "formula": "C24H31O8",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:82961"
       }
     }
   ],
@@ -147,7 +146,10 @@
       "name": "mycophenolic acid acyl-glucuronide esterase",
       "ec": [
         "3.1.1.93"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q9NUJ1"
+      }
     }
   ],
   "reactions": [
@@ -327,25 +329,25 @@
     },
     {
       "id": "r5",
-      "name": "6-O-desmethylmycophenolate + S-adenosyl-L-methionine = mycophenolate + S-adenosyl-L-hom...",
-      "equation": "6-O-desmethylmycophenolate + S-adenosyl-L-methionine = mycophenolate + S-adenosyl-L-homocysteine + H(+)",
+      "name": "17beta-estradiol + UDP-alpha-D-glucuronate = 17beta-estradiol 3-O-(beta-D-glucuronate) ...",
+      "equation": "17beta-estradiol + UDP-alpha-D-glucuronate = 17beta-estradiol 3-O-(beta-D-glucuronate) + UDP + H(+)",
       "substrates": [
         {
-          "metabolite": "6_o_desmethylmycophenolate",
+          "metabolite": "17_estradiol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "sam",
+          "metabolite": "udp_d_glucuronate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "mycophenolate",
+          "metabolite": "17_estradiol_3_o_d_glucuronide",
           "stoichiometry": 1
         },
         {
-          "metabolite": "sah",
+          "metabolite": "udp",
           "stoichiometry": 1
         },
         {
@@ -356,14 +358,213 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:81843"
+        "rhea": "RHEA:52460"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:81843"
+            "id": "RHEA:52460"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "17beta-estradiol + UDP-alpha-D-glucuronate = 17beta-estradiol 17-O-(beta-D-glucuronate)...",
+      "equation": "17beta-estradiol + UDP-alpha-D-glucuronate = 17beta-estradiol 17-O-(beta-D-glucuronate) + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "17_estradiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucuronate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "17_estradiol_17_glucosiduronate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:52464"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52464"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_mycophenolyl_coa_1-palmitoyl-2-propionyl-s-to-propionyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "mycophenolyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-palmitoyl-2-propionyl-s-to-propionyl-coa"
+      },
+      "note": "Shares mycophenolyl-CoA with 1-palmitoyl-2-propionyl-s… to propionyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:167447"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_mycophenolate_1-6-didemethyltoxoflavin-to-s-adenosyl-l-methion",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "mycophenolate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-6-didemethyltoxoflavin-to-s-adenosyl-l-methion"
+      },
+      "note": "Shares mycophenolate with 1,6-didemethyltoxoflavin to S-adenosyl-L-methionine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62932"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_17_estradiol_3_o_d_glucuronide_20-dihydro-11-deoxycorti-to-adenosine-3-5-bismon",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "17_estradiol_3_o_d_glucuronide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "20-dihydro-11-deoxycorti-to-adenosine-3-5-bismon"
+      },
+      "note": "Shares 17β-estradiol 3-O-(β-D-glucuronide) with 20β-dihydro-11-deoxycorti… to adenosine 3',5'-bismonoph….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:136641"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_17_estradiol_3_o_d_glucuronide_4-hydroxy-17beta-estradiol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "17_estradiol_3_o_d_glucuronide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxy-17beta-estradiol-to-h2o"
+      },
+      "note": "Shares 17β-estradiol 3-O-(β-D-glucuronide) with 4-hydroxy-17beta-estradiol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:136641"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_17_estradiol_3_o_d_glucuronide_co2-to-pyruvate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "17_estradiol_3_o_d_glucuronide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "co2-to-pyruvate"
+      },
+      "note": "Shares 17β-estradiol 3-O-(β-D-glucuronide) with CO2 to pyruvate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:136641"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_17_estradiol_3_o_d_glucuronide_diphosphate-to-chlorophyllide-b",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "17_estradiol_3_o_d_glucuronide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-chlorophyllide-b"
+      },
+      "note": "Shares 17β-estradiol 3-O-(β-D-glucuronide) with diphosphate to chlorophyllide b.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:136641"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_17_estradiol_17_glucosiduronate_3-iodo-l-thyronine-to-hydrogen-donor-83779",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "17_estradiol_17_glucosiduronate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-iodo-l-thyronine-to-hydrogen-donor-83779"
+      },
+      "note": "Shares 17β-estradiol 17-glucosiduronate with 3'-iodo-L-thyronine to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:82961"
           }
         ]
       }

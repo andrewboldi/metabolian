@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway ganglioside-gd3-to-n-acetylneuraminate "ganglioside GD3 to N-acetylneuraminate" {
-  spacing 164
+  spacing 170
 
   spine at 0,0 {
     ganglioside_gd3
@@ -26,9 +26,15 @@ pathway ganglioside-gd3-to-n-acetylneuraminate "ganglioside GD3 to N-acetylneura
     l_fucosyl_1_2_d_galactosyl_1_3_n_acetyl_d_galac
   }
 
-  branch from gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac_2_3_gal_1 side right {
-    gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac_2_3_gal_1
-    <-> . +udp_d_galactose +udp +hplus
-    d_galactosyl_1_3_d_galactosyl_1_3_n_acetyl_d_ga
+  branch from udp_d_galactose side right {
+    udp_d_galactose
+    <-> . +n4_6_o_sulfo_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2 +udp +hplus
+    n4_d_gal_1_4_6_o_sulfo_d_glcnac_1_2_d_man_1_3_d
+  }
+
+  branch from udp_d_galactose side left {
+    udp_d_galactose
+    <-> . +l_fuc_1_2_d_gal_1_3_d_galnac +udp +hplus
+    d_gal_1_3_l_fuc_1_2_d_gal_1_3_d_galnac
   }
 }

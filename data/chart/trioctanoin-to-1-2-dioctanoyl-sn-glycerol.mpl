@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway trioctanoin-to-1-2-dioctanoyl-sn-glycerol "trioctanoin to 1,2-dioctanoyl-sn-glycerol" {
-  spacing 200
+  spacing 212
 
   spine at 0,0 {
     trioctanoin
@@ -26,26 +26,26 @@ pathway trioctanoin-to-1-2-dioctanoyl-sn-glycerol "trioctanoin to 1,2-dioctanoyl
 
   branch from octanoate side right {
     octanoate
-    <-> . +octanoate_ester +h2o +hplus
-    aliphatic_alcohol
-  }
-
-  branch from octanoate side left {
-    octanoate
     <-> . +3_d_galactosyl_1_6_d_galactosyl_1_2_dioctoanoyl +h2o +hplus
     3_d_galactosyl_1_6_d_galactosyl_monooctanoyl_sn
   }
 
+  branch from octanoate side left {
+    octanoate
+    <-> . +1_2_dioctanoyl_3_d_galactosyl_sn_glycerol +h2o +hplus
+    3_d_galactosyl_monooctanoyl_sn_glycerol
+  }
+
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +cmp_n_acetyl_neuraminate +hplus
-    neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac
+    <-> . +n_acetylneuraminyl_2_3_d_galactosyl_1_4_n_acety +cmp_n_acetyl_neuraminate +hplus
+    n_acetylneuraminyl_2_8_n_acetylneuraminyl_2_3_d
   }
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> ec_2_4_3_1 [2.4.3.1] +d_galactoside +cmp_n_acetyl_neuraminate +hplus
-    n_acetyl_neuraminyl_2_6_d_galactoside
+    <-> . +d_galp_1_3_d_galpnac_1_3_d_galp_1_4_d_galp_1_4 +cmp_n_acetyl_neuraminate +hplus
+    neuac_2_3_d_gal_1_3_d_galnac_1_3_d_gal_1_4_d_ga
   }
 
   branch from 1_2_dioctanoyl_sn_glycero_3_phosphate side right {
@@ -54,15 +54,27 @@ pathway trioctanoin-to-1-2-dioctanoyl-sn-glycerol "trioctanoin to 1,2-dioctanoyl
     1_2_dioctanoyl_sn_glycerol_3_diphosphate
   }
 
-  branch from choline side left {
-    choline
-    <-> . +1_oleyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_oleyl_sn_glycero_3_phosphate
+  branch from octanoate side left {
+    octanoate
+    <-> ec_3_5_1_23 [3.5.1.23] +n_octanoyldihydrosphingosine +h2o
+    sphinganine
   }
 
-  branch from choline side right {
-    choline
-    <-> . +1_2_dihexadecanoyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_2_dihexadecanoyl_sn_glycerol_3_phosphate
+  branch from octanoate side right {
+    octanoate
+    <-> ec_6_2_1_3 [6.2.1.3] +octanoyl_coa +diphosphate +amp +coa
+    atp
+  }
+
+  branch from cytidine_5_monophosphate side left {
+    cytidine_5_monophosphate
+    <-> . +neuac_2_3_d_gal_1_3_d_galnac_1_3_d_gal_1_4_d_ga +cmp_n_acetyl_neuraminate +hplus
+    neuac_2_3_d_gal_1_3_neuac_2_6_d_galnac_1_3_d_ga
+  }
+
+  branch from cytidine_5_monophosphate side right {
+    cytidine_5_monophosphate
+    <-> . +d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_glc_1_1_cer +cmp_n_acetyl_neuraminate +hplus
+    d_galactosyl_1_3_n_acetyl_neuraminosyl_2_6_n_ac
   }
 }

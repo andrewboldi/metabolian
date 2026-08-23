@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway all-trans-tridecaprenyl-to-nad "all-trans-tridecaprenyl… to NAD" {
-  spacing 322
+  spacing 340
 
   spine at 0,0 {
     all_trans_tridecaprenyl_diphosphate
@@ -26,61 +26,151 @@ pathway all-trans-tridecaprenyl-to-nad "all-trans-tridecaprenyl… to NAD" {
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_118 [4.2.3.118] +e_2_methylgeranyl_diphosphate +h2o
-    2_methylisoborneol
+    <-> . +atp
+    cyclic_a_2_5_pa_3_5_pa_3_5_p
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_121 [4.2.3.121] +gpp
-    pinene
+    <-> ec_3_1_7_13 [3.1.7.13] +neryl_diphosphate +h2o
+    nerol
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_166 [2.1.1.166] +uridine_5_monophosphate_1 +sam +hplus
-    2_o_methyluridine_5_monophosphate_1
+    <-> . +n6_n6_dimethyl_l_lysine_1 +sam +hplus
+    n6_n6_n6_trimethyl_l_lysine
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_167 [2.1.1.167] +guanosine_5_monophosphate_1 +sam +hplus
-    2_o_methylguanosine_5_monophosphate_1
+    <-> . +2s_4r_4_hydroxy_4_methylglutamate +malonyl-coa +sam +atp +nadph +hplus +amp +co2 +ppi +nadp +coa +h2o
+    5s_5_2r_2_carboxylato_2_hydroxy_2_methylethyl_2
   }
 
   branch from h side right {
     h
-    <-> . +udp +gama_cehc_glucuronide +cehc
-    udp_alpha_d_glucuronate
+    <-> . +acetyl_coa +demethyl_desacetyl_rifamycin_sv +27_o_demethylrifamycin_sv
+    coa
   }
 
   branch from h side left {
     h
-    <-> . +15z_3_oxotetracosenoyl_coa +nadph +nadp
-    3_s_hydroxy_cis_15_tetracosaenoyl_coa
+    <-> ec_2_5_1_18 [2.5.1.18] +1r_hydroxy_2r_glutathionyl_1_2_dihydronaphthale +glutathione
+    1r_2s_naphthalene_1_2_oxide
   }
 
   branch from nadph side right {
     nadph
-    <-> . +2e_9z_octadecadienoyl_coa +h +nadp
-    9z_octadecenoyl_coa
+    <-> . +h +2_nitrobenzoate +nadp +h2o
+    2_hydroxylaminobenzoic_acid
   }
 
   branch from nadph side left {
     nadph
-    <-> . +6_trans_12_epi_leukotriene_b4 +nadp +h
-    5_oxo_6e_12_epi_leukotriene_b4
+    <-> ec_1_1_1_246 [1.1.1.246] +h +sophorol +nadp +h2o
+    maackiain
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_174 [1.1.1.174] +nadh +h +cyclohexan_1_2_dione
-    2_hydroxycyclohexan_1_one
+    <-> . +nadh +9h_fluoren_9_one +h +o2
+    1_10_dihydro_1_10_dihydroxyfluoren_9_one
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_14_99_2 [1.14.99.2] +nadh +kynurenate +h +o2
-    7_8_dihydro_7_8_dihydroxykynurenate
+    <-> . +nadh +h +o2 +1_7_dimethylxanthine +formaldehyde +h2o
+    1_methyl_7h_xanthine
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +icas_10 +atp +coa +amp
+    ic_asc_c9_coa
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +icas_1 +atp +coa +amp
+    ic_asc_c7_coa
+  }
+
+  branch from sam side right {
+    sam
+    <-> . +l_lysinium +sah +hplus
+    n6_methyl_l_lysinium
+  }
+
+  branch from sam side left {
+    sam
+    <-> . +4_amino_l_phenylalanine +sah +hplus
+    4_methylamino_l_phenylalanine
+  }
+
+  branch from sah side right {
+    sah
+    <-> . +4_methylamino_l_phenylalanine +sam +hplus
+    4_dimethylamino_l_phenylalanine
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_77 [2.1.1.77] +d_aspartate +sam
+    d_aspartate_methyl_ester
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +thiobenzamide_s_oxide +h2o +h +o2 +nadph
+    thiobenzamide
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +thiobenzamide_s_oxide +h +o2 +nadph +h2o
+    thiobenzamide_s_s_dioxide
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_5_1_18 [2.5.1.18] +1r_glutathionyl_2r_hydroxy_1_2_dihydronaphthale +glutathione
+    1s_2r_naphthalene_1_2_oxide
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_5_1_18 [2.5.1.18] +1s_hydroxy_2s_glutathionyl_1_2_dihydronaphthale +1s_2r_naphthalene_1_2_oxide
+    glutathione
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_14_13_179 [1.14.13.179] +formaldehyde +nadp +1_7_dimethylxanthine +h2o +h +o2
+    caffeine
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_14_13_178 [1.14.13.178] +1_methyl_7h_xanthine +h +o2 +xanthine +nadp +h2o
+    formaldehyde
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_14_13_178 [1.14.13.178] +1_methyl_7h_xanthine +h +o2 +formaldehyde +nad +h2o
+    xanthine
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> . +4_hydroxylamino_2_6_dinitrotoluene +h +nad +h2o
+    4_amino_2_6_dinitrotoluene
+  }
+
+  branch from nad side right {
+    nad
+    <-> . +nadh +h +2_hydroxylamino_4_6_dinitrotoluene +h2o
+    2_amino_4_6_dinitrotoluene
   }
 }

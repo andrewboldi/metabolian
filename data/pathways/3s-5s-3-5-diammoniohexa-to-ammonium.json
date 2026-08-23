@@ -121,23 +121,13 @@
       }
     },
     {
-      "id": "3_hydroxybutanoyl_coa",
-      "name": "3-hydroxybutanoyl-CoA",
-      "short": "3-hydroxybutanoyl-C…",
-      "formula": "C25H38N7O18P3S",
-      "charge": -4,
+      "id": "3s_3_6_diammoniohexanoate",
+      "name": "(3S)-3,6-diammoniohexanoate",
+      "short": "3,6-diammoniohexano…",
+      "formula": "C6H15N2O2",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:78611"
-      }
-    },
-    {
-      "id": "r_2_hydroxybutanoyl_coa",
-      "name": "(R)-2-hydroxybutanoyl-CoA",
-      "short": "2-hydroxybutanoyl-C…",
-      "formula": "C25H38N7O18P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:87474"
+        "chebi": "CHEBI:57434"
       }
     }
   ],
@@ -161,6 +151,13 @@
       "name": "3-aminobutyryl-CoA ammonia-lyase",
       "ec": [
         "4.3.1.14"
+      ]
+    },
+    {
+      "id": "ec_5_4_3_3",
+      "name": "lysine 5,6-aminomutase",
+      "ec": [
+        "5.4.3.3"
       ]
     }
   ],
@@ -310,70 +307,193 @@
     },
     {
       "id": "r4",
-      "name": "3-hydroxybutanoyl-CoA = (2E)-butenoyl-CoA + H2O",
-      "equation": "3-hydroxybutanoyl-CoA = (2E)-butenoyl-CoA + H2O",
+      "name": "lysine 5,6-aminomutase",
+      "equation": "(3S)-3,6-diaminohexanoate = (3S,5S)-3,5-diaminohexanoate",
+      "ec": "5.4.3.3",
       "substrates": [
         {
-          "metabolite": "3_hydroxybutanoyl_coa",
+          "metabolite": "3s_3_6_diammoniohexanoate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "crotonoyl_coa",
+          "metabolite": "3s_5s_3_5_diammoniohexanoate",
           "stoichiometry": 1
-        },
+        }
+      ],
+      "catalysts": [
         {
-          "metabolite": "h2o",
-          "stoichiometry": 1
+          "enzyme": "ec_5_4_3_3"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:45584"
+        "rhea": "RHEA:21736"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:45584"
+            "id": "RHEA:21736"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_l_3_aminobutanoyl_coa_leukotriene-c4-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_3_aminobutanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "leukotriene-c4-to-hydrogen-donor"
+      },
+      "note": "Shares L-3-aminobutanoyl-CoA with leukotriene C4 to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57366"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "(2R)-hydroxybutanoyl-CoA = (2E)-butenoyl-CoA + H2O",
-      "equation": "(2R)-hydroxybutanoyl-CoA = (2E)-butenoyl-CoA + H2O",
-      "substrates": [
-        {
-          "metabolite": "r_2_hydroxybutanoyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "crotonoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:47176"
+      "id": "xt_crotonoyl_coa_2-3-dihydroxy-3-methylbut-to-butyryl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "crotonoyl_coa"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3-dihydroxy-3-methylbut-to-butyryl-coa"
+      },
+      "note": "Shares Crotonoyl-CoA with 2,3-dihydroxy-3-methylbut… to butyryl-CoA.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:47176"
+            "db": "ChEBI",
+            "id": "CHEBI:57332"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_crotonoyl_coa_2-o-glutaroyl-1-o-palmito-to-crotonoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "crotonoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-o-glutaroyl-1-o-palmito-to-crotonoyl-coa"
+      },
+      "note": "Shares Crotonoyl-CoA with 2-O-glutaroyl-1-O-palmito… to crotonoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57332"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_crotonoyl_coa_2s-2-1r-1-carboxyla-to-butyryl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "crotonoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2s-2-1r-1-carboxyla-to-butyryl-coa"
+      },
+      "note": "Shares Crotonoyl-CoA with (2S)-2-{[(1R)-1-carboxyla… to butyryl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57332"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_crotonoyl_coa_l-saccharopinate-to-r-crotonylcarnitine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "crotonoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-saccharopinate-to-r-crotonylcarnitine"
+      },
+      "note": "Shares Crotonoyl-CoA with L-saccharopinate to (R)-crotonylcarnitine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57332"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_crotonoyl_coa_vinylacetyl-coa-to-norsolorinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "crotonoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "vinylacetyl-coa-to-norsolorinate"
+      },
+      "note": "Shares Crotonoyl-CoA with vinylacetyl-CoA to norsolorinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57332"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3s_3_6_diammoniohexanoate_psicosyllysine-to-d-glucopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3s_3_6_diammoniohexanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "psicosyllysine-to-d-glucopyranose"
+      },
+      "note": "Shares (3S)-3,6-diammoniohexanoate with psicosyllysine to D-glucopyranose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57434"
           }
         ]
       }

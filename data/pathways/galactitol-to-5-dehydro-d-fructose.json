@@ -134,6 +134,15 @@
       "xrefs": {
         "metanetx": "MNXM8"
       }
+    },
+    {
+      "id": "keto_d_tagatose",
+      "name": "keto-D-tagatose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:47693"
+      }
     }
   ],
   "enzymes": [
@@ -156,6 +165,13 @@
       "name": "L-arabinitol 4-dehydrogenase",
       "ec": [
         "1.1.1.12"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_16",
+      "name": "galactitol 2-dehydrogenase",
+      "ec": [
+        "1.1.1.16"
       ]
     }
   ],
@@ -333,6 +349,321 @@
           {
             "db": "MetaNetX",
             "id": "MNXR133605"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "galactitol 2-dehydrogenase",
+      "equation": "galactitol + NAD(+) = keto-D-tagatose + NADH + H(+)",
+      "ec": "1.1.1.16",
+      "substrates": [
+        {
+          "metabolite": "galactitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "keto_d_tagatose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_16"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:20685"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20685"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_galactitol_d-galactosyl-1-3-n-ac-to-cytidine-5-monophospha",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "galactitol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-galactosyl-1-3-n-ac-to-cytidine-5-monophospha"
+      },
+      "note": "Shares galactitol with β-D-galactosyl-(1→3)-N-ac… to cytidine 5'-monophosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16813"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_galactitol_galactosylceramide-to-cytidine-5-monophosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "galactitol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "galactosylceramide-to-cytidine-5-monophosphate"
+      },
+      "note": "Shares galactitol with galactosylceramide to cytidine 5'-monophosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16813"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_keto_l_sorbose_d-glucitol-6-phosphate-to-5-dehydro-d-fructose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "keto_l_sorbose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glucitol-6-phosphate-to-5-dehydro-d-fructose"
+      },
+      "note": "Shares keto-L-sorbose with D-glucitol 6-phosphate to 5-dehydro-D-fructose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:13172"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_keto_l_sorbose_d-psicose-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "keto_l_sorbose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-psicose-to-hydrogen-donor"
+      },
+      "note": "Shares keto-L-sorbose with D-psicose to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:13172"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_keto_l_sorbose_l-sorbopyranose-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "keto_l_sorbose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-sorbopyranose-to-succinate"
+      },
+      "note": "Shares keto-L-sorbose with α-L-sorbopyranose to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:13172"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_dehydro_d_fructose_d-glucitol-6-phosphate-to-5-dehydro-d-fructose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_dehydro_d_fructose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glucitol-6-phosphate-to-5-dehydro-d-fructose"
+      },
+      "note": "Shares 5-dehydro-D-fructose with D-glucitol 6-phosphate to 5-dehydro-D-fructose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17011"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_dehydro_d_fructose_d-psicose-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_dehydro_d_fructose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-psicose-to-hydrogen-donor"
+      },
+      "note": "Shares 5-dehydro-D-fructose with D-psicose to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17011"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_dehydro_d_fructose_ndp-d-glucose-to-nucleoside-5-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_dehydro_d_fructose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ndp-d-glucose-to-nucleoside-5-diphosphate"
+      },
+      "note": "Shares 5-dehydro-D-fructose with NDP-α-D-glucose to nucleoside 5'-diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17011"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_keto_d_tagatose_2s-3r-3-hydroxybutane-1-to-menaquinol-7",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "keto_d_tagatose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2s-3r-3-hydroxybutane-1-to-menaquinol-7"
+      },
+      "note": "Shares keto-D-tagatose with (2S,3R)-3-hydroxybutane-1… to menaquinol-7.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:47693"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_keto_d_tagatose_alpha-d-galactose-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "keto_d_tagatose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-galactose-to-nad"
+      },
+      "note": "Shares keto-D-tagatose with alpha-D-galactose… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:47693"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_keto_d_tagatose_keto-d-tagatose-to-d-glycero-d-ido-octulose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "keto_d_tagatose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "keto-d-tagatose-to-d-glycero-d-ido-octulose"
+      },
+      "note": "Shares keto-D-tagatose with keto-D-tagatose to D-Glycero-D-ido-octulose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:47693"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_keto_d_tagatose_nadh-to-keto-d-tagatose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "keto_d_tagatose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-keto-d-tagatose"
+      },
+      "note": "Shares keto-D-tagatose with NADH to keto-D-tagatose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:47693"
           }
         ]
       }

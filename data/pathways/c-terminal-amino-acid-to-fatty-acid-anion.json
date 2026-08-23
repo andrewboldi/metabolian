@@ -104,26 +104,6 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
-    },
-    {
-      "id": "c_terminal_amino_acid_phosphatidylserine_amidate",
-      "name": "C-terminal amino acid- phosphatidylserine amidated glycine",
-      "short": "C-terminal amino…",
-      "formula": "C12H14N3O12PR3",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:172942"
-      }
-    },
-    {
-      "id": "phosphatidylserine_amidated_glycine",
-      "name": "phosphatidylserine amidated glycine",
-      "short": "phosphatidylserine…",
-      "formula": "C10H14N2O11PR2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:176543"
-      }
     }
   ],
   "enzymes": [],
@@ -248,42 +228,115 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "[protein]-C-terminal L-amino acid-glycyl-phosphatidylserine + H2O = 1,2-diacyl-sn-glyce...",
-      "equation": "[protein]-C-terminal L-amino acid-glycyl-phosphatidylserine + H2O = 1,2-diacyl-sn-glycero-3-phospho-L-serine-N-glycine + [protein]-C-terminal L-amino acid",
-      "substrates": [
-        {
-          "metabolite": "c_terminal_amino_acid_phosphatidylserine_amidate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "phosphatidylserine_amidated_glycine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "c_terminal_proteinogenic_amino_acid",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:67912"
+      "id": "xt_c_terminal_amino_acid_phosphatidylethanolamine_a_lipid-a-4-e-coli-to-fatty-acyl-monophosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "c_terminal_amino_acid_phosphatidylethanolamine_a"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "lipid-a-4-e-coli-to-fatty-acyl-monophosphate"
+      },
+      "note": "Shares C-terminal amino acid- phosphatidylethanolamine amidated glycine with lipid A(4−) (E. coli) to fatty acyl monophosphate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:67912"
+            "db": "ChEBI",
+            "id": "CHEBI:172941"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_c_terminal_proteinogenic_amino_acid_2-acyl-6-d-mannosyl-1-to-6-amino-acid-carboxyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "c_terminal_proteinogenic_amino_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-acyl-6-d-mannosyl-1-to-6-amino-acid-carboxyl"
+      },
+      "note": "Shares C-terminal proteinogenic amino-acid with 2-acyl-6-[α-D-mannosyl-(1… to 6-[amino acid carboxyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:90782"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_c_terminal_proteinogenic_amino_acid_n-3-carboxylatopropionyl-to-s-2-acetamido-6-oxop",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "c_terminal_proteinogenic_amino_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-3-carboxylatopropionyl-to-s-2-acetamido-6-oxop"
+      },
+      "note": "Shares C-terminal proteinogenic amino-acid with N-(3-carboxylatopropionyl… to (S)-2-acetamido-6-oxopime….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:90782"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_acyl_6_6_phosphoethanolamine_d_mannosyl_1_2_d_2-acyl-6-d-mannosyl-1-to-6-amino-acid-carboxyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_acyl_6_6_phosphoethanolamine_d_mannosyl_1_2_d"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-acyl-6-d-mannosyl-1-to-6-amino-acid-carboxyl"
+      },
+      "note": "Shares 2-acyl-6-[6-phosphoethanolamine-α-D-mannosyl-(1→2)-α-D-mannosyl-(1→6)-2-phosphoethanolamine-α-D-mannosyl-(1→4)-α-D-glucosaminyl]-1-(1-radyl,2-acyl-sn-glycero-3-phospho)-1D-myo-inositol with 2-acyl-6-[α-D-mannosyl-(1… to 6-[amino acid carboxyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:144079"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_amino_acid_carboxyl_end_amidated_6_phosphoetha_2-acyl-6-d-mannosyl-1-to-6-amino-acid-carboxyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_amino_acid_carboxyl_end_amidated_6_phosphoetha"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-acyl-6-d-mannosyl-1-to-6-amino-acid-carboxyl"
+      },
+      "note": "Shares 6-[amino acid carboxyl end amidated-6-phosphoethanolamine-α-D-mannosyl-(1→2)-α-D-mannosyl-(1→6)-2-phosphoethanolamine-α-D-mannosyl-(1→4)-α-D-glucosaminyl]-1-(1-radyl,2-acyl-sn-glycero-3-phospho)-1D-myo-inositol with 2-acyl-6-[α-D-mannosyl-(1… to 6-[amino acid carboxyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:233273"
           }
         ]
       }

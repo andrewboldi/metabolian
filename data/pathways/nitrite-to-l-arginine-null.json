@@ -1,0 +1,323 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "nitrite-to-l-arginine-null",
+  "name": "nitrite to L-arginine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from nitrite to L-arginine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR150619"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "nitrite",
+      "name": "nitrite",
+      "formula": "NO2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM107"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nitric_oxide",
+      "name": "nitric oxide",
+      "formula": "NO",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1107902"
+      }
+    },
+    {
+      "id": "nitric_acid",
+      "name": "nitric acid",
+      "formula": "HNO3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM732399"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "l_citrulline",
+      "name": "L-citrulline",
+      "formula": "C6H13N3O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM732471"
+      }
+    },
+    {
+      "id": "n5_e_amino_hydroxyimino_methyl_ornithine",
+      "name": "N5-[(E)-amino(hydroxyimino)methyl]ornithine",
+      "short": "N5-[(E)-amino(hydro…",
+      "formula": "C6H14N4O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:47825"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "l_arginine",
+      "name": "L-arginine",
+      "formula": "C6H15N4O2",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM739527"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_7_6_1",
+      "name": "nitrite dismutase",
+      "ec": [
+        "1.7.6.1"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_39",
+      "name": "nitric-oxide synthase (NADPH)",
+      "ec": [
+        "1.14.13.39"
+      ],
+      "xrefs": {
+        "uniprot": "P29475"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "nitrite dismutase",
+      "ec": "1.7.6.1",
+      "substrates": [
+        {
+          "metabolite": "nitrite",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nitric_oxide",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nitric_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_7_6_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR150619"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR150619"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "nitric-oxide synthase (NADPH)",
+      "ec": "1.14.13.39",
+      "substrates": [
+        {
+          "metabolite": "nitric_oxide",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_citrulline",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n5_e_amino_hydroxyimino_methyl_ornithine",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_39"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR102007"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR102007"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "nitric-oxide synthase (NADPH)",
+      "ec": "1.14.13.39",
+      "substrates": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n5_e_amino_hydroxyimino_methyl_ornithine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_arginine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_39"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR102006"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR102006"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_n5_e_amino_hydroxyimino_methyl_ornithine_nitrite-to-l-arginine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n5_e_amino_hydroxyimino_methyl_ornithine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nitrite-to-l-arginine"
+      },
+      "note": "Shares N5-[(E)-amino(hydroxyimino)methyl]ornithine with nitrite to L-arginine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:47825"
+          }
+        ]
+      }
+    }
+  ]
+}

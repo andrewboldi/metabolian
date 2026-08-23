@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway neurotensin-to-s-adenosyl-l-homocysteine "neurotensin to S-adenosyl-L-homocysteine" {
-  spacing 176
+  spacing 164
 
   spine at 0,0 {
     neurotensin
@@ -16,27 +16,15 @@ pathway neurotensin-to-s-adenosyl-l-homocysteine "neurotensin to S-adenosyl-L-ho
     3r_3_4_dimethyl_2_oxopentanoate
   }
 
-  branch from nh3 side left {
-    nh3
-    <-> . +d_tyrosine +o2 +h2o +h2o2
-    3_4_hydroxyphenyl_pyruvate
+  branch from neurotensin side left {
+    neurotensin
+    <-> . +h2o +ile_leu
+    neurotensin_1_11
   }
 
-  branch from nh3 side right {
-    nh3
-    <-> . +d_dopa +o2 +h2o +h2o2
-    3_4_dihydroxyphenylpyruvate
-  }
-
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_312 [2.1.1.312] +uridine_5_monophosphate_1 +sam +hplus
-    n3_methyluridine_5_monophosphate_1
-  }
-
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_313 [2.1.1.313] +sam +n3_methyluridine_5_monophosphate_1 +hplus
-    uridine_5_monophosphate_1
+  branch from neurotensin side right {
+    neurotensin
+    <-> . +h2o +tyr_ile_leu
+    neurotensin_1_10
   }
 }

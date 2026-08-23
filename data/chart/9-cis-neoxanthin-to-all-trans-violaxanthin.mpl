@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 9-cis-neoxanthin-to-all-trans-violaxanthin "9'-cis-neoxanthin to all-trans-violaxanthin" {
-  spacing 232
+  spacing 262
 
   spine at 0,0 {
     9_cis_neoxanthin
@@ -28,14 +28,14 @@ pathway 9-cis-neoxanthin-to-all-trans-violaxanthin "9'-cis-neoxanthin to all-tra
 
   branch from o2 side right {
     o2
-    <-> . +alpha_pinene +h +nadph +nadp +h2o
-    alpha_pinene_oxide
+    <-> . +5_s_6_s_epoxy_15_r_hydroxyeicosatetraenoate +h2o
+    15_r_hydroxy_5z_8z_11z_13e_eicosatetraenoate
   }
 
   branch from o2 side left {
     o2
-    <-> . +4_hydroxydebrisoquin +nadp +h2o +debrisoquin +nadph
-    h
+    <-> . +2_5z_8z_11z_14z_eicosatetraenoyl_glycerol
+    12_hydroperoxyeicosatetraenoate_glyceryl_ester
   }
 
   branch from 9_cis_neoxanthin side right {
@@ -52,7 +52,37 @@ pathway 9-cis-neoxanthin-to-all-trans-violaxanthin "9'-cis-neoxanthin to all-tra
 
   branch from all_trans_violaxanthin side right {
     all_trans_violaxanthin
-    <-> ec_1_10_99_3 [1.10.99.3] +l_dehydroascorbic_acid +all_trans_antheraxanthin +h2o +h
-    l_ascorbate
+    <-> ec_1_14_13_90 [1.14.13.90] +h +all_trans_antheraxanthin +o2 +nadph +h2o
+    nadp
+  }
+
+  branch from 2_trans_4_trans_xanthoxin side left {
+    2_trans_4_trans_xanthoxin
+    <-> . +nad +nadh +hplus
+    2_trans_abscisic_aldehyde
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_14_14_1 [1.14.14.1] +h +estrone +nadph +nadp +h2o
+    16alpha_hydroxyestrone
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +h +13_hydroxy_gama_tocopherol +nadph +nadp +h2o
+    13_carboxy_gamma_tocopherol
+  }
+
+  branch from all_trans_violaxanthin side right {
+    all_trans_violaxanthin
+    <-> ec_1_14_13_90 [1.14.13.90] +all_trans_zeaxanthin +h +o2 +nadph +nadp
+    h2o
+  }
+
+  branch from all_trans_violaxanthin side left {
+    all_trans_violaxanthin
+    <-> ec_1_14_13_90 [1.14.13.90] +all_trans_zeaxanthin +h +o2 +nad +h2o
+    nadh
   }
 }

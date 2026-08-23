@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway sitosterol-to-d-glucopyranose "sitosterol to D-glucopyranose" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     sitosterol
@@ -14,17 +14,5 @@ pathway sitosterol-to-d-glucopyranose "sitosterol to D-glucopyranose" {
     stigmasterol_3_o_d_glucoside
     <-> . +h2o -glucose
     stigmasterol
-  }
-
-  branch from glucose side left {
-    glucose
-    <-> . +celosianin_i +h +1_o_4_coumaroyl_d_glucose
-    amaranthin
-  }
-
-  branch from glucose side right {
-    glucose
-    <-> ec_2_4_1_10 [2.4.1.10] +sucrose +6_kestotriose
-    6_6_kestotetraose
   }
 }

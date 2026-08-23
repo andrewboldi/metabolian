@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-hydroperoxy-4-glucosy-to-s-adenosyl-l-homocyst "2-[hydroperoxy-(4-glucosy… to S-adenosyl-L-homocysteine" {
-  spacing 246
+  spacing 276
 
   spine at 0,0 {
     2_hydroperoxy_4_glucosyl_hydroxyphenyl_methyl_6
@@ -22,55 +22,85 @@ pathway 2-hydroperoxy-4-glucosy-to-s-adenosyl-l-homocyst "2-[hydroperoxy-(4-gluc
 
   branch from h2o2 side left {
     h2o2
-    <-> . +s_ethyl_l_cysteine +o2 +h2o
-    ethiin
+    <-> ec_1_11_1_11 [1.11.1.11] +l_dehydroascorbic_acid +h2o +h
+    l_ascorbate
   }
 
   branch from h2o2 side right {
     h2o2
-    <-> . +hemigossypol +desoxyhemigossypol +h2o
-    o2
-  }
-
-  branch from isoliquiritigenin side left {
-    isoliquiritigenin
-    <-> ec_2_3_1_170 [2.3.1.170] +malonyl_coa +trans_4_coumaroyl_coa +h +nadph +nadp +coa +h2o
-    co2
-  }
-
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> . +udp +quercetagitrin +h
-    quercetagetin
+    <-> . +16_hydroxyhexadecanoate +o2
+    16_oxohexadecanoate
   }
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +esculin +h
-    esculetin
+    <-> . +udp +aloenin +h
+    6_2_4_dihydroxy_6_methylphenyl_4_methoxypyran_2
   }
 
-  branch from fmn side right {
-    fmn
-    <-> . +14_15_eet +fmnh2 +o2 +h2o +hplus
-    14_15_epoxy_20_hydroxy_5z_8z_11z_icosatrienoate
+  branch from udp_alpha_d_glucose side right {
+    udp_alpha_d_glucose
+    <-> . +udp +glucosyl_heptosyl_2_kdo2_lipid_a +h
+    alpha_hep_1_3_alpha_hep_1_5_alpha_kdo_2_4_alpha
   }
 
-  branch from fmn side left {
-    fmn
-    <-> . +5_cholestan_3_ol +fmnh2 +o2 +h2o +hplus
-    24s_hydroxycholestanol
+  branch from h2o side left {
+    h2o
+    <-> . +l_threonine +l_isoleucine +l_tryptophan
+    tryptophanyl_threonyl_isoleucine
   }
 
-  branch from sah side right {
-    sah
-    <-> . +3_methylaminomethyl_indole +sam +hplus
-    gramine
+  branch from h2o side right {
+    h2o
+    <-> . +l_threonine +l_tryptophan +l_tyrosine
+    tryptophanyl_threonyl_tyrosine
   }
 
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_346 [2.1.1.346] +adenosine_5_monophosphate_1 +sam +hplus
-    n6_methyladenosine_5_monophosphate_1
+  branch from h2o2 side left {
+    h2o2
+    <-> . +z_phenylacetaldehyde_oxime +h +h2o +nh4
+    2_phenylacetaldehyde
+  }
+
+  branch from h2o2 side right {
+    h2o2
+    <-> . +docosan_1_ol +o2
+    docosanal
+  }
+
+  branch from udp side left {
+    udp
+    <-> ec_2_4_1_241 [2.4.1.241] +h +1_18_1_2_18_3_digalactosyldiacylglycerol +1_9z_octadecenoyl_2_9z_12z_15z_octadecatrienoyl
+    udp_alpha_d_galactose
+  }
+
+  branch from udp side right {
+    udp
+    <-> ec_2_4_1_241 [2.4.1.241] +h +1_20_0_2_18_3_digalactosyldiacylglycerol +udp_alpha_d_galactose
+    1_20_0_2_18_3_monogalactosyldiacylglycerol
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_3_3_11 [2.3.3.11] +r_2_hydroxyglutarate +coa +glyoxylate +h2o
+    propanoyl_coa
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_3_3_11 [2.3.3.11] +propanoyl_coa +glyoxylate +h2o +s_2_hydroxyglutarate
+    coa
+  }
+
+  branch from udp_alpha_d_glucose side left {
+    udp_alpha_d_glucose
+    <-> ec_2_4_1_249 [2.4.1.249] +udp +ternatin_c5 +h
+    delphinidin_3_o_6_o_malonyl_beta_d_glucoside
+  }
+
+  branch from udp_alpha_d_glucose side right {
+    udp_alpha_d_glucose
+    <-> ec_2_4_1_249 [2.4.1.249] +udp +ternatin_c5 +h
+    delphinidin_3_o_6_o_malonyl_beta_d_glucoside
   }
 }

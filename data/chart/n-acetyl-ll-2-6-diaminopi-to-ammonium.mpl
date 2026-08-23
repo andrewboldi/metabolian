@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-acetyl-ll-2-6-diaminopi-to-ammonium "N-acetyl-LL-2,6-diaminopi… to ammonium" {
-  spacing 240
+  spacing 234
 
   spine at 0,0 {
     n_acetyl_ll_2_6_diaminopimelate
@@ -16,39 +16,33 @@ pathway n-acetyl-ll-2-6-diaminopi-to-ammonium "N-acetyl-LL-2,6-diaminopi… to a
     s_2_amino_6_oxopimelate
   }
 
-  branch from acetate side left {
-    acetate
-    <-> . +n_acetyl_d_glucosaminyl_1_4_1_6_anhydro_n_acetyl +h2o
-    n_acetyl_d_glucosaminyl_1_4_1_6_anhydro_d_muramy
-  }
-
-  branch from acetate side right {
-    acetate
-    <-> . +n_acetyl_s_benzyl_l_cysteine +h2o
-    s_benzyl_l_cysteine
-  }
-
-  branch from meso_2_6_diaminopimelic_acid_dizwitterion side left {
-    meso_2_6_diaminopimelic_acid_dizwitterion
-    <-> ec_4_1_1_20 [4.1.1.20] +hplus +co2
-    l_lysinium
-  }
-
-  branch from meso_2_6_diaminopimelic_acid_dizwitterion side right {
-    meso_2_6_diaminopimelic_acid_dizwitterion
-    <-> . +nadp +nh3 +nadph +hplus
+  branch from s_2_amino_6_oxopimelate side left {
+    s_2_amino_6_oxopimelate
+    <-> . +h2o +hplus
     s_2_3_4_5_tetrahydrodipicolinate
-  }
-
-  branch from nh3 side left {
-    nh3
-    <-> ec_4_3_1_23 [4.3.1.23] +tyrosine
-    trans_4_coumarate
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_4_4_1_1 [4.4.1.1] +l_homoserine
-    oxobut
+    <-> . +valine +o2 +h2o +h2o2
+    kiv
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> . +glutamine +o2 +h2o +h2o2
+    2_oxoglutaramate
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> . +o2 +h2o +pyruvate +h2o2
+    alanine
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> . +l_cystine +o2 +h2o +h2o2
+    2r_2_ammonio_2_carboxylatoethyl_disulfanyl_oxop
   }
 }

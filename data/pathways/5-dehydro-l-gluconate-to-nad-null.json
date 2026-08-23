@@ -1,0 +1,365 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "5-dehydro-l-gluconate-to-nad-null",
+  "name": "5-dehydro-L-gluconate to NAD",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 5-dehydro-L-gluconate to NAD(+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR196770"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:137108"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "5_dehydro_l_gluconate",
+      "name": "5-dehydro-L-gluconate",
+      "short": "5-dehydro-L-glucona…",
+      "formula": "C6H9O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:137108"
+      }
+    },
+    {
+      "id": "2_4_didehydro_inositol",
+      "name": "2,4-didehydro-inositol",
+      "short": "2,4-didehydro-inosi…",
+      "formula": "C6H7O6",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1368217"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "scyllo_inosose",
+      "name": "scyllo-inosose",
+      "formula": "C6H10O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1102164"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "inositol",
+      "name": "inositol",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:24848"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_18",
+      "name": "inositol 2-dehydrogenase",
+      "ec": [
+        "1.1.1.18"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR196770",
+      "substrates": [
+        {
+          "metabolite": "5_dehydro_l_gluconate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_4_didehydro_inositol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR196770"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196770"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR196768",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_4_didehydro_inositol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "scyllo_inosose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR196768"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196768"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "inositol 2-dehydrogenase",
+      "ec": "1.1.1.18",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "scyllo_inosose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "inositol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_18"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR145301"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR145301"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_2_4_didehydro_inositol_5-dehydro-l-gluconate-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_4_didehydro_inositol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-dehydro-l-gluconate-to-nad"
+      },
+      "note": "Shares 2,4-didehydro-inositol with 5-dehydro-L-gluconate to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368217"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_scyllo_inosose_5-dehydro-l-gluconate-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "scyllo_inosose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-dehydro-l-gluconate-to-nad"
+      },
+      "note": "Shares scyllo-inosose with 5-dehydro-L-gluconate to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1102164"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_scyllo_inosose_chloroacetaldehyde-to-nad-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "scyllo_inosose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "chloroacetaldehyde-to-nad-null"
+      },
+      "note": "Shares scyllo-inosose with chloroacetaldehyde to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1102164"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_scyllo_inosose_d-xylulose-1-phosphate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "scyllo_inosose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-xylulose-1-phosphate-to-h2o"
+      },
+      "note": "Shares scyllo-inosose with D-Xylulose 1-phosphate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1102164"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_scyllo_inosose_d-xylulose-1-phosphate-to-phosphate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "scyllo_inosose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-xylulose-1-phosphate-to-phosphate-null"
+      },
+      "note": "Shares scyllo-inosose with D-Xylulose 1-phosphate to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1102164"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_scyllo_inosose_diphosphate-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "scyllo_inosose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-h2o-null"
+      },
+      "note": "Shares scyllo-inosose with diphosphate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1102164"
+          }
+        ]
+      }
+    }
+  ]
+}

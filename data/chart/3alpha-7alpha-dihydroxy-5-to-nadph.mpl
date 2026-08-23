@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3alpha-7alpha-dihydroxy-5-to-nadph "3Alpha,7Alpha-Dihydroxy-5… to NADPH" {
-  spacing 206
+  spacing 152
 
   spine at 0,0 {
     3alpha_7alpha_dihydroxy_5beta_cholestan_27_al
@@ -14,59 +14,5 @@ pathway 3alpha-7alpha-dihydroxy-5-to-nadph "3Alpha,7Alpha-Dihydroxy-5… to NADP
     5beta_cholestan_3alpha_7alpha_12alpha_24_s_tetro
     <-> . +nadp -h -nadph
     7alpha_24_dihydroxy_5beta_cholestan_3_one
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +3_sulfopropanoic_acid +nadph +h2o
-    3_oxopropane_1_sulfonate
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +1s_2s_4r_endo_fenchol +h +nadph
-    1r_4s_fenchone
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_23 [3.6.3.23] +adp +n_acetyl_d_glucosaminyl_n_acetylmuramoyl_l_alany +phosphate +n_acetyl_d_glucosaminyl_n_acetylmuramoyl_l_alany +h2o
-    atp
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
-    met_ala
-  }
-
-  branch from o2 side left {
-    o2
-    <-> ec_1_3_99_2 [1.3.99.2] +2_methylpropanoyl_coa +h2o
-    2_methylpropenoyl_coa
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +octanoyl_coa +coa +nad +h2o +acetyl_coa +h +h2o2
-    nadh
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> ec_1_1_1_46 [1.1.1.46] +l_arabinono_1_4_lactone +h +nadp
-    alpha_l_arabinofuranose
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> ec_1_1_1_46 [1.1.1.46] +l_arabinono_1_4_lactone +h +nadp
-    beta_l_arabinofuranose
-  }
-
-  branch from 7alpha_24_dihydroxy_5beta_cholestan_3_one side left {
-    7alpha_24_dihydroxy_5beta_cholestan_3_one
-    <-> . +h +nadph +nadp
-    4_cholesten_7_12_24_triol_3_one
   }
 }

@@ -250,6 +250,55 @@
       "xrefs": {
         "chebi": "CHEBI:76442"
       }
+    },
+    {
+      "id": "2e_15z_18z_21z_24z_triacontapentaenoyl_coa",
+      "name": "(2E,15Z,18Z,21Z,24Z)-triacontapentaenoyl-CoA",
+      "short": "(2E,15Z,18Z,21Z,24Z…",
+      "formula": "C51H80N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:76431"
+      }
+    },
+    {
+      "id": "l_pipecolic_acid",
+      "name": "L-pipecolic acid",
+      "formula": "C6H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61185"
+      }
+    },
+    {
+      "id": "1s_8as_octahydroindolizin_1_ol",
+      "name": "(1S,8aS)-octahydroindolizin-1-ol",
+      "short": "(1S,8aS)-octahydroi…",
+      "formula": "C8H16NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:167676"
+      }
+    },
+    {
+      "id": "apigenin_7_o_d_glucoside",
+      "name": "apigenin 7-O-β-D-glucoside",
+      "short": "apigenin 7-O-β-D-gl…",
+      "formula": "C21H19O10",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77722"
+      }
+    },
+    {
+      "id": "apigenin_7_o_6_o_malonyl_d_glucoside",
+      "name": "apigenin 7-O-(6-O-malonyl-β-D-glucoside)",
+      "short": "apigenin 7-O-(6-O-m…",
+      "formula": "C24H20O13",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:169949"
+      }
     }
   ],
   "enzymes": [],
@@ -922,6 +971,303 @@
           {
             "db": "Rhea",
             "id": "RHEA:39427"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r17",
+      "name": "(2E,15Z,18Z,21Z,24Z)-triacontapentaenoyl-CoA + NADPH + H(+) = (15Z,18Z,21Z,24Z)-triacon...",
+      "equation": "(2E,15Z,18Z,21Z,24Z)-triacontapentaenoyl-CoA + NADPH + H(+) = (15Z,18Z,21Z,24Z)-triacontatetraenoyl-CoA + NADP(+)",
+      "substrates": [
+        {
+          "metabolite": "2e_15z_18z_21z_24z_triacontapentaenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "15z_18z_21z_24z_triacontatetraenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 17,
+      "xrefs": {
+        "rhea": "RHEA:39379"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:39379"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r18",
+      "name": "L-pipecolate + malonyl-CoA + 3 NADPH + 5 H(+) = (1S,8aS)-octahydroindolizin-1-ol + CO2 ...",
+      "equation": "L-pipecolate + malonyl-CoA + 3 NADPH + 5 H(+) = (1S,8aS)-octahydroindolizin-1-ol + CO2 + 3 NADP(+) + CoA + 2 H2O",
+      "substrates": [
+        {
+          "metabolite": "l_pipecolic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 5
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1s_8as_octahydroindolizin_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 18,
+      "xrefs": {
+        "rhea": "RHEA:67132"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:67132"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r19",
+      "name": "apigenin 7-O-beta-D-glucoside + malonyl-CoA = apigenin 7-O-(6-O-malonyl-beta-D-glucosid...",
+      "equation": "apigenin 7-O-beta-D-glucoside + malonyl-CoA = apigenin 7-O-(6-O-malonyl-beta-D-glucoside) + CoA",
+      "substrates": [
+        {
+          "metabolite": "apigenin_7_o_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "apigenin_7_o_6_o_malonyl_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 19,
+      "xrefs": {
+        "rhea": "RHEA:67348"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:67348"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_2e_15z_18z_21z_24z_triacontapentaenoyl_coa_1-all-cis-docosa-7-10-13-to-3r-15z-18z-21z-24z-3",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2e_15z_18z_21z_24z_triacontapentaenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-all-cis-docosa-7-10-13-to-3r-15z-18z-21z-24z-3"
+      },
+      "note": "Shares (2E,15Z,18Z,21Z,24Z)-triacontapentaenoyl-CoA with 1-(all-cis-docosa-7,10,13… to (3R,15Z,18Z,21Z,24Z)-3-hy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76431"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_pipecolic_acid_19z-22z-25z-28z-31z-tet-to-23z-26z-29z-32z-35z",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_pipecolic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "19z-22z-25z-28z-31z-tet-to-23z-26z-29z-32z-35z"
+      },
+      "note": "Shares L-pipecolic acid with (19Z,22Z,25Z,28Z,31Z)-tet… to (23Z,26Z,29Z,32Z,35Z)-oct….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61185"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_pipecolic_acid_l-glutamine-to-methyl-com",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_pipecolic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-glutamine-to-methyl-com"
+      },
+      "note": "Shares L-pipecolic acid with L-glutamine to methyl-CoM.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61185"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_pipecolic_acid_l-saccharopinate-to-l-2-aminoadipate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_pipecolic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-saccharopinate-to-l-2-aminoadipate"
+      },
+      "note": "Shares L-pipecolic acid with L-saccharopinate to L-2-aminoadipate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61185"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_pipecolic_acid_n-carbamoyl-d-amino-to-acyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_pipecolic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-carbamoyl-d-amino-to-acyl-coa"
+      },
+      "note": "Shares L-pipecolic acid with N-carbamoyl-D-α-amino… to acyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61185"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_apigenin_7_o_d_glucoside_apigenin-7-o-d-glucoside-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "apigenin_7_o_d_glucoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "apigenin-7-o-d-glucoside-to-fmn"
+      },
+      "note": "Shares apigenin 7-O-β-D-glucoside with apigenin 7-O-β-D-glucoside to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77722"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_apigenin_7_o_d_glucoside_isovitexin-7-olate-to-apiin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "apigenin_7_o_d_glucoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isovitexin-7-olate-to-apiin"
+      },
+      "note": "Shares apigenin 7-O-β-D-glucoside with isovitexin-7-olate to apiin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77722"
           }
         ]
       }

@@ -129,53 +129,6 @@
       "xrefs": {
         "metanetx": "MNXM727276"
       }
-    },
-    {
-      "id": "octanedioyl_coa",
-      "name": "octanedioyl-CoA",
-      "formula": "C29H43N7O19P3S",
-      "charge": -5,
-      "xrefs": {
-        "chebi": "CHEBI:76317"
-      }
-    },
-    {
-      "id": "r_carnitine",
-      "name": "(R)-carnitine",
-      "formula": "C7H15NO3",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1105737"
-      }
-    },
-    {
-      "id": "o_suberoylcarnitine",
-      "name": "O-suberoylcarnitine",
-      "formula": "C15H26NO6",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:77083"
-      }
-    },
-    {
-      "id": "8z_11z_14z_eicosatrienoyl_coa",
-      "name": "(8Z,11Z,14Z)-eicosatrienoyl-CoA",
-      "short": "(8Z,11Z,14Z)-eicosa…",
-      "formula": "C41H64N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM1104037"
-      }
-    },
-    {
-      "id": "dihomo_gamma_linolenyl_carnitine",
-      "name": "dihomo-gamma-linolenyl carnitine",
-      "short": "dihomo-gamma-linole…",
-      "formula": "C27H47NO4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:140729"
-      }
     }
   ],
   "enzymes": [
@@ -184,7 +137,10 @@
       "name": "acetyl-CoA C-acyltransferase",
       "ec": [
         "2.3.1.16"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P55084"
+      }
     }
   ],
   "reactions": [
@@ -348,79 +304,159 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "Reaction MNXR96430",
-      "substrates": [
-        {
-          "metabolite": "octanedioyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "r_carnitine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o_suberoylcarnitine",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR96430"
+      "id": "xt_2e_9z_hexadecadienoyl_coa_1-oleoyl-2-palmitoyl-sn-g-to-9z-hexadecenoyl-sn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2e_9z_hexadecadienoyl_coa"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1-oleoyl-2-palmitoyl-sn-g-to-9z-hexadecenoyl-sn"
+      },
+      "note": "Shares (2E,9Z)-hexadecadienoyl-CoA with 1-oleoyl-2-palmitoyl-sn-g… to [(9Z)-hexadecenoyl]-sn-gl….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR96430"
+            "db": "ChEBI",
+            "id": "CHEBI:77549"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "Reaction MNXR97502",
-      "substrates": [
-        {
-          "metabolite": "8z_11z_14z_eicosatrienoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "r_carnitine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "dihomo_gamma_linolenyl_carnitine",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "metanetx": "MNXR97502"
+      "id": "xt_2e_9z_hexadecadienoyl_coa_h-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2e_9z_hexadecadienoyl_coa"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-h2o"
+      },
+      "note": "Shares (2E,9Z)-hexadecadienoyl-CoA with H to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR97502"
+            "db": "ChEBI",
+            "id": "CHEBI:77549"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2e_9z_hexadecadienoyl_coa_palmitoleoyl-ethanolamide-to-1-hexadecanoyl-2-9z",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2e_9z_hexadecadienoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "palmitoleoyl-ethanolamide-to-1-hexadecanoyl-2-9z"
+      },
+      "note": "Shares (2E,9Z)-hexadecadienoyl-CoA with palmitoleoyl ethanolamide to 1-hexadecanoyl-2-[(9Z)-he….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77549"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3s_9z_3_hydroxyhexadecenoyl_coa_24-methylidenelophenol-to-avenasterol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3s_9z_3_hydroxyhexadecenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "24-methylidenelophenol-to-avenasterol"
+      },
+      "note": "Shares (3S,9Z)-3-hydroxyhexadecenoyl-CoA with 24-methylidenelophenol to avenasterol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:232641"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3s_9z_3_hydroxyhexadecenoyl_coa_h-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3s_9z_3_hydroxyhexadecenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-h2o"
+      },
+      "note": "Shares (3S,9Z)-3-hydroxyhexadecenoyl-CoA with H to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:232641"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_z_3_oxohexadec_9_enoyl_coa_24-methylidenelophenol-to-avenasterol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "z_3_oxohexadec_9_enoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "24-methylidenelophenol-to-avenasterol"
+      },
+      "note": "Shares (Z)-3-oxohexadec-9-enoyl-CoA with 24-methylidenelophenol to avenasterol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:232642"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_z_tetradec_7_enoyl_coa_dtdp-beta-l-rhamnose-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "z_tetradec_7_enoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-beta-l-rhamnose-to-coa"
+      },
+      "note": "Shares (Z)-tetradec-7-enoyl-CoA with dTDP-beta-L-rhamnose to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:232643"
           }
         ]
       }

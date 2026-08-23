@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-hydroxyphenylacetyl-coa-to-s-adenosyl-l-homocy "3-hydroxyphenylacetyl-CoA to S-adenosyl-L-homocysteine" {
-  spacing 302
+  spacing 272
 
   spine at 0,0 {
     3_hydroxyphenylacetyl_coa
@@ -16,35 +16,5 @@ pathway 3-hydroxyphenylacetyl-coa-to-s-adenosyl-l-homocy "3-hydroxyphenylacetyl-
     2_methyl_6_all_trans_nonaprenyl_1_4_benzoquinone
     <-> ec_2_1_1_295 [2.1.1.295] +sam -sah -hplus
     plastoquinol_9
-  }
-
-  branch from 2_methyl_6_all_trans_nonaprenyl_1_4_benzoquinone side left {
-    2_methyl_6_all_trans_nonaprenyl_1_4_benzoquinone
-    <-> . +s_adenosyl_l_homocysteine +h +2_all_trans_nonaprenyl_benzene_1_4_diol
-    s_adenosyl_l_methionine
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_185 [4.2.3.185] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    ent_atiserene
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_188 [4.2.3.188] +all_trans_pentaprenyl_diphosphate
-    geranylfarnesene
-  }
-
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_298 [2.1.1.298] +l_glutamine +sam +hplus
-    n5_methyl_l_glutamine
-  }
-
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_316 [2.1.1.316] +7_demethylmitomycin_b +sam
-    mitomycin_b
   }
 }

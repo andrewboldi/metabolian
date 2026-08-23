@@ -144,34 +144,6 @@
       "xrefs": {
         "chebi": "CHEBI:16240"
       }
-    },
-    {
-      "id": "udp_d_glucose",
-      "name": "UDP-α-D-glucose",
-      "formula": "C15H22N2O17P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:58885"
-      }
-    },
-    {
-      "id": "5_o_d_glucosylpyridoxine",
-      "name": "5'-O-β-D-glucosylpyridoxine",
-      "short": "5'-O-β-D-glucosylpy…",
-      "formula": "C14H21NO8",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:17382"
-      }
-    },
-    {
-      "id": "udp",
-      "name": "UDP",
-      "formula": "C9H11N2O12P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58223"
-      }
     }
   ],
   "enzymes": [
@@ -180,7 +152,10 @@
       "name": "pyridoxal phosphatase",
       "ec": [
         "3.1.3.74"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q8TCD6"
+      }
     },
     {
       "id": "ec_1_1_99_9",
@@ -201,13 +176,6 @@
       "name": "pyridoxine 4-oxidase",
       "ec": [
         "1.1.3.12"
-      ]
-    },
-    {
-      "id": "ec_2_4_1_160",
-      "name": "pyridoxine 5'-O-beta-D-glucosyltransferase",
-      "ec": [
-        "2.4.1.160"
       ]
     }
   ],
@@ -395,52 +363,137 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "pyridoxine 5'-O-beta-D-glucosyltransferase",
-      "equation": "pyridoxine + UDP-alpha-D-glucose = 5'-O-beta-D-glucosylpyridoxine + UDP + H(+)",
-      "ec": "2.4.1.160",
-      "substrates": [
-        {
-          "metabolite": "pyridoxine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp_d_glucose",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "5_o_d_glucosylpyridoxine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_4_1_160"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:20177"
+      "id": "xt_pyridoxine_2s-flavan-4-one-to-flavonol-3-o-6-4-coumar",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pyridoxine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2s-flavan-4-one-to-flavonol-3-o-6-4-coumar"
+      },
+      "note": "Shares pyridoxine with (2S)-flavan-4-one to flavonol 3-O-[6-(4-coumar….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:20177"
+            "db": "ChEBI",
+            "id": "CHEBI:16709"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_isopyridoxal_isopyridoxal-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isopyridoxal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isopyridoxal-to-ammonium"
+      },
+      "note": "Shares isopyridoxal with isopyridoxal to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17889"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_pyridoxolactone_s-2-chloropropanoate-to-chloride",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_pyridoxolactone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2-chloropropanoate-to-chloride"
+      },
+      "note": "Shares 5-pyridoxolactone with (S)-2-chloropropanoate to chloride.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:2124"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pyridoxal_4-pyridoxolactone-to-5-oxido-6-methylpyridiniu",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pyridoxal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-pyridoxolactone-to-5-oxido-6-methylpyridiniu"
+      },
+      "note": "Shares pyridoxal with 4-pyridoxolactone to 5-oxido-6-methylpyridiniu….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17310"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pyridoxal_organohalogen-compound-to-adenosine-3-5-bismonop",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pyridoxal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "organohalogen-compound-to-adenosine-3-5-bismonop"
+      },
+      "note": "Shares pyridoxal with organohalogen compound to adenosine 3',5'-bismonoph….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17310"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pyridoxal_tauropinate-to-sulfoacetyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pyridoxal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "tauropinate-to-sulfoacetyl-coa"
+      },
+      "note": "Shares pyridoxal with tauropinate to sulfoacetyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17310"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-methylcatechol-to-h2o "3-methylcatechol to H2O" {
-  spacing 234
+  spacing 324
 
   spine at 0,0 {
     3_methylcatechol
@@ -18,67 +18,157 @@ pathway 3-methylcatechol-to-h2o "3-methylcatechol to H2O" {
 
   branch from nadh side left {
     nadh
-    <-> . +h +2s_3_hydroxy_1_4_hydroxy_3_methoxyphenyl_2_2_me +nad
-    alphar_betas_guaiacylglycerol_beta_guaiacyl_eth
+    <-> ec_1_14_13_25 [1.14.13.25] +nitrobenzene +o2 +nad +h2o
+    4_nitrophenol
   }
 
   branch from nadh side right {
     nadh
-    <-> . +h +2r_3_hydroxy_1_4_hydroxy_3_methoxyphenyl_2_2_me +nad
-    alphar_betar_guaiacylglycerol_beta_guaiacyl_eth
+    <-> ec_1_2_1_3 [1.2.1.3] +4_hydroxynon_2_enoic_acid +h +nad +h2o
+    4_hydroxynon_2_enal
   }
 
   branch from h side left {
     h
-    <-> . +4_chloro_2_fluoromuconate +o2
-    5_chloro_3_fluorocatechol
+    <-> ec_3_2_2_5 [3.2.2.5] +nicotinamide_guanine_dinucleotide +nicotinamide
+    cyclic_gdp_ribose
   }
 
   branch from h side right {
     h
-    <-> . +2_chloro_4_fluoromuconolactone
-    2_chloro_4_fluoromuconate
+    <-> ec_1_2_1_5 [1.2.1.5] +decanoate +nadph +decanal +h2o
+    nadp
   }
 
   branch from o2 side left {
     o2
-    <-> . +5_hydroxymethylfurfural +h2o2
-    2_5_furandimethanol
+    <-> ec_1_3_3_6 [1.3.3.6] +2e_9z_octadecadienoyl_coa +h2o2
+    9z_octadecenoyl_coa
   }
 
   branch from o2 side right {
     o2
-    <-> . +s_scoulerine +h +h2o2
-    dehydroscoulerine
+    <-> ec_1_5_3_16 [1.5.3.16] +alpha_methylspermidine +h2o2 +3_aminopropanal +h +h2o
+    alpha_methylspermine
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +2s_3_hydroxy_1_4_hydroxy_3_methoxyphenyl_2_2_me
-    alphas_betas_guaiacylglycerol_beta_guaiacyl_eth
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +3_nitrobenzaldehyde
+    3_nitrobenzyl_alcohol
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +4r_perillyl_aldehyde +h +o2 +h2o
-    4r_4_1_methylethenyl_1_cyclohexenecarboxylic_ac
+    <-> ec_1_1_1_21 [1.1.1.21] +nadh +d_fucopyranose +h
+    1_deoxy_d_glucitol
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_21 [3.2.1.21] +4_methylumbelliferyl_d_glucoside +4_methylumbelliferone
-    glucose
+    <-> . +n_carbamoyl_d_hydroxyphenylglycine
+    5_p_hydroxyphenyl_hydantoin
   }
 
   branch from h2o side right {
     h2o
-    <-> . +glucose
-    beta_d_glcp_1_6_beta_d_glcp
+    <-> ec_3_5_1_88 [3.5.1.88] +2_2_2_amino_4_methylthio_1_oxobutyl_amino_4_meth +formate
+    n_formyl_l_methionyl_l_leucyl_l_phenylalaninate
   }
 
   branch from 2_hydroxy_3_methylbenzylidenepyruvic_acid side left {
     2_hydroxy_3_methylbenzylidenepyruvic_acid
     <-> .
     2_hydroxy_8_methylchromene_2_carboxylate
+  }
+
+  branch from 3_methylcatechol side right {
+    3_methylcatechol
+    <-> ec_1_14_13_7 [1.14.13.7] +nadp +h2o +h +o2 +4_methylphenol
+    nadph
+  }
+
+  branch from 3_methylcatechol side left {
+    3_methylcatechol
+    <-> ec_1_14_13_7 [1.14.13.7] +nadp +h2o +h +o2 +nadph
+    2_hydroxytoluene
+  }
+
+  branch from co2 side right {
+    co2
+    <-> . +l_lathyrine +h2o +h +l_serine
+    2_amino_4_carboxypyrimidine
+  }
+
+  branch from co2 side left {
+    co2
+    <-> ec_4_1_1_77 [4.1.1.77] +4e_2_oxo_hex_4_enoate +h
+    e_5_methyl_2_oxo_3_hex_3_enedioate
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_184 [1.1.1.184] +nadh +5_dihydrotestosterone +h
+    5_androstane_3_17_diol
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_184 [1.1.1.184] +nadh +h +cyclohex_2_enone
+    cyclohex_2_en_1_ol
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_4_19_5 [3.4.19.5] +l_aspartate +l_arginine
+    asp_arg
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_4_21_104 [3.4.21.104] +p_tosyl_l_arginine +methanol
+    tame
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_1_1_184 [1.1.1.184] +indan_1_one +h +nad
+    r_indan_1_ol
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> ec_1_1_1_184 [1.1.1.184] +4_pyridinecarboxaldehyde +h +nad
+    4_pyridinemethanol
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_2_1_37 [3.2.1.37] +2_nitrophenyl_beta_d_xylopyranoside +h2o +aldehydo_d_xylose
+    2_nitrophenol
+  }
+
+  branch from h side left {
+    h
+    <-> ec_1_1_1_21 [1.1.1.21] +d_fucopyranose +nadph +nadp
+    l_fucitol
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_1_3_10 [1.1.3.10] +2_keto_d_xylose +h2o2
+    aldehydo_d_xylose
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_4_3_3 [1.4.3.3] +d_isoleucine +h2o +nh4 +h2o2
+    3_methyl_2_oxopentanoate
+  }
+
+  branch from pyruvate side right {
+    pyruvate
+    <-> ec_2_7_1_40 [2.7.1.40] +8_bromoadenosine_5_diphosphate +h +phosphoenolpyruvate
+    8_bromoadenosine_5_triphosphate
   }
 }

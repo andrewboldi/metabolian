@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-d-galnac-1-3-d-galn "UDP to α-D-GalNAc-(1→3)-α-D-GalN…" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     udp
@@ -14,29 +14,5 @@ pathway udp-to-d-galnac-1-3-d-galn "UDP to α-D-GalNAc-(1→3)-α-D-GalN…" {
     udp_alpha_d_galactose
     <-> . +udp +alpha_d_gal_1_4_alpha_d_galnac_1_3_alpha_d_galna +h -udp_alpha_d_galactose
     d_galnac_1_3_d_galnac_diphospho_ditrans_octacis
-  }
-
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> ec_2_4_1_115 [2.4.1.115] +udp +peonidin_3_glucoside
-    3_5_7_trihydroxy_2_4_hydroxy_3_methoxyphenyl_chr
-  }
-
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> . +udp +cyanidin_5_o_glucoside +h
-    cyanidin
-  }
-
-  branch from udp_alpha_d_galactose side left {
-    udp_alpha_d_galactose
-    <-> ec_2_4_1_241 [2.4.1.241] +udp +1_16_0_2_18_2_digalactosyldiacylglycerol +h
-    1_9z_12z_octadecadienoyl_2_hexadecanoyl_3_beta_d
-  }
-
-  branch from udp_alpha_d_galactose side right {
-    udp_alpha_d_galactose
-    <-> ec_2_4_1_241 [2.4.1.241] +udp +1_16_0_2_18_3_digalactosyldiacylglycerol +h
-    1_9z_12z_15z_octadecatrienoyl_2_hexadecanoyl_3_b
   }
 }

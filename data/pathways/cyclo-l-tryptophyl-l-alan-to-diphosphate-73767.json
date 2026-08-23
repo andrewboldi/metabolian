@@ -1,0 +1,455 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "cyclo-l-tryptophyl-l-alan-to-diphosphate-73767",
+  "name": "cyclo(L-tryptophyl-L-alan… to diphosphate",
+  "category": "other",
+  "summary": "A 3-step route from cyclo(L-tryptophyl-L-alanyl) to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:73767"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:193002"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "cyclo_l_tryptophyl_l_alanyl",
+      "name": "cyclo(L-tryptophyl-L-alanyl)",
+      "short": "cyclo(L-tryptophyl-…",
+      "formula": "C14H15N3O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:193002"
+      }
+    },
+    {
+      "id": "dmapp",
+      "name": "Dimethylallyl diphosphate (DMAPP)",
+      "short": "Dimethylallyl PP…",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57623"
+      }
+    },
+    {
+      "id": "preechinulin",
+      "name": "preechinulin",
+      "formula": "C19H23N3O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:193003"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "neoechinulin_a",
+      "name": "neoechinulin A",
+      "formula": "C19H21N3O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:193004"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "variecolorin_g",
+      "name": "variecolorin G",
+      "formula": "C24H29N3O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:193009"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "cyclo(L-tryptophyl-L-alanyl) + dimethylallyl diphosphate = preechinulin + diphosphate",
+      "equation": "cyclo(L-tryptophyl-L-alanyl) + dimethylallyl diphosphate = preechinulin + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "cyclo_l_tryptophyl_l_alanyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dmapp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "preechinulin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:73767"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:73767"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "preechinulin + reduced [NADPH--hemoprotein reductase] + O2 = neoechinulin A + oxidized ...",
+      "equation": "preechinulin + reduced [NADPH--hemoprotein reductase] + O2 = neoechinulin A + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "preechinulin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "neoechinulin_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:73771"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:73771"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "neoechinulin A + dimethylallyl diphosphate = variecolorin G + diphosphate",
+      "equation": "neoechinulin A + dimethylallyl diphosphate = variecolorin G + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "neoechinulin_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dmapp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "variecolorin_g",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:73791"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:73791"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_cyclo_l_tryptophyl_l_alanyl_ala-leu-to-ammonium-37291",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cyclo_l_tryptophyl_l_alanyl"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ala-leu-to-ammonium-37291"
+      },
+      "note": "Shares cyclo(L-tryptophyl-L-alanyl) with Ala-Leu to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:193002"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cyclo_l_tryptophyl_l_alanyl_cyclo-l-tryptophyl-l-alan-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cyclo_l_tryptophyl_l_alanyl"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cyclo-l-tryptophyl-l-alan-to-diphosphate"
+      },
+      "note": "Shares cyclo(L-tryptophyl-L-alanyl) with cyclo(L-tryptophyl-L-alan… to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:193002"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cyclo_l_tryptophyl_l_alanyl_n-acetyl-d-muramoyl-l-ala-to-2-acetamido-3-o-1r",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cyclo_l_tryptophyl_l_alanyl"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyl-d-muramoyl-l-ala-to-2-acetamido-3-o-1r"
+      },
+      "note": "Shares cyclo(L-tryptophyl-L-alanyl) with N-acetyl-D-muramoyl-L-ala… to 2-acetamido-3-O-[(1R)-1-c….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:193002"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_preechinulin_2-acylphloroglucinol-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "preechinulin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-acylphloroglucinol-to-diphosphate"
+      },
+      "note": "Shares preechinulin with 2-acylphloroglucinol to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:193003"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_preechinulin_cyclo-l-tryptophyl-l-alan-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "preechinulin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cyclo-l-tryptophyl-l-alan-to-diphosphate"
+      },
+      "note": "Shares preechinulin with cyclo(L-tryptophyl-L-alan… to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:193003"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_preechinulin_n2-4-aminobutanoyl-l-ar-to-diphosphate-59628",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "preechinulin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n2-4-aminobutanoyl-l-ar-to-diphosphate-59628"
+      },
+      "note": "Shares preechinulin with N2-(4-aminobutanoyl)-L-ar… to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:193003"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_neoechinulin_a_2-glutathion-s-yl-1-4-h-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "neoechinulin_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-glutathion-s-yl-1-4-h-to-fmn"
+      },
+      "note": "Shares neoechinulin A with 2-(glutathion-S-yl)-1,4-h… to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:193004"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_neoechinulin_a_cyclo-l-tryptophyl-l-alan-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "neoechinulin_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cyclo-l-tryptophyl-l-alan-to-diphosphate"
+      },
+      "note": "Shares neoechinulin A with cyclo(L-tryptophyl-L-alan… to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:193004"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_variecolorin_g_cyclo-l-tryptophyl-l-alan-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "variecolorin_g"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cyclo-l-tryptophyl-l-alan-to-diphosphate"
+      },
+      "note": "Shares variecolorin G with cyclo(L-tryptophyl-L-alan… to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:193009"
+          }
+        ]
+      }
+    }
+  ]
+}

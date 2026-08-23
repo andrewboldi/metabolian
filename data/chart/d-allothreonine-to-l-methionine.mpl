@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-allothreonine-to-l-methionine "D-allothreonine to L-methionine" {
-  spacing 288
+  spacing 340
 
   spine at 0,0 {
     d_allothreonine
@@ -26,26 +26,14 @@ pathway d-allothreonine-to-l-methionine "D-allothreonine to L-methionine" {
 
   branch from glycine side left {
     glycine
-    <-> ec_2_6_1_44 [2.6.1.44] +alanine +pyruvate
-    glyoxylate
+    <-> . +hexacosanoyl_coa +coa +hplus
+    n_hexacosanoylglycinate
   }
 
   branch from glycine side right {
     glycine
-    <-> ec_2_3_1_192 [2.3.1.192] +phenylacetyl_coa +coa +hplus
-    phenylacetylglycine
-  }
-
-  branch from acetate side left {
-    acetate
-    <-> . +pyrrolizixenacetamide +h2o +hplus
-    3_amino_5_6_7_7a_tetrahydro_1h_pyrrolizin_1_one
-  }
-
-  branch from acetate side right {
-    acetate
-    <-> . +n_acetyl_d_glucosaminyl_1_4_n_acetyl_d_muramate +h2o
-    n_acetyl_d_glucosaminyl_1_4_d_muramate_zwitterio
+    <-> . +docosanoyl_coa +coa +hplus
+    n_docosanoylglycinate
   }
 
   branch from trans_coumaryl_acetate side left {
@@ -62,50 +50,50 @@ pathway d-allothreonine-to-l-methionine "D-allothreonine to L-methionine" {
 
   branch from acetate side left {
     acetate
-    <-> ec_1_2_2_2 [1.2.2.2] +ubiquinone_8 +pyruvate +h2o +ubiquinol_8
-    co2
+    <-> ec_3_5_1_17 [3.5.1.17] +l_lysine +h2o
+    n_6_acetyl_l_lysine
   }
 
   branch from acetate side right {
     acetate
-    <-> . +l_asparagine +h +h2o
-    n_acetyl_l_asparagine
+    <-> ec_1_2_5_2 [1.2.5.2] +h +pyrroloquinoline_quinol +acetaldehyde +h2o
+    pyrroloquinoline_quinone
   }
 
   branch from nadp side left {
     nadp
-    <-> . +h +ebastine +o2 +nadph +h2o
-    hydroxyebastine
+    <-> . +h +3beta_hydroxy_cholest_5_en_26_oate +nadph +h2o
+    3beta_hydroxy_5_cholestenal
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_13_17 [1.14.13.17] +h +cholesterol +o2 +nadph +h2o
-    7alpha_hydroxycholesterol
+    <-> . +h +15_oxo_lipoxin_a4 +nadph
+    13_14_dihydro_15_oxo_lipoxin_a4
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_38 [2.1.1.38] +o_demethylpuromycin +sam +hplus
-    puromycin
+    <-> ec_2_1_1_190 [2.1.1.190] +uridine_5_monophosphate_1 +sam +hplus
+    5_methyluridine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_62 [2.1.1.62] +5_n7_methyl_5_triphosphoguanosine_2_o_methyladen +sam +hplus
-    5_n7_methyl_5_triphosphoguanosine_n6_methyl_2_o
+    <-> ec_2_1_1_191 [2.1.1.191] +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
   }
 
   branch from s_s_adenosyl_l_methionine side left {
     s_s_adenosyl_l_methionine
-    <-> ec_2_1_1_49 [2.1.1.49] +s_adenosyl_l_homocysteine +h +n_methylpyrazole
-    1h_pyrazole
+    <-> ec_2_1_1_49 [2.1.1.49] +s_adenosyl_l_homocysteine +n_methyltryptamine +h
+    tryptamine
   }
 
   branch from s_s_adenosyl_l_methionine side right {
     s_s_adenosyl_l_methionine
-    <-> ec_2_1_1_11 [2.1.1.11] +s_adenosyl_l_homocysteine +magnesium_protoporphyrin_monomethyl_ester
-    magnesium_protoporphyrin
+    <-> ec_2_1_1_118 [2.1.1.118] +s_adenosyl_l_homocysteine +palmatine +h
+    columbamine
   }
 
   branch from l_methionine side left {
@@ -118,5 +106,77 @@ pathway d-allothreonine-to-l-methionine "D-allothreonine to L-methionine" {
     l_methionine
     <-> . +5_deoxyadenosine +2_methylbacteriohopanetetrol +cob_iii_alamin +methylcobalamin +bacteriohopanetetrol
     s_adenosyl_l_methionine
+  }
+
+  branch from d_allothreonine side left {
+    d_allothreonine
+    <-> . +o2 +h2o +h2o2 +nh3
+    r_3_hydroxy_2_oxobutanoate
+  }
+
+  branch from glycine side right {
+    glycine
+    <-> . +chenodeoxycholoyl_coa +coa +hplus
+    glycochenodeoxycholate
+  }
+
+  branch from glycine side left {
+    glycine
+    <-> . +icosanoyl_coa +coa +hplus
+    n_icosanoylglycinate
+  }
+
+  branch from trans_anol side right {
+    trans_anol
+    <-> . +trans_p_coumaryl_alcohol +h +nadph +nadp
+    h2o
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +adrenochrome +h +nadp
+    adrenochrome_o_semiquinone
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +h +nadp +noradrenochrome_o_semiquinone
+    noradrenochrome
+  }
+
+  branch from acetate side left {
+    acetate
+    <-> . +nadh +h +benzoate +nad +h2o
+    e_cinnamate
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> ec_2_8_3_8 [2.8.3.8] +acetyl_coa +h +3_hydroxy_5_oxohexanoate
+    3_hydroxy_5_oxohexanoyl_coa
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +h +25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol +nadph +h2o
+    3alpha_7alpha_12alpha_trihydroxy_5beta_cholestan
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +cholestane_3_7_12_24_25_pentol +h +nadph
+    3alpha_7alpha_12alpha_25_tetrahydroxy_5beta_chol
+  }
+
+  branch from sam side left {
+    sam
+    <-> ec_2_1_1_193 [2.1.1.193] +uridine_5_monophosphate_1 +sah +hplus
+    n3_methyluridine_5_monophosphate_1
+  }
+
+  branch from sam side right {
+    sam
+    <-> ec_2_1_1_198 [2.1.1.198] +cytidine_5_monophosphate_1 +sah +hplus
+    2_o_methylcytidine_5_monophosphate_1
   }
 }

@@ -83,40 +83,71 @@
       }
     },
     {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "15_dehydroprostaglandin_a1",
+      "name": "15-dehydroprostaglandin A1",
+      "short": "15-dehydroprostagla…",
+      "formula": "C20H29O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:85072"
+      }
+    },
+    {
       "id": "nadh",
       "name": "NADH",
       "formula": "C21H27N7O14P2",
       "charge": -2,
       "xrefs": {
-        "metanetx": "MNXM10"
+        "chebi": "CHEBI:57945"
       }
     },
     {
-      "id": "15_dehydro_prostaglandin_b1",
-      "name": "15-dehydro-prostaglandin B1",
-      "short": "15-dehydro-prostagl…",
-      "formula": "C20H29O4",
+      "id": "2_hydroxy_17_estradiol",
+      "name": "2-hydroxy-17β-estradiol",
+      "short": "2-hydroxy-17β-estra…",
+      "formula": "C18H24O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28744"
+      }
+    },
+    {
+      "id": "2_hydroxy_17_estradiol_2_o_d_glucuronide",
+      "name": "2-hydroxy-17β-estradiol 2-O-(β-D-glucuronide)",
+      "short": "2-hydroxy-17β-estra…",
+      "formula": "C24H31O9",
       "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM1132192"
+        "chebi": "CHEBI:136933"
       }
     },
     {
-      "id": "h",
-      "name": "H",
-      "formula": "H",
-      "charge": 1,
+      "id": "4_hydroxy_17_estradiol",
+      "name": "4-hydroxy-17β-estradiol",
+      "short": "4-hydroxy-17β-estra…",
+      "formula": "C18H24O3",
+      "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM1"
+        "chebi": "CHEBI:62845"
       }
     },
     {
-      "id": "nad",
-      "name": "NAD",
-      "formula": "C21H26N7O14P2",
+      "id": "4_hydroxy_17_estradiol_3_o_d_glucuronide",
+      "name": "4-hydroxy-17β-estradiol 3-O-(β-D-glucuronide)",
+      "short": "4-hydroxy-17β-estra…",
+      "formula": "C24H31O9",
       "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM8"
+        "chebi": "CHEBI:136936"
       }
     }
   ],
@@ -126,13 +157,6 @@
       "name": "prostaglandin-A1 Delta-isomerase",
       "ec": [
         "5.3.3.9"
-      ]
-    },
-    {
-      "id": "ec_1_1_1_141",
-      "name": "15-hydroxyprostaglandin dehydrogenase (NAD(+))",
-      "ec": [
-        "1.1.1.141"
       ]
     }
   ],
@@ -250,25 +274,11 @@
     },
     {
       "id": "r4",
-      "name": "15-hydroxyprostaglandin dehydrogenase (NAD(+))",
-      "ec": "1.1.1.141",
+      "name": "prostaglandin A1 + NAD(+) = 15-oxo-prostaglandin A1 + NADH + H(+)",
+      "equation": "prostaglandin A1 + NAD(+) = 15-oxo-prostaglandin A1 + NADH + H(+)",
       "substrates": [
         {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "15_dehydro_prostaglandin_b1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "prostaglandin_b1",
+          "metabolite": "prostaglandin_a1",
           "stoichiometry": 1
         },
         {
@@ -276,22 +286,361 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
+      "products": [
         {
-          "enzyme": "ec_1_1_1_141"
+          "metabolite": "15_dehydroprostaglandin_a1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "metanetx": "MNXR192893"
+        "rhea": "RHEA:41263"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR192893"
+            "db": "Rhea",
+            "id": "RHEA:41263"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "2-hydroxy-17beta-estradiol + UDP-alpha-D-glucuronate = 17beta-estradiol 2-O-(beta-D-glu...",
+      "equation": "2-hydroxy-17beta-estradiol + UDP-alpha-D-glucuronate = 17beta-estradiol 2-O-(beta-D-glucuronate) + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "2_hydroxy_17_estradiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucuronate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxy_17_estradiol_2_o_d_glucuronide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:53032"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53032"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "4-hydroxy-17beta-estradiol + UDP-alpha-D-glucuronate = 4-hydroxy-17beta-estradiol 3-O-(...",
+      "equation": "4-hydroxy-17beta-estradiol + UDP-alpha-D-glucuronate = 4-hydroxy-17beta-estradiol 3-O-(beta-D-glucuronate) + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "4_hydroxy_17_estradiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucuronate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxy_17_estradiol_3_o_d_glucuronide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:53036"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53036"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_prostaglandin_a1_isethionate-to-3-sulfonatopyruvate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_a1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isethionate-to-3-sulfonatopyruvate"
+      },
+      "note": "Shares prostaglandin A1 with isethionate to 3-sulfonatopyruvate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57398"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_a1_thromboxane-a1-to-15-dehydro-prostaglandin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_a1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "thromboxane-a1-to-15-dehydro-prostaglandin"
+      },
+      "note": "Shares prostaglandin A1 with thromboxane A1 to 15-dehydro-prostaglandin….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57398"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_b1_propanoate-to-h2o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_b1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "propanoate-to-h2o2"
+      },
+      "note": "Shares prostaglandin B1 with propanoate to H2O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133393"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_hydroxy_17_estradiol_17-estradiol-to-sulfate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_hydroxy_17_estradiol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "17-estradiol-to-sulfate"
+      },
+      "note": "Shares 2-hydroxy-17β-estradiol with 17α-estradiol to sulfate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28744"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_hydroxy_17_estradiol_19-hydroxyandrostenedione-to-4-hydroxyestrone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_hydroxy_17_estradiol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "19-hydroxyandrostenedione-to-4-hydroxyestrone"
+      },
+      "note": "Shares 2-hydroxy-17β-estradiol with 19-Hydroxyandrostenedione to 4-hydroxyestrone….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28744"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_hydroxy_17_estradiol_leukotriene-c4-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_hydroxy_17_estradiol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "leukotriene-c4-to-hydrogen-donor"
+      },
+      "note": "Shares 2-hydroxy-17β-estradiol with leukotriene C4 to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28744"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_hydroxy_17_estradiol_methyl-group-to-1-hexadecyl-sn-glycero-3",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_hydroxy_17_estradiol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "methyl-group-to-1-hexadecyl-sn-glycero-3"
+      },
+      "note": "Shares 2-hydroxy-17β-estradiol with methyl group to 1-hexadecyl-sn-glycero-3-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28744"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_hydroxy_17_estradiol_s-2e-6e-farnesyl-l-cy-to-s-adenosyl-l-homocystei",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_hydroxy_17_estradiol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2e-6e-farnesyl-l-cy-to-s-adenosyl-l-homocystei"
+      },
+      "note": "Shares 2-hydroxy-17β-estradiol with S-[(2E,6E)-farnesyl]-L-cy… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28744"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_hydroxy_17_estradiol_methyl-group-to-1-hexadecyl-sn-glycero-3",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_hydroxy_17_estradiol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "methyl-group-to-1-hexadecyl-sn-glycero-3"
+      },
+      "note": "Shares 4-hydroxy-17β-estradiol with methyl group to 1-hexadecyl-sn-glycero-3-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62845"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_hydroxy_17_estradiol_o3-d-galactosyl-1-4-to-o3-n-acetyl-d-glucosam",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_hydroxy_17_estradiol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "o3-d-galactosyl-1-4-to-o3-n-acetyl-d-glucosam"
+      },
+      "note": "Shares 4-hydroxy-17β-estradiol with O3-(β-D-galactosyl-(1→4)-… to O3-(N-acetyl-α-D-glucosam….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62845"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_hydroxy_17_estradiol_r-reticulinium-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_hydroxy_17_estradiol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-reticulinium-to-hydrogen-donor"
+      },
+      "note": "Shares 4-hydroxy-17β-estradiol with (R)-reticulinium to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62845"
           }
         ]
       }

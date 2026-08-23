@@ -1,0 +1,521 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "all-trans-18-hydroxyretin-to-h2o",
+  "name": "all-trans-18-hydroxyretin… to H2O",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from all-trans-18-hydroxyretinoate to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR146275"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:139258"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "all_trans_18_hydroxyretinoate",
+      "name": "all-trans-18-hydroxyretinoate",
+      "short": "all-trans-18-hydrox…",
+      "formula": "C20H27O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:139258"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "all_trans_retinoate",
+      "name": "all-trans-retinoate",
+      "formula": "C20H27O2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1364381"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "13_cis_retinoate",
+      "name": "13-cis-retinoate",
+      "formula": "C20H27O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:169952"
+      }
+    },
+    {
+      "id": "rac_5_6_epoxy_retinoate",
+      "name": "Rac-5,6-epoxy-retinoate",
+      "short": "Rac-5,6-epoxy-retin…",
+      "formula": "C20H27O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM726412"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_14_1",
+      "name": "unspecific monooxygenase",
+      "ec": [
+        "1.14.14.1"
+      ],
+      "xrefs": {
+        "uniprot": "P04798"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "unspecific monooxygenase",
+      "ec": "1.14.14.1",
+      "substrates": [
+        {
+          "metabolite": "all_trans_18_hydroxyretinoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "all_trans_retinoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR146275"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR146275"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR103424",
+      "substrates": [
+        {
+          "metabolite": "all_trans_retinoate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "13_cis_retinoate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR103424"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR103424"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR146282",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "13_cis_retinoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "rac_5_6_epoxy_retinoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR146282"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR146282"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_all_trans_18_hydroxyretinoate_dammarenediol-ii-to-d-glucopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_18_hydroxyretinoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dammarenediol-ii-to-d-glucopyranose"
+      },
+      "note": "Shares all-trans-18-hydroxyretinoate with dammarenediol-II to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:139258"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinoate_11-cis-retinal-to-9-cis-retinoate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "11-cis-retinal-to-9-cis-retinoate"
+      },
+      "note": "Shares all-trans-retinoate with 11-cis-retinal to 9-cis-retinoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364381"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinoate_24-methylidenelophenol-to-avenasterol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "24-methylidenelophenol-to-avenasterol"
+      },
+      "note": "Shares all-trans-retinoate with 24-methylidenelophenol to avenasterol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364381"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinoate_glycosmisate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "glycosmisate-to-h2o"
+      },
+      "note": "Shares all-trans-retinoate with glycosmisate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364381"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinoate_retinal-to-all-trans-neoxanthin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "retinal-to-all-trans-neoxanthin"
+      },
+      "note": "Shares all-trans-retinoate with retinal to all-trans-neoxanthin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364381"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinoate_retncoa-c-to-1-o-4-oxoretinoyl-d-g",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "retncoa-c-to-1-o-4-oxoretinoyl-d-g"
+      },
+      "note": "Shares all-trans-retinoate with Retncoa c to 1-O-(4-oxoretinoyl)-β-D-g….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364381"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_13_cis_retinoate_13-cis-retinol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "13_cis_retinoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "13-cis-retinol-to-h2o"
+      },
+      "note": "Shares 13-cis-retinoate with 13-cis-retinol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:169952"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_13_cis_retinoate_hesperidin-to-3-o-beta-glucosyl-2-ox",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "13_cis_retinoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hesperidin-to-3-o-beta-glucosyl-2-ox"
+      },
+      "note": "Shares 13-cis-retinoate with hesperidin to 3-(O-beta-glucosyl)-(2-ox….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:169952"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_13_cis_retinoate_l-dopachromate-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "13_cis_retinoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-dopachromate-to-o2"
+      },
+      "note": "Shares 13-cis-retinoate with L-dopachromate to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:169952"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_13_cis_retinoate_o-s-fatty-acylpantethein-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "13_cis_retinoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "o-s-fatty-acylpantethein-to-h2o"
+      },
+      "note": "Shares 13-cis-retinoate with O-(S-fatty acylpantethein… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:169952"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_rac_5_6_epoxy_retinoate_2e-4z-7e-2-hydroxy-6-ox-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "rac_5_6_epoxy_retinoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2e-4z-7e-2-hydroxy-6-ox-to-h2o"
+      },
+      "note": "Shares Rac-5,6-epoxy-retinoate with (2E,4Z,7E)-2-hydroxy-6-ox… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM726412"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_rac_5_6_epoxy_retinoate_udp-to-triiodothyronine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "rac_5_6_epoxy_retinoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-triiodothyronine"
+      },
+      "note": "Shares Rac-5,6-epoxy-retinoate with UDP to triiodothyronine….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM726412"
+          }
+        ]
+      }
+    }
+  ]
+}

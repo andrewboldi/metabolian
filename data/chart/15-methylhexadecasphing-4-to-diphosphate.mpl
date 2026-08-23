@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 15-methylhexadecasphing-4-to-diphosphate "15-methylhexadecasphing-4… to diphosphate" {
-  spacing 280
+  spacing 256
 
   spine at 0,0 {
     15_methylhexadecasphing_4_enine_1_phosphate
@@ -14,29 +14,5 @@ pathway 15-methylhexadecasphing-4-to-diphosphate "15-methylhexadecasphing-4… t
     n_methylethanolaminium_phosphate
     <-> ec_2_7_7_57 [2.7.7.57] +ctp +hplus -ppi
     cdp_n_methylethanolamine
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +2_deoxycytidine_5_monophosphate_1 +sam +atp +h2o +adp +pi +hplus
-    5_methyl_dcmp_1
-  }
-
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_380 [2.1.1.380] +3_amino_2_4_dihydroxybenzoate +sam +hplus
-    3_amino_2_hydroxy_4_methoxybenzoate
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_207 [4.2.3.207] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +h2o
-    neoverrucosan_5_ol
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_208 [4.2.3.208] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +h2o
-    verrucosan_2_ol
   }
 }

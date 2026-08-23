@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway benzoylagmatinium-to-glycine "benzoylagmatinium to glycine" {
-  spacing 236
+  spacing 284
 
   spine at 0,0 {
     benzoylagmatinium
@@ -32,49 +32,97 @@ pathway benzoylagmatinium-to-glycine "benzoylagmatinium to glycine" {
 
   branch from agmatinium side left {
     agmatinium
-    <-> ec_2_3_1_64 [2.3.1.64] +4_coumaroyl_coa +coa +hplus
-    p_coumaroylagmatine
-  }
-
-  branch from agmatinium side right {
-    agmatinium
     <-> ec_3_5_3_20 [3.5.3.20] +1_4_diguanidiniumylbutane +h2o
     urea
   }
 
+  branch from agmatinium side right {
+    agmatinium
+    <-> ec_2_7_3_10 [2.7.3.10] +atp +adp +hplus
+    n4_phosphonatoagmatine
+  }
+
   branch from benzoyl_coa side left {
     benzoyl_coa
-    <-> . +butan_1_ol +coa
-    butyl_benzoate
+    <-> . +3_hydroxybenzyl_alcohol +coa
+    3_hydroxybenzyl_benzoate
   }
 
   branch from benzoyl_coa side right {
     benzoyl_coa
-    <-> . +ethanol +coa
-    ethyl_benzoate
+    <-> . +geraniol +coa
+    geranyl_benzoate
   }
 
   branch from ppi side left {
     ppi
-    <-> . +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    1r_2r_3r_prephytoene_diphosphate
+    <-> . +gtp
+    precursor_z
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_1 [2.5.1.1] +ipp +dmapp
-    gpp
+    <-> ec_4_2_3_45 [4.2.3.45] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
+    phyllocladan_16_ol
   }
 
   branch from glycine side left {
     glycine
-    <-> ec_2_6_1_45 [2.6.1.45] +glyoxylate +serine
-    3_hydroxypyruvate
+    <-> ec_2_1_1_156 [2.1.1.156] +sam +sah +hplus
+    dmglycine
   }
 
   branch from glycine side right {
     glycine
-    <-> . +l_kynurenine +glyoxylate
-    4_2_aminophenyl_2_4_dioxobutanoate
+    <-> ec_2_1_1_162 [2.1.1.162] +sam +sah +hplus
+    betaine
+  }
+
+  branch from agmatinium side left {
+    agmatinium
+    <-> ec_4_1_1_19 [4.1.1.19] +hplus +co2
+    arginine
+  }
+
+  branch from agmatinium side right {
+    agmatinium
+    <-> ec_2_5_1_104 [2.5.1.104] +s_adenosylmethioninaminium +5_s_methyl_5_thioadenosine +hplus
+    n1_aminopropylagmatine
+  }
+
+  branch from benzoyl_coa side left {
+    benzoyl_coa
+    <-> . +z_hex_3_en_1_ol +coa
+    3z_hex_3_en_1_yl_benzoate
+  }
+
+  branch from benzoyl_coa side right {
+    benzoyl_coa
+    <-> . +octan_1_ol +coa
+    octyl_benzoate
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_2_5_1_75 [2.5.1.75] +adenosine_5_monophosphate_1 +dmapp
+    n6_dimethylallyladenine_5_monophosphate_1
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_6_2_1_36 [6.2.1.36] +3_hydroxypropionate +atp +coa +amp
+    3_hydroxypropanoyl_coa
+  }
+
+  branch from glycine side left {
+    glycine
+    <-> ec_2_6_1_112 [2.6.1.112] +s_2_ureidoglycine +glyoxylate
+    oxalurate
+  }
+
+  branch from glycine side right {
+    glycine
+    <-> . +palmitoyl_coa +hplus +co2 +coa
+    1_deoxymethyl_3_dehydrosphinganine
   }
 }

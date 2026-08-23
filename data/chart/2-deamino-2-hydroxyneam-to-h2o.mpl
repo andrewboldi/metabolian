@@ -18,27 +18,15 @@ pathway 2-deamino-2-hydroxyneam-to-h2o "2'-deamino-2'-hydroxyneam… to H2O" {
     atp
   }
 
-  branch from glutamate side left {
-    glutamate
-    <-> . +amp_3_end_1 +atp +amp +ppi
-    3_l_glutamate_adenylyl_1_group
-  }
-
-  branch from glutamate side right {
-    glutamate
-    <-> . +n_oleoyl_l_glutamate +h2o
-    oleate
-  }
-
   branch from o2 side left {
     o2
-    <-> . +h +13_hydroxy_gama_tocopherol +nadph +nadp +h2o
-    13_carboxy_gamma_tocopherol
+    <-> ec_1_2_3_1 [1.2.3.1] +h +n_methyl_4_pyridone_3_carboxamide +h2o2 +h2o
+    1_methylnicotinamide
   }
 
   branch from o2 side right {
     o2
-    <-> . +25r_cholest_5_en_3beta_7alpha_26_triol +h +nadph +3beta_7alpha_dihydroxy_5_cholestenoate +h2o
+    <-> ec_1_14_13_8 [1.14.13.8] +h +1_methyl_4_phenyl_1_2_3_6_tetrahydropyridine +nadph +1_methyl_4_phenyl_1_2_3_6_tetrahydropyridine_n_o +h2o
     nadp
   }
 
@@ -54,33 +42,123 @@ pathway 2-deamino-2-hydroxyneam-to-h2o "2'-deamino-2'-hydroxyneam… to H2O" {
     3_deamino_3_hydroxykanamycin_x
   }
 
-  branch from kanamycin_x side left {
-    kanamycin_x
-    <-> . +h +h2o2 +o2
-    6_oxokanamycin_x
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol
   }
 
   branch from atp side right {
     atp
-    <-> . +fructosylglycine +h +adp
-    fructoseglycine_ketone_3_phosphate
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +d_glucitol_3_phosphate +adp +h
-    d_sorbitol
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +5_s_6_s_epoxy_15_r_hydroxyeicosatetraenoate
-    15_epi_lipoxin_a4
+    <-> . +h +adp +phosphate +h2o
+    3alpha_7alpha_dihydroxy_5beta_cholestan_26_oic_a
   }
 
   branch from h2o side left {
     h2o
-    <-> . +5_s_6_s_epoxy_15_r_hydroxyeicosatetraenoate +h
-    15_epi_lipoxin_b4
+    <-> ec_3_6_1_14 [3.6.1.14] +itp +h +phosphate
+    inosine_5_tetraphosphate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +d_fructofuranose +phosphate
+    beta_d_fructose_2_phosphate
+  }
+
+  branch from 2_deamino_2_hydroxyneamine side left {
+    2_deamino_2_hydroxyneamine
+    <-> ec_2_4_1_301 [2.4.1.301] +udp_d_kanosamine +udp +hplus
+    kanamycin_a
+  }
+
+  branch from 2_deamino_2_hydroxyneamine side right {
+    2_deamino_2_hydroxyneamine
+    <-> . +udp_d_glucose +udp +hplus
+    kanamycin_d
+  }
+
+  branch from h2o2 side left {
+    h2o2
+    <-> ec_1_11_1_14 [1.11.1.14] +3_4_dimethoxybenzaldehyde +1_3_4_dimethoxyphenyl_ethane_1_2_diol +h2o
+    1_2_bis_3_4_dimethoxyphenyl_propane_1_3_diol
+  }
+
+  branch from h2o2 side right {
+    h2o2
+    <-> ec_1_8_3_5 [1.8.3.5] +polyprenal +l_cysteine +o2 +h2o
+    s_polyprenyl_l_cysteine
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +h +cholest_5_ene +nadph +nadp +h2o
+    5_6beta_epoxy_5beta_cholestane
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +h +cholest_5_ene +nadph +nadp +h2o
+    5_6alpha_epoxy_5alpha_cholestane
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_7_2_13 [2.7.2.13] +atp +l_glutamate +adp
+    l_alpha_glutamyl_phosphate
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_8_2_3 [2.8.2.3] +adenosine_3_5_bisphosphate +benzenamine_sulfate +aniline
+    3_phosphoadenylyl_sulfate
+  }
+
+  branch from adp side left {
+    adp
+    <-> ec_2_7_1_102 [2.7.1.102] +h +atp +d_hamamelose
+    d_hamamelose_2_1_phosphate
+  }
+
+  branch from adp side right {
+    adp
+    <-> . +cyclopropanecarboxylic_acid +h +atp +coa +phosphate
+    cyclopropanecarboxyl_coa
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> ec_3_1_3_10 [3.1.3.10] +alpha_d_glucose +h2o
+    alpha_d_glucose_1_phosphate
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_2_4_2_2 [2.4.2.2] +pyrimidine +alpha_d_ribose_1_phosphate +h
+    pyrimidine_nucleoside
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_6_2_1_23 [6.2.1.23] +diphosphate +amp +omega_carboxyacyl_coa +h +alpha_omega_dicarboxylic_acid
+    coa
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +diphosphate +2_4_dichlorobenzoyl_coa +amp +coa
+    2_4_dichlorobenzoate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +d_galacturonolactone +h
+    beta_d_galacturonate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_2_2_8 [3.2.2.8] +d_ribose +h +pyrimidine_nucleoside
+    pyrimidine
   }
 }

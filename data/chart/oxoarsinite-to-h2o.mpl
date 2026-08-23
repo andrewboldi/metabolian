@@ -4,39 +4,17 @@
 # edit the generator, not this file.
 
 pathway oxoarsinite-to-h2o "oxoarsinite to H2O" {
-  spacing 264
+  spacing 152
 
   spine at 0,0 {
     oxoarsinite
     <-> . +h2o
     arsenite
-    <-> . +gsh +hplus -h2o
-    arsenic_triglutathione
-    <-> ec_7_6_2_3 [7.6.2.3] +h +adp +phosphate -arsenic_triglutathione -h2o
-    atp
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    1_2_di_o_palmitoyl_sn_glycero_3_phosphocholine
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    1_hexadecanoyl_sn_glycero_3_phosphate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_threonine +l_methionine +l_arginine
-    threonyl_methionyl_arginine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_threonine +l_arginine +l_phenylalanine
-    threonyl_phenylalanyl_arginine
+    <-> . +d_ribose +r_lipoate -h -ribose_1_arsenate
+    r_dihydrolipoate
+    <-> . +l_dehydroascorbic_acid -h -l_ascorbate
+    r_lipoate
+    <-> . +l_lysine -h2o
+    lipoyllysine
   }
 }

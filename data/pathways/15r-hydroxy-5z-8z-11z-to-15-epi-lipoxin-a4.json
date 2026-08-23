@@ -1,0 +1,372 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "15r-hydroxy-5z-8z-11z-to-15-epi-lipoxin-a4",
+  "name": "(15R)-hydroxy-(5Z,8Z,11Z,… to 15-epi-lipoxin A4",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from (15R)-hydroxy-(5Z,8Z,11Z,13E)-eicosatetraenoate to 15-epi-lipoxin A4, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR164926"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "15r_hydroxy_5z_8z_11z_13e_eicosatetraenoate",
+      "name": "(15R)-hydroxy-(5Z,8Z,11Z,13E)-eicosatetraenoate",
+      "short": "hydroxy-(5Z,8Z,11Z,…",
+      "formula": "C20H31O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM734295"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "5s_6e_8z_11z_13e_15r_5_hydroperoxy_15_hydroxyic",
+      "name": "(5S,6E,8Z,11Z,13E,15R)-5-hydroperoxy-15-hydroxyicosa-6,8,11,13-tetraenoate",
+      "short": "(5S,6E,8Z,11Z,13E,1…",
+      "formula": "C20H31O5",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM819444"
+      }
+    },
+    {
+      "id": "7e_9e_11z_13e_15r_5s_6s_5_6_epoxyicosa_15_hydro",
+      "name": "(7E,9E,11Z,13E,15R)-(5S,6S)-5,6-epoxyicosa-15-hydroxy-7,9,11,13-tetraenoate",
+      "short": "(7E,9E,11Z,13E,15R)…",
+      "formula": "C20H29O4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM819445"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "15_epi_lipoxin_a4",
+      "name": "15-epi-lipoxin A4",
+      "formula": "C20H32O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:72789"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_13_11_34",
+      "name": "arachidonate 5-lipoxygenase",
+      "ec": [
+        "1.13.11.34"
+      ],
+      "xrefs": {
+        "uniprot": "P09917"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "arachidonate 5-lipoxygenase",
+      "ec": "1.13.11.34",
+      "substrates": [
+        {
+          "metabolite": "15r_hydroxy_5z_8z_11z_13e_eicosatetraenoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5s_6e_8z_11z_13e_15r_5_hydroperoxy_15_hydroxyic",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_34"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR164926"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR164926"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "arachidonate 5-lipoxygenase",
+      "ec": "1.13.11.34",
+      "substrates": [
+        {
+          "metabolite": "5s_6e_8z_11z_13e_15r_5_hydroperoxy_15_hydroxyic",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7e_9e_11z_13e_15r_5s_6s_5_6_epoxyicosa_15_hydro",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_34"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR164927"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR164927"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR123757",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "7e_9e_11z_13e_15r_5s_6s_5_6_epoxyicosa_15_hydro",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "15_epi_lipoxin_a4",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR123757"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR123757"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_15r_hydroxy_5z_8z_11z_13e_eicosatetraenoate_2e-2-hydroxypenta-2-4-d-to-3-carboxy-2-hydroxym",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "15r_hydroxy_5z_8z_11z_13e_eicosatetraenoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2e-2-hydroxypenta-2-4-d-to-3-carboxy-2-hydroxym"
+      },
+      "note": "Shares (15R)-hydroxy-(5Z,8Z,11Z,13E)-eicosatetraenoate with (2E)-2-hydroxypenta-2,4-d… to 3-Carboxy-2-hydroxymucona….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM734295"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_15r_hydroxy_5z_8z_11z_13e_eicosatetraenoate_8-hydroxy-2-deoxyguanosi-to-2-deoxyguanosine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "15r_hydroxy_5z_8z_11z_13e_eicosatetraenoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "8-hydroxy-2-deoxyguanosi-to-2-deoxyguanosine"
+      },
+      "note": "Shares (15R)-hydroxy-(5Z,8Z,11Z,13E)-eicosatetraenoate with 8-hydroxy-2'-deoxyguanosi… to 2'-deoxyguanosine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM734295"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_15r_hydroxy_5z_8z_11z_13e_eicosatetraenoate_adenylyl-selenate-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "15r_hydroxy_5z_8z_11z_13e_eicosatetraenoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "adenylyl-selenate-to-nadph"
+      },
+      "note": "Shares (15R)-hydroxy-(5Z,8Z,11Z,13E)-eicosatetraenoate with adenylyl selenate to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM734295"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_15r_hydroxy_5z_8z_11z_13e_eicosatetraenoate_glucoerucin-to-h",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "15r_hydroxy_5z_8z_11z_13e_eicosatetraenoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "glucoerucin-to-h"
+      },
+      "note": "Shares (15R)-hydroxy-(5Z,8Z,11Z,13E)-eicosatetraenoate with glucoerucin to H.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM734295"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_15r_hydroxy_5z_8z_11z_13e_eicosatetraenoate_propanoate-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "15r_hydroxy_5z_8z_11z_13e_eicosatetraenoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "propanoate-to-o2"
+      },
+      "note": "Shares (15R)-hydroxy-(5Z,8Z,11Z,13E)-eicosatetraenoate with propanoate to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM734295"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7e_9e_11z_13e_15r_5s_6s_5_6_epoxyicosa_15_hydro_o-phospho-l-serine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7e_9e_11z_13e_15r_5s_6s_5_6_epoxyicosa_15_hydro"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "o-phospho-l-serine-to-h2o"
+      },
+      "note": "Shares (7E,9E,11Z,13E,15R)-(5S,6S)-5,6-epoxyicosa-15-hydroxy-7,9,11,13-tetraenoate with O-phospho-L-serine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM819445"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_15_epi_lipoxin_a4_2e-2-hydroxypenta-2-4-d-to-3-carboxy-2-hydroxym",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "15_epi_lipoxin_a4"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2e-2-hydroxypenta-2-4-d-to-3-carboxy-2-hydroxym"
+      },
+      "note": "Shares 15-epi-lipoxin A4 with (2E)-2-hydroxypenta-2,4-d… to 3-Carboxy-2-hydroxymucona….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:72789"
+          }
+        ]
+      }
+    }
+  ]
+}

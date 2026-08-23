@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-acetylarylalkylamine-to-aromatic-carboxylate "N-acetylarylalkylamine to aromatic carboxylate" {
-  spacing 252
+  spacing 282
 
   spine at 0,0 {
     n_acetylarylalkylamine
@@ -18,14 +18,14 @@ pathway n-acetylarylalkylamine-to-aromatic-carboxylate "N-acetylarylalkylamine t
 
   branch from acetate side left {
     acetate
-    <-> ec_4_1_3_22 [4.1.3.22] +pyruvate
-    l_citramalate
+    <-> ec_3_1_1_66 [3.1.1.66] +5_3_4_diacetoxybut_1_ynyl_2_2_bithiophene +h2o +hplus
+    5_3_hydroxy_4_acetoxybut_1_ynyl_2_2_bithiophene
   }
 
   branch from acetate side right {
     acetate
-    <-> ec_3_7_1_6 [3.7.1.6] +h2o +pyruvate +hplus
-    acetylpyruvate
+    <-> ec_2_8_3_10 [2.8.3.10] +citrate +acetyl_coa
+    3s_citryl_coa
   }
 
   branch from arenecarbaldehyde side left {
@@ -54,13 +54,43 @@ pathway n-acetylarylalkylamine-to-aromatic-carboxylate "N-acetylarylalkylamine t
 
   branch from nh3 side left {
     nh3
-    <-> ec_3_5_1_57 [3.5.1.57] +l_tryptophanamide +h2o
-    l_tryptophan
+    <-> ec_3_5_5_4 [3.5.5.4] +3_cyano_l_alanine +h2o
+    aspartate
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_2_7_3_8 [2.7.3.8] +atp +adp +hplus
-    phosphoramidate
+    <-> ec_2_3_2_7 [2.3.2.7] +hydroxylamine +l_asparagine +hplus
+    l_aspartylhydroxamic_acid
+  }
+
+  branch from acetate side left {
+    acetate
+    <-> ec_3_1_1_80 [3.1.1.80] +17_o_acetylajmalinium +h2o +hplus
+    ajmalinium
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> ec_3_5_1_51 [3.5.1.51] +4_acetamidobutanoyl_coa +h2o
+    4_aminobutanoyl_coa
+  }
+
+  branch from copper side left {
+    copper
+    <-> . +ascorbate +copper +hplus
+    mdha
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_1_4_3_19 [1.4.3.19] +glycine +o2 +h2o +h2o2
+    glyoxylate
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_1_4_1_21 [1.4.1.21] +aspartate +nadp +h2o +nadph +hplus
+    oxaloacetate
   }
 }

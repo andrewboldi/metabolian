@@ -127,70 +127,6 @@
       "xrefs": {
         "chebi": "CHEBI:33384"
       }
-    },
-    {
-      "id": "restrictinol",
-      "name": "restrictinol",
-      "formula": "C17H28O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:231923"
-      }
-    },
-    {
-      "id": "restricticin",
-      "name": "restricticin",
-      "formula": "C19H32NO4",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:231924"
-      }
-    },
-    {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:30616"
-      }
-    },
-    {
-      "id": "pser",
-      "name": "O-Phospho-L-serine",
-      "formula": "C3H6NO6P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57524"
-      }
-    },
-    {
-      "id": "adp",
-      "name": "ADP",
-      "formula": "C10H12N5O10P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:456216"
-      }
-    },
-    {
-      "id": "n_arachidonoyl_l_serine",
-      "name": "N-arachidonoyl-L-serine",
-      "short": "N-arachidonoyl-L-se…",
-      "formula": "C23H36NO4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:149697"
-      }
-    },
-    {
-      "id": "arachidonate",
-      "name": "arachidonate",
-      "formula": "C20H31O2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:32395"
-      }
     }
   ],
   "enzymes": [
@@ -199,7 +135,10 @@
       "name": "glutamate formimidoyltransferase",
       "ec": [
         "2.1.2.5"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "O95954"
+      }
     },
     {
       "id": "ec_1_5_3_24",
@@ -213,14 +152,10 @@
       "name": "glycine hydroxymethyltransferase",
       "ec": [
         "2.1.2.1"
-      ]
-    },
-    {
-      "id": "ec_2_7_1_225",
-      "name": "L-serine kinase (ATP)",
-      "ec": [
-        "2.7.1.225"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P34896"
+      }
     }
   ],
   "reactions": [
@@ -374,134 +309,181 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "restrictinol + glycine + H(+) = restricticin + H2O",
-      "equation": "restrictinol + glycine + H(+) = restricticin + H2O",
-      "substrates": [
-        {
-          "metabolite": "restrictinol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glycine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "restricticin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:81535"
+      "id": "xt_6s_5_formyltetrahydrofolate_6s-5-formyltetrahydrofo-to-d-glucopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6s_5_formyltetrahydrofolate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "6s-5-formyltetrahydrofo-to-d-glucopyranose"
+      },
+      "note": "Shares (6S)-5-formyltetrahydrofolate with (6S)-5-formyltetrahydrofo… to D-glucopyranose.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:81535"
+            "db": "ChEBI",
+            "id": "CHEBI:57457"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "L-serine kinase (ATP)",
-      "equation": "L-serine + ATP = O-phospho-L-serine + ADP + H(+)",
-      "ec": "2.7.1.225",
-      "substrates": [
-        {
-          "metabolite": "serine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "pser",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_7_1_225"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:59112"
+      "id": "xt_6s_5_formyltetrahydrofolate_6s-5-methyltetrahydrofo-to-6s-5-formyltetrahydr",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6s_5_formyltetrahydrofolate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "6s-5-methyltetrahydrofo-to-6s-5-formyltetrahydr"
+      },
+      "note": "Shares (6S)-5-formyltetrahydrofolate with (6S)-5-methyltetrahydrofo… to (6S)-5-formyltetrahydrofo….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:59112"
+            "db": "ChEBI",
+            "id": "CHEBI:57457"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "N-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-L-serine + H2O = (5Z,8Z,11Z,14Z)-eicosatetraenoate +...",
-      "equation": "N-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-L-serine + H2O = (5Z,8Z,11Z,14Z)-eicosatetraenoate + L-serine",
-      "substrates": [
-        {
-          "metabolite": "n_arachidonoyl_l_serine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "arachidonate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "serine",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:64116"
+      "id": "xt_n_formyl_l_glutamate_3-4-oxo-4-5-dihydro-1h-i-to-n2-formyl-n1-5-phosp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_formyl_l_glutamate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "3-4-oxo-4-5-dihydro-1h-i-to-n2-formyl-n1-5-phosp"
+      },
+      "note": "Shares N-formyl-L-glutamate with 3-(4-oxo-4,5-dihydro-1H-i… to N2-formyl-N1-(5-phospho-β….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:64116"
+            "db": "ChEBI",
+            "id": "CHEBI:17684"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sarcosine_acylcholine-to-n5-methyl-l-glutamine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sarcosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acylcholine-to-n5-methyl-l-glutamine"
+      },
+      "note": "Shares Sarcosine with acylcholine to N5-methyl-L-glutamine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57433"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sarcosine_creatinine-to-n5-formyl-5-6-7-8-tetrahy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sarcosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "creatinine-to-n5-formyl-5-6-7-8-tetrahy"
+      },
+      "note": "Shares Sarcosine with creatinine to N5-formyl-5,6,7,8-tetrahy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57433"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sarcosine_dtdp-4-amino-4-6-dideoxy-to-s-adenosyl-l-homocys",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sarcosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-4-amino-4-6-dideoxy-to-s-adenosyl-l-homocys"
+      },
+      "note": "Shares Sarcosine with dTDP-4-amino-4,6-dideoxy-… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57433"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sarcosine_guanidinoacetic-acid-to-s-adenosyl-l-homocystein",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sarcosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "guanidinoacetic-acid-to-s-adenosyl-l-homocystein"
+      },
+      "note": "Shares Sarcosine with guanidinoacetic acid to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57433"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sarcosine_vitexin-2-o-l-rhamnos-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sarcosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "vitexin-2-o-l-rhamnos-to-hydrogen-donor"
+      },
+      "note": "Shares Sarcosine with vitexin 2''-O-β-L-rhamnos… to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57433"
           }
         ]
       }

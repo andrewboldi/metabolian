@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway petiveriin-to-diiodine "petiveriin to diiodine" {
-  spacing 206
+  spacing 272
 
   spine at 0,0 {
     petiveriin
@@ -36,37 +36,103 @@ pathway petiveriin-to-diiodine "petiveriin to diiodine" {
 
   branch from h side right {
     h
-    <-> . +2_8_hydroxy_2_oxotridecyl_6_oxopyran_4_olate +nadph +nadp
-    2_2_8_dihydroxytridecyl_6_oxopyran_4_olate
+    <-> ec_1_1_99_3 [1.1.99.3] +fadh2 +2_dehydro_d_gluconate +d_gluconate
+    fad
   }
 
   branch from h side left {
     h
-    <-> . +malonyl_coa +7_hydroxylauroyl_coa +2_8_hydroxy_2_oxotridecyl_6_oxopyran_4_olate +coa
-    co2
+    <-> . +fadh2 +2_dehydro_d_gluconate +fad
+    d_gluconate
   }
 
   branch from h2o2 side right {
     h2o2
-    <-> . +triostin_a_dithiol +o2
-    triostin_a
+    <-> . +h +o2 +nadph +pitavastatin +pitavastatin_m13
+    nadp
   }
 
   branch from h2o2 side left {
     h2o2
-    <-> . +thiocoraline_dithiol +o2
-    thiocoraline
+    <-> . +5z_8z_11z_14z_eicosatetraenoyl_coa +o2
+    2_trans_cis_cis_cis_cis_4_8_11_14_eicosapentaeno
   }
 
   branch from l_tyrosine side right {
     l_tyrosine
-    <-> . +l_lysine +h +h2o
-    lys_tyr
+    <-> . +l_asparagine +l_phenylalanine +h2o
+    asparaginyl_tyrosyl_phenylalanine
   }
 
   branch from l_tyrosine side left {
     l_tyrosine
-    <-> . +tyr_phe +h2o
-    l_phenylalanine
+    <-> . +l_asparagine +l_threonine +h2o
+    asparaginyl_tyrosyl_threonine
+  }
+
+  branch from 2_aminoprop_2_enoate side right {
+    2_aminoprop_2_enoate
+    <-> ec_4_4_1_4 [4.4.1.4] +methylsulfanol
+    s_methylcysteine_s_oxide
+  }
+
+  branch from 2_aminoprop_2_enoate side left {
+    2_aminoprop_2_enoate
+    <-> ec_4_4_1_4 [4.4.1.4] +ethylsulfenate
+    ethiin
+  }
+
+  branch from 3_3_5_triiodo_l_thyronine side right {
+    3_3_5_triiodo_l_thyronine
+    <-> . +iodide +nadp +nadph
+    l_thyroxine
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +l_alanine +l_histidine
+    ala_his_ala
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +ubiquinone_6 +o2
+    ubiquinol_6
+  }
+
+  branch from h side left {
+    h
+    <-> . +o2 +nadph +cyclosporin_a_metabolite_m1 +nadp +h2o
+    am19_cyclosporine
+  }
+
+  branch from h side right {
+    h
+    <-> . +cyclosporin_a +o2 +nadph +nadp +h2o
+    cyclosporin_a_metabolite_m18
+  }
+
+  branch from h2o2 side left {
+    h2o2
+    <-> . +6z_9z_12z_octadecatrienoyl_coa +o2
+    2e_6z_9z_12z_octadecatetraenoyl_coa
+  }
+
+  branch from h2o2 side right {
+    h2o2
+    <-> . +2_trans_6_cis_dodeca_2_6_dienoyl_coa +h +cis_6_dodecenoyl_coenzyme_a
+    o2
+  }
+
+  branch from l_tyrosine side left {
+    l_tyrosine
+    <-> . +l_asparagine +l_cysteine +h2o
+    cystyl_tyrosyl_asparagine
+  }
+
+  branch from l_tyrosine side right {
+    l_tyrosine
+    <-> . +l_leucine +l_glutamine +h2o
+    glutaminyl_tyrosyl_leucine
   }
 }

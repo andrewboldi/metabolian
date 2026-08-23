@@ -1,0 +1,551 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-arabinitol-to-7-methyluric-acid-null",
+  "name": "D-arabinitol to 7-Methyluric acid",
+  "category": "energy-metabolism",
+  "summary": "A 5-step route from D-arabinitol to 7-Methyluric acid, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR197981"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_arabinitol",
+      "name": "D-arabinitol",
+      "formula": "C5H12O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1018"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "alpha_d_ribulose",
+      "name": "alpha-D-ribulose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1371691"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "beta_d_ribofuranose",
+      "name": "beta-D-ribofuranose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM3548"
+      }
+    },
+    {
+      "id": "7_methylxanthine",
+      "name": "7-methylxanthine",
+      "formula": "C6H6N4O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:48991"
+      }
+    },
+    {
+      "id": "7_methylxanthosine",
+      "name": "7-methylxanthosine",
+      "formula": "C11H15N4O6",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:49310"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "d_ribofuranose",
+      "name": "D-ribofuranose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:47013"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "H2O2",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM732620"
+      }
+    },
+    {
+      "id": "7_methyluric_acid",
+      "name": "7-Methyluric acid",
+      "formula": "C6H6N4O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:80470"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_250",
+      "name": "D-arabinitol 2-dehydrogenase",
+      "ec": [
+        "1.1.1.250"
+      ]
+    },
+    {
+      "id": "ec_5_3_1_20",
+      "name": "ribose isomerase",
+      "ec": [
+        "5.3.1.20"
+      ]
+    },
+    {
+      "id": "ec_3_2_2_25",
+      "name": "N-methyl nucleosidase",
+      "ec": [
+        "3.2.2.25"
+      ]
+    },
+    {
+      "id": "ec_1_17_3_2",
+      "name": "xanthine oxidase",
+      "ec": [
+        "1.17.3.2"
+      ],
+      "xrefs": {
+        "uniprot": "P47989"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "D-arabinitol 2-dehydrogenase",
+      "ec": "1.1.1.250",
+      "substrates": [
+        {
+          "metabolite": "d_arabinitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alpha_d_ribulose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_250"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR197981"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197981"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "ribose isomerase",
+      "ec": "5.3.1.20",
+      "substrates": [
+        {
+          "metabolite": "alpha_d_ribulose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "beta_d_ribofuranose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_1_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR182122"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR182122"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "N-methyl nucleosidase",
+      "ec": "3.2.2.25",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "beta_d_ribofuranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "7_methylxanthine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_methylxanthosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_2_25"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR173540"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR173540"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "N-methyl nucleosidase",
+      "equation": "7-methylxanthosine + H2O = 7-methylxanthine + D-ribose + H(+)",
+      "ec": "3.2.2.25",
+      "substrates": [
+        {
+          "metabolite": "7_methylxanthosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_methylxanthine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_ribofuranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_2_25"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:10880"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10880"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "xanthine oxidase",
+      "ec": "1.17.3.2",
+      "substrates": [
+        {
+          "metabolite": "7_methylxanthine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "7_methyluric_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_17_3_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR111562"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR111562"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_7_methylxanthosine_caffeine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_methylxanthosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "caffeine-to-h2o"
+      },
+      "note": "Shares 7-methylxanthosine with caffeine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:49310"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_methylxanthosine_caffeine-to-h2o-36271",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_methylxanthosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "caffeine-to-h2o-36271"
+      },
+      "note": "Shares 7-methylxanthosine with caffeine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:49310"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_methylxanthosine_d-arabinitol-to-7-methyluric-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_methylxanthosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-arabinitol-to-7-methyluric-acid"
+      },
+      "note": "Shares 7-methylxanthosine with D-arabinitol to 7-Methyluric acid.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:49310"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_methylxanthosine_xanthosine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_methylxanthosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "xanthosine-to-h2o"
+      },
+      "note": "Shares 7-methylxanthosine with xanthosine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:49310"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_methylxanthosine_xanthosine-to-h2o-15025",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_methylxanthosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "xanthosine-to-h2o-15025"
+      },
+      "note": "Shares 7-methylxanthosine with xanthosine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:49310"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_methyluric_acid_d-arabinitol-to-7-methyluric-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_methyluric_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-arabinitol-to-7-methyluric-acid"
+      },
+      "note": "Shares 7-Methyluric acid with D-arabinitol to 7-Methyluric acid.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:80470"
+          }
+        ]
+      }
+    }
+  ]
+}

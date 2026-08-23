@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway acetyl-coa-to-succinate "acetyl-CoA to succinate" {
-  spacing 200
+  spacing 284
 
   spine at 0,0 {
     acetyl_coa
@@ -18,49 +18,133 @@ pathway acetyl-coa-to-succinate "acetyl-CoA to succinate" {
 
   branch from coa side left {
     coa
-    <-> . +4_methylumbelliferyl_d_glucoside +malonyl_coa
-    4_methylumbelliferone_6_o_malonylglucoside
+    <-> ec_2_3_3_13 [2.3.3.13] +acetyl_coa +h +2_oxopentanoate +h2o
+    2_propylmalate
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_176 [2.3.1.176] +3_oxochol_4_en_24_oyl_coa +propanoyl_coa
-    3_24_dioxocholest_4_en_26_oyl_coa
+    <-> ec_2_3_1_185 [2.3.1.185] +acetyl_coa +tropine
+    acetylpseudotropine
   }
 
   branch from co2 side left {
     co2
-    <-> . +n_o_dimethylhydroxylamine +3_4_dichloroaniline +h2o
-    linuron
+    <-> ec_4_1_1_77 [4.1.1.77] +cis_2_oxohex_4_enoic_acid +e_5_methyl_2_oxo_3_hex_3_enedioate
+    h
   }
 
   branch from co2 side right {
     co2
-    <-> . +2_keto_4_hydroxy_5_phosphopentanoate +oxaloacetate +phosphonoacetaldehyde
-    h
+    <-> . +2_polyprenyl_6_methoxyphenol
+    3_polyprenyl_4_hydroxy_5_methoxybenzoate
   }
 
   branch from succinate side left {
     succinate
-    <-> . +sulfinosuccinate +h2o +h
-    sulfite
+    <-> ec_1_14_11_70 [1.14.11.70] +2_oxoglutarate +deoxycylindrospermopsin +o2 +co2
+    7_epi_cylindrospermopsin
   }
 
   branch from succinate side right {
     succinate
-    <-> . +l_leucine +2_oxoglutarate +o2 +co2
-    5_hydroxy_leucine
+    <-> ec_1_14_20_14 [1.14.20.14] +2_oxoglutarate +h +o2 +chloride +12_epi_hapalindole_c_isonitrile +co2 +h2o
+    12_epi_hapalindole_e
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_149 [3.2.1.149] +2_phenylethanol +a_6_o_beta_d_xylopyranosyl_beta_d_glucopyranose
-    2_phenylethyl_primeveroside
+    <-> ec_3_1_1_68 [3.1.1.68] +l_lyxonate +h
+    d_xylono_1_4_lactone
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_149 [3.2.1.149] +linalyl_beta_vicianoside +vicianose
-    linalool
+    <-> ec_4_2_1_82 [4.2.1.82] +l_lyxonate
+    2_dehydro_3_deoxy_d_arabinonate
+  }
+
+  branch from acetyl_coa side left {
+    acetyl_coa
+    <-> ec_2_3_1_186 [2.3.1.186] +h +acetylpseudotropine +coa
+    pseudotropine
+  }
+
+  branch from acetyl_coa side right {
+    acetyl_coa
+    <-> ec_2_3_1_185 [2.3.1.185] +h +acetylpseudotropine +coa
+    tropine
+  }
+
+  branch from coa side left {
+    coa
+    <-> . +acetyl_coa +deacetylcolchicine
+    s_colchicine
+  }
+
+  branch from coa side right {
+    coa
+    <-> ec_2_3_1_205 [2.3.1.205] +fumigaclavine_a +acetyl_coa
+    fumigaclavine_b
+  }
+
+  branch from 2_oxoglutarate side left {
+    2_oxoglutarate
+    <-> ec_1_14_20_14 [1.14.20.14] +ambiguine_h +h +o2 +chloride +co2 +succinate +h2o
+    ambiguine_a
+  }
+
+  branch from 2_oxoglutarate side right {
+    2_oxoglutarate
+    <-> ec_1_14_20_14 [1.14.20.14] +h +o2 +chloride +ambiguine_c +co2 +succinate +h2o
+    ambiguine_b
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +h +urobilinogen +h2o
+    3_2e_2_3_2_carboxyethyl_5_3_ethyl_4_methyl_5_oxo
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +stercobilinogen +h2o
+    l_urobilin
+  }
+
+  branch from co2 side left {
+    co2
+    <-> . +2_polyprenyl_6_methoxyphenol
+    3_polyprenyl_4_hydroxy_5_methoxybenzoate
+  }
+
+  branch from co2 side right {
+    co2
+    <-> ec_4_1_1_68 [4.1.1.68] +cis_2_oxohept_3_enedioic_acid
+    5_carboxy_2_oxohept_3_enedioate
+  }
+
+  branch from succinate side left {
+    succinate
+    <-> ec_1_14_20_14 [1.14.20.14] +2_oxoglutarate +h +o2 +chloride +ambiguine_l_isonitrile +co2 +h2o
+    ambiguine_k_isonitrile
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> ec_1_14_20_14 [1.14.20.14] +2_oxoglutarate +h +o2 +chloride +ambiguine_i +co2 +h2o
+    ambiguine_e
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_4_2_1_25 [4.2.1.25] +2_dehydro_3_deoxy_d_arabinonate
+    l_arabinonate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_1_6_6_9 [1.6.6.9] +trimethylamine +fad +h +trimethylamine_n_oxide
+    fadh2
   }
 }

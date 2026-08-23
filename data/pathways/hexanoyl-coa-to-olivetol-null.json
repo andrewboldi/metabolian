@@ -1,0 +1,488 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "hexanoyl-coa-to-olivetol-null",
+  "name": "hexanoyl-CoA to olivetol",
+  "category": "other",
+  "summary": "A 3-step route from hexanoyl-CoA to olivetol, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR196731"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "hexanoyl_coa",
+      "name": "hexanoyl-CoA",
+      "formula": "C27H42N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1103616"
+      }
+    },
+    {
+      "id": "malonyl_coa",
+      "name": "malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "metanetx": "MNXM1106093"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "3_5_dioxodecanoyl_coa",
+      "name": "3,5-dioxodecanoyl-CoA",
+      "short": "3,5-dioxodecanoyl-C…",
+      "formula": "C31H46N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1372597"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "3_5_7_trioxododecanoyl_coa",
+      "name": "3,5,7-trioxododecanoyl-CoA",
+      "short": "3,5,7-trioxododecan…",
+      "formula": "C33H48N7O20P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:66957"
+      }
+    },
+    {
+      "id": "olivetol",
+      "name": "olivetol",
+      "formula": "C11H16O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:66960"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR196731",
+      "substrates": [
+        {
+          "metabolite": "hexanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "malonyl_coa",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_5_dioxodecanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR196731"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196731"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR196733",
+      "substrates": [
+        {
+          "metabolite": "malonyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_5_dioxodecanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_5_7_trioxododecanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR196733"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196733"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3,5,7-trioxododecanoyl-CoA = olivetol + CO2 + CoA",
+      "equation": "3,5,7-trioxododecanoyl-CoA = olivetol + CO2 + CoA",
+      "substrates": [
+        {
+          "metabolite": "3_5_7_trioxododecanoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "olivetol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:20261"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20261"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3_5_dioxodecanoyl_coa_hexanoyl-coa-to-olivetol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_5_dioxodecanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hexanoyl-coa-to-olivetol"
+      },
+      "note": "Shares 3,5-dioxodecanoyl-CoA with hexanoyl-CoA to olivetol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1372597"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_5_7_trioxododecanoyl_coa_biotin-amide-to-4-hydroxy-5-methyl-6-pent",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_5_7_trioxododecanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "biotin-amide-to-4-hydroxy-5-methyl-6-pent"
+      },
+      "note": "Shares 3,5,7-trioxododecanoyl-CoA with biotin amide to 4-hydroxy-5-methyl-6-pent….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:66957"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_5_7_trioxododecanoyl_coa_biotin-amide-to-4-hydroxy-5-methyl-6-pent-13081",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_5_7_trioxododecanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "biotin-amide-to-4-hydroxy-5-methyl-6-pent-13081"
+      },
+      "note": "Shares 3,5,7-trioxododecanoyl-CoA with biotin amide to 4-hydroxy-5-methyl-6-pent….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:66957"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_5_7_trioxododecanoyl_coa_hexanoyl-coa-to-olivetol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_5_7_trioxododecanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hexanoyl-coa-to-olivetol"
+      },
+      "note": "Shares 3,5,7-trioxododecanoyl-CoA with hexanoyl-CoA to olivetol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:66957"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_5_7_trioxododecanoyl_coa_olivetolate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_5_7_trioxododecanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "olivetolate-to-h2o"
+      },
+      "note": "Shares 3,5,7-trioxododecanoyl-CoA with olivetolate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:66957"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_5_7_trioxododecanoyl_coa_olivetolate-to-h2o-34127",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_5_7_trioxododecanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "olivetolate-to-h2o-34127"
+      },
+      "note": "Shares 3,5,7-trioxododecanoyl-CoA with olivetolate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:66957"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_5_7_trioxododecanoyl_coa_udp-to-coa-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_5_7_trioxododecanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-coa-null"
+      },
+      "note": "Shares 3,5,7-trioxododecanoyl-CoA with UDP to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:66957"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_olivetol_hexanoyl-coa-to-olivetol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "olivetol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hexanoyl-coa-to-olivetol"
+      },
+      "note": "Shares olivetol with hexanoyl-CoA to olivetol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:66960"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_olivetol_menaquinone-4-to-formaldehyde-74079",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "olivetol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "menaquinone-4-to-formaldehyde-74079"
+      },
+      "note": "Shares olivetol with menaquinone-4 to formaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:66960"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_olivetol_microperfuranone-to-2-phenylethanol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "olivetol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "microperfuranone-to-2-phenylethanol"
+      },
+      "note": "Shares olivetol with (−)-microperfuranone to 2-phenylethanol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:66960"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_olivetol_n-octyl-sulfate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "olivetol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-octyl-sulfate-to-h2o"
+      },
+      "note": "Shares olivetol with n-octyl sulfate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:66960"
+          }
+        ]
+      }
+    }
+  ]
+}

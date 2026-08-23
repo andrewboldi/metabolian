@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cmp-to-udp-2-n-3r-3-hydroxy-1 "CMP to UDP-2-N-[(3R)-3-hydroxy-1…" {
-  spacing 328
+  spacing 304
 
   spine at 0,0 {
     cmp
@@ -16,29 +16,5 @@ pathway cmp-to-udp-2-n-3r-3-hydroxy-1 "CMP to UDP-2-N-[(3R)-3-hydroxy-1…" {
     lipid_a_disaccharide_p_gingivalis
     <-> ec_2_4_1_182 [2.4.1.182] +udp +h -udp_2_n_3r_3_hydroxy_15_methylhexadecanoyl_3_o_3
     lipid_x_p_gingivalis
-  }
-
-  branch from cmp_3_deoxy_alpha_d_manno_octulosonic_acid side left {
-    cmp_3_deoxy_alpha_d_manno_octulosonic_acid
-    <-> ec_2_4_99_12 [2.4.99.12] +alpha_kdo_2_6_lipid_iva_e_coli +cmp +h
-    lipid_iva_e_coli
-  }
-
-  branch from cmp_3_deoxy_alpha_d_manno_octulosonic_acid side right {
-    cmp_3_deoxy_alpha_d_manno_octulosonic_acid
-    <-> ec_2_7_7_38 [2.7.7.38] +ctp +h +3_deoxy_d_manno_octulosonate
-    diphosphate
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_2_7_1_46 [2.7.1.46] +beta_l_arabinose_1_phosphate +h +adp
-    alpha_l_arabinofuranose
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    1_2_di_9z_12z_15z_octadecatrienoyl_sn_glycero_3
   }
 }

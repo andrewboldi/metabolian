@@ -32,22 +32,159 @@ pathway acetylacetone-to-dehydro-coenzyme-f420-0 "acetylacetone to dehydro coenz
     dehydro_coenzyme_f420_0
   }
 
+  branch from methylglyoxal side left {
+    methylglyoxal
+    <-> . +guanosine_5_monophosphate_1
+    n2_1_hydroxy_2_oxopropyl_gmp_1
+  }
 
+  branch from methylglyoxal side right {
+    methylglyoxal
+    <-> . +l_argininium +l_cysteine +h2o +hplus
+    n5_4_s_l_cysteinyl_residue_5_methyl_1h_imidazol
+  }
 
+  branch from acetate side left {
+    acetate
+    <-> ec_3_1_1_113 [3.1.1.113] +ethyl_acetate +h2o +hplus
+    ethanol
+  }
 
+  branch from acetate side right {
+    acetate
+    <-> ec_3_5_1_98 [3.5.1.98] +n6_acetyl_l_lysine +h2o
+    l_lysinium
+  }
 
+  branch from d_glyceraldehyde side left {
+    d_glyceraldehyde
+    <-> . +3_hydroxypyruvate
+    3r_4s_5r_3_4_5_6_tetrahydroxy_2_oxohexanoate
+  }
 
+  branch from d_glyceraldehyde side right {
+    d_glyceraldehyde
+    <-> . +3_hydroxypyruvate
+    2_dehydro_d_galactonate
+  }
 
+  branch from formate side left {
+    formate
+    <-> . +5_methylsulfanyl_2_3_dioxopentyl_phosphate +o2 +h2o +pi +hplus
+    4_methylthio_2_oxobutanoate
+  }
 
+  branch from formate side right {
+    formate
+    <-> ec_4_1_99_5 [4.1.99.5] +octadecanal +nadph +o2 +hplus +nadp +h2o
+    heptadecane
+  }
 
+  branch from 5_amino_6_d_ribitylamino_uracil side left {
+    5_amino_6_d_ribitylamino_uracil
+    <-> ec_3_1_3_104 [3.1.3.104] +h2o +pi
+    5_amino_6_5_phosphoribitylamino_uracil
+  }
 
+  branch from 5_amino_6_d_ribitylamino_uracil side right {
+    5_amino_6_d_ribitylamino_uracil
+    <-> . +glyoxal +h2o
+    5_2_oxoethylideneamino_6_d_ribitylaminouracil
+  }
 
+  branch from dehydroglycine side left {
+    dehydroglycine
+    <-> . +o2 +h2o2
+    glycine
+  }
 
+  branch from dehydroglycine side right {
+    dehydroglycine
+    <-> . +h2o +nh3
+    glyoxylate
+  }
 
+  branch from 5_deoxyadenosine side left {
+    5_deoxyadenosine
+    <-> ec_2_1_1_224 [2.1.1.224] +adenosine_5_monophosphate_1 +di_sulfido_diiron +sam +methionine +di_sulfido_diiron +sah
+    8_methyladenosine_5_monophosphate_1
+  }
 
+  branch from 5_deoxyadenosine side right {
+    5_deoxyadenosine
+    <-> ec_2_1_1_192 [2.1.1.192] +adenosine_5_monophosphate_1 +di_sulfido_diiron +sam +methionine +di_sulfido_diiron +sah
+    2_methyladenosine_5_monophosphate_1
+  }
 
+  branch from methionine side left {
+    methionine
+    <-> . +h2o +glycine
+    gly_met
+  }
 
+  branch from methionine side right {
+    methionine
+    <-> . +met_ala +h2o
+    alanine
+  }
 
+  branch from 7_8_didemethyl_8_hydroxy_5_deazariboflavin side left {
+    7_8_didemethyl_8_hydroxy_5_deazariboflavin
+    <-> ec_2_7_8_28 [2.7.8.28] +3_r_glyceryl_diphospho_5_guanosine +gmp +hplus
+    3pg_factor420_0
+  }
 
+  branch from nh3 side right {
+    nh3
+    <-> ec_3_5_4_46 [3.5.4.46] +camp +h2o +hplus
+    3_5_cyclic_imp
+  }
 
+  branch from nh3 side left {
+    nh3
+    <-> ec_1_14_12_14 [1.14.12.14] +2_aminobenzenesulfonate +nadh +o2 +hplus +nad
+    2_3_dihydroxybenzenesulfonate
+  }
+
+  branch from acetylacetone side right {
+    acetylacetone
+    <-> ec_1_1_1_149 [1.1.1.149] +h +nadph +nadp
+    compound_0000420
+  }
+
+  branch from methylglyoxal side left {
+    methylglyoxal
+    <-> . +5_amino_6_d_ribitylamino_uracil +h2o
+    5_2_oxopropylideneamino_6_d_ribitylaminouracil
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> . +n_acetylsphingosine +h2o
+    sphingosine
+  }
+
+  branch from acetate side left {
+    acetate
+    <-> . +dihydroprecondylocarpine_acetate +hplus
+    catharanthine
+  }
+
+  branch from d_fructofuranose_1_phosphate side right {
+    d_fructofuranose_1_phosphate
+    <-> . +h2o +pi
+    d_fructofuranose
+  }
+
+  branch from d_fructofuranose_1_phosphate side left {
+    d_fructofuranose_1_phosphate
+    <-> ec_2_7_1_3 [2.7.1.3] +h +adp +d_fructofuranose
+    atp
+  }
+
+  branch from d_glyceraldehyde side right {
+    d_glyceraldehyde
+    <-> . +pyruvate
+    2_keto_3_deoxy_l_galactonate
+  }
 }

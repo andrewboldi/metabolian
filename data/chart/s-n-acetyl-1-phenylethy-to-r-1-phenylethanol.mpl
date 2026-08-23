@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-n-acetyl-1-phenylethy-to-r-1-phenylethanol "(S)-N-acetyl-1-phenylethyâ€¦ to (R)-1-phenylethanol" {
-  spacing 240
+  spacing 228
 
   spine at 0,0 {
     s_n_acetyl_1_phenylethylamine
@@ -14,17 +14,5 @@ pathway s-n-acetyl-1-phenylethy-to-r-1-phenylethanol "(S)-N-acetyl-1-phenylethyâ
     acetophenone
     <-> . +nadph +hplus -nadp
     r_1_phenylethanol
-  }
-
-  branch from alanine side left {
-    alanine
-    <-> . +ala_thr +h2o
-    threonine
-  }
-
-  branch from alanine side right {
-    alanine
-    <-> ec_6_3_2_49 [6.3.2.49] +anticapsin +atp +adp +pi +hplus
-    bacilysin
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway isatin-to-l-tryptophan "isatin to L-tryptophan" {
-  spacing 284
+  spacing 332
 
   spine at 0,0 {
     isatin
@@ -24,14 +24,14 @@ pathway isatin-to-l-tryptophan "isatin to L-tryptophan" {
 
   branch from co2 side left {
     co2
-    <-> . +n_acetyl_5_methoxykynuramine +h +formate +h2o2
-    n_gamma_acetyl_n_2_formyl_5_methoxykynurenamine
+    <-> . +3_aminopropane_1_2_diol
+    threo_2_amino_3_4_dihydroxybutanoic_acid
   }
 
   branch from co2 side right {
     co2
-    <-> . +peroxynitrite
-    nitrosoperoxycarbonate
+    <-> . +4_4_dichlorodiphenylmethane
+    bis_4_chlorophenyl_acetic_acid
   }
 
   branch from o_aminobenzaldehyde side left {
@@ -48,85 +48,133 @@ pathway isatin-to-l-tryptophan "isatin to L-tryptophan" {
 
   branch from anthranilate side left {
     anthranilate
-    <-> . +ardeemin_fq +diphosphate +h +amp +h2o +l_alanine +l_tryptophan
+    <-> . +asperlicin_d +diphosphate +h +amp +h2o +l_tryptophan
     atp
   }
 
   branch from anthranilate side right {
     anthranilate
-    <-> . +diphosphate +h +amp +h2o +atp +l_tryptophan
-    asperlicin_c
+    <-> ec_2_7_7_55 [2.7.7.55] +n_adenylylanthranilic_acid +h +atp
+    diphosphate
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +18_20_dioxo_20_coa_leukotriene_b4
-    20_coa_20_oxo_18r_hydroxyleucotriene_b4
+    <-> ec_1_1_1_174 [1.1.1.174] +nadh +2_hydroxycyclohexan_1_one +h
+    cis_cyclohexane_1_2_diol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_6_1_2 [1.6.1.2] +nadh +nadp +nadph
-    pmf
+    <-> ec_1_3_1_119 [1.3.1.119] +nadh +h +3_4_6_trichlorocatechol
+    1s_2r_3_4_6_trichlorocyclohexa_3_5_diene_1_2_di
   }
 
   branch from h2o side left {
     h2o
-    <-> . +12_oxo_20_carboxy_leukotriene_b4
-    12_oxo_20_trihydroxy_leukotriene_b4
+    <-> . +nadh +h +1_naphthoate +nad
+    1_naphthaldehyde
   }
 
   branch from h2o side right {
     h2o
-    <-> . +eicosa_2e_8z_11z_14z_17z_pentaenoyl_coa +h
-    3s_8z_11z_14z_17z_3_hydroxyicosatetraenoyl_coa
+    <-> . +nadh +h +2_methylnaphthalene +o2 +nad
+    2_naphthyl_methanol
   }
 
   branch from n_formylanthranilate side left {
-    n_formylanthranilate
-    <-> ec_3_7_1_3 [3.7.1.3] +l_alanine +h +h2o
-    n_formyl_l_kynurenine
-  }
-
-  branch from n_formylanthranilate side right {
     n_formylanthranilate
     <-> ec_1_13_11_47 [1.13.11.47] +3_hydroxy_1h_quinolin_4_one +o2
     carbon_monoxide
   }
 
-  branch from n_formylkynurenine side left {
+  branch from n_formylkynurenine side right {
     n_formylkynurenine
     <-> ec_1_13_11_52 [1.13.11.52] +o2
     d_tryptophan
   }
 
-  branch from n_formylkynurenine side right {
+  branch from n_formylkynurenine side left {
     n_formylkynurenine
     <-> ec_3_5_1_9 [3.5.1.9] +h +formate +h2o
     l_kynurenine
   }
 
-  branch from o2 side left {
-    o2
-    <-> . +12_hydroxyeicosatetraenoate +h +nadph +12_20_dihete +h2o
-    nadp
-  }
-
   branch from o2 side right {
     o2
-    <-> . +5_oxo_12_s_hydroxy_eicosa_6e_8z_10e_14z_tetraeno
-    5_oxo_6e_8z_11z_14z_eicosatetraenoate
+    <-> . +1_2_dihydroxy_8_carboxynaphthalene
+    2_carboxy_2_hydroxy_8_carboxychromene
   }
 
-  branch from l_tryptophan side left {
+  branch from o2 side left {
+    o2
+    <-> . +2_hydroxy_7_hydroxymethylchromene_2_carboxylate
+    1_2_dihydroxy_7_hydroxymethylnaphthalene
+  }
+
+  branch from l_tryptophan side right {
     l_tryptophan
     <-> . +diphosphate +indol_3_yl_acetyl_l_tryptophan +h +amp +atp
     indol_3_yl_acetate
   }
 
-  branch from l_tryptophan side right {
+  branch from l_tryptophan side left {
     l_tryptophan
-    <-> . +diphosphate +h +amp +h2o +anthranilate +atp
-    asperlicin_d
+    <-> . +histidyltryptophyldiketopiperazine +diphosphate +h +amp +atp
+    l_histidine
+  }
+
+  branch from h side right {
+    h
+    <-> . +3_hydroxy_2_methyl_4_pyrone +dtdp
+    dtdp_3_4_didehydro_2_6_dideoxy_d_glucose
+  }
+
+  branch from h side left {
+    h
+    <-> . +dtdp +3_o_l_olivosyl_oleandolide +oleandolide
+    dtdp_l_olivose
+  }
+
+  branch from co2 side right {
+    co2
+    <-> . +r_allantoin +h
+    s_2_oxo_4_hydroxy_4_carboxy_5_ureidoimidazoline
+  }
+
+  branch from co2 side left {
+    co2
+    <-> . +13_deoxycarminomycin +h
+    10_carboxy_13_deoxycarminomycin
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_14_13_84 [1.14.13.84] +h +4_hydroxyacetophenone +nad
+    4_1_hydroxyethyl_phenol
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> ec_1_3_1_29 [1.3.1.29] +h +8_methylnaphthalene_1_2_diol +nad
+    cis_1_2_dihydroxy_1_2_dihydro_8_methylnaphthalen
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_14_12_12 [1.14.12.12] +nadh +h +2_methylnaphthalene +nad
+    1r_2s_7_methyl_1_2_dihydronaphthalene_1_2_diol
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_14_15_3 [1.14.15.3] +nadh +h +cyclohexane +nad +h2o
+    cyclohexanol
+  }
+
+  branch from anthranilate side right {
+    anthranilate
+    <-> ec_1_7_1_6 [1.7.1.6] +methyl_red +h +nadph +nadp
+    n_n_dimethyl_1_4_phenylenediamine
   }
 }

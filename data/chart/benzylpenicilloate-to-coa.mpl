@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway benzylpenicilloate-to-coa "benzylpenicilloate to CoA" {
-  spacing 218
+  spacing 266
 
   spine at 0,0 {
     benzylpenicilloate
@@ -16,69 +16,117 @@ pathway benzylpenicilloate-to-coa "benzylpenicilloate to CoA" {
     penicillin_g
   }
 
-  branch from penicillin_g side left {
-    penicillin_g
-    <-> ec_3_5_1_11 [3.5.1.11] +h +h2o +6_aminopenicillanate
-    phenyl_acetate
+  branch from h2o side left {
+    h2o
+    <-> . +tyr_gly +l_tyrosine
+    glycine
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_5_1_101 [3.5.1.101] +h +s_piperidine_2_carboxamide +nh4
-    l_pipecolate
+    <-> . +l_proline +l_phenylalanine
+    pro_phe
   }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_4_2_3_45 [4.2.3.45] +diphosphate +phyllocladan_16alpha_ol
-    copalyl_diphosphate
-  }
-
-  branch from 6_aminopenicillanate side right {
+  branch from 6_aminopenicillanate side left {
     6_aminopenicillanate
     <-> ec_3_5_1_11 [3.5.1.11] +amoxicillin +h2o
     d_4_hydroxyphenylglycine
   }
 
-  branch from 6_aminopenicillanate side left {
+  branch from 6_aminopenicillanate side right {
     6_aminopenicillanate
     <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
     atp
   }
 
-  branch from 2_phenylacetate side right {
+  branch from 2_phenylacetate side left {
     2_phenylacetate
     <-> ec_1_14_13_84 [1.14.13.84] +acetophenone +o2 +nadph +h2o
     nadp
   }
 
-  branch from 2_phenylacetate side left {
+  branch from 2_phenylacetate side right {
     2_phenylacetate
     <-> ec_3_1_1_1 [3.1.1.1] +phenol +h2o
     acetate
   }
 
-  branch from h side right {
-    h
-    <-> . +2_oxo_2h_pyran_4_6_dicarboxylate +methanol
-    4_carboxy_2_hydroxy_6_methoxy_6_oxohexa_2_4_dien
-  }
-
   branch from h side left {
     h
-    <-> ec_2_7_7_72 [2.7.7.72] +ctp +trna_with_a_3_cytidine +trna_with_a_3_cc_end
-    diphosphate
+    <-> . +2_bromoethanol +bromide
+    oxirane
   }
 
-  branch from coa side right {
-    coa
-    <-> . +malonyl_coa +h +co2 +h2o
-    6_2_2_4_dihydroxy_6_methylphenyl_2_oxoethyl_4_hy
+  branch from h side right {
+    h
+    <-> . +glycidol +bromide
+    3_bromopropane_1_2_diol
   }
 
   branch from coa side left {
     coa
-    <-> . +malonyl_coa +h +co2 +h2o
-    octaketide_sek4
+    <-> ec_2_3_1_60 [2.3.1.60] +acetyl_coa +tobramycin +h
+    n3_acetyltobramycin
+  }
+
+  branch from coa side right {
+    coa
+    <-> ec_2_3_1_65 [2.3.1.65] +deoxycholoyl_coa +glycine +h
+    glycodeoxycholate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_2_1_20 [3.2.1.20] +isomaltotriose +isomaltose
+    alpha_d_glucose
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_4_11_1 [3.4.11.1] +l_leucine +glycylglycine
+    leu_gly_gly
+  }
+
+  branch from 2_phenylacetate side left {
+    2_phenylacetate
+    <-> ec_6_2_1_13 [6.2.1.13] +phenylacetyl_coa +phosphate +atp +coa
+    adp
+  }
+
+  branch from phenylacetyl_coa side right {
+    phenylacetyl_coa
+    <-> ec_1_17_5_1 [1.17.5.1] +ubiquinone_10 +h2o +phenylglyoxylyl_coa
+    ubiquinol_10
+  }
+
+  branch from phenylacetyl_coa side left {
+    phenylacetyl_coa
+    <-> . +h +o2 +h2o
+    cis_dihydrodiol_derivative_of_phenylacetyl_coa
+  }
+
+  branch from h side right {
+    h
+    <-> ec_1_1_1_21 [1.1.1.21] +compound_0063751 +nadp +nadph
+    p_chlorophenylglyoxal
+  }
+
+  branch from h side left {
+    h
+    <-> ec_1_1_1_21 [1.1.1.21] +4_bromophenylglyoxal +nadph +nadp
+    4_bromobenzoyl_methanol
+  }
+
+  branch from coa side right {
+    coa
+    <-> ec_2_3_1_23 [2.3.1.23] +1_palmitoylglycerophosphocholine +9z_octadecenoyl_coa +h
+    1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph
+  }
+
+  branch from coa side left {
+    coa
+    <-> ec_3_1_2_20 [3.1.2.20] +3_5_dihydroxyphenylacetyl_coa +h2o +h
+    3_5_dihydroxyphenyl_acetate
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway h-to-bacteriochlorophyll-b "H to bacteriochlorophyll b" {
-  spacing 164
+  spacing 200
 
   spine at 0,0 {
     h
@@ -18,13 +18,49 @@ pathway h-to-bacteriochlorophyll-b "H to bacteriochlorophyll b" {
 
   branch from nadp side left {
     nadp
-    <-> . +10_deoxymethymycin +h +o2 +nadph +h2o
-    methymycin
+    <-> . +8z_11z_14z_17z_eicosatetraenoyl_coa +h +nadph
+    eicosa_2e_8z_11z_14z_17z_pentaenoyl_coa
   }
 
   branch from nadp side right {
     nadp
-    <-> . +pikromycin +h2o +h +nadph +narbomycin
-    o2
+    <-> . +3_oxooleoyl_coa +h +nadph
+    3_s_hydroxy_cis_9_octadecenoyl_coa
+  }
+
+  branch from h side left {
+    h
+    <-> . +beta_d_fructose +atp +adp
+    d_fructose_1_phosphate
+  }
+
+  branch from h side right {
+    h
+    <-> . +d_glucuronate +ketoprofen +h2o
+    ketoprofen_glucuronide
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +8_s_hydroxy_hexadeca_2e_4e_6e_10z_tetraenoate +h +nadp
+    8_s_hydroxy_hexadeca_2e_6e_10z_trienoate
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +6_r_hydroxy_tetradeca_2e_4e_8z_trienoate +h +nadp
+    6_r_hydroxy_tetradeca_2e_8z_dienoate
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +6_s_hydroxy_tetradeca_2e_4e_8z_trienoate +h +nadph
+    6_s_hydroxy_tetradeca_2e_8z_dienoate
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +10_11_dihydro_12_epi_leukotriene_b4 +h +o2 +nadph +h2o
+    20_oh_10_11_dihydro_leukotriene_b4
   }
 }

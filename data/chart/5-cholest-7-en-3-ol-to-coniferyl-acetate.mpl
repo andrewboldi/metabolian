@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-cholest-7-en-3-ol-to-coniferyl-acetate "5α-cholest-7-en-3β-ol to coniferyl acetate" {
-  spacing 210
+  spacing 258
 
   spine at 0,0 {
     lathosterol
@@ -32,26 +32,26 @@ pathway 5-cholest-7-en-3-ol-to-coniferyl-acetate "5α-cholest-7-en-3β-ol to con
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_181 [2.1.1.181] +adenosine_5_monophosphate_1 +sam +hplus
-    n6_methyladenosine_5_monophosphate_1
+    <-> ec_2_1_1_185 [2.1.1.185] +guanosine_5_monophosphate_1 +sam +hplus
+    2_o_methylguanosine_5_monophosphate_1
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_88 [2.1.1.88] +gossypetin +sam +hplus
-    3_4_5_7_pentahydroxy_8_methoxyflavon_3_olate
+    <-> ec_2_1_1_328 [2.1.1.328] +n_demethylindolmycin +sam +hplus
+    indolmycin
   }
 
   branch from acetate side right {
     acetate
-    <-> . +1_palmityl_2_acetyl_sn_glycero_3_phosphate +h2o +hplus
-    1_hexadecyl_sn_glycero_3_phosphate
+    <-> . +n_acetyltryptamine +h2o
+    tryptaminium
   }
 
   branch from acetate side left {
     acetate
-    <-> . +1_hexadecyl_2_acetyl_sn_glycero_3_phosphoethanol +h2o +hplus
-    1_hexadecyl_sn_glycero_3_phosphoethanolamine
+    <-> . +melatonin +h2o
+    5_methoxytryptamine
   }
 
   branch from coniferyl_acetate side right {
@@ -64,5 +64,53 @@ pathway 5-cholest-7-en-3-ol-to-coniferyl-acetate "5α-cholest-7-en-3β-ol to con
     coniferyl_acetate
     <-> . +isoeugenol +acetate +nadp
     nadph
+  }
+
+  branch from lathosterol side right {
+    lathosterol
+    <-> . +nad +nadh +hplus
+    lathosterone
+  }
+
+  branch from lathosterol side left {
+    lathosterol
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    7_oxo_5_cholestan_3_ol
+  }
+
+  branch from sam side right {
+    sam
+    <-> ec_2_1_1_103 [2.1.1.103] +n_methylethanolaminium_phosphate +sah +hplus
+    n_n_dimethylethanolamine_phosphate
+  }
+
+  branch from sam side left {
+    sam
+    <-> ec_2_1_1_103 [2.1.1.103] +n_n_dimethylethanolamine_phosphate +sah +hplus
+    phosphocholine
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_163 [2.1.1.163] +6_methoxy_2_octaprenyl_1_4_benzoquinone +sam +hplus
+    3_methyl_6_methoxy_2_octaprenyl_1_4_benzoquinone
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_165 [2.1.1.165] +iodide +sam
+    iodomethane
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> . +n_acetyl_l_glutaminate +h2o
+    glutamine
+  }
+
+  branch from acetate side left {
+    acetate
+    <-> ec_3_5_1_108 [3.5.1.108] +udp_3_o_3r_hydroxyacyl_n_acetyl_d_glucosamine +h2o
+    udp_3_o_3r_hydroxyacyl_d_glucosamine
   }
 }

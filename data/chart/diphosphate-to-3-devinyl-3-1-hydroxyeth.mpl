@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway diphosphate-to-3-devinyl-3-1-hydroxyeth "diphosphate to 3-devinyl-3-(1-hydroxyeth…" {
-  spacing 336
+  spacing 300
 
   spine at 0,0 {
     diphosphate
@@ -14,41 +14,5 @@ pathway diphosphate-to-3-devinyl-3-1-hydroxyeth "diphosphate to 3-devinyl-3-(1-h
     nadp
     <-> ec_4_2_1_165 [4.2.1.165] +chlorophyllide_a +h2o
     3_devinyl_3_1_hydroxyethyl_chlorophyllide_a
-  }
-
-  branch from h side left {
-    h
-    <-> . +trp_met_arg +h2o +l_arginine +l_tryptophan
-    l_methionine
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_22 [3.6.3.22] +adp +l_tryptophan +phosphate +l_tryptophan +h2o
-    atp
-  }
-
-  branch from chlorophyllide_a2 side left {
-    chlorophyllide_a2
-    <-> ec_1_14_13_122 [1.14.13.122] +chlorophyllide_b2 +nadp +h2o +h +nadph
-    o2
-  }
-
-  branch from chlorophyllide_a2 side right {
-    chlorophyllide_a2
-    <-> . +nadp +h2o +h +o2 +nadph
-    71_hydroxychlorophyllide_a2
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +n_hydroxy_l_tetrahomomethioninate +h2o +o2 +nadph
-    l_tetrahomomethionine
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +h +o2 +n_hydroxy_l_hexahomomethioninate +nadph +h2o
-    n_n_dihydroxy_l_hexahomomethioninate
   }
 }

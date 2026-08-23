@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-proline-betaine-to-hydrogen-donor "L-proline betaine to hydrogen donor" {
-  spacing 230
+  spacing 284
 
   spine at 0,0 {
     l_proline_betaine
@@ -32,14 +32,14 @@ pathway l-proline-betaine-to-hydrogen-donor "L-proline betaine to hydrogen donor
 
   branch from formaldehyde side left {
     formaldehyde
-    <-> . +n6_methyl_l_lysinium +akg +o2 +succinate +co2
-    l_lysinium
+    <-> . +s_scoulerine +akg +o2 +succinate +co2
+    s_3_o_demethylscoulerine
   }
 
   branch from formaldehyde side right {
     formaldehyde
-    <-> . +n6_n6_dimethyl_l_lysine_1 +akg +o2 +succinate +co2
-    n6_methyl_l_lysinium
+    <-> . +s_reticulinium +akg +o2 +succinate +co2
+    s_6_o_demethylreticuline
   }
 
   branch from l_proline side left {
@@ -74,13 +74,67 @@ pathway l-proline-betaine-to-hydrogen-donor "L-proline betaine to hydrogen donor
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> ec_1_14_99_47 [1.14.99.47] +larreatricin +o2 +hydrogen_acceptor +h2o
-    3_hydroxylarreatricin
+    <-> . +malonyl-coa +acetyl_coa +hplus +hydrogen_acceptor +co2 +coa +h2o
+    2_4_dihydroxy_6_methylbenzaldehyde
   }
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> ec_1_3_99_33 [1.3.99.33] +dihydrourocanate +hydrogen_acceptor
-    urocanate
+    <-> . +o_s_2e_4e_6e_octa_2_4_6_trienyl_pantetheine_4_ph +malonyl-coa +hplus +holo-acp +hydrogen_acceptor +co2 +coa +h2o
+    2_4_dihydroxy_6_3e_5e_7e_2_oxonona_3_5_7_trienyl
+  }
+
+  branch from l_proline_betaine side right {
+    l_proline_betaine
+    <-> ec_5_1_1_22 [5.1.1.22]
+    d_proline_betaine
+  }
+
+  branch from formaldehyde side left {
+    formaldehyde
+    <-> . +thebaine +akg +o2 +succinate +co2 +hplus
+    6_o_demethylthebaine
+  }
+
+  branch from formaldehyde side right {
+    formaldehyde
+    <-> . +n1_methyladenosine_5_monophosphate_1 +akg +o2 +succinate +co2
+    adenosine_5_monophosphate_1
+  }
+
+  branch from l_proline side left {
+    l_proline
+    <-> . +e_sinapaldehyde +h2o
+    e_nesocodin_alcohol_form
+  }
+
+  branch from l_proline side right {
+    l_proline
+    <-> . +akg +o2 +trans_3_hydroxy_l_proline +co2
+    succinate
+  }
+
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> . +tyrosine +holo-acp +malonyl-coa +acetyl_coa +hydrogen_donor +sam +atp +hplus +amp +sah +co2 +ppi +coa +h2o
+    o_s_n_4e_6e_10s_12z_14e_6_10_dimethyl_3_oxohexad
+  }
+
+  branch from hydrogen_acceptor side right {
+    hydrogen_acceptor
+    <-> . +malonyl-coa +hydrogen_donor +hplus +co2 +coa +h2o
+    6_hydroxymellein
+  }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> . +chrodrimanin_f +hydrogen_acceptor
+    chrodrimanin_h
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> ec_1_17_99_10 [1.17.99.10] +cholest_1_4_dien_3_one +hydrogen_acceptor +h2o
+    25_hydroxycholest_1_4_dien_3_one
   }
 }

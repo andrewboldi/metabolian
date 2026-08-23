@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2z-4z-2-chloro-5-hydrox-to-h2o "(2Z,4Z)-2-chloro-5-hydrox… to H2O" {
-  spacing 330
+  spacing 276
 
   spine at 0,0 {
     2z_4z_2_chloro_5_hydroxyhexa_2_4_dienedioate
@@ -18,59 +18,5 @@ pathway 2z-4z-2-chloro-5-hydrox-to-h2o "(2Z,4Z)-2-chloro-5-hydrox… to H2O" {
     2_amino_5_chlorophenyl_carbonate
     <-> . +h -h2o
     chlorzoxazone
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    22_0_18_2_pe
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    24_0_18_2_pe
-  }
-
-  branch from 2z_4z_2_amino_5_chlorohexa_2_4_dienedioate side left {
-    2z_4z_2_amino_5_chlorohexa_2_4_dienedioate
-    <-> . +nh4 +h +h2o
-    2_hydroxy_5_chloromuconate
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_2_1_125 [3.2.1.125] +alpha_d_glucose +vomilenine
-    raucaffricine
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_2_1_105 [3.2.1.105] +beta_d_glucose +strictosidine_aglycone
-    3alpha_s_strictosidine
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
-    thujan_3_ol
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
-    1r_2s_4r_borneol
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +9z_12z_octadecadienoate +h +nadph +nadp +h2o
-    vernolic_acid
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +nadh +h +vernolic_acid +nad +h2o
-    9z_12z_octadecadienoate
   }
 }

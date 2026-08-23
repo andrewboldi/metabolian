@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway h-to-methanol "H to methanol" {
-  spacing 188
+  spacing 164
 
   spine at 0,0 {
     h
@@ -14,29 +14,5 @@ pathway h-to-methanol "H to methanol" {
     10s_juvenile_hormone_iii_diol
     <-> ec_3_1_1_59 [3.1.1.59] +h2o -methanol
     10s_juvenile_hormone_iii_acid_diol
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +h +nadph +13_14_dihydro_15_oxoprostaglandin_e1
-    13_14_dihydro_pge1
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_3_1_48 [1.3.1.48] +15_dehydro_prostaglandin_f3alpha +h +nadph
-    15_dehydro_13_14_dihydro_prostaglandin_f3alpha
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +acetylpyruvate +h +acetate
-    2_4_6_trioxoheptanoate
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +acetylpyruvate +h +acetate
-    2_4_6_trioxoheptanoate
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-11z-icosenoyl-glycerol-to-1-linolenoyl-2-oleoy "1-(11Z-icosenoyl)glycerol to 1-α-linolenoyl-2-oleoylgl…" {
-  spacing 164
+  spacing 182
 
   spine at 0,0 {
     1_11z_icosenoyl_glycerol
@@ -26,5 +26,23 @@ pathway 1-11z-icosenoyl-glycerol-to-1-linolenoyl-2-oleoy "1-(11Z-icosenoyl)glyce
     1_linolenoylglycerol
     <-> . +oleoyl_coa +coa
     1_linolenoyl_3_oleoylglycerol
+  }
+
+  branch from 1_stearoyl_2_linolenoyl_sn_glycero_3_phosphochol side left {
+    1_stearoyl_2_linolenoyl_sn_glycero_3_phosphochol
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    atp
+  }
+
+  branch from oleoyl_coa side right {
+    oleoyl_coa
+    <-> . +1_octadecanoyl_sn_glycero_3_phospho_1_sn_glycero +coa
+    1_octadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph
+  }
+
+  branch from oleoyl_coa side left {
+    oleoyl_coa
+    <-> . +1_acyl_sn_glycero_3_phosphoethanolamine +coa
+    1_acyl_2_oleoyl_sn_glycero_3_phosphoethanolamine
   }
 }

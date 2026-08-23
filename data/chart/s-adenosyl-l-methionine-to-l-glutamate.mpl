@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-adenosyl-l-methionine-to-l-glutamate "S-adenosyl-L-methionine to L-glutamate" {
-  spacing 170
+  spacing 158
 
   spine at 0,0 {
     sam
@@ -20,17 +20,5 @@ pathway s-adenosyl-l-methionine-to-l-glutamate "S-adenosyl-L-methionine to L-glu
     s_azetidine_2_carboxylate
     <-> . +acetyl_coa +coa +hplus
     2s_n_acetylazetidine_2_carboxylate
-  }
-
-  branch from l_glutamate side right {
-    l_glutamate
-    <-> . +6r_10_formyltetrahydrofolate +atp +10_formyltetrahydrofolate_glu_5 +adp +phosphate
-    h
-  }
-
-  branch from l_glutamate side left {
-    l_glutamate
-    <-> . +h +10_formyltetrahydrofolate_glu_6 +adp +phosphate +atp
-    10_formyltetrahydrofolate_glu_5
   }
 }

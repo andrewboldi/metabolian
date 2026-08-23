@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-carbamoyl-l-valinate-to-diphosphate "N-carbamoyl-L-valinate to diphosphate" {
-  spacing 216
+  spacing 180
 
   spine at 0,0 {
     n_carbamoyl_l_valinate
@@ -22,41 +22,5 @@ pathway n-carbamoyl-l-valinate-to-diphosphate "N-carbamoyl-L-valinate to diphosp
     2s_5_5_dimethylpiperidinium_2_carboxylate
     <-> . +10_hydroxy_pre_flavunoidine +atp -amp -ppi -hplus
     flavunoidine
-  }
-
-  branch from nh3 side left {
-    nh3
-    <-> . +2s_heptan_2_aminium +nad +h2o +nadh +hplus
-    heptan_2_one
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +5_hydroxyoctan_4_aminium +nad +h2o +nadh +hplus
-    5_hydroxy_4_octanone
-  }
-
-  branch from alanine side left {
-    alanine
-    <-> . +3_hydroxy_l_kynurenine +pyruvate +h2o
-    xanthurenate
-  }
-
-  branch from alanine side right {
-    alanine
-    <-> . +3_hydroxy_l_kynurenine +pyruvate
-    4_2_amino_3_hydroxyphenyl_2_4_dioxobutanoate
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +gpp +h2o
-    4_terpineol
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_205 [4.2.3.205] +pre_sodorifen_diphosphate
-    sodorifen
   }
 }

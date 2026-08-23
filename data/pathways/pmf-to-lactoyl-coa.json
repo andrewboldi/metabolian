@@ -1,0 +1,284 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "pmf-to-lactoyl-coa",
+  "name": "PMF to lactoyl-CoA",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from PMF to lactoyl-CoA, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR195466"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "pmf",
+      "name": "PMF",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM01"
+      }
+    },
+    {
+      "id": "h2",
+      "name": "H2",
+      "formula": "H2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1108018"
+      }
+    },
+    {
+      "id": "mk_8",
+      "name": "MK-8",
+      "formula": "C51H72O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:205208"
+      }
+    },
+    {
+      "id": "menaquinol_8",
+      "name": "Menaquinol 8",
+      "formula": "C51H74O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1368769"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM23"
+      }
+    },
+    {
+      "id": "s_lactate",
+      "name": "(S)-lactate",
+      "formula": "C3H5O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1371363"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1104266"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM26"
+      }
+    },
+    {
+      "id": "lactoyl_coa",
+      "name": "lactoyl-CoA",
+      "formula": "C24H40N7O18P3S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM726793"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_2_3",
+      "name": "L-lactate dehydrogenase (cytochrome)",
+      "ec": [
+        "1.1.2.3"
+      ]
+    },
+    {
+      "id": "ec_2_8_3_1",
+      "name": "propionate CoA-transferase",
+      "ec": [
+        "2.8.3.1"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR195466",
+      "substrates": [
+        {
+          "metabolite": "pmf",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "mk_8",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pmf",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "menaquinol_8",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR195466"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR195466"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "L-lactate dehydrogenase (cytochrome)",
+      "ec": "1.1.2.3",
+      "substrates": [
+        {
+          "metabolite": "menaquinol_8",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "mk_8",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "s_lactate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_2_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR195496"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR195496"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "propionate CoA-transferase",
+      "ec": "2.8.3.1",
+      "substrates": [
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "s_lactate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 4
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "lactoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_3_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR149232"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR149232"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_lactoyl_coa_acryloyl-coa-to-nicotinamide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lactoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acryloyl-coa-to-nicotinamide"
+      },
+      "note": "Shares lactoyl-CoA with acryloyl-CoA to nicotinamide….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM726793"
+          }
+        ]
+      }
+    }
+  ]
+}

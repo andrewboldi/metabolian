@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3r-4r-7-2-dihydroxy-4-to-coa "(3R,4R)-7,2'-dihydroxy-4'… to CoA" {
-  spacing 328
+  spacing 340
 
   spine at 0,0 {
     3r_4r_7_2_dihydroxy_4_methoxyisoflavanol
@@ -16,51 +16,22 @@ pathway 3r-4r-7-2-dihydroxy-4-to-coa "(3R,4R)-7,2'-dihydroxy-4'… to CoA" {
     medicarpin_3_o_glucoside_6_malonate
   }
 
-  branch from medicarpin side left {
-    medicarpin
-    <-> ec_1_1_1_246 [1.1.1.246] +h +3r_vestitone +nadph +h2o
-    nadp
-  }
 
-  branch from medicarpin side right {
-    medicarpin
-    <-> . +h +nadph +nadp
-    vestitol
-  }
 
-  branch from medicocarpin side left {
-    medicocarpin
-    <-> ec_2_4_1_170 [2.4.1.170] +udp +h +medicarpin
-    udp_alpha_d_glucose
-  }
 
-  branch from medicocarpin side right {
-    medicocarpin
-    <-> ec_2_3_1_115 [2.3.1.115] +malonyl_coa +atp +h2o +medicarpin_3_o_glucoside_6_malonate +coa +amp
-    diphosphate
-  }
 
-  branch from h2o side left {
-    h2o
-    <-> . +prostaglandin_e2
-    prostaglandin_b2
-  }
 
-  branch from h2o side right {
-    h2o
-    <-> . +prostaglandin_pge2_glyceryl_ester
-    prostaglandin_pgb2_glyceryl_ester
-  }
 
-  branch from coa side left {
-    coa
-    <-> . +r_carnitine +pentadecanoyl_coa
-    pendtadenoyl_carnitine
-  }
 
-  branch from coa side right {
-    coa
-    <-> . +acetyl_coa +n_1_acetylspermidine +h
-    n_3_4_acetamidobutyl_amino_propyl_acetamide
-  }
+
+
+
+
+
+
+
+
+
+
+
 }

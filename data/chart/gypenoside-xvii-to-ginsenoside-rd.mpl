@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway gypenoside-xvii-to-ginsenoside-rd "gypenoside XVII to ginsenoside Rd" {
-  spacing 238
+  spacing 268
 
   spine at 0,0 {
     gypenoside_xvii
@@ -18,33 +18,63 @@ pathway gypenoside-xvii-to-ginsenoside-rd "gypenoside XVII to ginsenoside Rd" {
     ginsenoside_rd
   }
 
-  branch from ginsenoside_rb1 side left {
-    ginsenoside_rb1
-    <-> ec_3_2_1_193 [3.2.1.193] +glucose +h2o
-    ginsenoside_f2
+  branch from h2o side left {
+    h2o
+    <-> . +l_leucine +l_histidine +l_phenylalanine
+    phe_leu_his
   }
 
   branch from h2o side right {
     h2o
-    <-> . +n_acetyl_d_glucosaminyl_n_acetyl_tunicaminyl_ura +acetate
-    n_acetyl_d_glucosaminyl_tunicaminyl_uracil
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +2_2_methylsulfanyl_butyl_maleate +h
-    2_4_methylthio_butylmalic_acid
-  }
-
-  branch from glucose side right {
-    glucose
-    <-> . +des_methyl_avenacin_a_1 +beta_glucopyranosyl_anthranilate
-    des_acyl_avenacin_a
+    <-> . +l_leucine +l_phenylalanine
+    phenylalanyl_leucine
   }
 
   branch from glucose side left {
     glucose
-    <-> . +ellagic_acid
-    pedunculagin
+    <-> ec_3_2_1_20 [3.2.1.20] +h2o
+    d_maltose
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> ec_3_2_1_206 [3.2.1.206] +oleuropein_aglycone +h2o
+    oleuropein
+  }
+
+  branch from glucose side left {
+    glucose
+    <-> ec_2_4_1_25 [2.4.1.25] +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g +d_maltose
+    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> ec_2_4_1_25 [2.4.1.25] +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g +d_maltose
+    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +l_proline +l_lysine +l_phenylalanine
+    phenylalanyl_lysyl_proline
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +l_asparagine +l_phenylalanine
+    phenylalanyl_phenylalaninyl_asparagine
+  }
+
+  branch from udp_d_glucose side left {
+    udp_d_glucose
+    <-> . +l_fucosyl_l_threonyl +udp +hplus
+    d_glucosyl_1_3_l_fucosyl_l_threonyl
+  }
+
+  branch from udp_d_glucose side right {
+    udp_d_glucose
+    <-> ec_2_4_1_385 [2.4.1.385] +27_hydroxysterols +udp +hplus
+    sterol_27_d_glucosides
   }
 }

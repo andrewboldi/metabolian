@@ -85,16 +85,6 @@
       }
     },
     {
-      "id": "4_carboxy_2_hydroxy_cis_cis_muconate",
-      "name": "4-carboxy-2-hydroxy-cis,cis-muconate",
-      "short": "4-carboxy-2-hydroxy…",
-      "formula": "C7H3O7",
-      "charge": -3,
-      "xrefs": {
-        "metanetx": "MNXM1054"
-      }
-    },
-    {
       "id": "4_carboxy_2_hydroxyhexa_2_4_dienedioate",
       "name": "4-Carboxy-2-hydroxyhexa-2,4-dienedioate",
       "short": "4-Carboxy-2-hydroxy…",
@@ -239,7 +229,7 @@
       "ec": "5.3.3.10",
       "substrates": [
         {
-          "metabolite": "4_carboxy_2_hydroxy_cis_cis_muconate",
+          "metabolite": "4_carboxy_2_hydroxyhexa_2_4_dienedioate",
           "stoichiometry": 1
         }
       ],
@@ -257,42 +247,6 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "metanetx": "MNXR139281"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR139281"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "5-carboxymethyl-2-hydroxymuconate Delta-isomerase",
-      "ec": "5.3.3.10",
-      "substrates": [
-        {
-          "metabolite": "4_carboxy_2_hydroxyhexa_2_4_dienedioate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2z_4_oxobut_2_ene_1_2_4_tricarboxylate",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_5_3_3_10"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
         "metanetx": "MNXR142036"
       },
       "provenance": {
@@ -301,6 +255,206 @@
           {
             "db": "MetaNetX",
             "id": "MNXR142036"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_gallate_6s-5-formyltetrahydrofo-to-d-glucopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "gallate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6s-5-formyltetrahydrofo-to-d-glucopyranose"
+      },
+      "note": "Shares gallate with (6S)-5-formyltetrahydrofo… to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16918"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_gallate_digallate-to-nadp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "gallate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "digallate-to-nadp"
+      },
+      "note": "Shares gallate with digallate to NADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16918"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1e_4_oxobut_1_ene_1_2_4_tricarboxylate_nadh-to-4-carboxy-2-hydroxy-cis-c",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1e_4_oxobut_1_ene_1_2_4_tricarboxylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-4-carboxy-2-hydroxy-cis-c"
+      },
+      "note": "Shares (1E)-4-oxobut-1-ene-1,2,4-tricarboxylate with NADH to 4-carboxy-2-hydroxy-cis,c….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57471"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2z_4_oxobut_2_ene_1_2_4_tricarboxylate_4-carboxy-2-hydroxy-cis-c-to-methanol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2z_4_oxobut_2_ene_1_2_4_tricarboxylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-carboxy-2-hydroxy-cis-c-to-methanol"
+      },
+      "note": "Shares (2Z)-4-oxobut-2-ene-1,2,4-tricarboxylate with 4-carboxy-2-hydroxy-cis,c… to methanol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:142690"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_carboxy_2_hydroxyhexa_2_4_dienedioate_2-oxo-2h-pyran-4-6-dicarb-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_carboxy_2_hydroxyhexa_2_4_dienedioate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-oxo-2h-pyran-4-6-dicarb-to-h2o"
+      },
+      "note": "Shares 4-Carboxy-2-hydroxyhexa-2,4-dienedioate with 2-oxo-2H-pyran-4,6-dicarb… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1365052"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_carboxy_2_hydroxyhexa_2_4_dienedioate_4-carboxy-2-hydroxy-cis-c-to-methanol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_carboxy_2_hydroxyhexa_2_4_dienedioate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-carboxy-2-hydroxy-cis-c-to-methanol"
+      },
+      "note": "Shares 4-Carboxy-2-hydroxyhexa-2,4-dienedioate with 4-carboxy-2-hydroxy-cis,c… to methanol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1365052"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_carboxy_2_hydroxyhexa_2_4_dienedioate_4-carboxy-2-hydroxyhexa-2-to-4-carboxy-2-hydroxy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_carboxy_2_hydroxyhexa_2_4_dienedioate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-carboxy-2-hydroxyhexa-2-to-4-carboxy-2-hydroxy"
+      },
+      "note": "Shares 4-Carboxy-2-hydroxyhexa-2,4-dienedioate with 4-Carboxy-2-hydroxyhexa-2… to 4-Carboxy-2-hydroxy-6-met….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1365052"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_carboxy_2_hydroxyhexa_2_4_dienedioate_nadh-to-4-carboxy-2-hydroxy-cis-c",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_carboxy_2_hydroxyhexa_2_4_dienedioate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-4-carboxy-2-hydroxy-cis-c"
+      },
+      "note": "Shares 4-Carboxy-2-hydroxyhexa-2,4-dienedioate with NADH to 4-carboxy-2-hydroxy-cis,c….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1365052"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_carboxy_2_hydroxyhexa_2_4_dienedioate_s-adenosyl-l-homocysteine-to-8-apo-caroten-8-al",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_carboxy_2_hydroxyhexa_2_4_dienedioate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-8-apo-caroten-8-al"
+      },
+      "note": "Shares 4-Carboxy-2-hydroxyhexa-2,4-dienedioate with S-adenosyl-L-homocysteine to 8'-apo-β,ψ-caroten-8'-al.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1365052"
           }
         ]
       }

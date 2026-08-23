@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-5-dihydroxy-1-4-naphtho-to-nadph "3,5-Dihydroxy-1,4-naphtho… to NADPH" {
-  spacing 236
+  spacing 188
 
   spine at 0,0 {
     3_5_dihydroxy_1_4_naphthoquinone
@@ -14,53 +14,5 @@ pathway 3-5-dihydroxy-1-4-naphtho-to-nadph "3,5-Dihydroxy-1,4-naphtho… to NADP
     1_4_5_naphthalenetriol
     <-> ec_1_6_5_2 [1.6.5.2] +nadp -juglone -nadph
     h
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +chlorophyllide_a +h2o
-    chlorophyllide_b
-  }
-
-  branch from o2 side right {
-    o2
-    <-> ec_1_14_13_92 [1.14.13.92] +nadh +h +phenylacetone +nad +h2o
-    benzyl_acetate
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_14_13_96 [1.14.13.96] +nadh +h +5beta_cholestane_3alpha_7alpha_diol +o2 +h2o
-    5beta_cholestane_3alpha_7alpha_12alpha_triol
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_14_99_33 [1.14.99.33] +nadh +9z_12z_octadecadienoate +h +o2 +h2o
-    crepenynate
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    18_0_t16_1_pg
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +phosphate +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +h2o
-    atp
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> ec_1_1_1_117 [1.1.1.117] +d_arabinofuranose +nadp +h
-    d_arabinono_1_4_lactone
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> ec_1_1_1_117 [1.1.1.117] +h +d_arabinono_1_4_lactone +nadp
-    d_arabinofuranose
   }
 }

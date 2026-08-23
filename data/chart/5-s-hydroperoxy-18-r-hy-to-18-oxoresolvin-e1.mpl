@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-s-hydroperoxy-18-r-hy-to-18-oxoresolvin-e1 "5(S)-hydroperoxy-18(R)-hyâ€¦ to 18-oxoresolvin E1" {
-  spacing 152
+  spacing 158
 
   spine at 0,0 {
     5_s_hydroperoxy_18_r_hydroxy_6e_8z_11z_14z_16e_i
@@ -14,5 +14,11 @@ pathway 5-s-hydroperoxy-18-r-hy-to-18-oxoresolvin-e1 "5(S)-hydroperoxy-18(R)-hyâ
     resolvin_e1
     <-> . +nad -nadh -hplus
     18_oxoresolvin_e1
+  }
+
+  branch from 5_s_hydroperoxy_18_r_hydroxy_6e_8z_11z_14z_16e_i side left {
+    5_s_hydroperoxy_18_r_hydroxy_6e_8z_11z_14z_16e_i
+    <-> . +o2
+    18_r_hepe
   }
 }

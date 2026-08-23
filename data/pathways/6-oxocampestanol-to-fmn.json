@@ -153,42 +153,6 @@
       "xrefs": {
         "metanetx": "WATER"
       }
-    },
-    {
-      "id": "arachidonate",
-      "name": "arachidonate",
-      "formula": "C20H31O2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:32395"
-      }
-    },
-    {
-      "id": "7_hete",
-      "name": "7-HETE",
-      "formula": "C20H31O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:136523"
-      }
-    },
-    {
-      "id": "13_hete",
-      "name": "13-HETE",
-      "formula": "C20H31O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:136524"
-      }
-    },
-    {
-      "id": "6_deoxoteasterone",
-      "name": "6-deoxoteasterone",
-      "formula": "C28H50O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:20716"
-      }
     }
   ],
   "enzymes": [
@@ -409,143 +373,71 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = 7-hyd...",
-      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = 7-hydroxy-(5Z,8Z,11Z,14Z)-eicosatetraenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "arachidonate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "7_hete",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:52288"
+      "id": "xt_teasterone_1s-bornane-2-5-dione-to-delta2-5-3-4-4-trimethy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "teasterone"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1s-bornane-2-5-dione-to-delta2-5-3-4-4-trimethy"
+      },
+      "note": "Shares teasterone with (1S)-bornane-2,5-dione to Delta2,5-3,4,4-trimethylp….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:52288"
+            "db": "ChEBI",
+            "id": "CHEBI:26863"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = 13-hy...",
-      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = 13-hydroxy-(5Z,8Z,11Z,14Z)-eicosatetraenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "arachidonate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "13_hete",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:52292"
+      "id": "xt_teasterone_6-hydroxytyphasterol-to-7-oxatyphasterol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "teasterone"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "6-hydroxytyphasterol-to-7-oxatyphasterol"
+      },
+      "note": "Shares teasterone with 6α-hydroxytyphasterol to 7-oxatyphasterol.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:52292"
+            "db": "ChEBI",
+            "id": "CHEBI:26863"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "Reaction MNXR135553",
-      "substrates": [
-        {
-          "metabolite": "6_deoxoteasterone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "teasterone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "metanetx": "MNXR135553"
+      "id": "xt_teasterone_campestanol-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "teasterone"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "campestanol-to-fmn"
+      },
+      "note": "Shares teasterone with campestanol to FMN.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR135553"
+            "db": "ChEBI",
+            "id": "CHEBI:26863"
           }
         ]
       }

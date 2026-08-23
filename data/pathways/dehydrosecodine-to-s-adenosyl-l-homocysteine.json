@@ -183,35 +183,6 @@
       "xrefs": {
         "chebi": "CHEBI:57856"
       }
-    },
-    {
-      "id": "n6_methyl_l_lysinium",
-      "name": "N6-methyl-L-lysinium",
-      "formula": "C7H15N2O",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:61929"
-      }
-    },
-    {
-      "id": "n6_n6_dimethyl_l_lysine_1",
-      "name": "N6,N6-dimethyl-L-lysine(1+)",
-      "short": "N6,N6-dimethyl-L-ly…",
-      "formula": "C8H17N2O",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:61976"
-      }
-    },
-    {
-      "id": "n6_n6_n6_trimethyl_l_lysine",
-      "name": "N6,N6,N6-trimethyl-L-lysine",
-      "short": "N6,N6,N6-trimethyl-…",
-      "formula": "C9H19N2O",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:61961"
-      }
     }
   ],
   "enzymes": [],
@@ -465,89 +436,93 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r7",
-      "name": "N(6)-methyl-L-lysyl(56)-[histone H3] + S-adenosyl-L-methionine = N(6),N(6)-dimethyl-L-l...",
-      "equation": "N(6)-methyl-L-lysyl(56)-[histone H3] + S-adenosyl-L-methionine = N(6),N(6)-dimethyl-L-lysyl(56)-[histone H3] + S-adenosyl-L-homocysteine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "n6_methyl_l_lysinium",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n6_n6_dimethyl_l_lysine_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:85919"
+      "id": "xt_dehydrosecodine_dehydrosecodine-to-echitovenine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dehydrosecodine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "dehydrosecodine-to-echitovenine"
+      },
+      "note": "Shares dehydrosecodine with dehydrosecodine to (−)-echitovenine.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:85919"
+            "db": "ChEBI",
+            "id": "CHEBI:146237"
           }
         ]
       }
     },
     {
-      "id": "r8",
-      "name": "N(6),N(6)-dimethyl-L-lysyl(56)-[histone H3] + S-adenosyl-L-methionine = N(6),N(6),N(6)-...",
-      "equation": "N(6),N(6)-dimethyl-L-lysyl(56)-[histone H3] + S-adenosyl-L-methionine = N(6),N(6),N(6)-trimethyl-L-lysyl(56)-[histone H3] + S-adenosyl-L-homocysteine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "n6_n6_dimethyl_l_lysine_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n6_n6_n6_trimethyl_l_lysine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "rhea": "RHEA:85923"
+      "id": "xt_dehydrosecodine_dihydroprecondylocarpine-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dehydrosecodine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "dihydroprecondylocarpine-to-fmn"
+      },
+      "note": "Shares dehydrosecodine with dihydroprecondylocarpine… to FMN.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:85923"
+            "db": "ChEBI",
+            "id": "CHEBI:146237"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_coronaridine_coronaridine-to-ibogaine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coronaridine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "coronaridine-to-ibogaine"
+      },
+      "note": "Shares (−)-coronaridine with (−)-coronaridine to ibogaine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:146232"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ibogaine_coronaridine-to-ibogaine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ibogaine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "coronaridine-to-ibogaine"
+      },
+      "note": "Shares ibogaine with (−)-coronaridine to ibogaine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:146259"
           }
         ]
       }

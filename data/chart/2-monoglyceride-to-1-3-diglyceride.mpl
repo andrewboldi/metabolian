@@ -10,7 +10,7 @@ pathway 2-monoglyceride-to-1-3-diglyceride "2-monoglyceride to 1,3-diglyceride" 
     2_monoglyceride
     <-> . +phosphatidylcholine -1_2_diglyceride
     acyl_sn_glycero_3_phosphocholine
-    <-> . +1_2_diglyceride +phosphatidylcholine -1_o_acyl_sn_glycero_3_phosphocholine
+    <-> . +1_2_diglyceride +1_2_diacyl_sn_glycero_3_phosphoethanolamine -1_acyl_sn_glycero_3_phosphoethanolamine
     triglyceride
     <-> . +all_trans_retinol -1_3_diglyceride
     all_trans_retinyl_ester

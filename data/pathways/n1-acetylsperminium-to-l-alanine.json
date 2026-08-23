@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "n1-acetylsperminium-to-l-alanine",
   "name": "N1-acetylsperminium to L-alanine",
-  "category": "amino-acid-metabolism",
+  "category": "redox-detox",
   "summary": "A 3-step route from N1-acetylsperminium(3+) to L-alanine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -117,46 +117,6 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:57972"
-      }
-    },
-    {
-      "id": "n_n_dimethyl_l_argininium",
-      "name": "Nω,N'ω-dimethyl-L-argininium",
-      "short": "Nω,N'ω-dimethyl-L-a…",
-      "formula": "C8H19N4O2",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:197308"
-      }
-    },
-    {
-      "id": "5_3_3_dimethylguanidino_2_oxopentanoate",
-      "name": "5-(3,3'-dimethylguanidino)-2-oxopentanoate",
-      "short": "5-(3,3'-dimethylgua…",
-      "formula": "C8H15N3O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:197310"
-      }
-    },
-    {
-      "id": "2s_2_ammonio_5_iminio_methylamino_methyl_amino",
-      "name": "(2S)-2-ammonio-5-{[iminio(methylamino)methyl]amino}pentanoate",
-      "short": "2-ammonio-5-{[imini…",
-      "formula": "C7H17N4O2",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:114953"
-      }
-    },
-    {
-      "id": "5_3_methylguanidino_2_oxopentanoate",
-      "name": "5-(3-methylguanidino)-2-oxopentanoate",
-      "short": "5-(3-methylguanidin…",
-      "formula": "C7H13N3O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:197314"
       }
     }
   ],
@@ -300,81 +260,269 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "N(omega),N('omega)-dimethyl-L-arginine + pyruvate = 5-(3,3'-dimethylguanidino)-2-oxopen...",
-      "equation": "N(omega),N('omega)-dimethyl-L-arginine + pyruvate = 5-(3,3'-dimethylguanidino)-2-oxopentanoate + L-alanine",
-      "substrates": [
-        {
-          "metabolite": "n_n_dimethyl_l_argininium",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pyruvate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "5_3_3_dimethylguanidino_2_oxopentanoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "alanine",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:77307"
+      "id": "xt_n1_acetylsperminium_n1-acetylsperminium-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n1_acetylsperminium"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "n1-acetylsperminium-to-ammonium"
+      },
+      "note": "Shares N1-acetylsperminium with N1-acetylsperminium to ammonium.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:77307"
+            "db": "ChEBI",
+            "id": "CHEBI:58101"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "N(omega)-methyl-L-arginine + pyruvate = 5-(3-methylguanidino)-2-oxopentanoate + L-alanine",
-      "equation": "N(omega)-methyl-L-arginine + pyruvate = 5-(3-methylguanidino)-2-oxopentanoate + L-alanine",
-      "substrates": [
-        {
-          "metabolite": "2s_2_ammonio_5_iminio_methylamino_methyl_amino",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pyruvate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "5_3_methylguanidino_2_oxopentanoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "alanine",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:77319"
+      "id": "xt_n1_acetylsperminium_n1-acetylsperminium-to-trypanothione-disulfide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n1_acetylsperminium"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "n1-acetylsperminium-to-trypanothione-disulfide"
+      },
+      "note": "Shares N1-acetylsperminium with N1-acetylsperminium to trypanothione disulfide.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:77319"
+            "db": "ChEBI",
+            "id": "CHEBI:58101"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n1_acetylsperminium_n1-n12-diacetylsperminium-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n1_acetylsperminium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n1-n12-diacetylsperminium-to-ammonium"
+      },
+      "note": "Shares N1-acetylsperminium with N1,N12-diacetylsperminium to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58101"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_spermine_4-coumaroyl-coa-to-di-sulfido-diiron",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "spermine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-coumaroyl-coa-to-di-sulfido-diiron"
+      },
+      "note": "Shares spermine with 4-coumaroyl-CoA to di-μ-sulfido-diiron.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:45725"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_spermine_guaiacylglycerol-guaiac-to-hydroquinone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "spermine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "guaiacylglycerol-guaiac-to-hydroquinone"
+      },
+      "note": "Shares spermine with guaiacylglycerol-β-guaiac… to hydroquinone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:45725"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_spermine_l-arogenate-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "spermine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-arogenate-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares spermine with L-arogenate to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:45725"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_spermine_n1-acetylsperminium-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "spermine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n1-acetylsperminium-to-ammonium"
+      },
+      "note": "Shares spermine with N1-acetylsperminium to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:45725"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_spermine_n8-acetylspermidinium-to-spermidine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "spermine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n8-acetylspermidinium-to-spermidine"
+      },
+      "note": "Shares spermine with N8-acetylspermidinium to spermidine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:45725"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_spermine_spermine-to-1-pyrrolinium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "spermine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "spermine-to-1-pyrrolinium"
+      },
+      "note": "Shares spermine with spermine to 1-pyrrolinium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:45725"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_3_ammoniopropyl_4_ammoniobutanal_r-h-to-hydrogen-acceptor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_3_ammoniopropyl_4_ammoniobutanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-h-to-hydrogen-acceptor"
+      },
+      "note": "Shares N-(3-ammoniopropyl)-4-ammoniobutanal with R-H to hydrogen acceptor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58869"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_ammoniopropanal_n1-acetylspermidinium-to-s-adenosyl-l-homocystei",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_ammoniopropanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n1-acetylspermidinium-to-s-adenosyl-l-homocystei"
+      },
+      "note": "Shares 3-ammoniopropanal with N1-acetylspermidinium to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58374"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_ammoniopropanal_n1-acetylsperminium-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_ammoniopropanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n1-acetylsperminium-to-ammonium"
+      },
+      "note": "Shares 3-ammoniopropanal with N1-acetylsperminium to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58374"
           }
         ]
       }

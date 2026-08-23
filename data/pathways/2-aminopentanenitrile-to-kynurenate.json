@@ -111,22 +111,22 @@
       }
     },
     {
+      "id": "n_carbamoyl_l_tyrosinate",
+      "name": "N-carbamoyl-L-tyrosinate",
+      "short": "N-carbamoyl-L-tyros…",
+      "formula": "C10H11N2O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:233554"
+      }
+    },
+    {
       "id": "tyrosine",
       "name": "L-Tyrosine",
       "formula": "C9H11NO3",
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:58315"
-      }
-    },
-    {
-      "id": "4_hydroxyphenyl_acetaldehyde",
-      "name": "(4-hydroxyphenyl)acetaldehyde",
-      "short": "(4-hydroxyphenyl)ac…",
-      "formula": "C8H8O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:15621"
       }
     },
     {
@@ -137,72 +137,9 @@
       "xrefs": {
         "chebi": "CHEBI:16526"
       }
-    },
-    {
-      "id": "chorismate",
-      "name": "chorismate",
-      "formula": "C10H8O6",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:29748"
-      }
-    },
-    {
-      "id": "4_amino_4_deoxychorismate",
-      "name": "4-amino-4-deoxychorismate",
-      "short": "4-amino-4-deoxychor…",
-      "formula": "C10H10NO5",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:58406"
-      }
-    },
-    {
-      "id": "pyruvate",
-      "name": "Pyruvate",
-      "formula": "C3H3O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:15361"
-      }
-    },
-    {
-      "id": "alanine",
-      "name": "L-Alanine",
-      "formula": "C3H7NO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:57972"
-      }
-    },
-    {
-      "id": "keto_phenylpyruvate",
-      "name": "keto-phenylpyruvate",
-      "formula": "C9H7O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:18005"
-      }
-    },
-    {
-      "id": "l_phenylalanine",
-      "name": "L-phenylalanine",
-      "formula": "C9H11NO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:58095"
-      }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_4_1_1_108",
-      "name": "4-hydroxyphenylacetaldehyde synthase",
-      "ec": [
-        "4.1.1.108"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -339,16 +276,11 @@
     },
     {
       "id": "r4",
-      "name": "4-hydroxyphenylacetaldehyde synthase",
-      "equation": "L-tyrosine + O2 + H2O + H(+) = (4-hydroxyphenyl)acetaldehyde + H2O2 + NH4(+) + CO2",
-      "ec": "4.1.1.108",
+      "name": "N-carbamoyl-L-tyrosine + H2O + 2 H(+) = L-tyrosine + NH4(+) + CO2",
+      "equation": "N-carbamoyl-L-tyrosine + H2O + 2 H(+) = L-tyrosine + NH4(+) + CO2",
       "substrates": [
         {
-          "metabolite": "tyrosine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
+          "metabolite": "n_carbamoyl_l_tyrosinate",
           "stoichiometry": 1
         },
         {
@@ -357,16 +289,12 @@
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "4_hydroxyphenyl_acetaldehyde",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o2",
+          "metabolite": "tyrosine",
           "stoichiometry": 1
         },
         {
@@ -378,147 +306,107 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_1_1_108"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:55528"
+        "rhea": "RHEA:84023"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:55528"
+            "id": "RHEA:84023"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_l_2_aminopentanoic_acid_2s-2-1r-1-carboxyla-to-butyryl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_2_aminopentanoic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2s-2-1r-1-carboxyla-to-butyryl-coa"
+      },
+      "note": "Shares L-2-aminopentanoic acid with (2S)-2-{[(1R)-1-carboxyla… to butyryl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58441"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "chorismate + NH4(+) = 4-amino-4-deoxychorismate + H2O",
-      "equation": "chorismate + NH4(+) = 4-amino-4-deoxychorismate + H2O",
-      "substrates": [
-        {
-          "metabolite": "chorismate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "4_amino_4_deoxychorismate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:55684"
+      "id": "xt_l_2_aminopentanoic_acid_h-to-4-2-aminophenyl-2-4-dio",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_2_aminopentanoic_acid"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-4-2-aminophenyl-2-4-dio"
+      },
+      "note": "Shares L-2-aminopentanoic acid with H to 4-(2-aminophenyl)-2,4-dio….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:55684"
+            "db": "ChEBI",
+            "id": "CHEBI:58441"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "L-kynurenine + pyruvate = kynurenate + L-alanine + H2O",
-      "equation": "L-kynurenine + pyruvate = kynurenate + L-alanine + H2O",
-      "substrates": [
-        {
-          "metabolite": "l_kynurenine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pyruvate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "kynurenate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "alanine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:65916"
+      "id": "xt_2_oxopentanoate_2s-2-1r-1-carboxyla-to-butyryl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxopentanoate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2s-2-1r-1-carboxyla-to-butyryl-coa"
+      },
+      "note": "Shares 2-oxopentanoate with (2S)-2-{[(1R)-1-carboxyla… to butyryl-CoA.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:65916"
+            "db": "ChEBI",
+            "id": "CHEBI:28644"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "3-phenylpyruvate + L-kynurenine = kynurenate + L-phenylalanine + H2O",
-      "equation": "3-phenylpyruvate + L-kynurenine = kynurenate + L-phenylalanine + H2O",
-      "substrates": [
-        {
-          "metabolite": "keto_phenylpyruvate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_kynurenine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "kynurenate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_phenylalanine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:66092"
+      "id": "xt_2_oxopentanoate_h-to-4-2-aminophenyl-2-4-dio",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxopentanoate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-4-2-aminophenyl-2-4-dio"
+      },
+      "note": "Shares 2-oxopentanoate with H to 4-(2-aminophenyl)-2,4-dio….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:66092"
+            "db": "ChEBI",
+            "id": "CHEBI:28644"
           }
         ]
       }

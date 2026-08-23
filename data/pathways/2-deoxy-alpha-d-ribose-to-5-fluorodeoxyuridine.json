@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "2-deoxy-alpha-d-ribose-to-5-fluorodeoxyuridine",
   "name": "2-deoxy-alpha-D-ribose… to 5-Fluorodeoxyuridine…",
-  "category": "amino-acid-metabolism",
+  "category": "other",
   "summary": "A 4-step route from 2-deoxy-alpha-D-ribose 1-phosphate to 5-Fluorodeoxyuridine triphosphate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -107,53 +107,6 @@
       "xrefs": {
         "metanetx": "MNXM814680"
       }
-    },
-    {
-      "id": "3r_4s_5s_6r_2_4e_2_amino_3_hydroxyoctadec_4_en",
-      "name": "(3R,4S,5S,6R)-2-{[(4E)-2-amino-3-hydroxyoctadec-4-en-1-yl]oxy}-6-(hydroxymethyl)oxane-3,4,5-triol",
-      "short": "(3R,4S,5S,6R)-2-{[(…",
-      "formula": "C24H47NO7",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:185325"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "WATER"
-      }
-    },
-    {
-      "id": "glycyl_aspartate",
-      "name": "Glycyl-Aspartate",
-      "formula": "C6H10N2O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:193741"
-      }
-    },
-    {
-      "id": "glycyl_glutamate",
-      "name": "Glycyl-Glutamate",
-      "formula": "C7H12N2O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:193748"
-      }
-    },
-    {
-      "id": "l_tyrosine_n_glycyl",
-      "name": "L-Tyrosine, N-glycyl-",
-      "short": "L-Tyrosine,…",
-      "formula": "C11H14N2O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:181428"
-      }
     }
   ],
   "enzymes": [
@@ -162,35 +115,50 @@
       "name": "uridine phosphorylase",
       "ec": [
         "2.4.2.3"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q16831"
+      }
     },
     {
       "id": "ec_2_4_2_4",
       "name": "thymidine phosphorylase",
       "ec": [
         "2.4.2.4"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P19971"
+      }
     },
     {
       "id": "ec_2_7_1_21",
       "name": "thymidine kinase",
       "ec": [
         "2.7.1.21"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P04183"
+      }
     },
     {
       "id": "ec_2_7_4_14",
       "name": "UMP/CMP kinase",
       "ec": [
         "2.7.4.14"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q5EBM0"
+      }
     },
     {
       "id": "ec_2_7_4_6",
       "name": "nucleoside-diphosphate kinase",
       "ec": [
         "2.7.4.6"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q5EBM0"
+      }
     }
   ],
   "reactions": [
@@ -381,203 +349,225 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "Reaction MNXR204954",
-      "substrates": [
-        {
-          "metabolite": "3r_4s_5s_6r_2_4e_2_amino_3_hydroxyoctadec_4_en",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3r_4s_5s_6r_2_4e_2_amino_3_hydroxyoctadec_4_en",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR204954"
+      "id": "xt_5_fluorouracil_5-phospho-alpha-d-ribose-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_fluorouracil"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "5-phospho-alpha-d-ribose-to-h2o-null"
+      },
+      "note": "Shares 5-fluorouracil with 5-phospho-alpha-D-ribose-… to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR204954"
+            "id": "MNXM1368741"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "Reaction MNXR204961",
-      "substrates": [
-        {
-          "metabolite": "glycyl_aspartate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "glycyl_aspartate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "metanetx": "MNXR204961"
+      "id": "xt_5_fluorouracil_alpha-d-ribose-1-phosphate-to-5-fluorouridine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_fluorouracil"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-ribose-1-phosphate-to-5-fluorouridine"
+      },
+      "note": "Shares 5-fluorouracil with alpha-D-ribose 1-phosphate to 5-Fluorouridine….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR204961"
+            "id": "MNXM1368741"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "Reaction MNXR204968",
-      "substrates": [
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glycyl_glutamate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glycyl_glutamate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "metanetx": "MNXR204968"
+      "id": "xt_5_fluorouracil_d-mannonate-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_fluorouracil"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "d-mannonate-to-h2o-null"
+      },
+      "note": "Shares 5-fluorouracil with D-mannonate to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR204968"
+            "id": "MNXM1368741"
           }
         ]
       }
     },
     {
-      "id": "r8",
-      "name": "Reaction MNXR204973",
-      "substrates": [
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_tyrosine_n_glycyl",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_tyrosine_n_glycyl",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "metanetx": "MNXR204973"
+      "id": "xt_5_fluorouracil_d-xylulose-1-phosphate-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_fluorouracil"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "d-xylulose-1-phosphate-to-phosphate"
+      },
+      "note": "Shares 5-fluorouracil with D-Xylulose 1-phosphate to phosphate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR204973"
+            "id": "MNXM1368741"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_fluorouracil_h-to-nadp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_fluorouracil"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-nadp"
+      },
+      "note": "Shares 5-fluorouracil with H to NADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368741"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_fluorouracil_nadh-to-nad-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_fluorouracil"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-nad-null"
+      },
+      "note": "Shares 5-fluorouracil with NADH to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368741"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_fluorouracil_s-adenosyl-l-homocysteine-to-adp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_fluorouracil"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-adp"
+      },
+      "note": "Shares 5-fluorouracil with S-adenosyl-L-homocysteine to ADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368741"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_floxuridine_2-deoxy-alpha-d-ribose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "floxuridine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-deoxy-alpha-d-ribose-to-h2o"
+      },
+      "note": "Shares floxuridine with 2-deoxy-alpha-D-ribose… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60761"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_fluorodeoxyuridine_monophosphate_2-deoxy-alpha-d-ribose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_fluorodeoxyuridine_monophosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-deoxy-alpha-d-ribose-to-h2o"
+      },
+      "note": "Shares 5-fluorodeoxyuridine monophosphate with 2-deoxy-alpha-D-ribose… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:2129"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_fluorodeoxyuridine_triphosphate_2-deoxy-alpha-d-ribose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_fluorodeoxyuridine_triphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-deoxy-alpha-d-ribose-to-h2o"
+      },
+      "note": "Shares 5-Fluorodeoxyuridine triphosphate with 2-deoxy-alpha-D-ribose… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM814680"
           }
         ]
       }

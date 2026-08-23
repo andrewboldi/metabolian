@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3r-15z-3-hydroxytetraco-to-n-13z-docosenoyl-sph "(3R,15Z)-3-hydroxytetraco… to N-(13Z-docosenoyl)-sphing…" {
-  spacing 164
+  spacing 158
 
   spine at 0,0 {
     3r_15z_3_hydroxytetracosenoyl_coa
@@ -20,11 +20,5 @@ pathway 3r-15z-3-hydroxytetraco-to-n-13z-docosenoyl-sph "(3R,15Z)-3-hydroxytetra
     erucoyl_coa
     <-> . +o2 +h2o2
     2e_13z_docosadienoyl_coa
-  }
-
-  branch from erucoyl_coa side right {
-    erucoyl_coa
-    <-> . +sn_glycerol_3_phosphate +coa
-    1_acylglycerol_3p_13_docose
   }
 }

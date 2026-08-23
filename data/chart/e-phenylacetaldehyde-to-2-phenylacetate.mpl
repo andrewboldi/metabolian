@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway e-phenylacetaldehyde-to-2-phenylacetate "(E)-phenylacetaldehyde… to 2-phenylacetate" {
-  spacing 190
+  spacing 184
 
   spine at 0,0 {
     e_phenylacetaldehyde_oxime
@@ -14,11 +14,5 @@ pathway e-phenylacetaldehyde-to-2-phenylacetate "(E)-phenylacetaldehyde… to 2-
     phenylacetonitrile
     <-> ec_3_5_5_1 [3.5.5.1] +h2o -2_phenylacetate
     nh4
-  }
-
-  branch from nh4 side left {
-    nh4
-    <-> ec_4_3_1_17 [4.3.1.17] +pyruvate +h2o
-    2_aminoprop_2_enoate
   }
 }

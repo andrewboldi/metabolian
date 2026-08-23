@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway tetracycline-to-hydroquinones "tetracycline to hydroquinones" {
-  spacing 224
+  spacing 230
 
   spine at 0,0 {
     tetracycline
@@ -26,5 +26,11 @@ pathway tetracycline-to-hydroquinones "tetracycline to hydroquinones" {
     chlortetracycline
     <-> ec_1_14_13_231 [1.14.13.231] +11a_hydroxychlortetracycline +nadp +h2o +o2 +nadph
     h
+  }
+
+  branch from tetracycline side left {
+    tetracycline
+    <-> ec_1_14_13_231 [1.14.13.231] +nadph +o2 +hplus +nadp +h2o
+    11a_hydroxytetracycline
   }
 }

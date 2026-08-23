@@ -1,0 +1,373 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "hydroxymethylene-acetate-to-r-lactaldehyde-null",
+  "name": "hydroxymethylene acetate to (R)-lactaldehyde",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from hydroxymethylene acetate to (R)-lactaldehyde, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR121011"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "hydroxymethylene_acetate",
+      "name": "hydroxymethylene acetate",
+      "short": "hydroxymethylene…",
+      "formula": "C3H6O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM164838"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "hydroxyacetone",
+      "name": "hydroxyacetone",
+      "formula": "C3H6O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1744"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "propane_1_2_diol",
+      "name": "propane-1,2-diol",
+      "formula": "C3H8O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364595"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "r_lactaldehyde",
+      "name": "(R)-lactaldehyde",
+      "formula": "C3H6O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM909"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_6",
+      "name": "glycerol dehydrogenase",
+      "ec": [
+        "1.1.1.6"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_2",
+      "name": "alcohol dehydrogenase (NADP(+))",
+      "ec": [
+        "1.1.1.2"
+      ],
+      "xrefs": {
+        "uniprot": "P14550"
+      }
+    },
+    {
+      "id": "ec_1_1_1_21",
+      "name": "aldose reductase",
+      "ec": [
+        "1.1.1.21"
+      ],
+      "xrefs": {
+        "uniprot": "P15121"
+      }
+    },
+    {
+      "id": "ec_1_3_1_20",
+      "name": "trans-1,2-dihydrobenzene-1,2-diol dehydrogenase",
+      "ec": [
+        "1.3.1.20"
+      ],
+      "xrefs": {
+        "uniprot": "Q04828"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR121011",
+      "substrates": [
+        {
+          "metabolite": "hydroxymethylene_acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hydroxyacetone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR121011"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR121011"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "glycerol dehydrogenase",
+      "ec": "1.1.1.6",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydroxyacetone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "propane_1_2_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR114035"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR114035"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "alcohol dehydrogenase (NADP(+))",
+      "ec": "1.1.1.2",
+      "substrates": [
+        {
+          "metabolite": "propane_1_2_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "r_lactaldehyde",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR129705"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR129705"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_hydroxymethylene_acetate_4-hydroxybenzoyl-coa-to-diphosphate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxymethylene_acetate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxybenzoyl-coa-to-diphosphate-null"
+      },
+      "note": "Shares hydroxymethylene acetate with 4-hydroxybenzoyl-CoA to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM164838"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hydroxymethylene_acetate_5-s-glutathionyl-aminochr-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxymethylene_acetate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-s-glutathionyl-aminochr-to-o2"
+      },
+      "note": "Shares hydroxymethylene acetate with 5-S-glutathionyl-aminochr… to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM164838"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hydroxymethylene_acetate_hydroxymethylene-acetate-to-r-lactaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxymethylene_acetate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hydroxymethylene-acetate-to-r-lactaldehyde"
+      },
+      "note": "Shares hydroxymethylene acetate with hydroxymethylene acetate to (R)-lactaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM164838"
+          }
+        ]
+      }
+    }
+  ]
+}

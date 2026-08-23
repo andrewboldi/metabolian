@@ -121,34 +121,6 @@
       "xrefs": {
         "chebi": "CHEBI:33019"
       }
-    },
-    {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:30616"
-      }
-    },
-    {
-      "id": "cyclic_hexaadenylate",
-      "name": "cyclic hexaadenylate",
-      "formula": "C60H66N30O36P6",
-      "charge": -6,
-      "xrefs": {
-        "chebi": "CHEBI:142456"
-      }
-    },
-    {
-      "id": "cyclic_tetraadenylate",
-      "name": "cyclic tetraadenylate",
-      "short": "cyclic tetraadenyla…",
-      "formula": "C40H44N20O24P4",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:142457"
-      }
     }
   ],
   "enzymes": [
@@ -326,73 +298,93 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "6 ATP = cyclic hexaadenylate + 6 diphosphate",
-      "equation": "6 ATP = cyclic hexaadenylate + 6 diphosphate",
-      "substrates": [
-        {
-          "metabolite": "atp",
-          "stoichiometry": 6
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "cyclic_hexaadenylate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 6
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:58276"
+      "id": "xt_molybdopterin_adenine_dinucleotide_n-5-phosphonato-d-ribo-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "molybdopterin_adenine_dinucleotide"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "n-5-phosphonato-d-ribo-to-h2o"
+      },
+      "note": "Shares molybdopterin adenine dinucleotide with N-(5-phosphonato-β-D-ribo… to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:58276"
+            "db": "ChEBI",
+            "id": "CHEBI:62727"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "4 ATP = cyclic tetraadenylate + 4 diphosphate",
-      "equation": "4 ATP = cyclic tetraadenylate + 4 diphosphate",
-      "substrates": [
-        {
-          "metabolite": "atp",
-          "stoichiometry": 4
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "cyclic_tetraadenylate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 4
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:58280"
+      "id": "xt_molybdate_n-5-phosphonato-d-ribo-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "molybdate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "n-5-phosphonato-d-ribo-to-h2o"
+      },
+      "note": "Shares molybdate with N-(5-phosphonato-β-D-ribo… to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:58280"
+            "db": "ChEBI",
+            "id": "CHEBI:36264"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_mo_vi_o2_oh_molybdopterin_cofactor_n-5-phosphonato-d-ribo-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "mo_vi_o2_oh_molybdopterin_cofactor"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-5-phosphonato-d-ribo-to-h2o"
+      },
+      "note": "Shares Mo(VI)O2(OH)-molybdopterin cofactor with N-(5-phosphonato-β-D-ribo… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:71302"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_mo_vi_o2_oh_molybdopterin_cofactor_phosphate-monoester-to-6-phospho-2-dehydro-d-glu",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "mo_vi_o2_oh_molybdopterin_cofactor"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phosphate-monoester-to-6-phospho-2-dehydro-d-glu"
+      },
+      "note": "Shares Mo(VI)O2(OH)-molybdopterin cofactor with phosphate monoester… to 6-phospho-2-dehydro-D-glu….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:71302"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway gtp-to-8-oxo-gmp "GTP to 8-oxo-GMP" {
-  spacing 172
+  spacing 160
 
   spine at 0,0 {
     gtp
@@ -14,17 +14,5 @@ pathway gtp-to-8-oxo-gmp "GTP to 8-oxo-GMP" {
     8_oxo_gdp
     <-> ec_3_6_1_58 [3.6.1.58] +h2o -pi -hplus
     8_oxo_gmp
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +thromboxane_b3
-    txa3
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_3_2_10 [3.3.2.10] +14_15_dihete
-    5z_8z_11z_17z_14_15_epoxyicosatetraenoate
   }
 }

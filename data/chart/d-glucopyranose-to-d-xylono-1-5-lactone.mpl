@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-glucopyranose-to-d-xylono-1-5-lactone "D-glucopyranose to D-xylono-1,5-lactone" {
-  spacing 340
+  spacing 338
 
   spine at 0,0 {
     glucose
@@ -16,33 +16,21 @@ pathway d-glucopyranose-to-d-xylono-1-5-lactone "D-glucopyranose to D-xylono-1,5
     d_xylono_1_5_lactone
   }
 
-  branch from ginsenoside_rb3 side left {
-    ginsenoside_rb3
-    <-> . +glucose +h2o
-    ginsenoside_mx
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +2_hydroxy_2_1h_indol_3_yl_acetonitrile
-    dehydro_indole_3_yl_acetonitrile
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +propanoate +gamma_l_glutamyl_l_orornithine_delta_lactam
-    n_propanoyl_gamma_l_glutamyl_l_orornithine_delta
-  }
-
-  branch from d_xylopyranose side right {
+  branch from d_xylopyranose side left {
     d_xylopyranose
     <-> ec_1_1_1_307 [1.1.1.307] +nad +nadh +hplus
     xylitol
   }
 
+  branch from d_xylopyranose side right {
+    d_xylopyranose
+    <-> ec_5_3_1_5 [5.3.1.5]
+    d_xylulofuranose
+  }
+
   branch from d_xylopyranose side left {
     d_xylopyranose
     <-> .
-    aldehydo_d_xylose
+    d_xylofuranose
   }
 }

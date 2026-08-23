@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-1-deoxy-2-3-hexodiulose-6 "UDP to 1-deoxy-2,3-hexodiulose-6…" {
-  spacing 220
+  spacing 238
 
   spine at 0,0 {
     udp
@@ -16,27 +16,45 @@ pathway udp-to-1-deoxy-2-3-hexodiulose-6 "UDP to 1-deoxy-2,3-hexodiulose-6…" {
     1_deoxy_2_3_hexodiulose_6_phosphate
   }
 
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> . +udp +h +sutherlandin
-    1_cyano_2_hydroxymethylprop_1_ene_3_ol
+  branch from 4_hydroxy_2_5_dimethylfuran_3_one side left {
+    4_hydroxy_2_5_dimethylfuran_3_one
+    <-> .
+    furaneol_enol_form
   }
 
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> . +udp +h +glucodigitoxigenin_3_o_beta_d_quinovoside
-    digitoxigenin_3beta_yl_beta_d_quinovoside
+  branch from h side right {
+    h
+    <-> ec_4_2_1_49 [4.2.1.49] +trans_urocanate +h2o
+    3_4_oxo_4_5_dihydro_1h_imidazol_5_yl_propanoic_a
   }
 
-  branch from 4_hydroxy_5_methyl_2_methylenefuran_3_one side left {
-    4_hydroxy_5_methyl_2_methylenefuran_3_one
-    <-> . +4_hydroxy_5_methyl_3_furanone +h2o
-    formaldehyde
+  branch from h side left {
+    h
+    <-> ec_4_2_1_85 [4.2.1.85] +2r_3s_2_3_dimethylmalate +h2o
+    dimethylmaleate
   }
 
-  branch from 4_hydroxy_5_methyl_2_methylenefuran_3_one side right {
-    4_hydroxy_5_methyl_2_methylenefuran_3_one
-    <-> . +formaldehyde +h2o
-    4_hydroxy_5_methyl_3_2h_furanone
+  branch from phosphate side right {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    3_s_hydroxy_pravastatin_tetranor
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    3_s_hydroxy_pravastatin
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +diphosphate +aphidicolan_16beta_ol
+    9alpha_copalyl_diphosphate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_4_2_1_80 [4.2.1.80] +2e_2_hydroxypenta_2_4_dienoate
+    s_4_hydroxy_2_oxopentanoate
   }
 }

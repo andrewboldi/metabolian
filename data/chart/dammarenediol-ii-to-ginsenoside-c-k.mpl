@@ -34,14 +34,14 @@ pathway dammarenediol-ii-to-ginsenoside-c-k "dammarenediol-II to ginsenoside C-K
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_19_73 [1.14.19.73] +s_scoulerine +fmnh2 +o2 +h2o +hplus
-    s_nandinine
+    <-> . +dodecan_1_ol +fmnh2 +o2 +h2o +hplus
+    1_3_dodecanediol
   }
 
   branch from fmn side left {
     fmn
-    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +fmnh2 +o2 +h2o +hplus
-    4z_7z_10z_13z_16z_19_20_epoxydocosapentaenoate
+    <-> . +decan_1_ol +fmnh2 +o2 +h2o +hplus
+    1_7_decanediol
   }
 
   branch from ginsenoside_f2 side right {
@@ -70,13 +70,61 @@ pathway dammarenediol-ii-to-ginsenoside-c-k "dammarenediol-II to ginsenoside C-K
 
   branch from glucose side right {
     glucose
-    <-> . +nigerose +h2o
-    d_glucose
+    <-> . +oleandomycin +h2o
+    glucosyl_oleandomycin
   }
 
   branch from glucose side left {
     glucose
-    <-> . +h2o +d_glucose
-    d_glcp_1_2_d_glcp
+    <-> . +7_8_dihydroxycoumarin +h2o
+    daphnin
+  }
+
+  branch from udp_d_glucose side right {
+    udp_d_glucose
+    <-> ec_2_4_1_368 [2.4.1.368] +oleanolate +udp +hplus
+    oleanolate_3_o_d_glucoside
+  }
+
+  branch from udp_d_glucose side left {
+    udp_d_glucose
+    <-> ec_2_4_1_115 [2.4.1.115] +cyanidin +udp +hplus
+    cyanidin_3_o_d_glucoside
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> . +dodecan_1_ol +o2 +fmn +h2o +hplus
+    1_6_dodecanediol
+  }
+
+  branch from fmnh2 side left {
+    fmnh2
+    <-> . +dodecan_1_ol +o2 +fmn +h2o +hplus
+    1_9_dodecanediol
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +dodecan_1_ol +fmnh2 +o2 +h2o +hplus
+    1_10_dodecanediol
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> . +2_hexyl_5_pentylresorcinol +fmnh2 +o2 +h2o +hplus
+    2_hexyl_5_5_hydroxypentyl_resorcinol
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> . +7_8_dihydroxycoumarin +h2o
+    daphnetin_8_glucoside
+  }
+
+  branch from glucose side left {
+    glucose
+    <-> ec_3_2_1_21 [3.2.1.21] +linamarin +h2o
+    linustatin
   }
 }

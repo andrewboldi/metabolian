@@ -4,63 +4,15 @@
 # edit the generator, not this file.
 
 pathway glutathione-disulfide-to-h2o "glutathione disulfide to H2O" {
-  spacing 308
+  spacing 260
 
   spine at 0,0 {
     glutathione_disulfide
-    <-> ec_1_11_1_12 [1.11.1.12] +4s_hdohe +h2o -glutathione
-    4s_hpdha
-    <-> ec_1_13_11_34 [1.13.11.34] -o2
-    4z_7z_10z_13z_16z_19z_docosahexaenoate
-    <-> . +h +adp +phosphate -4z_7z_10z_13z_16z_19z_docosahexaenoate -h2o
-    atp
-  }
-
-  branch from glutathione side left {
-    glutathione
-    <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa +h2o
-    7_methylthioheptanonitrile_oxide
-  }
-
-  branch from glutathione side right {
-    glutathione
-    <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa +h2o
-    1_methylsulfanyl_8_aci_nitrooctane
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +h +alpha_hydroxyheme +verdoheme +h2o
-    carbon_monoxide
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +h +itatartarate
-    2_hydroxyparaconate
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
-    xylotetraose
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
-    cellopentaose
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    1_3_beta_xylobiose
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    1_3_beta_xylotriose
+    <-> ec_1_11_1_12 [1.11.1.12] +4z_7z_10s_11e_13z_15e_17s_19z_10_17_dihydroxydo +h2o -h -glutathione
+    10s_17s_dihpdha
+    <-> ec_1_13_11_33 [1.13.11.33] -o2
+    4z_7z_10z_13z_15e_17s_19z_17_hydroperoxydocosah
+    <-> . +h +nadph -nadp -h2o
+    17s_hydroxy_4z_7z_10z_13z_15e_19z_docosahexaeno
   }
 }

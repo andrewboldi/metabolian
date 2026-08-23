@@ -1,0 +1,607 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "pheophytin-b-to-red-chlorophyll-catabolite-null",
+  "name": "pheophytin b to Red chlorophyll catabolite",
+  "category": "energy-metabolism",
+  "summary": "A 4-step route from pheophytin b to Red chlorophyll catabolite, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR196689"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:38256"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "pheophytin_b",
+      "name": "pheophytin b",
+      "formula": "C55H72N4O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:38256"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "pheophorbide_b",
+      "name": "pheophorbide b",
+      "formula": "C35H34N4O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:38258"
+      }
+    },
+    {
+      "id": "phytol",
+      "name": "phytol",
+      "formula": "C20H40O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM2712"
+      }
+    },
+    {
+      "id": "pheophorbide_a",
+      "name": "pheophorbide a",
+      "formula": "C35H34N4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58687"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "pheophytin_a",
+      "name": "pheophytin a",
+      "formula": "C55H74N4O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1363632"
+      }
+    },
+    {
+      "id": "pheophorbide_a",
+      "name": "Pheophorbide a",
+      "formula": "C35H35N4O5",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1364549"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "red_chlorophyll_catabolite",
+      "name": "Red chlorophyll catabolite",
+      "short": "Red chlorophyll…",
+      "formula": "C35H37N4O7",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM736918"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_1_14",
+      "name": "chlorophyllase",
+      "ec": [
+        "3.1.1.14"
+      ]
+    },
+    {
+      "id": "ec_1_14_12_20",
+      "name": "EC 1.14.12.20",
+      "ec": [
+        "1.14.12.20"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "chlorophyllase",
+      "ec": "3.1.1.14",
+      "substrates": [
+        {
+          "metabolite": "pheophytin_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pheophorbide_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phytol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR196689"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196689"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "chlorophyllase",
+      "ec": "3.1.1.14",
+      "substrates": [
+        {
+          "metabolite": "pheophorbide_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "phytol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pheophytin_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR122282"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR122282"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "chlorophyllase",
+      "ec": "3.1.1.14",
+      "substrates": [
+        {
+          "metabolite": "pheophytin_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pheophorbide_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phytol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR177197"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR177197"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Reaction MNXR126213",
+      "ec": "1.14.12.20",
+      "substrates": [
+        {
+          "metabolite": "pheophorbide_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "red_chlorophyll_catabolite",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_12_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR126213"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR126213"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_pheophytin_b_beta-tri-n-acetylchitotri-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pheophytin_b"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-tri-n-acetylchitotri-to-h2o"
+      },
+      "note": "Shares pheophytin b with beta-tri-N-acetylchitotri… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:38256"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pheophytin_b_pheophytin-b-to-red-chlorophyll-catabolite",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pheophytin_b"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "pheophytin-b-to-red-chlorophyll-catabolite"
+      },
+      "note": "Shares pheophytin b with pheophytin b to Red chlorophyll catabolite.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:38256"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pheophorbide_b_pheophytin-b-to-red-chlorophyll-catabolite",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pheophorbide_b"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "pheophytin-b-to-red-chlorophyll-catabolite"
+      },
+      "note": "Shares pheophorbide b with pheophytin b to Red chlorophyll catabolite.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:38258"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pheophytin_a_geranylgeranyl-chlorophyl-to-chlorophyll-a",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pheophytin_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "geranylgeranyl-chlorophyl-to-chlorophyll-a"
+      },
+      "note": "Shares pheophytin a with geranylgeranyl-chlorophyl… to chlorophyll a.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1363632"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pheophytin_a_geranylgeranyl-chlorophyl-to-chlorophyll-a-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pheophytin_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "geranylgeranyl-chlorophyl-to-chlorophyll-a-null"
+      },
+      "note": "Shares pheophytin a with geranylgeranyl-chlorophyl… to chlorophyll a.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1363632"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pheophytin_a_pheophytin-b-to-red-chlorophyll-catabolite",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pheophytin_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "pheophytin-b-to-red-chlorophyll-catabolite"
+      },
+      "note": "Shares pheophytin a with pheophytin b to Red chlorophyll catabolite.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1363632"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pheophorbide_a_5-methyl-1h-benzimidazole-to-atp-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pheophorbide_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-methyl-1h-benzimidazole-to-atp-null"
+      },
+      "note": "Shares Pheophorbide a with 5-methyl-1H-benzimidazole to ATP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364549"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pheophorbide_a_methyl-benzeneacetate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pheophorbide_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "methyl-benzeneacetate-to-h2o"
+      },
+      "note": "Shares Pheophorbide a with Methyl benzeneacetate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364549"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pheophorbide_a_pheophytin-b-to-red-chlorophyll-catabolite",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pheophorbide_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "pheophytin-b-to-red-chlorophyll-catabolite"
+      },
+      "note": "Shares Pheophorbide a with pheophytin b to Red chlorophyll catabolite.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364549"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pheophorbide_a_trans-methylferulate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pheophorbide_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-methylferulate-to-h2o"
+      },
+      "note": "Shares Pheophorbide a with trans-methylferulate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364549"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_red_chlorophyll_catabolite_h-to-4-methylcatechol-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "red_chlorophyll_catabolite"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-4-methylcatechol-null"
+      },
+      "note": "Shares Red chlorophyll catabolite with H to 4-methylcatechol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM736918"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_red_chlorophyll_catabolite_nadh-to-e-dodec-2-enal",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "red_chlorophyll_catabolite"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-e-dodec-2-enal"
+      },
+      "note": "Shares Red chlorophyll catabolite with NADH to (E)-dodec-2-enal.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM736918"
+          }
+        ]
+      }
+    }
+  ]
+}

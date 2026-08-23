@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway r-dihydrolipoate-to-n6-r-s8-isopentanoyldi "(R)-dihydrolipoate to N6-[(R)-S8-isopentanoyldi…" {
-  spacing 308
+  spacing 302
 
   spine at 0,0 {
     r_dihydrolipoate
@@ -16,15 +16,9 @@ pathway r-dihydrolipoate-to-n6-r-s8-isopentanoyldi "(R)-dihydrolipoate to N6-[(R
     n6_r_s8_isopentanoyldihydrolipoyl_l_lysine
   }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_192 [4.2.3.192] +5s_9s_10s_13e_labda_7_13_dien_15_yl_diphosphate
-    labda_7_13_16_14_triene
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_193 [4.2.3.193] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    12e_labda_8_17_12_14_triene
+  branch from isovaleryl_coa side left {
+    isovaleryl_coa
+    <-> . +h2o +coa +hplus
+    isovalerate
   }
 }

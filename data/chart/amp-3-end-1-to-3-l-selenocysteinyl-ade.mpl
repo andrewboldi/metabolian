@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway amp-3-end-1-to-3-l-selenocysteinyl-ade "AMP 3'-end(1−) to 3'-(L-selenocysteinyl)ade…" {
-  spacing 306
+  spacing 300
 
   spine at 0,0 {
     amp_3_end_1
@@ -14,11 +14,5 @@ pathway amp-3-end-1-to-3-l-selenocysteinyl-ade "AMP 3'-end(1−) to 3'-(L-seleno
     3_o_phosphonato_l_seryl_adenylyl_2_group
     <-> ec_2_9_1_2 [2.9.1.2] +selenophosphate +h2o -pi
     3_l_selenocysteinyl_adenylyl_1_group
-  }
-
-  branch from 3_l_seryl_adenylyl_1_group side left {
-    3_l_seryl_adenylyl_1_group
-    <-> . +acetyl_coa +coa
-    3_n_acetyl_l_seryl_adenylyl_1
   }
 }

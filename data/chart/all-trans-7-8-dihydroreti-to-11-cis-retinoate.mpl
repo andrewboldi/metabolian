@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway all-trans-7-8-dihydroreti-to-11-cis-retinoate "all-trans-7,8-dihydroreti… to 11-cis-retinoate" {
-  spacing 236
+  spacing 224
 
   spine at 0,0 {
     all_trans_7_8_dihydroretinol
@@ -22,26 +22,14 @@ pathway all-trans-7-8-dihydroreti-to-11-cis-retinoate "all-trans-7,8-dihydroreti
 
   branch from all_trans_retinol side left {
     all_trans_retinol
-    <-> . +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
-    all_trans_4_hydroxyretinol
-  }
-
-  branch from all_trans_retinol side right {
-    all_trans_retinol
     <-> . +myristoyl_coa +coa
     all_trans_retinyl_tetradecanoate
   }
 
-  branch from hydrogen_donor side left {
-    hydrogen_donor
-    <-> . +dihydropyriculariol +hydrogen_acceptor
-    pyriculariol
-  }
-
-  branch from hydrogen_donor side right {
-    hydrogen_donor
-    <-> . +malonyl-coa +acetyl_coa +sam +hydrogen_acceptor +sah +co2 +coa +h2o
-    fumigermin
+  branch from all_trans_retinol side right {
+    all_trans_retinol
+    <-> .
+    13_cis_retinol
   }
 
   branch from 11_cis_retinol side left {
@@ -56,15 +44,15 @@ pathway all-trans-7-8-dihydroreti-to-11-cis-retinoate "all-trans-7,8-dihydroreti
     11_cis_retinyl_palmitate
   }
 
-  branch from fatty-acid side left {
-    fatty-acid
-    <-> . +n_fatty_acyl_l_tyrosine +h2o
-    tyrosine
+  branch from 11_cis_retinol side left {
+    11_cis_retinol
+    <-> .
+    9_cis_retinol
   }
 
-  branch from fatty-acid side right {
-    fatty-acid
-    <-> . +n_fatty_acyl_l_lysine +h2o
-    l_lysinium
+  branch from 11_cis_retinol side right {
+    11_cis_retinol
+    <-> . +fatty_acyl_coa +coa
+    11_cis_retinyl_ester
   }
 }

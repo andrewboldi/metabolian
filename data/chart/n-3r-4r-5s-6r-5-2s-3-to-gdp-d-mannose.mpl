@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-3r-4r-5s-6r-5-2s-3-to-gdp-d-mannose "N-[(3R,4R,5S,6R)-5-[(2S,3… to GDP-α-D-mannose" {
-  spacing 292
+  spacing 268
 
   spine at 0,0 {
     n_3r_4r_5s_6r_5_2s_3s_4s_5r_6r_3_5_dihydroxy_4_2
@@ -16,29 +16,5 @@ pathway n-3r-4r-5s-6r-5-2s-3-to-gdp-d-mannose "N-[(3R,4R,5S,6R)-5-[(2S,3… to G
     d_mannose_1_phosphate
     <-> ec_2_7_7_22 [2.7.7.22] +gdp +hplus -pi
     gdp_d_mannose
-  }
-
-  branch from d_mannopyranose side left {
-    d_mannopyranose
-    <-> ec_1_1_1_292 [1.1.1.292] +nadp +d_glucosone +nadph
-    h
-  }
-
-  branch from d_mannopyranose side right {
-    d_mannopyranose
-    <-> ec_5_3_1_15 [5.3.1.15]
-    keto_d_fructose
-  }
-
-  branch from gdp_d_mannose side left {
-    gdp_d_mannose
-    <-> ec_1_1_1_132 [1.1.1.132] +nad +h2o +nadh +hplus
-    gdp_d_mannuronate
-  }
-
-  branch from gdp_d_mannose side right {
-    gdp_d_mannose
-    <-> ec_4_2_1_47 [4.2.1.47] +h2o
-    gdp_4_dehydro_6_deoxy_d_mannose
   }
 }

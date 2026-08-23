@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cis-3-4-leucopelargonidin-to-s-adenosyl-l-homocy "cis-3,4-leucopelargonidin to S-adenosyl-L-homocysteine" {
-  spacing 268
+  spacing 310
 
   spine at 0,0 {
     cis_3_4_leucopelargonidin
@@ -22,14 +22,117 @@ pathway cis-3-4-leucopelargonidin-to-s-adenosyl-l-homocy "cis-3,4-leucopelargoni
     7_3_5_o_trimethylmyricetin_3_olate
   }
 
+  branch from dihydromyricetin side left {
+    dihydromyricetin
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    taxifolin
+  }
 
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_19_73 [1.14.19.73] +s_scoulerine +fmnh2 +o2 +h2o +hplus
+    s_nandinine
+  }
 
+  branch from fmn side left {
+    fmn
+    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +fmnh2 +o2 +h2o +hplus
+    4z_7z_10z_13z_16z_19_20_epoxydocosapentaenoate
+  }
 
+  branch from myricetin side right {
+    myricetin
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    quercetin_7_olate
+  }
 
+  branch from myricetin side left {
+    myricetin
+    <-> . +sam +sah +hplus
+    7_o_methylmyricetin_5_olate
+  }
 
+  branch from laricitrin side right {
+    laricitrin
+    <-> . +sam +sah +hplus
+    3_3_o_dimethylmyricetin_7_olate
+  }
 
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_220 [2.1.1.220] +adenosine_5_monophosphate_1 +sam +hplus
+    n1_methyladenosine_5_monophosphate_1
+  }
 
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_223 [2.1.1.223] +adenosine_5_monophosphate_1 +sam +hplus
+    n6_methyladenosine_5_monophosphate_1
+  }
 
+  branch from syringetin side left {
+    syringetin
+    <-> . +sam +sah +hplus
+    3_3_5_o_trimethylmyricetin_7_olate
+  }
 
+  branch from fmnh2 side right {
+    fmnh2
+    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +o2 +fmn +h2o +hplus
+    4z_7z_10z_13z_19z_16_17_epoxydocosapentaenoate
+  }
 
+  branch from fmnh2 side left {
+    fmnh2
+    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +o2 +fmn +h2o +hplus
+    4z_7z_10z_16z_19z_13_14_epoxydocosapentaenoate
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +fmnh2 +o2 +h2o +hplus
+    4z_7z_13z_16z_19z_10_11_epoxydocosapentaenoate
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> . +7z_10z_13z_16z_19z_docosapentaenoate +fmnh2 +o2 +h2o +hplus
+    7z_10z_13z_16z_19_20_epoxydocosatetraenoate
+  }
+
+  branch from akg side right {
+    akg
+    <-> . +udp_4_amino_4_6_dideoxy_l_n_acetyl_l_altrosamine +atp +adp +pi +hplus
+    udp_solosamine
+  }
+
+  branch from myricetin side left {
+    myricetin
+    <-> . +sam +sah +hplus
+    3_o_methylmyricetin_7_olate
+  }
+
+  branch from sam side right {
+    sam
+    <-> ec_2_1_1_309 [2.1.1.309] +guanosine_5_monophosphate_1 +sah
+    n7_methylguanosine_5_phosphate_zwitterion
+  }
+
+  branch from sam side left {
+    sam
+    <-> ec_2_1_1_312 [2.1.1.312] +uridine_5_monophosphate_1 +sah +hplus
+    n3_methyluridine_5_monophosphate_1
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_313 [2.1.1.313] +sam +n3_methyluridine_5_monophosphate_1 +hplus
+    uridine_5_monophosphate_1
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_225 [2.1.1.225] +cytidine_5_monophosphate_1 +sam +hplus
+    2_o_methylcytidine_5_monophosphate_1
+  }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway alanyl-l-argininium-to-succinate "β-alanyl-L-argininium to succinate" {
-  spacing 204
+  spacing 168
 
   spine at 0,0 {
     alanyl_l_argininium
@@ -22,41 +22,5 @@ pathway alanyl-l-argininium-to-succinate "β-alanyl-L-argininium to succinate" {
     peramine
     <-> . +akg +o2 -succinate -co2
     8_hydroxyperamine
-  }
-
-  branch from arginine side left {
-    arginine
-    <-> . +neurotensin_1_8_dizwitterion +h2o
-    neurotensin_1_7
-  }
-
-  branch from arginine side right {
-    arginine
-    <-> . +cholate +h2o
-    l_arginocholate
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +l_lysinium +sam +hplus
-    n6_n6_dimethyl_l_lysinium
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +3_4_5_trihydroxy_3_methoxyflavon_7_olate +sam +hplus
-    3_3_o_dimethylquercetin
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +l_tyrosine +utp
-    uridylyl_l_tyrosine_1
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +fpp +h2o
-    longiborneol
   }
 }

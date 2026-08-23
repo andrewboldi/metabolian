@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-amino-4-phosphonobutano-to-succinate "2-amino-4-phosphonobutano… to succinate" {
-  spacing 182
+  spacing 158
 
   spine at 0,0 {
     2_amino_4_phosphonobutanoate
@@ -22,33 +22,9 @@ pathway 2-amino-4-phosphonobutano-to-succinate "2-amino-4-phosphonobutano… to 
     fr_33289
   }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_200 [4.2.3.200] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    beta_pinacene
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> ec_2_5_1_148 [2.5.1.148] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +nadph +hplus +nadp
-    lycopaoctaene
-  }
-
   branch from cmp_5_3_aminopropyl_phosphonate side left {
     cmp_5_3_aminopropyl_phosphonate
     <-> . +ctp +h +2_amino_4_phosphonobutanoate +co2
     diphosphate
-  }
-
-  branch from cytidine_5_monophosphate side right {
-    cytidine_5_monophosphate
-    <-> . +1_palmityl_2_arachidonoyl_sn_glycerol +cdp_ethanolamine +hplus
-    1_o_palmityl_2_arachidonoyl_sn_glycero_3_phospho
-  }
-
-  branch from cytidine_5_monophosphate side left {
-    cytidine_5_monophosphate
-    <-> . +1_palmityl_2_oleoyl_sn_glycerol +cdp_ethanolamine +hplus
-    1_o_palmityl_2_oleoyl_sn_glycero_3_phosphoethano
   }
 }

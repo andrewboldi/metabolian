@@ -111,62 +111,89 @@
       }
     },
     {
-      "id": "d_maltose",
-      "name": "D-maltose",
-      "formula": "C12H22O11",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1106000"
-      }
-    },
-    {
-      "id": "d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g",
-      "name": "α-D-Glcp-(1→4)-α-D-Glcp-(1→4)-α-D-Glcp-(1→4)-α-D-Glcp-(1→4)-α-D-Glcp-(1→4)-α-D-Glcp-(1→4)-D-Glcp",
-      "short": "α-D-Glcp-(1→4)-α-D-…",
-      "formula": "C42H72O36",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:143183"
-      }
-    },
-    {
-      "id": "beta_d_glucose",
-      "name": "beta-D-glucose",
+      "id": "aldehydo_d_glucose",
+      "name": "aldehydo-D-glucose",
       "formula": "C6H12O6",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM1364060"
+        "metanetx": "MNXM1364062"
       }
     },
     {
-      "id": "1_4_alpha_d_glucan",
-      "name": "1,4-alpha-D-glucan",
-      "formula": "C36H62O31",
-      "charge": 0,
+      "id": "2r_3r_2_3_dihydroxy_3_methylpentanoate",
+      "name": "(2R,3R)-2,3-dihydroxy-3-methylpentanoate",
+      "short": "(2R,3R)-2,3-dihydro…",
+      "formula": "C6H11O4",
+      "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM733515"
+        "metanetx": "MNXM1202"
       }
     },
     {
-      "id": "alpha_d_glucose",
-      "name": "alpha-D-glucose",
-      "formula": "C6H12O6",
-      "charge": 0,
+      "id": "r_3_methyl_2_oxopentanoate",
+      "name": "(R)-3-methyl-2-oxopentanoate",
+      "short": "3-methyl-2-oxopenta…",
+      "formula": "C6H9O3",
+      "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM1105027"
+        "metanetx": "MNXM94056"
       }
     },
     {
-      "id": "maltononaose",
-      "name": "Maltononaose",
-      "formula": "C54H92O46",
+      "id": "l_djenkolic_acid",
+      "name": "L-djenkolic acid",
+      "formula": "C7H14N2O4S2",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM1103698"
+        "chebi": "CHEBI:6211"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
       }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_4_2_1_9",
+      "name": "dihydroxy-acid dehydratase",
+      "ec": [
+        "4.2.1.9"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -286,136 +313,188 @@
     },
     {
       "id": "r4",
-      "name": "Reaction MNXR192511",
+      "name": "Reaction MNXR95114",
       "substrates": [
         {
-          "metabolite": "d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "d_maltose",
+          "metabolite": "glucose",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "beta_d_glucose",
+          "metabolite": "aldehydo_d_glucose",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "metanetx": "MNXR192511"
+        "metanetx": "MNXR95114"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR192511"
+            "id": "MNXR95114"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "Reaction MNXR95153",
+      "name": "dihydroxy-acid dehydratase",
+      "ec": "4.2.1.9",
       "substrates": [
         {
-          "metabolite": "d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g",
+          "metabolite": "2r_3r_2_3_dihydroxy_3_methylpentanoate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "1_4_alpha_d_glucan",
+          "metabolite": "r_3_methyl_2_oxopentanoate",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_9"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR95153"
+        "metanetx": "MNXR97360"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR95153"
+            "id": "MNXR97360"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "Reaction MNXR157985",
+      "name": "Reaction MNXR97483",
       "substrates": [
         {
-          "metabolite": "alpha_d_glucose",
+          "metabolite": "l_djenkolic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "glucose",
+          "metabolite": "l_djenkolic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "metanetx": "MNXR157985"
+        "metanetx": "MNXR97483"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR157985"
+            "id": "MNXR97483"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_2r_3r_2_3_dihydroxy_3_methylpentanoate_r-3-hydroxy-3-methyl-2-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2r_3r_2_3_dihydroxy_3_methylpentanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-3-hydroxy-3-methyl-2-to-nad"
+      },
+      "note": "Shares (2R,3R)-2,3-dihydroxy-3-methylpentanoate with (R)-3-hydroxy-3-methyl-2-… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1202"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "Reaction MNXR158863",
-      "substrates": [
-        {
-          "metabolite": "maltoheptaose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glucose",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "maltononaose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "metanetx": "MNXR158863"
+      "id": "xt_r_3_methyl_2_oxopentanoate_monosaccharide-1-phosphate-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_3_methyl_2_oxopentanoate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "monosaccharide-1-phosphate-to-phosphate"
+      },
+      "note": "Shares (R)-3-methyl-2-oxopentanoate with monosaccharide 1-phosphate to phosphate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR158863"
+            "id": "MNXM94056"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_djenkolic_acid_s-adenosyl-l-homocysteine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_djenkolic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-h2o"
+      },
+      "note": "Shares L-djenkolic acid with S-adenosyl-L-homocysteine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:6211"
           }
         ]
       }

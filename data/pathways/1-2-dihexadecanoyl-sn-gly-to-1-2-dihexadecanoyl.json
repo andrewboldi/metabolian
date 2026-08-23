@@ -102,6 +102,16 @@
       "xrefs": {
         "chebi": "CHEBI:84968"
       }
+    },
+    {
+      "id": "1_2_dihexadecanoyl_sn_glycero_3_phospho_1d_myo_i",
+      "name": "1,2-dihexadecanoyl-sn-glycero-3-phospho-(1D-myo-inositol-3,4-bisphosphate)",
+      "short": "1,2-dihexadecanoyl-…",
+      "formula": "C41H76O19P3",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:83422"
+      }
     }
   ],
   "enzymes": [],
@@ -266,6 +276,91 @@
           {
             "db": "Rhea",
             "id": "RHEA:55992"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "1,2-dihexadecanoyl-sn-glycero-3-phospho-(1D-myo-inositol-3,4,5-trisphosphate) + H2O = 1...",
+      "equation": "1,2-dihexadecanoyl-sn-glycero-3-phospho-(1D-myo-inositol-3,4,5-trisphosphate) + H2O = 1,2-dihexadecanoyl-sn-glycero-3-phospho-(1D-myo-inositol-3,4-bisphosphate) + phosphate",
+      "substrates": [
+        {
+          "metabolite": "1_2_dihexadecanoyl_sn_glycero_3_phospho_1d_myo_i",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_2_dihexadecanoyl_sn_glycero_3_phospho_1d_myo_i",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:43556"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43556"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_1_2_dihexadecanoyl_sn_glycero_3_phospho_1d_myo_i_1-2-dipalmitoyl-sn-glycer-to-1-2-dihexadecanoyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_2_dihexadecanoyl_sn_glycero_3_phospho_1d_myo_i"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-dipalmitoyl-sn-glycer-to-1-2-dihexadecanoyl"
+      },
+      "note": "Shares 1,2-dihexadecanoyl-sn-glycero-3-phospho-(1D-myo-inositol-4,5-bisphosphate) with 1,2-dipalmitoyl-sn-glycer… to 1,2-dihexadecanoyl-sn-gly….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83423"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_2_dipalmitoyl_sn_glycero_3_phospho_1d_myo_inos_1-2-dipalmitoyl-sn-glycer-to-1-2-dihexadecanoyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_2_dipalmitoyl_sn_glycero_3_phospho_1d_myo_inos"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-dipalmitoyl-sn-glycer-to-1-2-dihexadecanoyl"
+      },
+      "note": "Shares 1,2-dipalmitoyl-sn-glycero-3-phospho-(1D-myo-inositol-5-phosphate) with 1,2-dipalmitoyl-sn-glycer… to 1,2-dihexadecanoyl-sn-gly….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84968"
           }
         ]
       }

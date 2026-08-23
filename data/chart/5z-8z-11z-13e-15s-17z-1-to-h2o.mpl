@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5z-8z-11z-13e-15s-17z-1-to-h2o "(5Z,8Z,11Z,13E,15S,17Z)-1… to H2O" {
-  spacing 194
+  spacing 260
 
   spine at 0,0 {
     5z_8z_11z_13e_15s_17z_15_hydroperoxy_5_8_11_13
@@ -20,43 +20,109 @@ pathway 5z-8z-11z-13e-15s-17z-1-to-h2o "(5Z,8Z,11Z,13E,15S,17Z)-1… to H2O" {
 
   branch from 15s_hydroperoxy_5z_8z_11z_13e_eicosatetraenoate side left {
     15s_hydroperoxy_5z_8z_11z_13e_eicosatetraenoate
-    <-> ec_1_14_14_1 [1.14.14.1] +h
-    11h_14_15_eeta
-  }
-
-  branch from 15s_hydroperoxy_5z_8z_11z_13e_eicosatetraenoate side right {
-    15s_hydroperoxy_5z_8z_11z_13e_eicosatetraenoate
     <-> . +h +l_cysteine +h2o
     eoxin_e4
   }
 
-  branch from 14_15_dihete side left {
+  branch from 14_15_dihete side right {
     14_15_dihete
     <-> . +lipoxin_b4 +h
     o2
   }
 
-  branch from atp side right {
-    atp
-    <-> ec_6_2_1_32 [6.2.1.32] +diphosphate +n_methylanthraniloyl_coa +amp +coa
-    n_methylanthranilate
-  }
-
   branch from atp side left {
     atp
-    <-> ec_6_3_1_9 [6.3.1.9] +h +adp +glutathionylspermine +phosphate +glutathione
-    spermine
+    <-> . +h +adp +phosphate +h2o
+    l_l_homocystine
   }
 
-  branch from h2o side right {
-    h2o
-    <-> . +6_carboxyhex_2_enoyl_coa +h
-    3_hydroxy_6_carboxyhexanoyl_coa
+  branch from atp side right {
+    atp
+    <-> . +co2 +pyruvate +h2o +h +adp +phosphate
+    oxaloacetate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +6_hydroxycyclohex_1_ene_1_carbonyl_coa
-    2_6_dihydroxycyclohexane_1_carbonyl_coa
+    <-> . +diphosphate +intermedeol
+    2e_6e_farnesyl_diphosphate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +acetyl_coa +l_glutamine +h +n_acetyl_l_glutaminyl_l_glutamine
+    coa
+  }
+
+  branch from 5z_8z_11z_13e_15s_17z_15_hydroperoxy_5_8_11_13 side left {
+    5z_8z_11z_13e_15s_17z_15_hydroperoxy_5_8_11_13
+    <-> . +h2o
+    ectocarpin_b
+  }
+
+  branch from 5z_8z_11z_13e_15s_17z_15_hydroperoxy_5_8_11_13 side right {
+    5z_8z_11z_13e_15s_17z_15_hydroperoxy_5_8_11_13
+    <-> .
+    ectocarpin_c
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +chanoclavine_i_aldehyde
+    didehydroagroclavine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +2s_bisdechlorogeodin
+    asterric_acid
+  }
+
+  branch from h side left {
+    h
+    <-> . +2_oxoglutarate +35_aminobacteriohopane_32_33_34_triol +formyl_hopane
+    l_glutamate
+  }
+
+  branch from h side right {
+    h
+    <-> . +mycophenolate +2_morpholin_4_yl_ethanol +h2o
+    mycophenolate_mofetil
+  }
+
+  branch from adp side left {
+    adp
+    <-> ec_2_7_1_105 [2.7.1.105] +h +beta_d_fructose_2_6_bisphosphate +atp
+    keto_d_fructose_6_phosphate
+  }
+
+  branch from adp side right {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    l_arabinopyranose
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> ec_3_1_3_29 [3.1.3.29] +alpha_d_glucosamine_6_phosphate +h2o +h
+    beta_d_glucosamine
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_3_1_3_62 [3.1.3.62] +1d_myo_inositol_1_2_3_5_6_pentakisphosphate +h2o
+    1d_myo_inositol_1_2_5_6_tetrakisphosphate
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
+    ala_his
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_2_7_1_145 [2.7.1.145] +cytarabine +h +adp
+    1_beta_d_arabinofuranosylcytosine_5_monophosphat
   }
 }

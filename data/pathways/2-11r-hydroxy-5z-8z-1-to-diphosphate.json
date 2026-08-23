@@ -135,34 +135,6 @@
       "xrefs": {
         "chebi": "CHEBI:33019"
       }
-    },
-    {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:175763"
-      }
-    },
-    {
-      "id": "isosativene",
-      "name": "(−)-isosativene",
-      "formula": "C15H24",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:231814"
-      }
-    },
-    {
-      "id": "z_e_farnesene",
-      "name": "(Z,E)-α-farnesene",
-      "formula": "C15H24",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:39238"
-      }
     }
   ],
   "enzymes": [],
@@ -299,73 +271,71 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "(2E,6E)-farnesyl diphosphate = (-)-isosativene + diphosphate",
-      "equation": "(2E,6E)-farnesyl diphosphate = (-)-isosativene + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "fpp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "isosativene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:81543"
+      "id": "xt_2_11r_hydroxy_5z_8z_12e_14z_icosatetraenoyl_sn_g_leukotriene-c4-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_11r_hydroxy_5z_8z_12e_14z_icosatetraenoyl_sn_g"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "leukotriene-c4-to-hydrogen-donor"
+      },
+      "note": "Shares 2-[(11R)-hydroxy-(5Z,8Z,12E,14Z)-icosatetraenoyl]-sn-glycero-3-phosphocholine with leukotriene C4 to hydrogen donor.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:81543"
+            "db": "ChEBI",
+            "id": "CHEBI:137582"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "(2E,6E)-farnesyl diphosphate = (3Z,6E)-alpha-farnesene + diphosphate",
-      "equation": "(2E,6E)-farnesyl diphosphate = (3Z,6E)-alpha-farnesene + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "fpp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "z_e_farnesene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:82411"
+      "id": "xt_11_r_hete_3-epi-6-deoxocathasterone-to-nadp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11_r_hete"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "3-epi-6-deoxocathasterone-to-nadp"
+      },
+      "note": "Shares 11(R)-HETE with 3-epi-6-deoxocathasterone to NADP.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:82411"
+            "db": "ChEBI",
+            "id": "CHEBI:78836"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_11_r_hete_phylloquinone-to-adp-d-ribose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11_r_hete"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phylloquinone-to-adp-d-ribose"
+      },
+      "note": "Shares 11(R)-HETE with phylloquinone to ADP-D-ribose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78836"
           }
         ]
       }

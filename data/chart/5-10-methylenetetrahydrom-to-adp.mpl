@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-10-methylenetetrahydrom-to-adp "5,10-methylenetetrahydrom… to ADP" {
-  spacing 338
+  spacing 260
 
   spine at 0,0 {
     5_10_methylenetetrahydromethanopterin
@@ -14,83 +14,5 @@ pathway 5-10-methylenetetrahydrom-to-adp "5,10-methylenetetrahydrom… to ADP" {
     beta_d_glucose_6_phosphate
     <-> ec_2_7_1_147 [2.7.1.147] +h +amp -adp
     beta_d_glucose
-  }
-
-  branch from reduced_coenzyme_f420 side left {
-    reduced_coenzyme_f420
-    <-> ec_1_12_98_1 [1.12.98.1] +coenzyme_gamma_f420_2 +h
-    h2
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +1_tridecanoylglycerophosphoethanolamine_c13_0_pe +phosphate +1_tridecanoylglycerophosphoethanolamine_c13_0_pe +h2o
-    atp
-  }
-
-  branch from h side left {
-    h
-    <-> . +acetyl_coa +3z_6z_dodecadienoyl_coa +coa
-    3_oxo_cis_cis_5_8_tetradecadienoyl_coa
-  }
-
-  branch from 5_10_methenyl_5_6_7_8_tetrahydromethanopterin side right {
-    5_10_methenyl_5_6_7_8_tetrahydromethanopterin
-    <-> ec_1_5_98_1 [1.5.98.1] +5_10_methylenetetrahydromethanopterin +coenzyme_gamma_f420_2 +h
-    1_5_dihydrocoenzyme_f420
-  }
-
-  branch from 5_10_methenyl_5_6_7_8_tetrahydromethanopterin side left {
-    5_10_methenyl_5_6_7_8_tetrahydromethanopterin
-    <-> . +5_10_methylenetetrahydromethanopterin +nadp
-    nadph
-  }
-
-  branch from beta_d_glucose_6_phosphate side right {
-    beta_d_glucose_6_phosphate
-    <-> . +pyruvate +beta_d_glucose
-    phosphoenolpyruvate
-  }
-
-  branch from beta_d_glucose_6_phosphate side left {
-    beta_d_glucose_6_phosphate
-    <-> ec_1_1_1_363 [1.1.1.363] +6_phospho_d_glucono_1_5_lactone +h +nadph
-    nadp
-  }
-
-  branch from coenzyme_gamma_f420_2 side right {
-    coenzyme_gamma_f420_2
-    <-> . +coenzyme_f390_a +h +atp
-    diphosphate
-  }
-
-  branch from coenzyme_gamma_f420_2 side left {
-    coenzyme_gamma_f420_2
-    <-> . +gtp +h +diphosphate
-    coenzyme_f390_g
-  }
-
-  branch from beta_d_glucose side right {
-    beta_d_glucose
-    <-> ec_5_3_1_5 [5.3.1.5]
-    d_fructofuranose
-  }
-
-  branch from beta_d_glucose side left {
-    beta_d_glucose
-    <-> ec_3_1_1_33 [3.1.1.33] +h +acetate +h2o
-    6_o_acetyl_beta_d_glucose
-  }
-
-  branch from adp side right {
-    adp
-    <-> . +h +phosphate +atp +h2o
-    all_trans_retinal
-  }
-
-  branch from adp side left {
-    adp
-    <-> . +h +phosphate +atp +h2o
-    rosuvastatin
   }
 }

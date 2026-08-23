@@ -1,0 +1,593 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "thromboxane-a1-to-15-dehydro-prostaglandin-null",
+  "name": "thromboxane A1 to 15-dehydro-prostaglandin…",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from thromboxane A1 to 15-dehydro-prostaglandin E1(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR200059"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "thromboxane_a1",
+      "name": "thromboxane A1",
+      "formula": "C20H33O5",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1559882"
+      }
+    },
+    {
+      "id": "prostaglandin_h1",
+      "name": "prostaglandin H1",
+      "formula": "C20H33O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:90793"
+      }
+    },
+    {
+      "id": "prostaglandin_e1",
+      "name": "prostaglandin E1",
+      "formula": "C20H33O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57397"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "15_dehydro_prostaglandin_e1",
+      "name": "15-dehydro-prostaglandin E1",
+      "short": "15-dehydro-prostagl…",
+      "formula": "C20H31O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57401"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "prostaglandin_a1",
+      "name": "prostaglandin A1",
+      "formula": "C20H31O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57398"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "prostaglandin_f1",
+      "name": "Prostaglandin F1",
+      "formula": "C20H35O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:178049"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_3_99_5",
+      "name": "thromboxane-A synthase",
+      "ec": [
+        "5.3.99.5"
+      ],
+      "xrefs": {
+        "uniprot": "Q96SQ9"
+      }
+    },
+    {
+      "id": "ec_1_1_1_197",
+      "name": "15-hydroxyprostaglandin dehydrogenase (NADP(+))",
+      "ec": [
+        "1.1.1.197"
+      ],
+      "xrefs": {
+        "uniprot": "P16152"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "thromboxane-A synthase",
+      "ec": "5.3.99.5",
+      "substrates": [
+        {
+          "metabolite": "thromboxane_a1",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "prostaglandin_h1",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_99_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR200059"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR200059"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "prostaglandin H1 = prostaglandin E1",
+      "equation": "prostaglandin H1 = prostaglandin E1",
+      "substrates": [
+        {
+          "metabolite": "prostaglandin_h1",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "prostaglandin_e1",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:50436"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50436"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "15-hydroxyprostaglandin dehydrogenase (NADP(+))",
+      "equation": "prostaglandin E1 + NADP(+) = 15-oxoprostaglandin E1 + NADPH + H(+)",
+      "ec": "1.1.1.197",
+      "substrates": [
+        {
+          "metabolite": "prostaglandin_e1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "15_dehydro_prostaglandin_e1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_197"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:11636"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11636"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "prostaglandin E1 = prostaglandin A1 + H2O",
+      "equation": "prostaglandin E1 = prostaglandin A1 + H2O",
+      "substrates": [
+        {
+          "metabolite": "prostaglandin_e1",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "prostaglandin_a1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:50548"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50548"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "prostaglandin E1 + NADPH + H(+) = prostaglandin F1 + NADP(+)",
+      "equation": "prostaglandin E1 + NADPH + H(+) = prostaglandin F1 + NADP(+)",
+      "substrates": [
+        {
+          "metabolite": "prostaglandin_e1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "prostaglandin_f1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:68612"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:68612"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_thromboxane_a1_h-to-amicoumacin-a-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "thromboxane_a1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-amicoumacin-a-null"
+      },
+      "note": "Shares thromboxane A1 with H to amicoumacin A.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1559882"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_thromboxane_a1_maltoheptaose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "thromboxane_a1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "maltoheptaose-to-h2o"
+      },
+      "note": "Shares thromboxane A1 with maltoheptaose to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1559882"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_thromboxane_a1_thromboxane-a1-to-15-dehydro-prostaglandin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "thromboxane_a1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "thromboxane-a1-to-15-dehydro-prostaglandin"
+      },
+      "note": "Shares thromboxane A1 with thromboxane A1 to 15-dehydro-prostaglandin….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1559882"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_h1_8z-11z-14z-eicosatrieno-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_h1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "8z-11z-14z-eicosatrieno-to-fmn"
+      },
+      "note": "Shares prostaglandin H1 with (8Z,11Z,14Z)-eicosatrieno… to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:90793"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_h1_8z-11z-14z-eicosatrieno-to-fmn-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_h1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "8z-11z-14z-eicosatrieno-to-fmn-null"
+      },
+      "note": "Shares prostaglandin H1 with (8Z,11Z,14Z)-eicosatrieno… to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:90793"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_h1_thromboxane-a1-to-15-dehydro-prostaglandin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_h1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "thromboxane-a1-to-15-dehydro-prostaglandin"
+      },
+      "note": "Shares prostaglandin H1 with thromboxane A1 to 15-dehydro-prostaglandin….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:90793"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_e1_isethionate-to-3-sulfonatopyruvate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_e1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isethionate-to-3-sulfonatopyruvate"
+      },
+      "note": "Shares prostaglandin E1 with isethionate to 3-sulfonatopyruvate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57397"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_e1_nadh-to-15-dehydro-prostaglandin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_e1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-15-dehydro-prostaglandin"
+      },
+      "note": "Shares prostaglandin E1 with NADH to 15-dehydro-prostaglandin….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57397"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_e1_nadh-to-15-dehydro-prostaglandin-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_e1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-15-dehydro-prostaglandin-null"
+      },
+      "note": "Shares prostaglandin E1 with NADH to 15-dehydro-prostaglandin….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57397"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_e1_thromboxane-a1-to-15-dehydro-prostaglandin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_e1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "thromboxane-a1-to-15-dehydro-prostaglandin"
+      },
+      "note": "Shares prostaglandin E1 with thromboxane A1 to 15-dehydro-prostaglandin….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57397"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_15_dehydro_prostaglandin_e1_nadh-to-15-dehydro-prostaglandin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "15_dehydro_prostaglandin_e1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-15-dehydro-prostaglandin"
+      },
+      "note": "Shares 15-dehydro-prostaglandin E1 with NADH to 15-dehydro-prostaglandin….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57401"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_15_dehydro_prostaglandin_e1_nadh-to-15-dehydro-prostaglandin-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "15_dehydro_prostaglandin_e1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-15-dehydro-prostaglandin-null"
+      },
+      "note": "Shares 15-dehydro-prostaglandin E1 with NADH to 15-dehydro-prostaglandin….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57401"
+          }
+        ]
+      }
+    }
+  ]
+}

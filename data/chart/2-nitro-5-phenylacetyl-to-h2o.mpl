@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-nitro-5-phenylacetyl-to-h2o "2-Nitro-5-[(Phenylacetyl)… to H2O" {
-  spacing 258
+  spacing 324
 
   spine at 0,0 {
     2_nitro_5_phenylacetyl_amino_benzoic_acid
@@ -18,67 +18,133 @@ pathway 2-nitro-5-phenylacetyl-to-h2o "2-Nitro-5-[(Phenylacetyl)… to H2O" {
 
   branch from h side left {
     h
-    <-> ec_3_8_1_5 [3.8.1.5] +2_3_dibromo_1_propanol +bromide +h2o
-    1_2_3_tribromopropane
+    <-> . +adp +phosphate +atp +h2o
+    petrobactin
   }
 
   branch from h side right {
     h
-    <-> ec_3_8_1_5 [3.8.1.5] +2_bromoethanol +bromide +h2o
-    1_2_dibromoethane
-  }
-
-  branch from 2_phenylacetate side left {
-    2_phenylacetate
-    <-> ec_6_2_1_13 [6.2.1.13] +phenylacetyl_coa +adp +phosphate +atp
-    coa
-  }
-
-  branch from 2_phenylacetaldehyde side right {
-    2_phenylacetaldehyde
-    <-> ec_1_2_1_5 [1.2.1.5] +h +nadph +nadp +h2o
-    phenyl_acetate
-  }
-
-  branch from 2_phenylacetaldehyde side left {
-    2_phenylacetaldehyde
-    <-> ec_1_2_1_39 [1.2.1.39] +nadh +h +phenyl_acetate +h2o
-    nad
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_2_1_5 [1.2.1.5] +4_hydroxynon_2_enal +h2o +h +nadph
-    4_hydroxynon_2_enoic_acid
+    <-> ec_4_1_2_47 [4.1.2.47] +cyanide +5_methyl_2_hexanone
+    2s_2_hydroxy_2_5_dimethylhexanenitrile
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_2_1_5 [1.2.1.5] +decanoate +h +nadph +h2o
-    decanal
+    <-> ec_1_1_1_92 [1.1.1.92] +r_glycerate +co2 +h +nadph
+    oxaloglycolate
   }
 
-  branch from h2o side right {
-    h2o
-    <-> ec_3_8_1_5 [3.8.1.5] +1_2_dibromopropane +h +bromide
-    2_bromopropanol
+  branch from nadp side right {
+    nadp
+    <-> ec_1_1_1_183 [1.1.1.183] +e_cinnamaldehyde +h +nadph
+    cinnamyl_alcohol
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_8_1_5 [3.8.1.5] +3_bromo_1_propanol +h +bromide
-    1_3_dibromopropane
+    <-> . +2z_4e_2_8_dihydroxy_8_methyl_6_oxonona_2_4_dien +3_hydroxyisovaleric_acid
+    2z_2_hydroxypenta_2_4_dienoate
   }
 
-  branch from atp side right {
-    atp
-    <-> ec_2_7_1_1 [2.7.1.1] +beta_d_fructose_6_phosphate +h +adp
-    beta_d_fructose
+  branch from h2o side right {
+    h2o
+    <-> . +p_gingivalis_kdo2_lipid_a_3_deacylated_4_dephosp +r_3_hydroxypalmitic_acid
+    p_gingivalis_kdo2_lipid_a_penta_acylated_4_depho
   }
 
   branch from atp side left {
     atp
-    <-> ec_2_7_1_3 [2.7.1.3] +d_fructofuranose_1_phosphate +h +adp
-    d_fructofuranose
+    <-> ec_2_7_1_29 [2.7.1.29] +glyceraldehyde_3_phosphate +adp +h
+    glyceraldehyde
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_2_7_1_29 [2.7.1.29] +hydroxyacetone +h +adp
+    hydroxyacetone_phosphate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +p_gingivalis_kdo2_lipid_a_penta_acylated_1_depho +phosphate
+    p_gingivalis_kdo2_lipid_a_penta_acylated_non_pho
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +3_amino_4_hydroxyphenyl_arsonous_acid +glutathione
+    hapa_iii_glutathione_complex
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_8_2_2 [2.8.2.2] +adenosine_3_5_bisphosphate +24s_hydroxycholesterol_3_24_disulfate +24s_hydroxycholesterol_3_sulfate
+    3_phosphoadenylyl_sulfate
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_3_1_87 [2.3.1.87] +coa_s_acetyl_tryptamine +bromide +coa
+    2_bromo_n_2_1h_indol_3_yl_ethyl_acetamide
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_3_1_16 [1.3.1.16] +3_nitropropanoate +nadp +h
+    3_nitroacrylate
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_14_12_5 [1.14.12.5] +2_hydroxymethyl_3_acetamidomethylene_succinate +nadp +h +o2
+    5_pyridoxate
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_13_11_30 [1.13.11.30] +stizolobinic_acid +nadph
+    5_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_13_11_30 [1.13.11.30] +stizolobinic_acid +nadph
+    5_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem
+  }
+
+  branch from adp side left {
+    adp
+    <-> ec_3_6_3_41 [3.6.3.41] +h +phosphate +atp +h2o
+    heme_b
+  }
+
+  branch from adp side right {
+    adp
+    <-> . +gly_met +h +phosphate +atp +l_methionine
+    glycine
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +beta_d_glcnac_1_3_beta_l_rha_1_4_alpha_d_glcnac +phosphoenolpyruvate
+    beta_d_glcnac46pyr_1_3_beta_l_rha_1_4_alpha_d_gl
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_3_6_1_5 [3.6.1.5] +2_chloro_amp +h +h2o
+    2_chloro_atp
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +l_alanine +glycine +h +adp +phosphate
+    ala_gly
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_2_7_1_91 [2.7.1.91] +sphing_4_enine_1_phosphate +adp
+    sphing_4_enine
   }
 }

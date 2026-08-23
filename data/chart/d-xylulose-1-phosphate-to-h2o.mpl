@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-xylulose-1-phosphate-to-h2o "D-Xylulose 1-phosphate to H2O" {
-  spacing 218
+  spacing 308
 
   spine at 0,0 {
     d_xylulose_1_phosphate
@@ -24,61 +24,151 @@ pathway d-xylulose-1-phosphate-to-h2o "D-Xylulose 1-phosphate to H2O" {
 
   branch from h side right {
     h
-    <-> ec_3_4_11_10 [3.4.11.10] +l_aspartate +4_nitroaniline +h2o
-    aspartic_acid_beta_4_nitroanilide
+    <-> ec_2_7_8_26 [2.7.8.26] +adenosylcob_iii_inamide_gdp +5_methylbenzimidazole_ribotide_phosphate +5_methylbenzimidazolyl_cobamide_5_phosphate
+    gmp
   }
 
   branch from h side left {
     h
-    <-> ec_3_4_11_21 [3.4.11.21] +l_aspartate +angiotensin_iii +h2o
-    angiotensin_ii
+    <-> ec_2_3_3_20 [2.3.3.20] +decanoyl_coa +h2o +2r_2_octyl_3_oxododecanoate
+    coa
   }
 
   branch from atp side right {
     atp
-    <-> . +h +adp +phosphate +h2o
-    n_alpha_formyl_l_methionine
+    <-> ec_2_7_2_18 [2.7.2.18] +9z_octadecenoate +adp
+    oleoyl_phosphate
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +h +adp +4_phosphopentanoyl_coa
+    4_hydroxypentanoyl_coa
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_1_1_19 [1.1.1.19] +d_glucuronate +h +nadph
+    l_gulonate
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +5_dehydro_2_deoxy_d_gluconate +h +nadph
+    myo_inositol
+  }
+
+  branch from xylitol side right {
+    xylitol
+    <-> ec_1_1_1_14 [1.1.1.14] +nadh +d_xylulofuranose +h
+    nad
+  }
+
+  branch from xylitol side left {
+    xylitol
+    <-> ec_1_1_1_10 [1.1.1.10] +h +nadph +nadp
+    lyxulose
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +4_octanoyl_5_oxo_2h_furan_3_yl_methyl_phosphate
+    2_oxo_3_phosphooxy_propyl_3_oxodecanoate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +l_alanine +l_2_amino_4_methoxy_trans_but_3_enoic_acid
+    l_alanyl_2s_3e_amino_4_methoxy_but_3_enoyl_l_ala
+  }
+
+  branch from adp side right {
+    adp
+    <-> . +h +4_methylamino_butanoate +phosphate +atp +h2o
+    n_methylpyrrolidin_2_one
+  }
+
+  branch from adp side left {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    l_ectoine
+  }
+
+  branch from h side right {
+    h
+    <-> . +co2 +urolithin_m5
+    3_4_8_9_10_pentahydroxy_6_oxobenzo_c_chromene_1
+  }
+
+  branch from h side left {
+    h
+    <-> . +alpha_d_ribofuranose_5_phosphate +h2o +phosphate
+    beta_d_ribopyranose
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_6_2_1_5 [6.2.1.5] +itaconyl_coa +adp +phosphate +coa
+    itaconate
   }
 
   branch from atp side left {
     atp
     <-> . +h +adp +phosphate +h2o
-    d_mannitol
+    lactose
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +h +myo_inositol +nadp
+    scyllo_inosose
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_5_1_33 [1.5.1.33] +5_6_7_8_tetrahydrobiopterin +nadp +h
+    tetrahydrobiopterin_4a_carbinolamine
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_13_24 [1.14.13.24] +3_hydroxy_4_methyl_benzoate +h +o2 +nadph +h2o
-    4_methylgentisate
+    <-> ec_2_3_1_41 [2.3.1.41] +hexadecanoate +co2 +coa +h2o +malonyl_coa +h +nadph
+    acetyl_coa
   }
 
   branch from nadp side left {
     nadp
-    <-> . +4_hydroxybenzoate +h +o2 +nadph +h2o
-    2_5_dihydroxybenzoate
+    <-> . +malonyl_coa +h +nadph +h2o
+    3_oxopropanoyl_coa
   }
 
   branch from xylitol side right {
     xylitol
-    <-> ec_1_1_1_188 [1.1.1.188] +h +nadph +nadp
-    aldehydo_d_xylose
+    <-> ec_1_1_1_15 [1.1.1.15] +lyxulose +h +nad
+    nadh
   }
 
-  branch from xylitol side left {
-    xylitol
-    <-> ec_1_1_3_41 [1.1.3.41] +alpha_d_xylose +h2o2
-    o2
+  branch from phosphate side left {
+    phosphate
+    <-> . +2_oxo_3_phosphooxy_propyl_7_methyl_3_oxooctanoat +h2o
+    3_hydroxy_2_oxopropyl_7_methyl_3_oxooctanoate
   }
 
-  branch from h2o side right {
-    h2o
-    <-> ec_3_2_1_22 [3.2.1.22] +beta_d_galactose +n_acetyllactosamine
-    alpha_d_galactosyl_1_3_beta_d_galactosyl_1_4_n_a
+  branch from phosphate side right {
+    phosphate
+    <-> ec_3_1_3_73 [3.1.3.73] +phenyl_cobeta_adenosylcobamide_5_phosphate +h2o
+    phenyl_cobeta_adenosylcobamide
   }
 
   branch from h2o side left {
     h2o
-    <-> . +d_tyrosinamide +h +nh4
-    d_tyrosine
+    <-> ec_4_4_1_13 [4.4.1.13] +3_methyl_3_sulfanylbutan_1_ol +pyruvate +nh4
+    felinine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +13s_hydroperoxy_9z_11e_octadecadienoate
+    omega5z_etheroleate
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-arabinofuranose-to-d-arabinono-1-4-lactone "D-arabinofuranose to D-arabinono-1,4-lactone" {
-  spacing 256
+  spacing 220
 
   spine at 0,0 {
     d_arabinofuranose
@@ -14,41 +14,5 @@ pathway d-arabinofuranose-to-d-arabinono-1-4-lactone "D-arabinofuranose to D-ara
     aldehydo_d_arabinose
     <-> ec_1_1_1_117 [1.1.1.117] +nadp -nadph -d_arabinono_1_4_lactone
     h
-  }
-
-  branch from h side left {
-    h
-    <-> . +udp_n_acetyl_alpha_d_galactosamine +alpha_l_rha_1_4_alpha_d_glc_1_4_beta_d_gal_1_3_g +beta_d_galnac_1_3_alpha_l_rha_1_4_alpha_d_glc_1
-    udp
-  }
-
-  branch from h side right {
-    h
-    <-> . +p_gingivalis_kdo2_lipid_a_3_deacylated_4_dephosp +3r_3_hydroxy_13_methyltetradecanoate +h2o
-    p_gingivalis_kdo2_lipid_a_penta_acylated_4_depho
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> ec_1_6_99_1 [1.6.99.1] +2_hexenal +h +nadp
-    hexanal
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> ec_1_3_1_27 [1.3.1.27] +2_hexadecenal +h +nadp
-    hexadecanal
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_4_1_21 [1.4.1.21] +nadh +iminoaspartate +h
-    l_aspartate
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_4_1_21 [1.4.1.21] +nadh +h +l_aspartate
-    iminoaspartate
   }
 }

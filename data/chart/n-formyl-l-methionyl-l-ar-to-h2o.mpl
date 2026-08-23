@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-formyl-l-methionyl-l-ar-to-h2o "N-formyl-L-methionyl-L-ar… to H2O" {
-  spacing 200
+  spacing 152
 
   spine at 0,0 {
     n_formyl_l_methionyl_l_arginyl_l_threonylglycyl
@@ -16,53 +16,5 @@ pathway n-formyl-l-methionyl-l-ar-to-h2o "N-formyl-L-methionyl-L-ar… to H2O" {
     s_adenosyl_l_methionine
     <-> . +diphosphate +microcin_c_intermediate_4 +h +amp -atp -h2o
     microcin_c_precursor_peptide_mcca
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    2_o_4_deoxy_l_threo_hex_4_enopyranuronosyl_l_rha
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    avilamycin_a
-  }
-
-  branch from s_adenosyl_l_methionine side left {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +17_o_acetylajmaline +h
-    17_o_acetylnorajmaline
-  }
-
-  branch from s_adenosyl_l_methionine side right {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +premithramycinone +h
-    4_demethylpremithramycinone
-  }
-
-  branch from microcin_c_intermediate_4 side left {
-    microcin_c_intermediate_4
-    <-> . +h2o +h
-    microcin_c_intermediate_3
-  }
-
-  branch from microcin_c_precursor_peptide_mcca side right {
-    microcin_c_precursor_peptide_mcca
-    <-> . +diphosphate +h +atp
-    microcin_c_intermediate_1
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
-    d_4_glcpa_1_4_d_glcp_1_4_l_rhap_1_3_d_glcp
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
-    d_glcp_1_4_l_rhap_1_3_d_glcp
   }
 }

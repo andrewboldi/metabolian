@@ -113,60 +113,6 @@
       "xrefs": {
         "metanetx": "MNXM2798"
       }
-    },
-    {
-      "id": "h",
-      "name": "H",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM1"
-      }
-    },
-    {
-      "id": "methylarsonate",
-      "name": "methylarsonate",
-      "formula": "CH4AsO3",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM2131"
-      }
-    },
-    {
-      "id": "methylarsonous_acid",
-      "name": "methylarsonous acid",
-      "formula": "CH5AsO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:17826"
-      }
-    },
-    {
-      "id": "tyrindoxyl",
-      "name": "tyrindoxyl",
-      "formula": "C9H8BrNOS",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1132865"
-      }
-    },
-    {
-      "id": "tyrindoleninone",
-      "name": "tyrindoleninone",
-      "formula": "C9H6BrNOS",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1132866"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "WATER"
-      }
     }
   ],
   "enzymes": [
@@ -175,7 +121,10 @@
       "name": "carotenoid-9',10'-cleaving dioxygenase",
       "ec": [
         "1.13.11.71"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q9BYV7"
+      }
     }
   ],
   "reactions": [
@@ -344,79 +293,269 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "Reaction MNXR193831",
-      "substrates": [
-        {
-          "metabolite": "h",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "methylarsonate",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "methylarsonous_acid",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR193831"
+      "id": "xt_lutein_h-to-meso-zeaxanthin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lutein"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-meso-zeaxanthin"
+      },
+      "note": "Shares lutein with H to meso-zeaxanthin.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR193831"
+            "db": "ChEBI",
+            "id": "CHEBI:28838"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "Reaction MNXR193836",
-      "substrates": [
-        {
-          "metabolite": "tyrindoxyl",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "tyrindoleninone",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "metanetx": "MNXR193836"
+      "id": "xt_lutein_lutein-to-o2-68432",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lutein"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "lutein-to-o2-68432"
+      },
+      "note": "Shares lutein with lutein to O2.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28838"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3r_6r_hydroxy_ionone_lutein-to-o2-68432",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3r_6r_hydroxy_ionone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "lutein-to-o2-68432"
+      },
+      "note": "Shares (3R,6R)-hydroxy-α-ionone with lutein to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:177904"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3r_3_hydroxy_10_apo_carotenal_5-cis-lycopene-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3r_3_hydroxy_10_apo_carotenal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cis-lycopene-to-h2o"
+      },
+      "note": "Shares (3R)-3-hydroxy-10'-apo-β-carotenal with 5-cis-lycopene to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:177902"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_9_dimethyldodeca_2_4_6_8_10_pentaenedial_12-hydroxyeicosatetraenoa-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_9_dimethyldodeca_2_4_6_8_10_pentaenedial"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "12-hydroxyeicosatetraenoa-to-h2o"
+      },
+      "note": "Shares 4,9-dimethyldodeca-2,4,6,8,10-pentaenedial with 12-hydroxyeicosatetraenoa… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:53171"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_9_dimethyldodeca_2_4_6_8_10_pentaenedial_5-cis-lycopene-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_9_dimethyldodeca_2_4_6_8_10_pentaenedial"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cis-lycopene-to-h2o"
+      },
+      "note": "Shares 4,9-dimethyldodeca-2,4,6,8,10-pentaenedial with 5-cis-lycopene to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:53171"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_9_dimethyldodeca_2_4_6_8_10_pentaenedial_carotene-to-all-trans-violaxanthin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_9_dimethyldodeca_2_4_6_8_10_pentaenedial"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "carotene-to-all-trans-violaxanthin"
+      },
+      "note": "Shares 4,9-dimethyldodeca-2,4,6,8,10-pentaenedial with β-carotene to all-trans-violaxanthin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:53171"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_9_dimethyldodeca_2_4_6_8_10_pentaenedial_lutein-to-o2-68432",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_9_dimethyldodeca_2_4_6_8_10_pentaenedial"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "lutein-to-o2-68432"
+      },
+      "note": "Shares 4,9-dimethyldodeca-2,4,6,8,10-pentaenedial with lutein to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:53171"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3r_hydroxy_ionone_5-cis-lycopene-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3r_hydroxy_ionone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cis-lycopene-to-h2o"
+      },
+      "note": "Shares (3R)-hydroxy-β-ionone with 5-cis-lycopene to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:53173"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3r_hydroxy_ionone_carotene-to-all-trans-violaxanthin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3r_hydroxy_ionone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "carotene-to-all-trans-violaxanthin"
+      },
+      "note": "Shares (3R)-hydroxy-β-ionone with β-carotene to all-trans-violaxanthin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:53173"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3r_hydroxy_ionone_lutein-to-o2-68432",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3r_hydroxy_ionone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "lutein-to-o2-68432"
+      },
+      "note": "Shares (3R)-hydroxy-β-ionone with lutein to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:53173"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_6_epoxy_3_hydroxy_9_apo_beta_caroten_9_one_carotene-to-all-trans-violaxanthin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_6_epoxy_3_hydroxy_9_apo_beta_caroten_9_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "carotene-to-all-trans-violaxanthin"
+      },
+      "note": "Shares 5,6-epoxy-3-hydroxy-9-apo-beta-caroten-9-one with β-carotene to all-trans-violaxanthin.",
+      "provenance": {
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR193836"
+            "id": "MNXM102752"
           }
         ]
       }

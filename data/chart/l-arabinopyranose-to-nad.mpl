@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-arabinopyranose-to-nad "β-L-arabinopyranose to NAD" {
-  spacing 164
+  spacing 158
 
   spine at 0,0 {
     l_arabinopyranose
@@ -18,13 +18,7 @@ pathway l-arabinopyranose-to-nad "β-L-arabinopyranose to NAD" {
 
   branch from 3s_4s_2_hydroxymethyl_oxolane_2_3_4_triol side left {
     3s_4s_2_hydroxymethyl_oxolane_2_3_4_triol
-    <-> ec_5_3_1_4 [5.3.1.4]
-    aldehydo_l_arabinose
-  }
-
-  branch from 3s_4s_2_hydroxymethyl_oxolane_2_3_4_triol side right {
-    3s_4s_2_hydroxymethyl_oxolane_2_3_4_triol
     <-> ec_5_3_1_5 [5.3.1.5]
-    l_arabinofuranose
+    l_ribose
   }
 }

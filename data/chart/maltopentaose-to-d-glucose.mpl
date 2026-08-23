@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway maltopentaose-to-d-glucose "maltopentaose to α-D-glucose" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     maltopentaose
@@ -14,17 +14,5 @@ pathway maltopentaose-to-d-glucose "maltopentaose to α-D-glucose" {
     d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
     <-> . +h2o -d_glucose
     d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_1_3_3_4 [1.3.3.4] +protoporphyrin +o2
-    protoporphyrinogen_ix
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_2_1_22 [3.2.1.22] +sucrose +d_galactose
-    raffinose
   }
 }

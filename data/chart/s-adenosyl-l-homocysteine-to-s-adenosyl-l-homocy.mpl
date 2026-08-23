@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-adenosyl-l-homocysteine-to-s-adenosyl-l-homocy "S-adenosyl-L-homocysteine to S-adenosyl-L-homocysteine" {
-  spacing 182
+  spacing 158
 
   spine at 0,0 {
     s_adenosyl_l_homocysteine
@@ -16,33 +16,9 @@ pathway s-adenosyl-l-homocysteine-to-s-adenosyl-l-homocy "S-adenosyl-L-homocyste
     1_3_5_dichloro_2_6_dihydroxy_4_methoxyphenyl_hex
   }
 
-  branch from s_s_adenosyl_l_methionine side left {
-    s_s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +1_3_5_dichloro_2_6_dihydroxy_4_methoxyphenyl_hex
-    3_5_dichloro_2_4_6_trihydroxyphenyl_hexan_1_one
-  }
-
-  branch from s_s_adenosyl_l_methionine side right {
-    s_s_adenosyl_l_methionine
-    <-> ec_2_1_1_41 [2.1.1.41] +s_adenosyl_l_homocysteine +h +eburicol
-    lanosterol
-  }
-
   branch from 3_chloro_2_4_6_trihydroxyphenyl_hexan_1_one side left {
     3_chloro_2_4_6_trihydroxyphenyl_hexan_1_one
     <-> . +fadh2 +chloride +o2 +fad +h2o +hplus
     2_4_6_trihydroxyphenylhexan_1_one
-  }
-
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_49 [2.1.1.49] +secondary_ammonium_ion +sam +hplus
-    methylated_secondary_ammonium_ion
-  }
-
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_49 [2.1.1.49] +tertiary_ammonium_ion +sam +hplus
-    methylated_tertiary_amine
   }
 }

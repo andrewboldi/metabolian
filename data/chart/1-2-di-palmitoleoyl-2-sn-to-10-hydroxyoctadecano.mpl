@@ -20,45 +20,9 @@ pathway 1-2-di-palmitoleoyl-2-sn-to-10-hydroxyoctadecano "1,2-di-palmitoleoyl-2-
     10_hydroxyoctadecanoate
   }
 
-  branch from cytidine_5_monophosphate side left {
-    cytidine_5_monophosphate
-    <-> . +d_galp_1_3_d_galpnac_1_3_d_galp_1_4_d_galp_1_4 +cmp_n_acetyl_neuraminate +hplus
-    neuac_2_3_d_gal_1_3_d_galnac_1_3_d_gal_1_4_d_ga
-  }
 
-  branch from cytidine_5_monophosphate side right {
-    cytidine_5_monophosphate
-    <-> . +neuac_2_3_d_gal_1_3_d_galnac_1_3_d_gal_1_4_d_ga +cmp_n_acetyl_neuraminate +hplus
-    neuac_2_3_d_gal_1_3_neuac_2_6_d_galnac_1_3_d_ga
-  }
 
-  branch from 1_9z_hexadecenoyl_sn_glycero_3_phosphocholine side left {
-    1_9z_hexadecenoyl_sn_glycero_3_phosphocholine
-    <-> . +1_1_2_trioleoyl_2_palmitoyl_cardiolipin +trioleoyl_2_monolysocardiolipin
-    1_palmitoleoyl_2_palmitoyl_sn_glycero_3_phosphoc
-  }
 
-  branch from 1_9z_hexadecenoyl_sn_glycero_3_phosphocholine side right {
-    1_9z_hexadecenoyl_sn_glycero_3_phosphocholine
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    atp
-  }
 
-  branch from trioleoyl_2_monolysocardiolipin side left {
-    trioleoyl_2_monolysocardiolipin
-    <-> . +tetraoleoyl_cardiolipin +1_nonadecanoyl_sn_glycero_3_phosphocholine
-    1_nonadecanoyl_2_oleoyl_sn_glycero_3_phosphochol
-  }
 
-  branch from trioleoyl_2_monolysocardiolipin side right {
-    trioleoyl_2_monolysocardiolipin
-    <-> . +tetraoleoyl_cardiolipin +1_o_oleoyl_sn_glycero_3_phosphocholine
-    1_2_dioleoyl_sn_glycero_3_phosphocholine
-  }
-
-  branch from 10_hydroxyoctadecanoate side left {
-    10_hydroxyoctadecanoate
-    <-> . +h2o
-    10e_octadecenoate
-  }
 }

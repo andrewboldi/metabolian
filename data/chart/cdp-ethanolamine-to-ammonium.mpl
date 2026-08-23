@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cdp-ethanolamine-to-ammonium "CDP-ethanolamine to ammonium" {
-  spacing 272
+  spacing 248
 
   spine at 0,0 {
     cdp_ethanolamine
@@ -14,29 +14,5 @@ pathway cdp-ethanolamine-to-ammonium "CDP-ethanolamine to ammonium" {
     phosphoethanolamine
     <-> ec_4_2_3_2 [4.2.3.2] +h2o -nh3 -pi
     acetaldehyde
-  }
-
-  branch from cytidine_5_monophosphate side left {
-    cytidine_5_monophosphate
-    <-> . +n4_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_4 +cmp_n_acetyl_neuraminate +hplus
-    an_n4_neu5ac_2_3_d_gal_1_4_d_glcnac_1_2_d_man_1
-  }
-
-  branch from cytidine_5_monophosphate side right {
-    cytidine_5_monophosphate
-    <-> . +n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_4_d_gal_1_4 +cmp_n_acetyl_neuraminate +hplus
-    n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_4_neu5ac_2
-  }
-
-  branch from serine side left {
-    serine
-    <-> . +nad +nadh +hplus
-    l_3_oxoalanine
-  }
-
-  branch from serine side right {
-    serine
-    <-> ec_1_1_1_387 [1.1.1.387] +nad +co2 +nadh
-    ammonioacetaldehyde
   }
 }

@@ -1,0 +1,411 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "nadh-to-3-methyl-2-oxovalerate-null",
+  "name": "NADH to 3-methyl-2-oxovalerate",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from NADH to 3-methyl-2-oxovalerate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR198501"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "2s_2_methylbutanoyl_coa",
+      "name": "(2S)-2-methylbutanoyl-CoA",
+      "short": "2-methylbutanoyl-CoA",
+      "formula": "C26H40N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1364163"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "3_methyl_2_oxopentanoate",
+      "name": "3-methyl-2-oxopentanoate",
+      "short": "3-methyl-2-oxopenta…",
+      "formula": "C6H9O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1363844"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "2r_hydroxy_3_methylvalerate",
+      "name": "(2R)-hydroxy-3-methylvalerate",
+      "short": "hydroxy-3-methylval…",
+      "formula": "C6H11O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:232388"
+      }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H30N9O15P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57692"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3_methyl_2_oxovalerate",
+      "name": "3-methyl-2-oxovalerate",
+      "short": "3-methyl-2-oxovaler…",
+      "formula": "C6H9O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:28654"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58307"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_2_1_25",
+      "name": "branched-chain alpha-keto acid dehydrogenase system",
+      "ec": [
+        "1.2.1.25"
+      ]
+    },
+    {
+      "id": "ec_1_2_4_4",
+      "name": "3-methyl-2-oxobutanoate dehydrogenase (2-methylpropanoyl-transferring)",
+      "ec": [
+        "1.2.4.4"
+      ],
+      "xrefs": {
+        "uniprot": "P12694"
+      }
+    },
+    {
+      "id": "ec_1_8_1_4",
+      "name": "dihydrolipoyl dehydrogenase",
+      "ec": [
+        "1.8.1.4"
+      ],
+      "xrefs": {
+        "uniprot": "P09622"
+      }
+    },
+    {
+      "id": "ec_2_3_1_168",
+      "name": "dihydrolipoyllysine-residue (2-methylpropanoyl)transferase",
+      "ec": [
+        "2.3.1.168"
+      ],
+      "xrefs": {
+        "uniprot": "P11182"
+      }
+    },
+    {
+      "id": "ec_1_1_1_345",
+      "name": "D-2-hydroxyacid dehydrogenase (NAD(+))",
+      "ec": [
+        "1.1.1.345"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "branched-chain alpha-keto acid dehydrogenase system",
+      "ec": "1.2.1.25",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2s_2_methylbutanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_methyl_2_oxopentanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_25"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR198501"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198501"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "D-2-hydroxyacid dehydrogenase (NAD(+))",
+      "ec": "1.1.1.345",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_methyl_2_oxopentanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2r_hydroxy_3_methylvalerate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_345"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR172518"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR172518"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(2R)-hydroxy-3-methylpentanoate + FAD + H(+) = 3-methyl-2-oxopentanoate + FADH2",
+      "equation": "(2R)-hydroxy-3-methylpentanoate + FAD + H(+) = 3-methyl-2-oxopentanoate + FADH2",
+      "substrates": [
+        {
+          "metabolite": "2r_hydroxy_3_methylvalerate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_methyl_2_oxovalerate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:82503"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82503"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_2r_hydroxy_3_methylvalerate_2r-hydroxy-3-methylvale-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2r_hydroxy_3_methylvalerate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2r-hydroxy-3-methylvale-to-h2o"
+      },
+      "note": "Shares (2R)-hydroxy-3-methylvalerate with (2R)-hydroxy-3-methylvale… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:232388"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2r_hydroxy_3_methylvalerate_2r-hydroxy-3-methylvale-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2r_hydroxy_3_methylvalerate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2r-hydroxy-3-methylvale-to-h2o-null"
+      },
+      "note": "Shares (2R)-hydroxy-3-methylvalerate with (2R)-hydroxy-3-methylvale… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:232388"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2r_hydroxy_3_methylvalerate_nadh-to-3-methyl-2-oxovalerate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2r_hydroxy_3_methylvalerate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-3-methyl-2-oxovalerate"
+      },
+      "note": "Shares (2R)-hydroxy-3-methylvalerate with NADH to 3-methyl-2-oxovalerate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:232388"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_methyl_2_oxovalerate_nadh-to-3-methyl-2-oxovalerate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_methyl_2_oxovalerate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-3-methyl-2-oxovalerate"
+      },
+      "note": "Shares 3-methyl-2-oxovalerate with NADH to 3-methyl-2-oxovalerate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28654"
+          }
+        ]
+      }
+    }
+  ]
+}

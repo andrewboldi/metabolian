@@ -159,45 +159,6 @@
       "xrefs": {
         "chebi": "CHEBI:57856"
       }
-    },
-    {
-      "id": "1_2_dioleoyl_sn_glycero_3_phosphoethanolamine",
-      "name": "1,2-dioleoyl-sn-glycero-3-phosphoethanolamine",
-      "short": "1,2-dioleoyl-sn-gly…",
-      "formula": "C41H78NO8P",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:74986"
-      }
-    },
-    {
-      "id": "1_2_dioleoyl_sn_glycero_3_phospho_n_methylethano",
-      "name": "1,2-dioleoyl-sn-glycero-3-phospho-N-methylethanolamine",
-      "short": "1,2-dioleoyl-sn-gly…",
-      "formula": "C42H80NO8P",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:85679"
-      }
-    },
-    {
-      "id": "ldopa",
-      "name": "3,4-Dihydroxy-L-phenylalanine (L-DOPA)",
-      "short": "3,4-Dihydroxy-L-phe…",
-      "formula": "C9H11NO4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:57504"
-      }
-    },
-    {
-      "id": "3_o_methyldopa",
-      "name": "3-O-methyldopa",
-      "formula": "C10H13NO4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:133668"
-      }
     }
   ],
   "enzymes": [
@@ -206,7 +167,10 @@
       "name": "N(6)-L-threonylcarbamoyladenine synthase",
       "ec": [
         "2.3.1.234"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q9NPF4"
+      }
     }
   ],
   "reactions": [
@@ -364,89 +328,225 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "1,2-di-(9Z-octadecenoyl)-sn-glycero-3-phosphoethanolamine + S-adenosyl-L-methionine = 1...",
-      "equation": "1,2-di-(9Z-octadecenoyl)-sn-glycero-3-phosphoethanolamine + S-adenosyl-L-methionine = 1,2-di-(9Z-octadecenoyl)-sn-glycero-3-phospho-N-methylethanolamine + S-adenosyl-L-homocysteine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "1_2_dioleoyl_sn_glycero_3_phosphoethanolamine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_2_dioleoyl_sn_glycero_3_phospho_n_methylethano",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:70619"
+      "id": "xt_l_threonylcarbamoyladenylate_1-5-phospho-d-ribosyl-to-3-imidazol-4-yl-2-oxopr",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_threonylcarbamoyladenylate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1-5-phospho-d-ribosyl-to-3-imidazol-4-yl-2-oxopr"
+      },
+      "note": "Shares L-threonylcarbamoyladenylate with 1-(5-phospho-β-D-ribosyl)… to 3-(imidazol-4-yl)-2-oxopr….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:70619"
+            "db": "ChEBI",
+            "id": "CHEBI:73682"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "L-dopa + S-adenosyl-L-methionine = 3-O-methyl-L-dopa + S-adenosyl-L-homocysteine + H(+)",
-      "equation": "L-dopa + S-adenosyl-L-methionine = 3-O-methyl-L-dopa + S-adenosyl-L-homocysteine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "ldopa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_o_methyldopa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:72259"
+      "id": "xt_n6_l_threonylcarbamoyladenine_5_monophosphate_2_5-end-purine-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n6_l_threonylcarbamoyladenine_5_monophosphate_2"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "5-end-purine-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares N6-L-threonylcarbamoyladenine 5'-monophosphate(2−) with 5'-end purine… to S-adenosyl-L-homocysteine.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:72259"
+            "db": "ChEBI",
+            "id": "CHEBI:74418"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n6_l_threonylcarbamoyladenine_5_monophosphate_2_veratrylglycerol-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n6_l_threonylcarbamoyladenine_5_monophosphate_2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "veratrylglycerol-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares N6-L-threonylcarbamoyladenine 5'-monophosphate(2−) with veratrylglycerol… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74418"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_thiol_group_5-end-purine-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "thiol_group"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-end-purine-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares thiol group with 5'-end purine… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29917"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_thiol_group_methyl-group-to-1-hexadecyl-sn-glycero-3",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "thiol_group"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "methyl-group-to-1-hexadecyl-sn-glycero-3"
+      },
+      "note": "Shares thiol group with methyl group to 1-hexadecyl-sn-glycero-3-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29917"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_thiol_group_r-h-to-hydrogen-acceptor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "thiol_group"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-h-to-hydrogen-acceptor"
+      },
+      "note": "Shares thiol group with R-H to hydrogen acceptor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29917"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_h_group_5-end-purine-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "h_group"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-end-purine-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares H group with 5'-end purine… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64428"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_h_group_methyl-group-to-1-hexadecyl-sn-glycero-3",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "h_group"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "methyl-group-to-1-hexadecyl-sn-glycero-3"
+      },
+      "note": "Shares H group with methyl group to 1-hexadecyl-sn-glycero-3-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64428"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_h_group_r-h-to-hydrogen-acceptor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "h_group"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-h-to-hydrogen-acceptor"
+      },
+      "note": "Shares H group with R-H to hydrogen acceptor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64428"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_methylthio_n6_l_threonylcarbamoyladenine_5_mon_5-end-purine-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_methylthio_n6_l_threonylcarbamoyladenine_5_mon"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-end-purine-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares 2-methylthio-N6-L-threonylcarbamoyladenine 5'-monophosphate(2−) with 5'-end purine… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74420"
           }
         ]
       }

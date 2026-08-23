@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-6r-l-erythro-6-7-dihydr "NADH to (6R)-L-erythro-6,7-dihydr…" {
-  spacing 240
+  spacing 228
 
   spine at 0,0 {
     nadh
@@ -14,17 +14,5 @@ pathway nadh-to-6r-l-erythro-6-7-dihydr "NADH to (6R)-L-erythro-6,7-dihydr…" {
     4a_hydroxy_l_erythro_5_6_7_8_tetrahydrobiopterin
     <-> ec_4_2_1_96 [4.2.1.96] -h2o
     bh2
-  }
-
-  branch from sapropterin side left {
-    sapropterin
-    <-> . +nadp +nadph +hplus
-    6r_6_lactoyl_5_6_7_8_tetrahydropterin
-  }
-
-  branch from ldopa side right {
-    ldopa
-    <-> ec_1_14_18_1 [1.14.18.1] +o2 +h2o
-    l_dopaquinone
   }
 }

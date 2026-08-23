@@ -1,0 +1,564 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "h-to-zeinoxanthin-null",
+  "name": "H to zeinoxanthin",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from H(+) to zeinoxanthin, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR180673"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "6_r_beta_epsilon_carotene",
+      "name": "(6'R)-beta,epsilon-carotene",
+      "short": "(6'R)-beta,epsilon-…",
+      "formula": "C40H56",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM731660"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "alpha_cryptoxanthin",
+      "name": "alpha-cryptoxanthin",
+      "formula": "C40H56O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735277"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "lutein",
+      "name": "lutein",
+      "formula": "C40H56O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1371524"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "zeinoxanthin",
+      "name": "zeinoxanthin",
+      "formula": "C40H56O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:65244"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_13_129",
+      "name": "EC 1.14.13.129",
+      "ec": [
+        "1.14.13.129"
+      ]
+    },
+    {
+      "id": "ec_1_14_99_45",
+      "name": "EC 1.14.99.45",
+      "ec": [
+        "1.14.99.45"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR180673",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "6_r_beta_epsilon_carotene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alpha_cryptoxanthin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR180673"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR180673"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR173539",
+      "ec": "1.14.13.129",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alpha_cryptoxanthin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "lutein",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_129"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR173539"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR173539"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR176897",
+      "ec": "1.14.99.45",
+      "substrates": [
+        {
+          "metabolite": "lutein",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "zeinoxanthin",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_99_45"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR176897"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR176897"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_6_r_beta_epsilon_carotene_5-hydroxy-d-tryptophan-to-r-dyspropterin-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_r_beta_epsilon_carotene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-hydroxy-d-tryptophan-to-r-dyspropterin-null"
+      },
+      "note": "Shares (6'R)-beta,epsilon-carotene with 5-hydroxy-D-tryptophan to (R)-dyspropterin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM731660"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_r_beta_epsilon_carotene_h-to-meso-zeaxanthin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_r_beta_epsilon_carotene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-meso-zeaxanthin"
+      },
+      "note": "Shares (6'R)-beta,epsilon-carotene with H to meso-zeaxanthin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM731660"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_r_beta_epsilon_carotene_h-to-meso-zeaxanthin-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_r_beta_epsilon_carotene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-meso-zeaxanthin-null"
+      },
+      "note": "Shares (6'R)-beta,epsilon-carotene with H to meso-zeaxanthin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM731660"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_r_beta_epsilon_carotene_h-to-zeinoxanthin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_r_beta_epsilon_carotene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-zeinoxanthin"
+      },
+      "note": "Shares (6'R)-beta,epsilon-carotene with H to zeinoxanthin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM731660"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_r_beta_epsilon_carotene_nadh-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_r_beta_epsilon_carotene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-nad"
+      },
+      "note": "Shares (6'R)-beta,epsilon-carotene with NADH to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM731660"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_alpha_cryptoxanthin_5-cis-lycopene-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "alpha_cryptoxanthin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cis-lycopene-to-h2o"
+      },
+      "note": "Shares alpha-cryptoxanthin with 5-cis-lycopene to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM735277"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_alpha_cryptoxanthin_5-cis-lycopene-to-h2o-68444",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "alpha_cryptoxanthin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cis-lycopene-to-h2o-68444"
+      },
+      "note": "Shares alpha-cryptoxanthin with 5-cis-lycopene to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM735277"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_alpha_cryptoxanthin_h-to-zeinoxanthin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "alpha_cryptoxanthin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-zeinoxanthin"
+      },
+      "note": "Shares alpha-cryptoxanthin with H to zeinoxanthin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM735277"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lutein_5-cis-lycopene-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lutein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cis-lycopene-to-h2o"
+      },
+      "note": "Shares lutein with 5-cis-lycopene to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371524"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lutein_5-cis-lycopene-to-h2o-68444",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lutein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cis-lycopene-to-h2o-68444"
+      },
+      "note": "Shares lutein with 5-cis-lycopene to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371524"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lutein_h-to-zeinoxanthin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lutein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-zeinoxanthin"
+      },
+      "note": "Shares lutein with H to zeinoxanthin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371524"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_zeinoxanthin_5-hydroxy-d-tryptophan-to-r-dyspropterin-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "zeinoxanthin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-hydroxy-d-tryptophan-to-r-dyspropterin-null"
+      },
+      "note": "Shares zeinoxanthin with 5-hydroxy-D-tryptophan to (R)-dyspropterin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:65244"
+          }
+        ]
+      }
+    }
+  ]
+}

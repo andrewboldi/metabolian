@@ -20,31 +20,31 @@ pathway n-stearoylsphingosine-1-p-to-n-hexadecanoylsphin "N-stearoylsphingosine-
 
   branch from n_octadecanoylsphingosine side left {
     n_octadecanoylsphingosine
-    <-> . +d_galactosyl_n_octadecanoylsphingosine +h2o
-    d_galactopyranose
-  }
-
-  branch from n_octadecanoylsphingosine side right {
-    n_octadecanoylsphingosine
     <-> . +d_glucosyl_n_octadecanoylsphingosine +cholesterol
     cholesteryl_d_glucoside
   }
 
-  branch from octadecanoate side left {
-    octadecanoate
-    <-> . +12_octadecanoyloxy_octadecanoate +h2o +hplus
-    12_hydroxyoctadecanoate
-  }
-
   branch from octadecanoate side right {
     octadecanoate
-    <-> . +13_octadecanoyloxy_octadecanoate +h2o +hplus
-    13_hydroxyoctadecanoate
+    <-> . +1_octadecanoyl_2_9z_octadecenoyl_sn_glycerol +h2o +hplus
+    2_oleoylglycerol
   }
 
-  branch from n_hexadecanoylsphingosine side left {
-    n_hexadecanoylsphingosine
-    <-> . +n_hexadecanoyl_d_galactosylsphingosine +h2o
-    d_galactose
+  branch from octadecanoate side left {
+    octadecanoate
+    <-> . +1_stearoyl_2_4z_7z_10z_13z_16z_19z_docosahexaeno +h2o +hplus
+    mg_0_0_22_6_4z_7z_10z_13z_16z_19z_0_0
+  }
+
+  branch from palmitoyl_coa side right {
+    palmitoyl_coa
+    <-> . +fad +hplus +fadh2
+    trans_hexadecenoyl_coa
+  }
+
+  branch from palmitoyl_coa side left {
+    palmitoyl_coa
+    <-> . +decan_1_ol +coa
+    decyl_palmitate
   }
 }

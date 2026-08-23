@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-3-cyclic-amp-to-adenin-9-yl-riburonosate "2',3'-cyclic AMP to adenin-9-yl riburonosate" {
-  spacing 246
+  spacing 240
 
   spine at 0,0 {
     2_3_cyclic_amp
@@ -16,11 +16,5 @@ pathway 2-3-cyclic-amp-to-adenin-9-yl-riburonosate "2',3'-cyclic AMP to adenin-9
     5_dehydroadenosine
     <-> . +o2 +h2o -h2o2 -hplus
     adenin_9_yl_riburonosate
-  }
-
-  branch from adenosine side left {
-    adenosine
-    <-> . +inosine +amp
-    imp
   }
 }

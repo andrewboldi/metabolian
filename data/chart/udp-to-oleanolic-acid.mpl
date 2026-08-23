@@ -4,51 +4,15 @@
 # edit the generator, not this file.
 
 pathway udp-to-oleanolic-acid "UDP to oleanolic acid…" {
-  spacing 188
+  spacing 152
 
   spine at 0,0 {
     udp
-    <-> . +oleanolate_3_beta_d_glucuronoside_3_1_galactosid -udp_alpha_d_glucose
-    oleanolate_3_beta_d_glucuronoside_3_1_galactosid
-    <-> . +udp +h -oleanolate_3_beta_d_glucuronoside_3_1_galactosid
+    <-> . +oleanolate_3_beta_d_glucuronoside_3_1_galactosid +h -oleanolate_3_beta_d_glucuronoside_3_1_galactosid
     udp_alpha_d_glucose
-    <-> . +udp +h +oleanolate_3_beta_d_glucuronoside_3_1_galactosid -oleanolic_acid_3_o_beta_d_glucosiduronic_acid
+    <-> . +udp +oleanolate_3_beta_d_glucuronoside_3_1_galactosid +h -chikusetsusaponin_iva
     udp_alpha_d_galactose
-  }
-
-  branch from udp_alpha_d_glucose side left {
+    <-> . +udp +chikusetsusaponin_iva +h -oleanolic_acid_3_o_beta_d_glucosiduronic_acid
     udp_alpha_d_glucose
-    <-> . +udp +h +soyasapogenol_b_22_o_beta_d_glucoside
-    soyasapogenol_b
-  }
-
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> . +udp +h +soyasapogenol_b
-    soyasapogenol_b_3_o_beta_d_glucoside
-  }
-
-  branch from oleanolate_3_beta_d_glucuronoside_3_1_galactosid side left {
-    oleanolate_3_beta_d_glucuronoside_3_1_galactosid
-    <-> . +udp +udp_alpha_d_glucose
-    oleanolate_3_beta_d_glucuronoside_3_1_galactosid
-  }
-
-  branch from oleanolate_3_beta_d_glucuronoside_3_1_galactosid side right {
-    oleanolate_3_beta_d_glucuronoside_3_1_galactosid
-    <-> . +udp +udp_alpha_d_glucose
-    oleanolate_3_beta_d_glucuronoside_3_1_galactosid
-  }
-
-  branch from udp_alpha_d_galactose side left {
-    udp_alpha_d_galactose
-    <-> ec_2_4_1_241 [2.4.1.241] +udp +1_18_1_2_16_0_digalactosyldiacylglycerol +h
-    1_9z_octadecenoyl_2_hexadecanoyl_3_d_galactosyl
-  }
-
-  branch from udp_alpha_d_galactose side right {
-    udp_alpha_d_galactose
-    <-> ec_2_4_1_241 [2.4.1.241] +udp +h +1_18_2_2_16_2_digalactosyldiacylglycerol
-    2s_1_o_7z_10z_hexadecadienoyl_2_o_linoleoyl_3_o
   }
 }

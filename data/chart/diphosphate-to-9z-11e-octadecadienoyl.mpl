@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway diphosphate-to-9z-11e-octadecadienoyl "diphosphate to (9Z,11E)-octadecadienoyl-…" {
-  spacing 164
+  spacing 158
 
   spine at 0,0 {
     diphosphate
@@ -19,12 +19,6 @@ pathway diphosphate-to-9z-11e-octadecadienoyl "diphosphate to (9Z,11E)-octadecad
   branch from 11e_octadecenoyl_coa side left {
     11e_octadecenoyl_coa
     <-> . +fe2 +o2 +hplus +iron +h2o
-    11e_13z_octadecadienoyl_coa
-  }
-
-  branch from 11e_octadecenoyl_coa side right {
-    11e_octadecenoyl_coa
-    <-> . +fe2 +o2 +hplus +iron +h2o
-    5z_11e_octadecadienoyl_coa
+    6z_11e_octadecadienoyl_coa
   }
 }

@@ -4,57 +4,93 @@
 # edit the generator, not this file.
 
 pathway udp-to-undecaprenyl-phosphate "UDP to Undecaprenyl phosphate" {
-  spacing 306
+  spacing 340
 
   spine at 0,0 {
     udp
-    <-> ec_2_4_1_227 [2.4.1.227] +dec_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_gl +h -dec_pp_murnac_l_ala_gamma_d_glu_meso_dap_d_ala_d
-    udp_n_acetyl_alpha_d_glucosamine
-    <-> . +undecaprenyl_phosphate -undecaprenyl_diphospho_n_acetyl_glucosamine -h
+    <-> ec_2_4_1_304 [2.4.1.304] +beta_d_gal_1_4_alpha_d_glcnac_pp_undecaprenol +h -n_acetyl_alpha_d_glucosaminyl_di_trans_octa_cis
+    udp_alpha_d_galactose
+    <-> ec_3_6_1_45 [3.6.1.45] +h2o -alpha_d_galactose_1_phosphate -h
     ump
     <-> ec_2_7_8_13 [2.7.8.13] +h +undecaprenyl_diphospho_n_acetylmuramoyl_l_alanyl -undecaprenyl_phosphate
     udp_n_acetyl_alpha_d_muramoyl_l_alanyl_gamma_d_g
   }
 
-  branch from udp_n_acetyl_alpha_d_glucosamine side left {
-    udp_n_acetyl_alpha_d_glucosamine
-    <-> . +utp +n_acetyl_beta_d_glucosamine_6_phosphate +h
-    diphosphate
+  branch from udp_alpha_d_galactose side left {
+    udp_alpha_d_galactose
+    <-> ec_2_4_1_241 [2.4.1.241] +udp +h +1_18_2_2_16_0_digalactosyldiacylglycerol
+    1_9z_12z_octadecadienoyl_2_hexadecanoyl_3_beta_d
   }
 
-  branch from udp_n_acetyl_alpha_d_glucosamine side right {
-    udp_n_acetyl_alpha_d_glucosamine
-    <-> ec_2_4_1_212 [2.4.1.212] +udp +h +d_glcpnac_1_4_d_glcpa +h2o
-    udp_alpha_d_glucuronate
+  branch from udp_alpha_d_galactose side right {
+    udp_alpha_d_galactose
+    <-> ec_2_4_1_241 [2.4.1.241] +udp +1_18_3_2_16_0_digalactosyldiacylglycerol +h
+    1_9z_12z_15z_octadecatrienoyl_2_hexadecanoyl_3_b
   }
 
-  branch from undecaprenyl_diphospho_n_acetyl_glucosamine side left {
-    undecaprenyl_diphospho_n_acetyl_glucosamine
-    <-> . +dtdp_beta_l_rhamnose +dtdp +h
-    rhamanosyl_n_acetylglucosamyl_undecaprenyl_dipho
+  branch from n_acetyl_alpha_d_glucosaminyl_di_trans_octa_cis side left {
+    n_acetyl_alpha_d_glucosaminyl_di_trans_octa_cis
+    <-> . +gdp +beta_l_fuc_1_3_alpha_d_glcnac_pp_und +h
+    gdp_beta_l_fucose
   }
 
   branch from h side right {
     h
-    <-> . +3e_phycoerythrobilin
-    3z_phycoerythrobilin
+    <-> . +adp +sm_d18_1_21_0_sphingomyelin +phosphate +sm_d18_1_21_0_sphingomyelin +h2o
+    atp
   }
 
   branch from h side left {
     h
-    <-> . +2r_3e_phycocyanobilin
-    3z_phycocyanobilin
+    <-> . +adp +phosphate +atp +h2o
+    sm_d18_1_22_1_sphingomyelin
   }
 
-  branch from undecaprenyl_phosphate side right {
-    undecaprenyl_phosphate
-    <-> . +core_oligosaccharide_lipid_a +undecaprenyl_phosphate_4_amino_4_deoxy_l_arabino
-    4_amino_4_deoxy_l_arabinose_modified_core_oligos
+  branch from udp side right {
+    udp
+    <-> ec_2_4_1_241 [2.4.1.241] +h +1_18_3_2_16_1_digalactosyldiacylglycerol +udp_alpha_d_galactose
+    1_18_3_2_16_1_monogalactosyldiacylglycerol
   }
 
-  branch from undecaprenyl_phosphate side left {
-    undecaprenyl_phosphate
-    <-> . +undecaprenyl_diphosphate +h2o +h
-    phosphate
+  branch from udp side left {
+    udp
+    <-> ec_2_4_1_241 [2.4.1.241] +h +1_18_3_2_16_2_digalactosyldiacylglycerol +udp_alpha_d_galactose
+    1_18_3_2_16_2_monogalactosyldiacylglycerol
+  }
+
+  branch from h side right {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    sm_d18_1_22_0_sphingomyelin
+  }
+
+  branch from h side left {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    sm_d18_1_23_0_sphingomyelin
+  }
+
+  branch from udp_alpha_d_galactose side right {
+    udp_alpha_d_galactose
+    <-> ec_2_4_1_241 [2.4.1.241] +udp +h +1_18_2_2_16_3_digalactosyldiacylglycerol
+    1_9z_12z_octadecadienoyl_2_7z_10z_13z_hexadecatr
+  }
+
+  branch from udp_alpha_d_galactose side left {
+    udp_alpha_d_galactose
+    <-> ec_2_4_1_241 [2.4.1.241] +udp +h +1_18_0_2_18_1_digalactosyldiacylglycerol
+    1_18_0_2_18_1_monogalactosyldiacylglycerol
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +l_methionine +l_arginine +l_phenylalanine
+    methionyl_phenylalanyl_arginine
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +l_methionine +l_tryptophan +l_phenylalanine
+    methionyl_tryptophanyl_phenylalanine
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway chenodeoxycholoyl-coa-to-nad "chenodeoxycholoyl-CoA to NAD" {
-  spacing 242
+  spacing 308
 
   spine at 0,0 {
     chenodeoxycholoyl_coa
@@ -20,50 +20,50 @@ pathway chenodeoxycholoyl-coa-to-nad "chenodeoxycholoyl-CoA to NAD" {
 
   branch from 25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26 side left {
     25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26
-    <-> ec_5_1_99_4 [5.1.99.4] +h
-    25s_3alpha_7alpha_dihydroxy_5beta_cholestanoyl
-  }
-
-  branch from 25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26 side right {
-    25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26
     <-> ec_6_2_1_28 [6.2.1.28] +diphosphate +h +amp +atp +coa
     3alpha_7alpha_dihydroxy_5beta_cholestanate
   }
 
+  branch from 25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26 side right {
+    25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26
+    <-> .
+    25s_3alpha_7alpha_dihydroxy_5beta_cholestanoyl
+  }
+
   branch from coa side left {
     coa
-    <-> ec_2_3_1_16 [2.3.1.16] +acetyl_coa +3_methylbut_2_enoyl_coa +h
-    5_methyl_3_oxo_4_hexenoyl_coa
+    <-> . +kaempferol_3_o_6_o_feruloyl_glucoside +trans_4_coumaroyl_coa
+    kaempferol_3_o_3_o_4_coumaroyl_6_o_feruloyl_gluc
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_5 [2.3.1.5] +acetyl_coa +acetohydrazide
-    n_n_diacetylhydrazine
+    <-> . +isorhamnetin_3_o_6_o_4_coumaroyl_glucoside +trans_4_coumaroyl_coa
+    isorhamnetin_3_o_3_6_o_di_4_coumaroyl_glucoside
   }
 
   branch from o2 side left {
     o2
-    <-> . +h +z_4_2_hydroxy_5_sulfonatophenyl_2_oxobut_3_enoa
-    1_2_dihydroxynaphthalene_6_sulfonate
+    <-> . +nocardicin_g +h2o
+    nocardicin_f
   }
 
   branch from o2 side right {
     o2
-    <-> . +3_hydroxy_2_naphthoate
-    3_6_carboxymethylene_cyclohexa_2_4_dien_1_yliden
+    <-> ec_1_10_3_1 [1.10.3.1] +2_6_dimethoxyphenol +h2o
+    coerulignone
   }
 
   branch from atp side left {
     atp
-    <-> . +diphosphate +2_3_4_saturated_fatty_acyl_coa +amp +coa
-    2_3_4_saturated_fatty_acid
+    <-> . +h +adp +phosphate +h2o
+    thiamine
   }
 
   branch from atp side right {
     atp
-    <-> ec_2_7_1_102 [2.7.1.102] +h +adp +d_hamamelose_2_phosphate
-    d_hamamelose
+    <-> ec_6_3_2_12 [6.3.2.12] +6r_10_formyltetrahydrofolate +h +l_glutamate +adp +phosphate
+    6r_10_formyltetrahydropteroyldiglutamate
   }
 
   branch from 25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26 side left {
@@ -72,39 +72,105 @@ pathway chenodeoxycholoyl-coa-to-nad "chenodeoxycholoyl-CoA to NAD" {
     25r_5beta_cholestane_3alpha_7alpha_26_triol
   }
 
-  branch from nadp side right {
-    nadp
-    <-> ec_1_1_1_219 [1.1.1.219] +garbanzol +h +nadph
-    5_deoxyleucopelargonidin
+  branch from 25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26 side right {
+    25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26
+    <-> ec_1_2_1_3 [1.2.1.3] +nadh +h +nad +h2o
+    25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_219 [1.1.1.219] +h +trans_fustin +nadph
-    fisetinidol_4beta_ol
+    <-> . +bergaptol +h2o +o2 +nadph
+    psoralen
   }
 
-  branch from h2o side right {
-    h2o
-    <-> ec_3_8_1_5 [3.8.1.5] +h +beta_2_3_4_5_6_pentachlorocyclohexanol +chloride
-    beta_hexachlorocyclohexane
+  branch from nadp side right {
+    nadp
+    <-> . +4_hydroxycinnamoylmethane +h +nadph
+    raspberry_ketone
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_8_1_5 [3.8.1.5] +h +chloride +beta_2_3_5_6_tetrachloro_1_4_cyclohexanediol
-    beta_2_3_4_5_6_pentachlorocyclohexanol
+    <-> ec_4_2_1_74 [4.2.1.74] +e_z_dodeca_2_5_dienoyl_coa
+    s_z_3_hydroxydodec_5_enoyl_coa
   }
 
-  branch from nad side right {
-    nad
-    <-> . +nadh +4_hydroxylamino_2_6_dinitrotoluene +h +h2o
-    4_amino_2_6_dinitrotoluene
+  branch from h2o side right {
+    h2o
+    <-> ec_3_4_21_4 [3.4.21.4] +l_4_hydroxyphenylglycyl_l_arginine +d_4_hydroxyphenylglycine_l_seryl_l_4_hydroxyphen +h
+    l_4_hydroxyphenylglycine_l_arginyl_d_4_hydroxyph
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +2_amino_4_6_dinitrotoluene +h2o
-    2_4_diamino_6_nitrotoluene
+    <-> ec_1_1_1_21 [1.1.1.21] +nadh +h +3_chlorobenzaldehyde
+    3_chlorophenyl_methanol
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_2_1_28 [1.2.1.28] +nadh +h +3_chlorobenzoate +h2o
+    3_chlorobenzaldehyde
+  }
+
+  branch from chenodeoxycholoyl_coa side left {
+    chenodeoxycholoyl_coa
+    <-> ec_2_3_1_65 [2.3.1.65] +glycine +h +coa
+    glycochenodeoxycholate
+  }
+
+  branch from chenodeoxycholoyl_coa side right {
+    chenodeoxycholoyl_coa
+    <-> ec_2_3_1_65 [2.3.1.65] +taurine +coa
+    taurochenodeoxycholate
+  }
+
+  branch from propanoyl_coa side left {
+    propanoyl_coa
+    <-> ec_2_8_3_1 [2.8.3.1] +propanoate +r_lactoyl_coa
+    r_lactate
+  }
+
+  branch from propanoyl_coa side right {
+    propanoyl_coa
+    <-> ec_2_3_1_29 [2.3.1.29] +glycine +coa
+    2_amino_4_oxopentanoic_acid
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +2_n_n_dihydroxynocardicin_c +h
+    nocardicin_b
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_1_63 [3.6.1.63] +diphosphate +alpha_d_ribose_1_2_n_acetamidomethylphosphonate +h
+    alpha_d_ribose_1_acetamidomethylphosphonate_5_tr
+  }
+
+  branch from 25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26 side left {
+    25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26
+    <-> . +o2 +h2o
+    24e_3_7_dihydroxy_5_cholest_24_en_26_oyl_coa
+  }
+
+  branch from coa side right {
+    coa
+    <-> . +isorhamnetin_3_o_6_o_feruloyl_glucoside +trans_4_coumaroyl_coa
+    isorhamnetin_3_o_3_o_4_coumaroyl_6_o_feruloyl_gl
+  }
+
+  branch from coa side left {
+    coa
+    <-> . +quercetin_3_o_6_o_4_coumaroyl_glucoside +trans_4_coumaroyl_coa
+    quercetin_3_o_3_6_o_di_4_coumaroyl_glucoside
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +4_hydroxytetracenomycin_a2 +h2o
+    tetracenomycin_a2_epoxyquinone
   }
 }

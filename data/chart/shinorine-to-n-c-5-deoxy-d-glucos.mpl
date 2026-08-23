@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway shinorine-to-n-c-5-deoxy-d-glucos "shinorine to [N-(C-5-[deoxy-β-D-glucos…" {
-  spacing 224
+  spacing 212
 
   spine at 0,0 {
     shinorine
@@ -20,18 +20,6 @@ pathway shinorine-to-n-c-5-deoxy-d-glucos "shinorine to [N-(C-5-[deoxy-β-D-gluc
     triglucosyl_enterobactin
     <-> ec_3_1_1_107 [3.1.1.107] +h2o -hplus
     n_c_5_deoxy_d_glucosyl_2_3_dihydroxybenzoyl_l_s
-  }
-
-  branch from mycosporine_glycine side left {
-    mycosporine_glycine
-    <-> . +h +amp +l_seryl_amp
-    shinorine
-  }
-
-  branch from mycosporine_glycine side right {
-    mycosporine_glycine
-    <-> . +diphosphate +shinorine +amp +l_serine
-    atp
   }
 
   branch from monoglucosyl_enterobactin side left {

@@ -145,33 +145,6 @@
       "xrefs": {
         "chebi": "CHEBI:57287"
       }
-    },
-    {
-      "id": "2_phenylethanol",
-      "name": "2-phenylethanol",
-      "formula": "C8H10O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:49000"
-      }
-    },
-    {
-      "id": "iron",
-      "name": "iron",
-      "formula": "Fe",
-      "charge": 3,
-      "xrefs": {
-        "chebi": "CHEBI:29034"
-      }
-    },
-    {
-      "id": "fe2",
-      "name": "Ferrous iron (Fe2+)",
-      "formula": "Fe",
-      "charge": 2,
-      "xrefs": {
-        "chebi": "CHEBI:29033"
-      }
     }
   ],
   "enzymes": [
@@ -353,46 +326,181 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "2-phenylethanol + 2 Fe(III)-[cytochrome c] = 2-phenylacetaldehyde + 2 Fe(II)-[cytochrom...",
-      "equation": "2-phenylethanol + 2 Fe(III)-[cytochrome c] = 2-phenylacetaldehyde + 2 Fe(II)-[cytochrome c] + 2 H(+)",
-      "substrates": [
-        {
-          "metabolite": "2_phenylethanol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "iron",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "phenylacetaldehyde",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fe2",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:79319"
+      "id": "xt_2_phenylethanaminium_n-acetylphenylethylamine-to-phenethyl-benzoate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_phenylethanaminium"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetylphenylethylamine-to-phenethyl-benzoate"
+      },
+      "note": "Shares 2-phenylethanaminium with N-acetylphenylethylamine to phenethyl benzoate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:79319"
+            "db": "ChEBI",
+            "id": "CHEBI:225237"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_phenylethanaminium_styrene-oxide-to-2r-dihomocitrate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_phenylethanaminium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "styrene-oxide-to-2r-dihomocitrate"
+      },
+      "note": "Shares 2-phenylethanaminium with styrene oxide to (2R)-dihomocitrate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:225237"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_phenylethanaminium_urethane-to-acetaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_phenylethanaminium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "urethane-to-acetaldehyde"
+      },
+      "note": "Shares 2-phenylethanaminium with urethane to acetaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:225237"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phenylacetaldehyde_microperfuranone-to-2-phenylethanol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phenylacetaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "microperfuranone-to-2-phenylethanol"
+      },
+      "note": "Shares phenylacetaldehyde with (−)-microperfuranone to 2-phenylethanol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16424"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phenylacetaldehyde_n-acetylphenylethylamine-to-phenethyl-benzoate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phenylacetaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetylphenylethylamine-to-phenethyl-benzoate"
+      },
+      "note": "Shares phenylacetaldehyde with N-acetylphenylethylamine to phenethyl benzoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16424"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phenylacetaldehyde_n-n-dimethylformamide-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phenylacetaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-n-dimethylformamide-to-ammonium"
+      },
+      "note": "Shares phenylacetaldehyde with N,N-dimethylformamide to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16424"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phenylacetaldehyde_styrene-oxide-to-2r-dihomocitrate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phenylacetaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "styrene-oxide-to-2r-dihomocitrate"
+      },
+      "note": "Shares phenylacetaldehyde with styrene oxide to (2R)-dihomocitrate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16424"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetylphenylethylamine_n-acetylphenylethylamine-to-phenethyl-benzoate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetylphenylethylamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetylphenylethylamine-to-phenethyl-benzoate"
+      },
+      "note": "Shares N-acetylphenylethylamine with N-acetylphenylethylamine to phenethyl benzoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18177"
           }
         ]
       }

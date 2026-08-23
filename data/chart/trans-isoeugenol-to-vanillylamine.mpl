@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway trans-isoeugenol-to-vanillylamine "trans-isoeugenol to vanillylamine" {
-  spacing 182
+  spacing 218
 
   spine at 0,0 {
     trans_isoeugenol
@@ -34,5 +34,41 @@ pathway trans-isoeugenol-to-vanillylamine "trans-isoeugenol to vanillylamine" {
     8_methyl_6_nonenoic_acid
     <-> ec_6_2_1_3 [6.2.1.3] +6e_8_methylnon_6_enoyl_coa +h +adp +phosphate +coa
     atp
+  }
+
+  branch from vanillylamine side right {
+    vanillylamine
+    <-> ec_2_3_2_35 [2.3.2.35] +9_methyldecanoyl_coa +h +coa
+    homodihydrocapsaicin
+  }
+
+  branch from vanillylamine side left {
+    vanillylamine
+    <-> ec_2_3_2_35 [2.3.2.35] +7_methyloct_6_enoyl_coa +h +coa
+    norcapsaicin
+  }
+
+  branch from h side right {
+    h
+    <-> ec_1_1_1_323 [1.1.1.323] +thujan_3_ol +nadp +thujone
+    nadph
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_2_2_3 [3.2.2.3] +beta_d_ribosylnicotinate +h2o +nicotinate
+    d_ribose
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_3_2_8 [3.3.2.8] +1r_2r_4s_limonene_1_2_diol
+    4s_limonene_1_2_epoxide
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_3_2_9 [3.3.2.9] +aflatoxin_b1_diol
+    aflatoxin_b1_exo_8_9_epoxide
   }
 }

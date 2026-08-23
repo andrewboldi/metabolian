@@ -142,41 +142,50 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:175763"
-      }
-    },
-    {
-      "id": "cadinol",
-      "name": "(+)-δ-cadinol",
-      "formula": "C15H26O",
+      "id": "carnitine",
+      "name": "L-Carnitine",
+      "formula": "C7H15NO3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:184119"
+        "chebi": "CHEBI:16347"
       }
     },
     {
-      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
-      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
-      "short": "2-trans,6-trans,10-…",
-      "formula": "C20H33O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58756"
-      }
-    },
-    {
-      "id": "araneosene",
-      "name": "δ-araneosene",
-      "formula": "C20H32",
+      "id": "fatty_acyl_l_carnitine",
+      "name": "fatty acyl-L-carnitine",
+      "short": "fatty acyl-L-carnit…",
+      "formula": "C8H14NO4R",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:192991"
+        "chebi": "CHEBI:176910"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "primary_fatty_alcohol",
+      "name": "primary fatty alcohol",
+      "short": "primary fatty…",
+      "formula": "CH3OR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:142622"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
       }
     }
   ],
@@ -186,27 +195,16 @@
       "name": "long-chain-alcohol O-fatty-acyltransferase",
       "ec": [
         "2.3.1.75"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q58HT5"
+      }
     },
     {
       "id": "ec_3_1_1_50",
       "name": "wax-ester hydrolase",
       "ec": [
         "3.1.1.50"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_212",
-      "name": "(+)-delta-cadinol synthase",
-      "ec": [
-        "4.2.3.212"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_215",
-      "name": "delta-araneosene synthase",
-      "ec": [
-        "4.2.3.215"
       ]
     }
   ],
@@ -393,86 +391,352 @@
     },
     {
       "id": "r5",
-      "name": "(+)-delta-cadinol synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate + H2O = (+)-delta-cadinol + diphosphate",
-      "ec": "4.2.3.212",
+      "name": "a fatty acyl-CoA + (R)-carnitine = a fatty acyl-L-carnitine + CoA",
+      "equation": "a fatty acyl-CoA + (R)-carnitine = a fatty acyl-L-carnitine + CoA",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "fatty_acyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "carnitine",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "cadinol",
+          "metabolite": "fatty_acyl_l_carnitine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "ppi",
+          "metabolite": "coa",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_212"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:78271"
+        "rhea": "RHEA:78751"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:78271"
+            "id": "RHEA:78751"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "delta-araneosene synthase",
-      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate = delta-araneosene + diphosphate",
-      "ec": "4.2.3.215",
+      "name": "a fatty acyl-CoA + 2 NADPH + 2 H(+) = a primary fatty alcohol + 2 NADP(+) + CoA",
+      "equation": "a fatty acyl-CoA + 2 NADPH + 2 H(+) = a primary fatty alcohol + 2 NADP(+) + CoA",
       "substrates": [
         {
-          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+          "metabolite": "fatty_acyl_coa",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "araneosene",
+          "metabolite": "primary_fatty_alcohol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+          "metabolite": "nadp",
+          "stoichiometry": 2
+        },
         {
-          "enzyme": "ec_4_2_3_215"
+          "metabolite": "coa",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:78275"
+        "rhea": "RHEA:81759"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:78275"
+            "id": "RHEA:81759"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_long_chain_fatty_alcohol_long-chain-fatty-acyl-coa-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "long_chain_fatty_alcohol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "long-chain-fatty-acyl-coa-to-fmn"
+      },
+      "note": "Shares long-chain fatty alcohol with long-chain fatty acyl-CoA to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17135"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_long_chain_fatty_alcohol_r-2-hydroxy-long-chain-to-long-chain-fatty-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "long_chain_fatty_alcohol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-2-hydroxy-long-chain-to-long-chain-fatty-acid"
+      },
+      "note": "Shares long-chain fatty alcohol with (R)-2-hydroxy-long-chain-… to long-chain fatty acid….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17135"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_long_chain_fatty_acid_anion_fatty-acyl-coa-to-o-s-2r-4r-6r-2-4-6-tri",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "long_chain_fatty_acid_anion"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fatty-acyl-coa-to-o-s-2r-4r-6r-2-4-6-tri"
+      },
+      "note": "Shares long-chain fatty acid anion with fatty acyl-CoA to O-(S-[2R,4R,6R]-2,4,6-tri….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57560"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_long_chain_fatty_acid_anion_long-chain-fatty-acid-to-o-s-2r-4r-6r-8r-2-4-6",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "long_chain_fatty_acid_anion"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "long-chain-fatty-acid-to-o-s-2r-4r-6r-8r-2-4-6"
+      },
+      "note": "Shares long-chain fatty acid anion with long-chain fatty acid… to O-(S-[2R,4R,6R,8R]-2,4,6,….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57560"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_long_chain_fatty_acid_anion_n-long-chain-acyl-ethano-to-o-s-2s-4s-6s-2-4-6-t",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "long_chain_fatty_acid_anion"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-long-chain-acyl-ethano-to-o-s-2s-4s-6s-2-4-6-t"
+      },
+      "note": "Shares long-chain fatty acid anion with N-(long-chain-acyl)ethano… to O-(S-[2S,4S,6S]-2,4,6-tri….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57560"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_long_chain_fatty_acid_anion_n-long-chain-fatty-acyl-to-aromatic-carboxylate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "long_chain_fatty_acid_anion"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-long-chain-fatty-acyl-to-aromatic-carboxylate"
+      },
+      "note": "Shares long-chain fatty acid anion with N-(long-chain-fatty-acyl)… to aromatic carboxylate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57560"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_long_chain_fatty_acid_anion_r-2-hydroxy-long-chain-to-long-chain-fatty-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "long_chain_fatty_acid_anion"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-2-hydroxy-long-chain-to-long-chain-fatty-acid"
+      },
+      "note": "Shares long-chain fatty acid anion with (R)-2-hydroxy-long-chain-… to long-chain fatty acid….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57560"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_long_chain_fatty_acyl_amp_19-4-hydroxyphenyl-nonad-to-o-s-c37-phenol-carbo",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "long_chain_fatty_acyl_amp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "19-4-hydroxyphenyl-nonad-to-o-s-c37-phenol-carbo"
+      },
+      "note": "Shares long-chain fatty acyl-AMP with 19-(4-hydroxyphenyl)nonad… to O-(S-C37-(phenol)carboxyp….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:136562"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_long_chain_fatty_acyl_amp_long-chain-fatty-acid-to-o-s-2r-4r-6r-8r-2-4-6",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "long_chain_fatty_acyl_amp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "long-chain-fatty-acid-to-o-s-2r-4r-6r-8r-2-4-6"
+      },
+      "note": "Shares long-chain fatty acyl-AMP with long-chain fatty acid… to O-(S-[2R,4R,6R,8R]-2,4,6,….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:136562"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_o_s_long_chain_fatty_acyl_pantetheine_4_phosphor_19-4-hydroxyphenyl-nonad-to-o-s-c37-phenol-carbo",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "o_s_long_chain_fatty_acyl_pantetheine_4_phosphor"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "19-4-hydroxyphenyl-nonad-to-o-s-c37-phenol-carbo"
+      },
+      "note": "Shares O-[S-(long-chain fatty acyl)pantetheine-4'-phosphoryl]serine(1−) with 19-(4-hydroxyphenyl)nonad… to O-(S-C37-(phenol)carboxyp….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133243"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_o_s_long_chain_fatty_acyl_pantetheine_4_phosphor_fatty-acyl-coa-to-o-s-2r-4r-6r-2-4-6-tri",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "o_s_long_chain_fatty_acyl_pantetheine_4_phosphor"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fatty-acyl-coa-to-o-s-2r-4r-6r-2-4-6-tri"
+      },
+      "note": "Shares O-[S-(long-chain fatty acyl)pantetheine-4'-phosphoryl]serine(1−) with fatty acyl-CoA to O-(S-[2R,4R,6R]-2,4,6-tri….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133243"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_o_s_long_chain_fatty_acyl_pantetheine_4_phosphor_long-chain-fatty-acid-to-o-s-2r-4r-6r-8r-2-4-6",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "o_s_long_chain_fatty_acyl_pantetheine_4_phosphor"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "long-chain-fatty-acid-to-o-s-2r-4r-6r-8r-2-4-6"
+      },
+      "note": "Shares O-[S-(long-chain fatty acyl)pantetheine-4'-phosphoryl]serine(1−) with long-chain fatty acid… to O-(S-[2R,4R,6R,8R]-2,4,6,….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133243"
           }
         ]
       }

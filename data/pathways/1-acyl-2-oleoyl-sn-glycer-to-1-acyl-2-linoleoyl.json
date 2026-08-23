@@ -131,33 +131,31 @@
       }
     },
     {
-      "id": "11r_11_hydroperoxylinoleate",
-      "name": "(11R)-11-hydroperoxylinoleate",
-      "short": "11-hydroperoxylinol…",
-      "formula": "C18H31O4",
-      "charge": -1,
+      "id": "linolenoyl_coa",
+      "name": "α-linolenoyl-CoA",
+      "formula": "C39H60N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:134248"
+        "chebi": "CHEBI:74034"
       }
     },
     {
-      "id": "1_tetradecanoyl_2_9z_12z_octadecadienoyl_sn_glyc",
-      "name": "1-tetradecanoyl-2-[(9Z,12Z)-octadecadienoyl]-sn-glycero-3-phosphocholine",
-      "short": "1-tetradecanoyl-2-[…",
-      "formula": "C40H76NO8P",
+      "id": "2_oleoylglycerol",
+      "name": "2-oleoylglycerol",
+      "formula": "C21H40O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:86094"
+        "chebi": "CHEBI:73990"
       }
     },
     {
-      "id": "1_myristoyl_sn_glycero_3_phosphocholine",
-      "name": "1-myristoyl-sn-glycero-3-phosphocholine",
-      "short": "1-myristoyl-sn-glyc…",
-      "formula": "C22H46NO7P",
+      "id": "1_linoleoyl_2_oleoylglycerol",
+      "name": "1-linoleoyl-2-oleoylglycerol",
+      "short": "1-linoleoyl-2-oleoy…",
+      "formula": "C39H70O5",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:64489"
+        "chebi": "CHEBI:75614"
       }
     }
   ],
@@ -349,78 +347,290 @@
     },
     {
       "id": "r5",
-      "name": "(9Z,12Z)-octadecadienoate + O2 = (11R)-hydroperoxy-(9Z,12Z)-octadecadienoate",
-      "equation": "(9Z,12Z)-octadecadienoate + O2 = (11R)-hydroperoxy-(9Z,12Z)-octadecadienoate",
+      "name": "(9Z,12Z)-octadecadienoyl-CoA + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = (9Z,12Z,15Z)-oc...",
+      "equation": "(9Z,12Z)-octadecadienoyl-CoA + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = (9Z,12Z,15Z)-octadecatrienoyl-CoA + 2 Fe(III)-[cytochrome b5] + 2 H2O",
       "substrates": [
         {
-          "metabolite": "linoleate",
+          "metabolite": "linoleoyl_coa",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
         },
         {
           "metabolite": "o2",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "11r_11_hydroperoxylinoleate",
+          "metabolite": "linolenoyl_coa",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:51640"
+        "rhea": "RHEA:66040"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:51640"
+            "id": "RHEA:66040"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "1-tetradecanoyl-2-(9Z,12Z-octadecadienoyl)-sn-glycero-3-phosphocholine + H2O = 1-tetrad...",
-      "equation": "1-tetradecanoyl-2-(9Z,12Z-octadecadienoyl)-sn-glycero-3-phosphocholine + H2O = 1-tetradecanoyl-sn-glycero-3-phosphocholine + (9Z,12Z)-octadecadienoate + H(+)",
+      "name": "2-(9Z-octadecenoyl)-glycerol + (9Z,12Z)-octadecadienoyl-CoA = 1-(9Z,12Z-octadecadienoyl...",
+      "equation": "2-(9Z-octadecenoyl)-glycerol + (9Z,12Z)-octadecadienoyl-CoA = 1-(9Z,12Z-octadecadienoyl)-2-(9Z-octadecenoyl)-glycerol + CoA",
       "substrates": [
         {
-          "metabolite": "1_tetradecanoyl_2_9z_12z_octadecadienoyl_sn_glyc",
+          "metabolite": "2_oleoylglycerol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "linoleoyl_coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "1_myristoyl_sn_glycero_3_phosphocholine",
+          "metabolite": "1_linoleoyl_2_oleoylglycerol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "linoleate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "coa",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:54392"
+        "rhea": "RHEA:77291"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:54392"
+            "id": "RHEA:77291"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_1_acyl_2_oleoyl_sn_glycero_3_phosphocholine_beta_1-2-diacyl-3-linoleoylgly-to-1-acyl-2-r-12-hydro",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_acyl_2_oleoyl_sn_glycero_3_phosphocholine_beta"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-diacyl-3-linoleoylgly-to-1-acyl-2-r-12-hydro"
+      },
+      "note": "Shares 1-acyl-2-oleoyl-sn-glycero-3-phosphocholine betaine with 1,2-diacyl-3-linoleoylgly… to 1-acyl-2-[(R)-12-hydroxyo….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58293"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_linolenoyl_coa_1-oleoyl-2-stearoyl-sn-gl-to-1-o-oleoyl-sn-glyce",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "linolenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-oleoyl-2-stearoyl-sn-gl-to-1-o-oleoyl-sn-glyce"
+      },
+      "note": "Shares α-linolenoyl-CoA with 1-oleoyl-2-stearoyl-sn-gl… to 1-O-oleoyl-sn-glycero-3-p….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74034"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_linolenoyl_coa_2e-9z-12z-15z-octadecat-to-1-2-dicaproyl-3-7z-1",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "linolenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2e-9z-12z-15z-octadecat-to-1-2-dicaproyl-3-7z-1"
+      },
+      "note": "Shares α-linolenoyl-CoA with (2E,9Z,12Z,15Z)-octadecat… to 1,2-dicaproyl-3-(7Z,10Z,1….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74034"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_linolenoyl_coa_3-3-diiodo-l-thyronine-to-adenosine-3-5-bismonop",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "linolenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-3-diiodo-l-thyronine-to-adenosine-3-5-bismonop"
+      },
+      "note": "Shares α-linolenoyl-CoA with 3,3'-diiodo-L-thyronine to adenosine 3',5'-bismonoph….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74034"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_linolenoyl_coa_alaninium-amide-to-d-pantetheine-4-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "linolenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alaninium-amide-to-d-pantetheine-4-phosphate"
+      },
+      "note": "Shares α-linolenoyl-CoA with β-alaninium amide to D-pantetheine 4'-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74034"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_linolenoyl_coa_linolenoyl-coa-to-3-oxo-6z-9z-12z-15z-oct",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "linolenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "linolenoyl-coa-to-3-oxo-6z-9z-12z-15z-oct"
+      },
+      "note": "Shares α-linolenoyl-CoA with α-linolenoyl-CoA to 3-oxo-(6Z,9Z,12Z,15Z)-oct….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74034"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_linolenoyl_coa_linoleoyl-coa-to-3r-11z-14z-17z-3-hydrox",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "linolenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "linoleoyl-coa-to-3r-11z-14z-17z-3-hydrox"
+      },
+      "note": "Shares α-linolenoyl-CoA with linoleoyl-CoA to (3R,11Z,14Z,17Z)-3-hydrox….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74034"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_linolenoyl_coa_n-hexadecanoylphosphatidy-to-linolenoyl-sn-glyce",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "linolenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-hexadecanoylphosphatidy-to-linolenoyl-sn-glyce"
+      },
+      "note": "Shares α-linolenoyl-CoA with N-hexadecanoylphosphatidy… to α-linolenoyl-sn-glycero-3….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74034"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_linoleoyl_2_oleoylglycerol_1-monolinolein-to-glycerol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_linoleoyl_2_oleoylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-monolinolein-to-glycerol"
+      },
+      "note": "Shares 1-linoleoyl-2-oleoylglycerol with 1-monolinolein to glycerol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75614"
           }
         ]
       }

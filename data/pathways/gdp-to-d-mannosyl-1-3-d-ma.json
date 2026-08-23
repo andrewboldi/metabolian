@@ -107,64 +107,6 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
-    },
-    {
-      "id": "alpha_d_mannosyl_1_4_3_o_methyl_alpha_d_mannosyl",
-      "name": "alpha-D-mannosyl-(1->4)-[3-O-methyl-alpha-D-mannosyl)-(1->4)-]3-1-O,3-O-dimethyl-alpha-D-mannose",
-      "short": "alpha-D-mannosyl-(1…",
-      "formula": "C35H62O26",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1560066"
-      }
-    },
-    {
-      "id": "3_o_methyl_alpha_d_mannosyl_1_4_3_1_o_3_o_dimet",
-      "name": "[3-O-methyl-alpha-D-mannosyl-(1->4)]3-1-O,3-O-dimethyl-alpha-D-mannose",
-      "short": "[3-O-methyl-alpha-D…",
-      "formula": "C29H52O21",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1560064"
-      }
-    },
-    {
-      "id": "gmp",
-      "name": "GMP",
-      "formula": "C10H12N5O8P",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM1101285"
-      }
-    },
-    {
-      "id": "d_mannose_1_phosphate",
-      "name": "D-Mannose 1-phosphate",
-      "short": "D-Mannose 1-P",
-      "formula": "C6H11O9P",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM1560677"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "WATER"
-      }
-    },
-    {
-      "id": "n_acetyl_d_glucosaminyl_1_diphospho_ditrans_poly",
-      "name": "N-acetyl-α-D-glucosaminyl-1-diphospho-ditrans,polycis-undecaprenol",
-      "short": "N-acetyl-α-D-glucos…",
-      "formula": "C63H103NO12P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:62959"
-      }
     }
   ],
   "enzymes": [
@@ -180,20 +122,6 @@
       "name": "mannosyl-N-acetyl-alpha-D-glucosaminyl-diphospho-ditrans,octacis-",
       "ec": [
         "2.4.1.349"
-      ]
-    },
-    {
-      "id": "ec_2_4_1_393",
-      "name": "MMP alpha-(1->4)-mannosyltransferase",
-      "ec": [
-        "2.4.1.393"
-      ]
-    },
-    {
-      "id": "ec_2_4_1_348",
-      "name": "N-acetyl-alpha-D-glucosaminyl-diphospho-ditrans,octacis-undecaprenol",
-      "ec": [
-        "2.4.1.348"
       ]
     }
   ],
@@ -390,142 +318,71 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "MMP alpha-(1->4)-mannosyltransferase",
-      "ec": "2.4.1.393",
-      "substrates": [
-        {
-          "metabolite": "gdp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "alpha_d_mannosyl_1_4_3_o_methyl_alpha_d_mannosyl",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "gdp_alpha_d_mannose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "3_o_methyl_alpha_d_mannosyl_1_4_3_1_o_3_o_dimet",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_4_1_393"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR200350"
+      "id": "xt_d_mannosyl_1_3_d_mannosyl_1_3_d_mannosyl_1_3_n_gdp-to-d-mannose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_mannosyl_1_3_d_mannosyl_1_3_d_mannosyl_1_3_n"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "gdp-to-d-mannose"
+      },
+      "note": "Shares α-D-mannosyl-(1→3)-α-D-mannosyl-(1→3)-α-D-mannosyl-(1→3)-N-acetyl-α-D-glucosaminyl-1-diphospho-ditrans,polycis-undecaprenol with GDP to α-D-mannose….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR200350"
+            "db": "ChEBI",
+            "id": "CHEBI:137169"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "Reaction MNXR204927",
-      "substrates": [
-        {
-          "metabolite": "gmp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "d_mannose_1_phosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "gdp_alpha_d_mannose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "metanetx": "MNXR204927"
+      "id": "xt_d_mannosyl_1_3_d_mannosyl_1_3_d_mannosyl_1_3_n_s-adenosyl-l-homocysteine-to-o-methyl-4-o-alpha",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_mannosyl_1_3_d_mannosyl_1_3_d_mannosyl_1_3_n"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-o-methyl-4-o-alpha"
+      },
+      "note": "Shares α-D-mannosyl-(1→3)-α-D-mannosyl-(1→3)-α-D-mannosyl-(1→3)-N-acetyl-α-D-glucosaminyl-1-diphospho-ditrans,polycis-undecaprenol with S-adenosyl-L-homocysteine to O-methyl-4-O-[alpha-L-rha….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR204927"
+            "db": "ChEBI",
+            "id": "CHEBI:137169"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "N-acetyl-alpha-D-glucosaminyl-diphospho-ditrans,octacis-undecaprenol",
-      "equation": "N-acetyl-alpha-D-glucosaminyl-di-trans,octa-cis-undecaprenyl diphosphate + GDP-alpha-D-mannose = alpha-D-mannosyl-(1->3)-N-acetyl-alpha-D-glucosaminyl-di-trans,octa-cis-undecaprenyl diphosphate + GDP + H(+)",
-      "ec": "2.4.1.348",
-      "substrates": [
-        {
-          "metabolite": "n_acetyl_d_glucosaminyl_1_diphospho_ditrans_poly",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "gdp_d_mannose",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "d_mannosyl_1_3_n_acetyl_d_glucosaminyl_1_diphos",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "gdp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_4_1_348"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:53316"
+      "id": "xt_d_mannosyl_1_3_n_acetyl_d_glucosaminyl_1_diphos_lipid-a-to-h",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_mannosyl_1_3_n_acetyl_d_glucosaminyl_1_diphos"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "lipid-a-to-h"
+      },
+      "note": "Shares α-D-mannosyl-(1→3)-N-acetyl-α-D-glucosaminyl-1-diphospho-ditrans,polycis-undecaprenol with lipid A to H.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:53316"
+            "db": "ChEBI",
+            "id": "CHEBI:137168"
           }
         ]
       }

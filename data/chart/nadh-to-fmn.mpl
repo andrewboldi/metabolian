@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-fmn "NADH to FMN" {
-  spacing 308
+  spacing 248
 
   spine at 0,0 {
     nadh
@@ -20,14 +20,15 @@ pathway nadh-to-fmn "NADH to FMN" {
     murideoxycholate
   }
 
+  branch from muricholate side left {
+    muricholate
+    <-> . +allodeoxycholoyl_coa +muricholoyl_coa
+    allodeoxycholate
+  }
 
-
-
-
-
-
-
-
-
-
+  branch from 7_hydroxy_3_oxochol_24_oyl_coa side right {
+    7_hydroxy_3_oxochol_24_oyl_coa
+    <-> ec_1_3_1_116 [1.3.1.116] +nad +nadh +hplus
+    7_hydroxy_3_oxochol_4_en_24_oyl_coa
+  }
 }

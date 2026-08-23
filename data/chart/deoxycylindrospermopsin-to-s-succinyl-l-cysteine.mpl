@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway deoxycylindrospermopsin-to-s-succinyl-l-cysteine "deoxycylindrospermopsin to S-succinyl-L-cysteine(2−)" {
-  spacing 230
+  spacing 278
 
   spine at 0,0 {
     deoxycylindrospermopsin
@@ -24,13 +24,61 @@ pathway deoxycylindrospermopsin-to-s-succinyl-l-cysteine "deoxycylindrospermopsi
 
   branch from succinate side right {
     succinate
-    <-> . +5_methylcytidine_5_monophosphate_1 +akg +o2 +co2 +h2o
-    5_formyl_cmp_1
+    <-> . +l_lysinium +akg +o2 +co2
+    5s_5_hydroxy_l_lysinium
   }
 
   branch from succinate side left {
     succinate
-    <-> . +l_proline +akg +o2 +co2
-    trans_3_hydroxy_l_proline
+    <-> . +l_lysinium +chloride +akg +o2 +hplus +co2 +h2o
+    4_chloro_l_lysinium
+  }
+
+  branch from deoxycylindrospermopsin side right {
+    deoxycylindrospermopsin
+    <-> ec_1_14_11_70 [1.14.11.70] +akg +o2 +succinate +co2
+    7_epi_cylindrospermopsin
+  }
+
+  branch from deoxycylindrospermopsin side left {
+    deoxycylindrospermopsin
+    <-> ec_1_14_11_70 [1.14.11.70] +2_oxoglutarate +o2 +co2 +cylindrospermopsin
+    succinate
+  }
+
+  branch from akg side right {
+    akg
+    <-> . +nad +nadh +hplus
+    s_2_hydroxyglutarate
+  }
+
+  branch from akg side left {
+    akg
+    <-> . +4_amino_l_phenylalanine +glutamate
+    3_4_aminophenyl_pyruvate
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> ec_1_14_11_71 [1.14.11.71] +methylphosphonate +akg +o2 +co2
+    hydroxymethylphosphonate
+  }
+
+  branch from succinate side left {
+    succinate
+    <-> . +gibberellin_a53 +akg +o2 +co2 +h2o +hplus
+    gibberellin_a17
+  }
+
+  branch from l_cysteine side right {
+    l_cysteine
+    <-> ec_4_4_1_29 [4.4.1.29] +s_3_2r_phycocyanobilin_l_cysteine_2
+    3e_phycocyanobilin
+  }
+
+  branch from l_cysteine side left {
+    l_cysteine
+    <-> ec_4_4_1_29 [4.4.1.29] +3e_phycocyanobilin
+    s_3_2r_phycocyanobilin_l_cysteine_2
   }
 }

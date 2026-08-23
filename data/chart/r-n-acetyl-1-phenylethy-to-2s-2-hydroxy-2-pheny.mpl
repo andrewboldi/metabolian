@@ -16,15 +16,15 @@ pathway r-n-acetyl-1-phenylethy-to-2s-2-hydroxy-2-pheny "(R)-N-acetyl-1-phenylet
     2s_2_hydroxy_2_phenylpropanenitrile
   }
 
-  branch from nh3 side left {
-    nh3
-    <-> . +s_4_hydroxy_3_methylbutan_2_yl_l_cysteine +h2o +pyruvate
-    2_methyl_3_sulfanylbutan_1_ol
+  branch from hydrogen_cyanide side left {
+    hydrogen_cyanide
+    <-> . +formylthiophene
+    2r_2_hydroxy_2_thiophen_2_yl_acetonitrile
   }
 
-  branch from nh3 side right {
-    nh3
-    <-> . +3_sulfanylpentan_1_ol_l_cysteine +h2o +pyruvate
-    3_mercaptopentanol
+  branch from hydrogen_cyanide side right {
+    hydrogen_cyanide
+    <-> . +3_formylthiophene
+    2s_2_hydroxy_2_thiophen_3_yl_acetonitrile
   }
 }

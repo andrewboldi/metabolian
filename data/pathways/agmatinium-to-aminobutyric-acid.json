@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "agmatinium-to-aminobutyric-acid",
   "name": "agmatinium to γ-aminobutyric acid",
-  "category": "redox-detox",
+  "category": "nucleotide-metabolism",
   "summary": "A 3-step route from agmatinium(2+) to γ-aminobutyric acid zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -126,6 +126,53 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
+    },
+    {
+      "id": "cytidine_5_monophosphate_1",
+      "name": "cytidine 5'-monophosphate(1−)",
+      "short": "cytidine 5'-MP(1−)",
+      "formula": "C9H11N3O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:82748"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "agmatidine_5_phosphate_1",
+      "name": "agmatidine 5'-phosphate(1+)",
+      "short": "agmatidine 5'-P(1+)",
+      "formula": "C14H25N7O6P",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:83545"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
     }
   ],
   "enzymes": [
@@ -141,6 +188,13 @@
       "name": "putrescine oxidase",
       "ec": [
         "1.4.3.10"
+      ]
+    },
+    {
+      "id": "ec_6_3_4_22",
+      "name": "tRNA(Ile)(2)-agmatinylcytidine synthase",
+      "ec": [
+        "6.3.4.22"
       ]
     }
   ],
@@ -286,6 +340,267 @@
           {
             "db": "Rhea",
             "id": "RHEA:30803"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "tRNA(Ile)(2)-agmatinylcytidine synthase",
+      "equation": "cytidine(34) in tRNA(Ile2) + agmatine + ATP + H2O = 2-agmatinylcytidine(34) in tRNA(Ile2) + AMP + 2 phosphate + 2 H(+)",
+      "ec": "6.3.4.22",
+      "substrates": [
+        {
+          "metabolite": "cytidine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "agmatinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "agmatidine_5_phosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_3_4_22"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:43608"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43608"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_agmatinium_2-azaniumyl-4-5-dihydroxy-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "agmatinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-azaniumyl-4-5-dihydroxy-to-nad"
+      },
+      "note": "Shares agmatinium with 2-azaniumyl-4,5-dihydroxy… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58145"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_agmatinium_4-coumaroyl-coa-to-adenin-9-yl-riburonosate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "agmatinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-coumaroyl-coa-to-adenin-9-yl-riburonosate"
+      },
+      "note": "Shares agmatinium with 4-coumaroyl-CoA to adenin-9-yl riburonosate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58145"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_agmatinium_5-formimidoyltetrahydrofo-to-6s-5-6-7-8-tetrahyd",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "agmatinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-formimidoyltetrahydrofo-to-6s-5-6-7-8-tetrahyd"
+      },
+      "note": "Shares agmatinium with 5-formimidoyltetrahydrofo… to (6S)-5,6,7,8-tetrahydrofo….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58145"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_agmatinium_agmatinium-to-n1-acetyl-sym-homospermid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "agmatinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "agmatinium-to-n1-acetyl-sym-homospermid"
+      },
+      "note": "Shares agmatinium with agmatinium to N1-acetyl-sym-homospermid….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58145"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_agmatinium_benzoylagmatinium-to-glycine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "agmatinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "benzoylagmatinium-to-glycine"
+      },
+      "note": "Shares agmatinium with benzoylagmatinium to glycine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58145"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_ammoniobutanal_5-methyltetrahydropteroyl-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_ammoniobutanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-methyltetrahydropteroyl-to-ammonium"
+      },
+      "note": "Shares 4-ammoniobutanal with 5-methyltetrahydropteroyl… to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58264"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_ammoniobutanal_carboxyspermidine-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_ammoniobutanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "carboxyspermidine-to-succinate"
+      },
+      "note": "Shares 4-ammoniobutanal with carboxyspermidine to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58264"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_ammoniobutanal_l-histidinol-phosphate-to-l-glutamate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_ammoniobutanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-histidinol-phosphate-to-l-glutamate"
+      },
+      "note": "Shares 4-ammoniobutanal with L-histidinol phosphate to L-glutamate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58264"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_ammoniobutanal_spermine-to-1-pyrrolinium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_ammoniobutanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "spermine-to-1-pyrrolinium"
+      },
+      "note": "Shares 4-ammoniobutanal with spermine to 1-pyrrolinium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58264"
           }
         ]
       }

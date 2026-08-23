@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-acylglycerol-3p-13-octa-to-h2o "1-Acylglycerol-3P-13-Octa… to H2O" {
-  spacing 206
+  spacing 152
 
   spine at 0,0 {
     1_acylglycerol_3p_13_octade
@@ -14,59 +14,5 @@ pathway 1-acylglycerol-3p-13-octa-to-h2o "1-Acylglycerol-3P-13-Octa… to H2O" {
     atp
     <-> . +coa +13z_octadecenoic_acid -h2o
     13z_octadecenoyl_coa
-  }
-
-  branch from sn_glycerol_3_phosphate side left {
-    sn_glycerol_3_phosphate
-    <-> ec_2_7_8_5 [2.7.8.5] +cmp +phosphatidylglycerophosphate_didodecanoyl_n_c12
-    cdp_1_2_didodecanoylglycerol
-  }
-
-  branch from sn_glycerol_3_phosphate side right {
-    sn_glycerol_3_phosphate
-    <-> . +menaquinol_8 +dihydroxyacetone_phosphate
-    mk_8
-  }
-
-  branch from 13z_octadecenoyl_coa side left {
-    13z_octadecenoyl_coa
-    <-> . +s_carnitine +coa
-    r_oleoylcarnitine
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
-    nostocyclamide
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
-    nostocyclamide_m
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +r_3_hydroxyisobutyrate +h +h2o
-    r_3_hydroxy_isobutanoyl_coa
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +acetyl_coa +fucoxanthinol
-    fucoxanthin
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    raocyclamide_a
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    raocyclamide_b
   }
 }

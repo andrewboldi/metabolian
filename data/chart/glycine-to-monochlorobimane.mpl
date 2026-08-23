@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway glycine-to-monochlorobimane "glycine to monochlorobimane" {
-  spacing 260
+  spacing 248
 
   spine at 0,0 {
     glycine
@@ -16,39 +16,27 @@ pathway glycine-to-monochlorobimane "glycine to monochlorobimane" {
     glutathione
   }
 
-  branch from h2o side left {
-    h2o
-    <-> . +h +adp +tricosanoate +phosphate +tricosanoate
-    atp
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    cerotic_acid_d3
-  }
-
-  branch from glutathion_s_yl_bimane side left {
-    glutathion_s_yl_bimane
-    <-> . +h +phosphate +atp +h2o
-    adp
-  }
-
-  branch from glutathion_s_yl_bimane side right {
-    glutathion_s_yl_bimane
-    <-> ec_3_4_17_25 [3.4.17.25] +glycine +h2o
-    gamma_glutamylcysteine_s_yl_bimane
-  }
-
   branch from glutathione side left {
     glutathione
-    <-> . +dopaminechrome_keto_form
-    4_s_glutathionyl_5_6_dihydroxyindoline
+    <-> . +12_oxo_c_ltb3
+    12_dehydro_leukotriene_b4
   }
 
   branch from glutathione side right {
     glutathione
-    <-> ec_1_8_5_7 [1.8.5.7] +glutathione_disulfide +h +2_6_dichloro_4_hydroxyphenolate
-    2_6_dichloro_3_glutathion_s_yl_hydroquinone
+    <-> . +17beta_estradiol_2_3_quinone
+    2_hydroxy_17beta_estradiol_1_s_glutathione
+  }
+
+  branch from glutathione side left {
+    glutathione
+    <-> . +hepoxilin_a3_c
+    5z_9e_14z_8xi_11r_12s_11_12_epoxy_8_hydroxyicos
+  }
+
+  branch from glutathione side right {
+    glutathione
+    <-> . +prostaglandin_j2
+    s_pgj2_glutathione
   }
 }

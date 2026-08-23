@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway uridine-5-monophosphate-to-diphosphate "uridine 5'-monophosphate(… to diphosphate" {
-  spacing 244
+  spacing 256
 
   spine at 0,0 {
     uridine_5_monophosphate_1
@@ -14,5 +14,17 @@ pathway uridine-5-monophosphate-to-diphosphate "uridine 5'-monophosphate(… to 
     c_terminal_gly_gly_1
     <-> . +atp +hplus -ppi
     c_terminal_gly_gly_amp_1_group
+  }
+
+  branch from uridine_5_monophosphate_1 side left {
+    uridine_5_monophosphate_1
+    <-> ec_5_4_99_20 [5.4.99.20]
+    pseudouridine_5_phosphate_1
+  }
+
+  branch from uridine_5_monophosphate_1 side right {
+    uridine_5_monophosphate_1
+    <-> ec_1_3_1_91 [1.3.1.91] +nad +nadh +hplus
+    5_6_dihydrouridine_5_monophosphate_1
   }
 }

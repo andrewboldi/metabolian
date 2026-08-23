@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cadaverine-to-wortmanamide-a "cadaverine to wortmanamide A" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     cadaverine
@@ -14,5 +14,17 @@ pathway cadaverine-to-wortmanamide-a "cadaverine to wortmanamide A" {
     5_aminopentanoic_acid
     <-> . +malonyl-coa +acetyl_coa +nadph +hplus -co2 -nadp -coa -h2o
     wortmanamide_a
+  }
+
+  branch from cadaverine side left {
+    cadaverine
+    <-> ec_4_1_1_116 [4.1.1.116] +hplus +co2
+    d_lysinium
+  }
+
+  branch from cadaverine side right {
+    cadaverine
+    <-> . +acetyl_coa +coa +hplus
+    n_acetylcadaverine
   }
 }

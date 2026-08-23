@@ -4,27 +4,65 @@
 # edit the generator, not this file.
 
 pathway s-adenosyl-l-homocysteine-to-rhamnosyl-tricyclic "S-adenosyl-L-homocysteine to rhamnosyl tricyclic…" {
-  spacing 164
+  spacing 200
 
   spine at 0,0 {
     s_adenosyl_l_homocysteine
-    <-> . +h +2_3_o_methyl_rhamnosyl_tetracyclic_spinosyn_pseu -2_o_methyl_rhamnosyl_tetracyclic_spinosyn_pseudo
+    <-> . +h +2_3_4_o_methyl_rhamnosyl_tetracyclic_spinosyn_ps -2_3_o_methyl_rhamnosyl_tetracyclic_spinosyn_pseu
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +2_o_methyl_rhamnosyl_tetracyclic_spinosyn_pseudo -s_adenosyl_l_methionine
-    rhamnosyl_tetracyclic_spinosyn_pseudoaglycone
-    <-> .
+    <-> . +s_adenosyl_l_homocysteine +h +2_3_o_methyl_rhamnosyl_tetracyclic_spinosyn_pseu -s_adenosyl_l_methionine
+    2_o_methyl_rhamnosyl_tetracyclic_spinosyn_pseudo
+    <-> . +s_adenosyl_l_homocysteine +h -rhamnosyl_tetracyclic_spinosyn_pseudoaglycone
+    s_adenosyl_l_methionine
+    <-> . +rhamnosyl_tetracyclic_spinosyn_pseudoaglycone
     rhamnosyl_tricyclic_spinosyn_pseudoaglycone
   }
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +grayanate +h
-    4_o_demethylgrayanate
+    <-> . +s_adenosyl_l_homocysteine +lincomycin +h
+    n_demethyllincomycin
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +bdgt_0 +h
-    glycerol_dibiphytanyl_glycerol_tetraether
+    <-> ec_2_1_1_289 [2.1.1.289] +s_adenosyl_l_homocysteine +cobalt_precorrin_8 +h
+    co_precorrin_7
+  }
+
+  branch from s_adenosyl_l_homocysteine side left {
+    s_adenosyl_l_homocysteine
+    <-> ec_2_1_1_316 [2.1.1.316] +mitomycin_b +h +s_adenosyl_l_methionine
+    7_demethylmitomycin_b
+  }
+
+  branch from s_adenosyl_l_homocysteine side right {
+    s_adenosyl_l_homocysteine
+    <-> ec_2_1_1_328 [2.1.1.328] +indolmycin +s_adenosyl_l_methionine
+    n_demethylindolmycin
+  }
+
+  branch from h side left {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    n_carbamoylputrescine
+  }
+
+  branch from h side right {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    nitrite
+  }
+
+  branch from s_adenosyl_l_methionine side left {
+    s_adenosyl_l_methionine
+    <-> ec_2_1_1_365 [2.1.1.365] +s_adenosyl_l_homocysteine +1_3_3_tri_o_methyl_4alpha_mannobiose +h
+    d_man3me_1_4_d_man3me
+  }
+
+  branch from s_adenosyl_l_methionine side right {
+    s_adenosyl_l_methionine
+    <-> ec_2_1_1_64 [2.1.1.64] +s_adenosyl_l_homocysteine +h +ubiquinol
+    3_demethylubiquinol
   }
 }

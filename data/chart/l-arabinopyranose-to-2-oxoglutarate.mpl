@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-arabinopyranose-to-2-oxoglutarate "α-L-arabinopyranose to 2-oxoglutarate" {
-  spacing 248
+  spacing 260
 
   spine at 0,0 {
     l_arabinopyranose
@@ -22,13 +22,25 @@ pathway l-arabinopyranose-to-2-oxoglutarate "α-L-arabinopyranose to 2-oxoglutar
 
   branch from akg side left {
     akg
-    <-> . +nad +nadh +hplus
-    2_hydroxyglutarate
+    <-> . +3_methyldodecanoyl_coa +o2 +succinate +co2
+    2_hydroxy_3_methyldodecanoyl_coa
   }
 
   branch from akg side right {
     akg
-    <-> ec_2_6_1_54 [2.6.1.54] +pyridoxamine_5_phosphate +plp
-    d_glutamate
+    <-> . +validoxylamine_a +o2 +succinate +co2 +hplus
+    validoxylamine_b
+  }
+
+  branch from akg side left {
+    akg
+    <-> ec_1_14_11_58 [1.14.11.58] +n2_3r_3_2_saturated_acyloxy_acyl_l_ornithine +o2 +succinate +co2
+    n2_3r_3_2_hydroxyacyloxy_acyl_l_ornithine
+  }
+
+  branch from akg side right {
+    akg
+    <-> ec_1_14_20_10 [1.14.20.10] +2s_3_4_hydroxyphenyl_2_isocyanopropanoate +o2 +hplus +succinate +co2 +h2o
+    4_e_2_isocyanoethenyl_phenol
   }
 }

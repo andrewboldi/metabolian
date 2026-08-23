@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-acetyl-d-hexosamine-to-three-disacharide-linke "N-acetyl-D-hexosamine to three disacharide linked…" {
-  spacing 170
+  spacing 152
 
   spine at 0,0 {
     n_acetyl_d_hexosamine
@@ -13,24 +13,6 @@ pathway n-acetyl-d-hexosamine-to-three-disacharide-linke "N-acetyl-D-hexosamine 
     <-> . +l_alanine_d_glutamate_meso_2_6_diaminoheptanedio -h2o
     n_acetyl_d_glucosamine_anhydrous_n_acetylmuramyl
     <-> . +h +two_disacharide_linked_murein_units_tetrapeptide
-    three_disacharide_linked_murein_units_tetrapepti
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_1_14_14_149 [1.14.14.149] +h +o2 +nadph +1_deoxycapsidiol +capsidiol
-    nadp
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +n_carbamoyl_d_phenylglycine
-    phenylhydantoin
-  }
-
-  branch from three_disacharide_linked_murein_units_tetrapepti side left {
-    three_disacharide_linked_murein_units_tetrapepti
-    <-> . +h2o
     three_disacharide_linked_murein_units_tetrapepti
   }
 }

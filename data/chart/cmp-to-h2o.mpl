@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cmp-to-h2o "CMP to H2O" {
-  spacing 340
+  spacing 316
 
   spine at 0,0 {
     cmp
@@ -16,63 +16,15 @@ pathway cmp-to-h2o "CMP to H2O" {
     alpha_kdo_2_4_alpha_kdo_2_6_lipid_iva_e_coli
   }
 
-  branch from cmp_3_deoxy_alpha_d_manno_octulosonic_acid side left {
-    cmp_3_deoxy_alpha_d_manno_octulosonic_acid
-    <-> ec_2_4_99_12 [2.4.99.12] +cmp +alpha_kdo_2_6_lipid_iva_brucella +h
-    lipid_iva_brucella
-  }
-
-  branch from cmp_3_deoxy_alpha_d_manno_octulosonic_acid side right {
-    cmp_3_deoxy_alpha_d_manno_octulosonic_acid
-    <-> ec_2_4_99_13 [2.4.99.13] +cmp +alpha_kdo_2_4_alpha_kdo_2_6_lipid_iva_brucella +h
-    alpha_kdo_2_6_lipid_iva_brucella
-  }
-
   branch from cmp side left {
     cmp
-    <-> ec_2_7_8_46 [2.7.8.46] +cdp_l_ribitol +4_o_2r_1_glycerophospho_n_acetyl_beta_d_mannosam
-    4_o_1_d_ribitylphospho_2r_1_glycerophospho_n_ace
+    <-> . +ganglioside_gd3_d18_1_12_0 +ganglioside_gm3_d18_1_12_0
+    cmp_n_acetyl_beta_neuraminate
   }
 
   branch from cmp side right {
     cmp
-    <-> ec_2_7_8_5 [2.7.8.5] +1_2_dihexadecanoyl_sn_glycero_3_phospho_1_sn_gly +h +sn_glycerol_3_phosphate
-    cdp_dipalmitoyl_sn_glycerol
-  }
-
-  branch from h side left {
-    h
-    <-> ec_1_2_2_1 [1.2.2.1] +ubiquinone_6 +formate +ubiquinol_6
-    co2
-  }
-
-  branch from h side right {
-    h
-    <-> . +o2 +nadph +cyclosporin_a_metabolite_m1 +am19_cyclosporine +h2o
-    nadp
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    cyclosporin_a_metabolite_m1a
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    am1al_cyclosporine
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_alanine +l_histidine
-    ala_his_ala
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_alanine +l_lysine +l_threonine
-    alanyl_lysine_threonine
+    <-> . +phosphatidylglycerophosphate_dihexadec_9_enoyl_n +sn_glycerol_3_phosphate
+    cdp_1_2_di_9z_hexadecenoyl_sn_glycerol
   }
 }

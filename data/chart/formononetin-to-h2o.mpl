@@ -32,38 +32,38 @@ pathway formononetin-to-h2o "formononetin to H2O" {
 
   branch from coa side left {
     coa
-    <-> . +heptadecanoyl_coa +r_carnitine
-    o_heptadecanoylcarnitine
+    <-> . +hexacosanoyl_coa +r_carnitine
+    hexacosanoyl_carnitine
   }
 
   branch from coa side right {
     coa
-    <-> . +phosphate +h2o
-    3_dephospho_coa
+    <-> . +heptadecanoyl_coa +r_carnitine
+    o_heptadecanoylcarnitine
   }
 
   branch from h side left {
     h
-    <-> . +d_tagatose_1_phosphate +adp +atp
-    keto_d_tagatose
+    <-> ec_1_2_1_18 [1.2.1.18] +nadh +r_methylmalonyl_coa +coa +nad
+    2_methyl_3_oxopropanoate
   }
 
   branch from h side right {
     h
-    <-> . +l_alanine +atp +adp +phosphate
-    d_alanyl_d_alanine
+    <-> . +nadh +1_4_dihydroxy_2_naphthoate +nad +h2o
+    menadione
   }
 
   branch from malonate side left {
     malonate
-    <-> ec_1_8_1_5 [1.8.1.5] +co2 +2_carboxyethyl_com +nadph +nadp
-    coenzyme_m
+    <-> . +6_o_malonylwistin +h2o +h
+    afrormosin_7_o_glucoside
   }
 
   branch from malonate side right {
     malonate
-    <-> . +6_o_malonylwistin +h2o +h
-    afrormosin_7_o_glucoside
+    <-> ec_3_5_2_1 [3.5.2.1] +barbiturate +h2o +h
+    urea
   }
 
   branch from malonyldaidzin side left {
@@ -74,13 +74,91 @@ pathway formononetin-to-h2o "formononetin to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> . +2_keto_3_deoxy_d_glycero_d_galactononic_acid +phosphate
-    2_keto_3_deoxy_d_glycero_d_galactononic_acid_9_p
+    <-> ec_3_6_3_29 [3.6.3.29] +h +adp +molybdate +phosphate +molybdate
+    atp
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_2_1_23 [1.2.1.23] +nadh +r_lactate +h +r_lactaldehyde
-    nad
+    <-> . +h +adp +phosphate +atp
+    methanesulfonate
+  }
+
+  branch from udp_d_glucose side right {
+    udp_d_glucose
+    <-> ec_2_4_1_106 [2.4.1.106] +isovitexin_7_olate +udp +hplus
+    isovitexin_2_o_d_glucoside
+  }
+
+  branch from udp_d_glucose side left {
+    udp_d_glucose
+    <-> ec_2_4_1_176 [2.4.1.176] +gibberellin_a3 +udp +hplus
+    gibberellin_a3_o_d_glucoside
+  }
+
+  branch from ononin side right {
+    ononin
+    <-> ec_3_2_1_21 [3.2.1.21] +formononetin +h +h2o
+    beta_d_glucose
+  }
+
+  branch from malonyl_coa side left {
+    malonyl_coa
+    <-> . +3_oxo_all_cis_6_9_12_15_18_tetracosapentaenoyl_c +co2 +coa +h
+    7z_10z_13z_16z_19z_docosapentaenoyl_coa
+  }
+
+  branch from malonyl_coa side right {
+    malonyl_coa
+    <-> ec_2_3_1_21 [2.3.1.21] +r_carnitine +h +coa
+    o_malonyl_l_carnitine
+  }
+
+  branch from h side left {
+    h
+    <-> ec_1_5_1_20 [1.5.1.20] +6r_5_10_methylene_5_6_7_8_tetrahydrofolate +fadh2 +fad
+    6s_5_methyl_5_6_7_8_tetrahydrofolate
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_15 [3.6.3.15] +adp +phosphate +atp +h2o
+    na
+  }
+
+  branch from coa side left {
+    coa
+    <-> . +2_methylfumaryl_coa +adp +phosphate +atp
+    mesaconate
+  }
+
+  branch from coa side right {
+    coa
+    <-> . +2_methylfumaryl_coa +gdp +phosphate +mesaconate
+    gtp
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +ammonium_hydroxide +h
+    nh4
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_3_24 [3.6.3.24] +h +adp +phosphate +atp
+    ni
+  }
+
+  branch from malonate side left {
+    malonate
+    <-> . +acetate +na +h +na
+    co2
+  }
+
+  branch from daidzein_7_o_beta_d_glucoside side right {
+    daidzein_7_o_beta_d_glucoside
+    <-> ec_3_2_1_62 [3.2.1.62] +h2o +glucose +h
+    daidzein
   }
 }

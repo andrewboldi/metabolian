@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3s-4r-tetrahydrodaidzein-to-h2o "(3S,4R)-Tetrahydrodaidzein to H2O" {
-  spacing 212
+  spacing 158
 
   spine at 0,0 {
     3s_4r_tetrahydrodaidzein
@@ -18,61 +18,7 @@ pathway 3s-4r-tetrahydrodaidzein-to-h2o "(3S,4R)-Tetrahydrodaidzein to H2O" {
 
   branch from s_dihydrodaidzein side left {
     s_dihydrodaidzein
-    <-> . +h +nadph +nadp
-    3r_4s_tetrahydrodaidzein
-  }
-
-  branch from s_dihydrodaidzein side right {
-    s_dihydrodaidzein
     <-> .
     r_dihydrodaidzein
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +1_octadeca_trienoylglycerophosphocholine_sn1_lpc +phosphate +1_octadeca_trienoylglycerophosphocholine_sn1_lpc +h2o
-    atp
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    1_nonadecanoyl_sn_glycero_3_phosphocholine
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> ec_1_14_13_134 [1.14.13.134] +amyrin +h +o2 +nadp +h2o
-    11_hydroxy_amyrin
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> ec_1_14_13_143 [1.14.13.143] +h +ent_isokaurene +o2 +nadp +h2o
-    2_hydroxy_ent_isokaurene
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_14_13_145 [1.14.13.145] +ent_cassa_12_15_diene +h +o2 +nadph +h2o
-    11_hydroxy_ent_cassa_12_15_diene
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_14_13_144 [1.14.13.144] +h +stemod_13_17_ene +o2 +nadph +h2o
-    syn_stemoden_19_oate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_lysine +l_isoleucine +l_phenylalanine
-    lysyl_phenylalanyl_isoleucine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_lysine +l_isoleucine +l_tyrosine
-    lysyl_tyrosyl_isoleucine
   }
 }

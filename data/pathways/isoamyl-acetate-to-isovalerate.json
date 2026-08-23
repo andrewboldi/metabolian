@@ -116,43 +116,6 @@
       "xrefs": {
         "chebi": "CHEBI:57945"
       }
-    },
-    {
-      "id": "palmitoyl_coa",
-      "name": "Palmitoyl-CoA",
-      "formula": "C37H62N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57379"
-      }
-    },
-    {
-      "id": "3_methylbutyl_hexadecanoate",
-      "name": "3-methylbutyl hexadecanoate",
-      "short": "3-methylbutyl…",
-      "formula": "C21H42O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:235326"
-      }
-    },
-    {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57287"
-      }
-    },
-    {
-      "id": "isovaleryl_coa",
-      "name": "Isovaleryl-CoA",
-      "formula": "C26H40N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57345"
-      }
     }
   ],
   "enzymes": [
@@ -316,85 +279,115 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "3-methylbutan-1-ol + hexadecanoyl-CoA = 3-methylbutyl hexadecanoate + CoA",
-      "equation": "3-methylbutan-1-ol + hexadecanoyl-CoA = 3-methylbutyl hexadecanoate + CoA",
-      "substrates": [
-        {
-          "metabolite": "isoamylol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "palmitoyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_methylbutyl_hexadecanoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:85967"
+      "id": "xt_isoamylol_1-oleoyl-2-palmitoyl-sn-g-to-9z-hexadecenoyl-sn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isoamylol"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1-oleoyl-2-palmitoyl-sn-g-to-9z-hexadecenoyl-sn"
+      },
+      "note": "Shares isoamylol with 1-oleoyl-2-palmitoyl-sn-g… to [(9Z)-hexadecenoyl]-sn-gl….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:85967"
+            "db": "ChEBI",
+            "id": "CHEBI:15837"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "3-methylbutanoyl-CoA + H2O = 3-methylbutanoate + CoA + H(+)",
-      "equation": "3-methylbutanoyl-CoA + H2O = 3-methylbutanoate + CoA + H(+)",
-      "substrates": [
-        {
-          "metabolite": "isovaleryl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "isovalerate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:66984"
+      "id": "xt_isoamylol_2r-3s-3-isopropylmalate-to-neomycin-c",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isoamylol"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2r-3s-3-isopropylmalate-to-neomycin-c"
+      },
+      "note": "Shares isoamylol with (2R,3S)-3-isopropylmalate to neomycin C.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:66984"
+            "db": "ChEBI",
+            "id": "CHEBI:15837"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_methylbutanal_2r-3s-3-isopropylmalate-to-neomycin-c",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_methylbutanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2r-3s-3-isopropylmalate-to-neomycin-c"
+      },
+      "note": "Shares 3-methylbutanal with (2R,3S)-3-isopropylmalate to neomycin C.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16638"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_isovalerate_2r-3s-3-isopropylmalate-to-neomycin-c",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isovalerate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2r-3s-3-isopropylmalate-to-neomycin-c"
+      },
+      "note": "Shares isovalerate with (2R,3S)-3-isopropylmalate to neomycin C.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:48942"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_isovalerate_r-dihydrolipoate-to-n6-r-s8-isopentanoyldi",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isovalerate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-dihydrolipoate-to-n6-r-s8-isopentanoyldi"
+      },
+      "note": "Shares isovalerate with (R)-dihydrolipoate to N6-[(R)-S8-isopentanoyldi….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:48942"
           }
         ]
       }

@@ -1,0 +1,534 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "urea-to-h2o-null",
+  "name": "urea to H2O",
+  "category": "other",
+  "summary": "A 3-step route from urea to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR134580"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "urea",
+      "name": "urea",
+      "formula": "CH4N2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM117"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "nh4",
+      "name": "NH4",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM729302"
+      }
+    },
+    {
+      "id": "biuret",
+      "name": "biuret",
+      "formula": "C2H5N3O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1545"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "hydrogencarbonate",
+      "name": "hydrogencarbonate",
+      "formula": "CHO3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1094693"
+      }
+    },
+    {
+      "id": "cyanurate",
+      "name": "cyanurate",
+      "formula": "C3H3N3O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1100781"
+      }
+    },
+    {
+      "id": "ethylamine",
+      "name": "ethylamine",
+      "formula": "C2H8N",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM924"
+      }
+    },
+    {
+      "id": "n_ethylammelide",
+      "name": "N-ethylammelide",
+      "formula": "C5H8N4O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1103722"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_84",
+      "name": "biuret amidohydrolase",
+      "ec": [
+        "3.5.1.84"
+      ]
+    },
+    {
+      "id": "ec_3_5_2_15",
+      "name": "cyanuric acid amidohydrolase",
+      "ec": [
+        "3.5.2.15"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "biuret amidohydrolase",
+      "ec": "3.5.1.84",
+      "substrates": [
+        {
+          "metabolite": "urea",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh4",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "biuret",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_84"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR134580"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR134580"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "cyanuric acid amidohydrolase",
+      "ec": "3.5.2.15",
+      "substrates": [
+        {
+          "metabolite": "hydrogencarbonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "biuret",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cyanurate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_2_15"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR109681"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR109681"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR139382",
+      "substrates": [
+        {
+          "metabolite": "cyanurate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ethylamine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_ethylammelide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR139382"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR139382"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_biuret_urea-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "biuret"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "urea-to-h2o"
+      },
+      "note": "Shares biuret with urea to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1545"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cyanurate_1-carboxyvinyl-to-nadph-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cyanurate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-carboxyvinyl-to-nadph-null"
+      },
+      "note": "Shares cyanurate with 1-carboxyvinyl… to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1100781"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cyanurate_h-to-s-adenosyl-l-methionine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cyanurate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-s-adenosyl-l-methionine"
+      },
+      "note": "Shares cyanurate with H to S-adenosyl-L-methionine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1100781"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cyanurate_l-pyrrolysine-to-diphosphate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cyanurate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-pyrrolysine-to-diphosphate-null"
+      },
+      "note": "Shares cyanurate with L-pyrrolysine to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1100781"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cyanurate_urea-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cyanurate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "urea-to-h2o"
+      },
+      "note": "Shares cyanurate with urea to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1100781"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ethylamine_l-rhamnosyl-1-4-d-g-to-nad-78747",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ethylamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-rhamnosyl-1-4-d-g-to-nad-78747"
+      },
+      "note": "Shares ethylamine with α-L-rhamnosyl-(1→4)-β-D-g… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM924"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ethylamine_o-methyl-l-tyrosine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ethylamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "o-methyl-l-tyrosine-to-h2o"
+      },
+      "note": "Shares ethylamine with O-methyl-L-tyrosine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM924"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ethylamine_triethylamine-n-oxide-to-cobalt-precorrin-4",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ethylamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "triethylamine-n-oxide-to-cobalt-precorrin-4"
+      },
+      "note": "Shares ethylamine with triethylamine N-oxide to cobalt-precorrin-4.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM924"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ethylamine_triethylamine-n-oxide-to-cobalt-precorrin-4-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ethylamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "triethylamine-n-oxide-to-cobalt-precorrin-4-null"
+      },
+      "note": "Shares ethylamine with triethylamine N-oxide to cobalt-precorrin-4.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM924"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ethylamine_urea-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ethylamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "urea-to-h2o"
+      },
+      "note": "Shares ethylamine with urea to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM924"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_ethylammelide_hydroxyatrazine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_ethylammelide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hydroxyatrazine-to-h2o"
+      },
+      "note": "Shares N-ethylammelide with hydroxyatrazine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1103722"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_ethylammelide_hydroxyatrazine-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_ethylammelide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hydroxyatrazine-to-h2o-null"
+      },
+      "note": "Shares N-ethylammelide with hydroxyatrazine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1103722"
+          }
+        ]
+      }
+    }
+  ]
+}

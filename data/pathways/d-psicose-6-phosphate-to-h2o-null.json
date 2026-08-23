@@ -1,0 +1,448 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-psicose-6-phosphate-to-h2o-null",
+  "name": "D-psicose 6-phosphate to H2O",
+  "category": "other",
+  "summary": "A 3-step route from D-psicose 6-phosphate(2−) to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR151352"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:61519"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_psicose_6_phosphate",
+      "name": "D-psicose 6-phosphate",
+      "short": "D-psicose 6-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:61519"
+      }
+    },
+    {
+      "id": "aldehydo_d_allose_6_phosphate",
+      "name": "aldehydo-D-allose 6-phosphate",
+      "short": "aldehydo-D-allose…",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM735359"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "d_allopyranose",
+      "name": "D-allopyranose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4093"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_1_55",
+      "name": "allose kinase",
+      "ec": [
+        "2.7.1.55"
+      ]
+    },
+    {
+      "id": "ec_3_6_3_17",
+      "name": "EC 3.6.3.17",
+      "ec": [
+        "3.6.3.17"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR151352",
+      "substrates": [
+        {
+          "metabolite": "d_psicose_6_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aldehydo_d_allose_6_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR151352"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR151352"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "allose kinase",
+      "ec": "2.7.1.55",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "aldehydo_d_allose_6_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_allopyranose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_55"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR151163"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR151163"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR152956",
+      "ec": "3.6.3.17",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_allopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_allopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_3_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR152956"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR152956"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_d_psicose_6_phosphate_aldehydo-d-allose-to-5-hydroxyisouric-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_psicose_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aldehydo-d-allose-to-5-hydroxyisouric-acid"
+      },
+      "note": "Shares D-psicose 6-phosphate with aldehydo-D-allose to 5-hydroxyisouric acid.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61519"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_psicose_6_phosphate_aldehydo-d-allose-to-5-hydroxyisouric-acid-14805",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_psicose_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aldehydo-d-allose-to-5-hydroxyisouric-acid-14805"
+      },
+      "note": "Shares D-psicose 6-phosphate with aldehydo-D-allose to 5-hydroxyisouric acid.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61519"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_psicose_6_phosphate_d-psicose-6-phosphate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_psicose_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-psicose-6-phosphate-to-h2o"
+      },
+      "note": "Shares D-psicose 6-phosphate with D-psicose 6-phosphate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61519"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_psicose_6_phosphate_d-psicose-6-phosphate-to-l-1-4-dithiothreitol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_psicose_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-psicose-6-phosphate-to-l-1-4-dithiothreitol"
+      },
+      "note": "Shares D-psicose 6-phosphate with D-psicose 6-phosphate to L-1,4-dithiothreitol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61519"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_psicose_6_phosphate_d-psicose-6-phosphate-to-l-1-4-dithiothreitol-nu",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_psicose_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-psicose-6-phosphate-to-l-1-4-dithiothreitol-nu"
+      },
+      "note": "Shares D-psicose 6-phosphate with D-psicose 6-phosphate to L-1,4-dithiothreitol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61519"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_aldehydo_d_allose_6_phosphate_d-psicose-6-phosphate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aldehydo_d_allose_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-psicose-6-phosphate-to-h2o"
+      },
+      "note": "Shares aldehydo-D-allose 6-phosphate with D-psicose 6-phosphate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM735359"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_allopyranose_d-psicose-6-phosphate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_allopyranose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-psicose-6-phosphate-to-h2o"
+      },
+      "note": "Shares D-allopyranose with D-psicose 6-phosphate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:4093"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_allopyranose_nadh-to-d-allulose-6-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_allopyranose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-d-allulose-6-phosphate"
+      },
+      "note": "Shares D-allopyranose with NADH to D-Allulose 6-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:4093"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_allopyranose_nadh-to-d-allulose-6-phosphate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_allopyranose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-d-allulose-6-phosphate-null"
+      },
+      "note": "Shares D-allopyranose with NADH to D-Allulose 6-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:4093"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -106,54 +106,6 @@
       "xrefs": {
         "chebi": "CHEBI:232693"
       }
-    },
-    {
-      "id": "malonyl-coa",
-      "name": "Malonyl-CoA",
-      "formula": "C24H33N7O19P3S",
-      "charge": -5,
-      "xrefs": {
-        "chebi": "CHEBI:57384"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "Water",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:15377"
-      }
-    },
-    {
-      "id": "s_malonyl_4_phosphopantetheine",
-      "name": "S-malonyl-4'-phosphopantetheine",
-      "short": "S-malonyl-4'-phosph…",
-      "formula": "C14H22N2O10PS",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:172363"
-      }
-    },
-    {
-      "id": "4_8_dimethylnonanoyl_coa",
-      "name": "4,8-dimethylnonanoyl-CoA",
-      "short": "4,8-dimethylnonanoy…",
-      "formula": "C32H52N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:77061"
-      }
-    },
-    {
-      "id": "s_4_8_dimethylnonanoyl_4_phosphopantetheine",
-      "name": "S-4,8-dimethylnonanoyl-4'-phosphopantetheine",
-      "short": "S-4,8-dimethylnonan…",
-      "formula": "C22H41N2O8PS",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:172385"
-      }
     }
   ],
   "enzymes": [],
@@ -286,89 +238,27 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "malonyl-CoA + H2O = malonyl-4'-phosphopantetheine + adenosine 3',5'-bisphosphate + 2 H(+)",
-      "equation": "malonyl-CoA + H2O = malonyl-4'-phosphopantetheine + adenosine 3',5'-bisphosphate + 2 H(+)",
-      "substrates": [
-        {
-          "metabolite": "malonyl-coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "s_malonyl_4_phosphopantetheine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adenosine_3_5_bismonophosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:67468"
+      "id": "xt_n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_n4-d-gal-1-4-d-gl-to-cytidine-5-monophosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "n4-d-gal-1-4-d-gl-to-cytidine-5-monophosphate"
+      },
+      "note": "Shares N4-{[α-Neu5Ac-(2→6)-β-D-Gal-(1→4)-β-D-GlcNAc-(1→2)-α-D-Man-(1→3)]-[β-D-Gal-(1→4)-6-O-sulfo-β-D-GlcNAc-(1→3)-β-D-Gal-(1→4)-β-D-GlcNAc-(1→3)-β-D-Gal-(1→4)-β-D-GlcNAc-(1→2)-α-D-Man-(1→6)]-β-D-Man-(1→4)-β-D-GlcNAc-(1→4)-β-D-GlcNAc}-L-asparaginyl(2−) with N4-{[β-D-Gal-(1→4)-β-D-Gl… to cytidine 5'-monophosphate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:67468"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "4,8-dimethylnonanoyl-CoA + H2O = S-(4,8-dimethylnonanoyl)-4'-phosphopantetheine + adeno...",
-      "equation": "4,8-dimethylnonanoyl-CoA + H2O = S-(4,8-dimethylnonanoyl)-4'-phosphopantetheine + adenosine 3',5'-bisphosphate + 2 H(+)",
-      "substrates": [
-        {
-          "metabolite": "4_8_dimethylnonanoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "s_4_8_dimethylnonanoyl_4_phosphopantetheine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adenosine_3_5_bismonophosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:67524"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:67524"
+            "db": "ChEBI",
+            "id": "CHEBI:232689"
           }
         ]
       }

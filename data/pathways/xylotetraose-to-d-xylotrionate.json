@@ -109,6 +109,16 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
+    },
+    {
+      "id": "d_xylotetraono_1_5_lactone",
+      "name": "D-xylotetraono-1,5-lactone",
+      "short": "D-xylotetraono-1,5-…",
+      "formula": "C20H32O17",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:143165"
+      }
     }
   ],
   "enzymes": [
@@ -239,6 +249,113 @@
           {
             "db": "Rhea",
             "id": "RHEA:59648"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "D-xylotetraose + O2 = D-xylotetraono-1,5-lactone + H2O2",
+      "equation": "D-xylotetraose + O2 = D-xylotetraono-1,5-lactone + H2O2",
+      "substrates": [
+        {
+          "metabolite": "xylotetraose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_xylotetraono_1_5_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:59640"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59640"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_xylotetraose_n-3-aminopropyl-hydroxyl-to-h2o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "xylotetraose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-3-aminopropyl-hydroxyl-to-h2o2"
+      },
+      "note": "Shares xylotetraose with N-(3-aminopropyl)hydroxyl… to H2O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62972"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_xylp_1_4_d_xylp_1_4_d_xylp_2-naphthyl-beta-d-xylopyr-to-2-naphthol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_xylp_1_4_d_xylp_1_4_d_xylp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-naphthyl-beta-d-xylopyr-to-2-naphthol"
+      },
+      "note": "Shares β-D-Xylp-(1→4)-β-D-Xylp-(1→4)-D-Xylp with 2-Naphthyl-beta-D-xylopyr… to 2-naphthol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62783"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_xylp_1_4_d_xylp_1_4_d_xylp_alpha-d-glucose-to-keto-d-fructose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_xylp_1_4_d_xylp_1_4_d_xylp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-glucose-to-keto-d-fructose"
+      },
+      "note": "Shares β-D-Xylp-(1→4)-β-D-Xylp-(1→4)-D-Xylp with alpha-D-glucose… to keto-D-fructose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62783"
           }
         ]
       }

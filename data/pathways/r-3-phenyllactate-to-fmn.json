@@ -137,50 +137,48 @@
       }
     },
     {
-      "id": "sinalbin",
-      "name": "sinalbin",
-      "formula": "C14H18NO10S2",
-      "charge": -1,
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
       "xrefs": {
-        "metanetx": "MNXM1112426"
+        "chebi": "CHEBI:58349"
       }
     },
     {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "WATER"
-      }
-    },
-    {
-      "id": "e_2_4_hydroxyphenyl_n_sulfonatooxy_ethenimidoth",
-      "name": "(E)-2-(4-hydroxyphenyl)-N-(sulfonatooxy)ethenimidothioate",
-      "short": "2-(4-hydroxyphenyl)…",
-      "formula": "C8H8NO5S2",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM1372351"
-      }
-    },
-    {
-      "id": "e_2_4_hydroxyphenyl_n_sulfonatooxy_ethenimidoth",
-      "name": "(E)-2-(4-hydroxyphenyl)-N-(sulfonatooxy)ethenimidothioate",
-      "short": "2-(4-hydroxyphenyl)…",
-      "formula": "C8H7NO5S2",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM1372352"
-      }
-    },
-    {
-      "id": "h",
-      "name": "H",
-      "formula": "H",
+      "id": "tropiniumone",
+      "name": "tropiniumone",
+      "formula": "C8H14NO",
       "charge": 1,
       "xrefs": {
-        "metanetx": "MNXM1"
+        "chebi": "CHEBI:57851"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "atropinium",
+      "name": "atropinium",
+      "formula": "C17H24NO3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:57858"
+      }
+    },
+    {
+      "id": "tropate",
+      "name": "tropate",
+      "formula": "C9H9O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17000"
       }
     }
   ],
@@ -207,10 +205,17 @@
       ]
     },
     {
-      "id": "ec_3_2_1_147",
-      "name": "thioglucosidase",
+      "id": "ec_1_1_1_206",
+      "name": "tropinone reductase I",
       "ec": [
-        "3.2.1.147"
+        "1.1.1.206"
+      ]
+    },
+    {
+      "id": "ec_3_1_1_10",
+      "name": "tropinesterase",
+      "ec": [
+        "3.1.1.10"
       ]
     }
   ],
@@ -364,54 +369,61 @@
     },
     {
       "id": "r4",
-      "name": "thioglucosidase",
-      "ec": "3.2.1.147",
+      "name": "tropinone reductase I",
+      "equation": "tropine + NADP(+) = tropinone + NADPH + H(+)",
+      "ec": "1.1.1.206",
       "substrates": [
         {
-          "metabolite": "sinalbin",
+          "metabolite": "tropinium",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "nadp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "glucose",
+          "metabolite": "tropiniumone",
           "stoichiometry": 1
         },
         {
-          "metabolite": "e_2_4_hydroxyphenyl_n_sulfonatooxy_ethenimidoth",
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_2_1_147"
+          "enzyme": "ec_1_1_1_206"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "metanetx": "MNXR198447"
+        "rhea": "RHEA:18357"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR198447"
+            "db": "Rhea",
+            "id": "RHEA:18357"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "Reaction MNXR198448",
+      "name": "tropinesterase",
+      "equation": "atropine + H2O = tropate + tropine + H(+)",
+      "ec": "3.1.1.10",
       "substrates": [
         {
-          "metabolite": "sinalbin",
+          "metabolite": "atropinium",
           "stoichiometry": 1
         },
         {
@@ -421,29 +433,146 @@
       ],
       "products": [
         {
-          "metabolite": "glucose",
+          "metabolite": "tropate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "e_2_4_hydroxyphenyl_n_sulfonatooxy_ethenimidoth",
+          "metabolite": "tropinium",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h",
+          "metabolite": "hplus",
           "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_10"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR198448"
+        "rhea": "RHEA:23304"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR198448"
+            "db": "Rhea",
+            "id": "RHEA:23304"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_r_3_phenyllactyl_d_glucose_d-glucopyranose-to-diphosphate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_3_phenyllactyl_d_glucose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glucopyranose-to-diphosphate-null"
+      },
+      "note": "Shares (R)-3-phenyllactyl-β-D-glucose with D-glucopyranose to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:234340"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tropinium_aliphatic-aldoxime-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tropinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aliphatic-aldoxime-to-diphosphate"
+      },
+      "note": "Shares tropinium with aliphatic aldoxime to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57554"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_littorine_d-glucopyranose-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_littorine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glucopyranose-to-diphosphate"
+      },
+      "note": "Shares (R)-littorine with D-glucopyranose to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:234341"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_littorine_d-glucopyranose-to-diphosphate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_littorine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glucopyranose-to-diphosphate-null"
+      },
+      "note": "Shares (R)-littorine with D-glucopyranose to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:234341"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_littorine_dtdp-4-amino-4-6-dideoxy-to-h",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_littorine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-4-amino-4-6-dideoxy-to-h"
+      },
+      "note": "Shares (R)-littorine with DTDP-4-amino-4,6-dideoxy-… to H.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:234341"
           }
         ]
       }

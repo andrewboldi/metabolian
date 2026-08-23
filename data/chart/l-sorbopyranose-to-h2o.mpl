@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-sorbopyranose-to-h2o "α-L-sorbopyranose to H2O" {
-  spacing 220
+  spacing 196
 
   spine at 0,0 {
     l_sorbopyranose
@@ -14,29 +14,5 @@ pathway l-sorbopyranose-to-h2o "α-L-sorbopyranose to H2O" {
     keto_d_fructose
     <-> ec_3_2_1_20 [3.2.1.20] +alpha_d_glucose -h2o
     6_o_alpha_d_glucopyranosyl_beta_d_fructofuranose
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    glycochenodeoxycholate
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +taurochenodeoxycholate +phosphate +taurochenodeoxycholate +h2o
-    atp
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +tryptophanyl_isoleucyl_tryptophan +l_tryptophan
-    l_isoleucine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_leucine +l_valine +l_tryptophan
-    tryptophanyl_leucyl_valine
   }
 }

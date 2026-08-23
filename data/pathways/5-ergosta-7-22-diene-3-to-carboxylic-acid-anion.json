@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "5-ergosta-7-22-diene-3-to-carboxylic-acid-anion",
   "name": "5α-ergosta-7,22-diene-3β,… to carboxylic acid anion",
-  "category": "lipid-metabolism",
+  "category": "nucleotide-metabolism",
   "summary": "A 3-step route from 5α-ergosta-7,22-diene-3β,5-diol to carboxylic acid anion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -93,60 +93,41 @@
       }
     },
     {
-      "id": "a_peroxy_acid",
-      "name": "a peroxy acid",
-      "formula": "CHO3R",
+      "id": "carnitine",
+      "name": "L-Carnitine",
+      "formula": "C7H15NO3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:177878"
+        "chebi": "CHEBI:16347"
       }
     },
     {
-      "id": "h2o2",
-      "name": "Hydrogen peroxide",
-      "formula": "H2O2",
+      "id": "o_acyl_l_carnitine",
+      "name": "O-acyl-L-carnitine",
+      "formula": "C8H14NO4R",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16240"
+        "chebi": "CHEBI:75659"
       }
     },
     {
-      "id": "aliphatic_sulfonate_oxoanion",
-      "name": "aliphatic sulfonate oxoanion",
-      "short": "aliphatic…",
-      "formula": "CH2O3SR",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:231625"
-      }
-    },
-    {
-      "id": "tetra_3_sulfido_tetrairon",
-      "name": "tetra-μ3-sulfido-tetrairon",
-      "short": "tetra-μ3-sulfido-te…",
-      "formula": "H4Fe4S4",
-      "charge": 2,
-      "xrefs": {
-        "chebi": "CHEBI:33722"
-      }
-    },
-    {
-      "id": "tetra_3_sulfido_tetrairon",
-      "name": "tetra-μ3-sulfido-tetrairon",
-      "short": "tetra-μ3-sulfido-te…",
-      "formula": "H4Fe4S4",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:33723"
-      }
-    },
-    {
-      "id": "sulfite",
-      "name": "sulfite",
-      "formula": "O3S",
+      "id": "s_acyl_4_phosphopantetheine",
+      "name": "S-acyl-4'-phosphopantetheine",
+      "short": "S-acyl-4'-phosphopa…",
+      "formula": "C12H20N2O8PSR",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:17359"
+        "chebi": "CHEBI:132023"
+      }
+    },
+    {
+      "id": "adenosine_3_5_bismonophosphate",
+      "name": "adenosine 3',5'-bismonophosphate",
+      "short": "adenosine…",
+      "formula": "C10H11N5O10P2",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58343"
       }
     }
   ],
@@ -156,13 +137,6 @@
       "name": "5alpha-hydroxysteroid dehydratase",
       "ec": [
         "4.2.1.62"
-      ]
-    },
-    {
-      "id": "ec_1_97_1_13",
-      "name": "aliphatic sulfonate oxidoreductase",
-      "ec": [
-        "1.97.1.13"
       ]
     }
   ],
@@ -292,100 +266,172 @@
     },
     {
       "id": "r4",
-      "name": "a percarboxylic acid + H2O = a carboxylate + H2O2 + H(+)",
-      "equation": "a percarboxylic acid + H2O = a carboxylate + H2O2 + H(+)",
+      "name": "(R)-carnitine + an acyl-CoA = an O-acyl-(R)-carnitine + CoA",
+      "equation": "(R)-carnitine + an acyl-CoA = an O-acyl-(R)-carnitine + CoA",
       "substrates": [
         {
-          "metabolite": "a_peroxy_acid",
+          "metabolite": "carnitine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "acyl_coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "carboxylic_acid_anion",
+          "metabolite": "o_acyl_l_carnitine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "coa",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:68396"
+        "rhea": "RHEA:45068"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:68396"
+            "id": "RHEA:45068"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "aliphatic sulfonate oxidoreductase",
-      "equation": "an aliphatic sulfonate + 4 oxidized [4Fe-4S]-[ferredoxin] + 2 H2O = 4 reduced [4Fe-4S]-[ferredoxin] + a carboxylate + sulfite + 6 H(+)",
-      "ec": "1.97.1.13",
+      "name": "an acyl-CoA + H2O = an acyl-4'-phosphopantetheine + adenosine 3',5'-bisphosphate + 2 H(+)",
+      "equation": "an acyl-CoA + H2O = an acyl-4'-phosphopantetheine + adenosine 3',5'-bisphosphate + 2 H(+)",
       "substrates": [
         {
-          "metabolite": "aliphatic_sulfonate_oxoanion",
+          "metabolite": "acyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "tetra_3_sulfido_tetrairon",
-          "stoichiometry": 4
-        },
-        {
           "metabolite": "h2o",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "tetra_3_sulfido_tetrairon",
-          "stoichiometry": 4
-        },
-        {
-          "metabolite": "carboxylic_acid_anion",
+          "metabolite": "s_acyl_4_phosphopantetheine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "sulfite",
+          "metabolite": "adenosine_3_5_bismonophosphate",
           "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 6
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_97_1_13"
+          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:80643"
+        "rhea": "RHEA:50044"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:80643"
+            "id": "RHEA:50044"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_ergosterol_1-ergostan-3-yl-l-aspa-to-d-glucopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ergosterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-ergostan-3-yl-l-aspa-to-d-glucopyranose"
+      },
+      "note": "Shares ergosterol with 1-(ergostan-3β-yl)-L-aspa… to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16933"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ergosterol_5-cholest-7-en-3-ol-to-ergosta-5-7-22-24-28-tet",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ergosterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cholest-7-en-3-ol-to-ergosta-5-7-22-24-28-tet"
+      },
+      "note": "Shares ergosterol with 5α-cholest-7-en-3β-ol to ergosta-5,7,22,24(28)-tet….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16933"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ergosterol_ergosteryl-palmitate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ergosterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ergosteryl-palmitate-to-h2o"
+      },
+      "note": "Shares ergosterol with ergosteryl palmitate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16933"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_o_acyl_l_carnitine_l-saccharopinate-to-r-crotonylcarnitine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "o_acyl_l_carnitine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-saccharopinate-to-r-crotonylcarnitine"
+      },
+      "note": "Shares O-acyl-L-carnitine with L-saccharopinate to (R)-crotonylcarnitine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75659"
           }
         ]
       }

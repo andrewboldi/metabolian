@@ -1,0 +1,517 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-aspartate-to-trans-4-hydroxy-l-proline-null",
+  "name": "D-aspartate to trans-4-hydroxy-L-proline",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from D-aspartate to trans-4-hydroxy-L-proline, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR134505"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_aspartate",
+      "name": "D-aspartate",
+      "formula": "C4H6NO4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1364496"
+      }
+    },
+    {
+      "id": "4_hydroxy_2_oxoglutarate",
+      "name": "4-hydroxy-2-oxoglutarate",
+      "short": "4-hydroxy-2-oxoglut…",
+      "formula": "C5H4O6",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM894"
+      }
+    },
+    {
+      "id": "4s_4_hydroxy_l_glutamate",
+      "name": "(4S)-4-hydroxy-L-glutamate",
+      "short": "4-hydroxy-L-glutama…",
+      "formula": "C5H8NO5",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1371442"
+      }
+    },
+    {
+      "id": "oxaloacetate",
+      "name": "oxaloacetate",
+      "formula": "C4H2O5",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM46"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "3s_5r_1_pyrroline_3_hydroxy_5_carboxylic_acid",
+      "name": "(3S,5R)-1-pyrroline-3-hydroxy-5-carboxylic acid",
+      "short": "(3S,5R)-1-pyrroline…",
+      "formula": "C5H7NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:37005"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1105762"
+      }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H33N9O15P2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364149"
+      }
+    },
+    {
+      "id": "trans_4_hydroxy_l_proline",
+      "name": "trans-4-hydroxy-L-proline",
+      "short": "trans-4-hydroxy-L-p…",
+      "formula": "C5H9NO3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM736064"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_6_1_21",
+      "name": "D-amino-acid transaminase",
+      "ec": [
+        "2.6.1.21"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "D-amino-acid transaminase",
+      "ec": "2.6.1.21",
+      "substrates": [
+        {
+          "metabolite": "d_aspartate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4_hydroxy_2_oxoglutarate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4s_4_hydroxy_l_glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oxaloacetate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR134505"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR134505"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR207109",
+      "substrates": [
+        {
+          "metabolite": "4s_4_hydroxy_l_glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3s_5r_1_pyrroline_3_hydroxy_5_carboxylic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR207109"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR207109"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR206422",
+      "substrates": [
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "3s_5r_1_pyrroline_3_hydroxy_5_carboxylic_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "trans_4_hydroxy_l_proline",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR206422"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR206422"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_4_hydroxy_2_oxoglutarate_d-aspartate-to-trans-4-hydroxy-l-proline",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_hydroxy_2_oxoglutarate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-aspartate-to-trans-4-hydroxy-l-proline"
+      },
+      "note": "Shares 4-hydroxy-2-oxoglutarate with D-aspartate to trans-4-hydroxy-L-proline.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM894"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_hydroxy_2_oxoglutarate_nadh-to-phosphoenolpyruvate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_hydroxy_2_oxoglutarate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-phosphoenolpyruvate"
+      },
+      "note": "Shares 4-hydroxy-2-oxoglutarate with NADH to phosphoenolpyruvate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM894"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_hydroxy_2_oxoglutarate_nadh-to-phosphoenolpyruvate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_hydroxy_2_oxoglutarate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-phosphoenolpyruvate-null"
+      },
+      "note": "Shares 4-hydroxy-2-oxoglutarate with NADH to phosphoenolpyruvate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM894"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4s_4_hydroxy_l_glutamate_4r-4-hydroxy-2-oxogluta-to-trans-4-hydroxy-l-pr",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4s_4_hydroxy_l_glutamate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4r-4-hydroxy-2-oxogluta-to-trans-4-hydroxy-l-pr"
+      },
+      "note": "Shares (4S)-4-hydroxy-L-glutamate with (4R)-4-hydroxy-2-oxogluta… to trans-4-hydroxy-L-proline.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371442"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4s_4_hydroxy_l_glutamate_d-aspartate-to-trans-4-hydroxy-l-proline",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4s_4_hydroxy_l_glutamate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-aspartate-to-trans-4-hydroxy-l-proline"
+      },
+      "note": "Shares (4S)-4-hydroxy-L-glutamate with D-aspartate to trans-4-hydroxy-L-proline.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371442"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4s_4_hydroxy_l_glutamate_nadh-to-phosphoenolpyruvate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4s_4_hydroxy_l_glutamate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-phosphoenolpyruvate"
+      },
+      "note": "Shares (4S)-4-hydroxy-L-glutamate with NADH to phosphoenolpyruvate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371442"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4s_4_hydroxy_l_glutamate_nadh-to-phosphoenolpyruvate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4s_4_hydroxy_l_glutamate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-phosphoenolpyruvate-null"
+      },
+      "note": "Shares (4S)-4-hydroxy-L-glutamate with NADH to phosphoenolpyruvate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371442"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3s_5r_1_pyrroline_3_hydroxy_5_carboxylic_acid_3r-5s-1-pyrroline-3-hyd-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3s_5r_1_pyrroline_3_hydroxy_5_carboxylic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3r-5s-1-pyrroline-3-hyd-to-h2o"
+      },
+      "note": "Shares (3S,5R)-1-pyrroline-3-hydroxy-5-carboxylic acid with (3R,5S)-1-pyrroline-3-hyd… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:37005"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3s_5r_1_pyrroline_3_hydroxy_5_carboxylic_acid_3r-5s-1-pyrroline-3-hyd-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3s_5r_1_pyrroline_3_hydroxy_5_carboxylic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3r-5s-1-pyrroline-3-hyd-to-h2o-null"
+      },
+      "note": "Shares (3S,5R)-1-pyrroline-3-hydroxy-5-carboxylic acid with (3R,5S)-1-pyrroline-3-hyd… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:37005"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3s_5r_1_pyrroline_3_hydroxy_5_carboxylic_acid_4r-4-hydroxy-2-oxogluta-to-trans-4-hydroxy-l-pr",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3s_5r_1_pyrroline_3_hydroxy_5_carboxylic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4r-4-hydroxy-2-oxogluta-to-trans-4-hydroxy-l-pr"
+      },
+      "note": "Shares (3S,5R)-1-pyrroline-3-hydroxy-5-carboxylic acid with (4R)-4-hydroxy-2-oxogluta… to trans-4-hydroxy-L-proline.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:37005"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3s_5r_1_pyrroline_3_hydroxy_5_carboxylic_acid_d-aspartate-to-trans-4-hydroxy-l-proline",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3s_5r_1_pyrroline_3_hydroxy_5_carboxylic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-aspartate-to-trans-4-hydroxy-l-proline"
+      },
+      "note": "Shares (3S,5R)-1-pyrroline-3-hydroxy-5-carboxylic acid with D-aspartate to trans-4-hydroxy-L-proline.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:37005"
+          }
+        ]
+      }
+    }
+  ]
+}

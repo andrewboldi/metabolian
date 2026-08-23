@@ -1,0 +1,523 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "7-hydroxypregnenolone-to-h2o-null",
+  "name": "7α-hydroxypregnenolone to H2O",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 7α-hydroxypregnenolone to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR112434"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:81467"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "7_hydroxypregnenolone",
+      "name": "7α-hydroxypregnenolone",
+      "short": "7α-hydroxypregnenol…",
+      "formula": "C21H32O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:81467"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "pregnenolone",
+      "name": "pregnenolone",
+      "formula": "C21H32O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735193"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "17alpha_hydroxypregnenolone",
+      "name": "17alpha-hydroxypregnenolone",
+      "short": "17alpha-hydroxypreg…",
+      "formula": "C21H32O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM730460"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_13_100",
+      "name": "EC 1.14.13.100",
+      "ec": [
+        "1.14.13.100"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_29",
+      "name": "25/26-hydroxycholesterol 7alpha-hydroxylase",
+      "ec": [
+        "1.14.14.29"
+      ],
+      "xrefs": {
+        "uniprot": "O75881"
+      }
+    },
+    {
+      "id": "ec_1_14_14_19",
+      "name": "steroid 17alpha-monooxygenase",
+      "ec": [
+        "1.14.14.19"
+      ],
+      "xrefs": {
+        "uniprot": "P05093"
+      }
+    },
+    {
+      "id": "ec_1_14_99_9",
+      "name": "EC 1.14.99.9",
+      "ec": [
+        "1.14.99.9"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR112434",
+      "ec": "1.14.13.100",
+      "substrates": [
+        {
+          "metabolite": "7_hydroxypregnenolone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pregnenolone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_100"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR112434"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR112434"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "steroid 17alpha-monooxygenase",
+      "ec": "1.14.14.19",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pregnenolone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "17alpha_hydroxypregnenolone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_19"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR102253"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR102253"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR153828",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "17alpha_hydroxypregnenolone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "17alpha_hydroxypregnenolone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR153828"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR153828"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_7_hydroxypregnenolone_17-estradiol-to-16-hydroxyestrone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_hydroxypregnenolone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "17-estradiol-to-16-hydroxyestrone"
+      },
+      "note": "Shares 7α-hydroxypregnenolone with 17α-estradiol to 16α-hydroxyestrone….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:81467"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_hydroxypregnenolone_17-estradiol-to-16-hydroxyestrone-16705",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_hydroxypregnenolone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "17-estradiol-to-16-hydroxyestrone-16705"
+      },
+      "note": "Shares 7α-hydroxypregnenolone with 17α-estradiol to 16α-hydroxyestrone….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:81467"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_hydroxypregnenolone_7-hydroxypregnenolone-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_hydroxypregnenolone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-hydroxypregnenolone-to-h2o"
+      },
+      "note": "Shares 7α-hydroxypregnenolone with 7α-hydroxypregnenolone to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:81467"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pregnenolone_2e-3-2-4-dihydroxy-5-m-to-e-ferulate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pregnenolone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2e-3-2-4-dihydroxy-5-m-to-e-ferulate"
+      },
+      "note": "Shares pregnenolone with (2E)-3-(2,4-dihydroxy-5-m… to (E)-ferulate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM735193"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pregnenolone_7-hydroxypregnenolone-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pregnenolone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-hydroxypregnenolone-to-h2o"
+      },
+      "note": "Shares pregnenolone with 7α-hydroxypregnenolone to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM735193"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pregnenolone_8-hydroxy-2-deoxyguanosi-to-2-deoxyguanosine-nul",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pregnenolone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "8-hydroxy-2-deoxyguanosi-to-2-deoxyguanosine-nul"
+      },
+      "note": "Shares pregnenolone with 8-hydroxy-2'-deoxyguanosi… to 2'-deoxyguanosine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM735193"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pregnenolone_but-1-en-3-ol-to-1-hydroxybutan-2-one",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pregnenolone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "but-1-en-3-ol-to-1-hydroxybutan-2-one"
+      },
+      "note": "Shares pregnenolone with but-1-en-3-ol to 1-hydroxybutan-2-one.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM735193"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pregnenolone_catechin-to-catechin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pregnenolone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "catechin-to-catechin"
+      },
+      "note": "Shares pregnenolone with (+)-catechin to (−)-catechin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM735193"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pregnenolone_catechin-to-catechin-10616",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pregnenolone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "catechin-to-catechin-10616"
+      },
+      "note": "Shares pregnenolone with (+)-catechin to (−)-catechin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM735193"
+          }
+        ]
+      }
+    }
+  ]
+}

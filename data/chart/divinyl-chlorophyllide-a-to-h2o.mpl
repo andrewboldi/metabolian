@@ -22,79 +22,157 @@ pathway divinyl-chlorophyllide-a-to-h2o "divinyl chlorophyllide a to H2O" {
 
   branch from h side left {
     h
-    <-> ec_1_14_13_53 [1.14.13.53] +formononetin +o2 +nadph +nadp +h2o
-    2_hydroxyformononetin
+    <-> . +adp +ketoprofen_glucuronide +phosphate +ketoprofen_glucuronide +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> ec_1_14_13_89 [1.14.13.89] +biochanin_a +o2 +nadph +nadp +h2o
-    2_hydroxybiochanin_a
+    <-> . +adp +phosphate +atp +h2o
+    levanbiose
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_14_13_36 [1.14.13.36] +h +trans_4_coumaroylshikimate +o2 +nadp +h2o
-    5_o_e_caffeoyl_shikimate
+    <-> . +20_hydroxy_5s_hete +nadp +h2o +o2
+    5_r_hete
   }
 
   branch from nadph side right {
     nadph
-    <-> . +rifamycin_b +h +nadp
-    rifamycin_o
-  }
-
-  branch from divinylprotochlorophyllide side left {
-    divinylprotochlorophyllide
-    <-> ec_1_3_1_75 [1.3.1.75] +h +nadph +nadp
-    protochlorophyllide
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_2_1_32 [1.2.1.32] +nadh +h +2e_4z_2_hydroxymuconate +h2o
-    2_hydroxymuconic_semialdehyde
+    <-> . +h +5_r_hete +nadp
+    5_oxo_6e_8z_11z_14z_eicosatetraenoate
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_14_13_3 [1.14.13.3] +nadh +h +4_hydroxyphenylacetate +o2 +h2o
-    3_4_dihydroxyphenylacetate
+    <-> . +nadh +3_oxo_cis_cis_7_10_hexadecadienoyl_coa +h
+    3s_3_hydroxy_cis_cis_palmito_7_10_dienoyl_coa
   }
 
-  branch from o2 side right {
-    o2
-    <-> ec_1_14_11_15 [1.14.11.15] +gibberellin_a4 +co2 +succinate +2_oxoglutarate
-    gibberellin_a9
+  branch from nad side right {
+    nad
+    <-> . +nadh +3_oxo_cis_cis_5_8_tetradecadienoyl_coa +h
+    3_s_hydroxy_5z_8z_tetradecadienoyl_coa
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_11_13 [1.14.11.13] +gibberellin_a4 +2_oxoglutarate +co2 +succinate
-    gibberellin_a34
+    <-> . +5z_8z_11z_14z_eicosatetraenoyl_coa +h2o2
+    2_trans_cis_cis_cis_cis_4_8_11_14_eicosapentaeno
   }
 
-  branch from h2o side right {
-    h2o
-    <-> ec_3_1_1_83 [3.1.1.83] +3s_6s_6_isopropenyl_3_methyloxepan_2_one
-    5r_6_hydroxy_5_isopropenyl_2_methylhexanoate
+  branch from o2 side right {
+    o2
+    <-> . +6z_9z_12z_octadecatrienoyl_coa +h2o2
+    2e_6z_9z_12z_octadecatetraenoyl_coa
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_14_13_89 [1.14.13.89] +daidzein +h +o2 +nadph +nadp
-    2_hydroxydaidzein
+    <-> . +alpha_lactose +alpha_d_galactose
+    glucose
   }
 
-  branch from nadp side right {
-    nadp
-    <-> ec_1_14_13_84 [1.14.13.84] +4_hydroxyacetophenone +o2 +nadph +h2o
-    4_hydroxyphenylacetate
+  branch from h2o side right {
+    h2o
+    <-> . +l_leucine +l_tryptophan
+    leucyl_leucyl_tryptophan
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_13_85 [1.14.13.85] +6as_11as_2_dimethylallyl_3_6a_9_trihydroxyptero +h +o2 +nadph +h2o
-    glyceollin_ii
+    <-> . +20_oh_hepoxilin_a3 +h2o +h +o2 +nadph
+    5z_9e_14z_8xi_11r_12s_11_12_epoxy_8_hydroxyicos
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +s_9_deoxy_delta9_12_pgd2_glutathione +h +nadph
+    s_11_oh_9_deoxy_delta9_12_pgd2_glutathione
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +sulfasalazine +h +nadph +sulfapyridine
+    mesalaminate
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +torasemide_m1 +h2o +o2 +nadph
+    torasemide
+  }
+
+  branch from h side left {
+    h
+    <-> . +9z_hexadecenoate +sn_glycerol_3_phosphate +h2o
+    1_palmitoleoyl_sn_glycerol_3_phosphate
+  }
+
+  branch from h side right {
+    h
+    <-> . +d_glucuronate +losartan +h2o
+    losartan_n1_glucuronide
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +nadp +h2o +o2 +torasemide
+    torasemide_m3
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +h +vanillylmandelic_acid +nadp +h2o
+    3_methoxy_4_hydroxyphenylglycolaldehyde
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> . +h +6z_9z_12z_15z_18z_3_oxotetracosapentaenoyl_coa +nad
+    3_s_hydroxy_tetracosa_6_9_12_15_18_all_cis_penta
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +3_oxo_5_s_12_r_dihydroxy_eicosa_8_trans_6_14_cis +h +nad
+    3_s_5_s_12_r_trihydroxy_eicosa_8_trans_6_14_cis
+  }
+
+  branch from nad side left {
+    nad
+    <-> . +nadh +18_20_dioxo_20_coa_leukotriene_b4 +h
+    20_coa_20_oxo_18r_hydroxyleucotriene_b4
+  }
+
+  branch from nad side right {
+    nad
+    <-> . +nadh +16_18_oxo_18_coa_dinor_lte4 +h
+    16_s_hydroxy_18_oxo_18_coa_lte4
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +l_leucine +l_proline +l_arginine
+    leucyl_prolyl_arginine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +l_leucine +l_arginine +l_tryptophan
+    leucyl_tryptophanyl_arginine
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +cis_cis_tetradeca_5_8_dienoyl_coa +h +h2o2
+    trans_2_cis_cis_5_8_tetradecatrienoyl_coa
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +2s_6r_10r_trimethyl_hendecanoyl_coa +h2o2
+    2s_6r_10r_trimethyl_2e_hendecenoyl_coa
   }
 }

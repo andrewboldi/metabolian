@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway h-to-fmn-null "H to FMN" {
-  spacing 188
+  spacing 152
 
   spine at 0,0 {
     h
@@ -16,41 +16,5 @@ pathway h-to-fmn-null "H to FMN" {
     3_dehydro_6_hydroxyteasterone
     <-> . +fmnh2 +o2 -fmn -h2o -hplus
     3_dehydroteasterone
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +2e_6e_farnesal +h +nadph
-    2_trans_6_cis_farnesol
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +e_hex_2_en_1_ol +h +nadph
-    cis_3_hexenal
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_proline +l_valine +l_tryptophan
-    val_pro_trp
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_valine +l_serine +l_arginine
-    valyl_seryl_arginine
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +cholesterol_sulfate +fmnh2 +o2 +h2o +hplus
-    24s_hydroxycholesterol_3_sulfate
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +linoleate +fmnh2 +o2 +h2o +hplus
-    18_hydroxylinoleate
   }
 }

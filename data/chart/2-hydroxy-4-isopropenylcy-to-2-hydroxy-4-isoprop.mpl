@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-hydroxy-4-isopropenylcy-to-2-hydroxy-4-isoprop "2-hydroxy-4-isopropenylcy… to 2-hydroxy-4-isopropenylcy…" {
-  spacing 218
+  spacing 284
 
   spine at 0,0 {
     2_hydroxy_4_isopropenylcyclohexanecarboxylic_aci
@@ -18,67 +18,133 @@ pathway 2-hydroxy-4-isopropenylcy-to-2-hydroxy-4-isoprop "2-hydroxy-4-isopropeny
 
   branch from h side left {
     h
-    <-> . +s_adenosyl_l_homocysteine +isoarctigenin +matairesinol
-    s_adenosyl_l_methionine
+    <-> . +deferrichrome +fe
+    ferrichrome
   }
 
   branch from h side right {
     h
-    <-> ec_1_2_1_84 [1.2.1.84] +18_hydroxystearoyl_coa +nadph +nadp +coa
-    1_18_octadecane_diol
+    <-> . +deferrichrome +fe
+    ferrichrome
   }
 
   branch from perillate side left {
     perillate
-    <-> . +amp +perillyl_coenzyme_a +h +atp +coa
+    <-> . +amp +perillyl_coenzyme_a +h2o +h +atp +coa
     diphosphate
-  }
-
-  branch from perillate side right {
-    perillate
-    <-> . +diphosphate +perillyl_coenzyme_a +h2o +h +atp +coa
-    amp
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_1_3_4 [3.1.3.4] +1_18_hydroxyoeoyl_2_18_hydroxy_linoleoyl_sn_glyc +phosphate
-    1_18_hydroxyoeoyl_2_18_hydroxy_lioleoyl_sn_glyce
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_4_2_1_134 [4.2.1.134] +2e_11z_14r_17z_14_hydroxy_icosa_2_11_17_trienoy
-    3r_hydroxy_auricoloyl_coa
+    <-> . +6_exomethylene_lovastatin_acid_form
+    6_exomethylene_lovastatin_lactone_form
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +h +simvastatin +o2 +nadph +6_exomethylene_simvastatin_lactone_form
+    nadp
+  }
+
+  branch from adp side right {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    choline
   }
 
   branch from adp side left {
     adp
     <-> . +h +phosphate +atp +h2o
-    alpha_alpha_trehalose_6_alpha_mycolate
-  }
-
-  branch from adp side right {
-    adp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +phosphate +atp +h2o
-    glucosyl_oleandomycin
-  }
-
-  branch from phosphate side left {
-    phosphate
-    <-> . +2_3_bis_o_geranylgeranyl_sn_glycero_1_phospho_3 +h2o
-    2_3_bis_o_geranylgeranyl_sn_glycero_1_phospho_3
+    chloramphenicol
   }
 
   branch from phosphate side right {
     phosphate
-    <-> . +diphosphate +pyruvate +h
-    phosphoenolpyruvate
+    <-> . +h +adp +atp +h2o
+    coprostanol
   }
 
-  branch from 2_hydroxy_4_isopropenylcyclohexane_1_carbonyl_co side left {
+  branch from phosphate side left {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    carboxy_gliclazide
+  }
+
+  branch from 2_hydroxy_4_isopropenylcyclohexane_1_carbonyl_co side right {
     2_hydroxy_4_isopropenylcyclohexane_1_carbonyl_co
     <-> . +nadh +4_isopropenyl_2_oxocyclohexane_1_carbonyl_coa +h
     nad
+  }
+
+  branch from h side left {
+    h
+    <-> ec_1_1_99_5 [1.1.99.5] +fadh2 +dihydroxyacetone_phosphate +sn_glycerol_3_phosphate
+    fad
+  }
+
+  branch from h side right {
+    h
+    <-> . +fadh2 +dihydroxyacetone_phosphate +fad
+    sn_glycerol_3_phosphate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +n_5_hydroxyhexahydrocyclopenta_c_pyrrol_2_1h_yl +nadp +h +o2 +nadph
+    gliclazide
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +l_alanine +l_leucine +l_asparagine
+    alanyl_asparaginyl_leucine
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    cerivastatin
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    cerivastatin_m1
+  }
+
+  branch from coa side left {
+    coa
+    <-> . +r_carnitine +3_hydroxyoctadecadienoyl_coenzyme_a
+    3_hydroxyoctadecadienoylcarnitine
+  }
+
+  branch from coa side right {
+    coa
+    <-> . +3s_hydroxyoctadecanoyl_coa +r_carnitine
+    3_hydroxyoctadecanoylcarnitine
+  }
+
+  branch from adp side left {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    cerivastatin_m23
+  }
+
+  branch from adp side right {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    cyclosporin_a_sulfate
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    cyclosporin_a
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    cyanate
   }
 }

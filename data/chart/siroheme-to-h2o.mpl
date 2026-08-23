@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway siroheme-to-h2o "siroheme to H2O" {
-  spacing 258
+  spacing 336
 
   spine at 0,0 {
     siroheme
@@ -18,81 +18,28 @@ pathway siroheme-to-h2o "siroheme to H2O" {
     atp
   }
 
-  branch from fe_coproporphyrin_iii side left {
-    fe_coproporphyrin_iii
-    <-> ec_1_3_98_5 [1.3.98.5] +h2o2 +hplus +co2 +h2o
-    ferroheme_b
-  }
 
-  branch from 5_deoxyadenosine side right {
-    5_deoxyadenosine
-    <-> ec_1_17_98_2 [1.17.98.2] +bacteriochlorophyllide_c +sam +h2o +methionine +hplus
-    bacteriochlorophyllide_e
-  }
 
-  branch from 5_deoxyadenosine side left {
-    5_deoxyadenosine
-    <-> ec_1_17_98_2 [1.17.98.2] +bacteriochlorophyllide_d +sam +h2o +methionine +hplus
-    bacteriochlorophyllide_f
-  }
 
-  branch from methionine side right {
-    methionine
-    <-> ec_1_21_98_4 [1.21.98.4] +exxxy_peptide +sam +5_deoxyadenosine +hplus
-    e_y_cross_linked_exxxy_peptide_residues
-  }
 
-  branch from methionine side left {
-    methionine
-    <-> ec_2_3_1_311 [2.3.1.311] +uridine_5_monophosphate_1 +acetyl_coa +sam +h2o +5_deoxyadenosine +coa +hplus
-    5_carboxymethyl_uridine_5_monophosphate_2
-  }
 
-  branch from acetate side right {
-    acetate
-    <-> . +acetyltaurine +h2o
-    taurine
-  }
 
-  branch from acetate side left {
-    acetate
-    <-> . +n_acetyl_l_leucinate +h2o
-    leucine
-  }
 
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> . +spermidine +trimethylenediaminium +hydrogen_donor
-    1_pyrrolinium
-  }
 
-  branch from hydrogen_acceptor side left {
-    hydrogen_acceptor
-    <-> . +hydroxylamine +nh3 +hydrogen_donor +h2o +hplus
-    dinitrogen
-  }
 
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_39 [3.6.3.39] +h +adp +phosphate +h2o
-    alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_e_coli
-  }
 
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_21 [3.6.3.21] +h +adp +phosphate +h2o
-    l_lysine
-  }
 
-  branch from h2o side right {
-    h2o
-    <-> . +hexadecanoate +glycerophosphatidylethanolamine +h
-    1_palmitoyl_2_hydroxy_sn_glycero_3_pe
-  }
 
-  branch from h2o side left {
-    h2o
-    <-> . +leukotriene_f4_cytosol +glycine
-    leukotriene_c4
-  }
+
+
+
+
+
+
+
+
+
+
+
+
 }

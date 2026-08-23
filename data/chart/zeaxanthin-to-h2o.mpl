@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway zeaxanthin-to-h2o "zeaxanthin to H2O" {
-  spacing 208
+  spacing 184
 
   spine at 0,0 {
     zeaxanthin
@@ -18,29 +18,5 @@ pathway zeaxanthin-to-h2o "zeaxanthin to H2O" {
     caloxanthin
     <-> . +nadh +h +o2 -nad -h2o
     nostoxanthin
-  }
-
-  branch from nad side left {
-    nad
-    <-> . +nadh +acetyl_coa +4_hydroxybenzoyl_coa +h +coa +h2o
-    trans_4_coumaroyl_coa
-  }
-
-  branch from nad side right {
-    nad
-    <-> . +nadh +acetyl_coa +h +coa
-    ethanol
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +durhamycin_a +phosphate +durhamycin_a
-    atp
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    mithramycin_sk
   }
 }

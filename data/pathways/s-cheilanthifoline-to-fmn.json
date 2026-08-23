@@ -128,107 +128,6 @@
       "xrefs": {
         "chebi": "CHEBI:17104"
       }
-    },
-    {
-      "id": "quiannulatene",
-      "name": "quiannulatene",
-      "formula": "C25H40",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:167518"
-      }
-    },
-    {
-      "id": "quiannulatate",
-      "name": "quiannulatate",
-      "formula": "C25H37O2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:167519"
-      }
-    },
-    {
-      "id": "tetradecanoate",
-      "name": "tetradecanoate",
-      "formula": "C14H27O2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:30807"
-      }
-    },
-    {
-      "id": "12_hydroxymyristate",
-      "name": "12-hydroxymyristate",
-      "formula": "C14H27O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:167546"
-      }
-    },
-    {
-      "id": "n_terminal_amino_acid_1",
-      "name": "N-terminal α-amino-acid(1+)",
-      "short": "N-terminal…",
-      "formula": "C2H4NOR",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:78597"
-      }
-    },
-    {
-      "id": "n_terminal_trimethyl_amino_acid_1",
-      "name": "N-terminal trimethyl-α-amino-acid(1+)",
-      "short": "N-terminal…",
-      "formula": "C5H10NOR",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:146135"
-      }
-    },
-    {
-      "id": "malonyl-coa",
-      "name": "Malonyl-CoA",
-      "formula": "C24H33N7O19P3S",
-      "charge": -5,
-      "xrefs": {
-        "chebi": "CHEBI:57384"
-      }
-    },
-    {
-      "id": "acetyl_coa",
-      "name": "Acetyl-CoA",
-      "formula": "C23H34N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57288"
-      }
-    },
-    {
-      "id": "5_methylorsellinate",
-      "name": "5-methylorsellinate",
-      "formula": "C9H9O4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:146172"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16526"
-      }
-    },
-    {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57287"
-      }
     }
   ],
   "enzymes": [
@@ -477,203 +376,49 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "quiannulatene + 3 reduced [NADPH--hemoprotein reductase] + 3 O2 = quiannulatate + 3 oxi...",
-      "equation": "quiannulatene + 3 reduced [NADPH--hemoprotein reductase] + 3 O2 = quiannulatate + 3 oxidized [NADPH--hemoprotein reductase] + 4 H2O + 4 H(+)",
-      "substrates": [
-        {
-          "metabolite": "quiannulatene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 3
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "quiannulatate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 4
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 4
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:66868"
+      "id": "xt_s_cheilanthifoline_dihydrosanguinarine-to-macarpine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_cheilanthifoline"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "dihydrosanguinarine-to-macarpine"
+      },
+      "note": "Shares (S)-cheilanthifoline with dihydrosanguinarine to macarpine.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:66868"
+            "db": "ChEBI",
+            "id": "CHEBI:16233"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "tetradecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 12-hydroxytetradecanoate...",
-      "equation": "tetradecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 12-hydroxytetradecanoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "tetradecanoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "12_hydroxymyristate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:66876"
+      "id": "xt_s_cis_n_methylstylopine_n-demethyl-desepoxymaytan-to-7a-hydroxy-o-carbam",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_cis_n_methylstylopine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "n-demethyl-desepoxymaytan-to-7a-hydroxy-o-carbam"
+      },
+      "note": "Shares (S)-cis-N-methylstylopine with N-Demethyl-desepoxymaytan… to 7a-Hydroxy-o-carbamoyl-de….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:66876"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "an N-terminal L-alpha-aminoacyl-[protein] + 3 S-adenosyl-L-methionine = an N-terminal t...",
-      "equation": "an N-terminal L-alpha-aminoacyl-[protein] + 3 S-adenosyl-L-methionine = an N-terminal trimethyl-L-alpha-aminoacyl-[protein] + 3 S-adenosyl-L-homocysteine + 3 H(+)",
-      "substrates": [
-        {
-          "metabolite": "n_terminal_amino_acid_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 3
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n_terminal_trimethyl_amino_acid_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 3
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:62916"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:62916"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r8",
-      "name": "3 malonyl-CoA + acetyl-CoA + S-adenosyl-L-methionine + H(+) = 5-methylorsellinate + S-a...",
-      "equation": "3 malonyl-CoA + acetyl-CoA + S-adenosyl-L-methionine + H(+) = 5-methylorsellinate + S-adenosyl-L-homocysteine + 3 CO2 + 4 CoA",
-      "substrates": [
-        {
-          "metabolite": "malonyl-coa",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "acetyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "5_methylorsellinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 4
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "rhea": "RHEA:63056"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:63056"
+            "db": "ChEBI",
+            "id": "CHEBI:444"
           }
         ]
       }

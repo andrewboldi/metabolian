@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2e-9z-12z-15z-octadecat-to-1-2-dicaproyl-3-7z-1 "(2E,9Z,12Z,15Z)-octadecat… to 1,2-dicaproyl-3-(7Z,10Z,1…" {
-  spacing 152
+  spacing 170
 
   spine at 0,0 {
     2e_9z_12z_15z_octadecatetraenoyl_coa
@@ -16,5 +16,23 @@ pathway 2e-9z-12z-15z-octadecat-to-1-2-dicaproyl-3-7z-1 "(2E,9Z,12Z,15Z)-octadec
     7z_10z_13z_hexadecatrienoyl_coa
     <-> . +1_2_dihexanoylglycerol -coa
     1_2_dicaproyl_3_7z_10z_13z_hexadecatrienoyl_glyc
+  }
+
+  branch from 2e_9z_12z_15z_octadecatetraenoyl_coa side left {
+    2e_9z_12z_15z_octadecatetraenoyl_coa
+    <-> . +fad +hplus +fadh2
+    linolenoyl_coa
+  }
+
+  branch from 1_2_dihexanoylglycerol side right {
+    1_2_dihexanoylglycerol
+    <-> . +myristoyl_coa +coa
+    1_2_dicaproyl_3_myristoylglycerol
+  }
+
+  branch from 1_2_dihexanoylglycerol side left {
+    1_2_dihexanoylglycerol
+    <-> . +linolenoyl_coa +coa
+    1_2_caproyl_3_linolenoylglycerol
   }
 }

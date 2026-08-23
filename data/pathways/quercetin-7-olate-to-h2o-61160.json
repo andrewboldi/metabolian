@@ -1,0 +1,409 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "quercetin-7-olate-to-h2o-61160",
+  "name": "quercetin-7-olate to H2O",
+  "category": "other",
+  "summary": "A 3-step route from quercetin-7-olate to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:61160"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57694"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "quercetin_7_olate",
+      "name": "quercetin-7-olate",
+      "formula": "C15H9O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57694"
+      }
+    },
+    {
+      "id": "udp_l_rhamnose",
+      "name": "UDP-β-L-rhamnose",
+      "formula": "C15H22N2O16P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:83836"
+      }
+    },
+    {
+      "id": "quercitrin_7_olate",
+      "name": "quercitrin-7-olate",
+      "formula": "C21H19O11",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58192"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "l_rhamnopyranose",
+      "name": "L-rhamnopyranose",
+      "formula": "C6H12O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62346"
+      }
+    },
+    {
+      "id": "glucose",
+      "name": "D-Glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4167"
+      }
+    },
+    {
+      "id": "ginsenoside_f1",
+      "name": "ginsenoside F1",
+      "formula": "C36H62O9",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77150"
+      }
+    },
+    {
+      "id": "20s_ginsenoside_re",
+      "name": "(20S)-ginsenoside Re",
+      "formula": "C48H82O18",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM54984"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_2_1_40",
+      "name": "alpha-L-rhamnosidase",
+      "ec": [
+        "3.2.1.40"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_194",
+      "name": "ginsenosidase type IV",
+      "ec": [
+        "3.2.1.194"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "quercetin + UDP-beta-L-rhamnose = quercitrin + UDP + H(+)",
+      "equation": "quercetin + UDP-beta-L-rhamnose = quercitrin + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "quercetin_7_olate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_l_rhamnose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "quercitrin_7_olate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:61160"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61160"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "alpha-L-rhamnosidase",
+      "equation": "quercitrin + H2O = L-rhamnopyranose + quercetin",
+      "ec": "3.2.1.40",
+      "substrates": [
+        {
+          "metabolite": "quercitrin_7_olate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_rhamnopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "quercetin_7_olate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_40"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:17465"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17465"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "ginsenosidase type IV",
+      "ec": "3.2.1.194",
+      "substrates": [
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_rhamnopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ginsenoside_f1",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "20s_ginsenoside_re",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_194"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR118814"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR118814"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_quercitrin_7_olate_quercetin-7-olate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "quercitrin_7_olate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "quercetin-7-olate-to-h2o"
+      },
+      "note": "Shares quercitrin-7-olate with quercetin-7-olate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58192"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_quercitrin_7_olate_udp-4-ammonio-d-fucose-to-flavanone-7-o-l-rhamno",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "quercitrin_7_olate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-4-ammonio-d-fucose-to-flavanone-7-o-l-rhamno"
+      },
+      "note": "Shares quercitrin-7-olate with UDP-4-ammonio-α-D-fucose to flavanone 7-O-[α-L-rhamno….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58192"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ginsenoside_f1_dammarenediol-ii-to-d-glucopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ginsenoside_f1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dammarenediol-ii-to-d-glucopyranose"
+      },
+      "note": "Shares ginsenoside F1 with dammarenediol-II to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77150"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ginsenoside_f1_dammarenediol-ii-to-d-glucopyranose-38579",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ginsenoside_f1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dammarenediol-ii-to-d-glucopyranose-38579"
+      },
+      "note": "Shares ginsenoside F1 with dammarenediol-II to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77150"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ginsenoside_f1_quercetin-7-olate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ginsenoside_f1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "quercetin-7-olate-to-h2o"
+      },
+      "note": "Shares ginsenoside F1 with quercetin-7-olate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77150"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_20s_ginsenoside_re_quercetin-7-olate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "20s_ginsenoside_re"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "quercetin-7-olate-to-h2o"
+      },
+      "note": "Shares (20S)-ginsenoside Re with quercetin-7-olate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM54984"
+          }
+        ]
+      }
+    }
+  ]
+}

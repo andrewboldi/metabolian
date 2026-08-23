@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-dodecanoylphytosphingos-to-n-2-hydroxyhexacosa "N-dodecanoylphytosphingos… to N-(2-hydroxyhexacosanyl)-…" {
-  spacing 188
+  spacing 224
 
   spine at 0,0 {
     n_dodecanoylphytosphingosine
@@ -24,8 +24,8 @@ pathway n-dodecanoylphytosphingos-to-n-2-hydroxyhexacosa "N-dodecanoylphytosphin
 
   branch from phytosphingosine side right {
     phytosphingosine
-    <-> . +n_2_hydroxyhexacosanyl_4r_phytosphingosine +coa +hplus
-    2_hydroxyhexacosanoyl_coa
+    <-> . +n_11z_icosenoylphytosphingosine +h2o
+    gondoate
   }
 
   branch from dodecanoate side left {
@@ -50,5 +50,41 @@ pathway n-dodecanoylphytosphingos-to-n-2-hydroxyhexacosa "N-dodecanoylphytosphin
     n_2_hydroxyhexacosanyl_4r_phytosphingosine
     <-> . +h +n_hexacosanoyl_4r_hydroxysphinganine +o2 +nadph +h2o
     nadp
+  }
+
+  branch from phytosphingosine side left {
+    phytosphingosine
+    <-> . +n_arachidonoylphytosphingosine +h2o
+    arachidonate
+  }
+
+  branch from phytosphingosine side right {
+    phytosphingosine
+    <-> . +stearoyl_coa +coa +hplus
+    n_octadecanoyl_4_hydroxysphinganine
+  }
+
+  branch from dodecanoate side left {
+    dodecanoate
+    <-> . +3_d_galactosyl_1_6_d_galactosyl_1_2_didodecanoyl +h2o +hplus
+    3_d_galactosyl_1_6_d_galactosyl_monododecanoyl_s
+  }
+
+  branch from dodecanoate side right {
+    dodecanoate
+    <-> . +2_3_di_o_dodecanoyl_1_o_d_galactopyranosyl_sn_gl +h2o +hplus
+    1_d_galactosyl_monododecanoyl_sn_glycerol
+  }
+
+  branch from hexacosanoyl_coa side left {
+    hexacosanoyl_coa
+    <-> . +c20_phytosphingosine +coa +hplus
+    n_hexacosanoyl_c20_4_hydroxysphinganine
+  }
+
+  branch from hexacosanoyl_coa side right {
+    hexacosanoyl_coa
+    <-> . +h2o +coa +hplus
+    cerotate
   }
 }

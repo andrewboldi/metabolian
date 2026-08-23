@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-hexadecyl-2-glutaryl-sn-to-arachidonate "1-hexadecyl-2-glutaryl-sn… to arachidonate" {
-  spacing 170
+  spacing 188
 
   spine at 0,0 {
     1_hexadecyl_2_glutaryl_sn_glycero_3_phosphocholi
@@ -16,21 +16,39 @@ pathway 1-hexadecyl-2-glutaryl-sn-to-arachidonate "1-hexadecyl-2-glutaryl-sn… 
     lysophosphatidylcholine_o_16_0_0_0
   }
 
-  branch from 1_o_hexadecyl_2_arachidonoyl_sn_glycero_3_phosph side left {
-    1_o_hexadecyl_2_arachidonoyl_sn_glycero_3_phosph
-    <-> . +1_palmityl_2_arachidonoyl_sn_glycerol +cdp_choline +hplus
-    cytidine_5_monophosphate
+  branch from arachidonate side left {
+    arachidonate
+    <-> . +1_1z_hexadecenyl_2_arachidonoyl_sn_glycero_3_pho +h2o +hplus
+    1_1z_hexadecenyl_sn_glycero_3_phosphocholine
   }
 
   branch from arachidonate side right {
     arachidonate
-    <-> . +o2
-    8_s_hpete
+    <-> . +1_octadecanoyl_2_arachidonoyl_sn_glycero_3_phosp +h2o +hplus
+    1_octadecanoyl_sn_glycero_3_phospho_d_myo_inosit
+  }
+
+  branch from arachidonoyl_coa side left {
+    arachidonoyl_coa
+    <-> . +1_hexadecanoyl_sn_glycero_3_phospho_d_myo_inosit +coa
+    1_hexadecanoyl_2_5z_8z_11z_14z_icosatetraenoyl_s
+  }
+
+  branch from arachidonoyl_coa side right {
+    arachidonoyl_coa
+    <-> . +1_hexadecanoyl_sn_glycero_3_phosphoethanolamine +coa
+    1_hexadecanoyl_2_5z_8z_11z_14z_icosatetraenoyl_s
   }
 
   branch from arachidonate side left {
     arachidonate
-    <-> . +1_palmitoyl_2_arachidonoyl_sn_glycero_3_phosphoc +h2o +hplus
-    1_hexadecanoyl_sn_glycero_3_phosphocholine
+    <-> . +o2
+    9_r_hpete
+  }
+
+  branch from arachidonate side right {
+    arachidonate
+    <-> . +1_arachidonyl_2_palmityl_sn_glycero_3_phosphocho +h2o +hplus
+    2_hexadecyl_sn_glycero_3_phosphocholine
   }
 }

@@ -138,6 +138,26 @@
       "xrefs": {
         "chebi": "CHEBI:36729"
       }
+    },
+    {
+      "id": "4_pregnen_3_ol_20_one",
+      "name": "4-pregnen-3β-ol-20-one",
+      "short": "4-pregnen-3β-ol-20-…",
+      "formula": "C21H32O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:85899"
+      }
+    },
+    {
+      "id": "5_pregnane_3_20_dione",
+      "name": "5β-pregnane-3,20-dione",
+      "short": "5β-pregnane-3,20-di…",
+      "formula": "C21H32O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:30154"
+      }
     }
   ],
   "enzymes": [
@@ -153,7 +173,10 @@
       "name": "3-oxo-5alpha-steroid 4-dehydrogenase (NADP(+))",
       "ec": [
         "1.3.1.22"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P18405"
+      }
     },
     {
       "id": "ec_1_14_13_54",
@@ -401,6 +424,248 @@
           {
             "db": "Rhea",
             "id": "RHEA:46016"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "progesterone + NADPH + H(+) = 3beta-hydroxypregn-4-ene-20-one + NADP(+)",
+      "equation": "progesterone + NADPH + H(+) = 3beta-hydroxypregn-4-ene-20-one + NADP(+)",
+      "substrates": [
+        {
+          "metabolite": "progesterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_pregnen_3_ol_20_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:46216"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46216"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "progesterone + NADPH + H(+) = 5beta-pregnan-3,20-dione + NADP(+)",
+      "equation": "progesterone + NADPH + H(+) = 5beta-pregnan-3,20-dione + NADP(+)",
+      "substrates": [
+        {
+          "metabolite": "progesterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_pregnane_3_20_dione",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:46660"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46660"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3_hydroxy_5_pregnan_20_one_3-hydroxy-5-pregnan-20-to-5-pregnane-3-20-dione",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_hydroxy_5_pregnan_20_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxy-5-pregnan-20-to-5-pregnane-3-20-dione"
+      },
+      "note": "Shares 3β-hydroxy-5α-pregnan-20-one with 3β-hydroxy-5α-pregnan-20-… to 5α-pregnane-3,20-dione.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:11909"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_pregnane_3_20_dione_3-hydroxy-5-pregnan-20-to-5-pregnane-3-20-dione",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_pregnane_3_20_dione"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxy-5-pregnan-20-to-5-pregnane-3-20-dione"
+      },
+      "note": "Shares 5α-pregnane-3,20-dione with 3β-hydroxy-5α-pregnan-20-… to 5α-pregnane-3,20-dione.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28952"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_pregnane_3_20_dione_5-pregan-20-ol-3-one-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_pregnane_3_20_dione"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-pregan-20-ol-3-one-to-h2o"
+      },
+      "note": "Shares 5α-pregnane-3,20-dione with 5α-pregan-20β-ol-3-one to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28952"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_testosterone_acetate_20r-22r-20-22-dihydroxy-to-hydrogen-acceptor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "testosterone_acetate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "20r-22r-20-22-dihydroxy-to-hydrogen-acceptor"
+      },
+      "note": "Shares testosterone acetate with (20R,22R)-20,22-dihydroxy… to hydrogen acceptor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16524"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_20s_20_hydroxypregn_4_en_3_one_20r-22r-20-22-dihydroxy-to-hydrogen-acceptor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "20s_20_hydroxypregn_4_en_3_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "20r-22r-20-22-dihydroxy-to-hydrogen-acceptor"
+      },
+      "note": "Shares (20S)-20-hydroxypregn-4-en-3-one with (20R,22R)-20,22-dihydroxy… to hydrogen acceptor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28453"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_pregnane_3_20_dione_5-pregnan-20-ol-3-one-to-5-pregnane-3-20-dione",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_pregnane_3_20_dione"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-pregnan-20-ol-3-one-to-5-pregnane-3-20-dione"
+      },
+      "note": "Shares 5β-pregnane-3,20-dione with 5β-pregnan-20α-ol-3-one to 5β-pregnane-3,20-dione.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:30154"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_pregnane_3_20_dione_nadh-to-5-pregnane-3-20-dione",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_pregnane_3_20_dione"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-5-pregnane-3-20-dione"
+      },
+      "note": "Shares 5β-pregnane-3,20-dione with NADH to 5β-pregnane-3,20-dione.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:30154"
           }
         ]
       }

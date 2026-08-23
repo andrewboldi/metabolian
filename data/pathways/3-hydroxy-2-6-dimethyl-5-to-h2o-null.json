@@ -1,0 +1,370 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-hydroxy-2-6-dimethyl-5-to-h2o-null",
+  "name": "3-Hydroxy-2,6-dimethyl-5-… to H2O",
+  "category": "other",
+  "summary": "A 3-step route from 3-Hydroxy-2,6-dimethyl-5-methylene-heptanoyl-CoA to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR190748"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_hydroxy_2_6_dimethyl_5_methylene_heptanoyl_coa",
+      "name": "3-Hydroxy-2,6-dimethyl-5-methylene-heptanoyl-CoA",
+      "short": "3-Hydroxy-2,6-dimet…",
+      "formula": "C31H52N7O18P3S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1104611"
+      }
+    },
+    {
+      "id": "cis_2_methyl_5_isopropylhexa_2_5_dienoyl_coa",
+      "name": "cis-2-Methyl-5-isopropylhexa-2,5-dienoyl-CoA",
+      "short": "cis-2-Methyl-5-isop…",
+      "formula": "C31H50N7O17P3S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1363887"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "diphosphate",
+      "name": "diphosphate",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM11"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM728294"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "cis_2_6_dimethyl_5_methylenehept_2_enoic_acid",
+      "name": "cis-2,6-dimethyl-5-methylenehept-2-enoic acid",
+      "short": "cis-2,6-dimethyl-5-…",
+      "formula": "C10H16O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:23285"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "z_2_methyl_5_isopropylhexa_2_5_dienal",
+      "name": "(Z)-2-methyl-5-isopropylhexa-2,5-dienal",
+      "short": "2-methyl-5-isopropy…",
+      "formula": "C10H16O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM3397"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_2_1_17",
+      "name": "enoyl-CoA hydratase",
+      "ec": [
+        "4.2.1.17"
+      ],
+      "xrefs": {
+        "uniprot": "P40939"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "enoyl-CoA hydratase",
+      "ec": "4.2.1.17",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxy_2_6_dimethyl_5_methylene_heptanoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cis_2_methyl_5_isopropylhexa_2_5_dienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR190748"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR190748"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR110226",
+      "substrates": [
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cis_2_methyl_5_isopropylhexa_2_5_dienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cis_2_6_dimethyl_5_methylenehept_2_enoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR110226"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR110226"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR110224",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cis_2_6_dimethyl_5_methylenehept_2_enoic_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "z_2_methyl_5_isopropylhexa_2_5_dienal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR110224"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR110224"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3_hydroxy_2_6_dimethyl_5_methylene_heptanoyl_coa_3-hydroxy-2-6-dimethyl-5-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_hydroxy_2_6_dimethyl_5_methylene_heptanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxy-2-6-dimethyl-5-to-h2o"
+      },
+      "note": "Shares 3-Hydroxy-2,6-dimethyl-5-methylene-heptanoyl-CoA with 3-Hydroxy-2,6-dimethyl-5-… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104611"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cis_2_methyl_5_isopropylhexa_2_5_dienoyl_coa_3-hydroxy-2-6-dimethyl-5-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cis_2_methyl_5_isopropylhexa_2_5_dienoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxy-2-6-dimethyl-5-to-h2o"
+      },
+      "note": "Shares cis-2-Methyl-5-isopropylhexa-2,5-dienoyl-CoA with 3-Hydroxy-2,6-dimethyl-5-… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1363887"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cis_2_6_dimethyl_5_methylenehept_2_enoic_acid_3-hydroxy-2-6-dimethyl-5-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cis_2_6_dimethyl_5_methylenehept_2_enoic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxy-2-6-dimethyl-5-to-h2o"
+      },
+      "note": "Shares cis-2,6-dimethyl-5-methylenehept-2-enoic acid with 3-Hydroxy-2,6-dimethyl-5-… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:23285"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_z_2_methyl_5_isopropylhexa_2_5_dienal_3-hydroxy-2-6-dimethyl-5-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "z_2_methyl_5_isopropylhexa_2_5_dienal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxy-2-6-dimethyl-5-to-h2o"
+      },
+      "note": "Shares (Z)-2-methyl-5-isopropylhexa-2,5-dienal with 3-Hydroxy-2,6-dimethyl-5-… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM3397"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-diphosphate "NADH to diphosphate" {
-  spacing 266
+  spacing 332
 
   spine at 0,0 {
     nadh
@@ -19,6 +19,17 @@ pathway nadh-to-diphosphate "NADH to diphosphate" {
     <-> . +ochrindole_d -diphosphate
     terrequinone_a
   }
+
+
+
+
+
+
+
+
+
+
+
 
 
 

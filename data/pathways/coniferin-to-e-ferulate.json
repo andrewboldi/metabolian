@@ -128,23 +128,32 @@
       }
     },
     {
-      "id": "pelargonidin_3_o_d_glucoside_betaine",
-      "name": "pelargonidin 3-O-β-D-glucoside betaine",
-      "short": "pelargonidin…",
+      "id": "pelargonidin_3_glucoside",
+      "name": "Pelargonidin 3-glucoside",
+      "short": "Pelargonidin…",
       "formula": "C21H20O10",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:144778"
+        "metanetx": "MNXM1368464"
       }
     },
     {
       "id": "pelargonidin_3_7_di_o_beta_d_glucoside",
       "name": "Pelargonidin 3,7-di-O-beta-D-glucoside",
       "short": "Pelargonidin…",
-      "formula": "C27H31O15",
+      "formula": "C27H30O15",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1368870"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
       "charge": 1,
       "xrefs": {
-        "metanetx": "MNXM1368869"
+        "metanetx": "MNXM1"
       }
     },
     {
@@ -154,61 +163,6 @@
       "charge": -1,
       "xrefs": {
         "metanetx": "MNXM573"
-      }
-    },
-    {
-      "id": "j_104303",
-      "name": "J-104303",
-      "formula": "C20H11N3O4",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1368712"
-      }
-    },
-    {
-      "id": "j_109384",
-      "name": "J-109384",
-      "formula": "C26H21N3O9",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1368714"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "WATER"
-      }
-    },
-    {
-      "id": "be_13793c",
-      "name": "BE 13793C",
-      "formula": "C20H11N3O4",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1368713"
-      }
-    },
-    {
-      "id": "ed_110",
-      "name": "ED 110",
-      "formula": "C26H21N3O9",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1368715"
-      }
-    },
-    {
-      "id": "coniferaldehyde_d_glucoside",
-      "name": "coniferaldehyde β-D-glucoside",
-      "short": "coniferaldehyde…",
-      "formula": "C16H20O8",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:136949"
       }
     }
   ],
@@ -239,13 +193,6 @@
       "name": "coniferyl-aldehyde dehydrogenase",
       "ec": [
         "1.2.1.68"
-      ]
-    },
-    {
-      "id": "ec_2_4_1_300",
-      "name": "cyanidin 3-O-glucoside 7-O-glucosyltransferase (acyl-glucose)",
-      "ec": [
-        "2.4.1.300"
       ]
     }
   ],
@@ -438,11 +385,10 @@
     },
     {
       "id": "r5",
-      "name": "cyanidin 3-O-glucoside 7-O-glucosyltransferase (acyl-glucose)",
-      "ec": "2.4.1.300",
+      "name": "Reaction MNXR196792",
       "substrates": [
         {
-          "metabolite": "pelargonidin_3_o_d_glucoside_betaine",
+          "metabolite": "pelargonidin_3_glucoside",
           "stoichiometry": 1
         },
         {
@@ -456,145 +402,291 @@
           "stoichiometry": 1
         },
         {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
           "metabolite": "e_ferulate",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_4_1_300"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR196791"
+        "metanetx": "MNXR196792"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR196791"
+            "id": "MNXR196792"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_coniferin_7-ammoniomethyl-7-deazagu-to-d-mannosyl-4-o-queu",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coniferin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-ammoniomethyl-7-deazagu-to-d-mannosyl-4-o-queu"
+      },
+      "note": "Shares coniferin with 7-ammoniomethyl-7-deazagu… to α-D-mannosyl-4''-O-queuos….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16220"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "Reaction MNXR196566",
-      "substrates": [
-        {
-          "metabolite": "glucose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "j_104303",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "j_109384",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "metanetx": "MNXR196566"
+      "id": "xt_coniferin_crocetin-to-crocin-1",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coniferin"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "crocetin-to-crocin-1"
+      },
+      "note": "Shares coniferin with crocetin to crocin-1.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR196566"
+            "db": "ChEBI",
+            "id": "CHEBI:16220"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "Reaction MNXR196567",
-      "substrates": [
-        {
-          "metabolite": "glucose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "be_13793c",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "ed_110",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "metanetx": "MNXR196567"
+      "id": "xt_coniferol_5-cholest-7-en-3-ol-to-coniferyl-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coniferol"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cholest-7-en-3-ol-to-coniferyl-acetate"
+      },
+      "note": "Shares coniferol with 5α-cholest-7-en-3β-ol to coniferyl acetate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR196567"
+            "db": "ChEBI",
+            "id": "CHEBI:17745"
           }
         ]
       }
     },
     {
-      "id": "r8",
-      "name": "(E)-coniferaldehyde + UDP-alpha-D-glucose = 4-O-(beta-D-glucosyl)-4-(E)-coniferyl aldeh...",
-      "equation": "(E)-coniferaldehyde + UDP-alpha-D-glucose = 4-O-(beta-D-glucosyl)-4-(E)-coniferyl aldehyde + UDP + H(+)",
-      "substrates": [
-        {
-          "metabolite": "coniferyl_aldehyde",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp_d_glucose",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "coniferaldehyde_d_glucoside",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "rhea": "RHEA:57708"
+      "id": "xt_coniferol_coniferol-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coniferol"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "coniferol-to-diphosphate"
+      },
+      "note": "Shares coniferol with coniferol to diphosphate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:57708"
+            "db": "ChEBI",
+            "id": "CHEBI:17745"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_coniferol_crocetin-to-crocin-1",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coniferol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "crocetin-to-crocin-1"
+      },
+      "note": "Shares coniferol with crocetin to crocin-1.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17745"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_coniferyl_aldehyde_coniferol-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coniferyl_aldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "coniferol-to-diphosphate"
+      },
+      "note": "Shares coniferyl aldehyde with coniferol to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16547"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_coniferyl_aldehyde_coniferyl-aldehyde-to-scopolin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coniferyl_aldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "coniferyl-aldehyde-to-scopolin"
+      },
+      "note": "Shares coniferyl aldehyde with coniferyl aldehyde to scopolin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16547"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_coniferyl_aldehyde_iridodial-lactol-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coniferyl_aldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "iridodial-lactol-to-fmn"
+      },
+      "note": "Shares coniferyl aldehyde with (+)-iridodial lactol to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16547"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_ferulate_coniferol-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_ferulate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "coniferol-to-diphosphate"
+      },
+      "note": "Shares trans-ferulate with coniferol to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29749"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_ferulate_dihydroferulate-to-n-feruloyltyramine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_ferulate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dihydroferulate-to-n-feruloyltyramine"
+      },
+      "note": "Shares trans-ferulate with dihydroferulate to N-feruloyltyramine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29749"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_ferulate_n-feruloylglycinate-to-2-e-o-feruloyl-d-galact",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_ferulate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-feruloylglycinate-to-2-e-o-feruloyl-d-galact"
+      },
+      "note": "Shares trans-ferulate with N-feruloylglycinate to 2-(E)-O-feruloyl-D-galact….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29749"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_ferulate_shikimate-to-4-ethyl-2-methoxyphenol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_ferulate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "shikimate-to-4-ethyl-2-methoxyphenol"
+      },
+      "note": "Shares trans-ferulate with shikimate to 4-Ethyl-2-methoxyphenol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29749"
           }
         ]
       }

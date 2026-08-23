@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "e-non-2-enal-to-h2o",
   "name": "(E)-non-2-enal to H2O",
-  "category": "redox-detox",
+  "category": "other",
   "summary": "A 3-step route from (E)-non-2-enal to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -111,91 +111,43 @@
       }
     },
     {
-      "id": "1_hydroxynon_2_en_4_one",
-      "name": "1-Hydroxynon-2-en-4-one",
-      "short": "1-Hydroxynon-2-en-4…",
-      "formula": "C9H16O2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1368615"
-      }
-    },
-    {
-      "id": "nadp",
-      "name": "NADP",
-      "formula": "C21H25N7O17P3",
-      "charge": -3,
-      "xrefs": {
-        "metanetx": "MNXM5"
-      }
-    },
-    {
-      "id": "h",
-      "name": "H",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM1"
-      }
-    },
-    {
-      "id": "nadph",
-      "name": "NADPH",
-      "formula": "C21H26N7O17P3",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM738702"
-      }
-    },
-    {
-      "id": "z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa",
-      "name": "(Z)-1-(glutathion-S-yl)-N-hydroxy-omega-(methylsulfanyl)nonan-1-imine",
-      "short": "1-(glutathion-S-yl)…",
-      "formula": "C20H35N4O7S2",
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
       "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM10478"
+        "chebi": "CHEBI:57540"
       }
     },
     {
-      "id": "1_methylsulfanyl_9_aci_nitrononane",
-      "name": "1-(methylsulfanyl)-9-aci-nitrononane",
-      "short": "1-(methylsulfanyl)-…",
-      "formula": "C10H21NO2S",
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM1105011"
+        "chebi": "CHEBI:15377"
       }
     },
     {
-      "id": "glutathione",
-      "name": "glutathione",
-      "formula": "C10H16N3O6S",
+      "id": "e_non_2_enoate",
+      "name": "(E)-non-2-enoate",
+      "formula": "C9H15O2",
       "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM490899"
+        "chebi": "CHEBI:143908"
       }
     },
     {
-      "id": "9_methylthiononanonitrile_oxide",
-      "name": "9-methylthiononanonitrile oxide",
-      "short": "9-methylthiononanon…",
-      "formula": "C10H21NO2S",
-      "charge": 0,
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
       "xrefs": {
-        "metanetx": "MNXM1105012"
+        "chebi": "CHEBI:57945"
       }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_1_1_1_184",
-      "name": "carbonyl reductase (NADPH)",
-      "ec": [
-        "1.1.1.184"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -340,124 +292,137 @@
     },
     {
       "id": "r5",
-      "name": "carbonyl reductase (NADPH)",
-      "ec": "1.1.1.184",
+      "name": "(E)-non-2-enal + NAD(+) + H2O = (E)-non-2-enoate + NADH + 2 H(+)",
+      "equation": "(E)-non-2-enal + NAD(+) + H2O = (E)-non-2-enoate + NADH + 2 H(+)",
       "substrates": [
         {
-          "metabolite": "1_hydroxynon_2_en_4_one",
+          "metabolite": "e_non_2_enal",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadp",
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "h",
+          "metabolite": "e_non_2_enoate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadph",
+          "metabolite": "nadh",
           "stoichiometry": 1
         },
         {
-          "metabolite": "e_4_oxonon_2_enal",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_1_1_184"
+          "metabolite": "hplus",
+          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR197311"
+        "rhea": "RHEA:69767"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR197311"
+            "db": "Rhea",
+            "id": "RHEA:69767"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_e_non_2_enal_9-10-epoxy-10-12z-octadec-to-e-non-2-enoate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_non_2_enal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "9-10-epoxy-10-12z-octadec-to-e-non-2-enoate"
+      },
+      "note": "Shares (E)-non-2-enal with 9,10-epoxy-10,12Z-octadec… to (E)-non-2-enoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:142592"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "Reaction MNXR191489",
-      "substrates": [
-        {
-          "metabolite": "z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_methylsulfanyl_9_aci_nitrononane",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glutathione",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "metanetx": "MNXR191489"
+      "id": "xt_4_hydroperoxy_2_nonenal_hesperidin-to-3-o-beta-glucosyl-2-ox",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_hydroperoxy_2_nonenal"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "hesperidin-to-3-o-beta-glucosyl-2-ox"
+      },
+      "note": "Shares 4-Hydroperoxy-2-nonenal with hesperidin to 3-(O-beta-glucosyl)-(2-ox….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR191489"
+            "db": "ChEBI",
+            "id": "CHEBI:171939"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "Reaction MNXR191490",
-      "substrates": [
-        {
-          "metabolite": "z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "9_methylthiononanonitrile_oxide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glutathione",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "metanetx": "MNXR191490"
+      "id": "xt_e_4_oxonon_2_enal_3-2z-4z-5-carbamoyl-3-to-methanophenazine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_4_oxonon_2_enal"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "3-2z-4z-5-carbamoyl-3-to-methanophenazine"
+      },
+      "note": "Shares (E)-4-oxonon-2-enal with 3-[(2Z,4Z)-5-carbamoyl-3-… to methanophenazine.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR191490"
+            "db": "ChEBI",
+            "id": "CHEBI:58972"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_non_2_enoate_9-10-epoxy-10-12z-octadec-to-e-non-2-enoate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_non_2_enoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "9-10-epoxy-10-12z-octadec-to-e-non-2-enoate"
+      },
+      "note": "Shares (E)-non-2-enoate with 9,10-epoxy-10,12Z-octadec… to (E)-non-2-enoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:143908"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 7s-17s-17-hydroxy-7-hyd-to-8-oxoresolvin-d1 "(7S,17S)-17-hydroxy-7-hydâ€¦ to 8-oxoresolvin D1" {
-  spacing 190
+  spacing 202
 
   spine at 0,0 {
     7s_17s_17_hydroxy_7_hydroperoxydocosahexaenoate
@@ -18,19 +18,31 @@ pathway 7s-17s-17-hydroxy-7-hyd-to-8-oxoresolvin-d1 "(7S,17S)-17-hydroxy-7-hydâ€
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_21 [3.2.1.21] +p_nitrophenyl_beta_d_fucopyranoside +4_nitrophenol +beta_d_fucose
-    h
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    l_glutamylbutirosin_b
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_2_1_3 [1.2.1.3] +1h_imidazole +p_dimethylamino_cinnamate
-    p_dimethylamino_cinnamoylimidazole
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    butirosin_b
   }
 
   branch from resolvin_d1 side left {
     resolvin_d1
     <-> . +nad +nadh +hplus
     17_oxoresolvin_d1
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    xylostasin
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +amikacin +phosphate +amikacin
+    atp
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-ethyl-l-cysteine-to-o-succinyl-l-homoserine "S-ethyl-L-cysteine to O-succinyl-L-homoserine" {
-  spacing 236
+  spacing 302
 
   spine at 0,0 {
     s_ethyl_l_cysteine
@@ -18,61 +18,127 @@ pathway s-ethyl-l-cysteine-to-o-succinyl-l-homoserine "S-ethyl-L-cysteine to O-s
 
   branch from o_acetyl_l_serine side left {
     o_acetyl_l_serine
-    <-> ec_4_4_1_11 [4.4.1.11] +h +pyruvate +acetate +nh4
-    h2o
+    <-> ec_2_5_1_47 [2.5.1.47] +hydrogen_sulfide +acetate
+    cysteine
   }
 
   branch from o_acetyl_l_serine side right {
     o_acetyl_l_serine
-    <-> . +acetyl_coa +h +n_o_bisacetyl_l_serine
-    coa
+    <-> ec_2_5_1_53 [2.5.1.53] +uracil +h +acetate
+    3_uracil_1_yl_l_alanine
   }
 
   branch from h side left {
     h
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +heptan_2_one +nad
-    heptan_2_ol
+    <-> ec_3_6_3_23 [3.6.3.23] +gamma_l_glutamyl_l_cysteinyl_beta_alanine +adp +phosphate +gamma_l_glutamyl_l_cysteinyl_beta_alanine +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +butan_2_one +nad
-    2r_butan_2_ol
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    gly_glu
   }
 
   branch from acetate side left {
     acetate
-    <-> ec_3_1_1_1 [3.1.1.1] +o_nitrophenyl_acetate +h2o +h
-    2_nitrophenol
+    <-> ec_2_8_3_12 [2.8.3.12] +acetyl_coa +s_2_hydroxyglutarate
+    r_2_hydroxyglutaryl_coa
   }
 
   branch from acetate side right {
     acetate
-    <-> ec_2_8_3_12 [2.8.3.12] +glutarate +acetyl_coa
-    glutaryl_coa
-  }
-
-  branch from d_cystathionine side left {
-    d_cystathionine
-    <-> ec_4_2_1_22 [4.2.1.22] +l_homocysteine +h2o
-    l_serine
-  }
-
-  branch from d_cystathionine side right {
-    d_cystathionine
-    <-> ec_4_4_1_8 [4.4.1.8] +l_homocysteine +nh4 +h2o
-    pyruvate
+    <-> . +acetyl_coa +hydrogen_sulfide +l_serine +l_cysteine
+    coa
   }
 
   branch from l_cysteine side left {
     l_cysteine
-    <-> ec_4_4_1_3 [4.4.1.3] +pyruvate +nh4 +h2o
-    l_lanthionine_dizwitterion
+    <-> ec_2_5_1_47 [2.5.1.47] +3_cyano_l_alanine +hydrogen_sulfide
+    cyanide
   }
 
   branch from l_cysteine side right {
     l_cysteine
-    <-> . +c15817
-    heme
+    <-> . +cyclopropene
+    s_allylcysteine
+  }
+
+  branch from s_ethyl_l_cysteine side left {
+    s_ethyl_l_cysteine
+    <-> . +2_ammonioprop_2_enoate
+    ethanethiol
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    anserine
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    l_alanyl_gamma_d_glutamyl_meso_2_6_diaminopimelo
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> ec_1_2_5_1 [1.2.5.1] +ubiquinol_9 +co2 +pyruvate +h2o
+    ubiquinone_9
+  }
+
+  branch from acetate side left {
+    acetate
+    <-> ec_1_2_5_1 [1.2.5.1] +ubiquinol_10 +co2 +pyruvate +h2o
+    ubiquinone_10
+  }
+
+  branch from o_acetyl_l_serine side right {
+    o_acetyl_l_serine
+    <-> ec_2_5_1_53 [2.5.1.53] +uracil +h +acetate
+    isowillardiine
+  }
+
+  branch from o_acetyl_l_serine side left {
+    o_acetyl_l_serine
+    <-> ec_2_5_1_53 [2.5.1.53] +isowillardiine +h +acetate
+    uracil
+  }
+
+  branch from l_homocysteine side right {
+    l_homocysteine
+    <-> . +co_methyl_co_5_hydroxybenzimidazolylcob_i_amide +h +l_methionine
+    5_hydroxybenzimidazolylcobamide
+  }
+
+  branch from l_homocysteine side left {
+    l_homocysteine
+    <-> ec_4_4_1_2 [4.4.1.2] +z_2_aminobutenoic_acid +h
+    hydrogen_sulfide
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> . +apigeninidin +co2 +h2o +o2 +apiforol
+    2_oxoglutarate
+  }
+
+  branch from succinate side left {
+    succinate
+    <-> . +2r_6z_2_hydroxy_6_hydroxymethylidene_2_5_dimeth +2_oxoglutarate +o2 +co2 +h2o
+    stipitaldehyde
+  }
+
+  branch from l_cysteine side right {
+    l_cysteine
+    <-> ec_3_4_11_1 [3.4.11.1] +l_leucine +h2o
+    cys_leu
+  }
+
+  branch from l_cysteine side left {
+    l_cysteine
+    <-> ec_3_4_11_1 [3.4.11.1] +l_leucine +h2o
+    leu_cys
   }
 }

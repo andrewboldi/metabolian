@@ -1,0 +1,489 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "neoabietadienal-to-abietol",
+  "name": "neoabietadienal to abietol",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from neoabietadienal to abietol, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR181658"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "neoabietadienal",
+      "name": "neoabietadienal",
+      "formula": "C20H30O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM165010"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "5z_7e_9e_14z_17z_icosapentaenoate",
+      "name": "(5Z,7E,9E,14Z,17Z)-icosapentaenoate",
+      "short": "(5Z,7E,9E,14Z,17Z)-…",
+      "formula": "C20H29O2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM4185"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "abietal",
+      "name": "abietal",
+      "formula": "C20H30O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29509"
+      }
+    },
+    {
+      "id": "abietol",
+      "name": "abietol",
+      "formula": "C20H32O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29510"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_2_1_5",
+      "name": "aldehyde dehydrogenase [NAD(P)(+)]",
+      "ec": [
+        "1.2.1.5"
+      ],
+      "xrefs": {
+        "uniprot": "P30838"
+      }
+    },
+    {
+      "id": "ec_1_1_1_71",
+      "name": "alcohol dehydrogenase [NAD(P)(+)]",
+      "ec": [
+        "1.1.1.71"
+      ],
+      "xrefs": {
+        "uniprot": "P16152"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "aldehyde dehydrogenase [NAD(P)(+)]",
+      "ec": "1.2.1.5",
+      "substrates": [
+        {
+          "metabolite": "neoabietadienal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "5z_7e_9e_14z_17z_icosapentaenoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR181658"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR181658"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "aldehyde dehydrogenase [NAD(P)(+)]",
+      "ec": "1.2.1.5",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "5z_7e_9e_14z_17z_icosapentaenoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "abietal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR181654"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR181654"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "alcohol dehydrogenase [NAD(P)(+)]",
+      "ec": "1.1.1.71",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "abietal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "abietol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_71"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR181550"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR181550"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_5z_7e_9e_14z_17z_icosapentaenoate_acetoacetyl-coa-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5z_7e_9e_14z_17z_icosapentaenoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetoacetyl-coa-to-h2o"
+      },
+      "note": "Shares (5Z,7E,9E,14Z,17Z)-icosapentaenoate with acetoacetyl-CoA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM4185"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5z_7e_9e_14z_17z_icosapentaenoate_isopimaradiene-diol-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5z_7e_9e_14z_17z_icosapentaenoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isopimaradiene-diol-to-nadph"
+      },
+      "note": "Shares (5Z,7E,9E,14Z,17Z)-icosapentaenoate with isopimaradiene-diol to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM4185"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5z_7e_9e_14z_17z_icosapentaenoate_palustradiene-diol-to-abietate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5z_7e_9e_14z_17z_icosapentaenoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "palustradiene-diol-to-abietate"
+      },
+      "note": "Shares (5Z,7E,9E,14Z,17Z)-icosapentaenoate with palustradiene-diol to abietate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM4185"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5z_7e_9e_14z_17z_icosapentaenoate_palustric-acid-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5z_7e_9e_14z_17z_icosapentaenoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "palustric-acid-to-fmn"
+      },
+      "note": "Shares (5Z,7E,9E,14Z,17Z)-icosapentaenoate with Palustric acid to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM4185"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_abietol_2-trans-6-trans-10-trans-to-fmn-24316",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "abietol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-trans-6-trans-10-trans-to-fmn-24316"
+      },
+      "note": "Shares abietol with 2-trans,6-trans,10-trans-… to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29510"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_abietol_isopimaradiene-diol-to-abietol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "abietol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isopimaradiene-diol-to-abietol"
+      },
+      "note": "Shares abietol with isopimaradiene-diol to abietol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29510"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_abietol_levopiramadiene-diol-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "abietol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "levopiramadiene-diol-to-fmn"
+      },
+      "note": "Shares abietol with levopiramadiene-diol to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29510"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_abietol_nadp-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "abietol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadp-to-h2o"
+      },
+      "note": "Shares abietol with NADP to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29510"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_abietol_palustradiene-diol-to-abietate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "abietol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "palustradiene-diol-to-abietate"
+      },
+      "note": "Shares abietol with palustradiene-diol to abietate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29510"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_abietol_palustric-acid-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "abietol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "palustric-acid-to-fmn"
+      },
+      "note": "Shares abietol with Palustric acid to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29510"
+          }
+        ]
+      }
+    }
+  ]
+}

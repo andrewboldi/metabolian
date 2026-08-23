@@ -173,96 +173,6 @@
       "xrefs": {
         "chebi": "CHEBI:15945"
       }
-    },
-    {
-      "id": "d_galactose",
-      "name": "D-Galactose",
-      "formula": "C6H12O6",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1364488"
-      }
-    },
-    {
-      "id": "o2",
-      "name": "O2",
-      "formula": "O2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM735438"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "WATER"
-      }
-    },
-    {
-      "id": "h",
-      "name": "H",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM1"
-      }
-    },
-    {
-      "id": "h2o2",
-      "name": "H2O2",
-      "formula": "H2O2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM732620"
-      }
-    },
-    {
-      "id": "adp",
-      "name": "ADP",
-      "formula": "C10H12N5O10P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:456216"
-      }
-    },
-    {
-      "id": "pser",
-      "name": "O-Phospho-L-serine",
-      "formula": "C3H6NO6P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57524"
-      }
-    },
-    {
-      "id": "amp",
-      "name": "AMP",
-      "formula": "C10H12N5O7P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:456215"
-      }
-    },
-    {
-      "id": "thr_ser",
-      "name": "Thr-Ser",
-      "formula": "C7H14N2O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:169954"
-      }
-    },
-    {
-      "id": "threonine",
-      "name": "L-Threonine",
-      "formula": "C4H9NO3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:57926"
-      }
     }
   ],
   "enzymes": [
@@ -299,21 +209,10 @@
       "name": "hydroxypyruvate reductase",
       "ec": [
         "1.1.1.81"
-      ]
-    },
-    {
-      "id": "ec_1_1_3_9",
-      "name": "galactose oxidase",
-      "ec": [
-        "1.1.3.9"
-      ]
-    },
-    {
-      "id": "ec_2_7_1_226",
-      "name": "L-serine kinase (ADP)",
-      "ec": [
-        "2.7.1.226"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q9UBQ7"
+      }
     }
   ],
   "reactions": [
@@ -617,143 +516,269 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r8",
-      "name": "galactose oxidase",
-      "ec": "1.1.3.9",
-      "substrates": [
-        {
-          "metabolite": "d_galactose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "d_galactonate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o2",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_1_3_9"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "metanetx": "MNXR197685"
+      "id": "xt_d_galactono_1_4_lactone_d-galactosyl-1-3-n-ac-to-cytidine-5-monophospha",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_galactono_1_4_lactone"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "d-galactosyl-1-3-n-ac-to-cytidine-5-monophospha"
+      },
+      "note": "Shares D-galactono-1,4-lactone with β-D-galactosyl-(1→3)-N-ac… to cytidine 5'-monophosphate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR197685"
+            "db": "ChEBI",
+            "id": "CHEBI:15895"
           }
         ]
       }
     },
     {
-      "id": "r9",
-      "name": "L-serine kinase (ADP)",
-      "equation": "L-serine + ADP = O-phospho-L-serine + AMP + H(+)",
-      "ec": "2.7.1.226",
-      "substrates": [
-        {
-          "metabolite": "serine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "pser",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "amp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_7_1_226"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 9,
-      "xrefs": {
-        "rhea": "RHEA:59176"
+      "id": "xt_d_galactonate_9-hydroxygeraniol-to-2e-geraniol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_galactonate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "9-hydroxygeraniol-to-2e-geraniol"
+      },
+      "note": "Shares D-galactonate with 9-Hydroxygeraniol to (2E)-geraniol.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:59176"
+            "db": "ChEBI",
+            "id": "CHEBI:12931"
           }
         ]
       }
     },
     {
-      "id": "r10",
-      "name": "L-threonyl-L-serine + H2O = L-threonine + L-serine",
-      "equation": "L-threonyl-L-serine + H2O = L-threonine + L-serine",
-      "substrates": [
-        {
-          "metabolite": "thr_ser",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "threonine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "serine",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 10,
-      "xrefs": {
-        "rhea": "RHEA:67364"
+      "id": "xt_d_galactonate_d-galactopyranose-to-h2o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_galactonate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "d-galactopyranose-to-h2o2"
+      },
+      "note": "Shares D-galactonate with D-galactopyranose to H2O2.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:67364"
+            "db": "ChEBI",
+            "id": "CHEBI:12931"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_galactonate_d-galnac-1-3-l-fuc-to-l-fucosyl-1-2-d-gal",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_galactonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-galnac-1-3-l-fuc-to-l-fucosyl-1-2-d-gal"
+      },
+      "note": "Shares D-galactonate with α-D-GalNAc-(1→3)-[α-L-Fuc… to α-L-fucosyl-(1→2)-β-D-gal….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:12931"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_galactonate_undecaprenyl-diphospho-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_galactonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "undecaprenyl-diphospho-to-coa"
+      },
+      "note": "Shares D-galactonate with Undecaprenyl-diphospho… to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:12931"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_dehydro_3_deoxy_d_galactonate_2-dehydro-3-deoxy-d-galac-to-2-oxoglutarate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_dehydro_3_deoxy_d_galactonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-dehydro-3-deoxy-d-galac-to-2-oxoglutarate"
+      },
+      "note": "Shares 2-dehydro-3-deoxy-D-galactonate with 2-dehydro-3-deoxy-D-galac… to 2-oxoglutarate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57989"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glyceraldehyde_1-monolinolein-to-glycerol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glyceraldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-monolinolein-to-glycerol"
+      },
+      "note": "Shares D-glyceraldehyde with 1-monolinolein to glycerol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17378"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glyceraldehyde_acetylacetone-to-dehydro-coenzyme-f420-0",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glyceraldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetylacetone-to-dehydro-coenzyme-f420-0"
+      },
+      "note": "Shares D-glyceraldehyde with acetylacetone to dehydro coenzyme F420-0.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17378"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glyceraldehyde_d-fructofuranose-to-glycolaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glyceraldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-fructofuranose-to-glycolaldehyde"
+      },
+      "note": "Shares D-glyceraldehyde with β-D-fructofuranose… to glycolaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17378"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glyceraldehyde_d-gluconate-to-2-hydroxy-3-oxopropanoate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glyceraldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-gluconate-to-2-hydroxy-3-oxopropanoate"
+      },
+      "note": "Shares D-glyceraldehyde with D-gluconate to 2-hydroxy-3-oxopropanoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17378"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glyceraldehyde_d-serine-to-2-5-didehydro-d-gluconate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glyceraldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-serine-to-2-5-didehydro-d-gluconate"
+      },
+      "note": "Shares D-glyceraldehyde with D-serine to 2,5-didehydro-D-gluconate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17378"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_oxosuccinamate_acylcholine-to-n5-methyl-l-glutamine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxosuccinamate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acylcholine-to-n5-methyl-l-glutamine"
+      },
+      "note": "Shares 2-oxosuccinamate with acylcholine to N5-methyl-L-glutamine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57735"
           }
         ]
       }

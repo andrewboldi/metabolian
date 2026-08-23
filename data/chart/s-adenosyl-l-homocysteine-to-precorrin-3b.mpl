@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-adenosyl-l-homocysteine-to-precorrin-3b "S-adenosyl-L-homocysteine to Precorrin 3B" {
-  spacing 248
+  spacing 212
 
   spine at 0,0 {
     s_adenosyl_l_homocysteine
@@ -14,41 +14,5 @@ pathway s-adenosyl-l-homocysteine-to-precorrin-3b "S-adenosyl-L-homocysteine to 
     precorrin_4
     <-> ec_2_1_1_131 [2.1.1.131] +s_adenosyl_l_homocysteine +h -precorrin_3b
     s_adenosyl_l_methionine
-  }
-
-  branch from s_adenosyl_l_methionine side left {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +name
-    nogalonic_acid
-  }
-
-  branch from s_adenosyl_l_methionine side right {
-    s_adenosyl_l_methionine
-    <-> ec_2_1_1_288 [2.1.1.288] +s_adenosyl_l_homocysteine +aklanonic_acid_methyl_ester
-    aklanonic_acid
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +atp
-    1_hexacosanoyl_2_9z_12z_octadecadienoyl_sn_glyce
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +atp
-    1_hexacosanoyl_2_9z_12z_15z_octadecatrienoyl_sn
-  }
-
-  branch from precorrin_3b side left {
-    precorrin_3b
-    <-> . +h +o2
-    precorrin_3a
-  }
-
-  branch from precorrin_3b side right {
-    precorrin_3b
-    <-> ec_1_14_13_83 [1.14.13.83] +nadh +precorrin_3a +h +o2 +h2o
-    nad
   }
 }

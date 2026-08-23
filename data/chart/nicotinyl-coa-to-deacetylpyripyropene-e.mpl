@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nicotinyl-coa-to-deacetylpyripyropene-e "nicotinyl-CoA to deacetylpyripyropene E" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     nicotinyl_coa
@@ -16,17 +16,5 @@ pathway nicotinyl-coa-to-deacetylpyripyropene-e "nicotinyl-CoA to deacetylpyripy
     2_oxo_3_8s_epoxy_2e_6e_farnesyl_6_pyridin_3_yl_2
     <-> . +hplus
     deacetylpyripyropene_e
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +gpp +h2o
-    1r_2r_menth_2_en_1_ol
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +fpp +h2o
-    africanol
   }
 }

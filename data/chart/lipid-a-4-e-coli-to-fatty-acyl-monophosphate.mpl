@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway lipid-a-4-e-coli-to-fatty-acyl-monophosphate "lipid A(4−) (E. coli) to fatty acyl monophosphate" {
-  spacing 268
+  spacing 286
 
   spine at 0,0 {
     lipid_a_4_e_coli
@@ -20,51 +20,69 @@ pathway lipid-a-4-e-coli-to-fatty-acyl-monophosphate "lipid A(4−) (E. coli) to
     fatty_acyl_monophosphate
   }
 
-  branch from dag side left {
-    dag
-    <-> ec_2_7_8_42 [2.7.8.42] +kdo_2_lipid_iva +1_2_diacyl_sn_glycero_3_phosphoethanolamine
-    7_o_2_aminoethyl_phosphoryl_kdo_2_4_kdo_2_6_lipi
-  }
-
-  branch from dag side right {
-    dag
-    <-> . +lipid_a +1_2_diacyl_sn_glycero_3_phosphoethanolamine +hplus
-    lipid_a_4_2_aminoethyl_diphosphate_oxoanion
-  }
-
   branch from 1_2_diacyl_3_d_galactosyl_sn_glycerol side left {
-    1_2_diacyl_3_d_galactosyl_sn_glycerol
-    <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
-    1_2_diacyl_3_3_o_sulfo_d_galactosyl_sn_glycerol
-  }
-
-  branch from 1_2_diacyl_3_d_galactosyl_sn_glycerol side right {
     1_2_diacyl_3_d_galactosyl_sn_glycerol
     <-> ec_5_1_3_34 [5.1.3.34]
     3_d_glucosyl_1_2_diacyl_sn_glycerol
   }
 
-  branch from 3_d_galactosyl_1_6_d_galactosyl_1_2_diacyl_sn_gl side left {
+  branch from 1_2_diacyl_3_d_galactosyl_sn_glycerol side right {
+    1_2_diacyl_3_d_galactosyl_sn_glycerol
+    <-> . +udp_d_galactose +udp +hplus
     3_d_galactosyl_1_6_d_galactosyl_1_2_diacyl_sn_gl
-    <-> . +h2o +fatty-acid +hplus
-    1_acyl_3_o_d_galactosyl_1_6_d_galactosyl_sn_glyc
-  }
-
-  branch from 3_d_galactosyl_1_6_d_galactosyl_1_2_diacyl_sn_gl side right {
-    3_d_galactosyl_1_6_d_galactosyl_1_2_diacyl_sn_gl
-    <-> . +h2o +fatty-acid +hplus
-    2_acyl_3_o_d_galactosyl_1_6_d_galactosyl_sn_glyc
   }
 
   branch from fatty-acid side left {
     fatty-acid
-    <-> . +n_fatty_acyl_glycine +h2o
-    glycine
+    <-> . +d_galactosyl_1_4_d_galactosyl_1_4_d_glucosylcer +h2o
+    d_galactosyl_d_galactosyl_d_glucosylsphingosine
   }
 
   branch from fatty-acid side right {
     fatty-acid
-    <-> . +fatty_acid_ethyl_ester +h2o +hplus
-    ethanol
+    <-> . +d_galactosyl_1_4_d_galactosyl_1_4_d_glucosyl_1 +h2o
+    d_galactosyl_1_4_d_galactosyl_1_4_d_glucosylsph
+  }
+
+  branch from 1_2_diacyl_sn_glycero_3_phosphoethanolamine side left {
+    1_2_diacyl_sn_glycero_3_phosphoethanolamine
+    <-> . +n_acetylsphingosine +2_acyl_sn_glycero_3_phosphoethanolamine
+    1_o_acyl_n_acetylsphingosine
+  }
+
+  branch from 1_2_diacyl_sn_glycero_3_phosphoethanolamine side right {
+    1_2_diacyl_sn_glycero_3_phosphoethanolamine
+    <-> . +c_terminal_amino_acid_phosphatidylethanolamine_a +h2o
+    c_terminal_amino_acid_glycine
+  }
+
+  branch from udp_d_galactose side left {
+    udp_d_galactose
+    <-> . +1_oleoyl_2_palmitoyl_sn_glycerol +udp +hplus
+    1_9z_octadecenoyl_2_hexadecanoyl_3_d_galactosyl
+  }
+
+  branch from udp_d_galactose side right {
+    udp_d_galactose
+    <-> ec_2_4_1_343 [2.4.1.343] +n_acetyl_d_glucosaminyl_1_diphospho_ditrans_poly +udp +hplus
+    d_gal_1_3_d_glcnac_diphospho_ditrans_octacis_un
+  }
+
+  branch from 1_2_diacyl_3_d_galactosyl_sn_glycerol side left {
+    1_2_diacyl_3_d_galactosyl_sn_glycerol
+    <-> . +udp_d_glucose +udp +hplus
+    3_d_glucopyranosyl_1_6_d_galactopyranosyl_1_2_di
+  }
+
+  branch from fatty-acid side right {
+    fatty-acid
+    <-> . +d_glucosylceramide +h2o
+    d_glucosylsphingoid_base
+  }
+
+  branch from fatty-acid side left {
+    fatty-acid
+    <-> . +2_2_lysobisphosphatidate +h2o +hplus
+    a_3_acyl_sn_glycero_1_phospho_1_sn_glycerol
   }
 }

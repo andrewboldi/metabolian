@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 11z-eicosenoyl-coa-to-oleoyl-coa "(11Z)-eicosenoyl-CoA to oleoyl-CoA" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     11z_eicosenoyl_coa
@@ -16,17 +16,5 @@ pathway 11z-eicosenoyl-coa-to-oleoyl-coa "(11Z)-eicosenoyl-CoA to oleoyl-CoA" {
     11z_3_oxoicosa_11_enoyl_coa
     <-> . +coa -acetyl_coa
     oleoyl_coa
-  }
-
-  branch from oleoyl_coa side left {
-    oleoyl_coa
-    <-> . +1_hexadecanoyl_sn_glycero_3_phospho_d_myo_inosit +coa
-    1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph
-  }
-
-  branch from oleoyl_coa side right {
-    oleoyl_coa
-    <-> . +nadph +hplus +nadp +coa
-    9z_octadecen_1_ol
   }
 }

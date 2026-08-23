@@ -20,31 +20,31 @@ pathway 1-n2-etheno-2-deoxyguano-to-2-phosphonatoglycola "1,N2-etheno-2'-deoxygu
 
   branch from glyoxal side left {
     glyoxal
-    <-> . +dgtp
-    n2_1_hydroxy_2_oxoethyl_dgtp
+    <-> . +gdp
+    n2_1_hydroxy_2_oxoethyl_gdp
   }
 
   branch from glyoxal side right {
     glyoxal
-    <-> . +gtp
-    n2_1_hydroxy_2_oxoethyl_gtp
-  }
-
-  branch from succinate side left {
-    succinate
-    <-> . +4ar_7s_2_adenosyl_5_diphospho_5_ribosyl_7_amino +akg +o2 +co2
-    4ar_6s_7r_2_adenosyl_5_diphospho_5_ribosyl_6_hy
-  }
-
-  branch from succinate side right {
-    succinate
-    <-> . +okaramine_a +akg +o2 +co2
-    okaramine_e
-  }
-
-  branch from glycolate side left {
-    glycolate
-    <-> . +h2o +gmp +hplus
+    <-> . +gmp
     n2_1_hydroxy_2_oxoethyl_gmp
+  }
+
+  branch from 1_n2_etheno_2_deoxyguanosine_5_monophosphate_1 side left {
+    1_n2_etheno_2_deoxyguanosine_5_monophosphate_1
+    <-> . +h2o +2_deoxyribose_5_monophosphate_1
+    1_n2_ethenoguanine
+  }
+
+  branch from glyoxal side right {
+    glyoxal
+    <-> . +guanosine_5_monophosphate_1
+    n2_1_hydroxy_2_oxoethyl_gmp_1
+  }
+
+  branch from glyoxal side left {
+    glyoxal
+    <-> ec_1_2_1_49 [1.2.1.49] +nadp +h2o +glyoxylate +nadph
+    h
   }
 }

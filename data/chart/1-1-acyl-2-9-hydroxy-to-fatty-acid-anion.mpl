@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-1-acyl-2-9-hydroxy-to-fatty-acid-anion "1'-[1-acyl-2-(9-hydroxy-(… to fatty acid anion" {
-  spacing 170
+  spacing 176
 
   spine at 0,0 {
     1_1_acyl_2_9_hydroxy_10e_12z_octadecadienoyl_sn
@@ -16,19 +16,25 @@ pathway 1-1-acyl-2-9-hydroxy-to-fatty-acid-anion "1'-[1-acyl-2-(9-hydroxy-(… t
     2_monolysocardiolipin
   }
 
-  branch from 2_monolysocardiolipin side left {
-    2_monolysocardiolipin
-    <-> . +cardiolipin +coa
-    acyl_coa
+  branch from 9_hode side left {
+    9_hode
+    <-> . +9s_hydroperoxy_10e_12z_octadecadienoate +h +nadph +h2o
+    nadp
   }
 
   branch from 2_monolysocardiolipin side right {
     2_monolysocardiolipin
-    <-> . +oleoyl_coa +coa
-    2_oleoylcardiolipin
+    <-> . +linoleoyl_coa +coa
+    2_linoleoylcardiolipin
   }
 
-  branch from cardiolipin side left {
+  branch from 2_monolysocardiolipin side left {
+    2_monolysocardiolipin
+    <-> . +arachidonoyl_coa +coa
+    2_arachidonoylcardiolipin
+  }
+
+  branch from cardiolipin side right {
     cardiolipin
     <-> . +2_monolysocardiolipin
     2_2_dilysocardiolipin

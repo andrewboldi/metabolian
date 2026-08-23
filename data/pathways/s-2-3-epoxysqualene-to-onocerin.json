@@ -101,6 +101,24 @@
       "xrefs": {
         "chebi": "CHEBI:138303"
       }
+    },
+    {
+      "id": "arabidiol",
+      "name": "arabidiol",
+      "formula": "C30H52O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62417"
+      }
+    },
+    {
+      "id": "lupan_3_20_diol",
+      "name": "lupan-3β,20-diol",
+      "formula": "C30H52O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62735"
+      }
     }
   ],
   "enzymes": [
@@ -116,6 +134,20 @@
       "name": "alpha-onocerin synthase",
       "ec": [
         "5.4.99.66"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_124",
+      "name": "arabidiol synthase",
+      "ec": [
+        "4.2.1.124"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_128",
+      "name": "lupan-3beta,20-diol synthase",
+      "ec": [
+        "4.2.1.128"
       ]
     }
   ],
@@ -241,6 +273,112 @@
           {
             "db": "Rhea",
             "id": "RHEA:54668"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "arabidiol synthase",
+      "equation": "arabidiol = (S)-2,3-epoxysqualene + H2O",
+      "ec": "4.2.1.124",
+      "substrates": [
+        {
+          "metabolite": "arabidiol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "epoxysqualene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_124"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:31035"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31035"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "lupan-3beta,20-diol synthase",
+      "equation": "lupan-3beta,20-diol = (S)-2,3-epoxysqualene + H2O",
+      "ec": "4.2.1.128",
+      "substrates": [
+        {
+          "metabolite": "lupan_3_20_diol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "epoxysqualene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_128"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:31351"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31351"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3s_22s_2_3_22_23_diepoxy_2_3_22_23_tetrahydrosq_3s-22s-2-3-22-23-diepox-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3s_22s_2_3_22_23_diepoxy_2_3_22_23_tetrahydrosq"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3s-22s-2-3-22-23-diepox-to-fmn"
+      },
+      "note": "Shares (3S,22S)-2,3:22,23-diepoxy-2,3,22,23-tetrahydrosqualene with (3S,22S)-2,3:22,23-diepox… to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:138307"
           }
         ]
       }

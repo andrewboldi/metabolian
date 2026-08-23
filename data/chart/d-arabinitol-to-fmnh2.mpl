@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-arabinitol-to-fmnh2 "D-arabinitol to FMNH2" {
-  spacing 316
+  spacing 340
 
   spine at 0,0 {
     d_arabinitol
@@ -58,14 +58,14 @@ pathway d-arabinitol-to-fmnh2 "D-arabinitol to FMNH2" {
 
   branch from sulfonatoacetaldehyde side right {
     sulfonatoacetaldehyde
-    <-> ec_1_4_99_2 [1.4.99.2] +taurine +hydrogen_acceptor +h2o +nh3
-    hydrogen_donor
+    <-> ec_1_1_1_313 [1.1.1.313] +nadp +nadph +hplus
+    isethionate
   }
 
   branch from sulfonatoacetaldehyde side left {
     sulfonatoacetaldehyde
-    <-> ec_1_1_1_313 [1.1.1.313] +nadp +nadph +hplus
-    isethionate
+    <-> . +taurine +iron +h2o +fe2 +hplus
+    nh3
   }
 
   branch from sulfonatoacetate side right {
@@ -76,14 +76,14 @@ pathway d-arabinitol-to-fmnh2 "D-arabinitol to FMNH2" {
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_135 [1.14.14.135] +6as_11as_4_dimethylallyl_3_6a_9_trihydroxyptero +fmnh2 +o2 +h2o +hplus
-    glyceollin
+    <-> ec_1_14_14_87 [1.14.14.87] +liquiritigenin +fmnh2 +o2 +h2o +hplus
+    2r_3s_2_4_7_trihydroxyisoflavanone
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_5 [1.14.14.5] +alkanesulfonate_oxoanion +fmnh2 +o2 +sulfite +h2o +hplus
-    aldehyde
+    <-> ec_1_14_14_153 [1.14.14.153] +1h_indole +fmnh2 +o2 +h2o +hplus
+    indolin_2_one
   }
 
   branch from sulfite side left {
@@ -100,25 +100,85 @@ pathway d-arabinitol-to-fmnh2 "D-arabinitol to FMNH2" {
 
   branch from glyoxylate side left {
     glyoxylate
-    <-> ec_4_1_1_47 [4.1.1.47] +hplus +co2
-    2_hydroxy_3_oxopropanoate
+    <-> ec_4_1_3_14 [4.1.3.14] +3r_3_hydroxy_l_aspartate
+    glycine
   }
 
   branch from glyoxylate side right {
     glyoxylate
-    <-> ec_2_3_3_7 [2.3.3.7] +butyryl_coa +h2o +coa +hplus
-    3_ethylmalate
+    <-> ec_1_2_3_5 [1.2.3.5] +o2 +h2o +h2o2 +hplus
+    oxalate
   }
 
   branch from fmnh2 side left {
     fmnh2
-    <-> ec_1_14_14_52 [1.14.14.52] +4s_limonene +o2 +fmn +h2o +hplus
-    s_perillyl_alcohol
+    <-> ec_1_14_14_157 [1.14.14.157] +indolin_2_one +o2 +fmn +h2o +hplus
+    3_hydroxyindolin_2_one
   }
 
   branch from fmnh2 side right {
     fmnh2
-    <-> ec_1_14_19_66 [1.14.19.66] +r_n_methylcoclaurinium +s_n_methylcoclaurinium +o2 +fmn +h2o +hplus
-    berbamuninium
+    <-> ec_1_14_14_111 [1.14.14.111] +9_pimara_7_15_diene +o2 +fmn +h2o +hplus
+    9_pimara_7_15_dien_19_oate
+  }
+
+  branch from d_arabinitol side left {
+    d_arabinitol
+    <-> ec_1_1_1_11 [1.1.1.11] +nad +nadh +hplus
+    d_xylulose
+  }
+
+  branch from g3p side right {
+    g3p
+    <-> ec_4_3_3_6 [4.3.3.6] +r5p +glutamine +plp +pi +h2o +hplus
+    glutamate
+  }
+
+  branch from g3p side left {
+    g3p
+    <-> ec_1_2_1_90 [1.2.1.90] +nad +h2o +nadh +hplus
+    pg3
+  }
+
+  branch from sulfite side right {
+    sulfite
+    <-> . +l_cysteate +hplus
+    2_ammonioprop_2_enoate
+  }
+
+  branch from sulfite side left {
+    sulfite
+    <-> . +tetra_3_sulfido_tetrairon +taurine +h2o +tetra_3_sulfido_tetrairon +hplus
+    ammonioacetaldehyde
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> ec_1_14_14_182 [1.14.14.182] +taxusin +o2 +fmn +h2o +hplus
+    7_hydroxytaxusin
+  }
+
+  branch from fmnh2 side left {
+    fmnh2
+    <-> ec_1_14_14_36 [1.14.14.36] +tyrosine +o2 +fmn +co2 +h2o +hplus
+    e_4_hydroxyphenyl_acetaldehyde_oxime
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_151 [1.14.14.151] +premnaspirodiene +fmnh2 +o2 +h2o +hplus
+    solavetivone
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_84 [1.14.14.84] +linalool +fmnh2 +o2 +h2o +hplus
+    6e_8_oxolinalool
+  }
+
+  branch from glyoxylate side right {
+    glyoxylate
+    <-> ec_4_1_3_24 [4.1.3.24] +acetyl_coa
+    3s_3_carboxy_3_hydroxypropanoyl_coa
   }
 }

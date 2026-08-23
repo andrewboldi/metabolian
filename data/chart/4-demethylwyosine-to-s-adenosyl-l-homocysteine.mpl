@@ -17,16 +17,4 @@ pathway 4-demethylwyosine-to-s-adenosyl-l-homocysteine "4-demethylwyosine… to 
     <-> ec_2_3_1_231 [2.3.1.231] +sam +co2 -sah -hplus
     wybutosine_5_monophosphate_1
   }
-
-  branch from sah side left {
-    sah
-    <-> . +uridine_5_monophosphate_1 +sam +hplus
-    5_methyluridine_5_monophosphate_1
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +n6_l_threonylcarbamoyladenine_5_monophosphate_2 +sam +hplus
-    n6_methyl_n6_l_threonylcarbamoyladenosine_5_phos
-  }
 }

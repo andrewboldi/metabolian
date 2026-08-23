@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "maltose-6-phosphate-to-d-glucopyranose",
   "name": "α-maltose 6'-phosphate to D-glucopyranose",
-  "category": "lipid-metabolism",
+  "category": "other",
   "summary": "A 3-step route from α-maltose 6'-phosphate(2−) to D-glucopyranose, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -81,43 +81,6 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:4167"
-      }
-    },
-    {
-      "id": "avenacin_a_2",
-      "name": "avenacin A-2",
-      "formula": "C54H80O21",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1368264"
-      }
-    },
-    {
-      "id": "des_acyl_avenacin_a",
-      "name": "des-acyl avenacin A",
-      "formula": "C47H76O20",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM146544"
-      }
-    },
-    {
-      "id": "benzoyl_d_glucoside",
-      "name": "benzoyl-β-D-glucoside",
-      "short": "benzoyl-β-D-glucosi…",
-      "formula": "C13H16O7",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:141410"
-      }
-    },
-    {
-      "id": "avenacin_a_2",
-      "name": "avenacin A-2",
-      "formula": "C54H80O21",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1368265"
       }
     }
   ],
@@ -271,79 +234,269 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "Reaction MNXR196873",
-      "substrates": [
-        {
-          "metabolite": "glucose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "avenacin_a_2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "des_acyl_avenacin_a",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "benzoyl_d_glucoside",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR196873"
+      "id": "xt_maltose_6_phosphate_cellobiose-to-l-histidine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "maltose_6_phosphate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "cellobiose-to-l-histidine"
+      },
+      "note": "Shares α-maltose 6'-phosphate with cellobiose to L-histidine.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR196873"
+            "db": "ChEBI",
+            "id": "CHEBI:57478"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "Reaction MNXR196874",
-      "substrates": [
-        {
-          "metabolite": "glucose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "avenacin_a_2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "des_acyl_avenacin_a",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "benzoyl_d_glucoside",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR196874"
+      "id": "xt_maltose_6_phosphate_maltose-6-phosphate-to-hapalindole-h",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "maltose_6_phosphate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "maltose-6-phosphate-to-hapalindole-h"
+      },
+      "note": "Shares α-maltose 6'-phosphate with α-maltose 6'-phosphate to hapalindole H.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR196874"
+            "db": "ChEBI",
+            "id": "CHEBI:57478"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_maltose_cellobiose-to-l-histidine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "maltose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cellobiose-to-l-histidine"
+      },
+      "note": "Shares maltose with cellobiose to L-histidine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17306"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_maltose_cellobiose-to-mycothione",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "maltose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cellobiose-to-mycothione"
+      },
+      "note": "Shares maltose with cellobiose to mycothione.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17306"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_maltose_d-tagatofuranose-to-l-serine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "maltose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-tagatofuranose-to-l-serine"
+      },
+      "note": "Shares maltose with D-tagatofuranose… to L-serine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17306"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_maltose_laminarabiose-to-d-glucose-6-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "maltose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "laminarabiose-to-d-glucose-6-phosphate"
+      },
+      "note": "Shares maltose with laminarabiose to β-D-glucose 6-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17306"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_maltose_panose-to-1-o-acetylmaltose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "maltose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "panose-to-1-o-acetylmaltose"
+      },
+      "note": "Shares maltose with panose to 1-O-acetylmaltose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17306"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trehalose_adp-d-glucoside-to-d-glucose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trehalose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "adp-d-glucoside-to-d-glucose"
+      },
+      "note": "Shares α,α-trehalose with ADP α-D-glucoside to β-D-glucose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16551"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trehalose_aldehydo-d-mannose-to-trehalose-6-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trehalose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aldehydo-d-mannose-to-trehalose-6-phosphate"
+      },
+      "note": "Shares α,α-trehalose with aldehydo-D-mannose to α,α-trehalose 6-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16551"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trehalose_d-glucose-1-phosphate-to-2-3-dipalmitoyl-treha",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trehalose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glucose-1-phosphate-to-2-3-dipalmitoyl-treha"
+      },
+      "note": "Shares α,α-trehalose with α-D-glucose 1-phosphate to 2,3-dipalmitoyl-α,α-treha….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16551"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trehalose_n-long-chain-acyl-ethano-to-o-s-2s-4s-6s-2-4-6-t",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trehalose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-long-chain-acyl-ethano-to-o-s-2s-4s-6s-2-4-6-t"
+      },
+      "note": "Shares α,α-trehalose with N-(long-chain-acyl)ethano… to O-(S-[2S,4S,6S]-2,4,6-tri….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16551"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trehalose_ndp-d-glucose-to-nucleoside-5-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trehalose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ndp-d-glucose-to-nucleoside-5-diphosphate"
+      },
+      "note": "Shares α,α-trehalose with NDP-α-D-glucose to nucleoside 5'-diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16551"
           }
         ]
       }

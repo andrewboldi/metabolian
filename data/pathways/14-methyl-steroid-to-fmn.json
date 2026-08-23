@@ -110,53 +110,80 @@
       }
     },
     {
-      "id": "s_reticulinium",
-      "name": "(S)-reticulinium",
-      "formula": "C19H24NO4",
-      "charge": 1,
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:57873"
+        "metanetx": "MNXM1107623"
       }
     },
     {
-      "id": "s_corytuberine",
-      "name": "(S)-corytuberine",
-      "formula": "C19H21NO4",
+      "id": "medermycin",
+      "name": "Medermycin",
+      "formula": "C24H27NO8",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:81200"
+        "chebi": "CHEBI:31808"
       }
     },
     {
-      "id": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
-      "name": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate",
-      "short": "(4Z,7Z,10Z,13Z,16Z,…",
-      "formula": "C22H31O2",
-      "charge": -1,
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:77016"
+        "metanetx": "MNXM735438"
       }
     },
     {
-      "id": "4z_7z_10z_13z_16z_19r_20s_19_20_epoxydocosapent",
-      "name": "(4Z,7Z,10Z,13Z,16Z,19R,20S)-19,20-epoxydocosapentaenoate",
-      "short": "(4Z,7Z,10Z,13Z,16Z,…",
-      "formula": "C22H31O3",
-      "charge": -1,
+      "id": "mederrhodin_a",
+      "name": "mederrhodin A",
+      "formula": "C24H27NO9",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:136410"
+        "metanetx": "MNXM168303"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "dihydrokalafungin_dihydroquinone_form",
+      "name": "Dihydrokalafungin dihydroquinone form",
+      "short": "Dihydrokalafungin…",
+      "formula": "C16H16O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:81706"
+      }
+    },
+    {
+      "id": "dhk_oh",
+      "name": "DHK-OH",
+      "formula": "C16H16O7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:81704"
       }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_1_14_19_51",
-      "name": "(S)-corytuberine synthase",
-      "ec": [
-        "1.14.19.51"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -317,16 +344,14 @@
     },
     {
       "id": "r4",
-      "name": "(S)-corytuberine synthase",
-      "equation": "(S)-reticuline + reduced [NADPH--hemoprotein reductase] + O2 = (S)-corytuberine + oxidized [NADPH--hemoprotein reductase] + 2 H2O + 2 H(+)",
-      "ec": "1.14.19.51",
+      "name": "Reaction MNXR197027",
       "substrates": [
         {
-          "metabolite": "s_reticulinium",
+          "metabolite": "fmnh2",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fmnh2",
+          "metabolite": "medermycin",
           "stoichiometry": 1
         },
         {
@@ -336,53 +361,47 @@
       ],
       "products": [
         {
-          "metabolite": "s_corytuberine",
-          "stoichiometry": 1
-        },
-        {
           "metabolite": "fmn",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
-          "stoichiometry": 2
+          "metabolite": "mederrhodin_a",
+          "stoichiometry": 1
         },
         {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "catalysts": [
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
         {
-          "enzyme": "ec_1_14_19_51"
+          "metabolite": "h2o",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:51540"
+        "metanetx": "MNXR197027"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:51540"
+            "db": "MetaNetX",
+            "id": "MNXR197027"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate + reduced [NADPH--hemoprotein reductase] + O2 ...",
-      "equation": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate + reduced [NADPH--hemoprotein reductase] + O2 = (19R,20S)-epoxy-(4Z,7Z,10Z,13Z,16Z)-docosapentaenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "Reaction MNXR198767",
       "substrates": [
         {
-          "metabolite": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
+          "metabolite": "fmnh2",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fmnh2",
+          "metabolite": "dihydrokalafungin_dihydroquinone_form",
           "stoichiometry": 1
         },
         {
@@ -392,7 +411,7 @@
       ],
       "products": [
         {
-          "metabolite": "4z_7z_10z_13z_16z_19r_20s_19_20_epoxydocosapent",
+          "metabolite": "dhk_oh",
           "stoichiometry": 1
         },
         {
@@ -400,25 +419,159 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "h",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hplus",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:52120"
+        "metanetx": "MNXR198767"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:52120"
+            "db": "MetaNetX",
+            "id": "MNXR198767"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_medermycin_fmnh2-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "medermycin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fmnh2-to-h2o"
+      },
+      "note": "Shares Medermycin with FMNH2 to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:31808"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_mederrhodin_a_fmnh2-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "mederrhodin_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fmnh2-to-h2o"
+      },
+      "note": "Shares mederrhodin A with FMNH2 to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM168303"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dihydrokalafungin_dihydroquinone_form_3-epiecdysone-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dihydrokalafungin_dihydroquinone_form"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-epiecdysone-to-h2o"
+      },
+      "note": "Shares Dihydrokalafungin dihydroquinone form with 3-Epiecdysone to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:81706"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dihydrokalafungin_dihydroquinone_form_fmnh2-to-cytosine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dihydrokalafungin_dihydroquinone_form"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fmnh2-to-cytosine"
+      },
+      "note": "Shares Dihydrokalafungin dihydroquinone form with FMNH2 to cytosine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:81706"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dihydrokalafungin_dihydroquinone_form_fmnh2-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dihydrokalafungin_dihydroquinone_form"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fmnh2-to-o2"
+      },
+      "note": "Shares Dihydrokalafungin dihydroquinone form with FMNH2 to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:81706"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dhk_oh_fmnh2-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dhk_oh"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fmnh2-to-o2"
+      },
+      "note": "Shares DHK-OH with FMNH2 to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:81704"
           }
         ]
       }

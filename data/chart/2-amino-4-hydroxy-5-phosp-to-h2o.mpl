@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-amino-4-hydroxy-5-phosp-to-h2o "2-amino-4-hydroxy-5-phosp… to H2O" {
-  spacing 200
+  spacing 284
 
   spine at 0,0 {
     2_amino_4_hydroxy_5_phosphonopentanoate
@@ -18,49 +18,133 @@ pathway 2-amino-4-hydroxy-5-phosp-to-h2o "2-amino-4-hydroxy-5-phosp… to H2O" {
 
   branch from h side left {
     h
-    <-> . +l_alanine +indol_3_yl_acetate +h2o
-    n_indole_3_acetyl_l_alanine
+    <-> ec_2_3_1_298 [2.3.1.298] +sphing_4_enine +30_hydroxytriacontanoyl_coa +n_hydroxytriacontanoyl_sphingosine
+    coa
   }
 
   branch from h side right {
     h
-    <-> . +l_leucine +indol_3_yl_acetate +h2o
-    n_indole_3_acetyl_l_leucine
+    <-> ec_2_3_1_298 [2.3.1.298] +coa +n_30_hydroxytriacontanoyl_6r_6_hydroxysphingosin +6_hydroxysphingosine
+    30_hydroxytriacontanoyl_coa
   }
 
   branch from adp side left {
     adp
-    <-> ec_6_3_2_2 [6.3.2.2] +3_cyano_l_alanine +atp +l_glutamate +phosphate
-    glutamyl_cyanoalanine
+    <-> ec_2_4_1_245 [2.4.1.245] +alpha_d_glucose +adp_alpha_d_glucose +h
+    alpha_alpha_trehalose
   }
 
   branch from adp side right {
     adp
-    <-> ec_6_3_2_2 [6.3.2.2] +l_valine +atp +l_glutamate +phosphate
-    gamma_l_glutamyl_l_valine
+    <-> ec_2_7_1_157 [2.7.1.157] +n_acetyl_alpha_d_galactosamine_1_phosphate +h +atp
+    n_acetyl_beta_d_galactosamine
   }
 
   branch from phosphate side left {
     phosphate
-    <-> . +l_glyceraldehyde_3_phosphate +h2o +h
-    l_glyceraldehyde
+    <-> ec_2_4_1_320 [2.4.1.320] +alpha_d_mannose_1_phosphate +aldehydo_n_acetyl_d_glucosamine
+    d_manp_1_4_d_glcpnac
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_1_3_12 [3.1.3.12] +6_o_mycolyltrehalose_6_phosphate +h2o +h
-    alpha_alpha_trehalose_6_alpha_mycolate
+    <-> ec_3_1_3_58 [3.1.3.58] +beta_d_glucose_6_phosphate +h2o
+    beta_d_glucose
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_21 [3.2.1.21] +linamarin +2_hydroxy_2_methylpropanenitrile
-    glucose
+    <-> . +l_histidine +l_lysine +l_serine
+    seryl_lysyl_histidine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +betaine_aldehyde
-    betaine_aldehyde_hydrate
+    <-> . +l_lysine +l_serine +l_phenylalanine
+    seryl_phenylalanyl_lysine
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    1_2_di_9z_12z_15z_octadecatrienoyl_sn_glycero_3
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    2_3_bis_o_geranylgeranyl_sn_glycerol_1_phosphate
+  }
+
+  branch from l_arginine side left {
+    l_arginine
+    <-> . +l_threonine +l_isoleucine +h2o
+    threonyl_isoleucyl_arginine
+  }
+
+  branch from l_arginine side right {
+    l_arginine
+    <-> . +l_threonine +l_methionine +h2o
+    threonyl_methionyl_arginine
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_3_1_298 [2.3.1.298] +4r_hydroxysphinganine +30_hydroxytriacontanoyl_coa +coa
+    n_30_hydroxytriacontanoyl_phytosphingosine
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_3_1_298 [2.3.1.298] +coa +n_30_hydroxytriacontanoyl_sphinganine +30_hydroxytriacontanoyl_coa
+    sphinganine
+  }
+
+  branch from adp side left {
+    adp
+    <-> ec_3_6_3_1 [3.6.3.1] +h +phosphate +atp +h2o
+    cdp_2_3_bis_o_geranylgeranyl_sn_glycerol
+  }
+
+  branch from adp side right {
+    adp
+    <-> ec_3_6_3_1 [3.6.3.1] +h +phosphate +atp +h2o
+    2_3_bis_o_geranylgeranyl_sn_glycero_1_phospho_1
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> ec_2_5_1_56 [2.5.1.56] +n_acetyl_d_mannosamine +phosphoenolpyruvate +h2o
+    n_acetyl_alpha_neuraminate
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_2_4_1_64 [2.4.1.64] +beta_d_glucose +alpha_alpha_trehalose
+    beta_d_glucose_1_phosphate
+  }
+
+  branch from l_valine side left {
+    l_valine
+    <-> . +l_methionine +l_tryptophan +h2o
+    tryptophanyl_methionyl_valine
+  }
+
+  branch from l_valine side right {
+    l_valine
+    <-> . +l_proline +l_tryptophan +h2o
+    tryptophanyl_prolyl_valine
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +l_histidine +l_serine +l_tryptophan
+    seryl_tryptophanyl_histidine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +l_asparagine +l_threonine +l_tyrosine
+    threonyl_asparaginyl_tyrosine
   }
 }

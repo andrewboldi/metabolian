@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway inosine-to-h2o "inosine to H2O" {
-  spacing 242
+  spacing 206
 
   spine at 0,0 {
     inosine
@@ -18,43 +18,7 @@ pathway inosine-to-h2o "inosine to H2O" {
 
   branch from beta_d_ribopyranose side left {
     beta_d_ribopyranose
-    <-> ec_2_7_1_15 [2.7.1.15] +adp +h +atp
-    alpha_d_ribofuranose_5_phosphate
-  }
-
-  branch from beta_d_ribopyranose side right {
-    beta_d_ribopyranose
-    <-> . +cis_zeatin +h2o
-    9_ribosyl_cis_zeatin
-  }
-
-  branch from guanine side left {
-    guanine
-    <-> . +h2o +beta_d_ribopyranose
-    guanosine
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    glycine
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    gliclazide
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_methionine +l_glutamate
-    glutamyl_methionine
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_lysine +l_threonine +l_glutamate
-    glutamyl_threonyl_lysine
+    <-> .
+    d_ribopyranose
   }
 }

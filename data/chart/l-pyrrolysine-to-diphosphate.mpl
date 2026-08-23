@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-pyrrolysine-to-diphosphate "L-pyrrolysine to diphosphate" {
-  spacing 234
+  spacing 264
 
   spine at 0,0 {
     l_pyrrolysine
@@ -18,57 +18,16 @@ pathway l-pyrrolysine-to-diphosphate "L-pyrrolysine to diphosphate" {
     3_l_pyrrolysyl_adenylyl_zwitterionic_group
   }
 
-  branch from n6_3r_3_methyl_d_ornithyl_l_lysine side left {
-    n6_3r_3_methyl_d_ornithyl_l_lysine
-    <-> ec_6_3_2_59 [6.3.2.59] +l_lysinium +atp +adp +pi +hplus
-    3r_3_methyl_d_ornithine
-  }
 
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_144 [1.1.1.144] +nadh +4r_perillyl_aldehyde +h
-    r_perillyl_alcohol
-  }
 
-  branch from nad side left {
-    nad
-    <-> . +nitrite +4_nitrophenol +nadh
-    2_4_dinitrophenol
-  }
 
-  branch from h2o side right {
-    h2o
-    <-> . +oleandomycin +glucose
-    glucosyl_oleandomycin
-  }
 
-  branch from h2o side left {
-    h2o
-    <-> . +diphosphate +intermedeol
-    2e_6e_farnesyl_diphosphate
-  }
 
-  branch from nh3 side right {
-    nh3
-    <-> . +cyclopentylammonium +nadp +h2o +nadph +hplus
-    cyclopentanone
-  }
 
-  branch from nh3 side left {
-    nh3
-    <-> . +3_methylcyclopentanaminium +nadp +h2o +nadph +hplus
-    3_methylcyclopentanone
-  }
 
-  branch from ppi side right {
-    ppi
-    <-> . +r_2_hydroxy_3_methylbutyrate +l_phenylalanine +sam +atp +amp +sah +hplus
-    beauvericin
-  }
 
-  branch from ppi side left {
-    ppi
-    <-> . +6_hydroxydeoxybrevianamide_e +dmapp
-    notoamide_s
-  }
+
+
+
+
 }

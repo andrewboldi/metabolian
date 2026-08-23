@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway h-to-7-25-dihydroxy-4-cholest "H to 7α,25-dihydroxy-4-cholest…" {
-  spacing 292
+  spacing 268
 
   spine at 0,0 {
     h
@@ -14,29 +14,5 @@ pathway h-to-7-25-dihydroxy-4-cholest "H to 7α,25-dihydroxy-4-cholest…" {
     7_25_dihydroxycholesterol
     <-> . +nad -nadh -hplus
     7_25_dihydroxy_4_cholesten_3_one
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +tirandamycin_f +h2o +h +o2 +nadph
-    tirandamycin_c
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +h2o +tirandamycin_c +o2 +nadph
-    tirandamycin_f
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_1_3_73 [3.1.3.73] +coalpha_alpha_5_hydroxybenzimidazolyl_cobeta_ade +phosphate
-    coalpha_alpha_5_hydroxybenzimidazolyl_cobeta_ade
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +6_dehydro_scb3 +phosphate
-    3s_4r_4_6_methyloctanoyl_5_oxooxolan_3_yl_methy
   }
 }

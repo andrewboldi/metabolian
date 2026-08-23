@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n4-neu5ac-2-6-d-g-to-adenosine-3-5-bismonoph "N4-{[α-Neu5Ac-(2→6)-β-D-G… to adenosine 3',5'-bismonoph…" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d
@@ -14,17 +14,5 @@ pathway n4-neu5ac-2-6-d-g-to-adenosine-3-5-bismonoph "N4-{[α-Neu5Ac-(2→6)-β-
     n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_n
     <-> . +3_phosphonato_5_adenylyl_sulfate -adenosine_3_5_bismonophosphate -hplus
     n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_n
-  }
-
-  branch from adenosine_3_5_bismonophosphate side left {
-    adenosine_3_5_bismonophosphate
-    <-> . +malonyl-coa +h2o +hplus
-    s_malonyl_4_phosphopantetheine
-  }
-
-  branch from adenosine_3_5_bismonophosphate side right {
-    adenosine_3_5_bismonophosphate
-    <-> . +4_8_dimethylnonanoyl_coa +h2o +hplus
-    s_4_8_dimethylnonanoyl_4_phosphopantetheine
   }
 }

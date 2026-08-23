@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway hexanoyl-coa-to-olivetol "hexanoyl-CoA to olivetol" {
-  spacing 158
+  spacing 152
 
   spine at 0,0 {
     hexanoyl_coa
@@ -14,11 +14,5 @@ pathway hexanoyl-coa-to-olivetol "hexanoyl-CoA to olivetol" {
     3_5_7_trioxododecanoyl_coa
     <-> . -co2 -coa
     olivetol
-  }
-
-  branch from 3_5_7_trioxododecanoyl_coa side left {
-    3_5_7_trioxododecanoyl_coa
-    <-> ec_4_4_1_26 [4.4.1.26] +coa +hplus
-    olivetolate
   }
 }

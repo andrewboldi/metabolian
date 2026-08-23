@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cis-trans-4-hydroxymucona-to-h2o "cis,trans-4-hydroxymucona… to H2O" {
-  spacing 254
+  spacing 188
 
   spine at 0,0 {
     cis_trans_4_hydroxymuconate_semialdehyde
@@ -14,71 +14,5 @@ pathway cis-trans-4-hydroxymucona-to-h2o "cis,trans-4-hydroxymucona… to H2O" {
     nadp
     <-> . +nitrite +benzene_1_2_4_triol -h2o
     4_nitrocatechol
-  }
-
-  branch from hydroquinone side left {
-    hydroquinone
-    <-> ec_3_2_1_21 [3.2.1.21] +glucose +h2o
-    hydroquinone_o_beta_d_glucopyranoside
-  }
-
-  branch from hydroquinone side right {
-    hydroquinone
-    <-> ec_3_2_1_86 [3.2.1.86] +d_glucose_6_phosphate +h2o
-    arbutin_6_phosphate
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +gibberellin_a4 +nadph +nadp +h2o
-    16alpha_17_epoxy_gibberellin_a4
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +nadh +gibberellin_a4 +16alpha_17_epoxy_gibberellin_a4 +h2o
-    nad
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +2e_6e_farnesal +h +nadph
-    drimenol
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +2e_6e_farnesal +h +nadph
-    3r_6e_nerolidol
-  }
-
-  branch from benzene_1_2_4_triol side left {
-    benzene_1_2_4_triol
-    <-> ec_1_6_5_7 [1.6.5.7] +hydroxybenzoquinone +h +nad
-    nadh
-  }
-
-  branch from benzene_1_2_4_triol side right {
-    benzene_1_2_4_triol
-    <-> . +h +o2
-    2_4_6_trioxohexanoate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_histidine +l_asparagine +l_valine
-    valyl_histidyl_asparagine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_leucine +l_valine +l_phenylalanine
-    valyl_leucyl_phenylalanine
-  }
-
-  branch from 4_nitrocatechol side left {
-    4_nitrocatechol
-    <-> . +nitrite +nadp +h2o +o2 +nadph
-    hydroxybenzoquinone
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-fmn-null "NADH to FMN" {
-  spacing 212
+  spacing 152
 
   spine at 0,0 {
     nadh
@@ -14,65 +14,5 @@ pathway nadh-to-fmn-null "NADH to FMN" {
     4_4_dimethyl_14a_formyl_5alpha_cholesta_8_24_die
     <-> . +fmnh2 +o2 -formate -fmn -h2o -hplus
     ffmas
-  }
-
-  branch from formate side left {
-    formate
-    <-> . +2_4_6_trioxohexanoate +h2o +h
-    acetylpyruvate
-  }
-
-  branch from formate side right {
-    formate
-    <-> ec_3_7_1_9 [3.7.1.9] +cis_2_oxohex_4_enoic_acid +h +h2o
-    2_hydroxy_5_methyl_cis_cis_muconic_semialdehyde
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_13_11_30 [1.13.11.30] +nadh +stizolobinic_acid
-    5_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_13_11_30 [1.13.11.30] +nadh +stizolobinic_acid
-    5_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +2_oxo_3_phosphooxy_propyl_7_methyl_3_oxooctanoat +phosphate
-    3_hydroxy_2_oxopropyl_7_methyl_3_oxooctanoate
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_1_3_73 [3.1.3.73] +phenyl_cobeta_adenosylcobamide_5_phosphate +phosphate
-    phenyl_cobeta_adenosylcobamide
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +6_oxo_2_hydroxy_7_4_chlorophenyl_3_8_8_trichloro +h
-    1_1_dichloro_2_4_chloro_2_3_dihydroxyphenyl_2_4
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +h +1_1_dichloro_2_4_chloro_2_3_dihydroxyphenyl_2_4
-    6_oxo_2_hydroxy_7_4_chlorophenyl_3_8_8_trichloro
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> . +ent_kaur_15_en_19_al_17_oate +o2 +nadp +h2o
-    ent_kaur_15_en_17_19_dioate
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> . +elymoclavine_aldehyde +nadp +h2o +h +o2
-    elymoclavine
   }
 }

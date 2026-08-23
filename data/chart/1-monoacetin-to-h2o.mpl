@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-monoacetin-to-h2o "1-Monoacetin to H2O" {
-  spacing 326
+  spacing 340
 
   spine at 0,0 {
     1_monoacetin
@@ -18,67 +18,133 @@ pathway 1-monoacetin-to-h2o "1-Monoacetin to H2O" {
 
   branch from h side left {
     h
-    <-> ec_1_1_1_184 [1.1.1.184] +4_benzoylpyridine +nadph +nadp
-    phenyl_pyridin_4_yl_methanol
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +viomycin +phosphate +viomycin +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_1 [1.1.1.1] +s_nitrosoglutathione +nadh +nad
-    sulfinamide_glutathione
+    <-> ec_3_6_3_47 [3.6.3.47] +adp +phosphate +atp +h2o
+    eicosanoyl_coa
   }
 
   branch from acetate side left {
     acetate
-    <-> ec_3_1_1_41 [3.1.1.41] +deacetyl_7_aminocephalosporanic_acid +h +h2o
-    7_aminocephalosporanic_acid
+    <-> ec_3_5_1_108 [3.5.1.108] +udp_3_o_3_hydroxytetradecanoyl_n_acetylglucosami +h2o
+    udp_3_o_3r_3_hydroxytetradecanoyl_alpha_d_glucos
   }
 
   branch from acetate side right {
     acetate
-    <-> ec_3_1_1_7 [3.1.1.7] +thiocholine +h +h2o
-    acetylthiocholine
+    <-> . +n_demethyllincomycin_mercapturate +h2o
+    n_demethyllincomycin_s_cysteine_conjugate
   }
 
   branch from glycerol side left {
     glycerol
-    <-> ec_3_2_1_22 [3.2.1.22] +3_beta_d_galactosyl_sn_glycerol +h2o
-    d_galactopyranose
+    <-> . +alpha_d_glucose +sn_glycerol_3_phosphate
+    d_glucose_6_phosphate
   }
 
   branch from glycerol side right {
     glycerol
-    <-> ec_3_2_1_22 [3.2.1.22] +3_beta_d_galactosyl_sn_glycerol +h2o
-    beta_d_galactose
-  }
-
-  branch from sn_glycerol_1_phosphate side left {
-    sn_glycerol_1_phosphate
-    <-> ec_2_7_7_39 [2.7.7.39] +ctp +h +diphosphate
-    2s_cdp_glycerol
-  }
-
-  branch from phosphate side right {
-    phosphate
-    <-> ec_3_1_3_2 [3.1.3.2] +2_naphthyl_dihydrogen_phosphate +h2o +h
-    2_naphthol
+    <-> . +nadh +h +l_glyceraldehyde
+    nad
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_3_1_3_48 [3.1.3.48] +6_8_difluoro_4_methylumbelliferyl_phosphate +h2o +h
-    6_8_difluoro_7_hydroxy_4_methylcoumarin
+    <-> ec_3_6_3_47 [3.6.3.47] +h +adp +atp +h2o
+    hexacosanoyl_coa
   }
 
-  branch from h2o side right {
-    h2o
-    <-> ec_3_4_11_19 [3.4.11.19] +d_alanine +benzylaminium +h
-    d_alanine_benzylamide
+  branch from phosphate side right {
+    phosphate
+    <-> ec_3_6_3_47 [3.6.3.47] +h +adp +atp +h2o
+    tetradecanoyl_coa
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_4_11_19 [3.4.11.19] +d_alanine +4_nitroaniline
-    d_alanine_p_nitroanilide
+    <-> ec_3_2_1_147 [3.2.1.147] +alpha_d_glucose +2_butenyl_thiohydroximate_o_sulfate
+    gluconapin
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_2_1_147 [3.2.1.147] +alpha_d_glucose +z_n_sulfonatooxy_prop_2_enimidothioate +h
+    sinigrin
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +16_17_dihydro_16alpha_17_dihydroxy_gibberellin_a
+    16alpha_17_epoxy_gibberellin_a4
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +16_17_dihydro_16alpha_17_dihydroxy_gibberellin_a
+    16alpha_17_epoxy_gibberellin_a12
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_7_1_7 [2.7.1.7] +aldehydo_d_mannose +atp +adp
+    alpha_d_mannose_6_phosphate
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_7_1_60 [2.7.1.60] +n_acetyl_d_mannosamine_6_phosphate +adp +atp
+    n_acetyl_d_mannosamine
+  }
+
+  branch from acetate side left {
+    acetate
+    <-> . +udp_3_acetamido_2_amino_2_3_dideoxy_alpha_d_gluc +h2o
+    udp_2_3_diacetamido_2_3_dideoxy_alpha_d_glucuron
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> ec_3_5_1_108 [3.5.1.108] +udp_3_o_3r_3_hydroxy_13_methyltetradecanoyl_alph +h2o
+    udp_3_o_3r_3_hydroxy_13_methyltetradecanoyl_n_ac
+  }
+
+  branch from glycerol side left {
+    glycerol
+    <-> . +2_o_p_coumaroyl_glyceride +coa
+    4_coumaroyl_coa
+  }
+
+  branch from glycerol side right {
+    glycerol
+    <-> . +2_o_caffeoylglycerol +h +coa
+    caffeoyl_coa
+  }
+
+  branch from diphosphate side left {
+    diphosphate
+    <-> . +2z_6e_10e_geranylgeranyl_diphosphate +h +ipp
+    undecaprenyl_diphosphate
+  }
+
+  branch from diphosphate side right {
+    diphosphate
+    <-> ec_2_7_7_75 [2.7.7.75] +adenylated_molybdopterin +h +atp
+    molybdopterin
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> ec_2_4_1_279 [2.4.1.279] +beta_d_glucose_1_phosphate +aldehydo_d_glucose
+    nigerose
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> . +citrate +n_6_acetyl_n_6_hydroxy_l_lysine +atp +h2o +h +n_citryl_n_acetyl_n_hydroxylysine
+    adp
   }
 }

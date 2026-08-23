@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "cellobiose-to-l-histidine",
   "name": "cellobiose to L-histidine",
-  "category": "amino-acid-metabolism",
+  "category": "other",
   "summary": "A 3-step route from cellobiose to L-histidine residue, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -131,23 +131,78 @@
       }
     },
     {
-      "id": "2_amino_2_deoxy_d_gluconic_acid",
-      "name": "2-amino-2-deoxy-D-gluconic acid",
-      "short": "2-amino-2-deoxy-D-g…",
-      "formula": "C6H13NO6",
+      "id": "maltose",
+      "name": "maltose",
+      "formula": "C12H22O11",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58269"
+        "chebi": "CHEBI:17306"
       }
     },
     {
-      "id": "d_glucosaminic_acid_6_phosphate",
-      "name": "D-glucosaminic acid 6-phosphate",
-      "short": "D-glucosaminic…",
-      "formula": "C6H12NO9P",
+      "id": "maltose_6_phosphate",
+      "name": "α-maltose 6'-phosphate",
+      "short": "α-maltose 6'-P",
+      "formula": "C12H21O14P",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:75705"
+        "chebi": "CHEBI:57478"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "n_adp_d_ribosyl_l_histidyl_2",
+      "name": "Nτ-(ADP-D-ribosyl)-L-histidyl(2−)",
+      "short": "Nτ-(ADP-D-ribosyl)-…",
+      "formula": "C21H26N8O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:191398"
+      }
+    },
+    {
+      "id": "nicotinamide",
+      "name": "nicotinamide",
+      "formula": "C6H6N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17154"
+      }
+    },
+    {
+      "id": "utp",
+      "name": "UTP",
+      "formula": "C9H11N2O15P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:46398"
+      }
+    },
+    {
+      "id": "n_uridylyl_l_histidine_1",
+      "name": "Nτ-(uridylyl)-L-histidine(1−)",
+      "short": "Nτ-(uridylyl)-L-his…",
+      "formula": "C15H17N5O9P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:233474"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
       }
     }
   ],
@@ -171,7 +226,10 @@
       "name": "phosphohistidine phosphatase",
       "ec": [
         "3.9.1.3"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q9NRX4"
+      }
     },
     {
       "id": "ec_2_7_1_202",
@@ -181,10 +239,10 @@
       ]
     },
     {
-      "id": "ec_2_7_1_203",
-      "name": "protein-N(pi)-phosphohistidine--D-glucosaminate phosphotransferase",
+      "id": "ec_2_7_1_208",
+      "name": "protein-N(pi)-phosphohistidine--maltose phosphotransferase",
       "ec": [
-        "2.7.1.203"
+        "2.7.1.208"
       ]
     }
   ],
@@ -375,12 +433,12 @@
     },
     {
       "id": "r5",
-      "name": "protein-N(pi)-phosphohistidine--D-glucosaminate phosphotransferase",
-      "equation": "2-amino-2-deoxy-D-gluconate(out) + N(pros)-phospho-L-histidyl-[protein] = 2-amino-2-deoxy-D-gluconate 6-phosphate(in) + L-histidyl-[protein]",
-      "ec": "2.7.1.203",
+      "name": "protein-N(pi)-phosphohistidine--maltose phosphotransferase",
+      "equation": "D-maltose(out) + N(pros)-phospho-L-histidyl-[protein] = alpha-maltose 6'-phosphate(in) + L-histidyl-[protein]",
+      "ec": "2.7.1.208",
       "substrates": [
         {
-          "metabolite": "2_amino_2_deoxy_d_gluconic_acid",
+          "metabolite": "maltose",
           "stoichiometry": 1
         },
         {
@@ -390,7 +448,7 @@
       ],
       "products": [
         {
-          "metabolite": "d_glucosaminic_acid_6_phosphate",
+          "metabolite": "maltose_6_phosphate",
           "stoichiometry": 1
         },
         {
@@ -400,20 +458,368 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_7_1_203"
+          "enzyme": "ec_2_7_1_208"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:49256"
+        "rhea": "RHEA:49300"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:49256"
+            "id": "RHEA:49300"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "L-histidyl-[protein] + NAD(+) = N(tele)-(ADP-D-ribosyl)-L-histidyl-[protein] + nicotina...",
+      "equation": "L-histidyl-[protein] + NAD(+) = N(tele)-(ADP-D-ribosyl)-L-histidyl-[protein] + nicotinamide + H(+)",
+      "substrates": [
+        {
+          "metabolite": "l_histidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_adp_d_ribosyl_l_histidyl_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nicotinamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:72071"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:72071"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "L-histidyl-[protein] + UTP = N(tele)-(5'-uridylyl)-L-histidyl-[protein] + diphosphate",
+      "equation": "L-histidyl-[protein] + UTP = N(tele)-(5'-uridylyl)-L-histidyl-[protein] + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "l_histidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "utp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_uridylyl_l_histidine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:83891"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:83891"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_cellobiose_cellobiose-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cellobiose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cellobiose-to-hydrogen-donor"
+      },
+      "note": "Shares cellobiose with cellobiose to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17057"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cellobiose_cellobiose-to-mycothione",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cellobiose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cellobiose-to-mycothione"
+      },
+      "note": "Shares cellobiose with cellobiose to mycothione.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17057"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cellobiose_d-tagatofuranose-to-l-serine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cellobiose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-tagatofuranose-to-l-serine"
+      },
+      "note": "Shares cellobiose with D-tagatofuranose… to L-serine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17057"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cellobiose_phosphate-monoester-to-6-phospho-2-dehydro-d-glu",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cellobiose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phosphate-monoester-to-6-phospho-2-dehydro-d-glu"
+      },
+      "note": "Shares cellobiose with phosphate monoester… to 6-phospho-2-dehydro-D-glu….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17057"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_phosphonato_d_glucosyl_1_4_d_glucose_cellobiose-to-mycothione",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_phosphonato_d_glucosyl_1_4_d_glucose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cellobiose-to-mycothione"
+      },
+      "note": "Shares 6-phosphonato-β-D-glucosyl-(1→4)-D-glucose with cellobiose to mycothione.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58312"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_maltose_cellobiose-to-mycothione",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "maltose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cellobiose-to-mycothione"
+      },
+      "note": "Shares maltose with cellobiose to mycothione.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17306"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_maltose_d-tagatofuranose-to-l-serine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "maltose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-tagatofuranose-to-l-serine"
+      },
+      "note": "Shares maltose with D-tagatofuranose… to L-serine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17306"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_maltose_laminarabiose-to-d-glucose-6-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "maltose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "laminarabiose-to-d-glucose-6-phosphate"
+      },
+      "note": "Shares maltose with laminarabiose to β-D-glucose 6-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17306"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_maltose_maltose-6-phosphate-to-d-glucopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "maltose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "maltose-6-phosphate-to-d-glucopyranose"
+      },
+      "note": "Shares maltose with α-maltose 6'-phosphate to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17306"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_maltose_panose-to-1-o-acetylmaltose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "maltose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "panose-to-1-o-acetylmaltose"
+      },
+      "note": "Shares maltose with panose to 1-O-acetylmaltose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17306"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_maltose_6_phosphate_maltose-6-phosphate-to-d-glucopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "maltose_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "maltose-6-phosphate-to-d-glucopyranose"
+      },
+      "note": "Shares α-maltose 6'-phosphate with α-maltose 6'-phosphate to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57478"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_maltose_6_phosphate_maltose-6-phosphate-to-hapalindole-h",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "maltose_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "maltose-6-phosphate-to-hapalindole-h"
+      },
+      "note": "Shares α-maltose 6'-phosphate with α-maltose 6'-phosphate to hapalindole H.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57478"
           }
         ]
       }

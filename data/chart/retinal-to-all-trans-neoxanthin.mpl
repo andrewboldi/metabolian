@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway retinal-to-all-trans-neoxanthin "retinal to all-trans-neoxanthin" {
-  spacing 240
+  spacing 258
 
   spine at 0,0 {
     retinal
@@ -20,28 +20,16 @@ pathway retinal-to-all-trans-neoxanthin "retinal to all-trans-neoxanthin" {
     all_trans_neoxanthin
   }
 
-  branch from cryptoxanthin side left {
-    cryptoxanthin
-    <-> . +o2 +3r_hydroxy_ionone
-    10_apo_carotenal
-  }
-
-  branch from cryptoxanthin side right {
-    cryptoxanthin
-    <-> ec_1_14_13_129 [1.14.13.129] +nadh +all_trans_beta_carotene +h +o2 +h2o
-    nad
-  }
-
   branch from o2 side left {
     o2
-    <-> ec_1_14_14_91 [1.14.14.91] +2_nitro_4_hydroxycinnamate +nadp +h2o +h +nadph
-    2_nitrocinnamate
+    <-> . +o4_o5_dimethylthujaplicatin +h +nadph +nadp +h2o
+    dihydroanhydropodorhizol
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_3_3_4 [1.3.3.4] +mesoporphyrinogen_ix +h2o2
-    mesoporphyrin_ix
+    <-> . +previridicatumtoxin +nadph +nadp +h2o
+    viridicatumtoxin
   }
 
   branch from zeaxanthin side left {
@@ -52,8 +40,8 @@ pathway retinal-to-all-trans-neoxanthin "retinal to all-trans-neoxanthin" {
 
   branch from zeaxanthin side right {
     zeaxanthin
-    <-> ec_1_23_5_1 [1.23.5.1] +all_trans_violaxanthin +ascorbate +h2o
-    l_dehydroascorbate
+    <-> ec_1_13_11_65 [1.13.11.65] +o2 +3r_all_trans_3_hydroxyretinal
+    3r_11_cis_3_hydroxyretinal
   }
 
   branch from all_trans_violaxanthin side left {
@@ -66,5 +54,35 @@ pathway retinal-to-all-trans-neoxanthin "retinal to all-trans-neoxanthin" {
     all_trans_violaxanthin
     <-> .
     capsanthin_5_6_epoxide
+  }
+
+  branch from retinal side left {
+    retinal
+    <-> . +o2 +h2o +h2o2 +hplus
+    retinoate
+  }
+
+  branch from retinal side right {
+    retinal
+    <-> ec_1_17_3_2 [1.17.3.2] +nadh +all_trans_retinoate +h +h2o
+    nad
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_14_13_190 [1.14.13.190] +abietatriene +h +nadph +nadp +h2o
+    ferruginol
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_10_3_2 [1.10.3.2] +gossypol +h2o
+    hemigossypol
+  }
+
+  branch from zeaxanthin side left {
+    zeaxanthin
+    <-> . +o2 +hydroxy_cyclocitral
+    3r_3_hydroxy_8_apo_carotenal
   }
 }

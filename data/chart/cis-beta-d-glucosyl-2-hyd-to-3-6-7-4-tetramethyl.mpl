@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cis-beta-d-glucosyl-2-hyd-to-3-6-7-4-tetramethyl "cis-beta-D-glucosyl-2-hyd… to 3,6,7,4'-tetramethylquerc…" {
-  spacing 224
+  spacing 272
 
   spine at 0,0 {
     cis_beta_d_glucosyl_2_hydroxycinnamate
@@ -18,37 +18,85 @@ pathway cis-beta-d-glucosyl-2-hyd-to-3-6-7-4-tetramethyl "cis-beta-D-glucosyl-2-
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_245 [2.4.1.245] +udp +alpha_alpha_trehalose +h
-    glucose
+    <-> . +udp +tuberonic_acid_glucoside
+    12_hydroxyjasmonate
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_158 [2.4.1.158] +udp +13_sophorosyloxydocosanoic_acid
-    13_beta_d_glucosyloxy_docosanoate
+    <-> . +udp +benzoyl_d_glucoside
+    benzoate
   }
 
   branch from udp side left {
     udp
-    <-> ec_2_4_1_226 [2.4.1.226] +beta_d_glucuronosyl_1_3_n_acetyl_beta_d_galactos +n_acetyl_beta_d_galactosaminyl_1_4_beta_d_glucur
+    <-> ec_2_4_1_17 [2.4.1.17] +4e_15e_bilirubin_ixalpha_c8_beta_d_glucuronosid +4z_15z_bilirubin_ixalpha
     udp_alpha_d_glucuronate
   }
 
   branch from udp side right {
     udp
-    <-> ec_2_4_1_17 [2.4.1.17] +4_methylnitrosamino_1_3_pyridyl_1_butanol_glucur +udp_alpha_d_glucuronate
-    4_methylnitrosamino_1_3_pyridyl_1_butanol
+    <-> ec_2_4_1_17 [2.4.1.17] +curcumin_beta_d_glucuronide +udp_alpha_d_glucuronate
+    curcumin
   }
 
   branch from h side left {
     h
-    <-> ec_1_1_1_213 [1.1.1.213] +3_oxosteroid +nadph +3alpha_hydroxysteroid
-    nadp
+    <-> ec_1_1_1_2 [1.1.1.2] +16_ketoestrone +nadph +nadp
+    16_hydroxyestrone
   }
 
   branch from h side right {
     h
-    <-> . +nadh +d_galactopyranuronic_acid +nad
-    l_galactonic_acid
+    <-> ec_1_1_1_1 [1.1.1.1] +butan_2_one +nadph +nadp
+    2r_butan_2_ol
+  }
+
+  branch from cis_beta_d_glucosyl_2_hydroxycinnamate side left {
+    cis_beta_d_glucosyl_2_hydroxycinnamate
+    <-> ec_3_2_1_21 [3.2.1.21] +h2o +glucose
+    cis_2_coumarate
+  }
+
+  branch from udp side right {
+    udp
+    <-> ec_2_4_1_17 [2.4.1.17] +8_hydroxyquinoline_glucuronide +udp_alpha_d_glucuronate
+    quinolin_8_ol
+  }
+
+  branch from udp side left {
+    udp
+    <-> ec_2_7_1_1 [2.7.1.1] +utp +glucose +h
+    d_glucose_6_phosphate
+  }
+
+  branch from h side right {
+    h
+    <-> ec_1_2_1_19 [1.2.1.19] +undecanoate +nadph +nadp +h2o
+    undecanal
+  }
+
+  branch from h side left {
+    h
+    <-> ec_1_1_1_179 [1.1.1.179] +d_ribose +nadp +nadph
+    d_ribono_1_4_lactone
+  }
+
+  branch from udp_alpha_d_glucose side right {
+    udp_alpha_d_glucose
+    <-> . +udp +beta_d_glc_1_4_alpha_d_glc_pp_und +h
+    alpha_d_glc_pp_und
+  }
+
+  branch from udp_alpha_d_glucose side left {
+    udp_alpha_d_glucose
+    <-> ec_2_4_1_35 [2.4.1.35] +udp +h +2_naphthyl_d_glucoside
+    2_naphthol
+  }
+
+  branch from casticin side right {
+    casticin
+    <-> . +s_adenosyl_l_homocysteine +h +oxyayanin_b
+    s_adenosyl_l_methionine
   }
 }

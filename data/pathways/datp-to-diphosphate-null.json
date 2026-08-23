@@ -1,0 +1,559 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "datp-to-diphosphate-null",
+  "name": "dATP to diphosphate",
+  "category": "other",
+  "summary": "A 4-step route from dATP to diphosphate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR97321"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "datp",
+      "name": "dATP",
+      "formula": "C10H12N5O12P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM286"
+      }
+    },
+    {
+      "id": "dgmp",
+      "name": "dGMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM736654"
+      }
+    },
+    {
+      "id": "dgdp",
+      "name": "dGDP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM436"
+      }
+    },
+    {
+      "id": "dadp",
+      "name": "dADP",
+      "formula": "C10H12N5O9P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM735047"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "dgtp",
+      "name": "dGTP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM344"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "phytyl_phosphate",
+      "name": "phytyl phosphate",
+      "formula": "C20H39O4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:75483"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "phytyl_diphosphate",
+      "name": "phytyl diphosphate",
+      "formula": "C20H39O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:75434"
+      }
+    },
+    {
+      "id": "chlorophyllide_b2",
+      "name": "chlorophyllide b2",
+      "formula": "C35H28MgN4O6",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1136031"
+      }
+    },
+    {
+      "id": "chlorophyll_b2",
+      "name": "chlorophyll b2",
+      "formula": "C55H68MgN4O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1136034"
+      }
+    },
+    {
+      "id": "diphosphate",
+      "name": "diphosphate",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM11"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_1_23",
+      "name": "NAD(+) kinase",
+      "ec": [
+        "2.7.1.23"
+      ],
+      "xrefs": {
+        "uniprot": "Q4G0N4"
+      }
+    },
+    {
+      "id": "ec_2_5_1_62",
+      "name": "chlorophyll synthase",
+      "ec": [
+        "2.5.1.62"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR97321",
+      "substrates": [
+        {
+          "metabolite": "datp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dgmp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dgdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR97321"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR97321"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "NAD(+) kinase",
+      "ec": "2.7.1.23",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dgdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dgtp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_23"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR101885"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR101885"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR182659",
+      "substrates": [
+        {
+          "metabolite": "phytyl_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dgtp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phytyl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR182659"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR182659"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "chlorophyll synthase",
+      "ec": "2.5.1.62",
+      "substrates": [
+        {
+          "metabolite": "chlorophyllide_b2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "phytyl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "chlorophyll_b2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_62"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR193017"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR193017"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_dgmp_1-monoacetin-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dgmp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-monoacetin-to-h2o-null"
+      },
+      "note": "Shares dGMP with 1-Monoacetin to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM736654"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dgmp_8-hydroxy-2-deoxyguanosi-to-2-deoxyguanosine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dgmp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "8-hydroxy-2-deoxyguanosi-to-2-deoxyguanosine"
+      },
+      "note": "Shares dGMP with 8-hydroxy-2'-deoxyguanosi… to 2'-deoxyguanosine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM736654"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dgmp_8-hydroxy-2-deoxyguanosi-to-2-deoxyguanosine-nul",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dgmp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "8-hydroxy-2-deoxyguanosi-to-2-deoxyguanosine-nul"
+      },
+      "note": "Shares dGMP with 8-hydroxy-2'-deoxyguanosi… to 2'-deoxyguanosine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM736654"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dgmp_datp-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dgmp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "datp-to-diphosphate"
+      },
+      "note": "Shares dGMP with dATP to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM736654"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dgmp_nadh-to-cdp-d-arabinitol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dgmp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-cdp-d-arabinitol"
+      },
+      "note": "Shares dGMP with NADH to CDP-D-arabinitol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM736654"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_chlorophyllide_b2_3-hydroxy-7-ethoxycoumarin-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "chlorophyllide_b2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxy-7-ethoxycoumarin-to-o2"
+      },
+      "note": "Shares chlorophyllide b2 with 3-Hydroxy-7-ethoxycoumarin to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1136031"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_chlorophyllide_b2_4-chlorophenyl-phosphate-to-l-erythro-3-methylma",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "chlorophyllide_b2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-chlorophenyl-phosphate-to-l-erythro-3-methylma"
+      },
+      "note": "Shares chlorophyllide b2 with 4-Chlorophenyl phosphate to L-erythro-3-Methylmalyl-C….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1136031"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_chlorophyllide_b2_datp-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "chlorophyllide_b2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "datp-to-diphosphate"
+      },
+      "note": "Shares chlorophyllide b2 with dATP to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1136031"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_chlorophyllide_b2_dtdp-4-amino-4-6-dideoxy-to-h-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "chlorophyllide_b2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-4-amino-4-6-dideoxy-to-h-null"
+      },
+      "note": "Shares chlorophyllide b2 with DTDP-4-amino-4,6-dideoxy-… to H.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1136031"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_chlorophyll_b2_datp-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "chlorophyll_b2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "datp-to-diphosphate"
+      },
+      "note": "Shares chlorophyll b2 with dATP to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1136034"
+          }
+        ]
+      }
+    }
+  ]
+}

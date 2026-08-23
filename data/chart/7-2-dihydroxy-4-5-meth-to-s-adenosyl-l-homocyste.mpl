@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 7-2-dihydroxy-4-5-meth-to-s-adenosyl-l-homocyste "7,2'-dihydroxy-4',5'-meth… to S-adenosyl-L-homocysteine" {
-  spacing 280
+  spacing 244
 
   spine at 0,0 {
     7_2_dihydroxy_4_5_methylenedioxyisoflav_3_ene
@@ -16,41 +16,5 @@ pathway 7-2-dihydroxy-4-5-meth-to-s-adenosyl-l-homocyste "7,2'-dihydroxy-4',5'-m
     6a_hydroxymaackiain
     <-> ec_2_1_1_270 [2.1.1.270] +sam -sah -hplus
     pisatin
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_3_1_80 [1.3.1.80] +primary_fluorescent_chlorophyll_catabolite +nadph
-    red_chlorophyll_catabolite
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +9r_10r_dihydroxyoctadecanoate +h +o2 +nadph +h2o
-    9_10_18_trihydroxyoctadecanoic_acid
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_isoleucine +l_arginine
-    isoleucyl_arginyl_isoleucine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_histidine +l_asparagine +l_isoleucine
-    isoleucyl_asparaginyl_histidine
-  }
-
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_363 [2.1.1.363] +fpp +sam +hplus
-    pre_sodorifen_diphosphate
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +guanosine_5_monophosphate_1 +sam
-    n7_methylguanosine_5_phosphate_zwitterion
   }
 }

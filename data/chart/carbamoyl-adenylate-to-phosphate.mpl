@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway carbamoyl-adenylate-to-phosphate "carbamoyl adenylate to phosphate" {
-  spacing 224
+  spacing 190
 
   spine at 0,0 {
     carbamoyl_adenylate
@@ -12,79 +12,13 @@ pathway carbamoyl-adenylate-to-phosphate "carbamoyl adenylate to phosphate" {
     h
     <-> ec_6_1_2_2 [6.1.2.2] +diphosphate +nebramycin_iv +amp +phosphate -atp -kanamycin_b -h2o
     carbamoyl_phosphate
-    <-> . +ansamitocinoside_p_3 -phosphate
-    4_o_carbamoyl_ansamitocinoside_p_3
+    <-> ec_2_1_3_3 [2.1.3.3] +l_canaline -phosphate
+    o_ureidohomoserine
   }
 
-  branch from h side left {
-    h
-    <-> . +d_alanine +l_alanyl_d_glutamyl_meso_2_6_diaminoheptanedioat +h2o
-    l_alanine_d_glutamate_meso_2_6_diaminoheptanedio
-  }
-
-  branch from h side right {
-    h
-    <-> . +udp +2_acetamido_4_d_alanylamino_2_4_6_trideoxy_d_man +h2o
-    udp_2_acetamido_4_d_alanylamino_2_4_6_trideoxy_a
-  }
-
-  branch from amp side left {
-    amp
-    <-> . +diphosphate +und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig +h +atp +nh4
-    und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig
-  }
-
-  branch from amp side right {
-    amp
-    <-> . +diphosphate +und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig +h +atp +nh4
-    n_acetylmuramoyl_l_alanyl_d_isoglutaminyl_n_beta
-  }
-
-  branch from carbamoyl_phosphate side left {
-    carbamoyl_phosphate
-    <-> . +ansamitocinoside_p3 +phosphate
-    4_carbamoyl_ansamitocinoside_p3
-  }
-
-  branch from carbamoyl_phosphate side right {
-    carbamoyl_phosphate
-    <-> . +l_ornithine +h +phosphate
-    l_citrulline
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +7r_11s_16s_7_hydroxy_ent_kauran_11_16_epoxy_19 +diphosphate +h
-    7r_11s_16s_7_hydroxy_ent_kauran_11_16_epoxy_19
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +3_o_phospho_chloramphenicol +h +adp
-    chloramphenicol
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +2_acetamido_4_d_alanylamino_2_4_6_trideoxy_d_man +h +phosphoenolpyruvate +phosphate
-    5_n_acetyl_7_n_d_alanyl_legionaminic_acid
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_1_17_99_11 [1.17.99.11] +1_hydroxy_3_oxo_steroid
-    3_oxo_delta1_steroid
-  }
-
-  branch from phosphate side left {
-    phosphate
-    <-> ec_2_4_2_1 [2.4.2.1] +7h_purine +alpha_d_ribose_1_phosphate
-    nebularine
-  }
-
-  branch from phosphate side right {
-    phosphate
-    <-> . +heptaprenylglyceryl_phosphate +h2o +h
-    heptaprenylglycerol
+  branch from carbamoyl_adenylate side left {
+    carbamoyl_adenylate
+    <-> . +l_cysteinate_group +amp +hplus
+    c_terminal_s_carbamoyl_l_cysteinate
   }
 }

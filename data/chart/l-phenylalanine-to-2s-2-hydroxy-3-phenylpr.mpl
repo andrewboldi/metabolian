@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-phenylalanine-to-2s-2-hydroxy-3-phenylpr "L-phenylalanine to (2S)-2-hydroxy-3-phenylpr…" {
-  spacing 184
+  spacing 178
 
   spine at 0,0 {
     l_phenylalanine
@@ -20,11 +20,5 @@ pathway l-phenylalanine-to-2s-2-hydroxy-3-phenylpr "L-phenylalanine to (2S)-2-hy
     2_phenylethanaminium
     <-> . +acetyl_coa +coa +hplus
     n_acetylphenylethylamine
-  }
-
-  branch from phenylacetaldehyde side right {
-    phenylacetaldehyde
-    <-> . +iron +fe2 +hplus
-    2_phenylethanol
   }
 }

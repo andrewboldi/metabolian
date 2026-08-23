@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-hexanoyl-sphing-4-enine-to-sphingosine "N-(hexanoyl)sphing-4-enine to sphingosine" {
-  spacing 236
+  spacing 254
 
   spine at 0,0 {
     n_hexanoyl_sphing_4_enine
@@ -20,25 +20,43 @@ pathway n-hexanoyl-sphing-4-enine-to-sphingosine "N-(hexanoyl)sphing-4-enine to 
 
   branch from hexanoate side left {
     hexanoate
-    <-> . +o2 +h2o +h2o2 +hplus
+    <-> . +nadp +h2o +nadph +hplus
     hexanal
-  }
-
-  branch from sphingosine side right {
-    sphingosine
-    <-> . +fe2 +o2 +hplus +iron +h2o
-    sphinga_4e_14z_dienine
-  }
-
-  branch from cytidine_5_monophosphate side left {
-    cytidine_5_monophosphate
-    <-> ec_2_4_3_7 [2.4.3.7] +n_acetyl_neuraminyl_2_3_d_galactosyl_1_3_n_acety +cmp_n_acetyl_neuraminate +hplus
-    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace
   }
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> . +1_2_di_palmitoleoyl_2_sn_glycerol +cdp_ethanolamine +hplus
-    1_2_di_9z_hexadecenoyl_sn_glycero_3_phosphoethan
+    <-> . +neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac +cmp_n_acetyl_neuraminate +hplus
+    neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac
+  }
+
+  branch from cytidine_5_monophosphate side left {
+    cytidine_5_monophosphate
+    <-> . +d_galactosyl_1_3_n_acetyl_neuraminosyl_2_6_n_ac +cmp_n_acetyl_neuraminate +hplus
+    neu5ac_2_3_d_gal_1_3_neu5ac_2_6_d_galnac_1_4_ne
+  }
+
+  branch from n_hexanoyl_sphing_4_enine side right {
+    n_hexanoyl_sphing_4_enine
+    <-> . +atp +adp +hplus
+    n_hexanoylsphingosine_1_phosphate
+  }
+
+  branch from n_hexanoyl_sphing_4_enine side left {
+    n_hexanoyl_sphing_4_enine
+    <-> . +fe2 +o2 +hplus +iron +h2o
+    n_hexanoyl_sphinga_4e_14z_dienine
+  }
+
+  branch from cytidine_5_monophosphate side right {
+    cytidine_5_monophosphate
+    <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +cmp_n_acetyl_neuraminate +hplus
+    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace
+  }
+
+  branch from cytidine_5_monophosphate side left {
+    cytidine_5_monophosphate
+    <-> . +neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac +cmp_n_acetyl_neuraminate +hplus
+    neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac
   }
 }

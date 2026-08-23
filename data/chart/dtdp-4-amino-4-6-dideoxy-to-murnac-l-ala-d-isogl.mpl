@@ -38,25 +38,49 @@ pathway dtdp-4-amino-4-6-dideoxy-to-murnac-l-ala-d-isogl "dTDP-4-amino-4,6-dideo
 
   branch from di_trans_octa_cis_undecaprenyl_diphosphate side right {
     di_trans_octa_cis_undecaprenyl_diphosphate
-    <-> ec_2_4_1_129 [2.4.1.129] +a_nascent_peptidoglycan_dimer_e_faecium_tetrapep +h
-    und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig
+    <-> ec_2_4_1_129 [2.4.1.129] +n_acetylglucosamine_n_acetylmuramoyl_l_alanyl_d +h
+    di_trans_octa_cis_undecaprenyl_diphospho_n_acety
   }
 
   branch from di_trans_octa_cis_undecaprenyl_diphosphate side left {
     di_trans_octa_cis_undecaprenyl_diphosphate
-    <-> ec_2_4_1_129 [2.4.1.129] +a_nascent_peptidoglycan_dimer_e_faeciums +h
-    und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> ec_2_7_8_8 [2.7.8.8] +cmp +phosphatidylserine_didodecanoyl_n_c12_0 +l_serine
-    cdp_1_2_didodecanoylglycerol
+    <-> . +acetyl_coa +histamine +coa
+    n_acetylhistamine
   }
 
   branch from h side left {
     h
-    <-> . +cmp +phosphatidylserine_ditetradecanoyl_n_c14_0 +l_serine
-    cdp_1_2_ditetradecanoylglycerol
+    <-> . +cholate +h2o
+    3_12_dihydroxy_5_chol_6_en_24_oic_acid
+  }
+
+  branch from di_trans_octa_cis_undecaprenyl_diphosphate side right {
+    di_trans_octa_cis_undecaprenyl_diphosphate
+    <-> . +diphosphate +ipp
+    all_trans_decaprenyl_diphosphate
+  }
+
+  branch from di_trans_octa_cis_undecaprenyl_diphosphate side left {
+    di_trans_octa_cis_undecaprenyl_diphosphate
+    <-> ec_3_6_1_27 [3.6.1.27] +h2o +h +phosphate
+    all_trans_undecaprenyl_phosphate
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_1_17 [3.6.1.17] +xtp +xmp +h2o
+    p_1_p_4_bis_5_xanthosyl_tetraphosphate
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_7_7_28 [2.7.7.28] +gtp +alpha_d_hexose_1_phosphate +gdphexose
+    diphosphate
   }
 }

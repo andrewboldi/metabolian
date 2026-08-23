@@ -111,22 +111,12 @@
       }
     },
     {
-      "id": "r_5_methyl_tetronate",
-      "name": "(R)-5-methyl-tetronate",
-      "short": "5-methyl-tetronate",
-      "formula": "C5H5O3",
-      "charge": -1,
+      "id": "penilactone_d",
+      "name": "penilactone D",
+      "formula": "C16H14O8",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:188931"
-      }
-    },
-    {
-      "id": "peniphenone_d",
-      "name": "peniphenone D",
-      "formula": "C15H15O6",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:188935"
+        "chebi": "CHEBI:188934"
       }
     },
     {
@@ -139,12 +129,22 @@
       }
     },
     {
-      "id": "penilactone_a",
-      "name": "penilactone A",
-      "formula": "C25H26O9",
-      "charge": 0,
+      "id": "penilactone_b",
+      "name": "penilactone B",
+      "formula": "C26H25O11",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:188937"
+        "chebi": "CHEBI:188936"
+      }
+    },
+    {
+      "id": "s_5_carboxymethyl_tetronate",
+      "name": "(S)-5-carboxymethyl-tetronate",
+      "short": "5-carboxymethyl-tet…",
+      "formula": "C6H5O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:188932"
       }
     }
   ],
@@ -269,46 +269,11 @@
     },
     {
       "id": "r4",
-      "name": "(R)-5-methyl-tetronate + o-quinone methide = peniphenone D",
-      "equation": "(R)-5-methyl-tetronate + o-quinone methide = peniphenone D",
+      "name": "penilactone D + o-quinone methide + H(+) = penilactone B",
+      "equation": "penilactone D + o-quinone methide + H(+) = penilactone B",
       "substrates": [
         {
-          "metabolite": "r_5_methyl_tetronate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ortho_quinone_methide",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "peniphenone_d",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:70095"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:70095"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "peniphenone D + o-quinone methide + H(+) = penilactone A",
-      "equation": "peniphenone D + o-quinone methide + H(+) = penilactone A",
-      "substrates": [
-        {
-          "metabolite": "peniphenone_d",
+          "metabolite": "penilactone_d",
           "stoichiometry": 1
         },
         {
@@ -322,21 +287,106 @@
       ],
       "products": [
         {
-          "metabolite": "penilactone_a",
+          "metabolite": "penilactone_b",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:70099"
+        "rhea": "RHEA:70103"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:70099"
+            "id": "RHEA:70103"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(S)-5-carboxymethyl-tetronate + o-quinone methide = penilactone D + H(+)",
+      "equation": "(S)-5-carboxymethyl-tetronate + o-quinone methide = penilactone D + H(+)",
+      "substrates": [
+        {
+          "metabolite": "s_5_carboxymethyl_tetronate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ortho_quinone_methide",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "penilactone_d",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:70107"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:70107"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_clavatol_cellobiose-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "clavatol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cellobiose-to-hydrogen-donor"
+      },
+      "note": "Shares clavatol with cellobiose to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:188925"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ortho_quinone_methide_n-indole-3-acetyl-l-asp-to-hydroxyclavatol-methy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ortho_quinone_methide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-indole-3-acetyl-l-asp-to-hydroxyclavatol-methy"
+      },
+      "note": "Shares ortho-quinone methide with N-(indole-3-acetyl)-L-asp… to hydroxyclavatol methyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:188927"
           }
         ]
       }

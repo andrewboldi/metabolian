@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-androst-1-ene-3-17-dio-to-amp "5α-androst-1-ene-3,17-dio… to AMP" {
-  spacing 284
+  spacing 248
 
   spine at 0,0 {
     5_androst_1_ene_3_17_dione
@@ -14,41 +14,5 @@ pathway 5-androst-1-ene-3-17-dio-to-amp "5α-androst-1-ene-3,17-dio… to AMP" {
     1_17_dioxo_2_3_seco_androstan_3_oate
     <-> . +atp +coa -diphosphate -amp
     1_17_dioxo_2_3_seco_androstan_3_oyl_coa
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    cysteine
-  }
-
-  branch from h side right {
-    h
-    <-> ec_1_10_99_2 [1.10.99.2] +ubiquinol_9 +beta_nicotinamide_d_riboside +1_d_ribofuranosyl_1_4_dihydronicotinamide
-    ubiquinone_9
-  }
-
-  branch from diphosphate side left {
-    diphosphate
-    <-> ec_2_7_7_37 [2.7.7.37] +utp +beta_l_arabinose_1_phosphate +h
-    udp_beta_l_arabinopyranose
-  }
-
-  branch from diphosphate side right {
-    diphosphate
-    <-> ec_2_7_7_37 [2.7.7.37] +l_arabinose_1_phosphate +udp_beta_l_arabinopyranose +h
-    utp
-  }
-
-  branch from amp side left {
-    amp
-    <-> . +3_amino_2_4_dihydroxybenzoate +atp +coa +diphosphate
-    3_amino_2_4_dihydroxybenzoyl_coa
-  }
-
-  branch from amp side right {
-    amp
-    <-> . +7r_11s_16s_7_hydroxy_ent_kauran_11_16_epoxy_19 +h +coa
-    7r_11s_16s_7_hydroxy_ent_kauran_11_16_epoxy_19
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-pinoresinol "UDP to (−)-pinoresinol" {
-  spacing 196
+  spacing 208
 
   spine at 0,0 {
     udp
@@ -18,18 +18,6 @@ pathway udp-to-pinoresinol "UDP to (−)-pinoresinol" {
     pinoresinol
   }
 
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> ec_2_4_1_195 [2.4.1.195] +udp +h +p_hydroxybenzyldesulphoglucosinolate
-    p_hydroxyphenylacetothiohydroximate
-  }
-
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> ec_2_4_1_210 [2.4.1.210] +udp +h +limonin_17_beta_d_glucoside
-    limonoate_a_ring_lactone
-  }
-
   branch from pinoresinol side left {
     pinoresinol
     <-> .
@@ -40,5 +28,29 @@ pathway udp-to-pinoresinol "UDP to (−)-pinoresinol" {
     pinoresinol
     <-> .
     coniferyl_alcohol_radical
+  }
+
+  branch from udp side left {
+    udp
+    <-> . +12_o_d_glucuronoside_13_hydroxyoctadec_9z_enoate +h +12_13_dihydroxyoleic_acid
+    udp_alpha_d_glucuronate
+  }
+
+  branch from udp side right {
+    udp
+    <-> . +10_hydroxy_octadec_12z_enoate_9_beta_d_glucuroni +h +udp_alpha_d_glucuronate
+    9_10_dhome
+  }
+
+  branch from h side left {
+    h
+    <-> ec_5_4_99_61 [5.4.99.61] +hydrogenobyrinate
+    precorrin_8x
+  }
+
+  branch from h side right {
+    h
+    <-> ec_1_13_11_36 [1.13.11.36] +5_amino_4_chloro_2_2_hydroxymuconoyl_3_2h_pyrida +o2
+    5_amino_4_chloro_2_2_3_dihydroxyphenyl_pyridazin
   }
 }

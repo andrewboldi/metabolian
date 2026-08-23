@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-nonaprenyl-4-5-dihydrox-to-h2o "3-nonaprenyl-4,5-dihydrox… to H2O" {
-  spacing 316
+  spacing 280
 
   spine at 0,0 {
     3_nonaprenyl_4_5_dihydroxybenzoate
@@ -14,41 +14,5 @@ pathway 3-nonaprenyl-4-5-dihydrox-to-h2o "3-nonaprenyl-4,5-dihydrox… to H2O" {
     2_methoxy_6_all_trans_nonaprenyl_phenol
     <-> . +h +o2 +nadph -2_methoxy_6_all_trans_nonaprenylhydroquinone -h2o
     nadp
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +scutellarein +sam +hplus
-    scutellarein_7_olate_4_methyl_ether
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +cirsiliol +sam +hplus
-    eupatorin
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_3_1_22 [1.3.1.22] +h +adrenosterone +nadph
-    5alpha_androstane_3_11_17_trione
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_1_1_64 [1.1.1.64] +h +5alpha_androstane_3_11_17_trione +nadph
-    11_oxo_5_dihydrotestosterone
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +chanoclavine_i
-    agroclavine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +16_17_dihydro_16alpha_17_dihydroxy_gibberellin_a
-    16alpha_17_epoxy_gibberellin_a4
   }
 }

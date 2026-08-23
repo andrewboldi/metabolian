@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 7-hydroxypregnenolone-to-h2o "7α-hydroxypregnenolone to H2O" {
-  spacing 252
+  spacing 180
 
   spine at 0,0 {
     7_hydroxypregnenolone
@@ -14,77 +14,5 @@ pathway 7-hydroxypregnenolone-to-h2o "7α-hydroxypregnenolone to H2O" {
     nadp
     <-> . +h +adp +17alpha_hydroxypregnenolone +phosphate -17alpha_hydroxypregnenolone -h2o
     atp
-  }
-
-  branch from h side left {
-    h
-    <-> ec_2_7_2_10 [2.7.2.10] +glyceric_acid_1_3_biphosphate +adp +atp
-    2r_3_phosphoglycerate
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
-    d_xylp_1_4_d_xylp_1_4_d_xylp
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +2_hydroxy_4_2_oxo_1_3_dihydro_2h_inden_1_ylidene
-    1_2_dihydroxyfluorene
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +h +1_2_dihydroxyfluorene
-    2_hydroxy_4_2_oxo_1_3_dihydro_2h_inden_1_ylidene
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> . +bellidin +nadp +h2o +h +o2
-    1_3_5_trihydroxyxanthone
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> . +nadp +h2o +o2 +1_3_5_trihydroxyxanthone
-    1_3_5_6_tetrahydroxyxanthone
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +r_2s_5r_5_ethenyl_1_azabicyclo_2_2_2_octan_2_yl +cinchonine +h +nadph
-    cinchoninone
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +cinchonine +h +cinchoninone +nadph
-    cinchonidine
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_4_11_1 [3.4.11.1] +l_leucine +glycine
-    leu_gly
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_4_11_1 [3.4.11.1] +l_leucine
-    leucyl_leucine
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_7_2_2_18 [7.2.2.18] +h +adp +phosphate +h2o
-    iron_iii_dicitrate
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_34 [3.6.3.34] +h +adp +phosphate +h2o
-    fe_iii_dicitrate
   }
 }

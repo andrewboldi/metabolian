@@ -153,73 +153,6 @@
       "xrefs": {
         "chebi": "CHEBI:16188"
       }
-    },
-    {
-      "id": "octanoyl_coa",
-      "name": "octanoyl-CoA",
-      "formula": "C29H46N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM1093479"
-      }
-    },
-    {
-      "id": "s_carnitine",
-      "name": "(S)-carnitine",
-      "formula": "C7H15NO3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:11060"
-      }
-    },
-    {
-      "id": "coa",
-      "name": "CoA",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM727276"
-      }
-    },
-    {
-      "id": "2e_7_carboxy_4_methyl_5_oxohept_2_enoyl_coa",
-      "name": "(2E)-7-carboxy-4-methyl-5-oxohept-2-enoyl-CoA",
-      "short": "7-carboxy-4-methyl-…",
-      "formula": "C30H41N7O20P3S",
-      "charge": -5,
-      "xrefs": {
-        "metanetx": "MNXM819096"
-      }
-    },
-    {
-      "id": "3r_7_carboxy_3_hydroxy_4_methyl_5_oxoheptanoyl",
-      "name": "(3R)-7-carboxy-3-hydroxy-4-methyl-5-oxoheptanoyl-CoA",
-      "short": "7-carboxy-3-hydroxy…",
-      "formula": "C30H43N7O21P3S",
-      "charge": -5,
-      "xrefs": {
-        "metanetx": "MNXM819097"
-      }
-    },
-    {
-      "id": "4_4_diaponeurosporenal",
-      "name": "4,4'-diaponeurosporenal",
-      "short": "4,4'-diaponeurospor…",
-      "formula": "C30H40O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:79065"
-      }
-    },
-    {
-      "id": "4_4_diaponeurosporen_1_1_diol",
-      "name": "4,4'-diaponeurosporen-1,1-diol",
-      "short": "4,4'-diaponeurospor…",
-      "formula": "C30H42O2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM818722"
-      }
     }
   ],
   "enzymes": [
@@ -228,13 +161,6 @@
       "name": "acylcarnitine hydrolase",
       "ec": [
         "3.1.1.28"
-      ]
-    },
-    {
-      "id": "ec_4_2_1_119",
-      "name": "enoyl-CoA hydratase 2",
-      "ec": [
-        "4.2.1.119"
       ]
     }
   ],
@@ -427,115 +353,181 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "Reaction MNXR204373",
-      "substrates": [
-        {
-          "metabolite": "octanoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "s_carnitine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o_octanoyl_r_carnitine",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR204373"
+      "id": "xt_octan_1_aminium_4-hydroxy-2-oxo-5-methylh-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "octan_1_aminium"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxy-2-oxo-5-methylh-to-nad"
+      },
+      "note": "Shares octan-1-aminium with 4-Hydroxy-2-oxo-5-methylh… to NAD.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR204373"
+            "db": "ChEBI",
+            "id": "CHEBI:195453"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "enoyl-CoA hydratase 2",
-      "ec": "4.2.1.119",
-      "substrates": [
-        {
-          "metabolite": "2e_7_carboxy_4_methyl_5_oxohept_2_enoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3r_7_carboxy_3_hydroxy_4_methyl_5_oxoheptanoyl",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_1_119"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "metanetx": "MNXR183743"
+      "id": "xt_octanal_3-d-galactosyl-1-6-to-s-3-acetyloctanal",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "octanal"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "3-d-galactosyl-1-6-to-s-3-acetyloctanal"
+      },
+      "note": "Shares octanal with 3-[α-D-galactosyl-(1→6)-β… to (S)-3-acetyloctanal.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR183743"
+            "db": "ChEBI",
+            "id": "CHEBI:17935"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "Reaction MNXR183781",
-      "substrates": [
-        {
-          "metabolite": "4_4_diaponeurosporenal",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "4_4_diaponeurosporen_1_1_diol",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "metanetx": "MNXR183781"
+      "id": "xt_octanal_n-octyl-sulfate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "octanal"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "n-octyl-sulfate-to-h2o"
+      },
+      "note": "Shares octanal with n-octyl sulfate to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR183781"
+            "db": "ChEBI",
+            "id": "CHEBI:17935"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_octanal_octane-to-2-6-dihydroxynicotinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "octanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "octane-to-2-6-dihydroxynicotinate"
+      },
+      "note": "Shares octanal with octane to 2,6-dihydroxynicotinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17935"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_octan_1_ol_3-d-galactosyl-1-6-to-s-3-acetyloctanal",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "octan_1_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-d-galactosyl-1-6-to-s-3-acetyloctanal"
+      },
+      "note": "Shares octan-1-ol with 3-[α-D-galactosyl-(1→6)-β… to (S)-3-acetyloctanal.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16188"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_octan_1_ol_benzoylagmatinium-to-glycine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "octan_1_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "benzoylagmatinium-to-glycine"
+      },
+      "note": "Shares octan-1-ol with benzoylagmatinium to glycine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16188"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_octan_1_ol_n-octyl-sulfate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "octan_1_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-octyl-sulfate-to-h2o"
+      },
+      "note": "Shares octan-1-ol with n-octyl sulfate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16188"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_octan_1_ol_octane-to-2-6-dihydroxynicotinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "octan_1_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "octane-to-2-6-dihydroxynicotinate"
+      },
+      "note": "Shares octan-1-ol with octane to 2,6-dihydroxynicotinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16188"
           }
         ]
       }

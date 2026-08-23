@@ -1,0 +1,529 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-2-3-epoxysqualene-to-h2o",
+  "name": "(S)-2,3-epoxysqualene to H2O",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from (S)-2,3-epoxysqualene to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:31007"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:15441"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "epoxysqualene",
+      "name": "(S)-2,3-Epoxysqualene (2,3-oxidosqualene)",
+      "short": "2,3-Epoxysqualene…",
+      "formula": "C30H50O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15441"
+      }
+    },
+    {
+      "id": "amyrin",
+      "name": "β-amyrin",
+      "formula": "C30H50O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:10352"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "24_hydroxy_amyrin",
+      "name": "24-hydroxy-β-amyrin",
+      "formula": "C30H50O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62459"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "soyasapogenol_b",
+      "name": "soyasapogenol B",
+      "formula": "C30H50O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:9209"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "germanicol",
+      "name": "germanicol",
+      "formula": "C30H50O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62455"
+      }
+    },
+    {
+      "id": "camelliol_c",
+      "name": "camelliol C",
+      "formula": "C30H50O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62452"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_4_99_39",
+      "name": "beta-amyrin synthase",
+      "ec": [
+        "5.4.99.39"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_134",
+      "name": "beta-amyrin 24-hydroxylase",
+      "ec": [
+        "1.14.14.134"
+      ]
+    },
+    {
+      "id": "ec_5_4_99_34",
+      "name": "germanicol synthase",
+      "ec": [
+        "5.4.99.34"
+      ]
+    },
+    {
+      "id": "ec_5_4_99_38",
+      "name": "camelliol C synthase",
+      "ec": [
+        "5.4.99.38"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "beta-amyrin synthase",
+      "equation": "(S)-2,3-epoxysqualene = beta-amyrin",
+      "ec": "5.4.99.39",
+      "substrates": [
+        {
+          "metabolite": "epoxysqualene",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "amyrin",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_99_39"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:31007"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31007"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "beta-amyrin 24-hydroxylase",
+      "equation": "beta-amyrin + reduced [NADPH--hemoprotein reductase] + O2 = 24-hydroxy-beta-amyrin + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.134",
+      "substrates": [
+        {
+          "metabolite": "amyrin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "24_hydroxy_amyrin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_134"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:30991"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30991"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR177070",
+      "substrates": [
+        {
+          "metabolite": "24_hydroxy_amyrin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "soyasapogenol_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR177070"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR177070"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "germanicol synthase",
+      "equation": "(S)-2,3-epoxysqualene = germanicol",
+      "ec": "5.4.99.34",
+      "substrates": [
+        {
+          "metabolite": "epoxysqualene",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "germanicol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_99_34"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:31003"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31003"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "camelliol C synthase",
+      "equation": "(S)-2,3-epoxysqualene = camelliol C",
+      "ec": "5.4.99.38",
+      "substrates": [
+        {
+          "metabolite": "epoxysqualene",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "camelliol_c",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_99_38"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:31011"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31011"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_soyasapogenol_b_6-demethylsterigmatocystin-to-acetylene",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "soyasapogenol_b"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-demethylsterigmatocystin-to-acetylene"
+      },
+      "note": "Shares soyasapogenol B with 6-demethylsterigmatocystin to acetylene.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:9209"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_soyasapogenol_b_beta-fabatriose-to-soyasapogenol-b",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "soyasapogenol_b"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-fabatriose-to-soyasapogenol-b"
+      },
+      "note": "Shares soyasapogenol B with beta-Fabatriose to soyasapogenol B….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:9209"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_soyasapogenol_b_p-cumate-to-2-hydroxy-6-oxonona-2-4-7",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "soyasapogenol_b"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "p-cumate-to-2-hydroxy-6-oxonona-2-4-7"
+      },
+      "note": "Shares soyasapogenol B with p-cumate to 2-hydroxy-6-oxonona-2,4,7….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:9209"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_soyasapogenol_b_s-adenosyl-l-homocysteine-to-luteolin-glucoside",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "soyasapogenol_b"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-luteolin-glucoside"
+      },
+      "note": "Shares soyasapogenol B with S-adenosyl-L-homocysteine to Luteolin glucoside.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:9209"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_soyasapogenol_b_udp-to-soyasaponin-i",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "soyasapogenol_b"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-soyasaponin-i"
+      },
+      "note": "Shares soyasapogenol B with UDP to soyasaponin I.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:9209"
+          }
+        ]
+      }
+    }
+  ]
+}

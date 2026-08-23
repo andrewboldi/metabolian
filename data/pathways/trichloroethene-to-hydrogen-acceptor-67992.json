@@ -1,0 +1,505 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "trichloroethene-to-hydrogen-acceptor-67992",
+  "name": "trichloroethene to hydrogen acceptor",
+  "category": "other",
+  "summary": "A 3-step route from trichloroethene to hydrogen acceptor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:67992"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:16602"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "trichloroethene",
+      "name": "trichloroethene",
+      "formula": "C2HCl3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16602"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "cis_1_2_dichloroethene",
+      "name": "cis-1,2-dichloroethene",
+      "short": "cis-1,2-dichloroeth…",
+      "formula": "C2H2Cl2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28805"
+      }
+    },
+    {
+      "id": "chloride",
+      "name": "chloride",
+      "formula": "Cl",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17996"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "chloroethene",
+      "name": "chloroethene",
+      "formula": "C2H3Cl",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28509"
+      }
+    },
+    {
+      "id": "ethene",
+      "name": "ethene",
+      "formula": "C2H4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18153"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "trichloroethene + AH2 = (Z)-1,2-dichloroethene + chloride + A + H(+)",
+      "equation": "trichloroethene + AH2 = (Z)-1,2-dichloroethene + chloride + A + H(+)",
+      "substrates": [
+        {
+          "metabolite": "trichloroethene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cis_1_2_dichloroethene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "chloride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:67992"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:67992"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(Z)-1,2-dichloroethene + AH2 = chloroethene + chloride + A + H(+)",
+      "equation": "(Z)-1,2-dichloroethene + AH2 = chloroethene + chloride + A + H(+)",
+      "substrates": [
+        {
+          "metabolite": "cis_1_2_dichloroethene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "chloroethene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "chloride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:67996"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:67996"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "chloroethene + AH2 = ethene + chloride + A + H(+)",
+      "equation": "chloroethene + AH2 = ethene + chloride + A + H(+)",
+      "substrates": [
+        {
+          "metabolite": "chloroethene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ethene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "chloride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:68004"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:68004"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_trichloroethene_trichloroethene-to-hydrogen-acceptor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trichloroethene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trichloroethene-to-hydrogen-acceptor"
+      },
+      "note": "Shares trichloroethene with trichloroethene to hydrogen acceptor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16602"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trichloroethene_vitexin-2-o-l-rhamnos-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trichloroethene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "vitexin-2-o-l-rhamnos-to-hydrogen-donor"
+      },
+      "note": "Shares trichloroethene with vitexin 2''-O-β-L-rhamnos… to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16602"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trichloroethene_vitexin-2-o-l-rhamnos-to-hydrogen-donor-11432",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trichloroethene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "vitexin-2-o-l-rhamnos-to-hydrogen-donor-11432"
+      },
+      "note": "Shares trichloroethene with vitexin 2''-O-β-L-rhamnos… to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16602"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cis_1_2_dichloroethene_trichloroethene-to-hydrogen-acceptor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cis_1_2_dichloroethene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trichloroethene-to-hydrogen-acceptor"
+      },
+      "note": "Shares cis-1,2-dichloroethene with trichloroethene to hydrogen acceptor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28805"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_chloroethene_1-1-dichloroethene-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "chloroethene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-1-dichloroethene-to-succinate"
+      },
+      "note": "Shares chloroethene with 1,1-dichloroethene to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28509"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_chloroethene_1-1-dichloroethene-to-succinate-68000",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "chloroethene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-1-dichloroethene-to-succinate-68000"
+      },
+      "note": "Shares chloroethene with 1,1-dichloroethene to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28509"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_chloroethene_trichloroethene-to-hydrogen-acceptor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "chloroethene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trichloroethene-to-hydrogen-acceptor"
+      },
+      "note": "Shares chloroethene with trichloroethene to hydrogen acceptor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28509"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ethene_1-8-diazacyclotetradecane-to-adipate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ethene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-8-diazacyclotetradecane-to-adipate"
+      },
+      "note": "Shares ethene with 1,8-diazacyclotetradecane… to adipate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18153"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ethene_l-cys-ian-to-nadp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ethene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-cys-ian-to-nadp"
+      },
+      "note": "Shares ethene with L-Cys(IAN) to NADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18153"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ethene_l-cys-ian-to-nadp-10452",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ethene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-cys-ian-to-nadp-10452"
+      },
+      "note": "Shares ethene with L-Cys(IAN) to NADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18153"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ethene_leukotriene-c4-to-hydrogen-donor-17617",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ethene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "leukotriene-c4-to-hydrogen-donor-17617"
+      },
+      "note": "Shares ethene with leukotriene C4 to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18153"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ethene_s-methyl-5-thio-d-ribulos-to-dimethyl-disulfide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ethene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-methyl-5-thio-d-ribulos-to-dimethyl-disulfide"
+      },
+      "note": "Shares ethene with S-methyl-5-thio-D-ribulos… to dimethyl disulfide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18153"
+          }
+        ]
+      }
+    }
+  ]
+}

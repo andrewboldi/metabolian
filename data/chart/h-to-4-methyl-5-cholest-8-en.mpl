@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway h-to-4-methyl-5-cholest-8-en "H to 4α-methyl-5α-cholest-8-en…" {
-  spacing 206
+  spacing 152
 
   spine at 0,0 {
     h
@@ -20,59 +20,5 @@ pathway h-to-4-methyl-5-cholest-8-en "H to 4α-methyl-5α-cholest-8-en…" {
     3_hydroxy_4_methyl_5_cholest_8_ene_4_carboxylate
     <-> . +nad -co2 -nadh
     4_methyl_5_cholest_8_en_3_one
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +h +o2 +nadph +roxarsone_iii +h2o
-    roxarsone
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_1_1_314 [1.1.1.314] +germacra_1_10_4_11_13_trien_12_oate +h +nadph +h2o
-    germacra_1_10_4_11_13_trien_12_al
-  }
-
-  branch from lanost_8_ene_3_30_diol side left {
-    lanost_8_ene_3_30_diol
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    24_25_dihydrolanosterol
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +glucuronide_conjugate_of_3_methoxy_acetaminophen +phosphate +glucuronide_conjugate_of_3_methoxy_acetaminophen
-    atp
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_glutamine +l_glutamate +l_tryptophan
-    glutaminyl_tryptophanyl_glutamate
-  }
-
-  branch from 3_hydroxylanost_8_en_32_al side right {
-    3_hydroxylanost_8_en_32_al
-    <-> . +formate +nadp +h2o +o2 +nadph
-    4_4_dimethyl_5_alpha_cholesta_8_14_dien_3_beta_o
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> ec_1_14_14_73 [1.14.14.73] +albendazole +fmnh2 +o2 +h2o +hplus
-    albendazole_s_oxide
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> ec_1_14_14_73 [1.14.14.73] +fenbendazole +fmnh2 +o2 +h2o +hplus
-    oxfendazole
-  }
-
-  branch from 4_4_dimethyl_8_14_cholestadien_3_ol side left {
-    4_4_dimethyl_8_14_cholestadien_3_ol
-    <-> ec_1_14_13_70 [1.14.13.70] +h +24_25_dihydrolanosterol +o2 +nadph +nadp +h2o
-    formate
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-methylheptan-3-ol-to-4as-10br-oxomaritidine "4-Methylheptan-3-ol to (4aS,10bR)-oxomaritidine" {
-  spacing 280
+  spacing 220
 
   spine at 0,0 {
     4_methylheptan_3_ol
@@ -24,65 +24,5 @@ pathway 4-methylheptan-3-ol-to-4as-10br-oxomaritidine "4-Methylheptan-3-ol to (4
     4as_10br_noroxomaritidine
     <-> . +nadph +hplus -nadp
     4as_10br_oxomaritidine
-  }
-
-  branch from vanillin side left {
-    vanillin
-    <-> ec_4_1_2_41 [4.1.2.41] +acetyl_coa +h +h2o
-    feruloyl_coa
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +glycine +l_cysteine +l_arginine
-    arginyl_cystinyl_glycine
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_serine +l_cysteine +l_arginine
-    arginyl_cystinyl_serine
-  }
-
-  branch from s_adenosyl_l_methionine side right {
-    s_adenosyl_l_methionine
-    <-> . +chaxamycin_b_rel +s_adenosyl_l_homocysteine +h
-    3_demethylchaxamycin_b
-  }
-
-  branch from s_adenosyl_l_methionine side left {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +3_o_methylprotoansatrienin
-    protoansatrienin
-  }
-
-  branch from norbelladine side right {
-    norbelladine
-    <-> . +norcraugsodine +h +nadph
-    nadp
-  }
-
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_351 [2.1.1.351] +nocamycin_e +sam
-    nocamycin_i
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +adenosine_5_monophosphate_1 +sam +hplus
-    2_o_methyladenosine_5_monophosphate_1
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> ec_1_14_14_71 [1.14.14.71] +cucurbitadienol +fmnh2 +o2 +h2o +hplus
-    11_oxocucurbitadienol
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +cucurbitadienol +fmnh2 +o2 +h2o +hplus
-    11_hydroxycucurbitadienol
   }
 }

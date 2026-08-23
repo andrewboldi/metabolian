@@ -4,51 +4,123 @@
 # edit the generator, not this file.
 
 pathway s-adenosyl-l-homocysteine-to-luteolin-glucoside "S-adenosyl-L-homocysteine to Luteolin glucoside" {
-  spacing 224
+  spacing 296
 
   spine at 0,0 {
     s_adenosyl_l_homocysteine
-    <-> . +3_6_7_2_4_pentamethylquercetagetin_3_o_beta_d_gl +h -s_adenosyl_l_methionine
-    2_hydroxy_3_6_7_4_tetramethylquercetagetin_3_o_b
-    <-> . +udp +h -udp_alpha_d_glucose
-    2_hydroxy_3_6_7_4_tetramethylquercetagetin
-    <-> ec_2_4_1_35 [2.4.1.35] +luteolin +udp_alpha_d_glucose -luteolin_glucoside
+    <-> . +h +patulitrin -quercetagitrin
+    s_adenosyl_l_methionine
+    <-> . +udp +quercetagitrin +h -quercetagetin
+    udp_alpha_d_glucose
+    <-> ec_2_4_1_35 [2.4.1.35] +luteolin -luteolin_glucoside
     udp
   }
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +3_hydroxy_5_methoxybiphenyl +s_adenosyl_l_homocysteine +h
-    3_5_dihydroxybiphenyl
+    <-> ec_2_1_1_140 [2.1.1.140] +s_adenosyl_l_homocysteine +h +s_n_methylcoclaurine
+    coclaurine
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +aucuparin
-    noraucuparin
+    <-> . +s_adenosyl_l_homocysteine +2_hexaprenyl_6_methoxyphenol +h
+    2_hexaprenyl_6_hydroxyphenol
   }
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +h +rubusoside
-    19_o_beta_glucopyranosyl_steviol
+    <-> . +udp +h +medicagenate_28_o_beta_d_glucoside
+    medicagenic_acid
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_178 [2.4.1.178] +udp +h +r_3_4_dihydroxymandelonitrile_beta_d_glucoside
-    r_3_4_dihydroxymandelonitrile
+    <-> . +udp +h +soyasapogenol_b_22_o_beta_d_glucoside
+    soyasapogenol_b
   }
 
   branch from udp side left {
     udp
-    <-> ec_2_4_1_17 [2.4.1.17] +h +trans_3_hydroxycotinine_glucuronide +trans_3_hydroxycotinine
+    <-> . +des_isopropyl_dihydro_fluvastatin_tetranor_glucu +des_isopropyl_dihydro_fluvastatin_tetranor
     udp_alpha_d_glucuronate
   }
 
   branch from udp side right {
     udp
-    <-> ec_2_4_1_17 [2.4.1.17] +cotinine_glucuronide +udp_alpha_d_glucuronate
-    cotinine
+    <-> . +losartan_n1_glucuronide +udp_alpha_d_glucuronate
+    losartan
+  }
+
+  branch from s_adenosyl_l_homocysteine side left {
+    s_adenosyl_l_homocysteine
+    <-> ec_2_1_1_128 [2.1.1.128] +h +s_6_o_methylnorlaudanosoline +s_adenosyl_l_methionine
+    s_norlaudanosoline
+  }
+
+  branch from s_adenosyl_l_homocysteine side right {
+    s_adenosyl_l_homocysteine
+    <-> ec_2_1_1_94 [2.1.1.94] +16_methoxytabersonine +h +s_adenosyl_l_methionine
+    16_hydroxytabersonine
+  }
+
+  branch from h side left {
+    h
+    <-> . +adp +1_myristoyl_sn_glycero_3_phosphocholine +phosphate +1_myristoyl_sn_glycero_3_phosphocholine +h2o
+    atp
+  }
+
+  branch from h side right {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    1_pentadecanoyl_sn_glycero_3_phosphocholine
+  }
+
+  branch from s_adenosyl_l_methionine side left {
+    s_adenosyl_l_methionine
+    <-> . +s_adenosyl_l_homocysteine +methyl_nogalonate
+    nogalonate
+  }
+
+  branch from s_adenosyl_l_methionine side right {
+    s_adenosyl_l_methionine
+    <-> ec_2_1_1_288 [2.1.1.288] +s_adenosyl_l_homocysteine +aklanonic_acid_methyl_ester
+    aklanonic_acid
+  }
+
+  branch from udp side left {
+    udp
+    <-> . +udp_alpha_d_glucuronate +losartan
+    losartan_n2_glucuronide_losartan_m7
+  }
+
+  branch from udp side right {
+    udp
+    <-> . +pravastatin_glucuronide +udp_alpha_d_glucuronate
+    pravastatin_sodium
+  }
+
+  branch from udp_alpha_d_glucose side left {
+    udp_alpha_d_glucose
+    <-> . +udp +h +soyasapogenol_b
+    soyasapogenol_b_3_o_beta_d_glucoside
+  }
+
+  branch from udp_alpha_d_glucose side right {
+    udp_alpha_d_glucose
+    <-> . +udp +h +soyasapogenol_e_23_o_beta_d_glucoside
+    soyasapogenol_e
+  }
+
+  branch from luteolin side left {
+    luteolin
+    <-> . +h +o2 +nadph +nadp +h2o
+    tricetin
+  }
+
+  branch from luteolin side right {
+    luteolin
+    <-> ec_3_2_1_62 [3.2.1.62] +glucose +h2o
+    luteolin_7_o_beta_d_glucoside
   }
 }

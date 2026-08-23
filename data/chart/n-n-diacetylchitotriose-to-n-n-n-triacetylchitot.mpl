@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-n-diacetylchitotriose-to-n-n-n-triacetylchitot "N,N''-diacetylchitotriose to N,N',N''-triacetylchitotr…" {
-  spacing 164
+  spacing 188
 
   spine at 0,0 {
     n_n_diacetylchitotriose
@@ -18,13 +18,37 @@ pathway n-n-diacetylchitotriose-to-n-n-n-triacetylchitot "N,N''-diacetylchitotri
 
   branch from h2o side left {
     h2o
-    <-> . +s_adenosyl_l_homocysteine +co2 +2_4_dihydroxy_3_6_dimethylbenzaldehyde +nadp +coa +malonyl_coa +s_adenosyl_l_methionine +h +nadph
-    acetyl_coa
+    <-> . +l_histidine +l_serine +l_arginine
+    histidyl_arginyl_serine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +stipitaldehydate +nadp +h +o2 +nadph
-    stipitalide
+    <-> . +l_histidine +l_aspartate
+    histidyl_aspartate
+  }
+
+  branch from acetate side left {
+    acetate
+    <-> ec_6_2_1_13 [6.2.1.13] +gdp +acetyl_coa +phosphate +coa
+    gtp
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> ec_2_8_3_18 [2.8.3.18] +acetyl_coa +s_malate
+    s_malyl_coa
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +l_histidine +l_cysteine
+    histidyl_cystyl_cysteine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +l_alanine +l_histidine +l_glutamine
+    histidyl_glutaminyl_alanine
   }
 }

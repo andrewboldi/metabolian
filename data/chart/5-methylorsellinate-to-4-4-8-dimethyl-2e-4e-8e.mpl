@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-methylorsellinate-to-4-4-8-dimethyl-2e-4e-8e "5-methylorsellinate to 4-[4,8-dimethyl-(2E,4E,8E…" {
-  spacing 176
+  spacing 158
 
   spine at 0,0 {
     5_methylorsellinate
@@ -24,25 +24,7 @@ pathway 5-methylorsellinate-to-4-4-8-dimethyl-2e-4e-8e "5-methylorsellinate to 4
     4_4_8_dimethyl_2e_4e_8e_decatrienoyl_coa_5_o_met
   }
 
-  branch from 4_farnesyl_3_5_dihydroxy_6_methylphthalide side left {
-    4_farnesyl_3_5_dihydroxy_6_methylphthalide
-    <-> . +sam +sah +hplus
-    4_farnesyl_3_5_dihydroxy_6_methoxylphthalide
-  }
-
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_391 [2.1.1.391] +demethylgadusol +sam +hplus
-    gadusol
-  }
-
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_392 [2.1.1.392] +4_methylnorajmaline +sam +hplus
-    4_methylajmaline
-  }
-
-  branch from 4_4_8_dimethyl_2e_4e_8e_decatrienoyl_coa_5_o_met side right {
+  branch from 4_4_8_dimethyl_2e_4e_8e_decatrienoyl_coa_5_o_met side left {
     4_4_8_dimethyl_2e_4e_8e_decatrienoyl_coa_5_o_met
     <-> . +h2o
     4_3r_hydroxyfarnesoyl_coa_5_o_methyl_3_hydroxy_6

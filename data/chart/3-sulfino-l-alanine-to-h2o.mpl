@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-sulfino-l-alanine-to-h2o "3-sulfino-L-alanine to H2O" {
-  spacing 200
+  spacing 152
 
   spine at 0,0 {
     3_sulfino_l_alanine
@@ -16,53 +16,5 @@ pathway 3-sulfino-l-alanine-to-h2o "3-sulfino-L-alanine to H2O" {
     l_cysteate
     <-> . +h +adp +phosphate -l_cysteate -h2o
     atp
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_60 [1.1.1.60] +nadh +2r_tartronate_semialdehyde +h
-    r_glycerate
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_17_1_2 [1.17.1.2] +nadh +2e_4_hydroxy_3_methylbut_2_enyl_diphosphate +h +h2o
-    ipp
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_1_1_3 [3.1.1.3] +hexadecanoate +h +1_2_dipalmitoylglycerol
-    tripalmitin
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_2_1_21 [3.2.1.21] +linamarin +beta_d_glucose
-    linustatin
-  }
-
-  branch from l_cysteate side left {
-    l_cysteate
-    <-> . +adenosine_3_5_bisphosphate +nadp +2_aminoprop_2_enoate +nadph
-    3_phosphoadenylyl_sulfate
-  }
-
-  branch from l_cysteate side right {
-    l_cysteate
-    <-> ec_2_6_1_1 [2.6.1.1] +2_oxoglutarate +l_glutamate
-    3_sulfopyruvate
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_2_7_1_1 [2.7.1.1] +alpha_d_galactose +h +adp
-    6_o_phosphonohexopyranose
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_2_7_1_1 [2.7.1.1] +h +adp +6_o_phosphonohexopyranose
-    aldehydo_d_galactose
   }
 }

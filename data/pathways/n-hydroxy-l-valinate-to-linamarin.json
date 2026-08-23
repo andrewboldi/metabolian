@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "n-hydroxy-l-valinate-to-linamarin",
   "name": "N-hydroxy-L-valinate to linamarin",
-  "category": "lipid-metabolism",
+  "category": "other",
   "summary": "A 6-step route from N-hydroxy-L-valinate to linamarin, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -155,45 +155,6 @@
       "charge": -3,
       "xrefs": {
         "chebi": "CHEBI:58223"
-      }
-    },
-    {
-      "id": "preaspterpenacid_acid_i",
-      "name": "preaspterpenacid acid I",
-      "short": "preaspterpenacid…",
-      "formula": "C25H42O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:191389"
-      }
-    },
-    {
-      "id": "preaspterpenacid_acid_ii",
-      "name": "preaspterpenacid acid II",
-      "short": "preaspterpenacid…",
-      "formula": "C25H42O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:191390"
-      }
-    },
-    {
-      "id": "cholesterol",
-      "name": "Cholesterol",
-      "formula": "C27H46O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16113"
-      }
-    },
-    {
-      "id": "16s_22s_dihydroxycholesterol",
-      "name": "(16S,22S)-dihydroxycholesterol",
-      "short": "(16S,22S)-dihydroxy…",
-      "formula": "C27H46O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:191938"
       }
     }
   ],
@@ -466,105 +427,159 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r7",
-      "name": "preaspterpenacid acid I + reduced [NADPH--hemoprotein reductase] + O2 = preaspterpenaci...",
-      "equation": "preaspterpenacid acid I + reduced [NADPH--hemoprotein reductase] + O2 = preaspterpenacid acid II + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "preaspterpenacid_acid_i",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "preaspterpenacid_acid_ii",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:71999"
+      "id": "xt_n_hydroxy_l_valinate_6-demethylsterigmatocystin-to-acetylene",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_hydroxy_l_valinate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "6-demethylsterigmatocystin-to-acetylene"
+      },
+      "note": "Shares N-hydroxy-L-valinate with 6-demethylsterigmatocystin to acetylene.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:71999"
+            "db": "ChEBI",
+            "id": "CHEBI:61140"
           }
         ]
       }
     },
     {
-      "id": "r8",
-      "name": "cholesterol + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = (16S,22S)-dihydroxychol...",
-      "equation": "cholesterol + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = (16S,22S)-dihydroxycholesterol + 2 oxidized [NADPH--hemoprotein reductase] + 2 H2O + 2 H(+)",
-      "substrates": [
-        {
-          "metabolite": "cholesterol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "16s_22s_dihydroxycholesterol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "rhea": "RHEA:72191"
+      "id": "xt_e_2_methylpropanal_oxime_3-24r-24-r-fucosterol-to-cobamamide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_2_methylpropanal_oxime"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "3-24r-24-r-fucosterol-to-cobamamide"
+      },
+      "note": "Shares (E)-2-methylpropanal oxime with (3β,24R,24'R)-fucosterol… to cobamamide.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:72191"
+            "db": "ChEBI",
+            "id": "CHEBI:61143"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_2_methylpropanal_oxime_3-2z-4z-5-carbamoyl-3-to-methanophenazine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_2_methylpropanal_oxime"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-2z-4z-5-carbamoyl-3-to-methanophenazine"
+      },
+      "note": "Shares (E)-2-methylpropanal oxime with 3-[(2Z,4Z)-5-carbamoyl-3-… to methanophenazine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61143"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_2_methylpropanal_oxime_e-2-methylpropanal-oxime-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_2_methylpropanal_oxime"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "e-2-methylpropanal-oxime-to-h2o"
+      },
+      "note": "Shares (E)-2-methylpropanal oxime with (E)-2-methylpropanal oxime to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61143"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_2_methylpropanal_oxime_s-adenosyl-l-homocysteine-to-hydrogen-cyanide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_2_methylpropanal_oxime"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-hydrogen-cyanide"
+      },
+      "note": "Shares (E)-2-methylpropanal oxime with S-adenosyl-L-homocysteine to hydrogen cyanide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61143"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_z_2_methylpropanal_oxime_2-3-dinitrotoluene-to-3-methoxyphenol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "z_2_methylpropanal_oxime"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3-dinitrotoluene-to-3-methoxyphenol"
+      },
+      "note": "Shares (Z)-2-methylpropanal oxime with 2,3-dinitrotoluene to 3-methoxyphenol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61144"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_hydroxy_2_methylpropanenitrile_s-adenosyl-l-homocysteine-to-hydrogen-cyanide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_hydroxy_2_methylpropanenitrile"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-hydrogen-cyanide"
+      },
+      "note": "Shares 2-hydroxy-2-methylpropanenitrile with S-adenosyl-L-homocysteine to hydrogen cyanide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15348"
           }
         ]
       }

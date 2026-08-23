@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-dodecanoylglycinate-to-diphosphate "N-dodecanoylglycinate to diphosphate" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     n_dodecanoylglycinate
@@ -16,17 +16,5 @@ pathway n-dodecanoylglycinate-to-diphosphate "N-dodecanoylglycinate to diphospha
     dodecanoate
     <-> . +atp +hplus -ppi
     dodecanoyl_amp
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +amikacin +gtp
-    4_guanylylamikacin
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +amikacin +itp
-    4_inosinylylamikacin
   }
 }

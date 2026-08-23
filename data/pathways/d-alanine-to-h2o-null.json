@@ -71,81 +71,6 @@
       "xrefs": {
         "metanetx": "MNXM741012"
       }
-    },
-    {
-      "id": "3_oxooctanoyl_coa",
-      "name": "3-oxooctanoyl-CoA",
-      "formula": "C29H44N7O18P3S",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM1093448"
-      }
-    },
-    {
-      "id": "trans_4_coumaroyl_coa",
-      "name": "trans-4-coumaroyl-CoA",
-      "short": "trans-4-coumaroyl-C…",
-      "formula": "C30H38N7O18P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:85008"
-      }
-    },
-    {
-      "id": "1_4_hydroxyphenyl_1_decene_3_5_dione",
-      "name": "1-(4-Hydroxyphenyl)-1-decene-3,5-dione",
-      "short": "1-(4-Hydroxyphenyl)…",
-      "formula": "C16H20O3",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1372205"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM13"
-      }
-    },
-    {
-      "id": "coa",
-      "name": "CoA",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM727276"
-      }
-    },
-    {
-      "id": "5_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem",
-      "name": "5-(L-alanin-3-yl)-2-hydroxy-cis,cis-muconate 6-semialdehyde",
-      "short": "5-(L-alanin-3-yl)-2…",
-      "formula": "C9H10NO6",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM1368852"
-      }
-    },
-    {
-      "id": "muscaflavin",
-      "name": "muscaflavin",
-      "formula": "C9H7NO5",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM19482"
-      }
-    },
-    {
-      "id": "h",
-      "name": "H",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM1"
-      }
     }
   ],
   "enzymes": [
@@ -296,87 +221,71 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "Reaction MNXR196688",
-      "substrates": [
-        {
-          "metabolite": "3_oxooctanoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "trans_4_coumaroyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_4_hydroxyphenyl_1_decene_3_5_dione",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR196688"
+      "id": "xt_peptidoglycan_dimer_with_tetrapeptide_and_tripep_d-alanine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "peptidoglycan_dimer_with_tetrapeptide_and_tripep"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "d-alanine-to-h2o"
+      },
+      "note": "Shares peptidoglycan dimer with tetrapeptide and tripepetide stems (meso diaminopimelate containing) with D-alanine to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR196688"
+            "id": "MNXM151682"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "Reaction MNXR196695",
-      "substrates": [
-        {
-          "metabolite": "5_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "muscaflavin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR196695"
+      "id": "xt_peptidoglycan_dimer_with_pentapeptide_stems_meso_2-6-dimethylaniline-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "peptidoglycan_dimer_with_pentapeptide_stems_meso"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2-6-dimethylaniline-to-h2o"
+      },
+      "note": "Shares peptidoglycan dimer with pentapeptide stems (meso-diaminopimelate containing) with 2,6-dimethylaniline to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR196695"
+            "id": "MNXM741012"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_peptidoglycan_dimer_with_pentapeptide_stems_meso_d-alanine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "peptidoglycan_dimer_with_pentapeptide_stems_meso"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-alanine-to-h2o"
+      },
+      "note": "Shares peptidoglycan dimer with pentapeptide stems (meso-diaminopimelate containing) with D-alanine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM741012"
           }
         ]
       }

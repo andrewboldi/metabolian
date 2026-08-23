@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway xylotetraose-to-d-xylotrionate "xylotetraose to D-xylotrionate" {
-  spacing 164
+  spacing 170
 
   spine at 0,0 {
     xylotetraose
@@ -14,5 +14,11 @@ pathway xylotetraose-to-d-xylotrionate "xylotetraose to D-xylotrionate" {
     d_xylotriono_1_5_lactone
     <-> . +h2o -hplus
     d_xylotrionate
+  }
+
+  branch from xylotetraose side left {
+    xylotetraose
+    <-> . +o2 +h2o2
+    d_xylotetraono_1_5_lactone
   }
 }

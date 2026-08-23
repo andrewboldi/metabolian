@@ -1,0 +1,323 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "dodecanoyl-coa-to-coa-null",
+  "name": "dodecanoyl-CoA to CoA",
+  "category": "carbohydrate-metabolism",
+  "summary": "A 3-step route from dodecanoyl-CoA to CoA, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR165300"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "dodecanoyl_coa",
+      "name": "dodecanoyl-CoA",
+      "formula": "C33H54N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1092909"
+      }
+    },
+    {
+      "id": "4_3_methylbutanoyl_sucrose",
+      "name": "4-(3-methylbutanoyl)sucrose",
+      "short": "4-(3-methylbutanoyl…",
+      "formula": "C17H30O12",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM683063"
+      }
+    },
+    {
+      "id": "3_dodecanoyl_4_3_methylbutanoyl_sucrose",
+      "name": "3-dodecanoyl-4-(3-methylbutanoyl)sucrose",
+      "short": "3-dodecanoyl-4-(3-m…",
+      "formula": "C29H52O13",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM683058"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "3_methylbutanoyl_coa",
+      "name": "3-methylbutanoyl-CoA",
+      "formula": "C26H40N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1363975"
+      }
+    },
+    {
+      "id": "3_dodecanoyl_3_4_di_3_methylbutanoyl_sucrose",
+      "name": "3-dodecanoyl-3',4-di(3-methylbutanoyl)sucrose",
+      "short": "3-dodecanoyl-3',4-d…",
+      "formula": "C34H60O14",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM683059"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1104266"
+      }
+    },
+    {
+      "id": "2_acetyl_3_dodecanoyl_3_4_di_3_methylbutanoyl_su",
+      "name": "2-acetyl-3-dodecanoyl-3',4-di(3-methylbutanoyl)sucrose",
+      "short": "2-acetyl-3-dodecano…",
+      "formula": "C36H62O15",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM683047"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR165300",
+      "substrates": [
+        {
+          "metabolite": "dodecanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4_3_methylbutanoyl_sucrose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_dodecanoyl_4_3_methylbutanoyl_sucrose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR165300"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR165300"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR165302",
+      "substrates": [
+        {
+          "metabolite": "3_methylbutanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_dodecanoyl_4_3_methylbutanoyl_sucrose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_dodecanoyl_3_4_di_3_methylbutanoyl_sucrose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR165302"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR165302"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR165304",
+      "substrates": [
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_dodecanoyl_3_4_di_3_methylbutanoyl_sucrose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_acetyl_3_dodecanoyl_3_4_di_3_methylbutanoyl_su",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR165304"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR165304"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3_dodecanoyl_4_3_methylbutanoyl_sucrose_dimethylsulfoniopropanoyl-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_dodecanoyl_4_3_methylbutanoyl_sucrose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dimethylsulfoniopropanoyl-to-h2o"
+      },
+      "note": "Shares 3-dodecanoyl-4-(3-methylbutanoyl)sucrose with dimethylsulfoniopropanoyl… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM683058"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_dodecanoyl_4_3_methylbutanoyl_sucrose_dodecanoyl-coa-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_dodecanoyl_4_3_methylbutanoyl_sucrose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dodecanoyl-coa-to-coa"
+      },
+      "note": "Shares 3-dodecanoyl-4-(3-methylbutanoyl)sucrose with dodecanoyl-CoA to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM683058"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_dodecanoyl_4_3_methylbutanoyl_sucrose_tetradecyl-acetate-to-15-hydroxypalmitate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_dodecanoyl_4_3_methylbutanoyl_sucrose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "tetradecyl-acetate-to-15-hydroxypalmitate"
+      },
+      "note": "Shares 3-dodecanoyl-4-(3-methylbutanoyl)sucrose with Tetradecyl acetate to 15-hydroxypalmitate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM683058"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_dodecanoyl_3_4_di_3_methylbutanoyl_sucrose_dodecanoyl-coa-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_dodecanoyl_3_4_di_3_methylbutanoyl_sucrose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dodecanoyl-coa-to-coa"
+      },
+      "note": "Shares 3-dodecanoyl-3',4-di(3-methylbutanoyl)sucrose with dodecanoyl-CoA to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM683059"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_acetyl_3_dodecanoyl_3_4_di_3_methylbutanoyl_su_dodecanoyl-coa-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_acetyl_3_dodecanoyl_3_4_di_3_methylbutanoyl_su"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dodecanoyl-coa-to-coa"
+      },
+      "note": "Shares 2-acetyl-3-dodecanoyl-3',4-di(3-methylbutanoyl)sucrose with dodecanoyl-CoA to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM683047"
+          }
+        ]
+      }
+    }
+  ]
+}

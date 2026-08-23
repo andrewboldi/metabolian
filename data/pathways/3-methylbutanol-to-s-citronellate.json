@@ -1,0 +1,581 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-methylbutanol-to-s-citronellate",
+  "name": "3-methylbutanol to (S)-citronellate",
+  "category": "energy-metabolism",
+  "summary": "A 4-step route from 3-methylbutanol to (S)-citronellate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR172137"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_methylbutanol",
+      "name": "3-methylbutanol",
+      "formula": "C5H12O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1670"
+      }
+    },
+    {
+      "id": "n_n_dimethyl_4_nitrosoaniline",
+      "name": "N,N-dimethyl-4-nitrosoaniline",
+      "short": "N,N-dimethyl-4-nitr…",
+      "formula": "C8H10N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59990"
+      }
+    },
+    {
+      "id": "3_methylbutanal",
+      "name": "3-methylbutanal",
+      "formula": "C5H10O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1711"
+      }
+    },
+    {
+      "id": "4_hydroxylamino_n_n_dimethylaniline",
+      "name": "4-(hydroxylamino)-N,N-dimethylaniline",
+      "short": "4-(hydroxylamino)-N…",
+      "formula": "C8H12N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59991"
+      }
+    },
+    {
+      "id": "citronellal",
+      "name": "citronellal",
+      "formula": "C10H18O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:47856"
+      }
+    },
+    {
+      "id": "r_citronellol",
+      "name": "(R)-(+)-citronellol",
+      "formula": "C10H20O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:10360"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "s_citronellal",
+      "name": "(S)-(−)-citronellal",
+      "formula": "C10H18O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:368"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "s_citronellate",
+      "name": "(S)-citronellate",
+      "formula": "C10H17O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:143914"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_99_36",
+      "name": "alcohol dehydrogenase (nicotinoprotein)",
+      "ec": [
+        "1.1.99.36"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_71",
+      "name": "alcohol dehydrogenase [NAD(P)(+)]",
+      "ec": [
+        "1.1.1.71"
+      ],
+      "xrefs": {
+        "uniprot": "P16152"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "alcohol dehydrogenase (nicotinoprotein)",
+      "ec": "1.1.99.36",
+      "substrates": [
+        {
+          "metabolite": "3_methylbutanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_n_dimethyl_4_nitrosoaniline",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_methylbutanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4_hydroxylamino_n_n_dimethylaniline",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_99_36"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR172137"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR172137"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "alcohol dehydrogenase (nicotinoprotein)",
+      "ec": "1.1.99.36",
+      "substrates": [
+        {
+          "metabolite": "citronellal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4_hydroxylamino_n_n_dimethylaniline",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_citronellol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_n_dimethyl_4_nitrosoaniline",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_99_36"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR172138"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR172138"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "alcohol dehydrogenase [NAD(P)(+)]",
+      "ec": "1.1.1.71",
+      "substrates": [
+        {
+          "metabolite": "r_citronellol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "s_citronellal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_71"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR181262"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR181262"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(S)-(-)-citronellal + NADP(+) + H2O = (S)-(-)-citronellate + NADPH + 2 H(+)",
+      "equation": "(S)-(-)-citronellal + NADP(+) + H2O = (S)-(-)-citronellate + NADPH + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "s_citronellal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_citronellate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:60740"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:60740"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_citronellal_2e-4e-undeca-2-4-dieno-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "citronellal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2e-4e-undeca-2-4-dieno-to-nad"
+      },
+      "note": "Shares citronellal with (2E, 4E)-undeca-2,4-dieno… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:47856"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_citronellal_diphosphate-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "citronellal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-nadph"
+      },
+      "note": "Shares citronellal with diphosphate to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:47856"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_citronellol_2e-4e-undeca-2-4-dieno-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_citronellol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2e-4e-undeca-2-4-dieno-to-nad"
+      },
+      "note": "Shares (R)-(+)-citronellol with (2E, 4E)-undeca-2,4-dieno… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:10360"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_citronellol_diphosphate-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_citronellol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-nadph"
+      },
+      "note": "Shares (R)-(+)-citronellol with diphosphate to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:10360"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_citronellal_3e-nonenoyl-coa-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_citronellal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3e-nonenoyl-coa-to-nad"
+      },
+      "note": "Shares (S)-(−)-citronellal with (3E)-nonenoyl-CoA to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:368"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_citronellal_5-chloro-trans-dienelacto-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_citronellal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-chloro-trans-dienelacto-to-nad"
+      },
+      "note": "Shares (S)-(−)-citronellal with 5-chloro-trans-dienelacto… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:368"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_citronellal_beta-d-ribosylnicotinate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_citronellal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-d-ribosylnicotinate-to-h2o"
+      },
+      "note": "Shares (S)-(−)-citronellal with beta-D-ribosylnicotinate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:368"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_citronellal_geranylgeranyl-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_citronellal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "geranylgeranyl-to-h2o"
+      },
+      "note": "Shares (S)-(−)-citronellal with geranylgeranyl… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:368"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_citronellal_nadh-to-nadph-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_citronellal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-nadph-null"
+      },
+      "note": "Shares (S)-(−)-citronellal with NADH to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:368"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_citronellal_s-citronellol-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_citronellal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-citronellol-to-coa"
+      },
+      "note": "Shares (S)-(−)-citronellal with (S)-(−)-citronellol to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:368"
+          }
+        ]
+      }
+    }
+  ]
+}

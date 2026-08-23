@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway phosphatidylcholine-to-n-acylsphingosine "phosphatidylcholine to N-acylsphingosine" {
-  spacing 220
+  spacing 226
 
   spine at 0,0 {
     phosphatidylcholine
@@ -18,25 +18,31 @@ pathway phosphatidylcholine-to-n-acylsphingosine "phosphatidylcholine to N-acyls
 
   branch from 1_2_diglyceride side left {
     1_2_diglyceride
-    <-> . +1_2_diacyl_3_linoleoylglycerol +n_hydroxy_ultra_long_chain_fatty_acyl_sphingosin
-    n_linoleoyloxy_ultra_long_chain_fatty_acyl_sphin
-  }
-
-  branch from 1_2_diglyceride side right {
-    1_2_diglyceride
     <-> . +h2o +fatty-acid +hplus
     2_monoglyceride
   }
 
+  branch from n_acylsphingosine side right {
+    n_acylsphingosine
+    <-> . +udp_d_galactose +udp +hplus
+    n_acyl_d_galactosylsphingosine
+  }
+
   branch from n_acylsphingosine side left {
     n_acylsphingosine
-    <-> . +phosphatidylcholine +1_o_acyl_sn_glycero_3_phosphocholine
-    1_o_acyl_n_acylsphingosine
+    <-> . +fe2 +o2 +hplus +iron +h2o
+    n_acyl_4e_14z_sphingadienine
   }
 
   branch from n_acylsphingosine side right {
     n_acylsphingosine
-    <-> ec_1_14_19_18 [1.14.19.18] +fe2 +o2 +hplus +iron +h2o
-    n_acyl_4e_8e_sphinga_4_8_dienine
+    <-> . +n_acyl_d_galactosylsphingosine +cholesterol
+    cholesteryl_d_galactoside
+  }
+
+  branch from n_acylsphingosine side left {
+    n_acylsphingosine
+    <-> . +xylosyl_d_ceramide_d18_1_4e +cholesterol
+    cholesteryl_d_xyloside
   }
 }

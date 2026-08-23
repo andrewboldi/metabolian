@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-inner-core-oligosaccharid-null "UDP to inner core oligosaccharidâ€¦" {
-  spacing 266
+  spacing 224
 
   spine at 0,0 {
     udp
@@ -14,47 +14,5 @@ pathway udp-to-inner-core-oligosaccharid-null "UDP to inner core oligosaccharidâ
     h
     <-> . +adp_l_glycero_d_manno_heptose +phospho_heptosyl_heptosyl_kdo2_lipida -h -inner_core_oligosaccharide_lipid_a
     adp
-  }
-
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> . +udp +cucurbitacin_c_3_o_beta_d_glucopyranoside +h
-    cucurbitacin_c
-  }
-
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> . +udp +cucurbitacin_e_2_o_d_glucopyranoside +h
-    cucurbitacin_e
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    20_0_18_2_ps
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    20_0_18_3_ps
-  }
-
-  branch from adp side left {
-    adp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +phosphate +atp +h2o
-    1_11z_eicosenoyl_2_9z_12z_octadecadienoyl_sn_gly
-  }
-
-  branch from adp side right {
-    adp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +phosphate +atp +h2o
-    ps_20_1_11z_18_3_9z_12z_15z
-  }
-
-  branch from phospho_heptosyl_heptosyl_kdo2_lipida side left {
-    phospho_heptosyl_heptosyl_kdo2_lipida
-    <-> . +atp +h +adp
-    heptosyl_heptosyl_kdo2_lipida
   }
 }

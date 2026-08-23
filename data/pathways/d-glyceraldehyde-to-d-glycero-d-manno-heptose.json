@@ -1,0 +1,376 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-glyceraldehyde-to-d-glycero-d-manno-heptose",
+  "name": "D-glyceraldehyde… to D-glycero-D-manno-heptose…",
+  "category": "other",
+  "summary": "A 3-step route from D-glyceraldehyde 3-phosphate to D-glycero-D-manno-heptose 7-phosphate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR164676"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_glyceraldehyde_3_phosphate",
+      "name": "D-glyceraldehyde 3-phosphate",
+      "short": "D-glyceraldehyde 3-P",
+      "formula": "C3H5O6P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1372045"
+      }
+    },
+    {
+      "id": "rifamycin_l",
+      "name": "Rifamycin L",
+      "formula": "C39H49NO14",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:224235"
+      }
+    },
+    {
+      "id": "d_xylulose_5_phosphate",
+      "name": "D-xylulose 5-phosphate",
+      "short": "D-xylulose 5-P",
+      "formula": "C5H9O8P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM186"
+      }
+    },
+    {
+      "id": "rifamycin_s",
+      "name": "Rifamycin S",
+      "formula": "C37H45NO12",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:34948"
+      }
+    },
+    {
+      "id": "alpha_d_ribofuranose_5_phosphate",
+      "name": "alpha-D-ribofuranose 5-phosphate",
+      "short": "alpha-D-ribofuranos…",
+      "formula": "C5H11O8P",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1363910"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "d_sedoheptulose_7_phosphate",
+      "name": "D-sedoheptulose 7-phosphate",
+      "short": "D-sedoheptulose 7-P",
+      "formula": "C7H13O10P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM733314"
+      }
+    },
+    {
+      "id": "d_glycero_d_manno_heptose_7_phosphate",
+      "name": "D-glycero-D-manno-heptose 7-phosphate",
+      "short": "D-glycero-D-manno-h…",
+      "formula": "C7H15O10P",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM739658"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_2_1_1",
+      "name": "transketolase",
+      "ec": [
+        "2.2.1.1"
+      ],
+      "xrefs": {
+        "uniprot": "P51854"
+      }
+    },
+    {
+      "id": "ec_5_3_1_28",
+      "name": "D-sedoheptulose-7-phosphate isomerase",
+      "ec": [
+        "5.3.1.28"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR164676",
+      "substrates": [
+        {
+          "metabolite": "d_glyceraldehyde_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "rifamycin_l",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_xylulose_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "rifamycin_s",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR164676"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR164676"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "transketolase",
+      "ec": "2.2.1.1",
+      "substrates": [
+        {
+          "metabolite": "alpha_d_ribofuranose_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_xylulose_5_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glyceraldehyde_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "d_sedoheptulose_7_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_2_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR152015"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR152015"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "D-sedoheptulose-7-phosphate isomerase",
+      "ec": "5.3.1.28",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "d_sedoheptulose_7_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glycero_d_manno_heptose_7_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_1_28"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR151868"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR151868"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_d_xylulose_5_phosphate_alpha-beta-dihydroxyethyl-to-r-lactaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_xylulose_5_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-beta-dihydroxyethyl-to-r-lactaldehyde"
+      },
+      "note": "Shares D-xylulose 5-phosphate with alpha,beta-Dihydroxyethyl… to (R)-lactaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM186"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_xylulose_5_phosphate_nadh-to-cdp-d-arabinitol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_xylulose_5_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-cdp-d-arabinitol"
+      },
+      "note": "Shares D-xylulose 5-phosphate with NADH to CDP-D-arabinitol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM186"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_xylulose_5_phosphate_sedoheptulose-1-phosphate-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_xylulose_5_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sedoheptulose-1-phosphate-to-nad"
+      },
+      "note": "Shares D-xylulose 5-phosphate with sedoheptulose 1-phosphate to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM186"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_rifamycin_s_co2-to-arachidonate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "rifamycin_s"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "co2-to-arachidonate"
+      },
+      "note": "Shares Rifamycin S with CO2 to arachidonate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:34948"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glycero_d_manno_heptose_7_phosphate_5-hydroperoxy-epa-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glycero_d_manno_heptose_7_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-hydroperoxy-epa-to-h2o"
+      },
+      "note": "Shares D-glycero-D-manno-heptose 7-phosphate with 5-hydroperoxy-EPA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM739658"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glycero_d_manno_heptose_7_phosphate_adp-d-glycero-beta-d-mann-to-d-glycero-d-manno-h",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glycero_d_manno_heptose_7_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "adp-d-glycero-beta-d-mann-to-d-glycero-d-manno-h"
+      },
+      "note": "Shares D-glycero-D-manno-heptose 7-phosphate with ADP-D-glycero-beta-D-mann… to D-glycero-D-manno-heptose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM739658"
+          }
+        ]
+      }
+    }
+  ]
+}

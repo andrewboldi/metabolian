@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway h-to-h "H to H" {
-  spacing 188
+  spacing 248
 
   spine at 0,0 {
     h
@@ -18,20 +18,20 @@ pathway h-to-h "H to H" {
 
   branch from nadp side left {
     nadp
-    <-> ec_1_3_1_112 [1.3.1.112] +3_hydroxy_2_phenylchromenylium +h +nadph
-    3_flavanol_trans
+    <-> ec_1_1_1_324 [1.1.1.324] +e_hept_2_enal +h +nadph
+    trans_2_heptenol
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_3_1_112 [1.3.1.112] +3_hydroxy_2_phenylchromenylium +h +nadph
-    cis_3_flavanol
+    <-> ec_1_1_1_209 [1.1.1.209] +testosterone +h +nadph
+    androst_4_ene_3alpha_17beta_diol
   }
 
   branch from dtdp side left {
     dtdp
-    <-> . +dtdp_beta_l_rhamnose +k_252c +h
-    k252d
+    <-> . +mycinamicin_vi +dtdp_6_deoxy_alpha_d_allose
+    mycinamicin_vii
   }
 
   branch from dtdp side right {
@@ -42,13 +42,73 @@ pathway h-to-h "H to H" {
 
   branch from h side left {
     h
-    <-> . +dtdp_4_oxo_2_deoxy_alpha_d_pentos_2_ene +nadph +nadp
-    dtdp_4_oxo_2_deoxy_beta_l_xylose
+    <-> ec_1_2_98_1 [1.2.98.1] +pentan_1_ol +pentanoate +h2o
+    pentanal
   }
 
   branch from h side right {
     h
-    <-> . +2_oxoglutarate +dtdp_4_amino_2_4_dideoxy_beta_l_xylose +dtdp_4_oxo_2_deoxy_beta_l_xylose
-    l_glutamate
+    <-> ec_1_1_1_209 [1.1.1.209] +androstenediol_3_sulfate +nadp +nadph
+    dehydroepiandrosterone_3_sulfate
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_1_4_2 [3.1.4.2] +glycerol_1_phosphate +l_serine +h2o
+    glycerol_1_phosphoserine
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_1_1_1 [3.1.1.1] +4_methylumbelliferyl_butyate +h2o +butanoate
+    4_methylumbelliferone
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_14_14_1 [1.14.14.1] +n_hydroxy_iq +nadp +h2o +h +o2
+    3_methyl_3h_imidazo_4_5_f_quinolin_2_amine
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_14_14_91 [1.14.14.91] +2_fluoro_trans_cinnamate +h +o2 +nadp +h2o
+    2_fluoro_4_hydroxycinnamate
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_14_14_91 [1.14.14.91] +2_chloro_trans_cinnamate +h +o2 +nadph +h2o
+    2_chloro_4_hydroxycinnamate
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_14_14_91 [1.14.14.91] +3_coumaric_acid +h +o2 +nadph +h2o
+    caffeic_acid
+  }
+
+  branch from dtdp_l_oleandrose side left {
+    dtdp_l_oleandrose
+    <-> . +avermectin_a2b_aglycone +dtdp +h
+    avermectin_a2b_monosaccharide
+  }
+
+  branch from dtdp_l_oleandrose side right {
+    dtdp_l_oleandrose
+    <-> . +avermectin_a2b_aglycone +dtdp +h
+    avermectin_a2b_monosaccharide
+  }
+
+  branch from dtdp side left {
+    dtdp
+    <-> . +2_o_alpha_l_rhamnosylisoorietin +isoorientin
+    dtdp_beta_l_rhamnose
+  }
+
+  branch from dtdp side right {
+    dtdp
+    <-> ec_2_4_1_13 [2.4.1.13] +sucrose +h +keto_d_fructose
+    dtdp_alpha_d_glucose
   }
 }

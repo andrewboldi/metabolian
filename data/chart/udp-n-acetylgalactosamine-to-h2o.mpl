@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-n-acetylgalactosamine-to-h2o "UDP-N-acetylgalactosamine… to H2O" {
-  spacing 280
+  spacing 268
 
   spine at 0,0 {
     udp_n_acetylgalactosamine_5_6_ene
@@ -12,45 +12,57 @@ pathway udp-n-acetylgalactosamine-to-h2o "UDP-N-acetylgalactosamine… to H2O" {
     udp_6_deoxy_5_6_ene_n_acetyl_d_glucosamine
     <-> . +h2o
     udp_n_acetyl_alpha_d_glucosamine
-    <-> ec_2_7_8_35 [2.7.8.35] +decaprenol_phosphate -n_acetyl_alpha_d_glucosaminyl_diphospho_trans_oc
+    <-> . +alpha_d_glc_1_2_beta_d_glc_1_3_alpha_d_glcnac_pp -alpha_d_glcnac_1_p_6_alpha_d_glc_1_2_beta_d_glc -h
     ump
-    <-> ec_3_6_1_54 [3.6.1.54] +lipid_x_brucella +h -h2o
-    udp_2_n_3r_3_hydroxydodecanoyl_3_n_3r_3_hydroxyh
+    <-> ec_3_6_1_54 [3.6.1.54] +lipid_x_p_gingivalis +h -h2o
+    udp_2_n_3r_3_hydroxy_16_methylhexadecanoyl_3_o_3
   }
 
-  branch from udp_n_acetyl_alpha_d_glucosamine side left {
-    udp_n_acetyl_alpha_d_glucosamine
-    <-> . +udp +alpha_d_glcnac_1_4_beta_d_gal_1_3_galnac_pp_und +h
-    beta_d_gal_1_3_alpha_d_galnac_pp_und
+  branch from h side left {
+    h
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +l_ribose +phosphate +l_ribose +h2o
+    atp
   }
 
-  branch from udp_n_acetyl_alpha_d_glucosamine side right {
-    udp_n_acetyl_alpha_d_glucosamine
-    <-> ec_2_4_1_227 [2.4.1.227] +udp +undecaprenyl_diphospho_n_acetylmuramoyl_n_acetyl +h
-    undecaprenyl_diphospho_n_acetylmuramoyl_l_alanyl
-  }
-
-  branch from n_acetyl_alpha_d_glucosaminyl_diphospho_trans_oc side left {
-    n_acetyl_alpha_d_glucosaminyl_diphospho_trans_oc
-    <-> ec_2_4_1_289 [2.4.1.289] +dtdp_beta_l_rhamnose +dtdp +h
-    alpha_l_rhamnopyranosyl_1_3_n_acetyl_alpha_d_glu
-  }
-
-  branch from udp_2_n_3r_3_hydroxydodecanoyl_3_n_3r_3_hydroxyh side right {
-    udp_2_n_3r_3_hydroxydodecanoyl_3_n_3r_3_hydroxyh
-    <-> ec_2_4_1_182 [2.4.1.182] +dephospho_lipid_iva_brucella +h +lipid_x_brucella
-    udp
+  branch from h side right {
+    h
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    n_acetyl_alpha_d_galactosamine_1_phosphate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +indol_3_ylmethyl_glutathione +indole_3_methanol
-    glutathione
+    <-> ec_3_2_1_108 [3.2.1.108] +alpha_lactose +beta_d_galactose
+    alpha_d_glucose
   }
 
   branch from h2o side right {
     h2o
-    <-> . +indol_3_ylmethyl_l_cysteine +l_cysteine
-    indole_3_methanol
+    <-> ec_3_2_1_74 [3.2.1.74] +alpha_d_glucose
+    d_cellobiose
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_2_1_108 [3.2.1.108] +alpha_lactose +beta_d_glucose
+    beta_d_galactose
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_3_2_9 [3.3.2.9] +1r_2s_1_2_dihydronaphthalene_1_2_diol
+    1r_2s_naphthalene_1_2_oxide
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    3_6_anhydro_l_galactofuranose
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    beta_colitopyranose
   }
 }

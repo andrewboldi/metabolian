@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-epi-valiolone-to-validone-7-phosphate "5-epi-valiolone to validone 7-phosphate" {
-  spacing 182
+  spacing 158
 
   spine at 0,0 {
     5_epi_valiolone
@@ -14,30 +14,6 @@ pathway 5-epi-valiolone-to-validone-7-phosphate "5-epi-valiolone to validone 7-p
     valienone_7_phosphate
     <-> . +nadh +h -validone_7_phosphate
     nad
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_4_2_1_165 [4.2.1.165] +chlorophyllide_a
-    3_1_hydroxyethyl_chlorophyllide_a
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_1_1_1 [3.1.1.1] +3_2_2_dichlorovinyl_2_2_dimethylcyclopropanecarb +3_phenoxyphenyl_methanol
-    trans_permethrin
-  }
-
-  branch from nad side left {
-    nad
-    <-> . +nadh +4_5_dehydro_l_arginine +h
-    l_arginine
-  }
-
-  branch from nad side right {
-    nad
-    <-> . +nadh +h +butane +o2 +h2o
-    2r_butan_2_ol
   }
 
   branch from validone_7_phosphate side left {

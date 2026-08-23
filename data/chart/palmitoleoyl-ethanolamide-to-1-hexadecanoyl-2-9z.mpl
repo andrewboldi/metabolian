@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway palmitoleoyl-ethanolamide-to-1-hexadecanoyl-2-9z "palmitoleoyl ethanolamide to 1-hexadecanoyl-2-[(9Z)-he…" {
-  spacing 200
+  spacing 248
 
   spine at 0,0 {
     palmitoleoyl_ethanolamide
@@ -19,25 +19,25 @@ pathway palmitoleoyl-ethanolamide-to-1-hexadecanoyl-2-9z "palmitoleoyl ethanolam
   branch from palmitoleate side left {
     palmitoleate
     <-> . +1_2_3_tripalmitoleoylglycerol +h2o +hplus
-    2_3_dipalmitoleoyl_sn_glycerol
+    1_3_dipalmitoleoylglycerol
   }
 
   branch from palmitoleate side right {
     palmitoleate
-    <-> ec_3_1_1_98 [3.1.1.98] +o_9z_hexadecenoyl_l_serine +h2o +hplus
-    l_serine
+    <-> . +1_2_3_tripalmitoleoylglycerol +h2o +hplus
+    2_3_dipalmitoleoyl_sn_glycerol
   }
 
   branch from ethanolaminium side left {
     ethanolaminium
-    <-> . +1_1z_octadecenyl_2_9z_octadecenoyl_sn_glycero_3 +serine
-    1_1z_octadecenyl_2_oleoyl_sn_glycero_3_phosphose
+    <-> . +n_docosanoyl_ethanolamine +h2o
+    behenate
   }
 
   branch from ethanolaminium side right {
     ethanolaminium
-    <-> . +1_1z_octadecenyl_2_arachidonoyl_sn_glycero_3_pho +serine
-    1_1z_octadecenyl_2_arachidonoyl_sn_glycero_3_pho
+    <-> . +n_15z_tetracosenoyl_ethanolamine +h2o
+    15z_tetracosenoate
   }
 
   branch from palmitoleoyl_coa side left {
@@ -48,19 +48,67 @@ pathway palmitoleoyl-ethanolamide-to-1-hexadecanoyl-2-9z "palmitoleoyl ethanolam
 
   branch from palmitoleoyl_coa side right {
     palmitoleoyl_coa
-    <-> . +1_acyl_sn_glycero_3_phosphoserine +coa
-    1_acyl_2_palmitoleoyl_sn_glycero_3_phosphoserine
+    <-> . +malonyl-coa +hplus +co2 +coa
+    11z_3_oxooctadecenoyl_coa
   }
 
   branch from ppi side left {
     ppi
-    <-> . +l_selenomethionine +atp +h2o +pi
-    l_adenosylselenomethionine
+    <-> ec_4_2_3_187 [4.2.3.187] +fpp +h2o
+    2z_6e_hedycaryol
   }
 
   branch from ppi side right {
     ppi
-    <-> . +ipp +fpp
-    2_cis_6_trans_10_trans_geranylgeranyl_diphosphat
+    <-> ec_4_2_3_175 [4.2.3.175] +fpp +h2o
+    10_epi_cubebol
+  }
+
+  branch from palmitoleate side left {
+    palmitoleate
+    <-> . +12_9z_hexadecenoyloxy_octadecanoate +h2o +hplus
+    12_hydroxyoctadecanoate
+  }
+
+  branch from palmitoleate side right {
+    palmitoleate
+    <-> . +13_9z_hexadecenoyloxy_octadecanoate +h2o +hplus
+    13_hydroxyoctadecanoate
+  }
+
+  branch from palmitoleoyl_coa side left {
+    palmitoleoyl_coa
+    <-> . +1_oleoyl_sn_glycero_3_phosphate +coa
+    1_9z_octadecenoyl_2_9z_hexadecenoyl_sn_glycero_3
+  }
+
+  branch from palmitoleoyl_coa side right {
+    palmitoleoyl_coa
+    <-> . +fad +hplus +fadh2
+    2e_9z_hexadecadienoyl_coa
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_177 [4.2.3.177] +gpp
+    thujene
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_179 [4.2.3.179] +fpp
+    guaia_4_6_diene
+  }
+
+  branch from 1_palmitoyl_sn_glycerol_3_phosphate side left {
+    1_palmitoyl_sn_glycerol_3_phosphate
+    <-> . +atp +adp +hplus
+    1_hexadecanoyl_sn_glycerol
+  }
+
+  branch from 1_palmitoyl_sn_glycerol_3_phosphate side right {
+    1_palmitoyl_sn_glycerol_3_phosphate
+    <-> . +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +1_hexadecanoyl_sn_glycero_3_phosphocholine
+    1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
   }
 }

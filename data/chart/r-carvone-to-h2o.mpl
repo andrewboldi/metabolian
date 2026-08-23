@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway r-carvone-to-h2o "(R)-carvone to H2O" {
-  spacing 240
+  spacing 174
 
   spine at 0,0 {
     r_carvone
@@ -16,75 +16,9 @@ pathway r-carvone-to-h2o "(R)-carvone to H2O" {
     4s_limonene_1_2_epoxide
   }
 
-  branch from 4s_limonene side left {
-    4s_limonene
-    <-> ec_1_14_13_107 [1.14.13.107] +nadh +h +o2 +nad +h2o
-    1s_4s_limonene_1_2_epoxide
-  }
-
-  branch from 4s_limonene side right {
-    4s_limonene
-    <-> ec_1_14_13_107 [1.14.13.107] +nadh +h +o2 +nad +h2o
-    1r_4s_limonene_1_2_epoxide
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +1_docosapentenoylglycerophosphocholine_delta_7_1 +phosphate +1_docosapentenoylglycerophosphocholine_delta_7_1 +h2o
-    atp
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    1_tetracosanoyl_sn_glycero_3_phosphocholine
-  }
-
-  branch from o2 side left {
-    o2
-    <-> ec_1_1_3_40 [1.1.3.40] +d_mannitol +h2o2
-    beta_d_mannose
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +nadh +1r_5r_alpha_pinene +h +nad +h2o
-    alpha_pinene_oxide
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> . +h +4_hydroxyphenylacetonitrile +o2 +nadp +h2o
-    s_4_hydroxymandelonitrile
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> ec_1_14_13_54 [1.14.13.54] +h +an_oxosteroid +o2 +nadp +h2o
-    steroid_esters
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_14_13_99 [1.14.13.99] +h +o2 +24r_24_hydroxycholesterol +nadph +h2o
-    24r_7_24_dihydroxycholesterol
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +alpha_d_glucose +h +nadph
-    3_dehydro_d_glucose
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_histidine +l_lysine +l_methionine
-    methionyl_histidyl_lysine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_isoleucine +l_methionine
-    methionyl_methionyl_isoleucine
+  branch from 2_6_dichloroindophenol side left {
+    2_6_dichloroindophenol
+    <-> . +1r_2r_4s_limonene_1_2_diol +reduced_2_6_dichlorophenolindophenol
+    1r_4s_1_hydroxylimonen_2_one
   }
 }

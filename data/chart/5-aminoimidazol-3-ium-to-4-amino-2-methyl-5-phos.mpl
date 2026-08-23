@@ -18,15 +18,15 @@ pathway 5-aminoimidazol-3-ium-to-4-amino-2-methyl-5-phos "5-aminoimidazol-3-iumâ
     4_amino_2_methyl_5_phosphonatooxymethylpyrimidin
   }
 
-  branch from carbon_monoxide side left {
-    carbon_monoxide
-    <-> . +a_tetracycline +nadph +o2 +hplus +nadp +h2o
-    1s_10as_3_conh2_1_me2n_3_3a_4_6_ho_4_2_5_dioxo
+  branch from sam side left {
+    sam
+    <-> . +n1_methylpseudouridine_5_monophosphate_1 +5_s_methyl_5_thioadenosine +hplus
+    n1_methyl_n3_3s_3_amino_3_carboxypropyl_pseudour
   }
 
-  branch from carbon_monoxide side right {
-    carbon_monoxide
-    <-> . +tert_butylisonitrile +h2o +hplus
-    tert_butylammonium
+  branch from sam side right {
+    sam
+    <-> . +g5_ppp5_aaca_mrna +sah +hplus
+    g5_ppp5_m2_aaca_mrna
   }
 }

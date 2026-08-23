@@ -22,15 +22,15 @@ pathway 1-palmitoyl-2-arachidonoy-to-1-arachidonoyl-2-ol "1-palmitoyl-2-arachido
     1_arachidonoyl_2_oleoyl_sn_glycero_3_phosphate
   }
 
-  branch from arachidonate side left {
-    arachidonate
-    <-> . +1_heptadecanoyl_2_arachidonoyl_sn_glycero_3_phos +h2o +hplus
-    1_heptadecanoyl_sn_glycero_3_phosphoserine
+  branch from oleoyl_coa side left {
+    oleoyl_coa
+    <-> . +fad +hplus +fadh2
+    2e_9z_octadecadienoyl_coa
   }
 
-  branch from arachidonate side right {
-    arachidonate
-    <-> . +1_heptadecanoyl_2_arachidonoyl_sn_glycero_3_phos +h2o +hplus
-    1_heptadecanoyl_sn_glycero_3_phosphocholine
+  branch from oleoyl_coa side right {
+    oleoyl_coa
+    <-> . +9z_1_o_octadec_9_enyl_glycerol +coa
+    1_9z_octadecyl_3_oleoylglycerol
   }
 }

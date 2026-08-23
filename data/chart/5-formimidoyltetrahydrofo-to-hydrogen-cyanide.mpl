@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-formimidoyltetrahydrofo-to-hydrogen-cyanide "5-formimidoyltetrahydrofo… to hydrogen cyanide" {
-  spacing 216
+  spacing 240
 
   spine at 0,0 {
     5_formimidoyltetrahydrofolate
@@ -18,25 +18,49 @@ pathway 5-formimidoyltetrahydrofo-to-hydrogen-cyanide "5-formimidoyltetrahydrofo
 
   branch from glutamate side left {
     glutamate
-    <-> ec_2_6_1_49 [2.6.1.49] +ldopa +akg
-    3_4_dihydroxyphenylpyruvate
+    <-> ec_2_6_1_5 [2.6.1.5] +l_phenylalanine +akg
+    keto_phenylpyruvate
   }
 
   branch from glutamate side right {
     glutamate
-    <-> ec_2_3_1_35 [2.3.1.35] +n2_acetyl_l_ornithine +ornithine
-    nag
+    <-> . +n_acetyl_ll_2_6_diaminopimelate +akg
+    s_2_acetamido_6_oxopimelate
   }
 
   branch from hydrogen_cyanide side left {
     hydrogen_cyanide
-    <-> ec_1_14_17_4 [1.14.17.4] +1_aminocyclopropanecarboxylic_acid +ascorbate +o2 +l_dehydroascorbate +co2 +h2o
-    ethene
+    <-> ec_1_14_19_52 [1.14.19.52] +l_cys_ian +fmnh2 +o2 +fmn +co2 +h2o +hplus
+    camalexin
   }
 
   branch from hydrogen_cyanide side right {
     hydrogen_cyanide
-    <-> ec_1_14_19_52 [1.14.19.52] +l_cys_ian +fmnh2 +o2 +fmn +co2 +h2o +hplus
-    camalexin
+    <-> . +pentanal
+    2s_2_hydroxyhexanenitrile
+  }
+
+  branch from glutamate side left {
+    glutamate
+    <-> ec_1_5_3_18 [1.5.3.18] +l_saccharopinate +o2 +h2o +h2o2
+    l_allysine
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> ec_3_4_19_13 [3.4.19.13] +gsh +h2o
+    cysgly
+  }
+
+  branch from hydrogen_cyanide side left {
+    hydrogen_cyanide
+    <-> . +2_2_dimethylpropanal
+    2s_2_hydroxy_3_3_dimethylbutanenitrile
+  }
+
+  branch from hydrogen_cyanide side right {
+    hydrogen_cyanide
+    <-> . +cyclohexanecarbaldehyde
+    2s_2_cyclohexyl_2_hydroxyacetonitrile
   }
 }

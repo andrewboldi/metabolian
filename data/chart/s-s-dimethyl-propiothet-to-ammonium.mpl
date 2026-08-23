@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-s-dimethyl-propiothet-to-ammonium "S,S-dimethyl-β-propiothet… to ammonium" {
-  spacing 272
+  spacing 338
 
   spine at 0,0 {
     s_s_dimethyl_propiothetin
@@ -22,49 +22,115 @@ pathway s-s-dimethyl-propiothet-to-ammonium "S,S-dimethyl-β-propiothet… to am
 
   branch from menaquinone_8 side left {
     menaquinone_8
-    <-> . +thiosulfate +menaquinol_8
-    tetrathionate
+    <-> . +menaquinol_8 +o2 +h2o
+    pmf
   }
 
   branch from menaquinone_8 side right {
     menaquinone_8
-    <-> . +thiosulfate +h +sulfite +menaquinol_8
-    trithionate
+    <-> . +menaquinol_8 +dimethyl_sulfoxide +h2o
+    dimethyl_sulfide
   }
 
   branch from menaquinol_8 side left {
     menaquinol_8
-    <-> . +trimethylamine +menaquinone_8 +h2o +trimethylamine_n_oxide
+    <-> ec_1_2_2_1 [1.2.2.1] +pmf +co2 +pmf +menaquinone_8 +formate
     h
   }
 
   branch from menaquinol_8 side right {
     menaquinol_8
-    <-> . +l_aspartate +menaquinone_8
-    iminoaspartate
+    <-> . +pmf +co2 +pmf +menaquinone_8 +h
+    formate
   }
 
   branch from oxaloacetate side left {
     oxaloacetate
-    <-> ec_2_3_3_1 [2.3.3.1] +acetyl_coa +h2o +coa +hplus
-    citrate
+    <-> ec_4_1_3_17 [4.1.3.17] +pyruvate
+    2_hydroxy_4_oxobutane_1_2_4_tricarboxylate
   }
 
   branch from oxaloacetate side right {
     oxaloacetate
-    <-> ec_4_2_1_81 [4.2.1.81] +h2o
-    d_tartrate
+    <-> . +propionyl_coa +h2o +coa +hplus
+    2_methylcitrate
   }
 
   branch from nh3 side left {
     nh3
-    <-> ec_1_14_12_14 [1.14.12.14] +2_aminobenzenesulfonate +nadh +o2 +hplus +nad
-    2_3_dihydroxybenzenesulfonate
+    <-> . +l_asparagine +h2o
+    l_aspartate
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_2_3_2_14 [2.3.2.14] +d_alanine +glutamine
-    l_glutamyl_d_alaninate
+    <-> . +4_hydroxyestrone +o2 +h2o +hplus
+    pyridinestrone_3_carboxylate
+  }
+
+  branch from menaquinol_8 side left {
+    menaquinol_8
+    <-> ec_1_2_2_1 [1.2.2.1] +pmf +pmf +menaquinone_8 +h +formate
+    co2
+  }
+
+  branch from menaquinol_8 side right {
+    menaquinol_8
+    <-> . +adenosine_3_5_bisphosphate +menaquinone_8 +h +sulfite
+    3_phosphoadenylyl_sulfate
+  }
+
+  branch from menaquinone_8 side left {
+    menaquinone_8
+    <-> . +beta_d_glucose +menaquinol_8
+    d_glucono_1_5_lactone
+  }
+
+  branch from menaquinone_8 side right {
+    menaquinone_8
+    <-> . +nitrite +menaquinol_8 +h +h2o
+    nitric_oxide
+  }
+
+  branch from malate side left {
+    malate
+    <-> ec_3_1_2_30 [3.1.2.30] +h2o +coa +hplus
+    3s_3_carboxy_3_hydroxypropanoyl_coa
+  }
+
+  branch from oxaloacetate side right {
+    oxaloacetate
+    <-> ec_4_1_1_32 [4.1.1.32] +itp +phosphonatoenolpyruvate +co2
+    idp
+  }
+
+  branch from oxaloacetate side left {
+    oxaloacetate
+    <-> . +l_kynurenine +aspartate
+    4_2_aminophenyl_2_4_dioxobutanoate
+  }
+
+  branch from nitrite side right {
+    nitrite
+    <-> ec_1_14_12_23 [1.14.12.23] +2_chloro_6_nitrotoluene +nadh +o2 +nad
+    4_chloro_3_methylcatechol
+  }
+
+  branch from nitrite side left {
+    nitrite
+    <-> ec_1_14_12_23 [1.14.12.23] +2_chloro_4_nitrotoluene +nadh +o2 +nad
+    3_chloro_4_methylcatechol
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> . +hco3 +h2o +hplus
+    carbamate
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> . +3_4_phosphooxy_l_aspartate_adenylyl_3_group +pi +hplus
+    3_l_asparaginyl_adenylyl_1_group
   }
 }

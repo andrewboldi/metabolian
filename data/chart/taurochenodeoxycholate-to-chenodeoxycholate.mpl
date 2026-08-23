@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway taurochenodeoxycholate-to-chenodeoxycholate "taurochenodeoxycholate to chenodeoxycholate" {
-  spacing 242
+  spacing 230
 
   spine at 0,0 {
     taurochenodeoxycholate
@@ -24,20 +24,8 @@ pathway taurochenodeoxycholate-to-chenodeoxycholate "taurochenodeoxycholate to c
 
   branch from chenodeoxycholate side right {
     chenodeoxycholate
-    <-> . +udp_d_glucuronate +udp
-    chenodeoxycholic_acid_24_o_d_glucuronide
-  }
-
-  branch from taurine side left {
-    taurine
-    <-> . +stearoyl_coa +coa +hplus
-    n_stearoyltaurine
-  }
-
-  branch from taurine side right {
-    taurine
-    <-> . +icosanoyl_coa +coa +hplus
-    n_icosanoyltaurine
+    <-> . +nadp +nadph +hplus
+    7_oxolithocholate
   }
 
   branch from chenodeoxycholoyl_coa side left {
@@ -46,15 +34,15 @@ pathway taurochenodeoxycholate-to-chenodeoxycholate "taurochenodeoxycholate to c
     3_oxochenodeoxycholoyl_coa
   }
 
-  branch from ppi side right {
-    ppi
-    <-> . +2_cis_6_cis_farnesyl_diphosphate
-    1e_4e_8e_humulene
+  branch from taurochenodeoxycholate side right {
+    taurochenodeoxycholate
+    <-> . +nad +nadh +hplus
+    7_oxotaurolithocholate
   }
 
-  branch from ppi side left {
-    ppi
-    <-> . +2_cis_6_cis_farnesyl_diphosphate
-    curcumene
+  branch from taurochenodeoxycholate side left {
+    taurochenodeoxycholate
+    <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
+    taurochenodeoxycholate_3_sulfate
   }
 }

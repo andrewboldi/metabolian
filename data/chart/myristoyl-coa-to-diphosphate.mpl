@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway myristoyl-coa-to-diphosphate "myristoyl-CoA to diphosphate" {
-  spacing 164
+  spacing 170
 
   spine at 0,0 {
     myristoyl_coa
@@ -22,9 +22,15 @@ pathway myristoyl-coa-to-diphosphate "myristoyl-CoA to diphosphate" {
     9z_12z_tetradecadienoyl_coa
   }
 
-  branch from 9z_myristoleoyl_coa side right {
-    9z_myristoleoyl_coa
-    <-> . +carnitine +coa
-    o_9z_tetradecenoyl_l_carnitine
+  branch from myristoyl_coa side right {
+    myristoyl_coa
+    <-> . +fad +hplus +fadh2
+    trans_tetradec_2_enoyl_coa
+  }
+
+  branch from myristoyl_coa side left {
+    myristoyl_coa
+    <-> . +ketosphinganine +coa +hplus
+    n_myristoyl_3_ketodihydrosphingosine
   }
 }

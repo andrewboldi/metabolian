@@ -4,93 +4,171 @@
 # edit the generator, not this file.
 
 pathway diphosphate-to-h2o-null "diphosphate to H2O" {
-  spacing 230
+  spacing 336
 
   spine at 0,0 {
     diphosphate
-    <-> . +ferrichrome_a +h +amp +h2o -methylglutaconyl_hydroxy_ornithine -glycine -atp -l_serine
-    fe
-    <-> . +enterobactin -fe_iii_enterobactin
+    <-> . +3_amino_4_hydroxybenzoate_adenylate -atp -3_amino_4_hydroxybenzoate
     h
-    <-> ec_3_6_3_34 [3.6.3.34] +adp +fe_iii_enterobactin +phosphate -fe_iii_enterobactin -h2o
-    atp
-  }
-
-  branch from fe side left {
-    fe
-    <-> . +hydroxyl +h2o +h +h2o2
-    fe
-  }
-
-  branch from fe side right {
-    fe
-    <-> . +hydrogen_oxide +h2o +fe +h
-    h2o2
-  }
-
-  branch from methylglutaconyl_hydroxy_ornithine side left {
-    methylglutaconyl_hydroxy_ornithine
-    <-> . +3_methyl_2e_glutaconyl_coa +n5_hydroxy_l_ornithine
-    coa
-  }
-
-  branch from glycine side right {
-    glycine
-    <-> ec_4_1_2_5 [4.1.2.5] +2_amino_3_hydroxybutanoic_acid
-    acetaldehyde
-  }
-
-  branch from glycine side left {
-    glycine
-    <-> ec_3_4_11_4 [3.4.11.4] +ala_ala +h2o
-    gly_ala_ala
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_6_3_2_2 [6.3.2.2] +l_isoleucine +l_glutamate +adp +phosphate
-    l_gamma_glutamyl_l_isoleucine
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_6_3_2_1 [6.3.2.1] +diphosphate +pantoyl_adenylate +h
-    r_pantoate
-  }
-
-  branch from l_serine side right {
-    l_serine
-    <-> ec_3_5_1_18 [3.5.1.18] +l_aspartate +h +h2o
-    asp_ser
-  }
-
-  branch from l_serine side left {
-    l_serine
-    <-> ec_2_3_1_30 [2.3.1.30] +propanoyl_coa +coa
-    o_propionyl_l_serine
-  }
-
-  branch from h side right {
+    <-> . +3_amino_4_hydroxybenzoate +phosphate +h2o -dihydroxyacetone_phosphate
+    l_aspartate_4_semialdehyde
+    <-> ec_1_5_1_43 [1.5.1.43] +putrescine +nadph -nadp -carboxyspermidine -h2o
     h
-    <-> . +e_feruloyl_coa +serotonin +coa
-    n_feruloylserotonin
   }
 
   branch from h side left {
     h
-    <-> ec_3_1_8_1 [3.1.8.1] +dimethylthiophosphate +4_nitrophenol +h2o
-    parathion_methyl
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    pgp_16_1_9z_16_1_9z
   }
 
-  branch from h2o side right {
-    h2o
-    <-> . +dehydroabietadiene_diol
+  branch from h side right {
+    h
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    phosphatidylglycerol_dihexadec_9_enoyl_n_c16_1
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    dipalmitoyl_l_1_phosphatidyl_inositol
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    dipalmitoyl_1_phosphatidyl_1d_myo_inositol_4_pho
+  }
+
+  branch from dihydroxyacetone_phosphate side left {
+    dihydroxyacetone_phosphate
+    <-> . +5_dehydro_2_deoxy_d_gluconate +atp +h +adp
+    3_oxopropanoate
+  }
+
+  branch from dihydroxyacetone_phosphate side right {
+    dihydroxyacetone_phosphate
+    <-> . +scyllo_inosose +atp +3_oxopropanoate +h
+    adp
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +dehydroabietate +h2o +o2 +nadph
     dehydroabietadienal
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +h +o2 +nadph +4_1s_3ar_4s_6ar_4_1_3_benzodioxol_5_yl_tetrahydr +h2o
+    sesamin
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_4_2_1_165 [4.2.1.165] +3_deacetyl_3_vinylbacteriochlorophyllide_a
-    3_deacetyl_3_1_hydroxyethyl_bacteriochlorophylli
+    <-> ec_2_1_2_1 [2.1.2.1] +glycine +5_10_methylenetetrahydropteroyl_hepta_l_glutamat +tetrahydropteroyl_hepta_l_glutamate
+    l_serine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_2_1_2_1 [2.1.2.1] +glycine +5_10_methylenetetrahydropteroyl_octa_l_glutamate +l_serine
+    tetrahydropteroyl_octa_l_glutamate
+  }
+
+  branch from diphosphate side left {
+    diphosphate
+    <-> ec_6_1_3_1 [6.1.3.1] +amp +4_nonyl_3_octyl_oxetan_2_one +atp
+    2r_3s_2_octyl_3_hydroxydodecanoate
+  }
+
+  branch from diphosphate side right {
+    diphosphate
+    <-> . +citrate +atp +n3_decanoyl_n3_hydroxy_1_3_diaminopropane +h +n1_citryl_n3_decanoyl_n3_hydroxy_1_3_diaminoprop
+    amp
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_2_distearoyl_sn_glycero_3_phosphocholine
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    duvoglustat
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
+    1_deoxyxylonojirimycin
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
+    alpha_d_glucose
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +atp +h2o
+    alpha_l_arabinopyanose
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +atp +h2o
+    beta_d_xylose
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_5_1_3 [3.5.1.3] +s_malate +nh4
+    2_hydroxysuccinamate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_2_1_2_1 [2.1.2.1] +6r_5_10_methylene_5_6_7_8_tetrahydrofolate +glycine +d_serine
+    6s_5_6_7_8_tetrahydrofolate
+  }
+
+  branch from dihydroxyacetone_phosphate side left {
+    dihydroxyacetone_phosphate
+    <-> ec_1_1_5_3 [1.1.5.3] +menaquinol_9 +sn_glycerol_3_phosphate
+    menaquinone_9
+  }
+
+  branch from dihydroxyacetone_phosphate side right {
+    dihydroxyacetone_phosphate
+    <-> ec_2_5_1_72 [2.5.1.72] +iminoaspartate +phosphate +h2o
+    quinolinate
+  }
+
+  branch from putrescine side left {
+    putrescine
+    <-> . +o2 +nadph +h +nadp +h2o
+    2_hydroxyputrescine
+  }
+
+  branch from putrescine side right {
+    putrescine
+    <-> . +nadh +h +4_aminobutanal +nad +h2o
+    sym_homospermidine
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +dihydrogeranylgeranyl_bacteriochlorophyll_a +nadp +h
+    geranylgeranyl_bacteriochlorophyll_a
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +tetrahydrogeranylgeranyl_bacteriochlorophyll_a +h +nadp
+    bacteriochlorophyll_a
   }
 }

@@ -98,36 +98,9 @@
       "xrefs": {
         "chebi": "CHEBI:234170"
       }
-    },
-    {
-      "id": "apiin",
-      "name": "Apiin",
-      "formula": "C26H28O14",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1371939"
-      }
-    },
-    {
-      "id": "apigenin_7_o_beta_d_glucoside",
-      "name": "apigenin 7-O-beta-D-glucoside",
-      "short": "apigenin 7-O-beta-D…",
-      "formula": "C21H19O10",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM2794"
-      }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_2_4_2_25",
-      "name": "flavone apiosyltransferase",
-      "ec": [
-        "2.4.2.25"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -254,47 +227,115 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "flavone apiosyltransferase",
-      "ec": "2.4.2.25",
-      "substrates": [
-        {
-          "metabolite": "udp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "apiin",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "udp_alpha_d_apiose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "apigenin_7_o_beta_d_glucoside",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_4_2_25"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR198173"
+      "id": "xt_udp_alpha_d_apiose_8-hydroxy-2-deoxyguanosi-to-2-deoxyguanosine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "udp_alpha_d_apiose"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "8-hydroxy-2-deoxyguanosi-to-2-deoxyguanosine"
+      },
+      "note": "Shares UDP-alpha-D-apiose with 8-hydroxy-2'-deoxyguanosi… to 2'-deoxyguanosine.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR198173"
+            "id": "MNXM1108327"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_udp_alpha_d_apiose_udp-to-3-o-l-rha-1-3-d-g",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "udp_alpha_d_apiose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-3-o-l-rha-1-3-d-g"
+      },
+      "note": "Shares UDP-alpha-D-apiose with UDP to 3-O-{α-L-Rha-(1→3)-[β-D-G….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1108327"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_o_d_xyl_1_3_d_gal_1_2_d_glca_quillaic_acid_d_x_h-to-3-o-d-xyl-1-3-d-g",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_o_d_xyl_1_3_d_gal_1_2_d_glca_quillaic_acid_d_x"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-3-o-d-xyl-1-3-d-g"
+      },
+      "note": "Shares 3-O-{β-D-Xyl-(1→3)-[β-D-Gal-(1→2)]-β-D-GlcA}-quillaic acid β-D-Xyl-(1→4)-α-L-Rha-(1→2)-β-D-Fuc ester with H to 3-O-{β-D-Xyl-(1→3)-[β-D-G….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:234167"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_o_d_xyl_1_3_d_gal_1_2_d_glca_quillaic_acid_l_r_h-to-3-o-d-xyl-1-3-d-g",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_o_d_xyl_1_3_d_gal_1_2_d_glca_quillaic_acid_l_r"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-3-o-d-xyl-1-3-d-g"
+      },
+      "note": "Shares 3-O-{β-D-Xyl-(1→3)-[β-D-Gal-(1→2)]-β-D-GlcA}-quillaic acid α-L-Rha-(1→2)-β-D-Fuc ester with H to 3-O-{β-D-Xyl-(1→3)-[β-D-G….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:234168"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_o_d_xyl_1_3_d_gal_1_2_d_glca_quillaic_acid_d_f_h-to-3-o-d-xyl-1-3-d-g",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_o_d_xyl_1_3_d_gal_1_2_d_glca_quillaic_acid_d_f"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-3-o-d-xyl-1-3-d-g"
+      },
+      "note": "Shares 3-O-{β-D-Xyl-(1→3)-[β-D-Gal-(1→2)]-β-D-GlcA}-quillaic acid β-D-Fuc ester with H to 3-O-{β-D-Xyl-(1→3)-[β-D-G….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:234170"
           }
         ]
       }

@@ -137,6 +137,15 @@
       "xrefs": {
         "chebi": "CHEBI:57783"
       }
+    },
+    {
+      "id": "meso_butane_2_3_diol",
+      "name": "meso-butane-2,3-diol",
+      "formula": "C4H10O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:75460"
+      }
     }
   ],
   "enzymes": [
@@ -173,7 +182,10 @@
       "name": "(R,R)-butanediol dehydrogenase",
       "ec": [
         "1.1.1.4"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q00796"
+      }
     }
   ],
   "reactions": [
@@ -445,6 +457,205 @@
           {
             "db": "Rhea",
             "id": "RHEA:35607"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "(R,S)-butane-2,3-diol + NAD(+) = (R)-acetoin + NADH + H(+)",
+      "equation": "(R,S)-butane-2,3-diol + NAD(+) = (R)-acetoin + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "meso_butane_2_3_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_acetoin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:75423"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:75423"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_s_acetoin_acetoin-to-butane-2-3-dione",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_acetoin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetoin-to-butane-2-3-dione"
+      },
+      "note": "Shares (S)-acetoin with acetoin to butane-2,3-dione.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15687"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_butane_2_3_dione_acetoin-to-butane-2-3-dione",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "butane_2_3_dione"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetoin-to-butane-2-3-dione"
+      },
+      "note": "Shares butane-2,3-dione with acetoin to butane-2,3-dione.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16583"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2s_2_hydroxy_2_methyl_3_oxobutanoate_2-2r-5z-2-carboxy-4-me-to-thiamine-1-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2s_2_hydroxy_2_methyl_3_oxobutanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-2r-5z-2-carboxy-4-me-to-thiamine-1-diphosphate"
+      },
+      "note": "Shares (2S)-2-hydroxy-2-methyl-3-oxobutanoate with 2-[(2R,5Z)-2-carboxy-4-me… to thiamine(1+) diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58476"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_acetoin_l-allothreonine-to-acetaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acetoin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-allothreonine-to-acetaldehyde"
+      },
+      "note": "Shares acetoin with L-allothreonine to acetaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15688"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_acetoin_urethane-to-acetaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acetoin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "urethane-to-acetaldehyde"
+      },
+      "note": "Shares acetoin with urethane to acetaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15688"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_meso_butane_2_3_diol_1-chlorohexane-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "meso_butane_2_3_diol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-chlorohexane-to-h2o"
+      },
+      "note": "Shares meso-butane-2,3-diol with 1-Chlorohexane to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75460"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_meso_butane_2_3_diol_acetoin-to-butane-2-3-dione",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "meso_butane_2_3_diol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetoin-to-butane-2-3-dione"
+      },
+      "note": "Shares meso-butane-2,3-diol with acetoin to butane-2,3-dione.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75460"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-oxoglutarate-to-2-hydroxyacetophenone "2-oxoglutarate to 2-hydroxyacetophenone" {
-  spacing 260
+  spacing 212
 
   spine at 0,0 {
     2_oxoglutarate
@@ -14,53 +14,5 @@ pathway 2-oxoglutarate-to-2-hydroxyacetophenone "2-oxoglutarate to 2-hydroxyacet
     nadp
     <-> ec_1_1_1_188 [1.1.1.188] +nadh +h +phenylglyoxal -2_hydroxyacetophenone
     nad
-  }
-
-  branch from l_glutamate side left {
-    l_glutamate
-    <-> . +l_threonine +l_tryptophan +h2o
-    tryptophanyl_threonyl_glutamate
-  }
-
-  branch from l_glutamate side right {
-    l_glutamate
-    <-> . +l_arginine +l_tyrosine +h2o
-    tyrosyl_arginyl_glutamate
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +h +o2 +n_hydroxy_l_trihomomethioninate +nadph +h2o
-    n_n_dihydroxy_l_trihomomethioninate
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +h +o2 +n_hydroxy_l_tetrahomomethioninate +nadph +h2o
-    n_n_dihydroxy_l_tetrahomomethioninate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_proline +l_lysine
-    prolyl_lysyl_proline
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_proline +l_arginine
-    prolyl_prolyl_arginine
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_145 [1.1.1.145] +nadh +h +campest_5_en_3_one
-    campesterol
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_51 [1.1.1.51] +nadh +h +campesterol
-    campest_4_en_3_one
   }
 }

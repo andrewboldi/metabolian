@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway lycopene-to-decaprenoxanthin "lycopene to decaprenoxanthin" {
-  spacing 288
+  spacing 276
 
   spine at 0,0 {
     lycopene
@@ -14,18 +14,6 @@ pathway lycopene-to-decaprenoxanthin "lycopene to decaprenoxanthin" {
     flavuxanthin
     <-> .
     decaprenoxanthin
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +kanamycin_a +gtp
-    4_guanylylkanamycin_a
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +kanamycin_a +itp
-    4_inosinylylkanamycin_a
   }
 
   branch from flavuxanthin side left {

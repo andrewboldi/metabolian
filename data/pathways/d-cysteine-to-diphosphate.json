@@ -175,32 +175,41 @@
       }
     },
     {
-      "id": "s_3_2r_phycocyanobilin_l_cysteine_2",
-      "name": "S-3-[(2R)-phycocyanobilin]-L-cysteine(2−)",
-      "short": "S-3-[(2R)-phycocyan…",
-      "formula": "C36H41N5O7S",
-      "charge": -2,
+      "id": "pseudouridine_5_phosphate_1",
+      "name": "pseudouridine 5'-phosphate(1−)",
+      "short": "pseudouridine…",
+      "formula": "C9H10N2O8P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:85280"
+        "chebi": "CHEBI:65314"
       }
     },
     {
-      "id": "3e_phycocyanobilin",
-      "name": "(3E)-phycocyanobilin",
-      "formula": "C33H36N4O6",
-      "charge": -2,
+      "id": "5_6_dihydrouridine_5_monophosphate_1",
+      "name": "5,6-dihydrouridine 5'-monophosphate(1−)",
+      "short": "5,6-dihydrouridine…",
+      "formula": "C9H12N2O8P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:85275"
+        "chebi": "CHEBI:74443"
       }
     },
     {
-      "id": "s_3_2r_phycoviolobilin_l_cysteine_2",
-      "name": "S-3-[(2R)-phycoviolobilin]-L-cysteine(2−)",
-      "short": "S-3-[(2R)-phycoviol…",
-      "formula": "C36H41N5O7S",
-      "charge": -2,
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:85288"
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
       }
     }
   ],
@@ -213,18 +222,21 @@
       ]
     },
     {
-      "id": "ec_4_4_1_30",
-      "name": "phycobiliprotein beta-cysteine-155 phycobilin lyase",
+      "id": "ec_5_4_99_19",
+      "name": "16S rRNA pseudouridine(516) synthase",
       "ec": [
-        "4.4.1.30"
+        "5.4.99.19"
       ]
     },
     {
-      "id": "ec_4_4_1_31",
-      "name": "phycoerythrocyanin alpha-cysteine-84 phycoviolobilin lyase/isomerase",
+      "id": "ec_1_3_1_91",
+      "name": "tRNA-dihydrouridine(20) synthase [NAD(P)(+)]",
       "ec": [
-        "4.4.1.31"
-      ]
+        "1.3.1.91"
+      ],
+      "xrefs": {
+        "uniprot": "Q9NX74"
+      }
     }
   ],
   "reactions": [
@@ -385,82 +397,352 @@
     },
     {
       "id": "r4",
-      "name": "phycobiliprotein beta-cysteine-155 phycobilin lyase",
-      "equation": "phycocyanobilin-L-cysteinyl(155)-[phycoerythrocyanin beta-subunit] = apo-L-cysteinyl(155)-[phycoerythrocyanin beta-subunit] + (2R,3E)-phycocyanobilin",
-      "ec": "4.4.1.30",
+      "name": "16S rRNA pseudouridine(516) synthase",
+      "equation": "uridine(516) in 16S rRNA = pseudouridine(516) in 16S rRNA",
+      "ec": "5.4.99.19",
       "substrates": [
         {
-          "metabolite": "s_3_2r_phycocyanobilin_l_cysteine_2",
+          "metabolite": "uridine_5_monophosphate_1",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "l_cysteine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "3e_phycocyanobilin",
+          "metabolite": "pseudouridine_5_phosphate_1",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_4_1_30"
+          "enzyme": "ec_5_4_99_19"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:45516"
+        "rhea": "RHEA:38867"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:45516"
+            "id": "RHEA:38867"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "phycoerythrocyanin alpha-cysteine-84 phycoviolobilin lyase/isomerase",
-      "equation": "phycoviolobilin-L-cysteinyl(84)-[phycoerythrocyanin alpha-subunit] = apo-L-cysteinyl(84)-[phycoerythrocyanin alpha-subunit] + (2R,3E)-phycocyanobilin",
-      "ec": "4.4.1.31",
+      "name": "tRNA-dihydrouridine(20) synthase [NAD(P)(+)]",
+      "equation": "5,6-dihydrouridine(20) in tRNA + NADP(+) = uridine(20) in tRNA + NADPH + H(+)",
+      "ec": "1.3.1.91",
       "substrates": [
         {
-          "metabolite": "s_3_2r_phycoviolobilin_l_cysteine_2",
+          "metabolite": "5_6_dihydrouridine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "l_cysteine",
+          "metabolite": "uridine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
-          "metabolite": "3e_phycocyanobilin",
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_4_1_31"
+          "enzyme": "ec_1_3_1_91"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:45520"
+        "rhea": "RHEA:53336"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:45520"
+            "id": "RHEA:53336"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_d_cysteine_d-cysteine-to-4-5-secobiotin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_cysteine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-cysteine-to-4-5-secobiotin"
+      },
+      "note": "Shares D-cysteine with D-cysteine to 4,5-secobiotin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:35236"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_cysteine_ent-copal-8-ol-diphosphate-to-l-cysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_cysteine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ent-copal-8-ol-diphosphate-to-l-cysteine"
+      },
+      "note": "Shares D-cysteine with ent-copal-8-ol diphosphate to L-cysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:35236"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_mercaptopyruvate_2e-4z-7e-2-hydroxy-6-ox-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "mercaptopyruvate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2e-4z-7e-2-hydroxy-6-ox-to-h2o"
+      },
+      "note": "Shares 3-Mercaptopyruvate with (2E,4Z,7E)-2-hydroxy-6-ox… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57678"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_mercaptopyruvate_alaninium-amide-to-d-pantetheine-4-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "mercaptopyruvate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alaninium-amide-to-d-pantetheine-4-phosphate"
+      },
+      "note": "Shares 3-Mercaptopyruvate with β-alaninium amide to D-pantetheine 4'-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57678"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_mercaptopyruvate_erythro-5-hydroxy-l-lysin-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "mercaptopyruvate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "erythro-5-hydroxy-l-lysin-to-succinate"
+      },
+      "note": "Shares 3-Mercaptopyruvate with erythro-5-hydroxy-L-lysin… to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57678"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_mercaptopyruvate_n-ethylglycine-to-l-glutamate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "mercaptopyruvate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-ethylglycine-to-l-glutamate"
+      },
+      "note": "Shares 3-Mercaptopyruvate with N-ethylglycine to L-glutamate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57678"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_mercaptopyruvate_r-2-hydroxybutyrate-to-l-cysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "mercaptopyruvate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-2-hydroxybutyrate-to-l-cysteine"
+      },
+      "note": "Shares 3-Mercaptopyruvate with (R)-2-hydroxybutyrate to L-cysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57678"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_mercaptopyruvate_s-2e-6e-farnesyl-l-cy-to-s-adenosyl-l-homocystei",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "mercaptopyruvate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2e-6e-farnesyl-l-cy-to-s-adenosyl-l-homocystei"
+      },
+      "note": "Shares 3-Mercaptopyruvate with S-[(2E,6E)-farnesyl]-L-cy… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57678"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_disulfanyl_l_alanine_20s-17-20-dihydroxypreg-to-hydrogen-acceptor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_disulfanyl_l_alanine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "20s-17-20-dihydroxypreg-to-hydrogen-acceptor"
+      },
+      "note": "Shares 3-disulfanyl-L-alanine with (20S)-17,20-dihydroxypreg… to hydrogen acceptor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61963"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_disulfanyl_l_alanine_3-trisulfanyl-l-alanine-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_disulfanyl_l_alanine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-trisulfanyl-l-alanine-to-diphosphate"
+      },
+      "note": "Shares 3-disulfanyl-L-alanine with 3-trisulfanyl-L-alanine to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61963"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_disulfanyl_l_alanine_c-terminal-gly-gly-l-cys-to-l-cysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_disulfanyl_l_alanine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "c-terminal-gly-gly-l-cys-to-l-cysteine"
+      },
+      "note": "Shares 3-disulfanyl-L-alanine with C-terminal Gly-Gly-L-Cys(… to L-cysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61963"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_disulfanyl_l_alanine_n-5-phosphonato-d-ribo-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_disulfanyl_l_alanine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-5-phosphonato-d-ribo-to-h2o"
+      },
+      "note": "Shares 3-disulfanyl-L-alanine with N-(5-phosphonato-β-D-ribo… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61963"
           }
         ]
       }

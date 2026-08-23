@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "l-arabinopyranose-to-2-oxoglutarate",
   "name": "α-L-arabinopyranose to 2-oxoglutarate",
-  "category": "energy-metabolism",
+  "category": "lipid-metabolism",
   "summary": "A 5-step route from α-L-arabinopyranose to 2-oxoglutarate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -129,41 +129,108 @@
       }
     },
     {
-      "id": "2_hydroxyglutarate",
-      "name": "2-hydroxyglutarate",
-      "formula": "C5H6O5",
+      "id": "3_methyldodecanoyl_coa",
+      "name": "3-methyldodecanoyl-CoA",
+      "short": "3-methyldodecanoyl-…",
+      "formula": "C34H56N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:138637"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "2_hydroxy_3_methyldodecanoyl_coa",
+      "name": "2-hydroxy-3-methyldodecanoyl-CoA",
+      "short": "2-hydroxy-3-methyld…",
+      "formula": "C34H56N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:138636"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:11596"
+        "chebi": "CHEBI:30031"
       }
     },
     {
-      "id": "pyridoxamine_5_phosphate",
-      "name": "pyridoxamine 5'-phosphate",
-      "short": "pyridoxamine 5'-P",
-      "formula": "C8H12N2O5P",
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "validoxylamine_a",
+      "name": "validoxylamine A",
+      "formula": "C14H26NO8",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:111505"
+      }
+    },
+    {
+      "id": "validoxylamine_b",
+      "name": "validoxylamine B",
+      "formula": "C14H25NO9",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:141057"
+      }
+    },
+    {
+      "id": "n2_3r_3_2_saturated_acyloxy_acyl_l_ornithine",
+      "name": "N2-[(3R)-3-(2-saturated-acyloxy)acyl]-L-ornithine",
+      "short": "N2-[(3R)-3-(2-satur…",
+      "formula": "C10H16N2O5R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138473"
+      }
+    },
+    {
+      "id": "n2_3r_3_2_hydroxyacyloxy_acyl_l_ornithine",
+      "name": "N2-[(3R)-3-(2-hydroxyacyloxy)acyl]-L-ornithine",
+      "short": "N2-[(3R)-3-(2-hydro…",
+      "formula": "C10H16N2O6R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:139171"
+      }
+    },
+    {
+      "id": "2s_3_4_hydroxyphenyl_2_isocyanopropanoate",
+      "name": "(2S)-3-(4-hydroxyphenyl)-2-isocyanopropanoate",
+      "short": "3-(4-hydroxyphenyl)…",
+      "formula": "C10H8NO3",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:58451"
+        "chebi": "CHEBI:140647"
       }
     },
     {
-      "id": "plp",
-      "name": "Pyridoxal 5'-phosphate (PLP)",
-      "short": "Pyridoxal 5'-P (PLP)",
-      "formula": "C8H8NO6P",
-      "charge": -2,
+      "id": "4_e_2_isocyanoethenyl_phenol",
+      "name": "4-[(E)-2-isocyanoethenyl]phenol",
+      "short": "4-[(E)-2-isocyanoet…",
+      "formula": "C9H7NO",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:597326"
-      }
-    },
-    {
-      "id": "d_glutamate",
-      "name": "D-glutamate",
-      "formula": "C5H8NO4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:29986"
+        "chebi": "CHEBI:140650"
       }
     }
   ],
@@ -218,10 +285,17 @@
       ]
     },
     {
-      "id": "ec_2_6_1_54",
-      "name": "pyridoxamine-phosphate transaminase",
+      "id": "ec_1_14_11_58",
+      "name": "ornithine lipid ester-linked acyl 2-hydroxylase",
       "ec": [
-        "2.6.1.54"
+        "1.14.11.58"
+      ]
+    },
+    {
+      "id": "ec_1_14_20_10",
+      "name": "tyrosine isonitrile desaturase/decarboxylase",
+      "ec": [
+        "1.14.20.10"
       ]
     }
   ],
@@ -457,25 +531,80 @@
     },
     {
       "id": "r6",
-      "name": "2-hydroxyglutarate + NAD(+) = 2-oxoglutarate + NADH + H(+)",
-      "equation": "2-hydroxyglutarate + NAD(+) = 2-oxoglutarate + NADH + H(+)",
+      "name": "3-methyldodecanoyl-CoA + 2-oxoglutarate + O2 = 2-hydroxy-3-methyldodecanoyl-CoA + succi...",
+      "equation": "3-methyldodecanoyl-CoA + 2-oxoglutarate + O2 = 2-hydroxy-3-methyldodecanoyl-CoA + succinate + CO2",
       "substrates": [
         {
-          "metabolite": "2_hydroxyglutarate",
+          "metabolite": "3_methyldodecanoyl_coa",
           "stoichiometry": 1
         },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
         {
           "metabolite": "akg",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadh",
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxy_3_methyldodecanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:55192"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55192"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "validoxylamine A + 2-oxoglutarate + O2 = validoxylamine B + succinate + CO2 + H(+)",
+      "equation": "validoxylamine A + 2-oxoglutarate + O2 = validoxylamine B + succinate + CO2 + H(+)",
+      "substrates": [
+        {
+          "metabolite": "validoxylamine_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "validoxylamine_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
           "stoichiometry": 1
         },
         {
@@ -484,61 +613,374 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:13449"
+        "rhea": "RHEA:55648"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:13449"
+            "id": "RHEA:55648"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "pyridoxamine-phosphate transaminase",
-      "equation": "pyridoxamine 5'-phosphate + 2-oxoglutarate = pyridoxal 5'-phosphate + D-glutamate",
-      "ec": "2.6.1.54",
+      "id": "r8",
+      "name": "ornithine lipid ester-linked acyl 2-hydroxylase",
+      "equation": "an N(2)-[(3R)-3-(2-saturated-acyloxy)acyl]-L-ornithine lipid + 2-oxoglutarate + O2 = a 2-hydroxyornithine lipid + succinate + CO2",
+      "ec": "1.14.11.58",
       "substrates": [
         {
-          "metabolite": "pyridoxamine_5_phosphate",
+          "metabolite": "n2_3r_3_2_saturated_acyloxy_acyl_l_ornithine",
           "stoichiometry": 1
         },
         {
           "metabolite": "akg",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "plp",
+          "metabolite": "n2_3r_3_2_hydroxyacyloxy_acyl_l_ornithine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "d_glutamate",
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_6_1_54"
+          "enzyme": "ec_1_14_11_58"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:15877"
+        "rhea": "RHEA:55756"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:15877"
+            "id": "RHEA:55756"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "tyrosine isonitrile desaturase/decarboxylase",
+      "equation": "(2S)-3-(4-hydroxyphenyl)-2-isocyanopropanoate + 2-oxoglutarate + O2 + H(+) = 4-[(E)-2-isocyanoethenyl]phenol + succinate + 2 CO2 + H2O",
+      "ec": "1.14.20.10",
+      "substrates": [
+        {
+          "metabolite": "2s_3_4_hydroxyphenyl_2_isocyanopropanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_e_2_isocyanoethenyl_phenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_20_10"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:56692"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56692"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_l_arabinopyranose_l-arabinopyranose-to-l-xylulose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_arabinopyranose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-arabinopyranose-to-l-xylulose"
+      },
+      "note": "Shares α-L-arabinopyranose with α-L-arabinopyranose to L-xylulose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:46987"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_arabinono_1_4_lactone_l-arabinopyranose-to-l-xylulose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_arabinono_1_4_lactone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-arabinopyranose-to-l-xylulose"
+      },
+      "note": "Shares L-arabinono-1,4-lactone with α-L-arabinopyranose to L-xylulose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17100"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_dehydro_3_deoxy_l_arabinonate_3-dehydro-l-gulonate-to-glycolaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_dehydro_3_deoxy_l_arabinonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-dehydro-l-gulonate-to-glycolaldehyde"
+      },
+      "note": "Shares 2-dehydro-3-deoxy-L-arabinonate with 3-dehydro-L-gulonate to glycolaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:35173"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_5_dioxopentanoate_d-arabinitol-to-2-5-dioxopentanoate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_5_dioxopentanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-arabinitol-to-2-5-dioxopentanoate"
+      },
+      "note": "Shares 2,5-dioxopentanoate with D-arabinitol to 2,5-dioxopentanoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58136"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_5_dioxopentanoate_d-galacturonate-to-2-oxoglutarate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_5_dioxopentanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-galacturonate-to-2-oxoglutarate"
+      },
+      "note": "Shares 2,5-dioxopentanoate with β-D-galacturonate to 2-oxoglutarate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58136"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_5_dioxopentanoate_trans-4-hydroxy-l-proline-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_5_dioxopentanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-4-hydroxy-l-proline-to-ammonium"
+      },
+      "note": "Shares 2,5-dioxopentanoate with trans-4-hydroxy-L-proline to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58136"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_validoxylamine_a_valienol-1-phosphate-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "validoxylamine_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "valienol-1-phosphate-to-succinate"
+      },
+      "note": "Shares validoxylamine A with valienol 1-phosphate to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:111505"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n2_3r_3_2_saturated_acyloxy_acyl_l_ornithine_6-demethylsterigmatocystin-to-acetylene",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n2_3r_3_2_saturated_acyloxy_acyl_l_ornithine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-demethylsterigmatocystin-to-acetylene"
+      },
+      "note": "Shares N2-[(3R)-3-(2-saturated-acyloxy)acyl]-L-ornithine with 6-demethylsterigmatocystin to acetylene.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:138473"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n2_3r_3_2_saturated_acyloxy_acyl_l_ornithine_n2-3r-3-2-saturated-a-to-s-adenosyl-l-homocystei",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n2_3r_3_2_saturated_acyloxy_acyl_l_ornithine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n2-3r-3-2-saturated-a-to-s-adenosyl-l-homocystei"
+      },
+      "note": "Shares N2-[(3R)-3-(2-saturated-acyloxy)acyl]-L-ornithine with N2-[(3R)-3-(2-saturated-a… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:138473"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2s_3_4_hydroxyphenyl_2_isocyanopropanoate_d-ribitol-5-phosphate-to-h2o-19925",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2s_3_4_hydroxyphenyl_2_isocyanopropanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-ribitol-5-phosphate-to-h2o-19925"
+      },
+      "note": "Shares (2S)-3-(4-hydroxyphenyl)-2-isocyanopropanoate with D-ribitol 5-phosphate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:140647"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_e_2_isocyanoethenyl_phenol_udp-to-naringin-chalcone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_e_2_isocyanoethenyl_phenol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-naringin-chalcone"
+      },
+      "note": "Shares 4-[(E)-2-isocyanoethenyl]phenol with UDP to naringin chalcone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:140650"
           }
         ]
       }

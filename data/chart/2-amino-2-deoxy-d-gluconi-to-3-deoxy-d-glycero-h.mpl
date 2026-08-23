@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-amino-2-deoxy-d-gluconi-to-3-deoxy-d-glycero-h "2-amino-2-deoxy-D-gluconi… to 3-deoxy-D-glycero-hexo-2,…" {
-  spacing 262
+  spacing 250
 
   spine at 0,0 {
     2_amino_2_deoxy_d_gluconic_acid
@@ -16,18 +16,6 @@ pathway 2-amino-2-deoxy-d-gluconi-to-3-deoxy-d-glycero-h "2-amino-2-deoxy-D-gluc
     2_dehydro_3_deoxy_d_gluconate
     <-> ec_1_1_1_127 [1.1.1.127] +nad -nadh -hplus
     3_deoxy_d_glycero_hexo_2_5_diulosonate
-  }
-
-  branch from nh3 side left {
-    nh3
-    <-> . +ornithine +o2 +h2o +h2o2
-    5_amino_2_oxopentanoic_acid
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +l_cystine +o2 +h2o +h2o2
-    2r_2_ammonio_2_carboxylatoethyl_disulfanyl_oxop
   }
 
   branch from 3_deoxy_d_glycero_hexo_2_5_diulosonate side left {

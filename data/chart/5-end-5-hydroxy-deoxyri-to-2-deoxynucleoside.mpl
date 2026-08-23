@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-end-5-hydroxy-deoxyri-to-2-deoxynucleoside "5'-end 5'-hydroxy-deoxyri… to 2'-deoxynucleoside…" {
-  spacing 196
+  spacing 202
 
   spine at 0,0 {
     5_end_5_hydroxy_deoxyribonucleotidyl_deoxyribonu
@@ -30,5 +30,11 @@ pathway 5-end-5-hydroxy-deoxyri-to-2-deoxynucleoside "5'-end 5'-hydroxy-deoxyri�
     2_deoxyribonucleoside_5_diphosphate
     <-> . +h2o +pi +hplus
     2_deoxyribonucleoside_5_triphosphate
+  }
+
+  branch from nucleoside_5_monophosphate side left {
+    nucleoside_5_monophosphate
+    <-> ec_3_1_3_97 [3.1.3.97] +h2o +pi
+    nucleoside_3_5_bisphosphate
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway gama-glutamylglutathione-to-h2o "Gama-glutamylglutathione to H2O" {
-  spacing 200
+  spacing 260
 
   spine at 0,0 {
     gama_glutamylglutathione
@@ -18,49 +18,109 @@ pathway gama-glutamylglutathione-to-h2o "Gama-glutamylglutathione to H2O" {
 
   branch from glutathione side left {
     glutathione
-    <-> . +5z_9e_14z_8xi_11r_12s_11_12_epoxy_8_hydroxyicos +h
-    11_s_15_s_dihydroxy_14_r_s_glutathionyl_5_z_8_z
+    <-> ec_2_5_1_18 [2.5.1.18] +3_methylhexane_1_3_diol +h2o
+    3_glutathion_s_yl_3_methylhexan_1_ol
   }
 
   branch from glutathione side right {
     glutathione
-    <-> ec_2_3_2_15 [2.3.2.15] +glu_cys_n_gly +h +glu_cys_n_1_gly
-    glycine
-  }
-
-  branch from 5_oxo_l_proline side left {
-    5_oxo_l_proline
-    <-> . +gama_l_glutamyl_l_alpha_aminobutyrate
-    2s_2_aminobutanoate
-  }
-
-  branch from 5_oxo_l_proline side right {
-    5_oxo_l_proline
-    <-> ec_3_4_19_6 [3.4.19.6] +protirelin +h2o
-    l_histidyl_l_prolylamide
+    <-> . +s_2_succinyl_glutathione
+    fumarate
   }
 
   branch from atp side left {
     atp
-    <-> ec_2_7_1_5 [2.7.1.5] +lyxulose +h +adp
-    l_xylulose_1_phosphate
+    <-> . +diphosphate +l_phenylalanyl_adenylate +h
+    l_phenylalanine
   }
 
   branch from atp side right {
     atp
-    <-> ec_2_7_1_5 [2.7.1.5] +lyxulose +h +adp
-    l_xylulose_1_phosphate
+    <-> . +diphosphate +l_homoserine_lactone +amp
+    l_homoserine
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_22 [3.2.1.22] +polydextrose +d_galactose
-    beta_d_glucose
+    <-> . +2_oxepin_2_3h_ylideneacetyl_coa +nadp +h +nadph
+    3_oxo_5_6_didehydrosuberyl_coa
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_4_1_1_78 [4.1.1.78] +enol_oxaloacetate
-    acetylenedicarboxylate
+    <-> ec_4_2_1_180 [4.2.1.180] +e_2_benzylidenesuccinyl_coa
+    r_s_hydroxy_phenyl_methyl_succinyl_coa
+  }
+
+  branch from glutathione side left {
+    glutathione
+    <-> . +17beta_estradiol_2_3_quinone
+    2_hydroxy_17beta_estradiol_4_s_glutathione
+  }
+
+  branch from glutathione side right {
+    glutathione
+    <-> . +17_estradiol_3_4_quinone
+    4_hydroxy_17beta_estradiol_2_s_glutathione
+  }
+
+  branch from h side left {
+    h
+    <-> . +2_3_6_trihydroxypyridine +o2 +h2o2
+    nicotine_blue
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_3_1_213 [2.3.1.213] +1_o_trans_sinapoyl_beta_d_glucose +cyanidin_3_o_6_o_glucosyl_2_o_xylosylgalactoside +cyanidin_3_o_6_o_sinapoyl_beta_d_glucosyl_1_6_be
+    glucose
+  }
+
+  branch from adp side left {
+    adp
+    <-> ec_2_7_1_50 [2.7.1.50] +5_2_hydroxyethyl_4_methyl_1_3_thiazole_2_carboxy +atp +h
+    2_2_carboxy_4_methylthiazol_5_yl_ethyl_phosphate
+  }
+
+  branch from adp side right {
+    adp
+    <-> ec_2_7_1_35 [2.7.1.35] +h +4_deoxypyridoxine_5_phosphate +atp
+    4_deoxypyridoxine
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +sep_540 +h2o
+    sep_460
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> . +1_sn_glycero_1_phospho_3_phospho_1d_myo_inositol +h2o
+    1_sn_glycero_1_phospho_1d_myo_inositol
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +diphosphate +d_aspartyl_adenylate +h
+    d_aspartate
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +diphosphate +d_tryptophanyl_adenylate +h
+    d_tryptophan
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_1_3_3_4 [1.3.3.4] +protoporphyrin_ix +o2
+    protoporphyrinogen_ix
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_1_3_3_4 [1.3.3.4] +protoporphyrin +protoporphyrinogen_ix
+    o2
   }
 }

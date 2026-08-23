@@ -1,0 +1,542 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "ursodeoxycholate-to-isolithocholate-53800",
+  "name": "ursodeoxycholate to isolithocholate",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from ursodeoxycholate to isolithocholate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:53800"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:78604"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "ursodeoxycholate",
+      "name": "ursodeoxycholate",
+      "formula": "C24H39O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78604"
+      }
+    },
+    {
+      "id": "lithocholyl_coa",
+      "name": "lithocholyl-CoA",
+      "formula": "C45H70N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:87438"
+      }
+    },
+    {
+      "id": "ursodeoxycholoyl_coa",
+      "name": "ursodeoxycholoyl-CoA",
+      "formula": "C45H70N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:137679"
+      }
+    },
+    {
+      "id": "lithocholate",
+      "name": "lithocholate",
+      "formula": "C24H39O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29744"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "3_oxo_5_cholanate",
+      "name": "3-oxo-5β-cholanate",
+      "formula": "C24H37O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:11867"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "isolithocholate",
+      "name": "isolithocholate",
+      "formula": "C24H39O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:87728"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_52",
+      "name": "3alpha-hydroxycholanate dehydrogenase (NAD(+))",
+      "ec": [
+        "1.1.1.52"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_393",
+      "name": "3beta-hydroxycholanate 3-dehydrogenase (NADP(+))",
+      "ec": [
+        "1.1.1.393"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "ursodeoxycholate + lithocholoyl-CoA = ursodeoxycholoyl-CoA + lithocholate",
+      "equation": "ursodeoxycholate + lithocholoyl-CoA = ursodeoxycholoyl-CoA + lithocholate",
+      "substrates": [
+        {
+          "metabolite": "ursodeoxycholate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "lithocholyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ursodeoxycholoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "lithocholate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:53800"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53800"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "3alpha-hydroxycholanate dehydrogenase (NAD(+))",
+      "equation": "lithocholate + NAD(+) = 3-oxo-5beta-cholan-24-oate + NADH + H(+)",
+      "ec": "1.1.1.52",
+      "substrates": [
+        {
+          "metabolite": "lithocholate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_oxo_5_cholanate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_52"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:19585"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19585"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3beta-hydroxycholanate 3-dehydrogenase (NADP(+))",
+      "equation": "3-oxo-5beta-cholan-24-oate + NADPH + H(+) = isolithocholate + NADP(+)",
+      "ec": "1.1.1.393",
+      "substrates": [
+        {
+          "metabolite": "3_oxo_5_cholanate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "isolithocholate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_393"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:47520"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47520"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_ursodeoxycholate_1-2-3-trichloropropane-to-1-3-dichloropropan-2-o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ursodeoxycholate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-3-trichloropropane-to-1-3-dichloropropan-2-o"
+      },
+      "note": "Shares ursodeoxycholate with 1,2,3-Trichloropropane to 1,3-dichloropropan-2-ol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78604"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ursodeoxycholate_3-keto-beta-d-galactose-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ursodeoxycholate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-keto-beta-d-galactose-to-h2o-null"
+      },
+      "note": "Shares ursodeoxycholate with 3-keto-beta-D-galactose to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78604"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ursodeoxycholate_allocholate-to-7-oxolithocholate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ursodeoxycholate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "allocholate-to-7-oxolithocholate"
+      },
+      "note": "Shares ursodeoxycholate with allocholate to 7-oxolithocholate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78604"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ursodeoxycholate_allocholate-to-7-oxolithocholate-53764",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ursodeoxycholate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "allocholate-to-7-oxolithocholate-53764"
+      },
+      "note": "Shares ursodeoxycholate with allocholate to 7-oxolithocholate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78604"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ursodeoxycholate_nadh-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ursodeoxycholate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-fmn"
+      },
+      "note": "Shares ursodeoxycholate with NADH to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78604"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ursodeoxycholate_ursodeoxycholate-to-isolithocholate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ursodeoxycholate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ursodeoxycholate-to-isolithocholate"
+      },
+      "note": "Shares ursodeoxycholate with ursodeoxycholate to isolithocholate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78604"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_oxo_5_cholanate_7-hydroxy-3-oxochol-4-en-to-isolithocholate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_oxo_5_cholanate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-hydroxy-3-oxochol-4-en-to-isolithocholate"
+      },
+      "note": "Shares 3-oxo-5β-cholanate with 7α-hydroxy-3-oxochol-4-en… to isolithocholate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:11867"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_oxo_5_cholanate_7-hydroxy-3-oxochol-4-en-to-isolithocholate-4754",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_oxo_5_cholanate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-hydroxy-3-oxochol-4-en-to-isolithocholate-4754"
+      },
+      "note": "Shares 3-oxo-5β-cholanate with 7α-hydroxy-3-oxochol-4-en… to isolithocholate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:11867"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_oxo_5_cholanate_glycolithocholate-to-7-12-dioxolithocholate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_oxo_5_cholanate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "glycolithocholate-to-7-12-dioxolithocholate"
+      },
+      "note": "Shares 3-oxo-5β-cholanate with glycolithocholate to 7,12-dioxolithocholate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:11867"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_oxo_5_cholanate_glycolithocholate-to-7-12-dioxolithocholate-1090",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_oxo_5_cholanate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "glycolithocholate-to-7-12-dioxolithocholate-1090"
+      },
+      "note": "Shares 3-oxo-5β-cholanate with glycolithocholate to 7,12-dioxolithocholate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:11867"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_oxo_5_cholanate_ursodeoxycholate-to-isolithocholate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_oxo_5_cholanate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ursodeoxycholate-to-isolithocholate"
+      },
+      "note": "Shares 3-oxo-5β-cholanate with ursodeoxycholate to isolithocholate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:11867"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_isolithocholate_7-hydroxy-3-oxochol-4-en-to-isolithocholate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isolithocholate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-hydroxy-3-oxochol-4-en-to-isolithocholate"
+      },
+      "note": "Shares isolithocholate with 7α-hydroxy-3-oxochol-4-en… to isolithocholate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87728"
+          }
+        ]
+      }
+    }
+  ]
+}

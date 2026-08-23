@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2e-3-methylpent-2-enoat-to-nad "(2E)-3-methylpent-2-enoat… to NAD" {
-  spacing 276
+  spacing 228
 
   spine at 0,0 {
     2e_3_methylpent_2_enoate_5_phosphate
@@ -18,53 +18,5 @@ pathway 2e-3-methylpent-2-enoat-to-nad "(2E)-3-methylpent-2-enoat… to NAD" {
     mevaldate
     <-> ec_1_1_1_1 [1.1.1.1] +nadh -nad
     r_mevalonate
-  }
-
-  branch from h side left {
-    h
-    <-> . +bromide +spongiadioxin_c
-    2_4_dibromo_6_2_4_dibromo_6_hydroxyphenoxy_pheno
-  }
-
-  branch from h side right {
-    h
-    <-> ec_2_7_1_32 [2.7.1.32] +prenyl_phosphate +adp +prenol
-    atp
-  }
-
-  branch from ctp side left {
-    ctp
-    <-> ec_2_7_7_76 [2.7.7.76] +moo3_molybdopterin_cofactor +h +diphosphate
-    cytidylyl_molybdenum_cofactor_trioxo
-  }
-
-  branch from ctp side right {
-    ctp
-    <-> ec_2_7_7_38 [2.7.7.38] +3_deoxy_d_manno_octulosonate +cmp_3_deoxy_beta_d_manno_octulosonate
-    diphosphate
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> ec_1_1_1_195 [1.1.1.195] +4_hydroxycinnamyl_alcohol +nadp +h
-    e_4_coumaraldehyde
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> ec_1_14_13_200 [1.14.13.200] +tetracenomycin_b2 +h +o2 +nadp +h2o
-    8_demethyltetracenomycin_c
-  }
-
-  branch from nad side left {
-    nad
-    <-> . +nadh +9_13_cis_retinoic_acid +h +h2o
-    9_cis_retinal
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_93 [1.1.1.93] +nadh +2r_2_hydroxy_3_oxosuccinic_acid +h
-    2r_3r_tartrate
   }
 }

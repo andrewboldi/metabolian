@@ -1,0 +1,449 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "h-to-methanol-null",
+  "name": "H to methanol",
+  "category": "other",
+  "summary": "A 3-step route from H(+) to methanol, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR150149"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "methyl_farnesoate",
+      "name": "methyl farnesoate",
+      "formula": "C16H26O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:80535"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "juvenile_hormone_iii",
+      "name": "juvenile hormone III",
+      "formula": "C16H26O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM2685"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "10s_juvenile_hormone_iii_diol",
+      "name": "(10S)-Juvenile hormone III diol",
+      "short": "Juvenile hormone…",
+      "formula": "C16H28O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:80537"
+      }
+    },
+    {
+      "id": "10s_juvenile_hormone_iii_acid_diol",
+      "name": "(10S)-Juvenile hormone III acid diol",
+      "short": "Juvenile hormone…",
+      "formula": "C15H26O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:80538"
+      }
+    },
+    {
+      "id": "methanol",
+      "name": "methanol",
+      "formula": "CH4O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM729799"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_1_59",
+      "name": "juvenile-hormone esterase",
+      "ec": [
+        "3.1.1.59"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR150149",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methyl_farnesoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "juvenile_hormone_iii",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR150149"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR150149"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR111731",
+      "substrates": [
+        {
+          "metabolite": "juvenile_hormone_iii",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "10s_juvenile_hormone_iii_diol",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR111731"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR111731"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "juvenile-hormone esterase",
+      "ec": "3.1.1.59",
+      "substrates": [
+        {
+          "metabolite": "10s_juvenile_hormone_iii_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "10s_juvenile_hormone_iii_acid_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methanol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_59"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR111728"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR111728"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_methyl_farnesoate_h-to-methanol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "methyl_farnesoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-methanol"
+      },
+      "note": "Shares methyl farnesoate with H to methanol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:80535"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_methyl_farnesoate_s-2e-6e-farnesyl-l-cy-to-s-adenosyl-l-homocystei",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "methyl_farnesoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2e-6e-farnesyl-l-cy-to-s-adenosyl-l-homocystei"
+      },
+      "note": "Shares methyl farnesoate with S-[(2E,6E)-farnesyl]-L-cy… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:80535"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_juvenile_hormone_iii_h-to-methanol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "juvenile_hormone_iii"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-methanol"
+      },
+      "note": "Shares juvenile hormone III with H to methanol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2685"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_10s_juvenile_hormone_iii_diol_1-deoxypentalenate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "10s_juvenile_hormone_iii_diol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-deoxypentalenate-to-h2o"
+      },
+      "note": "Shares (10S)-Juvenile hormone III diol with 1-deoxypentalenate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:80537"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_10s_juvenile_hormone_iii_diol_1-deoxypentalenate-to-h2o-34619",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "10s_juvenile_hormone_iii_diol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-deoxypentalenate-to-h2o-34619"
+      },
+      "note": "Shares (10S)-Juvenile hormone III diol with 1-deoxypentalenate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:80537"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_10s_juvenile_hormone_iii_diol_h-to-methanol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "10s_juvenile_hormone_iii_diol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-methanol"
+      },
+      "note": "Shares (10S)-Juvenile hormone III diol with H to methanol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:80537"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_10s_juvenile_hormone_iii_acid_diol_glycosmisate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "10s_juvenile_hormone_iii_acid_diol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "glycosmisate-to-h2o"
+      },
+      "note": "Shares (10S)-Juvenile hormone III acid diol with glycosmisate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:80538"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_10s_juvenile_hormone_iii_acid_diol_h-to-methanol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "10s_juvenile_hormone_iii_acid_diol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-methanol"
+      },
+      "note": "Shares (10S)-Juvenile hormone III acid diol with H to methanol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:80538"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_10s_juvenile_hormone_iii_acid_diol_lipid-a-to-h-51748",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "10s_juvenile_hormone_iii_acid_diol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "lipid-a-to-h-51748"
+      },
+      "note": "Shares (10S)-Juvenile hormone III acid diol with lipid A to H.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:80538"
+          }
+        ]
+      }
+    }
+  ]
+}

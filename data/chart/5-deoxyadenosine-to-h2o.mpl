@@ -4,15 +4,15 @@
 # edit the generator, not this file.
 
 pathway 5-deoxyadenosine-to-h2o "5'-deoxyadenosine to H2O" {
-  spacing 188
+  spacing 152
 
   spine at 0,0 {
     5_deoxyadenosine
-    <-> . +h2o -5_deoxyribose
-    adenine
-    <-> ec_2_4_2_1 [2.4.2.1] +inosine -hypoxanthine
-    adenosine
-    <-> ec_3_1_3_5 [3.1.3.5] +diphosphate -h2o
-    adp
+    <-> . +7_aminomethyl_7_carbaguanine +l_methionine +2_hydroxycyclopenta_2_4_dien_1_one -s_adenosyl_l_methionine
+    queuine
+    <-> . +h +aldehydo_d_ribose -h2o
+    queuosine
+    <-> . +h +adp +phosphate -queuosine -h2o
+    atp
   }
 }

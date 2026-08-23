@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway propane-1-2-diol-to-nad "propane-1,2-diol to NAD" {
-  spacing 216
+  spacing 192
 
   spine at 0,0 {
     propane_1_2_diol
@@ -14,29 +14,5 @@ pathway propane-1-2-diol-to-nad "propane-1,2-diol to NAD" {
     d_ribulose_5_phosphate
     <-> . +nadh +h -nad
     d_arabitinol_5_phosphate
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +acetylcholine +phosphate +acetylcholine +h2o
-    atp
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    r_acetoin
-  }
-
-  branch from d_ribulose_5_phosphate side left {
-    d_ribulose_5_phosphate
-    <-> .
-    alpha_d_ribose_5_phosphate
-  }
-
-  branch from l_tryptophan side right {
-    l_tryptophan
-    <-> . +valyl_tryptophanyl_phenylalanine +h2o +l_phenylalanine
-    l_valine
   }
 }

@@ -139,63 +139,6 @@
       "xrefs": {
         "chebi": "CHEBI:58210"
       }
-    },
-    {
-      "id": "udp_d_glucose",
-      "name": "UDP-α-D-glucose",
-      "formula": "C15H22N2O17P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:58885"
-      }
-    },
-    {
-      "id": "udp",
-      "name": "UDP",
-      "formula": "C9H11N2O12P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58223"
-      }
-    },
-    {
-      "id": "r_norprotosinomenium",
-      "name": "(R)-norprotosinomenium",
-      "short": "norprotosinomenium",
-      "formula": "C18H22NO4",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:231631"
-      }
-    },
-    {
-      "id": "r_6_o_methylnorprotosinomenium",
-      "name": "(R)-6-O-methylnorprotosinomenium",
-      "short": "6-O-methylnorprotos…",
-      "formula": "C19H24NO4",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:231633"
-      }
-    },
-    {
-      "id": "l_tryptophan",
-      "name": "L-tryptophan",
-      "formula": "C11H12N2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:57912"
-      }
-    },
-    {
-      "id": "n_methyl_l_tryptophan",
-      "name": "Nα-methyl-L-tryptophan",
-      "short": "Nα-methyl-L-tryptop…",
-      "formula": "C12H14N2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:57283"
-      }
     }
   ],
   "enzymes": [
@@ -204,13 +147,6 @@
       "name": "naringenin 7-O-methyltransferase",
       "ec": [
         "2.1.1.232"
-      ]
-    },
-    {
-      "id": "ec_2_4_1_185",
-      "name": "flavanone 7-O-beta-glucosyltransferase",
-      "ec": [
-        "2.4.1.185"
       ]
     }
   ],
@@ -396,138 +332,203 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "flavanone 7-O-beta-glucosyltransferase",
-      "equation": "(2S)-naringenin + UDP-alpha-D-glucose = (2S)-naringenin 7-O-beta-D-glucoside + UDP + H(+)",
-      "ec": "2.4.1.185",
-      "substrates": [
-        {
-          "metabolite": "s_naringenin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp_d_glucose",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "naringenin_7_o_d_glucoside",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_4_1_185"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:65152"
+      "id": "xt_naringenin_7_o_d_glucoside_8z-11z-14z-17z-20z-23z-to-16z-19z-22z-25z-28z-3",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "naringenin_7_o_d_glucoside"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "8z-11z-14z-17z-20z-23z-to-16z-19z-22z-25z-28z-3"
+      },
+      "note": "Shares naringenin 7-O-β-D-glucoside with (8Z,11Z,14Z,17Z,20Z,23Z)-… to (16Z,19Z,22Z,25Z,28Z,31Z)….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:65152"
+            "db": "ChEBI",
+            "id": "CHEBI:28327"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "(R)-norprotosinomenine + S-adenosyl-L-methionine = (R)-6-O-methylnorprotosinomenine + S...",
-      "equation": "(R)-norprotosinomenine + S-adenosyl-L-methionine = (R)-6-O-methylnorprotosinomenine + S-adenosyl-L-homocysteine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "r_norprotosinomenium",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "r_6_o_methylnorprotosinomenium",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:80699"
+      "id": "xt_naringenin_7_o_d_glucoside_terminolate-to-asiaticoside-b",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "naringenin_7_o_d_glucoside"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "terminolate-to-asiaticoside-b"
+      },
+      "note": "Shares naringenin 7-O-β-D-glucoside with terminolate to Asiaticoside B.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:80699"
+            "db": "ChEBI",
+            "id": "CHEBI:28327"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "L-tryptophan + S-adenosyl-L-methionine = N(alpha)-methyl-L-tryptophan + S-adenosyl-L-ho...",
-      "equation": "L-tryptophan + S-adenosyl-L-methionine = N(alpha)-methyl-L-tryptophan + S-adenosyl-L-homocysteine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "l_tryptophan",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n_methyl_l_tryptophan",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:80771"
+      "id": "xt_s_naringenin_abietatriene-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_naringenin"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "abietatriene-to-fmn"
+      },
+      "note": "Shares (S)-naringenin with abietatriene to FMN.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:80771"
+            "db": "ChEBI",
+            "id": "CHEBI:17846"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_naringenin_bacteriochlorophyllide-d-to-bacteriochlorophylli",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_naringenin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "bacteriochlorophyllide-d-to-bacteriochlorophylli"
+      },
+      "note": "Shares (S)-naringenin with bacteriochlorophyllide d to bacteriochlorophyllide e.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17846"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_naringenin_menthol-to-fmnh2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_naringenin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "menthol-to-fmnh2"
+      },
+      "note": "Shares (S)-naringenin with (−)-menthol to FMNH2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17846"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_naringenin_n-arachidonoyl-1-oleoyl-s-to-9z-17-hydroxyoctade",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_naringenin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-arachidonoyl-1-oleoyl-s-to-9z-17-hydroxyoctade"
+      },
+      "note": "Shares (S)-naringenin with N-arachidonoyl-1-oleoyl-s… to (9Z)-17-hydroxyoctadec-9-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17846"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_naringenin_s-naringenin-to-2-3-dihydrogossypetin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_naringenin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-naringenin-to-2-3-dihydrogossypetin"
+      },
+      "note": "Shares (S)-naringenin with (S)-naringenin to 2,3-dihydrogossypetin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17846"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_naringenin_s-naringenin-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_naringenin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-naringenin-to-diphosphate"
+      },
+      "note": "Shares (S)-naringenin with (S)-naringenin to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17846"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_naringenin_terminolate-to-asiaticoside-b",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_naringenin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "terminolate-to-asiaticoside-b"
+      },
+      "note": "Shares (S)-naringenin with terminolate to Asiaticoside B.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17846"
           }
         ]
       }

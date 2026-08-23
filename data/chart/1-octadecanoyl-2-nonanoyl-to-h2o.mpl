@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-octadecanoyl-2-nonanoyl-to-h2o "1-octadecanoyl-2-nonanoyl… to H2O" {
-  spacing 242
+  spacing 308
 
   spine at 0,0 {
     1_octadecanoyl_2_nonanoyl_sn_glycero_3_phosphoch
@@ -20,93 +20,28 @@ pathway 1-octadecanoyl-2-nonanoyl-to-h2o "1-octadecanoyl-2-nonanoyl… to H2O" {
     3r_hydroxy_undecanoyl_coa
   }
 
-  branch from nonanoate side left {
-    nonanoate
-    <-> . +atp +nadph +hplus +amp +ppi +nadp
-    nonanal
-  }
 
-  branch from nonanoyl_coa side right {
-    nonanoyl_coa
-    <-> . +l_serine +coa
-    o_nonanoyl_l_serine
-  }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_148 [4.2.3.148] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    cembrene_c
-  }
 
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_149 [4.2.3.149] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +h2o
-    r_nephthenol
-  }
 
-  branch from 3r_hydroxynonanoyl_coa side left {
-    3r_hydroxynonanoyl_coa
-    <-> . +nadh +h +nad
-    3_oxononanoyl_coenzyme_a
-  }
 
-  branch from 3r_hydroxynonanoyl_coa side right {
-    3r_hydroxynonanoyl_coa
-    <-> . +nadh +h +nad
-    3_oxononanoyl_coa
-  }
 
-  branch from 3r_hydroxy_undecanoyl_coa side left {
-    3r_hydroxy_undecanoyl_coa
-    <-> . +nadh +h +nad
-    3_oxoundecanoyl_coenzyme_a
-  }
 
-  branch from coa side right {
-    coa
-    <-> . +acetyl_coa +3_s_10_r_oh_octadeca_6_trans_4_12_cis_trienoyl_c
-    3_oxo_5_s_12_r_dihydroxy_eicosa_8_trans_6_14_cis
-  }
 
-  branch from coa side left {
-    coa
-    <-> . +acetyl_coa +18_coa_18_oxo_dinorleukotriene_b4
-    18_20_dioxo_20_coa_leukotriene_b4
-  }
 
-  branch from o2 side right {
-    o2
-    <-> . +trans_4_coumarate
-    e_caffeate
-  }
 
-  branch from o2 side left {
-    o2
-    <-> ec_1_17_3_2 [1.17.3.2] +3_4_oxo_4_5_dihydro_1h_imidazol_5_yl_propanoic_a +h2o +h +h2o2
-    hydantoin_5_propionate
-  }
 
-  branch from nad side right {
-    nad
-    <-> ec_1_2_1_29 [1.2.1.29] +nadh +h +p_cumate +h2o
-    4_isopropylbenzaldehyde
-  }
 
-  branch from nad side left {
-    nad
-    <-> ec_1_3_1_56 [1.3.1.56] +nadh +h +4_chlorobiphenyl_2_3_diol
-    1s_2r_3_4_chlorophenyl_cyclohexa_3_5_diene_1_2
-  }
 
-  branch from h2o side right {
-    h2o
-    <-> . +thromboxane_b2
-    thromboxane_a2
-  }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_22 [3.6.3.22] +h +adp +phosphate +atp
-    l_valine
-  }
+
+
+
+
+
+
+
+
+
+
 }

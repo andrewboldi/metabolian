@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 15z-18z-21z-24z-triacon-to-23z-26z-29z-32z-octa "(15Z,18Z,21Z,24Z)-triacon… to (23Z,26Z,29Z,32Z)-octatri…" {
-  spacing 152
+  spacing 170
 
   spine at 0,0 {
     15z_18z_21z_24z_triacontatetraenoyl_coa
@@ -40,5 +40,23 @@ pathway 15z-18z-21z-24z-triacon-to-23z-26z-29z-32z-octa "(15Z,18Z,21Z,24Z)-triac
     2e_23z_26z_29z_32z_octatriacontapentaenoyl_coa
     <-> . +nadph +hplus -nadp
     23z_26z_29z_32z_octatriacontatetraenoyl_coa
+  }
+
+  branch from 15z_18z_21z_24z_triacontatetraenoyl_coa side left {
+    15z_18z_21z_24z_triacontatetraenoyl_coa
+    <-> . +nadph +hplus +nadp
+    2e_15z_18z_21z_24z_triacontapentaenoyl_coa
+  }
+
+  branch from malonyl-coa side right {
+    malonyl-coa
+    <-> . +l_pipecolic_acid +nadph +hplus +co2 +nadp +coa +h2o
+    1s_8as_octahydroindolizin_1_ol
+  }
+
+  branch from malonyl-coa side left {
+    malonyl-coa
+    <-> . +apigenin_7_o_d_glucoside +coa
+    apigenin_7_o_6_o_malonyl_d_glucoside
   }
 }

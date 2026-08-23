@@ -18,26 +18,26 @@ pathway methostenol-to-nad "Methostenol to NAD" {
 
   branch from co2 side left {
     co2
-    <-> ec_4_3_99_2 [4.3.99.2] +biotinyl_protein +h
-    carboxybiotinyl_protein
+    <-> ec_1_14_11_1 [1.14.11.1] +r_carnitine +bromosuccinate +o2 +4_trimethylamino_butanoate
+    3_bromo_2_ketoglutarate
   }
 
   branch from co2 side right {
     co2
-    <-> . +2_oxo_4_phenylbutyric_acid +nadh +h +nad
-    3_benzylmalic_acid
+    <-> ec_1_2_4_2 [1.2.4.2] +nadh +malonyl_coa +coa +nad
+    oxaloacetate
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_323 [1.1.1.323] +thujan_3_ol +h +nadph
-    thujone
+    <-> ec_1_1_1_21 [1.1.1.21] +compound_0280197 +h +nadph
+    2_2_dimethylpropanal
   }
 
   branch from nadp side right {
     nadp
-    <-> . +h +o2 +nadph +z_2_methylpropanal_oxime +h2o
-    2_hydroxy_2_methylpropanenitrile
+    <-> ec_1_1_1_21 [1.1.1.21] +h +2_naphthaldehyde +nadph
+    2_naphthyl_methanol
   }
 
   branch from lathosterol side left {
@@ -54,49 +54,121 @@ pathway methostenol-to-nad "Methostenol to NAD" {
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_175 [3.2.1.175] +glucose +h +2_cis_abscisate
-    abscisic_acid_d_glucopyranosyl_ester
+    <-> . +l_alanine +ala_gly
+    ala_ala_gly
   }
 
   branch from h2o side right {
     h2o
-    <-> . +3_deoxo_4b_deoxypaxilline +formate +nadp +o2 +nadph
-    paspaline_b
-  }
-
-  branch from 7_dehydrocholesterol side left {
-    7_dehydrocholesterol
-    <-> . +h +o2 +nadph +nadp +h2o
-    7_ketocholesterol
-  }
-
-  branch from 7_dehydrocholesterol side right {
-    7_dehydrocholesterol
-    <-> ec_1_14_21_6 [1.14.21.6] +o2 +lathosterol
-    h2o2
+    <-> . +ala_tyr +glycine
+    gly_ala_tyr
   }
 
   branch from cholesterol side left {
     cholesterol
-    <-> ec_1_1_1_145 [1.1.1.145] +nadh +h +nad
-    cholest_4_en_3_one
+    <-> . +dodecanoyl_coa +coa
+    cholesteryl_laurate
   }
 
   branch from cholesterol side right {
     cholesterol
-    <-> . +h +o2 +nadph +nadp +h2o
-    5_6beta_epoxy_5alpha_cholestan_3beta_ol
+    <-> . +tetradecanoyl_coa +cholesteryl_myristate
+    coa
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_323 [1.1.1.323] +nadh +h +thujone
-    thujan_3_ol
+    <-> ec_1_2_1_72 [1.2.1.72] +nadh +d_erythronate +h +h2o
+    d_erythrose
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +furfural
-    furfuryl_alcohol
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +s_2_phenylpropionaldehyde +h
+    s_2_phenylpropanol
+  }
+
+  branch from methostenol side left {
+    methostenol
+    <-> ec_5_3_3_5 [5.3.3.5]
+    4alpha_methylcholest_8_en_3beta_ol
+  }
+
+  branch from h side right {
+    h
+    <-> ec_1_1_1_21 [1.1.1.21] +4_hydroxynon_2_enal +nadph +nadp
+    4_hydroxynonenol
+  }
+
+  branch from h side left {
+    h
+    <-> ec_1_1_1_21 [1.1.1.21] +formaldehyde +nadph +nadp
+    methanol
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_1_3_4 [1.1.3.4] +2_deoxy_d_glucose +h2o2
+    2_deoxy_d_glucono_1_5_lactone
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_17_3_2 [1.17.3.2] +2_hydroxy_7_9_dihydropurin_8_one +h2o2 +h2o
+    2_hydroxypurine
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_1_1_21 [1.1.1.21] +2_4_6_trimethylbenzoyl_methanol +nadp +h
+    2_4_6_trimethylphenylglyoxal
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_1_1_21 [1.1.1.21] +2_methylpentanal +h +nadp
+    2_methylpentanol
+  }
+
+  branch from co2 side right {
+    co2
+    <-> . +nicotinate +h
+    quinolinate
+  }
+
+  branch from co2 side left {
+    co2
+    <-> ec_4_1_1_5 [4.1.1.5] +2s_2_acetolactate +h
+    actn
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_1_1_21 [1.1.1.21] +4_bromobenzaldehyde +h +nadph
+    4_bromobenzyl_alcohol
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_1_1_21 [1.1.1.21] +4_phenylphenylglyoxal +h +nadph
+    4_phenylbenzoyl_methanol
+  }
+
+  branch from lathosterol side right {
+    lathosterol
+    <-> . +fadh2 +h +5alpha_cholesta_7_24_dien_3beta_ol
+    fad
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +ala_gly_ala +alanine
+    gly_ala
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +glycylglycine +l_phenylalanine
+    phe_gly_gly
   }
 }

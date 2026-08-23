@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 25r-cholest-5-en-3beta-to-25r-7-26-dihydroxycho "(25R)-cholest-5-en-3beta,… to (25R)-7α,26-dihydroxychol…" {
-  spacing 296
+  spacing 236
 
   spine at 0,0 {
     25r_cholest_5_en_3beta_7alpha_26_triol
@@ -14,65 +14,5 @@ pathway 25r-cholest-5-en-3beta-to-25r-7-26-dihydroxycho "(25R)-cholest-5-en-3bet
     25r_7_26_dihydroxycholesterol
     <-> . +nad -nadh -hplus
     25r_7_26_dihydroxycholest_4_en_3_one
-  }
-
-  branch from 25r_cholest_5_ene_3_26_diol side left {
-    25r_cholest_5_ene_3_26_diol
-    <-> . +nadp +h2o +h +o2 +nadph
-    cholesterol
-  }
-
-  branch from 25r_cholest_5_ene_3_26_diol side right {
-    25r_cholest_5_ene_3_26_diol
-    <-> . +nadp +h +nadph
-    3beta_hydroxy_5_cholestenal
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
-    gly_asn
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
-    ala_thr
-  }
-
-  branch from o2 side left {
-    o2
-    <-> ec_1_14_13_15 [1.14.13.15] +3alpha_7alpha_dihydroxy_5beta_cholestan_26_oic_a +nadp +h2o +h +nadph
-    25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +h +benzoate +nadph +nadp +h2o
-    salicylate
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> . +l_alanine +h +nadp +h2o
-    s_2_aminopropanal
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> ec_1_1_1_21 [1.1.1.21] +h +beta_d_ribofuranose +nadp
-    xylitol
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +nataloe_emodin +fmnh2 +o2 +h2o +hplus
-    cladofulvin
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +20_hete +fmnh2 +o2 +h2o +hplus
-    8_9_epoxy_20_hydroxy_5z_11z_14z_icosatrienoate
   }
 }

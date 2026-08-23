@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-2-diacyl-sn-glycero-3-p-to-s-adenosyl-l-homocy "1,2-diacyl-sn-glycero-3-p… to S-adenosyl-L-homocysteine" {
-  spacing 272
+  spacing 332
 
   spine at 0,0 {
     1_2_diacyl_sn_glycero_3_phospholipid
@@ -30,25 +30,85 @@ pathway 1-2-diacyl-sn-glycero-3-p-to-s-adenosyl-l-homocy "1,2-diacyl-sn-glycero-
 
   branch from fatty-acid side left {
     fatty-acid
-    <-> ec_3_1_2_20 [3.1.2.20] +h2o +coa +hplus
-    fatty_acyl_coa
+    <-> ec_3_1_1_32 [3.1.1.32] +phosphatidylcholine +h2o +hplus
+    2_acyl_sn_glycero_3_phosphocholine
   }
 
   branch from fatty-acid side right {
     fatty-acid
-    <-> ec_3_1_1_28 [3.1.1.28] +o_acyl_l_carnitine +h2o +hplus
-    carnitine
+    <-> . +n_acylphytosphingosine +h2o
+    phytosphingosine
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_55 [2.1.1.55] +adenosine_5_monophosphate_1 +sam +hplus
-    n6_methyladenosine_5_monophosphate_1
+    <-> ec_2_1_1_165 [2.1.1.165] +chloride +sam
+    chloromethane
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_113 [2.1.1.113] +2_deoxycytidine_5_monophosphate_1 +sam +hplus
-    n4_methyl_dcmp_1
+    <-> ec_2_1_1_165 [2.1.1.165] +bromide +sam
+    bromomethane
+  }
+
+  branch from 1_2_diacyl_sn_glycero_3_phospholipid side left {
+    1_2_diacyl_sn_glycero_3_phospholipid
+    <-> ec_2_3_1_269 [2.3.1.269] +s_1_2_diacyl_sn_glyceryl_l_cysteiniumyl_group +a_2_acyl_sn_glycero_3_phospholipid +hplus
+    n_acyl_s_1_2_diacyl_sn_glyceryl_l_cysteine
+  }
+
+  branch from 1_2_diacyl_sn_glycero_3_phospholipid side right {
+    1_2_diacyl_sn_glycero_3_phospholipid
+    <-> . +h2o +fatty-acid +hplus
+    1_acyl_sn_glycero_3_phospholipid
+  }
+
+  branch from dag side left {
+    dag
+    <-> ec_4_6_1_13 [4.6.1.13] +1_phosphatidyl_1d_myo_inositol
+    1d_myo_inositol_1_2_cyclic_phosphate
+  }
+
+  branch from dag side right {
+    dag
+    <-> ec_2_7_8_27 [2.7.8.27] +n_acylsphingosine +phosphatidylcholine
+    sphingomyelin
+  }
+
+  branch from fatty-acid side left {
+    fatty-acid
+    <-> ec_3_1_1_118 [3.1.1.118] +1_phosphatidyl_1d_myo_inositol +h2o +hplus
+    2_acyl_sn_glycero_3_phospho_1d_myo_inositol
+  }
+
+  branch from fatty-acid side right {
+    fatty-acid
+    <-> ec_3_1_1_13 [3.1.1.13] +cholesteryl_ester +h2o +hplus
+    cholesterol
+  }
+
+  branch from sam side left {
+    sam
+    <-> ec_2_1_1_n4 [2.1.1.n4] +thiocyanate +sah
+    methyl_thiocyanate
+  }
+
+  branch from sam side right {
+    sam
+    <-> ec_2_1_1_212 [2.1.1.212] +2r_3s_2_4_7_trihydroxyisoflavanone +sah +hplus
+    2r_3s_2_7_dihydroxy_4_methoxyisoflavanone
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_236 [2.1.1.236] +dtdp_3_amino_3_6_dideoxy_d_galactopyranose +sam +hplus
+    dtdp_d_ravidosamine
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_239 [2.1.1.239] +3_o_l_olivosyl_oleandolide +sam +hplus
+    3_o_l_oleandrosyl_oleandolide
   }
 }

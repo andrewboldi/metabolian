@@ -1,0 +1,508 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1-2-dihydroxy-3-keto-5-me-to-o2",
+  "name": "1,2-dihydroxy-3-keto-5-me… to O2",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from 1,2-dihydroxy-3-keto-5-methylthiopentene to O2, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR198867"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1_2_dihydroxy_3_keto_5_methylthiopentene",
+      "name": "1,2-dihydroxy-3-keto-5-methylthiopentene",
+      "short": "1,2-dihydroxy-3-ket…",
+      "formula": "C6H10O3S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1369794"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "4_methylsulfanyl_2_oxobutanoate",
+      "name": "4-methylsulfanyl-2-oxobutanoate",
+      "short": "4-methylsulfanyl-2-…",
+      "formula": "C5H7O3S",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM276"
+      }
+    },
+    {
+      "id": "formate",
+      "name": "formate",
+      "formula": "CHO2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM39"
+      }
+    },
+    {
+      "id": "l_valine",
+      "name": "L-valine",
+      "formula": "C5H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM199"
+      }
+    },
+    {
+      "id": "kiv",
+      "name": "3-Methyl-2-oxobutanoate",
+      "short": "3-Methyl-2-oxobutan…",
+      "formula": "C5H7O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:11851"
+      }
+    },
+    {
+      "id": "l_methionine",
+      "name": "L-methionine",
+      "formula": "C5H11NO2S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM738804"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "H2O2",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM732620"
+      }
+    },
+    {
+      "id": "s_2_hydroxy_3_methylbutyric_acid",
+      "name": "(S)-2-hydroxy-3-methylbutyric acid",
+      "short": "2-hydroxy-3-methylb…",
+      "formula": "C5H10O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:60631"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_13_11_54",
+      "name": "acireductone dioxygenase (Fe(2+)-requiring)",
+      "ec": [
+        "1.13.11.54"
+      ],
+      "xrefs": {
+        "uniprot": "Q9BV57"
+      }
+    },
+    {
+      "id": "ec_2_6_1_42",
+      "name": "branched-chain-amino-acid transaminase",
+      "ec": [
+        "2.6.1.42"
+      ],
+      "xrefs": {
+        "uniprot": "P54687"
+      }
+    },
+    {
+      "id": "ec_1_1_3_15",
+      "name": "(S)-2-hydroxy-acid oxidase",
+      "ec": [
+        "1.1.3.15"
+      ],
+      "xrefs": {
+        "uniprot": "Q9UJM8"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "acireductone dioxygenase (Fe(2+)-requiring)",
+      "ec": "1.13.11.54",
+      "substrates": [
+        {
+          "metabolite": "1_2_dihydroxy_3_keto_5_methylthiopentene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "4_methylsulfanyl_2_oxobutanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_54"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR198867"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198867"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "branched-chain-amino-acid transaminase",
+      "ec": "2.6.1.42",
+      "substrates": [
+        {
+          "metabolite": "l_valine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4_methylsulfanyl_2_oxobutanoate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "kiv",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_methionine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_42"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR131406"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR131406"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(S)-2-hydroxy-acid oxidase",
+      "ec": "1.1.3.15",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "kiv",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_2_hydroxy_3_methylbutyric_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_3_15"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR134083"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR134083"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_1_2_dihydroxy_3_keto_5_methylthiopentene_1-2-dihydroxy-3-keto-5-me-to-3-5-dioxo-6-4-5-7-t",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_2_dihydroxy_3_keto_5_methylthiopentene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-dihydroxy-3-keto-5-me-to-3-5-dioxo-6-4-5-7-t"
+      },
+      "note": "Shares 1,2-dihydroxy-3-keto-5-methylthiopentene with 1,2-dihydroxy-3-keto-5-me… to 3,5-dioxo-6-[4,5,7-trihyd….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1369794"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_2_dihydroxy_3_keto_5_methylthiopentene_1-2-dihydroxy-3-keto-5-me-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_2_dihydroxy_3_keto_5_methylthiopentene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-dihydroxy-3-keto-5-me-to-nadph"
+      },
+      "note": "Shares 1,2-dihydroxy-3-keto-5-methylthiopentene with 1,2-dihydroxy-3-keto-5-me… to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1369794"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_2_dihydroxy_3_keto_5_methylthiopentene_3-methylbut-2-enoyl-coa-to-3-methylglutaric-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_2_dihydroxy_3_keto_5_methylthiopentene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-methylbut-2-enoyl-coa-to-3-methylglutaric-acid"
+      },
+      "note": "Shares 1,2-dihydroxy-3-keto-5-methylthiopentene with 3-methylbut-2-enoyl-CoA to 3-methylglutaric acid.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1369794"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_methylsulfanyl_2_oxobutanoate_2-methylbutanoyl-phosphate-to-l-methionine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_methylsulfanyl_2_oxobutanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-methylbutanoyl-phosphate-to-l-methionine"
+      },
+      "note": "Shares 4-methylsulfanyl-2-oxobutanoate with 2-methylbutanoyl phosphate to L-methionine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM276"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_methylsulfanyl_2_oxobutanoate_3-epiecdysone-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_methylsulfanyl_2_oxobutanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-epiecdysone-to-h2o"
+      },
+      "note": "Shares 4-methylsulfanyl-2-oxobutanoate with 3-Epiecdysone to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM276"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_methylsulfanyl_2_oxobutanoate_alpha-beta-dihydroxyethyl-to-s-8-succinyldihydro",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_methylsulfanyl_2_oxobutanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-beta-dihydroxyethyl-to-s-8-succinyldihydro"
+      },
+      "note": "Shares 4-methylsulfanyl-2-oxobutanoate with alpha,beta-Dihydroxyethyl… to S(8)-succinyldihydrolipoa….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM276"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_methylsulfanyl_2_oxobutanoate_co2-to-pyruvate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_methylsulfanyl_2_oxobutanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "co2-to-pyruvate"
+      },
+      "note": "Shares 4-methylsulfanyl-2-oxobutanoate with CO2 to pyruvate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM276"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_methylsulfanyl_2_oxobutanoate_dimethylsulfonio-acetate-to-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_methylsulfanyl_2_oxobutanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dimethylsulfonio-acetate-to-acetate"
+      },
+      "note": "Shares 4-methylsulfanyl-2-oxobutanoate with (dimethylsulfonio)acetate to acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM276"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_methylsulfanyl_2_oxobutanoate_l-glutamate-5-semialdehyde-to-nh4",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_methylsulfanyl_2_oxobutanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-glutamate-5-semialdehyde-to-nh4"
+      },
+      "note": "Shares 4-methylsulfanyl-2-oxobutanoate with L-glutamate 5-semialdehyde to NH4.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM276"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_methylsulfanyl_2_oxobutanoate_methylselenopyruvate-to-o-succinyl-l-homoserine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_methylsulfanyl_2_oxobutanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "methylselenopyruvate-to-o-succinyl-l-homoserine"
+      },
+      "note": "Shares 4-methylsulfanyl-2-oxobutanoate with Methylselenopyruvate to O-succinyl-L-homoserine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM276"
+          }
+        ]
+      }
+    }
+  ]
+}

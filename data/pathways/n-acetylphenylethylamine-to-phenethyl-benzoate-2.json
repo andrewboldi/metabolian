@@ -1,0 +1,625 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n-acetylphenylethylamine-to-phenethyl-benzoate-2",
+  "name": "N-acetylphenylethylamine to phenethyl benzoate",
+  "category": "redox-detox",
+  "summary": "A 4-step route from N-acetylphenylethylamine to phenethyl benzoate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:23952"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:18177"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n_acetylphenylethylamine",
+      "name": "N-acetylphenylethylamine",
+      "short": "N-acetylphenylethyl…",
+      "formula": "C10H13NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18177"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2_phenylethanaminium",
+      "name": "2-phenylethanaminium",
+      "formula": "C8H12N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:225237"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "Acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30089"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "phenylacetaldehyde",
+      "name": "phenylacetaldehyde",
+      "formula": "C8H8O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16424"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "2_phenylethanol",
+      "name": "2-phenylethanol",
+      "formula": "C8H10O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:49000"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "benzoyl_coa",
+      "name": "benzoyl-CoA",
+      "formula": "C28H36N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57369"
+      }
+    },
+    {
+      "id": "phenethyl_benzoate",
+      "name": "phenethyl benzoate",
+      "formula": "C15H14O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:156233"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_76",
+      "name": "arylalkyl acylamidase",
+      "ec": [
+        "3.5.1.76"
+      ]
+    },
+    {
+      "id": "ec_1_4_3_21",
+      "name": "primary-amine oxidase",
+      "ec": [
+        "1.4.3.21"
+      ],
+      "xrefs": {
+        "uniprot": "O75106"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "arylalkyl acylamidase",
+      "equation": "N-(2-phenylethyl)acetamide + H2O = 2-phenylethylamine + acetate",
+      "ec": "3.5.1.76",
+      "substrates": [
+        {
+          "metabolite": "n_acetylphenylethylamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_phenylethanaminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_76"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:23952"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23952"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "primary-amine oxidase",
+      "equation": "2-phenylethylamine + O2 + H2O = 2-phenylacetaldehyde + H2O2 + NH4(+)",
+      "ec": "1.4.3.21",
+      "substrates": [
+        {
+          "metabolite": "2_phenylethanaminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phenylacetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_4_3_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:25265"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25265"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "2-phenylacetaldehyde + NADH + H(+) = 2-phenylethanol + NAD(+)",
+      "equation": "2-phenylacetaldehyde + NADH + H(+) = 2-phenylethanol + NAD(+)",
+      "substrates": [
+        {
+          "metabolite": "phenylacetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_phenylethanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:63740"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63740"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "2-phenylethanol + benzoyl-CoA = phenethyl benzoate + CoA",
+      "equation": "2-phenylethanol + benzoyl-CoA = phenethyl benzoate + CoA",
+      "substrates": [
+        {
+          "metabolite": "2_phenylethanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "benzoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phenethyl_benzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:64840"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64840"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_n_acetylphenylethylamine_l-phenylalanine-to-2s-2-hydroxy-3-phenylpr",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetylphenylethylamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-phenylalanine-to-2s-2-hydroxy-3-phenylpr"
+      },
+      "note": "Shares N-acetylphenylethylamine with L-phenylalanine to (2S)-2-hydroxy-3-phenylpr….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18177"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetylphenylethylamine_l-phenylalanine-to-2s-2-hydroxy-3-phenylpr-19717",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetylphenylethylamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-phenylalanine-to-2s-2-hydroxy-3-phenylpr-19717"
+      },
+      "note": "Shares N-acetylphenylethylamine with L-phenylalanine to (2S)-2-hydroxy-3-phenylpr….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18177"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetylphenylethylamine_n-acetylphenylethylamine-to-phenethyl-benzoate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetylphenylethylamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetylphenylethylamine-to-phenethyl-benzoate"
+      },
+      "note": "Shares N-acetylphenylethylamine with N-acetylphenylethylamine to phenethyl benzoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18177"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_phenylethanaminium_l-phenylalanine-to-2s-2-hydroxy-3-phenylpr",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_phenylethanaminium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-phenylalanine-to-2s-2-hydroxy-3-phenylpr"
+      },
+      "note": "Shares 2-phenylethanaminium with L-phenylalanine to (2S)-2-hydroxy-3-phenylpr….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:225237"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_phenylethanaminium_l-phenylalanine-to-2s-2-hydroxy-3-phenylpr-19717",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_phenylethanaminium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-phenylalanine-to-2s-2-hydroxy-3-phenylpr-19717"
+      },
+      "note": "Shares 2-phenylethanaminium with L-phenylalanine to (2S)-2-hydroxy-3-phenylpr….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:225237"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_phenylethanaminium_n-acetylphenylethylamine-to-phenethyl-benzoate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_phenylethanaminium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetylphenylethylamine-to-phenethyl-benzoate"
+      },
+      "note": "Shares 2-phenylethanaminium with N-acetylphenylethylamine to phenethyl benzoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:225237"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_phenylethanaminium_styrene-oxide-to-2r-dihomocitrate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_phenylethanaminium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "styrene-oxide-to-2r-dihomocitrate"
+      },
+      "note": "Shares 2-phenylethanaminium with styrene oxide to (2R)-dihomocitrate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:225237"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_phenylethanaminium_styrene-oxide-to-2r-dihomocitrate-21604",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_phenylethanaminium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "styrene-oxide-to-2r-dihomocitrate-21604"
+      },
+      "note": "Shares 2-phenylethanaminium with styrene oxide to (2R)-dihomocitrate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:225237"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_phenylethanaminium_urethane-to-acetaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_phenylethanaminium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "urethane-to-acetaldehyde"
+      },
+      "note": "Shares 2-phenylethanaminium with urethane to acetaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:225237"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_phenylethanaminium_urethane-to-acetaldehyde-21372",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_phenylethanaminium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "urethane-to-acetaldehyde-21372"
+      },
+      "note": "Shares 2-phenylethanaminium with urethane to acetaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:225237"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_phenylethanol_microperfuranone-to-2-phenylethanol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_phenylethanol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "microperfuranone-to-2-phenylethanol"
+      },
+      "note": "Shares 2-phenylethanol with (−)-microperfuranone to 2-phenylethanol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:49000"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_phenylethanol_microperfuranone-to-2-phenylethanol-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_phenylethanol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "microperfuranone-to-2-phenylethanol-null"
+      },
+      "note": "Shares 2-phenylethanol with (−)-microperfuranone to 2-phenylethanol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:49000"
+          }
+        ]
+      }
+    }
+  ]
+}

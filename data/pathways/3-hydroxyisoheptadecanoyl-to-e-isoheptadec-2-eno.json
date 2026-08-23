@@ -100,6 +100,16 @@
       "xrefs": {
         "chebi": "CHEBI:16240"
       }
+    },
+    {
+      "id": "3_oxoisoheptadecanoyl_coa",
+      "name": "3-oxoisoheptadecanoyl-CoA",
+      "short": "3-oxoisoheptadecano…",
+      "formula": "C38H62N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:71445"
+      }
     }
   ],
   "enzymes": [],
@@ -217,6 +227,73 @@
           {
             "db": "Rhea",
             "id": "RHEA:86619"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "3-hydroxyisoheptadecanoyl-CoA + NADP(+) = 3-oxoisoheptadecanoyl-CoA + NADPH + H(+)",
+      "equation": "3-hydroxyisoheptadecanoyl-CoA + NADP(+) = 3-oxoisoheptadecanoyl-CoA + NADPH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxyisoheptadecanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_oxoisoheptadecanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:35311"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35311"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3_oxoisoheptadecanoyl_coa_3-hydroxyicosanoyl-coa-to-n-2-hydroxytetracosano",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_oxoisoheptadecanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxyicosanoyl-coa-to-n-2-hydroxytetracosano"
+      },
+      "note": "Shares 3-oxoisoheptadecanoyl-CoA with 3-hydroxyicosanoyl-CoA to N-(2-hydroxytetracosanoyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:71445"
           }
         ]
       }

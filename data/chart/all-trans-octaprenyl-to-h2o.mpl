@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway all-trans-octaprenyl-to-h2o "all-trans-octaprenyl… to H2O" {
-  spacing 340
+  spacing 280
 
   spine at 0,0 {
     all_trans_octaprenyl_diphosphate
@@ -20,65 +20,5 @@ pathway all-trans-octaprenyl-to-h2o "all-trans-octaprenyl… to H2O" {
     6_methoxy_2_octaprenylhydroquinone
     <-> . +nadh +h +adp +phosphate -atp -nad -h2o
     2_methoxy_6_all_trans_octaprenyl_phenol
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> ec_6_4_1_12 [6.4.1.12] +3_indol_3_yl_pyruvate +atp +amp +hplus
-    didemethylasterriquinone_d
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +didemethylasterriquinone_d +dmapp
-    asterriquinone_c1
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +n6_n6_dimethyl_l_lysine_1 +sam +hplus
-    n6_n6_n6_trimethyl_l_lysine
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +l_lysinium +sam +hplus
-    n6_methyl_l_lysinium
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    amikacin
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    gentamicin_a2e
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_35 [1.1.1.35] +nadh +11z_3_oxooctadecenoyl_coa +h
-    3s_11z_3_hydroxyoctadecenoyl_coa
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_14 [1.1.1.14] +nadh +beta_d_fructose +h
-    d_sorbitol
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    gentamycin_c2_5
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    gentamicin_c1
   }
 }

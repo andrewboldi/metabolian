@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 10-deacetyl-2-debenzoylba-to-paclitaxel "10-deacetyl-2-debenzoylba… to paclitaxel" {
-  spacing 290
+  spacing 326
 
   spine at 0,0 {
     10_deacetyl_2_debenzoylbaccatin_iii
@@ -28,13 +28,49 @@ pathway 10-deacetyl-2-debenzoylba-to-paclitaxel "10-deacetyl-2-debenzoylba… to
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_42 [1.14.14.42] +l_trihomomethionine +fmnh2 +o2 +co2 +h2o +hplus
-    e_6_methylsulfanyl_hexanal_oxime
+    <-> . +lipoxin_a4 +fmnh2 +o2 +h2o +hplus
+    20_hydroxylipoxin_a4
   }
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_133 [1.14.14.133] +1_8_cineole +fmnh2 +o2 +h2o +hplus
-    2_endo_hydroxy_1_8_cineole
+    <-> . +5_hete +fmnh2 +o2 +h2o +hplus
+    5_20_dihete
+  }
+
+  branch from benzoyl_coa side right {
+    benzoyl_coa
+    <-> . +ethanol +coa
+    benzyl_acetate
+  }
+
+  branch from benzoyl_coa side left {
+    benzoyl_coa
+    <-> . +hexan_2_ol +coa
+    hexan_2_yl_benzoate
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> . +8_hete +o2 +fmn +h2o +hplus
+    8_20_dihete
+  }
+
+  branch from fmnh2 side left {
+    fmnh2
+    <-> . +12_hete +o2 +fmn +h2o +hplus
+    12_20_dihete
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +6_trans_leukotriene_b4 +fmnh2 +o2 +h2o +hplus
+    20_hydroxy_6_trans_leukotriene_b4
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    18_r_hete
   }
 }

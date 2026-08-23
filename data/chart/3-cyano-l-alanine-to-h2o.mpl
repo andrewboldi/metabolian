@@ -4,27 +4,15 @@
 # edit the generator, not this file.
 
 pathway 3-cyano-l-alanine-to-h2o "3-cyano-L-alanine to H2O" {
-  spacing 224
+  spacing 208
 
   spine at 0,0 {
     3_cyano_l_alanine
-    <-> ec_4_4_1_9 [4.4.1.9] +hydrogen_sulfide +h -hydrogen_cyanide
-    d_cysteine
-    <-> ec_1_8_4_4 [1.8.4.4] +glutathione_disulfide -glutathione
-    d_cystine
-    <-> ec_7_4_2_12 [7.4.2.12] +h +adp +phosphate -d_cystine -h2o
-    atp
-  }
-
-  branch from glutathione side left {
-    glutathione
-    <-> . +17_estradiol_3_4_quinone
-    4_hydroxy_17beta_estradiol_2_s_glutathione
-  }
-
-  branch from glutathione side right {
-    glutathione
-    <-> . +12_oxo_c_ltb3
-    12_dehydro_leukotriene_b4
+    <-> ec_4_4_1_9 [4.4.1.9] +hydrogen_sulfide -cysteine
+    cyanide
+    <-> ec_2_8_1_2 [2.8.1.2] +2_oxo_3_sulfanylpropanoate -pyruvate
+    thiocyanate
+    <-> . +h +indole_3_methanol -h2o
+    indolylmethylisothiocyanate
   }
 }

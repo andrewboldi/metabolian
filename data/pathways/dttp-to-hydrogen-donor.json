@@ -117,33 +117,6 @@
       "xrefs": {
         "chebi": "CHEBI:17499"
       }
-    },
-    {
-      "id": "5_6_dihydrothymine",
-      "name": "5,6-dihydrothymine",
-      "formula": "C5H8N2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:27468"
-      }
-    },
-    {
-      "id": "nadp",
-      "name": "NADP+",
-      "formula": "C21H25N7O17P3",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58349"
-      }
-    },
-    {
-      "id": "nadph",
-      "name": "NADPH",
-      "formula": "C21H26N7O17P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57783"
-      }
     }
   ],
   "enzymes": [
@@ -159,20 +132,16 @@
       "name": "thymidine phosphorylase",
       "ec": [
         "2.4.2.4"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P19971"
+      }
     },
     {
       "id": "ec_1_17_99_4",
       "name": "uracil/thymine dehydrogenase",
       "ec": [
         "1.17.99.4"
-      ]
-    },
-    {
-      "id": "ec_1_3_1_2",
-      "name": "dihydropyrimidine dehydrogenase (NADP(+))",
-      "ec": [
-        "1.3.1.2"
       ]
     }
   ],
@@ -317,52 +286,269 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "dihydropyrimidine dehydrogenase (NADP(+))",
-      "equation": "5,6-dihydrothymine + NADP(+) = thymine + NADPH + H(+)",
-      "ec": "1.3.1.2",
-      "substrates": [
-        {
-          "metabolite": "5_6_dihydrothymine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "thymine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_3_1_2"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:58284"
+      "id": "xt_dttp_2-deoxynucleoside-to-triphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dttp"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2-deoxynucleoside-to-triphosphate"
+      },
+      "note": "Shares dTTP with 2'-deoxynucleoside… to triphosphate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:58284"
+            "db": "ChEBI",
+            "id": "CHEBI:37568"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dttp_dichloromethane-to-dtmp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dttp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dichloromethane-to-dtmp"
+      },
+      "note": "Shares dTTP with dichloromethane to dTMP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:37568"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dttp_dtdp-l-dihydrostreptose-to-dtdp-4-dehydro-l-rham",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dttp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-l-dihydrostreptose-to-dtdp-4-dehydro-l-rham"
+      },
+      "note": "Shares dTTP with dTDP-L-dihydrostreptose to dTDP-4-dehydro-β-L-rhamno….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:37568"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dttp_dtdp-l-mycarose-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dttp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-l-mycarose-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares dTTP with dTDP-β-L-mycarose to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:37568"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dttp_vancomycin-aglycone-to-dtdp-d-galacturonate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dttp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "vancomycin-aglycone-to-dtdp-d-galacturonate"
+      },
+      "note": "Shares dTTP with vancomycin aglycone to dTDP-D-galacturonate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:37568"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_thymidine_dichloromethane-to-dtmp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "thymidine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dichloromethane-to-dtmp"
+      },
+      "note": "Shares thymidine with dichloromethane to dTMP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17748"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_thymidine_dtdp-3-azaniumyl-3-6-dide-to-dtdp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "thymidine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-3-azaniumyl-3-6-dide-to-dtdp"
+      },
+      "note": "Shares thymidine with dTDP-3-azaniumyl-3,6-dide… to dTDP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17748"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_thymidine_thymidine-3-monophosphate-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "thymidine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "thymidine-3-monophosphate-to-succinate"
+      },
+      "note": "Shares thymidine with thymidine 3'-monophosphate to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17748"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxy_d_ribose_1_phosphate_2-deoxyguanosine-to-2-hydroxy-3-oxopropanoate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxy_d_ribose_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-deoxyguanosine-to-2-hydroxy-3-oxopropanoate"
+      },
+      "note": "Shares 2-deoxy-α-D-ribose 1-phosphate with 2'-deoxyguanosine… to 2-hydroxy-3-oxopropanoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57259"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxy_d_ribose_1_phosphate_dadp-to-adenine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxy_d_ribose_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dadp-to-adenine"
+      },
+      "note": "Shares 2-deoxy-α-D-ribose 1-phosphate with dADP to adenine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57259"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxy_d_ribose_1_phosphate_ditp-to-hypoxanthine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxy_d_ribose_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ditp-to-hypoxanthine"
+      },
+      "note": "Shares 2-deoxy-α-D-ribose 1-phosphate with dITP to hypoxanthine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57259"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxy_d_ribose_1_phosphate_purines-2-deoxy-d-ribonu-to-2-hydroxy-3-oxosucci",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxy_d_ribose_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "purines-2-deoxy-d-ribonu-to-2-hydroxy-3-oxosucci"
+      },
+      "note": "Shares 2-deoxy-α-D-ribose 1-phosphate with purines 2'-deoxy-D-ribonu… to 2-hydroxy-3-oxosuccinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57259"
           }
         ]
       }

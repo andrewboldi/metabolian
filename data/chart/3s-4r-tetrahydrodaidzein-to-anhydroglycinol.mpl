@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3s-4r-tetrahydrodaidzein-to-anhydroglycinol "(3S,4R)-Tetrahydrodaidzein to Anhydroglycinol" {
-  spacing 194
+  spacing 152
 
   spine at 0,0 {
     3s_4r_tetrahydrodaidzein
@@ -14,47 +14,5 @@ pathway 3s-4r-tetrahydrodaidzein-to-anhydroglycinol "(3S,4R)-Tetrahydrodaidzein 
     daidzein
     <-> . +h
     anhydroglycinol
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_lysine +l_valine +l_tryptophan
-    lysyl_valyl_tryptophan
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_leucine +l_methionine +l_arginine
-    methionyl_arginyl_leucine
-  }
-
-  branch from daidzein side left {
-    daidzein
-    <-> . +nadp +h +nadph
-    r_dihydrodaidzein
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +1_eicosenoylglycerophosphocholine_delta_11_sn1_l +phosphate +1_eicosenoylglycerophosphocholine_delta_11_sn1_l +h2o
-    atp
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    1_8z_11z_14z_icosatrienoyl_sn_glycero_3_phosphoc
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> ec_1_14_13_150 [1.14.13.150] +1e_4e_8e_humulene +h +o2 +nadp +h2o
-    8_hydroxy_humulene
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> ec_1_1_1_323 [1.1.1.323] +h +thujan_3_one +nadp
-    thujan_3_ol
   }
 }

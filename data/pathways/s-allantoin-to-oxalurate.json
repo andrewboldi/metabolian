@@ -116,33 +116,6 @@
       "xrefs": {
         "chebi": "CHEBI:57945"
       }
-    },
-    {
-      "id": "oxamate",
-      "name": "oxamate",
-      "formula": "C2H2NO3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:58363"
-      }
-    },
-    {
-      "id": "carbamoyl_p",
-      "name": "Carbamoyl phosphate",
-      "formula": "CH2NO5P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:58228"
-      }
-    },
-    {
-      "id": "pi",
-      "name": "Orthophosphate (Pi)",
-      "formula": "HO4P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:43474"
-      }
     }
   ],
   "enzymes": [
@@ -179,13 +152,6 @@
       "name": "ureidoglycolate dehydrogenase (NAD(+))",
       "ec": [
         "1.1.1.350"
-      ]
-    },
-    {
-      "id": "ec_2_1_3_5",
-      "name": "oxamate carbamoyltransferase",
-      "ec": [
-        "2.1.3.5"
       ]
     }
   ],
@@ -381,48 +347,225 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "oxamate carbamoyltransferase",
-      "equation": "oxamate + carbamoyl phosphate = N-carbamoyl-2-oxoglycine + phosphate",
-      "ec": "2.1.3.5",
-      "substrates": [
-        {
-          "metabolite": "oxamate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "carbamoyl_p",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "oxalurate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_3_5"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:22984"
+      "id": "xt_s_allantoin_3-5-unsubstituted-to-r-allantoin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_allantoin"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "3-5-unsubstituted-to-r-allantoin"
+      },
+      "note": "Shares (S)-(+)-allantoin with 3',5'-unsubstituted… to (R)-(−)-allantoin.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:22984"
+            "db": "ChEBI",
+            "id": "CHEBI:15678"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_allantoate_allantoin-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "allantoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "allantoin-to-ammonium"
+      },
+      "note": "Shares allantoate with allantoin to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17536"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_2_ureidoglycine_allantoin-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_2_ureidoglycine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "allantoin-to-ammonium"
+      },
+      "note": "Shares (S)-2-ureidoglycine with allantoin to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:59947"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_2_ureidoglycine_benzoylagmatinium-to-glycine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_2_ureidoglycine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "benzoylagmatinium-to-glycine"
+      },
+      "note": "Shares (S)-2-ureidoglycine with benzoylagmatinium to glycine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:59947"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_2_ureidoglycine_s-2-ureidoglycine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_2_ureidoglycine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2-ureidoglycine-to-h2o"
+      },
+      "note": "Shares (S)-2-ureidoglycine with (S)-2-ureidoglycine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:59947"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ureidoglycolate_allantoin-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ureidoglycolate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "allantoin-to-ammonium"
+      },
+      "note": "Shares (−)-ureidoglycolate with allantoin to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57296"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ureidoglycolate_n-ethylglycine-to-l-glutamate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ureidoglycolate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-ethylglycine-to-l-glutamate"
+      },
+      "note": "Shares (−)-ureidoglycolate with N-ethylglycine to L-glutamate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57296"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_oxalurate_allantoin-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "oxalurate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "allantoin-to-ammonium"
+      },
+      "note": "Shares oxalurate with allantoin to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57824"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_oxalurate_benzoylagmatinium-to-glycine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "oxalurate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "benzoylagmatinium-to-glycine"
+      },
+      "note": "Shares oxalurate with benzoylagmatinium to glycine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57824"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_oxalurate_n2-acetyl-l-ornithine-to-d-ribulose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "oxalurate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n2-acetyl-l-ornithine-to-d-ribulose"
+      },
+      "note": "Shares oxalurate with N2-acetyl-L-ornithine to D-ribulose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57824"
           }
         ]
       }

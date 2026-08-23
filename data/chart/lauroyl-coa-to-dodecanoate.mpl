@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway lauroyl-coa-to-dodecanoate "lauroyl-CoA to dodecanoate" {
-  spacing 158
+  spacing 170
 
   spine at 0,0 {
     lauroyl_coa
@@ -20,5 +20,17 @@ pathway lauroyl-coa-to-dodecanoate "lauroyl-CoA to dodecanoate" {
     dodecanal
     <-> ec_1_1_3_20 [1.1.3.20] +o2 +h2o2
     dodecan_1_ol
+  }
+
+  branch from lauroyl_coa side right {
+    lauroyl_coa
+    <-> . +o2 +h2o2
+    trans_dodec_2_enoyl_coa
+  }
+
+  branch from lauroyl_coa side left {
+    lauroyl_coa
+    <-> . +hexadecan_1_ol +coa
+    palmityl_laurate
   }
 }

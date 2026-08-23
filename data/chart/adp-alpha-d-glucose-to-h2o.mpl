@@ -4,15 +4,15 @@
 # edit the generator, not this file.
 
 pathway adp-alpha-d-glucose-to-h2o "ADP-alpha-D-glucose to H2O" {
-  spacing 160
+  spacing 204
 
   spine at 0,0 {
     adp_alpha_d_glucose
-    <-> ec_3_6_1_21 [3.6.1.21] +h2o -h -amp
-    alpha_d_glucose_1_phosphate
-    <-> ec_2_4_1_20 [2.4.1.20] +alpha_d_glucose -phosphate
-    d_cellobiose
-    <-> . +h +adp +phosphate -d_cellobiose -h2o
-    atp
+    <-> ec_2_4_1_213 [2.4.1.213] +h +sn_glycerol_3_phosphate -adp
+    2_o_beta_d_glucosyl_sn_glycerol_3_phosphate
+    <-> ec_3_1_3_69 [3.1.3.69] +h2o -2_o_beta_d_glucosyl_sn_glycerol -phosphate
+    h
+    <-> . +2_o_beta_d_glucosyl_sn_glycerol +adp +phosphate -atp -h2o
+    2_o_beta_d_glucosyl_sn_glycerol
   }
 }

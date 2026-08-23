@@ -23,16 +23,4 @@ pathway alpha-d-man-a-1-2-alph-to-c80-dolichol-phosphate "alpha-D-Man-a-(1->2)-a
     <-> ec_3_6_1_44 [3.6.1.44] +h2o -glucosyl_3_mannosyl_9_n_acetylglucosaminyl_2_ph -c80_dolichol_phosphate
     h
   }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +18_0_18_3_ps +phosphate +18_0_18_3_ps +h2o
-    atp
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    18_2_18_2_ps
-  }
 }

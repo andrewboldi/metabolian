@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n2-3-carboxylatopropiony-to-succinate "N2-(3-carboxylatopropiony… to succinate" {
-  spacing 246
+  spacing 240
 
   spine at 0,0 {
     n2_3_carboxylatopropionyl_l_arginine
@@ -16,11 +16,5 @@ pathway n2-3-carboxylatopropiony-to-succinate "N2-(3-carboxylatopropiony… to s
     n_3_carboxylatopropanoyl_l_glutamate
     <-> ec_3_5_1_96 [3.5.1.96] +h2o -succinate
     glutamate
-  }
-
-  branch from n2_succinyl_l_ornithinate side left {
-    n2_succinyl_l_ornithinate
-    <-> ec_2_1_3_11 [2.1.3.11] +carbamoyl_p +pi +hplus
-    n2_3_carboxylatopropionyl_l_citrullinate
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-3-hydroxylinoleoyl-coa-to-3-7-10-hexadecatrie "(S)-3-hydroxylinoleoyl-CoA to 3,7,10-Hexadecatrienoyl…" {
-  spacing 164
+  spacing 170
 
   spine at 0,0 {
     s_3_hydroxylinoleoyl_coa
@@ -28,5 +28,11 @@ pathway s-3-hydroxylinoleoyl-coa-to-3-7-10-hexadecatrie "(S)-3-hydroxylinoleoyl-
     3_7_10_hexadecatrienoyl_coenzyme_a
     <-> . +h +nadph +2e_4z_7z_10z_hexadecatetraenoyl_coa
     nadp
+  }
+
+  branch from s_3_hydroxylinoleoyl_coa side left {
+    s_3_hydroxylinoleoyl_coa
+    <-> . +h2o
+    2e_9z_12z_octadecatrienoyl_coa
   }
 }

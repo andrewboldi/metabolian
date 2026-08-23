@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway isopenicillin-n-to-adp "isopenicillin N to ADP" {
-  spacing 188
+  spacing 248
 
   spine at 0,0 {
     isopenicillin_n
@@ -16,39 +16,99 @@ pathway isopenicillin-n-to-adp "isopenicillin N to ADP" {
     n_acetyl_l_2_aminoadipic_acid_6_phosphate
   }
 
-  branch from l_2_aminoadipate side left {
-    l_2_aminoadipate
-    <-> . +h +atp +h2o +phosphate
-    l_2_aminoadipate_adenylate
-  }
-
-  branch from l_2_aminoadipate side right {
-    l_2_aminoadipate
-    <-> ec_1_2_1_31 [1.2.1.31] +nadh +h +atp +s_2_amino_6_oxohexanoate +amp +nad
-    diphosphate
-  }
-
   branch from coa side left {
     coa
-    <-> . +2_aminobenzoylacetyl_coa
-    4_hydroxy_2_quinolone
+    <-> . +2s_2_methylbutanoyl_coa +2_4_di_2_methyl_butanoyl_3_4_methyl_pentanoyl_su
+    2_4_6_tri_2_methyl_butanoyl_3_4_methyl_pentanoyl
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_255 [2.3.1.255] +acetyl_coa +l_valyl_group
-    n_acetyl_l_valyl
+    <-> . +2_methylpropanoyl_coa +2_4_di_2_methyl_butanoyl_3_5_methyl_hexanoyl_suc
+    2_4_di_2_methyl_butanoyl_3_5_methyl_hexanoyl_6_i
   }
 
   branch from adp side left {
     adp
-    <-> ec_2_7_1_21 [2.7.1.21] +acyclovir +h +atp
-    acyclovir_monophosphate
+    <-> ec_3_6_3_1 [3.6.3.1] +h +phosphate +atp +h2o
+    1_linoleoyl_2_palmitoleoyl_sn_glycerol_3_phospha
   }
 
   branch from adp side right {
     adp
-    <-> ec_2_7_1_21 [2.7.1.21] +h +3_azido_3_deoxythymidine_5_phosphate +atp
-    zidovudine
+    <-> ec_3_6_3_1 [3.6.3.1] +h +phosphate +atp +h2o
+    1_18_3_2_16_1_phosphatidate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_4_2_1_80 [4.2.1.80] +s_4_hydroxy_2_oxohexanoate
+    2z_2_hydroxyhexa_2_5_dienoate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +r_3_hydroxydecanoic_acid +alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_form_d_p_put
+    alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_form_c_p_put
+  }
+
+  branch from acetyl_coa side left {
+    acetyl_coa
+    <-> ec_2_3_1_5 [2.3.1.5] +2_aminofluorene +coa
+    2_acetamidofluorene
+  }
+
+  branch from acetyl_coa side right {
+    acetyl_coa
+    <-> ec_2_3_1_3 [2.3.1.3] +beta_d_glucosamine +coa
+    n_acetyl_beta_d_glucosamine
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    pc_20_0_18_2_9z_12z
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    pc_20_1_11z_18_2_9z_12z
+  }
+
+  branch from coa side left {
+    coa
+    <-> . +2s_2_methylbutanoyl_coa +2_4_di_2_methyl_butanoyl_3_5_methyl_hexanoyl_suc
+    2_4_6_tri_2_methyl_butanoyl_3_5_methyl_hexanoyl
+  }
+
+  branch from coa side right {
+    coa
+    <-> . +2_methylpropanoyl_coa +2_4_di_2_methyl_butanoyl_3_6_methyl_heptanoyl_su
+    2_4_di_2_methyl_butanoyl_3_6_methyl_heptanoyl_6
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    pc_20_0_18_3_9z_12z_15z
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    pc_20_1_11z_18_3_9z_12z_15z
+  }
+
+  branch from adp side left {
+    adp
+    <-> ec_3_6_3_1 [3.6.3.1] +h +phosphate +atp +h2o
+    pc_20_2_11z_14z_18_2_9z_12z
+  }
+
+  branch from adp side right {
+    adp
+    <-> ec_3_6_3_1 [3.6.3.1] +h +phosphate +atp +h2o
+    pc_20_2_11z_14z_18_3_9z_12z_15z
   }
 }

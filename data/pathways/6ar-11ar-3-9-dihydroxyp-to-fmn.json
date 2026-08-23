@@ -122,58 +122,13 @@
       }
     },
     {
-      "id": "tetradecanoate",
-      "name": "tetradecanoate",
-      "formula": "C14H27O2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:30807"
-      }
-    },
-    {
-      "id": "10_hydroxymyristate",
-      "name": "10-hydroxymyristate",
-      "formula": "C14H27O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:167545"
-      }
-    },
-    {
-      "id": "11_hydroxymyristate",
-      "name": "11-hydroxymyristate",
-      "formula": "C14H27O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:167547"
-      }
-    },
-    {
-      "id": "2_cis_6_cis_farnesyl_diphosphate",
-      "name": "2-cis,6-cis-farnesyl diphosphate",
-      "short": "2-cis,6-cis-farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:60374"
-      }
-    },
-    {
-      "id": "cedr_8_ene",
-      "name": "cedr-8-ene",
-      "formula": "C15H24",
+      "id": "3r_4r_7_2_4_trihydroxyisoflavanol",
+      "name": "(3R,4R)-7,2',4'-trihydroxyisoflavanol",
+      "short": "(3R,4R)-7,2',4'-tri…",
+      "formula": "C15H14O5",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:10216"
-      }
-    },
-    {
-      "id": "trans_farnesene",
-      "name": "trans-β-farnesene",
-      "formula": "C15H24",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:10418"
+        "chebi": "CHEBI:142869"
       }
     }
   ],
@@ -197,6 +152,13 @@
       "name": "glyceollin synthase",
       "ec": [
         "1.14.14.135"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_139",
+      "name": "pterocarpan synthase",
+      "ec": [
+        "4.2.1.139"
       ]
     }
   ],
@@ -362,172 +324,153 @@
     },
     {
       "id": "r4",
-      "name": "tetradecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 10-hydroxytetradecanoate...",
-      "equation": "tetradecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 10-hydroxytetradecanoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "pterocarpan synthase",
+      "equation": "(3R,4R)-7,2',4'-trihydroxyisoflavanol = (6aR,11aR)-3,9-dihydroxypterocarpan + H2O",
+      "ec": "4.2.1.139",
       "substrates": [
         {
-          "metabolite": "tetradecanoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
+          "metabolite": "3r_4r_7_2_4_trihydroxyisoflavanol",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "10_hydroxymyristate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
+          "metabolite": "6ar_11ar_3_9_dihydroxypterocarpan",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
           "stoichiometry": 1
-        },
+        }
+      ],
+      "catalysts": [
         {
-          "metabolite": "hplus",
-          "stoichiometry": 1
+          "enzyme": "ec_4_2_1_139"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:66880"
+        "rhea": "RHEA:58928"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:66880"
+            "id": "RHEA:58928"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3_6_9_trihydroxypterocarpan_d-glucosamine-to-d-fructofuranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_6_9_trihydroxypterocarpan"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glucosamine-to-d-fructofuranose"
+      },
+      "note": "Shares 3,6,9-trihydroxypterocarpan with α-D-glucosamine… to β-D-fructofuranose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15649"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "tetradecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 11-hydroxytetradecanoate...",
-      "equation": "tetradecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 11-hydroxytetradecanoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "tetradecanoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "11_hydroxymyristate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:66884"
+      "id": "xt_6as_11as_2_dimethylallyl_3_6a_9_trihydroxyptero_3-24r-24-r-fucosterol-to-cobamamide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6as_11as_2_dimethylallyl_3_6a_9_trihydroxyptero"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "3-24r-24-r-fucosterol-to-cobamamide"
+      },
+      "note": "Shares (6aS,11aS)-2-dimethylallyl-3,6a,9-trihydroxypterocarpan with (3β,24R,24'R)-fucosterol… to cobamamide.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:66884"
+            "db": "ChEBI",
+            "id": "CHEBI:50118"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "(2Z,6Z)-farnesyl diphosphate = (-)-alpha-cedrene + diphosphate",
-      "equation": "(2Z,6Z)-farnesyl diphosphate = (-)-alpha-cedrene + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "2_cis_6_cis_farnesyl_diphosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "cedr_8_ene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:68540"
+      "id": "xt_6as_11as_2_dimethylallyl_3_6a_9_trihydroxyptero_3-8-dideoxy-8-oxo-alpha-d-to-adp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6as_11as_2_dimethylallyl_3_6a_9_trihydroxyptero"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "3-8-dideoxy-8-oxo-alpha-d-to-adp"
+      },
+      "note": "Shares (6aS,11aS)-2-dimethylallyl-3,6a,9-trihydroxypterocarpan with 3,8-dideoxy-8-oxo-alpha-D… to ADP.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:68540"
+            "db": "ChEBI",
+            "id": "CHEBI:50118"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "(2Z,6Z)-farnesyl diphosphate = (E)-beta-farnesene + diphosphate",
-      "equation": "(2Z,6Z)-farnesyl diphosphate = (E)-beta-farnesene + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "2_cis_6_cis_farnesyl_diphosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "trans_farnesene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:68544"
+      "id": "xt_6as_11as_2_dimethylallyl_3_6a_9_trihydroxyptero_dtdp-3-amino-4-oxo-2-3-6-to-dtdp-3-4-didehydro-2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6as_11as_2_dimethylallyl_3_6a_9_trihydroxyptero"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-3-amino-4-oxo-2-3-6-to-dtdp-3-4-didehydro-2"
+      },
+      "note": "Shares (6aS,11aS)-2-dimethylallyl-3,6a,9-trihydroxypterocarpan with dTDP-3-amino-4-oxo-2,3,6-… to dTDP-3,4-didehydro-2,6-di….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:68544"
+            "db": "ChEBI",
+            "id": "CHEBI:50118"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3r_4r_7_2_4_trihydroxyisoflavanol_h-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3r_4r_7_2_4_trihydroxyisoflavanol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-h2o"
+      },
+      "note": "Shares (3R,4R)-7,2',4'-trihydroxyisoflavanol with H to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:142869"
           }
         ]
       }

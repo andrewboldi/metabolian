@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dolabradiene-to-3beta-15-16-trihydroxydol "dolabradiene to 3beta,15,16-trihydroxydol…" {
-  spacing 180
+  spacing 168
 
   spine at 0,0 {
     dolabradiene
@@ -14,17 +14,5 @@ pathway dolabradiene-to-3beta-15-16-trihydroxydol "dolabradiene to 3beta,15,16-t
     3_hydroxy_15_16_epoxydolabrene
     <-> . +h2o
     3beta_15_16_trihydroxydolabrene
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +longiborneol +fmnh2 +o2 +h2o +hplus
-    culmorin
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +5_pregnan_3_11_20_trione +fmnh2 +o2 +h2o +hplus
-    17_hydroxy_5_pregnan_3_11_20_trione
   }
 }

@@ -16,21 +16,21 @@ pathway benzylmalonyl-coa-to-e-cinnamoyl-coa "benzylmalonyl-CoA to (E)-cinnamoyl
     e_cinnamoyl_coa
   }
 
-  branch from e_cinnamoyl_coa side left {
-    e_cinnamoyl_coa
-    <-> . +trans_cinnamate +atp +coa +amp
-    ppi
-  }
-
-  branch from trans_cinnamate side right {
-    trans_cinnamate
-    <-> ec_2_4_1_177 [2.4.1.177] +udp_d_glucose +udp
-    1_o_trans_cinnamoyl_d_glucopyranose
-  }
-
   branch from trans_cinnamate side left {
     trans_cinnamate
     <-> ec_1_14_12_19 [1.14.12.19] +nadh +o2 +hplus +nad
     e_3_5s_6r_5_6_dihydroxycyclohexa_1_3_dienyl_acr
+  }
+
+  branch from r_3_phenyllactate side right {
+    r_3_phenyllactate
+    <-> . +fad +hplus +fadh2
+    keto_phenylpyruvate
+  }
+
+  branch from r_3_phenyllactate side left {
+    r_3_phenyllactate
+    <-> ec_1_1_3_15 [1.1.3.15] +o2 +h2o2
+    3_phenylpyruvate
   }
 }

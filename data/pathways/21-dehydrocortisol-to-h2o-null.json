@@ -1,0 +1,568 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "21-dehydrocortisol-to-h2o-null",
+  "name": "21-dehydrocortisol to H2O",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from 21-dehydrocortisol to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR130584"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:78595"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "21_dehydrocortisol",
+      "name": "21-dehydrocortisol",
+      "formula": "C21H28O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:78595"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "cortisol",
+      "name": "cortisol",
+      "formula": "C21H30O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM730404"
+      }
+    },
+    {
+      "id": "11beta_hydroxyandrost_4_ene_3_17_dione",
+      "name": "11beta-hydroxyandrost-4-ene-3,17-dione",
+      "short": "11beta-hydroxyandro…",
+      "formula": "C19H26O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM2593"
+      }
+    },
+    {
+      "id": "acetaldehyde",
+      "name": "acetaldehyde",
+      "formula": "C2H4O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM75"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "s_adenosyl_l_homocysteine",
+      "name": "S-adenosyl-L-homocysteine",
+      "short": "S-adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1102167"
+      }
+    },
+    {
+      "id": "cobalt_precorrin_6",
+      "name": "Cobalt-precorrin 6",
+      "formula": "C44H45CoN4O16",
+      "charge": -7,
+      "xrefs": {
+        "metanetx": "MNXM736810"
+      }
+    },
+    {
+      "id": "s_adenosyl_l_methionine",
+      "name": "S-adenosyl-L-methionine",
+      "short": "S-adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1363767"
+      }
+    },
+    {
+      "id": "cobalt_precorrin_5",
+      "name": "Cobalt-precorrin 5",
+      "formula": "C45H53CoN4O16",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM736804"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_151",
+      "name": "21-hydroxysteroid dehydrogenase (NADP(+))",
+      "ec": [
+        "1.1.1.151"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_62",
+      "name": "17beta-estradiol 17-dehydrogenase",
+      "ec": [
+        "1.1.1.62"
+      ],
+      "xrefs": {
+        "uniprot": "Q04828"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "21-hydroxysteroid dehydrogenase (NADP(+))",
+      "ec": "1.1.1.151",
+      "substrates": [
+        {
+          "metabolite": "21_dehydrocortisol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cortisol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_151"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR130584"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR130584"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR103724",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cortisol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "11beta_hydroxyandrost_4_ene_3_17_dione",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR103724"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR103724"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR153256",
+      "substrates": [
+        {
+          "metabolite": "s_adenosyl_l_homocysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 9
+        },
+        {
+          "metabolite": "cobalt_precorrin_6",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetaldehyde",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_adenosyl_l_methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cobalt_precorrin_5",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR153256"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR153256"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_21_dehydrocortisol_20-dihydro-11-deoxycorti-to-adenosine-3-5-bismon",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "21_dehydrocortisol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "20-dihydro-11-deoxycorti-to-adenosine-3-5-bismon"
+      },
+      "note": "Shares 21-dehydrocortisol with 20β-dihydro-11-deoxycorti… to adenosine 3',5'-bismonoph….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78595"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_21_dehydrocortisol_21-dehydrocortisol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "21_dehydrocortisol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "21-dehydrocortisol-to-h2o"
+      },
+      "note": "Shares 21-dehydrocortisol with 21-dehydrocortisol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78595"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_11beta_hydroxyandrost_4_ene_3_17_dione_11beta-hydroxy-5alpha-and-to-11-hydroxytestoster",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11beta_hydroxyandrost_4_ene_3_17_dione"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "11beta-hydroxy-5alpha-and-to-11-hydroxytestoster"
+      },
+      "note": "Shares 11beta-hydroxyandrost-4-ene-3,17-dione with 11beta-hydroxy-5alpha-and… to 11β-hydroxytestosterone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2593"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_11beta_hydroxyandrost_4_ene_3_17_dione_21-dehydrocortisol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11beta_hydroxyandrost_4_ene_3_17_dione"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "21-dehydrocortisol-to-h2o"
+      },
+      "note": "Shares 11beta-hydroxyandrost-4-ene-3,17-dione with 21-dehydrocortisol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2593"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_11beta_hydroxyandrost_4_ene_3_17_dione_5beta-pregnan-17alpha-3-2-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11beta_hydroxyandrost_4_ene_3_17_dione"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5beta-pregnan-17alpha-3-2-to-h2o"
+      },
+      "note": "Shares 11beta-hydroxyandrost-4-ene-3,17-dione with 5beta-pregnan-17alpha-3,2… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2593"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_11beta_hydroxyandrost_4_ene_3_17_dione_5beta-pregnan-17alpha-3-2-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11beta_hydroxyandrost_4_ene_3_17_dione"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5beta-pregnan-17alpha-3-2-to-h2o-null"
+      },
+      "note": "Shares 11beta-hydroxyandrost-4-ene-3,17-dione with 5beta-pregnan-17alpha-3,2… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2593"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_11beta_hydroxyandrost_4_ene_3_17_dione_s-2-chloropropanoate-to-chloride",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11beta_hydroxyandrost_4_ene_3_17_dione"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2-chloropropanoate-to-chloride"
+      },
+      "note": "Shares 11beta-hydroxyandrost-4-ene-3,17-dione with (S)-2-chloropropanoate to chloride.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2593"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_11beta_hydroxyandrost_4_ene_3_17_dione_tocotrienol-to-h2o-38095",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11beta_hydroxyandrost_4_ene_3_17_dione"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "tocotrienol-to-h2o-38095"
+      },
+      "note": "Shares 11beta-hydroxyandrost-4-ene-3,17-dione with γ-tocotrienol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2593"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cobalt_precorrin_6_2-3-dihydroxy-n-benzoylse-to-nadph-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cobalt_precorrin_6"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3-dihydroxy-n-benzoylse-to-nadph-null"
+      },
+      "note": "Shares Cobalt-precorrin 6 with 2,3-dihydroxy-N-benzoylse… to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM736810"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cobalt_precorrin_6_21-dehydrocortisol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cobalt_precorrin_6"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "21-dehydrocortisol-to-h2o"
+      },
+      "note": "Shares Cobalt-precorrin 6 with 21-dehydrocortisol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM736810"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cobalt_precorrin_6_3r-5s-1-pyrroline-3-hyd-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cobalt_precorrin_6"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3r-5s-1-pyrroline-3-hyd-to-h2o"
+      },
+      "note": "Shares Cobalt-precorrin 6 with (3R,5S)-1-pyrroline-3-hyd… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM736810"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cobalt_precorrin_6_nadh-to-coa-18-cooh-15e-dinor-lte4-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cobalt_precorrin_6"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-coa-18-cooh-15e-dinor-lte4-null"
+      },
+      "note": "Shares Cobalt-precorrin 6 with NADH to CoA-18-COOH-15E-dinor-LTE4.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM736810"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway beta-d-galactosyl-1-3-to-pyruvate "beta-D-galactosyl-(1->3)-… to pyruvate" {
-  spacing 340
+  spacing 318
 
   spine at 0,0 {
     beta_d_galactosyl_1_3_n_acetyl_d_glucosamine
@@ -18,87 +18,9 @@ pathway beta-d-galactosyl-1-3-to-pyruvate "beta-D-galactosyl-(1->3)-… to pyruv
     lactose_6_phosphate
   }
 
-  branch from beta_d_gal_1_3_beta_d_glcnac_1_3_beta_d_gal_1_4 side left {
-    beta_d_gal_1_3_beta_d_glcnac_1_3_beta_d_gal_1_4
-    <-> ec_3_2_1_140 [3.2.1.140] +beta_d_galactosyl_1_3_n_acetyl_d_glucosamine +h2o
+  branch from beta_lactose side left {
+    beta_lactose
+    <-> .
     alpha_lactose
-  }
-
-  branch from beta_d_gal_1_3_beta_d_glcnac_1_3_beta_d_gal_1_4 side right {
-    beta_d_gal_1_3_beta_d_glcnac_1_3_beta_d_gal_1_4
-    <-> . +cmp +ls_tetrasaccharide_a +h
-    cmp_n_acetyl_beta_neuraminate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_alanine +l_aspartate +l_arginine
-    asparaginyl_alanyl_arginine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_aspartate +l_glutamate +l_tryptophan
-    aspartyl_glutamyl_tryptophan
-  }
-
-  branch from udp_alpha_d_galactose side left {
-    udp_alpha_d_galactose
-    <-> ec_2_4_1_241 [2.4.1.241] +udp +1_18_3_2_16_0_digalactosyldiacylglycerol +h
-    1_9z_12z_15z_octadecatrienoyl_2_hexadecanoyl_3_b
-  }
-
-  branch from udp_alpha_d_galactose side right {
-    udp_alpha_d_galactose
-    <-> ec_2_4_1_241 [2.4.1.241] +udp +h +1_18_3_2_16_1_digalactosyldiacylglycerol
-    1_18_3_2_16_1_monogalactosyldiacylglycerol
-  }
-
-  branch from 2_acetamido_2_deoxy_d_glucopyranosyl_1_3_d_galac side left {
-    2_acetamido_2_deoxy_d_glucopyranosyl_1_3_d_galac
-    <-> ec_2_4_1_275 [2.4.1.275] +udp +h +udp_alpha_d_galactose
-    d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_glc
-  }
-
-  branch from lactose side right {
-    lactose
-    <-> ec_5_1_3_11 [5.1.3.11]
-    d_gal_1_4_d_man
-  }
-
-  branch from lactose side left {
-    lactose
-    <-> ec_3_2_1_108 [3.2.1.108] +h2o +d_galactopyranose
-    alpha_d_glucose
-  }
-
-  branch from udp_n_acetyl_alpha_d_glucosamine side right {
-    udp_n_acetyl_alpha_d_glucosamine
-    <-> . +udp +alpha_d_glcnac_1_2_beta_d_gal_1_4_alpha_l_fuc_1 +h
-    beta_d_gal_1_4_alpha_l_fuc_1_3_alpha_d_glcnac_1
-  }
-
-  branch from udp_n_acetyl_alpha_d_glucosamine side left {
-    udp_n_acetyl_alpha_d_glucosamine
-    <-> . +udp +beta_d_glcnac_1_3_beta_d_gal_1_4_alpha_l_fuc_1_3 +h
-    beta_d_gal_1_4_alpha_l_fuc_1_3_alpha_d_glcnac_1
-  }
-
-  branch from lactose_6_phosphate side right {
-    lactose_6_phosphate
-    <-> ec_3_2_1_23 [3.2.1.23] +alpha_lactose +h2o
-    phosphate
-  }
-
-  branch from pyruvate side left {
-    pyruvate
-    <-> . +2_o_6_phospho_d_mannosyl_d_glycerate +phosphoenolpyruvate
-    2r_2_o_alpha_d_mannosyl_glycerate
-  }
-
-  branch from pyruvate side right {
-    pyruvate
-    <-> ec_4_1_3_30 [4.1.3.30] +2r_3s_2_methylcitrate
-    succinate
   }
 }

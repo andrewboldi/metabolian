@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-3-4-dihydroxymandelaldehy "NADH to 3,4-dihydroxymandelaldehy…" {
-  spacing 236
+  spacing 188
 
   spine at 0,0 {
     nadh
@@ -16,53 +16,5 @@ pathway nadh-to-3-4-dihydroxymandelaldehy "NADH to 3,4-dihydroxymandelaldehy…"
     s_adenosyl_l_methionine
     <-> . +dhpg +nad -nadh -hplus
     dopegal
-  }
-
-  branch from 3_methoxy_4_hydroxyphenylglycolaldehyde side left {
-    3_methoxy_4_hydroxyphenylglycolaldehyde
-    <-> . +nadh +h +nad +h2o
-    vanillylmandelic_acid
-  }
-
-  branch from 3_methoxy_4_hydroxyphenylglycolaldehyde side right {
-    3_methoxy_4_hydroxyphenylglycolaldehyde
-    <-> . +h +vanillylmandelic_acid +nadph +h2o
-    nadp
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_geranial +h
-    s_terpineol
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +s_citronellal
-    isomenthol
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +yersiniose_b +phosphate +yersiniose_b
-    atp
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    d_paratopyranose
-  }
-
-  branch from s_adenosyl_l_methionine side left {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +hemanthamine +h
-    11_hydroxyvittatine
-  }
-
-  branch from s_adenosyl_l_methionine side right {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +haemanthamine +h
-    11_hydroxyvittatine
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway hydroxycitric-acid-to-h2o "Hydroxycitric acid to H2O" {
-  spacing 306
+  spacing 240
 
   spine at 0,0 {
     hydroxycitric_acid
@@ -16,71 +16,5 @@ pathway hydroxycitric-acid-to-h2o "Hydroxycitric acid to H2O" {
     3s_3_4_dihydroxybutanoyl_coa
     <-> ec_4_2_1_17 [4.2.1.17] -h2o
     4_hydroxycrotonyl_coa
-  }
-
-  branch from glycolyl_coa side left {
-    glycolyl_coa
-    <-> ec_2_3_1_7 [2.3.1.7] +r_carnitine +coa
-    o_glycolyl_l_carnitine
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +triol_metabolite_of_pravastatin +phosphate +triol_metabolite_of_pravastatin +h2o
-    atp
-  }
-
-  branch from h side left {
-    h
-    <-> . +l_alanine +l_arginine +l_tryptophan +h2o
-    trp_arg_ala
-  }
-
-  branch from oxaloacetate side right {
-    oxaloacetate
-    <-> ec_1_1_5_4 [1.1.5.4] +s_malate +ubiquinone_10
-    ubiquinol_10
-  }
-
-  branch from oxaloacetate side left {
-    oxaloacetate
-    <-> ec_4_1_3_34 [4.1.3.34] +acetyl_coa +h
-    3s_citryl_coa
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_phenylalanine +l_tyrosine
-    phenylalanyl_tyrosine
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_histidine +l_proline +l_tyrosine
-    pro_his_tyr
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +acetyl_coa +9z_octadecenoyl_coa
-    11z_3_oxoicosa_11_enoyl_coa
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +erucoyl_coa +acetyl_coa
-    15z_3_oxotetracosenoyl_coa
-  }
-
-  branch from nad side right {
-    nad
-    <-> . +nadh +h +cholesterol +o2 +h2o
-    26_hydroxycholesterol
-  }
-
-  branch from nad side left {
-    nad
-    <-> . +nadh +1s_bornane_2_5_dione +h +o2 +h2o
-    1r_4r_5_oxo_1_2_campholide
   }
 }

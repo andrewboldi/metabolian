@@ -121,77 +121,22 @@
       }
     },
     {
-      "id": "12_hydroxyeicosatetraenoate",
-      "name": "12-hydroxyeicosatetraenoate",
-      "short": "12-hydroxyeicosatet…",
-      "formula": "C20H31O3",
+      "id": "12_s_hpe_8_10_14_tre",
+      "name": "12(S)-HPE(8,10,14)TrE",
+      "short": "12(S)-HPE(8,10,14)T…",
+      "formula": "C20H33O4",
       "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM1368130"
+        "chebi": "CHEBI:78047"
       }
     },
     {
-      "id": "12s_hydroperoxy_5z_8z_10e_14z_eicosatetraenoate",
-      "name": "(12S)-hydroperoxy-(5Z,8Z,10E,14Z)-eicosatetraenoate",
-      "short": "hydroperoxy-(5Z,8Z,…",
-      "formula": "C20H31O4",
+      "id": "12_hpe_8_10_14_tre",
+      "name": "12-HPE(8,10,14)TrE",
+      "formula": "C20H33O4",
       "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM1368929"
-      }
-    },
-    {
-      "id": "resolvin_d5",
-      "name": "resolvin D5",
-      "formula": "C22H32O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:138645"
-      }
-    },
-    {
-      "id": "7s_17s_hhpdha",
-      "name": "(7S,17S)-HHpDHA",
-      "formula": "C22H31O5",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM1559678"
-      }
-    },
-    {
-      "id": "galactitol",
-      "name": "galactitol",
-      "formula": "C6H14O6",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1233"
-      }
-    },
-    {
-      "id": "l_xylo_hexos_2_ulose",
-      "name": "L-xylo-hexos-2-ulose",
-      "formula": "C6H10O6",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:48657"
-      }
-    },
-    {
-      "id": "n_acetylneuraminate",
-      "name": "N-acetylneuraminate",
-      "formula": "C11H18NO9",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM1106046"
-      }
-    },
-    {
-      "id": "nystose",
-      "name": "Nystose",
-      "formula": "C24H42O21",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:193929"
+        "chebi": "CHEBI:83334"
       }
     }
   ],
@@ -201,7 +146,10 @@
       "name": "phospholipid-hydroperoxide glutathione peroxidase",
       "ec": [
         "1.11.1.12"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P07203"
+      }
     }
   ],
   "reactions": [
@@ -294,14 +242,14 @@
     },
     {
       "id": "r3",
-      "name": "Reaction MNXR100444",
+      "name": "Reaction MNXR155161",
       "substrates": [
         {
-          "metabolite": "glutathione_disulfide",
+          "metabolite": "h",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h",
+          "metabolite": "15_s_hetre",
           "stoichiometry": 1
         },
         {
@@ -315,7 +263,7 @@
       ],
       "products": [
         {
-          "metabolite": "glutathione_disulfide",
+          "metabolite": "15_s_hetre",
           "stoichiometry": 1
         },
         {
@@ -330,308 +278,152 @@
       "reversibility": "reversible",
       "pathwayStep": 3,
       "xrefs": {
-        "metanetx": "MNXR100444"
+        "metanetx": "MNXR155161"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR100444"
+            "id": "MNXR155161"
           }
         ]
       }
     },
     {
       "id": "r4",
-      "name": "Reaction MNXR195464",
+      "name": "(8Z,11Z,14Z)-eicosatrienoate + O2 = (12S)-hydroperoxy-(8Z,10E,14Z)-eicosatrienoate",
+      "equation": "(8Z,11Z,14Z)-eicosatrienoate + O2 = (12S)-hydroperoxy-(8Z,10E,14Z)-eicosatrienoate",
       "substrates": [
         {
-          "metabolite": "12_hydroxyeicosatetraenoate",
+          "metabolite": "all_cis_icosa_8_11_14_trienoate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "glutathione_disulfide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "o2",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "12s_hydroperoxy_5z_8z_10e_14z_eicosatetraenoate",
+          "metabolite": "12_s_hpe_8_10_14_tre",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "glutathione",
-          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "metanetx": "MNXR195464"
+        "rhea": "RHEA:41328"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR195464"
+            "db": "Rhea",
+            "id": "RHEA:41328"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "phospholipid-hydroperoxide glutathione peroxidase",
-      "ec": "1.11.1.12",
+      "name": "(8Z,11Z,14Z)-eicosatrienoate + O2 = (8Z,10E,14Z)-12-hydroperoxyeicosatrienoate",
+      "equation": "(8Z,11Z,14Z)-eicosatrienoate + O2 = (8Z,10E,14Z)-12-hydroperoxyeicosatrienoate",
       "substrates": [
         {
-          "metabolite": "resolvin_d5",
+          "metabolite": "all_cis_icosa_8_11_14_trienoate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "glutathione_disulfide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "o2",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "7s_17s_hhpdha",
+          "metabolite": "12_hpe_8_10_14_tre",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glutathione",
-          "stoichiometry": 2
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_11_1_12"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR199721"
+        "rhea": "RHEA:43468"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR199721"
+            "db": "Rhea",
+            "id": "RHEA:43468"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_all_cis_icosa_8_11_14_trienoate_4-chlorophenylacetonitrile-to-s-4-hydroxy-2-oxoh",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_cis_icosa_8_11_14_trienoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-chlorophenylacetonitrile-to-s-4-hydroxy-2-oxoh"
+      },
+      "note": "Shares all-cis-icosa-8,11,14-trienoate with 4-chlorophenylacetonitrile to (S)-4-hydroxy-2-oxoheptan….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:71589"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "Reaction MNXR178988",
-      "substrates": [
-        {
-          "metabolite": "galactitol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "galactitol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "metanetx": "MNXR178988"
+      "id": "xt_all_cis_icosa_8_11_14_trienoate_8z-11z-14z-eicosatrieno-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_cis_icosa_8_11_14_trienoate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "8z-11z-14z-eicosatrieno-to-fmn"
+      },
+      "note": "Shares all-cis-icosa-8,11,14-trienoate with (8Z,11Z,14Z)-eicosatrieno… to FMN.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR178988"
+            "db": "ChEBI",
+            "id": "CHEBI:71589"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "Reaction MNXR178993",
-      "substrates": [
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_xylo_hexos_2_ulose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_xylo_hexos_2_ulose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "metanetx": "MNXR178993"
+      "id": "xt_15_s_hetre_z-1-glutathion-s-yl-n-to-l-serine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "15_s_hetre"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "z-1-glutathion-s-yl-n-to-l-serine"
+      },
+      "note": "Shares 15(S)-HETrE with (Z)-1-(glutathion-S-yl)-N… to L-serine.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR178993"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r8",
-      "name": "Reaction MNXR178995",
-      "substrates": [
-        {
-          "metabolite": "n_acetylneuraminate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n_acetylneuraminate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "metanetx": "MNXR178995"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR178995"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r9",
-      "name": "Reaction MNXR178996",
-      "substrates": [
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nystose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nystose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 9,
-      "xrefs": {
-        "metanetx": "MNXR178996"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR178996"
+            "db": "ChEBI",
+            "id": "CHEBI:88348"
           }
         ]
       }

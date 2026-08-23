@@ -16,21 +16,39 @@ pathway trehalose-to-sl1278 "α,α-trehalose to SL1278" {
     sl1278
   }
 
-  branch from trehalose_2_sulfate side left {
-    trehalose_2_sulfate
-    <-> ec_2_3_1_288 [2.3.1.288] +stearoyl_coa +coa
-    2_o_sulfo_2_o_stearoyl_trehalose
+  branch from adenosine_3_5_bismonophosphate side left {
+    adenosine_3_5_bismonophosphate
+    <-> . +so3_3_d_galactosyl_1_3_n_acetyl_d_galactosaminyl +3_phosphonato_5_adenylyl_sulfate +hplus
+    3_o_sulfo_d_galactosyl_1_3_n_acetyl_d_galactosam
   }
 
   branch from adenosine_3_5_bismonophosphate side right {
     adenosine_3_5_bismonophosphate
-    <-> . +17_ethynylestradiol +3_phosphonato_5_adenylyl_sulfate +hplus
-    17_ethynylestradiol_3_sulfate
+    <-> . +d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_glc_1_1_cer +3_phosphonato_5_adenylyl_sulfate +hplus
+    so3_3_d_galactosyl_1_3_n_acetyl_d_galactosaminyl
+  }
+
+  branch from 3_phosphonato_5_adenylyl_sulfate side left {
+    3_phosphonato_5_adenylyl_sulfate
+    <-> . +o3_d_galactosyl_1_3_n_acetyl_d_galactosaminyl_l +adenosine_3_5_bismonophosphate +hplus
+    3_o_3_o_sulfo_d_galactosyl_1_3_n_acetyl_d_galact
+  }
+
+  branch from 3_phosphonato_5_adenylyl_sulfate side right {
+    3_phosphonato_5_adenylyl_sulfate
+    <-> . +o3_d_galactosyl_1_3_n_acetyl_d_galactosaminyl_l +adenosine_3_5_bismonophosphate +hplus
+    3_o_3_o_sulfo_d_galactosyl_1_3_n_acetyl_d_galact
   }
 
   branch from adenosine_3_5_bismonophosphate side left {
     adenosine_3_5_bismonophosphate
-    <-> . +24s_24_hydroxycholesterol +3_phosphonato_5_adenylyl_sulfate +hplus
-    24s_hydroxycholesterol_3_sulfate
+    <-> . +indoxyl +3_phosphonato_5_adenylyl_sulfate +hplus
+    indoxyl_sulfate
+  }
+
+  branch from adenosine_3_5_bismonophosphate side right {
+    adenosine_3_5_bismonophosphate
+    <-> . +n_acetyl_d_glucosaminyl_1_3_d_galactosyl_1_4_n_a +3_phosphonato_5_adenylyl_sulfate +hplus
+    6_o_sulfo_n_acetyl_d_glucosaminyl_1_3_d_galactos
   }
 }

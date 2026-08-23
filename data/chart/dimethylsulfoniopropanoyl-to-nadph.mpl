@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dimethylsulfoniopropanoyl-to-nadph "dimethylsulfoniopropanoyl… to NADPH" {
-  spacing 224
+  spacing 188
 
   spine at 0,0 {
     dimethylsulfoniopropanoyl_coa
@@ -16,63 +16,27 @@ pathway dimethylsulfoniopropanoyl-to-nadph "dimethylsulfoniopropanoyl… to NADP
     3_oxopropanoyl_coa
   }
 
-  branch from h side left {
-    h
-    <-> . +6r_10_formyltetrahydrofolate +atp +l_glutamate +adp +phosphate +h2o
-    10_formyltetrahydrofolate_glu_5
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +fluvastatin +phosphate +fluvastatin +h2o
-    atp
-  }
-
   branch from coa side left {
     coa
-    <-> . +cis_cis_cis_10_13_16_docosatrienoyl_coa +h2o +h
-    10z_13z_16z_docosatrienoate
+    <-> . +9e_myristelaidoyl_coa +cholesterol
+    cholesteryl_myristelaidate
   }
 
   branch from coa side right {
     coa
-    <-> . +7z_hexadecenoyl_coa +r_carnitine
-    2e_hexadecenoylcarnitine
+    <-> . +erucoyl_coa +cholesterol
+    cholest_5_en_3b_yl_13z_docosenoate
   }
 
-  branch from 3_hydroxypropanoyl_coa side left {
-    3_hydroxypropanoyl_coa
-    <-> . +h +nadp +nadph
-    malonyl_coa_semialdehyde
+  branch from coa side left {
+    coa
+    <-> . +15z_tetracosenoyl_coa +cholesterol
+    cholest_5_en_3beta_yl_15z_tetracosenoate
   }
 
-  branch from acetate side right {
-    acetate
-    <-> . +digitoxin +h +h2o
-    3_o_acetyldigitoxin
-  }
-
-  branch from acetate side left {
-    acetate
-    <-> . +ditrans_octacis_undecaprenyldiphospho_n_acetyl_n
-    ditrans_octacis_undecaprenyldiphospho_n_acetylgl
-  }
-
-  branch from 3_oxopropanoyl_coa side right {
-    3_oxopropanoyl_coa
-    <-> . +h +nadph +nadp +h2o
-    malonyl_coa
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> . +octyl_acetate +nadp +h2o +h +decan_2_one
-    o2
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> . +h +o2 +phenylarsonous_acid +nadp +h2o
-    phenylarsonic_acid
+  branch from coa side right {
+    coa
+    <-> . +9z_12z_15z_octadecatrienoyl_coa +s_carnitine
+    alpha_linolenyl_carnitine
   }
 }

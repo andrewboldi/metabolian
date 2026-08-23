@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 11-hydroxyprogesterone-to-11-keto-5-androstane-3 "11β-hydroxyprogesterone to 11-keto-5α-androstane-3α,…" {
-  spacing 152
+  spacing 158
 
   spine at 0,0 {
     11_hydroxyprogesterone
@@ -20,5 +20,11 @@ pathway 11-hydroxyprogesterone-to-11-keto-5-androstane-3 "11β-hydroxyprogestero
     11_ketoandrosterone
     <-> . +nadph +hplus -nadp
     11_keto_5_androstane_3_17_diol
+  }
+
+  branch from 11_hydroxyprogesterone side left {
+    11_hydroxyprogesterone
+    <-> . +nadph +hplus +nadp
+    5_pregnan_11_ol_3_20_dione
   }
 }

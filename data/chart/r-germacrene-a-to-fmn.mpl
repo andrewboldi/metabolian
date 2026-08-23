@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway r-germacrene-a-to-fmn "(+)-(R)-germacrene A to FMN" {
-  spacing 200
+  spacing 158
 
   spine at 0,0 {
     r_germacrene_a
@@ -22,51 +22,9 @@ pathway r-germacrene-a-to-fmn "(+)-(R)-germacrene A to FMN" {
     3_hydroxyparthenolide
   }
 
-  branch from nadp side left {
-    nadp
-    <-> . +6z_9z_12z_15z_18z_tetracosapentaenoyl_coa +h2o +h +o2 +nadph
-    9z_12z_15z_18z_tetracosatetraenoyl_coa
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +13z_16z_docosadienoyl_coa +h +nadph
-    trans_cis_cis_2_13_16_docasatrienoyl_coenzyme_a
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_histidine +l_lysine +l_aspartate
-    aspartyl_lysyl_histidine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_proline +l_lysine +l_aspartate
-    aspartyl_prolyl_lysine
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +11_hydroxycucurbitadienol +fmnh2 +o2 +h2o +hplus
-    11_oxocucurbitadienol
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +cortisol +fmnh2 +o2 +h2o +hplus
-    6_hydroxycortisol
-  }
-
-  branch from germacra_1_10_4_11_13_trien_12_oate side left {
-    germacra_1_10_4_11_13_trien_12_oate
-    <-> ec_1_14_14_168 [1.14.14.168] +fmnh2 +o2 +fmn +h2o +hplus
-    8_hydroxygermacra_1_10_4_11_13_trien_12_oate
-  }
-
-  branch from germacra_1_10_4_11_13_trien_12_oate side right {
-    germacra_1_10_4_11_13_trien_12_oate
-    <-> ec_1_14_14_170 [1.14.14.170] +fmnh2 +o2 +fmn +h2o
-    8_epi_inunolide
+  branch from r_germacrene_a side left {
+    r_germacrene_a
+    <-> .
+    guaiene
   }
 }

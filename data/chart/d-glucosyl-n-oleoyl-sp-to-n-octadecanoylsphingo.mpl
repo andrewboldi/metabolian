@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-glucosyl-n-oleoyl-sp-to-n-octadecanoylsphingo "β-D-glucosyl-N-(oleoyl)sp… to N-octadecanoylsphingosine" {
-  spacing 176
+  spacing 200
 
   spine at 0,0 {
     d_glucosyl_n_oleoyl_sphingosine
@@ -18,25 +18,49 @@ pathway d-glucosyl-n-oleoyl-sp-to-n-octadecanoylsphingo "β-D-glucosyl-N-(oleoyl
 
   branch from n_oleoylsphingosine side left {
     n_oleoylsphingosine
-    <-> . +udp_d_xylose +udp +hplus
-    1_d_xylosyl_n_oleoylsphingosine
-  }
-
-  branch from n_oleoylsphingosine side right {
-    n_oleoylsphingosine
     <-> . +1_d_xylosyl_n_oleoylsphingosine +cholesterol
     cholesteryl_d_xyloside
   }
 
-  branch from cholesteryl_d_glucoside side left {
+  branch from cholesteryl_d_glucoside side right {
     cholesteryl_d_glucoside
     <-> . +cholesterol +udp +hplus
     udp_d_glucose
   }
 
-  branch from cholesteryl_d_glucoside side right {
+  branch from cholesteryl_d_glucoside side left {
     cholesteryl_d_glucoside
     <-> . +c8_d_glucosyl_n_acylsphingosine +cholesterol
     n_octanoylsphingosine
+  }
+
+  branch from cholesterol side right {
+    cholesterol
+    <-> . +linoleoyl_coa +coa
+    cholesteryl_linoleate
+  }
+
+  branch from cholesterol side left {
+    cholesterol
+    <-> . +stearoyl_coa +coa
+    cholesteryl_stearate
+  }
+
+  branch from cholesteryl_d_glucoside side right {
+    cholesteryl_d_glucoside
+    <-> . +d_glucosyl_n_dodecanoyl_sphingosine +cholesterol
+    n_dodecanoylsphingosine
+  }
+
+  branch from stearoyl_coa side left {
+    stearoyl_coa
+    <-> . +2_2_dilysocardiolipin +coa
+    2_stearoyl_2_monolysocardiolipin
+  }
+
+  branch from stearoyl_coa side right {
+    stearoyl_coa
+    <-> . +1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine +coa
+    1_z_alk_1_enyl_2_stearoyl_sn_glycero_3_phosphoet
   }
 }

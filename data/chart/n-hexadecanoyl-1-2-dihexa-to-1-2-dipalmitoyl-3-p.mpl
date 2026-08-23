@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-hexadecanoyl-1-2-dihexa-to-1-2-dipalmitoyl-3-p "N-hexadecanoyl-1,2-dihexa… to 1,2-dipalmitoyl-3-palmito…" {
-  spacing 176
+  spacing 188
 
   spine at 0,0 {
     n_hexadecanoyl_1_2_dihexadecanoyl_sn_glycero_3_p
@@ -18,25 +18,37 @@ pathway n-hexadecanoyl-1-2-dihexa-to-1-2-dipalmitoyl-3-p "N-hexadecanoyl-1,2-dih
 
   branch from 1_2_dihexadecanoyl_sn_glycerol_3_phosphate side left {
     1_2_dihexadecanoyl_sn_glycerol_3_phosphate
-    <-> . +dipalmitoyl_phosphatidylglycerol +h2o
-    cardiolipin_tetrahexadecanoyl_n_c16_0
-  }
-
-  branch from 1_2_dihexadecanoyl_sn_glycerol_3_phosphate side right {
-    1_2_dihexadecanoyl_sn_glycerol_3_phosphate
     <-> ec_2_7_7_41 [2.7.7.41] +ctp +h +cdp_dipalmitoyl_sn_glycerol
     diphosphate
   }
 
-  branch from palmitoyl_ethanolamide side left {
+  branch from palmitoyl_ethanolamide side right {
     palmitoyl_ethanolamide
     <-> . +n_1_dipalmitoyl_2_linoleoyl_sn_glycero_3_phospho +h2o +hplus
     1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
   }
 
-  branch from palmitoyl_ethanolamide side right {
+  branch from palmitoyl_ethanolamide side left {
     palmitoyl_ethanolamide
     <-> . +n_palmitoyl_1_oleoyl_sn_glycero_3_phosphoethanol +h2o +hplus
     1_oleoyl_sn_glycero_3_phosphate
+  }
+
+  branch from palmitoyl_ethanolamide side right {
+    palmitoyl_ethanolamide
+    <-> . +n_hexadecanoyl_1_1z_octadecenoyl_2_oleoyl_sn_gly +h2o +hplus
+    1_1z_octadecenyl_2_oleoyl_sn_glycero_3_phosphate
+  }
+
+  branch from palmitoleoyl_coa side left {
+    palmitoleoyl_coa
+    <-> . +h2o +coa +hplus
+    palmitoleate
+  }
+
+  branch from palmitoleoyl_coa side right {
+    palmitoleoyl_coa
+    <-> . +1_oleoyl_sn_glycero_3_phosphoethanolamine +coa
+    1_oleoyl_2_palmitoleoyl_sn_glycero_3_phosphoetha
   }
 }

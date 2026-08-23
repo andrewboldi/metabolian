@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-hydroxy-3-phenylpropion-to-h2o "3-hydroxy-3-phenylpropion… to H2O" {
-  spacing 224
+  spacing 290
 
   spine at 0,0 {
     3_hydroxy_3_phenylpropionic_acid
@@ -18,73 +18,139 @@ pathway 3-hydroxy-3-phenylpropion-to-h2o "3-hydroxy-3-phenylpropion… to H2O" {
 
   branch from h side left {
     h
-    <-> . +gdp_6_deoxy_4_keto_d_arabino_heptose
-    gdp_4_keto_6_deoxy_d_lyxo_heptose
+    <-> ec_2_4_1_170 [2.4.1.170] +udp +glycitin +glycitein
+    udp_alpha_d_glucose
   }
 
   branch from h side right {
     h
-    <-> . +gdp_4_keto_6_deoxy_d_lyxo_heptose
-    gdp_6_deoxy_4_keto_l_ribo_heptose
+    <-> ec_2_4_1_118 [2.4.1.118] +udp +trans_zeatin_7_beta_d_glucoside +udp_alpha_d_glucose
+    trans_zeatin
   }
 
   branch from acetate side left {
     acetate
-    <-> . +4_sulfophenyl_acetate +h2o
-    4_hydroxybenzenesulfonic_acid
+    <-> ec_3_5_1_108 [3.5.1.108] +udp_3_o_3r_3_hydroxydecanoyl_alpha_d_glucosamine +h2o
+    udp_3_o_3r_3_hydroxydecanoyl_n_acetyl_alpha_d_gl
   }
 
   branch from acetate side right {
     acetate
-    <-> ec_2_8_3_1 [2.8.3.1] +acetyl_coa +r_lactate
-    r_lactoyl_coa
+    <-> . +digitoxin +h +h2o
+    3_o_acetyldigitoxin
   }
 
   branch from benzaldehyde side left {
     benzaldehyde
-    <-> ec_4_1_2_26 [4.1.2.26] +glycine
-    l_threo_3_phenylserine
+    <-> . +h +oxalate +o2
+    3_phenylpyruvate
   }
 
   branch from benzaldehyde side right {
     benzaldehyde
-    <-> ec_1_1_99_36 [1.1.99.36] +3_4_dimethoxybenzaldehyde +benzyl_alcohol
-    3_4_dimethoxyphenyl_methanol
+    <-> ec_4_1_2_38 [4.1.2.38]
+    s_benzoin
   }
 
   branch from benzyl_alcohol side left {
-    benzyl_alcohol
-    <-> ec_3_5_1_133 [3.5.1.133] +co2 +l_glutamine +h +h2o
-    n_carbobenzyloxy_l_glutamine
-  }
-
-  branch from benzyl_alcohol side right {
     benzyl_alcohol
     <-> ec_3_2_1_149 [3.2.1.149] +d_apiofuranosyl_1_6_d_glucopyranose +h2o
     icariside_f2
   }
 
-  branch from nadp side left {
-    nadp
-    <-> ec_1_2_1_84 [1.2.1.84] +16_hydroxyhexadecanoyl_coa +h +nadph +coa
-    1_16_hexadecanediol
-  }
-
   branch from nadp side right {
     nadp
-    <-> ec_1_2_1_84 [1.2.1.84] +18_hydroxyoleoyl_coa +h +nadph +coa
-    9z_octadec_9_ene_1_18_diol
+    <-> ec_1_5_1_30 [1.5.1.30] +h +riboflavin +nadph
+    4a_5_dihydroriboflavin
   }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_3_1_1_97 [3.1.1.97] +diphthine +methanol
-    diphthine_methyl_ester
+  branch from nadp side left {
+    nadp
+    <-> . +h +o2 +tacrolimus +nadph +h2o
+    12_ht_or_m_vi_12_hydroxy_tacrolimus
   }
 
   branch from h2o side right {
     h2o
-    <-> . +2_dihydroxymethyl_furan
-    furfural
+    <-> . +d_alanine +1_6_anhydrous_n_acetylmuramyl_tripeptide
+    1_6_anhydrous_n_acetylmuramyl_tetrapeptide
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +d_alanine +1_6_anhydrous_n_acetylmuramyl_tripeptide
+    1_6_anhydrous_n_acetylmuramyl_tetrapeptide
+  }
+
+  branch from h side right {
+    h
+    <-> . +udp +cis_zeatin_7_n_glucoside +udp_alpha_d_glucose
+    cis_zeatin
+  }
+
+  branch from h side left {
+    h
+    <-> . +udp +dihydrozeatin_o_glucoside +udp_alpha_d_glucose
+    dihydrozeatin
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> . +ditrans_octacis_undecaprenyldiphospho_n_acetyl_n
+    ditrans_octacis_undecaprenyldiphospho_n_acetylgl
+  }
+
+  branch from acetate side left {
+    acetate
+    <-> . +beta_d_glucosamine +h +h2o
+    aldehydo_n_acetyl_d_glucosamine
+  }
+
+  branch from benzaldehyde side right {
+    benzaldehyde
+    <-> ec_4_1_2_38 [4.1.2.38]
+    r_benzoin
+  }
+
+  branch from benzaldehyde side left {
+    benzaldehyde
+    <-> ec_4_1_2_10 [4.1.2.10] +r_mandelonitrile +h
+    cyanide
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +4_hydroxymidazolam +h +o2 +nadp +h2o
+    1_4_dihydroxymidazolam
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +h +o2 +nadp +1_4_dihydroxymidazolam +h2o
+    1_hydroxymidazolam
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +1_hydroxymidazolam +h2o +h +o2 +nadph
+    midazolam
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +pravastatin_sodium +h +o2 +nadph +h2o
+    3_alpha_5_beta_dihydroxy_pravastatin_3_alpha5_be
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_1_1_14 [3.1.1.14] +h +phytol +chlorophyllide_a
+    chlorophyll_a
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_1_5_99_2 [1.5.99.2] +fadh2 +formaldehyde +h +sarcosine +n_n_dimethylglycine
+    fad
   }
 }

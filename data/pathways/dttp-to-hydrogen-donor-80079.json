@@ -1,0 +1,469 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "dttp-to-hydrogen-donor-80079",
+  "name": "dTTP to hydrogen donor",
+  "category": "nucleotide-metabolism",
+  "summary": "A 3-step route from dTTP(4−) to hydrogen donor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:80079"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:37568"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "dttp",
+      "name": "dTTP",
+      "formula": "C10H13N2O14P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:37568"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "thymidine",
+      "name": "thymidine",
+      "formula": "C10H14N2O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17748"
+      }
+    },
+    {
+      "id": "triphosphate",
+      "name": "triphosphate",
+      "formula": "O10P3",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:18036"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "2_deoxy_d_ribose_1_phosphate",
+      "name": "2-deoxy-α-D-ribose 1-phosphate",
+      "short": "2-deoxy-α-D-ribose…",
+      "formula": "C5H9O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57259"
+      }
+    },
+    {
+      "id": "thymine",
+      "name": "thymine",
+      "formula": "C5H6N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17821"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "5_methylbarbituride",
+      "name": "5-methylbarbituride",
+      "formula": "C5H5N2O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58571"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_2_2",
+      "name": "pyrimidine-nucleoside phosphorylase",
+      "ec": [
+        "2.4.2.2"
+      ]
+    },
+    {
+      "id": "ec_2_4_2_4",
+      "name": "thymidine phosphorylase",
+      "ec": [
+        "2.4.2.4"
+      ],
+      "xrefs": {
+        "uniprot": "P19971"
+      }
+    },
+    {
+      "id": "ec_1_17_99_4",
+      "name": "uracil/thymine dehydrogenase",
+      "ec": [
+        "1.17.99.4"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "dTTP + H2O = thymidine + triphosphate + H(+)",
+      "equation": "dTTP + H2O = thymidine + triphosphate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "dttp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "thymidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "triphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:80079"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:80079"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "pyrimidine-nucleoside phosphorylase",
+      "equation": "thymidine + phosphate = 2-deoxy-alpha-D-ribose 1-phosphate + thymine",
+      "ec": "2.4.2.2",
+      "substrates": [
+        {
+          "metabolite": "thymidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxy_d_ribose_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "thymine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_2_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:16037"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16037"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "uracil/thymine dehydrogenase",
+      "equation": "thymine + A + H2O = 5-methylbarbiturate + AH2 + H(+)",
+      "ec": "1.17.99.4",
+      "substrates": [
+        {
+          "metabolite": "thymine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_methylbarbituride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_17_99_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:13469"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13469"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_thymidine_dichloromethane-to-dtmp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "thymidine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dichloromethane-to-dtmp"
+      },
+      "note": "Shares thymidine with dichloromethane to dTMP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17748"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_thymidine_dichloromethane-to-dtmp-15397",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "thymidine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dichloromethane-to-dtmp-15397"
+      },
+      "note": "Shares thymidine with dichloromethane to dTMP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17748"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_thymidine_dtdp-3-azaniumyl-3-6-dide-to-dtdp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "thymidine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-3-azaniumyl-3-6-dide-to-dtdp"
+      },
+      "note": "Shares thymidine with dTDP-3-azaniumyl-3,6-dide… to dTDP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17748"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_thymidine_dtdp-3-azaniumyl-3-6-dide-to-dtdp-31671",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "thymidine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-3-azaniumyl-3-6-dide-to-dtdp-31671"
+      },
+      "note": "Shares thymidine with dTDP-3-azaniumyl-3,6-dide… to dTDP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17748"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_thymidine_dttp-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "thymidine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dttp-to-hydrogen-donor"
+      },
+      "note": "Shares thymidine with dTTP to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17748"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_thymidine_thymidine-3-monophosphate-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "thymidine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "thymidine-3-monophosphate-to-succinate"
+      },
+      "note": "Shares thymidine with thymidine 3'-monophosphate to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17748"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_thymidine_thymidine-3-monophosphate-to-succinate-37247",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "thymidine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "thymidine-3-monophosphate-to-succinate-37247"
+      },
+      "note": "Shares thymidine with thymidine 3'-monophosphate to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17748"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_methylbarbituride_dttp-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_methylbarbituride"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dttp-to-hydrogen-donor"
+      },
+      "note": "Shares 5-methylbarbituride with dTTP to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58571"
+          }
+        ]
+      }
+    }
+  ]
+}

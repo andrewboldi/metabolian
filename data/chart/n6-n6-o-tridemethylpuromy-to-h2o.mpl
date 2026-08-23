@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n6-n6-o-tridemethylpuromy-to-h2o "N6,N6,O-tridemethylpuromy… to H2O" {
-  spacing 182
+  spacing 236
 
   spine at 0,0 {
     n6_n6_o_tridemethylpuromycin
@@ -18,31 +18,85 @@ pathway n6-n6-o-tridemethylpuromy-to-h2o "N6,N6,O-tridemethylpuromy… to H2O" {
 
   branch from l_tyrosine side left {
     l_tyrosine
-    <-> ec_1_14_16_1 [1.14.16.1] +6_7_dimethyl_tetrahydropteridine +o2 +l_phenylalanine +h2o
-    6_7_dimethyl_dihydropteridine
+    <-> . +co2 +nadp +e_4_hydroxyphenylacetaldehyde_oxime +h2o +h +nadph
+    o2
   }
 
   branch from l_tyrosine side right {
     l_tyrosine
-    <-> ec_1_14_13_41 [1.14.13.41] +z_4_hydroxyphenyl_acetaldehyde_oxime +co2 +nadp +h2o +h +nadph
-    o2
-  }
-
-  branch from 3_amino_3_deoxy_amp side left {
-    3_amino_3_deoxy_amp
-    <-> . +h2o +l_tyrosine
-    n_6_n_6_o_tridemethylpuromycin_5_phosphate
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_4_2_1_11 [4.2.1.11] +2_phosphonomethyl_3_hydroxypropanoate
-    alpha_dihydroxyphosphinylmethyl_acrylate
+    <-> ec_1_14_16_1 [1.14.16.1] +5_6_7_8_tetrahydrobiopterin +o2 +l_phenylalanine +h2o
+    tetrahydrobiopterin_4a_carbinolamine
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_4_13_9 [3.4.13.9] +l_proline +l_arginine +h
-    arg_pro
+    <-> ec_3_6_3_39 [3.6.3.39] +h +adp +phosphate +atp
+    octyl_6_o_d_galactofuranosyl_d_glucopyranoside
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_3_39 [3.6.3.39] +h +adp +octyl_alpha_d_mannopyranoside +phosphate +octyl_alpha_d_mannopyranoside
+    atp
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_6_3_39 [3.6.3.39] +h +adp +phosphate +atp
+    octyl_alpha_d_galactopyranoside
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_3_39 [3.6.3.39] +h +adp +phosphate +atp
+    octyl_2_acetamido_2_deoxy_alpha_d_glucopyranosid
+  }
+
+  branch from l_tyrosine side left {
+    l_tyrosine
+    <-> ec_1_14_16_1 [1.14.16.1] +5_6_7_8_tetrahydrobiopterin +o2 +l_phenylalanine
+    4as_6r_4a_hydroxy_l_erythro_5_6_7_8_tetrahydrob
+  }
+
+  branch from l_tyrosine side right {
+    l_tyrosine
+    <-> ec_3_4_11_1 [3.4.11.1] +l_leucine +h2o
+    leu_tyr
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_42 [3.6.3.42] +adp +phosphate +atp +h2o
+    cellotetraose
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_42 [3.6.3.42] +adp +phosphate +atp +h2o
+    cellopentaose
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +atp +h2o
+    cephalosporin_c
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +atp +h2o
+    terpentecin
+  }
+
+  branch from diphosphate side left {
+    diphosphate
+    <-> ec_4_2_3_9 [4.2.3.9] +germacrene_a +h
+    farnesyl_diphosphate
+  }
+
+  branch from diphosphate side right {
+    diphosphate
+    <-> . +undecaprenyl_diphosphate +h +ipp
+    all_trans_decaprenyl_diphosphate
   }
 }

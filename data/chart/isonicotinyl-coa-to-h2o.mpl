@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway isonicotinyl-coa-to-h2o "isonicotinyl-CoA to H2O" {
-  spacing 206
+  spacing 266
 
   spine at 0,0 {
     isonicotinyl_coa
@@ -30,18 +30,6 @@ pathway isonicotinyl-coa-to-h2o "isonicotinyl-CoA to H2O" {
     isonicotinylglycine
   }
 
-  branch from l_lysinium side left {
-    l_lysinium
-    <-> ec_2_1_1_367 [2.1.1.367] +sam +sah +hplus
-    n6_methyl_l_lysinium
-  }
-
-  branch from l_lysinium side right {
-    l_lysinium
-    <-> ec_2_1_1_369 [2.1.1.369] +sam +n6_methyl_l_lysinium +hplus
-    sah
-  }
-
   branch from n_acetylisoniazid side left {
     n_acetylisoniazid
     <-> . +acetyl_coa +isoniazide
@@ -50,25 +38,97 @@ pathway isonicotinyl-coa-to-h2o "isonicotinyl-CoA to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> . +naphthyl_2_hydroxymethyl_succinyl_coa
-    naphthyl_2_methylene_succinyl_coa
+    <-> . +z_n_n_but_2_ene_2_3_diyl_diacetamide +acetamide
+    n_3_oxobutan_2_yl_acetamide
   }
 
   branch from h2o side left {
     h2o
-    <-> . +nadh +h +1_methylnaphthalene +o2 +nad
-    1_naphthyl_methanol
+    <-> ec_3_1_1_13 [3.1.1.13] +9z_octadecenoate +h +ergosterol
+    ergosteryl_oleate
   }
 
   branch from atp side right {
     atp
-    <-> . +malonyl_coa +h +l_glutamine +h2o +malonamoyl_coa +amp +l_glutamate
-    diphosphate
+    <-> ec_6_3_2_2 [6.3.2.2] +l_threonine +l_glutamate +h +adp +phosphate
+    l_glu_l_thr
   }
 
   branch from atp side left {
     atp
-    <-> ec_2_7_7_72 [2.7.7.72] +diphosphate +trna_with_a_3_cca_end +h
-    trna_with_a_3_cc_end
+    <-> ec_6_3_2_2 [6.3.2.2] +l_gamma_glutamyl_l_norvaline +adp +phosphate +l_glutamate
+    l_2_aminopentanoate
+  }
+
+  branch from h side right {
+    h
+    <-> ec_1_11_1_7 [1.11.1.7] +a_radical_of_luteolin_7_o_diglucuronide +h2o +h2o2
+    luteolin_7_o_beta_d_glucuronosyl_1_2_beta_d_gluc
+  }
+
+  branch from h side left {
+    h
+    <-> . +fe +o2 +h2o +h2o2
+    feo_oh_monomer
+  }
+
+  branch from acetohydrazide side right {
+    acetohydrazide
+    <-> ec_2_3_1_5 [2.3.1.5] +hydrazine +coa
+    acetyl_coa
+  }
+
+  branch from acetohydrazide side left {
+    acetohydrazide
+    <-> . +h +hydrazine +h2o
+    acetate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +4_e_2_methylamino_ethenyl_phenol
+    r_synephrine
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_2_1_31 [3.2.1.31] +luteolin_7_o_beta_d_glucuronosyl_1_2_beta_d_gluc +beta_d_glucuronate
+    luteolin_7_o_beta_d_glucuronosyl_1_2_beta_d_gluc
+  }
+
+  branch from adp side right {
+    adp
+    <-> ec_6_3_2_2 [6.3.2.2] +l_leucine +atp +l_glutamate +phosphate
+    h_gamma_glu_leu_oh
+  }
+
+  branch from adp side left {
+    adp
+    <-> ec_6_3_2_2 [6.3.2.2] +atp +l_isoleucine +l_glutamate +phosphate
+    l_gamma_glutamyl_l_isoleucine
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_3_1_3_104 [3.1.3.104] +d_gluconate +h2o
+    6_phospho_d_gluconate
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +l_glyceraldehyde_3_phosphate +h2o +h
+    l_glyceraldehyde
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_6_3_2_2 [6.3.2.2] +l_alanine +l_glutamate +adp +phosphate
+    gamma_glu_ala
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_6_3_2_2 [6.3.2.2] +glycine +l_glutamate +adp +phosphate
+    gamma_glu_gly
   }
 }

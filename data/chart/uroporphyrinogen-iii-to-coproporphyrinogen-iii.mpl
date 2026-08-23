@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway uroporphyrinogen-iii-to-coproporphyrinogen-iii "uroporphyrinogen III to coproporphyrinogen III" {
-  spacing 302
+  spacing 284
 
   spine at 0,0 {
     uroporphyrinogen3
@@ -14,23 +14,5 @@ pathway uroporphyrinogen-iii-to-coproporphyrinogen-iii "uroporphyrinogen III to 
     coproporphyrin_iii
     <-> . +h2o -coproporphyrinogen_iii
     h2o2
-  }
-
-  branch from h2o2 side left {
-    h2o2
-    <-> ec_1_3_3_16 [1.3.3.16] +prepatellamide_a_containing_thiazoline_residues +o2
-    prepatellamide_a_containing_thiazole_residues
-  }
-
-  branch from h2o2 side right {
-    h2o2
-    <-> ec_1_3_3_16 [1.3.3.16] +patellamide_c_precursor_peptide_containing_thiaz +o2
-    prepatellamide_c_containing_thiazoline_residues
-  }
-
-  branch from coproporphyrinogen_iii side left {
-    coproporphyrinogen_iii
-    <-> ec_1_3_3_3 [1.3.3.3] +co2 +protoporphyrinogen_ix +h2o2 +o2
-    h
   }
 }

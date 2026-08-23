@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway butanoyl-coa-to-diphosphate "butanoyl-CoA to diphosphate" {
-  spacing 204
+  spacing 192
 
   spine at 0,0 {
     butanoyl_coa
@@ -14,17 +14,5 @@ pathway butanoyl-coa-to-diphosphate "butanoyl-CoA to diphosphate" {
     dibutyrin
     <-> . +butyrate +atp +nadph +hplus -amp -ppi -nadp
     butanal
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +acetyl_coa +3_aminopropyl_l_aspartyl_1_amino_phosphoryl_5_a
-    5_o_3_acetylaminopropoxy_l_alpha_aspartyl_amino
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +acetyl_coa +cucurbitacin_e
-    16_o_acetylcucurbitacin_e
   }
 }

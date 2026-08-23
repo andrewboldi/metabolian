@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-hydroxy-2-6-dimethyl-5-to-h2o "3-Hydroxy-2,6-dimethyl-5-… to H2O" {
-  spacing 212
+  spacing 152
 
   spine at 0,0 {
     3_hydroxy_2_6_dimethyl_5_methylene_heptanoyl_coa
@@ -14,65 +14,5 @@ pathway 3-hydroxy-2-6-dimethyl-5-to-h2o "3-Hydroxy-2,6-dimethyl-5-… to H2O" {
     h
     <-> . +nadh +cis_2_6_dimethyl_5_methylenehept_2_enoic_acid -nad -h2o
     z_2_methyl_5_isopropylhexa_2_5_dienal
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_2_1_45 [3.2.1.45] +d_galactopyranose +n_hexadecanoylsphinganine
-    d_glucosyl_1_1_n_hexadecanoylsphinganine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_2_1_46 [3.2.1.46] +d_galactopyranose +n_hexadecanoylsphinganine
-    d_galactosyl_1_1_n_hexadecanoylsphinganine
-  }
-
-  branch from h side left {
-    h
-    <-> . +4_glutathion_s_yl_2_5_6_trichloroisophthalonitri +glutathione +chloride
-    4_6_bis_glutathion_s_yl_2_5_dichloroisophthaloni
-  }
-
-  branch from h side right {
-    h
-    <-> . +4_6_bis_glutathion_s_yl_2_5_dichloroisophthaloni +glutathione +chloride
-    2_4_6_tris_glutathion_s_yl_5_chloroisophthalonit
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    3_hydroxymorphinan_o_glucuronide
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    4_oh_midazolam_glucuronide
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +s_carnitine +h +decanedioyl_coa
-    o_sebacoylcarnitine
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +3s_hydroxydecanoyl_coa +s_carnitine
-    3_hydroxydecanoylcarnitine
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_21 [1.1.1.21] +nadh +h +3_methylbenzaldehyde
-    3_methylbenzyl_alcohol
-  }
-
-  branch from nad side right {
-    nad
-    <-> . +nadh +linolenoyl_coa +h +o2 +h2o
-    6z_9z_12z_15z_octadecatetraenoyl_coa
   }
 }

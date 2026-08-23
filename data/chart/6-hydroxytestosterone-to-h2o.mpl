@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 6-hydroxytestosterone-to-h2o "6β-hydroxytestosterone to H2O" {
-  spacing 250
+  spacing 160
 
   spine at 0,0 {
     6_hydroxytestosterone
@@ -16,95 +16,5 @@ pathway 6-hydroxytestosterone-to-h2o "6β-hydroxytestosterone to H2O" {
     16alpha_17beta_estriol
     <-> . +h +adp +phosphate -16alpha_17beta_estriol -h2o
     atp
-  }
-
-  branch from testosterone side left {
-    testosterone
-    <-> ec_2_8_2_15 [2.8.2.15] +adenosine_3_5_bisphosphate +testosterone_sulfate +h
-    3_phosphoadenylyl_sulfate
-  }
-
-  branch from h side right {
-    h
-    <-> . +5_chloro_3_methyl_cis_dienelactone +chloride
-    3_methyl_cis_dienelactone
-  }
-
-  branch from h side left {
-    h
-    <-> . +pravastatin_lactone +h2o
-    pravastatin_acid
-  }
-
-  branch from o2 side right {
-    o2
-    <-> ec_1_13_11_2 [1.13.11.2] +2_hydroxy_6_oxoocta_2_4_7_trienoate
-    3_vinylcatechol
-  }
-
-  branch from o2 side left {
-    o2
-    <-> ec_1_13_11_2 [1.13.11.2] +h +3_vinylcatechol
-    2_hydroxy_6_oxoocta_2_4_7_trienoate
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> . +12a_deshydroxy_desmethylanthrotainin +h +o2 +nadp +h2o
-    desmethylanthrotainin
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> . +h +o2 +desmethylanthrotainin +nadp +h2o
-    12a_deshydroxy_desmethylanthrotainin
-  }
-
-  branch from formate side right {
-    formate
-    <-> ec_1_13_11_54 [1.13.11.54] +1_2_dihydroxy_3_keto_5_methylthiopentene +o2 +h
-    4_methylsulfanyl_2_oxobutanoate
-  }
-
-  branch from formate side left {
-    formate
-    <-> . +diphosphate +amp +formyl_coa +atp
-    coa
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +h2o +desmethylanthrotainin +h +o2 +nadph
-    5_hydroxy_desmethylanthrotainin
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +h2o +desmethylanthrotainin +h +o2 +nadph
-    5_hydroxy_desmethylanthrotainin
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_4_13_23 [3.4.13.23] +glycine +s_4_oxo_2_methylpentan_2_yl_l_cysteine
-    s_4_oxo_2_methylpentan_2_yl_l_cysteinylglycine
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +4_6_methyloctanoyl_5_oxo_2h_furan_3_yl_methyl_p
-    2_oxo_3_phosphooxy_propyl_8_methyl_3_oxodecanoat
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    polydextrose
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
-    melibiose
   }
 }

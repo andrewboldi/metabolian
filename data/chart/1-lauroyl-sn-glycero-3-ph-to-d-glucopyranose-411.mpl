@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-lauroyl-sn-glycero-3-ph-to-d-glucopyranose-411 "1-lauroyl-sn-glycero-3-ph… to D-glucopyranose" {
-  spacing 306
+  spacing 340
 
   spine at 0,0 {
     1_lauroyl_sn_glycero_3_phosphocholine
@@ -22,93 +22,27 @@ pathway 1-lauroyl-sn-glycero-3-ph-to-d-glucopyranose-411 "1-lauroyl-sn-glycero-3
     n_acylsphingosine
   }
 
-  branch from phosphocholine side left {
-    phosphocholine
-    <-> . +1_hexadecanoyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_hexadecanoyl_sn_glycerol
-  }
 
-  branch from phosphocholine side right {
-    phosphocholine
-    <-> . +1_o_acyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_acyl_sn_glycerol
-  }
 
-  branch from cdp_choline side left {
-    cdp_choline
-    <-> . +1_2_dioleoyl_sn_glycerol +cytidine_5_monophosphate +hplus
-    1_2_dioleoyl_sn_glycero_3_phosphocholine
-  }
 
-  branch from cdp_choline side right {
-    cdp_choline
-    <-> . +1_stearoyl_2_arachidonoyl_sn_glycerol +cytidine_5_monophosphate +hplus
-    1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphoch
-  }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_90 [4.2.3.90] +fpp
-    5_epi_selinene
-  }
 
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_91 [4.2.3.91] +fpp +h2o
-    cubebol
-  }
 
-  branch from sphingomyelin side left {
-    sphingomyelin
-    <-> . +1_2_dihexadecanoyl_sn_glycero_3_phosphocholine +n_acylsphingosine
-    1_2_dipalmitoyl_sn_glycerol
-  }
 
-  branch from cytidine_5_monophosphate side right {
-    cytidine_5_monophosphate
-    <-> ec_2_4_3_6 [2.4.3.6] +d_galactosyl_1_4_n_acetyl_d_glucosaminide +cmp_n_acetyl_neuraminate +hplus
-    n_acetylneuraminyl_2_3_d_galactosyl_1_4_n_acety
-  }
 
-  branch from cytidine_5_monophosphate side left {
-    cytidine_5_monophosphate
-    <-> ec_2_4_3_2 [2.4.3.2] +d_galactosyl_1_3_n_acetyl_d_galactosaminide +cmp_n_acetyl_neuraminate +hplus
-    n_acetyl_neuraminyl_2_3_d_galactosyl_1_3_n_acety
-  }
 
-  branch from n_acylsphingosine side right {
-    n_acylsphingosine
-    <-> ec_2_7_1_138 [2.7.1.138] +atp +adp +hplus
-    n_acylsphingosine_1_phosphate
-  }
 
-  branch from n_acylsphingosine side left {
-    n_acylsphingosine
-    <-> ec_2_7_8_48 [2.7.8.48] +1_2_diacyl_sn_glycero_3_phosphoethanolamine +dag
-    n_acylsphingosine_1_phosphoethanolamine
-  }
 
-  branch from d_glucosyl_n_acylsphingosine side right {
-    d_glucosyl_n_acylsphingosine
-    <-> ec_2_4_1_274 [2.4.1.274] +udp_d_galactose +udp +hplus
-    d_galactosyl_1_4_d_glucosyl_1_1_n_acylsphingosi
-  }
 
-  branch from d_glucosyl_n_acylsphingosine side left {
-    d_glucosyl_n_acylsphingosine
-    <-> . +d_galactosyl_1_4_d_glucosyl_1_1_n_acylsphingosi +h2o
-    d_galactopyranose
-  }
 
-  branch from glucose side right {
-    glucose
-    <-> . +d_glucosyl_n_octadecanoylsphingosine +h2o
-    n_octadecanoylsphingosine
-  }
 
-  branch from glucose side left {
-    glucose
-    <-> . +nadp +nadph +hplus
-    d_glucitol
-  }
+
+
+
+
+
+
+
+
+
 }

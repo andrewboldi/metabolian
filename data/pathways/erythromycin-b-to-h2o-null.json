@@ -1,0 +1,490 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "erythromycin-b-to-h2o-null",
+  "name": "erythromycin B to H2O",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from erythromycin B to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR109654"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "erythromycin_b",
+      "name": "erythromycin B",
+      "formula": "C37H68NO12",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1103329"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "erythromycin_a",
+      "name": "erythromycin A",
+      "formula": "C37H68NO13",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1363597"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "1r_4r_4_r_5s_5_s_6r_6_s_7r_9r_11r_12r_13s_14s_1",
+      "name": "(1R,4R,4'R,5S,5'S,6R,6'S,7R,9R,11R,12R,13S,14S)-12-[(2S,3R,4S,6R)-4-(Dimethylamino)-3-hydroxy-6-methyloxan-2-yl]oxy-4-ethyl-5,5',6,11-tetrahydroxy-4'-methoxy-4',5,6',7,9,11,13-heptamethylspiro[3,15,17-trioxabicyclo[12.4.0]octadecane-16,2'-oxane]-2,8-dione",
+      "short": "(1R,4R,4'R,5S,5'S,6…",
+      "formula": "C37H65NO14",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:182021"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_13_154",
+      "name": "erythromycin 12 hydroxylase",
+      "ec": [
+        "1.14.13.154"
+      ]
+    },
+    {
+      "id": "ec_3_6_3_44",
+      "name": "EC 3.6.3.44",
+      "ec": [
+        "3.6.3.44"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "erythromycin 12 hydroxylase",
+      "ec": "1.14.13.154",
+      "substrates": [
+        {
+          "metabolite": "erythromycin_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "erythromycin_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_154"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR109654"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR109654"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR109652",
+      "substrates": [
+        {
+          "metabolite": "erythromycin_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1r_4r_4_r_5s_5_s_6r_6_s_7r_9r_11r_12r_13s_14s_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR109652"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR109652"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR175061",
+      "ec": "3.6.3.44",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1r_4r_4_r_5s_5_s_6r_6_s_7r_9r_11r_12r_13s_14s_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1r_4r_4_r_5s_5_s_6r_6_s_7r_9r_11r_12r_13s_14s_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_3_44"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR175061"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR175061"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_erythromycin_b_4-pyridoxolactone-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "erythromycin_b"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-pyridoxolactone-to-h2o-null"
+      },
+      "note": "Shares erythromycin B with 4-pyridoxolactone to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1103329"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_erythromycin_b_e-coli-mlps-to-h",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "erythromycin_b"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "e-coli-mlps-to-h"
+      },
+      "note": "Shares erythromycin B with E. coli MLPS to H.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1103329"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_erythromycin_b_erythromycin-b-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "erythromycin_b"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "erythromycin-b-to-h2o"
+      },
+      "note": "Shares erythromycin B with erythromycin B to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1103329"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_erythromycin_a_4-pyridoxolactone-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "erythromycin_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-pyridoxolactone-to-h2o-null"
+      },
+      "note": "Shares erythromycin A with 4-pyridoxolactone to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1363597"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_erythromycin_a_beta-d-ribosylnicotinate-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "erythromycin_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-d-ribosylnicotinate-to-h2o-null"
+      },
+      "note": "Shares erythromycin A with beta-D-ribosylnicotinate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1363597"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_erythromycin_a_e-coli-mlps-to-h",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "erythromycin_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "e-coli-mlps-to-h"
+      },
+      "note": "Shares erythromycin A with E. coli MLPS to H.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1363597"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_erythromycin_a_erythromycin-b-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "erythromycin_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "erythromycin-b-to-h2o"
+      },
+      "note": "Shares erythromycin A with erythromycin B to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1363597"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_erythromycin_a_s-adenosyl-l-homocysteine-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "erythromycin_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-nadph"
+      },
+      "note": "Shares erythromycin A with S-adenosyl-L-homocysteine to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1363597"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1r_4r_4_r_5s_5_s_6r_6_s_7r_9r_11r_12r_13s_14s_1_erythromycin-b-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1r_4r_4_r_5s_5_s_6r_6_s_7r_9r_11r_12r_13s_14s_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "erythromycin-b-to-h2o"
+      },
+      "note": "Shares (1R,4R,4'R,5S,5'S,6R,6'S,7R,9R,11R,12R,13S,14S)-12-[(2S,3R,4S,6R)-4-(Dimethylamino)-3-hydroxy-6-methyloxan-2-yl]oxy-4-ethyl-5,5',6,11-tetrahydroxy-4'-methoxy-4',5,6',7,9,11,13-heptamethylspiro[3,15,17-trioxabicyclo[12.4.0]octadecane-16,2'-oxane]-2,8-dione with erythromycin B to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:182021"
+          }
+        ]
+      }
+    }
+  ]
+}

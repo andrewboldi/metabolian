@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-1-dipalmitoyl-2-linoleo-to-l-glutamylethanolam "N,1-dipalmitoyl-2-linoleo… to γ-L-glutamylethanolamide" {
-  spacing 194
+  spacing 188
 
   spine at 0,0 {
     n_1_dipalmitoyl_2_linoleoyl_sn_glycero_3_phospho
@@ -20,43 +20,37 @@ pathway n-1-dipalmitoyl-2-linoleo-to-l-glutamylethanolam "N,1-dipalmitoyl-2-lino
 
   branch from linoleate side left {
     linoleate
-    <-> ec_1_13_11_77 [1.13.11.77] +o2
-    8e_10s_12z_10_hydroperoxyoctadeca_8_12_dienoate
+    <-> . +o2
+    13_hpode
   }
 
   branch from linoleate side right {
     linoleate
-    <-> . +1_2_3_trilinoleoylglycerol +h2o +hplus
-    1_3_dilinoleoylglycerol
-  }
-
-  branch from palmitoyl_ethanolamide side left {
-    palmitoyl_ethanolamide
-    <-> . +n_hexadecanoyl_1_1z_octadecenoyl_2_oleoyl_sn_gly +h2o +hplus
-    1_1z_octadecenyl_2_oleoyl_sn_glycero_3_phosphate
-  }
-
-  branch from 1_palmitoyl_sn_glycerol_3_phosphate side right {
-    1_palmitoyl_sn_glycerol_3_phosphate
-    <-> . +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +1_hexadecanoyl_sn_glycero_3_phosphocholine
-    1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
+    <-> . +o2
+    13_r_hpode
   }
 
   branch from 1_palmitoyl_sn_glycerol_3_phosphate side left {
     1_palmitoyl_sn_glycerol_3_phosphate
-    <-> . +h2o +palmitate +hplus
-    sn_glycerol_3_phosphate
+    <-> . +h2o +pi
+    1_hexadecanoyl_sn_glycerol
   }
 
-  branch from palmitate side right {
-    palmitate
-    <-> . +1_hexadecanoyl_2_octadecanoyl_sn_glycero_3_phosp +h2o +hplus
-    2_stearoyl_sn_glycero_3_phosphocholine
+  branch from 1_palmitoyl_sn_glycerol_3_phosphate side right {
+    1_palmitoyl_sn_glycerol_3_phosphate
+    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoyl_coa +coa
+    1_palmitoyl_2_4z_7z_10z_13z_16z_19z_docosahexaen
   }
 
-  branch from palmitate side left {
-    palmitate
-    <-> . +tripalmitin +h2o +hplus
-    dihexadecanoylglycerol
+  branch from linoleate side left {
+    linoleate
+    <-> . +o2
+    11r_11_hydroperoxylinoleate
+  }
+
+  branch from linoleate side right {
+    linoleate
+    <-> . +1_tetradecanoyl_2_9z_12z_octadecadienoyl_sn_glyc +h2o +hplus
+    1_myristoyl_sn_glycero_3_phosphocholine
   }
 }

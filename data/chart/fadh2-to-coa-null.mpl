@@ -4,83 +4,15 @@
 # edit the generator, not this file.
 
 pathway fadh2-to-coa-null "FADH2 to CoA" {
-  spacing 218
+  spacing 240
 
   spine at 0,0 {
     fadh2
-    <-> . +3_hydroxy_trans5_8tetradecadienoyl_coa +h -5e_8e_tetradecadienoyl_coa -h2o
+    <-> . +3_hydroxy_tetradecenoyl_7_coa +h -7z_tetradec_7_enoyl_coa -h2o
     fad
-    <-> . +nadh +acetyl_coa +fadh2 +5e_8e_tetradecadienoyl_coa +h -fad -coa -nad -h2o
-    7e_10e_hexadecadienoyl_coa
-    <-> . +nadh +acetyl_coa +fadh2 +h -linoelaidyl_coenzyme_a -coa -nad -h2o
-    fad
-    <-> . +s_carnitine +linoelaidyl_coenzyme_a -coa
-    o_linoelaidylcarnitine
-  }
-
-  branch from fad side left {
-    fad
-    <-> . +fadh2 +7_hydroxy_3_isocyanochromen_2_one +h +o2 +h2o
-    6_7_dihydroxy_3_isocyanochromen_2_one
-  }
-
-  branch from fad side right {
-    fad
-    <-> ec_1_5_99_8 [1.5.99.8] +s_1_pyrroline_5_carboxylate +fadh2 +h
-    l_proline
-  }
-
-  branch from 5e_8e_tetradecadienoyl_coa side left {
-    5e_8e_tetradecadienoyl_coa
-    <-> . +nadh +acetyl_coa +fadh2 +h +fad +coa +nad +h2o
-    3e_6e_dodecadienoyl_coa
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +aeruginopeptin_917s_c +phosphate +aeruginopeptin_917s_c
-    atp
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    aeruginopeptin_917s_a
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +acetyl_coa +trans_homoaconitate +h2o
-    pentane_1_2_3_5_tetracarboxylic_acid
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +h +perillate +atp +perillyl_coenzyme_a +phosphate +h2o
-    adp
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +palustradienal
-    isopimara_7_15_dienol
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +dehydroabietadienal
-    dehydroabietadienol
-  }
-
-  branch from linoelaidyl_coenzyme_a side right {
-    linoelaidyl_coenzyme_a
-    <-> . +nadh +h +o2 +nad +h2o
-    9z_octadecenoyl_coa
-  }
-
-  branch from linoelaidyl_coenzyme_a side left {
-    linoelaidyl_coenzyme_a
-    <-> . +nadh +h +o2 +nad +h2o
-    11z_octadecenoyl_coa
+    <-> . +nadh +acetyl_coa +fadh2 +7z_tetradec_7_enoyl_coa -fad -h -coa -nad -h2o
+    9z_hexadecenoyl_coa
+    <-> ec_2_3_1_51 [2.3.1.51] +1_11z_octadecenoyl_sn_glycero_3_phosphate -coa
+    1_11z_octadecenoyl_2_9z_hexadecenoyl_sn_glycero
   }
 }

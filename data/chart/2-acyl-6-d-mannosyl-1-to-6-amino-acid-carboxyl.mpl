@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-acyl-6-d-mannosyl-1-to-6-amino-acid-carboxyl "2-acyl-6-[α-D-mannosyl-(1… to 6-[amino acid carboxyl…" {
-  spacing 176
+  spacing 182
 
   spine at 0,0 {
     2_acyl_6_d_mannosyl_1_2_d_mannosyl_1_6_2_phospho
@@ -26,27 +26,33 @@ pathway 2-acyl-6-d-mannosyl-1-to-6-amino-acid-carboxyl "2-acyl-6-[α-D-mannosyl-
     6_amino_acid_carboxyl_end_amidated_6_phosphoetha
   }
 
-  branch from fatty-acid side left {
-    fatty-acid
-    <-> . +n_fatty_acyl_l_glutamine +h2o
-    glutamine
+  branch from c_terminal_proteinogenic_amino_acid side left {
+    c_terminal_proteinogenic_amino_acid
+    <-> . +c_terminal_amino_acid_phosphatidylserine_amidate +h2o
+    phosphatidylserine_amidated_glycine
   }
 
-  branch from fatty-acid side right {
-    fatty-acid
-    <-> . +1_2_diacyl_sn_glycero_3_phospholipid +h2o +hplus
-    1_acyl_sn_glycero_3_phospholipid
+  branch from stearoyl_coa side right {
+    stearoyl_coa
+    <-> . +1_acyl_sn_glycero_3_phosphoethanolamine +coa
+    1_acyl_2_stearoyl_sn_glycero_3_phosphoethanolami
   }
 
-  branch from phosphoethanolamine side left {
-    phosphoethanolamine
-    <-> . +1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph +h2o +hplus
-    1_palmitoyl_2_oleoyl_sn_glycerol
+  branch from stearoyl_coa side left {
+    stearoyl_coa
+    <-> . +hexadecan_1_ol +coa
+    palmityl_stearate
   }
 
-  branch from phosphoethanolamine side right {
-    phosphoethanolamine
-    <-> ec_3_6_1_53 [3.6.1.53] +cdp_ethanolamine +h2o +hplus
-    cytidine_5_monophosphate
+  branch from udp_n_acetyl_d_galactosamine side right {
+    udp_n_acetyl_d_galactosamine
+    <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +udp +hplus
+    n_acetyl_d_galactosaminyl_1_4_n_acetyl_neuramino
+  }
+
+  branch from udp_n_acetyl_d_galactosamine side left {
+    udp_n_acetyl_d_galactosamine
+    <-> . +neu5ac_2_3_d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_g +udp +hplus
+    n_acetyl_d_galactosaminyl_1_4_n_acetyl_neuramino
   }
 }

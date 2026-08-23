@@ -109,57 +109,9 @@
       "xrefs": {
         "chebi": "CHEBI:133491"
       }
-    },
-    {
-      "id": "1_20_0_2_18_3_digalactosyldiacylglycerol",
-      "name": "1-20:0-2-18:3-digalactosyldiacylglycerol",
-      "short": "1-20:0-2-18:3-digal…",
-      "formula": "C53H94O15",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM32593"
-      }
-    },
-    {
-      "id": "1_20_0_2_18_3_monogalactosyldiacylglycerol",
-      "name": "1-20:0-2-18:3-monogalactosyldiacylglycerol",
-      "short": "1-20:0-2-18:3-monog…",
-      "formula": "C47H84O10",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM32594"
-      }
-    },
-    {
-      "id": "1_20_1_2_18_2_digalactosyldiacylglycerol",
-      "name": "1-20:1-2-18:2-digalactosyldiacylglycerol",
-      "short": "1-20:1-2-18:2-digal…",
-      "formula": "C53H94O15",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM32598"
-      }
-    },
-    {
-      "id": "1_20_1_2_18_2_monogalactosyldiacylglycerol",
-      "name": "1-20:1-2-18:2-monogalactosyldiacylglycerol",
-      "short": "1-20:1-2-18:2-monog…",
-      "formula": "C47H84O10",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM32599"
-      }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_2_4_1_241",
-      "name": "digalactosyldiacylglycerol synthase",
-      "ec": [
-        "2.4.1.241"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -286,99 +238,115 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "digalactosyldiacylglycerol synthase",
-      "ec": "2.4.1.241",
-      "substrates": [
-        {
-          "metabolite": "udp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "1_20_0_2_18_3_digalactosyldiacylglycerol",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "udp_alpha_d_galactose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "1_20_0_2_18_3_monogalactosyldiacylglycerol",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_4_1_241"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR176338"
+      "id": "xt_gdp_l_colitose_d-gal-1-3-d-glcnac-to-5-o-phosphonato-d-ribof",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "gdp_l_colitose"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "d-gal-1-3-d-glcnac-to-5-o-phosphonato-d-ribof"
+      },
+      "note": "Shares GDP-β-L-colitose with β-D-Gal-(1→3)-β-D-GlcNAc-… to 5-O-phosphonato-α-D-ribof….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR176338"
+            "db": "ChEBI",
+            "id": "CHEBI:73932"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "digalactosyldiacylglycerol synthase",
-      "ec": "2.4.1.241",
-      "substrates": [
-        {
-          "metabolite": "udp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "1_20_1_2_18_2_digalactosyldiacylglycerol",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "udp_alpha_d_galactose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "1_20_1_2_18_2_monogalactosyldiacylglycerol",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_4_1_241"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR176339"
+      "id": "xt_gdp_l_colitose_gdp-to-d-gal-1-3-d-glcnac",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "gdp_l_colitose"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "gdp-to-d-gal-1-3-d-glcnac"
+      },
+      "note": "Shares GDP-β-L-colitose with GDP to α-D-Gal-(1→3)-α-D-GlcNAc-….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR176339"
+            "db": "ChEBI",
+            "id": "CHEBI:73932"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_gdp_l_colitose_gdp-to-d-mannosyl-1-3-n-acet",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "gdp_l_colitose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gdp-to-d-mannosyl-1-3-n-acet"
+      },
+      "note": "Shares GDP-β-L-colitose with GDP to α-D-mannosyl-(1→3)-N-acet….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:73932"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_gal_1_3_d_glcnac_diphospho_ditrans_octacis_un_gdp-to-d-gal-1-3-d-glcnac",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_gal_1_3_d_glcnac_diphospho_ditrans_octacis_un"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gdp-to-d-gal-1-3-d-glcnac"
+      },
+      "note": "Shares α-D-Gal-(1→3)-α-D-GlcNAc-diphospho-ditrans,octacis-undecaprenol with GDP to α-D-Gal-(1→3)-α-D-GlcNAc-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133491"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_gal_1_3_d_glcnac_diphospho_ditrans_octacis_un_lipid-a-4-e-coli-to-fatty-acyl-monophosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_gal_1_3_d_glcnac_diphospho_ditrans_octacis_un"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "lipid-a-4-e-coli-to-fatty-acyl-monophosphate"
+      },
+      "note": "Shares α-D-Gal-(1→3)-α-D-GlcNAc-diphospho-ditrans,octacis-undecaprenol with lipid A(4−) (E. coli) to fatty acyl monophosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133491"
           }
         ]
       }

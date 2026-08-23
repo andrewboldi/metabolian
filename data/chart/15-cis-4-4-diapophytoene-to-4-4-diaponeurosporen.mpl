@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 15-cis-4-4-diapophytoene-to-4-4-diaponeurosporen "15-cis-4,4'-diapophytoene to 4,4'-diaponeurosporenoate" {
-  spacing 296
+  spacing 302
 
   spine at 0,0 {
     15_cis_4_4_diapophytoene
@@ -14,5 +14,11 @@ pathway 15-cis-4-4-diapophytoene-to-4-4-diaponeurosporen "15-cis-4,4'-diapophyto
     4_4_diaponeurosporenal
     <-> . +nad +h2o -nadh -hplus
     4_4_diaponeurosporenoate
+  }
+
+  branch from 15_cis_4_4_diapophytoene side left {
+    15_cis_4_4_diapophytoene
+    <-> . +fad +hplus +fadh2
+    all_trans_4_4_diapophytofluene
   }
 }

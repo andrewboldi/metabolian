@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3s-4s-5s-10s-13r-4-10-1-to-zymosterone "(3S,4S,5S,10S,13R)-4,10,1… to zymosterone" {
-  spacing 194
+  spacing 158
 
   spine at 0,0 {
     3s_4s_5s_10s_13r_4_10_13_trimethyl_17_2r_6_meth
@@ -18,45 +18,9 @@ pathway 3s-4s-5s-10s-13r-4-10-1-to-zymosterone "(3S,4S,5S,10S,13R)-4,10,1… to 
     zymosterone
   }
 
-  branch from nadp side left {
-    nadp
-    <-> . +losartan +h +o2 +nadph +h2o
-    losartan_m5
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +6r_5_10_methylene_5_6_7_8_tetrahydrofolate +h +nadph
-    5_methyltetrahydrofolic_acid
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_5_2_2 [3.5.2.2] +3_ureidoisobutyric_acid
-    r_5_6_dihydrothymine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +5_4_hydroxyphenyl_3_oxovalero_delta_lactone
-    5_hydroxy_5_4_hydroxyphenyl_3_oxopentanoate
-  }
-
   branch from 4_carboxyzymosterol side left {
     4_carboxyzymosterol
     <-> . +fe2 +o2 +hplus +iron +h2o
     methylzymosterol
-  }
-
-  branch from nad side right {
-    nad
-    <-> . +nadh +neoprontosil +h +nh4 +h2o
-    sulfanilamide
-  }
-
-  branch from nad side left {
-    nad
-    <-> . +nadh +olsalazine
-    mesalaminate
   }
 }

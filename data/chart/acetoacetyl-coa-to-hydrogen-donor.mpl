@@ -4,12 +4,12 @@
 # edit the generator, not this file.
 
 pathway acetoacetyl-coa-to-hydrogen-donor "acetoacetyl-CoA to hydrogen donor" {
-  spacing 246
+  spacing 270
 
   spine at 0,0 {
     acetoacetyl_coa
-    <-> ec_2_8_3_9 [2.8.3.9] +chloroacetate +h -acetoacetate
-    chloroacetyl_coa
+    <-> ec_2_8_3_9 [2.8.3.9] +bhb -acetoacetate
+    3_hydroxybutanoyl_coa
     <-> ec_1_1_1_45 [1.1.1.45] +nadh +h +acetoacetate -nad
     s_3_hydroxybutyrate
     <-> ec_1_1_99_24 [1.1.99.24] +akg -acetoacetate
@@ -18,33 +18,57 @@ pathway acetoacetyl-coa-to-hydrogen-donor "acetoacetyl-CoA to hydrogen donor" {
     akg
   }
 
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_47 [1.1.1.47] +nadh +6_deoxy_d_glucono_1_5_lactone +h
-    d_quinovose
+  branch from 3_hydroxybutanoyl_coa side left {
+    3_hydroxybutanoyl_coa
+    <-> ec_5_1_2_3 [5.1.2.3]
+    3s_3_hydroxybutanoyl_coa
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_2_1_22 [1.2.1.22] +nadh +r_lactate +h +h2o
-    lactaldehyde
+    <-> ec_1_2_1_5 [1.2.1.5] +nadh +h +5z_8z_11z_14z_17z_eicosapentaenoate +h2o
+    neoabietadienal
   }
 
-  branch from r_2_hydroxyglutarate side left {
-    r_2_hydroxyglutarate
-    <-> ec_1_1_99_40 [1.1.99.40] +oxaloacetate +akg
-    r_malate
+  branch from nad side left {
+    nad
+    <-> ec_1_2_1_5 [1.2.1.5] +nadh +h +5z_8z_11z_14z_17z_eicosapentaenoate +h2o
+    isopimara_7_15_dienal
   }
 
-  branch from akg side right {
-    akg
-    <-> . +nadp +nadph +hplus
-    2_hydroxyglutarate
+  branch from nadh side right {
+    nadh
+    <-> ec_1_2_1_5 [1.2.1.5] +h +butanoate +nad +h2o
+    z_but_2_enol
   }
 
-  branch from akg side left {
-    akg
-    <-> ec_3_5_1_128 [3.5.1.128] +n_4_oxoglutaryl_l_cysteinylglycine +h2o
-    cysgly
+  branch from nadh side left {
+    nadh
+    <-> ec_1_2_1_5 [1.2.1.5] +9e_octadecenoate +h +nad +h2o
+    cis_9_octadecenal
+  }
+
+  branch from h side right {
+    h
+    <-> ec_1_2_1_5 [1.2.1.5] +nadh +6z_octadecenoate +cis_9_octadecenal +nad
+    h2o
+  }
+
+  branch from h side left {
+    h
+    <-> ec_1_2_1_5 [1.2.1.5] +nadh +cis_9_octadecenal +nad +h2o
+    9z_octadecenoate
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_2_1_5 [1.2.1.5] +nadh +15z_tetracosenoate +h +h2o
+    15_tetracosenal
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_2_1_5 [1.2.1.5] +nadh +h +tetratriacontanoate +h2o
+    tetratriacontanal
   }
 }

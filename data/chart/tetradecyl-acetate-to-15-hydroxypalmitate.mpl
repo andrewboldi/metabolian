@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway tetradecyl-acetate-to-15-hydroxypalmitate "Tetradecyl acetate to 15-hydroxypalmitate" {
-  spacing 176
+  spacing 206
 
   spine at 0,0 {
     tetradecyl_acetate
@@ -18,25 +18,55 @@ pathway tetradecyl-acetate-to-15-hydroxypalmitate "Tetradecyl acetate to 15-hydr
 
   branch from acetyl_coa side left {
     acetyl_coa
-    <-> ec_2_3_1_16 [2.3.1.16] +z_3_oxotetradec_7_enoyl_coa +coa
-    cis_dodec_5_enoyl_coa
+    <-> . +gitoxigenin +coa
+    oleandrigenin
   }
 
   branch from acetyl_coa side right {
     acetyl_coa
-    <-> ec_2_3_1_16 [2.3.1.16] +cis_dec_3_enoyl_coa +coa
-    z_3_oxododec_5_enoyl_coa
+    <-> . +alpha_l_fuc_1_3_alpha_d_glc_pp_und +coa
+    2_3_o_ac_alpha_l_fuc_1_3_alpha_d_glc_pp_und
   }
 
   branch from tetradecan_1_ol side left {
     tetradecan_1_ol
-    <-> . +palmitoyl_coa +coa
-    myristyl_palmitate
+    <-> . +myristoyl_coa +coa
+    tetradecyl_tetradecanoate
   }
 
   branch from tetradecan_1_ol side right {
     tetradecan_1_ol
-    <-> . +myristoyl_coa +coa
-    tetradecyl_tetradecanoate
+    <-> . +o2 +h2o2
+    tetradecanal
+  }
+
+  branch from coa side left {
+    coa
+    <-> . +acetyl_coa +alpha_d_gal_1_3_alpha_l_fuc_1_4_2_3_o_ac_alpha_l
+    2_o_ac_alpha_d_gal_1_3_alpha_l_fuc_1_4_2_3_o_ac
+  }
+
+  branch from coa side right {
+    coa
+    <-> . +2_methylpropanoyl_coa +2_4_di_2_methyl_butanoyl_3_4_methyl_pentanoyl_su
+    2_4_di_2_methyl_butanoyl_3_4_methyl_pentanoyl_6
+  }
+
+  branch from acetyl_coa side left {
+    acetyl_coa
+    <-> . +3_dodecanoyl_3_2_methylbutanoyl_4_3_methylbutano +coa
+    2_acetyl_3_dodecanoyl_3_2_methylbutanoyl_4_3_met
+  }
+
+  branch from acetyl_coa side right {
+    acetyl_coa
+    <-> . +3_dodecanoyl_4_3_methylbutanoyl_sucrose +coa
+    3_acetyl_3_dodecanoyl_4_3_methylbutanoyl_sucrose
+  }
+
+  branch from tetradecan_1_ol side left {
+    tetradecan_1_ol
+    <-> . +nadh +hplus +nad +coa
+    myristoyl_coa
   }
 }

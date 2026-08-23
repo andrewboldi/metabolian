@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway ergosta-5-7-22-24-28-tet-to-24-methylenecholeste "ergosta-5,7,22,24(28)-tet… to 24-methylenecholesteryl…" {
-  spacing 202
+  spacing 190
 
   spine at 0,0 {
     ergosta_5_7_22_24_28_tetraen_3beta_ol
@@ -14,18 +14,6 @@ pathway ergosta-5-7-22-24-28-tet-to-24-methylenecholeste "ergosta-5,7,22,24(28)-
     nadp
     <-> . +24_methylenecholesterol +udp_d_glucose -udp -hplus
     24_methylenecholesteryl_d_glucoside
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +h +elymoclavine +o2 +nadph +h2o
-    paspalic_acid
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +h +scopoletin +o2 +nadph +h2o
-    fraxetin
   }
 
   branch from 24_methylenecholesterol side left {

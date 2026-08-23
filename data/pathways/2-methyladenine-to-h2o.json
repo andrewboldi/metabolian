@@ -1,0 +1,289 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-methyladenine-to-h2o",
+  "name": "2-methyladenine to H2O",
+  "category": "nucleotide-metabolism",
+  "summary": "A 3-step route from 2-methyladenine to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR164270"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_methyladenine",
+      "name": "2-methyladenine",
+      "formula": "C6H7N5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1100620"
+      }
+    },
+    {
+      "id": "nicotinate_beta_d_ribonucleotide",
+      "name": "nicotinate beta-D-ribonucleotide",
+      "short": "nicotinate…",
+      "formula": "C11H12NO9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1108016"
+      }
+    },
+    {
+      "id": "2_methyladenine_ribotide_phosphate",
+      "name": "2-methyladenine ribotide phosphate",
+      "short": "2-methyladenine…",
+      "formula": "C11H14N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1364283"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nicotinate",
+      "name": "nicotinate",
+      "formula": "C6H4NO2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM274"
+      }
+    },
+    {
+      "id": "adenosylcob_iii_inamide_gdp",
+      "name": "adenosylcob(III)inamide-GDP",
+      "short": "adenosylcob(III)ina…",
+      "formula": "C68H95CoN21O21P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1101279"
+      }
+    },
+    {
+      "id": "gmp",
+      "name": "GMP",
+      "formula": "C10H12N5O8P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1101285"
+      }
+    },
+    {
+      "id": "coalpha_alpha_2_methyladenin_9_yl_cobeta_adenosy",
+      "name": "Coalpha-[alpha-(2-methyladenin-9-yl)]-Cobeta-adenosylcobamide 5'-phosphate",
+      "short": "Coalpha-[alpha-(2-m…",
+      "formula": "C69H95CoN21O20P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM818833"
+      }
+    },
+    {
+      "id": "5_phosphoguanylyl_3_5_guanosine",
+      "name": "5'-phosphoguanylyl(3'->5')guanosine",
+      "short": "5'-phosphoguanylyl(…",
+      "formula": "C20H23N10O15P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM4772"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_2_21",
+      "name": "nicotinate-nucleotide--dimethylbenzimidazole phosphoribosyltransferase",
+      "ec": [
+        "2.4.2.21"
+      ]
+    },
+    {
+      "id": "ec_2_7_8_26",
+      "name": "adenosylcobinamide-GDP ribazoletransferase",
+      "ec": [
+        "2.7.8.26"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "nicotinate-nucleotide--dimethylbenzimidazole phosphoribosyltransferase",
+      "ec": "2.4.2.21",
+      "substrates": [
+        {
+          "metabolite": "2_methyladenine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nicotinate_beta_d_ribonucleotide",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_methyladenine_ribotide_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nicotinate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_2_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR164270"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR164270"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "adenosylcobinamide-GDP ribazoletransferase",
+      "ec": "2.7.8.26",
+      "substrates": [
+        {
+          "metabolite": "adenosylcob_iii_inamide_gdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_methyladenine_ribotide_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gmp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "coalpha_alpha_2_methyladenin_9_yl_cobeta_adenosy",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_8_26"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR192566"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR192566"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR101036",
+      "substrates": [
+        {
+          "metabolite": "gmp",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_phosphoguanylyl_3_5_guanosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR101036"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR101036"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_coalpha_alpha_2_methyladenin_9_yl_cobeta_adenosy_secalciferol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coalpha_alpha_2_methyladenin_9_yl_cobeta_adenosy"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "secalciferol-to-h2o"
+      },
+      "note": "Shares Coalpha-[alpha-(2-methyladenin-9-yl)]-Cobeta-adenosylcobamide 5'-phosphate with secalciferol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM818833"
+          }
+        ]
+      }
+    }
+  ]
+}

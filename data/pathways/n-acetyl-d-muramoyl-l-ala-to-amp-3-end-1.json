@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "n-acetyl-d-muramoyl-l-ala-to-amp-3-end-1",
   "name": "N-acetyl-D-muramoyl-L-ala… to AMP 3'-end(1−)",
-  "category": "amino-acid-metabolism",
+  "category": "other",
   "summary": "A 5-step route from N-acetyl-D-muramoyl-L-alanyl-γ-D-glutamyl-meso-2,6-diaminopimeloyl-D-alanyl-D-alanine(2−) to AMP 3'-end(1−) residue, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -161,60 +161,31 @@
       }
     },
     {
-      "id": "dserine",
-      "name": "D-Serine",
-      "formula": "C3H7NO3",
-      "charge": 0,
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:35247"
+        "chebi": "CHEBI:57288"
       }
     },
     {
-      "id": "d_alanyl_d_serine",
-      "name": "D-alanyl-D-serine",
-      "formula": "C6H12N2O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:60390"
-      }
-    },
-    {
-      "id": "plp",
-      "name": "Pyridoxal 5'-phosphate (PLP)",
-      "short": "Pyridoxal 5'-P (PLP)",
-      "formula": "C8H8NO6P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:597326"
-      }
-    },
-    {
-      "id": "pyridoxamine_5_phosphate",
-      "name": "pyridoxamine 5'-phosphate",
-      "short": "pyridoxamine 5'-P",
-      "formula": "C8H12N2O5P",
+      "id": "3_n_acetyl_l_alanyl_adenylyl_1",
+      "name": "3'-(N-acetyl-L-alanyl)adenylyl(1−)",
+      "short": "3'-(N-acetyl-L-alan…",
+      "formula": "C15H19N6O8P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:58451"
+        "chebi": "CHEBI:232074"
       }
     },
     {
-      "id": "pyruvate",
-      "name": "Pyruvate",
-      "formula": "C3H3O3",
-      "charge": -1,
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:15361"
-      }
-    },
-    {
-      "id": "udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_l_ly",
-      "name": "UDP-N-acetyl-α-D-muramoyl-L-alanyl-γ-D-glutamyl-L-lysyl-D-alanine",
-      "short": "UDP-N-acetyl-α-D-mu…",
-      "formula": "C37H57N8O25P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:232760"
+        "chebi": "CHEBI:57287"
       }
     }
   ],
@@ -252,13 +223,6 @@
       "name": "UDP-N-acetylmuramoylpentapeptide-lysine N(6)-alanyltransferase",
       "ec": [
         "2.3.2.10"
-      ]
-    },
-    {
-      "id": "ec_6_3_2_35",
-      "name": "D-alanine--D-serine ligase",
-      "ec": [
-        "6.3.2.35"
       ]
     }
   ],
@@ -514,34 +478,25 @@
     },
     {
       "id": "r6",
-      "name": "D-alanine--D-serine ligase",
-      "equation": "D-serine + D-alanine + ATP = D-alanyl-D-serine + ADP + phosphate + H(+)",
-      "ec": "6.3.2.35",
+      "name": "L-alanyl-tRNA(Ala) + acetyl-CoA = N-acetyl-L-alanyl-tRNA(Ala) + CoA + H(+)",
+      "equation": "L-alanyl-tRNA(Ala) + acetyl-CoA = N-acetyl-L-alanyl-tRNA(Ala) + CoA + H(+)",
       "substrates": [
         {
-          "metabolite": "dserine",
+          "metabolite": "3_l_alanyl_adenylyl_zwitterionic_group",
           "stoichiometry": 1
         },
         {
-          "metabolite": "d_alanine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
+          "metabolite": "acetyl_coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "d_alanyl_d_serine",
+          "metabolite": "3_n_acetyl_l_alanyl_adenylyl_1",
           "stoichiometry": 1
         },
         {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pi",
+          "metabolite": "coa",
           "stoichiometry": 1
         },
         {
@@ -549,100 +504,217 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_6_3_2_35"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:27706"
+        "rhea": "RHEA:82083"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:27706"
+            "id": "RHEA:82083"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_d_alanyl_d_alanine_5-formimidoyltetrahydrofo-to-6s-5-6-7-8-tetrahyd",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_alanyl_d_alanine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-formimidoyltetrahydrofo-to-6s-5-6-7-8-tetrahyd"
+      },
+      "note": "Shares D-alanyl-D-alanine with 5-formimidoyltetrahydrofo… to (6S)-5,6,7,8-tetrahydrofo….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57822"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "pyridoxal 5'-phosphate + D-alanine = pyridoxamine 5'-phosphate + pyruvate",
-      "equation": "pyridoxal 5'-phosphate + D-alanine = pyridoxamine 5'-phosphate + pyruvate",
-      "substrates": [
-        {
-          "metabolite": "plp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "d_alanine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "pyridoxamine_5_phosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pyruvate",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:28562"
+      "id": "xt_d_alanyl_d_alanine_udp-n-acetyl-d-muramate-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_alanyl_d_alanine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-n-acetyl-d-muramate-to-ammonium"
+      },
+      "note": "Shares D-alanyl-D-alanine with UDP-N-acetyl-α-D-muramate to ammonium.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:28562"
+            "db": "ChEBI",
+            "id": "CHEBI:57822"
           }
         ]
       }
     },
     {
-      "id": "r8",
-      "name": "UDP-N-acetyl-alpha-D-muramoyl-L-alanyl-gamma-D-glutamyl-L-lysyl-D-alanyl-D-alanine + H2...",
-      "equation": "UDP-N-acetyl-alpha-D-muramoyl-L-alanyl-gamma-D-glutamyl-L-lysyl-D-alanyl-D-alanine + H2O = UDP-N-acetyl-alpha-D-muramoyl-L-alanyl-gamma-D-glutamyl-L-lysyl-D-alanine + D-alanine",
-      "substrates": [
-        {
-          "metabolite": "udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_l_ly",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_l_ly",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "d_alanine",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "rhea": "RHEA:83151"
+      "id": "xt_udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_l_ly_d-glutamine-to-udp-n-acetyl-d-muramoyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_l_ly"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glutamine-to-udp-n-acetyl-d-muramoyl"
+      },
+      "note": "Shares UDP-N-acetyl-α-D-muramoyl-L-alanyl-D-γ-glutamyl-L-lysinate with D-glutamine to UDP-N-acetyl-α-D-muramoyl….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:83151"
+            "db": "ChEBI",
+            "id": "CHEBI:83903"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_l_ly_ditrans-polycis-undecapre-to-amp-3-end-1",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_l_ly"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ditrans-polycis-undecapre-to-amp-3-end-1"
+      },
+      "note": "Shares UDP-N-acetyl-α-D-muramoyl-L-alanyl-γ-D-glutamyl-L-lysyl-D-alanyl-D-alaninate with ditrans,polycis-undecapre… to AMP 3'-end(1−).",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:70758"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_l_alanyl_adenylyl_zwitterionic_group_2r-3s-2-3-dimethylmalate-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_l_alanyl_adenylyl_zwitterionic_group"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2r-3s-2-3-dimethylmalate-to-diphosphate"
+      },
+      "note": "Shares 3'-(L-alanyl)adenylyl zwitterionic group with (2R,3S)-2,3-dimethylmalate to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78497"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_l_alanyl_adenylyl_zwitterionic_group_5-6-dihydrothymine-to-l-alanine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_l_alanyl_adenylyl_zwitterionic_group"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-6-dihydrothymine-to-l-alanine"
+      },
+      "note": "Shares 3'-(L-alanyl)adenylyl zwitterionic group with 5,6-dihydrothymine to L-alanine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78497"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_l_alanyl_adenylyl_zwitterionic_group_cdp-diacylglycerol-to-amp-3-end-1",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_l_alanyl_adenylyl_zwitterionic_group"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cdp-diacylglycerol-to-amp-3-end-1"
+      },
+      "note": "Shares 3'-(L-alanyl)adenylyl zwitterionic group with CDP-diacylglycerol to AMP 3'-end(1−).",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78497"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_l_alanyl_adenylyl_zwitterionic_group_l-selenocystathionine-to-3-l-selenocysteinyl-ade",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_l_alanyl_adenylyl_zwitterionic_group"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-selenocystathionine-to-3-l-selenocysteinyl-ade"
+      },
+      "note": "Shares 3'-(L-alanyl)adenylyl zwitterionic group with L-selenocystathionine to 3'-(L-selenocysteinyl)ade….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78497"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_l_alanyl_adenylyl_zwitterionic_group_s-4-amino-5-oxopentanoi-to-3-n-acetyl-l-glutami",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_l_alanyl_adenylyl_zwitterionic_group"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-4-amino-5-oxopentanoi-to-3-n-acetyl-l-glutami"
+      },
+      "note": "Shares 3'-(L-alanyl)adenylyl zwitterionic group with (S)-4-amino-5-oxopentanoi… to 3'-(N-acetyl-L-glutaminyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78497"
           }
         ]
       }

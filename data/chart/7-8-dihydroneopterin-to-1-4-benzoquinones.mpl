@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 7-8-dihydroneopterin-to-1-4-benzoquinones "7,8-dihydroneopterin to 1,4-benzoquinones" {
-  spacing 214
+  spacing 184
 
   spine at 0,0 {
     7_8_dihydroneopterin
@@ -14,35 +14,5 @@ pathway 7-8-dihydroneopterin-to-1-4-benzoquinones "7,8-dihydroneopterin to 1,4-b
     hydroquinones
     <-> . +o2 -h2o
     1_4_benzoquinones
-  }
-
-  branch from 7_8_dihydroxanthopterin side left {
-    7_8_dihydroxanthopterin
-    <-> ec_1_13_11_81 [1.13.11.81] +dihydroneopterin +o2 +formate +glycolaldehyde
-    h
-  }
-
-  branch from hydroquinones side right {
-    hydroquinones
-    <-> . +l_methionine +1_4_benzoquinones +h2o
-    l_methionine_r_s_oxide
-  }
-
-  branch from hydroquinones side left {
-    hydroquinones
-    <-> ec_1_97_1_14 [1.97.1.14] +selenite +1_4_benzoquinones +h2o
-    selenate
-  }
-
-  branch from 1_4_benzoquinones side right {
-    1_4_benzoquinones
-    <-> ec_1_3_5_3 [1.3.5.3] +protoporphyrinogen9 +hydroquinones
-    protoporphyrin9
-  }
-
-  branch from 1_4_benzoquinones side left {
-    1_4_benzoquinones
-    <-> . +nadh +hplus +nad
-    1_4_benzosemiquinones
   }
 }

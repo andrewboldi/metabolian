@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway c-terminal-l-ornithyl-to-o-pantetheine-4-phospho "C-terminal-γ-(L-ornithyl)… to O-(pantetheine-4'-phospho…" {
-  spacing 284
+  spacing 308
 
   spine at 0,0 {
     c_terminal_l_ornithyl_l_glutamyl_1_group
@@ -18,25 +18,49 @@ pathway c-terminal-l-ornithyl-to-o-pantetheine-4-phospho "C-terminal-γ-(L-ornit
 
   branch from ornithine side left {
     ornithine
-    <-> ec_1_14_13_196 [1.14.13.196] +nadh +o2 +nad +h2o
-    n5_hydroxy_l_ornithine
+    <-> ec_2_1_4_5 [2.1.4.5] +arginine
+    n_amidino_l_arginine
   }
 
   branch from ornithine side right {
     ornithine
-    <-> ec_2_3_1_109 [2.3.1.109] +succinyl_coa +coa +hplus
-    n2_succinyl_l_ornithinate
+    <-> ec_2_1_4_4 [2.1.4.4] +tyrosine +arginine
+    n_amidino_l_tyrosine
   }
 
   branch from holo-acp side left {
     holo-acp
-    <-> ec_6_2_1_59 [6.2.1.59] +behenate +atp +amp +ppi
-    o_s_docosanoylpantetheine_4_phosphoryl_l_serine
+    <-> ec_6_2_1_77 [6.2.1.77] +l_lysinium +atp +amp +ppi
+    o_s_l_lysyl_pantetheine_4_phosphoryl_l_serine_1
   }
 
   branch from holo-acp side right {
     holo-acp
-    <-> . +4_amino_l_phenylalanine +atp +amp +ppi
-    o_s_4_amino_l_phenylalanylpantetheine_4_phosphor
+    <-> . +o_s_l_lysyl_pantetheine_4_phosphoryl_l_serine_1 +amp +hplus
+    l_lysyl_5_amp
+  }
+
+  branch from o_s_3r_3_hydroxyacylpantetheine_4_phosphoryl_ser side left {
+    o_s_3r_3_hydroxyacylpantetheine_4_phosphoryl_ser
+    <-> ec_4_2_1_59 [4.2.1.59] +h2o
+    o_s_2e_2_enoylpantetheine_4_phosphoryl_l_serine
+  }
+
+  branch from o_s_3r_3_hydroxyacylpantetheine_4_phosphoryl_ser side right {
+    o_s_3r_3_hydroxyacylpantetheine_4_phosphoryl_ser
+    <-> ec_1_1_1_100 [1.1.1.100] +nadp +nadph +hplus
+    o_s_3_oxoacylpantetheine_4_phosphoryl_l_serine_1
+  }
+
+  branch from holo-acp side left {
+    holo-acp
+    <-> . +2s_3r_methylphenylalanine +atp +amp +ppi
+    o_s_3r_3_methyl_l_phenylalanylpantetheine_4_phos
+  }
+
+  branch from holo-acp side right {
+    holo-acp
+    <-> ec_2_3_1_327 [2.3.1.327] +o_s_11_methyldodecanoylpantetheine_4_phosphoryl +l_phenylalanine +hplus
+    n_11_methyldodecanoyl_l_phenylalanine
   }
 }

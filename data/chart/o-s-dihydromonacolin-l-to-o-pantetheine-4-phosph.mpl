@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway o-s-dihydromonacolin-l-to-o-pantetheine-4-phosph "O-[S-(dihydromonacolin L… to O-(pantetheine-4'-phospho…" {
-  spacing 340
+  spacing 326
 
   spine at 0,0 {
     o_s_dihydromonacolin_l_carboxy_pantetheine_4_pho
@@ -18,30 +18,6 @@ pathway o-s-dihydromonacolin-l-to-o-pantetheine-4-phosph "O-[S-(dihydromonacolin
     monacolin_j_carboxylate
     <-> ec_2_3_1_238 [2.3.1.238] +o_s_2_methylbutanoylpantetheine_4_phosphoryl_ser -holo-acp
     mevinolinate
-  }
-
-  branch from holo-acp side left {
-    holo-acp
-    <-> . +o_s_3_5_7_9_11_13_hexaoxotetradecanoyl_pantethei +h2o
-    dehydrocitreoisocoumarin
-  }
-
-  branch from holo-acp side right {
-    holo-acp
-    <-> . +o_s_3_5_7_9_11_pentaoxododecanoyl_pantetheine_4 +h2o
-    6_8_dihydroxy_3_2_oxopropyl_isocoumarin
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +casbene +fmnh2 +o2 +h2o +hplus
-    4_hydroxycasbene
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +c21_steroid +fmnh2 +o2 +h2o +hplus
-    21_hydroxy_c21_steroid
   }
 
   branch from mevinolinate side left {

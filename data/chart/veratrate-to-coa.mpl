@@ -22,51 +22,22 @@ pathway veratrate-to-coa "veratrate to CoA" {
     cyanidin_3_o_3_6_o_dimalonylglucoside
   }
 
-  branch from 1_o_vanilloyl_d_glucose side left {
-    1_o_vanilloyl_d_glucose
-    <-> ec_2_4_1_299 [2.4.1.299] +pelargonidin_3_o_d_glucoside_betaine +vanillate
-    pelargonin
-  }
 
-  branch from 1_o_vanilloyl_d_glucose side right {
-    1_o_vanilloyl_d_glucose
-    <-> . +pelargonidin_3_glucoside +h +vanillate
-    pelargonin
-  }
 
-  branch from cyanidin_3_o_beta_d_glucoside side left {
-    cyanidin_3_o_beta_d_glucoside
-    <-> . +udp +cyanidin_3_o_rutinoside
-    udp_beta_l_rhamnose
-  }
 
-  branch from cyanidin_3_o_beta_d_glucoside side right {
-    cyanidin_3_o_beta_d_glucoside
-    <-> ec_2_4_1_297 [2.4.1.297] +udp +cyanidin_3_o_sophoroside +h
-    udp_alpha_d_glucose
-  }
 
-  branch from 1_o_4_hydroxybenzoyl_d_glucopyranose side left {
-    1_o_4_hydroxybenzoyl_d_glucopyranose
-    <-> . +delphinidin_3_o_rutinoside_7_o_6_o_4_o_glucosyl +glucose
-    delphinidin_3_o_rutinoside_7_o_6_o_4_o_6_o_p_hyd
-  }
 
-  branch from cyanidin_3_o_6_o_malonyl_d_glucoside side right {
-    cyanidin_3_o_6_o_malonyl_d_glucoside
-    <-> ec_2_4_1_254 [2.4.1.254] +udp +cyanidin_3_o_6_o_malonyl_2_o_glucuronyl_glucosid
-    udp_alpha_d_glucuronate
-  }
 
-  branch from coa side left {
-    coa
-    <-> . +acetyl_coa +n_6_n_6_o_tridemethylpuromycin_5_phosphate
-    n_acetyl_n6_n6_o_tridemethylpuromycin_5_phosphat
-  }
 
-  branch from coa side right {
-    coa
-    <-> ec_2_3_1_173 [2.3.1.173] +trans_4_coumaroyl_coa +kaempferol_3_o_d_glucosyl_1_2_d_glucosyl_1_2_d_g
-    kaempferol_3_o_6_4_coumaroyl_d_glucosyl_1_2_d_gl
-  }
+
+
+
+
+
+
+
+
+
+
+
 }

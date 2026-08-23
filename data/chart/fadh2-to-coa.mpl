@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway fadh2-to-coa "FADH2 to CoA" {
-  spacing 212
+  spacing 302
 
   spine at 0,0 {
     fadh2
@@ -18,61 +18,151 @@ pathway fadh2-to-coa "FADH2 to CoA" {
 
   branch from fad side left {
     fad
-    <-> . +nonadecanoyl_coa +fadh2 +h
-    2e_nonadecenoyl_coenzyme_a
+    <-> . +nadh +acetyl_coa +tetradecanoyl_coa +fadh2 +h +coa +nad +h2o
+    hexadecanoyl_coa
   }
 
   branch from fad side right {
     fad
-    <-> . +erucoyl_coa +fadh2 +h
-    2e_13z_docosadienoyl_coa
+    <-> . +nadh +acetyl_coa +octadecanoyl_coa +fadh2 +h +coa +nad +h2o
+    eicosanoyl_coa
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_homomethionine +h +o2 +nadph +nadp +4_methylthiobutanaldoxime
-    co2
+    <-> . +l_threonine +l_isoleucine +l_tryptophan
+    tryptophanyl_threonyl_isoleucine
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_14_21_7 [1.14.21.7] +3_8_biflaviolin +nadp +h +o2 +nadph
-    flaviolin
+    <-> . +l_threonine +l_tryptophan +l_tyrosine
+    tryptophanyl_threonyl_tyrosine
   }
 
   branch from coa side left {
     coa
-    <-> . +diphosphate +vaccenyl_coenzyme_a +amp +h +atp +vaccenic_acid
-    pmf
+    <-> . +6z_9z_12z_15z_octadecatetraenoyl_coa +sn_glycerol_3_phosphate
+    1_6z_9z_12z_15z_octadecatetraenoyl_glycero_3_pho
   }
 
   branch from coa side right {
     coa
-    <-> . +dodecanedioyl_coa +r_carnitine +h
-    4s_4_11_carboxyundecanoyl_oxy_4_trimethylammoni
-  }
-
-  branch from 9z_12z_octadecadienoyl_coa side left {
-    9z_12z_octadecadienoyl_coa
-    <-> . +coa +h2o
-    linoelaidic_acid
-  }
-
-  branch from 9z_12z_octadecadienoyl_coa side right {
-    9z_12z_octadecadienoyl_coa
-    <-> . +9z_octadecenoyl_coa +h +o2 +nadph +h2o
-    nadp
+    <-> . +5z_8z_11z_14z_17z_eicosapentaenoyl_coa +sn_glycerol_3_phosphate
+    1_5z_8z_11z_14z_17z_eicosapentaenoyl_glycero_3_p
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +11_dehydrothromboxane_b2
-    thromboxane_b2
+    <-> . +nadh +acetyl_coa +tetradecanoyl_coa +h +coa +h2o
+    9z_hexadecenoyl_coa
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +3_oxodocosanoyl_coa +h
-    3_hydroxydocosanoyl_coa
+    <-> . +nadh +acetyl_coa +tetradecanoyl_coa +h +coa +h2o
+    2e_hexadecenoyl_coa
+  }
+
+  branch from fadh2 side left {
+    fadh2
+    <-> . +nadh +acetyl_coa +5z_8z_11z_14z_eicosatetraenoyl_coa +h +fad +coa +nad +h2o
+    7z_10z_13z_16z_docosatetraenoyl_coa
+  }
+
+  branch from fadh2 side right {
+    fadh2
+    <-> . +nadh +acetyl_coa +h +fad +coa +nad +h2o
+    4z_7z_10z_13z_16z_19z_docosahexaenoyl_coa
+  }
+
+  branch from h side left {
+    h
+    <-> . +adp +l_alanine_d_glutamate_meso_2_6_diaminoheptanedio +phosphate +l_alanine_d_glutamate_meso_2_6_diaminoheptanedio +h2o
+    atp
+  }
+
+  branch from h side right {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    4_pyridoxate
+  }
+
+  branch from fad side left {
+    fad
+    <-> . +coa +nad +h2o +nadh +acetyl_coa +fadh2 +h
+    octanoyl_coa
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +tryptophanyl_tyrosyl_tyrosine +l_tyrosine
+    l_tryptophan
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +turanose +beta_d_fructose
+    glucose
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +acetyl_coa +octadecanoyl_coa +h +h2o2 +eicosanoyl_coa +coa +nad +h2o
+    o2
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> . +acetyl_coa +h +h2o2 +7z_10z_13z_16z_docosatetraenoyl_coa +coa +o2 +nad +h2o
+    5z_8z_11z_14z_eicosatetraenoyl_coa
+  }
+
+  branch from acetyl_coa side right {
+    acetyl_coa
+    <-> . +nadh +6z_9z_12z_octadecatrienoyl_coa +h +coa +nad +h2o
+    4z_7z_10z_13z_16z_docosapentaenoyl_coa
+  }
+
+  branch from acetyl_coa side left {
+    acetyl_coa
+    <-> . +nadh +h +h2o2 +4z_7z_10z_13z_16z_docosapentaenoyl_coa +coa +o2 +nad +h2o
+    5z_8z_11z_14z_17z_eicosapentaenoyl_coa
+  }
+
+  branch from coa side right {
+    coa
+    <-> . +7z_10z_13z_16z_19z_docosapentaenoyl_coa +sn_glycerol_3_phosphate
+    1_acylglycerol_3p_7_10_13_16_19_docosa
+  }
+
+  branch from coa side left {
+    coa
+    <-> . +6z_9z_12z_15z_18z_21z_tetracosahexaenoyl_coa +sn_glycerol_3_phosphate
+    1_acylglycerol_3p_6_9_12_15_18_21_tetra
+  }
+
+  branch from nad side right {
+    nad
+    <-> . +nadh +eicosanoyl_coa +acetyl_coa +h +h2o2 +coa +o2 +h2o
+    tetracosanoyl_coa
+  }
+
+  branch from nad side left {
+    nad
+    <-> . +nadh +acetyl_coa +9z_octadecenoyl_coa +h +h2o2 +coa +o2 +h2o
+    15z_tetracosenoyl_coa
+  }
+
+  branch from r_carnitine side right {
+    r_carnitine
+    <-> . +7z_10z_13z_16z_docosatetraenoyl_coa +coa
+    7z_10z_13z_16z_docosatetraenoylcarnitine
+  }
+
+  branch from r_carnitine side left {
+    r_carnitine
+    <-> . +3s_hydroxydecanoyl_coa +coa
+    3_hydroxydecanoylcarnitine
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway h-to-4-methyl-3-oxoadipyl-coa "H to 4-methyl-3-oxoadipyl-CoA" {
-  spacing 204
+  spacing 252
 
   spine at 0,0 {
     h
@@ -18,25 +18,73 @@ pathway h-to-4-methyl-3-oxoadipyl-coa "H to 4-methyl-3-oxoadipyl-CoA" {
 
   branch from h side left {
     h
-    <-> . +quercetin_4_o_d_glucopyranoside +glucose +h2o
-    quercetin_3_4_di_o_d_glucoside
+    <-> ec_2_4_1_91 [2.4.1.91] +udp +3_o_beta_d_glucosyl_daphnetin +7_8_dihydroxycoumarin
+    udp_alpha_d_glucose
   }
 
   branch from h side right {
     h
-    <-> . +kaempferol_3_o_6_o_feruloyl_glucoside +coa +kaempferol_3_o_beta_d_glucoside
-    e_feruloyl_coa
+    <-> ec_2_4_1_126 [2.4.1.126] +udp +4_o_beta_d_glucosyl_esculetin +udp_alpha_d_glucose
+    esculetin
   }
 
   branch from succinate side left {
     succinate
-    <-> . +2_oxoglutarate +3_4_5_trihydroxy_3_7_dimethoxyflavone +o2 +3_4_5_6_tetrahydroxy_3_7_dimethoxyflavone
-    co2
+    <-> . +fadh2 +co2 +h +2_oxoglutarate +h2o
+    fad
   }
 
   branch from succinate side right {
     succinate
-    <-> ec_1_14_20_6 [1.14.20.6] +2_oxoglutarate +r_naringenin +o2 +co2
-    2s_3s_3_5_7_trihydroxy_2_4_hydroxyphenyl_2_3_di
+    <-> ec_1_14_11_1 [1.14.11.1] +r_carnitine +co2 +o2 +4_trimethylamino_butanoate
+    2_oxoglutarate
+  }
+
+  branch from h side left {
+    h
+    <-> . +3_o_beta_d_glucosyl_esculetin +udp_alpha_d_glucose +esculetin
+    udp
+  }
+
+  branch from h side right {
+    h
+    <-> . +udp +rubusoside +udp_alpha_d_glucose
+    19_o_beta_glucopyranosyl_steviol
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_2_1_26 [3.2.1.26] +polydextrose +beta_d_fructose
+    raffinose
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_4_2_1_96 [4.2.1.96] +4as_6r_4a_hydroxy_l_erythro_5_6_7_8_tetrahydrob
+    l_erythro_7_8_dihydrobiopterin
+  }
+
+  branch from succinyl_coa side left {
+    succinyl_coa
+    <-> . +diphosphate +amp +succinate +coa
+    atp
+  }
+
+  branch from succinyl_coa side right {
+    succinyl_coa
+    <-> . +adp +phosphate +succinate +atp
+    coa
+  }
+
+  branch from succinate side left {
+    succinate
+    <-> . +menaquinone_6 +menaquinol_6
+    fumarate
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> ec_1_3_5_1 [1.3.5.1] +h +fumarate +fad
+    fadh2
   }
 }

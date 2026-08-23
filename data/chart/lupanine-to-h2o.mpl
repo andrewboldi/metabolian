@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway lupanine-to-h2o "Lupanine to H2O" {
-  spacing 188
+  spacing 152
 
   spine at 0,0 {
     lupanine
@@ -14,41 +14,5 @@ pathway lupanine-to-h2o "Lupanine to H2O" {
     pyruvate
     <-> . +h +adp +cadaverine +phosphate -cadaverine -h2o
     atp
-  }
-
-  branch from pyruvate side left {
-    pyruvate
-    <-> . +phosphate +phosphoenolpyruvate +h2o
-    udp_n_acetyl_3_o_1_carboxyvinyl_alpha_d_glucosam
-  }
-
-  branch from pyruvate side right {
-    pyruvate
-    <-> ec_4_1_3_3 [4.1.3.3] +n_acetyl_d_mannosamine
-    n_acetyl_alpha_neuraminate
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +dimp +adp
-    didp
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    estrone_3_sulfate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    eicosanoate
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    epa_d5
   }
 }

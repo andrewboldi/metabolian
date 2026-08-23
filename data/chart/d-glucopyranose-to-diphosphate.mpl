@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-glucopyranose-to-diphosphate "D-glucopyranose to diphosphate" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     glucose
@@ -14,17 +14,5 @@ pathway d-glucopyranose-to-diphosphate "D-glucopyranose to diphosphate" {
     udp_alpha_d_glucose
     <-> . +r_3_phenyllactate +dlactate +leucine +sam +atp -amp -sah -ppi -hplus
     pf1022a
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    estrone_3_o_d_glucuronide
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +ethanesulfonic_acid +phosphate +ethanesulfonic_acid +h2o
-    atp
   }
 }

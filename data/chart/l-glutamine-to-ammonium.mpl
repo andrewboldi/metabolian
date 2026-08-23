@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-glutamine-to-ammonium "L-glutamine to ammonium" {
-  spacing 296
+  spacing 284
 
   spine at 0,0 {
     glutamine
@@ -26,17 +26,5 @@ pathway l-glutamine-to-ammonium "L-glutamine to ammonium" {
     carbamoyl-aspartate
     <-> ec_3_5_2_3 [3.5.2.3] +h2o +hplus
     dihydroorotate
-  }
-
-  branch from aspartate side left {
-    aspartate
-    <-> . +nadp +nadph +hplus
-    iminoaspartate
-  }
-
-  branch from aspartate side right {
-    aspartate
-    <-> . +nadph +o2 +nadp +h2o
-    n_hydroxy_l_aspartate
   }
 }

@@ -166,30 +166,30 @@
       }
     },
     {
-      "id": "n_amidino_l_arginine",
-      "name": "N-amidino-L-arginine",
-      "formula": "C7H17N6O2",
-      "charge": 1,
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:232086"
+        "chebi": "CHEBI:58349"
       }
     },
     {
-      "id": "cysteine",
-      "name": "L-Cysteine",
-      "formula": "C3H7NO2S",
-      "charge": 0,
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:35235"
+        "chebi": "CHEBI:58210"
       }
     },
     {
-      "id": "n_amidino_l_cysteine",
-      "name": "N-amidino-L-cysteine",
-      "formula": "C4H9N3O2S",
-      "charge": 0,
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:232115"
+        "chebi": "CHEBI:57783"
       }
     }
   ],
@@ -213,7 +213,10 @@
       "name": "ornithine decarboxylase",
       "ec": [
         "4.1.1.17"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P11926"
+      }
     },
     {
       "id": "ec_2_3_1_138",
@@ -223,10 +226,17 @@
       ]
     },
     {
-      "id": "ec_2_1_4_5",
-      "name": "arginine amidinotransferase",
+      "id": "ec_1_5_1_38",
+      "name": "FMN reductase (NADPH)",
       "ec": [
-        "2.1.4.5"
+        "1.5.1.38"
+      ]
+    },
+    {
+      "id": "ec_1_5_1_39",
+      "name": "FMN reductase [NAD(P)H]",
+      "ec": [
+        "1.5.1.39"
       ]
     }
   ],
@@ -433,86 +443,161 @@
     },
     {
       "id": "r5",
-      "name": "arginine amidinotransferase",
-      "equation": "2 L-arginine = N-amidino-L-arginine + L-ornithine",
-      "ec": "2.1.4.5",
+      "name": "FMN reductase (NADPH)",
+      "equation": "FMNH2 + NADP(+) = FMN + NADPH + 2 H(+)",
+      "ec": "1.5.1.38",
       "substrates": [
         {
-          "metabolite": "arginine",
-          "stoichiometry": 2
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n_amidino_l_arginine",
+          "metabolite": "fmn",
           "stoichiometry": 1
         },
         {
-          "metabolite": "ornithine",
+          "metabolite": "nadph",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_4_5"
+          "enzyme": "ec_1_5_1_38"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:82207"
+        "rhea": "RHEA:21624"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:82207"
+            "id": "RHEA:21624"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_glycine_aliphatic-aldoxime-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "glycine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aliphatic-aldoxime-to-diphosphate"
+      },
+      "note": "Shares glycine with aliphatic aldoxime to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29947"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "valine amidinotransferase",
-      "equation": "L-cysteine + L-arginine = N-amidino-L-cysteine + L-ornithine",
-      "ec": "2.1.4.4",
-      "substrates": [
-        {
-          "metabolite": "cysteine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "arginine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n_amidino_l_cysteine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ornithine",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_4_4"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:82219"
+      "id": "xt_glycine_ent-copal-8-ol-diphosphate-to-l-cysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "glycine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "ent-copal-8-ol-diphosphate-to-l-cysteine"
+      },
+      "note": "Shares glycine with ent-copal-8-ol diphosphate to L-cysteine.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:82219"
+            "db": "ChEBI",
+            "id": "CHEBI:29947"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_glycine_siroheme-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "glycine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "siroheme-to-h2o"
+      },
+      "note": "Shares glycine with siroheme to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29947"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_glycyl_radical_siroheme-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "glycyl_radical"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "siroheme-to-h2o"
+      },
+      "note": "Shares glycyl radical with siroheme to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:32722"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_fmnh_siroheme-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "fmnh"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "siroheme-to-h2o"
+      },
+      "note": "Shares FMNH• with siroheme to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:140311"
           }
         ]
       }

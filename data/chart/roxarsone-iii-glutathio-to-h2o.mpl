@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway roxarsone-iii-glutathio-to-h2o "roxarsone (III)-glutathio… to H2O" {
-  spacing 194
+  spacing 152
 
   spine at 0,0 {
     roxarsone_iii_glutathione_complex
@@ -14,47 +14,5 @@ pathway roxarsone-iii-glutathio-to-h2o "roxarsone (III)-glutathio… to H2O" {
     4_hydroxy_3_nitrocyclohexa_2_5_dien_1_one
     <-> ec_3_6_3_16 [3.6.3.16] +h +adp +arsenite +phosphate -arsenite -h2o
     atp
-  }
-
-  branch from glutathione side left {
-    glutathione
-    <-> ec_1_11_1_9 [1.11.1.9] +glutathione_disulfide +h2o
-    o2
-  }
-
-  branch from glutathione side right {
-    glutathione
-    <-> ec_2_5_1_18 [2.5.1.18] +3z_hex_3_en_1_ol
-    3_glutathion_s_yl_hexan_1_ol
-  }
-
-  branch from roxarsone_iii side left {
-    roxarsone_iii
-    <-> . +3_amino_4_hydroxyphenyl_arsonous_acid +nadp +h2o +h
-    nadph
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    2_3_bis_o_geranylgeranyl_sn_glycero_1_phospho_1
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    2_3_bis_o_geranylgeranyl_sn_glycero_1_phospho_1
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_threonine +l_methionine +l_tyrosine
-    threonyl_tyrosyl_methionine
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_alanine +l_proline +l_tryptophan
-    tryptophanyl_alanyl_proline
   }
 }

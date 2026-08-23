@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "3-oxoorientin-to-luteolin-7-o-d-glucos",
   "name": "3''-oxoorientin to luteolin 7-O-[(β-D-glucos…",
-  "category": "amino-acid-metabolism",
+  "category": "other",
   "summary": "A 4-step route from 3''-oxoorientin(1−) to luteolin 7-O-[(β-D-glucosyluronate)-(1→2)-(β-D-glucosiduronate)] 4'-O-β-D-glucosiduronate(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -104,51 +104,77 @@
       }
     },
     {
-      "id": "sam",
-      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
-      "short": "S-Adenosyl-L-methio…",
-      "formula": "C15H23N6O5S",
+      "id": "h",
+      "name": "H",
+      "formula": "H",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:59789"
+        "metanetx": "MNXM1"
       }
     },
     {
-      "id": "luteolin_5_olate_7_methyl_ether",
-      "name": "luteolin-5-olate 7-methyl ether",
-      "short": "luteolin-5-olate…",
-      "formula": "C16H11O6",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:192705"
-      }
-    },
-    {
-      "id": "sah",
-      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
-      "short": "S-Adenosyl-L-homocy…",
-      "formula": "C14H20N6O5S",
+      "id": "h2o2",
+      "name": "H2O2",
+      "formula": "H2O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57856"
+        "metanetx": "MNXM732620"
       }
     },
     {
-      "id": "udp_d_glucose",
-      "name": "UDP-α-D-glucose",
-      "formula": "C15H22N2O17P2",
-      "charge": -2,
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58885"
+        "metanetx": "MNXM735438"
       }
     },
     {
-      "id": "isoorientin",
-      "name": "isoorientin",
-      "formula": "C21H19O11",
+      "id": "orientin",
+      "name": "orientin",
+      "formula": "C21H20O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:7781"
+      }
+    },
+    {
+      "id": "estriol",
+      "name": "estriol",
+      "formula": "C18H24O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27974"
+      }
+    },
+    {
+      "id": "estriol_16_o_d_glucuronide",
+      "name": "estriol 16-O-(β-D-glucuronide)",
+      "short": "estriol 16-O-(β-D-g…",
+      "formula": "C24H31O9",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:58333"
+        "chebi": "CHEBI:136650"
+      }
+    },
+    {
+      "id": "epitestosterone",
+      "name": "epitestosterone",
+      "formula": "C19H28O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:42534"
+      }
+    },
+    {
+      "id": "epitestosterone_17_o_d_glucuronide",
+      "name": "epitestosterone 17-O-(β-D-glucuronide)",
+      "short": "epitestosterone…",
+      "formula": "C25H35O8",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:136673"
       }
     }
   ],
@@ -172,6 +198,13 @@
       "name": "luteolin-7-O-diglucuronide 4'-O-glucuronosyltransferase",
       "ec": [
         "2.4.1.191"
+      ]
+    },
+    {
+      "id": "ec_1_1_3_50",
+      "name": "C-glycoside oxidase",
+      "ec": [
+        "1.1.3.50"
       ]
     }
   ],
@@ -360,64 +393,69 @@
     },
     {
       "id": "r5",
-      "name": "luteolin + S-adenosyl-L-methionine = luteolin 7-methyl ether + S-adenosyl-L-homocystein...",
-      "equation": "luteolin + S-adenosyl-L-methionine = luteolin 7-methyl ether + S-adenosyl-L-homocysteine + H(+)",
+      "name": "C-glycoside oxidase",
+      "ec": "1.1.3.50",
       "substrates": [
         {
-          "metabolite": "luteolin_7_olate",
+          "metabolite": "3_oxoorientin",
           "stoichiometry": 1
         },
         {
-          "metabolite": "sam",
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "luteolin_5_olate_7_methyl_ether",
+          "metabolite": "o2",
           "stoichiometry": 1
         },
         {
-          "metabolite": "sah",
+          "metabolite": "orientin",
           "stoichiometry": 1
-        },
+        }
+      ],
+      "catalysts": [
         {
-          "metabolite": "hplus",
-          "stoichiometry": 1
+          "enzyme": "ec_1_1_3_50"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:73075"
+        "metanetx": "MNXR200312"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:73075"
+            "db": "MetaNetX",
+            "id": "MNXR200312"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "luteolin + UDP-alpha-D-glucose = isoorientin + UDP + H(+)",
-      "equation": "luteolin + UDP-alpha-D-glucose = isoorientin + UDP + H(+)",
+      "name": "16alpha,17beta-estriol + UDP-alpha-D-glucuronate = 16alpha,17beta-estriol 16-O-(beta-D-...",
+      "equation": "16alpha,17beta-estriol + UDP-alpha-D-glucuronate = 16alpha,17beta-estriol 16-O-(beta-D-glucuronate) + UDP + H(+)",
       "substrates": [
         {
-          "metabolite": "luteolin_7_olate",
+          "metabolite": "estriol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "udp_d_glucose",
+          "metabolite": "udp_d_glucuronate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "isoorientin",
+          "metabolite": "estriol_16_o_d_glucuronide",
           "stoichiometry": 1
         },
         {
@@ -432,14 +470,323 @@
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:78783"
+        "rhea": "RHEA:52472"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:78783"
+            "id": "RHEA:52472"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "epitestosterone + UDP-alpha-D-glucuronate = epitestosterone 17-O-(beta-D-glucuronate) +...",
+      "equation": "epitestosterone + UDP-alpha-D-glucuronate = epitestosterone 17-O-(beta-D-glucuronate) + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "epitestosterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucuronate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "epitestosterone_17_o_d_glucuronide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:52568"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52568"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_1_5_anhydro_d_erythro_hex_1_en_3_ulose_isoorientin-to-luteolin-7-o-d-glucoside",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_5_anhydro_d_erythro_hex_1_en_3_ulose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isoorientin-to-luteolin-7-o-d-glucoside"
+      },
+      "note": "Shares 1,5-anhydro-D-erythro-hex-1-en-3-ulose with isoorientin to luteolin 7-O-β-D-glucoside.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:195275"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_5_anhydro_d_erythro_hex_1_en_3_ulose_isovitexin-7-olate-to-apiin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_5_anhydro_d_erythro_hex_1_en_3_ulose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isovitexin-7-olate-to-apiin"
+      },
+      "note": "Shares 1,5-anhydro-D-erythro-hex-1-en-3-ulose with isovitexin-7-olate to apiin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:195275"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_5_anhydro_d_erythro_hex_1_en_3_ulose_kermesate-to-1-5-anhydro-d-erythro-hex",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_5_anhydro_d_erythro_hex_1_en_3_ulose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "kermesate-to-1-5-anhydro-d-erythro-hex"
+      },
+      "note": "Shares 1,5-anhydro-D-erythro-hex-1-en-3-ulose with kermesate to 1,5-anhydro-D-erythro-hex….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:195275"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_5_anhydro_d_erythro_hex_1_en_3_ulose_mangiferin-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_5_anhydro_d_erythro_hex_1_en_3_ulose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "mangiferin-to-fmn"
+      },
+      "note": "Shares 1,5-anhydro-D-erythro-hex-1-en-3-ulose with mangiferin to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:195275"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_luteolin_7_olate_1-1-dichloroethene-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "luteolin_7_olate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-1-dichloroethene-to-succinate"
+      },
+      "note": "Shares luteolin-7-olate with 1,1-dichloroethene to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57545"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_luteolin_7_olate_apigenin-7-olate-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "luteolin_7_olate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "apigenin-7-olate-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares luteolin-7-olate with apigenin-7-olate to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57545"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_luteolin_7_olate_isoorientin-to-luteolin-7-o-d-glucoside",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "luteolin_7_olate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isoorientin-to-luteolin-7-o-d-glucoside"
+      },
+      "note": "Shares luteolin-7-olate with isoorientin to luteolin 7-O-β-D-glucoside.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57545"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_luteolin_7_olate_luteolin-7-o-d-glucoside-to-s-adenosyl-l-homocys",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "luteolin_7_olate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "luteolin-7-o-d-glucoside-to-s-adenosyl-l-homocys"
+      },
+      "note": "Shares luteolin-7-olate with luteolin 7-O-β-D-glucoside to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57545"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_luteolin_7_olate_luteolin-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "luteolin_7_olate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "luteolin-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares luteolin-7-olate with luteolin to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57545"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_luteolin_7_olate_n-terminal-l-alanyl-l-pro-to-s-adenosyl-l-homocy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "luteolin_7_olate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-terminal-l-alanyl-l-pro-to-s-adenosyl-l-homocy"
+      },
+      "note": "Shares luteolin-7-olate with N-terminal L-alanyl-L-pro… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57545"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_orientin_methylselenol-to-1-deoxy-d-xylulose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "orientin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "methylselenol-to-1-deoxy-d-xylulose"
+      },
+      "note": "Shares orientin with methylselenol to 1-deoxy-D-xylulose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:7781"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_orientin_udp-to-orientin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "orientin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-orientin"
+      },
+      "note": "Shares orientin with UDP to orientin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:7781"
           }
         ]
       }

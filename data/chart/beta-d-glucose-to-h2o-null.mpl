@@ -4,17 +4,17 @@
 # edit the generator, not this file.
 
 pathway beta-d-glucose-to-h2o-null "beta-D-glucose to H2O" {
-  spacing 260
+  spacing 232
 
   spine at 0,0 {
     beta_d_glucose
-    <-> ec_1_1_5_2 [1.1.5.2] +ubiquinone_8 -ubiquinol_8
-    d_glucono_1_5_lactone
-    <-> ec_1_1_1_121 [1.1.1.121] +nadh +h -nad
-    d_allose
-    <-> .
-    d_allopyranose
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate -d_allopyranose -h2o
+    <-> ec_2_7_1_62 [2.7.1.62] +phosphoramidate +h -nh4
+    alpha_d_glucose_1_phosphate
+    <-> ec_2_4_1_20 [2.4.1.20] +alpha_d_glucose -phosphate
+    alpha_cellobiose
+    <-> ec_5_1_3_11 [5.1.3.11]
+    d_glucosyl_1_4_d_mannose
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate -d_glucosyl_1_4_d_mannose -h2o
     atp
   }
 }

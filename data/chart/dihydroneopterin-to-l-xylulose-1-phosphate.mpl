@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dihydroneopterin-to-l-xylulose-1-phosphate "Dihydroneopterin… to L-Xylulose 1-phosphate" {
-  spacing 218
+  spacing 248
 
   spine at 0,0 {
     dihydroneopterin_monophosphate
@@ -18,31 +18,61 @@ pathway dihydroneopterin-to-l-xylulose-1-phosphate "Dihydroneopterin… to L-Xyl
 
   branch from h side left {
     h
-    <-> ec_1_14_11_12 [1.14.11.12] +2_oxoglutarate +o2 +gibberellin_a44 +succinate +gibberellin_a19
-    co2
+    <-> . +l_leucine +l_lysine +l_arginine +h2o
+    lysyl_arginyl_leucine
   }
 
   branch from h side right {
     h
-    <-> ec_1_14_11_12 [1.14.11.12] +2_oxoglutarate +o2 +gibberellin_a44_closed_lactone_form +co2 +gibberellin_a19
-    succinate
+    <-> . +l_lysine +h2o
+    l_lysyl_l_lysyl_l_lysine
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_2_5_1_56 [2.5.1.56] +n_acetylneuraminate +phosphoenolpyruvate +h2o
-    aldehydo_n_acetyl_d_mannosamine
+    <-> . +h +adp +midazolam_glucuronide +midazolam_glucuronide +h2o
+    atp
   }
 
   branch from phosphate side right {
     phosphate
-    <-> . +h +adp +11_deoxycortisol +11_deoxycortisol +h2o
-    atp
+    <-> . +h +adp +atp +h2o
+    misonidazole_glucuronide
   }
 
-  branch from 6_hydroxymethyl_7_8_dihydropterin side left {
-    6_hydroxymethyl_7_8_dihydropterin
-    <-> . +6_hydroxymethyl_5_6_7_8_tetrahydropterin +nadp +h
-    nadph
+  branch from h2o side left {
+    h2o
+    <-> . +l_leucine +l_tyrosine
+    leucyl_tyrosyl_tyrosine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +levanbiose +beta_d_fructose
+    levantriose
+  }
+
+  branch from h side left {
+    h
+    <-> . +s_lactate +ferricytochrome_c +pyruvate
+    ferrocytochrome_c
+  }
+
+  branch from h side right {
+    h
+    <-> . +d_glucuronate +midazolam +h2o
+    midazolam_glucuronide
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +beta_d_glucose_1_phosphate +glucose
+    d_glucosyl_1_4_d_mannose
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    molybdate
   }
 }

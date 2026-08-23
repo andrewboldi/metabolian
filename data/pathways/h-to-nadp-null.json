@@ -1,0 +1,260 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "h-to-nadp-null",
+  "name": "H to NADP",
+  "category": "other",
+  "summary": "A 3-step route from H(+) to NADP(+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR177321"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "geranylgeranyl_bacteriopheophytin",
+      "name": "geranylgeranyl-bacteriopheophytin",
+      "short": "geranylgeranyl-bact…",
+      "formula": "C55H70N4O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM731881"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "dihydrogeranylgeranyl_bacteriopheophytin",
+      "name": "dihydrogeranylgeranyl-bacteriopheophytin",
+      "short": "dihydrogeranylgeran…",
+      "formula": "C55H72N4O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM726831"
+      }
+    },
+    {
+      "id": "tetrahydrogeranylgeranyl_bacteriopheophytin",
+      "name": "tetrahydrogeranylgeranyl-bacteriopheophytin",
+      "short": "tetrahydrogeranylge…",
+      "formula": "C55H74N4O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM727936"
+      }
+    },
+    {
+      "id": "bacteriophaeophytin_a",
+      "name": "bacteriophaeophytin a",
+      "short": "bacteriophaeophytin…",
+      "formula": "C55H76N4O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM491708"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR177321",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "geranylgeranyl_bacteriopheophytin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dihydrogeranylgeranyl_bacteriopheophytin",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR177321"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR177321"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR177322",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dihydrogeranylgeranyl_bacteriopheophytin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "tetrahydrogeranylgeranyl_bacteriopheophytin",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR177322"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR177322"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR177323",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "tetrahydrogeranylgeranyl_bacteriopheophytin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "bacteriophaeophytin_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR177323"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR177323"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_geranylgeranyl_bacteriopheophytin_methyl-1-4-benzoquinol-to-6-glutathion-s-yl-2-me",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "geranylgeranyl_bacteriopheophytin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "methyl-1-4-benzoquinol-to-6-glutathion-s-yl-2-me"
+      },
+      "note": "Shares geranylgeranyl-bacteriopheophytin with methyl-1,4-benzoquinol to 6-(glutathion-S-yl)-2-met….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM731881"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_bacteriophaeophytin_a_methyl-1-4-benzoquinol-to-6-glutathion-s-yl-2-me",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "bacteriophaeophytin_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "methyl-1-4-benzoquinol-to-6-glutathion-s-yl-2-me"
+      },
+      "note": "Shares bacteriophaeophytin a with methyl-1,4-benzoquinol to 6-(glutathion-S-yl)-2-met….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM491708"
+          }
+        ]
+      }
+    }
+  ]
+}

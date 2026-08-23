@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway aldehydo-d-galactose-to-acetyl-phosphate "aldehydo-D-galactose… to acetyl phosphate" {
-  spacing 250
+  spacing 292
 
   spine at 0,0 {
     aldehydo_d_galactose_6_phosphate
@@ -30,8 +30,8 @@ pathway aldehydo-d-galactose-to-acetyl-phosphate "aldehydo-D-galactose… to ace
 
   branch from keto_d_tagatose_6_phosphate side right {
     keto_d_tagatose_6_phosphate
-    <-> . +d_tagatopyranose +atp +adp
-    h
+    <-> .
+    d_tagatofuranose_6_phosphate
   }
 
   branch from e4p side left {
@@ -42,25 +42,67 @@ pathway aldehydo-d-galactose-to-acetyl-phosphate "aldehydo-D-galactose… to ace
 
   branch from l_lysinium side right {
     l_lysinium
-    <-> . +gtp +ppi +hplus
-    n_5_guanylyl_l_lysine_1
+    <-> . +n6_propanoyl_l_lysine +nad +h2o +nicotinamide
+    3_o_propanoyl_adp_d_ribose
   }
 
   branch from l_lysinium side left {
     l_lysinium
-    <-> ec_2_1_1_60 [2.1.1.60] +sam +sah +hplus
-    n6_methyl_l_lysinium
+    <-> ec_1_4_3_13 [1.4.3.13] +o2 +h2o +h2o2 +nh3
+    l_allysine
   }
 
   branch from acetate side right {
     acetate
-    <-> . +1_dodecyl_2_acetyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_dodecyl_sn_glycero_3_phosphocholine
+    <-> ec_3_1_1_106 [3.1.1.106] +3_o_acetyl_adp_d_ribose +h2o +hplus
+    adp_d_ribose
   }
 
   branch from acetate side left {
     acetate
-    <-> . +1_decyl_2_acetyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_decyl_sn_glycero_3_phosphocholine
+    <-> . +n_acetyl_l_aspartate +h2o
+    aspartate
+  }
+
+  branch from keto_d_tagatose_6_phosphate side right {
+    keto_d_tagatose_6_phosphate
+    <-> . +d_tagatopyranose +atp +adp
+    h
+  }
+
+  branch from l_lysinium side left {
+    l_lysinium
+    <-> ec_2_5_1_46 [2.5.1.46] +spermidine +trimethylenediaminium
+    deoxyhypusine_2
+  }
+
+  branch from l_lysinium side right {
+    l_lysinium
+    <-> . +n6_succinyl_l_lysine_1 +nad +h2o +nicotinamide
+    2_o_succinyl_adp_d_ribose
+  }
+
+  branch from acetate side left {
+    acetate
+    <-> ec_3_5_1_135 [3.5.1.135] +n4_acetylcytosine +h2o +hplus
+    cytosine
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> . +n_acetylserotonin +h2o
+    serotonin
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_56 [4.2.3.56] +fpp
+    himachalene
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_56 [4.2.3.56] +fpp
+    himachalene
   }
 }

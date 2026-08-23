@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway h2o2-to-h2o "H2O2 to H2O" {
-  spacing 218
+  spacing 308
 
   spine at 0,0 {
     h2o2
@@ -26,61 +26,151 @@ pathway h2o2-to-h2o "H2O2 to H2O" {
 
   branch from o2 side right {
     o2
-    <-> ec_1_13_11_1 [1.13.11.1] +3_fluorocatechol
-    2_fluoro_cis_cis_muconate
+    <-> ec_1_13_11_74 [1.13.11.74] +2_amino_5_methylphenol +h
+    2z_4e_2_amino_5_methyl_muconate_semialdehyde
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_13_11_1 [1.13.11.1] +4_fluorocatechol
-    3_fluoro_cis_cis_muconate
+    <-> . +trichloroethene +h
+    trichloroacetate
   }
 
   branch from atp side right {
     atp
-    <-> . +l_leucine +jasmonate +diphosphate +h +amp
-    jasmonoyl_l_leucine
+    <-> ec_2_7_1_1 [2.7.1.1] +beta_d_fructose_6_phosphate +h +adp
+    beta_d_fructose
   }
 
   branch from atp side left {
     atp
-    <-> ec_6_3_2_52 [6.3.2.52] +l_leucine +jasmonic_acid_anion +diphosphate +h +amp
-    a_jasmonoyl_l_leucine
+    <-> ec_2_7_1_11 [2.7.1.11] +d_fructofuranose_1_phosphate +h +adp
+    keto_d_fructose
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_126 [2.3.1.126] +trans_caffeoyl_coa +d_threo_isocitrate +h
-    2_caffeoylisocitric_acid
+    <-> ec_2_3_1_16 [2.3.1.16] +z_3_oxotetradec_7_enoyl_coa +cis_dodec_5_enoyl_coa
+    acetyl_coa
   }
 
   branch from coa side left {
     coa
-    <-> . +s_carnitine +h +h2o
-    s_carnitinyl_coa
+    <-> . +benzoyl_coa +z_3_hydroxypropyl_glucosinolate
+    glucomalcommin
   }
 
   branch from nadph side right {
     nadph
-    <-> . +cinchonidine +nadp +h
-    cinchoninone
+    <-> ec_1_14_14_1 [1.14.14.1] +h +progesterone +o2 +nadp +h2o
+    16alpha_hydroxyprogesterone
   }
 
   branch from nadph side left {
     nadph
-    <-> . +cinchonidine +nadp +h
-    cinchonidinone
+    <-> ec_1_1_1_218 [1.1.1.218] +ethylmorphinone +h +nadp
+    ethylmorphine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +1_aci_nitro_2_1h_indol_3_yl_ethane +l_cysteine
-    s_indolylmethylthiohydroximoyl_l_cysteine
+    <-> . +2_hydroxy_2_2_methylidenecyclopropyl_butanedioic +coa +acetyl_coa +h
+    2_oxohexa_4_5_cyclopropyl_5_enoate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +z_phenylacetaldehyde_oxime +h +o2 +l_cysteine +nadph +nadp
-    s_phenylacetothiohydroximoyl_l_cysteine
+    <-> . +geranyl_acetate +h +2e_geraniol
+    acetate
+  }
+
+  branch from h2o2 side right {
+    h2o2
+    <-> . +heme_b
+    cis_heme_d
+  }
+
+  branch from h2o2 side left {
+    h2o2
+    <-> . +3_aminopropyl_dimethylsulfanium +o2 +h2o +3_dimethylsulfoniopropionaldehyde
+    nh4
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +2_oxoglutarate +h +gibberellin_a12 +succinate +gibberellin_a110
+    co2
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +h +2_chloro_4_methyl_cis_cis_muconate
+    3_chloro_5_methylcatechol
+  }
+
+  branch from diphosphate side right {
+    diphosphate
+    <-> . +delta_2_carene
+    neryl_diphosphate
+  }
+
+  branch from diphosphate side left {
+    diphosphate
+    <-> . +neryl_diphosphate
+    1s_5s_alpha_pinene
+  }
+
+  branch from amp side right {
+    amp
+    <-> . +co2 +h +4_methyl_5_2_phosphooxyethyl_thiazole +h2o
+    adp_5_ethyl_4_methylthiazole_2_carboxylate
+  }
+
+  branch from amp side left {
+    amp
+    <-> ec_2_7_6_1 [2.7.6.1] +5_phospho_alpha_d_ribose_1_diphosphate +h +atp
+    aldehydo_d_ribose_5_phosphate
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +l_leucine +l_threonine +h +adp +phosphate
+    thr_leu
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    meso_lanthionine
+  }
+
+  branch from coa side right {
+    coa
+    <-> . +trans_4_coumaroyl_coa +r_3_4_hydroxyphenyl_lactate
+    4_coumaroyl_4_hydroxyphenyllactate
+  }
+
+  branch from coa side left {
+    coa
+    <-> ec_2_3_1_173 [2.3.1.173] +trans_4_coumaroyl_coa +kaempferol_3_o_beta_d_glucosyl_1_2_glucosyl_1_2
+    kaempferol_3_o_6_4_coumaroyl_beta_d_glucosyl_1_2
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_1_1_149 [1.1.1.149] +2_hydroxycyclohexan_1_one +h +nadph
+    cyclohexan_1_2_dione
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_1_1_218 [1.1.1.218] +h +hydrocodone +nadph
+    dihydrocodeine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +afrormosin +glucose
+    afrormosin_7_o_glucoside
   }
 }

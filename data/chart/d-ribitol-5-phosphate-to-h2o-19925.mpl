@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-ribitol-5-phosphate-to-h2o-19925 "D-ribitol 5-phosphate to H2O" {
-  spacing 258
+  spacing 318
 
   spine at 0,0 {
     d_ribitol_5_phosphate
@@ -18,57 +18,117 @@ pathway d-ribitol-5-phosphate-to-h2o-19925 "D-ribitol 5-phosphate to H2O" {
     2e_3_3_4_dioxocyclohexa_1_5_dien_1_yl_2_isocyan
   }
 
-  branch from 2s_3_4_hydroxyphenyl_2_isocyanopropanoate side left {
-    2s_3_4_hydroxyphenyl_2_isocyanopropanoate
-    <-> ec_1_14_20_10 [1.14.20.10] +akg +o2 +hplus +succinate +co2 +h2o
-    4_e_2_isocyanoethenyl_phenol
+  branch from formaldehyde side left {
+    formaldehyde
+    <-> ec_1_13_11_94 [1.13.11.94] +4_hydroxystyrene +o2
+    4_hydroxybenzaldehyde
   }
 
   branch from formaldehyde side right {
     formaldehyde
-    <-> ec_1_14_13_247 [1.14.13.247] +l_proline_betaine +nadh +o2 +hplus +nad +h2o
-    n_methylproline
+    <-> . +n6_n6_dimethyl_l_lysine_1 +akg +o2 +succinate +co2
+    n6_methyl_l_lysinium
   }
 
-  branch from formaldehyde side left {
-    formaldehyde
-    <-> . +2_methyl_l_serine
-    alanine
-  }
-
-  branch from 2e_3_4_hydroxyphenyl_2_isocyanoprop_2_enoate side right {
+  branch from 2e_3_4_hydroxyphenyl_2_isocyanoprop_2_enoate side left {
     2e_3_4_hydroxyphenyl_2_isocyanoprop_2_enoate
     <-> . +h +o2 +h2o
     paerucumarin
   }
 
-  branch from succinate side left {
-    succinate
-    <-> . +l_asparagine +akg +o2 +co2
-    3s_3_hydroxy_l_asparagine
-  }
-
   branch from succinate side right {
     succinate
-    <-> ec_1_14_11_n4 [1.14.11.n4] +l_histidine +akg +o2 +co2
-    3s_3_hydroxy_l_histidine
+    <-> ec_1_14_11_74 [1.14.11.74] +isoleucine +akg +o2 +co2
+    31_hydroxy_l_isoleucine
   }
 
-  branch from 2e_3_3_4_dioxocyclohexa_1_5_dien_1_yl_2_isocyan side left {
+  branch from succinate side left {
+    succinate
+    <-> ec_1_14_11_75 [1.14.11.75] +31_hydroxy_l_isoleucine +akg +o2 +co2
+    4s_31_4_dihydroxy_l_isoleucine
+  }
+
+  branch from 2e_3_3_4_dioxocyclohexa_1_5_dien_1_yl_2_isocyan side right {
     2e_3_3_4_dioxocyclohexa_1_5_dien_1_yl_2_isocyan
     <-> . +paerucumarin
     h
   }
 
+  branch from h2o side left {
+    h2o
+    <-> ec_3_6_3_27 [3.6.3.27] +h +adp +phosphate +phosphate
+    atp
+  }
+
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_2 [3.6.3.2] +h +adp +mg +phosphate +mg
-    atp
+    <-> . +neocasomorphin +l_isoleucine
+    neocasomorphin_1_5
+  }
+
+  branch from tyrosine side left {
+    tyrosine
+    <-> ec_1_3_1_43 [1.3.1.43] +nad +co2 +nadh
+    l_arogenate
+  }
+
+  branch from tyrosine side right {
+    tyrosine
+    <-> ec_4_1_1_25 [4.1.1.25] +hplus +co2
+    tyraminium
+  }
+
+  branch from formaldehyde side left {
+    formaldehyde
+    <-> . +akg +o2 +n6_methyl_l_lysinium +succinate +co2
+    n6_n6_dimethyl_l_lysine_1
+  }
+
+  branch from akg side right {
+    akg
+    <-> . +pyridoxamine_5_phosphate +plp
+    glutamate
+  }
+
+  branch from akg side left {
+    akg
+    <-> . +preaustinoid_a1 +o2 +succinate +co2 +h2o
+    berkeleyone_b
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> . +berkeleyone_b +akg +o2 +co2 +h2o
+    berkeleydione
+  }
+
+  branch from succinate side left {
+    succinate
+    <-> ec_1_14_11_76 [1.14.11.76] +glutamate +akg +o2 +co2
+    3r_3_hydroxy_l_glutamate
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +formaldehyde +nadp +nordazepam +h2o +h +nadph
+    diazepam
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +25r_cholest_5_en_3beta_7alpha_26_triol +h +nadph +3beta_7alpha_dihydroxy_5_cholestenoate +h2o
+    nadp
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +apelin_13 +l_phenylalanine
+    apelin_1_12
   }
 
   branch from h2o side left {
     h2o
-    <-> . +2_methylfumaryl_coa
-    3s_citramalyl_coa
+    <-> . +maltodecaose +beta_d_fructose
+    maltononaose
   }
 }

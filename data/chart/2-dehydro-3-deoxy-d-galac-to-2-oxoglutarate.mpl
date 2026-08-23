@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-dehydro-3-deoxy-d-galac-to-2-oxoglutarate "2-dehydro-3-deoxy-D-galacâ€¦ to 2-oxoglutarate" {
-  spacing 264
+  spacing 252
 
   spine at 0,0 {
     2_dehydro_3_deoxy_d_galactonate
@@ -16,17 +16,5 @@ pathway 2-dehydro-3-deoxy-d-galac-to-2-oxoglutarate "2-dehydro-3-deoxy-D-galacâ€
     dhap
     <-> . +glutamate -akg
     s_serinol_phosphate
-  }
-
-  branch from akg side left {
-    akg
-    <-> ec_1_1_1_399 [1.1.1.399] +nad +nadh +hplus
-    r_2_hydroxyglutarate
-  }
-
-  branch from akg side right {
-    akg
-    <-> . +nad +nadh +hplus
-    s_2_hydroxyglutarate
   }
 }

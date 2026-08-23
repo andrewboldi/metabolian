@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway digallate-to-nadp "digallate to NADP" {
-  spacing 316
+  spacing 340
 
   spine at 0,0 {
     digallate
@@ -24,34 +24,34 @@ pathway digallate-to-nadp "digallate to NADP" {
     2_6_dioxo_6_phenylhexanoate
   }
 
-  branch from pyrogallol side left {
-    pyrogallol
-    <-> . +3_methoxycatechol +fadh2 +o2 +fad +h2o +hplus
-    formaldehyde
-  }
-
-  branch from 2z_4e_2_hydroxymuconate side right {
+  branch from 2z_4e_2_hydroxymuconate side left {
     2z_4e_2_hydroxymuconate
     <-> ec_3_5_99_11 [3.5.99.11] +2z_4e_2_ammoniomuconate +h2o
     nh3
   }
 
-  branch from 2_oxopent_4_enoate side left {
+  branch from 2_oxopent_4_enoate side right {
     2_oxopent_4_enoate
-    <-> ec_1_4_3_2 [1.4.3.2] +nh4 +h2o2 +o2 +h2o
-    l_allylglycine
+    <-> .
+    2z_2_hydroxypenta_2_4_dienoate
+  }
+
+  branch from hpk side left {
+    hpk
+    <-> ec_3_7_1_8 [3.7.1.8] +h +benzoate +h2o
+    2_keto_4_pentenoate
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_11_1_8 [1.11.1.8] +h +3_5_diiodo_l_tyrosine +h2o2 +2_aminoprop_2_enoate
-    l_thyroxine
+    <-> . +leukotriene_f4_cytosol +glycine
+    leukotriene_c4
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_4_1_20 [1.4.1.20] +nadh +h +nh4 +r_3_methyl_2_oxopentanoate +nad
-    l_isoleucine
+    <-> ec_1_2_1_5 [1.2.1.5] +nadh +h +1_methyl_4_imidazoleacetic_acid +nad
+    1_methylimidazole_4_acetaldehyde
   }
 
   branch from 2_6_dioxo_6_phenylhexanoate side right {
@@ -62,13 +62,73 @@ pathway digallate-to-nadp "digallate to NADP" {
 
   branch from nadp side left {
     nadp
-    <-> ec_2_7_1_23 [2.7.1.23] +dtdp +h +nad
-    dttp
+    <-> . +h +7alpha_hydroxycholest_4_en_3_one +nadph
+    5beta_cholestane_3alpha_7alpha_diol
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_7_1_4 [1.7.1.4] +nitrite +h +nadph +h2o
-    ammonium_hydroxide
+    <-> . +5b_cholestane_3a_7a_12a_25_26_pentol +h2o +h +o2 +nadph
+    5beta_cholestane_3alpha_7alpha_12alpha_25_tetrol
+  }
+
+  branch from h side left {
+    h
+    <-> . +adp +d_manp_1_4_d_manp_1_4_d_manp_1_4_d_manp +phosphate +d_manp_1_4_d_manp_1_4_d_manp_1_4_d_manp +h2o
+    atp
+  }
+
+  branch from h side right {
+    h
+    <-> . +3_mercaptolactic_acid_cysteine_disulfide +nadh +3_mercaptolactic_acid +nad
+    l_cysteine
+  }
+
+  branch from benzoate side left {
+    benzoate
+    <-> ec_3_6_1_7 [3.6.1.7] +h +phosphate +h2o
+    benzoyl_phosphate
+  }
+
+  branch from benzoate side right {
+    benzoate
+    <-> ec_3_6_1_20 [3.6.1.20] +h +amp +h2o
+    benzoyl_amp
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +2_methylfumaryl_coa +pyruvate
+    acetyl_coa
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_7_4_2_11 [7.4.2.11] +h +adp +phosphate +atp
+    d_methionine
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +h +12_oxo_c_ltb3 +nadp
+    11_12_dihydro_12r_hydroxyleukotriene_c4
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +26_hydroxycholesterol +nadp +h
+    3beta_hydroxy_5_cholestenal
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_14_13_100 [1.14.13.100] +h +3beta_hydroxy_cholest_5_en_26_oate +o2 +nadph +h2o
+    3beta_7alpha_dihydroxy_5_cholestenoate
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +h +nadph +3beta_7alpha_dihydroxy_5_cholestenoate
+    7alpha_hydroxy_3_oxo_4_cholestenoic_acid_anion
   }
 }

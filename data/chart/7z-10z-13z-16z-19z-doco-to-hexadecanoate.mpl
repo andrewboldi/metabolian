@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 7z-10z-13z-16z-19z-doco-to-hexadecanoate "(7Z,10Z,13Z,16Z,19Z)-doco… to hexadecanoate" {
-  spacing 164
+  spacing 158
 
   spine at 0,0 {
     7z_10z_13z_16z_19z_docosapentaenoyl_coa
@@ -17,12 +17,6 @@ pathway 7z-10z-13z-16z-19z-doco-to-hexadecanoate "(7Z,10Z,13Z,16Z,19Z)-doco… t
   }
 
   branch from 4z_7z_10z_13z_16z_19z_docosahexaenoyl_coa side left {
-    4z_7z_10z_13z_16z_19z_docosahexaenoyl_coa
-    <-> . +h2o +coa +hplus
-    4z_7z_10z_13z_16z_19z_docosahexaenoate
-  }
-
-  branch from 4z_7z_10z_13z_16z_19z_docosahexaenoyl_coa side right {
     4z_7z_10z_13z_16z_19z_docosahexaenoyl_coa
     <-> . +o2 +h2o2
     2e_4z_7z_10z_13z_16z_19z_docosaheptaenoyl_coa

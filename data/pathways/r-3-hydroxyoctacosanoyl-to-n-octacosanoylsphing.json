@@ -121,39 +121,22 @@
       }
     },
     {
-      "id": "octacosanoate",
-      "name": "octacosanoate",
-      "formula": "C28H55O2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:31002"
-      }
-    },
-    {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:30616"
+        "chebi": "CHEBI:57288"
       }
     },
     {
-      "id": "amp",
-      "name": "AMP",
-      "formula": "C10H12N5O7P",
-      "charge": -2,
+      "id": "3_oxotriacontanoyl_coa",
+      "name": "3-oxotriacontanoyl-CoA",
+      "short": "3-oxotriacontanoyl-…",
+      "formula": "C51H88N7O18P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:456215"
-      }
-    },
-    {
-      "id": "ppi",
-      "name": "Diphosphate (PPi)",
-      "formula": "HO7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:33019"
+        "chebi": "CHEBI:74228"
       }
     }
   ],
@@ -329,15 +312,21 @@
     },
     {
       "id": "r5",
-      "name": "octacosanoate + ATP + CoA = octacosanoyl-CoA + AMP + diphosphate",
-      "equation": "octacosanoate + ATP + CoA = octacosanoyl-CoA + AMP + diphosphate",
+      "name": "octacosanoyl-CoA + acetyl-CoA = 3-oxo-triacontanoyl-CoA + CoA",
+      "equation": "octacosanoyl-CoA + acetyl-CoA = 3-oxo-triacontanoyl-CoA + CoA",
       "substrates": [
         {
-          "metabolite": "octacosanoate",
+          "metabolite": "montanoyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "atp",
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_oxotriacontanoyl_coa",
           "stoichiometry": 1
         },
         {
@@ -345,31 +334,129 @@
           "stoichiometry": 1
         }
       ],
-      "products": [
-        {
-          "metabolite": "montanoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "amp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:85315"
+        "rhea": "RHEA:85327"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:85315"
+            "id": "RHEA:85327"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_r_3_hydroxyoctacosanoyl_coa_hexacosanoyl-coa-to-3-oxo-octacosanoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_3_hydroxyoctacosanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hexacosanoyl-coa-to-3-oxo-octacosanoyl-coa"
+      },
+      "note": "Shares (R)-3-hydroxyoctacosanoyl-CoA with hexacosanoyl-CoA to 3-oxo-octacosanoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76382"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_2_octacosenoyl_coa_montanoyl-coa-to-3-oxotriacontanoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_2_octacosenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "montanoyl-coa-to-3-oxotriacontanoyl-coa"
+      },
+      "note": "Shares trans-2-octacosenoyl-CoA with montanoyl-CoA to 3-oxotriacontanoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76383"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_montanoyl_coa_5-end-nad-phospho-ribonu-to-diphosphate-60880",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "montanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-end-nad-phospho-ribonu-to-diphosphate-60880"
+      },
+      "note": "Shares montanoyl-CoA with 5'-end NAD-phospho-ribonu… to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74141"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_montanoyl_coa_montanoyl-coa-to-3-oxotriacontanoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "montanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "montanoyl-coa-to-3-oxotriacontanoyl-coa"
+      },
+      "note": "Shares montanoyl-CoA with montanoyl-CoA to 3-oxotriacontanoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74141"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_oxotriacontanoyl_coa_montanoyl-coa-to-3-oxotriacontanoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_oxotriacontanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "montanoyl-coa-to-3-oxotriacontanoyl-coa"
+      },
+      "note": "Shares 3-oxotriacontanoyl-CoA with montanoyl-CoA to 3-oxotriacontanoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74228"
           }
         ]
       }

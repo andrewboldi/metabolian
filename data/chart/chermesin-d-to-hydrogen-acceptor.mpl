@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway chermesin-d-to-hydrogen-acceptor "chermesin D to hydrogen acceptor" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     chermesin_d
@@ -14,17 +14,5 @@ pathway chermesin-d-to-hydrogen-acceptor "chermesin D to hydrogen acceptor" {
     asnovolin_j
     <-> . +hydrogen_donor +o2 -hydrogen_acceptor -h2o
     asnovolin_a
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +deacetylisoipecoside +sam +hplus
-    6_o_methyldeacetylisoipecoside
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +7_o_methyldeacetylisoipecoside +sam +hplus
-    6_7_o_o_dimethyldeacetylisoipecoside
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5alpha-pregnan-17alpha-ol-to-h2o "5alpha-Pregnan-17alpha-ol… to H2O" {
-  spacing 332
+  spacing 248
 
   spine at 0,0 {
     5alpha_pregnan_17alpha_ol_3_20_dione
@@ -18,89 +18,5 @@ pathway 5alpha-pregnan-17alpha-ol-to-h2o "5alpha-Pregnan-17alpha-ol… to H2O" {
     3beta_16alpha_dihydroxy_androst_5_en_17_one
     <-> . +h +adp +phosphate -3beta_16alpha_dihydroxy_androst_5_en_17_one -h2o
     atp
-  }
-
-  branch from h side left {
-    h
-    <-> . +r_glycerate +coa +h2o
-    d_glyceroyl_coa
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_1_8_1 [3.1.8.1] +4_methylsulfanyl_m_cresol +ethoxy_isopropylamino_phosphinate +h2o
-    fenamiphos
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> ec_1_14_13_124 [1.14.13.124] +co2 +n_benzylformamide +nadp +h2o +h +o2
-    l_phenylalanine
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> . +5_epi_aristolochene +h +o2 +nadp +h2o
-    1_deoxycapsidiol
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +h +n_hydroxy_l_valine +o2 +nadph +h2o
-    n_n_dihydroxy_l_valine
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +h +o2 +castasterone +nadph +h2o
-    brassinolide
-  }
-
-  branch from acetaldehyde side left {
-    acetaldehyde
-    <-> . +sotolone +h2o +h
-    2_oxobutanoate
-  }
-
-  branch from acetaldehyde side right {
-    acetaldehyde
-    <-> . +4_hydroxy_5_methyl_3_furanone +h2o
-    2e_2_ethylidene_4_hydroxy_5_methyl_3_2h_furanon
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_serine +l_arginine +l_tryptophan
-    seryl_arginyl_tryptophan
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_histidine +l_lysine +l_serine
-    seryl_lysyl_histidine
-  }
-
-  branch from nad side left {
-    nad
-    <-> . +nadh +octadecenoic_acid +o2 +h2o
-    octadecadienoate
-  }
-
-  branch from nad side right {
-    nad
-    <-> . +nadh +1_3_dimethylamino_propyl_1_4_fluorophenyl_1_3_di +h +o2 +h2o
-    citalopram_n_oxide
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_6_2_1_13 [6.2.1.13] +2_methylpropanoyl_coa +adp +phosphate +coa
-    2_methylpropanoate
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_2_7_11_1 [2.7.11.1] +h +kemptide +adp
-    phosphokemptide
   }
 }

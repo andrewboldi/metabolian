@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-xylulose-1-phosphate-to-phosphate "D-Xylulose 1-phosphate to phosphate" {
-  spacing 256
+  spacing 334
 
   spine at 0,0 {
     d_xylulose_1_phosphate
@@ -18,14 +18,14 @@ pathway d-xylulose-1-phosphate-to-phosphate "D-Xylulose 1-phosphate to phosphate
 
   branch from h side left {
     h
-    <-> . +3_bromo_2e_acrylic_acid +h2o +bromide
-    3_oxopropanoate
+    <-> ec_2_3_1_46 [2.3.1.46] +succinyl_coa +d_homoserine +coa
+    o_succinyl_d_homoserine
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_184 [1.1.1.184] +indan_1_one +nadph +nadp
-    r_indan_1_ol
+    <-> ec_2_3_1_46 [2.3.1.46] +succinyl_coa +3_aminopropan_1_ol +coa
+    4_3_aminopropoxy_4_oxobutanoic_acid
   }
 
   branch from glycolaldehyde side left {
@@ -36,55 +36,133 @@ pathway d-xylulose-1-phosphate-to-phosphate "D-Xylulose 1-phosphate to phosphate
 
   branch from dihydroxyacetone_phosphate side right {
     dihydroxyacetone_phosphate
-    <-> ec_1_1_99_5 [1.1.99.5] +fadh2 +h +sn_glycerol_3_phosphate
-    fad
+    <-> . +menaquinol_8 +sn_glycerol_3_phosphate
+    mk_8
   }
 
   branch from dihydroxyacetone_phosphate side left {
     dihydroxyacetone_phosphate
-    <-> . +fadh2 +h +fad
-    sn_glycerol_3_phosphate
-  }
-
-  branch from 5_amino_1_5_phospho_beta_d_ribosyl_imidazole side right {
-    5_amino_1_5_phospho_beta_d_ribosyl_imidazole
-    <-> . +nadh +4_amino_2_methyl_5_phosphooxymethyl_pyrimidine +h +formate +h2o
-    nad
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_4_2_1_40 [4.2.1.40] +l_idarate
-    5_dehydro_4_deoxy_d_glucarate
+    <-> . +beta_l_fucose_1_phosphate
+    s_lactaldehyde
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_1_1_7 [3.1.1.7] +propanoate +thiocholine +h
-    propionylthiocholine
+    <-> ec_3_2_1_14 [3.2.1.14] +4_methylumbelliferyl_beta_d_n_n_n_triacetylchito +tri_n_acetylchitotriose
+    4_methylumbelliferone
   }
 
-  branch from adp side left {
-    adp
-    <-> . +h +phosphate +atp +h2o
-    3_n_morpholino_propanesulfonate
+  branch from h2o side left {
+    h2o
+    <-> ec_4_2_1_33 [4.2.1.33] +2_isopropylmaleate
+    2r_3s_3_isopropylmalate
   }
 
   branch from adp side right {
     adp
-    <-> ec_6_6_1_1 [6.6.1.1] +protoporphyrin_ix +atp +mg +h2o +h +phosphate
-    magnesium_protoporphyrin
+    <-> ec_6_3_2_47 [6.3.2.47] +n_3_r_r_epoxysuccinamoyl_s_2_3_diaminopropanoate +l_valine +atp +h +phosphate
+    n_r_r_3_epoxysuccinamoyl_s_2_3_diaminopropanoyl
   }
 
-  branch from phosphate side left {
-    phosphate
-    <-> ec_3_1_3_25 [3.1.3.25] +1d_myo_inositol_1_phosphate +h2o
-    inositol
+  branch from adp side left {
+    adp
+    <-> ec_3_6_3_28 [3.6.3.28] +h +phosphate +atp +h2o
+    phosphonate
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_1_3_25 [3.1.3.25] +h2o +inositol
-    1d_myo_inositol_4_phosphate
+    <-> ec_3_1_3_4 [3.1.3.4] +sphing_4_enine_1_phosphate +h2o +h
+    sphing_4_enine
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> ec_2_4_2_4 [2.4.2.4] +5_fluorouracil +5_deoxy_alpha_d_ribose_1_phosphate
+    doxifluridine
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_3_1_199 [2.3.1.199] +octanoyl_coa +malonyl_coa +co2 +coa
+    3_oxodecanoyl_coa
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_3_1_199 [2.3.1.199] +decanoyl_coa +malonyl_coa +co2 +coa
+    3_oxododecanoyl_coa
+  }
+
+  branch from dihydroxyacetone_phosphate side right {
+    dihydroxyacetone_phosphate
+    <-> . +d_tagatose_1_phosphate +h
+    d_glyceraldehyde
+  }
+
+  branch from dihydroxyacetone_phosphate side left {
+    dihydroxyacetone_phosphate
+    <-> ec_1_1_5_3 [1.1.5.3] +2_demethylmenaquinone_8 +sn_glycerol_3_phosphate
+    2_demethylmenaquinol_8
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_3_3_4 [1.3.3.4] +protoporphyrin +h2o2
+    protoporphyrinogen_ix
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_3_3_7 [1.3.3.7] +uracil +h2o2
+    5_6_dihydrouracil
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_2_4_2_4 [2.4.2.4] +5_deoxy_alpha_d_ribose_1_phosphate +doxifluridine
+    5_fu
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> ec_2_4_2_3 [2.4.2.3] +alpha_d_ribose_1_phosphate +5_fu
+    5_fluorouridine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_4_2_1_132 [4.2.1.132] +2_hydroxy_cis_hex_2_4_dienoate +h
+    s_4_hydroxy_2_oxohexanoate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_4_2_1_80 [4.2.1.80] +h +s_4_hydroxy_2_oxohexanoate
+    2_hydroxyhexa_2_4_dienoate
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_7_6_2_5 [7.6.2.5] +h +adp +phosphate +h2o
+    heme_b
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_2_7_1_16 [2.7.1.16] +lyxose +h +adp
+    l_or_d_ribulose_5_phosphate
+  }
+
+  branch from adp side right {
+    adp
+    <-> ec_6_3_5_13 [6.3.5.13] +glcnac_1_4_mur2ac_oyl_l_ala_gamma_d_glu_l_lys_d +h +atp
+    beta_d_glcnac_1_4_mur2ac_oyl_l_ala_gamma_d_o_p_g
+  }
+
+  branch from adp side left {
+    adp
+    <-> ec_6_3_1_12 [6.3.1.12] +d_aspartate +beta_d_glcnac_1_4_mur2ac_oyl_l_ala_d_isoglutamin +atp +h +phosphate
+    und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig
   }
 }

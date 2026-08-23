@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway gamma-l-glutamyl-s-meth-to-fmn "gamma-L-glutamyl-(S)-meth… to FMN" {
-  spacing 192
+  spacing 198
 
   spine at 0,0 {
     gamma_l_glutamyl_s_methyl_l_cysteine
@@ -18,37 +18,43 @@ pathway gamma-l-glutamyl-s-meth-to-fmn "gamma-L-glutamyl-(S)-meth… to FMN" {
 
   branch from s_methylcysteine side left {
     s_methylcysteine
-    <-> . +o2 +h2o +s_methylcysteine_s_oxide
-    h2o2
-  }
-
-  branch from s_methylcysteine side right {
-    s_methylcysteine
-    <-> ec_4_1_99_1 [4.1.99.1] +h2o +methanethiol +nh4
-    pyruvate
-  }
-
-  branch from l_glutamate side left {
-    l_glutamate
-    <-> ec_3_5_1_14 [3.5.1.14] +n_acetyl_l_glutamate +h2o
-    acetate
+    <-> . +h +adp +phosphate +h2o
+    atp
   }
 
   branch from l_glutamate side right {
     l_glutamate
-    <-> . +h +atp +d_alpha_glutamyl_phosphate
-    adp
+    <-> . +l_arginine +l_tyrosine +h2o
+    tyrosyl_arginyl_glutamate
   }
 
-  branch from fmn side left {
-    fmn
-    <-> . +8_9_eet +fmnh2 +o2 +h2o +hplus
-    8_9_epoxy_20_hydroxy_5z_11z_14z_icosatrienoate
+  branch from l_glutamate side left {
+    l_glutamate
+    <-> . +l_tyrosine +h2o
+    tyrosyl_glutamate
   }
 
-  branch from fmn side right {
-    fmn
-    <-> . +11_12_eet +fmnh2 +o2 +h2o +hplus
-    11_12_epoxy_20_hydroxy_5z_8z_14z_icosatrienoate
+  branch from h2o side right {
+    h2o
+    <-> . +l_leucine +l_proline +l_tryptophan
+    tryptophanyl_prolyl_leucine
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +l_serine +l_tryptophan +l_tyrosine
+    tryptophanyl_seryl_tyrosine
+  }
+
+  branch from l_glutamate side right {
+    l_glutamate
+    <-> ec_3_4_19_16 [3.4.19.16] +an_e_1_glutathione_s_yl_omega_methylsulfanyl_alk +h2o
+    an_s_1e_1_hydroxyimino_omega_methylsulfanyl_alky
+  }
+
+  branch from l_glutamate side left {
+    l_glutamate
+    <-> . +l_ethynylserine +h2o
+    l_glutamyl_3r_l_ethynylserine
   }
 }

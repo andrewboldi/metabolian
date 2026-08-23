@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway demethylspheroidene-to-hydroxyspheroidenone "demethylspheroidene to Hydroxyspheroidenone" {
-  spacing 256
+  spacing 328
 
   spine at 0,0 {
     demethylspheroidene
@@ -30,25 +30,97 @@ pathway demethylspheroidene-to-hydroxyspheroidenone "demethylspheroidene to Hydr
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_262 [2.1.1.262] +squalene +sam +hplus
-    3_22_dimethyl_1_2_23_24_tetradehydro_2_3_22_23_t
+    <-> ec_2_1_1_299 [2.1.1.299] +n_terminal_l_prolyl_l_prolyl_l_lysyl_2 +sam +hplus
+    n_terminal_n_methyl_l_prolyl_l_prolyl_l_lysyl_2
   }
 
   branch from sah side right {
     sah
-    <-> . +squalene +sam +hplus
-    3_methyl_1_2_didehydro_2_3_dihydrosqualene
+    <-> . +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
   }
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_14_15_13 [1.14.15.13] +cyclo_l_leucyl_l_leucyl +di_sulfido_diiron +o2 +hplus +h2o
-    pulcherriminate
+    <-> ec_4_2_1_164 [4.2.1.164] +dtdp_4_dehydro_2_6_dideoxy_d_glucose +di_sulfido_diiron +hplus +h2o
+    dtdp_4_dehydro_2_3_6_trideoxy_d_glucose
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_14_15_6 [1.14.15.6] +di_sulfido_diiron +cholesterol +o2 +hplus +pregnenolone +h2o
-    4_methylpentanal
+    <-> . +24r_24_25_dihydroxycalciol +di_sulfido_diiron +o2 +hplus +h2o
+    25_hydroxy_24_oxocalciol
+  }
+
+  branch from demethylspheroidene side left {
+    demethylspheroidene
+    <-> . +h2
+    1_hydroxy_all_trans_1_2_dihydro_neurosporene
+  }
+
+  branch from sam side right {
+    sam
+    <-> . +5_methylcytidine_5_monophosphate_1 +sah +hplus
+    cytidine_5_monophosphate_1
+  }
+
+  branch from sam side left {
+    sam
+    <-> . +uridine_5_monophosphate_1 +sah +hplus
+    2_o_methyluridine_5_monophosphate_1
+  }
+
+  branch from spheroidene side right {
+    spheroidene
+    <-> ec_2_1_1_210 [2.1.1.210] +s_adenosyl_l_homocysteine +h +demethylspheroidene
+    s_adenosyl_l_methionine
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_260 [2.1.1.260] +pseudouridine_5_phosphate_1 +sam +hplus
+    n1_methylpseudouridine_5_monophosphate_1
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_313 [2.1.1.313] +uridine_5_monophosphate_1 +sam +hplus
+    n3_methyluridine_5_monophosphate_1
+  }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> . +20s_hydroxyvitamin_d3 +o2 +hplus +di_sulfido_diiron +h2o
+    20s_24r_dihydroxyvitamin_d3
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> . +20s_hydroxyvitamin_d3 +o2 +hplus +di_sulfido_diiron +h2o
+    20s_24s_dihydroxyvitamin_d3
+  }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> . +20s_hydroxyvitamin_d3 +di_sulfido_diiron +o2 +hplus +h2o
+    20_s_25_dihydroxyvitamin_d3
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> . +25_hydroxy_24_oxocalciol +di_sulfido_diiron +o2 +hplus +h2o
+    23_s_25_dihydroxy_24_oxovitamin_d3
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +h +18_coa_18_oxo_dinorleukotriene_b4 +coa
+    omega_carboxy_trinor_leukotriene_b4
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +18e_20_oxo_20_coa_ltb4
+    20_coa_20_oxo_18r_hydroxyleucotriene_b4
   }
 }

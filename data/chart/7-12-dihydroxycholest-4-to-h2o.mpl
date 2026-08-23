@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 7-12-dihydroxycholest-4-to-h2o "7α,12α-dihydroxycholest-4… to H2O" {
-  spacing 290
+  spacing 260
 
   spine at 0,0 {
     dihydroxy_4_cholesten_3_one_7a12a
@@ -14,35 +14,5 @@ pathway 7-12-dihydroxycholest-4-to-h2o "7α,12α-dihydroxycholest-4… to H2O" {
     nadp
     <-> . +h +5beta_cholestane_3alpha_7alpha_12alpha_triol +o2 +nadph -nadp -h2o
     5beta_cholestane_3alpha_7alpha_12alpha_25_tetrol
-  }
-
-  branch from dihydroxy_5b_cholestan_3_one_7a12a side left {
-    dihydroxy_5b_cholestan_3_one_7a12a
-    <-> ec_1_1_1_213 [1.1.1.213] +nadh +h +5beta_cholestane_3alpha_7alpha_12alpha_triol
-    nad
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +butanal +h +nadph
-    crotonaldehyde
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_206 [1.1.1.206] +nor_psi_tropine +h +nadph
-    nortropinone
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +beta_d_glucose +medicarpin
-    medicocarpin
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +4_21_dehydrogeissoschizine
-    strictosidine_aglycone
   }
 }

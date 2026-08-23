@@ -22,18 +22,6 @@ pathway acylcholine-to-n5-methyl-l-glutamine "acylcholine to N5-methyl-L-glutami
     n5_methyl_l_glutamine
   }
 
-  branch from carboxylic_acid_anion side left {
-    carboxylic_acid_anion
-    <-> ec_3_5_1_114 [3.5.1.114] +n_acyl_aromatic_l_amino_acid_anion +h2o
-    aromatic_l_amino_acid
-  }
-
-  branch from carboxylic_acid_anion side right {
-    carboxylic_acid_anion
-    <-> ec_3_5_1_133 [3.5.1.133] +n2_acyl_l_glutaminate +h2o
-    glutamine
-  }
-
   branch from choline side left {
     choline
     <-> . +1_hexadecanoyl_sn_glycero_3_phosphocholine +h2o +hplus
@@ -46,39 +34,51 @@ pathway acylcholine-to-n5-methyl-l-glutamine "acylcholine to N5-methyl-L-glutami
     1_myristoyl_sn_glycerol_3_phosphate
   }
 
-  branch from betaine side left {
-    betaine
-    <-> ec_2_1_1_162 [2.1.1.162] +glycine +sam +hplus
-    sah
-  }
-
-  branch from formaldehyde side right {
-    formaldehyde
-    <-> . +fluometuron +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
-    3_3_trifluoromethyl_phenyl_1_methylurea
-  }
-
-  branch from formaldehyde side left {
-    formaldehyde
-    <-> . +fenuron +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
-    1_methyl_3_phenylurea
-  }
-
-  branch from methylamine side right {
-    methylamine
-    <-> ec_1_5_99_16 [1.5.99.16] +2_methylaminoethyl_phosphonate +hydrogen_acceptor +h2o +hydrogen_donor
-    phosphonoacetaldehyde
-  }
-
   branch from glyoxylate side left {
     glyoxylate
-    <-> ec_4_3_2_5 [4.3.2.5] +c_terminal_xaa_2s_hydroxyglycino_1
-    c_terminal_amino_acid_amide
+    <-> . +5_methyl_dcmp_1 +ascorbate +o2 +co2
+    8s_9r_5_glyceryldeoxycytidine_5_monophosphate_1
   }
 
   branch from glyoxylate side right {
     glyoxylate
-    <-> ec_1_2_1_17 [1.2.1.17] +nadp +coa +nadph +hplus
-    oxalyl_coa
+    <-> ec_2_6_1_63 [2.6.1.63] +3_hydroxy_l_kynurenine +glycine +h2o
+    xanthurenate
+  }
+
+  branch from choline side left {
+    choline
+    <-> . +1_arachidonoyl_sn_glycero_3_phosphocholine +h2o +hplus
+    1_arachidonoyl_sn_glycerol_3_phosphate
+  }
+
+  branch from choline side right {
+    choline
+    <-> . +1_z_alk_1_enyl_sn_glycero_3_phosphocholine +h2o +hplus
+    1_z_alk_1_enyl_sn_glycero_3_phosphate
+  }
+
+  branch from glyoxylate side left {
+    glyoxylate
+    <-> . +3_hydroxy_l_kynurenine +glycine
+    4_2_amino_3_hydroxyphenyl_2_4_dioxobutanoate
+  }
+
+  branch from glyoxylate side right {
+    glyoxylate
+    <-> . +l_asparagine +glycine
+    2_oxosuccinamate
+  }
+
+  branch from glutamate side left {
+    glutamate
+    <-> ec_3_4_19_16 [3.4.19.16] +glucys_ian_gly +h2o
+    cys_ian_gly
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> ec_6_2_1_68 [6.2.1.68] +holo-acp +atp +amp +ppi
+    o_s_l_glutamyl_pantetheine_4_phosphoryl_serine_1
   }
 }

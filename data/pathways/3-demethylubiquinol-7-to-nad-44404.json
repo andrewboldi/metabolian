@@ -1,0 +1,368 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-demethylubiquinol-7-to-nad-44404",
+  "name": "3-demethylubiquinol-7 to NAD",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from 3-demethylubiquinol-7 to NAD(+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:44404"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:84431"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_demethylubiquinol_7",
+      "name": "3-demethylubiquinol-7",
+      "short": "3-demethylubiquinol…",
+      "formula": "C43H66O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:84431"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "ubiquinol_7",
+      "name": "ubiquinol-7",
+      "formula": "C44H68O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:84432"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "ubiquinone_7",
+      "name": "ubiquinone-7",
+      "formula": "C44H66O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:46448"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_64",
+      "name": "3-demethylubiquinol 3-O-methyltransferase",
+      "ec": [
+        "2.1.1.64"
+      ],
+      "xrefs": {
+        "uniprot": "Q9NZJ6"
+      }
+    },
+    {
+      "id": "ec_1_6_5_2",
+      "name": "NAD(P)H dehydrogenase (quinone)",
+      "ec": [
+        "1.6.5.2"
+      ],
+      "xrefs": {
+        "uniprot": "P15559"
+      }
+    },
+    {
+      "id": "ec_1_6_5_3",
+      "name": "EC 1.6.5.3",
+      "ec": [
+        "1.6.5.3"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3-demethylubiquinol 3-O-methyltransferase",
+      "equation": "3-demethylubiquinol-7 + S-adenosyl-L-methionine = ubiquinol-7 + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.64",
+      "substrates": [
+        {
+          "metabolite": "3_demethylubiquinol_7",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ubiquinol_7",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_64"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:44404"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44404"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "NAD(P)H dehydrogenase (quinone)",
+      "ec": "1.6.5.2",
+      "substrates": [
+        {
+          "metabolite": "ubiquinol_7",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ubiquinone_7",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_6_5_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR182077"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR182077"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "NAD(P)H dehydrogenase (quinone)",
+      "ec": "1.6.5.2",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ubiquinone_7",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ubiquinol_7",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_6_5_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR182078"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR182078"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3_demethylubiquinol_7_3-4-dihydroxy-5-all-trans-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_demethylubiquinol_7"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-4-dihydroxy-5-all-trans-to-h2o"
+      },
+      "note": "Shares 3-demethylubiquinol-7 with 3,4-dihydroxy-5-all-trans… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84431"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_demethylubiquinol_7_3-4-dihydroxy-5-all-trans-to-h2o-44480",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_demethylubiquinol_7"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-4-dihydroxy-5-all-trans-to-h2o-44480"
+      },
+      "note": "Shares 3-demethylubiquinol-7 with 3,4-dihydroxy-5-all-trans… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84431"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_demethylubiquinol_7_3-demethylubiquinol-7-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_demethylubiquinol_7"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-demethylubiquinol-7-to-nad"
+      },
+      "note": "Shares 3-demethylubiquinol-7 with 3-demethylubiquinol-7 to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84431"
+          }
+        ]
+      }
+    }
+  ]
+}

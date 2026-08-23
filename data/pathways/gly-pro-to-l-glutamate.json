@@ -99,119 +99,6 @@
       "xrefs": {
         "chebi": "CHEBI:29985"
       }
-    },
-    {
-      "id": "icosanoate",
-      "name": "icosanoate",
-      "formula": "C20H39O2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:32360"
-      }
-    },
-    {
-      "id": "n_icosanoylglycinate",
-      "name": "N-icosanoylglycinate",
-      "formula": "C22H42NO3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:87391"
-      }
-    },
-    {
-      "id": "cerotate",
-      "name": "cerotate",
-      "formula": "C26H51O2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:31013"
-      }
-    },
-    {
-      "id": "n_hexacosanoylglycinate",
-      "name": "N-hexacosanoylglycinate",
-      "short": "N-hexacosanoylglyci…",
-      "formula": "C28H54NO3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:87414"
-      }
-    },
-    {
-      "id": "holo-acp",
-      "name": "Holo-[acyl-carrier protein]",
-      "short": "Holo-[acyl-carrier…",
-      "formula": "C14H25N3O8PS",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:64479"
-      }
-    },
-    {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:30616"
-      }
-    },
-    {
-      "id": "o_s_l_glutamyl_pantetheine_4_phosphoryl_serine_1",
-      "name": "O-[S-(γ-L-glutamyl)pantetheine-4'-phosphoryl]serine(1−)",
-      "short": "O-[S-(γ-L-glutamyl)…",
-      "formula": "C19H32N4O11PS",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:137996"
-      }
-    },
-    {
-      "id": "adp",
-      "name": "ADP",
-      "formula": "C10H12N5O10P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:456216"
-      }
-    },
-    {
-      "id": "pi",
-      "name": "Orthophosphate (Pi)",
-      "formula": "HO4P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:43474"
-      }
-    },
-    {
-      "id": "4_amino_l_phenylalanine",
-      "name": "4-amino-L-phenylalanine",
-      "short": "4-amino-L-phenylala…",
-      "formula": "C9H12N2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:143072"
-      }
-    },
-    {
-      "id": "akg",
-      "name": "2-Oxoglutarate",
-      "formula": "C5H4O5",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:16810"
-      }
-    },
-    {
-      "id": "3_4_aminophenyl_pyruvate",
-      "name": "3-(4-aminophenyl)pyruvate",
-      "short": "3-(4-aminophenyl)py…",
-      "formula": "C9H8NO3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:143071"
-      }
     }
   ],
   "enzymes": [
@@ -220,21 +107,20 @@
       "name": "pyrroline-5-carboxylate reductase",
       "ec": [
         "1.5.1.2"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P32322"
+      }
     },
     {
       "id": "ec_1_2_1_88",
       "name": "L-glutamate gamma-semialdehyde dehydrogenase",
       "ec": [
         "1.2.1.88"
-      ]
-    },
-    {
-      "id": "ec_6_2_1_39",
-      "name": "[butirosin acyl-carrier protein]--L-glutamate ligase",
-      "ec": [
-        "6.2.1.39"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P30038"
+      }
     }
   ],
   "reactions": [
@@ -378,173 +264,93 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "eicosanoate + glycine = N-eicosanoylglycinate + H2O",
-      "equation": "eicosanoate + glycine = N-eicosanoylglycinate + H2O",
-      "substrates": [
-        {
-          "metabolite": "icosanoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glycine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n_icosanoylglycinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:47116"
+      "id": "xt_s_1_pyrroline_5_carboxylate_alanyl-l-argininium-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_1_pyrroline_5_carboxylate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "alanyl-l-argininium-to-succinate"
+      },
+      "note": "Shares (S)-1-pyrroline-5-carboxylate with β-alanyl-L-argininium to succinate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:47116"
+            "db": "ChEBI",
+            "id": "CHEBI:17388"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "hexacosanoate + glycine = N-hexacosanoylglycine + H2O",
-      "equation": "hexacosanoate + glycine = N-hexacosanoylglycine + H2O",
-      "substrates": [
-        {
-          "metabolite": "cerotate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glycine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n_hexacosanoylglycinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:47124"
+      "id": "xt_s_1_pyrroline_5_carboxylate_l-prolinylglycine-to-l-glutamate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_1_pyrroline_5_carboxylate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "l-prolinylglycine-to-l-glutamate"
+      },
+      "note": "Shares (S)-1-pyrroline-5-carboxylate with L-prolinylglycine to L-glutamate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:47124"
+            "db": "ChEBI",
+            "id": "CHEBI:17388"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "[butirosin acyl-carrier protein]--L-glutamate ligase",
-      "equation": "holo-[BtrI ACP] + L-glutamate + ATP = gamma-L-glutamyl-[BtrI ACP] + ADP + phosphate",
-      "ec": "6.2.1.39",
-      "substrates": [
-        {
-          "metabolite": "holo-acp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glutamate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "o_s_l_glutamyl_pantetheine_4_phosphoryl_serine_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_6_2_1_39"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:53948"
+      "id": "xt_s_1_pyrroline_5_carboxylate_s-2-halocarboxylic-to-l-glutamyl-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_1_pyrroline_5_carboxylate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2-halocarboxylic-to-l-glutamyl-phosphate"
+      },
+      "note": "Shares (S)-1-pyrroline-5-carboxylate with (S)-2-halocarboxylic… to L-γ-glutamyl phosphate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:53948"
+            "db": "ChEBI",
+            "id": "CHEBI:17388"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "4-amino-L-phenylalanine + 2-oxoglutarate = 3-(4-aminophenyl)pyruvate + L-glutamate",
-      "equation": "4-amino-L-phenylalanine + 2-oxoglutarate = 3-(4-aminophenyl)pyruvate + L-glutamate",
-      "substrates": [
-        {
-          "metabolite": "4_amino_l_phenylalanine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_4_aminophenyl_pyruvate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glutamate",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:59384"
+      "id": "xt_s_1_pyrroline_5_carboxylate_trans-4-hydroxy-l-proline-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_1_pyrroline_5_carboxylate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-4-hydroxy-l-proline-to-succinate"
+      },
+      "note": "Shares (S)-1-pyrroline-5-carboxylate with trans-4-hydroxy-L-proline to succinate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:59384"
+            "db": "ChEBI",
+            "id": "CHEBI:17388"
           }
         ]
       }

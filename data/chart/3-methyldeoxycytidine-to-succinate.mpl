@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-methyldeoxycytidine-to-succinate "3-methyldeoxycytidine… to succinate" {
-  spacing 228
+  spacing 210
 
   spine at 0,0 {
     3_methyldeoxycytidine_5_monophosphate_zwitterion
@@ -20,27 +20,9 @@ pathway 3-methyldeoxycytidine-to-succinate "3-methyldeoxycytidine… to succinat
     5_carboxy_dcmp_2
   }
 
-  branch from succinate side left {
-    succinate
-    <-> . +2_deoxyinosine_5_phosphate +chloride +akg +o2 +hplus +co2 +h2o
-    2_chloro_deoxyinosine_5_monophosphate
-  }
-
-  branch from succinate side right {
-    succinate
-    <-> ec_1_14_20_16 [1.14.20.16] +4_5_9_5_20_epoxytax_11_ene_4_9_diol +akg +o2 +co2 +h2o
-    4_hydroxy_5_5_20_epoxytax_11_en_9_one
-  }
-
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_260 [2.1.1.260] +pseudouridine_5_phosphate_1 +sam +hplus
-    n1_methylpseudouridine_5_monophosphate_1
-  }
-
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_260 [2.1.1.260] +sam +n1_methylpseudouridine_5_monophosphate_1 +hplus
-    pseudouridine_5_phosphate_1
+  branch from 3_methyldeoxycytidine_5_monophosphate_zwitterion side left {
+    3_methyldeoxycytidine_5_monophosphate_zwitterion
+    <-> . +h2o +2_deoxyribose_5_monophosphate_1 +hplus
+    3_methylcytosine
   }
 }

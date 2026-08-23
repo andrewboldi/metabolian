@@ -286,9 +286,27 @@
       "xrefs": {
         "chebi": "CHEBI:231454"
       }
+    },
+    {
+      "id": "epoxysqualene",
+      "name": "(S)-2,3-Epoxysqualene (2,3-oxidosqualene)",
+      "short": "2,3-Epoxysqualene…",
+      "formula": "C30H50O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15441"
+      }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_5_4_99_56",
+      "name": "tirucalladienol synthase",
+      "ec": [
+        "5.4.99.56"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -916,6 +934,155 @@
           {
             "db": "Rhea",
             "id": "RHEA:80299"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r15",
+      "name": "tirucalladienol synthase",
+      "equation": "(S)-2,3-epoxysqualene = tirucalla-7,24-dien-3beta-ol",
+      "ec": "5.4.99.56",
+      "substrates": [
+        {
+          "metabolite": "epoxysqualene",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "tirucalla_7_24_dien_3_ol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_99_56"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 15,
+      "xrefs": {
+        "rhea": "RHEA:31887"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31887"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_21s_21_acetyl_apo_melianone_21s-21-acetyl-apo-melia-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "21s_21_acetyl_apo_melianone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "21s-21-acetyl-apo-melia-to-succinate"
+      },
+      "note": "Shares (21S)-21-acetyl-apo-melianone with (21S)-21-acetyl-apo-melia… to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:231456"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_isobutyrate_21s-21-acetyl-apo-melia-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isobutyrate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "21s-21-acetyl-apo-melia-to-succinate"
+      },
+      "note": "Shares isobutyrate with (21S)-21-acetyl-apo-melia… to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:48944"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_isobutyrate_n-methyl-2-methylpropan-1-to-2-methylpropanoyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isobutyrate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-methyl-2-methylpropan-1-to-2-methylpropanoyl"
+      },
+      "note": "Shares isobutyrate with N-methyl-2-methylpropan-1… to 2-methylpropanoyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:48944"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_isobutyrate_n6-isobutyryl-l-lysine-to-o-s-3r-hydroxy-4-methy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isobutyrate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n6-isobutyryl-l-lysine-to-o-s-3r-hydroxy-4-methy"
+      },
+      "note": "Shares isobutyrate with N6-isobutyryl-L-lysine to O-[S-(3R)-hydroxy-4-methy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:48944"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_isobutyrate_p-cumate-to-2-hydroxy-6-oxonona-2-4-7",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isobutyrate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "p-cumate-to-2-hydroxy-6-oxonona-2-4-7"
+      },
+      "note": "Shares isobutyrate with p-cumate to 2-hydroxy-6-oxonona-2,4,7….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:48944"
           }
         ]
       }

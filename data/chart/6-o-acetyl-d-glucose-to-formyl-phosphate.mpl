@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 6-o-acetyl-d-glucose-to-formyl-phosphate "6-O-acetyl-D-glucose to formyl phosphate" {
-  spacing 268
+  spacing 280
 
   spine at 0,0 {
     6_o_acetyl_d_glucose
@@ -20,61 +20,73 @@ pathway 6-o-acetyl-d-glucose-to-formyl-phosphate "6-O-acetyl-D-glucose to formyl
 
   branch from glucose side left {
     glucose
-    <-> ec_3_2_1_118 [3.2.1.118] +r_prunasin +h2o
-    mandelonitrile
+    <-> ec_4_2_99_23 [4.2.99.23] +6_tuliposide_b
+    tulipalin_b
   }
 
   branch from glucose side right {
     glucose
-    <-> ec_2_7_1_1 [2.7.1.1] +atp +adp +hplus
-    g6p
-  }
-
-  branch from acetate side left {
-    acetate
-    <-> ec_4_1_2_66 [4.1.2.66] +trans_4_coumarate +h2o
-    4_hydroxybenzaldehyde
-  }
-
-  branch from acetate side right {
-    acetate
-    <-> . +3_hydroxy_3_4_o_d_glucosyl_3_methoxyphenyl_propa
-    glucovanillin
+    <-> ec_3_2_1_188 [3.2.1.188] +avenacoside_b +h2o
+    26_desglucoavenacoside_b
   }
 
   branch from succinate side left {
     succinate
-    <-> . +l_proline +akg +o2 +co2
-    trans_3_hydroxy_l_proline
+    <-> ec_1_14_20_12 [1.14.20.12] +2s_3_1h_indol_3_yl_2_isocyanopropanoate +akg +o2 +hplus +co2 +h2o
+    3_e_2_isocyanovinyl_indole
   }
 
   branch from succinate side right {
     succinate
-    <-> ec_1_14_11_29 [1.14.11.29] +l_proline +akg +o2 +co2
-    trans_4_hydroxy_l_proline
-  }
-
-  branch from succinyl_coa side left {
-    succinyl_coa
-    <-> ec_5_4_99_2 [5.4.99.2]
-    r_methylmalonyl_coa
-  }
-
-  branch from succinyl_coa side right {
-    succinyl_coa
-    <-> ec_1_2_1_105 [1.2.1.105] +nad +coa +co2 +nadh
-    akg
+    <-> ec_1_14_11_73 [1.14.11.73] +l_argininium +akg +o2 +co2
+    3r_3_hydroxy_l_argininium
   }
 
   branch from formate side left {
     formate
-    <-> . +24_25_dihydrolanosterol +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
-    4_4_dimethyl_8_14_cholestadien_3_ol
+    <-> . +eburicol +fmnh2 +o2 +fmn +h2o +hplus
+    4_4_24_trimethyl_5alpha_cholesta_8_14_24_28_trie
   }
 
   branch from formate side right {
     formate
-    <-> . +intermediate_i +nadph +h2o +nadp
-    16r_deshydroxymethyl_stemmadenine
+    <-> . +hydrogen_cyanide +h2o
+    nh3
+  }
+
+  branch from glucose side left {
+    glucose
+    <-> ec_3_2_1_206 [3.2.1.206] +oleuropein +h2o
+    oleuropein_aglycone
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> . +lithocholate_3_o_d_glucoside +h2o
+    lithocholate
+  }
+
+  branch from succinate side left {
+    succinate
+    <-> ec_1_14_20_14 [1.14.20.14] +12_epi_fischerindole_u +chloride +akg +o2 +hplus +co2 +h2o
+    12_epi_fischerindole_g
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> ec_1_14_11_63 [1.14.11.63] +l_lysinium +akg +o2 +co2
+    3s_3_hydroxy_l_lysine_1
+  }
+
+  branch from formyl_coa side left {
+    formyl_coa
+    <-> . +2_hydroxystearoyl_coa
+    heptadecanal
+  }
+
+  branch from formyl_coa side right {
+    formyl_coa
+    <-> . +heptadecanal
+    2r_2_hydroxyoctadecanoyl_coa
   }
 }

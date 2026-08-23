@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "4-aminobenzoate-to-h2o",
   "name": "4-aminobenzoate to H2O",
-  "category": "amino-acid-metabolism",
+  "category": "other",
   "summary": "A 3-step route from 4-aminobenzoate to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -117,55 +117,6 @@
       "xrefs": {
         "metanetx": "WATER"
       }
-    },
-    {
-      "id": "l_alanine",
-      "name": "L-alanine",
-      "formula": "C3H7NO2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1105732"
-      }
-    },
-    {
-      "id": "l_2_amino_4_methoxy_trans_but_3_enoic_acid",
-      "name": "L-2-amino-4-methoxy-trans-but-3-enoic acid",
-      "short": "L-2-amino-4-methoxy…",
-      "formula": "C5H9NO3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:156361"
-      }
-    },
-    {
-      "id": "l_alanyl_2s_3e_amino_4_methoxy_but_3_enoyl_l_ala",
-      "name": "L-alanyl-(2S,3E)-amino-4-methoxy-but-3-enoyl-L-alanine",
-      "short": "L-alanyl-(2S,3E)-am…",
-      "formula": "C11H19N3O5",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM818514"
-      }
-    },
-    {
-      "id": "13s_hydroperoxy_9z_11e_octadecadienoate",
-      "name": "(13S)-hydroperoxy-(9Z,11E)-octadecadienoate",
-      "short": "hydroperoxy-(9Z,11E…",
-      "formula": "C18H31O4",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM1104179"
-      }
-    },
-    {
-      "id": "omega5z_etheroleate",
-      "name": "(omega5Z)-etheroleate",
-      "short": "(omega5Z)-etherolea…",
-      "formula": "C18H29O3",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM819042"
-      }
     }
   ],
   "enzymes": [
@@ -174,7 +125,10 @@
       "name": "carboxylesterase",
       "ec": [
         "3.1.1.1"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P23141"
+      }
     }
   ],
   "reactions": [
@@ -302,75 +256,247 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "Reaction MNXR185213",
-      "substrates": [
-        {
-          "metabolite": "l_alanine",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "l_2_amino_4_methoxy_trans_but_3_enoic_acid",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "l_alanyl_2s_3e_amino_4_methoxy_but_3_enoyl_l_ala",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR185213"
+      "id": "xt_4_aminobenzoate_4-aminobenzoate-to-l-glutamate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_aminobenzoate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "4-aminobenzoate-to-l-glutamate"
+      },
+      "note": "Shares 4-aminobenzoate with 4-aminobenzoate to L-glutamate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR185213"
+            "db": "ChEBI",
+            "id": "CHEBI:17836"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "Reaction MNXR185467",
-      "substrates": [
-        {
-          "metabolite": "13s_hydroperoxy_9z_11e_octadecadienoate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "omega5z_etheroleate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR185467"
+      "id": "xt_4_aminobenzoate_4-aminobenzoate-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_aminobenzoate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "4-aminobenzoate-to-nad"
+      },
+      "note": "Shares 4-aminobenzoate with 4-aminobenzoate to NAD.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17836"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_aminobenzoate_7-8-dihydroneopterin-to-7-8-dihydropteroate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_aminobenzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-8-dihydroneopterin-to-7-8-dihydropteroate"
+      },
+      "note": "Shares 4-aminobenzoate with 7,8-dihydroneopterin to 7,8-dihydropteroate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17836"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_aminobenzoate_7-8-dihydroneopterin-to-dihydrofolate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_aminobenzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-8-dihydroneopterin-to-dihydrofolate"
+      },
+      "note": "Shares 4-aminobenzoate with 7,8-dihydroneopterin to dihydrofolate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17836"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_aminobenzoate_aliphatic-aldoxime-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_aminobenzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aliphatic-aldoxime-to-diphosphate"
+      },
+      "note": "Shares 4-aminobenzoate with aliphatic aldoxime to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17836"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_aminobenzoate_all-trans-hexaprenyl-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_aminobenzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "all-trans-hexaprenyl-to-ammonium"
+      },
+      "note": "Shares 4-aminobenzoate with all-trans-hexaprenyl… to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17836"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_aminobenzoate_shikimate-to-4-aminophenol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_aminobenzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "shikimate-to-4-aminophenol"
+      },
+      "note": "Shares 4-aminobenzoate with shikimate to 4-aminophenol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17836"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_aminobenzoate_1-palmitoyl-2-6z-9z-12z-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_aminobenzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-palmitoyl-2-6z-9z-12z-to-h2o"
+      },
+      "note": "Shares 4-aminobenzoate with 1-palmitoyl-2-[(6Z,9Z,12Z… to H2O.",
+      "provenance": {
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR185467"
+            "id": "MNXM421"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_aminobenzoate_7-8-dihydroneopterin-to-5-dehydro-d-gluconate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_aminobenzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-8-dihydroneopterin-to-5-dehydro-d-gluconate"
+      },
+      "note": "Shares 4-aminobenzoate with 7,8-dihydroneopterin to 5-dehydro-D-gluconate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM421"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_aminobenzoate_butan-1-ol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_aminobenzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "butan-1-ol-to-h2o"
+      },
+      "note": "Shares 4-aminobenzoate with butan-1-ol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM421"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_aminobenzoate_s-adenosyl-l-homocysteine-to-griseofulvin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_aminobenzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-griseofulvin"
+      },
+      "note": "Shares 4-aminobenzoate with S-adenosyl-L-homocysteine to griseofulvin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM421"
           }
         ]
       }

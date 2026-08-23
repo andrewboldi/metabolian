@@ -105,61 +105,6 @@
       }
     },
     {
-      "id": "n_3_carboxypropanoyl_n_hydroxyputrescine",
-      "name": "N-(3-carboxypropanoyl)-N-hydroxyputrescine",
-      "short": "N-(3-carboxypropano…",
-      "formula": "C8H16N2O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:229776"
-      }
-    },
-    {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:30616"
-      }
-    },
-    {
-      "id": "putrebactin",
-      "name": "putrebactin",
-      "formula": "C16H28N4O6",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:50432"
-      }
-    },
-    {
-      "id": "amp",
-      "name": "AMP",
-      "formula": "C10H12N5O7P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:456215"
-      }
-    },
-    {
-      "id": "hplus",
-      "name": "Proton (H+)",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:15378"
-      }
-    },
-    {
-      "id": "pre_putrebactin",
-      "name": "pre-putrebactin",
-      "formula": "C16H30N4O7",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:229777"
-      }
-    },
-    {
       "id": "bacterioruberin",
       "name": "bacterioruberin",
       "formula": "C50H76O4",
@@ -182,13 +127,6 @@
       "name": "lycopene elongase/hydratase (dihydrobisanhydrobacterioruberin-forming)",
       "ec": [
         "2.5.1.150"
-      ]
-    },
-    {
-      "id": "ec_6_3_2_63",
-      "name": "putrebactin synthase",
-      "ec": [
-        "6.3.2.63"
       ]
     },
     {
@@ -341,106 +279,6 @@
     },
     {
       "id": "r4",
-      "name": "putrebactin synthase",
-      "equation": "2 N-(3-carboxypropanoyl)-N-hydroxyputrescine + 2 ATP = putrebactin + 2 AMP + 2 diphosphate + 2 H(+)",
-      "ec": "6.3.2.63",
-      "substrates": [
-        {
-          "metabolite": "n_3_carboxypropanoyl_n_hydroxyputrescine",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "putrebactin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "amp",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_6_3_2_63"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:79279"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:79279"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "2 N-(3-carboxypropanoyl)-N-hydroxyputrescine + ATP = pre-putrebactin + AMP + diphosphat...",
-      "equation": "2 N-(3-carboxypropanoyl)-N-hydroxyputrescine + ATP = pre-putrebactin + AMP + diphosphate + H(+)",
-      "substrates": [
-        {
-          "metabolite": "n_3_carboxypropanoyl_n_hydroxyputrescine",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "pre_putrebactin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "amp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:79283"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:79283"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
       "name": "bisanhydrobacterioruberin hydratase",
       "equation": "bacterioruberin = bisanhydrobacterioruberin + 2 H2O",
       "ec": "4.2.1.161",
@@ -466,7 +304,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 4,
       "xrefs": {
         "rhea": "RHEA:38375"
       },
@@ -476,6 +314,74 @@
           {
             "db": "Rhea",
             "id": "RHEA:38375"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_dihydroisopentenyldehydrorhodopin_h2-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dihydroisopentenyldehydrorhodopin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h2-to-diphosphate"
+      },
+      "note": "Shares dihydroisopentenyldehydrorhodopin with H2 to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87163"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_bisanhydrobacterioruberin_bacterioruberin-to-c-p-473",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "bisanhydrobacterioruberin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "bacterioruberin-to-c-p-473"
+      },
+      "note": "Shares bisanhydrobacterioruberin with bacterioruberin to C.p.473.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87121"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_bacterioruberin_bacterioruberin-to-c-p-473",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "bacterioruberin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "bacterioruberin-to-c-p-473"
+      },
+      "note": "Shares bacterioruberin with bacterioruberin to C.p.473.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:49388"
           }
         ]
       }

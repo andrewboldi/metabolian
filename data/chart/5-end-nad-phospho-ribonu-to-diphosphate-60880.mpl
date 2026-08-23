@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-end-nad-phospho-ribonu-to-diphosphate-60880 "5'-end NAD-phospho-ribonu… to diphosphate" {
-  spacing 182
+  spacing 200
 
   spine at 0,0 {
     5_end_nad_phospho_ribonucleoside
@@ -20,31 +20,49 @@ pathway 5-end-nad-phospho-ribonu-to-diphosphate-60880 "5'-end NAD-phospho-ribonu
 
   branch from 5_end_ribonucleotide_2 side left {
     5_end_ribonucleotide_2
-    <-> . +sam +sah
-    5_end_bisphopshomethylribonucleoside
+    <-> . +5_end_n7_methyl_5_triphospho_guanosine_guanosine +h2o +hplus
+    n7_methyl_5_triphospho_guanosine_guanosine
   }
 
   branch from 5_end_ribonucleotide_2 side right {
     5_end_ribonucleotide_2
-    <-> . +sam +sah
-    5_end_phopshomethylribonucleoside_1
+    <-> . +5_n7_methyl_5_triphosphoguanosine_ribonucleoside +h2o +hplus
+    n7_methyl_5_triphosphoguanosine_nucleoside
   }
 
   branch from ppi side left {
     ppi
-    <-> . +14_15_eet +atp +coa +amp
-    14_15_epoxy_5z_8z_11z_icosatrienoyl_coa
+    <-> . +octacosanoate +atp +coa +amp
+    montanoyl_coa
   }
 
   branch from ppi side right {
     ppi
-    <-> . +5_6_eet +atp +coa +amp
-    5_6_epoxy_8z_11z_14z_icosatrienoyl_coa
+    <-> . +fpp
+    sterpurene
   }
 
-  branch from 5_end_gtp_ribonucleotide_5 side left {
-    5_end_gtp_ribonucleotide_5
-    <-> . +sam +sah
-    5_methyltriphosphate_guanosine_ribonucleotide_4
+  branch from 5_end_ribonucleotide_2 side left {
+    5_end_ribonucleotide_2
+    <-> . +h2o +fad +hplus
+    5_fad_phosphoribonucleoside_2
+  }
+
+  branch from 5_end_ribonucleotide_2 side right {
+    5_end_ribonucleotide_2
+    <-> . +ribonucleotide_ribonucleotide_2 +h2o +hplus
+    3_end_ribonucleotide_1
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +gpp +h2o
+    1r_2r_menth_2_en_1_ol
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +fpp +h2o
+    africanol
   }
 }

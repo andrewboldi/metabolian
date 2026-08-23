@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-adenosyl-l-homocysteine-to-hydrogen-cyanide "S-adenosyl-L-homocysteine to hydrogen cyanide" {
-  spacing 262
+  spacing 220
 
   spine at 0,0 {
     s_adenosyl_l_homocysteine
@@ -14,47 +14,5 @@ pathway s-adenosyl-l-homocysteine-to-hydrogen-cyanide "S-adenosyl-L-homocysteine
     2_hydroxy_2_methylpropanenitrile
     <-> . -hydrogen_cyanide
     acetone
-  }
-
-  branch from s_adenosyl_l_methionine side left {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +1s_1_2s_2_amino_4_methylpentanamido_ethyl_metho
-    hydrogen_1s_1_2s_2_amino_4_methylpentanamido_eth
-  }
-
-  branch from s_adenosyl_l_methionine side right {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +2s_4_prop_1_en_1_yl_2_3_dihydro_1h_pyrrole_2_ca +h
-    2s_4_ethenyl_2_3_dihydro_1h_pyrrole_2_carboxyla
-  }
-
-  branch from e_2_methylpropanal_oxime side left {
-    e_2_methylpropanal_oxime
-    <-> ec_1_14_13_118 [1.14.13.118] +co2 +nadp +h2o +h +o2 +nadph
-    l_valine
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +tetrahydroalstonine +fmnh2 +o2 +h2o +hplus
-    dihydroalstonine
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +ajmalicine +fmnh2 +o2 +h2o +hplus
-    dihydroserpentine
-  }
-
-  branch from hydrogen_cyanide side right {
-    hydrogen_cyanide
-    <-> . +cyclohexanecarbaldehyde
-    2s_2_cyclohexyl_2_hydroxyacetonitrile
-  }
-
-  branch from hydrogen_cyanide side left {
-    hydrogen_cyanide
-    <-> . +p_methoxybenzaldehyde
-    2s_2_hydroxy_2_4_methoxyphenyl_acetonitrile
   }
 }

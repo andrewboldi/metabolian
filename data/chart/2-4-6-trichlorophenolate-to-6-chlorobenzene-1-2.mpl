@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-4-6-trichlorophenolate-to-6-chlorobenzene-1-2 "2,4,6-trichlorophenolate to 6-Chlorobenzene-1,2,4-tri…" {
-  spacing 170
+  spacing 212
 
   spine at 0,0 {
     2_4_6_trichlorophenolate
@@ -18,19 +18,61 @@ pathway 2-4-6-trichlorophenolate-to-6-chlorobenzene-1-2 "2,4,6-trichlorophenolat
 
   branch from 2_6_dichlorobenzoquinone side left {
     2_6_dichlorobenzoquinone
-    <-> . +nadh +nad
+    <-> . +fadh2 +h +fad
     2_6_dichloro_4_hydroxyphenolate
   }
 
   branch from fad side right {
     fad
-    <-> ec_1_14_14_9 [1.14.14.9] +fadh2 +trans_4_coumarate +h +o2 +h2o
-    e_caffeate
+    <-> . +fadh2 +h +2_5_dichloro_p_benzoquinone
+    2_5_dichlorohydroquinone
   }
 
   branch from fad side left {
     fad
-    <-> ec_1_14_14_9 [1.14.14.9] +fadh2 +h +2_4_hydroxyphenyl_ethanol +o2 +h2o
+    <-> . +fadh2 +h +15_oxo_spinosyn_macrolactone
+    spinosyn_macrolactone
+  }
+
+  branch from 2_4_6_trichlorophenolate side right {
+    2_4_6_trichlorophenolate
+    <-> . +fadh2 +h +o2 +fad +2_6_dichloro_4_hydroxyphenolate +h2o
+    chloride
+  }
+
+  branch from fadh2 side left {
+    fadh2
+    <-> . +8_desmethylnovobiocic_acid +h +o2 +chloride +fad +h2o
+    chlorobiocic_acid
+  }
+
+  branch from fadh2 side right {
+    fadh2
+    <-> ec_1_14_14_9 [1.14.14.9] +h +2_4_hydroxyphenyl_ethanol +o2 +fad +h2o
     hydroxytyrosol
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_1_1_81 [3.1.1.81] +n_3_oxohexanoyl_l_homoserine_lactone +h2o
+    n_3_oxohexanoyl_l_homoserine
+  }
+
+  branch from h side right {
+    h
+    <-> ec_5_5_1_7 [5.5.1.7] +2_5_dichloro_3_methyl_muconate
+    2_5_dichloro_3_methyl_muconolactone
+  }
+
+  branch from fad side left {
+    fad
+    <-> ec_1_14_14_9 [1.14.14.9] +fadh2 +h +o2 +l_tyrosine +h2o
+    l_dopa
+  }
+
+  branch from fad side right {
+    fad
+    <-> ec_1_1_99_13 [1.1.99.13] +alpha_lactose +fadh2 +h
+    3_ketolactose
   }
 }

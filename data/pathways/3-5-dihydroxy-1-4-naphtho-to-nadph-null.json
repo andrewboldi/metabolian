@@ -1,0 +1,442 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-5-dihydroxy-1-4-naphtho-to-nadph-null",
+  "name": "3,5-Dihydroxy-1,4-naphtho… to NADPH",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 3,5-Dihydroxy-1,4-naphthoquinone to NADPH, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR195760"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_5_dihydroxy_1_4_naphthoquinone",
+      "name": "3,5-Dihydroxy-1,4-naphthoquinone",
+      "short": "3,5-Dihydroxy-1,4-n…",
+      "formula": "C10H5O4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1369290"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "juglone",
+      "name": "juglone",
+      "formula": "C10H6O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM3626"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "1_4_5_naphthalenetriol",
+      "name": "1,4,5-Naphthalenetriol",
+      "short": "1,4,5-Naphthalenetr…",
+      "formula": "C10H8O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:173810"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_17_3_4",
+      "name": "juglone 3-hydroxylase",
+      "ec": [
+        "1.17.3.4"
+      ]
+    },
+    {
+      "id": "ec_1_11_1_1",
+      "name": "NADH peroxidase",
+      "ec": [
+        "1.11.1.1"
+      ]
+    },
+    {
+      "id": "ec_1_6_5_2",
+      "name": "NAD(P)H dehydrogenase (quinone)",
+      "ec": [
+        "1.6.5.2"
+      ],
+      "xrefs": {
+        "uniprot": "P15559"
+      }
+    },
+    {
+      "id": "ec_1_8_1_15",
+      "name": "mycothione reductase",
+      "ec": [
+        "1.8.1.15"
+      ]
+    },
+    {
+      "id": "ec_1_8_1_9",
+      "name": "thioredoxin-disulfide reductase (NADPH)",
+      "ec": [
+        "1.8.1.9"
+      ],
+      "xrefs": {
+        "uniprot": "P62341"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "juglone 3-hydroxylase",
+      "ec": "1.17.3.4",
+      "substrates": [
+        {
+          "metabolite": "3_5_dihydroxy_1_4_naphthoquinone",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "juglone",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_17_3_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR195760"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR195760"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "NADH peroxidase",
+      "ec": "1.11.1.1",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "juglone",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_4_5_naphthalenetriol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_11_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR130303"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR130303"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "NAD(P)H dehydrogenase (quinone)",
+      "ec": "1.6.5.2",
+      "substrates": [
+        {
+          "metabolite": "1_4_5_naphthalenetriol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "juglone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_6_5_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR129914"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR129914"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3_5_dihydroxy_1_4_naphthoquinone_3-5-dihydroxy-1-4-naphtho-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_5_dihydroxy_1_4_naphthoquinone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-5-dihydroxy-1-4-naphtho-to-nadph"
+      },
+      "note": "Shares 3,5-Dihydroxy-1,4-naphthoquinone with 3,5-Dihydroxy-1,4-naphtho… to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1369290"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_5_dihydroxy_1_4_naphthoquinone_acetoin-to-nad-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_5_dihydroxy_1_4_naphthoquinone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetoin-to-nad-null"
+      },
+      "note": "Shares 3,5-Dihydroxy-1,4-naphthoquinone with acetoin to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1369290"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_5_dihydroxy_1_4_naphthoquinone_chloroacetaldehyde-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_5_dihydroxy_1_4_naphthoquinone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "chloroacetaldehyde-to-nad"
+      },
+      "note": "Shares 3,5-Dihydroxy-1,4-naphthoquinone with chloroacetaldehyde to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1369290"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_5_dihydroxy_1_4_naphthoquinone_divinyl-chlorophyllide-a-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_5_dihydroxy_1_4_naphthoquinone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "divinyl-chlorophyllide-a-to-h2o-null"
+      },
+      "note": "Shares 3,5-Dihydroxy-1,4-naphthoquinone with divinyl chlorophyllide a to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1369290"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_5_dihydroxy_1_4_naphthoquinone_enterobacterial-common-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_5_dihydroxy_1_4_naphthoquinone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "enterobacterial-common-to-h2o"
+      },
+      "note": "Shares 3,5-Dihydroxy-1,4-naphthoquinone with (enterobacterial common… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1369290"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_juglone_3-5-dihydroxy-1-4-naphtho-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "juglone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-5-dihydroxy-1-4-naphtho-to-nadph"
+      },
+      "note": "Shares juglone with 3,5-Dihydroxy-1,4-naphtho… to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM3626"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_4_5_naphthalenetriol_3-5-dihydroxy-1-4-naphtho-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_4_5_naphthalenetriol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-5-dihydroxy-1-4-naphtho-to-nadph"
+      },
+      "note": "Shares 1,4,5-Naphthalenetriol with 3,5-Dihydroxy-1,4-naphtho… to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:173810"
+          }
+        ]
+      }
+    }
+  ]
+}

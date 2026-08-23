@@ -4,51 +4,105 @@
 # edit the generator, not this file.
 
 pathway udp-to-coa-null "UDP to CoA" {
-  spacing 312
+  spacing 284
 
   spine at 0,0 {
     udp
-    <-> ec_2_4_1_297 [2.4.1.297] +pelargonidin_3_o_sophoroside -pelargonidin_3_o_d_glucoside_betaine
+    <-> . +curcumin_4_4_o_beta_d_digentiobioside +h -curcumin_4_o_beta_d_gentiobiosyl_4_o_beta_d_gluc
     udp_alpha_d_glucose
-    <-> ec_2_3_1_171 [2.3.1.171] +malonyl_coa +pelargonidin_3_o_d_glucoside_betaine +h -coa
-    pelargonidin_3_o_6_o_malonyl_d_glucoside
-    <-> . +malonyl_coa +h -coa
-    pelargonidin_3_o_3_6_o_dimalonylglucoside
-  }
-
-  branch from udp_alpha_d_glucose side left {
+    <-> . +udp +h +curcumin_4_o_beta_d_gentiobiosyl_4_o_beta_d_gluc -udp_alpha_d_glucose
+    curcumin_4_o_beta_d_gentiobioside
+    <-> . +udp +h -curcumin_monoglucoside
     udp_alpha_d_glucose
-    <-> ec_2_4_1_202 [2.4.1.202] +udp +dimboa_beta_d_glucoside
-    dimboa
+    <-> . +udp +h +curcumin_monoglucoside -udp_alpha_d_glucose
+    curcumin
+    <-> ec_2_3_1_217 [2.3.1.217] +co2 +h +coa -feruloyl_diketide_coa -h2o
+    e_feruloyl_coa
+    <-> ec_2_3_1_64 [2.3.1.64] +agmatine -feruloylagmatine -coa
+    h
   }
 
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> . +udp +beta_d_glc_1_3_6_o_succinoyl_beta_d_glc_1_3_beta +h
-    6_o_succinoyl_beta_d_glc_1_3_beta_d_glc_1_6_beta
+  branch from h2o side left {
+    h2o
+    <-> . +mupirocin_c1
+    mupirocin_p
   }
 
-  branch from pelargonidin_3_o_d_glucoside_betaine side left {
-    pelargonidin_3_o_d_glucoside_betaine
-    <-> . +glucose +pelargonidin_3_o_6_o_malyl_beta_d_glucoside
-    1_o_malyl_beta_d_glucose
+  branch from h2o side right {
+    h2o
+    <-> . +pelargonidin
+    4s_2_3_dehydroleucopelargonidin
   }
 
-  branch from pelargonidin_3_o_d_glucoside_betaine side right {
-    pelargonidin_3_o_d_glucoside_betaine
-    <-> ec_2_4_1_298 [2.4.1.298] +udp +udp_alpha_d_glucose
-    pelargonin
+  branch from h side left {
+    h
+    <-> . +4_e_2_3_4_dihydroxyphenyl_ethenyl_1_7_dihydroxy +co2
+    excited_state_fungal_oxyluciferin
+  }
+
+  branch from h side right {
+    h
+    <-> . +sinalbin +h2o +e_2_4_hydroxyphenyl_n_sulfonatooxy_ethenimidoth
+    glucose
   }
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_65 [2.3.1.65] +chenodeoxycholoyl_coa +taurine
-    taurochenodeoxycholate
+    <-> . +3_5_dioxodecanoyl_coa
+    4_hydroxy_6_pentylpyran_2_one
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_7 [2.3.1.7] +acetyl_coa +carnitine
-    o_acetyl_r_carnitine
+    <-> . +3_5_7_trioxododecanoyl_coa
+    4_hydroxy_6_2_oxoheptyl_pyran_2_one
+  }
+
+  branch from h side left {
+    h
+    <-> . +3_5_di_c_glucosyl_2_4_4_6_tetrahydroxydibenzoylm +h2o
+    isovitexin_8_c_glucoside
+  }
+
+  branch from h side right {
+    h
+    <-> . +isovitexin_8_c_glucoside +h2o
+    3_5_di_c_glucosyl_2_4_4_6_tetrahydroxydibenzoylm
+  }
+
+  branch from co2 side left {
+    co2
+    <-> . +menaquinol_8 +mk_8 +h +formate
+    pmf
+  }
+
+  branch from co2 side right {
+    co2
+    <-> ec_1_2_2_1 [1.2.2.1] +pmf +menaquinol_8 +pmf +h +formate
+    mk_8
+  }
+
+  branch from coa side left {
+    coa
+    <-> . +4_hydroxy_6_2_oxoheptyl_pyran_2_one
+    3_5_7_trioxododecanoyl_coa
+  }
+
+  branch from coa side right {
+    coa
+    <-> . +4_coumaroyl_coa +4_hydroxycinnamyl_alcohol
+    4_coumaryl_4_coumarate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_2_1_147 [3.2.1.147] +sinalbin +glucose
+    e_2_4_hydroxyphenyl_n_sulfonatooxy_ethenimidoth
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_1_53 [3.6.1.53] +cyclic_adp_ribose +h
+    1_5_phospho_beta_d_ribosyl_5_amp
   }
 }

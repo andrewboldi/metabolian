@@ -137,53 +137,6 @@
       "xrefs": {
         "chebi": "CHEBI:62898"
       }
-    },
-    {
-      "id": "cefoperazone",
-      "name": "cefoperazone",
-      "formula": "C25H27N9O8S2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM736483"
-      }
-    },
-    {
-      "id": "phosphate",
-      "name": "phosphate",
-      "formula": "HO4P",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM9"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "WATER"
-      }
-    },
-    {
-      "id": "4_phosphopentanoyl_coa",
-      "name": "4-phosphopentanoyl-CoA",
-      "short": "4-phosphopentanoyl-…",
-      "formula": "C26H39N7O21P4S",
-      "charge": -6,
-      "xrefs": {
-        "chebi": "CHEBI:231934"
-      }
-    },
-    {
-      "id": "4_hydroxypentanoyl_coa",
-      "name": "4-hydroxypentanoyl-CoA",
-      "short": "4-hydroxypentanoyl-…",
-      "formula": "C26H40N7O18P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:231929"
-      }
     }
   ],
   "enzymes": [
@@ -199,14 +152,10 @@
       "name": "choline kinase",
       "ec": [
         "2.7.1.32"
-      ]
-    },
-    {
-      "id": "ec_7_6_2_2",
-      "name": "ABC-type xenobiotic transporter",
-      "ec": [
-        "7.6.2.2"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P35790"
+      }
     }
   ],
   "reactions": [
@@ -353,101 +302,115 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "ABC-type xenobiotic transporter",
-      "ec": "7.6.2.2",
-      "substrates": [
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "cefoperazone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "cefoperazone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_7_6_2_2"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR186058"
+      "id": "xt_mevalonate_5pp_r-mevalonate-to-isopentenyl-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "mevalonate_5pp"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "r-mevalonate-to-isopentenyl-diphosphate"
+      },
+      "note": "Shares (R)-5-Diphosphomevalonate with (R)-mevalonate to isopentenyl diphosphate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR186058"
+            "db": "ChEBI",
+            "id": "CHEBI:57557"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "Reaction MNXR186794",
-      "substrates": [
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "4_phosphopentanoyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "4_hydroxypentanoyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR186794"
+      "id": "xt_mevalonate_5p_r-mevalonate-to-isopentenyl-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "mevalonate_5p"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "r-mevalonate-to-isopentenyl-diphosphate"
+      },
+      "note": "Shares (R)-5-Phosphomevalonate with (R)-mevalonate to isopentenyl diphosphate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR186794"
+            "db": "ChEBI",
+            "id": "CHEBI:58146"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_isopentenyl_phosphate_2e-3-methylpent-2-enoat-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isopentenyl_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2e-3-methylpent-2-enoat-to-nad"
+      },
+      "note": "Shares isopentenyl phosphate with (2E)-3-methylpent-2-enoat… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:65078"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_isopentenyl_phosphate_diphosphate-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isopentenyl_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-diphosphate"
+      },
+      "note": "Shares isopentenyl phosphate with diphosphate to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:65078"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_isopentenyl_phosphate_r-mevalonate-to-isopentenyl-diphosphate-42884",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isopentenyl_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-mevalonate-to-isopentenyl-diphosphate-42884"
+      },
+      "note": "Shares isopentenyl phosphate with (R)-mevalonate to isopentenyl diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:65078"
           }
         ]
       }

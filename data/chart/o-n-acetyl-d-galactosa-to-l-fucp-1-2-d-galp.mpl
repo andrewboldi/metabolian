@@ -16,18 +16,6 @@ pathway o-n-acetyl-d-galactosa-to-l-fucp-1-2-d-galp "O-(N-acetyl-Î±-D-galactosaâ
     l_fucp_1_2_d_galp_1_3_d_galpnac
   }
 
-  branch from o3_d_galactosyl_1_3_n_acetyl_d_galactosaminyl_l side left {
-    o3_d_galactosyl_1_3_n_acetyl_d_galactosaminyl_l
-    <-> ec_2_4_1_102 [2.4.1.102] +udpglcnac +udp +hplus
-    o3_d_galactosyl_1_3_n_acetyl_d_glucosaminyl_1_6
-  }
-
-  branch from o3_d_galactosyl_1_3_n_acetyl_d_galactosaminyl_l side right {
-    o3_d_galactosyl_1_3_n_acetyl_d_galactosaminyl_l
-    <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
-    3_o_3_o_sulfo_d_galactosyl_1_3_n_acetyl_d_galact
-  }
-
   branch from l_threonine side left {
     l_threonine
     <-> ec_2_7_11_30 [2.7.11.30] +atp +adp +hplus
@@ -36,7 +24,19 @@ pathway o-n-acetyl-d-galactosa-to-l-fucp-1-2-d-galp "O-(N-acetyl-Î±-D-galactosaâ
 
   branch from l_threonine side right {
     l_threonine
-    <-> . +octanoyl_coa +coa
-    o_octanoyl_l_threonine
+    <-> ec_2_4_1_221 [2.4.1.221] +gdp_l_fucose +gdp +hplus
+    l_fucosyl_l_threonyl
+  }
+
+  branch from gdp_l_fucose side left {
+    gdp_l_fucose
+    <-> . +n_acetyl_neuraminosyl_2_3_d_galactosyl_1_4_n_ace +gdp +hplus
+    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_4_l_fuc
+  }
+
+  branch from gdp_l_fucose side right {
+    gdp_l_fucose
+    <-> . +n_acetyl_neuraminosyl_2_3_d_galactosyl_1_4_n_ace +gdp +hplus
+    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_4_l_fuc
   }
 }

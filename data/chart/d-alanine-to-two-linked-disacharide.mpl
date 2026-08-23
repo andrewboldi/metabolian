@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-alanine-to-two-linked-disacharide "D-alanine to Two linked disacharide…" {
-  spacing 254
+  spacing 272
 
   spine at 0,0 {
     d_alanine
@@ -16,33 +16,51 @@ pathway d-alanine-to-two-linked-disacharide "D-alanine to Two linked disacharide
     undecaprenyl_diphospho_n_acetylmuramoyl_n_acetyl
   }
 
-  branch from three_disacharide_linked_murein_units_pentapepti side left {
-    three_disacharide_linked_murein_units_pentapepti
-    <-> . +d_alanine +h
-    a_peptidoglycan_trimer_with_pentapeptide_stems_m
+  branch from h2o side left {
+    h2o
+    <-> . +glucose
+    d_glucosyl_1_4_d_mannose
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_14_13_52 [1.14.13.52] +biochanin_a +h +o2 +nadph +nadp
-    pratensein
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_4_2_1_119 [4.2.1.119] +2e_6z_9z_12z_15z_18z_tetracosahexaenoyl_coa
-    3r_6z_9z_12z_15z_18z_3_hydroxytetracosapentaeno
-  }
-
-  branch from h side right {
-    h
-    <-> ec_1_14_13_21 [1.14.13.21] +garbanzol +o2 +nadph +trans_fustin +h2o
-    nadp
+    <-> . +l_leucine +l_methionine +l_arginine
+    methionyl_arginyl_leucine
   }
 
   branch from h side left {
     h
-    <-> ec_4_4_1_13 [4.4.1.13] +pyruvate +e_2_indol_3_yl_1_thioacetohydroximate +nh4 +h2o
-    s_indolylmethylthiohydroximoyl_l_cysteine
+    <-> . +adp +phosphate +atp +h2o
+    2_linoleoylglycerophosphocholine
+  }
+
+  branch from h side right {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    2_oleoylglycerophosphocholine
+  }
+
+  branch from h side left {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    1_arachidonoyl_glycero_3_phosphocholine
+  }
+
+  branch from h side right {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    1_docosahexaenoylglycerophosphocholine
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +methionyl_phenylalanyl_arginine +l_arginine +l_phenylalanine
+    l_methionine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +methionyl_tryptophanyl_phenylalanine +l_methionine +l_phenylalanine
+    l_tryptophan
   }
 }

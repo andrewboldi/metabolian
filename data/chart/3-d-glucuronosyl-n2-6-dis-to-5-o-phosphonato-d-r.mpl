@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-d-glucuronosyl-n2-6-dis-to-5-o-phosphonato-d-r "3-D-glucuronosyl-N2,6-dis… to 5-O-phosphonato-α-D-ribof…" {
-  spacing 298
+  spacing 340
 
   spine at 0,0 {
     3_d_glucuronosyl_n2_6_disulfonato_d_glucosamine
@@ -42,43 +42,97 @@ pathway 3-d-glucuronosyl-n2-6-dis-to-5-o-phosphonato-d-r "3-D-glucuronosyl-N2,6-
 
   branch from sulfate side left {
     sulfate
-    <-> ec_1_14_11_77 [1.14.11.77] +nonyl_sulfate +akg +o2 +succinate +co2 +hplus
-    nonanal
+    <-> . +z_n_sulfonatooxy_prop_2_enimidothioate +sulfur_atom
+    allyl_cyanide
   }
 
   branch from sulfate side right {
     sulfate
-    <-> ec_1_14_11_77 [1.14.11.77] +decyl_sulfate +akg +o2 +succinate +co2 +hplus
-    decanal
+    <-> . +z_3_hydroxypropyl_n_sulfonatooxy_methanimidothi
+    3_hydroxypropyl_isothiocyanate
   }
 
-  branch from n_acetyl_d_galactosamine_1_phosphate side left {
-    n_acetyl_d_galactosamine_1_phosphate
-    <-> . +udp_n_acetyl_d_galactosamine +h2o +hplus
-    ump
-  }
-
-  branch from udp_n_acetyl_d_galactosamine side right {
+  branch from udp_n_acetyl_d_galactosamine side left {
     udp_n_acetyl_d_galactosamine
     <-> ec_2_4_1_244 [2.4.1.244] +n_acetyl_d_glucosaminide +udp +hplus
     n_acetyl_d_galactosaminyl_1_4_n_acetyl_d_glucosa
   }
 
-  branch from udp_n_acetyl_d_galactosamine side left {
+  branch from udp_n_acetyl_d_galactosamine side right {
     udp_n_acetyl_d_galactosamine
     <-> ec_5_1_3_7 [5.1.3.7]
     udpglcnac
   }
 
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_46 [4.2.3.46] +fpp
+    e_e_farnesene
+  }
+
   branch from ppi side right {
     ppi
-    <-> ec_6_1_3_1 [6.1.3.1] +2r_3s_2_alkyl_3_hydroxyalkanoate +atp +amp
-    cis_3_4_dialkyloxetan_2_one
+    <-> ec_3_1_7_6 [3.1.7.6] +fpp +h2o
+    2_trans_6_trans_farnesol
+  }
+
+  branch from d_glucopyranuronate side left {
+    d_glucopyranuronate
+    <-> ec_3_2_1_167 [3.2.1.167] +baicalin +h2o +hplus
+    baicalein
+  }
+
+  branch from d_glucopyranuronate side right {
+    d_glucopyranuronate
+    <-> ec_3_2_1_167 [3.2.1.167] +wogonin_7_o_d_glucuronate +h2o +hplus
+    wogonin
+  }
+
+  branch from sulfate side left {
+    sulfate
+    <-> . +z_4_methylsufinylbutyl_n_sulfonatooxy_methanimi
+    sulforaphane
+  }
+
+  branch from sulfate side right {
+    sulfate
+    <-> . +z_2r_2_hydroxy_3_butenyl_n_sulfonatooxy_methani
+    s_goitrin
+  }
+
+  branch from utp side left {
+    utp
+    <-> . +ctp +ppi
+    3_3_cyclic_cmp_ump
+  }
+
+  branch from utp side right {
+    utp
+    <-> . +e_e_e_geranylgeraniol +udp +hplus
+    2e_6e_10e_geranylgeranyl_phosphate
+  }
+
+  branch from udp_n_acetyl_d_galactosamine side left {
+    udp_n_acetyl_d_galactosamine
+    <-> . +n_glycoloylneuraminosyl_2_3_d_galactosyl_1_4_n +udp +hplus
+    n_acetyl_d_galactosaminyl_1_4_n_glycoloylneurami
+  }
+
+  branch from udp_n_acetyl_d_galactosamine side right {
+    udp_n_acetyl_d_galactosamine
+    <-> . +d_galactosyl_1_4_d_glucosyl_1_1_n_acylsphingosi +udp +hplus
+    n_acetyl_d_galactosaminyl_1_4_d_galactosyl_1_4_d
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_6_2_1_40 [6.2.1.40] +4_hydroxybutyrate +atp +coa +amp
-    4_hydroxybutyryl_coa
+    <-> ec_4_2_3_49 [4.2.3.49] +fpp +h2o
+    3r_6e_nerolidol
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_2_5_1_31 [2.5.1.31] +ipp +fpp
+    ditrans_polycis_undecaprenyl_diphosphate
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway z-1-l-cysteinylglycin-to-e-7-methylsulfanyl-hep "(Z)-1-(L-cysteinylglycin-… to (E)-7-(methylsulfanyl)hep…" {
-  spacing 302
+  spacing 224
 
   spine at 0,0 {
     z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth
@@ -20,83 +20,5 @@ pathway z-1-l-cysteinylglycin-to-e-7-methylsulfanyl-hep "(Z)-1-(L-cysteinylglyci
     n_n_dihydroxy_l_tetrahomomethioninate
     <-> . +hplus -co2 -h2o
     e_7_methylsulfanyl_heptanal_oxime
-  }
-
-  branch from glycine side left {
-    glycine
-    <-> . +l_serine +l_glutamate +h2o
-    seryl_glycyl_glutamate
-  }
-
-  branch from glycine side right {
-    glycine
-    <-> . +octanedioyl_coa +h +suberylglycine
-    coa
-  }
-
-  branch from h side left {
-    h
-    <-> . +r_carnitine +5z_8z_11z_eicosatrienoyl_coenzyme_a +coa
-    acar_20_3
-  }
-
-  branch from h side right {
-    h
-    <-> . +nonadecanoyl_coa +acetyl_coa +coa
-    3_oxoheneicosanoyl_coenzyme_a
-  }
-
-  branch from e_7_methylsulfanyl_heptanal_oxime side left {
-    e_7_methylsulfanyl_heptanal_oxime
-    <-> . +h +nadph +nadp +h2o
-    7_methylthioheptanonitrile_oxide
-  }
-
-  branch from o2 side right {
-    o2
-    <-> ec_1_13_12_3 [1.13.12.3] +co2 +3_methylsulfanylpropanamide +h2o
-    l_methionine
-  }
-
-  branch from o2 side left {
-    o2
-    <-> ec_1_7_3_1 [1.7.3.1] +nitrite +h +acetone +h2o2 +h2o
-    2_nitropropane
-  }
-
-  branch from l_cysteine side right {
-    l_cysteine
-    <-> . +l_asparagine +l_proline +h2o
-    prolyl_asparaginyl_cysteine
-  }
-
-  branch from l_cysteine side left {
-    l_cysteine
-    <-> . +l_proline +h2o
-    prolyl_cysteine
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> . +2_methylpropanoyl_coa +malonyl_coa +h +r_methylmalonyl_coa +co2 +nadp +coa +h2o
-    6_8a_seco_6_8a_deoxy_5_oxoavermectin_1b_aglycon
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> ec_1_3_1_20 [1.3.1.20] +1r_2s_1_2_dihydronaphthalene_1_2_diol +nadp +h
-    naphthalene_1_2_diol
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> ec_1_14_19_54 [1.14.19.54] +s_reticulinium +fmnh2 +o2 +h2o +hplus
-    reticulinylium
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> ec_1_14_14_76 [1.14.14.76] +ent_isokaurene +fmnh2 +o2 +h2o +hplus
-    2_3_dihydroxy_ent_isokaurene
   }
 }

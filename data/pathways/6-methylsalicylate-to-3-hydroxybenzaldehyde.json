@@ -155,35 +155,6 @@
       "xrefs": {
         "chebi": "CHEBI:57287"
       }
-    },
-    {
-      "id": "6_deoxo_28_norteasterone",
-      "name": "6-deoxo-28-norteasterone",
-      "short": "6-deoxo-28-norteast…",
-      "formula": "C27H48O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:188985"
-      }
-    },
-    {
-      "id": "28_norteasterone",
-      "name": "28-norteasterone",
-      "formula": "C27H46O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:188988"
-      }
-    },
-    {
-      "id": "6_hydroxy_28_norteasterone",
-      "name": "6α-hydroxy-28-norteasterone",
-      "short": "6α-hydroxy-28-norte…",
-      "formula": "C27H48O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:188987"
-      }
     }
   ],
   "enzymes": [
@@ -386,105 +357,93 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "6-deoxo-28-norteasterone + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = 28-norteas...",
-      "equation": "6-deoxo-28-norteasterone + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = 28-norteasterone + 2 oxidized [NADPH--hemoprotein reductase] + 3 H2O + 2 H(+)",
-      "substrates": [
-        {
-          "metabolite": "6_deoxo_28_norteasterone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "28_norteasterone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:70111"
+      "id": "xt_6_methylsalicylate_malonyl-coa-to-hydrogen-acceptor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_methylsalicylate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "malonyl-coa-to-hydrogen-acceptor"
+      },
+      "note": "Shares 6-methylsalicylate with malonyl-CoA to hydrogen acceptor.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:70111"
+            "db": "ChEBI",
+            "id": "CHEBI:36658"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "6-deoxo-28-norteasterone + reduced [NADPH--hemoprotein reductase] + O2 = 6alpha-hydroxy...",
-      "equation": "6-deoxo-28-norteasterone + reduced [NADPH--hemoprotein reductase] + O2 = 6alpha-hydroxy-28-norteasterone + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "6_deoxo_28_norteasterone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "6_hydroxy_28_norteasterone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:70115"
+      "id": "xt_3_hydroxybenzyl_alcohol_abietatriene-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_hydroxybenzyl_alcohol"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "abietatriene-to-fmn"
+      },
+      "note": "Shares 3-hydroxybenzyl alcohol with abietatriene to FMN.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:70115"
+            "db": "ChEBI",
+            "id": "CHEBI:17069"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_hydroxybenzyl_alcohol_benzoylagmatinium-to-glycine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_hydroxybenzyl_alcohol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "benzoylagmatinium-to-glycine"
+      },
+      "note": "Shares 3-hydroxybenzyl alcohol with benzoylagmatinium to glycine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17069"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_hydroxybenzaldehyde_19-4-hydroxyphenyl-nonad-to-o-s-c37-phenol-carbo",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_hydroxybenzaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "19-4-hydroxyphenyl-nonad-to-o-s-c37-phenol-carbo"
+      },
+      "note": "Shares 3-hydroxybenzaldehyde with 19-(4-hydroxyphenyl)nonad… to O-(S-C37-(phenol)carboxyp….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16207"
           }
         ]
       }

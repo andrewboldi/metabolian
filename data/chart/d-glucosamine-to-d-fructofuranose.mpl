@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-glucosamine-to-d-fructofuranose "α-D-glucosamine… to β-D-fructofuranose…" {
-  spacing 304
+  spacing 340
 
   spine at 0,0 {
     d_glucosamine_6_phosphate
@@ -30,13 +30,49 @@ pathway d-glucosamine-to-d-fructofuranose "α-D-glucosamine… to β-D-fructofur
 
   branch from nh3 side left {
     nh3
-    <-> ec_1_4_1_19 [1.4.1.19] +l_tryptophan +nad +h2o +nadh +hplus
-    3_indol_3_yl_pyruvate
+    <-> ec_3_5_2_18 [3.5.2.18] +1_4_5_6_tetrahydro_6_oxonicotinate +h2o
+    2_formylglutarate
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_1_4_1_19 [1.4.1.19] +nadp +h2o +3_indol_3_yl_pyruvate +nadph +hplus
-    l_tryptophan
+    <-> ec_3_5_1_84 [3.5.1.84] +biuret +h2o
+    urea_1_carboxylate
+  }
+
+  branch from d_fructofuranose_6_phosphate side left {
+    d_fructofuranose_6_phosphate
+    <-> ec_2_4_1_329 [2.4.1.329] +sucrose_6f_phosphate +pi
+    g1p
+  }
+
+  branch from d_fructofuranose_6_phosphate side right {
+    d_fructofuranose_6_phosphate
+    <-> ec_5_3_1_9 [5.3.1.9]
+    d_fructofuranose_6_phosphate
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_3_5_1_73 [3.5.1.73] +r_carnitinamide +h2o
+    carnitine
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_6_3_4_16 [6.3.4.16] +hco3 +atp +adp +pi +hplus
+    carbamoyl_p
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_2_5_1_36 [2.5.1.36] +3_6_9_trihydroxypterocarpan +dmapp
+    6as_11as_4_dimethylallyl_3_6a_9_trihydroxyptero
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_2_5_1_68 [2.5.1.68] +ipp +gpp
+    2_cis_6_trans_farnesyl_diphosphate
   }
 }

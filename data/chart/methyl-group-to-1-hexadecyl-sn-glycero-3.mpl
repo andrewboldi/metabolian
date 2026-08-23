@@ -28,88 +28,40 @@ pathway methyl-group-to-1-hexadecyl-sn-glycero-3 "methyl group to 1-hexadecyl-sn
     1_hexadecyl_sn_glycero_3_phosphate
   }
 
-  branch from formaldehyde side left {
-    formaldehyde
-    <-> . +1_methyldeoxyadenosine_5_monophosphate +akg +o2 +succinate +co2 +hplus
-    2_deoxyadenosine_5_monophosphate_1
-  }
-
-  branch from formaldehyde side right {
-    formaldehyde
-    <-> . +akg +o2 +2_deoxyadenosine_5_monophosphate_1 +succinate +co2 +hplus
-    1_methyldeoxyadenosine_5_monophosphate
-  }
-
-  branch from succinate side left {
-    succinate
-    <-> . +lauroyl_coa +akg +o2 +co2
-    2_hydroxydodecanoyl_coa
-  }
-
-  branch from succinate side right {
-    succinate
-    <-> . +myristoyl_coa +akg +o2 +co2
-    2_hydroxytetradecanoyl_coa
-  }
-
   branch from alanine side left {
     alanine
-    <-> ec_1_5_1_17 [1.5.1.17] +nad +h2o +pyruvate +nadh +hplus
-    2_2_iminodipropanoate
+    <-> ec_6_3_2_49 [6.3.2.49] +anticapsin +atp +adp +pi +hplus
+    bacilysin
   }
 
   branch from alanine side right {
     alanine
-    <-> ec_2_6_1_51 [2.6.1.51] +serine +pyruvate
-    3_hydroxypyruvate
-  }
-
-  branch from 5_deoxyadenosine side left {
-    5_deoxyadenosine
-    <-> . +utp +hydrogen_donor +sam +methionine +hydrogen_acceptor +h2o +hplus
-    3_deoxy_3_4_didehydro_utp
-  }
-
-  branch from 5_deoxyadenosine side right {
-    5_deoxyadenosine
-    <-> ec_1_21_98_5 [1.21.98.5] +2_3_di_o_phytanyl_sn_glycero_1_phospho_3_sn_glyc +hydrogen_donor +sam +methionine +hydrogen_acceptor +hplus
-    glycerol_dibiphytanyl_glycerol_tetraether_glycer
-  }
-
-  branch from methionine side left {
-    methionine
-    <-> . +2_3_di_o_phytanyl_sn_glycerol +hydrogen_donor +sam +5_deoxyadenosine +hydrogen_acceptor +hplus
-    glycerol_dibiphytanyl_glycerol_tetraether
-  }
-
-  branch from methionine side right {
-    methionine
-    <-> . +3_l_methionyl_adenylyl_zwitterionic_group +h2o +hplus
-    amp_3_end_1
+    <-> . +2s_3s_5r_10r_12s_14s_15r_16r_2_amino_12_16_dime +pyruvate
+    3s_5r_10r_12s_14s_15r_16r_3_5_10_14_15_pentahyd
   }
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +hydrogen_donor +o2 +h2o
-    4z_7z_10z_14e_16z_19z_13_hydroxydocosahexaenoat
+    <-> . +terremutin +hydrogen_donor
+    terreate
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +hydrogen_donor +o2 +h2o
-    18_r_hepe
+    <-> . +cdp_2_3_bis_o_geranylgeranyl_sn_glycerol +hydrogen_donor
+    cdp_2_3_bis_o_phytanyl_sn_glycerol
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_261 [2.1.1.261] +4_3_methylbut_2_enyl_l_tryptophan +sam +hplus
-    4_3_methylbut_2_enyl_l_abrine
+    <-> . +2_hydroxy_17_estradiol +sam +hplus
+    2_hydroxyestradiol_3_methyl_ether
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_265 [2.1.1.265] +tellurite +sam
-    methanetelluronate
+    <-> . +4_hydroxy_17_estradiol +sam +hplus
+    4_methoxy_17_estradiol
   }
 
   branch from 1_palmitoylglycerone_3_phosphate side left {
@@ -140,5 +92,95 @@ pathway methyl-group-to-1-hexadecyl-sn-glycero-3 "methyl group to 1-hexadecyl-sn
     palmitate
     <-> ec_3_1_1_64 [3.1.1.64] +h2o +11_cis_retinol +hplus
     all_trans_retinyl_palmitate
+  }
+
+  branch from alanine side right {
+    alanine
+    <-> ec_6_2_1_67 [6.2.1.67] +holo-acp +atp +amp +ppi
+    o_s_l_alanyl_pantetheine_4_phosphoryl_l_serine_r
+  }
+
+  branch from alanine side left {
+    alanine
+    <-> . +atp +hplus +ppi
+    l_alanyl_amp
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> . +2_3_bis_o_geranylgeranyl_sn_glycero_3_phospho_l +hydrogen_acceptor
+    2_3_bis_o_phytanyl_sn_glycero_3_phospho_l_serine
+  }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> . +2_amino_6_hydroxyaminopurine +hydrogen_acceptor +h2o
+    9h_purine_2_6_diamine
+  }
+
+  branch from sam side right {
+    sam
+    <-> . +4_hydroxyestrone +sah +hplus
+    4_methoxyestrone
+  }
+
+  branch from sam side left {
+    sam
+    <-> . +2_hydroxyestrone +sah +hplus
+    2_hydroxy_3_o_methyl_estrone
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_49 [2.1.1.49] +secondary_ammonium_ion +sam +hplus
+    methylated_secondary_ammonium_ion
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_49 [2.1.1.49] +tertiary_ammonium_ion +sam +hplus
+    methylated_tertiary_amine
+  }
+
+  branch from palmitoyl_coa side right {
+    palmitoyl_coa
+    <-> . +fad +hplus +fadh2
+    trans_hexadecenoyl_coa
+  }
+
+  branch from palmitoyl_coa side left {
+    palmitoyl_coa
+    <-> . +acetyl_coa +coa
+    3_oxooctadecanoyl_coa
+  }
+
+  branch from 1_palmitoylglycerone_3_phosphate side right {
+    1_palmitoylglycerone_3_phosphate
+    <-> . +heptadecan_1_ol +palmitate +hplus
+    1_heptadecylglycerone_3_phosphate
+  }
+
+  branch from 1_palmitoylglycerone_3_phosphate side left {
+    1_palmitoylglycerone_3_phosphate
+    <-> . +octadecan_1_ol +palmitate +hplus
+    1_octadecylglycerone_3_phosphate
+  }
+
+  branch from hexadecan_1_ol side right {
+    hexadecan_1_ol
+    <-> . +palmitoyl_coa +coa
+    palmityl_palmitate
+  }
+
+  branch from hexadecan_1_ol side left {
+    hexadecan_1_ol
+    <-> . +oleoyl_coa +coa
+    palmityl_oleate
+  }
+
+  branch from palmitate side right {
+    palmitate
+    <-> . +n_hexadecanoylphytosphingosine +h2o
+    phytosphingosine
   }
 }

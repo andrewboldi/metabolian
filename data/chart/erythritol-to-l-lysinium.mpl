@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway erythritol-to-l-lysinium "erythritol to L-lysinium" {
-  spacing 234
+  spacing 252
 
   spine at 0,0 {
     erythritol
@@ -36,21 +36,39 @@ pathway erythritol-to-l-lysinium "erythritol to L-lysinium" {
     d_threose
   }
 
-  branch from n6_d_erythrulosyl_l_lysinium side left {
-    n6_d_erythrulosyl_l_lysinium
-    <-> . +h +n6_3_o_phospho_d_erythrulosyl_l_lysinium_1 +adp
-    atp
+  branch from l_lysinium side left {
+    l_lysinium
+    <-> . +l_methionine +hypobromite +bromide +h2o +hplus
+    s_l_lysyl_l_methionine_sulfilimine
   }
 
   branch from l_lysinium side right {
     l_lysinium
-    <-> . +sam +sah +hplus
-    n6_methyl_l_lysinium
+    <-> . +o_s_hexadecanoylpantetheine_4_phosphoryl_serine +holo-acp +hplus
+    n6_hexadecanoyl_l_lysine
+  }
+
+  branch from erythritol side left {
+    erythritol
+    <-> ec_2_7_1_27 [2.7.1.27] +atp +adp +hplus
+    d_erythritol_4_phosphate
+  }
+
+  branch from erythritol side right {
+    erythritol
+    <-> . +nadp +nadph +hplus
+    d_erythrose
   }
 
   branch from l_lysinium side left {
     l_lysinium
-    <-> . +glyoxal
-    n6_1_hydroxy_2_oxoethyl_l_lysinium
+    <-> . +o_s_9z_hexadecenoylpantetheine_4_phosphoryl_seri +holo-acp +hplus
+    n6_9z_hexadec_9_enoyl_l_lysine
+  }
+
+  branch from l_lysinium side right {
+    l_lysinium
+    <-> ec_2_3_1_309 [2.3.1.309] +acetyl_coa +coa +hplus
+    n6_acetyl_l_lysine
   }
 }

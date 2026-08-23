@@ -1,0 +1,405 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "h-to-hydrogen-acceptor-null",
+  "name": "H to hydrogen acceptor",
+  "category": "other",
+  "summary": "A 3-step route from H(+) to hydrogen acceptor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR193861"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nitarsone",
+      "name": "nitarsone",
+      "formula": "C6H6AsNO5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62629"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "arsanilate",
+      "name": "arsanilate",
+      "formula": "C6H7AsNO3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM42633"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "p_aminophenylarsonous_acid",
+      "name": "p-aminophenylarsonous acid",
+      "short": "p-aminophenylarsono…",
+      "formula": "C6H8AsNO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50022"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "4_ammoniocyclohexa_2_5_dien_1_one",
+      "name": "4-ammoniocyclohexa-2,5-dien-1-one",
+      "short": "4-ammoniocyclohexa-…",
+      "formula": "C6H8NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:232331"
+      }
+    },
+    {
+      "id": "arsenite",
+      "name": "arsenite",
+      "formula": "H2AsO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29242"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR193861",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nitarsone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "arsanilate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR193861"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR193861"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR193857",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "arsanilate",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "p_aminophenylarsonous_acid",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR193857"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR193857"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "4-aminophenylarsonous acid + AH2 + O2 = 4-aminocyclohexa-2,5-dien-1-one + arsenite + A",
+      "equation": "4-aminophenylarsonous acid + AH2 + O2 = 4-aminocyclohexa-2,5-dien-1-one + arsenite + A",
+      "substrates": [
+        {
+          "metabolite": "p_aminophenylarsonous_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_ammoniocyclohexa_2_5_dien_1_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "arsenite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:82443"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82443"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_nitarsone_h-to-hydrogen-acceptor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nitarsone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-hydrogen-acceptor"
+      },
+      "note": "Shares nitarsone with H to hydrogen acceptor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62629"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_arsanilate_h-to-hydrogen-acceptor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "arsanilate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-hydrogen-acceptor"
+      },
+      "note": "Shares arsanilate with H to hydrogen acceptor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM42633"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_p_aminophenylarsonous_acid_h-to-hydrogen-acceptor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "p_aminophenylarsonous_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-hydrogen-acceptor"
+      },
+      "note": "Shares p-aminophenylarsonous acid with H to hydrogen acceptor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:50022"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_p_aminophenylarsonous_acid_nitarsone-iii-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "p_aminophenylarsonous_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nitarsone-iii-to-h2o"
+      },
+      "note": "Shares p-aminophenylarsonous acid with nitarsone (III) to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:50022"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_p_aminophenylarsonous_acid_nitarsone-iii-to-h2o-82439",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "p_aminophenylarsonous_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nitarsone-iii-to-h2o-82439"
+      },
+      "note": "Shares p-aminophenylarsonous acid with nitarsone (III) to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:50022"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_ammoniocyclohexa_2_5_dien_1_one_h-to-hydrogen-acceptor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_ammoniocyclohexa_2_5_dien_1_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-hydrogen-acceptor"
+      },
+      "note": "Shares 4-ammoniocyclohexa-2,5-dien-1-one with H to hydrogen acceptor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:232331"
+          }
+        ]
+      }
+    }
+  ]
+}

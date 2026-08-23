@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-rhamnulose-1-phosphate-to-h2o "L-rhamnulose 1-phosphate to H2O" {
-  spacing 176
+  spacing 242
 
   spine at 0,0 {
     l_rhamnulose_1_phosphate
@@ -20,25 +20,91 @@ pathway l-rhamnulose-1-phosphate-to-h2o "L-rhamnulose 1-phosphate to H2O" {
 
   branch from atp side left {
     atp
-    <-> . +diphosphate +h +amp +indol_3_yl_acetyl_l_glutamine +indol_3_yl_acetate
-    l_glutamine
+    <-> . +h +adp +phosphate +h2o
+    5alpha_pregnane_3_20_dione
   }
 
   branch from atp side right {
     atp
-    <-> . +1d_myo_inositol_3_4_bisphosphate +h +adp
-    1d_myo_inositol_3_phosphate
+    <-> . +h +adp +phosphate +h2o
+    lithocholate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_4_2_1_119 [4.2.1.119] +2_trans_5_cis_7_trans_tetradecatrienoyl_coa
-    3r_hydroxy_5_cis_7_trans_tetradecadienoyl_coa
+    <-> . +h +mycinamicin_v +o2 +nadph +mycinamicin_ii
+    nadp
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_4_2_1_119 [4.2.1.119] +2e_5e_dodeca_2_5_dienoyl_coa
-    3r_hydroxy_5_trans_dodecenoyl_coa
+    <-> . +mycinamicin_iv +o2 +nadph +nadp
+    mycinamicin_i
+  }
+
+  branch from l_rhamnulose_1_phosphate side left {
+    l_rhamnulose_1_phosphate
+    <-> . +h +adp +atp
+    l_rhamnulose
+  }
+
+  branch from h side right {
+    h
+    <-> . +mycinamicin_iv +o2 +nadph +nadp +h2o
+    mycinamicin_i
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_4_1_335 [2.4.1.335] +udp +2_3_diacetamido_2_3_dideoxy_beta_d_uronateglucos +an_archaeal_dolichyl_n_acetyl_alpha_d_glucosamin
+    udp_2_3_diacetamido_2_3_dideoxy_alpha_d_glucuron
+  }
+
+  branch from adp side right {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    13s_hydroperoxy_9z_11e_octadecadienoate
+  }
+
+  branch from adp side left {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    2_methoxy_17beta_estradiol
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    taurodeoxycholate
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    coproporphyrin_i
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_2_5_1_56 [2.5.1.56] +n_acetylneuraminate +phosphoenolpyruvate +h2o
+    aldehydo_n_acetyl_d_mannosamine
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    5_6_eet
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +adenine +ribosylhopane
+    adenosylhopane
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +ribosyl_hopane +adenosylhopane
+    adenine
   }
 }

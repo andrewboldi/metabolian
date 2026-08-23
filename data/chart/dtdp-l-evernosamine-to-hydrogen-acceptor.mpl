@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dtdp-l-evernosamine-to-hydrogen-acceptor "dTDP-β-L-evernosamine to hydrogen acceptor" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     dtdp_l_evernosamine
@@ -14,17 +14,5 @@ pathway dtdp-l-evernosamine-to-hydrogen-acceptor "dTDP-β-L-evernosamine to hydr
     dtdp_2_3_6_trideoxy_3_c_methyl_4_o_methyl_3_nitr
     <-> . +hydrogen_donor +o2 -hydrogen_acceptor -h2o
     dtdp_l_evernitrose
-  }
-
-  branch from hydrogen_acceptor side left {
-    hydrogen_acceptor
-    <-> . +dihydro_ferroheme_d1 +hydrogen_donor
-    ferroheme_d1
-  }
-
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> ec_1_14_99_64 [1.14.99.64] +zeaxanthin +hydrogen_donor +o2 +h2o
-    adonixanthin
   }
 }

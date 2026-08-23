@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-serine-to-d-xylose-1-3-d-xylo "L-serine to α-D-xylose-(1→3)-α-D-xylo…" {
-  spacing 304
+  spacing 316
 
   spine at 0,0 {
     l_serine
@@ -14,5 +14,17 @@ pathway l-serine-to-d-xylose-1-3-d-xylo "L-serine to α-D-xylose-(1→3)-α-D-xy
     d_xylose_1_3_d_glucose_l_seryl
     <-> ec_2_4_2_62 [2.4.2.62] +udp_d_xylose -udp -hplus
     d_xylose_1_3_d_xylose_1_3_d_glucose_l_seryl
+  }
+
+  branch from l_serine side left {
+    l_serine
+    <-> ec_2_7_11_8 [2.7.11.8] +atp +adp +hplus
+    o_phospho_l_serine_2
+  }
+
+  branch from l_serine side right {
+    l_serine
+    <-> . +lauroyl_coa +coa
+    o_lauroyl_l_serine
   }
 }

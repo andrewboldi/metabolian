@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-trans-6-trans-farnesyl-to-nadph "2-trans,6-trans-farnesyl… to NADPH" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     fpp
@@ -14,17 +14,5 @@ pathway 2-trans-6-trans-farnesyl-to-nadph "2-trans,6-trans-farnesyl… to NADPH"
     germacra_1_10_4_11_13_trien_12_ol
     <-> ec_1_1_1_314 [1.1.1.314] +nadp -germacra_1_10_4_11_13_trien_12_al -nadph
     h
-  }
-
-  branch from h side left {
-    h
-    <-> . +beta_casomorphin_1_6 +l_isoleucine +h2o
-    casomorphin
-  }
-
-  branch from h side right {
-    h
-    <-> . +d_arginyl_l_arginyl_d_glutaminyl_l_phenylalanine +2_2_2_2_2_amino_3_4_hydroxyphenyl_1_oxopropyl_am +dynorphin_b_10_13 +h2o
-    dynorphin_b
   }
 }

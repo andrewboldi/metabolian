@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-5-diamino-6-1-d-ribity-to-d-ribose-1-5-bisphos "2,5-diamino-6-(1-D-ribity… to α-D-ribose 1,5-bisphospha…" {
-  spacing 272
+  spacing 290
 
   spine at 0,0 {
     2_5_diamino_6_1_d_ribitylamino_pyrimidin_4_3h_on
@@ -20,13 +20,31 @@ pathway 2-5-diamino-6-1-d-ribity-to-d-ribose-1-5-bisphos "2,5-diamino-6-(1-D-rib
 
   branch from nh3 side left {
     nh3
-    <-> ec_2_3_2_1 [2.3.2.1] +d_glutamine +d_glutamate
-    d_glutamyl_d_glutamate
+    <-> . +cytidine_5_monophosphate_1 +h2o +hplus
+    uridine_5_monophosphate_1
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_3_5_4_11 [3.5.4.11] +2_amino_4_hydroxypteridine +h2o +hplus
-    2_4_dihydroxypteridine
+    <-> . +triuret +h2o
+    1_carboxybiuret
+  }
+
+  branch from 2_5_diamino_6_1_d_ribitylamino_pyrimidin_4_3h_on side left {
+    2_5_diamino_6_1_d_ribitylamino_pyrimidin_4_3h_on
+    <-> ec_1_1_1_302 [1.1.1.302] +nad +nadh +hplus
+    2_5_diamino_6_1_d_ribosylamino_pyrimidin_4_3h_on
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_4_3_3_8 [4.3.3.8] +l_mimosine +h2o +pyruvate
+    3_hydroxypyridin_4_1h_one
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> . +adp_1_deoxy_o_didehydro_ribofuranosylium +l_argininium +hplus
+    adp_2_imine_ribofurano_1_2_4_5_oxazolidine_2
   }
 }

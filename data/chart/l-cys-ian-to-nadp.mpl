@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-cys-ian-to-nadp "L-Cys(IAN) to NADP" {
-  spacing 200
+  spacing 284
 
   spine at 0,0 {
     l_cys_ian
@@ -18,51 +18,24 @@ pathway l-cys-ian-to-nadp "L-Cys(IAN) to NADP" {
     dihydrocamalexic_acid
   }
 
-  branch from hydrogen_cyanide side left {
-    hydrogen_cyanide
-    <-> ec_1_4_99_5 [1.4.99.5] +glycine +hydrogen_acceptor +co2
-    hydrogen_donor
-  }
 
-  branch from hydrogen_cyanide side right {
-    hydrogen_cyanide
-    <-> ec_4_4_1_9 [4.4.1.9] +cysteine +h2s +hplus
-    3_cyano_l_alanine
-  }
 
-  branch from fmn side left {
-    fmn
-    <-> ec_1_14_14_89 [1.14.14.89] +formononetin +fmnh2 +o2 +h2o +hplus
-    2_hydroxyformononetin
-  }
 
-  branch from fmn side right {
-    fmn
-    <-> ec_1_14_14_136 [1.14.14.136] +10_deoxysarpagine +fmnh2 +o2 +h2o +hplus
-    sarpagine
-  }
 
-  branch from h side left {
-    h
-    <-> .
-    pmf
-  }
 
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    glycocholate
-  }
 
-  branch from nadp side left {
-    nadp
-    <-> . +3alpha_7alpha_12alpha_trihydroxy_5beta_cholest_2 +o2 +nadph +h +h2o
-    3alpha_7alpha_12alpha_trihydroxy_24_oxo_5beta_ch
-  }
 
-  branch from nadp side right {
-    nadp
-    <-> . +h2o +3alpha_7alpha_12alpha_trihydroxy_24_oxo_5beta_ch +h +nadph
-    3alpha_7alpha_12alpha_trihydroxy_5beta_cholest_2
-  }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-n-dihydroxy-l-tyrosinate-to-s-4-hydroxymandelo "N,N-dihydroxy-L-tyrosinate to (S)-4-hydroxymandelonitri…" {
-  spacing 270
+  spacing 258
 
   spine at 0,0 {
     n_n_dihydroxy_l_tyrosinate
@@ -20,17 +20,5 @@ pathway n-n-dihydroxy-l-tyrosinate-to-s-4-hydroxymandelo "N,N-dihydroxy-L-tyrosi
     e_4_hydroxyphenyl_acetaldehyde_oxime
     <-> .
     z_4_hydroxyphenyl_acetaldehyde_oxime
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> ec_1_14_14_178 [1.14.14.178] +c28_steroid +fmnh2 +o2 +h2o +hplus
-    22s_22_hydroxy_c28_steroid
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> ec_1_14_14_178 [1.14.14.178] +c29_steroid +fmnh2 +o2 +h2o +hplus
-    22s_22_hydroxy_c29_steroid
   }
 }

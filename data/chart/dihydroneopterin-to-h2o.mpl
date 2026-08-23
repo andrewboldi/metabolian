@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dihydroneopterin-to-h2o "Dihydroneopterin… to H2O" {
-  spacing 284
+  spacing 236
 
   spine at 0,0 {
     dihydroneopterin_monophosphate
@@ -14,53 +14,5 @@ pathway dihydroneopterin-to-h2o "Dihydroneopterin… to H2O" {
     a_7_8_dihydroneopterin
     <-> . +diphosphate +h +phosphate -h2o
     7_8_dihydroneopterin_3_triphosphate
-  }
-
-  branch from 7_8_dihydroneopterin_3_triphosphate side left {
-    7_8_dihydroneopterin_3_triphosphate
-    <-> ec_3_5_4_16 [3.5.4.16] +h +h2o
-    2_5_diamino_6_5_triphosphoryl_3_4_trihydroxy_2_o
-  }
-
-  branch from 7_8_dihydroneopterin_3_triphosphate side right {
-    7_8_dihydroneopterin_3_triphosphate
-    <-> ec_3_1_3_1 [3.1.3.1] +h2o +h +phosphate
-    7_8_dihydroneopterin
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_alanine +l_lysine +l_phenylalanine
-    phenylalanyl_lysyl_alanine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_proline +l_lysine +l_phenylalanine
-    phenylalanyl_lysyl_proline
-  }
-
-  branch from h side left {
-    h
-    <-> . +rosuvastatin +h2o
-    rosuvastatin_5s_lactone
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    simvastatin
-  }
-
-  branch from phosphate side left {
-    phosphate
-    <-> . +h +adp +sm_d18_0_24_1_sphingomyelin +sm_d18_0_24_1_sphingomyelin +h2o
-    atp
-  }
-
-  branch from phosphate side right {
-    phosphate
-    <-> . +h +adp +atp +h2o
-    sm_d18_1_14_0_sphingomyelin
   }
 }

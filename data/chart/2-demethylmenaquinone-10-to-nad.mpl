@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-demethylmenaquinone-10-to-nad "2-demethylmenaquinone-10 to NAD" {
-  spacing 272
+  spacing 212
 
   spine at 0,0 {
     2_demethylmenaquinone_10
@@ -16,65 +16,5 @@ pathway 2-demethylmenaquinone-10-to-nad "2-demethylmenaquinone-10 to NAD" {
     menaquinone_10
     <-> ec_1_6_5_2 [1.6.5.2] +nadh +h -nad
     menaquinol_10
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_21 [1.1.1.21] +h +beta_d_xylose +nadph
-    xylitol
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_1_1_21 [1.1.1.21] +h +beta_l_arabinofuranose +nadph
-    l_arabinitol
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +ribonucleotide +sam +hplus
-    2_o_methylribonucleotide_1
-  }
-
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_41 [2.1.1.41] +cycloartenol +sam +hplus
-    24_methylenecycloartanol
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    stearic_acid_d3
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +13z_octadecenoic_acid +phosphate +13z_octadecenoic_acid +h2o
-    atp
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> ec_1_1_1_21 [1.1.1.21] +h +nadp +l_arabinitol
-    alpha_l_arabinofuranose
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> ec_1_1_1_42 [1.1.1.42] +s_oxalatosuccinate +h +nadp
-    d_erythro_isocitrate
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_2_1_27 [1.2.1.27] +nadh +co2 +h +acetate +h2o
-    3_oxopropanoate
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_37 [1.1.1.37] +nadh +h +3_phenylpyruvate
-    s_3_phenyllactate
   }
 }

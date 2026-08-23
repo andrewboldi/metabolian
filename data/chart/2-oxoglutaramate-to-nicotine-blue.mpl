@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-oxoglutaramate-to-nicotine-blue "2-oxoglutaramate to nicotine blue" {
-  spacing 224
+  spacing 176
 
   spine at 0,0 {
     2_oxoglutaramate
@@ -16,53 +16,5 @@ pathway 2-oxoglutaramate-to-nicotine-blue "2-oxoglutaramate to nicotine blue" {
     nad
     <-> ec_1_1_1_328 [1.1.1.328] +3_3_bipyridine_2_2_5_5_6_6_hexol +nad -nadh -hplus
     nicotine_blue
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_2_1_104 [3.2.1.104] +alpha_d_glucose +cholesterol
-    cholesteryl_3_beta_d_glucoside
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_2_1_10 [3.2.1.10] +alpha_d_glucose +beta_d_glucose
-    isomaltose
-  }
-
-  branch from blue_pigment side left {
-    blue_pigment
-    <-> . +h +nadph +3_3_bipyridine_2_2_5_5_6_6_hexol
-    nadp
-  }
-
-  branch from h2o2 side right {
-    h2o2
-    <-> . +triacontanal +o2
-    triacontan_1_ol
-  }
-
-  branch from h2o2 side left {
-    h2o2
-    <-> ec_1_11_1_7 [1.11.1.7] +hispidin +h2o
-    3_14_bihispidinyl
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_geranial +h
-    neoisodihydrocarveol
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
-    neodihydrocarveol
-  }
-
-  branch from nicotine_blue side right {
-    nicotine_blue
-    <-> . +o2 +h +h2o2
-    2_3_6_trihydroxypyridine
   }
 }

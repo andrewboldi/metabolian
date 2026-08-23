@@ -16,15 +16,15 @@ pathway fmnh2-to-d-erythrulose "FMNH2 to D-erythrulose" {
     d_erythrulose
   }
 
-  branch from d_erythrose side left {
-    d_erythrose
-    <-> . +nadp +nadph +hplus
-    erythritol
-  }
-
-  branch from d_erythrulose side right {
+  branch from d_erythrulose side left {
     d_erythrulose
     <-> ec_1_1_1_403 [1.1.1.403] +nad +nadh +hplus
     d_threitol
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> ec_1_19_1_1 [1.19.1.1] +nadp +nadph +hplus
+    fmn
   }
 }

@@ -16,9 +16,9 @@ pathway n-acyl-15-methylhexadecap-to-1-2-diacyl-3-o-d-gl "N-acyl-15-methylhexade
     1_2_diacyl_3_o_d_glucosyl_1_2_d_glucosyl_sn_glyc
   }
 
-  branch from 1_2_diacyl_3_o_d_glucosyl_sn_glycerol side left {
-    1_2_diacyl_3_o_d_glucosyl_sn_glycerol
-    <-> . +udp_d_galactose +udp +hplus
-    d_galactopyranosyl_1_2_d_glucopyranosyl_1_3_1_2
+  branch from n_acyl_15_methylhexadecaphytosphingosine side left {
+    n_acyl_15_methylhexadecaphytosphingosine
+    <-> . +fe2 +o2 +hplus +iron +h2o
+    n_acyl_15_methylhexadecasphinganine
   }
 }

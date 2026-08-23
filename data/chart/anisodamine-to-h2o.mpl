@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway anisodamine-to-h2o "Anisodamine to H2O" {
-  spacing 272
+  spacing 200
 
   spine at 0,0 {
     anisodamine
@@ -14,77 +14,5 @@ pathway anisodamine-to-h2o "Anisodamine to H2O" {
     co2
     <-> ec_1_14_20_13 [1.14.20.13] +2_oxoglutarate +6s_hydroxyhyoscyamine +o2 -co2 -scopolamine -h2o
     succinate
-  }
-
-  branch from 2_oxoglutarate side left {
-    2_oxoglutarate
-    <-> ec_2_5_1_64 [2.5.1.64] +h +isochorismate +co2 +pyruvate
-    1s_6r_2_succinyl_6_hydroxycyclohexa_2_4_diene_1
-  }
-
-  branch from 2_oxoglutarate side right {
-    2_oxoglutarate
-    <-> ec_1_2_1_38 [1.2.1.38] +acetyl_coa +atp +nadph +l_glutamate +nadp +coa +n_2_acetyl_l_ornithine +phosphate
-    adp
-  }
-
-  branch from o2 side left {
-    o2
-    <-> ec_1_14_13_142 [1.14.13.142] +nadh +h +androsta_1_4_diene_3_17_dione +nad +h2o
-    9_hydroxyandrosta_1_4_diene_3_17_dione
-  }
-
-  branch from o2 side right {
-    o2
-    <-> ec_1_14_13_151 [1.14.13.151] +nadh +s_linalool +h +nad +h2o
-    6e_8_hydroxylinalool
-  }
-
-  branch from co2 side left {
-    co2
-    <-> ec_2_3_1_199 [2.3.1.199] +15z_tetracosenoyl_coa +malonyl_coa +h +3_oxo_17z_hexacosenoyl_coa
-    coa
-  }
-
-  branch from co2 side right {
-    co2
-    <-> . +4alpha_14alpha_dimethyl_ergosta_8_25_27_dienol +h
-    4beta_carboxycyclolaudenol
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    pravastatin_sodium
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +pravastatin_glucuronide +phosphate +pravastatin_glucuronide +h2o
-    atp
-  }
-
-  branch from succinate side left {
-    succinate
-    <-> ec_1_3_5_1 [1.3.5.1] +ubiquinol_7 +fumarate
-    ubiquinone_7
-  }
-
-  branch from succinate side right {
-    succinate
-    <-> ec_1_14_20_14 [1.14.20.14] +12_epi_hapalindole_c +2_oxoglutarate +h +o2 +chloride +co2 +h2o
-    12_epi_hapalindole_e
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_glutamine +l_phenylalanine
-    phenylalanyl_glutaminyl_phenylalanine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_leucine +l_aspartate +l_phenylalanine
-    phenylalanyl_leucyl_aspartate
   }
 }

@@ -42,26 +42,26 @@ pathway udp-4-amino-4-deoxy-l-a-to-ctp "UDP-4-amino-4-deoxy-β-L-a… to CTP" {
 
   branch from ditrans_polycis_undecaprenyl_phosphate side left {
     ditrans_polycis_undecaprenyl_phosphate
-    <-> ec_3_6_1_27 [3.6.1.27] +h2o +pi +hplus
-    ditrans_polycis_undecaprenyl_diphosphate
-  }
-
-  branch from ditrans_polycis_undecaprenyl_phosphate side right {
-    ditrans_polycis_undecaprenyl_phosphate
     <-> ec_2_7_4_29 [2.7.4.29] +ditrans_polycis_undecaprenyl_diphosphate +kdo_2_lipid_a_6_e_coli
     kdo_2_lipid_a_1_diphosphate_7_e_coli
   }
 
+  branch from ditrans_polycis_undecaprenyl_phosphate side right {
+    ditrans_polycis_undecaprenyl_phosphate
+    <-> ec_2_7_4_29 [2.7.4.29] +an_kdo_2_4_kdo_2_6_lipid_a +ditrans_polycis_undecaprenyl_diphosphate
+    an_d_kdo_2_4_d_kdo_2_6_lipid_a_1_diphosphate
+  }
+
   branch from ump side left {
     ump
-    <-> ec_3_6_1_8 [3.6.1.8] +utp +h2o +hplus
-    ppi
+    <-> . +h2o +pi +hplus
+    utp
   }
 
   branch from ump side right {
     ump
-    <-> . +h2o +pi +hplus
-    utp
+    <-> . +h2o +hplus
+    3_5_cyclic_ump
   }
 
   branch from l_rhamnopyranosyl_1_3_d_galactopyranosyl_diphos side left {
@@ -76,39 +76,81 @@ pathway udp-4-amino-4-deoxy-l-a-to-ctp "UDP-4-amino-4-deoxy-β-L-a… to CTP" {
     udp_alpha_d_glucose
   }
 
-  branch from dtdp side left {
-    dtdp
-    <-> . +ctp +cdp
-    dtmp
-  }
-
-  branch from dtdp side right {
-    dtdp
-    <-> . +dctp +dtmp
-    dcdp
-  }
-
-  branch from cdp side left {
-    cdp
-    <-> . +cdp_d_glucose +g6p +hplus
-    trehalose_6_phosphate
-  }
-
-  branch from cdp side right {
-    cdp
-    <-> ec_2_7_1_40 [2.7.1.40] +ctp +pyruvate +hplus
-    phosphonatoenolpyruvate
-  }
-
   branch from ctp side left {
     ctp
-    <-> . +1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphate +hplus +ppi
-    cdp_1_stearoyl_2_arachidonoyl_sn_glycerol
+    <-> . +1_stearoyl_2_4z_7z_10z_13z_16z_19z_docosahexaeno +hplus +ppi
+    cdp_1_stearoyl_2_4z_7z_10z_13z_16z_19z_docosahex
   }
 
   branch from ctp side right {
     ctp
-    <-> . +1_hexadecanoyl_2_5z_8z_11z_14z_eicosatetraenoyl +hplus +ppi
-    cdp_1_palmitoyl_2_arachidonoyl_sn_glycerol
+    <-> . +1_2_dilinoleoyl_sn_glycero_3_phosphate +hplus +ppi
+    cdp_1_2_dilinoleoyl_sn_glycerol
+  }
+
+  branch from ditrans_polycis_undecaprenyl_phosphate side left {
+    ditrans_polycis_undecaprenyl_phosphate
+    <-> . +udp +undecaprenyl_phosphate_4_amino_4_deoxy_l_arabino
+    udp_4_amino_4_deoxy_beta_l_arabinose
+  }
+
+  branch from ditrans_polycis_undecaprenyl_phosphate side right {
+    ditrans_polycis_undecaprenyl_phosphate
+    <-> . +alpha_d_man_1_2_alpha_d_man_1_2_beta_d_man_1_3_g +beta_d_glc_pp_und +h
+    alpha_d_man_1_2_alpha_d_man_1_2_alpha_d_glc_1_3
+  }
+
+  branch from udp_d_galactose side left {
+    udp_d_galactose
+    <-> . +d_galactosyl_1_4_d_glucosyl_1_1_n_acylsphingosi +udp +hplus
+    d_galp_1_3_d_galp_1_4_d_glcp_1_1_cer
+  }
+
+  branch from udp_d_galactose side right {
+    udp_d_galactose
+    <-> . +n_2_hydroxyhexanoyl_sphingosine +udp +hplus
+    n_2_hydroxyhexanoyl_d_galactosylsphingosine
+  }
+
+  branch from dtdp_6_deoxy_l_mannose side left {
+    dtdp_6_deoxy_l_mannose
+    <-> ec_5_1_3_25 [5.1.3.25]
+    dtdp_6_deoxy_l_talose
+  }
+
+  branch from gdp_d_mannose side right {
+    gdp_d_mannose
+    <-> . +ins_1_p_cer_d18_0_24_0 +gdp +hplus
+    man_ins_1_p_cer_d18_0_24_0
+  }
+
+  branch from gdp_d_mannose side left {
+    gdp_d_mannose
+    <-> . +inositol_1_phosphophytoceramide +gdp +hplus
+    mannosylinositol_1_phosphophytoceramide
+  }
+
+  branch from cdp_d_abequose side right {
+    cdp_d_abequose
+    <-> ec_1_1_1_341 [1.1.1.341] +nadp +nadph +hplus
+    cdp_4_dehydro_3_6_dideoxy_d_glucose
+  }
+
+  branch from cdp_d_abequose side left {
+    cdp_d_abequose
+    <-> . +nadh +h +cdp_4_dehydro_3_6_dideoxy_d_glucose
+    nad
+  }
+
+  branch from ctp side right {
+    ctp
+    <-> ec_2_7_7_90 [2.7.7.90] +8_amino_3_8_dideoxy_d_manno_oct_2_ulosonic_acid +ppi
+    cmp_8_amino_3_8_dideoxy_d_manno_oct_2_ulosonate
+  }
+
+  branch from ctp side left {
+    ctp
+    <-> ec_2_7_7_93 [2.7.7.93] +phosphonoformate +ppi
+    cmp_5_phosphonoformate
   }
 }

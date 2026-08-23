@@ -1,0 +1,548 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-coumarate-to-1e-6e-1-4-hydroxypheny",
+  "name": "2-coumarate to (1E,6E)-1-(4-hydroxypheny…",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 2-coumarate to (1E,6E)-1-(4-hydroxyphenyl)-7-phenylhepta-1,6-diene-3,5-dione, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR197838"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_coumarate",
+      "name": "2-coumarate",
+      "formula": "C9H7O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1364407"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "e_cinnamate",
+      "name": "(E)-cinnamate",
+      "formula": "C9H7O2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1371727"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "e_cinnamoyl_coa",
+      "name": "(E)-cinnamoyl-CoA",
+      "formula": "C30H38N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1372622"
+      }
+    },
+    {
+      "id": "4_coumaroyl_diketide",
+      "name": "4-coumaroyl-diketide",
+      "formula": "C11H9O4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM12561"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "1e_6e_1_4_hydroxyphenyl_7_phenylhepta_1_6_diene",
+      "name": "(1E,6E)-1-(4-hydroxyphenyl)-7-phenylhepta-1,6-diene-3,5-dione",
+      "short": "(1E,6E)-1-(4-hydrox…",
+      "formula": "C19H16O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM9384"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_14_91",
+      "name": "trans-cinnamate 4-monooxygenase",
+      "ec": [
+        "1.14.14.91"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "trans-cinnamate 4-monooxygenase",
+      "ec": "1.14.14.91",
+      "substrates": [
+        {
+          "metabolite": "2_coumarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "e_cinnamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_91"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR197838"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197838"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR180179",
+      "substrates": [
+        {
+          "metabolite": "e_cinnamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "e_cinnamoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR180179"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR180179"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR116808",
+      "substrates": [
+        {
+          "metabolite": "4_coumaroyl_diketide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "e_cinnamoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1e_6e_1_4_hydroxyphenyl_7_phenylhepta_1_6_diene",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR116808"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR116808"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_2_coumarate_cis-beta-d-glucosyl-2-hyd-to-3-6-7-4-tetramethyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_coumarate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cis-beta-d-glucosyl-2-hyd-to-3-6-7-4-tetramethyl"
+      },
+      "note": "Shares 2-coumarate with cis-beta-D-glucosyl-2-hyd… to 3,6,7,4'-tetramethylquerc….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364407"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_cinnamate_3-hydroxy-3-phenylpropion-to-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_cinnamate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxy-3-phenylpropion-to-acetate"
+      },
+      "note": "Shares (E)-cinnamate with 3-hydroxy-3-phenylpropion… to acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371727"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_cinnamate_4-coumarate-to-r-3-ammonio-3-phenylpro",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_cinnamate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-coumarate-to-r-3-ammonio-3-phenylpro"
+      },
+      "note": "Shares (E)-cinnamate with 4-coumarate to (R)-3-ammonio-3-phenylpro….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371727"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_cinnamate_d-allothreonine-to-l-methionine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_cinnamate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-allothreonine-to-l-methionine"
+      },
+      "note": "Shares (E)-cinnamate with D-allothreonine to L-methionine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371727"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_cinnamoyl_coa_1-3-5-trihydroxybenzene-to-s-8-glutaryldihydroli",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_cinnamoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-3-5-trihydroxybenzene-to-s-8-glutaryldihydroli"
+      },
+      "note": "Shares (E)-cinnamoyl-CoA with 1,3,5-trihydroxybenzene to S(8)-glutaryldihydrolipoa….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1372622"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_cinnamoyl_coa_3-o-feruloyl-d-quinic-acid-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_cinnamoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-o-feruloyl-d-quinic-acid-to-fmn"
+      },
+      "note": "Shares (E)-cinnamoyl-CoA with 3-O-feruloyl-D-quinic acid to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1372622"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_cinnamoyl_coa_4-formylbenzoate-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_cinnamoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-formylbenzoate-to-nad"
+      },
+      "note": "Shares (E)-cinnamoyl-CoA with 4-formylbenzoate to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1372622"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_cinnamoyl_coa_h-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_cinnamoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-nad"
+      },
+      "note": "Shares (E)-cinnamoyl-CoA with H to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1372622"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_cinnamoyl_coa_malonyl-coa-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_cinnamoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "malonyl-coa-to-h2o"
+      },
+      "note": "Shares (E)-cinnamoyl-CoA with malonyl-CoA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1372622"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_coumaroyl_diketide_4-chlorophenyl-phosphate-to-l-erythro-3-methylma",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_coumaroyl_diketide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-chlorophenyl-phosphate-to-l-erythro-3-methylma"
+      },
+      "note": "Shares 4-coumaroyl-diketide with 4-Chlorophenyl phosphate to L-erythro-3-Methylmalyl-C….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM12561"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_coumaroyl_diketide_dehydro-proline-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_coumaroyl_diketide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dehydro-proline-to-o2"
+      },
+      "note": "Shares 4-coumaroyl-diketide with Dehydro-proline to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM12561"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_coumaroyl_diketide_kaempferol-3-o-3-o-4-co-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_coumaroyl_diketide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "kaempferol-3-o-3-o-4-co-to-coa"
+      },
+      "note": "Shares 4-coumaroyl-diketide with kaempferol 3-O-(3″-O-4-co… to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM12561"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway h-to-h2o "H to H2O" {
-  spacing 230
+  spacing 308
 
   spine at 0,0 {
     h
@@ -22,38 +22,38 @@ pathway h-to-h2o "H to H2O" {
 
   branch from nadph side left {
     nadph
-    <-> ec_1_14_13_178 [1.14.13.178] +1_methyl_7h_xanthine +h +o2 +xanthine +nadp +h2o
-    formaldehyde
+    <-> ec_1_3_1_72 [1.3.1.72] +cycloartenol +h +nadp
+    cycloartanol
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_14_13_179 [1.14.13.179] +1_methyl_7h_xanthine +formaldehyde +nadp +h2o +h +o2
-    theophylline
+    <-> ec_1_1_1_348 [1.1.1.348] +h +3r_2_hydroxydihydrodaidzein +nadp
+    3r_4r_7_2_4_trihydroxyisoflavanol
   }
 
   branch from leucodopachrome side left {
-    leucodopachrome
-    <-> . +ldopa +fmnh2 +o2 +h2o +hplus
-    fmn
-  }
-
-  branch from leucodopachrome side right {
     leucodopachrome
     <-> . +betanidin +h2o
     betalamic_acid
   }
 
+  branch from leucodopachrome side right {
+    leucodopachrome
+    <-> . +h +o2 +nadph +nadp +h2o
+    l_dopa
+  }
+
   branch from nad side left {
     nad
-    <-> . +nadh +h +o2 +1_7_dimethylxanthine +formaldehyde +h2o
-    1_methyl_7h_xanthine
+    <-> . +5_chloro_3_5_cyclohexadiene_l_2_diol_1_carboxyla +nadh +4_chlorocatechol
+    co2
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_14_13_178 [1.14.13.178] +nadh +1_methyl_7h_xanthine +h +o2 +formaldehyde +h2o
-    xanthine
+    <-> ec_1_14_12_26 [1.14.12.26] +nadh +1_2_4_5_tetrachlorobenzene +h +o2
+    1r_2s_1_3_4_6_tetrachlorocyclohexa_3_5_diene_1
   }
 
   branch from l_dopaquinone side left {
@@ -76,25 +76,103 @@ pathway h-to-h2o "H to H2O" {
 
   branch from atp side right {
     atp
-    <-> ec_6_3_1_12 [6.3.1.12] +d_aspartate +beta_d_glcnac_1_4_mur2ac_oyl_l_ala_gamma_d_glu_l +h +adp +phosphate
-    und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_gl
+    <-> ec_2_7_1_162 [2.7.1.162] +n_acetyl_d_hexosamine +h +adp
+    n_acetyl_d_mannosamine_1_phosphate
   }
 
   branch from atp side left {
     atp
-    <-> ec_7_6_2_14 [7.6.2.14] +h +adp +phosphate +h2o
-    alkanesulfonate_oxoanion
+    <-> . +h +adp +phospho_heptosyl_phospho_heptosyl_heptosyl_kdo2
+    inner_core_oligosaccharide_lipid_a
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_4_2_1_131 [4.2.1.131] +3_4_dihydrorhodovibrin
-    3_4_dihydroanhydrorhodovibrin
+    <-> ec_4_2_1_17 [4.2.1.17] +2e_9z_hexadecadienoyl_coa
+    3s_9z_3_hydroxyhexadecenoyl_coa
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_4_2_1_131 [4.2.1.131] +chlorobactene
-    hydroxychlorobactene
+    <-> ec_4_2_1_17 [4.2.1.17] +e_z_tetradeca_2_7_dienoyl_coa
+    3s_7z_3_hydroxytetradec_7_enoyl_coa
+  }
+
+  branch from h side right {
+    h
+    <-> . +diphosphate +31r_8_ethyl_12_methylbacteriochlorophyll_d +31r_8_ethyl_12_methylbacteriochlorophyllide_d
+    2e_6e_farnesyl_diphosphate
+  }
+
+  branch from h side left {
+    h
+    <-> . +diphosphate +31r_8_12_diethylbacteriochlorophyll_d +2e_6e_farnesyl_diphosphate
+    31r_8_12_diethylbacteriochlorophyllide_d
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_2_1_4 [1.2.1.4] +s_malate +h +nadph +h2o
+    3r_3_hydroxy_4_oxobutanoate
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_3_1_51 [1.3.1.51] +2_hydroxygenistein +h +nadph
+    dalbergioidin
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +gibberellin_a4 +co2 +h +succinate +gibberellin_a36 +nadp +o2
+    2_oxoglutarate
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +h +coumarin +nadp
+    3_4_dihydrocoumarin
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_14_12_26 [1.14.12.26] +1_2_dichlorobenzene +h +o2 +nad
+    1r_2s_3_4_dichlorocyclohexa_3_5_diene_1_2_diol
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> ec_1_14_12_26 [1.14.12.26] +1_2_3_trichlorobenzene +h +o2 +nad
+    1r_2s_3_4_5_trichlorocyclohexa_3_5_diene_1_2_di
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_3_1_119 [1.3.1.119] +nadh +h +1r_2s_3_4_5_trichlorocyclohexa_3_5_diene_1_2_di
+    3_4_5_trichlorocatechol
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_14_12_26 [1.14.12.26] +1r_2s_5_chloro_3_methylcyclohexa_3_5_diene_1_2 +nadh +h +3_chlorotoluene
+    o2
+  }
+
+  branch from glutathione side right {
+    glutathione
+    <-> . +s_pgj2_glutathione
+    prostaglandin_j2
+  }
+
+  branch from glutathione side left {
+    glutathione
+    <-> . +prostaglandin_a2
+    s_pga2_glutathione
+  }
+
+  branch from adp side right {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    l_methionine_r_s_oxide
   }
 }

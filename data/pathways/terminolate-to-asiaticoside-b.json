@@ -91,9 +91,58 @@
       "xrefs": {
         "chebi": "CHEBI:187486"
       }
+    },
+    {
+      "id": "s_naringenin",
+      "name": "(S)-naringenin",
+      "formula": "C15H12O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17846"
+      }
+    },
+    {
+      "id": "naringenin_7_o_d_glucoside",
+      "name": "naringenin 7-O-β-D-glucoside",
+      "short": "naringenin…",
+      "formula": "C21H22O10",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28327"
+      }
+    },
+    {
+      "id": "tigogenin",
+      "name": "tigogenin",
+      "formula": "C27H44O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:9595"
+      }
+    },
+    {
+      "id": "tigogenin_3_o_d_glucopyranoside",
+      "name": "tigogenin 3-O-β-D-glucopyranoside",
+      "short": "tigogenin…",
+      "formula": "C33H54O8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:166995"
+      }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_2_4_1_185",
+      "name": "flavanone 7-O-beta-glucosyltransferase",
+      "ec": [
+        "2.4.1.185"
+      ],
+      "xrefs": {
+        "uniprot": "Q3SY77"
+      }
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -216,6 +265,298 @@
           {
             "db": "Rhea",
             "id": "RHEA:84967"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "flavanone 7-O-beta-glucosyltransferase",
+      "equation": "(2S)-naringenin + UDP-alpha-D-glucose = (2S)-naringenin 7-O-beta-D-glucoside + UDP + H(+)",
+      "ec": "2.4.1.185",
+      "substrates": [
+        {
+          "metabolite": "s_naringenin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "naringenin_7_o_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_185"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:65152"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65152"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "tigogenin + UDP-alpha-D-glucose = tigogenin 3-O-beta-D-glucopyranoside + UDP + H(+)",
+      "equation": "tigogenin + UDP-alpha-D-glucose = tigogenin 3-O-beta-D-glucopyranoside + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "tigogenin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "tigogenin_3_o_d_glucopyranoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:66276"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:66276"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_s_naringenin_abietatriene-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_naringenin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "abietatriene-to-fmn"
+      },
+      "note": "Shares (S)-naringenin with abietatriene to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17846"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_naringenin_bacteriochlorophyllide-d-to-bacteriochlorophylli",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_naringenin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "bacteriochlorophyllide-d-to-bacteriochlorophylli"
+      },
+      "note": "Shares (S)-naringenin with bacteriochlorophyllide d to bacteriochlorophyllide e.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17846"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_naringenin_menthol-to-fmnh2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_naringenin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "menthol-to-fmnh2"
+      },
+      "note": "Shares (S)-naringenin with (−)-menthol to FMNH2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17846"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_naringenin_n-arachidonoyl-1-oleoyl-s-to-9z-17-hydroxyoctade",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_naringenin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-arachidonoyl-1-oleoyl-s-to-9z-17-hydroxyoctade"
+      },
+      "note": "Shares (S)-naringenin with N-arachidonoyl-1-oleoyl-s… to (9Z)-17-hydroxyoctadec-9-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17846"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_naringenin_naringenin-7-o-d-glucos-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_naringenin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "naringenin-7-o-d-glucos-to-fmn"
+      },
+      "note": "Shares (S)-naringenin with naringenin 7-O-β-D-glucos… to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17846"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_naringenin_s-naringenin-to-2-3-dihydrogossypetin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_naringenin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-naringenin-to-2-3-dihydrogossypetin"
+      },
+      "note": "Shares (S)-naringenin with (S)-naringenin to 2,3-dihydrogossypetin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17846"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_naringenin_s-naringenin-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_naringenin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-naringenin-to-diphosphate"
+      },
+      "note": "Shares (S)-naringenin with (S)-naringenin to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17846"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_naringenin_7_o_d_glucoside_8z-11z-14z-17z-20z-23z-to-16z-19z-22z-25z-28z-3",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "naringenin_7_o_d_glucoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "8z-11z-14z-17z-20z-23z-to-16z-19z-22z-25z-28z-3"
+      },
+      "note": "Shares naringenin 7-O-β-D-glucoside with (8Z,11Z,14Z,17Z,20Z,23Z)-… to (16Z,19Z,22Z,25Z,28Z,31Z)….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28327"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_naringenin_7_o_d_glucoside_naringenin-7-o-d-glucos-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "naringenin_7_o_d_glucoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "naringenin-7-o-d-glucos-to-fmn"
+      },
+      "note": "Shares naringenin 7-O-β-D-glucoside with naringenin 7-O-β-D-glucos… to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28327"
           }
         ]
       }

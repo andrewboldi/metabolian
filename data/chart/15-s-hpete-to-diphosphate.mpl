@@ -28,15 +28,15 @@ pathway 15-s-hpete-to-diphosphate "15(S)-HPETE to diphosphate" {
     15_r_hpete
   }
 
-  branch from ppi side left {
-    ppi
-    <-> . +pre_putrebactin +atp +amp +hplus
-    putrebactin
+  branch from 15_s_hpete side left {
+    15_s_hpete
+    <-> ec_5_4_4_7 [5.4.4.7]
+    13r_hydroxy_14s_15s_epoxyicosa_5z_8z_11z_trieno
   }
 
-  branch from ppi side right {
-    ppi
-    <-> . +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    sobralene
+  branch from 15_s_hpete side right {
+    15_s_hpete
+    <-> . +h2o
+    eoxin_a4
   }
 }

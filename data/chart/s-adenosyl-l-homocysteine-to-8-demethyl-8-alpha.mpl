@@ -17,16 +17,4 @@ pathway s-adenosyl-l-homocysteine-to-8-demethyl-8-alpha "S-adenosyl-L-homocystei
     <-> ec_2_1_1_305 [2.1.1.305] +s_adenosyl_l_homocysteine +8_demethyl_8_2_o_methyl_alpha_l_rhamnosyl_tetrac +h -s_adenosyl_l_methionine
     8_demethyl_8_alpha_l_rhamnosyl_tetracenomycin_c
   }
-
-  branch from s_adenosyl_l_methionine side left {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +pyrrolomycin_j +h
-    pyrrolomycin_d
-  }
-
-  branch from s_adenosyl_l_methionine side right {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +fucosterol +h
-    24_methylenecholesterol
-  }
 }

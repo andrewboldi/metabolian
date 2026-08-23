@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-methyl-l-amino-acid-to-ammonium "N-methyl-L-α-amino acid to ammonium" {
-  spacing 268
+  spacing 340
 
   spine at 0,0 {
     n_methyl_l_amino_acid
@@ -20,14 +20,14 @@ pathway n-methyl-l-amino-acid-to-ammonium "N-methyl-L-α-amino acid to ammonium"
 
   branch from l_amino_acid side left {
     l_amino_acid
-    <-> . +n_fatty_acyl_l_amino_acid_anion +h2o
-    fatty-acid
+    <-> . +cholate +h2o
+    n_choloyl_l_amino_acid_anion
   }
 
   branch from l_amino_acid side right {
     l_amino_acid
-    <-> ec_3_4_13_9 [3.4.13.9] +xaa_l_proline +h2o
-    l_proline
+    <-> . +taurocholate +n_choloyl_l_amino_acid_anion
+    taurine
   }
 
   branch from formaldehyde side left {
@@ -38,13 +38,13 @@ pathway n-methyl-l-amino-acid-to-ammonium "N-methyl-L-α-amino acid to ammonium"
 
   branch from formaldehyde side right {
     formaldehyde
-    <-> ec_1_14_11_32 [1.14.11.32] +codeine +akg +o2 +succinate +co2
-    morphine
+    <-> . +n_methyl_l_tryptophan +o2 +h2o +h2o2
+    l_tryptophan
   }
 
   branch from 2_oxo_monocarboxylic_acid_anion side left {
     2_oxo_monocarboxylic_acid_anion
-    <-> ec_1_1_1_345 [1.1.1.345] +nad +nadh +hplus
+    <-> ec_1_1_1_272 [1.1.1.272] +nadp +nadph +hplus
     2r_2_hydroxy_monocarboxylic_acid_anion
   }
 
@@ -56,14 +56,14 @@ pathway n-methyl-l-amino-acid-to-ammonium "N-methyl-L-α-amino acid to ammonium"
 
   branch from nh3 side left {
     nh3
-    <-> ec_4_3_1_6 [4.3.1.6] +alanyl_coa
-    acryloyl_coa
+    <-> ec_4_3_1_13 [4.3.1.13] +h2o +hplus +pyruvate +co2
+    o_carbamoyl_l_serine
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_4_3_1_16 [4.3.1.16] +oxaloacetate
-    3s_3_hydroxy_l_aspartate
+    <-> ec_1_4_1_10 [1.4.1.10] +glycine +nad +h2o +nadh +hplus
+    glyoxylate
   }
 
   branch from 2_oxosuccinamate side left {
@@ -80,13 +80,85 @@ pathway n-methyl-l-amino-acid-to-ammonium "N-methyl-L-α-amino acid to ammonium"
 
   branch from oxaloacetate side left {
     oxaloacetate
-    <-> ec_1_4_3_1 [1.4.3.1] +o2 +h2o +h2o2 +nh3
-    d_aspartate
+    <-> ec_4_2_1_32 [4.2.1.32] +h2o
+    l_tartrate
   }
 
   branch from oxaloacetate side right {
     oxaloacetate
-    <-> ec_4_2_1_32 [4.2.1.32] +h2o
-    l_tartrate
+    <-> ec_5_3_2_2 [5.3.2.2]
+    enol_oxaloacetate
+  }
+
+  branch from l_amino_acid side left {
+    l_amino_acid
+    <-> . +glycocholate +n_choloyl_l_amino_acid_anion
+    glycine
+  }
+
+  branch from l_amino_acid side right {
+    l_amino_acid
+    <-> . +acetyl_coa +coa +hplus
+    n_acetyl_l_amino_acid_anion
+  }
+
+  branch from formaldehyde side left {
+    formaldehyde
+    <-> ec_1_5_3_19 [1.5.3.19] +4_methylamino_butyric_acid +o2 +h2o +h2o2
+    gaba
+  }
+
+  branch from formaldehyde side right {
+    formaldehyde
+    <-> ec_1_14_13_178 [1.14.13.178] +theophylline +nadph +o2 +hplus +nadp +h2o
+    3_methyl_7h_xanthine
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_1_4_3_5 [1.4.3.5] +o2 +h2o +plp +h2o2
+    pyridoxamine_5_phosphate
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_3_5_1_2 [3.5.1.2] +h2o +glutamate
+    glutamine
+  }
+
+  branch from l_asparagine side left {
+    l_asparagine
+    <-> ec_4_2_1_65 [4.2.1.65] +h2o
+    3_cyano_l_alanine
+  }
+
+  branch from l_asparagine side right {
+    l_asparagine
+    <-> ec_3_5_1_1 [3.5.1.1] +h2o +nh3
+    aspartate
+  }
+
+  branch from 2_oxosuccinamate side left {
+    2_oxosuccinamate
+    <-> . +l_asparagine +pyruvate
+    alanine
+  }
+
+  branch from 2_oxosuccinamate side right {
+    2_oxosuccinamate
+    <-> . +o2 +h2o +h2o2 +nh3
+    d_asparagine
+  }
+
+  branch from oxaloacetate side left {
+    oxaloacetate
+    <-> ec_2_3_3_2 [2.3.3.2] +lauroyl_coa +h2o +coa +hplus
+    2s_3s_2_hydroxytridecane_1_2_3_tricarboxylate
+  }
+
+  branch from oxaloacetate side right {
+    oxaloacetate
+    <-> ec_4_2_1_81 [4.2.1.81] +h2o
+    d_tartrate
   }
 }

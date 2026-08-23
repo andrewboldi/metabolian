@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-deoxy-d-glucoside-to-2-deoxy-d-glucopyranose "2-deoxy-α-D-glucoside to 2-deoxy-D-glucopyranose" {
-  spacing 194
+  spacing 182
 
   spine at 0,0 {
     2_deoxy_d_glucoside
@@ -14,18 +14,6 @@ pathway 2-deoxy-d-glucoside-to-2-deoxy-d-glucopyranose "2-deoxy-α-D-glucoside t
     2_deoxy_d_glucopyranose_6_phosphate
     <-> ec_3_1_3_68 [3.1.3.68] +h2o -pi
     2_deoxy_d_glucopyranose
-  }
-
-  branch from alcohol side left {
-    alcohol
-    <-> ec_1_11_1_26 [1.11.1.26] +nadh +hplus +nad +h2o
-    peroxol
-  }
-
-  branch from alcohol side right {
-    alcohol
-    <-> . +peroxol +l_cysteine
-    s_hydroxy_l_cysteine
   }
 
   branch from 2_deoxy_d_glucopyranose_6_phosphate side left {

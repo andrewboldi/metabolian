@@ -130,21 +130,57 @@
       }
     },
     {
-      "id": "d_galactopyranose",
-      "name": "D-galactopyranose",
+      "id": "beta_d_fructose",
+      "name": "beta-D-fructose",
       "formula": "C6H12O6",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:4139"
+        "metanetx": "MNXM1364098"
       }
     },
     {
-      "id": "epimelibiose",
-      "name": "Epimelibiose",
-      "formula": "C12H22O11",
+      "id": "beta_d_mannose",
+      "name": "beta-D-mannose",
+      "formula": "C6H12O6",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM728399"
+        "metanetx": "MNXM731842"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
       }
     },
     {
@@ -163,7 +199,10 @@
       "name": "hexokinase",
       "ec": [
         "2.7.1.1"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q2TB90"
+      }
     },
     {
       "id": "ec_2_7_1_7",
@@ -177,13 +216,6 @@
       "name": "D-mannitol oxidase",
       "ec": [
         "1.1.3.40"
-      ]
-    },
-    {
-      "id": "ec_3_2_1_22",
-      "name": "alpha-galactosidase",
-      "ec": [
-        "3.2.1.22"
       ]
     }
   ],
@@ -362,13 +394,38 @@
     },
     {
       "id": "r5",
-      "name": "alpha-galactosidase",
-      "ec": "3.2.1.22",
+      "name": "Reaction MNXR180703",
       "substrates": [
         {
-          "metabolite": "d_galactopyranose",
+          "metabolite": "beta_d_fructose",
           "stoichiometry": 1
-        },
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_mannopyranose",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR180703"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR180703"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "Reaction MNXR185565",
+      "substrates": [
         {
           "metabolite": "d_mannopyranose",
           "stoichiometry": 1
@@ -376,7 +433,53 @@
       ],
       "products": [
         {
-          "metabolite": "epimelibiose",
+          "metabolite": "beta_d_mannose",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "metanetx": "MNXR185565"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR185565"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "Reaction MNXR188369",
+      "substrates": [
+        {
+          "metabolite": "d_mannopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_mannopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
           "stoichiometry": 1
         },
         {
@@ -384,22 +487,283 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_2_1_22"
-        }
-      ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 7,
       "xrefs": {
-        "metanetx": "MNXR153448"
+        "metanetx": "MNXR188369"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR153448"
+            "id": "MNXR188369"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_d_manp_1_3_d_manp_1_6_d_manp_1_4_d_glcpnac_1_4_d-manp-1-3-d-manp-to-d-fructofuranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_manp_1_3_d_manp_1_6_d_manp_1_4_d_glcpnac_1_4"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-manp-1-3-d-manp-to-d-fructofuranose"
+      },
+      "note": "Shares α-D-Manp-(1→3)-[α-D-Manp-(1→6)]-β-D-Manp-(1→4)-β-D-GlcpNAc-(1→4)-D-GlcpNAc with α-D-Manp-(1→3)-[α-D-Manp-… to D-fructofuranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:53458"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_mannopyranose_6_phosphate_aldehydo-d-mannose-to-trehalose-6-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_mannopyranose_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aldehydo-d-mannose-to-trehalose-6-phosphate"
+      },
+      "note": "Shares D-mannopyranose 6-phosphate with aldehydo-D-mannose to α,α-trehalose 6-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58735"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_mannopyranose_6_phosphate_cellobiose-to-mycothione",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_mannopyranose_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cellobiose-to-mycothione"
+      },
+      "note": "Shares D-mannopyranose 6-phosphate with cellobiose to mycothione.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58735"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_mannopyranose_6_phosphate_d-mannitol-to-2-deoxy-4-epi-scyllo-inos",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_mannopyranose_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-mannitol-to-2-deoxy-4-epi-scyllo-inos"
+      },
+      "note": "Shares D-mannopyranose 6-phosphate with D-mannitol to 2-deoxy-4-epi-scyllo-inos….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58735"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_mannopyranose_6_phosphate_d-manp-1-2-d-manp-to-2-amino-2-deoxy-6-o-phosp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_mannopyranose_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-manp-1-2-d-manp-to-2-amino-2-deoxy-6-o-phosp"
+      },
+      "note": "Shares D-mannopyranose 6-phosphate with β-D-Manp-(1→2)-β-D-Manp-(… to 2-amino-2-deoxy-6-O-phosp….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58735"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_mannitol_6-sulfo-d-quinovose-to-d-fructofuranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_mannitol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-sulfo-d-quinovose-to-d-fructofuranose"
+      },
+      "note": "Shares D-mannitol with 6-sulfo-D-quinovose to D-fructofuranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16899"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_mannitol_d-mannitol-to-2-deoxy-4-epi-scyllo-inos",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_mannitol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-mannitol-to-2-deoxy-4-epi-scyllo-inos"
+      },
+      "note": "Shares D-mannitol with D-mannitol to 2-deoxy-4-epi-scyllo-inos….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16899"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_mannitol_d-manp-1-2-d-manp-to-2-amino-2-deoxy-6-o-phosp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_mannitol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-manp-1-2-d-manp-to-2-amino-2-deoxy-6-o-phosp"
+      },
+      "note": "Shares D-mannitol with β-D-Manp-(1→2)-β-D-Manp-(… to 2-amino-2-deoxy-6-O-phosp….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16899"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_mannitol_d-manp-1-3-d-manp-to-d-fructofuranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_mannitol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-manp-1-3-d-manp-to-d-fructofuranose"
+      },
+      "note": "Shares D-mannitol with α-D-Manp-(1→3)-[α-D-Manp-… to D-fructofuranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16899"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_mannitol_ndp-d-glucose-to-nucleoside-5-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_mannitol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ndp-d-glucose-to-nucleoside-5-diphosphate"
+      },
+      "note": "Shares D-mannitol with NDP-α-D-glucose to nucleoside 5'-diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16899"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_mannitol_nonan-1-ol-to-trans-2-nonenoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_mannitol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nonan-1-ol-to-trans-2-nonenoyl-coa"
+      },
+      "note": "Shares D-mannitol with nonan-1-ol to trans-2-nonenoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16899"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_beta_d_mannose_4-2z-2-methylimino-et-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "beta_d_mannose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-2z-2-methylimino-et-to-h2o"
+      },
+      "note": "Shares beta-D-mannose with 4-[(2Z)-2-(methylimino)et… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM731842"
           }
         ]
       }

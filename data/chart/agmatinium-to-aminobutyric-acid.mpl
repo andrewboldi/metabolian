@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway agmatinium-to-aminobutyric-acid "agmatinium to γ-aminobutyric acid" {
-  spacing 152
+  spacing 158
 
   spine at 0,0 {
     agmatinium
@@ -14,5 +14,11 @@ pathway agmatinium-to-aminobutyric-acid "agmatinium to γ-aminobutyric acid" {
     4_ammoniobutanal
     <-> . +nadp +h2o -nadph -hplus
     gaba
+  }
+
+  branch from agmatinium side left {
+    agmatinium
+    <-> ec_6_3_4_22 [6.3.4.22] +cytidine_5_monophosphate_1 +atp +h2o +amp +pi +hplus
+    agmatidine_5_phosphate_1
   }
 }

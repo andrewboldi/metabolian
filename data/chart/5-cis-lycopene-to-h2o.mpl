@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-cis-lycopene-to-h2o "5-cis-lycopene to H2O" {
-  spacing 276
+  spacing 340
 
   spine at 0,0 {
     5_cis_lycopene
@@ -34,14 +34,14 @@ pathway 5-cis-lycopene-to-h2o "5-cis-lycopene to H2O" {
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_12_18 [1.14.12.18] +h +4_chlorobiphenyl +nadph +nadp
-    1s_2r_3_4_chlorophenyl_cyclohexa_3_5_diene_1_2
+    <-> . +dimeric_urushiol_peroxide +h2o
+    3_8z_11e_13z_pentadeca_8_11_13_trien_1_yl_catech
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_12_18 [1.14.12.18] +h +biphenyl +nadph +nadp
-    2r_3s_3_phenylcyclohexa_3_5_diene_1_2_diol
+    <-> . +8_methyltetraphene_1_5_6_11_12_pentol +h2o2
+    dehydrorabelomycin
   }
 
   branch from 4_9_dimethyldodeca_2_4_6_8_10_pentaenedial side left {
@@ -58,25 +58,109 @@ pathway 5-cis-lycopene-to-h2o "5-cis-lycopene to H2O" {
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_50 [1.1.1.50] +5beta_dihydroaldosterone +h +nadph
-    3alpha_11beta_21_trihydroxy_20_oxo_5beta_pregnan
+    <-> . +2s_3_sulfopropanediol +h +nadph
+    1_hydroxy_2_oxo_3_sulfopropane
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_146 [1.1.1.146] +h +3alpha_21_dihydroxy_5beta_pregnane_11_20_dione +nadph
-    tetrahydrocorticosterone
+    <-> . +12_13_dihydroxy_9z_octadecenoate +h +o2 +nadph +h2o
+    9z_12_13_17_trihydroxyoctadeca_9_enoate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +5_6beta_epoxy_5beta_cholestane
-    5alpha_cholestan_5alpha_6beta_diol
+    <-> . +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +z_omega_methylsulfanyl_pentyl_thiohydroximate
+    ser_gly
   }
 
   branch from h2o side right {
     h2o
-    <-> . +5alpha_cholestan_5alpha_6beta_diol
-    5_6alpha_epoxy_5alpha_cholestane
+    <-> . +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +ser_gly
+    z_omega_methylsulfanyl_hexyl_thiohydroximate
+  }
+
+  branch from 2e_geranial side left {
+    2e_geranial
+    <-> .
+    neral
+  }
+
+  branch from 2e_geranial side right {
+    2e_geranial
+    <-> . +h2o +acetaldehyde
+    sulcatone
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +h +dehydrorabelomycin
+    3_2_formyl_6_hydroxy_4_methylphenyl_8_hydroxy_1
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +s_1_pyrroline_5_carboxylate +co2 +succinate +guanidine +ethene +h2o +h +l_arginine
+    2_oxoglutarate
+  }
+
+  branch from 3r_hydroxy_ionone side left {
+    3r_hydroxy_ionone
+    <-> . +zeaxanthin +o2
+    3r_3_hydroxy_10_apo_carotenal
+  }
+
+  branch from 3r_hydroxy_ionone side right {
+    3r_hydroxy_ionone
+    <-> . +cryptoxanthin +o2
+    10_apo_carotenal
+  }
+
+  branch from h side left {
+    h
+    <-> . +succinyl_coa +n_hydroxycadaverine +coa
+    n_3_carboxypropanoyl_n_hydroxycadaverine
+  }
+
+  branch from h side right {
+    h
+    <-> . +acetyl_coa +n_hydroxycadaverine +coa
+    n_hydroxy_n_acetylcadaverine
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +22_hydroxy_docosanoyl_coa +nadp +h
+    22_oxo_docosanoyl_coa
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +h +22_oxo_docosanoyl_coa +nadp +h2o
+    22_carboxy_docosanoyl_coa
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +h +nadph +4_o_methyl_d_myo_inosose
+    5d_5_o_methyl_chiro_inositol
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +butanal +h +nadph
+    z_but_2_enal
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +ser_gly
+    z_omega_methylsulfanyl_heptyl_thiohydroximate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +ser_gly
+    z_omega_methylsulfanyl_octyl_thiohydroximate
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway trioxidosulfanidosulfate-to-nicotinamide "trioxidosulfanidosulfate to nicotinamide" {
-  spacing 304
+  spacing 292
 
   spine at 0,0 {
     trioxidosulfanidosulfate
@@ -14,17 +14,5 @@ pathway trioxidosulfanidosulfate-to-nicotinamide "trioxidosulfanidosulfate to ni
     gssg
     <-> ec_2_4_2_59 [2.4.2.59] +h2s +glycine +nad -nicotinamide -h2o -hplus
     adp_5_ethyl_4_methylthiazole_2_carboxylate
-  }
-
-  branch from nicotinamide side left {
-    nicotinamide
-    <-> . +nad +hplus
-    1_3_glycocyclic_adp_d_ribose
-  }
-
-  branch from nicotinamide side right {
-    nicotinamide
-    <-> . +nad
-    adp_1_deoxy_o_didehydro_ribofuranosylium
   }
 }

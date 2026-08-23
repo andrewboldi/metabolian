@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-chloro-trans-dienelacto-to-nad "5-chloro-trans-dienelacto… to NAD" {
-  spacing 236
+  spacing 302
 
   spine at 0,0 {
     5_chloro_trans_dienelactone
@@ -18,61 +18,127 @@ pathway 5-chloro-trans-dienelacto-to-nad "5-chloro-trans-dienelacto… to NAD" {
 
   branch from h side left {
     h
-    <-> ec_1_1_1_21 [1.1.1.21] +nadh +3_fluorobenzaldehyde +nad
-    3_fluorobenzyl_alcohol
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +tubercidin +phosphate +tubercidin +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_21 [1.1.1.21] +nadh +3_bromobenzaldehyde +nad
-    3_bromobenzyl_alcohol
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    cadeguomycin
   }
 
   branch from 5_chloromaleylacetate side left {
     5_chloromaleylacetate
-    <-> . +nadh +h +chloride +nad
-    2e_2_5_dichloro_4_oxo_2_hexenedioic_acid
+    <-> .
+    2z_4z_2_chloro_3_hydroxyhexa_2_4_dienedioate
   }
 
-  branch from 5_chloromaleylacetate side right {
-    5_chloromaleylacetate
-    <-> . +h +chloride
-    2_5_dichloro_3_oxoadipate
-  }
-
-  branch from maleylacetate side left {
+  branch from maleylacetate side right {
     maleylacetate
     <-> ec_1_13_11_37 [1.13.11.37] +h +o2
     benzene_1_2_4_triol
   }
 
-  branch from maleylacetate side right {
+  branch from maleylacetate side left {
     maleylacetate
-    <-> ec_1_2_1_61 [1.2.1.61] +nadh +h +nad +h2o
-    4_hydroxymuconic_semialdehyde
-  }
-
-  branch from chloride side left {
-    chloride
-    <-> . +trans_4_carboxymethylenebut_2_en_4_olide
-    r_2_chloro_5_oxo_2_5_dihydro_2_furyl_acetate
+    <-> ec_1_3_1_32 [1.3.1.32] +nadh +2_bromomaleylacetate +nad
+    bromide
   }
 
   branch from chloride side right {
     chloride
-    <-> ec_3_5_4_43 [3.5.4.43] +n_isopropylammelide +h +h2o
-    compound_0054382
+    <-> . +h +glyoxylate +h2o
+    dichloroacetate
   }
 
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_21 [1.1.1.21] +nadh +3_cyanobenzaldehyde +h
-    3_cyanobenzyl_alcohol
+  branch from chloride side left {
+    chloride
+    <-> . +3_6_dihydroxypyridine_2_5_dione +h +h2o
+    6_chloro_2_5_dioxo_2_5_dihydropyridin_3_olate
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_21 [1.1.1.21] +nadh +h +4_chlorobenzaldehyde
-    pr01
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_geranial +h
+    1r_2s_4r_borneol
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +s_citronellal
+    neomenthol
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    candicidin_d
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    bleomycin_a2
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    bleomycin_b2
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    avilamycin_a
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_1_1_71 [1.1.1.71] +2e_geranial +h +nad
+    borneol
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> ec_1_1_1_71 [1.1.1.71] +2e_geranial +h +nad
+    s_terpineol
+  }
+
+  branch from maleylacetate side right {
+    maleylacetate
+    <-> ec_3_1_1_45 [3.1.1.45] +fluoride +h +h2o
+    4_fluoromuconolactone
+  }
+
+  branch from maleylacetate side left {
+    maleylacetate
+    <-> . +h2o +h +chloride
+    5_chlorocarbonyl_4_hydroxy_penta_2_4_dienate
+  }
+
+  branch from chloride side right {
+    chloride
+    <-> . +5_chloro_3_methyl_cis_dienelactone +h
+    3_methyl_cis_dienelactone
+  }
+
+  branch from chloride side left {
+    chloride
+    <-> . +h +sulochrin +h2o2 +h2o
+    dihydrogeodin
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +s_citronellal
+    isomenthol
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +s_citronellal
+    neoisomenthol
   }
 }

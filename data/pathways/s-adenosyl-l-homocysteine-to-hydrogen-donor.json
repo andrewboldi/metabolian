@@ -108,54 +108,6 @@
       "xrefs": {
         "chebi": "CHEBI:17499"
       }
-    },
-    {
-      "id": "plastoquinol_9",
-      "name": "plastoquinol-9",
-      "formula": "C53H82O2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM6387"
-      }
-    },
-    {
-      "id": "2_methyl_6_solanyl_1_4_benzoquinol",
-      "name": "2-Methyl-6-solanyl-1,4-benzoquinol",
-      "short": "2-Methyl-6-solanyl-…",
-      "formula": "C52H80O2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1370219"
-      }
-    },
-    {
-      "id": "methyl_gibberellin_a34",
-      "name": "methyl gibberellin A34",
-      "short": "methyl gibberellin…",
-      "formula": "C20H26O6",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1368642"
-      }
-    },
-    {
-      "id": "gibberellin_a34",
-      "name": "Gibberellin A34",
-      "formula": "C19H24O6",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1364237"
-      }
-    },
-    {
-      "id": "all_trans_neurosporene",
-      "name": "all-trans-neurosporene",
-      "short": "all-trans-neurospor…",
-      "formula": "C40H58",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1370532"
-      }
     }
   ],
   "enzymes": [
@@ -164,13 +116,6 @@
       "name": "carotenoid 1,2-hydratase",
       "ec": [
         "4.2.1.131"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_295",
-      "name": "2-methyl-6-phytyl-1,4-hydroquinone methyltransferase",
-      "ec": [
-        "2.1.1.295"
       ]
     }
   ],
@@ -295,133 +240,49 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "2-methyl-6-phytyl-1,4-hydroquinone methyltransferase",
-      "ec": "2.1.1.295",
-      "substrates": [
-        {
-          "metabolite": "s_adenosyl_l_homocysteine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "plastoquinol_9",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "s_adenosyl_l_methionine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "2_methyl_6_solanyl_1_4_benzoquinol",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_1_295"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR196387"
+      "id": "xt_methoxyneurosporene_s-adenosyl-l-homocysteine-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "methoxyneurosporene"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-fmn"
+      },
+      "note": "Shares methoxyneurosporene with S-adenosyl-L-homocysteine to FMN.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR196387"
+            "id": "MNXM740017"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "Reaction MNXR196605",
-      "substrates": [
-        {
-          "metabolite": "s_adenosyl_l_homocysteine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "methyl_gibberellin_a34",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "s_adenosyl_l_methionine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "gibberellin_a34",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR196605"
+      "id": "xt_1_hydroxyneurosporene_n-acetyl-beta-neuraminate-to-h",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_hydroxyneurosporene"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyl-beta-neuraminate-to-h"
+      },
+      "note": "Shares 1-hydroxyneurosporene with N-acetyl-beta-neuraminate… to H.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR196605"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "carotenoid 1,2-hydratase",
-      "ec": "4.2.1.131",
-      "substrates": [
-        {
-          "metabolite": "1_hydroxyneurosporene",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "all_trans_neurosporene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_1_131"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "metanetx": "MNXR198722"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR198722"
+            "id": "MNXM1364475"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-2-di-9z-12z-octadeca-to-1-linoleoyl-2-oleoyl-s "1,2-di-[(9Z,12Z)-octadeca… to 1-linoleoyl-2-oleoyl-sn-g…" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     1_2_di_9z_12z_octadecadienoyl_sn_glycero_3_phosp
@@ -14,5 +14,17 @@ pathway 1-2-di-9z-12z-octadeca-to-1-linoleoyl-2-oleoyl-s "1,2-di-[(9Z,12Z)-octad
     1_linoleoyl_sn_glycero_3_phosphate
     <-> . +oleoyl_coa -coa
     1_linoleoyl_2_oleoyl_sn_glycero_3_phosphate
+  }
+
+  branch from oleoyl_coa side left {
+    oleoyl_coa
+    <-> . +22_methyltricosan_1_ol +coa
+    1_o_22_methyltricosyl_oleate
+  }
+
+  branch from oleoyl_coa side right {
+    oleoyl_coa
+    <-> . +24_methylpentacosan_1_ol +coa
+    1_o_24_methylpentacosyl_oleate
   }
 }

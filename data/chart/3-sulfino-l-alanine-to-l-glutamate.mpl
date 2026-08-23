@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-sulfino-l-alanine-to-l-glutamate "3-sulfino-L-alanine to L-glutamate" {
-  spacing 220
+  spacing 208
 
   spine at 0,0 {
     3_sulfino_l_alanine
@@ -14,17 +14,5 @@ pathway 3-sulfino-l-alanine-to-l-glutamate "3-sulfino-L-alanine to L-glutamate" 
     taurine
     <-> ec_2_6_1_55 [2.6.1.55] +akg -glutamate
     sulfonatoacetaldehyde
-  }
-
-  branch from taurine side left {
-    taurine
-    <-> . +n_nervonoyltaurine +h2o
-    15z_tetracosenoate
-  }
-
-  branch from taurine side right {
-    taurine
-    <-> . +n_tricosanoyltaurine +h2o
-    tricosanoate
   }
 }

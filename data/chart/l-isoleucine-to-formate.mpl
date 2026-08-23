@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-isoleucine-to-formate "L-isoleucine to formate" {
-  spacing 294
+  spacing 252
 
   spine at 0,0 {
     l_isoleucine
@@ -20,57 +20,15 @@ pathway l-isoleucine-to-formate "L-isoleucine to formate" {
     propionyl_coa
   }
 
-  branch from hydrogen_acceptor side left {
-    hydrogen_acceptor
-    <-> . +3_3_diiodothyronamine +iodide +hplus +hydrogen_donor
-    3_3_5_triiodothyronamine
-  }
-
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> . +3_3_diiodothyronamine +iodide +hplus +hydrogen_donor
-    3_3_5_triiodothyronamine
-  }
-
   branch from 2_aminobut_2_enoic_acid side left {
     2_aminobut_2_enoic_acid
     <-> .
     1_aminocyclopropanecarboxylic_acid
   }
 
-  branch from 2_aminobut_2_enoic_acid side right {
-    2_aminobut_2_enoic_acid
-    <-> . +h2o
-    threonine
-  }
-
-  branch from 2_iminobutanoic_acid side left {
+  branch from 2_iminobutanoic_acid side right {
     2_iminobutanoic_acid
     <-> ec_4_3_1_19 [4.3.1.19]
     z_2_aminobutenoic_acid
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +4_methyl_cyclohexylammonium +nadp +h2o +nadph +hplus
-    4_methylcyclohexanone
-  }
-
-  branch from nh3 side left {
-    nh3
-    <-> . +2_methylcyclopentammonium +nadp +h2o +nadph +hplus
-    2_methylcyclopentanone
-  }
-
-  branch from propionyl_coa side right {
-    propionyl_coa
-    <-> ec_1_3_1_95 [1.3.1.95] +nad +nadh +hplus
-    acryloyl_coa
-  }
-
-  branch from propionyl_coa side left {
-    propionyl_coa
-    <-> . +hco3 +atp +adp +pi +hplus
-    methylmalonyl_coa
   }
 }

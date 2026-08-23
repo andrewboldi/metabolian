@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-adenosyl-l-homocysteine-to-nadph-null "S-adenosyl-L-homocysteine to NADPH" {
-  spacing 208
+  spacing 172
 
   spine at 0,0 {
     s_adenosyl_l_homocysteine
@@ -14,41 +14,5 @@ pathway s-adenosyl-l-homocysteine-to-nadph-null "S-adenosyl-L-homocysteine to NA
     4alpha_methylfecosterol
     <-> ec_1_3_1_70 [1.3.1.70] +nadp -4alpha_methyl_5alpha_ergosta_8_14_24_28_trien_3b -nadph
     h
-  }
-
-  branch from s_adenosyl_l_methionine side left {
-    s_adenosyl_l_methionine
-    <-> ec_2_1_1_316 [2.1.1.316] +s_adenosyl_l_homocysteine +mitomycin_b +h
-    7_demethylmitomycin_b
-  }
-
-  branch from s_adenosyl_l_methionine side right {
-    s_adenosyl_l_methionine
-    <-> ec_2_1_1_365 [2.1.1.365] +s_adenosyl_l_homocysteine +1_3_3_tri_o_methyl_4alpha_mannobiose +h
-    d_man3me_1_4_d_man3me
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_1_1_19 [3.1.1.19] +beta_d_glucuronate +h2o
-    d_glucurono_6_2_lactone
-  }
-
-  branch from h side right {
-    h
-    <-> ec_2_7_1_46 [2.7.1.46] +beta_l_arabinose_1_phosphate +adp +beta_l_arabinofuranose
-    atp
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> . +levopiramadiene_diol +nadp +h2o +h +o2
-    levopimaradienol
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> . +dehydroabietadiene_diol +nadp +h2o +h +dehydroabietadienol
-    o2
   }
 }

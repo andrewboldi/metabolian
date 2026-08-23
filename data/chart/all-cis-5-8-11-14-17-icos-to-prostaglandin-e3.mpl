@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway all-cis-5-8-11-14-17-icos-to-prostaglandin-e3 "all-cis-5,8,11,14,17-icos… to prostaglandin E3" {
-  spacing 158
+  spacing 170
 
   spine at 0,0 {
     all_cis_5_8_11_14_17_icosapentaenoate
@@ -20,5 +20,17 @@ pathway all-cis-5-8-11-14-17-icos-to-prostaglandin-e3 "all-cis-5,8,11,14,17-icos
     prostaglandin_h3
     <-> .
     prostaglandin_d3
+  }
+
+  branch from all_cis_5_8_11_14_17_icosapentaenoate side right {
+    all_cis_5_8_11_14_17_icosapentaenoate
+    <-> ec_5_3_3_13 [5.3.3.13]
+    5z_7e_9e_14z_17z_icosapentaenoate
+  }
+
+  branch from all_cis_5_8_11_14_17_icosapentaenoate side left {
+    all_cis_5_8_11_14_17_icosapentaenoate
+    <-> . +o2
+    12_hpepe
   }
 }

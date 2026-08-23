@@ -1,0 +1,419 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "citrate-to-cis-aconitate-null",
+  "name": "citrate to cis-aconitate",
+  "category": "other",
+  "summary": "A 3-step route from citrate to cis-aconitate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR165040"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "citrate",
+      "name": "citrate",
+      "formula": "C6H5O7",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1107752"
+      }
+    },
+    {
+      "id": "l_glutamate",
+      "name": "L-glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM741173"
+      }
+    },
+    {
+      "id": "citrylglutamate",
+      "name": "β-citrylglutamate",
+      "formula": "C11H11NO10",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:76942"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "citrate",
+      "name": "Citrate",
+      "formula": "C6H5O7",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:16947"
+      }
+    },
+    {
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29985"
+      }
+    },
+    {
+      "id": "cis_aconitate",
+      "name": "cis-Aconitate",
+      "formula": "C6H3O6",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:16383"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_68",
+      "name": "N-formylglutamate deformylase",
+      "ec": [
+        "3.5.1.68"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "N-formylglutamate deformylase",
+      "ec": "3.5.1.68",
+      "substrates": [
+        {
+          "metabolite": "citrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "citrylglutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_68"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR165040"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR165040"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "beta-citrylglutamate + H2O = citrate + L-glutamate",
+      "equation": "beta-citrylglutamate + H2O = citrate + L-glutamate",
+      "substrates": [
+        {
+          "metabolite": "citrylglutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "citrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:86691"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:86691"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "citrate = cis-aconitate + H2O",
+      "equation": "citrate = cis-aconitate + H2O",
+      "substrates": [
+        {
+          "metabolite": "citrate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cis_aconitate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:10228"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10228"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_citrylglutamate_citrate-to-cis-aconitate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "citrylglutamate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "citrate-to-cis-aconitate"
+      },
+      "note": "Shares β-citrylglutamate with citrate to cis-aconitate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76942"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_citrylglutamate_precorrin-6y-to-cob-ii-yrinic-acid-a-c",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "citrylglutamate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "precorrin-6y-to-cob-ii-yrinic-acid-a-c"
+      },
+      "note": "Shares β-citrylglutamate with precorrin-6Y to cob(II)yrinic acid a,c….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76942"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_citrylglutamate_precorrin-6y-to-cob-ii-yrinic-acid-a-c-17477",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "citrylglutamate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "precorrin-6y-to-cob-ii-yrinic-acid-a-c-17477"
+      },
+      "note": "Shares β-citrylglutamate with precorrin-6Y to cob(II)yrinic acid a,c….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76942"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cis_aconitate_citrate-to-cis-aconitate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cis_aconitate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "citrate-to-cis-aconitate"
+      },
+      "note": "Shares cis-Aconitate with citrate to cis-aconitate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16383"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cis_aconitate_citric-acid-cycle",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cis_aconitate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "citric-acid-cycle"
+      },
+      "note": "Shares cis-Aconitate with Citric acid cycle (TCA / Krebs cycle).",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16383"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cis_aconitate_trans-aconitate-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cis_aconitate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-aconitate-to-succinate"
+      },
+      "note": "Shares cis-Aconitate with trans-aconitate to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16383"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cis_aconitate_trans-aconitate-to-succinate-17265",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cis_aconitate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-aconitate-to-succinate-17265"
+      },
+      "note": "Shares cis-Aconitate with trans-aconitate to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16383"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cis_aconitate_tricarballylate-to-d-erythro-isocitrate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cis_aconitate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "tricarballylate-to-d-erythro-isocitrate"
+      },
+      "note": "Shares cis-Aconitate with tricarballylate to D-erythro-isocitrate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16383"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cis_aconitate_tricarballylate-to-d-erythro-isocitrate-86635",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cis_aconitate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "tricarballylate-to-d-erythro-isocitrate-86635"
+      },
+      "note": "Shares cis-Aconitate with tricarballylate to D-erythro-isocitrate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16383"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -129,81 +129,6 @@
       "xrefs": {
         "metanetx": "WATER"
       }
-    },
-    {
-      "id": "quinuclidinone",
-      "name": "Quinuclidinone",
-      "formula": "C7H11NO",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1133036"
-      }
-    },
-    {
-      "id": "quinuclidin_2_ol",
-      "name": "Quinuclidin-2-ol",
-      "formula": "C7H13NO",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1133037"
-      }
-    },
-    {
-      "id": "8_thiabicyclo_3_2_1_octan_3_ol",
-      "name": "8-Thiabicyclo[3.2.1]octan-3-ol",
-      "short": "8-Thiabicyclo[3.2.1…",
-      "formula": "C7H12OS",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1133039"
-      }
-    },
-    {
-      "id": "8_thiabicyclo_3_2_1_octane_3_one",
-      "name": "8-thiabicyclo[3,2,1]octane-3-one",
-      "short": "8-thiabicyclo[3,2,1…",
-      "formula": "C7H10OS",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM489651"
-      }
-    },
-    {
-      "id": "3_4_6_trihydroxy_cis_cinnamate",
-      "name": "3,4,6-trihydroxy-cis-cinnamate",
-      "short": "3,4,6-trihydroxy-ci…",
-      "formula": "C9H7O5",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM481963"
-      }
-    },
-    {
-      "id": "esculetin",
-      "name": "esculetin",
-      "formula": "C9H6O4",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM8593"
-      }
-    },
-    {
-      "id": "s_usnate",
-      "name": "(S)-usnate",
-      "formula": "C18H15O7",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM1369158"
-      }
-    },
-    {
-      "id": "hydratedusnate",
-      "name": "hydratedusnate",
-      "formula": "C18H16O8",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM478317"
-      }
     }
   ],
   "enzymes": [
@@ -219,13 +144,6 @@
       "name": "3alpha-hydroxysteroid 3-dehydrogenase (Si-specific)",
       "ec": [
         "1.1.1.50"
-      ]
-    },
-    {
-      "id": "ec_1_1_1_206",
-      "name": "tropinone reductase I",
-      "ec": [
-        "1.1.1.206"
       ]
     }
   ],
@@ -370,175 +288,225 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "tropinone reductase I",
-      "ec": "1.1.1.206",
-      "substrates": [
-        {
-          "metabolite": "quinuclidinone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "quinuclidin_2_ol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_1_1_206"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR194948"
+      "id": "xt_c7a_hydroxy_4_cholesten_3_one_7-ketocholesterol-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "c7a_hydroxy_4_cholesten_3_one"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "7-ketocholesterol-to-fmn"
+      },
+      "note": "Shares 7alpha-Hydroxycholest-4-en-3-one with 7-ketocholesterol to FMN.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR194948"
+            "db": "ChEBI",
+            "id": "CHEBI:17899"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "tropinone reductase I",
-      "ec": "1.1.1.206",
-      "substrates": [
-        {
-          "metabolite": "8_thiabicyclo_3_2_1_octan_3_ol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "8_thiabicyclo_3_2_1_octane_3_one",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_1_1_206"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR194951"
+      "id": "xt_c7a_hydroxy_4_cholesten_3_one_bile-acid-synthesis",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "c7a_hydroxy_4_cholesten_3_one"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "bile-acid-synthesis"
+      },
+      "note": "Shares 7alpha-Hydroxycholest-4-en-3-one with Bile acid synthesis (classic and alternative pathways).",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR194951"
+            "db": "ChEBI",
+            "id": "CHEBI:17899"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "Reaction MNXR177183",
-      "substrates": [
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "3_4_6_trihydroxy_cis_cinnamate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "esculetin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "metanetx": "MNXR177183"
+      "id": "xt_c7a_hydroxy_5b_cholestan_3_one_bile-acid-synthesis",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "c7a_hydroxy_5b_cholestan_3_one"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "bile-acid-synthesis"
+      },
+      "note": "Shares 7alpha-Hydroxy-5beta-cholestan-3-one with Bile acid synthesis (classic and alternative pathways).",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR177183"
+            "db": "ChEBI",
+            "id": "CHEBI:2290"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "Reaction MNXR177418",
-      "substrates": [
-        {
-          "metabolite": "s_usnate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydratedusnate",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "metanetx": "MNXR177418"
+      "id": "xt_c7a_hydroxy_5b_cholestan_3_one_l-pyrrolysine-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "c7a_hydroxy_5b_cholestan_3_one"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "l-pyrrolysine-to-diphosphate"
+      },
+      "note": "Shares 7alpha-Hydroxy-5beta-cholestan-3-one with L-pyrrolysine to diphosphate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:2290"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5beta_cholestane_3alpha_7alpha_diol_digallate-to-nadp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5beta_cholestane_3alpha_7alpha_diol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "digallate-to-nadp"
+      },
+      "note": "Shares 5beta-cholestane-3alpha,7alpha-diol with digallate to NADP.",
+      "provenance": {
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR177418"
+            "id": "MNXM730484"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5beta_cholestane_3alpha_7alpha_diol_l-pyrrolysine-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5beta_cholestane_3alpha_7alpha_diol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-pyrrolysine-to-diphosphate"
+      },
+      "note": "Shares 5beta-cholestane-3alpha,7alpha-diol with L-pyrrolysine to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM730484"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5beta_cholestane_3alpha_7alpha_diol_methylselenol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5beta_cholestane_3alpha_7alpha_diol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "methylselenol-to-h2o"
+      },
+      "note": "Shares 5beta-cholestane-3alpha,7alpha-diol with methylselenol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM730484"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5beta_cholestane_3alpha_7alpha_diol_nadh-to-2-chloroethanol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5beta_cholestane_3alpha_7alpha_diol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-2-chloroethanol"
+      },
+      "note": "Shares 5beta-cholestane-3alpha,7alpha-diol with NADH to 2-chloroethanol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM730484"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5beta_cholestane_3alpha_7alpha_diol_nadh-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5beta_cholestane_3alpha_7alpha_diol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-nadph"
+      },
+      "note": "Shares 5beta-cholestane-3alpha,7alpha-diol with NADH to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM730484"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5beta_cholestane_3alpha_7alpha_27_triol_chenodeoxycholoyl-coa-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5beta_cholestane_3alpha_7alpha_27_triol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "chenodeoxycholoyl-coa-to-nad"
+      },
+      "note": "Shares 5beta-cholestane-3alpha,7alpha,27-triol with chenodeoxycholoyl-CoA to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM729417"
           }
         ]
       }

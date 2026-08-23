@@ -4,51 +4,15 @@
 # edit the generator, not this file.
 
 pathway s-methyl-5-thioadenosine-to-h2o-null "S-methyl-5'-thioadenosine to H2O" {
-  spacing 228
+  spacing 172
 
   spine at 0,0 {
     s_methyl_5_thioadenosine
-    <-> ec_3_2_2_16 [3.2.2.16] +h2o -aldehydo_s_methyl_5_thio_d_ribose
-    adenine
-    <-> ec_1_14_11_33 [1.14.11.33] +formaldehyde +co2 +succinate -o2 -1_methyladenine
-    2_oxoglutarate
-    <-> ec_3_2_2_13 [3.2.2.13] +beta_d_ribofuranose +1_methyladenine -h2o
-    1_methyladenosine
-  }
-
-  branch from 2_oxoglutarate side left {
-    2_oxoglutarate
-    <-> . +demethoxysulfazecin +o2 +co2 +succinate
-    demethylsulfazecin
-  }
-
-  branch from 2_oxoglutarate side right {
-    2_oxoglutarate
-    <-> ec_1_14_11_32 [1.14.11.32] +formaldehyde +neomorphine +co2 +succinate +o2
-    neopine
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +nitric_oxide
-    nitrous_oxide
-  }
-
-  branch from o2 side right {
-    o2
-    <-> ec_1_13_11_33 [1.13.11.33] +7s_hydroxy_4z_8e_10z_13z_16z_19z_docosahexaenoat
-    7s_17s_hhpdha
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +d_galactopyranose +beta_d_gal_1_3_beta_d_glcnac_1_3_beta_d_glcnac_1
-    d_gal_1_3_d_glcnac_1_3_d_gal_1_4_d_glcnac_1_6_d
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +1s_4r_4_aminocyclopent_2_ene_1_carboxylate
-    1r_4s_2_azabicyclo_2_2_1_hept_5_en_3_one
+    <-> . +spermidine +co2 -s_adenosyl_l_methionine
+    putrescine
+    <-> ec_4_1_1_17 [4.1.1.17] +co2 -ornithine
+    h
+    <-> ec_3_5_1_16 [3.5.1.16] +acetate +ornithine -h2o
+    n_2_acetyl_l_ornithine
   }
 }

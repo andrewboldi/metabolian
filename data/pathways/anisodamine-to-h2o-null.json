@@ -1,0 +1,477 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "anisodamine-to-h2o-null",
+  "name": "Anisodamine to H2O",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from Anisodamine to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR192149"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:2735"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "anisodamine",
+      "name": "Anisodamine",
+      "formula": "C17H23NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:2735"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM25"
+      }
+    },
+    {
+      "id": "2_oxoglutarate",
+      "name": "2-oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1368744"
+      }
+    },
+    {
+      "id": "l_hyoscyamine",
+      "name": "L-hyoscyamine",
+      "formula": "C17H24NO3",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM2759"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "6s_hydroxyhyoscyamine",
+      "name": "(6S)-Hydroxyhyoscyamine",
+      "short": "Hydroxyhyoscyamine",
+      "formula": "C17H23NO4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM732796"
+      }
+    },
+    {
+      "id": "scopolamine",
+      "name": "scopolamine",
+      "formula": "C17H21NO4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM4105"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_11_11",
+      "name": "hyoscyamine (6S)-dioxygenase",
+      "ec": [
+        "1.14.11.11"
+      ]
+    },
+    {
+      "id": "ec_1_14_20_13",
+      "name": "6beta-hydroxyhyoscyamine epoxidase",
+      "ec": [
+        "1.14.20.13"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "hyoscyamine (6S)-dioxygenase",
+      "ec": "1.14.11.11",
+      "substrates": [
+        {
+          "metabolite": "anisodamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_oxoglutarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_hyoscyamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR192149"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR192149"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "hyoscyamine (6S)-dioxygenase",
+      "ec": "1.14.11.11",
+      "substrates": [
+        {
+          "metabolite": "2_oxoglutarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_hyoscyamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "6s_hydroxyhyoscyamine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR148375"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR148375"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "6beta-hydroxyhyoscyamine epoxidase",
+      "ec": "1.14.20.13",
+      "substrates": [
+        {
+          "metabolite": "2_oxoglutarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "6s_hydroxyhyoscyamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "scopolamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_20_13"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR148322"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR148322"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_anisodamine_anisodamine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "anisodamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "anisodamine-to-h2o"
+      },
+      "note": "Shares Anisodamine with Anisodamine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:2735"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_anisodamine_gdp-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "anisodamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gdp-to-o2"
+      },
+      "note": "Shares Anisodamine with GDP to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:2735"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_hyoscyamine_anisodamine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_hyoscyamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "anisodamine-to-h2o"
+      },
+      "note": "Shares L-hyoscyamine with Anisodamine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2759"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_hyoscyamine_dimethylselenoniopropanoa-to-acrylate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_hyoscyamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dimethylselenoniopropanoa-to-acrylate-null"
+      },
+      "note": "Shares L-hyoscyamine with dimethylselenoniopropanoa… to acrylate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2759"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_hyoscyamine_r-pantothenate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_hyoscyamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-pantothenate-to-h2o"
+      },
+      "note": "Shares L-hyoscyamine with (R)-pantothenate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2759"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6s_hydroxyhyoscyamine_anisodamine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6s_hydroxyhyoscyamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "anisodamine-to-h2o"
+      },
+      "note": "Shares (6S)-Hydroxyhyoscyamine with Anisodamine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM732796"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_scopolamine_anisodamine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "scopolamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "anisodamine-to-h2o"
+      },
+      "note": "Shares scopolamine with Anisodamine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM4105"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_scopolamine_gdp-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "scopolamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gdp-to-o2"
+      },
+      "note": "Shares scopolamine with GDP to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM4105"
+          }
+        ]
+      }
+    }
+  ]
+}

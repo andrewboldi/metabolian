@@ -34,25 +34,85 @@ pathway 1r-5as-6r-1-4-5-5a-6-9-to-h2o "(1R,5aS,6R)-1,4,5,5a,6,9-… to H2O" {
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_144 [4.2.3.144] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +h2o
-    geranyllinalool
+    <-> . +nonanoate +atp +nadph +hplus +amp +nadp
+    nonanal
   }
 
   branch from ppi side right {
     ppi
-    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    z_biformene
+    <-> . +fpp
+    cadinene
   }
 
   branch from h2o side left {
     h2o
-    <-> . +5_hydroperoxy_epa
-    leukotriene_a5
+    <-> . +11z_14z_eicosadienoate +h +coa
+    11z_14z_icosadienoyl_coa
   }
 
   branch from h2o side right {
     h2o
-    <-> . +leukotriene_a5
-    5_12_dihydroxy_6e_ltb5
+    <-> ec_3_5_4_5 [3.5.4.5] +h +5_deoxy_5_fluorocytidine +nh4
+    doxifluridine
+  }
+
+  branch from dmapp side left {
+    dmapp
+    <-> ec_3_6_1_76 [3.6.1.76] +h2o +pi +hplus
+    prenyl_phosphate
+  }
+
+  branch from dmapp side right {
+    dmapp
+    <-> . +butyrolactone_ii +ppi
+    butyrolactone_i
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +fpp +h2o
+    cadinol
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +streptomycin +gtp
+    6_o_guanylylstreptomycin
+  }
+
+  branch from h side left {
+    h
+    <-> . +isoniazid_alpha_ketoglutaric_acid +h2o +isoniazide
+    2_oxoglutarate
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_5_1_18 [2.5.1.18] +4_glutathionyl_cyclophosphamide +h2o +glutathione
+    aldophosphamide
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_17_3_2 [1.17.3.2] +purine_6_thiol +h2o +h2o2
+    6_thiourate
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_2_3_1 [1.2.3.1] +h +n_methyl_6_pyridone_3_carboxamide +h2o2 +h2o
+    1_methylnicotinamide
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_1_1_1 [3.1.1.1] +4_amino_1_piperidinecarboxylic_acid +sn_38
+    npc
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_2_1_31 [3.2.1.31] +d_glucuronate +sn_38
+    sn_38_o_d_glucuronoside
   }
 }

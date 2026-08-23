@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 17-o-acetylnorajmaline-to-d-glucopyranose "17-O-acetylnorajmaline to D-glucopyranose" {
-  spacing 230
+  spacing 254
 
   spine at 0,0 {
     17_o_acetylnorajmaline
@@ -34,5 +34,29 @@ pathway 17-o-acetylnorajmaline-to-d-glucopyranose "17-O-acetylnorajmaline to D-g
     glucose
     <-> ec_2_4_1_230 [2.4.1.230] +d_glcp_1_2_d_glcp +pi
     d_glucose_1_phosphate
+  }
+
+  branch from udp_d_glucose side right {
+    udp_d_glucose
+    <-> ec_2_4_1_210 [2.4.1.210] +limonin +h2o +udp +hplus
+    limonin_17_d_glucoside
+  }
+
+  branch from udp_d_glucose side left {
+    udp_d_glucose
+    <-> ec_2_4_1_127 [2.4.1.127] +menthol +udp +hplus
+    menthyl_d_glucoside
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> ec_2_7_1_147 [2.7.1.147] +adp +amp +hplus
+    g6p
+  }
+
+  branch from glucose side left {
+    glucose
+    <-> ec_3_2_1_104 [3.2.1.104] +cholesteryl_d_glucoside +h2o
+    cholesterol
   }
 }

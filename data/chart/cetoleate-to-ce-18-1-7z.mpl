@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cetoleate-to-ce-18-1-7z "cetoleate to CE 18:1(7Z)" {
-  spacing 230
+  spacing 248
 
   spine at 0,0 {
     cetoleate
@@ -40,18 +40,6 @@ pathway cetoleate-to-ce-18-1-7z "cetoleate to CE 18:1(7Z)" {
     11z_docosenoyl_coa
     <-> . +nadh +acetyl_coa +fadh2 +h +coa +nad +h2o
     fad
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +fpp
-    sesquisabinene_b
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +fpp
-    sesquisabinene_a
   }
 
   branch from 2e_11z_docosadi_2_11_enoyl_coa side left {
@@ -104,7 +92,37 @@ pathway cetoleate-to-ce-18-1-7z "cetoleate to CE 18:1(7Z)" {
 
   branch from 7z_octadecenoyl_coa side left {
     7z_octadecenoyl_coa
+    <-> . +r_carnitine +coa
+    11z_octadecenoylcarnitine
+  }
+
+  branch from 11z_docosenoyl_coa side right {
+    11z_docosenoyl_coa
+    <-> . +s_carnitine +coa
+    11z_docos_11_enoylcarnitine
+  }
+
+  branch from 9z_icos_9_enoyl_coa side left {
+    9z_icos_9_enoyl_coa
+    <-> . +s_carnitine +coa
+    eicosenoylcarnitine_11
+  }
+
+  branch from 7z_octadecenoyl_coa side right {
+    7z_octadecenoyl_coa
     <-> . +acetyl_coa +fadh2 +h +fad +coa +nad +h2o
     nadh
+  }
+
+  branch from cholesterol side left {
+    cholesterol
+    <-> . +nadph +o2 +hplus +nadp +h2o
+    25_hydroxycholesterol
+  }
+
+  branch from cholesterol side right {
+    cholesterol
+    <-> . +5z_8z_11z_14z_17z_icosapentaenoyl_coa +coa
+    cholesteryl_5z_8z_11z_14z_17z_eicosapentaenoate
   }
 }

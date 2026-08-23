@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway maltose-to-d-glucose "α-maltose to α-D-glucose…" {
-  spacing 182
+  spacing 200
 
   spine at 0,0 {
     maltose
@@ -26,31 +26,49 @@ pathway maltose-to-d-glucose "α-maltose to α-D-glucose…" {
 
   branch from d_glucose side left {
     d_glucose
-    <-> . +cellobiose +h2o
-    glucose
+    <-> . +6_kestotriose +sucrose
+    6_6_kestotetraose
   }
 
   branch from d_glucose side right {
     d_glucose
-    <-> . +2_d_glucosyloxy_cis_cinnamate +h2o
-    cis_2_coumarate
+    <-> . +3_ketolactose +h2o
+    3_keto_d_galactose
   }
 
   branch from g1p side left {
     g1p
-    <-> ec_2_7_7_69 [2.7.7.69] +pi +gdp +hplus
-    gdp_d_glucose
+    <-> ec_2_7_7_69 [2.7.7.69] +gdp_d_glucose +d_mannose_1_phosphate
+    gdp_d_mannose
   }
 
   branch from g1p side right {
     g1p
-    <-> ec_2_4_1_352 [2.4.1.352] +2_o_d_glucopyranosyl_d_glycerate +pi
-    d_glycerate
+    <-> . +o_phospho_l_serine_2 +d_glucose_1_6_bisphosphate
+    l_serine
   }
 
-  branch from d_glucose_1_6_bisphosphate side left {
-    d_glucose_1_6_bisphosphate
-    <-> . +o_phospho_l_serine_2 +g1p
-    l_serine
+  branch from d_glucose side left {
+    d_glucose
+    <-> ec_3_2_1_207 [3.2.1.207] +n_glc_1_3_man_1_2_man_1_2_man_1_3_man_1_2_man_1 +h2o
+    n4_d_man_1_2_d_man_1_2_d_man_1_3_d_man_1_2_d_man
+  }
+
+  branch from d_glucose side right {
+    d_glucose
+    <-> ec_3_2_1_216 [3.2.1.216] +d_glcp_1_2_d_glcp +h2o
+    glucose
+  }
+
+  branch from g1p side left {
+    g1p
+    <-> ec_2_4_1_389 [2.4.1.389] +d_glcp_1_3_d_galp +pi
+    d_galactopyranose
+  }
+
+  branch from g1p side right {
+    g1p
+    <-> ec_2_4_1_392 [2.4.1.392] +3_o_d_glucosyl_d_glucuronoside +pi
+    d_glucosiduronate
   }
 }

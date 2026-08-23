@@ -18,37 +18,37 @@ pathway 2r-3r-2-3-dihydroxy-3-m-to-n6-r-s8-isobutyryldi "(2R,3R)-2,3-dihydroxy-3
 
   branch from kmv side left {
     kmv
-    <-> . +isoleucine +o2 +h2o +h2o2
-    nh3
-  }
-
-  branch from kmv side right {
-    kmv
     <-> . +isoleucine +glyoxylate
     glycine
   }
 
-  branch from kiv side left {
-    kiv
-    <-> . +valine +glycine
-    glyoxylate
-  }
-
-  branch from kiv side right {
-    kiv
-    <-> ec_2_6_1_42 [2.6.1.42] +l_valine +4_methylsulfanyl_2_oxobutanoate
-    l_methionine
-  }
-
-  branch from isoleucine side left {
+  branch from isoleucine side right {
     isoleucine
     <-> ec_6_3_2_47 [6.3.2.47] +n3_fumaramoyl_s_2_3_diaminopropanoic_acid +atp +adp +pi +hplus
     dapdiamide_b
   }
 
-  branch from isoleucine side right {
+  branch from isoleucine side left {
     isoleucine
-    <-> ec_1_14_11_74 [1.14.11.74] +akg +o2 +succinate +co2
-    31_hydroxy_l_isoleucine
+    <-> ec_2_1_4_4 [2.1.4.4] +arginine +ornithine
+    n_amidino_l_isoleucine
+  }
+
+  branch from 2r_3r_2_3_dihydroxy_3_methylpentanoate side right {
+    2r_3r_2_3_dihydroxy_3_methylpentanoate
+    <-> ec_1_1_1_86 [1.1.1.86] +nadp +nadph +hplus
+    s_2_acetyl_2_hydroxybutanoate
+  }
+
+  branch from valine side left {
+    valine
+    <-> ec_2_1_4_4 [2.1.4.4] +arginine +ornithine
+    n_amidino_l_valine
+  }
+
+  branch from valine side right {
+    valine
+    <-> . +atp +nadph +hplus +amp +ppi +nadp
+    2_ammonio_3_methylbutanal
   }
 }

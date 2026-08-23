@@ -4,63 +4,15 @@
 # edit the generator, not this file.
 
 pathway d-arabinitol-to-h2o "D-arabinitol to H2O" {
-  spacing 256
+  spacing 224
 
   spine at 0,0 {
     d_arabinitol
-    <-> ec_1_1_1_287 [1.1.1.287] +nadp -h -nadph
-    alpha_d_ribulose
-    <-> ec_5_3_1_20 [5.3.1.20]
-    beta_d_ribopyranose
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate -beta_d_ribopyranose -h2o
-    atp
-  }
-
-  branch from h side left {
-    h
-    <-> . +5_fluorouridine +atp +adp
-    5_fluorouridine_monophosphate
-  }
-
-  branch from h side right {
-    h
-    <-> . +5_phospho_alpha_d_ribose_1_diphosphate +5_fluorouracil +5_fluorouridine_monophosphate
-    diphosphate
-  }
-
-  branch from beta_d_ribopyranose side left {
-    beta_d_ribopyranose
-    <-> .
-    d_ribose
-  }
-
-  branch from beta_d_ribopyranose side right {
-    beta_d_ribopyranose
-    <-> .
-    d_ribopyranose
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    3r_5s_fluvastatin
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    glucuronide_conjugate_of_3_methoxy_acetaminophen
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +beta_d_fructose +alpha_d_galactose
-    lactulose
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +d_glucarate +h
-    compound_0286062
+    <-> ec_1_1_1_21 [1.1.1.21] +nadp -h -nadph
+    aldehydo_d_arabinose
+    <-> ec_4_1_2_23 [4.1.2.23] +pyruvate
+    3_deoxy_d_manno_octulosonate
+    <-> ec_3_1_3_45 [3.1.3.45] +h +phosphate -h2o
+    8_phospho_3_deoxy_d_manno_oct_2_ulosonic_acid
   }
 }

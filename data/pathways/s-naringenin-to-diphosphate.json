@@ -117,80 +117,6 @@
       "xrefs": {
         "chebi": "CHEBI:50209"
       }
-    },
-    {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:175763"
-      }
-    },
-    {
-      "id": "cadinene",
-      "name": "β-cadinene",
-      "formula": "C15H24",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:27723"
-      }
-    },
-    {
-      "id": "gpp",
-      "name": "Geranyl diphosphate (GPP)",
-      "short": "Geranyl PP (GPP)",
-      "formula": "C10H17O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58057"
-      }
-    },
-    {
-      "id": "sabinene",
-      "name": "sabinene",
-      "formula": "C10H16",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:50027"
-      }
-    },
-    {
-      "id": "dodecanoate",
-      "name": "dodecanoate",
-      "formula": "C12H23O2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:18262"
-      }
-    },
-    {
-      "id": "10_hydroxylaurate",
-      "name": "10-hydroxylaurate",
-      "formula": "C12H23O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:167542"
-      }
-    },
-    {
-      "id": "tetradecanoate",
-      "name": "tetradecanoate",
-      "formula": "C14H27O2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:30807"
-      }
-    },
-    {
-      "id": "9_hydroxymyristate",
-      "name": "9-hydroxymyristate",
-      "formula": "C14H27O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:167544"
-      }
     }
   ],
   "enzymes": [
@@ -363,175 +289,247 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "(2E,6E)-farnesyl diphosphate = beta-cadinene + diphosphate",
-      "equation": "(2E,6E)-farnesyl diphosphate = beta-cadinene + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "fpp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "cadinene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:68596"
+      "id": "xt_s_naringenin_abietatriene-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_naringenin"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "abietatriene-to-fmn"
+      },
+      "note": "Shares (S)-naringenin with abietatriene to FMN.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:68596"
+            "db": "ChEBI",
+            "id": "CHEBI:17846"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "(2E)-geranyl diphosphate = sabinene + diphosphate",
-      "equation": "(2E)-geranyl diphosphate = sabinene + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "gpp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "sabinene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:68636"
+      "id": "xt_s_naringenin_bacteriochlorophyllide-d-to-bacteriochlorophylli",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_naringenin"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "bacteriochlorophyllide-d-to-bacteriochlorophylli"
+      },
+      "note": "Shares (S)-naringenin with bacteriochlorophyllide d to bacteriochlorophyllide e.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:68636"
+            "db": "ChEBI",
+            "id": "CHEBI:17846"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "dodecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 10-hydroxydodecanoate + oxi...",
-      "equation": "dodecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 10-hydroxydodecanoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "dodecanoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "10_hydroxylaurate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:66892"
+      "id": "xt_s_naringenin_menthol-to-fmnh2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_naringenin"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "menthol-to-fmnh2"
+      },
+      "note": "Shares (S)-naringenin with (−)-menthol to FMNH2.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:66892"
+            "db": "ChEBI",
+            "id": "CHEBI:17846"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "tetradecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 9-hydroxytetradecanoate ...",
-      "equation": "tetradecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 9-hydroxytetradecanoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "tetradecanoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "9_hydroxymyristate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:66916"
+      "id": "xt_s_naringenin_n-arachidonoyl-1-oleoyl-s-to-9z-17-hydroxyoctade",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_naringenin"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "n-arachidonoyl-1-oleoyl-s-to-9z-17-hydroxyoctade"
+      },
+      "note": "Shares (S)-naringenin with N-arachidonoyl-1-oleoyl-s… to (9Z)-17-hydroxyoctadec-9-….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:66916"
+            "db": "ChEBI",
+            "id": "CHEBI:17846"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_naringenin_naringenin-7-o-d-glucos-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_naringenin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "naringenin-7-o-d-glucos-to-fmn"
+      },
+      "note": "Shares (S)-naringenin with naringenin 7-O-β-D-glucos… to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17846"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_naringenin_s-naringenin-to-2-3-dihydrogossypetin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_naringenin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-naringenin-to-2-3-dihydrogossypetin"
+      },
+      "note": "Shares (S)-naringenin with (S)-naringenin to 2,3-dihydrogossypetin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17846"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_naringenin_terminolate-to-asiaticoside-b",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_naringenin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "terminolate-to-asiaticoside-b"
+      },
+      "note": "Shares (S)-naringenin with terminolate to Asiaticoside B.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17846"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sophoraflavanone_b_4-formylbenzoate-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sophoraflavanone_b"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-formylbenzoate-to-nad"
+      },
+      "note": "Shares sophoraflavanone B with 4-formylbenzoate to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:50207"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sophoraflavanone_b_nadh-to-4-methylpent-2-enoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sophoraflavanone_b"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-4-methylpent-2-enoyl-coa"
+      },
+      "note": "Shares sophoraflavanone B with NADH to 4-methylpent-2-enoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:50207"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_leachianone_g_4-formylbenzoate-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "leachianone_g"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-formylbenzoate-to-nad"
+      },
+      "note": "Shares leachianone G with 4-formylbenzoate to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:50208"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_leachianone_g_nadh-to-4-methylpent-2-enoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "leachianone_g"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-4-methylpent-2-enoyl-coa"
+      },
+      "note": "Shares leachianone G with NADH to 4-methylpent-2-enoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:50208"
           }
         ]
       }

@@ -1,0 +1,530 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "epi-isozizaene-to-h2o-25976",
+  "name": "(+)-epi-isozizaene to H2O",
+  "category": "other",
+  "summary": "A 3-step route from (+)-epi-isozizaene to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:25976"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:51458"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "epi_isozizaene",
+      "name": "(+)-epi-isozizaene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:51458"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "5s_albaflavenol",
+      "name": "(5S)-albaflavenol",
+      "formula": "C15H24O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:51480"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "albaflavenone",
+      "name": "albaflavenone",
+      "formula": "C15H22O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:51460"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_6_3_44",
+      "name": "EC 3.6.3.44",
+      "ec": [
+        "3.6.3.44"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(+)-epi-isozizaene + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = (5S)-albaflavenol ...",
+      "equation": "(+)-epi-isozizaene + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = (5S)-albaflavenol + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
+      "substrates": [
+        {
+          "metabolite": "epi_isozizaene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5s_albaflavenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:25976"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25976"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(5S)-albaflavenol + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = albaflavenone + 2 o...",
+      "equation": "(5S)-albaflavenol + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = albaflavenone + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
+      "substrates": [
+        {
+          "metabolite": "5s_albaflavenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "albaflavenone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:25980"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25980"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR175171",
+      "ec": "3.6.3.44",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "albaflavenone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "albaflavenone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_3_44"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR175171"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR175171"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_5s_albaflavenol_epi-isozizaene-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5s_albaflavenol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "epi-isozizaene-to-h2o"
+      },
+      "note": "Shares (5S)-albaflavenol with (+)-epi-isozizaene to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:51480"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5s_albaflavenol_udp-to-d-lupinic-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5s_albaflavenol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-d-lupinic-acid"
+      },
+      "note": "Shares (5S)-albaflavenol with UDP to D-lupinic acid.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:51480"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5s_albaflavenol_udp-to-solasod-3-one",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5s_albaflavenol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-solasod-3-one"
+      },
+      "note": "Shares (5S)-albaflavenol with UDP to solasod-3-one.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:51480"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_albaflavenone_2-trans-6-trans-farnesyl-to-di-sulfido-diiron",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "albaflavenone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-trans-6-trans-farnesyl-to-di-sulfido-diiron"
+      },
+      "note": "Shares albaflavenone with 2-trans,6-trans-farnesyl… to di-μ-sulfido-diiron.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:51460"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_albaflavenone_2-trans-6-trans-farnesyl-to-di-sulfido-diiron-25",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "albaflavenone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-trans-6-trans-farnesyl-to-di-sulfido-diiron-25"
+      },
+      "note": "Shares albaflavenone with 2-trans,6-trans-farnesyl… to di-μ-sulfido-diiron.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:51460"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_albaflavenone_25s-3alpha-7alpha-12alp-to-nad-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "albaflavenone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "25s-3alpha-7alpha-12alp-to-nad-null"
+      },
+      "note": "Shares albaflavenone with (25S)-3alpha,7alpha,12alp… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:51460"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_albaflavenone_epi-isozizaene-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "albaflavenone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "epi-isozizaene-to-h2o"
+      },
+      "note": "Shares albaflavenone with (+)-epi-isozizaene to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:51460"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_albaflavenone_n-acyl-d-amino-acid-to-di-sulfido-diiron",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "albaflavenone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acyl-d-amino-acid-to-di-sulfido-diiron"
+      },
+      "note": "Shares albaflavenone with N-acyl-D-α-amino acid… to di-μ-sulfido-diiron.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:51460"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_albaflavenone_n-acyl-d-amino-acid-to-di-sulfido-diiron-18309",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "albaflavenone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acyl-d-amino-acid-to-di-sulfido-diiron-18309"
+      },
+      "note": "Shares albaflavenone with N-acyl-D-α-amino acid… to di-μ-sulfido-diiron.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:51460"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_albaflavenone_udp-to-d-lupinic-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "albaflavenone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-d-lupinic-acid"
+      },
+      "note": "Shares albaflavenone with UDP to D-lupinic acid.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:51460"
+          }
+        ]
+      }
+    }
+  ]
+}

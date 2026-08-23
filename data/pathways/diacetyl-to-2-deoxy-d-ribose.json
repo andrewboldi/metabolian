@@ -1,0 +1,518 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "diacetyl-to-2-deoxy-d-ribose",
+  "name": "diacetyl to 2-deoxy-D-ribose…",
+  "category": "other",
+  "summary": "A 3-step route from diacetyl to 2-deoxy-D-ribose 5-phosphate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR95421"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "diacetyl",
+      "name": "diacetyl",
+      "formula": "C4H6O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1467"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "r_acetoin",
+      "name": "(R)-acetoin",
+      "formula": "C4H8O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM664"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM23"
+      }
+    },
+    {
+      "id": "acetaldehyde",
+      "name": "acetaldehyde",
+      "formula": "C2H4O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM75"
+      }
+    },
+    {
+      "id": "glyceraldehyde_3_phosphate",
+      "name": "glyceraldehyde 3-phosphate",
+      "short": "glyceraldehyde 3-P",
+      "formula": "C3H7O6P",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1372044"
+      }
+    },
+    {
+      "id": "2_deoxy_d_ribose_5_phosphate",
+      "name": "2-deoxy-D-ribose 5-phosphate",
+      "short": "2-deoxy-D-ribose 5-P",
+      "formula": "C5H9O7P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM732594"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_1_2_4",
+      "name": "deoxyribose-phosphate aldolase",
+      "ec": [
+        "4.1.2.4"
+      ],
+      "xrefs": {
+        "uniprot": "Q9Y315"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR95421",
+      "substrates": [
+        {
+          "metabolite": "diacetyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "r_acetoin",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR95421"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR95421"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR103380",
+      "substrates": [
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "r_acetoin",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetaldehyde",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR103380"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR103380"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "deoxyribose-phosphate aldolase",
+      "ec": "4.1.2.4",
+      "substrates": [
+        {
+          "metabolite": "glyceraldehyde_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetaldehyde",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "2_deoxy_d_ribose_5_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_2_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR153400"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR153400"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_diacetyl_2-chloro-2-2-chloro-4-me-to-1r-2s-3-4-dichloro-6",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "diacetyl"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-chloro-2-2-chloro-4-me-to-1r-2s-3-4-dichloro-6"
+      },
+      "note": "Shares diacetyl with 2-chloro-2-(2-chloro-4-me… to (1R,2S)-3,4-dichloro-6-me….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1467"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_diacetyl_9-10-dihydroxybenzo-a-pyr-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "diacetyl"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "9-10-dihydroxybenzo-a-pyr-to-h2o"
+      },
+      "note": "Shares diacetyl with 9,10-Dihydroxybenzo[a]pyr… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1467"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_diacetyl_acetyl-coa-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "diacetyl"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetyl-coa-to-nadph"
+      },
+      "note": "Shares diacetyl with acetyl-CoA to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1467"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_diacetyl_diphosphate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "diacetyl"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-h2o"
+      },
+      "note": "Shares diacetyl with diphosphate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1467"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_diacetyl_nadh-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "diacetyl"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-h2o"
+      },
+      "note": "Shares diacetyl with NADH to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1467"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_acetoin_3-4-dihydroquinoxaline-2-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_acetoin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-4-dihydroquinoxaline-2-to-h2o"
+      },
+      "note": "Shares (R)-acetoin with 3,4-dihydroquinoxaline-2-… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM664"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_acetoin_actn-to-2-deoxy-d-ribose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_acetoin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "actn-to-2-deoxy-d-ribose"
+      },
+      "note": "Shares (R)-acetoin with ACTN to 2-deoxy-D-ribose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM664"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_acetoin_alpha-d-galactose-to-d-galactopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_acetoin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-galactose-to-d-galactopyranose"
+      },
+      "note": "Shares (R)-acetoin with Alpha D galactose to D-galactopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM664"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_acetoin_atrazine-to-2-deoxy-d-ribose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_acetoin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "atrazine-to-2-deoxy-d-ribose"
+      },
+      "note": "Shares (R)-acetoin with atrazine to 2-deoxy-D-ribose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM664"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_acetoin_h-to-cobalt-dihydrosirohydroch",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_acetoin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-cobalt-dihydrosirohydroch"
+      },
+      "note": "Shares (R)-acetoin with H to cobalt-dihydrosirohydroch….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM664"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxy_d_ribose_5_phosphate_aldehydo-2-deoxy-d-ribose-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxy_d_ribose_5_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aldehydo-2-deoxy-d-ribose-to-h2o-null"
+      },
+      "note": "Shares 2-deoxy-D-ribose 5-phosphate with aldehydo-2-deoxy-D-ribose to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM732594"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxy_d_ribose_5_phosphate_r-demethyl-4-deoxygadus-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxy_d_ribose_5_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-demethyl-4-deoxygadus-to-nad"
+      },
+      "note": "Shares 2-deoxy-D-ribose 5-phosphate with (R)-demethyl-4-deoxygadus… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM732594"
+          }
+        ]
+      }
+    }
+  ]
+}

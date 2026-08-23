@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-hydroxy-3-3-4-dihydrox-to-s-adenosyl-l-homocys "3-hydroxy-3-(3,4-dihydrox… to S-adenosyl-L-homocysteine" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     3_hydroxy_3_3_4_dihydroxyphenyl_propanoyl_coa
@@ -14,17 +14,5 @@ pathway 3-hydroxy-3-3-4-dihydrox-to-s-adenosyl-l-homocys "3-hydroxy-3-(3,4-dihyd
     3_4_dihydroxybenzoate
     <-> . +sam -sah -hplus
     vanillate
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +kaempferol_oxoanion +sam +hplus
-    3_o_methylkaempferol_7_olate
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +myricetin +sam +hplus
-    3_o_methylmyricetin_7_olate
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dihydroprecondylocarpine-to-echitovenine "dihydroprecondylocarpine… to (+)-echitovenine" {
-  spacing 164
+  spacing 188
 
   spine at 0,0 {
     dihydroprecondylocarpine_acetate
@@ -18,13 +18,37 @@ pathway dihydroprecondylocarpine-to-echitovenine "dihydroprecondylocarpine… to
 
   branch from fmn side left {
     fmn
-    <-> . +1_o_oleoyl_sn_glycero_3_phosphocholine +fmnh2 +o2 +h2o +hplus
-    1_o_11_hydroxyoleoyl_sn_glycero_3_phosphocholine
+    <-> . +dodecane +fmnh2 +o2 +h2o +hplus
+    dodecan_5_ol
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_177 [1.14.14.177] +triacontanoate +fmnh2 +o2 +h2o +hplus
-    hydroxytriacontanoate
+    <-> . +tetradecane +fmnh2 +o2 +h2o +hplus
+    tetradecan_7_ol
+  }
+
+  branch from fmnh2 side left {
+    fmnh2
+    <-> . +hexadecane +o2 +fmn +h2o +hplus
+    hexadecan_8_ol
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> . +decan_1_ol +o2 +fmn +h2o +hplus
+    1_3_decanediol
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> . +dodecan_1_ol +fmnh2 +o2 +h2o +hplus
+    1_5_dodecanediol
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +dodecan_1_ol +fmnh2 +o2 +h2o +hplus
+    1_4_dodecanediol
   }
 }

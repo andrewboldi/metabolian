@@ -164,6 +164,24 @@
       }
     },
     {
+      "id": "dgdp",
+      "name": "dGDP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM436"
+      }
+    },
+    {
+      "id": "dgtp",
+      "name": "dGTP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM344"
+      }
+    },
+    {
       "id": "dtdp",
       "name": "dTDP",
       "formula": "C10H13N2O11P2",
@@ -182,86 +200,12 @@
       }
     },
     {
-      "id": "norepinephrine",
-      "name": "L-Noradrenaline (norepinephrine)",
-      "short": "L-Noradrenaline…",
-      "formula": "C8H12NO3",
-      "charge": 1,
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:72587"
-      }
-    },
-    {
-      "id": "r_3_4_dihydroxymandelaldehyde",
-      "name": "(R)-3,4-dihydroxymandelaldehyde",
-      "short": "3,4-dihydroxymandel…",
-      "formula": "C8H8O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:180943"
-      }
-    },
-    {
-      "id": "h2o2",
-      "name": "Hydrogen peroxide",
-      "formula": "H2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16240"
-      }
-    },
-    {
-      "id": "cadaverine",
-      "name": "cadaverine",
-      "formula": "C5H16N2",
-      "charge": 2,
-      "xrefs": {
-        "chebi": "CHEBI:58384"
-      }
-    },
-    {
-      "id": "5_ammoniopentanal",
-      "name": "5-ammoniopentanal",
-      "formula": "C5H12NO",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:144896"
-      }
-    },
-    {
-      "id": "fumigatonoid_c",
-      "name": "fumigatonoid C",
-      "formula": "C25H36O8",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:167689"
-      }
-    },
-    {
-      "id": "novofumigatonin",
-      "name": "novofumigatonin",
-      "formula": "C25H34O8",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:156460"
-      }
-    },
-    {
-      "id": "jasmonate",
-      "name": "jasmonate",
-      "formula": "C12H17O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:58431"
-      }
-    },
-    {
-      "id": "12_hydroxyjasmonate",
-      "name": "12-hydroxyjasmonate",
-      "formula": "C12H17O4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:132022"
+        "metanetx": "MNXM40333"
       }
     }
   ],
@@ -278,7 +222,10 @@
       "name": "cytidine deaminase",
       "ec": [
         "3.5.4.5"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P32320"
+      }
     },
     {
       "id": "ec_1_14_11_3",
@@ -292,7 +239,10 @@
       "name": "deoxycytidine kinase",
       "ec": [
         "2.7.1.74"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P27707"
+      }
     }
   ],
   "reactions": [
@@ -501,6 +451,54 @@
       "ec": "2.7.1.74",
       "substrates": [
         {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dcmp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dgdp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dgtp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_deoxycytidine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_74"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR181974"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR181974"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "deoxycytidine kinase",
+      "ec": "2.7.1.74",
+      "substrates": [
+        {
           "metabolite": "dtdp",
           "stoichiometry": 1
         },
@@ -529,7 +527,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
         "metanetx": "MNXR181977"
       },
@@ -544,193 +542,315 @@
       }
     },
     {
-      "id": "r6",
-      "name": "(R)-noradrenaline + O2 + H2O = (R)-3,4-dihydroxymandelaldehyde + H2O2 + NH4(+)",
-      "equation": "(R)-noradrenaline + O2 + H2O = (R)-3,4-dihydroxymandelaldehyde + H2O2 + NH4(+)",
-      "substrates": [
-        {
-          "metabolite": "norepinephrine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "r_3_4_dihydroxymandelaldehyde",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:69076"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:69076"
-          }
-        ]
-      }
-    },
-    {
       "id": "r7",
-      "name": "cadaverine + O2 + H2O = 5-aminopentanal + H2O2 + NH4(+)",
-      "equation": "cadaverine + O2 + H2O = 5-aminopentanal + H2O2 + NH4(+)",
+      "name": "deoxycytidine kinase",
+      "ec": "2.7.1.74",
       "substrates": [
         {
-          "metabolite": "cadaverine",
+          "metabolite": "h",
           "stoichiometry": 1
         },
         {
-          "metabolite": "o2",
+          "metabolite": "dcmp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "adp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "5_ammoniopentanal",
+          "metabolite": "dgtp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o2",
+          "metabolite": "2_deoxycytidine",
           "stoichiometry": 1
-        },
+        }
+      ],
+      "catalysts": [
         {
-          "metabolite": "nh3",
-          "stoichiometry": 1
+          "enzyme": "ec_2_7_1_74"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:69132"
+        "metanetx": "MNXR182572"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:69132"
+            "db": "MetaNetX",
+            "id": "MNXR182572"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_2_deoxyuridine_2-deoxyguanosine-to-2-hydroxy-3-oxopropanoate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxyuridine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-deoxyguanosine-to-2-hydroxy-3-oxopropanoate"
+      },
+      "note": "Shares 2'-deoxyuridine with 2'-deoxyguanosine… to 2-hydroxy-3-oxopropanoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16450"
           }
         ]
       }
     },
     {
-      "id": "r8",
-      "name": "fumigatonoid C + 2-oxoglutarate + O2 = novofumigatonin + succinate + CO2 + H2O",
-      "equation": "fumigatonoid C + 2-oxoglutarate + O2 = novofumigatonin + succinate + CO2 + H2O",
-      "substrates": [
-        {
-          "metabolite": "fumigatonoid_c",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "novofumigatonin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "succinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "rhea": "RHEA:67104"
+      "id": "xt_2_deoxyuridine_2-deoxyuridine-to-dump",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxyuridine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2-deoxyuridine-to-dump"
+      },
+      "note": "Shares 2'-deoxyuridine with 2'-deoxyuridine to dUMP.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:67104"
+            "db": "ChEBI",
+            "id": "CHEBI:16450"
           }
         ]
       }
     },
     {
-      "id": "r9",
-      "name": "jasmonate + 2-oxoglutarate + O2 = (1R,2R)-12-hydroxyjasmonate + succinate + CO2",
-      "equation": "jasmonate + 2-oxoglutarate + O2 = (1R,2R)-12-hydroxyjasmonate + succinate + CO2",
-      "substrates": [
-        {
-          "metabolite": "jasmonate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "12_hydroxyjasmonate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "succinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 9,
-      "xrefs": {
-        "rhea": "RHEA:67144"
+      "id": "xt_2_deoxyuridine_5-6-dihydrouridine-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxyuridine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "5-6-dihydrouridine-to-hydrogen-donor"
+      },
+      "note": "Shares 2'-deoxyuridine with 5,6-dihydrouridine… to hydrogen donor.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:67144"
+            "db": "ChEBI",
+            "id": "CHEBI:16450"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_uridine_2-3-cyclic-ump-to-d-ribose-1-5-bisphospha",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "uridine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3-cyclic-ump-to-d-ribose-1-5-bisphospha"
+      },
+      "note": "Shares uridine with 2',3'-cyclic UMP to α-D-ribose 1,5-bisphospha….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16704"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_uridine_2-amino-2-deoxy-d-gluconi-to-2-dehydro-3-deoxy-d",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "uridine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-amino-2-deoxy-d-gluconi-to-2-dehydro-3-deoxy-d"
+      },
+      "note": "Shares uridine with 2-amino-2-deoxy-D-gluconi… to 2-dehydro-3-deoxy-D-arabi….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16704"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_uridine_udp-2-3-diacyl-d-glucos-to-uridine-5-monophospha",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "uridine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-2-3-diacyl-d-glucos-to-uridine-5-monophospha"
+      },
+      "note": "Shares uridine with UDP-2,3-diacyl-α-D-glucos… to uridine 5'-monophosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16704"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dcdp_8-hydroxy-2-deoxyguanosi-to-2-deoxyguanosine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dcdp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "8-hydroxy-2-deoxyguanosi-to-2-deoxyguanosine"
+      },
+      "note": "Shares dCDP with 8-hydroxy-2'-deoxyguanosi… to 2'-deoxyguanosine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM411"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dcdp_cdp-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dcdp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cdp-to-h2o-null"
+      },
+      "note": "Shares dCDP with CDP to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM411"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dcdp_creatinine-phosphate-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dcdp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "creatinine-phosphate-to-nad"
+      },
+      "note": "Shares dCDP with creatinine phosphate to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM411"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dcdp_dcmp-to-dcdp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dcdp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dcmp-to-dcdp"
+      },
+      "note": "Shares dCDP with dCMP to dCDP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM411"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dcdp_dcmp-to-dcdp-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dcdp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dcmp-to-dcdp-null"
+      },
+      "note": "Shares dCDP with dCMP to dCDP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM411"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dcdp_dioleoyl-phosphatidic-acid-to-5-methyldeoxycytid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dcdp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dioleoyl-phosphatidic-acid-to-5-methyldeoxycytid"
+      },
+      "note": "Shares dCDP with dioleoyl phosphatidic acid to 5-methyldeoxycytidine….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM411"
           }
         ]
       }

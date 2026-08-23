@@ -130,6 +130,45 @@
       "xrefs": {
         "chebi": "CHEBI:76515"
       }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "o_orsellinate_depsidate",
+      "name": "o-orsellinate depsidate",
+      "short": "o-orsellinate…",
+      "formula": "C16H13O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57548"
+      }
+    },
+    {
+      "id": "cyanidin_3_o_6_o_4_o_d_glucosyl_p_coumaroyl_2_o",
+      "name": "cyanidin 3-O-[6-O-(4-O-β-D-glucosyl-p-coumaroyl)-2-O-(β-D-xylosyl)-β-D-glucosyl]-5-O-β-D-glucoside",
+      "short": "cyanidin 3-O-[6-O-(…",
+      "formula": "C47H54O27",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:192528"
+      }
+    },
+    {
+      "id": "cyanidin_3_o_6_o_4_o_d_glucosyl_p_coumaroyl_2_o",
+      "name": "cyanidin 3-O-[6-O-(4-O-β-D-glucosyl-p-coumaroyl)-2-O-(β-D-xylosyl)-β-D-glucosyl]-5-O-(6-O-malonyl-β-D-glucoside)",
+      "short": "cyanidin 3-O-[6-O-(…",
+      "formula": "C50H55O30",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:72650"
+      }
     }
   ],
   "enzymes": [],
@@ -298,6 +337,164 @@
           {
             "db": "Rhea",
             "id": "RHEA:39643"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "6 malonyl-CoA + 2 acetyl-CoA + 5 H(+) = o-orsellinate depside + 6 CO2 + 8 CoA + H2O",
+      "equation": "6 malonyl-CoA + 2 acetyl-CoA + 5 H(+) = o-orsellinate depside + 6 CO2 + 8 CoA + H2O",
+      "substrates": [
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 6
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 5
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_orsellinate_depsidate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 6
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 8
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:72467"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:72467"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "anthocyanin A6 + malonyl-CoA = anthocyanin A8 + CoA",
+      "equation": "anthocyanin A6 + malonyl-CoA = anthocyanin A8 + CoA",
+      "substrates": [
+        {
+          "metabolite": "cyanidin_3_o_6_o_4_o_d_glucosyl_p_coumaroyl_2_o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cyanidin_3_o_6_o_4_o_d_glucosyl_p_coumaroyl_2_o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:72759"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:72759"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_16z_19z_22z_25z_28z_31z_tetratriacontahexaenoyl_8z-11z-14z-17z-20z-23z-to-16z-19z-22z-25z-28z-3",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "16z_19z_22z_25z_28z_31z_tetratriacontahexaenoyl"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "8z-11z-14z-17z-20z-23z-to-16z-19z-22z-25z-28z-3"
+      },
+      "note": "Shares (16Z,19Z,22Z,25Z,28Z,31Z)-tetratriacontahexaenoyl-CoA with (8Z,11Z,14Z,17Z,20Z,23Z)-… to (16Z,19Z,22Z,25Z,28Z,31Z)….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74319"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_o_orsellinate_depsidate_o-orsellinate-depsidate-to-2-3-5-trihydroxytolue",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "o_orsellinate_depsidate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "o-orsellinate-depsidate-to-2-3-5-trihydroxytolue"
+      },
+      "note": "Shares o-orsellinate depsidate with o-orsellinate depsidate to 2,3,5-trihydroxytoluene.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57548"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cyanidin_3_o_6_o_4_o_d_glucosyl_p_coumaroyl_2_o_tryptophol-to-indol-3-ylacetyl-myo-in",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cyanidin_3_o_6_o_4_o_d_glucosyl_p_coumaroyl_2_o"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "tryptophol-to-indol-3-ylacetyl-myo-in"
+      },
+      "note": "Shares cyanidin 3-O-[6-O-(4-O-β-D-glucosyl-p-coumaroyl)-2-O-(β-D-xylosyl)-β-D-glucosyl]-5-O-(6-O-malonyl-β-D-glucoside) with tryptophol to (indol-3-ylacetyl)-myo-in….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:72650"
           }
         ]
       }

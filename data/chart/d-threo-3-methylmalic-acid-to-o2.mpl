@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-threo-3-methylmalic-acid-to-o2 "D-threo-3-methylmalic acid to O2" {
-  spacing 218
+  spacing 254
 
   spine at 0,0 {
     d_threo_3_methylmalic_acid
@@ -16,40 +16,28 @@ pathway d-threo-3-methylmalic-acid-to-o2 "D-threo-3-methylmalic acid to O2" {
     3_methylgentisate
   }
 
-  branch from 2_methylmaleate side left {
-    2_methylmaleate
-    <-> ec_3_7_1_23 [3.7.1.23] +h +pyruvate +h2o
-    2e_3_methyl_4_6_dioxohept_2_enedioate
+  branch from h side left {
+    h
+    <-> . +p_nitrostyrene_oxide +bromide
+    r_p_nitro_2_bromo_1_phenylethanol
   }
 
   branch from h side right {
     h
-    <-> . +nadh +3_4_dihydroxyphthalate +nad
-    phthalate_3_4_cis_dihydrodiol
-  }
-
-  branch from h side left {
-    h
-    <-> ec_5_5_1_1 [5.5.1.1] +3_methylmuconolactone
-    3_methyl_cis_cis_muconic_acid
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_1_14_14_1 [1.14.14.1] +4_hydroxymethyl_nitrosoamino_1_3_pyridinyl_1_but +nadp +h +o2 +nadph
-    4_n_nitrosomethylamino_1_3_pyridyl_butan_1_one
+    <-> . +s_2_chloro_1_phenylethanol +chloride
+    s_styrene_oxide
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_14_14_1 [1.14.14.1] +alpha_3_hydroxymethyl_nitrosoamino_propyl_3_pyri +nadp +h +o2 +nadph
-    4_methylnitrosamino_1_3_pyridyl_1_butanol
+    <-> ec_3_1_1_1 [3.1.1.1] +ethanol +hexanoate +h
+    ethyl_hexanoate
   }
 
-  branch from 3_methylgentisate side right {
-    3_methylgentisate
-    <-> ec_1_14_13_24 [1.14.13.24] +nadh +3_hydroxy_5_methyl_benzoate +h +o2 +h2o
-    nad
+  branch from h2o side right {
+    h2o
+    <-> ec_3_1_1_1 [3.1.1.1] +ethanol +h +pentanoate
+    ethyl_pentanoate
   }
 
   branch from 3_methylgentisate side left {
@@ -60,13 +48,61 @@ pathway d-threo-3-methylmalic-acid-to-o2 "D-threo-3-methylmalic acid to O2" {
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_14_1 [1.14.14.1] +7_hydroxymethyl_12_methylbenz_a_anthracene +nadp +h2o +h +7_12_dimethyltetraphene
-    nadph
+    <-> ec_1_14_18_1 [1.14.18.1] +4_tert_butylcatechol +h2o
+    4_tert_butyl_benzo_1_2_quinone
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_14_1 [1.14.14.1] +7_12_dimethylbenz_a_anthracene_5_6_oxide +nadp +h2o +h +nadph
-    7_12_dimethyltetraphene
+    <-> ec_1_14_18_1 [1.14.18.1] +2_3_4_dioxocyclohexa_1_5_dien_1_yl_acetic_acid +h2o +h
+    3_4_dihydroxyphenylacetate
+  }
+
+  branch from h side right {
+    h
+    <-> . +glycidol +chloride
+    3_chloropropane_1_2_diol
+  }
+
+  branch from h side left {
+    h
+    <-> . +p_nitrostyrene_oxide +bromide
+    s_p_nitro_2_bromo_1_phenylethanol
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_1_1_1 [3.1.1.1] +propanoate +ethanol +h
+    ethyl_propionate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_1_1_1 [3.1.1.1] +ethanol +h +butanoate
+    ethyl_butyrate
+  }
+
+  branch from pyruvate side right {
+    pyruvate
+    <-> ec_4_4_1_3 [4.4.1.3] +nh4 +methanol +h2o
+    o_methyl_dl_serine
+  }
+
+  branch from pyruvate side left {
+    pyruvate
+    <-> ec_4_4_1_3 [4.4.1.3] +thioglycolate +nh4 +h2o
+    s_carboxymethyl_l_cysteine
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_14_18_1 [1.14.18.1] +1_1_hydroxy_2_propan_2_ylamino_ethyl_3_4_dioxocy +h2o
+    l_isoprenaline
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_14_16_1 [1.14.16.1] +6_7_dimethyl_tetrahydropteridine +l_phenylalanine +l_tyrosine +h2o
+    6_7_dimethyl_dihydropteridine
   }
 }

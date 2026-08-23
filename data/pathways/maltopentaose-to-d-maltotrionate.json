@@ -109,25 +109,6 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
-    },
-    {
-      "id": "glucose",
-      "name": "D-Glucose",
-      "formula": "C6H12O6",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:4167"
-      }
-    },
-    {
-      "id": "d_glucosyl_1_4_d_mannose",
-      "name": "α-D-glucosyl-(1→4)-α-D-mannose",
-      "short": "α-D-glucosyl-(1→4)-…",
-      "formula": "C12H22O11",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:47937"
-      }
     }
   ],
   "enzymes": [
@@ -261,41 +242,27 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "Reaction MNXR206087",
-      "substrates": [
-        {
-          "metabolite": "d_glcp_1_4_d_glcp_1_4_d_glcp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "glucose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "d_glucosyl_1_4_d_mannose",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR206087"
+      "id": "xt_beta_maltose_maltoheptaose-to-d-glucopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "beta_maltose"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "maltoheptaose-to-d-glucopyranose"
+      },
+      "note": "Shares beta-maltose with maltoheptaose to D-glucopyranose.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR206087"
+            "id": "MNXM1106001"
           }
         ]
       }

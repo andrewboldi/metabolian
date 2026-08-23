@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway decanoyl-coa-to-coa "decanoyl-CoA to CoA" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     decanoyl_coa
@@ -14,17 +14,5 @@ pathway decanoyl-coa-to-coa "decanoyl-CoA to CoA" {
     3_decanoyl_3_4_di_3_methylbutanoyl_sucrose
     <-> . +acetyl_coa -coa
     2_acetyl_3_decanoyl_3_4_di_3_methylbutanoyl_sucr
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +succinyl_coa +a_cyclic_beta_1_2_glucan
-    a_succinylated_cyclic_beta_1_2_glucan
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +octanoyl_coa +acetyl_coa +malonyl_coa +h +4_o_demethylsphaerophorin +h2o
-    co2
   }
 }

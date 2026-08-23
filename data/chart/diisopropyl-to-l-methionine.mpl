@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway diisopropyl-to-l-methionine "diisopropyl… to L-methionine" {
-  spacing 216
+  spacing 228
 
   spine at 0,0 {
     diisopropyl_fluorophosphate
@@ -18,27 +18,39 @@ pathway diisopropyl-to-l-methionine "diisopropyl… to L-methionine" {
     methionine
   }
 
-  branch from methionine side left {
-    methionine
-    <-> . +n_fatty_acyl_l_methionine +h2o
-    fatty-acid
-  }
-
-  branch from methionine side right {
-    methionine
-    <-> . +ctp +hydrogen_donor +sam +5_deoxyadenosine +hydrogen_acceptor +h2o +hplus
-    3_deoxy_3_4_didehydro_ctp
-  }
-
   branch from sah side left {
     sah
-    <-> ec_2_1_1_231 [2.1.1.231] +4_hydroxyflavanones +sam +hplus
-    4_methoxyflavanones
+    <-> . +guanosine_5_monophosphate_1 +sam +hplus
+    2_o_methylguanosine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_240 [2.1.1.240] +trans_resveratrol +sam +hplus
-    pterostilbene
+    <-> . +sam +2_o_methylguanosine_5_monophosphate_1 +hplus
+    guanosine_5_monophosphate_1
+  }
+
+  branch from sam side left {
+    sam
+    <-> . +cytidine_5_monophosphate_1 +sah +hplus
+    5_methylcytidine_5_monophosphate_1
+  }
+
+  branch from sam side right {
+    sam
+    <-> . +5_methylcytidine_5_monophosphate_1 +sah +hplus
+    cytidine_5_monophosphate_1
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_322 [2.1.1.322] +l_argininium +sam +hplus
+    n5_methyl_argininium_1
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_233 [2.1.1.233] +l_leucinate +sam
+    methyl_l_leucinato_group
   }
 }

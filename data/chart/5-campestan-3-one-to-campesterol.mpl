@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-campestan-3-one-to-campesterol "5α-campestan-3-one to campesterol" {
-  spacing 248
+  spacing 302
 
   spine at 0,0 {
     5_campestan_3_one
@@ -30,14 +30,14 @@ pathway 5-campestan-3-one-to-campesterol "5α-campestan-3-one to campesterol" {
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +trans_3_chloroallyl_aldehyde
-    trans_3_chloroprop_2_en_1_ol
+    <-> ec_1_3_1_29 [1.3.1.29] +nadh +h +4_5_dihydroxypyrene
+    cis_4_5_dihydroxy_4_5_dihydropyrene
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +cis_3_chloroallyl_aldehyde
-    cis_3_chloroprop_2_en_1_ol
+    <-> . +nadh +phenanthrene_4_carboxylate +h +o2
+    cis_3_4_phenanthrenedihydrodiol_4_carboxylate
   }
 
   branch from campesterol side left {
@@ -50,5 +50,59 @@ pathway 5-campestan-3-one-to-campesterol "5α-campestan-3-one to campesterol" {
     campesterol
     <-> . +h +24_methylcholesta_5_24_dien_3_ol +nadp
     nadph
+  }
+
+  branch from campest_4_en_3_one side left {
+    campest_4_en_3_one
+    <-> . +22s_22_hydroxycampest_4_en_3_one +nadp +h2o +h +nadph
+    o2
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +h +o2 +2_4_dichlorotoluene +nad
+    4_6_dichloro_3_methyl_cis_1_2_dihydroxycyclohexa
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> . +benzo_a_pyrene_cis_4_5_dihydrodiol +nad +h +o2
+    benzo_a_pyrene
+  }
+
+  branch from h side right {
+    h
+    <-> . +s_adenosyl_l_homocysteine +1_methoxypyrene +1_hydroxypyrene
+    s_adenosyl_l_methionine
+  }
+
+  branch from h side left {
+    h
+    <-> . +10_oxabenzo_def_chrysen_9_one +formate
+    cis_4_8_hydroxypyren_7_yl_2_oxobut_3_enoate
+  }
+
+  branch from nad side right {
+    nad
+    <-> . +nadh +h +benzo_a_pyrene +o2
+    benzo_a_pyrene_cis_11_12_dihydrodiol
+  }
+
+  branch from nad side left {
+    nad
+    <-> . +nadh +h +pyrene_4_5_dione
+    4_5_dihydroxypyrene
+  }
+
+  branch from campesterol side right {
+    campesterol
+    <-> ec_1_3_1_72 [1.3.1.72] +h +nadph +nadp
+    24_methylenecholesterol
+  }
+
+  branch from campesterol side left {
+    campesterol
+    <-> . +nadp +h2o +h +o2 +nadph
+    22s_22_hydroxycampesterol
   }
 }

@@ -1,0 +1,562 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "itp-to-h",
+  "name": "ITP to H",
+  "category": "other",
+  "summary": "A 6-step route from ITP to H(+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR105326"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "itp",
+      "name": "ITP",
+      "formula": "C10H11N4O14P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1103428"
+      }
+    },
+    {
+      "id": "beta_d_fructose",
+      "name": "beta-D-fructose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364098"
+      }
+    },
+    {
+      "id": "idp",
+      "name": "IDP",
+      "formula": "C10H11N4O11P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1104559"
+      }
+    },
+    {
+      "id": "beta_d_fructose_6_phosphate",
+      "name": "beta-D-fructose 6-phosphate",
+      "short": "beta-D-fructose 6-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1107898"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "dadp",
+      "name": "dADP",
+      "formula": "C10H12N5O9P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM735047"
+      }
+    },
+    {
+      "id": "datp",
+      "name": "dATP",
+      "formula": "C10H12N5O12P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM286"
+      }
+    },
+    {
+      "id": "hexopyranose",
+      "name": "hexopyranose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:167473"
+      }
+    },
+    {
+      "id": "6_o_phosphonohexopyranose",
+      "name": "6-o-Phosphonohexopyranose",
+      "short": "6-o-Phosphonohexopy…",
+      "formula": "C6H13O9P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:182132"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1102128"
+      }
+    },
+    {
+      "id": "ump",
+      "name": "UMP",
+      "formula": "C9H11N2O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1104823"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "uracil",
+      "name": "Uracil",
+      "formula": "C4H4N2O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1368457"
+      }
+    },
+    {
+      "id": "alpha_d_ribose_1_5_bisphosphate",
+      "name": "alpha-D-ribose 1,5-bisphosphate",
+      "short": "alpha-D-ribose…",
+      "formula": "C5H8O11P2",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM740983"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "uracil_5_carboxylate",
+      "name": "Uracil 5-carboxylate",
+      "formula": "C5H3N2O4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1369036"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_1_1",
+      "name": "hexokinase",
+      "ec": [
+        "2.7.1.1"
+      ],
+      "xrefs": {
+        "uniprot": "Q2TB90"
+      }
+    },
+    {
+      "id": "ec_4_1_1_66",
+      "name": "uracil-5-carboxylate decarboxylase",
+      "ec": [
+        "4.1.1.66"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "hexokinase",
+      "ec": "2.7.1.1",
+      "substrates": [
+        {
+          "metabolite": "itp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "beta_d_fructose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "idp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "beta_d_fructose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR105326"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR105326"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "hexokinase",
+      "ec": "2.7.1.1",
+      "substrates": [
+        {
+          "metabolite": "beta_d_fructose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "beta_d_fructose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "datp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR105327"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR105327"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "hexokinase",
+      "ec": "2.7.1.1",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "datp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hexopyranose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_o_phosphonohexopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dadp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR107775"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR107775"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Reaction MNXR105122",
+      "substrates": [
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ump",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "datp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR105122"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR105122"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "Reaction MNXR196394",
+      "substrates": [
+        {
+          "metabolite": "ump",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "uracil",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alpha_d_ribose_1_5_bisphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR196394"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196394"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "uracil-5-carboxylate decarboxylase",
+      "ec": "4.1.1.66",
+      "substrates": [
+        {
+          "metabolite": "uracil",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "uracil_5_carboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_66"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "metanetx": "MNXR195625"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR195625"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_hexopyranose_d-glucopyranose-to-6-o-phosphonohexopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hexopyranose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glucopyranose-to-6-o-phosphonohexopyranose"
+      },
+      "note": "Shares hexopyranose with D-glucopyranose to 6-o-Phosphonohexopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:167473"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hexopyranose_d-glucopyranose-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hexopyranose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glucopyranose-to-phosphate"
+      },
+      "note": "Shares hexopyranose with D-glucopyranose to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:167473"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hexopyranose_nadh-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hexopyranose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-nadph"
+      },
+      "note": "Shares hexopyranose with NADH to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:167473"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_alpha_d_ribose_1_5_bisphosphate_n-acetyl-beta-d-muramate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "alpha_d_ribose_1_5_bisphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyl-beta-d-muramate-to-h2o"
+      },
+      "note": "Shares alpha-D-ribose 1,5-bisphosphate with N-acetyl-beta-D-muramate… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM740983"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_uracil_5_carboxylate_phenoxymethylpenicillin-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "uracil_5_carboxylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phenoxymethylpenicillin-to-o2"
+      },
+      "note": "Shares Uracil 5-carboxylate with phenoxymethylpenicillin to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1369036"
+          }
+        ]
+      }
+    }
+  ]
+}

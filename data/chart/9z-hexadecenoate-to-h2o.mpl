@@ -4,51 +4,17 @@
 # edit the generator, not this file.
 
 pathway 9z-hexadecenoate-to-h2o "(9Z)-hexadecenoate to H2O" {
-  spacing 188
+  spacing 192
 
   spine at 0,0 {
     9z_hexadecenoate
-    <-> . +h +2_9z_hexadecenoyl_sn_glycero_3_phospho_1_sn_glyc -h2o
-    pg_16_1_9z_16_1_9z
-    <-> . +phosphate -h2o
-    phosphatidylglycerophosphate_dihexadec_9_enoyl_n
-    <-> . +h +adp +phosphate -phosphatidylglycerophosphate_dihexadec_9_enoyl_n -h2o
+    <-> . +glycerophosphatidylethanolamine +h -h2o
+    a_1_acyl_sn_glycero_3_phosphoethanolamine_n_c16
+    <-> . +9z_hexadecenoate +h -h2o
+    phosphatidylethanolamine_dihexadec_9enoyl_n_c16
+    <-> ec_4_1_1_65 [4.1.1.65] +co2 -phosphatidylserine_dihexadec_9_enoyl_n_c16_1
+    h
+    <-> . +adp +phosphatidylserine_dihexadec_9_enoyl_n_c16_1 +phosphate -phosphatidylserine_dihexadec_9_enoyl_n_c16_1 -h2o
     atp
-  }
-
-  branch from pg_16_1_9z_16_1_9z side left {
-    pg_16_1_9z_16_1_9z
-    <-> . +9z_hexadecenoate +h +h2o
-    pg_16_1_9z_0_0
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_42 [3.6.3.42] +h +adp +phosphate +atp
-    cellopentaose
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    cephalosporin_c
-  }
-
-  branch from phosphatidylglycerophosphate_dihexadec_9_enoyl_n side right {
-    phosphatidylglycerophosphate_dihexadec_9_enoyl_n
-    <-> . +cmp +sn_glycerol_3_phosphate
-    cdp_1_2_di_9z_hexadecenoyl_sn_glycerol
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    terpentecin
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    rifamycin_sv
   }
 }

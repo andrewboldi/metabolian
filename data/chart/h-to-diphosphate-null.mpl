@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway h-to-diphosphate-null "H to diphosphate" {
-  spacing 340
+  spacing 304
 
   spine at 0,0 {
     h
@@ -16,59 +16,5 @@ pathway h-to-diphosphate-null "H to diphosphate" {
     5_ammoniomethyl_3_furyl_methyl_diphosphate
     <-> ec_2_5_1_131 [2.5.1.131] +glutamyltyramine -ppi
     4_4_2_l_glutamylamino_ethyl_phenoxymethyl_furan
-  }
-
-  branch from adp side left {
-    adp
-    <-> . +h +phosphate +atp +h2o
-    vaccenic_acid
-  }
-
-  branch from adp side right {
-    adp
-    <-> . +h +phosphate +atp +h2o
-    linoelaidic_acid
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +8_8a_deoxyoleandolide +co2 +coa +h2o +h +nadph +r_methylmalonyl_coa
-    malonyl_coa
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +malonyl_coa +methylmalonyl_coa +h +nadph +co2 +coa +h2o
-    10_deoxymethynolide
-  }
-
-  branch from 4_phosphooxymethyl_2_furancarboxaldehyde side left {
-    4_phosphooxymethyl_2_furancarboxaldehyde
-    <-> . +nadh +h +atp +2_4_substituted_furan_phosphate +adp +phosphate
-    nad
-  }
-
-  branch from phosphate side right {
-    phosphate
-    <-> . +h +adp +atp +h2o
-    nonadecanoic_acid
-  }
-
-  branch from phosphate side left {
-    phosphate
-    <-> . +h +adp +atp +h2o
-    gadoleic_acid
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +all_trans_pentaprenyl_diphosphate
-    quiannulatene
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +3_methylvalerate +atp +coa +amp
-    3_methylpentanoyl_coa
   }
 }

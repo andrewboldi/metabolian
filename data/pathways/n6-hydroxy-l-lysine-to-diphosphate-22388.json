@@ -1,0 +1,529 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n6-hydroxy-l-lysine-to-diphosphate-22388",
+  "name": "N6-hydroxy-L-lysine to diphosphate",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from N6-hydroxy-L-lysine zwitterion to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:22388"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57820"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n6_hydroxy_l_lysine",
+      "name": "N6-hydroxy-L-lysine",
+      "formula": "C6H14N2O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57820"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "n6_acetyl_n6_hydroxy_l_lysine",
+      "name": "N6-acetyl-N6-hydroxy-L-lysine",
+      "short": "N6-acetyl-N6-hydrox…",
+      "formula": "C8H16N2O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58122"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "citrate",
+      "name": "Citrate",
+      "formula": "C6H5O7",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:16947"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "n_citryl_n_acetyl_n_hydroxylysine",
+      "name": "Nα-citryl-Nε-acetyl-Nε-hydroxylysine",
+      "short": "Nα-citryl-Nε-acetyl…",
+      "formula": "C14H19N2O10",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:63796"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "aerobactinate",
+      "name": "aerobactinate",
+      "formula": "C22H33N4O13",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58396"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_3_1_102",
+      "name": "N(6)-hydroxylysine O-acetyltransferase",
+      "ec": [
+        "2.3.1.102"
+      ]
+    },
+    {
+      "id": "ec_6_3_2_38",
+      "name": "N(2)-citryl-N(6)-acetyl-N(6)-hydroxylysine synthase",
+      "ec": [
+        "6.3.2.38"
+      ]
+    },
+    {
+      "id": "ec_6_3_2_39",
+      "name": "aerobactin synthase",
+      "ec": [
+        "6.3.2.39"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "N(6)-hydroxylysine O-acetyltransferase",
+      "equation": "N(6)-hydroxy-L-lysine + acetyl-CoA = N(6)-acetyl-N(6)-hydroxy-L-lysine + CoA",
+      "ec": "2.3.1.102",
+      "substrates": [
+        {
+          "metabolite": "n6_hydroxy_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_acetyl_n6_hydroxy_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_102"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:22388"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22388"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N(2)-citryl-N(6)-acetyl-N(6)-hydroxylysine synthase",
+      "equation": "N(6)-acetyl-N(6)-hydroxy-L-lysine + citrate + ATP = N(2)-citryl-N(6)-acetyl-N(6)-hydroxy-L-lysine + AMP + diphosphate + H(+)",
+      "ec": "6.3.2.38",
+      "substrates": [
+        {
+          "metabolite": "n6_acetyl_n6_hydroxy_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "citrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_citryl_n_acetyl_n_hydroxylysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_3_2_38"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:32163"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32163"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "aerobactin synthase",
+      "equation": "N(2)-citryl-N(6)-acetyl-N(6)-hydroxy-L-lysine + N(6)-acetyl-N(6)-hydroxy-L-lysine + ATP = aerobactin + AMP + diphosphate + H(+)",
+      "ec": "6.3.2.39",
+      "substrates": [
+        {
+          "metabolite": "n_citryl_n_acetyl_n_hydroxylysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n6_acetyl_n6_hydroxy_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aerobactinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_3_2_39"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:32167"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32167"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_n6_hydroxy_l_lysine_3-4-oxo-4-5-dihydro-1h-i-to-n2-formyl-n1-5-phosp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n6_hydroxy_l_lysine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-4-oxo-4-5-dihydro-1h-i-to-n2-formyl-n1-5-phosp"
+      },
+      "note": "Shares N6-hydroxy-L-lysine with 3-(4-oxo-4,5-dihydro-1H-i… to N2-formyl-N1-(5-phospho-β….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57820"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n6_hydroxy_l_lysine_n2-4-aminobutanoyl-l-ly-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n6_hydroxy_l_lysine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n2-4-aminobutanoyl-l-ly-to-succinate"
+      },
+      "note": "Shares N6-hydroxy-L-lysine with N2-(4-aminobutanoyl)-L-ly… to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57820"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n6_hydroxy_l_lysine_n2-4-aminobutanoyl-l-ly-to-succinate-59620",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n6_hydroxy_l_lysine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n2-4-aminobutanoyl-l-ly-to-succinate-59620"
+      },
+      "note": "Shares N6-hydroxy-L-lysine with N2-(4-aminobutanoyl)-L-ly… to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57820"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n6_hydroxy_l_lysine_n6-hydroxy-l-lysine-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n6_hydroxy_l_lysine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n6-hydroxy-l-lysine-to-diphosphate"
+      },
+      "note": "Shares N6-hydroxy-L-lysine with N6-hydroxy-L-lysine to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57820"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n6_hydroxy_l_lysine_udp-4-amino-4-deoxy-l-a-to-n4-d-glcnac-1-2-d-247",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n6_hydroxy_l_lysine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-4-amino-4-deoxy-l-a-to-n4-d-glcnac-1-2-d-247"
+      },
+      "note": "Shares N6-hydroxy-L-lysine with UDP-4-amino-4-deoxy-β-L-a… to N4-{β-D-GlcNAc-(1→2)-α-D-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57820"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n6_acetyl_n6_hydroxy_l_lysine_n6-hydroxy-l-lysine-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n6_acetyl_n6_hydroxy_l_lysine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n6-hydroxy-l-lysine-to-diphosphate"
+      },
+      "note": "Shares N6-acetyl-N6-hydroxy-L-lysine with N6-hydroxy-L-lysine to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58122"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_citryl_n_acetyl_n_hydroxylysine_1-monoacetin-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_citryl_n_acetyl_n_hydroxylysine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-monoacetin-to-h2o"
+      },
+      "note": "Shares Nα-citryl-Nε-acetyl-Nε-hydroxylysine with 1-Monoacetin to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:63796"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_citryl_n_acetyl_n_hydroxylysine_n6-hydroxy-l-lysine-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_citryl_n_acetyl_n_hydroxylysine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n6-hydroxy-l-lysine-to-diphosphate"
+      },
+      "note": "Shares Nα-citryl-Nε-acetyl-Nε-hydroxylysine with N6-hydroxy-L-lysine to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:63796"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_citryl_n_acetyl_n_hydroxylysine_o-acetyl-l-homoserine-to-l-cysteine-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_citryl_n_acetyl_n_hydroxylysine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "o-acetyl-l-homoserine-to-l-cysteine-null"
+      },
+      "note": "Shares Nα-citryl-Nε-acetyl-Nε-hydroxylysine with O-acetyl-L-homoserine to L-cysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:63796"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_aerobactinate_n6-hydroxy-l-lysine-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aerobactinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n6-hydroxy-l-lysine-to-diphosphate"
+      },
+      "note": "Shares aerobactinate with N6-hydroxy-L-lysine to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58396"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway malonyl-coa-to-h2o-null "malonyl-CoA to H2O" {
-  spacing 258
+  spacing 192
 
   spine at 0,0 {
     malonyl_coa
@@ -16,71 +16,5 @@ pathway malonyl-coa-to-h2o-null "malonyl-CoA to H2O" {
     cyanidin_3_o_2_o_2_o_sinapoyl_bata_d_xylopyranos
     <-> ec_1_2_1_68 [1.2.1.68] +h +e_sinapate +nadph -nadp -h2o
     e_sinapaldehyde
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +acetyl_coa +gitoxigenin
-    oleandrigenin
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +acetyl_coa +alpha_l_fuc_1_3_alpha_d_glc_pp_und
-    2_3_o_ac_alpha_l_fuc_1_3_alpha_d_glc_pp_und
-  }
-
-  branch from glucose side left {
-    glucose
-    <-> ec_2_4_1_10 [2.4.1.10] +sucrose +h2o
-    beta_d_fructose
-  }
-
-  branch from glucose side right {
-    glucose
-    <-> ec_1_1_1_119 [1.1.1.119] +h +nadph +nadp
-    d_glucono_1_4_lactone
-  }
-
-  branch from cyanidin_3_o_2_o_2_o_sinapoyl_bata_d_xylopyranos side left {
-    cyanidin_3_o_2_o_2_o_sinapoyl_bata_d_xylopyranos
-    <-> . +1_o_trans_sinapoyl_beta_d_glucose +glucose
-    cyanidin_3_o_6_o_4_o_beta_d_glucosyl_p_coumaroyl
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_9z_hexadecenoyl_2_9z_12z_15z_octadecatrienoyl
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +1_stearoyl_2_oleoyl_sn_glycero_3_phospho_1d_myo +phosphate +1_stearoyl_2_oleoyl_sn_glycero_3_phospho_1d_myo +h2o
-    atp
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +phellandral
-    1s_2r_4r_neoisodihydrocarveol
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +1s_2r_4r_neoisodihydrocarveol
-    2e_geranial
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +7r_7_hydroxyluteothin
-    dehydrodeoxyaureothin
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +prochaxamycin
-    3_demethylchaxamycin_b
   }
 }

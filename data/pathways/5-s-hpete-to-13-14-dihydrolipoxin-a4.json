@@ -120,40 +120,22 @@
       }
     },
     {
-      "id": "h",
-      "name": "H",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM1"
-      }
-    },
-    {
-      "id": "13_14_dihydro_15_oxo_lipoxin_a4",
-      "name": "13,14-dihydro-15-oxo-lipoxin A4",
-      "short": "13,14-dihydro-15-ox…",
-      "formula": "C20H31O5",
+      "id": "7r_hydroxy_5s_6s_epoxy_8z_11z_14z_icosatrienoat",
+      "name": "(7R)-hydroxy-(5S,6S)-epoxy-(8Z,11Z,14Z)-icosatrienoate",
+      "short": "hydroxy-(5S,6S)-epo…",
+      "formula": "C20H31O4",
       "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM734282"
+        "chebi": "CHEBI:77919"
       }
     },
     {
-      "id": "nadph",
-      "name": "NADPH",
-      "formula": "C21H26N7O17P3",
-      "charge": -4,
+      "id": "5_oxo_ete",
+      "name": "5-oxo-ETE",
+      "formula": "C20H29O3",
+      "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM738702"
-      }
-    },
-    {
-      "id": "nadp",
-      "name": "NADP",
-      "formula": "C21H25N7O17P3",
-      "charge": -3,
-      "xrefs": {
-        "metanetx": "MNXM5"
+        "chebi": "CHEBI:65342"
       }
     }
   ],
@@ -364,42 +346,200 @@
     },
     {
       "id": "r6",
-      "name": "Reaction MNXR205249",
+      "name": "(5S)-hydroperoxy-(6E,8Z,11Z,14Z)-eicosatetraenoate = 7R-hydroxy-5S,6S-epoxy-(8Z,11Z,14Z...",
+      "equation": "(5S)-hydroperoxy-(6E,8Z,11Z,14Z)-eicosatetraenoate = 7R-hydroxy-5S,6S-epoxy-(8Z,11Z,14Z)-eicosatrienoate",
       "substrates": [
         {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "13_14_dihydro_15_oxo_lipoxin_a4",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
+          "metabolite": "5_s_hpete",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "13_14_dihydrolipoxin_a4",
+          "metabolite": "7r_hydroxy_5s_6s_epoxy_8z_11z_14z_icosatrienoat",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "metanetx": "MNXR205249"
+        "rhea": "RHEA:41251"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR205249"
+            "db": "Rhea",
+            "id": "RHEA:41251"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "(5S)-hydroperoxy-(6E,8Z,11Z,14Z)-eicosatetraenoate = 5-oxo-(6E,8Z,11Z,14Z)-eicosatetrae...",
+      "equation": "(5S)-hydroperoxy-(6E,8Z,11Z,14Z)-eicosatetraenoate = 5-oxo-(6E,8Z,11Z,14Z)-eicosatetraenoate + H2O",
+      "substrates": [
+        {
+          "metabolite": "5_s_hpete",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_oxo_ete",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:48632"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48632"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_5_s_hpete_1-oleoyl-2-arachidonoyl-s-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_s_hpete"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-oleoyl-2-arachidonoyl-s-to-hydrogen-donor"
+      },
+      "note": "Shares 5(S)-HPETE with 1-oleoyl-2-arachidonoyl-s… to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57450"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_s_hpete_6-acetyl-2-amino-3-7-8-9-to-l-glutamate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_s_hpete"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-acetyl-2-amino-3-7-8-9-to-l-glutamate"
+      },
+      "note": "Shares 5(S)-HPETE with 6-acetyl-2-amino-3,7,8,9-… to L-glutamate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57450"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_leukotriene_a4_arachidonate-to-fmn-32307",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "leukotriene_a4"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "arachidonate-to-fmn-32307"
+      },
+      "note": "Shares leukotriene A4 with arachidonate to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57463"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_leukotriene_a4_leukotriene-c4-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "leukotriene_a4"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "leukotriene-c4-to-hydrogen-donor"
+      },
+      "note": "Shares leukotriene A4 with leukotriene C4 to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57463"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lipoxin_a4_10-deacetyl-2-debenzoylba-to-paclitaxel",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lipoxin_a4"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "10-deacetyl-2-debenzoylba-to-paclitaxel"
+      },
+      "note": "Shares lipoxin A4 with 10-deacetyl-2-debenzoylba… to paclitaxel.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:67026"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_13_14_dihydrolipoxin_a4_ent-kaur-16-en-19-al-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "13_14_dihydrolipoxin_a4"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ent-kaur-16-en-19-al-to-h2o"
+      },
+      "note": "Shares 13,14-dihydrolipoxin A4 with ent-kaur-16-en-19-al to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78329"
           }
         ]
       }

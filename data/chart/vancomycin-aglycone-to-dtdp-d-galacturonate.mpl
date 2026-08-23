@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway vancomycin-aglycone-to-dtdp-d-galacturonate "vancomycin aglycone to dTDP-D-galacturonate" {
-  spacing 260
+  spacing 272
 
   spine at 0,0 {
     vancomycin_aglycone
@@ -22,27 +22,39 @@ pathway vancomycin-aglycone-to-dtdp-d-galacturonate "vancomycin aglycone to dTDP
     dtdp_d_galacturonate
   }
 
-  branch from dttp side left {
-    dttp
-    <-> . +kanamycin_a +ppi
-    4_thymidylylkanamycin_a
-  }
-
-  branch from dttp side right {
-    dttp
-    <-> . +amikacin +ppi
-    4_thymidylylamikacin
-  }
-
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_83 [4.2.3.83] +fpp
-    santalene
+    <-> ec_4_2_3_185 [4.2.3.185] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    ent_atiserene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_82 [4.2.3.82] +fpp
-    santalene
+    <-> ec_4_2_3_188 [4.2.3.188] +all_trans_pentaprenyl_diphosphate
+    geranylfarnesene
+  }
+
+  branch from udp_d_glucose side left {
+    udp_d_glucose
+    <-> ec_2_4_1_297 [2.4.1.297] +anthocyanidin_3_o_d_glucoside +udp +hplus
+    anthocyanidin_3_o_sophoroside_betaine
+  }
+
+  branch from udp_d_glucose side right {
+    udp_d_glucose
+    <-> ec_2_4_1_298 [2.4.1.298] +anthocyanidin_3_o_d_glucoside +udp +hplus
+    anthocyanidin_3_5_di_o_d_glucoside_betaine
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_188 [4.2.3.188] +all_trans_hexaprenyl_diphosphate
+    hexaprene
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_188 [4.2.3.188] +all_trans_heptaprenyl_diphosphate
+    heptaprene
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-methoxybenzoate-to-formaldehyde "4-methoxybenzoate to formaldehyde" {
-  spacing 320
+  spacing 340
 
   spine at 0,0 {
     4_methoxybenzoate
@@ -18,63 +18,25 @@ pathway 4-methoxybenzoate-to-formaldehyde "4-methoxybenzoate to formaldehyde" {
     phenol
   }
 
-  branch from 4_hydroxybenzoate side left {
-    4_hydroxybenzoate
-    <-> ec_4_1_3_40 [4.1.3.40] +pyruvate
-    chorismate
-  }
 
-  branch from 4_hydroxybenzoate side right {
-    4_hydroxybenzoate
-    <-> ec_2_5_1_93 [2.5.1.93] +gpp +ppi
-    3_geranyl_4_hydroxybenzoate
-  }
 
-  branch from formaldehyde side left {
-    formaldehyde
-    <-> . +5_methyltriphosphate_guanosine_ribonucleotide_4 +akg +o2 +succinate +co2 +hplus
-    5_end_gtp_ribonucleotide_5
-  }
 
-  branch from formaldehyde side right {
-    formaldehyde
-    <-> . +n3_methylcytidine_5_monophosphate_1 +akg +o2 +succinate +co2
-    cytidine_5_monophosphate_1
-  }
 
-  branch from hydrogen_acceptor side left {
-    hydrogen_acceptor
-    <-> ec_1_3_7_8 [1.3.7.8] +nh3 +adp +pi +hplus +hydrogen_donor +atp +h2o
-    hydroxylamine
-  }
 
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> ec_1_3_99_30 [1.3.99.30] +15_cis_phytoene +hydrogen_donor
-    all_trans_3_4_didehydrolycopene
-  }
 
-  branch from phenol side left {
-    phenol
-    <-> . +tyrosine
-    2_ammonioprop_2_enoate
-  }
 
-  branch from phenol side right {
-    phenol
-    <-> . +nadh +o2 +hplus +nad +h2o
-    quinol
-  }
 
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_100 [2.1.1.100] +s_2e_6e_farnesyl_l_cysteinate +sam
-    s_2e_6e_farnesyl_l_cysteine_methyl_ester
-  }
 
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_145 [2.1.1.145] +trans_aconitate +sam
-    2e_2_methoxycarbonylmethyl_but_2_enedioate
-  }
+
+
+
+
+
+
+
+
+
+
+
+
 }

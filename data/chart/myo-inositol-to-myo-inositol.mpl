@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway myo-inositol-to-myo-inositol "myo-inositol to myo-inositol" {
-  spacing 290
+  spacing 236
 
   spine at 0,0 {
     myo_inositol
@@ -18,59 +18,5 @@ pathway myo-inositol-to-myo-inositol "myo-inositol to myo-inositol" {
     raffinose
     <-> ec_2_4_1_123 [2.4.1.123] +udp +galactinol +h -myo_inositol
     udp_alpha_d_galactose
-  }
-
-  branch from raffinose side left {
-    raffinose
-    <-> . +sucrose
-    mediose
-  }
-
-  branch from raffinose side right {
-    raffinose
-    <-> ec_2_4_1_166 [2.4.1.166] +sucrose
-    1f_alpha_d_galactosylraffinose
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +r_3_hydroxydecanoic_acid +alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_form_b_p_put
-    alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_form_a_p_put
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +3_hydroxy_3_methylbutanenitrile
-    3_methyl_2_butenenitrile
-  }
-
-  branch from galactinol side left {
-    galactinol
-    <-> . +ajugose +myo_inositol
-    verbascose
-  }
-
-  branch from udp_alpha_d_galactose side right {
-    udp_alpha_d_galactose
-    <-> . +udp +alpha_d_gal_1_6_alpha_d_glu_1_4_alpha_l_rha_1_3 +h
-    alpha_d_glu_1_4_alpha_l_rha_1_3_alpha_d_gal_pp_u
-  }
-
-  branch from udp_alpha_d_galactose side left {
-    udp_alpha_d_galactose
-    <-> ec_2_4_1_309 [2.4.1.309] +udp +alpha_d_gal_1_3_alpha_l_fuc_1_2_beta_d_gal_1_3_a +h
-    alpha_l_fuc_1_2_beta_d_gal_1_3_alpha_d_galnac_1
-  }
-
-  branch from myo_inositol side right {
-    myo_inositol
-    <-> . +phosphate +h2o
-    1d_myo_inositol_hexakisphosphate
-  }
-
-  branch from myo_inositol side left {
-    myo_inositol
-    <-> ec_1_1_1_18 [1.1.1.18] +nadh +5_dehydro_2_deoxy_d_gluconate +h
-    nad
   }
 }

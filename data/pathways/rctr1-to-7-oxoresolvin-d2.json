@@ -97,46 +97,6 @@
       }
     },
     {
-      "id": "z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa",
-      "name": "(Z)-1-(glutathion-S-yl)-N-hydroxy-omega-(methylsulfanyl)pentan-1-imine",
-      "short": "1-(glutathion-S-yl)…",
-      "formula": "C16H27N4O7S2",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM10338"
-      }
-    },
-    {
-      "id": "5_methylthiopentanonitrile_oxide",
-      "name": "5-methylthiopentanonitrile oxide",
-      "short": "5-methylthiopentano…",
-      "formula": "C6H13NO2S",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1104996"
-      }
-    },
-    {
-      "id": "z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa",
-      "name": "(Z)-1-(glutathion-S-yl)-N-hydroxy-omega-(methylsulfanyl)hexan-1-imine",
-      "short": "1-(glutathion-S-yl)…",
-      "formula": "C17H29N4O7S2",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM10377"
-      }
-    },
-    {
-      "id": "1_methylsulfanyl_6_aci_nitrohexane",
-      "name": "1-(methylsulfanyl)-6-aci-nitrohexane",
-      "short": "1-(methylsulfanyl)-…",
-      "formula": "C7H15NO2S",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1104997"
-      }
-    },
-    {
       "id": "16_oxoresolvin_d2",
       "name": "16-oxoresolvin D2",
       "formula": "C22H29O5",
@@ -152,7 +112,10 @@
       "name": "leukotriene-C4 synthase",
       "ec": [
         "4.4.1.20"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q03013"
+      }
     }
   ],
   "reactions": [
@@ -275,82 +238,6 @@
     },
     {
       "id": "r4",
-      "name": "Reaction MNXR191482",
-      "substrates": [
-        {
-          "metabolite": "z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "5_methylthiopentanonitrile_oxide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glutathione",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR191482"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR191482"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "Reaction MNXR191483",
-      "substrates": [
-        {
-          "metabolite": "z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_methylsulfanyl_6_aci_nitrohexane",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glutathione",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR191483"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR191483"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
       "name": "resolvin D2 + NAD(+) = 16-oxoresolvin D2 + NADH + H(+)",
       "equation": "resolvin D2 + NAD(+) = 16-oxoresolvin D2 + NADH + H(+)",
       "substrates": [
@@ -378,7 +265,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 4,
       "xrefs": {
         "rhea": "RHEA:53588"
       },
@@ -388,6 +275,30 @@
           {
             "db": "Rhea",
             "id": "RHEA:53588"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_7s_8s_epoxy_resolvin_7s-17s-17-hydroxy-7-hyd-to-8-oxoresolvin-d1",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7s_8s_epoxy_resolvin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7s-17s-17-hydroxy-7-hyd-to-8-oxoresolvin-d1"
+      },
+      "note": "Shares (7S,8S)-epoxy-resolvin with (7S,17S)-17-hydroxy-7-hyd… to 8-oxoresolvin D1.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364776"
           }
         ]
       }

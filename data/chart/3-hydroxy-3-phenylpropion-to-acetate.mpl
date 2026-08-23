@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-hydroxy-3-phenylpropion-to-acetate "3-hydroxy-3-phenylpropion… to acetate" {
-  spacing 264
+  spacing 312
 
   spine at 0,0 {
     3_hydroxy_3_phenylpropionic_acid
@@ -28,67 +28,115 @@ pathway 3-hydroxy-3-phenylpropion-to-acetate "3-hydroxy-3-phenylpropion… to ac
 
   branch from e_cinnamate side right {
     e_cinnamate
-    <-> . +nadh +h +o2 +nad
-    cis_3_3_carboxyethenyl_3_5_cyclohexadiene_1_2_di
+    <-> ec_1_14_12_19 [1.14.12.19] +nadh +h +o2 +nad
+    e_3_5r_6s_5_6_dihydroxycyclohexa_1_3_dienyl_acr
   }
 
   branch from h side left {
     h
-    <-> . +roquefortine_f +s_adenosyl_l_homocysteine +s_adenosyl_l_methionine
-    n1_hydroxy_roquefortine_c
+    <-> . +4_hydroxy_2_oxoheptanedioate +h2o
+    cis_2_oxohept_3_enedioic_acid
   }
 
   branch from h side right {
     h
-    <-> ec_2_3_1_199 [2.3.1.199] +malonyl_coa +densipoloyl_coa +3_oxoauricoloyl_coa +coa
-    co2
+    <-> ec_2_4_1_159 [2.4.1.159] +udp +rutin +quercetin_3_o_beta_d_glucofuranoside
+    udp_beta_l_rhamnose
   }
 
   branch from h2o side left {
     h2o
-    <-> . +6_hydroxy_allocryptopine
-    dihydrochelerythrine
+    <-> . +two_disacharide_linked_murein_units_pentapeptide
+    two_linked_disacharide_pentapeptide_and_tripepti
   }
 
   branch from h2o side right {
     h2o
-    <-> . +2_keto_4_hydroxy_5_phosphopentanoate
-    2_keto_5_phospho_3_cis_pentenoate
-  }
-
-  branch from d_phenylalanine side left {
-    d_phenylalanine
-    <-> . +h +h2o +nh4
-    d_phenylalaninamide
-  }
-
-  branch from d_phenylalanine side right {
-    d_phenylalanine
-    <-> ec_6_3_2_4 [6.3.2.4] +d_alanine +atp +h +adp +phosphate
-    d_alanyl_d_phenylalanine
+    <-> . +cis_2_oxohept_3_enedioic_acid
+    2_4_dihydroxy_2_heptenedioic_acid
   }
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_198 [2.3.1.198] +hexadecanedioyl_coa +sn_glycerol_3_phosphate
-    sn_2_c16_0_dca_lpa
+    <-> . +3_hydroxyisovaleryl_coa +h2o
+    3_hydroxyisovaleric_acid
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_198 [2.3.1.198] +2_omega_hydroxy_c22_0_lpa +sn_glycerol_3_phosphate
-    22_hydroxy_docosanoyl_coa
+    <-> . +s_3_hydroxyglutaryl_coa +h2o +h
+    3_hydroxyglutarate
   }
 
-  branch from l_phenylalanine side left {
-    l_phenylalanine
-    <-> .
-    d_phenylalanine
+  branch from e_cinnamate side left {
+    e_cinnamate
+    <-> . +nadh +h +o2 +nad
+    cis_3_3_carboxyethenyl_3_5_cyclohexadiene_1_2_di
   }
 
-  branch from l_phenylalanine side right {
-    l_phenylalanine
-    <-> . +des_arg9_bradykinin +h2o
-    des_phe8_des_arg9_bradykinin
+  branch from e_cinnamate side right {
+    e_cinnamate
+    <-> . +h2o
+    r_3_phenyllactate
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_4_1_240 [2.4.1.240] +udp +kaempferol_3_o_d_glucosyl_1_2_d_glucosyl_1_2_d_g +kaempferol_3_o_d_glucosyl_1_2_d_glucoside
+    udp_alpha_d_glucose
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_4_2_35 [2.4.2.35] +udp +quercetin_3_o_d_xylosyl_1_2_d_glucoside +quercetin_3_o_beta_d_glucofuranoside
+    udp_alpha_d_xylose
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +d_alanine +n_acetyl_d_glucosamine_anhydrous_n_acetylmuramyl
+    n_acetyl_d_glucosamine_anhydrous_n_acetylmuramyl
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_2_1_14 [3.2.1.14] +n_n_diacetylchitobiose
+    aldehydo_n_acetyl_d_glucosamine
+  }
+
+  branch from nh4 side left {
+    nh4
+    <-> ec_1_4_99_1 [1.4.99.1] +d_alanine +fad +h2o +h +pyruvate
+    fadh2
+  }
+
+  branch from nh4 side right {
+    nh4
+    <-> ec_4_3_1_15 [4.3.1.15] +h +3_aminoalanine +h2o
+    pyruvate
+  }
+
+  branch from acetyl_coa side left {
+    acetyl_coa
+    <-> . +glycine +h +coa
+    n_acetylglycine
+  }
+
+  branch from acetyl_coa side right {
+    acetyl_coa
+    <-> . +nonadecanoyl_coa +h +coa
+    3_oxoheneicosanoyl_coenzyme_a
+  }
+
+  branch from coa side left {
+    coa
+    <-> . +tetradecanoyl_coa +1_tetradecanoyl_sn_glycerol_3_phosphate +h
+    dimyristoyl_phosphatidic_acid
+  }
+
+  branch from coa side right {
+    coa
+    <-> . +2e_tetradecenoyl_coa +r_carnitine
+    5z_tetradecenoylcarnitine
   }
 }

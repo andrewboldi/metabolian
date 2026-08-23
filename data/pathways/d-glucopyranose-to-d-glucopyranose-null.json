@@ -94,87 +94,6 @@
       "xrefs": {
         "chebi": "CHEBI:15377"
       }
-    },
-    {
-      "id": "h",
-      "name": "H",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM1"
-      }
-    },
-    {
-      "id": "adp",
-      "name": "ADP",
-      "formula": "C10H12N5O10P2",
-      "charge": -3,
-      "xrefs": {
-        "metanetx": "MNXM40333"
-      }
-    },
-    {
-      "id": "l_xylose",
-      "name": "L-xylose",
-      "formula": "C5H10O5",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM734858"
-      }
-    },
-    {
-      "id": "phosphate",
-      "name": "phosphate",
-      "formula": "HO4P",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM9"
-      }
-    },
-    {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM3"
-      }
-    },
-    {
-      "id": "lyxulose",
-      "name": "Lyxulose",
-      "formula": "C5H10O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:165240"
-      }
-    },
-    {
-      "id": "d_fructofuranose",
-      "name": "α-D-fructofuranose",
-      "formula": "C6H12O6",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:37720"
-      }
-    },
-    {
-      "id": "r_mandelonitrile",
-      "name": "(R)-mandelonitrile",
-      "formula": "C8H7NO",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:18450"
-      }
-    },
-    {
-      "id": "r_prunasin",
-      "name": "(R)-prunasin",
-      "formula": "C14H17NO6",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM731718"
-      }
     }
   ],
   "enzymes": [
@@ -183,42 +102,20 @@
       "name": "glucosylceramidase",
       "ec": [
         "3.2.1.45"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P04062"
+      }
     },
     {
       "id": "ec_3_2_1_62",
       "name": "glycosylceramidase",
       "ec": [
         "3.2.1.62"
-      ]
-    },
-    {
-      "id": "ec_3_6_3_17",
-      "name": "EC 3.6.3.17",
-      "ec": [
-        "3.6.3.17"
-      ]
-    },
-    {
-      "id": "ec_5_3_1_5",
-      "name": "xylose isomerase",
-      "ec": [
-        "5.3.1.5"
-      ]
-    },
-    {
-      "id": "ec_3_2_1_118",
-      "name": "prunasin beta-glucosidase",
-      "ec": [
-        "3.2.1.118"
-      ]
-    },
-    {
-      "id": "ec_3_2_1_21",
-      "name": "beta-glucosidase",
-      "ec": [
-        "3.2.1.21"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P09848"
+      }
     }
   ],
   "reactions": [
@@ -343,195 +240,137 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "Reaction MNXR174786",
-      "ec": "3.6.3.17",
-      "substrates": [
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_xylose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_xylose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_6_3_17"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR174786"
+      "id": "xt_n_hexadecanoylsphing_4_enine_2e-2-hydroxypenta-2-4-d-to-3-carboxy-2-hydroxym",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_hexadecanoylsphing_4_enine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2e-2-hydroxypenta-2-4-d-to-3-carboxy-2-hydroxym"
+      },
+      "note": "Shares N-hexadecanoylsphing-4-enine with (2E)-2-hydroxypenta-2,4-d… to 3-Carboxy-2-hydroxymucona….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR174786"
+            "id": "MNXM1371309"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "Reaction MNXR174787",
-      "ec": "3.6.3.17",
-      "substrates": [
-        {
-          "metabolite": "lyxulose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "lyxulose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_6_3_17"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR174787"
+      "id": "xt_d_glucosyl_n_hexadecanoylsphingosine_n-hexadecanoylsphingosine-to-palmitoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glucosyl_n_hexadecanoylsphingosine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "n-hexadecanoylsphingosine-to-palmitoyl-coa"
+      },
+      "note": "Shares β-D-glucosyl-N-hexadecanoylsphingosine with N-hexadecanoylsphingosine… to palmitoyl-CoA.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR174787"
+            "db": "ChEBI",
+            "id": "CHEBI:84716"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "xylose isomerase",
-      "ec": "5.3.1.5",
-      "substrates": [
-        {
-          "metabolite": "d_fructofuranose",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "glucose",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_5_3_1_5"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "metanetx": "MNXR191842"
+      "id": "xt_d_glucosyl_n_hexadecanoylsphingosine_trehalose-6-mycolate-to-6-o-acetyl-d-glucose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glucosyl_n_hexadecanoylsphingosine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "trehalose-6-mycolate-to-6-o-acetyl-d-glucose"
+      },
+      "note": "Shares β-D-glucosyl-N-hexadecanoylsphingosine with α,α'-trehalose 6-mycolate to 6-O-acetyl-β-D-glucose.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR191842"
+            "db": "ChEBI",
+            "id": "CHEBI:84716"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "prunasin beta-glucosidase",
-      "ec": "3.2.1.118",
-      "substrates": [
-        {
-          "metabolite": "r_mandelonitrile",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glucose",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "r_prunasin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_2_1_118"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "metanetx": "MNXR192109"
+      "id": "xt_n_hexadecanoylsphingosine_n-hexadecanoylsphingosine-to-palmitoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_hexadecanoylsphingosine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "n-hexadecanoylsphingosine-to-palmitoyl-coa"
+      },
+      "note": "Shares N-hexadecanoylsphingosine with N-hexadecanoylsphingosine… to palmitoyl-CoA.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR192109"
+            "db": "ChEBI",
+            "id": "CHEBI:72959"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_hexadecanoylsphingosine_n-stearoylsphingosine-1-p-to-n-hexadecanoylsphin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_hexadecanoylsphingosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-stearoylsphingosine-1-p-to-n-hexadecanoylsphin"
+      },
+      "note": "Shares N-hexadecanoylsphingosine with N-stearoylsphingosine-1-p… to N-hexadecanoylsphingosine….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:72959"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_hexadecanoylsphingosine_trehalose-6-mycolate-to-6-o-acetyl-d-glucose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_hexadecanoylsphingosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trehalose-6-mycolate-to-6-o-acetyl-d-glucose"
+      },
+      "note": "Shares N-hexadecanoylsphingosine with α,α'-trehalose 6-mycolate to 6-O-acetyl-β-D-glucose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:72959"
           }
         ]
       }

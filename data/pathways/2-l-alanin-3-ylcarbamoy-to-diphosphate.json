@@ -119,52 +119,6 @@
       "xrefs": {
         "chebi": "CHEBI:136993"
       }
-    },
-    {
-      "id": "amikacin",
-      "name": "amikacin",
-      "formula": "C22H47N5O13",
-      "charge": 4,
-      "xrefs": {
-        "chebi": "CHEBI:84739"
-      }
-    },
-    {
-      "id": "ctp",
-      "name": "CTP (cytidine 5'-triphosphate)",
-      "short": "CTP (cytidine 5'-TP)",
-      "formula": "C9H12N3O14P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:37563"
-      }
-    },
-    {
-      "id": "4_cytidylylamikacin",
-      "name": "4'-cytidylylamikacin",
-      "formula": "C31H58N8O20P",
-      "charge": 3,
-      "xrefs": {
-        "chebi": "CHEBI:233260"
-      }
-    },
-    {
-      "id": "utp",
-      "name": "UTP",
-      "formula": "C9H11N2O15P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:46398"
-      }
-    },
-    {
-      "id": "4_uridylylamikacin",
-      "name": "4'-uridylylamikacin",
-      "formula": "C31H57N7O21P",
-      "charge": 3,
-      "xrefs": {
-        "chebi": "CHEBI:233261"
-      }
     }
   ],
   "enzymes": [
@@ -345,81 +299,93 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "amikacin + CTP = 4'-cytidylylamikacin + diphosphate",
-      "equation": "amikacin + CTP = 4'-cytidylylamikacin + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "amikacin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ctp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "4_cytidylylamikacin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:83735"
+      "id": "xt_2_l_alanin_3_ylcarbamoyl_methyl_2_hydroxybutaned_n2-acetyl-l-ornithine-to-d-ribulose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_l_alanin_3_ylcarbamoyl_methyl_2_hydroxybutaned"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "n2-acetyl-l-ornithine-to-d-ribulose"
+      },
+      "note": "Shares 2-[(L-alanin-3-ylcarbamoyl)methyl]-2-hydroxybutanedioate with N2-acetyl-L-ornithine to D-ribulose.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:83735"
+            "db": "ChEBI",
+            "id": "CHEBI:142969"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "amikacin + UTP = 4'-uridylylamikacin + diphosphate",
-      "equation": "amikacin + UTP = 4'-uridylylamikacin + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "amikacin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "utp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "4_uridylylamikacin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:83739"
+      "id": "xt_3_amino_l_alanine_3-methylpalmitoyl-coa-to-n3-carboxylatoformyl-l",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_amino_l_alanine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "3-methylpalmitoyl-coa-to-n3-carboxylatoformyl-l"
+      },
+      "note": "Shares 3-amino-L-alanine with 3-methylpalmitoyl-CoA to N3-(carboxylatoformyl)-L-….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:83739"
+            "db": "ChEBI",
+            "id": "CHEBI:57721"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_amino_l_alanine_n2-acetyl-l-ornithine-to-d-ribulose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_amino_l_alanine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n2-acetyl-l-ornithine-to-d-ribulose"
+      },
+      "note": "Shares 3-amino-L-alanine with N2-acetyl-L-ornithine to D-ribulose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57721"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_amino_l_alanine_o-phosphonato-l-serine-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_amino_l_alanine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "o-phosphonato-l-serine-to-ammonium"
+      },
+      "note": "Shares 3-amino-L-alanine with O-phosphonato-L-serine to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57721"
           }
         ]
       }

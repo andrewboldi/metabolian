@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway plastoquinone-9-to-plastoquinol-1 "plastoquinone-9 to plastoquinol-1" {
-  spacing 168
+  spacing 186
 
   spine at 0,0 {
     plastoquinone_9
@@ -16,5 +16,23 @@ pathway plastoquinone-9-to-plastoquinol-1 "plastoquinone-9 to plastoquinol-1" {
     15_9_di_cis_phytofluene
     <-> ec_1_3_5_5 [1.3.5.5] +15_cis_phytoene +plastoquinone_1 -plastoquinol_1
     9_9_15_tri_cis_carotene
+  }
+
+  branch from 15_9_di_cis_phytofluene side left {
+    15_9_di_cis_phytofluene
+    <-> ec_1_3_5_5 [1.3.5.5] +15_cis_phytoene +a_plastoquinone
+    a_plastoquinol
+  }
+
+  branch from 15_cis_phytoene side right {
+    15_cis_phytoene
+    <-> ec_2_5_1_32 [2.5.1.32] +diphosphate
+    prephytoene_diphosphate
+  }
+
+  branch from 15_cis_phytoene side left {
+    15_cis_phytoene
+    <-> ec_2_5_1_32 [2.5.1.32] +2z_6e_10e_geranylgeranyl_diphosphate
+    diphosphate
   }
 }

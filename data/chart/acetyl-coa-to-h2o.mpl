@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway acetyl-coa-to-h2o "acetyl-CoA to H2O" {
-  spacing 188
+  spacing 260
 
   spine at 0,0 {
     acetyl_coa
@@ -18,37 +18,109 @@ pathway acetyl-coa-to-h2o "acetyl-CoA to H2O" {
 
   branch from coa side left {
     coa
-    <-> . +subaphyllin +h +e_feruloyl_coa
-    putrescine
+    <-> . +acetyl_coa +tryptoquialanol
+    tryptoquialanine_a
   }
 
   branch from coa side right {
     coa
-    <-> . +2_methylpropanoyl_coa +n_demethyl_desepoxymaytansinol
-    n_demethyl_desepoxyansamitocin_p_3
+    <-> . +benzoyl_coa +pyrrothine
+    benzoyl_pyrrothine
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +o2 +monofluorobenzene
-    4_fluorocyclohexadiene_cis_cis_1_2_diol
+    <-> ec_1_14_13_1 [1.14.13.1] +nadh +4_chlorosalicylate +h +o2 +4_chlorocatechol +h2o
+    co2
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +o2 +monofluorobenzene
-    1_fluorocyclohexadiene_cis_cis_1_2_diol
+    <-> ec_1_14_13_1 [1.14.13.1] +nadh +5_chlorosalicylate +h +o2 +co2 +h2o
+    4_chlorocatechol
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_2_1_5 [1.2.1.5] +nadh +h +carboxyphosphamide +nad
-    aldophosphamide
+    <-> . +2_methylpropanoate +h +acetate
+    4_methyl_3_oxopentanoate
   }
 
   branch from h2o side right {
     h2o
-    <-> . +carbamazepine_10_11_epoxide
-    dihydroxycarbazepine
+    <-> . +arteannuin +h +o2
+    dihydroartemisinic_acid_hydroperoxide
+  }
+
+  branch from acetyl_coa side left {
+    acetyl_coa
+    <-> . +holomycin +coa
+    holothin
+  }
+
+  branch from acetyl_coa side right {
+    acetyl_coa
+    <-> . +dtdp_4_acetyl_alpha_d_ravidosamine +coa
+    dtdp_d_ravidosamine
+  }
+
+  branch from coa side left {
+    coa
+    <-> . +benzoyl_holothin +holothin
+    benzoyl_coa
+  }
+
+  branch from coa side right {
+    coa
+    <-> . +acetyl_coa +3_hydroxytrichothecene
+    isotrichodermin
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> . +l_gulono_1_4_lactone +h +nad
+    l_gulopyranose
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_1_1_221 [1.1.1.221] +6r_dehydrovomifoliol +h +nad
+    6s_9r_vomifoliol
+  }
+
+  branch from h side left {
+    h
+    <-> . +1_5_diazabicyclo_4_3_0_nonane
+    1_3_aminopropyl_pyrrolinium
+  }
+
+  branch from h side right {
+    h
+    <-> . +gibberellin_a28 +2_oxoglutarate +o2 +co2 +succinate
+    2betaoh_gibberellin28
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_3_1_52 [1.3.1.52] +nadh +2e_2_methylbut_2_enoyl_coa +h
+    2s_2_methylbutanoyl_coa
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_2_1_23 [1.2.1.23] +nadh +h +3_hydroxypyruvate +h2o
+    hydroxypyruvaldehyde
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +methanofuran_d +l_glutamate
+    4_4_2_gamma_l_glutamylamino_ethyl_phenoxymethyl
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +vindoline +h2o2 +catharanthine
+    alpha_3_4_anhydrovinblastine_radical
   }
 }

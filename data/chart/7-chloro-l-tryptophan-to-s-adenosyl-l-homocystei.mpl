@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 7-chloro-l-tryptophan-to-s-adenosyl-l-homocystei "7-chloro-L-tryptophan to S-adenosyl-L-homocysteine" {
-  spacing 294
+  spacing 270
 
   spine at 0,0 {
     7_chloro_l_tryptophan
@@ -20,33 +20,9 @@ pathway 7-chloro-l-tryptophan-to-s-adenosyl-l-homocystei "7-chloro-L-tryptophan 
     rebeccamycin
   }
 
-  branch from 2_iminio_3_7_chloroindol_3_yl_propionate side left {
-    2_iminio_3_7_chloroindol_3_yl_propionate
-    <-> . +h2o2 +h2o
-    3_4_bis_7_chloroindol_3_yl_2_5_diiminiohexanedio
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +2_n_acetyl_6_deamino_6_hydroxyparomomycin_ii +phosphate +2_n_acetyl_6_deamino_6_hydroxyparomomycin_ii
-    atp
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    6_deamino_6_hydroxyparomomycin_ii
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +malonyl-coa +acetyl_coa +sam +nadph +hplus +co2 +nadp +coa +h2o
-    soppiline_a
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +avenanthramide_c +sam +hplus
-    avenanthramide_b
+  branch from 7_chloro_l_tryptophan side left {
+    7_chloro_l_tryptophan
+    <-> ec_1_14_19_60 [1.14.19.60] +fadh2 +chloride +o2 +fad +h2o
+    6_7_dichloro_l_tryptophan
   }
 }

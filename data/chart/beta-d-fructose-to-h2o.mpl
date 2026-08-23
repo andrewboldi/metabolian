@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway beta-d-fructose-to-h2o "beta-D-fructose… to H2O" {
-  spacing 304
+  spacing 340
 
   spine at 0,0 {
     beta_d_fructose_2_6_bisphosphate
@@ -14,91 +14,163 @@ pathway beta-d-fructose-to-h2o "beta-D-fructose… to H2O" {
     nad
     <-> ec_2_7_1_1 [2.7.1.1] +h +adp +d_mannitol_1_phosphate -d_sorbitol
     atp
-    <-> ec_3_2_1_23 [3.2.1.23] +beta_d_galactose +d_sorbitol -h2o
-    lactitol
-  }
-
-  branch from keto_d_fructose_6_phosphate side left {
-    keto_d_fructose_6_phosphate
-    <-> ec_2_7_1_1 [2.7.1.1] +atp +h +adp
-    beta_d_fructose
-  }
-
-  branch from keto_d_fructose_6_phosphate side right {
-    keto_d_fructose_6_phosphate
-    <-> . +h +amp +adp
-    beta_d_fructose_1_6_bisphosphate
+    <-> ec_3_2_1_22 [3.2.1.22] +d_galactopyranose +d_sorbitol -h2o
+    d_galp_1_6_d_glc_oh
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_3_1_3_1 [3.1.3.1] +1_naphthyl_dihydrogen_phosphate +h2o +h
-    1_naphthol
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +atp +h2o
+    all_trans_heptaprenyl_diphosphate
   }
 
   branch from phosphate side right {
     phosphate
-    <-> . +3_azido_3_deoxythymidine_5_phosphate +h2o
-    zidovudine
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +atp +h2o
+    2e_6e_10e_14e_geranylfarnesyl_diphosphate
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_2 [1.1.1.2] +nadh +h +methylacetoacetic_acid
-    methyl_3_hydroxybutyrate
+    <-> ec_1_3_1_74 [1.3.1.74] +nadh +e_hex_2_enal +h
+    hexanal
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +decanal
-    decan_1_ol
+    <-> . +nadh +h +1r_4s_fenchone
+    1s_2s_4r_endo_fenchol
   }
 
   branch from d_mannitol_1_phosphate side left {
     d_mannitol_1_phosphate
-    <-> . +d_mannitol +phosphoenolpyruvate
-    pyruvate
-  }
-
-  branch from d_mannitol_1_phosphate side right {
-    d_mannitol_1_phosphate
-    <-> ec_2_7_1_1 [2.7.1.1] +itp +d_sorbitol +h
-    idp
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    toluene
+    <-> ec_1_1_1_200 [1.1.1.200] +d_glucose_6_phosphate +h +nadph
+    nadp
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
-    glycyl_l_leucine
+    <-> ec_2_7_1_15 [2.7.1.15] +alpha_d_ribofuranose_5_phosphate +adp +h
+    beta_d_ribofuranose
   }
 
-  branch from d_sorbitol side left {
-    d_sorbitol
-    <-> ec_1_1_99_28 [1.1.99.28] +d_fructofuranose +beta_d_glucose
-    d_glucono_1_5_lactone
+  branch from atp side left {
+    atp
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    all_trans_decaprenyl_diphosphate
   }
 
   branch from d_sorbitol side right {
     d_sorbitol
-    <-> ec_1_1_99_28 [1.1.99.28] +d_fructofuranose +d_glucono_1_5_lactone
-    alpha_d_glucose
+    <-> ec_1_1_99_28 [1.1.99.28] +beta_d_glucose +beta_d_fructose
+    d_glucono_1_5_lactone
   }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_3_1_1_25 [3.1.1.25] +dl_4_hydroxy_caproic_acid
-    caprolactone
+  branch from d_sorbitol side left {
+    d_sorbitol
+    <-> ec_1_1_1_14 [1.1.1.14] +nadh +h +nad
+    beta_d_fructose
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_81 [3.2.1.81] +neoagarobiose
-    neoagarotetraose
+    <-> ec_3_6_1_15 [3.6.1.15] +h +adp +phosphate
+    dgtp
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_6_1_15 [3.6.1.15] +h +phosphate +atp
+    dgdp
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +h +adp +phosphate +atp
+    beta_nicotinamide_d_riboside
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +d_glcnac6s_1_4_d_glca +d_glucuronate +h
+    d_glca_1_4_d_glcnac6s_1_4_d_glca
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> . +6_dehydro_scb2 +h2o
+    3s_4r_4_octanoyl_5_oxooxolan_3_yl_methyl_phosph
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    glutathion_s_yl_bimane
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +h +5_dehydro_4_deoxy_d_glucuronate +nad
+    2_dehydro_3_deoxy_d_gluconate
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> . +h +cdp_d_xylulose +nad
+    cdp_d_arabinitol
+  }
+
+  branch from h side right {
+    h
+    <-> ec_4_1_1_65 [4.1.1.65] +co2 +1_15z_tetracosenoyl_2_9z_12z_octadecadienoyl_sn
+    1_15z_tetracosenoyl_2_9z_12z_octadecadienoyl_sn
+  }
+
+  branch from h side left {
+    h
+    <-> ec_4_1_1_65 [4.1.1.65] +co2 +24_1_18_3_pe
+    1_15z_tetracosenoyl_2_9z_12z_15z_octadecatrienoy
+  }
+
+  branch from nad side right {
+    nad
+    <-> . +nadh +h +cdp_4_dehydro_3_6_dideoxy_d_glucose
+    cdp_3_6_dideoxy_d_glucose
+  }
+
+  branch from nad side left {
+    nad
+    <-> . +nadh +norsolorinic_acid +h
+    1_s_averantin
+  }
+
+  branch from adp side right {
+    adp
+    <-> ec_2_7_1_1 [2.7.1.1] +alpha_d_galactose +h +atp
+    6_o_phosphonohexopyranose
+  }
+
+  branch from adp side left {
+    adp
+    <-> ec_2_7_1_1 [2.7.1.1] +h +atp +6_o_phosphonohexopyranose
+    aldehydo_d_galactose
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_2_7_1_1 [2.7.1.1] +h +adp +6_o_phosphonohexopyranose
+    aldehydo_d_glucose
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_2_7_1_1 [2.7.1.1] +h +adp +6_o_phosphonohexopyranose
+    d_fructofuranose
+  }
+
+  branch from d_sorbitol side right {
+    d_sorbitol
+    <-> ec_1_1_1_2 [1.1.1.2] +h +nadph +nadp
+    alpha_d_glucose
   }
 }

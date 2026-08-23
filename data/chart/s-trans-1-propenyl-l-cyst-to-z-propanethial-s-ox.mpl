@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-trans-1-propenyl-l-cyst-to-z-propanethial-s-ox "S-trans-1-propenyl-L-cyst… to (Z)-propanethial S-oxide" {
-  spacing 218
+  spacing 242
 
   spine at 0,0 {
     s_trans_1_propenyl_l_cysteine
@@ -18,26 +18,14 @@ pathway s-trans-1-propenyl-l-cyst-to-z-propanethial-s-ox "S-trans-1-propenyl-L-c
 
   branch from h2o2 side left {
     h2o2
-    <-> . +9z_12z_15z_octadecatrienoate +h +aplotaxene +h2o
-    co2
+    <-> ec_1_4_3_16 [1.4.3.16] +l_aspartate +o2
+    iminoaspartate
   }
 
   branch from h2o2 side right {
     h2o2
-    <-> ec_1_1_3_9 [1.1.3.9] +d_galactopyranose +o2 +h2o +h
-    d_galactonate
-  }
-
-  branch from s_1_propenyl_l_cysteine_sulfoxide side left {
-    s_1_propenyl_l_cysteine_sulfoxide
-    <-> ec_4_4_1_4 [4.4.1.4] +nh4 +e_prop_1_en_1_so_peroxol +h2o
-    pyruvate
-  }
-
-  branch from s_1_propenyl_l_cysteine_sulfoxide side right {
-    s_1_propenyl_l_cysteine_sulfoxide
-    <-> . +h2o2 +o2 +h2o
-    s_allylcysteine
+    <-> ec_1_17_3_2 [1.17.3.2] +2_8_dioxoadenine +o2 +h2o
+    8_oxoadenine
   }
 
   branch from e_prop_1_en_1_so_peroxol side left {
@@ -48,13 +36,49 @@ pathway s-trans-1-propenyl-l-cyst-to-z-propanethial-s-ox "S-trans-1-propenyl-L-c
 
   branch from 2_ammonioprop_2_enoate side right {
     2_ammonioprop_2_enoate
-    <-> . +chloride +hplus
-    3_chloro_d_alanine
+    <-> . +3_sulfanylpentan_1_ol_l_cysteine
+    3_mercaptopentanol
   }
 
   branch from 2_ammonioprop_2_enoate side left {
     2_ammonioprop_2_enoate
-    <-> . +s_1_hydroxy_3_methylhexan_3_yl_l_cysteine
-    3_methyl_3_sulfanylhexan_1_ol
+    <-> . +l_mimosine
+    3_hydroxypyridin_4_1h_one
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_13_11_16 [1.13.11.16] +3_methylcatechol
+    2_hydroxy_6_keto_2_4_heptadienoate
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +15_hydroperoxyeicosa_8z_11z_13e_trienoate
+    8z_11z_14z_eicosatrienoate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_4_2_1_36 [4.2.1.36] +homocitric_acid +cis_homoaconitate
+    h
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_4_2_1_17 [4.2.1.17] +2_methylpropenoyl_coa
+    3_hydroxy_2_methylpropanoyl_coa
+  }
+
+  branch from h2o2 side right {
+    h2o2
+    <-> . +fructosylglycine +o2 +h
+    2_e_3s_4r_5r_3_4_5_6_tetrahydroxy_2_oxohexyliden
+  }
+
+  branch from h2o2 side left {
+    h2o2
+    <-> ec_1_5_3_25 [1.5.3.25] +fructosylglycine +o2 +h2o +d_glucosone
+    glycine
   }
 }

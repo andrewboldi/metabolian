@@ -115,46 +115,6 @@
       "xrefs": {
         "chebi": "CHEBI:73544"
       }
-    },
-    {
-      "id": "uridine_5_monophosphate_1",
-      "name": "uridine 5'-monophosphate(1−)",
-      "short": "uridine 5'-MP(1−)",
-      "formula": "C9H10N2O8P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:65315"
-      }
-    },
-    {
-      "id": "5_methyluridine_5_monophosphate_1",
-      "name": "5-methyluridine 5'-monophosphate(1−)",
-      "short": "5-methyluridine…",
-      "formula": "C10H12N2O8P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:74447"
-      }
-    },
-    {
-      "id": "n6_l_threonylcarbamoyladenine_5_monophosphate_2",
-      "name": "N6-L-threonylcarbamoyladenine 5'-monophosphate(2−)",
-      "short": "N6-L-threonylcarbam…",
-      "formula": "C15H17N6O10P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:74418"
-      }
-    },
-    {
-      "id": "n6_methyl_n6_l_threonylcarbamoyladenosine_5_phos",
-      "name": "N6-methyl,N6-L-threonylcarbamoyladenosine 5'-phosphate(2−)",
-      "short": "N6-methyl,N6-L-thre…",
-      "formula": "C16H19N6O10P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:188470"
-      }
     }
   ],
   "enzymes": [
@@ -163,28 +123,40 @@
       "name": "tRNA(Phe) (4-demethylwyosine(37)-C(7)) aminocarboxypropyltransferase",
       "ec": [
         "2.5.1.114"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q53H54"
+      }
     },
     {
       "id": "ec_2_1_1_282",
       "name": "tRNA(Phe) 7-[(3-amino-3-carboxypropyl)-4-demethylwyosine(37)-N(4)]-",
       "ec": [
         "2.1.1.282"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q6IPR3"
+      }
     },
     {
       "id": "ec_2_1_1_290",
       "name": "tRNA(Phe) [7-(3-amino-3-carboxypropyl)wyosine(37)-O]-methyltransferase",
       "ec": [
         "2.1.1.290"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "O60294"
+      }
     },
     {
       "id": "ec_2_3_1_231",
       "name": "tRNA(Phe) {7-[3-amino-3-(methoxycarbonyl)propyl]wyosine(37)-N}-",
       "ec": [
         "2.3.1.231"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "O60294"
+      }
     }
   ],
   "reactions": [
@@ -383,89 +355,49 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "a uridine in RNA + S-adenosyl-L-methionine = a 5-methyluridine in RNA + S-adenosyl-L-ho...",
-      "equation": "a uridine in RNA + S-adenosyl-L-methionine = a 5-methyluridine in RNA + S-adenosyl-L-homocysteine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "uridine_5_monophosphate_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "5_methyluridine_5_monophosphate_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:69867"
+      "id": "xt_4_demethylwyosine_5_monophosphate_1_guanosine-5-monophosphat-to-s-adenosyl-l-homocys",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_demethylwyosine_5_monophosphate_1"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "guanosine-5-monophosphat-to-s-adenosyl-l-homocys"
+      },
+      "note": "Shares 4-demethylwyosine 5'-monophosphate(1−) with guanosine 5'-monophosphat… to S-adenosyl-L-homocysteine.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:69867"
+            "db": "ChEBI",
+            "id": "CHEBI:64315"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "N(6)-L-threonylcarbamoyladenosine(37) in tRNA + S-adenosyl-L-methionine = N(6)-methyl,N...",
-      "equation": "N(6)-L-threonylcarbamoyladenosine(37) in tRNA + S-adenosyl-L-methionine = N(6)-methyl,N(6)-L-threonylcarbamoyladenosine(37) in tRNA + S-adenosyl-L-homocysteine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "n6_l_threonylcarbamoyladenine_5_monophosphate_2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n6_methyl_n6_l_threonylcarbamoyladenosine_5_phos",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:70027"
+      "id": "xt_7_3s_3_amino_3_carboxypropyl_wyosine_5_monophosp_s-5-oxo-2-5-dihydro-2-f-to-nitrite",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_3s_3_amino_3_carboxypropyl_wyosine_5_monophosp"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "s-5-oxo-2-5-dihydro-2-f-to-nitrite"
+      },
+      "note": "Shares 7-[(3S)-3-amino-3-carboxypropyl]wyosine 5'-monophosphate(1−) with (S)-5-oxo-2,5-dihydro-2-f… to nitrite.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:70027"
+            "db": "ChEBI",
+            "id": "CHEBI:73543"
           }
         ]
       }

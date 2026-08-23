@@ -1,0 +1,452 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "r-mandelonitrile-to-h2o-null",
+  "name": "(R)-mandelonitrile to H2O",
+  "category": "other",
+  "summary": "A 3-step route from (R)-mandelonitrile to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR118201"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:18450"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "r_mandelonitrile",
+      "name": "(R)-mandelonitrile",
+      "formula": "C8H7NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18450"
+      }
+    },
+    {
+      "id": "beta_d_glcp_1_6_beta_d_glcp",
+      "name": "beta-D-Glcp-(1->6)-beta-D-Glcp",
+      "short": "beta-D-Glcp-(1->6)-…",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1107960"
+      }
+    },
+    {
+      "id": "r_amygdalin",
+      "name": "(R)-amygdalin",
+      "formula": "C20H27NO11",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735862"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1102128"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "udp_alpha_d_glucose",
+      "name": "UDP-alpha-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1364019"
+      }
+    },
+    {
+      "id": "r_prunasin",
+      "name": "(R)-prunasin",
+      "formula": "C14H17NO6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM731718"
+      }
+    },
+    {
+      "id": "beta_d_glucose",
+      "name": "beta-D-glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364060"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_2_1_119",
+      "name": "vicianin beta-glucosidase",
+      "ec": [
+        "3.2.1.119"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_117",
+      "name": "amygdalin beta-glucosidase",
+      "ec": [
+        "3.2.1.117"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "vicianin beta-glucosidase",
+      "ec": "3.2.1.119",
+      "substrates": [
+        {
+          "metabolite": "r_mandelonitrile",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "beta_d_glcp_1_6_beta_d_glcp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_amygdalin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_119"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR118201"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR118201"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR143709",
+      "substrates": [
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "r_amygdalin",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "udp_alpha_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "r_prunasin",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR143709"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR143709"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "amygdalin beta-glucosidase",
+      "ec": "3.2.1.117",
+      "substrates": [
+        {
+          "metabolite": "beta_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "r_prunasin",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_amygdalin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_117"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR173324"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR173324"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_r_amygdalin_glyceric-acid-to-nad-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_amygdalin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "glyceric-acid-to-nad-null"
+      },
+      "note": "Shares (R)-amygdalin with Glyceric acid… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM735862"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_amygdalin_maltoheptaose-to-d-glucopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_amygdalin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "maltoheptaose-to-d-glucopyranose"
+      },
+      "note": "Shares (R)-amygdalin with maltoheptaose to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM735862"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_amygdalin_r-mandelonitrile-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_amygdalin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-mandelonitrile-to-h2o"
+      },
+      "note": "Shares (R)-amygdalin with (R)-mandelonitrile to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM735862"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_prunasin_2-phenylacetamide-to-s-mandelonitrile",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_prunasin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-phenylacetamide-to-s-mandelonitrile"
+      },
+      "note": "Shares (R)-prunasin with 2-phenylacetamide to (S)-mandelonitrile.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM731718"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_prunasin_2-phenylacetamide-to-s-mandelonitrile-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_prunasin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-phenylacetamide-to-s-mandelonitrile-null"
+      },
+      "note": "Shares (R)-prunasin with 2-phenylacetamide to (S)-mandelonitrile.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM731718"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_prunasin_glyceric-acid-to-nad-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_prunasin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "glyceric-acid-to-nad-null"
+      },
+      "note": "Shares (R)-prunasin with Glyceric acid… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM731718"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_prunasin_maltoheptaose-to-d-glucopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_prunasin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "maltoheptaose-to-d-glucopyranose"
+      },
+      "note": "Shares (R)-prunasin with maltoheptaose to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM731718"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_prunasin_nadh-to-s-2-hydroxyoctanenitrile",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_prunasin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-s-2-hydroxyoctanenitrile"
+      },
+      "note": "Shares (R)-prunasin with NADH to (S)-2-Hydroxyoctanenitrile.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM731718"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_prunasin_r-mandelonitrile-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_prunasin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-mandelonitrile-to-h2o"
+      },
+      "note": "Shares (R)-prunasin with (R)-mandelonitrile to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM731718"
+          }
+        ]
+      }
+    }
+  ]
+}

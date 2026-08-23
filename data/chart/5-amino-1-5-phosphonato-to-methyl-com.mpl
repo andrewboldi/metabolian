@@ -21,4 +21,16 @@ pathway 5-amino-1-5-phosphonato-to-methyl-com "5-amino-1-(5-phosphonato-… to m
     <-> ec_2_1_1_253 [2.1.1.253] +methyl_co +coenzyme_m -methyl_com -hplus
     cobalt
   }
+
+  branch from carnitine side left {
+    carnitine
+    <-> . +stearoyl_coa +coa
+    o_octadecanoyl_l_carnitine
+  }
+
+  branch from carnitine side right {
+    carnitine
+    <-> . +9z_myristoleoyl_coa +coa
+    o_9z_tetradecenoyl_l_carnitine
+  }
 }

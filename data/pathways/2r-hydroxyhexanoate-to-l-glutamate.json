@@ -118,53 +118,6 @@
       "xrefs": {
         "chebi": "CHEBI:29985"
       }
-    },
-    {
-      "id": "l_glutamyl_l_glutamate_2",
-      "name": "γ-L-glutamyl-L-glutamate(2−)",
-      "short": "γ-L-glutamyl-L-glut…",
-      "formula": "C10H12N2O6",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:143622"
-      }
-    },
-    {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:30616"
-      }
-    },
-    {
-      "id": "l_glutamyl_l_glutamyl_l_glutamate_3",
-      "name": "L-glutamyl-γ-L-glutamyl-L-glutamate(3−)",
-      "short": "L-glutamyl-γ-L-glut…",
-      "formula": "C15H18N3O9",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:183054"
-      }
-    },
-    {
-      "id": "adp",
-      "name": "ADP",
-      "formula": "C10H12N5O10P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:456216"
-      }
-    },
-    {
-      "id": "pi",
-      "name": "Orthophosphate (Pi)",
-      "formula": "HO4P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:43474"
-      }
     }
   ],
   "enzymes": [
@@ -173,20 +126,6 @@
       "name": "2-aminohexanoate transaminase",
       "ec": [
         "2.6.1.67"
-      ]
-    },
-    {
-      "id": "ec_6_3_2_61",
-      "name": "tubulin-glutamate ligase",
-      "ec": [
-        "6.3.2.61"
-      ]
-    },
-    {
-      "id": "ec_6_3_2_62",
-      "name": "beta-tubulin-glutamate ligase",
-      "ec": [
-        "6.3.2.62"
       ]
     }
   ],
@@ -321,117 +260,115 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "tubulin-glutamate ligase",
-      "equation": "gamma-L-glutamyl-L-glutamyl-[tubulin] + L-glutamate + ATP = L-glutamyl-gamma-L-glutamyl-L-glutamyl-[tubulin] + ADP + phosphate + H(+)",
-      "ec": "6.3.2.61",
-      "substrates": [
-        {
-          "metabolite": "l_glutamyl_l_glutamate_2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glutamate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "l_glutamyl_l_glutamyl_l_glutamate_3",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pi",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_6_3_2_61"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:69200"
+      "id": "xt_2r_hydroxyhexanoate_2r-hydroxyhexanoate-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2r_hydroxyhexanoate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2r-hydroxyhexanoate-to-phosphate"
+      },
+      "note": "Shares (2R)-hydroxyhexanoate with (2R)-hydroxyhexanoate to phosphate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:69200"
+            "db": "ChEBI",
+            "id": "CHEBI:232386"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "beta-tubulin-glutamate ligase",
-      "equation": "gamma-L-glutamyl-L-glutamyl-[beta-tubulin] + L-glutamate + ATP = L-glutamyl-gamma-L-glutamyl-L-glutamyl-[beta-tubulin] + ADP + phosphate + H(+)",
-      "ec": "6.3.2.62",
-      "substrates": [
-        {
-          "metabolite": "l_glutamyl_l_glutamate_2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glutamate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "l_glutamyl_l_glutamyl_l_glutamate_3",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pi",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_6_3_2_62"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:69204"
+      "id": "xt_2_oxohexanoate_2r-hydroxyhexanoate-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxohexanoate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2r-hydroxyhexanoate-to-phosphate"
+      },
+      "note": "Shares 2-oxohexanoate with (2R)-hydroxyhexanoate to phosphate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:69204"
+            "db": "ChEBI",
+            "id": "CHEBI:35177"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_oxohexanoate_4-hydroxy-2-oxooctanoate-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxohexanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxy-2-oxooctanoate-to-ammonium"
+      },
+      "note": "Shares 2-oxohexanoate with 4-Hydroxy-2-oxooctanoate to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:35177"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_2_aminohexanoic_acid_2r-hydroxyhexanoate-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_2_aminohexanoic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2r-hydroxyhexanoate-to-phosphate"
+      },
+      "note": "Shares L-2-aminohexanoic acid with (2R)-hydroxyhexanoate to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58455"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_2_aminohexanoic_acid_4-hydroxy-2-oxooctanoate-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_2_aminohexanoic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxy-2-oxooctanoate-to-ammonium"
+      },
+      "note": "Shares L-2-aminohexanoic acid with 4-Hydroxy-2-oxooctanoate to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58455"
           }
         ]
       }

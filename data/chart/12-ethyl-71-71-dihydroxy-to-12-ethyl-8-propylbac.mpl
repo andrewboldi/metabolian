@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 12-ethyl-71-71-dihydroxy-to-12-ethyl-8-propylbac "12-ethyl-71,71-dihydroxy-… to 12-Ethyl-8-propylbacterio…" {
-  spacing 276
+  spacing 252
 
   spine at 0,0 {
     12_ethyl_71_71_dihydroxy_8_propylbacteriochlorop
@@ -14,29 +14,5 @@ pathway 12-ethyl-71-71-dihydroxy-to-12-ethyl-8-propylbac "12-ethyl-71,71-dihydro
     12_ethyl_8_propylbacteriochlorophyllide_c
     <-> ec_2_1_1_333 [2.1.1.333] +s_adenosyl_l_homocysteine +h -12_ethyl_8_propylbacteriochlorophyllide_d
     s_adenosyl_l_methionine
-  }
-
-  branch from s_adenosyl_l_methionine side left {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +nbeta_methylnorajmaline
-    norajmaline
-  }
-
-  branch from s_adenosyl_l_methionine side right {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +s_isococlaurine
-    s_norcoclaurine
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +h +adp +4_s_glutathionyl_5_6_dihydroxyindoline +phosphate +4_s_glutathionyl_5_6_dihydroxyindoline
-    atp
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    para_hydroxyatorvastatin
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-e-2-3-4-dihydroxyph-to-excited-state-fungal "4-[(E)-2-(3,4-dihydroxyph… to excited state fungal…" {
-  spacing 194
+  spacing 158
 
   spine at 0,0 {
     4_e_2_3_4_dihydroxyphenyl_ethenyl_1_7_dihydroxy
@@ -16,45 +16,9 @@ pathway 4-e-2-3-4-dihydroxyph-to-excited-state-fungal "4-[(E)-2-(3,4-dihydroxyph
     co2
   }
 
-  branch from h side left {
-    h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +l_olivose +phosphate +l_olivose +h2o
-    atp
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
-    d_olivose
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +glycyrrhetinate +nadp +h2o +glycyrrhetaldehyde
-    nadph
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +glycyrrhetinate +nadp +h2o +h +nadph
-    11_oxo_amyrin
-  }
-
   branch from 3_hydroxyhispidin side left {
     3_hydroxyhispidin
     <-> . +nadph +o2 +hplus +nadp +h2o
     hispidin
-  }
-
-  branch from co2 side right {
-    co2
-    <-> ec_4_1_1_65 [4.1.1.65] +1_oleoyl_2_linoleoyl_sn_glycero_3_phosphoethanol +h
-    1_oleoyl_2_linoleoyl_sn_glycero_3_phospho_l_seri
-  }
-
-  branch from co2 side left {
-    co2
-    <-> ec_4_1_1_65 [4.1.1.65] +pe_18_3_9z_12z_15z_18_3_9z_12z_15z
-    ps_18_3_9z_12z_15z_18_3_9z_12z_15z
   }
 }

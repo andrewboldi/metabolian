@@ -1,0 +1,424 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "propane-1-2-diol-to-phosphate-null",
+  "name": "propane-1,2-diol to phosphate",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from propane-1,2-diol to phosphate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR147597"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "propane_1_2_diol",
+      "name": "propane-1,2-diol",
+      "formula": "C3H8O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364595"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "lactaldehyde",
+      "name": "lactaldehyde",
+      "formula": "C3H6O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM732881"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "glycerol",
+      "name": "glycerol",
+      "formula": "C3H8O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM89612"
+      }
+    },
+    {
+      "id": "diphosphate",
+      "name": "diphosphate",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM11"
+      }
+    },
+    {
+      "id": "sn_glycerol_3_phosphate",
+      "name": "sn-glycerol 3-phosphate",
+      "short": "sn-glycerol 3-P",
+      "formula": "C3H7O6P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM66"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_1",
+      "name": "alcohol dehydrogenase",
+      "ec": [
+        "1.1.1.1"
+      ],
+      "xrefs": {
+        "uniprot": "P07327"
+      }
+    },
+    {
+      "id": "ec_1_1_1_21",
+      "name": "aldose reductase",
+      "ec": [
+        "1.1.1.21"
+      ],
+      "xrefs": {
+        "uniprot": "P15121"
+      }
+    },
+    {
+      "id": "ec_1_1_1_55",
+      "name": "lactaldehyde reductase (NADPH)",
+      "ec": [
+        "1.1.1.55"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_30",
+      "name": "glycerol dehydratase",
+      "ec": [
+        "4.2.1.30"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_79",
+      "name": "diphosphate--glycerol phosphotransferase",
+      "ec": [
+        "2.7.1.79"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "alcohol dehydrogenase",
+      "ec": "1.1.1.1",
+      "substrates": [
+        {
+          "metabolite": "propane_1_2_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "lactaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR147597"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR147597"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "glycerol dehydratase",
+      "ec": "4.2.1.30",
+      "substrates": [
+        {
+          "metabolite": "lactaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glycerol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_30"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR134251"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR134251"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "diphosphate--glycerol phosphotransferase",
+      "ec": "2.7.1.79",
+      "substrates": [
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycerol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sn_glycerol_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_79"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR115189"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR115189"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_lactaldehyde_4r-4-hydroxy-2-oxogluta-to-trans-4-hydroxy-l-pr",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lactaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4r-4-hydroxy-2-oxogluta-to-trans-4-hydroxy-l-pr"
+      },
+      "note": "Shares lactaldehyde with (4R)-4-hydroxy-2-oxogluta… to trans-4-hydroxy-L-proline.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM732881"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lactaldehyde_5-chloro-5-deoxy-d-ribona-to-phosphate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lactaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-chloro-5-deoxy-d-ribona-to-phosphate-null"
+      },
+      "note": "Shares lactaldehyde with 5-chloro-5-deoxy-D-ribona… to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM732881"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lactaldehyde_alpha-beta-dihydroxyethyl-to-r-lactaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lactaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-beta-dihydroxyethyl-to-r-lactaldehyde"
+      },
+      "note": "Shares lactaldehyde with alpha,beta-Dihydroxyethyl… to (R)-lactaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM732881"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lactaldehyde_alpha-beta-dihydroxyethyl-to-r-lactaldehyde-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lactaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-beta-dihydroxyethyl-to-r-lactaldehyde-null"
+      },
+      "note": "Shares lactaldehyde with alpha,beta-Dihydroxyethyl… to (R)-lactaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM732881"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lactaldehyde_fluoride-to-nad-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lactaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fluoride-to-nad-null"
+      },
+      "note": "Shares lactaldehyde with fluoride to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM732881"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lactaldehyde_propane-1-2-diol-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lactaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "propane-1-2-diol-to-phosphate"
+      },
+      "note": "Shares lactaldehyde with propane-1,2-diol to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM732881"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-palmitoyl-2-oleoyl-3-st-to-diphosphate "1-palmitoyl-2-oleoyl-3-st… to diphosphate" {
-  spacing 218
+  spacing 254
 
   spine at 0,0 {
     1_palmitoyl_2_oleoyl_3_stearoyl_sn_glycerol
@@ -18,13 +18,105 @@ pathway 1-palmitoyl-2-oleoyl-3-st-to-diphosphate "1-palmitoyl-2-oleoyl-3-st… t
     palmitoyl_coa
   }
 
+  branch from 1_palmitoyl_2_oleoyl_sn_glycerol side left {
+    1_palmitoyl_2_oleoyl_sn_glycerol
+    <-> . +1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph +h2o +hplus
+    phosphocholine
+  }
 
+  branch from octadecanoate side right {
+    octadecanoate
+    <-> . +tristearoylglycerol +h2o +hplus
+    2_3_distearoyl_sn_glycerol
+  }
 
+  branch from octadecanoate side left {
+    octadecanoate
+    <-> . +nad +h2o +nadh +hplus
+    octadecanal
+  }
 
+  branch from palmitate side right {
+    palmitate
+    <-> . +1_o_palmitoyl_2_o_5_oxovaleryl_sn_glycero_3_phos +h2o +hplus
+    2_5_oxovaleroyl_sn_glycero_3_phosphocholine
+  }
 
+  branch from palmitate side left {
+    palmitate
+    <-> . +1_hexadecanoyl_2_9_oxononanoyl_sn_glycero_3_phos +h2o +hplus
+    2_9_oxononanoyl_sn_glycero_3_phosphocholine
+  }
 
+  branch from palmitoyl_coa side right {
+    palmitoyl_coa
+    <-> . +2_2_dilysocardiolipin +coa
+    2_palmitoyl_2_monolysocardiolipin
+  }
 
+  branch from palmitoyl_coa side left {
+    palmitoyl_coa
+    <-> . +1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine +coa
+    1_z_alk_1_enyl_2_palmitoyl_sn_glycero_3_phosphoe
+  }
 
+  branch from ppi side right {
+    ppi
+    <-> . +medium_chain_fatty_acid_anion +atp +hplus
+    medium_chain_fatty_acyl_amp
+  }
 
+  branch from ppi side left {
+    ppi
+    <-> . +fpp +h2o
+    6e_nerolidol
+  }
 
+  branch from octadecanoate side right {
+    octadecanoate
+    <-> . +n_octadecanoyl_4_hydroxysphinganine +h2o
+    phytosphingosine
+  }
+
+  branch from octadecanoate side left {
+    octadecanoate
+    <-> . +octadecanoate_ester +h2o +hplus
+    aliphatic_alcohol
+  }
+
+  branch from palmitoyl_coa side right {
+    palmitoyl_coa
+    <-> . +1_acyl_sn_glycero_3_phosphoethanolamine +coa
+    1_acyl_2_palmitoyl_sn_glycero_3_phosphoethanolam
+  }
+
+  branch from palmitoyl_coa side left {
+    palmitoyl_coa
+    <-> . +1_acyl_sn_glycero_3_phospho_1_sn_glycerol +coa
+    1_acyl_2_palmitoyl_sn_glycero_3_phospho_1_sn_gly
+  }
+
+  branch from palmitate side right {
+    palmitate
+    <-> . +n_palmitoyl_l_phenylalanine +h2o
+    l_phenylalanine
+  }
+
+  branch from palmitate side left {
+    palmitate
+    <-> . +1_palmitoyl_2_oleoyl_sn_glycero_3_phospho_1_sn_g +h2o +hplus
+    2_oleoyl_sn_glycero_3_phospho_1_sn_glycerol
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +mutildienyl_diphosphate +h2o
+    premutilin
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_2_7_7_108 [2.7.7.108] +l_serine +atp
+    o_adenylyl_l_serine_1
+  }
 }

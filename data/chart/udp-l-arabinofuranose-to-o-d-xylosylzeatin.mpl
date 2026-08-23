@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-l-arabinofuranose-to-o-d-xylosylzeatin "UDP-β-L-arabinofuranose to O-β-D-xylosylzeatin" {
-  spacing 218
+  spacing 236
 
   spine at 0,0 {
     udp_l_arabinofuranose
@@ -16,21 +16,39 @@ pathway udp-l-arabinofuranose-to-o-d-xylosylzeatin "UDP-β-L-arabinofuranose to 
     o_d_xylosylzeatin
   }
 
-  branch from udp_l_arabinopyranose side left {
-    udp_l_arabinopyranose
-    <-> ec_4_1_1_67 [4.1.1.67] +hplus +co2
-    udp_d_galacturonate
+  branch from udp_d_xylose side left {
+    udp_d_xylose
+    <-> ec_2_4_2_63 [2.4.2.63] +l_serine +udp +hplus
+    o3_d_xylosyl_l_serine
   }
 
   branch from udp_d_xylose side right {
     udp_d_xylose
-    <-> ec_2_4_2_56 [2.4.2.56] +kaempferol_oxoanion +udp +hplus
-    kaempferol_3_o_d_xyloside
+    <-> . +n_acylsphingosine +udp +hplus
+    xylosyl_d_ceramide_d18_1_4e
+  }
+
+  branch from udp_l_arabinofuranose side left {
+    udp_l_arabinofuranose
+    <-> ec_2_4_2_58 [2.4.2.58] +trans_4_hydroxy_l_proline +udp +hplus
+    o_l_arabinofuranosyl_trans_4_hydroxy_l_proline
+  }
+
+  branch from udp_d_xylose side right {
+    udp_d_xylose
+    <-> . +n_oleoylsphingosine +udp +hplus
+    1_d_xylosyl_n_oleoylsphingosine
   }
 
   branch from udp_d_xylose side left {
     udp_d_xylose
-    <-> ec_4_1_1_35 [4.1.1.35] +hplus +co2
-    udp_d_glucuronate
+    <-> . +11_o_acetylcyathatriol +udp +hplus
+    erinacine_q
+  }
+
+  branch from zeatin side right {
+    zeatin
+    <-> ec_1_3_1_69 [1.3.1.69] +nadp +nadph +hplus
+    dihydrozeatin
   }
 }

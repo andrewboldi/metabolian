@@ -111,80 +111,6 @@
       "xrefs": {
         "chebi": "CHEBI:60377"
       }
-    },
-    {
-      "id": "primary_fatty_amide",
-      "name": "primary fatty amide",
-      "formula": "CH2NOR",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:143129"
-      }
-    },
-    {
-      "id": "nh3",
-      "name": "Ammonia (NH3)",
-      "formula": "H4N",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:28938"
-      }
-    },
-    {
-      "id": "fatty_acid_taurine_conjugate",
-      "name": "fatty acid-taurine conjugate",
-      "short": "fatty acid-taurine…",
-      "formula": "C3H5NO4SR",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:132040"
-      }
-    },
-    {
-      "id": "taurine",
-      "name": "Taurine",
-      "formula": "C2H7NO3S",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:507393"
-      }
-    },
-    {
-      "id": "3_5_cyclic_cmp",
-      "name": "3',5'-cyclic CMP",
-      "formula": "C9H11N3O7P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:58003"
-      }
-    },
-    {
-      "id": "a_kdo_2_lipid_iva",
-      "name": "a (Kdo)2-lipid IVA",
-      "formula": "C40H56N2O37P2R4",
-      "charge": -6,
-      "xrefs": {
-        "chebi": "CHEBI:176429"
-      }
-    },
-    {
-      "id": "cmp_3_deoxy_d_manno_octulosonate",
-      "name": "CMP-3-deoxy-β-D-manno-octulosonate",
-      "short": "CMP-3-deoxy-β-D-man…",
-      "formula": "C17H24N3O15P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:85987"
-      }
-    },
-    {
-      "id": "a_kdo_3_lipid_iva",
-      "name": "a (Kdo)3-lipid IVA",
-      "formula": "C48H67N2O44P2R4",
-      "charge": -7,
-      "xrefs": {
-        "chebi": "CHEBI:192708"
-      }
     }
   ],
   "enzymes": [
@@ -193,20 +119,6 @@
       "name": "phosphatidylcholine synthase",
       "ec": [
         "2.7.8.24"
-      ]
-    },
-    {
-      "id": "ec_3_1_4_17",
-      "name": "3',5'-cyclic-nucleotide phosphodiesterase",
-      "ec": [
-        "3.1.4.17"
-      ]
-    },
-    {
-      "id": "ec_2_4_99_14",
-      "name": "(Kdo)2-lipid IVA (2-8) 3-deoxy-D-manno-octulosonic acid transferase",
-      "ec": [
-        "2.4.99.14"
       ]
     }
   ],
@@ -345,175 +257,115 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "a fatty acylamide + H2O = a fatty acid + NH4(+)",
-      "equation": "a fatty acylamide + H2O = a fatty acid + NH4(+)",
-      "substrates": [
-        {
-          "metabolite": "primary_fatty_amide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "fatty-acid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:63032"
+      "id": "xt_1_hexanoyl_2_acyl_sn_glycero_3_phosphocholine_1-hexanoyl-2-acyl-sn-glyc-to-linoleoyl-sn-glycer",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_hexanoyl_2_acyl_sn_glycero_3_phosphocholine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1-hexanoyl-2-acyl-sn-glyc-to-linoleoyl-sn-glycer"
+      },
+      "note": "Shares 1-hexanoyl-2-acyl-sn-glycero-3-phosphocholine with 1-hexanoyl-2-acyl-sn-glyc… to linoleoyl-sn-glycero-3-ph….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:63032"
+            "db": "ChEBI",
+            "id": "CHEBI:137403"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "an N-fatty acyl-taurine + H2O = taurine + a fatty acid",
-      "equation": "an N-fatty acyl-taurine + H2O = taurine + a fatty acid",
-      "substrates": [
-        {
-          "metabolite": "fatty_acid_taurine_conjugate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "taurine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fatty-acid",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:63152"
+      "id": "xt_cdp_diacylglycerol_4-methylumbelliferyl-to-ctp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cdp_diacylglycerol"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "4-methylumbelliferyl-to-ctp"
+      },
+      "note": "Shares CDP-diacylglycerol with 4-methylumbelliferyl… to CTP.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:63152"
+            "db": "ChEBI",
+            "id": "CHEBI:58332"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "3',5'-cyclic-nucleotide phosphodiesterase",
-      "equation": "3',5'-cyclic CMP + H2O = CMP + H(+)",
-      "ec": "3.1.4.17",
-      "substrates": [
-        {
-          "metabolite": "3_5_cyclic_cmp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "cytidine_5_monophosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_1_4_17"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:72675"
+      "id": "xt_cdp_diacylglycerol_cdp-diacylglycerol-to-1-phosphatidyl-1d-myo-ino",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cdp_diacylglycerol"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "cdp-diacylglycerol-to-1-phosphatidyl-1d-myo-ino"
+      },
+      "note": "Shares CDP-diacylglycerol with CDP-diacylglycerol to 1-phosphatidyl-1D-myo-ino….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:72675"
+            "db": "ChEBI",
+            "id": "CHEBI:58332"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "(Kdo)2-lipid IVA (2-8) 3-deoxy-D-manno-octulosonic acid transferase",
-      "equation": "an alpha-Kdo-(2->4)-alpha-Kdo-(2->6)-lipid IVA + CMP-3-deoxy-beta-D-manno-octulosonate = an alpha-Kdo-(2->8)-alpha-Kdo-(2->4)-alpha-Kdo-(2->6)-lipid IVA + CMP + H(+)",
-      "ec": "2.4.99.14",
-      "substrates": [
-        {
-          "metabolite": "a_kdo_2_lipid_iva",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "cmp_3_deoxy_d_manno_octulosonate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "a_kdo_3_lipid_iva",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "cytidine_5_monophosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_4_99_14"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:73823"
+      "id": "xt_cdp_diacylglycerol_cdp-diacylglycerol-to-amp-3-end-1",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cdp_diacylglycerol"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "cdp-diacylglycerol-to-amp-3-end-1"
+      },
+      "note": "Shares CDP-diacylglycerol with CDP-diacylglycerol to AMP 3'-end(1−).",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:73823"
+            "db": "ChEBI",
+            "id": "CHEBI:58332"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cdp_diacylglycerol_d-ribitol-5-phosphate-to-3-o-d-xylosyl-1-3",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cdp_diacylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-ribitol-5-phosphate-to-3-o-d-xylosyl-1-3"
+      },
+      "note": "Shares CDP-diacylglycerol with D-ribitol 5-phosphate to 3-O-[α-D-xylosyl-(1→3)-β-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58332"
           }
         ]
       }

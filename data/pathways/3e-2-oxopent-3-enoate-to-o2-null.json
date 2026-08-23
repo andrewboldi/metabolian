@@ -1,0 +1,443 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3e-2-oxopent-3-enoate-to-o2-null",
+  "name": "(3E)-2-oxopent-3-enoate to O2",
+  "category": "other",
+  "summary": "A 3-step route from (3E)-2-oxopent-3-enoate to O2, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR198683"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3e_2_oxopent_3_enoate",
+      "name": "(3E)-2-oxopent-3-enoate",
+      "short": "2-oxopent-3-enoate",
+      "formula": "C5H5O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1112488"
+      }
+    },
+    {
+      "id": "2_oxopent_4_enoate",
+      "name": "2-oxopent-4-enoate",
+      "formula": "C5H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:11641"
+      }
+    },
+    {
+      "id": "2_methylpropanoate",
+      "name": "2-methylpropanoate",
+      "formula": "C4H7O2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1137660"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "7_methyl_2_hydroxy_6_oxoocta_2_4_dienoate",
+      "name": "7-Methyl-2-hydroxy-6-oxoocta-2,4-dienoate",
+      "short": "7-Methyl-2-hydroxy-…",
+      "formula": "C9H11O4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1371580"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "3_isopropylcatechol",
+      "name": "3-isopropylcatechol",
+      "formula": "C9H12O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM36571"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "2z_2_hydroxypenta_2_4_dienoate",
+      "name": "(2Z)-2-hydroxypenta-2,4-dienoate",
+      "short": "2-hydroxypenta-2,4-…",
+      "formula": "C5H5O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1364412"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_3_2_6",
+      "name": "2-hydroxymuconate tautomerase",
+      "ec": [
+        "5.3.2.6"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2-hydroxymuconate tautomerase",
+      "ec": "5.3.2.6",
+      "substrates": [
+        {
+          "metabolite": "3e_2_oxopent_3_enoate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_oxopent_4_enoate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_2_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR198683"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198683"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR197662",
+      "substrates": [
+        {
+          "metabolite": "2_methylpropanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_oxopent_4_enoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_methyl_2_hydroxy_6_oxoocta_2_4_dienoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR197662"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197662"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR197616",
+      "substrates": [
+        {
+          "metabolite": "7_methyl_2_hydroxy_6_oxoocta_2_4_dienoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_isopropylcatechol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR197616"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197616"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "2-hydroxymuconate tautomerase",
+      "ec": "5.3.2.6",
+      "substrates": [
+        {
+          "metabolite": "3e_2_oxopent_3_enoate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2z_2_hydroxypenta_2_4_dienoate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_2_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR198682"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198682"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3e_2_oxopent_3_enoate_3e-2-oxopent-3-enoate-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3e_2_oxopent_3_enoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3e-2-oxopent-3-enoate-to-o2"
+      },
+      "note": "Shares (3E)-2-oxopent-3-enoate with (3E)-2-oxopent-3-enoate to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1112488"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_methyl_2_hydroxy_6_oxoocta_2_4_dienoate_2-methylpropanoate-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_methyl_2_hydroxy_6_oxoocta_2_4_dienoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-methylpropanoate-to-o2"
+      },
+      "note": "Shares 7-Methyl-2-hydroxy-6-oxoocta-2,4-dienoate with 2-methylpropanoate to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371580"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_methyl_2_hydroxy_6_oxoocta_2_4_dienoate_2-methylpropanoate-to-o2-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_methyl_2_hydroxy_6_oxoocta_2_4_dienoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-methylpropanoate-to-o2-null"
+      },
+      "note": "Shares 7-Methyl-2-hydroxy-6-oxoocta-2,4-dienoate with 2-methylpropanoate to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371580"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_methyl_2_hydroxy_6_oxoocta_2_4_dienoate_3e-2-oxopent-3-enoate-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_methyl_2_hydroxy_6_oxoocta_2_4_dienoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3e-2-oxopent-3-enoate-to-o2"
+      },
+      "note": "Shares 7-Methyl-2-hydroxy-6-oxoocta-2,4-dienoate with (3E)-2-oxopent-3-enoate to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371580"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_methyl_2_hydroxy_6_oxoocta_2_4_dienoate_bacteriohopanetetrol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_methyl_2_hydroxy_6_oxoocta_2_4_dienoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "bacteriohopanetetrol-to-h2o"
+      },
+      "note": "Shares 7-Methyl-2-hydroxy-6-oxoocta-2,4-dienoate with bacteriohopanetetrol… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371580"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_isopropylcatechol_3e-2-oxopent-3-enoate-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_isopropylcatechol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3e-2-oxopent-3-enoate-to-o2"
+      },
+      "note": "Shares 3-isopropylcatechol with (3E)-2-oxopent-3-enoate to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM36571"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_isopropylcatechol_5-hydroxy-l-kynurenine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_isopropylcatechol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-hydroxy-l-kynurenine-to-h2o"
+      },
+      "note": "Shares 3-isopropylcatechol with 5-hydroxy-L-kynurenine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM36571"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_isopropylcatechol_nadh-to-o-5z-tetradecenoyl-l-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_isopropylcatechol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-o-5z-tetradecenoyl-l-null"
+      },
+      "note": "Shares 3-isopropylcatechol with NADH to O-[(5Z)-tetradecenoyl]-L-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM36571"
+          }
+        ]
+      }
+    }
+  ]
+}

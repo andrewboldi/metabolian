@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 7r-7-4-carboxylatobuta-to-s-adenosyl-l-homocyst "(7R)-7-(4-carboxylatobuta… to S-adenosyl-L-homocysteine" {
-  spacing 288
+  spacing 324
 
   spine at 0,0 {
     7r_7_4_carboxylatobutanamido_cephalosporanate
@@ -20,51 +20,87 @@ pathway 7r-7-4-carboxylatobuta-to-s-adenosyl-l-homocyst "(7R)-7-(4-carboxylatobu
     1_methylnicotinamide
   }
 
-  branch from glutaryl_coa side left {
-    glutaryl_coa
-    <-> . +fad +hplus +fadh2 +co2
-    crotonoyl_coa
-  }
-
-  branch from glutaryl_coa side right {
-    glutaryl_coa
-    <-> ec_1_3_99_32 [1.3.99.32] +hydrogen_acceptor +hydrogen_donor
-    trans_4_carboxybut_2_enoyl_coa
-  }
-
   branch from nicotinamide side left {
     nicotinamide
-    <-> . +n6_malonyl_l_lysine_1 +nad +h2o +l_lysinium
-    2_o_malonyl_adp_d_ribose
+    <-> . +n6_hexadecanoyl_l_lysine +nad +h2o +l_lysinium
+    2_o_hexadecanoyl_adp_d_ribose
   }
 
   branch from nicotinamide side right {
     nicotinamide
-    <-> . +n6_acyl_l_lysine +nad +h2o +l_lysinium
-    o_acyl_adp_d_ribose
+    <-> . +n6_lauroyl_l_lysine +nad +h2o +l_lysinium
+    2_o_dodecanoyl_adp_d_ribose
   }
 
   branch from l_lysinium side left {
     l_lysinium
-    <-> ec_3_5_1_124 [3.5.1.124] +n6_1_hydroxy_2_oxopropyl_l_lysine +h2o +hplus
-    lactate
+    <-> ec_2_1_1_354 [2.1.1.354] +sam +sah +hplus
+    n6_n6_n6_trimethyl_l_lysine
   }
 
   branch from l_lysinium side right {
     l_lysinium
-    <-> ec_2_1_1_259 [2.1.1.259] +sam +sah +hplus
-    n6_n6_n6_trimethyl_l_lysine
+    <-> ec_2_1_1_364 [2.1.1.364] +sam +sah +hplus
+    n6_methyl_l_lysinium
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_212 [2.1.1.212] +2r_3s_2_4_7_trihydroxyisoflavanone +sam +hplus
-    2r_3s_2_7_dihydroxy_4_methoxyisoflavanone
+    <-> ec_2_1_1_298 [2.1.1.298] +l_glutamine +sam +hplus
+    n5_methyl_l_glutamine
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_236 [2.1.1.236] +dtdp_3_amino_3_6_dideoxy_d_galactopyranose +sam +hplus
-    dtdp_d_ravidosamine
+    <-> ec_2_1_1_316 [2.1.1.316] +7_demethylmitomycin_b +sam
+    mitomycin_b
+  }
+
+  branch from l_lysinium side left {
+    l_lysinium
+    <-> . +5_end_diphospho_adenosine_3 +n_5_guanylyl_l_lysine_1 +hplus
+    5_end_5_triphospho_guanosine_adenosine_3
+  }
+
+  branch from l_lysinium side right {
+    l_lysinium
+    <-> . +5_end_diphospho_guanosine_3 +n_5_guanylyl_l_lysine_1 +hplus
+    5_end_5_triphospho_guanosine_guanosine_3
+  }
+
+  branch from nicotinamide side left {
+    nicotinamide
+    <-> . +n6_capryl_l_lysine +nad +h2o +l_lysinium
+    2_o_decanoyl_adp_d_ribose
+  }
+
+  branch from nicotinamide side right {
+    nicotinamide
+    <-> . +n6_hexanoyl_l_lysine +nad +h2o +l_lysinium
+    2_o_hexanoyl_adp_d_ribose
+  }
+
+  branch from sam side left {
+    sam
+    <-> ec_2_1_1_316 [2.1.1.316] +7_demethylmitomycin_a +sah
+    mitomycin_a
+  }
+
+  branch from sam side right {
+    sam
+    <-> . +cobalt_ii_factor_iii +hplus +sah
+    cobalt_ii_factor_iv
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_260 [2.1.1.260] +pseudouridine_5_phosphate_1 +sam +hplus
+    n1_methylpseudouridine_5_monophosphate_1
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_260 [2.1.1.260] +sam +n1_methylpseudouridine_5_monophosphate_1 +hplus
+    pseudouridine_5_phosphate_1
   }
 }

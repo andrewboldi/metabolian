@@ -1,0 +1,448 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "6s-5-formyltetrahydrofo-to-l-serine-23240",
+  "name": "(6S)-5-formyltetrahydrofo… to L-serine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from (6S)-5-formyltetrahydrofolate(2−) to L-serine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:23240"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57457"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "6s_5_formyltetrahydrofolate",
+      "name": "(6S)-5-formyltetrahydrofolate",
+      "short": "5-formyltetrahydrof…",
+      "formula": "C20H21N7O7",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57457"
+      }
+    },
+    {
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29985"
+      }
+    },
+    {
+      "id": "n_formyl_l_glutamate",
+      "name": "N-formyl-L-glutamate",
+      "formula": "C6H7NO5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:17684"
+      }
+    },
+    {
+      "id": "thf",
+      "name": "Tetrahydrofolate",
+      "formula": "C19H21N7O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57453"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "sarcosine",
+      "name": "Sarcosine",
+      "formula": "C3H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57433"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "methylene_thf",
+      "name": "5,10-Methylenetetrahydrofolate",
+      "short": "5,10-Methylenetetra…",
+      "formula": "C20H21N7O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:15636"
+      }
+    },
+    {
+      "id": "glycine",
+      "name": "Glycine",
+      "formula": "C2H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57305"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "serine",
+      "name": "L-Serine",
+      "formula": "C3H7NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:33384"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_2_5",
+      "name": "glutamate formimidoyltransferase",
+      "ec": [
+        "2.1.2.5"
+      ],
+      "xrefs": {
+        "uniprot": "O95954"
+      }
+    },
+    {
+      "id": "ec_1_5_3_24",
+      "name": "sarcosine oxidase (5,10-methylenetetrahydrofolate-forming)",
+      "ec": [
+        "1.5.3.24"
+      ]
+    },
+    {
+      "id": "ec_2_1_2_1",
+      "name": "glycine hydroxymethyltransferase",
+      "ec": [
+        "2.1.2.1"
+      ],
+      "xrefs": {
+        "uniprot": "P34896"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "glutamate formimidoyltransferase",
+      "equation": "(6S)-5-formyl-5,6,7,8-tetrahydrofolate + L-glutamate = N-formyl-L-glutamate + (6S)-5,6,7,8-tetrahydrofolate + H(+)",
+      "ec": "2.1.2.5",
+      "substrates": [
+        {
+          "metabolite": "6s_5_formyltetrahydrofolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_formyl_l_glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "thf",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_2_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:23240"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23240"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "sarcosine oxidase (5,10-methylenetetrahydrofolate-forming)",
+      "equation": "sarcosine + (6S)-5,6,7,8-tetrahydrofolate + O2 = (6R)-5,10-methylene-5,6,7,8-tetrahydrofolate + glycine + H2O2",
+      "ec": "1.5.3.24",
+      "substrates": [
+        {
+          "metabolite": "sarcosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "thf",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methylene_thf",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_5_3_24"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:70455"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:70455"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "glycine hydroxymethyltransferase",
+      "equation": "(6R)-5,10-methylene-5,6,7,8-tetrahydrofolate + glycine + H2O = (6S)-5,6,7,8-tetrahydrofolate + L-serine",
+      "ec": "2.1.2.1",
+      "substrates": [
+        {
+          "metabolite": "methylene_thf",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "thf",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "serine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_2_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:15481"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15481"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_6s_5_formyltetrahydrofolate_6s-5-formyltetrahydrofo-to-d-glucopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6s_5_formyltetrahydrofolate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6s-5-formyltetrahydrofo-to-d-glucopyranose"
+      },
+      "note": "Shares (6S)-5-formyltetrahydrofolate with (6S)-5-formyltetrahydrofo… to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57457"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6s_5_formyltetrahydrofolate_6s-5-formyltetrahydrofo-to-d-glucopyranose-1048",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6s_5_formyltetrahydrofolate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6s-5-formyltetrahydrofo-to-d-glucopyranose-1048"
+      },
+      "note": "Shares (6S)-5-formyltetrahydrofolate with (6S)-5-formyltetrahydrofo… to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57457"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6s_5_formyltetrahydrofolate_6s-5-formyltetrahydrofo-to-l-serine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6s_5_formyltetrahydrofolate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6s-5-formyltetrahydrofo-to-l-serine"
+      },
+      "note": "Shares (6S)-5-formyltetrahydrofolate with (6S)-5-formyltetrahydrofo… to L-serine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57457"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6s_5_formyltetrahydrofolate_6s-5-methyltetrahydrofo-to-6s-5-formyltetrahydr",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6s_5_formyltetrahydrofolate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6s-5-methyltetrahydrofo-to-6s-5-formyltetrahydr"
+      },
+      "note": "Shares (6S)-5-formyltetrahydrofolate with (6S)-5-methyltetrahydrofo… to (6S)-5-formyltetrahydrofo….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57457"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_formyl_l_glutamate_3-4-oxo-4-5-dihydro-1h-i-to-n2-formyl-n1-5-phosp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_formyl_l_glutamate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-4-oxo-4-5-dihydro-1h-i-to-n2-formyl-n1-5-phosp"
+      },
+      "note": "Shares N-formyl-L-glutamate with 3-(4-oxo-4,5-dihydro-1H-i… to N2-formyl-N1-(5-phospho-β….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17684"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_formyl_l_glutamate_6s-5-formyltetrahydrofo-to-l-serine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_formyl_l_glutamate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6s-5-formyltetrahydrofo-to-l-serine"
+      },
+      "note": "Shares N-formyl-L-glutamate with (6S)-5-formyltetrahydrofo… to L-serine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17684"
+          }
+        ]
+      }
+    }
+  ]
+}

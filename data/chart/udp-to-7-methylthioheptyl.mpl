@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-7-methylthioheptyl "UDP to 7-Methylthioheptyl…" {
-  spacing 276
+  spacing 252
 
   spine at 0,0 {
     udp
@@ -16,29 +16,5 @@ pathway udp-to-7-methylthioheptyl "UDP to 7-Methylthioheptyl…" {
     3_phosphoadenylyl_sulfate
     <-> ec_2_8_2_38 [2.8.2.38] +7_methylthioheptyl_desulfoglucosinolate -7_methylthioheptyl_glucosinolate
     adenosine_3_5_bisphosphate
-  }
-
-  branch from 3_phosphoadenylyl_sulfate side left {
-    3_phosphoadenylyl_sulfate
-    <-> . +adenosine_3_5_bisphosphate +glucoiberverin
-    3_methylthiopropyl_desulfoglucosinolate
-  }
-
-  branch from 3_phosphoadenylyl_sulfate side right {
-    3_phosphoadenylyl_sulfate
-    <-> ec_2_8_2_40 [2.8.2.40] +adenosine_3_5_bisphosphate +omega_sulfo_beta_dihydromenaquinone_9
-    omega_hydroxy_beta_dihydromenaquinone_9
-  }
-
-  branch from adenosine_3_5_bisphosphate side left {
-    adenosine_3_5_bisphosphate
-    <-> . +keratan_sulfate_ii_core_4_linked +h +3_phosphoadenylyl_sulfate
-    keratan_sulfate_ii_biosynthesis_precursor_10
-  }
-
-  branch from adenosine_3_5_bisphosphate side right {
-    adenosine_3_5_bisphosphate
-    <-> . +keratan_sulfate_ii_biosynthesis_precursor_9 +h +3_phosphoadenylyl_sulfate
-    keratan_sulfate_ii_biosynthesis_precursor_8
   }
 }

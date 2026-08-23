@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-furoyl-coa-to-hydrogen-donor "2-furoyl-CoA to hydrogen donor" {
-  spacing 240
+  spacing 318
 
   spine at 0,0 {
     2_furoyl_coa
@@ -20,75 +20,27 @@ pathway 2-furoyl-coa-to-hydrogen-donor "2-furoyl-CoA to hydrogen donor" {
     5_hydroxy_2_furoyl_coa
   }
 
-  branch from atp side left {
-    atp
-    <-> ec_2_7_7_54 [2.7.7.54] +diphosphate +n_adenylyl_l_phenylalanine +h
-    l_phenylalanine
-  }
 
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
-    ala_his
-  }
 
-  branch from coa side left {
-    coa
-    <-> . +malonyl_coa +2_5_dimethyl_4_oxo_4_5_dihydro_3_furanyl_beta_d
-    malonyl_furaneol_glucopyranoside
-  }
 
-  branch from coa side right {
-    coa
-    <-> . +acetyl_coa +9z_11e_tetradecadien_1_ol
-    9z_11e_tetradecadienyl_acetate
-  }
 
-  branch from furfural side left {
-    furfural
-    <-> . +hydrogen_cyanide
-    2r_2_furan_2_yl_2_hydroxyacetonitrile
-  }
 
-  branch from furfural side right {
-    furfural
-    <-> . +h +nadph +nadp
-    furfuryl_alcohol
-  }
 
-  branch from o2 side left {
-    o2
-    <-> ec_1_13_11_4 [1.13.11.4] +2e_3_methyl_4_6_dioxohept_2_enedioate +h
-    4_methylgentisate
-  }
 
-  branch from o2 side right {
-    o2
-    <-> . +4_hydroxy_3_hydroxymethyl_benzoate +nadp +h2o +nadph
-    4_hydroxy_3_methylbenzoic_acid
-  }
 
-  branch from h2o side left {
-    h2o
-    <-> . +lyngbyatoxin_a +h +o2 +nadph +nadp
-    lyngbyatoxin_b
-  }
 
-  branch from h2o side right {
-    h2o
-    <-> . +lyngbyatoxin_a +h +o2 +nadph +nadp
-    lyngbyatoxin_c
-  }
 
-  branch from ppi side left {
-    ppi
-    <-> . +l_serine +utp
-    uridylyl_l_serine_1
-  }
 
-  branch from ppi side right {
-    ppi
-    <-> . +l_threonine +utp
-    uridylyl_l_threonine_1
-  }
+
+
+
+
+
+
+
+
+
+
+
+
 }

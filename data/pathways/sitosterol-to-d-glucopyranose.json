@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "sitosterol-to-d-glucopyranose",
   "name": "sitosterol to D-glucopyranose",
-  "category": "carbohydrate-metabolism",
+  "category": "energy-metabolism",
   "summary": "A 3-step route from sitosterol to D-glucopyranose, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -117,70 +117,6 @@
       "xrefs": {
         "chebi": "CHEBI:4167"
       }
-    },
-    {
-      "id": "celosianin_i",
-      "name": "celosianin I",
-      "formula": "C39H38N2O21",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM1368620"
-      }
-    },
-    {
-      "id": "h",
-      "name": "H",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM1"
-      }
-    },
-    {
-      "id": "amaranthin",
-      "name": "amaranthin",
-      "formula": "C30H34N2O19",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:2621"
-      }
-    },
-    {
-      "id": "1_o_4_coumaroyl_d_glucose",
-      "name": "1-O-(4-coumaroyl)-β-D-glucose",
-      "short": "1-O-(4-coumaroyl)-β…",
-      "formula": "C15H18O8",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:71498"
-      }
-    },
-    {
-      "id": "sucrose",
-      "name": "sucrose",
-      "formula": "C12H22O11",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1104180"
-      }
-    },
-    {
-      "id": "6_kestotriose",
-      "name": "6-kestotriose",
-      "formula": "C18H32O16",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:64833"
-      }
-    },
-    {
-      "id": "6_6_kestotetraose",
-      "name": "6,6-kestotetraose",
-      "formula": "C24H42O21",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:64836"
-      }
     }
   ],
   "enzymes": [
@@ -189,13 +125,6 @@
       "name": "sterol 22-desaturase",
       "ec": [
         "1.14.19.41"
-      ]
-    },
-    {
-      "id": "ec_2_4_1_10",
-      "name": "levansucrase",
-      "ec": [
-        "2.4.1.10"
       ]
     }
   ],
@@ -338,89 +267,71 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "Reaction MNXR197123",
-      "substrates": [
-        {
-          "metabolite": "glucose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "celosianin_i",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "amaranthin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "1_o_4_coumaroyl_d_glucose",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR197123"
+      "id": "xt_sitosterol_1-2-3-6-tetrakis-o-galloy-to-cornusiin-e",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sitosterol"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-3-6-tetrakis-o-galloy-to-cornusiin-e"
+      },
+      "note": "Shares sitosterol with 1,2,3,6-tetrakis-O-galloy… to cornusiin E.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR197123"
+            "db": "ChEBI",
+            "id": "CHEBI:27693"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "levansucrase",
-      "ec": "2.4.1.10",
-      "substrates": [
-        {
-          "metabolite": "sucrose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "6_kestotriose",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "6_6_kestotetraose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glucose",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_4_1_10"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR197154"
+      "id": "xt_sitosterol_mogroside-iii-a1-to-mogroside-vi",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sitosterol"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "mogroside-iii-a1-to-mogroside-vi"
+      },
+      "note": "Shares sitosterol with mogroside III-A1 to mogroside VI.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR197154"
+            "db": "ChEBI",
+            "id": "CHEBI:27693"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sitosterol_sitosterol-to-campesterol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sitosterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sitosterol-to-campesterol"
+      },
+      "note": "Shares sitosterol with sitosterol to campesterol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:27693"
           }
         ]
       }

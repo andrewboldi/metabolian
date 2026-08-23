@@ -98,74 +98,6 @@
       "xrefs": {
         "chebi": "CHEBI:15903"
       }
-    },
-    {
-      "id": "4_methoxyglucobrassicin",
-      "name": "4-methoxyglucobrassicin",
-      "short": "4-methoxyglucobrass…",
-      "formula": "C17H21N2O10S2",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM1104978"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "WATER"
-      }
-    },
-    {
-      "id": "4_methoxy_3_indolylmethyl_glucosinolate_aglycone",
-      "name": "4-methoxy-3-indolylmethyl glucosinolate aglycone",
-      "short": "4-methoxy-3-indolyl…",
-      "formula": "C11H10N2O5S2",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM1363461"
-      }
-    },
-    {
-      "id": "h",
-      "name": "H",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM1"
-      }
-    },
-    {
-      "id": "cyanidin_3_o_6_o_4_coumaroyl_beta_d_glucosyl_1_6",
-      "name": "cyanidin 3-O-[6-O-(4-coumaroyl)-beta-D-glucosyl-(1->6)]-[beta-D-xylosyl-(1->2)]-beta-D-galactoside",
-      "short": "cyanidin 3-O-[6-O-(…",
-      "formula": "C41H43O22",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM1368634"
-      }
-    },
-    {
-      "id": "cyanidin_3_o_6_o_glucosyl_2_o_xylosylgalactoside",
-      "name": "cyanidin 3-O-(6-O-glucosyl-2-O-xylosylgalactoside) betaine",
-      "short": "cyanidin 3-O-(6-O-g…",
-      "formula": "C32H38O20",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1368532"
-      }
-    },
-    {
-      "id": "1_o_4_coumaroyl_d_glucose",
-      "name": "1-O-(4-coumaroyl)-β-D-glucose",
-      "short": "1-O-(4-coumaroyl)-β…",
-      "formula": "C15H18O8",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:71498"
-      }
     }
   ],
   "enzymes": [
@@ -181,13 +113,6 @@
       "name": "sucrose:sucrose fructosyltransferase",
       "ec": [
         "2.4.1.99"
-      ]
-    },
-    {
-      "id": "ec_2_3_1_213",
-      "name": "cyanidin 3-O-(6-O-glucosyl-2-O-xylosylgalactoside) 6'''-O-",
-      "ec": [
-        "2.3.1.213"
       ]
     }
   ],
@@ -320,93 +245,181 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "Reaction MNXR197231",
-      "substrates": [
-        {
-          "metabolite": "4_methoxyglucobrassicin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "4_methoxy_3_indolylmethyl_glucosinolate_aglycone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glucose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR197231"
+      "id": "xt_sucrose_d-galactose-to-2-o-d-mannosyl-1-2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sucrose"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "d-galactose-to-2-o-d-mannosyl-1-2"
+      },
+      "note": "Shares sucrose with α-D-galactose to 2-O-[α-D-mannosyl-(1→2)-α….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR197231"
+            "db": "ChEBI",
+            "id": "CHEBI:17992"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "cyanidin 3-O-(6-O-glucosyl-2-O-xylosylgalactoside) 6'''-O-",
-      "ec": "2.3.1.213",
-      "substrates": [
-        {
-          "metabolite": "glucose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "cyanidin_3_o_6_o_4_coumaroyl_beta_d_glucosyl_1_6",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "cyanidin_3_o_6_o_glucosyl_2_o_xylosylgalactoside",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "1_o_4_coumaroyl_d_glucose",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_3_1_213"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR197625"
+      "id": "xt_sucrose_laminarabiose-to-d-glucose-6-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sucrose"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "laminarabiose-to-d-glucose-6-phosphate"
+      },
+      "note": "Shares sucrose with laminarabiose to β-D-glucose 6-phosphate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR197625"
+            "db": "ChEBI",
+            "id": "CHEBI:17992"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sucrose_maltose-to-d-glucose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sucrose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "maltose-to-d-glucose"
+      },
+      "note": "Shares sucrose with α-maltose to α-D-glucose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17992"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sucrose_myo-inositol-phosphate-to-planteose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sucrose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "myo-inositol-phosphate-to-planteose"
+      },
+      "note": "Shares sucrose with myo-inositol phosphate to planteose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17992"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sucrose_ndp-d-glucose-to-nucleoside-5-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sucrose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ndp-d-glucose-to-nucleoside-5-diphosphate"
+      },
+      "note": "Shares sucrose with NDP-α-D-glucose to nucleoside 5'-diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17992"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sucrose_sucrose-6f-phosphate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sucrose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sucrose-6f-phosphate-to-h2o"
+      },
+      "note": "Shares sucrose with sucrose 6F-phosphate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17992"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sucrose_trehalose-6-mycolate-to-6-o-acetyl-d-glucose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sucrose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trehalose-6-mycolate-to-6-o-acetyl-d-glucose"
+      },
+      "note": "Shares sucrose with α,α'-trehalose 6-mycolate to 6-O-acetyl-β-D-glucose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17992"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_6_kestotetraose_sucrose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_6_kestotetraose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sucrose-to-h2o"
+      },
+      "note": "Shares 1,6-kestotetraose with sucrose to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64835"
           }
         ]
       }

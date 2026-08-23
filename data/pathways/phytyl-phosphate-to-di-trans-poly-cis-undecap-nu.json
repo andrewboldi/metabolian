@@ -1,0 +1,269 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "phytyl-phosphate-to-di-trans-poly-cis-undecap-nu",
+  "name": "phytyl phosphate to di-trans,poly-cis-Undecap…",
+  "category": "other",
+  "summary": "A 3-step route from phytyl phosphate(2−) to di-trans,poly-cis-Undecaprenyl phosphate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR182660"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:75483"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "phytyl_phosphate",
+      "name": "phytyl phosphate",
+      "formula": "C20H39O4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:75483"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "dgdp",
+      "name": "dGDP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM436"
+      }
+    },
+    {
+      "id": "phytyl_diphosphate",
+      "name": "phytyl diphosphate",
+      "formula": "C20H39O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:75434"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1102128"
+      }
+    },
+    {
+      "id": "ump",
+      "name": "UMP",
+      "formula": "C9H11N2O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1104823"
+      }
+    },
+    {
+      "id": "dgtp",
+      "name": "dGTP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM344"
+      }
+    },
+    {
+      "id": "alpha_d_glucopyranosyl_diphospho_ditrans_octacis",
+      "name": "alpha-D-Glucopyranosyl-diphospho-ditrans,octacis-undecaprenol",
+      "short": "alpha-D-Glucopyrano…",
+      "formula": "C61H102O12P2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1370281"
+      }
+    },
+    {
+      "id": "udp_alpha_d_glucose",
+      "name": "UDP-alpha-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1364019"
+      }
+    },
+    {
+      "id": "di_trans_poly_cis_undecaprenyl_phosphate",
+      "name": "di-trans,poly-cis-Undecaprenyl phosphate",
+      "short": "di-trans,poly-cis-U…",
+      "formula": "C55H91O4P",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1372531"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_8_31",
+      "name": "undecaprenyl-phosphate glucose phosphotransferase",
+      "ec": [
+        "2.7.8.31"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR182660",
+      "substrates": [
+        {
+          "metabolite": "phytyl_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dgdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phytyl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR182660"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR182660"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR105124",
+      "substrates": [
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dgdp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ump",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dgtp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR105124"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR105124"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "undecaprenyl-phosphate glucose phosphotransferase",
+      "ec": "2.7.8.31",
+      "substrates": [
+        {
+          "metabolite": "ump",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alpha_d_glucopyranosyl_diphospho_ditrans_octacis",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "udp_alpha_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_trans_poly_cis_undecaprenyl_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_8_31"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR197583"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197583"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_alpha_d_glucopyranosyl_diphospho_ditrans_octacis_phytyl-phosphate-to-di-trans-poly-cis-undecap",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "alpha_d_glucopyranosyl_diphospho_ditrans_octacis"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phytyl-phosphate-to-di-trans-poly-cis-undecap"
+      },
+      "note": "Shares alpha-D-Glucopyranosyl-diphospho-ditrans,octacis-undecaprenol with phytyl phosphate to di-trans,poly-cis-Undecap….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1370281"
+          }
+        ]
+      }
+    }
+  ]
+}

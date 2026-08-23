@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway beta1-tomatine-to-tomatidine "beta1-tomatine to tomatidine" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     beta1_tomatine
@@ -16,29 +16,5 @@ pathway beta1-tomatine-to-tomatidine "beta1-tomatine to tomatidine" {
     h
     <-> . +udp +tomatidine_galactoside -tomatidine
     udp_alpha_d_galactose
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_1_1_80 [3.1.1.80] +17_o_acetylnorajmaline +h +norajmaline
-    acetate
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_1_1_80 [3.1.1.80] +17_o_acetylnorajmaline +h +acetate
-    norajmaline
-  }
-
-  branch from h side left {
-    h
-    <-> . +2z_4e_2_hydroxy_6_oxohepta_2_4_dienoate +co2
-    2_hydroxy_3_carboxy_6_oxo_hepta_2_4_dienoate
-  }
-
-  branch from h side right {
-    h
-    <-> . +2_hydroxy_3_carboxy_6_methoxy_hexa_2_4_dienoate +co2
-    2_hydroxy_6_methoxy_hexa_2_4_dienoate
   }
 }

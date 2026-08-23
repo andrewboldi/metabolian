@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dodecanoate-ester-to-12-oxododecanoate "dodecanoate ester to 12-oxododecanoate" {
-  spacing 176
+  spacing 212
 
   spine at 0,0 {
     dodecanoate_ester
@@ -18,25 +18,61 @@ pathway dodecanoate-ester-to-12-oxododecanoate "dodecanoate ester to 12-oxododec
 
   branch from dodecanoate side left {
     dodecanoate
-    <-> . +1_2_didodecanoyl_3_d_galactosyl_sn_glycerol +h2o +hplus
-    3_d_galactosyl_monododecanoyl_sn_glycerol
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    9_hydroxylaurate
   }
 
   branch from dodecanoate side right {
     dodecanoate
-    <-> . +h2o2 +h2o
-    2_hydroxydodecanoate
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    8_hydroxylaurate
   }
 
   branch from fmn side left {
     fmn
-    <-> . +17_estradiol +fmnh2 +o2 +h2o +hplus
-    15_hydroxyestradiol
+    <-> ec_1_14_14_168 [1.14.14.168] +germacra_1_10_4_11_13_trien_12_oate +fmnh2 +o2 +h2o +hplus
+    8_hydroxygermacra_1_10_4_11_13_trien_12_oate
   }
 
   branch from fmn side right {
     fmn
-    <-> . +17_estradiol +fmnh2 +o2 +h2o +hplus
-    4_hydroxy_17_estradiol
+    <-> ec_1_14_14_170 [1.14.14.170] +germacra_1_10_4_11_13_trien_12_oate +fmnh2 +o2 +h2o
+    8_epi_inunolide
+  }
+
+  branch from dodecanoate side left {
+    dodecanoate
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    10_hydroxylaurate
+  }
+
+  branch from dodecanoate side right {
+    dodecanoate
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    3_hydroxylaurate
+  }
+
+  branch from fmnh2 side left {
+    fmnh2
+    <-> ec_1_14_14_169 [1.14.14.169] +8_hydroxygermacra_1_10_4_11_13_trien_12_oate +o2 +fmn +h2o
+    eupatolide
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> . +8_hydroxygermacra_1_10_4_11_13_trien_12_oate +o2 +fmn +h2o +hplus
+    6_8_hydroxygermacra_1_10_4_11_13_trien_12_oate
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> . +germacra_1_10_4_11_13_trien_12_oate +fmnh2 +o2 +h2o +hplus
+    8_hydroxygermacra_1_10_4_11_13_trien_12_oate
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +tetrahydroalstonine +fmnh2 +o2 +h2o +hplus
+    dihydroalstonine
   }
 }

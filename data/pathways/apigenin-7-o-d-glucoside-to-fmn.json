@@ -139,62 +139,6 @@
       "xrefs": {
         "chebi": "CHEBI:58210"
       }
-    },
-    {
-      "id": "udp_d_glucose",
-      "name": "UDP-α-D-glucose",
-      "formula": "C15H22N2O17P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:58885"
-      }
-    },
-    {
-      "id": "isovitexin_7_olate",
-      "name": "isovitexin-7-olate",
-      "formula": "C21H19O10",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:58447"
-      }
-    },
-    {
-      "id": "udp",
-      "name": "UDP",
-      "formula": "C9H11N2O12P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58223"
-      }
-    },
-    {
-      "id": "n_methyl_l_tryptophan",
-      "name": "Nα-methyl-L-tryptophan",
-      "short": "Nα-methyl-L-tryptop…",
-      "formula": "C12H14N2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:57283"
-      }
-    },
-    {
-      "id": "n_n_dimethyl_l_tryptophan",
-      "name": "Nα,Nα-dimethyl-L-tryptophan",
-      "short": "Nα,Nα-dimethyl-L-tr…",
-      "formula": "C13H16N2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:231710"
-      }
-    },
-    {
-      "id": "hypaphorine",
-      "name": "hypaphorine",
-      "formula": "C14H18N2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:5832"
-      }
     }
   ],
   "enzymes": [
@@ -384,132 +328,159 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "apigenin + UDP-alpha-D-glucose = isovitexin + UDP + H(+)",
-      "equation": "apigenin + UDP-alpha-D-glucose = isovitexin + UDP + H(+)",
-      "substrates": [
-        {
-          "metabolite": "apigenin_7_olate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp_d_glucose",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "isovitexin_7_olate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:78787"
+      "id": "xt_apigenin_7_o_d_glucoside_15z-18z-21z-24z-triacon-to-23z-26z-29z-32z-octa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "apigenin_7_o_d_glucoside"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "15z-18z-21z-24z-triacon-to-23z-26z-29z-32z-octa"
+      },
+      "note": "Shares apigenin 7-O-β-D-glucoside with (15Z,18Z,21Z,24Z)-triacon… to (23Z,26Z,29Z,32Z)-octatri….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:78787"
+            "db": "ChEBI",
+            "id": "CHEBI:77722"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "N(alpha)-methyl-L-tryptophan + S-adenosyl-L-methionine = N(alpha),N(alpha)-dimethyl-L-t...",
-      "equation": "N(alpha)-methyl-L-tryptophan + S-adenosyl-L-methionine = N(alpha),N(alpha)-dimethyl-L-tryptophan + S-adenosyl-L-homocysteine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "n_methyl_l_tryptophan",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n_n_dimethyl_l_tryptophan",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:80847"
+      "id": "xt_apigenin_7_o_d_glucoside_isovitexin-7-olate-to-apiin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "apigenin_7_o_d_glucoside"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "isovitexin-7-olate-to-apiin"
+      },
+      "note": "Shares apigenin 7-O-β-D-glucoside with isovitexin-7-olate to apiin.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:80847"
+            "db": "ChEBI",
+            "id": "CHEBI:77722"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "N(alpha),N(alpha)-dimethyl-L-tryptophan + S-adenosyl-L-methionine = N(alpha),N(alpha),N...",
-      "equation": "N(alpha),N(alpha)-dimethyl-L-tryptophan + S-adenosyl-L-methionine = N(alpha),N(alpha),N(alpha)-trimethyl-L-tryptophan + S-adenosyl-L-homocysteine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "n_n_dimethyl_l_tryptophan",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "hypaphorine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:80851"
+      "id": "xt_apigenin_7_olate_apigenin-7-olate-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "apigenin_7_olate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "apigenin-7-olate-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares apigenin-7-olate with apigenin-7-olate to S-adenosyl-L-homocysteine.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:80851"
+            "db": "ChEBI",
+            "id": "CHEBI:58470"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_apigenin_7_olate_isovitexin-7-olate-to-apiin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "apigenin_7_olate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isovitexin-7-olate-to-apiin"
+      },
+      "note": "Shares apigenin-7-olate with isovitexin-7-olate to apiin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58470"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_apigenin_7_olate_udp-to-d-glucose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "apigenin_7_olate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-d-glucose"
+      },
+      "note": "Shares apigenin-7-olate with UDP to β-D-glucose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58470"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ladanein_d-galnac-1-3-l-fuc-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ladanein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-galnac-1-3-l-fuc-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares ladanein with α-D-GalNAc-(1→3)-[α-L-Fuc… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:192702"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ladanein_scutellarein-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ladanein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "scutellarein-to-succinate"
+      },
+      "note": "Shares ladanein with scutellarein to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:192702"
           }
         ]
       }

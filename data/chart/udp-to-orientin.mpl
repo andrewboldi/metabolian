@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-orientin "UDP to orientin" {
-  spacing 292
+  spacing 304
 
   spine at 0,0 {
     udp
@@ -16,12 +16,75 @@ pathway udp-to-orientin "UDP to orientin" {
     udp
   }
 
+  branch from udp_alpha_d_glucose side left {
+    udp_alpha_d_glucose
+    <-> . +udp +alpha_alpha_trehalose +h
+    aldehydo_d_glucose
+  }
 
+  branch from udp_alpha_d_glucose side right {
+    udp_alpha_d_glucose
+    <-> ec_2_4_1_13 [2.4.1.13] +udp +sucrose +h
+    beta_d_fructopyranose
+  }
 
+  branch from udp side left {
+    udp
+    <-> ec_2_4_1_22 [2.4.1.22] +alpha_lactose +h +beta_d_glucose
+    udp_alpha_d_galactose
+  }
 
+  branch from udp side right {
+    udp
+    <-> ec_2_4_1_22 [2.4.1.22] +alpha_lactose +h +udp_alpha_d_galactose
+    alpha_d_glucose
+  }
 
+  branch from orientin side left {
+    orientin
+    <-> . +1_3_4_dihydroxyphenyl_3_3_c_glucosyl_2_4_6_trihy +h
+    h2o
+  }
 
+  branch from orientin side right {
+    orientin
+    <-> . +h +h2o
+    1_3_4_dihydroxyphenyl_3_3_c_glucosyl_2_4_6_trihy
+  }
 
+  branch from udp side left {
+    udp
+    <-> ec_2_4_1_17 [2.4.1.17] +h +beta_d_glucuronate +h2o
+    udp_alpha_d_glucuronate
+  }
 
+  branch from udp side right {
+    udp
+    <-> ec_2_4_1_241 [2.4.1.241] +1_18_1_2_16_0_digalactosyldiacylglycerol +h +udp_alpha_d_galactose
+    1_9z_octadecenoyl_2_hexadecanoyl_3_d_galactosyl
+  }
 
+  branch from h side left {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    1_arachidonoyl_sn_glycero_3_phosphoethanolamine
+  }
+
+  branch from h side right {
+    h
+    <-> . +adp +1_dihomo_linolenoylglycerophosphoethanolamine_20 +phosphate +1_dihomo_linolenoylglycerophosphoethanolamine_20 +h2o
+    atp
+  }
+
+  branch from udp_alpha_d_glucose side left {
+    udp_alpha_d_glucose
+    <-> . +udp +1_phenyl_3_3_c_glucosyl_2_4_6_trihydroxyphenyl_p +h
+    2_5_7_trihydroxy_2_phenyl_2_3_dihydro_4h_chromen
+  }
+
+  branch from udp_alpha_d_glucose side right {
+    udp_alpha_d_glucose
+    <-> . +udp +1_3_4_dihydroxyphenyl_3_3_c_glucosyl_2_4_6_trihy +h
+    2_3_4_dihydroxyphenyl_2_5_7_trihydroxy_2_3_dihyd
+  }
 }

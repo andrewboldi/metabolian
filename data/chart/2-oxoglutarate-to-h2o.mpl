@@ -4,55 +4,15 @@
 # edit the generator, not this file.
 
 pathway 2-oxoglutarate-to-h2o "2-oxoglutarate to H2O" {
-  spacing 188
+  spacing 164
 
   spine at 0,0 {
     2_oxoglutarate
-    <-> . +h +paromomycin_ii -6_deamino_6_oxoparomomycin_ii
-    l_glutamate
-    <-> . +h2o2 +6_deamino_6_oxoparomomycin_ii -6_deamino_6_hydroxyparomomycin_ii
-    o2
-    <-> . +h +acetate +6_deamino_6_hydroxyparomomycin_ii -h2o
-    2_n_acetyl_6_deamino_6_hydroxyparomomycin_ii
-    <-> . +udp +h -5_ribosylparomamine
-    udp_n_acetyl_alpha_d_glucosamine
-    <-> . +h +5_ribosylparomamine +phosphate -h2o
-    5_phosphoribosylparomamine
-  }
-
-  branch from l_glutamate side left {
-    l_glutamate
-    <-> ec_2_6_1_59 [2.6.1.59] +dtdp_4_dehydro_6_deoxy_d_galactose +2_oxoglutarate +h
-    dtdp_4_amino_4_6_dideoxy_d_galactose
-  }
-
-  branch from l_glutamate side right {
-    l_glutamate
-    <-> ec_2_6_1_42 [2.6.1.42] +3_methyl_2_oxopentanoate +2_oxoglutarate
-    l_isoleucine
-  }
-
-  branch from o2 side left {
-    o2
-    <-> ec_1_13_11_16 [1.13.11.16] +2_hydroxy_6_oxo_octa_2_4_dienoate
-    3_ethylcatechol
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +h +3_ethylcatechol
-    2_hydroxy_6_oxo_octa_2_4_dienoate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_4_2_1_138 [4.2.1.138] +caryolan_1_ol
-    caryophyllene
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_4_21_54 [3.4.21.54] +angiotensin_i_dizwitterion +leu_val_tyr_ser_tetrapeptide
-    synthetic_tetradecapeptide_renin_substrate
+    <-> ec_1_14_11_33 [1.14.11.33] +n1_ethyladenine +o2 -adenine -succinate -acetaldehyde
+    co2
+    <-> ec_1_5_99_12 [1.5.99.12] +fadh2 +adenine +h +2e_4_hydroxy_3_methylbut_2_enal -trans_zeatin -h2o
+    fad
+    <-> . +d_ribose +trans_zeatin -h2o
+    9_ribosyl_trans_zeatin
   }
 }

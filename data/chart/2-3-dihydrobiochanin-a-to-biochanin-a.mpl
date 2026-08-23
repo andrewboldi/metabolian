@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-3-dihydrobiochanin-a-to-biochanin-a "2,3-dihydrobiochanin A to biochanin A…" {
-  spacing 280
+  spacing 304
 
   spine at 0,0 {
     2_3_dihydrobiochanin_a
@@ -14,5 +14,29 @@ pathway 2-3-dihydrobiochanin-a-to-biochanin-a "2,3-dihydrobiochanin A to biochan
     biochanin_a_7_o_d_glucoside
     <-> ec_2_3_1_115 [2.3.1.115] +malonyl-coa -coa
     biochanin_a_7_o_d_glucoside_6_o_malonate
+  }
+
+  branch from udp_d_glucose side left {
+    udp_d_glucose
+    <-> ec_2_4_1_220 [2.4.1.220] +indoxyl +udp +hplus
+    indican
+  }
+
+  branch from udp_d_glucose side right {
+    udp_d_glucose
+    <-> ec_2_4_1_116 [2.4.1.116] +cyanidin_3_o_rutinoside_betaine +udp +hplus
+    cyanidin_3_o_rutinoside_5_o_d_glucoside_betaine
+  }
+
+  branch from malonyl-coa side left {
+    malonyl-coa
+    <-> ec_6_2_1_76 [6.2.1.76] +malonate +atp +coa +amp
+    ppi
+  }
+
+  branch from malonyl-coa side right {
+    malonyl-coa
+    <-> ec_2_3_1_199 [2.3.1.199] +very_long_chain_acyl_coa +hplus +co2 +coa
+    very_long_chain_3_oxoacyl_coa
   }
 }

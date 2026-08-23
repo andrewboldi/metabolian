@@ -1,0 +1,401 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "luteolin-7-o-d-glucoside-to-s-adenosyl-l-homocys",
+  "name": "luteolin 7-O-β-D-glucoside to S-adenosyl-L-homocysteine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from luteolin 7-O-β-D-glucoside(1−) to S-adenosyl-L-homocysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:69663"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:77791"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "luteolin_7_o_d_glucoside",
+      "name": "luteolin 7-O-β-D-glucoside",
+      "short": "luteolin 7-O-β-D-gl…",
+      "formula": "C21H19O11",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77791"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "luteolin_7_olate",
+      "name": "luteolin-7-olate",
+      "formula": "C15H9O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57545"
+      }
+    },
+    {
+      "id": "d_glucose",
+      "name": "β-D-glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15903"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "4_5_dihydroxy_3_methoxyflavon_7_olate",
+      "name": "4',5-dihydroxy-3'-methoxyflavon-7-olate",
+      "short": "4',5-dihydroxy-3'-m…",
+      "formula": "C16H11O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57799"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "velutin",
+      "name": "velutin",
+      "formula": "C17H14O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:177047"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_398",
+      "name": "isoflavone 3'-O-methyltransferase",
+      "ec": [
+        "2.1.1.398"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "luteolin 7-O-beta-D-glucoside + H2O = luteolin + beta-D-glucose",
+      "equation": "luteolin 7-O-beta-D-glucoside + H2O = luteolin + beta-D-glucose",
+      "substrates": [
+        {
+          "metabolite": "luteolin_7_o_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "luteolin_7_olate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:69663"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69663"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "isoflavone 3'-O-methyltransferase",
+      "equation": "luteolin + S-adenosyl-L-methionine = chrysoeriol + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.398",
+      "substrates": [
+        {
+          "metabolite": "luteolin_7_olate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_5_dihydroxy_3_methoxyflavon_7_olate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_398"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:14589"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14589"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "chrysoeriol + S-adenosyl-L-methionine = velutin + S-adenosyl-L-homocysteine",
+      "equation": "chrysoeriol + S-adenosyl-L-methionine = velutin + S-adenosyl-L-homocysteine",
+      "substrates": [
+        {
+          "metabolite": "4_5_dihydroxy_3_methoxyflavon_7_olate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "velutin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:73083"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:73083"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_luteolin_7_o_d_glucoside_isoorientin-to-luteolin-7-o-d-glucoside",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "luteolin_7_o_d_glucoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isoorientin-to-luteolin-7-o-d-glucoside"
+      },
+      "note": "Shares luteolin 7-O-β-D-glucoside with isoorientin to luteolin 7-O-β-D-glucoside.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77791"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_luteolin_7_olate_1-1-dichloroethene-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "luteolin_7_olate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-1-dichloroethene-to-succinate"
+      },
+      "note": "Shares luteolin-7-olate with 1,1-dichloroethene to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57545"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_luteolin_7_olate_3-oxoorientin-to-luteolin-7-o-d-glucos",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "luteolin_7_olate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-oxoorientin-to-luteolin-7-o-d-glucos"
+      },
+      "note": "Shares luteolin-7-olate with 3''-oxoorientin to luteolin 7-O-[(β-D-glucos….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57545"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_luteolin_7_olate_apigenin-7-olate-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "luteolin_7_olate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "apigenin-7-olate-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares luteolin-7-olate with apigenin-7-olate to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57545"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_luteolin_7_olate_isoorientin-to-luteolin-7-o-d-glucoside",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "luteolin_7_olate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isoorientin-to-luteolin-7-o-d-glucoside"
+      },
+      "note": "Shares luteolin-7-olate with isoorientin to luteolin 7-O-β-D-glucoside.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57545"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_luteolin_7_olate_luteolin-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "luteolin_7_olate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "luteolin-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares luteolin-7-olate with luteolin to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57545"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_luteolin_7_olate_n-terminal-l-alanyl-l-pro-to-s-adenosyl-l-homocy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "luteolin_7_olate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-terminal-l-alanyl-l-pro-to-s-adenosyl-l-homocy"
+      },
+      "note": "Shares luteolin-7-olate with N-terminal L-alanyl-L-pro… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57545"
+          }
+        ]
+      }
+    }
+  ]
+}

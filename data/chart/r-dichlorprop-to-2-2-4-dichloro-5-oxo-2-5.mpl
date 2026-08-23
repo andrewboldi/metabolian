@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway r-dichlorprop-to-2-2-4-dichloro-5-oxo-2-5 "(R)-dichlorprop to 2-(2,4-dichloro-5-oxo-2,5…" {
-  spacing 270
+  spacing 282
 
   spine at 0,0 {
     r_dichlorprop
@@ -20,18 +20,6 @@ pathway r-dichlorprop-to-2-2-4-dichloro-5-oxo-2-5 "(R)-dichlorprop to 2-(2,4-dic
     2_2_4_dichloro_5_oxo_2_5_dihydrofuryl_acetate
   }
 
-  branch from succinate side left {
-    succinate
-    <-> . +l_lysinium +akg +o2 +co2
-    4_hydroxy_l_lysine_1
-  }
-
-  branch from succinate side right {
-    succinate
-    <-> . +l_argininium +akg +o2 +co2
-    3r_3_hydroxy_l_argininium
-  }
-
   branch from cis_2_chloro_4_carboxymethylenebut_2_en_1_4_olid side left {
     cis_2_chloro_4_carboxymethylenebut_2_en_1_4_olid
     <-> . +h +chloride
@@ -40,13 +28,37 @@ pathway r-dichlorprop-to-2-2-4-dichloro-5-oxo-2-5 "(R)-dichlorprop to 2-(2,4-dic
 
   branch from chloride side right {
     chloride
-    <-> . +h +chlorobenzene
-    5_6_dichloro_1_3_cyclohexadiene
+    <-> ec_2_5_1_18 [2.5.1.18] +2_s_glutathionyl_acetyl_chloride +1_1_dichloroethylene_epoxide
+    glutathione
   }
 
   branch from chloride side left {
     chloride
-    <-> ec_5_5_1_7 [5.5.1.7] +h +2_3_5_trichloro_cis_cis_muconate
-    2_5_dichloro_carboxymethylenebut_2_en_4_olide
+    <-> ec_2_5_1_18 [2.5.1.18] +s_2_chloroacetyl_glutathione +glutathione
+    chloroacetyl_chloride
+  }
+
+  branch from chloride side right {
+    chloride
+    <-> ec_2_5_1_18 [2.5.1.18] +2_s_glutathionyl_acetyl_chloride +glutathione
+    2_s_glutathionyl_acetyl_glutathione
+  }
+
+  branch from chloride side left {
+    chloride
+    <-> ec_3_8_1_5 [3.8.1.5] +h +beta_2_3_4_5_6_pentachlorocyclohexanol +h2o
+    beta_hexachlorocyclohexane
+  }
+
+  branch from h side right {
+    h
+    <-> ec_1_1_1_145 [1.1.1.145] +nadh +11_deoxycortisol +nad
+    17alpha_21_dihydroxypregnenolone
+  }
+
+  branch from h side left {
+    h
+    <-> . +n_carbamoyl_l_glutamate +h2o
+    hydantoin_5_propionate
   }
 }

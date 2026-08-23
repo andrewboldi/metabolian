@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-fluoro-5-deoxy-d-ribose-to-fluoroacetate "5-fluoro-5-deoxy-D-ribose… to fluoroacetate" {
-  spacing 210
+  spacing 216
 
   spine at 0,0 {
     5_fluoro_5_deoxy_d_ribose_1_phosphate
@@ -16,21 +16,27 @@ pathway 5-fluoro-5-deoxy-d-ribose-to-fluoroacetate "5-fluoro-5-deoxy-D-ribose…
     fluoroacetate
   }
 
-  branch from fluoroacetaldehyde side left {
-    fluoroacetaldehyde
-    <-> ec_1_2_1_5 [1.2.1.5] +fluoroacetate +h +nadph +h2o
-    nadp
+  branch from dihydroxyacetone_phosphate side left {
+    dihydroxyacetone_phosphate
+    <-> ec_1_1_5_3 [1.1.5.3] +ubiquinol_9 +sn_glycerol_3_phosphate
+    ubiquinone_9
   }
 
   branch from dihydroxyacetone_phosphate side right {
     dihydroxyacetone_phosphate
-    <-> ec_1_1_5_3 [1.1.5.3] +ubiquinol_2 +ubiquinone_2
-    sn_glycerol_3_phosphate
+    <-> ec_1_1_5_3 [1.1.5.3] +ubiquinol_10 +sn_glycerol_3_phosphate
+    ubiquinone_10
   }
 
   branch from dihydroxyacetone_phosphate side left {
     dihydroxyacetone_phosphate
-    <-> ec_4_1_2_17 [4.1.2.17] +l_fucose_1_phosphate +s_lactaldehyde
+    <-> ec_1_1_99_5 [1.1.99.5] +ubiquinol_7 +sn_glycerol_3_phosphate
+    ubiquinone_7
+  }
+
+  branch from dihydroxyacetone_phosphate side right {
+    dihydroxyacetone_phosphate
+    <-> ec_4_1_2_13 [4.1.2.13] +sedoheptulose_1_phosphate +d_erythrose
     h
   }
 }

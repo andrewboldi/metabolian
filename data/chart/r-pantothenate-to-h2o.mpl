@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway r-pantothenate-to-h2o "(R)-pantothenate to H2O" {
-  spacing 318
+  spacing 340
 
   spine at 0,0 {
     r_pantothenate
@@ -20,26 +20,26 @@ pathway r-pantothenate-to-h2o "(R)-pantothenate to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_179 [3.2.1.179] +n_acetyl_d_galactosamine +5_dehydro_4_deoxy_2_o_sulfo_d_glucuronic_acid
-    4_deoxy_4_d_glcpa2s_1_3_d_galpnac
+    <-> . +h +tropate +tropine
+    l_hyoscyamine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +1_3_4_dihydroxyphenyl_3_3_c_glucosyl_2_4_6_trihy
-    isoorientin
+    <-> ec_3_1_1_36 [3.1.1.36] +h +limonoate
+    limonoate_d_ring_lactone
   }
 
   branch from 3_phosphoadenylyl_sulfate side left {
     3_phosphoadenylyl_sulfate
-    <-> ec_2_8_2_1 [2.8.2.1] +adenosine_3_5_bisphosphate +m_nitrophenyl_sulfate
-    3_nitrophenol
+    <-> . +adenosine_3_5_bisphosphate +h +cyclosporin_a_sulfate
+    cyclosporin_a
   }
 
   branch from 3_phosphoadenylyl_sulfate side right {
     3_phosphoadenylyl_sulfate
-    <-> ec_2_8_2_1 [2.8.2.1] +adenosine_3_5_bisphosphate +2_hydroxy_5_nitrophenyl_hydrogen_sulfate +h
-    4_nitrocatechol
+    <-> . +adenosine_3_5_bisphosphate +sulfochenodeoxycholate +h
+    chenodeoxycholate
   }
 
   branch from oa_6129_b1 side left {
@@ -50,37 +50,127 @@ pathway r-pantothenate-to-h2o "(R)-pantothenate to H2O" {
 
   branch from adenosine_3_5_bisphosphate side right {
     adenosine_3_5_bisphosphate
-    <-> ec_2_8_2_28 [2.8.2.28] +quercetin_3_4_7_trissulfate +3_phosphoadenylyl_sulfate +h
-    quercetin_3_4_bissulfate
+    <-> . +h +17alpha_hydroxypregnenolone_sulfate +3_phosphoadenylyl_sulfate
+    17alpha_hydroxypregnenolone
   }
 
   branch from adenosine_3_5_bisphosphate side left {
     adenosine_3_5_bisphosphate
-    <-> . +quercetin_3_7_3_4_tetra_o_sulfate +3_phosphoadenylyl_sulfate
-    quercetin_3_4_7_trissulfate
+    <-> . +2r_2_amino_3_4_3_iodo_4_sulfooxy_phenoxy_phenyl +3_phosphoadenylyl_sulfate
+    3_monoiodo_l_thyronine
   }
 
   branch from h side right {
     h
-    <-> . +emodin +emodin_anthrone +h2o
-    emodin_dianthrone
+    <-> . +udp +9_d_glucosyl_kinetin +udp_alpha_d_glucose
+    kinetin
   }
 
   branch from h side left {
     h
-    <-> ec_3_1_1_26 [3.1.1.26] +9z_octadecenoate +mgmg_0_0_16_0 +h2o
-    1_9z_octadecenoyl_2_hexadecanoyl_3_d_galactosyl
+    <-> . +udp +9_d_glucosyl_cis_zeatin +cis_zeatin
+    udp_alpha_d_glucose
   }
 
   branch from nadp side right {
     nadp
-    <-> . +l_galactopyranose +h +nadph
-    l_galactono_1_5_lactone
+    <-> ec_1_14_13_77 [1.14.13.77] +taxa_4_20_11_dien_5alpha_ol +h +o2 +nadph +h2o
+    taxa_4_20_11_dien_5alpha_13alpha_diol
   }
 
   branch from nadp side left {
     nadp
-    <-> . +malonyl_coa +s_methylmalonyl_coa +4_aminobenzoyl_coa +h +nadph +candicinolide +coa +h2o
-    co2
+    <-> ec_1_14_13_76 [1.14.13.76] +10beta_hydroxytaxa_4_20_11_dien_5alpha_yl_acetat +h2o +h +o2 +nadph
+    taxa_4_20_11_dien_5alpha_yl_acetate
+  }
+
+  branch from r_pantothenate side right {
+    r_pantothenate
+    <-> . +h +adp +phosphate +atp +h2o
+    na
+  }
+
+  branch from r_pantothenate side left {
+    r_pantothenate
+    <-> . +h +adp +phosphate +h2o
+    atp
+  }
+
+  branch from h side right {
+    h
+    <-> . +udp +coreopsin +udp_alpha_d_glucose
+    butein
+  }
+
+  branch from h side left {
+    h
+    <-> . +udp +sulfurein +udp_alpha_d_glucose
+    sulfuretin
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_4_2_1_68 [4.2.1.68] +2_dehydro_3_deoxy_l_fuconate
+    d_fuconate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_1_1_38 [3.1.1.38] +h +triacetate
+    triacetate_lactone
+  }
+
+  branch from adenosine_3_5_bisphosphate side right {
+    adenosine_3_5_bisphosphate
+    <-> . +taurocholic_acid_3_sulfate +3_phosphoadenylyl_sulfate +h
+    taurocholate
+  }
+
+  branch from adenosine_3_5_bisphosphate side left {
+    adenosine_3_5_bisphosphate
+    <-> . +taurodeoxycholic_acid_3_sulfate +3_phosphoadenylyl_sulfate +h
+    taurodeoxycholate
+  }
+
+  branch from 3_phosphoadenylyl_sulfate side right {
+    3_phosphoadenylyl_sulfate
+    <-> . +adenosine_3_5_bisphosphate +thiomethyl_sulphoxide_acetaminophen_sulphate
+    thiomethyl_sulphoxide_conjugate_acetaminophen
+  }
+
+  branch from 3_phosphoadenylyl_sulfate side left {
+    3_phosphoadenylyl_sulfate
+    <-> ec_2_8_2_39 [2.8.2.39] +adenosine_3_5_bisphosphate +12_sulfooxyjasmonate +h
+    12_hydroxyjasmonate
+  }
+
+  branch from 7_methylthioheptyl_desulfoglucosinolate side right {
+    7_methylthioheptyl_desulfoglucosinolate
+    <-> ec_2_4_1_195 [2.4.1.195] +udp +h +udp_alpha_d_glucose
+    z_omega_methylsulfanyl_octyl_thiohydroximate
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_14_13_185 [1.14.13.185] +10_deoxymethymycin +h +nadph +nadp +h2o
+    neomethymycin
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +10_deoxymethymycin +h +nadph +nadp +h2o
+    methymycin
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_14_13_21 [1.14.13.21] +luteolin +nadp +h2o +h +o2
+    apigenin
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_14_13_53 [1.14.13.53] +formononetin +h +o2 +nadp +h2o
+    2_hydroxyformononetin
   }
 }

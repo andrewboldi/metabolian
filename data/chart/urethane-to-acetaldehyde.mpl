@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway urethane-to-acetaldehyde "urethane to acetaldehyde" {
-  spacing 264
+  spacing 288
 
   spine at 0,0 {
     urethane
@@ -20,26 +20,26 @@ pathway urethane-to-acetaldehyde "urethane to acetaldehyde" {
 
   branch from ethanol side left {
     ethanol
-    <-> . +ethyl_oleate +h2o +hplus
-    oleate
+    <-> . +fatty_acid_ethyl_ester +h2o +hplus
+    fatty-acid
   }
 
   branch from ethanol side right {
     ethanol
-    <-> . +ethyl_palmitoleate +h2o +hplus
-    palmitoleate
+    <-> . +ethyl_octadecanoate +h2o +hplus
+    octadecanoate
   }
 
   branch from nh3 side left {
     nh3
-    <-> ec_3_5_1_100 [3.5.1.100] +r_piperazin_4_ium_2_carboxamide +h2o
-    r_piperazine_2_carboxylic_acid
+    <-> . +h2o +fatty-acid
+    primary_fatty_amide
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_3_5_1_101 [3.5.1.101] +s_piperazin_4_ium_2_carboxamide +h2o
-    s_piperazine_2_carboxylic_acid
+    <-> . +gondamide +h2o
+    gondoate
   }
 
   branch from acetoin side left {
@@ -52,5 +52,29 @@ pathway urethane-to-acetaldehyde "urethane to acetaldehyde" {
     acetoin
     <-> . +2_phenylethanaminium +h2o
     3_phenethylamino_butan_2_one
+  }
+
+  branch from ethanol side left {
+    ethanol
+    <-> ec_2_3_1_268 [2.3.1.268] +acetyl_coa +coa
+    ethyl_acetate
+  }
+
+  branch from ethanol side right {
+    ethanol
+    <-> . +butyryl_coa +coa
+    ethyl_butyrate
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> . +s_1_hydroxy_3_methylhexan_3_yl_l_cysteine +h2o +pyruvate
+    3_methyl_3_sulfanylhexan_1_ol
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> . +3_sulfanylhexan_1_ol_l_cysteine +h2o +pyruvate
+    3_mercaptohexanol
   }
 }

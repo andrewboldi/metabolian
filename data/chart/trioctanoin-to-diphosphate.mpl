@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway trioctanoin-to-diphosphate "trioctanoin to diphosphate" {
-  spacing 200
+  spacing 224
 
   spine at 0,0 {
     trioctanoin
@@ -20,49 +20,73 @@ pathway trioctanoin-to-diphosphate "trioctanoin to diphosphate" {
 
   branch from octanoate side left {
     octanoate
-    <-> . +1_2_dioctanoyl_3_d_galactosyl_sn_glycerol +h2o +hplus
-    3_d_galactosyl_monooctanoyl_sn_glycerol
+    <-> . +h +o2 +nadph +nadp +h2o
+    7_hydroxy_octanoate
   }
 
   branch from octanoate side right {
     octanoate
-    <-> ec_3_5_1_23 [3.5.1.23] +n_octanoyldihydrosphingosine +h2o
-    sphinganine
-  }
-
-  branch from glycerol side left {
-    glycerol
-    <-> ec_3_1_3_21 [3.1.3.21] +h2o +pi
-    sn_glycerol_3_phosphate
-  }
-
-  branch from glycerol side right {
-    glycerol
-    <-> . +r_s_glycero_1_phospho_3_9z_octadecenoyl_1_glyce +1_oleoyl_sn_glycerol
-    s_s_bis_3_oleoylglycero_1_phosphate
+    <-> ec_2_3_1_85 [2.3.1.85] +decanoate +co2 +nadp +coa +h2o +h +nadph
+    malonyl_coa
   }
 
   branch from octanoyl_coa side left {
     octanoyl_coa
-    <-> . +1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine +coa
-    1_z_alk_1_enyl_2_octanoyl_sn_glycero_3_phosphoet
+    <-> . +2_monolysocardiolipin +coa
+    2_capryloylcardiolipin
   }
 
   branch from octanoyl_coa side right {
     octanoyl_coa
-    <-> . +1_acyl_sn_glycero_3_phosphoethanolamine +coa
-    1_acyl_2_octanoyl_sn_glycero_3_phosphoethanolami
+    <-> . +2_2_dilysocardiolipin +coa
+    2_capryloyl_2_monolysocardiolipin
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_135 [4.2.3.135] +fpp
-    6_protoilludene
+    <-> . +2_cis_6_cis_farnesyl_diphosphate
+    germacrene_a
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_136 [4.2.3.136] +fpp
-    isocomene
+    <-> . +2_cis_6_cis_farnesyl_diphosphate
+    1e_4e_8e_humulene
+  }
+
+  branch from octanoate side left {
+    octanoate
+    <-> ec_2_3_1_85 [2.3.1.85] +acetyl_coa +malonyl_coa +h +nadph +nadp +coa +h2o
+    co2
+  }
+
+  branch from octanoate side right {
+    octanoate
+    <-> ec_3_5_1_23 [3.5.1.23] +sphing_4_enine +h +h2o
+    n_octanoylsphing_4_enine
+  }
+
+  branch from octanoyl_coa side left {
+    octanoyl_coa
+    <-> . +o2 +h2o2
+    trans_oct_2_enoyl_coa
+  }
+
+  branch from octanoyl_coa side right {
+    octanoyl_coa
+    <-> . +1_o_palmityl_2_acetyl_sn_glycerol +coa
+    1_palmityl_2_acetyl_3_capryloyl_sn_glycerol
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +2_cis_6_cis_farnesyl_diphosphate
+    curcumene
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +2_cis_6_cis_farnesyl_diphosphate
+    z_bisabolene
   }
 }

@@ -171,13 +171,43 @@
       }
     },
     {
-      "id": "d_galactosyl_1_3_d_galactosyl_1_3_n_acetyl_d_ga",
-      "name": "α-D-galactosyl-(1→3)-β-D-galactosyl-(1→3)-N-acetyl-β-D-galactosaminyl-(1→4)-[N-acetyl-α-neuraminosyl-(2→8)-N-acetyl-α-neuraminosyl-(2→3)]-β-D-galactosyl-(1→4)-β-D-glucosyl-(1↔1')-ceramide (d18:1(4E))",
-      "short": "α-D-galactosyl-(1→3…",
-      "formula": "C73H121N4O44R",
-      "charge": -2,
+      "id": "n4_6_o_sulfo_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2",
+      "name": "N4-{6-O-sulfo-β-D-GlcNAc-(1→2)-α-D-Man-(1→3)-[β-D-GlcNAc-(1→2)-α-D-Man-(1→6)]-β-D-Man-(1→4)-β-D-GlcNAc-(1→4)-β-D-GlcNAc}-L-Asn",
+      "short": "N4-{6-O-sulfo-β-D-G…",
+      "formula": "C54H87N6O40S",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:141778"
+        "chebi": "CHEBI:233660"
+      }
+    },
+    {
+      "id": "n4_d_gal_1_4_6_o_sulfo_d_glcnac_1_2_d_man_1_3_d",
+      "name": "N4-{β-D-Gal-(1→4)-6-O-sulfo-β-D-GlcNAc-(1→2)-α-D-Man-(1→3)-[β-D-Gal-(1→4)-β-D-GlcNAc-(1→2)-α-D-Man-(1→6)]-β-D-Man-(1→4)-β-D-GlcNAc-(1→4)-β-D-GlcNAc}-L-Asn",
+      "short": "N4-{β-D-Gal-(1→4)-6…",
+      "formula": "C66H107N6O50S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:233661"
+      }
+    },
+    {
+      "id": "l_fuc_1_2_d_gal_1_3_d_galnac",
+      "name": "α-L-Fuc-(1→2)-β-D-Gal-(1→3)-α-D-GalNAc",
+      "short": "α-L-Fuc-(1→2)-β-D-G…",
+      "formula": "C20H34NO15R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:233962"
+      }
+    },
+    {
+      "id": "d_gal_1_3_l_fuc_1_2_d_gal_1_3_d_galnac",
+      "name": "α-D-Gal-(1→3)-[α-L-Fuc-(1→2)]-β-D-Gal-(1→3)-α-D-GalNAc",
+      "short": "α-D-Gal-(1→3)-[α-L-…",
+      "formula": "C26H44NO20R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:233963"
       }
     }
   ],
@@ -439,11 +469,54 @@
     },
     {
       "id": "r7",
-      "name": "a ganglioside GD1b (d18:1(4E)) + UDP-alpha-D-galactose = a ganglioside Gal-GD1b (d18:1(...",
-      "equation": "a ganglioside GD1b (d18:1(4E)) + UDP-alpha-D-galactose = a ganglioside Gal-GD1b (d18:1(4E)) + UDP + H(+)",
+      "name": "an N(4)-{6-O-sulfo-beta-D-GlcNAc-(1->2)-alpha-D-Man-(1->3)-[beta-D-GlcNAc-(1->2)-alpha-...",
+      "equation": "an N(4)-{6-O-sulfo-beta-D-GlcNAc-(1->2)-alpha-D-Man-(1->3)-[beta-D-GlcNAc-(1->2)-alpha-D-Man-(1->6)]-beta-D-Man-(1->4)-beta-D-GlcNAc-(1->4)-beta-D-GlcNAc}-L--asparaginyl-[protein] + 2 UDP-alpha-D-galactose = an N(4)-{beta-D-Gal-(1->4)-6-O-sulfo-beta-D-GlcNAc-(1->2)-alpha-D-Man-(1->3)-[beta-D-Gal-(1->4)-beta-D-GlcNAc-(1->2)-alpha-D-Man-(1->6)]-beta-D-Man-(1->4)-beta-D-GlcNAc-(1->4)-beta-D-GlcNAc}-L-asparaginyl-[protein] + 2 UDP + 2 H(+)",
       "substrates": [
         {
-          "metabolite": "gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac_2_3_gal_1",
+          "metabolite": "n4_6_o_sulfo_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_galactose",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n4_d_gal_1_4_6_o_sulfo_d_glcnac_1_2_d_man_1_3_d",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:84279"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84279"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "an alpha-L-Fuc-(1->2)-beta-D-Gal-(1->3)-alpha-D-GalNAc derivative + UDP-alpha-D-galacto...",
+      "equation": "an alpha-L-Fuc-(1->2)-beta-D-Gal-(1->3)-alpha-D-GalNAc derivative + UDP-alpha-D-galactose = an alpha-D-Gal-(1->3)-[alpha-L-Fuc-(1->2)]-beta-D-Gal-(1->3)-alpha-D-GalNAc derivative + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "l_fuc_1_2_d_gal_1_3_d_galnac",
           "stoichiometry": 1
         },
         {
@@ -453,7 +526,7 @@
       ],
       "products": [
         {
-          "metabolite": "d_galactosyl_1_3_d_galactosyl_1_3_n_acetyl_d_ga",
+          "metabolite": "d_gal_1_3_l_fuc_1_2_d_gal_1_3_d_galnac",
           "stoichiometry": 1
         },
         {
@@ -466,16 +539,282 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:79743"
+        "rhea": "RHEA:84527"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:79743"
+            "id": "RHEA:84527"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_ganglioside_gd3_galactosylceramide-to-cytidine-5-monophosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ganglioside_gd3"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "galactosylceramide-to-cytidine-5-monophosphate"
+      },
+      "note": "Shares ganglioside GD3 with galactosylceramide to cytidine 5'-monophosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78436"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ganglioside_gd3_ganglioside-gd3-to-d-galactopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ganglioside_gd3"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ganglioside-gd3-to-d-galactopyranose"
+      },
+      "note": "Shares ganglioside GD3 with ganglioside GD3 to D-galactopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78436"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ganglioside_gd3_ganglioside-gd3-to-n-acetyl-9-o-acetylneur",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ganglioside_gd3"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ganglioside-gd3-to-n-acetyl-9-o-acetylneur"
+      },
+      "note": "Shares ganglioside GD3 with ganglioside GD3 to α-N-acetyl-9-O-acetylneur….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78436"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ganglioside_gd3_n-acetylneuraminosyl-2-to-n-acetylneuraminate-4",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ganglioside_gd3"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetylneuraminosyl-2-to-n-acetylneuraminate-4"
+      },
+      "note": "Shares ganglioside GD3 with α-N-acetylneuraminosyl-(2… to N-acetylneuraminate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78436"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_galnac_1_4_neu5ac_2_8_neu5ac_2_3_gal_1_4_glc_1_galnac-1-4-neu5ac-to-n-acetyl-d-galactosamin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "galnac_1_4_neu5ac_2_8_neu5ac_2_3_gal_1_4_glc_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "galnac-1-4-neu5ac-to-n-acetyl-d-galactosamin"
+      },
+      "note": "Shares β-GalNAc-(1→4)-[α-Neu5Ac-(2→8)-α-Neu5Ac-(2→3)]-β-Gal-(1→4)-β-Glc-(1↔1')-Cer with β-GalNAc-(1→4)-[α-Neu5Ac-… to N-acetyl-β-D-galactosamin….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78542"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac_2_3_gal_1_1-lauroyl-sn-glycero-3-ph-to-d-glucopyranose-411",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac_2_3_gal_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-lauroyl-sn-glycero-3-ph-to-d-glucopyranose-411"
+      },
+      "note": "Shares β-Gal-(1→3)-β-GalNAc-(1→4)-[α-Neu5Ac-(2→8)-α-Neu5Ac-(2→3)]-β-Gal-(1→4)-β-Glc-(1↔1')-Cer with 1-lauroyl-sn-glycero-3-ph… to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87785"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac_2_3_gal_1_gal-1-3-galnac-1-4-to-d-galactosyl-1-3-n-ac",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac_2_3_gal_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gal-1-3-galnac-1-4-to-d-galactosyl-1-3-n-ac"
+      },
+      "note": "Shares β-Gal-(1→3)-β-GalNAc-(1→4)-[α-Neu5Ac-(2→8)-α-Neu5Ac-(2→3)]-β-Gal-(1→4)-β-Glc-(1↔1')-Cer with β-Gal-(1→3)-β-GalNAc-(1→4… to β-D-galactosyl-(1→3)-N-ac….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87785"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac_2_3_gal_1_n4-d-glcnac-1-2-d-to-cytidine-5-monophosphate-15",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac_2_3_gal_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n4-d-glcnac-1-2-d-to-cytidine-5-monophosphate-15"
+      },
+      "note": "Shares β-Gal-(1→3)-β-GalNAc-(1→4)-[α-Neu5Ac-(2→8)-α-Neu5Ac-(2→3)]-β-Gal-(1→4)-β-Glc-(1↔1')-Cer with N4-{β-D-GlcNAc-(1→2)-α-D-… to cytidine 5'-monophosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87785"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac_2_3_gal_1_neu5ac-2-3-gal-1-3-to-n-acetyl-d-galactosamin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac_2_3_gal_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "neu5ac-2-3-gal-1-3-to-n-acetyl-d-galactosamin"
+      },
+      "note": "Shares β-Gal-(1→3)-β-GalNAc-(1→4)-[α-Neu5Ac-(2→8)-α-Neu5Ac-(2→3)]-β-Gal-(1→4)-β-Glc-(1↔1')-Cer with α-Neu5Ac-(2→3)-β-Gal-(1→3… to N-acetyl-β-D-galactosamin….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87785"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac_2-c-methyl-d-erythritol-to-pseudouridine-5-phosp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-c-methyl-d-erythritol-to-pseudouridine-5-phosp"
+      },
+      "note": "Shares α-Neu5Ac-(2→3)-β-Gal-(1→3)-β-GalNAc-(1→4)-[α-Neu5Ac-(2→8)-α-Neu5Ac-(2→3)]-β-Gal-(1→4)-β-Glc-(1↔1')-Cer with 2-C-methyl-D-erythritol… to pseudouridine 5'-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78452"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac_neu5ac-2-3-gal-1-3-to-n-acetyl-d-galactosamin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "neu5ac-2-3-gal-1-3-to-n-acetyl-d-galactosamin"
+      },
+      "note": "Shares α-Neu5Ac-(2→3)-β-Gal-(1→3)-β-GalNAc-(1→4)-[α-Neu5Ac-(2→8)-α-Neu5Ac-(2→3)]-β-Gal-(1→4)-β-Glc-(1↔1')-Cer with α-Neu5Ac-(2→3)-β-Gal-(1→3… to N-acetyl-β-D-galactosamin….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78452"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_n-hexanoyl-sphing-4-enine-to-sphingosine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-hexanoyl-sphing-4-enine-to-sphingosine"
+      },
+      "note": "Shares α-Neu5Ac-(2→8)-α-Neu5Ac-(2→3)-β-Gal-(1→3)-β-GalNAc-(1→4)-[α-Neu5Ac-(2→8)-α-Neu5Ac-(2→3)]-β-Gal-(1→4)-β-Glc-(1↔1')-Cer(d18:1) with N-(hexanoyl)sphing-4-enine to sphingosine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78455"
           }
         ]
       }

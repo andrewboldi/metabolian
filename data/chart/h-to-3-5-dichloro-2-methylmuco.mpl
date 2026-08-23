@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway h-to-3-5-dichloro-2-methylmuco "H to 3,5-Dichloro-2-methylmuco…" {
-  spacing 192
+  spacing 216
 
   spine at 0,0 {
     h
@@ -18,13 +18,37 @@ pathway h-to-3-5-dichloro-2-methylmuco "H to 3,5-Dichloro-2-methylmuco…" {
 
   branch from h2o side left {
     h2o
-    <-> ec_1_1_1_186 [1.1.1.186] +nadh +h +dtdp_d_galacturonate +nad
-    dtdp_d_galactose
+    <-> . +n_acetyl_d_galactosamine +ganglioside_gm3_d18_1_12_0
+    ganglioside_gm2_d18_1_12_0
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_128 [3.2.1.128] +glycyrrhetinate +h +2_beta_d_glucuronosyl_d_glucuronate
-    glycyrrhizinate
+    <-> . +all_cis_7_10_13_hexadecatrienoic_acid +coa
+    7_10_13_hexadecatrienoylcoa
+  }
+
+  branch from h side left {
+    h
+    <-> . +heptosyl_heptosyl_kdo2_lipida +adp +heptosyl_kdo_2_lipid_a
+    adp_l_glycero_d_manno_heptose
+  }
+
+  branch from h side right {
+    h
+    <-> . +adp_l_glycero_d_manno_heptose +phospho_heptosyl_heptosyl_kdo2_lipida +inner_core_oligosaccharide_lipid_a
+    adp
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +l_histidine +l_arginine +l_phenylalanine
+    histidyl_phenylalanyl_arginine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +l_histidine +l_tryptophan
+    histidyl_tryptophanyl_histidine
   }
 }

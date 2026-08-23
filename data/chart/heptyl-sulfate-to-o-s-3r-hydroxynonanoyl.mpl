@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway heptyl-sulfate-to-o-s-3r-hydroxynonanoyl "heptyl sulfate to O-[S-(3R)-hydroxynonanoyl…" {
-  spacing 200
+  spacing 182
 
   spine at 0,0 {
     heptyl_sulfate
@@ -32,18 +32,6 @@ pathway heptyl-sulfate-to-o-s-3r-hydroxynonanoyl "heptyl sulfate to O-[S-(3R)-hy
     2_6_dichloroindophenol
   }
 
-  branch from succinate side left {
-    succinate
-    <-> . +2_aminophenyl_succinate +succinyl_coa
-    3_2_aminophenyl_succinyl_coa
-  }
-
-  branch from succinate side right {
-    succinate
-    <-> . +1_n6_etheno_2_deoxyadenosine_5_monophosphate_1 +akg +o2 +h2o +glyoxal +co2
-    2_deoxyadenosine_5_monophosphate_1
-  }
-
   branch from heptanoyl_coa side left {
     heptanoyl_coa
     <-> . +o2 +h2o2
@@ -56,15 +44,9 @@ pathway heptyl-sulfate-to-o-s-3r-hydroxynonanoyl "heptyl sulfate to O-[S-(3R)-hy
     o_heptanoyl_l_serine
   }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_161 [4.2.3.161] +fpp
-    3s_asterisca_2_9_6_diene
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_162 [4.2.3.162] +fpp
-    amorphene
+  branch from heptanal side left {
+    heptanal
+    <-> ec_1_2_1_3 [1.2.1.3] +h +nadph +heptanoate +h2o
+    nadp
   }
 }

@@ -111,71 +111,6 @@
       "xrefs": {
         "chebi": "CHEBI:18407"
       }
-    },
-    {
-      "id": "4_carboxyl_motiol",
-      "name": "4β-carboxyl motiol",
-      "formula": "C30H47O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:231459"
-      }
-    },
-    {
-      "id": "2_deoxypolytolypin",
-      "name": "2-deoxypolytolypin",
-      "formula": "C30H44O6",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:231462"
-      }
-    },
-    {
-      "id": "polytolypin",
-      "name": "polytolypin",
-      "formula": "C30H44O7",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:231461"
-      }
-    },
-    {
-      "id": "piperonal",
-      "name": "piperonal",
-      "formula": "C8H6O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:8240"
-      }
-    },
-    {
-      "id": "2s_2_2h_1_3_benzodioxol_5_yl_2_hydroxyacetonitr",
-      "name": "(2S)-2-(2H-1,3-benzodioxol-5-yl)-2-hydroxyacetonitrile",
-      "short": "2-(2H-1,3-benzodiox…",
-      "formula": "C9H7NO3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:197361"
-      }
-    },
-    {
-      "id": "formylthiophene",
-      "name": "formylthiophene",
-      "formula": "C5H4OS",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:87301"
-      }
-    },
-    {
-      "id": "2r_2_hydroxy_2_thiophen_2_yl_acetonitrile",
-      "name": "(2R)-2-hydroxy-2-(thiophen-2-yl)acetonitrile",
-      "short": "2-hydroxy-2-(thioph…",
-      "formula": "C6H5NOS",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:197332"
-      }
     }
   ],
   "enzymes": [
@@ -314,175 +249,49 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "4beta-carboxyl motiol + 4 reduced [NADPH--hemoprotein reductase] + 4 O2 = 2-deoxypolyto...",
-      "equation": "4beta-carboxyl motiol + 4 reduced [NADPH--hemoprotein reductase] + 4 O2 = 2-deoxypolytolypin + 4 oxidized [NADPH--hemoprotein reductase] + 5 H2O + 5 H(+)",
-      "substrates": [
-        {
-          "metabolite": "4_carboxyl_motiol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 4
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 4
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_deoxypolytolypin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 4
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 5
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 5
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:80231"
+      "id": "xt_z_4_hydroxyphenyl_acetaldehyde_oxime_n-n-dihydroxy-l-tyrosinate-to-s-4-hydroxymandelo",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "z_4_hydroxyphenyl_acetaldehyde_oxime"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "n-n-dihydroxy-l-tyrosinate-to-s-4-hydroxymandelo"
+      },
+      "note": "Shares (Z)-(4-hydroxyphenyl)acetaldehyde oxime with N,N-dihydroxy-L-tyrosinate to (S)-4-hydroxymandelonitri….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:80231"
+            "db": "ChEBI",
+            "id": "CHEBI:15667"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "2-deoxypolytolypin + reduced [NADPH--hemoprotein reductase] + O2 = polytolypin + oxidiz...",
-      "equation": "2-deoxypolytolypin + reduced [NADPH--hemoprotein reductase] + O2 = polytolypin + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "2_deoxypolytolypin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "polytolypin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:80235"
+      "id": "xt_s_4_hydroxymandelonitrile_n-n-dihydroxy-l-tyrosinate-to-s-4-hydroxymandelo",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_4_hydroxymandelonitrile"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "n-n-dihydroxy-l-tyrosinate-to-s-4-hydroxymandelo"
+      },
+      "note": "Shares (S)-4-hydroxymandelonitrile with N,N-dihydroxy-L-tyrosinate to (S)-4-hydroxymandelonitri….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:80235"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "piperonal + hydrogen cyanide = (2S)-2-(2H-1,3-benzodioxol-5-yl)-2-hydroxyacetonitrile",
-      "equation": "piperonal + hydrogen cyanide = (2S)-2-(2H-1,3-benzodioxol-5-yl)-2-hydroxyacetonitrile",
-      "substrates": [
-        {
-          "metabolite": "piperonal",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_cyanide",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2s_2_2h_1_3_benzodioxol_5_yl_2_hydroxyacetonitr",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:77451"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:77451"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "formylthiophene + hydrogen cyanide = (2R)-2-hydroxy-2-(thiophen-2-yl)acetonitrile",
-      "equation": "formylthiophene + hydrogen cyanide = (2R)-2-hydroxy-2-(thiophen-2-yl)acetonitrile",
-      "substrates": [
-        {
-          "metabolite": "formylthiophene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_cyanide",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2r_2_hydroxy_2_thiophen_2_yl_acetonitrile",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:77455"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:77455"
+            "db": "ChEBI",
+            "id": "CHEBI:16660"
           }
         ]
       }

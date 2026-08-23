@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-s-glutathionyl-dopachro-to-h2o "5-S-glutathionyl-dopachro… to H2O" {
-  spacing 188
+  spacing 254
 
   spine at 0,0 {
     5_s_glutathionyl_dopachrome_hydroquinone
@@ -20,37 +20,103 @@ pathway 5-s-glutathionyl-dopachro-to-h2o "5-S-glutathionyl-dopachro… to H2O" {
 
   branch from glutathione side left {
     glutathione
-    <-> . +12_dehydro_leukotriene_b4
-    12_oxo_c_ltb3
+    <-> . +urocanate
+    s_2_carboxy_1_1h_imidazol_4_yl_ethyl_glutathione
   }
 
   branch from glutathione side right {
     glutathione
-    <-> . +17beta_estradiol_2_3_quinone
-    2_hydroxy_17beta_estradiol_1_s_glutathione
+    <-> ec_2_5_1_18 [2.5.1.18] +glutathione_episulfonium_ion +bromide
+    1_2_dibromoethane
   }
 
-  branch from leucodopachrome side left {
-    leucodopachrome
-    <-> . +h +l_dopa +o2 +nadph +h2o
-    nadp
-  }
-
-  branch from 5_s_cysteinyldopa side right {
+  branch from 5_s_cysteinyldopa side left {
     5_s_cysteinyldopa
     <-> . +5_s_l_cysteinyl_dopaquinone +3_4_dihydro_1_4_benzothiazine_3_carboxylate +h
     1_4_benzothiazine_o_quinonimine
   }
 
+  branch from h2o side right {
+    h2o
+    <-> ec_1_21_98_2 [1.21.98.2] +2_5_diiminio_3_4_bis_indol_3_yl_hexanedioate +h2o2
+    2_iminio_3_indol_3_yl_propanoate
+  }
+
   branch from h2o side left {
     h2o
-    <-> ec_4_2_1_105 [4.2.1.105] +formononetin +h
-    2_7_dihydroxy_4_methoxyisoflavanone
+    <-> . +2_2_methylsulfanyl_butyl_maleate +h
+    2_4_methylthio_butylmalic_acid
+  }
+
+  branch from glutathione side right {
+    glutathione
+    <-> ec_2_5_1_18 [2.5.1.18] +s_formylmethyl_glutathione +bromide
+    2_bromoacetaldehyde
+  }
+
+  branch from glutathione side left {
+    glutathione
+    <-> . +2r_2_glutathion_s_yl_3_hydroxy_1_4_hydroxy_3_me +glutathione_disulfide
+    3_hydroxy_1_4_hydroxy_3_methoxyphenyl_propan_1_o
+  }
+
+  branch from h side right {
+    h
+    <-> . +diphosphate +31r_8_ethyl_12_methylbacteriochlorophyll_c +31r_8_ethyl_12_methylbacteriochlorophyllide_c
+    2e_6e_farnesyl_diphosphate
+  }
+
+  branch from h side left {
+    h
+    <-> . +diphosphate +31r_8_12_diethylbacteriochlorophyll_c +2e_6e_farnesyl_diphosphate
+    31r_8_12_diethylbacteriochlorophyllide_c
+  }
+
+  branch from l_dopa side right {
+    l_dopa
+    <-> ec_1_14_16_2 [1.14.16.2] +sapropterin +o2 +l_tyrosine +h2o
+    tetrahydrobiopterin_4a_carbinolamine
+  }
+
+  branch from l_dopa side left {
+    l_dopa
+    <-> ec_1_14_16_2 [1.14.16.2] +o2 +l_tyrosine +tetrahydrobiopterin_4a_carbinolamine +h2o
+    5_6_7_8_tetrahydrobiopterin
+  }
+
+  branch from l_cysteine side right {
+    l_cysteine
+    <-> . +s_indole_l_cysteine
+    indole_3_carbaldehyde
+  }
+
+  branch from l_cysteine side left {
+    l_cysteine
+    <-> ec_4_2_1_22 [4.2.1.22] +l_homocysteine +h +l_l_cystathionine
+    hydrogen_sulfide
+  }
+
+  branch from glycine side right {
+    glycine
+    <-> . +gamma_glu_cys_gamma_glu_cys_beta_ala +glutathione
+    gamma_l_glutamyl_l_cysteinyl_beta_alanine
+  }
+
+  branch from glycine side left {
+    glycine
+    <-> ec_2_3_1_13 [2.3.1.13] +3_phenylpropanoyl_coa +phenylpropionylglycine
+    coa
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_4_2_1_84 [4.2.1.84] +h +3_5_dibromo_4_hydroxybenzonitrile
-    3_5_dibromo_4_hydroxybenzamide
+    <-> . +2_2_methylsulfanyl_butyl_maleate +h
+    3_4_methylthio_butylmalic_acid
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +2_2_methylsulfanyl_pentyl_maleate +h
+    2_5_methylthio_pentylmalic_acid
   }
 }

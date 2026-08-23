@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway maltopentaose-to-d-maltotrionate "maltopentaose to D-maltotrionate" {
-  spacing 158
+  spacing 152
 
   spine at 0,0 {
     maltopentaose
@@ -14,11 +14,5 @@ pathway maltopentaose-to-d-maltotrionate "maltopentaose to D-maltotrionate" {
     d_maltotriono_1_5_lactone
     <-> . +h2o -hplus
     d_maltotrionate
-  }
-
-  branch from d_glcp_1_4_d_glcp_1_4_d_glcp side left {
-    d_glcp_1_4_d_glcp_1_4_d_glcp
-    <-> . +h2o +d_glucosyl_1_4_d_mannose
-    glucose
   }
 }

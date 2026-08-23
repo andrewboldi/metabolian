@@ -1,0 +1,465 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-oxoglutarate-to-5-oxo-2-furoyl-coa-null",
+  "name": "2-oxoglutarate to 5-oxo-2-furoyl-CoA",
+  "category": "other",
+  "summary": "A 3-step route from 2-oxoglutarate to 5-oxo-2-furoyl-CoA, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR196315"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_oxoglutarate",
+      "name": "2-oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1368744"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "2_oxoglutaryl_coa",
+      "name": "2-Oxoglutaryl-CoA",
+      "formula": "C26H40N7O20P3S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1370830"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "5_hydroxy_2_furoyl_coa",
+      "name": "5-hydroxy-2-furoyl-CoA",
+      "short": "5-hydroxy-2-furoyl-…",
+      "formula": "C26H33N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "metanetx": "MNXM727180"
+      }
+    },
+    {
+      "id": "5_oxo_2_furoyl_coa",
+      "name": "5-oxo-2-furoyl-CoA",
+      "formula": "C26H34N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM4393"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR196315",
+      "substrates": [
+        {
+          "metabolite": "2_oxoglutarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 6
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_oxoglutaryl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR196315"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196315"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR196317",
+      "substrates": [
+        {
+          "metabolite": "2_oxoglutaryl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 5
+        },
+        {
+          "metabolite": "5_hydroxy_2_furoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR196317"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196317"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR117900",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_hydroxy_2_furoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_oxo_2_furoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR117900"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR117900"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_2_oxoglutaryl_coa_2-oxoglutarate-to-5-oxo-2-furoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxoglutaryl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-oxoglutarate-to-5-oxo-2-furoyl-coa"
+      },
+      "note": "Shares 2-Oxoglutaryl-CoA with 2-oxoglutarate to 5-oxo-2-furoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1370830"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_oxoglutaryl_coa_2-oxoglutaryl-coa-to-s-8-glutaryldihydrolipoa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxoglutaryl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-oxoglutaryl-coa-to-s-8-glutaryldihydrolipoa"
+      },
+      "note": "Shares 2-Oxoglutaryl-CoA with 2-oxoglutaryl-CoA to S(8)-glutaryldihydrolipoa….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1370830"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_oxoglutaryl_coa_2-oxoglutaryl-coa-to-s-8-glutaryldihydrolipoa-nu",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxoglutaryl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-oxoglutaryl-coa-to-s-8-glutaryldihydrolipoa-nu"
+      },
+      "note": "Shares 2-Oxoglutaryl-CoA with 2-oxoglutaryl-CoA to S(8)-glutaryldihydrolipoa….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1370830"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_oxoglutaryl_coa_s-adenosyl-l-homocysteine-to-reduced-coenzyme-nu",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxoglutaryl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-reduced-coenzyme-nu"
+      },
+      "note": "Shares 2-Oxoglutaryl-CoA with S-adenosyl-L-homocysteine to reduced coenzyme….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1370830"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_oxoglutaryl_coa_sphing-4-enine-to-safingol-l-threo-sphing",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxoglutaryl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sphing-4-enine-to-safingol-l-threo-sphing"
+      },
+      "note": "Shares 2-Oxoglutaryl-CoA with sphing-4-enine to Safingol ( L-threo-sphing….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1370830"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_hydroxy_2_furoyl_coa_2-oxoglutarate-to-5-oxo-2-furoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_hydroxy_2_furoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-oxoglutarate-to-5-oxo-2-furoyl-coa"
+      },
+      "note": "Shares 5-hydroxy-2-furoyl-CoA with 2-oxoglutarate to 5-oxo-2-furoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM727180"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_hydroxy_2_furoyl_coa_divinyl-chlorophyllide-a-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_hydroxy_2_furoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "divinyl-chlorophyllide-a-to-h2o-null"
+      },
+      "note": "Shares 5-hydroxy-2-furoyl-CoA with divinyl chlorophyllide a to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM727180"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_hydroxy_2_furoyl_coa_h-to-cobalt-dihydrosirohydroch",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_hydroxy_2_furoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-cobalt-dihydrosirohydroch"
+      },
+      "note": "Shares 5-hydroxy-2-furoyl-CoA with H to cobalt-dihydrosirohydroch….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM727180"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_oxo_2_furoyl_coa_2-oxoglutarate-to-5-oxo-2-furoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_oxo_2_furoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-oxoglutarate-to-5-oxo-2-furoyl-coa"
+      },
+      "note": "Shares 5-oxo-2-furoyl-CoA with 2-oxoglutarate to 5-oxo-2-furoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM4393"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_oxo_2_furoyl_coa_s-adenosyl-l-homocysteine-to-reduced-coenzyme-nu",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_oxo_2_furoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-reduced-coenzyme-nu"
+      },
+      "note": "Shares 5-oxo-2-furoyl-CoA with S-adenosyl-L-homocysteine to reduced coenzyme….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM4393"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_oxo_2_furoyl_coa_s-adenosyl-l-homocysteine-to-udp-l-iduronate-nul",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_oxo_2_furoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-udp-l-iduronate-nul"
+      },
+      "note": "Shares 5-oxo-2-furoyl-CoA with S-adenosyl-L-homocysteine to UDP-β-L-iduronate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM4393"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_oxo_2_furoyl_coa_sphing-4-enine-to-safingol-l-threo-sphing",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_oxo_2_furoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sphing-4-enine-to-safingol-l-threo-sphing"
+      },
+      "note": "Shares 5-oxo-2-furoyl-CoA with sphing-4-enine to Safingol ( L-threo-sphing….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM4393"
+          }
+        ]
+      }
+    }
+  ]
+}

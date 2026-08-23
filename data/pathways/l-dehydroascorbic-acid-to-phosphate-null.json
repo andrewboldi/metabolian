@@ -1,0 +1,498 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-dehydroascorbic-acid-to-phosphate-null",
+  "name": "L-dehydroascorbic acid to phosphate",
+  "category": "other",
+  "summary": "A 3-step route from L-dehydroascorbic acid to phosphate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR163261"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_dehydroascorbic_acid",
+      "name": "L-dehydroascorbic acid",
+      "short": "L-dehydroascorbic…",
+      "formula": "C6H6O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1108062"
+      }
+    },
+    {
+      "id": "all_trans_antheraxanthin",
+      "name": "all-trans-antheraxanthin",
+      "short": "all-trans-antheraxa…",
+      "formula": "C40H56O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM586"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "l_ascorbate",
+      "name": "L-ascorbate",
+      "formula": "C6H7O6",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM727871"
+      }
+    },
+    {
+      "id": "all_trans_violaxanthin",
+      "name": "all-trans-violaxanthin",
+      "short": "all-trans-violaxant…",
+      "formula": "C40H56O4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM738452"
+      }
+    },
+    {
+      "id": "diphosphate",
+      "name": "diphosphate",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM11"
+      }
+    },
+    {
+      "id": "2_phospho_l_ascorbate",
+      "name": "2-phospho-L-ascorbate",
+      "short": "2-phospho-L-ascorba…",
+      "formula": "C6H7O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1370747"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR163261",
+      "substrates": [
+        {
+          "metabolite": "l_dehydroascorbic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "all_trans_antheraxanthin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_ascorbate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "all_trans_violaxanthin",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR163261"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR163261"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR197422",
+      "substrates": [
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_ascorbate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_phospho_l_ascorbate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR197422"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197422"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR197414",
+      "substrates": [
+        {
+          "metabolite": "2_phospho_l_ascorbate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_ascorbate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR197414"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197414"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_all_trans_antheraxanthin_3-epiecdysone-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_antheraxanthin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-epiecdysone-to-h2o"
+      },
+      "note": "Shares all-trans-antheraxanthin with 3-Epiecdysone to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM586"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_antheraxanthin_4-2-iminoethyl-phenol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_antheraxanthin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-2-iminoethyl-phenol-to-h2o"
+      },
+      "note": "Shares all-trans-antheraxanthin with 4-(2-iminoethyl)phenol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM586"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_antheraxanthin_9-cis-neoxanthin-to-all-trans-violaxanthin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_antheraxanthin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "9-cis-neoxanthin-to-all-trans-violaxanthin"
+      },
+      "note": "Shares all-trans-antheraxanthin with 9'-cis-neoxanthin to all-trans-violaxanthin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM586"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_antheraxanthin_aflatoxin-q1-to-aflatoxin-b1exo-8-9-epoxi",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_antheraxanthin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aflatoxin-q1-to-aflatoxin-b1exo-8-9-epoxi"
+      },
+      "note": "Shares all-trans-antheraxanthin with aflatoxin Q1 to Aflatoxin B1exo-8,9-epoxi….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM586"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_antheraxanthin_diaminobutyryl-citryl-eth-to-amp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_antheraxanthin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diaminobutyryl-citryl-eth-to-amp"
+      },
+      "note": "Shares all-trans-antheraxanthin with diaminobutyryl-citryl-eth… to AMP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM586"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_antheraxanthin_l-dehydroascorbic-acid-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_antheraxanthin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-dehydroascorbic-acid-to-phosphate"
+      },
+      "note": "Shares all-trans-antheraxanthin with L-dehydroascorbic acid to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM586"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_violaxanthin_4-2-iminoethyl-phenol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_violaxanthin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-2-iminoethyl-phenol-to-h2o"
+      },
+      "note": "Shares all-trans-violaxanthin with 4-(2-iminoethyl)phenol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM738452"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_violaxanthin_9-cis-neoxanthin-to-all-trans-violaxanthin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_violaxanthin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "9-cis-neoxanthin-to-all-trans-violaxanthin"
+      },
+      "note": "Shares all-trans-violaxanthin with 9'-cis-neoxanthin to all-trans-violaxanthin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM738452"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_violaxanthin_carotene-to-all-trans-violaxanthin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_violaxanthin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "carotene-to-all-trans-violaxanthin"
+      },
+      "note": "Shares all-trans-violaxanthin with β-carotene to all-trans-violaxanthin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM738452"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_violaxanthin_l-dehydroascorbic-acid-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_violaxanthin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-dehydroascorbic-acid-to-phosphate"
+      },
+      "note": "Shares all-trans-violaxanthin with L-dehydroascorbic acid to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM738452"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_phospho_l_ascorbate_2-dehydro-d-glucose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_phospho_l_ascorbate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-dehydro-d-glucose-to-h2o"
+      },
+      "note": "Shares 2-phospho-L-ascorbate with 2-Dehydro-D-glucose to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1370747"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_phospho_l_ascorbate_imp-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_phospho_l_ascorbate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "imp-to-h2o"
+      },
+      "note": "Shares 2-phospho-L-ascorbate with IMP to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1370747"
+          }
+        ]
+      }
+    }
+  ]
+}

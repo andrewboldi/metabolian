@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-gibberellin-a6 "UDP to gibberellin A6" {
-  spacing 294
+  spacing 216
 
   spine at 0,0 {
     udp
@@ -14,83 +14,5 @@ pathway udp-to-gibberellin-a6 "UDP to gibberellin A6" {
     gibberellin_a5
     <-> . +2_oxoglutarate +o2 -h -succinate -gibberellin_a6
     co2
-  }
-
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> ec_2_4_1_293 [2.4.1.293] +udp +n_acetylgalactosaminyl_2_glucosyl_n_acetylgalac +h
-    n_acetylgalactosaminyl_5_n_n_diacetylbacillosam
-  }
-
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> ec_2_4_1_293 [2.4.1.293] +udp +h +n_acetylgalactosaminyl_5_n_n_diacetylbacillosam
-    n_acetylgalactosaminyl_2_glucosaminyl_n_acetylg
-  }
-
-  branch from lsm_6641 side left {
-    lsm_6641
-    <-> . +nadp +h2o +h +o2 +nadph
-    gibberellin_a7
-  }
-
-  branch from 2_oxoglutarate side right {
-    2_oxoglutarate
-    <-> . +nadh +succinyl_coa +co2 +nad
-    coa
-  }
-
-  branch from 2_oxoglutarate side left {
-    2_oxoglutarate
-    <-> . +nadh +co2 +nad
-    d_threo_isocitrate
-  }
-
-  branch from o2 side right {
-    o2
-    <-> ec_1_10_3_10 [1.10.3.10] +ubiquinol_2 +h2o
-    ubiquinone_2
-  }
-
-  branch from o2 side left {
-    o2
-    <-> ec_1_14_13_141 [1.14.13.141] +nadh +h +cholest_4_en_3_one +nad +h2o
-    26_hydroxycholest_4_en_3_one
-  }
-
-  branch from co2 side right {
-    co2
-    <-> . +2_3_4_tribromo_1h_pyrrole +h
-    tribromopyrrole_2_carboxylate
-  }
-
-  branch from co2 side left {
-    co2
-    <-> . +salinisporamycin_a
-    rifsaliniketal
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +pitavastatin +phosphate +pitavastatin +h2o
-    atp
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    pitavastatin_m3
-  }
-
-  branch from succinate side right {
-    succinate
-    <-> . +adp +phosphate +atp +coa
-    succinyl_coa
-  }
-
-  branch from succinate side left {
-    succinate
-    <-> ec_1_3_5_1 [1.3.5.1] +ubiquinol_10 +fumarate
-    ubiquinone_10
   }
 }

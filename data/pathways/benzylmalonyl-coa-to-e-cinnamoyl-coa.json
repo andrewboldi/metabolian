@@ -110,70 +110,6 @@
       }
     },
     {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:30616"
-      }
-    },
-    {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57287"
-      }
-    },
-    {
-      "id": "amp",
-      "name": "AMP",
-      "formula": "C10H12N5O7P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:456215"
-      }
-    },
-    {
-      "id": "ppi",
-      "name": "Diphosphate (PPi)",
-      "formula": "HO7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:33019"
-      }
-    },
-    {
-      "id": "udp_d_glucose",
-      "name": "UDP-α-D-glucose",
-      "formula": "C15H22N2O17P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:58885"
-      }
-    },
-    {
-      "id": "1_o_trans_cinnamoyl_d_glucopyranose",
-      "name": "1-O-trans-cinnamoyl-β-D-glucopyranose",
-      "short": "1-O-trans-cinnamoyl…",
-      "formula": "C15H18O7",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16279"
-      }
-    },
-    {
-      "id": "udp",
-      "name": "UDP",
-      "formula": "C9H11N2O12P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58223"
-      }
-    },
-    {
       "id": "nadh",
       "name": "NADH",
       "formula": "C21H27N7O14P2",
@@ -200,6 +136,60 @@
       "xrefs": {
         "chebi": "CHEBI:57540"
       }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H30N9O15P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57692"
+      }
+    },
+    {
+      "id": "keto_phenylpyruvate",
+      "name": "keto-phenylpyruvate",
+      "formula": "C9H7O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:18005"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58307"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "3_phenylpyruvate",
+      "name": "3-phenylpyruvate",
+      "formula": "C9H7O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM730221"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "H2O2",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM732620"
+      }
     }
   ],
   "enzymes": [
@@ -225,18 +215,21 @@
       ]
     },
     {
-      "id": "ec_2_4_1_177",
-      "name": "cinnamate beta-D-glucosyltransferase",
-      "ec": [
-        "2.4.1.177"
-      ]
-    },
-    {
       "id": "ec_1_14_12_19",
       "name": "3-phenylpropanoate dioxygenase",
       "ec": [
         "1.14.12.19"
       ]
+    },
+    {
+      "id": "ec_1_1_3_15",
+      "name": "(S)-2-hydroxy-acid oxidase",
+      "ec": [
+        "1.1.3.15"
+      ],
+      "xrefs": {
+        "uniprot": "Q9UJM8"
+      }
     }
   ],
   "reactions": [
@@ -381,98 +374,6 @@
     },
     {
       "id": "r4",
-      "name": "(E)-cinnamate + ATP + CoA = (E)-cinnamoyl-CoA + AMP + diphosphate",
-      "equation": "(E)-cinnamate + ATP + CoA = (E)-cinnamoyl-CoA + AMP + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "trans_cinnamate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "e_cinnamoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "amp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:64788"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:64788"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "cinnamate beta-D-glucosyltransferase",
-      "equation": "(E)-cinnamate + UDP-alpha-D-glucose = 1-O-(trans-cinnamoyl)-beta-D-glucose + UDP",
-      "ec": "2.4.1.177",
-      "substrates": [
-        {
-          "metabolite": "trans_cinnamate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp_d_glucose",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_o_trans_cinnamoyl_d_glucopyranose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_4_1_177"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:13437"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:13437"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
       "name": "3-phenylpropanoate dioxygenase",
       "equation": "(E)-cinnamate + NADH + O2 + H(+) = (2E)-3-(cis-5,6-dihydroxycyclohexa-1,3-dien-1-yl)prop-2-enoate + NAD(+)",
       "ec": "1.14.12.19",
@@ -510,7 +411,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 4,
       "xrefs": {
         "rhea": "RHEA:25058"
       },
@@ -520,6 +421,161 @@
           {
             "db": "Rhea",
             "id": "RHEA:25058"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(R)-3-phenyllactate + FAD + H(+) = 3-phenylpyruvate + FADH2",
+      "equation": "(R)-3-phenyllactate + FAD + H(+) = 3-phenylpyruvate + FADH2",
+      "substrates": [
+        {
+          "metabolite": "r_3_phenyllactate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "keto_phenylpyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:82507"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82507"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "(S)-2-hydroxy-acid oxidase",
+      "ec": "1.1.3.15",
+      "substrates": [
+        {
+          "metabolite": "r_3_phenyllactate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_phenylpyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_3_15"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "metanetx": "MNXR144468"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR144468"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_e_cinnamoyl_coa_all-trans-undecaprenyl-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_cinnamoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "all-trans-undecaprenyl-to-nad"
+      },
+      "note": "Shares (E)-cinnamoyl-CoA with all-trans-undecaprenyl… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57252"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_cinnamoyl_coa_e-cinnamyl-alcohol-to-trans-pinosylvin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_cinnamoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "e-cinnamyl-alcohol-to-trans-pinosylvin"
+      },
+      "note": "Shares (E)-cinnamoyl-CoA with (E)-cinnamyl alcohol to trans-pinosylvin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57252"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_3_5s_6r_5_6_dihydroxycyclohexa_1_3_dienyl_acr_trans-3-coumarate-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_3_5s_6r_5_6_dihydroxycyclohexa_1_3_dienyl_acr"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-3-coumarate-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares (E)-3-[(5S,6R)-5,6-dihydroxycyclohexa-1,3-dienyl]acrylate with trans-3-coumarate to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61451"
           }
         ]
       }

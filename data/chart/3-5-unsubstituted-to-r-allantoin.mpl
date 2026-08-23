@@ -30,26 +30,26 @@ pathway 3-5-unsubstituted-to-r-allantoin "3',5'-unsubstituted… to (R)-(−)-al
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_82 [1.14.14.82] +3_unsubstituted_flavone +fmnh2 +o2 +h2o +hplus
-    3_hydroxyflavonoid
+    <-> ec_1_14_14_135 [1.14.14.135] +6as_11as_4_dimethylallyl_3_6a_9_trihydroxyptero +fmnh2 +o2 +h2o +hplus
+    glyceollin
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_19_67 [1.14.19.67] +r_reticulinium +fmnh2 +o2 +h2o +hplus
-    salutaridinium
+    <-> ec_1_14_14_5 [1.14.14.5] +alkanesulfonate_oxoanion +fmnh2 +o2 +sulfite +h2o +hplus
+    aldehyde
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_58 [2.5.1.58] +l_cysteine +fpp
-    s_2e_6e_farnesyl_l_cysteine
+    <-> ec_6_3_2_24 [6.3.2.24] +tyrosine +arginine +atp +amp +hplus
+    l_tyrosiniumyl_l_arginine
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_2_7_7_39 [2.7.7.39] +sn_glycerol_3_phosphate +ctp +hplus
-    2r_cdp_glycerol
+    <-> ec_4_6_1_1 [4.6.1.1] +atp
+    camp
   }
 
   branch from xanthine side left {
@@ -66,13 +66,85 @@ pathway 3-5-unsubstituted-to-r-allantoin "3',5'-unsubstituted… to (R)-(−)-al
 
   branch from 7_9_dihydro_1h_purine_2_6_8_3h_trione side left {
     7_9_dihydro_1h_purine_2_6_8_3h_trione
-    <-> ec_3_5_4_32 [3.5.4.32] +7_8_dihydro_8_oxoguanine +h2o +hplus
-    nh3
+    <-> ec_1_17_3_2 [1.17.3.2] +o2 +h2o +h2o2
+    6_8_dihydroxypurine
   }
 
   branch from 7_9_dihydro_1h_purine_2_6_8_3h_trione side right {
     7_9_dihydro_1h_purine_2_6_8_3h_trione
-    <-> ec_1_17_3_2 [1.17.3.2] +o2 +h2o +h2o2
-    6_8_dihydroxypurine
+    <-> . +h +adp +phosphate +h2o
+    atp
+  }
+
+  branch from fmnh2 side left {
+    fmnh2
+    <-> ec_1_14_14_52 [1.14.14.52] +4s_limonene +o2 +fmn +h2o +hplus
+    s_perillyl_alcohol
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> ec_1_14_14_57 [1.14.14.57] +lithocholate +o2 +fmn +h2o +hplus
+    hyodeoxycholate
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> . +n_hydroxy_l_tyrosinate +fmnh2 +o2 +h2o +hplus
+    n_n_dihydroxy_l_tyrosinate
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_29 [1.14.14.29] +25_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
+    7_25_dihydroxycholesterol
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_6_1_1_14 [6.1.1.14] +amp_3_end_1 +glycine +atp +amp
+    3_glycyladenylyl_zwitterionic_group
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_167 [4.2.3.167] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +h2o
+    3e_7e_dolabella_3_7_dien_18_ol
+  }
+
+  branch from xmp side left {
+    xmp
+    <-> . +h2o +pi
+    xanthosine
+  }
+
+  branch from xmp side right {
+    xmp
+    <-> ec_3_6_1_9 [3.6.1.9] +h2o +ppi +hplus
+    xtp
+  }
+
+  branch from xanthine side left {
+    xanthine
+    <-> ec_1_14_13_179 [1.14.13.179] +3_methyl_7h_xanthine +nadh +o2 +hplus +nad +h2o
+    formaldehyde
+  }
+
+  branch from xanthine side right {
+    xanthine
+    <-> ec_1_14_13_179 [1.14.13.179] +nadph +o2 +hplus +formaldehyde +nadp +h2o
+    3_methyl_7h_xanthine
+  }
+
+  branch from 7_9_dihydro_1h_purine_2_6_8_3h_trione side left {
+    7_9_dihydro_1h_purine_2_6_8_3h_trione
+    <-> ec_1_17_1_4 [1.17.1.4] +nadh +h +6_8_dihydroxypurine +h2o
+    nad
+  }
+
+  branch from 7_9_dihydro_1h_purine_2_6_8_3h_trione side right {
+    7_9_dihydro_1h_purine_2_6_8_3h_trione
+    <-> ec_1_17_3_2 [1.17.3.2] +h2o2 +o2 +h2o
+    hypoxanthine
   }
 }

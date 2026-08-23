@@ -1,0 +1,480 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "7-8-dihydroneopterin-to-glycolaldehyde-28346",
+  "name": "7,8-dihydroneopterin… to glycolaldehyde",
+  "category": "other",
+  "summary": "A 3-step route from 7,8-dihydroneopterin 3'-triphosphate(4−) to glycolaldehyde, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:28346"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58462"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "7_8_dihydroneopterin_3_triphosphate",
+      "name": "7,8-dihydroneopterin 3'-triphosphate",
+      "short": "7,8-dihydroneopteri…",
+      "formula": "C9H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58462"
+      }
+    },
+    {
+      "id": "7_8_dihydromonapterin_3_triphosphate",
+      "name": "7,8-dihydromonapterin 3-triphosphate",
+      "short": "7,8-dihydromonapter…",
+      "formula": "C9H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:61186"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "7_8_dihydromonapterin",
+      "name": "7,8-dihydromonapterin",
+      "short": "7,8-dihydromonapter…",
+      "formula": "C9H13N5O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:71175"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "6_hydroxymethyl_7_8_dihydropterin",
+      "name": "6-hydroxymethyl-7,8-dihydropterin",
+      "short": "6-hydroxymethyl-7,8…",
+      "formula": "C7H9N5O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM728662"
+      }
+    },
+    {
+      "id": "glycolaldehyde",
+      "name": "glycolaldehyde",
+      "formula": "C2H4O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM734590"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_1_99_7",
+      "name": "dihydroneopterin triphosphate 2'-epimerase",
+      "ec": [
+        "5.1.99.7"
+      ]
+    },
+    {
+      "id": "ec_4_1_2_25",
+      "name": "dihydroneopterin aldolase",
+      "ec": [
+        "4.1.2.25"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "dihydroneopterin triphosphate 2'-epimerase",
+      "equation": "7,8-dihydroneopterin 3'-triphosphate = 7,8-dihydromonapterin 3'-triphosphate",
+      "ec": "5.1.99.7",
+      "substrates": [
+        {
+          "metabolite": "7_8_dihydroneopterin_3_triphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_8_dihydromonapterin_3_triphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_1_99_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:28346"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28346"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "7,8-dihydromonapterin 3'-triphosphate + 3 H2O = 7,8-dihydromonapterin + 3 phosphate + 2...",
+      "equation": "7,8-dihydromonapterin 3'-triphosphate + 3 H2O = 7,8-dihydromonapterin + 3 phosphate + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "7_8_dihydromonapterin_3_triphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_8_dihydromonapterin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:34843"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34843"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "dihydroneopterin aldolase",
+      "ec": "4.1.2.25",
+      "substrates": [
+        {
+          "metabolite": "7_8_dihydromonapterin",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_hydroxymethyl_7_8_dihydropterin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycolaldehyde",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_2_25"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR198929"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198929"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_7_8_dihydroneopterin_3_triphosphate_2-amino-2-deoxy-d-gluconi-to-2-dehydro-3-deoxy-d",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_8_dihydroneopterin_3_triphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-amino-2-deoxy-d-gluconi-to-2-dehydro-3-deoxy-d"
+      },
+      "note": "Shares 7,8-dihydroneopterin 3'-triphosphate with 2-amino-2-deoxy-D-gluconi… to 2-dehydro-3-deoxy-D-arabi….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58462"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_8_dihydroneopterin_3_triphosphate_6-acetyl-2-amino-3-7-8-9-to-l-glutamate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_8_dihydroneopterin_3_triphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-acetyl-2-amino-3-7-8-9-to-l-glutamate"
+      },
+      "note": "Shares 7,8-dihydroneopterin 3'-triphosphate with 6-acetyl-2-amino-3,7,8,9-… to L-glutamate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58462"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_8_dihydroneopterin_3_triphosphate_6-acetyl-2-amino-3-7-8-9-to-l-glutamate-10720",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_8_dihydroneopterin_3_triphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-acetyl-2-amino-3-7-8-9-to-l-glutamate-10720"
+      },
+      "note": "Shares 7,8-dihydroneopterin 3'-triphosphate with 6-acetyl-2-amino-3,7,8,9-… to L-glutamate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58462"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_8_dihydroneopterin_3_triphosphate_7-8-dihydroneopterin-to-dihydrofolate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_8_dihydroneopterin_3_triphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-8-dihydroneopterin-to-dihydrofolate"
+      },
+      "note": "Shares 7,8-dihydroneopterin 3'-triphosphate with 7,8-dihydroneopterin to dihydrofolate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58462"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_8_dihydroneopterin_3_triphosphate_7-8-dihydroneopterin-to-dihydrofolate-10540",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_8_dihydroneopterin_3_triphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-8-dihydroneopterin-to-dihydrofolate-10540"
+      },
+      "note": "Shares 7,8-dihydroneopterin 3'-triphosphate with 7,8-dihydroneopterin to dihydrofolate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58462"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_8_dihydroneopterin_3_triphosphate_7-8-dihydroneopterin-to-glycolaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_8_dihydroneopterin_3_triphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-8-dihydroneopterin-to-glycolaldehyde"
+      },
+      "note": "Shares 7,8-dihydroneopterin 3'-triphosphate with 7,8-dihydroneopterin… to glycolaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58462"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_8_dihydroneopterin_3_triphosphate_aliphatic-primary-amide-to-acyl-coa-12673",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_8_dihydroneopterin_3_triphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aliphatic-primary-amide-to-acyl-coa-12673"
+      },
+      "note": "Shares 7,8-dihydroneopterin 3'-triphosphate with aliphatic primary amide to acyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58462"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_8_dihydromonapterin_3_triphosphate_7-8-dihydroneopterin-to-glycolaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_8_dihydromonapterin_3_triphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-8-dihydroneopterin-to-glycolaldehyde"
+      },
+      "note": "Shares 7,8-dihydromonapterin 3-triphosphate with 7,8-dihydroneopterin… to glycolaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61186"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_8_dihydromonapterin_7-8-dihydroneopterin-to-5-dehydro-d-gluconate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_8_dihydromonapterin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-8-dihydroneopterin-to-5-dehydro-d-gluconate"
+      },
+      "note": "Shares 7,8-dihydromonapterin with 7,8-dihydroneopterin to 5-dehydro-D-gluconate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:71175"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_8_dihydromonapterin_7-8-dihydroneopterin-to-5-dehydro-d-gluconate-45",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_8_dihydromonapterin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-8-dihydroneopterin-to-5-dehydro-d-gluconate-45"
+      },
+      "note": "Shares 7,8-dihydromonapterin with 7,8-dihydroneopterin to 5-dehydro-D-gluconate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:71175"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_8_dihydromonapterin_7-8-dihydroneopterin-to-glycolaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_8_dihydromonapterin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-8-dihydroneopterin-to-glycolaldehyde"
+      },
+      "note": "Shares 7,8-dihydromonapterin with 7,8-dihydroneopterin… to glycolaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:71175"
+          }
+        ]
+      }
+    }
+  ]
+}

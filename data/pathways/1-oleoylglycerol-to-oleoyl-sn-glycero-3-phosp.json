@@ -109,6 +109,44 @@
       "xrefs": {
         "chebi": "CHEBI:76083"
       }
+    },
+    {
+      "id": "hexacosan_1_ol",
+      "name": "hexacosan-1-ol",
+      "formula": "C26H54O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28415"
+      }
+    },
+    {
+      "id": "1_o_hexacosyl_oleate",
+      "name": "1-O-hexacosyl oleate",
+      "formula": "C44H86O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:232009"
+      }
+    },
+    {
+      "id": "16_methylheptadecan_1_ol",
+      "name": "16-methylheptadecan-1-ol",
+      "short": "16-methylheptadecan…",
+      "formula": "C18H38O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:84911"
+      }
+    },
+    {
+      "id": "1_o_16_methylheptadecyl_oleate",
+      "name": "1-O-16-methylheptadecyl oleate",
+      "short": "1-O-16-methylheptad…",
+      "formula": "C36H70O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:232010"
+      }
     }
   ],
   "enzymes": [],
@@ -230,6 +268,350 @@
           {
             "db": "Rhea",
             "id": "RHEA:38739"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "hexacosan-1-ol + (9Z)-octadecenoyl-CoA = 1-O-hexacosyl (9Z)-octadecenoate + CoA",
+      "equation": "hexacosan-1-ol + (9Z)-octadecenoyl-CoA = 1-O-hexacosyl (9Z)-octadecenoate + CoA",
+      "substrates": [
+        {
+          "metabolite": "hexacosan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oleoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_o_hexacosyl_oleate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:81795"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81795"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "16-methylheptadecan-1-ol + (9Z)-octadecenoyl-CoA = 1-O-16-methylheptadecyl (9Z)-octadec...",
+      "equation": "16-methylheptadecan-1-ol + (9Z)-octadecenoyl-CoA = 1-O-16-methylheptadecyl (9Z)-octadecenoate + CoA",
+      "substrates": [
+        {
+          "metabolite": "16_methylheptadecan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oleoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_o_16_methylheptadecyl_oleate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:81803"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81803"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_1_oleoylglycerol_1-3-dioleoyl-2-palmitoylg-to-8e-10s-10-hydropero",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_oleoylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-3-dioleoyl-2-palmitoylg-to-8e-10s-10-hydropero"
+      },
+      "note": "Shares 1-oleoylglycerol with 1,3-dioleoyl-2-palmitoylg… to (8E,10S)-10-hydroperoxy-8….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75342"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_oleoylglycerol_1-oleoyl-sn-glycerol-to-oleate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_oleoylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-oleoyl-sn-glycerol-to-oleate"
+      },
+      "note": "Shares 1-oleoylglycerol with 1-oleoyl-sn-glycerol to oleate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75342"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_oleoylglycerol_1-oleoylglycerol-to-oleate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_oleoylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-oleoylglycerol-to-oleate"
+      },
+      "note": "Shares 1-oleoylglycerol with 1-oleoylglycerol to oleate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75342"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_oleoylglycerol_laminarabiose-to-d-glucose-6-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_oleoylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "laminarabiose-to-d-glucose-6-phosphate"
+      },
+      "note": "Shares 1-oleoylglycerol with laminarabiose to β-D-glucose 6-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75342"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_3_dioleoylglycerol_1-3-dioleoyl-2-palmitoylg-to-8e-10s-10-hydropero",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_3_dioleoylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-3-dioleoyl-2-palmitoylg-to-8e-10s-10-hydropero"
+      },
+      "note": "Shares 1,3-dioleoylglycerol with 1,3-dioleoyl-2-palmitoylg… to (8E,10S)-10-hydroperoxy-8….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75735"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_3_dioleoylglycerol_1-oleoyl-sn-glycerol-to-oleate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_3_dioleoylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-oleoyl-sn-glycerol-to-oleate"
+      },
+      "note": "Shares 1,3-dioleoylglycerol with 1-oleoyl-sn-glycerol to oleate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75735"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_3_dioleoylglycerol_2-3-dioleoyl-sn-glycerol-to-oleate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_3_dioleoylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3-dioleoyl-sn-glycerol-to-oleate"
+      },
+      "note": "Shares 1,3-dioleoylglycerol with 2,3-dioleoyl-sn-glycerol to oleate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75735"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_3_dioleoylglycerol_3-oleoyl-sn-glycerol-to-oleate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_3_dioleoylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-oleoyl-sn-glycerol-to-oleate"
+      },
+      "note": "Shares 1,3-dioleoylglycerol with 3-oleoyl-sn-glycerol to oleate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75735"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_oleoyl_sn_glycerol_1-2-dioleoyl-sn-glycero-3-to-1-o-oleoyl-sn-glyce",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_oleoyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-dioleoyl-sn-glycero-3-to-1-o-oleoyl-sn-glyce"
+      },
+      "note": "Shares 1-oleoyl-sn-glycerol with 1,2-dioleoyl-sn-glycero-3… to 1-O-oleoyl-sn-glycero-3-p….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75757"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_oleoyl_sn_glycerol_1-oleoyl-2-linoleoyl-sn-g-to-3-hydroxypropanal",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_oleoyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-oleoyl-2-linoleoyl-sn-g-to-3-hydroxypropanal"
+      },
+      "note": "Shares 1-oleoyl-sn-glycerol with 1-oleoyl-2-linoleoyl-sn-g… to 3-hydroxypropanal.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75757"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_oleoyl_sn_glycerol_1-oleoyl-sn-glycerol-to-oleate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_oleoyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-oleoyl-sn-glycerol-to-oleate"
+      },
+      "note": "Shares 1-oleoyl-sn-glycerol with 1-oleoyl-sn-glycerol to oleate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75757"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_oleoyl_sn_glycerol_1-palmitoyl-2-3-dioleoyl-to-oleate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_oleoyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-palmitoyl-2-3-dioleoyl-to-oleate"
+      },
+      "note": "Shares 1-oleoyl-sn-glycerol with 1-palmitoyl-2,3-dioleoyl-… to oleate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:75757"
           }
         ]
       }

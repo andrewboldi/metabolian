@@ -137,34 +137,6 @@
       "xrefs": {
         "chebi": "CHEBI:43474"
       }
-    },
-    {
-      "id": "acetyl_coa",
-      "name": "Acetyl-CoA",
-      "formula": "C23H34N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57288"
-      }
-    },
-    {
-      "id": "3_n_acetyl_l_seryl_adenylyl_1",
-      "name": "3'-(N-acetyl-L-seryl)adenylyl(1−)",
-      "short": "3'-(N-acetyl-L-sery…",
-      "formula": "C15H19N6O9P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:232072"
-      }
-    },
-    {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57287"
-      }
     }
   ],
   "enzymes": [
@@ -173,21 +145,30 @@
       "name": "serine--tRNA ligase",
       "ec": [
         "6.1.1.11"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P49591"
+      }
     },
     {
       "id": "ec_2_7_1_164",
       "name": "O-phosphoseryl-tRNA(Sec) kinase",
       "ec": [
         "2.7.1.164"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q8IV42"
+      }
     },
     {
       "id": "ec_2_9_1_2",
       "name": "O-phospho-L-seryl-tRNA(Sec):L-selenocysteinyl-tRNA synthase",
       "ec": [
         "2.9.1.2"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q9HD40"
+      }
     }
   ],
   "reactions": [
@@ -341,42 +322,247 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "L-seryl-tRNA(Ser) + acetyl-CoA = N-acetyl-L-seryl-tRNA(Ser) + CoA",
-      "equation": "L-seryl-tRNA(Ser) + acetyl-CoA = N-acetyl-L-seryl-tRNA(Ser) + CoA",
-      "substrates": [
-        {
-          "metabolite": "3_l_seryl_adenylyl_1_group",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "acetyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_n_acetyl_l_seryl_adenylyl_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:82075"
+      "id": "xt_3_l_seryl_adenylyl_1_group_amino-acid-ester-to-l-argininium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_l_seryl_adenylyl_1_group"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "amino-acid-ester-to-l-argininium"
+      },
+      "note": "Shares 3'-(L-seryl)adenylyl(1−) group with α-amino acid ester to L-argininium.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:82075"
+            "db": "ChEBI",
+            "id": "CHEBI:78533"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_l_seryl_adenylyl_1_group_ditrans-polycis-undecapre-to-amp-3-end-1",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_l_seryl_adenylyl_1_group"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ditrans-polycis-undecapre-to-amp-3-end-1"
+      },
+      "note": "Shares 3'-(L-seryl)adenylyl(1−) group with ditrans,polycis-undecapre… to AMP 3'-end(1−).",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78533"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_l_seryl_adenylyl_1_group_l-methionyl-l-aspartyl-to-amp-3-end-1",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_l_seryl_adenylyl_1_group"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-methionyl-l-aspartyl-to-amp-3-end-1"
+      },
+      "note": "Shares 3'-(L-seryl)adenylyl(1−) group with L-methionyl-L-aspartyl… to AMP 3'-end(1−).",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78533"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_l_seryl_adenylyl_1_group_l-selenocystathionine-to-3-l-selenocysteinyl-ade",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_l_seryl_adenylyl_1_group"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-selenocystathionine-to-3-l-selenocysteinyl-ade"
+      },
+      "note": "Shares 3'-(L-seryl)adenylyl(1−) group with L-selenocystathionine to 3'-(L-selenocysteinyl)ade….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78533"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_o_phosphonato_l_seryl_adenylyl_2_group_6-sulfo-d-quinovose-to-l-cysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_o_phosphonato_l_seryl_adenylyl_2_group"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-sulfo-d-quinovose-to-l-cysteine"
+      },
+      "note": "Shares 3'-(O-phosphonato-L-seryl)adenylyl(2−) group with 6-sulfo-D-quinovose to L-cysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78551"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_o_phosphonato_l_seryl_adenylyl_2_group_d-galactose-to-2-o-d-mannosyl-1-2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_o_phosphonato_l_seryl_adenylyl_2_group"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-galactose-to-2-o-d-mannosyl-1-2"
+      },
+      "note": "Shares 3'-(O-phosphonato-L-seryl)adenylyl(2−) group with α-D-galactose to 2-O-[α-D-mannosyl-(1→2)-α….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78551"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_selenophosphate_5-carboxymethylaminomethy-to-5-methylaminomethyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "selenophosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-carboxymethylaminomethy-to-5-methylaminomethyl"
+      },
+      "note": "Shares selenophosphate with 5-carboxymethylaminomethy… to 5-methylaminomethyl-2-sel….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16144"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_selenophosphate_l-selenocystathionine-to-3-l-selenocysteinyl-ade",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "selenophosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-selenocystathionine-to-3-l-selenocysteinyl-ade"
+      },
+      "note": "Shares selenophosphate with L-selenocystathionine to 3'-(L-selenocysteinyl)ade….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16144"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_selenophosphate_sedoheptulose-to-2-oxoglutarate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "selenophosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sedoheptulose-to-2-oxoglutarate"
+      },
+      "note": "Shares selenophosphate with sedoheptulose to 2-oxoglutarate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16144"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_selenophosphate_selenophosphate-to-hydrogen-acceptor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "selenophosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "selenophosphate-to-hydrogen-acceptor"
+      },
+      "note": "Shares selenophosphate with selenophosphate to hydrogen acceptor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16144"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_l_selenocysteinyl_adenylyl_1_group_l-selenocystathionine-to-3-l-selenocysteinyl-ade",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_l_selenocysteinyl_adenylyl_1_group"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-selenocystathionine-to-3-l-selenocysteinyl-ade"
+      },
+      "note": "Shares 3'-(L-selenocysteinyl)adenylyl(1−) group with L-selenocystathionine to 3'-(L-selenocysteinyl)ade….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78573"
           }
         ]
       }

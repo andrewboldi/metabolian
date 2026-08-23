@@ -18,27 +18,15 @@ pathway 6-carboxymethyl-5-methyl-to-s-guanylylpyridinol "6-carboxymethyl-5-methy
     s_guanylylpyridinol_l_cysteine_1
   }
 
-  branch from sah side left {
-    sah
-    <-> . +cytidine_5_monophosphate_1 +sam +hplus
-    5_methylcytidine_5_monophosphate_1
+  branch from l_cysteine side left {
+    l_cysteine
+    <-> ec_2_3_1_100 [2.3.1.100] +palmitoyl_coa +coa
+    s_palmitoyl_l_cysteine
   }
 
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_337 [2.1.1.337] +r_reticulinium +sam +hplus
-    r_tembetarine
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +gtp +atp
-    cyclic_amp_amp_gmp
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +utp
-    cyclic_di_ump
+  branch from l_cysteine side right {
+    l_cysteine
+    <-> ec_4_4_1_39 [4.4.1.39] +s_3_2r_phycoerythrobilin_l_cysteine_2
+    3e_phycoerythrobilin
   }
 }

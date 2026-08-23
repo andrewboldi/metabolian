@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-hydroxysteroid-4-carb-to-hydrogen-donor "3β-hydroxysteroid-4α-carb… to hydrogen donor" {
-  spacing 314
+  spacing 302
 
   spine at 0,0 {
     3_hydroxysteroid_4_carboxylate
@@ -24,7 +24,7 @@ pathway 3-hydroxysteroid-4-carb-to-hydrogen-donor "3β-hydroxysteroid-4α-carb�
 
   branch from 3_oxo_steroid side right {
     3_oxo_steroid
-    <-> ec_1_1_1_270 [1.1.1.270] +nadp +nadph +hplus
+    <-> . +nad +nadh +hplus
     3_hydroxy_steroid
   }
 
@@ -32,17 +32,5 @@ pathway 3-hydroxysteroid-4-carb-to-hydrogen-donor "3β-hydroxysteroid-4α-carb�
     3_oxo_1_steroid
     <-> . +h2o
     1_hydroxy_3_oxo_steroid
-  }
-
-  branch from hydrogen_donor side right {
-    hydrogen_donor
-    <-> . +linoleate +o2 +hydrogen_acceptor +h2o
-    9_hode
-  }
-
-  branch from hydrogen_donor side left {
-    hydrogen_donor
-    <-> . +7_chloro_l_tryptophan +o2 +hydrogen_acceptor +co2 +h2o
-    monodechloroaminopyrrolnitrin
   }
 }

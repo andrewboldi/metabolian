@@ -4,95 +4,15 @@
 # edit the generator, not this file.
 
 pathway 4-hydroxy-2-oxopentanoic-to-h2o "4-hydroxy-2-oxopentanoic… to H2O" {
-  spacing 290
+  spacing 224
 
   spine at 0,0 {
     4_hydroxy_2_oxopentanoic_acid
-    <-> ec_4_1_2_52 [4.1.2.52] -pyruvate -acetaldehyde
-    h
-    <-> ec_4_1_2_4 [4.1.2.4] +glyceraldehyde_3_phosphate +acetaldehyde -h
-    2_deoxy_d_ribose_5_phosphate
-    <-> . +h +adp -deoxyribose
-    atp
-    <-> . +h +adp +deoxyribose +phosphate -atp -h2o
-    deoxyribose
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    pc_18_3_9z_12z_15z_18_2_9z_12z
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_9z_octadecenoyl_2_9z_12z_15z_octadecatrienoyl
-  }
-
-  branch from pyruvate side left {
-    pyruvate
-    <-> . +n_acetyl_beta_d_glucosamine_6_phosphate +phosphoenolpyruvate
-    n_acetyl_beta_d_glucosamine
-  }
-
-  branch from pyruvate side right {
-    pyruvate
-    <-> . +trans_trans_2_4_dihydroxy_5_methyl_6_oxo_2_4_hex +h2o +h
-    2_methyl_3_oxopropanoate
-  }
-
-  branch from acetaldehyde side left {
-    acetaldehyde
-    <-> . +4_hydroxy_5_methyl_3_2h_furanone +h2o
-    2e_2_ethylidene_4_hydroxy_5_methyl_3_2h_furanon
-  }
-
-  branch from acetaldehyde side right {
-    acetaldehyde
-    <-> . +prefumagillin +o2
-    prefumagillin_aldehyde
-  }
-
-  branch from 2_deoxy_d_ribose_5_phosphate side left {
-    2_deoxy_d_ribose_5_phosphate
-    <-> ec_2_7_1_229 [2.7.1.229] +atp +h +adp
-    aldehydo_2_deoxy_d_ribose
-  }
-
-  branch from 2_deoxy_d_ribose_5_phosphate side right {
-    2_deoxy_d_ribose_5_phosphate
-    <-> . +phosphate +h2o
-    2_deoxy_d_ribofuranose
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    pc_18_2_9z_12z_18_3_9z_12z_15z
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph
-  }
-
-  branch from deoxyribose side left {
-    deoxyribose
-    <-> . +h2o +phosphate
-    2_deoxy_alpha_d_ribose_1_phosphate
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_alanine +l_tyrosine
-    tyr_ala
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_serine +l_arginine +l_tyrosine
-    tyrosyl_arginyl_serine
+    <-> . +co2 -h -h2o
+    z_5_oxohex_2_enedioate
+    <-> ec_3_5_99_5 [3.5.99.5] +h +nh4 -h2o
+    2e_4z_2_aminomuconic_acid
+    <-> ec_1_2_1_32 [1.2.1.32] +nadh +h -nad -h2o
+    2_aminomuconate_6_semialdehyde
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-cholestan-3-one-to-amp "5α-cholestan-3-one to AMP" {
-  spacing 254
+  spacing 326
 
   spine at 0,0 {
     5_cholestan_3_one
@@ -28,37 +28,109 @@ pathway 5-cholestan-3-one-to-amp "5α-cholestan-3-one to AMP" {
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_14_15_10 [1.14.15.10] +di_sulfido_diiron +r_camphor +o2 +hplus +h2o
-    6_endo_hydroxycamphor
+    <-> . +epothilone_d +di_sulfido_diiron +o2 +hplus +h2o
+    epothilone_b
   }
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_14_15_15 [1.14.15.15] +triol_ca +di_sulfido_diiron +o2 +hplus +h2o
-    25r_3_7_12_trihydroxy_5_cholestan_26_oate
+    <-> ec_1_14_15_17 [1.14.15.17] +pheophorbide_a +di_sulfido_diiron +o2 +hplus
+    red_chlorophyll_catabolite
   }
 
   branch from diphosphate side right {
     diphosphate
-    <-> . +h +adp +phosphate +atp
-    h2o
+    <-> . +2z_6e_10e_geranylgeranyl_diphosphate +h +farnesyl_diphosphate
+    dimethylallyl_diphosphate
   }
 
   branch from diphosphate side left {
     diphosphate
-    <-> . +6_7_dihydro_5_oxo_12_epi_ltb4 +atp +coa +h +amp
-    5_oxo_12_s_hydroxy_eicosa_8e_10e_14z_trienoyl_co
+    <-> ec_6_2_1_3 [6.2.1.3] +2e_hexadecenoyl_coa +amp +atp +coa
+    9z_hexadecenoate
   }
 
   branch from amp side right {
     amp
-    <-> . +diphosphate +10_11_dihydro_ltb4_coa +atp +coa
-    10_11_dihydro_leukotriene_b4
+    <-> ec_2_7_4_10 [2.7.4.10] +utp +adp
+    udp
   }
 
   branch from amp side left {
     amp
-    <-> . +diphosphate +10_11_dihydro_ltb4_coa +h +atp +coa
-    6_7_dihydro_12_epi_ltb4
+    <-> ec_3_6_1_21 [3.6.1.21] +adp_alpha_d_mannose +h2o +h
+    alpha_d_mannose_1_phosphate
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> . +pheophorbide_a +o2 +hplus +di_sulfido_diiron +h2o
+    epoxypheophorbide_a
+  }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> ec_1_3_7_14 [1.3.7.14] +bacteriochlorophyllide_g +di_sulfido_diiron +adp +pi +atp +h2o +hplus
+    divinyl_chlorophyllide_a
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_3_7_15 [1.3.7.15] +bacteriochlorophyllide_a +adp +pi +di_sulfido_diiron +atp +h2o +hplus
+    3_acetylchlorophyllide_a
+  }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> . +25_hydroxy_24_oxocalciol +di_sulfido_diiron +o2 +hplus +h2o
+    1s_1_25_dihydroxy_24_oxocalciol
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_3_6_3_25 [3.6.3.25] +h +adp +phosphate +h2o
+    thiosulfate
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_6_3_2_4 [6.3.2.4] +d_alanyl_d_alanine +udp_n_acetyl_muramoyl_l_alanyl_d_glutamyl_l_lysi +adp +udp_n_acetyl_alpha_d_muramoyl_l_alanyl_gamma_d_g +phosphate
+    h
+  }
+
+  branch from coa side right {
+    coa
+    <-> . +deoxycholoyl_coa +taurine +h
+    taurodeoxycholate
+  }
+
+  branch from coa side left {
+    coa
+    <-> . +n_acetyl_l_alaninate +h +l_alanine
+    acetyl_coa
+  }
+
+  branch from diphosphate side right {
+    diphosphate
+    <-> . +udp_alpha_d_galacturonate +h +1_phospho_alpha_d_galacturonate
+    utp
+  }
+
+  branch from diphosphate side left {
+    diphosphate
+    <-> ec_1_2_1_31 [1.2.1.31] +l_2_aminoadipate_adenylate +h +atp
+    l_2_aminoadipate
+  }
+
+  branch from amp side right {
+    amp
+    <-> . +diphosphate +r_methylmalonyl_coa +atp +coa
+    methylmalonate
+  }
+
+  branch from amp side left {
+    amp
+    <-> ec_6_2_1_11 [6.2.1.11] +biotinyl_5_amp +coa +h
+    biotinyl_coa
   }
 }

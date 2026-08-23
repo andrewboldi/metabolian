@@ -147,42 +147,6 @@
       "xrefs": {
         "chebi": "CHEBI:64815"
       }
-    },
-    {
-      "id": "ferruginol",
-      "name": "ferruginol",
-      "formula": "C20H30O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:78274"
-      }
-    },
-    {
-      "id": "pisiferate",
-      "name": "(+)-pisiferate",
-      "formula": "C20H27O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:167487"
-      }
-    },
-    {
-      "id": "asperterpenoid_a",
-      "name": "asperterpenoid A",
-      "formula": "C25H37O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:167512"
-      }
-    },
-    {
-      "id": "asperterpenoid_c",
-      "name": "asperterpenoid C",
-      "formula": "C25H37O4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:167514"
-      }
     }
   ],
   "enzymes": [
@@ -412,105 +376,71 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "ferruginol + 3 reduced [NADPH--hemoprotein reductase] + 3 O2 = pisiferate + 3 oxidized ...",
-      "equation": "ferruginol + 3 reduced [NADPH--hemoprotein reductase] + 3 O2 = pisiferate + 3 oxidized [NADPH--hemoprotein reductase] + 4 H2O + 4 H(+)",
-      "substrates": [
-        {
-          "metabolite": "ferruginol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 3
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "pisiferate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 4
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 4
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:66804"
+      "id": "xt_r_camphor_geranyl-diphosphate-to-6-exo-hydroxycamphor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_camphor"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "geranyl-diphosphate-to-6-exo-hydroxycamphor"
+      },
+      "note": "Shares (R)-camphor with geranyl diphosphate to (+)-6-exo-hydroxycamphor.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:66804"
+            "db": "ChEBI",
+            "id": "CHEBI:15396"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "asperterpenoid A + reduced [NADPH--hemoprotein reductase] + O2 = asperterpenoid C + oxi...",
-      "equation": "asperterpenoid A + reduced [NADPH--hemoprotein reductase] + O2 = asperterpenoid C + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "asperterpenoid_a",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "asperterpenoid_c",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:66844"
+      "id": "xt_r_camphor_n-acyl-d-amino-acid-to-di-sulfido-diiron",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_camphor"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acyl-d-amino-acid-to-di-sulfido-diiron"
+      },
+      "note": "Shares (R)-camphor with N-acyl-D-α-amino acid… to di-μ-sulfido-diiron.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:66844"
+            "db": "ChEBI",
+            "id": "CHEBI:15396"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_2_2_3_trimethyl_5_oxocyclopent_3_en_1_yl_acet_1s-bornane-2-5-dione-to-delta2-5-3-4-4-trimethy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_2_2_3_trimethyl_5_oxocyclopent_3_en_1_yl_acet"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1s-bornane-2-5-dione-to-delta2-5-3-4-4-trimethy"
+      },
+      "note": "Shares [(R)-2,2,3-trimethyl-5-oxocyclopent-3-en-1-yl]acetate with (1S)-bornane-2,5-dione to Delta2,5-3,4,4-trimethylp….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64815"
           }
         ]
       }

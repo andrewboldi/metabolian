@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway brevianamide-f-to-diphosphate "brevianamide F to diphosphate" {
-  spacing 338
+  spacing 302
 
   spine at 0,0 {
     brevianamide_f
@@ -30,41 +30,5 @@ pathway brevianamide-f-to-diphosphate "brevianamide F to diphosphate" {
     tryprostatin_b
     <-> . +nadph +o2 +hplus +nadp +h2o
     demethoxyfumitremorgin_c
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +utp +gtp
-    c_gmp_ump
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_214 [4.2.3.214] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    5r_12r_14s_dolasta_1_15_8_diene
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +decan_1_ol +fmnh2 +o2 +h2o +hplus
-    1_3_decanediol
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +dodecan_1_ol +fmnh2 +o2 +h2o +hplus
-    1_5_dodecanediol
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +uridine_5_monophosphate_1 +sam +hplus
-    5_methyluridine_5_monophosphate_1
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +sam +5_methyluridine_5_monophosphate_1 +hplus
-    uridine_5_monophosphate_1
   }
 }

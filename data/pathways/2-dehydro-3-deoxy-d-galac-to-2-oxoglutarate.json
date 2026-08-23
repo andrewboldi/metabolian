@@ -121,44 +121,6 @@
       "xrefs": {
         "chebi": "CHEBI:16810"
       }
-    },
-    {
-      "id": "r_2_hydroxyglutarate",
-      "name": "(R)-2-hydroxyglutarate",
-      "short": "2-hydroxyglutarate",
-      "formula": "C5H6O5",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:15801"
-      }
-    },
-    {
-      "id": "nad",
-      "name": "NAD+",
-      "formula": "C21H26N7O14P2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:57540"
-      }
-    },
-    {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57945"
-      }
-    },
-    {
-      "id": "s_2_hydroxyglutarate",
-      "name": "(S)-2-hydroxyglutarate",
-      "short": "2-hydroxyglutarate",
-      "formula": "C5H6O5",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:16782"
-      }
     }
   ],
   "enzymes": [
@@ -195,14 +157,10 @@
       "name": "triose-phosphate isomerase",
       "ec": [
         "5.3.1.1"
-      ]
-    },
-    {
-      "id": "ec_1_1_1_399",
-      "name": "2-oxoglutarate reductase",
-      "ec": [
-        "1.1.1.399"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P60174"
+      }
     }
   ],
   "reactions": [
@@ -371,95 +329,27 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "2-oxoglutarate reductase",
-      "equation": "(R)-2-hydroxyglutarate + NAD(+) = 2-oxoglutarate + NADH + H(+)",
-      "ec": "1.1.1.399",
-      "substrates": [
-        {
-          "metabolite": "r_2_hydroxyglutarate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_1_1_399"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:49612"
+      "id": "xt_2_dehydro_3_deoxy_d_galactonate_d-galactono-1-4-lactone-to-l-serine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_dehydro_3_deoxy_d_galactonate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "d-galactono-1-4-lactone-to-l-serine"
+      },
+      "note": "Shares 2-dehydro-3-deoxy-D-galactonate with D-galactono-1,4-lactone to L-serine.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:49612"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "(S)-2-hydroxyglutarate + NAD(+) = 2-oxoglutarate + NADH + H(+)",
-      "equation": "(S)-2-hydroxyglutarate + NAD(+) = 2-oxoglutarate + NADH + H(+)",
-      "substrates": [
-        {
-          "metabolite": "s_2_hydroxyglutarate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:57172"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:57172"
+            "db": "ChEBI",
+            "id": "CHEBI:57989"
           }
         ]
       }

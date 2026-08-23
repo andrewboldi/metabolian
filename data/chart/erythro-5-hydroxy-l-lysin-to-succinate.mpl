@@ -26,51 +26,22 @@ pathway erythro-5-hydroxy-l-lysin-to-succinate "erythro-5-hydroxy-L-lysin… to 
     deacetylcephalosporin_c
   }
 
-  branch from l_allysine side left {
-    l_allysine
-    <-> ec_1_4_3_20 [1.4.3.20] +o2 +h2o +h2o2 +nh3
-    l_lysinium
-  }
 
-  branch from l_allysine side right {
-    l_allysine
-    <-> ec_1_5_3_18 [1.5.3.18] +l_saccharopinate +o2 +h2o +h2o2
-    glutamate
-  }
 
-  branch from nh3 side left {
-    nh3
-    <-> ec_4_3_1_19 [4.3.1.19] +threonine
-    oxobut
-  }
 
-  branch from nh3 side right {
-    nh3
-    <-> ec_3_5_4_8 [3.5.4.8] +4_aminoimidazole +h2o +hplus
-    3_5_dihydro_4h_imidazol_4_one
-  }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_56 [4.2.3.56] +fpp
-    himachalene
-  }
 
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_56 [4.2.3.56] +fpp
-    himachalene
-  }
 
-  branch from succinate side left {
-    succinate
-    <-> . +trans_3_hydroxy_l_proline +akg +o2 +co2
-    3s_3_4_dihydroxy_l_proline
-  }
 
-  branch from succinate side right {
-    succinate
-    <-> ec_1_14_11_79 [1.14.11.79] +l_histidine +akg +o2 +co2
-    3s_3_hydroxy_l_histidine
-  }
+
+
+
+
+
+
+
+
+
+
+
 }

@@ -1,0 +1,336 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-vinylglycine-to-glycine-51916",
+  "name": "L-vinylglycine to glycine",
+  "category": "other",
+  "summary": "A 3-step route from L-vinylglycine zwitterion to glycine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:51916"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:134467"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_vinylglycine",
+      "name": "L-vinylglycine",
+      "formula": "C4H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:134467"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "oxobut",
+      "name": "2-Oxobutanoate",
+      "formula": "C4H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16763"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "l_kynurenine",
+      "name": "L-kynurenine",
+      "formula": "C10H12N2O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57959"
+      }
+    },
+    {
+      "id": "4_2_aminophenyl_2_4_dioxobutanoate",
+      "name": "4-(2-aminophenyl)-2,4-dioxobutanoate",
+      "short": "4-(2-aminophenyl)-2…",
+      "formula": "C10H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58147"
+      }
+    },
+    {
+      "id": "l_aminobutyrate",
+      "name": "L-α-aminobutyrate",
+      "formula": "C4H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:74359"
+      }
+    },
+    {
+      "id": "glyoxylate",
+      "name": "Glyoxylate",
+      "formula": "C2HO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36655"
+      }
+    },
+    {
+      "id": "glycine",
+      "name": "Glycine",
+      "formula": "C2H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57305"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(2S)-2-amino-3-butenoate + H2O = 2-oxobutanoate + NH4(+)",
+      "equation": "(2S)-2-amino-3-butenoate + H2O = 2-oxobutanoate + NH4(+)",
+      "substrates": [
+        {
+          "metabolite": "l_vinylglycine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "oxobut",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:51916"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51916"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2-oxobutanoate + L-kynurenine = 4-(2-aminophenyl)-2,4-dioxobutanoate + (2S)-2-aminobuta...",
+      "equation": "2-oxobutanoate + L-kynurenine = 4-(2-aminophenyl)-2,4-dioxobutanoate + (2S)-2-aminobutanoate",
+      "substrates": [
+        {
+          "metabolite": "oxobut",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_kynurenine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_2_aminophenyl_2_4_dioxobutanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_aminobutyrate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:66048"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:66048"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(2S)-2-aminobutanoate + glyoxylate = 2-oxobutanoate + glycine",
+      "equation": "(2S)-2-aminobutanoate + glyoxylate = 2-oxobutanoate + glycine",
+      "substrates": [
+        {
+          "metabolite": "l_aminobutyrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glyoxylate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "oxobut",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:77339"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77339"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_l_vinylglycine_l-canavanine-to-o-ureidohomoserine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_vinylglycine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-canavanine-to-o-ureidohomoserine"
+      },
+      "note": "Shares L-vinylglycine with L-canavanine to O-Ureidohomoserine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:134467"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_vinylglycine_l-canavanine-to-o-ureidohomoserine-62444",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_vinylglycine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-canavanine-to-o-ureidohomoserine-62444"
+      },
+      "note": "Shares L-vinylglycine with L-canavanine to O-Ureidohomoserine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:134467"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_vinylglycine_l-vinylglycine-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_vinylglycine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-vinylglycine-to-coa"
+      },
+      "note": "Shares L-vinylglycine with L-vinylglycine to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:134467"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_vinylglycine_l-vinylglycine-to-coa-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_vinylglycine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-vinylglycine-to-coa-null"
+      },
+      "note": "Shares L-vinylglycine with L-vinylglycine to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:134467"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_vinylglycine_l-vinylglycine-to-glycine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_vinylglycine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-vinylglycine-to-glycine"
+      },
+      "note": "Shares L-vinylglycine with L-vinylglycine to glycine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:134467"
+          }
+        ]
+      }
+    }
+  ]
+}

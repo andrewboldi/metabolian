@@ -4,18 +4,12 @@
 # edit the generator, not this file.
 
 pathway udp-to-afzelin "UDP to afzelin" {
-  spacing 244
+  spacing 242
 
   spine at 0,0 {
     udp
-    <-> . +kaempferide_3_o_beta_d_glucopyranosyl_1_2_alpha +h -udp_alpha_d_glucose
-    kaempferide_3_o_alpha_l_rhamnosyl_1_6_beta_d_glu
-    <-> . +udp +h -kaempferide_3_o_glucoside
-    udp_beta_l_rhamnose
-    <-> . +udp +kaempferide_3_o_glucoside +h -kaempferide
+    <-> ec_2_4_1_237 [2.4.1.237] +h +kaempferol_7_o_d_glucoside -kaempferol
     udp_alpha_d_glucose
-    <-> ec_2_1_1_155 [2.1.1.155] +s_adenosyl_l_homocysteine +h +kaempferide -kaempferol
-    s_s_adenosyl_l_methionine
     <-> . +dtdp_beta_l_rhamnose +kaempferol -h -afzelin
     dtdp
     <-> . +dtdp_beta_l_rhamnose +afzelin -dtdp
@@ -24,51 +18,33 @@ pathway udp-to-afzelin "UDP to afzelin" {
     udp_beta_l_rhamnose
   }
 
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> ec_2_4_1_170 [2.4.1.170] +udp +glycitin +h
-    glycitein
-  }
-
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> ec_2_4_1_118 [2.4.1.118] +udp +trans_zeatin_7_beta_d_glucoside +h
-    trans_zeatin
-  }
-
-  branch from s_s_adenosyl_l_methionine side left {
-    s_s_adenosyl_l_methionine
-    <-> ec_2_1_1_41 [2.1.1.41] +s_adenosyl_l_homocysteine +z_24_ethylidenelophenol +h
-    24_methylidenelophenol
-  }
-
-  branch from s_s_adenosyl_l_methionine side right {
-    s_s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +premithramycin_a3 +h
-    premithramycin_a3
-  }
-
-  branch from dtdp side left {
-    dtdp
-    <-> . +dtdp_beta_l_rhamnose +alpha_d_glc_1_3_alpha_d_galnac_pp_und +h
-    alpha_l_rha_1_4_alpha_d_glc_1_3_alpha_d_galnac_p
-  }
-
-  branch from dtdp side right {
-    dtdp
-    <-> . +dtdp_beta_l_rhamnose +alpha_l_rha_1_4_alpha_d_glc_1_3_alpha_d_galnac_p +h
-    alpha_l_rha_1_2_alpha_l_rha_1_4_alpha_d_glc_1_3
-  }
-
   branch from h side left {
     h
-    <-> ec_4_2_1_9 [4.2.1.9] +l_threonate +h2o
-    4_hydroxy_2_oxobutanoic_acid
+    <-> . +cyclic_adp_beta_d_ribose +h2o
+    1_5_phospho_beta_d_ribosyl_5_amp
   }
 
   branch from h side right {
     h
-    <-> ec_4_2_1_9 [4.2.1.9] +d_erythronate +4_hydroxy_2_oxobutanoic_acid
-    h2o
+    <-> . +deoxymupirocin_c +h2o
+    desepoxy_mupirocin_p
+  }
+
+  branch from h side left {
+    h
+    <-> . +h2o +desepoxy_mupirocin_p
+    deoxymupirocin_c
+  }
+
+  branch from h side right {
+    h
+    <-> . +taxifolin +h2o
+    idb_1027
+  }
+
+  branch from kaempferol_7_o_d_glucoside side left {
+    kaempferol_7_o_d_glucoside
+    <-> . +malonyl-coa +coa
+    kaempferol_7_o_6_o_malonyl_d_glucoside
   }
 }

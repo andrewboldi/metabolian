@@ -138,44 +138,6 @@
       }
     },
     {
-      "id": "3_l_alanyl_adenylyl_zwitterionic_group",
-      "name": "3'-(L-alanyl)adenylyl zwitterionic group",
-      "short": "3'-(L-alanyl)adenyl…",
-      "formula": "C13H18N6O7P",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:78497"
-      }
-    },
-    {
-      "id": "alanine",
-      "name": "L-Alanine",
-      "formula": "C3H7NO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:57972"
-      }
-    },
-    {
-      "id": "3_l_seryl_adenylyl_1_group",
-      "name": "3'-(L-seryl)adenylyl(1−) group",
-      "short": "3'-(L-seryl)adenyly…",
-      "formula": "C13H17N6O8P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:78533"
-      }
-    },
-    {
-      "id": "serine",
-      "name": "L-Serine",
-      "formula": "C3H7NO3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:33384"
-      }
-    },
-    {
       "id": "d_threonine",
       "name": "D-threonine",
       "formula": "C4H9NO3",
@@ -192,6 +154,97 @@
       "charge": -2,
       "xrefs": {
         "chebi": "CHEBI:58675"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "ammonioacetone",
+      "name": "ammonioacetone",
+      "formula": "C3H8NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58320"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "2_aminobut_2_enoic_acid",
+      "name": "2-aminobut-2-enoic acid",
+      "short": "2-aminobut-2-enoic…",
+      "formula": "C4H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:48306"
+      }
+    },
+    {
+      "id": "fluoroacetate",
+      "name": "fluoroacetate",
+      "formula": "C2H2FO2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1475"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
       }
     }
   ],
@@ -223,6 +276,16 @@
       "ec": [
         "5.1.1.6"
       ]
+    },
+    {
+      "id": "ec_1_2_1_5",
+      "name": "aldehyde dehydrogenase [NAD(P)(+)]",
+      "ec": [
+        "1.2.1.5"
+      ],
+      "xrefs": {
+        "uniprot": "P30838"
+      }
     }
   ],
   "reactions": [
@@ -410,88 +473,6 @@
     },
     {
       "id": "r5",
-      "name": "L-alanyl-tRNA(Pro) + H2O = tRNA(Pro) + L-alanine + H(+)",
-      "equation": "L-alanyl-tRNA(Pro) + H2O = tRNA(Pro) + L-alanine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "3_l_alanyl_adenylyl_zwitterionic_group",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "amp_3_end_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "alanine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:74243"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:74243"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "L-seryl-tRNA(Ser) + H2O = tRNA(Ser) + L-serine",
-      "equation": "L-seryl-tRNA(Ser) + H2O = tRNA(Ser) + L-serine",
-      "substrates": [
-        {
-          "metabolite": "3_l_seryl_adenylyl_1_group",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "amp_3_end_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "serine",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:74551"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:74551"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
       "name": "threonine racemase",
       "equation": "L-threonine = D-threonine",
       "ec": "5.1.1.6",
@@ -513,7 +494,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:13913"
       },
@@ -528,7 +509,7 @@
       }
     },
     {
-      "id": "r8",
+      "id": "r6",
       "name": "O-phospho-L-threonine + H2O = L-threonine + phosphate",
       "equation": "O-phospho-L-threonine + H2O = L-threonine + phosphate",
       "substrates": [
@@ -552,7 +533,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 8,
+      "pathwayStep": 6,
       "xrefs": {
         "rhea": "RHEA:30579"
       },
@@ -562,6 +543,402 @@
           {
             "db": "Rhea",
             "id": "RHEA:30579"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "L-threonine + NAD(+) = aminoacetone + CO2 + NADH",
+      "equation": "L-threonine + NAD(+) = aminoacetone + CO2 + NADH",
+      "substrates": [
+        {
+          "metabolite": "threonine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ammonioacetone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:33239"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33239"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "L-threonine = 2-aminobut-2-enoate + H2O",
+      "equation": "L-threonine = 2-aminobut-2-enoate + H2O",
+      "substrates": [
+        {
+          "metabolite": "threonine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_aminobut_2_enoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:40675"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40675"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "aldehyde dehydrogenase [NAD(P)(+)]",
+      "ec": "1.2.1.5",
+      "substrates": [
+        {
+          "metabolite": "fluoroacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fluoroacetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "metanetx": "MNXR181793"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR181793"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3_l_homoseryl_adenylyl_3-l-homoseryl-adenylyl-to-r-3-hydroxy-3-methyl-2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_l_homoseryl_adenylyl"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-l-homoseryl-adenylyl-to-r-3-hydroxy-3-methyl-2"
+      },
+      "note": "Shares 3'-(L-homoseryl)adenylyl with 3'-(L-homoseryl)adenylyl to (R)-3-hydroxy-3-methyl-2-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:193130"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_homoserine_2-c-methyl-d-erythritol-to-pseudouridine-5-phosp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_homoserine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-c-methyl-d-erythritol-to-pseudouridine-5-phosp"
+      },
+      "note": "Shares L-homoserine with 2-C-methyl-D-erythritol… to pseudouridine 5'-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57476"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_homoserine_2-deoxymugineate-to-succinyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_homoserine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-deoxymugineate-to-succinyl-coa"
+      },
+      "note": "Shares L-homoserine with 2'-deoxymugineate to succinyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57476"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_homoserine_3-l-homoseryl-adenylyl-to-r-3-hydroxy-3-methyl-2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_homoserine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-l-homoseryl-adenylyl-to-r-3-hydroxy-3-methyl-2"
+      },
+      "note": "Shares L-homoserine with 3'-(L-homoseryl)adenylyl to (R)-3-hydroxy-3-methyl-2-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57476"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_homoserine_l-canavanine-to-4-phosphonato-l-aspartic",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_homoserine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-canavanine-to-4-phosphonato-l-aspartic"
+      },
+      "note": "Shares L-homoserine with L-canavanine to 4-phosphonato-L-aspartic….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57476"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_homoserine_l-rhamnofuranose-to-3-carboxy-cis-cis-muconate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_homoserine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-rhamnofuranose-to-3-carboxy-cis-cis-muconate"
+      },
+      "note": "Shares L-homoserine with L-rhamnofuranose to 3-carboxy-cis,cis-muconate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57476"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_o_phosphonato_l_homoserine_2-methylpropanal-oxime-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "o_phosphonato_l_homoserine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-methylpropanal-oxime-to-ammonium"
+      },
+      "note": "Shares O-phosphonato-L-homoserine with 2-methylpropanal oxime to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57590"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_o_phosphonato_l_homoserine_c-terminal-gly-gly-1-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "o_phosphonato_l_homoserine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "c-terminal-gly-gly-1-to-diphosphate"
+      },
+      "note": "Shares O-phosphonato-L-homoserine with C-terminal Gly-Gly(1−) to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57590"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_fluoroacetaldehyde_5-fluoro-5-deoxy-d-ribose-to-fluoroacetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "fluoroacetaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-fluoro-5-deoxy-d-ribose-to-fluoroacetate"
+      },
+      "note": "Shares fluoroacetaldehyde with 5-fluoro-5-deoxy-D-ribose… to fluoroacetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:14272"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_threonine_5-6-dihydrothymine-to-l-alanine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_threonine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-6-dihydrothymine-to-l-alanine"
+      },
+      "note": "Shares D-threonine with 5,6-dihydrothymine to L-alanine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57757"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_threonine_6-acetyl-2-amino-3-7-8-9-to-l-glutamate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_threonine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-acetyl-2-amino-3-7-8-9-to-l-glutamate"
+      },
+      "note": "Shares D-threonine with 6-acetyl-2-amino-3,7,8,9-… to L-glutamate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57757"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_o_phosphonato_l_threonine_l-threonine-to-adenosylcobinamide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "o_phosphonato_l_threonine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-threonine-to-adenosylcobinamide"
+      },
+      "note": "Shares O-phosphonato-L-threonine with L-threonine to adenosylcobinamide….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58675"
           }
         ]
       }

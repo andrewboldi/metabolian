@@ -12,7 +12,7 @@ pathway 13-cis-retinol-to-h2o "13-cis-retinol to H2O" {
     13_cis_retinal
     <-> . +nadp +h2o -13_cis_retinoate -nadph
     h
-    <-> . +13_cis_retinoate +o2 +nadph -rac_5_6_epoxy_retinoate -h2o
+    <-> . +13_cis_retinoate +o2 +nadph -5_8_epoxy_13_cis_retinoate -h2o
     nadp
   }
 }

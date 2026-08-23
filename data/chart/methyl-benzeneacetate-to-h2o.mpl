@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway methyl-benzeneacetate-to-h2o "Methyl benzeneacetate to H2O" {
-  spacing 212
+  spacing 272
 
   spine at 0,0 {
     methyl_benzeneacetate
@@ -18,61 +18,121 @@ pathway methyl-benzeneacetate-to-h2o "Methyl benzeneacetate to H2O" {
 
   branch from h side left {
     h
-    <-> ec_3_8_1_5 [3.8.1.5] +3_bromo_1_propanol +h2o +bromide
-    propane_1_3_diol
+    <-> ec_3_1_2_23 [3.1.2.23] +4_fluorobenzoic_acid +coa +h2o
+    4_fluorobenzoyl_coa
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +3_nitrobenzaldehyde +nad
-    3_nitrobenzyl_alcohol
+    <-> ec_3_6_1_5 [3.6.1.5] +2_methylthio_amp +phosphate +h2o
+    2_methylthio_atp
   }
 
   branch from methanol side left {
     methanol
-    <-> ec_1_14_14_1 [1.14.14.1] +2_ethylidene_1_5_dimethyl_3_3_diphenylpyrrolidin
-    6_dimethylamino_4_4_diphenylheptan_3_one
+    <-> . +24_alkyl_sterol_2
+    26_27_dehydrozymosterol
   }
 
   branch from methanol side right {
     methanol
-    <-> ec_3_5_1_11 [3.5.1.11] +d_alpha_phenylglycine +h2o
-    d_phenylglycine_methyl_ester
-  }
-
-  branch from 2_hydroxyphenyl_acetate side left {
-    2_hydroxyphenyl_acetate
-    <-> . +nadh +o2 +nad +h2o
-    phenyl_acetate
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_21 [1.1.1.21] +nadh +d_fucopyranose +h
-    1_deoxy_d_glucitol
+    <-> . +26_27_dehydrozymosterol
+    26_hydroxy_27_methyl_zymosterol
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_184 [1.1.1.184] +nadh +5_dihydrotestosterone +h
-    5_androstane_3_17_diol
+    <-> ec_1_1_1_199 [1.1.1.199] +nadh +s_usnate +h
+    2_acetyl_6_3_acetyl_2_4_6_trihydroxy_5_methylphe
   }
 
-  branch from h2o side right {
-    h2o
-    <-> ec_3_2_1_37 [3.2.1.37] +2_nitrophenyl_beta_d_xylopyranoside +h +aldehydo_d_xylose
-    2_nitrophenol
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_15 [1.1.1.15] +nadh +l_fructofuranose +h
+    l_glucitol
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_3_2_6 [3.3.2.6] +l_leucine +4_nitroaniline
-    l_leucinyl_p_nitroanilide
+    <-> . +arsenic_trypanothione +arsenous_acid
+    trypanothione
   }
 
-  branch from homogentisate side right {
-    homogentisate
-    <-> ec_2_5_1_117 [2.5.1.117] +diphosphate +2_methyl_6_solanyl_1_4_benzoquinol +co2 +h
-    all_trans_nonaprenyl_diphosphate
+  branch from h2o side right {
+    h2o
+    <-> ec_3_4_13_18 [3.4.13.18] +4_n_s_cysteinylglycylacetyl_amino_phenylarsonous +glycine
+    4_n_s_cysteinylacetyl_amino_phenylarsonous_acid
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +benzoate +methanol
+    o_toluate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_4_2_1_95 [4.2.1.95] +xanthohumol_hydrate
+    xanthohumol
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_1_5 [3.6.1.5] +8_bromo_amp +phosphate +h2o
+    8_bromoadenosine_5_triphosphate
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_3_1_51 [2.3.1.51] +1_hexadecanoyl_sn_glycero_3_phospho_d_myo_inosit +9z_octadecenoyl_coa +1_hexadecanoyl_2_z_octadec_9_enoyl_sn_glycero_3
+    coa
+  }
+
+  branch from methanol side left {
+    methanol
+    <-> ec_3_1_1_82 [3.1.1.82] +pheophorbide_a +h2o +h +pyropheophorbide_a
+    co2
+  }
+
+  branch from methanol side right {
+    methanol
+    <-> ec_3_1_1_82 [3.1.1.82] +pheophorbide_a +h2o +co2
+    pyropheophorbide_a
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> . +2_hydroxy_5_methylquinone +h +nad
+    2_4_5_trihydroxytoluene
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +h +2_4_5_trihydroxytoluene +nad
+    2_hydroxy_5_methylquinone
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_13_11_52 [1.13.11.52] +5_methoxy_n_formylkynurenine
+    5_methoxy_dl_tryptophan
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +3_all_trans_octaprenyl_benzene_1_2_diol
+    2_all_trans_octaprenylphenol
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_333 [1.1.1.333] +nadh +trans_octacis_decaprenylphospho_beta_d_erythro_p +h
+    trans_octacis_decaprenylphospho_beta_d_arabinofu
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_92 [1.1.1.92] +nadh +2r_2_hydroxy_3_oxosuccinic_acid +co2
+    r_glycerate
   }
 }

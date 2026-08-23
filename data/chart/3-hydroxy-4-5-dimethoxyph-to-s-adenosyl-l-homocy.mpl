@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-hydroxy-4-5-dimethoxyph-to-s-adenosyl-l-homocy "3-hydroxy-4,5-dimethoxyph… to S-adenosyl-L-homocysteine" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     3_hydroxy_4_5_dimethoxyphenethylaminium
@@ -14,17 +14,5 @@ pathway 3-hydroxy-4-5-dimethoxyph-to-s-adenosyl-l-homocy "3-hydroxy-4,5-dimethox
     n_methylmescalinium
     <-> . +sam -sah -hplus
     n_n_dimethylmescalinium
-  }
-
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_403 [2.1.1.403] +ecgonone +sam
-    ecgononium_methyl_ester
-  }
-
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_401 [2.1.1.401] +nicotinate +sam
-    methyl_nicotinate
   }
 }

@@ -4,113 +4,147 @@
 # edit the generator, not this file.
 
 pathway s-adenosyl-l-homocysteine-to-h2o "S-adenosyl-L-homocysteine to H2O" {
-  spacing 248
+  spacing 284
 
   spine at 0,0 {
     s_adenosyl_l_homocysteine
-    <-> . +3_4_5_o_trimethylmyricetin_3_7_diolate +h -syringetin
+    <-> . +salsoline +h -s_salsolinol
     s_adenosyl_l_methionine
-    <-> ec_2_1_1_149 [2.1.1.149] +s_adenosyl_l_homocysteine +h +syringetin -s_adenosyl_l_methionine
-    myricetin
-    <-> . +nadp +h2o -quercetin -o2 -nadph
-    h
-    <-> . +quercetin +o2 +nadph -nadp -h2o
-    3_3_4_5_7_8_hexahydroxyflavone
+    <-> . +h +s_salsolinol +h2o -acetaldehyde
+    dopamine
+    <-> . +pyruvate -h2o
+    salsolinol_1_carboxylate
   }
 
   branch from s_adenosyl_l_methionine side left {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +c37_phenolphthiocerol_a +h
-    c36_phenolphthiotriol_a
-  }
-
-  branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
     <-> . +s_adenosyl_l_homocysteine +h +neoglucobrassicin
     1_hydroxyglucobrassicin
   }
 
-  branch from myricetin side left {
-    myricetin
-    <-> ec_1_14_13_88 [1.14.13.88] +h +o2 +nadph +nadp +h2o
-    luteolin
+  branch from s_adenosyl_l_methionine side right {
+    s_adenosyl_l_methionine
+    <-> . +s_adenosyl_l_homocysteine +4_methoxyglucobrassicin +h
+    4_hydroxyglucobrassicin
   }
 
-  branch from h side right {
-    h
-    <-> . +c31_phthiodiolenone_a +nadph +nadp
-    c31_phthiodiolone_a
+  branch from dopamine side left {
+    dopamine
+    <-> ec_1_14_16_2 [1.14.16.2] +sapropterin +tyramine +o2
+    4as_6r_4a_hydroxy_l_erythro_5_6_7_8_tetrahydrob
   }
 
-  branch from h side left {
-    h
-    <-> . +c33_phthiodiolenone_a +nadph +nadp
-    c33_phthiodiolone_a
-  }
-
-  branch from quercetin side right {
-    quercetin
-    <-> ec_3_2_1_62 [3.2.1.62] +quercetin_4_o_d_glucopyranoside +h2o
-    glucose
-  }
-
-  branch from quercetin side left {
-    quercetin
-    <-> ec_1_14_20_6 [1.14.20.6] +2_oxoglutarate +taxifolin +o2 +h +succinate +h2o
-    co2
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +s_beta_hydroxy_l_tryptophan
-    r_n_formyl_beta_hydroxy_l_kynurenine
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +h +bisphenol_a +nadph +nadp +h2o
-    1_2_bis_4_hydroxyphenyl_propan_2_ol
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> . +c34_phenolphthiodiolone_a +h +nadp
-    c34_phenolphthiotriol_a
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> . +c34_phenolphthiodiolenone_a +h +nadp
-    c34_phenolphthiodiolone_a
-  }
-
-  branch from 3_3_4_5_7_8_hexahydroxyflavone side right {
-    3_3_4_5_7_8_hexahydroxyflavone
-    <-> ec_2_4_1_237 [2.4.1.237] +udp +h +gossypetin_7_o_glucoside
-    udp_alpha_d_glucose
-  }
-
-  branch from nadp side left {
+  branch from dopamine side right {
+    dopamine
+    <-> . +h +tyramine +o2 +nadph +h2o
     nadp
-    <-> . +c36_phenolphthiodiolenone_a +h +nadph
-    c36_phenolphthiodiolone_a
   }
 
-  branch from nadp side right {
-    nadp
-    <-> ec_2_3_1_287 [2.3.1.287] +s_methylmalonyl_coa +h +o_s_hexadecanoylpantetheine_4_phosphoryl_serine +nadph +co2 +coa +h2o
-    o_s_c40_phthioceranylpantetheine_4_phosphoryl_l
+  branch from acetaldehyde side left {
+    acetaldehyde
+    <-> ec_4_1_1_1 [4.1.1.1] +hetpp
+    thiamine_diphosphate
+  }
+
+  branch from acetaldehyde side right {
+    acetaldehyde
+    <-> ec_1_2_3_1 [1.2.3.1] +h +acetate +h2o2 +h2o
+    o2
   }
 
   branch from h2o side left {
     h2o
-    <-> . +c32_mycoketide +coa
-    c32_mycoketide_coa
+    <-> . +dca_cl
+    dehydrodiconiferyl_acid_aldehyde_gem_diol
   }
 
   branch from h2o side right {
     h2o
-    <-> . +4_hydroxybenzoate +h +4_1_hydroxyethyl_phenol +o2
-    4_4_dihydroxy_alpha_methylstilbene
+    <-> . +dca_cl
+    dehydrodiconiferyl_acid_gem_diol
+  }
+
+  branch from s_adenosyl_l_homocysteine side left {
+    s_adenosyl_l_homocysteine
+    <-> ec_2_1_1_128 [2.1.1.128] +r_coclaurine +h +s_adenosyl_l_methionine
+    r_norcoclaurine
+  }
+
+  branch from s_adenosyl_l_homocysteine side right {
+    s_adenosyl_l_homocysteine
+    <-> . +hmdboa_glucoside +h +s_adenosyl_l_methionine
+    dimboa_beta_d_glucoside
+  }
+
+  branch from h side left {
+    h
+    <-> . +diphosphate +12_ethyl_8_propylbacteriochlorophyll_d +12_ethyl_8_propylbacteriochlorophyllide_d
+    2e_6e_farnesyl_diphosphate
+  }
+
+  branch from h side right {
+    h
+    <-> . +diphosphate +12_ethyl_8_isobutylbacteriochlorophyll_d +2e_6e_farnesyl_diphosphate
+    12_ethyl_8_isobutylbacteriochlorophyllide_d
+  }
+
+  branch from s_adenosyl_l_methionine side left {
+    s_adenosyl_l_methionine
+    <-> . +s_adenosyl_l_homocysteine +pinostrobin +h
+    s_pinocembrin
+  }
+
+  branch from s_adenosyl_l_methionine side right {
+    s_adenosyl_l_methionine
+    <-> . +s_adenosyl_l_homocysteine +beta_bixin +h
+    norbixin
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +n_acetyl_d_glucosaminyl_n_acetyl_tunicaminyl_ura +acetate
+    n_acetyl_d_glucosaminyl_tunicaminyl_uracil
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +avenate_a
+    2_deoxymugineate
+  }
+
+  branch from dopamine side left {
+    dopamine
+    <-> . +udp +h +dopamine_3_o_glucuronide
+    udp_alpha_d_glucuronate
+  }
+
+  branch from dopamine side right {
+    dopamine
+    <-> . +dopamine_glucuronide +h +udp_alpha_d_glucuronate
+    udp
+  }
+
+  branch from acetaldehyde side left {
+    acetaldehyde
+    <-> ec_4_1_2_5 [4.1.2.5] +2_amino_3_hydroxybutanoic_acid
+    glycine
+  }
+
+  branch from acetaldehyde side right {
+    acetaldehyde
+    <-> ec_1_2_1_10 [1.2.1.10] +acetyl_coa +h +nadph +nadp
+    coa
+  }
+
+  branch from pyruvate side left {
+    pyruvate
+    <-> ec_4_4_1_13 [4.4.1.13] +l_djenkolic_acid +h2o +nh4
+    s_sulfanylmethyl_l_cysteine
+  }
+
+  branch from pyruvate side right {
+    pyruvate
+    <-> . +hydroxylamine +h2o
+    pyruvic_oxime
   }
 }

@@ -99,57 +99,21 @@
       }
     },
     {
-      "id": "fluoroacetate",
-      "name": "fluoroacetate",
-      "formula": "C2H2FO2",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM1475"
-      }
-    },
-    {
-      "id": "h",
-      "name": "H",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM1"
-      }
-    },
-    {
-      "id": "nadph",
-      "name": "NADPH",
-      "formula": "C21H26N7O17P3",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM738702"
-      }
-    },
-    {
-      "id": "nadp",
-      "name": "NADP",
-      "formula": "C21H25N7O17P3",
-      "charge": -3,
-      "xrefs": {
-        "metanetx": "MNXM5"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
+      "id": "ubiquinol_9",
+      "name": "ubiquinol-9",
+      "formula": "C54H84O4",
       "charge": 0,
       "xrefs": {
-        "metanetx": "WATER"
+        "chebi": "CHEBI:84424"
       }
     },
     {
-      "id": "ubiquinol_2",
-      "name": "ubiquinol-2",
-      "formula": "C19H28O4",
+      "id": "ubiquinone_9",
+      "name": "ubiquinone-9",
+      "formula": "C54H82O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:167578"
+        "metanetx": "MNXM1363635"
       }
     },
     {
@@ -163,31 +127,67 @@
       }
     },
     {
-      "id": "ubiquinone_2",
-      "name": "ubiquinone-2",
-      "formula": "C19H26O4",
+      "id": "ubiquinol_10",
+      "name": "ubiquinol-10",
+      "formula": "C59H92O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:46372"
+        "chebi": "CHEBI:64183"
       }
     },
     {
-      "id": "l_fucose_1_phosphate",
-      "name": "α-L-fucose 1-phosphate",
-      "short": "α-L-fucose 1-P",
-      "formula": "C6H13O8P",
+      "id": "ubiquinone_10",
+      "name": "ubiquinone-10",
+      "formula": "C59H90O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:6220"
+        "metanetx": "MNXM1364539"
       }
     },
     {
-      "id": "s_lactaldehyde",
-      "name": "(S)-lactaldehyde",
-      "formula": "C3H6O2",
+      "id": "ubiquinol_7",
+      "name": "ubiquinol-7",
+      "formula": "C44H68O4",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM732880"
+        "chebi": "CHEBI:84432"
+      }
+    },
+    {
+      "id": "ubiquinone_7",
+      "name": "ubiquinone-7",
+      "formula": "C44H66O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:46448"
+      }
+    },
+    {
+      "id": "sedoheptulose_1_phosphate",
+      "name": "sedoheptulose 1-phosphate",
+      "short": "sedoheptulose 1-P",
+      "formula": "C7H15O10P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:9082"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "d_erythrose",
+      "name": "D-erythrose",
+      "formula": "C4H8O4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM737002"
       }
     }
   ],
@@ -200,25 +200,31 @@
       ]
     },
     {
-      "id": "ec_1_2_1_5",
-      "name": "aldehyde dehydrogenase [NAD(P)(+)]",
-      "ec": [
-        "1.2.1.5"
-      ]
-    },
-    {
       "id": "ec_1_1_5_3",
       "name": "glycerol-3-phosphate dehydrogenase",
       "ec": [
         "1.1.5.3"
+      ],
+      "xrefs": {
+        "uniprot": "P43304"
+      }
+    },
+    {
+      "id": "ec_1_1_99_5",
+      "name": "EC 1.1.99.5",
+      "ec": [
+        "1.1.99.5"
       ]
     },
     {
-      "id": "ec_4_1_2_17",
-      "name": "L-fuculose-phosphate aldolase",
+      "id": "ec_4_1_2_13",
+      "name": "fructose-bisphosphate aldolase",
       "ec": [
-        "4.1.2.17"
-      ]
+        "4.1.2.13"
+      ],
+      "xrefs": {
+        "uniprot": "P04075"
+      }
     }
   ],
   "reactions": [
@@ -341,52 +347,44 @@
     },
     {
       "id": "r4",
-      "name": "aldehyde dehydrogenase [NAD(P)(+)]",
-      "ec": "1.2.1.5",
+      "name": "glycerol-3-phosphate dehydrogenase",
+      "ec": "1.1.5.3",
       "substrates": [
         {
-          "metabolite": "fluoroacetate",
+          "metabolite": "ubiquinol_9",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "nadph",
+          "metabolite": "dihydroxyacetone_phosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "fluoroacetaldehyde",
+          "metabolite": "ubiquinone_9",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "sn_glycerol_3_phosphate",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_2_1_5"
+          "enzyme": "ec_1_1_5_3"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "metanetx": "MNXR181793"
+        "metanetx": "MNXR157500"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR181793"
+            "id": "MNXR157500"
           }
         ]
       }
@@ -397,7 +395,7 @@
       "ec": "1.1.5.3",
       "substrates": [
         {
-          "metabolite": "ubiquinol_2",
+          "metabolite": "ubiquinol_10",
           "stoichiometry": 1
         },
         {
@@ -407,11 +405,11 @@
       ],
       "products": [
         {
-          "metabolite": "sn_glycerol_3_phosphate",
+          "metabolite": "ubiquinone_10",
           "stoichiometry": 1
         },
         {
-          "metabolite": "ubiquinone_2",
+          "metabolite": "sn_glycerol_3_phosphate",
           "stoichiometry": 1
         }
       ],
@@ -423,25 +421,69 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR144907"
+        "metanetx": "MNXR182362"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR144907"
+            "id": "MNXR182362"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "L-fuculose-phosphate aldolase",
-      "ec": "4.1.2.17",
+      "name": "Reaction MNXR182669",
+      "ec": "1.1.99.5",
       "substrates": [
         {
-          "metabolite": "l_fucose_1_phosphate",
+          "metabolite": "ubiquinol_7",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dihydroxyacetone_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ubiquinone_7",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sn_glycerol_3_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_99_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "metanetx": "MNXR182669"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR182669"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "fructose-bisphosphate aldolase",
+      "ec": "4.1.2.13",
+      "substrates": [
+        {
+          "metabolite": "sedoheptulose_1_phosphate",
           "stoichiometry": 1
         }
       ],
@@ -451,7 +493,7 @@
           "stoichiometry": 2
         },
         {
-          "metabolite": "s_lactaldehyde",
+          "metabolite": "d_erythrose",
           "stoichiometry": 1
         },
         {
@@ -461,20 +503,286 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_1_2_17"
+          "enzyme": "ec_4_1_2_13"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 7,
       "xrefs": {
-        "metanetx": "MNXR153529"
+        "metanetx": "MNXR184471"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR153529"
+            "id": "MNXR184471"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_5_fluoro_5_deoxy_d_ribose_1_phosphate_diphosphate-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_fluoro_5_deoxy_d_ribose_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-phosphate"
+      },
+      "note": "Shares 5-fluoro-5-deoxy-D-ribose 1-phosphate with diphosphate to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM10305"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_fluoroacetaldehyde_3-l-homoseryl-adenylyl-to-acetaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "fluoroacetaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-l-homoseryl-adenylyl-to-acetaldehyde"
+      },
+      "note": "Shares fluoroacetaldehyde with 3'-(L-homoseryl)adenylyl to acetaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:14272"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_fluoroacetate_fluoroacetyl-coa-to-glyoxylate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "fluoroacetate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fluoroacetyl-coa-to-glyoxylate"
+      },
+      "note": "Shares fluoroacetate with fluoroacetyl-CoA to glyoxylate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18172"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ubiquinol_7_2e-3-2-4-dihydroxy-5-m-to-e-ferulate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ubiquinol_7"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2e-3-2-4-dihydroxy-5-m-to-e-ferulate"
+      },
+      "note": "Shares ubiquinol-7 with (2E)-3-(2,4-dihydroxy-5-m… to (E)-ferulate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84432"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ubiquinol_7_3-demethylubiquinol-7-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ubiquinol_7"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-demethylubiquinol-7-to-nad"
+      },
+      "note": "Shares ubiquinol-7 with 3-demethylubiquinol-7 to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84432"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ubiquinol_7_7-benzyloxyquinoline-to-2-5-7-trihydroxy-2-4-hyd",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ubiquinol_7"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-benzyloxyquinoline-to-2-5-7-trihydroxy-2-4-hyd"
+      },
+      "note": "Shares ubiquinol-7 with 7-Benzyloxyquinoline to 2,5,7-trihydroxy-2-(4-hyd….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84432"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ubiquinol_7_trithionate-to-menadiol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ubiquinol_7"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trithionate-to-menadiol"
+      },
+      "note": "Shares ubiquinol-7 with trithionate to menadiol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84432"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ubiquinol_7_ubiquinol-7-to-s-sulfo-l-cysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ubiquinol_7"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ubiquinol-7-to-s-sulfo-l-cysteine"
+      },
+      "note": "Shares ubiquinol-7 with ubiquinol-7 to S-sulfo-L-cysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84432"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ubiquinone_7_2e-3-2-4-dihydroxy-5-m-to-e-ferulate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ubiquinone_7"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2e-3-2-4-dihydroxy-5-m-to-e-ferulate"
+      },
+      "note": "Shares ubiquinone-7 with (2E)-3-(2,4-dihydroxy-5-m… to (E)-ferulate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:46448"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ubiquinone_7_3-demethylubiquinol-7-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ubiquinone_7"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-demethylubiquinol-7-to-nad"
+      },
+      "note": "Shares ubiquinone-7 with 3-demethylubiquinol-7 to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:46448"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ubiquinone_7_7-benzyloxyquinoline-to-2-5-7-trihydroxy-2-4-hyd",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ubiquinone_7"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-benzyloxyquinoline-to-2-5-7-trihydroxy-2-4-hyd"
+      },
+      "note": "Shares ubiquinone-7 with 7-Benzyloxyquinoline to 2,5,7-trihydroxy-2-(4-hyd….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:46448"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ubiquinone_7_trithionate-to-menadiol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ubiquinone_7"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trithionate-to-menadiol"
+      },
+      "note": "Shares ubiquinone-7 with trithionate to menadiol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:46448"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-threonylcarbamoyladenyl-to-s-adenosyl-l-homocy "L-threonylcarbamoyladenyl… to S-adenosyl-L-homocysteine" {
-  spacing 236
+  spacing 224
 
   spine at 0,0 {
     l_threonylcarbamoyladenylate
@@ -14,17 +14,5 @@ pathway l-threonylcarbamoyladenyl-to-s-adenosyl-l-homocy "L-threonylcarbamoylade
     2_thio_n6_l_threonylcarbamoyladenine_5_monophosp
     <-> . +sam -sah -hplus
     2_methylthio_n6_l_threonylcarbamoyladenine_5_mon
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +1_2_dioleoyl_sn_glycero_3_phosphoethanolamine +sam +hplus
-    1_2_dioleoyl_sn_glycero_3_phospho_n_methylethano
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +ldopa +sam +hplus
-    3_o_methyldopa
   }
 }

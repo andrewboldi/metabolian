@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-adenosyl-l-homocysteine-to-nadph "S-adenosyl-L-homocysteine to NADPH" {
-  spacing 212
+  spacing 296
 
   spine at 0,0 {
     s_adenosyl_l_homocysteine
@@ -18,14 +18,14 @@ pathway s-adenosyl-l-homocysteine-to-nadph "S-adenosyl-L-homocysteine to NADPH" 
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +beta_peltatin_a_methyl_ether +h
-    peltatin
+    <-> ec_2_1_1_107 [2.1.1.107] +s_adenosyl_l_homocysteine +dihydrosirohydrochlorin +h
+    uroporphyrinogen_iii
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +desoxyhemigossypol_6_methyl_ether +h
-    desoxyhemigossypol
+    <-> ec_2_1_1_107 [2.1.1.107] +s_adenosyl_l_homocysteine +h +uroporphyrinogen_iii
+    precorrin_2
   }
 
   branch from 4_hydroxy_2_2_bipyrrole_5_carbaldehyde side left {
@@ -42,37 +42,121 @@ pathway s-adenosyl-l-homocysteine-to-nadph "S-adenosyl-L-homocysteine to NADPH" 
 
   branch from nad side left {
     nad
-    <-> ec_1_14_12_26 [1.14.12.26] +nadh +1_2_4_5_tetrachlorobenzene +h +o2
-    1r_2s_1_3_4_6_tetrachlorocyclohexa_3_5_diene_1
+    <-> ec_1_1_1_121 [1.1.1.121] +nadh +h +d_galactono_1_5_lactone
+    beta_d_galactose
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_14_12_26 [1.14.12.26] +nadh +1_2_dichlorobenzene +h +o2
-    1r_2s_3_4_dichlorocyclohexa_3_5_diene_1_2_diol
+    <-> ec_1_14_19_7 [1.14.19.7] +nadh +h +s_2_hydroxypropylphosphonate +o2 +h2o
+    1r_2s_epoxypropylphosphonate
   }
 
   branch from h side left {
     h
-    <-> ec_2_5_1_1 [2.5.1.1] +2_hydroxygenistein +dimethylallyl_diphosphate +licoisoflavone_a
-    diphosphate
+    <-> . +keto_d_fructose +l_lysine +h2o
+    glucoselysine
   }
 
   branch from h side right {
     h
-    <-> ec_2_5_1_1 [2.5.1.1] +isowighteone +diphosphate +genistein
-    dimethylallyl_diphosphate
+    <-> . +ai_77_b +h2o
+    amicoumacin_c
   }
 
   branch from nadph side left {
     nadph
-    <-> . +h +o2 +cyclohexane +nadp +h2o
-    cyclohexanol
+    <-> ec_1_3_1_20 [1.3.1.20] +1r_2s_1_2_dihydronaphthalene_1_2_diol +nadp +h
+    naphthalene_1_2_diol
   }
 
   branch from nadph side right {
     nadph
-    <-> . +dihydrogeranylgeranyl_bacteriochlorophyll_a +nadp +h
-    geranylgeranyl_bacteriochlorophyllide_a
+    <-> . +h +o2 +2_polyprenyl_3_methyl_6_methoxy_1_4_benzoquinone +nadp +h2o
+    2_polyprenyl_3_methyl_5_hydroxy_6_methoxy_1_4_be
+  }
+
+  branch from s_adenosyl_l_homocysteine side left {
+    s_adenosyl_l_homocysteine
+    <-> ec_2_1_1_38 [2.1.1.38] +h +puromycin +s_adenosyl_l_methionine
+    o_demethylpuromycin
+  }
+
+  branch from s_adenosyl_l_homocysteine side right {
+    s_adenosyl_l_homocysteine
+    <-> ec_2_1_1_121 [2.1.1.121] +s_nororientaline +h +s_adenosyl_l_methionine
+    s_6_o_methylnorlaudanosoline
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_1_4_61 [3.1.4.61] +2r_2_3_bisphosphoglycerate +h2o
+    cyclic_2_3_bisphosphoglycerate
+  }
+
+  branch from h side right {
+    h
+    <-> . +erythromycin_a +h2o
+    hydrolyzed_erythromycin_a
+  }
+
+  branch from s_adenosyl_l_methionine side left {
+    s_adenosyl_l_methionine
+    <-> . +s_adenosyl_l_homocysteine +premithramycin_a3 +h
+    premithramycin_a3
+  }
+
+  branch from s_adenosyl_l_methionine side right {
+    s_adenosyl_l_methionine
+    <-> ec_2_1_1_153 [2.1.1.153] +s_adenosyl_l_homocysteine +7_o_methylvitexin_2_o_l_rhamnoside +h
+    vitexin_2_o_l_rhamnoside
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> ec_1_1_1_297 [1.1.1.297] +h +1r_4s_1_hydroxylimonen_2_one +nad
+    1s_2s_4r_limonene_1_2_diol
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_1_1_203 [1.1.1.203] +d_glucarate +h +nad +h2o
+    beta_d_glucuronate
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_307 [1.1.1.307] +nadh +alpha_d_xylose +h
+    xylitol
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_307 [1.1.1.307] +nadh +h +xylitol
+    beta_d_xylose
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_1_1_274 [1.1.1.274] +h +nadph +2_5_didehydro_d_gluconate
+    2_dehydro_d_galactonate
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_1_1_215 [1.1.1.215] +h +2_dehydro_d_galactonate +nadph
+    l_idonate
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_3_1_80 [1.3.1.80] +primary_fluorescent_chlorophyll_catabolite +nadp
+    red_chlorophyll_catabolite
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +5a_11a_dehydrooxytetracycline +h +nadp
+    oxytetracycline
   }
 }

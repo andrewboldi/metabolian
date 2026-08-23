@@ -16,39 +16,75 @@ pathway 1-5-anhydro-d-fructose-to-microthecin "1,5-anhydro-D-fructose to microth
     microthecin
   }
 
-  branch from 1_5_anhydro_d_mannitol side left {
-    1_5_anhydro_d_mannitol
-    <-> . +h +adp +phosphate +h2o
-    atp
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_118 [1.1.1.118] +nadh +d_glucono_1_5_lactone +h
+    alpha_d_glucose
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_2_1_48 [1.2.1.48] +nadh +9z_12z_octadecadienoate +h +h2o
-    a_linoleate_group
+    <-> ec_1_1_1_21 [1.1.1.21] +nadh +alpha_d_galactose +h
+    galactitol
   }
 
-  branch from nad side left {
-    nad
-    <-> ec_1_2_1_48 [1.2.1.48] +nadh +2_butenoic_acid +h +h2o
-    crotonaldehyde
-  }
-
-  branch from 1_5_anhydro_d_fructose side right {
+  branch from 1_5_anhydro_d_fructose side left {
     1_5_anhydro_d_fructose
     <-> ec_4_2_1_111 [4.2.1.111] +h2o
     ascopyrone_m
   }
 
-  branch from 1_5_anhydro_d_fructose side left {
+  branch from 1_5_anhydro_d_fructose side right {
     1_5_anhydro_d_fructose
     <-> ec_1_1_1_263 [1.1.1.263] +nadp +nadph +hplus
     1_5_anhydro_d_glucitol
   }
 
-  branch from microthecin side right {
+  branch from microthecin side left {
     microthecin
     <-> ec_4_2_1_110 [4.2.1.110]
     1_5_anhydro_4_deoxy_d_glycero_hex_3_en_2_ulose
+  }
+
+  branch from 1_5_anhydro_d_fructose side right {
+    1_5_anhydro_d_fructose
+    <-> ec_4_2_1_110 [4.2.1.110] +1_5_anhydro_4_deoxy_d_glycero_hex_3_en_2_ulose
+    h2o
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> ec_1_1_1_48 [1.1.1.48] +h +d_galactono_1_4_lactone +nad
+    alpha_d_galactose
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +3alpha_7alpha_dihydroxy_5beta_cholestan_26_oic_a +h +nad +h2o
+    25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_4_2_1 [2.4.2.1] +beta_nicotinamide_d_riboside +phosphate +nicotinamide
+    alpha_d_ribose_1_phosphate
+  }
+
+  branch from h side right {
+    h
+    <-> . +7z_10z_13z_16z_docosatetraenoyl_coa +h2o +coa
+    7z_10z_13z_16z_docosatetraenoate
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_2_1_3 [1.2.1.3] +nadh +h +25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26 +h2o
+    3alpha_7alpha_dihydroxy_5beta_cholestanate
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_121 [1.1.1.121] +nadh +h +alpha_d_galactose
+    d_galactono_1_5_lactone
   }
 }

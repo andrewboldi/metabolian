@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway sphing-4-enine-to-safingol-l-threo-sphing "sphing-4-enine to Safingol ( L-threo-sphing…" {
-  spacing 238
+  spacing 298
 
   spine at 0,0 {
     sphing_4_enine
@@ -18,55 +18,115 @@ pathway sphing-4-enine-to-safingol-l-threo-sphing "sphing-4-enine to Safingol ( 
 
   branch from h side left {
     h
-    <-> . +formaldehyde +tryptamine +h2o
-    2_3_4_9_tetrahydro_1h_pyrido_3_4_b_indole
+    <-> . +2_oxoglutaramate +h2o
+    2_3_6_trihydroxypyridine
   }
 
   branch from h side right {
     h
-    <-> . +l_dehydroascorbic_acid +13_hydroxy_e4_neuroprostane +h2o +l_ascorbate
-    13_hydroperoxy_h4_neuroprostane
+    <-> . +2z_2_hydroxypent_2_enedioyl_coa +h2o
+    5_oxo_2_furoyl_coa
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_14_14_1 [1.14.14.1] +n_hydroxy_phip +nadp +h2o +h +o2
-    phip
+    <-> . +4_demethylpremithracinone +nadp +h2o +h +o2
+    4s_2_acetyl_3_4_8_10_11_12_hexahydroxy_1_4_dihy
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_14_14_91 [1.14.14.91] +2_methoxy_4_hydroxycinnamate +nadp +h2o +h +3_2_methoxyphenyl_2_propenoic_acid
-    o2
+    <-> . +4_demethylpremithracinone +nadp +h2o +h +o2
+    4s_2_acetyl_3_4_8_10_11_12_hexahydroxy_1_4_dihy
   }
 
   branch from fad side left {
     fad
-    <-> . +5_guanidino_2_oxopentanoate +fadh2 +h +nh4 +h2o
-    d_arginine
+    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoyl_coa +fadh2 +h
+    2_4_7_10_13_16_19_docosaheptenoylcoa
   }
 
   branch from fad side right {
     fad
-    <-> . +decanoyl_coa +h2o +fadh2 +h
-    3s_hydroxydecanoyl_coa
-  }
-
-  branch from 3_oxosphinganine side left {
-    3_oxosphinganine
-    <-> . +nadh +h +nad
-    sphinganine
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_2_1_5 [1.2.1.5] +malonaldehyde +h2o +h +nadph
-    3_oxopropanoate
+    <-> . +nadh +acetyl_coa +fadh2 +z_hex_3_enoyl_coa +h +coa +nad +h2o
+    5_octenoylcoa
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_13_81 [1.14.13.81] +h +o2 +nadph +13_1_oxo_mg_protoporphyrin_ix_13_monomethyl_este +h2o
-    divinylprotochlorophyllide
+    <-> . +l_hydroxyarginine +h2o +nadph +l_arginine
+    o2
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_3_1_112 [1.3.1.112] +pelargonidin +h +nadph
+    afzelechin
+  }
+
+  branch from sphing_4_enine side left {
+    sphing_4_enine
+    <-> . +alpha_d_galactose +h2o
+    beta_d_galactosyl_11_sphing_4_enine
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +h +nadph +afzelechin
+    pelargonidin
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_3_1_112 [1.3.1.112] +pelargonidin +h +nadph
+    epiafzelechin
+  }
+
+  branch from h side right {
+    h
+    <-> . +2_oxoglutaryl_coa +5_oxo_2_furoyl_coa
+    h2o
+  }
+
+  branch from h side left {
+    h
+    <-> . +2_oxoglutaryl_coa
+    2z_2_hydroxypent_2_enedioyl_coa
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_3_1_112 [1.3.1.112] +epigallocatechin +nadp +h
+    delphinidin
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_3_1_112 [1.3.1.112] +delphinidin +h +nadp
+    gallocatechin
+  }
+
+  branch from fadh2 side right {
+    fadh2
+    <-> . +nadh +acetyl_coa +3e_6e_dodecadienoyl_coa +h +fad +coa +nad +h2o
+    5e_8e_tetradecadienoyl_coa
+  }
+
+  branch from fadh2 side left {
+    fadh2
+    <-> . +2e_11z_octadecadienoyl_coa +h +fad
+    11e_octadecenoyl_coa
+  }
+
+  branch from fad side right {
+    fad
+    <-> . +nadh +acetyl_coa +fadh2 +h +coa +nad +h2o
+    7z_octadec_7_enoyl_coa
+  }
+
+  branch from fad side left {
+    fad
+    <-> . +nadh +acetyl_coa +fadh2 +h +coa +nad +h2o
+    linoelaidyl_coenzyme_a
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-serine-to-d-gal-1-4-d-glcnac "L-serine to β-D-Gal-(1→4)-β-D-GlcNAc-…" {
-  spacing 290
+  spacing 308
 
   spine at 0,0 {
     l_serine
@@ -16,9 +16,27 @@ pathway l-serine-to-d-gal-1-4-d-glcnac "L-serine to β-D-Gal-(1→4)-β-D-GlcNAc
     d_gal_1_4_d_glcnac_1_3_l_fuc_l_ser
   }
 
-  branch from l_fucosyl_l_seryl side left {
-    l_fucosyl_l_seryl
-    <-> . +udp_d_glucose +udp +hplus
-    d_glucosyl_1_3_l_fucosyl_l_seryl
+  branch from l_serine side left {
+    l_serine
+    <-> ec_2_7_11_6 [2.7.11.6] +atp +adp +hplus
+    o_phospho_l_serine_2
+  }
+
+  branch from l_serine side right {
+    l_serine
+    <-> . +myristoyl_coa +coa
+    o_myristoyl_l_serine
+  }
+
+  branch from gdp_l_fucose side left {
+    gdp_l_fucose
+    <-> . +d_galactosyl_1_3_l_fucosyl_1_4_n_acetyl_d_gluco +gdp +hplus
+    l_fucosyl_1_2_d_galactosyl_1_3_l_fucosyl_1_4_n
+  }
+
+  branch from gdp_l_fucose side right {
+    gdp_l_fucose
+    <-> . +methyl_8_d_galactosyl_1_4_n_acetyl_d_glucosaminy +gdp +hplus
+    methyl_8_d_galactosyl_1_4_l_fucosyl_1_3_n_acetyl
   }
 }

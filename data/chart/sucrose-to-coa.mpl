@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway sucrose-to-coa "sucrose to CoA" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     sucrose
@@ -16,17 +16,5 @@ pathway sucrose-to-coa "sucrose to CoA" {
     3_isobutanoyl_3_4_di_3_methylbutanoyl_sucrose
     <-> . +acetyl_coa -coa
     2_acetyl_3_isobutanoyl_3_4_di_3_methylbutanoyl_s
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +acetyl_coa +rhamanosyl_n_acetylglucosamyl_undecaprenyl_dipho
-    o_acetyl_rhamanosyl_n_acetylglucosamyl_undecapre
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +acetyl_coa +cucurbitacin_d
-    cucurbitacin_b
   }
 }

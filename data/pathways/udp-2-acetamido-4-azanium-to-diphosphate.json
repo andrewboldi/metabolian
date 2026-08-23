@@ -189,6 +189,25 @@
       }
     },
     {
+      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
+      "short": "2-trans,6-trans,10-…",
+      "formula": "C20H33O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58756"
+      }
+    },
+    {
+      "id": "tsukubadiene",
+      "name": "tsukubadiene",
+      "formula": "C20H32",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:137528"
+      }
+    },
+    {
       "id": "fpp",
       "name": "trans,trans-Farnesyl diphosphate (FPP)",
       "short": "trans,trans-Farnesy…",
@@ -199,32 +218,32 @@
       }
     },
     {
-      "id": "germacrene_d",
-      "name": "(+)-germacrene D",
+      "id": "2s_3r_6s_9s_protoillud_7_ene",
+      "name": "(2S,3R,6S,9S)-(−)-protoillud-7-ene",
+      "short": "(2S,3R,6S,9S)-(−)-p…",
       "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:49046"
+        "chebi": "CHEBI:137530"
       }
     },
     {
-      "id": "2_cis_6_cis_farnesyl_diphosphate",
-      "name": "2-cis,6-cis-farnesyl diphosphate",
-      "short": "2-cis,6-cis-farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:60374"
-      }
-    },
-    {
-      "id": "endo_bergamotene",
-      "name": "(−)-endo-α-bergamotene",
-      "short": "(−)-endo-α-bergamot…",
+      "id": "3s_asterisca_2_9_6_diene",
+      "name": "(3S)-(+)-asterisca-2(9),6-diene",
+      "short": "(+)-asterisca-2(9),…",
       "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:61679"
+        "chebi": "CHEBI:137531"
+      }
+    },
+    {
+      "id": "amorphene",
+      "name": "(−)-α-amorphene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:137533"
       }
     }
   ],
@@ -258,17 +277,31 @@
       ]
     },
     {
-      "id": "ec_4_2_3_77",
-      "name": "(+)-germacrene D synthase",
+      "id": "ec_4_2_3_159",
+      "name": "tsukubadiene synthase",
       "ec": [
-        "4.2.3.77"
+        "4.2.3.159"
       ]
     },
     {
-      "id": "ec_4_2_3_54",
-      "name": "(-)-endo-alpha-bergamotene synthase [(2Z,6Z)-farnesyl diphosphate",
+      "id": "ec_4_2_3_160",
+      "name": "(2S,3R,6S,9S)-(-)-protoillud-7-ene synthase",
       "ec": [
-        "4.2.3.54"
+        "4.2.3.160"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_161",
+      "name": "(3S)-(+)-asterisca-2(9),6-diene synthase",
+      "ec": [
+        "4.2.3.161"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_162",
+      "name": "(-)-alpha-amorphene synthase",
+      "ec": [
+        "4.2.3.162"
       ]
     }
   ],
@@ -515,9 +548,50 @@
     },
     {
       "id": "r6",
-      "name": "(+)-germacrene D synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = (+)-germacrene D + diphosphate",
-      "ec": "4.2.3.77",
+      "name": "tsukubadiene synthase",
+      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate = tsukubadiene + diphosphate",
+      "ec": "4.2.3.159",
+      "substrates": [
+        {
+          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "tsukubadiene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_159"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:53624"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53624"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "(2S,3R,6S,9S)-(-)-protoillud-7-ene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (2S,3R,6S,9S)-(-)-protoillud-7-ene + diphosphate",
+      "ec": "4.2.3.160",
       "substrates": [
         {
           "metabolite": "fpp",
@@ -526,7 +600,7 @@
       ],
       "products": [
         {
-          "metabolite": "germacrene_d",
+          "metabolite": "2s_3r_6s_9s_protoillud_7_ene",
           "stoichiometry": 1
         },
         {
@@ -536,61 +610,214 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_77"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:30427"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:30427"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "(-)-endo-alpha-bergamotene synthase [(2Z,6Z)-farnesyl diphosphate",
-      "equation": "(2Z,6Z)-farnesyl diphosphate = (1S,5S,6S)-alpha-bergamotene + diphosphate",
-      "ec": "4.2.3.54",
-      "substrates": [
-        {
-          "metabolite": "2_cis_6_cis_farnesyl_diphosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "endo_bergamotene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_54"
+          "enzyme": "ec_4_2_3_160"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:30471"
+        "rhea": "RHEA:53628"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:30471"
+            "id": "RHEA:53628"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "(3S)-(+)-asterisca-2(9),6-diene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (3S)-(+)-asterisca-2(9),6-diene + diphosphate",
+      "ec": "4.2.3.161",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3s_asterisca_2_9_6_diene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_161"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:53632"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53632"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "(-)-alpha-amorphene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (-)-alpha-amorphene + diphosphate",
+      "ec": "4.2.3.162",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "amorphene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_162"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:53640"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53640"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_udp_2_acetamido_4_azaniumyl_2_4_6_trideoxy_d_glu_udp-2-acetamido-4-azanium-to-udp-2-acetamido-2-6",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "udp_2_acetamido_4_azaniumyl_2_4_6_trideoxy_d_glu"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-2-acetamido-4-azanium-to-udp-2-acetamido-2-6"
+      },
+      "note": "Shares UDP-2-acetamido-4-azaniumyl-2,4,6-trideoxy-α-D-glucose with UDP-2-acetamido-4-azanium… to UDP-2-acetamido-2,6-dideo….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:63277"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_udp_n_n_diacetylbacillosamine_ditrans-octacis-undecapre-to-udp-n-n-diacetylbac",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "udp_n_n_diacetylbacillosamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ditrans-octacis-undecapre-to-udp-n-n-diacetylbac"
+      },
+      "note": "Shares UDP-N,N'-diacetylbacillosamine with ditrans,octacis-undecapre… to UDP-N,N'-diacetylbacillos….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:67134"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_udp_n_n_diacetylbacillosamine_tritrans-heptacis-undecap-to-d-galnac-1-4-2-d",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "udp_n_n_diacetylbacillosamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "tritrans-heptacis-undecap-to-d-galnac-1-4-2-d"
+      },
+      "note": "Shares UDP-N,N'-diacetylbacillosamine with tritrans,heptacis-undecap… to [α-D-GalNAc-(1→4)]2-[β-D-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:67134"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_4_diacetamido_2_4_6_trideoxy_d_mannopyranose_gdp-2-acetamido-2-6-dideo-to-2-4-diacetamido-2-4",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_4_diacetamido_2_4_6_trideoxy_d_mannopyranose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gdp-2-acetamido-2-6-dideo-to-2-4-diacetamido-2-4"
+      },
+      "note": "Shares 2,4-diacetamido-2,4,6-trideoxy-α-D-mannopyranose with GDP-2-acetamido-2,6-dideo… to 2,4-diacetamido-2,4,6-tri….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:68645"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_udp_2_acetamido_4_amino_2_4_6_trideoxyglucose_garbanzol-to-2-hydroxyliquiritigenin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "udp_2_acetamido_4_amino_2_4_6_trideoxyglucose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "garbanzol-to-2-hydroxyliquiritigenin"
+      },
+      "note": "Shares UDP-2-acetamido-4-amino-2,4,6-trideoxyglucose with garbanzol to 2-hydroxyliquiritigenin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104915"
           }
         ]
       }

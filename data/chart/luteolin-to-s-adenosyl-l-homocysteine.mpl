@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway luteolin-to-s-adenosyl-l-homocysteine "luteolin to S-adenosyl-L-homocysteine" {
-  spacing 232
+  spacing 152
 
   spine at 0,0 {
     luteolin
@@ -12,45 +12,7 @@ pathway luteolin-to-s-adenosyl-l-homocysteine "luteolin to S-adenosyl-L-homocyst
     luteolin_4_o_d_glucoside
     <-> . +h2o -d_glucose
     luteolin_7_olate
-    <-> ec_2_1_1_398 [2.1.1.398] +sam -sah -hplus
-    4_5_dihydroxy_3_methoxyflavon_7_olate
-    <-> . +sam -sah
-    velutin
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +l_lyxopyranose +phosphate +l_lyxopyranose
-    atp
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    3s_4s_2_hydroxymethyl_oxolane_2_3_4_triol
-  }
-
-  branch from luteolin_7_olate side left {
-    luteolin_7_olate
-    <-> . +sam +sah +hplus
-    diosmetin_7_olate
-  }
-
-  branch from luteolin_7_olate side right {
-    luteolin_7_olate
-    <-> . +apigenin_7_olate +fmnh2 +o2 +h2o +hplus
-    fmn
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +eriodictyol +sam +hplus
-    homoeriodictyol
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +e_5_hydroxyferulate +sam +hplus
-    trans_sinapate
+    <-> . +sam -sah -hplus
+    luteolin_5_olate_7_methyl_ether
   }
 }

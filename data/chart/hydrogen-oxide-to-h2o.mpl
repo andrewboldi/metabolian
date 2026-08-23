@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway hydrogen-oxide-to-h2o "Hydrogen oxide to H2O" {
-  spacing 196
+  spacing 160
 
   spine at 0,0 {
     hydrogen_oxide
@@ -14,41 +14,5 @@ pathway hydrogen-oxide-to-h2o "Hydrogen oxide to H2O" {
     8_oxo_dgmp
     <-> ec_3_6_1_55 [3.6.1.55] +diphosphate +h -h2o
     8_oxo_dgtp
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_3_2_10 [3.3.2.10] +h +4z_7z_10z_13z_16z_19_20_epoxydocosapentaenoate
-    19_20_dihdpa
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_1_11_1_12 [1.11.1.12] +glutathione_disulfide +7s_hydroxy_4z_8e_10z_13z_16z_19z_docosahexaenoat +7_hydroperoxy_4z_8e_10z_13z_16z_19z_docosahexaen
-    glutathione
-  }
-
-  branch from h side left {
-    h
-    <-> . +co2 +benzene
-    benzoate
-  }
-
-  branch from h side right {
-    h
-    <-> . +2_hydroxy_6_oxo_6_2_4_dihydroxyphenyl_hexa_2_4_d +o2
-    2_2_3_4_tetrahydroxybiphenyl
-  }
-
-  branch from phosphate side left {
-    phosphate
-    <-> . +h +adp +atp +h2o
-    5_6_epoxy_3_alpha_iso_pravastatin
-  }
-
-  branch from phosphate side right {
-    phosphate
-    <-> . +h +adp +5_dihydrotestosterone_17_o_d_glucuronide +5_dihydrotestosterone_17_o_d_glucuronide +h2o
-    atp
   }
 }

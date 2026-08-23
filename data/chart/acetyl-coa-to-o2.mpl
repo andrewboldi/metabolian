@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway acetyl-coa-to-o2 "acetyl-CoA to O2" {
-  spacing 212
+  spacing 152
 
   spine at 0,0 {
     acetyl_coa
@@ -16,65 +16,5 @@ pathway acetyl-coa-to-o2 "acetyl-CoA to O2" {
     5_oxo_12_r_hydroxy_eicosa_2e_8e_10e_14z_tetraeno
     <-> . +h2o2 -o2
     5_oxo_12_r_hydroxy_eicosa_8e_10e_14z_trienoyl_co
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +decanoyl_coa +n_3_aminopropyl_hydroxylamine
-    n3_decanoyl_n3_hydroxy_1_3_diaminopropane
-  }
-
-  branch from coa side right {
-    coa
-    <-> ec_2_3_3_20 [2.3.3.20] +decanoyl_coa +h2o +h
-    2r_2_octyl_3_oxododecanoate
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_6_5_2 [1.6.5.2] +nadh +demethylmenaquinone_12 +h
-    2_demethylmenaquinol_12
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_6_5_2 [1.6.5.2] +nadh +2_demethylmenaquinone_13 +h
-    2_demethylmenaquinol_13
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +jadomycin_a +phosphate +jadomycin_a
-    atp
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    gaudimycin_a
-  }
-
-  branch from 5_oxo_12_r_hydroxy_eicosa_8e_10e_14z_trienoyl_co side left {
-    5_oxo_12_r_hydroxy_eicosa_8e_10e_14z_trienoyl_co
-    <-> . +6_7_dihydro_5_oxo_leukotriene_b4 +atp +coa +amp
-    diphosphate
-  }
-
-  branch from 5_oxo_12_r_hydroxy_eicosa_8e_10e_14z_trienoyl_co side right {
-    5_oxo_12_r_hydroxy_eicosa_8e_10e_14z_trienoyl_co
-    <-> . +6_7_dihydro_5_oxo_12_epi_ltb4 +atp +coa +diphosphate +h
-    amp
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +previridicatumtoxin +nadph +nadp +h2o
-    viridicatumtoxin
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +abietatriene +nadp +h2o +h +miltiradiene
-    nadph
   }
 }

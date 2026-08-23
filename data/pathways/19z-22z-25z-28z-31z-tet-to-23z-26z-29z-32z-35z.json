@@ -170,6 +170,35 @@
       "xrefs": {
         "chebi": "CHEBI:76484"
       }
+    },
+    {
+      "id": "l_pipecolic_acid",
+      "name": "L-pipecolic acid",
+      "formula": "C6H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61185"
+      }
+    },
+    {
+      "id": "8as_octahydroindolizin_1_one",
+      "name": "(8aS)-octahydroindolizin-1-one",
+      "short": "(8aS)-octahydroindo…",
+      "formula": "C8H14NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:167645"
+      }
+    },
+    {
+      "id": "1r_8as_octahydroindolizin_1_ol",
+      "name": "(1R,8aS)-octahydroindolizin-1-ol",
+      "short": "(1R,8aS)-octahydroi…",
+      "formula": "C8H16NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:167675"
+      }
     }
   ],
   "enzymes": [],
@@ -506,6 +535,236 @@
           {
             "db": "Rhea",
             "id": "RHEA:39563"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "L-pipecolate + malonyl-CoA + 2 NADPH + 4 H(+) = (8aS)-octahydroindolizin-1-one + CO2 + ...",
+      "equation": "L-pipecolate + malonyl-CoA + 2 NADPH + 4 H(+) = (8aS)-octahydroindolizin-1-one + CO2 + 2 NADP(+) + CoA + 2 H2O",
+      "substrates": [
+        {
+          "metabolite": "l_pipecolic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 4
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "8as_octahydroindolizin_1_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:65392"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65392"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "L-pipecolate + malonyl-CoA + 3 NADPH + 5 H(+) = (1R,8aS)-octahydroindolizin-1-ol + CO2 ...",
+      "equation": "L-pipecolate + malonyl-CoA + 3 NADPH + 5 H(+) = (1R,8aS)-octahydroindolizin-1-ol + CO2 + 3 NADP(+) + CoA + 2 H2O",
+      "substrates": [
+        {
+          "metabolite": "l_pipecolic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 5
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1r_8as_octahydroindolizin_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:67128"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:67128"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_19z_22z_25z_28z_31z_tetratriacontapentaenoyl_co_11z-14z-17z-20z-23z-hex-to-19z-22z-25z-28z-31z",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "19z_22z_25z_28z_31z_tetratriacontapentaenoyl_co"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "11z-14z-17z-20z-23z-hex-to-19z-22z-25z-28z-31z"
+      },
+      "note": "Shares (19Z,22Z,25Z,28Z,31Z)-tetratriacontapentaenoyl-CoA with (11Z,14Z,17Z,20Z,23Z)-hex… to (19Z,22Z,25Z,28Z,31Z)-tet….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74260"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_pipecolic_acid_15z-18z-21z-24z-triacon-to-23z-26z-29z-32z-octa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_pipecolic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "15z-18z-21z-24z-triacon-to-23z-26z-29z-32z-octa"
+      },
+      "note": "Shares L-pipecolic acid with (15Z,18Z,21Z,24Z)-triacon… to (23Z,26Z,29Z,32Z)-octatri….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61185"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_pipecolic_acid_l-glutamine-to-methyl-com",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_pipecolic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-glutamine-to-methyl-com"
+      },
+      "note": "Shares L-pipecolic acid with L-glutamine to methyl-CoM.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61185"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_pipecolic_acid_l-saccharopinate-to-l-2-aminoadipate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_pipecolic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-saccharopinate-to-l-2-aminoadipate"
+      },
+      "note": "Shares L-pipecolic acid with L-saccharopinate to L-2-aminoadipate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61185"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_pipecolic_acid_n-carbamoyl-d-amino-to-acyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_pipecolic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-carbamoyl-d-amino-to-acyl-coa"
+      },
+      "note": "Shares L-pipecolic acid with N-carbamoyl-D-α-amino… to acyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61185"
           }
         ]
       }

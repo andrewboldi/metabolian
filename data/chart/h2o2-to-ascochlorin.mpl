@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway h2o2-to-ascochlorin "H2O2 to ascochlorin" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     h2o2
@@ -20,29 +20,5 @@ pathway h2o2-to-ascochlorin "H2O2 to ascochlorin" {
     ilicicolin_c
     <-> . +nadph +o2 +hplus -nadp -h2o
     ascochlorin
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +cyclosporin_a_metabolite_m18 +h2o
-    am1ac_cyclosporine
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +cyclosporin_a +h +nadph +cyclosporin_a_metabolite_m18 +h2o
-    nadp
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +fpp +h2o
-    acorenol
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +fpp +h2o
-    koraiol
   }
 }

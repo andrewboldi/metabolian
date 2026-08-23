@@ -4,89 +4,123 @@
 # edit the generator, not this file.
 
 pathway imp-to-h2o "IMP to H2O" {
-  spacing 340
+  spacing 264
 
   spine at 0,0 {
     imp
-    <-> ec_1_1_1_205 [1.1.1.205] +nicotinamide_hypoxanthine_dinucleotide +h2o -h -nicotinamide_hypoxanthine_dinucleotide
-    xmp
-    <-> ec_1_2_1_12 [1.2.1.12] +glyceric_acid_1_3_biphosphate +nicotinamide_hypoxanthine_dinucleotide -h -nicotinamide_hypoxanthine_dinucleotide -phosphate
-    d_glyceraldehyde_3_phosphate
-    <-> . +h2o -phosphate
-    d_glyceraldehyde
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate -d_glyceraldehyde -h2o
-    atp
+    <-> ec_2_7_4_8 [2.7.4.8] +atp -adp
+    idp
+    <-> ec_2_7_1_48 [2.7.1.48] +cmp +h -cytidine
+    itp
+    <-> . +cytidine +agmatine -h2o
+    agmatidine
   }
 
-  branch from h side left {
-    h
-    <-> ec_3_5_1_11 [3.5.1.11] +phenylacetylglycine +h2o +phenyl_acetate
-    glycine
+  branch from idp side left {
+    idp
+    <-> ec_2_7_1_1 [2.7.1.1] +itp +beta_d_glucosamine
+    alpha_d_glucosamine_6_phosphate
   }
 
-  branch from h side right {
-    h
-    <-> ec_1_3_5_2 [1.3.5.2] +ubiquinol_2 +methyl_s_orotate +ubiquinone_2
-    methyl_s_dihydroorotate
+  branch from idp side right {
+    idp
+    <-> . +itp +d_mannopyranose +h
+    beta_d_mannose_6_phosphate
   }
 
-  branch from d_glyceraldehyde_3_phosphate side left {
-    d_glyceraldehyde_3_phosphate
-    <-> ec_4_3_3_6 [4.3.3.6] +alpha_d_ribofuranose_5_phosphate +nh4 +h +phosphate +h2o
-    pyridoxal_5_phosphate
+  branch from adp side left {
+    adp
+    <-> . +adp_l_glycero_d_manno_heptose +galactosyl_glucosyl_3_heptosyl_3_kdo2_lipid_a_bi +h
+    core_oligosaccharide_lipid_a_e_coli_k_12_core_ty
   }
 
-  branch from d_glyceraldehyde_3_phosphate side right {
-    d_glyceraldehyde_3_phosphate
-    <-> ec_1_2_1_13 [1.2.1.13] +nadp +phosphate +h +2r_2_3_bisphosphoglycerate
-    nadph
+  branch from adp side right {
+    adp
+    <-> . +2_phospho_l_ascorbate +atp
+    l_ascorbate
   }
 
-  branch from phosphate side left {
-    phosphate
-    <-> ec_3_1_3_27 [3.1.3.27] +distearoyl_phosphatidylglycerol +h2o
-    phosphatidylglycerophosphate_dioctadecanoyl_n_c1
-  }
-
-  branch from phosphate side right {
-    phosphate
-    <-> ec_3_1_3_1 [3.1.3.1] +phenol +h2o
-    phenyl_phosphate
-  }
-
-  branch from d_glyceraldehyde side left {
-    d_glyceraldehyde
-    <-> . +h2o +h +phosphate
-    glyceraldehyde_3_phosphate
-  }
-
-  branch from d_glyceraldehyde side right {
-    d_glyceraldehyde
-    <-> . +d_tagatose_1_phosphate +h
-    dihydroxyacetone_phosphate
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    ferroxamine
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    ferroxamine
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_5_1_28 [3.5.1.28] +glcnac_1_6_anhmurnac +l_alanyl_gamma_d_glutamyl_meso_2_6_diaminopimelo
-    glcnac_1_6_anhmurnac_l_ala_gamma_d_glu_meso_dap
+  branch from itp side left {
+    itp
+    <-> . +n_acetyl_d_galactosamine +idp +h
+    n_acetyl_alpha_d_galactosamine_1_phosphate
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_5_1_11 [3.5.1.11] +ethanol +phenyl_acetate
-    ethyl_phenylacetate
+    <-> . +2_formyl_1_indanone +h +pyruvate
+    2_hydroxy_4_1_oxo_1_3_dihydro_2h_inden_2_ylidene
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +1_formylindan_2_one +h +pyruvate
+    2_hydroxy_4_2_oxo_1_3_dihydro_2h_inden_1_ylidene
+  }
+
+  branch from imp side right {
+    imp
+    <-> . +h2o +hypoxanthine
+    alpha_d_ribose_5_phosphate
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +glucosyl_heptosyl_2_kdo2_lipid_a +h +adp
+    glucosyl_heptosyl_2_kdo2_lipid_a_phosphate
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
+    d_galactose
+  }
+
+  branch from adp side left {
+    adp
+    <-> . +adp_l_glycero_d_manno_heptose +glucosyl_heptosyl_2_kdo2_lipid_a_phosphate +h
+    glucosyl_heptosyl_3_kdo2_lipid_a_phosphate
+  }
+
+  branch from adp side right {
+    adp
+    <-> ec_3_6_3_17 [3.6.3.17] +h +phosphate +atp +h2o
+    alpha_d_galactose
+  }
+
+  branch from cmp side left {
+    cmp
+    <-> ec_2_4_99_14 [2.4.99.14] +h +kdo_2_8_kdo_2_4_kdo_2_6_lipid_iva +cmp_3_deoxy_alpha_d_manno_octulosonic_acid
+    alpha_kdo_2_4_alpha_kdo_2_6_lipid_iva_e_coli
+  }
+
+  branch from cmp side right {
+    cmp
+    <-> ec_2_7_8_38 [2.7.8.38] +2_3_bis_o_sesterterpanyl_sn_glycero_1_phosphoser +h +l_serine
+    cdp_2_3_bis_o_sesterterpanyl_sn_glycerol
+  }
+
+  branch from h side left {
+    h
+    <-> . +4_coumarate +4_hydroxystyrene
+    co2
+  }
+
+  branch from h side right {
+    h
+    <-> ec_4_1_1_102 [4.1.1.102] +e_caffeate +co2
+    3_4_dihydroxystyrene
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +1_formyl_2_indanone +pyruvate
+    2_hydroxy_4_2_oxo_1_3_dihydro_2h_inden_1_ylidene
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +2_oxocyclohexane_1_carbonyl_coa +h
+    6_carboxyhexanoyl_coa
   }
 }

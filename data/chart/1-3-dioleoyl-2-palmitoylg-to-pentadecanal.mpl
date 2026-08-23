@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-3-dioleoyl-2-palmitoylg-to-pentadecanal "1,3-dioleoyl-2-palmitoylg… to pentadecanal" {
-  spacing 182
+  spacing 206
 
   spine at 0,0 {
     1_3_dioleoyl_2_palmitoylglycerol
@@ -18,14 +18,14 @@ pathway 1-3-dioleoyl-2-palmitoylg-to-pentadecanal "1,3-dioleoyl-2-palmitoylg… 
 
   branch from oleate side left {
     oleate
-    <-> . +h2o +coa +hplus
-    oleoyl_coa
+    <-> . +1_oleoyl_2_acetyl_sn_glycero_3_phosphocholine +h2o +hplus
+    2_acetyl_sn_glycero_3_phosphocholine
   }
 
   branch from oleate side right {
     oleate
-    <-> . +1_oleoyl_sn_glycero_3_phosphoserine +h2o +hplus
-    sn_glycero_3_phosphoserine
+    <-> . +1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph +h2o +hplus
+    1_hexadecanoyl_sn_glycero_3_phospho_d_myo_inosit
   }
 
   branch from 1_oleoylglycerone_3_phosphate side left {
@@ -36,13 +36,37 @@ pathway 1-3-dioleoyl-2-palmitoylg-to-pentadecanal "1,3-dioleoyl-2-palmitoylg… 
 
   branch from palmitate side right {
     palmitate
-    <-> . +octadecan_1_ol +1_palmitoylglycerone_3_phosphate +hplus
-    1_octadecylglycerone_3_phosphate
+    <-> . +1_palmitoyl_sn_glycero_3_phosphoserine +h2o +hplus
+    sn_glycero_3_phosphoserine
   }
 
   branch from palmitate side left {
     palmitate
-    <-> . +9z_12z_octadecadien_1_ol +1_palmitoylglycerone_3_phosphate +hplus
-    1_9z_12z_octadecadienylglycerone_3_phosphate
+    <-> . +1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph +h2o +hplus
+    2_oleoyl_sn_glycero_3_phosphoethanolamine
+  }
+
+  branch from oleate side right {
+    oleate
+    <-> . +1_9z_octadecenoyl_sn_glycero_3_phospho_1_sn_glyc +h2o +hplus
+    sn_glycero_3_phospho_1_sn_glycerol
+  }
+
+  branch from oleate side left {
+    oleate
+    <-> . +n_oleoylphytosphingosine +h2o
+    phytosphingosine
+  }
+
+  branch from palmitate side right {
+    palmitate
+    <-> . +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +h2o +hplus
+    2_linoleoyl_sn_glycero_3_phosphoethanolamine
+  }
+
+  branch from palmitate side left {
+    palmitate
+    <-> . +1_palmitoyl_sn_glycerol_3_phosphate +h2o +hplus
+    sn_glycerol_3_phosphate
   }
 }

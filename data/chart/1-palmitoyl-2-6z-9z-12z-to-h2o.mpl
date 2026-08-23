@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-palmitoyl-2-6z-9z-12z-to-h2o "1-palmitoyl-2-[(6Z,9Z,12Z… to H2O" {
-  spacing 230
+  spacing 308
 
   spine at 0,0 {
     1_palmitoyl_2_6z_9z_12z_octadecatrienoyl_sn_glyc
@@ -24,26 +24,26 @@ pathway 1-palmitoyl-2-6z-9z-12z-to-h2o "1-palmitoyl-2-[(6Z,9Z,12Z… to H2O" {
 
   branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side right {
     1_hexadecanoyl_sn_glycero_3_phosphocholine
-    <-> . +1_palmitoyl_2_arachidonoyl_sn_glycero_3_phosphoc +n_acetylsphingosine
-    1_o_arachidonoyl_n_acetylsphingosine
+    <-> . +trilinoleoyl_2_monolysocardiolipin +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
+    tetralinoleoyl_cardiolipin
   }
 
   branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side left {
     1_hexadecanoyl_sn_glycero_3_phosphocholine
-    <-> . +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +h2o +hplus
-    linoleate
+    <-> . +1_palmitoyl_2_arachidonoyl_sn_glycero_3_phosphoc +1_2_dioleoyl_sn_glycero_3_phosphoethanolamine +hplus
+    n_arachidonoyl_1_2_dioleoyl_sn_glycero_3_phospho
   }
 
   branch from h side right {
     h
-    <-> ec_3_1_6_2 [3.1.6.2] +sulfate +cholesterol +h2o
-    cholesterol_sulfate
+    <-> . +3_methoxytyramine_betaxanthin +h2o +betalamic_acid
+    3_methoxytyramine
   }
 
   branch from h side left {
     h
-    <-> . +succinyl_coa +r_carnitine +coa
-    o_succinylcarnitine
+    <-> . +miraxanthin_v +h2o +betalamic_acid
+    dopamine
   }
 
   branch from 6z_9z_12z_octadecatrienoate side right {
@@ -60,37 +60,115 @@ pathway 1-palmitoyl-2-6z-9z-12z-to-h2o "1-palmitoyl-2-[(6Z,9Z,12Z… to H2O" {
 
   branch from cholesterol side right {
     cholesterol
-    <-> ec_2_3_1_26 [2.3.1.26] +2e_hexadecenoyl_coa +coa
-    cholesteryl_palmitoleate
+    <-> ec_1_1_1_145 [1.1.1.145] +nadh +h +cholest_4_en_3_one
+    nad
   }
 
   branch from cholesterol side left {
     cholesterol
-    <-> ec_3_1_1_13 [3.1.1.13] +hexadecanoate +h +h2o
-    cholesteryl_palmitate
+    <-> . +h +o2 +nadph +nadp +h2o
+    5_6beta_epoxy_5alpha_cholestan_3beta_ol
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_21 [3.6.3.21] +h +adp +phosphate +h2o
-    l_threonine
+    <-> ec_6_3_2_52 [6.3.2.52] +diphosphate +jasmonic_acid_l_phenylalanine +amp +l_phenylalanine
+    jasmonate
   }
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
-    testosterone_17_o_d_glucuronide
+    <-> ec_6_3_2_52 [6.3.2.52] +diphosphate +a_jasmonoyl_glutamine +h +amp +jasmonic_acid_anion
+    l_glutamine
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_3_2_9 [3.3.2.9] +trans_3_4_dihydro_3_4_dihydroxy_7_12_dimethylben
-    1a_11b_dihydro_4_9_dimethylbenz_a_anthra_3_4_b_o
+    <-> ec_2_3_3_17 [2.3.3.17] +acetyl_coa +2_oxo_9_methylthiononanoic_acid +coa
+    2_7_methylthio_heptylmalic_acid
   }
 
   branch from h2o side left {
     h2o
-    <-> . +dibenzo_a_l_pyrene_11_12_diol
-    dibenzo_a_l_pyrene_11_12_epoxide
+    <-> ec_1_10_3_4 [1.10.3.4] +2_aminophenol +o2
+    6_iminocyclohexa_2_4_dienone
+  }
+
+  branch from cholesterol side right {
+    cholesterol
+    <-> . +nad +nadh +hplus
+    cholest_5_en_3_one
+  }
+
+  branch from cholesterol side left {
+    cholesterol
+    <-> . +oleoyl_coa +coa
+    cholesteryl_oleate
+  }
+
+  branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side right {
+    1_hexadecanoyl_sn_glycero_3_phosphocholine
+    <-> . +1_palmitoyl_2_arachidonoyl_sn_glycero_3_phosphoc +cholesterol
+    cholesteryl_arachidonate
+  }
+
+  branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side left {
+    1_hexadecanoyl_sn_glycero_3_phosphocholine
+    <-> . +cholesterol +cholesteryl_oleate
+    1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +4_hydroxyphenyl_4_hydroxybenzoate +h +hydroquinone
+    4_hydroxybenzoate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_1_14_13_25 [1.14.13.25] +nadh +trichloroethene +h +o2 +nad
+    trichloroepoxyethane
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_7_8_23 [2.7.8.23] +1_carboxyvinyl_carboxyphosphonate
+    carboxyphosphonopyruvate
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_7_8_23 [2.7.8.23] +3_hydrohydroxyphosphoryl_pyruvate +carboxyphosphonopyruvate
+    co2
+  }
+
+  branch from cholesterol side right {
+    cholesterol
+    <-> . +udp +h +cholesteryl_alpha_d_glucoside
+    udp_alpha_d_glucose
+  }
+
+  branch from cholesterol side left {
+    cholesterol
+    <-> . +h +o2 +nadph +cholest_5_en_3beta_22r_diol +h2o
+    nadp
+  }
+
+  branch from adp side right {
+    adp
+    <-> . +h +glycerol_2_phosphate +atp
+    glycerol
+  }
+
+  branch from adp side left {
+    adp
+    <-> . +4_aminobenzoyl_coa +phosphate +atp +coa
+    4_aminobenzoate
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_2_4_1_216 [2.4.1.216] +beta_d_glucose_6_phosphate +beta_d_glucose_1_phosphate
+    alpha_alpha_trehalose_6_phosphate
   }
 }

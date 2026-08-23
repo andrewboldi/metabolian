@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway isorhamnetin-to-s-adenosyl-l-homocysteine "isorhamnetin… to S-adenosyl-L-homocysteine" {
-  spacing 218
+  spacing 224
 
   spine at 0,0 {
     isorhamnetin_3_o_4_o_4_coumaroyl_glucoside
@@ -16,69 +16,14 @@ pathway isorhamnetin-to-s-adenosyl-l-homocysteine "isorhamnetin… to S-adenosyl
     rhamnacene_3_olate
   }
 
-  branch from trans_4_coumaroyl_coa side left {
-    trans_4_coumaroyl_coa
-    <-> ec_2_3_1_302 [2.3.1.302] +5_hydroxyanthranilate +coa
-    avenanthramide_a
-  }
 
-  branch from trans_4_coumaroyl_coa side right {
-    trans_4_coumaroyl_coa
-    <-> . +2r_3s_piscidate +coa
-    cimicifugate_k
-  }
 
-  branch from isorhamnetin_3_o_d_glucopyranoside side left {
-    isorhamnetin_3_o_d_glucopyranoside
-    <-> . +coa +trans_4_coumaroyl_coa
-    isorhamnetin_3_o_6_o_4_coumaroyl_glucoside
-  }
 
-  branch from isorhamnetin_3_o_d_glucopyranoside side right {
-    isorhamnetin_3_o_d_glucopyranoside
-    <-> . +isorhamnetin_3_o_6_o_feruloyl_glucoside +coa
-    e_feruloyl_coa
-  }
 
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> . +udp +6_o_beta_d_glucosyl_6_hydroxyflavone +h
-    6_hydroxyflavone
-  }
 
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> . +7_o_beta_d_glucosyl_7_hydroxyflavone +udp +h
-    7_hydroxyflavone
-  }
 
-  branch from isorhamnetin side left {
-    isorhamnetin
-    <-> ec_2_1_1_398 [2.1.1.398] +sam +sah +hplus
-    quercetin_7_olate
-  }
 
-  branch from isorhamnetin side right {
-    isorhamnetin
-    <-> . +sam +sah +hplus
-    3_3_o_dimethylquercetin
-  }
 
-  branch from rhamnacene_3_olate side left {
-    rhamnacene_3_olate
-    <-> . +sam +sah +hplus
-    rhamnetin_3_olate
-  }
 
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_260 [2.1.1.260] +pseudouridine_5_phosphate_1 +sam +hplus
-    n1_methylpseudouridine_5_monophosphate_1
-  }
 
-  branch from sah side left {
-    sah
-    <-> . +guanosine_5_monophosphate_1 +sam
-    n7_methylguanosine_5_phosphate_zwitterion
-  }
 }

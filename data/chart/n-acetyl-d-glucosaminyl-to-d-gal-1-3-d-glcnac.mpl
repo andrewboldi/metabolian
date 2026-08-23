@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-acetyl-d-glucosaminyl-to-d-gal-1-3-d-glcnac "N-acetyl-β-D-glucosaminyl… to β-D-Gal-(1→3)-β-D-GlcNAc-…" {
-  spacing 290
+  spacing 314
 
   spine at 0,0 {
     n_acetyl_d_glucosaminyl_1_3_d_galactosyl_1_4_d_g
@@ -20,5 +20,29 @@ pathway n-acetyl-d-glucosaminyl-to-d-gal-1-3-d-glcnac "N-acetyl-β-D-glucosaminy
     d_glcpnac_1_3_d_galp_1_4_d_glcpnac_1_3_d_galp_1
     <-> . +udp_d_galactose +udp +hplus
     d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_glcnac_1_3_d
+  }
+
+  branch from udp_d_galactose side right {
+    udp_d_galactose
+    <-> . +verapyrone_b_aglycone +udp +hplus
+    verapyrone_b
+  }
+
+  branch from udp_d_galactose side left {
+    udp_d_galactose
+    <-> . +exophillate +udp +hplus
+    phaeomoniecin_d
+  }
+
+  branch from udpglcnac side right {
+    udpglcnac
+    <-> . +n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_glcnac +udp +hplus
+    n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_glcnac
+  }
+
+  branch from udpglcnac side left {
+    udpglcnac
+    <-> . +d_galactoside +udp +hplus
+    n_acetyl_d_glucosaminyl_1_4_d_galactoside
   }
 }

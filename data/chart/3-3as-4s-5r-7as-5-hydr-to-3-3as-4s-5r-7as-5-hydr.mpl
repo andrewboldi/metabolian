@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-3as-4s-5r-7as-5-hydr-to-3-3as-4s-5r-7as-5-hydr "3-[(3aS,4S,5R,7aS)-5-hydr… to 3-[(3aS,4S,5R,7aS)-5-hydr…" {
-  spacing 176
+  spacing 188
 
   spine at 0,0 {
     3_3as_4s_5r_7as_5_hydroxy_7a_methyl_1_5_dioxo_oc
@@ -18,25 +18,37 @@ pathway 3-3as-4s-5r-7as-5-hydr-to-3-3as-4s-5r-7as-5-hydr "3-[(3aS,4S,5R,7aS)-5-h
 
   branch from ppi side left {
     ppi
-    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    isopimara_8_14_15_diene
+    <-> ec_4_2_3_203 [4.2.3.203] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    isoelisabethatriene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_98 [4.2.3.98] +fpp +h2o
-    muurolol
+    <-> . +l_tryptophan +gpp
+    2s_3r_3_geranyl_2_3_dihydro_2_n_cyclo_l_tryptop
   }
 
-  branch from hydrogen_donor side left {
-    hydrogen_donor
-    <-> ec_1_14_99_67 [1.14.99.67] +n_dichloroacetyl_p_aminophenylserinol +o2 +hydrogen_acceptor +h2o
-    chloramphenicol
+  branch from ppi side left {
+    ppi
+    <-> . +trna_3_terminal_nucleotidyl_cytidyl_cytidine_3 +atp
+    trna_3_terminal_nucleotidyl_cytidyl_cytidyl_aden
   }
 
-  branch from hydrogen_donor side right {
-    hydrogen_donor
-    <-> . +1_hydroxy_carotene +hydrogen_acceptor
-    1_hydroxytorulene
+  branch from ppi side right {
+    ppi
+    <-> . +fpp
+    sesquisabinene_b
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +cyclohexylamine +formate
+    n_cyclohexylformamide
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +h +cyromazine +nh4
+    n_cyclopropylammeline
   }
 }

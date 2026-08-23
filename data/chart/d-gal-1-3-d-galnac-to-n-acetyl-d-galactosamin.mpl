@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-gal-1-3-d-galnac-to-n-acetyl-d-galactosamin "β-D-Gal-(1→3)-β-D-GalNAc-… to N-acetyl-β-D-galactosamin…" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_glc_1_1_cer
@@ -14,5 +14,17 @@ pathway d-gal-1-3-d-galnac-to-n-acetyl-d-galactosamin "β-D-Gal-(1→3)-β-D-Gal
     d_galactosyl_1_3_l_fucosyl_1_2_d_galactosyl_1_3
     <-> . +udp_n_acetyl_d_galactosamine -udp -hplus
     n_acetyl_d_galactosaminyl_1_3_d_galactosyl_1_3_l
+  }
+
+  branch from gdp_l_fucose side left {
+    gdp_l_fucose
+    <-> . +methyl_8_n_acetyl_neuraminosyl_2_3_d_galactosyl +gdp +hplus
+    methyl_8_n_acetyl_neuraminosyl_2_3_d_galactosyl
+  }
+
+  branch from gdp_l_fucose side right {
+    gdp_l_fucose
+    <-> . +methyl_8_d_galactosyl_1_3_n_acetyl_d_glucosamyl +gdp +hplus
+    methyl_8_d_galactosyl_1_3_l_fucosyl_1_4_n_acetyl
   }
 }

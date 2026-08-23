@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway pctr1-to-glutathione-disulfide "PCTR1 to glutathione disulfide" {
-  spacing 218
+  spacing 182
 
   spine at 0,0 {
     pctr1
@@ -16,45 +16,9 @@ pathway pctr1-to-glutathione-disulfide "PCTR1 to glutathione disulfide" {
     17s_hdha
   }
 
-  branch from 16s_17s_epoxy_4z_7z_10z_12e_14e_19z_docosahexae side left {
-    16s_17s_epoxy_4z_7z_10z_12e_14e_19z_docosahexae
-    <-> . +h2o
-    protectin_d1
-  }
-
-  branch from glutathione side right {
-    glutathione
-    <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa +h2o
-    1_methylsulfanyl_4_aci_nitrobutane
-  }
-
-  branch from glutathione side left {
-    glutathione
-    <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa +h2o
-    1_methylsulfanyl_5_aci_nitropentane
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +d_threose +phosphate +d_threose +h2o
-    atp
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
-    alpha_d_xylose
-  }
-
-  branch from 4z_7z_10z_13z_15e_17s_19z_17_hydroperoxydocosah side right {
+  branch from 4z_7z_10z_13z_15e_17s_19z_17_hydroperoxydocosah side left {
     4z_7z_10z_13z_15e_17s_19z_17_hydroperoxydocosah
     <-> . +o2
     4z_7z_10z_13z_16z_19z_docosahexaenoate
-  }
-
-  branch from 4z_7z_10z_13z_15e_17s_19z_17_hydroperoxydocosah side left {
-    4z_7z_10z_13z_15e_17s_19z_17_hydroperoxydocosah
-    <-> ec_1_13_11_33 [1.13.11.33] +10s_17s_dihpdha
-    o2
   }
 }

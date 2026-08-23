@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-s-hydroxy-tetracosa-12-to-h2o "3(S)-hydroxy-tetracosa-12… to H2O" {
-  spacing 236
+  spacing 308
 
   spine at 0,0 {
     3_s_hydroxy_tetracosa_12_15_18_21_all_cis_tetrae
@@ -24,50 +24,50 @@ pathway 3-s-hydroxy-tetracosa-12-to-h2o "3(S)-hydroxy-tetracosa-12… to H2O" {
 
   branch from h side left {
     h
-    <-> ec_2_6_1_29 [2.6.1.29] +alpha_omega_diamine +2_oxoglutarate +l_glutamate
-    omega_aminoaldehyde
+    <-> . +2_2_methylsulfanyl_hexyl_maleate +h2o
+    3_6_methylthio_hexylmalic_acid
   }
 
   branch from h side right {
     h
-    <-> . +3_5_dibromo_4_hydroxybenzoate +nh4 +h2o
-    3_5_dibromo_4_hydroxybenzamide
+    <-> . +2_2_methylsulfanyl_heptyl_maleate +h2o
+    2_7_methylthio_heptylmalic_acid
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_183 [1.1.1.183] +neral +h +nadp
-    nerol
+    <-> . +h +abieta_8_14_12_diene +o2 +nadp +h2o
+    levopimaradienol
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_14_13_8 [1.14.13.8] +h +tamoxifen +o2 +nadp +h2o
-    tamoxifen_n_oxide
+    <-> . +neoabietadienal +o2 +nadp +h2o
+    neoabietic_acid
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +h +tamoxifen +o2 +nadph +h2o
-    afimoxifene
+    <-> . +h +palustradiene +o2 +nadph +h2o
+    palustradienol
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +h +n_desmethyltamoxifen +o2 +nadph +h2o
-    4_hydroxy_n_desmethyltamoxifen
+    <-> . +palustradiene_diol +h2o +h +nadph +palustradienol
+    o2
   }
 
   branch from h2o side left {
     h2o
-    <-> . +hydrogencarbonate +benzoate
-    terephthalate
+    <-> . +2_2_methylsulfanyl_heptyl_maleate +h
+    3_7_methylthio_heptylmalic_acid
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_21_3_6 [1.21.3.6] +trans_2_3_4_4_6_pentahydroxychalcone +o2
-    bracteatin
+    <-> . +10_formyl_tetrahydromethanopterin +h
+    5_10_methenyl_5_6_7_8_tetrahydromethanopterin
   }
 
   branch from all_cis_12_15_18_21_tetracosatetraenoyl_coa side left {
@@ -84,25 +84,97 @@ pathway 3-s-hydroxy-tetracosa-12-to-h2o "3(S)-hydroxy-tetracosa-12… to H2O" {
 
   branch from atp side left {
     atp
-    <-> ec_2_7_1_119 [2.7.1.119] +h +adp +7_o_phosphohygromycin_b
-    hygromycin_b
+    <-> . +diphosphate +amp +4_hydroxyphenylacetyl_coa +coa
+    4_hydroxyphenylacetate
   }
 
   branch from atp side right {
     atp
-    <-> . +h +cyclohexane_1_carbonyl_coa +amp +phosphate +coa +h2o
-    cyclohexane_1_carboxylate
+    <-> ec_6_3_1_12 [6.3.1.12] +d_aspartate +beta_glcnac_1_4_mur2ac_oyl_l_ala_gamma_d_glu_l +h +adp +phosphate
+    beta_glcnac_1_4_mur2ac_oyl_l_ala_gamma_d_glu_n
   }
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_69 [2.3.1.69] +acetyl_coa +1r_2s_4r_borneol
-    bornyl_acetate
+    <-> ec_2_3_1_16 [2.3.1.16] +acetyl_coa +3z_5e_dodecadienoyl_coa
+    5_cis_7_trans_3_oxo_tetradecadienoyl_coa
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_3_17 [2.3.3.17] +acetyl_coa +2_oxo_6_methylthiohexanoic_acid +h2o
-    2_4_methylthio_butylmalic_acid
+    <-> . +18_hydroxyoleoyl_coa +1_18_hydroxyoeoyl_2_18_hydroxy_linoleoyl_sn_glyc
+    tri_acyl_estolide
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +h +isopimara_7_15_diene +o2 +nadph +h2o
+    isopimara_7_15_dienol
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +h +3r_6e_nerolidol +o2 +nadph +e_4_8_dimethyl_1_3_7_nonatriene +h2o
+    buten_2_one
+  }
+
+  branch from h side left {
+    h
+    <-> . +co2 +2_5_methylsulfanyl_oxopentanoate
+    2_2_methylsulfanyl_ethyl_3_oxobutanedioate
+  }
+
+  branch from h side right {
+    h
+    <-> . +co2 +2_oxo_10_methylthiodecanoic_acid
+    3_carboxy_10_methylsulfanyl_2_oxodecanoate
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +formaldehyde +acetate +nadp +h2o +o2
+    hydroxyacetone
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +h +o2 +cyclohexane +nadp +h2o
+    cyclohexanol
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +3s_hydroxyadipyl_coa +h
+    5_oxo_furan_2_acetyl_coa
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +l_alanine +h +indol_3_yl_acetate
+    n_indole_3_acetyl_l_alanine
+  }
+
+  branch from diphosphate side left {
+    diphosphate
+    <-> . +alpha_patchoulene
+    2e_6e_farnesyl_diphosphate
+  }
+
+  branch from diphosphate side right {
+    diphosphate
+    <-> . +terpinene
+    neryl_diphosphate
+  }
+
+  branch from amp side left {
+    amp
+    <-> ec_3_6_1_21 [3.6.1.21] +alpha_d_ribose_1_phosphate +h +h2o
+    adp_beta_d_ribose
+  }
+
+  branch from amp side right {
+    amp
+    <-> . +h +2_2_carboxy_4_methylthiazol_5_yl_ethyl_phosphate +h2o
+    adp_5_ethyl_4_methylthiazole_2_carboxylate
   }
 }

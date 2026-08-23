@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 6ar-11ar-3-9-dihydroxyp-to-fmn "(6aR,11aR)-3,9-dihydroxyp… to FMN" {
-  spacing 272
+  spacing 254
 
   spine at 0,0 {
     6ar_11ar_3_9_dihydroxypterocarpan
@@ -16,27 +16,9 @@ pathway 6ar-11ar-3-9-dihydroxyp-to-fmn "(6aR,11aR)-3,9-dihydroxyp… to FMN" {
     glyceollin_ii
   }
 
-  branch from fmn side left {
-    fmn
-    <-> . +tetradecanoate +fmnh2 +o2 +h2o +hplus
-    10_hydroxymyristate
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +tetradecanoate +fmnh2 +o2 +h2o +hplus
-    11_hydroxymyristate
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +2_cis_6_cis_farnesyl_diphosphate
-    cedr_8_ene
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +2_cis_6_cis_farnesyl_diphosphate
-    trans_farnesene
+  branch from 6ar_11ar_3_9_dihydroxypterocarpan side left {
+    6ar_11ar_3_9_dihydroxypterocarpan
+    <-> ec_4_2_1_139 [4.2.1.139] +h2o
+    3r_4r_7_2_4_trihydroxyisoflavanol
   }
 }

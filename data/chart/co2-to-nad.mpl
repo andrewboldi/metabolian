@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway co2-to-nad "CO2 to NAD" {
-  spacing 280
+  spacing 340
 
   spine at 0,0 {
     co2
@@ -22,38 +22,38 @@ pathway co2-to-nad "CO2 to NAD" {
 
   branch from h side left {
     h
-    <-> ec_1_1_1_2 [1.1.1.2] +4_cyanobenzaldehyde +nadph +nadp
-    4_cyanobenzyl_alcohol
+    <-> . +dichlorocarbene +h2o +chloride
+    formate
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_2 [1.1.1.2] +4_formylbenzoate +nadph +nadp
-    4_carboxybenzyl_alcohol
+    <-> . +dichlorocarbene +h2o +formate
+    chloride
   }
 
   branch from pyruvate side left {
     pyruvate
-    <-> ec_4_4_1_13 [4.4.1.13] +h +z_2_phenyl_1_thioacetohydroximate +nh4 +h2o
-    s_phenylacetothiohydroximoyl_l_cysteine
+    <-> ec_2_7_1_121 [2.7.1.121] +glyceraldehyde_3_phosphate +h +glyceraldehyde
+    phosphoenolpyruvate
   }
 
   branch from pyruvate side right {
     pyruvate
-    <-> . +ubiquinol_2 +co2 +acetate +h2o
-    ubiquinone_2
+    <-> ec_4_1_2_20 [4.1.2.20] +2r_tartronate_semialdehyde
+    5_dehydro_4_deoxy_d_glucarate
   }
 
   branch from benzaldehyde side left {
     benzaldehyde
-    <-> ec_4_1_2_38 [4.1.2.38]
-    s_benzoin
+    <-> ec_4_1_2_47 [4.1.2.47] +cyanide +h
+    s_mandelonitrile
   }
 
   branch from benzaldehyde side right {
     benzaldehyde
-    <-> ec_4_1_2_38 [4.1.2.38]
-    r_benzoin
+    <-> . +h +benzoate +ferrocyanide +h2o
+    ferricyanide
   }
 
   branch from cinnamoyl_coa side left {
@@ -70,49 +70,109 @@ pathway co2-to-nad "CO2 to NAD" {
 
   branch from h2o side left {
     h2o
-    <-> ec_3_4_24_27 [3.4.24.27] +leu_gly_pro +z_gly_pro
-    z_gly_pro_leu_gly_pro
+    <-> . +4_propyl_l_proline +methylsulfanyl_lincosamide
+    n_demethyllincomycin
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_4_21_26 [3.4.21.26] +coumarin_120 +z_gly_pro
-    z_gly_pro_amc
+    <-> . +4_1e_3_carboxy_3_oxoprop_1_en_1_yl_2_3_dihydro_1
+    5_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem
   }
 
   branch from atp side left {
     atp
-    <-> ec_6_3_2_45 [6.3.2.45] +udp_n_acetyl_alpha_d_muramate +l_alanyl_gamma_d_glutamyl_meso_2_6_diaminopimelo +h +adp +phosphate
-    udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_meso
+    <-> ec_2_7_1_1 [2.7.1.1] +2s_4r_5s_6r_6_hydroxymethyl_oxane_2_4_5_triol +h +2_deoxy_d_glucose_6_phosphate
+    adp
   }
 
   branch from atp side right {
     atp
-    <-> . +fructoselysine_3_phosphate +h +adp
-    1_deoxy_1_n6_lysino_d_fructose
+    <-> . +l_alanine +l_leucine +h +adp +phosphate
+    ala_leu
   }
 
   branch from coa side left {
     coa
-    <-> . +methylmalonate +h +h2o
-    r_methylmalonyl_coa
+    <-> . +acetyl_coa +z_octadec_11_enol
+    z_octadec_11_enyl_acetate
   }
 
   branch from coa side right {
     coa
-    <-> . +9z_octadecenoyl_coa +h2o
-    octadecenoic_acid
+    <-> . +dodecanoyl_coa +hydroxychlorobactene_glucoside
+    lauryl_hydroxychlorobactene_glucoside
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_2_1_3 [1.2.1.3] +nadh +5_methoxyindole_2_carboxylic_acid +h +h2o
-    5_methoxyindole_3_carbaldehyde
+    <-> ec_1_6_5_2 [1.6.5.2] +nadh +2_6_dimethyl_1_4_benzoquinone +h
+    2_6_dimethyl_1_4_benzenediol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_2_1_3 [1.2.1.3] +nadh +5_nitro_1_naphthoate +h +h2o
-    5_nitro_1_naphthaldehyde
+    <-> ec_1_1_1_370 [1.1.1.370] +nadh +h +l_glucono_1_5_lactone
+    aldehydo_l_glucose
+  }
+
+  branch from co2 side left {
+    co2
+    <-> ec_4_1_1_114 [4.1.1.114] +7z_pentadec_7_ene
+    3_hexyl_4_septyloxetan_2_one
+  }
+
+  branch from co2 side right {
+    co2
+    <-> . +firefly_oxyluciferin
+    firefly_oxyluciferin_dioxetanone
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_2_1_161 [3.2.1.161] +d_apiofuranosyl_1_6_d_glucopyranose +dalpatein +h2o
+    dalpatein_7_o_beta_d_apiofuranosyl_1_6_beta_d_gl
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_3_1_23 [2.3.1.23] +octadecanoyl_coa +1_palmitoylglycerophosphocholine +coa
+    1_hexadecanoyl_2_octadecanoyl_sn_glycero_3_phosp
+  }
+
+  branch from pyruvate side left {
+    pyruvate
+    <-> ec_4_1_2_20 [4.1.2.20] +2s_tartronate_semialdehyde
+    2_dehydro_3_deoxy_d_glucarate
+  }
+
+  branch from pyruvate side right {
+    pyruvate
+    <-> . +2_formylindan_1_one +h +h2o
+    2_hydroxy_4_1_oxo_1_3_dihydro_2h_inden_2_ylidene
+  }
+
+  branch from acetyl_coa side left {
+    acetyl_coa
+    <-> ec_2_3_1_107 [2.3.1.107] +deacetylvindorosine +coa
+    vindorosine
+  }
+
+  branch from acetyl_coa side right {
+    acetyl_coa
+    <-> . +isobutanol +coa
+    isobutyl_acetate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +hydroxyl +datp
+    2_oxo_datp
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +datp +2_oxo_datp
+    hydrogen_oxide
   }
 }

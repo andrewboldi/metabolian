@@ -144,6 +144,54 @@
       "xrefs": {
         "chebi": "CHEBI:16193"
       }
+    },
+    {
+      "id": "o_phospho_l_serine_2",
+      "name": "O-phospho-L-serine(2−)",
+      "short": "O-phospho-L-serine(…",
+      "formula": "C3H4NO5P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:83421"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "udpglcnac",
+      "name": "UDP-N-acetyl-α-D-glucosamine (UDP-GlcNAc)",
+      "short": "UDP-N-acetyl-α-D-gl…",
+      "formula": "C17H25N3O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57705"
+      }
+    },
+    {
+      "id": "o_n_acetyl_d_glucosaminyl_l_serine",
+      "name": "O-(N-acetyl-α-D-glucosaminyl)-L-serine",
+      "short": "O-(N-acetyl-α-D-glu…",
+      "formula": "C11H18N2O7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:143279"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
     }
   ],
   "enzymes": [
@@ -174,6 +222,16 @@
       "ec": [
         "1.14.13.24"
       ]
+    },
+    {
+      "id": "ec_3_1_3_53",
+      "name": "[myosin-light-chain] phosphatase",
+      "ec": [
+        "3.1.3.53"
+      ],
+      "xrefs": {
+        "uniprot": "P62140"
+      }
     }
   ],
   "reactions": [
@@ -420,6 +478,338 @@
           {
             "db": "Rhea",
             "id": "RHEA:22692"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "[myosin-light-chain] phosphatase",
+      "equation": "O-phospho-L-seryl-[myosin light chain] + H2O = L-seryl-[myosin light chain] + phosphate",
+      "ec": "3.1.3.53",
+      "substrates": [
+        {
+          "metabolite": "o_phospho_l_serine_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_3_53"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:12849"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12849"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "L-seryl-[protein] + UDP-N-acetyl-alpha-D-glucosamine = 3-O-[N-acetyl-alpha-D-glucosamin...",
+      "equation": "L-seryl-[protein] + UDP-N-acetyl-alpha-D-glucosamine = 3-O-[N-acetyl-alpha-D-glucosaminyl]-L-seryl-[protein] + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "l_serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udpglcnac",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_n_acetyl_d_glucosaminyl_l_serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:59872"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59872"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_acetylsalicylate_acetylsalicylate-to-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acetylsalicylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetylsalicylate-to-acetate"
+      },
+      "note": "Shares acetylsalicylate with acetylsalicylate to acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:13719"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_acetylsalicylate_acetylsalicylate-to-dibenzo-1-4-dioxine-2-3-d",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acetylsalicylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetylsalicylate-to-dibenzo-1-4-dioxine-2-3-d"
+      },
+      "note": "Shares acetylsalicylate with acetylsalicylate to dibenzo[1,4]dioxine-2,3-d….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:13719"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_o_acetyl_l_serine_o-n-acetyl-d-glucosami-to-d-glucopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "o_acetyl_l_serine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "o-n-acetyl-d-glucosami-to-d-glucopyranose"
+      },
+      "note": "Shares O-acetyl-L-serine with O-(N-acetyl-β-D-glucosami… to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:141128"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_5_dihydroxybenzoate_2-hydroxybenzoyl-coa-to-hydroquinone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_5_dihydroxybenzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-hydroxybenzoyl-coa-to-hydroquinone"
+      },
+      "note": "Shares 2,5-dihydroxybenzoate with 2-hydroxybenzoyl-CoA to hydroquinone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58044"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_maleylpyruvate_5-nitroanthranilate-to-fumarate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_maleylpyruvate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-nitroanthranilate-to-fumarate"
+      },
+      "note": "Shares 3-maleylpyruvate with 5-nitroanthranilate to fumarate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16727"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_maleate_r-carnitine-to-maleate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "maleate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-carnitine-to-maleate"
+      },
+      "note": "Shares maleate with (R)-carnitine to maleate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:30780"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_hydroxybenzoate_19-4-hydroxyphenyl-nonad-to-o-s-c37-phenol-carbo",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_hydroxybenzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "19-4-hydroxyphenyl-nonad-to-o-s-c37-phenol-carbo"
+      },
+      "note": "Shares 3-hydroxybenzoate with 19-(4-hydroxyphenyl)nonad… to O-(S-C37-(phenol)carboxyp….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16193"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_hydroxybenzoate_chorismate-to-4-d-glucosyloxy-3-hyd",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_hydroxybenzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "chorismate-to-4-d-glucosyloxy-3-hyd"
+      },
+      "note": "Shares 3-hydroxybenzoate with chorismate to 4-(β-D-glucosyloxy)-3-hyd….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16193"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_hydroxybenzoate_cyclohexanol-to-cyclohexanone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_hydroxybenzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cyclohexanol-to-cyclohexanone"
+      },
+      "note": "Shares 3-hydroxybenzoate with cyclohexanol to cyclohexanone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16193"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_hydroxybenzoate_d-ribitol-5-phosphate-to-3-o-d-xylosyl-1-3",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_hydroxybenzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-ribitol-5-phosphate-to-3-o-d-xylosyl-1-3"
+      },
+      "note": "Shares 3-hydroxybenzoate with D-ribitol 5-phosphate to 3-O-[α-D-xylosyl-(1→3)-β-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16193"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_o_n_acetyl_d_glucosaminyl_l_serine_udp-to-undecaprenyldiphospho-n-a",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "o_n_acetyl_d_glucosaminyl_l_serine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-undecaprenyldiphospho-n-a"
+      },
+      "note": "Shares O-(N-acetyl-α-D-glucosaminyl)-L-serine with UDP to undecaprenyldiphospho-N-a….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:143279"
           }
         ]
       }

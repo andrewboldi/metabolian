@@ -1,0 +1,537 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "lycopene-to-decaprenoxanthin-56124",
+  "name": "lycopene to decaprenoxanthin",
+  "category": "other",
+  "summary": "A 3-step route from lycopene to decaprenoxanthin, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:56124"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:15948"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "lycopene",
+      "name": "lycopene",
+      "formula": "C40H56",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15948"
+      }
+    },
+    {
+      "id": "dmapp",
+      "name": "Dimethylallyl diphosphate (DMAPP)",
+      "short": "Dimethylallyl PP…",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57623"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "nonaflavuxanthin",
+      "name": "nonaflavuxanthin",
+      "formula": "C45H64O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:139514"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "flavuxanthin",
+      "name": "flavuxanthin",
+      "formula": "C50H72O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:139515"
+      }
+    },
+    {
+      "id": "decaprenoxanthin",
+      "name": "decaprenoxanthin",
+      "formula": "C50H72O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM737120"
+      }
+    },
+    {
+      "id": "sarcinaxanthin",
+      "name": "Sarcinaxanthin",
+      "formula": "C50H72O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:202023"
+      }
+    },
+    {
+      "id": "sarprenoxanthin",
+      "name": "sarprenoxanthin",
+      "formula": "C50H72O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM818734"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_5_1_149",
+      "name": "lycopene elongase/hydratase (flavuxanthin-forming)",
+      "ec": [
+        "2.5.1.149"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "lycopene elongase/hydratase (flavuxanthin-forming)",
+      "equation": "all-trans-lycopene + dimethylallyl diphosphate + A + H2O = nonaflavuxanthin + AH2 + diphosphate",
+      "ec": "2.5.1.149",
+      "substrates": [
+        {
+          "metabolite": "lycopene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dmapp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nonaflavuxanthin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_149"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:56124"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56124"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "lycopene elongase/hydratase (flavuxanthin-forming)",
+      "equation": "nonaflavuxanthin + dimethylallyl diphosphate + A + H2O = flavuxanthin + AH2 + diphosphate",
+      "ec": "2.5.1.149",
+      "substrates": [
+        {
+          "metabolite": "nonaflavuxanthin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dmapp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "flavuxanthin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_149"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:56128"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56128"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR123426",
+      "substrates": [
+        {
+          "metabolite": "flavuxanthin",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "decaprenoxanthin",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR123426"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR123426"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Reaction MNXR183618",
+      "substrates": [
+        {
+          "metabolite": "flavuxanthin",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sarcinaxanthin",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR183618"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR183618"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "Reaction MNXR183653",
+      "substrates": [
+        {
+          "metabolite": "flavuxanthin",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sarprenoxanthin",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR183653"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR183653"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_nonaflavuxanthin_lycopene-to-decaprenoxanthin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nonaflavuxanthin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "lycopene-to-decaprenoxanthin"
+      },
+      "note": "Shares nonaflavuxanthin with lycopene to decaprenoxanthin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:139514"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_flavuxanthin_lycopene-to-decaprenoxanthin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "flavuxanthin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "lycopene-to-decaprenoxanthin"
+      },
+      "note": "Shares flavuxanthin with lycopene to decaprenoxanthin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:139515"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_decaprenoxanthin_hesperidin-to-3-o-beta-glucosyl-2-ox",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "decaprenoxanthin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hesperidin-to-3-o-beta-glucosyl-2-ox"
+      },
+      "note": "Shares decaprenoxanthin with hesperidin to 3-(O-beta-glucosyl)-(2-ox….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM737120"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_decaprenoxanthin_hesperidin-to-3-o-beta-glucosyl-2-ox-28134",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "decaprenoxanthin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hesperidin-to-3-o-beta-glucosyl-2-ox-28134"
+      },
+      "note": "Shares decaprenoxanthin with hesperidin to 3-(O-beta-glucosyl)-(2-ox….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM737120"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_decaprenoxanthin_lycopene-to-decaprenoxanthin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "decaprenoxanthin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "lycopene-to-decaprenoxanthin"
+      },
+      "note": "Shares decaprenoxanthin with lycopene to decaprenoxanthin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM737120"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sarcinaxanthin_lycopene-to-decaprenoxanthin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sarcinaxanthin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "lycopene-to-decaprenoxanthin"
+      },
+      "note": "Shares Sarcinaxanthin with lycopene to decaprenoxanthin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:202023"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sarcinaxanthin_s-adenosyl-l-homocysteine-to-afrormosin-7-o-gluc",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sarcinaxanthin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-afrormosin-7-o-gluc"
+      },
+      "note": "Shares Sarcinaxanthin with S-adenosyl-L-homocysteine to afrormosin-7-O-glucoside.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:202023"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sarcinaxanthin_udp-to-orientin-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sarcinaxanthin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-orientin-null"
+      },
+      "note": "Shares Sarcinaxanthin with UDP to orientin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:202023"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sarprenoxanthin_lycopene-to-decaprenoxanthin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sarprenoxanthin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "lycopene-to-decaprenoxanthin"
+      },
+      "note": "Shares sarprenoxanthin with lycopene to decaprenoxanthin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM818734"
+          }
+        ]
+      }
+    }
+  ]
+}

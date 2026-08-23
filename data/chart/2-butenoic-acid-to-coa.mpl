@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-butenoic-acid-to-coa "2-butenoic acid to CoA" {
-  spacing 228
+  spacing 258
 
   spine at 0,0 {
     2_butenoic_acid
@@ -16,63 +16,93 @@ pathway 2-butenoic-acid-to-coa "2-butenoic acid to CoA" {
     r_3_hydroxybutyrylcarnitine
   }
 
-  branch from but_2_enoyl_coa side left {
-    but_2_enoyl_coa
-    <-> ec_1_3_8_6 [1.3.8.6] +glutaryl_coa +fad +h +co2
-    fadh2
+  branch from h2o side left {
+    h2o
+    <-> ec_4_2_1_132 [4.2.1.132] +cis_2_oxohex_4_enoic_acid +h
+    s_4_hydroxy_2_oxohexanoate
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_3_1_1 [3.3.1.1] +l_homocysteine +3_deazaadenosine
-    3_deazaadenosylhomocysteine
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_5_1_14 [3.5.1.14] +h +acetate +l_serine
-    n_acetyl_dl_serine
-  }
-
-  branch from 3r_3_hydroxybutanoyl_coa side right {
-    3r_3_hydroxybutanoyl_coa
-    <-> . +bhb +atp +coa +amp
-    diphosphate
+    <-> . +picolinate +h
+    2z_4e_2_amino_6_oxohexa_2_4_dienoate
   }
 
   branch from 3r_3_hydroxybutanoyl_coa side left {
     3r_3_hydroxybutanoyl_coa
-    <-> . +nadh +acetoacetyl_coa +h
-    nad
+    <-> . +r_carnitine +coa
+    3_hydroxybutyrylcarnitine
   }
 
   branch from h side right {
     h
-    <-> ec_4_2_2_13 [4.2.2.13] +1_5_anhydro_d_fructose +2_4_dinitrophenol
-    2_4_dinitrophenyl_alpha_d_glucopyranoside
+    <-> ec_4_1_2_47 [4.1.2.47] +cyanide +acetone
+    2_hydroxy_2_methylpropanenitrile
   }
 
   branch from h side left {
     h
-    <-> ec_1_1_1_1 [1.1.1.1] +butan_2_one +nadph +2s_butan_2_ol
-    nadp
-  }
-
-  branch from r_3_hydroxybutyrylcarnitine side right {
-    r_3_hydroxybutyrylcarnitine
-    <-> . +carnitine +coa
-    3_hydroxybutanoyl_coa
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +nadh +acetyl_coa +h +h2o2 +o2 +nad +h2o
-    9z_octadecenoyl_coa
+    <-> ec_4_1_1_98 [4.1.1.98] +2_octaprenylphenol +co2
+    3_octaprenyl_4_hydroxybenzoate
   }
 
   branch from coa side right {
     coa
-    <-> . +nadh +acetyl_coa +h +nadp +h2o2 +9z_octadecenoyl_coa +nadph +nad +h2o
-    o2
+    <-> ec_2_3_1_16 [2.3.1.16] +11z_3_oxooctadecenoyl_coa +9z_hexadecenoyl_coa
+    acetyl_coa
+  }
+
+  branch from coa side left {
+    coa
+    <-> ec_2_3_1_45 [2.3.1.45] +acetyl_coa +n_acetylneuraminate
+    n_acetyl_9_o_acetylneuraminate
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_5_1_5 [3.5.1.5] +urea +h2o +nh4
+    co2
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_5_4_16 [3.5.4.16] +7_8_dihydroneopterin_3_triphosphate +h2o
+    2_5_diamino_6_5_triphosphoryl_3_4_trihydroxy_2_o
+  }
+
+  branch from coa side right {
+    coa
+    <-> ec_2_3_1_16 [2.3.1.16] +acetyl_coa +z_2_3_dehydroadipyl_coa
+    3_oxo_5_6_didehydrosuberyl_coa
+  }
+
+  branch from coa side left {
+    coa
+    <-> . +acetyl_coa +heptaprenylglycerol
+    diacetylheptaprenylglycerol
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_4_2_1_114 [4.2.1.114] +r_dihomocitrate
+    cis_homo_2aconitate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_5_4_16 [3.5.4.16] +h +2_5_diamino_6_5_triphosphoryl_3_4_trihydroxy_2_o
+    7_8_dihydroneopterin_3_triphosphate
+  }
+
+  branch from s_carnitine side right {
+    s_carnitine
+    <-> . +atp +coa +adp +pi
+    s_carnitinyl_coa
+  }
+
+  branch from s_carnitine side left {
+    s_carnitine
+    <-> .
+    r_carnitine
   }
 }

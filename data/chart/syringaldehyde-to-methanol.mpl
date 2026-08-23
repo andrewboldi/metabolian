@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway syringaldehyde-to-methanol "syringaldehyde to methanol" {
-  spacing 196
+  spacing 244
 
   spine at 0,0 {
     syringaldehyde
@@ -16,27 +16,14 @@ pathway syringaldehyde-to-methanol "syringaldehyde to methanol" {
     2_oxo_2h_pyran_4_6_dicarboxylate
   }
 
-  branch from nadh side left {
-    nadh
-    <-> ec_1_3_1_119 [1.3.1.119] +h +4_5_dichlorobenzene_1_2_diol +nad
-    1r_2s_3_4_dichlorocyclohexa_3_5_diene_1_2_diol
-  }
 
-  branch from nadh side right {
-    nadh
-    <-> ec_1_14_12_26 [1.14.12.26] +1_2_3_trichlorobenzene +h +o2 +nad
-    1r_2s_3_4_5_trichlorocyclohexa_3_5_diene_1_2_di
-  }
 
-  branch from h side left {
-    h
-    <-> ec_2_5_1_1 [2.5.1.1] +diphosphate +lupiwighteone +genistein
-    dimethylallyl_diphosphate
-  }
 
-  branch from h side right {
-    h
-    <-> . +co2 +cannabichromene
-    cannabichromenate
-  }
+
+
+
+
+
+
+
 }

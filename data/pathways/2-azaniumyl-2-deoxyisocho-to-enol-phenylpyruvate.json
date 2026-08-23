@@ -108,62 +108,6 @@
       "xrefs": {
         "chebi": "CHEBI:16815"
       }
-    },
-    {
-      "id": "d_glutamine",
-      "name": "D-glutamine",
-      "formula": "C5H10N2O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:58000"
-      }
-    },
-    {
-      "id": "n2_3_hydroxy_3_methylhexanoyl_l_glutaminate",
-      "name": "N2-(3-hydroxy-3-methylhexanoyl)-L-glutaminate",
-      "short": "N2-(3-hydroxy-3-met…",
-      "formula": "C12H21N2O5",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:143556"
-      }
-    },
-    {
-      "id": "3_hydroxy_3_methylhexanoate",
-      "name": "3-hydroxy-3-methylhexanoate",
-      "short": "3-hydroxy-3-methylh…",
-      "formula": "C7H13O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:143555"
-      }
-    },
-    {
-      "id": "r_3_phenyllactate",
-      "name": "(R)-3-phenyllactate",
-      "formula": "C9H9O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:11009"
-      }
-    },
-    {
-      "id": "fad",
-      "name": "FAD",
-      "formula": "C27H30N9O15P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:57692"
-      }
-    },
-    {
-      "id": "fadh2",
-      "name": "FADH2",
-      "formula": "C27H33N9O15P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:58307"
-      }
     }
   ],
   "enzymes": [
@@ -193,14 +137,10 @@
       "name": "phenylpyruvate tautomerase",
       "ec": [
         "5.3.2.1"
-      ]
-    },
-    {
-      "id": "ec_3_5_1_133",
-      "name": "N(alpha)-acyl-L-glutamine aminoacylase",
-      "ec": [
-        "3.5.1.133"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P14174"
+      }
     }
   ],
   "reactions": [
@@ -371,122 +311,203 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "L-glutamine = D-glutamine",
-      "equation": "L-glutamine = D-glutamine",
-      "substrates": [
-        {
-          "metabolite": "glutamine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "d_glutamine",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:59276"
+      "id": "xt_2_azaniumyl_2_deoxyisochorismate_2-azaniumyl-2-deoxyisocho-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_azaniumyl_2_deoxyisochorismate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2-azaniumyl-2-deoxyisocho-to-nad"
+      },
+      "note": "Shares 2-azaniumyl-2-deoxyisochorismate with 2-azaniumyl-2-deoxyisocho… to NAD.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:59276"
+            "db": "ChEBI",
+            "id": "CHEBI:58792"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "N(alpha)-acyl-L-glutamine aminoacylase",
-      "equation": "N(2)-(3-hydroxy-3-methylhexanoyl)-L-glutaminate + H2O = 3-hydroxy-3-methylhexanoate + L-glutamine",
-      "ec": "3.5.1.133",
-      "substrates": [
-        {
-          "metabolite": "n2_3_hydroxy_3_methylhexanoyl_l_glutaminate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_hydroxy_3_methylhexanoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glutamine",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_5_1_133"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:60036"
+      "id": "xt_2_azaniumyl_2_deoxyisochorismate_5-formimidoyltetrahydrofo-to-6s-5-6-7-8-tetrahyd",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_azaniumyl_2_deoxyisochorismate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "5-formimidoyltetrahydrofo-to-6s-5-6-7-8-tetrahyd"
+      },
+      "note": "Shares 2-azaniumyl-2-deoxyisochorismate with 5-formimidoyltetrahydrofo… to (6S)-5,6,7,8-tetrahydrofo….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:60036"
+            "db": "ChEBI",
+            "id": "CHEBI:58792"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "(R)-3-phenyllactate + FAD + H(+) = 3-phenylpyruvate + FADH2",
-      "equation": "(R)-3-phenyllactate + FAD + H(+) = 3-phenylpyruvate + FADH2",
-      "substrates": [
-        {
-          "metabolite": "r_3_phenyllactate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fad",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "keto_phenylpyruvate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fadh2",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:82507"
+      "id": "xt_2_azaniumyl_2_deoxyisochorismate_chorismate-to-1r-6s-6-ammonio-5-oxocy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_azaniumyl_2_deoxyisochorismate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "chorismate-to-1r-6s-6-ammonio-5-oxocy"
+      },
+      "note": "Shares 2-azaniumyl-2-deoxyisochorismate with chorismate to (1R,6S)-6-ammonio-5-oxocy….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:82507"
+            "db": "ChEBI",
+            "id": "CHEBI:58792"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_azaniumyl_2_deoxyisochorismate_d-arabinitol-to-fmnh2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_azaniumyl_2_deoxyisochorismate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-arabinitol-to-fmnh2"
+      },
+      "note": "Shares 2-azaniumyl-2-deoxyisochorismate with D-arabinitol to FMNH2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58792"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_azaniumyl_2_deoxyisochorismate_isophthalate-to-n-benzoylanthranilate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_azaniumyl_2_deoxyisochorismate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isophthalate-to-n-benzoylanthranilate"
+      },
+      "note": "Shares 2-azaniumyl-2-deoxyisochorismate with isophthalate to N-benzoylanthranilate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58792"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1s_4s_prephenate_1s-4s-prephenate-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1s_4s_prephenate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1s-4s-prephenate-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares (1s,4s)-prephenate with (1s,4s)-prephenate to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29934"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1s_4s_prephenate_5-methoxy-2-methyl-3-octa-to-2-hydroxy-5-oxoprol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1s_4s_prephenate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-methoxy-2-methyl-3-octa-to-2-hydroxy-5-oxoprol"
+      },
+      "note": "Shares (1s,4s)-prephenate with 5-methoxy-2-methyl-3-octa… to 2-hydroxy-5-oxoprolinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29934"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1s_4s_prephenate_l-arogenate-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1s_4s_prephenate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-arogenate-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares (1s,4s)-prephenate with L-arogenate to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29934"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1s_4s_prephenate_l-arogenate-to-trans-3-methylglutaconyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1s_4s_prephenate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-arogenate-to-trans-3-methylglutaconyl"
+      },
+      "note": "Shares (1s,4s)-prephenate with L-arogenate to trans-3-methylglutaconyl-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29934"
           }
         ]
       }

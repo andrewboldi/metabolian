@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cholest-5-en-3-one-to-h2o "cholest-5-en-3-one to H2O" {
-  spacing 340
+  spacing 336
 
   spine at 0,0 {
     cholest_5_en_3_one
@@ -14,17 +14,5 @@ pathway cholest-5-en-3-one-to-h2o "cholest-5-en-3-one to H2O" {
     25r_4_dafachronate
     <-> . +nadh +h -nad -h2o
     25r_3_ketocholest_4_en_26_al
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +neurotensin +2r_2_2s_2_2r_2_amino_1_hydroxy_3_4_hydroxypheny
-    neurotensin_1_10
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +5_s_l_cysteinyl_dopaquinone
-    1_4_benzothiazine_o_quinonimine
   }
 }

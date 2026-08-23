@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2s-2-ammonio-5-iminio-to-diphosphate "(2S)-2-ammonio-5-{[iminio… to diphosphate" {
-  spacing 190
+  spacing 160
 
   spine at 0,0 {
     2s_2_ammonio_5_iminio_methylamino_methyl_amino
@@ -16,35 +16,5 @@ pathway 2s-2-ammonio-5-iminio-to-diphosphate "(2S)-2-ammonio-5-{[iminio… to di
     l_proline
     <-> ec_6_1_1_15 [6.1.1.15] +amp_3_end_1 +atp -amp -ppi
     3_l_prolyl_adenylyl_zwitterionic_group
-  }
-
-  branch from citrulline side left {
-    citrulline
-    <-> . +l_cysteine +n5_hydroxyamino_imino_methyl_l_ornithinium +o2 +h2o +hplus
-    s_nitroso_l_cysteine
-  }
-
-  branch from citrulline side right {
-    citrulline
-    <-> . +arginine +nadph +o2 +s_nitroso_l_cysteine +nadp +h2o
-    l_cysteine
-  }
-
-  branch from ornithine side left {
-    ornithine
-    <-> ec_2_1_4_4 [2.1.4.4] +tyrosine +arginine
-    n_amidino_l_tyrosine
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +fpp +h2o
-    cadinol
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +streptomycin +gtp
-    6_o_guanylylstreptomycin
   }
 }

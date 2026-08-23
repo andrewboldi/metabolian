@@ -1,0 +1,569 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "methacrylyl-coa-to-methylmalonate-31175",
+  "name": "methacrylyl-CoA to methylmalonate",
+  "category": "energy-metabolism",
+  "summary": "A 4-step route from methacrylyl-CoA(4−) to methylmalonate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:31175"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:62500"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "methacrylyl_coa",
+      "name": "Methacrylyl-CoA",
+      "formula": "C25H36N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:62500"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hib_coa",
+      "name": "(S)-3-Hydroxyisobutyryl-CoA",
+      "short": "3-Hydroxyisobutyryl…",
+      "formula": "C25H38N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:62611"
+      }
+    },
+    {
+      "id": "hydroxyisobutyrate",
+      "name": "(S)-3-Hydroxyisobutyrate",
+      "short": "3-Hydroxyisobutyrate",
+      "formula": "C4H7O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:62638"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "mmsa",
+      "name": "(S)-Methylmalonate semialdehyde",
+      "short": "Methylmalonate…",
+      "formula": "C4H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:62413"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "methylmalonate",
+      "name": "methylmalonate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:17453"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_31",
+      "name": "3-hydroxyisobutyrate dehydrogenase",
+      "ec": [
+        "1.1.1.31"
+      ],
+      "xrefs": {
+        "uniprot": "P31937"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2-methylpropenoyl-CoA + H2O = (S)-3-hydroxyisobutanoyl-CoA",
+      "equation": "2-methylpropenoyl-CoA + H2O = (S)-3-hydroxyisobutanoyl-CoA",
+      "substrates": [
+        {
+          "metabolite": "methacrylyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hib_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:31175"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31175"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(S)-3-hydroxyisobutanoyl-CoA + H2O = (S)-3-hydroxy-2-methylpropanoate + CoA + H(+)",
+      "equation": "(S)-3-hydroxyisobutanoyl-CoA + H2O = (S)-3-hydroxy-2-methylpropanoate + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "hib_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hydroxyisobutyrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:31251"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31251"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3-hydroxyisobutyrate dehydrogenase",
+      "equation": "(S)-3-hydroxy-2-methylpropanoate + NAD(+) = (S)-2-methyl-3-oxopropanoate + NADH + H(+)",
+      "ec": "1.1.1.31",
+      "substrates": [
+        {
+          "metabolite": "hydroxyisobutyrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "mmsa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_31"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:31275"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31275"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(S)-2-methyl-3-oxopropanoate + NAD(+) + H2O = methylmalonate + NADH + 2 H(+)",
+      "equation": "(S)-2-methyl-3-oxopropanoate + NAD(+) + H2O = methylmalonate + NADH + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "mmsa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methylmalonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:31043"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31043"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_methacrylyl_coa_isobutyryl-coa-to-l-lysinium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "methacrylyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isobutyryl-coa-to-l-lysinium"
+      },
+      "note": "Shares Methacrylyl-CoA with isobutyryl-CoA to L-lysinium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62500"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_methacrylyl_coa_isobutyryl-coa-to-l-lysinium-44180",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "methacrylyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isobutyryl-coa-to-l-lysinium-44180"
+      },
+      "note": "Shares Methacrylyl-CoA with isobutyryl-CoA to L-lysinium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62500"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_methacrylyl_coa_methacrylyl-coa-to-methylmalonate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "methacrylyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "methacrylyl-coa-to-methylmalonate"
+      },
+      "note": "Shares Methacrylyl-CoA with methacrylyl-CoA to methylmalonate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62500"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hib_coa_methacrylyl-coa-to-methylmalonate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hib_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "methacrylyl-coa-to-methylmalonate"
+      },
+      "note": "Shares (S)-3-Hydroxyisobutyryl-CoA with methacrylyl-CoA to methylmalonate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62611"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hydroxyisobutyrate_methacrylyl-coa-to-methylmalonate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxyisobutyrate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "methacrylyl-coa-to-methylmalonate"
+      },
+      "note": "Shares (S)-3-Hydroxyisobutyrate with methacrylyl-CoA to methylmalonate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62638"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_mmsa_3-mercaptopropionate-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "mmsa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-mercaptopropionate-to-ammonium"
+      },
+      "note": "Shares (S)-Methylmalonate semialdehyde with 3-mercaptopropionate to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62413"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_mmsa_3-mercaptopropionate-to-ammonium-53776",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "mmsa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-mercaptopropionate-to-ammonium-53776"
+      },
+      "note": "Shares (S)-Methylmalonate semialdehyde with 3-mercaptopropionate to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62413"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_mmsa_5-methyltetrahydropteroyl-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "mmsa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-methyltetrahydropteroyl-to-ammonium"
+      },
+      "note": "Shares (S)-Methylmalonate semialdehyde with 5-methyltetrahydropteroyl… to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62413"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_mmsa_methacrylyl-coa-to-methylmalonate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "mmsa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "methacrylyl-coa-to-methylmalonate"
+      },
+      "note": "Shares (S)-Methylmalonate semialdehyde with methacrylyl-CoA to methylmalonate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62413"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_mmsa_methyl-group-to-1-hexadecyl-sn-glycero-3-30299",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "mmsa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "methyl-group-to-1-hexadecyl-sn-glycero-3-30299"
+      },
+      "note": "Shares (S)-Methylmalonate semialdehyde with methyl group to 1-hexadecyl-sn-glycero-3-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62413"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_mmsa_r-mevalonate-to-propionyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "mmsa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-mevalonate-to-propionyl-coa"
+      },
+      "note": "Shares (S)-Methylmalonate semialdehyde with (R)-mevalonate to propionyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62413"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_mmsa_r-mevalonate-to-propionyl-coa-14833",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "mmsa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-mevalonate-to-propionyl-coa-14833"
+      },
+      "note": "Shares (S)-Methylmalonate semialdehyde with (R)-mevalonate to propionyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62413"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -101,12 +101,66 @@
       }
     },
     {
-      "id": "dserine",
-      "name": "D-Serine",
-      "formula": "C3H7NO3",
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "l_3_oxoalanine",
+      "name": "L-3-oxoalanine",
+      "formula": "C3H5NO3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:35247"
+        "chebi": "CHEBI:77662"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "ammonioacetaldehyde",
+      "name": "ammonioacetaldehyde",
+      "formula": "C2H6NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58213"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
       }
     },
     {
@@ -119,52 +173,31 @@
       }
     },
     {
-      "id": "pi",
-      "name": "Orthophosphate (Pi)",
-      "formula": "HO4P",
-      "charge": -2,
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:43474"
+        "chebi": "CHEBI:456216"
       }
     },
     {
-      "id": "1_2_dioleoyl_sn_glycero_3_phospho_1d_myo_inosito",
-      "name": "1,2-dioleoyl-sn-glycero-3-phospho-1D-myo-inositol",
-      "short": "1,2-dioleoyl-sn-gly…",
-      "formula": "C45H82O13P",
+      "id": "n_arachidonoyl_l_serine",
+      "name": "N-arachidonoyl-L-serine",
+      "short": "N-arachidonoyl-L-se…",
+      "formula": "C23H36NO4",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:195485"
+        "chebi": "CHEBI:149697"
       }
     },
     {
-      "id": "2_oleoyl_sn_glycero_3_phospho_1d_myo_inositol",
-      "name": "2-oleoyl-sn-glycero-3-phospho-1D-myo-inositol",
-      "short": "2-oleoyl-sn-glycero…",
-      "formula": "C27H50O12P",
+      "id": "arachidonate",
+      "name": "arachidonate",
+      "formula": "C20H31O2",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:195487"
-      }
-    },
-    {
-      "id": "1_oleoyl_2_8z_11z_14z_icosatrienoyl_sn_glycero_3",
-      "name": "1-oleoyl-2-(8Z,11Z,14Z-icosatrienoyl)-sn-glycero-3-phospho-1D-myo-inositol",
-      "short": "1-oleoyl-2-(8Z,11Z,…",
-      "formula": "C47H82O13P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:195488"
-      }
-    },
-    {
-      "id": "2_8z_11z_14z_icosatrienoyl_sn_glycero_3_phospho",
-      "name": "2-(8Z,11Z,14Z-icosatrienoyl)-sn-glycero-3-phospho-1D-myo-inositol",
-      "short": "2-(8Z,11Z,14Z-icosa…",
-      "formula": "C29H50O12P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:195489"
+        "chebi": "CHEBI:32395"
       }
     }
   ],
@@ -177,17 +210,17 @@
       ]
     },
     {
-      "id": "ec_5_1_1_18",
-      "name": "serine racemase",
+      "id": "ec_1_1_1_276",
+      "name": "serine 3-dehydrogenase (NADP(+))",
       "ec": [
-        "5.1.1.18"
+        "1.1.1.276"
       ]
     },
     {
-      "id": "ec_3_1_3_3",
-      "name": "phosphoserine phosphatase",
+      "id": "ec_2_7_1_225",
+      "name": "L-serine kinase (ATP)",
       "ec": [
-        "3.1.3.3"
+        "2.7.1.225"
       ]
     }
   ],
@@ -317,107 +350,118 @@
     },
     {
       "id": "r4",
-      "name": "serine racemase",
-      "equation": "L-serine = D-serine",
-      "ec": "5.1.1.18",
+      "name": "L-serine + NAD(+) = 2-aminomalonate semialdehyde + NADH + H(+)",
+      "equation": "L-serine + NAD(+) = 2-aminomalonate semialdehyde + NADH + H(+)",
       "substrates": [
         {
           "metabolite": "serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "dserine",
+          "metabolite": "l_3_oxoalanine",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+        },
         {
-          "enzyme": "ec_5_1_1_18"
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:10980"
+        "rhea": "RHEA:43528"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:10980"
+            "id": "RHEA:43528"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "phosphoserine phosphatase",
-      "equation": "O-phospho-L-serine + H2O = L-serine + phosphate",
-      "ec": "3.1.3.3",
+      "name": "serine 3-dehydrogenase (NADP(+))",
+      "equation": "L-serine + NADP(+) = aminoacetaldehyde + CO2 + NADPH",
+      "ec": "1.1.1.276",
       "substrates": [
-        {
-          "metabolite": "pser",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
         {
           "metabolite": "serine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "pi",
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ammonioacetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_1_3_3"
+          "enzyme": "ec_1_1_1_276"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:21208"
+        "rhea": "RHEA:43620"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:21208"
+            "id": "RHEA:43620"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "1,2-di-(9Z-octadecenoyl)-sn-glycero-3-phospho-1D-myo-inositol + H2O = 2-(9Z-octadecenoy...",
-      "equation": "1,2-di-(9Z-octadecenoyl)-sn-glycero-3-phospho-1D-myo-inositol + H2O = 2-(9Z-octadecenoyl)-sn-glycero-3-phospho-1D-myo-inositol + (9Z)-octadecenoate + H(+)",
+      "name": "L-serine kinase (ATP)",
+      "equation": "L-serine + ATP = O-phospho-L-serine + ADP + H(+)",
+      "ec": "2.7.1.225",
       "substrates": [
         {
-          "metabolite": "1_2_dioleoyl_sn_glycero_3_phospho_1d_myo_inosito",
+          "metabolite": "serine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "atp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "2_oleoyl_sn_glycero_3_phospho_1d_myo_inositol",
+          "metabolite": "pser",
           "stoichiometry": 1
         },
         {
-          "metabolite": "oleate",
+          "metabolite": "adp",
           "stoichiometry": 1
         },
         {
@@ -425,28 +469,33 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_225"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:76979"
+        "rhea": "RHEA:59112"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:76979"
+            "id": "RHEA:59112"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "1-(9Z-octadecenoyl)-2-(8Z,11Z,14Z-eicosatrienoyl)-sn-glycero-3-phospho-1D-myo-inositol ...",
-      "equation": "1-(9Z-octadecenoyl)-2-(8Z,11Z,14Z-eicosatrienoyl)-sn-glycero-3-phospho-1D-myo-inositol + H2O = 2-(8Z,11Z,14Z-eicosatrienoyl)-sn-glycero-3-phospho-1D-myo-inositol + (9Z)-octadecenoate + H(+)",
+      "name": "N-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-L-serine + H2O = (5Z,8Z,11Z,14Z)-eicosatetraenoate +...",
+      "equation": "N-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-L-serine + H2O = (5Z,8Z,11Z,14Z)-eicosatetraenoate + L-serine",
       "substrates": [
         {
-          "metabolite": "1_oleoyl_2_8z_11z_14z_icosatrienoyl_sn_glycero_3",
+          "metabolite": "n_arachidonoyl_l_serine",
           "stoichiometry": 1
         },
         {
@@ -456,29 +505,159 @@
       ],
       "products": [
         {
-          "metabolite": "2_8z_11z_14z_icosatrienoyl_sn_glycero_3_phospho",
+          "metabolite": "arachidonate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "oleate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "serine",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:76983"
+        "rhea": "RHEA:64116"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:76983"
+            "id": "RHEA:64116"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_l_3_oxoalanine_d-serine-to-glycine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_3_oxoalanine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-serine-to-glycine"
+      },
+      "note": "Shares L-3-oxoalanine with D-serine to glycine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77662"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_3_oxoalanine_ent-copal-8-ol-diphosphate-to-l-cysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_3_oxoalanine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ent-copal-8-ol-diphosphate-to-l-cysteine"
+      },
+      "note": "Shares L-3-oxoalanine with ent-copal-8-ol diphosphate to L-cysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77662"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ammonioacetaldehyde_1-chloro-2-nitrobenzene-to-methanofuranate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ammonioacetaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-chloro-2-nitrobenzene-to-methanofuranate"
+      },
+      "note": "Shares ammonioacetaldehyde with 1-chloro-2-nitrobenzene to methanofuranate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58213"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ammonioacetaldehyde_d-arabinitol-to-fmnh2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ammonioacetaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-arabinitol-to-fmnh2"
+      },
+      "note": "Shares ammonioacetaldehyde with D-arabinitol to FMNH2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58213"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ammonioacetaldehyde_d-serine-to-glycine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ammonioacetaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-serine-to-glycine"
+      },
+      "note": "Shares ammonioacetaldehyde with D-serine to glycine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58213"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ammonioacetaldehyde_n-oleoyltaurine-to-taurine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ammonioacetaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-oleoyltaurine-to-taurine"
+      },
+      "note": "Shares ammonioacetaldehyde with N-oleoyltaurine to taurine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58213"
           }
         ]
       }

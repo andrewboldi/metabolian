@@ -14,57 +14,141 @@ pathway 2-hydroxy-n-methyl-5-oxop-to-h2o "2-hydroxy-N-methyl-5-oxop… to H2O" {
     gamma_ethyl_alpha_ketoglutarate
     <-> ec_2_1_1_247 [2.1.1.247] +methylamine +coenzyme_m -nh4
     methyl_coenzyme_m
-    <-> ec_2_1_1_86 [2.1.1.86] +5_6_7_8_tetrahydromethanopterin -coenzyme_m
-    5_methyl_5_6_7_8_tetrahydromethanopterin
-    <-> ec_2_1_1_246 [2.1.1.246] +coenzyme_m +methanol -h2o
+    <-> ec_2_1_1_247 [2.1.1.247] +methylamine -dimethylamine
+    coenzyme_m
+    <-> ec_2_1_1_246 [2.1.1.246] +methanol -h2o
     methyl_coenzyme_m
-  }
-
-  branch from gamma_ethyl_alpha_ketoglutarate side left {
-    gamma_ethyl_alpha_ketoglutarate
-    <-> ec_3_5_1_3 [3.5.1.3] +ethanol +h +h2o
-    2_oxoglutarate
-  }
-
-  branch from methylamine side right {
-    methylamine
-    <-> ec_3_5_4_43 [3.5.4.43] +n_isopropylammelide +h +h2o
-    6_hydroxy_4_n_isopropylamino_2_n_methylamino_1_3
   }
 
   branch from methylamine side left {
     methylamine
-    <-> ec_1_4_3_1 [1.4.3.1] +n_methyl_d_aspartic_acid +o2 +h2o +h +h2o2
-    oxaloacetate
+    <-> ec_1_4_1_17 [1.4.1.17] +n_methyl_alanine +nadp +h2o +h +nadph
+    pyruvate
+  }
+
+  branch from methylamine side right {
+    methylamine
+    <-> ec_1_4_3_24 [1.4.3.24] +4_oxo_4_pyridin_3_yl_butanal +h2o2 +pseudooxynicotine +h2o
+    o2
+  }
+
+  branch from methyl_coenzyme_m side left {
+    methyl_coenzyme_m
+    <-> ec_2_1_1_86 [2.1.1.86] +5_6_7_8_tetrahydrosarcinapterin +5_methyltetrahydrosarcinapterin +coenzyme_m
+    na
   }
 
   branch from nh4 side right {
     nh4
-    <-> ec_4_4_1_13 [4.4.1.13] +z_1_l_cystein_s_yl_n_hydroxy_omega_methylsulfan +h2o +z_omega_methylsulfanyl_pentyl_thiohydroximate
-    pyruvate
+    <-> . +3_4_bis_7_chloroindol_3_yl_2_5_diiminiohexanedio +h
+    dichlorochromopyrrolate
   }
 
   branch from nh4 side left {
     nh4
-    <-> ec_4_4_1_13 [4.4.1.13] +z_1_l_cystein_s_yl_n_hydroxy_omega_methylsulfan +h2o +pyruvate
-    z_omega_methylsulfanyl_hexyl_thiohydroximate
+    <-> ec_3_5_1_131 [3.5.1.131] +3_oxo_3_ureidopropanoate +h2o
+    1_carboxymalonamate
   }
 
-  branch from 5_methyl_5_6_7_8_tetrahydromethanopterin side right {
-    5_methyl_5_6_7_8_tetrahydromethanopterin
-    <-> ec_1_2_7_4 [1.2.7.4] +5_6_7_8_tetrahydromethanopterin +acetyl_coa +h +coa
-    carbon_monoxide
+  branch from dimethylamine side right {
+    dimethylamine
+    <-> . +3_chloro_4_methoxyaniline +co2 +h +h2o
+    metoxuron
   }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_3_5_1_28 [3.5.1.28] +peptidoglycan_dimer_with_a_single_pentapeptide_s +l_alanyl_gamma_d_glutamyl_meso_2_6_diaminopimelo
-    peptidoglycan_dimer_with_pentapeptide_stems_meso
+  branch from dimethylamine side left {
+    dimethylamine
+    <-> . +co2 +4_chloroaniline +h +h2o
+    monuron
   }
 
   branch from h2o side right {
     h2o
-    <-> . +cytidine +agmatine
-    agmatidine
+    <-> . +2e_13z_icosadienoyl_coa
+    3_s_hydroxy_13_cis_eicosenoyl_coenzyme_a
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +2e_tridecenoyl_coenzyme_a
+    3_hydroxytridecanoyl_coenzyme_a
+  }
+
+  branch from ethanol side right {
+    ethanol
+    <-> . +h +n_propanoyl_gamma_l_glutamyl_l_orornithine_delta +h2o
+    glorin
+  }
+
+  branch from ethanol side left {
+    ethanol
+    <-> ec_3_1_8_1 [3.1.8.1] +h +dipropylsulfanylphosphinate +h2o
+    ethoprophos
+  }
+
+  branch from h side right {
+    h
+    <-> . +nonadecanoyl_coa +fad +2e_nonadecenoyl_coenzyme_a
+    fadh2
+  }
+
+  branch from h side left {
+    h
+    <-> . +heptanoyl_coa +fad +fadh2
+    2e_hept_2_enoyl_coa
+  }
+
+  branch from methylamine side right {
+    methylamine
+    <-> ec_3_5_1_137 [3.5.1.137] +co2 +2_isopropylphenol +h +h2o
+    isoprocarb
+  }
+
+  branch from methylamine side left {
+    methylamine
+    <-> ec_3_5_1_137 [3.5.1.137] +co2 +2_isopropoxyphenol +h +h2o
+    propoxur
+  }
+
+  branch from nh4 side right {
+    nh4
+    <-> ec_3_5_1_131 [3.5.1.131] +1_carboxynitrourea +h2o
+    1_nitrobiuret
+  }
+
+  branch from nh4 side left {
+    nh4
+    <-> . +h +amicoumacin_a
+    amicoumacin_c
+  }
+
+  branch from dimethylamine side right {
+    dimethylamine
+    <-> . +l_citrulline +h2o
+    n_omega_n_omega_dimethyl_l_arginine
+  }
+
+  branch from methanol side left {
+    methanol
+    <-> ec_1_14_14_1 [1.14.14.1] +2_ethylidene_1_5_dimethyl_3_3_diphenylpyrrolidin
+    6_dimethylamino_4_4_diphenylheptan_3_one
+  }
+
+  branch from methanol side right {
+    methanol
+    <-> ec_3_1_1_1 [3.1.1.1] +acibenzolar +h2o
+    acibenzolar_s_methyl
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +2e_7z_hexadecadienoyl_coa +h
+    s_3_hydroxy_7_hexadecenoyl_coenzyme_a
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +pentadecanoate +h +cholesterol
+    cholest_5_en_3b_yl_pentadecanoate
   }
 }

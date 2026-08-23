@@ -110,73 +110,6 @@
       "xrefs": {
         "chebi": "CHEBI:78259"
       }
-    },
-    {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:175763"
-      }
-    },
-    {
-      "id": "ylangene",
-      "name": "β-ylangene",
-      "formula": "C15H24",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:188453"
-      }
-    },
-    {
-      "id": "all_trans_pentaprenyl_diphosphate",
-      "name": "all-trans-pentaprenyl diphosphate",
-      "short": "all-trans-pentapren…",
-      "formula": "C25H41O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:57907"
-      }
-    },
-    {
-      "id": "fusoxypene_a",
-      "name": "fusoxypene A",
-      "formula": "C25H40",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:191385"
-      }
-    },
-    {
-      "id": "6_deoxo_28_nortyphasterol",
-      "name": "6-deoxo-28-nortyphasterol",
-      "short": "6-deoxo-28-nortypha…",
-      "formula": "C27H48O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:188992"
-      }
-    },
-    {
-      "id": "28_nortyphasterol",
-      "name": "28-nortyphasterol",
-      "formula": "C27H46O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:188994"
-      }
-    },
-    {
-      "id": "6_hydroxy_28_nortyphasterol",
-      "name": "6α-hydroxy-28-nortyphasterol",
-      "short": "6α-hydroxy-28-norty…",
-      "formula": "C27H48O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:188993"
-      }
     }
   ],
   "enzymes": [
@@ -357,175 +290,27 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "(2E,6E)-farnesyl diphosphate = beta-ylangene + diphosphate",
-      "equation": "(2E,6E)-farnesyl diphosphate = beta-ylangene + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "fpp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "ylangene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:69775"
+      "id": "xt_3_hydroxy_ent_sandaracopimaradiene_20s-17-20-dihydroxypreg-to-testolate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_hydroxy_ent_sandaracopimaradiene"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "20s-17-20-dihydroxypreg-to-testolate"
+      },
+      "note": "Shares 3α-hydroxy-ent-sandaracopimaradiene with (20S)-17,20-dihydroxypreg… to testolate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:69775"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "(2E,6E,10E,14E)-geranylfarnesyl diphosphate = fusoxypene A + diphosphate",
-      "equation": "(2E,6E,10E,14E)-geranylfarnesyl diphosphate = fusoxypene A + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "all_trans_pentaprenyl_diphosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "fusoxypene_a",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:71979"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:71979"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "6-deoxo-28-nortyphasterol + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = 28-nortyp...",
-      "equation": "6-deoxo-28-nortyphasterol + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = 28-nortyphasterol + 2 oxidized [NADPH--hemoprotein reductase] + 3 H2O + 2 H(+)",
-      "substrates": [
-        {
-          "metabolite": "6_deoxo_28_nortyphasterol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "28_nortyphasterol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:70135"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:70135"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "6-deoxo-28-nortyphasterol + reduced [NADPH--hemoprotein reductase] + O2 = 6alpha-hydrox...",
-      "equation": "6-deoxo-28-nortyphasterol + reduced [NADPH--hemoprotein reductase] + O2 = 6alpha-hydroxy-28-nortyphasterol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "6_deoxo_28_nortyphasterol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "6_hydroxy_28_nortyphasterol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:70139"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:70139"
+            "db": "ChEBI",
+            "id": "CHEBI:78255"
           }
         ]
       }

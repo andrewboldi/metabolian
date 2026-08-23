@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway formaldehyde-to-morphiniumone "formaldehyde to morphiniumone" {
-  spacing 202
+  spacing 256
 
   spine at 0,0 {
     formaldehyde
@@ -18,43 +18,97 @@ pathway formaldehyde-to-morphiniumone "formaldehyde to morphiniumone" {
 
   branch from 2_oxoglutarate side left {
     2_oxoglutarate
-    <-> ec_2_6_1_94 [2.6.1.94] +kanamycin_a +h +l_glutamate
-    6_oxokanamycin_x
+    <-> ec_1_14_11_22 [1.14.11.22] +s_pinocembrin +o2 +co2 +succinate +h2o
+    chrysin
   }
 
   branch from 2_oxoglutarate side right {
     2_oxoglutarate
-    <-> . +3_amino_3_deoxygentamicin_a2 +h +l_glutamate
-    3_oxogentamicin_a2
+    <-> ec_2_6_1_21 [2.6.1.21] +d_phenylalanine +3_phenylpyruvate
+    d_glutamate
   }
 
   branch from o2 side left {
     o2
-    <-> . +nadh +phthalate +h +nad
-    phthalate_3_4_cis_dihydrodiol
+    <-> ec_1_14_13_41 [1.14.13.41] +nadp +n_hydroxy_l_tyrosine +h2o +l_tyrosine
+    nadph
   }
 
   branch from o2 side right {
     o2
-    <-> . +trans_trans_2_4_dihydroxy_5_methyl_6_oxo_2_4_hex
-    2_4_5_trihydroxytoluene
+    <-> . +6_hydroxychlorzoxazone +nadp +h2o +chlorzoxazone +nadph
+    h
   }
 
-  branch from oripavine side left {
-    oripavine
-    <-> . +sam +sah +hplus
-    thebaine
-  }
-
-  branch from neomorphinone side right {
+  branch from neomorphinone side left {
     neomorphinone
     <-> . +nadp +nadph +hplus
     neomorphine
   }
 
-  branch from morphiniumone side left {
+  branch from morphiniumone side right {
     morphiniumone
     <-> ec_1_1_1_218 [1.1.1.218] +nad +nadh +hplus
     morphine
+  }
+
+  branch from formaldehyde side left {
+    formaldehyde
+    <-> . +4_nitrosoamino_1_3_pyridinyl_1_butanone
+    4_hydroxymethyl_nitrosoamino_1_3_pyridinyl_1_but
+  }
+
+  branch from formaldehyde side right {
+    formaldehyde
+    <-> . +alpha_3_nitrosoamino_propyl_3_pyridinemethanol
+    alpha_3_hydroxymethyl_nitrosoamino_propyl_3_pyri
+  }
+
+  branch from co2 side left {
+    co2
+    <-> ec_4_1_1_74 [4.1.1.74] +4_methylbenzaldehyde
+    4_methylbenzoylformic_acid
+  }
+
+  branch from co2 side right {
+    co2
+    <-> ec_4_1_1_74 [4.1.1.74] +4_methoxybenzaldehyde
+    4_methoxybenzoylformic_acid
+  }
+
+  branch from succinate side left {
+    succinate
+    <-> . +n_2_succinyl_l_arginine +h2o
+    l_arginine
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> ec_3_7_1_14 [3.7.1.14] +2_hydroxy_6_oxonona_2_4_dienedioic_acid +h2o +h
+    2_hydroxypenta_2_4_dienoic_acid
+  }
+
+  branch from 2_oxoglutarate side left {
+    2_oxoglutarate
+    <-> . +h +3_5_dihydroxy_3_4_7_trimethoxyflavone +o2 +co2 +succinate
+    oxyayanin_b
+  }
+
+  branch from 2_oxoglutarate side right {
+    2_oxoglutarate
+    <-> . +dtdp_3_amino_4_dehydro_2_3_6_trideoxy_beta_l_glu +h +l_glutamate
+    dtdp_3_4_dioxo_2_6_dideoxy_l_glucose
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_14_18_1 [1.14.18.1] +4_acetamido_o_benzoquinone +h2o
+    4_acetamidophenol
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_14_18_1 [1.14.18.1] +4_methyl_o_benzoquinone +h2o
+    4_methylcatechol
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway diphosphate-to-13-16-19-docosatrienoic "diphosphate to 13,16,19-Docosatrienoic…" {
-  spacing 200
+  spacing 152
 
   spine at 0,0 {
     diphosphate
@@ -14,53 +14,5 @@ pathway diphosphate-to-13-16-19-docosatrienoic "diphosphate to 13,16,19-Docosatr
     13z_16z_19z_docosatrienoyl_coa
     <-> . +diphosphate +h +amp -coa -13_16_19_docosatrienoic_acid
     atp
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
-    nodularin_v
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
-    bistratamide_a
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
-    bistratamide_b
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
-    bistratamide_e
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +hexanoyl_coa +h +nadph +hexanal
-    nadp
-  }
-
-  branch from coa side right {
-    coa
-    <-> ec_2_3_1_51 [2.3.1.51] +octadecanoyl_coa +1_stearoyl_sn_glycero_3_phosphate
-    1_2_dioctadecanoyl_sn_glycerol_3_phosphate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    dendroamide_a
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    obyanamide
   }
 }

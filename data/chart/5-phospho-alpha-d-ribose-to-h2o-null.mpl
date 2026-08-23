@@ -4,115 +4,159 @@
 # edit the generator, not this file.
 
 pathway 5-phospho-alpha-d-ribose-to-h2o-null "5-phospho-alpha-D-ribose-… to H2O" {
-  spacing 248
+  spacing 296
 
   spine at 0,0 {
     5_phospho_alpha_d_ribose_1_preq0
-    <-> . +h +nadph -nadp -nh4
-    1r_2r_3s_4s_4_5_cyano_4_oxo_3h_pyrrolo_2_3_d_py
-    <-> . +gtp +l_aspartate -succinylo_toyocamycin_phosphate -h -phosphate
-    gdp
-    <-> . +succinylo_toyocamycin_phosphate -fumarate
-    toyocamycin_phosphate
-    <-> . +h2o -phosphate
-    toyocamycin
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate -toyocamycin -h2o
+    <-> . +diphosphate -7_cyano_7_deazaguanine
+    5_phospho_alpha_d_ribose_1_diphosphate
+    <-> . +paromamine -h -5_phosphoribosylparomamine
+    diphosphate
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +5_phosphoribosylparomamine +phosphate -5_phosphoribosylparomamine -h2o
     atp
   }
 
-  branch from nadp side left {
-    nadp
-    <-> . +l_2_amino_8_hydroxydecanoate +h +nadph
-    l_2_amino_8_oxodecanoate
+  branch from 5_phospho_alpha_d_ribose_1_diphosphate side left {
+    5_phospho_alpha_d_ribose_1_diphosphate
+    <-> . +h +h2o +diphosphate
+    alpha_d_ribofuranose_5_phosphate
   }
 
-  branch from nadp side right {
-    nadp
-    <-> . +20_hydroxy_prefusarin +h2o +h +o2 +nadph
-    prefusarin
+  branch from 5_phospho_alpha_d_ribose_1_diphosphate side right {
+    5_phospho_alpha_d_ribose_1_diphosphate
+    <-> ec_2_4_2_7 [2.4.2.7] +5_amino_1_5_phospho_beta_d_ribosyl_imidazole_4_c +diphosphate
+    5_amino_4_imidazolecarboxyamide
   }
 
-  branch from nh4 side left {
-    nh4
-    <-> . +co2 +indole_3_acetaldehyde +h2o2 +h +l_tryptophan +h2o
-    o2
+  branch from diphosphate side left {
+    diphosphate
+    <-> . +alpha_selinene
+    2e_6e_farnesyl_diphosphate
   }
 
-  branch from nh4 side right {
-    nh4
-    <-> . +3_aminopropyl_dimethylsulfanium +o2 +h2o +3_dimethylsulfoniopropionaldehyde
-    h2o2
-  }
-
-  branch from gdp side left {
-    gdp
-    <-> ec_2_7_1_190 [2.7.1.190] +kanamycin_a_2_phosphate +h +gtp
-    kanamycin_a
-  }
-
-  branch from gdp side right {
-    gdp
-    <-> ec_2_7_1_190 [2.7.1.190] +kanamycin_b_2_phosphate +h +gtp
-    kanamycin_b
+  branch from diphosphate side right {
+    diphosphate
+    <-> . +nadh +acetyl_coa +fadh2 +propanoyl_coa +h +amp +tridecanoic_acid +atp +coa +nad +h2o
+    fad
   }
 
   branch from h side left {
     h
-    <-> . +s_adenosyl_l_homocysteine +9_n_methoxy_tryptophan +9_n_hydroxy_l_tryptophan
-    s_adenosyl_l_methionine
+    <-> . +4z_7z_10z_13z_hexadecatetraenoyl_coa +fad +2e_4z_7z_10z_13z_hexadecapentaenoyl_coa
+    fadh2
   }
 
   branch from h side right {
     h
-    <-> . +trichosetin
-    dieckmann_product
-  }
-
-  branch from phosphate side left {
-    phosphate
-    <-> ec_3_1_3_29 [3.1.3.29] +alpha_d_glucosamine_6_phosphate +h2o +h
-    beta_d_glucosamine
-  }
-
-  branch from phosphate side right {
-    phosphate
-    <-> ec_3_1_3_62 [3.1.3.62] +1d_myo_inositol_1_2_3_4_5_pentakisphosphate +h2o
-    d_myo_inositol_1_2_3_4_tetrakisphosphate
-  }
-
-  branch from fumarate side left {
-    fumarate
-    <-> . +m_xylene
-    3_methylbenzylsuccinate
-  }
-
-  branch from fumarate side right {
-    fumarate
-    <-> . +o2 +h2o
-    succinate
+    <-> . +3r_11z_3_hydroxyoctadecenoyl_coa +fadh2 +fad +h2o
+    9z_octadecenoyl_coa
   }
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
-    n_acetyl_dl_methionine
+    <-> . +dimp +adp
+    didp
   }
 
   branch from atp side right {
     atp
     <-> . +h +adp +phosphate +h2o
-    methyl_beta_d_galactoside
+    fluvastatin
   }
 
   branch from h2o side left {
     h2o
-    <-> . +2r_3_9s_9ar_9_hydroxy_2_2_dimethyl_3_oxo_1h_2h
-    deoxynortryptoquialanone
+    <-> . +l_cysteine
+    cystyl_cysteine
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_57 [3.2.1.57] +isomaltose +glucose
-    2r_3s_4s_5r_6s_2_hydroxymethyl_6_2r_3s_4s_5r_6r
+    <-> . +fadh2 +h +3_hydroxyoctadecadienoyl_coenzyme_a +fad
+    9z_12z_octadecadienoyl_coa
+  }
+
+  branch from diphosphate side left {
+    diphosphate
+    <-> ec_6_2_1_1 [6.2.1.1] +acetyl_coa +amp +atp +coa
+    acetate
+  }
+
+  branch from diphosphate side right {
+    diphosphate
+    <-> ec_1_2_1_70 [1.2.1.70] +s_4_amino_5_oxopentanoate +nadp +amp +h +atp +l_glutamate
+    nadph
+  }
+
+  branch from 5_phospho_alpha_d_ribose_1_diphosphate side left {
+    5_phospho_alpha_d_ribose_1_diphosphate
+    <-> ec_2_4_2_45 [2.4.2.45] +decaprenol_phosphate +h +diphosphate
+    trans_octacis_decaprenylphospho_beta_d_ribofuran
+  }
+
+  branch from 5_phospho_alpha_d_ribose_1_diphosphate side right {
+    5_phospho_alpha_d_ribose_1_diphosphate
+    <-> ec_2_4_2_10 [2.4.2.10] +5_fluorouracil +diphosphate
+    5_fluorouridine_5_monophosphate
+  }
+
+  branch from h side left {
+    h
+    <-> . +3s_hydroxyoctadecanoyl_coa +fadh2 +fad +h2o
+    octadecanoyl_coa
+  }
+
+  branch from h side right {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    4_aminobutanoate
+  }
+
+  branch from adp side left {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    glucuronide_conjugate_of_3_methoxy_acetaminophen
+  }
+
+  branch from adp side right {
+    adp
+    <-> . +h +l_glutamine +phosphate +l_glutamine +atp +h2o
+    na
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    glycyl_dl_phenylalanine
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    glycine
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    gliclazide
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    guanidinoacetate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +fluvastatin
+    trans_lactone_fluvastatin
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +l_lysine +l_glutamine +h
+    gln_lys_lys
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-serine-to-o3-n-acetyl-d-glucosam "L-serine to O3-[N-acetyl-β-D-glucosam…" {
-  spacing 294
+  spacing 300
 
   spine at 0,0 {
     l_serine
@@ -16,9 +16,15 @@ pathway l-serine-to-o3-n-acetyl-d-glucosam "L-serine to O3-[N-acetyl-β-D-glucos
     o3_n_acetyl_d_glucosaminyl_1_3_n_acetyl_d_glucos
   }
 
-  branch from o_n_acetyl_d_galactosaminyl_l_serine side left {
-    o_n_acetyl_d_galactosaminyl_l_serine
-    <-> . +udp_d_galactose +udp +hplus
-    o3_d_galactosyl_1_3_n_acetyl_d_galactosaminyl_l
+  branch from l_serine side left {
+    l_serine
+    <-> ec_2_7_11_4 [2.7.11.4] +atp +adp +hplus
+    o_phospho_l_serine_2
+  }
+
+  branch from l_serine side right {
+    l_serine
+    <-> ec_2_4_1_221 [2.4.1.221] +gdp_l_fucose +gdp +hplus
+    l_fucosyl_l_seryl
   }
 }

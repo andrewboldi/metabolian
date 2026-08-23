@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway ribonucleotide-uridine-2-to-diphosphate "ribonucleotide-uridine(2−) to diphosphate" {
-  spacing 250
+  spacing 238
 
   spine at 0,0 {
     ribonucleotide_uridine_2
@@ -32,17 +32,5 @@ pathway ribonucleotide-uridine-2-to-diphosphate "ribonucleotide-uridine(2−) to
     3_end_ribonucleotide_2_3_cyclic_phosphate_2
     <-> . +h2o +pi +hplus
     3_end_ribonucleotide_1
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_181 [4.2.3.181] +fpp
-    selina_4_15_7_11_diene
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_180 [4.2.3.180] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    pseudolaratriene
   }
 }

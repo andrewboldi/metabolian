@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway progesterone-to-fmn "progesterone to FMN" {
-  spacing 158
+  spacing 152
 
   spine at 0,0 {
     progesterone
@@ -14,11 +14,5 @@ pathway progesterone-to-fmn "progesterone to FMN" {
     11_ketoprogesterone
     <-> . +fmnh2 +o2 -fmn -h2o -hplus
     21_deoxycortisone
-  }
-
-  branch from 11_hydroxyprogesterone side left {
-    11_hydroxyprogesterone
-    <-> . +nadph +hplus +nadp
-    5_pregnan_11_ol_3_20_dione
   }
 }

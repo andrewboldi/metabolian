@@ -1,19 +1,48 @@
 {
   "$schema": "../../schema/pathway.schema.json",
   "id": "alpha-d-glucose-to-h2o-null",
-  "name": "alpha-D-glucose to H2O",
+  "name": "alpha-D-glucose… to H2O",
   "category": "other",
-  "summary": "A 3-step route from alpha-D-glucose to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "summary": "A 4-step route from alpha-D-glucose 1,6-bisphosphate to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
     "sources": [
       {
         "db": "MetaNetX",
-        "id": "MNXR192385"
+        "id": "MNXR189104"
       }
     ]
   },
   "metabolites": [
+    {
+      "id": "alpha_d_glucose_1_6_bisphosphate",
+      "name": "alpha-D-glucose 1,6-bisphosphate",
+      "short": "alpha-D-glucose…",
+      "formula": "C6H10O12P2",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1102141"
+      }
+    },
+    {
+      "id": "glucose",
+      "name": "D-Glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4167"
+      }
+    },
+    {
+      "id": "alpha_d_glucose_1_phosphate",
+      "name": "alpha-D-glucose 1-phosphate",
+      "short": "alpha-D-glucose 1-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1364214"
+      }
+    },
     {
       "id": "alpha_d_glucose",
       "name": "alpha-D-glucose",
@@ -24,13 +53,30 @@
       }
     },
     {
-      "id": "alpha_alpha_trehalose",
-      "name": "alpha,alpha-trehalose",
-      "short": "alpha,alpha-trehalo…",
+      "id": "d_cellobiose",
+      "name": "D-cellobiose",
       "formula": "C12H22O11",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM1364185"
+        "metanetx": "MNXM726888"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "cellotriose",
+      "name": "cellotriose",
+      "formula": "C18H32O16",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:3528"
       }
     },
     {
@@ -40,26 +86,6 @@
       "charge": 0,
       "xrefs": {
         "metanetx": "WATER"
-      }
-    },
-    {
-      "id": "trehalose_trans_methoxy_di_mycolate",
-      "name": "trehalose-trans-methoxy-di-mycolate",
-      "short": "trehalose-trans-met…",
-      "formula": "C184H358O17",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM22164"
-      }
-    },
-    {
-      "id": "trehalose_trans_methoxy_mono_mycolate",
-      "name": "trehalose-trans-methoxy-mono-mycolate",
-      "short": "trehalose-trans-met…",
-      "formula": "C98H190O14",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM7835"
       }
     },
     {
@@ -81,15 +107,6 @@
       }
     },
     {
-      "id": "phosphate",
-      "name": "phosphate",
-      "formula": "HO4P",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM9"
-      }
-    },
-    {
       "id": "atp",
       "name": "ATP",
       "formula": "C10H12N5O13P3",
@@ -101,34 +118,136 @@
   ],
   "enzymes": [
     {
-      "id": "ec_3_2_1_20",
-      "name": "alpha-glucosidase",
+      "id": "ec_2_7_1_41",
+      "name": "glucose-1-phosphate phosphodismutase",
       "ec": [
-        "3.2.1.20"
+        "2.7.1.41"
       ]
     },
     {
-      "id": "ec_3_2_1_28",
-      "name": "alpha,alpha-trehalase",
+      "id": "ec_2_4_1_20",
+      "name": "cellobiose phosphorylase",
       "ec": [
-        "3.2.1.28"
+        "2.4.1.20"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_74",
+      "name": "glucan 1,4-beta-glucosidase",
+      "ec": [
+        "3.2.1.74"
+      ]
+    },
+    {
+      "id": "ec_3_6_3_18",
+      "name": "EC 3.6.3.18",
+      "ec": [
+        "3.6.3.18"
       ]
     }
   ],
   "reactions": [
     {
       "id": "r1",
-      "name": "alpha-glucosidase",
-      "ec": "3.2.1.20",
+      "name": "glucose-1-phosphate phosphodismutase",
+      "ec": "2.7.1.41",
       "substrates": [
         {
-          "metabolite": "alpha_d_glucose",
-          "stoichiometry": 2
+          "metabolite": "alpha_d_glucose_1_6_bisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "alpha_alpha_trehalose",
+          "metabolite": "alpha_d_glucose_1_phosphate",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_41"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR189104"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR189104"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "cellobiose phosphorylase",
+      "ec": "2.4.1.20",
+      "substrates": [
+        {
+          "metabolite": "alpha_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alpha_d_glucose_1_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_cellobiose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR173453"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR173453"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "glucan 1,4-beta-glucosidase",
+      "ec": "3.2.1.74",
+      "substrates": [
+        {
+          "metabolite": "alpha_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_cellobiose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cellotriose",
           "stoichiometry": 1
         },
         {
@@ -138,61 +257,28 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_2_1_20"
+          "enzyme": "ec_3_2_1_74"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 1,
+      "pathwayStep": 3,
       "xrefs": {
-        "metanetx": "MNXR192385"
+        "metanetx": "MNXR173470"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR192385"
+            "id": "MNXR173470"
           }
         ]
       }
     },
     {
-      "id": "r2",
-      "name": "Reaction MNXR123465",
-      "substrates": [
-        {
-          "metabolite": "alpha_alpha_trehalose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "trehalose_trans_methoxy_di_mycolate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "trehalose_trans_methoxy_mono_mycolate",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 2,
-      "xrefs": {
-        "metanetx": "MNXR123465"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR123465"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r3",
-      "name": "Reaction MNXR123581",
+      "id": "r4",
+      "name": "Reaction MNXR174805",
+      "ec": "3.6.3.18",
       "substrates": [
         {
           "metabolite": "h",
@@ -203,7 +289,7 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "trehalose_trans_methoxy_mono_mycolate",
+          "metabolite": "cellotriose",
           "stoichiometry": 1
         },
         {
@@ -217,7 +303,7 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "trehalose_trans_methoxy_mono_mycolate",
+          "metabolite": "cellotriose",
           "stoichiometry": 1
         },
         {
@@ -225,17 +311,288 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_3_18"
+        }
+      ],
       "reversibility": "reversible",
-      "pathwayStep": 3,
+      "pathwayStep": 4,
       "xrefs": {
-        "metanetx": "MNXR123581"
+        "metanetx": "MNXR174805"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR123581"
+            "id": "MNXR174805"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_alpha_d_glucose_1_6_bisphosphate_alpha-d-glucose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "alpha_d_glucose_1_6_bisphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-glucose-to-h2o"
+      },
+      "note": "Shares alpha-D-glucose 1,6-bisphosphate with alpha-D-glucose… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1102141"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_alpha_d_glucose_1_6_bisphosphate_alpha-d-glucose-to-keto-d-fructose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "alpha_d_glucose_1_6_bisphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-glucose-to-keto-d-fructose"
+      },
+      "note": "Shares alpha-D-glucose 1,6-bisphosphate with alpha-D-glucose… to keto-D-fructose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1102141"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_alpha_d_glucose_1_6_bisphosphate_glyceric-acid-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "alpha_d_glucose_1_6_bisphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "glyceric-acid-to-phosphate"
+      },
+      "note": "Shares alpha-D-glucose 1,6-bisphosphate with Glyceric acid… to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1102141"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_alpha_d_glucose_1_6_bisphosphate_keto-d-fructose-to-beta-d-fructose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "alpha_d_glucose_1_6_bisphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "keto-d-fructose-to-beta-d-fructose"
+      },
+      "note": "Shares alpha-D-glucose 1,6-bisphosphate with keto-D-fructose… to beta-D-fructose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1102141"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_alpha_d_glucose_1_6_bisphosphate_udp-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "alpha_d_glucose_1_6_bisphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-h2o-null"
+      },
+      "note": "Shares alpha-D-glucose 1,6-bisphosphate with UDP to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1102141"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_cellobiose_1-carboxyvinyl-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_cellobiose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-carboxyvinyl-to-nadph"
+      },
+      "note": "Shares D-cellobiose with 1-carboxyvinyl… to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM726888"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_cellobiose_7-benzyloxyquinoline-to-2-5-7-trihydroxy-2-4-hyd",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_cellobiose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-benzyloxyquinoline-to-2-5-7-trihydroxy-2-4-hyd"
+      },
+      "note": "Shares D-cellobiose with 7-Benzyloxyquinoline to 2,5,7-trihydroxy-2-(4-hyd….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM726888"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_cellobiose_alpha-d-glucose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_cellobiose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-glucose-to-h2o"
+      },
+      "note": "Shares D-cellobiose with alpha-D-glucose… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM726888"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_cellobiose_d-cellobiono-1-5-lactone-to-d-glucosyl-1-4-d-gl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_cellobiose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-cellobiono-1-5-lactone-to-d-glucosyl-1-4-d-gl"
+      },
+      "note": "Shares D-cellobiose with D-cellobiono-1,5-lactone to β-D-glucosyl-(1→4)-β-D-gl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM726888"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_cellobiose_gdp-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_cellobiose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gdp-to-h2o"
+      },
+      "note": "Shares D-cellobiose with GDP to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM726888"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_cellobiose_udp-n-acetylgalactosamine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_cellobiose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-n-acetylgalactosamine-to-h2o"
+      },
+      "note": "Shares D-cellobiose with UDP-N-acetylgalactosamine… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM726888"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cellotriose_1-5-anhydro-d-fructose-to-d-cellotrionate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cellotriose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-5-anhydro-d-fructose-to-d-cellotrionate"
+      },
+      "note": "Shares cellotriose with 1,5-anhydro-D-fructose to D-cellotrionate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:3528"
           }
         ]
       }

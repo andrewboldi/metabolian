@@ -129,45 +129,6 @@
       "xrefs": {
         "metanetx": "WATER"
       }
-    },
-    {
-      "id": "2e_9z_octadecadienoyl_coa",
-      "name": "(2E,9Z)-octadecadienoyl-CoA",
-      "short": "(2E,9Z)-octadecadie…",
-      "formula": "C39H62N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:77553"
-      }
-    },
-    {
-      "id": "3_s_hydroxy_cis_9_octadecenoyl_coa",
-      "name": "3(S)-hydroxy-cis-9-octadecenoyl-CoA",
-      "short": "3(S)-hydroxy-cis-9-…",
-      "formula": "C39H64N7O18P3S",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM1560365"
-      }
-    },
-    {
-      "id": "12_13_dihydroxyoleic_acid",
-      "name": "12,13-Dihydroxyoleic acid",
-      "short": "12,13-Dihydroxyolei…",
-      "formula": "C18H34O4",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1370725"
-      }
-    },
-    {
-      "id": "vernolate",
-      "name": "(−)-vernolate",
-      "formula": "C18H31O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:194416"
-      }
     }
   ],
   "enzymes": [
@@ -176,14 +137,20 @@
       "name": "long-chain-3-hydroxyacyl-CoA dehydrogenase",
       "ec": [
         "1.1.1.211"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P40939"
+      }
     },
     {
       "id": "ec_4_2_1_17",
       "name": "enoyl-CoA hydratase",
       "ec": [
         "4.2.1.17"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P40939"
+      }
     }
   ],
   "reactions": [
@@ -321,75 +288,93 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "Reaction MNXR206660",
-      "substrates": [
-        {
-          "metabolite": "2e_9z_octadecadienoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_s_hydroxy_cis_9_octadecenoyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR206660"
+      "id": "xt_9z_myristoleoyl_coa_3-iodo-l-thyronine-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9z_myristoleoyl_coa"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "3-iodo-l-thyronine-to-hydrogen-donor"
+      },
+      "note": "Shares (9Z)-myristoleoyl-CoA with 3'-iodo-L-thyronine to hydrogen donor.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR206660"
+            "db": "ChEBI",
+            "id": "CHEBI:65060"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "Reaction MNXR206662",
-      "substrates": [
-        {
-          "metabolite": "12_13_dihydroxyoleic_acid",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "vernolate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR206662"
+      "id": "xt_9z_myristoleoyl_coa_5-amino-1-5-phosphonato-to-methyl-com",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9z_myristoleoyl_coa"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "5-amino-1-5-phosphonato-to-methyl-com"
+      },
+      "note": "Shares (9Z)-myristoleoyl-CoA with 5-amino-1-(5-phosphonato-… to methyl-CoM.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR206662"
+            "db": "ChEBI",
+            "id": "CHEBI:65060"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_9z_myristoleoyl_coa_glycerophosphatidylethano-to-1-2-dihexadecanoyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9z_myristoleoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "glycerophosphatidylethano-to-1-2-dihexadecanoyl"
+      },
+      "note": "Shares (9Z)-myristoleoyl-CoA with glycerophosphatidylethano… to 1,2-dihexadecanoyl-sn-gly….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:65060"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_9z_myristoleoyl_coa_myristoyl-coa-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9z_myristoleoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "myristoyl-coa-to-diphosphate"
+      },
+      "note": "Shares (9Z)-myristoleoyl-CoA with myristoyl-CoA to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:65060"
           }
         ]
       }

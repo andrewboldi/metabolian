@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway diphosphate-to-atp "diphosphate to ATP" {
-  spacing 206
+  spacing 152
 
   spine at 0,0 {
     diphosphate
@@ -14,59 +14,5 @@ pathway diphosphate-to-atp "diphosphate to ATP" {
     1d_3_amino_1_guanidino_1_3_dideoxy_scyllo_inosit
     <-> . +h +adp -atp
     1d_1_guanidino_3_amino_1_3_dideoxy_scyllo_inosit
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
-    lactulose
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
-    beta_d_glcp_1_6_beta_d_glcp
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
-    3_o_d_galactopyranosyl_d_arabinose
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
-    sucralose
-  }
-
-  branch from l_ornithine side left {
-    l_ornithine
-    <-> . +l_citrulline +h2o
-    carbamate
-  }
-
-  branch from l_ornithine side right {
-    l_ornithine
-    <-> . +co2 +nh4 +h +h2o
-    l_citrulline
-  }
-
-  branch from l_arginine side left {
-    l_arginine
-    <-> ec_3_4_11_9 [3.4.11.9] +des_arg1_bradykinin +h +h2o
-    bradykinin
-  }
-
-  branch from l_arginine side right {
-    l_arginine
-    <-> . +d_octopine +nadp +h2o +h +nadph
-    pyruvate
-  }
-
-  branch from 1d_1_guanidino_3_amino_1_3_dideoxy_scyllo_inosit side left {
-    1d_1_guanidino_3_amino_1_3_dideoxy_scyllo_inosit
-    <-> ec_2_6_1_56 [2.6.1.56] +d_1_guanidino_1_deoxy_3_dehydro_scyllo_inositol +pyruvate
-    l_alanine
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 9-hydroxygeraniol-to-2e-geraniol "9-Hydroxygeraniol to (2E)-geraniol" {
-  spacing 292
+  spacing 340
 
   spine at 0,0 {
     9_hydroxygeraniol
@@ -20,85 +20,157 @@ pathway 9-hydroxygeraniol-to-2e-geraniol "9-Hydroxygeraniol to (2E)-geraniol" {
 
   branch from h side left {
     h
-    <-> . +diphosphate +12_ethyl_8_isobutylbacteriochlorophyll_c +12_ethyl_8_isobutylbacteriochlorophyllide_c
-    2e_6e_farnesyl_diphosphate
+    <-> . +adp +phosphate +atp +h2o
+    taurocholic_acid_3_sulfate
   }
 
   branch from h side right {
     h
-    <-> . +formaldehyde +acetate
-    hydroxymethylene_acetate
+    <-> . +adp +phosphate +atp +h2o
+    taurodeoxycholic_acid_3_sulfate
   }
 
   branch from o2 side left {
     o2
-    <-> . +neoabietadienal +nadph +nadp +h2o
-    neoabietic_acid
+    <-> ec_1_1_3_9 [1.1.3.9] +beta_d_galactose +h2o +h +h2o2
+    d_galactonate
   }
 
   branch from o2 side right {
     o2
-    <-> . +h +palustradiene +nadph +nadp +h2o
-    palustradienol
+    <-> ec_1_1_3_9 [1.1.3.9] +beta_d_galactose +h2o2
+    d_galacto_hexodialdose
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_3_1_51 [1.3.1.51] +2_hydroxygenistein +h +nadp
-    dalbergioidin
+    <-> ec_1_1_1_120 [1.1.1.120] +beta_d_galactose +nadp +h
+    d_galactono_1_4_lactone
   }
 
   branch from nadph side right {
     nadph
-    <-> . +h +coumarin +nadp
-    3_4_dihydrocoumarin
+    <-> ec_1_1_1_179 [1.1.1.179] +d_xylono_1_5_lactone +h +nadp
+    beta_d_xylose
   }
 
   branch from 2e_geraniol side left {
     2e_geraniol
-    <-> . +geranyl_acetate +h2o +h
-    acetate
+    <-> ec_1_14_13_152 [1.14.13.152] +nadp +h2o +h +o2 +nadph
+    6e_8_hydroxygeraniol
   }
 
   branch from 2e_geraniol side right {
     2e_geraniol
-    <-> . +nadp +h +nadph
-    citronellol
+    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +nadp
+    phellandral
   }
 
   branch from h2o side left {
     h2o
-    <-> . +2_2_methylsulfanyl_butyl_maleate +h
-    3_4_methylthio_butylmalic_acid
+    <-> . +l_phenylalanine +l_tyrosine
+    phenylalanyl_tyrosine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +2_2_methylsulfanyl_pentyl_maleate +h
-    2_5_methylthio_pentylmalic_acid
-  }
-
-  branch from udp_alpha_d_xylose side left {
-    udp_alpha_d_xylose
-    <-> ec_2_4_2_35 [2.4.2.35] +udp +h +flavonol_3_o_d_xylosylglycoside
-    flavonol_3_o_d_galactoside
-  }
-
-  branch from udp_alpha_d_xylose side right {
-    udp_alpha_d_xylose
-    <-> ec_2_4_2_35 [2.4.2.35] +udp +quercetin_3_o_d_xylosyl_1_2_d_glucoside
-    quercetin_3_o_d_glucopyranoside
+    <-> . +l_proline +l_aspartate +l_arginine
+    prolyl_arginyl_aspartate
   }
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +myricetin_3_o_gentiobioside
-    myricetin_3_o_d_glucopyranoside
+    <-> . +udp +beta_d_glc_1_2_beta_d_fuc3nac_1_6_alpha_d_glc_1 +h
+    beta_d_fucnac_1_6_alpha_d_glc_1_4_alpha_d_galnac
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +h +3_7_4_trimethylquercetagetin_3_o_beta_d_glucosid
-    oxyayanin_b
+    <-> . +udp +alpha_d_glc_1_3_alpha_d_galnac_pp_und +h
+    n_acetyl_d_galactosaminyl_1_diphospho_ditrans_po
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_1_1_21 [1.1.1.21] +alpha_d_xylose +h +nadph
+    xylitol
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_1_1_21 [1.1.1.21] +h +beta_l_arabinofuranose +nadph
+    l_arabinitol
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +l_proline +l_cysteine +l_arginine
+    prolyl_arginyl_cysteine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +l_asparagine +l_proline +l_cysteine
+    prolyl_asparaginyl_cysteine
+  }
+
+  branch from h side left {
+    h
+    <-> . +adp +5_8_tetradecadienoic_acid +phosphate +5_8_tetradecadienoic_acid +h2o
+    atp
+  }
+
+  branch from h side right {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    taurohyocholate
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_1_3_9 [1.1.3.9] +alpha_d_galactose +d_galacto_hexodialdose
+    h2o2
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_13_99_1 [1.13.99.1] +myo_inositol +h +h2o
+    beta_d_glucuronate
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_1_1_21 [1.1.1.21] +h +nadp +l_arabinitol
+    alpha_l_arabinofuranose
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_1_1_42 [1.1.1.42] +s_oxalatosuccinate +h +nadp
+    d_erythro_isocitrate
+  }
+
+  branch from 2e_geraniol side left {
+    2e_geraniol
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
+    nad
+  }
+
+  branch from udp side right {
+    udp
+    <-> ec_2_4_1_241 [2.4.1.241] +h +1_18_0_2_18_2_digalactosyldiacylglycerol +1_18_0_2_18_2_monogalactosyldiacylglycerol
+    udp_alpha_d_galactose
+  }
+
+  branch from udp side left {
+    udp
+    <-> ec_2_4_1_241 [2.4.1.241] +h +1_18_1_2_18_1_digalactosyldiacylglycerol +udp_alpha_d_galactose
+    1_18_1_2_18_1_monogalactosyldiacylglycerol
+  }
+
+  branch from udp_alpha_d_glucose side right {
+    udp_alpha_d_glucose
+    <-> . +udp +alpha_d_glc_1_4_alpha_d_galnac_1_3_alpha_d_galna +h
+    d_galnac_1_3_d_galnac_diphospho_ditrans_octacis
   }
 }

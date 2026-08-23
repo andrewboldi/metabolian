@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-aci-nitropropanoate-to-l-glutamyl-l-cysteinyl "3-aci-nitropropanoate to L-γ-glutamyl-L-cysteinyl-…" {
-  spacing 234
+  spacing 264
 
   spine at 0,0 {
     3_aci_nitropropanoate
@@ -30,19 +30,49 @@ pathway 3-aci-nitropropanoate-to-l-glutamyl-l-cysteinyl "3-aci-nitropropanoate t
 
   branch from nitrite side left {
     nitrite
-    <-> ec_1_14_12_23 [1.14.12.23] +2_nitrotoluene +nadh +o2 +nad
-    3_methylcatechol
+    <-> . +1_2_dinitroglycerol +nadph +nadp
+    1_mononitroglycerol
   }
 
   branch from nitrite side right {
     nitrite
-    <-> ec_1_14_12_23 [1.14.12.23] +3_nitrotoluene +nadh +o2 +nad
-    4_methylcatechol
+    <-> . +nadph +1_mononitroglycerol +nadp
+    1_3_dinitroglycerol
+  }
+
+  branch from 3_oxopropanoate side left {
+    3_oxopropanoate
+    <-> . +3_nitropropanoate +hydrogen_acceptor +h2o +nitrite +hplus
+    hydrogen_donor
+  }
+
+  branch from nitrite side right {
+    nitrite
+    <-> . +nadh +1_3_dinitroglycerol +nad
+    nitroglycerin
+  }
+
+  branch from nitrite side left {
+    nitrite
+    <-> . +nitroglycerin +nadh +nad
+    1_2_dinitroglycerol
+  }
+
+  branch from alanine side right {
+    alanine
+    <-> . +palmitoyl_coa +hplus +co2 +coa
+    1_deoxy_3_dehydrosphinganine
   }
 
   branch from alanine side left {
     alanine
-    <-> . +arginine +ornithine
-    3_guanidinopropanoic_acid
+    <-> . +ala_thr +h2o
+    threonine
+  }
+
+  branch from glu_cys side right {
+    glu_cys
+    <-> ec_1_8_1_13 [1.8.1.13] +nadp +nadph +hplus
+    bis_glutamylcystinate
   }
 }

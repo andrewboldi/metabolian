@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-histidine-to-hydrogen-acceptor "L-histidine to hydrogen acceptor" {
-  spacing 222
+  spacing 216
 
   spine at 0,0 {
     l_histidine
@@ -16,11 +16,5 @@ pathway l-histidine-to-hydrogen-acceptor "L-histidine to hydrogen acceptor" {
     2_sulfenohercynine
     <-> . +hydrogen_donor +hplus -hydrogen_acceptor -h2o
     ergothioneine
-  }
-
-  branch from ergothioneine side left {
-    ergothioneine
-    <-> . +hplus
-    ergothioneine_thione_form
   }
 }

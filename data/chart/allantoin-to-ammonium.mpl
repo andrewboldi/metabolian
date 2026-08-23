@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway allantoin-to-ammonium "allantoin to ammonium" {
-  spacing 194
+  spacing 188
 
   spine at 0,0 {
     allantoin
@@ -30,33 +30,27 @@ pathway allantoin-to-ammonium "allantoin to ammonium" {
     oxalurate
   }
 
-  branch from urea side left {
-    urea
-    <-> ec_3_5_3_17 [3.5.3.17] +taurocyamine +h2o
-    taurine
-  }
-
-  branch from glyoxylate side right {
-    glyoxylate
-    <-> ec_4_1_3_24 [4.1.3.24] +l_erythro_3_methylmalyl_coa
-    propionyl_coa
-  }
-
-  branch from glyoxylate side left {
-    glyoxylate
-    <-> . +propionyl_coa +h2o +coa +hplus
-    3_methylmalate
+  branch from nh3 side left {
+    nh3
+    <-> . +5_hydroxypentan_2_aminium +nad +h2o +nadh +hplus
+    5_hydroxypentan_2_one
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +l_threo_3_phenylserine
-    keto_phenylpyruvate
+    <-> . +2_hydroxy_1_phenylethan_1_aminium +nad +h2o +nadh +hplus
+    2_hydroxyacetophenone
   }
 
   branch from nh3 side left {
     nh3
-    <-> ec_1_4_1_25 [1.4.1.25] +arginine +nad +h2o +nadh +hplus
-    5_guanidino_2_oxopentanoic_acid
+    <-> . +1s_2_methyl_cyclohexylammonium +nad +h2o +nadh +hplus
+    2_methylcyclohexanone
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> . +nadp +h2o +2_methylcyclohexanone +nadph +hplus
+    1s_2_methyl_cyclohexylammonium
   }
 }

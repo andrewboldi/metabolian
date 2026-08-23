@@ -1,0 +1,505 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "4-nitrobenzaldehyde-to-h2o-80363",
+  "name": "4-nitrobenzaldehyde to H2O",
+  "category": "other",
+  "summary": "A 3-step route from 4-nitrobenzaldehyde to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:80363"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:66926"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "4_nitrobenzaldehyde",
+      "name": "4-nitrobenzaldehyde",
+      "formula": "C7H5NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:66926"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "4_nitrobenzoate",
+      "name": "4-nitrobenzoate",
+      "formula": "C7H4NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:142863"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "4_hydroxyamino_benzoate",
+      "name": "4-(hydroxyamino)benzoate",
+      "short": "4-(hydroxyamino)ben…",
+      "formula": "C7H6NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:231457"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "4-nitrobenzaldehyde + NAD(+) + H2O = 4-nitrobenzoate + NADH + 2 H(+)",
+      "equation": "4-nitrobenzaldehyde + NAD(+) + H2O = 4-nitrobenzoate + NADH + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "4_nitrobenzaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_nitrobenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:80363"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:80363"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "4-nitrobenzoate + 2 NADH + 2 H(+) = 4-hydroxylaminobenzoate + 2 NAD(+) + H2O",
+      "equation": "4-nitrobenzoate + 2 NADH + 2 H(+) = 4-hydroxylaminobenzoate + 2 NAD(+) + H2O",
+      "substrates": [
+        {
+          "metabolite": "4_nitrobenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxyamino_benzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:80199"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:80199"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR117417",
+      "substrates": [
+        {
+          "metabolite": "4_hydroxyamino_benzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_nitrobenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR117417"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR117417"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_4_nitrobenzaldehyde_4-aminobenzoate-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_nitrobenzaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-aminobenzoate-to-nad"
+      },
+      "note": "Shares 4-nitrobenzaldehyde with 4-aminobenzoate to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:66926"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_nitrobenzaldehyde_4-aminobenzoate-to-nad-58888",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_nitrobenzaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-aminobenzoate-to-nad-58888"
+      },
+      "note": "Shares 4-nitrobenzaldehyde with 4-aminobenzoate to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:66926"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_nitrobenzaldehyde_4-nitrobenzaldehyde-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_nitrobenzaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-nitrobenzaldehyde-to-h2o"
+      },
+      "note": "Shares 4-nitrobenzaldehyde with 4-nitrobenzaldehyde to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:66926"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_nitrobenzaldehyde_4-nitrotoluene-to-4-nitrobenzyl-alcohol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_nitrobenzaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-nitrotoluene-to-4-nitrobenzyl-alcohol"
+      },
+      "note": "Shares 4-nitrobenzaldehyde with 4-nitrotoluene to 4-nitrobenzyl alcohol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:66926"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_nitrobenzaldehyde_4-nitrotoluene-to-4-nitrobenzyl-alcohol-80359",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_nitrobenzaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-nitrotoluene-to-4-nitrobenzyl-alcohol-80359"
+      },
+      "note": "Shares 4-nitrobenzaldehyde with 4-nitrotoluene to 4-nitrobenzyl alcohol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:66926"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_nitrobenzoate_4-aminobenzoate-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_nitrobenzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-aminobenzoate-to-nad"
+      },
+      "note": "Shares 4-nitrobenzoate with 4-aminobenzoate to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:142863"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_nitrobenzoate_4-aminobenzoate-to-nad-58888",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_nitrobenzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-aminobenzoate-to-nad-58888"
+      },
+      "note": "Shares 4-nitrobenzoate with 4-aminobenzoate to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:142863"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_nitrobenzoate_4-nitrobenzaldehyde-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_nitrobenzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-nitrobenzaldehyde-to-h2o"
+      },
+      "note": "Shares 4-nitrobenzoate with 4-nitrobenzaldehyde to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:142863"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_nitrobenzoate_diphosphate-to-o-pantetheine-4-phospho",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_nitrobenzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-o-pantetheine-4-phospho"
+      },
+      "note": "Shares 4-nitrobenzoate with diphosphate to O-(pantetheine-4'-phospho….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:142863"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_nitrobenzoate_diphosphate-to-o-pantetheine-4-phospho-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_nitrobenzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-o-pantetheine-4-phospho-null"
+      },
+      "note": "Shares 4-nitrobenzoate with diphosphate to O-(pantetheine-4'-phospho….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:142863"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_hydroxyamino_benzoate_4-nitrobenzaldehyde-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_hydroxyamino_benzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-nitrobenzaldehyde-to-h2o"
+      },
+      "note": "Shares 4-(hydroxyamino)benzoate with 4-nitrobenzaldehyde to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:231457"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_hydroxyamino_benzoate_diphosphate-to-o-pantetheine-4-phospho",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_hydroxyamino_benzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-o-pantetheine-4-phospho"
+      },
+      "note": "Shares 4-(hydroxyamino)benzoate with diphosphate to O-(pantetheine-4'-phospho….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:231457"
+          }
+        ]
+      }
+    }
+  ]
+}

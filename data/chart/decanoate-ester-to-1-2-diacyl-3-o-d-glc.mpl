@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway decanoate-ester-to-1-2-diacyl-3-o-d-glc "decanoate ester to 1,2-diacyl-3-O-(β-D-Glc-(…" {
-  spacing 322
+  spacing 334
 
   spine at 0,0 {
     decanoate_ester
@@ -36,13 +36,81 @@ pathway decanoate-ester-to-1-2-diacyl-3-o-d-glc "decanoate ester to 1,2-diacyl-3
     1_2_diacyl_3_o_d_glc_1_6_d_glc_1_6_d_glc_sn_glyc
   }
 
+  branch from ppi side left {
+    ppi
+    <-> . +fpp
+    bisabolene
+  }
 
+  branch from ppi side right {
+    ppi
+    <-> . +fpp
+    z_bisabolene
+  }
 
+  branch from holo-acp side left {
+    holo-acp
+    <-> . +l_arginyl_amp +amp +hplus
+    o_s_l_arginyl_pantetheine_4_phosphoryl_serine_1
+  }
 
+  branch from holo-acp side right {
+    holo-acp
+    <-> . +hexadecanoyl_amp +amp +hplus
+    o_s_hexadecanoylpantetheine_4_phosphoryl_serine
+  }
 
+  branch from dodecanoyl_pantetheine_4_phosphorylserine_1 side left {
+    dodecanoyl_pantetheine_4_phosphorylserine_1
+    <-> . +fad +hplus +fadh2
+    o_s_2z_dodecenoylpantetheine_4_phosphoryl_l_seri
+  }
 
+  branch from ppi side right {
+    ppi
+    <-> . +fpp
+    cedr_8_ene
+  }
 
+  branch from ppi side left {
+    ppi
+    <-> . +cedr_8_ene
+    2_cis_6_cis_farnesyl_diphosphate
+  }
 
+  branch from holo-acp side right {
+    holo-acp
+    <-> . +medium_chain_fatty_acyl_amp +amp +hplus
+    o_s_medium_chain_fatty_acyl_pantetheine_4_phosph
+  }
 
+  branch from holo-acp side left {
+    holo-acp
+    <-> . +n_citryl_spermidine +o_s_3_4_dihydroxybenzoyl_pantetheine_4_phosphory +hplus
+    n1_3_4_dihydroxybenzoyl_n8_citryl_spermidine
+  }
 
+  branch from malonyl-acp side right {
+    malonyl-acp
+    <-> ec_2_3_1_293 [2.3.1.293] +ultra_long_chain_mono_unsaturated_fatty_acyl_pan +hplus +holo-acp +co2
+    ultra_long_chain_mono_unsaturated_3_oxoacyl_pant
+  }
+
+  branch from 1_2_diacyl_sn_glycero_3_phosphoethanolamine side left {
+    1_2_diacyl_sn_glycero_3_phosphoethanolamine
+    <-> . +fatty_acyl_coa +coa
+    2_acyl_sn_glycero_3_phosphoethanolamine
+  }
+
+  branch from udp_d_glucose side right {
+    udp_d_glucose
+    <-> . +l_erythro_n_acylsphingosine +udp +hplus
+    d_glucosyl_l_erythro_n_acylsphingosine
+  }
+
+  branch from udp_d_glucose side left {
+    udp_d_glucose
+    <-> . +l_asparagine +udp +hplus
+    n4_d_glucosyl_l_asparagine
+  }
 }

@@ -1,0 +1,633 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "hydroxypyruvaldehyde-to-h2o-null",
+  "name": "hydroxypyruvaldehyde to H2O",
+  "category": "energy-metabolism",
+  "summary": "A 4-step route from hydroxypyruvaldehyde to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR129358"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:46660"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "hydroxypyruvaldehyde",
+      "name": "hydroxypyruvaldehyde",
+      "formula": "C3H4O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:46660"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "3_hydroxypyruvate",
+      "name": "3-hydroxypyruvate",
+      "formula": "C3H3O4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM392"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "l_glyceric_acid",
+      "name": "L-glyceric acid",
+      "formula": "C3H6O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:74324"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "l_glyceraldehyde",
+      "name": "L-glyceraldehyde",
+      "formula": "C3H6O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM7478"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_2_1_49",
+      "name": "2-oxoaldehyde dehydrogenase (NADP(+))",
+      "ec": [
+        "1.2.1.49"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_291",
+      "name": "2-hydroxymethylglutarate dehydrogenase",
+      "ec": [
+        "1.1.1.291"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_22",
+      "name": "lactaldehyde dehydrogenase",
+      "ec": [
+        "1.2.1.22"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_3",
+      "name": "aldehyde dehydrogenase (NAD(+))",
+      "ec": [
+        "1.2.1.3"
+      ],
+      "xrefs": {
+        "uniprot": "P00352"
+      }
+    },
+    {
+      "id": "ec_3_6_3_17",
+      "name": "EC 3.6.3.17",
+      "ec": [
+        "3.6.3.17"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2-oxoaldehyde dehydrogenase (NADP(+))",
+      "ec": "1.2.1.49",
+      "substrates": [
+        {
+          "metabolite": "hydroxypyruvaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "3_hydroxypyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_49"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR129358"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR129358"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2-hydroxymethylglutarate dehydrogenase",
+      "ec": "1.1.1.291",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "3_hydroxypyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_glyceric_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_291"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR100701"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR100701"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "lactaldehyde dehydrogenase",
+      "ec": "1.2.1.22",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_glyceric_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_glyceraldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_22"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR130119"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR130119"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Reaction MNXR174783",
+      "ec": "3.6.3.17",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_glyceraldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_glyceraldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_3_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR174783"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR174783"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_hydroxypyruvaldehyde_2-aminophenol-to-l-glutamate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxypyruvaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-aminophenol-to-l-glutamate-null"
+      },
+      "note": "Shares hydroxypyruvaldehyde with 2-aminophenol to L-glutamate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:46660"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hydroxypyruvaldehyde_acetyl-coa-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxypyruvaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetyl-coa-to-h2o"
+      },
+      "note": "Shares hydroxypyruvaldehyde with acetyl-CoA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:46660"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hydroxypyruvaldehyde_hydroxypyruvaldehyde-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxypyruvaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hydroxypyruvaldehyde-to-h2o"
+      },
+      "note": "Shares hydroxypyruvaldehyde with hydroxypyruvaldehyde to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:46660"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_glyceric_acid_hydroxypyruvaldehyde-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_glyceric_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hydroxypyruvaldehyde-to-h2o"
+      },
+      "note": "Shares L-glyceric acid with hydroxypyruvaldehyde to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74324"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_glyceraldehyde_1-monoacetin-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_glyceraldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-monoacetin-to-h2o"
+      },
+      "note": "Shares L-glyceraldehyde with 1-Monoacetin to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM7478"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_glyceraldehyde_1-monoacetin-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_glyceraldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-monoacetin-to-h2o-null"
+      },
+      "note": "Shares L-glyceraldehyde with 1-Monoacetin to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM7478"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_glyceraldehyde_2r-hydroxyhexanoate-to-phosphate-86071",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_glyceraldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2r-hydroxyhexanoate-to-phosphate-86071"
+      },
+      "note": "Shares L-glyceraldehyde with (2R)-hydroxyhexanoate to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM7478"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_glyceraldehyde_beta-d-galactosyl-1-3-to-pyruvate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_glyceraldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-d-galactosyl-1-3-to-pyruvate-null"
+      },
+      "note": "Shares L-glyceraldehyde with beta-D-galactosyl-(1->3)-… to pyruvate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM7478"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_glyceraldehyde_hydroxypyruvaldehyde-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_glyceraldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hydroxypyruvaldehyde-to-h2o"
+      },
+      "note": "Shares L-glyceraldehyde with hydroxypyruvaldehyde to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM7478"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_glyceraldehyde_isonicotinyl-coa-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_glyceraldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isonicotinyl-coa-to-h2o"
+      },
+      "note": "Shares L-glyceraldehyde with isonicotinyl-CoA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM7478"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_glyceraldehyde_lupanine-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_glyceraldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "lupanine-to-phosphate"
+      },
+      "note": "Shares L-glyceraldehyde with lupanine to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM7478"
+          }
+        ]
+      }
+    }
+  ]
+}

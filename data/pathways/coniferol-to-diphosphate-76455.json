@@ -1,0 +1,542 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "coniferol-to-diphosphate-76455",
+  "name": "coniferol to diphosphate",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from coniferol to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:76455"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:17745"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "coniferol",
+      "name": "coniferol",
+      "formula": "C10H12O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17745"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "coniferyl_aldehyde",
+      "name": "coniferyl aldehyde",
+      "formula": "C10H10O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16547"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "trans_ferulate",
+      "name": "trans-ferulate",
+      "formula": "C10H9O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29749"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "trans_feruloyl_amp",
+      "name": "trans-feruloyl-AMP",
+      "formula": "C20H21N5O10P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:192350"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_2_1_68",
+      "name": "coniferyl-aldehyde dehydrogenase",
+      "ec": [
+        "1.2.1.68"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(E)-coniferol + A = (E)-coniferaldehyde + AH2",
+      "equation": "(E)-coniferol + A = (E)-coniferaldehyde + AH2",
+      "substrates": [
+        {
+          "metabolite": "coniferol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "coniferyl_aldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:76455"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:76455"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "coniferyl-aldehyde dehydrogenase",
+      "equation": "(E)-coniferaldehyde + NAD(+) + H2O = (E)-ferulate + NADH + 2 H(+)",
+      "ec": "1.2.1.68",
+      "substrates": [
+        {
+          "metabolite": "coniferyl_aldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_ferulate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_68"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:23968"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23968"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(E)-ferulate + ATP + H(+) = (E)-feruloyl-AMP + diphosphate",
+      "equation": "(E)-ferulate + ATP + H(+) = (E)-feruloyl-AMP + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "trans_ferulate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_feruloyl_amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:72439"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:72439"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_coniferol_5-cholest-7-en-3-ol-to-coniferyl-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coniferol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cholest-7-en-3-ol-to-coniferyl-acetate"
+      },
+      "note": "Shares coniferol with 5α-cholest-7-en-3β-ol to coniferyl acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17745"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_coniferol_5-cholest-7-en-3-ol-to-coniferyl-acetate-13685",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coniferol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cholest-7-en-3-ol-to-coniferyl-acetate-13685"
+      },
+      "note": "Shares coniferol with 5α-cholest-7-en-3β-ol to coniferyl acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17745"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_coniferol_coniferin-to-e-ferulate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coniferol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "coniferin-to-e-ferulate"
+      },
+      "note": "Shares coniferol with coniferin to (E)-ferulate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17745"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_coniferol_coniferin-to-e-ferulate-12252",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coniferol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "coniferin-to-e-ferulate-12252"
+      },
+      "note": "Shares coniferol with coniferin to (E)-ferulate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17745"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_coniferol_coniferol-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coniferol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "coniferol-to-diphosphate"
+      },
+      "note": "Shares coniferol with coniferol to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17745"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_coniferol_crocetin-to-crocin-1",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coniferol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "crocetin-to-crocin-1"
+      },
+      "note": "Shares coniferol with crocetin to crocin-1.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17745"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_coniferol_tritrans-heptacis-undecap-to-d-galnac-1-4-2-d-34",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coniferol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "tritrans-heptacis-undecap-to-d-galnac-1-4-2-d-34"
+      },
+      "note": "Shares coniferol with tritrans,heptacis-undecap… to [α-D-GalNAc-(1→4)]2-[β-D-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17745"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_coniferyl_aldehyde_coniferin-to-e-ferulate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coniferyl_aldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "coniferin-to-e-ferulate"
+      },
+      "note": "Shares coniferyl aldehyde with coniferin to (E)-ferulate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16547"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_coniferyl_aldehyde_coniferin-to-e-ferulate-12252",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coniferyl_aldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "coniferin-to-e-ferulate-12252"
+      },
+      "note": "Shares coniferyl aldehyde with coniferin to (E)-ferulate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16547"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_coniferyl_aldehyde_coniferol-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coniferyl_aldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "coniferol-to-diphosphate"
+      },
+      "note": "Shares coniferyl aldehyde with coniferol to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16547"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_coniferyl_aldehyde_coniferyl-aldehyde-to-scopolin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coniferyl_aldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "coniferyl-aldehyde-to-scopolin"
+      },
+      "note": "Shares coniferyl aldehyde with coniferyl aldehyde to scopolin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16547"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_coniferyl_aldehyde_coniferyl-aldehyde-to-scopolin-64648",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coniferyl_aldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "coniferyl-aldehyde-to-scopolin-64648"
+      },
+      "note": "Shares coniferyl aldehyde with coniferyl aldehyde to scopolin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16547"
+          }
+        ]
+      }
+    }
+  ]
+}

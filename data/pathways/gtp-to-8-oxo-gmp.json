@@ -94,43 +94,6 @@
       "xrefs": {
         "chebi": "CHEBI:145694"
       }
-    },
-    {
-      "id": "thromboxane_b3",
-      "name": "thromboxane B3",
-      "formula": "C20H32O6",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:84444"
-      }
-    },
-    {
-      "id": "txa3",
-      "name": "TXA3",
-      "formula": "C20H30O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:165349"
-      }
-    },
-    {
-      "id": "14_15_dihete",
-      "name": "14,15-diHETE",
-      "formula": "C20H31O4",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM1559470"
-      }
-    },
-    {
-      "id": "5z_8z_11z_17z_14_15_epoxyicosatetraenoate",
-      "name": "(5Z,8Z,11Z,17Z)-14,15-epoxyicosatetraenoate",
-      "short": "(5Z,8Z,11Z,17Z)-14,…",
-      "formula": "C20H29O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:136443"
-      }
     }
   ],
   "enzymes": [
@@ -146,14 +109,10 @@
       "name": "8-oxo-dGDP phosphatase",
       "ec": [
         "3.6.1.58"
-      ]
-    },
-    {
-      "id": "ec_3_3_2_10",
-      "name": "soluble epoxide hydrolase",
-      "ec": [
-        "3.3.2.10"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q6ZVK8"
+      }
     }
   ],
   "reactions": [
@@ -292,77 +251,181 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "Reaction MNXR200081",
-      "substrates": [
-        {
-          "metabolite": "thromboxane_b3",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "txa3",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR200081"
+      "id": "xt_hydroxyl_3-1h-indol-3-yl-propanoa-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxyl"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "3-1h-indol-3-yl-propanoa-to-ammonium"
+      },
+      "note": "Shares hydroxyl with 3-(1H-indol-3-yl)propanoa… to ammonium.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR200081"
+            "id": "MNXM1108315"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "soluble epoxide hydrolase",
-      "ec": "3.3.2.10",
-      "substrates": [
-        {
-          "metabolite": "14_15_dihete",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "5z_8z_11z_17z_14_15_epoxyicosatetraenoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_3_2_10"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR200083"
+      "id": "xt_hydroxyl_acetoacetyl-coa-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxyl"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "acetoacetyl-coa-to-h2o"
+      },
+      "note": "Shares hydroxyl with acetoacetyl-CoA to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR200083"
+            "id": "MNXM1108315"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hydroxyl_adenosine-5-phospho-n-me-to-n-acetylimidazole",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxyl"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "adenosine-5-phospho-n-me-to-n-acetylimidazole"
+      },
+      "note": "Shares hydroxyl with Adenosine-5'-phospho-N-me… to N-acetylimidazole.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1108315"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hydroxyl_co2-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxyl"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "co2-to-nad"
+      },
+      "note": "Shares hydroxyl with CO2 to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1108315"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hydroxyl_dimp-to-damp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxyl"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dimp-to-damp"
+      },
+      "note": "Shares hydroxyl with dIMP to dAMP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1108315"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hydroxyl_retncoa-c-to-1-o-4-oxoretinoyl-d-g",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxyl"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "retncoa-c-to-1-o-4-oxoretinoyl-d-g"
+      },
+      "note": "Shares hydroxyl with Retncoa c to 1-O-(4-oxoretinoyl)-β-D-g….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1108315"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_8_oxo_gtp_n-11z-icosenoylsphingos-to-n-15z-tetracosenoylsp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "8_oxo_gtp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-11z-icosenoylsphingos-to-n-15z-tetracosenoylsp"
+      },
+      "note": "Shares 8-oxo-GTP with N-(11Z)-icosenoylsphingos… to N-(15Z)-tetracosenoylsphi….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:143553"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_8_oxo_gmp_n-11z-icosenoylsphingos-to-n-15z-tetracosenoylsp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "8_oxo_gmp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-11z-icosenoylsphingos-to-n-15z-tetracosenoylsp"
+      },
+      "note": "Shares 8-oxo-GMP with N-(11Z)-icosenoylsphingos… to N-(15Z)-tetracosenoylsphi….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:145694"
           }
         ]
       }

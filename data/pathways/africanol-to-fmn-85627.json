@@ -1,0 +1,460 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "africanol-to-fmn-85627",
+  "name": "africanol to FMN",
+  "category": "other",
+  "summary": "A 4-step route from africanol to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:85627"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:234485"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "africanol",
+      "name": "africanol",
+      "formula": "C15H26O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:234485"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "4_hydroxyafricanol",
+      "name": "4-hydroxyafricanol",
+      "formula": "C15H26O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:234487"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "4_oxoafricanol",
+      "name": "4-oxoafricanol",
+      "formula": "C15H24O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:234488"
+      }
+    },
+    {
+      "id": "2_dehydroxy_2_en_4_oxoafricanol",
+      "name": "2-dehydroxy-2-en-4-oxoafricanol",
+      "short": "2-dehydroxy-2-en-4-…",
+      "formula": "C15H22O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:234489"
+      }
+    },
+    {
+      "id": "ophiocerate",
+      "name": "ophiocerate",
+      "formula": "C15H19O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:234490"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "africanol + reduced [NADPH--hemoprotein reductase] + O2 = 4-hydroxyafricanol + oxidized...",
+      "equation": "africanol + reduced [NADPH--hemoprotein reductase] + O2 = 4-hydroxyafricanol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "africanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxyafricanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:85627"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:85627"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "4-hydroxyafricanol + reduced [NADPH--hemoprotein reductase] + O2 = 4-oxoafricanol + oxi...",
+      "equation": "4-hydroxyafricanol + reduced [NADPH--hemoprotein reductase] + O2 = 4-oxoafricanol + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "4_hydroxyafricanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_oxoafricanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:85631"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:85631"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "4-oxoafricanol = 2-dehydroxy-2-en-4-oxoafricanol + H2O",
+      "equation": "4-oxoafricanol = 2-dehydroxy-2-en-4-oxoafricanol + H2O",
+      "substrates": [
+        {
+          "metabolite": "4_oxoafricanol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_dehydroxy_2_en_4_oxoafricanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:85635"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:85635"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "2-dehydroxy-2-en-4-oxoafricanol + 3 reduced [NADPH--hemoprotein reductase] + 3 O2 = oph...",
+      "equation": "2-dehydroxy-2-en-4-oxoafricanol + 3 reduced [NADPH--hemoprotein reductase] + 3 O2 = ophiocerate + 3 oxidized [NADPH--hemoprotein reductase] + 4 H2O + 4 H(+)",
+      "substrates": [
+        {
+          "metabolite": "2_dehydroxy_2_en_4_oxoafricanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ophiocerate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 4
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:85639"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:85639"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_africanol_5-end-nad-phospho-ribonu-to-diphosphate-60880",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "africanol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-end-nad-phospho-ribonu-to-diphosphate-60880"
+      },
+      "note": "Shares africanol with 5'-end NAD-phospho-ribonu… to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:234485"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_africanol_africanol-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "africanol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "africanol-to-fmn"
+      },
+      "note": "Shares africanol with africanol to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:234485"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_africanol_o-methyl-l-tyrosine-to-h2o-74487",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "africanol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "o-methyl-l-tyrosine-to-h2o-74487"
+      },
+      "note": "Shares africanol with O-methyl-L-tyrosine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:234485"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_hydroxyafricanol_africanol-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_hydroxyafricanol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "africanol-to-fmn"
+      },
+      "note": "Shares 4-hydroxyafricanol with africanol to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:234487"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_oxoafricanol_africanol-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_oxoafricanol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "africanol-to-fmn"
+      },
+      "note": "Shares 4-oxoafricanol with africanol to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:234488"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_dehydroxy_2_en_4_oxoafricanol_africanol-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_dehydroxy_2_en_4_oxoafricanol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "africanol-to-fmn"
+      },
+      "note": "Shares 2-dehydroxy-2-en-4-oxoafricanol with africanol to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:234489"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ophiocerate_africanol-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ophiocerate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "africanol-to-fmn"
+      },
+      "note": "Shares ophiocerate with africanol to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:234490"
+          }
+        ]
+      }
+    }
+  ]
+}

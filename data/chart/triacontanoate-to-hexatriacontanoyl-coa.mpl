@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway triacontanoate-to-hexatriacontanoyl-coa "triacontanoate to hexatriacontanoyl-CoA" {
-  spacing 330
+  spacing 340
 
   spine at 0,0 {
     triacontanoate
@@ -42,63 +42,147 @@ pathway triacontanoate-to-hexatriacontanoyl-coa "triacontanoate to hexatriaconta
     trans_2_triacontenoyl_coa
   }
 
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_204 [4.2.3.204] +fpp +h2o
-    valerianol
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +utp +atp
-    3_3_cuamp
-  }
-
   branch from nadp side right {
     nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +h +1_nitronaphthalene +o2 +nadph +h2o
-    1_nitronaphthalene_5_6_oxide
+    <-> . +5_10_methylene_tetrahydromethanopterin_iminium_f +h +nadph
+    5_10_methenyl_5_6_7_8_tetrahydromethanopterin
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +9z_12z_octadecadienoate +h +o2 +nadph +h2o
-    9r_10s_9_10_epome
+    <-> . +l_galactopyranose +h +nadph
+    l_galactono_1_5_lactone
   }
 
   branch from h2o side right {
     h2o
-    <-> . +cyclohexylamine +formate
-    n_cyclohexylformamide
+    <-> ec_1_16_3_2 [1.16.3.2] +fe +o2 +h
+    feo_oh_monomer
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_14_15_3 [1.14.15.3] +nadh +h +o2 +cyclohexane +nad
-    cyclohexanol
+    <-> . +hydrogen_sulfide +h +succinate
+    4_oxo_4_sulfanylbutanoate
   }
 
   branch from co2 side right {
     co2
-    <-> ec_2_3_1_74 [2.3.1.74] +malonyl_coa +trans_caffeoyl_coa +h +coa
-    trans_2_3_4_4_6_pentahydroxychalcone
+    <-> . +2_5_diiminio_3_4_bis_indol_3_yl_hexanedioate +protodeoxyviolaceinate
+    nh4
   }
 
   branch from co2 side left {
     co2
-    <-> ec_1_14_11_9 [1.14.11.9] +2_oxoglutarate +s_pinocembrin +o2 +pinobanksin
-    succinate
+    <-> ec_4_1_1_56 [4.1.1.56] +3_oxopalmitic_acid
+    2_pentadecanone
   }
 
   branch from coa side right {
     coa
-    <-> ec_3_1_2_20 [3.1.2.20] +h +7_isojasmonate +h2o
-    7_isojasmonic_acid_coa
+    <-> . +4_methylumbelliferyl_d_glucoside +malonyl_coa
+    4_methylumbelliferone_6_o_malonylglucoside
   }
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_5 [2.3.1.5] +4_acetamido_2_amino_6_nitrotoluene +2_4_diamino_6_nitrotoluene
-    acetyl_coa
+    <-> ec_2_3_1_176 [2.3.1.176] +3_oxochol_4_en_24_oyl_coa +propanoyl_coa
+    3_24_dioxocholest_4_en_26_oyl_coa
+  }
+
+  branch from malonyl-coa side right {
+    malonyl-coa
+    <-> . +3_methylundecanoyl_coa +hplus +co2 +coa
+    4_hydroxy_6_4_methyl_2_oxododecyl_pyran_2_one
+  }
+
+  branch from malonyl-coa side left {
+    malonyl-coa
+    <-> . +12_methyloctadecanoyl_coa +hplus +co2 +coa
+    4_hydroxy_6_13_methyl_2_oxononadecyl_pyran_2_one
+  }
+
+  branch from h side right {
+    h
+    <-> . +co2 +2_keto_4_hydroxy_5_phosphopentanoate +phosphonoacetaldehyde
+    oxaloacetate
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_8_2_1 [2.8.2.1] +adenosine_3_5_bisphosphate +s_equol_4_sulfate +equol
+    3_phosphoadenylyl_sulfate
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +malonyl_coa +s_methylmalonyl_coa +4_aminobenzoyl_coa +h +co2 +nadp +coa +h2o
+    candicinolide
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +acetyl_coa +malonyl_coa +h +co2 +nadp +coa +h2o
+    5z_8z_11z_14z_eicosatetraenoate
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +acetyl_coa +malonyl_coa +h +nadph +co2 +coa +h2o
+    4z_7z_10z_13z_16z_19z_docosahexaenoate
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_1_1_330 [1.1.1.330] +3_oxoauricoloyl_coa +h +nadph
+    3r_hydroxy_auricoloyl_coa
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +phomamide +l_serine
+    4_o_dimethylallyl_l_tyrosine
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +co2 +n_o_dimethylhydroxylamine +3_4_dichloroaniline
+    linuron
+  }
+
+  branch from malonyl_coa side right {
+    malonyl_coa
+    <-> ec_2_3_1_199 [2.3.1.199] +densipoloyl_coa +h +co2 +coa
+    3_oxoauricoloyl_coa
+  }
+
+  branch from malonyl_coa side left {
+    malonyl_coa
+    <-> . +2_5_dimethyl_4_oxo_4_5_dihydro_3_furanyl_beta_d +coa
+    malonyl_furaneol_glucopyranoside
+  }
+
+  branch from co2 side right {
+    co2
+    <-> . +2_oxoglutarate +fusicocca_2_10_14_diene_8beta_16_diol +o2 +succinate
+    fusicocca_1_10_14_diene_3_8beta_16_triol
+  }
+
+  branch from co2 side left {
+    co2
+    <-> . +2_oxoglutarate +fusicocca_2_10_14_diene_8beta_16_diol +o2 +succinate +h2o
+    8beta_hydroxyfusicocca_1_10_14_diene_16_al
+  }
+
+  branch from coa side right {
+    coa
+    <-> ec_2_3_1_198 [2.3.1.198] +2_c22_0_dca_lpa +sn_glycerol_3_phosphate
+    22_carboxy_docosanoyl_coa
+  }
+
+  branch from coa side left {
+    coa
+    <-> ec_2_3_1_198 [2.3.1.198] +hexadecanedioyl_coa +sn_glycerol_3_phosphate
+    sn_2_c16_0_dca_lpa
   }
 }

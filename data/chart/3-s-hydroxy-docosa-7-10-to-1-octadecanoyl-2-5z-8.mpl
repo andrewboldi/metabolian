@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-s-hydroxy-docosa-7-10-to-1-octadecanoyl-2-5z-8 "3(S)-hydroxy-docosa-7,10,… to 1-octadecanoyl-2-(5Z,8Z,1…" {
-  spacing 194
+  spacing 158
 
   spine at 0,0 {
     3_s_hydroxy_docosa_7_10_13_16_19_all_cis_pentaen
@@ -16,45 +16,9 @@ pathway 3-s-hydroxy-docosa-7-10-to-1-octadecanoyl-2-5z-8 "3(S)-hydroxy-docosa-7,
     1_octadecanoyl_2_5z_8z_11z_14z_17z_eicosapentaen
   }
 
-  branch from h side left {
-    h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +ciprofloxacin +phosphate +ciprofloxacin +h2o
-    atp
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    jadomycin_b
-  }
-
   branch from 7z_10z_13z_16z_19z_3_oxodocosapentaenoyl_coa side left {
     7z_10z_13z_16z_19z_3_oxodocosapentaenoyl_coa
     <-> . +nad +nadh +hplus
     3r_7z_10z_13z_16z_19z_3_hydroxydocosapentaenoyl
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> . +h +3r_4r_4_hydroxymethyl_3_6_methylheptanoyl_oxola +nadp
-    scb1
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> . +h +2_4_dinitrophenol +nadp
-    2_4_dinitrophenol_hydride_sigma_complex
-  }
-
-  branch from 5z_8z_11z_14z_17z_icosapentaenoyl_coa side right {
-    5z_8z_11z_14z_17z_icosapentaenoyl_coa
-    <-> . +fe2 +o2 +hplus +iron +h2o
-    arachidonoyl_coa
-  }
-
-  branch from 5z_8z_11z_14z_17z_icosapentaenoyl_coa side left {
-    5z_8z_11z_14z_17z_icosapentaenoyl_coa
-    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +atp +coa +amp
-    ppi
   }
 }

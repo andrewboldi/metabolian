@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3r-9z-hydroxyicos-9-eno-to-diphosphate "(3R,9Z)-hydroxyicos-9-eno… to diphosphate" {
-  spacing 194
+  spacing 224
 
   spine at 0,0 {
     3r_9z_hydroxyicos_9_enoyl_coa
@@ -24,43 +24,73 @@ pathway 3r-9z-hydroxyicos-9-eno-to-diphosphate "(3R,9Z)-hydroxyicos-9-eno… to 
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +h +benzo_a_pyrene +o2 +nadph +h2o
-    benzo_a_pyrene_4_5_oxide
+    <-> . +echinocandin_c +h2o +h +o2 +nadph
+    echinocandin_d
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +benzo_a_pyrene_diol_epoxide_i +h2o +h +o2 +nadph
-    benzo_a_pyrene_7_8_diol
+    <-> . +echinocandin_c +h +o2 +nadph +h2o
+    echinocandin_b
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_3_2_9 [3.3.2.9] +1_nitronaphthalene_5_6_oxide
-    1_nitro_5_6_dihydroxy_dihydronaphthalene
+    <-> . +4_4_2_gamma_l_glutamylamino_ethyl_phenoxymethyl +l_glutamate
+    methanofuran_b
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_3_2_9 [3.3.2.9] +bromobenzene_3_4_oxide
-    bromobenzene_3_4_dihydrodiol
+    <-> . +sulfinosuccinate +h +sulfite
+    succinate
   }
 
-  branch from 9z_icos_9_enoyl_coa side left {
-    9z_icos_9_enoyl_coa
-    <-> . +s_carnitine +coa
-    eicosenoylcarnitine_11
+  branch from h side left {
+    h
+    <-> . +acetyl_coa +blasticidin_s +acetylblasticidin_s
+    coa
   }
 
-  branch from ppi side right {
-    ppi
-    <-> . +utp +ctp
-    3_3_cyclic_cmp_ump
+  branch from h side right {
+    h
+    <-> . +gdp_mycosamine +demycosaminyl_candicidin_iii +candicidin_d
+    gdp
   }
 
-  branch from ppi side left {
-    ppi
-    <-> . +r_lavandulyl_diphosphate +h2o
-    r_lavandulol
+  branch from nadph side left {
+    nadph
+    <-> . +h +8e_10e_dodecadienoic_acid +nadp +h2o
+    8e_10e_dodeca_8_10_dienol
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +dechloro_dehydrogriseofulvin +h +nadp
+    dechlorogriseofulvin
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_2_1_84 [1.2.1.84] +9z_11e_tetradec_9_11_dienoyl_coa +h +nadph +coa
+    9z_11e_tetradecadien_1_ol
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_2_1_84 [1.2.1.84] +h +11z_tetradecenol +coa +nadph
+    cis_tetradec_11_enoyl_coa
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_4_2_1_134 [4.2.1.134] +2e_11z_14r_17z_14_hydroxy_icosa_2_11_17_trienoy
+    3r_hydroxy_auricoloyl_coa
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +gdp_4_keto_6_deoxy_d_lyxo_heptose +h
+    gdp_d_glycero_alpha_d_manno_heptose
   }
 }

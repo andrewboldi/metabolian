@@ -18,25 +18,25 @@ pathway d-ribose-to-d-ribulose "D-ribose to D-ribulose" {
 
   branch from h2o side left {
     h2o
-    <-> . +d_urobilinogen +o2
-    d_urobilin
+    <-> . +argtyrval +l_arginine +l_tyrosine
+    l_valine
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_5_1_26 [3.5.1.26] +l_asparagine +aldehydo_n_acetyl_d_glucosamine
-    n_4_beta_n_acetyl_d_glucosaminyl_l_asparagine
+    <-> . +arginyl_valyl_tryptophan +l_valine +l_tryptophan
+    l_arginine
   }
 
-  branch from aldehydo_d_ribose side left {
-    aldehydo_d_ribose
-    <-> . +aldehydo_d_ribose_5_phosphate +h2o
-    phosphate
+  branch from h2o side left {
+    h2o
+    <-> . +11_z_14_z_eicosadienoic_acid +coa
+    11z_14z_icosadienoyl_coa
   }
 
-  branch from aldehydo_d_ribose side right {
-    aldehydo_d_ribose
-    <-> ec_3_2_2_7 [3.2.2.7] +adenosine +h2o
-    adenine
+  branch from h2o side right {
+    h2o
+    <-> . +n_acetyl_d_hexosamine
+    chitin
   }
 }

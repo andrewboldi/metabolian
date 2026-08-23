@@ -4,39 +4,15 @@
 # edit the generator, not this file.
 
 pathway aldehydo-2-deoxy-d-ribose-to-h2o-null "aldehydo-2-deoxy-D-ribose to H2O" {
-  spacing 224
+  spacing 152
 
   spine at 0,0 {
     aldehydo_2_deoxy_d_ribose
-    <-> . +guanine -h2o
-    2_deoxyguanosine
-    <-> ec_2_4_2_6 [2.4.2.6] +adenine -guanine
-    2_deoxyadenosine
-    <-> ec_3_1_3_2 [3.1.3.2] +h +phosphate -h2o
-    2_deoxyadenosine_3_monophosphate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_alanine +l_cysteine +l_arginine
-    alanyl_arginyl_cysteine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_alanine +glycine +l_arginine
-    alanyl_arginyl_glycine
-  }
-
-  branch from guanine side left {
-    guanine
-    <-> ec_3_6_3_37 [3.6.3.37] +h +adp +phosphate +h2o
+    <-> ec_2_7_1_229 [2.7.1.229] +atp -adp -2_deoxy_d_ribose_5_phosphate
+    h
+    <-> . +adp +2_deoxy_d_ribose_5_phosphate -deoxyribose
     atp
-  }
-
-  branch from guanine side right {
-    guanine
-    <-> ec_3_2_2_1 [3.2.2.1] +guanosine +h2o
-    aldehydo_d_ribose
+    <-> . +h +adp +deoxyribose +phosphate -atp -h2o
+    deoxyribose
   }
 }

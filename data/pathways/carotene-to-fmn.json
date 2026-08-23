@@ -118,42 +118,6 @@
       "xrefs": {
         "chebi": "CHEBI:134233"
       }
-    },
-    {
-      "id": "decane",
-      "name": "decane",
-      "formula": "C10H22",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:41808"
-      }
-    },
-    {
-      "id": "decan_3_ol",
-      "name": "decan-3-ol",
-      "formula": "C10H22O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:195405"
-      }
-    },
-    {
-      "id": "dodecane",
-      "name": "dodecane",
-      "formula": "C12H26",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:28817"
-      }
-    },
-    {
-      "id": "dodecan_5_ol",
-      "name": "dodecan-5-ol",
-      "formula": "C12H26O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:195406"
-      }
     }
   ],
   "enzymes": [
@@ -162,14 +126,20 @@
       "name": "beta-carotene 15,15'-dioxygenase",
       "ec": [
         "1.13.11.63"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q9HAY6"
+      }
     },
     {
       "id": "ec_1_2_3_1",
       "name": "aldehyde oxidase",
       "ec": [
         "1.2.3.1"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q06278"
+      }
     }
   ],
   "reactions": [
@@ -368,105 +338,269 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "decane + reduced [NADPH--hemoprotein reductase] + O2 = 3-decanol + oxidized [NADPH--hem...",
-      "equation": "decane + reduced [NADPH--hemoprotein reductase] + O2 = 3-decanol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "decane",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "decan_3_ol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:76735"
+      "id": "xt_carotene_carotene-to-all-trans-violaxanthin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "carotene"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "carotene-to-all-trans-violaxanthin"
+      },
+      "note": "Shares β-carotene with β-carotene to all-trans-violaxanthin.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:76735"
+            "db": "ChEBI",
+            "id": "CHEBI:17579"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "dodecane + reduced [NADPH--hemoprotein reductase] + O2 = 5-dodecanol + oxidized [NADPH-...",
-      "equation": "dodecane + reduced [NADPH--hemoprotein reductase] + O2 = 5-dodecanol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "dodecane",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "dodecan_5_ol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:76739"
+      "id": "xt_carotene_carotene-to-hydrogen-acceptor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "carotene"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "carotene-to-hydrogen-acceptor"
+      },
+      "note": "Shares β-carotene with β-carotene to hydrogen acceptor.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:76739"
+            "db": "ChEBI",
+            "id": "CHEBI:17579"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_carotene_leukotriene-c4-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "carotene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "leukotriene-c4-to-hydrogen-donor"
+      },
+      "note": "Shares β-carotene with leukotriene C4 to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17579"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_carotene_r-h-to-hydrogen-acceptor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "carotene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-h-to-hydrogen-acceptor"
+      },
+      "note": "Shares β-carotene with R-H to hydrogen acceptor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17579"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_carotene_s-adenosyl-l-homocysteine-to-8-apo-caroten-8-al",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "carotene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-8-apo-caroten-8-al"
+      },
+      "note": "Shares β-carotene with S-adenosyl-L-homocysteine to 8'-apo-β,ψ-caroten-8'-al.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17579"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinal_20s-17-20-dihydroxypreg-to-testolate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "20s-17-20-dihydroxypreg-to-testolate"
+      },
+      "note": "Shares all-trans-retinal with (20S)-17,20-dihydroxypreg… to testolate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17898"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinal_all-trans-retinol-to-1-o-all-trans-retinoyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "all-trans-retinol-to-1-o-all-trans-retinoyl"
+      },
+      "note": "Shares all-trans-retinal with all-trans-retinol to 1-O-(all-trans-retinoyl)-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17898"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinal_all-trans-retinyl-to-4-d-glucopyranuronosyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "all-trans-retinyl-to-4-d-glucopyranuronosyl"
+      },
+      "note": "Shares all-trans-retinal with all-trans-retinyl… to 4-(β-D-glucopyranuronosyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17898"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinal_s-adenosyl-l-homocysteine-to-8-apo-caroten-8-al",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-8-apo-caroten-8-al"
+      },
+      "note": "Shares all-trans-retinal with S-adenosyl-L-homocysteine to 8'-apo-β,ψ-caroten-8'-al.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17898"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinoate_all-trans-retinol-to-1-o-all-trans-retinoyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "all-trans-retinol-to-1-o-all-trans-retinoyl"
+      },
+      "note": "Shares all-trans-retinoate with all-trans-retinol to 1-O-(all-trans-retinoyl)-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:35291"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinoate_all-trans-retinyl-to-4-d-glucopyranuronosyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "all-trans-retinyl-to-4-d-glucopyranuronosyl"
+      },
+      "note": "Shares all-trans-retinoate with all-trans-retinyl… to 4-(β-D-glucopyranuronosyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:35291"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_retinoate_dammarenediol-ii-to-d-glucopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_retinoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dammarenediol-ii-to-d-glucopyranose"
+      },
+      "note": "Shares all-trans-retinoate with dammarenediol-II to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:35291"
           }
         ]
       }

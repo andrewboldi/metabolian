@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-o-a-l-arabinofuranosyl-to-h2o "5-O-a-L-Arabinofuranosyl-… to H2O" {
-  spacing 270
+  spacing 276
 
   spine at 0,0 {
     5_o_a_l_arabinofuranosyl_l_arabinose
@@ -16,33 +16,8 @@ pathway 5-o-a-l-arabinofuranosyl-to-h2o "5-O-a-L-Arabinofuranosyl-… to H2O" {
     arabinotetraose
   }
 
-  branch from aldehydo_l_arabinose side left {
-    aldehydo_l_arabinose
-    <-> ec_2_7_1_46 [2.7.1.46] +beta_l_arabinose_1_phosphate +h +adp
-    atp
-  }
 
-  branch from aldehydo_l_arabinose side right {
-    aldehydo_l_arabinose
-    <-> ec_5_3_1_4 [5.3.1.4]
-    l_ribulose
-  }
 
-  branch from 1_5_l_arabinotriose side left {
-    1_5_l_arabinotriose
-    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
-    h
-  }
 
-  branch from h2o side right {
-    h2o
-    <-> ec_3_4_21_104 [3.4.21.104] +p_tosyl_l_arginine +methanol
-    tame
-  }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_3_5_1_88 [3.5.1.88] +met_ala_ser +formate
-    n_formyl_l_methionyl_l_alanyl_l_serinate
-  }
 }

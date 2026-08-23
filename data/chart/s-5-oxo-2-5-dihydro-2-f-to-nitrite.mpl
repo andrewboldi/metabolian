@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-5-oxo-2-5-dihydro-2-f-to-nitrite "(S)-5-oxo-2,5-dihydro-2-f… to nitrite" {
-  spacing 274
+  spacing 334
 
   spine at 0,0 {
     s_5_oxo_2_5_dihydro_2_furylacetate
@@ -28,93 +28,27 @@ pathway s-5-oxo-2-5-dihydro-2-f-to-nitrite "(S)-5-oxo-2,5-dihydro-2-f… to nitr
     nitrite
   }
 
-  branch from 5_oxo_4_5_dihydro_2_furylacetate side left {
-    5_oxo_4_5_dihydro_2_furylacetate
-    <-> ec_4_1_1_44 [4.1.1.44] +hplus +co2
-    r_2_carboxylatomethyl_5_oxo_2_5_dihydro_2_furoa
-  }
 
-  branch from 3_oxoadipate side right {
-    3_oxoadipate
-    <-> ec_1_3_1_32 [1.3.1.32] +nad +nadh +hplus
-    maleylacetate
-  }
 
-  branch from 3_oxoadipate side left {
-    3_oxoadipate
-    <-> ec_2_3_1_318 [2.3.1.318] +acetyl_coa +succinyl_coa
-    acetoacetate
-  }
 
-  branch from 3_oxoadipyl_coa side right {
-    3_oxoadipyl_coa
-    <-> . +nad +nadh +hplus
-    3s_hydroxyadipyl_coa
-  }
 
-  branch from succinate side left {
-    succinate
-    <-> ec_1_14_11_7 [1.14.11.7] +l_proline +akg +o2 +co2
-    trans_3_hydroxy_l_proline
-  }
 
-  branch from succinate side right {
-    succinate
-    <-> ec_2_8_3_2 [2.8.3.2] +oxalate +succinyl_coa
-    oxalyl_coa
-  }
 
-  branch from fumarate side left {
-    fumarate
-    <-> ec_4_3_1_1 [4.3.1.1] +aspartate
-    nh3
-  }
 
-  branch from fumarate side right {
-    fumarate
-    <-> . +n_acetyl_s_2_succino_l_cysteine
-    n_acetyl_l_cysteinate
-  }
 
-  branch from menaquinone_8 side left {
-    menaquinone_8
-    <-> . +selenite +h2o +menaquinol_8
-    selenate
-  }
 
-  branch from menaquinone_8 side right {
-    menaquinone_8
-    <-> ec_1_18_99_1 [1.18.99.1] +h2 +menaquinol_8
-    pmf
-  }
 
-  branch from menaquinol_8 side left {
-    menaquinol_8
-    <-> ec_1_6_5_3 [1.6.5.3] +pmf +nadh +menaquinone_8 +h +pmf
-    nad
-  }
 
-  branch from menaquinol_8 side right {
-    menaquinol_8
-    <-> ec_1_6_5_3 [1.6.5.3] +pmf +menaquinone_8 +h +pmf +nad
-    nadh
-  }
 
-  branch from nitrite side left {
-    nitrite
-    <-> ec_1_7_7_1 [1.7.7.1] +di_sulfido_diiron +nh3 +h2o +hplus
-    di_sulfido_diiron
-  }
 
-  branch from nitrite side right {
-    nitrite
-    <-> ec_1_7_3_6 [1.7.3.6] +o2 +h2o +hplus
-    hydroxylamine
-  }
 
-  branch from nitrate side left {
-    nitrate
-    <-> . +3_aci_nitropropanoate +o2 +h2o +nitrite +h2o2 +hplus
-    3_oxopropanoate
-  }
+
+
+
+
+
+
+
+
+
 }

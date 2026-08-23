@@ -20,25 +20,43 @@ pathway cobalt-precorrin-6b-to-l-glutamate "cobalt-precorrin-6B to L-glutamate" 
 
   branch from sah side left {
     sah
-    <-> . +malonyl-coa +sam
-    malonyl_coa_methyl_ester
+    <-> . +5_end_phopshomethylribonucleoside_1 +sam
+    5_end_bisphopshomethylribonucleoside
   }
 
   branch from sah side right {
     sah
-    <-> ec_6_3_2_40 [6.3.2.40] +anthranilate +l_phenylalanine +sam +atp +amp +ppi +hplus
-    cyclopeptine
+    <-> . +adenosine_5_monophosphate_1 +sam +hplus
+    n6_methyladenosine_5_monophosphate_1
   }
 
-  branch from glutamate side left {
-    glutamate
-    <-> ec_2_6_1_124 [2.6.1.124] +c_terminal_l_ornithyl_l_glutamyl_1_group +akg
-    c_terminal_l_glutamyl_5_semialdehyde_l_glutamyl
+  branch from cobalt_precorrin_8 side left {
+    cobalt_precorrin_8
+    <-> ec_2_1_1_132 [2.1.1.132] +s_adenosyl_l_homocysteine +co2 +h +co_precorrin_6b
+    s_adenosyl_l_methionine
   }
 
-  branch from glutamate side right {
-    glutamate
-    <-> ec_3_4_19_16 [3.4.19.16] +glucys_ian_gly +h2o
-    cys_ian_gly
+  branch from sam side right {
+    sam
+    <-> . +n6_methyladenosine_5_monophosphate_1 +sah +hplus
+    adenosine_5_monophosphate_1
+  }
+
+  branch from sam side left {
+    sam
+    <-> . +desmethylnectriapyrone +sah +hplus
+    nectriapyrone
+  }
+
+  branch from sah side right {
+    sah
+    <-> . +5_end_gtp_ribonucleotide_5 +sam
+    5_methyltriphosphate_guanosine_ribonucleotide_4
+  }
+
+  branch from sah side left {
+    sah
+    <-> . +malonyl-coa +acetyl_coa +sam +nadph +hplus +co2 +nadp +coa +h2o
+    desmethylnectriapyrone
   }
 }

@@ -4,75 +4,159 @@
 # edit the generator, not this file.
 
 pathway udp-to-h2o "UDP to H2O" {
-  spacing 320
+  spacing 340
 
   spine at 0,0 {
     udp
-    <-> ec_2_4_1_153 [2.4.1.153] +h +archaeal_dolichyl_n_acetyl_alpha_d_glucosaminyl -archaeal_dolichyl_phosphate
-    udp_n_acetyl_alpha_d_glucosamine
-    <-> ec_3_6_1_45 [3.6.1.45] +h2o -h -n_acetyl_d_mannosamine_1_phosphate
-    ump
-    <-> ec_3_6_1_17 [3.6.1.17] +utp +h -h2o
-    p_1_p_4_bis_uridin_5_yl_tetraphosphate
+    <-> . +h +undecaprenyl_phosphate_4_amino_4_deoxy_l_arabino -undecaprenyl_phosphate
+    udp_4_amino_4_deoxy_beta_l_arabinose
+    <-> ec_2_1_2_13 [2.1.2.13] +6r_10_formyltetrahydrofolate -uridine_5_diphospho_beta_4_deoxy_4_formamido_l_a
+    6s_5_6_7_8_tetrahydrofolate
+    <-> . +l_glutamate -h2o
+    pentaglutamyl_folate_thf
   }
 
-  branch from udp_n_acetyl_alpha_d_glucosamine side left {
-    udp_n_acetyl_alpha_d_glucosamine
-    <-> . +n_acetyl_d_glucosaminyl_n_acetyl_tunicaminyl_ura +udp +h
-    n_acetyl_tunicaminyl_uracil
+  branch from undecaprenyl_phosphate side left {
+    undecaprenyl_phosphate
+    <-> . +core_oligosaccharide_lipid_a +undecaprenyl_phosphate_4_amino_4_deoxy_l_arabino
+    4_amino_4_deoxy_l_arabinose_modified_core_oligos
   }
 
-  branch from udp_n_acetyl_alpha_d_glucosamine side right {
-    udp_n_acetyl_alpha_d_glucosamine
-    <-> ec_3_2_1_183 [3.2.1.183] +udp +h +h2o
-    n_acetyl_d_mannosamine
+  branch from undecaprenyl_phosphate side right {
+    undecaprenyl_phosphate
+    <-> . +undecaprenyl_diphosphate +h2o +h
+    phosphate
   }
 
-  branch from ump side left {
-    ump
-    <-> . +udp_n_acetyl_alpha_d_galactosamine +glc_galnac_p_gro_p_mannac_glcnac_pp_undecaprenol +h
-    galnac_p_glc_galnac_p_gro_p_mannac_glcnac_pp_und
+  branch from 6s_5_6_7_8_tetrahydrofolate side left {
+    6s_5_6_7_8_tetrahydrofolate
+    <-> . +6r_10_formyltetrahydrofolate +l_tyrosine
+    n_formyl_l_tyrosine
   }
 
-  branch from ump side right {
-    ump
-    <-> ec_2_7_6_1 [2.7.6.1] +utp +aldehydo_d_ribose_5_phosphate +h
-    5_phospho_alpha_d_ribose_1_diphosphate
+  branch from 6s_5_6_7_8_tetrahydrofolate side right {
+    6s_5_6_7_8_tetrahydrofolate
+    <-> . +nadh +6r_5_10_methylene_5_6_7_8_tetrahydrofolate +co2 +nh4 +nad
+    glycine
   }
 
-  branch from h side left {
-    h
-    <-> . +dtdp_4_dehydro_2_6_dideoxy_d_glucose
-    dtdp_4_oxo_2_6_dideoxy_l_mannose
-  }
-
-  branch from h side right {
-    h
-    <-> ec_1_1_1_85 [1.1.1.85] +nadh +co2 +2_oxo_10_methylthiodecanoic_acid +nad
-    3_7_methylthio_heptylmalic_acid
-  }
-
-  branch from n_acetyl_d_mannosamine_1_phosphate side left {
-    n_acetyl_d_mannosamine_1_phosphate
-    <-> ec_2_7_1_162 [2.7.1.162] +n_acetyl_d_hexosamine +atp +h
+  branch from pentaglutamyl_folate_thf side left {
+    pentaglutamyl_folate_thf
+    <-> . +6s_5_6_7_8_tetrahydrofolate +atp +l_glutamate +h +phosphate
     adp
   }
 
-  branch from n_acetyl_d_mannosamine_1_phosphate side right {
-    n_acetyl_d_mannosamine_1_phosphate
-    <-> . +diphosphate +utp +h
-    udp_n_acetyl_alpha_d_galactosamine
+  branch from pentaglutamyl_folate_thf side right {
+    pentaglutamyl_folate_thf
+    <-> . +h +hexaglutamyl_folate_thf +adp +phosphate +l_glutamate
+    atp
   }
 
   branch from h2o side left {
     h2o
-    <-> . +s_2_methyl_3_oxopropanoate +h +pyruvate
-    trans_trans_2_4_dihydroxy_5_methyl_6_oxo_2_4_hex
+    <-> ec_1_13_11_34 [1.13.11.34] +4_s_hydroperoxy_17_s_hydroxydocosahexaenoic_acid +h
+    4_5_epoxy_17s_hydroxy_docosahexaenoate
   }
 
   branch from h2o side right {
     h2o
-    <-> . +h +5_nitro_o_toluidine +nadph +2_4_diaminotoluene
-    nadp
+    <-> . +4_5_epoxy_17s_hydroxy_docosahexaenoate +h
+    resolvin_d3
+  }
+
+  branch from udp side left {
+    udp
+    <-> . +h +digitoxigenin_3beta_yl_beta_d_quinovoside +digitoxigenin
+    udp_alpha_d_quinovose
+  }
+
+  branch from udp side right {
+    udp
+    <-> . +octyl_6_o_d_galactofuranosyl_d_glucopyranoside +h +octyl_d_glucopyranoside
+    udp_d_galactofuranose
+  }
+
+  branch from h side left {
+    h
+    <-> . +gdp_guluronate
+    gdp_d_mannuronate
+  }
+
+  branch from h side right {
+    h
+    <-> ec_5_5_1_7 [5.5.1.7] +2_chloromuconolactone
+    2e_4z_2_chloromuconate
+  }
+
+  branch from undecaprenyl_phosphate_4_amino_4_deoxy_l_arabino side left {
+    undecaprenyl_phosphate_4_amino_4_deoxy_l_arabino
+    <-> . +formate +h2o
+    undecaprenyl_phosphate_4_amino_4_formyl_l_arabin
+  }
+
+  branch from undecaprenyl_phosphate_4_amino_4_deoxy_l_arabino side right {
+    undecaprenyl_phosphate_4_amino_4_deoxy_l_arabino
+    <-> . +formate +h2o
+    undecaprenyl_phosphate_4_amino_4_formyl_l_arabin
+  }
+
+  branch from undecaprenyl_phosphate side left {
+    undecaprenyl_phosphate
+    <-> . +h2o +h +phosphate
+    undecaprenyl_diphosphate
+  }
+
+  branch from undecaprenyl_phosphate side right {
+    undecaprenyl_phosphate
+    <-> . +h2o +phosphate
+    all_trans_undecaprenyl_diphosphate
+  }
+
+  branch from 6r_10_formyltetrahydrofolate side left {
+    6r_10_formyltetrahydrofolate
+    <-> . +atp +l_glutamate +h +adp +phosphate +h2o
+    10_formyltetrahydrofolate_glu_5
+  }
+
+  branch from 6r_10_formyltetrahydrofolate side right {
+    6r_10_formyltetrahydrofolate
+    <-> . +n5_hydroxy_l_ornithine +6s_5_6_7_8_tetrahydrofolate
+    n5_formyl_n5_hydroxy_l_ornithine
+  }
+
+  branch from 6s_5_6_7_8_tetrahydrofolate side left {
+    6s_5_6_7_8_tetrahydrofolate
+    <-> . +l_glutamate +h2o
+    heptaglutamyl_folate_thf
+  }
+
+  branch from 6s_5_6_7_8_tetrahydrofolate side right {
+    6s_5_6_7_8_tetrahydrofolate
+    <-> ec_2_1_5_1 [2.1.5.1] +6r_5_10_methylene_5_6_7_8_tetrahydrofolate +sesamin_monocatechol
+    sesamin
+  }
+
+  branch from l_glutamate side left {
+    l_glutamate
+    <-> . +l_glutamine +n_acetyl_l_glutaminyl_l_glutamine
+    n2_acetyl_l_glutaminyl_l_glutamamide
+  }
+
+  branch from l_glutamate side right {
+    l_glutamate
+    <-> ec_2_6_1_13 [2.6.1.13] +2_oxoglutarate +2s_2_4_diaminopentanedioate
+    2s_2_amino_4_oxopentanedioate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +4_5_epoxy_17s_hydroxy_docosahexaenoate +h
+    resolvin_d4
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_4_4_1_13 [4.4.1.13] +z_1_l_cystein_s_yl_n_hydroxy_omega_methylsulfan +nh4 +z_omega_methylsulfanyl_octyl_thiohydroximate
+    pyruvate
   }
 }

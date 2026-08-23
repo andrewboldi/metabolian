@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2e-4e-undeca-2-4-dieno-to-nad "(2E, 4E)-undeca-2,4-dieno… to NAD" {
-  spacing 212
+  spacing 296
 
   spine at 0,0 {
     2e_4e_undeca_2_4_dienoyl_coa
@@ -18,37 +18,121 @@ pathway 2e-4e-undeca-2-4-dieno-to-nad "(2E, 4E)-undeca-2,4-dieno… to NAD" {
 
   branch from o2 side left {
     o2
-    <-> . +arteannuin +h2o +h
-    dihydroartemisinic_acid_hydroperoxide
+    <-> ec_1_7_3_1 [1.7.3.1] +nitrite +h +h2o2 +cyclohexanone +h2o
+    nitrocyclohexane
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_10_3_1 [1.10.3.1] +cis_caffeic_acid +h +h2o
-    2z_3_3_4_dioxocyclohexa_1_5_dien_1_yl_prop_2_en
+    <-> ec_1_13_11_54 [1.13.11.54] +h +formate +2_oxopentanoate
+    1_2_dihydroxyhex_1_en_3_one
   }
 
   branch from coa side left {
     coa
-    <-> . +benzoyl_holothin +benzoyl_coa
-    holothin
+    <-> . +11z_eicosenoyl_coa +cholesterol
+    cholesteryl_11z_icosenoate
   }
 
   branch from coa side right {
     coa
-    <-> . +holothin +acetyl_coa
-    holomycin
+    <-> ec_2_3_1_26 [2.3.1.26] +erucoyl_coa +cholesterol
+    cholest_5_en_3b_yl_13z_docosenoate
   }
 
   branch from nad side left {
     nad
-    <-> . +bixin_dialdehyde +h2o +nadh +h
-    norbixin
+    <-> ec_1_1_1_50 [1.1.1.50] +nadh +3_keto_fusidic_acid
+    fusidate
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_17_1_4 [1.17.1.4] +nadh +h +6_8_dihydroxypurine +h2o
-    hypoxanthine
+    <-> ec_1_1_1_50 [1.1.1.50] +nadh +h +2_1_imidazolyl_1_4_methoxyphenyl_2_methyl_1_prop
+    1_4_methoxyphenyl_2_methyl_2_1h_imidazol_1_yl_1
+  }
+
+  branch from h2o2 side left {
+    h2o2
+    <-> ec_1_11_1_16 [1.11.1.16] +2_6_dimethoxybenzoquinone +h2o
+    1_4_dihydroxy_2_6_dimethoxybenzene
+  }
+
+  branch from h2o2 side right {
+    h2o2
+    <-> ec_1_11_1_16 [1.11.1.16] +toluquinol +h2o
+    2_methyl_1_4_benzoquinone
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_13_11_53 [1.13.11.53] +h +butanoate +co +1_2_dihydroxyhex_1_en_3_one
+    formate
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_13_11_11 [1.13.11.11] +5_methyl_dl_tryptophan
+    5_methyl_n_formylkynurenine
+  }
+
+  branch from acetyl_coa side left {
+    acetyl_coa
+    <-> . +3_oxo_4_r_8_dimethyl_nonanoyl_coenzyme_a +coa
+    2r_2_6_dimethylheptanoyl_coa
+  }
+
+  branch from acetyl_coa side right {
+    acetyl_coa
+    <-> . +2_methylpropanoyl_coa +coa
+    3_oxoisohexanoyl_coa
+  }
+
+  branch from coa side left {
+    coa
+    <-> . +8z_11z_14z_eicosatrienoyl_coa +cholesterol
+    cholesteryl_all_cis_icosa_8_11_14_trienoate
+  }
+
+  branch from coa side right {
+    coa
+    <-> . +7z_10z_13z_16z_docosatetraenoyl_coa +cholesterol
+    ce_22_4_7z_10z_13z_16z
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> . +4_methylcyclohexanone +h +nad
+    4_methylcyclohexan_1_ol
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +citronellal +h +nad
+    r_citronellol
+  }
+
+  branch from h side left {
+    h
+    <-> . +adp +sm_d18_0_24_0_sphingomyelin +phosphate +sm_d18_0_24_0_sphingomyelin +h2o
+    atp
+  }
+
+  branch from h side right {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    sm_d18_0_25_0_sphingomyelin
+  }
+
+  branch from nad side left {
+    nad
+    <-> . +nadh +2_4_dimethyl_3_pentanone +h
+    compound_0286204
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_376 [1.1.1.376] +nadh +h +d_talono_1_4_lactone
+    d_talopyranose
   }
 }

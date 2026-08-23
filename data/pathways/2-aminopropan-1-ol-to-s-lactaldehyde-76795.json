@@ -1,0 +1,523 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-aminopropan-1-ol-to-s-lactaldehyde-76795",
+  "name": "2-aminopropan-1-ol to (S)-lactaldehyde",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 2-aminopropan-1-ol(1+) to (S)-lactaldehyde, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:76795"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:195439"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_aminopropan_1_ol",
+      "name": "2-aminopropan-1-ol",
+      "formula": "C3H10NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:195439"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hydroxyacetone",
+      "name": "hydroxyacetone",
+      "formula": "C3H6O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27957"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "s_propane_1_2_diol",
+      "name": "(S)-propane-1,2-diol",
+      "formula": "C3H8O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29002"
+      }
+    },
+    {
+      "id": "s_lactaldehyde",
+      "name": "(S)-lactaldehyde",
+      "formula": "C3H6O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18041"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_77",
+      "name": "lactaldehyde reductase",
+      "ec": [
+        "1.1.1.77"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2-aminopropan-1-ol + NAD(+) + H2O = hydroxyacetone + NH4(+) + NADH + H(+)",
+      "equation": "2-aminopropan-1-ol + NAD(+) + H2O = hydroxyacetone + NH4(+) + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "2_aminopropan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hydroxyacetone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:76795"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:76795"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "hydroxyacetone + NADH + H(+) = (S)-propane-1,2-diol + NAD(+)",
+      "equation": "hydroxyacetone + NADH + H(+) = (S)-propane-1,2-diol + NAD(+)",
+      "substrates": [
+        {
+          "metabolite": "hydroxyacetone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_propane_1_2_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:28667"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28667"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "lactaldehyde reductase",
+      "equation": "(S)-propane-1,2-diol + NAD(+) = (S)-lactaldehyde + NADH + H(+)",
+      "ec": "1.1.1.77",
+      "substrates": [
+        {
+          "metabolite": "s_propane_1_2_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_lactaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_77"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:15933"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15933"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_2_aminopropan_1_ol_2-aminopropan-1-ol-to-s-lactaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_aminopropan_1_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-aminopropan-1-ol-to-s-lactaldehyde"
+      },
+      "note": "Shares 2-aminopropan-1-ol with 2-aminopropan-1-ol to (S)-lactaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:195439"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hydroxyacetone_2-aminopropan-1-ol-to-s-lactaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxyacetone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-aminopropan-1-ol-to-s-lactaldehyde"
+      },
+      "note": "Shares hydroxyacetone with 2-aminopropan-1-ol to (S)-lactaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:27957"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hydroxyacetone_2s-3-sulfopropanediol-to-3-hydroxyhexane-2-5-di",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxyacetone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2s-3-sulfopropanediol-to-3-hydroxyhexane-2-5-di"
+      },
+      "note": "Shares hydroxyacetone with (2S)-3-sulfopropanediol to 3-hydroxyhexane-2,5-dione.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:27957"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hydroxyacetone_d-ribitol-5-phosphate-to-h2o-19925",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxyacetone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-ribitol-5-phosphate-to-h2o-19925"
+      },
+      "note": "Shares hydroxyacetone with D-ribitol 5-phosphate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:27957"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hydroxyacetone_dihydrophloroglucinol-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxyacetone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dihydrophloroglucinol-to-nadph"
+      },
+      "note": "Shares hydroxyacetone with dihydrophloroglucinol to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:27957"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hydroxyacetone_dihydrophloroglucinol-to-nadph-80827",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxyacetone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dihydrophloroglucinol-to-nadph-80827"
+      },
+      "note": "Shares hydroxyacetone with dihydrophloroglucinol to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:27957"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hydroxyacetone_maltose-6-phosphate-to-hapalindole-h",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxyacetone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "maltose-6-phosphate-to-hapalindole-h"
+      },
+      "note": "Shares hydroxyacetone with α-maltose 6'-phosphate to hapalindole H.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:27957"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hydroxyacetone_maltose-6-phosphate-to-hapalindole-h-20421",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxyacetone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "maltose-6-phosphate-to-hapalindole-h-20421"
+      },
+      "note": "Shares hydroxyacetone with α-maltose 6'-phosphate to hapalindole H.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:27957"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_propane_1_2_diol_2-aminopropan-1-ol-to-s-lactaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_propane_1_2_diol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-aminopropan-1-ol-to-s-lactaldehyde"
+      },
+      "note": "Shares (S)-propane-1,2-diol with 2-aminopropan-1-ol to (S)-lactaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29002"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_lactaldehyde_2-aminopropan-1-ol-to-s-lactaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_lactaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-aminopropan-1-ol-to-s-lactaldehyde"
+      },
+      "note": "Shares (S)-lactaldehyde with 2-aminopropan-1-ol to (S)-lactaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18041"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_lactaldehyde_dioscin-to-3s-4s-5s-3-4-5-trihydro",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_lactaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dioscin-to-3s-4s-5s-3-4-5-trihydro"
+      },
+      "note": "Shares (S)-lactaldehyde with dioscin to (3S,4S,5S)-3,4,5-trihydro….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18041"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_lactaldehyde_dioscin-to-3s-4s-5s-3-4-5-trihydro-38939",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_lactaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dioscin-to-3s-4s-5s-3-4-5-trihydro-38939"
+      },
+      "note": "Shares (S)-lactaldehyde with dioscin to (3S,4S,5S)-3,4,5-trihydro….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18041"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-gal-1-3-d-galnac-to-d-gal-1-3-d-galnac "β-D-Gal-(1→3)-β-D-GalNAc-… to β-D-Gal-(1→3)-β-D-GalNAc-…" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_glc_1_1_cer
@@ -16,29 +16,5 @@ pathway d-gal-1-3-d-galnac-to-d-gal-1-3-d-galnac "β-D-Gal-(1→3)-β-D-GalNAc-�
     n_acetyl_d_galactosaminyl_1_4_d_galactosyl_1_4_d
     <-> . +udp_d_galactose -udp -hplus
     d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_glc_1_1_cer
-  }
-
-  branch from d_galactopyranose side left {
-    d_galactopyranose
-    <-> ec_3_2_1_145 [3.2.1.145] +h2o
-    d_galp_1_3_d_galp
-  }
-
-  branch from d_galactopyranose side right {
-    d_galactopyranose
-    <-> . +h2o
-    d_galp_1_6_d_galp
-  }
-
-  branch from d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_glc_1_1_cer side left {
-    d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_glc_1_1_cer
-    <-> . +udpglcnac +udp +hplus
-    d_galactosyl_1_3_n_acetyl_d_glucosaminyl_1_6_n
-  }
-
-  branch from d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_glc_1_1_cer side right {
-    d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_glc_1_1_cer
-    <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
-    d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4
   }
 }

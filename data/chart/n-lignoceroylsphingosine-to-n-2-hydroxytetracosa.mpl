@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-lignoceroylsphingosine-to-n-2-hydroxytetracosa "N-lignoceroylsphingosine-… to N-(2-hydroxytetracosanoyl…" {
-  spacing 194
+  spacing 218
 
   spine at 0,0 {
     n_lignoceroylsphingosine_1_phosphocholine
@@ -20,18 +20,6 @@ pathway n-lignoceroylsphingosine-to-n-2-hydroxytetracosa "N-lignoceroylsphingosi
     n_2_hydroxytetracosanoyl_phytosphingosine
   }
 
-  branch from tetracosanoate side left {
-    tetracosanoate
-    <-> . +n_tetracosanoylsphinganine +h2o
-    sphinganine
-  }
-
-  branch from tetracosanoate side right {
-    tetracosanoate
-    <-> . +1_tetracosanoylglycerol +h2o +hplus
-    glycerol
-  }
-
   branch from tetracosanoyl_coa side left {
     tetracosanoyl_coa
     <-> . +o2 +h2o2
@@ -40,25 +28,61 @@ pathway n-lignoceroylsphingosine-to-n-2-hydroxytetracosa "N-lignoceroylsphingosi
 
   branch from tetracosanoyl_coa side right {
     tetracosanoyl_coa
-    <-> . +hco3 +atp +adp +pi +hplus
-    2_carboxytetracosanoyl_coa
+    <-> . +sphingoid_base +coa +hplus
+    n_tetracosanoyl_sphingoid_base
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_125 [4.2.3.125] +fpp
-    muurolene
+    <-> . +2_oxo_atp +h2o +hplus
+    2_oxo_amp
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_126 [4.2.3.126] +fpp
-    muurolene
+    <-> . +fpp
+    allo_aromadendrene
   }
 
   branch from n_2_hydroxytetracosanoyl_phytosphingosine side left {
     n_2_hydroxytetracosanoyl_phytosphingosine
     <-> . +nadp +h2o +nadph +o2 +hplus
     4r_n_2_3_dihydroxytetracosanoyl_4_hydroxysphing
+  }
+
+  branch from tetracosanoyl_coa side right {
+    tetracosanoyl_coa
+    <-> . +sphinga_4e_8e_dienine +coa +hplus
+    4e_8e_n_tetracosanoylsphinga_4_8_dienine
+  }
+
+  branch from tetracosanoyl_coa side left {
+    tetracosanoyl_coa
+    <-> . +4r_hydroxysphing_8z_enine +coa +hplus
+    4r_8z_n_tetracosanoyl_4_hydroxysphing_8_enine
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +o6_methyl_dgtp +h2o +hplus
+    o6_methyl_dgmp
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +n6_methyl_datp +h2o +hplus
+    n6_methyl_damp
+  }
+
+  branch from phytosphingosine side right {
+    phytosphingosine
+    <-> ec_2_7_1_91 [2.7.1.91] +atp +adp +hplus
+    phytosphingosine_1_phosphate
+  }
+
+  branch from phytosphingosine side left {
+    phytosphingosine
+    <-> . +palmitoyl_coa +coa +hplus
+    n_hexadecanoylphytosphingosine
   }
 }

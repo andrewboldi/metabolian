@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-11z-14z-eicosadienoyl-to-2e-8z-11z-14z-17z-20z "1-(11Z,14Z-eicosadienoyl)… to (2E,8Z,11Z,14Z,17Z,20Z,23…" {
-  spacing 212
+  spacing 188
 
   spine at 0,0 {
     1_11z_14z_eicosadienoyl_glycero_3_phosphate
@@ -42,30 +42,6 @@ pathway 1-11z-14z-eicosadienoyl-to-2e-8z-11z-14z-17z-20z "1-(11Z,14Z-eicosadieno
     2e_8z_11z_14z_17z_20z_23z_hexacosaheptaenoyl_co
   }
 
-  branch from h side left {
-    h
-    <-> ec_3_6_3_23 [3.6.3.23] +adp +gramicidin_c +phosphate +gramicidin_c +h2o
-    atp
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
-    aeruginosin_b
-  }
-
-  branch from sn_glycerol_3_phosphate side left {
-    sn_glycerol_3_phosphate
-    <-> . +trans_9_octadecenoyl_coa +coa
-    1_acylglycerol_3p_9_octade
-  }
-
-  branch from sn_glycerol_3_phosphate side right {
-    sn_glycerol_3_phosphate
-    <-> . +7z_octadec_7_enoyl_coa +h +coa
-    1_acylglycerol_3p_7_octade
-  }
-
   branch from 8z_11z_14z_icosatrienoyl_coa side left {
     8z_11z_14z_icosatrienoyl_coa
     <-> ec_1_14_19_44 [1.14.19.44] +fe2 +o2 +hplus +iron +h2o
@@ -74,31 +50,31 @@ pathway 1-11z-14z-eicosadienoyl-to-2e-8z-11z-14z-17z-20z "1-(11Z,14Z-eicosadieno
 
   branch from 5z_8z_11z_14z_17z_icosapentaenoyl_coa side right {
     5z_8z_11z_14z_17z_icosapentaenoyl_coa
-    <-> . +cholesterol +coa
-    cholesteryl_5z_8z_11z_14z_17z_eicosapentaenoate
-  }
-
-  branch from 5z_8z_11z_14z_17z_icosapentaenoyl_coa side left {
-    5z_8z_11z_14z_17z_icosapentaenoyl_coa
     <-> . +h2o +coa +hplus
     all_cis_5_8_11_14_17_icosapentaenoate
   }
 
-  branch from 7z_10z_13z_16z_19z_3_oxodocosapentaenoyl_coa side right {
-    7z_10z_13z_16z_19z_3_oxodocosapentaenoyl_coa
-    <-> ec_1_1_1_100 [1.1.1.100] +nadh +h +3r_7z_10z_13z_16z_19z_3_hydroxydocosapentaenoyl
-    nad
-  }
-
-  branch from 2e_7z_10z_13z_16z_19z_docosahexaenoyl_coa side left {
-    2e_7z_10z_13z_16z_19z_docosahexaenoyl_coa
-    <-> . +3_s_hydroxy_docosa_7_10_13_16_19_all_cis_pentaen
-    h2o
+  branch from 5z_8z_11z_14z_17z_icosapentaenoyl_coa side left {
+    5z_8z_11z_14z_17z_icosapentaenoyl_coa
+    <-> . +o2 +h2o2
+    2e_5z_8z_11z_14z_17z_icosahexaenoyl_coa
   }
 
   branch from 2e_8z_11z_14z_17z_20z_23z_hexacosaheptaenoyl_co side right {
     2e_8z_11z_14z_17z_20z_23z_hexacosaheptaenoyl_co
     <-> . +nadph +hplus +nadp
     8z_11z_14z_17z_20z_23z_hexacosahexaenoyl_coa
+  }
+
+  branch from malonyl-coa side left {
+    malonyl-coa
+    <-> . +3_m_hydroxyphenyl_propanoyl_coa +hplus +co2 +coa
+    3_3_5_trihydroxybibenzyl
+  }
+
+  branch from malonyl-coa side right {
+    malonyl-coa
+    <-> ec_2_3_1_281 [2.3.1.281] +nadh +nadph +hplus +co2 +nad +nadp +coa +h2o
+    2e_5s_6e_8e_10e_5_hydroxydodeca_2_6_8_10_tetrae
   }
 }

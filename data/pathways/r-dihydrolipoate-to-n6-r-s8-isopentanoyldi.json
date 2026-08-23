@@ -121,43 +121,21 @@
       }
     },
     {
-      "id": "5s_9s_10s_13e_labda_7_13_dien_15_yl_diphosphate",
-      "name": "(5S,9S,10S,13E)-labda-7,13-dien-15-yl diphosphate",
-      "short": "(5S,9S,10S,13E)-lab…",
-      "formula": "C20H33O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:63682"
-      }
-    },
-    {
-      "id": "labda_7_13_16_14_triene",
-      "name": "labda-7,13(16),14-triene",
-      "short": "labda-7,13(16),14-t…",
-      "formula": "C20H32",
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:138301"
+        "chebi": "CHEBI:15377"
       }
     },
     {
-      "id": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
-      "name": "5α,9α,10β-labda-8(20),13-dien-15-yl diphosphate",
-      "short": "5α,9α,10β-labda-8(2…",
-      "formula": "C20H33O7P2",
-      "charge": -3,
+      "id": "isovalerate",
+      "name": "isovalerate",
+      "formula": "C5H9O2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:58635"
-      }
-    },
-    {
-      "id": "12e_labda_8_17_12_14_triene",
-      "name": "(12E)-labda-8(17),12,14-triene",
-      "short": "labda-8(17),12,14-t…",
-      "formula": "C20H32",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:138302"
+        "chebi": "CHEBI:48942"
       }
     }
   ],
@@ -167,21 +145,10 @@
       "name": "dihydrolipoyllysine-residue (2-methylpropanoyl)transferase",
       "ec": [
         "2.3.1.168"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_192",
-      "name": "labda-7,13(16),14-triene synthase",
-      "ec": [
-        "4.2.3.192"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_193",
-      "name": "(12E)-labda-8(17),12,14-triene synthase",
-      "ec": [
-        "4.2.3.193"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P11182"
+      }
     }
   ],
   "reactions": [
@@ -318,82 +285,309 @@
     },
     {
       "id": "r4",
-      "name": "labda-7,13(16),14-triene synthase",
-      "equation": "(13E)-labda-7,13-dien-15-yl diphosphate = labda-7,13(16),14-triene + diphosphate",
-      "ec": "4.2.3.192",
+      "name": "3-methylbutanoyl-CoA + H2O = 3-methylbutanoate + CoA + H(+)",
+      "equation": "3-methylbutanoyl-CoA + H2O = 3-methylbutanoate + CoA + H(+)",
       "substrates": [
         {
-          "metabolite": "5s_9s_10s_13e_labda_7_13_dien_15_yl_diphosphate",
+          "metabolite": "isovaleryl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "labda_7_13_16_14_triene",
+          "metabolite": "isovalerate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "ppi",
+          "metabolite": "coa",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+        },
         {
-          "enzyme": "ec_4_2_3_192"
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:54636"
+        "rhea": "RHEA:66984"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:54636"
+            "id": "RHEA:66984"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_r_dihydrolipoate_r-dihydrolipoate-to-n6-r-s8-acetyldihydrol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_dihydrolipoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-dihydrolipoate-to-n6-r-s8-acetyldihydrol"
+      },
+      "note": "Shares (R)-dihydrolipoate with (R)-dihydrolipoate to N6-[(R)-S8-acetyldihydrol….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83093"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "(12E)-labda-8(17),12,14-triene synthase",
-      "equation": "(+)-copalyl diphosphate = (12E)-labda-8(17),12,14-triene + diphosphate",
-      "ec": "4.2.3.193",
-      "substrates": [
-        {
-          "metabolite": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "12e_labda_8_17_12_14_triene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_193"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:54640"
+      "id": "xt_n6_r_dihydrolipoyl_l_lysine_1-8-diazacyclotetradecane-to-adipate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n6_r_dihydrolipoyl_l_lysine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1-8-diazacyclotetradecane-to-adipate"
+      },
+      "note": "Shares N6-[(R)-dihydrolipoyl]-L-lysine with 1,8-diazacyclotetradecane… to adipate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:54640"
+            "db": "ChEBI",
+            "id": "CHEBI:83100"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n6_r_dihydrolipoyl_l_lysine_2-hydroxy-4-methylvalerate-to-o-s-isoheptanoyl-p",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n6_r_dihydrolipoyl_l_lysine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-hydroxy-4-methylvalerate-to-o-s-isoheptanoyl-p"
+      },
+      "note": "Shares N6-[(R)-dihydrolipoyl]-L-lysine with 2-hydroxy-4-methylvalerate to O-[S-(isoheptanoyl)pantet….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83100"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n6_r_dihydrolipoyl_l_lysine_d-arabinitol-1-phosphate-to-n6-r-s8-succinyldihy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n6_r_dihydrolipoyl_l_lysine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-arabinitol-1-phosphate-to-n6-r-s8-succinyldihy"
+      },
+      "note": "Shares N6-[(R)-dihydrolipoyl]-L-lysine with D-arabinitol 1-phosphate to N6-[(R)-S8-succinyldihydr….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83100"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n6_r_dihydrolipoyl_l_lysine_d-valine-to-n6-r-s8-isobutyryldihy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n6_r_dihydrolipoyl_l_lysine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-valine-to-n6-r-s8-isobutyryldihy"
+      },
+      "note": "Shares N6-[(R)-dihydrolipoyl]-L-lysine with D-valine to N6-[(R)-S8-isobutyryldihy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83100"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n6_r_dihydrolipoyl_l_lysine_d-xylulose-1-5-bisphospha-to-n6-r-s8-acetyldihyd",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n6_r_dihydrolipoyl_l_lysine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-xylulose-1-5-bisphospha-to-n6-r-s8-acetyldihyd"
+      },
+      "note": "Shares N6-[(R)-dihydrolipoyl]-L-lysine with D-xylulose 1,5-bisphospha… to N6-[(R)-S8-acetyldihydrol….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83100"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n6_r_dihydrolipoyl_l_lysine_r-alanopine-to-n6-r-s8-succinyldihydr",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n6_r_dihydrolipoyl_l_lysine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-alanopine-to-n6-r-s8-succinyldihydr"
+      },
+      "note": "Shares N6-[(R)-dihydrolipoyl]-L-lysine with (R)-β-alanopine to N6-[(R)-S8-succinyldihydr….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83100"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n6_r_dihydrolipoyl_l_lysine_r-dihydrolipoate-to-n6-r-s8-acetyldihydrol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n6_r_dihydrolipoyl_l_lysine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-dihydrolipoate-to-n6-r-s8-acetyldihydrol"
+      },
+      "note": "Shares N6-[(R)-dihydrolipoyl]-L-lysine with (R)-dihydrolipoate to N6-[(R)-S8-acetyldihydrol….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83100"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_isovaleryl_coa_2r-3s-3-isopropylmalate-to-neomycin-c",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isovaleryl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2r-3s-3-isopropylmalate-to-neomycin-c"
+      },
+      "note": "Shares Isovaleryl-CoA with (2R,3S)-3-isopropylmalate to neomycin C.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57345"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_isovaleryl_coa_isovaleryl-coa-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isovaleryl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isovaleryl-coa-to-coa"
+      },
+      "note": "Shares Isovaleryl-CoA with isovaleryl-CoA to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57345"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_isovaleryl_coa_r-2-hydroxy-4-methylpen-to-malonyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isovaleryl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-2-hydroxy-4-methylpen-to-malonyl-coa"
+      },
+      "note": "Shares Isovaleryl-CoA with (R)-2-hydroxy-4-methylpen… to malonyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57345"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n6_r_s8_isopentanoyldihydrolipoyl_l_lysine_l-leucyl-o-isoindolinone-to-n6-r-s8-isopentanoyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n6_r_s8_isopentanoyldihydrolipoyl_l_lysine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-leucyl-o-isoindolinone-to-n6-r-s8-isopentanoyl"
+      },
+      "note": "Shares N6-[(R)-S8-isopentanoyldihydrolipoyl]-L-lysine with L-leucyl-(O-isoindolinone… to N6-[(R)-S8-isopentanoyldi….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:233973"
           }
         ]
       }

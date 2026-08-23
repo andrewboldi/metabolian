@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cmp-to-beta-d-gal-1-3-alpha-d "CMP to beta-D-Gal-(1->3)-alpha-D…" {
-  spacing 188
+  spacing 152
 
   spine at 0,0 {
     cmp
@@ -14,41 +14,5 @@ pathway cmp-to-beta-d-gal-1-3-alpha-d "CMP to beta-D-Gal-(1->3)-alpha-D…" {
     udp_alpha_d_galactose
     <-> . +udp +beta_d_glcl_1_3_beta_d_gal_1_3_alpha_d_galnac_di +h -beta_d_gal_1_3_alpha_d_galnac_pp_und
     udp_alpha_d_glucose
-  }
-
-  branch from cmp_n_acetyl_beta_neuraminate side left {
-    cmp_n_acetyl_beta_neuraminate
-    <-> . +cmp +disialyllacto_n_tetraose +h
-    ls_tetrasaccharide_a
-  }
-
-  branch from cmp_n_acetyl_beta_neuraminate side right {
-    cmp_n_acetyl_beta_neuraminate
-    <-> . +cmp +ls_tetrasaccharide_c +h
-    d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_glc
-  }
-
-  branch from udp_alpha_d_galactose side left {
-    udp_alpha_d_galactose
-    <-> . +udp +alpha_d_gal_1_3_alpha_l_fucnam_1_3_alpha_d_glcna +h
-    alpha_l_fucnam_1_3_alpha_d_glcnac_pp_undecapreno
-  }
-
-  branch from udp_alpha_d_galactose side right {
-    udp_alpha_d_galactose
-    <-> . +udp +beta_d_gal_1_4_alpha_d_glcnac_1_4_beta_d_gal_1_3 +h
-    alpha_d_glcnac_1_4_beta_d_gal_1_3_alpha_d_glcnac
-  }
-
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> ec_2_4_1_249 [2.4.1.249] +udp +ternatin_c5 +h
-    delphinidin_3_o_6_o_malonyl_beta_glucoside_3_o_b
-  }
-
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> . +udp +glucosyl_o_acetyl_rhamanosyl_n_acetylglucosamyl +h
-    o_acetyl_rhamanosyl_n_acetylglucosamyl_undecapre
   }
 }

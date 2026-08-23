@@ -1,0 +1,564 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "geranyl-diphosphate-to-h2o-15809",
+  "name": "geranyl diphosphate to H2O",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from geranyl diphosphate(3−) to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:15809"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58057"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "gpp",
+      "name": "Geranyl diphosphate (GPP)",
+      "short": "Geranyl PP (GPP)",
+      "formula": "C10H17O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58057"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "r_linalool",
+      "name": "(R)-linalool",
+      "formula": "C10H18O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "6e_8_hydroxylinalool",
+      "name": "(6E)-8-hydroxylinalool",
+      "short": "8-hydroxylinalool",
+      "formula": "C10H18O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1963"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "6e_8_oxolinalool",
+      "name": "(6E)-8-oxolinalool",
+      "formula": "C10H16O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64259"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_2_3_26",
+      "name": "R-linalool synthase",
+      "ec": [
+        "4.2.3.26"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_151",
+      "name": "EC 1.14.13.151",
+      "ec": [
+        "1.14.13.151"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "R-linalool synthase",
+      "equation": "(2E)-geranyl diphosphate + H2O = (R)-linalool + diphosphate",
+      "ec": "4.2.3.26",
+      "substrates": [
+        {
+          "metabolite": "gpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_linalool",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_26"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:15809"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15809"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR173869",
+      "ec": "1.14.13.151",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "r_linalool",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6e_8_hydroxylinalool",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_151"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR173869"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR173869"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR173870",
+      "ec": "1.14.13.151",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "6e_8_hydroxylinalool",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6e_8_oxolinalool",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_151"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR173870"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR173870"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_6e_8_hydroxylinalool_gdp-3-dehydro-6-deoxy-alp-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6e_8_hydroxylinalool"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gdp-3-dehydro-6-deoxy-alp-to-nadph"
+      },
+      "note": "Shares (6E)-8-hydroxylinalool with GDP-3-dehydro-6-deoxy-alp… to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1963"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6e_8_hydroxylinalool_geranyl-diphosphate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6e_8_hydroxylinalool"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "geranyl-diphosphate-to-h2o"
+      },
+      "note": "Shares (6E)-8-hydroxylinalool with geranyl diphosphate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1963"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6e_8_hydroxylinalool_isopimaradiene-diol-to-nadph-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6e_8_hydroxylinalool"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isopimaradiene-diol-to-nadph-null"
+      },
+      "note": "Shares (6E)-8-hydroxylinalool with isopimaradiene-diol to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1963"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6e_8_hydroxylinalool_neoabietadiene-diol-to-ent-copalyl-diphosphate-n",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6e_8_hydroxylinalool"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "neoabietadiene-diol-to-ent-copalyl-diphosphate-n"
+      },
+      "note": "Shares (6E)-8-hydroxylinalool with neoabietadiene-diol to ent-copalyl diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1963"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6e_8_hydroxylinalool_syringaldehyde-to-methanol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6e_8_hydroxylinalool"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "syringaldehyde-to-methanol"
+      },
+      "note": "Shares (6E)-8-hydroxylinalool with syringaldehyde to methanol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1963"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6e_8_oxolinalool_d-arabinitol-to-fmnh2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6e_8_oxolinalool"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-arabinitol-to-fmnh2"
+      },
+      "note": "Shares (6E)-8-oxolinalool with D-arabinitol to FMNH2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64259"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6e_8_oxolinalool_d-arabinitol-to-fmnh2-11868",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6e_8_oxolinalool"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-arabinitol-to-fmnh2-11868"
+      },
+      "note": "Shares (6E)-8-oxolinalool with D-arabinitol to FMNH2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64259"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6e_8_oxolinalool_geranyl-diphosphate-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6e_8_oxolinalool"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "geranyl-diphosphate-to-fmn"
+      },
+      "note": "Shares (6E)-8-oxolinalool with geranyl diphosphate to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64259"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6e_8_oxolinalool_geranyl-diphosphate-to-fmn-68708",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6e_8_oxolinalool"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "geranyl-diphosphate-to-fmn-68708"
+      },
+      "note": "Shares (6E)-8-oxolinalool with geranyl diphosphate to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64259"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6e_8_oxolinalool_geranyl-diphosphate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6e_8_oxolinalool"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "geranyl-diphosphate-to-h2o"
+      },
+      "note": "Shares (6E)-8-oxolinalool with geranyl diphosphate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64259"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6e_8_oxolinalool_palustric-acid-to-fmn-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6e_8_oxolinalool"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "palustric-acid-to-fmn-null"
+      },
+      "note": "Shares (6E)-8-oxolinalool with Palustric acid to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64259"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6e_8_oxolinalool_syringaldehyde-to-methanol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6e_8_oxolinalool"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "syringaldehyde-to-methanol"
+      },
+      "note": "Shares (6E)-8-oxolinalool with syringaldehyde to methanol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64259"
+          }
+        ]
+      }
+    }
+  ]
+}

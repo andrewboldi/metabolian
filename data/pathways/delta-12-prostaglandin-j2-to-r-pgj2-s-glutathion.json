@@ -1,0 +1,335 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "delta-12-prostaglandin-j2-to-r-pgj2-s-glutathion",
+  "name": "Delta(12)-prostaglandin J2 to (R)-PGJ2-S-glutathione…",
+  "category": "redox-detox",
+  "summary": "A 3-step route from Delta(12)-prostaglandin J2 to (R)-PGJ2-S-glutathione conjugate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR195561"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "delta_12_prostaglandin_j2",
+      "name": "Delta(12)-prostaglandin J2",
+      "short": "Delta(12)-prostagla…",
+      "formula": "C20H29O4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1371999"
+      }
+    },
+    {
+      "id": "15_deoxy_delta_12_14_prostaglandin_j2",
+      "name": "15-deoxy-Delta(12,14)-prostaglandin J2",
+      "short": "15-deoxy-Delta(12,1…",
+      "formula": "C20H27O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM33413"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "prostaglandin_j2",
+      "name": "prostaglandin J2",
+      "formula": "C20H29O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:133396"
+      }
+    },
+    {
+      "id": "gsh",
+      "name": "Glutathione (reduced, GSH)",
+      "short": "Glutathione…",
+      "formula": "C10H16N3O6S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57925"
+      }
+    },
+    {
+      "id": "r_pgj2_s_glutathione_conjugate",
+      "name": "(R)-PGJ2-S-glutathione conjugate",
+      "short": "PGJ2-S-glutathione…",
+      "formula": "C30H45N3O10S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:133771"
+      }
+    },
+    {
+      "id": "13_14_dihydro_12_prostaglandin_j2",
+      "name": "13,14-dihydro-Δ12-prostaglandin J2",
+      "short": "13,14-dihydro-Δ12-p…",
+      "formula": "C20H29O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:133424"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR195561",
+      "substrates": [
+        {
+          "metabolite": "delta_12_prostaglandin_j2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "15_deoxy_delta_12_14_prostaglandin_j2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR195561"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR195561"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR103607",
+      "substrates": [
+        {
+          "metabolite": "15_deoxy_delta_12_14_prostaglandin_j2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "prostaglandin_j2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR103607"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR103607"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "prostaglandin J2 + glutathione = prostaglandin J2-S-(R)-glutathione",
+      "equation": "prostaglandin J2 + glutathione = prostaglandin J2-S-(R)-glutathione",
+      "substrates": [
+        {
+          "metabolite": "prostaglandin_j2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gsh",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_pgj2_s_glutathione_conjugate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:50804"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50804"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "prostaglandin J2 = Delta(12)-prostaglandin J2",
+      "equation": "prostaglandin J2 = Delta(12)-prostaglandin J2",
+      "substrates": [
+        {
+          "metabolite": "prostaglandin_j2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "13_14_dihydro_12_prostaglandin_j2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:53548"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53548"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_15_deoxy_delta_12_14_prostaglandin_j2_5-trans-prostaglandin-d2-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "15_deoxy_delta_12_14_prostaglandin_j2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-trans-prostaglandin-d2-to-h2o"
+      },
+      "note": "Shares 15-deoxy-Delta(12,14)-prostaglandin J2 with 5-trans Prostaglandin D2 to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM33413"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_15_deoxy_delta_12_14_prostaglandin_j2_prostaglandin-d2-to-s-11-oh-9-deoxy-delta9-1",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "15_deoxy_delta_12_14_prostaglandin_j2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "prostaglandin-d2-to-s-11-oh-9-deoxy-delta9-1"
+      },
+      "note": "Shares 15-deoxy-Delta(12,14)-prostaglandin J2 with prostaglandin D2 to S-(11-OH-9-deoxy-delta9,1….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM33413"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_j2_5-trans-prostaglandin-d2-to-s-pgj2-s-glutathione",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_j2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-trans-prostaglandin-d2-to-s-pgj2-s-glutathione"
+      },
+      "note": "Shares prostaglandin J2 with 5-trans Prostaglandin D2 to (S)-PGJ2-S-glutathione….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133396"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_j2_h-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_j2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-h2o"
+      },
+      "note": "Shares prostaglandin J2 with H to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133396"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_j2_prostaglandin-f2-to-15-dehydro-prostaglandin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_j2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "prostaglandin-f2-to-15-dehydro-prostaglandin"
+      },
+      "note": "Shares prostaglandin J2 with prostaglandin F2α… to 15-dehydro-prostaglandin….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133396"
+          }
+        ]
+      }
+    }
+  ]
+}

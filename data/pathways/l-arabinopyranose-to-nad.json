@@ -84,21 +84,12 @@
       }
     },
     {
-      "id": "aldehydo_l_arabinose",
-      "name": "aldehydo-L-arabinose",
+      "id": "l_ribose",
+      "name": "β-L-ribose",
       "formula": "C5H10O5",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:6182"
-      }
-    },
-    {
-      "id": "l_arabinofuranose",
-      "name": "L-arabinofuranose",
-      "formula": "C5H10O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:6178"
+        "chebi": "CHEBI:47005"
       }
     }
   ],
@@ -115,7 +106,10 @@
       "name": "aldose reductase",
       "ec": [
         "1.1.1.21"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P15121"
+      }
     },
     {
       "id": "ec_5_3_1_5",
@@ -248,42 +242,6 @@
     },
     {
       "id": "r4",
-      "name": "L-arabinose isomerase",
-      "ec": "5.3.1.4",
-      "substrates": [
-        {
-          "metabolite": "3s_4s_2_hydroxymethyl_oxolane_2_3_4_triol",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "aldehydo_l_arabinose",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_5_3_1_4"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR198293"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR198293"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
       "name": "xylose isomerase",
       "ec": "5.3.1.5",
       "substrates": [
@@ -294,7 +252,7 @@
       ],
       "products": [
         {
-          "metabolite": "l_arabinofuranose",
+          "metabolite": "l_ribose",
           "stoichiometry": 1
         }
       ],
@@ -304,16 +262,282 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
-        "metanetx": "MNXR199500"
+        "metanetx": "MNXR199501"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR199500"
+            "id": "MNXR199501"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_l_arabinopyranose_1-2-dioleoyl-sn-glycero-3-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_arabinopyranose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-dioleoyl-sn-glycero-3-to-h2o"
+      },
+      "note": "Shares β-L-arabinopyranose with 1,2-dioleoyl-sn-glycero-3… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:40886"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_arabinopyranose_l-arabinopyranose-to-l-arabinose-1-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_arabinopyranose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-arabinopyranose-to-l-arabinose-1-phosphate"
+      },
+      "note": "Shares β-L-arabinopyranose with β-L-arabinopyranose to β-L-arabinose 1-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:40886"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_arabinopyranose_l-arabinopyranose-to-l-xylulose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_arabinopyranose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-arabinopyranose-to-l-xylulose"
+      },
+      "note": "Shares β-L-arabinopyranose with α-L-arabinopyranose to L-xylulose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:40886"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3s_4s_2_hydroxymethyl_oxolane_2_3_4_triol_5-o-a-l-arabinofuranosyl-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3s_4s_2_hydroxymethyl_oxolane_2_3_4_triol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-o-a-l-arabinofuranosyl-to-h2o"
+      },
+      "note": "Shares (3S,4S)-2-(Hydroxymethyl)oxolane-2,3,4-triol with 5-O-a-L-Arabinofuranosyl-… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:182416"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3s_4s_2_hydroxymethyl_oxolane_2_3_4_triol_ergothioneine-thione-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3s_4s_2_hydroxymethyl_oxolane_2_3_4_triol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ergothioneine-thione-to-h2o"
+      },
+      "note": "Shares (3S,4S)-2-(Hydroxymethyl)oxolane-2,3,4-triol with ergothioneine (thione… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:182416"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3s_4s_2_hydroxymethyl_oxolane_2_3_4_triol_fadh2-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3s_4s_2_hydroxymethyl_oxolane_2_3_4_triol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fadh2-to-h2o"
+      },
+      "note": "Shares (3S,4S)-2-(Hydroxymethyl)oxolane-2,3,4-triol with FADH2 to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:182416"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3s_4s_2_hydroxymethyl_oxolane_2_3_4_triol_ginsenoside-mc-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3s_4s_2_hydroxymethyl_oxolane_2_3_4_triol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ginsenoside-mc-to-h2o"
+      },
+      "note": "Shares (3S,4S)-2-(Hydroxymethyl)oxolane-2,3,4-triol with ginsenoside Mc to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:182416"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3s_4s_2_hydroxymethyl_oxolane_2_3_4_triol_l-arabino-1-5-lactone-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3s_4s_2_hydroxymethyl_oxolane_2_3_4_triol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-arabino-1-5-lactone-to-h2o"
+      },
+      "note": "Shares (3S,4S)-2-(Hydroxymethyl)oxolane-2,3,4-triol with L-Arabino-1,5-lactone to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:182416"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3s_4s_2_hydroxymethyl_oxolane_2_3_4_triol_l-arabinopyranose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3s_4s_2_hydroxymethyl_oxolane_2_3_4_triol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-arabinopyranose-to-h2o"
+      },
+      "note": "Shares (3S,4S)-2-(Hydroxymethyl)oxolane-2,3,4-triol with L-arabinopyranose to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:182416"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_beta_l_arabinofuranose_2-amino-4-hydroxy-5-phosp-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "beta_l_arabinofuranose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-amino-4-hydroxy-5-phosp-to-phosphate"
+      },
+      "note": "Shares beta-L-arabinofuranose with 2-amino-4-hydroxy-5-phosp… to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM730690"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_beta_l_arabinofuranose_9-hydroxygeraniol-to-2e-geraniol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "beta_l_arabinofuranose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "9-hydroxygeraniol-to-2e-geraniol"
+      },
+      "note": "Shares beta-L-arabinofuranose with 9-Hydroxygeraniol to (2E)-geraniol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM730690"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_beta_l_arabinofuranose_l-arabinopyranose-to-l-arabinose-1-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "beta_l_arabinofuranose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-arabinopyranose-to-l-arabinose-1-phosphate"
+      },
+      "note": "Shares beta-L-arabinofuranose with β-L-arabinopyranose to β-L-arabinose 1-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM730690"
           }
         ]
       }

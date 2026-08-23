@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-gypsogenate "UDP to gypsogenate…" {
-  spacing 182
+  spacing 164
 
   spine at 0,0 {
     udp
@@ -16,33 +16,15 @@ pathway udp-to-gypsogenate "UDP to gypsogenate…" {
     gypsogenate_28_d_glucoside
   }
 
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> . +udp +h +soyasapogenol_e_23_o_beta_d_glucoside
-    soyasapogenol_e
+  branch from udp_d_glucose side left {
+    udp_d_glucose
+    <-> . +mogroside_iiie +udp +hplus
+    isomogroside_iv
   }
 
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> . +udp +h +eugenyl_o_beta_d_glucopyranoside
-    eugenol
-  }
-
-  branch from gypsogenate side left {
-    gypsogenate
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    oleanolate
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +ent_cassa_12_15_dien_2_3_diol +fmnh2 +o2 +h2o +hplus
-    ent_3_hydroxycassa_12_15_dien_2_one
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> ec_1_14_14_72 [1.14.14.72] +drimenol +fmnh2 +o2 +h2o +hplus
-    drimendiol
+  branch from udp_d_glucose side right {
+    udp_d_glucose
+    <-> . +mogroside_iiie +udp +hplus
+    mogroside_iv
   }
 }

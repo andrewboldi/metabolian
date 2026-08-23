@@ -1,0 +1,599 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-sulfino-l-alanine-to-h2o-70295",
+  "name": "3-sulfino-L-alanine to H2O",
+  "category": "other",
+  "summary": "A 4-step route from 3-sulfino-L-alanine(1−) to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:70295"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:61085"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_sulfino_l_alanine",
+      "name": "3-sulfino-L-alanine",
+      "formula": "C3H6NO4S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:61085"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "3_sulfinatopyruvate",
+      "name": "3-sulfinatopyruvate",
+      "formula": "C3H2O5S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:140699"
+      }
+    },
+    {
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29985"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nh4",
+      "name": "NH4",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM729302"
+      }
+    },
+    {
+      "id": "3_sulfino_l_alanine",
+      "name": "3-sulfino-L-alanine",
+      "formula": "C3H6NO4S",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1364516"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "l_cysteate",
+      "name": "L-cysteate",
+      "formula": "C3H6NO5S",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM713"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3-sulfino-L-alanine + 2-oxoglutarate = 3-sulfinopyruvate + L-glutamate",
+      "equation": "3-sulfino-L-alanine + 2-oxoglutarate = 3-sulfinopyruvate + L-glutamate",
+      "substrates": [
+        {
+          "metabolite": "3_sulfino_l_alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_sulfinatopyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:70295"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:70295"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR107619",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_sulfinatopyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh4",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_sulfino_l_alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR107619"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR107619"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR94979",
+      "substrates": [
+        {
+          "metabolite": "3_sulfino_l_alanine",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_cysteate",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR94979"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR94979"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Reaction MNXR101033",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_cysteate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_cysteate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR101033"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR101033"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3_sulfino_l_alanine_3-sulfino-l-alanine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_sulfino_l_alanine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-sulfino-l-alanine-to-h2o"
+      },
+      "note": "Shares 3-sulfino-L-alanine with 3-sulfino-L-alanine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61085"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_sulfino_l_alanine_3-sulfino-l-alanine-to-l-glutamate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_sulfino_l_alanine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-sulfino-l-alanine-to-l-glutamate"
+      },
+      "note": "Shares 3-sulfino-L-alanine with 3-sulfino-L-alanine to L-glutamate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61085"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_sulfino_l_alanine_3-sulfino-l-alanine-to-l-glutamate-16877",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_sulfino_l_alanine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-sulfino-l-alanine-to-l-glutamate-16877"
+      },
+      "note": "Shares 3-sulfino-L-alanine with 3-sulfino-L-alanine to L-glutamate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61085"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_sulfino_l_alanine_d-arabinitol-to-fmnh2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_sulfino_l_alanine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-arabinitol-to-fmnh2"
+      },
+      "note": "Shares 3-sulfino-L-alanine with D-arabinitol to FMNH2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61085"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_sulfino_l_alanine_d-arabinitol-to-fmnh2-11868",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_sulfino_l_alanine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-arabinitol-to-fmnh2-11868"
+      },
+      "note": "Shares 3-sulfino-L-alanine with D-arabinitol to FMNH2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61085"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_sulfino_l_alanine_ent-copal-8-ol-diphosphate-to-l-cysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_sulfino_l_alanine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ent-copal-8-ol-diphosphate-to-l-cysteine"
+      },
+      "note": "Shares 3-sulfino-L-alanine with ent-copal-8-ol diphosphate to L-cysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61085"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_sulfino_l_alanine_ent-copal-8-ol-diphosphate-to-l-cysteine-18721",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_sulfino_l_alanine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ent-copal-8-ol-diphosphate-to-l-cysteine-18721"
+      },
+      "note": "Shares 3-sulfino-L-alanine with ent-copal-8-ol diphosphate to L-cysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61085"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_sulfinatopyruvate_3-sulfino-l-alanine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_sulfinatopyruvate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-sulfino-l-alanine-to-h2o"
+      },
+      "note": "Shares 3-sulfinatopyruvate with 3-sulfino-L-alanine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:140699"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_sulfinatopyruvate_ethionamide-to-sulfate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_sulfinatopyruvate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ethionamide-to-sulfate"
+      },
+      "note": "Shares 3-sulfinatopyruvate with ethionamide to sulfate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:140699"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_sulfinatopyruvate_ethionamide-to-sulfate-47616",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_sulfinatopyruvate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ethionamide-to-sulfate-47616"
+      },
+      "note": "Shares 3-sulfinatopyruvate with ethionamide to sulfate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:140699"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_sulfino_l_alanine_1d-chiro-inositol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_sulfino_l_alanine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1d-chiro-inositol-to-h2o"
+      },
+      "note": "Shares 3-sulfino-L-alanine with 1D-chiro-inositol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364516"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_sulfino_l_alanine_1d-chiro-inositol-to-h2o-25832",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_sulfino_l_alanine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1d-chiro-inositol-to-h2o-25832"
+      },
+      "note": "Shares 3-sulfino-L-alanine with 1D-chiro-inositol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364516"
+          }
+        ]
+      }
+    }
+  ]
+}

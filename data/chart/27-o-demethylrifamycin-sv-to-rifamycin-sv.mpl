@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 27-o-demethylrifamycin-sv-to-rifamycin-sv "27-O-demethylrifamycin SV to rifamycin SV…" {
-  spacing 248
+  spacing 278
 
   spine at 0,0 {
     27_o_demethylrifamycin_sv
@@ -20,13 +20,43 @@ pathway 27-o-demethylrifamycin-sv-to-rifamycin-sv "27-O-demethylrifamycin SV to 
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_95 [2.1.1.95] +tocotrienol +sam +hplus
-    tocotrienol
+    <-> . +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> . +n_methyl_l_histidine +sam +hplus
-    n_n_dimethyl_l_histidine
+    <-> . +malonyl-coa +acetyl_coa +sam +hplus +co2 +coa
+    3_methylorsellinate
+  }
+
+  branch from sam side left {
+    sam
+    <-> . +n1_methylpseudouridine_5_monophosphate_1 +5_s_methyl_5_thioadenosine +hplus
+    n1_methyl_n3_3s_3_amino_3_carboxypropyl_pseudour
+  }
+
+  branch from sam side right {
+    sam
+    <-> ec_2_5_1_157 [2.5.1.157] +n1_methylpseudouridine_5_monophosphate_1 +n1_methyl_n3_3s_3_amino_3_carboxypropyl_pseudour +hplus
+    5_s_methyl_5_thioadenosine
+  }
+
+  branch from sah side left {
+    sah
+    <-> . +e_5_hydroxyferuloyl_coa +sam +hplus
+    sinapoyl_coa
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_375 [2.1.1.375] +g5_ppp5_aaca_mrna +sam +hplus
+    m7g5_ppp5_m2_aaca_mrna
+  }
+
+  branch from fadh2_c4_hydroperoxide side left {
+    fadh2_c4_hydroperoxide
+    <-> . +rifampicin +nadh +fadh2 +nad +h2o +hplus
+    rifampicin_hemiaminal
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway alpha-l-rhamnose-1-4-d-to-h2o "alpha-L-rhamnose-(1->4)-D… to H2O" {
-  spacing 290
+  spacing 260
 
   spine at 0,0 {
     alpha_l_rhamnose_1_4_d_glucuronate
@@ -14,35 +14,5 @@ pathway alpha-l-rhamnose-1-4-d-to-h2o "alpha-L-rhamnose-(1->4)-D… to H2O" {
     l_rhamnulose
     <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate -l_rhamnulose -h2o
     atp
-  }
-
-  branch from 4_deoxy_l_threo_hex_4_enopyranuronate side left {
-    4_deoxy_l_threo_hex_4_enopyranuronate
-    <-> ec_5_3_1_17 [5.3.1.17]
-    3_deoxy_d_glycero_2_5_hexodiulosonate
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
-    neoagarotetraose
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
-    neoagarotriose
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    neoagarohexaose
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    neoagaropentaose
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-naphthaleneacetamide-to-naphthalene-1-4-diol "1-naphthaleneacetamide to naphthalene-1,4-diol" {
-  spacing 200
+  spacing 236
 
   spine at 0,0 {
     1_naphthaleneacetamide
@@ -16,28 +16,16 @@ pathway 1-naphthaleneacetamide-to-naphthalene-1-4-diol "1-naphthaleneacetamide t
     naphthalene_1_4_diol
   }
 
-  branch from nh3 side left {
-    nh3
-    <-> ec_1_4_1_28 [1.4.1.28] +two_alkyl_ammonium_ion +nadp +h2o +nadph +hplus
-    ketone
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +cytidine_5_monophosphate_1 +h2o +hplus
-    uridine_5_monophosphate_1
-  }
-
   branch from acetate side left {
     acetate
-    <-> . +acetyl_coa +4_hydroxybutanoate
-    4_hydroxybutanoyl_coa
+    <-> ec_2_8_3_12 [2.8.3.12] +r_2_hydroxyglutarate +acetyl_coa
+    r_2_hydroxyglutaryl_coa
   }
 
   branch from acetate side right {
     acetate
-    <-> ec_2_8_3_8 [2.8.3.8] +acetyl_coa +h +3_hydroxy_5_oxohexanoate
-    3_hydroxy_5_oxohexanoyl_coa
+    <-> . +d_glucosaminyl_1_4_d_glucosamine +h +h2o
+    n_acetyl_d_glucosaminyl_1_4_d_glucosaminium
   }
 
   branch from 1_naphthol side left {
@@ -62,5 +50,53 @@ pathway 1-naphthaleneacetamide-to-naphthalene-1-4-diol "1-naphthaleneacetamide t
     naphthalene_1_4_diol
     <-> ec_1_2_5_3 [1.2.5.3] +1_4_naphthoquinone +co +h2o
     co2
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +h +o2 +nadph +n_3_carboxypropanoyl_n_hydroxyputrescine +3_4_amino_3_hydroxybutyl_hydroxy_carbamoyl_propa
+    nadp
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +melatonin +h2o2
+    n_gamma_acetyl_n_2_formyl_5_methoxykynurenamine
+  }
+
+  branch from acetate side left {
+    acetate
+    <-> . +s_4_hydroxy_nonenal_3_yl_l_cysteine +h2o
+    4_hydroxy_2_nonenal_n_acetyl_l_cysteine
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> . +3_aminobutan_2_ol +h2o
+    n_3_hydroxybutan_2_yl_acetamide
+  }
+
+  branch from 1_naphthol side left {
+    1_naphthol
+    <-> ec_1_11_2_1 [1.11.2.1] +h2o2 +h2o
+    naphthalene
+  }
+
+  branch from 1_naphthol side right {
+    1_naphthol
+    <-> ec_3_1_3_1 [3.1.3.1] +1_naphthyl_dihydrogen_phosphate +h2o +h
+    phosphate
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +7_7_dimethyl_2_methylenebicyclo_2_2_1_heptane +co2 +h2o
+    alpha_fenchocamphorone
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +beta_fenchene +co2 +h2o
+    beta_fenchocamphorone
   }
 }

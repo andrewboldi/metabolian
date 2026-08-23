@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2e-4e-tetradecadienoyl-to-lauroyl-coa "(2E,4E)-tetradecadienoyl-… to lauroyl-CoA" {
-  spacing 260
+  spacing 284
 
   spine at 0,0 {
     2e_4e_tetradecadienoyl_coa
@@ -36,22 +36,22 @@ pathway 2e-4e-tetradecadienoyl-to-lauroyl-coa "(2E,4E)-tetradecadienoyl-… to l
     5z_tetradecenoyl_coa
   }
 
-  branch from 3s_5z_3_hydroxytetradec_5_enoyl_coa side left {
+  branch from 2e_5z_tetradecadienoyl_coa side left {
+    2e_5z_tetradecadienoyl_coa
+    <-> . +3z_dodecenoyl_coa +acetyl_coa +h2o2 +o2 +h2o
+    coa
+  }
+
+  branch from 3s_5z_3_hydroxytetradec_5_enoyl_coa side right {
     3s_5z_3_hydroxytetradec_5_enoyl_coa
     <-> . +nadh +3_oxomyrist_5_enoyl_coenzyme_a +nad
     h
   }
 
-  branch from 3s_5z_3_hydroxytetradec_5_enoyl_coa side right {
+  branch from 3s_5z_3_hydroxytetradec_5_enoyl_coa side left {
     3s_5z_3_hydroxytetradec_5_enoyl_coa
     <-> . +nadh +3_oxomyrist_5_enoyl_coenzyme_a +h
     nad
-  }
-
-  branch from trans_dodec_2_enoyl_coa side left {
-    trans_dodec_2_enoyl_coa
-    <-> . +h2o
-    s_3_hydroxylauroyl_coa
   }
 
   branch from trans_dodec_2_enoyl_coa side right {
@@ -60,15 +60,39 @@ pathway 2e-4e-tetradecadienoyl-to-lauroyl-coa "(2E,4E)-tetradecadienoyl-… to l
     r_3_hydroxylauroyl_coa
   }
 
-  branch from lauroyl_coa side left {
-    lauroyl_coa
-    <-> . +serine +hplus +co2 +coa
-    3_dehydrotetradecasphinganine
+  branch from trans_dodec_2_enoyl_coa side left {
+    trans_dodec_2_enoyl_coa
+    <-> . +h2o +coa +hplus
+    e_dodec_2_enoate
   }
 
   branch from lauroyl_coa side right {
     lauroyl_coa
-    <-> . +1_oleoyl_sn_glycero_3_phosphate +coa
-    1_oleoyl_2_lauroyl_sn_glycero_3_phosphate
+    <-> . +2_monolysocardiolipin +coa
+    2_lauroylcardiolipin
+  }
+
+  branch from lauroyl_coa side left {
+    lauroyl_coa
+    <-> . +2_2_dilysocardiolipin +coa
+    2_dodecanoyl_2_monolysocardiolipin
+  }
+
+  branch from 2e_5z_tetradecadienoyl_coa side right {
+    2e_5z_tetradecadienoyl_coa
+    <-> . +5z_tetradecenoyl_coa +fad +h
+    fadh2
+  }
+
+  branch from lauroyl_coa side left {
+    lauroyl_coa
+    <-> . +1_hexadecanoyl_sn_glycero_3_phospho_1_sn_glycero +coa
+    1_palmitoyl_2_lauroyl_sn_glycero_3_phospho_1_sn
+  }
+
+  branch from lauroyl_coa side right {
+    lauroyl_coa
+    <-> . +carnitine +coa
+    o_lauroyl_l_carnitine
   }
 }

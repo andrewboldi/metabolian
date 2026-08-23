@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway yaequinolone-j1-to-luteone "Yaequinolone J1 to luteone" {
-  spacing 210
+  spacing 186
 
   spine at 0,0 {
     yaequinolone_j1
@@ -20,29 +20,5 @@ pathway yaequinolone-j1-to-luteone "Yaequinolone J1 to luteone" {
     4e_2_methyl_6_methylidenenona_2_4_dienyl_quinol
     <-> .
     yaequinolone_j2
-  }
-
-  branch from dimethylallyl_diphosphate side right {
-    dimethylallyl_diphosphate
-    <-> ec_1_17_1_2 [1.17.1.2] +nadp +h2o +h +nadph
-    2e_4_hydroxy_3_methylbut_2_enyl_diphosphate
-  }
-
-  branch from dimethylallyl_diphosphate side left {
-    dimethylallyl_diphosphate
-    <-> ec_2_7_4_26 [2.7.4.26] +prenyl_phosphate +atp
-    adp
-  }
-
-  branch from diphosphate side right {
-    diphosphate
-    <-> ec_6_1_3_1 [6.1.3.1] +amp +3_hexyl_4_septyloxetan_2_one +2r_3s_2_hexyl_3_hydroxydecanoate
-    atp
-  }
-
-  branch from diphosphate side left {
-    diphosphate
-    <-> ec_6_2_1_2 [6.2.1.2] +amp +4_oxopentanoyl_coa +atp +coa
-    4_oxopentanoate
   }
 }

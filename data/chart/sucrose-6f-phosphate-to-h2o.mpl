@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway sucrose-6f-phosphate-to-h2o "sucrose 6F-phosphate to H2O" {
-  spacing 232
+  spacing 214
 
   spine at 0,0 {
     sucrose_6f_phosphate
@@ -18,27 +18,9 @@ pathway sucrose-6f-phosphate-to-h2o "sucrose 6F-phosphate to H2O" {
     3_dehydro_alpha_d_glucosyl_beta_d_fructofuranosi
   }
 
-  branch from d_fructofuranose side left {
-    d_fructofuranose
-    <-> ec_1_1_2_2 [1.1.2.2] +iron +fe2 +hplus
-    d_mannitol
-  }
-
-  branch from d_fructofuranose side right {
-    d_fructofuranose
-    <-> ec_5_3_1_7 [5.3.1.7]
-    alpha_d_mannopyranose
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +2_acetyl_6_hydroxyneomycin_c +phosphate +2_acetyl_6_hydroxyneomycin_c
-    atp
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    1r_2r_3s_4r_6s_4_6_diamino_3_hydroxy_2_d_mannop
+  branch from beta_d_fructose side left {
+    beta_d_fructose
+    <-> .
+    psicopyranose
   }
 }

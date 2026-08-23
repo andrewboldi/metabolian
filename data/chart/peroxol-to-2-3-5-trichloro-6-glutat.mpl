@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway peroxol-to-2-3-5-trichloro-6-glutat "peroxol to 2,3,5-trichloro-6-(glutat…" {
-  spacing 284
+  spacing 314
 
   spine at 0,0 {
     peroxol
@@ -16,39 +16,69 @@ pathway peroxol-to-2-3-5-trichloro-6-glutat "peroxol to 2,3,5-trichloro-6-(gluta
     glutathione
   }
 
-  branch from 2_3_6_trichloro_4_hydroxyphenolate side left {
-    2_3_6_trichloro_4_hydroxyphenolate
-    <-> ec_2_5_1_18 [2.5.1.18] +glutathione +2_6_dichloro_3_glutathion_s_yl_hydroquinone
-    chloride
-  }
-
-  branch from gsh side right {
-    gsh
-    <-> . +15_deoxy_12_14_prostaglandin_j2
-    15_deoxy_12_14_prostaglandin_j2_s_glutathione_co
-  }
-
-  branch from gsh side left {
-    gsh
-    <-> . +2_4_6_trinitrotoluene +hydrogen_donor +hydrogen_acceptor +h2o
-    s_2_6_dinitro_4_hydroxylaminotoluyl_glutathione
-  }
-
-  branch from glutathione side right {
-    glutathione
-    <-> . +l_alanine +cysgly
-    gama_l_glutamyl_l_alanine
-  }
-
   branch from glutathione side left {
     glutathione
     <-> . +17beta_estradiol_2_3_quinone
     2_hydroxy_17beta_estradiol_4_s_glutathione
   }
 
-  branch from 2_3_5_trichloro_6_glutathion_s_yl_hydroquinone side right {
+  branch from glutathione side right {
+    glutathione
+    <-> . +2_hydroxyestrone_1_s_glutathione
+    estrone_2_3_quinone
+  }
+
+  branch from 2_3_5_trichloro_6_glutathion_s_yl_hydroquinone side left {
     2_3_5_trichloro_6_glutathion_s_yl_hydroquinone
-    <-> ec_2_5_1_18 [2.5.1.18] +h +glutathione +chloride
-    2_3_5_6_tetrachlorohydroquinone
+    <-> ec_2_5_1_18 [2.5.1.18] +2_3_5_6_tetrachlorohydroquinone +h +glutathione
+    chloride
+  }
+
+  branch from 2_6_dichloro_4_hydroxyphenolate side right {
+    2_6_dichloro_4_hydroxyphenolate
+    <-> . +fadh2 +o2 +fad +chloride +h2o +hplus
+    2_chloro_6_hydroxy_1_4_benzoquinone
+  }
+
+  branch from 2_6_dichloro_4_hydroxyphenolate side left {
+    2_6_dichloro_4_hydroxyphenolate
+    <-> . +nadh +h +2_4_6_trichlorophenolate +o2 +chloride +h2o
+    nad
+  }
+
+  branch from glutathione_disulfide side right {
+    glutathione_disulfide
+    <-> . +glutathioselenol +glutathione
+    selenodiglutathione
+  }
+
+  branch from glutathione_disulfide side left {
+    glutathione_disulfide
+    <-> . +3_hydroxy_1_4_hydroxy_3_methoxyphenyl_propan_1_o +glutathione
+    2s_2_glutathion_s_yl_3_hydroxy_1_4_hydroxy_3_me
+  }
+
+  branch from h side right {
+    h
+    <-> ec_4_99_1_2 [4.99.1.2] +hg +benzene +acetate
+    phenylmercury_acetate
+  }
+
+  branch from h side left {
+    h
+    <-> . +4_4a_dihydroxy_dihydro_dibenzo_p_dioxin
+    2_2_3_trihydroxydiphenyl_ether
+  }
+
+  branch from glutathione side right {
+    glutathione
+    <-> . +4_hydroxyestrone_2_s_glutathione
+    estra_1_5_10_diene_3_4_17_trione
+  }
+
+  branch from glutathione side left {
+    glutathione
+    <-> . +12_dehydro_leukotriene_b4
+    12_oxo_c_ltb3
   }
 }

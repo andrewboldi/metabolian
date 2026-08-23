@@ -16,27 +16,27 @@ pathway fluoroacetyl-coa-to-glyoxylate "fluoroacetyl-CoA to glyoxylate" {
     glyoxylate
   }
 
-  branch from glycolate side left {
-    glycolate
-    <-> . +h2o +gdp +hplus
-    n2_1_hydroxy_2_oxoethyl_gdp
-  }
-
-  branch from glycolate side right {
-    glycolate
-    <-> . +n2_1_hydroxy_2_oxoethyl_gmp_1 +h2o +hplus
-    guanosine_5_monophosphate_1
-  }
-
   branch from glyoxylate side left {
     glyoxylate
-    <-> ec_1_5_3_20 [1.5.3.20] +n_alkylglycine +o2 +h2o +h2o2
-    alkylaminium
+    <-> . +n_1_deoxy_d_fructopyranos_1_yl_glycine_betaine +o2 +h2o +h2o2
+    1_deoxy_d_fructos_1_yl_amine
   }
 
   branch from glyoxylate side right {
     glyoxylate
-    <-> ec_4_1_3_16 [4.1.3.16] +pyruvate
-    l_4_hydroxy_2_oxoglutarate
+    <-> . +l_lysinium +glycine
+    6_amino_2_oxohexanoic_acid
+  }
+
+  branch from fluoroacetyl_coa side left {
+    fluoroacetyl_coa
+    <-> ec_6_2_1_1 [6.2.1.1] +diphosphate +amp +atp +coa
+    fluoroacetate
+  }
+
+  branch from glyoxylate side right {
+    glyoxylate
+    <-> . +5_7_dibromo_l_tryptophan +o2 +nh3
+    5_7_dibromo_indole_3_carbaldehyde
   }
 }

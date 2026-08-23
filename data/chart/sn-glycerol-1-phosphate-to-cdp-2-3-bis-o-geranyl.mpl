@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway sn-glycerol-1-phosphate-to-cdp-2-3-bis-o-geranyl "sn-glycerol 1-phosphate to CDP-2,3-bis-O-geranylfarn…" {
-  spacing 316
+  spacing 304
 
   spine at 0,0 {
     sn_glycerol_1_phosphate
@@ -14,17 +14,5 @@ pathway sn-glycerol-1-phosphate-to-cdp-2-3-bis-o-geranyl "sn-glycerol 1-phosphat
     2_3_bis_o_geranylfarnesyl_sn_glycerol_1_phosphat
     <-> ec_2_7_7_67 [2.7.7.67] +ctp +h -cdp_2_3_bis_o_geranylfarnesyl_sn_glycerol
     diphosphate
-  }
-
-  branch from diphosphate side left {
-    diphosphate
-    <-> . +ctp +5_n_acetyl_7_n_d_alanyl_legionaminic_acid +h
-    cmp_5_n_acetyl_7_n_d_alanyl_legionaminic_acid
-  }
-
-  branch from diphosphate side right {
-    diphosphate
-    <-> . +ctp +5_7_diacetamido_3_5_7_9_tetradeoxy_l_glycero_d_g +h
-    cmp_5_7_diacetamido_3_5_7_9_tetradeoxy_l_glycero
   }
 }

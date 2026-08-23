@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cis-cis-2-ammonio-3-3-ox-to-ammonium "cis,cis-2-ammonio-3-(3-ox… to ammonium" {
-  spacing 252
+  spacing 258
 
   spine at 0,0 {
     cis_cis_2_ammonio_3_3_oxoprop_1_enyl_but_2_enedi
@@ -14,5 +14,11 @@ pathway cis-cis-2-ammonio-3-3-ox-to-ammonium "cis,cis-2-ammonio-3-(3-ox… to am
     2z_4e_2_ammoniomuconate
     <-> ec_3_5_99_5 [3.5.99.5] +h2o -nh3
     3e_2_oxohex_3_enedioate
+  }
+
+  branch from cis_cis_2_ammonio_3_3_oxoprop_1_enyl_but_2_enedi side left {
+    cis_cis_2_ammonio_3_3_oxoprop_1_enyl_but_2_enedi
+    <-> ec_1_13_11_6 [1.13.11.6] +o2
+    3_hydroxyanthranilate
   }
 }

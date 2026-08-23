@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 20s-17-20-dihydroxypreg-to-hydrogen-acceptor "(20S)-17,20-dihydroxypregâ€¦ to hydrogen acceptor" {
-  spacing 252
+  spacing 282
 
   spine at 0,0 {
     20s_17_20_dihydroxypregn_4_en_3_one
@@ -18,37 +18,67 @@ pathway 20s-17-20-dihydroxypreg-to-hydrogen-acceptor "(20S)-17,20-dihydroxypregâ
 
   branch from androst_4_ene_3_17_dione side left {
     androst_4_ene_3_17_dione
-    <-> . +nadph +hplus +nadp
-    5_androstane_3_17_dione
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    15_hydroxyandrost_4_ene_3_17_dione
   }
 
   branch from androst_4_ene_3_17_dione side right {
     androst_4_ene_3_17_dione
-    <-> ec_1_3_99_4 [1.3.99.4] +hydrogen_acceptor +hydrogen_donor
-    androsta_1_4_diene_3_17_dione
+    <-> . +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    11_hydroxyandrost_4_ene_3_17_dione
   }
 
   branch from acetate side left {
     acetate
-    <-> ec_3_1_1_113 [3.1.1.113] +ethyl_acetate +h2o +hplus
-    ethanol
+    <-> . +n_acetyl_s_benzyl_l_cysteine +h2o
+    s_benzyl_l_cysteine
   }
 
   branch from acetate side right {
     acetate
-    <-> ec_3_5_1_98 [3.5.1.98] +n6_acetyl_l_lysine +h2o
-    l_lysinium
+    <-> . +n_acetyl_l_tryptophanate +h2o
+    l_tryptophan
   }
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> ec_1_3_99_39 [1.3.99.39] +carotenoid_end_derivative +hydrogen_donor
-    carotenoid_end_group
+    <-> ec_1_14_19_15 [1.14.19.15] +11z_hexadec_11_enoyl_coa +hydrogen_donor +o2 +h2o
+    10e_12z_hexadecadienoyl_coa
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> ec_1_14_99_65 [1.14.99.65] +o_s_4_amino_l_phenylalanylpantetheine_4_phosphor +hydrogen_donor +o2 +h2o
-    o_s_2r_2_4_aminophenyl_l_serylpantetheine_4_phos
+    <-> ec_2_8_1_14 [2.8.1.14] +5_taurinomethyluridine_5_phosphate_1 +3_disulfanyl_l_alanine +hydrogen_donor +atp +l_cysteine +amp +ppi +hplus
+    5_taurinomethyl_2_thiouridine_5_phosphate_1
+  }
+
+  branch from androst_4_ene_3_17_dione side left {
+    androst_4_ene_3_17_dione
+    <-> ec_1_14_14_197 [1.14.14.197] +fmnh2 +o2 +fmn +h2o +hplus
+    11_hydroxyandrost_4_ene_3_17_dione
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> . +3_substituted_propionyl_coa +hydrogen_acceptor
+    2_3_dehydroacyl_coa
+  }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> . +5_s_hete +o2 +hydrogen_acceptor +h2o
+    5_s_11_r_dihete
+  }
+
+  branch from hydrogen_acceptor side right {
+    hydrogen_acceptor
+    <-> . +5_s_hete +hydrogen_donor +o2 +h2o
+    5_s_15_r_dihete
+  }
+
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +hydrogen_donor +o2 +h2o
+    17_r_hdohe
   }
 }

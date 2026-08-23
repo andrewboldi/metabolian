@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cis-acetylacrylic-acid-to-3-chloro-cis-cis-mucon "cis-acetylacrylic acid to 3-chloro-cis,cis-muconate" {
-  spacing 252
+  spacing 294
 
   spine at 0,0 {
     cis_acetylacrylic_acid
@@ -20,64 +20,64 @@ pathway cis-acetylacrylic-acid-to-3-chloro-cis-cis-mucon "cis-acetylacrylic acid
     3_chloro_cis_cis_muconate
   }
 
-  branch from protoanemonin side left {
-    protoanemonin
-    <-> ec_5_5_1_1 [5.5.1.1] +fluoride +co2 +h
-    3_fluoro_cis_cis_muconate
+  branch from h2o side left {
+    h2o
+    <-> ec_3_2_1_21 [3.2.1.21] +beta_d_galactose +4_methylumbelliferone
+    4_methylumbelliferyl_d_galactoside
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_4_17_13 [3.4.17.13] +d_alanine +h +n_acetyl_d_glucosaminyl_n_acetylmuramoyl_l_alany
-    n_acetyl_d_glucosaminyl_n_acetylmuramoyl_l_ala_d
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_4_19_11 [3.4.19.11] +meso_diaminopimeloyl_alanine +n_acetylmuramoyl_l_ala_d_glu
-    n_acetylmuramoyl_l_ala_d_glu_l_meso_diaminopimel
-  }
-
-  branch from h side right {
-    h
-    <-> . +nebramine +nadp +nadph
-    4_oxonebramine
+    <-> ec_3_1_1_1 [3.1.1.1] +dexmethylphenidate +methanol
+    ritalinic_acid
   }
 
   branch from h side left {
     h
-    <-> . +paromomycin_ii
-    paromomycin
+    <-> ec_3_5_4_43 [3.5.4.43] +n_isopropylammelide +chloride +h2o
+    compound_0054382
   }
 
-  branch from 3_chloro_cis_cis_muconate side right {
+  branch from h side right {
+    h
+    <-> ec_1_2_1_77 [1.2.1.77] +3_4_dehydroadipyl_coa +nadph +nadp +h2o
+    3z_6_oxohex_3_enoyl_coa
+  }
+
+  branch from 3_chloro_cis_cis_muconate side left {
     3_chloro_cis_cis_muconate
     <-> ec_5_5_1_7 [5.5.1.7] +h +chloride
     trans_4_carboxymethylenebut_2_en_4_olide
   }
 
-  branch from cis_4_carboxymethylenebut_2_en_4_olide side left {
+  branch from cis_4_carboxymethylenebut_2_en_4_olide side right {
     cis_4_carboxymethylenebut_2_en_4_olide
     <-> . +chloride
     5_chloromuconolactone
   }
 
-  branch from cis_4_carboxymethylenebut_2_en_4_olide side right {
+  branch from cis_4_carboxymethylenebut_2_en_4_olide side left {
     cis_4_carboxymethylenebut_2_en_4_olide
     <-> ec_5_5_1_7 [5.5.1.7] +h +chloride
     2e_4z_2_chloromuconate
   }
 
-  branch from chloride side left {
-    chloride
-    <-> ec_2_5_1_18 [2.5.1.18] +2_s_glutathionyl_acetyl_chloride +1_1_dichloroethylene_epoxide
-    glutathione
-  }
-
   branch from chloride side right {
     chloride
-    <-> ec_2_5_1_18 [2.5.1.18] +s_2_chloroacetyl_glutathione +glutathione
-    chloroacetyl_chloride
+    <-> . +2_chloro_2_2_4_dichloro_5_oxofuran_2_yl_acetate
+    2_5_dichloro_carboxymethylenebut_2_en_4_olide
+  }
+
+  branch from chloride side left {
+    chloride
+    <-> ec_2_5_1_47 [2.5.1.47] +hydrogen_sulfide +3_chloro_l_alanine
+    l_cysteine
+  }
+
+  branch from r_2_chloro_5_oxo_2_5_dihydro_2_furyl_acetate side right {
+    r_2_chloro_5_oxo_2_5_dihydro_2_furyl_acetate
+    <-> . +h +chloride +h2o
+    maleylacetate
   }
 
   branch from r_2_chloro_5_oxo_2_5_dihydro_2_furyl_acetate side left {
@@ -86,9 +86,51 @@ pathway cis-acetylacrylic-acid-to-3-chloro-cis-cis-mucon "cis-acetylacrylic acid
     maleylacetate
   }
 
-  branch from r_2_chloro_5_oxo_2_5_dihydro_2_furyl_acetate side right {
-    r_2_chloro_5_oxo_2_5_dihydro_2_furyl_acetate
-    <-> . +h +chloride +h2o
-    maleylacetate
+  branch from h2o side right {
+    h2o
+    <-> ec_3_1_1_25 [3.1.1.25] +4_hydroxypelargonic_acid
+    nonanolactone
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_1_1_25 [3.1.1.25] +dl_4_hydroxy_caproic_acid
+    caprolactone
+  }
+
+  branch from co2 side right {
+    co2
+    <-> . +malonyl_coa +h +tetracosanoate +nadph +nadp +coa +h2o
+    hexacosanoate
+  }
+
+  branch from co2 side left {
+    co2
+    <-> ec_1_14_13_41 [1.14.13.41] +z_4_hydroxyphenyl_acetaldehyde_oxime +nadp +h2o +h +o2 +nadph
+    n_hydroxy_l_tyrosine
+  }
+
+  branch from chloride side right {
+    chloride
+    <-> ec_2_5_1_18 [2.5.1.18] +dcnb_3_4_dichloronitrobenzene +glutathione
+    s_2_chloro_4_nitrophenyl_glutathione
+  }
+
+  branch from chloride side left {
+    chloride
+    <-> ec_3_8_1_5 [3.8.1.5] +h +cyclohexanol +h2o
+    monochlorocyclohexane
+  }
+
+  branch from h side right {
+    h
+    <-> ec_1_1_1_209 [1.1.1.209] +epitestosterone +nadp +nadph
+    androst_4_ene_3_17_dione
+  }
+
+  branch from h side left {
+    h
+    <-> ec_1_1_1_2 [1.1.1.2] +methylacetoacetic_acid +nadph +methyl_3_hydroxybutyrate
+    nadp
   }
 }

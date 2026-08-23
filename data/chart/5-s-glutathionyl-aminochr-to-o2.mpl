@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-s-glutathionyl-aminochr-to-o2 "5-S-glutathionyl-aminochr… to O2" {
-  spacing 188
+  spacing 248
 
   spine at 0,0 {
     5_s_glutathionyl_aminochrome_reduced
@@ -18,37 +18,97 @@ pathway 5-s-glutathionyl-aminochr-to-o2 "5-S-glutathionyl-aminochr… to O2" {
 
   branch from glutathione side left {
     glutathione
-    <-> . +adrenochrome
-    5_s_glutathionyl_adrenochrome_hydroquinone
+    <-> ec_2_5_1_18 [2.5.1.18] +2_glutathion_s_yl_2_1h_indol_3_yl_acetonitrile
+    dehydro_indole_3_yl_acetonitrile
   }
 
   branch from glutathione side right {
     glutathione
-    <-> . +5_s_glutathionyl_noradrenochrome_hydroquinone
-    noradrenochrome
+    <-> ec_2_5_1_18 [2.5.1.18] +e_4_hydroxynon_2_enal
+    3_glutathion_s_yl_4_hydroxynonanal
   }
 
   branch from h side left {
     h
-    <-> ec_2_5_1_18 [2.5.1.18] +4_5_dihydro_4_hydroxy_5_s_glutathionyl_benzo_a_p +glutathione
-    benzo_a_pyrene_4_5_oxide
+    <-> . +diphosphate +12_ethyl_8_propylbacteriochlorophyll_c +12_ethyl_8_propylbacteriochlorophyllide_c
+    2e_6e_farnesyl_diphosphate
   }
 
   branch from h side right {
     h
-    <-> ec_2_5_1_18 [2.5.1.18] +s_2_2_dichloro_1_hydroxy_ethyl_glutathione +glutathione
-    2_2_dichloroacetaldehyde
+    <-> . +diphosphate +12_ethyl_8_isobutylbacteriochlorophyll_c +2e_6e_farnesyl_diphosphate
+    12_ethyl_8_isobutylbacteriochlorophyllide_c
   }
 
   branch from o2 side left {
     o2
-    <-> . +1_2_anthracenediol
-    4_3_hydroxy_2_naphthyl_2_oxobut_3_enoic_acid
+    <-> . +methanesulfonate +h +z_3_hydroxypropyl_glucosinolate +h2o
+    glucoiberin
   }
 
   branch from o2 side right {
     o2
-    <-> . +1_2_anthracenediol
-    3_2_carboxyvinyl_naphthalene_2_carboxylic_acid
+    <-> . +gibberellin_a34 +2_oxoglutarate +co2 +gibberellin_a34_catabolite +h2o
+    succinate
+  }
+
+  branch from glutathione side left {
+    glutathione
+    <-> . +glutathione_disulfide +hydroxylamine
+    s_hydroxysulfenamide_glutathione
+  }
+
+  branch from glutathione side right {
+    glutathione
+    <-> ec_1_8_4_2 [1.8.4.2] +mercaptoethanol +glutathione_disulfide
+    2_2_dithiodiethanol
+  }
+
+  branch from co2 side left {
+    co2
+    <-> . +hinokiresinol
+    4_coumaryl_4_coumarate
+  }
+
+  branch from co2 side right {
+    co2
+    <-> . +4_coumaryl_4_coumarate
+    7r_trans_hinokiresinol
+  }
+
+  branch from h side left {
+    h
+    <-> . +formaldehyde +acetate
+    hydroxymethylene_acetate
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_3_1_280 [2.3.1.280] +acetyl_coa +3_aminopropyl_phosphonic_acid +coa
+    2_acetamidopropyl_phosphonate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +2_2_methylsulfanyl_pentyl_maleate +h
+    3_5_methylthio_pentylmalic_acid
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +2_2_methylsulfanyl_hexyl_maleate +h
+    2_6_methylthio_hexylmalic_acid
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +co2 +indole_3_acetaldehyde +nh4 +h2o2 +h +h2o
+    l_tryptophan
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_21_3_6 [1.21.3.6] +coreopsin +h2o
+    aureusidin_6_o_glucoside
   }
 }

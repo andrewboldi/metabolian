@@ -122,71 +122,6 @@
       "xrefs": {
         "chebi": "CHEBI:78442"
       }
-    },
-    {
-      "id": "glutamate",
-      "name": "L-Glutamate",
-      "formula": "C5H8NO4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:29985"
-      }
-    },
-    {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:30616"
-      }
-    },
-    {
-      "id": "3_l_glutamate_adenylyl_1_group",
-      "name": "3'-(L-glutamate)adenylyl(1−) group",
-      "short": "3'-(L-glutamate)ade…",
-      "formula": "C15H19N6O9P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:78520"
-      }
-    },
-    {
-      "id": "amp",
-      "name": "AMP",
-      "formula": "C10H12N5O7P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:456215"
-      }
-    },
-    {
-      "id": "ppi",
-      "name": "Diphosphate (PPi)",
-      "formula": "HO7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:33019"
-      }
-    },
-    {
-      "id": "3_d_aspartyl_adenylyl_1_group",
-      "name": "3'-(D-aspartyl)adenylyl(1−) group",
-      "short": "3'-(D-aspartyl)aden…",
-      "formula": "C14H17N6O9P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:188449"
-      }
-    },
-    {
-      "id": "d_aspartate",
-      "name": "D-aspartate",
-      "formula": "C4H6NO4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:29990"
-      }
     }
   ],
   "enzymes": [
@@ -195,20 +130,16 @@
       "name": "N-terminal methionine N(alpha)-acetyltransferase NatB",
       "ec": [
         "2.3.1.254"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P61599"
+      }
     },
     {
       "id": "ec_2_3_2_29",
       "name": "aspartate/glutamate leucyltransferase",
       "ec": [
         "2.3.2.29"
-      ]
-    },
-    {
-      "id": "ec_3_1_1_96",
-      "name": "D-aminoacyl-tRNA deacylase",
-      "ec": [
-        "3.1.1.96"
       ]
     }
   ],
@@ -349,99 +280,181 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "tRNA(Gln) + L-glutamate + ATP = L-glutamyl-tRNA(Gln) + AMP + diphosphate",
-      "equation": "tRNA(Gln) + L-glutamate + ATP = L-glutamyl-tRNA(Gln) + AMP + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "amp_3_end_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glutamate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_l_glutamate_adenylyl_1_group",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "amp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:64612"
+      "id": "xt_l_glutamyl_zwitterionic_group_2e-4z-7e-2-hydroxy-6-ox-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_glutamyl_zwitterionic_group"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2e-4z-7e-2-hydroxy-6-ox-to-h2o"
+      },
+      "note": "Shares L-α-glutamyl zwitterionic group with (2E,4Z,7E)-2-hydroxy-6-ox… to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:64612"
+            "db": "ChEBI",
+            "id": "CHEBI:64721"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "D-aminoacyl-tRNA deacylase",
-      "equation": "D-aspartyl-tRNA(Asp) + H2O = tRNA(Asp) + D-aspartate + H(+)",
-      "ec": "3.1.1.96",
-      "substrates": [
-        {
-          "metabolite": "3_d_aspartyl_adenylyl_1_group",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "amp_3_end_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "d_aspartate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_1_1_96"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:69795"
+      "id": "xt_l_glutamyl_zwitterionic_group_n5-l-1-carboxyethyl-l-o-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_glutamyl_zwitterionic_group"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "n5-l-1-carboxyethyl-l-o-to-ammonium"
+      },
+      "note": "Shares L-α-glutamyl zwitterionic group with N5-(L-1-carboxyethyl)-L-o… to ammonium.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:69795"
+            "db": "ChEBI",
+            "id": "CHEBI:64721"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetyl_l_methionine_ethyl-methyl-sulfide-to-n-acetyl-l-methionine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyl_l_methionine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ethyl-methyl-sulfide-to-n-acetyl-l-methionine"
+      },
+      "note": "Shares N-acetyl-L-methionine with ethyl methyl sulfide to N-acetyl-L-methionine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:71670"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetyl_l_methionine_l-methionyl-l-aspartyl-to-amp-3-end-1",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyl_l_methionine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-methionyl-l-aspartyl-to-amp-3-end-1"
+      },
+      "note": "Shares N-acetyl-L-methionine with L-methionyl-L-aspartyl… to AMP 3'-end(1−).",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:71670"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetyl_l_methionine_n-acetyl-d-methionine-to-3-methylthiopropylamini",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyl_l_methionine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyl-d-methionine-to-3-methylthiopropylamini"
+      },
+      "note": "Shares N-acetyl-L-methionine with N-acetyl-D-methionine to 3-methylthiopropylaminium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:71670"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_l_leucyl_adenylyl_zwitterionic_group_amino-acid-ester-to-l-argininium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_l_leucyl_adenylyl_zwitterionic_group"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "amino-acid-ester-to-l-argininium"
+      },
+      "note": "Shares 3'-(L-leucyl)adenylyl zwitterionic group with α-amino acid ester to L-argininium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78494"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_l_leucyl_adenylyl_zwitterionic_group_l-methionyl-l-aspartyl-to-amp-3-end-1",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_l_leucyl_adenylyl_zwitterionic_group"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-methionyl-l-aspartyl-to-amp-3-end-1"
+      },
+      "note": "Shares 3'-(L-leucyl)adenylyl zwitterionic group with L-methionyl-L-aspartyl… to AMP 3'-end(1−).",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78494"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_l_leucyl_adenylyl_zwitterionic_group_n-oleoyl-l-leucinate-to-amp-3-end-1",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_l_leucyl_adenylyl_zwitterionic_group"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-oleoyl-l-leucinate-to-amp-3-end-1"
+      },
+      "note": "Shares 3'-(L-leucyl)adenylyl zwitterionic group with N-oleoyl-L-leucinate to AMP 3'-end(1−).",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78494"
           }
         ]
       }

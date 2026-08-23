@@ -332,61 +332,46 @@
       }
     },
     {
-      "id": "anditomin",
-      "name": "anditomin",
-      "formula": "C25H30O5",
-      "charge": 0,
+      "id": "iron",
+      "name": "iron",
+      "formula": "Fe",
+      "charge": 3,
       "xrefs": {
-        "metanetx": "MNXM1363761"
+        "chebi": "CHEBI:29034"
       }
     },
     {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
+      "id": "mdha",
+      "name": "Monodehydroascorbate (ascorbate radical)",
+      "short": "Monodehydroascorbat…",
+      "formula": "C6H6O6",
+      "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM13"
+        "chebi": "CHEBI:59513"
       }
     },
     {
-      "id": "succinate",
-      "name": "succinate",
-      "formula": "C4H4O4",
-      "charge": -2,
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
       "xrefs": {
-        "metanetx": "MNXM25"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "WATER"
-      }
-    },
-    {
-      "id": "2_oxoglutarate",
-      "name": "2-oxoglutarate",
-      "formula": "C5H4O5",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM1368744"
-      }
-    },
-    {
-      "id": "o2",
-      "name": "O2",
-      "formula": "O2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM735438"
+        "chebi": "CHEBI:29033"
       }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_7_2_1_3",
+      "name": "ascorbate ferrireductase (transmembrane)",
+      "ec": [
+        "7.2.1.3"
+      ],
+      "xrefs": {
+        "uniprot": "Q8N8Q1"
+      }
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -1000,50 +985,117 @@
     },
     {
       "id": "r15",
-      "name": "Reaction MNXR198538",
+      "name": "ascorbate ferrireductase (transmembrane)",
+      "equation": "Fe(3+)(out) + L-ascorbate(in) = monodehydro-L-ascorbate radical(in) + Fe(2+)(out) + H(+)",
+      "ec": "7.2.1.3",
       "substrates": [
         {
-          "metabolite": "anditomin",
+          "metabolite": "iron",
           "stoichiometry": 1
         },
         {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "succinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "ascorbate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "2_oxoglutarate",
+          "metabolite": "mdha",
           "stoichiometry": 1
         },
         {
-          "metabolite": "andilesin_c",
+          "metabolite": "fe2",
           "stoichiometry": 1
         },
         {
-          "metabolite": "o2",
+          "metabolite": "hplus",
           "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_7_2_1_3"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 15,
       "xrefs": {
-        "metanetx": "MNXR198538"
+        "rhea": "RHEA:30403"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR198538"
+            "db": "Rhea",
+            "id": "RHEA:30403"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3_5_dimethylorsellinate_3-5-dimethylorsellinate-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_5_dimethylorsellinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-5-dimethylorsellinate-to-succinate"
+      },
+      "note": "Shares 3,5-dimethylorsellinate with 3,5-dimethylorsellinate to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:131856"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_5_dimethylorsellinate_5-o-d-mycaminosyl-20-ox-to-s-adenosyl-l-homocyst",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_5_dimethylorsellinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-o-d-mycaminosyl-20-ox-to-s-adenosyl-l-homocyst"
+      },
+      "note": "Shares 3,5-dimethylorsellinate with 5-O-β-D-mycaminosyl-20-ox… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:131856"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_andilesin_c_3-o-methylkaempferol-to-butein",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "andilesin_c"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-o-methylkaempferol-to-butein"
+      },
+      "note": "Shares andilesin C with 3-O-methylkaempferol to butein.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:223334"
           }
         ]
       }

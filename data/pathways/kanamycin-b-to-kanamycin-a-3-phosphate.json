@@ -172,25 +172,6 @@
       "xrefs": {
         "chebi": "CHEBI:456215"
       }
-    },
-    {
-      "id": "4_adenylylkanamycin_a",
-      "name": "4'-adenylylkanamycin A",
-      "short": "4'-adenylylkanamyci…",
-      "formula": "C28H51N9O17P",
-      "charge": 3,
-      "xrefs": {
-        "chebi": "CHEBI:233199"
-      }
-    },
-    {
-      "id": "ppi",
-      "name": "Diphosphate (PPi)",
-      "formula": "HO7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:33019"
-      }
     }
   ],
   "enzymes": [
@@ -414,42 +395,93 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "kanamycin A + ATP = 4'-adenylylkanamycin A + diphosphate",
-      "equation": "kanamycin A + ATP = 4'-adenylylkanamycin A + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "kanamycin_a",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "4_adenylylkanamycin_a",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:83671"
+      "id": "xt_kanamycin_b_udp-d-glucose-to-n6-acetylkanamycin-b",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "kanamycin_b"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-d-glucose-to-n6-acetylkanamycin-b"
+      },
+      "note": "Shares kanamycin B with UDP-α-D-glucose to N6'-acetylkanamycin B.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:83671"
+            "db": "ChEBI",
+            "id": "CHEBI:58549"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_carbamoyl_adenylate_carbamoyl-adenylate-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "carbamoyl_adenylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "carbamoyl-adenylate-to-phosphate"
+      },
+      "note": "Shares carbamoyl adenylate with carbamoyl adenylate to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:73674"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_carbamoyl_adenylate_carbamoyl-phosphate-to-h2o-36375",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "carbamoyl_adenylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "carbamoyl-phosphate-to-h2o-36375"
+      },
+      "note": "Shares carbamoyl adenylate with carbamoyl phosphate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:73674"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_o_carbamoylkanamycin_a_sedoheptulose-to-2-oxoglutarate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_o_carbamoylkanamycin_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sedoheptulose-to-2-oxoglutarate"
+      },
+      "note": "Shares 6''-O-carbamoylkanamycin A with sedoheptulose to 2-oxoglutarate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:73675"
           }
         ]
       }

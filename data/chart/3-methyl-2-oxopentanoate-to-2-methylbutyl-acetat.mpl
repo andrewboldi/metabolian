@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-methyl-2-oxopentanoate-to-2-methylbutyl-acetat "3-methyl-2-oxopentanoate to 2-methylbutyl acetate" {
-  spacing 228
+  spacing 222
 
   spine at 0,0 {
     3_methyl_2_oxopentanoate
@@ -17,12 +17,6 @@ pathway 3-methyl-2-oxopentanoate-to-2-methylbutyl-acetat "3-methyl-2-oxopentanoa
   }
 
   branch from 2_methylbutan_1_ol side left {
-    2_methylbutan_1_ol
-    <-> . +butyryl_coa +coa
-    2_methylbutyl_butanoate
-  }
-
-  branch from 2_methylbutan_1_ol side right {
     2_methylbutan_1_ol
     <-> . +hexanoyl_coa +coa
     2_methylbutyl_hexanoate

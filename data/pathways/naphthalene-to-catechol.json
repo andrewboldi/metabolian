@@ -213,24 +213,6 @@
       }
     },
     {
-      "id": "amp",
-      "name": "AMP",
-      "formula": "C10H12N5O7P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:456215"
-      }
-    },
-    {
-      "id": "ppi",
-      "name": "Diphosphate (PPi)",
-      "formula": "HO7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:33019"
-      }
-    },
-    {
       "id": "phenyl_phosphate",
       "name": "phenyl phosphate",
       "formula": "C6H5O4P",
@@ -240,12 +222,31 @@
       }
     },
     {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
       "id": "pi",
       "name": "Orthophosphate (Pi)",
       "formula": "HO4P",
       "charge": -2,
       "xrefs": {
         "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "1s_2s_1_2_dihydronaphthalene_1_2_diol",
+      "name": "(1S,2S)-1,2-dihydronaphthalene-1,2-diol",
+      "short": "(1S,2S)-1,2-dihydro…",
+      "formula": "C10H10O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28809"
       }
     }
   ],
@@ -709,7 +710,7 @@
     {
       "id": "r9",
       "name": "1-hydroxy-2-naphthoate hydroxylase",
-      "equation": "1-hydroxy-2-naphthoate + NADH + O2 + 2 H(+) = naphthalene-1,2-diol + CO2 + NAD(+) + H2O",
+      "equation": "1-hydroxy-2-naphthoate + NADPH + O2 + 2 H(+) = naphthalene-1,2-diol + CO2 + NADP(+) + H2O",
       "ec": "1.14.13.135",
       "substrates": [
         {
@@ -717,7 +718,7 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadh",
+          "metabolite": "nadph",
           "stoichiometry": 1
         },
         {
@@ -739,7 +740,7 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "nad",
+          "metabolite": "nadp",
           "stoichiometry": 1
         },
         {
@@ -755,14 +756,14 @@
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:31271"
+        "rhea": "RHEA:31571"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31271"
+            "id": "RHEA:31571"
           }
         ]
       }
@@ -812,61 +813,6 @@
     },
     {
       "id": "r11",
-      "name": "salicylate + ATP + NADPH + H(+) = salicylaldehyde + AMP + diphosphate + NADP(+)",
-      "equation": "salicylate + ATP + NADPH + H(+) = salicylaldehyde + AMP + diphosphate + NADP(+)",
-      "substrates": [
-        {
-          "metabolite": "salicylate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "salicylaldehyde",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "amp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 11,
-      "xrefs": {
-        "rhea": "RHEA:68880"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:68880"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r12",
       "name": "phenol phosphorylase",
       "equation": "phenol + ATP + H2O = phenyl phosphate + AMP + phosphate + 2 H(+)",
       "ec": "2.7.1.238",
@@ -908,7 +854,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 12,
+      "pathwayStep": 11,
       "xrefs": {
         "rhea": "RHEA:73839"
       },
@@ -918,6 +864,315 @@
           {
             "db": "Rhea",
             "id": "RHEA:73839"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "(1S,2S)-1,2-dihydronaphthalene-1,2-diol + NADP(+) = naphthalene-1,2-diol + NADPH + H(+)",
+      "equation": "(1S,2S)-1,2-dihydronaphthalene-1,2-diol + NADP(+) = naphthalene-1,2-diol + NADPH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1s_2s_1_2_dihydronaphthalene_1_2_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "naphthalene_1_2_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:65228"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65228"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_naphthalene_1_2_diol_1-hydroxy-2-naphthoate-to-1-2-benzoquinone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "naphthalene_1_2_diol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-hydroxy-2-naphthoate-to-1-2-benzoquinone"
+      },
+      "note": "Shares naphthalene-1,2-diol with 1-hydroxy-2-naphthoate to 1,2-benzoquinone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17435"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_salicylaldehyde_acetylsalicylate-to-dibenzo-1-4-dioxine-2-3-d",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "salicylaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetylsalicylate-to-dibenzo-1-4-dioxine-2-3-d"
+      },
+      "note": "Shares salicylaldehyde with acetylsalicylate to dibenzo[1,4]dioxine-2,3-d….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16008"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_salicylaldehyde_salicyl-alcohol-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "salicylaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "salicyl-alcohol-to-diphosphate"
+      },
+      "note": "Shares salicylaldehyde with salicyl alcohol to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16008"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phenol_2-naphthyl-beta-d-xylopyr-to-2-naphthol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phenol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-naphthyl-beta-d-xylopyr-to-2-naphthol"
+      },
+      "note": "Shares phenol with 2-Naphthyl-beta-D-xylopyr… to 2-naphthol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15882"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phenol_4-methoxybenzoate-to-formaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phenol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-methoxybenzoate-to-formaldehyde"
+      },
+      "note": "Shares phenol with 4-methoxybenzoate to formaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15882"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phenol_4-methylumbelliferyl-to-ctp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phenol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-methylumbelliferyl-to-ctp"
+      },
+      "note": "Shares phenol with 4-methylumbelliferyl… to CTP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15882"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phenol_acetylsalicylate-to-dibenzo-1-4-dioxine-2-3-d",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phenol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetylsalicylate-to-dibenzo-1-4-dioxine-2-3-d"
+      },
+      "note": "Shares phenol with acetylsalicylate to dibenzo[1,4]dioxine-2,3-d….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15882"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phenol_benzene-to-4-methylcatechol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phenol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "benzene-to-4-methylcatechol"
+      },
+      "note": "Shares phenol with benzene to 4-methylcatechol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15882"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phenol_creatinine-to-n5-formyl-5-6-7-8-tetrahy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phenol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "creatinine-to-n5-formyl-5-6-7-8-tetrahy"
+      },
+      "note": "Shares phenol with creatinine to N5-formyl-5,6,7,8-tetrahy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15882"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phenol_nicotinate-d-ribonucleoti-to-phosphomannan",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phenol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nicotinate-d-ribonucleoti-to-phosphomannan"
+      },
+      "note": "Shares phenol with nicotinate D-ribonucleoti… to Phosphomannan.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15882"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_hydroxy_2_naphthoate_1-hydroxy-2-naphthoate-to-1-2-benzoquinone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_hydroxy_2_naphthoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-hydroxy-2-naphthoate-to-1-2-benzoquinone"
+      },
+      "note": "Shares 1-hydroxy-2-naphthoate with 1-hydroxy-2-naphthoate to 1,2-benzoquinone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15992"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phenyl_phosphate_4-methoxybenzoate-to-formaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phenyl_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-methoxybenzoate-to-formaldehyde"
+      },
+      "note": "Shares phenyl phosphate with 4-methoxybenzoate to formaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:193089"
           }
         ]
       }

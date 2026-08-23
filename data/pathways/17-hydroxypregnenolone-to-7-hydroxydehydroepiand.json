@@ -139,42 +139,6 @@
       "xrefs": {
         "chebi": "CHEBI:183368"
       }
-    },
-    {
-      "id": "19e_geissoschizine",
-      "name": "(19E)-geissoschizine",
-      "formula": "C21H24N2O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:17037"
-      }
-    },
-    {
-      "id": "rhazimal",
-      "name": "rhazimal",
-      "formula": "C21H22N2O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:230473"
-      }
-    },
-    {
-      "id": "variecoladiene",
-      "name": "variecoladiene",
-      "formula": "C25H40",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:230481"
-      }
-    },
-    {
-      "id": "variecolin",
-      "name": "variecolin",
-      "formula": "C25H36O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:66349"
-      }
     }
   ],
   "enzymes": [
@@ -183,21 +147,20 @@
       "name": "steroid 17alpha-monooxygenase",
       "ec": [
         "1.14.14.19"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P05093"
+      }
     },
     {
       "id": "ec_1_14_14_32",
       "name": "17alpha-hydroxyprogesterone deacetylase",
       "ec": [
         "1.14.14.32"
-      ]
-    },
-    {
-      "id": "ec_1_14_14_187",
-      "name": "rhazimal synthase",
-      "ec": [
-        "1.14.14.187"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P05093"
+      }
     }
   ],
   "reactions": [
@@ -398,111 +361,159 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "rhazimal synthase",
-      "equation": "(19E)-geissoschizine + reduced [NADPH--hemoprotein reductase] + O2 = rhazimal + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
-      "ec": "1.14.14.187",
-      "substrates": [
-        {
-          "metabolite": "19e_geissoschizine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "rhazimal",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_187"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:79619"
+      "id": "xt_17_hydroxypregnenolone_benzoin-to-4-d-glucosyloxy-benzoa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "17_hydroxypregnenolone"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "benzoin-to-4-d-glucosyloxy-benzoa"
+      },
+      "note": "Shares 17α-hydroxypregnenolone with benzoin to 4-(β-D-glucosyloxy)benzoa….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:79619"
+            "db": "ChEBI",
+            "id": "CHEBI:28750"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "variecoladiene + 4 reduced [NADPH--hemoprotein reductase] + 4 O2 = variecolin + 4 oxidi...",
-      "equation": "variecoladiene + 4 reduced [NADPH--hemoprotein reductase] + 4 O2 = variecolin + 4 oxidized [NADPH--hemoprotein reductase] + 6 H2O + 4 H(+)",
-      "substrates": [
-        {
-          "metabolite": "variecoladiene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 4
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 4
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "variecolin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 4
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 6
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 4
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:79691"
+      "id": "xt_dehydroepiandrosterone_17-estradiol-to-sulfate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dehydroepiandrosterone"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "17-estradiol-to-sulfate"
+      },
+      "note": "Shares dehydroepiandrosterone with 17α-estradiol to sulfate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:79691"
+            "db": "ChEBI",
+            "id": "CHEBI:28689"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dehydroepiandrosterone_dehydroepiandrosterone-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dehydroepiandrosterone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dehydroepiandrosterone-to-fmn"
+      },
+      "note": "Shares dehydroepiandrosterone with dehydroepiandrosterone… to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28689"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dehydroepiandrosterone_leukotriene-c4-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dehydroepiandrosterone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "leukotriene-c4-to-hydrogen-donor"
+      },
+      "note": "Shares dehydroepiandrosterone with leukotriene C4 to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28689"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dehydroepiandrosterone_petunidin-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dehydroepiandrosterone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "petunidin-to-h2o"
+      },
+      "note": "Shares dehydroepiandrosterone with petunidin to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28689"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dehydroepiandrosterone_testosterone-to-androst-5-ene-3-17-diol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dehydroepiandrosterone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "testosterone-to-androst-5-ene-3-17-diol"
+      },
+      "note": "Shares dehydroepiandrosterone with testosterone to androst-5-ene-3β,17β-diol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28689"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_hydroxydehydroepiandrosterone_4-formylbenzoate-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_hydroxydehydroepiandrosterone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-formylbenzoate-to-nad"
+      },
+      "note": "Shares 7α-hydroxydehydroepiandrosterone with 4-formylbenzoate to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:81471"
           }
         ]
       }

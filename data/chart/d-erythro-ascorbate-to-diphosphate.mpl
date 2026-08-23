@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-erythro-ascorbate-to-diphosphate "D-erythro-Ascorbate to diphosphate" {
-  spacing 244
+  spacing 208
 
   spine at 0,0 {
     d_erythro_ascorbate
@@ -20,41 +20,5 @@ pathway d-erythro-ascorbate-to-diphosphate "D-erythro-Ascorbate to diphosphate" 
     ru5p
     <-> . +ctp +hplus -ppi
     cdp_d_ribulose
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +h +2s_flavanone +nadph +3_5_dihydroxyflavanone +h2o
-    nadp
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +luteolin +h +nadph +nadp +h2o
-    tricetin
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
-    1s_2s_4r_endo_fenchol
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
-    nerol
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +fpp
-    allo_aromadendrene
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +o6_methyl_dgtp +h2o +hplus
-    o6_methyl_dgmp
   }
 }

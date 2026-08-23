@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway mogrol-to-mogroside-iva "mogrol to mogroside IVA" {
-  spacing 170
+  spacing 152
 
   spine at 0,0 {
     mogrol
@@ -16,23 +16,5 @@ pathway mogrol-to-mogroside-iva "mogrol to mogroside IVA" {
     mogroside_iiia
     <-> . +udp_d_glucose -udp -hplus
     mogroside_iva
-  }
-
-  branch from mogroside_ii_e side left {
-    mogroside_ii_e
-    <-> . +udp_d_glucose +udp +hplus
-    mogroside_iiie
-  }
-
-  branch from mogroside_iiia side right {
-    mogroside_iiia
-    <-> . +udp_d_glucose +udp +hplus
-    mogroside_iia1
-  }
-
-  branch from mogroside_iiia side left {
-    mogroside_iiia
-    <-> . +udp_d_glucose +udp +hplus
-    mogroside_ivx
   }
 }

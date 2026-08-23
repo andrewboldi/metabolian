@@ -1,0 +1,380 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-vinylglycine-to-coa-null",
+  "name": "L-vinylglycine to CoA",
+  "category": "other",
+  "summary": "A 3-step route from L-vinylglycine zwitterion to CoA, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR199177"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:134467"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_vinylglycine",
+      "name": "L-vinylglycine",
+      "formula": "C4H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:134467"
+      }
+    },
+    {
+      "id": "2e_2_aminobut_2_enoic_acid",
+      "name": "(2E)-2-aminobut-2-enoic acid",
+      "short": "2-aminobut-2-enoic…",
+      "formula": "C4H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:194308"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "l_homoserine",
+      "name": "L-homoserine",
+      "formula": "C4H9NO3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM353"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1104266"
+      }
+    },
+    {
+      "id": "acetylhomoserine",
+      "name": "Acetylhomoserine",
+      "formula": "C6H10NO4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1560551"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_4_1_43",
+      "name": "canavanine-gamma-lyase",
+      "ec": [
+        "4.4.1.43"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "canavanine-gamma-lyase",
+      "ec": "4.4.1.43",
+      "substrates": [
+        {
+          "metabolite": "l_vinylglycine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2e_2_aminobut_2_enoic_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_4_1_43"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR199177"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR199177"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "canavanine-gamma-lyase",
+      "ec": "4.4.1.43",
+      "substrates": [
+        {
+          "metabolite": "2e_2_aminobut_2_enoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_homoserine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_4_1_43"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR199178"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR199178"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR204106",
+      "substrates": [
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_homoserine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acetylhomoserine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR204106"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR204106"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_l_vinylglycine_l-canavanine-to-o-ureidohomoserine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_vinylglycine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-canavanine-to-o-ureidohomoserine"
+      },
+      "note": "Shares L-vinylglycine with L-canavanine to O-Ureidohomoserine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:134467"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_vinylglycine_l-canavanine-to-o-ureidohomoserine-62444",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_vinylglycine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-canavanine-to-o-ureidohomoserine-62444"
+      },
+      "note": "Shares L-vinylglycine with L-canavanine to O-Ureidohomoserine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:134467"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_vinylglycine_l-vinylglycine-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_vinylglycine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-vinylglycine-to-coa"
+      },
+      "note": "Shares L-vinylglycine with L-vinylglycine to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:134467"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_vinylglycine_l-vinylglycine-to-glycine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_vinylglycine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-vinylglycine-to-glycine"
+      },
+      "note": "Shares L-vinylglycine with L-vinylglycine to glycine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:134467"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_vinylglycine_l-vinylglycine-to-glycine-51916",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_vinylglycine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-vinylglycine-to-glycine-51916"
+      },
+      "note": "Shares L-vinylglycine with L-vinylglycine to glycine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:134467"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2e_2_aminobut_2_enoic_acid_l-vinylglycine-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2e_2_aminobut_2_enoic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-vinylglycine-to-coa"
+      },
+      "note": "Shares (2E)-2-aminobut-2-enoic acid with L-vinylglycine to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:194308"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_acetylhomoserine_l-vinylglycine-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acetylhomoserine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-vinylglycine-to-coa"
+      },
+      "note": "Shares Acetylhomoserine with L-vinylglycine to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1560551"
+          }
+        ]
+      }
+    }
+  ]
+}

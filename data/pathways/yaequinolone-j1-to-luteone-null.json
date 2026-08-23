@@ -1,0 +1,465 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "yaequinolone-j1-to-luteone-null",
+  "name": "Yaequinolone J1 to luteone",
+  "category": "other",
+  "summary": "A 3-step route from Yaequinolone J1 to luteone, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR199995"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:215148"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "yaequinolone_j1",
+      "name": "Yaequinolone J1",
+      "formula": "C27H31NO5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:215148"
+      }
+    },
+    {
+      "id": "4e_2_methyl_6_methylidenenona_2_4_dienyl_quinol",
+      "name": "(4E)-2-methyl-6-methylidenenona-2,4-dienyl-quinolinone B",
+      "short": "2-methyl-6-methylid…",
+      "formula": "C27H31NO5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1559867"
+      }
+    },
+    {
+      "id": "diphosphate",
+      "name": "diphosphate",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM11"
+      }
+    },
+    {
+      "id": "dimethylallyl_diphosphate",
+      "name": "dimethylallyl diphosphate",
+      "short": "dimethylallyl PP",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM132"
+      }
+    },
+    {
+      "id": "yaequinolone_e",
+      "name": "yaequinolone E",
+      "formula": "C22H23NO5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:193077"
+      }
+    },
+    {
+      "id": "2_hydroxygenistein",
+      "name": "2'-hydroxygenistein",
+      "formula": "C15H9O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:140306"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "luteone",
+      "name": "luteone",
+      "formula": "C20H18O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM19114"
+      }
+    },
+    {
+      "id": "yaequinolone_j2",
+      "name": "Yaequinolone J2",
+      "formula": "C27H31NO5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:227445"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_5_1_1",
+      "name": "dimethylallyltranstransferase",
+      "ec": [
+        "2.5.1.1"
+      ],
+      "xrefs": {
+        "uniprot": "P14324"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR199995",
+      "substrates": [
+        {
+          "metabolite": "yaequinolone_j1",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4e_2_methyl_6_methylidenenona_2_4_dienyl_quinol",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR199995"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR199995"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR199993",
+      "substrates": [
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4e_2_methyl_6_methylidenenona_2_4_dienyl_quinol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dimethylallyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "yaequinolone_e",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR199993"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR199993"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "dimethylallyltranstransferase",
+      "ec": "2.5.1.1",
+      "substrates": [
+        {
+          "metabolite": "2_hydroxygenistein",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dimethylallyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "luteone",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR121901"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR121901"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Reaction MNXR199996",
+      "substrates": [
+        {
+          "metabolite": "yaequinolone_j2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4e_2_methyl_6_methylidenenona_2_4_dienyl_quinol",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR199996"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR199996"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_yaequinolone_j1_yaequinolone-j1-to-luteone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "yaequinolone_j1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "yaequinolone-j1-to-luteone"
+      },
+      "note": "Shares Yaequinolone J1 with Yaequinolone J1 to luteone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:215148"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4e_2_methyl_6_methylidenenona_2_4_dienyl_quinol_quinolinone-b-to-penigequinolone-a",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4e_2_methyl_6_methylidenenona_2_4_dienyl_quinol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "quinolinone-b-to-penigequinolone-a"
+      },
+      "note": "Shares (4E)-2-methyl-6-methylidenenona-2,4-dienyl-quinolinone B with Quinolinone B to penigequinolone A.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1559867"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4e_2_methyl_6_methylidenenona_2_4_dienyl_quinol_quinolinone-b-to-penigequinolone-a-73999",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4e_2_methyl_6_methylidenenona_2_4_dienyl_quinol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "quinolinone-b-to-penigequinolone-a-73999"
+      },
+      "note": "Shares (4E)-2-methyl-6-methylidenenona-2,4-dienyl-quinolinone B with Quinolinone B to penigequinolone A.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1559867"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4e_2_methyl_6_methylidenenona_2_4_dienyl_quinol_yaequinolone-j1-to-luteone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4e_2_methyl_6_methylidenenona_2_4_dienyl_quinol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "yaequinolone-j1-to-luteone"
+      },
+      "note": "Shares (4E)-2-methyl-6-methylidenenona-2,4-dienyl-quinolinone B with Yaequinolone J1 to luteone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1559867"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_yaequinolone_e_quinolinone-b-to-penigequinolone-a",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "yaequinolone_e"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "quinolinone-b-to-penigequinolone-a"
+      },
+      "note": "Shares yaequinolone E with Quinolinone B to penigequinolone A.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:193077"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_yaequinolone_e_quinolinone-b-to-penigequinolone-a-73999",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "yaequinolone_e"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "quinolinone-b-to-penigequinolone-a-73999"
+      },
+      "note": "Shares yaequinolone E with Quinolinone B to penigequinolone A.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:193077"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_yaequinolone_e_yaequinolone-j1-to-luteone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "yaequinolone_e"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "yaequinolone-j1-to-luteone"
+      },
+      "note": "Shares yaequinolone E with Yaequinolone J1 to luteone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:193077"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_luteone_yaequinolone-j1-to-luteone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "luteone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "yaequinolone-j1-to-luteone"
+      },
+      "note": "Shares luteone with Yaequinolone J1 to luteone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM19114"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_yaequinolone_j2_yaequinolone-j1-to-luteone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "yaequinolone_j2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "yaequinolone-j1-to-luteone"
+      },
+      "note": "Shares Yaequinolone J2 with Yaequinolone J1 to luteone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:227445"
+          }
+        ]
+      }
+    }
+  ]
+}

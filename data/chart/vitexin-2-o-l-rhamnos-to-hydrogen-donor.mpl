@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway vitexin-2-o-l-rhamnos-to-hydrogen-donor "vitexin 2''-O-β-L-rhamnos… to hydrogen donor" {
-  spacing 284
+  spacing 340
 
   spine at 0,0 {
     vitexin_2_o_l_rhamnoside
@@ -18,37 +18,97 @@ pathway vitexin-2-o-l-rhamnos-to-hydrogen-donor "vitexin 2''-O-β-L-rhamnos… t
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_141 [2.1.1.141] +jasmonate +sam
-    methyl_jasmonate
+    <-> ec_2_1_1_84 [2.1.1.84] +3_4_5_6_tetrahydroxy_3_7_dimethoxyflavone +sam
+    3_4_5_trihydroxy_3_6_7_trimethoxyflavone
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_26 [2.1.1.26] +2_iodophenol +sam +hplus
-    1_iodo_2_methoxybenzene
+    <-> ec_2_1_1_69 [2.1.1.69] +5_hydroxyfurocoumarin +sam +hplus
+    5_methoxyfurocoumarin
   }
 
   branch from sam side left {
     sam
-    <-> ec_2_5_1_25 [2.5.1.25] +uridine_5_monophosphate_1 +5_s_methyl_5_thioadenosine +hplus
-    3_3_amino_3_carboxypropyl_uridine_5_phosphate_1
+    <-> ec_2_1_1_136 [2.1.1.136] +2_4_6_trichlorophenolate +sah
+    2_4_6_trichloroanisole
   }
 
   branch from sam side right {
     sam
-    <-> ec_2_1_1_301 [2.1.1.301] +l_alaniniumyl_group +sah +hplus
-    n_n_dimethyl_l_alanyl_group
+    <-> ec_2_1_1_8 [2.1.1.8] +histaminium +sah +hplus
+    n_methylhistaminium
   }
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> ec_1_1_99_31 [1.1.99.31] +s_mandelate +hydrogen_acceptor
-    phenylglyoxylate
+    <-> ec_1_21_99_5 [1.21.99.5] +trichloroethene +chloride +hydrogen_acceptor +hplus
+    tetrachloroethene
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> ec_1_14_99_59 [1.14.99.59] +tryptaminium +o2 +hydrogen_acceptor +h2o
-    4_hydroxytryptamine
+    <-> ec_1_1_99_27 [1.1.99.27] +r_pantolactone +hydrogen_acceptor
+    2_dehydropantolactone
+  }
+
+  branch from sam side left {
+    sam
+    <-> ec_2_5_1_24 [2.5.1.24] +n6_dimethylallyladenine +5_s_methyl_5_thioadenosine +hplus
+    discadenine
+  }
+
+  branch from sam side right {
+    sam
+    <-> ec_2_5_1_38 [2.5.1.38] +nocardicin_e +5_s_methyl_5_thioadenosine +hplus
+    isonocardicin_a
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_20 [2.1.1.20] +glycine +sam +hplus
+    sarcosine
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_128 [2.1.1.128] +rs_norcoclaurinium +sam +hplus
+    rs_coclaurinium
+  }
+
+  branch from methylcobalamin side left {
+    methylcobalamin
+    <-> . +sam +sah
+    cob_i_alamin
+  }
+
+  branch from methylcobalamin side right {
+    methylcobalamin
+    <-> . +l_tryptophan +cob_i_alamin +hplus
+    2_methyl_l_tryptophan
+  }
+
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> ec_1_14_99_38 [1.14.99.38] +cholesterol +hydrogen_donor +o2 +h2o
+    25_hydroxycholesterol
+  }
+
+  branch from hydrogen_acceptor side right {
+    hydrogen_acceptor
+    <-> ec_1_7_99_1 [1.7.99.1] +nh3 +h2o +hydrogen_donor +hplus
+    hydroxylamine
+  }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> ec_1_3_99_39 [1.3.99.39] +carotenoid_end_derivative +hydrogen_acceptor
+    carotenoid_end_group
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> ec_1_14_99_65 [1.14.99.65] +o_s_4_amino_l_phenylalanylpantetheine_4_phosphor +o2 +hydrogen_acceptor +h2o
+    o_s_2r_2_4_aminophenyl_l_serylpantetheine_4_phos
   }
 }

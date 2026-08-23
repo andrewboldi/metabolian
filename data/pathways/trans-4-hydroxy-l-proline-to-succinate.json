@@ -175,44 +175,6 @@
       "xrefs": {
         "metanetx": "MNXM9422"
       }
-    },
-    {
-      "id": "s_s_drim_8_en_11_yl_diphosphate",
-      "name": "(S,S)-drim-8-en-11-yl diphosphate",
-      "short": "(S,S)-drim-8-en-11-…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:231796"
-      }
-    },
-    {
-      "id": "d_mannitol",
-      "name": "D-mannitol",
-      "formula": "C6H14O6",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16899"
-      }
-    },
-    {
-      "id": "sporulositol_a",
-      "name": "Sporulositol A",
-      "formula": "C21H38O6",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:206556"
-      }
-    },
-    {
-      "id": "5_triphosphoadenylyl_2_5_adenosine",
-      "name": "5'-triphosphoadenylyl-(2'→5')-adenosine",
-      "short": "5'-triphosphoadenyl…",
-      "formula": "C20H23N10O19P4",
-      "charge": -5,
-      "xrefs": {
-        "chebi": "CHEBI:140294"
-      }
     }
   ],
   "enzymes": [
@@ -487,77 +449,181 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r6",
-      "name": "(S,S)-drim-8-en-11-yl diphosphate + D-mannitol = sporulositol A + diphosphate",
-      "equation": "(S,S)-drim-8-en-11-yl diphosphate + D-mannitol = sporulositol A + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "s_s_drim_8_en_11_yl_diphosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "d_mannitol",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "sporulositol_a",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:82587"
+      "id": "xt_trans_4_hydroxy_l_proline_coenzyme-q10-to-glutathionate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_4_hydroxy_l_proline"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "coenzyme-q10-to-glutathionate"
+      },
+      "note": "Shares trans-4-hydroxy-L-proline with coenzyme Q10 to glutathionate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:82587"
+            "db": "ChEBI",
+            "id": "CHEBI:58375"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "2 ATP = 5'-triphosphoadenylyl-(2'->5')-adenosine + diphosphate",
-      "equation": "2 ATP = 5'-triphosphoadenylyl-(2'->5')-adenosine + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "atp",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "5_triphosphoadenylyl_2_5_adenosine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:82599"
+      "id": "xt_trans_4_hydroxy_l_proline_l-proline-to-erythro-4-hydroxy-l-gluta",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_4_hydroxy_l_proline"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "l-proline-to-erythro-4-hydroxy-l-gluta"
+      },
+      "note": "Shares trans-4-hydroxy-L-proline with L-proline to erythro-4-hydroxy-L-gluta….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:82599"
+            "db": "ChEBI",
+            "id": "CHEBI:58375"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_4_hydroxy_l_proline_trans-4-hydroxy-l-proline-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_4_hydroxy_l_proline"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-4-hydroxy-l-proline-to-ammonium"
+      },
+      "note": "Shares trans-4-hydroxy-L-proline with trans-4-hydroxy-L-proline to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58375"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_1_pyrroline_5_carboxylate_alanyl-l-argininium-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_1_pyrroline_5_carboxylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alanyl-l-argininium-to-succinate"
+      },
+      "note": "Shares (S)-1-pyrroline-5-carboxylate with β-alanyl-L-argininium to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17388"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_1_pyrroline_5_carboxylate_gly-pro-to-l-glutamate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_1_pyrroline_5_carboxylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gly-pro-to-l-glutamate"
+      },
+      "note": "Shares (S)-1-pyrroline-5-carboxylate with Gly-Pro to L-glutamate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17388"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_1_pyrroline_5_carboxylate_l-prolinylglycine-to-l-glutamate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_1_pyrroline_5_carboxylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-prolinylglycine-to-l-glutamate"
+      },
+      "note": "Shares (S)-1-pyrroline-5-carboxylate with L-prolinylglycine to L-glutamate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17388"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_1_pyrroline_5_carboxylate_s-2-halocarboxylic-to-l-glutamyl-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_1_pyrroline_5_carboxylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2-halocarboxylic-to-l-glutamyl-phosphate"
+      },
+      "note": "Shares (S)-1-pyrroline-5-carboxylate with (S)-2-halocarboxylic… to L-γ-glutamyl phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17388"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3s_5s_carbapenam_3_carboxylate_3s-5s-carbapenam-3-carb-to-s-adenosyl-l-homocys",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3s_5s_carbapenam_3_carboxylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3s-5s-carbapenam-3-carb-to-s-adenosyl-l-homocys"
+      },
+      "note": "Shares (3S,5S)-carbapenam-3-carboxylate with (3S,5S)-carbapenam-3-carb… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:73939"
           }
         ]
       }

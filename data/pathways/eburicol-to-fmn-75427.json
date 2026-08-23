@@ -1,0 +1,385 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "eburicol-to-fmn-75427",
+  "name": "eburicol to FMN",
+  "category": "other",
+  "summary": "A 3-step route from eburicol to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:75427"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:70315"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "eburicol",
+      "name": "eburicol",
+      "formula": "C31H52O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:70315"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "32_hydroxyeburicol",
+      "name": "32-hydroxyeburicol",
+      "formula": "C31H52O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:194328"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "32_ketoeburicol",
+      "name": "32-ketoeburicol",
+      "formula": "C31H50O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:194329"
+      }
+    },
+    {
+      "id": "4_4_24_trimethyl_5alpha_cholesta_8_14_24_28_trie",
+      "name": "4,4,24-trimethyl-5alpha-cholesta-8,14,24(28)-triene-3beta-ol",
+      "short": "4,4,24-trimethyl-5a…",
+      "formula": "C30H48O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:194330"
+      }
+    },
+    {
+      "id": "formate",
+      "name": "Formate",
+      "formula": "CHO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15740"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "eburicol + reduced [NADPH--hemoprotein reductase] + O2 = 32-hydroxyeburicol + oxidized ...",
+      "equation": "eburicol + reduced [NADPH--hemoprotein reductase] + O2 = 32-hydroxyeburicol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "eburicol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "32_hydroxyeburicol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:75427"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:75427"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "32-hydroxyeburicol + reduced [NADPH--hemoprotein reductase] + O2 = 32-oxoeburicol + oxi...",
+      "equation": "32-hydroxyeburicol + reduced [NADPH--hemoprotein reductase] + O2 = 32-oxoeburicol + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "32_hydroxyeburicol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "32_ketoeburicol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:75431"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:75431"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "32-oxoeburicol + reduced [NADPH--hemoprotein reductase] + O2 = 14-demethyleburicol + fo...",
+      "equation": "32-oxoeburicol + reduced [NADPH--hemoprotein reductase] + O2 = 14-demethyleburicol + formate + oxidized [NADPH--hemoprotein reductase] + H2O + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "32_ketoeburicol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_4_24_trimethyl_5alpha_cholesta_8_14_24_28_trie",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:75435"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:75435"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_32_hydroxyeburicol_eburicol-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "32_hydroxyeburicol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "eburicol-to-fmn"
+      },
+      "note": "Shares 32-hydroxyeburicol with eburicol to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:194328"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_32_ketoeburicol_eburicol-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "32_ketoeburicol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "eburicol-to-fmn"
+      },
+      "note": "Shares 32-ketoeburicol with eburicol to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:194329"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_4_24_trimethyl_5alpha_cholesta_8_14_24_28_trie_6-o-acetyl-d-glucose-to-formyl-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_4_24_trimethyl_5alpha_cholesta_8_14_24_28_trie"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-o-acetyl-d-glucose-to-formyl-phosphate"
+      },
+      "note": "Shares 4,4,24-trimethyl-5alpha-cholesta-8,14,24(28)-triene-3beta-ol with 6-O-acetyl-D-glucose to formyl phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:194330"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_4_24_trimethyl_5alpha_cholesta_8_14_24_28_trie_6-o-acetyl-d-glucose-to-formyl-phosphate-18485",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_4_24_trimethyl_5alpha_cholesta_8_14_24_28_trie"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-o-acetyl-d-glucose-to-formyl-phosphate-18485"
+      },
+      "note": "Shares 4,4,24-trimethyl-5alpha-cholesta-8,14,24(28)-triene-3beta-ol with 6-O-acetyl-D-glucose to formyl phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:194330"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_4_24_trimethyl_5alpha_cholesta_8_14_24_28_trie_eburicol-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_4_24_trimethyl_5alpha_cholesta_8_14_24_28_trie"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "eburicol-to-fmn"
+      },
+      "note": "Shares 4,4,24-trimethyl-5alpha-cholesta-8,14,24(28)-triene-3beta-ol with eburicol to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:194330"
+          }
+        ]
+      }
+    }
+  ]
+}

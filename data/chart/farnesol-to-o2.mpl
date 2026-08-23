@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway farnesol-to-o2 "farnesol to O2" {
-  spacing 262
+  spacing 340
 
   spine at 0,0 {
     farnesol
@@ -26,14 +26,14 @@ pathway farnesol-to-o2 "farnesol to O2" {
 
   branch from nad side right {
     nad
-    <-> ec_1_3_1_119 [1.3.1.119] +nadh +h +3_4_6_trichlorocatechol
-    1s_2r_3_4_6_trichlorocyclohexa_3_5_diene_1_2_di
+    <-> ec_1_14_13_24 [1.14.13.24] +nadh +3_hydroxy_5_methyl_benzoate +h +o2 +h2o
+    3_methylgentisate
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +bisphenol_a +o2 +h2o
-    1_2_bis_4_hydroxyphenyl_propan_2_ol
+    <-> . +nadh +2_5_xylenol +h +o2 +h2o
+    5_hydroxymethyl_2_methylphenol
   }
 
   branch from 2e_6e_farnesal side right {
@@ -50,37 +50,127 @@ pathway farnesol-to-o2 "farnesol to O2" {
 
   branch from h side right {
     h
-    <-> . +dtdp +3_o_l_olivosyl_oleandolide +oleandolide
-    dtdp_l_olivose
+    <-> . +5_hydroxy_cmp +diphosphate +h2o
+    5_hydroxy_ctp
   }
 
   branch from h side left {
     h
-    <-> . +2_methylpropanoyl_coa +malonyl_coa +methylmalonyl_coa +nadph +nadp +6_8a_seco_6_8a_deoxy_5_oxoavermectin_1b_aglycon +coa +h2o
-    co2
+    <-> . +2_oxo_4_phenylbutyric_acid +co2
+    2_benzyl_3_oxobutanedioate
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_3_1_45 [1.3.1.45] +h +2_hydroxybiochanin_a +nadp
-    ferreirin
+    <-> . +9_hydroxy_aurachin_d +h +o2 +nadp +h2o
+    aurachin_re
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_14_13_22 [1.14.13.22] +2_hydroxycyclohexan_1_one +h +o2 +nadp +h2o
-    2_hydroxyhexano_6_lactone
+    <-> . +h +aurachin_d +o2 +nadp +h2o
+    aurachin_c
   }
 
   branch from o2 side right {
     o2
-    <-> . +amyrin
-    soyasapogenol_b
+    <-> . +l_leucine +2_oxoglutarate +succinate +4_hydroxy_l_leucine
+    co2
   }
 
   branch from o2 side left {
     o2
-    <-> . +dihydrokalafungin +h2o
-    5_deoxodihydrokalafungin
+    <-> . +2_oxoglutarate +l_threonine +co2 +succinate
+    threo_2_amino_3_4_dihydroxybutanoic_acid
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> .
+    6_hydro_nad
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> .
+    2_hydro_nad
+  }
+
+  branch from h side right {
+    h
+    <-> . +hydrogen_sulfide +co2
+    carbonothioic_o_o_acid
+  }
+
+  branch from h side left {
+    h
+    <-> . +dtdp_3_acetamido_3_6_dideoxy_alpha_d_glucose +coa +dtdp_3_amino_3_6_dideoxy_alpha_d_glucose
+    acetyl_coa
+  }
+
+  branch from nad side right {
+    nad
+    <-> . +nadh +h +3_5_xylenol +o2 +h2o
+    3_hydroxymethyl_5_methylphenol
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_90 [1.1.1.90] +nadh +h +5_hydroxymethyl_2_methylphenol
+    3_hydroxy_4_methylbenzaldehyde
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +malonyl_coa +s_methylmalonyl_coa +h +nadph +co2 +protomycinolide_iv +h2o
+    coa
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +tylosin +h +nadph
+    relomycin
+  }
+
+  branch from 2e_6e_farnesal side right {
+    2e_6e_farnesal
+    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +nadp
+    drimenol
+  }
+
+  branch from 2e_6e_farnesal side left {
+    2e_6e_farnesal
+    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +nadp
+    3r_6e_nerolidol
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +h +10e_12z_hexadeca_10_12_dienoate +nadp +h2o
+    bombykol
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +h +2_5_dihydroxybenzoate +nadp +h2o
+    2_5_dihydroxybenzaldehyde
+  }
+
+  branch from h2o2 side right {
+    h2o2
+    <-> ec_1_3_3_6 [1.3.3.6] +2_trans_6_trans_tridecadienoyl_coa +o2
+    6_trans_tridecenoyl_coa
+  }
+
+  branch from h2o2 side left {
+    h2o2
+    <-> ec_1_3_3_6 [1.3.3.6] +2_trans_5_cis_7_trans_tetradecatrienoyl_coa +o2
+    5_cis_7_trans_tetradecadienoyl_coa
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +2_oxoglutarate +3_4_5_trihydroxy_3_7_dimethoxyflavone +co2 +3_4_5_6_tetrahydroxy_3_7_dimethoxyflavone
+    succinate
   }
 }

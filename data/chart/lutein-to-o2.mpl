@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway lutein-to-o2 "lutein to O2" {
-  spacing 228
+  spacing 216
 
   spine at 0,0 {
     lutein
@@ -16,17 +16,5 @@ pathway lutein-to-o2 "lutein to O2" {
     o2
     <-> ec_1_13_11_71 [1.13.11.71] +5_6_epoxy_3_hydroxy_9_apo_beta_caroten_9_one +5_6_epoxy_3_hydroxy_12_apo_beta_caroten_12_al -o2
     9_cis_violaxanthin
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +h +methylarsonate
-    methylarsonous_acid
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +tyrindoxyl +h2o
-    tyrindoleninone
   }
 }

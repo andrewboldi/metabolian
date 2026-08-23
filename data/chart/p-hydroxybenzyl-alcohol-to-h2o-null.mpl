@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway p-hydroxybenzyl-alcohol-to-h2o-null "p-hydroxybenzyl alcohol to H2O" {
-  spacing 184
+  spacing 160
 
   spine at 0,0 {
     p_hydroxybenzyl_alcohol
@@ -14,29 +14,5 @@ pathway p-hydroxybenzyl-alcohol-to-h2o-null "p-hydroxybenzyl alcohol to H2O" {
     4_hydroxymandelonitrile
     <-> ec_3_2_1_21 [3.2.1.21] +glucose -h2o
     dhurrin
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    3_5_cyclic_amp
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +3_5_cyclic_gmp +phosphate +3_5_cyclic_gmp +h2o
-    atp
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    choline
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    cholate
   }
 }

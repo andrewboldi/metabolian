@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-atropinium-to-succinyl-coa "(S)-atropinium to succinyl-CoA" {
-  spacing 228
+  spacing 264
 
   spine at 0,0 {
     s_atropinium
@@ -18,25 +18,61 @@ pathway s-atropinium-to-succinyl-coa "(S)-atropinium to succinyl-CoA" {
 
   branch from succinate side left {
     succinate
-    <-> ec_2_8_3_5 [2.8.3.5] +3_oxo_monocarboxylic_acid_anion +succinyl_coa
-    3_oxoacyl_coa
+    <-> ec_2_8_3_20 [2.8.3.20] +r_malate +succinyl_coa
+    3r_3_carboxy_3_hydroxypropanoyl_coa
   }
 
   branch from succinate side right {
     succinate
-    <-> ec_1_14_11_20 [1.14.11.20] +3_hydroxy_16_methoxy_2_3_dihydrotabersoninium +akg +o2 +co2
-    11_o_demethyl_17_o_deacetylvindolinium
+    <-> . +l_lysinium +akg +o2 +co2
+    3s_3_hydroxy_l_lysine
   }
 
   branch from succinyl_coa side left {
     succinyl_coa
-    <-> ec_1_2_7_3 [1.2.7.3] +di_sulfido_diiron +akg +coa +co2 +hplus
-    di_sulfido_diiron
+    <-> . +serine +coa
+    o_succinyl_l_serinate
   }
 
   branch from succinyl_coa side right {
     succinyl_coa
-    <-> ec_2_3_1_117 [2.3.1.117] +s_2_3_4_5_tetrahydrodipicolinate +h2o +coa
-    l_2_succinylamino_6_oxoheptanedioate
+    <-> ec_2_3_1_109 [2.3.1.109] +ornithine +coa +hplus
+    n2_succinyl_l_ornithinate
+  }
+
+  branch from akg side left {
+    akg
+    <-> ec_2_6_1_54 [2.6.1.54] +pyridoxamine_5_phosphate +plp
+    d_glutamate
+  }
+
+  branch from akg side right {
+    akg
+    <-> . +n_4_carboxy_4_oxobutanoyl_l_ethylglycylglycine +h2o
+    n_2s_2_ammoniobutanoyl_glycinate
+  }
+
+  branch from succinate side left {
+    succinate
+    <-> . +ornithine +akg +o2 +co2
+    3s_3_hydroxy_l_ornithine
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> ec_1_14_11_46 [1.14.11.46] +2_aminoethyl_phosphonic_acid +akg +o2 +co2
+    1r_2_amino_1_hydroxyethyl_phosphonate
+  }
+
+  branch from succinyl_coa side left {
+    succinyl_coa
+    <-> . +h2o +adenosine_3_5_bismonophosphate +hplus
+    s_succinyl_4_phosphopantetheine
+  }
+
+  branch from succinyl_coa side right {
+    succinyl_coa
+    <-> ec_2_8_3_28 [2.8.3.28] +phenylsuccinate +succinate
+    2_phenylsuccinyl_coa
   }
 }

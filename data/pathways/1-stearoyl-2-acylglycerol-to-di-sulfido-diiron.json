@@ -112,43 +112,6 @@
       "xrefs": {
         "chebi": "CHEBI:87024"
       }
-    },
-    {
-      "id": "epothilone_d",
-      "name": "epothilone D",
-      "formula": "C27H41NO5S",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:29579"
-      }
-    },
-    {
-      "id": "epothilone_b",
-      "name": "epothilone B",
-      "formula": "C27H41NO6S",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:31550"
-      }
-    },
-    {
-      "id": "pheophorbide_a",
-      "name": "pheophorbide a",
-      "formula": "C35H34N4O5",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:58687"
-      }
-    },
-    {
-      "id": "red_chlorophyll_catabolite",
-      "name": "red chlorophyll catabolite",
-      "short": "red chlorophyll…",
-      "formula": "C35H36N4O7",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:58716"
-      }
     }
   ],
   "enzymes": [
@@ -178,13 +141,6 @@
       "name": "sn-1 acyl-lipid omega-3 desaturase (ferredoxin)",
       "ec": [
         "1.14.19.36"
-      ]
-    },
-    {
-      "id": "ec_1_14_15_17",
-      "name": "pheophorbide a oxygenase",
-      "ec": [
-        "1.14.15.17"
       ]
     }
   ],
@@ -416,107 +372,27 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "epothilone D + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = epothilone B + 2 oxidize...",
-      "equation": "epothilone D + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = epothilone B + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
-      "substrates": [
-        {
-          "metabolite": "epothilone_d",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "epothilone_b",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:47808"
+      "id": "xt_1_linoleoyl_2_acylglycerolipid_5-o-d-mycaminosyl-20-ox-to-s-adenosyl-l-homocyst",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_linoleoyl_2_acylglycerolipid"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "5-o-d-mycaminosyl-20-ox-to-s-adenosyl-l-homocyst"
+      },
+      "note": "Shares 1-linoleoyl-2-acylglycerolipid with 5-O-β-D-mycaminosyl-20-ox… to S-adenosyl-L-homocysteine.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:47808"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "pheophorbide a oxygenase",
-      "equation": "pheophorbide a + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = red chlorophyll catabolite + 2 oxidized [2Fe-2S]-[ferredoxin]",
-      "ec": "1.14.15.17",
-      "substrates": [
-        {
-          "metabolite": "pheophorbide_a",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "red_chlorophyll_catabolite",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_15_17"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:48140"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:48140"
+            "db": "ChEBI",
+            "id": "CHEBI:87010"
           }
         ]
       }

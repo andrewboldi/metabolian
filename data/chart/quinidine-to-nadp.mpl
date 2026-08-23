@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway quinidine-to-nadp "quinidine to NADP" {
-  spacing 188
+  spacing 152
 
   spine at 0,0 {
     quinidine
@@ -16,41 +16,5 @@ pathway quinidine-to-nadp "quinidine to NADP" {
     h
     <-> . +h2 +quinidinone +nadph -quinine -nadp
     quinidine
-  }
-
-  branch from h side left {
-    h
-    <-> . +2z_4e_2_hydroxy_6_oxo_6_sulfonatohexa_2_4_dieno +o2
-    2_3_dihydroxybenzenesulfonate
-  }
-
-  branch from h side right {
-    h
-    <-> . +sulfo_aldehydes +2_3_dihydroxybenzenesulfonate
-    o2
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> . +prefumagillin_aldehyde +o2 +nadp +h2o
-    fumagillin
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> . +erinacine_c +nadp +h
-    erinacine_b
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_5_1_19 [1.5.1.19] +l_asparagine +2_oxoglutarate +h +nadph +h2o
-    succinamopine
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +heliopine +h2o +h +l_glutamine +nadph
-    pyruvate
   }
 }

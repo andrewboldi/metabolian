@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 12-ht-or-m-vi-to-h2o "12-HT or M-VI,… to H2O" {
-  spacing 200
+  spacing 152
 
   spine at 0,0 {
     12_ht_or_m_vi_12_hydroxy_tacrolimus
@@ -14,53 +14,5 @@ pathway 12-ht-or-m-vi-to-h2o "12-HT or M-VI,… to H2O" {
     s_adenosyl_l_methionine
     <-> . +h +adp +13_o_desmethyl_tacrolimus_13_dmt_or_m_i +phosphate -13_o_desmethyl_tacrolimus_13_dmt_or_m_i -h2o
     atp
-  }
-
-  branch from h side left {
-    h
-    <-> . +lysopa_21_0_0_0 +coa +heneicosanoyl_coenzyme_a
-    sn_glycerol_3_phosphate
-  }
-
-  branch from h side right {
-    h
-    <-> . +lysopa_22_0_0_0 +coa +sn_glycerol_3_phosphate
-    docosanoyl_coa
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +alpha_d_ribose_1_phosphate +e_5_2_bromovinyl_uracil +phosphate
-    brivudine
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +2s_6r_10r_trimethyl_hendecanoyl_coa +h2o2
-    2s_6r_10r_trimethyl_2e_hendecenoyl_coa
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    hesperetin_7_o_glucuronide
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    hyocholic_acid_gamma_muricholate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +15z_tetracosenoate +h +cholesterol
-    cholest_5_en_3beta_yl_15z_tetracosenoate
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +all_cis_7_10_13_16_19_docosapentaenoate +h +cholesterol
-    cholesteryl_7z_10z_13z_16z_19z_docosapentaenoate
   }
 }

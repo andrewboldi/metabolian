@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-icosa-8-11-14-trienoyl-to-2e-8z-11z-14z-icosat "3-Icosa-8,11,14-trienoyl-… to (2E,8Z,11Z,14Z)-icosatetr…" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     3_icosa_8_11_14_trienoyl_coa
@@ -14,17 +14,5 @@ pathway 3-icosa-8-11-14-trienoyl-to-2e-8z-11z-14z-icosat "3-Icosa-8,11,14-trieno
     3r_8z_11z_14z_3_hydroxyicosatrienoyl_coa
     <-> . -h2o
     2e_8z_11z_14z_icosatetraenoyl_coa
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    nicotinic_d4_acid
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    nicotinamide
   }
 }

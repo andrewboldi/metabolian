@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dehydroprobetaenone-i-to-stemphyloxin-ii "dehydroprobetaenone I to stemphyloxin II" {
-  spacing 158
+  spacing 164
 
   spine at 0,0 {
     dehydroprobetaenone_i
@@ -20,5 +20,11 @@ pathway dehydroprobetaenone-i-to-stemphyloxin-ii "dehydroprobetaenone I to stemp
     betaenone_c
     <-> . +nadph +o2 +hplus +nadp +h2o
     stemphyloxin_i
+  }
+
+  branch from dehydroprobetaenone_i side right {
+    dehydroprobetaenone_i
+    <-> . +nadph +o2 +hplus +nadp +h2o
+    epoxybetaenone
   }
 }

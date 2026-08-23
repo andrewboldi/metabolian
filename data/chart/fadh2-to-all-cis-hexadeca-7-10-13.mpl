@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway fadh2-to-all-cis-hexadeca-7-10-13 "FADH2 to all-cis-hexadeca-7,10,13-…" {
-  spacing 200
+  spacing 152
 
   spine at 0,0 {
     fadh2
@@ -20,53 +20,5 @@ pathway fadh2-to-all-cis-hexadeca-7-10-13 "FADH2 to all-cis-hexadeca-7,10,13-…
     coa
     <-> . +7z_10z_13z_hexadecatrienoyl_coa +phytol -coa
     all_cis_hexadeca_7_10_13_trienoate_phytyl_ester
-  }
-
-  branch from fad side left {
-    fad
-    <-> . +fadh2 +sibiromycin_aglycon +h
-    5e_7s_8r_8_11_13_trihydroxy_12_methyl_5_propyli
-  }
-
-  branch from fad side right {
-    fad
-    <-> ec_1_14_19_9 [1.14.19.9] +fadh2 +5_nitroindole +h +o2 +bromide +h2o
-    3_bromo_5_nitroindole
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +3_5_7_trioxododecanoyl_coa
-    4_hydroxy_6_2_oxoheptyl_pyran_2_one
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +4_hydroxy_6_2_oxoheptyl_pyran_2_one
-    3_5_7_trioxododecanoyl_coa
-  }
-
-  branch from nad side left {
-    nad
-    <-> . +nadh +acetyl_coa +diphosphate +7_8_epoxy_4z_10z_hexadecadienoic_acid +h +amp +h2o2 +gamma_9_10_epode +coa +o2 +h2o
-    atp
-  }
-
-  branch from nad side right {
-    nad
-    <-> . +nadh +acetyl_coa +diphosphate +10_11_epoxy_4z_7z_hexadecadienoic_acid +h +amp +h2o2 +atp +coa +o2 +h2o
-    gamma_12_13_epode
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_5_1_23 [3.5.1.23] +sphing_4_enine +hexanoate +h
-    n_hexanoyl_d_erythro_sphingosine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_5_1_23 [3.5.1.23] +n_acetylsphingosine +h +acetate
-    sphing_4_enine
   }
 }

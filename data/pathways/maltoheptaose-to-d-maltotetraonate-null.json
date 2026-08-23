@@ -1,0 +1,555 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "maltoheptaose-to-d-maltotetraonate-null",
+  "name": "maltoheptaose to D-maltotetraonate",
+  "category": "redox-detox",
+  "summary": "A 3-step route from maltoheptaose to D-maltotetraonate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR130599"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:62010"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "maltoheptaose",
+      "name": "maltoheptaose",
+      "formula": "C42H72O36",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62010"
+      }
+    },
+    {
+      "id": "glucose",
+      "name": "D-Glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4167"
+      }
+    },
+    {
+      "id": "d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp",
+      "name": "α-D-Glcp-(1→4)-α-D-Glcp-(1→4)-α-D-Glcp-(1→4)-D-Glcp",
+      "short": "α-D-Glcp-(1→4)-α-D-…",
+      "formula": "C24H42O21",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:143180"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "d_maltotetraono_1_5_lactone",
+      "name": "D-maltotetraono-1,5-lactone",
+      "short": "D-maltotetraono-1,5…",
+      "formula": "C24H40O21",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:143185"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "d_maltotetraonate",
+      "name": "D-maltotetraonate",
+      "formula": "C24H41O22",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:143190"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nigerose",
+      "name": "nigerose",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:7570"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "cellobiosan",
+      "name": "cellobiosan",
+      "formula": "C12H20O10",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1132171"
+      }
+    },
+    {
+      "id": "levoglucosan",
+      "name": "levoglucosan",
+      "formula": "C6H10O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:30997"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_1_25",
+      "name": "4-alpha-glucanotransferase",
+      "ec": [
+        "2.4.1.25"
+      ],
+      "xrefs": {
+        "uniprot": "P35573"
+      }
+    },
+    {
+      "id": "ec_3_2_1_20",
+      "name": "alpha-glucosidase",
+      "ec": [
+        "3.2.1.20"
+      ],
+      "xrefs": {
+        "uniprot": "Q8TET4"
+      }
+    },
+    {
+      "id": "ec_3_2_1_21",
+      "name": "beta-glucosidase",
+      "ec": [
+        "3.2.1.21"
+      ],
+      "xrefs": {
+        "uniprot": "Q9H227"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "4-alpha-glucanotransferase",
+      "ec": "2.4.1.25",
+      "substrates": [
+        {
+          "metabolite": "maltoheptaose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_25"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR130599"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR130599"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "D-maltotetraose + O2 = D-maltotetraono-1,5-lactone + H2O2",
+      "equation": "D-maltotetraose + O2 = D-maltotetraono-1,5-lactone + H2O2",
+      "substrates": [
+        {
+          "metabolite": "d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_maltotetraono_1_5_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:59676"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59676"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "D-maltotetraono-1,5-lactone + H2O = D-maltotetraonate + H(+)",
+      "equation": "D-maltotetraono-1,5-lactone + H2O = D-maltotetraonate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "d_maltotetraono_1_5_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_maltotetraonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:59712"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59712"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "alpha-glucosidase",
+      "ec": "3.2.1.20",
+      "substrates": [
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nigerose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR192331"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR192331"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "beta-glucosidase",
+      "ec": "3.2.1.21",
+      "substrates": [
+        {
+          "metabolite": "cellobiosan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "levoglucosan",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR192837"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR192837"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_d_maltotetraono_1_5_lactone_maltoheptaose-to-d-maltotetraonate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_maltotetraono_1_5_lactone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "maltoheptaose-to-d-maltotetraonate"
+      },
+      "note": "Shares D-maltotetraono-1,5-lactone with maltoheptaose to D-maltotetraonate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:143185"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_maltotetraonate_maltoheptaose-to-d-maltotetraonate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_maltotetraonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "maltoheptaose-to-d-maltotetraonate"
+      },
+      "note": "Shares D-maltotetraonate with maltoheptaose to D-maltotetraonate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:143190"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cellobiosan_d-glucopyranose-to-1-o-galloyl-beta-d-glucose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cellobiosan"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glucopyranose-to-1-o-galloyl-beta-d-glucose"
+      },
+      "note": "Shares cellobiosan with D-glucopyranose to 1-O-galloyl-beta-D-glucose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1132171"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_levoglucosan_d-glucopyranose-to-1-o-galloyl-beta-d-glucose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "levoglucosan"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glucopyranose-to-1-o-galloyl-beta-d-glucose"
+      },
+      "note": "Shares levoglucosan with D-glucopyranose to 1-O-galloyl-beta-D-glucose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:30997"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_levoglucosan_diphosphate-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "levoglucosan"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-phosphate"
+      },
+      "note": "Shares levoglucosan with diphosphate to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:30997"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_levoglucosan_levoglucosan-to-3-ammonio-2-3-dideoxy-scy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "levoglucosan"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "levoglucosan-to-3-ammonio-2-3-dideoxy-scy"
+      },
+      "note": "Shares levoglucosan with levoglucosan to 3-ammonio-2,3-dideoxy-scy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:30997"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_levoglucosan_levoglucosan-to-3-ammonio-2-3-dideoxy-scy-63428",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "levoglucosan"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "levoglucosan-to-3-ammonio-2-3-dideoxy-scy-63428"
+      },
+      "note": "Shares levoglucosan with levoglucosan to 3-ammonio-2,3-dideoxy-scy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:30997"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_levoglucosan_p-nitrophenyl-to-2-hexadecanoyl-1-tetradec-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "levoglucosan"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "p-nitrophenyl-to-2-hexadecanoyl-1-tetradec-null"
+      },
+      "note": "Shares levoglucosan with p-Nitrophenyl… to 2-hexadecanoyl-1-tetradec….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:30997"
+          }
+        ]
+      }
+    }
+  ]
+}

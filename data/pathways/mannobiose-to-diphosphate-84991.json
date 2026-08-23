@@ -1,0 +1,495 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "mannobiose-to-diphosphate-84991",
+  "name": "mannobiose to diphosphate",
+  "category": "other",
+  "summary": "A 3-step route from mannobiose to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:84991"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:25164"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "mannobiose",
+      "name": "mannobiose",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:25164"
+      }
+    },
+    {
+      "id": "d_manp_1_4_d_glcp",
+      "name": "β-D-Manp-(1→4)-D-Glcp",
+      "short": "β-D-Manp-(1→4)-D-Gl…",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64351"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "d_mannose_1_phosphate",
+      "name": "α-D-mannose 1-phosphate",
+      "short": "α-D-mannose 1-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58409"
+      }
+    },
+    {
+      "id": "glucose",
+      "name": "D-Glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4167"
+      }
+    },
+    {
+      "id": "gtp",
+      "name": "GTP",
+      "formula": "C10H12N5O14P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:37565"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "gdp_d_mannose",
+      "name": "GDP-α-D-mannose",
+      "formula": "C16H23N5O16P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57527"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_1_281",
+      "name": "4-O-beta-D-mannosyl-D-glucose phosphorylase",
+      "ec": [
+        "2.4.1.281"
+      ]
+    },
+    {
+      "id": "ec_2_7_7_13",
+      "name": "mannose-1-phosphate guanylyltransferase",
+      "ec": [
+        "2.7.7.13"
+      ],
+      "xrefs": {
+        "uniprot": "Q9Y5P6"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "D-mannobiose = beta-D-mannosyl-(1->4)-D-glucose",
+      "equation": "D-mannobiose = beta-D-mannosyl-(1->4)-D-glucose",
+      "substrates": [
+        {
+          "metabolite": "mannobiose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_manp_1_4_d_glcp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:84991"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84991"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "4-O-beta-D-mannosyl-D-glucose phosphorylase",
+      "equation": "beta-D-mannosyl-(1->4)-D-glucose + phosphate = alpha-D-mannose 1-phosphate + D-glucose",
+      "ec": "2.4.1.281",
+      "substrates": [
+        {
+          "metabolite": "d_manp_1_4_d_glcp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_mannose_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_281"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:32531"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32531"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "mannose-1-phosphate guanylyltransferase",
+      "equation": "alpha-D-mannose 1-phosphate + GTP + H(+) = GDP-alpha-D-mannose + diphosphate",
+      "ec": "2.7.7.13",
+      "substrates": [
+        {
+          "metabolite": "d_mannose_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gtp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gdp_d_mannose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_7_13"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:15229"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15229"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_mannobiose_alpha-d-mannose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "mannobiose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-mannose-to-h2o"
+      },
+      "note": "Shares mannobiose with alpha-D-mannose… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:25164"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_mannobiose_alpha-d-mannose-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "mannobiose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-mannose-to-h2o-null"
+      },
+      "note": "Shares mannobiose with alpha-D-mannose… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:25164"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_mannobiose_beta-d-ribosylnicotinate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "mannobiose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-d-ribosylnicotinate-to-h2o"
+      },
+      "note": "Shares mannobiose with beta-D-ribosylnicotinate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:25164"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_mannobiose_mannobiose-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "mannobiose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "mannobiose-to-diphosphate"
+      },
+      "note": "Shares mannobiose with mannobiose to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:25164"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_mannobiose_propanoate-to-h2o2-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "mannobiose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "propanoate-to-h2o2-null"
+      },
+      "note": "Shares mannobiose with propanoate to H2O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:25164"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_manp_1_4_d_glcp_alpha-d-mannose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_manp_1_4_d_glcp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-mannose-to-h2o"
+      },
+      "note": "Shares β-D-Manp-(1→4)-D-Glcp with alpha-D-mannose… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64351"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_manp_1_4_d_glcp_alpha-d-mannose-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_manp_1_4_d_glcp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-mannose-to-h2o-null"
+      },
+      "note": "Shares β-D-Manp-(1→4)-D-Glcp with alpha-D-mannose… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64351"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_manp_1_4_d_glcp_gdp-to-d-mannose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_manp_1_4_d_glcp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gdp-to-d-mannose"
+      },
+      "note": "Shares β-D-Manp-(1→4)-D-Glcp with GDP to α-D-mannose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64351"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_manp_1_4_d_glcp_gdp-to-d-mannose-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_manp_1_4_d_glcp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gdp-to-d-mannose-null"
+      },
+      "note": "Shares β-D-Manp-(1→4)-D-Glcp with GDP to α-D-mannose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64351"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_manp_1_4_d_glcp_mannobiose-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_manp_1_4_d_glcp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "mannobiose-to-diphosphate"
+      },
+      "note": "Shares β-D-Manp-(1→4)-D-Glcp with mannobiose to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64351"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_manp_1_4_d_glcp_p-nitrophenyl-alpha-l-rha-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_manp_1_4_d_glcp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "p-nitrophenyl-alpha-l-rha-to-h2o"
+      },
+      "note": "Shares β-D-Manp-(1→4)-D-Glcp with p-nitrophenyl-alpha-L-rha… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64351"
+          }
+        ]
+      }
+    }
+  ]
+}

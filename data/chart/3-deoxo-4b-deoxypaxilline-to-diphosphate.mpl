@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-deoxo-4b-deoxypaxilline-to-diphosphate "3-Deoxo-4b-deoxypaxilline to diphosphate" {
-  spacing 200
+  spacing 284
 
   spine at 0,0 {
     3_deoxo_4b_deoxypaxilline
@@ -18,51 +18,24 @@ pathway 3-deoxo-4b-deoxypaxilline-to-diphosphate "3-Deoxo-4b-deoxypaxilline to d
     20_21_diprenylterpendole_c
   }
 
-  branch from terpendole_i side left {
-    terpendole_i
-    <-> . +diphosphate +dimethylallyl_diphosphate
-    1s_2r_5s_7s_8r_9r_11s_12s_15s_7_2_hydroxypropan
-  }
 
-  branch from nadp side right {
-    nadp
-    <-> . +lambertine +h +nadph
-    r_canadine
-  }
 
-  branch from nadp side left {
-    nadp
-    <-> . +5_10_methylene_tetrahydromethanopterin_iminium_f +h +nadph
-    5_10_methenyl_5_6_7_8_tetrahydromethanopterin
-  }
 
-  branch from h2o side right {
-    h2o
-    <-> . +11_dehydro_15_oxo_spinosyn_macrolactone
-    15_oxo_spinosyn_macrolactone
-  }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_3_4_19_13 [3.4.19.13] +l_glutamate +s_4_hydroxy_nonenal_3_yl_l_cysteinylglycine
-    3_glutathion_s_yl_4_hydroxynonanal
-  }
 
-  branch from terpendole_j side right {
-    terpendole_j
-    <-> . +dimethylallyl_diphosphate +diphosphate
-    20_21_diprenylterpendole_j
-  }
 
-  branch from diphosphate side left {
-    diphosphate
-    <-> . +1_2_amino_7_methyl_4_oxo_7_8_dihydro_3h_pteridi +5_phospho_alpha_d_ribose_1_diphosphate
-    1_2_amino_7_methyl_4_oxo_7_8_dihydro_3h_pteridi
-  }
 
-  branch from diphosphate side right {
-    diphosphate
-    <-> . +curcumene
-    2e_6e_farnesyl_diphosphate
-  }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

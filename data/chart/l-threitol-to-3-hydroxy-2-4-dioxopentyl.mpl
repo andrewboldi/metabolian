@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-threitol-to-3-hydroxy-2-4-dioxopentyl "L-threitol to 3-hydroxy-2,4-dioxopentyl…" {
-  spacing 274
+  spacing 262
 
   spine at 0,0 {
     l_threitol
@@ -22,17 +22,5 @@ pathway l-threitol-to-3-hydroxy-2-4-dioxopentyl "L-threitol to 3-hydroxy-2,4-dio
     l_erythrulose_1_phosphate
     <-> ec_4_1_1_121 [4.1.1.121] +hplus +co2
     3_oxoisoapionate_4_phosphate
-  }
-
-  branch from formaldehyde side right {
-    formaldehyde
-    <-> . +s_reticulinium +akg +o2 +succinate +co2
-    s_6_o_demethylreticuline
-  }
-
-  branch from formaldehyde side left {
-    formaldehyde
-    <-> . +n1_methyladenosine_5_monophosphate_1 +akg +o2 +succinate +co2
-    adenosine_5_monophosphate_1
   }
 }

@@ -16,15 +16,15 @@ pathway n-acetylsphingosine-to-linoleate "N-acetylsphingosine to linoleate" {
     1_acyl_sn_glycero_3_phosphoethanolamine
   }
 
-  branch from linoleate side left {
-    linoleate
-    <-> . +1_stearoyl_2_linoleoyl_sn_glycerol +h2o +hplus
-    1_stearoyl_sn_glycerol
+  branch from linoleoyl_coa side left {
+    linoleoyl_coa
+    <-> . +fad +hplus +fadh2
+    2e_9z_12z_octadecatrienoyl_coa
   }
 
-  branch from linoleate side right {
-    linoleate
-    <-> . +o2
-    13_hpode
+  branch from linoleoyl_coa side right {
+    linoleoyl_coa
+    <-> . +1_10z_heptadecenoyl_sn_glycero_3_phosphoethanola +coa
+    1_10z_heptadecenoyl_2_linoleoyl_sn_glycero_3_pho
   }
 }

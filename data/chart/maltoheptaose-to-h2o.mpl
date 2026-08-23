@@ -4,71 +4,99 @@
 # edit the generator, not this file.
 
 pathway maltoheptaose-to-h2o "maltoheptaose to H2O" {
-  spacing 206
+  spacing 280
 
   spine at 0,0 {
     maltoheptaose
-    <-> . +h2o -beta_d_fructose
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
-    <-> . +h2o -d_glucose
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
-    <-> . +h2o -d_glucose
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp
-    <-> ec_3_2_1_1 [3.2.1.1] +h +4_nitrophenol -h2o
-    p_nitrophenylmaltotetraoside
-  }
-
-  branch from d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g side left {
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
-    <-> ec_2_4_1_25 [2.4.1.25] +glucose +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
-    d_maltose
-  }
-
-  branch from d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g side right {
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
-    <-> . +h +adp +phosphate +h2o
-    atp
-  }
-
-  branch from beta_d_fructose side left {
-    beta_d_fructose
-    <-> . +maltoheptaose +h2o
-    maltononaose
-  }
-
-  branch from beta_d_fructose side right {
-    beta_d_fructose
-    <-> . +sucrose +phosphate
+    <-> ec_2_4_1_1 [2.4.1.1] +phosphate -maltohexaose
     d_glucopyranose_1_phosphate
+    <-> ec_2_7_1_106 [2.7.1.106] +glyceric_acid_1_3_biphosphate -h -2r_3_phosphoglycerate
+    glucose_1_6_bisphosphate
+    <-> ec_4_2_1_11 [4.2.1.11] +2r_3_phosphoglycerate -h2o
+    phosphoenolpyruvate
   }
 
-  branch from d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g side left {
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
-    <-> . +h +phosphate +atp +h2o
-    adp
+  branch from h side left {
+    h
+    <-> . +prostaglandin_e2
+    11_pge2
   }
 
-  branch from d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g side right {
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
-    <-> ec_3_2_1_20 [3.2.1.20] +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g +h2o
-    glucose
+  branch from h side right {
+    h
+    <-> . +5z_8z_11z_14z_eicosatetraenoate +o2 +h2o +h2o2
+    11_hete
   }
 
-  branch from d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp side left {
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp
-    <-> . +glucose +h2o
-    d_glcp_1_4_d_glcp_1_4_d_glcp
+  branch from phosphoenolpyruvate side left {
+    phosphoenolpyruvate
+    <-> . +beta_d_fructose +pyruvate
+    d_fructose_1_phosphate
   }
 
-  branch from h2o side right {
-    h2o
-    <-> ec_3_5_1_6 [3.5.1.6] +co2 +alpha_fluoro_beta_alanine +nh4 +h
-    alpha_fluoro_beta_ureidopropionic_acid
+  branch from phosphoenolpyruvate side right {
+    phosphoenolpyruvate
+    <-> . +galactitol +pyruvate
+    galactitol_1_phosphate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_2_9 [3.2.2.9] +s_adenosyl_l_homocysteine +s_ribosyl_l_homocysteine
-    adenine
+    <-> . +thromboxane_a1 +h
+    thromboxane_b1
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +13s_hydroperoxy_9z_11e_octadecadienoate
+    9_12_13_trihome
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +h +adp +atorvastatin_lactone_ether_glucuronide_g3 +atorvastatin_lactone_ether_glucuronide_g3 +h2o
+    atp
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    5_r_hete
+  }
+
+  branch from h side left {
+    h
+    <-> . +12s_hydroxy_5z_8z_10e_14z_eicosatetraenoate +nadp +nadph
+    12_oxo_5z_8z_10e_14z_eicosatetraenoate
+  }
+
+  branch from h side right {
+    h
+    <-> . +leukotriene_d4
+    11_trans_ltd4
+  }
+
+  branch from phosphoenolpyruvate side left {
+    phosphoenolpyruvate
+    <-> . +beta_d_mannose_6_phosphate +pyruvate +h
+    d_mannopyranose
+  }
+
+  branch from phosphoenolpyruvate side right {
+    phosphoenolpyruvate
+    <-> . +2_ammonio_2_deoxy_d_galactopyranose +d_galactosamine_6_phosphate
+    pyruvate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +delta_17_6_keto_prostaglandin_f1alpha
+    pgi3
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +thromboxane_b3
+    txa3
   }
 }

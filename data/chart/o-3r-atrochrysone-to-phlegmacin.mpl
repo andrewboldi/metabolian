@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway o-3r-atrochrysone-to-phlegmacin "O-((3R)-atrochrysone… to phlegmacin" {
-  spacing 220
+  spacing 208
 
   spine at 0,0 {
     o_3r_atrochrysone_carboxylpantetheine_4_phosphor
@@ -16,17 +16,5 @@ pathway o-3r-atrochrysone-to-phlegmacin "O-((3R)-atrochrysone… to phlegmacin" 
     r_torosachrysone
     <-> ec_1_11_2_7 [1.11.2.7] +h2o2 -h2o -hplus
     phlegmacin
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +picrinine +sam +hplus
-    ervincine
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +perivine +sam +hplus
-    vobasine
   }
 }

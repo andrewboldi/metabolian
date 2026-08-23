@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-lyxonate-to-h2o "L-lyxonate to H2O" {
-  spacing 222
+  spacing 186
 
   spine at 0,0 {
     l_lyxonate
@@ -16,45 +16,9 @@ pathway l-lyxonate-to-h2o "L-lyxonate to H2O" {
     atp
   }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_2_3_1_219 [2.3.1.219] +trans_4_coumaroyl_coa +p_coumaroyl_diketide_coa +co2 +h +coa
-    bisdemethoxycurcumin
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_2_3_1_217 [2.3.1.217] +e_feruloyl_coa +p_coumaroyl_diketide_coa +co2 +h +coa
-    demethoxycurcumin
-  }
-
   branch from aldehydo_d_xylose side left {
     aldehydo_d_xylose
     <-> ec_5_3_1_5 [5.3.1.5]
     d_xylulofuranose
-  }
-
-  branch from o2 side right {
-    o2
-    <-> ec_1_13_12_22 [1.13.12.22] +nogalonic_acid +h2o
-    12_deoxynogalonic_acid
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +deoxyviolaceinate +h +deoxyviolacein +h2o
-    co2
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_6_3_1_8 [6.3.1.8] +spermidine +glutathione +h +adp +phosphate
-    glutathionylspermidine
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_2_7_1_47 [2.7.1.47] +lyxose +h +adp
-    l_ribulose_5_phosphate
   }
 }

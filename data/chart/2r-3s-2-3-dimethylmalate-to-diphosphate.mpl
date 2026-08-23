@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2r-3s-2-3-dimethylmalate-to-diphosphate "(2R,3S)-2,3-dimethylmalate to diphosphate" {
-  spacing 312
+  spacing 340
 
   spine at 0,0 {
     2r_3s_2_3_dimethylmalate
@@ -38,20 +38,20 @@ pathway 2r-3s-2-3-dimethylmalate-to-diphosphate "(2R,3S)-2,3-dimethylmalate to d
 
   branch from propionyl_coa side right {
     propionyl_coa
-    <-> ec_2_3_3_11 [2.3.3.11] +glyoxylate +h2o +coa +hplus
-    2_hydroxyglutarate
+    <-> ec_2_3_1_176 [2.3.1.176] +choloyl_coa +coa
+    thca_24oxo_coa
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_6_3_1_1 [6.3.1.1] +aspartate +nh3 +atp +amp +hplus
+    <-> ec_6_3_5_4 [6.3.5.4] +aspartate +glutamine +atp +h2o +glutamate +amp +hplus
     l_asparagine
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_75 [4.2.3.75] +fpp
-    germacrene_d
+    <-> ec_6_1_1_7 [6.1.1.7] +amp_3_end_1 +alanine +atp +amp
+    3_l_alanyl_adenylyl_zwitterionic_group
   }
 
   branch from orotate side left {
@@ -64,5 +64,65 @@ pathway 2r-3s-2-3-dimethylmalate-to-diphosphate "(2R,3S)-2,3-dimethylmalate to d
     orotate
     <-> . +dihydroorotate +hydrogen_acceptor
     hydrogen_donor
+  }
+
+  branch from 2r_3s_2_3_dimethylmalate side left {
+    2r_3s_2_3_dimethylmalate
+    <-> ec_4_2_1_85 [4.2.1.85] +h2o
+    dimethylmaleate
+  }
+
+  branch from propionate side right {
+    propionate
+    <-> . +nad +h2o +nadh +hplus
+    propanal
+  }
+
+  branch from propionate side left {
+    propionate
+    <-> . +propionamide +h2o
+    nh3
+  }
+
+  branch from propionyl_coa side right {
+    propionyl_coa
+    <-> ec_2_3_3_11 [2.3.3.11] +glyoxylate +h2o +coa +hplus
+    2_hydroxyglutarate
+  }
+
+  branch from propionyl_coa side left {
+    propionyl_coa
+    <-> ec_2_1_3_1 [2.1.3.1] +s_methylmalonyl_coa +pyruvate
+    oxaloacetate
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_2_5_1_58 [2.5.1.58] +l_cysteine +fpp
+    s_2e_6e_farnesyl_l_cysteine
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_2_7_7_39 [2.7.7.39] +sn_glycerol_3_phosphate +ctp +hplus
+    2r_cdp_glycerol
+  }
+
+  branch from omp side right {
+    omp
+    <-> ec_4_1_1_23 [4.1.1.23] +hplus +co2
+    ump
+  }
+
+  branch from orotate side left {
+    orotate
+    <-> ec_1_3_5_2 [1.3.5.2] +dihydroorotate +ubiquinone_8
+    ubiquinol_8
+  }
+
+  branch from orotate side right {
+    orotate
+    <-> ec_1_3_5_2 [1.3.5.2] +dihydroorotate +1_4_benzoquinones
+    hydroquinones
   }
 }

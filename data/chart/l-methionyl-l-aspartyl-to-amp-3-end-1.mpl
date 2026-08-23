@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-methionyl-l-aspartyl-to-amp-3-end-1 "L-methionyl-L-aspartyl… to AMP 3'-end(1−)" {
-  spacing 294
+  spacing 306
 
   spine at 0,0 {
     l_methionyl_l_aspartyl_zwitterionic
@@ -24,13 +24,25 @@ pathway l-methionyl-l-aspartyl-to-amp-3-end-1 "L-methionyl-L-aspartyl… to AMP 
 
   branch from amp_3_end_1 side right {
     amp_3_end_1
-    <-> ec_2_3_2_6 [2.3.2.6] +l_argininiumyl_2_group +3_l_leucyl_adenylyl_zwitterionic_group +hplus
-    l_leucyl_l_arginyl_2_group
+    <-> . +3_l_seryl_adenylyl_1_group +h2o
+    serine
   }
 
   branch from amp_3_end_1 side left {
     amp_3_end_1
-    <-> ec_3_1_1_96 [3.1.1.96] +3_glycyladenylyl_zwitterionic_group +h2o +hplus
-    glycine
+    <-> . +l_lysyl_5_amp +amp +hplus
+    3_l_lysyl_adenylyl_1_group
+  }
+
+  branch from 3_l_leucyl_adenylyl_zwitterionic_group side right {
+    3_l_leucyl_adenylyl_zwitterionic_group
+    <-> . +acetyl_coa +coa +hplus
+    3_n_acetyl_l_leucyl_adenylyl
+  }
+
+  branch from amp_3_end_1 side left {
+    amp_3_end_1
+    <-> . +3_n_acetylglycyl_adenylyl +h2o +hplus
+    n_acetylglycinate
   }
 }

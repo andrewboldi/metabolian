@@ -118,6 +118,34 @@
       "xrefs": {
         "chebi": "CHEBI:57945"
       }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H30N9O15P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57692"
+      }
+    },
+    {
+      "id": "trans_2_hexacosenoyl_coa",
+      "name": "trans-2-hexacosenoyl-CoA",
+      "short": "trans-2-hexacosenoy…",
+      "formula": "C47H80N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:74281"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58307"
+      }
     }
   ],
   "enzymes": [],
@@ -251,6 +279,205 @@
           {
             "db": "Rhea",
             "id": "RHEA:85339"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "hexacosanoyl-CoA + oxidized [electron-transfer flavoprotein] + H(+) = (2E)-hexacosenoyl...",
+      "equation": "hexacosanoyl-CoA + oxidized [electron-transfer flavoprotein] + H(+) = (2E)-hexacosenoyl-CoA + reduced [electron-transfer flavoprotein]",
+      "substrates": [
+        {
+          "metabolite": "hexacosanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_2_hexacosenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:48216"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48216"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_hexacosanoyl_coa_1-6-anhydro-n-acetyl-mu-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hexacosanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-6-anhydro-n-acetyl-mu-to-diphosphate"
+      },
+      "note": "Shares hexacosanoyl-CoA with 1,6-anhydro-N-acetyl-β-mu… to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64868"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hexacosanoyl_coa_3s-3-hydroxytetracosano-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hexacosanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3s-3-hydroxytetracosano-to-fmn"
+      },
+      "note": "Shares hexacosanoyl-CoA with (3S)-3-hydroxytetracosano… to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64868"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hexacosanoyl_coa_d-allothreonine-to-l-methionine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hexacosanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-allothreonine-to-l-methionine"
+      },
+      "note": "Shares hexacosanoyl-CoA with D-allothreonine to L-methionine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64868"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hexacosanoyl_coa_n-dodecanoylphytosphingos-to-n-2-hydroxyhexacosa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hexacosanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-dodecanoylphytosphingos-to-n-2-hydroxyhexacosa"
+      },
+      "note": "Shares hexacosanoyl-CoA with N-dodecanoylphytosphingos… to N-(2-hydroxyhexacosanyl)-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64868"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_oxo_octacosanoyl_coa_3s-3-hydroxytetracosano-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_oxo_octacosanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3s-3-hydroxytetracosano-to-fmn"
+      },
+      "note": "Shares 3-oxo-octacosanoyl-CoA with (3S)-3-hydroxytetracosano… to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:73976"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_3_hydroxyoctacosanoyl_coa_r-3-hydroxyoctacosanoyl-to-n-octacosanoylsphing",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_3_hydroxyoctacosanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-3-hydroxyoctacosanoyl-to-n-octacosanoylsphing"
+      },
+      "note": "Shares (R)-3-hydroxyoctacosanoyl-CoA with (R)-3-hydroxyoctacosanoyl… to N-octacosanoylsphinganine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76382"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_2_hexacosenoyl_coa_3s-3-hydroxytetracosano-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_2_hexacosenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3s-3-hydroxytetracosano-to-fmn"
+      },
+      "note": "Shares trans-2-hexacosenoyl-CoA with (3S)-3-hydroxytetracosano… to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74281"
           }
         ]
       }

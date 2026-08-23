@@ -1,0 +1,487 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "aldehydo-d-ribose-to-l-erythrulose-1-phosphate",
+  "name": "aldehydo-D-ribose… to L-erythrulose 1-phosphate",
+  "category": "other",
+  "summary": "A 3-step route from aldehydo-D-ribose 5-phosphate to L-erythrulose 1-phosphate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR144325"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "aldehydo_d_ribose_5_phosphate",
+      "name": "aldehydo-D-ribose 5-phosphate",
+      "short": "aldehydo-D-ribose…",
+      "formula": "C5H9O8P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1363911"
+      }
+    },
+    {
+      "id": "l_xylulose",
+      "name": "L-xylulose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1371095"
+      }
+    },
+    {
+      "id": "d_sedoheptulose_7_phosphate",
+      "name": "D-sedoheptulose 7-phosphate",
+      "short": "D-sedoheptulose 7-P",
+      "formula": "C7H13O10P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM733314"
+      }
+    },
+    {
+      "id": "glyceraldehyde",
+      "name": "glyceraldehyde",
+      "formula": "C3H6O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM8672"
+      }
+    },
+    {
+      "id": "alpha_d_ribofuranose_5_phosphate",
+      "name": "alpha-D-ribofuranose 5-phosphate",
+      "short": "alpha-D-ribofuranos…",
+      "formula": "C5H11O8P",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1363910"
+      }
+    },
+    {
+      "id": "octulose_8_phosphate",
+      "name": "octulose 8-phosphate",
+      "formula": "C8H17O11P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:134365"
+      }
+    },
+    {
+      "id": "d_erythrose_4_phosphate",
+      "name": "D-erythrose 4-phosphate",
+      "short": "D-erythrose 4-P",
+      "formula": "C4H7O7P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM258"
+      }
+    },
+    {
+      "id": "l_erythrulose_1_phosphate",
+      "name": "L-erythrulose 1-phosphate",
+      "short": "L-erythrulose 1-P",
+      "formula": "C4H7O7P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM4635"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_2_1_1",
+      "name": "transketolase",
+      "ec": [
+        "2.2.1.1"
+      ],
+      "xrefs": {
+        "uniprot": "P51854"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "transketolase",
+      "ec": "2.2.1.1",
+      "substrates": [
+        {
+          "metabolite": "aldehydo_d_ribose_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_xylulose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_sedoheptulose_7_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glyceraldehyde",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_2_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR144325"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR144325"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR185846",
+      "substrates": [
+        {
+          "metabolite": "alpha_d_ribofuranose_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_sedoheptulose_7_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "octulose_8_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_erythrose_4_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR185846"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR185846"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR204687",
+      "substrates": [
+        {
+          "metabolite": "d_erythrose_4_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_erythrulose_1_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR204687"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR204687"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_l_xylulose_d-arabinitol-to-l-arabinitol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_xylulose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-arabinitol-to-l-arabinitol"
+      },
+      "note": "Shares L-xylulose with D-arabinitol to L-arabinitol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371095"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_glyceraldehyde_2-nitro-5-phenylacetyl-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "glyceraldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-nitro-5-phenylacetyl-to-h2o"
+      },
+      "note": "Shares glyceraldehyde with 2-Nitro-5-[(Phenylacetyl)… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM8672"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_glyceraldehyde_co2-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "glyceraldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "co2-to-nad"
+      },
+      "note": "Shares glyceraldehyde with CO2 to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM8672"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_glyceraldehyde_d-glycero-alpha-d-manno-h-to-nadp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "glyceraldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glycero-alpha-d-manno-h-to-nadp"
+      },
+      "note": "Shares glyceraldehyde with D-glycero-alpha-D-manno-h… to NADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM8672"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_glyceraldehyde_d-mannonate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "glyceraldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-mannonate-to-h2o"
+      },
+      "note": "Shares glyceraldehyde with D-mannonate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM8672"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_glyceraldehyde_nadh-to-sn-glycerol-3-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "glyceraldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-sn-glycerol-3-phosphate"
+      },
+      "note": "Shares glyceraldehyde with NADH to sn-glycerol 3-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM8672"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_glyceraldehyde_r-glycerate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "glyceraldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-glycerate-to-h2o"
+      },
+      "note": "Shares glyceraldehyde with (R)-glycerate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM8672"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_octulose_8_phosphate_alpha-d-ribofuranose-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "octulose_8_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-ribofuranose-to-phosphate"
+      },
+      "note": "Shares octulose 8-phosphate with alpha-D-ribofuranose… to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:134365"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_octulose_8_phosphate_beta-d-mannose-6-phosphate-to-keto-d-fructose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "octulose_8_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-d-mannose-6-phosphate-to-keto-d-fructose"
+      },
+      "note": "Shares octulose 8-phosphate with beta-D-mannose 6-phosphate to keto-D-fructose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:134365"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_octulose_8_phosphate_l-xylulose-5-phosphate-to-octulose-8-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "octulose_8_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-xylulose-5-phosphate-to-octulose-8-phosphate"
+      },
+      "note": "Shares octulose 8-phosphate with L-xylulose 5-phosphate to octulose 8-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:134365"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_erythrose_4_phosphate_alpha-d-ribofuranose-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_erythrose_4_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-ribofuranose-to-phosphate"
+      },
+      "note": "Shares D-erythrose 4-phosphate with alpha-D-ribofuranose… to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM258"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_erythrose_4_phosphate_beta-d-fructose-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_erythrose_4_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-d-fructose-to-h2o-null"
+      },
+      "note": "Shares D-erythrose 4-phosphate with beta-D-fructose… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM258"
+          }
+        ]
+      }
+    }
+  ]
+}

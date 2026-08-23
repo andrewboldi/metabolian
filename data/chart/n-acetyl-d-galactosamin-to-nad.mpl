@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-acetyl-d-galactosamin-to-nad "N-acetyl-β-D-galactosamin… to NAD" {
-  spacing 264
+  spacing 306
 
   spine at 0,0 {
     n_acetyl_d_galactosaminyl_1_4_l_iduronyl_1_3_n_a
@@ -38,33 +38,75 @@ pathway n-acetyl-d-galactosamin-to-nad "N-acetyl-β-D-galactosamin… to NAD" {
     d_tagatose_1_phosphate
   }
 
-  branch from nh3 side right {
-    nh3
-    <-> . +n_carbamoyl_l_alaninate +h2o +hplus +co2
-    alanine
-  }
-
-  branch from nh3 side left {
-    nh3
-    <-> ec_1_4_1_28 [1.4.1.28] +two_alkyl_ammonium_ion +nad +h2o +nadh +hplus
-    ketone
-  }
-
   branch from galactitol_1_phosphate side right {
     galactitol_1_phosphate
     <-> ec_3_1_3_50 [3.1.3.50] +galactitol +phosphate
     h2o
   }
 
-  branch from nad side left {
-    nad
-    <-> . +nadh +h +styrene +o2
-    cis_3_ethenylcyclohexa_3_5_diene_1_2_diol
+  branch from galactitol_1_phosphate side left {
+    galactitol_1_phosphate
+    <-> ec_1_1_1_251 [1.1.1.251] +nadh +h +nad
+    l_tagatofuranose_6_phosphate
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +2_4_5_trichlorophenoxy_acetate +o2 +2_4_5_trichlorophenol +h2o
-    glyoxylate
+    <-> . +collinusin +nadh +h
+    7_8_7_8_tetrahydrojusticidin_b
+  }
+
+  branch from nad side left {
+    nad
+    <-> . +collinusin +nadh +h
+    justicidin_b
+  }
+
+  branch from n_acetyl_d_galactosamine side right {
+    n_acetyl_d_galactosamine
+    <-> ec_3_2_1_217 [3.2.1.217] +o_n_acetyl_d_galactosaminyl_l_threonine +h2o
+    l_threonine
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> ec_1_1_1_35 [1.1.1.35] +h +3_24_dioxocholest_4_en_26_oyl_coa +nad
+    24_hydroxy_3_oxocholest_4_en_26_oyl_coa
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +3_oxo_24_ethyl_26_al_cholest_4_ene +nad +h2o +h
+    3_oxo_24_ethyl_cholest_4_en_26_oate
+  }
+
+  branch from h side left {
+    h
+    <-> . +3_chloro_5_fluorocatechol +o2
+    2_chloro_4_fluoromuconate
+  }
+
+  branch from h side right {
+    h
+    <-> . +4_chloro_2_fluoromuconate +o2
+    3_chloro_6_fluorocatechol
+  }
+
+  branch from galactitol_1_phosphate side left {
+    galactitol_1_phosphate
+    <-> ec_1_1_1_251 [1.1.1.251] +nadh +h +nad
+    d_tagatofuranose_6_phosphate
+  }
+
+  branch from nad side right {
+    nad
+    <-> . +nadh +h +thujan_3_one
+    thujan_3_ol
+  }
+
+  branch from nad side left {
+    nad
+    <-> . +nadh +h +2s_3r_2_amino_3_methyl_4_ketopentanoate
+    4s_4_hydroxy_l_isoleucine
   }
 }

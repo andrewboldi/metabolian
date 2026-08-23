@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-ribulose-1-5-bisphospha-to-2-dehydro-3-deoxy-d "D-ribulose 1,5-bisphospha… to 2-dehydro-3-deoxy-D-gluco…" {
-  spacing 340
+  spacing 332
 
   spine at 0,0 {
     d_ribulose_1_5_bisphosphate
@@ -16,59 +16,5 @@ pathway d-ribulose-1-5-bisphospha-to-2-dehydro-3-deoxy-d "D-ribulose 1,5-bisphos
     2_dehydro_3_deoxy_6_phospho_d_galactonate
     <-> ec_2_7_1_45 [2.7.1.45] +h +adp -2_dehydro_3_deoxy_d_gluconate
     atp
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    glycoursodeoxycholate
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    sulfochenodeoxycholate
-  }
-
-  branch from l_ribulose_5_phosphate side left {
-    l_ribulose_5_phosphate
-    <-> ec_5_3_1_6 [5.3.1.6] +h
-    alpha_d_ribofuranose_5_phosphate
-  }
-
-  branch from l_ribulose_5_phosphate side right {
-    l_ribulose_5_phosphate
-    <-> ec_2_7_1_16 [2.7.1.16] +atp +h +adp
-    3s_4s_2_hydroxymethyl_oxolane_2_3_4_triol
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_8_1_15 [1.8.1.15] +5_mercapto_2_nitrobenzoate +h +nadph
-    dithionitrobenzoic_acid
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_6_5_2 [1.6.5.2] +2_6_dimethyl_1_4_benzenediol +h +nadph
-    2_6_dimethyl_1_4_benzoquinone
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_lysine +glycine +l_cysteine
-    glycyl_lysyl_cysteine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_lysine +glycine +l_phenylalanine
-    glycyl_lysyl_phenylalanine
-  }
-
-  branch from 2_dehydro_3_deoxy_d_gluconate side left {
-    2_dehydro_3_deoxy_d_gluconate
-    <-> . +nadh +h +5_dehydro_4_deoxy_d_glucuronate
-    nad
   }
 }

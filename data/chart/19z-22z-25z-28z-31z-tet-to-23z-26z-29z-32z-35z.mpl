@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 19z-22z-25z-28z-31z-tet-to-23z-26z-29z-32z-35z "(19Z,22Z,25Z,28Z,31Z)-tet… to (23Z,26Z,29Z,32Z,35Z)-oct…" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     19z_22z_25z_28z_31z_tetratriacontapentaenoyl_co
@@ -24,5 +24,17 @@ pathway 19z-22z-25z-28z-31z-tet-to-23z-26z-29z-32z-35z "(19Z,22Z,25Z,28Z,31Z)-te
     2e_23z_26z_29z_32z_35z_octatriacontahexaenoyl_c
     <-> . +nadph +hplus -nadp
     23z_26z_29z_32z_35z_octatriacontapentaenoyl_coa
+  }
+
+  branch from malonyl-coa side left {
+    malonyl-coa
+    <-> . +l_pipecolic_acid +nadph +hplus +co2 +nadp +coa +h2o
+    8as_octahydroindolizin_1_one
+  }
+
+  branch from malonyl-coa side right {
+    malonyl-coa
+    <-> . +l_pipecolic_acid +nadph +hplus +co2 +nadp +coa +h2o
+    1r_8as_octahydroindolizin_1_ol
   }
 }

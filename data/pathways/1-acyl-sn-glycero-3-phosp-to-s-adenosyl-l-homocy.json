@@ -113,42 +113,6 @@
       "xrefs": {
         "chebi": "CHEBI:57856"
       }
-    },
-    {
-      "id": "esculetin",
-      "name": "esculetin",
-      "formula": "C9H6O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:490095"
-      }
-    },
-    {
-      "id": "scopoletin",
-      "name": "scopoletin",
-      "formula": "C10H8O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:17488"
-      }
-    },
-    {
-      "id": "isoscopoletin",
-      "name": "isoscopoletin",
-      "formula": "C10H8O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:81484"
-      }
-    },
-    {
-      "id": "scoparone",
-      "name": "scoparone",
-      "formula": "C11H10O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:9055"
-      }
     }
   ],
   "enzymes": [
@@ -157,7 +121,10 @@
       "name": "glycerophosphoinositol glycerophosphodiesterase",
       "ec": [
         "3.1.4.44"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q9NZC3"
+      }
     },
     {
       "id": "ec_2_1_1_129",
@@ -308,89 +275,71 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "esculetin + S-adenosyl-L-methionine = scopoletin + S-adenosyl-L-homocysteine + H(+)",
-      "equation": "esculetin + S-adenosyl-L-methionine = scopoletin + S-adenosyl-L-homocysteine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "esculetin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "scopoletin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:68948"
+      "id": "xt_1_sn_glycero_3_o_phosphonato_1d_myo_inositol_1-oleoyl-sn-glycero-3-pho-to-s-adenosyl-l-homocy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_sn_glycero_3_o_phosphonato_1d_myo_inositol"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1-oleoyl-sn-glycero-3-pho-to-s-adenosyl-l-homocy"
+      },
+      "note": "Shares 1-(sn-glycero-3-O-phosphonato)-1D-myo-inositol with 1-oleoyl-sn-glycero-3-pho… to S-adenosyl-L-homocysteine.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:68948"
+            "db": "ChEBI",
+            "id": "CHEBI:58444"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "isoscopoletin + S-adenosyl-L-methionine = scoparone + S-adenosyl-L-homocysteine + H(+)",
-      "equation": "isoscopoletin + S-adenosyl-L-methionine = scoparone + S-adenosyl-L-homocysteine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "isoscopoletin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "scoparone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:68952"
+      "id": "xt_1_sn_glycero_3_o_phosphonato_1d_myo_inositol_2-hydroxyhexacosanoyl-coa-to-carboxylic-acid-ani",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_sn_glycero_3_o_phosphonato_1d_myo_inositol"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2-hydroxyhexacosanoyl-coa-to-carboxylic-acid-ani"
+      },
+      "note": "Shares 1-(sn-glycero-3-O-phosphonato)-1D-myo-inositol with 2-hydroxyhexacosanoyl-CoA to carboxylic acid anion.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:68952"
+            "db": "ChEBI",
+            "id": "CHEBI:58444"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_sn_glycero_3_o_phosphonato_1d_myo_inositol_aliphatic-primary-amide-to-acyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_sn_glycero_3_o_phosphonato_1d_myo_inositol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aliphatic-primary-amide-to-acyl-coa"
+      },
+      "note": "Shares 1-(sn-glycero-3-O-phosphonato)-1D-myo-inositol with aliphatic primary amide to acyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58444"
           }
         ]
       }

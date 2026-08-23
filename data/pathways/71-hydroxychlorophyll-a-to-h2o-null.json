@@ -1,0 +1,579 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "71-hydroxychlorophyll-a-to-h2o-null",
+  "name": "71-hydroxychlorophyll a to H2O",
+  "category": "other",
+  "summary": "A 4-step route from 71-hydroxychlorophyll a to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR179501"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:76032"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "71_hydroxychlorophyll_a",
+      "name": "71-hydroxychlorophyll a",
+      "short": "71-hydroxychlorophy…",
+      "formula": "C55H72MgN4O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:76032"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "chlorophyll_a",
+      "name": "chlorophyll a",
+      "formula": "C55H72MgN4O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1108239"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "chlorophyll_b",
+      "name": "Chlorophyll b",
+      "formula": "C55H70MgN4O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1108242"
+      }
+    },
+    {
+      "id": "chlorophyllide_b",
+      "name": "chlorophyllide b",
+      "formula": "C35H32MgN4O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:38209"
+      }
+    },
+    {
+      "id": "phytol",
+      "name": "phytol",
+      "formula": "C20H40O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM2712"
+      }
+    },
+    {
+      "id": "chlorophyll_b",
+      "name": "Chlorophyll b",
+      "formula": "C55H71MgN4O6",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM736588"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_1_14",
+      "name": "chlorophyllase",
+      "ec": [
+        "3.1.1.14"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR179501",
+      "substrates": [
+        {
+          "metabolite": "71_hydroxychlorophyll_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "chlorophyll_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR179501"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR179501"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR178534",
+      "substrates": [
+        {
+          "metabolite": "chlorophyll_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "chlorophyll_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR178534"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR178534"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "chlorophyllase",
+      "ec": "3.1.1.14",
+      "substrates": [
+        {
+          "metabolite": "chlorophyll_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "chlorophyllide_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phytol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR150496"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR150496"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "chlorophyllase",
+      "ec": "3.1.1.14",
+      "substrates": [
+        {
+          "metabolite": "chlorophyllide_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phytol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "chlorophyll_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR150497"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR150497"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_71_hydroxychlorophyll_a_71-hydroxychlorophyll-a-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "71_hydroxychlorophyll_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "71-hydroxychlorophyll-a-to-h2o"
+      },
+      "note": "Shares 71-hydroxychlorophyll a with 71-hydroxychlorophyll a to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76032"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_71_hydroxychlorophyll_a_71-hydroxychlorophyll-a-to-protochlorophyllide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "71_hydroxychlorophyll_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "71-hydroxychlorophyll-a-to-protochlorophyllide"
+      },
+      "note": "Shares 71-hydroxychlorophyll a with 71-hydroxychlorophyll a to protochlorophyllide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76032"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_71_hydroxychlorophyll_a_71-hydroxychlorophyll-a-to-protochlorophyllide-n",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "71_hydroxychlorophyll_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "71-hydroxychlorophyll-a-to-protochlorophyllide-n"
+      },
+      "note": "Shares 71-hydroxychlorophyll a with 71-hydroxychlorophyll a to protochlorophyllide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76032"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_71_hydroxychlorophyll_a_secalciferol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "71_hydroxychlorophyll_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "secalciferol-to-h2o"
+      },
+      "note": "Shares 71-hydroxychlorophyll a with secalciferol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76032"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_71_hydroxychlorophyll_a_udp-to-soyasaponin-i-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "71_hydroxychlorophyll_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-soyasaponin-i-null"
+      },
+      "note": "Shares 71-hydroxychlorophyll a with UDP to soyasaponin I.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76032"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_chlorophyll_a_1-chlorohexane-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "chlorophyll_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-chlorohexane-to-h2o"
+      },
+      "note": "Shares chlorophyll a with 1-Chlorohexane to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1108239"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_chlorophyll_a_6-phospho-d-glucono-1-5-l-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "chlorophyll_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-phospho-d-glucono-1-5-l-to-nadph"
+      },
+      "note": "Shares chlorophyll a with 6-phospho-D-glucono-1,5-l… to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1108239"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_chlorophyll_a_6-phospho-d-glucono-1-5-l-to-nadph-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "chlorophyll_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-phospho-d-glucono-1-5-l-to-nadph-null"
+      },
+      "note": "Shares chlorophyll a with 6-phospho-D-glucono-1,5-l… to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1108239"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_chlorophyll_a_71-hydroxychlorophyll-a-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "chlorophyll_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "71-hydroxychlorophyll-a-to-h2o"
+      },
+      "note": "Shares chlorophyll a with 71-hydroxychlorophyll a to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1108239"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_chlorophyll_a_geranylgeranyl-chlorophyl-to-chlorophyll-a",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "chlorophyll_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "geranylgeranyl-chlorophyl-to-chlorophyll-a"
+      },
+      "note": "Shares chlorophyll a with geranylgeranyl-chlorophyl… to chlorophyll a.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1108239"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_chlorophyll_a_geranylgeranyl-chlorophyl-to-chlorophyll-a-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "chlorophyll_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "geranylgeranyl-chlorophyl-to-chlorophyll-a-null"
+      },
+      "note": "Shares chlorophyll a with geranylgeranyl-chlorophyl… to chlorophyll a.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1108239"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_chlorophyll_a_sn-glycero-3-phosphoethan-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "chlorophyll_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sn-glycero-3-phosphoethan-to-h2o-null"
+      },
+      "note": "Shares chlorophyll a with sn-glycero-3-phosphoethan… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1108239"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-11-oxotestosterone "NADH to 11-oxotestosterone" {
-  spacing 318
+  spacing 276
 
   spine at 0,0 {
     nadh
@@ -14,47 +14,5 @@ pathway nadh-to-11-oxotestosterone "NADH to 11-oxotestosterone" {
     h
     <-> . +11_hydroxytestosterone +nadp -nadph -hplus
     11_oxotestosterone
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_117 [1.1.1.117] +nadh +h +d_arabinono_1_4_lactone
-    d_arabinopyranose
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_117 [1.1.1.117] +nadh +h +d_arabinono_1_4_lactone
-    d_arabinopyranose
-  }
-
-  branch from h side left {
-    h
-    <-> . +erythromycin_a +h2o
-    hydrolyzed_erythromycin_a
-  }
-
-  branch from h side right {
-    h
-    <-> . +pgp +phosphate +h2o
-    guanosine_3_5_bis_diphosphate
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> ec_1_14_13_158 [1.14.13.158] +artemisinic_alcohol +nadp +h2o +h +o2
-    amorpha_4_11_diene
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> . +artemisinic_alcohol +h +o2 +nadp +h2o
-    artemisinic_aldehyde
-  }
-
-  branch from 11_oxotestosterone side left {
-    11_oxotestosterone
-    <-> ec_1_1_1_239 [1.1.1.239] +nadh +h +nad
-    adrenosterone
   }
 }

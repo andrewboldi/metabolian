@@ -18,45 +18,45 @@ pathway s-2-halocarboxylic-to-ammonium "(S)-2-halocarboxylic… to ammonium" {
     2_oxo_monocarboxylic_acid_anion
   }
 
-  branch from halide_anion side left {
-    halide_anion
-    <-> ec_1_14_12_13 [1.14.12.13] +2_halobenzoate +nadh +o2 +hplus +co2 +nad
-    catechol
-  }
-
-  branch from 2_oxo_monocarboxylic_acid_anion side right {
-    2_oxo_monocarboxylic_acid_anion
-    <-> ec_1_1_1_272 [1.1.1.272] +nadp +nadph +hplus
-    2r_2_hydroxy_monocarboxylic_acid_anion
-  }
-
   branch from 2_oxo_monocarboxylic_acid_anion side left {
     2_oxo_monocarboxylic_acid_anion
-    <-> . +h2o +nh3
-    a_2_iminiocarboxylate
-  }
-
-  branch from l_amino_acid side right {
-    l_amino_acid
-    <-> . +cholate +h2o
-    n_choloyl_l_amino_acid_anion
-  }
-
-  branch from l_amino_acid side left {
-    l_amino_acid
-    <-> . +taurocholate +n_choloyl_l_amino_acid_anion
-    taurine
+    <-> . +fad +hplus +fadh2
+    2r_2_hydroxy_monocarboxylic_acid_anion
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_3_5_4_15 [3.5.4.15] +guanosine +h2o +hplus
-    xanthosine
+    <-> ec_3_5_3_21 [3.5.3.21] +methylenediurea +h2o +hplus +co2
+    n_hydroxymethyl_urea
   }
 
   branch from nh3 side left {
     nh3
-    <-> ec_1_7_2_2 [1.7.2.2] +iron +h2o +fe2 +hplus
-    nitrite
+    <-> ec_6_3_1_2 [6.3.1.2] +glutamate +atp +adp +pi +hplus
+    glutamine
+  }
+
+  branch from alanine side right {
+    alanine
+    <-> ec_2_6_1_43 [2.6.1.43] +ala +pyruvate
+    4_5_dioxopentanoate
+  }
+
+  branch from alanine side left {
+    alanine
+    <-> ec_4_1_1_12 [4.1.1.12] +hplus +co2
+    aspartate
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> . +utp +atp +adp +pi +hplus
+    ctp
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_1_4_2_1 [1.4.2.1] +iron +glycine +h2o +fe2 +hplus
+    glyoxylate
   }
 }

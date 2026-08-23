@@ -1,0 +1,351 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "maltose-6-phosphate-to-d-glucopyranose-36295",
+  "name": "α-maltose 6'-phosphate to D-glucopyranose",
+  "category": "other",
+  "summary": "A 3-step route from α-maltose 6'-phosphate(2−) to D-glucopyranose, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:36295"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57478"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "maltose_6_phosphate",
+      "name": "α-maltose 6'-phosphate",
+      "short": "α-maltose 6'-P",
+      "formula": "C12H21O14P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57478"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "maltose",
+      "name": "maltose",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17306"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "trehalose",
+      "name": "α,α-trehalose",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16551"
+      }
+    },
+    {
+      "id": "d_glucose_1_phosphate",
+      "name": "β-D-glucose 1-phosphate",
+      "short": "β-D-glucose 1-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57684"
+      }
+    },
+    {
+      "id": "glucose",
+      "name": "D-Glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4167"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_3_90",
+      "name": "maltose 6'-phosphate phosphatase",
+      "ec": [
+        "3.1.3.90"
+      ]
+    },
+    {
+      "id": "ec_5_4_99_16",
+      "name": "maltose alpha-D-glucosyltransferase",
+      "ec": [
+        "5.4.99.16"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_64",
+      "name": "alpha,alpha-trehalose phosphorylase",
+      "ec": [
+        "2.4.1.64"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "maltose 6'-phosphate phosphatase",
+      "equation": "alpha-maltose 6'-phosphate + H2O = D-maltose + phosphate",
+      "ec": "3.1.3.90",
+      "substrates": [
+        {
+          "metabolite": "maltose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "maltose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_3_90"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:36295"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36295"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "maltose alpha-D-glucosyltransferase",
+      "equation": "D-maltose = alpha,alpha-trehalose",
+      "ec": "5.4.99.16",
+      "substrates": [
+        {
+          "metabolite": "maltose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trehalose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_99_16"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:15145"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15145"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "alpha,alpha-trehalose phosphorylase",
+      "equation": "alpha,alpha-trehalose + phosphate = beta-D-glucose 1-phosphate + D-glucose",
+      "ec": "2.4.1.64",
+      "substrates": [
+        {
+          "metabolite": "trehalose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glucose_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_64"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:23512"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23512"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_maltose_6_phosphate_cellobiose-to-l-histidine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "maltose_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cellobiose-to-l-histidine"
+      },
+      "note": "Shares α-maltose 6'-phosphate with cellobiose to L-histidine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57478"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_maltose_6_phosphate_cellobiose-to-l-histidine-49292",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "maltose_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cellobiose-to-l-histidine-49292"
+      },
+      "note": "Shares α-maltose 6'-phosphate with cellobiose to L-histidine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57478"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_maltose_6_phosphate_maltose-6-phosphate-to-d-glucopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "maltose_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "maltose-6-phosphate-to-d-glucopyranose"
+      },
+      "note": "Shares α-maltose 6'-phosphate with α-maltose 6'-phosphate to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57478"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_maltose_6_phosphate_maltose-6-phosphate-to-hapalindole-h",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "maltose_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "maltose-6-phosphate-to-hapalindole-h"
+      },
+      "note": "Shares α-maltose 6'-phosphate with α-maltose 6'-phosphate to hapalindole H.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57478"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_maltose_6_phosphate_maltose-6-phosphate-to-hapalindole-h-20421",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "maltose_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "maltose-6-phosphate-to-hapalindole-h-20421"
+      },
+      "note": "Shares α-maltose 6'-phosphate with α-maltose 6'-phosphate to hapalindole H.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57478"
+          }
+        ]
+      }
+    }
+  ]
+}

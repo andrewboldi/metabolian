@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "casomorphin-7-human-to-2-methylbutanal",
   "name": "β-casomorphin-7 (human) to 2-methylbutanal",
-  "category": "amino-acid-metabolism",
+  "category": "other",
   "summary": "A 3-step route from β-casomorphin-7 (human)(1−) to 2-methylbutanal, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -112,87 +112,12 @@
       }
     },
     {
-      "id": "l_m_tyrosine",
-      "name": "L-m-tyrosine",
-      "formula": "C9H11NO3",
+      "id": "2_methylbutan_1_ol",
+      "name": "2-methylbutan-1-ol",
+      "formula": "C5H12O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:78290"
-      }
-    },
-    {
-      "id": "3_hydroxyphenylpyruvate",
-      "name": "3-hydroxyphenylpyruvate",
-      "short": "3-hydroxyphenylpyru…",
-      "formula": "C9H7O4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:167869"
-      }
-    },
-    {
-      "id": "dmapp",
-      "name": "Dimethylallyl diphosphate (DMAPP)",
-      "short": "Dimethylallyl PP…",
-      "formula": "C5H9O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:57623"
-      }
-    },
-    {
-      "id": "prekainate",
-      "name": "prekainate",
-      "formula": "C10H16NO4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:170011"
-      }
-    },
-    {
-      "id": "ppi",
-      "name": "Diphosphate (PPi)",
-      "formula": "HO7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:33019"
-      }
-    },
-    {
-      "id": "2_methylbutan_1_aminium",
-      "name": "2-methylbutan-1-aminium",
-      "short": "2-methylbutan-1-ami…",
-      "formula": "C5H14N",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:195482"
-      }
-    },
-    {
-      "id": "nad",
-      "name": "NAD+",
-      "formula": "C21H26N7O14P2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:57540"
-      }
-    },
-    {
-      "id": "nh3",
-      "name": "Ammonia (NH3)",
-      "formula": "H4N",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:28938"
-      }
-    },
-    {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57945"
+        "chebi": "CHEBI:48945"
       }
     },
     {
@@ -220,7 +145,10 @@
       "name": "branched-chain-amino-acid transaminase",
       "ec": [
         "2.6.1.42"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P54687"
+      }
     },
     {
       "id": "ec_4_1_1_72",
@@ -362,158 +290,21 @@
     },
     {
       "id": "r4",
-      "name": "3-hydroxy-L-phenylalanine + 2-oxoglutarate = 3-(3-hydroxyphenyl)pyruvate + L-glutamate",
-      "equation": "3-hydroxy-L-phenylalanine + 2-oxoglutarate = 3-(3-hydroxyphenyl)pyruvate + L-glutamate",
+      "name": "2-methylbutan-1-ol + NADP(+) = 2-methylbutanal + NADPH + H(+)",
+      "equation": "2-methylbutan-1-ol + NADP(+) = 2-methylbutanal + NADPH + H(+)",
       "substrates": [
         {
-          "metabolite": "l_m_tyrosine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_hydroxyphenylpyruvate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glutamate",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:67168"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:67168"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "dimethylallyl diphosphate + L-glutamate = prekainate + diphosphate",
-      "equation": "dimethylallyl diphosphate + L-glutamate = prekainate + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "dmapp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glutamate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "prekainate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:67476"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:67476"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "2-methylbutanamine + NAD(+) + H2O = 2-methylbutanal + NH4(+) + NADH + H(+)",
-      "equation": "2-methylbutanamine + NAD(+) + H2O = 2-methylbutanal + NH4(+) + NADH + H(+)",
-      "substrates": [
-        {
-          "metabolite": "2_methylbutan_1_aminium",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_methylbutanal",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:76955"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:76955"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "2-methylbutanamine + NADP(+) + H2O = 2-methylbutanal + NH4(+) + NADPH + H(+)",
-      "equation": "2-methylbutanamine + NADP(+) + H2O = 2-methylbutanal + NH4(+) + NADPH + H(+)",
-      "substrates": [
-        {
-          "metabolite": "2_methylbutan_1_aminium",
+          "metabolite": "2_methylbutan_1_ol",
           "stoichiometry": 1
         },
         {
           "metabolite": "nadp",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
         }
       ],
       "products": [
         {
           "metabolite": "2_methylbutanal",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
           "stoichiometry": 1
         },
         {
@@ -526,16 +317,172 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:76959"
+        "rhea": "RHEA:84375"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:76959"
+            "id": "RHEA:84375"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_kmv_2r-3r-2-3-dihydroxy-3-m-to-n6-r-s8-isobutyryldi",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "kmv"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2r-3r-2-3-dihydroxy-3-m-to-n6-r-s8-isobutyryldi"
+      },
+      "note": "Shares (S)-3-Methyl-2-oxopentanoate with (2R,3R)-2,3-dihydroxy-3-m… to N6-[(R)-S8-isobutyryldihy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:35146"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_kmv_l-isoleucine-to-n6-r-s8-s-2-methylb",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "kmv"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-isoleucine-to-n6-r-s8-s-2-methylb"
+      },
+      "note": "Shares (S)-3-Methyl-2-oxopentanoate with L-isoleucine to N6-{(R)-S8-[(S)-2-methylb….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:35146"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_kmv_n-12-hydroxy-7-isoja-to-o-s-4s-4-methyl-3-oxoh",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "kmv"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-12-hydroxy-7-isoja-to-o-s-4s-4-methyl-3-oxoh"
+      },
+      "note": "Shares (S)-3-Methyl-2-oxopentanoate with N-[(+)-12-hydroxy-7-isoja… to O{S-[(4S)-4-methyl-3-oxoh….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:35146"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_kmv_quinine-to-5-hydroxyisouric-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "kmv"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "quinine-to-5-hydroxyisouric-acid"
+      },
+      "note": "Shares (S)-3-Methyl-2-oxopentanoate with quinine to 5-hydroxyisouric acid.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:35146"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_methylbutanal_linoleoyl-ethanolamide-to-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_methylbutanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "linoleoyl-ethanolamide-to-acetate"
+      },
+      "note": "Shares 2-methylbutanal with linoleoyl ethanolamide to acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16182"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_methylbutan_1_ol_3-methyl-2-oxopentanoate-to-2-methylbutyl-acetat",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_methylbutan_1_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-methyl-2-oxopentanoate-to-2-methylbutyl-acetat"
+      },
+      "note": "Shares 2-methylbutan-1-ol with 3-methyl-2-oxopentanoate to 2-methylbutyl acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:48945"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_methylbutan_1_ol_butane-to-butyryl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_methylbutan_1_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "butane-to-butyryl-coa"
+      },
+      "note": "Shares 2-methylbutan-1-ol with butane to butyryl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:48945"
           }
         ]
       }

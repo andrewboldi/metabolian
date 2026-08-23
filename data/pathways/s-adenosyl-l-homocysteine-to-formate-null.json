@@ -9,7 +9,7 @@
     "sources": [
       {
         "db": "MetaNetX",
-        "id": "MNXR198608"
+        "id": "MNXR198609"
       }
     ]
   },
@@ -25,12 +25,12 @@
       }
     },
     {
-      "id": "mk_8",
-      "name": "MK-8",
+      "id": "menaquinone_8",
+      "name": "menaquinone-8",
       "formula": "C51H72O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:205208"
+        "chebi": "CHEBI:44027"
       }
     },
     {
@@ -116,6 +116,42 @@
       "xrefs": {
         "metanetx": "MNXM39"
       }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "menaquinol_8",
+      "name": "menaquinol-8",
+      "formula": "C51H74O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61684"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
     }
   ],
   "enzymes": [
@@ -137,14 +173,14 @@
   "reactions": [
     {
       "id": "r1",
-      "name": "Reaction MNXR198608",
+      "name": "Reaction MNXR198609",
       "substrates": [
         {
           "metabolite": "s_adenosyl_l_homocysteine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "mk_8",
+          "metabolite": "menaquinone_8",
           "stoichiometry": 1
         },
         {
@@ -165,52 +201,52 @@
       "reversibility": "reversible",
       "pathwayStep": 1,
       "xrefs": {
-        "metanetx": "MNXR198608"
+        "metanetx": "MNXR198609"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR198608"
+            "id": "MNXR198609"
           }
         ]
       }
     },
     {
       "id": "r2",
-      "name": "Reaction MNXR101866",
+      "name": "Reaction MNXR101875",
       "ec": "1.6.5.3",
       "substrates": [
         {
           "metabolite": "pmf",
-          "stoichiometry": 3
+          "stoichiometry": 14
         },
         {
           "metabolite": "nadh",
-          "stoichiometry": 1
+          "stoichiometry": 5
         },
         {
           "metabolite": "h",
-          "stoichiometry": 1
+          "stoichiometry": 5
         },
         {
           "metabolite": "2_demethylmenaquinone_8",
-          "stoichiometry": 1
+          "stoichiometry": 5
         }
       ],
       "products": [
         {
           "metabolite": "pmf",
-          "stoichiometry": 3
+          "stoichiometry": 14
         },
         {
           "metabolite": "2_demethylmenaquinol_8",
-          "stoichiometry": 1
+          "stoichiometry": 5
         },
         {
           "metabolite": "nad",
-          "stoichiometry": 1
+          "stoichiometry": 5
         }
       ],
       "catalysts": [
@@ -221,14 +257,14 @@
       "reversibility": "reversible",
       "pathwayStep": 2,
       "xrefs": {
-        "metanetx": "MNXR101866"
+        "metanetx": "MNXR101875"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR101866"
+            "id": "MNXR101875"
           }
         ]
       }
@@ -277,6 +313,49 @@
           {
             "db": "MetaNetX",
             "id": "MNXR182146"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "menaquinone-8 + NADH + H(+) = menaquinol-8 + NAD(+)",
+      "equation": "menaquinone-8 + NADH + H(+) = menaquinol-8 + NAD(+)",
+      "substrates": [
+        {
+          "metabolite": "menaquinone_8",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "menaquinol_8",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:29243"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:29243"
           }
         ]
       }

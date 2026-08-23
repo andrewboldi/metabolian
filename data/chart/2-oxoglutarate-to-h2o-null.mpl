@@ -4,15 +4,19 @@
 # edit the generator, not this file.
 
 pathway 2-oxoglutarate-to-h2o-null "2-oxoglutarate to H2O" {
-  spacing 228
+  spacing 152
 
   spine at 0,0 {
     2_oxoglutarate
-    <-> ec_2_6_1_94 [2.6.1.94] +kanamycin_b -h -l_glutamate
-    6_oxokanamycin_c
-    <-> . +h +h2o2 -o2
-    kanamycin_c
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate -kanamycin_c -h2o
-    atp
+    <-> . +h +paromomycin_ii -6_deamino_6_oxoparomomycin_ii
+    l_glutamate
+    <-> . +h2o2 +6_deamino_6_oxoparomomycin_ii -6_deamino_6_hydroxyparomomycin_ii
+    o2
+    <-> . +h +acetate +6_deamino_6_hydroxyparomomycin_ii -h2o
+    2_n_acetyl_6_deamino_6_hydroxyparomomycin_ii
+    <-> . +udp +h -5_ribosylparomamine
+    udp_n_acetyl_alpha_d_glucosamine
+    <-> . +h +5_ribosylparomamine +phosphate -h2o
+    5_phosphoribosylparomamine
   }
 }

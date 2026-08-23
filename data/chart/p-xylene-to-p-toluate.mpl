@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway p-xylene-to-p-toluate "p-xylene to p-toluate" {
-  spacing 200
+  spacing 194
 
   spine at 0,0 {
     p_xylene
@@ -18,25 +18,19 @@ pathway p-xylene-to-p-toluate "p-xylene to p-toluate" {
 
   branch from 4_methylbenzyl_alcohol side left {
     4_methylbenzyl_alcohol
-    <-> . +nadh +h +p_xylene +o2 +h2o
-    nad
+    <-> ec_1_1_1_21 [1.1.1.21] +h +4_methylbenzaldehyde +nadph
+    nadp
   }
 
   branch from 4_methylbenzyl_alcohol side right {
     4_methylbenzyl_alcohol
+    <-> . +nadh +h +p_xylene +o2 +h2o
+    nad
+  }
+
+  branch from 4_methylbenzyl_alcohol side left {
+    4_methylbenzyl_alcohol
     <-> ec_1_1_1_21 [1.1.1.21] +h +4_methylbenzaldehyde +nad
     nadh
-  }
-
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
-    <-> ec_4_2_1_164 [4.2.1.164] +dtdp_4_dehydro_2_6_dideoxy_d_glucose +di_sulfido_diiron +hplus +h2o
-    dtdp_4_dehydro_2_3_6_trideoxy_d_glucose
-  }
-
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
-    <-> . +24r_24_25_dihydroxycalciol +di_sulfido_diiron +o2 +hplus +h2o
-    25_hydroxy_24_oxocalciol
   }
 }

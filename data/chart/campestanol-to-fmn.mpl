@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway campestanol-to-fmn "campestanol to FMN" {
-  spacing 182
+  spacing 164
 
   spine at 0,0 {
     campestanol
@@ -22,27 +22,9 @@ pathway campestanol-to-fmn "campestanol to FMN" {
     campestanol
   }
 
-  branch from fmn side right {
-    fmn
-    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +fmnh2 +o2 +h2o +hplus
-    5z_8z_14z_17z_11_12_epoxyicosatetraenoate
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +fmnh2 +o2 +h2o +hplus
-    5z_8z_11z_17z_14_15_epoxyicosatetraenoate
-  }
-
   branch from 6_deoxoteasterone side right {
     6_deoxoteasterone
-    <-> ec_1_14_19_79 [1.14.19.79] +fmnh2 +o2 +fmn +h2o +hplus
-    3_dehydro_6_deoxoteasterone
-  }
-
-  branch from 6_deoxoteasterone side left {
-    6_deoxoteasterone
-    <-> ec_1_14_14_179 [1.14.14.179] +fmnh2 +o2 +fmn +h2o +hplus
+    <-> . +o2 +h2o
     teasterone
   }
 }

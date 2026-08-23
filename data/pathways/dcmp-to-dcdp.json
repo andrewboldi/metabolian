@@ -76,6 +76,24 @@
       "xrefs": {
         "metanetx": "MNXM360"
       }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM728294"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
     }
   ],
   "enzymes": [],
@@ -158,34 +176,304 @@
     },
     {
       "id": "r3",
-      "name": "Reaction MNXR97050",
+      "name": "Reaction MNXR204138",
       "substrates": [
         {
-          "metabolite": "dcmp",
+          "metabolite": "dctp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "dctp",
+          "metabolite": "amp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
           "metabolite": "dcdp",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 3,
       "xrefs": {
-        "metanetx": "MNXR97050"
+        "metanetx": "MNXR204138"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR97050"
+            "id": "MNXR204138"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_dcdp_8-hydroxy-2-deoxyguanosi-to-2-deoxyguanosine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dcdp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "8-hydroxy-2-deoxyguanosi-to-2-deoxyguanosine"
+      },
+      "note": "Shares dCDP with 8-hydroxy-2'-deoxyguanosi… to 2'-deoxyguanosine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM411"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dcdp_cdp-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dcdp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cdp-to-h2o-null"
+      },
+      "note": "Shares dCDP with CDP to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM411"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dcdp_creatinine-phosphate-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dcdp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "creatinine-phosphate-to-nad"
+      },
+      "note": "Shares dCDP with creatinine phosphate to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM411"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dcdp_dcmp-to-dcdp-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dcdp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dcmp-to-dcdp-null"
+      },
+      "note": "Shares dCDP with dCMP to dCDP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM411"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dcdp_dioleoyl-phosphatidic-acid-to-5-methyldeoxycytid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dcdp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dioleoyl-phosphatidic-acid-to-5-methyldeoxycytid"
+      },
+      "note": "Shares dCDP with dioleoyl phosphatidic acid to 5-methyldeoxycytidine….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM411"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dcdp_keto-d-fructose-to-beta-d-fructose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dcdp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "keto-d-fructose-to-beta-d-fructose"
+      },
+      "note": "Shares dCDP with keto-D-fructose… to beta-D-fructose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM411"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dcdp_n4-acetyl-2-deoxycytidine-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dcdp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n4-acetyl-2-deoxycytidine-to-succinate"
+      },
+      "note": "Shares dCDP with N4-acetyl-2'-deoxycytidine to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM411"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dgdp_beta-d-fructose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dgdp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-d-fructose-to-h2o"
+      },
+      "note": "Shares dGDP with beta-D-fructose… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM436"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dgdp_cdp-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dgdp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cdp-to-h2o"
+      },
+      "note": "Shares dGDP with CDP to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM436"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dgdp_datp-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dgdp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "datp-to-diphosphate"
+      },
+      "note": "Shares dGDP with dATP to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM436"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dgdp_dgtp-to-3s-citryl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dgdp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dgtp-to-3s-citryl-coa"
+      },
+      "note": "Shares dGDP with dGTP to (3S)-Citryl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM436"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dgdp_h-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dgdp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-diphosphate"
+      },
+      "note": "Shares dGDP with H to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM436"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-acetyl-l-valinate-to-n-hydroxy-2-methylpropana "N-acetyl-L-valinate to N-hydroxy-2-methylpropana…" {
-  spacing 186
+  spacing 180
 
   spine at 0,0 {
     n_acetyl_l_valinate
@@ -14,11 +14,5 @@ pathway n-acetyl-l-valinate-to-n-hydroxy-2-methylpropana "N-acetyl-L-valinate to
     2_methylpropanaminium
     <-> ec_1_14_14_30 [1.14.14.30] +fadh2 +o2 -fad -h2o -hplus
     n_hydroxy_2_methylpropanamine
-  }
-
-  branch from valine side left {
-    valine
-    <-> . +valacyclovir +h2o +hplus
-    acyclovir
   }
 }

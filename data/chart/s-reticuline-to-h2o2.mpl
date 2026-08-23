@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-reticuline-to-h2o2 "(S)-reticuline to H2O2" {
-  spacing 288
+  spacing 340
 
   spine at 0,0 {
     s_reticuline
@@ -20,87 +20,153 @@ pathway s-reticuline-to-h2o2 "(S)-reticuline to H2O2" {
     l_dopaquinone
   }
 
-  branch from s_adenosyl_l_methionine side left {
-    s_adenosyl_l_methionine
-    <-> ec_2_1_1_129 [2.1.1.129] +s_adenosyl_l_homocysteine +h +1d_6_o_methyl_myo_inositol
-    myo_inositol
-  }
-
-  branch from s_adenosyl_l_methionine side right {
-    s_adenosyl_l_methionine
-    <-> ec_2_1_1_65 [2.1.1.65] +s_adenosyl_l_homocysteine +h +2_o_methyllicodione
-    licodione
-  }
-
-  branch from s_norlaudanosoline side left {
-    s_norlaudanosoline
-    <-> ec_2_1_1_128 [2.1.1.128] +s_adenosyl_l_homocysteine +h +s_adenosyl_l_methionine
-    s_6_o_methylnorlaudanosoline
-  }
-
-  branch from 3_4_dihydroxyphenylacetaldehyde side right {
+  branch from 3_4_dihydroxyphenylacetaldehyde side left {
     3_4_dihydroxyphenylacetaldehyde
     <-> ec_1_2_1_5 [1.2.1.5] +nadp +h2o +h +nadph
     3_4_dihydroxyphenylacetate
   }
 
-  branch from dopamine side left {
+  branch from dopamine side right {
     dopamine
     <-> ec_1_14_17_1 [1.14.17.1] +l_dehydroascorbic_acid +r_noradrenaline +h2o +h +o2
     l_ascorbate
   }
 
-  branch from dopamine side right {
+  branch from dopamine side left {
     dopamine
-    <-> . +h +adp +phosphate +h2o
+    <-> . +nadh +h +nad +h2o
+    m_tyraminium
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +colistin_b +phosphate +colistin_b +h2o
     atp
   }
 
   branch from h side left {
     h
-    <-> ec_1_1_1_21 [1.1.1.21] +nadh +compound_0066905 +nad
-    p_fluorobenzyl_alcohol
-  }
-
-  branch from h side right {
-    h
-    <-> ec_1_1_1_1 [1.1.1.1] +4_methoxybenzyl_alcohol +nad +4_methoxybenzaldehyde
-    nadh
-  }
-
-  branch from l_dopa side left {
-    l_dopa
-    <-> ec_1_14_16_2 [1.14.16.2] +5_6_7_8_tetrahydrobiopterin +o2 +l_tyrosine
-    4as_6r_4a_hydroxy_l_erythro_5_6_7_8_tetrahydrob
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    thiostrepton
   }
 
   branch from l_dopa side right {
     l_dopa
-    <-> ec_1_13_11_30 [1.13.11.30] +h +o2
-    5_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem
+    <-> . +2_oxoglutarate +o2 +l_glutamate
+    3_4_hydroxyphenyl_pyruvate
   }
 
   branch from 3_phenylpyruvate side left {
     3_phenylpyruvate
-    <-> ec_2_6_1_57 [2.6.1.57] +3_4_hydroxyphenyl_pyruvate +l_phenylalanine
-    l_tyrosine
+    <-> . +l_dihydroanticapsin +l_phenylalanine
+    3_1r_2s_5r_6s_5_hydroxy_7_oxabicyclo_4_1_0_hepta
   }
 
   branch from 3_phenylpyruvate side right {
     3_phenylpyruvate
-    <-> ec_2_6_1_21 [2.6.1.21] +2_oxoglutarate +d_phenylalanine
-    d_glutamate
+    <-> . +acetyl_coa +h +h2o +coa
+    2_benzylmalic_acid
   }
 
   branch from h2o2 side left {
     h2o2
-    <-> ec_1_1_3_4 [1.1.3.4] +2_deoxy_d_glucose +o2
-    2_deoxy_d_glucono_1_5_lactone
+    <-> . +l_methionine_s_s_oxide +h2o
+    l_methionine
   }
 
   branch from h2o2 side right {
     h2o2
-    <-> ec_1_17_3_2 [1.17.3.2] +2_hydroxy_7_9_dihydropurin_8_one +o2 +h2o
-    2_hydroxypurine
+    <-> . +h2o +l_methionine
+    l_methionine_s_oxide
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    pentalenolactone_d
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    neopentalenolactone_d
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    neopentalenolactone_f
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    pentalenolactone_e
+  }
+
+  branch from dopamine side left {
+    dopamine
+    <-> . +h +phosphate +atp +h2o
+    adp
+  }
+
+  branch from co2 side right {
+    co2
+    <-> ec_4_1_1_65 [4.1.1.65] +pe_20_1_11z_18_2_9z_12z +h
+    1_11z_eicosenoyl_2_9z_12z_octadecadienoyl_sn_gly
+  }
+
+  branch from co2 side left {
+    co2
+    <-> ec_4_1_1_65 [4.1.1.65] +pe_20_0_18_3_9z_12z_15z +h
+    20_0_18_3_ps
+  }
+
+  branch from l_phenylalanine side right {
+    l_phenylalanine
+    <-> . +phenylalanine
+    pmf
+  }
+
+  branch from l_phenylalanine side left {
+    l_phenylalanine
+    <-> ec_1_14_13_124 [1.14.13.124] +z_phenylacetaldehyde_oxime +co2 +nadp +h2o +h +o2
+    nadph
+  }
+
+  branch from 3_phenylpyruvate side right {
+    3_phenylpyruvate
+    <-> ec_5_3_2_1 [5.3.2.1] +h
+    2_hydroxy_3_phenylpropenoate
+  }
+
+  branch from 3_phenylpyruvate side left {
+    3_phenylpyruvate
+    <-> ec_5_3_2_1 [5.3.2.1]
+    enol_phenylpyruvate
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_14_13_177 [1.14.13.177] +fumitremorgin_c +h +nadph +nadp +h2o
+    12_13_dihydroxyfumitremorgin_c
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_14_21_10 [1.14.21.10] +fumitremorgin_c +nadp +h2o +h +nadph
+    tryprostatin_a
+  }
+
+  branch from h2o2 side right {
+    h2o2
+    <-> . +nadh +acetyl_coa +octadecanoyl_coa +h +coa +o2 +nad +h2o
+    tetracosanoyl_coa
+  }
+
+  branch from h2o2 side left {
+    h2o2
+    <-> . +octanoyl_coa +coa +o2 +nad +h2o +acetyl_coa +h
+    nadh
   }
 }

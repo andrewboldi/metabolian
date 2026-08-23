@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-mg-protoporphyrin-ix "NADH to Mg-protoporphyrin IX" {
-  spacing 256
+  spacing 244
 
   spine at 0,0 {
     nadh
@@ -14,17 +14,5 @@ pathway nadh-to-mg-protoporphyrin-ix "NADH to Mg-protoporphyrin IX" {
     s_adenosyl_l_methionine
     <-> ec_2_1_1_11 [2.1.1.11] +s_adenosyl_l_homocysteine +mg_protoporphyrin_ix_13_monomethyl_ester -s_adenosyl_l_methionine
     mg_protoporphyrin_ix
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_alanine
-    d_alanyl_d_alanine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +a_d_mannosyl_2_b_d_mannosyl_n_acetylglucosamine +d_mannopyranose
-    d_manp_1_4_d_glcpnac
   }
 }

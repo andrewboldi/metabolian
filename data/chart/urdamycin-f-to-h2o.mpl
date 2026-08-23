@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway urdamycin-f-to-h2o "Urdamycin F to H2O" {
-  spacing 200
+  spacing 260
 
   spine at 0,0 {
     urdamycin_f
@@ -12,55 +12,115 @@ pathway urdamycin-f-to-h2o "Urdamycin F to H2O" {
     dtdp_d_olivose
     <-> . +3a_deolivosylpremithramycin_b -dtdp -h
     premithramycin_b
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate -premithramycin_b -h2o
-    atp
+    <-> . +h +o2 +nadph -nadp -h2o
+    premithramycin_b_lactone
   }
 
   branch from dtdp side left {
     dtdp
-    <-> ec_2_7_1_48 [2.7.1.48] +uridine +dttp +h
-    ump
+    <-> . +h +sibiromycin +dtdp_sibirosamine
+    sibiromycin_aglycon
   }
 
   branch from dtdp side right {
     dtdp
-    <-> . +dtdp_3_acetamido_3_6_dideoxy_alpha_d_glucose +beta_d_ribf_1_4_beta_d_gal_1_3_alpha_d_galnac_di +h
-    beta_d_qui3nac_1_3_beta_d_ribf_1_4_beta_d_gal_1
+    <-> . +adp +amp
+    dttp
   }
 
   branch from h side left {
     h
-    <-> ec_5_5_1_7 [5.5.1.7] +2_5_dichloro_3_methyl_muconate
-    2_5_dichloro_3_methyl_muconolactone
+    <-> ec_1_1_1_184 [1.1.1.184] +o_nitrobenzyl_alcohol +nadp +nadph
+    2_nitrobenzaldehyde
   }
 
   branch from h side right {
     h
-    <-> . +5_chloro_2_methyl_maleylacetate +h2o
-    5_chloro_2_methyl_dienelactone
+    <-> ec_3_8_1_5 [3.8.1.5] +bromocyclohexane +h2o +bromide
+    cyclohexanol
   }
 
-  branch from atp side left {
-    atp
-    <-> ec_2_7_6_3 [2.7.6.3] +1_2_amino_7_methyl_4_oxo_7_8_dihydro_3h_pteridi +h +amp
-    6_1_hydroxyethyl_7_methyl_7_8_dihydropterin
+  branch from nadp side left {
+    nadp
+    <-> ec_1_1_1_2 [1.1.1.2] +h +nadph +3_chlorobenzaldehyde
+    3_chlorophenyl_methanol
   }
 
-  branch from atp side right {
-    atp
-    <-> . +l_alanine +fumiquinazoline_f_indoline_2_3_diol +h +fumiquinazoline_a +amp +h2o
-    diphosphate
+  branch from nadp side right {
+    nadp
+    <-> ec_1_1_1_2 [1.1.1.2] +h +3_methoxybenzaldehyde +nadph
+    3_methoxybenzyl_alcohol
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_5_1_97 [3.5.1.97] +l_homoserine_lactone +butanoate
-    a_s_butyr_amido_r_butyrolactone
+    <-> ec_3_4_14_5 [3.4.14.5] +glycyl_l_proline_2_naphthylamide +2_naphthylamine
+    gly_pro
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_1_1_81 [3.1.1.81] +n_3_oxooctanoyl_l_homoserine
-    3_oxo_n_3s_2_oxotetrahydrofuran_3_yl_octanamide
+    <-> ec_3_2_1_182 [3.2.1.182] +dimboa +beta_d_glucose
+    dimboa_beta_d_glucoside
+  }
+
+  branch from h side left {
+    h
+    <-> ec_1_1_1_2 [1.1.1.2] +4_methoxybenzyl_alcohol +nadp +nadph
+    4_methoxybenzaldehyde
+  }
+
+  branch from h side right {
+    h
+    <-> ec_6_3_4_2 [6.3.4.2] +l_glutamine_hydroxamate +h2o +l_glutamate
+    hydroxylamine
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_3_3_4 [1.3.3.4] +mesoporphyrinogen_ix +h2o2
+    mesoporphyrin_ix
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_1_3_17 [1.1.3.17] +betaine_aldehyde +h2o
+    choline
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_1_1_103 [1.1.1.103] +2s_2_amino_3_oxobutanoate +h +nadp
+    l_threonine
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_14_14_55 [1.14.14.55] +testosterone +h +o2 +nadp +h2o
+    15beta_hydroxytestosterone
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_14_14_55 [1.14.14.55] +testosterone +h +o2 +nadph +h2o
+    1_hydroxytestosterone
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +1_chloroethenyl_oxirane +h2o +h +o2 +nadph
+    chloroprene
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_2_1_22 [3.2.1.22] +beta_d_galactose +alpha_d_galactose
+    galabiose
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_2_1_31 [3.2.1.31] +alpha_d_glucuronic_acid +phenolphthalein
+    phenolphthalein_beta_d_glucuronide
   }
 }

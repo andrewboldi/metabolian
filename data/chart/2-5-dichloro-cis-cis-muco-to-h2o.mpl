@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-5-dichloro-cis-cis-muco-to-h2o "2,5-dichloro-cis,cis-muco… to H2O" {
-  spacing 246
+  spacing 186
 
   spine at 0,0 {
     2_5_dichloro_cis_cis_muconate
@@ -18,69 +18,9 @@ pathway 2-5-dichloro-cis-cis-muco-to-h2o "2,5-dichloro-cis,cis-muco… to H2O" {
     4_fluoromuconolactone
   }
 
-  branch from chloride side left {
-    chloride
-    <-> . +h2o +maleylacetate +h
-    5_chlorocarbonyl_4_hydroxy_penta_2_4_dienate
-  }
-
-  branch from chloride side right {
-    chloride
-    <-> . +5_chlorocarbonyl_4_hydroxy_penta_2_4_dienate +h2o +h
-    maleylacetate
-  }
-
-  branch from maleylacetate side left {
-    maleylacetate
-    <-> ec_3_1_1_45 [3.1.1.45] +h +h2o
-    cis_4_carboxymethylenebut_2_en_4_olide
-  }
-
-  branch from maleylacetate side right {
-    maleylacetate
-    <-> ec_3_1_1_45 [3.1.1.45] +h +h2o
-    trans_4_carboxymethylenebut_2_en_4_olide
-  }
-
-  branch from h side left {
-    h
-    <-> . +1r_5as_6r_1_4_5_5a_6_9_hexahydrophenazine_1_6_d +h2o
-    1r_6s_6_amino_5_oxocyclohex_2_ene_1_carboxylic
-  }
-
-  branch from h side right {
-    h
-    <-> . +h2o +1r_6s_6_amino_5_oxocyclohex_2_ene_1_carboxylic
-    1r_6r_1_2_5_5a_6_7_hexahydrophenazine_1_6_dicar
-  }
-
-  branch from nad side left {
-    nad
-    <-> . +octanoyl_coa +nadh +acetyl_coa +fadh2 +h +9e_12e_octadecadienoyl_coa +coa +h2o
-    fad
-  }
-
-  branch from nad side right {
-    nad
-    <-> . +octanoyl_coa +nadh +acetyl_coa +fadh2 +h +fad +coa +h2o
-    linoelaidyl_coenzyme_a
-  }
-
   branch from 4_fluoromuconolactone side left {
     4_fluoromuconolactone
     <-> ec_5_5_1_1 [5.5.1.1]
     3_fluoro_cis_cis_muconate
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +6_oxo_2_hydroxycyclohexane_1_carboxyl_coa
-    6_oxocyclohex_1_ene_1_carbonyl_coa
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +3_5_dihydroxy_1_4_naphthoquinone +h +o2
-    naphthalene_1_2_4_8_tetrol
   }
 }

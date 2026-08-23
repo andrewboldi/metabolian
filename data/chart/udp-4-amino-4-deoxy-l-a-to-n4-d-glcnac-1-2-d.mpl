@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-4-amino-4-deoxy-l-a-to-n4-d-glcnac-1-2-d "UDP-4-amino-4-deoxy-β-L-a… to N4-{β-D-GlcNAc-(1→2)-α-D-…" {
-  spacing 286
+  spacing 292
 
   spine at 0,0 {
     udp_4_amino_4_deoxy_l_arabinopyranose
@@ -16,33 +16,39 @@ pathway udp-4-amino-4-deoxy-l-a-to-n4-d-glcnac-1-2-d "UDP-4-amino-4-deoxy-β-L-a
     n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6
   }
 
-  branch from udp_l_threo_pentopyranos_4_ulose side left {
-    udp_l_threo_pentopyranos_4_ulose
-    <-> ec_1_1_1_305 [1.1.1.305] +nad +co2 +nadh
-    udp_d_glucuronate
-  }
-
-  branch from glutamate side right {
-    glutamate
-    <-> ec_2_6_1_89 [2.6.1.89] +dtdp_3_azaniumyl_3_6_dideoxy_d_glucose +akg
-    dtdp_3_dehydro_6_deoxy_d_glucose
-  }
-
-  branch from glutamate side left {
-    glutamate
-    <-> ec_2_6_1_93 [2.6.1.93] +neamine +akg
-    6_oxoparomamine
+  branch from udp_d_xylose side left {
+    udp_d_xylose
+    <-> ec_2_4_2_56 [2.4.2.56] +kaempferol_oxoanion +udp +hplus
+    kaempferol_3_o_d_xyloside
   }
 
   branch from udp_d_xylose side right {
     udp_d_xylose
-    <-> ec_2_4_2_61 [2.4.2.61] +3_o_d_ribitylphospho_2_3_n_acetyl_d_galactosamin +udp +hplus
-    3_o_d_xylosyl_1_4_d_ribitylphospho_2_3_n_acetyl
+    <-> ec_2_4_2_50 [2.4.2.50] +cyanidin_3_o_d_galactoside +udp +hplus
+    cyanidin_3_o_d_xylosyl_1_2_d_galactoside
   }
 
   branch from udp_d_xylose side left {
     udp_d_xylose
-    <-> ec_2_4_2_35 [2.4.2.35] +flavonol_3_o_glycoside +udp +hplus
-    flavonol_3_o_d_xylosyl_1_2_d_glycoside_s
+    <-> ec_2_4_2_51 [2.4.2.51] +anthocyanidin_3_o_d_glucoside +udp +hplus
+    anthocyanidin_3_o_d_sambubioside_betaine
+  }
+
+  branch from udp_d_xylose side right {
+    udp_d_xylose
+    <-> ec_2_4_2_26 [2.4.2.26] +l_serine +udp +hplus
+    o3_d_xylosyl_l_serine
+  }
+
+  branch from n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6 side left {
+    n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6
+    <-> ec_2_4_1_214 [2.4.1.214] +gdp_l_fucose +gdp +hplus
+    n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6
+  }
+
+  branch from n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6 side right {
+    n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6
+    <-> . +udp_d_galactose +udp +hplus
+    n4_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2
   }
 }

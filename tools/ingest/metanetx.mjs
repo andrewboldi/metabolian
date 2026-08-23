@@ -56,6 +56,86 @@ function parseSide(side) {
   }).filter(Boolean);
 }
 
+/** Two participants are the SAME species only when they share an elemental
+ *  composition AND a charge. MetaNetX and ChEBI often disagree on the latter:
+ *  ChEBI states a compound as the microspecies that exists at physiological pH
+ *  (a different protonation state), so its formula/charge is not interchangeable
+ *  with MNX's for balance arithmetic even when they name "the same" molecule. */
+function sameSpecies(elA, chargeA, elB, chargeB) {
+  if (chargeA !== chargeB) return false;
+  if (!elA || !elB) return false;
+  const keys = new Set([...Object.keys(elA), ...Object.keys(elB)]);
+  for (const k of keys) if ((elA[k] || 0) !== (elB[k] || 0)) return false;
+  return true;
+}
+
+/**
+ * Resolve one MetaNetX participant to the formula/charge used for balance AND
+ * the corpus-wide key it is stored under.
+ *
+ * The rule that keeps a reaction internally balanced: balance against MetaNetX's
+ * OWN native formula/charge whenever it has one, because MNX curates each
+ * reaction to balance within its own namespace. A ChEBI xref is adopted as the
+ * participant's identity (so MNX and Rhea dedupe against each other) ONLY when
+ * ChEBI names the exact same species — same composition and same charge — as MNX.
+ * When they differ, keep the mnx: key so the module carries MNX's self-consistent
+ * numbers and does not (a) turn a balanced reaction unbalanced by mixing
+ * protonation states, or (b) trip validate.mjs's cross-module identity check by
+ * claiming a ChEBI accession with a non-ChEBI formula.
+ *
+ * Balance ALWAYS uses the native MNX formula/charge — never a ChEBI substitute.
+ * A participant with no concrete native formula (MNX marks it generic: a "*"
+ * polymer, an "R" group) is left unresolved rather than rescued with a ChEBI
+ * formula, because that substitution is exactly what silently unbalanced 1,737
+ * reactions here and would fabricate balance for MNX's structurally generic set.
+ *
+ * Returns { key, charge, el } or null when MNX gives no concrete formula+charge.
+ */
+export function bridgeParticipant(mnx, { props, toChebi, chebi }) {
+  const native = props.get(mnx);
+  const nativeEl = native && native.charge !== null ? parseFormula(native.formula) : null;
+  if (!nativeEl) return null;
+
+  const acc = toChebi.get(mnx);
+  const xref = acc && chebi.has(acc) ? chebi.get(acc) : null;
+  const xrefEl = xref && xref.charge !== null ? parseFormula(xref.formula) : null;
+  const key = xrefEl && sameSpecies(nativeEl, native.charge, xrefEl, xref.charge)
+    ? acc
+    : `mnx:${mnx}`;
+  return { key, charge: native.charge, el: nativeEl };
+}
+
+/**
+ * Resolve, key, and mass/charge-balance one reaction. Mutates each participant's
+ * `.chebi` (the corpus-wide key) in place, exactly as the old inline loop did.
+ * Balance arithmetic uses each participant's resolved native formula/charge, so
+ * a reaction that balances in MetaNetX's own numbers stays balanced here.
+ */
+export function bridgeReaction(substrates, products, ctx) {
+  const info = new Map();
+  for (const p of [...substrates, ...products]) {
+    const res = bridgeParticipant(p.mnx, ctx);
+    if (!res) return { ok: false, balanced: false };
+    p.chebi = res.key;
+    info.set(p, res);
+  }
+  const tally = (side, sign) => {
+    const acc = { charge: 0, el: {} };
+    for (const p of side) {
+      const { el, charge } = info.get(p);
+      acc.charge += sign * p.n * charge;
+      for (const [k, v] of Object.entries(el)) acc.el[k] = (acc.el[k] || 0) + sign * p.n * v;
+    }
+    return acc;
+  };
+  const a = tally(substrates, 1), b = tally(products, -1);
+  if (a.charge + b.charge !== 0) return { ok: true, balanced: false };
+  for (const k of new Set([...Object.keys(a.el), ...Object.keys(b.el)])) {
+    if ((a.el[k] || 0) + (b.el[k] || 0) !== 0) return { ok: true, balanced: false };
+  }
+  return { ok: true, balanced: true };
+}
+
 /**
  * Load MetaNetX reactions that are NOT already in the Rhea corpus.
  *
@@ -112,43 +192,16 @@ export function loadMetanetx(chebi) {
     });
   }
 
-  // Resolve every participant to a key shared with the Rhea corpus where possible.
+  // Resolve every participant to a key shared with the Rhea corpus where possible,
+  // then balance every reaction against that resolution.
   const out = [];
   let skippedUnresolved = 0, skippedUnbalanced = 0;
-  const keyOf = (mnx) => {
-    const c = toChebi.get(mnx);
-    return c && chebi.has(c) ? c : `mnx:${mnx}`;
-  };
+  const ctx = { props, toChebi, chebi };
 
   for (const r of parsed) {
-    const all = [...r.substrates, ...r.products];
-    let ok = true;
-    for (const p of all) {
-      p.chebi = keyOf(p.mnx);                       // "chebi" is the corpus-wide participant key
-      const known = chebi.get(p.chebi) || props.get(p.mnx);
-      if (!known || !known.formula || known.charge === null || !parseFormula(known.formula)) { ok = false; break; }
-    }
+    const { ok, balanced } = bridgeReaction(r.substrates, r.products, ctx);
     if (!ok) { skippedUnresolved++; continue; }
-
-    // balance, against whichever table holds each participant
-    const tally = (side, sign) => {
-      const acc = { charge: 0, el: {} };
-      for (const p of side) {
-        const info = chebi.get(p.chebi) || props.get(p.mnx);
-        const el = parseFormula(info.formula);
-        acc.charge += sign * p.n * info.charge;
-        for (const [k, v] of Object.entries(el)) acc.el[k] = (acc.el[k] || 0) + sign * p.n * v;
-      }
-      return acc;
-    };
-    const a = tally(r.substrates, 1), b = tally(r.products, -1);
-    if (a.charge + b.charge !== 0) { skippedUnbalanced++; continue; }
-    let balanced = true;
-    for (const k of new Set([...Object.keys(a.el), ...Object.keys(b.el)])) {
-      if ((a.el[k] || 0) + (b.el[k] || 0) !== 0) { balanced = false; break; }
-    }
     if (!balanced) { skippedUnbalanced++; continue; }
-
     out.push({ rhea: null, mnx: r.mnx, equation: null, ec: r.ec, substrates: r.substrates, products: r.products });
   }
 

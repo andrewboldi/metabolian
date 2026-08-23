@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-octadecanoyl-2-hexanoyl-to-1-stearoyl-sn-glyce "1-octadecanoyl-2-hexanoyl… to 1-stearoyl-sn-glycero-3-p…" {
-  spacing 176
+  spacing 188
 
   spine at 0,0 {
     1_octadecanoyl_2_hexanoyl_sn_glycero_3_phosphoch
@@ -18,25 +18,37 @@ pathway 1-octadecanoyl-2-hexanoyl-to-1-stearoyl-sn-glyce "1-octadecanoyl-2-hexan
 
   branch from hexanoate side left {
     hexanoate
-    <-> . +nad +h2o +nadh +hplus
+    <-> . +iron +h2o +fe2 +hplus
     hexanal
-  }
-
-  branch from 1_stearoyl_sn_glycero_3_phosphocholine side right {
-    1_stearoyl_sn_glycero_3_phosphocholine
-    <-> . +1_octadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +n_acetylsphingosine
-    1_o_linoleoyl_n_acetylsphingosine
-  }
-
-  branch from 1_stearoyl_sn_glycero_3_phosphocholine side left {
-    1_stearoyl_sn_glycero_3_phosphocholine
-    <-> . +1_nonadecanoyl_sn_glycero_3_phosphocholine +1_stearoyl_2_oleoyl_sn_glycero_3_phosphocholine
-    1_nonadecanoyl_2_oleoyl_sn_glycero_3_phosphochol
   }
 
   branch from 1_o_oleoyl_n_acetylsphingosine side right {
     1_o_oleoyl_n_acetylsphingosine
-    <-> . +1_oleoyl_2_stearoyl_sn_glycero_3_phosphocholine +n_acetylsphingosine
-    2_stearoyl_sn_glycero_3_phosphocholine
+    <-> . +1_octadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph +n_acetylsphingosine
+    1_octadecanoyl_sn_glycero_3_phospho_1_sn_glycero
+  }
+
+  branch from oleoyl_coa side left {
+    oleoyl_coa
+    <-> . +1_myristoyl_sn_glycerol_3_phosphate +coa
+    1_myristoyl_2_oleoyl_sn_glycero_3_phosphate
+  }
+
+  branch from oleoyl_coa side right {
+    oleoyl_coa
+    <-> . +2_monolysocardiolipin +coa
+    2_oleoylcardiolipin
+  }
+
+  branch from n_acetylsphingosine side left {
+    n_acetylsphingosine
+    <-> . +1_hexadecanoyl_2_5z_8z_11z_14z_icosatetraenoyl_s +1_hexadecanoyl_sn_glycero_3_phosphoethanolamine
+    1_o_arachidonoyl_n_acetylsphingosine
+  }
+
+  branch from n_acetylsphingosine side right {
+    n_acetylsphingosine
+    <-> . +atp +adp +hplus
+    n_acetylsphingosine_1_phosphate
   }
 }

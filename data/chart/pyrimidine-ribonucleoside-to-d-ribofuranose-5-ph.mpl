@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway pyrimidine-ribonucleoside-to-d-ribofuranose-5-ph "pyrimidine ribonucleoside… to D-ribofuranose 5-phosphate" {
-  spacing 236
+  spacing 242
 
   spine at 0,0 {
     pyrimidine_ribonucleoside_5_monophosphate
@@ -22,21 +22,27 @@ pathway pyrimidine-ribonucleoside-to-d-ribofuranose-5-ph "pyrimidine ribonucleos
     2_deoxy_d_ribofuranose_5_phosphate
   }
 
-  branch from d_ribofuranose_5_phosphate side right {
-    d_ribofuranose_5_phosphate
-    <-> . +gmp +h2o
-    guanine
-  }
-
-  branch from adp_d_ribose side left {
+  branch from adp_d_ribose side right {
     adp_d_ribose
     <-> ec_3_2_2_19 [3.2.2.19] +n_adp_d_ribosyl_l_arginine +h2o
     arginine
   }
 
-  branch from adp_d_ribose side right {
+  branch from adp_d_ribose side left {
     adp_d_ribose
     <-> . +h2o
     cyclic_adp_d_ribose
+  }
+
+  branch from adp_d_ribose side right {
+    adp_d_ribose
+    <-> . +4_adp_d_ribosyl_l_aspartyl_2 +h2o +hplus
+    l_aspartate
+  }
+
+  branch from adp_d_ribose side left {
+    adp_d_ribose
+    <-> . +s_adp_d_ribosyl_l_cysteine_2 +h2o
+    l_cysteine
   }
 }

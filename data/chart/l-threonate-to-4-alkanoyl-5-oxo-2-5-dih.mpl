@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-threonate-to-4-alkanoyl-5-oxo-2-5-dih "L-threonate to (4-alkanoyl-5-oxo-2,5-dih…" {
-  spacing 262
+  spacing 274
 
   spine at 0,0 {
     l_threonate
@@ -36,19 +36,31 @@ pathway l-threonate-to-4-alkanoyl-5-oxo-2-5-dih "L-threonate to (4-alkanoyl-5-ox
 
   branch from holo-acp side left {
     holo-acp
-    <-> . +malonyl-coa +nadph +hplus +co2 +nadp +coa +h2o
-    o_s_4a_5_dihydro_ml_236c_carboxy_pantetheine_4_p
+    <-> ec_2_3_1_129 [2.3.1.129] +o_s_3r_3_hydroxyacylpantetheine_4_phosphoryl_ser +udpglcnac
+    udp_3_o_3r_hydroxyacyl_n_acetyl_d_glucosamine
   }
 
   branch from holo-acp side right {
     holo-acp
-    <-> ec_6_2_1_59 [6.2.1.59] +icosanoate +atp +amp +ppi
-    o_s_icosanoylpantetheine_4_phosphoryl_l_serine_1
+    <-> ec_2_3_1_305 [2.3.1.305] +udp_2_acetamido_3_ammonio_2_3_dideoxy_d_glucopyr +o_s_3r_3_hydroxyacylpantetheine_4_phosphoryl_ser +hplus
+    udp_2_acetamido_3_3r_3_hydroxyacyl_amino_2_3_did
   }
 
   branch from 4_alkanoyl_5_oxo_2_5_dihydrofuran_3_yl_methyl_p side left {
     4_alkanoyl_5_oxo_2_5_dihydrofuran_3_yl_methyl_p
     <-> ec_1_3_1_113 [1.3.1.113] +nadp +nadph +hplus
     3s_4r_4_alkanoyl_5_oxooxolan_3_yl_methyl_phosph
+  }
+
+  branch from holo-acp side right {
+    holo-acp
+    <-> . +2e_enoyl_fatty_acid_anion +atp +amp +ppi
+    o_s_2e_2_enoylpantetheine_4_phosphoryl_l_serine
+  }
+
+  branch from holo-acp side left {
+    holo-acp
+    <-> . +o_s_2e_2_enoylpantetheine_4_phosphoryl_l_serine +amp +hplus
+    2e_2_fatty_enoyladenylate
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-serine-phosphoethanolam-to-h2o "L-serine-phosphoethanolam… to H2O" {
-  spacing 308
+  spacing 340
 
   spine at 0,0 {
     l_serine_phosphoethanolamine
@@ -18,61 +18,115 @@ pathway l-serine-phosphoethanolam-to-h2o "L-serine-phosphoethanolam… to H2O" {
 
   branch from phosphoethanolamine side left {
     phosphoethanolamine
-    <-> ec_2_1_1_103 [2.1.1.103] +s_adenosyl_l_homocysteine +n_methylethanolamine_phosphate +h
-    s_s_adenosyl_l_methionine
-  }
-
-  branch from phosphoethanolamine side right {
-    phosphoethanolamine
     <-> ec_4_1_2_27 [4.1.2.27] +sphing_4_enine_1_phosphate
     2_hexadecenal
   }
 
-  branch from h side left {
-    h
-    <-> ec_1_6_2_6 [1.6.2.6] +nadp +ferroleghemoglobin +ferrileghemoglobin
-    nadph
-  }
-
   branch from h side right {
     h
-    <-> . +nitrite +o2
-    nitric_acid
+    <-> . +d_glucuronate +4_acetamidophenol +h2o
+    acetaminophen_o_beta_d_glucosiduronic_acid
   }
 
-  branch from serine side left {
-    serine
-    <-> ec_4_3_1_15 [4.3.1.15] +nh4
-    pyruvate
-  }
-
-  branch from sphing_4_enine_1_phosphate side right {
-    sphing_4_enine_1_phosphate
-    <-> ec_2_7_1_91 [2.7.1.91] +adp +atp
-    sphing_4_enine
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +formate +undecaprenyl_phosphate_4_amino_4_deoxy_l_arabino
-    undecaprenyl_phosphate_4_amino_4_formyl_l_arabin
+  branch from h side left {
+    h
+    <-> . +gmp +adenosylcobalamin +ribazole
+    adenosine_gdp_cobinamide
   }
 
   branch from h2o side right {
     h2o
-    <-> . +hydroxymethylbilane
-    uroporphyrinogen_i
+    <-> . +d_glucuronate +3_hydroxymorphinan
+    3_hydroxymorphinan_o_glucuronide
   }
 
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_14 [3.6.3.14] +h +adp +phosphate +h2o
-    pmf
+  branch from h2o side left {
+    h2o
+    <-> . +d_glucuronate +4_hydroxytriazolam
+    4_hydroxy_triazolam_glucuronide
   }
 
   branch from atp side right {
     atp
     <-> . +h +adp +phosphate +h2o
-    butane_1_sulfonate
+    cerivastatin_m23_glucuronide
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +1_2_di_7z_tetradecenoyl_sn_glycerol +h +adp
+    1_2_di_7z_tetradecenoyl_sn_glycero_3_phosphate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +d_glucuronate +6_hydroxy_fluvastatin
+    6_hydroxy_fluvastatin_glucuronide
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +d_glucuronate +alpha_hydroxyalprazolam
+    alpha_hydroxyalprazolam_glucuronide
+  }
+
+  branch from h side right {
+    h
+    <-> . +o2 +nadph +cyclosporin_a_metabolite_m17 +cyclosporin_a_metabolite_m8 +h2o
+    nadp
+  }
+
+  branch from h side left {
+    h
+    <-> . +o2 +nadph +cyclosporin_a_metabolite_m1 +nadp +h2o
+    cyclosporin_a_metabolite_m8
+  }
+
+  branch from hexadecanoate side right {
+    hexadecanoate
+    <-> . +1_hexadecanoylglycerone_3_phosphate +hexadecan_1_ol +h
+    1_1z_hexadecenyl_glycero_3_phosphate
+  }
+
+  branch from hexadecanoate side left {
+    hexadecanoate
+    <-> . +h +o2 +nadph +nadp +h2o
+    16_hydroxyhexadecanoate
+  }
+
+  branch from adp side right {
+    adp
+    <-> . +h +1_2_di_9z_hexadecenoyl_sn_glycero_3_phosphate +atp
+    1_2_diacyl_sn_glycerol_dihexadec_9_enoyl_n_c16_1
+  }
+
+  branch from adp side left {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    diclofenac_d_glucosiduronic_acid
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    n_desisopropyl_fluvastatin
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    dextrin
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    gemcitabine
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26
   }
 }

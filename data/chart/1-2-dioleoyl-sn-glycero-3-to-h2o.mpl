@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-2-dioleoyl-sn-glycero-3-to-h2o "1,2-dioleoyl-sn-glycero-3… to H2O" {
-  spacing 244
+  spacing 304
 
   spine at 0,0 {
     1_2_dioleoyl_sn_glycero_3_phospho_1_sn_glycerol
@@ -20,63 +20,22 @@ pathway 1-2-dioleoyl-sn-glycero-3-to-h2o "1,2-dioleoyl-sn-glycero-3… to H2O" {
     atp
   }
 
-  branch from 1_2_dioleoyl_sn_glycero_3_phospho_1_sn_glycerol side left {
-    1_2_dioleoyl_sn_glycero_3_phospho_1_sn_glycerol
-    <-> . +1_9z_octadecenoyl_sn_glycero_3_phospho_1_sn_glyc +coa
-    oleoyl_coa
-  }
 
-  branch from 1_2_dioleoyl_sn_glycero_3_phospho_1_sn_glycerol side right {
-    1_2_dioleoyl_sn_glycero_3_phospho_1_sn_glycerol
-    <-> . +1_nonadecanoyl_sn_glycero_3_phosphocholine +1_9z_octadecenoyl_sn_glycero_3_phospho_1_sn_glyc
-    1_nonadecanoyl_2_oleoyl_sn_glycero_3_phosphochol
-  }
 
-  branch from 1_9z_octadecenoyl_sn_glycero_3_phospho_1_sn_glyc side left {
-    1_9z_octadecenoyl_sn_glycero_3_phospho_1_sn_glyc
-    <-> . +lauroyl_coa +coa
-    1_oleoyl_2_lauroyl_sn_glycero_3_phospho_1_sn_gly
-  }
 
-  branch from 1_9z_octadecenoyl_sn_glycero_3_phospho_1_sn_glyc side right {
-    1_9z_octadecenoyl_sn_glycero_3_phospho_1_sn_glyc
-    <-> . +sn_glycero_3_phospho_1_sn_glycerol
-    1_oleoyl_sn_glycero_3_phospho_3_oleoyl_1_sn_glyc
-  }
 
-  branch from oleate side left {
-    oleate
-    <-> . +n_icosanoyl_1_oleoyl_sn_glycero_3_phosphoethanol +h2o +hplus
-    n_icosanoyl_sn_glycero_3_phosphoethanolamine
-  }
 
-  branch from oleate side right {
-    oleate
-    <-> . +n_oleoyl_l_glutaminate +h2o
-    glutamine
-  }
 
-  branch from h2o side left {
-    h2o
-    <-> . +13_14_epoxy_retinol
-    13_14_dihydroxy_retinol
-  }
 
-  branch from h2o side right {
-    h2o
-    <-> . +nitrite +h +hypochlorous_acid
-    nitryl_chloride
-  }
 
-  branch from atp side left {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    sulfoacetate
-  }
 
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_25 [3.6.3.25] +h +adp +phosphate +h2o
-    sulfate
-  }
+
+
+
+
+
+
+
+
+
 }

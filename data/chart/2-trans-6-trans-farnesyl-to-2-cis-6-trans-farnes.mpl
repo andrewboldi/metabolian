@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-trans-6-trans-farnesyl-to-2-cis-6-trans-farnes "2-trans,6-trans-farnesyl… to (2-cis,6-trans)-farnesol" {
-  spacing 214
+  spacing 208
 
   spine at 0,0 {
     fpp
@@ -14,11 +14,5 @@ pathway 2-trans-6-trans-farnesyl-to-2-cis-6-trans-farnes "2-trans,6-trans-farnes
     2_trans_6_trans_farnesol
     <-> ec_5_2_1_9 [5.2.1.9]
     2_cis_6_trans_farnesol
-  }
-
-  branch from 2_trans_6_trans_farnesol side left {
-    2_trans_6_trans_farnesol
-    <-> . +nadph +o2 +hplus +nadp +h2o
-    2e_6e_10e_hydroxyfarnesol
   }
 }

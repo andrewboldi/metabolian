@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2r-hydroxyhexanoate-to-phosphate "(2R)-hydroxyhexanoate to phosphate" {
-  spacing 208
+  spacing 268
 
   spine at 0,0 {
     2r_hydroxyhexanoate
@@ -20,37 +20,97 @@ pathway 2r-hydroxyhexanoate-to-phosphate "(2R)-hydroxyhexanoate to phosphate" {
 
   branch from h side left {
     h
-    <-> . +cyromazine +h2o +nh4
-    n_cyclopropylammeline
+    <-> . +huvastatin_acid +h2o
+    huvastatin_lactone
   }
 
   branch from h side right {
     h
-    <-> ec_2_5_1_18 [2.5.1.18] +1r_hydroxy_2r_glutathionyl_1_2_dihydronaphthale +glutathione
-    1r_2s_naphthalene_1_2_oxide
+    <-> . +monacolin_j_carboxylate +2_dimethylbutanoyl_s_methyl_mercaptopropanoate +simvastatin_hydroxy_acid
+    methyl_mercaptopropanoate
   }
 
   branch from adp side left {
     adp
-    <-> ec_2_7_12_2 [2.7.12.2] +h +atp +l_threonine
-    o_phospho_l_threonine
+    <-> ec_2_7_1_21 [2.7.1.21] +acyclovir +h +atp
+    acyclovir_monophosphate
   }
 
   branch from adp side right {
     adp
-    <-> ec_3_6_3_49 [3.6.3.49] +h +phosphate +atp +h2o
-    chloride
+    <-> ec_2_7_1_21 [2.7.1.21] +h +3_azido_3_deoxythymidine_5_phosphate +atp
+    zidovudine
   }
 
   branch from phosphate side left {
     phosphate
-    <-> . +salbostatin_6_phosphate +h2o +h
-    salbostatin
+    <-> ec_3_1_3_12 [3.1.3.12] +6_o_mycolyltrehalose_6_phosphate +h2o +h
+    alpha_alpha_trehalose_6_alpha_mycolate
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_2_4_1_216 [2.4.1.216] +beta_d_glucose_6_phosphate +beta_d_glucose_1_phosphate
-    alpha_alpha_trehalose_6_phosphate
+    <-> ec_3_1_3_12 [3.1.3.12] +6_o_cis_methoxy_mycolyl_trehalose_6_phosphate +h2o
+    trehalose_cis_methoxy_mono_mycolate
+  }
+
+  branch from d_alanine side left {
+    d_alanine
+    <-> . +n_acetylglucosamine_n_acetylmuramoyl_l_alanyl_d
+    a_peptidoglycan_with_d_d_cross_links_meso_diamin
+  }
+
+  branch from d_alanine side right {
+    d_alanine
+    <-> ec_3_4_17_13 [3.4.17.13] +l_alanyl_d_glutamyl_meso_2_6_diaminoheptanedioat +h +h2o
+    l_alanyl_gamma_d_glutamyl_meso_2_6_diaminopimelo
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_6_3_2_1 [6.3.2.1] +diphosphate +pantoylglycine +amp +r_pantoate
+    glycine
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_2_7_1_1 [2.7.1.1] +1_5_anhydro_d_glucitol_6_phosphate +h +adp
+    1_5_anhydro_d_glucitol
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_2_1_12 [2.2.1.12] +co2 +r_1_3_diphenyl_pentane_1_4_dione +trans_chalcone
+    pyruvate
+  }
+
+  branch from h side right {
+    h
+    <-> . +gdp_d_erythro_alpha_d_gluco_octose +diphosphate +d_erythro_alpha_d_gluco_octopyranose1_phosphate
+    gtp
+  }
+
+  branch from adp side left {
+    adp
+    <-> ec_2_7_1_1 [2.7.1.1] +d_arabinose_5_phosphate +h +atp
+    d_arabinofuranose
+  }
+
+  branch from adp side right {
+    adp
+    <-> ec_2_7_1_1 [2.7.1.1] +2_5_anhydro_d_mannitol +h +atp
+    2_5_anhydro_d_mannitol_6_phosphate
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> ec_3_1_3_12 [3.1.3.12] +6_o_trans_methoxy_mycolyl_trehalose_6_phosphate +h2o
+    trehalose_trans_methoxy_mono_mycolate
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_3_1_3_12 [3.1.3.12] +6_o_cis_keto_mycolyl_trehalose_6_phosphate +h2o
+    trehalose_cis_keto_mono_mycolate
   }
 }

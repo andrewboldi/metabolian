@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-amino-2-methyl-5-dipho-to-phosphate "4-amino-2-methyl-5-(dipho… to phosphate" {
-  spacing 274
+  spacing 172
 
   spine at 0,0 {
     4_amino_2_methyl_5_diphosphooxymethyl_pyrimidine
@@ -18,107 +18,5 @@ pathway 4-amino-2-methyl-5-dipho-to-phosphate "4-amino-2-methyl-5-(dipho… to p
     5_amino_1_5_phospho_d_ribosyl_imidazole
     <-> . +hydrogencarbonate +atp -5_amino_1_5_phospho_d_ribosyl_imidazole_4_carbox -phosphate
     adp
-  }
-
-  branch from diphosphate side left {
-    diphosphate
-    <-> ec_4_2_3_51 [4.2.3.51] +phellandrene
-    neryl_diphosphate
-  }
-
-  branch from diphosphate side right {
-    diphosphate
-    <-> ec_4_2_3_32 [4.2.3.32] +ent_abieta_8_14_12_diene
-    ent_copalyl_diphosphate
-  }
-
-  branch from co2 side left {
-    co2
-    <-> . +hexanoyl_coa +malonyl_coa +h +olivetolate
-    coa
-  }
-
-  branch from co2 side right {
-    co2
-    <-> ec_4_1_1_65 [4.1.1.65] +r_1_2_distearoylphosphatidylethanolamine
-    1_2_distearoyl_sn_glycero_3_phosphoserine
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_9z_hexadecenoyl_2_9z_12z_octadecadienoyl_sn_gl
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    1_2_dioleoyl_sn_glycero_3_phosphoethanolamine
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    18_0_18_3_pe
-  }
-
-  branch from 5_amino_1_5_phospho_d_ribosyl_imidazole side left {
-    5_amino_1_5_phospho_d_ribosyl_imidazole
-    <-> . +atp +h +adp +phosphate
-    2_formamido_n_1_5_o_phospho_beta_d_ribosyl_aceta
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_6e_farnesal +h
-    3s_6e_nerolidol
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_6e_farnesal +h
-    drimenol
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_1_1_107 [3.1.1.107] +diglucosyl_enterobactin
-    diglucosyl_2_3_dihydroxybenzoylserine_3
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +ferroheme_a
-    fe_ii_hydroxyheme_i
-  }
-
-  branch from adp side right {
-    adp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +phosphate +atp +h2o
-    1_oleoyl_2_linoleoyl_sn_glycero_3_phosphoethanol
-  }
-
-  branch from adp side left {
-    adp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +phosphate +atp +h2o
-    1_2_dilinoleoyl_sn_glycero_3_phosphoethanolamine
-  }
-
-  branch from phosphate side right {
-    phosphate
-    <-> . +carbamoyl_phosphate +9beta_mitosane_core
-    carbamoylated_9beta_mitosane_core
-  }
-
-  branch from phosphate side left {
-    phosphate
-    <-> . +carbamoyl_phosphate +9alpha_mitosane_core
-    carbamoylated_9alpha_mitosane_core
   }
 }

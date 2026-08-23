@@ -141,51 +141,6 @@
       "xrefs": {
         "chebi": "CHEBI:73315"
       }
-    },
-    {
-      "id": "fmnh2",
-      "name": "FMNH2",
-      "formula": "C17H21N4O9P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57618"
-      }
-    },
-    {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:15379"
-      }
-    },
-    {
-      "id": "long_chain_alkane",
-      "name": "long-chain alkane",
-      "formula": "HR",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:83563"
-      }
-    },
-    {
-      "id": "fmn",
-      "name": "FMN",
-      "formula": "C17H18N4O9P",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58210"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16526"
-      }
     }
   ],
   "enzymes": [
@@ -194,21 +149,30 @@
       "name": "2-hydroxyacyl-CoA lyase",
       "ec": [
         "4.1.2.63"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q9UJ83"
+      }
     },
     {
       "id": "ec_1_2_1_48",
       "name": "long-chain-aldehyde dehydrogenase",
       "ec": [
         "1.2.1.48"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P43353"
+      }
     },
     {
       "id": "ec_2_5_1_26",
       "name": "alkylglycerone-phosphate synthase",
       "ec": [
         "2.5.1.26"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "O00116"
+      }
     }
   ],
   "reactions": [
@@ -393,58 +357,269 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "a long-chain fatty aldehyde + reduced [NADPH--hemoprotein reductase] + O2 = a long-chai...",
-      "equation": "a long-chain fatty aldehyde + reduced [NADPH--hemoprotein reductase] + O2 = a long-chain alkane + oxidized [NADPH--hemoprotein reductase] + CO2 + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "long_chain_fatty_aldehyde",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "long_chain_alkane",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:83563"
+      "id": "xt_long_chain_fatty_aldehyde_2r-2-hydroxy-4-methyls-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "long_chain_fatty_aldehyde"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2r-2-hydroxy-4-methyls-to-h2o"
+      },
+      "note": "Shares long-chain fatty aldehyde with (2R)-2-hydroxy-4-(methyls… to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:83563"
+            "db": "ChEBI",
+            "id": "CHEBI:17176"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_long_chain_fatty_aldehyde_long-chain-fatty-acid-to-o-s-2r-4r-6r-8r-2-4-6",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "long_chain_fatty_aldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "long-chain-fatty-acid-to-o-s-2r-4r-6r-8r-2-4-6"
+      },
+      "note": "Shares long-chain fatty aldehyde with long-chain fatty acid… to O-(S-[2R,4R,6R,8R]-2,4,6,….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17176"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_long_chain_fatty_aldehyde_long-chain-fatty-acyl-coa-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "long_chain_fatty_aldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "long-chain-fatty-acyl-coa-to-fmn"
+      },
+      "note": "Shares long-chain fatty aldehyde with long-chain fatty acyl-CoA to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17176"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_long_chain_fatty_aldehyde_long-chain-fatty-acyl-coa-to-long-chain-fatty-ac",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "long_chain_fatty_aldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "long-chain-fatty-acyl-coa-to-long-chain-fatty-ac"
+      },
+      "note": "Shares long-chain fatty aldehyde with long-chain fatty acyl-CoA to long-chain fatty acyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17176"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_long_chain_fatty_aldehyde_n-long-chain-acyl-ethano-to-o-s-2s-4s-6s-2-4-6-t",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "long_chain_fatty_aldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-long-chain-acyl-ethano-to-o-s-2s-4s-6s-2-4-6-t"
+      },
+      "note": "Shares long-chain fatty aldehyde with N-(long-chain-acyl)ethano… to O-(S-[2S,4S,6S]-2,4,6-tri….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17176"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_formyl_coa_2-hydroxyisobutanoyl-coa-to-2-oxopropyl-com",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "formyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-hydroxyisobutanoyl-coa-to-2-oxopropyl-com"
+      },
+      "note": "Shares formyl-CoA with 2-hydroxyisobutanoyl-CoA to 2-oxopropyl-CoM.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57376"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_formyl_coa_3-methyl-fatty-acid-anion-to-2-methyl-fatty-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "formyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-methyl-fatty-acid-anion-to-2-methyl-fatty-acid"
+      },
+      "note": "Shares formyl-CoA with 3-methyl fatty acid anion to 2-methyl fatty acid anion.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57376"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_formyl_coa_3-methylpalmitoyl-coa-to-n3-carboxylatoformyl-l",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "formyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-methylpalmitoyl-coa-to-n3-carboxylatoformyl-l"
+      },
+      "note": "Shares formyl-CoA with 3-methylpalmitoyl-CoA to N3-(carboxylatoformyl)-L-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57376"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_formyl_coa_6-o-acetyl-d-glucose-to-formyl-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "formyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-o-acetyl-d-glucose-to-formyl-phosphate"
+      },
+      "note": "Shares formyl-CoA with 6-O-acetyl-D-glucose to formyl phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57376"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_formyl_coa_oxaloacetate-to-formyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "formyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "oxaloacetate-to-formyl-coa"
+      },
+      "note": "Shares formyl-CoA with oxaloacetate to formyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57376"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_formyl_coa_phytanoyl-coa-to-pristanate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "formyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phytanoyl-coa-to-pristanate"
+      },
+      "note": "Shares formyl-CoA with phytanoyl-CoA to pristanate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57376"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_long_chain_fatty_acid_anion_fatty-acyl-coa-to-o-s-2r-4r-6r-2-4-6-tri",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "long_chain_fatty_acid_anion"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fatty-acyl-coa-to-o-s-2r-4r-6r-2-4-6-tri"
+      },
+      "note": "Shares long-chain fatty acid anion with fatty acyl-CoA to O-(S-[2R,4R,6R]-2,4,6-tri….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57560"
           }
         ]
       }

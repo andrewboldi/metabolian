@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway acetyl-coa-to-h2o-null "acetyl-CoA to H2O" {
-  spacing 188
+  spacing 260
 
   spine at 0,0 {
     acetyl_coa
@@ -18,37 +18,109 @@ pathway acetyl-coa-to-h2o-null "acetyl-CoA to H2O" {
 
   branch from coa side left {
     coa
-    <-> . +acetyl_coa +thienamycin
-    n_acetylthienamycin
+    <-> . +acetyl_coa +15_o_deacetylcalonectrin
+    calonectrin
   }
 
   branch from coa side right {
     coa
-    <-> . +acetyl_coa +tabtoxinine_lactam
-    n1_acetyl_tabtoxinine_beta_lactam
+    <-> . +acetyl_coa +3_15_diacetoxyscirpenol
+    3_4_15_triacetoxyscirpenol
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_14_12_10 [1.14.12.10] +nadh +h +3_fluorobenzoic_acid +o2
-    3_fluorocyclohexadiene_cis_cis_1_2_diol_1_carbox
+    <-> ec_1_1_1_218 [1.1.1.218] +nadh +h +hydrocodone
+    dihydrocodeine
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_14_12_10 [1.14.12.10] +nadh +h +3_fluorobenzoic_acid +o2
-    5_fluorocyclohexadiene_cis_cis_1_2_diol_1_carbox
+    <-> ec_1_1_1_218 [1.1.1.218] +nadh +h +codeinone
+    codeine
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_14_14_1 [1.14.14.1] +h +valproic_acid +o2 +nadph +4_hydroxyvalproic_acid
-    nadp
+    <-> ec_1_10_3_1 [1.10.3.1] +cis_caffeic_acid +o2 +h
+    2z_3_3_4_dioxocyclohexa_1_5_dien_1_yl_prop_2_en
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_14_14_1 [1.14.14.1] +h +valproic_acid +o2 +nadph +nadp
-    5_hydroxyvalproic_acid
+    <-> . +9_10_epoxy_10_12z_octadecadienoate +h
+    9_hydroxy_10_oxo_12_z_octadecenoic_acid
+  }
+
+  branch from acetyl_coa side left {
+    acetyl_coa
+    <-> . +trichodermol +coa
+    trichodermin
+  }
+
+  branch from acetyl_coa side right {
+    acetyl_coa
+    <-> . +udp_2_4_diacetamido_2_4_6_trideoxy_beta_l_idose +coa
+    udp_4_amino_4_6_dideoxy_n_acetyl_beta_l_idosamin
+  }
+
+  branch from coa side left {
+    coa
+    <-> . +trichodermol +2_4_6_octatrienedioyl_coa
+    harzianum_a
+  }
+
+  branch from coa side right {
+    coa
+    <-> . +2_aminobenzoylacetyl_coa
+    4_hydroxy_2_quinolone
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> ec_1_1_1_1 [1.1.1.1] +5_dihydrotestosterone +h +nad
+    5_androstane_3_17_diol
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_1_1_188 [1.1.1.188] +h +9_10_phenanthroquinone +nad
+    phenanthrene_9_10_diol
+  }
+
+  branch from h side left {
+    h
+    <-> . +acetyl_coa +n_3_aminopropyl_hydroxylamine +coa
+    n_3_aminopropyl_n_hydroxyacetamide
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_5_1_1 [2.5.1.1] +diphosphate +wighteone +genistein
+    dimethylallyl_diphosphate
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +5beta_pregnan_3_20_dione
+    3beta_hydroxy_5beta_pregnane_20_one
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_184 [1.1.1.184] +nadh +h +4_nitroacetophenone
+    1_4_nitrophenyl_ethanol
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +neoabietadiene_diol
+    neoabietadienal
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +dehydroabietadiene_diol
+    dehydroabietadienal
   }
 }

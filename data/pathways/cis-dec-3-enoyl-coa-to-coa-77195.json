@@ -1,0 +1,465 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "cis-dec-3-enoyl-coa-to-coa-77195",
+  "name": "cis-dec-3-enoyl-CoA to CoA",
+  "category": "other",
+  "summary": "A 3-step route from cis-dec-3-enoyl-CoA(4−) to CoA, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:77195"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:195601"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "cis_dec_3_enoyl_coa",
+      "name": "cis-dec-3-enoyl-CoA",
+      "formula": "C31H48N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:195601"
+      }
+    },
+    {
+      "id": "trans_dec_2_enoyl_coa",
+      "name": "trans-dec-2-enoyl-CoA",
+      "short": "trans-dec-2-enoyl-C…",
+      "formula": "C31H48N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:61406"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "trans_trans_deca_2_4_dienoyl_coa",
+      "name": "trans,trans-deca-2,4-dienoyl-CoA",
+      "short": "trans,trans-deca-2,…",
+      "formula": "C31H46N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:62244"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "r_carnitine",
+      "name": "(R)-carnitine",
+      "formula": "C7H15NO3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1105737"
+      }
+    },
+    {
+      "id": "4s_4_2e_4z_2_4_decadienoyloxy_4_trimethylammoni",
+      "name": "(4S)-4-[(2E,4Z)-2,4-Decadienoyloxy]-4-(trimethylammonio)butanoate",
+      "short": "4-[(2E,4Z)-2,4-Deca…",
+      "formula": "C17H29NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:177713"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(3Z)-decenoyl-CoA = (2E)-decenoyl-CoA",
+      "equation": "(3Z)-decenoyl-CoA = (2E)-decenoyl-CoA",
+      "substrates": [
+        {
+          "metabolite": "cis_dec_3_enoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_dec_2_enoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:77195"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77195"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(2E)-decenoyl-CoA + NADP(+) = (2E,4E)-decadienoyl-CoA + NADPH + H(+)",
+      "equation": "(2E)-decenoyl-CoA + NADP(+) = (2E,4E)-decadienoyl-CoA + NADPH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "trans_dec_2_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_trans_deca_2_4_dienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:53296"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53296"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR154972",
+      "substrates": [
+        {
+          "metabolite": "trans_trans_deca_2_4_dienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "r_carnitine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4s_4_2e_4z_2_4_decadienoyloxy_4_trimethylammoni",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR154972"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR154972"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_cis_dec_3_enoyl_coa_cis-dec-3-enoyl-coa-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cis_dec_3_enoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cis-dec-3-enoyl-coa-to-coa"
+      },
+      "note": "Shares cis-dec-3-enoyl-CoA with cis-dec-3-enoyl-CoA to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:195601"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cis_dec_3_enoyl_coa_z-3-oxotetradec-7-enoyl-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cis_dec_3_enoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "z-3-oxotetradec-7-enoyl-to-coa"
+      },
+      "note": "Shares cis-dec-3-enoyl-CoA with (Z)-3-oxotetradec-7-enoyl… to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:195601"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cis_dec_3_enoyl_coa_z-3-oxotetradec-7-enoyl-to-coa-82943",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cis_dec_3_enoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "z-3-oxotetradec-7-enoyl-to-coa-82943"
+      },
+      "note": "Shares cis-dec-3-enoyl-CoA with (Z)-3-oxotetradec-7-enoyl… to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:195601"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_trans_deca_2_4_dienoyl_coa_cis-dec-3-enoyl-coa-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_trans_deca_2_4_dienoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cis-dec-3-enoyl-coa-to-coa"
+      },
+      "note": "Shares trans,trans-deca-2,4-dienoyl-CoA with cis-dec-3-enoyl-CoA to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62244"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_trans_deca_2_4_dienoyl_coa_trans-trans-deca-2-4-dien-to-3-hydroxydecanoyl-c",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_trans_deca_2_4_dienoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-trans-deca-2-4-dien-to-3-hydroxydecanoyl-c"
+      },
+      "note": "Shares trans,trans-deca-2,4-dienoyl-CoA with trans,trans-deca-2,4-dien… to 3-hydroxydecanoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62244"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_trans_deca_2_4_dienoyl_coa_trans-trans-deca-2-4-dien-to-3s-3-hydroxydodec-c",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_trans_deca_2_4_dienoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-trans-deca-2-4-dien-to-3s-3-hydroxydodec-c"
+      },
+      "note": "Shares trans,trans-deca-2,4-dienoyl-CoA with trans,trans-deca-2,4-dien… to (3S)-3-hydroxydodec-cis-6….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62244"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_trans_deca_2_4_dienoyl_coa_trans-trans-deca-2-4-dien-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_trans_deca_2_4_dienoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-trans-deca-2-4-dien-to-nad"
+      },
+      "note": "Shares trans,trans-deca-2,4-dienoyl-CoA with trans,trans-deca-2,4-dien… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62244"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_trans_deca_2_4_dienoyl_coa_trans-trans-deca-2-4-dien-to-nad-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_trans_deca_2_4_dienoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-trans-deca-2-4-dien-to-nad-null"
+      },
+      "note": "Shares trans,trans-deca-2,4-dienoyl-CoA with trans,trans-deca-2,4-dien… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62244"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4s_4_2e_4z_2_4_decadienoyloxy_4_trimethylammoni_3-oxo-2s-methylisocapry-to-nad-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4s_4_2e_4z_2_4_decadienoyloxy_4_trimethylammoni"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-oxo-2s-methylisocapry-to-nad-null"
+      },
+      "note": "Shares (4S)-4-[(2E,4Z)-2,4-Decadienoyloxy]-4-(trimethylammonio)butanoate with 3-Oxo-(2S)-Methylisocapry… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:177713"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4s_4_2e_4z_2_4_decadienoyloxy_4_trimethylammoni_3alpha-7alpha-12alpha-tri-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4s_4_2e_4z_2_4_decadienoyloxy_4_trimethylammoni"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3alpha-7alpha-12alpha-tri-to-nadph"
+      },
+      "note": "Shares (4S)-4-[(2E,4Z)-2,4-Decadienoyloxy]-4-(trimethylammonio)butanoate with 3alpha,7alpha,12alpha-tri… to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:177713"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4s_4_2e_4z_2_4_decadienoyloxy_4_trimethylammoni_cis-dec-3-enoyl-coa-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4s_4_2e_4z_2_4_decadienoyloxy_4_trimethylammoni"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cis-dec-3-enoyl-coa-to-coa"
+      },
+      "note": "Shares (4S)-4-[(2E,4Z)-2,4-Decadienoyloxy]-4-(trimethylammonio)butanoate with cis-dec-3-enoyl-CoA to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:177713"
+          }
+        ]
+      }
+    }
+  ]
+}

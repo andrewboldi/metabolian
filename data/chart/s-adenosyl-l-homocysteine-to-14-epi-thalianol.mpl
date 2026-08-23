@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-adenosyl-l-homocysteine-to-14-epi-thalianol "S-adenosyl-L-homocysteine to 14-Epi-Thalianol" {
-  spacing 216
+  spacing 264
 
   spine at 0,0 {
     s_adenosyl_l_homocysteine
@@ -16,51 +16,99 @@ pathway s-adenosyl-l-homocysteine-to-14-epi-thalianol "S-adenosyl-L-homocysteine
     14_epi_thalianol
   }
 
-  branch from s_adenosyl_l_methionine side left {
-    s_adenosyl_l_methionine
-    <-> ec_2_1_1_79 [2.1.1.79] +s_adenosyl_l_homocysteine +h +cyclopropane_phosphatidylglycerol_dihexadec_9_10
-    phosphatidylglycerol_dihexadec_9_enoyl_n_c16_1
-  }
-
-  branch from s_adenosyl_l_methionine side right {
-    s_adenosyl_l_methionine
-    <-> ec_2_1_1_133 [2.1.1.133] +s_adenosyl_l_homocysteine +cobalt_precorrin_5 +h
-    cobalt_precorrin_4
-  }
-
   branch from nadp side left {
     nadp
-    <-> ec_1_14_21_1 [1.14.21.1] +s_cheilanthifoline +h +o2 +nadph +h2o
-    s_stylopine
+    <-> . +13z_3_oxoicosenoyl_coa +h +nadph
+    13z_3_hydroxyicos_13_enoyl_coa
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_21_3 [1.14.21.3] +h +r_n_methylcoclaurine +o2 +nadph +s_n_methylcoclaurine +h2o
-    berbamunine
+    <-> . +3_s_hydroxy_9_cis_eicosenoyl_coenzyme_a +h +nadph
+    3_oxo_9_cis_eicosenoyl_coenzyme_a
   }
 
   branch from s_2_3_epoxysqualene side left {
     s_2_3_epoxysqualene
     <-> .
-    bauerenol
+    achilleol_a
   }
 
   branch from s_2_3_epoxysqualene side right {
     s_2_3_epoxysqualene
-    <-> ec_5_4_99_51 [5.4.99.51]
-    baccharis_oxide
+    <-> ec_5_4_99_32 [5.4.99.32]
+    17z_protosta_17_20_24_dien_3beta_ol
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_14_13_55 [1.14.13.55] +h +protopine +o2 +nadph +nadp
-    6_hydroxyprotopine
+    <-> . +13z_16z_19z_docosa_13_16_19_trienoyl_coa +h +13_16_19_docosatrienoic_acid
+    coa
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_14_13_37 [1.14.13.37] +s_cis_n_methylstylopine +o2 +nadph +nadp
-    protopine
+    <-> . +all_cis_12_15_18_21_tetracosatetraenoyl_coa +h +coa
+    12z_15z_18z_21z_tetracosatetraenoic_acid
+  }
+
+  branch from h side left {
+    h
+    <-> . +9z_12z_octadecadienoate +coa +h2o
+    9e_12e_octadecadienoyl_coa
+  }
+
+  branch from h side right {
+    h
+    <-> . +7z_10z_13z_16z_docosatetraenoyl_coa +h2o +coa
+    adrenic_acid
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +9z_octadecenoyl_coa +h +nadph +nadp +h2o
+    linoelaidyl_coenzyme_a
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +nadp +h2o +9e_12e_octadecadienoyl_coa +h +nadph
+    6z_9z_12z_octadecatrienoyl_coa
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +13z_16z_docosadienoyl_coa +nadp +h
+    trans_cis_cis_2_13_16_docasatrienoyl_coenzyme_a
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +13s_hydroperoxy_9z_11e_octadecadienoate +h +nadp +h2o
+    13s_hydroxy_9z_11e_octadecadienoate
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +13z_16z_19z_3_oxodocosatrienoyl_coa +h +nadph
+    3_s_hydroxy_docosa_13_16_19_all_cis_trienoyl_coe
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +13z_16z_19z_docosa_13_16_19_trienoyl_coa +h +nadph
+    trans_cis_cis_cis_2_13_16_19_docosatetraenoyl_co
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +adrenic_acid +h +adp +phosphate +adrenic_acid
+    atp
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +9z_12z_15z_18z_tetracosatetraenoyl_coa +h +coa
+    tetracosatetraenoic_acid_n_6
   }
 }

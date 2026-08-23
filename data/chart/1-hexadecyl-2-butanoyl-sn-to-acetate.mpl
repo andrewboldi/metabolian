@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-hexadecyl-2-butanoyl-sn-to-acetate "1-hexadecyl-2-butanoyl-sn… to acetate" {
-  spacing 158
+  spacing 152
 
   spine at 0,0 {
     1_hexadecyl_2_butanoyl_sn_glycero_3_phosphocholi
@@ -14,11 +14,5 @@ pathway 1-hexadecyl-2-butanoyl-sn-to-acetate "1-hexadecyl-2-butanoyl-sn… to ac
     2_o_acetyl_1_o_hexadecyl_sn_glycero_3_phosphocho
     <-> . +h2o -acetate -hplus
     lysophosphatidylcholine_o_16_0_0_0
-  }
-
-  branch from butyrate side left {
-    butyrate
-    <-> ec_2_3_1_315 [2.3.1.315] +cyclohexanecarboxylate +butyryl_coa
-    cyclohexane_1_carbonyl_coa
   }
 }

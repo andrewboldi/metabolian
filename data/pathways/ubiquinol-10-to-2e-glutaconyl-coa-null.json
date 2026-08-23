@@ -1,0 +1,518 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "ubiquinol-10-to-2e-glutaconyl-coa-null",
+  "name": "ubiquinol-10 to (2E)-glutaconyl-CoA",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from ubiquinol-10 to (2E)-glutaconyl-CoA, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR182140"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:64183"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "ubiquinol_10",
+      "name": "ubiquinol-10",
+      "formula": "C59H92O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64183"
+      }
+    },
+    {
+      "id": "1_pyrroline_2_carboxylate",
+      "name": "1-pyrroline-2-carboxylate",
+      "short": "1-pyrroline-2-carbo…",
+      "formula": "C5H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM957"
+      }
+    },
+    {
+      "id": "ubiquinone_10",
+      "name": "ubiquinone-10",
+      "formula": "C59H90O4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364539"
+      }
+    },
+    {
+      "id": "d_proline",
+      "name": "D-proline",
+      "formula": "C5H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM162989"
+      }
+    },
+    {
+      "id": "butanoyl_coa",
+      "name": "butanoyl-CoA",
+      "formula": "C25H38N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1104300"
+      }
+    },
+    {
+      "id": "2e_butenoyl_coa",
+      "name": "(2E)-butenoyl-CoA",
+      "formula": "C25H36N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1363936"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "na",
+      "name": "Na",
+      "formula": "Na",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM27"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "2e_glutaconyl_coa",
+      "name": "(2E)-glutaconyl-CoA",
+      "formula": "C26H35N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "metanetx": "MNXM725881"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_7_2_4_5",
+      "name": "glutaconyl-CoA decarboxylase",
+      "ec": [
+        "7.2.4.5"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR182140",
+      "substrates": [
+        {
+          "metabolite": "ubiquinol_10",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_pyrroline_2_carboxylate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ubiquinone_10",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_proline",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR182140"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR182140"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR163360",
+      "substrates": [
+        {
+          "metabolite": "butanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ubiquinone_10",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ubiquinol_10",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2e_butenoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR163360"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR163360"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "glutaconyl-CoA decarboxylase",
+      "ec": "7.2.4.5",
+      "substrates": [
+        {
+          "metabolite": "2e_butenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "na",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "na",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2e_glutaconyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_7_2_4_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR164440"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR164440"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_1_pyrroline_2_carboxylate_l-glutamate-5-semialdehyde-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_pyrroline_2_carboxylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-glutamate-5-semialdehyde-to-h2o"
+      },
+      "note": "Shares 1-pyrroline-2-carboxylate with L-glutamate 5-semialdehyde to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM957"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_pyrroline_2_carboxylate_l-glutamate-5-semialdehyde-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_pyrroline_2_carboxylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-glutamate-5-semialdehyde-to-h2o-null"
+      },
+      "note": "Shares 1-pyrroline-2-carboxylate with L-glutamate 5-semialdehyde to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM957"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_pyrroline_2_carboxylate_ubiquinol-10-to-2e-glutaconyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_pyrroline_2_carboxylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ubiquinol-10-to-2e-glutaconyl-coa"
+      },
+      "note": "Shares 1-pyrroline-2-carboxylate with ubiquinol-10 to (2E)-glutaconyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM957"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_proline_2-oxohepta-3-5-dienedioa-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_proline"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-oxohepta-3-5-dienedioa-to-o2"
+      },
+      "note": "Shares D-proline with 2-oxohepta--3,5-dienedioa… to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM162989"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_proline_dimethylsulfoniopropanoyl-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_proline"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dimethylsulfoniopropanoyl-to-h2o-null"
+      },
+      "note": "Shares D-proline with dimethylsulfoniopropanoyl… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM162989"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_proline_gdp-3-dehydro-6-deoxy-alp-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_proline"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gdp-3-dehydro-6-deoxy-alp-to-nadph"
+      },
+      "note": "Shares D-proline with GDP-3-dehydro-6-deoxy-alp… to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM162989"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_proline_l-glutamate-5-semialdehyde-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_proline"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-glutamate-5-semialdehyde-to-h2o"
+      },
+      "note": "Shares D-proline with L-glutamate 5-semialdehyde to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM162989"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_proline_l-glutamate-5-semialdehyde-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_proline"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-glutamate-5-semialdehyde-to-h2o-null"
+      },
+      "note": "Shares D-proline with L-glutamate 5-semialdehyde to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM162989"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_proline_ubiquinol-10-to-2e-glutaconyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_proline"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ubiquinol-10-to-2e-glutaconyl-coa"
+      },
+      "note": "Shares D-proline with ubiquinol-10 to (2E)-glutaconyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM162989"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2e_butenoyl_coa_beta-nicotinamide-to-cyclopropanecarboxyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2e_butenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-nicotinamide-to-cyclopropanecarboxyl-coa"
+      },
+      "note": "Shares (2E)-butenoyl-CoA with beta-nicotinamide… to Cyclopropanecarboxyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1363936"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2e_butenoyl_coa_beta-nicotinamide-to-cyclopropanecarboxyl-coa-nu",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2e_butenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-nicotinamide-to-cyclopropanecarboxyl-coa-nu"
+      },
+      "note": "Shares (2E)-butenoyl-CoA with beta-nicotinamide… to Cyclopropanecarboxyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1363936"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2e_butenoyl_coa_ubiquinol-10-to-2e-glutaconyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2e_butenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ubiquinol-10-to-2e-glutaconyl-coa"
+      },
+      "note": "Shares (2E)-butenoyl-CoA with ubiquinol-10 to (2E)-glutaconyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1363936"
+          }
+        ]
+      }
+    }
+  ]
+}

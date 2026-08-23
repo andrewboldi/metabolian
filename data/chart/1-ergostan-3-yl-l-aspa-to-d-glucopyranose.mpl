@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-ergostan-3-yl-l-aspa-to-d-glucopyranose "1-(ergostan-3β-yl)-L-aspa… to D-glucopyranose" {
-  spacing 248
+  spacing 224
 
   spine at 0,0 {
     1_ergostan_3_yl_l_aspartate
@@ -14,29 +14,5 @@ pathway 1-ergostan-3-yl-l-aspa-to-d-glucopyranose "1-(ergostan-3β-yl)-L-aspa…
     ergosteryl_3_d_glucoside
     <-> . +h2o -glucose
     ergosterol
-  }
-
-  branch from aspartate side left {
-    aspartate
-    <-> ec_1_4_1_29 [1.4.1.29] +nad +nadh +hplus
-    iminoaspartate
-  }
-
-  branch from aspartate side right {
-    aspartate
-    <-> ec_6_3_4_25 [6.3.4.25] +2_deoxyguanosine_5_monophosphate +atp +adp +pi +hplus
-    2s_2_amino_2_deoxyadenylo_succinate
-  }
-
-  branch from glucose side left {
-    glucose
-    <-> ec_5_3_1_5 [5.3.1.5]
-    d_fructofuranose
-  }
-
-  branch from glucose side right {
-    glucose
-    <-> ec_3_2_1_125 [3.2.1.125] +vomilenine +h2o
-    raucaffricine
   }
 }

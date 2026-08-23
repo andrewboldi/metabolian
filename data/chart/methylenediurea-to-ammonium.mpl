@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway methylenediurea-to-ammonium "methylenediurea to ammonium" {
-  spacing 164
+  spacing 176
 
   spine at 0,0 {
     methylenediurea
@@ -18,13 +18,25 @@ pathway methylenediurea-to-ammonium "methylenediurea to ammonium" {
 
   branch from nh3 side left {
     nh3
-    <-> . +di_sulfido_diiron +glutamate +h2o +akg +hplus
-    di_sulfido_diiron
+    <-> . +l_glutamine +serotonin
+    n_2_5_hydroxy_1h_indol_3_yl_ethyl_l_glutamine
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +1_4_butanediammonium +o2 +h2o2
-    1_pyrrolinium
+    <-> . +l_glutamine +norepinephrine
+    n_2r_2_3_4_dihydroxyphenyl_2_hydroxyethyl_l_glut
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> . +l_glutamine +histaminium
+    n_2_1h_imidazol_4_yl_ethyl_l_glutamine
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> . +2_deoxycytidine_5_monophosphate_1 +h2o +hplus
+    dump
   }
 }

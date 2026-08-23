@@ -96,44 +96,6 @@
       "xrefs": {
         "metanetx": "MNXM722979"
       }
-    },
-    {
-      "id": "alpha_d_glucosamine_6_phosphate",
-      "name": "alpha-D-glucosamine 6-phosphate",
-      "short": "alpha-D-glucosamine…",
-      "formula": "C6H13NO8P",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM1104065"
-      }
-    },
-    {
-      "id": "glucosamine_1p",
-      "name": "Glucosamine-1P",
-      "formula": "C6H14NO8P",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:174383"
-      }
-    },
-    {
-      "id": "5_trans_prostaglandin_d2",
-      "name": "5-trans Prostaglandin D2",
-      "short": "5-trans Prostagland…",
-      "formula": "C20H32O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:156156"
-      }
-    },
-    {
-      "id": "prostaglandin_h2",
-      "name": "prostaglandin H2",
-      "formula": "C20H31O5",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM730289"
-      }
     }
   ],
   "enzymes": [
@@ -142,7 +104,10 @@
       "name": "aldose reductase",
       "ec": [
         "1.1.1.21"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P15121"
+      }
     },
     {
       "id": "ec_1_1_99_36",
@@ -274,71 +239,269 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "Reaction MNXR206330",
-      "substrates": [
-        {
-          "metabolite": "alpha_d_glucosamine_6_phosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "glucosamine_1p",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR206330"
+      "id": "xt_s_propane_1_2_diol_isoepoxydon-to-e-ascladiol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_propane_1_2_diol"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "isoepoxydon-to-e-ascladiol"
+      },
+      "note": "Shares (S)-propane-1,2-diol with (+)-isoepoxydon to (E)-ascladiol.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR206330"
+            "id": "MNXM1255"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "Reaction MNXR206331",
-      "substrates": [
-        {
-          "metabolite": "5_trans_prostaglandin_d2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "prostaglandin_h2",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR206331"
+      "id": "xt_s_propane_1_2_diol_r-s-lactoylglutathione-to-l-alaninol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_propane_1_2_diol"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "r-s-lactoylglutathione-to-l-alaninol"
+      },
+      "note": "Shares (S)-propane-1,2-diol with (R)-S-lactoylglutathione to L-alaninol.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR206331"
+            "id": "MNXM1255"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hydroxyacetone_2-nitro-5-phenylacetyl-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxyacetone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-nitro-5-phenylacetyl-to-h2o"
+      },
+      "note": "Shares hydroxyacetone with 2-Nitro-5-[(Phenylacetyl)… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1744"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hydroxyacetone_3-s-hydroxy-tetracosa-12-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxyacetone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-s-hydroxy-tetracosa-12-to-h2o"
+      },
+      "note": "Shares hydroxyacetone with 3(S)-hydroxy-tetracosa-12… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1744"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hydroxyacetone_biphenyl-2-3-diol-to-nadp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxyacetone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "biphenyl-2-3-diol-to-nadp"
+      },
+      "note": "Shares hydroxyacetone with biphenyl-2,3-diol to NADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1744"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hydroxyacetone_hydroxymethylene-acetate-to-r-lactaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxyacetone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hydroxymethylene-acetate-to-r-lactaldehyde"
+      },
+      "note": "Shares hydroxyacetone with hydroxymethylene acetate to (R)-lactaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1744"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hydroxyacetone_manganese-to-h2o-52240",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxyacetone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "manganese-to-h2o-52240"
+      },
+      "note": "Shares hydroxyacetone with manganese to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1744"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hydroxyacetone_propane-1-2-diol-to-l-tryptophan",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxyacetone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "propane-1-2-diol-to-l-tryptophan"
+      },
+      "note": "Shares hydroxyacetone with propane-1,2-diol to L-tryptophan.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1744"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hydroxyacetone_propane-1-2-diol-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydroxyacetone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "propane-1-2-diol-to-nad"
+      },
+      "note": "Shares hydroxyacetone with propane-1,2-diol to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1744"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_4_dimethoxyphenyl_methanol_1-phenylpropan-1-aminium-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_4_dimethoxyphenyl_methanol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-phenylpropan-1-aminium-to-h2o"
+      },
+      "note": "Shares (3,4-dimethoxyphenyl)methanol with 1-phenylpropan-1-aminium to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62150"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_4_dimethoxyphenyl_methanol_3-4-dimethoxybenzaldehyde-to-udp-d-xylulose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_4_dimethoxyphenyl_methanol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-4-dimethoxybenzaldehyde-to-udp-d-xylulose"
+      },
+      "note": "Shares (3,4-dimethoxyphenyl)methanol with 3,4-dimethoxybenzaldehyde to UDP-D-xylulose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62150"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_4_dimethoxyphenyl_methanol_adenosine-3-5-bisphosph-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_4_dimethoxyphenyl_methanol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "adenosine-3-5-bisphosph-to-h2o"
+      },
+      "note": "Shares (3,4-dimethoxyphenyl)methanol with adenosine 3',5'-bisphosph… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62150"
           }
         ]
       }

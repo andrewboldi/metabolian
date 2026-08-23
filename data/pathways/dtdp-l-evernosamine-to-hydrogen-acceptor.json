@@ -119,53 +119,9 @@
       "xrefs": {
         "chebi": "CHEBI:13193"
       }
-    },
-    {
-      "id": "dihydro_ferroheme_d1",
-      "name": "dihydro-ferroheme d1",
-      "formula": "C34H28FeN4O10",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:140498"
-      }
-    },
-    {
-      "id": "ferroheme_d1",
-      "name": "ferroheme d1",
-      "formula": "C34H26FeN4O10",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:60549"
-      }
-    },
-    {
-      "id": "zeaxanthin",
-      "name": "zeaxanthin",
-      "formula": "C40H56O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:27547"
-      }
-    },
-    {
-      "id": "adonixanthin",
-      "name": "adonixanthin",
-      "formula": "C40H54O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:80217"
-      }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_1_14_99_64",
-      "name": "zeaxanthin 4-ketolase",
-      "ec": [
-        "1.14.99.64"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -311,95 +267,49 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "dihydro-heme d1 + A = heme d1 + AH2",
-      "equation": "dihydro-heme d1 + A = heme d1 + AH2",
-      "substrates": [
-        {
-          "metabolite": "dihydro_ferroheme_d1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_acceptor",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "ferroheme_d1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_donor",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:56524"
+      "id": "xt_dtdp_l_evernosamine_dtdp-l-evernosamine-to-dtdp-3-amino-2-3-6-trideo",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dtdp_l_evernosamine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-l-evernosamine-to-dtdp-3-amino-2-3-6-trideo"
+      },
+      "note": "Shares dTDP-β-L-evernosamine with dTDP-β-L-evernosamine to dTDP-3-amino-2,3,6-trideo….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:56524"
+            "db": "ChEBI",
+            "id": "CHEBI:77144"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "zeaxanthin 4-ketolase",
-      "equation": "all-trans-zeaxanthin + 2 AH2 + 2 O2 = all-trans-adonixanthin + 2 A + 3 H2O",
-      "ec": "1.14.99.64",
-      "substrates": [
-        {
-          "metabolite": "zeaxanthin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_donor",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "adonixanthin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_acceptor",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 3
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_99_64"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:56768"
+      "id": "xt_dtdp_2_3_6_trideoxy_3_c_methyl_4_o_methyl_3_nitr_dtdp-l-evernosamine-to-dtdp-3-amino-2-3-6-trideo",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dtdp_2_3_6_trideoxy_3_c_methyl_4_o_methyl_3_nitr"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-l-evernosamine-to-dtdp-3-amino-2-3-6-trideo"
+      },
+      "note": "Shares dTDP-2,3,6-trideoxy-3-C-methyl-4-O-methyl-3-nitroso-β-L-arabino-hexopyranose with dTDP-β-L-evernosamine to dTDP-3-amino-2,3,6-trideo….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:56768"
+            "db": "ChEBI",
+            "id": "CHEBI:77142"
           }
         ]
       }

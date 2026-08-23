@@ -173,43 +173,6 @@
       }
     },
     {
-      "id": "berkeleyone_b",
-      "name": "berkeleyone B",
-      "formula": "C26H34O7",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:69025"
-      }
-    },
-    {
-      "id": "berkeleydione",
-      "name": "berkeleydione",
-      "formula": "C26H32O7",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:69021"
-      }
-    },
-    {
-      "id": "glutamate",
-      "name": "L-Glutamate",
-      "formula": "C5H8NO4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:29985"
-      }
-    },
-    {
-      "id": "3r_3_hydroxy_l_glutamate",
-      "name": "(3R)-3-hydroxy-L-glutamate",
-      "short": "3-hydroxy-L-glutama…",
-      "formula": "C5H8NO5",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:155841"
-      }
-    },
-    {
       "id": "gibberellin_a28",
       "name": "gibberellin A28",
       "formula": "C20H26O8",
@@ -225,13 +188,6 @@
       "name": "gibberellin-44 dioxygenase",
       "ec": [
         "1.14.11.12"
-      ]
-    },
-    {
-      "id": "ec_1_14_11_76",
-      "name": "L-glutamate 3(R)-hydroxylase",
-      "ec": [
-        "1.14.11.76"
       ]
     }
   ],
@@ -447,110 +403,6 @@
     },
     {
       "id": "r5",
-      "name": "berkeleyone B + 2-oxoglutarate + O2 = berkeleydione + succinate + CO2 + H2O",
-      "equation": "berkeleyone B + 2-oxoglutarate + O2 = berkeleydione + succinate + CO2 + H2O",
-      "substrates": [
-        {
-          "metabolite": "berkeleyone_b",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "berkeleydione",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "succinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:65188"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:65188"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "L-glutamate 3(R)-hydroxylase",
-      "equation": "L-glutamate + 2-oxoglutarate + O2 = (3R)-3-hydroxy-L-glutamate + succinate + CO2",
-      "ec": "1.14.11.76",
-      "substrates": [
-        {
-          "metabolite": "glutamate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3r_3_hydroxy_l_glutamate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "succinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_11_76"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:65752"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:65752"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
       "name": "Reaction MNXR121861",
       "substrates": [
         {
@@ -585,7 +437,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 5,
       "xrefs": {
         "metanetx": "MNXR121861"
       },
@@ -595,6 +447,140 @@
           {
             "db": "MetaNetX",
             "id": "MNXR121861"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_gibberellin_a53_deoxycylindrospermopsin-to-s-succinyl-l-cysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "gibberellin_a53"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "deoxycylindrospermopsin-to-s-succinyl-l-cysteine"
+      },
+      "note": "Shares gibberellin A53 with deoxycylindrospermopsin to S-succinyl-L-cysteine(2−).",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:143954"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_gibberellin_a53_gibberellin-a53-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "gibberellin_a53"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gibberellin-a53-to-succinate"
+      },
+      "note": "Shares gibberellin A53 with gibberellin A53 to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:143954"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_gibberellin_a19_gibberellin-a53-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "gibberellin_a19"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gibberellin-a53-to-succinate"
+      },
+      "note": "Shares gibberellin A19 with gibberellin A53 to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58587"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_gibberellin_a17_deoxycylindrospermopsin-to-s-succinyl-l-cysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "gibberellin_a17"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "deoxycylindrospermopsin-to-s-succinyl-l-cysteine"
+      },
+      "note": "Shares gibberellin A17 with deoxycylindrospermopsin to S-succinyl-L-cysteine(2−).",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:143958"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_gibberellin_a38_diaminobutyryl-citryl-eth-to-diaminobutyryl-citr",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "gibberellin_a38"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diaminobutyryl-citryl-eth-to-diaminobutyryl-citr"
+      },
+      "note": "Shares Gibberellin A38 with diaminobutyryl-citryl-eth… to diaminobutyryl-citryl-eth….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:175651"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_gibberellin_a28_acetyl-coa-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "gibberellin_a28"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetyl-coa-to-h2o"
+      },
+      "note": "Shares gibberellin A28 with acetyl-CoA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:24241"
           }
         ]
       }

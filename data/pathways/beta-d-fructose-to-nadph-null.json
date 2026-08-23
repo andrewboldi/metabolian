@@ -1,0 +1,478 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "beta-d-fructose-to-nadph-null",
+  "name": "beta-D-fructose to NADPH",
+  "category": "other",
+  "summary": "A 3-step route from beta-D-fructose to NADPH, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR134141"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "beta_d_fructose",
+      "name": "beta-D-fructose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364098"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "keto_d_fructose_6_phosphate",
+      "name": "keto-D-fructose 6-phosphate",
+      "short": "keto-D-fructose 6-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM89629"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "alditol_6_phosphate",
+      "name": "Alditol 6-phosphate",
+      "formula": "C6H15O9P",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1104464"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "l_sorbose_1_phosphate",
+      "name": "L-sorbose 1-phosphate",
+      "short": "L-sorbose 1-P",
+      "formula": "C6H13O9P",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM722989"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_3_2",
+      "name": "acid phosphatase",
+      "ec": [
+        "3.1.3.2"
+      ],
+      "xrefs": {
+        "uniprot": "Q6ZNF0"
+      }
+    },
+    {
+      "id": "ec_3_1_3_23",
+      "name": "sugar-phosphatase",
+      "ec": [
+        "3.1.3.23"
+      ]
+    },
+    {
+      "id": "ec_3_1_3_29",
+      "name": "N-acylneuraminate-9-phosphatase",
+      "ec": [
+        "3.1.3.29"
+      ],
+      "xrefs": {
+        "uniprot": "Q8TBE9"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "acid phosphatase",
+      "ec": "3.1.3.2",
+      "substrates": [
+        {
+          "metabolite": "beta_d_fructose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "keto_d_fructose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_3_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR134141"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR134141"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR206833",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "keto_d_fructose_6_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "alditol_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR206833"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR206833"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR206923",
+      "substrates": [
+        {
+          "metabolite": "alditol_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_sorbose_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR206923"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR206923"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_alditol_6_phosphate_alditol-6-phosphate-to-beta-d-glucose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "alditol_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alditol-6-phosphate-to-beta-d-glucose"
+      },
+      "note": "Shares Alditol 6-phosphate with Alditol 6-phosphate to beta-D-glucose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104464"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_alditol_6_phosphate_alditol-6-phosphate-to-beta-d-glucose-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "alditol_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alditol-6-phosphate-to-beta-d-glucose-null"
+      },
+      "note": "Shares Alditol 6-phosphate with Alditol 6-phosphate to beta-D-glucose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104464"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_alditol_6_phosphate_beta-d-fructose-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "alditol_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-d-fructose-to-nadph"
+      },
+      "note": "Shares Alditol 6-phosphate with beta-D-fructose to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104464"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_sorbose_1_phosphate_25-deacetylrifampicin-to-rifampicin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_sorbose_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "25-deacetylrifampicin-to-rifampicin"
+      },
+      "note": "Shares L-sorbose 1-phosphate with 25-Deacetylrifampicin to rifampicin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM722989"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_sorbose_1_phosphate_5-hydroperoxy-epa-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_sorbose_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-hydroperoxy-epa-to-h2o"
+      },
+      "note": "Shares L-sorbose 1-phosphate with 5-hydroperoxy-EPA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM722989"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_sorbose_1_phosphate_beta-d-fructose-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_sorbose_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-d-fructose-to-nadph"
+      },
+      "note": "Shares L-sorbose 1-phosphate with beta-D-fructose to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM722989"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_sorbose_1_phosphate_glyceric-acid-to-phosphate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_sorbose_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "glyceric-acid-to-phosphate-null"
+      },
+      "note": "Shares L-sorbose 1-phosphate with Glyceric acid… to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM722989"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_sorbose_1_phosphate_itp-to-d-mannitol-1-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_sorbose_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "itp-to-d-mannitol-1-phosphate"
+      },
+      "note": "Shares L-sorbose 1-phosphate with ITP to D-mannitol 1-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM722989"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_sorbose_1_phosphate_itp-to-d-mannitol-1-phosphate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_sorbose_1_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "itp-to-d-mannitol-1-phosphate-null"
+      },
+      "note": "Shares L-sorbose 1-phosphate with ITP to D-mannitol 1-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM722989"
+          }
+        ]
+      }
+    }
+  ]
+}

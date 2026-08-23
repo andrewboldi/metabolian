@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-amino-2-oxobut-3-enoate-to-o2 "4-amino-2-oxobut-3-enoate to O2" {
-  spacing 224
+  spacing 152
 
   spine at 0,0 {
     4_amino_2_oxobut_3_enoate
@@ -14,77 +14,5 @@ pathway 4-amino-2-oxobut-3-enoate-to-o2 "4-amino-2-oxobut-3-enoate to O2" {
     4_formamido_2_oxobut_3_enoate
     <-> . +h -o2
     3_hydroxy_4h_pyrid_4_one
-  }
-
-  branch from formylpyruvate side left {
-    formylpyruvate
-    <-> . +h2o +h +formate
-    pyruvate
-  }
-
-  branch from nh4 side right {
-    nh4
-    <-> . +beta_d_glcnac_1_4_mur2ac_oyl_l_ala_gamma_d_glu_l +h2o
-    beta_d_glcnac_1_4_mur2ac_oyl_l_ala_d_isoglutamin
-  }
-
-  branch from nh4 side left {
-    nh4
-    <-> ec_2_1_1_21 [2.1.1.21] +n_methyl_l_glutamate +h2o
-    n_5_methyl_l_glutamine
-  }
-
-  branch from 4_formamido_2_oxobut_3_enoate side right {
-    4_formamido_2_oxobut_3_enoate
-    <-> . +4_amino_2_oxobut_3_enoate +h2o
-    formate
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
-    1_3_beta_xylotetraose
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_18 [3.6.3.18] +adp +alpha_1_5_l_arabinobiose +phosphate +alpha_1_5_l_arabinobiose +h2o
-    atp
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    xxxg_xyloglucan_oligosaccharide
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    melezitose
-  }
-
-  branch from 3_hydroxy_4h_pyrid_4_one side left {
-    3_hydroxy_4h_pyrid_4_one
-    <-> ec_3_5_1_61 [3.5.1.61] +l_mimosine +h2o
-    l_serine
-  }
-
-  branch from 3_hydroxy_4h_pyrid_4_one side right {
-    3_hydroxy_4h_pyrid_4_one
-    <-> . +nadh +h +4_pyridone +o2 +h2o
-    nad
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +h +nadph +2_2_1_3_dioxan_2_yl_ethyl_thio_5_phenyl_1_3_4_ox +2_2_1_3_dioxan_2_yl_ethanesulfinyl_5_phenyl_1_3 +h2o
-    nadp
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +h +diatoxanthin +nadph +nadp +h2o
-    diadinoxanthin
   }
 }

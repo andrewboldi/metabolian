@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway z-1-l-cysteinylglycin-to-e-9-methylsulfanyl-non "(Z)-1-(L-cysteinylglycin-… to (E)-9-(methylsulfanyl)non…" {
-  spacing 302
+  spacing 224
 
   spine at 0,0 {
     z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth
@@ -20,83 +20,5 @@ pathway z-1-l-cysteinylglycin-to-e-9-methylsulfanyl-non "(Z)-1-(L-cysteinylglyci
     n_n_dihydroxy_l_hexahomomethioninate
     <-> . +hplus -co2 -h2o
     e_9_methylsulfanyl_nonanal_oxime
-  }
-
-  branch from glycine side left {
-    glycine
-    <-> . +l_aspartate +l_tryptophan +h2o
-    tryptophanyl_glycyl_aspartate
-  }
-
-  branch from glycine side right {
-    glycine
-    <-> . +l_valine +l_tryptophan +h2o
-    tryptophanyl_glycyl_valine
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +7_2_6_dimethyl_8_2_methyl_1_oxobutoxy_1_2_6_7_8 +phosphate +7_2_6_dimethyl_8_2_methyl_1_oxobutoxy_1_2_6_7_8 +h2o
-    atp
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    lovastatin
-  }
-
-  branch from e_9_methylsulfanyl_nonanal_oxime side left {
-    e_9_methylsulfanyl_nonanal_oxime
-    <-> . +h +nadph +nadp +h2o
-    9_methylthiononanonitrile_oxide
-  }
-
-  branch from o2 side right {
-    o2
-    <-> ec_1_1_3_42 [1.1.3.42] +prosolanapyrone_ii +h2o2
-    solanapyrone_a
-  }
-
-  branch from o2 side left {
-    o2
-    <-> ec_1_1_3_10 [1.1.3.10] +2_dehydro_d_glucose +h2o2
-    beta_d_glucose
-  }
-
-  branch from l_cysteine side right {
-    l_cysteine
-    <-> . +l_threonine +l_tyrosine +h2o
-    tyrosyl_cysteinyl_threonine
-  }
-
-  branch from l_cysteine side left {
-    l_cysteine
-    <-> . +iaox_n_oxide +h2o
-    s_indolylmethylthiohydroximoyl_l_cysteine
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> ec_1_14_13_126 [1.14.13.126] +calcitriol +h +o2 +nadp +h2o
-    calcitetrol
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> ec_1_14_13_120 [1.14.13.120] +germacra_1_10_4_11_13_trien_12_oate +h +o2 +nadp +h2o
-    costunolide
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +4a_5_dihydro_ml_236c_carboxylate +fmnh2 +o2 +h2o +hplus
-    3_hydroxy_3_5_dihydro_ml_236c_carboxylate
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> ec_1_14_14_151 [1.14.14.151] +valencene +fmnh2 +o2 +h2o +hplus
-    nootkatone
   }
 }

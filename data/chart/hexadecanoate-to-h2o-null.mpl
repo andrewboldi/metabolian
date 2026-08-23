@@ -4,15 +4,15 @@
 # edit the generator, not this file.
 
 pathway hexadecanoate-to-h2o-null "hexadecanoate to H2O" {
-  spacing 192
+  spacing 300
 
   spine at 0,0 {
     hexadecanoate
-    <-> . +h +sn_glycerol_3_phosphate -h2o
-    lpa_0_0_16_0
-    <-> . +hexadecanoate -1_2_dihexadecanoyl_sn_glycerol_3_phosphate -h2o
-    h
-    <-> ec_3_6_1_26 [3.6.1.26] +cmp +1_2_dihexadecanoyl_sn_glycerol_3_phosphate -h2o
-    cdp_dipalmitoyl_sn_glycerol
+    <-> ec_3_1_1_5 [3.1.1.5] +glycerophosphatidylethanolamine +h -h2o
+    2_hexadecanoyl_sn_glycero_3_phosphoethanolamine
+    <-> ec_2_3_1_40 [2.3.1.40] +hexadecanoate +atp -1_2_dihexadecanoyl_sn_glycero_3_phosphoethanolam -amp
+    diphosphate
+    <-> ec_3_6_3_1 [3.6.3.1] +h +1_2_dihexadecanoyl_sn_glycero_3_phosphoethanolam +adp +phosphate -atp -h2o
+    1_2_dihexadecanoyl_sn_glycero_3_phosphoethanolam
   }
 }

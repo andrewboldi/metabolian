@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-acetyldemethylphosphino-to-h2o "N-Acetyldemethylphosphino… to H2O" {
-  spacing 234
+  spacing 252
 
   spine at 0,0 {
     n_acetyldemethylphosphinothricinate
@@ -20,57 +20,75 @@ pathway n-acetyldemethylphosphino-to-h2o "N-Acetyldemethylphosphino… to H2O" {
     atp
   }
 
-  branch from cob_i_alamin side left {
-    cob_i_alamin
-    <-> . +sam +methylcobalamin
-    sah
-  }
-
-  branch from cob_i_alamin side right {
-    cob_i_alamin
-    <-> . +methylcobalamin +l_tryptophan +hplus
-    2_methyl_l_tryptophan
-  }
-
-  branch from hydrogen_acceptor side left {
-    hydrogen_acceptor
-    <-> . +2_amino_6_hydroxyaminopurine +hydrogen_donor +h2o
-    9h_purine_2_6_diamine
-  }
-
-  branch from triphosphate side right {
-    triphosphate
-    <-> ec_4_2_3_12 [4.2.3.12] +7_8_dihydroneopterin_3_triphosphate +h
-    6_pyruvoyl_5_6_7_8_tetrahydropterin
-  }
-
-  branch from triphosphate side left {
-    triphosphate
-    <-> ec_4_1_2_50 [4.1.2.50] +7_8_dihydroneopterin_3_triphosphate +h2o +h +acetaldehyde
-    5_6_7_8_tetrahydropterin_6_carboxylate
+  branch from atp side left {
+    atp
+    <-> ec_2_7_1_76 [2.7.1.76] +2r_3s_4s_5r_2_6_amino_2_fluoro_9_purinyl_5_hydr +h +adp
+    fludarabine_phosphate
   }
 
   branch from atp side right {
     atp
-    <-> ec_6_3_1_9 [6.3.1.9] +glutathione +glutathionylaminopropylcadaverine +homotrypanothione +phosphate
-    adp
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_6_2_1_39 [6.2.1.39] +l_glutamate +4_aminobutyryl_acp +adp +phosphate
-    gamma_l_glutamyl_4_aminobutyryl_acp
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_1_1_45 [3.1.1.45] +2e_2_5_dichloro_4_oxo_2_hexenedioic_acid
-    2_5_dichloro_carboxymethylenebut_2_en_4_olide
+    <-> ec_6_2_1_12 [6.2.1.12] +diphosphate +4_methoxycinnamoyl_coa +amp +h +4_methoxycinnamic_acid
+    coa
   }
 
   branch from h2o side left {
     h2o
-    <-> . +1_2_bis_4_hydroxyphenyl_propan_2_ol
-    4_4_dihydroxy_alpha_methylstilbene
+    <-> ec_3_2_1_179 [3.2.1.179] +n_acetyl_d_galactosamine +5_dehydro_4_deoxy_2_o_sulfo_d_glucuronate
+    4_deoxy_delta_4_beta_d_glcpa2s_1_3_beta_d_galpna
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +1_3_4_dihydroxyphenyl_3_3_c_glucosyl_2_4_6_trihy
+    isoorientin
+  }
+
+  branch from adenosine side left {
+    adenosine
+    <-> ec_3_2_2_1 [3.2.2.1] +h2o +beta_d_ribofuranose
+    adenine
+  }
+
+  branch from adenosine side right {
+    adenosine
+    <-> ec_3_2_2_7 [3.2.2.7] +h2o +adenine
+    aldehydo_d_ribose
+  }
+
+  branch from h side left {
+    h
+    <-> . +co2 +15_decarboxymethyl_epsilon_rhodomycinone
+    15_demethoxy_epsilon_rhodomycinone
+  }
+
+  branch from h side right {
+    h
+    <-> . +emodin +emodin_anthrone +h2o
+    emodin_dianthrone
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_2_7_1_20 [2.7.1.20] +2_methyladenosine_5_monophosphate +adp +h
+    2_methyladenosine
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_6_2_1_33 [6.2.1.33] +diphosphate +h +4_bromobenzoyl_coa +amp +coa
+    4_bromobenzoic_acid
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_4_2_1_84 [4.2.1.84] +propionamide
+    propionitrile
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_4_2_1_84 [4.2.1.84] +butanamide
+    butyronitrile
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-nad "NADH to NAD" {
-  spacing 188
+  spacing 272
 
   spine at 0,0 {
     nadh
@@ -18,37 +18,121 @@ pathway nadh-to-nad "NADH to NAD" {
 
   branch from sulfite side left {
     sulfite
-    <-> ec_1_14_11_17 [1.14.11.17] +2_oxoglutarate +1_pentanesulfonate +o2 +h +succinate +pentanal
-    co2
+    <-> . +thiosulfate +menaquinol +h +menaquinone_2
+    hydrogen_sulfide
   }
 
   branch from sulfite side right {
     sulfite
-    <-> ec_2_8_1_2 [2.8.1.2] +thiosulfate +pyruvate +h
-    2_oxo_3_sulfanylpropanoate
+    <-> ec_1_14_14_5 [1.14.14.5] +fmnh2 +h +taurine +o2 +aminoacetaldehyde +h2o
+    fmn
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +4_heptanone
-    heptan_4_ol
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
+    borneol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +3_methylbutan_2_one
-    s_3_methylbutan_2_ol
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
+    s_terpineol
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_4_13_9 [3.4.13.9] +l_proline +l_lysine
-    lysyl_proline
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +jadomycin_b +phosphate +jadomycin_b
+    atp
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_4_13_9 [3.4.13.9] +l_proline
-    pro_pro
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    jadomycin_a
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> ec_1_1_1_71 [1.1.1.71] +h +phellandral +nad
+    1s_2s_4r_endo_fenchol
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_1_1_71 [1.1.1.71] +h +phellandral +nad
+    nerol
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +nadh +h +6_r_beta_epsilon_carotene +nad +h2o
+    zeinoxanthin
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +artemisinate +nadp +h2o +h +nadph
+    amorpha_4_11_diene
+  }
+
+  branch from sulfite side left {
+    sulfite
+    <-> . +thiosulfate +mk_8 +h +trithionate
+    menaquinol_8
+  }
+
+  branch from sulfite side right {
+    sulfite
+    <-> ec_3_1_1_92 [3.1.1.92] +maleylacetate +h +h2o
+    4_sulfomuconolactone
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
+    r_linalool
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
+    s_linalool
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    gaudimycin_a
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    gaudimycin_b
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    oviedomycin
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    kinamycin_d
+  }
+
+  branch from l_cysteine side left {
+    l_cysteine
+    <-> ec_4_4_1_1 [4.4.1.1] +z_2_aminobutenoic_acid
+    l_l_cystathionine
+  }
+
+  branch from l_cysteine side right {
+    l_cysteine
+    <-> . +cmp +h +n_r_4_phosphopantothenoyl_l_cysteine
+    r_4_phosphopantothenoyl_cytidylate
   }
 }

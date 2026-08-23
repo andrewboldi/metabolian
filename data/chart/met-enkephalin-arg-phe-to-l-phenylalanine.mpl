@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway met-enkephalin-arg-phe-to-l-phenylalanine "Met-enkephalin-Arg-Phe to L-phenylalanine" {
-  spacing 194
+  spacing 230
 
   spine at 0,0 {
     met_enkephalin_arg_phe
@@ -36,25 +36,61 @@ pathway met-enkephalin-arg-phe-to-l-phenylalanine "Met-enkephalin-Arg-Phe to L-p
 
   branch from l_methionine side right {
     l_methionine
-    <-> . +h2o +l_phenylalanine
-    met_phe
+    <-> . +l_methionine_s_oxide +co2 +succinate +o2
+    2_oxoglutarate
   }
 
   branch from l_methionine side left {
     l_methionine
-    <-> ec_3_4_11_4 [3.4.11.4] +h2o +glycylglycine
-    met_gly_gly
+    <-> . +propanoate +dihydro_ferroheme_d1 +5_deoxyadenosine +h +s_adenosyl_l_methionine +h2o
+    12_18_didecarboxysiroheme
   }
 
   branch from l_phenylalanine side right {
     l_phenylalanine
-    <-> ec_6_3_2_52 [6.3.2.52] +diphosphate +jasmonic_acid_l_phenylalanine +amp +jasmonate
+    <-> ec_3_6_3_22 [3.6.3.22] +h +adp +phosphate +h2o
     atp
   }
 
   branch from l_phenylalanine side left {
     l_phenylalanine
-    <-> ec_6_3_2_52 [6.3.2.52] +diphosphate +a_jasmonoyl_l_phenylalanine +h +amp +atp
-    jasmonic_acid_anion
+    <-> ec_2_7_7_54 [2.7.7.54] +diphosphate +n_adenylyl_l_phenylalanine +atp
+    h
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +9_methylthio_nonyl_thiohydroximic_acid
+    ser_gly
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +petivericin
+    phenylmethanesulfenate
+  }
+
+  branch from l_methionine side right {
+    l_methionine
+    <-> . +n_methyl_l_valyl_l_tryptophanol +l_homocysteine +nadp +h2o +h +nadph +l_tryptophan
+    l_valine
+  }
+
+  branch from l_methionine side left {
+    l_methionine
+    <-> . +h2o +l_phenylalanine
+    met_phe
+  }
+
+  branch from l_phenylalanine side right {
+    l_phenylalanine
+    <-> . +h2o +l_valine
+    val_phe
+  }
+
+  branch from l_phenylalanine side left {
+    l_phenylalanine
+    <-> . +glycine +h2o
+    phe_gly
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway margarate-to-9z-12z-heptadecadienoyl "margarate to (9Z,12Z)-heptadecadienoyl…" {
-  spacing 188
+  spacing 224
 
   spine at 0,0 {
     margarate
@@ -18,26 +18,62 @@ pathway margarate-to-9z-12z-heptadecadienoyl "margarate to (9Z,12Z)-heptadecadie
 
   branch from heptadecanoyl_coa side left {
     heptadecanoyl_coa
+    <-> . +h2o +h +coa
+    heptadecanoate
+  }
+
+  branch from heptadecanoyl_coa side right {
+    heptadecanoyl_coa
     <-> . +malonyl_coa +h +coa +3_oxononadecanoyl_coenzyme_a
     co2
   }
 
-  branch from heptadecanoyl_coa side right {
+  branch from ppi side left {
+    ppi
+    <-> . +arginine +atp +hplus
+    l_arginyl_amp
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_6_2_1_74 [6.2.1.74] +3_amino_5_hydroxybenzoate +holo-acp +atp +amp
+    o_s_3_hydroxy_5_benzoyl_pantetheine_4_phosphoryl
+  }
+
+  branch from 9z_heptadecenoyl_coa side left {
+    9z_heptadecenoyl_coa
+    <-> . +h2o +coa
+    9z_heptadecenoic_acid
+  }
+
+  branch from 9z_heptadecenoyl_coa side right {
+    9z_heptadecenoyl_coa
+    <-> . +nadp +h2o +heptadecanoyl_coa +o2 +nadph
+    h
+  }
+
+  branch from heptadecanoyl_coa side left {
     heptadecanoyl_coa
     <-> . +acetyl_coa +h +3_oxononadecanoyl_coenzyme_a
     coa
   }
 
+  branch from heptadecanoyl_coa side right {
+    heptadecanoyl_coa
+    <-> . +cholesterol +coa
+    cholest_5_en_3b_yl_heptadecanoate
+  }
+
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_99 [4.2.3.99] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    syn_labda_8_17_12e_14_triene
+    <-> . +o_orsellinate +fpp
+    ilicicolinate_b
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_21 [2.5.1.21] +fpp +nadph +hplus +nadp
-    squalene
+    <-> . +5_methylorsellinate +atp +nadph +hplus +amp +nadp
+    2_4_dihydroxy_5_6_dimethylbenzaldehyde
   }
 
   branch from 9z_heptadecenoyl_coa side left {

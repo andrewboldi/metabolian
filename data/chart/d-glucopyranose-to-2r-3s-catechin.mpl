@@ -4,13 +4,17 @@
 # edit the generator, not this file.
 
 pathway d-glucopyranose-to-2r-3s-catechin "D-glucopyranose to (2R,3S)-catechin" {
-  spacing 324
+  spacing 308
 
   spine at 0,0 {
     glucose
-    <-> . +cyanidin_3_o_6_o_malyl_beta_d_glucoside -1_o_malyl_beta_d_glucose
+    <-> . +delphinidin_3_o_6_o_malyl_beta_d_glucoside -1_o_malyl_beta_d_glucose
+    mirtillin
+    <-> . +1_o_vanilloyl_d_glucose -h -vanillate
+    delphinidin_3_7_di_o_beta_d_glucoside
+    <-> ec_2_4_1_300 [2.4.1.300] +cyanidin_3_7_di_o_beta_d_glucoside +h +vanillate -1_o_vanilloyl_d_glucose
     cyanidin_3_o_glucoside
-    <-> . +1_o_feruloyl_d_glucose -h -e_ferulate
+    <-> . +1_o_vanilloyl_d_glucose -h -vanillate
     cyanin
     <-> . +udp +h -cyanidin_5_o_glucoside
     udp_alpha_d_glucose
@@ -18,53 +22,5 @@ pathway d-glucopyranose-to-2r-3s-catechin "D-glucopyranose to (2R,3S)-catechin" 
     idb_1027
     <-> ec_1_3_1_77 [1.3.1.77] +h +nadph -2r_3s_catechin
     nadp
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +phosphate +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +h2o
-    atp
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_hexadecanoyl_2_9z_12z_15z_octadecatrienoyl_sn
-  }
-
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> . +udp +gomphrenin_i +h
-    betanidin
-  }
-
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> . +udp +3_5_di_c_glucosyl_2_4_4_6_tetrahydroxydibenzoylm +h
-    6c_glucosyl_2_hydroxynaringenin
-  }
-
-  branch from idb_1027 side left {
-    idb_1027
-    <-> ec_1_3_1_77 [1.3.1.77] +nadp +h +nadph
-    epicatechin
-  }
-
-  branch from idb_1027 side right {
-    idb_1027
-    <-> . +taxifolin +h
-    h2o
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +dihydrocarveol +h +nadph
-    2e_geranial
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +phellandral
-    1s_2s_4r_isodihydrocarveol
   }
 }

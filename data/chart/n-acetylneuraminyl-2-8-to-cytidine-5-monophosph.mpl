@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-acetylneuraminyl-2-8-to-cytidine-5-monophosph "α-N-acetylneuraminyl-(2→8… to cytidine 5'-monophosphate" {
-  spacing 194
+  spacing 164
 
   spine at 0,0 {
     n_acetylneuraminyl_2_8_n_acetylneuraminyl_2_3_d
@@ -26,45 +26,15 @@ pathway n-acetylneuraminyl-2-8-to-cytidine-5-monophosph "α-N-acetylneuraminyl-(
     n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace
   }
 
-  branch from d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4 side left {
-    d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4
-    <-> . +gdp_l_fucose +gdp +hplus
-    l_fuc_1_2_d_gal_1_3_d_galnac_1_4_neu5ac_2_8_neu
+  branch from udp_d_galactose side left {
+    udp_d_galactose
+    <-> . +l_fuc_1_2_d_gal_1_3_d_galnac +udp +hplus
+    d_gal_1_3_l_fuc_1_2_d_gal_1_3_d_galnac
   }
 
-  branch from d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4 side right {
-    d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4
-    <-> . +udp_d_galactose +udp +hplus
-    d_galactosyl_1_3_d_galactosyl_1_3_n_acetyl_d_ga
-  }
-
-  branch from n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace side left {
-    n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace
-    <-> . +udp_n_acetyl_d_galactosamine +udp +hplus
-    n_acetyl_d_galactosaminyl_1_4_d_galactosyl_1_3_n
-  }
-
-  branch from d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4 side right {
-    d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4
-    <-> . +udpglcnac +udp +hplus
-    d_galactosyl_1_3_n_acetyl_d_glucosaminyl_1_6_n
-  }
-
-  branch from d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4 side left {
-    d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4
-    <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
-    d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4
-  }
-
-  branch from n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace side right {
-    n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace
-    <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
-    8_o_sulfo_n_acetylneuraminosyl_2_3_d_galactosyl
-  }
-
-  branch from n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace side left {
-    n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace
-    <-> . +udp_n_acetyl_d_galactosamine +udp +hplus
-    n_acetyl_d_galactosaminyl_1_4_n_acetyl_neuramino
+  branch from udp_d_galactose side right {
+    udp_d_galactose
+    <-> . +l_fuc_1_2_d_gal_1_4_d_glc +udp +hplus
+    d_gal_1_3_l_fuc_1_2_d_gal_1_4_d_glc
   }
 }

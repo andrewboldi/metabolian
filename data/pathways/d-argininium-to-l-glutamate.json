@@ -107,42 +107,6 @@
       "xrefs": {
         "chebi": "CHEBI:29985"
       }
-    },
-    {
-      "id": "nadph",
-      "name": "NADPH",
-      "formula": "C21H26N7O17P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57783"
-      }
-    },
-    {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:15379"
-      }
-    },
-    {
-      "id": "n_hydroxyputrescine",
-      "name": "N-hydroxyputrescine",
-      "formula": "C4H13N2O",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:180909"
-      }
-    },
-    {
-      "id": "nadp",
-      "name": "NADP+",
-      "formula": "C21H25N7O17P3",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58349"
-      }
     }
   ],
   "enzymes": [
@@ -165,13 +129,6 @@
       "name": "putrescine--2-oxoglutarate transaminase",
       "ec": [
         "2.6.1.82"
-      ]
-    },
-    {
-      "id": "ec_1_14_13_252",
-      "name": "putrescine N-hydroxylase",
-      "ec": [
-        "1.14.13.252"
       ]
     }
   ],
@@ -314,56 +271,203 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "putrescine N-hydroxylase",
-      "equation": "putrescine + NADPH + O2 = N-hydroxyputrescine + NADP(+) + H2O",
-      "ec": "1.14.13.252",
-      "substrates": [
-        {
-          "metabolite": "1_4_butanediammonium",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n_hydroxyputrescine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_13_252"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:78815"
+      "id": "xt_d_argininium_ala-leu-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_argininium"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "ala-leu-to-ammonium"
+      },
+      "note": "Shares D-argininium with Ala-Leu to ammonium.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:78815"
+            "db": "ChEBI",
+            "id": "CHEBI:32689"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_argininium_amino-acid-ester-to-l-argininium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_argininium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "amino-acid-ester-to-l-argininium"
+      },
+      "note": "Shares D-argininium with α-amino acid ester to L-argininium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:32689"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_argininium_d-argininium-to-4-guanidinobutanoic-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_argininium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-argininium-to-4-guanidinobutanoic-acid"
+      },
+      "note": "Shares D-argininium with D-argininium to 4-guanidinobutanoic acid.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:32689"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_argininium_d-argininium-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_argininium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-argininium-to-phosphate"
+      },
+      "note": "Shares D-argininium with D-argininium to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:32689"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_ornithinium_d-ornithinium-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_ornithinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-ornithinium-to-h2o"
+      },
+      "note": "Shares D-ornithinium with D-ornithinium to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57668"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_ornithinium_n2-acetyl-l-ornithine-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_ornithinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n2-acetyl-l-ornithine-to-ammonium"
+      },
+      "note": "Shares D-ornithinium with N2-acetyl-L-ornithine to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57668"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_pyrrolinium_l-glutamine-to-methyl-com",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_pyrrolinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-glutamine-to-methyl-com"
+      },
+      "note": "Shares 1-pyrrolinium with L-glutamine to methyl-CoM.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:36781"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_pyrrolinium_methyl-sulfate-to-s-formylmycothiol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_pyrrolinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "methyl-sulfate-to-s-formylmycothiol"
+      },
+      "note": "Shares 1-pyrrolinium with methyl sulfate to S-formylmycothiol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:36781"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_pyrrolinium_spermine-to-1-pyrrolinium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_pyrrolinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "spermine-to-1-pyrrolinium"
+      },
+      "note": "Shares 1-pyrrolinium with spermine to 1-pyrrolinium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:36781"
           }
         ]
       }

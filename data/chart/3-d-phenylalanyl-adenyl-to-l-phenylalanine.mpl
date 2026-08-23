@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-d-phenylalanyl-adenyl-to-l-phenylalanine "3'-(D-phenylalanyl)adenyl… to L-phenylalanine" {
-  spacing 276
+  spacing 258
 
   spine at 0,0 {
     3_d_phenylalanyl_adenylyl_zwitterion_group
@@ -16,12 +16,45 @@ pathway 3-d-phenylalanyl-adenyl-to-l-phenylalanine "3'-(D-phenylalanyl)adenyl…
     oxaloacetate
   }
 
+  branch from keto_phenylpyruvate side left {
+    keto_phenylpyruvate
+    <-> . +nadp +nadph +hplus
+    3_phenyllactate
+  }
 
+  branch from keto_phenylpyruvate side right {
+    keto_phenylpyruvate
+    <-> . +3_hydroxy_l_kynurenine +l_phenylalanine
+    4_2_amino_3_hydroxyphenyl_2_4_dioxobutanoate
+  }
 
+  branch from oxaloacetate side left {
+    oxaloacetate
+    <-> . +2e_10e_dode_2_10_dicenoyl_coa +h2o +coa +hplus
+    4e_11e_2_hydroxytrideca_4_11_dien_1_2_3_tricarb
+  }
 
+  branch from l_phenylalanine side right {
+    l_phenylalanine
+    <-> . +des_arg9_bradykinin +h2o
+    des_phe8_des_arg9_bradykinin
+  }
 
+  branch from l_phenylalanine side left {
+    l_phenylalanine
+    <-> . +apelin_13 +h2o
+    apelin_12
+  }
 
+  branch from l_phenylalanine side right {
+    l_phenylalanine
+    <-> . +pyr1_apelin_13 +h2o
+    pyr1_apelin_12
+  }
 
-
-
+  branch from l_phenylalanine side left {
+    l_phenylalanine
+    <-> . +apelin_17 +h2o
+    apelin_16
+  }
 }

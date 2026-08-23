@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-o-5z-tetradecenoyl-l "NADH to O-[(5Z)-tetradecenoyl]-L-…" {
-  spacing 224
+  spacing 308
 
   spine at 0,0 {
     nadh
@@ -24,75 +24,28 @@ pathway nadh-to-o-5z-tetradecenoyl-l "NADH to O-[(5Z)-tetradecenoyl]-L-…" {
     o_5z_tetradecenoyl_l_carnitine
   }
 
-  branch from coa side left {
-    coa
-    <-> . +acetyl_coa +s_5_acetamido_2_hydroxyphenyl_cysteine
-    acetaminophen_mercapturate_conjugate_n_acetyl_cy
-  }
 
-  branch from coa side right {
-    coa
-    <-> . +erucoyl_coa +diphosphate +amp +atp
-    13z_docosenoate
-  }
 
-  branch from o2 side left {
-    o2
-    <-> ec_1_13_11_36 [1.13.11.36] +5_amino_4_chloro_2_2_3_dihydroxyphenyl_pyridazin
-    5_amino_4_chloro_2_5_hydroxymuconoyl_3_2h_pyrida
-  }
 
-  branch from o2 side right {
-    o2
-    <-> ec_1_14_13_89 [1.14.13.89] +2_hydroxygenistein +nadp +h2o +h +nadph
-    genistein
-  }
 
-  branch from nad side left {
-    nad
-    <-> . +nadh +acetyl_coa +5z_8z_11z_14z_17z_eicosapentaenoyl_coa +h +coa +h2o
-    2_7_10_13_16_19_docosahexenoyl_coenzyme_a
-  }
 
-  branch from nad side right {
-    nad
-    <-> . +octanoyl_coa +fad +coa +h2o +nadh +acetyl_coa +fadh2 +h
-    hexanoyl_coa
-  }
 
-  branch from h2o side left {
-    h2o
-    <-> . +4_hydroxy_2_oxoheptanedioate +h
-    2_hydroxyhepta_2_4_dienedioic_acid
-  }
 
-  branch from h2o side right {
-    h2o
-    <-> . +4_hydroxy_2_oxoheptanedioate
-    2z_4z_2_hydroxyhepta_2_4_dienedioate
-  }
 
-  branch from 7z_hexadecenoyl_coa side left {
-    7z_hexadecenoyl_coa
-    <-> . +diphosphate +h +amp +atp +coa
-    7_palmitoleic_acid
-  }
 
-  branch from 7z_hexadecenoyl_coa side right {
-    7z_hexadecenoyl_coa
-    <-> . +nadp +h2o +h +o2 +nadph
-    hexadecanoyl_coa
-  }
 
-  branch from 2e_7z_hexadecadienoyl_coa side left {
-    2e_7z_hexadecadienoyl_coa
-    <-> . +7z_hexadecenoyl_coa +fad +h
-    fadh2
-  }
 
-  branch from 2e_7z_hexadecadienoyl_coa side right {
-    2e_7z_hexadecadienoyl_coa
-    <-> . +h +h2o
-    s_3_hydroxy_7_hexadecenoyl_coenzyme_a
-  }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

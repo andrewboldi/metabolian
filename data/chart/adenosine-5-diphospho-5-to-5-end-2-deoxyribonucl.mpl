@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway adenosine-5-diphospho-5-to-5-end-2-deoxyribonucl "adenosine-5'-diphospho-5'… to 5'-end 2'-deoxyribonucleo…" {
-  spacing 256
+  spacing 262
 
   spine at 0,0 {
     adenosine_5_diphospho_5_2_deoxyribonucleotide
@@ -26,5 +26,11 @@ pathway adenosine-5-diphospho-5-to-5-end-2-deoxyribonucl "adenosine-5'-diphospho
     5_end_2_deoxyribonucleotide_2
     <-> . +5_end_l_tyrosyl_2_deoxyribonucleotide_1 +h2o +hplus
     tyrosine
+  }
+
+  branch from 5_end_2_deoxyribonucleotide_2 side left {
+    5_end_2_deoxyribonucleotide_2
+    <-> . +5_end_2_deoxyribose_deoxyribonucleotide +hplus
+    2e_4s_4_hydroxypenten_2_al_5_phosphate
   }
 }

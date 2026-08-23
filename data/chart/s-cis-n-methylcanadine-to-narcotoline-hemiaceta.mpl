@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-cis-n-methylcanadine-to-narcotoline-hemiaceta "(S)-cis-N-methylcanadine to Narcotoline hemiacetal" {
-  spacing 340
+  spacing 320
 
   spine at 0,0 {
     s_cis_n_methylcanadine
@@ -22,41 +22,5 @@ pathway s-cis-n-methylcanadine-to-narcotoline-hemiaceta "(S)-cis-N-methylcanadin
     h
     <-> . +4_o_desmethylpapaveroxine
     narcotoline_hemiacetal
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +steroid +fmnh2 +o2 +h2o +hplus
-    15_hydroxy_steroid
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +octadecanal +fmnh2 +o2 +co2 +h2o +hplus
-    heptadecane
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    octyl_6_o_d_galactofuranosyl_d_glucopyranoside
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +octyl_alpha_d_mannopyranoside +phosphate +octyl_alpha_d_mannopyranoside +h2o
-    atp
-  }
-
-  branch from acetate side left {
-    acetate
-    <-> . +deoxynivalenol +h +h2o
-    3_acetyldeoxynivalenol
-  }
-
-  branch from acetate side right {
-    acetate
-    <-> . +deoxynivalenol +h +h2o
-    15_acetyldeoxynivalenol
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-gulono-1-4-lactone-to-l-xylulose-5-phosphate "L-gulono-1,4-lactone to L-xylulose 5-phosphate" {
-  spacing 228
+  spacing 252
 
   spine at 0,0 {
     l_gulono_1_4_lactone
@@ -44,13 +44,37 @@ pathway l-gulono-1-4-lactone-to-l-xylulose-5-phosphate "L-gulono-1,4-lactone to 
 
   branch from l_xylulose side left {
     l_xylulose
-    <-> ec_1_1_1_12 [1.1.1.12] +nad +nadh +hplus
-    l_arabinitol
+    <-> .
+    l_lyxopyranose
   }
 
   branch from l_xylulose side right {
     l_xylulose
-    <-> ec_1_1_1_10 [1.1.1.10] +nadp +nadph +hplus
+    <-> ec_1_1_1_15 [1.1.1.15] +nad +nadh +hplus
     xylitol
+  }
+
+  branch from l_gulono_1_4_lactone side left {
+    l_gulono_1_4_lactone
+    <-> . +iron +fe2 +hplus
+    ascorbate
+  }
+
+  branch from l_gulonate side right {
+    l_gulonate
+    <-> ec_1_1_1_19 [1.1.1.19] +alpha_d_glucuronic_acid +nadph
+    nadp
+  }
+
+  branch from l_gulonate side left {
+    l_gulonate
+    <-> ec_1_1_1_19 [1.1.1.19] +nadp +h +nadph
+    beta_d_glucuronate
+  }
+
+  branch from l_xylulose side right {
+    l_xylulose
+    <-> .
+    l_xylopyranose
   }
 }

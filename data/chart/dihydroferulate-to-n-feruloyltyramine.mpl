@@ -16,15 +16,15 @@ pathway dihydroferulate-to-n-feruloyltyramine "dihydroferulate to N-feruloyltyra
     n_feruloyltyramine
   }
 
-  branch from ppi side left {
-    ppi
-    <-> . +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +nadh +hplus +nad
-    lycopaoctaene
+  branch from tyraminium side left {
+    tyraminium
+    <-> . +acetyl_coa +coa +hplus
+    n_acetyltyramine
   }
 
-  branch from ppi side right {
-    ppi
-    <-> . +nadh +hplus +lycopaoctaene +nad
-    1r_2r_3r_prephytoene_diphosphate
+  branch from tyraminium side right {
+    tyraminium
+    <-> . +hexanoyl_coa +coa +hplus
+    n_hexanoyltyramine
   }
 }

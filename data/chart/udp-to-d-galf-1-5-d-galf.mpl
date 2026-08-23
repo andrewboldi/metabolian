@@ -8,9 +8,9 @@ pathway udp-to-d-galf-1-5-d-galf "UDP to [β-D-Galf-(1→5)-β-D-Galf-…" {
 
   spine at 0,0 {
     udp
-    <-> ec_2_4_1_205 [2.4.1.205] +h +1_6_beta_d_galactosylgalactogen -galactogen
-    udp_alpha_d_galactose
-    <-> ec_3_6_1_45 [3.6.1.45] +h2o -alpha_d_galactose_1_phosphate -h
+    <-> ec_2_4_1_197 [2.4.1.197] +o_mannopyranosyl_alpha_1_3_o_mannopyranosyl_alph +h -o_mannopyranosyl_alpha_1_3_o_mannopyranosyl_alph
+    udp_n_acetyl_alpha_d_glucosamine
+    <-> ec_2_7_8_15 [2.7.8.15] +dolichyl_phosphate -n_acetyl_d_glucosaminyldiphosphodolichol
     ump
     <-> ec_2_7_8_13 [2.7.8.13] +dec_pp_murnac_l_ala_gamma_d_glu_meso_dap_d_ala_d -udp_n_acetyl_alpha_d_muramoyl_l_alanyl_gamma_d_g
     trans_polycis_decaprenyl_phosphate
@@ -24,51 +24,87 @@ pathway udp-to-d-galf-1-5-d-galf "UDP to [β-D-Galf-(1→5)-β-D-Galf-…" {
     d_galf_1_5_d_galf_1_6_14_d_galf_1_5_d_galf_1_4
   }
 
-  branch from udp_alpha_d_galactose side left {
-    udp_alpha_d_galactose
-    <-> ec_2_4_1_133 [2.4.1.133] +udp +o3_d_galactosyl_1_4_d_xylosyl_l_serine +h
-    o3_d_xylosyl_l_serine
+  branch from udp_n_acetyl_alpha_d_glucosamine side left {
+    udp_n_acetyl_alpha_d_glucosamine
+    <-> ec_3_2_1_183 [3.2.1.183] +udp +n_acetyl_d_mannosamine +h
+    h2o
   }
 
-  branch from udp_alpha_d_galactose side right {
-    udp_alpha_d_galactose
-    <-> ec_2_4_1_134 [2.4.1.134] +udp +h +o3_d_galactosyl_1_3_d_galactosyl_1_4_d_xylosyl_l
-    o3_d_galactosyl_1_4_d_xylosyl_l_serine
+  branch from udp_n_acetyl_alpha_d_glucosamine side right {
+    udp_n_acetyl_alpha_d_glucosamine
+    <-> ec_5_1_3_2 [5.1.3.2] +h
+    udp_n_acetylgalactosamine
   }
 
-  branch from ump side left {
-    ump
-    <-> ec_2_7_1_48 [2.7.1.48] +uridine +itp +h
-    idp
+  branch from udp side left {
+    udp
+    <-> ec_2_4_1_17 [2.4.1.17] +gemfibrozil_glucuronide +gemfibrozil
+    udp_alpha_d_glucuronate
   }
 
-  branch from ump side right {
-    ump
-    <-> ec_3_5_4_12 [3.5.4.12] +cmp +h +h2o
-    nh4
-  }
-
-  branch from alpha_d_galactose_1_phosphate side left {
-    alpha_d_galactose_1_phosphate
-    <-> ec_2_7_7_69 [2.7.7.69] +gdp +h +phosphate
-    gdp_d_galactose
-  }
-
-  branch from alpha_d_galactose_1_phosphate side right {
-    alpha_d_galactose_1_phosphate
-    <-> . +phosphate +h2o
-    l_galactopyranose
+  branch from udp side right {
+    udp
+    <-> ec_2_4_1_17 [2.4.1.17] +naproxen_glucuronide +udp_alpha_d_glucuronate
+    naproxen
   }
 
   branch from h side left {
     h
-    <-> . +nadh +pyrene_4_5_dione +nad
-    4_5_dihydroxypyrene
+    <-> ec_2_4_2_35 [2.4.2.35] +udp +flavonol_3_o_d_xylosylglycoside +flavonol_3_o_d_galactoside
+    udp_alpha_d_xylose
   }
 
   branch from h side right {
     h
-    <-> ec_1_3_1_32 [1.3.1.32] +5_methylmaleylacetate +nadh +nad
-    2_methyl_3_oxoadipate
+    <-> ec_2_4_1_74 [2.4.1.74] +udp +a_d_galactosylglycosaminoglycan +a_glycosaminoglycan
+    udp_alpha_d_galactose
+  }
+
+  branch from udp_n_acetyl_alpha_d_glucosamine side left {
+    udp_n_acetyl_alpha_d_glucosamine
+    <-> . +udp +alpha_d_glc_1_6_alpha_d_glc_1_4_beta_d_glcnac_1 +h
+    alpha_d_glc_1_6_alpha_d_glc_1_4_alpha_d_gal_1_3
+  }
+
+  branch from udp_n_acetyl_alpha_d_glucosamine side right {
+    udp_n_acetyl_alpha_d_glucosamine
+    <-> . +udp +beta_d_glcnac_1_3_beta_d_gal_1_3_alpha_d_galnac +h
+    beta_d_gal_1_3_alpha_d_galnac_1_3_alpha_d_glcnac
+  }
+
+  branch from dolichyl_phosphate side left {
+    dolichyl_phosphate
+    <-> ec_3_1_4_49 [3.1.4.49] +alpha_d_mannopyranose +h2o
+    dolichyl_beta_d_mannosyl_phosphate
+  }
+
+  branch from dolichyl_phosphate side right {
+    dolichyl_phosphate
+    <-> . +alpha_man_1_2_alpha_man_1_2_alpha_man_1_3_alpha +dolichyl_beta_d_mannosyl_phosphate
+    glycan_g10595
+  }
+
+  branch from udpglcnac side left {
+    udpglcnac
+    <-> . +o3_n_acetyl_d_glucosaminyl_1_2_d_mannosyl_l_seri +udp +hplus
+    o3_n_acetyl_d_glucosaminyl_1_2_n_acetyl_d_glucos
+  }
+
+  branch from udpglcnac side right {
+    udpglcnac
+    <-> . +o3_n_acetyl_d_glucosaminyl_1_2_d_mannosyl_l_thre +udp +hplus
+    o3_n_acetyl_d_glucosaminyl_1_2_n_acetyl_d_glucos
+  }
+
+  branch from udp_d_galactofuranose side left {
+    udp_d_galactofuranose
+    <-> . +udp +alpha_d_galf_1_4_alpha_d_gal_1_3_beta_d_mannac_1 +h
+    alpha_d_gal_1_3_beta_d_mannac_1_6_beta_d_galf_1
+  }
+
+  branch from udp_d_galactofuranose side right {
+    udp_d_galactofuranose
+    <-> . +udp +alpha_d_galf_1_4_beta_d_galnac_1_4_alpha_l_rha_1 +h
+    beta_d_galnac_1_4_alpha_l_rha_1_3_alpha_d_glcnac
   }
 }

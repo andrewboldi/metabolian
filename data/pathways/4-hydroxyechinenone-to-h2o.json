@@ -156,104 +156,9 @@
       "xrefs": {
         "metanetx": "MNXM722818"
       }
-    },
-    {
-      "id": "3_oxo_homoplatensic_coa",
-      "name": "3-oxo-homoplatensic-CoA",
-      "short": "3-oxo-homoplatensic…",
-      "formula": "C41H56N7O20P3S",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM1132462"
-      }
-    },
-    {
-      "id": "3s_3_hydroxy_homoplatensic_coa",
-      "name": "(3S)-3-hydroxy-homoplatensic-CoA",
-      "short": "3-hydroxy-homoplate…",
-      "formula": "C41H58N7O20P3S",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM1132461"
-      }
-    },
-    {
-      "id": "3_oxopentanoyl_coa",
-      "name": "3-oxopentanoyl-CoA",
-      "formula": "C26H38N7O18P3S",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM1101900"
-      }
-    },
-    {
-      "id": "s_3_hydroxypentanoyl_coa",
-      "name": "(S)-3-hydroxypentanoyl-CoA",
-      "short": "3-hydroxypentanoyl-…",
-      "formula": "C26H40N7O18P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:138607"
-      }
-    },
-    {
-      "id": "oleandomycin",
-      "name": "oleandomycin",
-      "formula": "C35H62NO12",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM1103066"
-      }
-    },
-    {
-      "id": "beta_d_glucose",
-      "name": "beta-D-glucose",
-      "formula": "C6H12O6",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1364060"
-      }
-    },
-    {
-      "id": "glucosyl_oleandomycin",
-      "name": "glucosyl-oleandomycin",
-      "short": "glucosyl-oleandomyc…",
-      "formula": "C41H72NO17",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM8659"
-      }
-    },
-    {
-      "id": "15_15_dihydroxy_carotene",
-      "name": "15,15'-dihydroxy-β-carotene",
-      "short": "15,15'-dihydroxy-β-…",
-      "formula": "C40H58O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:67228"
-      }
-    },
-    {
-      "id": "carotene_15_15_epoxide",
-      "name": "β-carotene 15,15'-epoxide",
-      "short": "β-carotene…",
-      "formula": "C40H56O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:67227"
-      }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_1_1_1_35",
-      "name": "3-hydroxyacyl-CoA dehydrogenase",
-      "ec": [
-        "1.1.1.35"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -466,171 +371,71 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r6",
-      "name": "3-hydroxyacyl-CoA dehydrogenase",
-      "ec": "1.1.1.35",
-      "substrates": [
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "3_oxo_homoplatensic_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3s_3_hydroxy_homoplatensic_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_1_1_35"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "metanetx": "MNXR193392"
+      "id": "xt_4_hydroxyechinenone_carotene-to-hydrogen-acceptor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_hydroxyechinenone"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "carotene-to-hydrogen-acceptor"
+      },
+      "note": "Shares 4'-hydroxyechinenone with β-carotene to hydrogen acceptor.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR193392"
+            "db": "ChEBI",
+            "id": "CHEBI:140610"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "3-hydroxyacyl-CoA dehydrogenase",
-      "ec": "1.1.1.35",
-      "substrates": [
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "3_oxopentanoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "s_3_hydroxypentanoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_1_1_35"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "metanetx": "MNXR193401"
+      "id": "xt_canthaxanthin_all-trans-beta-carotene-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "canthaxanthin"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "all-trans-beta-carotene-to-h2o"
+      },
+      "note": "Shares canthaxanthin with all-trans-beta-carotene to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR193401"
+            "db": "ChEBI",
+            "id": "CHEBI:3362"
           }
         ]
       }
     },
     {
-      "id": "r8",
-      "name": "Reaction MNXR176531",
-      "substrates": [
-        {
-          "metabolite": "oleandomycin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "beta_d_glucose",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "glucosyl_oleandomycin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "metanetx": "MNXR176531"
+      "id": "xt_2_2_dihydroxycanthaxanthin_all-trans-beta-carotene-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_2_dihydroxycanthaxanthin"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "all-trans-beta-carotene-to-h2o"
+      },
+      "note": "Shares 2,2'-dihydroxycanthaxanthin with all-trans-beta-carotene to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR176531"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r9",
-      "name": "Reaction MNXR176689",
-      "substrates": [
-        {
-          "metabolite": "15_15_dihydroxy_carotene",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "carotene_15_15_epoxide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 9,
-      "xrefs": {
-        "metanetx": "MNXR176689"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR176689"
+            "id": "MNXM147701"
           }
         ]
       }

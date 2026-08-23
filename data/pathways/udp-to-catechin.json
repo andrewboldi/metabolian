@@ -96,33 +96,6 @@
       "xrefs": {
         "chebi": "CHEBI:33992"
       }
-    },
-    {
-      "id": "2e_geranial",
-      "name": "(2E)-geranial",
-      "formula": "C10H16O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1368412"
-      }
-    },
-    {
-      "id": "r_terpineol",
-      "name": "(R)-(+)-α-terpineol",
-      "formula": "C10H18O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:300"
-      }
-    },
-    {
-      "id": "thujan_3_ol",
-      "name": "(-)-thujan-3-ol",
-      "formula": "C10H18O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM97633"
-      }
     }
   ],
   "enzymes": [
@@ -131,13 +104,6 @@
       "name": "anthocyanidin 3-O-glucosyltransferase",
       "ec": [
         "2.4.1.115"
-      ]
-    },
-    {
-      "id": "ec_1_1_1_71",
-      "name": "alcohol dehydrogenase [NAD(P)(+)]",
-      "ec": [
-        "1.1.1.71"
       ]
     }
   ],
@@ -269,99 +235,247 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "alcohol dehydrogenase [NAD(P)(+)]",
-      "ec": "1.1.1.71",
-      "substrates": [
-        {
-          "metabolite": "2e_geranial",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "r_terpineol",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_1_1_71"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR181337"
+      "id": "xt_cyanidin_3_o_glucoside_d-glucopyranose-to-2r-3s-catechin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cyanidin_3_o_glucoside"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glucopyranose-to-2r-3s-catechin"
+      },
+      "note": "Shares Cyanidin 3-O-glucoside with D-glucopyranose to (2R,3S)-catechin.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR181337"
+            "id": "MNXM1371016"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "alcohol dehydrogenase [NAD(P)(+)]",
-      "ec": "1.1.1.71",
-      "substrates": [
-        {
-          "metabolite": "2e_geranial",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "thujan_3_ol",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_1_1_71"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR181343"
+      "id": "xt_cyanidin_3_o_glucoside_d-glucopyranose-to-coa-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cyanidin_3_o_glucoside"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glucopyranose-to-coa-null"
+      },
+      "note": "Shares Cyanidin 3-O-glucoside with D-glucopyranose to CoA.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR181343"
+            "id": "MNXM1371016"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cyanidin_3_o_glucoside_d-glucopyranose-to-cyanidin-3-o-glucoside",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cyanidin_3_o_glucoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glucopyranose-to-cyanidin-3-o-glucoside"
+      },
+      "note": "Shares Cyanidin 3-O-glucoside with D-glucopyranose to Cyanidin 3-O-glucoside.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371016"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cyanidin_3_o_glucoside_tetrahydrofolyl-poly-glut-to-3-methylsulfanyl-pr",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cyanidin_3_o_glucoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "tetrahydrofolyl-poly-glut-to-3-methylsulfanyl-pr"
+      },
+      "note": "Shares Cyanidin 3-O-glucoside with tetrahydrofolyl-poly(glut… to 3-(methylsulfanyl)propano….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371016"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_idb_1027_aldehydo-d-ribose-to-d-sedoheptulose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "idb_1027"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aldehydo-d-ribose-to-d-sedoheptulose"
+      },
+      "note": "Shares IdB 1027 with aldehydo-D-ribose… to D-sedoheptulose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1372543"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_idb_1027_beta-d-glucose-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "idb_1027"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-d-glucose-to-nad"
+      },
+      "note": "Shares IdB 1027 with beta-D-glucose to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1372543"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_idb_1027_catechin-to-catechin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "idb_1027"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "catechin-to-catechin"
+      },
+      "note": "Shares IdB 1027 with (+)-catechin to (−)-catechin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1372543"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_idb_1027_d-glucopyranose-to-2r-3s-catechin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "idb_1027"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glucopyranose-to-2r-3s-catechin"
+      },
+      "note": "Shares IdB 1027 with D-glucopyranose to (2R,3S)-catechin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1372543"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_idb_1027_epicatechin-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "idb_1027"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "epicatechin-to-nadph"
+      },
+      "note": "Shares IdB 1027 with (+)-epicatechin to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1372543"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_idb_1027_udp-to-afzelin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "idb_1027"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-afzelin"
+      },
+      "note": "Shares IdB 1027 with UDP to afzelin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1372543"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_catechin_catechin-to-catechin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "catechin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "catechin-to-catechin"
+      },
+      "note": "Shares (−)-catechin with (+)-catechin to (−)-catechin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:33992"
           }
         ]
       }

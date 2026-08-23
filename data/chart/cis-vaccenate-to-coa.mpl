@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cis-vaccenate-to-coa "cis-vaccenate to CoA" {
-  spacing 224
+  spacing 152
 
   spine at 0,0 {
     cis_vaccenate
@@ -16,77 +16,5 @@ pathway cis-vaccenate-to-coa "cis-vaccenate to CoA" {
     malonyl_coa
     <-> . +r_carnitine +vaccenyl_coenzyme_a -h -coa
     car_18_1_11e
-  }
-
-  branch from 11z_octadecenoyl_coa side left {
-    11z_octadecenoyl_coa
-    <-> . +fadh2 +3_hydroxyoctadecenoylcoa +h +h2o
-    fad
-  }
-
-  branch from 11z_octadecenoyl_coa side right {
-    11z_octadecenoyl_coa
-    <-> . +car_18_1_11e +coa
-    s_carnitine
-  }
-
-  branch from 13z_3_oxoicosenoyl_coa side left {
-    13z_3_oxoicosenoyl_coa
-    <-> . +co2 +coa +malonyl_coa +h
-    11e_octadecenoyl_coa
-  }
-
-  branch from 13z_3_oxoicosenoyl_coa side right {
-    13z_3_oxoicosenoyl_coa
-    <-> . +h +nadph +nadp
-    13z_3_hydroxyicos_13_enoyl_coa
-  }
-
-  branch from malonyl_coa side left {
-    malonyl_coa
-    <-> ec_2_3_1_115 [2.3.1.115] +apiin +h +coa
-    malonylapiin
-  }
-
-  branch from malonyl_coa side right {
-    malonyl_coa
-    <-> ec_2_3_1_115 [2.3.1.115] +h +coa +malonylapiin
-    apiin
-  }
-
-  branch from vaccenyl_coenzyme_a side left {
-    vaccenyl_coenzyme_a
-    <-> . +nadh +octadecanoyl_coa +h +o2 +h2o
-    nad
-  }
-
-  branch from vaccenyl_coenzyme_a side right {
-    vaccenyl_coenzyme_a
-    <-> . +nadh +o2 +h +nad +h2o
-    9z_12z_octadecadienoyl_coa
-  }
-
-  branch from h side left {
-    h
-    <-> . +ellagic_acid +h2o
-    3_4_8_9_10_pentahydroxy_6_oxobenzo_c_chromene_1
-  }
-
-  branch from h side right {
-    h
-    <-> . +d_galactofuranose +4_nitrophenol +h2o
-    4_nitrophenyl_beta_d_galactofuranoside
-  }
-
-  branch from coa side left {
-    coa
-    <-> ec_6_2_1_3 [6.2.1.3] +7_methyloct_6_enoate +atp +adp +phosphate
-    7_methyloct_6_enoyl_coa
-  }
-
-  branch from coa side right {
-    coa
-    <-> ec_6_2_1_3 [6.2.1.3] +9_methyldecanoyl_coa +h +adp +phosphate +atp
-    9_methyl_decanoic_acid
   }
 }

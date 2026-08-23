@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cmp-to-1-2-dihexadecanoyl-sn-gly "CMP to 1,2-dihexadecanoyl-sn-gly…" {
-  spacing 158
+  spacing 152
 
   spine at 0,0 {
     cmp
@@ -14,11 +14,5 @@ pathway cmp-to-1-2-dihexadecanoyl-sn-gly "CMP to 1,2-dihexadecanoyl-sn-gly…" {
     1_2_dipalmitoyl_sn_glycero_3_phospho_1_d_myo_ino
     <-> . +h2o -pi
     1_2_dihexadecanoyl_sn_glycero_3_phospho_d_myo_in
-  }
-
-  branch from dipalmitoyl_phosphatidylglycerol side left {
-    dipalmitoyl_phosphatidylglycerol
-    <-> . +hexadecanoate +h +2_hexadecanoyl_sn_glycero_3_phospho_1_sn_glycero +atp +amp
-    diphosphate
   }
 }

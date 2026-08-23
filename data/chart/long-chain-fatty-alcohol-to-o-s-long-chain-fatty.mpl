@@ -18,15 +18,15 @@ pathway long-chain-fatty-alcohol-to-o-s-long-chain-fatty "long-chain fatty alcoh
     o_s_long_chain_fatty_acyl_pantetheine_4_phosphor
   }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_212 [4.2.3.212] +fpp +h2o
-    cadinol
+  branch from fatty_acyl_coa side left {
+    fatty_acyl_coa
+    <-> . +carnitine +coa
+    fatty_acyl_l_carnitine
   }
 
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_215 [4.2.3.215] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    araneosene
+  branch from fatty_acyl_coa side right {
+    fatty_acyl_coa
+    <-> . +nadph +hplus +nadp +coa
+    primary_fatty_alcohol
   }
 }

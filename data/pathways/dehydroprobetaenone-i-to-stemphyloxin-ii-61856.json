@@ -1,0 +1,604 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "dehydroprobetaenone-i-to-stemphyloxin-ii-61856",
+  "name": "dehydroprobetaenone I to stemphyloxin II",
+  "category": "other",
+  "summary": "A 3-step route from dehydroprobetaenone I to stemphyloxin II, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:61856"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:145061"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "dehydroprobetaenone_i",
+      "name": "dehydroprobetaenone I",
+      "short": "dehydroprobetaenone…",
+      "formula": "C21H34O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:145061"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "betaenone_c",
+      "name": "betaenone C",
+      "formula": "C21H34O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:145053"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "betaenone_a",
+      "name": "betaenone A",
+      "formula": "C21H34O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:145055"
+      }
+    },
+    {
+      "id": "stemphyloxin_ii",
+      "name": "stemphyloxin II",
+      "formula": "C21H34O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:145066"
+      }
+    },
+    {
+      "id": "stemphyloxin_i",
+      "name": "stemphyloxin I",
+      "formula": "C21H34O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:145070"
+      }
+    },
+    {
+      "id": "epoxybetaenone",
+      "name": "epoxybetaenone",
+      "formula": "C21H34O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:145069"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "dehydroprobetaenone I + 3 NADPH + 3 O2 + 3 H(+) = betaenone C + 3 NADP(+) + 3 H2O",
+      "equation": "dehydroprobetaenone I + 3 NADPH + 3 O2 + 3 H(+) = betaenone C + 3 NADP(+) + 3 H2O",
+      "substrates": [
+        {
+          "metabolite": "dehydroprobetaenone_i",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "betaenone_c",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:61856"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61856"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "betaenone C = betaenone A",
+      "equation": "betaenone C = betaenone A",
+      "substrates": [
+        {
+          "metabolite": "betaenone_c",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "betaenone_a",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:61896"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61896"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "betaenone A + NADPH + O2 + H(+) = stemphyloxin II + NADP(+) + H2O",
+      "equation": "betaenone A + NADPH + O2 + H(+) = stemphyloxin II + NADP(+) + H2O",
+      "substrates": [
+        {
+          "metabolite": "betaenone_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "stemphyloxin_ii",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:61904"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61904"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "betaenone C + NADPH + O2 + H(+) = stemphyloxin I + NADP(+) + H2O",
+      "equation": "betaenone C + NADPH + O2 + H(+) = stemphyloxin I + NADP(+) + H2O",
+      "substrates": [
+        {
+          "metabolite": "betaenone_c",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "stemphyloxin_i",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:62712"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62712"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "dehydroprobetaenone I + NADPH + O2 + H(+) = epoxybetaenone + NADP(+) + H2O",
+      "equation": "dehydroprobetaenone I + NADPH + O2 + H(+) = epoxybetaenone + NADP(+) + H2O",
+      "substrates": [
+        {
+          "metabolite": "dehydroprobetaenone_i",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "epoxybetaenone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:61860"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61860"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_dehydroprobetaenone_i_dehydroprobetaenone-i-to-stemphyloxin-ii",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dehydroprobetaenone_i"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dehydroprobetaenone-i-to-stemphyloxin-ii"
+      },
+      "note": "Shares dehydroprobetaenone I with dehydroprobetaenone I to stemphyloxin II.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:145061"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dehydroprobetaenone_i_ethylbenzene-to-3-oxo-3-phenylpropionate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dehydroprobetaenone_i"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ethylbenzene-to-3-oxo-3-phenylpropionate"
+      },
+      "note": "Shares dehydroprobetaenone I with ethylbenzene to 3-oxo-3-phenylpropionate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:145061"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dehydroprobetaenone_i_l-proline-betaine-to-hydrogen-donor-19357",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dehydroprobetaenone_i"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-proline-betaine-to-hydrogen-donor-19357"
+      },
+      "note": "Shares dehydroprobetaenone I with L-proline betaine to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:145061"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dehydroprobetaenone_i_leukotriene-c4-to-hydrogen-donor-17617",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dehydroprobetaenone_i"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "leukotriene-c4-to-hydrogen-donor-17617"
+      },
+      "note": "Shares dehydroprobetaenone I with leukotriene C4 to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:145061"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_betaenone_c_dehydroprobetaenone-i-to-stemphyloxin-ii",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "betaenone_c"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dehydroprobetaenone-i-to-stemphyloxin-ii"
+      },
+      "note": "Shares betaenone C with dehydroprobetaenone I to stemphyloxin II.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:145053"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_betaenone_c_ethylbenzene-to-3-oxo-3-phenylpropionate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "betaenone_c"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ethylbenzene-to-3-oxo-3-phenylpropionate"
+      },
+      "note": "Shares betaenone C with ethylbenzene to 3-oxo-3-phenylpropionate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:145053"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_betaenone_c_l-proline-betaine-to-hydrogen-donor-19357",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "betaenone_c"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-proline-betaine-to-hydrogen-donor-19357"
+      },
+      "note": "Shares betaenone C with L-proline betaine to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:145053"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_betaenone_a_dehydroprobetaenone-i-to-stemphyloxin-ii",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "betaenone_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dehydroprobetaenone-i-to-stemphyloxin-ii"
+      },
+      "note": "Shares betaenone A with dehydroprobetaenone I to stemphyloxin II.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:145055"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_stemphyloxin_ii_dehydroprobetaenone-i-to-stemphyloxin-ii",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "stemphyloxin_ii"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dehydroprobetaenone-i-to-stemphyloxin-ii"
+      },
+      "note": "Shares stemphyloxin II with dehydroprobetaenone I to stemphyloxin II.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:145066"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_stemphyloxin_i_dehydroprobetaenone-i-to-stemphyloxin-ii",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "stemphyloxin_i"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dehydroprobetaenone-i-to-stemphyloxin-ii"
+      },
+      "note": "Shares stemphyloxin I with dehydroprobetaenone I to stemphyloxin II.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:145070"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_epoxybetaenone_dehydroprobetaenone-i-to-stemphyloxin-ii",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "epoxybetaenone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dehydroprobetaenone-i-to-stemphyloxin-ii"
+      },
+      "note": "Shares epoxybetaenone with dehydroprobetaenone I to stemphyloxin II.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:145069"
+          }
+        ]
+      }
+    }
+  ]
+}

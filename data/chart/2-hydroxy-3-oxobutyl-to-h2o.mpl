@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-hydroxy-3-oxobutyl-to-h2o "2-hydroxy-3-oxobutyl… to H2O" {
-  spacing 274
+  spacing 220
 
   spine at 0,0 {
     2_hydroxy_3_oxobutyl_phosphate
@@ -14,59 +14,5 @@ pathway 2-hydroxy-3-oxobutyl-to-h2o "2-hydroxy-3-oxobutyl… to H2O" {
     5_amino_6_d_ribitylamino_uracil
     <-> . +h +riboflavin +adp +phosphate -atp -h2o
     riboflavin
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    sm_d18_1_16_0_sphingomyelin
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    sm_d18_1_17_0_sphingomyelin
-  }
-
-  branch from phosphate side left {
-    phosphate
-    <-> . +h +adp +atp +h2o
-    sm_d18_1_18_1_sphingomyelin
-  }
-
-  branch from phosphate side right {
-    phosphate
-    <-> . +h +adp +atp +h2o
-    sm_d18_1_18_0_sphingomyelin
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_asparagine +l_phenylalanine
-    phenylalanyl_phenylalaninyl_asparagine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_threonine +l_phenylalanine
-    phenylalanyl_phenylalaninyl_threonine
-  }
-
-  branch from 5_amino_6_d_ribitylamino_uracil side left {
-    5_amino_6_d_ribitylamino_uracil
-    <-> ec_2_5_1_78 [2.5.1.78] +1_deoxy_l_glycero_tetrulose_4_phosphate +h +phosphate +h2o
-    6_7_dimethyl_8_1_d_ribityl_lumazine
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    sm_d18_1_20_1_sphingomyelin
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    sm_d18_1_20_0_sphingomyelin
   }
 }

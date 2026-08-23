@@ -205,99 +205,6 @@
       "xrefs": {
         "chebi": "CHEBI:16526"
       }
-    },
-    {
-      "id": "2e_4e_6e_7_hydroxy_4_methylhepta_2_4_6_trienal",
-      "name": "(2E,4E,6E)-7-hydroxy-4-methylhepta-2,4,6-trienal",
-      "short": "(2E,4E,6E)-7-hydrox…",
-      "formula": "C8H10O2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1372594"
-      }
-    },
-    {
-      "id": "o2",
-      "name": "O2",
-      "formula": "O2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM735438"
-      }
-    },
-    {
-      "id": "tetradecane",
-      "name": "tetradecane",
-      "formula": "C14H30",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:41253"
-      }
-    },
-    {
-      "id": "tetradecan_7_ol",
-      "name": "tetradecan-7-ol",
-      "formula": "C14H30O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:195412"
-      }
-    },
-    {
-      "id": "hexadecane",
-      "name": "hexadecane",
-      "formula": "C16H34",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:45296"
-      }
-    },
-    {
-      "id": "hexadecan_8_ol",
-      "name": "hexadecan-8-ol",
-      "formula": "C16H34O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:197398"
-      }
-    },
-    {
-      "id": "scopoletin",
-      "name": "scopoletin",
-      "formula": "C10H8O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:17488"
-      }
-    },
-    {
-      "id": "scoparone",
-      "name": "scoparone",
-      "formula": "C11H10O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:9055"
-      }
-    },
-    {
-      "id": "7_8_dihydroxycoumarin",
-      "name": "7,8-dihydroxycoumarin",
-      "short": "7,8-dihydroxycoumar…",
-      "formula": "C9H6O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:17313"
-      }
-    },
-    {
-      "id": "7_hydroxy_8_methoxycoumarin",
-      "name": "7-hydroxy-8-methoxycoumarin",
-      "short": "7-hydroxy-8-methoxy…",
-      "formula": "C10H8O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:180544"
-      }
     }
   ],
   "enzymes": [
@@ -645,235 +552,137 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r8",
-      "name": "carlactone synthase",
-      "ec": "1.13.11.69",
-      "substrates": [
-        {
-          "metabolite": "2e_4e_6e_7_hydroxy_4_methylhepta_2_4_6_trienal",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "11r_carlactone",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "o2",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "9_cis_10_apo_carotenal",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_13_11_69"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "metanetx": "MNXR196379"
+      "id": "xt_9_cis_carotene_s-adenosyl-l-homocysteine-to-8-apo-caroten-8-al",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9_cis_carotene"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-8-apo-caroten-8-al"
+      },
+      "note": "Shares 9-cis-β-carotene with S-adenosyl-L-homocysteine to 8'-apo-β,ψ-caroten-8'-al.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR196379"
+            "db": "ChEBI",
+            "id": "CHEBI:67188"
           }
         ]
       }
     },
     {
-      "id": "r9",
-      "name": "tetradecane + reduced [NADPH--hemoprotein reductase] + O2 = 7-tetradecanol + oxidized [...",
-      "equation": "tetradecane + reduced [NADPH--hemoprotein reductase] + O2 = 7-tetradecanol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "tetradecane",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "tetradecan_7_ol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 9,
-      "xrefs": {
-        "rhea": "RHEA:76743"
+      "id": "xt_9_cis_10_apo_carotenal_3-o-methylkaempferol-to-butein",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9_cis_10_apo_carotenal"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "3-o-methylkaempferol-to-butein"
+      },
+      "note": "Shares 9-cis-10'-apo-β-carotenal with 3-O-methylkaempferol to butein.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:76743"
+            "db": "ChEBI",
+            "id": "CHEBI:67192"
           }
         ]
       }
     },
     {
-      "id": "r10",
-      "name": "hexadecane + reduced [NADPH--hemoprotein reductase] + O2 = 9-hexadecanol + oxidized [NA...",
-      "equation": "hexadecane + reduced [NADPH--hemoprotein reductase] + O2 = 9-hexadecanol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "hexadecane",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "hexadecan_8_ol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 10,
-      "xrefs": {
-        "rhea": "RHEA:76747"
+      "id": "xt_ionone_12-hydroxyeicosatetraenoa-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ionone"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "12-hydroxyeicosatetraenoa-to-h2o"
+      },
+      "note": "Shares β-ionone with 12-hydroxyeicosatetraenoa… to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:76747"
+            "db": "ChEBI",
+            "id": "CHEBI:32325"
           }
         ]
       }
     },
     {
-      "id": "r11",
-      "name": "scopoletin + S-adenosyl-L-methionine = scoparone + S-adenosyl-L-homocysteine + H(+)",
-      "equation": "scopoletin + S-adenosyl-L-methionine = scoparone + S-adenosyl-L-homocysteine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "scopoletin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "scoparone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 11,
-      "xrefs": {
-        "rhea": "RHEA:68956"
+      "id": "xt_ionone_5-cis-lycopene-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ionone"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cis-lycopene-to-h2o"
+      },
+      "note": "Shares β-ionone with 5-cis-lycopene to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:68956"
+            "db": "ChEBI",
+            "id": "CHEBI:32325"
           }
         ]
       }
     },
     {
-      "id": "r12",
-      "name": "7,8-dihydroxycoumarin + S-adenosyl-L-methionine = 7-hydroxy-8-methoxycoumarin + S-adeno...",
-      "equation": "7,8-dihydroxycoumarin + S-adenosyl-L-methionine = 7-hydroxy-8-methoxycoumarin + S-adenosyl-L-homocysteine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "7_8_dihydroxycoumarin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "7_hydroxy_8_methoxycoumarin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 12,
-      "xrefs": {
-        "rhea": "RHEA:68960"
+      "id": "xt_ionone_s-adenosyl-l-homocysteine-to-8-apo-caroten-8-al",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ionone"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-8-apo-caroten-8-al"
+      },
+      "note": "Shares β-ionone with S-adenosyl-L-homocysteine to 8'-apo-β,ψ-caroten-8'-al.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:68960"
+            "db": "ChEBI",
+            "id": "CHEBI:32325"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_11r_carlactone_3-o-methylkaempferol-to-butein",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11r_carlactone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-o-methylkaempferol-to-butein"
+      },
+      "note": "Shares (11R)-carlactone with 3-O-methylkaempferol to butein.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:194508"
           }
         ]
       }

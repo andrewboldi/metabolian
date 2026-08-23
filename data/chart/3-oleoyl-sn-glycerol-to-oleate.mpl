@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-oleoyl-sn-glycerol-to-oleate "3-oleoyl-sn-glycerol to oleate" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     3_oleoyl_sn_glycerol
@@ -16,5 +16,17 @@ pathway 3-oleoyl-sn-glycerol-to-oleate "3-oleoyl-sn-glycerol to oleate" {
     all_trans_retinyl_oleate
     <-> . +dioleoylglycerol +h2o -oleate -hplus
     monooleoylglycerol
+  }
+
+  branch from oleoyl_coa side left {
+    oleoyl_coa
+    <-> . +1_monomyristoylglycerol +coa
+    1_myristoyl_3_oleoylglycerol
+  }
+
+  branch from oleoyl_coa side right {
+    oleoyl_coa
+    <-> . +tetracosan_1_ol +coa
+    1_o_tetracosyl_oleate
   }
 }

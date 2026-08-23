@@ -145,46 +145,6 @@
       "xrefs": {
         "chebi": "CHEBI:16240"
       }
-    },
-    {
-      "id": "2_2_dilysocardiolipin",
-      "name": "2,2'-dilysocardiolipin",
-      "short": "2,2'-dilysocardioli…",
-      "formula": "C11H18O15P2R2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:75137"
-      }
-    },
-    {
-      "id": "2_palmitoyl_2_monolysocardiolipin",
-      "name": "2-palmitoyl-2'-monolysocardiolipin",
-      "short": "2-palmitoyl-2'-mono…",
-      "formula": "C27H48O16P2R2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:75207"
-      }
-    },
-    {
-      "id": "1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine",
-      "name": "1-(Z)-alk-1-enyl-sn-glycero-3-phosphoethanolamine",
-      "short": "1-(Z)-alk-1-enyl-sn…",
-      "formula": "C7H15NO6PR",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:77288"
-      }
-    },
-    {
-      "id": "1_z_alk_1_enyl_2_palmitoyl_sn_glycero_3_phosphoe",
-      "name": "1-(Z)-alk-1-enyl-2-palmitoyl-sn-glycero-3-phosphoethanolamine",
-      "short": "1-(Z)-alk-1-enyl-2-…",
-      "formula": "C23H45NO7PR",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:77303"
-      }
     }
   ],
   "enzymes": [
@@ -193,14 +153,20 @@
       "name": "sphingosine kinase",
       "ec": [
         "2.7.1.91"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q9NYA1"
+      }
     },
     {
       "id": "ec_4_1_2_27",
       "name": "sphinganine-1-phosphate aldolase",
       "ec": [
         "4.1.2.27"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "O95470"
+      }
     },
     {
       "id": "ec_1_2_1_n2",
@@ -392,81 +358,71 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "1',3'-bis-[1-acyl-sn-glycero-3-phospho]-glycerol + hexadecanoyl-CoA = 1'-[1-acyl-2-hexa...",
-      "equation": "1',3'-bis-[1-acyl-sn-glycero-3-phospho]-glycerol + hexadecanoyl-CoA = 1'-[1-acyl-2-hexadecanoyl-sn-glycero-3-phospho],3'-[1-acyl,2-hydroxy-sn-glycero-3-phospho]-glycerol + CoA",
-      "substrates": [
-        {
-          "metabolite": "2_2_dilysocardiolipin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "palmitoyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_palmitoyl_2_monolysocardiolipin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:37691"
+      "id": "xt_sphinganine_1_phosphate_2-hydroxyhexacosanoyl-coa-to-carboxylic-acid-ani",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sphinganine_1_phosphate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2-hydroxyhexacosanoyl-coa-to-carboxylic-acid-ani"
+      },
+      "note": "Shares sphinganine 1-phosphate with 2-hydroxyhexacosanoyl-CoA to carboxylic acid anion.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:37691"
+            "db": "ChEBI",
+            "id": "CHEBI:57939"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "a 1-O-(1Z-alkenyl)-sn-glycero-3-phosphoethanolamine + hexadecanoyl-CoA = 1-O-(1Z)-alken...",
-      "equation": "a 1-O-(1Z-alkenyl)-sn-glycero-3-phosphoethanolamine + hexadecanoyl-CoA = 1-O-(1Z)-alkenyl-2-hexadecanoyl-sn-glycero-3-phosphoethanolamine + CoA",
-      "substrates": [
-        {
-          "metabolite": "1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "palmitoyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_z_alk_1_enyl_2_palmitoyl_sn_glycero_3_phosphoe",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:37755"
+      "id": "xt_hexadecanal_hexadecanoate-ester-to-trans-hexadec-2-enal",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hexadecanal"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "hexadecanoate-ester-to-trans-hexadec-2-enal"
+      },
+      "note": "Shares hexadecanal with hexadecanoate ester to trans-hexadec-2-enal.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:37755"
+            "db": "ChEBI",
+            "id": "CHEBI:17600"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hexadecanal_palmitoyl-coa-to-palmitoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hexadecanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "palmitoyl-coa-to-palmitoyl-coa"
+      },
+      "note": "Shares hexadecanal with palmitoyl-CoA to palmitoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17600"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-selenocystathionine-to-3-l-selenocysteinyl-ade "L-selenocystathionine to 3'-(L-selenocysteinyl)ade…" {
-  spacing 276
+  spacing 318
 
   spine at 0,0 {
     l_selenocystathionine
@@ -32,49 +32,91 @@ pathway l-selenocystathionine-to-3-l-selenocysteinyl-ade "L-selenocystathionine 
 
   branch from nh3 side left {
     nh3
-    <-> ec_1_4_1_25 [1.4.1.25] +arginine +nadp +h2o +nadph +hplus
-    5_guanidino_2_oxopentanoic_acid
+    <-> . +1s_3_methyl_cyclohexylammonium +nad +h2o +nadh +hplus
+    3_methylcyclohexanone
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_4_2_1_168 [4.2.1.168] +gdp_4_dehydro_6_deoxy_d_mannose +glutamate +akg
-    gdp_4_dehydro_3_6_dideoxy_d_mannose
+    <-> . +nadp +h2o +3_methylcyclohexanone +nadph +hplus
+    1s_3_methyl_cyclohexylammonium
   }
 
   branch from alanine side left {
     alanine
-    <-> . +plp +pyruvate
-    pyridoxamine_5_phosphate
+    <-> . +3_l_alanyl_adenylyl_zwitterionic_group +h2o +hplus
+    amp_3_end_1
   }
 
   branch from alanine side right {
     alanine
-    <-> ec_2_6_1_113 [2.6.1.113] +1_4_butanediammonium +pyruvate
-    4_ammoniobutanal
-  }
-
-  branch from hydrogen_acceptor side left {
-    hydrogen_acceptor
-    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +hydrogen_donor +o2 +h2o
-    15_r_hepe
-  }
-
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> . +7z_10z_13z_16z_19z_docosapentaenoate +hydrogen_donor +o2 +h2o
-    7z_10z_13r_14e_16z_19z_13_hydroxydocosapentaeno
+    <-> . +n_n_dimethyl_l_argininium +pyruvate
+    5_3_3_dimethylguanidino_2_oxopentanoate
   }
 
   branch from selenophosphate side left {
     selenophosphate
-    <-> ec_2_9_1_3 [2.9.1.3] +5_methylaminomethyl_2_thiouridine_5_monophosphat +gpp +h2o +hplus +thiogeraniol +pi +ppi
-    5_methylaminomethyl_2_selenouridine_5_monophosph
+    <-> . +udp_d_glucose +h2o +udp +pi +hplus
+    1_seleno_d_glucose
   }
 
   branch from selenophosphate side right {
     selenophosphate
-    <-> . +udp_d_glucose +h2o +udp +pi +hplus
-    1_seleno_d_glucose
+    <-> . +udp_d_galactose +h2o +udp +pi +hplus
+    1_seleno_d_galactose
+  }
+
+  branch from oxobut side left {
+    oxobut
+    <-> . +l_phenylalanine +keto_phenylpyruvate
+    l_aminobutyrate
+  }
+
+  branch from oxobut side right {
+    oxobut
+    <-> . +n_n_dimethyl_l_argininium +l_aminobutyrate
+    5_3_3_dimethylguanidino_2_oxopentanoate
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> . +4_methyl_cyclohexylammonium +nadp +h2o +nadph +hplus
+    4_methylcyclohexanone
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> . +2_methylcyclopentammonium +nadp +h2o +nadph +hplus
+    2_methylcyclopentanone
+  }
+
+  branch from alanine side left {
+    alanine
+    <-> . +2s_2_ammonio_5_iminio_methylamino_methyl_amino +pyruvate
+    5_3_methylguanidino_2_oxopentanoate
+  }
+
+  branch from alanine side right {
+    alanine
+    <-> . +n_1_deoxy_d_fructopyranos_1_yl_l_alanine_betaine +o2 +h2o +h2o2
+    2_dehydro_d_glucopyranose
+  }
+
+  branch from selenophosphate side left {
+    selenophosphate
+    <-> . +udp_n_acetyl_d_galactosamine +h2o +udp +pi +hplus
+    n_acetyl_1_seleno_d_galactosamine
+  }
+
+  branch from 3_l_seryl_adenylyl_1_group side right {
+    3_l_seryl_adenylyl_1_group
+    <-> . +h2o +amp_3_end_1
+    serine
+  }
+
+  branch from 3_l_seryl_adenylyl_1_group side left {
+    3_l_seryl_adenylyl_1_group
+    <-> . +acetyl_coa +coa
+    3_n_acetyl_l_seryl_adenylyl_1
   }
 }

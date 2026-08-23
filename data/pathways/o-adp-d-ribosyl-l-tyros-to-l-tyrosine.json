@@ -102,51 +102,48 @@
       }
     },
     {
-      "id": "udp_d_glucose",
-      "name": "UDP-α-D-glucose",
-      "formula": "C15H22N2O17P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:58885"
-      }
-    },
-    {
-      "id": "d_glucosyl_l_tyrosyl",
-      "name": "α-D-glucosyl-L-tyrosyl",
-      "short": "α-D-glucosyl-L-tyro…",
-      "formula": "C15H19NO7",
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:140573"
+        "chebi": "CHEBI:15379"
       }
     },
     {
-      "id": "udp",
-      "name": "UDP",
-      "formula": "C9H11N2O12P2",
-      "charge": -3,
+      "id": "l_topaquinone_1",
+      "name": "L-topaquinone(1−)",
+      "formula": "C9H6NO4",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:58223"
+        "chebi": "CHEBI:79027"
       }
     },
     {
-      "id": "udpglcnac",
-      "name": "UDP-N-acetyl-α-D-glucosamine (UDP-GlcNAc)",
-      "short": "UDP-N-acetyl-α-D-gl…",
-      "formula": "C17H25N3O17P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57705"
-      }
-    },
-    {
-      "id": "n_acetyl_d_glucosaminyl_l_tyrosyl",
-      "name": "N-acetyl-α-D-glucosaminyl-L-tyrosyl",
-      "short": "N-acetyl-α-D-glucos…",
-      "formula": "C17H22N2O7",
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:134208"
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "hypobromite",
+      "name": "hypobromite",
+      "formula": "BrO",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29250"
+      }
+    },
+    {
+      "id": "3_bromo_l_tyrosine",
+      "name": "3-bromo-L-tyrosine",
+      "formula": "C9H8BrNO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:183512"
       }
     }
   ],
@@ -156,14 +153,20 @@
       "name": "receptor protein-tyrosine kinase",
       "ec": [
         "2.7.10.1"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q9UM73"
+      }
     },
     {
       "id": "ec_2_7_10_2",
       "name": "non-specific protein-tyrosine kinase",
       "ec": [
         "2.7.10.2"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P00519"
+      }
     },
     {
       "id": "ec_2_7_10_3",
@@ -177,35 +180,40 @@
       "name": "[Src-family] C-terminal protein kinase",
       "ec": [
         "2.7.10.4"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P41240"
+      }
     },
     {
       "id": "ec_2_7_12_1",
       "name": "dual-specificity kinase",
       "ec": [
         "2.7.12.1"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P49759"
+      }
     },
     {
       "id": "ec_2_7_12_2",
       "name": "mitogen-activated protein kinase kinase",
       "ec": [
         "2.7.12.2"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q02750"
+      }
     },
     {
       "id": "ec_3_1_3_48",
       "name": "protein-tyrosine-phosphatase",
       "ec": [
         "3.1.3.48"
-      ]
-    },
-    {
-      "id": "ec_2_4_1_186",
-      "name": "glycogenin glucosyltransferase",
-      "ec": [
-        "2.4.1.186"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q9UNH5"
+      }
     }
   ],
   "reactions": [
@@ -344,26 +352,25 @@
     },
     {
       "id": "r4",
-      "name": "glycogenin glucosyltransferase",
-      "equation": "L-tyrosyl-[glycogenin] + UDP-alpha-D-glucose = alpha-D-glucosyl-L-tyrosyl-[glycogenin] + UDP + H(+)",
-      "ec": "2.4.1.186",
+      "name": "L-tyrosyl-[protein] + 2 O2 = L-topaquinyl-[protein] + H2O2 + H(+)",
+      "equation": "L-tyrosyl-[protein] + 2 O2 = L-topaquinyl-[protein] + H2O2 + H(+)",
       "substrates": [
         {
           "metabolite": "l_tyrosine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "udp_d_glucose",
-          "stoichiometry": 1
+          "metabolite": "o2",
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "d_glucosyl_l_tyrosyl",
+          "metabolite": "l_topaquinone_1",
           "stoichiometry": 1
         },
         {
-          "metabolite": "udp",
+          "metabolite": "h2o2",
           "stoichiometry": 1
         },
         {
@@ -371,47 +378,32 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_4_1_186"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:23360"
+        "rhea": "RHEA:64464"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:23360"
+            "id": "RHEA:64464"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "L-tyrosyl-[protein] + UDP-N-acetyl-alpha-D-glucosamine = O-(N-acetyl-alpha-D-glucosamin...",
-      "equation": "L-tyrosyl-[protein] + UDP-N-acetyl-alpha-D-glucosamine = O-(N-acetyl-alpha-D-glucosaminyl)-L-tyrosyl-[protein] + UDP + H(+)",
+      "name": "hypobromite + L-tyrosyl-[protein] + H(+) = 3-bromo-L-tyrosyl-[protein] + H2O",
+      "equation": "hypobromite + L-tyrosyl-[protein] + H(+) = 3-bromo-L-tyrosyl-[protein] + H2O",
       "substrates": [
         {
+          "metabolite": "hypobromite",
+          "stoichiometry": 1
+        },
+        {
           "metabolite": "l_tyrosine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udpglcnac",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n_acetyl_d_glucosaminyl_l_tyrosyl",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp",
           "stoichiometry": 1
         },
         {
@@ -419,17 +411,95 @@
           "stoichiometry": 1
         }
       ],
+      "products": [
+        {
+          "metabolite": "3_bromo_l_tyrosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:51536"
+        "rhea": "RHEA:69356"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:51536"
+            "id": "RHEA:69356"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_o_adp_d_ribosyl_l_tyrosine_2_2-phospho-nucleotide-to-adp-d-ribose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "o_adp_d_ribosyl_l_tyrosine_2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-phospho-nucleotide-to-adp-d-ribose"
+      },
+      "note": "Shares O-(ADP-D-ribosyl)-L-tyrosine(2−) with 2'-phospho-nucleotide… to ADP-D-ribose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:142557"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hypobromite_5r-5-hydroxy-l-lysine-1-to-d-glucopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hypobromite"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5r-5-hydroxy-l-lysine-1-to-d-glucopyranose"
+      },
+      "note": "Shares hypobromite with (5R)-5-hydroxy-L-lysine(1… to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29250"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hypobromite_erythritol-to-l-lysinium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hypobromite"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "erythritol-to-l-lysinium"
+      },
+      "note": "Shares hypobromite with erythritol to L-lysinium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29250"
           }
         ]
       }

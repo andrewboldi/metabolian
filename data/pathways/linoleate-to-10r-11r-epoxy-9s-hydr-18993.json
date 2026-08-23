@@ -1,0 +1,427 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "linoleate-to-10r-11r-epoxy-9s-hydr-18993",
+  "name": "linoleate to (10R,11R)-epoxy-(9S)-hydr…",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from linoleate to (10R,11R)-epoxy-(9S)-hydroxy-(12Z)-octadecenoate(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:18993"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:30245"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "linoleate",
+      "name": "linoleate",
+      "formula": "C18H31O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30245"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "11s_11_hydroperoxylinoleate",
+      "name": "(11S)-11-hydroperoxylinoleate",
+      "short": "11-hydroperoxylinol…",
+      "formula": "C18H31O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57467"
+      }
+    },
+    {
+      "id": "9_s_hpode",
+      "name": "9(S)-HPODE",
+      "formula": "C18H31O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:60955"
+      }
+    },
+    {
+      "id": "10r_11r_epoxy_9s_hydroxy_12z_octadecenoate",
+      "name": "(10R,11R)-epoxy-(9S)-hydroxy-(12Z)-octadecenoate",
+      "short": "(10R,11R)-epoxy-(9S…",
+      "formula": "C18H31O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:194243"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_13_11_45",
+      "name": "linoleate 11-lipoxygenase",
+      "ec": [
+        "1.13.11.45"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "linoleate 11-lipoxygenase",
+      "equation": "(9Z,12Z)-octadecadienoate + O2 = (11S)-hydroperoxy-(9Z,12Z)-octadecadienoate",
+      "ec": "1.13.11.45",
+      "substrates": [
+        {
+          "metabolite": "linoleate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "11s_11_hydroperoxylinoleate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_45"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:18993"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18993"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(11S)-hydroperoxy-(9Z,12Z)-octadecadienoate = (9S)-hydroperoxy-(10E,12Z)-octadecadienoate",
+      "equation": "(11S)-hydroperoxy-(9Z,12Z)-octadecadienoate = (9S)-hydroperoxy-(10E,12Z)-octadecadienoate",
+      "substrates": [
+        {
+          "metabolite": "11s_11_hydroperoxylinoleate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "9_s_hpode",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:51276"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51276"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(9S)-hydroperoxy-(10E,12Z)-octadecadienoate = (10R,11R)-epoxy-(9S)-hydroxy-(12Z)-octade...",
+      "equation": "(9S)-hydroperoxy-(10E,12Z)-octadecadienoate = (10R,11R)-epoxy-(9S)-hydroxy-(12Z)-octadecenoate",
+      "substrates": [
+        {
+          "metabolite": "9_s_hpode",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "10r_11r_epoxy_9s_hydroxy_12z_octadecenoate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:75275"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:75275"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_11s_11_hydroperoxylinoleate_11s-11-hydroperoxylinol-to-colneleate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11s_11_hydroperoxylinoleate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "11s-11-hydroperoxylinol-to-colneleate"
+      },
+      "note": "Shares (11S)-11-hydroperoxylinoleate with (11S)-11-hydroperoxylinol… to colneleate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57467"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_11s_11_hydroperoxylinoleate_11s-11-hydroperoxylinol-to-colneleate-51304",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11s_11_hydroperoxylinoleate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "11s-11-hydroperoxylinol-to-colneleate-51304"
+      },
+      "note": "Shares (11S)-11-hydroperoxylinoleate with (11S)-11-hydroperoxylinol… to colneleate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57467"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_11s_11_hydroperoxylinoleate_linoleate-to-10r-11r-epoxy-9s-hydr",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11s_11_hydroperoxylinoleate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "linoleate-to-10r-11r-epoxy-9s-hydr"
+      },
+      "note": "Shares (11S)-11-hydroperoxylinoleate with linoleate to (10R,11R)-epoxy-(9S)-hydr….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57467"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_9_s_hpode_11s-11-hydroperoxylinol-to-colneleate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9_s_hpode"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "11s-11-hydroperoxylinol-to-colneleate"
+      },
+      "note": "Shares 9(S)-HPODE with (11S)-11-hydroperoxylinol… to colneleate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60955"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_9_s_hpode_11s-11-hydroperoxylinol-to-colneleate-51304",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9_s_hpode"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "11s-11-hydroperoxylinol-to-colneleate-51304"
+      },
+      "note": "Shares 9(S)-HPODE with (11S)-11-hydroperoxylinol… to colneleate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60955"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_9_s_hpode_5-oxo-2-sulfonato-2-5-di-to-3-phosphonato-5-ade",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9_s_hpode"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-oxo-2-sulfonato-2-5-di-to-3-phosphonato-5-ade"
+      },
+      "note": "Shares 9(S)-HPODE with (5-oxo-2-sulfonato-2,5-di… to 3'-phosphonato-5'-adenyly….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60955"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_9_s_hpode_linoleate-to-10r-11r-epoxy-9s-hydr",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9_s_hpode"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "linoleate-to-10r-11r-epoxy-9s-hydr"
+      },
+      "note": "Shares 9(S)-HPODE with linoleate to (10R,11R)-epoxy-(9S)-hydr….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60955"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_9_s_hpode_linoleoyl-ethanolamide-to-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9_s_hpode"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "linoleoyl-ethanolamide-to-acetate"
+      },
+      "note": "Shares 9(S)-HPODE with linoleoyl ethanolamide to acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60955"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_9_s_hpode_linoleoyl-ethanolamide-to-acetate-35567",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9_s_hpode"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "linoleoyl-ethanolamide-to-acetate-35567"
+      },
+      "note": "Shares 9(S)-HPODE with linoleoyl ethanolamide to acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60955"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_9_s_hpode_selenite-to-glutathionate-34903",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "9_s_hpode"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "selenite-to-glutathionate-34903"
+      },
+      "note": "Shares 9(S)-HPODE with selenite to glutathionate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60955"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_10r_11r_epoxy_9s_hydroxy_12z_octadecenoate_linoleate-to-10r-11r-epoxy-9s-hydr",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "10r_11r_epoxy_9s_hydroxy_12z_octadecenoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "linoleate-to-10r-11r-epoxy-9s-hydr"
+      },
+      "note": "Shares (10R,11R)-epoxy-(9S)-hydroxy-(12Z)-octadecenoate with linoleate to (10R,11R)-epoxy-(9S)-hydr….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:194243"
+          }
+        ]
+      }
+    }
+  ]
+}

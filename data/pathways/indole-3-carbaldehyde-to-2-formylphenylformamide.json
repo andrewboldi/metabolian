@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "indole-3-carbaldehyde-to-2-formylphenylformamide",
   "name": "indole-3-carbaldehyde to 2-formylphenylformamide",
-  "category": "amino-acid-metabolism",
+  "category": "redox-detox",
   "summary": "A 3-step route from indole-3-carbaldehyde to 2-formylphenylformamide, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -102,24 +102,6 @@
       }
     },
     {
-      "id": "serine",
-      "name": "L-Serine",
-      "formula": "C3H7NO3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:33384"
-      }
-    },
-    {
-      "id": "l_tryptophan",
-      "name": "L-tryptophan",
-      "formula": "C11H12N2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:57912"
-      }
-    },
-    {
       "id": "nadh",
       "name": "NADH",
       "formula": "C21H27N7O14P2",
@@ -160,13 +142,6 @@
       "name": "indole 2,3-dioxygenase",
       "ec": [
         "1.13.11.17"
-      ]
-    },
-    {
-      "id": "ec_4_2_1_122",
-      "name": "tryptophan synthase (indole-salvaging)",
-      "ec": [
-        "4.2.1.122"
       ]
     }
   ],
@@ -306,51 +281,6 @@
     },
     {
       "id": "r4",
-      "name": "tryptophan synthase (indole-salvaging)",
-      "equation": "indole + L-serine = L-tryptophan + H2O",
-      "ec": "4.2.1.122",
-      "substrates": [
-        {
-          "metabolite": "1h_indole",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "serine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "l_tryptophan",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_1_122"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:26434"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:26434"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
       "name": "indole + NADH + O2 + H(+) = indoxyl + NAD(+) + H2O",
       "equation": "indole + NADH + O2 + H(+) = indoxyl + NAD(+) + H2O",
       "substrates": [
@@ -386,7 +316,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
         "rhea": "RHEA:52836"
       },
@@ -396,6 +326,140 @@
           {
             "db": "Rhea",
             "id": "RHEA:52836"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_1h_indole_d-arabinitol-to-fmnh2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1h_indole"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-arabinitol-to-fmnh2"
+      },
+      "note": "Shares 1H-indole with D-arabinitol to FMNH2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16881"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1h_indole_l-rhamnofuranose-to-3-carboxy-cis-cis-muconate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1h_indole"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-rhamnofuranose-to-3-carboxy-cis-cis-muconate"
+      },
+      "note": "Shares 1H-indole with L-rhamnofuranose to 3-carboxy-cis,cis-muconate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16881"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1h_indole_n-5-phosphonato-d-ribo-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1h_indole"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-5-phosphonato-d-ribo-to-h2o"
+      },
+      "note": "Shares 1H-indole with N-(5-phosphonato-β-D-ribo… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16881"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1h_indole_s-alkyl-l-cysteine-s-oxide-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1h_indole"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-alkyl-l-cysteine-s-oxide-to-ammonium"
+      },
+      "note": "Shares 1H-indole with S-alkyl-L-cysteine S-oxide to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16881"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_indoxyl_2-3-dihydrobiochanin-a-to-biochanin-a",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "indoxyl"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3-dihydrobiochanin-a-to-biochanin-a"
+      },
+      "note": "Shares indoxyl with 2,3-dihydrobiochanin A to biochanin A….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17840"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_indoxyl_trehalose-to-sl1278",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "indoxyl"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trehalose-to-sl1278"
+      },
+      "note": "Shares indoxyl with α,α-trehalose to SL1278.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17840"
           }
         ]
       }

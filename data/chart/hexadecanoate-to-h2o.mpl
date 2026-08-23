@@ -4,63 +4,17 @@
 # edit the generator, not this file.
 
 pathway hexadecanoate-to-h2o "hexadecanoate to H2O" {
-  spacing 340
+  spacing 184
 
   spine at 0,0 {
     hexadecanoate
-    <-> ec_3_1_1_5 [3.1.1.5] +glycerophosphatidylethanolamine +h -h2o
-    2_hexadecanoyl_sn_glycero_3_phosphoethanolamine
-    <-> ec_2_3_1_40 [2.3.1.40] +hexadecanoate +atp -1_2_dihexadecanoyl_sn_glycero_3_phosphoethanolam -amp
-    diphosphate
-    <-> ec_3_6_3_1 [3.6.3.1] +h +1_2_dihexadecanoyl_sn_glycero_3_phosphoethanolam +adp +phosphate -atp -h2o
-    1_2_dihexadecanoyl_sn_glycero_3_phosphoethanolam
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_4_2_1_17 [4.2.1.17] +2e_5_methylhexa_2_4_dienoyl_coa
-    3_hydroxy_5_methylhex_4_enoyl_coa
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_4_2_1_17 [4.2.1.17] +h +3_hydroxy_5_methylhex_4_enoyl_coa
-    2e_5_methylhexa_2_4_dienoyl_coa
-  }
-
-  branch from diphosphate side left {
-    diphosphate
-    <-> ec_2_5_1_123 [2.5.1.123] +2e_geranyl_diphosphate +flaviolin
-    3_linalylflaviolin_2_olate
-  }
-
-  branch from diphosphate side right {
-    diphosphate
-    <-> . +8_oxo_gmp +h +h2o
-    8_oxo_gtp
-  }
-
-  branch from amp side left {
-    amp
-    <-> ec_6_2_1_12 [6.2.1.12] +diphosphate +caffeoyl_coa +h +atp +coa
-    e_caffeate
-  }
-
-  branch from amp side right {
-    amp
-    <-> ec_6_2_1_12 [6.2.1.12] +diphosphate +caffeoyl_coa +h +atp +coa
-    caffeic_acid
-  }
-
-  branch from atp side left {
+    <-> . +sn_glycero_3_phospho_1_rac_glycerol +h -h2o
+    1_hexadecanoyl_sn_glycero_3_phospho_1_sn_glycero
+    <-> . +hexadecanoate +h -h2o
+    dipalmitoyl_phosphatidylglycerol
+    <-> ec_3_1_3_27 [3.1.3.27] +phosphate -h2o
+    phosphatidylglycerophosphate_dihexadecanoyl_n_c1
+    <-> . +h +adp +phosphate -phosphatidylglycerophosphate_dihexadecanoyl_n_c1 -h2o
     atp
-    <-> . +l_ascorbic_acid_2_phosphate +adp +h
-    l_ascorbate
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +adp +l_ascorbate
-    2_phospho_l_ascorbate
   }
 }

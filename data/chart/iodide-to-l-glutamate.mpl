@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway iodide-to-l-glutamate "iodide to L-glutamate" {
-  spacing 190
+  spacing 202
 
   spine at 0,0 {
     iodide
@@ -22,15 +22,27 @@ pathway iodide-to-l-glutamate "iodide to L-glutamate" {
     3_4_hydroxy_3_5_diiodophenyl_lactate
   }
 
-  branch from glutamate side right {
-    glutamate
-    <-> ec_5_4_3_9 [5.4.3.9]
-    isoglutamate
+  branch from iodide side right {
+    iodide
+    <-> ec_1_11_1_8 [1.11.1.8] +h2o2 +hplus +h2o
+    diiodine
   }
 
-  branch from glutamate side left {
-    glutamate
-    <-> . +cob_ii_yrinate +glutamine +atp +h2o +adp +pi +hplus
-    cob_ii_yrinate_c_monoamide
+  branch from iodide side left {
+    iodide
+    <-> . +h2o2 +h2o
+    hypoiodite
+  }
+
+  branch from tyrosine side right {
+    tyrosine
+    <-> . +o2
+    ldopa
+  }
+
+  branch from tyrosine side left {
+    tyrosine
+    <-> . +n_oleoyl_l_tyrosine +h2o
+    oleate
   }
 }

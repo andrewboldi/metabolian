@@ -24,27 +24,63 @@ pathway alpha-kdo-2-6-lipid-to-d-gal-1-3-l-fuc-1 "alpha-Kdo-(2->6)-lipidâ€¦ to Î
     d_gal_1_3_l_fuc_1_2_d_gal_1_3_d_galnac_1_3_d_ga
   }
 
-  branch from lipid_iva_e_coli side left {
-    lipid_iva_e_coli
-    <-> ec_2_4_99_12 [2.4.99.12] +cmp +di_3_deoxy_d_manno_octulosonyl_lipid_iv_a
-    cmp_3_deoxy_alpha_d_manno_octulosonic_acid
+  branch from cmp side left {
+    cmp
+    <-> . +4s_5r_6r_5_acetamido_4_hydroxy_6_1r_2r_1_2_3_tr +lactose
+    cmp_n_acetyl_beta_neuraminate
   }
 
-  branch from n_acetyl_d_galactosaminyl_1_diphospho_ditrans_po side right {
-    n_acetyl_d_galactosaminyl_1_diphospho_ditrans_po
-    <-> . +udp +alpha_d_glc_1_3_alpha_d_galnac_pp_und +h
-    udp_alpha_d_glucose
+  branch from cmp side right {
+    cmp
+    <-> . +ls_tetrasaccharide_a +h +cmp_n_acetyl_beta_neuraminate
+    beta_d_gal_1_3_beta_d_glcnac_1_3_beta_d_gal_1_4
   }
 
-  branch from d_galnac_1_3_d_galnac_diphospho_ditrans_octacis side left {
-    d_galnac_1_3_d_galnac_diphospho_ditrans_octacis
-    <-> . +alpha_d_glc_1_4_alpha_d_galnac_1_3_alpha_d_galna +h +udp_alpha_d_glucose
-    udp
+  branch from h side left {
+    h
+    <-> ec_5_3_99_4 [5.3.99.4] +prostaglandin_h3
+    pgi3
   }
 
-  branch from l_fuc_1_2_d_gal_1_3_d_galnac_1_3_d_galnac_dipho side right {
-    l_fuc_1_2_d_gal_1_3_d_galnac_1_3_d_galnac_dipho
-    <-> . +acetyl_coa +coa
-    3_4_diacetyl_alpha_l_fuc_1_2_beta_d_gal_1_3_alph
+  branch from h side right {
+    h
+    <-> ec_5_3_99_5 [5.3.99.5] +prostaglandin_h3
+    txa3
+  }
+
+  branch from udp_n_acetyl_d_galactosamine side left {
+    udp_n_acetyl_d_galactosamine
+    <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +udp +hplus
+    n_acetyl_d_galactosaminyl_1_4_d_galactosyl_1_3_n
+  }
+
+  branch from udp_n_acetyl_d_galactosamine side right {
+    udp_n_acetyl_d_galactosamine
+    <-> . +n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace +udp +hplus
+    3_o_n_acetyl_neuraminosyl_2_3_n_acetyl_d_galacto
+  }
+
+  branch from udp_d_galactose side left {
+    udp_d_galactose
+    <-> . +o3_d_galactosyl_1_3_6_o_sulfo_n_acetyl_d_glucosa +udp +hplus
+    o3_d_galactosyl_1_3_d_galactosyl_1_4_6_o_sulfo_n
+  }
+
+  branch from udp_d_galactose side right {
+    udp_d_galactose
+    <-> . +anthocyanidin_betaine +udp
+    anthocyanidin_3_o_d_galactoside
+  }
+
+  branch from gdp_l_fucose side left {
+    gdp_l_fucose
+    <-> . +n_neu5ac_2_3_d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d +gdp +hplus
+    n_neu5ac_2_3_d_gal_1_4_l_fuc_1_3_d_glcnac_1_3_d
+  }
+
+  branch from gdp_l_fucose side right {
+    gdp_l_fucose
+    <-> . +d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_glcnac_1_3_d +gdp +hplus
+    d_gal_1_4_l_fuc_1_3_d_glcnac_1_3_d_gal_1_4_d_gl
   }
 }

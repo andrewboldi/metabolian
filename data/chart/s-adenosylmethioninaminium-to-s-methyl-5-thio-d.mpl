@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-adenosylmethioninaminium-to-s-methyl-5-thio-d "S-adenosylmethioninaminium to S-methyl-5-thio-α-D-ribos…" {
-  spacing 214
+  spacing 196
 
   spine at 0,0 {
     s_adenosylmethioninaminium
@@ -14,23 +14,5 @@ pathway s-adenosylmethioninaminium-to-s-methyl-5-thio-d "S-adenosylmethioninamin
     s_methyl_5_thio_d_ribofuranose
     <-> ec_2_7_1_100 [2.7.1.100] +atp -adp -hplus
     s_methyl_5_thio_d_ribose_1_phosphate
-  }
-
-  branch from 5_s_methyl_5_thioadenosine side left {
-    5_s_methyl_5_thioadenosine
-    <-> ec_2_5_1_152 [2.5.1.152] +d_histidine +sam +hplus
-    n_3s_3_amino_3_carboxypropyl_d_histidine_dizwitt
-  }
-
-  branch from 5_s_methyl_5_thioadenosine side right {
-    5_s_methyl_5_thioadenosine
-    <-> ec_2_5_1_25 [2.5.1.25] +uridine_5_monophosphate_1 +sam +hplus
-    3_3_amino_3_carboxypropyl_uridine_5_phosphate_1
-  }
-
-  branch from spermidine side left {
-    spermidine
-    <-> ec_2_3_1_248 [2.3.1.248] +sinapoyl_coa +coa +hplus
-    n1_n8_bis_sinapoyl_spermidine
   }
 }

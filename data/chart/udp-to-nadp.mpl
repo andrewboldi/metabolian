@@ -4,67 +4,135 @@
 # edit the generator, not this file.
 
 pathway udp-to-nadp "UDP to NADP" {
-  spacing 200
+  spacing 292
 
   spine at 0,0 {
     udp
-    <-> . +curcumin_4_4_o_beta_d_digentiobioside +h -curcumin_4_o_beta_d_gentiobiosyl_4_o_beta_d_gluc
+    <-> . +2_5_dihydroxybenzoic_acid_5_o_d_glucoside -2_5_dihydroxybenzoate
     udp_alpha_d_glucose
-    <-> . +udp +h +curcumin_4_o_beta_d_gentiobiosyl_4_o_beta_d_gluc -udp_alpha_d_glucose
-    curcumin_4_o_beta_d_gentiobioside
-    <-> . +udp +h -curcumin_monoglucoside
-    udp_alpha_d_glucose
-    <-> . +udp +h +curcumin_monoglucoside -udp_alpha_d_glucose
-    curcumin
+    <-> ec_1_2_1_29 [1.2.1.29] +h +h2o2 +2_5_dihydroxybenzoate -o2 -h2o
+    2_5_dihydroxybenzaldehyde
     <-> . +h +nadph -nadp
-    dihydrocurcumin
+    gentisyl_alcohol
   }
 
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> . +udp +h +2_2_bis_4_hydroxy_3_methybut_2_enyl_beta_beta_ca
-    2_2_bis_4_hydroxy_3_methybut_2_enyl_beta_beta_ca
+  branch from o2 side left {
+    o2
+    <-> ec_1_1_3_9 [1.1.3.9] +d_galactopyranose +h2o2
+    galacto_hexodialdose
   }
 
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> . +udp +decaprenoxanthin_diglucoside +h
-    decaprenoxanthin_monoglucoside
+  branch from o2 side right {
+    o2
+    <-> . +2_hydroxy_3_carboxy_6_oxo_7_methylocta_2_4_dieno +h
+    2_3_dihydroxy_p_cumate
   }
 
-  branch from curcumin_4_o_beta_d_gentiobioside side left {
-    curcumin_4_o_beta_d_gentiobioside
-    <-> . +udp +h +udp_alpha_d_glucose
-    curcumin_4_o_beta_d_gentiotrioside
+  branch from h2o side left {
+    h2o
+    <-> ec_3_1_1_45 [3.1.1.45] +maleylacetate +h
+    trans_4_carboxymethylenebut_2_en_4_olide
   }
 
-  branch from curcumin_4_o_beta_d_gentiobioside side right {
-    curcumin_4_o_beta_d_gentiobioside
-    <-> . +udp +h +udp_alpha_d_glucose
-    curcumin_4_o_d_gentiotrioside
-  }
-
-  branch from curcumin side left {
-    curcumin
-    <-> . +feruloyl_diketide +e_feruloyl_coa +h +coa
-    co2
-  }
-
-  branch from dihydrocurcumin side right {
-    dihydrocurcumin
-    <-> . +nadp +h +nadph
-    tetrahydrocurcumin
+  branch from h2o side right {
+    h2o
+    <-> . +5_2_formylethyl_4_6_dihydroxypicolinic_acid +nadp +h +nadph
+    5_2_carboxyethyl_4_6_dihydroxypicolinate
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_21 [1.1.1.21] +d_arabinitol +h +nadph
-    d_lyxose
+    <-> ec_1_3_1_36 [1.3.1.36] +4_21_dehydrogeissoschizine +nadph
+    geissoschizine
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_6_5_2 [1.6.5.2] +ubiquinol_2 +h +nadph
-    ubiquinone_2
+    <-> ec_1_3_1_36 [1.3.1.36] +nadph +geissoschizine
+    4_21_dehydrogeissoschizine
+  }
+
+  branch from udp side left {
+    udp
+    <-> . +6_beta_oh_gliclazide_glucuronide +h +6_beta_oh_gliclazide
+    udp_alpha_d_glucuronate
+  }
+
+  branch from udp side right {
+    udp
+    <-> . +7_beta_oh_gliclazide_glucuronide +h +udp_alpha_d_glucuronate
+    n_5_hydroxyhexahydrocyclopenta_c_pyrrol_2_1h_yl
+  }
+
+  branch from h side left {
+    h
+    <-> ec_1_3_3_10 [1.3.3.10] +alpha_beta_didehydrotryptophan +h2o2 +o2
+    l_tryptophan
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_7_1_8 [3.7.1.8] +2e_2_hydroxypenta_2_4_dienoate +4_chlorobenzoate +h2o
+    2_hydroxy_6_oxo_6_4_chlorophenyl_hexa_2_4_dienoa
+  }
+
+  branch from h2o2 side left {
+    h2o2
+    <-> . +formaldehyde +n_n_dimethylglycine +o2 +h2o
+    glycine_betaine
+  }
+
+  branch from h2o2 side right {
+    h2o2
+    <-> ec_1_4_3_16 [1.4.3.16] +l_aspartate +o2 +h
+    iminoaspartate
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_14_14_103 [1.14.14.103] +16_hydroxytabersonine +nadp +h2o +h +nadph
+    tabersonine
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_14_13_73 [1.14.13.73] +nadp +h2o +h +tabersonine +nadph
+    16_hydroxytabersonine
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_4_2_1_154 [4.2.1.154] +tetracenomycin_f1
+    tetracenomycin_f2
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_4_2_1_154 [4.2.1.154] +tetracenomycin_f2
+    tetracenomycin_f1
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_1_1_287 [1.1.1.287] +d_arabinitol +nadp +h
+    d_xylulofuranose
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_14_13_147 [1.14.13.147] +h +taxusin +o2 +nadp +h2o
+    7_hydroxytaxusin
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_2_4_99_20 [2.4.99.20] +nicotinamide +h
+    2_phospho_cyclic_adp_ribose
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_3_1_54 [1.3.1.54] +precorrin_6a +h +nadph
+    precorrin_6b
   }
 }

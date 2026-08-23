@@ -4,14 +4,14 @@
 # edit the generator, not this file.
 
 pathway methylselenopyruvate-to-o-succinyl-l-homoserine "Methylselenopyruvate to O-succinyl-L-homoserine" {
-  spacing 258
+  spacing 340
 
   spine at 0,0 {
     methylselenopyruvate
     <-> . +l_methionine -se_methyl_l_selenocysteine -4_methylsulfanyl_2_oxobutanoate
     h
     <-> ec_2_1_1_280 [2.1.1.280] +s_adenosyl_l_homocysteine +se_methyl_l_selenocysteine -l_selenocysteine
-    s_s_adenosyl_l_methionine
+    s_adenosyl_l_methionine
     <-> ec_1_1_1_124 [1.1.1.124] +o_acetyl_l_homoserine +l_selenocysteine -acetate -l_selenocystathionine
     h
     <-> ec_1_1_1_124 [1.1.1.124] +succinate +l_selenocystathionine -o_succinyl_l_homoserine
@@ -20,14 +20,74 @@ pathway methylselenopyruvate-to-o-succinyl-l-homoserine "Methylselenopyruvate to
 
   branch from h side left {
     h
-    <-> . +3e_phytochromobilin
-    3z_phytochromobilin
+    <-> . +udp +3_7_3_4_tetramethylquercetin_2_o_beta_d_glucosid +udp_alpha_d_glucose
+    2_hydroxy_3_7_3_4_tetramethylquercetin
   }
 
   branch from h side right {
     h
-    <-> . +2e_3_2_4_dihydroxy_5_methoxyphenyl_prop_2_enoic
-    z_6_hydroxyferulate
+    <-> . +udp +3_6_7_2_4_pentamethylquercetagetin_3_o_beta_d_gl +udp_alpha_d_glucose
+    3_6_7_2_4_pentamethylquercetagetin
+  }
+
+  branch from 4_methylsulfanyl_2_oxobutanoate side left {
+    4_methylsulfanyl_2_oxobutanoate
+    <-> ec_2_6_1_15 [2.6.1.15] +l_phenylalanine +l_methionine
+    3_phenylpyruvate
+  }
+
+  branch from 4_methylsulfanyl_2_oxobutanoate side right {
+    4_methylsulfanyl_2_oxobutanoate
+    <-> ec_2_6_1_27 [2.6.1.27] +l_tryptophan +l_methionine
+    indole_3_pyruvate
+  }
+
+  branch from s_adenosyl_l_methionine side left {
+    s_adenosyl_l_methionine
+    <-> . +s_adenosyl_l_homocysteine +carbapenem_biosynthesis_intermediate_4 +h
+    carbapenem_biosynthesis_intermediate_3
+  }
+
+  branch from s_adenosyl_l_methionine side right {
+    s_adenosyl_l_methionine
+    <-> . +5_deoxyadenosine +h +l_methionine +13_1_oxo_mg_protoporphyrin_ix_13_monomethyl_este
+    13_1_hydroxy_mg_protoporphyrin_ix_13_monomethyl
+  }
+
+  branch from acetate side left {
+    acetate
+    <-> ec_3_5_1_14 [3.5.1.14] +n_acetyl_l_tryptophanate +h2o
+    l_tryptophan
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> ec_3_1_1_2 [3.1.1.2] +h +phenol +h2o
+    phenyl_acetate
+  }
+
+  branch from l_methionine side left {
+    l_methionine
+    <-> . +l_arginine +h2o
+    arginyl_arginyl_metheonine
+  }
+
+  branch from l_methionine side right {
+    l_methionine
+    <-> . +l_proline +l_arginine +h2o
+    arginyl_prolyl_methionine
+  }
+
+  branch from h side left {
+    h
+    <-> . +udp +patulitrin +patuletin
+    udp_alpha_d_glucose
+  }
+
+  branch from h side right {
+    h
+    <-> . +udp +eupatolitin_3_glucoside +udp_alpha_d_glucose
+    eupatolitin
   }
 
   branch from 4_methylsulfanyl_2_oxobutanoate side left {
@@ -38,37 +98,61 @@ pathway methylselenopyruvate-to-o-succinyl-l-homoserine "Methylselenopyruvate to
 
   branch from 4_methylsulfanyl_2_oxobutanoate side right {
     4_methylsulfanyl_2_oxobutanoate
-    <-> . +s_methyl_propanethioate +h
-    co2
+    <-> ec_2_6_1_88 [2.6.1.88] +l_alanine +l_methionine
+    pyruvate
   }
 
-  branch from s_s_adenosyl_l_methionine side left {
-    s_s_adenosyl_l_methionine
-    <-> ec_2_1_1_141 [2.1.1.141] +s_adenosyl_l_homocysteine +methyl_jasmonate
-    jasmonate
+  branch from s_adenosyl_l_homocysteine side left {
+    s_adenosyl_l_homocysteine
+    <-> ec_2_1_1_333 [2.1.1.333] +12_ethyl_8_isobutylbacteriochlorophyllide_d +s_adenosyl_l_methionine +h
+    12_ethyl_8_isobutylbacteriochlorophyllide_c
   }
 
-  branch from s_s_adenosyl_l_methionine side right {
-    s_s_adenosyl_l_methionine
-    <-> ec_2_1_1_145 [2.1.1.145] +s_adenosyl_l_homocysteine +e_2_methoxycarbonylmethyl_but_2_enedioate
-    trans_aconitate
+  branch from s_adenosyl_l_homocysteine side right {
+    s_adenosyl_l_homocysteine
+    <-> ec_2_1_1_99 [2.1.1.99] +vindolidine +s_adenosyl_l_methionine
+    3r_3_hydroxy_2_3_dihydrotabersonine
   }
 
-  branch from acetate side left {
-    acetate
-    <-> . +s_4_hydroxy_nonenal_3_yl_l_cysteine +h2o
-    4_hydroxy_2_nonenal_n_acetyl_l_cysteine
+  branch from s_adenosyl_l_methionine side left {
+    s_adenosyl_l_methionine
+    <-> . +31r_8_12_diethyl_71_hydroxybacteriochlorophylli +h2o +5_deoxyadenosine +h +l_methionine
+    31r_8_12_diethyl_71_71_dihydroxybacteriochlorop
+  }
+
+  branch from s_adenosyl_l_methionine side right {
+    s_adenosyl_l_methionine
+    <-> . +s_adenosyl_l_homocysteine +h +s_2_methylscoulerine
+    s_scoulerine
+  }
+
+  branch from o_acetyl_l_homoserine side left {
+    o_acetyl_l_homoserine
+    <-> . +serinol +h +acetate
+    dihydrorhizobitoxine
   }
 
   branch from acetate side right {
     acetate
-    <-> . +3_aminobutan_2_ol +h2o
-    n_3_hydroxybutan_2_yl_acetamide
+    <-> . +puromycin +h2o
+    n_acetylpuromycin
   }
 
-  branch from o_succinyl_l_homoserine side left {
-    o_succinyl_l_homoserine
-    <-> ec_2_5_1_48 [2.5.1.48] +h +succinate +cystathionine
-    l_cysteine
+  branch from acetate side left {
+    acetate
+    <-> ec_3_1_1_80 [3.1.1.80] +17_o_acetylnorajmaline +h2o +h
+    norajmaline
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> . +fadh2 +h +fumarate
+    fad
+  }
+
+  branch from succinate side left {
+    succinate
+    <-> ec_1_3_5_1 [1.3.5.1] +ubiquinol_9 +fumarate
+    ubiquinone_9
   }
 }

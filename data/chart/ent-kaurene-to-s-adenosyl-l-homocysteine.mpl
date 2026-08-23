@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway ent-kaurene-to-s-adenosyl-l-homocysteine "ent-kaurene to S-adenosyl-L-homocysteine" {
-  spacing 224
+  spacing 200
 
   spine at 0,0 {
     ent_kaurene
@@ -18,29 +18,5 @@ pathway ent-kaurene-to-s-adenosyl-l-homocysteine "ent-kaurene to S-adenosyl-L-ho
     gibberellin_a4
     <-> ec_2_1_1_275 [2.1.1.275] +sam -sah
     gibberellin_a4_methyl_ester
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +steroid +fmnh2 +o2 +h2o +hplus
-    11_hydroxy_steroid
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> ec_1_14_14_197 [1.14.14.197] +11_deoxycorticosterone +fmnh2 +o2 +h2o +hplus
-    11_hydroxycorticosterone
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +rhamnetin_3_olate +sam +hplus
-    7_4_o_dimethylquercetin_3_olate
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +3_4_5_o_trimethylmyricetin_3_7_diolate +sam
-    7_3_4_5_o_tetramethylmyricetin_3_olate
   }
 }

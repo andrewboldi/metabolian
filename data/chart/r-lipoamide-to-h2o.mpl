@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway r-lipoamide-to-h2o "(R)-lipoamide to H2O" {
-  spacing 244
+  spacing 328
 
   spine at 0,0 {
     r_lipoamide
@@ -12,79 +12,169 @@ pathway r-lipoamide-to-h2o "(R)-lipoamide to H2O" {
     r_dihydrolipoamide
     <-> ec_2_1_2_10 [2.1.2.10] +6r_5_10_methylene_5_6_7_8_tetrahydrofolate +nh4 -h -s8_aminomethyldihydrolipoamide
     6s_5_6_7_8_tetrahydrofolate
-    <-> ec_3_4_17_11 [3.4.17.11] +h +l_glutamate -h2o
-    thf_l_glutamate
+    <-> . +5_methoxytryptamine -serotonin
+    6s_5_methyl_5_6_7_8_tetrahydrofolate
+    <-> . +atp +l_glutamate -adp -5_methyltetrahydropteroyltri_l_glutamate -phosphate
+    h
+    <-> . +s_adenosyl_l_homocysteine +5_methyltetrahydropteroyltri_l_glutamate -s_adenosyl_l_methionine
+    tetrahydropteroyltri_l_glutamate
+    <-> . +nadh +h +l_serine -5_methyltetrahydropteroyltri_l_glutamate -nad -h2o
+    glycine
   }
 
   branch from r_dihydrolipoamide side left {
     r_dihydrolipoamide
-    <-> . +r_lipoamide +glutathione
-    glutathione_disulfide
+    <-> ec_2_3_1_168 [2.3.1.168] +2_methylpropanoyl_coa +s_8_2_methylpropanoyl_dihydrolipoamide
+    coa
   }
 
   branch from r_dihydrolipoamide side right {
     r_dihydrolipoamide
-    <-> ec_2_3_1_61 [2.3.1.61] +succinyl_coa +s_succinyl_dihydrolipoamide
-    coa
+    <-> ec_2_3_1_168 [2.3.1.168] +2s_2_methylbutanoyl_coa +coa
+    s_8_2_methylbutanoyl_dihydrolipoamide
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_188 [1.1.1.188] +duroquinol +h +nadph
-    duroquinone
+    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +phellandral
+    1s_2s_4s_dihydrocarveol
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_21 [1.1.1.21] +h +l_xylose +nadph
-    xylitol
+    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +1s_2s_4s_dihydrocarveol
+    2e_geranial
   }
 
   branch from 6s_5_6_7_8_tetrahydrofolate side left {
     6s_5_6_7_8_tetrahydrofolate
-    <-> . +tetrahydropteroyltri_l_glutamate +h +adp +phosphate +l_glutamate
-    atp
+    <-> . +h2o +h +l_glutamate
+    tetrahydrofolyl_poly_glutamic_acid_macromolecule
   }
 
   branch from 6s_5_6_7_8_tetrahydrofolate side right {
     6s_5_6_7_8_tetrahydrofolate
-    <-> . +nadh +6r_5_10_methylene_5_6_7_8_tetrahydrofolate +co2 +nh4 +nad
-    glycine
+    <-> ec_1_5_1_3 [1.5.1.3] +nadp +h +nadph
+    folate
   }
 
   branch from h side left {
     h
-    <-> ec_3_5_1_11 [3.5.1.11] +7_amino_8_oxo_3_pyridin_1_ium_1_ylmethyl_5_thia +thien_2_ylacetate +h2o
-    cefaloridine
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    yersiniose_b
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +5_dihydrotestosterone +nad
-    5_androstane_3_17_diol
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    d_paratopyranose
   }
 
-  branch from thf_l_glutamate side left {
-    thf_l_glutamate
-    <-> ec_2_1_2_1 [2.1.2.1] +5_10_methylenetetrahydropteroyl_di_l_glutamate +h +glycine +h2o
-    l_serine
+  branch from serotonin side left {
+    serotonin
+    <-> . +h +nadph +tryptamine +nadp +h2o
+    o2
   }
 
-  branch from thf_l_glutamate side right {
-    thf_l_glutamate
-    <-> ec_6_3_2_17 [6.3.2.17] +h +adp +phosphate +atp +l_glutamate
-    tetrahydropteroyltri_l_glutamate
+  branch from serotonin side right {
+    serotonin
+    <-> . +nadh +h +o2 +nad +h2o
+    tryptamine
+  }
+
+  branch from adp side left {
+    adp
+    <-> ec_3_6_3_17 [3.6.3.17] +h +phosphate +atp +h2o
+    l_sorbopyranose
+  }
+
+  branch from adp side right {
+    adp
+    <-> ec_3_6_3_17 [3.6.3.17] +h +phosphate +atp +h2o
+    keto_d_sorbose
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +atp +h2o
+    beta_l_fucose
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +atp +h2o
+    beta_d_ribofuranose
+  }
+
+  branch from s_adenosyl_l_methionine side left {
+    s_adenosyl_l_methionine
+    <-> . +s_adenosyl_l_homocysteine +dihydro_5_6_dehydrokawain +h
+    4_hydroxy_6_penethyl_pyran_2_one
+  }
+
+  branch from s_adenosyl_l_methionine side right {
+    s_adenosyl_l_methionine
+    <-> . +s_adenosyl_l_homocysteine +31_dmt_or_m_ii_31_o_desmethyl_tacrolimus +h
+    13_31_o_didesmethyl_tacrolimus
+  }
+
+  branch from glycine side left {
+    glycine
+    <-> ec_3_4_13_23 [3.4.13.23] +3_sulfanylpentan_1_ol_l_cysteine +h2o
+    s_5_hydroxypentan_3_yl_l_cysteinylglycine
+  }
+
+  branch from glycine side right {
+    glycine
+    <-> ec_3_4_13_23 [3.4.13.23] +s_z_n_hydroxy_2_phenylethanimidoyl_l_cysteinylgl +h2o
+    s_phenylacetothiohydroximoyl_l_cysteine
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_geranial +h
+    1s_2s_4r_isodihydrocarveol
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_geranial +h
+    neodihydrocarveol
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_4_22_40 [3.4.22.40] +l_histidine +2_naphthylamine
-    l_histidyl_beta_naphthylamide
+    <-> ec_1_7_5_2 [1.7.5.2] +nitric_oxide +menaquinol +menaquinone_2
+    nitrous_oxide
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_4_11_4 [3.4.11.4] +l_alanine +ala_ala
-    ala_ala_ala
+    <-> . +9s_10s_9_10_dihydroxyoctadecanoate
+    9s_10r_epoxyoctadecanoate
+  }
+
+  branch from r_lipoamide side left {
+    r_lipoamide
+    <-> ec_1_2_4_4 [1.2.4.4] +3_methyl_2_oxopentanoate +h +s_8_2_methylbutanoyl_dihydrolipoamide
+    co2
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    n_acetyl_alpha_neuraminate
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    n_acetyl_beta_neuraminate
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_1_1_71 [1.1.1.71] +dihydrocarveol +nadp +h
+    phellandral
   }
 }

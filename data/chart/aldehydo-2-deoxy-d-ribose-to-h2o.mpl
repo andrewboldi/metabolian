@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway aldehydo-2-deoxy-d-ribose-to-h2o "aldehydo-2-deoxy-D-ribose to H2O" {
-  spacing 300
+  spacing 206
 
   spine at 0,0 {
     aldehydo_2_deoxy_d_ribose
@@ -12,81 +12,13 @@ pathway aldehydo-2-deoxy-d-ribose-to-h2o "aldehydo-2-deoxy-D-ribose to H2O" {
     2_deoxyinosine
     <-> ec_2_4_2_6 [2.4.2.6] +adenine -hypoxanthine
     2_deoxyadenosine
-    <-> ec_2_7_1_74 [2.7.1.74] +utp -h -damp
-    udp
-    <-> ec_3_1_4_17 [3.1.4.17] +h +damp -h2o
-    3_5_cyclic_damp
+    <-> ec_3_1_3_2 [3.1.3.2] +h +phosphate -h2o
+    2_deoxyadenosine_3_monophosphate
   }
 
   branch from 2_deoxyinosine side left {
     2_deoxyinosine
     <-> ec_2_4_2_6 [2.4.2.6] +thymine +hypoxanthine
     thymidine
-  }
-
-  branch from 2_deoxyinosine side right {
-    2_deoxyinosine
-    <-> . +dimp +h +adp
-    atp
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    4_acetamidophenol
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    3alpha_hydroxy_5beta_androstan_17_one
-  }
-
-  branch from 2_deoxyadenosine side left {
-    2_deoxyadenosine
-    <-> . +2_oxo_2_deoxyadenosine +h2o
-    hydrogen_oxide
-  }
-
-  branch from hypoxanthine side right {
-    hypoxanthine
-    <-> ec_3_2_2_1 [3.2.2.1] +inosine +h2o
-    beta_d_ribofuranose
-  }
-
-  branch from hypoxanthine side left {
-    hypoxanthine
-    <-> ec_2_4_2_5 [2.4.2.5] +inosine +guanine
-    guanosine
-  }
-
-  branch from udp side right {
-    udp
-    <-> . +am1c_glucuronide_cyclosporine +cyclosporin_a_metabolite_m18
-    udp_alpha_d_glucuronate
-  }
-
-  branch from udp side left {
-    udp
-    <-> . +cerivastatin_m23_glucuronide +udp_alpha_d_glucuronate
-    cerivastatin_m23
-  }
-
-  branch from h side right {
-    h
-    <-> ec_2_2_1_7 [2.2.1.7] +glyceraldehyde_3_phosphate +pyruvate +1_deoxy_d_xylulose_5_phosphate
-    co2
-  }
-
-  branch from h side left {
-    h
-    <-> ec_4_1_2_14 [4.1.2.14] +glyceraldehyde_3_phosphate +pyruvate
-    2_dehydro_3_deoxy_6_phospho_d_gluconate
-  }
-
-  branch from damp side right {
-    damp
-    <-> ec_1_14_11_33 [1.14.11.33] +formaldehyde +co2 +succinate +o2 +1_methyl_damp
-    2_oxoglutarate
   }
 }

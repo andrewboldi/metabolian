@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway prephytoene-diphosphate-to-diphosphate "prephytoene diphosphate to diphosphate" {
-  spacing 284
+  spacing 278
 
   spine at 0,0 {
     prephytoene_diphosphate
@@ -20,73 +20,67 @@ pathway prephytoene-diphosphate-to-diphosphate "prephytoene diphosphate to dipho
 
   branch from h side left {
     h
-    <-> ec_1_14_13_15 [1.14.13.15] +25r_5beta_cholestane_3alpha_7alpha_26_triol +nadp +h2o +o2 +nadph
-    5beta_cholestane_3alpha_7alpha_diol
+    <-> . +cyathatriol +nadp +nadph
+    cyathin_a3
   }
 
   branch from h side right {
     h
-    <-> ec_1_14_13_49 [1.14.13.49] +4s_limonene +o2 +nadph +perillyl_alcohol +h2o
-    nadp
-  }
-
-  branch from 2e_6e_10e_geranylgeranyl_diphosphate side left {
-    2e_6e_10e_geranylgeranyl_diphosphate
-    <-> ec_2_5_1_133 [2.5.1.133] +diphosphate +geranylgeranyl_bacteriochlorophyll_a
-    bacteriochlorophyllide_a
-  }
-
-  branch from 2e_6e_10e_geranylgeranyl_diphosphate side right {
-    2e_6e_10e_geranylgeranyl_diphosphate
-    <-> . +geranylgeranyl_bacteriochlorophyllide_b +diphosphate +h
-    bacteriochlorophyllide_b
-  }
-
-  branch from farnesyl_diphosphate side left {
-    farnesyl_diphosphate
-    <-> ec_4_2_3_9 [4.2.3.9] +diphosphate +h
-    germacrene_a
-  }
-
-  branch from farnesyl_diphosphate side right {
-    farnesyl_diphosphate
-    <-> ec_4_2_3_48 [4.2.3.48] +diphosphate +h +3s_6e_nerolidol
-    h2o
+    <-> . +11_o_acetylcyathatriol +nadp +nadph
+    11_o_acetylcyathin_a3
   }
 
   branch from ipp side left {
     ipp
-    <-> ec_2_5_1_20 [2.5.1.20] +diphosphate +poly_cis_polyprenyl_diphosphate_longer_by_one_c5
-    poly_cis_polyprenyl_diphosphate
+    <-> . +diphosphate +all_trans_undecaprenyl_diphosphate
+    2e_6e_farnesyl_diphosphate
   }
 
   branch from ipp side right {
     ipp
-    <-> ec_2_5_1_87 [2.5.1.87] +diphosphate +di_trans_poly_cis_decaprenyl_diphosphate
-    2e_6e_farnesyl_diphosphate
-  }
-
-  branch from dimethylallyl_diphosphate side left {
-    dimethylallyl_diphosphate
-    <-> . +diphosphate +beta_cyclopiazonate
-    alpha_acetyl_gamma_beta_indolyl_methyltetramate
-  }
-
-  branch from dimethylallyl_diphosphate side right {
-    dimethylallyl_diphosphate
-    <-> ec_1_17_1_2 [1.17.1.2] +nadh +1_hydroxy_2_methyl_2_e_butenyl_4_diphosphate +h2o
-    nad
+    <-> ec_1_17_7_4 [1.17.7.4] +fmnh2 +2e_4_hydroxy_3_methylbut_2_enyl_diphosphate +h +h2o
+    fmn
   }
 
   branch from diphosphate side left {
     diphosphate
-    <-> . +2e_6e_farnesyl_diphosphate
-    alpha_ylangene
+    <-> ec_4_2_3_9 [4.2.3.9] +2e_6e_farnesyl_diphosphate
+    aristolochene
   }
 
   branch from diphosphate side right {
     diphosphate
-    <-> . +2e_6e_farnesyl_diphosphate
-    cyperene
+    <-> ec_4_2_3_71 [4.2.3.71] +2e_6e_farnesyl_diphosphate
+    1z_4e_germacrene_b
+  }
+
+  branch from diphosphate side left {
+    diphosphate
+    <-> ec_4_2_3_60 [4.2.3.60] +2e_6e_farnesyl_diphosphate
+    germacrene_c
+  }
+
+  branch from diphosphate side right {
+    diphosphate
+    <-> ec_4_2_3_100 [4.2.3.100] +2e_6e_farnesyl_diphosphate
+    bicyclogermacrene
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_1_1_4 [3.1.1.4] +1_icosanoyl_sn_glycero_3_phosphate +5z_8z_11z_14z_eicosatetraenoate +h2o
+    1_icosanoyl_2_arachidonoyl_sn_glycero_3_phosphat
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_1_1_4 [3.1.1.4] +1_o_octadecyl_sn_glycero_3_phosphocholine +5z_8z_11z_14z_eicosatetraenoate +h2o
+    1_o_octadecyl_2_arachidonoyl_sn_glycero_3_phosph
+  }
+
+  branch from ipp side left {
+    ipp
+    <-> . +diphosphate +2e_6e_farnesyl_diphosphate +h
+    octaprenyl_diphosphate
   }
 }

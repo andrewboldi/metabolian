@@ -1,0 +1,502 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "geranylgeranyl-chlorophyl-to-chlorophyll-a",
+  "name": "geranylgeranyl-chlorophyl… to chlorophyll a",
+  "category": "other",
+  "summary": "A 3-step route from geranylgeranyl-chlorophyll a to chlorophyll a, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR185182"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:64668"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "geranylgeranyl_chlorophyll_a",
+      "name": "geranylgeranyl-chlorophyll a",
+      "short": "geranylgeranyl-chlo…",
+      "formula": "C55H66MgN4O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64668"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "chlorophyll_a",
+      "name": "chlorophyll a",
+      "formula": "C55H72MgN4O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1108239"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "pheophytin_a",
+      "name": "pheophytin a",
+      "formula": "C55H74N4O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1363632"
+      }
+    },
+    {
+      "id": "mg",
+      "name": "Mg",
+      "formula": "Mg",
+      "charge": 2,
+      "xrefs": {
+        "metanetx": "MNXM653"
+      }
+    },
+    {
+      "id": "chlorophyll_a",
+      "name": "chlorophyll a",
+      "formula": "C55H71MgN4O5",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM736584"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_99_1_10",
+      "name": "magnesium dechelatase",
+      "ec": [
+        "4.99.1.10"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR185182",
+      "substrates": [
+        {
+          "metabolite": "geranylgeranyl_chlorophyll_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "chlorophyll_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 3
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR185182"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR185182"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "magnesium dechelatase",
+      "ec": "4.99.1.10",
+      "substrates": [
+        {
+          "metabolite": "chlorophyll_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pheophytin_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "mg",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_99_1_10"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR137912"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR137912"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "magnesium dechelatase",
+      "ec": "4.99.1.10",
+      "substrates": [
+        {
+          "metabolite": "pheophytin_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "mg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "chlorophyll_a",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_99_1_10"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR151658"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR151658"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_geranylgeranyl_chlorophyll_a_3-geranylgeranylindole-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "geranylgeranyl_chlorophyll_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-geranylgeranylindole-to-fmn"
+      },
+      "note": "Shares geranylgeranyl-chlorophyll a with 3-Geranylgeranylindole to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64668"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_geranylgeranyl_chlorophyll_a_5-methoxybenzimidazole-to-3-6-dihydronicotinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "geranylgeranyl_chlorophyll_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-methoxybenzimidazole-to-3-6-dihydronicotinate"
+      },
+      "note": "Shares geranylgeranyl-chlorophyll a with 5-Methoxybenzimidazole to 3,6-dihydronicotinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64668"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_chlorophyll_a_1-chlorohexane-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "chlorophyll_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-chlorohexane-to-h2o"
+      },
+      "note": "Shares chlorophyll a with 1-Chlorohexane to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1108239"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_chlorophyll_a_6-phospho-d-glucono-1-5-l-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "chlorophyll_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-phospho-d-glucono-1-5-l-to-nadph"
+      },
+      "note": "Shares chlorophyll a with 6-phospho-D-glucono-1,5-l… to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1108239"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_chlorophyll_a_71-hydroxychlorophyll-a-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "chlorophyll_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "71-hydroxychlorophyll-a-to-h2o"
+      },
+      "note": "Shares chlorophyll a with 71-hydroxychlorophyll a to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1108239"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pheophytin_a_pheophytin-b-to-red-chlorophyll-catabolite",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pheophytin_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "pheophytin-b-to-red-chlorophyll-catabolite"
+      },
+      "note": "Shares pheophytin a with pheophytin b to Red chlorophyll catabolite.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1363632"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_mg_1-carboxyvinyl-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "mg"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-carboxyvinyl-to-nadph"
+      },
+      "note": "Shares Mg with 1-carboxyvinyl… to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM653"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_mg_2-4-dichloro-5-oxo-2-5-di-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "mg"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-4-dichloro-5-oxo-2-5-di-to-o2"
+      },
+      "note": "Shares Mg with 2,4-dichloro-5-oxo-2,5-di… to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM653"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_mg_nadh-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "mg"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-h2o"
+      },
+      "note": "Shares Mg with NADH to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM653"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_mg_retncoa-c-to-1-o-4-oxoretinoyl-d-g",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "mg"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "retncoa-c-to-1-o-4-oxoretinoyl-d-g"
+      },
+      "note": "Shares Mg with Retncoa c to 1-O-(4-oxoretinoyl)-β-D-g….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM653"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_mg_udp-to-soyasaponin-i",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "mg"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-soyasaponin-i"
+      },
+      "note": "Shares Mg with UDP to soyasaponin I.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM653"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_chlorophyll_a_3-hydroxy-3-phenylpropion-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "chlorophyll_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxy-3-phenylpropion-to-h2o"
+      },
+      "note": "Shares chlorophyll a with 3-hydroxy-3-phenylpropion… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM736584"
+          }
+        ]
+      }
+    }
+  ]
+}

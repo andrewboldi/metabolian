@@ -1,0 +1,540 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "xylotetraose-to-d-xylotrionate-null",
+  "name": "xylotetraose to D-xylotrionate",
+  "category": "redox-detox",
+  "summary": "A 3-step route from xylotetraose to D-xylotrionate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR194772"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:62972"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "xylotetraose",
+      "name": "xylotetraose",
+      "formula": "C20H34O17",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62972"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "d_xylp_1_4_d_xylp_1_4_d_xylp",
+      "name": "β-D-Xylp-(1→4)-β-D-Xylp-(1→4)-D-Xylp",
+      "short": "β-D-Xylp-(1→4)-β-D-…",
+      "formula": "C15H26O13",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62783"
+      }
+    },
+    {
+      "id": "beta_d_xylose",
+      "name": "beta-D-xylose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM5071"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "d_xylotriono_1_5_lactone",
+      "name": "D-xylotriono-1,5-lactone",
+      "short": "D-xylotriono-1,5-la…",
+      "formula": "C15H24O13",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:143164"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "d_xylotrionate",
+      "name": "D-xylotrionate",
+      "formula": "C15H25O14",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:143167"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "d_xylotetraono_1_5_lactone",
+      "name": "D-xylotetraono-1,5-lactone",
+      "short": "D-xylotetraono-1,5-…",
+      "formula": "C20H32O17",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:143165"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_2_1_37",
+      "name": "xylan 1,4-beta-xylosidase",
+      "ec": [
+        "3.2.1.37"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "xylan 1,4-beta-xylosidase",
+      "ec": "3.2.1.37",
+      "substrates": [
+        {
+          "metabolite": "xylotetraose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_xylp_1_4_d_xylp_1_4_d_xylp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "beta_d_xylose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_37"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR194772"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR194772"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "D-xylotriose + O2 = D-xylotriono-1,5-lactone + H2O2",
+      "equation": "D-xylotriose + O2 = D-xylotriono-1,5-lactone + H2O2",
+      "substrates": [
+        {
+          "metabolite": "d_xylp_1_4_d_xylp_1_4_d_xylp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_xylotriono_1_5_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:59636"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59636"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "D-xylotriono-1,5-lactone + H2O = D-xylotrionate + H(+)",
+      "equation": "D-xylotriono-1,5-lactone + H2O = D-xylotrionate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "d_xylotriono_1_5_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_xylotrionate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:59648"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59648"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "D-xylotetraose + O2 = D-xylotetraono-1,5-lactone + H2O2",
+      "equation": "D-xylotetraose + O2 = D-xylotetraono-1,5-lactone + H2O2",
+      "substrates": [
+        {
+          "metabolite": "xylotetraose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_xylotetraono_1_5_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:59640"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59640"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_xylotetraose_n-3-aminopropyl-hydroxyl-to-h2o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "xylotetraose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-3-aminopropyl-hydroxyl-to-h2o2"
+      },
+      "note": "Shares xylotetraose with N-(3-aminopropyl)hydroxyl… to H2O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62972"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_xylotetraose_propanoate-to-d-threonine-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "xylotetraose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "propanoate-to-d-threonine-null"
+      },
+      "note": "Shares xylotetraose with propanoate to D-threonine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62972"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_xylotetraose_xylotetraose-to-d-xylotrionate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "xylotetraose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "xylotetraose-to-d-xylotrionate"
+      },
+      "note": "Shares xylotetraose with xylotetraose to D-xylotrionate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62972"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_xylp_1_4_d_xylp_1_4_d_xylp_2-naphthyl-beta-d-xylopyr-to-2-naphthol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_xylp_1_4_d_xylp_1_4_d_xylp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-naphthyl-beta-d-xylopyr-to-2-naphthol"
+      },
+      "note": "Shares β-D-Xylp-(1→4)-β-D-Xylp-(1→4)-D-Xylp with 2-Naphthyl-beta-D-xylopyr… to 2-naphthol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62783"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_xylp_1_4_d_xylp_1_4_d_xylp_2-naphthyl-beta-d-xylopyr-to-2-naphthol-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_xylp_1_4_d_xylp_1_4_d_xylp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-naphthyl-beta-d-xylopyr-to-2-naphthol-null"
+      },
+      "note": "Shares β-D-Xylp-(1→4)-β-D-Xylp-(1→4)-D-Xylp with 2-Naphthyl-beta-D-xylopyr… to 2-naphthol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62783"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_xylp_1_4_d_xylp_1_4_d_xylp_alpha-d-glucose-to-keto-d-fructose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_xylp_1_4_d_xylp_1_4_d_xylp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-glucose-to-keto-d-fructose"
+      },
+      "note": "Shares β-D-Xylp-(1→4)-β-D-Xylp-(1→4)-D-Xylp with alpha-D-glucose… to keto-D-fructose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62783"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_xylp_1_4_d_xylp_1_4_d_xylp_udp-to-afzelin-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_xylp_1_4_d_xylp_1_4_d_xylp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-afzelin-null"
+      },
+      "note": "Shares β-D-Xylp-(1→4)-β-D-Xylp-(1→4)-D-Xylp with UDP to afzelin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62783"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_xylp_1_4_d_xylp_1_4_d_xylp_xylotetraose-to-d-xylotrionate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_xylp_1_4_d_xylp_1_4_d_xylp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "xylotetraose-to-d-xylotrionate"
+      },
+      "note": "Shares β-D-Xylp-(1→4)-β-D-Xylp-(1→4)-D-Xylp with xylotetraose to D-xylotrionate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62783"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_xylotriono_1_5_lactone_xylotetraose-to-d-xylotrionate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_xylotriono_1_5_lactone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "xylotetraose-to-d-xylotrionate"
+      },
+      "note": "Shares D-xylotriono-1,5-lactone with xylotetraose to D-xylotrionate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:143164"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_xylotrionate_xylotetraose-to-d-xylotrionate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_xylotrionate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "xylotetraose-to-d-xylotrionate"
+      },
+      "note": "Shares D-xylotrionate with xylotetraose to D-xylotrionate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:143167"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_xylotetraono_1_5_lactone_xylotetraose-to-d-xylotrionate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_xylotetraono_1_5_lactone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "xylotetraose-to-d-xylotrionate"
+      },
+      "note": "Shares D-xylotetraono-1,5-lactone with xylotetraose to D-xylotrionate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:143165"
+          }
+        ]
+      }
+    }
+  ]
+}

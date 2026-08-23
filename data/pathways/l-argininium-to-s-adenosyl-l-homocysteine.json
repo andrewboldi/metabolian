@@ -1,0 +1,350 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-argininium-to-s-adenosyl-l-homocysteine",
+  "name": "L-argininium to S-adenosyl-L-homocysteine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from L-argininium residue to S-adenosyl-L-homocysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:48096"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:29965"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_argininium",
+      "name": "L-argininium",
+      "formula": "C6H13N4O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:29965"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "n_n_dimethyl_l_arginine_1",
+      "name": "Nω,Nω-dimethyl-L-arginine(1+)",
+      "short": "Nω,Nω-dimethyl-L-ar…",
+      "formula": "C8H17N4O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:61897"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "n_methyl_argininium_1",
+      "name": "Nω-methyl-argininium(1+)",
+      "short": "Nω-methyl-argininiu…",
+      "formula": "C7H15N4O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:65280"
+      }
+    },
+    {
+      "id": "formaldehyde",
+      "name": "formaldehyde",
+      "formula": "CH2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16842"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_319",
+      "name": "type I protein arginine methyltransferase",
+      "ec": [
+        "2.1.1.319"
+      ],
+      "xrefs": {
+        "uniprot": "Q99873"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "type I protein arginine methyltransferase",
+      "equation": "L-arginyl-[protein] + 2 S-adenosyl-L-methionine = N(omega),N(omega)-dimethyl-L-arginyl-[protein] + 2 S-adenosyl-L-homocysteine + 2 H(+)",
+      "ec": "2.1.1.319",
+      "substrates": [
+        {
+          "metabolite": "l_argininium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_n_dimethyl_l_arginine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_319"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:48096"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48096"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N(omega),N(omega)-dimethyl-L-arginyl-[protein] + 2-oxoglutarate + O2 = N(omega)-methyl-...",
+      "equation": "N(omega),N(omega)-dimethyl-L-arginyl-[protein] + 2-oxoglutarate + O2 = N(omega)-methyl-L-arginyl-[protein] + formaldehyde + succinate + CO2",
+      "substrates": [
+        {
+          "metabolite": "n_n_dimethyl_l_arginine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_methyl_argininium_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:58352"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58352"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "N(omega)-methyl-L-arginyl-[protein] + S-adenosyl-L-methionine = N(omega),N(omega)-dimet...",
+      "equation": "N(omega)-methyl-L-arginyl-[protein] + S-adenosyl-L-methionine = N(omega),N(omega)-dimethyl-L-arginyl-[protein] + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "n_methyl_argininium_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_n_dimethyl_l_arginine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:48104"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48104"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_n_n_dimethyl_l_arginine_1_methyl-sulfate-to-s-formylmycothiol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_n_dimethyl_l_arginine_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "methyl-sulfate-to-s-formylmycothiol"
+      },
+      "note": "Shares Nω,Nω-dimethyl-L-arginine(1+) with methyl sulfate to S-formylmycothiol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61897"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_methyl_argininium_1_l-argininium-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_methyl_argininium_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-argininium-to-succinate"
+      },
+      "note": "Shares Nω-methyl-argininium(1+) with L-argininium to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:65280"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_methyl_argininium_1_l-argininium-to-succinate-48108",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_methyl_argininium_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-argininium-to-succinate-48108"
+      },
+      "note": "Shares Nω-methyl-argininium(1+) with L-argininium to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:65280"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway e-non-2-enal-to-h2o "(E)-non-2-enal to H2O" {
-  spacing 176
+  spacing 164
 
   spine at 0,0 {
     e_non_2_enal
@@ -22,21 +22,9 @@ pathway e-non-2-enal-to-h2o "(E)-non-2-enal to H2O" {
     e_4_oxonon_2_en_1_ol
   }
 
-  branch from e_4_oxonon_2_enal side right {
-    e_4_oxonon_2_enal
-    <-> ec_1_1_1_184 [1.1.1.184] +1_hydroxynon_2_en_4_one +nadp +nadph
-    h
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa +glutathione
-    1_methylsulfanyl_9_aci_nitrononane
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa +glutathione
-    9_methylthiononanonitrile_oxide
+  branch from e_non_2_enal side right {
+    e_non_2_enal
+    <-> . +nad +h2o +nadh +hplus
+    e_non_2_enoate
   }
 }

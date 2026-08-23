@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-3-carboxylatopropionyl-to-s-2-acetamido-6-oxop "N-(3-carboxylatopropionyl… to (S)-2-acetamido-6-oxopime…" {
-  spacing 274
+  spacing 298
 
   spine at 0,0 {
     n_3_carboxylatopropionyl_ll_2_6_diaminopimelate
@@ -18,43 +18,67 @@ pathway n-3-carboxylatopropionyl-to-s-2-acetamido-6-oxop "N-(3-carboxylatopropio
 
   branch from succinate side left {
     succinate
-    <-> . +l_aspartate +akg +o2 +co2
-    3s_3_hydroxy_l_aspartate
+    <-> . +4_chloro_2_methylphenoxy_acetate +akg +o2 +glyoxylate +co2
+    4_chloro_2_methylphenol
   }
 
   branch from succinate side right {
     succinate
-    <-> ec_1_14_11_n4 [1.14.11.n4] +akg +o2 +3s_3_hydroxy_l_aspartate +co2
-    l_aspartate
+    <-> . +2_methylphenoxy_acetate +akg +o2 +glyoxylate +co2
+    o_cresol
   }
 
   branch from s_2_3_4_5_tetrahydrodipicolinate side left {
-    s_2_3_4_5_tetrahydrodipicolinate
-    <-> . +h2o +hplus
-    s_2_amino_6_oxopimelate
-  }
-
-  branch from s_2_3_4_5_tetrahydrodipicolinate side right {
     s_2_3_4_5_tetrahydrodipicolinate
     <-> ec_1_17_1_8 [1.17.1.8] +nad +h2o +nadh +hplus
     2s_4s_4_hydroxy_2_3_4_5_tetrahydrodipicolinate
   }
 
+  branch from glutamate side right {
+    glutamate
+    <-> . +atp +hplus +ppi
+    l_glutamyl_amp
+  }
+
   branch from glutamate side left {
     glutamate
-    <-> ec_2_6_1_80 [2.6.1.80] +s_s_s_nicotianamine_trizwitterion +akg
-    3_deamino_3_oxonicotianaminium
+    <-> ec_3_4_17_24 [3.4.17.24] +c_terminal_amino_acyl_l_glutamyl_l_glutamate_2 +h2o
+    c_terminal_amino_acyl_l_glutamate_2
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> . +5_methylcytidine_5_monophosphate_1 +akg +o2 +co2
+    5_hydroxymethylcytidine_5_monophosphate_1
+  }
+
+  branch from succinate side left {
+    succinate
+    <-> . +2_deoxyadenosine_5_monophosphate +chloride +akg +o2 +hplus +co2 +h2o
+    2_chloro_deoxyadenosine_5_monophosphate
+  }
+
+  branch from akg side right {
+    akg
+    <-> ec_2_6_1_125 [2.6.1.125] +arginine +glutamate
+    5_guanidino_2_oxopentanoic_acid
+  }
+
+  branch from akg side left {
+    akg
+    <-> . +2_deoxyguanosine_5_monophosphate +chloride +o2 +hplus +succinate +co2 +h2o
+    2_chloro_deoxyguanosine_5_monophosphate
   }
 
   branch from glutamate side right {
     glutamate
-    <-> ec_2_6_1_9 [2.6.1.9] +l_histidinol_phosphate +akg
-    3_imidazol_4_yl_2_oxopropyl_phosphate
+    <-> ec_3_4_17_24 [3.4.17.24] +c_terminal_amino_acyl_l_glutamate_2 +h2o
+    c_terminal_proteinogenic_amino_acid
   }
 
-  branch from s_2_acetamido_6_oxopimelate side left {
-    s_2_acetamido_6_oxopimelate
-    <-> . +akg +glutamate
-    n_acetyl_ll_2_6_diaminopimelate
+  branch from glutamate side left {
+    glutamate
+    <-> . +amp_3_end_1 +atp +amp +ppi
+    3_l_glutamate_adenylyl_1_group
   }
 }

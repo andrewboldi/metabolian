@@ -1,0 +1,274 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-glucopyranose-to-phosphate-null",
+  "name": "D-glucopyranose to phosphate",
+  "category": "other",
+  "summary": "A 3-step route from D-glucopyranose to phosphate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR96484"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:4167"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "glucose",
+      "name": "D-Glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4167"
+      }
+    },
+    {
+      "id": "carbamoyl_phosphate",
+      "name": "carbamoyl phosphate",
+      "formula": "CH2NO5P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM138"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "d_glucose_6_phosphate",
+      "name": "D-glucose 6-phosphate",
+      "short": "D-glucose 6-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1364111"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "nh4",
+      "name": "NH4",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM729302"
+      }
+    },
+    {
+      "id": "alpha_d_glucose_1_phosphate",
+      "name": "alpha-D-glucose 1-phosphate",
+      "short": "alpha-D-glucose 1-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1364214"
+      }
+    },
+    {
+      "id": "4_nitrophenyl_d_glucuronide",
+      "name": "4-nitrophenyl β-D-glucuronide",
+      "short": "4-nitrophenyl…",
+      "formula": "C12H13NO9",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:90146"
+      }
+    },
+    {
+      "id": "beta_d_glucosyl_1_3_4_nitrophenyl_d_glucuronate",
+      "name": "beta-D-glucosyl-(1->3)-(4-nitrophenyl)-D-glucuronate",
+      "short": "beta-D-glucosyl-(1-…",
+      "formula": "C18H22NO14",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1559985"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_4_2_2",
+      "name": "phosphoglucomutase (alpha-D-glucose-1,6-bisphosphate-dependent)",
+      "ec": [
+        "5.4.2.2"
+      ],
+      "xrefs": {
+        "uniprot": "P36871"
+      }
+    },
+    {
+      "id": "ec_5_4_2_5",
+      "name": "phosphoglucomutase (glucose-cofactor)",
+      "ec": [
+        "5.4.2.5"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_392",
+      "name": "3-O-beta-D-glucopyranosyl-beta-D-glucuronide phosphorylase",
+      "ec": [
+        "2.4.1.392"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR96484",
+      "substrates": [
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "carbamoyl_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glucose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh4",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR96484"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR96484"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "phosphoglucomutase (alpha-D-glucose-1,6-bisphosphate-dependent)",
+      "ec": "5.4.2.2",
+      "substrates": [
+        {
+          "metabolite": "d_glucose_6_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "alpha_d_glucose_1_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_2_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR145962"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR145962"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3-O-beta-D-glucopyranosyl-beta-D-glucuronide phosphorylase",
+      "ec": "2.4.1.392",
+      "substrates": [
+        {
+          "metabolite": "alpha_d_glucose_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4_nitrophenyl_d_glucuronide",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "beta_d_glucosyl_1_3_4_nitrophenyl_d_glucuronate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_392"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR200219"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR200219"
+          }
+        ]
+      }
+    }
+  ]
+}

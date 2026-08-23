@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-5-phospho-d-ribosyl-to-3-imidazol-4-yl-2-oxopr "1-(5-phospho-β-D-ribosyl)… to 3-(imidazol-4-yl)-2-oxopr…" {
-  spacing 256
+  spacing 280
 
   spine at 0,0 {
     1_5_phospho_d_ribosyl_atp
@@ -28,31 +28,55 @@ pathway 1-5-phospho-d-ribosyl-to-3-imidazol-4-yl-2-oxopr "1-(5-phospho-β-D-ribo
 
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_84 [2.5.1.84] +ipp +gpp
-    all_trans_nonaprenyl_diphosphate
+    <-> ec_4_2_3_143 [4.2.3.143] +fpp +h2o
+    kunzeaol
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_85 [2.5.1.85] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +all_trans_nonaprenyl_diphosphate
-    ipp
-  }
-
-  branch from 5_5_phospho_1_deoxy_d_ribulos_1_ylimino_methylam side right {
-    5_5_phospho_1_deoxy_d_ribulos_1_ylimino_methylam
-    <-> . +d_erythro_1_imidazol_4_yl_glycerol_3_phosphate +aicar +h2o +hplus
-    nh3
-  }
-
-  branch from glutamate side left {
-    glutamate
-    <-> ec_2_6_1_82 [2.6.1.82] +1_4_butanediammonium +akg
-    4_ammoniobutanal
+    <-> ec_2_5_1_112 [2.5.1.112] +dmapp +adp
+    n6_dimethylallyl_adenosine_5_diphosphate
   }
 
   branch from glutamate side right {
     glutamate
-    <-> ec_2_3_1_1 [2.3.1.1] +acetyl_coa +coa +hplus
-    nag
+    <-> . +s_2e_6e_10e_geranylgeranyl_l_glutathione +h2o
+    s_2e_6e_10e_geranylgeranyl_l_cysteinylglycine
+  }
+
+  branch from glutamate side left {
+    glutamate
+    <-> . +dmapp +ppi
+    prekainate
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_2_5_1_112 [2.5.1.112] +dmapp +atp
+    n6_dimethylallyl_adenosine_5_triphosphate
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_2_7_7_87 [2.7.7.87] +threonine +hco3 +atp +h2o
+    l_threonylcarbamoyladenylate
+  }
+
+  branch from glutamine side right {
+    glutamine
+    <-> . +alanine +atp +adp +pi +hplus
+    ala_gln
+  }
+
+  branch from glutamate side left {
+    glutamate
+    <-> . +nadp +h2o +nadph +hplus
+    l_glutamic_5_semialdehyde
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> . +l_glutamyl_l_glutamate_2 +atp +adp +pi +hplus
+    l_glutamyl_l_glutamyl_l_glutamate_3
   }
 }

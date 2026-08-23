@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-4-hydroxycyclohex-2-en-to-s-adenosyl-l-homocys "3-(4-hydroxycyclohex-2-en… to S-adenosyl-L-homocysteine" {
-  spacing 274
+  spacing 340
 
   spine at 0,0 {
     3_4_hydroxycyclohex_2_en_1_ylidene_pyruvate
@@ -26,8 +26,8 @@ pathway 3-4-hydroxycyclohex-2-en-to-s-adenosyl-l-homocys "3-(4-hydroxycyclohex-2
 
   branch from keto_phenylpyruvate side right {
     keto_phenylpyruvate
-    <-> ec_2_1_1_281 [2.1.1.281] +sam +sah +hplus
-    3s_3_methyl_2_oxo_3_phenylpropanoate
+    <-> . +nad +nadh +hplus
+    3_phenyllactate
   }
 
   branch from 3_indol_3_yl_pyruvate side left {
@@ -38,20 +38,20 @@ pathway 3-4-hydroxycyclohex-2-en-to-s-adenosyl-l-homocys "3-(4-hydroxycyclohex-2
 
   branch from 3_indol_3_yl_pyruvate side right {
     3_indol_3_yl_pyruvate
-    <-> . +l_tryptophan +o2 +h2o +h2o2
-    nh3
+    <-> ec_6_4_1_12 [6.4.1.12] +atp +amp +ppi +hplus
+    didemethylasterriquinone_d
   }
 
   branch from l_phenylalanine side left {
     l_phenylalanine
-    <-> ec_4_2_1_91 [4.2.1.91] +hplus +co2 +h2o
-    l_arogenate
+    <-> ec_2_3_1_53 [2.3.1.53] +acetyl_coa +coa +hplus
+    n_acetyl_l_phenylalaninate
   }
 
   branch from l_phenylalanine side right {
     l_phenylalanine
-    <-> ec_2_3_1_53 [2.3.1.53] +acetyl_coa +coa +hplus
-    n_acetyl_l_phenylalaninate
+    <-> ec_3_4_17_23 [3.4.17.23] +ile5_angiotensin_ii_dizwitterion +h2o
+    ile5_angiotensin_ii_1_7_dizwitterion
   }
 
   branch from r_3_indol_3_yl_2_oxobutyrate side left {
@@ -62,13 +62,79 @@ pathway 3-4-hydroxycyclohex-2-en-to-s-adenosyl-l-homocys "3-(4-hydroxycyclohex-2
 
   branch from sah side right {
     sah
-    <-> . +c30_botryococcene +sam +hplus
-    20_methyl_21_22_didehydro_20_21_dihydrobotryococ
+    <-> ec_2_1_1_67 [2.1.1.67] +tioguanine +sam +hplus
+    6_methylthioguanine
   }
 
   branch from sah side left {
     sah
-    <-> . +3_methyl_1_2_didehydro_2_3_dihydrobotryococcene +sam +hplus
-    3_20_dimethyl_1_2_21_22_tetradehydro_2_3_20_21_t
+    <-> ec_2_1_1_351 [2.1.1.351] +nocamycin_e +sam
+    nocamycin_i
+  }
+
+  branch from l_phenylalanine side right {
+    l_phenylalanine
+    <-> ec_5_4_3_10 [5.4.3.10]
+    r_3_ammonio_3_phenylpropanoate
+  }
+
+  branch from l_phenylalanine side left {
+    l_phenylalanine
+    <-> ec_5_4_3_11 [5.4.3.11]
+    s_3_ammonio_3_phenylpropanoate
+  }
+
+  branch from keto_phenylpyruvate side right {
+    keto_phenylpyruvate
+    <-> . +atp +h2o +amp +ppi +hplus
+    phenguignardate
+  }
+
+  branch from keto_phenylpyruvate side left {
+    keto_phenylpyruvate
+    <-> ec_6_4_1_11 [6.4.1.11] +atp +amp +ppi +hplus
+    polyporic_acid_anion
+  }
+
+  branch from l_tryptophan side right {
+    l_tryptophan
+    <-> ec_1_4_3_23 [1.4.3.23] +o2 +h2o2
+    2_iminio_3_indol_3_yl_propanoate
+  }
+
+  branch from l_tryptophan side left {
+    l_tryptophan
+    <-> ec_1_14_19_58 [1.14.19.58] +fadh2 +chloride +o2 +fad +h2o
+    5_chloro_l_tryptophan
+  }
+
+  branch from 3_indol_3_yl_pyruvate side right {
+    3_indol_3_yl_pyruvate
+    <-> . +d_tryptophan +o2 +h2o +h2o2
+    nh3
+  }
+
+  branch from sam side left {
+    sam
+    <-> . +adenosine_5_monophosphate_1 +sah +hplus
+    2_o_methyladenosine_5_monophosphate_1
+  }
+
+  branch from sam side right {
+    sam
+    <-> . +3_hydroxy_d_kynurenine +sah +hplus
+    3_hydroxy_4_methyl_d_kynurenine
+  }
+
+  branch from sah side left {
+    sah
+    <-> . +l_glutamine +sam +hplus
+    n5_methyl_l_glutamine
+  }
+
+  branch from sah side right {
+    sah
+    <-> . +n_terminal_glycyl_l_lysyl_l_glutamate_1 +sam +hplus
+    n_terminal_n_n_n_trimethyl_l_glycyl_l_lysyl_l_gl
   }
 }

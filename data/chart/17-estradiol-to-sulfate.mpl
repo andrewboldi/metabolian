@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 17-estradiol-to-sulfate "17α-estradiol to sulfate" {
-  spacing 224
+  spacing 284
 
   spine at 0,0 {
     17_estradiol
@@ -16,39 +16,18 @@ pathway 17-estradiol-to-sulfate "17α-estradiol to sulfate" {
     estrone
   }
 
-  branch from estrone side left {
-    estrone
-    <-> ec_1_1_1_62 [1.1.1.62] +nadp +nadph +hplus
-    17_estradiol
-  }
 
-  branch from estrone side right {
-    estrone
-    <-> . +17_estradiol +hydrogen_acceptor
-    hydrogen_donor
-  }
 
-  branch from adenosine_3_5_bismonophosphate side left {
-    adenosine_3_5_bismonophosphate
-    <-> ec_2_8_2_31 [2.8.2.31] +5_cholane_3_7_12_24_tetrol +3_phosphonato_5_adenylyl_sulfate +hplus
-    3_7_12_trihydroxy_5_cholan_24_yl_sulfate
-  }
 
-  branch from adenosine_3_5_bismonophosphate side right {
-    adenosine_3_5_bismonophosphate
-    <-> ec_2_8_2_9 [2.8.2.9] +methyl_l_tyrosinate +3_phosphonato_5_adenylyl_sulfate +hplus
-    l_tyrosine_methyl_ester_4_sulfate
-  }
 
-  branch from sulfate side left {
-    sulfate
-    <-> ec_3_1_6_22 [3.1.6.22] +2_butyloctyl_sulfate +h2o +hplus
-    2_butyl_1_octanol
-  }
 
-  branch from sulfate side right {
-    sulfate
-    <-> ec_4_8_1_6 [4.8.1.6] +z_n_sulfonatooxy_alkenimidothioate
-    epithionitrile
-  }
+
+
+
+
+
+
+
+
+
 }

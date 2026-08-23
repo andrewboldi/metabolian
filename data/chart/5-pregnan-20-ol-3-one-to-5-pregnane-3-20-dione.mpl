@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-pregnan-20-ol-3-one-to-5-pregnane-3-20-dione "5β-pregnan-20α-ol-3-one to 5β-pregnane-3,20-dione" {
-  spacing 232
+  spacing 214
 
   spine at 0,0 {
     5_pregnan_20_ol_3_one
@@ -16,27 +16,9 @@ pathway 5-pregnan-20-ol-3-one-to-5-pregnane-3-20-dione "5β-pregnan-20α-ol-3-on
     5_pregnane_3_20_dione
   }
 
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    sitagliptin_m4_n_carbomyl_glucuronide_conjugate
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +tacrolimus +phosphate +tacrolimus +h2o
-    atp
-  }
-
   branch from 5_pregnane_3_20_dione side left {
     5_pregnane_3_20_dione
     <-> ec_1_1_1_277 [1.1.1.277] +nadp +nadph +hplus
     3_hydroxy_5_pregnan_20_one
-  }
-
-  branch from 5_pregnane_3_20_dione side right {
-    5_pregnane_3_20_dione
-    <-> . +nadph +hplus +nadp
-    progesterone
   }
 }

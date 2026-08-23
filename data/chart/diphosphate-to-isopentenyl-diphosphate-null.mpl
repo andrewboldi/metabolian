@@ -17,28 +17,4 @@ pathway diphosphate-to-isopentenyl-diphosphate-null "diphosphate to isopentenyl 
     <-> ec_2_5_1_11 [2.5.1.11] +diphosphate +phellandrene -ipp
     all_trans_octaprenyl_diphosphate
   }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
-    1_deoxyxylonojirimycin
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
-    alpha_d_glucose
-  }
-
-  branch from ipp side left {
-    ipp
-    <-> . +diphosphate +di_trans_octa_cis_undecaprenyl_diphosphate
-    all_trans_decaprenyl_diphosphate
-  }
-
-  branch from ipp side right {
-    ipp
-    <-> ec_1_17_1_2 [1.17.1.2] +1_hydroxy_2_methyl_2_e_butenyl_4_diphosphate +nadph +h2o
-    nadp
-  }
 }

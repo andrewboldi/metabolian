@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway quercetin-4-o-d-glucop-to-adenosine-3-5-bismonop "quercetin 4'-O-β-D-glucop… to adenosine 3',5'-bismonoph…" {
-  spacing 232
+  spacing 220
 
   spine at 0,0 {
     quercetin_4_o_d_glucopyranoside
@@ -14,17 +14,5 @@ pathway quercetin-4-o-d-glucop-to-adenosine-3-5-bismonop "quercetin 4'-O-β-D-gl
     quercetin_3_sulfate
     <-> ec_2_8_2_27 [2.8.2.27] +3_phosphonato_5_adenylyl_sulfate -adenosine_3_5_bismonophosphate -hplus
     quercetin_7_olate_3_4_bissulfate
-  }
-
-  branch from adenosine_3_5_bismonophosphate side left {
-    adenosine_3_5_bismonophosphate
-    <-> . +oleoyl_coa +h2o +hplus
-    s_oleoyl_4_phosphopantetheine
-  }
-
-  branch from adenosine_3_5_bismonophosphate side right {
-    adenosine_3_5_bismonophosphate
-    <-> . +arachidonoyl_coa +h2o +hplus
-    s_arachidonoyl_4_phosphopantetheine
   }
 }

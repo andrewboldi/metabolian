@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-aminoethyl-phosphonic-to-coniferyl-acetate "(2-aminoethyl)phosphonicâ€¦ to coniferyl acetate" {
-  spacing 290
+  spacing 308
 
   spine at 0,0 {
     2_aminoethyl_phosphonic_acid
@@ -32,31 +32,49 @@ pathway 2-aminoethyl-phosphonic-to-coniferyl-acetate "(2-aminoethyl)phosphonicâ€
 
   branch from alanine side left {
     alanine
-    <-> ec_2_6_1_58 [2.6.1.58] +l_phenylalanine +pyruvate
-    keto_phenylpyruvate
+    <-> ec_1_5_1_17 [1.5.1.17] +nad +h2o +pyruvate +nadh +hplus
+    2_2_iminodipropanoate
   }
 
   branch from alanine side right {
     alanine
-    <-> ec_2_6_1_84 [2.6.1.84] +arginine +pyruvate
-    5_guanidino_2_oxopentanoic_acid
+    <-> ec_5_1_1_1 [5.1.1.1]
+    d_alanine
   }
 
-  branch from acetaldehyde side left {
-    acetaldehyde
-    <-> . +n1_ethyl_2_deoxyadenosine_5_monophosphate +akg +o2 +succinate +co2 +hplus
-    2_deoxyadenosine_5_monophosphate_1
+  branch from 2_aminoethyl_phosphonic_acid side left {
+    2_aminoethyl_phosphonic_acid
+    <-> ec_2_3_1_280 [2.3.1.280] +acetyl_coa +coa +hplus
+    2_acetamidoethyl_phosphonate
   }
 
-  branch from acetate side right {
-    acetate
-    <-> . +melatonin +h2o
-    5_methoxytryptamine
+  branch from 2_aminoethyl_phosphonic_acid side right {
+    2_aminoethyl_phosphonic_acid
+    <-> ec_2_7_7_107 [2.7.7.107] +ctp +ppi
+    cmp_2_aminoethyl_phosphonate
   }
 
-  branch from acetate side left {
-    acetate
-    <-> . +n_acetyl_l_glutaminate +h2o
-    glutamine
+  branch from phosphonoacetaldehyde side left {
+    phosphonoacetaldehyde
+    <-> ec_1_5_3_27 [1.5.3.27] +2_methylaminoethyl_phosphonate +o2 +h2o +h2o2
+    methylamine
+  }
+
+  branch from phosphonoacetaldehyde side right {
+    phosphonoacetaldehyde
+    <-> ec_1_5_3_27 [1.5.3.27] +2_dimethylaminoethyl_phosphonate +o2 +h2o +h2o2
+    dimethylaminium
+  }
+
+  branch from alanine side left {
+    alanine
+    <-> ec_2_6_1_51 [2.6.1.51] +serine +pyruvate
+    3_hydroxypyruvate
+  }
+
+  branch from alanine side right {
+    alanine
+    <-> ec_2_6_1_115 [2.6.1.115] +2e_5s_6e_8e_10e_1_ammoniododeca_2_6_8_10_tetrae +pyruvate
+    2e_5s_6e_8e_10e_5_hydroxydodeca_2_6_8_10_tetrae
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-phosphatidyl-1d-myo-ino-to-2-o-d-mannopyranosy "1-phosphatidyl-1D-myo-ino… to 2-O-(α-D-mannopyranosyl)-…" {
-  spacing 274
+  spacing 268
 
   spine at 0,0 {
     1_phosphatidyl_1d_myo_inositol
@@ -14,11 +14,5 @@ pathway 1-phosphatidyl-1d-myo-ino-to-2-o-d-mannopyranosy "1-phosphatidyl-1D-myo-
     phosphatidyl_myo_inositol_6_acylmannoside
     <-> ec_2_4_1_346 [2.4.1.346] +gdp_d_mannose -gdp -hplus
     2_o_d_mannopyranosyl_6_o_6_acyl_d_mannopyranosyl
-  }
-
-  branch from 2_o_d_mannopyranosyl_1_phosphatidyl_1d_myo_inosi side left {
-    2_o_d_mannopyranosyl_1_phosphatidyl_1d_myo_inosi
-    <-> ec_2_4_1_346 [2.4.1.346] +gdp_d_mannose +gdp +hplus
-    2_6_o_bis_d_mannopyranosyl_1_phosphatidyl_1d_myo
   }
 }

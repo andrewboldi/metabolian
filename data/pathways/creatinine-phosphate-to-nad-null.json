@@ -1,0 +1,575 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "creatinine-phosphate-to-nad-null",
+  "name": "creatinine phosphate to NAD",
+  "category": "other",
+  "summary": "A 4-step route from creatinine phosphate to NAD(+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR193628"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "creatinine_phosphate",
+      "name": "creatinine phosphate",
+      "formula": "C4H6N3O4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM47773"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "n_phosphocreatine",
+      "name": "N-phosphocreatine",
+      "formula": "C4H8N3O5P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM90130"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "dcdp",
+      "name": "dCDP",
+      "formula": "C9H12N3O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM411"
+      }
+    },
+    {
+      "id": "dctp",
+      "name": "dCTP",
+      "formula": "C9H12N3O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM360"
+      }
+    },
+    {
+      "id": "creatine",
+      "name": "creatine",
+      "formula": "C4H9N3O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM728947"
+      }
+    },
+    {
+      "id": "phytyl_phosphate",
+      "name": "phytyl phosphate",
+      "formula": "C20H39O4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:75483"
+      }
+    },
+    {
+      "id": "phytyl_diphosphate",
+      "name": "phytyl diphosphate",
+      "formula": "C20H39O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:75434"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_3_2",
+      "name": "creatine kinase",
+      "ec": [
+        "2.7.3.2"
+      ],
+      "xrefs": {
+        "uniprot": "P12277"
+      }
+    },
+    {
+      "id": "ec_2_7_1_23",
+      "name": "NAD(+) kinase",
+      "ec": [
+        "2.7.1.23"
+      ],
+      "xrefs": {
+        "uniprot": "Q4G0N4"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR193628",
+      "substrates": [
+        {
+          "metabolite": "creatinine_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_phosphocreatine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR193628"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR193628"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "creatine kinase",
+      "ec": "2.7.3.2",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dcdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_phosphocreatine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dctp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "creatine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_3_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR129749"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR129749"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR182270",
+      "substrates": [
+        {
+          "metabolite": "phytyl_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dctp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dcdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phytyl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR182270"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR182270"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "NAD(+) kinase",
+      "ec": "2.7.1.23",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dcdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dctp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_23"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR101886"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR101886"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_creatinine_phosphate_4-chlorophenyl-phosphate-to-l-erythro-3-methylma",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "creatinine_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-chlorophenyl-phosphate-to-l-erythro-3-methylma"
+      },
+      "note": "Shares creatinine phosphate with 4-Chlorophenyl phosphate to L-erythro-3-Methylmalyl-C….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM47773"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_creatinine_phosphate_creatinine-phosphate-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "creatinine_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "creatinine-phosphate-to-nad"
+      },
+      "note": "Shares creatinine phosphate with creatinine phosphate to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM47773"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_creatinine_phosphate_udp-to-dolichyl-hexadecanoate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "creatinine_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-dolichyl-hexadecanoate-null"
+      },
+      "note": "Shares creatinine phosphate with UDP to dolichyl hexadecanoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM47773"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_phosphocreatine_3r-hydroxytetradecanoate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_phosphocreatine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3r-hydroxytetradecanoate-to-h2o"
+      },
+      "note": "Shares N-phosphocreatine with (3R)-hydroxytetradecanoate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM90130"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_phosphocreatine_creatinine-phosphate-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_phosphocreatine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "creatinine-phosphate-to-nad"
+      },
+      "note": "Shares N-phosphocreatine with creatinine phosphate to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM90130"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dctp_4r-5r-4-5-dihydroxycycl-to-l-1-4-dithiothreitol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dctp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4r-5r-4-5-dihydroxycycl-to-l-1-4-dithiothreitol"
+      },
+      "note": "Shares dCTP with (4R,5R)-4,5-dihydroxycycl… to L-1,4-dithiothreitol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM360"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dctp_creatinine-phosphate-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dctp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "creatinine-phosphate-to-nad"
+      },
+      "note": "Shares dCTP with creatinine phosphate to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM360"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dctp_dcmp-to-dcdp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dctp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dcmp-to-dcdp"
+      },
+      "note": "Shares dCTP with dCMP to dCDP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM360"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dctp_dcmp-to-dcdp-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dctp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dcmp-to-dcdp-null"
+      },
+      "note": "Shares dCTP with dCMP to dCDP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM360"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dctp_dioleoyl-phosphatidic-acid-to-5-methyldeoxycytid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dctp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dioleoyl-phosphatidic-acid-to-5-methyldeoxycytid"
+      },
+      "note": "Shares dCTP with dioleoyl phosphatidic acid to 5-methyldeoxycytidine….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM360"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dctp_n4-acetyl-2-deoxycytidine-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dctp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n4-acetyl-2-deoxycytidine-to-succinate"
+      },
+      "note": "Shares dCTP with N4-acetyl-2'-deoxycytidine to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM360"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dctp_n4-acetyl-2-deoxycytidine-to-succinate-62936",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dctp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n4-acetyl-2-deoxycytidine-to-succinate-62936"
+      },
+      "note": "Shares dCTP with N4-acetyl-2'-deoxycytidine to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM360"
+          }
+        ]
+      }
+    }
+  ]
+}

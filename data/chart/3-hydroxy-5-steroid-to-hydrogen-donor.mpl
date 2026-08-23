@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-hydroxy-5-steroid-to-hydrogen-donor "3β-hydroxy-Δ5-steroid to hydrogen donor" {
-  spacing 264
+  spacing 288
 
   spine at 0,0 {
     3_hydroxy_5_steroid
@@ -30,13 +30,37 @@ pathway 3-hydroxy-5-steroid-to-hydrogen-donor "3β-hydroxy-Δ5-steroid to hydrog
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> ec_1_2_99_10 [1.2.99.10] +4_4_diapolycopen_4_al +hydrogen_acceptor +h2o +hplus
-    4_4_diapolycopen_4_oate
+    <-> . +linoleate +o2 +hydrogen_acceptor +h2o
+    9_r_hode
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> . +3_hydroxychol_5_en_24_oyl_coa +hydrogen_acceptor
-    3_hydroxychola_5_22_dien_24_oyl_coa
+    <-> . +linoleate +o2 +hydrogen_acceptor +h2o
+    13_s_hode
+  }
+
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> . +linoleate +hydrogen_donor +o2 +h2o
+    13_r_hode
+  }
+
+  branch from hydrogen_acceptor side right {
+    hydrogen_acceptor
+    <-> . +linoleate +hydrogen_donor +o2 +h2o
+    9_s_hode
+  }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> . +cyathatriol +hydrogen_acceptor
+    cyathin_a3
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> . +2r_9s_annullatin_h +hydrogen_acceptor
+    2r_annullatin_f
   }
 }

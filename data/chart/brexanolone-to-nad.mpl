@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway brexanolone-to-nad "brexanolone to NAD" {
-  spacing 268
+  spacing 232
 
   spine at 0,0 {
     brexanolone
@@ -16,41 +16,5 @@ pathway brexanolone-to-nad "brexanolone to NAD" {
     h
     <-> ec_1_1_1_51 [1.1.1.51] +nadh +5alpha_pregnane_3_20_dione -nad
     5alpha_pregnan_20alpha_ol_3_one
-  }
-
-  branch from h side left {
-    h
-    <-> . +co2 +urolithin_m5
-    3_4_8_9_10_pentahydroxy_6_oxobenzo_c_chromene_1
-  }
-
-  branch from h side right {
-    h
-    <-> . +alpha_d_ribofuranose_5_phosphate +h2o +phosphate
-    beta_d_ribopyranose
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> . +2_octaprenyl_6_methoxyphenol +h +o2 +nadp +h2o
-    2_octaprenyl_6_methoxy_1_4_benzoquinol
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> . +elymoclavine_aldehyde +o2 +nadp +h2o
-    paspalic_acid
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_93 [1.1.1.93] +nadh +oxaloglycolate +h
-    2r_3r_tartrate
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_93 [1.1.1.93] +2r_3s_tartrate +h +nadh
-    2s_2_hydroxy_3_oxosuccinic_acid
   }
 }

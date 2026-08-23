@@ -1,0 +1,426 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "aldehydo-d-glucose-to-d-glucosone",
+  "name": "aldehydo-D-glucose to D-glucosone",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from aldehydo-D-glucose to D-glucosone, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR199540"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "aldehydo_d_glucose",
+      "name": "aldehydo-D-glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364062"
+      }
+    },
+    {
+      "id": "l_glutamine",
+      "name": "L-glutamine",
+      "formula": "C5H10N2O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM37"
+      }
+    },
+    {
+      "id": "n_1_deoxy_d_fructos_1_yl_l_glutamine",
+      "name": "N-(1-deoxy-D-fructos-1-yl)-L-glutamine",
+      "short": "N-(1-deoxy-D-fructo…",
+      "formula": "C11H20N2O8",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1559592"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "4_carbamoyl_2_e_3s_4r_5r_3_4_5_6_tetrahydroxy_2",
+      "name": "4-carbamoyl-2-[(E)-[(3S,4R,5R)-3,4,5,6-tetrahydroxy-2-oxohexylidene]amino]butanoate",
+      "short": "4-carbamoyl-2-[(E)-…",
+      "formula": "C11H17N2O8",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1559593"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "H2O2",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM732620"
+      }
+    },
+    {
+      "id": "d_glucosone",
+      "name": "D-glucosone",
+      "formula": "C6H10O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:52417"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR199540",
+      "substrates": [
+        {
+          "metabolite": "aldehydo_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_glutamine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_1_deoxy_d_fructos_1_yl_l_glutamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR199540"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR199540"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR199541",
+      "substrates": [
+        {
+          "metabolite": "n_1_deoxy_d_fructos_1_yl_l_glutamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_carbamoyl_2_e_3s_4r_5r_3_4_5_6_tetrahydroxy_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR199541"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR199541"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR199542",
+      "substrates": [
+        {
+          "metabolite": "4_carbamoyl_2_e_3s_4r_5r_3_4_5_6_tetrahydroxy_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_glutamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_glucosone",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR199542"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR199542"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_n_1_deoxy_d_fructos_1_yl_l_glutamine_d-mannonate-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_1_deoxy_d_fructos_1_yl_l_glutamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-mannonate-to-h2o-null"
+      },
+      "note": "Shares N-(1-deoxy-D-fructos-1-yl)-L-glutamine with D-mannonate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1559592"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_1_deoxy_d_fructos_1_yl_l_glutamine_diphosphate-to-pyocyanine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_1_deoxy_d_fructos_1_yl_l_glutamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-pyocyanine"
+      },
+      "note": "Shares N-(1-deoxy-D-fructos-1-yl)-L-glutamine with diphosphate to pyocyanine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1559592"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glucosone_2-dehydro-d-glucose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glucosone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-dehydro-d-glucose-to-h2o"
+      },
+      "note": "Shares D-glucosone with 2-Dehydro-D-glucose to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:52417"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glucosone_2e-2-hydroxypenta-2-4-d-to-1-fluorocyclohexadie",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glucosone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2e-2-hydroxypenta-2-4-d-to-1-fluorocyclohexadie"
+      },
+      "note": "Shares D-glucosone with (2E)-2-hydroxypenta-2,4-d… to 1-Fluorocyclohexadiene-ci….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:52417"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glucosone_butanal-to-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glucosone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "butanal-to-acetate"
+      },
+      "note": "Shares D-glucosone with butanal to acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:52417"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glucosone_d-manp-1-3-d-manp-to-d-fructofuranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glucosone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-manp-1-3-d-manp-to-d-fructofuranose"
+      },
+      "note": "Shares D-glucosone with α-D-Manp-(1→3)-[α-D-Manp-… to D-fructofuranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:52417"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glucosone_diphosphate-to-pyocyanine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glucosone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-pyocyanine"
+      },
+      "note": "Shares D-glucosone with diphosphate to pyocyanine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:52417"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glucosone_protirelin-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glucosone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "protirelin-to-phosphate"
+      },
+      "note": "Shares D-glucosone with protirelin to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:52417"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glucosone_s-trans-1-propenyl-l-cyst-to-z-propanethial-s-ox",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glucosone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-trans-1-propenyl-l-cyst-to-z-propanethial-s-ox"
+      },
+      "note": "Shares D-glucosone with S-trans-1-propenyl-L-cyst… to (Z)-propanethial S-oxide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:52417"
+          }
+        ]
+      }
+    }
+  ]
+}

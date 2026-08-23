@@ -104,51 +104,6 @@
       "xrefs": {
         "metanetx": "MNXM507495"
       }
-    },
-    {
-      "id": "adp",
-      "name": "ADP",
-      "formula": "C10H12N5O10P2",
-      "charge": -3,
-      "xrefs": {
-        "metanetx": "MNXM40333"
-      }
-    },
-    {
-      "id": "chromate",
-      "name": "chromate",
-      "formula": "CrO4",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM736620"
-      }
-    },
-    {
-      "id": "phosphate",
-      "name": "phosphate",
-      "formula": "HO4P",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM9"
-      }
-    },
-    {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM3"
-      }
-    },
-    {
-      "id": "d_cysteine",
-      "name": "D-cysteine",
-      "formula": "C3H7NO2S",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM2112"
-      }
     }
   ],
   "enzymes": [
@@ -171,7 +126,10 @@
       "name": "L-lactate dehydrogenase",
       "ec": [
         "1.1.1.27"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q6ZMR3"
+      }
     }
   ],
   "reactions": [
@@ -310,103 +268,269 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "Reaction MNXR96912",
-      "substrates": [
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "chromate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "chromate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR96912"
+      "id": "xt_acryloyl_coa_2-6-dimethylaniline-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acryloyl_coa"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2-6-dimethylaniline-to-h2o"
+      },
+      "note": "Shares acryloyl-CoA with 2,6-dimethylaniline to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR96912"
+            "id": "MNXM1364005"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "Reaction MNXR96996",
-      "substrates": [
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "d_cysteine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "d_cysteine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR96996"
+      "id": "xt_acryloyl_coa_acetoacetyl-coa-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acryloyl_coa"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "acetoacetyl-coa-to-h2o-null"
+      },
+      "note": "Shares acryloyl-CoA with acetoacetyl-CoA to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR96996"
+            "id": "MNXM1364005"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_acryloyl_coa_acryloyl-coa-to-nadp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acryloyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acryloyl-coa-to-nadp"
+      },
+      "note": "Shares acryloyl-CoA with acryloyl-CoA to NADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364005"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_acryloyl_coa_acryloyl-coa-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acryloyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acryloyl-coa-to-o2"
+      },
+      "note": "Shares acryloyl-CoA with acryloyl-CoA to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364005"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_acryloyl_coa_antibiotic-ji-20ba-to-antibiotic-g-418",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acryloyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "antibiotic-ji-20ba-to-antibiotic-g-418"
+      },
+      "note": "Shares acryloyl-CoA with Antibiotic JI-20Ba to Antibiotic G-418.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364005"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_acryloyl_coa_dimethylselenoniopropanoa-to-acrylate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acryloyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dimethylselenoniopropanoa-to-acrylate"
+      },
+      "note": "Shares acryloyl-CoA with dimethylselenoniopropanoa… to acrylate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364005"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_acryloyl_coa_diphosphate-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "acryloyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-o2"
+      },
+      "note": "Shares acryloyl-CoA with diphosphate to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364005"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lactoyl_coa_pmf-to-lactoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lactoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "pmf-to-lactoyl-coa"
+      },
+      "note": "Shares lactoyl-CoA with PMF to lactoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM726793"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_deamido_nad_deamido-nad-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "deamido_nad"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "deamido-nad-to-h2o"
+      },
+      "note": "Shares deamido-NAD with deamido-NAD to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1103300"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_deamido_nad_deamido-nad-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "deamido_nad"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "deamido-nad-to-h2o-null"
+      },
+      "note": "Shares deamido-NAD with deamido-NAD to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1103300"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_deamido_nad_nadh-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "deamido_nad"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-h2o"
+      },
+      "note": "Shares deamido-NAD with NADH to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1103300"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_deamido_nad_propanoate-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "deamido_nad"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "propanoate-to-o2"
+      },
+      "note": "Shares deamido-NAD with propanoate to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1103300"
           }
         ]
       }

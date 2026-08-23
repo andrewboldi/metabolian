@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 6z-9z-12z-15z-18z-tetra-to-hydrogen-acceptor "(6Z,9Z,12Z,15Z,18Z)-tetraâ€¦ to hydrogen acceptor" {
-  spacing 170
+  spacing 152
 
   spine at 0,0 {
     6z_9z_12z_15z_18z_tetracosapentaenoyl_coa
@@ -26,23 +26,5 @@ pathway 6z-9z-12z-15z-18z-tetra-to-hydrogen-acceptor "(6Z,9Z,12Z,15Z,18Z)-tetraâ
     7z_10z_13z_16z_docosatetraenoyl_coa
     <-> . +hydrogen_donor +o2 -hydrogen_acceptor -h2o
     4z_7z_10z_13z_16z_docosapentaenoyl_coa
-  }
-
-  branch from 6z_9z_12z_15z_18z_3_oxotetracosapentaenoyl_coa side left {
-    6z_9z_12z_15z_18z_3_oxotetracosapentaenoyl_coa
-    <-> . +nadh +h +nad
-    3_s_hydroxy_tetracosa_6_9_12_15_18_all_cis_penta
-  }
-
-  branch from 4z_7z_10z_13z_16z_docosapentaenoyl_coa side right {
-    4z_7z_10z_13z_16z_docosapentaenoyl_coa
-    <-> . +s_carnitine +4e_7e_10e_13e_16e_docosapentaenoylcarnitine
-    coa
-  }
-
-  branch from 4z_7z_10z_13z_16z_docosapentaenoyl_coa side left {
-    4z_7z_10z_13z_16z_docosapentaenoyl_coa
-    <-> . +diphosphate +amp +atp +coa
-    docosa_4_7_10_13_16_pentaenoic_acid
   }
 }

@@ -1,0 +1,514 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-hydroxypentanoyl-coa-to-coa-null",
+  "name": "3-hydroxypentanoyl-CoA to CoA",
+  "category": "lipid-metabolism",
+  "summary": "A 3-step route from 3-hydroxypentanoyl-CoA(4-) to CoA, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR190416"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:231432"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_hydroxypentanoyl_coa",
+      "name": "3-hydroxypentanoyl-CoA",
+      "short": "3-hydroxypentanoyl-…",
+      "formula": "C26H40N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:231432"
+      }
+    },
+    {
+      "id": "2e_pentenoyl_coa",
+      "name": "(2E)-pentenoyl-CoA",
+      "formula": "C26H38N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:86160"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1105762"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "pentanoyl_coa",
+      "name": "pentanoyl-CoA",
+      "formula": "C26H40N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1104372"
+      }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H33N9O15P2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364149"
+      }
+    },
+    {
+      "id": "cholesterol",
+      "name": "cholesterol",
+      "formula": "C27H46O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM726122"
+      }
+    },
+    {
+      "id": "cholesteryl_pentanoate",
+      "name": "cholesteryl pentanoate",
+      "short": "cholesteryl…",
+      "formula": "C32H54O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM45927"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_3_1_26",
+      "name": "sterol O-acyltransferase",
+      "ec": [
+        "2.3.1.26"
+      ],
+      "xrefs": {
+        "uniprot": "P35610"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR190416",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxypentanoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2e_pentenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR190416"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR190416"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR158650",
+      "substrates": [
+        {
+          "metabolite": "2e_pentenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pentanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR158650"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR158650"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "sterol O-acyltransferase",
+      "ec": "2.3.1.26",
+      "substrates": [
+        {
+          "metabolite": "pentanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cholesterol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cholesteryl_pentanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_26"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR164662"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR164662"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3_hydroxypentanoyl_coa_3-hydroxypentanoyl-coa-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_hydroxypentanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxypentanoyl-coa-to-coa"
+      },
+      "note": "Shares 3-hydroxypentanoyl-CoA with 3-hydroxypentanoyl-CoA to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:231432"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_hydroxypentanoyl_coa_3-hydroxypentanoyl-coa-to-trans-pent-3-enoic-aci",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_hydroxypentanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxypentanoyl-coa-to-trans-pent-3-enoic-aci"
+      },
+      "note": "Shares 3-hydroxypentanoyl-CoA with 3-hydroxypentanoyl-CoA to trans-pent-3-enoic acid.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:231432"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2e_pentenoyl_coa_1-5-anhydro-d-fructose-to-d-cellotrionate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2e_pentenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-5-anhydro-d-fructose-to-d-cellotrionate"
+      },
+      "note": "Shares (2E)-pentenoyl-CoA with 1,5-anhydro-D-fructose to D-cellotrionate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:86160"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2e_pentenoyl_coa_1-palmitoyl-2-valeroyl-sn-to-o-s-3r-hydroxyhepta",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2e_pentenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-palmitoyl-2-valeroyl-sn-to-o-s-3r-hydroxyhepta"
+      },
+      "note": "Shares (2E)-pentenoyl-CoA with 1-palmitoyl-2-valeroyl-sn… to O-[S-(3R)-hydroxyheptanoy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:86160"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2e_pentenoyl_coa_3-hydroxypentanoyl-coa-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2e_pentenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxypentanoyl-coa-to-coa"
+      },
+      "note": "Shares (2E)-pentenoyl-CoA with 3-hydroxypentanoyl-CoA to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:86160"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2e_pentenoyl_coa_3-hydroxypentanoyl-coa-to-trans-pent-3-enoic-aci",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2e_pentenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxypentanoyl-coa-to-trans-pent-3-enoic-aci"
+      },
+      "note": "Shares (2E)-pentenoyl-CoA with 3-hydroxypentanoyl-CoA to trans-pent-3-enoic acid.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:86160"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2e_pentenoyl_coa_alpha-d-glucose-to-keto-d-fructose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2e_pentenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-glucose-to-keto-d-fructose"
+      },
+      "note": "Shares (2E)-pentenoyl-CoA with alpha-D-glucose… to keto-D-fructose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:86160"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2e_pentenoyl_coa_pentanamide-to-3-propylmalate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2e_pentenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "pentanamide-to-3-propylmalate"
+      },
+      "note": "Shares (2E)-pentenoyl-CoA with pentanamide to 3-propylmalate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:86160"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2e_pentenoyl_coa_pentanamide-to-3-propylmalate-10000",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2e_pentenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "pentanamide-to-3-propylmalate-10000"
+      },
+      "note": "Shares (2E)-pentenoyl-CoA with pentanamide to 3-propylmalate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:86160"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pentanoyl_coa_3-hydroxypentanoyl-coa-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pentanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxypentanoyl-coa-to-coa"
+      },
+      "note": "Shares pentanoyl-CoA with 3-hydroxypentanoyl-CoA to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104372"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pentanoyl_coa_acetoacetyl-coa-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pentanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetoacetyl-coa-to-h2o"
+      },
+      "note": "Shares pentanoyl-CoA with acetoacetyl-CoA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104372"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pentanoyl_coa_p-nitrophenyl-valerate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pentanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "p-nitrophenyl-valerate-to-h2o"
+      },
+      "note": "Shares pentanoyl-CoA with p-Nitrophenyl valerate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104372"
+          }
+        ]
+      }
+    }
+  ]
+}

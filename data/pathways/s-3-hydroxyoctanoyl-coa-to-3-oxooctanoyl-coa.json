@@ -128,6 +128,16 @@
       "xrefs": {
         "chebi": "CHEBI:85640"
       }
+    },
+    {
+      "id": "3_hydroxyoctanoyl_coa",
+      "name": "3-hydroxyoctanoyl-CoA",
+      "short": "3-hydroxyoctanoyl-C…",
+      "formula": "C29H46N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:86040"
+      }
     }
   ],
   "enzymes": [],
@@ -315,6 +325,197 @@
           {
             "db": "Rhea",
             "id": "RHEA:46044"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "(2E)-octenoyl-CoA + H2O = 3-hydroxyoctanoyl-CoA",
+      "equation": "(2E)-octenoyl-CoA + H2O = 3-hydroxyoctanoyl-CoA",
+      "substrates": [
+        {
+          "metabolite": "trans_oct_2_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_hydroxyoctanoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:46348"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46348"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_s_3_hydroxyoctanoyl_coa_n-methylhexanamide-to-3-oxooctanoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_3_hydroxyoctanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-methylhexanamide-to-3-oxooctanoyl-coa"
+      },
+      "note": "Shares (S)-3-hydroxyoctanoyl-CoA with N-methylhexanamide to 3-oxooctanoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62617"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_oct_2_enoyl_coa_dioleoyl-phosphatidic-acid-to-1-octanoyl-2-oleoy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_oct_2_enoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dioleoyl-phosphatidic-acid-to-1-octanoyl-2-oleoy"
+      },
+      "note": "Shares trans-oct-2-enoyl-CoA with dioleoyl phosphatidic acid to 1-octanoyl-2-oleoyl-sn-gl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62242"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_oct_2_enoyl_coa_octanoyl-coa-to-glyoxylate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_oct_2_enoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "octanoyl-coa-to-glyoxylate"
+      },
+      "note": "Shares trans-oct-2-enoyl-CoA with octanoyl-CoA to glyoxylate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62242"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_oct_2_enoyl_coa_trans-3-cis-5-octadienoyl-to-octanoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_oct_2_enoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-3-cis-5-octadienoyl-to-octanoyl-coa"
+      },
+      "note": "Shares trans-oct-2-enoyl-CoA with trans-3-cis-5-octadienoyl… to octanoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62242"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_oct_2_enoyl_coa_trioctanoin-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_oct_2_enoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trioctanoin-to-diphosphate"
+      },
+      "note": "Shares trans-oct-2-enoyl-CoA with trioctanoin to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62242"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_3_hydroxyoctanoyl_coa_n-methylhexanamide-to-3-oxooctanoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_3_hydroxyoctanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-methylhexanamide-to-3-oxooctanoyl-coa"
+      },
+      "note": "Shares (R)-3-hydroxyoctanoyl-CoA with N-methylhexanamide to 3-oxooctanoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74279"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_oxooctanoyl_coa_n-methylhexanamide-to-3-oxooctanoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_oxooctanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-methylhexanamide-to-3-oxooctanoyl-coa"
+      },
+      "note": "Shares 3-oxooctanoyl-CoA with N-methylhexanamide to 3-oxooctanoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62619"
           }
         ]
       }

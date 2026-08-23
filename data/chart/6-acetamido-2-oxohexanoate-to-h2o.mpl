@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 6-acetamido-2-oxohexanoate-to-h2o "6-acetamido-2-oxohexanoate to H2O" {
-  spacing 206
+  spacing 260
 
   spine at 0,0 {
     6_acetamido_2_oxohexanoate
@@ -18,26 +18,14 @@ pathway 6-acetamido-2-oxohexanoate-to-h2o "6-acetamido-2-oxohexanoate to H2O" {
 
   branch from acetate side left {
     acetate
-    <-> ec_3_1_1_6 [3.1.1.6] +13_sophorosyloxydocosanoic_acid +h2o
-    13_o_2_beta_d_glucopyranosyl_beta_d_glucopyranos
+    <-> ec_3_1_1_13 [3.1.1.13] +cholesteryl_acetate +h2o +cholesterol
+    h
   }
 
   branch from acetate side right {
     acetate
-    <-> ec_3_1_1_6 [3.1.1.6] +h +13_o_2_beta_d_glucopyranosyl_beta_d_glucopyranos +h2o
-    13_sophorosyloxydocosanoate_6_6_diacetate
-  }
-
-  branch from 6_amino_2_oxohexanoate side left {
-    6_amino_2_oxohexanoate
-    <-> . +l_lysine +2_oxoglutarate
-    l_glutamate
-  }
-
-  branch from d_lysine side right {
-    d_lysine
-    <-> . +fructoselysine_6_phosphate +h2o
-    beta_d_glucose_6_phosphate
+    <-> ec_3_1_1_1 [3.1.1.1] +o_nitrophenyl_acetate +h2o +h
+    2_nitrophenol
   }
 
   branch from d_lysine side left {
@@ -46,27 +34,93 @@ pathway 6-acetamido-2-oxohexanoate-to-h2o "6-acetamido-2-oxohexanoate to H2O" {
     atp
   }
 
-  branch from pyruvate side right {
-    pyruvate
-    <-> ec_2_6_1_58 [2.6.1.58] +2_oxo_4_phenylbutyric_acid +l_alanine +l_homophenylalanine
-    h
+  branch from d_lysine side right {
+    d_lysine
+    <-> . +r_2_amino_6_oxohexanoate +l_glutamate
+    2_oxoglutarate
   }
 
   branch from pyruvate side left {
     pyruvate
-    <-> . +sulfonopine +nadp +h2o +h +nadph
-    s_methyl_l_methionine
+    <-> ec_4_4_1_3 [4.4.1.3] +nh4 +l_cysteine +h2o
+    l_lanthionine_dizwitterion
   }
 
-  branch from h2o side right {
-    h2o
-    <-> ec_3_3_2_9 [3.3.2.9] +7_12_dimethylbenz_a_anthracene_5_6_oxide
-    trans_5_6_dihydro_5_6_dihydroxy_7_12_dimethylben
+  branch from pyruvate side right {
+    pyruvate
+    <-> ec_4_1_99_1 [4.1.99.1] +o_nitrobenzenethiol +nh4 +h2o
+    s_o_nitrophenyl_l_cysteine
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +9_10_dihydroxyoctadecanoate +o2 +nadph +9_10_18_trihydroxyoctadecanoic_acid
-    nadp
+    <-> ec_3_1_1_1 [3.1.1.1] +phenylthioacetate +thioacetate
+    phenol
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +tyr_ala +l_tyrosine
+    alanine
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +l_leucine +l_tyrosine
+    tyr_leu
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +tyr_phe +l_tyrosine
+    l_phenylalanine
+  }
+
+  branch from acetate side left {
+    acetate
+    <-> ec_3_1_1_3 [3.1.1.3] +2_aminofluorene +h +h2o
+    2_acetamidofluorene
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> ec_2_3_1_190 [2.3.1.190] +acetoin +2_6_dichloroindophenol +h2o +h +acetaldehyde
+    reduced_2_6_dichlorophenolindophenol
+  }
+
+  branch from d_alanine side left {
+    d_alanine
+    <-> ec_3_4_11_19 [3.4.11.19] +nh4 +h2o
+    1_2_diaminopropanoate
+  }
+
+  branch from d_alanine side right {
+    d_alanine
+    <-> ec_3_4_11_19 [3.4.11.19] +glycine +h2o
+    d_ala_gly
+  }
+
+  branch from pyruvate side left {
+    pyruvate
+    <-> ec_4_1_99_1 [4.1.99.1] +s_methylcysteine +h2o +nh4
+    methanethiol
+  }
+
+  branch from pyruvate side right {
+    pyruvate
+    <-> ec_4_4_1_11 [4.4.1.11] +h +acetate +nh4 +h2o
+    o_acetyl_l_serine
+  }
+
+  branch from alpha_d_glucose_6_phosphate side left {
+    alpha_d_glucose_6_phosphate
+    <-> . +phosphoenolpyruvate +pyruvate
+    alpha_d_glucose
+  }
+
+  branch from alpha_d_glucose_6_phosphate side right {
+    alpha_d_glucose_6_phosphate
+    <-> ec_2_7_1_142 [2.7.1.142] +alpha_d_glucose +sn_glycerol_3_phosphate
+    glycerol
   }
 }

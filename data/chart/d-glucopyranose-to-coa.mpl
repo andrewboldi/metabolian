@@ -4,31 +4,19 @@
 # edit the generator, not this file.
 
 pathway d-glucopyranose-to-coa "D-glucopyranose to CoA" {
-  spacing 320
+  spacing 308
 
   spine at 0,0 {
     glucose
-    <-> . +cyanidin_3_o_glucoside_7_o_6_o_4_o_6_o_p_hydroxy -1_o_4_hydroxybenzoyl_d_glucopyranose
-    cyanidin_3_o_glucoside_7_o_6_o_4_o_glucosyl_oxyb
-    <-> . +4_hydroxybenzoate +h -1_o_4_hydroxybenzoyl_d_glucopyranose
-    cyanidin_3_o_glucoside_7_o_6_o_p_hydroxybenzoyl
-    <-> . +glucose -1_o_4_hydroxybenzoyl_d_glucopyranose
-    cyanidin_3_7_di_o_beta_d_glucoside
-    <-> ec_2_4_1_300 [2.4.1.300] +4_hydroxybenzoate +h -1_o_4_hydroxybenzoyl_d_glucopyranose
-    cyanidin_3_o_glucoside
-    <-> ec_2_3_1_215 [2.3.1.215] +trans_4_coumaroyl_coa -coa
-    cyanidin_3_o_6_o_p_coumaroyl_glucoside
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +2_methylpropanoyl_coa +2_4_di_2_methyl_butanoyl_3_4_methyl_pentanoyl_su
-    2_4_di_2_methyl_butanoyl_3_4_methyl_pentanoyl_6
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +2s_2_methylbutanoyl_coa +2_4_di_2_methyl_butanoyl_3_4_methyl_pentanoyl_su
-    2_4_6_tri_2_methyl_butanoyl_3_4_methyl_pentanoyl
+    <-> . +celosianin_ii -1_o_feruloyl_d_glucose
+    amaranthin
+    <-> ec_2_4_1_300 [2.4.1.300] +pelargonidin_3_o_d_glucoside_betaine +1_o_feruloyl_d_glucose -e_ferulate
+    pelargonidin_3_7_di_o_beta_d_glucoside
+    <-> ec_2_4_1_300 [2.4.1.300] +cyanidin_3_7_di_o_d_glucoside_betaine +e_ferulate -1_o_feruloyl_d_glucose
+    cyanidin_3_o_beta_d_glucoside
+    <-> ec_2_4_1_299 [2.4.1.299] +1_o_vanilloyl_d_glucose -vanillate
+    cyanidin_3_5_di_o_beta_d_glucoside
+    <-> ec_2_3_1_153 [2.3.1.153] +trans_4_coumaroyl_coa +h -coa
+    cyanidin_3_o_beta_d_glucoside_5_o_6_coumaroyl_be
   }
 }

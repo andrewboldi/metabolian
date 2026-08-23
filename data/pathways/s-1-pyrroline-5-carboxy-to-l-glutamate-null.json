@@ -1,0 +1,538 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-1-pyrroline-5-carboxy-to-l-glutamate-null",
+  "name": "(S)-1-pyrroline-5-carboxy… to L-glutamate",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from (S)-1-pyrroline-5-carboxylate to L-glutamate(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR196673"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_1_pyrroline_5_carboxylate",
+      "name": "(S)-1-pyrroline-5-carboxylate",
+      "short": "1-pyrroline-5-carbo…",
+      "formula": "C5H6NO2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1105060"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "guanidine",
+      "name": "guanidine",
+      "formula": "CH6N3",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM2828"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "5_hydroxy_l_arginine",
+      "name": "5-hydroxy-L-arginine",
+      "formula": "C6H15N4O3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:231271"
+      }
+    },
+    {
+      "id": "guanidinium",
+      "name": "guanidinium",
+      "formula": "CH6N3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:30087"
+      }
+    },
+    {
+      "id": "l_glutamic_5_semialdehyde",
+      "name": "L-glutamic 5-semialdehyde",
+      "short": "L-glutamic…",
+      "formula": "C5H9NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58066"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29985"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_2_1_88",
+      "name": "L-glutamate gamma-semialdehyde dehydrogenase",
+      "ec": [
+        "1.2.1.88"
+      ],
+      "xrefs": {
+        "uniprot": "P30038"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR196673",
+      "substrates": [
+        {
+          "metabolite": "s_1_pyrroline_5_carboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "guanidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_hydroxy_l_arginine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR196673"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196673"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "5-hydroxy-L-arginine = guanidine + L-glutamate 5-semialdehyde",
+      "equation": "5-hydroxy-L-arginine = guanidine + L-glutamate 5-semialdehyde",
+      "substrates": [
+        {
+          "metabolite": "5_hydroxy_l_arginine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "guanidinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_glutamic_5_semialdehyde",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:31527"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31527"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "L-glutamate gamma-semialdehyde dehydrogenase",
+      "equation": "L-glutamate 5-semialdehyde + NAD(+) + H2O = L-glutamate + NADH + 2 H(+)",
+      "ec": "1.2.1.88",
+      "substrates": [
+        {
+          "metabolite": "l_glutamic_5_semialdehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_88"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:30235"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30235"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_guanidine_5-cis-lycopene-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "guanidine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cis-lycopene-to-h2o"
+      },
+      "note": "Shares guanidine with 5-cis-lycopene to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2828"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_guanidine_5-dehydroshikimate-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "guanidine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-dehydroshikimate-to-nadph"
+      },
+      "note": "Shares guanidine with 5-Dehydroshikimate to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2828"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_guanidine_d-alanine-to-two-linked-disacharide-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "guanidine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-alanine-to-two-linked-disacharide-null"
+      },
+      "note": "Shares guanidine with D-alanine to Two linked disacharide….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2828"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_guanidine_d-alanine-to-undecaprenyl-diphospho-n-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "guanidine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-alanine-to-undecaprenyl-diphospho-n-null"
+      },
+      "note": "Shares guanidine with D-alanine to Undecaprenyl-diphospho-N-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2828"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_guanidine_dtdp-4-amino-4-6-dideoxy-to-h-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "guanidine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-4-amino-4-6-dideoxy-to-h-null"
+      },
+      "note": "Shares guanidine with DTDP-4-amino-4,6-dideoxy-… to H.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2828"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_guanidine_s-1-pyrroline-5-carboxy-to-l-glutamate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "guanidine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-1-pyrroline-5-carboxy-to-l-glutamate"
+      },
+      "note": "Shares guanidine with (S)-1-pyrroline-5-carboxy… to L-glutamate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2828"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_guanidine_z-indol-3-yl-n-sulfo-to-h2o-76227",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "guanidine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "z-indol-3-yl-n-sulfo-to-h2o-76227"
+      },
+      "note": "Shares guanidine with (Z)-(indol-3-yl)-N-(sulfo… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2828"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_hydroxy_l_arginine_2-deoxymugineate-to-succinyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_hydroxy_l_arginine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-deoxymugineate-to-succinyl-coa"
+      },
+      "note": "Shares 5-hydroxy-L-arginine with 2'-deoxymugineate to succinyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:231271"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_hydroxy_l_arginine_2-deoxymugineate-to-succinyl-coa-12200",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_hydroxy_l_arginine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-deoxymugineate-to-succinyl-coa-12200"
+      },
+      "note": "Shares 5-hydroxy-L-arginine with 2'-deoxymugineate to succinyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:231271"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_hydroxy_l_arginine_s-1-pyrroline-5-carboxy-to-l-glutamate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_hydroxy_l_arginine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-1-pyrroline-5-carboxy-to-l-glutamate"
+      },
+      "note": "Shares 5-hydroxy-L-arginine with (S)-1-pyrroline-5-carboxy… to L-glutamate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:231271"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_guanidinium_co2-to-cyanamide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "guanidinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "co2-to-cyanamide"
+      },
+      "note": "Shares guanidinium with CO2 to cyanamide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:30087"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_guanidinium_co2-to-cyanamide-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "guanidinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "co2-to-cyanamide-null"
+      },
+      "note": "Shares guanidinium with CO2 to cyanamide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:30087"
+          }
+        ]
+      }
+    }
+  ]
+}

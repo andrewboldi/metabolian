@@ -194,23 +194,23 @@
       }
     },
     {
-      "id": "5_end_n_acetyl_d_glucosamine_diphospho_uridyl_ri",
-      "name": "5'-end N-acetyl-α-D-glucosamine-diphospho-uridyl-ribonucleoside",
-      "short": "5'-end N-acetyl-α-D…",
-      "formula": "C22H31N3O23P3R",
-      "charge": -3,
+      "id": "5_end_n2_n2_n7_trimethyl_5_triphosphoguanosine_a",
+      "name": "5'-end (N2,N2,N7-trimethyl 5'-triphosphoguanosine)-adenosine(2−)",
+      "short": "5'-end (N2,N2,N7-tr…",
+      "formula": "C23H30N10O17P3",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:232345"
+        "chebi": "CHEBI:156475"
       }
     },
     {
-      "id": "udpglcnac",
-      "name": "UDP-N-acetyl-α-D-glucosamine (UDP-GlcNAc)",
-      "short": "UDP-N-acetyl-α-D-gl…",
-      "formula": "C17H25N3O17P2",
+      "id": "5_end_phospho_adenosine_2",
+      "name": "5'-end phospho-adenosine(2−)",
+      "short": "5'-end phospho-aden…",
+      "formula": "C10H11N5O7P",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:57705"
+        "chebi": "CHEBI:143978"
       }
     }
   ],
@@ -488,11 +488,11 @@
     },
     {
       "id": "r7",
-      "name": "a 5'-end N-acetyl-alpha-D-glucosamine-diphospho-uridyl-ribonucleoside in mRNA + H2O = a...",
-      "equation": "a 5'-end N-acetyl-alpha-D-glucosamine-diphospho-uridyl-ribonucleoside in mRNA + H2O = a 5'-end phospho-ribonucleoside in mRNA + UDP-N-acetyl-alpha-D-glucosamine + H(+)",
+      "name": "a 5'-end (N(2),N(2),N(7)-trimethyl 5'-triphosphoguanosine)-adenosine in mRNA + H2O = a ...",
+      "equation": "a 5'-end (N(2),N(2),N(7)-trimethyl 5'-triphosphoguanosine)-adenosine in mRNA + H2O = a 5'-end phospho-adenosine in mRNA + N(2),N(2),N(7)-trimethyl-GDP + 2 H(+)",
       "substrates": [
         {
-          "metabolite": "5_end_n_acetyl_d_glucosamine_diphospho_uridyl_ri",
+          "metabolite": "5_end_n2_n2_n7_trimethyl_5_triphosphoguanosine_a",
           "stoichiometry": 1
         },
         {
@@ -502,29 +502,295 @@
       ],
       "products": [
         {
-          "metabolite": "5_end_ribonucleotide_2",
+          "metabolite": "5_end_phospho_adenosine_2",
           "stoichiometry": 1
         },
         {
-          "metabolite": "udpglcnac",
+          "metabolite": "n2_n2_n7_trimethylguanosine_diphosphate",
           "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:82603"
+        "rhea": "RHEA:65368"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:82603"
+            "id": "RHEA:65368"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_5_n7_methyl_5_triphosphoguanosine_ribonucleoside_5-5-triphosphoguanosin-to-s-s-adenosyl-l-methion",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_n7_methyl_5_triphosphoguanosine_ribonucleoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-5-triphosphoguanosin-to-s-s-adenosyl-l-methion"
+      },
+      "note": "Shares 5'-(N7-methyl 5'-triphosphoguanosine)-ribonucleoside(2−) with 5'-(5'-triphosphoguanosin… to (S)-S-adenosyl-L-methioni….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:156461"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_n7_methyl_5_triphosphoguanosine_ribonucleoside_5-end-ribonucleotide-to-7-methylguanosine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_n7_methyl_5_triphosphoguanosine_ribonucleoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-end-ribonucleotide-to-7-methylguanosine"
+      },
+      "note": "Shares 5'-(N7-methyl 5'-triphosphoguanosine)-ribonucleoside(2−) with 5'-end ribonucleotide… to 7-methylguanosine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:156461"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_n7_methyl_5_triphosphoguanosine_ribonucleoside_5-n7-methyl-to-5-end-ribonucleoside",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_n7_methyl_5_triphosphoguanosine_ribonucleoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-n7-methyl-to-5-end-ribonucleoside"
+      },
+      "note": "Shares 5'-(N7-methyl 5'-triphosphoguanosine)-ribonucleoside(2−) with 5'-(N7-methyl… to 5'-end ribonucleoside….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:156461"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_n7_methyl_5_triphosphoguanosine_ribonucleoside_n-5-guanylyl-l-lysine-to-s-adenosyl-l-homocystei",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_n7_methyl_5_triphosphoguanosine_ribonucleoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-5-guanylyl-l-lysine-to-s-adenosyl-l-homocystei"
+      },
+      "note": "Shares 5'-(N7-methyl 5'-triphosphoguanosine)-ribonucleoside(2−) with Nε-(5'-guanylyl)-L-lysine… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:156461"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_n2_n7_dimethyl_5_triphosphoguanosine_ribonucle_5-n7-methyl-to-5-end-ribonucleoside",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_n2_n7_dimethyl_5_triphosphoguanosine_ribonucle"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-n7-methyl-to-5-end-ribonucleoside"
+      },
+      "note": "Shares 5'-(N2,N7-dimethyl 5'-triphosphoguanosine)-ribonucleoside(2−) with 5'-(N7-methyl… to 5'-end ribonucleoside….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:172880"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_end_n2_n2_n7_trimethyl_5_triphosphoguanosine_r_5-n7-methyl-to-5-end-ribonucleoside",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_end_n2_n2_n7_trimethyl_5_triphosphoguanosine_r"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-n7-methyl-to-5-end-ribonucleoside"
+      },
+      "note": "Shares 5'-end (N2,N2,N7-trimethyl 5'-triphosphoguanosine)- ribonucleoside(2−) with 5'-(N7-methyl… to 5'-end ribonucleoside….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:167623"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nucleoside_5_triphoshate_5-end-ribonucleotide-2-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nucleoside_5_triphoshate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-end-ribonucleotide-2-to-diphosphate"
+      },
+      "note": "Shares nucleoside 5'-triphoshate with 5'-end ribonucleotide(2−) to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61557"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nucleoside_5_triphoshate_chlorophyll-to-2-4-divinyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nucleoside_5_triphoshate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "chlorophyll-to-2-4-divinyl"
+      },
+      "note": "Shares nucleoside 5'-triphoshate with chlorophyll to 2,4-divinyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61557"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nucleoside_5_triphoshate_dioleoyl-phosphatidic-acid-to-5-methyldeoxycytid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nucleoside_5_triphoshate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dioleoyl-phosphatidic-acid-to-5-methyldeoxycytid"
+      },
+      "note": "Shares nucleoside 5'-triphoshate with dioleoyl phosphatidic acid to 5-methyldeoxycytidine….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61557"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nucleoside_5_triphoshate_ndp-d-glucose-to-nucleoside-5-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nucleoside_5_triphoshate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ndp-d-glucose-to-nucleoside-5-diphosphate"
+      },
+      "note": "Shares nucleoside 5'-triphoshate with NDP-α-D-glucose to nucleoside 5'-diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61557"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nucleoside_5_triphoshate_nucleoside-5-triphoshate-to-nucleoside-5-triphos",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nucleoside_5_triphoshate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nucleoside-5-triphoshate-to-nucleoside-5-triphos"
+      },
+      "note": "Shares nucleoside 5'-triphoshate with nucleoside 5'-triphoshate to nucleoside 5'-triphoshate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61557"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nucleoside_5_triphoshate_nucleoside-5-triphoshate-to-ribonucleoside",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nucleoside_5_triphoshate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nucleoside-5-triphoshate-to-ribonucleoside"
+      },
+      "note": "Shares nucleoside 5'-triphoshate with nucleoside 5'-triphoshate to ribonucleoside.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61557"
           }
         ]
       }

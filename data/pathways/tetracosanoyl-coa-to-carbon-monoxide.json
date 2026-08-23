@@ -1,0 +1,561 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "tetracosanoyl-coa-to-carbon-monoxide",
+  "name": "tetracosanoyl-CoA to carbon monoxide",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from tetracosanoyl-CoA to carbon monoxide(1+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR159185"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "tetracosanoyl_coa",
+      "name": "tetracosanoyl-CoA",
+      "formula": "C45H78N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1104012"
+      }
+    },
+    {
+      "id": "diphosphate",
+      "name": "diphosphate",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM11"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM728294"
+      }
+    },
+    {
+      "id": "tetracosanoate",
+      "name": "tetracosanoate",
+      "formula": "C24H47O2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM3297"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "tetracosanal",
+      "name": "tetracosanal",
+      "formula": "C24H48O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:169310"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "tricosane",
+      "name": "tricosane",
+      "formula": "C23H48",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:32934"
+      }
+    },
+    {
+      "id": "carbon_monoxide",
+      "name": "carbon monoxide",
+      "formula": "CHO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58072"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_2_1_48",
+      "name": "long-chain-aldehyde dehydrogenase",
+      "ec": [
+        "1.2.1.48"
+      ],
+      "xrefs": {
+        "uniprot": "P43353"
+      }
+    },
+    {
+      "id": "ec_1_2_1_5",
+      "name": "aldehyde dehydrogenase [NAD(P)(+)]",
+      "ec": [
+        "1.2.1.5"
+      ],
+      "xrefs": {
+        "uniprot": "P30838"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR159185",
+      "substrates": [
+        {
+          "metabolite": "tetracosanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "tetracosanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR159185"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR159185"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "long-chain-aldehyde dehydrogenase",
+      "ec": "1.2.1.48",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "tetracosanoate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "tetracosanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_48"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR132957"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR132957"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR178607",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "tetracosanal",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "tricosane",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "carbon_monoxide",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR178607"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR178607"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_tetracosanoyl_coa_1-behenoylglycerol-to-n-docosanoylsphinganine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tetracosanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-behenoylglycerol-to-n-docosanoylsphinganine"
+      },
+      "note": "Shares tetracosanoyl-CoA with 1-behenoylglycerol to N-docosanoylsphinganine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104012"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tetracosanoyl_coa_dioleoyl-phosphatidic-acid-to-5-methyldeoxycytid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tetracosanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dioleoyl-phosphatidic-acid-to-5-methyldeoxycytid"
+      },
+      "note": "Shares tetracosanoyl-CoA with dioleoyl phosphatidic acid to 5-methyldeoxycytidine….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104012"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tetracosanoyl_coa_fadh2-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tetracosanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fadh2-to-coa"
+      },
+      "note": "Shares tetracosanoyl-CoA with FADH2 to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104012"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tetracosanoyl_coa_fadh2-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tetracosanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fadh2-to-h2o-null"
+      },
+      "note": "Shares tetracosanoyl-CoA with FADH2 to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104012"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tetracosanoyl_coa_nadh-to-keto-d-fructuronate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tetracosanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-keto-d-fructuronate"
+      },
+      "note": "Shares tetracosanoyl-CoA with NADH to keto-D-fructuronate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104012"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tetracosanoyl_coa_s-reticuline-to-h2o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tetracosanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-reticuline-to-h2o2"
+      },
+      "note": "Shares tetracosanoyl-CoA with (S)-reticuline to H2O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104012"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tetracosanoate_cis-acetylacrylic-acid-to-3-chloro-cis-cis-mucon",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tetracosanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cis-acetylacrylic-acid-to-3-chloro-cis-cis-mucon"
+      },
+      "note": "Shares tetracosanoate with cis-acetylacrylic acid to 3-chloro-cis,cis-muconate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM3297"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tetracosanoate_h-to-bacteriopheophytin-a",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tetracosanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-bacteriopheophytin-a"
+      },
+      "note": "Shares tetracosanoate with H to bacteriopheophytin a.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM3297"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tetracosanoate_hydroxyatrazine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tetracosanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hydroxyatrazine-to-h2o"
+      },
+      "note": "Shares tetracosanoate with hydroxyatrazine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM3297"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tetracosanal_2-oxoglutarate-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tetracosanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-oxoglutarate-to-nadph"
+      },
+      "note": "Shares tetracosanal with 2-oxoglutarate to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:169310"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tetracosanal_h-to-bacteriopheophytin-a",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tetracosanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-bacteriopheophytin-a"
+      },
+      "note": "Shares tetracosanal with H to bacteriopheophytin a.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:169310"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tetracosanal_levopiramadiene-diol-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tetracosanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "levopiramadiene-diol-to-fmn"
+      },
+      "note": "Shares tetracosanal with levopiramadiene-diol to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:169310"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,478 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "dodecanoyl-amp-to-fmn-46504",
+  "name": "dodecanoyl-AMP to FMN",
+  "category": "lipid-metabolism",
+  "summary": "A 3-step route from dodecanoyl-AMP(1−) to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:46504"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:83623"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "dodecanoyl_amp",
+      "name": "dodecanoyl-AMP",
+      "formula": "C22H35N5O8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:83623"
+      }
+    },
+    {
+      "id": "holo-acp",
+      "name": "Holo-[acyl-carrier protein]",
+      "short": "Holo-[acyl-carrier…",
+      "formula": "C14H25N3O8PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64479"
+      }
+    },
+    {
+      "id": "dodecanoyl_pantetheine_4_phosphorylserine_1",
+      "name": "dodecanoyl-pantetheine-4-phosphorylserine(1−)",
+      "short": "dodecanoyl-pantethe…",
+      "formula": "C26H47N3O9PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:65264"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "dodecanoate",
+      "name": "dodecanoate",
+      "formula": "C12H23O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:18262"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "r_11_hydroxylaurate",
+      "name": "(R)-11-hydroxylaurate",
+      "short": "11-hydroxylaurate",
+      "formula": "C12H23O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78423"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_2_21",
+      "name": "dodecanoyl-[acyl-carrier-protein] hydrolase",
+      "ec": [
+        "3.1.2.21"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "dodecanoyl-AMP + holo-[ACP] = dodecanoyl-[ACP] + AMP + H(+)",
+      "equation": "dodecanoyl-AMP + holo-[ACP] = dodecanoyl-[ACP] + AMP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "dodecanoyl_amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "holo-acp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dodecanoyl_pantetheine_4_phosphorylserine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:46504"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46504"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "dodecanoyl-[acyl-carrier-protein] hydrolase",
+      "equation": "dodecanoyl-[ACP] + H2O = dodecanoate + holo-[ACP] + H(+)",
+      "ec": "3.1.2.21",
+      "substrates": [
+        {
+          "metabolite": "dodecanoyl_pantetheine_4_phosphorylserine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dodecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "holo-acp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_2_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:30119"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30119"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "dodecanoate + reduced [NADPH--hemoprotein reductase] + O2 = (11R)-hydroxydodecanoate + ...",
+      "equation": "dodecanoate + reduced [NADPH--hemoprotein reductase] + O2 = (11R)-hydroxydodecanoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "dodecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_11_hydroxylaurate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:41724"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41724"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_dodecanoyl_amp_dodecanoyl-amp-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dodecanoyl_amp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dodecanoyl-amp-to-fmn"
+      },
+      "note": "Shares dodecanoyl-AMP with dodecanoyl-AMP to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83623"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dodecanoyl_amp_n-dodecanoylglycinate-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dodecanoyl_amp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-dodecanoylglycinate-to-diphosphate"
+      },
+      "note": "Shares dodecanoyl-AMP with N-dodecanoylglycinate to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83623"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dodecanoyl_amp_n-dodecanoylglycinate-to-diphosphate-58540",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dodecanoyl_amp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-dodecanoylglycinate-to-diphosphate-58540"
+      },
+      "note": "Shares dodecanoyl-AMP with N-dodecanoylglycinate to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83623"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dodecanoyl_pantetheine_4_phosphorylserine_1_decanoate-ester-to-1-2-diacyl-3-o-d-glc",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dodecanoyl_pantetheine_4_phosphorylserine_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "decanoate-ester-to-1-2-diacyl-3-o-d-glc"
+      },
+      "note": "Shares dodecanoyl-pantetheine-4-phosphorylserine(1−) with decanoate ester to 1,2-diacyl-3-O-(β-D-Glc-(….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:65264"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dodecanoyl_pantetheine_4_phosphorylserine_1_decanoate-ester-to-1-2-diacyl-3-o-d-glc-47360",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dodecanoyl_pantetheine_4_phosphorylserine_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "decanoate-ester-to-1-2-diacyl-3-o-d-glc-47360"
+      },
+      "note": "Shares dodecanoyl-pantetheine-4-phosphorylserine(1−) with decanoate ester to 1,2-diacyl-3-O-(β-D-Glc-(….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:65264"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dodecanoyl_pantetheine_4_phosphorylserine_1_dodecanoate-to-o-s-3r-hydroxytetradec",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dodecanoyl_pantetheine_4_phosphorylserine_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dodecanoate-to-o-s-3r-hydroxytetradec"
+      },
+      "note": "Shares dodecanoyl-pantetheine-4-phosphorylserine(1−) with dodecanoate to O-[S-(3R)-hydroxytetradec….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:65264"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dodecanoyl_pantetheine_4_phosphorylserine_1_dodecanoate-to-o-s-3r-hydroxytetradec-63620",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dodecanoyl_pantetheine_4_phosphorylserine_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dodecanoate-to-o-s-3r-hydroxytetradec-63620"
+      },
+      "note": "Shares dodecanoyl-pantetheine-4-phosphorylserine(1−) with dodecanoate to O-[S-(3R)-hydroxytetradec….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:65264"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dodecanoyl_pantetheine_4_phosphorylserine_1_dodecanoyl-amp-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dodecanoyl_pantetheine_4_phosphorylserine_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dodecanoyl-amp-to-fmn"
+      },
+      "note": "Shares dodecanoyl-pantetheine-4-phosphorylserine(1−) with dodecanoyl-AMP to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:65264"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_11_hydroxylaurate_dodecanoyl-amp-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_11_hydroxylaurate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dodecanoyl-amp-to-fmn"
+      },
+      "note": "Shares (R)-11-hydroxylaurate with dodecanoyl-AMP to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78423"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,307 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-gentiobiosyl-crocetin-to-beta-d-glucosyl-croc",
+  "name": "β-D-gentiobiosyl crocetin to beta-D-glucosyl crocetin",
+  "category": "other",
+  "summary": "A 3-step route from β-D-gentiobiosyl crocetin(1−) to beta-D-glucosyl crocetin, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:31471"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:62770"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_gentiobiosyl_crocetin",
+      "name": "β-D-gentiobiosyl crocetin",
+      "short": "β-D-gentiobiosyl…",
+      "formula": "C32H43O14",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:62770"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "d_gentiobiosyl_d_glucosyl_crocetin",
+      "name": "β-D-gentiobiosyl β-D-glucosyl crocetin",
+      "short": "β-D-gentiobiosyl…",
+      "formula": "C38H54O19",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62771"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1102128"
+      }
+    },
+    {
+      "id": "udp_alpha_d_glucose",
+      "name": "UDP-alpha-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1364019"
+      }
+    },
+    {
+      "id": "crocin_3",
+      "name": "crocin-3",
+      "formula": "C32H43O14",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1369547"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "beta_d_glucosyl_crocetin",
+      "name": "beta-D-glucosyl crocetin",
+      "short": "beta-D-glucosyl…",
+      "formula": "C26H33O9",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM2503"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_1_271",
+      "name": "crocetin glucosyltransferase",
+      "ec": [
+        "2.4.1.271"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_330",
+      "name": "beta-D-glucosyl crocetin beta-1,6-glucosyltransferase",
+      "ec": [
+        "2.4.1.330"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "crocetin glucosyltransferase",
+      "equation": "beta-D-gentiobiosyl crocetin + UDP-alpha-D-glucose = beta-D-gentiobiosyl beta-D-glucosyl crocetin + UDP",
+      "ec": "2.4.1.271",
+      "substrates": [
+        {
+          "metabolite": "d_gentiobiosyl_crocetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_gentiobiosyl_d_glucosyl_crocetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_271"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:31471"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31471"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "crocetin glucosyltransferase",
+      "ec": "2.4.1.271",
+      "substrates": [
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_gentiobiosyl_d_glucosyl_crocetin",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "udp_alpha_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "crocin_3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_271"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR197587"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197587"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "beta-D-glucosyl crocetin beta-1,6-glucosyltransferase",
+      "ec": "2.4.1.330",
+      "substrates": [
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "crocin_3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "udp_alpha_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "beta_d_glucosyl_crocetin",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_330"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR197601"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197601"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_d_gentiobiosyl_crocetin_crocetin-to-crocin-1",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_gentiobiosyl_crocetin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "crocetin-to-crocin-1"
+      },
+      "note": "Shares β-D-gentiobiosyl crocetin with crocetin to crocin-1.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62770"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_gentiobiosyl_d_glucosyl_crocetin_crocetin-to-crocin-1",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_gentiobiosyl_d_glucosyl_crocetin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "crocetin-to-crocin-1"
+      },
+      "note": "Shares β-D-gentiobiosyl β-D-glucosyl crocetin with crocetin to crocin-1.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62771"
+          }
+        ]
+      }
+    }
+  ]
+}

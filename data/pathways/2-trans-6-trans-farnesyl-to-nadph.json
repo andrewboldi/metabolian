@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "2-trans-6-trans-farnesyl-to-nadph",
   "name": "2-trans,6-trans-farnesyl… to NADPH",
-  "category": "amino-acid-metabolism",
+  "category": "energy-metabolism",
   "summary": "A 3-step route from 2-trans,6-trans-farnesyl diphosphate(3−) to NADPH, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -136,81 +136,6 @@
       "charge": -4,
       "xrefs": {
         "metanetx": "MNXM738702"
-      }
-    },
-    {
-      "id": "beta_casomorphin_1_6",
-      "name": "beta-casomorphin (1-6)",
-      "short": "beta-casomorphin…",
-      "formula": "C38H49N6O10",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM1560335"
-      }
-    },
-    {
-      "id": "l_isoleucine",
-      "name": "L-isoleucine",
-      "formula": "C6H13NO2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM728337"
-      }
-    },
-    {
-      "id": "casomorphin",
-      "name": "Casomorphin",
-      "formula": "C44H61N7O11",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:172843"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "WATER"
-      }
-    },
-    {
-      "id": "d_arginyl_l_arginyl_d_glutaminyl_l_phenylalanine",
-      "name": "D-Arginyl-L-arginyl-D-glutaminyl-L-phenylalanine",
-      "short": "D-Arginyl-L-arginyl…",
-      "formula": "C26H43N11O6",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:177679"
-      }
-    },
-    {
-      "id": "2_2_2_2_2_amino_3_4_hydroxyphenyl_1_oxopropyl_am",
-      "name": "2-[[2-[[2-[[2-[[2-amino-3-(4-hydroxyphenyl)-1-oxopropyl]amino]-1-oxoethyl]amino]-1-oxoethyl]amino]-1-oxo-3-phenylpropyl]amino]-4-methylpentanoic acid",
-      "short": "2-[[2-[[2-[[2-[[2-a…",
-      "formula": "C28H37N5O7",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:91634"
-      }
-    },
-    {
-      "id": "dynorphin_b_10_13",
-      "name": "Dynorphin B (10-13)",
-      "formula": "C20H39N5O6",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:169592"
-      }
-    },
-    {
-      "id": "dynorphin_b",
-      "name": "dynorphin B",
-      "formula": "C74H118N21O17",
-      "charge": 3,
-      "xrefs": {
-        "metanetx": "MNXM1560330"
       }
     }
   ],
@@ -370,91 +295,115 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "Reaction MNXR206504",
-      "substrates": [
-        {
-          "metabolite": "beta_casomorphin_1_6",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_isoleucine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "casomorphin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR206504"
+      "id": "xt_germacrene_a_germacrene-a-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "germacrene_a"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "germacrene-a-to-fmn"
+      },
+      "note": "Shares (+)-germacrene A with (+)-germacrene A to FMN.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR206504"
+            "db": "ChEBI",
+            "id": "CHEBI:41595"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "Reaction MNXR206508",
-      "substrates": [
-        {
-          "metabolite": "d_arginyl_l_arginyl_d_glutaminyl_l_phenylalanine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "2_2_2_2_2_amino_3_4_hydroxyphenyl_1_oxopropyl_am",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "dynorphin_b_10_13",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "dynorphin_b",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR206508"
+      "id": "xt_germacra_1_10_4_11_13_trien_12_ol_2-3-dihydroxy-n-benzoylse-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "germacra_1_10_4_11_13_trien_12_ol"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3-dihydroxy-n-benzoylse-to-nadph"
+      },
+      "note": "Shares germacra-1(10),4,11(13)-trien-12-ol with 2,3-dihydroxy-N-benzoylse… to NADPH.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR206508"
+            "db": "ChEBI",
+            "id": "CHEBI:62090"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_germacra_1_10_4_11_13_trien_12_ol_r-germacrene-a-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "germacra_1_10_4_11_13_trien_12_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-germacrene-a-to-fmn"
+      },
+      "note": "Shares germacra-1(10),4,11(13)-trien-12-ol with (+)-(R)-germacrene A to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62090"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_germacra_1_10_4_11_13_trien_12_al_2-3-dihydroxy-n-benzoylse-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "germacra_1_10_4_11_13_trien_12_al"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3-dihydroxy-n-benzoylse-to-nadph"
+      },
+      "note": "Shares germacra-1(10),4,11(13)-trien-12-al with 2,3-dihydroxy-N-benzoylse… to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62091"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_germacra_1_10_4_11_13_trien_12_al_r-germacrene-a-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "germacra_1_10_4_11_13_trien_12_al"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-germacrene-a-to-fmn"
+      },
+      "note": "Shares germacra-1(10),4,11(13)-trien-12-al with (+)-(R)-germacrene A to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62091"
           }
         ]
       }

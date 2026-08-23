@@ -130,6 +130,25 @@
       "xrefs": {
         "chebi": "CHEBI:57287"
       }
+    },
+    {
+      "id": "2_arachidonoyl_sn_glycero_3_phosphoethanolamine",
+      "name": "2-arachidonoyl-sn-glycero-3-phosphoethanolamine",
+      "short": "2-arachidonoyl-sn-g…",
+      "formula": "C25H44NO7P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:76091"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
     }
   ],
   "enzymes": [],
@@ -286,6 +305,219 @@
           {
             "db": "Rhea",
             "id": "RHEA:62108"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "2-(5Z,8Z,11Z,14Z)-eicosatetraenoyl-sn-glycero-3-phosphoethanolamine + 2 O2 = 2-(prostag...",
+      "equation": "2-(5Z,8Z,11Z,14Z)-eicosatetraenoyl-sn-glycero-3-phosphoethanolamine + 2 O2 = 2-(prostaglandin G2)-sn-glycero-3-phosphoethanolamine",
+      "substrates": [
+        {
+          "metabolite": "2_arachidonoyl_sn_glycero_3_phosphoethanolamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_9s_11r_epidioxy_15s_hydroperoxy_5z_13e_prostad",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:54204"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54204"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_prostaglandin_e2_1-3-dioleoyl-2-palmitoylg-to-8e-10s-10-hydropero",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_e2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-3-dioleoyl-2-palmitoylg-to-8e-10s-10-hydropero"
+      },
+      "note": "Shares prostaglandin E2 with 1,3-dioleoyl-2-palmitoylg… to (8E,10S)-10-hydroperoxy-8….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:606564"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_e2_2-5z-13e-15s-11-15-di-to-r-pga2-s-glutathione",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_e2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-5z-13e-15s-11-15-di-to-r-pga2-s-glutathione"
+      },
+      "note": "Shares prostaglandin E2 with 2-[(5Z,13E,15S)-11α,15-di… to (R)-PGA2-S-glutathione….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:606564"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_e2_prostaglandin-f2-coa-to-15-dehydro-prostaglandin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_e2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "prostaglandin-f2-coa-to-15-dehydro-prostaglandin"
+      },
+      "note": "Shares prostaglandin E2 with prostaglandin F2α-CoA to 15-dehydro-prostaglandin….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:606564"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_e2_prostaglandin-f2-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_e2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "prostaglandin-f2-to-fmn"
+      },
+      "note": "Shares prostaglandin E2 with prostaglandin F2α to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:606564"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_arachidonoyl_sn_glycero_3_phosphoethanolamine_1-oleoyl-2-stearoyl-sn-gl-to-1-o-oleoyl-sn-glyce",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_arachidonoyl_sn_glycero_3_phosphoethanolamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-oleoyl-2-stearoyl-sn-gl-to-1-o-oleoyl-sn-glyce"
+      },
+      "note": "Shares 2-arachidonoyl-sn-glycero-3-phosphoethanolamine with 1-oleoyl-2-stearoyl-sn-gl… to 1-O-oleoyl-sn-glycero-3-p….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76091"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_arachidonoyl_sn_glycero_3_phosphoethanolamine_1-palmitoyl-2-3-dioleoyl-to-oleate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_arachidonoyl_sn_glycero_3_phosphoethanolamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-palmitoyl-2-3-dioleoyl-to-oleate"
+      },
+      "note": "Shares 2-arachidonoyl-sn-glycero-3-phosphoethanolamine with 1-palmitoyl-2,3-dioleoyl-… to oleate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76091"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_arachidonoyl_sn_glycero_3_phosphoethanolamine_lipid-iia-to-1-2-diacyl-sn-glycero-3-p",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_arachidonoyl_sn_glycero_3_phosphoethanolamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "lipid-iia-to-1-2-diacyl-sn-glycero-3-p"
+      },
+      "note": "Shares 2-arachidonoyl-sn-glycero-3-phosphoethanolamine with lipid IIA to 1,2-diacyl-sn-glycero-3-p….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76091"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_arachidonoyl_sn_glycero_3_phosphoethanolamine_n-n-dimethyl-l-arginini-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_arachidonoyl_sn_glycero_3_phosphoethanolamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-n-dimethyl-l-arginini-to-hydrogen-donor"
+      },
+      "note": "Shares 2-arachidonoyl-sn-glycero-3-phosphoethanolamine with Nω,Nω-dimethyl-L-arginini… to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76091"
           }
         ]
       }

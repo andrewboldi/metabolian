@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 24s-24-hydroxycholester-to-8-methylsulfanyl-oct "(24S)-24-hydroxycholester… to 8-(methylsulfanyl)octyl-g…" {
-  spacing 306
+  spacing 270
 
   spine at 0,0 {
     24s_24_hydroxycholesterol
@@ -20,55 +20,19 @@ pathway 24s-24-hydroxycholester-to-8-methylsulfanyl-oct "(24S)-24-hydroxycholest
 
   branch from adenosine_3_5_bismonophosphate side left {
     adenosine_3_5_bismonophosphate
-    <-> ec_2_8_2_39 [2.8.2.39] +11_hydroxyjasmonate +3_phosphonato_5_adenylyl_sulfate +hplus
-    11_sulfojasmonate
-  }
-
-  branch from adenosine_3_5_bismonophosphate side right {
-    adenosine_3_5_bismonophosphate
-    <-> ec_2_8_2_24 [2.8.2.24] +z_indolylmethyl_desulfoglucosinolate +3_phosphonato_5_adenylyl_sulfate +hplus
-    z_glucobrassicin
-  }
-
-  branch from 24s_hydroxycholesterol_3_24_disulfate side left {
-    24s_hydroxycholesterol_3_24_disulfate
-    <-> ec_2_8_2_2 [2.8.2.2] +adenosine_3_5_bisphosphate +h +3_phosphoadenylyl_sulfate
-    24s_hydroxycholesterol_3_sulfate
+    <-> . +so3_3_d_galactosyl_1_3_n_acetyl_d_galactosaminyl +3_phosphonato_5_adenylyl_sulfate +hplus
+    3_o_sulfo_d_galactosyl_1_3_n_acetyl_d_galactosam
   }
 
   branch from 3_phosphoadenylyl_sulfate side right {
     3_phosphoadenylyl_sulfate
-    <-> . +adenosine_3_5_bisphosphate +glucoerucin
-    4_methylthiobutyl_desulfoglucosinolate
+    <-> . +adenosine_3_5_bisphosphate +glucoiberverin
+    3_methylthiopropyl_desulfoglucosinolate
   }
 
   branch from 3_phosphoadenylyl_sulfate side left {
     3_phosphoadenylyl_sulfate
-    <-> ec_2_8_2_36 [2.8.2.36] +adenosine_3_5_bisphosphate +a_47934
-    desulfo_a47934
-  }
-
-  branch from adenosine_3_5_bisphosphate side right {
-    adenosine_3_5_bisphosphate
-    <-> . +paracetamol_sulfate +3_phosphoadenylyl_sulfate
-    4_acetamidophenol
-  }
-
-  branch from adenosine_3_5_bisphosphate side left {
-    adenosine_3_5_bisphosphate
-    <-> . +2r_2_amino_3_4_3_iodo_4_sulfooxy_phenoxy_phenyl +3_phosphoadenylyl_sulfate
-    3_monoiodo_l_thyronine
-  }
-
-  branch from h side right {
-    h
-    <-> . +3_4_6_trihydroxy_cis_cinnamate
-    3_4_6_dihydroxy_3_oxocyclohexa_1_4_dien_1_yl_acr
-  }
-
-  branch from h side left {
-    h
-    <-> . +cis_caffeic_acid
-    e_caffeate
+    <-> ec_2_8_2_40 [2.8.2.40] +adenosine_3_5_bisphosphate +omega_sulfo_beta_dihydromenaquinone_9
+    omega_hydroxy_beta_dihydromenaquinone_9
   }
 }

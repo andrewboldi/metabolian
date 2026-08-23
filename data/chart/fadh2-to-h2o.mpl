@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway fadh2-to-h2o "FADH2 to H2O" {
-  spacing 204
+  spacing 258
 
   spine at 0,0 {
     fadh2
@@ -18,49 +18,103 @@ pathway fadh2-to-h2o "FADH2 to H2O" {
 
   branch from fad side left {
     fad
-    <-> ec_1_4_99_1 [1.4.99.1] +d_alanine +h2o +fadh2 +h +nh4
-    pyruvate
+    <-> . +fadh2 +h +2_5_dichlorohydroquinone +o2 +chloride +h2o
+    5_chloro_2_hydroxy_p_benzoquinone
   }
 
   branch from fad side right {
     fad
-    <-> ec_1_5_99_2 [1.5.99.2] +fadh2 +formaldehyde +h +sarcosine +h2o
-    n_n_dimethylglycine
+    <-> . +fadh2 +2_5_dichlorohydroquinone +o2 +chloride +h2o
+    5_chlorohydroxyquinone
   }
 
   branch from cis_zeatin side left {
     cis_zeatin
-    <-> . +udp +h +9_d_glucosyl_cis_zeatin
-    udp_alpha_d_glucose
-  }
-
-  branch from cis_zeatin side right {
-    cis_zeatin
-    <-> . +h +cis_zeatin_7_n_glucoside +udp_alpha_d_glucose
-    udp
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_2_1_20 [3.2.1.20] +maltoheptaose +maltohexaose
-    beta_d_glucose
+    <-> . +9_ribosyl_cis_zeatin +h2o
+    beta_d_ribopyranose
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_5_1_3 [3.5.1.3] +glutarate +h +nh4
-    glutaramic_acid
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
+    3s_4s_2_hydroxymethyl_oxolane_2_3_4_triol
   }
 
-  branch from 9_ribosyl_cis_zeatin side left {
-    9_ribosyl_cis_zeatin
-    <-> . +cis_zeatin +h2o
+  branch from h2o side left {
+    h2o
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +l_xylose +phosphate +l_xylose
+    atp
+  }
+
+  branch from fadh2 side right {
+    fadh2
+    <-> ec_1_3_8_2 [1.3.8.2] +h +4_4_diaponeurosporene +fad
+    4_4_diapo_carotene
+  }
+
+  branch from fadh2 side left {
+    fadh2
+    <-> ec_1_3_8_1 [1.3.8.1] +butanoyl_coa +fad +h
+    but_2_enoyl_coa
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    lyxulose
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    n_acetyl_d_muramate
+  }
+
+  branch from fad side right {
+    fad
+    <-> ec_1_3_8_6 [1.3.8.6] +glutaryl_coa +h +fadh2 +but_2_enoyl_coa
+    co2
+  }
+
+  branch from fad side left {
+    fad
+    <-> ec_2_7_7_2 [2.7.7.2] +diphosphate +h +atp
+    fmn
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
+    psicopyranose
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
+    alpha_l_rhamnose
+  }
+
+  branch from d_ribose side right {
+    d_ribose
+    <-> .
     beta_d_ribofuranose
   }
 
-  branch from 9_ribosyl_cis_zeatin side right {
-    9_ribosyl_cis_zeatin
-    <-> . +cis_zeatin +h2o
-    aldehydo_d_ribose
+  branch from d_ribose side left {
+    d_ribose
+    <-> ec_3_2_2_1 [3.2.2.1] +7h_purine +h2o
+    nebularine
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +atp +h2o
+    sedoheptulose
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +atp +h2o
+    d_tagatopyranose
   }
 }

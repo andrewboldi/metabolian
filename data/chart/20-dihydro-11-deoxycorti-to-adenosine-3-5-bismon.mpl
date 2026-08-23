@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 20-dihydro-11-deoxycorti-to-adenosine-3-5-bismon "20β-dihydro-11-deoxycorti… to adenosine 3',5'-bismonoph…" {
-  spacing 200
+  spacing 224
 
   spine at 0,0 {
     20_dihydro_11_deoxycortisol
@@ -28,27 +28,51 @@ pathway 20-dihydro-11-deoxycorti-to-adenosine-3-5-bismon "20β-dihydro-11-deoxyc
     21_dehydrocortisol
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
-    <-> ec_1_14_15_45 [1.14.15.45] +4_hydroxy_3_all_trans_heptaprenylbenzoate +di_sulfido_diiron +o2 +hplus +h2o
-    3_4_dihydroxy_5_all_trans_heptaprenylbenzoate
-  }
-
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
-    <-> ec_1_14_15_45 [1.14.15.45] +4_hydroxy_3_all_trans_decaprenylbenzoate +di_sulfido_diiron +o2 +hplus +h2o
-    3_decaprenyl_4_5_dihydroxybenzoate
-  }
-
   branch from adenosine_3_5_bismonophosphate side left {
     adenosine_3_5_bismonophosphate
-    <-> . +myristoyl_coa +h2o +hplus
-    s_tetradecanoyl_4_phosphopantetheine
+    <-> . +estrone_3_o_d_glucuronide +3_phosphonato_5_adenylyl_sulfate +hplus
+    estrone_3_o_3_sulfo_d_glucuronide
   }
 
   branch from adenosine_3_5_bismonophosphate side right {
     adenosine_3_5_bismonophosphate
-    <-> . +palmitoyl_coa +h2o +hplus
-    s_hexadecanoyl_4_phosphopantetheine
+    <-> . +5_pregnane_3_20_diol_3_o_d_glucuronide +3_phosphonato_5_adenylyl_sulfate +hplus
+    5_pregnane_3_20_diol_3_o_3_sulfo_d_glucuronide
+  }
+
+  branch from cortisol side left {
+    cortisol
+    <-> . +nadph +hplus +nadp
+    cortisone
+  }
+
+  branch from cortisol side right {
+    cortisol
+    <-> . +nadph +hplus +nadp
+    20_dihydrocortisol
+  }
+
+  branch from 3_phosphonato_5_adenylyl_sulfate side left {
+    3_phosphonato_5_adenylyl_sulfate
+    <-> . +testosterone_17_o_d_glucuronide +adenosine_3_5_bismonophosphate +hplus
+    testosterone_17_o_3_sulfo_d_glucuronide
+  }
+
+  branch from 3_phosphonato_5_adenylyl_sulfate side right {
+    3_phosphonato_5_adenylyl_sulfate
+    <-> . +dehydroepiandrosterone_3_o_d_glucuronide +adenosine_3_5_bismonophosphate +hplus
+    dehydroepiandrosterone_3_o_3_sulfo_d_glucuronide
+  }
+
+  branch from adenosine_3_5_bismonophosphate side left {
+    adenosine_3_5_bismonophosphate
+    <-> . +5_androstane_3_17_diol_11_one_17_carboxylate_3_o +3_phosphonato_5_adenylyl_sulfate +hplus
+    5_androstane_3_17_diol_11_one_17_carboxylate_3_o
+  }
+
+  branch from adenosine_3_5_bismonophosphate side right {
+    adenosine_3_5_bismonophosphate
+    <-> . +17_estradiol_3_o_d_glucuronide +3_phosphonato_5_adenylyl_sulfate +hplus
+    17_estradiol_3_o_3_sulfo_d_glucuronide
   }
 }

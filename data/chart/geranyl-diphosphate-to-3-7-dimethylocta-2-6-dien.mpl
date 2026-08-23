@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway geranyl-diphosphate-to-3-7-dimethylocta-2-6-dien "geranyl diphosphate to 3,7-dimethylocta-2,6-dien…" {
-  spacing 256
+  spacing 220
 
   spine at 0,0 {
     gpp
@@ -32,51 +32,15 @@ pathway geranyl-diphosphate-to-3-7-dimethylocta-2-6-dien "geranyl diphosphate to
     geranyl_acetate
   }
 
-  branch from ppi side left {
-    ppi
-    <-> . +fpp +h2o
-    discoidol
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +geranylgeranyl_diphosphate +h2o
-    s_nephthenol
-  }
-
   branch from geranial side left {
     geranial
     <-> . +nadph +o2 +hplus +nadp +h2o
     1e_2_6_dimethylhepta_1_5_dien_1_yl_formate
   }
 
-  branch from geranate side right {
-    geranate
-    <-> ec_1_2_1_5 [1.2.1.5] +2e_geranial +nadp +h2o +h
-    nadph
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_112 [1.1.1.112] +nadh +indan_1_one +h
-    indan_1_ol
-  }
-
-  branch from nad side right {
-    nad
-    <-> . +nadh +h +cathinone
-    cathine
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +cephamycin_c +phosphate +cephamycin_c
-    atp
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    methicillin
+  branch from geraniol side right {
+    geraniol
+    <-> . +palmitoyl_coa +coa
+    2e_geranyl_hexadecanoate
   }
 }

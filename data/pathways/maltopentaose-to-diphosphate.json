@@ -99,61 +99,6 @@
       "xrefs": {
         "chebi": "CHEBI:33019"
       }
-    },
-    {
-      "id": "limonin",
-      "name": "limonin",
-      "formula": "C26H30O8",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16226"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "Water",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:15377"
-      }
-    },
-    {
-      "id": "limonin_17_d_glucoside",
-      "name": "limonin 17-β-D-glucoside",
-      "short": "limonin 17-β-D-gluc…",
-      "formula": "C32H41O14",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:57626"
-      }
-    },
-    {
-      "id": "udp",
-      "name": "UDP",
-      "formula": "C9H11N2O12P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58223"
-      }
-    },
-    {
-      "id": "salicyl_alcohol",
-      "name": "salicyl alcohol",
-      "formula": "C7H8O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16464"
-      }
-    },
-    {
-      "id": "salicin",
-      "name": "salicin",
-      "formula": "C13H18O7",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:17814"
-      }
     }
   ],
   "enzymes": [
@@ -162,21 +107,10 @@
       "name": "UTP--glucose-1-phosphate uridylyltransferase",
       "ec": [
         "2.7.7.9"
-      ]
-    },
-    {
-      "id": "ec_2_4_1_210",
-      "name": "limonoid glucosyltransferase",
-      "ec": [
-        "2.4.1.210"
-      ]
-    },
-    {
-      "id": "ec_2_4_1_172",
-      "name": "salicyl-alcohol beta-D-glucosyltransferase",
-      "ec": [
-        "2.4.1.172"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q16851"
+      }
     }
   ],
   "reactions": [
@@ -306,105 +240,93 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "limonoid glucosyltransferase",
-      "equation": "limonin + UDP-alpha-D-glucose + H2O = limonin 17-beta-D-glucoside + UDP + 2 H(+)",
-      "ec": "2.4.1.210",
-      "substrates": [
-        {
-          "metabolite": "limonin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp_d_glucose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "limonin_17_d_glucoside",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_4_1_210"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:11256"
+      "id": "xt_maltopentaose_d-galactose-to-2-o-d-mannosyl-1-2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "maltopentaose"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "d-galactose-to-2-o-d-mannosyl-1-2"
+      },
+      "note": "Shares α-maltopentaose with α-D-galactose to 2-O-[α-D-mannosyl-(1→2)-α….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:11256"
+            "db": "ChEBI",
+            "id": "CHEBI:61952"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "salicyl-alcohol beta-D-glucosyltransferase",
-      "equation": "salicyl alcohol + UDP-alpha-D-glucose = salicin + UDP + H(+)",
-      "ec": "2.4.1.172",
-      "substrates": [
-        {
-          "metabolite": "salicyl_alcohol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp_d_glucose",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "salicin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_4_1_172"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:11512"
+      "id": "xt_maltopentaose_maltose-to-d-glucose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "maltopentaose"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "maltose-to-d-glucose"
+      },
+      "note": "Shares α-maltopentaose with α-maltose to α-D-glucose….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:11512"
+            "db": "ChEBI",
+            "id": "CHEBI:61952"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_maltotetraose_maltose-to-d-glucose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "maltotetraose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "maltose-to-d-glucose"
+      },
+      "note": "Shares α-maltotetraose with α-maltose to α-D-glucose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61988"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_maltotriose_maltose-to-d-glucose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "maltotriose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "maltose-to-d-glucose"
+      },
+      "note": "Shares α-maltotriose with α-maltose to α-D-glucose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:27931"
           }
         ]
       }

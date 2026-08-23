@@ -4,17 +4,21 @@
 # edit the generator, not this file.
 
 pathway gdp-to-d-rhamnosyl-1-3-n-ace "GDP to α-D-rhamnosyl-(1→3)-N-ace…" {
-  spacing 152
+  spacing 158
 
   spine at 0,0 {
     gdp
-    <-> . +alpha_d_man_1_2_alpha_d_man_1_2_beta_d_man_1_3_a +h -alpha_d_man_1_2_beta_d_man_1_3_alpha_d_galnac_pp
+    <-> . +alpha_d_man_1_3_alpha_l_fuc_1_3_alpha_d_galnac_p +h -alpha_l_fuc_1_3_alpha_d_galnac_pp_und
     gdp_alpha_d_mannose
-    <-> . +gdp +alpha_d_man_1_2_beta_d_man_1_3_alpha_d_galnac_pp +h -gdp_alpha_d_mannose
-    beta_d_man_1_3_alpha_d_galnac_diphospho_ditrans
-    <-> . +gdp +h -n_acetyl_d_galactosaminyl_1_diphospho_ditrans_po
-    gdp_alpha_d_mannose
+    <-> . +gdp +alpha_l_fuc_1_3_alpha_d_galnac_pp_und +h -n_acetyl_d_galactosaminyl_1_diphospho_ditrans_po
+    gdp_beta_l_fucose
     <-> . +gdp_6_deoxy_d_mannose +n_acetyl_d_galactosaminyl_1_diphospho_ditrans_po -gdp -hplus
     d_rhamnosyl_1_3_n_acetyl_d_galactosaminyl_1_dip
+  }
+
+  branch from gdp_6_deoxy_d_mannose side left {
+    gdp_6_deoxy_d_mannose
+    <-> ec_1_1_1_187 [1.1.1.187] +nad +nadh +hplus
+    gdp_4_dehydro_6_deoxy_d_mannose
   }
 }

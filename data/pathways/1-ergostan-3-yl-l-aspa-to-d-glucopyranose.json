@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "1-ergostan-3-yl-l-aspa-to-d-glucopyranose",
   "name": "1-(ergostan-3β-yl)-L-aspa… to D-glucopyranose",
-  "category": "amino-acid-metabolism",
+  "category": "other",
   "summary": "A 3-step route from 1-(ergostan-3β-yl)-L-aspartate to D-glucopyranose, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -100,116 +100,6 @@
       "xrefs": {
         "chebi": "CHEBI:4167"
       }
-    },
-    {
-      "id": "nad",
-      "name": "NAD+",
-      "formula": "C21H26N7O14P2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:57540"
-      }
-    },
-    {
-      "id": "iminoaspartate",
-      "name": "iminoaspartate",
-      "formula": "C4H4NO4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:77875"
-      }
-    },
-    {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57945"
-      }
-    },
-    {
-      "id": "2_deoxyguanosine_5_monophosphate",
-      "name": "2'-deoxyguanosine 5'-monophosphate",
-      "short": "2'-deoxyguanosine…",
-      "formula": "C10H12N5O7P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57673"
-      }
-    },
-    {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:30616"
-      }
-    },
-    {
-      "id": "2s_2_amino_2_deoxyadenylo_succinate",
-      "name": "(2S)-2-amino-2'-deoxyadenylo-succinate",
-      "short": "2-amino-2'-deoxyade…",
-      "formula": "C14H15N6O10P",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:172924"
-      }
-    },
-    {
-      "id": "adp",
-      "name": "ADP",
-      "formula": "C10H12N5O10P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:456216"
-      }
-    },
-    {
-      "id": "pi",
-      "name": "Orthophosphate (Pi)",
-      "formula": "HO4P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:43474"
-      }
-    },
-    {
-      "id": "d_fructofuranose",
-      "name": "D-fructofuranose",
-      "formula": "C6H12O6",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:37721"
-      }
-    },
-    {
-      "id": "vomilenine",
-      "name": "vomilenine",
-      "formula": "C21H22N2O3",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM726775"
-      }
-    },
-    {
-      "id": "raucaffricine",
-      "name": "raucaffricine",
-      "formula": "C27H32N2O8",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1371435"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "WATER"
-      }
     }
   ],
   "enzymes": [
@@ -218,34 +108,6 @@
       "name": "ergosteryl-3beta-O-L-aspartate hydrolase",
       "ec": [
         "3.1.1.121"
-      ]
-    },
-    {
-      "id": "ec_1_4_1_29",
-      "name": "iminosuccinate reductase",
-      "ec": [
-        "1.4.1.29"
-      ]
-    },
-    {
-      "id": "ec_6_3_4_25",
-      "name": "2-amino-2'-deoxyadenylo-succinate synthase",
-      "ec": [
-        "6.3.4.25"
-      ]
-    },
-    {
-      "id": "ec_5_3_1_5",
-      "name": "xylose isomerase",
-      "ec": [
-        "5.3.1.5"
-      ]
-    },
-    {
-      "id": "ec_3_2_1_125",
-      "name": "raucaffricine beta-glucosidase",
-      "ec": [
-        "3.2.1.125"
       ]
     }
   ],
@@ -380,189 +242,93 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "iminosuccinate reductase",
-      "equation": "L-aspartate + NAD(+) = iminosuccinate + NADH + H(+)",
-      "ec": "1.4.1.29",
-      "substrates": [
-        {
-          "metabolite": "aspartate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "iminoaspartate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_4_1_29"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:42440"
+      "id": "xt_1_ergostan_3_yl_l_aspartate_5-cholest-7-en-3-ol-to-ergosta-5-7-22-24-28-tet",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_ergostan_3_yl_l_aspartate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cholest-7-en-3-ol-to-ergosta-5-7-22-24-28-tet"
+      },
+      "note": "Shares 1-(ergostan-3β-yl)-L-aspartate with 5α-cholest-7-en-3β-ol to ergosta-5,7,22,24(28)-tet….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:42440"
+            "db": "ChEBI",
+            "id": "CHEBI:195261"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "2-amino-2'-deoxyadenylo-succinate synthase",
-      "equation": "dGMP + L-aspartate + ATP = (2S)-2-amino-2'-deoxyadenylo-succinate + ADP + phosphate + 2 H(+)",
-      "ec": "6.3.4.25",
-      "substrates": [
-        {
-          "metabolite": "2_deoxyguanosine_5_monophosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "aspartate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2s_2_amino_2_deoxyadenylo_succinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pi",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_6_3_4_25"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:67628"
+      "id": "xt_ergosterol_5-cholest-7-en-3-ol-to-ergosta-5-7-22-24-28-tet",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ergosterol"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cholest-7-en-3-ol-to-ergosta-5-7-22-24-28-tet"
+      },
+      "note": "Shares ergosterol with 5α-cholest-7-en-3β-ol to ergosta-5,7,22,24(28)-tet….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:67628"
+            "db": "ChEBI",
+            "id": "CHEBI:16933"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "xylose isomerase",
-      "ec": "5.3.1.5",
-      "substrates": [
-        {
-          "metabolite": "d_fructofuranose",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "glucose",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_5_3_1_5"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "metanetx": "MNXR197792"
+      "id": "xt_ergosterol_5-ergosta-7-22-diene-3-to-carboxylic-acid-anion",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ergosterol"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "5-ergosta-7-22-diene-3-to-carboxylic-acid-anion"
+      },
+      "note": "Shares ergosterol with 5α-ergosta-7,22-diene-3β,… to carboxylic acid anion.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR197792"
+            "db": "ChEBI",
+            "id": "CHEBI:16933"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "raucaffricine beta-glucosidase",
-      "ec": "3.2.1.125",
-      "substrates": [
-        {
-          "metabolite": "glucose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "vomilenine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "raucaffricine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_2_1_125"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "metanetx": "MNXR197890"
+      "id": "xt_ergosterol_ergosteryl-palmitate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ergosterol"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "ergosteryl-palmitate-to-h2o"
+      },
+      "note": "Shares ergosterol with ergosteryl palmitate to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR197890"
+            "db": "ChEBI",
+            "id": "CHEBI:16933"
           }
         ]
       }

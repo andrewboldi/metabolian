@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-averantin-to-versicolorin-a "(S)-averantin to versicolorin A" {
-  spacing 252
+  spacing 276
 
   spine at 0,0 {
     s_averantin
@@ -28,14 +28,14 @@ pathway s-averantin-to-versicolorin-a "(S)-averantin to versicolorin A" {
 
   branch from fmn side left {
     fmn
-    <-> . +cholesterol +fmnh2 +o2 +h2o +hplus
-    22r_22_hydroxycholesterol
+    <-> . +n_12_oxojasmonyl_l_amino_acid_anion +fmnh2 +o2 +h2o +hplus
+    n_12_hydroxy_12_oxojasmonyl_l_amino_acid_dianion
   }
 
   branch from fmn side right {
     fmn
-    <-> . +cholesterol +fmnh2 +o2 +h2o +hplus
-    24r_24_hydroxycholesterol
+    <-> ec_1_14_14_62 [1.14.14.62] +ferruginol +fmnh2 +o2 +h2o +hplus
+    salviol
   }
 
   branch from s_5_oxoaverantin side left {
@@ -60,5 +60,29 @@ pathway s-averantin-to-versicolorin-a "(S)-averantin to versicolorin A" {
     2s_3s_versiconal_hemiacetal
     <-> ec_1_1_1_353 [1.1.1.353] +nadp +nadph +hplus
     s_versiconol
+  }
+
+  branch from fmnh2 side left {
+    fmnh2
+    <-> ec_1_14_14_63 [1.14.14.63] +amyrin +o2 +fmn +h2o +hplus
+    maniladiol
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> ec_1_14_14_81 [1.14.14.81] +3_5_unsubstituted_flavanone +o2 +fmn +h2o +hplus
+    3_5_dihydroxyflavanone
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_64 [1.14.14.64] +amyrin +fmnh2 +o2 +h2o +hplus
+    daturadiol
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_65 [1.14.14.65] +ferruginol +fmnh2 +o2 +h2o +hplus
+    sugiol
   }
 }

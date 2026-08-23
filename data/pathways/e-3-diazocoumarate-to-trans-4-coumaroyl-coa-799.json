@@ -1,0 +1,354 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "e-3-diazocoumarate-to-trans-4-coumaroyl-coa-799",
+  "name": "(E)-3-diazocoumarate to trans-4-coumaroyl-CoA",
+  "category": "other",
+  "summary": "A 3-step route from (E)-3-diazocoumarate to trans-4-coumaroyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:79971"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:229673"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "e_3_diazocoumarate",
+      "name": "(E)-3-diazocoumarate",
+      "formula": "C9H6N2O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:229673"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "dinitrogen",
+      "name": "dinitrogen",
+      "formula": "N2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17997"
+      }
+    },
+    {
+      "id": "trans_4_coumarate",
+      "name": "trans-4-coumarate",
+      "formula": "C9H7O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:12876"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "trans_4_coumaroyl_amp",
+      "name": "trans-4-coumaroyl-AMP",
+      "short": "trans-4-coumaroyl-A…",
+      "formula": "C19H19N5O9P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:192348"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "trans_4_coumaroyl_coa",
+      "name": "trans-4-coumaroyl-CoA",
+      "short": "trans-4-coumaroyl-C…",
+      "formula": "C30H38N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:85008"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(E)-3-diazocoumarate + NADH = N2 + (E)-4-coumarate + NAD(+)",
+      "equation": "(E)-3-diazocoumarate + NADH = N2 + (E)-4-coumarate + NAD(+)",
+      "substrates": [
+        {
+          "metabolite": "e_3_diazocoumarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dinitrogen",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "trans_4_coumarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:79971"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79971"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(E)-4-coumarate + ATP + H(+) = (E)-4-coumaroyl-AMP + diphosphate",
+      "equation": "(E)-4-coumarate + ATP + H(+) = (E)-4-coumaroyl-AMP + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "trans_4_coumarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_4_coumaroyl_amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:72419"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:72419"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(E)-4-coumaroyl-AMP + CoA = (E)-4-coumaroyl-CoA + AMP + H(+)",
+      "equation": "(E)-4-coumaroyl-AMP + CoA = (E)-4-coumaroyl-CoA + AMP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "trans_4_coumaroyl_amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_4_coumaroyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:72423"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:72423"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_e_3_diazocoumarate_1-chloro-2-nitrobenzene-to-methanofuranate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_3_diazocoumarate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-chloro-2-nitrobenzene-to-methanofuranate"
+      },
+      "note": "Shares (E)-3-diazocoumarate with 1-chloro-2-nitrobenzene to methanofuranate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:229673"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_3_diazocoumarate_1-chloro-2-nitrobenzene-to-methanofuranate-57812",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_3_diazocoumarate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-chloro-2-nitrobenzene-to-methanofuranate-57812"
+      },
+      "note": "Shares (E)-3-diazocoumarate with 1-chloro-2-nitrobenzene to methanofuranate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:229673"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_3_diazocoumarate_e-3-diazocoumarate-to-trans-4-coumaroyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_3_diazocoumarate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "e-3-diazocoumarate-to-trans-4-coumaroyl-coa"
+      },
+      "note": "Shares (E)-3-diazocoumarate with (E)-3-diazocoumarate to trans-4-coumaroyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:229673"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_4_coumaroyl_amp_e-3-diazocoumarate-to-trans-4-coumaroyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_4_coumaroyl_amp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "e-3-diazocoumarate-to-trans-4-coumaroyl-coa"
+      },
+      "note": "Shares trans-4-coumaroyl-AMP with (E)-3-diazocoumarate to trans-4-coumaroyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:192348"
+          }
+        ]
+      }
+    }
+  ]
+}

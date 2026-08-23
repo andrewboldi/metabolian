@@ -1,0 +1,385 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "udp-to-gibberellin-a6-null",
+  "name": "UDP to gibberellin A6",
+  "category": "other",
+  "summary": "A 3-step route from UDP to gibberellin A6, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR191917"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1102128"
+      }
+    },
+    {
+      "id": "gibberellin_2_o_beta_d_glucoside",
+      "name": "gibberellin 2-O-beta-D-glucoside",
+      "short": "gibberellin…",
+      "formula": "C25H31O11",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1364218"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "udp_alpha_d_glucose",
+      "name": "UDP-alpha-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1364019"
+      }
+    },
+    {
+      "id": "lsm_6641",
+      "name": "LSM-6641",
+      "formula": "C19H22O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:95296"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM25"
+      }
+    },
+    {
+      "id": "gibberellin_a5",
+      "name": "Gibberellin A5",
+      "formula": "C19H22O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364244"
+      }
+    },
+    {
+      "id": "2_oxoglutarate",
+      "name": "2-oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1368744"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "gibberellin_a6",
+      "name": "gibberellin A6",
+      "formula": "C19H21O6",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM738061"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_1_176",
+      "name": "gibberellin beta-D-glucosyltransferase",
+      "ec": [
+        "2.4.1.176"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "gibberellin beta-D-glucosyltransferase",
+      "ec": "2.4.1.176",
+      "substrates": [
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gibberellin_2_o_beta_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "udp_alpha_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "lsm_6641",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_176"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR191917"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR191917"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR118613",
+      "substrates": [
+        {
+          "metabolite": "lsm_6641",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gibberellin_a5",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_oxoglutarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR118613"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR118613"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR118619",
+      "substrates": [
+        {
+          "metabolite": "gibberellin_a5",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_oxoglutarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gibberellin_a6",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR118619"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR118619"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_gibberellin_2_o_beta_d_glucoside_udp-to-gibberellin-a6",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "gibberellin_2_o_beta_d_glucoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-gibberellin-a6"
+      },
+      "note": "Shares gibberellin 2-O-beta-D-glucoside with UDP to gibberellin A6.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364218"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lsm_6641_5-chloro-trans-dienelacto-to-1r-2s-3-4-dichloroc",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lsm_6641"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-chloro-trans-dienelacto-to-1r-2s-3-4-dichloroc"
+      },
+      "note": "Shares LSM-6641 with 5-chloro-trans-dienelacto… to (1R,2S)-3,4-dichlorocyclo….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:95296"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lsm_6641_udp-to-gibberellin-a6",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lsm_6641"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-gibberellin-a6"
+      },
+      "note": "Shares LSM-6641 with UDP to gibberellin A6.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:95296"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_gibberellin_a5_udp-to-gibberellin-a6",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "gibberellin_a5"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-gibberellin-a6"
+      },
+      "note": "Shares Gibberellin A5 with UDP to gibberellin A6.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364244"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_gibberellin_a6_udp-to-gibberellin-a6",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "gibberellin_a6"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-gibberellin-a6"
+      },
+      "note": "Shares gibberellin A6 with UDP to gibberellin A6.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM738061"
+          }
+        ]
+      }
+    }
+  ]
+}

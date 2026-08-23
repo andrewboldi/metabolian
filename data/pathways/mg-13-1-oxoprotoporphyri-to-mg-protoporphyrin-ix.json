@@ -135,51 +135,6 @@
       "xrefs": {
         "metanetx": "MNXM732752"
       }
-    },
-    {
-      "id": "adp",
-      "name": "ADP",
-      "formula": "C10H12N5O10P2",
-      "charge": -3,
-      "xrefs": {
-        "metanetx": "MNXM40333"
-      }
-    },
-    {
-      "id": "l_cystine",
-      "name": "L-cystine",
-      "formula": "C6H12N2O4S2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM927"
-      }
-    },
-    {
-      "id": "phosphate",
-      "name": "phosphate",
-      "formula": "HO4P",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM9"
-      }
-    },
-    {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM3"
-      }
-    },
-    {
-      "id": "l_l_cystathionine",
-      "name": "L,L-cystathionine",
-      "formula": "C7H14N2O4S",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM319"
-      }
     }
   ],
   "enzymes": [
@@ -195,20 +150,6 @@
       "name": "magnesium protoporphyrin IX methyltransferase",
       "ec": [
         "2.1.1.11"
-      ]
-    },
-    {
-      "id": "ec_3_6_3_21",
-      "name": "EC 3.6.3.21",
-      "ec": [
-        "3.6.3.21"
-      ]
-    },
-    {
-      "id": "ec_7_4_2_12",
-      "name": "ABC-type cystine transporter",
-      "ec": [
-        "7.4.2.12"
       ]
     }
   ],
@@ -358,109 +299,115 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "Reaction MNXR97003",
-      "ec": "3.6.3.21",
-      "substrates": [
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_cystine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_cystine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_6_3_21"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR97003"
+      "id": "xt_mg_13_1_oxoprotoporphyrin_13_monomethyl_ester_h-to-protochlorophyllide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "mg_13_1_oxoprotoporphyrin_13_monomethyl_ester"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-protochlorophyllide"
+      },
+      "note": "Shares Mg-13(1)-oxoprotoporphyrin 13-monomethyl ester with H to protochlorophyllide.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR97003"
+            "id": "MNXM1352"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "Reaction MNXR97023",
-      "substrates": [
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_l_cystathionine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "l_l_cystathionine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR97023"
+      "id": "xt_3_8_divinyl_protochlorophyllide_a_2-5-dichloro-4-methyl-muc-to-1r-2s-3-6-dichloro",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_8_divinyl_protochlorophyllide_a"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2-5-dichloro-4-methyl-muc-to-1r-2s-3-6-dichloro"
+      },
+      "note": "Shares 3,8-divinyl protochlorophyllide a with 2,5-dichloro-4-methyl-muc… to (1R,2S)-3,6-dichloro-4-me….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR97023"
+            "id": "MNXM741310"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_8_divinyl_protochlorophyllide_a_h-to-protochlorophyllide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_8_divinyl_protochlorophyllide_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-protochlorophyllide"
+      },
+      "note": "Shares 3,8-divinyl protochlorophyllide a with H to protochlorophyllide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM741310"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_magnesium_protoporphyrin_ix_13_monomethyl_ester_h-to-protochlorophyllide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "magnesium_protoporphyrin_ix_13_monomethyl_ester"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-protochlorophyllide"
+      },
+      "note": "Shares magnesium-protoporphyrin IX 13-monomethyl ester with H to protochlorophyllide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM741293"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_mg_protoporphyrin_ix_nadh-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "mg_protoporphyrin_ix"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-h2o"
+      },
+      "note": "Shares Mg-protoporphyrin IX with NADH to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM732752"
           }
         ]
       }

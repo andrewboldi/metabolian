@@ -4,29 +4,15 @@
 # edit the generator, not this file.
 
 pathway keto-d-fructose-to-h2o "keto-D-fructose to H2O" {
-  spacing 200
+  spacing 188
 
   spine at 0,0 {
     keto_d_fructose
     <-> ec_1_1_99_28 [1.1.99.28] +glucose -d_sorbitol
     d_glucono_1_5_lactone
     <-> ec_1_1_1_121 [1.1.1.121] +nadh +h -nad
-    aldehydo_d_altrose
-    <-> .
-    d_altropyranose
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate -d_altropyranose -h2o
+    d_allose
+    <-> . +h +adp +phosphate -d_allose -h2o
     atp
-  }
-
-  branch from d_altropyranose side left {
-    d_altropyranose
-    <-> ec_5_3_1_3 [5.3.1.3]
-    d_allulose
-  }
-
-  branch from d_altropyranose side right {
-    d_altropyranose
-    <-> ec_5_3_1_3 [5.3.1.3]
-    psicopyranose
   }
 }

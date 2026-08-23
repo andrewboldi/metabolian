@@ -24,40 +24,28 @@ pathway glycosmisate-to-h2o "glycosmisate to H2O" {
     3_4_dihydroxybenzoate
   }
 
-  branch from hydroquinones side left {
-    hydroquinones
-    <-> . +r_malate +1_4_benzoquinones
-    enol_oxaloacetate
-  }
-
-  branch from hydroquinones side right {
-    hydroquinones
-    <-> . +1_4_benzoquinones +enol_oxaloacetate
-    malate
-  }
-
   branch from co2 side left {
     co2
-    <-> . +p_hydroxybenzyl_alcohol +l_alanine +diphosphate +h +amp +4_methyl_5_2_phosphooxyethyl_thiazole +h2o +1_deoxy_d_xylulose_5_phosphate +l_cysteine +l_tyrosine
-    atp
+    <-> ec_2_3_1_74 [2.3.1.74] +malonyl_coa +trans_caffeoyl_coa +h +coa
+    trans_2_3_4_4_6_pentahydroxychalcone
   }
 
   branch from co2 side right {
     co2
-    <-> ec_2_3_2_2 [2.3.2.2] +gamma_glutamyl_beta_aminopropiononitrile +h2o +h +l_glutamate
-    3_cyano_l_alanine
+    <-> ec_1_14_11_23 [1.14.11.23] +galangin +succinate +h2o +pinobanksin +o2
+    2_oxoglutarate
   }
 
   branch from h side left {
     h
-    <-> . +leukotriene_c5 +glutathione
-    leukotriene_a5
+    <-> ec_3_1_2_20 [3.1.2.20] +7_isojasmonate +coa +h2o
+    7_isojasmonic_acid_coa
   }
 
   branch from h side right {
     h
-    <-> . +5_s_6_s_epoxy_15_r_hepe +h2o
-    15_epi_lipoxin_b5
+    <-> ec_2_3_1_16 [2.3.1.16] +acetyl_coa +5_methylhex_4_enoyl_coa +7_methyl_3_oxooct_6_enoyl_coa
+    coa
   }
 
   branch from vanillin side left {
@@ -74,38 +62,38 @@ pathway glycosmisate-to-h2o "glycosmisate to H2O" {
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_50 [1.1.1.50] +nadh +h +5beta_dihydrocorticosterone
-    tetrahydrocorticosterone
+    <-> ec_1_2_1_5 [1.2.1.5] +nadh +h +carboxyphosphamide +h2o
+    aldophosphamide
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_53 [1.1.1.53] +nadh +h +3alpha_21_dihydroxy_5beta_pregnane_11_20_dione
-    3alpha_20alpha_21_trihydroxy_5beta_pregnane_11_o
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +5_phenyl_1_3_oxazinane_2_4_dione
+    4_hydroxy_5_phenyltetrahydro_1_3_oxazin_2_one
   }
 
   branch from vanillate side left {
-    vanillate
-    <-> ec_2_4_1_300 [2.4.1.300] +pelargonidin_3_o_d_glucoside_betaine +1_o_vanilloyl_d_glucose
-    pelargonidin_3_7_di_o_beta_d_glucoside
-  }
-
-  branch from vanillate side right {
     vanillate
     <-> . +pelargonidin_3_glucoside +1_o_vanilloyl_d_glucose +h
     pelargonidin_3_7_di_o_beta_d_glucoside
   }
 
+  branch from vanillate side right {
+    vanillate
+    <-> ec_2_4_1_299 [2.4.1.299] +pelargonidin_3_o_d_glucoside_betaine +1_o_vanilloyl_d_glucose
+    pelargonin
+  }
+
   branch from h2o side left {
     h2o
-    <-> . +13s_hydroperoxy_9z_11e_octadecadienoate +4_hydroperoxy_2_nonenal
-    nonanoate
+    <-> . +hydrogencarbonate +benzoate
+    terephthalate
   }
 
   branch from h2o side right {
     h2o
-    <-> . +5_s_12_r_dihydroxy_eicosa_2_8_trans_6_14_cis_tet
-    3_s_5_s_12_r_trihydroxy_eicosa_8_trans_6_14_cis
+    <-> ec_3_2_1_31 [3.2.1.31] +d_glucuronate +luteolin_7_o_beta_d_glucuronosyl_1_2_beta_d_gluc
+    luteolin_7_o_beta_d_glucuronosyl_1_2_beta_d_gluc
   }
 
   branch from 3_4_dihydroxybenzoate side left {
@@ -122,14 +110,14 @@ pathway glycosmisate-to-h2o "glycosmisate to H2O" {
 
   branch from methylcobalamin side left {
     methylcobalamin
-    <-> . +5_deoxyadenosine +cob_iii_alamin +l_methionine +2_methyltetrahymanol +tetrahymanol
+    <-> . +5_deoxyadenosine +cob_iii_alamin +l_methionine +2_methyldiplopterol +hopan_22_ol
     s_adenosyl_l_methionine
   }
 
   branch from methylcobalamin side right {
     methylcobalamin
-    <-> . +5_deoxyadenosine +cob_iii_alamin +l_methionine +2_methyldiplopterol +s_adenosyl_l_methionine
-    hopan_22_ol
+    <-> ec_2_1_1_251 [2.1.1.251] +cbl +h +dimethyl_sulfide
+    methanethiol
   }
 
   branch from 4_hydroxyisophthalic_acid side left {
@@ -140,25 +128,55 @@ pathway glycosmisate-to-h2o "glycosmisate to H2O" {
 
   branch from o2 side right {
     o2
-    <-> . +dibenzo_a_l_pyrene_11_12_epoxide +nadp +h2o +h +nadph
-    dibenzo_a_l_pyrene
+    <-> ec_1_13_11_1 [1.13.11.1] +3_fluorocatechol
+    2_fluoro_cis_cis_muconate
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_13_11_52 [1.13.11.52] +h +formyl_5_hydroxykynurenamine
-    serotonin
+    <-> ec_1_13_11_1 [1.13.11.1] +4_fluorocatechol
+    3_fluoro_cis_cis_muconate
   }
 
   branch from nadph side right {
     nadph
-    <-> . +h +w_carboxy_leukotriene_b4 +nadp
-    20_cooh_10_11_dihydro_ltb4
+    <-> ec_1_8_1_12 [1.8.1.12] +homotrypanothione_disulfide +h +nadp
+    homotrypanothione
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_272 [1.1.1.272] +h +3_sulfopyruvate +nadp
-    2s_3_sulfolactate
+    <-> ec_1_14_14_1 [1.14.14.1] +all_trans_retinoate +h +o2 +nadp +h2o
+    5_6_epoxyretinoate
+  }
+
+  branch from glycosmisate side right {
+    glycosmisate
+    <-> ec_1_2_1_29 [1.2.1.29] +nadh +h +nad +h2o
+    dehydrodiconiferyl_aldehyde
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_3_1_16 [2.3.1.16] +acetyl_coa +3_methylbut_2_enoyl_coa +coa
+    5_methyl_3_oxo_4_hexenoyl_coa
+  }
+
+  branch from h side right {
+    h
+    <-> . +juvenile_hormone_iii_carboxylate +h2o
+    10s_juvenile_hormone_iii_acid_diol
+  }
+
+  branch from co2 side left {
+    co2
+    <-> . +nh4 +atropaldehyde +h
+    3_carbamoyl_2_phenylpropionaldehyde
+  }
+
+  branch from co2 side right {
+    co2
+    <-> . +7_oxoheptanoic_acid +h
+    2_oxosuberate
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-oxo-24-isopropanoyl-c-to-coa "3-oxo-24-(isopropanoyl)-c… to CoA" {
-  spacing 224
+  spacing 308
 
   spine at 0,0 {
     3_oxo_24_isopropanoyl_cholest_4_24_dien_26_oyl_c
@@ -18,8 +18,8 @@ pathway 3-oxo-24-isopropanoyl-c-to-coa "3-oxo-24-(isopropanoyl)-c… to CoA" {
 
   branch from hydrogencarbonate side left {
     hydrogencarbonate
-    <-> . +agmatine +h2o
-    l_arginine
+    <-> ec_2_1_3_3 [2.1.3.3] +l_glutamine +atp +ornithine +h2o +h +adp +l_glutamate +phosphate
+    l_citrulline
   }
 
   branch from hydrogencarbonate side right {
@@ -30,61 +30,145 @@ pathway 3-oxo-24-isopropanoyl-c-to-coa "3-oxo-24-(isopropanoyl)-c… to CoA" {
 
   branch from atp side left {
     atp
-    <-> ec_7_6_2_10 [7.6.2.10] +h +adp +phosphate +h2o
-    sn_glycerophosphodiester
+    <-> . +h +adp +phosphate +h2o
+    13z_octadecenoic_acid
   }
 
   branch from atp side right {
     atp
     <-> . +h +adp +phosphate +h2o
-    l_l_homocystine
+    vaccenic_acid
   }
 
   branch from h side left {
     h
-    <-> . +s_adenosyl_l_homocysteine +fusarubinaldehyde +6_o_demethylfusarubinaldehyde
-    s_adenosyl_l_methionine
+    <-> . +adp +phosphate +atp +h2o
+    linoelaidic_acid
   }
 
   branch from h side right {
     h
-    <-> . +s_adenosyl_l_homocysteine +8_o_methylfusarubinaldehyde +s_adenosyl_l_methionine
-    fusarubinaldehyde
+    <-> . +adp +phosphate +atp +h2o
+    nonadecanoate
   }
 
   branch from adp side left {
     adp
-    <-> . +co2 +pyruvate +atp +h2o +h +phosphate
-    oxaloacetate
+    <-> . +h +phosphate +atp +h2o
+    gadoleic_acid
   }
 
   branch from adp side right {
     adp
     <-> . +h +phosphate +atp +h2o
-    l_arabinopyranose
+    5z_8z_11z_eicosatrienoic_acid
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_3_1_3_62 [3.1.3.62] +d_myo_inositol_2_3_4_trisphosphate +h2o
-    d_myo_inositol_1_2_3_4_tetrakisphosphate
+    <-> . +h +adp +atp +h2o
+    henicosanoic_acid
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_1_3_62 [3.1.3.62] +d_myo_inositol_2_3_4_trisphosphate +h +h2o
-    1d_myo_inositol_2_4_bisphosphate
+    <-> . +h +adp +atp +h2o
+    13z_docosenoate
   }
 
   branch from coa side left {
     coa
-    <-> . +18_hydroxyoleoyl_coa +1_18_hydroxyoeoyl_2_18_hydroxy_linoleoyl_sn_glyc
-    tri_acyl_estolide
+    <-> . +henicosanoic_acid +h2o
+    heneicosanoyl_coenzyme_a
   }
 
   branch from coa side right {
     coa
-    <-> . +9z_12z_18_hydroxyoctadecadienoyl_coa +tri_acyl_estolide
-    tetra_acyl_estolide
+    <-> . +tricosanoyl_coa +h2o +h
+    tricosanoate
+  }
+
+  branch from h side left {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    cetoleic_acid
+  }
+
+  branch from h side right {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    hexacosanoate
+  }
+
+  branch from adp side left {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    17z_hexacosenoate
+  }
+
+  branch from adp side right {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    9z_12z_15z_18z_21z_tetracosapentaenoate
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    tetracosahexaenoic_acid_n_3
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    11z_14z_17z_eicosatrienoate
+  }
+
+  branch from hydrogencarbonate side left {
+    hydrogencarbonate
+    <-> ec_6_4_1_5 [6.4.1.5] +trans_geranyl_coa +atp +h +adp +phosphate
+    3_4_methylpent_3_en_1_yl_pent_2_enedioyl_coa
+  }
+
+  branch from hydrogencarbonate side right {
+    hydrogencarbonate
+    <-> ec_6_4_1_4 [6.4.1.4] +3_methylbut_2_enoyl_coa +h +atp +adp +phosphate
+    trans_3_methylglutaconyl_coa
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    13_16_19_docosatrienoic_acid
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    7z_10z_13z_16z_docosatetraenoate
+  }
+
+  branch from 2e_2_methylbut_2_enoyl_coa side left {
+    2e_2_methylbut_2_enoyl_coa
+    <-> . +glycine +coa
+    tiglylglycine
+  }
+
+  branch from 2e_2_methylbut_2_enoyl_coa side right {
+    2e_2_methylbut_2_enoyl_coa
+    <-> ec_1_3_99_2 [1.3.99.2] +h2o +o2
+    2s_2_methylbutanoyl_coa
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +l_histidine +l_methionine
+    his_met
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +l_histidine +l_arginine +l_phenylalanine
+    histidyl_phenylalanyl_arginine
   }
 }

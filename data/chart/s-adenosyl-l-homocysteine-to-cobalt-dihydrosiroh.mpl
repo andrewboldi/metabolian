@@ -4,11 +4,15 @@
 # edit the generator, not this file.
 
 pathway s-adenosyl-l-homocysteine-to-cobalt-dihydrosiroh "S-adenosyl-L-homocysteine to cobalt-dihydrosirohydroch…" {
-  spacing 248
+  spacing 324
 
   spine at 0,0 {
     s_adenosyl_l_homocysteine
-    <-> ec_2_1_1_133 [2.1.1.133] +cobalt_precorrin_5 -h -cobalt_precorrin_4
+    <-> ec_2_1_1_195 [2.1.1.195] +cobalt_precorrin_6 -cobalt_precorrin_5b
+    s_adenosyl_l_methionine
+    <-> ec_3_7_1_12 [3.7.1.12] +h +cobalt_precorrin_5b +acetaldehyde -h2o
+    co_precorrin_5a
+    <-> ec_2_1_1_271 [2.1.1.271] +s_adenosyl_l_homocysteine +h -cobalt_precorrin_4
     s_adenosyl_l_methionine
     <-> ec_2_1_1_131 [2.1.1.131] +s_adenosyl_l_homocysteine +cobalt_precorrin_4 -s_adenosyl_l_methionine
     cobalt_precorrin_3
@@ -18,25 +22,85 @@ pathway s-adenosyl-l-homocysteine-to-cobalt-dihydrosiroh "S-adenosyl-L-homocyste
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +15_dmt_or_m_iii_15_o_desmethyl_tacrolimus
-    15_31_o_didesmethyl_tacrolimus
+    <-> . +s_adenosyl_l_homocysteine +h +o2 +tacrolimus
+    31_o_desmethyl_19_hydroxy_37_39_epoxy_tacrolimus
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +15_31_o_didesmethyl_tacrolimus
-    31_o_demethyl_fk_506
+    <-> . +s_adenosyl_l_homocysteine +vanillylmandelic_acid
+    r_3_4_dihydroxymandelate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +gramicidin_a +phosphate +gramicidin_a
+    atp
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    gramicidin_b
+  }
+
+  branch from s_adenosyl_l_homocysteine side left {
+    s_adenosyl_l_homocysteine
+    <-> . +2_3_carboxy_3_methylammonio_propyl_l_histidine +s_adenosyl_l_methionine
+    2_3_amino_3_carboxypropyl_l_histidine
+  }
+
+  branch from s_adenosyl_l_homocysteine side right {
+    s_adenosyl_l_homocysteine
+    <-> . +dihydrosirohydrochlorin +s_adenosyl_l_methionine
+    precorrin_1
+  }
+
+  branch from s_adenosyl_l_methionine side left {
+    s_adenosyl_l_methionine
+    <-> . +s_adenosyl_l_homocysteine +precorrin_5 +h
+    precorrin_4
+  }
+
+  branch from s_adenosyl_l_methionine side right {
+    s_adenosyl_l_methionine
+    <-> . +s_adenosyl_l_homocysteine +precorrin_3a +h
+    dihydrosirohydrochlorin
   }
 
   branch from h side left {
     h
-    <-> . +dehydroxypaxilline +o2 +nadph +nadp +h2o
-    paspalicine
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    gramicidin_c
   }
 
   branch from h side right {
     h
-    <-> . +paspalicine +o2 +nadph +nadp +h2o
-    paspalinine
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    aeruginosin_b
+  }
+
+  branch from acetaldehyde side left {
+    acetaldehyde
+    <-> . +n_n_diethylethanamine_oxide
+    diethylamine
+  }
+
+  branch from acetaldehyde side right {
+    acetaldehyde
+    <-> ec_4_1_2_52 [4.1.2.52] +4_hydroxy_2_oxopentanoic_acid +h
+    pyruvate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    gly_pro
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    angiotensin_ii
   }
 }

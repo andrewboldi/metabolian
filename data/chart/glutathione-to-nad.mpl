@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway glutathione-to-nad "glutathione to NAD" {
-  spacing 188
+  spacing 236
 
   spine at 0,0 {
     glutathione
@@ -30,25 +30,73 @@ pathway glutathione-to-nad "glutathione to NAD" {
 
   branch from glutathione side left {
     glutathione
-    <-> . +urocanate
-    s_2_carboxy_1_1h_imidazol_4_yl_ethyl_glutathione
+    <-> . +dopaminechrome_keto_form
+    4_s_glutathionyl_5_6_dihydroxyindoline
   }
 
   branch from glutathione side right {
     glutathione
-    <-> ec_2_5_1_18 [2.5.1.18] +2_s_glutathionyl_acetyl_chloride +chloride
-    2_s_glutathionyl_acetyl_glutathione
+    <-> . +glutathione_disulfide +o2 +h2o
+    h2o2
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_14_13_69 [1.14.13.69] +nadh +h +styrene +o2 +h2o
-    r_styrene_oxide
+    <-> . +nadh +acetyl_coa +fadh2 +h +coa +13z_octadecenoyl_coa +h2o
+    fad
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +2_carboxyethyl_com +h +h2o
-    2_hydroxyethyl_com
+    <-> . +nadh +acetyl_coa +fadh2 +h +fad +coa +h2o
+    trans_9_octadecenoyl_coa
+  }
+
+  branch from glutathione side left {
+    glutathione
+    <-> ec_1_14_14_43 [1.14.14.43] +1_aci_nitro_omega_methylthio_alkane +h2o
+    an_e_1_glutathione_s_yl_omega_methylsulfanyl_alk
+  }
+
+  branch from glutathione side right {
+    glutathione
+    <-> ec_1_8_5_7 [1.8.5.7] +glutathione_disulfide +h +2_6_dichloro_4_hydroxyphenolate
+    2_6_dichloro_3_glutathion_s_yl_hydroquinone
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> . +acetyl_coa +fadh2 +h +fad +9z_12z_octadecadienoyl_coa +nad +h2o
+    coa
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +acetyl_coa +fadh2 +h +fad +coa +nad +h2o
+    8z_11z_icosadienoyl_coa
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_7_7_30 [2.7.7.30] +gtp +beta_l_fucose_1_phosphate +diphosphate
+    gdp_l_fucose
+  }
+
+  branch from h side right {
+    h
+    <-> ec_1_14_13_88 [1.14.13.88] +2r_3r_dihydrokaempferol +o2 +nadph +2r_3r_dihydromyricetin +h2o
+    nadp
+  }
+
+  branch from nad side left {
+    nad
+    <-> . +nadh +acetyl_coa +fadh2 +h +fad +coa +h2o
+    5z_8z_11z_eicosatrienoyl_coenzyme_a
+  }
+
+  branch from nad side right {
+    nad
+    <-> . +nadh +acetyl_coa +fadh2 +h +fad +coa +h2o
+    7z_10z_13z_16z_docosatetraenoyl_coa
   }
 }

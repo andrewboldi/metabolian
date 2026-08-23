@@ -187,127 +187,6 @@
       "xrefs": {
         "chebi": "CHEBI:176935"
       }
-    },
-    {
-      "id": "steroid",
-      "name": "steroid",
-      "formula": "C19H31R",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:35341"
-      }
-    },
-    {
-      "id": "15_hydroxy_steroid",
-      "name": "15α-hydroxy steroid",
-      "formula": "C19H31OR",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:83147"
-      }
-    },
-    {
-      "id": "octadecanal",
-      "name": "octadecanal",
-      "formula": "C18H36O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:17034"
-      }
-    },
-    {
-      "id": "heptadecane",
-      "name": "heptadecane",
-      "formula": "C17H36",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16148"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16526"
-      }
-    },
-    {
-      "id": "octyl_6_o_d_galactofuranosyl_d_glucopyranoside",
-      "name": "octyl 6-O-β-D-galactofuranosyl-α-D-glucopyranoside",
-      "short": "octyl 6-O-β-D-galac…",
-      "formula": "C20H38O11",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:71631"
-      }
-    },
-    {
-      "id": "adp",
-      "name": "ADP",
-      "formula": "C10H12N5O10P2",
-      "charge": -3,
-      "xrefs": {
-        "metanetx": "MNXM40333"
-      }
-    },
-    {
-      "id": "phosphate",
-      "name": "phosphate",
-      "formula": "HO4P",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM9"
-      }
-    },
-    {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM3"
-      }
-    },
-    {
-      "id": "octyl_alpha_d_mannopyranoside",
-      "name": "octyl alpha-D-mannopyranoside",
-      "short": "octyl alpha-D-manno…",
-      "formula": "C14H28O6",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM65379"
-      }
-    },
-    {
-      "id": "deoxynivalenol",
-      "name": "deoxynivalenol",
-      "formula": "C15H20O6",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1108438"
-      }
-    },
-    {
-      "id": "3_acetyldeoxynivalenol",
-      "name": "3-acetyldeoxynivalenol",
-      "short": "3-acetyldeoxynivale…",
-      "formula": "C17H22O7",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM164210"
-      }
-    },
-    {
-      "id": "15_acetyldeoxynivalenol",
-      "name": "15-acetyldeoxynivalenol",
-      "short": "15-acetyldeoxynival…",
-      "formula": "C17H22O7",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM164059"
-      }
     }
   ],
   "enzymes": [
@@ -676,293 +555,71 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r8",
-      "name": "a steroid + reduced [NADPH--hemoprotein reductase] + O2 = a 15alpha-hydroxy steroid + o...",
-      "equation": "a steroid + reduced [NADPH--hemoprotein reductase] + O2 = a 15alpha-hydroxy steroid + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "steroid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "15_hydroxy_steroid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "rhea": "RHEA:83179"
+      "id": "xt_s_cis_n_methylcanadine_s-tetrahydrocolumbamine-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_cis_n_methylcanadine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "s-tetrahydrocolumbamine-to-fmn"
+      },
+      "note": "Shares (S)-cis-N-methylcanadine with (S)-tetrahydrocolumbamine to FMN.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:83179"
+            "db": "ChEBI",
+            "id": "CHEBI:50540"
           }
         ]
       }
     },
     {
-      "id": "r9",
-      "name": "octadecanal + reduced [NADPH--hemoprotein reductase] + O2 = heptadecane + oxidized [NAD...",
-      "equation": "octadecanal + reduced [NADPH--hemoprotein reductase] + O2 = heptadecane + oxidized [NADPH--hemoprotein reductase] + CO2 + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "octadecanal",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "heptadecane",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 9,
-      "xrefs": {
-        "rhea": "RHEA:83559"
+      "id": "xt_3_o_acetyl_4_o_demethylpapaveroxine_juvenile-hormone-ii-to-noscapine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_o_acetyl_4_o_demethylpapaveroxine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "juvenile-hormone-ii-to-noscapine"
+      },
+      "note": "Shares 3-O-acetyl-4'-O-demethylpapaveroxine with juvenile hormone II to (−)-noscapine.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:83559"
+            "db": "ChEBI",
+            "id": "CHEBI:141643"
           }
         ]
       }
     },
     {
-      "id": "r10",
-      "name": "Reaction MNXR178982",
-      "substrates": [
-        {
-          "metabolite": "octyl_6_o_d_galactofuranosyl_d_glucopyranoside",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "octyl_6_o_d_galactofuranosyl_d_glucopyranoside",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 10,
-      "xrefs": {
-        "metanetx": "MNXR178982"
+      "id": "xt_narcotoline_hemiacetal_4alpha-carboxy-5alpha-cho-to-nadp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "narcotoline_hemiacetal"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "4alpha-carboxy-5alpha-cho-to-nadp"
+      },
+      "note": "Shares Narcotoline hemiacetal with 4alpha-carboxy-5alpha-cho… to NADP.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR178982"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r11",
-      "name": "Reaction MNXR178983",
-      "substrates": [
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "octyl_alpha_d_mannopyranoside",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "octyl_alpha_d_mannopyranoside",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 11,
-      "xrefs": {
-        "metanetx": "MNXR178983"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR178983"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r12",
-      "name": "Reaction MNXR191660",
-      "substrates": [
-        {
-          "metabolite": "deoxynivalenol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "acetate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_acetyldeoxynivalenol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 12,
-      "xrefs": {
-        "metanetx": "MNXR191660"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR191660"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r13",
-      "name": "Reaction MNXR191662",
-      "substrates": [
-        {
-          "metabolite": "deoxynivalenol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "acetate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "15_acetyldeoxynivalenol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 13,
-      "xrefs": {
-        "metanetx": "MNXR191662"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR191662"
+            "db": "ChEBI",
+            "id": "CHEBI:176935"
           }
         ]
       }

@@ -1,0 +1,444 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "alpha-d-glucosamine-to-acetate-null",
+  "name": "alpha-D-glucosamine… to acetate",
+  "category": "other",
+  "summary": "A 3-step route from alpha-D-glucosamine 6-phosphate to acetate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR200571"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "alpha_d_glucosamine_6_phosphate",
+      "name": "alpha-D-glucosamine 6-phosphate",
+      "short": "alpha-D-glucosamine…",
+      "formula": "C6H13NO8P",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1104065"
+      }
+    },
+    {
+      "id": "n_acetyl_d_hexosamine",
+      "name": "N-acetyl-D-hexosamine",
+      "short": "N-acetyl-D-hexosami…",
+      "formula": "C8H15NO6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:21601"
+      }
+    },
+    {
+      "id": "6_phospho_beta_d_glucosaminyl_1_4_n_acetyl_d_glu",
+      "name": "6-phospho-beta-D-glucosaminyl-(1->4)-N-acetyl-D-glucosamine",
+      "short": "6-phospho-beta-D-gl…",
+      "formula": "C14H26N2O13P",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1560163"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM26"
+      }
+    },
+    {
+      "id": "diacetylchitobiose_6_phosphate",
+      "name": "diacetylchitobiose-6'-phosphate",
+      "short": "diacetylchitobiose-…",
+      "formula": "C16H27N2O14P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:64883"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "n_monoacetylchitobiose_6_phosphate",
+      "name": "N'-monoacetylchitobiose-6'-phosphate",
+      "short": "N'-monoacetylchitob…",
+      "formula": "C14H26N2O13P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:71315"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "Acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30089"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR200571",
+      "substrates": [
+        {
+          "metabolite": "alpha_d_glucosamine_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_acetyl_d_hexosamine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_phospho_beta_d_glucosaminyl_1_4_n_acetyl_d_glu",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR200571"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR200571"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR200570",
+      "substrates": [
+        {
+          "metabolite": "6_phospho_beta_d_glucosaminyl_1_4_n_acetyl_d_glu",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "diacetylchitobiose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR200570"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR200570"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "diacetylchitobiose-6'-phosphate + H2O = N'-monoacetylchitobiose-6'-phosphate + acetate",
+      "equation": "diacetylchitobiose-6'-phosphate + H2O = N'-monoacetylchitobiose-6'-phosphate + acetate",
+      "substrates": [
+        {
+          "metabolite": "diacetylchitobiose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_monoacetylchitobiose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:35083"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35083"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_6_phospho_beta_d_glucosaminyl_1_4_n_acetyl_d_glu_alpha-d-glucosamine-to-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_phospho_beta_d_glucosaminyl_1_4_n_acetyl_d_glu"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-glucosamine-to-acetate"
+      },
+      "note": "Shares 6-phospho-beta-D-glucosaminyl-(1->4)-N-acetyl-D-glucosamine with alpha-D-glucosamine… to acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1560163"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_diacetylchitobiose_6_phosphate_3-hydroxysebacic-acid-to-hydrogen-donor-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "diacetylchitobiose_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxysebacic-acid-to-hydrogen-donor-null"
+      },
+      "note": "Shares diacetylchitobiose-6'-phosphate with 3-hydroxysebacic acid to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64883"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_diacetylchitobiose_6_phosphate_4-hydroxy-2-oxo-5-methylh-to-nad-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "diacetylchitobiose_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxy-2-oxo-5-methylh-to-nad-null"
+      },
+      "note": "Shares diacetylchitobiose-6'-phosphate with 4-Hydroxy-2-oxo-5-methylh… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64883"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_diacetylchitobiose_6_phosphate_alpha-d-glucosamine-to-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "diacetylchitobiose_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-glucosamine-to-acetate"
+      },
+      "note": "Shares diacetylchitobiose-6'-phosphate with alpha-D-glucosamine… to acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64883"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_diacetylchitobiose_6_phosphate_e-coli-mlps-to-h",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "diacetylchitobiose_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "e-coli-mlps-to-h"
+      },
+      "note": "Shares diacetylchitobiose-6'-phosphate with E. coli MLPS to H.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64883"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_diacetylchitobiose_6_phosphate_h-to-4-methylcatechol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "diacetylchitobiose_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-4-methylcatechol"
+      },
+      "note": "Shares diacetylchitobiose-6'-phosphate with H to 4-methylcatechol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64883"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_diacetylchitobiose_6_phosphate_n-acetyl-beta-d-muramate-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "diacetylchitobiose_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyl-beta-d-muramate-to-h2o-null"
+      },
+      "note": "Shares diacetylchitobiose-6'-phosphate with N-acetyl-beta-D-muramate… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64883"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_diacetylchitobiose_6_phosphate_p-nitrophenyl-n-acetyl-be-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "diacetylchitobiose_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "p-nitrophenyl-n-acetyl-be-to-h2o"
+      },
+      "note": "Shares diacetylchitobiose-6'-phosphate with p-Nitrophenyl-N-acetyl-be… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64883"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_monoacetylchitobiose_6_phosphate_alpha-d-glucosamine-to-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_monoacetylchitobiose_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-glucosamine-to-acetate"
+      },
+      "note": "Shares N'-monoacetylchitobiose-6'-phosphate with alpha-D-glucosamine… to acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:71315"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_monoacetylchitobiose_6_phosphate_n-monoacetylchitobiose-6-to-s-adenosyl-l-homocys",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_monoacetylchitobiose_6_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-monoacetylchitobiose-6-to-s-adenosyl-l-homocys"
+      },
+      "note": "Shares N'-monoacetylchitobiose-6'-phosphate with N'-monoacetylchitobiose-6… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:71315"
+          }
+        ]
+      }
+    }
+  ]
+}

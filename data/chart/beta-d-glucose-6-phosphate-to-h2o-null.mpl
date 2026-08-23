@@ -4,17 +4,15 @@
 # edit the generator, not this file.
 
 pathway beta-d-glucose-6-phosphate-to-h2o-null "beta-D-glucose 6-phosphate to H2O" {
-  spacing 152
+  spacing 168
 
   spine at 0,0 {
     beta_d_glucose_6_phosphate
-    <-> .
-    keto_d_fructose_6_phosphate
-    <-> . +nadh +h -nad
-    alditol_6_phosphate
-    <-> . +pyruvate -d_sorbitol -phosphoenolpyruvate
+    <-> ec_3_2_1_86 [3.2.1.86] +beta_d_glucose +h -h2o
+    6_phospho_beta_d_glucosyl_1_4_beta_d_glucose
+    <-> ec_2_7_1_85 [2.7.1.85] +adp -atp -beta_cellobiose
     h
-    <-> ec_3_2_1_22 [3.2.1.22] +alpha_d_galactose +d_sorbitol -h2o
-    d_galp_1_6_d_glc_oh
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +beta_cellobiose +phosphate -beta_cellobiose -h2o
+    atp
   }
 }

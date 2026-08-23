@@ -1,0 +1,390 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n8-acetylspermidinium-to-spermidine-23928",
+  "name": "N8-acetylspermidinium to spermidine",
+  "category": "redox-detox",
+  "summary": "A 3-step route from N8-acetylspermidinium(2+) to spermidine(3+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:23928"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58535"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n8_acetylspermidinium",
+      "name": "N8-acetylspermidinium",
+      "short": "N8-acetylspermidini…",
+      "formula": "C9H23N3O",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:58535"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "spermidine",
+      "name": "spermidine",
+      "formula": "C7H22N3",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:57834"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "Acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30089"
+      }
+    },
+    {
+      "id": "s_adenosylmethioninaminium",
+      "name": "S-adenosylmethioninaminium",
+      "short": "S-adenosylmethionin…",
+      "formula": "C14H24N6O3S",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:57443"
+      }
+    },
+    {
+      "id": "spermine",
+      "name": "spermine",
+      "formula": "C10H30N4",
+      "charge": 4,
+      "xrefs": {
+        "chebi": "CHEBI:45725"
+      }
+    },
+    {
+      "id": "5_s_methyl_5_thioadenosine",
+      "name": "5'-S-methyl-5'-thioadenosine",
+      "short": "5'-S-methyl-5'-thio…",
+      "formula": "C11H15N5O3S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17509"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "3_ammoniopropanal",
+      "name": "3-ammoniopropanal",
+      "formula": "C3H8NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58374"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_48",
+      "name": "acetylspermidine deacetylase",
+      "ec": [
+        "3.5.1.48"
+      ],
+      "xrefs": {
+        "uniprot": "Q969S8"
+      }
+    },
+    {
+      "id": "ec_2_5_1_22",
+      "name": "spermine synthase",
+      "ec": [
+        "2.5.1.22"
+      ],
+      "xrefs": {
+        "uniprot": "P52788"
+      }
+    },
+    {
+      "id": "ec_1_5_3_13",
+      "name": "N(1)-acetylpolyamine oxidase",
+      "ec": [
+        "1.5.3.13"
+      ],
+      "xrefs": {
+        "uniprot": "Q6QHF9"
+      }
+    },
+    {
+      "id": "ec_1_5_3_16",
+      "name": "spermine oxidase",
+      "ec": [
+        "1.5.3.16"
+      ],
+      "xrefs": {
+        "uniprot": "Q9NWM0"
+      }
+    },
+    {
+      "id": "ec_1_5_3_17",
+      "name": "non-specific polyamine oxidase",
+      "ec": [
+        "1.5.3.17"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "acetylspermidine deacetylase",
+      "equation": "N(8)-acetylspermidine + H2O = spermidine + acetate",
+      "ec": "3.5.1.48",
+      "substrates": [
+        {
+          "metabolite": "n8_acetylspermidinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "spermidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_48"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:23928"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23928"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "spermine synthase",
+      "equation": "S-adenosyl 3-(methylsulfanyl)propylamine + spermidine = spermine + S-methyl-5'-thioadenosine + H(+)",
+      "ec": "2.5.1.22",
+      "substrates": [
+        {
+          "metabolite": "s_adenosylmethioninaminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "spermidine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "spermine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_s_methyl_5_thioadenosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_22"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:19973"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19973"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "N(1)-acetylpolyamine oxidase",
+      "equation": "spermine + O2 + H2O = 3-aminopropanal + spermidine + H2O2",
+      "ec": "1.5.3.13",
+      "substrates": [
+        {
+          "metabolite": "spermine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_ammoniopropanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "spermidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_5_3_13"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:25804"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25804"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_n8_acetylspermidinium_n1-n12-diacetylsperminium-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n8_acetylspermidinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n1-n12-diacetylsperminium-to-ammonium"
+      },
+      "note": "Shares N8-acetylspermidinium with N1,N12-diacetylsperminium to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58535"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n8_acetylspermidinium_n1-n12-diacetylsperminium-to-ammonium-25868",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n8_acetylspermidinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n1-n12-diacetylsperminium-to-ammonium-25868"
+      },
+      "note": "Shares N8-acetylspermidinium with N1,N12-diacetylsperminium to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58535"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n8_acetylspermidinium_n8-acetylspermidinium-to-spermidine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n8_acetylspermidinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n8-acetylspermidinium-to-spermidine"
+      },
+      "note": "Shares N8-acetylspermidinium with N8-acetylspermidinium to spermidine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58535"
+          }
+        ]
+      }
+    }
+  ]
+}

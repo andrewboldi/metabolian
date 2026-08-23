@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway r-propane-1-2-diol-to-h2o "(R)-propane-1,2-diol to H2O" {
-  spacing 196
+  spacing 220
 
   spine at 0,0 {
     r_propane_1_2_diol
@@ -12,9 +12,7 @@ pathway r-propane-1-2-diol-to-h2o "(R)-propane-1,2-diol to H2O" {
     h
     <-> ec_4_2_1_30 [4.2.1.30] +s_lactaldehyde +h2o
     glycerol
-    <-> . +h +cardiolipin_tetrahexadecanoyl_n_c16_0
-    dipalmitoyl_phosphatidylglycerol
-    <-> . +h +adp +phosphate -dipalmitoyl_phosphatidylglycerol -h2o
-    atp
+    <-> ec_3_1_4_46 [3.1.4.46] +h +sn_glycerol_3_phosphate -h2o
+    bis_glycerophospho_glycerol
   }
 }

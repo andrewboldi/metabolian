@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway beta-nicotinamide-to-diphosphate "beta-nicotinamide… to diphosphate" {
-  spacing 276
+  spacing 264
 
   spine at 0,0 {
     beta_nicotinamide_d_riboside
@@ -16,17 +16,5 @@ pathway beta-nicotinamide-to-diphosphate "beta-nicotinamide… to diphosphate" {
     nmn
     <-> ec_2_7_7_1 [2.7.7.1] +atp +hplus -nad
     ppi
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_1_1_74 [3.1.1.74] +16_methylsulfonyloxyhexadecanoic_acid +4_nitrophenol +h2o
-    p_nitrophenyl_16_methyl_sulfone_ester_hexadecano
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_1_3_76 [3.1.3.76] +2_2_bi_benzothiazole_6_ol +phosphate +h2o
-    attophos
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 17-hydroxypregnenolone-to-7-hydroxydehydroepiand "17α-hydroxypregnenolone to 7β-hydroxydehydroepiandro…" {
-  spacing 192
+  spacing 180
 
   spine at 0,0 {
     17_hydroxypregnenolone
@@ -16,17 +16,5 @@ pathway 17-hydroxypregnenolone-to-7-hydroxydehydroepiand "17α-hydroxypregnenolo
     7_ketodehydroepiandrosterone
     <-> . +nadph +hplus -nadp
     7_hydroxydehydroepiandrosterone
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> ec_1_14_14_187 [1.14.14.187] +19e_geissoschizine +fmnh2 +o2 +h2o +hplus
-    rhazimal
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +variecoladiene +fmnh2 +o2 +h2o +hplus
-    variecolin
   }
 }

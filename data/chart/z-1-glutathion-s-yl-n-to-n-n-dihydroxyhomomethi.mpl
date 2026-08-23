@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway z-1-glutathion-s-yl-n-to-n-n-dihydroxyhomomethi "(Z)-1-(glutathion-S-yl)-N… to N,N-dihydroxyhomomethioni…" {
-  spacing 206
+  spacing 152
 
   spine at 0,0 {
     z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa
@@ -14,59 +14,5 @@ pathway z-1-glutathion-s-yl-n-to-n-n-dihydroxyhomomethi "(Z)-1-(glutathion-S-yl)
     nadp
     <-> . +co2 +4_methylthiobutanaldoxime +h2o -n_n_dihydroxyhomomethionine
     h
-  }
-
-  branch from glutathione side left {
-    glutathione
-    <-> . +arsenous_acid +h2o
-    arsenic_triglutathione
-  }
-
-  branch from glutathione side right {
-    glutathione
-    <-> ec_1_11_1_9 [1.11.1.9] +glutathione_disulfide +prostaglandin_e2 +h2o
-    15s_15_hydroperoxy_prostaglandin_e2
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_14_13_133 [1.14.13.133] +h +pentalen_13_ol +o2 +nadph +h2o
-    pentalen_13_al
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_14_13_133 [1.14.13.133] +h +o2 +nadph +pentalen_13_al +h2o
-    pentalenene
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_lysine +l_glutamine +l_phenylalanine
-    lysyl_glutaminyl_phenylalanine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_lysine
-    lysyl_lysyl_lysine
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +1_pentadecanoyl_sn_glycero_3_phosphocholine +phosphate +1_pentadecanoyl_sn_glycero_3_phosphocholine +h2o
-    atp
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    1_octadeca_trienoylglycerophosphocholine_sn1_lpc
-  }
-
-  branch from n_n_dihydroxyhomomethionine side left {
-    n_n_dihydroxyhomomethionine
-    <-> . +h +nadph +n_hydroxyhomomethionine +nadp +h2o
-    o2
   }
 }

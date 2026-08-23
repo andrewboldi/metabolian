@@ -28,19 +28,135 @@ pathway r-alanopine-to-n6-r-s8-succinyldihydr "(R)-β-alanopine to N6-[(R)-S8-su
     n6_r_s8_succinyldihydrolipoyl_l_lysine_1
   }
 
+  branch from alanine side left {
+    alanine
+    <-> . +histaminium +atp +amp +ppi +hplus
+    carcininium
+  }
 
+  branch from alanine side right {
+    alanine
+    <-> . +dopamine +atp +amp +ppi +hplus
+    n_alanyldopamine
+  }
 
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_115 [4.2.3.115] +gpp
+    terpinene
+  }
 
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_116 [4.2.3.116] +gpp
+    camphene
+  }
 
+  branch from r_pantoate side left {
+    r_pantoate
+    <-> ec_1_1_1_106 [1.1.1.106] +nad +nadh +hplus
+    r_4_dehydropantoate
+  }
 
+  branch from r_pantoate side right {
+    r_pantoate
+    <-> ec_2_7_1_169 [2.7.1.169] +atp +adp +hplus
+    r_4_phosphonatopantoate
+  }
 
+  branch from kiv side left {
+    kiv
+    <-> ec_2_6_1_66 [2.6.1.66] +l_valine +pyruvate
+    alanine
+  }
 
+  branch from kiv side right {
+    kiv
+    <-> . +nadh +2_methylpropanoate +co2 +h +h2o
+    nad
+  }
 
+  branch from n6_r_dihydrolipoyl_l_lysine side left {
+    n6_r_dihydrolipoyl_l_lysine
+    <-> ec_2_3_1_168 [2.3.1.168] +mbutyryl_coa +coa
+    n6_r_s8_s_2_methylbutanoyl_dihydrolipoyl_l_lysin
+  }
 
+  branch from n6_r_dihydrolipoyl_l_lysine side right {
+    n6_r_dihydrolipoyl_l_lysine
+    <-> . +3s_3_carboxy_3_hydroxypropanoyl_coa +coa
+    n6_r_s8_3s_3_carboxy_3_hydroxypropanoyl_dihydrol
+  }
 
+  branch from methylene_thf side left {
+    methylene_thf
+    <-> ec_1_5_1_15 [1.5.1.15] +nad +nadh
+    methenyl_thf
+  }
 
+  branch from nh3 side right {
+    nh3
+    <-> ec_1_4_1_18 [1.4.1.18] +l_thialysinium +nad +nadh +hplus
+    4s_5_6_dihydro_4h_1_3_thiazine_4_carboxylate
+  }
 
+  branch from nh3 side left {
+    nh3
+    <-> . +l_thialysinium +nad +h2o +nadh +hplus
+    s_acetaldehyde_l_cysteine
+  }
 
+  branch from n6_r_lipoyl_l_lysine side right {
+    n6_r_lipoyl_l_lysine
+    <-> ec_2_3_1_313 [2.3.1.313] +nad +h2o +nicotinamide +l_lysinium
+    2_o_lipoyl_adp_d_ribose
+  }
 
+  branch from n6_r_lipoyl_l_lysine side left {
+    n6_r_lipoyl_l_lysine
+    <-> ec_3_5_1_138 [3.5.1.138] +h2o +r_lipoate
+    l_lysinium
+  }
 
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_118 [4.2.3.118] +e_2_methylgeranyl_diphosphate +h2o
+    2_methylisoborneol
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_121 [4.2.3.121] +gpp
+    pinene
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_1_4_3_26 [1.4.3.26] +3_amino_5_4_hydroxyphenyl_methyl_4_4_dimethylpyr +o2 +h2o +h2o2
+    premycofactocin
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> . +h2o +hplus +premycofactocin
+    5_4_hydroxyphenyl_methyl_3_imino_4_4_dimethylpyr
+  }
+
+  branch from n6_r_lipoyl_l_lysine side right {
+    n6_r_lipoyl_l_lysine
+    <-> . +hplus +n6_r_s8_3s_3_carboxy_3_hydroxypropanoyl_dihydrol +co2
+    l_4_hydroxy_2_oxoglutarate
+  }
+
+  branch from akg side left {
+    akg
+    <-> . +3_n4_etheno_2_deoxycytidine_5_monophosphate_1 +o2 +h2o +glyoxal +succinate +co2
+    2_deoxycytidine_5_monophosphate_1
+  }
+
+  branch from akg side right {
+    akg
+    <-> . +3_n4_etheno_2_deoxycytidine_5_monophosphate_1 +o2 +h2o +2_deoxycytidine_5_monophosphate_1 +succinate +co2
+    glyoxal
+  }
 }

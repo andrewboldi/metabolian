@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-ethyl-l-serine-to-r-2-ethylmalate "2-ethyl-L-serine to (R)-2-ethylmalate" {
-  spacing 188
+  spacing 158
 
   spine at 0,0 {
     2_ethyl_l_serine
@@ -18,37 +18,7 @@ pathway 2-ethyl-l-serine-to-r-2-ethylmalate "2-ethyl-L-serine to (R)-2-ethylmala
 
   branch from l_aminobutyrate side left {
     l_aminobutyrate
-    <-> . +oxobut +l_histidine
-    3_imidazol_5_yl_pyruvate
-  }
-
-  branch from l_aminobutyrate side right {
-    l_aminobutyrate
-    <-> . +oxobut +l_phenylalanine
-    keto_phenylpyruvate
-  }
-
-  branch from oxobut side left {
-    oxobut
-    <-> . +n_n_dimethyl_l_argininium +l_aminobutyrate
-    5_3_3_dimethylguanidino_2_oxopentanoate
-  }
-
-  branch from oxobut side right {
-    oxobut
-    <-> ec_2_6_1_44 [2.6.1.44] +l_aminobutyrate +pyruvate
-    alanine
-  }
-
-  branch from nh3 side left {
-    nh3
-    <-> . +n_carbamoyl_l_cysteinate +h2o +hplus +co2
-    cysteine
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +n_carbamoyl_l_tryptophanate +h2o +hplus +co2
-    l_tryptophan
+    <-> . +3_hydroxy_l_kynurenine +oxobut
+    4_2_amino_3_hydroxyphenyl_2_4_dioxobutanoate
   }
 }

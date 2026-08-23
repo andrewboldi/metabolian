@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-xylp-1-6-d-glcp-to-h2o-null "α-D-Xylp-(1→6)-D-Glcp to H2O" {
-  spacing 216
+  spacing 192
 
   spine at 0,0 {
     d_xylp_1_6_d_glcp
@@ -14,29 +14,5 @@ pathway d-xylp-1-6-d-glcp-to-h2o-null "α-D-Xylp-(1→6)-D-Glcp to H2O" {
     xllg_xyloglucan_oligosaccharide
     <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate -xllg_xyloglucan_oligosaccharide -h2o
     atp
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_asparagine +l_aspartate +l_valine
-    aspartyl_valyl_asparagine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    11z_icos_11_enoic_acid
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    15z_tetracosenoate
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    15_s_hetre
   }
 }

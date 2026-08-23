@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway trans-sinapyl-alcohol-to-h2o "trans-sinapyl alcohol to H2O" {
-  spacing 272
+  spacing 340
 
   spine at 0,0 {
     trans_sinapyl_alcohol
@@ -54,25 +54,121 @@ pathway trans-sinapyl-alcohol-to-h2o "trans-sinapyl alcohol to H2O" {
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
-    glycochenodeoxycholate
+    <-> . +diphosphate +pre_alcaligin +h +amp
+    3_4_amino_3_hydroxybutyl_hydroxy_carbamoyl_propa
   }
 
   branch from atp side right {
     atp
-    <-> . +h +adp +phosphate +h2o
-    taurochenodeoxycholate
+    <-> . +diphosphate +alcaligin +h +amp
+    pre_alcaligin
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +adp +phosphate +atp
-    sulfate
+    <-> . +s_dnpa
+    s_hemiketal
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_1_1_13 [3.1.1.13] +9z_hexadecenoate +h +cholesterol
-    cholesteryl_palmitoleate
+    <-> ec_3_1_1_95 [3.1.1.95] +epsilon_rhodomycin_t +15_demethoxy_epsilon_rhodomycin
+    methanol
+  }
+
+  branch from trans_sinapyl_alcohol side left {
+    trans_sinapyl_alcohol
+    <-> ec_1_1_1_195 [1.1.1.195] +nadp +nadph +hplus
+    e_sinapaldehyde
+  }
+
+  branch from trans_sinapyl_alcohol side right {
+    trans_sinapyl_alcohol
+    <-> . +acetyl_coa +coa
+    trans_sinapyl_actetate
+  }
+
+  branch from udp_d_glucose side left {
+    udp_d_glucose
+    <-> ec_2_4_1_195 [2.4.1.195] +z_2_indol_3_yl_1_thioacetohydroximate +udp
+    z_indolylmethyl_desulfoglucosinolate
+  }
+
+  branch from udp_d_glucose side right {
+    udp_d_glucose
+    <-> ec_2_4_1_354 [2.4.1.354] +r_mandelonitrile +udp +hplus
+    r_prunasin
+  }
+
+  branch from udp side left {
+    udp
+    <-> ec_2_4_1_17 [2.4.1.17] +4_methylnitrosamino_1_3_pyridyl_1_butanol_glucur +4_methylnitrosamino_1_3_pyridyl_1_butanol
+    udp_alpha_d_glucuronate
+  }
+
+  branch from udp side right {
+    udp
+    <-> ec_2_4_1_17 [2.4.1.17] +nnal_n_glucuronide +udp_alpha_d_glucuronate
+    4_methylnitrosamino_1_3_pyridyl_1_butanol
+  }
+
+  branch from h side left {
+    h
+    <-> ec_1_14_14_1 [1.14.14.1] +7_12_dimethylbenz_a_anthracene_5_6_oxide +nadp +h2o +nadph +7_12_dimethyltetraphene
+    o2
+  }
+
+  branch from h side right {
+    h
+    <-> . +behenate +o2 +nadph +22_hydroxydocosanoate +h2o
+    nadp
+  }
+
+  branch from udp_alpha_d_glucose side left {
+    udp_alpha_d_glucose
+    <-> ec_2_4_1_245 [2.4.1.245] +udp +h +glucose
+    alpha_alpha_trehalose
+  }
+
+  branch from udp_alpha_d_glucose side right {
+    udp_alpha_d_glucose
+    <-> ec_2_4_1_158 [2.4.1.158] +udp +13_sophorosyloxydocosanoic_acid
+    13_beta_d_glucosyloxy_docosanoate
+  }
+
+  branch from sinapyl_alcohol side left {
+    sinapyl_alcohol
+    <-> . +acetyl_coa +trans_sinapyl_actetate
+    coa
+  }
+
+  branch from adp side right {
+    adp
+    <-> . +2_methyl_3_n_amyl_pyrrole +4_methoxy_2_2_bipyrrole_5_carboxaldehyde +atp +h +phosphate
+    prodigiosin
+  }
+
+  branch from adp side left {
+    adp
+    <-> . +l_leucine +demethylblasticidin_s +atp +phosphate
+    l_leucyl_demethyl_blasticidin_s
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> . +2_3_bis_o_geranylgeranyl_sn_glycero_1_phospho_1 +h2o
+    2_3_bis_o_geranylgeranyl_sn_glycero_1_phospho_1
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +1d_myo_inositol_3_4_5_6_tetrakisphosphate +h2o
+    1d_myo_inositol_1_3_4_5_6_pentakisphosphate
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_6_2_1_2 [6.2.1.2] +diphosphate +7_hydroxylauroyl_coa +amp +coa
+    7_hydroxylaurate
   }
 }

@@ -26,87 +26,28 @@ pathway formononetin-to-coa "formononetin to CoA" {
     maackiain_3_o_glucosyl_6_o_malonate
   }
 
-  branch from fmn side left {
-    fmn
-    <-> ec_1_14_14_116 [1.14.14.116] +s_averantin +fmnh2 +o2 +h2o
-    1_s_5_r_5_hydroxyaverantin
-  }
 
-  branch from fmn side right {
-    fmn
-    <-> . +3_hydroxypalmitate +fmnh2 +o2 +h2o +hplus
-    3_16_dihydroxyhexadecanoate
-  }
 
-  branch from pseudobaptigenin side left {
-    pseudobaptigenin
-    <-> . +h +o2 +nadph +nadp +h2o
-    calycosin
-  }
 
-  branch from nadp side right {
-    nadp
-    <-> . +h +7alpha_hydroxycholest_4_en_3_one +nadph
-    5beta_cholestane_3alpha_7alpha_diol
-  }
 
-  branch from nadp side left {
-    nadp
-    <-> . +5b_cholestane_3a_7a_12a_25_26_pentol +h2o +h +o2 +nadph
-    5beta_cholestane_3alpha_7alpha_12alpha_25_tetrol
-  }
 
-  branch from 2_7_dihydroxy_4_5_methylenedioxyisoflavone side right {
-    2_7_dihydroxy_4_5_methylenedioxyisoflavone
-    <-> ec_1_3_1_45 [1.3.1.45] +h +nadph +nadp
-    sophorol
-  }
 
-  branch from h2o side left {
-    h2o
-    <-> . +h +adp +normetanephrine +phosphate +normetanephrine
-    atp
-  }
 
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    15z_tetracosenoyl_coa
-  }
 
-  branch from maackiain side left {
-    maackiain
-    <-> . +h +o2 +nadph +nadp +h2o
-    6a_hydroxymaackiain
-  }
 
-  branch from maackiain side right {
-    maackiain
-    <-> ec_4_2_1_139 [4.2.1.139] +h2o
-    3r_4r_2_hydroxy_4_5_methylenedioxyisoflavan_4_7
-  }
 
-  branch from maackiain side left {
-    maackiain
-    <-> ec_2_4_1_170 [2.4.1.170] +udp +h +trifolirhizin
-    udp_alpha_d_glucose
-  }
 
-  branch from trifolirhizin side right {
-    trifolirhizin
-    <-> ec_2_3_1_115 [2.3.1.115] +malonyl_coa +atp +h2o +maackiain_3_o_glucosyl_6_o_malonate +coa +amp
-    diphosphate
-  }
 
-  branch from coa side left {
-    coa
-    <-> . +2_methylfumaryl_coa +gdp +phosphate +mesaconate
-    gtp
-  }
 
-  branch from coa side right {
-    coa
-    <-> . +15z_tetracosenoyl_coa +r_carnitine
-    nervonyl_carnitine
-  }
+
+
+
+
+
+
+
+
+
+
+
 }

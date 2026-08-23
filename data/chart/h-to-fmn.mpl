@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway h-to-fmn "H to FMN" {
-  spacing 252
+  spacing 270
 
   spine at 0,0 {
     h
@@ -18,25 +18,43 @@ pathway h-to-fmn "H to FMN" {
 
   branch from h2o side left {
     h2o
-    <-> . +3_phenylpropionitrile
-    3_phenylpropionaldoxim
+    <-> . +feruloyl_diketide +h +coa
+    feruloyl_diketide_coa
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_2_1_3 [1.2.1.3] +nadh +phenanthrene_9_carboxylate +h +nad
-    phenanthrene_9_carboxaldehyde
+    <-> . +colibactin
+    colibactin_with_hydrolyzed_cyclopropane_groups
   }
 
-  branch from fmn side left {
-    fmn
-    <-> ec_1_14_14_69 [1.14.14.69] +ent_cassa_12_15_diene +fmnh2 +o2 +h2o +hplus
-    ent_3_hydroxycassa_12_15_dien_2_one
+  branch from h side left {
+    h
+    <-> ec_2_3_2_35 [2.3.2.35] +nordihydrocapsaicin +coa +7_methyloctanoyl_coa
+    vanillylamine
   }
 
-  branch from fmn side right {
-    fmn
-    <-> . +ent_cassa_12_15_dien_2_ol +fmnh2 +o2 +h2o +hplus
-    ent_cassa_12_15_dien_2_3_diol
+  branch from h side right {
+    h
+    <-> ec_2_3_2_35 [2.3.2.35] +4e_6_methylhept_4_enoyl_coa +vanillylamine +coa
+    dinorcapsaicin
+  }
+
+  branch from phosphocholine side left {
+    phosphocholine
+    <-> ec_3_1_4_38 [3.1.4.38] +sphing_4_enine_phosphocholine +h2o +h
+    sphing_4_enine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_5_1_115 [3.5.1.115] +1_mycothiol_s_yl_n_demethyllincomycin +1d_myo_inositol_2_amino_2_deoxy_alpha_d_glucopyr
+    n_demethyllincomycin_mercapturate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_4_22_40 [3.4.22.40] +deamido_bleomycin_b2 +nh4 +h
+    bleomycin_b2
   }
 }

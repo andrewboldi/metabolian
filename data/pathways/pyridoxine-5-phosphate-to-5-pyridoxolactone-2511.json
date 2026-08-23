@@ -1,0 +1,634 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "pyridoxine-5-phosphate-to-5-pyridoxolactone-2511",
+  "name": "pyridoxine 5'-phosphate to 5-pyridoxolactone",
+  "category": "redox-detox",
+  "summary": "A 3-step route from pyridoxine 5'-phosphate(2−) to 5-pyridoxolactone, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:25112"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58589"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "pyridoxine_5_phosphate",
+      "name": "pyridoxine 5'-phosphate",
+      "short": "pyridoxine 5'-P",
+      "formula": "C8H10NO6P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58589"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "pyridoxine",
+      "name": "pyridoxine",
+      "formula": "C8H11NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16709"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "isopyridoxal",
+      "name": "isopyridoxal",
+      "formula": "C8H9NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17889"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "5_pyridoxolactone",
+      "name": "5-pyridoxolactone",
+      "formula": "C8H7NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:2124"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "pyridoxal",
+      "name": "pyridoxal",
+      "formula": "C8H9NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17310"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_3_74",
+      "name": "pyridoxal phosphatase",
+      "ec": [
+        "3.1.3.74"
+      ],
+      "xrefs": {
+        "uniprot": "Q8TCD6"
+      }
+    },
+    {
+      "id": "ec_1_1_99_9",
+      "name": "pyridoxine 5-dehydrogenase",
+      "ec": [
+        "1.1.99.9"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_416",
+      "name": "isopyridoxal dehydrogenase (5-pyridoxolactone-forming)",
+      "ec": [
+        "1.1.1.416"
+      ]
+    },
+    {
+      "id": "ec_1_1_3_12",
+      "name": "pyridoxine 4-oxidase",
+      "ec": [
+        "1.1.3.12"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "pyridoxal phosphatase",
+      "equation": "pyridoxine 5'-phosphate + H2O = pyridoxine + phosphate",
+      "ec": "3.1.3.74",
+      "substrates": [
+        {
+          "metabolite": "pyridoxine_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pyridoxine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_3_74"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:25112"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25112"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "pyridoxine 5-dehydrogenase",
+      "equation": "pyridoxine + A = isopyridoxal + AH2",
+      "ec": "1.1.99.9",
+      "substrates": [
+        {
+          "metabolite": "pyridoxine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "isopyridoxal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_99_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:14497"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14497"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "isopyridoxal dehydrogenase (5-pyridoxolactone-forming)",
+      "equation": "isopyridoxal + NAD(+) = 5-pyridoxolactone + NADH + H(+)",
+      "ec": "1.1.1.416",
+      "substrates": [
+        {
+          "metabolite": "isopyridoxal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_pyridoxolactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_416"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:51588"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51588"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "pyridoxine 4-oxidase",
+      "equation": "pyridoxine + O2 = pyridoxal + H2O2",
+      "ec": "1.1.3.12",
+      "substrates": [
+        {
+          "metabolite": "pyridoxine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pyridoxal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_3_12"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:15033"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15033"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_pyridoxine_5_phosphate_pyridoxine-5-phosphate-to-5-pyridoxolactone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pyridoxine_5_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "pyridoxine-5-phosphate-to-5-pyridoxolactone"
+      },
+      "note": "Shares pyridoxine 5'-phosphate with pyridoxine 5'-phosphate to 5-pyridoxolactone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58589"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pyridoxine_2s-flavan-4-one-to-flavonol-3-o-6-4-coumar",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pyridoxine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2s-flavan-4-one-to-flavonol-3-o-6-4-coumar"
+      },
+      "note": "Shares pyridoxine with (2S)-flavan-4-one to flavonol 3-O-[6-(4-coumar….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16709"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pyridoxine_benzoin-to-4-d-glucosyloxy-benzoa-21460",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pyridoxine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "benzoin-to-4-d-glucosyloxy-benzoa-21460"
+      },
+      "note": "Shares pyridoxine with benzoin to 4-(β-D-glucosyloxy)benzoa….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16709"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pyridoxine_pyridoxine-5-phosphate-to-5-pyridoxolactone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pyridoxine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "pyridoxine-5-phosphate-to-5-pyridoxolactone"
+      },
+      "note": "Shares pyridoxine with pyridoxine 5'-phosphate to 5-pyridoxolactone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16709"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_isopyridoxal_isopyridoxal-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isopyridoxal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isopyridoxal-to-ammonium"
+      },
+      "note": "Shares isopyridoxal with isopyridoxal to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17889"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_isopyridoxal_isopyridoxal-to-ammonium-57936",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isopyridoxal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isopyridoxal-to-ammonium-57936"
+      },
+      "note": "Shares isopyridoxal with isopyridoxal to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17889"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_isopyridoxal_pyridoxine-5-phosphate-to-5-pyridoxolactone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isopyridoxal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "pyridoxine-5-phosphate-to-5-pyridoxolactone"
+      },
+      "note": "Shares isopyridoxal with pyridoxine 5'-phosphate to 5-pyridoxolactone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17889"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_pyridoxolactone_10z-13z-16z-19z-docosat-to-h2o-37095",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_pyridoxolactone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "10z-13z-16z-19z-docosat-to-h2o-37095"
+      },
+      "note": "Shares 5-pyridoxolactone with (10Z,13Z,16Z,19Z)-docosat… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:2124"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_pyridoxolactone_pyridoxine-5-phosphate-to-5-pyridoxolactone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_pyridoxolactone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "pyridoxine-5-phosphate-to-5-pyridoxolactone"
+      },
+      "note": "Shares 5-pyridoxolactone with pyridoxine 5'-phosphate to 5-pyridoxolactone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:2124"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_pyridoxolactone_s-2-chloropropanoate-to-chloride",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_pyridoxolactone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2-chloropropanoate-to-chloride"
+      },
+      "note": "Shares 5-pyridoxolactone with (S)-2-chloropropanoate to chloride.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:2124"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pyridoxal_4-pyridoxolactone-to-5-oxido-6-methylpyridiniu",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pyridoxal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-pyridoxolactone-to-5-oxido-6-methylpyridiniu"
+      },
+      "note": "Shares pyridoxal with 4-pyridoxolactone to 5-oxido-6-methylpyridiniu….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17310"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pyridoxal_4-pyridoxolactone-to-5-oxido-6-methylpyridiniu-1",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pyridoxal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-pyridoxolactone-to-5-oxido-6-methylpyridiniu-1"
+      },
+      "note": "Shares pyridoxal with 4-pyridoxolactone to 5-oxido-6-methylpyridiniu….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17310"
+          }
+        ]
+      }
+    }
+  ]
+}

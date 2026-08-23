@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-9s-11r-epidioxy-15s-to-lysophosphatidylethanol "2-[(9S,11R)-epidioxy-(15S… to lysophosphatidylethanolam…" {
-  spacing 152
+  spacing 158
 
   spine at 0,0 {
     2_9s_11r_epidioxy_15s_hydroperoxy_5z_13e_prostad
@@ -16,5 +16,11 @@ pathway 2-9s-11r-epidioxy-15s-to-lysophosphatidylethanol "2-[(9S,11R)-epidioxy-(
     2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate
     <-> . +acyl_coa -coa
     lysophosphatidylethanolamine
+  }
+
+  branch from 2_9s_11r_epidioxy_15s_hydroperoxy_5z_13e_prostad side left {
+    2_9s_11r_epidioxy_15s_hydroperoxy_5z_13e_prostad
+    <-> . +o2
+    2_arachidonoyl_sn_glycero_3_phosphoethanolamine
   }
 }

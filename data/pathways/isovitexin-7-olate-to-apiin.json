@@ -130,31 +130,21 @@
       }
     },
     {
-      "id": "malonyl-coa",
-      "name": "Malonyl-CoA",
-      "formula": "C24H33N7O19P3S",
-      "charge": -5,
+      "id": "udp_d_glucuronate",
+      "name": "UDP-α-D-glucuronate",
+      "formula": "C15H19N2O18P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:57384"
+        "chebi": "CHEBI:58052"
       }
     },
     {
-      "id": "apigenin_7_o_6_o_malonyl_d_glucoside",
-      "name": "apigenin 7-O-(6-O-malonyl-β-D-glucoside)",
-      "short": "apigenin 7-O-(6-O-m…",
-      "formula": "C24H20O13",
-      "charge": -2,
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:169949"
-      }
-    },
-    {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57287"
+        "chebi": "CHEBI:16526"
       }
     }
   ],
@@ -362,39 +352,283 @@
     },
     {
       "id": "r5",
-      "name": "apigenin 7-O-beta-D-glucoside + malonyl-CoA = apigenin 7-O-(6-O-malonyl-beta-D-glucosid...",
-      "equation": "apigenin 7-O-beta-D-glucoside + malonyl-CoA = apigenin 7-O-(6-O-malonyl-beta-D-glucoside) + CoA",
+      "name": "UDP-alpha-D-glucuronate + H(+) = UDP-alpha-D-apiose + CO2",
+      "equation": "UDP-alpha-D-glucuronate + H(+) = UDP-alpha-D-apiose + CO2",
       "substrates": [
         {
-          "metabolite": "apigenin_7_o_d_glucoside",
+          "metabolite": "udp_d_glucuronate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "malonyl-coa",
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "apigenin_7_o_6_o_malonyl_d_glucoside",
+          "metabolite": "udp_d_apiose",
           "stoichiometry": 1
         },
         {
-          "metabolite": "coa",
+          "metabolite": "co2",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:67348"
+        "rhea": "RHEA:70523"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:67348"
+            "id": "RHEA:70523"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_isovitexin_7_olate_formononetin-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isovitexin_7_olate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "formononetin-to-h2o"
+      },
+      "note": "Shares isovitexin-7-olate with formononetin to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58447"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_isovitexin_7_olate_udp-to-d-glucose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isovitexin_7_olate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-d-glucose"
+      },
+      "note": "Shares isovitexin-7-olate with UDP to β-D-glucose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58447"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_5_anhydro_d_erythro_hex_1_en_3_ulose_3-oxoorientin-to-luteolin-7-o-d-glucos",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_5_anhydro_d_erythro_hex_1_en_3_ulose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-oxoorientin-to-luteolin-7-o-d-glucos"
+      },
+      "note": "Shares 1,5-anhydro-D-erythro-hex-1-en-3-ulose with 3''-oxoorientin to luteolin 7-O-[(β-D-glucos….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:195275"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_5_anhydro_d_erythro_hex_1_en_3_ulose_isoorientin-to-luteolin-7-o-d-glucoside",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_5_anhydro_d_erythro_hex_1_en_3_ulose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isoorientin-to-luteolin-7-o-d-glucoside"
+      },
+      "note": "Shares 1,5-anhydro-D-erythro-hex-1-en-3-ulose with isoorientin to luteolin 7-O-β-D-glucoside.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:195275"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_5_anhydro_d_erythro_hex_1_en_3_ulose_kermesate-to-1-5-anhydro-d-erythro-hex",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_5_anhydro_d_erythro_hex_1_en_3_ulose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "kermesate-to-1-5-anhydro-d-erythro-hex"
+      },
+      "note": "Shares 1,5-anhydro-D-erythro-hex-1-en-3-ulose with kermesate to 1,5-anhydro-D-erythro-hex….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:195275"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_5_anhydro_d_erythro_hex_1_en_3_ulose_mangiferin-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_5_anhydro_d_erythro_hex_1_en_3_ulose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "mangiferin-to-fmn"
+      },
+      "note": "Shares 1,5-anhydro-D-erythro-hex-1-en-3-ulose with mangiferin to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:195275"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_apigenin_7_olate_apigenin-7-o-d-glucoside-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "apigenin_7_olate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "apigenin-7-o-d-glucoside-to-fmn"
+      },
+      "note": "Shares apigenin-7-olate with apigenin 7-O-β-D-glucoside to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58470"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_apigenin_7_olate_apigenin-7-olate-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "apigenin_7_olate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "apigenin-7-olate-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares apigenin-7-olate with apigenin-7-olate to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58470"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_apigenin_7_olate_udp-to-d-glucose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "apigenin_7_olate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-d-glucose"
+      },
+      "note": "Shares apigenin-7-olate with UDP to β-D-glucose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58470"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_apigenin_7_o_d_glucoside_15z-18z-21z-24z-triacon-to-23z-26z-29z-32z-octa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "apigenin_7_o_d_glucoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "15z-18z-21z-24z-triacon-to-23z-26z-29z-32z-octa"
+      },
+      "note": "Shares apigenin 7-O-β-D-glucoside with (15Z,18Z,21Z,24Z)-triacon… to (23Z,26Z,29Z,32Z)-octatri….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77722"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_apigenin_7_o_d_glucoside_apigenin-7-o-d-glucoside-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "apigenin_7_o_d_glucoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "apigenin-7-o-d-glucoside-to-fmn"
+      },
+      "note": "Shares apigenin 7-O-β-D-glucoside with apigenin 7-O-β-D-glucoside to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77722"
           }
         ]
       }

@@ -101,6 +101,92 @@
       "xrefs": {
         "chebi": "CHEBI:4167"
       }
+    },
+    {
+      "id": "l_methionine",
+      "name": "L-methionine",
+      "formula": "C5H9NOS",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16044"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "s_5r_5_hydroxy_l_lysyl_l_methionine_sulfilimine",
+      "name": "S-[(5R)-5-hydroxy-L-lysyl]-L-methionine sulfilimine",
+      "short": "S-[(5R)-5-hydroxy-L…",
+      "formula": "C11H19N3O3S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:166866"
+      }
+    },
+    {
+      "id": "hypobromite",
+      "name": "hypobromite",
+      "formula": "BrO",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29250"
+      }
+    },
+    {
+      "id": "bromide",
+      "name": "bromide",
+      "formula": "Br",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15858"
+      }
+    },
+    {
+      "id": "d_galactosyl_1_4_d_glucosyl_1_1_ceramide",
+      "name": "β-D-galactosyl-(1→4)-β-D-glucosyl-(1↔1)-ceramide",
+      "short": "β-D-galactosyl-(1→4…",
+      "formula": "C16H27NO13R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:79208"
+      }
+    },
+    {
+      "id": "d_gal_1_3_d_gal_1_4_d_glc_1_1_cer",
+      "name": "α-D-Gal-(1→3)-β-D-Gal-(1→4)-β-D-Glc-(1↔1')-Cer",
+      "short": "α-D-Gal-(1→3)-β-D-G…",
+      "formula": "C22H37NO18R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:140817"
+      }
+    },
+    {
+      "id": "l_fuc_1_2_d_gal_1_3_d_glcnac_1_4_neu5ac_2_3_d_g",
+      "name": "α-L-Fuc-(1→2)-β-D-Gal-(1→3)-β-D-GlcNAc-(1→4)-[α-Neu5Ac-(2→3)]-β-D-Gal-(1→4)-β-D-Glc-Cer",
+      "short": "α-L-Fuc-(1→2)-β-D-G…",
+      "formula": "C47H76N3O35R2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:90189"
+      }
+    },
+    {
+      "id": "d_galactosyl_1_3_l_fucosyl_1_2_d_galactosyl_1_3",
+      "name": "α-D-galactosyl-(1→3)-[α-L-fucosyl-(1→2)]-β-D-galactosyl-(1→3)-N-acetyl-β-D-galactosaminyl-(1→4)-[N-acetyl-α-neuraminosyl-(2→3)]-β-D-galactosyl-(1→4)-β-D-glucosyl-(1↔1')-ceramide",
+      "short": "α-D-galactosyl-(1→3…",
+      "formula": "C53H86N3O40R2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:142289"
+      }
     }
   ],
   "enzymes": [
@@ -109,21 +195,30 @@
       "name": "procollagen galactosyltransferase",
       "ec": [
         "2.4.1.50"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q8NBJ5"
+      }
     },
     {
       "id": "ec_2_4_1_66",
       "name": "procollagen glucosyltransferase",
       "ec": [
         "2.4.1.66"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "O60568"
+      }
     },
     {
       "id": "ec_3_2_1_107",
       "name": "protein-glucosylgalactosylhydroxylysine glucosidase",
       "ec": [
         "3.2.1.107"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q32M88"
+      }
     }
   ],
   "reactions": [
@@ -266,6 +361,456 @@
           {
             "db": "Rhea",
             "id": "RHEA:11068"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(5R)-5-hydroxy-L-lysyl-[collagen] + L-methionyl-[collagen] + H2O2 = [collagen]-(5R)-5-h...",
+      "equation": "(5R)-5-hydroxy-L-lysyl-[collagen] + L-methionyl-[collagen] + H2O2 = [collagen]-(5R)-5-hydroxy-L-lysyl-N-S-L-methionyl-[collagen] + 2 H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "5r_5_hydroxy_l_lysine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_5r_5_hydroxy_l_lysyl_l_methionine_sulfilimine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:66008"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:66008"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(5R)-5-hydroxy-L-lysyl-[collagen] + L-methionyl-[collagen] + hypobromite = [collagen]-(...",
+      "equation": "(5R)-5-hydroxy-L-lysyl-[collagen] + L-methionyl-[collagen] + hypobromite = [collagen]-(5R)-5-hydroxy-L-lysyl-N-S-L-methionyl-[collagen] + bromide + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "5r_5_hydroxy_l_lysine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hypobromite",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_5r_5_hydroxy_l_lysyl_l_methionine_sulfilimine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "bromide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:66012"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:66012"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "a beta-D-galactosyl-(1->4)-beta-D-glucosyl-(1<->1)-ceramide + UDP-alpha-D-galactose = a...",
+      "equation": "a beta-D-galactosyl-(1->4)-beta-D-glucosyl-(1<->1)-ceramide + UDP-alpha-D-galactose = an isogloboside iGb3Cer + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "d_galactosyl_1_4_d_glucosyl_1_1_ceramide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_galactose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_gal_1_3_d_gal_1_4_d_glc_1_1_cer",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:78463"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:78463"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "a ganglioside Fuc-GM1 + UDP-alpha-D-galactose = a ganglioside Fuc(Gal)-GM1 + UDP + H(+)",
+      "equation": "a ganglioside Fuc-GM1 + UDP-alpha-D-galactose = a ganglioside Fuc(Gal)-GM1 + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "l_fuc_1_2_d_gal_1_3_d_glcnac_1_4_neu5ac_2_3_d_g",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_galactose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_galactosyl_1_3_l_fucosyl_1_2_d_galactosyl_1_3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:79215"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79215"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_5r_5_hydroxy_l_lysine_1_3-4-dihydrocoumarin-to-2-benzylsuccinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5r_5_hydroxy_l_lysine_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-4-dihydrocoumarin-to-2-benzylsuccinate"
+      },
+      "note": "Shares (5R)-5-hydroxy-L-lysine(1+) with 3,4-dihydrocoumarin to 2-benzylsuccinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133442"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_methionine_aklavinone-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_methionine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aklavinone-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares L-methionine with aklavinone to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16044"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_methionine_biotinate-sulfoxide-to-l-lysinium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_methionine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "biotinate-sulfoxide-to-l-lysinium"
+      },
+      "note": "Shares L-methionine with biotinate sulfoxide to L-lysinium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16044"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_methionine_erythritol-to-l-lysinium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_methionine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "erythritol-to-l-lysinium"
+      },
+      "note": "Shares L-methionine with erythritol to L-lysinium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16044"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hypobromite_erythritol-to-l-lysinium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hypobromite"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "erythritol-to-l-lysinium"
+      },
+      "note": "Shares hypobromite with erythritol to L-lysinium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29250"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hypobromite_o-adp-d-ribosyl-l-tyros-to-l-tyrosine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hypobromite"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "o-adp-d-ribosyl-l-tyros-to-l-tyrosine"
+      },
+      "note": "Shares hypobromite with O-(ADP-D-ribosyl)-L-tyros… to L-tyrosine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29250"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_galactosyl_1_4_d_glucosyl_1_1_ceramide_1-lauroyl-sn-glycero-3-ph-to-d-glucopyranose-411",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_galactosyl_1_4_d_glucosyl_1_1_ceramide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-lauroyl-sn-glycero-3-ph-to-d-glucopyranose-411"
+      },
+      "note": "Shares β-D-galactosyl-(1→4)-β-D-glucosyl-(1↔1)-ceramide with 1-lauroyl-sn-glycero-3-ph… to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:79208"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_galactosyl_1_4_d_glucosyl_1_1_ceramide_d-galactosyl-1-4-d-to-cytidine-5-monophosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_galactosyl_1_4_d_glucosyl_1_1_ceramide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-galactosyl-1-4-d-to-cytidine-5-monophosphate"
+      },
+      "note": "Shares β-D-galactosyl-(1→4)-β-D-glucosyl-(1↔1)-ceramide with β-D-galactosyl-(1→4)-β-D-… to cytidine 5'-monophosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:79208"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_galactosyl_1_4_d_glucosyl_1_1_ceramide_d-galactosyl-1-4-d-to-d-gal-1-4-l-fuc-1",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_galactosyl_1_4_d_glucosyl_1_1_ceramide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-galactosyl-1-4-d-to-d-gal-1-4-l-fuc-1"
+      },
+      "note": "Shares β-D-galactosyl-(1→4)-β-D-glucosyl-(1↔1)-ceramide with β-D-galactosyl-(1→4)-β-D-… to β-D-Gal-(1→4)-[α-L-Fuc-(1….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:79208"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_galactosyl_1_4_d_glucosyl_1_1_ceramide_d-galnac-1-3-d-galn-to-d-galactosyl-1-4-d",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_galactosyl_1_4_d_glucosyl_1_1_ceramide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-galnac-1-3-d-galn-to-d-galactosyl-1-4-d"
+      },
+      "note": "Shares β-D-galactosyl-(1→4)-β-D-glucosyl-(1↔1)-ceramide with α-D-GalNAc-(1→3)-β-D-GalN… to α-D-galactosyl-(1→4)-β-D-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:79208"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_galactosyl_1_4_d_glucosyl_1_1_ceramide_n-acetyl-d-galactosamin-to-d-galactosyl-1-4-d",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_galactosyl_1_4_d_glucosyl_1_1_ceramide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyl-d-galactosamin-to-d-galactosyl-1-4-d"
+      },
+      "note": "Shares β-D-galactosyl-(1→4)-β-D-glucosyl-(1↔1)-ceramide with N-acetyl-β-D-galactosamin… to β-D-galactosyl-(1→4)-β-D-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:79208"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_galactosyl_1_4_d_glucosyl_1_1_ceramide_n-acetylneuraminyl-2-3-to-d-glucopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_galactosyl_1_4_d_glucosyl_1_1_ceramide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetylneuraminyl-2-3-to-d-glucopyranose"
+      },
+      "note": "Shares β-D-galactosyl-(1→4)-β-D-glucosyl-(1↔1)-ceramide with α-N-acetylneuraminyl-(2→3… to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:79208"
           }
         ]
       }

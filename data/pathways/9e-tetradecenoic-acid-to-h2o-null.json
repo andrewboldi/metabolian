@@ -1,0 +1,486 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "9e-tetradecenoic-acid-to-h2o-null",
+  "name": "(9E)-tetradecenoic acid to H2O",
+  "category": "other",
+  "summary": "A 3-step route from (9E)-tetradecenoic acid to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR205980"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:131381"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "9e_tetradecenoic_acid",
+      "name": "(9E)-tetradecenoic acid",
+      "short": "tetradecenoic acid",
+      "formula": "C14H26O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:131381"
+      }
+    },
+    {
+      "id": "sn_glycerol_3_phosphate",
+      "name": "sn-glycerol 3-phosphate",
+      "short": "sn-glycerol 3-P",
+      "formula": "C3H7O6P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM66"
+      }
+    },
+    {
+      "id": "2_7z_tetradecenoyl_sn_glycero_3_phosphate",
+      "name": "2-(7Z-tetradecenoyl)-sn-glycero-3-phosphate",
+      "short": "2-(7Z-tetradecenoyl…",
+      "formula": "C17H31O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:234302"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "1_2_di_7z_tetradecenoyl_sn_glycero_3_phosphate",
+      "name": "1,2-di-(7Z-tetradecenoyl)-sn-glycero-3-phosphate",
+      "short": "1,2-di-(7Z-tetradec…",
+      "formula": "C31H55O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:234292"
+      }
+    },
+    {
+      "id": "cmp",
+      "name": "CMP",
+      "formula": "C9H12N3O8P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1103302"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "cdp_1_2_di_7z_tetradecenoyl_sn_glycerol",
+      "name": "CDP-1,2-di-(7Z-tetradecenoyl)-sn-glycerol",
+      "short": "CDP-1,2-di-(7Z-tetr…",
+      "formula": "C40H67N3O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:234303"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR205980",
+      "substrates": [
+        {
+          "metabolite": "9e_tetradecenoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sn_glycerol_3_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_7z_tetradecenoyl_sn_glycero_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR205980"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR205980"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR206385",
+      "substrates": [
+        {
+          "metabolite": "9e_tetradecenoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_7z_tetradecenoyl_sn_glycero_3_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_2_di_7z_tetradecenoyl_sn_glycero_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR206385"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR206385"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR204397",
+      "substrates": [
+        {
+          "metabolite": "cmp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_2_di_7z_tetradecenoyl_sn_glycero_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cdp_1_2_di_7z_tetradecenoyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR204397"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR204397"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_2_7z_tetradecenoyl_sn_glycero_3_phosphate_9e-tetradecenoic-acid-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_7z_tetradecenoyl_sn_glycero_3_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "9e-tetradecenoic-acid-to-h2o"
+      },
+      "note": "Shares 2-(7Z-tetradecenoyl)-sn-glycero-3-phosphate with (9E)-tetradecenoic acid to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:234302"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_2_di_7z_tetradecenoyl_sn_glycero_3_phosphate_2e-2-hydroxypenta-2-4-d-to-tert-butoxymethanol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_2_di_7z_tetradecenoyl_sn_glycero_3_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2e-2-hydroxypenta-2-4-d-to-tert-butoxymethanol"
+      },
+      "note": "Shares 1,2-di-(7Z-tetradecenoyl)-sn-glycero-3-phosphate with (2E)-2-hydroxypenta-2,4-d… to tert-butoxymethanol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:234292"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_2_di_7z_tetradecenoyl_sn_glycero_3_phosphate_9e-tetradecenoic-acid-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_2_di_7z_tetradecenoyl_sn_glycero_3_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "9e-tetradecenoic-acid-to-h2o"
+      },
+      "note": "Shares 1,2-di-(7Z-tetradecenoyl)-sn-glycero-3-phosphate with (9E)-tetradecenoic acid to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:234292"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_2_di_7z_tetradecenoyl_sn_glycero_3_phosphate_aldehydo-d-ribose-to-d-sedoheptulose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_2_di_7z_tetradecenoyl_sn_glycero_3_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aldehydo-d-ribose-to-d-sedoheptulose"
+      },
+      "note": "Shares 1,2-di-(7Z-tetradecenoyl)-sn-glycero-3-phosphate with aldehydo-D-ribose… to D-sedoheptulose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:234292"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_2_di_7z_tetradecenoyl_sn_glycero_3_phosphate_ferrioxamine-b-to-diphosphate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_2_di_7z_tetradecenoyl_sn_glycero_3_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ferrioxamine-b-to-diphosphate-null"
+      },
+      "note": "Shares 1,2-di-(7Z-tetradecenoyl)-sn-glycero-3-phosphate with ferrioxamine B to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:234292"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_2_di_7z_tetradecenoyl_sn_glycero_3_phosphate_l-idonate-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_2_di_7z_tetradecenoyl_sn_glycero_3_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-idonate-to-h2o-null"
+      },
+      "note": "Shares 1,2-di-(7Z-tetradecenoyl)-sn-glycero-3-phosphate with L-idonate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:234292"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_2_di_7z_tetradecenoyl_sn_glycero_3_phosphate_l-serine-phosphoethanolam-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_2_di_7z_tetradecenoyl_sn_glycero_3_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-serine-phosphoethanolam-to-h2o"
+      },
+      "note": "Shares 1,2-di-(7Z-tetradecenoyl)-sn-glycero-3-phosphate with L-serine-phosphoethanolam… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:234292"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cdp_1_2_di_7z_tetradecenoyl_sn_glycerol_9e-tetradecenoic-acid-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cdp_1_2_di_7z_tetradecenoyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "9e-tetradecenoic-acid-to-h2o"
+      },
+      "note": "Shares CDP-1,2-di-(7Z-tetradecenoyl)-sn-glycerol with (9E)-tetradecenoic acid to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:234303"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cdp_1_2_di_7z_tetradecenoyl_sn_glycerol_aldehydo-d-ribose-to-d-sedoheptulose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cdp_1_2_di_7z_tetradecenoyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aldehydo-d-ribose-to-d-sedoheptulose"
+      },
+      "note": "Shares CDP-1,2-di-(7Z-tetradecenoyl)-sn-glycerol with aldehydo-D-ribose… to D-sedoheptulose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:234303"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cdp_1_2_di_7z_tetradecenoyl_sn_glycerol_ferrioxamine-b-to-diphosphate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cdp_1_2_di_7z_tetradecenoyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ferrioxamine-b-to-diphosphate-null"
+      },
+      "note": "Shares CDP-1,2-di-(7Z-tetradecenoyl)-sn-glycerol with ferrioxamine B to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:234303"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cdp_1_2_di_7z_tetradecenoyl_sn_glycerol_glycerophosphatidylethano-to-l-serine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cdp_1_2_di_7z_tetradecenoyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "glycerophosphatidylethano-to-l-serine"
+      },
+      "note": "Shares CDP-1,2-di-(7Z-tetradecenoyl)-sn-glycerol with glycerophosphatidylethano… to L-serine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:234303"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cdp_1_2_di_7z_tetradecenoyl_sn_glycerol_glycerophosphatidylethano-to-l-serine-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cdp_1_2_di_7z_tetradecenoyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "glycerophosphatidylethano-to-l-serine-null"
+      },
+      "note": "Shares CDP-1,2-di-(7Z-tetradecenoyl)-sn-glycerol with glycerophosphatidylethano… to L-serine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:234303"
+          }
+        ]
+      }
+    }
+  ]
+}

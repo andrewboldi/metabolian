@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "short-chain-fatty-aldehyde-to-short-chain-fatty",
   "name": "short-chain fatty aldehyde to short-chain fatty acid…",
-  "category": "amino-acid-metabolism",
+  "category": "lipid-metabolism",
   "summary": "A 3-step route from short-chain fatty aldehyde to short-chain fatty acid anion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -138,44 +138,6 @@
       "xrefs": {
         "chebi": "CHEBI:229605"
       }
-    },
-    {
-      "id": "l_tyrosine",
-      "name": "L-tyrosine",
-      "formula": "C9H9NO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:46858"
-      }
-    },
-    {
-      "id": "o_adenyl_l_tyrosine_1",
-      "name": "O-adenyl-L-tyrosine(1−)",
-      "short": "O-adenyl-L-tyrosine…",
-      "formula": "C19H20N6O8P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:83624"
-      }
-    },
-    {
-      "id": "l_threonine",
-      "name": "L-threonine",
-      "formula": "C4H7NO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:30013"
-      }
-    },
-    {
-      "id": "o_adenyl_l_threonine_1",
-      "name": "O-adenyl-L-threonine(1−)",
-      "short": "O-adenyl-L-threonin…",
-      "formula": "C14H18N6O8P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:138113"
-      }
     }
   ],
   "enzymes": [
@@ -184,13 +146,6 @@
       "name": "ADP-dependent short-chain-acyl-CoA hydrolase",
       "ec": [
         "3.1.2.18"
-      ]
-    },
-    {
-      "id": "ec_2_7_7_108",
-      "name": "protein adenylyltransferase",
-      "ec": [
-        "2.7.7.108"
       ]
     }
   ],
@@ -373,96 +328,6 @@
           {
             "db": "Rhea",
             "id": "RHEA:78907"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "protein adenylyltransferase",
-      "equation": "L-tyrosyl-[protein] + ATP = O-(5'-adenylyl)-L-tyrosyl-[protein] + diphosphate",
-      "ec": "2.7.7.108",
-      "substrates": [
-        {
-          "metabolite": "l_tyrosine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "o_adenyl_l_tyrosine_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_7_7_108"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:54288"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:54288"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "protein adenylyltransferase",
-      "equation": "L-threonyl-[protein] + ATP = 3-O-(5'-adenylyl)-L-threonyl-[protein] + diphosphate",
-      "ec": "2.7.7.108",
-      "substrates": [
-        {
-          "metabolite": "l_threonine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "o_adenyl_l_threonine_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_7_7_108"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:54292"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:54292"
           }
         ]
       }

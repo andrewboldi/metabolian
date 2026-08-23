@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-adenosine-gdp-cobinamide "NADH to Adenosine-GDP-cobinamide" {
-  spacing 254
+  spacing 188
 
   spine at 0,0 {
     nadh
@@ -16,71 +16,5 @@ pathway nadh-to-adenosine-gdp-cobinamide "NADH to Adenosine-GDP-cobinamide" {
     adenosyl_cobinamide_phosphate
     <-> . +gtp +h -adenosine_gdp_cobinamide
     diphosphate
-  }
-
-  branch from 1_aminopropan_2_ol side left {
-    1_aminopropan_2_ol
-    <-> . +adenosyl_cobyric_acid +atp +adp +phosphate
-    adenosyl_cobinamide
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_14_13_151 [1.14.13.151] +nadh +linalool +h +o2 +h2o
-    6e_8_oxolinalool
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_14_13_151 [1.14.13.151] +nadh +r_linalool +h +o2 +6e_8_oxolinalool
-    h2o
-  }
-
-  branch from r_1_aminopropan_2_yl_phosphate side right {
-    r_1_aminopropan_2_yl_phosphate
-    <-> . +atp +h +adp
-    r_1_aminopropan_2_ol
-  }
-
-  branch from adp side left {
-    adp
-    <-> . +h +phosphate +atp +h2o
-    sulphate_conjugate_3_methoxy_acetaminophen
-  }
-
-  branch from adp side right {
-    adp
-    <-> . +h +phosphate +atp +h2o
-    siroheme
-  }
-
-  branch from phosphate side left {
-    phosphate
-    <-> . +d_ribulose +h2o
-    d_ribulose_5_phosphate
-  }
-
-  branch from phosphate side right {
-    phosphate
-    <-> . +h +adp +atp +h2o
-    simvastatin_hydroxy_acid
-  }
-
-  branch from diphosphate side left {
-    diphosphate
-    <-> ec_6_2_1_53 [6.2.1.53] +l_proline +h +atp
-    l_prolyl_adenylate
-  }
-
-  branch from diphosphate side right {
-    diphosphate
-    <-> ec_6_3_2_52 [6.3.2.52] +l_alanine +atp +jasmonic_acid_anion +h +7_epi_jasmonoyl_l_alanine
-    amp
-  }
-
-  branch from adenosine_gdp_cobinamide side left {
-    adenosine_gdp_cobinamide
-    <-> . +gmp +adenosylcobalamin +h
-    ribazole
   }
 }

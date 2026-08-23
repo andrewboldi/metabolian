@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-aminobenzoylacetate-to-2-hydroxylamino-benzoyl "2-aminobenzoylacetate to 2-(hydroxylamino)benzoylo…" {
-  spacing 214
+  spacing 202
 
   spine at 0,0 {
     2_aminobenzoylacetate
@@ -14,18 +14,6 @@ pathway 2-aminobenzoylacetate-to-2-hydroxylamino-benzoyl "2-aminobenzoylacetate 
     2_heptyl_4_hydroxyquinoline_n_oxide
     <-> . +h2o
     2_hydroxylamino_benzoyloctanoate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +tryptophanyl_tyrosyl_glutamine +l_tryptophan +l_tyrosine
-    l_glutamine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +tryptophanyl_tyrosyl_tyrosine +l_tyrosine
-    l_tryptophan
   }
 
   branch from 2_heptyl_4_hydroxyquinoline_n_oxide side left {

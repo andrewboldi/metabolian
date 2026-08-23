@@ -102,23 +102,31 @@
       }
     },
     {
-      "id": "cytidine_5_monophosphate_1",
-      "name": "cytidine 5'-monophosphate(1−)",
-      "short": "cytidine 5'-MP(1−)",
-      "formula": "C9H11N3O7P",
-      "charge": -1,
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:82748"
+        "chebi": "CHEBI:30616"
       }
     },
     {
-      "id": "5_methylcytidine_5_monophosphate_1",
-      "name": "5-methylcytidine 5'-monophosphate(1−)",
-      "short": "5-methylcytidine…",
-      "formula": "C10H13N3O7P",
-      "charge": -1,
+      "id": "phosphonatoguanidiniumylacetate",
+      "name": "phosphonatoguanidiniumylacetate",
+      "short": "phosphonatoguanidin…",
+      "formula": "C3H6N3O5P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:74483"
+        "chebi": "CHEBI:57612"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
       }
     }
   ],
@@ -128,7 +136,10 @@
       "name": "guanidinoacetate N-methyltransferase",
       "ec": [
         "2.1.1.2"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q14353"
+      }
     },
     {
       "id": "ec_3_5_3_3",
@@ -142,6 +153,13 @@
       "name": "sarcosine/dimethylglycine N-methyltransferase",
       "ec": [
         "2.1.1.157"
+      ]
+    },
+    {
+      "id": "ec_2_7_3_1",
+      "name": "guanidinoacetate kinase",
+      "ec": [
+        "2.7.3.1"
       ]
     }
   ],
@@ -291,86 +309,227 @@
     },
     {
       "id": "r4",
-      "name": "a cytidine in RNA + S-adenosyl-L-methionine = a 5-methylcytidine in RNA + S-adenosyl-L-...",
-      "equation": "a cytidine in RNA + S-adenosyl-L-methionine = a 5-methylcytidine in RNA + S-adenosyl-L-homocysteine + H(+)",
+      "name": "guanidinoacetate kinase",
+      "equation": "guanidinoacetate + ATP = phosphoguanidinoacetate + ADP + H(+)",
+      "ec": "2.7.3.1",
       "substrates": [
         {
-          "metabolite": "cytidine_5_monophosphate_1",
+          "metabolite": "guanidinoacetic_acid",
           "stoichiometry": 1
         },
         {
-          "metabolite": "sam",
+          "metabolite": "atp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "5_methylcytidine_5_monophosphate_1",
+          "metabolite": "phosphonatoguanidiniumylacetate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "sah",
+          "metabolite": "adp",
           "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
           "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_3_1"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:61460"
+        "rhea": "RHEA:14145"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:61460"
+            "id": "RHEA:14145"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_guanidinoacetic_acid_creatinine-to-n5-formyl-5-6-7-8-tetrahy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "guanidinoacetic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "creatinine-to-n5-formyl-5-6-7-8-tetrahy"
+      },
+      "note": "Shares guanidinoacetic acid with creatinine to N5-formyl-5,6,7,8-tetrahy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57742"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "a cytidine in mRNA + S-adenosyl-L-methionine = a 5-methylcytidine in mRNA + S-adenosyl-...",
-      "equation": "a cytidine in mRNA + S-adenosyl-L-methionine = a 5-methylcytidine in mRNA + S-adenosyl-L-homocysteine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "cytidine_5_monophosphate_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "5_methylcytidine_5_monophosphate_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:61464"
+      "id": "xt_guanidinoacetic_acid_n-feruloylglycinate-to-2-e-o-feruloyl-d-galact",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "guanidinoacetic_acid"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "n-feruloylglycinate-to-2-e-o-feruloyl-d-galact"
+      },
+      "note": "Shares guanidinoacetic acid with N-feruloylglycinate to 2-(E)-O-feruloyl-D-galact….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:61464"
+            "db": "ChEBI",
+            "id": "CHEBI:57742"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_creatine_creatinine-to-creatine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "creatine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "creatinine-to-creatine"
+      },
+      "note": "Shares creatine with creatinine to creatine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57947"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sarcosine_6s-5-formyltetrahydrofo-to-l-serine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sarcosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6s-5-formyltetrahydrofo-to-l-serine"
+      },
+      "note": "Shares Sarcosine with (6S)-5-formyltetrahydrofo… to L-serine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57433"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sarcosine_acylcholine-to-n5-methyl-l-glutamine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sarcosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acylcholine-to-n5-methyl-l-glutamine"
+      },
+      "note": "Shares Sarcosine with acylcholine to N5-methyl-L-glutamine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57433"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sarcosine_creatinine-to-n5-formyl-5-6-7-8-tetrahy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sarcosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "creatinine-to-n5-formyl-5-6-7-8-tetrahy"
+      },
+      "note": "Shares Sarcosine with creatinine to N5-formyl-5,6,7,8-tetrahy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57433"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sarcosine_dtdp-4-amino-4-6-dideoxy-to-s-adenosyl-l-homocys",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sarcosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-4-amino-4-6-dideoxy-to-s-adenosyl-l-homocys"
+      },
+      "note": "Shares Sarcosine with dTDP-4-amino-4,6-dideoxy-… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57433"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sarcosine_vitexin-2-o-l-rhamnos-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sarcosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "vitexin-2-o-l-rhamnos-to-hydrogen-donor"
+      },
+      "note": "Shares Sarcosine with vitexin 2''-O-β-L-rhamnos… to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57433"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-quercetin-3-o-6-o-caffe "UDP to quercetin 3-O-[(6-O-caffe…" {
-  spacing 188
+  spacing 224
 
   spine at 0,0 {
     udp
@@ -18,39 +18,75 @@ pathway udp-to-quercetin-3-o-6-o-caffe "UDP to quercetin 3-O-[(6-O-caffe…" {
     quercetin_3_o_6_o_caffeoyl_d_glucosyl_1_2_d_gluc
   }
 
-  branch from udp_beta_l_rhamnose side left {
-    udp_beta_l_rhamnose
-    <-> . +udp +3_o_l_rha_1_3_d_gal_1_2_d_glca_quillaic_acid_l_r +h
-    3_o_l_rha_1_3_d_gal_1_2_d_glca_quillaic_acid_d_f
+  branch from udp_alpha_d_glucose side left {
+    udp_alpha_d_glucose
+    <-> ec_2_4_1_202 [2.4.1.202] +udp +dimboa_beta_d_glucoside
+    dimboa
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +luteolin_7_o_gentiobioside
-    luteolin_7_o_beta_d_glucoside
+    <-> . +udp +beta_d_glc_1_3_6_o_succinoyl_beta_d_glc_1_3_beta +h
+    6_o_succinoyl_beta_d_glc_1_3_beta_d_glc_1_6_beta
+  }
+
+  branch from udp side left {
+    udp
+    <-> ec_2_4_1_241 [2.4.1.241] +h +1_18_2_2_16_2_digalactosyldiacylglycerol +2s_1_o_7z_10z_hexadecadienoyl_2_o_linoleoyl_3_o
+    udp_alpha_d_galactose
+  }
+
+  branch from udp side right {
+    udp
+    <-> ec_2_4_1_241 [2.4.1.241] +h +1_18_3_2_16_3_digalactosyldiacylglycerol +udp_alpha_d_galactose
+    1_9z_12z_15z_octadecatrienoyl_2_7z_10z_13z_hexad
+  }
+
+  branch from h side left {
+    h
+    <-> . +adp +1_linoleoylglycerophosphoethanolamine_delta_9_12 +phosphate +1_linoleoylglycerophosphoethanolamine_delta_9_12 +h2o
+    atp
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_palmitoyl_2_hydroxy_sn_glycero_3_pe
   }
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +sesaminol_2_o_beta_d_gentiotrioside +h
-    sesaminol_2_o_d_gentiobioside
+    <-> . +udp +alpha_d_glc_1_3_alpha_l_quinac_1_3_alpha_d_glcna +h
+    alpha_l_quinac_1_3_alpha_d_glcnac_pp_undecapreno
   }
 
-  branch from quercetin_3_o_d_glucopyranoside side right {
-    quercetin_3_o_d_glucopyranoside
-    <-> . +quercetin_3_o_4_o_4_coumaroyl_glucoside +coa +h
-    trans_4_coumaroyl_coa
+  branch from udp_alpha_d_glucose side right {
+    udp_alpha_d_glucose
+    <-> . +udp +alpha_d_glc_1_4_alpha_d_galnac_1_3_alpha_d_glcna +h
+    alpha_d_galnac_1_3_alpha_d_glcnac_pp_und
   }
 
-  branch from quercetin_3_o_d_glucopyranoside side left {
-    quercetin_3_o_d_glucopyranoside
-    <-> . +trans_4_coumaroyl_coa +h +coa
-    quercetin_3_o_3_o_4_coumaroyl_glucoside
+  branch from udp_d_glucose side left {
+    udp_d_glucose
+    <-> . +16_hydroxygypsogenate +udp
+    16_hydroxygypsogenate_28_d_glucoside
   }
 
-  branch from quercetin_3_o_d_glucosyl_1_2_d_glucoside side right {
-    quercetin_3_o_d_glucosyl_1_2_d_glucoside
-    <-> ec_2_4_1_240 [2.4.1.240] +udp +udp_alpha_d_glucose
-    quercetin_3_o_d_glucosyl_1_2_d_glucosyl_1_2_d_gl
+  branch from udp_d_glucose side right {
+    udp_d_glucose
+    <-> . +l_fucosyl_l_seryl +udp +hplus
+    d_glucosyl_1_3_l_fucosyl_l_seryl
+  }
+
+  branch from trans_caffeoyl_coa side left {
+    trans_caffeoyl_coa
+    <-> ec_2_3_1_126 [2.3.1.126] +d_threo_isocitrate +coa
+    2_e_caffeoyl_d_threo_isocitrate
+  }
+
+  branch from trans_caffeoyl_coa side right {
+    trans_caffeoyl_coa
+    <-> ec_2_3_1_140 [2.3.1.140] +2r_3_3_4_dihydroxyphenyl_lactate +coa
+    r_rosmarinate
   }
 }

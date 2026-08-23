@@ -1,0 +1,605 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-aminophenol-to-diphosphate-26305",
+  "name": "2-aminophenol to diphosphate",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 2-aminophenol to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:26305"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:18112"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_aminophenol",
+      "name": "2-aminophenol",
+      "formula": "C6H7NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18112"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "2_aminomuconic_6_semialdehyde",
+      "name": "2-aminomuconic 6-semialdehyde",
+      "short": "2-aminomuconic…",
+      "formula": "C6H7NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77634"
+      }
+    },
+    {
+      "id": "picolinate",
+      "name": "picolinate",
+      "formula": "C6H4NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:38184"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "2_formylpyridine",
+      "name": "2-formylpyridine",
+      "formula": "C6H5NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:73012"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "2_aminophenoxazin_3_one",
+      "name": "2-aminophenoxazin-3-one",
+      "short": "2-aminophenoxazin-3…",
+      "formula": "C12H8N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17293"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_13_11_74",
+      "name": "2-aminophenol 1,6-dioxygenase",
+      "ec": [
+        "1.13.11.74"
+      ]
+    },
+    {
+      "id": "ec_1_10_3_4",
+      "name": "o-aminophenol oxidase",
+      "ec": [
+        "1.10.3.4"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2-aminophenol 1,6-dioxygenase",
+      "equation": "2-aminophenol + O2 = 2-aminomuconate 6-semialdehyde",
+      "ec": "1.13.11.74",
+      "substrates": [
+        {
+          "metabolite": "2_aminophenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_aminomuconic_6_semialdehyde",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_74"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:26305"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26305"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2-aminomuconate 6-semialdehyde = picolinate + H2O + H(+)",
+      "equation": "2-aminomuconate 6-semialdehyde = picolinate + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "2_aminomuconic_6_semialdehyde",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "picolinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:86795"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:86795"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "picolinate + ATP + NADPH + H(+) = picolinal + AMP + diphosphate + NADP(+)",
+      "equation": "picolinate + ATP + NADPH + H(+) = picolinal + AMP + diphosphate + NADP(+)",
+      "substrates": [
+        {
+          "metabolite": "picolinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_formylpyridine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:68908"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:68908"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "o-aminophenol oxidase",
+      "equation": "4 2-aminophenol + 3 O2 = 2 2-aminophenoxazin-3-one + 6 H2O",
+      "ec": "1.10.3.4",
+      "substrates": [
+        {
+          "metabolite": "2_aminophenol",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_aminophenoxazin_3_one",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 6
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_10_3_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:40963"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40963"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_2_aminophenol_2-aminophenol-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_aminophenol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-aminophenol-to-diphosphate"
+      },
+      "note": "Shares 2-aminophenol with 2-aminophenol to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18112"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_aminophenol_5-6-dihydrouridine-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_aminophenol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-6-dihydrouridine-to-hydrogen-donor"
+      },
+      "note": "Shares 2-aminophenol with 5,6-dihydrouridine… to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18112"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_aminophenol_5-6-dihydrouridine-to-hydrogen-donor-10232",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_aminophenol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-6-dihydrouridine-to-hydrogen-donor-10232"
+      },
+      "note": "Shares 2-aminophenol with 5,6-dihydrouridine… to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18112"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_aminophenol_n-phenylhydroxylamine-to-di-sulfido-diiron",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_aminophenol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-phenylhydroxylamine-to-di-sulfido-diiron"
+      },
+      "note": "Shares 2-aminophenol with N-phenylhydroxylamine to di-μ-sulfido-diiron.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18112"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_aminophenol_n-phenylhydroxylamine-to-di-sulfido-diiron-52884",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_aminophenol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-phenylhydroxylamine-to-di-sulfido-diiron-52884"
+      },
+      "note": "Shares 2-aminophenol with N-phenylhydroxylamine to di-μ-sulfido-diiron.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18112"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_aminomuconic_6_semialdehyde_2-aminophenol-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_aminomuconic_6_semialdehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-aminophenol-to-diphosphate"
+      },
+      "note": "Shares 2-aminomuconic 6-semialdehyde with 2-aminophenol to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77634"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_aminomuconic_6_semialdehyde_cis-cis-2-ammonio-3-3-ox-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_aminomuconic_6_semialdehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cis-cis-2-ammonio-3-3-ox-to-ammonium"
+      },
+      "note": "Shares 2-aminomuconic 6-semialdehyde with cis,cis-2-ammonio-3-(3-ox… to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77634"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_aminomuconic_6_semialdehyde_cis-cis-2-ammonio-3-3-ox-to-ammonium-16557",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_aminomuconic_6_semialdehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cis-cis-2-ammonio-3-3-ox-to-ammonium-16557"
+      },
+      "note": "Shares 2-aminomuconic 6-semialdehyde with cis,cis-2-ammonio-3-(3-ox… to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:77634"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_picolinate_2-aminophenol-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "picolinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-aminophenol-to-diphosphate"
+      },
+      "note": "Shares picolinate with 2-aminophenol to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:38184"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_formylpyridine_2-aminophenol-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_formylpyridine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-aminophenol-to-diphosphate"
+      },
+      "note": "Shares 2-formylpyridine with 2-aminophenol to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:73012"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_formylpyridine_3-methylpyrrole-2-4-dicar-to-novobiocic-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_formylpyridine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-methylpyrrole-2-4-dicar-to-novobiocic-acid"
+      },
+      "note": "Shares 2-formylpyridine with 3-Methylpyrrole-2,4-dicar… to novobiocic acid.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:73012"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_formylpyridine_gdp-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_formylpyridine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gdp-to-h2o"
+      },
+      "note": "Shares 2-formylpyridine with GDP to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:73012"
+          }
+        ]
+      }
+    }
+  ]
+}

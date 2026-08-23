@@ -18,26 +18,26 @@ pathway d-glucopyranose-to-phosphate "D-glucopyranose to phosphate" {
 
   branch from alpha_d_glucose_1_phosphate side left {
     alpha_d_glucose_1_phosphate
-    <-> ec_2_4_1_7 [2.4.1.7] +sucrose +phosphate
-    beta_d_fructose
+    <-> ec_5_4_2_2 [5.4.2.2]
+    beta_d_glucose_6_phosphate
   }
 
   branch from alpha_d_glucose_1_phosphate side right {
     alpha_d_glucose_1_phosphate
-    <-> . +phosphate +glucose
-    d_maltose
+    <-> ec_2_4_1_1 [2.4.1.1] +maltopentaose +phosphate
+    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp
   }
 
   branch from nh4 side left {
     nh4
-    <-> ec_3_5_1_4 [3.5.1.4] +2_hydroxyisobutyramide +h2o
-    2_hydroxyisobutyrate
+    <-> ec_4_1_99_1 [4.1.99.1] +h +pyruvate +chloride +h2o
+    3_chloro_l_alanine
   }
 
   branch from nh4 side right {
     nh4
-    <-> ec_4_4_1_13 [4.4.1.13] +l_djenkolic_acid +h2o +pyruvate
-    s_sulfanylmethyl_l_cysteine
+    <-> ec_3_5_1_1 [3.5.1.1] +l_asparagine +h +hydroxylamine
+    n_hydroxy_l_aspartic_1_amide
   }
 
   branch from alpha_alpha_trehalose side left {
@@ -48,19 +48,115 @@ pathway d-glucopyranose-to-phosphate "D-glucopyranose to phosphate" {
 
   branch from alpha_alpha_trehalose side right {
     alpha_alpha_trehalose
-    <-> ec_2_4_1_64 [2.4.1.64] +beta_d_glucose_1_phosphate +phosphate
-    beta_d_glucose
+    <-> . +udp +h +phosphate +d_glucose_6_phosphate +h2o
+    udp_alpha_d_glucose
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_2_5_1_95 [2.5.1.95] +4_6_ch3_coo_c_beta_d_man_1_4_beta_glca_1_2_6_o_a +d_man_beta_1_4_glca_beta_1_2_6_o_acetyl_d_man_al
-    phosphoenolpyruvate
+    <-> ec_2_5_1_55 [2.5.1.55] +d_arabinofuranose_5_phosphate +phosphoenolpyruvate +h2o
+    3_deoxy_alpha_d_manno_2_octulosonate_8_phosphate
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_2_7_4_27 [2.7.4.27] +diphosphate +h +l_threonine
-    o_phospho_l_threonine
+    <-> ec_3_1_3_91 [3.1.3.91] +n_7_methyl_gmp +h2o +h
+    n2_methylguanosine
+  }
+
+  branch from glucose side left {
+    glucose
+    <-> ec_5_1_3_3 [5.1.3.3]
+    beta_d_glucose
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> . +h +4_nitrophenol +h2o
+    4_nitrophenyl_d_glucoside
+  }
+
+  branch from phosphoramidate side left {
+    phosphoramidate
+    <-> ec_2_7_1_62 [2.7.1.62] +h +hexopyranose +nh4
+    alpha_d_hexose_1_phosphate
+  }
+
+  branch from phosphoramidate side right {
+    phosphoramidate
+    <-> ec_2_7_1_62 [2.7.1.62] +h +nh4 +alpha_d_hexose_1_phosphate
+    a_hexose
+  }
+
+  branch from h side left {
+    h
+    <-> . +h2 +cinchoninone +nadph +cinchonine +nadp
+    cinchonidine
+  }
+
+  branch from h side right {
+    h
+    <-> . +2_methoxy_5_methyl_6_all_trans_hexaprenyl_1_4_be +o2
+    3_demethylubiquinone_6
+  }
+
+  branch from alpha_d_glucose_1_phosphate side left {
+    alpha_d_glucose_1_phosphate
+    <-> ec_3_1_3_10 [3.1.3.10] +beta_d_glucose +phosphate
+    h2o
+  }
+
+  branch from alpha_d_glucose_1_phosphate side right {
+    alpha_d_glucose_1_phosphate
+    <-> ec_2_4_1_139 [2.4.1.139] +phosphate +h2o
+    alpha_maltose
+  }
+
+  branch from nh4 side left {
+    nh4
+    <-> ec_1_4_1_11 [1.4.1.11] +nadh +h +5s_5_amino_3_oxohexanoate +nad +h2o
+    3r_5r_3_5_diammoniohexanoate
+  }
+
+  branch from nh4 side right {
+    nh4
+    <-> ec_3_5_99_5 [3.5.99.5] +2z_4e_2_aminomuconate +h2o
+    4_oxalocrotonate
+  }
+
+  branch from alpha_alpha_trehalose side left {
+    alpha_alpha_trehalose
+    <-> ec_2_4_1_64 [2.4.1.64] +beta_d_glucose_1_phosphate +phosphate
+    alpha_d_glucose
+  }
+
+  branch from alpha_alpha_trehalose side right {
+    alpha_alpha_trehalose
+    <-> ec_2_4_1_245 [2.4.1.245] +adp_alpha_d_glucose +beta_d_glucose +h
+    adp
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +1_phospho_alpha_d_glucuronate +h2o
+    d_glucuronate
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_3_6_1_1 [3.6.1.1] +diphosphate +h2o +h
+    pmf
+  }
+
+  branch from beta_d_glucose_1_phosphate side left {
+    beta_d_glucose_1_phosphate
+    <-> ec_2_4_1_8 [2.4.1.8] +alpha_d_glucose +phosphate
+    d_maltose
+  }
+
+  branch from beta_d_glucose_1_phosphate side right {
+    beta_d_glucose_1_phosphate
+    <-> ec_2_4_1_230 [2.4.1.230] +beta_d_glucose +phosphate
+    d_glcp_1_2_d_glcp
   }
 }

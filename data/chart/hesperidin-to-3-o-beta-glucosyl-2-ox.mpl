@@ -36,14 +36,14 @@ pathway hesperidin-to-3-o-beta-glucosyl-2-ox "hesperidin to 3-(O-beta-glucosyl)-
 
   branch from h2o side left {
     h2o
-    <-> . +h +adp +phosphatidylserine_ditetradecanoyl_n_c14_0 +phosphate +phosphatidylserine_ditetradecanoyl_n_c14_0
-    atp
+    <-> . +3_oxo_10_r_hydroxy_octadeca_6e_8e_12z_trienoyl_c +coa
+    6e_8e_10r_12z_10_hydroxy_3_oxooctadecatrienoic
   }
 
   branch from h2o side right {
     h2o
-    <-> . +h +adp +phosphate +atp
-    phosphatidylserine_dioctadecanoyl_n_c18_0
+    <-> . +3_oxo_10_s_hydroxy_octadeca_6e_8e_12z_trienoyl_c +h +3_oxo_10_s_hydroxy_octadeca_6e_8e_12z_trienoate
+    coa
   }
 
   branch from udp_beta_l_rhamnose side left {
@@ -72,37 +72,109 @@ pathway hesperidin-to-3-o-beta-glucosyl-2-ox "hesperidin to 3-(O-beta-glucosyl)-
 
   branch from h side left {
     h
-    <-> . +fadh2 +protoporphyrin_ix +protoporphyrinogen_ix
-    fad
+    <-> . +12_o_d_glucuronoside_13_hydroxyoctadec_9z_enoate +udp +12_13_dihydroxy_9z_octadecenoate
+    udp_alpha_d_glucuronate
   }
 
   branch from h side right {
     h
-    <-> . +co2 +phosphatidylethanolamine_ditetradecanoyl_n_c14_0
-    phosphatidylserine_ditetradecanoyl_n_c14_0
+    <-> . +10_hydroxy_octadec_12z_enoate_9_beta_d_glucuroni +udp +udp_alpha_d_glucuronate
+    9_10_dihydroxy_12z_octadecenoate
   }
 
   branch from nadph side left {
     nadph
-    <-> . +7alpha_hydroxy_3_oxo_4_cholestenoic_acid_anion +h +nadp
-    3beta_7alpha_dihydroxy_5_cholestenoate
+    <-> ec_1_2_1_5 [1.2.1.5] +h +hva +nadp +h2o
+    4_hydroxy_3_methoxyphenyl_acetaldehyde
   }
 
   branch from nadph side right {
     nadph
-    <-> . +9_cis_retinal +h +o2 +nadp +h2o
-    4_oh_retinal
+    <-> ec_1_8_1_10 [1.8.1.10] +glutathione +nadp +l_cysteine
+    l_cysteine_glutathione_disulfide
   }
 
   branch from udp side left {
     udp
-    <-> . +3_5_3_5_tetraiodo_l_thyronine_beta_d_glucuronosi +h +l_thyroxine
-    udp_alpha_d_glucuronate
+    <-> . +rac_4_hydroxy_4_o_beta_d_glucuronide_all_trans_r +udp_alpha_d_glucuronate
+    4_hydroxy_all_trans_retinyl_acetate
   }
 
   branch from udp side right {
     udp
-    <-> . +3_3_diiodo_l_thyronine_beta_d_glucuronoside +h +udp_alpha_d_glucuronate
-    3_3_diiodo_l_thyronine
+    <-> . +all_trans_retinoyl_1_o_beta_d_glucuronate +udp_alpha_d_glucuronate
+    13_cis_retinoate
+  }
+
+  branch from udp_d_glucose side left {
+    udp_d_glucose
+    <-> ec_2_4_1_173 [2.4.1.173] +sterol +udp +hplus
+    sterol_3_d_glucoside
+  }
+
+  branch from udp_d_glucose side right {
+    udp_d_glucose
+    <-> ec_2_4_1_237 [2.4.1.237] +7_hydroxyflavonol +udp +hplus
+    flavonol_7_o_d_glucoside
+  }
+
+  branch from beta_l_rhamnose side left {
+    beta_l_rhamnose
+    <-> ec_3_2_1_40 [3.2.1.40] +h +quercetin_3_o_d_glucopyranoside +h2o
+    rutin
+  }
+
+  branch from beta_l_rhamnose side right {
+    beta_l_rhamnose
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
+    atp
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +13s_hydroperoxy_9z_11e_octadecadienoate +4_hydroperoxy_2_nonenal
+    nonanoate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +prostaglandin_d2 +h
+    15_deoxy_pgd2
+  }
+
+  branch from udp side left {
+    udp
+    <-> . +gdp +ump
+    gtp
+  }
+
+  branch from udp side right {
+    udp
+    <-> . +h +undecaprenyl_phosphate_4_amino_4_formyl_l_arabin +undecaprenyl_phosphate
+    uridine_5_diphospho_beta_4_deoxy_4_formamido_l_a
+  }
+
+  branch from h side left {
+    h
+    <-> . +3_s_10_r_oh_octadeca_6_trans_4_12_cis_trienoyl_c +h2o +coa
+    3_s_10_r_oh_octadeca_6_trans_4_12_cis_trienoate
+  }
+
+  branch from h side right {
+    h
+    <-> . +leukotriene_c5 +glutathione
+    leukotriene_a5
+  }
+
+  branch from udp_beta_l_rhamnose side left {
+    udp_beta_l_rhamnose
+    <-> . +udp +h +isovitexin_2_o_rhamnoside
+    isovitexin
+  }
+
+  branch from udp_beta_l_rhamnose side right {
+    udp_beta_l_rhamnose
+    <-> . +udp +quercetin_3_o_d_glucopyranosyl_7_o_l_rhamnopyran
+    quercetin_3_o_d_glucopyranoside
   }
 }

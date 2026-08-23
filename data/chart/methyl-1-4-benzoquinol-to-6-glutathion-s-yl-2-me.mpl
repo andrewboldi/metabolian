@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway methyl-1-4-benzoquinol-to-6-glutathion-s-yl-2-me "methyl-1,4-benzoquinol to 6-(glutathion-S-yl)-2-met…" {
-  spacing 264
+  spacing 336
 
   spine at 0,0 {
     methyl_1_4_benzoquinol
@@ -16,63 +16,135 @@ pathway methyl-1-4-benzoquinol-to-6-glutathion-s-yl-2-me "methyl-1,4-benzoquinol
     glutathione
   }
 
-  branch from 2_methyl_1_4_benzoquinone side left {
-    2_methyl_1_4_benzoquinone
-    <-> ec_1_1_3_10 [1.1.3.10] +2_dehydro_d_glucose +toluquinol
-    glucose
-  }
-
-  branch from 2_methyl_1_4_benzoquinone side right {
-    2_methyl_1_4_benzoquinone
-    <-> ec_1_11_1_16 [1.11.1.16] +toluquinol +h2o2
-    h2o
-  }
-
   branch from h side left {
     h
-    <-> ec_1_2_1_57 [1.2.1.57] +nadh +hexanoyl_coa +hexanal +nad
-    coa
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +clarithromycin +phosphate +clarithromycin +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_10 [1.1.1.10] +isatin +nadph +nadp
-    2_3_dihydroxyindole
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    e_roxithromycin
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_2 [1.1.1.2] +16_ketoestrone +h +nadp
-    16_hydroxyestrone
+    <-> . +10_deoxymethymycin +h +o2 +nadp +h2o
+    novamethymycin
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_1 [1.1.1.1] +butan_2_one +h +nadp
-    2r_butan_2_ol
+    <-> ec_1_1_1_412 [1.1.1.412] +h +2r_2_decyl_3_oxotetradecanoate +nadp
+    2r_3s_2_decyl_3_hydroxytetradecanoate
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_328 [1.1.1.328] +nadh +duroquinone +h
-    durohydroquinone
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_geranial +h
+    1s_2s_4r_endo_fenchol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_11_1_1 [1.11.1.1] +nadh +2_5_dimethyl_1_4_benzoquinone +h
-    compound_0069549
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +11r_dihydroartemisinic_aldehyde
+    3r_6e_nerolidol
   }
 
   branch from glutathione side left {
     glutathione
-    <-> . +4_methoxyindol_3_ylmethyl_isothiocyanate
-    glutathion_s_yl_4_methoxy_3_indolylmethylisothi
+    <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa +h2o
+    1_methylsulfanyl_8_aci_nitrooctane
   }
 
   branch from glutathione side right {
     glutathione
-    <-> ec_2_5_1_18 [2.5.1.18] +indol_3_ylmethylisothiocyanate_glutathione
-    indolylmethylisothiocyanate
+    <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa +h2o
+    8_methylthiooctanonitrile_oxide
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_3_1_111 [1.3.1.111] +h +geranylgeranyl_bacteriopheophytin +nadph
+    bacteriophaeophytin_a
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_1_1_115 [1.1.1.115] +h +d_ribonate +nadph +h2o
+    beta_d_ribopyranose
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    mycinamicin_iii
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    mycinamicin_iv
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +h +syringaresinol +nadp
+    5_5_dimethoxylariciresinol
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_1_1_412 [1.1.1.412] +h +2r_2_octyl_3_oxododecanoate +nadp
+    2r_3s_2_octyl_3_hydroxydodecanoate
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> ec_1_1_1_71 [1.1.1.71] +h +11r_dihydroartemisinic_aldehyde +nad
+    2_trans_6_cis_farnesol
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_1_1_71 [1.1.1.71] +h +dotriacontanal +nad
+    dotriacontan_1_ol
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +hexacosanal
+    hexacosan_1_ol
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +octacosanal
+    octacosan_1_ol
+  }
+
+  branch from glutathione_disulfide side left {
+    glutathione_disulfide
+    <-> ec_1_11_1_12 [1.11.1.12] +11s_hydroperoxy_4z_7z_9e_13z_16z_19z_docosahexae +glutathione +h2o
+    11s_hdohe
+  }
+
+  branch from glutathione_disulfide side right {
+    glutathione_disulfide
+    <-> . +5_r_hete +h2o +h +glutathione
+    5s_hydroperoxy_6e_8z_11z_14z_eicosatetraenoate
+  }
+
+  branch from glutathione side left {
+    glutathione
+    <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa +h2o
+    1_methylsulfanyl_9_aci_nitrononane
+  }
+
+  branch from glutathione side right {
+    glutathione
+    <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa +h2o
+    9_methylthiononanonitrile_oxide
   }
 }

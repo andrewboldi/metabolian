@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 12-epi-leukotriene-b4-to-11-12-15-theta "12-epi-leukotriene B4 to 11,12,15-THETA" {
-  spacing 214
+  spacing 160
 
   spine at 0,0 {
     12_epi_leukotriene_b4
@@ -18,59 +18,5 @@ pathway 12-epi-leukotriene-b4-to-11-12-15-theta "12-epi-leukotriene B4 to 11,12,
     15h_11_12_eeta
     <-> ec_1_14_14_1 [1.14.14.1] +h2o
     11_12_15_theta
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_23 [3.6.3.23] +adp +gly_pro +phosphate +gly_pro +h2o
-    atp
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
-    angiotensin_ii
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    ile5_angiotensin_ii_1_7
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    balenine
-  }
-
-  branch from 5_6_ep_15s_hete side left {
-    5_6_ep_15s_hete
-    <-> . +h +h2o
-    lipoxin_b4
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_1_1_124 [1.1.1.124] +beta_d_fructose +h +nadph
-    5_dehydro_d_fructose
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_138 [1.1.1.138] +d_mannitol +h +nadph
-    beta_d_fructose
-  }
-
-  branch from o2 side right {
-    o2
-    <-> ec_1_14_13_169 [1.14.13.169] +4r_hydroxysphinganine +nadp +h2o +h +nadph
-    sphinganine
-  }
-
-  branch from o2 side left {
-    o2
-    <-> ec_1_14_13_99 [1.14.13.99] +24s_24_hydroxycholesterol +h +nadph +nadp +h2o
-    24s_7_24_dihydroxycholesterol
   }
 }

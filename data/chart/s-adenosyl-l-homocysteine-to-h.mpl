@@ -4,16 +4,16 @@
 # edit the generator, not this file.
 
 pathway s-adenosyl-l-homocysteine-to-h "S-adenosyl-L-homocysteine to H" {
-  spacing 206
+  spacing 248
 
   spine at 0,0 {
     s_adenosyl_l_homocysteine
-    <-> . +methyl_o_4_beta_d_glucuronosyl_1_4_alpha_d_galac +h -beta_d_glucuronosyl_1_4_alpha_d_galacturonosyl_1
+    <-> . +h +avermectin_a2b_aglycone -avermectin_b2b_aglycone
     s_adenosyl_l_methionine
-    <-> . +udp +beta_d_glucuronosyl_1_4_alpha_d_galacturonosyl_1 +h -alpha_d_galacturonosyl_1_4_beta_d_glucuronosyl_1
-    udp_alpha_d_glucuronate
-    <-> . +3_3_5_triiodo_l_thyronine -3_5_3_triiodo_l_thyronine_beta_d_glucuronoside -h
-    udp
+    <-> . +dtdp_l_oleandrose +avermectin_b2b_aglycone -dtdp -h
+    avermectin_b2b_monosaccharide
+    <-> . +dtdp_l_oleandrose -dtdp -h
+    avermectin_b2b
   }
 
   branch from s_adenosyl_l_methionine side left {
@@ -28,45 +28,87 @@ pathway s-adenosyl-l-homocysteine-to-h "S-adenosyl-L-homocysteine to H" {
     2_nonaprenyl_6_methoxy_1_4_benzoquinone
   }
 
-  branch from udp_alpha_d_glucuronate side left {
-    udp_alpha_d_glucuronate
-    <-> ec_2_4_1_17 [2.4.1.17] +udp +cyproheptadine_beta_d_glucuronide +h
-    cyproheptadine
+  branch from dtdp side left {
+    dtdp
+    <-> . +dtdp_3_acetamido_3_6_dideoxy_alpha_d_glucose +alpha_d_man_1_3_alpha_l_fuc_1_3_alpha_d_galnac_p +h
+    alpha_d_qui3nac_1_3_alpha_d_man_1_3_alpha_l_fuc
   }
 
-  branch from udp_alpha_d_glucuronate side right {
-    udp_alpha_d_glucuronate
-    <-> ec_2_4_1_17 [2.4.1.17] +udp +diethylstilbestrol_glucuronide
-    diethylstilbestrol
-  }
-
-  branch from alpha_d_galacturonosyl_1_4_beta_d_glucuronosyl_1 side left {
-    alpha_d_galacturonosyl_1_4_beta_d_glucuronosyl_1
-    <-> .
-    beta_d_glucuronosyl_1_4_beta_d_glucuronosyl_1_4
-  }
-
-  branch from udp side right {
-    udp
-    <-> ec_2_4_1_38 [2.4.1.38] +h +n_acetyllactosamine +n_acetyl_beta_d_glucosamine
-    udp_alpha_d_galactose
-  }
-
-  branch from udp side left {
-    udp
-    <-> ec_2_4_1_22 [2.4.1.22] +alpha_lactose +h +udp_alpha_d_galactose
-    glucose
-  }
-
-  branch from h side right {
-    h
-    <-> ec_5_5_1_7 [5.5.1.7] +2e_4z_2_chloromuconate
-    5_chloromuconolactone
+  branch from dtdp side right {
+    dtdp
+    <-> . +dtdp_beta_l_rhamnose +alpha_d_glc_1_3_alpha_d_galnac_pp_und +h
+    alpha_l_rha_1_4_alpha_d_glc_1_3_alpha_d_galnac_p
   }
 
   branch from h side left {
     h
-    <-> . +3_4_6_trichlorocatechol +chloride
-    1r_2s_1_3_4_6_tetrachlorocyclohexa_3_5_diene_1
+    <-> ec_3_4_24_27 [3.4.24.27] +l_leucyl_l_alanine +n_benzyloxycarbonylglycine +h2o
+    benzyloxycarbonyl_gly_leu_ala
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_4_1_69 [2.4.1.69] +gdp +methyl_2_alpha_l_fucopyranosyl_beta_d_galactosid +methyl_beta_d_galactoside
+    gdp_l_fucose
+  }
+
+  branch from s_adenosyl_l_homocysteine side left {
+    s_adenosyl_l_homocysteine
+    <-> ec_2_1_1_212 [2.1.1.212] +biochanin_a +h +s_adenosyl_l_methionine
+    genistein
+  }
+
+  branch from s_adenosyl_l_homocysteine side right {
+    s_adenosyl_l_homocysteine
+    <-> . +anhydrochlortetracycline +h +s_adenosyl_l_methionine
+    4_aminoanhydrochlortetracycline
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_2_1_161 [3.2.1.161] +beta_d_glucose +4_nitrophenol +h2o
+    4_nitrophenyl_d_glucoside
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_2_1_3 [3.2.1.3] +beta_d_glucose +2_4_dinitrophenol +h2o
+    2_4_dinitrophenyl_alpha_d_glucopyranoside
+  }
+
+  branch from s_adenosyl_l_methionine side left {
+    s_adenosyl_l_methionine
+    <-> . +s_adenosyl_l_homocysteine +3_demethylstaurosporine
+    o_demethyl_n_demethyl_staurosporine
+  }
+
+  branch from s_adenosyl_l_methionine side right {
+    s_adenosyl_l_methionine
+    <-> . +s_adenosyl_l_homocysteine +oxyayanin_b
+    3_4_5_6_tetrahydroxy_3_7_dimethoxyflavone
+  }
+
+  branch from dtdp_l_oleandrose side left {
+    dtdp_l_oleandrose
+    <-> . +avermectin_a1b_aglycone +dtdp +h
+    avermectin_a1b_monosaccharide
+  }
+
+  branch from dtdp_l_oleandrose side right {
+    dtdp_l_oleandrose
+    <-> . +avermectin_a1b_aglycone +dtdp +h
+    avermectin_a1b_monosaccharide
+  }
+
+  branch from dtdp side left {
+    dtdp
+    <-> . +dtdp_beta_l_rhamnose +alpha_l_rha_1_4_alpha_d_glc_1_3_alpha_d_galnac_p +h
+    alpha_l_rha_1_2_alpha_l_rha_1_4_alpha_d_glc_1_3
+  }
+
+  branch from dtdp side right {
+    dtdp
+    <-> . +beta_d_gal_1_4_alpha_d_glc_1_4_alpha_d_galnac_1 +dtdp_3_acetamido_3_6_dideoxy_d_galactopyranose +h
+    alpha_d_fuc3nac_1_4_beta_d_gal_1_4_alpha_d_glc_1
   }
 }

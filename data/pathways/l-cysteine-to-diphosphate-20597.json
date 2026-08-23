@@ -128,43 +128,6 @@
       "xrefs": {
         "chebi": "CHEBI:33019"
       }
-    },
-    {
-      "id": "3_sulfanylpentan_1_ol_l_cysteine",
-      "name": "3-sulfanylpentan-1-ol-L-cysteine",
-      "short": "3-sulfanylpentan-1-…",
-      "formula": "C8H17NO3S",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:156143"
-      }
-    },
-    {
-      "id": "3_mercaptopentanol",
-      "name": "3-mercaptopentanol",
-      "formula": "C5H12OS",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:156144"
-      }
-    },
-    {
-      "id": "s_ethyl_l_cysteine",
-      "name": "S-ethyl-L-cysteine",
-      "formula": "C5H11NO2S",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:156145"
-      }
-    },
-    {
-      "id": "ethanethiol",
-      "name": "ethanethiol",
-      "formula": "C2H6S",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:46511"
-      }
     }
   ],
   "enzymes": [
@@ -307,73 +270,269 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "3-sulfanylpentan-1-ol-L-cysteine = 3-sulfanyl-1-pentanol + 2-aminoprop-2-enoate",
-      "equation": "3-sulfanylpentan-1-ol-L-cysteine = 3-sulfanyl-1-pentanol + 2-aminoprop-2-enoate",
-      "substrates": [
-        {
-          "metabolite": "3_sulfanylpentan_1_ol_l_cysteine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_mercaptopentanol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "2_ammonioprop_2_enoate",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:64776"
+      "id": "xt_l_cystine_5-methyltetrahydropteroyl-to-ammonium-21196",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_cystine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "5-methyltetrahydropteroyl-to-ammonium-21196"
+      },
+      "note": "Shares L-cystine with 5-methyltetrahydropteroyl… to ammonium.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:64776"
+            "db": "ChEBI",
+            "id": "CHEBI:35491"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "S-ethyl-L-cysteine = ethanethiol + 2-aminoprop-2-enoate",
-      "equation": "S-ethyl-L-cysteine = ethanethiol + 2-aminoprop-2-enoate",
-      "substrates": [
-        {
-          "metabolite": "s_ethyl_l_cysteine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "ethanethiol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "2_ammonioprop_2_enoate",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:64784"
+      "id": "xt_l_cystine_l-cys-gly-disulfide-to-tetrachloro-1-4-benzoquin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_cystine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "l-cys-gly-disulfide-to-tetrachloro-1-4-benzoquin"
+      },
+      "note": "Shares L-cystine with L-Cys-Gly disulfide… to tetrachloro-1,4-benzoquin….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:64784"
+            "db": "ChEBI",
+            "id": "CHEBI:35491"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_cystine_l-cysteine-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_cystine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-cysteine-to-diphosphate"
+      },
+      "note": "Shares L-cystine with L-cysteine to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:35491"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_cystine_l-cystine-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_cystine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-cystine-to-diphosphate"
+      },
+      "note": "Shares L-cystine with L-cystine to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:35491"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_cystine_l-cystine-to-diphosphate-24927",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_cystine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-cystine-to-diphosphate-24927"
+      },
+      "note": "Shares L-cystine with L-cystine to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:35491"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_cystine_n-acetyl-ll-2-6-diaminopi-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_cystine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyl-ll-2-6-diaminopi-to-ammonium"
+      },
+      "note": "Shares L-cystine with N-acetyl-LL-2,6-diaminopi… to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:35491"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_disulfanyl_l_alanine_alaninium-amide-to-d-pantetheine-4-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_disulfanyl_l_alanine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alaninium-amide-to-d-pantetheine-4-phosphate"
+      },
+      "note": "Shares 3-disulfanyl-L-alanine with β-alaninium amide to D-pantetheine 4'-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58591"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_disulfanyl_l_alanine_alaninium-amide-to-d-pantetheine-4-phosphate-26",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_disulfanyl_l_alanine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alaninium-amide-to-d-pantetheine-4-phosphate-26"
+      },
+      "note": "Shares 3-disulfanyl-L-alanine with β-alaninium amide to D-pantetheine 4'-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58591"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_disulfanyl_l_alanine_l-cysteine-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_disulfanyl_l_alanine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-cysteine-to-diphosphate"
+      },
+      "note": "Shares 3-disulfanyl-L-alanine with L-cysteine to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58591"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_disulfanyl_l_alanine_l-cystine-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_disulfanyl_l_alanine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-cystine-to-diphosphate"
+      },
+      "note": "Shares 3-disulfanyl-L-alanine with L-cystine to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58591"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_disulfanyl_l_alanine_l-cystine-to-diphosphate-24927",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_disulfanyl_l_alanine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-cystine-to-diphosphate-24927"
+      },
+      "note": "Shares 3-disulfanyl-L-alanine with L-cystine to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58591"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_s_sulfanyl_l_cysteinyl_adenylyl_zwitterionic_g_l-cysteine-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_s_sulfanyl_l_cysteinyl_adenylyl_zwitterionic_g"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-cysteine-to-diphosphate"
+      },
+      "note": "Shares 3'-[(S)-sulfanyl-L-cysteinyl]adenylyl zwitterionic group with L-cysteine to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:229520"
           }
         ]
       }

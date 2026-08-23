@@ -4,51 +4,15 @@
 # edit the generator, not this file.
 
 pathway fmnh2-to-menaquinol-6 "FMNH2 to menaquinol-6" {
-  spacing 264
+  spacing 208
 
   spine at 0,0 {
     fmnh2
-    <-> ec_1_14_14_33 [1.14.14.33] +edta +h +o2 -ethylenediaminetriacetate -glyoxylate -h2o
+    <-> ec_1_14_14_108 [1.14.14.108] +1r_4r_bornane_2_5_dione +h +o2 -1r_4r_5_oxo_1_2_campholide -h2o
     fmn
     <-> ec_2_1_1_350 [2.1.1.350] +s_adenosyl_l_homocysteine +5_deoxyadenosine +8_methylmenaquinone_6 +l_methionine -s_adenosyl_l_methionine -menaquinone_6
     fmnh2
     <-> . +pmf +h2 +menaquinone_6 -menaquinol_6
     pmf
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +daunosamine +phosphate +daunosamine
-    atp
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    d_fucose
-  }
-
-  branch from s_adenosyl_l_methionine side left {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +5_hydroxyanthrotainin +h
-    5_hydroxy_desmethylanthrotainin
-  }
-
-  branch from s_adenosyl_l_methionine side right {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +5_hydroxyanthrotainin
-    5_hydroxy_desmethylanthrotainin
-  }
-
-  branch from pmf side left {
-    pmf
-    <-> ec_1_2_2_1 [1.2.2.1] +menaquinol_8 +co2 +h +formate
-    mk_8
-  }
-
-  branch from pmf side right {
-    pmf
-    <-> ec_7_1_1_3 [7.1.1.3] +plastoquinol_9 +o2 +h2o
-    plastoquinone_9
   }
 }

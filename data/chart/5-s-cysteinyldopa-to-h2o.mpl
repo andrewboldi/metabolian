@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-s-cysteinyldopa-to-h2o "5-S-cysteinyldopa to H2O" {
-  spacing 194
+  spacing 242
 
   spine at 0,0 {
     5_s_cysteinyldopa
@@ -20,26 +20,26 @@ pathway 5-s-cysteinyldopa-to-h2o "5-S-cysteinyldopa to H2O" {
 
   branch from l_cysteine side left {
     l_cysteine
-    <-> . +s_indole_l_cysteine
-    indole_3_carbaldehyde
+    <-> . +l_alanine +l_arginine +h2o
+    alanyl_arginyl_cysteine
   }
 
   branch from l_cysteine side right {
     l_cysteine
-    <-> ec_4_2_1_22 [4.2.1.22] +l_homocysteine +h +l_l_cystathionine
-    hydrogen_sulfide
+    <-> . +glycine +l_arginine +h2o
+    arginyl_cystinyl_glycine
   }
 
   branch from l_dopa side left {
     l_dopa
-    <-> ec_1_14_16_2 [1.14.16.2] +sapropterin +o2 +l_tyrosine +h2o
-    tetrahydrobiopterin_4a_carbinolamine
+    <-> ec_1_14_16_2 [1.14.16.2] +5_6_7_8_tetrahydrobiopterin +o2 +l_tyrosine
+    4as_6r_4a_hydroxy_l_erythro_5_6_7_8_tetrahydrob
   }
 
   branch from l_dopa side right {
     l_dopa
-    <-> ec_1_14_16_2 [1.14.16.2] +o2 +l_tyrosine +tetrahydrobiopterin_4a_carbinolamine +h2o
-    5_6_7_8_tetrahydrobiopterin
+    <-> ec_1_13_11_30 [1.13.11.30] +h +o2
+    5_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem
   }
 
   branch from 2_s_cysteinyldopaquinone side left {
@@ -50,13 +50,61 @@ pathway 5-s-cysteinyldopa-to-h2o "5-S-cysteinyldopa to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> ec_3_3_2_10 [3.3.2.10] +15_16_dihode
-    15_16_epode
+    <-> ec_4_1_1_78 [4.1.1.78] +enol_oxaloacetate
+    acetylenedicarboxylate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_3_2_10 [3.3.2.10] +9_10_epode
-    9_10_dihode
+    <-> ec_4_2_1_83 [4.2.1.83] +2s_2_hydroxy_4_oxobutane_1_2_4_tricarboxylate
+    1e_4_oxobut_1_ene_1_2_4_tricarboxylate
+  }
+
+  branch from l_cysteine side right {
+    l_cysteine
+    <-> . +l_serine +l_arginine +h2o
+    arginyl_cystinyl_serine
+  }
+
+  branch from l_cysteine side left {
+    l_cysteine
+    <-> . +l_valine +l_arginine +h2o
+    arginyl_valyl_cysteine
+  }
+
+  branch from l_dopa side right {
+    l_dopa
+    <-> . +h +o2 +nadph +l_tyrosine +h2o
+    nadp
+  }
+
+  branch from l_dopa side left {
+    l_dopa
+    <-> . +nh4
+    3_4_hydroxyphenyl_pyruvate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_4_2_1_80 [4.2.1.80] +trans_2_oxohex_4_enoate
+    s_4_hydroxy_2_oxohexanoate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +aminodhq
+    5_amino_5_deoxy_3_dehydroshikimic_acid
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +18r_hydroxy_5z_8z_11z_14z_16e_eicosapentaenoate +h2o
+    5_6_epoxy_18r_hepe
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +5z_9e_14z_8xi_11r_12s_11_12_epoxy_8_hydroxyicos +nadph +nadp +h2o
+    20_oh_hepoxilin_a3
   }
 }

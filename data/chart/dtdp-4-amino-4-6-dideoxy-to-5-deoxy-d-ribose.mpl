@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dtdp-4-amino-4-6-dideoxy-to-5-deoxy-d-ribose "dTDP-4-amino-4,6-dideoxy-… to 5-deoxy-α-D-ribose…" {
-  spacing 298
+  spacing 304
 
   spine at 0,0 {
     dtdp_4_amino_4_6_dideoxy_d_glucose
@@ -16,45 +16,51 @@ pathway dtdp-4-amino-4-6-dideoxy-to-5-deoxy-d-ribose "dTDP-4-amino-4,6-dideoxy-�
     5_deoxy_d_ribose_1_phosphate
   }
 
-  branch from 5_deoxyadenosine side left {
-    5_deoxyadenosine
-    <-> . +2r_3r_5s_6r_6_methyl_2_s_pantetheinyl_carbapena +methylcobalamin +sam +cob_iii_alamin +methionine
-    2r_3r_5s_6r_6_ethyl_2_s_pantetheinyl_carbapenam
-  }
-
-  branch from methionine side right {
-    methionine
-    <-> . +hydrogen_donor +sam +hydrogen_acceptor +hplus
-    5_deoxyadenosin_5_yl_radical
-  }
-
-  branch from hydrogen_acceptor side left {
-    hydrogen_acceptor
-    <-> ec_1_14_99_63 [1.14.99.63] +carotene +hydrogen_donor +o2 +h2o
-    echinenone
-  }
-
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> . +h2o +pyruvate +hydrogen_donor +nh3
-    d_alanine
-  }
-
   branch from nh3 side left {
     nh3
-    <-> . +7_cyano_7_carbaguanine_5_phosphate_1
-    archaeosine_5_phosphate_zwitterionic
+    <-> ec_3_5_3_27 [3.5.3.27] +arginine +h2o +hplus +co2
+    ornithine
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_4_1_1_107 [4.1.1.107] +ldopa +o2 +h2o +hplus +h2o2 +co2
-    dopal
+    <-> . +cordycepin +h2o +hplus
+    3_deoxyinosine
   }
 
   branch from 5_deoxy_d_ribofuranose side left {
     5_deoxy_d_ribofuranose
     <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
     atp
+  }
+
+  branch from dtdp_4_amino_4_6_dideoxy_d_glucose side right {
+    dtdp_4_amino_4_6_dideoxy_d_glucose
+    <-> ec_2_3_1_209 [2.3.1.209] +acetyl_coa +coa +hplus
+    dtdp_4_acetamido_4_6_dideoxy_d_glucose
+  }
+
+  branch from sam side left {
+    sam
+    <-> . +cytidine_5_monophosphate_1 +sah +hplus
+    5_methylcytidine_5_monophosphate_1
+  }
+
+  branch from sam side right {
+    sam
+    <-> . +cytidine_5_monophosphate_1 +5_methylcytidine_5_monophosphate_1 +hplus
+    sah
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> . +3_4_dimethoxy_l_phenylalanine
+    3_4_dimethoxy_e_cinnamate
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> . +n_carbamoyl_l_phenylalaninate +h2o +hplus +co2
+    l_phenylalanine
   }
 }

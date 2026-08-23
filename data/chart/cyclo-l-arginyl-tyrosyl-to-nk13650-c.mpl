@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cyclo-l-arginyl-tyrosyl-to-nk13650-c "cyclo(L-arginyl-tyrosyl)(… to NK13650 C" {
-  spacing 206
+  spacing 158
 
   spine at 0,0 {
     cyclo_l_arginyl_tyrosyl_1
@@ -22,11 +22,9 @@ pathway cyclo-l-arginyl-tyrosyl-to-nk13650-c "cyclo(L-arginyl-tyrosyl)(… to NK
     nk13650_c
   }
 
-
-
-
-
-
-
-
+  branch from citrate side left {
+    citrate
+    <-> ec_6_2_1_18 [6.2.1.18] +atp +coa +adp +pi
+    3s_citryl_coa
+  }
 }

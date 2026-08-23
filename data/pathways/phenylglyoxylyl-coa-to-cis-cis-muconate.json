@@ -200,13 +200,12 @@
       }
     },
     {
-      "id": "s_5_oxo_2_5_dihydro_2_furylacetate",
-      "name": "(S)-5-oxo-2,5-dihydro-2-furylacetate",
-      "short": "5-oxo-2,5-dihydro-2…",
-      "formula": "C6H5O4",
-      "charge": -1,
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:58736"
+        "chebi": "CHEBI:28938"
       }
     }
   ],
@@ -230,7 +229,10 @@
       "name": "benzaldehyde dehydrogenase (NAD(+))",
       "ec": [
         "1.2.1.28"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P00352"
+      }
     },
     {
       "id": "ec_1_14_12_10",
@@ -251,13 +253,6 @@
       "name": "catechol 1,2-dioxygenase",
       "ec": [
         "1.13.11.1"
-      ]
-    },
-    {
-      "id": "ec_5_5_1_1",
-      "name": "muconate cycloisomerase",
-      "ec": [
-        "5.5.1.1"
       ]
     }
   ],
@@ -640,18 +635,33 @@
     },
     {
       "id": "r9",
-      "name": "muconate cycloisomerase",
-      "equation": "(S)-muconolactone = cis,cis-muconate + H(+)",
-      "ec": "5.5.1.1",
+      "name": "benzylamine + NAD(+) + H2O = benzaldehyde + NH4(+) + NADH + H(+)",
+      "equation": "benzylamine + NAD(+) + H2O = benzaldehyde + NH4(+) + NADH + H(+)",
       "substrates": [
         {
-          "metabolite": "s_5_oxo_2_5_dihydro_2_furylacetate",
+          "metabolite": "benzylaminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "cis_cis_muconate",
+          "metabolite": "benzaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
           "stoichiometry": 1
         },
         {
@@ -659,22 +669,283 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_5_5_1_1"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:30031"
+        "rhea": "RHEA:76863"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:30031"
+            "id": "RHEA:76863"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_phenylglyoxylate_3-4-dihydrocoumarin-to-2-benzylsuccinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phenylglyoxylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-4-dihydrocoumarin-to-2-benzylsuccinate"
+      },
+      "note": "Shares phenylglyoxylate with 3,4-dihydrocoumarin to 2-benzylsuccinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:36656"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phenylglyoxylate_s-mandelate-to-n2-n5-dibenzoyl-l-ornithi",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phenylglyoxylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-mandelate-to-n2-n5-dibenzoyl-l-ornithi"
+      },
+      "note": "Shares phenylglyoxylate with (S)-mandelate to N2,N5-dibenzoyl-L-ornithi….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:36656"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_benzaldehyde_2-phenylacetamide-to-s-mandelonitrile",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "benzaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-phenylacetamide-to-s-mandelonitrile"
+      },
+      "note": "Shares benzaldehyde with 2-phenylacetamide to (S)-mandelonitrile.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17169"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_benzaldehyde_benzoin-to-4-d-glucosyloxy-benzoa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "benzaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "benzoin-to-4-d-glucosyloxy-benzoa"
+      },
+      "note": "Shares benzaldehyde with benzoin to 4-(β-D-glucosyloxy)benzoa….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17169"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_benzaldehyde_benzoylagmatinium-to-glycine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "benzaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "benzoylagmatinium-to-glycine"
+      },
+      "note": "Shares benzaldehyde with benzoylagmatinium to glycine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17169"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_benzaldehyde_e-phenylacetaldehyde-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "benzaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "e-phenylacetaldehyde-to-ammonium"
+      },
+      "note": "Shares benzaldehyde with (E)-phenylacetaldehyde… to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17169"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_benzaldehyde_l-threo-3-phenylserine-to-s-adenosyl-l-homocyste",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "benzaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-threo-3-phenylserine-to-s-adenosyl-l-homocyste"
+      },
+      "note": "Shares benzaldehyde with L-threo-3-phenylserine to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17169"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_benzaldehyde_n-acetyl-s-benzyl-l-cyste-to-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "benzaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyl-s-benzyl-l-cyste-to-acetate"
+      },
+      "note": "Shares benzaldehyde with N-acetyl-S-benzyl-L-cyste… to acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17169"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_benzoate_benzoate-to-2-3-4-6-tetrahydroxybenz",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "benzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "benzoate-to-2-3-4-6-tetrahydroxybenz"
+      },
+      "note": "Shares benzoate with benzoate to 2,3',4,6-tetrahydroxybenz….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16150"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_benzoate_benzoin-to-4-d-glucosyloxy-benzoa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "benzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "benzoin-to-4-d-glucosyloxy-benzoa"
+      },
+      "note": "Shares benzoate with benzoin to 4-(β-D-glucosyloxy)benzoa….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16150"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_benzoate_benzoylagmatinium-to-glycine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "benzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "benzoylagmatinium-to-glycine"
+      },
+      "note": "Shares benzoate with benzoylagmatinium to glycine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16150"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_benzoate_biphenyl-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "benzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "biphenyl-to-nad"
+      },
+      "note": "Shares benzoate with biphenyl to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16150"
           }
         ]
       }

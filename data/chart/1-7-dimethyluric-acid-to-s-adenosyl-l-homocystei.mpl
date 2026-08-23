@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-7-dimethyluric-acid-to-s-adenosyl-l-homocystei "1,7-dimethyluric acid to S-adenosyl-L-homocysteine" {
-  spacing 224
+  spacing 188
 
   spine at 0,0 {
     1_7_dimethyluric_acid
@@ -16,41 +16,5 @@ pathway 1-7-dimethyluric-acid-to-s-adenosyl-l-homocystei "1,7-dimethyluric acid 
     theobromine
     <-> ec_2_1_1_160 [2.1.1.160] +sam -sah -hplus
     caffeine
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +gibberellin_a9 +nadph +16alpha_17_epoxy_gibberellin_a9 +h2o
-    nadp
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +nadh +gibberellin_a9 +nad +h2o
-    16alpha_17_epoxy_gibberellin_a9
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_valine +l_tryptophan +l_phenylalanine
-    valyl_tryptophanyl_phenylalanine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_valine +l_tryptophan
-    valyl_tryptophanyl_valine
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +5_hydroxyuridine_5_phosphate_1 +sam +hplus
-    5_methoxyuridine_5_phosphate_1
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +l_methionine +sam
-    s_methyl_l_methionine_1
   }
 }

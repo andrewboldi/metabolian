@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-alkyl-2-acetylglycerol-to-oleoyl-sn-glycero-3 "1-alkyl-2-acetylglycerol to oleoyl-sn-glycero-3-phosp…" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     1_alkyl_2_acetylglycerol
@@ -14,5 +14,17 @@ pathway 1-alkyl-2-acetylglycerol-to-oleoyl-sn-glycero-3 "1-alkyl-2-acetylglycero
     choline_alfoscerate
     <-> . +oleoyl_coa -coa
     oleoyl_sn_glycero_3_phosphocholine
+  }
+
+  branch from oleoyl_coa side left {
+    oleoyl_coa
+    <-> . +decan_1_ol +coa
+    decyl_oleate
+  }
+
+  branch from oleoyl_coa side right {
+    oleoyl_coa
+    <-> . +palmitoleyl_alcohol +coa
+    palmitoleyl_oleate
   }
 }

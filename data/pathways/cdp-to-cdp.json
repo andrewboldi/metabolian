@@ -127,24 +127,6 @@
       "xrefs": {
         "chebi": "CHEBI:57783"
       }
-    },
-    {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM10"
-      }
-    },
-    {
-      "id": "nad",
-      "name": "NAD",
-      "formula": "C21H26N7O14P2",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM8"
-      }
     }
   ],
   "enzymes": [
@@ -353,45 +335,137 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "Reaction MNXR182336",
-      "substrates": [
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "cdp_4_dehydro_3_6_dideoxy_d_glucose",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "cdp_3_6_dideoxy_d_glucose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR182336"
+      "id": "xt_cdp_3_6_dideoxy_d_glucose_beta-d-fructose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cdp_3_6_dideoxy_d_glucose"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-d-fructose-to-h2o"
+      },
+      "note": "Shares CDP-3,6-dideoxy-α-D-glucose with beta-D-fructose… to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR182336"
+            "db": "ChEBI",
+            "id": "CHEBI:70785"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_mannopyranosyl_1_4_l_rhamnopyranosyl_1_3_d_ga_udp-4-amino-4-deoxy-l-a-to-ctp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_mannopyranosyl_1_4_l_rhamnopyranosyl_1_3_d_ga"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-4-amino-4-deoxy-l-a-to-ctp"
+      },
+      "note": "Shares α-D-mannopyranosyl-(1→4)-α-L-rhamnopyranosyl-(1→3)-α-D-galactopyranosyl-diphospho-ditrans,octacis-undecaprenol with UDP-4-amino-4-deoxy-β-L-a… to CTP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:157670"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cdp_3_6_dideoxy_d_mannose_cdp-n-methyl-l-glucosamine-to-lipid-iib",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cdp_3_6_dideoxy_d_mannose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cdp-n-methyl-l-glucosamine-to-lipid-iib"
+      },
+      "note": "Shares CDP-3,6-dideoxy-α-D-mannose with CDP-N-methyl-L-glucosamine to lipid IIB.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:88041"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cdp_4_dehydro_3_6_dideoxy_d_glucose_3-5-17-3-hydroxyandr-to-7-hydroxymethyl-12-meth",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cdp_4_dehydro_3_6_dideoxy_d_glucose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-5-17-3-hydroxyandr-to-7-hydroxymethyl-12-meth"
+      },
+      "note": "Shares CDP-4-dehydro-3,6-dideoxy-α-D-glucose with (3β,5α,17β)-3-hydroxyandr… to 7-Hydroxymethyl-12-methyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:70783"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cdp_4_dehydro_3_6_dideoxy_d_glucose_beta-d-fructose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cdp_4_dehydro_3_6_dideoxy_d_glucose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-d-fructose-to-h2o"
+      },
+      "note": "Shares CDP-4-dehydro-3,6-dideoxy-α-D-glucose with beta-D-fructose… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:70783"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cdp_4_dehydro_3_6_dideoxy_d_glucose_udp-4-amino-4-deoxy-l-a-to-ctp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cdp_4_dehydro_3_6_dideoxy_d_glucose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-4-amino-4-deoxy-l-a-to-ctp"
+      },
+      "note": "Shares CDP-4-dehydro-3,6-dideoxy-α-D-glucose with UDP-4-amino-4-deoxy-β-L-a… to CTP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:70783"
           }
         ]
       }

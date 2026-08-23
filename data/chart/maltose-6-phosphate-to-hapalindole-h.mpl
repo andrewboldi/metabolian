@@ -26,18 +26,6 @@ pathway maltose-6-phosphate-to-hapalindole-h "α-maltose 6'-phosphate to hapalin
     hapalindole_h
   }
 
-  branch from glucose side left {
-    glucose
-    <-> . +benzylglucosinolate_aglycone +h +h2o
-    z_glucotropeolin
-  }
-
-  branch from glucose side right {
-    glucose
-    <-> ec_3_2_1_147 [3.2.1.147] +z_indol_3_yl_n_sulfonatooxy_methanimidothioate +h +h2o
-    z_glucobrassicin
-  }
-
   branch from 6pgc side left {
     6pgc
     <-> ec_1_1_1_43 [1.1.1.43] +nadp +nadph +hplus
@@ -56,15 +44,15 @@ pathway maltose-6-phosphate-to-hapalindole-h "α-maltose 6'-phosphate to hapalin
     12_epi_fischerindole_u
   }
 
-  branch from ppi side right {
-    ppi
-    <-> . +fpp +h2o
-    1s_6s_7r_sesquipiperitol
+  branch from l_tryptophan side right {
+    l_tryptophan
+    <-> . +h2o
+    cyclo_l_tryptophyl_l_tryptophyl
   }
 
-  branch from ppi side left {
-    ppi
-    <-> . +2_cis_6_trans_farnesyl_diphosphate
-    trans_farnesene
+  branch from l_tryptophan side left {
+    l_tryptophan
+    <-> ec_1_14_19_82 [1.14.19.82] +bromide +nadph +o2 +hplus +nadp +h2o
+    5_bromo_l_tryptophan
   }
 }

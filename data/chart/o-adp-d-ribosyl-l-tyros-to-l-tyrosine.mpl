@@ -18,13 +18,13 @@ pathway o-adp-d-ribosyl-l-tyros-to-l-tyrosine "O-(ADP-D-ribosyl)-L-tyros… to L
 
   branch from l_tyrosine side left {
     l_tyrosine
-    <-> ec_2_4_1_186 [2.4.1.186] +udp_d_glucose +udp +hplus
-    d_glucosyl_l_tyrosyl
+    <-> . +o2 +h2o2 +hplus
+    l_topaquinone_1
   }
 
   branch from l_tyrosine side right {
     l_tyrosine
-    <-> . +udpglcnac +udp +hplus
-    n_acetyl_d_glucosaminyl_l_tyrosyl
+    <-> . +hypobromite +hplus +h2o
+    3_bromo_l_tyrosine
   }
 }

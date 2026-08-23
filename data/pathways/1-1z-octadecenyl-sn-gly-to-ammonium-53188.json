@@ -1,0 +1,447 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1-1z-octadecenyl-sn-gly-to-ammonium-53188",
+  "name": "1-(1Z-octadecenyl)-sn-gly… to ammonium",
+  "category": "redox-detox",
+  "summary": "A 3-step route from 1-(1Z-octadecenyl)-sn-glycero-3-phospho-(N-oleoyl)ethanolamine(1−) to ammonium, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:53188"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:137010"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1_1z_octadecenyl_sn_glycero_3_phospho_n_oleoyl_e",
+      "name": "1-(1Z-octadecenyl)-sn-glycero-3-phospho-(N-oleoyl)ethanolamine",
+      "short": "1-(1Z-octadecenyl)-…",
+      "formula": "C41H79NO7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:137010"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "1_1z_octadecenyl_sn_glycero_3_phosphate",
+      "name": "1-(1Z-octadecenyl)-sn-glycero-3-phosphate",
+      "short": "1-(1Z-octadecenyl)-…",
+      "formula": "C21H41O6P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:137017"
+      }
+    },
+    {
+      "id": "oleoyl_ethanolamide",
+      "name": "oleoyl ethanolamide",
+      "formula": "C20H39NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:71466"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "ethanolaminium",
+      "name": "ethanolaminium",
+      "formula": "C2H8NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:57603"
+      }
+    },
+    {
+      "id": "oleate",
+      "name": "oleate",
+      "formula": "C18H33O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30823"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "glycolaldehyde",
+      "name": "glycolaldehyde",
+      "formula": "C2H4O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17071"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_4_3_8",
+      "name": "ethanolamine oxidase",
+      "ec": [
+        "1.4.3.8"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "1-O-(1Z-octadecenyl)-sn-glycero-3-phospho-(N-9Z-octadecenoyl)-ethanolamine + H2O = 1-O-...",
+      "equation": "1-O-(1Z-octadecenyl)-sn-glycero-3-phospho-(N-9Z-octadecenoyl)-ethanolamine + H2O = 1-O-(1Z-octadecenyl)-sn-glycero-3-phosphate + N-(9Z-octadecenoyl) ethanolamine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1_1z_octadecenyl_sn_glycero_3_phospho_n_oleoyl_e",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_1z_octadecenyl_sn_glycero_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oleoyl_ethanolamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:53188"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53188"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N-(9Z-octadecenoyl) ethanolamine + H2O = ethanolamine + (9Z)-octadecenoate",
+      "equation": "N-(9Z-octadecenoyl) ethanolamine + H2O = ethanolamine + (9Z)-octadecenoate",
+      "substrates": [
+        {
+          "metabolite": "oleoyl_ethanolamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ethanolaminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oleate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:45060"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45060"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "ethanolamine oxidase",
+      "equation": "ethanolamine + O2 + H2O = glycolaldehyde + H2O2 + NH4(+)",
+      "ec": "1.4.3.8",
+      "substrates": [
+        {
+          "metabolite": "ethanolaminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glycolaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_4_3_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:18581"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18581"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_1_1z_octadecenyl_sn_glycero_3_phospho_n_oleoyl_e_1-1z-octadecenyl-sn-gly-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_1z_octadecenyl_sn_glycero_3_phospho_n_oleoyl_e"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-1z-octadecenyl-sn-gly-to-ammonium"
+      },
+      "note": "Shares 1-(1Z-octadecenyl)-sn-glycero-3-phospho-(N-oleoyl)ethanolamine with 1-(1Z-octadecenyl)-sn-gly… to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:137010"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_1z_octadecenyl_sn_glycero_3_phosphate_1-1z-octadecenyl-2-9z-to-palmitoyl-ethanolamide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_1z_octadecenyl_sn_glycero_3_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-1z-octadecenyl-2-9z-to-palmitoyl-ethanolamide"
+      },
+      "note": "Shares 1-(1Z-octadecenyl)-sn-glycero-3-phosphate with 1-(1Z-octadecenyl)-2-(9Z-… to palmitoyl ethanolamide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:137017"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_1z_octadecenyl_sn_glycero_3_phosphate_1-1z-octadecenyl-sn-gly-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_1z_octadecenyl_sn_glycero_3_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-1z-octadecenyl-sn-gly-to-ammonium"
+      },
+      "note": "Shares 1-(1Z-octadecenyl)-sn-glycero-3-phosphate with 1-(1Z-octadecenyl)-sn-gly… to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:137017"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_oleoyl_ethanolamide_1-1z-octadecenyl-sn-gly-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "oleoyl_ethanolamide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-1z-octadecenyl-sn-gly-to-ammonium"
+      },
+      "note": "Shares oleoyl ethanolamide with 1-(1Z-octadecenyl)-sn-gly… to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:71466"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_oleoyl_ethanolamide_1-2-dioleoyl-sn-glycero-3-to-h2o-55260",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "oleoyl_ethanolamide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-dioleoyl-sn-glycero-3-to-h2o-55260"
+      },
+      "note": "Shares oleoyl ethanolamide with 1,2-dioleoyl-sn-glycero-3… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:71466"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_oleoyl_ethanolamide_n-1-dioleoyl-sn-glycero-3-to-oleoyl-sn-glycero-3",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "oleoyl_ethanolamide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-1-dioleoyl-sn-glycero-3-to-oleoyl-sn-glycero-3"
+      },
+      "note": "Shares oleoyl ethanolamide with N,1-dioleoyl-sn-glycero-3… to oleoyl-sn-glycero-3-phosp….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:71466"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_oleoyl_ethanolamide_n-1-dioleoyl-sn-glycero-3-to-triolein",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "oleoyl_ethanolamide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-1-dioleoyl-sn-glycero-3-to-triolein"
+      },
+      "note": "Shares oleoyl ethanolamide with N,1-dioleoyl-sn-glycero-3… to triolein.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:71466"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_oleoyl_ethanolamide_n-1-dioleoyl-sn-glycero-3-to-triolein-56460",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "oleoyl_ethanolamide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-1-dioleoyl-sn-glycero-3-to-triolein-56460"
+      },
+      "note": "Shares oleoyl ethanolamide with N,1-dioleoyl-sn-glycero-3… to triolein.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:71466"
+          }
+        ]
+      }
+    }
+  ]
+}

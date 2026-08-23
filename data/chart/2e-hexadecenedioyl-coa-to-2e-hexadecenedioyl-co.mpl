@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2e-hexadecenedioyl-coa-to-2e-hexadecenedioyl-co "(2E)-hexadecenedioyl-CoA to (2E)-hexadecenedioyl-CoA" {
-  spacing 218
+  spacing 164
 
   spine at 0,0 {
     2e_hexadecenedioyl_coa
@@ -28,61 +28,7 @@ pathway 2e-hexadecenedioyl-coa-to-2e-hexadecenedioyl-co "(2E)-hexadecenedioyl-Co
 
   branch from hexadecanedioyl_coa side right {
     hexadecanedioyl_coa
-    <-> . +carnitine +coa
-    o_hexadecanedioyl_l_carnitine
-  }
-
-  branch from hexadecanedioyl_coa side left {
-    hexadecanedioyl_coa
     <-> . +h2o +coa +hplus
     hexadecanedioate
-  }
-
-  branch from coa side right {
-    coa
-    <-> ec_3_1_2_17 [3.1.2.17] +methylmalonyl_coa +h2o +h
-    methylmalonate
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +4_coumaroyl_diketide +h +h2o
-    p_coumaroyl_diketide_coa
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +3r_3_n5_dihydroxy_l_glutamine +nadp +h2o +h +nadph
-    3r_3_hydroxy_l_glutamine
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +4s_8r_2_19_dihydroxy_7_9_dioxapentacyclo_10_8_0 +h +nadph +nadp +h2o
-    4s_8r_2_20_dihydroxy_7_9_13_trioxapentacyclo_10
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_21 [1.1.1.21] +nadh +alpha_d_galactose +h
-    galactitol
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_48 [1.1.1.48] +nadh +h +d_galactono_1_4_lactone
-    alpha_d_galactose
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +tuberactinomycin_o +phosphate +tuberactinomycin_o
-    atp
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    tylosin
   }
 }

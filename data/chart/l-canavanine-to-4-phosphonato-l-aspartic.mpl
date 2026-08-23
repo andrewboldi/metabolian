@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-canavanine-to-4-phosphonato-l-aspartic "L-canavanine to 4-phosphonato-L-aspartic…" {
-  spacing 226
+  spacing 208
 
   spine at 0,0 {
     l_canavanine
@@ -14,23 +14,5 @@ pathway l-canavanine-to-4-phosphonato-l-aspartic "L-canavanine to 4-phosphonato-
     l_aspartic_acid_4_semialdehyde
     <-> ec_1_2_1_11 [1.2.1.11] +pi +nadp -nadph -hplus
     4_phosphonato_l_aspartic_acid
-  }
-
-  branch from n_hydroxyguanidinium side left {
-    n_hydroxyguanidinium
-    <-> ec_4_4_1_43 [4.4.1.43] +l_canavanine
-    l_vinylglycine
-  }
-
-  branch from l_aspartic_acid_4_semialdehyde side right {
-    l_aspartic_acid_4_semialdehyde
-    <-> . +nad +h2o +nadh +hplus
-    aspartate
-  }
-
-  branch from l_aspartic_acid_4_semialdehyde side left {
-    l_aspartic_acid_4_semialdehyde
-    <-> ec_1_5_1_55 [1.5.1.55] +n1_s_3_amino_3_carboxypropyl_agmatine +nadp +h2o +nadph +hplus
-    agmatinium
   }
 }

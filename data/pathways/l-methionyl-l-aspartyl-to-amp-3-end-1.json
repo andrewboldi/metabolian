@@ -143,42 +143,79 @@
       }
     },
     {
-      "id": "l_argininiumyl_2_group",
-      "name": "L-argininiumyl(2+) group",
-      "short": "L-argininiumyl(2+)…",
-      "formula": "C6H15N4O",
-      "charge": 2,
+      "id": "3_l_seryl_adenylyl_1_group",
+      "name": "3'-(L-seryl)adenylyl(1−) group",
+      "short": "3'-(L-seryl)adenyly…",
+      "formula": "C13H17N6O8P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:64719"
+        "chebi": "CHEBI:78533"
       }
     },
     {
-      "id": "l_leucyl_l_arginyl_2_group",
-      "name": "L-leucyl-L-arginyl(2+) group",
-      "short": "L-leucyl-L-arginyl(…",
-      "formula": "C12H26N5O2",
-      "charge": 2,
-      "xrefs": {
-        "chebi": "CHEBI:133044"
-      }
-    },
-    {
-      "id": "3_glycyladenylyl_zwitterionic_group",
-      "name": "3'-glycyladenylyl zwitterionic group",
-      "short": "3'-glycyladenylyl…",
-      "formula": "C12H16N6O7P",
+      "id": "serine",
+      "name": "L-Serine",
+      "formula": "C3H7NO3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:78522"
+        "chebi": "CHEBI:33384"
       }
     },
     {
-      "id": "glycine",
-      "name": "Glycine",
-      "formula": "C2H5NO2",
-      "charge": 0,
+      "id": "l_lysyl_5_amp",
+      "name": "L-lysyl-5'-AMP",
+      "formula": "C16H27N7O8P",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:57305"
+        "chebi": "CHEBI:176581"
+      }
+    },
+    {
+      "id": "3_l_lysyl_adenylyl_1_group",
+      "name": "3'-(L-lysyl)adenylyl(1+) group",
+      "short": "3'-(L-lysyl)adenyly…",
+      "formula": "C16H26N7O7P",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:78529"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "3_n_acetyl_l_leucyl_adenylyl",
+      "name": "3'-(N-acetyl-L-leucyl)adenylyl",
+      "short": "3'-(N-acetyl-L-leuc…",
+      "formula": "C18H25N6O8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:232065"
+      }
+    },
+    {
+      "id": "3_n_acetylglycyl_adenylyl",
+      "name": "3'-(N-acetylglycyl)adenylyl",
+      "short": "3'-(N-acetylglycyl)…",
+      "formula": "C14H17N6O8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:232036"
+      }
+    },
+    {
+      "id": "n_acetylglycinate",
+      "name": "N-acetylglycinate",
+      "formula": "C4H6NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:61887"
       }
     }
   ],
@@ -188,27 +225,16 @@
       "name": "N-terminal methionine N(alpha)-acetyltransferase NatB",
       "ec": [
         "2.3.1.254"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P61599"
+      }
     },
     {
       "id": "ec_2_3_2_29",
       "name": "aspartate/glutamate leucyltransferase",
       "ec": [
         "2.3.2.29"
-      ]
-    },
-    {
-      "id": "ec_2_3_2_6",
-      "name": "lysine/arginine leucyltransferase",
-      "ec": [
-        "2.3.2.6"
-      ]
-    },
-    {
-      "id": "ec_3_1_1_96",
-      "name": "D-aminoacyl-tRNA deacylase",
-      "ec": [
-        "3.1.1.96"
       ]
     }
   ],
@@ -391,61 +417,11 @@
     },
     {
       "id": "r5",
-      "name": "lysine/arginine leucyltransferase",
-      "equation": "N-terminal L-arginyl-[protein] + L-leucyl-tRNA(Leu) = N-terminal L-leucyl-L-arginyl-[protein] + tRNA(Leu) + H(+)",
-      "ec": "2.3.2.6",
+      "name": "L-seryl-tRNA(Ser) + H2O = tRNA(Ser) + L-serine",
+      "equation": "L-seryl-tRNA(Ser) + H2O = tRNA(Ser) + L-serine",
       "substrates": [
         {
-          "metabolite": "l_argininiumyl_2_group",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "3_l_leucyl_adenylyl_zwitterionic_group",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "l_leucyl_l_arginyl_2_group",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "amp_3_end_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_3_2_6"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:50416"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:50416"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "D-aminoacyl-tRNA deacylase",
-      "equation": "glycyl-tRNA(Ala) + H2O = tRNA(Ala) + glycine + H(+)",
-      "ec": "3.1.1.96",
-      "substrates": [
-        {
-          "metabolite": "3_glycyladenylyl_zwitterionic_group",
+          "metabolite": "3_l_seryl_adenylyl_1_group",
           "stoichiometry": 1
         },
         {
@@ -459,7 +435,46 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "glycine",
+          "metabolite": "serine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:74551"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:74551"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "L-lysyl-5'-AMP + tRNA(Lys) = L-lysyl-tRNA(Lys) + AMP + H(+)",
+      "equation": "L-lysyl-5'-AMP + tRNA(Lys) = L-lysyl-tRNA(Lys) + AMP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "l_lysyl_5_amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp_3_end_1",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_l_lysyl_adenylyl_1_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
           "stoichiometry": 1
         },
         {
@@ -467,22 +482,369 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_1_1_96"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:53744"
+        "rhea": "RHEA:78619"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:53744"
+            "id": "RHEA:78619"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "L-leucyl-tRNA(Leu) + acetyl-CoA = N-acetyl-L-leucyl-tRNA(Leu) + CoA + H(+)",
+      "equation": "L-leucyl-tRNA(Leu) + acetyl-CoA = N-acetyl-L-leucyl-tRNA(Leu) + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "3_l_leucyl_adenylyl_zwitterionic_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_n_acetyl_l_leucyl_adenylyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:82051"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82051"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "N-acetylglycyl-tRNA(Gly) + H2O = N-acetylglycine + tRNA(Gly) + H(+)",
+      "equation": "N-acetylglycyl-tRNA(Gly) + H2O = N-acetylglycine + tRNA(Gly) + H(+)",
+      "substrates": [
+        {
+          "metabolite": "3_n_acetylglycyl_adenylyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetylglycinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp_3_end_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:81979"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81979"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_l_aspartyl_zwitterionic_group_2e-4z-7e-2-hydroxy-6-ox-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_aspartyl_zwitterionic_group"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2e-4z-7e-2-hydroxy-6-ox-to-h2o"
+      },
+      "note": "Shares L-α-aspartyl zwitterionic group with (2E,4Z,7E)-2-hydroxy-6-ox… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64720"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_aspartyl_zwitterionic_group_n5-l-1-carboxyethyl-l-o-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_aspartyl_zwitterionic_group"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n5-l-1-carboxyethyl-l-o-to-ammonium"
+      },
+      "note": "Shares L-α-aspartyl zwitterionic group with N5-(L-1-carboxyethyl)-L-o… to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64720"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetyl_l_methionine_ethyl-methyl-sulfide-to-n-acetyl-l-methionine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyl_l_methionine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ethyl-methyl-sulfide-to-n-acetyl-l-methionine"
+      },
+      "note": "Shares N-acetyl-L-methionine with ethyl methyl sulfide to N-acetyl-L-methionine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:71670"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetyl_l_methionine_l-methionyl-l-glutamyl-to-amp-3-end-1",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyl_l_methionine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-methionyl-l-glutamyl-to-amp-3-end-1"
+      },
+      "note": "Shares N-acetyl-L-methionine with L-methionyl-L-glutamyl… to AMP 3'-end(1−).",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:71670"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetyl_l_methionine_n-acetyl-d-methionine-to-3-methylthiopropylamini",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyl_l_methionine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyl-d-methionine-to-3-methylthiopropylamini"
+      },
+      "note": "Shares N-acetyl-L-methionine with N-acetyl-D-methionine to 3-methylthiopropylaminium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:71670"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_l_leucyl_adenylyl_zwitterionic_group_amino-acid-ester-to-l-argininium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_l_leucyl_adenylyl_zwitterionic_group"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "amino-acid-ester-to-l-argininium"
+      },
+      "note": "Shares 3'-(L-leucyl)adenylyl zwitterionic group with α-amino acid ester to L-argininium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78494"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_l_leucyl_adenylyl_zwitterionic_group_l-methionyl-l-glutamyl-to-amp-3-end-1",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_l_leucyl_adenylyl_zwitterionic_group"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-methionyl-l-glutamyl-to-amp-3-end-1"
+      },
+      "note": "Shares 3'-(L-leucyl)adenylyl zwitterionic group with L-methionyl-L-glutamyl… to AMP 3'-end(1−).",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78494"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_l_leucyl_adenylyl_zwitterionic_group_n-oleoyl-l-leucinate-to-amp-3-end-1",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_l_leucyl_adenylyl_zwitterionic_group"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-oleoyl-l-leucinate-to-amp-3-end-1"
+      },
+      "note": "Shares 3'-(L-leucyl)adenylyl zwitterionic group with N-oleoyl-L-leucinate to AMP 3'-end(1−).",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78494"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ala_ser_n-formyl-l-methionyl-l-ph-to-n-propanoyl-l-methi",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ala_ser"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-formyl-l-methionyl-l-ph-to-n-propanoyl-l-methi"
+      },
+      "note": "Shares Ala-Ser with N-formyl-L-methionyl-L-ph… to N-propanoyl-L-methioninate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:233101"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_l_seryl_adenylyl_1_group_amino-acid-ester-to-l-argininium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_l_seryl_adenylyl_1_group"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "amino-acid-ester-to-l-argininium"
+      },
+      "note": "Shares 3'-(L-seryl)adenylyl(1−) group with α-amino acid ester to L-argininium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78533"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_l_seryl_adenylyl_1_group_amp-3-end-1-to-3-l-selenocysteinyl-ade",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_l_seryl_adenylyl_1_group"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "amp-3-end-1-to-3-l-selenocysteinyl-ade"
+      },
+      "note": "Shares 3'-(L-seryl)adenylyl(1−) group with AMP 3'-end(1−) to 3'-(L-selenocysteinyl)ade….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78533"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_l_seryl_adenylyl_1_group_ditrans-polycis-undecapre-to-amp-3-end-1",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_l_seryl_adenylyl_1_group"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ditrans-polycis-undecapre-to-amp-3-end-1"
+      },
+      "note": "Shares 3'-(L-seryl)adenylyl(1−) group with ditrans,polycis-undecapre… to AMP 3'-end(1−).",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78533"
           }
         ]
       }

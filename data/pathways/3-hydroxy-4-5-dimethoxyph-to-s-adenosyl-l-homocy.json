@@ -84,61 +84,9 @@
       "xrefs": {
         "chebi": "CHEBI:231782"
       }
-    },
-    {
-      "id": "ecgonone",
-      "name": "(+)-ecgonone",
-      "formula": "C9H13NO3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:234007"
-      }
-    },
-    {
-      "id": "ecgononium_methyl_ester",
-      "name": "ecgononium methyl ester",
-      "short": "ecgononium methyl…",
-      "formula": "C10H16NO3",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:66941"
-      }
-    },
-    {
-      "id": "nicotinate",
-      "name": "nicotinate",
-      "formula": "C6H4NO2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:32544"
-      }
-    },
-    {
-      "id": "methyl_nicotinate",
-      "name": "methyl nicotinate",
-      "formula": "C7H7NO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:134761"
-      }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_2_1_1_403",
-      "name": "methylecgonone synthase",
-      "ec": [
-        "2.1.1.403"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_401",
-      "name": "nicotinate methyltransferase",
-      "ec": [
-        "2.1.1.401"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -268,93 +216,49 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "methylecgonone synthase",
-      "equation": "(+)-ecgonone + S-adenosyl-L-methionine = ecgonone methyl ester + S-adenosyl-L-homocysteine",
-      "ec": "2.1.1.403",
-      "substrates": [
-        {
-          "metabolite": "ecgonone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "ecgononium_methyl_ester",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_1_403"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:85367"
+      "id": "xt_mescalinium_1-6-didemethyltoxoflavin-to-s-adenosyl-l-methion",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "mescalinium"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1-6-didemethyltoxoflavin-to-s-adenosyl-l-methion"
+      },
+      "note": "Shares mescalinium with 1,6-didemethyltoxoflavin to S-adenosyl-L-methionine.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:85367"
+            "db": "ChEBI",
+            "id": "CHEBI:231762"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "nicotinate methyltransferase",
-      "equation": "nicotinate + S-adenosyl-L-methionine = methyl nicotinate + S-adenosyl-L-homocysteine",
-      "ec": "2.1.1.401",
-      "substrates": [
-        {
-          "metabolite": "nicotinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "methyl_nicotinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_1_401"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:85447"
+      "id": "xt_n_methylmescalinium_dihydroprecondylocarpine-to-3-epoxy-16-methoxy-2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_methylmescalinium"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "dihydroprecondylocarpine-to-3-epoxy-16-methoxy-2"
+      },
+      "note": "Shares N-methylmescalinium with dihydroprecondylocarpine… to 3-epoxy-16-methoxy-2,3-di….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:85447"
+            "db": "ChEBI",
+            "id": "CHEBI:231781"
           }
         ]
       }

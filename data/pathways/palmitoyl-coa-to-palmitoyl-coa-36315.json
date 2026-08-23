@@ -1,0 +1,478 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "palmitoyl-coa-to-palmitoyl-coa-36315",
+  "name": "palmitoyl-CoA to palmitoyl-CoA",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from palmitoyl-CoA(4−) to palmitoyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:36315"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57379"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "palmitoyl_coa",
+      "name": "Palmitoyl-CoA",
+      "formula": "C37H62N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57379"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "hexadecan_1_ol",
+      "name": "hexadecan-1-ol",
+      "formula": "C16H34O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16125"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "hexadecanal",
+      "name": "hexadecanal",
+      "formula": "C16H32O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17600"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "trans_9_octadecenoyl_coa",
+      "name": "trans-9-octadecenoyl-CoA",
+      "short": "trans-9-octadecenoy…",
+      "formula": "C39H64N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:77537"
+      }
+    },
+    {
+      "id": "hexadecyl_elaidate",
+      "name": "hexadecyl elaidate",
+      "formula": "C34H66O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:84072"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_2_1_84",
+      "name": "alcohol-forming fatty acyl-CoA reductase (NADPH)",
+      "ec": [
+        "1.2.1.84"
+      ],
+      "xrefs": {
+        "uniprot": "Q8WVX9"
+      }
+    },
+    {
+      "id": "ec_1_1_1_164",
+      "name": "hexadecanol dehydrogenase",
+      "ec": [
+        "1.1.1.164"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_42",
+      "name": "hexadecanal dehydrogenase (acylating)",
+      "ec": [
+        "1.2.1.42"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "alcohol-forming fatty acyl-CoA reductase (NADPH)",
+      "equation": "hexadecanoyl-CoA + 2 NADPH + 2 H(+) = hexadecan-1-ol + 2 NADP(+) + CoA",
+      "ec": "1.2.1.84",
+      "substrates": [
+        {
+          "metabolite": "palmitoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hexadecan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_84"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:36315"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36315"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "hexadecanol dehydrogenase",
+      "equation": "hexadecan-1-ol + NAD(+) = hexadecanal + NADH + H(+)",
+      "ec": "1.1.1.164",
+      "substrates": [
+        {
+          "metabolite": "hexadecan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hexadecanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_164"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:22056"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22056"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "hexadecanal dehydrogenase (acylating)",
+      "equation": "hexadecanal + NAD(+) + CoA = hexadecanoyl-CoA + NADH + H(+)",
+      "ec": "1.2.1.42",
+      "substrates": [
+        {
+          "metabolite": "hexadecanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "palmitoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_42"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:19705"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19705"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(9E)-octadecenoyl-CoA + hexadecan-1-ol = hexadecyl (9E)-octadecenoate + CoA",
+      "equation": "(9E)-octadecenoyl-CoA + hexadecan-1-ol = hexadecyl (9E)-octadecenoate + CoA",
+      "substrates": [
+        {
+          "metabolite": "trans_9_octadecenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hexadecan_1_ol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hexadecyl_elaidate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:44128"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44128"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_hexadecanal_hexadecanoate-ester-to-trans-hexadec-2-enal",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hexadecanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hexadecanoate-ester-to-trans-hexadec-2-enal"
+      },
+      "note": "Shares hexadecanal with hexadecanoate ester to trans-hexadec-2-enal.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17600"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hexadecanal_hexadecanoate-ester-to-trans-hexadec-2-enal-4739",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hexadecanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hexadecanoate-ester-to-trans-hexadec-2-enal-4739"
+      },
+      "note": "Shares hexadecanal with hexadecanoate ester to trans-hexadec-2-enal.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17600"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hexadecanal_palmitoyl-coa-to-palmitoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hexadecanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "palmitoyl-coa-to-palmitoyl-coa"
+      },
+      "note": "Shares hexadecanal with palmitoyl-CoA to palmitoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17600"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hexadecanal_sphinganine-to-palmitoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hexadecanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sphinganine-to-palmitoyl-coa"
+      },
+      "note": "Shares hexadecanal with sphinganine to palmitoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17600"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hexadecanal_sphinganine-to-palmitoyl-coa-15465",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hexadecanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sphinganine-to-palmitoyl-coa-15465"
+      },
+      "note": "Shares hexadecanal with sphinganine to palmitoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17600"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hexadecyl_elaidate_palmitoyl-coa-to-palmitoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hexadecyl_elaidate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "palmitoyl-coa-to-palmitoyl-coa"
+      },
+      "note": "Shares hexadecyl elaidate with palmitoyl-CoA to palmitoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84072"
+          }
+        ]
+      }
+    }
+  ]
+}

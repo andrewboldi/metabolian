@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 7-ammoniomethyl-7-deazagu-to-d-mannosyl-4-o-queu "7-ammoniomethyl-7-deazagu… to α-D-mannosyl-4''-O-queuos…" {
-  spacing 310
+  spacing 340
 
   spine at 0,0 {
     7_ammoniomethyl_7_deazaguanine
@@ -18,33 +18,75 @@ pathway 7-ammoniomethyl-7-deazagu-to-d-mannosyl-4-o-queu "7-ammoniomethyl-7-deaz
     d_mannosyl_4_o_queuosine_5_phosphate_1
   }
 
-  branch from adenine side left {
-    adenine
-    <-> . +hydrogen_donor +hydrogen_acceptor +h2o
-    n6_hydroxyadenine
-  }
-
-  branch from methionine side right {
-    methionine
-    <-> ec_2_1_1_379 [2.1.1.379] +l_argininium +hydrogen_donor +sam +5_deoxyadenosine +hydrogen_acceptor +sah +hplus
-    5s_c_methyl_l_argininium
-  }
-
-  branch from methionine side left {
-    methionine
-    <-> . +gtp +hydrogen_donor +sam +5_deoxyadenosine +hydrogen_acceptor +h2o +hplus
-    3_deoxy_3_4_didehydro_gtp
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> . +2s_9s_annullatin_h +hydrogen_donor
+    2s_9s_annullatin_d
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> ec_1_14_19_14 [1.14.19.14] +linoleoyl_containing_glycerolipid +hydrogen_donor +o2 +h2o
-    8e_10e_12z_octadecatrienoyl_containing_glycerol
+    <-> . +trans_sinapyl_alcohol +hydrogen_donor
+    e_sinapaldehyde
+  }
+
+  branch from guanosine_5_monophosphate_1 side left {
+    guanosine_5_monophosphate_1
+    <-> ec_2_1_1_256 [2.1.1.256] +sam +sah +hplus
+    n2_methylguanosine_5_monophosphate_1
+  }
+
+  branch from guanosine_5_monophosphate_1 side right {
+    guanosine_5_monophosphate_1
+    <-> . +sam +sah
+    n7_methylguanosine_5_phosphate_zwitterion
+  }
+
+  branch from sam side left {
+    sam
+    <-> . +ribonucleotide +sah +hplus
+    2_o_methylribonucleotide_1
+  }
+
+  branch from sam side right {
+    sam
+    <-> . +adenosine_5_monophosphate_1 +sah +hplus
+    n1_methyladenosine_5_monophosphate_1
+  }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> . +coniferin +hydrogen_acceptor
+    coniferaldehyde_d_glucoside
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> . +urobilinogen +hydrogen_acceptor
+    bilirubin
   }
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> ec_1_14_19_15 [1.14.19.15] +11z_hexadec_11_enoyl_coa +hydrogen_donor +o2 +h2o
-    10e_12z_hexadecadienoyl_coa
+    <-> . +urobilinogen +hydrogen_donor
+    4z_15z_mesobilirubin_ix
+  }
+
+  branch from hydrogen_acceptor side right {
+    hydrogen_acceptor
+    <-> . +2_4_6_trinitrotoluene +gsh +hydrogen_donor +h2o
+    s_2_6_dinitro_4_hydroxylaminotoluyl_glutathione
+  }
+
+  branch from gdp_d_mannose side left {
+    gdp_d_mannose
+    <-> . +h2o +gmp +hplus
+    d_mannose_1_phosphate
+  }
+
+  branch from gdp_d_mannose side right {
+    gdp_d_mannose
+    <-> . +h2o +gdp +hplus
+    d_mannopyranose
   }
 }

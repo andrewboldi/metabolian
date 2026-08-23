@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway pelargonidin-to-coa-null "pelargonidin… to CoA" {
-  spacing 182
+  spacing 152
 
   spine at 0,0 {
     pelargonidin_3_o_2_o_xylosyl_6_o_caffeoyl_glucos
@@ -14,35 +14,5 @@ pathway pelargonidin-to-coa-null "pelargonidin… to CoA" {
     udp_alpha_d_xylose
     <-> . +pelargonidin_3_glucoside +trans_caffeoyl_coa -coa
     pelargonidin_3_o_6_caffeoyl_beta_d_glucoside
-  }
-
-  branch from pelargonidin_3_o_beta_d_sambubioside side left {
-    pelargonidin_3_o_beta_d_sambubioside
-    <-> . +trans_4_coumaroyl_coa +coa
-    pelargonidin_3_o_2_o_xylosyl_6_o_p_coumaroyl_glu
-  }
-
-  branch from trans_caffeoyl_coa side right {
-    trans_caffeoyl_coa
-    <-> . +trans_4_coumaroyl_coa +h +o2 +nadph +h2o
-    nadp
-  }
-
-  branch from trans_caffeoyl_coa side left {
-    trans_caffeoyl_coa
-    <-> . +malonyl_coa +h +coa +hispidin
-    co2
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +2_methylpropanoyl_coa +2_4_di_2_methyl_butanoyl_3_6_methyl_heptanoyl_su
-    2_4_di_2_methyl_butanoyl_3_6_methyl_heptanoyl_6
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +2s_2_methylbutanoyl_coa +2_4_di_2_methyl_butanoyl_3_6_methyl_heptanoyl_su
-    2_4_di_2_methyl_butanoyl_3_6_methyl_heptanoyl_6
   }
 }

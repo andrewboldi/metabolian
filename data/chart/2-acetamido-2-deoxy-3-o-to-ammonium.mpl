@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-acetamido-2-deoxy-3-o-to-ammonium "2-acetamido-2-deoxy-3-O-(… to ammonium" {
-  spacing 276
+  spacing 312
 
   spine at 0,0 {
     2_acetamido_2_deoxy_3_o_4_deoxy_l_threo_hex_4_en
@@ -20,37 +20,73 @@ pathway 2-acetamido-2-deoxy-3-o-to-ammonium "2-acetamido-2-deoxy-3-O-(… to amm
 
   branch from sulfate side left {
     sulfate
-    <-> ec_3_1_6_3 [3.1.6.3] +d_glucopyranose_6_sulfate +h2o +hplus
-    glucose
-  }
-
-  branch from sulfate side right {
-    sulfate
     <-> ec_3_1_6_8 [3.1.6.8] +d_galactosylceramide_sulfate +h2o +hplus
     n_acyl_d_galactosylsphingosine
   }
 
+  branch from sulfate side right {
+    sulfate
+    <-> ec_1_14_11_77 [1.14.11.77] +2_ethylhexyl_sulfate +akg +o2 +succinate +co2 +hplus
+    2_ethylhexanal
+  }
+
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_123 [2.5.1.123] +flaviolin_2_olate +gpp
-    3_linalylflaviolin_2_olate
+    <-> ec_2_7_7_47 [2.7.7.47] +streptomycin +atp
+    3_adenylylstreptomycin
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_29 [2.5.1.29] +ipp +fpp
-    2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    <-> ec_6_1_1_19 [6.1.1.19] +amp_3_end_1 +arginine +atp +amp
+    3_l_arginyl_adenylyl_1_group
   }
 
   branch from nh3 side left {
     nh3
-    <-> ec_3_5_1_4 [3.5.1.4] +n_acylammonia +h2o
-    monocarboxylic_acid_anion
+    <-> ec_3_5_4_20 [3.5.4.20] +pyrithiamine +h2o +hplus
+    1_4_hydroxy_2_methylpyrimid_5_ylmethyl_3_2_hydro
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_1_4_1_18 [1.4.1.18] +l_lysinium +nad +nadh +hplus
-    s_1_piperideine_6_carboxylate
+    <-> ec_3_5_1_67 [3.5.1.67] +4_methylene_l_glutamine +h2o
+    4_methylene_l_glutamate
+  }
+
+  branch from sulfate side left {
+    sulfate
+    <-> ec_3_1_6_20 [3.1.6.20] +s_2_sulfodisulfanyl_l_cysteine_1 +h2o +hplus
+    3_trisulfanyl_l_alanine
+  }
+
+  branch from sulfate side right {
+    sulfate
+    <-> ec_1_14_11_77 [1.14.11.77] +primary_linear_alkyl_sulfate_ester +akg +o2 +succinate +co2 +hplus
+    aldehyde
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_10 [4.2.3.10] +gpp +h2o
+    endo_fenchol
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_6_1_1_6 [6.1.1.6] +amp_3_end_1 +l_lysinium +atp +amp
+    3_l_lysyl_adenylyl_1_group
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_3_5_4_6 [3.5.4.6] +amp +h2o +hplus
+    imp
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_1_4_1_2 [1.4.1.2] +glutamate +nad +h2o +nadh +hplus
+    akg
   }
 }

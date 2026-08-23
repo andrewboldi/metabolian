@@ -1,0 +1,482 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "diphosphate-to-l-methionine-null",
+  "name": "diphosphate to L-methionine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from diphosphate to L-methionine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR200393"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "diphosphate",
+      "name": "diphosphate",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM11"
+      }
+    },
+    {
+      "id": "l_homoseryl_adenylate",
+      "name": "(L-homoseryl)adenylate",
+      "short": "(L-homoseryl)adenyl…",
+      "formula": "C14H21N6O9P",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1560073"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "l_homoserine",
+      "name": "L-homoserine",
+      "formula": "C4H9NO3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM353"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "dimethyl_sulfide",
+      "name": "dimethyl sulfide",
+      "formula": "C2H6S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM444"
+      }
+    },
+    {
+      "id": "s_methyl_l_methionine",
+      "name": "S-methyl-L-methionine",
+      "short": "S-methyl-L-methioni…",
+      "formula": "C6H14NO2S",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM681265"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "s_adenosyl_l_homocysteine",
+      "name": "S-adenosyl-L-homocysteine",
+      "short": "S-adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1102167"
+      }
+    },
+    {
+      "id": "s_s_adenosyl_l_methionine",
+      "name": "(S)-S-adenosyl-L-methionine",
+      "short": "S-adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:142094"
+      }
+    },
+    {
+      "id": "l_methionine",
+      "name": "L-methionine",
+      "formula": "C5H11NO2S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM738804"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_12",
+      "name": "methionine S-methyltransferase",
+      "ec": [
+        "2.1.1.12"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR200393",
+      "substrates": [
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_homoseryl_adenylate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_homoserine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR200393"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR200393"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR198472",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_homoserine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dimethyl_sulfide",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_methyl_l_methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR198472"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198472"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "methionine S-methyltransferase",
+      "ec": "2.1.1.12",
+      "substrates": [
+        {
+          "metabolite": "s_adenosyl_l_homocysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "s_methyl_l_methionine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_s_adenosyl_l_methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_methionine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_12"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR195621"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR195621"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_l_homoseryl_adenylate_5-methyl-1h-benzimidazole-to-atp-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_homoseryl_adenylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-methyl-1h-benzimidazole-to-atp-null"
+      },
+      "note": "Shares (L-homoseryl)adenylate with 5-methyl-1H-benzimidazole to ATP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1560073"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_homoseryl_adenylate_diphosphate-to-l-methionine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_homoseryl_adenylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-l-methionine"
+      },
+      "note": "Shares (L-homoseryl)adenylate with diphosphate to L-methionine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1560073"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_homoseryl_adenylate_microperfuranone-to-2-phenylethanol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_homoseryl_adenylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "microperfuranone-to-2-phenylethanol"
+      },
+      "note": "Shares (L-homoseryl)adenylate with (−)-microperfuranone to 2-phenylethanol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1560073"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_methyl_l_methionine_2-hydroxypropyl-com-to-formaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_methyl_l_methionine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-hydroxypropyl-com-to-formaldehyde"
+      },
+      "note": "Shares S-methyl-L-methionine with 2-hydroxypropyl-CoM to formaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM681265"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_methyl_l_methionine_dimethylsulfoniopropanoyl-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_methyl_l_methionine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dimethylsulfoniopropanoyl-to-h2o-null"
+      },
+      "note": "Shares S-methyl-L-methionine with dimethylsulfoniopropanoyl… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM681265"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_methyl_l_methionine_diphosphate-to-l-methionine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_methyl_l_methionine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-l-methionine"
+      },
+      "note": "Shares S-methyl-L-methionine with diphosphate to L-methionine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM681265"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_methyl_l_methionine_manganese-to-h2o-52240",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_methyl_l_methionine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "manganese-to-h2o-52240"
+      },
+      "note": "Shares S-methyl-L-methionine with manganese to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM681265"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_methyl_l_methionine_methostenol-to-nad-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_methyl_l_methionine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "methostenol-to-nad-null"
+      },
+      "note": "Shares S-methyl-L-methionine with Methostenol to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM681265"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_methyl_l_methionine_r-2-hydroxy-3-methylbut-to-h2o-84927",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_methyl_l_methionine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-2-hydroxy-3-methylbut-to-h2o-84927"
+      },
+      "note": "Shares S-methyl-L-methionine with (R)-2-hydroxy-3-methylbut… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM681265"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_methyl_l_methionine_tachysterol-3-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_methyl_l_methionine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "tachysterol-3-to-h2o"
+      },
+      "note": "Shares S-methyl-L-methionine with tachysterol 3 to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM681265"
+          }
+        ]
+      }
+    }
+  ]
+}

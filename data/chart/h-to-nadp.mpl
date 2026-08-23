@@ -4,27 +4,81 @@
 # edit the generator, not this file.
 
 pathway h-to-nadp "H to NADP" {
-  spacing 164
+  spacing 218
 
   spine at 0,0 {
     h
-    <-> . +geranylgeranyl_bacteriopheophytin +nadph -dihydrogeranylgeranyl_bacteriopheophytin
-    nadp
-    <-> . +h +dihydrogeranylgeranyl_bacteriopheophytin +nadph -nadp
-    tetrahydrogeranylgeranyl_bacteriopheophytin
-    <-> . +h +nadph -nadp
-    bacteriophaeophytin_a
+    <-> . +nadp +dtdp_beta_l_mycarose -nadph
+    dtdp_4_dehydro_3_methyl_2_6_dideoxy_beta_l_gluco
+    <-> . +s_adenosyl_l_homocysteine +h -dtdp_4_oxo_2_6_dideoxy_l_mannose
+    s_adenosyl_l_methionine
+    <-> . +h +dtdp_4_oxo_2_6_dideoxy_l_mannose +nadph -nadp
+    dtdp_l_olivose
   }
 
-  branch from nadp side left {
-    nadp
-    <-> . +3_decanone +h +o2 +nadph +h2o
-    heptyl_propanoate
+  branch from dtdp_4_dehydro_3_methyl_2_6_dideoxy_beta_l_gluco side left {
+    dtdp_4_dehydro_3_methyl_2_6_dideoxy_beta_l_gluco
+    <-> .
+    dtdp_3_methyl_4_oxo_2_6_dideoxy_d_glucose
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +prostaglandin_pge2_glyceryl_ester +nadp +h
+    15_oxo_prostaglandin_e2_glyceryl_ester
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +4alpha_formyl_5alpha_cholesta_8_en_3beta_ol +nadp +h2o +h +o2
+    4alpha_hydroxymethyl_5alpha_cholesta_8_en_3beta
   }
 
   branch from nadp side right {
     nadp
-    <-> . +3_decanone +h +o2 +nadph +h2o
-    ethyl_octanoate
+    <-> . +4_cholesten_7_12_24_triol_3_one +h +nadph
+    7alpha_24_dihydroxy_5beta_cholestan_3_one
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +7alpha_24_dihydroxycholest_4_en_3_one +h +nadph
+    7alpha_24alpha_dihydroxy_5beta_cholestan_3_one
+  }
+
+  branch from h side right {
+    h
+    <-> . +5_phospho_alpha_d_ribose_1_diphosphate +5_fluorouracil +5_fluorouridine_monophosphate
+    diphosphate
+  }
+
+  branch from h side left {
+    h
+    <-> . +d_glucuronate +des_isopropyl_dihydro_fluvastatin_tetranor +h2o
+    des_isopropyl_dihydro_fluvastatin_tetranor_glucu
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +3alpha_7alpha_dihydroxy_5beta_cholestan_27_al +h +o2 +nadph +h2o
+    tetrahca
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +25r_cholest_5_ene_3_26_diol +h2o +h +o2 +nadph
+    cholesterol
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +25r_5beta_cholestane_3alpha_7alpha_12alpha_26_t +h +o2 +nadp +h2o
+    5beta_cholestane_3alpha_7alpha_12alpha_27_27_pen
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +17a_20a_dihydroxycholesterol +nadp +h2o +h +o2
+    20_hydroxycholesterol
   }
 }

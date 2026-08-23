@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-ethylglycine-to-l-glutamate "N-ethylglycine to L-glutamate" {
-  spacing 200
+  spacing 224
 
   spine at 0,0 {
     n_ethylglycine
@@ -18,25 +18,49 @@ pathway n-ethylglycine-to-l-glutamate "N-ethylglycine to L-glutamate" {
 
   branch from glyoxylate side left {
     glyoxylate
-    <-> ec_2_6_1_4 [2.6.1.4] +akg +glutamate
-    glycine
+    <-> . +pyruvate
+    4_hydroxy_2_oxoglutarate
   }
 
   branch from glyoxylate side right {
     glyoxylate
-    <-> ec_2_2_1_5 [2.2.1.5] +akg +hplus +co2
-    2_hydroxy_3_oxoadipate
+    <-> ec_2_6_1_45 [2.6.1.45] +serine +glycine
+    3_hydroxypyruvate
   }
 
   branch from glutamate side left {
     glutamate
-    <-> ec_1_4_1_14 [1.4.1.14] +nad +akg +nadh +hplus
-    glutamine
+    <-> ec_2_6_1_65 [2.6.1.65] +6_acetamido_3_aminohexanoic_acid +akg
+    6_acetamido_3_oxohexanoate
   }
 
   branch from glutamate side right {
     glutamate
-    <-> ec_2_6_1_22 [2.6.1.22] +s_3_aminoisobutyric_acid +akg
-    2_methyl_3_oxopropanoate
+    <-> ec_2_6_1_3 [2.6.1.3] +cysteine +akg
+    mercaptopyruvate
+  }
+
+  branch from glyoxylate side left {
+    glyoxylate
+    <-> . +l_kynurenine +glycine
+    4_2_aminophenyl_2_4_dioxobutanoate
+  }
+
+  branch from glyoxylate side right {
+    glyoxylate
+    <-> ec_3_5_1_116 [3.5.1.116] +ureidoglycolate +h2o +hplus +co2
+    nh3
+  }
+
+  branch from glutamate side left {
+    glutamate
+    <-> ec_2_6_1_57 [2.6.1.57] +aromatic_l_amino_acid +akg
+    aromatic_2_oxo_monocarboxylic_acid_anion
+  }
+
+  branch from glutamate side right {
+    glutamate
+    <-> ec_4_1_1_15 [4.1.1.15] +hplus +co2
+    gaba
   }
 }

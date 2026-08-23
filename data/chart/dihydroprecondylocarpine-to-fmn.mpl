@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dihydroprecondylocarpine-to-fmn "dihydroprecondylocarpine… to FMN" {
-  spacing 174
+  spacing 162
 
   spine at 0,0 {
     dihydroprecondylocarpine_acetate
@@ -22,17 +22,5 @@ pathway dihydroprecondylocarpine-to-fmn "dihydroprecondylocarpine… to FMN" {
     dehydrosecodine
     <-> ec_5_5_1_37 [5.5.1.37]
     catharanthine
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +testosterone +fmnh2 +o2 +h2o +hplus
-    2_hydroxytestosterone
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    16_r_hete
   }
 }

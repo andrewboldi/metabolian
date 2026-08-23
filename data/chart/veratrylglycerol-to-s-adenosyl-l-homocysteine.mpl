@@ -22,14 +22,14 @@ pathway veratrylglycerol-to-s-adenosyl-l-homocysteine "veratrylglycerol… to S-
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_172 [2.1.1.172] +guanosine_5_monophosphate_1 +sam +hplus
-    n2_methylguanosine_5_monophosphate_1
+    <-> . +scopoletin +sam +hplus
+    scoparone
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_173 [2.1.1.173] +sam +n2_methylguanosine_5_monophosphate_1 +hplus
-    guanosine_5_monophosphate_1
+    <-> . +uridine_5_monophosphate_1 +sam +hplus
+    5_methyluridine_5_monophosphate_1
   }
 
   branch from resorcinol side left {
@@ -42,5 +42,29 @@ pathway veratrylglycerol-to-s-adenosyl-l-homocysteine "veratrylglycerol… to S-
     resorcinol
     <-> . +hplus +co2
     2_4_dihydroxybenzoate
+  }
+
+  branch from sam side left {
+    sam
+    <-> . +5_methyluridine_5_monophosphate_1 +sah +hplus
+    uridine_5_monophosphate_1
+  }
+
+  branch from sam side right {
+    sam
+    <-> . +n6_l_threonylcarbamoyladenine_5_monophosphate_2 +sah +hplus
+    n6_methyl_n6_l_threonylcarbamoyladenosine_5_phos
+  }
+
+  branch from sah side left {
+    sah
+    <-> . +1_2_dioleoyl_sn_glycero_3_phosphoethanolamine +sam +hplus
+    1_2_dioleoyl_sn_glycero_3_phospho_n_methylethano
+  }
+
+  branch from sah side right {
+    sah
+    <-> . +norepinephrine +sam +hplus
+    normetanephrine
   }
 }

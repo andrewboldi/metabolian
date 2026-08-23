@@ -28,7 +28,7 @@ pathway naphthalene-to-catechol "naphthalene to catechol" {
 
   branch from naphthalene_1_2_diol side left {
     naphthalene_1_2_diol
-    <-> ec_1_14_13_135 [1.14.13.135] +nadh +o2 +hplus +co2 +nad +h2o
+    <-> ec_1_14_13_135 [1.14.13.135] +nadph +o2 +hplus +co2 +nadp +h2o
     1_hydroxy_2_naphthoate
   }
 
@@ -38,15 +38,15 @@ pathway naphthalene-to-catechol "naphthalene to catechol" {
     1r_2r_1_2_dihydronaphthalene_1_2_diol
   }
 
-  branch from salicylaldehyde side left {
-    salicylaldehyde
-    <-> . +salicylate +atp +nadph +hplus +amp +nadp
-    ppi
-  }
-
-  branch from phenol side right {
+  branch from phenol side left {
     phenol
     <-> ec_2_7_1_238 [2.7.1.238] +atp +h2o +amp +pi +hplus
     phenyl_phosphate
+  }
+
+  branch from naphthalene_1_2_diol side right {
+    naphthalene_1_2_diol
+    <-> . +nadp +nadph +hplus
+    1s_2s_1_2_dihydronaphthalene_1_2_diol
   }
 }

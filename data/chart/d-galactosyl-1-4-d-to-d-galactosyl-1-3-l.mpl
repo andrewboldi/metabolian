@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-galactosyl-1-4-d-to-d-galactosyl-1-3-l "β-D-galactosyl-(1→4)-β-D-… to α-D-galactosyl-(1→3)-[α-L…" {
-  spacing 282
+  spacing 294
 
   spine at 0,0 {
     d_galactosyl_1_4_d_glucosyl_1_1_n_acylsphingosi
@@ -20,33 +20,45 @@ pathway d-galactosyl-1-4-d-to-d-galactosyl-1-3-l "β-D-galactosyl-(1→4)-β-D-�
     d_galactosyl_1_3_l_fucosyl_1_2_d_galactosyl_1_3
   }
 
-  branch from n_acetylneuraminosyl_2_3_d_galactosyl_1_4_d_glu side left {
-    n_acetylneuraminosyl_2_3_d_galactosyl_1_4_d_glu
-    <-> . +h2o +n_acylsphingosine
-    n_acetylneuraminosyl_2_3_d_galactosyl_1_4_d_glu
+  branch from d_galactosyl_1_4_d_glucosyl_1_1_n_acylsphingosi side left {
+    d_galactosyl_1_4_d_glucosyl_1_1_n_acylsphingosi
+    <-> . +n_acetyl_d_galactosaminyl_1_4_d_galactosyl_1_4_d +h2o
+    n_acetyl_d_galactosamine
   }
 
-  branch from cytidine_5_monophosphate side right {
-    cytidine_5_monophosphate
-    <-> . +n4_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_4 +cmp_n_acetyl_neuraminate +hplus
-    n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d
+  branch from udp_n_acetyl_d_galactosamine side right {
+    udp_n_acetyl_d_galactosamine
+    <-> . +neu5ac_2_3_d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_g +udp +hplus
+    n_acetyl_neuraminosyl_2_3_n_acetyl_d_galactosami
   }
 
-  branch from cytidine_5_monophosphate side left {
-    cytidine_5_monophosphate
-    <-> . +n4_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_4 +cmp_n_acetyl_neuraminate +hplus
-    n4_neu5ac_2_3_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d
+  branch from udp_n_acetyl_d_galactosamine side left {
+    udp_n_acetyl_d_galactosamine
+    <-> . +l_fuc_1_2_d_gal_1_4_d_glc +udp +hplus
+    d_galnac_1_3_l_fuc_1_2_d_gal_1_4_d_glc
   }
 
-  branch from n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace side right {
-    n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace
-    <-> . +h2o +n_acylsphingosine
-    d_galp_1_3_d_galpnac_1_4_neup5ac_2_3_d_galp_1_4
+  branch from udp_d_galactose side right {
+    udp_d_galactose
+    <-> . +d_galactosyl_1_3_d_galactosyl_1_3_n_acetyl_d_ga +udp +hplus
+    d_galactosyl_1_3_d_galactosyl_1_3_d_galactosyl
   }
 
-  branch from l_fuc_1_2_d_gal_1_3_d_galnac_1_4_neu5ac_2_3_d_g side left {
-    l_fuc_1_2_d_gal_1_3_d_galnac_1_4_neu5ac_2_3_d_g
-    <-> . +h2o +n_acylsphingosine
-    l_fucp_1_2_d_galp_1_3_d_galpnac_1_4_neup5ac_2_3
+  branch from udp_d_galactose side left {
+    udp_d_galactose
+    <-> . +d_galactosyl_1_3_d_galactosyl_1_3_n_acetyl_d_ga +udp +hplus
+    d_galactosyl_1_3_d_galactosyl_1_3_d_galactosyl
+  }
+
+  branch from gdp_l_fucose side right {
+    gdp_l_fucose
+    <-> . +d_gal_1_3_d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_gl +gdp +hplus
+    d_gal_1_3_d_gal_1_4_l_fuc_1_3_d_glcnac_1_3_d_ga
+  }
+
+  branch from gdp_l_fucose side left {
+    gdp_l_fucose
+    <-> . +neu5gc_2_3_d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_g +gdp +hplus
+    neu5gc_2_3_d_gal_1_4_d_glcnac_1_3_d_gal_1_4_l_f
   }
 }

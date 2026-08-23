@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway alpha-d-lyxopyranose-to-d-xylono-1-5-lactone "alpha-D-lyxopyranose to D-xylono-1,5-lactone" {
-  spacing 172
+  spacing 166
 
   spine at 0,0 {
     alpha_d_lyxopyranose
@@ -20,11 +20,5 @@ pathway alpha-d-lyxopyranose-to-d-xylono-1-5-lactone "alpha-D-lyxopyranose to D-
     d_xylopyranose
     <-> ec_1_1_1_307 [1.1.1.307] +nadp +nadph +hplus
     xylitol
-  }
-
-  branch from d_xylopyranose side right {
-    d_xylopyranose
-    <-> .
-    d_xylofuranose
   }
 }

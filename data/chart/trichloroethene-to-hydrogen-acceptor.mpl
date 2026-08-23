@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway trichloroethene-to-hydrogen-acceptor "trichloroethene to hydrogen acceptor" {
-  spacing 170
+  spacing 152
 
   spine at 0,0 {
     trichloroethene
@@ -14,23 +14,5 @@ pathway trichloroethene-to-hydrogen-acceptor "trichloroethene to hydrogen accept
     chloroethene
     <-> . +hydrogen_donor -chloride -hydrogen_acceptor -hplus
     ethene
-  }
-
-  branch from hydrogen_acceptor side left {
-    hydrogen_acceptor
-    <-> . +malonyl-coa +acetyl_coa +hydrogen_donor +sam +hplus +sah +co2 +coa +h2o
-    clavatol
-  }
-
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> . +malonyl-coa +acetyl_coa +hydrogen_donor +nadph +hplus +co2 +nadp +coa +h2o
-    cordypyrone_a
-  }
-
-  branch from ethene side left {
-    ethene
-    <-> ec_1_13_12_19 [1.13.12.19] +o2 +hplus +co2 +h2o
-    akg
   }
 }

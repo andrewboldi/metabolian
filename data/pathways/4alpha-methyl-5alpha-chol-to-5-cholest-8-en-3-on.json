@@ -136,13 +136,12 @@
       }
     },
     {
-      "id": "4alpha_methyl_cholesta_8_14_dienol",
-      "name": "4alpha-methyl-cholesta-8,14-dienol",
-      "short": "4alpha-methyl-chole…",
-      "formula": "C28H46O",
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM37782"
+        "metanetx": "MNXM735438"
       }
     },
     {
@@ -161,15 +160,6 @@
       "charge": -3,
       "xrefs": {
         "metanetx": "MNXM5"
-      }
-    },
-    {
-      "id": "o2",
-      "name": "O2",
-      "formula": "O2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM735438"
       }
     },
     {
@@ -206,14 +196,10 @@
       "name": "cholestenol Delta-isomerase",
       "ec": [
         "5.3.3.5"
-      ]
-    },
-    {
-      "id": "ec_1_3_1_70",
-      "name": "Delta(14)-sterol reductase",
-      "ec": [
-        "1.3.1.70"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q15125"
+      }
     },
     {
       "id": "ec_1_14_13_72",
@@ -356,54 +342,6 @@
     },
     {
       "id": "r4",
-      "name": "Delta(14)-sterol reductase",
-      "ec": "1.3.1.70",
-      "substrates": [
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "4alpha_methyl_cholesta_8_14_dienol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "4_methyl_5_cholest_8_en_3_ol",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_3_1_70"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR164813"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR164813"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
       "name": "Reaction MNXR182457",
       "ec": "1.14.13.72",
       "substrates": [
@@ -444,7 +382,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
         "metanetx": "MNXR182457"
       },
@@ -459,7 +397,7 @@
       }
     },
     {
-      "id": "r6",
+      "id": "r5",
       "name": "Reaction MNXR182458",
       "ec": "1.14.13.72",
       "substrates": [
@@ -500,7 +438,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
         "metanetx": "MNXR182458"
       },
@@ -510,6 +448,74 @@
           {
             "db": "MetaNetX",
             "id": "MNXR182458"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_4_methyl_5_cholest_8_en_3_ol_14-demethyllanosterol-to-5-cholest-8-en-3-ol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_methyl_5_cholest_8_en_3_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "14-demethyllanosterol-to-5-cholest-8-en-3-ol"
+      },
+      "note": "Shares 4α-methyl-5α-cholest-8-en-3β-ol with 14-demethyllanosterol to 5α-cholest-8-en-3β-ol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87051"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_hydroxy_5_cholest_8_ene_4_carboxylate_14-demethyllanosterol-to-5-cholest-8-en-3-ol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_hydroxy_5_cholest_8_ene_4_carboxylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "14-demethyllanosterol-to-5-cholest-8-en-3-ol"
+      },
+      "note": "Shares 3β-hydroxy-5α-cholest-8-ene-4α-carboxylate with 14-demethyllanosterol to 5α-cholest-8-en-3β-ol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87055"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_cholest_8_en_3_one_14-demethyllanosterol-to-5-cholest-8-en-3-ol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_cholest_8_en_3_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "14-demethyllanosterol-to-5-cholest-8-en-3-ol"
+      },
+      "note": "Shares 5α-cholest-8-en-3-one with 14-demethyllanosterol to 5α-cholest-8-en-3β-ol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87056"
           }
         ]
       }

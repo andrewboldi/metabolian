@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-tetracosanoylsphinganine-to-r-2-hydroxylignoce "N-tetracosanoylsphinganine to (R)-2-hydroxylignocerate" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     n_tetracosanoylsphinganine
@@ -14,17 +14,5 @@ pathway n-tetracosanoylsphinganine-to-r-2-hydroxylignoce "N-tetracosanoylsphinga
     tetracosanoate
     <-> . +fe2 +o2 +hplus -iron -h2o
     r_2_hydroxylignocerate
-  }
-
-  branch from phytosphingosine side left {
-    phytosphingosine
-    <-> . +fe2 +o2 +hplus +iron +h2o
-    sphinganine
-  }
-
-  branch from phytosphingosine side right {
-    phytosphingosine
-    <-> . +stearoyl_coa +coa +hplus
-    n_octadecanoyl_4_hydroxysphinganine
   }
 }

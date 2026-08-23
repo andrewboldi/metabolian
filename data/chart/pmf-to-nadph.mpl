@@ -4,51 +4,17 @@
 # edit the generator, not this file.
 
 pathway pmf-to-nadph "PMF to NADPH" {
-  spacing 244
+  spacing 152
 
   spine at 0,0 {
     pmf
-    <-> . +nitrite +menaquinone_8 +h2o -pmf -nitrate
-    menaquinol_8
-    <-> ec_1_1_2_3 [1.1.2.3] +pyruvate -s_lactate
-    menaquinone_8
-    <-> ec_1_1_1_1 [1.1.1.1] +s_lactate +nadp -pyruvate -nadph
-    h
-  }
-
-  branch from pmf side left {
+    <-> ec_1_18_99_1 [1.18.99.1] +h2 +ubiquinone_8 -pmf
+    ubiquinol_8
+    <-> . +pmf +ferricytochrome_c -ferrocytochrome_c -ubiquinone_8 -h
     pmf
-    <-> . +diphosphate +h +a_tetradecenoyl_coa_n_c14_1coa +amp +atp +coa
-    9e_tetradecenoic_acid
-  }
-
-  branch from pmf side right {
-    pmf
-    <-> . +butanoyl_coa +diphosphate +amp +butanoate +coa
-    atp
-  }
-
-  branch from h side left {
+    <-> . +ferrocytochrome_c +h +pyruvate -ferricytochrome_c
+    s_lactate
+    <-> ec_1_1_1_1 [1.1.1.1] +nadp -pyruvate -nadph
     h
-    <-> . +adp +phosphate +atp +h2o
-    1_eicosatrienoylglycerophosphocholine_delta_11_1
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    1_pentadecanoylglycerophosphocholine_sn1_lpc_15
-  }
-
-  branch from pyruvate side left {
-    pyruvate
-    <-> ec_4_1_3_32 [4.1.3.32] +propanoate
-    2r_3s_2_3_dimethylmalate
-  }
-
-  branch from pyruvate side right {
-    pyruvate
-    <-> ec_4_1_3_3 [4.1.3.3] +aldehydo_n_glycolylneuraminate
-    n_glycolyl_d_mannosamine
   }
 }

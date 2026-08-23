@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway tyraminium-to-2-4-5-trihydroxyphenylace "tyraminium to 2,4,5-trihydroxyphenylace…" {
-  spacing 176
+  spacing 158
 
   spine at 0,0 {
     tyraminium
@@ -18,25 +18,7 @@ pathway tyraminium-to-2-4-5-trihydroxyphenylace "tyraminium to 2,4,5-trihydroxyp
     2_4_5_trihydroxyphenylacetate
   }
 
-  branch from dopamine side left {
-    dopamine
-    <-> . +pyruvate +h2o
-    r_salsolinol_1_carboxylate
-  }
-
-  branch from dopamine side right {
-    dopamine
-    <-> . +fatty_acyl_coa +coa +hplus
-    n_fatty_acyl_dopamine
-  }
-
   branch from dopac side left {
-    dopac
-    <-> ec_4_1_1_83 [4.1.1.83] +hplus +co2
-    4_methylcatechol
-  }
-
-  branch from dopac side right {
     dopac
     <-> . +h2o +coa +hplus
     3_4_dihydroxyphenylacetyl_coa

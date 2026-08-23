@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-hydroxyethylphosphonic-to-1r-2s-epoxypropylpho "2-hydroxyethylphosphonic… to (1R,2S)-epoxypropylphosph…" {
-  spacing 324
+  spacing 276
 
   spine at 0,0 {
     2_hydroxyethylphosphonic_acid
@@ -16,53 +16,5 @@ pathway 2-hydroxyethylphosphonic-to-1r-2s-epoxypropylpho "2-hydroxyethylphosphon
     s_2_hydroxypropylphosphonate
     <-> ec_1_11_1_23 [1.11.1.23] +h2o2 -h2o
     1r_2s_epoxypropylphosphonate
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_159 [4.2.3.159] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    tsukubadiene
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_160 [4.2.3.160] +fpp
-    2s_3r_6s_9s_protoillud_7_ene
-  }
-
-  branch from hydrogen_acceptor side left {
-    hydrogen_acceptor
-    <-> . +chrodrimanin_f +hydrogen_donor
-    chrodrimanin_h
-  }
-
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> ec_1_17_99_10 [1.17.99.10] +cholest_1_4_dien_3_one +h2o +hydrogen_donor
-    25_hydroxycholest_1_4_dien_3_one
-  }
-
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_310 [2.1.1.310] +cytidine_5_monophosphate_1 +sam +hplus
-    5_methylcytidine_5_monophosphate_1
-  }
-
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_311 [2.1.1.311] +sam +5_methylcytidine_5_monophosphate_1 +hplus
-    cytidine_5_monophosphate_1
-  }
-
-  branch from cytidine_5_monophosphate side left {
-    cytidine_5_monophosphate
-    <-> . +d_galactosyl_1_4_d_glucosyl_1_1_ceramide +cmp_n_acetyl_neuraminate +hplus
-    n_acetylneuraminyl_2_3_d_galactosyl_1_4_d_gluco
-  }
-
-  branch from cytidine_5_monophosphate side right {
-    cytidine_5_monophosphate
-    <-> . +d_galactosyl_1_3_n_acetyl_neuraminosyl_2_6_n_ac +cmp_n_acetyl_neuraminate +hplus
-    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace
   }
 }

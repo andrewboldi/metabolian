@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway all-trans-retinyl-to-4-d-glucopyranuronosyl "all-trans-retinyl… to 4-(β-D-glucopyranuronosyl…" {
-  spacing 224
+  spacing 236
 
   spine at 0,0 {
     all_trans_retinyl_palmitate
@@ -18,5 +18,17 @@ pathway all-trans-retinyl-to-4-d-glucopyranuronosyl "all-trans-retinyl… to 4-(
     all_trans_4_hydroxyretinoate
     <-> . +udp_d_glucuronate -udp -hplus
     4_d_glucopyranuronosyloxy_retinoate
+  }
+
+  branch from udp_d_glucuronate side left {
+    udp_d_glucuronate
+    <-> . +prunetin_5_olate +udp
+    prunetin_4_o_d_glucuronide
+  }
+
+  branch from udp_d_glucuronate side right {
+    udp_d_glucuronate
+    <-> . +prunetin_5_olate +udp
+    prunetin_5_o_d_glucuronide
   }
 }

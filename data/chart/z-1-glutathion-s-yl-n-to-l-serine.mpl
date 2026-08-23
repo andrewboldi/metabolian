@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway z-1-glutathion-s-yl-n-to-l-serine "(Z)-1-(glutathion-S-yl)-N… to L-serine" {
-  spacing 288
+  spacing 340
 
   spine at 0,0 {
     z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa
@@ -16,14 +16,159 @@ pathway z-1-glutathion-s-yl-n-to-l-serine "(Z)-1-(glutathion-S-yl)-N… to L-ser
     glycine
   }
 
+  branch from z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth side left {
+    z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth
+    <-> ec_3_4_13_23 [3.4.13.23] +h2o +glycine
+    s_4_methylthiobutylthiohydroximoyl_l_cysteine
+  }
 
+  branch from l_glutamate side right {
+    l_glutamate
+    <-> . +l_leucine +h2o
+    glutamyl_leucine
+  }
 
+  branch from l_glutamate side left {
+    l_glutamate
+    <-> . +l_histidine +l_methionine +h2o
+    glutamyl_methioninyl_histidine
+  }
 
+  branch from 4_methylthiobutylthiohydroximate side right {
+    4_methylthiobutylthiohydroximate
+    <-> ec_2_4_1_195 [2.4.1.195] +udp +3_methylthiopropyl_desulfoglucosinolate +h
+    udp_alpha_d_glucose
+  }
 
+  branch from 4_methylthiobutylthiohydroximate side left {
+    4_methylthiobutylthiohydroximate
+    <-> ec_2_4_1_195 [2.4.1.195] +3_methylthiopropyl_desulfoglucosinolate +h +udp_alpha_d_glucose
+    udp
+  }
 
+  branch from glycine side right {
+    glycine
+    <-> . +l_alanine +l_lysine +h +h2o
+    ala_gly_lys
+  }
 
+  branch from glycine side left {
+    glycine
+    <-> . +l_asparagine +l_tyrosine +h2o
+    asparaginyl_tyrosyl_glycine
+  }
 
+  branch from atp side right {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    11z_eicosenoate
+  }
 
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    15_s_hetre
+  }
 
+  branch from l_serine side right {
+    l_serine
+    <-> . +l_arginine +h2o
+    arginyl_seryl_serine
+  }
 
+  branch from l_serine side left {
+    l_serine
+    <-> . +l_cysteine +l_methionine +h2o
+    cystyl_seryl_methionine
+  }
+
+  branch from z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa side right {
+    z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa
+    <-> . +h2o +glutathione
+    1_methylsulfanyl_4_aci_nitrobutane
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +d_tagatofuranose_6_phosphate +nh4
+    d_galactosamine_6_phosphate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +3_hydroxy_simvastatin_lactone_form
+    3_hydroxy_simvastatin_acid_form
+  }
+
+  branch from l_glutamate side left {
+    l_glutamate
+    <-> . +l_methionine +h2o
+    glutamyl_methionine
+  }
+
+  branch from l_glutamate side right {
+    l_glutamate
+    <-> . +l_lysine +l_threonine +h2o
+    glutamyl_threonyl_lysine
+  }
+
+  branch from h side left {
+    h
+    <-> . +precorrin_2 +co
+    cobalt_dihydrosirohydrochlorin
+  }
+
+  branch from h side right {
+    h
+    <-> ec_4_1_2_14 [4.1.2.14] +glyceraldehyde_3_phosphate +pyruvate
+    2_dehydro_3_deoxy_6_phospho_d_gluconate
+  }
+
+  branch from adp side left {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    11z_14z_eicosadienoate
+  }
+
+  branch from adp side right {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    5_s_glutathionyl_dopamine
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    15_r_hepe
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    15_s_hepe
+  }
+
+  branch from glycine side left {
+    glycine
+    <-> . +l_histidine +l_asparagine +h2o
+    glycyl_histidyl_asparagine
+  }
+
+  branch from glycine side right {
+    glycine
+    <-> . +l_histidine +l_lysine +h2o
+    glycyl_histidyl_lysine
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    5_hydroxy_6e_8z_11z_14z_17z_eicosapentaenoate
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    18r_hydroxy_5z_8z_11z_14z_16e_eicosapentaenoate
+  }
 }

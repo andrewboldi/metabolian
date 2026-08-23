@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-glucopyranose-to-d-glucopyranose "D-glucopyranose to D-glucopyranose" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     glucose
@@ -16,17 +16,5 @@ pathway d-glucopyranose-to-d-glucopyranose "D-glucopyranose to D-glucopyranose" 
     cyanidin_3_7_di_o_d_glucoside_betaine
     <-> . +delphinidin_3_o_rutinoside_7_o_6_o_4_o_glucosyl +1_o_4_hydroxybenzoyl_d_glucopyranose -glucose
     violdelphin
-  }
-
-  branch from glucose side left {
-    glucose
-    <-> ec_2_3_1_72 [2.3.1.72] +myo_inositol +1_o_indol_3_ylacetyl_beta_d_glucose
-    indole_3_acetyl_myo_inositol
-  }
-
-  branch from glucose side right {
-    glucose
-    <-> ec_3_2_1_182 [3.2.1.182] +dimboa +h +h2o
-    dimboa_beta_d_glucoside
   }
 }

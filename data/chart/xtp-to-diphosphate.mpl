@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway xtp-to-diphosphate "XTP to diphosphate" {
-  spacing 238
+  spacing 232
 
   spine at 0,0 {
     xtp
@@ -16,33 +16,27 @@ pathway xtp-to-diphosphate "XTP to diphosphate" {
     glutamate
   }
 
-  branch from xmp side left {
-    xmp
-    <-> . +h2o +pi
-    xanthosine
-  }
-
-  branch from glutamate side right {
-    glutamate
-    <-> ec_2_6_1_102 [2.6.1.102] +gdp_4_amino_4_6_dideoxy_d_mannose +akg
-    gdp_4_dehydro_6_deoxy_d_mannose
-  }
-
-  branch from glutamate side left {
-    glutamate
-    <-> . +d_lysinium +akg
-    6_amino_2_oxohexanoic_acid
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_198 [4.2.3.198] +fpp
+    selinene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_63 [4.2.3.63] +fpp
-    cubenene
+    <-> ec_2_7_4_28 [2.7.4.28] +phosphate_group +pi +hplus
+    hydroxy_group
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_64 [4.2.3.64] +fpp +h2o
-    epicubenol
+    <-> ec_2_5_1_133 [2.5.1.133] +bacteriochlorophyllide_a +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +hplus
+    geranylgeranyl_bacteriochlorophyllide_a
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_6_1_17 [4.6.1.17] +8s_3_8_cyclo_7_8_dihydroguanosine_5_triphosphat
+    precursor_z
   }
 }

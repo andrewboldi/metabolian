@@ -18,15 +18,15 @@ pathway dtdp-d-glucose-to-n-tetracosanoylsphingosine "dTDP-α-D-glucose to N-tet
     n_tetracosanoylsphingosine
   }
 
-  branch from glucose side left {
-    glucose
-    <-> ec_3_2_1_147 [3.2.1.147] +z_3s_2_3_hydroxybutenyl_thiohydroximate_o_sulfa +h +h2o
-    2r_2_hydroxybut_3_enylglucosinolate
+  branch from tetracosanoyl_coa side left {
+    tetracosanoyl_coa
+    <-> . +fad +hplus +fadh2
+    trans_2_tetracosenoyl_coa
   }
 
-  branch from glucose side right {
-    glucose
-    <-> . +e_3s_2_3_hydroxybutenyl_thiohydroximate_o_sulfa +h +2r_2_hydroxybut_3_enylglucosinolate
-    h2o
+  branch from tetracosanoyl_coa side right {
+    tetracosanoyl_coa
+    <-> . +acetyl_coa +coa
+    3_oxohexacosanoyl_coa
   }
 }

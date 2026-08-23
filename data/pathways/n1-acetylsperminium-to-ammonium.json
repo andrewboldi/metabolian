@@ -100,9 +100,56 @@
       "xrefs": {
         "chebi": "CHEBI:28938"
       }
+    },
+    {
+      "id": "spermine",
+      "name": "spermine",
+      "formula": "C10H30N4",
+      "charge": 4,
+      "xrefs": {
+        "chebi": "CHEBI:45725"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_2_3_1_57",
+      "name": "diamine N-acetyltransferase",
+      "ec": [
+        "2.3.1.57"
+      ],
+      "xrefs": {
+        "uniprot": "Q92831"
+      }
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -241,6 +288,321 @@
           {
             "db": "Rhea",
             "id": "RHEA:30895"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "diamine N-acetyltransferase",
+      "equation": "spermine + acetyl-CoA = N(1)-acetylspermine + CoA + H(+)",
+      "ec": "2.3.1.57",
+      "substrates": [
+        {
+          "metabolite": "spermine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n1_acetylsperminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_57"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:33099"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33099"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_n1_acetylsperminium_n1-acetylsperminium-to-l-alanine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n1_acetylsperminium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n1-acetylsperminium-to-l-alanine"
+      },
+      "note": "Shares N1-acetylsperminium with N1-acetylsperminium to L-alanine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58101"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n1_acetylsperminium_n1-acetylsperminium-to-trypanothione-disulfide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n1_acetylsperminium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n1-acetylsperminium-to-trypanothione-disulfide"
+      },
+      "note": "Shares N1-acetylsperminium with N1-acetylsperminium to trypanothione disulfide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58101"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n1_acetylsperminium_n1-n12-diacetylsperminium-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n1_acetylsperminium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n1-n12-diacetylsperminium-to-ammonium"
+      },
+      "note": "Shares N1-acetylsperminium with N1,N12-diacetylsperminium to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58101"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n1_acetylspermidinium_carboxyspermidine-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n1_acetylspermidinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "carboxyspermidine-to-succinate"
+      },
+      "note": "Shares N1-acetylspermidinium with carboxyspermidine to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58324"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n1_acetylspermidinium_n1-acetylspermidinium-to-s-adenosyl-l-homocystei",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n1_acetylspermidinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n1-acetylspermidinium-to-s-adenosyl-l-homocystei"
+      },
+      "note": "Shares N1-acetylspermidinium with N1-acetylspermidinium to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58324"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n1_acetylspermidinium_n1-n12-diacetylsperminium-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n1_acetylspermidinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n1-n12-diacetylsperminium-to-ammonium"
+      },
+      "note": "Shares N1-acetylspermidinium with N1,N12-diacetylsperminium to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58324"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n1_acetylspermidinium_pyridine-3-4-diol-to-cobamamide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n1_acetylspermidinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "pyridine-3-4-diol-to-cobamamide"
+      },
+      "note": "Shares N1-acetylspermidinium with pyridine-3,4-diol to cobamamide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58324"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_ammoniopropanal_n1-acetylspermidinium-to-s-adenosyl-l-homocystei",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_ammoniopropanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n1-acetylspermidinium-to-s-adenosyl-l-homocystei"
+      },
+      "note": "Shares 3-ammoniopropanal with N1-acetylspermidinium to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58374"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_ammoniopropanal_n1-acetylsperminium-to-l-alanine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_ammoniopropanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n1-acetylsperminium-to-l-alanine"
+      },
+      "note": "Shares 3-ammoniopropanal with N1-acetylsperminium to L-alanine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58374"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_ammoniopropanal_n8-acetylspermidinium-to-spermidine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_ammoniopropanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n8-acetylspermidinium-to-spermidine"
+      },
+      "note": "Shares 3-ammoniopropanal with N8-acetylspermidinium to spermidine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58374"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_ammoniopropanal_nadh-to-diphosphate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_ammoniopropanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-diphosphate-null"
+      },
+      "note": "Shares 3-ammoniopropanal with NADH to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58374"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_ammoniopropanal_thermosperminium-to-4-l-glutamylamino-buta",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_ammoniopropanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "thermosperminium-to-4-l-glutamylamino-buta"
+      },
+      "note": "Shares 3-ammoniopropanal with thermosperminium to 4-(L-γ-glutamylamino)buta….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58374"
           }
         ]
       }

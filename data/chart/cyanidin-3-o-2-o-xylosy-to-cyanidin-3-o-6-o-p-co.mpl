@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cyanidin-3-o-2-o-xylosy-to-cyanidin-3-o-6-o-p-co "cyanidin 3-O-[2″-O-xylosy… to Cyanidin 3-O-(6-O-p-couma…" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     cyanidin_3_o_2_o_xylosyl_6_o_caffeoyl_glucoside
@@ -14,29 +14,5 @@ pathway cyanidin-3-o-2-o-xylosy-to-cyanidin-3-o-6-o-p-co "cyanidin 3-O-[2″-O-x
     cyanidin_3_o_2_o_xylosyl_6_o_p_coumaroyl_glucosi
     <-> . +udp +h -cyanidin_3_o_6_o_p_coumaroyl_glucoside
     udp_alpha_d_xylose
-  }
-
-  branch from trans_caffeoyl_coa side left {
-    trans_caffeoyl_coa
-    <-> ec_2_3_1_153 [2.3.1.153] +pelargonin +coa
-    pelargonidin_3_glucoside_5_caffeoylglucoside
-  }
-
-  branch from trans_caffeoyl_coa side right {
-    trans_caffeoyl_coa
-    <-> . +albireodelphin +coa
-    gentiodelphin
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +decanoyl_coa +sucrose
-    beta_d_fructofuranosyl_4_o_decanoyl_alpha_d_gluc
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +dodecanoyl_coa +sucrose
-    beta_d_fructofuranosyl_4_o_dodecanoyl_alpha_d_gl
   }
 }

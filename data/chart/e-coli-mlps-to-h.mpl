@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway e-coli-mlps-to-h "E. coli MLPS to H" {
-  spacing 230
+  spacing 296
 
   spine at 0,0 {
     e_coli_mlps
@@ -22,79 +22,145 @@ pathway e-coli-mlps-to-h "E. coli MLPS to H" {
 
   branch from lipid_a_core_oligosaccharide_e_coli_k_12_core_ty side left {
     lipid_a_core_oligosaccharide_e_coli_k_12_core_ty
-    <-> . +udp +lipid_a_core_oligosaccharide_e_coli_k_12_core_ty +h
-    udp_n_acetyl_alpha_d_glucosamine
-  }
-
-  branch from lipid_a_core_oligosaccharide_e_coli_k_12_core_ty side right {
-    lipid_a_core_oligosaccharide_e_coli_k_12_core_ty
     <-> ec_7_5_2_6 [7.5.2.6] +h +adp +phosphate +h2o
     atp
   }
 
-  branch from phosphoenolpyruvate side left {
-    phosphoenolpyruvate
-    <-> ec_2_5_1_56 [2.5.1.56] +n_butanoylmannosamine +h +h2o +phosphate
-    n_butanoylneuraminate
-  }
-
   branch from phosphoenolpyruvate side right {
     phosphoenolpyruvate
-    <-> ec_2_5_1_56 [2.5.1.56] +n_pentanoylmannosamine +h +h2o +phosphate
-    n_pentanoylneuraminate
+    <-> ec_2_5_1_56 [2.5.1.56] +n_acetylneuraminate +phosphate +h2o
+    n_acetyl_d_mannosamine
   }
 
-  branch from udp_alpha_d_galactose side left {
-    udp_alpha_d_galactose
-    <-> ec_2_4_1_22 [2.4.1.22] +udp +h +beta_lactose
-    beta_d_glucose
+  branch from phosphoenolpyruvate side left {
+    phosphoenolpyruvate
+    <-> . +d_glucosaminyl_1_4_d_glucosamine +h +beta_d_glucosaminyl_1_4_beta_d_glucosamine_6_pho
+    pyruvate
   }
 
   branch from udp_alpha_d_galactose side right {
     udp_alpha_d_galactose
-    <-> ec_2_4_1_22 [2.4.1.22] +udp +h +beta_lactose
-    alpha_d_glucose
+    <-> . +udp +alpha_neu5ac_2_3_alpha_d_gal_1_2_beta_d_glc_1_3 +h
+    alpha_neu5ac_2_3_beta_d_glc_1_3_alpha_d_glcnac_p
   }
 
-  branch from udp_alpha_d_glucuronate side left {
-    udp_alpha_d_glucuronate
-    <-> ec_2_4_1_135 [2.4.1.135] +udp +h +o3_d_glucuronosyl_1_3_d_galactosyl_1_3_d_galacto
-    o3_d_galactosyl_1_3_d_galactosyl_1_4_d_xylosyl_l
+  branch from udp_alpha_d_galactose side left {
+    udp_alpha_d_galactose
+    <-> . +udp +beta_d_gal_1_3_beta_d_galnac_1_4_alpha_d_gal_1_3 +h
+    beta_d_galnac_1_4_alpha_d_gal_1_3_alpha_d_galnac
   }
 
   branch from udp_alpha_d_glucuronate side right {
     udp_alpha_d_glucuronate
-    <-> ec_2_4_1_17 [2.4.1.17] +udp +h +morphine_3_glucuronide
-    morphine
+    <-> . +udp +cyanidin_3_o_6_o_malonyl_2_o_glucuronyl_glucosid +h
+    cyanidin_3_6_malonylglucoside
   }
 
-  branch from 2_o_ac_alpha_d_gal_1_3_alpha_l_fuc_1_4_2_3_o_ac side left {
-    2_o_ac_alpha_d_gal_1_3_alpha_l_fuc_1_4_2_3_o_ac
-    <-> . +acetyl_coa +alpha_d_gal_1_3_alpha_l_fuc_1_4_2_3_o_ac_alpha_l
-    coa
+  branch from udp_alpha_d_glucuronate side left {
+    udp_alpha_d_glucuronate
+    <-> . +udp +amaranthin
+    betanin
   }
 
   branch from udp side right {
     udp
-    <-> . +6_methoxypodophyllotoxin_7_glucoside +h +5_methoxypodophyllotoxin
-    udp_alpha_d_glucose
+    <-> . +udp_n_acetyl_alpha_d_galactosamine +beta_d_man_1_4_beta_d_glc_1_3_alpha_d_galnac_pp +h
+    alpha_d_galnac_1_3_beta_d_man_1_4_beta_d_glc_1_3
   }
 
   branch from udp side left {
     udp
-    <-> . +5_demethoxy_6_methoxypodophyllotoxin_7_glucoside +h +udp_alpha_d_glucose
-    5_demethoxy_6_methoxypodophyllotoxin
+    <-> . +udp_n_acetyl_alpha_d_galactosamine +alpha_l_rha_1_4_alpha_d_glcnac_1_4_beta_d_gal_1 +h
+    beta_d_galnac_1_3_alpha_l_rha_1_4_alpha_d_glcnac
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_21 [1.1.1.21] +nadh +4_bromobenzaldehyde +nad
-    4_bromobenzyl_alcohol
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    neopentalenolactone_e
   }
 
   branch from h side left {
     h
-    <-> ec_1_1_1_21 [1.1.1.21] +nadh +3_methoxybenzaldehyde +nad
-    3_methoxybenzyl_alcohol
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    neopentalenolactone
+  }
+
+  branch from di_trans_octa_cis_undecaprenyl_diphosphate side right {
+    di_trans_octa_cis_undecaprenyl_diphosphate
+    <-> ec_2_4_99_26 [2.4.99.26] +lipopolysaccharide_helicobacter_pylori +h +helicobacter_pylori_o_antigen
+    h_pylori_core_oligosaccharide_lipid_a
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    erythromycin_a
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    erythromycin_b
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +atp +h2o
+    erythromycin_d
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +atp +h2o
+    azithromycin
+  }
+
+  branch from phosphoenolpyruvate side left {
+    phosphoenolpyruvate
+    <-> . +n_acetyl_beta_d_glucosamine_6_phosphate +pyruvate
+    n_acetyl_beta_d_glucosamine
+  }
+
+  branch from phosphoenolpyruvate side right {
+    phosphoenolpyruvate
+    <-> . +n_n_diacetylchitobiose +pyruvate
+    diacetylchitobiose_6_phosphate
+  }
+
+  branch from udp side left {
+    udp
+    <-> . +udp_n_acetyl_alpha_d_galactosamine +alpha_l_rha_1_4_alpha_d_glc_1_4_beta_d_gal_1_3_g +h
+    beta_d_galnac_1_3_alpha_l_rha_1_4_alpha_d_glc_1
+  }
+
+  branch from udp side right {
+    udp
+    <-> . +alpha_d_gal_1_3_alpha_d_galnac_pp_und +beta_d_galnac_1_4_alpha_d_gal_1_3_alpha_d_galnac +h
+    udp_n_acetyl_alpha_d_galactosamine
+  }
+
+  branch from udp_alpha_d_galactose side left {
+    udp_alpha_d_galactose
+    <-> . +udp +alpha_d_gal_1_6_alpha_d_glu_1_4_alpha_l_rha_1_3 +h
+    alpha_d_glu_1_4_alpha_l_rha_1_3_alpha_d_gal_pp_u
+  }
+
+  branch from udp_alpha_d_galactose side right {
+    udp_alpha_d_galactose
+    <-> . +udp +oleanolate_3_beta_d_glucuronoside_3_1_galactosid +h
+    chikusetsusaponin_iva
+  }
+
+  branch from udp_alpha_d_glucuronate side left {
+    udp_alpha_d_glucuronate
+    <-> ec_2_4_1_17 [2.4.1.17] +udp +h +glucosyl_heptosyl_3_glucosyluronate_kdo2_lipid_a
+    glucosyl_heptosyl_3_kdo2_lipid_a_phosphate_e_col
+  }
+
+  branch from udp_alpha_d_glucuronate side right {
+    udp_alpha_d_glucuronate
+    <-> . +udp +h +glucosyl_heptosyl_3_glucosyluronate_kdo2_lipid_a
+    glucosyl_heptosyl_3_kdo2_lipid_a_phosphate
   }
 }

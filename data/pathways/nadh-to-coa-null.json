@@ -9,7 +9,7 @@
     "sources": [
       {
         "db": "MetaNetX",
-        "id": "MNXR99368"
+        "id": "MNXR204751"
       }
     ]
   },
@@ -33,15 +33,6 @@
       }
     },
     {
-      "id": "fadh2",
-      "name": "FADH2",
-      "formula": "C27H33N9O15P2",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM1105762"
-      }
-    },
-    {
       "id": "h",
       "name": "H",
       "formula": "H",
@@ -51,21 +42,31 @@
       }
     },
     {
-      "id": "butanoyl_coa",
-      "name": "butanoyl-CoA",
-      "formula": "C25H38N7O17P3S",
-      "charge": -4,
+      "id": "h2o2",
+      "name": "H2O2",
+      "formula": "H2O2",
+      "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM1104300"
+        "metanetx": "MNXM732620"
       }
     },
     {
-      "id": "fad",
-      "name": "FAD",
-      "formula": "C27H33N9O15P2",
+      "id": "5_tetradecenoyl_coenzyme_a",
+      "name": "5-Tetradecenoyl Coenzyme A",
+      "short": "5-Tetradecenoyl…",
+      "formula": "C35H56N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM744904"
+      }
+    },
+    {
+      "id": "7_hexadecenoyl_coa",
+      "name": "7-Hexadecenoyl-CoA",
+      "formula": "C37H64N7O17P3S",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM1364149"
+        "metanetx": "MNXM1554354"
       }
     },
     {
@@ -75,6 +76,15 @@
       "charge": -4,
       "xrefs": {
         "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
       }
     },
     {
@@ -96,55 +106,57 @@
       }
     },
     {
-      "id": "hexanoyl_coa",
-      "name": "hexanoyl-CoA",
-      "formula": "C27H42N7O17P3S",
+      "id": "9z_octadecenoyl_coa",
+      "name": "(9Z)-octadecenoyl-CoA",
+      "short": "octadecenoyl-CoA",
+      "formula": "C39H64N7O17P3S",
       "charge": -4,
       "xrefs": {
-        "metanetx": "MNXM1103616"
+        "metanetx": "MNXM1364155"
       }
     },
     {
-      "id": "malonyl_coa",
-      "name": "malonyl-CoA",
-      "formula": "C24H33N7O19P3S",
-      "charge": -5,
+      "id": "diphosphate",
+      "name": "diphosphate",
+      "formula": "HO7P2",
+      "charge": -3,
       "xrefs": {
-        "metanetx": "MNXM1106093"
+        "metanetx": "MNXM11"
       }
     },
     {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
       "xrefs": {
-        "metanetx": "MNXM13"
+        "metanetx": "MNXM728294"
       }
     },
     {
-      "id": "olivetol",
-      "name": "olivetol",
-      "formula": "C11H16O2",
-      "charge": 0,
+      "id": "9z_octadecenoate",
+      "name": "(9Z)-octadecenoate",
+      "formula": "C18H33O2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:66960"
+        "metanetx": "MNXM1364393"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
       }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_2_3_1_206",
-      "name": "3,5,7-trioxododecanoyl-CoA synthase",
-      "ec": [
-        "2.3.1.206"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
-      "name": "Reaction MNXR99368",
+      "name": "Reaction MNXR204751",
       "substrates": [
         {
           "metabolite": "nadh",
@@ -152,28 +164,32 @@
         },
         {
           "metabolite": "acetyl_coa",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "fadh2",
           "stoichiometry": 1
         },
         {
           "metabolite": "h",
-          "stoichiometry": 3
+          "stoichiometry": 5
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_tetradecenoyl_coenzyme_a",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "butanoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fad",
+          "metabolite": "7_hexadecenoyl_coa",
           "stoichiometry": 1
         },
         {
           "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
           "stoichiometry": 1
         },
         {
@@ -188,21 +204,21 @@
       "reversibility": "reversible",
       "pathwayStep": 1,
       "xrefs": {
-        "metanetx": "MNXR99368"
+        "metanetx": "MNXR204751"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR99368"
+            "id": "MNXR204751"
           }
         ]
       }
     },
     {
       "id": "r2",
-      "name": "Reaction MNXR157405",
+      "name": "Reaction MNXR204767",
       "substrates": [
         {
           "metabolite": "nadh",
@@ -213,29 +229,29 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "butanoyl_coa",
+          "metabolite": "7_hexadecenoyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fadh2",
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "9z_octadecenoyl_coa",
           "stoichiometry": 1
         },
         {
           "metabolite": "h",
           "stoichiometry": 3
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "hexanoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fad",
-          "stoichiometry": 1
         },
         {
           "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
           "stoichiometry": 1
         },
         {
@@ -250,66 +266,84 @@
       "reversibility": "reversible",
       "pathwayStep": 2,
       "xrefs": {
-        "metanetx": "MNXR157405"
+        "metanetx": "MNXR204767"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR157405"
+            "id": "MNXR204767"
           }
         ]
       }
     },
     {
       "id": "r3",
-      "name": "3,5,7-trioxododecanoyl-CoA synthase",
-      "ec": "2.3.1.206",
+      "name": "Reaction MNXR102175",
       "substrates": [
         {
-          "metabolite": "hexanoyl_coa",
+          "metabolite": "diphosphate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "malonyl_coa",
-          "stoichiometry": 3
+          "metabolite": "9z_octadecenoyl_coa",
+          "stoichiometry": 1
         },
         {
-          "metabolite": "h",
-          "stoichiometry": 3
+          "metabolite": "amp",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "co2",
-          "stoichiometry": 4
+          "metabolite": "9z_octadecenoate",
+          "stoichiometry": 1
         },
         {
-          "metabolite": "olivetol",
+          "metabolite": "atp",
           "stoichiometry": 1
         },
         {
           "metabolite": "coa",
-          "stoichiometry": 4
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_3_1_206"
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 3,
       "xrefs": {
-        "metanetx": "MNXR116462"
+        "metanetx": "MNXR102175"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR116462"
+            "id": "MNXR102175"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_5_tetradecenoyl_coenzyme_a_nadh-to-o-5z-tetradecenoyl-l",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_tetradecenoyl_coenzyme_a"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-o-5z-tetradecenoyl-l"
+      },
+      "note": "Shares 5-Tetradecenoyl Coenzyme A with NADH to O-[(5Z)-tetradecenoyl]-L-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM744904"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway neryl-diphosphate-to-diphosphate "neryl diphosphate to diphosphate" {
-  spacing 340
+  spacing 320
 
   spine at 0,0 {
     neryl_diphosphate
@@ -16,41 +16,5 @@ pathway neryl-diphosphate-to-diphosphate "neryl diphosphate to diphosphate" {
     2e_6e_farnesyl_diphosphate
     <-> . +12_ethyl_8_isobutylbacteriochlorophyllide_d +h -diphosphate
     12_ethyl_8_isobutylbacteriochlorophyll_d
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +fpp
-    2z_4e_ionylideneethane
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +l_oxindolylalanine +l_leucyl_o_isoindolinone_l_homoserine +atp +amp +hplus
-    l_leu_l_isd_l_oid
-  }
-
-  branch from 2e_6e_farnesyl_diphosphate side left {
-    2e_6e_farnesyl_diphosphate
-    <-> ec_4_2_3_9 [4.2.3.9] +diphosphate
-    aristolochene
-  }
-
-  branch from 2e_6e_farnesyl_diphosphate side right {
-    2e_6e_farnesyl_diphosphate
-    <-> ec_4_2_3_71 [4.2.3.71] +diphosphate
-    1z_4e_germacrene_b
-  }
-
-  branch from diphosphate side left {
-    diphosphate
-    <-> ec_6_1_3_1 [6.1.3.1] +amp +4_nonyl_3_octyl_oxetan_2_one +2r_3s_2_octyl_3_hydroxydodecanoate
-    atp
-  }
-
-  branch from diphosphate side right {
-    diphosphate
-    <-> . +tabtoxin +h +amp +tabtoxinine_lactam +atp
-    l_threonine
   }
 }

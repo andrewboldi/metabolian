@@ -116,52 +116,6 @@
       "xrefs": {
         "chebi": "CHEBI:15377"
       }
-    },
-    {
-      "id": "nadp",
-      "name": "NADP+",
-      "formula": "C21H25N7O17P3",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58349"
-      }
-    },
-    {
-      "id": "6r_6_lactoyl_5_6_7_8_tetrahydropterin",
-      "name": "(6R)-6-lactoyl-5,6,7,8-tetrahydropterin",
-      "short": "6-lactoyl-5,6,7,8-t…",
-      "formula": "C9H13N5O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:136565"
-      }
-    },
-    {
-      "id": "nadph",
-      "name": "NADPH",
-      "formula": "C21H26N7O17P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57783"
-      }
-    },
-    {
-      "id": "hplus",
-      "name": "Proton (H+)",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:15378"
-      }
-    },
-    {
-      "id": "l_dopaquinone",
-      "name": "L-dopaquinone",
-      "formula": "C9H9NO4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:57924"
-      }
     }
   ],
   "enzymes": [
@@ -170,21 +124,20 @@
       "name": "tyrosine 3-monooxygenase",
       "ec": [
         "1.14.16.2"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P07101"
+      }
     },
     {
       "id": "ec_4_2_1_96",
       "name": "4a-hydroxytetrahydrobiopterin dehydratase",
       "ec": [
         "4.2.1.96"
-      ]
-    },
-    {
-      "id": "ec_1_14_18_1",
-      "name": "tyrosinase",
-      "ec": [
-        "1.14.18.1"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q9H0N5"
+      }
     }
   ],
   "reactions": [
@@ -319,91 +272,269 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "(6R)-L-erythro-5,6,7,8-tetrahydrobiopterin + NADP(+) = 6-lactoyl-5,6,7,8-tetrahydropter...",
-      "equation": "(6R)-L-erythro-5,6,7,8-tetrahydrobiopterin + NADP(+) = 6-lactoyl-5,6,7,8-tetrahydropterin + NADPH + H(+)",
-      "substrates": [
-        {
-          "metabolite": "sapropterin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "6r_6_lactoyl_5_6_7_8_tetrahydropterin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:42500"
+      "id": "xt_l_erythro_7_8_dihydrobiopterin_5-chloro-trans-dienelacto-to-1r-2s-3-4-dichloroc",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_erythro_7_8_dihydrobiopterin"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "5-chloro-trans-dienelacto-to-1r-2s-3-4-dichloroc"
+      },
+      "note": "Shares L-erythro-7,8-dihydrobiopterin with 5-chloro-trans-dienelacto… to (1R,2S)-3,4-dichlorocyclo….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:42500"
+            "db": "MetaNetX",
+            "id": "MNXM723641"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "tyrosinase",
-      "equation": "2 L-dopa + O2 = 2 L-dopaquinone + 2 H2O",
-      "ec": "1.14.18.1",
-      "substrates": [
-        {
-          "metabolite": "ldopa",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "l_dopaquinone",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_18_1"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:34287"
+      "id": "xt_l_erythro_7_8_dihydrobiopterin_co2-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_erythro_7_8_dihydrobiopterin"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "co2-to-o2"
+      },
+      "note": "Shares L-erythro-7,8-dihydrobiopterin with CO2 to O2.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:34287"
+            "db": "MetaNetX",
+            "id": "MNXM723641"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_erythro_7_8_dihydrobiopterin_h-to-4-methyl-3-oxoadipyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_erythro_7_8_dihydrobiopterin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-4-methyl-3-oxoadipyl-coa"
+      },
+      "note": "Shares L-erythro-7,8-dihydrobiopterin with H to 4-methyl-3-oxoadipyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM723641"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_erythro_7_8_dihydrobiopterin_l-erythro-biopterin-to-l-erythro-7-8-dihydrobiop",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_erythro_7_8_dihydrobiopterin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-erythro-biopterin-to-l-erythro-7-8-dihydrobiop"
+      },
+      "note": "Shares L-erythro-7,8-dihydrobiopterin with L-erythro-biopterin to L-erythro-7,8-dihydrobiop….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM723641"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_erythro_7_8_dihydrobiopterin_sapropterin-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_erythro_7_8_dihydrobiopterin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sapropterin-to-nadph"
+      },
+      "note": "Shares L-erythro-7,8-dihydrobiopterin with sapropterin to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM723641"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4a_hydroxy_l_erythro_5_6_7_8_tetrahydrobiopterin_1-o-1-2-saturated-alkyl-to-di-sulfido-diiron",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4a_hydroxy_l_erythro_5_6_7_8_tetrahydrobiopterin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-o-1-2-saturated-alkyl-to-di-sulfido-diiron"
+      },
+      "note": "Shares 4a-hydroxy-L-erythro-5,6,7,8-tetrahydrobiopterin with 1-O-(1,2-saturated-alkyl)… to di-μ-sulfido-diiron.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15642"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4a_hydroxy_l_erythro_5_6_7_8_tetrahydrobiopterin_l-erythro-biopterin-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4a_hydroxy_l_erythro_5_6_7_8_tetrahydrobiopterin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-erythro-biopterin-to-succinate"
+      },
+      "note": "Shares 4a-hydroxy-L-erythro-5,6,7,8-tetrahydrobiopterin with L-erythro-biopterin to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15642"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4a_hydroxy_l_erythro_5_6_7_8_tetrahydrobiopterin_s-mandelate-to-1-4-benzosemiquinone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4a_hydroxy_l_erythro_5_6_7_8_tetrahydrobiopterin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-mandelate-to-1-4-benzosemiquinone"
+      },
+      "note": "Shares 4a-hydroxy-L-erythro-5,6,7,8-tetrahydrobiopterin with (S)-mandelate to 1,4-benzosemiquinone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15642"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_bh2_1-o-1-2-saturated-alkyl-to-di-sulfido-diiron",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "bh2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-o-1-2-saturated-alkyl-to-di-sulfido-diiron"
+      },
+      "note": "Shares Dihydrobiopterin (BH2) with 1-O-(1,2-saturated-alkyl)… to di-μ-sulfido-diiron.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:43120"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_bh2_6r-5-10-methylene-5-6-7-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "bh2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6r-5-10-methylene-5-6-7-to-h2o-null"
+      },
+      "note": "Shares Dihydrobiopterin (BH2) with (6R)-5,10-methylene-5,6,7… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:43120"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_bh2_catecholamine-metabolism",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "bh2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "catecholamine-metabolism"
+      },
+      "note": "Shares Dihydrobiopterin (BH2) with Catecholamine biosynthesis and degradation.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:43120"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_bh2_l-erythro-biopterin-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "bh2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-erythro-biopterin-to-succinate"
+      },
+      "note": "Shares Dihydrobiopterin (BH2) with L-erythro-biopterin to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:43120"
           }
         ]
       }

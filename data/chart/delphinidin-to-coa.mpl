@@ -4,43 +4,43 @@
 # edit the generator, not this file.
 
 pathway delphinidin-to-coa "delphinidin… to CoA" {
-  spacing 176
+  spacing 284
 
   spine at 0,0 {
     delphinidin_3_o_rutinoside_7_o_6_o_4_o_glucosyl
     <-> . +4_hydroxybenzoate +h -1_o_4_hydroxybenzoyl_d_glucopyranose
     delphinidin_3_o_rutinoside_7_o_6_o_p_hydroxybenz
-    <-> . +glucose -1_o_4_hydroxybenzoyl_d_glucopyranose
-    bisdeacylplatyconin
+    <-> . +glucose +h -1_o_4_hydroxybenzoyl_d_glucopyranose
+    delphinidin_3_o_rutinoside_7_o_d_glucoside
     <-> . +4_hydroxybenzoate +h -1_o_4_hydroxybenzoyl_d_glucopyranose
     tulipanin
-    <-> . +udp +h -mirtillin
+    <-> . +udp -delphinidin_3_o_d_glucoside_betaine
     udp_beta_l_rhamnose
-    <-> . +trans_4_coumaroyl_coa +mirtillin -coa
-    delphinidin_3_6_p_coumaroyl_glucoside
-  }
-
-  branch from mirtillin side left {
-    mirtillin
-    <-> . +enin
-    ethene
-  }
-
-  branch from mirtillin side right {
-    mirtillin
-    <-> . +glucose +delphinidin_3_o_6_o_malyl_beta_d_glucoside
-    1_o_malyl_beta_d_glucose
+    <-> ec_2_3_1_215 [2.3.1.215] +trans_4_coumaroyl_coa +delphinidin_3_o_d_glucoside_betaine +h -coa
+    delphinidin_3_o_6_o_z_4_coumaroyl_d_glucoside
   }
 
   branch from coa side left {
     coa
-    <-> . +11z_eicosenoyl_coa +r_carnitine
-    eicosenoylcarnitine_9
+    <-> ec_2_3_1_21 [2.3.1.21] +r_carnitine +9z_hexadecenoyl_coa
+    hexadecenoyl_carnitine
   }
 
   branch from coa side right {
     coa
-    <-> . +r_carnitine +8z_11z_icosadienoyl_coa
-    8z_11z_eicosadienoylcarnitine
+    <-> . +2e_hexadecenoyl_coa +r_carnitine
+    2e_hexadecenoylcarnitine
+  }
+
+  branch from coa side left {
+    coa
+    <-> . +r_carnitine +9z_octadecenoyl_coa
+    octadecenoyl_carnitine
+  }
+
+  branch from coa side right {
+    coa
+    <-> ec_2_3_1_21 [2.3.1.21] +5z_8z_11z_14z_eicosatetraenoyl_coa +r_carnitine
+    arachidonoyl_l_carnitine
   }
 }

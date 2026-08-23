@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-3-dihydroxy-n-benzoylse-to-h2o "2,3-dihydroxy-N-benzoylse… to H2O" {
-  spacing 246
+  spacing 340
 
   spine at 0,0 {
     2_3_dihydroxy_n_benzoylserine_dimer
@@ -24,49 +24,145 @@ pathway 2-3-dihydroxy-n-benzoylse-to-h2o "2,3-dihydroxy-N-benzoylse… to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> . +2_2_bis_4_hydroxyphenyl_1_propanol +o2
-    2_2_bis_4_hydroxyphenyl_propanoic_acid
+    <-> . +aurodrosopterin +2_amino_6_acetyl_3_7_8_9_tetrahydro_3h_pyrimido
+    7_8_dihydrolumazine
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_14_13_90 [1.14.13.90] +nadh +all_trans_zeaxanthin +h +o2 +nad
-    all_trans_antheraxanthin
+    <-> . +2_4_6_trioxohexanoate +h +formate
+    acetylpyruvate
   }
 
   branch from h side right {
     h
-    <-> . +2_s_glutathionyl_acetyl_chloride +h2o +chloride
-    2_s_glutathionyl_acetate
+    <-> . +2_4_6_trioxohexanoate +h2o +formate
+    acetylpyruvate
   }
 
   branch from h side left {
     h
-    <-> . +imp +h2o
-    3_5_cyclic_imp
+    <-> . +6_3_hydroxy_2_3_5_7_trioxononanoyl_phenyl_3_5_di +h2o
+    12_deoxyaklanonic_acid
   }
 
   branch from nadph side right {
     nadph
-    <-> . +o_5_oxidonitroso_4_oxocyclohex_2_en_1_ylidenenit +nadp
-    2_4_dinitrophenol
+    <-> . +r_2s_5r_5_ethenyl_1_azabicyclo_2_2_2_octan_2_yl +cinchonine +nadp +h
+    cinchoninone
   }
 
   branch from nadph side left {
     nadph
-    <-> . +1_6_8_trihydroxy_1h_3h_cyclohepta_c_furan_5_one +o2 +nadp +h2o
-    stipitalide
+    <-> . +cinchonine +nadp +h +cinchoninone
+    cinchonidine
   }
 
   branch from atp side right {
     atp
-    <-> ec_6_3_2_16 [6.3.2.16] +d_alanine +alanyl_poly_glycerolphosphate +h +adp +phosphate
-    d_alanyl_l_alanyl_poly_glycerol_phosphate
+    <-> . +diphosphate +l_2_3_diaminopropanoatel_adenylate +h
+    s_2_3_diaminopropanoate
   }
 
   branch from atp side left {
     atp
-    <-> ec_6_3_2_16 [6.3.2.16] +d_alanine +alanyl_poly_glycerolphosphate +h +adp +phosphate
-    d_alanyl_alanyl_poly_glycerolphosphate
+    <-> . +diphosphate +microcin_c_intermediate_1 +h
+    microcin_c_precursor_peptide_mcca
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +6_3_hydroxy_2_3_5_7_trioxononanoyl_phenyl_3_5_di +h
+    12_deoxyaklanonic_acid
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_2_1_153 [3.2.1.153] +sucrose +d_fructofuranose
+    1_f_beta_d_fructosylsucrose
+  }
+
+  branch from fe side right {
+    fe
+    <-> . +fmnh2 +h +fe_enterobactin +enterobactin
+    fmn
+  }
+
+  branch from fe side left {
+    fe
+    <-> . +riboflavin +enterobactin +h +fe_enterobactin
+    4a_5_dihydroriboflavin
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +pseudoisoeugenol +h2o +h +nadph +trans_anethole
+    o2
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_3_1_105 [1.3.1.105] +2_butyl_4_hydroxy_5_methyl_3_2h_furanone +h +nadph
+    2e_2_butylidene_4_hydroxy_5_methyl_3_2h_furanon
+  }
+
+  branch from h side right {
+    h
+    <-> . +2_hydroxy_3_carboxy_6_oxo_hepta_2_4_dienoate +o2
+    2_3_dihydroxy_4_toluate
+  }
+
+  branch from h side left {
+    h
+    <-> . +2_3_dihydroxy_4_toluate +o2
+    2_hydroxy_3_carboxy_6_oxo_hepta_2_4_dienoate
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_3_1_105 [1.3.1.105] +nadp +h +2e_2_butylidene_4_hydroxy_5_methyl_3_2h_furanon
+    2_butyl_4_hydroxy_5_methyl_3_2h_furanone
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_3_1_105 [1.3.1.105] +4_hydroxy_5_methyl_2_propyl_3_2h_furanone +nadp +h
+    2e_4_hydroxy_5_methyl_2_propylidene_3_2h_furano
+  }
+
+  branch from adp side right {
+    adp
+    <-> ec_7_5_2_5 [7.5.2.5] +h +phosphate +atp +h2o
+    lipopolysaccharide_helicobacter_pylori
+  }
+
+  branch from adp side left {
+    adp
+    <-> ec_7_5_2_6 [7.5.2.6] +h +phosphate +atp +h2o
+    h_pylori_core_oligosaccharide_lipid_a
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_3_1_3_1 [3.1.3.1] +7_8_dihydroneopterin_3_triphosphate +h2o +h
+    7_8_dihydroneopterin
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> ec_3_1_3_1 [3.1.3.1] +7_8_dihydroneopterin_3_triphosphate +h2o +h
+    dihydroneopterin
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +diphosphate +microcin_c_intermediate_3
+    microcin_c_intermediate_2
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +diphosphate +l_pipecolate_adenylate +h
+    l_pipecolate
   }
 }

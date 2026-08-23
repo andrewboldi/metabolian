@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dihydrodemethylsterigmato-to-8-o-methyldihydrost "dihydrodemethylsterigmato… to 8-O-methyldihydrosterigma…" {
-  spacing 276
+  spacing 336
 
   spine at 0,0 {
     dihydrodemethylsterigmatocystin
@@ -18,63 +18,123 @@ pathway dihydrodemethylsterigmato-to-8-o-methyldihydrost "dihydrodemethylsterigm
     h
   }
 
-  branch from sah side left {
-    sah
-    <-> . +cytidine_5_monophosphate_1 +sam +hplus
-    5_methylcytidine_5_monophosphate_1
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +sam +5_methylcytidine_5_monophosphate_1 +hplus
-    cytidine_5_monophosphate_1
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +linoleate +fmnh2 +o2 +h2o +hplus
-    9_r_hode
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    13_s_hete
-  }
-
   branch from h side left {
     h
-    <-> ec_3_8_1_8 [3.8.1.8] +6_chloro_1_3_5_triazine_2_4_diamine +h2o +nh4
-    4_amino_6_chloro_1_3_5_triazin_2_ol
+    <-> . +co2 +1_2_dihydropyrimidine
+    3_6_dihydronicotinate
   }
 
   branch from h side right {
     h
-    <-> . +cyclohex_1_ene_1_carbonyl_coa +h2o
-    2_hydroxycyclohexane_1_carbonyl_coa
+    <-> . +1_methylpyrrolinium +1_2_dihydropyrimidine
+    3_6_dihydronicotine
   }
 
   branch from o2 side left {
     o2
-    <-> . +fluorene
-    3_4_dihydroxyfluorene
+    <-> . +2_dihydroxymethyl_furan +h +h2o2
+    2_furoate
   }
 
   branch from o2 side right {
     o2
-    <-> . +fluorene
-    1_2_dihydroxyfluorene
+    <-> . +h +2z_4z_2_amino_5_formylhexa_2_4_dienedioate
+    4_amino_3_hydroxybenzoate
   }
 
   branch from nadph side left {
     nadph
-    <-> . +h +19_epi_cathenamine +nadp
-    19_epi_ajmalicine
+    <-> . +dtdp_3_n_n_dimethylamino_4_oxo_2_3_6_trideoxy_l +h +nadp
+    dtdp_l_megosamine
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_14_13_105 [1.14.13.105] +isodihydrocarvone +h +o2 +nadp +h2o
-    4s_7r_4_isopropenyl_7_methyloxepan_2_one
+    <-> . +h +3_5_dihydroxy_3_4_7_trimethoxyflavone +o2 +nadp +h2o
+    2_hydroxy_3_7_4_trimethylquercetin
+  }
+
+  branch from co2 side left {
+    co2
+    <-> . +h2 +h2o
+    co
+  }
+
+  branch from co2 side right {
+    co2
+    <-> . +nonadec_1_ene +h2o +h +h2o2
+    eicosanoate
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +casticin +h +o2 +nadph +h2o
+    2_hydroxy_3_6_7_4_tetramethylquercetagetin
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +h +nadph +7_dehydroporiferasterol
+    porifersta_5_7_dienol
+  }
+
+  branch from methanol side left {
+    methanol
+    <-> ec_3_1_1_95 [3.1.1.95] +aclacinomycin_a +h2o
+    15_demethoxy_aclacinomycin_a
+  }
+
+  branch from methanol side right {
+    methanol
+    <-> ec_3_1_1_95 [3.1.1.95] +15_demethoxy_epsilon_rhodomycinone +h +h2o
+    epsilon_rhodomycinone
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_2_1_159 [3.2.1.159] +agarotriose +3_6_anhydro_l_galactopyranose
+    neoagarotetraose
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_2_1_159 [3.2.1.159] +agaropentaose +3_6_anhydro_l_galactopyranose
+    neoagarohexaose
+  }
+
+  branch from h side left {
+    h
+    <-> . +2z_4z_2_amino_5_formylhexa_2_4_dienedioate +h2o
+    isocinchomeronic_acid
+  }
+
+  branch from h side right {
+    h
+    <-> . +2_oxoglutarate +antibiotic_ji_20b +h2o2 +o2 +l_glutamate
+    geneticin_cation
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +2_aminophenoxazin_3_one +h2o
+    6_iminocyclohexa_2_4_dienone
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +co2 +prodeoxyviolacein +h2o +h
+    protodeoxyviolaceinate
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +porifersta_7_25_27_dienol +h +nadp
+    poriferast_7_en_3beta_ol
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_3_1_93 [1.3.1.93] +lesqueroloyl_coa +nadp +h
+    trans_lesqueroloyl_coa
   }
 }

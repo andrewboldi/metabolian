@@ -232,90 +232,6 @@
       "xrefs": {
         "chebi": "CHEBI:28938"
       }
-    },
-    {
-      "id": "4_methoxybenzoate",
-      "name": "4-methoxybenzoate",
-      "formula": "C8H7O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:16639"
-      }
-    },
-    {
-      "id": "nadph",
-      "name": "NADPH",
-      "formula": "C21H26N7O17P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57783"
-      }
-    },
-    {
-      "id": "p_methoxybenzaldehyde",
-      "name": "p-methoxybenzaldehyde",
-      "short": "p-methoxybenzaldehy…",
-      "formula": "C8H8O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:28235"
-      }
-    },
-    {
-      "id": "nadp",
-      "name": "NADP+",
-      "formula": "C21H25N7O17P3",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58349"
-      }
-    },
-    {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:175763"
-      }
-    },
-    {
-      "id": "cadinene",
-      "name": "α-cadinene",
-      "formula": "C15H24",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:80749"
-      }
-    },
-    {
-      "id": "l_alanine",
-      "name": "L-alanine",
-      "formula": "C3H7NO2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1105732"
-      }
-    },
-    {
-      "id": "udp_n_acetyl_alpha_d_muramoyl_l_alanyl_gamma_d_g",
-      "name": "UDP-N-acetyl-alpha-D-muramoyl-L-alanyl-gamma-D-glutamyl-meso-2,6-diaminopimelate",
-      "short": "UDP-N-acetyl-alpha-…",
-      "formula": "C35H51N7O26P2",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM1446"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "WATER"
-      }
     }
   ],
   "enzymes": [
@@ -804,131 +720,269 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r9",
-      "name": "4-methoxybenzoate + ATP + NADPH + H(+) = 4-methoxybenzaldehyde + AMP + diphosphate + NA...",
-      "equation": "4-methoxybenzoate + ATP + NADPH + H(+) = 4-methoxybenzaldehyde + AMP + diphosphate + NADP(+)",
-      "substrates": [
-        {
-          "metabolite": "4_methoxybenzoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "p_methoxybenzaldehyde",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "amp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 9,
-      "xrefs": {
-        "rhea": "RHEA:68900"
+      "id": "xt_udp_n_acetyl_d_muramate_2-acetamido-3-o-1r-1-c-to-udp-n-acetyl-3-o-1-car",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "udp_n_acetyl_d_muramate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2-acetamido-3-o-1r-1-c-to-udp-n-acetyl-3-o-1-car"
+      },
+      "note": "Shares UDP-N-acetyl-α-D-muramate with 2-acetamido-3-O-[(1R)-1-c… to UDP-N-acetyl-3-O-(1-carbo….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:68900"
+            "db": "ChEBI",
+            "id": "CHEBI:70757"
           }
         ]
       }
     },
     {
-      "id": "r10",
-      "name": "(2E,6E)-farnesyl diphosphate = alpha-cadinene + diphosphate",
-      "equation": "(2E,6E)-farnesyl diphosphate = alpha-cadinene + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "fpp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "cadinene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 10,
-      "xrefs": {
-        "rhea": "RHEA:69444"
+      "id": "xt_udp_n_acetyl_d_muramate_l-ala-d-glu-meso-dap-d-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "udp_n_acetyl_d_muramate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "l-ala-d-glu-meso-dap-d-to-h2o"
+      },
+      "note": "Shares UDP-N-acetyl-α-D-muramate with L-Ala-γ-D-Glu-meso-Dap-D-… to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:69444"
+            "db": "ChEBI",
+            "id": "CHEBI:70757"
           }
         ]
       }
     },
     {
-      "id": "r11",
-      "name": "Reaction MNXR178389",
-      "substrates": [
-        {
-          "metabolite": "l_alanine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp_n_acetyl_alpha_d_muramoyl_l_alanyl_gamma_d_g",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_meso",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 11,
-      "xrefs": {
-        "metanetx": "MNXR178389"
+      "id": "xt_udp_n_acetyl_d_muramoyl_l_alaninate_d-glutamine-to-udp-n-acetyl-d-muramoyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "udp_n_acetyl_d_muramoyl_l_alaninate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glutamine-to-udp-n-acetyl-d-muramoyl"
+      },
+      "note": "Shares UDP-N-acetyl-α-D-muramoyl-L-alaninate with D-glutamine to UDP-N-acetyl-α-D-muramoyl….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR178389"
+            "db": "ChEBI",
+            "id": "CHEBI:83898"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamate_d-glutamine-to-udp-n-acetyl-d-muramoyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glutamine-to-udp-n-acetyl-d-muramoyl"
+      },
+      "note": "Shares UDP-N-acetyl-α-D-muramoyl-L-alanyl-D-glutamate with D-glutamine to UDP-N-acetyl-α-D-muramoyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83900"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_meso_2_6_diaminopimelic_acid_dizwitterion_l-ala-d-glu-meso-dap-d-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "meso_2_6_diaminopimelic_acid_dizwitterion"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-ala-d-glu-meso-dap-d-to-h2o"
+      },
+      "note": "Shares meso-2,6-diaminopimelic acid dizwitterion with L-Ala-γ-D-Glu-meso-Dap-D-… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57791"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_meso_2_6_diaminopimelic_acid_dizwitterion_l-glutamine-to-methyl-com",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "meso_2_6_diaminopimelic_acid_dizwitterion"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-glutamine-to-methyl-com"
+      },
+      "note": "Shares meso-2,6-diaminopimelic acid dizwitterion with L-glutamine to methyl-CoM.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57791"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_meso_2_6_diaminopimelic_acid_dizwitterion_n-acetyl-ll-2-6-diaminopi-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "meso_2_6_diaminopimelic_acid_dizwitterion"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyl-ll-2-6-diaminopi-to-ammonium"
+      },
+      "note": "Shares meso-2,6-diaminopimelic acid dizwitterion with N-acetyl-LL-2,6-diaminopi… to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57791"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_meso_2_6_diaminopimelic_acid_dizwitterion_tryptophol-to-n6-indol-3-yl-acetyl-l",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "meso_2_6_diaminopimelic_acid_dizwitterion"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "tryptophol-to-n6-indol-3-yl-acetyl-l"
+      },
+      "note": "Shares meso-2,6-diaminopimelic acid dizwitterion with tryptophol to N6-[(indol-3-yl)acetyl]-L….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57791"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_meso_l-ala-d-glu-meso-dap-d-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_meso"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-ala-d-glu-meso-dap-d-to-h2o"
+      },
+      "note": "Shares UDP-N-acetyl-α-D-muramoyl-L-alanyl-D-γ-glutamyl-meso-2,6-diaminoheptanedioate with L-Ala-γ-D-Glu-meso-Dap-D-… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83905"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_alanyl_d_alanine_5-formimidoyltetrahydrofo-to-6s-5-6-7-8-tetrahyd",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_alanyl_d_alanine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-formimidoyltetrahydrofo-to-6s-5-6-7-8-tetrahyd"
+      },
+      "note": "Shares D-alanyl-D-alanine with 5-formimidoyltetrahydrofo… to (6S)-5,6,7,8-tetrahydrofo….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57822"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_alanyl_d_alanine_n-acetyl-d-muramoyl-l-ala-to-amp-3-end-1",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_alanyl_d_alanine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyl-d-muramoyl-l-ala-to-amp-3-end-1"
+      },
+      "note": "Shares D-alanyl-D-alanine with N-acetyl-D-muramoyl-L-ala… to AMP 3'-end(1−).",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57822"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_udp_n_acetylmuramoyl_l_alanyl_d_glutamyl_meso_2_udp-to-undecaprenyldiphospho-n-a",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "udp_n_acetylmuramoyl_l_alanyl_d_glutamyl_meso_2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-undecaprenyldiphospho-n-a"
+      },
+      "note": "Shares UDP-N-acetylmuramoyl-L-alanyl-γ-D-glutamyl-meso-2,6-diaminopimeloyl-D-alanyl-D-alaninate with UDP to undecaprenyldiphospho-N-a….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61386"
           }
         ]
       }

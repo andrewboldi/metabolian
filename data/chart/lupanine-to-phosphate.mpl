@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway lupanine-to-phosphate "lupanine to phosphate" {
-  spacing 230
+  spacing 290
 
   spine at 0,0 {
     lupanine
@@ -18,43 +18,103 @@ pathway lupanine-to-phosphate "lupanine to phosphate" {
 
   branch from pyruvate side left {
     pyruvate
-    <-> . +alpha_lactose +phosphoenolpyruvate
-    lactose_6_phosphate
+    <-> ec_4_1_2_54 [4.1.2.54] +2_dehydro_3_deoxy_l_gluconate
+    l_glyceraldehyde
   }
 
   branch from pyruvate side right {
     pyruvate
-    <-> . +r_lactate +menaquinone_6
-    menaquinol_6
-  }
-
-  branch from cadaverine side left {
-    cadaverine
-    <-> . +h +nh4 +5_aminopentanoate
-    o2
-  }
-
-  branch from h side right {
-    h
-    <-> . +nadh +phenylglyoxylate +nad
-    s_mandelate
+    <-> . +r_lactate +ferricytochrome_c +h
+    ferrocytochrome_c
   }
 
   branch from h side left {
     h
-    <-> . +nadh +phenylglyoxylate +nad
-    mandelate
+    <-> . +adp +glycyl_glutamate +phosphate +glycyl_glutamate +h2o
+    atp
   }
 
-  branch from phosphate side right {
-    phosphate
-    <-> ec_3_1_3_93 [3.1.3.93] +l_galactose_1_phosphate +h2o +h
-    alpha_l_galactose
+  branch from h side right {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    l_tyrosine_n_glycyl
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_3_1_3_11 [3.1.3.11] +d_fructofuranose_1_phosphate +h2o
-    beta_d_fructose
+    <-> . +h +adp +atp +h2o
+    gemfibrozil_glucuronide
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    glycoursodeoxycholate
+  }
+
+  branch from l_alanine side left {
+    l_alanine
+    <-> . +h2o
+    d_alanyl_d_alanine
+  }
+
+  branch from l_alanine side right {
+    l_alanine
+    <-> ec_3_6_3_22 [3.6.3.22] +h +phosphate +atp +h2o
+    adp
+  }
+
+  branch from h side left {
+    h
+    <-> . +gemfibrozil +gemfibrozil_glucuronide +h2o
+    d_glucuronate
+  }
+
+  branch from h side right {
+    h
+    <-> . +adenosine_3_5_bisphosphate +sulfochenodeoxycholate +chenodeoxycholate
+    3_phosphoadenylyl_sulfate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +beta_d_fructose +alpha_d_galactose
+    lactulose
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +polydextrose +alpha_d_galactose
+    glucose
+  }
+
+  branch from pyruvate side left {
+    pyruvate
+    <-> . +nadh +h +s_lactate +nad
+    pmf
+  }
+
+  branch from pyruvate side right {
+    pyruvate
+    <-> . +ferricytochrome_c +ferrocytochrome_c +h
+    s_lactate
+  }
+
+  branch from carbamoyl_phosphate side left {
+    carbamoyl_phosphate
+    <-> ec_6_3_4_16 [6.3.4.16] +h +adp +phosphate +atp +nh4 +h2o
+    co2
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    sulfochenodeoxycholate
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    all_cis_7_10_13_hexadecatrienoic_acid
   }
 }

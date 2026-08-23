@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-2z-2-methylimino-et-to-h2o "4-[(2Z)-2-(methylimino)et… to H2O" {
-  spacing 200
+  spacing 302
 
   spine at 0,0 {
     4_2z_2_methylimino_ethyl_phenol
@@ -16,10 +16,153 @@ pathway 4-2z-2-methylimino-et-to-h2o "4-[(2Z)-2-(methylimino)et… to H2O" {
     atp
   }
 
+  branch from methylamine side left {
+    methylamine
+    <-> ec_3_5_1_137 [3.5.1.137] +aldicarb +h +h2o +aldicarb_oxime
+    co2
+  }
 
+  branch from methylamine side right {
+    methylamine
+    <-> ec_3_5_1_137 [3.5.1.137] +2z_2_hydroxyimino_n_n_dimethyl_2_methylsulfanyl +co2 +h +h2o
+    oxamyl
+  }
 
+  branch from o2 side left {
+    o2
+    <-> ec_1_1_3_40 [1.1.3.40] +d_mannitol +h2o2
+    alpha_d_mannopyranose
+  }
 
+  branch from o2 side right {
+    o2
+    <-> ec_1_1_3_40 [1.1.3.40] +d_mannitol +h2o2
+    beta_d_mannose
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> . +l_proline +l_cysteine
+    prolyl_cysteine
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> . +l_proline +l_glutamine
+    prolyl_glutaminyl_proline
+  }
 
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    triol_metabolite_of_pravastatin
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_3_6_3_22 [3.6.3.22] +h +adp +phosphate +h2o
+    l_tryptophan
+  }
+
+  branch from 4_2z_2_methylimino_ethyl_phenol side left {
+    4_2z_2_methylimino_ethyl_phenol
+    <-> .
+    4_e_2_methylamino_ethenyl_phenol
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +l_histidine +l_proline +l_tyrosine
+    pro_his_tyr
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +l_histidine +l_proline
+    prolyl_histidine
+  }
+
+  branch from 3_methoxy_4_hydroxyphenylglycolaldehyde side right {
+    3_methoxy_4_hydroxyphenylglycolaldehyde
+    <-> ec_1_2_1_5 [1.2.1.5] +vanillylmandelic_acid +h +nadph +h2o
+    nadp
+  }
+
+  branch from 3_methoxy_4_hydroxyphenylglycolaldehyde side left {
+    3_methoxy_4_hydroxyphenylglycolaldehyde
+    <-> ec_1_2_1_5 [1.2.1.5] +h +nadph +nadp +h2o
+    vanillylmandelate
+  }
+
+  branch from h2o2 side right {
+    h2o2
+    <-> . +icosan_1_ol +o2
+    eicosanal
+  }
+
+  branch from h2o2 side left {
+    h2o2
+    <-> . +6_hydroxy_2_hydroxy_4_hydroxyphenyl_methyl_1_ben +h2o
+    2_hydroperoxy_4_hydroxyphenyl_methyl_6_hydroxy_1
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +nadh +1r_5r_alpha_pinene +h +nad +h2o
+    alpha_pinene_oxide
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +1r_2s_1_2_dihydronaphthalene_1_2_diol +h +nadph +nadp +h2o
+    1_2_dihydroxy_3_4_epoxy_1_2_3_4_tetrahydronaphth
+  }
+
+  branch from h side right {
+    h
+    <-> . +d_glucuronate +trans_lactone_fluvastatin
+    fluvstatin_glucuronide
+  }
+
+  branch from h side left {
+    h
+    <-> . +l_alanine +l_arginine +l_tryptophan +h2o
+    trp_arg_ala
+  }
+
+  branch from adp side right {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    thiomethyl_sulphoxide_acetaminophen_sulphate
+  }
+
+  branch from adp side left {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    9e_tetradecenoic_acid
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> . +sucrose +d_glucopyranose_1_phosphate
+    beta_d_fructose
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    thromboxane_b2
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    ursocholate
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    ursodeoxycholic_acid_3_sulfate
+  }
 }

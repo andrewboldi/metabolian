@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-3-hydroxydecanoyl-coa-to-trans-dec-2-enoyl-co "(S)-3-hydroxydecanoyl-CoA to trans-dec-2-enoyl-CoA" {
-  spacing 176
+  spacing 188
 
   spine at 0,0 {
     s_3_hydroxydecanoyl_coa
@@ -22,21 +22,33 @@ pathway s-3-hydroxydecanoyl-coa-to-trans-dec-2-enoyl-co "(S)-3-hydroxydecanoyl-C
     r_3_hydroxydecanoyl_coa
   }
 
-  branch from trans_dec_2_enoyl_coa side right {
-    trans_dec_2_enoyl_coa
-    <-> . +oxaloacetate +hplus +coa +h2o
-    4_octa_1_enyl_2_5_dioxo_2_5_dihydro_3_furanyl_a
-  }
-
-  branch from decanoyl_coa side left {
+  branch from decanoyl_coa side right {
     decanoyl_coa
     <-> . +1_hexadecanoyl_sn_glycero_3_phosphocholine +coa
     1_palmitoyl_2_decanoyl_sn_glycero_3_phosphocholi
   }
 
-  branch from decanoyl_coa side right {
+  branch from decanoyl_coa side left {
     decanoyl_coa
     <-> . +h2o +coa +hplus
     decanoate
+  }
+
+  branch from s_3_hydroxydecanoyl_coa side right {
+    s_3_hydroxydecanoyl_coa
+    <-> . +nad +nadh +hplus
+    3_oxodecanoyl_coa
+  }
+
+  branch from decanoyl_coa side left {
+    decanoyl_coa
+    <-> . +1_o_palmityl_2_acetyl_sn_glycerol +coa
+    1_hexadecyl_2_acetyl_3_decanoyl_sn_glycerol
+  }
+
+  branch from decanoyl_coa side right {
+    decanoyl_coa
+    <-> . +malonyl-acp +hplus +co2 +coa
+    o_s_3_oxododecanoylpantetheine_4_phosphoryl_seri
   }
 }

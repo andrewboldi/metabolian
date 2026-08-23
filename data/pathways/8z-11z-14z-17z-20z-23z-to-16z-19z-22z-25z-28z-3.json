@@ -250,6 +250,45 @@
       "xrefs": {
         "chebi": "CHEBI:74319"
       }
+    },
+    {
+      "id": "trans_rhaponticin",
+      "name": "trans-rhaponticin",
+      "formula": "C21H24O9",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:8824"
+      }
+    },
+    {
+      "id": "6_o_malonyl_trans_rhaponticin",
+      "name": "6-O-malonyl-trans-rhaponticin",
+      "short": "6-O-malonyl-trans-r…",
+      "formula": "C24H25O12",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:169946"
+      }
+    },
+    {
+      "id": "naringenin_7_o_d_glucoside",
+      "name": "naringenin 7-O-β-D-glucoside",
+      "short": "naringenin…",
+      "formula": "C21H22O10",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28327"
+      }
+    },
+    {
+      "id": "2s_naringenin_7_o_6_o_malonyl_d_glucoside",
+      "name": "(2S)-naringenin 7-O-(6-O-malonyl-β-D-glucoside)",
+      "short": "naringenin…",
+      "formula": "C24H23O13",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:169950"
+      }
     }
   ],
   "enzymes": [],
@@ -922,6 +961,174 @@
           {
             "db": "Rhea",
             "id": "RHEA:39631"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r17",
+      "name": "rhaponticin + malonyl-CoA = 6-O-malonyl-rhaponticin + CoA",
+      "equation": "rhaponticin + malonyl-CoA = 6-O-malonyl-rhaponticin + CoA",
+      "substrates": [
+        {
+          "metabolite": "trans_rhaponticin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_o_malonyl_trans_rhaponticin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 17,
+      "xrefs": {
+        "rhea": "RHEA:67352"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:67352"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r18",
+      "name": "(2S)-naringenin 7-O-beta-D-glucoside + malonyl-CoA = (2S)-naringenin 7-O-(6-O-malonyl-b...",
+      "equation": "(2S)-naringenin 7-O-beta-D-glucoside + malonyl-CoA = (2S)-naringenin 7-O-(6-O-malonyl-beta-D-glucoside) + CoA",
+      "substrates": [
+        {
+          "metabolite": "naringenin_7_o_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2s_naringenin_7_o_6_o_malonyl_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 18,
+      "xrefs": {
+        "rhea": "RHEA:67356"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:67356"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_8z_11z_14z_17z_20z_23z_hexacosahexaenoyl_coa_1-11z-14z-eicosadienoyl-to-2e-8z-11z-14z-17z-20z",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "8z_11z_14z_17z_20z_23z_hexacosahexaenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-11z-14z-eicosadienoyl-to-2e-8z-11z-14z-17z-20z"
+      },
+      "note": "Shares (8Z,11Z,14Z,17Z,20Z,23Z)-hexacosahexaenoyl-CoA with 1-(11Z,14Z-eicosadienoyl)… to (2E,8Z,11Z,14Z,17Z,20Z,23….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74306"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_16z_19z_22z_25z_28z_31z_tetratriacontahexaenoyl_16z-19z-22z-25z-28z-31z-to-18z-21z-24z-27z-30z",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "16z_19z_22z_25z_28z_31z_tetratriacontahexaenoyl"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "16z-19z-22z-25z-28z-31z-to-18z-21z-24z-27z-30z"
+      },
+      "note": "Shares (16Z,19Z,22Z,25Z,28Z,31Z)-tetratriacontahexaenoyl-CoA with (16Z,19Z,22Z,25Z,28Z,31Z)… to (18Z,21Z,24Z,27Z,30Z,33Z)….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74319"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_naringenin_7_o_d_glucoside_naringenin-7-o-d-glucos-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "naringenin_7_o_d_glucoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "naringenin-7-o-d-glucos-to-fmn"
+      },
+      "note": "Shares naringenin 7-O-β-D-glucoside with naringenin 7-O-β-D-glucos… to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28327"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_naringenin_7_o_d_glucoside_terminolate-to-asiaticoside-b",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "naringenin_7_o_d_glucoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "terminolate-to-asiaticoside-b"
+      },
+      "note": "Shares naringenin 7-O-β-D-glucoside with terminolate to Asiaticoside B.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28327"
           }
         ]
       }

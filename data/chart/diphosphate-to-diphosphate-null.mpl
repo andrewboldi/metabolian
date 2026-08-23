@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway diphosphate-to-diphosphate-null "diphosphate to diphosphate" {
-  spacing 288
+  spacing 336
 
   spine at 0,0 {
     diphosphate
@@ -28,79 +28,127 @@ pathway diphosphate-to-diphosphate-null "diphosphate to diphosphate" {
 
   branch from copal_8_ol_diphosphate side right {
     copal_8_ol_diphosphate
-    <-> . +diphosphate
-    13_epi_manoyl_oxide
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +spermidine +citrate +atp +amp +hplus
-    n_citryl_spermidine
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +n_citryl_spermidine +spermidine +atp +amp +hplus
-    n8_n_8_citryl_bis_spermidine_3
+    <-> ec_4_2_3_190 [4.2.3.190] +diphosphate
+    manoyl_oxide
   }
 
   branch from 2e_6e_10e_geranylgeranyl_diphosphate side left {
     2e_6e_10e_geranylgeranyl_diphosphate
-    <-> ec_2_5_1_133 [2.5.1.133] +diphosphate +geranylgeranyl_bacteriochlorophyllide_b
-    bacteriochlorophyllide_b
+    <-> ec_2_5_1_133 [2.5.1.133] +diphosphate +geranylgeranyl_bacteriochlorophyll_a
+    bacteriochlorophyllide_a
   }
 
   branch from 2e_6e_10e_geranylgeranyl_diphosphate side right {
     2e_6e_10e_geranylgeranyl_diphosphate
-    <-> ec_4_2_3_146 [4.2.3.146] +diphosphate +h2o
-    cyclooctat_9_en_7_ol
+    <-> . +geranylgeranyl_bacteriochlorophyllide_b +diphosphate +h
+    bacteriochlorophyllide_b
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_179 [3.2.1.179] +n_acetyl_d_hexosamine +4_deoxy_l_threo_hex_4_enopyranuronate
-    beta_d_4_deoxy_delta_4_glcpa_1_3_beta_d_glcpnac
+    <-> . +l_histidine +l_aspartate +l_cysteine
+    aspartyl_histidyl_cysteine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +4_deoxy_l_threo_hex_4_enopyranosiduronate_alpha +4_deoxy_l_threo_hex_4_enopyranuronate
-    alpha_l_rhamnopyranose_3_sulfate
+    <-> . +l_histidine +l_proline +l_aspartate
+    aspartyl_histidyl_proline
   }
 
   branch from dimethylallyl_diphosphate side left {
     dimethylallyl_diphosphate
-    <-> . +fusicoccin_j +diphosphate
-    fusicoccin_p
+    <-> ec_2_5_1_159 [2.5.1.159] +ambiguine_h +diphosphate
+    hapalindole_u
   }
 
   branch from dimethylallyl_diphosphate side right {
     dimethylallyl_diphosphate
-    <-> ec_2_5_1_1 [2.5.1.1] +diphosphate +wighteone +h
-    genistein
+    <-> ec_2_5_1_35 [2.5.1.35] +diphosphate +aspulvinone_h
+    aspulvinone_e
   }
 
   branch from ipp side left {
     ipp
-    <-> ec_2_5_1_88 [2.5.1.88] +diphosphate +omega_mono_trans_deca_cis_dodecaprenyl_diphospha
-    2_cis_6_trans_farnesyl_diphosphate
+    <-> ec_2_5_1_89 [2.5.1.89] +diphosphate +2e_6e_10e_geranylgeranyl_diphosphate
+    tri_trans_hepta_cis_undecaprenyl_diphosphate
   }
 
   branch from ipp side right {
     ipp
-    <-> ec_2_5_1_87 [2.5.1.87] +di_trans_poly_cis_polyprenyl_diphosphate_c80 +diphosphate
-    2e_6e_farnesyl_diphosphate
+    <-> ec_2_5_1_89 [2.5.1.89] +diphosphate +2e_6e_10e_geranylgeranyl_diphosphate
+    tri_trans_hexa_cis_decaprenyl_diphosphate
   }
 
   branch from diphosphate side left {
     diphosphate
-    <-> . +delta_2_carene
-    neryl_diphosphate
+    <-> ec_4_2_3_204 [4.2.3.204] +valerianol +h2o
+    2e_6e_farnesyl_diphosphate
   }
 
   branch from diphosphate side right {
     diphosphate
-    <-> . +neryl_diphosphate
-    1s_5s_alpha_pinene
+    <-> . +5_phospho_alpha_d_ribose_1_diphosphate +h2o
+    aldehydo_d_ribose_5_phosphate
+  }
+
+  branch from diphosphate side left {
+    diphosphate
+    <-> . +copal_8_ol_diphosphate +h2o
+    13e_labdene_8alpha_15_diol
+  }
+
+  branch from diphosphate side right {
+    diphosphate
+    <-> ec_4_1_99_18 [4.1.99.18] +gtp +h +h2o
+    precursor_z_hydrate
+  }
+
+  branch from 2e_6e_10e_geranylgeranyl_diphosphate side left {
+    2e_6e_10e_geranylgeranyl_diphosphate
+    <-> . +diphosphate +h2o
+    alpha_cembratriene_ol
+  }
+
+  branch from 2e_6e_10e_geranylgeranyl_diphosphate side right {
+    2e_6e_10e_geranylgeranyl_diphosphate
+    <-> . +diphosphate +h2o
+    beta_cembratriene_ol
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +l_histidine +l_lysine +l_aspartate
+    aspartyl_lysyl_histidine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +l_aspartate +l_methionine
+    aspartyl_methionyl_aspartate
+  }
+
+  branch from dimethylallyl_diphosphate side left {
+    dimethylallyl_diphosphate
+    <-> . +diphosphate +beta_cyclopiazonate
+    alpha_acetyl_gamma_beta_indolyl_methyltetramate
+  }
+
+  branch from dimethylallyl_diphosphate side right {
+    dimethylallyl_diphosphate
+    <-> ec_1_17_1_2 [1.17.1.2] +nadh +1_hydroxy_2_methyl_2_e_butenyl_4_diphosphate +h2o
+    nad
+  }
+
+  branch from ipp side left {
+    ipp
+    <-> ec_2_5_1_87 [2.5.1.87] +diphosphate +2e_6e_farnesyl_diphosphate
+    di_trans_poly_cis_nonaprenyl_diphosphate
+  }
+
+  branch from ipp side right {
+    ipp
+    <-> ec_2_5_1_89 [2.5.1.89] +diphosphate +2e_6e_10e_geranylgeranyl_diphosphate
+    tri_trans_penta_cis_nonaprenyl_diphosphate
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway monosaccharide-1-phosphate-to-phosphate "monosaccharide 1-phosphate to phosphate" {
-  spacing 324
+  spacing 340
 
   spine at 0,0 {
     monosaccharide_1_phosphate
@@ -20,14 +20,14 @@ pathway monosaccharide-1-phosphate-to-phosphate "monosaccharide 1-phosphate to p
 
   branch from ppi side left {
     ppi
-    <-> ec_6_1_1_18 [6.1.1.18] +amp_3_end_1 +glutamine +atp +amp
-    3_l_glutaminyl_adenylyl_zwitterionic_group
+    <-> . +gpp
+    phellandrene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_5_1_1_11 [5.1.1.11] +l_phenylalanine +atp +h2o +amp +hplus
-    d_phenylalanine
+    <-> ec_4_2_3_109 [4.2.3.109] +gpp
+    sabinene
   }
 
   branch from nicotinamide side left {
@@ -44,37 +44,133 @@ pathway monosaccharide-1-phosphate-to-phosphate "monosaccharide 1-phosphate to p
 
   branch from h side left {
     h
-    <-> ec_3_6_3_21 [3.6.3.21] +adp +phosphate +atp +h2o
-    glycine
+    <-> ec_1_4_1_20 [1.4.1.20] +nadh +nh4 +r_3_methyl_2_oxopentanoate +nad +h2o
+    l_isoleucine
   }
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
-    glutathione
+    <-> ec_3_6_3_22 [3.6.3.22] +adp +l_isoleucine +phosphate +atp +l_isoleucine
+    h2o
   }
 
   branch from adp side left {
     adp
-    <-> ec_7_4_2_10 [7.4.2.10] +h +glutathione +phosphate +atp +glutathione
-    h2o
+    <-> . +h +phosphate +atp +h2o
+    myo_inositol
   }
 
   branch from adp side right {
     adp
     <-> . +h +phosphate +atp +h2o
-    1_hexanesulfonic_acid
+    2_hydroxyethane_1_sulfonate
   }
 
   branch from phosphate side left {
     phosphate
-    <-> . +h +adp +atp +h2o
-    hg
+    <-> . +2_keto_3_deoxy_d_glycero_d_galactononic_acid +h2o
+    2_keto_3_deoxy_d_glycero_d_galactononic_acid_9_p
   }
 
   branch from phosphate side right {
     phosphate
-    <-> . +h +adp +atp +h2o
-    histamine
+    <-> . +l_alanine +atp +h +adp
+    d_alanyl_d_alanine
+  }
+
+  branch from utp side left {
+    utp
+    <-> . +ctp +h2o +hplus
+    nh3
+  }
+
+  branch from utp side right {
+    utp
+    <-> ec_2_7_1_40 [2.7.1.40] +pyruvate +udp +hplus
+    phosphonatoenolpyruvate
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_30 [4.2.3.30] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    ent_pimara_8_14_15_diene
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_31 [4.2.3.31] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    ent_pimara_9_11_15_diene
+  }
+
+  branch from nmn side left {
+    nmn
+    <-> . +h2o +pi
+    n_ribosylnicotinamide
+  }
+
+  branch from nmn side right {
+    nmn
+    <-> . +nadp +h2o +hplus
+    adenosine_2_5_bisphosphate
+  }
+
+  branch from nicotinamide side left {
+    nicotinamide
+    <-> . +nadp +h2o +hplus
+    adp_d_ribose_2_phosphate
+  }
+
+  branch from nicotinamide side right {
+    nicotinamide
+    <-> . +pi +nad +hplus
+    adp_d_ribose_1_phosphate
+  }
+
+  branch from 4_hydroxybenzoate side left {
+    4_hydroxybenzoate
+    <-> ec_4_1_3_40 [4.1.3.40] +pyruvate
+    chorismate
+  }
+
+  branch from 4_hydroxybenzoate side right {
+    4_hydroxybenzoate
+    <-> ec_2_5_1_93 [2.5.1.93] +gpp +ppi
+    3_geranyl_4_hydroxybenzoate
+  }
+
+  branch from l_aspartate side left {
+    l_aspartate
+    <-> ec_6_3_2_29 [6.3.2.29] +cyanophycin_primer_l_aspartate +h +adp +phosphate +atp
+    cyanophycin_primer
+  }
+
+  branch from l_aspartate side right {
+    l_aspartate
+    <-> . +l_aspartyl_adenylate +h +atp
+    diphosphate
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +9z_12z_octadecadienoate +coa +diphosphate +9z_12z_octadecadienoyl_coa
+    amp
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_3_6_3_21 [3.6.3.21] +h +adp +phosphate +h2o
+    l_lysine
+  }
+
+  branch from h side left {
+    h
+    <-> ec_1_2_1_23 [1.2.1.23] +nadh +r_lactate +r_lactaldehyde +h2o
+    nad
+  }
+
+  branch from h side right {
+    h
+    <-> . +hexadecanoate +core_oligosaccharide_lipid_a +h2o
+    hepta_acylated_core_oligosaccharide_lipid_a
   }
 }

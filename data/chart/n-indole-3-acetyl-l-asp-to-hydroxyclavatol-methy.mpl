@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-indole-3-acetyl-l-asp-to-hydroxyclavatol-methy "N-(indole-3-acetyl)-L-asp… to hydroxyclavatol methyl…" {
-  spacing 254
+  spacing 260
 
   spine at 0,0 {
     n_indole_3_acetyl_l_aspartate
@@ -18,33 +18,39 @@ pathway n-indole-3-acetyl-l-asp-to-hydroxyclavatol-methy "N-(indole-3-acetyl)-L-
     hydroxyclavatol_methyl_ether
   }
 
-  branch from indole_3_acetate side left {
-    indole_3_acetate
-    <-> . +akg +o2 +succinate +co2
-    2_oxindole_3_acetate
+  branch from aspartate side left {
+    aspartate
+    <-> . +nadp +nadph +hplus
+    iminoaspartate
   }
 
   branch from aspartate side right {
     aspartate
-    <-> ec_2_7_2_4 [2.7.2.4] +atp +adp
-    4_phosphonato_l_aspartic_acid
+    <-> . +nk13650_b +atp +adp +pi +hplus
+    nk13650_a
   }
 
-  branch from aspartate side left {
+  branch from n_indole_3_acetyl_l_aspartate side left {
+    n_indole_3_acetyl_l_aspartate
+    <-> . +diphosphate +h +amp +indol_3_yl_acetate +atp
+    l_aspartate
+  }
+
+  branch from aspartate side right {
     aspartate
-    <-> ec_1_4_3_16 [1.4.3.16] +o2 +h2o2
-    iminoaspartate
+    <-> . +3_hydroxy_l_kynurenine +oxaloacetate
+    4_2_amino_3_hydroxyphenyl_2_4_dioxobutanoate
   }
 
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_217 [2.1.1.217] +adenosine_5_monophosphate_1 +sam +hplus
-    n1_methyladenosine_5_monophosphate_1
+  branch from ortho_quinone_methide side left {
+    ortho_quinone_methide
+    <-> . +r_5_methyl_tetronate
+    peniphenone_d
   }
 
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_218 [2.1.1.218] +sam +n1_methyladenosine_5_monophosphate_1 +hplus
-    adenosine_5_monophosphate_1
+  branch from ortho_quinone_methide side right {
+    ortho_quinone_methide
+    <-> . +peniphenone_d +hplus
+    penilactone_a
   }
 }

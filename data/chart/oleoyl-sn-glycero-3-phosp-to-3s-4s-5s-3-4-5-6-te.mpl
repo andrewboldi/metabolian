@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway oleoyl-sn-glycero-3-phosp-to-3s-4s-5s-3-4-5-6-te "oleoyl-sn-glycero-3-phosp… to (3S,4S,5S)-3,4,5,6-tetrah…" {
-  spacing 188
+  spacing 176
 
   spine at 0,0 {
     oleoyl_sn_glycero_3_phosphate
@@ -16,17 +16,5 @@ pathway oleoyl-sn-glycero-3-phosp-to-3s-4s-5s-3-4-5-6-te "oleoyl-sn-glycero-3-ph
     l_glyceraldehyde
     <-> . +3_hydroxypyruvate
     3s_4s_5s_3_4_5_6_tetrahydroxy_2_oxohexanoate
-  }
-
-  branch from oleate side left {
-    oleate
-    <-> . +1_1z_hexadecenyl_2_9z_octadecenoyl_sn_glycero_3 +h2o +hplus
-    1_1z_hexadecenyl_sn_glycero_3_phosphocholine
-  }
-
-  branch from oleate side right {
-    oleate
-    <-> . +1_oleoyl_2_7z_10z_13z_16z_19z_docosapentaenoyl_s +h2o +hplus
-    2_7z_10z_13z_16z_19z_docosapentaenoyl_sn_glycero
   }
 }

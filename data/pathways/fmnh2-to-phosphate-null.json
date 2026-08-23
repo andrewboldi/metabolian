@@ -1,0 +1,494 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "fmnh2-to-phosphate-null",
+  "name": "FMNH2 to phosphate",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from FMNH2 to phosphate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR198726"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1107623"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "3_1_carboxyvinyloxy_anthranilate",
+      "name": "3-(1-carboxyvinyloxy)anthranilate",
+      "short": "3-(1-carboxyvinylox…",
+      "formula": "C10H7NO5",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM4320"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H21N4O9P",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364147"
+      }
+    },
+    {
+      "id": "2s_2_amino_4_deoxychorismate",
+      "name": "(2S)-2-amino-4-deoxychorismate",
+      "short": "2-amino-4-deoxychor…",
+      "formula": "C10H10NO5",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM2042"
+      }
+    },
+    {
+      "id": "glucose",
+      "name": "D-Glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4167"
+      }
+    },
+    {
+      "id": "alpha_d_glucose_1_phosphate",
+      "name": "alpha-D-glucose 1-phosphate",
+      "short": "alpha-D-glucose 1-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1364214"
+      }
+    },
+    {
+      "id": "riboflavin",
+      "name": "riboflavin",
+      "formula": "C17H19N4O6",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM270"
+      }
+    },
+    {
+      "id": "aldehydo_d_glucuronate",
+      "name": "aldehydo-D-glucuronate",
+      "short": "aldehydo-D-glucuron…",
+      "formula": "C6H9O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:142686"
+      }
+    },
+    {
+      "id": "beta_d_glucosyl_1_3_d_glucuronate",
+      "name": "beta-D-glucosyl-(1->3)-D-glucuronate",
+      "short": "beta-D-glucosyl-(1-…",
+      "formula": "C12H19O12",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1559984"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_3_8_16",
+      "name": "2-amino-4-deoxychorismate dehydrogenase",
+      "ec": [
+        "1.3.8.16"
+      ]
+    },
+    {
+      "id": "ec_1_3_99_24",
+      "name": "EC 1.3.99.24",
+      "ec": [
+        "1.3.99.24"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_42",
+      "name": "riboflavin phosphotransferase",
+      "ec": [
+        "2.7.1.42"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_392",
+      "name": "3-O-beta-D-glucopyranosyl-beta-D-glucuronide phosphorylase",
+      "ec": [
+        "2.4.1.392"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2-amino-4-deoxychorismate dehydrogenase",
+      "ec": "1.3.8.16",
+      "substrates": [
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "3_1_carboxyvinyloxy_anthranilate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2s_2_amino_4_deoxychorismate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_8_16"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR198726"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198726"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "riboflavin phosphotransferase",
+      "ec": "2.7.1.42",
+      "substrates": [
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "alpha_d_glucose_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "riboflavin",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_42"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR198706"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198706"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3-O-beta-D-glucopyranosyl-beta-D-glucuronide phosphorylase",
+      "ec": "2.4.1.392",
+      "substrates": [
+        {
+          "metabolite": "alpha_d_glucose_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "aldehydo_d_glucuronate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "beta_d_glucosyl_1_3_d_glucuronate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_392"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR200218"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR200218"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3_1_carboxyvinyloxy_anthranilate_fmnh2-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_1_carboxyvinyloxy_anthranilate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fmnh2-to-phosphate"
+      },
+      "note": "Shares 3-(1-carboxyvinyloxy)anthranilate with FMNH2 to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM4320"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2s_2_amino_4_deoxychorismate_fmnh2-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2s_2_amino_4_deoxychorismate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fmnh2-to-phosphate"
+      },
+      "note": "Shares (2S)-2-amino-4-deoxychorismate with FMNH2 to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2042"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_aldehydo_d_glucuronate_3-hydroxy-7-ethoxycoumarin-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aldehydo_d_glucuronate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxy-7-ethoxycoumarin-to-o2"
+      },
+      "note": "Shares aldehydo-D-glucuronate with 3-Hydroxy-7-ethoxycoumarin to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:142686"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_aldehydo_d_glucuronate_alcohol-glucuronate-to-keto-d-fructuronate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aldehydo_d_glucuronate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alcohol-glucuronate-to-keto-d-fructuronate"
+      },
+      "note": "Shares aldehydo-D-glucuronate with alcohol glucuronate… to keto-D-fructuronate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:142686"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_aldehydo_d_glucuronate_alcohol-glucuronate-to-keto-d-fructuronate-63692",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aldehydo_d_glucuronate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alcohol-glucuronate-to-keto-d-fructuronate-63692"
+      },
+      "note": "Shares aldehydo-D-glucuronate with alcohol glucuronate… to keto-D-fructuronate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:142686"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_aldehydo_d_glucuronate_d-mannonate-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aldehydo_d_glucuronate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-mannonate-to-h2o-null"
+      },
+      "note": "Shares aldehydo-D-glucuronate with D-mannonate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:142686"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_aldehydo_d_glucuronate_fmnh2-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aldehydo_d_glucuronate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fmnh2-to-phosphate"
+      },
+      "note": "Shares aldehydo-D-glucuronate with FMNH2 to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:142686"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_aldehydo_d_glucuronate_maltoheptaose-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aldehydo_d_glucuronate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "maltoheptaose-to-h2o-null"
+      },
+      "note": "Shares aldehydo-D-glucuronate with maltoheptaose to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:142686"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_beta_d_glucosyl_1_3_d_glucuronate_fmnh2-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "beta_d_glucosyl_1_3_d_glucuronate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fmnh2-to-phosphate"
+      },
+      "note": "Shares beta-D-glucosyl-(1->3)-D-glucuronate with FMNH2 to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1559984"
+          }
+        ]
+      }
+    }
+  ]
+}

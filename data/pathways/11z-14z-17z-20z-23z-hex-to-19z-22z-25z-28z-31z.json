@@ -250,6 +250,35 @@
       "xrefs": {
         "chebi": "CHEBI:74260"
       }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "7_9_10_trihydroxy_3_2_oxopropyl_1h_benzo_g_isoch",
+      "name": "7,9,10-trihydroxy-3-(2-oxopropyl)-1H-benzo[g]isochromen-1-one",
+      "short": "7,9,10-trihydroxy-3…",
+      "formula": "C16H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:146009"
+      }
+    },
+    {
+      "id": "tetraacetic_acid_lactone",
+      "name": "tetraacetic acid lactone",
+      "short": "tetraacetic acid…",
+      "formula": "C8H8O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:133952"
+      }
     }
   ],
   "enzymes": [],
@@ -922,6 +951,172 @@
           {
             "db": "Rhea",
             "id": "RHEA:39539"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r17",
+      "name": "7 malonyl-CoA + acetyl-CoA + 7 H(+) = 7,9,10-trihydroxy-3-(2-oxopropyl)-1H-benzo[g]isoc...",
+      "equation": "7 malonyl-CoA + acetyl-CoA + 7 H(+) = 7,9,10-trihydroxy-3-(2-oxopropyl)-1H-benzo[g]isochromen-1-one + 7 CO2 + 8 CoA + 2 H2O",
+      "substrates": [
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 7
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 7
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_9_10_trihydroxy_3_2_oxopropyl_1h_benzo_g_isoch",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 7
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 8
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 17,
+      "xrefs": {
+        "rhea": "RHEA:62860"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62860"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r18",
+      "name": "3 malonyl-CoA + acetyl-CoA + 3 H(+) = tetraacetate lactone + 3 CO2 + 4 CoA",
+      "equation": "3 malonyl-CoA + acetyl-CoA + 3 H(+) = tetraacetate lactone + 3 CO2 + 4 CoA",
+      "substrates": [
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "tetraacetic_acid_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 4
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 18,
+      "xrefs": {
+        "rhea": "RHEA:63064"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63064"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_11z_14z_17z_20z_23z_hexacosapentaenoyl_coa_9z-12z-15z-18z-21z-tetr-to-11z-14z-17z-20z-23z",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11z_14z_17z_20z_23z_hexacosapentaenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "9z-12z-15z-18z-21z-tetr-to-11z-14z-17z-20z-23z"
+      },
+      "note": "Shares (11Z,14Z,17Z,20Z,23Z)-hexacosapentaenoyl-CoA with (9Z,12Z,15Z,18Z,21Z)-tetr… to (11Z,14Z,17Z,20Z,23Z)-hex….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74229"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_19z_22z_25z_28z_31z_tetratriacontapentaenoyl_co_19z-22z-25z-28z-31z-tet-to-23z-26z-29z-32z-35z",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "19z_22z_25z_28z_31z_tetratriacontapentaenoyl_co"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "19z-22z-25z-28z-31z-tet-to-23z-26z-29z-32z-35z"
+      },
+      "note": "Shares (19Z,22Z,25Z,28Z,31Z)-tetratriacontapentaenoyl-CoA with (19Z,22Z,25Z,28Z,31Z)-tet… to (23Z,26Z,29Z,32Z,35Z)-oct….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74260"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_9_10_trihydroxy_3_2_oxopropyl_1h_benzo_g_isoch_7-9-10-trihydroxy-3-2-ox-to-m-viriditoxin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_9_10_trihydroxy_3_2_oxopropyl_1h_benzo_g_isoch"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-9-10-trihydroxy-3-2-ox-to-m-viriditoxin"
+      },
+      "note": "Shares 7,9,10-trihydroxy-3-(2-oxopropyl)-1H-benzo[g]isochromen-1-one with 7,9,10-trihydroxy-3-(2-ox… to (M)-viriditoxin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:146009"
           }
         ]
       }

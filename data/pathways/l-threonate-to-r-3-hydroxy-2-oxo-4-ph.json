@@ -218,6 +218,15 @@
       "xrefs": {
         "chebi": "CHEBI:132139"
       }
+    },
+    {
+      "id": "2_epi_valiolone",
+      "name": "2-epi-valiolone",
+      "formula": "C7H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:131717"
+      }
     }
   ],
   "enzymes": [
@@ -254,7 +263,10 @@
       "name": "transaldolase",
       "ec": [
         "2.2.1.2"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P37837"
+      }
     },
     {
       "id": "ec_1_2_1_72",
@@ -282,6 +294,13 @@
       "name": "demethyl-4-deoxygadusol synthase",
       "ec": [
         "4.2.3.154"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_155",
+      "name": "2-epi-valiolone synthase",
+      "ec": [
+        "4.2.3.155"
       ]
     }
   ],
@@ -742,6 +761,313 @@
           {
             "db": "Rhea",
             "id": "RHEA:49560"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "2-epi-valiolone synthase",
+      "equation": "D-sedoheptulose 7-phosphate = 2-epi-valiolone + phosphate",
+      "ec": "4.2.3.155",
+      "substrates": [
+        {
+          "metabolite": "s7p",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_epi_valiolone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_155"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:49564"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49564"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_l_threonate_l-threonate-to-4-alkanoyl-5-oxo-2-5-dih",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_threonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-threonate-to-4-alkanoyl-5-oxo-2-5-dih"
+      },
+      "note": "Shares L-threonate with L-threonate to (4-alkanoyl-5-oxo-2,5-dih….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57561"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_2_4_dihydroxy_3_oxobutanoate_4-o-phosphonato-d-erythro-to-r-2-4-dihydroxy-3-o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_2_4_dihydroxy_3_oxobutanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-o-phosphonato-d-erythro-to-r-2-4-dihydroxy-3-o"
+      },
+      "note": "Shares (R)-2,4-dihydroxy-3-oxobutanoate with 4-O-phosphonato-D-erythro… to (R)-2,4-dihydroxy-3-oxobu….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57958"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_2_hydroxy_3_oxo_4_phosphonatooxy_butanoate_d-erythronate-to-o-pantetheine-4-phospho",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_2_hydroxy_3_oxo_4_phosphonatooxy_butanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-erythronate-to-o-pantetheine-4-phospho"
+      },
+      "note": "Shares (R)-2-hydroxy-3-oxo-4-(phosphonatooxy)butanoate with D-erythronate to O-(pantetheine-4'-phospho….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:136593"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e4p_2r-2-o-phosphonato-3-su-to-3-dehydroquinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e4p"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2r-2-o-phosphonato-3-su-to-3-dehydroquinate"
+      },
+      "note": "Shares D-Erythrose 4-phosphate with (2R)-2-O-phosphonato-3-su… to 3-dehydroquinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16897"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e4p_aldehydo-d-galactose-to-acetyl-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e4p"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aldehydo-d-galactose-to-acetyl-phosphate"
+      },
+      "note": "Shares D-Erythrose 4-phosphate with aldehydo-D-galactose… to acetyl phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16897"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e4p_d-apiitol-to-nitrate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e4p"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-apiitol-to-nitrate"
+      },
+      "note": "Shares D-Erythrose 4-phosphate with D-apiitol to nitrate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16897"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e4p_d-apiose-to-d-fructofuranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e4p"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-apiose-to-d-fructofuranose"
+      },
+      "note": "Shares D-Erythrose 4-phosphate with D-apiose to β-D-fructofuranose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16897"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e4p_erythritol-to-l-lysinium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e4p"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "erythritol-to-l-lysinium"
+      },
+      "note": "Shares D-Erythrose 4-phosphate with erythritol to L-lysinium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16897"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e4p_fmnh2-to-d-erythrulose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e4p"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fmnh2-to-d-erythrulose"
+      },
+      "note": "Shares D-Erythrose 4-phosphate with FMNH2 to D-erythrulose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16897"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sedoheptulose_1_7_bisphosphate_sedoheptulose-to-2-oxoglutarate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sedoheptulose_1_7_bisphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sedoheptulose-to-2-oxoglutarate"
+      },
+      "note": "Shares sedoheptulose 1,7-bisphosphate with sedoheptulose to 2-oxoglutarate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58335"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s7p_acetylacetone-to-dehydro-coenzyme-f420-0",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s7p"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetylacetone-to-dehydro-coenzyme-f420-0"
+      },
+      "note": "Shares D-Sedoheptulose 7-phosphate with acetylacetone to dehydro coenzyme F420-0.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57483"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s7p_aldehydo-d-galactose-to-acetyl-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s7p"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aldehydo-d-galactose-to-acetyl-phosphate"
+      },
+      "note": "Shares D-Sedoheptulose 7-phosphate with aldehydo-D-galactose… to acetyl phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57483"
           }
         ]
       }

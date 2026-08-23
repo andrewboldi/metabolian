@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-terminal-glycyl-l-lysyl-to-s-adenosyl-l-homocy "N-terminal glycyl-L-lysyl… to S-adenosyl-L-homocysteine" {
-  spacing 164
+  spacing 188
 
   spine at 0,0 {
     n_terminal_glycyl_l_lysyl_l_glutamate_1
@@ -18,13 +18,37 @@ pathway n-terminal-glycyl-l-lysyl-to-s-adenosyl-l-homocy "N-terminal glycyl-L-ly
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_208 [2.1.1.208] +uridine_5_monophosphate_1 +sam +hplus
-    2_o_methyluridine_5_monophosphate_1
+    <-> . +3_desmethyl_okaramine_b +sam +hplus
+    okaramine_b
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_209 [2.1.1.209] +guanosine_5_monophosphate_1 +sam +hplus
-    n1_methylguanosine_5_monophosphate_1
+    <-> . +guanosine_5_monophosphate_1 +sam +hplus
+    n2_methylguanosine_5_monophosphate_1
+  }
+
+  branch from sam side left {
+    sam
+    <-> ec_2_5_1_161 [2.5.1.161] +nad +5_s_methyl_5_thioadenosine +hplus
+    4ar_7s_2_adenosyl_5_diphospho_5_ribosyl_7_amino
+  }
+
+  branch from sam side right {
+    sam
+    <-> . +n2_methylguanosine_5_monophosphate_1 +sah +hplus
+    guanosine_5_monophosphate_1
+  }
+
+  branch from sah side left {
+    sah
+    <-> . +1s_4s_4_4_hydroxyphenyl_methyl_2_5_diazaspiro_b +sam +hplus
+    1s_4s_4_4_methoxyphenyl_methyl_2_5_diazaspiro_b
+  }
+
+  branch from sah side right {
+    sah
+    <-> . +1s_4s_4_4_methoxyphenyl_methyl_2_5_diazaspiro_b +sam +hplus
+    1s_4s_4_4_methoxyphenyl_methyl_2_methyl_2_5_dia
   }
 }

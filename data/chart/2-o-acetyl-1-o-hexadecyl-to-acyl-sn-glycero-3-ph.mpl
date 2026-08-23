@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-o-acetyl-1-o-hexadecyl-to-acyl-sn-glycero-3-ph "2-O-acetyl-1-O-hexadecyl-… to acyl-sn-glycero-3-phospho…" {
-  spacing 158
+  spacing 152
 
   spine at 0,0 {
     2_o_acetyl_1_o_hexadecyl_sn_glycero_3_phosphocho
@@ -14,11 +14,5 @@ pathway 2-o-acetyl-1-o-hexadecyl-to-acyl-sn-glycero-3-ph "2-O-acetyl-1-O-hexadec
     1_hexadecyl_2_hexadecanoyl_sn_glycero_3_phosphoc
     <-> . +choline_alfoscerate +acyl_coa -coa
     acyl_sn_glycero_3_phosphocholine
-  }
-
-  branch from n_acetylsphingosine side left {
-    n_acetylsphingosine
-    <-> . +atp +adp +hplus
-    n_acetylsphingosine_1_phosphate
   }
 }

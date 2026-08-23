@@ -128,81 +128,6 @@
       "xrefs": {
         "chebi": "CHEBI:16240"
       }
-    },
-    {
-      "id": "6_hydroxy_28_norteasterone",
-      "name": "6α-hydroxy-28-norteasterone",
-      "short": "6α-hydroxy-28-norte…",
-      "formula": "C27H48O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:188987"
-      }
-    },
-    {
-      "id": "28_norteasterone",
-      "name": "28-norteasterone",
-      "formula": "C27H46O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:188988"
-      }
-    },
-    {
-      "id": "3_dehydro_6_deoxo_28_norteasterone",
-      "name": "3-dehydro-6-deoxo-28-norteasterone",
-      "short": "3-dehydro-6-deoxo-2…",
-      "formula": "C27H46O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:188989"
-      }
-    },
-    {
-      "id": "6_dehydro_28_norteasterone",
-      "name": "6-dehydro-28-norteasterone",
-      "short": "6-dehydro-28-nortea…",
-      "formula": "C27H44O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:188991"
-      }
-    },
-    {
-      "id": "alpha_d_glucose",
-      "name": "alpha-D-glucose",
-      "formula": "C6H12O6",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1105027"
-      }
-    },
-    {
-      "id": "r_prunasin",
-      "name": "(R)-prunasin",
-      "formula": "C14H17NO6",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM731718"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "WATER"
-      }
-    },
-    {
-      "id": "beta_d_glucose",
-      "name": "beta-D-glucose",
-      "formula": "C6H12O6",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1364060"
-      }
     }
   ],
   "enzymes": [
@@ -218,13 +143,6 @@
       "name": "(R)-mandelonitrile oxidase",
       "ec": [
         "1.1.3.49"
-      ]
-    },
-    {
-      "id": "ec_3_2_1_118",
-      "name": "prunasin beta-glucosidase",
-      "ec": [
-        "3.2.1.118"
       ]
     }
   ],
@@ -424,193 +342,269 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "6alpha-hydroxy-28-norteasterone + reduced [NADPH--hemoprotein reductase] + O2 = 28-nort...",
-      "equation": "6alpha-hydroxy-28-norteasterone + reduced [NADPH--hemoprotein reductase] + O2 = 28-norteasterone + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "6_hydroxy_28_norteasterone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "28_norteasterone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:70119"
+      "id": "xt_n_hydroxy_l_phenylalaninate_3-24r-24-r-fucosterol-to-cobamamide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_hydroxy_l_phenylalaninate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "3-24r-24-r-fucosterol-to-cobamamide"
+      },
+      "note": "Shares N-hydroxy-L-phenylalaninate with (3β,24R,24'R)-fucosterol… to cobamamide.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:70119"
+            "db": "ChEBI",
+            "id": "CHEBI:58726"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "3-dehydro-6-deoxo-28-norteasterone + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = ...",
-      "equation": "3-dehydro-6-deoxo-28-norteasterone + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = 6-dehydro-28-norteasterone + 2 oxidized [NADPH--hemoprotein reductase] + 3 H2O + 2 H(+)",
-      "substrates": [
-        {
-          "metabolite": "3_dehydro_6_deoxo_28_norteasterone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "6_dehydro_28_norteasterone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:70123"
+      "id": "xt_e_phenylacetaldehyde_oxime_24-methylidenelophenol-to-episterol-ester",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_phenylacetaldehyde_oxime"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "24-methylidenelophenol-to-episterol-ester"
+      },
+      "note": "Shares (E)-phenylacetaldehyde oxime with 24-methylidenelophenol to episterol ester.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:70123"
+            "db": "ChEBI",
+            "id": "CHEBI:47793"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "prunasin beta-glucosidase",
-      "ec": "3.2.1.118",
-      "substrates": [
-        {
-          "metabolite": "alpha_d_glucose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "r_mandelonitrile",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "r_prunasin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_2_1_118"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "metanetx": "MNXR192111"
+      "id": "xt_e_phenylacetaldehyde_oxime_25-deacetylrifampicin-to-rifampicin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_phenylacetaldehyde_oxime"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "25-deacetylrifampicin-to-rifampicin"
+      },
+      "note": "Shares (E)-phenylacetaldehyde oxime with 25-Deacetylrifampicin to rifampicin.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR192111"
+            "db": "ChEBI",
+            "id": "CHEBI:47793"
           }
         ]
       }
     },
     {
-      "id": "r8",
-      "name": "prunasin beta-glucosidase",
-      "ec": "3.2.1.118",
-      "substrates": [
-        {
-          "metabolite": "r_mandelonitrile",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "beta_d_glucose",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "r_prunasin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_2_1_118"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "metanetx": "MNXR192542"
+      "id": "xt_e_phenylacetaldehyde_oxime_aci-nitroethane-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_phenylacetaldehyde_oxime"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "aci-nitroethane-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares (E)-phenylacetaldehyde oxime with aci-nitroethane to S-adenosyl-L-homocysteine.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR192542"
+            "db": "ChEBI",
+            "id": "CHEBI:47793"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_phenylacetaldehyde_oxime_e-phenylacetaldehyde-to-2-phenylacetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_phenylacetaldehyde_oxime"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "e-phenylacetaldehyde-to-2-phenylacetate"
+      },
+      "note": "Shares (E)-phenylacetaldehyde oxime with (E)-phenylacetaldehyde… to 2-phenylacetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:47793"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_phenylacetaldehyde_oxime_e-phenylacetaldehyde-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_phenylacetaldehyde_oxime"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "e-phenylacetaldehyde-to-ammonium"
+      },
+      "note": "Shares (E)-phenylacetaldehyde oxime with (E)-phenylacetaldehyde… to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:47793"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_phenylacetaldehyde_oxime_s-hydroxymethyl-glutathi-to-folate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_phenylacetaldehyde_oxime"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-hydroxymethyl-glutathi-to-folate"
+      },
+      "note": "Shares (E)-phenylacetaldehyde oxime with S-(hydroxymethyl)glutathi… to folate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:47793"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_phenylacetaldehyde_oxime_shikimate-to-4-ethyl-2-methoxyphenol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_phenylacetaldehyde_oxime"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "shikimate-to-4-ethyl-2-methoxyphenol"
+      },
+      "note": "Shares (E)-phenylacetaldehyde oxime with shikimate to 4-Ethyl-2-methoxyphenol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:47793"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_mandelonitrile_2-phenylacetamide-to-s-mandelonitrile",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_mandelonitrile"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-phenylacetamide-to-s-mandelonitrile"
+      },
+      "note": "Shares (R)-mandelonitrile with 2-phenylacetamide to (S)-mandelonitrile.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18450"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_mandelonitrile_24-methylidenelophenol-to-episterol-ester",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_mandelonitrile"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "24-methylidenelophenol-to-episterol-ester"
+      },
+      "note": "Shares (R)-mandelonitrile with 24-methylidenelophenol to episterol ester.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18450"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_mandelonitrile_3-hydroxy-3-phenylpropion-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_mandelonitrile"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxy-3-phenylpropion-to-h2o"
+      },
+      "note": "Shares (R)-mandelonitrile with 3-hydroxy-3-phenylpropion… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18450"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_mandelonitrile_r-mandelonitrile-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_mandelonitrile"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-mandelonitrile-to-h2o"
+      },
+      "note": "Shares (R)-mandelonitrile with (R)-mandelonitrile to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18450"
           }
         ]
       }

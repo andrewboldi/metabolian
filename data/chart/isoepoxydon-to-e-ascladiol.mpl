@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway isoepoxydon-to-e-ascladiol "(+)-isoepoxydon to (E)-ascladiol" {
-  spacing 182
+  spacing 212
 
   spine at 0,0 {
     isoepoxydon
@@ -26,27 +26,57 @@ pathway isoepoxydon-to-e-ascladiol "(+)-isoepoxydon to (E)-ascladiol" {
     gentisyl_alcohol
   }
 
-  branch from hydrogen_donor side right {
-    hydrogen_donor
-    <-> . +malonyl-coa +acetyl_coa +hplus +hydrogen_acceptor +co2 +coa +h2o
-    2_4_dihydroxy_6_methylbenzaldehyde
-  }
-
-  branch from hydrogen_donor side left {
-    hydrogen_donor
-    <-> . +o_s_2e_4e_6e_octa_2_4_6_trienyl_pantetheine_4_ph +malonyl-coa +hplus +holo-acp +hydrogen_acceptor +co2 +coa +h2o
-    2_4_dihydroxy_6_3e_5e_7e_2_oxonona_3_5_7_trienyl
-  }
-
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_62 [1.1.1.62] +h +16alpha_hydroxyestrone +nadph
-    16alpha_17beta_estriol
+    <-> ec_1_1_1_113 [1.1.1.113] +h +l_xylono_1_4_lactone +nadph
+    l_xylopyranose
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_4_1_12 [1.4.1.12] +h +2_amino_5_oxohexanoate +nh4 +nadph +h2o
-    2r_5s_2_5_diaminohexanoate
+    <-> ec_1_1_1_21 [1.1.1.21] +s_propane_1_2_diol +h +nadph
+    s_lactaldehyde
+  }
+
+  branch from isoepoxydon side right {
+    isoepoxydon
+    <-> . +h2o
+    2_5_dihydroxybenzaldehyde
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_1_1_39 [3.1.1.39] +actinomyc_d_monolactone +h2o
+    actinomycin_d
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_1_1_6 [3.1.1.6] +acetate +13_o_2_beta_d_glucopyranosyl_beta_d_glucopyranos +h2o
+    13_sophorosyloxydocosanoate_6_6_diacetate
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_1_1_115 [1.1.1.115] +h +d_ribonate +nadp +h2o
+    aldehydo_d_ribose
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_14_13_7 [1.14.13.7] +h +o2 +2_chlorophenol +nadp +h2o
+    3_chlorocatechol
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_14_13_7 [1.14.13.7] +h +3_chlorophenol +o2 +nadph +3_chlorocatechol
+    h2o
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +trans_11_hydroxyjasmonate +h2o +h +o2 +nadph
+    jasmonate
   }
 }

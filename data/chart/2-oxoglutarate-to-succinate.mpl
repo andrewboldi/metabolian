@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-oxoglutarate-to-succinate "2-oxoglutarate to succinate" {
-  spacing 206
+  spacing 152
 
   spine at 0,0 {
     2_oxoglutarate
@@ -14,59 +14,5 @@ pathway 2-oxoglutarate-to-succinate "2-oxoglutarate to succinate" {
     co2
     <-> ec_1_14_11_6 [1.14.11.6] +2_oxoglutarate +5_formyluracil +o2 -co2 -h -succinate
     uracil_5_carboxylate
-  }
-
-  branch from co2 side left {
-    co2
-    <-> . +acetyl_coa +malonyl_coa +h +6_2_4_dihydroxy_6_methylphenyl_4_hydroxypyran_2 +h2o
-    coa
-  }
-
-  branch from co2 side right {
-    co2
-    <-> . +malonyl_coa +anthraniloyl_coa +h +coa
-    4_hydroxy_2_quinolone
-  }
-
-  branch from succinate side left {
-    succinate
-    <-> . +ambiguine_k +co2 +h2o +2_oxoglutarate +h +o2 +chloride
-    ambiguine_l
-  }
-
-  branch from succinate side right {
-    succinate
-    <-> ec_1_14_20_11 [1.14.20.11] +2s_3_1h_indol_3_yl_2_isocyanopropanoate +2_oxoglutarate +h +o2 +co2 +h2o
-    3_z_2_isocyanoethenyl_1h_indole
-  }
-
-  branch from 5_formyluracil side left {
-    5_formyluracil
-    <-> ec_1_14_11_6 [1.14.11.6] +2_oxoglutarate +o2 +co2 +succinate +h2o
-    5_hydroxymethyluracil
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_leucine +l_arginine +l_tyrosine
-    tyrosyl_leucyl_arginine
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_phenylalanine +l_tyrosine
-    tyrosyl_phenylalanyl_tyrosine
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +1_2_dipalmitoyl_sn_glycero_3_phospho_1_sn_glycer +phosphate +1_2_dipalmitoyl_sn_glycero_3_phospho_1_sn_glycer +h2o
-    atp
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    16_0_t16_1_pg
   }
 }

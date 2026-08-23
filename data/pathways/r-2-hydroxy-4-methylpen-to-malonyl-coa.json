@@ -396,6 +396,91 @@
       "xrefs": {
         "chebi": "CHEBI:142802"
       }
+    },
+    {
+      "id": "pivaloyl_coa",
+      "name": "pivaloyl-CoA",
+      "formula": "C26H40N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:136712"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "2_hydroxyisovaleryl_coa",
+      "name": "2-hydroxyisovaleryl-CoA",
+      "short": "2-hydroxyisovaleryl…",
+      "formula": "C26H40N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:138296"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    },
+    {
+      "id": "biotinyl_5_amp",
+      "name": "biotinyl-5'-AMP",
+      "formula": "C20H27N7O9PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:62414"
+      }
+    },
+    {
+      "id": "anthocyanidin_3_o_d_glucoside",
+      "name": "anthocyanidin 3-O-β-D-glucoside",
+      "short": "anthocyanidin…",
+      "formula": "C21H19O10R2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:16307"
+      }
+    },
+    {
+      "id": "anthocyanidin_3_o_6_o_malonyl_d_glucoside_betain",
+      "name": "anthocyanidin 3-O-(6-O-malonyl-β-D-glucoside) betaine",
+      "short": "anthocyanidin…",
+      "formula": "C24H20O13R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:84163"
+      }
+    },
+    {
+      "id": "anthranilate",
+      "name": "anthranilate",
+      "formula": "C7H6NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16567"
+      }
+    },
+    {
+      "id": "n_malonylanthranilate",
+      "name": "N-malonylanthranilate",
+      "short": "N-malonylanthranila…",
+      "formula": "C10H7NO5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16872"
+      }
     }
   ],
   "enzymes": [
@@ -418,7 +503,10 @@
       "name": "isovaleryl-CoA dehydrogenase",
       "ec": [
         "1.3.8.4"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P26440"
+      }
     },
     {
       "id": "ec_6_3_4_14",
@@ -453,20 +541,40 @@
       "name": "biotin--[methylmalonyl-CoA-carboxytransferase] ligase",
       "ec": [
         "6.3.4.9"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P50747"
+      }
     },
     {
       "id": "ec_6_3_4_11",
       "name": "biotin--[methylcrotonoyl-CoA-carboxylase] ligase",
       "ec": [
         "6.3.4.11"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P50747"
+      }
     },
     {
       "id": "ec_2_3_1_95",
       "name": "trihydroxystilbene synthase",
       "ec": [
         "2.3.1.95"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_171",
+      "name": "anthocyanin 6''-O-malonyltransferase",
+      "ec": [
+        "2.3.1.171"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_113",
+      "name": "anthranilate N-malonyltransferase",
+      "ec": [
+        "2.3.1.113"
       ]
     }
   ],
@@ -1204,6 +1312,483 @@
           {
             "db": "Rhea",
             "id": "RHEA:12060"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r16",
+      "name": "3-methylbutanoyl-CoA = 2,2-dimethylpropanoyl-CoA",
+      "equation": "3-methylbutanoyl-CoA = 2,2-dimethylpropanoyl-CoA",
+      "substrates": [
+        {
+          "metabolite": "isovaleryl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pivaloyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 16,
+      "xrefs": {
+        "rhea": "RHEA:52620"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52620"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r17",
+      "name": "3-methylbutanoyl-CoA + 2-oxoglutarate + O2 = 2-hydroxy-3-methylbutanoyl-CoA + succinate...",
+      "equation": "3-methylbutanoyl-CoA + 2-oxoglutarate + O2 = 2-hydroxy-3-methylbutanoyl-CoA + succinate + CO2",
+      "substrates": [
+        {
+          "metabolite": "isovaleryl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxyisovaleryl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 17,
+      "xrefs": {
+        "rhea": "RHEA:54612"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54612"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r18",
+      "name": "biotinyl-5'-AMP + L-lysyl-[protein] = N(6)-biotinyl-L-lysyl-[protein] + AMP + 2 H(+)",
+      "equation": "biotinyl-5'-AMP + L-lysyl-[protein] = N(6)-biotinyl-L-lysyl-[protein] + AMP + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "biotinyl_5_amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "biotinyl_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 18,
+      "xrefs": {
+        "rhea": "RHEA:59732"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59732"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r19",
+      "name": "anthocyanin 6''-O-malonyltransferase",
+      "equation": "an anthocyanidin 3-O-beta-D-glucoside + malonyl-CoA = an anthocyanidin 3-O-(6-O-malonyl-beta-D-glucoside) + CoA",
+      "ec": "2.3.1.171",
+      "substrates": [
+        {
+          "metabolite": "anthocyanidin_3_o_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "anthocyanidin_3_o_6_o_malonyl_d_glucoside_betain",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_171"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 19,
+      "xrefs": {
+        "rhea": "RHEA:16025"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16025"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r20",
+      "name": "anthranilate N-malonyltransferase",
+      "equation": "anthranilate + malonyl-CoA = N-malonylanthranilate + CoA",
+      "ec": "2.3.1.113",
+      "substrates": [
+        {
+          "metabolite": "anthranilate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_malonylanthranilate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_113"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 20,
+      "xrefs": {
+        "rhea": "RHEA:17557"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17557"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_r_2_hydroxy_4_methylpentanoate_2r-3s-3-isopropylmalate-to-neomycin-c",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_2_hydroxy_4_methylpentanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2r-3s-3-isopropylmalate-to-neomycin-c"
+      },
+      "note": "Shares (R)-2-hydroxy-4-methylpentanoate with (2R,3S)-3-isopropylmalate to neomycin C.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:55535"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_2_hydroxy_4_methylpentanoate_nadh-to-4-methylpent-2-enoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_2_hydroxy_4_methylpentanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-4-methylpent-2-enoyl-coa"
+      },
+      "note": "Shares (R)-2-hydroxy-4-methylpentanoate with NADH to 4-methylpent-2-enoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:55535"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_r_2_hydroxy_4_methylpentanoate_r-2-hydroxy-4-methylpen-to-5-3-carboxylato-3-ox",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "r_2_hydroxy_4_methylpentanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-2-hydroxy-4-methylpen-to-5-3-carboxylato-3-ox"
+      },
+      "note": "Shares (R)-2-hydroxy-4-methylpentanoate with (R)-2-hydroxy-4-methylpen… to 5-(3-carboxylato-3-oxopro….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:55535"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_isovaleryl_coa_2r-3s-3-isopropylmalate-to-neomycin-c",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isovaleryl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2r-3s-3-isopropylmalate-to-neomycin-c"
+      },
+      "note": "Shares Isovaleryl-CoA with (2R,3S)-3-isopropylmalate to neomycin C.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57345"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_isovaleryl_coa_isovaleryl-coa-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isovaleryl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isovaleryl-coa-to-coa"
+      },
+      "note": "Shares Isovaleryl-CoA with isovaleryl-CoA to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57345"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_isovaleryl_coa_r-dihydrolipoate-to-n6-r-s8-isopentanoyldi",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isovaleryl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-dihydrolipoate-to-n6-r-s8-isopentanoyldi"
+      },
+      "note": "Shares Isovaleryl-CoA with (R)-dihydrolipoate to N6-[(R)-S8-isopentanoyldi….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57345"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_methylcrotonyl_coa_l-arogenate-to-trans-3-methylglutaconyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "methylcrotonyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-arogenate-to-trans-3-methylglutaconyl"
+      },
+      "note": "Shares 3-Methylcrotonyl-CoA with L-arogenate to trans-3-methylglutaconyl-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57344"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_carboxybiotinyl_l_lysine_1_biotin-amide-to-4-hydroxy-5-methyl-6-pent",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "carboxybiotinyl_l_lysine_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "biotin-amide-to-4-hydroxy-5-methyl-6-pent"
+      },
+      "note": "Shares carboxybiotinyl-L-lysine(1−) with biotin amide to 4-hydroxy-5-methyl-6-pent….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83145"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_methylglutaconyl_coa_l-arogenate-to-trans-3-methylglutaconyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "methylglutaconyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-arogenate-to-trans-3-methylglutaconyl"
+      },
+      "note": "Shares 3-Methylglutaconyl-CoA with L-arogenate to trans-3-methylglutaconyl-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57346"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_biotinyl_l_lysine_biotin-amide-to-4-hydroxy-5-methyl-6-pent",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "biotinyl_l_lysine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "biotin-amide-to-4-hydroxy-5-methyl-6-pent"
+      },
+      "note": "Shares biotinyl-L-lysine with biotin amide to 4-hydroxy-5-methyl-6-pent….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83144"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_biotinyl_l_lysine_biotinate-sulfoxide-to-l-lysinium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "biotinyl_l_lysine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "biotinate-sulfoxide-to-l-lysinium"
+      },
+      "note": "Shares biotinyl-L-lysine with biotinate sulfoxide to L-lysinium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83144"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_leucine_l-leucyl-o-isoindolinone-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_leucine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-leucyl-o-isoindolinone-to-hydrogen-donor"
+      },
+      "note": "Shares D-leucine with L-leucyl-(O-isoindolinone… to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:143079"
           }
         ]
       }

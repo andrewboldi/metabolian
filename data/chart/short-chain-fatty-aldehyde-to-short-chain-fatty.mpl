@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway short-chain-fatty-aldehyde-to-short-chain-fatty "short-chain fatty aldehyde to short-chain fatty acid…" {
-  spacing 258
+  spacing 246
 
   spine at 0,0 {
     short_chain_fatty_aldehyde
@@ -20,17 +20,5 @@ pathway short-chain-fatty-aldehyde-to-short-chain-fatty "short-chain fatty aldeh
     short_chain_fatty_acyl_coa
     <-> . +acetyl_coa +coa
     short_chain_3_oxoacyl_coa
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> ec_2_7_7_108 [2.7.7.108] +l_tyrosine +atp
-    o_adenyl_l_tyrosine_1
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> ec_2_7_7_108 [2.7.7.108] +l_threonine +atp
-    o_adenyl_l_threonine_1
   }
 }

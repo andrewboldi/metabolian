@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dtdp-3-azaniumyl-3-4-6-tr-to-di-sulfido-diiron "dTDP-3-azaniumyl-3,4,6-tr… to di-μ-sulfido-diiron" {
-  spacing 296
+  spacing 340
 
   spine at 0,0 {
     dtdp_3_azaniumyl_3_4_6_trideoxy_d_glucose
@@ -18,37 +18,85 @@ pathway dtdp-3-azaniumyl-3-4-6-tr-to-di-sulfido-diiron "dTDP-3-azaniumyl-3,4,6-t
 
   branch from sah side left {
     sah
-    <-> . +c30_botryococcene +sam +hplus
-    3_methyl_1_2_didehydro_2_3_dihydrobotryococcene
+    <-> ec_2_1_1_42 [2.1.1.42] +3_hydroxyflavonoid +sam +hplus
+    3_methoxyflavones
   }
 
   branch from sah side right {
     sah
-    <-> . +20_methyl_21_22_didehydro_20_21_dihydrobotryococ +sam +hplus
-    3_20_dimethyl_1_2_21_22_tetradehydro_2_3_20_21_t
-  }
-
-  branch from 10_deoxymethymycin side left {
-    10_deoxymethymycin
-    <-> ec_1_14_15_33 [1.14.15.33] +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
-    neomethymycin
-  }
-
-  branch from 10_deoxymethymycin side right {
-    10_deoxymethymycin
-    <-> ec_1_14_15_33 [1.14.15.33] +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
-    novamethymycin
+    <-> ec_2_1_1_267 [2.1.1.267] +5_hydroxy_3_methoxyflavone +sam +hplus
+    3_5_dimethoxyflavone
   }
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_14_15_33 [1.14.15.33] +narbomycin +di_sulfido_diiron +o2 +hplus +h2o
-    pikromycin
+    <-> . +cryptoxanthin +di_sulfido_diiron +o2 +hplus +h2o
+    3s_5r_6s_cryptoxanthin_5_6_epoxide
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_14_15_35 [1.14.15.35] +6_deoxyerythronolide_b +di_sulfido_diiron +o2 +hplus +h2o
-    erythronolide_b
+    <-> . +20s_23_dihydroxyvitamin_d3 +di_sulfido_diiron +o2 +hplus +h2o
+    20s_23_24_trihydroxyvitamin_d3
+  }
+
+  branch from sam side left {
+    sam
+    <-> . +adenosine_5_monophosphate_1 +sah +hplus
+    n1_methyladenosine_5_monophosphate_1
+  }
+
+  branch from sam side right {
+    sam
+    <-> . +norbaeocystin +sah +hplus
+    baeocystin
+  }
+
+  branch from sah side left {
+    sah
+    <-> . +baeocystin +sam +hplus
+    psilocybin
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_348 [2.1.1.348] +adenosine_5_monophosphate_1 +sam +hplus
+    n6_methyladenosine_5_monophosphate_1
+  }
+
+  branch from 10_deoxymethynolide side left {
+    10_deoxymethynolide
+    <-> ec_2_3_1_239 [2.3.1.239] +malonyl-coa +nadph +hplus +co2 +nadp +coa +h2o
+    s_methylmalonyl_coa
+  }
+
+  branch from 10_deoxymethynolide side right {
+    10_deoxymethynolide
+    <-> . +malonyl_coa +methylmalonyl_coa +h +nadph +nadp +coa +h2o
+    co2
+  }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> . +20s_23_dihydroxyvitamin_d3 +o2 +hplus +di_sulfido_diiron +h2o
+    20s_23_25_trihydroxyvitamin_d3
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_14_19_53 [1.14.19.53] +all_trans_retinol +o2 +hplus +di_sulfido_diiron +h2o
+    all_trans_3_4_didehydroretinol
+  }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> . +all_trans_retinol +di_sulfido_diiron +o2 +hplus +h2o
+    all_trans_4_hydroxyretinol
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_14_15_19 [1.14.15.19] +testosterone +di_sulfido_diiron +o2 +hplus +h2o
+    1_hydroxytestosterone
   }
 }

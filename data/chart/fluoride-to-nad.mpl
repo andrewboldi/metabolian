@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway fluoride-to-nad "fluoride to NAD" {
-  spacing 252
+  spacing 340
 
   spine at 0,0 {
     fluoride
@@ -18,61 +18,157 @@ pathway fluoride-to-nad "fluoride to NAD" {
 
   branch from h2o side left {
     h2o
-    <-> ec_3_4_19_16 [3.4.19.16] +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +l_glutamate
-    z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa
+    <-> ec_2_3_2_2 [2.3.2.2] +l_alpha_methyl_gamma_glutamyl_l_alpha_aminobutyr +2s_2_aminobutanoate
+    l_alpha_methyl_glutamate
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_4_19_16 [3.4.19.16] +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +l_glutamate
-    z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa
+    <-> . +acetylpyruvate
+    2_oxo_3_pentynoate
   }
 
   branch from h side left {
     h
-    <-> . +adenosine_3_5_bisphosphate +24_epicathasterone_3_o_sulfate +24_epicathasterone
-    3_phosphoadenylyl_sulfate
+    <-> ec_3_5_1_14 [3.5.1.14] +acetate +l_serine +h2o
+    n_acetyl_dl_serine
   }
 
   branch from h side right {
     h
-    <-> ec_2_3_1_74 [2.3.1.74] +malonyl_coa +dihydro_4_coumaroyl_coa +phloretin +coa
-    co2
+    <-> ec_3_5_1_14 [3.5.1.14] +l_proline +acetate +h2o
+    n_acetyl_l_proline
   }
 
   branch from atp side left {
     atp
-    <-> . +cytosinine +3s_beta_arginine +h +adp +phosphate
-    demethylblasticidin_s
+    <-> . +h +adp +phosphate +h2o
+    fe_iii_hydroxamate
   }
 
   branch from atp side right {
     atp
-    <-> . +histidyltryptophyldiketopiperazine +diphosphate +h +amp +l_tryptophan
-    l_histidine
+    <-> . +h +adp +phosphate +h2o
+    ferrichrome
   }
 
   branch from coa side left {
     coa
-    <-> . +3_oxotetradecanoyl_coa +h2o
-    3_oxotetradecanoic_acid
+    <-> ec_2_3_1_51 [2.3.1.51] +1_11z_octadecenoyl_sn_glycero_3_phosphate +h +11z_octadecenoyl_coa
+    pa_18_1_11z_18_1_11z
   }
 
   branch from coa side right {
     coa
-    <-> . +acetyl_coa +l_ornithine +h
-    n5_acetyl_l_ornithine
+    <-> . +h +13e_tetranor_16_carboxy_lte4 +h2o
+    13e_tetranor_16_oxo_16_coa_lte4
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +thujan_3_one
-    thujan_3_ol
+    <-> ec_1_1_1_122 [1.1.1.122] +nadh +l_arabino_1_5_lactone +h
+    l_arabinopyranose
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +2s_3r_2_amino_3_methyl_4_ketopentanoate
-    4s_4_hydroxy_l_isoleucine
+    <-> ec_1_17_1_8 [1.17.1.8] +nadh +h +2_3_dihydrodipicolinate
+    2_3_4_5_tetrahydrodipicolinate
+  }
+
+  branch from fluoride side left {
+    fluoride
+    <-> . +trans_4_carboxymethylenebut_2_en_4_olide
+    5_fluoromuconolactone
+  }
+
+  branch from fluoride side right {
+    fluoride
+    <-> ec_3_1_1_45 [3.1.1.45] +h +5_fluoromuconolactone +h2o
+    maleylacetate
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_5_1_14 [3.5.1.14] +l_threonine +acetate +h2o
+    n_acetyl_l_threonine
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_5_3_1 [3.5.3.1] +urea +4_amino_2_nitrophenylacetate +h2o
+    4_guanidino_2_nitrophenylacetate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_3_2_9 [3.3.2.9] +1_chloroethenyl_oxirane
+    3_chloro_3_butene_1_2_diol
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_3_2_6 [3.3.2.6] +l_leucine +4_nitroaniline
+    l_leucinyl_p_nitroanilide
+  }
+
+  branch from diphosphate side left {
+    diphosphate
+    <-> . +3_7_11_eudesmadiene
+    2e_6e_farnesyl_diphosphate
+  }
+
+  branch from diphosphate side right {
+    diphosphate
+    <-> . +2e_6e_farnesyl_diphosphate
+    longicyclene
+  }
+
+  branch from amp side left {
+    amp
+    <-> . +7z_hexadecenoyl_coa +diphosphate +h +atp +coa
+    7_palmitoleic_acid
+  }
+
+  branch from amp side right {
+    amp
+    <-> . +diphosphate +trans_9_octadecenoyl_coa +atp +coa
+    9e_octadecenoate
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    glycerophosphoserine
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    11_deoxycortisol
+  }
+
+  branch from coa side left {
+    coa
+    <-> . +kaempferol_3_o_4_6_o_di_4_coumaroyl_glucoside +tribuloside
+    trans_4_coumaroyl_coa
+  }
+
+  branch from coa side right {
+    coa
+    <-> . +quercetin_3_o_4_o_4_coumaroyl_glucoside +trans_4_coumaroyl_coa +h
+    quercetin_3_o_d_glucopyranoside
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> ec_1_1_1_146 [1.1.1.146] +h +3alpha_21_dihydroxy_5beta_pregnane_11_20_dione +nad
+    tetrahydrocorticosterone
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +2_oxoglutaramate +h +1_amino_1_deoxy_scyllo_inositol +l_glutamine +nad
+    myo_inositol
   }
 }

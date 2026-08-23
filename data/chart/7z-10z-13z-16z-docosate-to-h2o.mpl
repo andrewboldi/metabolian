@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 7z-10z-13z-16z-docosate-to-h2o "(7Z,10Z,13Z,16Z)-docosate… to H2O" {
-  spacing 206
+  spacing 152
 
   spine at 0,0 {
     7z_10z_13z_16z_docosatetraenoyl_coa
@@ -14,59 +14,5 @@ pathway 7z-10z-13z-16z-docosate-to-h2o "(7Z,10Z,13Z,16Z)-docosate… to H2O" {
     4z_7z_10z_13z_16z_docosapentaenoate
     <-> . +h +adp +phosphate -4z_7z_10z_13z_16z_docosapentaenoate -h2o
     atp
-  }
-
-  branch from 4z_7z_10z_13z_16z_docosapentaenoyl_coa side left {
-    4z_7z_10z_13z_16z_docosapentaenoyl_coa
-    <-> . +amp +4z_7z_10z_13z_16z_docosapentaenoate +atp +coa
-    diphosphate
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    sm_d18_0_24_1_sphingomyelin
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    sm_d18_1_14_0_sphingomyelin
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +r_carnitine +3r_3_hydroxybutanoyl_coa
-    3_hydroxybutyrylcarnitine
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +r_carnitine +2e_2_methylbut_2_enoyl_coa
-    o_tiglylcarnitine
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    sm_d18_1_15_0_sphingomyelin
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    sm_d18_1_16_1_sphingomyelin
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    sm_d18_1_16_0_sphingomyelin
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    sm_d18_1_17_0_sphingomyelin
   }
 }

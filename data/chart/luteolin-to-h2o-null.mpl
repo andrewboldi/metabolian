@@ -4,93 +4,15 @@
 # edit the generator, not this file.
 
 pathway luteolin-to-h2o-null "luteolin to H2O" {
-  spacing 254
+  spacing 196
 
   spine at 0,0 {
     luteolin
-    <-> ec_1_14_11_23 [1.14.11.23] +co2 +h +succinate +h2o -2_oxoglutarate -o2
-    2r_3r_dihydrokaempferol
-    <-> ec_1_14_11_19 [1.14.11.19] +co2 +succinate +h2o -2r_3s_4s_3_4_leucopelargonidin -o2
-    2_oxoglutarate
-    <-> ec_1_17_1_3 [1.17.1.3] +h +2r_3s_4s_3_4_leucopelargonidin +nadph -afzelechin -h2o
-    nadp
-  }
-
-  branch from 2r_3r_dihydrokaempferol side left {
-    2r_3r_dihydrokaempferol
-    <-> ec_1_14_13_21 [1.14.13.21] +h +o2 +nadph +nadp +h2o
-    2r_3r_dihydroquercetin
-  }
-
-  branch from 2r_3r_dihydrokaempferol side right {
-    2r_3r_dihydrokaempferol
-    <-> ec_1_14_13_88 [1.14.13.88] +h +o2 +nadph +nadp +h2o
-    2r_3r_dihydromyricetin
-  }
-
-  branch from 2_oxoglutarate side left {
-    2_oxoglutarate
-    <-> ec_1_14_11_22 [1.14.11.22] +s_pinocembrin +o2 +co2 +succinate +h2o
-    chrysin
-  }
-
-  branch from 2_oxoglutarate side right {
-    2_oxoglutarate
-    <-> . +h +3_5_dihydroxy_3_4_7_trimethoxyflavone +o2 +co2 +succinate
-    oxyayanin_b
-  }
-
-  branch from o2 side left {
-    o2
-    <-> ec_1_13_11_12 [1.13.11.12] +9z_12z_octadecadienoate +h
-    hydroperoxylinoleic_acid
-  }
-
-  branch from o2 side right {
-    o2
-    <-> ec_1_14_99_1 [1.14.99.1] +prostaglandin_g2
-    prostaglandin_h2
-  }
-
-  branch from 2r_3s_4s_3_4_leucopelargonidin side left {
-    2r_3s_4s_3_4_leucopelargonidin
-    <-> ec_1_14_11_19 [1.14.11.19] +2_oxoglutarate +o2 +co2 +h +succinate +h2o
-    pelargonidin
-  }
-
-  branch from 2r_3s_4s_3_4_leucopelargonidin side right {
-    2r_3s_4s_3_4_leucopelargonidin
-    <-> . +2_oxoglutarate +o2 +co2 +succinate +h2o
-    4s_2_3_dehydroleucopelargonidin
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_184 [1.1.1.184] +h +trichloroacetate +nadph
-    chloral_hydrate
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_1_1_184 [1.1.1.184] +ethyl_2_hydroxyisovalerate +h +nadph
-    ethyl_3_methyl_2_oxobutanoate
-  }
-
-  branch from afzelechin side left {
-    afzelechin
-    <-> ec_1_3_1_77 [1.3.1.77] +nadh +pelargonidin +h
-    nad
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_1_4_1_20 [1.4.1.20] +nadh +4_ethylthio_2_oxobutanoate +nh4 +nad
-    l_ethionine
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_4_2_1_84 [4.2.1.84] +methylacrylonitrile
-    methacrylamide
+    <-> ec_2_1_1_155 [2.1.1.155] +s_adenosyl_l_methionine -h -kaempferide
+    s_adenosyl_l_homocysteine
+    <-> ec_2_1_1_155 [2.1.1.155] +h +kaempferide -kaempferol
+    s_s_adenosyl_l_methionine
+    <-> ec_3_2_1_62 [3.2.1.62] +glucose +kaempferol -h2o
+    kaempferol_3_o_beta_d_glucoside
   }
 }

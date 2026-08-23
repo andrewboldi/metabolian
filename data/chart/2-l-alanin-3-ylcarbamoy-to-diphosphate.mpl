@@ -15,16 +15,4 @@ pathway 2-l-alanin-3-ylcarbamoy-to-diphosphate "2-[(L-alanin-3-ylcarbamoy… to 
     <-> ec_6_3_2_56 [6.3.2.56] +akg +atp -amp -ppi -hplus
     staphyloferrin_b
   }
-
-  branch from ppi side left {
-    ppi
-    <-> . +amikacin +ctp
-    4_cytidylylamikacin
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +amikacin +utp
-    4_uridylylamikacin
-  }
 }

@@ -4,101 +4,159 @@
 # edit the generator, not this file.
 
 pathway l-glutamate-5-semialdehyde-to-h2o-null "L-glutamate 5-semialdehyde to H2O" {
-  spacing 252
+  spacing 290
 
   spine at 0,0 {
     l_glutamate_5_semialdehyde
-    <-> ec_2_6_1_13 [2.6.1.13] +glycine -l_ornithine
-    glyoxylate
-    <-> ec_1_1_99_14 [1.1.99.14] +fadh2 +h -glycolate
+    <-> . +l_glutamate -h -ornithine
+    2_oxoglutarate
+    <-> . +h +ornithine -l_glutamate
+    5_amino_2_oxopentanoate
+    <-> . -h2o
+    1_pyrroline_2_carboxylate
+    <-> . +fadh2 +h -d_proline
     fad
-    <-> . +ubiquinone_8 +glycolate -glyoxylate
-    ubiquinol_8
-    <-> . +nitrite +h -nh4 -h2o
-    ubiquinone_8
+    <-> ec_1_21_4_1 [1.21.4.1] +r_dihydrolipoate +d_proline -5_aminopentanoate
+    r_lipoate
+    <-> . +h +na +adp +phosphate -r_lipoate -atp -h2o
+    na
   }
 
-  branch from glyoxylate side left {
-    glyoxylate
-    <-> . +h +glutathione +chloride +h2o
-    s_alpha_chlorocarboxymethyl_glutathione
+  branch from h side left {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    1_dihomo_linolenoylglycerophosphocholine_20_3_de
   }
 
-  branch from glyoxylate side right {
-    glyoxylate
-    <-> ec_4_1_3_1 [4.1.3.1] +succinate
-    isocitrate
+  branch from h side right {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    1_eicosapentenoylglycerophosphocholine_delta_5_8
   }
 
-  branch from l_ornithine side left {
-    l_ornithine
-    <-> ec_2_6_1_13 [2.6.1.13] +l_glutamate_5_semialdehyde +l_alanine
-    pyruvate
-  }
-
-  branch from l_ornithine side right {
-    l_ornithine
-    <-> ec_2_6_1_13 [2.6.1.13] +l_glutamate_5_semialdehyde +l_tyrosine
-    3_4_hydroxyphenyl_pyruvate
-  }
-
-  branch from fad side left {
-    fad
-    <-> . +fadh2 +2_6_dichlorobenzoquinone +h
-    2_6_dichloro_4_hydroxyphenolate
-  }
-
-  branch from fad side right {
-    fad
-    <-> . +thca_coa_25r +fadh2 +h
-    24e_3_7_12_trihydroxy_5_cholest_24_en_26_oyl_co
-  }
-
-  branch from ubiquinol_8 side left {
-    ubiquinol_8
-    <-> ec_1_1_5_6 [1.1.5.6] +ubiquinone_8 +h +formate
-    co2
-  }
-
-  branch from ubiquinol_8 side right {
-    ubiquinol_8
-    <-> ec_1_10_3_11 [1.10.3.11] +ubiquinone_8 +h2o
-    o2
-  }
-
-  branch from ubiquinone_8 side left {
-    ubiquinone_8
-    <-> . +l_aspartate +ubiquinol_8 +h
-    iminoaspartate
-  }
-
-  branch from ubiquinone_8 side right {
-    ubiquinone_8
-    <-> . +l_aspartate +ubiquinol_8
-    iminoaspartate
-  }
-
-  branch from nh4 side left {
-    nh4
-    <-> . +h +amicoumacin_a
-    amicoumacin_c
-  }
-
-  branch from nh4 side right {
-    nh4
-    <-> ec_3_4_11_1 [3.4.11.1] +l_leucine +h +h2o
-    l_leucinamide
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_histidine +l_lysine +l_threonine
-    histidyl_lysyl_threonine
+  branch from 1_pyrroline_2_carboxylate side left {
+    1_pyrroline_2_carboxylate
+    <-> . +ubiquinol_9 +d_proline
+    ubiquinone_9
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_histidine +l_glutamine +l_methionine
-    histidyl_methionyl_glutamine
+    <-> . +h +adp +phosphate +atp
+    1_docosatetraenoylglycerophosphocholine_delta_7
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +h +adp +phosphate +atp
+    1_docosapentenoylglycerophosphocholine_delta_4_7
+  }
+
+  branch from fad side right {
+    fad
+    <-> . +dodecanoyl_coa +nadh +acetyl_coa +fadh2 +h +coa +nad +h2o
+    tetradecanoyl_coa
+  }
+
+  branch from fad side left {
+    fad
+    <-> . +nadh +acetyl_coa +fadh2 +h +coa +nad +h2o
+    hexadecanoyl_coa
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    1_docosapentenoylglycerophosphocholine_delta_7_1
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    pc_16_1_9e_0_0
+  }
+
+  branch from h side right {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    1_pentadecanoylglycerophosphoethanolamine_c15_0
+  }
+
+  branch from h side left {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    1_hexadecenoylglycerophosphoethanolamine_c16_1_p
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +h +adp +phosphate +atp
+    1_eicosatrienoylglycerophosphoethanolamine_delta
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +h +adp +phosphate +atp
+    2_linoleoylglycerophosphoethanolamine
+  }
+
+  branch from fadh2 side right {
+    fadh2
+    <-> . +nadh +acetyl_coa +tetradecanoyl_coa +h +hexadecanoyl_coa +fad +nad +h2o
+    coa
+  }
+
+  branch from fadh2 side left {
+    fadh2
+    <-> . +octanoyl_coa +nadh +acetyl_coa +h +hexadecanoyl_coa +fad +coa +h2o
+    nad
+  }
+
+  branch from fad side right {
+    fad
+    <-> . +octanoyl_coa +nadh +acetyl_coa +fadh2 +h +coa +nad +h2o
+    2e_hexadecenoyl_coa
+  }
+
+  branch from fad side left {
+    fad
+    <-> . +octanoyl_coa +nadh +acetyl_coa +fadh2 +h +coa +nad +h2o
+    9z_hexadecenoyl_coa
+  }
+
+  branch from adp side right {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    1_dihomo_linolenoylglycerophosphoethanolamine_20
+  }
+
+  branch from adp side left {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    1_2_distearoylphosphatidylethanolamine
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    3_2_aminoethoxy_hydroxy_phosphoryl_oxy_2_hydrox
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    2_azaniumylethyl_2_hydroxy_3_octadec_9_enoyloxyp
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    1_palmitoylglycerophosphocholine
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    protoheme
   }
 }

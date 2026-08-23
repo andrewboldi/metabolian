@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-acyl-sn-glycero-3-phosp-to-s-adenosyl-l-homocy "1-acyl-sn-glycero-3-phosp… to S-adenosyl-L-homocysteine" {
-  spacing 264
+  spacing 252
 
   spine at 0,0 {
     1_acyl_sn_glycero_3_phospho_1d_myo_inositol
@@ -14,17 +14,5 @@ pathway 1-acyl-sn-glycero-3-phosp-to-s-adenosyl-l-homocy "1-acyl-sn-glycero-3-ph
     myo_inositol
     <-> ec_2_1_1_129 [2.1.1.129] +sam -sah -hplus
     1d_4_o_methyl_myo_inositol
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +esculetin +sam +hplus
-    scopoletin
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +isoscopoletin +sam +hplus
-    scoparone
   }
 }

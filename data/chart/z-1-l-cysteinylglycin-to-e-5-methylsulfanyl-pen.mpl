@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway z-1-l-cysteinylglycin-to-e-5-methylsulfanyl-pen "(Z)-1-(L-cysteinylglycin-… to (E)-5-(methylsulfanyl)pen…" {
-  spacing 302
+  spacing 224
 
   spine at 0,0 {
     z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth
@@ -21,16 +21,4 @@ pathway z-1-l-cysteinylglycin-to-e-5-methylsulfanyl-pen "(Z)-1-(L-cysteinylglyci
     <-> . +hplus -co2 -h2o
     e_5_methylsulfanyl_pentanal_oxime
   }
-
-
-
-
-
-
-
-
-
-
-
-
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway octanoyl-coa-to-2r-3s-homoisocitrate "octanoyl-CoA to (2R,3S)-homoisocitrate" {
-  spacing 290
+  spacing 340
 
   spine at 0,0 {
     octanoyl_coa
@@ -26,26 +26,14 @@ pathway octanoyl-coa-to-2r-3s-homoisocitrate "octanoyl-CoA to (2R,3S)-homoisocit
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_173 [2.3.1.173] +trans_4_coumaroyl_coa +kaempferol_3_o_beta_d_glucosyl_1_2_glucosyl_1_2
-    kaempferol_3_o_6_4_coumaroyl_beta_d_glucosyl_1_2
+    <-> . +dodecanoyl_coa +sucrose
+    beta_d_fructofuranosyl_4_o_dodecanoyl_alpha_d_gl
   }
 
   branch from coa side left {
     coa
-    <-> . +7_o_beta_d_glucosyl_7_hydroxyflavone +malonyl_coa
-    7_hydroxyflavone_7_o_6_malonyl_beta_d_glucoside
-  }
-
-  branch from 2_oxoadipate side right {
-    2_oxoadipate
-    <-> . +acetyl_coa +h2o +h +coa
-    dihomocitrate
-  }
-
-  branch from 2_oxoadipate side left {
-    2_oxoadipate
-    <-> . +co2 +4_carboxy_1_hydroxybutyryl_thpp +h
-    thiamine_diphosphate
+    <-> . +3_methylbutanoyl_coa +4_3_methylbutanoyl_sucrose
+    3_4_di_3_methylbutanoyl_sucrose
   }
 
   branch from 3_hydroxy_l_kynurenine side right {
@@ -56,31 +44,121 @@ pathway octanoyl-coa-to-2r-3s-homoisocitrate "octanoyl-CoA to (2R,3S)-homoisocit
 
   branch from 3_hydroxy_l_kynurenine side left {
     3_hydroxy_l_kynurenine
-    <-> ec_1_14_13_9 [1.14.13.9] +nadh +h +o2 +nad +h2o
-    l_kynurenine
+    <-> ec_1_11_1_7 [1.11.1.7] +uncyclized_xanthommatin +h2o
+    h2o2
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +norcamphor +nad
-    trans_bicyclo_2_2_1_heptanol
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    d_alanyl_r_lactic_acid
   }
 
   branch from h side left {
     h
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +4_methylcyclohexanone +nad
-    cis_4_methylcyclohexanol
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    angiotensin_i_dizwitterion
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +3_methylbutan_2_one
-    r_3_methylbutan_2_ol
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_geranial +h
+    neodihydrocarveol
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +2_oxohexane
-    s_2_hexanol
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +11r_dihydroartemisinic_aldehyde
+    presilphiperfolan_8_ol
+  }
+
+  branch from octanoyl_coa side right {
+    octanoyl_coa
+    <-> ec_3_6_3_47 [3.6.3.47] +h +phosphate +atp +h2o
+    adp
+  }
+
+  branch from octanoyl_coa side left {
+    octanoyl_coa
+    <-> ec_2_3_3_20 [2.3.3.20] +h2o +h +coa
+    2r_2_hexyl_3_oxodecanoate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    glu_glu
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    beta_homovaline_beta_homoalanine_beta_homoleucin
+  }
+
+  branch from coa side right {
+    coa
+    <-> . +3_methylbutanoyl_coa +4_3_methylbutanoyl_sucrose
+    2_4_di_3_methylbutanoyl_sucrose
+  }
+
+  branch from coa side left {
+    coa
+    <-> . +2_methylpropanoyl_coa +4_3_methylbutanoyl_sucrose
+    2_isobutanoyl_4_3_methylbutanoyl_sucrose
+  }
+
+  branch from 3_hydroxy_l_kynurenine side right {
+    3_hydroxy_l_kynurenine
+    <-> . +co2
+    3_hydroxykynurenamine
+  }
+
+  branch from co2 side left {
+    co2
+    <-> ec_4_1_1_65 [4.1.1.65] +pe_18_3_9z_12z_15z_18_3_9z_12z_15z
+    ps_18_3_9z_12z_15z_18_3_9z_12z_15z
+  }
+
+  branch from co2 side right {
+    co2
+    <-> ec_4_1_1_65 [4.1.1.65] +pe_20_0_18_2_9z_12z +h
+    20_0_18_2_ps
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    3s_3_3s_3_aminobutanoyl_amino_5_methylhexanoic
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    n_acetyl_d_glucosaminyl_n_acetylmuramoyl_l_ala_d
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> ec_1_1_1_71 [1.1.1.71] +h +phellandral +nad
+    thujan_3_ol
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_1_1_71 [1.1.1.71] +h +phellandral +nad
+    r_terpineol
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
+    thujan_3_ol
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
+    1r_2s_4r_borneol
   }
 }

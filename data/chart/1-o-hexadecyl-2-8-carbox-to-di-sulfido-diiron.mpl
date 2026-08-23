@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-o-hexadecyl-2-8-carbox-to-di-sulfido-diiron "1-O-hexadecyl-2-(8-carbox… to di-μ-sulfido-diiron" {
-  spacing 170
+  spacing 152
 
   spine at 0,0 {
     1_o_hexadecyl_2_8_carboxyoctanoyl_sn_glycero_3_p
@@ -14,23 +14,5 @@ pathway 1-o-hexadecyl-2-8-carbox-to-di-sulfido-diiron "1-O-hexadecyl-2-(8-carbox
     1_hexadecyl_sn_glycero_3_phosphate
     <-> ec_1_14_15_7 [1.14.15.7] +choline +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
     betaine_aldehyde_hydrate
-  }
-
-  branch from azelaate side left {
-    azelaate
-    <-> . +1_palmitoyl_2_azelaoyl_sn_glycero_3_phosphocholi +h2o +hplus
-    1_hexadecanoyl_sn_glycero_3_phosphocholine
-  }
-
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
-    <-> . +cryptoxanthin +di_sulfido_diiron +o2 +hplus +h2o
-    3s_5r_6s_cryptoxanthin_5_6_epoxide
-  }
-
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
-    <-> . +20s_23_dihydroxyvitamin_d3 +di_sulfido_diiron +o2 +hplus +h2o
-    20s_23_24_trihydroxyvitamin_d3
   }
 }

@@ -28,26 +28,26 @@ pathway 5-methyltetrahydropteroyl-to-ammonium "5-methyltetrahydropteroyl… to a
 
   branch from methionine side right {
     methionine
-    <-> ec_1_3_98_6 [1.3.98.6] +fe_coproporphyrin_iii +sam +5_deoxyadenosine +co2
-    ferroheme_b
+    <-> . +2_3_di_o_phytanyl_sn_glycerol +hydrogen_donor +sam +5_deoxyadenosine +hydrogen_acceptor +hplus
+    glycerol_dibiphytanyl_glycerol_tetraether
   }
 
   branch from methionine side left {
     methionine
-    <-> ec_1_8_98_7 [1.8.98.7] +l_cysteine +sam +h2o +h2s +5_deoxyadenosine +hplus
-    l_3_oxoalanine
+    <-> . +3_l_methionyl_adenylyl_zwitterionic_group +h2o +hplus
+    amp_3_end_1
   }
 
   branch from alanine side right {
     alanine
-    <-> ec_2_6_1_56 [2.6.1.56] +1d_3_ammmonio_1_guanidiniumyl_1_3_dideoxy_scyllo +pyruvate
-    1d_1_guanidiniumyl_1_deoxy_3_dehydro_scyllo_inos
+    <-> ec_2_6_1_99 [2.6.1.99] +l_tryptophan +pyruvate
+    3_indol_3_yl_pyruvate
   }
 
   branch from alanine side left {
     alanine
-    <-> ec_4_1_1_64 [4.1.1.64] +2_2_dialkylglycine +pyruvate +hplus +co2
-    dialkyl_ketone
+    <-> . +plp +pyruvate
+    pyridoxamine_5_phosphate
   }
 
   branch from 2_oxoglutaramate side right {
@@ -64,25 +64,85 @@ pathway 5-methyltetrahydropteroyl-to-ammonium "5-methyltetrahydropteroyl… to a
 
   branch from akg side right {
     akg
-    <-> ec_1_5_1_19 [1.5.1.19] +d_nopalinate +nadp +h2o +nadph +hplus
-    arginine
+    <-> . +l_m_tyrosine +glutamate
+    3_hydroxyphenylpyruvate
   }
 
   branch from akg side left {
     akg
-    <-> ec_6_4_1_7 [6.4.1.7] +hco3 +atp +adp +pi +hplus
-    s_oxalatosuccinate
+    <-> . +prekainate +o2 +hplus +succinate +co2 +h2o
+    kainate_lactone
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_3_5_4_45 [3.5.4.45] +melamine +h2o
-    ammeline
+    <-> . +arachidonoyl_amine +h2o
+    arachidonate
   }
 
   branch from nh3 side left {
     nh3
-    <-> ec_3_5_4_45 [3.5.4.45] +ammeline +h2o +hplus
-    ammelide
+    <-> . +linoleamide +h2o
+    linoleate
+  }
+
+  branch from methionine side right {
+    methionine
+    <-> ec_5_3_99_13 [5.3.99.13] +2_deoxyadenosine_5_monophosphate +sam +5_deoxyadenosine +hplus
+    4_phospho_dehydrooxetanocin
+  }
+
+  branch from methionine side left {
+    methionine
+    <-> . +hydrogen_donor +sam +hydrogen_acceptor +hplus
+    5_deoxyadenosin_5_yl_radical
+  }
+
+  branch from alanine side right {
+    alanine
+    <-> ec_2_6_1_113 [2.6.1.113] +1_4_butanediammonium +pyruvate
+    4_ammoniobutanal
+  }
+
+  branch from alanine side left {
+    alanine
+    <-> . +mmsa +pyruvate
+    s_3_aminoisobutyric_acid
+  }
+
+  branch from glutamine side right {
+    glutamine
+    <-> . +n_fatty_acyl_l_glutamine +h2o
+    fatty-acid
+  }
+
+  branch from glutamine side left {
+    glutamine
+    <-> ec_2_6_1_123 [2.6.1.123] +chorismate +h2o +glutamate +nh3
+    4_amino_4_deoxychorismate
+  }
+
+  branch from akg side right {
+    akg
+    <-> ec_2_6_1_122 [2.6.1.122] +udp_2_acetamido_3_ammonio_2_3_dideoxy_d_glucopyr +glutamate
+    udp_2_acetamido_2_deoxy_3_dehydro_d_glucopyranos
+  }
+
+  branch from akg side left {
+    akg
+    <-> . +1_n6_etheno_2_deoxyadenosine_5_monophosphate_1 +o2 +h2o +glyoxal +succinate +co2
+    2_deoxyadenosine_5_monophosphate_1
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> . +erucamide +h2o
+    erucate
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> . +nervonamide +h2o
+    15z_tetracosenoate
   }
 }

@@ -24,61 +24,145 @@ pathway 14-demethyllanosterol-to-nad "14-demethyllanosterol to NAD" {
 
   branch from co2 side left {
     co2
-    <-> ec_4_1_1_98 [4.1.1.98] +2_polyprenylphenol
-    4_hydroxy_3_polyprenylbenzoate
+    <-> . +tabtoxin_biosynthesis_intermediate_4
+    tabtoxin_biosynthesis_intermediate_3
   }
 
   branch from co2 side right {
     co2
-    <-> . +3_aminopropane_1_2_diol
-    threo_2_amino_3_4_dihydroxybutanoic_acid
+    <-> ec_1_14_13_1 [1.14.13.1] +nadh +5_methylsalicylate +h +o2 +nad +h2o
+    4_methylcatechol
   }
 
   branch from h side left {
     h
-    <-> . +adp +phosphate +atp +h2o
-    9e_octadecenoate
+    <-> . +holyrine_a +dtdp +dtdp_l_ristosamine
+    k_252c
   }
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
-    9z_12z_15z_octadecatrienoate
+    <-> ec_1_2_1_96 [1.2.1.96] +4_hydroxy_3_methylbenzaldehyde +nadp +h2o +nadph
+    4_hydroxy_3_methylbenzoic_acid
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_10_1_1 [1.10.1.1] +trans_acenaphthene_1_2_diol +nadp +h
-    acenaphthene_1_2_dione
+    <-> . +3_oxoribostamycin +h +nadp
+    xylostasin
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_14_13_8 [1.14.13.8] +h +1_methyl_4_phenyl_1_2_3_6_tetrahydropyridine +o2 +nadp +h2o
-    1_methyl_4_phenyl_1_2_3_6_tetrahydropyridine_n_o
+    <-> . +4_oxolividamine +h +nadp
+    lividamine
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_13_11_38 [1.13.11.38] +1_hydroxy_2_naphthoate +h
-    trans_2_carboxybenzylidenepyruvic_acid
+    <-> . +lividamine +h2o2
+    6_oxolividamine
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_13_11_3 [1.13.11.3] +2_oxo_2h_pyran_4_6_dicarboxylate +h +h2o
-    3_4_5_trihydroxybenzoate
+    <-> ec_1_13_11_67 [1.13.11.67] +14_apo_beta_carotenal +e_e_2_methyl_6_oxohepta_2_4_dienol
+    8_apo_beta_carotenol
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +2_3_dihydroxy_ddt
-    1s_2s_ddt_2_3_dihydrodiol
+    <-> ec_1_14_12_26 [1.14.12.26] +nadh +h +o2 +2_4_dichlorotoluene
+    1r_2s_4_6_dichloro_3_methylcyclohexa_3_5_diene
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_3_1_119 [1.3.1.119] +nadh +h +3_6_dichlorocatechol
-    3_6_dichloro_cis_cyclohexa_3_5_diene_1_2_diol
+    <-> ec_1_14_12_26 [1.14.12.26] +nadh +2_5_dichlorotoluene +h +o2
+    1r_2s_3_6_dichloro_4_methylcyclohexa_3_5_diene
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_3_1_112 [1.3.1.112] +3_hydroxy_2_phenylchromenylium +h +nadph
+    3_flavanol_trans
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_3_1_112 [1.3.1.112] +3_hydroxy_2_phenylchromenylium +h +nadph
+    cis_3_flavanol
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_8_3_5 [1.8.3.5] +3_methyl_2_butenal +h2o2 +l_cysteine +h2o
+    s_prenyl_l_cysteine
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +3r_5s_1_pyrroline_3_hydroxy_5_carboxylate +h +h2o
+    trans_4_hydroxy_l_proline
+  }
+
+  branch from co2 side left {
+    co2
+    <-> ec_1_14_12_13 [1.14.12.13] +nadh +2_bromobenzoate +h +o2 +bromide +nad
+    catechol
+  }
+
+  branch from co2 side right {
+    co2
+    <-> ec_1_14_12_13 [1.14.12.13] +nadh +2_iodobenzoate +h +o2 +catechol +nad
+    iodide
+  }
+
+  branch from h side left {
+    h
+    <-> . +paromomycin_ii
+    paromomycin
+  }
+
+  branch from h side right {
+    h
+    <-> . +2_oxoglutarate +antibiotic_ji_20ba +l_glutamate
+    6_oxo_g418
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +dtdp_4_oxo_2_deoxy_alpha_d_pentos_2_ene +h +nadp
+    dtdp_4_oxo_2_deoxy_beta_l_xylose
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +3_keto_beta_d_galactose +h +nadp
+    d_galactopyranose
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> ec_1_14_12_26 [1.14.12.26] +3_4_dichlorotoluene +h +o2 +nad
+    1r_2s_3_4_dichloro_6_methylcyclohexa_3_5_diene
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_3_1_119 [1.3.1.119] +h +1r_2s_4_6_dichloro_3_methylcyclohexa_3_5_diene +nad
+    4_6_dichloro_3_methylcatechol
+  }
+
+  branch from nad side left {
+    nad
+    <-> . +nadh +h +2s_3_hydroxy_1_4_hydroxy_3_methoxyphenyl_2_2_me
+    alphar_betas_guaiacylglycerol_beta_guaiacyl_eth
+  }
+
+  branch from nad side right {
+    nad
+    <-> . +nadh +h +2r_3_hydroxy_1_4_hydroxy_3_methoxyphenyl_2_2_me
+    alphar_betar_guaiacylglycerol_beta_guaiacyl_eth
   }
 }

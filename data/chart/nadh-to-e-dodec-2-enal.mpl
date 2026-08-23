@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-e-dodec-2-enal "NADH to (E)-dodec-2-enal" {
-  spacing 210
+  spacing 270
 
   spine at 0,0 {
     nadh
@@ -20,31 +20,91 @@ pathway nadh-to-e-dodec-2-enal "NADH to (E)-dodec-2-enal" {
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_28 [1.1.1.28] +nadh +h +3_bromopyruvic_acid
-    3_bromolactate
+    <-> . +nadh +h +isojusticidin_b
+    7_8_dihydroisojusticidin_b
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_14_14_37 [1.14.14.37] +nadh +4_hydroxyphenylacetaldehyde_oxime +h +o2 +h2o
-    4_hydroxymandelonitrile
+    <-> ec_1_1_1_306 [1.1.1.306] +nadh +h +s_formylbacillithiol
+    s_hydroxymethyl_bacillithiol
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_14_13_84 [1.14.13.84] +4_methylacetophenone +h +o2 +nadph +tolylacetate
-    nadp
+    <-> ec_4_2_1_119 [4.2.1.119] +2e_7_carboxy_4_methyl_5_oxohept_2_enoyl_coa
+    3r_7_carboxy_3_hydroxy_4_methyl_5_oxoheptanoyl
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_14_13_84 [1.14.13.84] +4_methoxyacetophenone +h +o2 +nadph +nadp
-    4_methoxyphenylacetic_acid
+    <-> . +4_4_diaponeurosporenal
+    4_4_diaponeurosporen_1_1_diol
   }
 
   branch from dodecanal side left {
     dodecanal
     <-> . +nadp +nadph +hplus
     dodecan_1_ol
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +h +amarouciaxanthin_a +nad
+    fucoxanthinol
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> . +bacteriochlorophyllide_b +h +nad
+    3_deacetyl_3_1_hydroxyethyl_bacteriochlorophylli
+  }
+
+  branch from h side right {
+    h
+    <-> . +tetradecanal +carbon_monoxide
+    tridecane
+  }
+
+  branch from h side left {
+    h
+    <-> . +docosanal +carbon_monoxide
+    henicosane
+  }
+
+  branch from nad side right {
+    nad
+    <-> . +nadh +h +7_8_dihydroisojusticidin_b
+    7_8_7_8_tetrahydroisojusticidin_b
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_35 [1.1.1.35] +nadh +11z_3_oxooctadecenoyl_coa +h
+    3s_11z_3_hydroxyoctadecenoyl_coa
+  }
+
+  branch from sulfate side right {
+    sulfate
+    <-> . +tyrindoxyl +h +h2o
+    tyrindoxyl_sulfate
+  }
+
+  branch from sulfate side left {
+    sulfate
+    <-> . +benzylglucosinolate_aglycone
+    benzyl_thiocyanate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +h +5_4_hydroxy_3_methoxyphenyl_4_hydroxymethyl_oxol
+    4_4_hydroxy_3_methoxyphenyl_tetrahydro_3h_furo_3
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +epoxypheophorbide_a
+    red_chlorophyll_catabolite
   }
 }

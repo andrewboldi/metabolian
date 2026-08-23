@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway ala-leu-to-ammonium "Ala-Leu to ammonium" {
-  spacing 192
+  spacing 204
 
   spine at 0,0 {
     ala_leu
@@ -16,39 +16,51 @@ pathway ala-leu-to-ammonium "Ala-Leu to ammonium" {
     4_methyl_3_oxopentanoate
   }
 
-  branch from leucine side left {
-    leucine
-    <-> . +isoleucine +l_asparagine +l_histidine +ornithine +l_lysinium +cysteine +aspartate +l_phenylalanine +glutamate +atp +amp +ppi +h2o +hplus
-    bacitracin_a
-  }
-
-  branch from leucine side right {
-    leucine
-    <-> . +n_1_deoxy_d_fructopyranos_1_yl_l_leucine_betaine +o2 +h2o +h2o2
-    2_dehydro_d_glucopyranose
-  }
-
   branch from alanine side left {
     alanine
-    <-> . +mmsa +pyruvate
-    s_3_aminoisobutyric_acid
+    <-> ec_2_6_1_44 [2.6.1.44] +oxobut +pyruvate
+    l_aminobutyrate
   }
 
   branch from alanine side right {
     alanine
-    <-> . +palmitoyl_coa +hplus +co2 +coa
-    1_deoxy_3_dehydrosphinganine
+    <-> . +2s_2_e_2r_3s_4r_5r_2_3_4_5_tetrahydroxyoxan_2_y +h2o +hplus
+    2_dehydro_d_glucopyranose
   }
 
   branch from nh3 side left {
     nh3
-    <-> ec_1_4_3_25 [1.4.3.25] +arginine +o2 +h2o +h2o2
-    5_guanidino_2_oxopentanoic_acid
+    <-> . +1_cyclohexylethanaminium +nadp +h2o +nadph +hplus
+    1_cyclohexylethanone
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_4_3_1_15 [4.3.1.15] +h2o +hplus +pyruvate
-    3_amino_d_alanine
+    <-> . +pentan_1_aminium +nadp +h2o +nadph +hplus
+    pentanal
+  }
+
+  branch from alanine side left {
+    alanine
+    <-> . +cholate +h2o
+    l_alanocholate
+  }
+
+  branch from alanine side right {
+    alanine
+    <-> . +taurocholate +l_alanocholate
+    taurine
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> . +5_hydroxymethyldeoxycytidylate +h2o +hplus
+    5_hydroxymethyluridine_2_deoxy_5_phosphate
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> . +d_argininium +o2 +h2o +h2o2
+    5_guanidino_2_oxopentanoic_acid
   }
 }

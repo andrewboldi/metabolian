@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-nicotinium-to-2-3-6-trihydroxypyridine "(S)-nicotinium to 2,3,6-trihydroxypyridine" {
-  spacing 248
+  spacing 284
 
   spine at 0,0 {
     s_nicotinium
@@ -22,14 +22,14 @@ pathway s-nicotinium-to-2-3-6-trihydroxypyridine "(S)-nicotinium to 2,3,6-trihyd
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> ec_1_21_99_5 [1.21.99.5] +trichloroethene +chloride +hydrogen_acceptor +hplus
-    tetrachloroethene
+    <-> ec_1_14_99_47 [1.14.99.47] +larreatricin +o2 +hydrogen_acceptor +h2o
+    3_hydroxylarreatricin
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> ec_1_1_99_27 [1.1.99.27] +r_pantolactone +hydrogen_acceptor
-    2_dehydropantolactone
+    <-> ec_1_3_99_33 [1.3.99.33] +dihydrourocanate +hydrogen_acceptor
+    urocanate
   }
 
   branch from 6_hydroxypseudooxynicotinium side left {
@@ -42,5 +42,41 @@ pathway s-nicotinium-to-2-3-6-trihydroxypyridine "(S)-nicotinium to 2,3,6-trihyd
     4_methylamino_butyric_acid
     <-> ec_1_5_3_21 [1.5.3.21] +o2 +h2o +methylamine +h2o2
     4_oxobutanoate
+  }
+
+  branch from s_nicotinium side left {
+    s_nicotinium
+    <-> . +nadph +o2 +nadp +h2o
+    trans_s_nicotine_n1_oxide
+  }
+
+  branch from s_nicotinium side right {
+    s_nicotinium
+    <-> . +fmnh2 +o2 +formaldehyde +fmn +h2o +hplus
+    s_nornicotine
+  }
+
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> ec_2_1_1_272 [2.1.1.272] +cobalt_ii_factor_iii +hydrogen_donor +sam +sah
+    cobalt_precorrin_4
+  }
+
+  branch from hydrogen_acceptor side right {
+    hydrogen_acceptor
+    <-> . +oleoyl_coa +hydrogen_donor +o2 +h2o
+    linoleoyl_coa
+  }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> . +palmitoleoyl_coa +o2 +hydrogen_acceptor +h2o
+    9z_12z_hexadecadienoyl_coa
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> . +9z_12z_15z_18z_tetracosatetraenoyl_coa +o2 +hydrogen_acceptor +h2o
+    6z_9z_12z_15z_18z_tetracosapentaenoyl_coa
   }
 }

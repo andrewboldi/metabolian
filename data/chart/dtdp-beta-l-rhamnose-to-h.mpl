@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dtdp-beta-l-rhamnose-to-h "dTDP-beta-L-rhamnose to H" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     dtdp_beta_l_rhamnose
@@ -14,29 +14,5 @@ pathway dtdp-beta-l-rhamnose-to-h "dTDP-beta-L-rhamnose to H" {
     udp
     <-> . +dtdp_4_deoxy_4_s_3_hydroxybutanoylamino_alpha_d +beta_d_galnac_1_4_alpha_l_rha_1_3_alpha_d_glcnac -dtdp -h
     alpha_dqui4nbus3oh_1_4_beta_d_galnac_1_4_alpha_l
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +2_o_geranylgeranyl_3_o_geranylfarnesyl_sn_glycer +phosphate +2_o_geranylgeranyl_3_o_geranylfarnesyl_sn_glycer +h2o
-    atp
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    2_3_bis_o_geranylfarnesyl_sn_glycero_1_phospho_1
-  }
-
-  branch from udp side left {
-    udp
-    <-> . +h +beta_d_glucuronosyl_4e_4_methyl_6_3_methyl_1_4_d +2_methyl_3_2e_5_carboxy_3_methylpent_2_enyl_1_4
-    udp_alpha_d_glucuronate
-  }
-
-  branch from udp side right {
-    udp
-    <-> . +urolithin_a_3_o_glucuronide +udp_alpha_d_glucuronate
-    urolithin_a
   }
 }

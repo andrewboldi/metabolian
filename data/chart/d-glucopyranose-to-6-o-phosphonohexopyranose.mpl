@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-glucopyranose-to-6-o-phosphonohexopyranose "D-glucopyranose to 6-o-Phosphonohexopyranose" {
-  spacing 266
+  spacing 260
 
   spine at 0,0 {
     glucose
@@ -14,11 +14,5 @@ pathway d-glucopyranose-to-6-o-phosphonohexopyranose "D-glucopyranose to 6-o-Pho
     hexopyranose
     <-> ec_2_7_1_1 [2.7.1.1] +h +atp -6_o_phosphonohexopyranose
     adp
-  }
-
-  branch from d_glucono_1_5_lactone side left {
-    d_glucono_1_5_lactone
-    <-> ec_1_1_5_2 [1.1.5.2] +alpha_d_glucose +ubiquinone_2
-    ubiquinol_2
   }
 }

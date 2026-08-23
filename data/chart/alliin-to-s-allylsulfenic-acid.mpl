@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway alliin-to-s-allylsulfenic-acid "alliin to S-allylsulfenic acid" {
-  spacing 164
+  spacing 212
 
   spine at 0,0 {
     alliin
@@ -18,13 +18,61 @@ pathway alliin-to-s-allylsulfenic-acid "alliin to S-allylsulfenic acid" {
 
   branch from 2_ammonioprop_2_enoate side left {
     2_ammonioprop_2_enoate
-    <-> . +h2o
-    dserine
+    <-> . +chloride +hplus
+    3_chloro_d_alanine
   }
 
   branch from 2_ammonioprop_2_enoate side right {
     2_ammonioprop_2_enoate
-    <-> . +s_alkyl_l_cysteine
-    alkanethiol
+    <-> . +s_1_hydroxy_3_methylhexan_3_yl_l_cysteine
+    3_methyl_3_sulfanylhexan_1_ol
+  }
+
+  branch from alliin side left {
+    alliin
+    <-> . +nadp +h2o +o2 +nadph +s_allylcysteine
+    h
+  }
+
+  branch from alliin side right {
+    alliin
+    <-> . +h2o2 +s_allylcysteine +h2o
+    o2
+  }
+
+  branch from 2_ammonioprop_2_enoate side left {
+    2_ammonioprop_2_enoate
+    <-> . +3_sulfanylhexan_1_ol_l_cysteine
+    3_mercaptohexanol
+  }
+
+  branch from 2_ammonioprop_2_enoate side right {
+    2_ammonioprop_2_enoate
+    <-> . +s_4_hydroxy_3_methylbutan_2_yl_l_cysteine
+    2_methyl_3_sulfanylbutan_1_ol
+  }
+
+  branch from thioacrolein side left {
+    thioacrolein
+    <-> .
+    2_vinyl_4h_1_3_dithin
+  }
+
+  branch from thioacrolein side right {
+    thioacrolein
+    <-> .
+    3_vinyl_4h_1_2_dithin
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +h +2_4_dinitrotoluene +nadph +4_amino_2_nitrotoluene
+    nadp
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +h +4_amino_2_nitrotoluene +nadph +nadp
+    2_4_diaminotoluene
   }
 }

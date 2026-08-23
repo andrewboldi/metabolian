@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-2-3-6-tetrakis-o-galloy-to-cornusiin-e "1,2,3,6-tetrakis-O-galloy… to cornusiin E" {
-  spacing 326
+  spacing 338
 
   spine at 0,0 {
     1_2_3_6_tetrakis_o_galloyl_d_glucose
@@ -18,19 +18,31 @@ pathway 1-2-3-6-tetrakis-o-galloy-to-cornusiin-e "1,2,3,6-tetrakis-O-galloy… t
 
   branch from glucose side left {
     glucose
-    <-> ec_2_3_1_103 [2.3.1.103] +1_o_sinapoyl_d_glucose
-    1_2_di_o_sinapoyl_d_glucose
+    <-> . +d_glucosyl_n_octadecanoylsphingosine +h2o
+    n_octadecanoylsphingosine
   }
 
   branch from glucose side right {
     glucose
-    <-> . +melibiose +h2o
-    d_galactopyranose
+    <-> . +nadp +nadph +hplus
+    d_glucitol
   }
 
   branch from tellimagrandin_ii side left {
     tellimagrandin_ii
     <-> . +cornusiin_e +h2o +o2
     h
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> ec_3_2_1_104 [3.2.1.104] +daucosterol +h2o
+    sitosterol
+  }
+
+  branch from glucose side left {
+    glucose
+    <-> . +campesterol_3_d_glucoside +h2o
+    campesterol
   }
 }

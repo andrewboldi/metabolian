@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway shikimate-to-4-aminophenol "shikimate to 4-aminophenol" {
-  spacing 252
+  spacing 240
 
   spine at 0,0 {
     shikimate
@@ -20,17 +20,5 @@ pathway shikimate-to-4-aminophenol "shikimate to 4-aminophenol" {
     4_aminobenzoate
     <-> ec_1_14_13_27 [1.14.13.27] +nadh +o2 +hplus -co2 -nad -h2o
     4_aminophenol
-  }
-
-  branch from chorismate side left {
-    chorismate
-    <-> ec_3_3_2_13 [3.3.2.13] +h2o +pyruvate
-    3r_4r_3_4_dihydroxycyclohexa_1_5_diene_1_carbox
-  }
-
-  branch from 4_aminobenzoate side right {
-    4_aminobenzoate
-    <-> . +l_tyrosine +ascorbate +l_lysinium +o2 +l_allysine +l_dehydroascorbate +h2o +hplus
-    glycine
   }
 }

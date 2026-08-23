@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-oleoyl-2-linoleoyl-sn-g-to-3-hydroxypropanal "1-oleoyl-2-linoleoyl-sn-g… to 3-hydroxypropanal" {
-  spacing 188
+  spacing 224
 
   spine at 0,0 {
     1_oleoyl_2_linoleoyl_sn_glycerol
@@ -18,37 +18,73 @@ pathway 1-oleoyl-2-linoleoyl-sn-g-to-3-hydroxypropanal "1-oleoyl-2-linoleoyl-sn-
 
   branch from oleate side left {
     oleate
-    <-> . +1_2_dioleoyl_sn_glycerol +h2o +hplus
-    1_oleoyl_sn_glycerol
+    <-> . +1_2_dioleoyl_sn_glycero_3_phosphocholine +h2o +hplus
+    2_oleoyl_sn_glycero_3_phosphocholine
   }
 
   branch from oleate side right {
     oleate
-    <-> . +1_oleoyl_2_acetyl_sn_glycero_3_phosphocholine +h2o +hplus
-    2_acetyl_sn_glycero_3_phosphocholine
+    <-> . +1_oleoyl_2_acyl_sn_glycero_3_phosphoglycerol +h2o +hplus
+    2_acyl_sn_glycero_3_phosphoglycerol
   }
 
   branch from linoleate side left {
     linoleate
-    <-> ec_1_13_11_60 [1.13.11.60] +o2
-    8_r_hpode
+    <-> ec_1_13_11_61 [1.13.11.61] +o2
+    9_r_hpode
   }
 
   branch from linoleate side right {
     linoleate
-    <-> ec_1_13_11_58 [1.13.11.58] +o2
-    9_s_hpode
+    <-> ec_1_13_11_62 [1.13.11.62] +o2
+    8e_10r_12z_10_hydroperoxy_8_12_octadecadienoate
   }
 
   branch from glycerol side left {
     glycerol
-    <-> . +prostaglandin_d2_1_glyceryl_ester +h2o +hplus
-    prostaglandin_d2
+    <-> ec_3_1_3_21 [3.1.3.21] +h2o +pi
+    sn_glycerol_3_phosphate
   }
 
   branch from glycerol side right {
     glycerol
-    <-> . +15_deoxy_12_14_prostaglandin_j2_2_glyceryl_ester +h2o +hplus
-    15_deoxy_12_14_prostaglandin_j2
+    <-> . +3_acyl_sn_glycerol +h2o +hplus
+    fatty-acid
+  }
+
+  branch from oleate side left {
+    oleate
+    <-> . +n_oleoyl_l_tryptophan +h2o
+    l_tryptophan
+  }
+
+  branch from oleate side right {
+    oleate
+    <-> . +n_oleoyl_l_lysine +h2o
+    l_lysinium
+  }
+
+  branch from linoleate side left {
+    linoleate
+    <-> ec_1_13_11_77 [1.13.11.77] +o2
+    8e_10s_12z_10_hydroperoxyoctadeca_8_12_dienoate
+  }
+
+  branch from linoleate side right {
+    linoleate
+    <-> . +1_2_3_trilinoleoylglycerol +h2o +hplus
+    1_3_dilinoleoylglycerol
+  }
+
+  branch from glycerol side left {
+    glycerol
+    <-> . +r_s_glycero_3_phospho_3_acyl_1_glycerol +1_acyl_sn_glycerol
+    2_2_lysobisphosphatidate
+  }
+
+  branch from glycerol side right {
+    glycerol
+    <-> . +r_s_glycero_1_phospho_3_9z_octadecenoyl_1_glyce +1_oleoyl_sn_glycerol
+    s_s_bis_3_oleoylglycero_1_phosphate
   }
 }

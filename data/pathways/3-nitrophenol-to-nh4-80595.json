@@ -1,0 +1,305 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-nitrophenol-to-nh4-80595",
+  "name": "3-nitrophenol to NH4",
+  "category": "other",
+  "summary": "A 3-step route from 3-nitrophenol to NH4(+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:80595"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:34346"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_nitrophenol",
+      "name": "3-nitrophenol",
+      "formula": "C6H5NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:34346"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3_hydroxyamino_phenol",
+      "name": "3-(hydroxyamino)phenol",
+      "short": "3-(hydroxyamino)phe…",
+      "formula": "C6H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50446"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "aminohydroquinone",
+      "name": "aminohydroquinone",
+      "formula": "C6H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13769"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "benzene_1_2_4_triol",
+      "name": "benzene-1,2,4-triol",
+      "formula": "C6H6O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM722"
+      }
+    },
+    {
+      "id": "nh4",
+      "name": "NH4",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM729302"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_4_4_3",
+      "name": "3-(hydroxyamino)phenol mutase",
+      "ec": [
+        "5.4.4.3"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3-nitrophenol + 2 NADPH + 2 H(+) = 3-hydroxyaminophenol + 2 NADP(+) + H2O",
+      "equation": "3-nitrophenol + 2 NADPH + 2 H(+) = 3-hydroxyaminophenol + 2 NADP(+) + H2O",
+      "substrates": [
+        {
+          "metabolite": "3_nitrophenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_hydroxyamino_phenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:80595"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:80595"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "3-(hydroxyamino)phenol mutase",
+      "equation": "3-hydroxyaminophenol = aminohydroquinone",
+      "ec": "5.4.4.3",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxyamino_phenol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aminohydroquinone",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_4_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:20577"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20577"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR112720",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "aminohydroquinone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "benzene_1_2_4_triol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh4",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR112720"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR112720"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3_hydroxyamino_phenol_3-nitrophenol-to-nh4",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_hydroxyamino_phenol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-nitrophenol-to-nh4"
+      },
+      "note": "Shares 3-(hydroxyamino)phenol with 3-nitrophenol to NH4.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:50446"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_aminohydroquinone_3-nitrophenol-to-nh4",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "aminohydroquinone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-nitrophenol-to-nh4"
+      },
+      "note": "Shares aminohydroquinone with 3-nitrophenol to NH4.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:13769"
+          }
+        ]
+      }
+    }
+  ]
+}

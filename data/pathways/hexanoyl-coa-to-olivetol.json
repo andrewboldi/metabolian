@@ -105,35 +105,9 @@
       "xrefs": {
         "chebi": "CHEBI:57287"
       }
-    },
-    {
-      "id": "olivetolate",
-      "name": "olivetolate",
-      "formula": "C12H15O4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:66950"
-      }
-    },
-    {
-      "id": "hplus",
-      "name": "Proton (H+)",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:15378"
-      }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_4_4_1_26",
-      "name": "olivetolic acid cyclase",
-      "ec": [
-        "4.4.1.26"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -265,48 +239,115 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "olivetolic acid cyclase",
-      "equation": "3,5,7-trioxododecanoyl-CoA = olivetolate + CoA + H(+)",
-      "ec": "4.4.1.26",
-      "substrates": [
-        {
-          "metabolite": "3_5_7_trioxododecanoyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "olivetolate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_4_1_26"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:34123"
+      "id": "xt_3_5_7_trioxododecanoyl_coa_biotin-amide-to-4-hydroxy-5-methyl-6-pent",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_5_7_trioxododecanoyl_coa"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "biotin-amide-to-4-hydroxy-5-methyl-6-pent"
+      },
+      "note": "Shares 3,5,7-trioxododecanoyl-CoA with biotin amide to 4-hydroxy-5-methyl-6-pent….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:34123"
+            "db": "ChEBI",
+            "id": "CHEBI:66957"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_5_7_trioxododecanoyl_coa_olivetolate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_5_7_trioxododecanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "olivetolate-to-h2o"
+      },
+      "note": "Shares 3,5,7-trioxododecanoyl-CoA with olivetolate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:66957"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_5_7_trioxododecanoyl_coa_udp-to-coa-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_5_7_trioxododecanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-coa-null"
+      },
+      "note": "Shares 3,5,7-trioxododecanoyl-CoA with UDP to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:66957"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_olivetol_microperfuranone-to-2-phenylethanol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "olivetol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "microperfuranone-to-2-phenylethanol"
+      },
+      "note": "Shares olivetol with (−)-microperfuranone to 2-phenylethanol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:66960"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_olivetol_n-octyl-sulfate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "olivetol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-octyl-sulfate-to-h2o"
+      },
+      "note": "Shares olivetol with n-octyl sulfate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:66960"
           }
         ]
       }

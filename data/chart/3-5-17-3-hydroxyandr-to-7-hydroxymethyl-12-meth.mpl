@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-5-17-3-hydroxyandr-to-7-hydroxymethyl-12-meth "(3β,5α,17β)-3-hydroxyandr… to 7-Hydroxymethyl-12-methyl…" {
-  spacing 210
+  spacing 252
 
   spine at 0,0 {
     3_5_17_3_hydroxyandrostan_17_yl_sulfate
@@ -36,8 +36,8 @@ pathway 3-5-17-3-hydroxyandr-to-7-hydroxymethyl-12-meth "(3β,5α,17β)-3-hydrox
 
   branch from 3_phosphoadenylyl_sulfate side right {
     3_phosphoadenylyl_sulfate
-    <-> ec_2_8_2_3 [2.8.2.3] +adenosine_3_5_bisphosphate +h +benzenamine_sulfate
-    aniline
+    <-> . +adenosine_3_5_bisphosphate +quercetin_3_7_3_4_tetra_o_sulfate +h
+    quercetin_3_3_7_trissulfate
   }
 
   branch from 17beta_hydroxy_5alpha_androstan_3_one side left {
@@ -48,13 +48,55 @@ pathway 3-5-17-3-hydroxyandr-to-7-hydroxymethyl-12-meth "(3β,5α,17β)-3-hydrox
 
   branch from adenosine_3_5_bisphosphate side right {
     adenosine_3_5_bisphosphate
-    <-> . +3_phosphoadenylyl_selenate +nadph +h +nadp
-    selenite
+    <-> ec_2_8_2_25 [2.8.2.25] +isorhamnetin_3_sulfate +h +3_phosphoadenylyl_sulfate
+    isorhamnetin
   }
 
   branch from adenosine_3_5_bisphosphate side left {
     adenosine_3_5_bisphosphate
-    <-> . +quercetin_3_7_3_4_tetra_o_sulfate +3_phosphoadenylyl_sulfate +h
-    quercetin_3_3_7_trissulfate
+    <-> . +isorhamnetin_3_4_bisulfate +h +3_phosphoadenylyl_sulfate
+    isorhamnetin_3_sulfate
+  }
+
+  branch from adenosine_3_5_bisphosphate side right {
+    adenosine_3_5_bisphosphate
+    <-> ec_2_8_2_1 [2.8.2.1] +5_hydroxytryptophol_sulfate +h +3_phosphoadenylyl_sulfate
+    5_hydroxytryptophol
+  }
+
+  branch from adenosine_3_5_bisphosphate side left {
+    adenosine_3_5_bisphosphate
+    <-> . +22r_23r_28_homobrassinolide_22_sulfate +h +3_phosphoadenylyl_sulfate
+    28_homobrassinolide
+  }
+
+  branch from h side right {
+    h
+    <-> ec_1_1_1_85 [1.1.1.85] +nadh +co2 +2_oxo_10_methylthiodecanoic_acid +nad
+    3_7_methylthio_heptylmalic_acid
+  }
+
+  branch from h side left {
+    h
+    <-> . +cdp_4_dehydro_3_6_dideoxy_d_glucose_epimer
+    cdp_4_dehydro_3_6_dideoxy_d_glucose
+  }
+
+  branch from 3_phosphoadenylyl_sulfate side right {
+    3_phosphoadenylyl_sulfate
+    <-> . +adenosine_3_5_bisphosphate +h +castasterone_22_o_sulfate
+    castasterone
+  }
+
+  branch from 3_phosphoadenylyl_sulfate side left {
+    3_phosphoadenylyl_sulfate
+    <-> . +adenosine_3_5_bisphosphate +h +24_epicathasterone_3_o_sulfate
+    24_epicathasterone
+  }
+
+  branch from 7_hydroxymethyl_12_methylbenz_a_anthracene side right {
+    7_hydroxymethyl_12_methylbenz_a_anthracene
+    <-> ec_1_14_14_1 [1.14.14.1] +nadp +h2o +h +nadph +7_12_dimethyltetraphene
+    o2
   }
 }

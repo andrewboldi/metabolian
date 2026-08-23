@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway haxglutamyl-folate-dhf-to-h2o "Haxglutamyl folate (DHF) to H2O" {
-  spacing 194
+  spacing 152
 
   spine at 0,0 {
     haxglutamyl_folate_dhf
@@ -14,47 +14,5 @@ pathway haxglutamyl-folate-dhf-to-h2o "Haxglutamyl folate (DHF) to H2O" {
     7_8_dihydrofolate
     <-> . +l_glutamate -h2o
     pentaglutamyl_folate_dhf
-  }
-
-  branch from l_glutamate side left {
-    l_glutamate
-    <-> ec_6_3_5_9 [6.3.5.9] +hydrogenobyrinate_a_c_diamide +h +adp +phosphate +l_glutamine +atp +h2o
-    hydrogenobyrinate
-  }
-
-  branch from l_glutamate side right {
-    l_glutamate
-    <-> ec_3_4_19_16 [3.4.19.16] +z_1_l_cysteinylglycin_s_yl_n_hydroxy_2_1h_indol +h2o
-    z_1_glutathion_s_yl_n_hydroxy_2_1h_indol_3_yl_e
-  }
-
-  branch from 7_8_dihydrofolate side left {
-    7_8_dihydrofolate
-    <-> ec_1_5_1_3 [1.5.1.3] +nadh +h +folate
-    nad
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +5_dehydro_2_deoxy_d_gluconate +h +adp +dihydroxyacetone_phosphate
-    3_oxopropanoate
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +scyllo_inosose +3_oxopropanoate +h +adp
-    dihydroxyacetone_phosphate
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +12_ethyl_8_isobutylbacteriochlorophyllide_d
-    12_ethyl_8_isobutyl_3_vinylbacteriochlorophyllid
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +ferroheme_a
-    hydroxyferroheme_i
   }
 }

@@ -18,45 +18,63 @@ pathway udp-to-triiodothyronine "UDP to triiodothyronine…" {
     udp
   }
 
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> ec_2_4_1_85 [2.4.1.85] +udp +h +s_prunasin
-    mandelonitrile
-  }
-
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> ec_2_4_1_171 [2.4.1.171] +udp +h +cycasin
-    methylazoxymethanol
-  }
-
-  branch from beta_d_glca_1_2_alpha_d_man_1_3_beta_d_glc_1_4_a side left {
-    beta_d_glca_1_2_alpha_d_man_1_3_beta_d_glc_1_4_a
-    <-> ec_2_4_1_251 [2.4.1.251] +gdp +d_man_beta_1_4_glca_beta_1_2_d_man_alpha_1_3_d_g +h
-    gdp_alpha_d_mannose
+  branch from udp_alpha_d_glucuronate side left {
+    udp_alpha_d_glucuronate
+    <-> . +udp +bilirubin_ixalpha_bis_beta_d_glucuronoside
+    mono_glucosyluronic_acid_bilirubin
   }
 
   branch from udp_alpha_d_glucuronate side right {
     udp_alpha_d_glucuronate
-    <-> ec_2_4_1_17 [2.4.1.17] +udp +h +morphine_6_glucuronide
-    morphine
-  }
-
-  branch from udp_alpha_d_glucuronate side left {
-    udp_alpha_d_glucuronate
-    <-> . +udp +1_oh_midazolam_glucuronide
-    1_hydroxymidazolam
-  }
-
-  branch from udp side right {
-    udp
-    <-> ec_2_7_7_37 [2.7.7.37] +beta_l_arabinose_1_phosphate +h +phosphate
-    udp_beta_l_arabinopyranose
+    <-> . +udp +s_carboxy_ibuprofen_glucuronide +h
+    carboxyibuprofen
   }
 
   branch from udp side left {
     udp
-    <-> ec_2_4_1_117 [2.4.1.117] +a_dolichyl_beta_d_glucosyl_phosphate +udp_alpha_d_glucose
-    c80_dolichol_phosphate
+    <-> . +udp_n_acetyl_alpha_d_galactosamine +trihexosyl_ceramide +h
+    globoside
+  }
+
+  branch from udp side right {
+    udp
+    <-> . +cerivastatin_m1_glucuronide +h +udp_alpha_d_glucuronate
+    cerivastatin_m1
+  }
+
+  branch from udp side left {
+    udp
+    <-> . +cerivastatin_m23_glucuronide +h +udp_alpha_d_glucuronate
+    cerivastatin_m23
+  }
+
+  branch from udp side right {
+    udp
+    <-> . +des_isopropyl_dihydro_fluvastatin_tetranor_glucu +udp_alpha_d_glucuronate
+    des_isopropyl_dihydro_fluvastatin_tetranor
+  }
+
+  branch from h side left {
+    h
+    <-> . +7_methyl_2_hydroxy_6_oxoocta_2_4_dienoate +co2
+    2_hydroxy_3_carboxy_6_oxo_7_methylocta_2_4_dieno
+  }
+
+  branch from h side right {
+    h
+    <-> ec_1_13_12_21 [1.13.12.21] +tetracenomycin_f1 +o2 +h2o
+    tetracenomycin_d3
+  }
+
+  branch from udp_alpha_d_glucuronate side left {
+    udp_alpha_d_glucuronate
+    <-> . +udp +rac_5_6_epoxy_retinoyl_beta_d_glucuronide
+    rac_5_6_epoxy_retinoate
+  }
+
+  branch from udp_alpha_d_glucuronate side right {
+    udp_alpha_d_glucuronate
+    <-> . +udp +ibuprofen_acyl_glucuronide
+    ibuprofen
   }
 }

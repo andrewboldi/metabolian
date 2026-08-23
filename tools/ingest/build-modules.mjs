@@ -20,7 +20,7 @@
 import { writeFileSync, readdirSync, readFileSync, existsSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { chebiTable, loadReactions, conjugateMap, enzymeNames, CURRENCY } from "./corpus.mjs";
+import { chebiTable, loadReactions, conjugateMap, enzymeNames, expasyUniprot, CURRENCY } from "./corpus.mjs";
 import { loadMetanetx } from "./metanetx.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
@@ -94,6 +94,11 @@ const GENERATED = new Set(
 );
 const conjugates = conjugateMap();
 const ecNames = enzymeNames();
+// EC -> representative human UniProt accession (a real Rhea/ExPASy -> UniProt
+// link). Not a gene symbol: enzyme.dat carries neither HGNC symbols nor a
+// reliable proxy for them, so the gene NODE layer is left unlit rather than
+// populated from entry names that would misname the gene.
+const ecUniprot = expasyUniprot();
 const canonical = new Map();
 for (const f of readdirSync(OUT).filter((x) => x.endsWith(".json"))) {
   if (GENERATED.has(f.replace(".json", ""))) continue;
@@ -225,6 +230,10 @@ const index = [];
  *  sheet without inventing a new one. Capped per sheet and per anchor so a hub
  *  compound cannot bury its own spine. */
 const MAX_BRANCH_PER_SHEET = Number(process.env.MAX_BRANCH || 26);
+// No sheet is drawn with more branches than the primary pass already produces
+// cleanly, so the leftover pass below can only fill a sheet UP TO this same
+// ceiling — never past the branch density the current build routes at 0/0/0.
+const LEFTOVER_TOTAL_CAP = Number(process.env.LEFTOVER_CAP || MAX_BRANCH_PER_SHEET);
 function pickBranches(chain) {
   const onSpine = new Set(chain.flatMap((i) => [...mainsOf(reactions[i], "substrates"), ...mainsOf(reactions[i], "products")]));
   const out = [];
@@ -256,10 +265,54 @@ function pickBranches(chain) {
   return out;
 }
 
+/** LEFTOVER PASS. Spine extraction and the primary branch pass together still
+ *  leave ~2,700 vetted reactions undrawn — real, balanced, cited chemistry that
+ *  simply does not chain into a MIN_SPINE spine and was not picked as a branch.
+ *  They stay in the merged graph and search either way, but they never reach the
+ *  DRAWING. This hangs each one on an existing spine as one more branch, which is
+ *  the poster's own idiom for "what else this compound does". It is hard-gated on
+ *  readability so it cannot degrade a sheet:
+ *    - anchors ONLY on a SPINE metabolite (never on another branch's far node),
+ *      so the layout stays identical in KIND to what the build already routes;
+ *    - re-lists a far compound the sheet does not already draw (no self-loops,
+ *      no duplicate edges), so it is never a 2-node stub;
+ *    - never pushes a sheet past LEFTOVER_TOTAL_CAP branches — the same ceiling
+ *      the primary pass already proves renderable — and no more than two per
+ *      anchor, so a hub cannot bury its own spine.
+ *  Deterministic: spine metabolites and their touching reactions are visited in
+ *  index order. Runs only for sheets that actually emit (called from the emit
+ *  loop past its skip guards), so a reaction is never consumed by a sheet that
+ *  is then dropped. */
+function grabLeftovers(chain, primary) {
+  const spineMet = new Set(chain.flatMap((i) => [...mainsOf(reactions[i], "substrates"), ...mainsOf(reactions[i], "products")]));
+  const onSheet = new Set(spineMet);
+  for (const b of primary) onSheet.add(b.far);
+  const extra = [];
+  const perAnchor = new Map();
+  let total = primary.length;
+  for (const anchor of spineMet) {
+    if (total >= LEFTOVER_TOTAL_CAP) break;
+    const cand = (touching.get(anchor) || []).filter((j) => !used.has(j) && !chain.includes(j));
+    for (const j of cand) {
+      if (total >= LEFTOVER_TOTAL_CAP) break;
+      if ((perAnchor.get(anchor) || 0) >= 2) break;
+      const r = reactions[j];
+      const far = [...mainsOf(r, "products"), ...mainsOf(r, "substrates")].find((c) => c !== anchor && !onSheet.has(c));
+      if (!far) continue;
+      extra.push({ anchor, far, rxnIdx: j });
+      used.add(j);
+      onSheet.add(far);
+      perAnchor.set(anchor, (perAnchor.get(anchor) || 0) + 1);
+      total++;
+    }
+  }
+  return extra;
+}
+
+let leftoverDrawn = 0, leftoverSheets = 0;
 for (const chain of sheets) {
   const branches = pickBranches(chain);
   const rxns = chain.map((i) => reactions[i]);
-  const branchRxns = branches.map((b) => reactions[b.rxnIdx]);
   const first = mainsOf(rxns[0], "substrates")[0];
   const last = mainsOf(rxns[rxns.length - 1], "products").slice(-1)[0] || mainsOf(rxns[rxns.length - 1], "products")[0];
   if (!first || !last) continue;
@@ -278,6 +331,15 @@ for (const chain of sheets) {
   if (!id || existing.has(id)) id = slug(`${title}-${rxns[0].rhea}`);
   if (existing.has(id)) continue;
   existing.add(id);
+
+  // Committed to emit: hang still-undrawn vetted reactions off this spine as
+  // extra branches. Done here (past the skip guards) so a leftover is never
+  // consumed by a sheet that is then dropped, and merged into `branches` so the
+  // rest of the emit path — metabolites, enzymes, spacing, .mpl branch lines —
+  // treats them exactly like a primary branch.
+  const extras = grabLeftovers(chain, branches);
+  if (extras.length) { branches.push(...extras); leftoverDrawn += extras.length; leftoverSheets++; }
+  const branchRxns = branches.map((b) => reactions[b.rxnIdx]);
 
   // participants
   const metIds = new Map();
@@ -323,7 +385,8 @@ for (const chain of sheets) {
       ecSeen.set(ec, enzId);
       // schema: enzyme.ec is an ARRAY (an enzyme can carry several), while
       // reaction.ec is a single string. Easy to conflate; the validator catches it.
-      enzymes.push({ id: enzId, name: ecNames.get(ec) || `EC ${ec}`, ec: [ec] });
+      const uniprot = ecUniprot.get(ec);
+      enzymes.push({ id: enzId, name: ecNames.get(ec) || `EC ${ec}`, ec: [ec], ...(uniprot ? { xrefs: { uniprot } } : {}) });
     }
   }
 
@@ -432,4 +495,90 @@ for (const chain of sheets) {
 }
 
 console.log(`Wrote ${written} module(s), ${reactionsWritten} reactions -> data/pathways/`);
+console.log(`Leftover pass: drew ${leftoverDrawn} otherwise-undrawn reaction(s) as extra branches across ${leftoverSheets} sheet(s) (cap ${LEFTOVER_TOTAL_CAP}/sheet, <=2/anchor).`);
 writeFileSync(join(ROOT, "data", "ingest", "sheets.json"), JSON.stringify(index, null, 2));
+
+// ---------------------------------------------------------------- crosstalk
+// The generated sheets carry no relations of their own, so the atlas's long-range
+// layer sees only the 27 hand-authored modules. Recover the couplings that the
+// spine cut already implies: two sheets that both draw the SAME non-currency
+// metabolite are metabolically connected through it. This is not fabricated — the
+// shared node is one resolved ChEBI/MetaNetX identity present in both modules — so
+// it is emitted as a `crosstalk` relation (metabolite -> pathway), matching the
+// hand-authored convention, pointing from the shared compound to the other sheet.
+//
+// Two guards keep the couplings meaningful. Currency is excluded (every sheet
+// touches ATP/water). And a metabolite drawn in MORE than CROSSTALK_HUB modules is
+// a hub, not a specific link — coupling all of them pairwise is noise, not signal —
+// so it is skipped entirely. Per-module output is capped so one sheet does not
+// drown in edges. Only sheets written this run are enriched; the curated modules
+// keep their authored relations untouched. The index spans every module on disk,
+// so a generated sheet can couple to a curated pathway (its highest-value link).
+enrichCrosstalk(new Set(index.map((e) => e.id)));
+
+function enrichCrosstalk(writtenIds) {
+  const HUB = Number(process.env.CROSSTALK_HUB || 8);
+  const PER_MODULE = Number(process.env.CROSSTALK_MAX || 12);
+  const files = readdirSync(OUT).filter((f) => f.endsWith(".json"));
+  const mods = files.map((f) => ({ file: f, m: JSON.parse(readFileSync(join(OUT, f), "utf8")) }));
+
+  // A coupling key is the shared, resolved identity: the ChEBI accession where the
+  // metabolite has one, else the MetaNetX id. Currency never couples.
+  const keyOf = (met) => {
+    const c = String(met.xrefs?.chebi || "").replace("CHEBI:", "");
+    if (c) return CURRENCY.has(c) ? null : `c:${c}`;
+    return met.xrefs?.metanetx ? `m:${met.xrefs.metanetx}` : null;
+  };
+
+  // key -> [{ id, name, local }] : which modules draw this metabolite, and under
+  // what local id. Deduped per module so a metabolite listed once per module.
+  const idx = new Map();
+  for (const { m } of mods) {
+    const seen = new Set();
+    for (const met of m.metabolites || []) {
+      const k = keyOf(met);
+      if (!k || seen.has(k)) continue;
+      seen.add(k);
+      if (!idx.has(k)) idx.set(k, []);
+      idx.get(k).push({ id: m.id, name: m.name, local: met.id });
+    }
+  }
+
+  let injected = 0, touched = 0;
+  for (const { file, m } of mods) {
+    if (!writtenIds.has(m.id)) continue;
+    const rels = [];
+    const seenRid = new Set();
+    for (const met of m.metabolites || []) {
+      if (rels.length >= PER_MODULE) break;
+      const k = keyOf(met);
+      if (!k) continue;
+      const partners = (idx.get(k) || []).filter((e) => e.id !== m.id);
+      if (partners.length < 1 || partners.length + 1 > HUB) continue; // <2 sharing, or a hub
+      partners.sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
+      for (const p of partners) {
+        if (rels.length >= PER_MODULE) break;
+        const rid = `xt_${met.id}_${p.id}`;
+        if (seenRid.has(rid)) continue;
+        seenRid.add(rid);
+        const src = met.xrefs?.chebi
+          ? { db: "ChEBI", id: met.xrefs.chebi }
+          : { db: "MetaNetX", id: met.xrefs.metanetx };
+        rels.push({
+          id: rid,
+          type: "crosstalk",
+          source: { kind: "metabolite", id: met.id },
+          target: { kind: "pathway", id: p.id },
+          note: `Shares ${met.name} with ${p.name}.`,
+          provenance: { confidence: "medium", sources: [src] },
+        });
+      }
+    }
+    if (!rels.length) continue;
+    m.relations = [...(m.relations || []), ...rels]; // never clobbers curated relations
+    writeFileSync(join(OUT, file), `${JSON.stringify(m, null, 2)}\n`);
+    injected += rels.length;
+    touched++;
+  }
+  console.log(`Crosstalk: ${injected} relation(s) across ${touched} module(s) (hub<=${HUB}, max ${PER_MODULE}/module).`);
+}

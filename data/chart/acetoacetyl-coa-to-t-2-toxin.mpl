@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway acetoacetyl-coa-to-t-2-toxin "acetoacetyl-CoA to T-2 toxin" {
-  spacing 264
+  spacing 312
 
   spine at 0,0 {
     acetoacetyl_coa
@@ -18,49 +18,97 @@ pathway acetoacetyl-coa-to-t-2-toxin "acetoacetyl-CoA to T-2 toxin" {
 
   branch from 3_methylbutanoyl_coa side left {
     3_methylbutanoyl_coa
-    <-> ec_1_3_99_10 [1.3.99.10] +nadh +3_methylbut_2_enoyl_coa +h
-    nad
+    <-> . +malonyl_coa +h +5_methyl_3_oxohexanoyl_coa +coa
+    co2
   }
 
   branch from 3_methylbutanoyl_coa side right {
     3_methylbutanoyl_coa
-    <-> . +ubiquinol_10 +3_methylbut_2_enoyl_coa
-    ubiquinone_10
+    <-> . +r_dihydrolipoamide +coa
+    s_8_2_methylbutanoyl_dihydrolipoamide
   }
 
   branch from coa side left {
     coa
-    <-> ec_3_1_2_20 [3.1.2.20] +4_chlorobenzoate +h +h2o
-    4_chlorobenzoyl_coa
+    <-> . +r_3_hydroxyisobutyrate +h +h2o
+    r_3_hydroxy_isobutanoyl_coa
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_76 [2.3.1.76] +hexadecanoyl_coa +retinol
-    11_cis_retinyl_hexadecanoate
+    <-> . +acetyl_coa +fucoxanthinol
+    fucoxanthin
   }
 
   branch from h side left {
     h
-    <-> ec_1_1_1_51 [1.1.1.51] +nadh +16_ketoestrone +nad
-    16_hydroxyestrone
+    <-> ec_2_7_1_1 [2.7.1.1] +d_tagatopyranose +atp +6_o_phosphonohexopyranose
+    adp
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_62 [1.1.1.62] +2_acetylpyridine +nadph +nadp
-    1_pyridin_2_yl_ethanol
+    <-> ec_3_1_1_5 [3.1.1.5] +9z_12z_octadecadienoate +sn_glycerol_3_phosphocholine +h2o
+    2_linoleoyl_sn_glycero_3_phosphocholine
   }
 
   branch from acetate side left {
     acetate
-    <-> ec_3_1_1_7 [3.1.1.7] +s_propyl_thioacetate +h2o +h
-    propane_1_thiol
+    <-> ec_3_5_1_108 [3.5.1.108] +udp_3_o_3r_3_hydroxy_hexadecanoyl_alpha_d_glucos +h2o
+    udp_3_o_3r_3_hydroxyhexanoyl_n_acetyl_alpha_d_gl
   }
 
   branch from acetate side right {
     acetate
-    <-> ec_1_1_1_1 [1.1.1.1] +h +4_nitrophenol +h2o
-    4_nitrophenyl_acetate
+    <-> ec_3_5_1_108 [3.5.1.108] +udp_2_acetamido_2_3_dideoxy_3_3r_3_hydroxyhexade +h2o
+    udp_3_n_3r_3_hydroxyhexanoyl_alpha_3_amino_3_deo
+  }
+
+  branch from coa side left {
+    coa
+    <-> . +12_hydroxy_3_oxochol_4_en_24_oyl_coa +h2o +h
+    12alpha_hydroxy_3_oxochola_4_en_24_oate
+  }
+
+  branch from coa side right {
+    coa
+    <-> . +11z_14z_17z_eicosatrienoate +h +h2o
+    11z_14z_17z_icosatrienoyl_coa
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_2_1_22 [3.2.1.22] +melibiose +beta_d_galactose
+    2r_3r_4s_5s_6r_6_2s_3r_4s_5r_6r_3_4_5_trihydrox
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +d_alanine +ubiquinone_10 +pyruvate +nh4
+    ubiquinol_10
+  }
+
+  branch from h side left {
+    h
+    <-> ec_1_6_5_2 [1.6.5.2] +ubiquinol_9 +nad +ubiquinone_9
+    nadh
+  }
+
+  branch from h side right {
+    h
+    <-> ec_1_6_5_2 [1.6.5.2] +nadh +2_decaprenyl_6_methoxy_1_4_benzoquinone +2_decaprenyl_6_methoxyhydroquinone
+    nad
+  }
+
+  branch from acetate side left {
+    acetate
+    <-> ec_3_5_1_108 [3.5.1.108] +udp_3_o_3r_3_hydroxytetradecanoyl_alpha_d_glucos +h +h2o
+    udp_3_o_3_hydroxytetradecanoyl_n_acetyl_beta_glu
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> ec_3_7_1_25 [3.7.1.25] +2e_2_hydroxypenta_2_4_dienoate +h +h2o
+    2_hydroxy_6_keto_2_4_heptadienoate
   }
 }

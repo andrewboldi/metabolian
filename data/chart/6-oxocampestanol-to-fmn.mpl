@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 6-oxocampestanol-to-fmn "6-oxocampestanol to FMN" {
-  spacing 176
+  spacing 158
 
   spine at 0,0 {
     6_oxocampestanol
@@ -20,23 +20,5 @@ pathway 6-oxocampestanol-to-fmn "6-oxocampestanol to FMN" {
     cathasterone
     <-> . +h +3s_5s_8s_9s_10r_13r_17r_17_2r_5r_5_6_dimethylhe +o2 +nadph +h2o
     nadp
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    7_hete
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    13_hete
-  }
-
-  branch from teasterone side right {
-    teasterone
-    <-> . +6_deoxoteasterone +o2
-    h2o
   }
 }

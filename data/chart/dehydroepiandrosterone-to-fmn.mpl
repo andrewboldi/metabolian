@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dehydroepiandrosterone-to-fmn "dehydroepiandrosterone… to FMN" {
-  spacing 264
+  spacing 240
 
   spine at 0,0 {
     dehydroepiandrosterone_sulfate
@@ -18,29 +18,5 @@ pathway dehydroepiandrosterone-to-fmn "dehydroepiandrosterone… to FMN" {
     19_hydroxyandrost_4_ene_3_17_dione
     <-> . +fmnh2 +o2 -fmn -h2o -hplus
     3_17_dioxoandrost_4_en_19_al
-  }
-
-  branch from dehydroepiandrosterone side left {
-    dehydroepiandrosterone
-    <-> . +udp_d_glucose +udp +hplus
-    dehydroepiandrosterone_3_d_glucoside
-  }
-
-  branch from androst_4_ene_3_17_dione side right {
-    androst_4_ene_3_17_dione
-    <-> ec_1_14_14_197 [1.14.14.197] +fmnh2 +o2 +fmn +h2o +hplus
-    11_hydroxyandrost_4_ene_3_17_dione
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +6_methoxycoumarin +fmnh2 +o2 +h2o +hplus
-    scopoletin
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +ganoderate_dm +fmnh2 +o2 +h2o +hplus
-    hainanate_a
   }
 }

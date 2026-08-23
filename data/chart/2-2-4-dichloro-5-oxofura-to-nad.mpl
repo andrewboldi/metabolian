@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-2-4-dichloro-5-oxofura-to-nad "2-(2,4-dichloro-5-oxofura… to NAD" {
-  spacing 204
+  spacing 252
 
   spine at 0,0 {
     2_2_4_dichloro_5_oxofuran_2_yl_propanoate
@@ -18,25 +18,73 @@ pathway 2-2-4-dichloro-5-oxofura-to-nad "2-(2,4-dichloro-5-oxofura… to NAD" {
 
   branch from o2 side left {
     o2
-    <-> . +fumiquinazoline_a +h2o2
-    fumiquinazoline_c
+    <-> ec_1_14_14_149 [1.14.14.149] +3_deoxycapsidiol +nadp +h2o +h +nadph
+    5_epi_aristolochene
   }
 
   branch from o2 side right {
     o2
-    <-> . +2_methyl_3_n_amyl_pyrrole +h2o2
-    2_methyl_3_n_amyl_dihydropyrrole
+    <-> ec_1_14_14_149 [1.14.14.149] +3_deoxycapsidiol +h +nadph +capsidiol +h2o
+    nadp
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_3_1_56 [1.3.1.56] +nadh +4_bromo_2_3_dihydroxydiphenyl_ether +h
-    4_bromo_2_3_dihydrodiol_diphenyl_ether
+    <-> . +nadh +acetyl_coa +butanoyl_coa +h +coa +h2o
+    2e_hexenoyl_coa
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_396 [1.1.1.396] +nadh +h +3_acetyl_3_devinylchlorophyllide_a
-    3_devinyl_3_1_hydroxyethyl_chlorophyllide_a
+    <-> . +nadh +acetyl_coa +butanoyl_coa +fadh2 +h +fad +coa +h2o
+    hexanoyl_coa
+  }
+
+  branch from h side left {
+    h
+    <-> ec_1_3_1_111 [1.3.1.111] +geranylgeranyl_bacteriochlorophyllide_a +nadph +nadp
+    bacteriochlorophyll_a
+  }
+
+  branch from h side right {
+    h
+    <-> ec_4_2_3_156 [4.2.3.156] +diphosphate +r_12_hydroxysqualene +h2o
+    presqualene_diphosphate
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_14_14_149 [1.14.14.149] +h +nadph +1_deoxycapsidiol +nadp +h2o
+    capsidiol
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_13_11_39 [1.13.11.39] +biphenyl_2_3_diol
+    2_hydroxy_6_oxo_6_phenylhexa_2_4_dienoate
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> . +acetyl_coa +butanoyl_coa +h +h2o2 +hexanoyl_coa +o2 +nad +h2o
+    coa
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +acetyl_coa +fadh2 +z_hex_3_enoyl_coa +h +coa +5z_octenoyl_coa +nad +h2o
+    fad
+  }
+
+  branch from nad side left {
+    nad
+    <-> . +nadh +acetyl_coa +z_hex_3_enoyl_coa +h +h2o2 +coa +o2 +h2o
+    5z_octenoyl_coa
+  }
+
+  branch from nad side right {
+    nad
+    <-> . +octanoyl_coa +fad +coa +h2o +nadh +hexanoyl_coa +fadh2 +h
+    acetyl_coa
   }
 }

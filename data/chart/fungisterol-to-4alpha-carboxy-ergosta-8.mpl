@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway fungisterol-to-4alpha-carboxy-ergosta-8 "fungisterol to 4alpha-carboxy-ergosta-8,…" {
-  spacing 176
+  spacing 224
 
   spine at 0,0 {
     fungisterol
@@ -18,25 +18,73 @@ pathway fungisterol-to-4alpha-carboxy-ergosta-8 "fungisterol to 4alpha-carboxy-e
 
   branch from h side left {
     h
-    <-> . +n_acetylphosphinothricyl_l_alanyl_l_leucine +h2o +phosalacine
-    acetate
+    <-> . +adp +1_docosahexaenoylglycerophosphocholine +phosphate +1_docosahexaenoylglycerophosphocholine +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> . +s_adenosyl_l_homocysteine +c32_phthiocerol_a +c31_phthiotriol
-    s_adenosyl_l_methionine
+    <-> . +adp +phosphate +atp +h2o
+    1_eicosadienoylglycerophosphocholine_delta_11_14
   }
 
   branch from nadph side left {
     nadph
-    <-> . +c31_phthiodiolone_a +h +nadp
-    c31_phthiotriol
+    <-> . +r_coclaurine +nadp +h
+    4_r_11_hydroxy_10_methoxy_5_azaspiro_cyclohexan
   }
 
   branch from nadph side right {
     nadph
-    <-> . +c33_phthiodiolone_a +h +nadp
-    c33_phthiotriol_a
+    <-> . +17_o_acetylnorajmaline +nadp +h
+    20alphas_19_20_dihydrovomilenine
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +h +nadph +11r_dihydroartemisinic_aldehyde
+    11r_dihydroartemisinic_alcohol
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_1_1_270 [1.1.1.270] +h +nadph +31_norcycloartanone
+    31_norcycloartanol
+  }
+
+  branch from h side left {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    1_eicosatrienoylglycerophosphocholine_delta_11_1
+  }
+
+  branch from h side right {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    1_heptadecanoyl_sn_glycero_3_phosphocholine
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_3_1_70 [1.3.1.70] +h +4alpha_methyl_ergosta_8_14_25_27_trienol +nadp
+    4alpha_methyl_ergosta_8_25_27_dienol
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +h +tomatid_4_en_3_one +nadp
+    dehydrotomatidine
+  }
+
+  branch from co2 side left {
+    co2
+    <-> . +excited_state_firefly_oxyluciferin
+    firefly_oxyluciferin_dioxetanone
+  }
+
+  branch from co2 side right {
+    co2
+    <-> . +coelenterazine_disulfonate_dioxetanone
+    excited_state_coelenteramide_disulfonate_anion
   }
 }

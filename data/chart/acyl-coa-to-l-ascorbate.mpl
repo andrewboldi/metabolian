@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway acyl-coa-to-l-ascorbate "acyl-CoA to L-ascorbate" {
-  spacing 224
+  spacing 212
 
   spine at 0,0 {
     acyl_coa
@@ -14,17 +14,5 @@ pathway acyl-coa-to-l-ascorbate "acyl-CoA to L-ascorbate" {
     n_acyl_2s_hydroxyglycinate
     <-> ec_1_6_5_4 [1.6.5.4] +mdha +nadh +hplus -nad
     ascorbate
-  }
-
-  branch from ascorbate side left {
-    ascorbate
-    <-> . +o2 +h2o
-    l_dehydroascorbate
-  }
-
-  branch from ascorbate side right {
-    ascorbate
-    <-> ec_1_3_3_12 [1.3.3.12] +o2 +h2o2 +hplus
-    l_galactono_1_4_lactone
   }
 }

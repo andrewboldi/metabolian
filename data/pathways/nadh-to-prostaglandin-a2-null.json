@@ -1,0 +1,541 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "nadh-to-prostaglandin-a2-null",
+  "name": "NADH to prostaglandin A2",
+  "category": "energy-metabolism",
+  "summary": "A 4-step route from NADH to prostaglandin A2(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR193781"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "15_dehydro_prostaglandin_a2",
+      "name": "15-dehydro-prostaglandin A2",
+      "short": "15-dehydro-prostagl…",
+      "formula": "C20H27O4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1132829"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "prostaglandin_a2",
+      "name": "prostaglandin A2",
+      "formula": "C20H29O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:133370"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "prostaglandin_c2",
+      "name": "prostaglandin C2",
+      "formula": "C20H29O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:133392"
+      }
+    },
+    {
+      "id": "prostaglandin_b2",
+      "name": "prostaglandin B2",
+      "formula": "C20H29O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:133391"
+      }
+    },
+    {
+      "id": "prostaglandin_c2",
+      "name": "prostaglandin-c2",
+      "formula": "C20H29O4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1560467"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_141",
+      "name": "15-hydroxyprostaglandin dehydrogenase (NAD(+))",
+      "ec": [
+        "1.1.1.141"
+      ],
+      "xrefs": {
+        "uniprot": "P15428"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "15-hydroxyprostaglandin dehydrogenase (NAD(+))",
+      "ec": "1.1.1.141",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "15_dehydro_prostaglandin_a2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "prostaglandin_a2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_141"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR193781"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR193781"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "prostaglandin A2 = prostaglandin C2",
+      "equation": "prostaglandin A2 = prostaglandin C2",
+      "substrates": [
+        {
+          "metabolite": "prostaglandin_a2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "prostaglandin_c2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:50540"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50540"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "prostaglandin C2 = prostaglandin B2",
+      "equation": "prostaglandin C2 = prostaglandin B2",
+      "substrates": [
+        {
+          "metabolite": "prostaglandin_c2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "prostaglandin_b2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:50544"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50544"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Reaction MNXR200033",
+      "substrates": [
+        {
+          "metabolite": "prostaglandin_b2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "prostaglandin_a2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR200033"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR200033"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "Reaction MNXR206751",
+      "substrates": [
+        {
+          "metabolite": "prostaglandin_c2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "prostaglandin_b2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR206751"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR206751"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_15_dehydro_prostaglandin_a2_nadh-to-prostaglandin-a2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "15_dehydro_prostaglandin_a2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-prostaglandin-a2"
+      },
+      "note": "Shares 15-dehydro-prostaglandin A2 with NADH to prostaglandin A2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1132829"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_a2_2-5z-13e-15s-11-15-di-to-r-pga2-s-glutathione",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_a2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-5z-13e-15s-11-15-di-to-r-pga2-s-glutathione"
+      },
+      "note": "Shares prostaglandin A2 with 2-[(5Z,13E,15S)-11α,15-di… to (R)-PGA2-S-glutathione….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133370"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_a2_2-5z-13e-15s-11-15-di-to-r-pga2-s-glutathione-53",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_a2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-5z-13e-15s-11-15-di-to-r-pga2-s-glutathione-53"
+      },
+      "note": "Shares prostaglandin A2 with 2-[(5Z,13E,15S)-11α,15-di… to (R)-PGA2-S-glutathione….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133370"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_a2_5-s-glutathionyl-dopachro-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_a2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-s-glutathionyl-dopachro-to-h2o-null"
+      },
+      "note": "Shares prostaglandin A2 with 5-S-glutathionyl-dopachro… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133370"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_a2_h-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_a2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-h2o"
+      },
+      "note": "Shares prostaglandin A2 with H to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133370"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_a2_leukotriene-c4-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_a2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "leukotriene-c4-to-hydrogen-donor"
+      },
+      "note": "Shares prostaglandin A2 with leukotriene C4 to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133370"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_a2_nadh-to-prostaglandin-a2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_a2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-prostaglandin-a2"
+      },
+      "note": "Shares prostaglandin A2 with NADH to prostaglandin A2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133370"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_a2_s-hydroxymethyl-glutathi-to-folate-19981",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_a2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-hydroxymethyl-glutathi-to-folate-19981"
+      },
+      "note": "Shares prostaglandin A2 with S-(hydroxymethyl)glutathi… to folate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133370"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_c2_nadh-to-prostaglandin-a2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_c2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-prostaglandin-a2"
+      },
+      "note": "Shares prostaglandin C2 with NADH to prostaglandin A2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133392"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_b2_4-chlorobenzoate-to-s-adenosyl-l-homocysteine-23",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_b2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-chlorobenzoate-to-s-adenosyl-l-homocysteine-23"
+      },
+      "note": "Shares prostaglandin B2 with 4-chlorobenzoate to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133391"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_b2_n-acetyl-alaninate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_b2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyl-alaninate-to-h2o"
+      },
+      "note": "Shares prostaglandin B2 with N-acetyl-β-alaninate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133391"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prostaglandin_b2_nadh-to-prostaglandin-a2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prostaglandin_b2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-prostaglandin-a2"
+      },
+      "note": "Shares prostaglandin B2 with NADH to prostaglandin A2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133391"
+          }
+        ]
+      }
+    }
+  ]
+}

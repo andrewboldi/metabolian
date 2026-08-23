@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-mannonate-to-h2o-null "D-mannonate to H2O" {
-  spacing 246
+  spacing 340
 
   spine at 0,0 {
     d_mannonate
@@ -14,20 +14,20 @@ pathway d-mannonate-to-h2o-null "D-mannonate to H2O" {
     l_gulonate
     <-> ec_1_1_1_19 [1.1.1.19] +nadp -nadph -hplus
     aldehydo_d_glucuronate
-    <-> ec_3_2_1_167 [3.2.1.167] +h +baicalein -h2o
-    baicalin
+    <-> ec_3_2_1_56 [3.2.1.56] +n_6_o_disulfo_d_glucosamine -3_d_glucosyluronate_n2_6_disulo_beta_d_glucosami -h2o
+    h
   }
 
   branch from nadh side left {
     nadh
-    <-> ec_1_1_1_153 [1.1.1.153] +l_sepiapterin +h +nad
-    d_erythro_7_8_dihydrobiopterin
+    <-> . +n_1_deoxy_d_fructos_1_yl_l_glutamine +h +nad
+    mannopine
   }
 
   branch from nadh side right {
     nadh
-    <-> . +h +m_xylene +o2 +nad +h2o
-    3_methylbenzyl_alcohol
+    <-> . +2_oxoglutarate +h +l_arginine +nad +h2o
+    d_nopaline
   }
 
   branch from d_fructofuranuronic_acid side left {
@@ -38,49 +38,91 @@ pathway d-mannonate-to-h2o-null "D-mannonate to H2O" {
 
   branch from d_fructofuranuronic_acid side right {
     d_fructofuranuronic_acid
-    <-> ec_5_3_1_12 [5.3.1.12] +h
-    beta_d_glucuronate
-  }
-
-  branch from l_gulonate side left {
-    l_gulonate
-    <-> ec_1_1_1_19 [1.1.1.19] +nadp +h +beta_d_glucuronate
-    nadph
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_6_99_3 [1.6.99.3] +nadh +ubiquinone_6 +h
-    ubiquinol_6
+    <-> . +h +adp +phosphate +h2o
+    atp
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_6_5_2 [1.6.5.2] +nadh +h +ubiquinol_6
-    ubiquinone_6
+    <-> ec_1_1_1_122 [1.1.1.122] +nadh +l_xylono_1_5_lactone +h
+    l_xylopyranose
   }
 
-  branch from aldehydo_d_glucuronate side right {
-    aldehydo_d_glucuronate
-    <-> . +nadh +h +nad +h2o
-    d_glucarate
+  branch from nad side right {
+    nad
+    <-> . +nadh +s_3_methyl_2_oxopentanoate +h
+    2r_3r_2_hydroxy_3_methylpentanoic_acid
   }
 
-  branch from aldehydo_d_glucuronate side left {
-    aldehydo_d_glucuronate
-    <-> . +udp +h +h2o
-    udp_alpha_d_glucuronate
+  branch from h side left {
+    h
+    <-> . +2z_2_hydroxypenta_2_4_dienoate +2_4_dihydroxybenzoate +h2o
+    2_hydroxy_6_oxo_6_2_4_dihydroxyphenyl_hexa_2_4_d
   }
 
-  branch from h2o side right {
-    h2o
-    <-> . +nicotinamide +h +nad
-    adp_beta_d_ribose
+  branch from h side right {
+    h
+    <-> . +myxochelin_a +nadp +nadph
+    myxochelin_aldehyde_intermediate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_7_1_1 [1.7.1.1] +nitrite +nad +nadh
-    nitric_acid
+    <-> ec_3_3_2_10 [3.3.2.10] +13s_14s_epoxy_4z_7z_9e_11e_16z_19z_docosahexaen
+    7r_14s_dihydroxy_4z_8e_10e_12z_16z_19z_docosahe
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +16s_17s_epoxy_4z_7z_10z_12e_14e_19z_docosahexae
+    protectin_d1
+  }
+
+  branch from nad side left {
+    nad
+    <-> . +nadh +3_decaprenyl_4_hydroxybenzoate +h +o2 +h2o
+    3_4_dihydroxy_5_all_trans_decaprenyl_benzoate
+  }
+
+  branch from nad side right {
+    nad
+    <-> . +nadh +acetyl_coa +3_s_hydroxy_pravastatin_tetranor_coa +h +h2o2 +coa +o2 +h2o
+    3_s_hydroxy_pravastatin_coa
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> . +5_fluorouracil +h +nad
+    5_6_dihydro_5_fluorouracil
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +balsalazide +h +mesalaminate +nad
+    4_aminobenzoyl_beta_alanine
+  }
+
+  branch from h side left {
+    h
+    <-> . +microcin_c_intermediate_3 +h2o
+    microcin_c_intermediate_4
+  }
+
+  branch from h side right {
+    h
+    <-> . +6_oxoprostaglandin_e1 +nadph +nadp
+    6_oxoprostaglandin_f1alpha
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +leporin_c
+    pre_leporin_c
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +h +13_14_dihydro_15_oxo_prostaglandin_e2
+    bicyclo_pge2
   }
 }

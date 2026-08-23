@@ -1,0 +1,531 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "4-hydroxynonanal-to-1-hydroperoxy-8-carboxyoc-nu",
+  "name": "4-hydroxynonanal to 1-hydroperoxy-8-carboxyoc…",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 4-hydroxynonanal to 1-hydroperoxy-8-carboxyoctyl 3,4-epoxynon-(2E)-enyl ether, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR198827"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:156112"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "4_hydroxynonanal",
+      "name": "4-hydroxynonanal",
+      "formula": "C9H18O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:156112"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "4_hydroxynon_2_enal",
+      "name": "4-hydroxynon-2-enal",
+      "formula": "C9H16O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:32585"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "3_4_epoxynonanal",
+      "name": "3,4-Epoxynonanal",
+      "formula": "C9H16O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:171773"
+      }
+    },
+    {
+      "id": "nonanedioate",
+      "name": "nonanedioate",
+      "formula": "C9H14O4",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM731023"
+      }
+    },
+    {
+      "id": "1_hydroperoxy_8_carboxyoctyl_3_4_epoxynon_2e_eny",
+      "name": "1-hydroperoxy-8-carboxyoctyl 3,4-epoxynon-(2E)-enyl ether",
+      "short": "1-hydroperoxy-8-car…",
+      "formula": "C18H32O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM164037"
+      }
+    },
+    {
+      "id": "e_4_hydroxynon_2_enal",
+      "name": "(E)-4-hydroxynon-2-enal",
+      "short": "4-hydroxynon-2-enal",
+      "formula": "C9H16O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58968"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_3_1_74",
+      "name": "2-alkenal reductase [NAD(P)(+)]",
+      "ec": [
+        "1.3.1.74"
+      ],
+      "xrefs": {
+        "uniprot": "Q14914"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2-alkenal reductase [NAD(P)(+)]",
+      "ec": "1.3.1.74",
+      "substrates": [
+        {
+          "metabolite": "4_hydroxynonanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxynon_2_enal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_1_74"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR198827"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198827"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR103891",
+      "substrates": [
+        {
+          "metabolite": "4_hydroxynon_2_enal",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_4_epoxynonanal",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR103891"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR103891"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR103892",
+      "substrates": [
+        {
+          "metabolite": "3_4_epoxynonanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nonanedioate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_hydroperoxy_8_carboxyoctyl_3_4_epoxynon_2e_eny",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR103892"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR103892"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Reaction MNXR206710",
+      "substrates": [
+        {
+          "metabolite": "e_4_hydroxynon_2_enal",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_4_epoxynonanal",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR206710"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR206710"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_4_hydroxynonanal_4-hydroxynonanal-to-1-hydroperoxy-8-carboxyoc",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_hydroxynonanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxynonanal-to-1-hydroperoxy-8-carboxyoc"
+      },
+      "note": "Shares 4-hydroxynonanal with 4-hydroxynonanal to 1-hydroperoxy-8-carboxyoc….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:156112"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_4_epoxynonanal_4-hydroxynonanal-to-1-hydroperoxy-8-carboxyoc",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_4_epoxynonanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxynonanal-to-1-hydroperoxy-8-carboxyoc"
+      },
+      "note": "Shares 3,4-Epoxynonanal with 4-hydroxynonanal to 1-hydroperoxy-8-carboxyoc….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:171773"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nonanedioate_4-hydroxynonanal-to-1-hydroperoxy-8-carboxyoc",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nonanedioate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxynonanal-to-1-hydroperoxy-8-carboxyoc"
+      },
+      "note": "Shares nonanedioate with 4-hydroxynonanal to 1-hydroperoxy-8-carboxyoc….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM731023"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_hydroperoxy_8_carboxyoctyl_3_4_epoxynon_2e_eny_4-hydroxynonanal-to-1-hydroperoxy-8-carboxyoc",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_hydroperoxy_8_carboxyoctyl_3_4_epoxynon_2e_eny"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxynonanal-to-1-hydroperoxy-8-carboxyoc"
+      },
+      "note": "Shares 1-hydroperoxy-8-carboxyoctyl 3,4-epoxynon-(2E)-enyl ether with 4-hydroxynonanal to 1-hydroperoxy-8-carboxyoc….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM164037"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_hydroperoxy_8_carboxyoctyl_3_4_epoxynon_2e_eny_methanofuran-to-dihydroxyacetone-phosphate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_hydroperoxy_8_carboxyoctyl_3_4_epoxynon_2e_eny"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "methanofuran-to-dihydroxyacetone-phosphate-null"
+      },
+      "note": "Shares 1-hydroperoxy-8-carboxyoctyl 3,4-epoxynon-(2E)-enyl ether with methanofuran… to dihydroxyacetone phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM164037"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_hydroperoxy_8_carboxyoctyl_3_4_epoxynon_2e_eny_s-4-hydroxymandelate-to-2-hydroxyacetophenone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_hydroperoxy_8_carboxyoctyl_3_4_epoxynon_2e_eny"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-4-hydroxymandelate-to-2-hydroxyacetophenone"
+      },
+      "note": "Shares 1-hydroperoxy-8-carboxyoctyl 3,4-epoxynon-(2E)-enyl ether with (S)-4-hydroxymandelate to 2-hydroxyacetophenone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM164037"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_4_hydroxynon_2_enal_4-hydroxynonanal-to-1-hydroperoxy-8-carboxyoc",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_4_hydroxynon_2_enal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxynonanal-to-1-hydroperoxy-8-carboxyoc"
+      },
+      "note": "Shares (E)-4-hydroxynon-2-enal with 4-hydroxynonanal to 1-hydroperoxy-8-carboxyoc….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58968"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_4_hydroxynon_2_enal_5-s-glutathionyl-aminochr-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_4_hydroxynon_2_enal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-s-glutathionyl-aminochr-to-o2"
+      },
+      "note": "Shares (E)-4-hydroxynon-2-enal with 5-S-glutathionyl-aminochr… to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58968"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_4_hydroxynon_2_enal_alpha-d-glucose-to-d-glucosyl-1-4-d-ma-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_4_hydroxynon_2_enal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-glucose-to-d-glucosyl-1-4-d-ma-null"
+      },
+      "note": "Shares (E)-4-hydroxynon-2-enal with alpha-D-glucose to β-D-glucosyl-(1→4)-β-D-ma….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58968"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_4_hydroxynon_2_enal_coenzyme-q10-to-glutathionate-38359",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_4_hydroxynon_2_enal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "coenzyme-q10-to-glutathionate-38359"
+      },
+      "note": "Shares (E)-4-hydroxynon-2-enal with coenzyme Q10 to glutathionate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58968"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_4_hydroxynon_2_enal_diphosphate-to-precorrin-6b",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_4_hydroxynon_2_enal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-precorrin-6b"
+      },
+      "note": "Shares (E)-4-hydroxynon-2-enal with diphosphate to precorrin-6B.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58968"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_4_hydroxynon_2_enal_prostaglandin-d2-to-s-11-oh-9-deoxy-delta9-1-nul",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_4_hydroxynon_2_enal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "prostaglandin-d2-to-s-11-oh-9-deoxy-delta9-1-nul"
+      },
+      "note": "Shares (E)-4-hydroxynon-2-enal with prostaglandin D2 to S-(11-OH-9-deoxy-delta9,1….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58968"
+          }
+        ]
+      }
+    }
+  ]
+}

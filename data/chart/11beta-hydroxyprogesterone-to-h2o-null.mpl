@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 11beta-hydroxyprogesterone-to-h2o-null "11Beta-Hydroxyprogesterone to H2O" {
-  spacing 300
+  spacing 240
 
   spine at 0,0 {
     11beta_hydroxyprogesterone
@@ -18,65 +18,5 @@ pathway 11beta-hydroxyprogesterone-to-h2o-null "11Beta-Hydroxyprogesterone to H2
     17alpha_21_dihydroxypregnenolone
     <-> ec_1_14_15_4 [1.14.15.4] +h +o2 +nadph -nadp -h2o
     11beta_17alpha_21_trihydroxypregnenolone
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
-    anserine
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
-    l_alanyl_gamma_d_glutamyl_meso_2_6_diaminopimelo
-  }
-
-  branch from o2 side left {
-    o2
-    <-> ec_1_14_13_190 [1.14.13.190] +h +nadph +miltiradiene +nadp +h2o
-    ferruginol
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +dehydroascorbide
-    cyclic_2_3_o_oxalyl_l_threonate
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> ec_1_1_1_412 [1.1.1.412] +h +2r_2_octyl_3_oxododecanoate +nadp
-    2r_3s_2_octyl_3_hydroxydodecanoate
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> . +coclaurine +nadp +h
-    4_r_11_hydroxy_10_methoxy_5_azaspiro_cyclohexan
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +h +nadph +6_dehydro_scb2
-    scb2
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_3_1_113 [1.3.1.113] +h +nadph +4_6_methyloctanoyl_5_oxo_2h_furan_3_yl_methyl_p
-    3s_4r_4_6_methyloctanoyl_5_oxooxolan_3_yl_methy
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +l_alanyl_l_glutamate +adp +phosphate +l_alanyl_l_glutamate
-    atp
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    glycylglycine
   }
 }

@@ -187,39 +187,87 @@
       }
     },
     {
-      "id": "ginsenoside_rg2",
-      "name": "ginsenoside Rg2",
-      "formula": "C42H72O13",
-      "charge": 0,
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:77151"
+        "metanetx": "MNXM1"
       }
     },
     {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
-      "charge": 0,
+      "id": "4_deoxy_l_threo_hex_4_enopyranuronate",
+      "name": "4-deoxy-L-threo-hex-4-enopyranuronate",
+      "short": "4-deoxy-L-threo-hex…",
+      "formula": "C6H7O6",
+      "charge": -1,
       "xrefs": {
-        "metanetx": "WATER"
+        "chebi": "CHEBI:195277"
       }
     },
     {
-      "id": "glucose",
-      "name": "D-Glucose",
-      "formula": "C6H12O6",
+      "id": "alpha_l_rhamnosyl_1_4_d_glucuronate",
+      "name": "alpha-L-Rhamnosyl-(1->4)-D-glucuronate",
+      "short": "alpha-L-Rhamnosyl-(…",
+      "formula": "C12H20O11",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:4167"
+        "metanetx": "MNXM1556251"
       }
     },
     {
-      "id": "protopanaxatriol",
-      "name": "protopanaxatriol",
-      "formula": "C30H52O4",
+      "id": "l_rhamnulose",
+      "name": "L-Rhamnulose",
+      "formula": "C6H12O5",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:75951"
+        "metanetx": "MNXM731756"
+      }
+    },
+    {
+      "id": "d_erythrose",
+      "name": "D-erythrose",
+      "formula": "C4H8O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27904"
+      }
+    },
+    {
+      "id": "3s_4s_5r_6r_3_4_5_6_7_pentahydroxy_2_oxoheptano",
+      "name": "(3S,4S,5R,6R)-3,4,5,6,7-pentahydroxy-2-oxoheptanoate",
+      "short": "(3S,4S,5R,6R)-3,4,5…",
+      "formula": "C7H11O8",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:231439"
+      }
+    },
+    {
+      "id": "glycerate",
+      "name": "glycerate",
+      "formula": "C3H5O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:33871"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
       }
     }
   ],
@@ -260,10 +308,10 @@
       ]
     },
     {
-      "id": "ec_3_2_1_194",
-      "name": "ginsenosidase type IV",
+      "id": "ec_4_2_2_28",
+      "name": "alpha-L-rhamnosyl-(1->4)-beta-D-glucuronate lyase",
       "ec": [
-        "3.2.1.194"
+        "4.2.2.28"
       ]
     }
   ],
@@ -565,48 +613,352 @@
     },
     {
       "id": "r8",
-      "name": "ginsenosidase type IV",
-      "ec": "3.2.1.194",
+      "name": "alpha-L-rhamnosyl-(1->4)-beta-D-glucuronate lyase",
+      "ec": "4.2.2.28",
       "substrates": [
-        {
-          "metabolite": "ginsenoside_rg2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "glucose",
-          "stoichiometry": 1
-        },
         {
           "metabolite": "l_rhamnopyranose",
           "stoichiometry": 1
         },
         {
-          "metabolite": "protopanaxatriol",
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4_deoxy_l_threo_hex_4_enopyranuronate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "alpha_l_rhamnosyl_1_4_d_glucuronate",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_2_1_194"
+          "enzyme": "ec_4_2_2_28"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "metanetx": "MNXR118812"
+        "metanetx": "MNXR199281"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR118812"
+            "id": "MNXR199281"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "Reaction MNXR206778",
+      "substrates": [
+        {
+          "metabolite": "l_rhamnopyranose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_rhamnulose",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "metanetx": "MNXR206778"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR206778"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "D-erythrose + 3-hydroxypyruvate = (3S,4S,5R,6R)-3,4,5,6,7-pentahydroxy-2-oxoheptanoate",
+      "equation": "D-erythrose + 3-hydroxypyruvate = (3S,4S,5R,6R)-3,4,5,6,7-pentahydroxy-2-oxoheptanoate",
+      "substrates": [
+        {
+          "metabolite": "d_erythrose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_hydroxypyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3s_4s_5r_6r_3_4_5_6_7_pentahydroxy_2_oxoheptano",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:80075"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:80075"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "glycerate + NAD(+) = 3-hydroxypyruvate + NADH + H(+)",
+      "equation": "glycerate + NAD(+) = 3-hydroxypyruvate + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "glycerate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_hydroxypyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:81639"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81639"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_dioscin_tryptophol-to-indol-3-ylacetyl-myo-in",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dioscin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "tryptophol-to-indol-3-ylacetyl-myo-in"
+      },
+      "note": "Shares dioscin with tryptophol to (indol-3-ylacetyl)-myo-in….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74023"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_lactaldehyde_2-aminopropan-1-ol-to-s-lactaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_lactaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-aminopropan-1-ol-to-s-lactaldehyde"
+      },
+      "note": "Shares (S)-lactaldehyde with 2-aminopropan-1-ol to (S)-lactaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18041"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_lactaldehyde_l-rhamnofuranose-to-3-carboxy-cis-cis-muconate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_lactaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-rhamnofuranose-to-3-carboxy-cis-cis-muconate"
+      },
+      "note": "Shares (S)-lactaldehyde with L-rhamnofuranose to 3-carboxy-cis,cis-muconate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18041"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_diosgenin_tryptophol-to-indol-3-ylacetyl-myo-in",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "diosgenin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "tryptophol-to-indol-3-ylacetyl-myo-in"
+      },
+      "note": "Shares diosgenin with tryptophol to (indol-3-ylacetyl)-myo-in….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:4629"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_dehydro_4_deoxy_d_glucuronate_l-rhamnosyl-1-4-d-glu-to-3-deoxy-d-glycero-hexo",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_dehydro_4_deoxy_d_glucuronate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-rhamnosyl-1-4-d-glu-to-3-deoxy-d-glycero-hexo"
+      },
+      "note": "Shares 5-dehydro-4-deoxy-D-glucuronate with α-L-rhamnosyl-(1→4)-D-glu… to 3-deoxy-D-glycero-hexo-2,….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17117"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_dehydro_4_deoxy_d_glucuronate_n-acetylneuraminyl-2-8-to-n-acetyl-d-galactosam",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_dehydro_4_deoxy_d_glucuronate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetylneuraminyl-2-8-to-n-acetyl-d-galactosam"
+      },
+      "note": "Shares 5-dehydro-4-deoxy-D-glucuronate with α-N-acetylneuraminyl-(2→8… to N-acetyl-β-D-galactosamine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17117"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_rhamnulose_l-rhamnulose-1-phosphate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_rhamnulose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-rhamnulose-1-phosphate-to-h2o"
+      },
+      "note": "Shares L-Rhamnulose with L-rhamnulose 1-phosphate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM731756"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_erythrose_erythritol-to-l-lysinium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_erythrose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "erythritol-to-l-lysinium"
+      },
+      "note": "Shares D-erythrose with erythritol to L-lysinium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:27904"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_erythrose_fmnh2-to-d-erythrulose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_erythrose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fmnh2-to-d-erythrulose"
+      },
+      "note": "Shares D-erythrose with FMNH2 to D-erythrulose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:27904"
           }
         ]
       }

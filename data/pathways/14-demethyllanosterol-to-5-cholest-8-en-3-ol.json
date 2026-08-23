@@ -302,6 +302,26 @@
       "xrefs": {
         "metanetx": "MNXM819207"
       }
+    },
+    {
+      "id": "methylzymosterol_carboxylate",
+      "name": "4alpha-Methylzymosterol-4-carboxylate",
+      "short": "4alpha-Methylzymost…",
+      "formula": "C29H45O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64925"
+      }
+    },
+    {
+      "id": "4alpha_methyl_cholesta_8_14_dienol",
+      "name": "4alpha-methyl-cholesta-8,14-dienol",
+      "short": "4alpha-methyl-chole…",
+      "formula": "C28H46O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM37782"
+      }
     }
   ],
   "enzymes": [
@@ -317,7 +337,20 @@
       "name": "Delta(24)-sterol reductase",
       "ec": [
         "1.3.1.72"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q15392"
+      }
+    },
+    {
+      "id": "ec_1_3_1_70",
+      "name": "Delta(14)-sterol reductase",
+      "ec": [
+        "1.3.1.70"
+      ],
+      "xrefs": {
+        "uniprot": "O76062"
+      }
     }
   ],
   "reactions": [
@@ -1304,6 +1337,371 @@
           {
             "db": "MetaNetX",
             "id": "MNXR179592"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r21",
+      "name": "4,4-dimethyl-5alpha-cholesta-8,24-dien-3beta-ol + 6 Fe(II)-[cytochrome b5] + 3 O2 + 5 H...",
+      "equation": "4,4-dimethyl-5alpha-cholesta-8,24-dien-3beta-ol + 6 Fe(II)-[cytochrome b5] + 3 O2 + 5 H(+) = 4beta-methylzymosterol-4alpha-carboxylate + 6 Fe(III)-[cytochrome b5] + 4 H2O",
+      "substrates": [
+        {
+          "metabolite": "tmas",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 6
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 5
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methylzymosterol_carboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 6
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 4
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 21,
+      "xrefs": {
+        "rhea": "RHEA:55244"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55244"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r22",
+      "name": "Delta(14)-sterol reductase",
+      "ec": "1.3.1.70",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4alpha_methyl_cholesta_8_14_dienol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4_methyl_5_cholest_8_en_3_ol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_1_70"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 22,
+      "xrefs": {
+        "metanetx": "MNXR164813"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR164813"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_tmas_14-demethyllanosterol-to-3-dehydro-4-methylzymos",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tmas"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "14-demethyllanosterol-to-3-dehydro-4-methylzymos"
+      },
+      "note": "Shares 4,4-Dimethyl-5alpha-cholesta-8,24-dien-3beta-ol (T-MAS / 14-demethyllanosterol) with 14-demethyllanosterol to 3-dehydro-4-methylzymoste….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18364"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tmas_14-demethyllanosterol-to-7-dehydrodesmosterol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tmas"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "14-demethyllanosterol-to-7-dehydrodesmosterol"
+      },
+      "note": "Shares 4,4-Dimethyl-5alpha-cholesta-8,24-dien-3beta-ol (T-MAS / 14-demethyllanosterol) with 14-demethyllanosterol to 7-dehydrodesmosterol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18364"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tmas_14-demethyllanosterol-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tmas"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "14-demethyllanosterol-to-nad"
+      },
+      "note": "Shares 4,4-Dimethyl-5alpha-cholesta-8,24-dien-3beta-ol (T-MAS / 14-demethyllanosterol) with 14-demethyllanosterol to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18364"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tmas_cholesterol-biosynthesis",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tmas"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cholesterol-biosynthesis"
+      },
+      "note": "Shares 4,4-Dimethyl-5alpha-cholesta-8,24-dien-3beta-ol (T-MAS / 14-demethyllanosterol) with Cholesterol biosynthesis (mevalonate pathway).",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18364"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tmas_lanosteryl-palmitate-to-5-formamido-1-5-phospho",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tmas"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "lanosteryl-palmitate-to-5-formamido-1-5-phospho"
+      },
+      "note": "Shares 4,4-Dimethyl-5alpha-cholesta-8,24-dien-3beta-ol (T-MAS / 14-demethyllanosterol) with lanosteryl palmitate to 5-formamido-1-(5-phospho-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:18364"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_4_dimethyl_5_cholest_8_en_3_ol_h-to-4-methyl-5-cholest-8-en",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_4_dimethyl_5_cholest_8_en_3_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-4-methyl-5-cholest-8-en"
+      },
+      "note": "Shares 4,4-dimethyl-5α-cholest-8-en-3β-ol with H to 4α-methyl-5α-cholest-8-en….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87044"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_hydroxy_4_methyl_5_cholest_8_ene_4_carboxylate_h-to-4-methyl-5-cholest-8-en",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_hydroxy_4_methyl_5_cholest_8_ene_4_carboxylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-4-methyl-5-cholest-8-en"
+      },
+      "note": "Shares 3β-hydroxy-4β-methyl-5α-cholest-8-ene-4α-carboxylate with H to 4α-methyl-5α-cholest-8-en….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87047"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_methyl_5_cholest_8_en_3_one_h-to-4-methyl-5-cholest-8-en",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_methyl_5_cholest_8_en_3_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-4-methyl-5-cholest-8-en"
+      },
+      "note": "Shares 4α-methyl-5α-cholest-8-en-3-one with H to 4α-methyl-5α-cholest-8-en….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87050"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_methyl_5_cholest_8_en_3_ol_4alpha-methyl-5alpha-chol-to-5-cholest-8-en-3-on",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_methyl_5_cholest_8_en_3_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4alpha-methyl-5alpha-chol-to-5-cholest-8-en-3-on"
+      },
+      "note": "Shares 4α-methyl-5α-cholest-8-en-3β-ol with 4alpha-methyl-5alpha-chol… to 5α-cholest-8-en-3-one.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87051"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_hydroxy_5_cholest_8_ene_4_carboxylate_4alpha-methyl-5alpha-chol-to-5-cholest-8-en-3-on",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_hydroxy_5_cholest_8_ene_4_carboxylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4alpha-methyl-5alpha-chol-to-5-cholest-8-en-3-on"
+      },
+      "note": "Shares 3β-hydroxy-5α-cholest-8-ene-4α-carboxylate with 4alpha-methyl-5alpha-chol… to 5α-cholest-8-en-3-one.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87055"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_cholest_8_en_3_one_4alpha-methyl-5alpha-chol-to-5-cholest-8-en-3-on",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_cholest_8_en_3_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4alpha-methyl-5alpha-chol-to-5-cholest-8-en-3-on"
+      },
+      "note": "Shares 5α-cholest-8-en-3-one with 4alpha-methyl-5alpha-chol… to 5α-cholest-8-en-3-one.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:87056"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_zymostenol_5-cholest-7-en-3-ol-to-ergosta-5-7-22-24-28-tet",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "zymostenol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cholest-7-en-3-ol-to-ergosta-5-7-22-24-28-tet"
+      },
+      "note": "Shares 5alpha-Cholest-8-en-3beta-ol (zymostenol) with 5α-cholest-7-en-3β-ol to ergosta-5,7,22,24(28)-tet….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16608"
           }
         ]
       }

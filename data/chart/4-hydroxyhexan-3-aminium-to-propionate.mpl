@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-hydroxyhexan-3-aminium-to-propionate "4-hydroxyhexan-3-aminium to propionate" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     4_hydroxyhexan_3_aminium
@@ -14,29 +14,5 @@ pathway 4-hydroxyhexan-3-aminium-to-propionate "4-hydroxyhexan-3-aminium to prop
     propanal
     <-> . +o2 +h2o -h2o2 -hplus
     propionate
-  }
-
-  branch from nh3 side left {
-    nh3
-    <-> . +d_aspartate +nad +h2o +nadh +hplus
-    oxaloacetate
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +2r_butan_2_aminium +nad +h2o +nadh +hplus
-    butan_2_one
-  }
-
-  branch from propanal side left {
-    propanal
-    <-> . +nadp +nadph +hplus
-    propan_1_ol
-  }
-
-  branch from propanal side right {
-    propanal
-    <-> . +hydrogen_cyanide
-    2s_2_hydroxybutanenitrile
   }
 }

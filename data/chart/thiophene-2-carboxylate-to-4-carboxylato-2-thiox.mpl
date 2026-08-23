@@ -18,25 +18,25 @@ pathway thiophene-2-carboxylate-to-4-carboxylato-2-thiox "thiophene-2-carboxylat
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_84 [4.2.3.84] +fpp +h2o
-    10_epi_eudesmol
+    <-> ec_4_2_3_169 [4.2.3.169] +fpp +h2o
+    7_epi_eudesmol
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_85 [4.2.3.85] +fpp +h2o
-    eudesmol
+    <-> ec_4_2_3_170 [4.2.3.170] +fpp +h2o
+    4_epi_cubebol
   }
 
-  branch from hydrogen_acceptor side left {
-    hydrogen_acceptor
-    <-> . +1_4_benzoquinones +hydrogen_donor
-    hydroquinones
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_173 [4.2.3.173] +fpp +h2o
+    cadinol
   }
 
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> . +5_s_hydroperoxy_18_r_hydroxy_6e_8z_11z_14z_16e_i +hydrogen_donor +h2o
-    resolvin_e2
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_174 [4.2.3.174] +fpp +h2o
+    2e_6e_hedycaryol
   }
 }

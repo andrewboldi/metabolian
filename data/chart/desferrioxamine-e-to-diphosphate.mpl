@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway desferrioxamine-e-to-diphosphate "desferrioxamine E to diphosphate" {
-  spacing 176
+  spacing 224
 
   spine at 0,0 {
     desferrioxamine_e
@@ -18,25 +18,73 @@ pathway desferrioxamine-e-to-diphosphate "desferrioxamine E to diphosphate" {
 
   branch from atp side left {
     atp
-    <-> . +diphosphate +indole_3_acetyl_l_valine +amp +indol_3_yl_acetate
-    l_valine
+    <-> . +h +adp +phosphate +h2o
+    17alpha_hydroxypregnenolone_sulfate
   }
 
   branch from atp side right {
     atp
-    <-> . +diphosphate +indole_3_acetyl_l_phenylalanine +amp +l_phenylalanine
-    indol_3_yl_acetate
+    <-> . +h +adp +phosphate +h2o
+    11_dehydrothromboxane_b2
   }
 
-  branch from ppi side left {
-    ppi
-    <-> . +spectinomycin +atp
-    9_o_adenylylspectinomycin
+  branch from diphosphate side left {
+    diphosphate
+    <-> ec_2_5_1_20 [2.5.1.20] +poly_cis_polyprenyl_diphosphate_longer_by_one_c5 +ipp
+    poly_cis_polyprenyl_diphosphate
   }
 
-  branch from ppi side right {
-    ppi
-    <-> . +streptomycin +atp
-    6_o_adenylylstreptomycin
+  branch from diphosphate side right {
+    diphosphate
+    <-> . +2_3_cgamp
+    pppgp_2_5_a
+  }
+
+  branch from h side left {
+    h
+    <-> . +d_alanine +three_disacharide_linked_murein_units_pentapepti
+    a_peptidoglycan_trimer_with_pentapeptide_stems_m
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_3_2_7 [3.3.2.7] +5z_9e_14z_8xi_11r_12s_11_12_epoxy_8_hydroxyicos +h2o
+    5z_9e_14z_8xi_11xi_12s_8_11_12_trihydroxyicosa
+  }
+
+  branch from amp side left {
+    amp
+    <-> . +diphosphate +h +lovastatin +atp
+    7_2_6_dimethyl_8_2_methyl_1_oxobutoxy_1_2_6_7_8
+  }
+
+  branch from amp side right {
+    amp
+    <-> . +diphosphate +h +11z_octadecenoyl_coa +atp +vaccenic_acid
+    coa
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    4_hydroxynon_2_enal
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    9_10_dihydroxy_12z_octadecenoate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_1_14_15_17 [1.14.15.17] +epoxypheophorbide_a
+    red_chlorophyll_catabolite
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_2_1_21 [3.2.1.21] +glucose +methanol
+    methyl_d_glucopyranoside
   }
 }

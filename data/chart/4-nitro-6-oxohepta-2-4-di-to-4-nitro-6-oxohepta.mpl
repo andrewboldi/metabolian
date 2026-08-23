@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-nitro-6-oxohepta-2-4-di-to-4-nitro-6-oxohepta "4-nitro-6-oxohepta-2,4-di… to 4-nitro-6-oxohepta-2,4-di…" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     4_nitro_6_oxohepta_2_4_dienedioate
@@ -16,17 +16,5 @@ pathway 4-nitro-6-oxohepta-2-4-di-to-4-nitro-6-oxohepta "4-nitro-6-oxohepta-2,4-
     5_nitrosalicylate
     <-> . +o2 -hplus
     4_nitro_6_oxohepta_2_4_dienedioate
-  }
-
-  branch from o2 side left {
-    o2
-    <-> ec_1_13_11_66 [1.13.11.66] +2z_4e_4_hydroxy_6_methoxy_6_oxohexa_2_4_dienoat +h
-    2_methoxyhydroquinone
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +nadh +para_isopropylaniline +h +nh4 +nad
-    4_isopropylcatechol
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-adenosyl-l-homocysteine-to-3-4-dihydroxy-5-all "S-adenosyl-L-homocysteine to 3,4-dihydroxy-5-(all-tran…" {
-  spacing 218
+  spacing 152
 
   spine at 0,0 {
     s_adenosyl_l_homocysteine
@@ -18,71 +18,5 @@ pathway s-adenosyl-l-homocysteine-to-3-4-dihydroxy-5-all "S-adenosyl-L-homocyste
     4_amino_3_methoxybenzoate
     <-> . +3_4_dihydroxybenzoate +all_trans_hexaprenyl_diphosphate -3_4_dihydroxy_5_all_trans_hexaprenyl_benzoate
     diphosphate
-  }
-
-  branch from s_adenosyl_l_methionine side left {
-    s_adenosyl_l_methionine
-    <-> ec_2_1_1_275 [2.1.1.275] +s_adenosyl_l_homocysteine +methyl_gibberellin_a9 +h
-    gibberellin_a9
-  }
-
-  branch from s_adenosyl_l_methionine side right {
-    s_adenosyl_l_methionine
-    <-> ec_2_1_1_49 [2.1.1.49] +s_adenosyl_l_homocysteine +r_nicotine_isomethonium_ion
-    s_nicotine
-  }
-
-  branch from h side left {
-    h
-    <-> . +3z_dodecenoyl_coa +acetyl_coa +3_oxomyrist_5_enoyl_coenzyme_a
-    coa
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    lithocholate_sulfate
-  }
-
-  branch from o2 side left {
-    o2
-    <-> ec_1_7_3_1 [1.7.3.1] +nitrite +h +h2o2 +2_hydroxy_pentan_3_one +h2o
-    3_nitro_2_pentanol
-  }
-
-  branch from o2 side right {
-    o2
-    <-> ec_1_7_3_1 [1.7.3.1] +nitrite +h +h2o2 +cyclohexanone +h2o
-    nitrocyclohexane
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> . +h +o2 +2_polyprenyl_3_methyl_6_methoxy_1_4_benzoquinone +nadp +h2o
-    2_polyprenyl_3_methyl_5_hydroxy_6_methoxy_1_4_be
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> ec_1_1_1_274 [1.1.1.274] +h +2_5_didehydro_d_gluconate +nadp
-    2_dehydro_d_galactonate
-  }
-
-  branch from 3_all_trans_hexaprenyl_4_amino_5_methoxybenzoate side left {
-    3_all_trans_hexaprenyl_4_amino_5_methoxybenzoate
-    <-> . +s_adenosyl_l_homocysteine +h +s_adenosyl_l_methionine
-    4_amino_5_hydroxy_3_all_trans_hexaprenylbenzoate
-  }
-
-  branch from diphosphate side right {
-    diphosphate
-    <-> . +h +amp +taurolithocholate +atp +lithocholate
-    taurine
-  }
-
-  branch from diphosphate side left {
-    diphosphate
-    <-> ec_2_7_7_40 [2.7.7.40] +cdp_l_ribitol +ctp +d_ribitol_5_phosphate
-    pmf
   }
 }

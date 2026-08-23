@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway ergosteryl-palmitate-to-h2o "ergosteryl palmitate to H2O" {
-  spacing 218
+  spacing 308
 
   spine at 0,0 {
     ergosteryl_palmitate
@@ -22,67 +22,157 @@ pathway ergosteryl-palmitate-to-h2o "ergosteryl palmitate to H2O" {
 
   branch from palmitate side left {
     palmitate
-    <-> ec_3_1_2_2 [3.1.2.2] +h2o +coa +hplus
-    palmitoyl_coa
+    <-> . +1_oleoyl_2_palmitoyl_sn_glycero_3_phosphocholine +h2o +hplus
+    1_o_oleoyl_sn_glycero_3_phosphocholine
   }
 
   branch from palmitate side right {
     palmitate
-    <-> . +n_hexadecanoylphytosphingosine +h2o
-    phytosphingosine
+    <-> . +1_hexadecanoyl_sn_glycero_3_phosphocholine +h2o +hplus
+    choline_alfoscerate
   }
 
   branch from fmn side left {
     fmn
-    <-> . +3_17_dihydroxy_9_10_secoandrosta_1_3_5_10_triene +fmnh2 +o2 +h2o +hplus
-    3_4_17_trihydroxy_9_10_secoandrosta_1_3_5_10_tri
+    <-> . +vernolate +fmnh2 +o2 +h2o +hplus
+    12_13_epoxy_18_hydroxy_9z_octadecenoate
   }
 
   branch from fmn side right {
     fmn
-    <-> . +4_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
-    4_7_dihydroxycholesterol
-  }
-
-  branch from 1_25_dihydroxyvitamin_d2 side left {
-    1_25_dihydroxyvitamin_d2
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    doxercalciferol
-  }
-
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
-    <-> ec_1_14_15_33 [1.14.15.33] +narbomycin +di_sulfido_diiron +o2 +hplus +h2o
-    neopikromycin
+    <-> . +8_9_eet +fmnh2 +o2 +h2o +hplus
+    8_9_epoxy_20_hydroxy_5z_11z_14z_icosatrienoate
   }
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_14_15_33 [1.14.15.33] +narbomycin +di_sulfido_diiron +o2 +hplus +h2o
-    novapikromycin
+    <-> ec_1_14_15_22 [1.14.15.22] +calciol +di_sulfido_diiron +o2 +hplus +h2o
+    calcidiol
   }
 
-  branch from nadp side right {
-    nadp
-    <-> . +h +15_oxo_lipoxin_a4 +nadph
-    13_14_dihydro_15_oxo_lipoxin_a4
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_14_15_22 [1.14.15.22] +calcidiol +di_sulfido_diiron +o2 +hplus +h2o
+    calcitriol
   }
 
   branch from nadp side left {
     nadp
-    <-> . +4_oxo_9_cis_retinoate +h +nadph
-    9_cis_4_oxo_13_14_dihydro_retinoate
+    <-> ec_1_14_99_2 [1.14.99.2] +kynurenate +h +o2 +nadph
+    7_8_dihydro_7_8_dihydroxykynurenate
   }
 
-  branch from h2o side right {
-    h2o
-    <-> . +2_2_2_2_2_amino_3_4_hydroxyphenyl_1_oxopropyl_am +h +dynorphin_a_6_8
-    dynorphin_a_1_8
+  branch from nadp side right {
+    nadp
+    <-> . +h +o2 +nadph +toluene +h2o
+    3_methylphenol
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +s_salsolinol +acetaldehyde
-    dopamine
+    <-> . +h +adp +phosphate +atp
+    s_glutathionyl_ethacrynic_acid
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +h +adp +phosphate +atp
+    propanoyl_coa
+  }
+
+  branch from palmitate side left {
+    palmitate
+    <-> . +1_palmitoyl_2_arachidonoyl_sn_glycero_3_phosphoc +h2o +hplus
+    2_arachidonoyl_sn_glycero_3_phosphocholine
+  }
+
+  branch from palmitate side right {
+    palmitate
+    <-> . +tripalmitin +h2o +hplus
+    2_3_dipalmitoyl_sn_glycerol
+  }
+
+  branch from fmnh2 side left {
+    fmnh2
+    <-> . +11_12_eet +o2 +fmn +h2o +hplus
+    11_12_epoxy_20_hydroxy_5z_8z_14z_icosatrienoate
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> . +14_15_eet +o2 +fmn +h2o +hplus
+    14_15_epoxy_20_hydroxy_5z_8z_11z_icosatrienoate
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> . +5_cholestan_3_ol +fmnh2 +o2 +h2o +hplus
+    24s_hydroxycholestanol
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +prostaglandin_i2 +fmnh2 +o2 +h2o +hplus
+    19_hydroxyprostaglandin_i2
+  }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> ec_1_14_15_26 [1.14.15.26] +toluene +o2 +hplus +di_sulfido_diiron +h2o
+    benzyl_alcohol
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_14_15_25 [1.14.15.25] +p_cymene +o2 +hplus +di_sulfido_diiron +h2o
+    4_isopropylbenzyl_alcohol
+  }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> . +mevastatin +di_sulfido_diiron +o2 +hplus +h2o
+    pravastatin_lactone
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> . +alachlor +di_sulfido_diiron +o2 +hplus +n_2_6_diethylphenyl_2_chloroacetamide +h2o
+    methyl_formate
+  }
+
+  branch from h side left {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    choloyl_coa
+  }
+
+  branch from h side right {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    taurolithocholate_3_sulfate
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_13_11_38 [1.13.11.38] +1_hydroxy_2_naphthoate +h
+    trans_2_carboxybenzylidenepyruvic_acid
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_13_11_3 [1.13.11.3] +2_oxo_2h_pyran_4_6_dicarboxylate +h +h2o
+    3_4_5_trihydroxybenzoate
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_14_13_7 [1.14.13.7] +nadp +h2o +h +3_methylphenol +o2
+    3_methylcatechol
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_10_1_1 [1.10.1.1] +trans_acenaphthene_1_2_diol +nadp +h
+    acenaphthene_1_2_dione
   }
 }

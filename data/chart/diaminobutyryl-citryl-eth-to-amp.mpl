@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway diaminobutyryl-citryl-eth-to-amp "diaminobutyryl-citryl-eth… to AMP" {
-  spacing 236
+  spacing 308
 
   spine at 0,0 {
     diaminobutyryl_citryl_ethanolamino_alpha_ketoglu
@@ -18,26 +18,26 @@ pathway diaminobutyryl-citryl-eth-to-amp "diaminobutyryl-citryl-eth… to AMP" {
 
   branch from 2_oxoglutarate side left {
     2_oxoglutarate
-    <-> . +gibberellin_a34 +o2 +succinate +gibberellin_a34_catabolite +h2o
-    co2
+    <-> ec_1_1_1_286 [1.1.1.286] +nadh +co2 +nad
+    d_erythro_isocitrate
   }
 
   branch from 2_oxoglutarate side right {
     2_oxoglutarate
-    <-> . +gibberellin_a13 +co2 +succinate +h +gibberellin_a25
-    o2
+    <-> ec_2_6_1_1 [2.6.1.1] +2_oxo_3_sulfanylpropanoate +d_glutamate
+    l_cysteine
   }
 
   branch from atp side left {
     atp
-    <-> ec_6_2_1_3 [6.2.1.3] +phytenoyl_coa +diphosphate +h +amp +coa
-    2e_phytenoic_acid
+    <-> . +h +adp +phosphate +h2o
+    cerivastatin
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_22 [3.6.3.22] +h +adp +phosphate +h2o
-    l_phenylalanine
+    <-> . +h +adp +phosphate +h2o
+    s_5_acetamido_2_hydroxyphenyl_cysteine
   }
 
   branch from l_2_4_diaminobutanoate side left {
@@ -54,49 +54,121 @@ pathway diaminobutyryl-citryl-eth-to-amp "diaminobutyryl-citryl-eth… to AMP" {
 
   branch from diphosphate side left {
     diphosphate
-    <-> . +beta_patchoulene
-    2e_6e_farnesyl_diphosphate
+    <-> ec_2_5_1_32 [2.5.1.32] +all_trans_phytoene
+    prephytoene_diphosphate
   }
 
   branch from diphosphate side right {
     diphosphate
-    <-> . +2e_6e_farnesyl_diphosphate
-    gamma_patchoulene
+    <-> ec_4_2_3_67 [4.2.3.67] +cis_muurola_3_5_diene
+    2e_6e_farnesyl_diphosphate
   }
 
   branch from h side left {
     h
-    <-> ec_1_2_1_84 [1.2.1.84] +7_hydroxylauroyl_coa +nadph +nadp +coa
-    1_7_dodecanediol
+    <-> . +cyclosporin_a +o2 +nadph +cyclosporin_a_metabolite_m17 +h2o
+    nadp
   }
 
   branch from h side right {
     h
-    <-> ec_2_7_7_77 [2.7.7.77] +bis_guanylyl_molybdopterin_cofactor +diphosphate +gtp
-    bis_molybdenum_cofactor
+    <-> . +cyclosporin_a +o2 +nadph +nadp +h2o
+    cyclosporin_a_metabolite_m1
   }
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_15 [2.3.1.15] +hexadecanedioyl_coa +sn_glycerol_3_phosphate
-    1_c16_0_alpha_omega_dicarboxyl_2_lysophosphatida
+    <-> . +2e_11z_14z_icosatrienoyl_coa +h2o +h
+    trans_cis_cis_2_11_14_eicosatrienoic_acid
   }
 
   branch from coa side right {
     coa
-    <-> . +kaempferol_3_o_6_o_feruloyl_glucoside +trans_4_coumaroyl_coa
-    kaempferol_3_o_3_o_4_coumaroyl_6_o_feruloyl_gluc
+    <-> . +2s_ethylmalonyl_coa +h2o +h
+    ethylmalonate
   }
 
   branch from amp side left {
     amp
-    <-> ec_6_2_1_3 [6.2.1.3] +diphosphate +2_3_4_saturated_fatty_acyl_coa +atp +coa +2_3_4_saturated_fatty_acid
-    pmf
+    <-> . +diphosphate +h +taurolithocholate +atp +lithocholate
+    taurine
   }
 
   branch from amp side right {
     amp
-    <-> ec_6_2_1_12 [6.2.1.12] +diphosphate +4_methoxycinnamoyl_coa +h +atp +coa
-    4_methoxycinnamic_acid
+    <-> . +diphosphate +2s_pristanoyl_coa +atp +coa
+    2_6_10_14_tetramethylpentadecanoate
+  }
+
+  branch from diphosphate side left {
+    diphosphate
+    <-> ec_4_2_3_67 [4.2.3.67] +2e_6e_farnesyl_diphosphate
+    cis_muurola_4_15_5_diene
+  }
+
+  branch from diphosphate side right {
+    diphosphate
+    <-> ec_4_2_3_95 [4.2.3.95] +2e_6e_farnesyl_diphosphate
+    alpha_cuprenene
+  }
+
+  branch from h side left {
+    h
+    <-> . +l_dehydroascorbic_acid +all_trans_zeaxanthin +h2o +l_ascorbate
+    all_trans_antheraxanthin
+  }
+
+  branch from h side right {
+    h
+    <-> . +d_alanyl_d_alanine +l_arginine +h2o
+    arg_ala_ala
+  }
+
+  branch from amp side left {
+    amp
+    <-> . +diphosphate +30_hydroxytriacontanoyl_coa +atp +coa
+    hydroxytriacontanoate
+  }
+
+  branch from amp side right {
+    amp
+    <-> . +diphosphate +8_phenyloctanoyl_coa +atp +coa
+    8_phenyloctanoate
+  }
+
+  branch from 2_oxoglutarate side left {
+    2_oxoglutarate
+    <-> ec_1_14_11_1 [1.14.11.1] +s_carnitine +co2 +succinate +4_trimethylamino_butanoate
+    o2
+  }
+
+  branch from 2_oxoglutarate side right {
+    2_oxoglutarate
+    <-> ec_2_6_1_8 [2.6.1.8] +d_ornithine +l_glutamate
+    5_amino_2_oxopentanoate
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    d_alanine
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    d_arginine
+  }
+
+  branch from l_leucine side left {
+    l_leucine
+    <-> . +l_arginine +l_phenylalanine +h2o
+    arginyl_leucyl_phenylalanine
+  }
+
+  branch from l_leucine side right {
+    l_leucine
+    <-> . +l_threonine +l_cysteine +h2o
+    cystyl_leucyl_threonine
   }
 }

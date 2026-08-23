@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-acyl-6-d-mannosyl-1-to-sn-glycerol-3-phosphate "2-acyl-6-[α-D-mannosyl-(1… to sn-glycerol 3-phosphate" {
-  spacing 206
+  spacing 164
 
   spine at 0,0 {
     2_acyl_6_d_mannosyl_1_2_d_mannosyl_1_2_d_mannosy
@@ -24,57 +24,15 @@ pathway 2-acyl-6-d-mannosyl-1-to-sn-glycerol-3-phosphate "2-acyl-6-[α-D-mannosy
     ethanolaminium
   }
 
-  branch from 1_3_diacyl_sn_glycerol side left {
-    1_3_diacyl_sn_glycerol
-    <-> . +acyl_coa +coa
-    3_acyl_sn_glycerol
-  }
-
-  branch from fatty-acid side right {
-    fatty-acid
-    <-> . +1_2_diacyl_sn_glycero_3_phospholipid +h2o +hplus
-    a_2_acyl_sn_glycero_3_phospholipid
-  }
-
-  branch from fatty-acid side left {
-    fatty-acid
-    <-> . +1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol +h2o +hplus
-    2_acyl_sn_glycero_3_phospho_1_sn_glycerol
-  }
-
-  branch from 1_acyl_sn_glycero_3_phosphoethanolamine side right {
-    1_acyl_sn_glycero_3_phosphoethanolamine
-    <-> . +2_monolysocardiolipin +1_2_diacyl_sn_glycero_3_phosphoethanolamine
-    cardiolipin
-  }
-
-  branch from 1_acyl_sn_glycero_3_phosphoethanolamine side left {
-    1_acyl_sn_glycero_3_phosphoethanolamine
-    <-> . +oleoyl_coa +coa
-    1_acyl_2_oleoyl_sn_glycero_3_phosphoethanolamine
+  branch from 2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate side left {
+    2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate
+    <-> . +1_hexadecanoyl_sn_glycero_3_phosphoethanolamine
+    1_2_dihexadecanoyl_sn_glycero_3_phosphoethanolam
   }
 
   branch from 2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate side right {
     2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate
-    <-> ec_3_3_2_2 [3.3.2.2] +1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine +h2o
-    ch2_containing_aldehyde
-  }
-
-  branch from 2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate side left {
-    2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate
-    <-> . +1_hexadecanoyl_sn_glycero_3_phosphoethanolamine +1_hexadecanoyl_sn_glycero_3_phosphocholine
-    1_2_dihexadecanoyl_sn_glycero_3_phosphocholine
-  }
-
-  branch from sn_glycerol_3_phosphate side right {
-    sn_glycerol_3_phosphate
-    <-> . +n_icosanoyl_sn_glycero_3_phosphoethanolamine +h2o +hplus
-    n_icosanoyl_ethanolamine
-  }
-
-  branch from sn_glycerol_3_phosphate side left {
-    sn_glycerol_3_phosphate
-    <-> . +n_4z_7z_10z_13z_16z_19z_docosahexaenoyl_sn_glyce +h2o +hplus
-    n_4z_7z_10z_13z_16z_19z_docosahexaenoylethanolam
+    <-> . +h +adp +phosphate +h2o
+    atp
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-coa-18-cooh-15e-dinor-lte4 "NADH to CoA-18-COOH-15E-dinor-LTE4" {
-  spacing 188
+  spacing 236
 
   spine at 0,0 {
     nadh
@@ -18,14 +18,14 @@ pathway nadh-to-coa-18-cooh-15e-dinor-lte4 "NADH to CoA-18-COOH-15E-dinor-LTE4" 
 
   branch from nad side left {
     nad
-    <-> ec_1_3_1_25 [1.3.1.25] +nadh +co2 +h +3_fluorocatechol
-    3_fluorocyclohexadiene_cis_cis_1_2_diol_1_carbox
+    <-> ec_1_1_1_284 [1.1.1.284] +nadh +ethanol +h +s_formylglutathione +glutathione_ethyl_ester +h2o
+    formaldehyde
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_3_1_25 [1.3.1.25] +nadh +co2 +h +4_fluorocatechol
-    5_fluorocyclohexadiene_cis_cis_1_2_diol_1_carbox
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +2_octanone
+    2s_octan_2_ol
   }
 
   branch from 16e_18_oxo_18_coa_dinor_lte4 side left {
@@ -36,19 +36,67 @@ pathway nadh-to-coa-18-cooh-15e-dinor-lte4 "NADH to CoA-18-COOH-15E-dinor-LTE4" 
 
   branch from h2o side right {
     h2o
-    <-> . +3_phenylpropionaldoxim +co2 +nadp +h +nadph +l_homophenylalanine
-    o2
+    <-> ec_3_1_1_83 [3.1.1.83] +6_isopropenyl_3_methyloxepan_2_one +h
+    a_6_hydroxy_5_isopropenyl_2_methylhexanoate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_4_4_1_13 [4.4.1.13] +pyruvate +nh4 +p_hydroxyphenylacetothiohydroximate
-    s_hydroxyphenylacetothiohydroximoyl_l_cysteine
+    <-> ec_3_3_2_8 [3.3.2.8] +1s_2s_4r_limonene_1_2_diol
+    4r_limonene_1alpha_2alpha_epoxide
   }
 
   branch from coa_18_cooh_15e_dinor_lte4 side right {
     coa_18_cooh_15e_dinor_lte4
     <-> . +coa_18_cooh_16e_dinor_lte5 +h +nadph
     nadp
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> ec_1_1_1_1 [1.1.1.1] +h +heptan_2_one +nad
+    heptan_2r_ol
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_1_1_1 [1.1.1.1] +h +4_6_6_trimethylbicyclo_3_1_1_hept_3_en_2_one +nad
+    r_cis_verbenol
+  }
+
+  branch from h side left {
+    h
+    <-> . +hydrogen_sulfide +thiophosgene +carbon_disulfide
+    chloride
+  }
+
+  branch from h side right {
+    h
+    <-> . +e_feruloyl_coa +serotonin +coa
+    n_feruloylserotonin
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +2_oxohexane
+    hexan_2_ol
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +2_oxohexane
+    r_2_hexanol
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +udp +kanosamine +h
+    udp_alpha_d_kanosamine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +glucose +s_4_hydroxymandelonitrile
+    dhurrin
   }
 }

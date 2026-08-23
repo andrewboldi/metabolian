@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-glutamate-5-semialdehyde-to-h2o "L-glutamate 5-semialdehyde to H2O" {
-  spacing 254
+  spacing 158
 
   spine at 0,0 {
     l_glutamate_5_semialdehyde
@@ -18,109 +18,13 @@ pathway l-glutamate-5-semialdehyde-to-h2o "L-glutamate 5-semialdehyde to H2O" {
     fad
     <-> ec_1_21_4_1 [1.21.4.1] +r_dihydrolipoate +d_proline -5_aminopentanoate
     r_lipoate
-    <-> . +6_aminoquinoline +h -h2o
-    lipoyl_6_aminoquinoline
-  }
-
-  branch from 2_oxoglutarate side left {
-    2_oxoglutarate
-    <-> ec_1_14_20_14 [1.14.20.14] +h +o2 +chloride +ambiguine_l_isonitrile +succinate +ambiguine_k_isonitrile +h2o
-    co2
-  }
-
-  branch from 2_oxoglutarate side right {
-    2_oxoglutarate
-    <-> ec_1_14_20_14 [1.14.20.14] +h +o2 +chloride +ambiguine_i +co2 +ambiguine_e +h2o
-    succinate
-  }
-
-  branch from h side left {
-    h
-    <-> . +l_alanine +l_glutamate +l_tryptophan +h2o
-    glu_trp_ala
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +glycyl_dl_phenylalanine +phosphate +glycyl_dl_phenylalanine +h2o
-    atp
-  }
-
-  branch from ornithine side left {
-    ornithine
-    <-> . +nh4 +h
-    l_proline
-  }
-
-  branch from ornithine side right {
-    ornithine
-    <-> . +n_acetyl_l_glutamate +h +l_glutamate
-    n_2_acetyl_l_ornithine
-  }
-
-  branch from 5_amino_2_oxopentanoate side left {
-    5_amino_2_oxopentanoate
-    <-> ec_2_6_1_8 [2.6.1.8] +2_oxoglutarate +l_glutamate
-    d_ornithine
-  }
-
-  branch from l_glutamate side right {
-    l_glutamate
-    <-> . +l_leucine +l_arginine +h2o
-    glutaminyl_arginyl_leucine
-  }
-
-  branch from l_glutamate side left {
-    l_glutamate
-    <-> . +l_leucine +l_asparagine +h2o
-    glutaminyl_asparaginyl_leucine
-  }
-
-  branch from 1_pyrroline_2_carboxylate side right {
-    1_pyrroline_2_carboxylate
-    <-> . +ubiquinone_8 +d_proline
-    ubiquinol_8
+    <-> . +h +na +adp +phosphate -r_lipoate -atp -h2o
+    na
   }
 
   branch from 1_pyrroline_2_carboxylate side left {
     1_pyrroline_2_carboxylate
     <-> . +ubiquinol_9 +d_proline
     ubiquinone_9
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_leucine +l_glutamine +l_tyrosine
-    glutaminyl_tyrosyl_leucine
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_glutamate
-    glutamyl_glutamate
-  }
-
-  branch from fad side right {
-    fad
-    <-> . +2_methyl_3_n_amyl_pyrrole +fadh2 +h
-    2_methyl_3_n_amyl_dihydropyrrole
-  }
-
-  branch from fad side left {
-    fad
-    <-> . +fadh2 +h +o2 +chloride +naphthomycin_e +h2o
-    naphthomycin_a
-  }
-
-  branch from d_proline side right {
-    d_proline
-    <-> ec_1_21_4_1 [1.21.4.1] +nadh +h +5_aminopentanoate
-    nad
-  }
-
-  branch from d_proline side left {
-    d_proline
-    <-> . +ubiquinol_10 +1_pyrroline_2_carboxylate
-    ubiquinone_10
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-amino-4-hydroxy-5-phosp-to-phosphate "2-amino-4-hydroxy-5-phosp… to phosphate" {
-  spacing 200
+  spacing 284
 
   spine at 0,0 {
     2_amino_4_hydroxy_5_phosphonopentanoate
@@ -18,49 +18,133 @@ pathway 2-amino-4-hydroxy-5-phosp-to-phosphate "2-amino-4-hydroxy-5-phosp… to 
 
   branch from h2o side left {
     h2o
-    <-> ec_3_1_2_23 [3.1.2.23] +benzoyl_coa +h +coa
-    benzoate
+    <-> . +2e_6z_9z_12z_15z_18z_tetracosahexaenoyl_coa
+    3_s_hydroxy_tetracosa_6_9_12_15_18_all_cis_penta
   }
 
   branch from h2o side right {
     h2o
-    <-> . +3s_hydroxyadipyl_coa +h
-    5_oxo_furan_2_acetyl_coa
+    <-> . +2_6_dimethyl_trans_2_heptenoyl_coa
+    3_s_hydroxy_2_s_6_dimethyl_heptanoyl_coa
   }
 
   branch from h side left {
     h
-    <-> . +co2 +2_oxo_6_methylthiohexanoic_acid
-    3_carboxy_6_methylsulfanyl_2_oxohexanoate
+    <-> . +fe +triglucosyl_enterobactin
+    iron_iii_triglucosyl_enterobactin_complex
   }
 
   branch from h side right {
     h
-    <-> . +co2 +2_oxopentanoate
-    3_ethyl_2_oxosuccinate
+    <-> . +fe +diglucosyl_enterobactin
+    fe_iii_di_c_5_deoxy_d_glucosyl_enterobactin
   }
 
   branch from adp side left {
     adp
-    <-> ec_6_3_2_2 [6.3.2.2] +l_alpha_methyl_gamma_glutamyl_l_alpha_aminobutyr +h +phosphate +2s_2_aminobutanoate +atp
-    l_alpha_methyl_glutamate
+    <-> ec_2_7_1_59 [2.7.1.59] +n_acetyl_beta_d_glucosamine_6_phosphate +h +atp
+    n_acetyl_beta_d_glucosamine
   }
 
   branch from adp side right {
     adp
-    <-> ec_6_3_2_2 [6.3.2.2] +gamma_l_glutamyl_s_methyl_l_cysteine +h +phosphate +atp +l_glutamate
-    s_methylcysteine
+    <-> ec_2_7_1_1 [2.7.1.1] +alpha_d_mannopyranose +atp +h
+    alpha_d_mannose_6_phosphate
   }
 
   branch from phosphate side left {
     phosphate
-    <-> . +h +l_threonine +h2o
-    o_phospho_l_threonine
+    <-> . +3_dehydroquinate
+    3_deoxy_d_arabino_heptulopyranuronate_7_phosphat
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_1_3_104 [3.1.3.104] +d_gluconate +h2o
-    6_phospho_d_gluconate
+    <-> . +5_fluorouridine_5_monophosphate +h2o
+    5_fluorouridine
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +l_serine +l_arginine +l_tryptophan
+    seryl_arginyl_tryptophan
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +l_serine +l_cysteine +l_arginine
+    seryl_cysteinyl_arginine
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_2_7_1_85 [2.7.1.85] +6_phospho_beta_d_glucosyl_1_4_beta_d_glucose +adp +h
+    alpha_cellobiose
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_2_7_1_43 [2.7.1.43] +1_phospho_alpha_d_glucuronate +h +adp
+    beta_d_glucuronate
+  }
+
+  branch from l_arginine side left {
+    l_arginine
+    <-> .
+    3s_beta_arginine
+  }
+
+  branch from l_arginine side right {
+    l_arginine
+    <-> . +l_threonine +l_tyrosine +h2o
+    threonyl_arginyl_tyrosine
+  }
+
+  branch from h side left {
+    h
+    <-> . +8_hydroxygermacra_1_10_4_11_13_trien_12_oate +h2o
+    inunolide
+  }
+
+  branch from h side right {
+    h
+    <-> . +4_isopropenyl_2_oxocyclohexane_1_carbonyl_coa +h2o
+    4_isopropenyl_pimeloyl_coa
+  }
+
+  branch from adp side left {
+    adp
+    <-> ec_2_7_1_46 [2.7.1.46] +beta_l_arabinose_1_phosphate +h +atp
+    beta_l_arabinofuranose
+  }
+
+  branch from adp side right {
+    adp
+    <-> ec_2_7_1_46 [2.7.1.46] +beta_l_arabinose_1_phosphate +h +atp
+    alpha_l_arabinofuranose
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +pgp +h +h2o
+    guanosine_3_5_bis_diphosphate
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_2_4_1_329 [2.4.1.329] +sucrose +d_glucopyranose_1_phosphate
+    keto_d_fructose
+  }
+
+  branch from l_valine side left {
+    l_valine
+    <-> . +glycine +l_tryptophan +h2o
+    tryptophanyl_glycyl_valine
+  }
+
+  branch from l_valine side right {
+    l_valine
+    <-> . +l_leucine +l_tryptophan +h2o
+    tryptophanyl_leucyl_valine
   }
 }

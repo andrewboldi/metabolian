@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3r-3-carboxylmethyl-a-to-o-s-3r-3-isocyanoylbu "(3R)-3-[(carboxylmethyl)a… to O-[S-((3R)-3-isocyanoylbu…" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     3r_3_carboxylmethyl_amino_butanoic_acid
@@ -16,17 +16,5 @@ pathway 3r-3-carboxylmethyl-a-to-o-s-3r-3-isocyanoylbu "(3R)-3-[(carboxylmethyl)
     3r_3_isocyanylbutanoyl_amp
     <-> . +holo-acp -amp -hplus
     o_s_3r_3_isocyanoylbutenoyl_pantetheine_4_phosph
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +fpp +h2o
-    6e_nerolidol
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +mutildienyl_diphosphate +h2o
-    premutilin
   }
 }

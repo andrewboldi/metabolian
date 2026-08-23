@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway kaempferol-3-o-4-o-4-co-to-h "kaempferol 3-O-(4″-O-4-co… to H" {
-  spacing 252
+  spacing 300
 
   spine at 0,0 {
     kaempferol_3_o_4_o_4_coumaroyl_glucoside
@@ -16,63 +16,20 @@ pathway kaempferol-3-o-4-o-4-co-to-h "kaempferol 3-O-(4″-O-4-co… to H" {
     udp
   }
 
-  branch from trans_4_coumaroyl_coa side left {
-    trans_4_coumaroyl_coa
-    <-> ec_2_3_1_215 [2.3.1.215] +anthocyanidin_3_o_d_glucoside +coa +hplus
-    anthocyanidin_3_o_6_o_4_hydroxycinnamoyl_d_gluco
-  }
 
-  branch from trans_4_coumaroyl_coa side right {
-    trans_4_coumaroyl_coa
-    <-> ec_2_3_1_249 [2.3.1.249] +spermidine +coa +hplus
-    n1_n8_bis_coumaroyl_spermidine
-  }
 
-  branch from kaempferol_3_o_beta_d_glucoside side left {
-    kaempferol_3_o_beta_d_glucoside
-    <-> ec_2_4_1_159 [2.4.1.159] +udp +kaempferol_3_rutinoside
-    udp_beta_l_rhamnose
-  }
 
-  branch from kaempferol_3_o_beta_d_glucoside side right {
-    kaempferol_3_o_beta_d_glucoside
-    <-> ec_3_2_1_62 [3.2.1.62] +glucose +kaempferol
-    h2o
-  }
 
-  branch from h side left {
-    h
-    <-> . +co2 +c34_phenolphthiodiolenone_a
-    c35_phenolcarboxyphthiodiolenone
-  }
 
-  branch from h side right {
-    h
-    <-> . +co2 +c36_phenolphthiodiolenone_a
-    c37_phenolcarboxyphthiodiolenone
-  }
 
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> . +udp +quercetin_3_4_di_o_d_glucoside
-    quercetin_4_o_d_glucopyranoside
-  }
 
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> . +udp +quercetin_3_4_di_o_d_glucoside
-    quercetin_3_o_d_glucopyranoside
-  }
 
-  branch from udp side left {
-    udp
-    <-> ec_2_4_1_17 [2.4.1.17] +s_nicotinium_n_d_glucosiduronate +h +s_nicotine
-    udp_alpha_d_glucuronate
-  }
 
-  branch from udp side right {
-    udp
-    <-> ec_2_4_1_17 [2.4.1.17] +4e_15e_bilirubin_ixalpha_c8_beta_d_glucuronosid +udp_alpha_d_glucuronate
-    4z_15z_bilirubin_ixalpha
-  }
+
+
+
+
+
+
+
 }

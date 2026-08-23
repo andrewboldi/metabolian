@@ -110,71 +110,6 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
-    },
-    {
-      "id": "r_2_hydroxyglutarate",
-      "name": "(R)-2-hydroxyglutarate",
-      "short": "2-hydroxyglutarate",
-      "formula": "C5H6O5",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:15801"
-      }
-    },
-    {
-      "id": "fad",
-      "name": "FAD",
-      "formula": "C27H30N9O15P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:57692"
-      }
-    },
-    {
-      "id": "fadh2",
-      "name": "FADH2",
-      "formula": "C27H33N9O15P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:58307"
-      }
-    },
-    {
-      "id": "pseudopaline",
-      "name": "pseudopaline",
-      "formula": "C15H20N4O8",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:143198"
-      }
-    },
-    {
-      "id": "nad",
-      "name": "NAD+",
-      "formula": "C21H26N7O14P2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:57540"
-      }
-    },
-    {
-      "id": "n_3s_3_amino_3_carboxypropyl_l_histidine_dizwitt",
-      "name": "N-[(3S)-3-amino-3-carboxypropyl]-L-histidine dizwitterion",
-      "short": "N-[(3S)-3-amino-3-c…",
-      "formula": "C10H16N4O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:143196"
-      }
-    },
-    {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57945"
-      }
     }
   ],
   "enzymes": [
@@ -339,97 +274,27 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "(R)-2-hydroxyglutarate + FAD + H(+) = FADH2 + 2-oxoglutarate",
-      "equation": "(R)-2-hydroxyglutarate + FAD + H(+) = FADH2 + 2-oxoglutarate",
-      "substrates": [
-        {
-          "metabolite": "r_2_hydroxyglutarate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fad",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "fadh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:57168"
+      "id": "xt_3_dehydro_d_glucose_6_phosphate_cellobiose-to-mycothione",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_dehydro_d_glucose_6_phosphate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "cellobiose-to-mycothione"
+      },
+      "note": "Shares 3-dehydro-D-glucose-6-phosphate with cellobiose to mycothione.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:57168"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "pseudopaline + NAD(+) + H2O = (2S)-2-amino-4-{[(1S)-1-carboxy-2-(1H-imidazol-4-yl)ethyl...",
-      "equation": "pseudopaline + NAD(+) + H2O = (2S)-2-amino-4-{[(1S)-1-carboxy-2-(1H-imidazol-4-yl)ethyl]amino}butanoate + 2-oxoglutarate + NADH + H(+)",
-      "substrates": [
-        {
-          "metabolite": "pseudopaline",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n_3s_3_amino_3_carboxypropyl_l_histidine_dizwitt",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:59788"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:59788"
+            "db": "ChEBI",
+            "id": "CHEBI:75052"
           }
         ]
       }

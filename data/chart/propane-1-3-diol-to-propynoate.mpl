@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway propane-1-3-diol-to-propynoate "propane-1,3-diol to propynoate" {
-  spacing 220
+  spacing 208
 
   spine at 0,0 {
     propane_1_3_diol
@@ -28,17 +28,5 @@ pathway propane-1-3-diol-to-propynoate "propane-1,3-diol to propynoate" {
     3_hydroxypropionate
     <-> . +atp +coa +adp +pi
     3_hydroxypropanoyl_coa
-  }
-
-  branch from 3_oxopropanoate side left {
-    3_oxopropanoate
-    <-> . +3_nitropropanoate +hydrogen_acceptor +h2o +hydrogen_donor +hplus
-    nitrite
-  }
-
-  branch from propynoate side right {
-    propynoate
-    <-> . +nad +h2o +nadh +hplus
-    prop_2_ynal
   }
 }

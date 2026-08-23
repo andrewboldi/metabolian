@@ -1,0 +1,444 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "e-e-piperate-to-piperyline-73575",
+  "name": "(E,E)-piperate to piperyline",
+  "category": "other",
+  "summary": "A 3-step route from (E,E)-piperate to piperyline, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:73575"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:192831"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "e_e_piperate",
+      "name": "(E,E)-piperate",
+      "formula": "C12H9O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:192831"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "e_e_piperoyl_amp",
+      "name": "(E,E)-piperoyl-AMP",
+      "formula": "C22H21N5O10P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:192833"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "e_e_piperonyl_coa",
+      "name": "(E,E)-piperonyl-CoA",
+      "formula": "C33H40N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57325"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "pyrrolidinium_ion",
+      "name": "pyrrolidinium ion",
+      "formula": "C4H10N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:52145"
+      }
+    },
+    {
+      "id": "piperyline",
+      "name": "piperyline",
+      "formula": "C16H17NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:9691"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(E,E)-piperate + ATP + H(+) = (E,E)-piperoyl-AMP + diphosphate",
+      "equation": "(E,E)-piperate + ATP + H(+) = (E,E)-piperoyl-AMP + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "e_e_piperate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "e_e_piperoyl_amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:73575"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:73575"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(E,E)-piperoyl-AMP + CoA = (E,E)-piperoyl-CoA + AMP + H(+)",
+      "equation": "(E,E)-piperoyl-AMP + CoA = (E,E)-piperoyl-CoA + AMP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "e_e_piperoyl_amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "e_e_piperonyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:73579"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:73579"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "pyrrolidine + (E,E)-piperoyl-CoA = piperyline + CoA + H(+)",
+      "equation": "pyrrolidine + (E,E)-piperoyl-CoA = piperyline + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "pyrrolidinium_ion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "e_e_piperonyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "piperyline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:73663"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:73663"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_e_e_piperate_e-e-feruperate-to-piperine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_e_piperate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "e-e-feruperate-to-piperine"
+      },
+      "note": "Shares (E,E)-piperate with (E,E)-feruperate to piperine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:192831"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_e_piperate_e-e-feruperate-to-piperine-73555",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_e_piperate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "e-e-feruperate-to-piperine-73555"
+      },
+      "note": "Shares (E,E)-piperate with (E,E)-feruperate to piperine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:192831"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_e_piperate_e-e-piperate-to-piperyline",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_e_piperate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "e-e-piperate-to-piperyline"
+      },
+      "note": "Shares (E,E)-piperate with (E,E)-piperate to piperyline.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:192831"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_e_piperoyl_amp_e-e-piperate-to-piperyline",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_e_piperoyl_amp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "e-e-piperate-to-piperyline"
+      },
+      "note": "Shares (E,E)-piperoyl-AMP with (E,E)-piperate to piperyline.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:192833"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_e_piperonyl_coa_e-e-feruperate-to-piperine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_e_piperonyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "e-e-feruperate-to-piperine"
+      },
+      "note": "Shares (E,E)-piperonyl-CoA with (E,E)-feruperate to piperine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57325"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_e_piperonyl_coa_e-e-feruperate-to-piperine-73555",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_e_piperonyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "e-e-feruperate-to-piperine-73555"
+      },
+      "note": "Shares (E,E)-piperonyl-CoA with (E,E)-feruperate to piperine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57325"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_e_piperonyl_coa_e-e-piperate-to-piperyline",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_e_piperonyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "e-e-piperate-to-piperyline"
+      },
+      "note": "Shares (E,E)-piperonyl-CoA with (E,E)-piperate to piperyline.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57325"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_pyrrolidinium_ion_e-e-piperate-to-piperyline",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "pyrrolidinium_ion"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "e-e-piperate-to-piperyline"
+      },
+      "note": "Shares pyrrolidinium ion with (E,E)-piperate to piperyline.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:52145"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_piperyline_e-e-piperate-to-piperyline",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "piperyline"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "e-e-piperate-to-piperyline"
+      },
+      "note": "Shares piperyline with (E,E)-piperate to piperyline.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:9691"
+          }
+        ]
+      }
+    }
+  ]
+}

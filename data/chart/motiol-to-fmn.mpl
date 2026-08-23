@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway motiol-to-fmn "motiol to FMN" {
-  spacing 152
+  spacing 158
 
   spine at 0,0 {
     motiol
@@ -14,5 +14,11 @@ pathway motiol-to-fmn "motiol to FMN" {
     2_hydroxyl_4_carboxyl_motiol
     <-> . +fmnh2 +o2 -fmn -h2o -hplus
     polytolypin
+  }
+
+  branch from motiol side left {
+    motiol
+    <-> .
+    epoxysqualene
   }
 }

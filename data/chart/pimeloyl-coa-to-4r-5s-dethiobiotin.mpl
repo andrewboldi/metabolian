@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway pimeloyl-coa-to-4r-5s-dethiobiotin "pimeloyl-CoA to (4R,5S)-dethiobiotin" {
-  spacing 236
+  spacing 254
 
   spine at 0,0 {
     pimeloyl_coa
@@ -16,5 +16,23 @@ pathway pimeloyl-coa-to-4r-5s-dethiobiotin "pimeloyl-CoA to (4R,5S)-dethiobiotin
     7r_8s_8_ammonio_7_carboxylatoamino_nonanoate
     <-> . +atp -adp -pi -hplus
     4r_5s_dethiobiotin
+  }
+
+  branch from 7r_8s_8_ammonio_7_carboxylatoamino_nonanoate side left {
+    7r_8s_8_ammonio_7_carboxylatoamino_nonanoate
+    <-> . +n6_2s_3r_2_amino_8_carboxyoctan_3_yl_l_lysine_1 +co2 +nadp +h2o +nadph +hplus
+    l_allysine
+  }
+
+  branch from 7r_8s_8_ammonio_7_carboxylatoamino_nonanoate side right {
+    7r_8s_8_ammonio_7_carboxylatoamino_nonanoate
+    <-> . +co2 +nad +h2o +l_allysine +nadh +hplus
+    n6_2s_3r_2_amino_8_carboxyoctan_3_yl_l_lysine_1
+  }
+
+  branch from pimeloyl_coa side left {
+    pimeloyl_coa
+    <-> ec_1_3_1_62 [1.3.1.62] +nad +nadh +hplus
+    2_3_didehydropimeloyl_coa
   }
 }

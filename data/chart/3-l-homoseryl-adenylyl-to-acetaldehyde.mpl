@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-l-homoseryl-adenylyl-to-acetaldehyde "3'-(L-homoseryl)adenylyl to acetaldehyde" {
-  spacing 204
+  spacing 210
 
   spine at 0,0 {
     3_l_homoseryl_adenylyl
@@ -18,18 +18,6 @@ pathway 3-l-homoseryl-adenylyl-to-acetaldehyde "3'-(L-homoseryl)adenylyl to acet
     4_fluoro_l_threonine
   }
 
-  branch from amp_3_end_1 side left {
-    amp_3_end_1
-    <-> . +3_l_alanyl_adenylyl_zwitterionic_group +h2o +hplus
-    alanine
-  }
-
-  branch from amp_3_end_1 side right {
-    amp_3_end_1
-    <-> . +3_l_seryl_adenylyl_1_group +h2o
-    serine
-  }
-
   branch from threonine side left {
     threonine
     <-> ec_5_1_1_6 [5.1.1.6]
@@ -40,5 +28,23 @@ pathway 3-l-homoseryl-adenylyl-to-acetaldehyde "3'-(L-homoseryl)adenylyl to acet
     threonine
     <-> . +h2o +pi
     o_phosphonato_l_threonine
+  }
+
+  branch from threonine side left {
+    threonine
+    <-> . +nad +co2 +nadh
+    ammonioacetone
+  }
+
+  branch from threonine side right {
+    threonine
+    <-> . +h2o
+    2_aminobut_2_enoic_acid
+  }
+
+  branch from fluoroacetaldehyde side left {
+    fluoroacetaldehyde
+    <-> ec_1_2_1_5 [1.2.1.5] +fluoroacetate +h +nadph +h2o
+    nadp
   }
 }

@@ -1,0 +1,394 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "beta-d-mannose-6-phosphate-to-keto-d-fructose-nu",
+  "name": "beta-D-mannose 6-phosphate to keto-D-fructose…",
+  "category": "other",
+  "summary": "A 3-step route from beta-D-mannose 6-phosphate to keto-D-fructose 6-phosphate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR206055"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "beta_d_mannose_6_phosphate",
+      "name": "beta-D-mannose 6-phosphate",
+      "short": "beta-D-mannose 6-P",
+      "formula": "C6H13O9P",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1103551"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "keto_d_fructose_6_phosphate",
+      "name": "keto-D-fructose 6-phosphate",
+      "short": "keto-D-fructose 6-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM89629"
+      }
+    },
+    {
+      "id": "alpha_d_ribofuranose_5_phosphate",
+      "name": "alpha-D-ribofuranose 5-phosphate",
+      "short": "alpha-D-ribofuranos…",
+      "formula": "C5H11O8P",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1363910"
+      }
+    },
+    {
+      "id": "d_glyceraldehyde_3_phosphate",
+      "name": "D-glyceraldehyde 3-phosphate",
+      "short": "D-glyceraldehyde 3-P",
+      "formula": "C3H5O6P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1372045"
+      }
+    },
+    {
+      "id": "octulose_8_phosphate",
+      "name": "octulose 8-phosphate",
+      "formula": "C8H17O11P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:134365"
+      }
+    },
+    {
+      "id": "dihydroxyacetone",
+      "name": "dihydroxyacetone",
+      "formula": "C3H6O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM460"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR206055",
+      "substrates": [
+        {
+          "metabolite": "beta_d_mannose_6_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "keto_d_fructose_6_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR206055"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR206055"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR183971",
+      "substrates": [
+        {
+          "metabolite": "alpha_d_ribofuranose_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "keto_d_fructose_6_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glyceraldehyde_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "octulose_8_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR183971"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR183971"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR131199",
+      "substrates": [
+        {
+          "metabolite": "d_glyceraldehyde_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dihydroxyacetone",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "keto_d_fructose_6_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR131199"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR131199"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_octulose_8_phosphate_aldehydo-d-ribose-to-l-erythrulose-1-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "octulose_8_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aldehydo-d-ribose-to-l-erythrulose-1-phosphate"
+      },
+      "note": "Shares octulose 8-phosphate with aldehydo-D-ribose… to L-erythrulose 1-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:134365"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_octulose_8_phosphate_aldehydo-d-ribose-to-l-erythrulose-1-phosphate-n",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "octulose_8_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aldehydo-d-ribose-to-l-erythrulose-1-phosphate-n"
+      },
+      "note": "Shares octulose 8-phosphate with aldehydo-D-ribose… to L-erythrulose 1-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:134365"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_octulose_8_phosphate_alpha-d-ribofuranose-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "octulose_8_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-ribofuranose-to-phosphate"
+      },
+      "note": "Shares octulose 8-phosphate with alpha-D-ribofuranose… to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:134365"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_octulose_8_phosphate_alpha-d-ribofuranose-to-phosphate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "octulose_8_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-ribofuranose-to-phosphate-null"
+      },
+      "note": "Shares octulose 8-phosphate with alpha-D-ribofuranose… to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:134365"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_octulose_8_phosphate_beta-d-mannose-6-phosphate-to-keto-d-fructose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "octulose_8_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-d-mannose-6-phosphate-to-keto-d-fructose"
+      },
+      "note": "Shares octulose 8-phosphate with beta-D-mannose 6-phosphate to keto-D-fructose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:134365"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_octulose_8_phosphate_l-xylulose-5-phosphate-to-octulose-8-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "octulose_8_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-xylulose-5-phosphate-to-octulose-8-phosphate"
+      },
+      "note": "Shares octulose 8-phosphate with L-xylulose 5-phosphate to octulose 8-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:134365"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_octulose_8_phosphate_l-xylulose-5-phosphate-to-octulose-8-phosphate-n",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "octulose_8_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-xylulose-5-phosphate-to-octulose-8-phosphate-n"
+      },
+      "note": "Shares octulose 8-phosphate with L-xylulose 5-phosphate to octulose 8-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:134365"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dihydroxyacetone_alpha-beta-dihydroxyethyl-to-s-8-succinyldihydro",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dihydroxyacetone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-beta-dihydroxyethyl-to-s-8-succinyldihydro"
+      },
+      "note": "Shares dihydroxyacetone with alpha,beta-Dihydroxyethyl… to S(8)-succinyldihydrolipoa….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM460"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dihydroxyacetone_beta-d-mannose-6-phosphate-to-keto-d-fructose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dihydroxyacetone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-d-mannose-6-phosphate-to-keto-d-fructose"
+      },
+      "note": "Shares dihydroxyacetone with beta-D-mannose 6-phosphate to keto-D-fructose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM460"
+          }
+        ]
+      }
+    }
+  ]
+}

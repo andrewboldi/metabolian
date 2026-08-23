@@ -1,0 +1,559 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "calciol-to-di-sulfido-diiron-46588",
+  "name": "calciol to di-μ-sulfido-diiron",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from calciol to di-μ-sulfido-diiron(2+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:46588"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:28940"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "calciol",
+      "name": "calciol",
+      "formula": "C27H44O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28940"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "calcidiol",
+      "name": "calcidiol",
+      "formula": "C27H44O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17933"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "24r_24_25_dihydroxycalciol",
+      "name": "(24R)-24,25-dihydroxycalciol",
+      "short": "24,25-dihydroxycalc…",
+      "formula": "C27H44O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28818"
+      }
+    },
+    {
+      "id": "calcitetrol",
+      "name": "calcitetrol",
+      "formula": "C27H44O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:47799"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_15_16",
+      "name": "vitamin D3 24-hydroxylase",
+      "ec": [
+        "1.14.15.16"
+      ],
+      "xrefs": {
+        "uniprot": "Q07973"
+      }
+    },
+    {
+      "id": "ec_1_14_15_18",
+      "name": "calcidiol 1-monooxygenase",
+      "ec": [
+        "1.14.15.18"
+      ],
+      "xrefs": {
+        "uniprot": "O15528"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "calciol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = calcidiol + 2 oxidized [adrenodoxin] ...",
+      "equation": "calciol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = calcidiol + 2 oxidized [adrenodoxin] + H2O",
+      "substrates": [
+        {
+          "metabolite": "calciol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "calcidiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:46588"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46588"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "vitamin D3 24-hydroxylase",
+      "equation": "calcidiol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = secalciferol + 2 oxidized [adrenodoxin] + H2O",
+      "ec": "1.14.15.16",
+      "substrates": [
+        {
+          "metabolite": "calcidiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "24r_24_25_dihydroxycalciol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_15_16"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:24968"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24968"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "calcidiol 1-monooxygenase",
+      "equation": "secalciferol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = calcitetrol + 2 oxidized [adrenodoxin] + H2O",
+      "ec": "1.14.15.18",
+      "substrates": [
+        {
+          "metabolite": "24r_24_25_dihydroxycalciol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "calcitetrol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_15_18"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:49064"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49064"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_calciol_2-nitrophenolate-to-nitrite",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "calciol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-nitrophenolate-to-nitrite"
+      },
+      "note": "Shares calciol with 2-nitrophenolate to nitrite.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28940"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_calciol_3-hydroxy-5-steroid-to-hydrogen-donor-24076",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "calciol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxy-5-steroid-to-hydrogen-donor-24076"
+      },
+      "note": "Shares calciol with 3β-hydroxy-Δ5-steroid to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28940"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_calciol_calciol-to-di-sulfido-diiron",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "calciol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "calciol-to-di-sulfido-diiron"
+      },
+      "note": "Shares calciol with calciol to di-μ-sulfido-diiron.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28940"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_calciol_ergosteryl-palmitate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "calciol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ergosteryl-palmitate-to-h2o"
+      },
+      "note": "Shares calciol with ergosteryl palmitate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28940"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_calciol_ergosteryl-palmitate-to-h2o-33543",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "calciol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ergosteryl-palmitate-to-h2o-33543"
+      },
+      "note": "Shares calciol with ergosteryl palmitate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28940"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_calciol_lumisterol-3-to-di-sulfido-diiron",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "calciol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "lumisterol-3-to-di-sulfido-diiron"
+      },
+      "note": "Shares calciol with lumisterol 3 to di-μ-sulfido-diiron.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28940"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_calciol_lumisterol-3-to-di-sulfido-diiron-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "calciol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "lumisterol-3-to-di-sulfido-diiron-null"
+      },
+      "note": "Shares calciol with lumisterol 3 to di-μ-sulfido-diiron.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28940"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_24r_24_25_dihydroxycalciol_calciol-to-di-sulfido-diiron",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "24r_24_25_dihydroxycalciol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "calciol-to-di-sulfido-diiron"
+      },
+      "note": "Shares (24R)-24,25-dihydroxycalciol with calciol to di-μ-sulfido-diiron.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28818"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_24r_24_25_dihydroxycalciol_demethylspheroidene-to-hydroxyspheroidenone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "24r_24_25_dihydroxycalciol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "demethylspheroidene-to-hydroxyspheroidenone"
+      },
+      "note": "Shares (24R)-24,25-dihydroxycalciol with demethylspheroidene to Hydroxyspheroidenone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28818"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_24r_24_25_dihydroxycalciol_demethylspheroidene-to-hydroxyspheroidenone-3090",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "24r_24_25_dihydroxycalciol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "demethylspheroidene-to-hydroxyspheroidenone-3090"
+      },
+      "note": "Shares (24R)-24,25-dihydroxycalciol with demethylspheroidene to Hydroxyspheroidenone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28818"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_calcitetrol_alfacalcidol-to-di-sulfido-diiron",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "calcitetrol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alfacalcidol-to-di-sulfido-diiron"
+      },
+      "note": "Shares calcitetrol with alfacalcidol to di-μ-sulfido-diiron.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:47799"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_calcitetrol_alfacalcidol-to-di-sulfido-diiron-46592",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "calcitetrol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alfacalcidol-to-di-sulfido-diiron-46592"
+      },
+      "note": "Shares calcitetrol with alfacalcidol to di-μ-sulfido-diiron.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:47799"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-2-4-diacetamido-2-4-6-to-cmp-5-7-diacetamido "UDP-2,4-diacetamido-2,4,6… to CMP-5,7-diacetamido-3,5,7…" {
-  spacing 206
+  spacing 290
 
   spine at 0,0 {
     udp_2_4_diacetamido_2_4_6_trideoxy_beta_l_idose
@@ -20,14 +20,14 @@ pathway udp-2-4-diacetamido-2-4-6-to-cmp-5-7-diacetamido "UDP-2,4-diacetamido-2,
 
   branch from udp side left {
     udp
-    <-> ec_2_4_1_17 [2.4.1.17] +ketoprofen_glucuronide +ketoprofen
+    <-> . +urolithin_a_3_o_glucuronide +urolithin_a
     udp_alpha_d_glucuronate
   }
 
   branch from udp side right {
     udp
-    <-> ec_2_4_1_17 [2.4.1.17] +gemfibrozil_glucuronide +udp_alpha_d_glucuronate
-    gemfibrozil
+    <-> . +h +beta_d_glucuronosyl_2_methyl_4_3_methyl_1_4_diox +udp_alpha_d_glucuronate
+    5c_aglycone
   }
 
   branch from 2_4_diacetamido_2_4_6_trideoxy_beta_l_gulose side left {
@@ -38,37 +38,121 @@ pathway udp-2-4-diacetamido-2-4-6-to-cmp-5-7-diacetamido "UDP-2,4-diacetamido-2,
 
   branch from h side right {
     h
-    <-> ec_1_1_1_2 [1.1.1.2] +1_2_4_butanetriol +nadp +nadph
-    3r_3_4_dihydroxybutanal
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_11z_14z_17z_eicoastrienoyl_2_9z_12z_15z_octade
   }
 
   branch from h side left {
     h
-    <-> . +4_3_acetyl_5_hydroxy_4_oxo_1_4_dihydronapthalen +nadph +s_chiral_alcohol
-    nadp
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_13z_docosenoyl_2_9z_octadecenoyl_sn_glycero_3
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_1_3_29 [3.1.3.29] +d_arabinose_5_phosphate +h2o
-    2_3_4_5_tetrahydroxypentanal
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +1_docosanoyl_2_9z_12z_octadecadienoyl_sn_glycero +1_docosanoyl_2_9z_12z_octadecadienoyl_sn_glycero +h2o
+    atp
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_3_1_3_1 [3.1.3.1] +2_4_dinitrophenyl_phosphate +h2o +h
-    2_4_dinitrophenol
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +atp +h2o
+    pc_22_0_18_3_9z_12z_15z
   }
 
   branch from diphosphate side right {
     diphosphate
-    <-> . +diazepinomicin +4_6_8_trihydroxydibenzodiazepinone
-    2e_6e_farnesyl_diphosphate
+    <-> ec_6_1_3_1 [6.1.3.1] +amp +3_decyl_4_undecyloxetan_2_one +atp
+    2r_3s_2_decyl_3_hydroxytetradecanoate
   }
 
   branch from diphosphate side left {
     diphosphate
-    <-> . +2e_geranyl_diphosphate +indolactam_v
-    lyngbyatoxin_a
+    <-> . +adenylylcoelenterazine_disulfonate +atp
+    watasenia_luciferin
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +r_3_hydroxydecanoic_acid +alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_form_b_p_put
+    alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_form_a_p_put
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +3_hydroxy_3_methylbutanenitrile
+    3_methyl_2_butenenitrile
+  }
+
+  branch from udp side right {
+    udp
+    <-> ec_2_7_1_36 [2.7.1.36] +utp +r_mevalonate +h
+    r_5_phosphomevalonate
+  }
+
+  branch from udp side left {
+    udp
+    <-> ec_2_4_1_17 [2.4.1.17] +androsterone_3_glucosiduronic_acid +udp_alpha_d_glucuronate
+    androsterone
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    22_1_18_3_pc
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    22_2_18_3_pc
+  }
+
+  branch from phosphoenolpyruvate side right {
+    phosphoenolpyruvate
+    <-> . +n_acetyl_beta_d_muramate_6_phosphate +pyruvate
+    n_acetyl_d_muramate
+  }
+
+  branch from phosphoenolpyruvate side left {
+    phosphoenolpyruvate
+    <-> . +d_fructofuranose_1_phosphate +pyruvate
+    d_fructofuranose
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +atp +h2o
+    pe_20_1_11z_18_3_9z_12z_15z
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +atp +h2o
+    pe_20_2_11z_14z_18_2_9z_12z
+  }
+
+  branch from ctp side right {
+    ctp
+    <-> ec_2_7_1_11 [2.7.1.11] +cdp +d_tagatofuranose_1_6_bisphosphate +h
+    d_tagatofuranose_6_phosphate
+  }
+
+  branch from ctp side left {
+    ctp
+    <-> . +cdp +4_amino_2_methyl_5_phosphooxymethyl_pyrimidine +h
+    4_amino_5_hydroxymethyl_2_methylpyrimidine
+  }
+
+  branch from diphosphate side right {
+    diphosphate
+    <-> . +2_geranylfernesyl_phenazine +2e_6e_10e_14e_geranylfarnesyl_diphosphate
+    2_hydroxyphenazine
+  }
+
+  branch from diphosphate side left {
+    diphosphate
+    <-> . +d_firefly_luciferyl_adenylate +h +atp
+    firefly_d_luciferin
   }
 }

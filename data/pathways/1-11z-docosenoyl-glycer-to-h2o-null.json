@@ -1,0 +1,417 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1-11z-docosenoyl-glycer-to-h2o-null",
+  "name": "1-(11Z-Docosenoyl)-Glycer… to H2O",
+  "category": "other",
+  "summary": "A 3-step route from 1-(11Z-Docosenoyl)-Glycero-3-Phosphate to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR205102"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1_11z_docosenoyl_glycero_3_phosphate",
+      "name": "1-(11Z-Docosenoyl)-Glycero-3-Phosphate",
+      "short": "1-(11Z-Docosenoyl)-…",
+      "formula": "C25H47O7P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1560484"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "sn_glycerol_3_phosphate",
+      "name": "sn-glycerol 3-phosphate",
+      "short": "sn-glycerol 3-P",
+      "formula": "C3H7O6P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM66"
+      }
+    },
+    {
+      "id": "11z_docosenoyl_coa",
+      "name": "(11Z)-docosenoyl-CoA",
+      "formula": "C43H72N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:232625"
+      }
+    },
+    {
+      "id": "diphosphate",
+      "name": "diphosphate",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM11"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM728294"
+      }
+    },
+    {
+      "id": "cetoleic_acid",
+      "name": "cetoleic acid",
+      "formula": "C22H42O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:32428"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR205102",
+      "substrates": [
+        {
+          "metabolite": "1_11z_docosenoyl_glycero_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sn_glycerol_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "11z_docosenoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR205102"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR205102"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR158312",
+      "substrates": [
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "11z_docosenoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cetoleic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR158312"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR158312"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR158313",
+      "substrates": [
+        {
+          "metabolite": "cetoleic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "11z_docosenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR158313"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR158313"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_1_11z_docosenoyl_glycero_3_phosphate_1-11z-docosenoyl-glycer-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_11z_docosenoyl_glycero_3_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-11z-docosenoyl-glycer-to-h2o"
+      },
+      "note": "Shares 1-(11Z-Docosenoyl)-Glycero-3-Phosphate with 1-(11Z-Docosenoyl)-Glycer… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1560484"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_11z_docosenoyl_coa_1-11z-docosenoyl-glycer-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11z_docosenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-11z-docosenoyl-glycer-to-h2o"
+      },
+      "note": "Shares (11Z)-docosenoyl-CoA with 1-(11Z-Docosenoyl)-Glycer… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:232625"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_11z_docosenoyl_coa_3r-hydroxy-11z-docoseno-to-2e-11z-docosadi-2-11",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11z_docosenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3r-hydroxy-11z-docoseno-to-2e-11z-docosadi-2-11"
+      },
+      "note": "Shares (11Z)-docosenoyl-CoA with 3R-hydroxy-(11Z)-docoseno… to (2E,11Z)-docosadi-2,11-en….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:232625"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_11z_docosenoyl_coa_cetoleate-to-ce-18-1-7z",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11z_docosenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cetoleate-to-ce-18-1-7z"
+      },
+      "note": "Shares (11Z)-docosenoyl-CoA with cetoleate to CE 18:1(7Z).",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:232625"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_11z_docosenoyl_coa_cetoleate-to-ce-18-1-7z-83403",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11z_docosenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cetoleate-to-ce-18-1-7z-83403"
+      },
+      "note": "Shares (11Z)-docosenoyl-CoA with cetoleate to CE 18:1(7Z).",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:232625"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cetoleic_acid_1-11z-docosenoyl-glycer-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cetoleic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-11z-docosenoyl-glycer-to-h2o"
+      },
+      "note": "Shares cetoleic acid with 1-(11Z-Docosenoyl)-Glycer… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:32428"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cetoleic_acid_3-oxo-24-isopropanoyl-c-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cetoleic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-oxo-24-isopropanoyl-c-to-coa"
+      },
+      "note": "Shares cetoleic acid with 3-oxo-24-(isopropanoyl)-c… to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:32428"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cetoleic_acid_s-adenosyl-l-homocysteine-to-griseofulvin-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cetoleic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-griseofulvin-null"
+      },
+      "note": "Shares cetoleic acid with S-adenosyl-L-homocysteine to griseofulvin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:32428"
+          }
+        ]
+      }
+    }
+  ]
+}

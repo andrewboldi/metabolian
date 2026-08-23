@@ -105,22 +105,49 @@
       }
     },
     {
-      "id": "udp_d_galactose",
-      "name": "UDP-α-D-galactose",
-      "formula": "C15H22N2O17P2",
-      "charge": -2,
+      "id": "n_acyl_15_methylhexadecasphinganine",
+      "name": "N-acyl-15-methylhexadecasphinganine",
+      "short": "N-acyl-15-methylhex…",
+      "formula": "C18H36NO3R",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:66914"
+        "chebi": "CHEBI:70845"
       }
     },
     {
-      "id": "d_galactopyranosyl_1_2_d_glucopyranosyl_1_3_1_2",
-      "name": "α-D-galactopyranosyl-(1→2)-α-D-glucopyranosyl-(1→3)-1,2-diacyl-sn-glycerol",
-      "short": "α-D-galactopyranosy…",
-      "formula": "C17H26O15R2",
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29033"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:136769"
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "iron",
+      "name": "iron",
+      "formula": "Fe",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:29034"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
       }
     }
   ],
@@ -280,43 +307,141 @@
     },
     {
       "id": "r4",
-      "name": "a 1,2-diacyl-3-O-(alpha-D-glucopyranosyl)-sn-glycerol + UDP-alpha-D-galactose = a 1,2-d...",
-      "equation": "a 1,2-diacyl-3-O-(alpha-D-glucopyranosyl)-sn-glycerol + UDP-alpha-D-galactose = a 1,2-diacyl-3-O-[alpha-D-galactopyranosyl-(1->2)-alpha-D-glucopyranosyl]-sn-glycerol + UDP + H(+)",
+      "name": "an N-acyl-15-methylhexadecasphinganine + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = an N-...",
+      "equation": "an N-acyl-15-methylhexadecasphinganine + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = an N-acyl-4-hydroxy-15-methylhexadecasphinganine + 2 Fe(III)-[cytochrome b5] + H2O",
       "substrates": [
         {
-          "metabolite": "1_2_diacyl_3_o_d_glucosyl_sn_glycerol",
+          "metabolite": "n_acyl_15_methylhexadecasphinganine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "udp_d_galactose",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "d_galactopyranosyl_1_2_d_glucopyranosyl_1_3_1_2",
-          "stoichiometry": 1
+          "metabolite": "fe2",
+          "stoichiometry": 2
         },
         {
-          "metabolite": "udp",
+          "metabolite": "o2",
           "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acyl_15_methylhexadecaphytosphingosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:52696"
+        "rhea": "RHEA:81475"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:52696"
+            "id": "RHEA:81475"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_1_2_diacyl_3_o_d_glucosyl_sn_glycerol_queuosine-5-phosphate-to-d-galactosyl-5-o-queu",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_2_diacyl_3_o_d_glucosyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "queuosine-5-phosphate-to-d-galactosyl-5-o-queu"
+      },
+      "note": "Shares 1,2-diacyl-3-O-(α-D-glucosyl)-sn-glycerol with queuosine 5'-phosphate to β-D-galactosyl-5''-O-queu….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17670"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acyl_15_methylhexadecasphinganine_2-saturated-fatty-acid-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acyl_15_methylhexadecasphinganine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-saturated-fatty-acid-to-diphosphate"
+      },
+      "note": "Shares N-acyl-15-methylhexadecasphinganine with 2-saturated fatty acid… to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:70845"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acyl_15_methylhexadecasphinganine_aliphatic-primary-amide-to-acyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acyl_15_methylhexadecasphinganine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aliphatic-primary-amide-to-acyl-coa"
+      },
+      "note": "Shares N-acyl-15-methylhexadecasphinganine with aliphatic primary amide to acyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:70845"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acyl_15_methylhexadecasphinganine_n-acyl-15-methylhexadecas-to-15-methylhexadecasp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acyl_15_methylhexadecasphinganine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acyl-15-methylhexadecas-to-15-methylhexadecasp"
+      },
+      "note": "Shares N-acyl-15-methylhexadecasphinganine with N-acyl-15-methylhexadecas… to 15-methylhexadecasphing-4….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:70845"
           }
         ]
       }

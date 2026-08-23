@@ -1,0 +1,496 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "6-trans-leukotriene-b4-to-h2o-null",
+  "name": "6-trans-leukotriene B4 to H2O",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 6-trans-leukotriene B4 to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR200043"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "6_trans_leukotriene_b4",
+      "name": "6-trans-leukotriene B4",
+      "short": "6-trans-leukotriene…",
+      "formula": "C20H31O4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1368517"
+      }
+    },
+    {
+      "id": "epi_leukotriene_a4",
+      "name": "epi-leukotriene A4",
+      "formula": "C20H29O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:193571"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "5s_hydroperoxy_6e_8z_11z_14z_eicosatetraenoate",
+      "name": "(5S)-hydroperoxy-(6E,8Z,11Z,14Z)-eicosatetraenoate",
+      "short": "hydroperoxy-(6E,8Z,…",
+      "formula": "C20H31O4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM730648"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_13_11_34",
+      "name": "arachidonate 5-lipoxygenase",
+      "ec": [
+        "1.13.11.34"
+      ],
+      "xrefs": {
+        "uniprot": "P09917"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR200043",
+      "substrates": [
+        {
+          "metabolite": "6_trans_leukotriene_b4",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "epi_leukotriene_a4",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR200043"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR200043"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "arachidonate 5-lipoxygenase",
+      "ec": "1.13.11.34",
+      "substrates": [
+        {
+          "metabolite": "epi_leukotriene_a4",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5s_hydroperoxy_6e_8z_11z_14z_eicosatetraenoate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_34"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR197870"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197870"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR154061",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5s_hydroperoxy_6e_8z_11z_14z_eicosatetraenoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5s_hydroperoxy_6e_8z_11z_14z_eicosatetraenoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR154061"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR154061"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_6_trans_leukotriene_b4_4-2-iminoethyl-phenol-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_trans_leukotriene_b4"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-2-iminoethyl-phenol-to-h2o-null"
+      },
+      "note": "Shares 6-trans-leukotriene B4 with 4-(2-iminoethyl)phenol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368517"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_trans_leukotriene_b4_6-trans-leukotriene-b4-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_trans_leukotriene_b4"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-trans-leukotriene-b4-to-h2o"
+      },
+      "note": "Shares 6-trans-leukotriene B4 with 6-trans-leukotriene B4 to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368517"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_trans_leukotriene_b4_dec-pp-beta-d-glcnac-1-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_trans_leukotriene_b4"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dec-pp-beta-d-glcnac-1-to-nad"
+      },
+      "note": "Shares 6-trans-leukotriene B4 with Dec-PP-[beta-D-GlcNAc-(1-… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368517"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_trans_leukotriene_b4_formononetin-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_trans_leukotriene_b4"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "formononetin-to-coa"
+      },
+      "note": "Shares 6-trans-leukotriene B4 with formononetin to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368517"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_trans_leukotriene_b4_tocopherol-to-h2o-24012",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_trans_leukotriene_b4"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "tocopherol-to-h2o-24012"
+      },
+      "note": "Shares 6-trans-leukotriene B4 with γ-tocopherol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368517"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_epi_leukotriene_a4_6-trans-leukotriene-b4-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "epi_leukotriene_a4"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-trans-leukotriene-b4-to-h2o"
+      },
+      "note": "Shares epi-leukotriene A4 with 6-trans-leukotriene B4 to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:193571"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_epi_leukotriene_a4_glycine-to-monochlorobimane-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "epi_leukotriene_a4"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "glycine-to-monochlorobimane-null"
+      },
+      "note": "Shares epi-leukotriene A4 with glycine to monochlorobimane.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:193571"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_epi_leukotriene_a4_leukotriene-b4-to-5s-6r-dihydroxy-15s-h",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "epi_leukotriene_a4"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "leukotriene-b4-to-5s-6r-dihydroxy-15s-h"
+      },
+      "note": "Shares epi-leukotriene A4 with leukotriene B4 to (5S,6R)-dihydroxy-(15S)-h….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:193571"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_epi_leukotriene_a4_leukotriene-b4-to-5s-6r-dihydroxy-15s-h-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "epi_leukotriene_a4"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "leukotriene-b4-to-5s-6r-dihydroxy-15s-h-null"
+      },
+      "note": "Shares epi-leukotriene A4 with leukotriene B4 to (5S,6R)-dihydroxy-(15S)-h….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:193571"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_epi_leukotriene_a4_o-acetyl-l-homoserine-to-l-cysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "epi_leukotriene_a4"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "o-acetyl-l-homoserine-to-l-cysteine"
+      },
+      "note": "Shares epi-leukotriene A4 with O-acetyl-L-homoserine to L-cysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:193571"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5s_hydroperoxy_6e_8z_11z_14z_eicosatetraenoate_6-trans-leukotriene-b4-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5s_hydroperoxy_6e_8z_11z_14z_eicosatetraenoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-trans-leukotriene-b4-to-h2o"
+      },
+      "note": "Shares (5S)-hydroperoxy-(6E,8Z,11Z,14Z)-eicosatetraenoate with 6-trans-leukotriene B4 to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM730648"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5s_hydroperoxy_6e_8z_11z_14z_eicosatetraenoate_h-to-o2-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5s_hydroperoxy_6e_8z_11z_14z_eicosatetraenoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-o2-null"
+      },
+      "note": "Shares (5S)-hydroperoxy-(6E,8Z,11Z,14Z)-eicosatetraenoate with H to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM730648"
+          }
+        ]
+      }
+    }
+  ]
+}

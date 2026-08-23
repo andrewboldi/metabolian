@@ -113,71 +113,6 @@
       "xrefs": {
         "chebi": "CHEBI:234465"
       }
-    },
-    {
-      "id": "nad",
-      "name": "NAD+",
-      "formula": "C21H26N7O14P2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:57540"
-      }
-    },
-    {
-      "id": "n_adp_d_ribosyl_l_histidyl_2",
-      "name": "Nτ-(ADP-D-ribosyl)-L-histidyl(2−)",
-      "short": "Nτ-(ADP-D-ribosyl)-…",
-      "formula": "C21H26N8O14P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:191398"
-      }
-    },
-    {
-      "id": "nicotinamide",
-      "name": "nicotinamide",
-      "formula": "C6H6N2O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:17154"
-      }
-    },
-    {
-      "id": "hplus",
-      "name": "Proton (H+)",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:15378"
-      }
-    },
-    {
-      "id": "utp",
-      "name": "UTP",
-      "formula": "C9H11N2O15P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:46398"
-      }
-    },
-    {
-      "id": "n_uridylyl_l_histidine_1",
-      "name": "Nτ-(uridylyl)-L-histidine(1−)",
-      "short": "Nτ-(uridylyl)-L-his…",
-      "formula": "C15H17N5O9P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:233474"
-      }
-    },
-    {
-      "id": "ppi",
-      "name": "Diphosphate (PPi)",
-      "formula": "HO7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:33019"
-      }
     }
   ],
   "enzymes": [
@@ -356,85 +291,71 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "L-histidyl-[protein] + NAD(+) = N(tele)-(ADP-D-ribosyl)-L-histidyl-[protein] + nicotina...",
-      "equation": "L-histidyl-[protein] + NAD(+) = N(tele)-(ADP-D-ribosyl)-L-histidyl-[protein] + nicotinamide + H(+)",
-      "substrates": [
-        {
-          "metabolite": "l_histidine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n_adp_d_ribosyl_l_histidyl_2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nicotinamide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:72071"
+      "id": "xt_2_d_mannosyl_3_phosphonatoglycerate_aldehydo-d-arabinose-to-2-d-mannosyl-3-phosph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_d_mannosyl_3_phosphonatoglycerate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "aldehydo-d-arabinose-to-2-d-mannosyl-3-phosph"
+      },
+      "note": "Shares 2-(α-D-mannosyl)-3-phosphonatoglycerate with aldehydo-D-arabinose… to 2-(α-D-mannosyl)-3-phosph….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:72071"
+            "db": "ChEBI",
+            "id": "CHEBI:57744"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "L-histidyl-[protein] + UTP = N(tele)-(5'-uridylyl)-L-histidyl-[protein] + diphosphate",
-      "equation": "L-histidyl-[protein] + UTP = N(tele)-(5'-uridylyl)-L-histidyl-[protein] + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "l_histidine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "utp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n_uridylyl_l_histidine_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:83891"
+      "id": "xt_2_d_mannosyl_d_glycerate_d-glycerate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_d_mannosyl_d_glycerate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glycerate-to-h2o"
+      },
+      "note": "Shares 2-(α-D-mannosyl)-D-glycerate with D-glycerate to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:83891"
+            "db": "ChEBI",
+            "id": "CHEBI:57541"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_o_6_phospho_d_mannosyl_d_glycerate_l-alanine-to-2-propylpiperidine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_o_6_phospho_d_mannosyl_d_glycerate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-alanine-to-2-propylpiperidine"
+      },
+      "note": "Shares 2-O-(6-phospho-α-D-mannosyl)-D-glycerate with L-alanine to 2-propylpiperidine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60331"
           }
         ]
       }

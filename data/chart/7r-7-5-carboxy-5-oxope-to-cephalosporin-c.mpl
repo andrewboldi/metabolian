@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 7r-7-5-carboxy-5-oxope-to-cephalosporin-c "(7R)-7-(5-carboxy-5-oxope… to cephalosporin C" {
-  spacing 252
+  spacing 288
 
   spine at 0,0 {
     7r_7_5_carboxy_5_oxopentanamido_cephalosporanat
@@ -18,25 +18,61 @@ pathway 7r-7-5-carboxy-5-oxope-to-cephalosporin-c "(7R)-7-(5-carboxy-5-oxope… 
 
   branch from akg side left {
     akg
-    <-> ec_1_5_1_7 [1.5.1.7] +l_saccharopinate +nad +h2o +nadh +hplus
-    l_lysinium
+    <-> ec_6_4_1_7 [6.4.1.7] +hco3 +atp +adp +pi +hplus
+    s_oxalatosuccinate
   }
 
   branch from akg side right {
     akg
-    <-> ec_2_3_3_14 [2.3.3.14] +acetyl_coa +h2o +coa +hplus
-    2r_homocitrate
+    <-> ec_1_1_1_41 [1.1.1.41] +nad +co2 +nadh
+    d_threo_isocitrate
   }
 
   branch from acetate side left {
     acetate
-    <-> . +n_acetylcadaverine +h2o
-    cadaverine
+    <-> . +3_hydroxy_3_4_o_d_glucosyl_3_methoxyphenyl_propa
+    glucovanillin
   }
 
   branch from acetate side right {
     acetate
-    <-> . +n1_acetylspermidinium +h2o
-    spermidine
+    <-> . +3_hydroxy_3_4_hydroxyphenyl_propanoate
+    4_hydroxybenzaldehyde
+  }
+
+  branch from d_glutamate side left {
+    d_glutamate
+    <-> ec_4_2_1_48 [4.2.1.48] +h2o
+    5_oxo_d_prolinate
+  }
+
+  branch from d_glutamate side right {
+    d_glutamate
+    <-> . +d_lysinium +akg
+    6_amino_2_oxohexanoic_acid
+  }
+
+  branch from akg side left {
+    akg
+    <-> ec_3_5_1_36 [3.5.1.36] +n_methyl_2_oxoglutaramate +h2o
+    methylamine
+  }
+
+  branch from akg side right {
+    akg
+    <-> ec_1_1_99_24 [1.1.99.24] +4_hydroxybutyrate +4_oxobutanoate
+    r_2_hydroxyglutarate
+  }
+
+  branch from acetate side left {
+    acetate
+    <-> . +ac_o_9_sialylglycoconjugate_anion +h2o +hplus
+    sialylglycoconjugate_anion
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> . +acetyltaurine +h2o
+    taurine
   }
 }

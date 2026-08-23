@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-2-dihexadecanoyl-sn-gly-to-1-2-dihexadecanoyl "1,2-dihexadecanoyl-sn-gly… to 1,2-dihexadecanoyl-sn-gly…" {
-  spacing 158
+  spacing 164
 
   spine at 0,0 {
     1_2_dihexadecanoyl_sn_glycero_3_phospho_1d_myo_i
@@ -20,5 +20,11 @@ pathway 1-2-dihexadecanoyl-sn-gly-to-1-2-dihexadecanoyl "1,2-dihexadecanoyl-sn-g
     1_2_dihexadecanoyl_sn_glycero_3_phospho_1d_myo_i
     <-> . +atp +adp +hplus
     1_2_dipalmitoyl_sn_glycero_3_phospho_1d_myo_inos
+  }
+
+  branch from 1_2_dihexadecanoyl_sn_glycero_3_phospho_1d_myo_i side right {
+    1_2_dihexadecanoyl_sn_glycero_3_phospho_1d_myo_i
+    <-> . +h2o +pi
+    1_2_dihexadecanoyl_sn_glycero_3_phospho_1d_myo_i
   }
 }

@@ -1,0 +1,521 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-adenosyl-l-homocysteine-to-diphosphate",
+  "name": "S-adenosyl-L-homocysteine to diphosphate",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from S-adenosyl-L-homocysteine to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR151956"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_adenosyl_l_homocysteine",
+      "name": "S-adenosyl-L-homocysteine",
+      "short": "S-adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1102167"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "menaquinol",
+      "name": "Menaquinol",
+      "formula": "C21H26O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM736184"
+      }
+    },
+    {
+      "id": "s_adenosyl_l_methionine",
+      "name": "S-adenosyl-L-methionine",
+      "short": "S-adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1363767"
+      }
+    },
+    {
+      "id": "demethylmenaquinol",
+      "name": "Demethylmenaquinol",
+      "formula": "C20H24O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM731616"
+      }
+    },
+    {
+      "id": "diphosphate",
+      "name": "diphosphate",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM11"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "1_4_dihydroxy_2_naphthoate",
+      "name": "1,4-dihydroxy-2-naphthoate",
+      "short": "1,4-dihydroxy-2-nap…",
+      "formula": "C11H7O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:11173"
+      }
+    },
+    {
+      "id": "all_trans_polyprenyl_diphosphate",
+      "name": "all-trans-polyprenyl diphosphate",
+      "short": "all-trans-polypreny…",
+      "formula": "C10H20O7P2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM729010"
+      }
+    },
+    {
+      "id": "all_trans_nonaprenyl_diphosphate",
+      "name": "all-trans-nonaprenyl diphosphate",
+      "short": "all-trans-nonapreny…",
+      "formula": "C45H73O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58391"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "2_demethylmenaquinol_9",
+      "name": "2-demethylmenaquinol-9",
+      "short": "2-demethylmenaquino…",
+      "formula": "C55H80O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:84542"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_163",
+      "name": "demethylmenaquinone methyltransferase",
+      "ec": [
+        "2.1.1.163"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_74",
+      "name": "1,4-dihydroxy-2-naphthoate polyprenyltransferase",
+      "ec": [
+        "2.5.1.74"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "demethylmenaquinone methyltransferase",
+      "ec": "2.1.1.163",
+      "substrates": [
+        {
+          "metabolite": "s_adenosyl_l_homocysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "menaquinol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_adenosyl_l_methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "demethylmenaquinol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_163"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR151956"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR151956"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "1,4-dihydroxy-2-naphthoate polyprenyltransferase",
+      "ec": "2.5.1.74",
+      "substrates": [
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "demethylmenaquinol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_4_dihydroxy_2_naphthoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "all_trans_polyprenyl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_74"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR114073"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR114073"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "1,4-dihydroxy-2-naphthoate polyprenyltransferase",
+      "equation": "all-trans-nonaprenyl diphosphate + 1,4-dihydroxy-2-naphthoate + H(+) = 2-demethylmenaquinol-9 + CO2 + diphosphate",
+      "ec": "2.5.1.74",
+      "substrates": [
+        {
+          "metabolite": "all_trans_nonaprenyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_4_dihydroxy_2_naphthoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_demethylmenaquinol_9",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_74"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:44804"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44804"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_menaquinol_fmnh2-to-2s-3-sulfolactate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "menaquinol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fmnh2-to-2s-3-sulfolactate"
+      },
+      "note": "Shares Menaquinol with FMNH2 to (2S)-3-sulfolactate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM736184"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_menaquinol_glucoerucin-to-h",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "menaquinol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "glucoerucin-to-h"
+      },
+      "note": "Shares Menaquinol with glucoerucin to H.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM736184"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_menaquinol_methylselenol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "menaquinol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "methylselenol-to-h2o"
+      },
+      "note": "Shares Menaquinol with methylselenol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM736184"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_polyprenyl_diphosphate_co2-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_polyprenyl_diphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "co2-to-h2o"
+      },
+      "note": "Shares all-trans-polyprenyl diphosphate with CO2 to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM729010"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_nonaprenyl_diphosphate_3-hydroxyphenylacetyl-coa-to-s-adenosyl-l-homocy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_nonaprenyl_diphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxyphenylacetyl-coa-to-s-adenosyl-l-homocy"
+      },
+      "note": "Shares all-trans-nonaprenyl diphosphate with 3-hydroxyphenylacetyl-CoA to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58391"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_nonaprenyl_diphosphate_4-chlorobenzoate-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_nonaprenyl_diphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-chlorobenzoate-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares all-trans-nonaprenyl diphosphate with 4-chlorobenzoate to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58391"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_nonaprenyl_diphosphate_5-cholestane-3-7-diol-to-24e-3-7-12-trihydrox",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_nonaprenyl_diphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cholestane-3-7-diol-to-24e-3-7-12-trihydrox"
+      },
+      "note": "Shares all-trans-nonaprenyl diphosphate with 5β-cholestane-3α,7α-diol to (24E)-3α,7α,12α-trihydrox….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58391"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_demethylmenaquinol_9_2-demethylmenaquinone-9-to-adenosine-3-5-bismono",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_demethylmenaquinol_9"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-demethylmenaquinone-9-to-adenosine-3-5-bismono"
+      },
+      "note": "Shares 2-demethylmenaquinol-9 with 2-demethylmenaquinone-9 to adenosine 3',5'-bismonoph….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84542"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_demethylmenaquinol_9_acetoacetyl-coa-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_demethylmenaquinol_9"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acetoacetyl-coa-to-h2o-null"
+      },
+      "note": "Shares 2-demethylmenaquinol-9 with acetoacetyl-CoA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:84542"
+          }
+        ]
+      }
+    }
+  ]
+}

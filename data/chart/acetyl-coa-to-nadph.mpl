@@ -4,15 +4,173 @@
 # edit the generator, not this file.
 
 pathway acetyl-coa-to-nadph "acetyl-CoA to NADPH" {
-  spacing 152
+  spacing 308
 
   spine at 0,0 {
     acetyl_coa
-    <-> . +l_lysine -n_acetyl_l_lysine -coa
+    <-> . +4_hydroxybutanoate -acetate
+    4_hydroxybutanoyl_coa
+    <-> . +h +nadph -nadp -coa
+    4_hydroxybutyraldehyde
+    <-> . +nadh +h -nad
+    butane_1_4_diol
+    <-> . +nadp -4_hydroxybutyraldehyde -nadph
     h
-    <-> . +2_oxoglutarate +n_acetyl_l_lysine -l_glutamate
-    n_acetyl_l_2_aminoadipate_semialdehyde
-    <-> . +h +nadp +phosphate -nadph
-    n_acetyl_l_2_aminoadipic_acid_6_phosphate
+  }
+
+  branch from 4_hydroxybutanoyl_coa side left {
+    4_hydroxybutanoyl_coa
+    <-> ec_1_3_3_6 [1.3.3.6] +o2 +h2o2
+    4_hydroxycrotonyl_coa
+  }
+
+  branch from 4_hydroxybutanoyl_coa side right {
+    4_hydroxybutanoyl_coa
+    <-> ec_4_2_1_120 [4.2.1.120] +h2o
+    vinylacetyl_coa
+  }
+
+  branch from acetate side left {
+    acetate
+    <-> ec_3_1_1_3 [3.1.1.3] +h +4_ethoxyaniline +h2o
+    phenacetin
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> ec_3_1_1_41 [3.1.1.41] +deacetyl_7_aminocephalosporanic_acid +h +h2o
+    7_aminocephalosporanic_acid
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_1_1_62 [1.1.1.62] +2_3_pentanediol +h +nadph
+    pentane_2_3_dione
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_1_1_21 [1.1.1.21] +diacetyl +h +nadph
+    butane_2_3_diol
+  }
+
+  branch from coa side left {
+    coa
+    <-> ec_2_3_1_76 [2.3.1.76] +hexadecanoyl_coa +11_cis_retinol
+    all_trans_retinyl_hexadecanoate
+  }
+
+  branch from coa side right {
+    coa
+    <-> ec_2_3_1_78 [2.3.1.78] +acetyl_coa +beta_d_glucosamine
+    n_acetyl_beta_d_galactosamine
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_210 [1.1.1.210] +nadh +h +5beta_androstane_3_17_dione
+    epietiocholanolone
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_328 [1.1.1.328] +nadh +h +2_6_dichloroindophenol
+    reduced_2_6_dichlorophenolindophenol
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_5_4_5 [3.5.4.5] +cytarabine +h2o +nh4
+    spongouridin
+  }
+
+  branch from h side right {
+    h
+    <-> ec_1_1_1_62 [1.1.1.62] +2_acetylpyridine +nadph +nadp
+    1_pyridin_2_yl_ethanol
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_1_1_184 [1.1.1.184] +nadp +13_dihydrodaunorubicin
+    daunorubicin
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_1_1_2 [1.1.1.2] +1_7_7_trimethylbicyclo_2_2_1_heptane_2_3_diol +nadp +h
+    bornane_2_3_dione
+  }
+
+  branch from acetyl_coa side left {
+    acetyl_coa
+    <-> ec_2_3_1_30 [2.3.1.30] +l_threonine +coa
+    o_acetyl_l_threonine
+  }
+
+  branch from acetyl_coa side right {
+    acetyl_coa
+    <-> . +nadh +h +h2o2 +coa +o2 +nad +h2o
+    9z_octadecenoyl_coa
+  }
+
+  branch from 4_hydroxybutanoate side left {
+    4_hydroxybutanoate
+    <-> ec_3_1_1_25 [3.1.1.25] +h +h2o
+    gamma_butyrolactone
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> ec_2_7_2_1 [2.7.2.1] +gdp +acetyl_phosphate
+    gtp
+  }
+
+  branch from acetate side left {
+    acetate
+    <-> ec_2_7_2_1 [2.7.2.1] +itp +acetyl_phosphate
+    idp
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_1_1_20 [3.1.1.20] +methyl_3_4_5_trihydroxybenzoate +h2o +methanol
+    3_4_5_trihydroxybenzoate
+  }
+
+  branch from h side left {
+    h
+    <-> ec_1_2_3_1 [1.2.3.1] +reduced_2_6_dichlorophenolindophenol +indole_3_carboxylate +indole_3_carbaldehyde +h2o
+    2_6_dichloroindophenol
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_1_1_209 [1.1.1.209] +1_2_dihydro_1_2_acenaphthylenediol +nadp +h
+    acenaphthene_1_2_dione
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_3_1_20 [1.3.1.20] +ethyl_2_hydroxypropanoate +nadp +h
+    ethyl_pyruvate
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_3_1_20 [1.3.1.20] +methyl_2_hydroxypropionate +h +nadph
+    methyl_pyruvate
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_14_13_84 [1.14.13.84] +4_hydroxyhydratropate +h2o +h +o2 +nadph
+    p_hydroxypropiophenone
+  }
+
+  branch from coa side right {
+    coa
+    <-> ec_2_3_1_30 [2.3.1.30] +propanoyl_coa +l_serine
+    o_propionyl_l_serine
   }
 }

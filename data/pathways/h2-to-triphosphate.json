@@ -1,0 +1,495 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "h2-to-triphosphate",
+  "name": "H2 to triphosphate",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from H2 to triphosphate(5−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR192123"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "h2",
+      "name": "H2",
+      "formula": "H2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1108018"
+      }
+    },
+    {
+      "id": "coenzyme_gamma_f420_2",
+      "name": "coenzyme gamma-F420-2",
+      "short": "coenzyme gamma-F420…",
+      "formula": "C29H36N5O18P",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364225"
+      }
+    },
+    {
+      "id": "reduced_coenzyme_f420",
+      "name": "Reduced coenzyme F420",
+      "short": "Reduced coenzyme…",
+      "formula": "C29H34N5O18P",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1370085"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "6_phospho_d_glucono_1_5_lactone",
+      "name": "6-phospho-D-glucono-1,5-lactone",
+      "short": "6-phospho-D-glucono…",
+      "formula": "C6H9O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1104491"
+      }
+    },
+    {
+      "id": "d_glucose_6_phosphate",
+      "name": "D-glucose 6-phosphate",
+      "short": "D-glucose 6-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1364111"
+      }
+    },
+    {
+      "id": "diphosphate",
+      "name": "diphosphate",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM11"
+      }
+    },
+    {
+      "id": "glucose",
+      "name": "D-Glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4167"
+      }
+    },
+    {
+      "id": "triphosphate",
+      "name": "triphosphate",
+      "formula": "O10P3",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:18036"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_12_98_1",
+      "name": "coenzyme F420 hydrogenase",
+      "ec": [
+        "1.12.98.1"
+      ]
+    },
+    {
+      "id": "ec_1_1_98_2",
+      "name": "glucose-6-phosphate dehydrogenase (coenzyme-F420)",
+      "ec": [
+        "1.1.98.2"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "coenzyme F420 hydrogenase",
+      "ec": "1.12.98.1",
+      "substrates": [
+        {
+          "metabolite": "h2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coenzyme_gamma_f420_2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "reduced_coenzyme_f420",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 4
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_12_98_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR192123"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR192123"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "glucose-6-phosphate dehydrogenase (coenzyme-F420)",
+      "ec": "1.1.98.2",
+      "substrates": [
+        {
+          "metabolite": "6_phospho_d_glucono_1_5_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "reduced_coenzyme_f420",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 4
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glucose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coenzyme_gamma_f420_2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_98_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR191365"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR191365"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR137560",
+      "substrates": [
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_glucose_6_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "triphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR137560"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR137560"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_reduced_coenzyme_f420_5-10-methylenetetrahydrom-to-adp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "reduced_coenzyme_f420"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-10-methylenetetrahydrom-to-adp"
+      },
+      "note": "Shares Reduced coenzyme F420 with 5,10-methylenetetrahydrom… to ADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1370085"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_reduced_coenzyme_f420_5alpha-androstane-3alpha-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "reduced_coenzyme_f420"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5alpha-androstane-3alpha-to-h2o"
+      },
+      "note": "Shares Reduced coenzyme F420 with 5alpha-Androstane-3alpha,… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1370085"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_reduced_coenzyme_f420_6-phospho-d-glucono-1-5-l-to-d-glucopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "reduced_coenzyme_f420"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-phospho-d-glucono-1-5-l-to-d-glucopyranose"
+      },
+      "note": "Shares Reduced coenzyme F420 with 6-phospho-D-glucono-1,5-l… to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1370085"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_reduced_coenzyme_f420_propanoate-to-d-threonine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "reduced_coenzyme_f420"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "propanoate-to-d-threonine"
+      },
+      "note": "Shares Reduced coenzyme F420 with propanoate to D-threonine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1370085"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_reduced_coenzyme_f420_r-2-hydroxy-3-methylbut-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "reduced_coenzyme_f420"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-2-hydroxy-3-methylbut-to-h2o"
+      },
+      "note": "Shares Reduced coenzyme F420 with (R)-2-hydroxy-3-methylbut… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1370085"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_phospho_d_glucono_1_5_lactone_2-3-dinitrotoluene-to-3-methoxyphenol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_phospho_d_glucono_1_5_lactone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3-dinitrotoluene-to-3-methoxyphenol"
+      },
+      "note": "Shares 6-phospho-D-glucono-1,5-lactone with 2,3-dinitrotoluene to 3-methoxyphenol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104491"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_phospho_d_glucono_1_5_lactone_5-10-methylenetetrahydrom-to-adp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_phospho_d_glucono_1_5_lactone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-10-methylenetetrahydrom-to-adp"
+      },
+      "note": "Shares 6-phospho-D-glucono-1,5-lactone with 5,10-methylenetetrahydrom… to ADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104491"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_phospho_d_glucono_1_5_lactone_6-o-cis-methoxy-mycolyl-t-to-atp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_phospho_d_glucono_1_5_lactone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-o-cis-methoxy-mycolyl-t-to-atp"
+      },
+      "note": "Shares 6-phospho-D-glucono-1,5-lactone with 6-O-cis-methoxy-mycolyl-t… to ATP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104491"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_phospho_d_glucono_1_5_lactone_6-phospho-d-glucono-1-5-l-to-d-glucopyranose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_phospho_d_glucono_1_5_lactone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-phospho-d-glucono-1-5-l-to-d-glucopyranose"
+      },
+      "note": "Shares 6-phospho-D-glucono-1,5-lactone with 6-phospho-D-glucono-1,5-l… to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104491"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_phospho_d_glucono_1_5_lactone_6-phospho-d-glucono-1-5-l-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_phospho_d_glucono_1_5_lactone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-phospho-d-glucono-1-5-l-to-nadph"
+      },
+      "note": "Shares 6-phospho-D-glucono-1,5-lactone with 6-phospho-D-glucono-1,5-l… to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104491"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_phospho_d_glucono_1_5_lactone_s-adenosyl-l-homocysteine-to-adp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_phospho_d_glucono_1_5_lactone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-adp"
+      },
+      "note": "Shares 6-phospho-D-glucono-1,5-lactone with S-adenosyl-L-homocysteine to ADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1104491"
+          }
+        ]
+      }
+    }
+  ]
+}

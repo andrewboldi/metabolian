@@ -1,0 +1,713 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "cdp-to-diphosphate",
+  "name": "CDP to diphosphate",
+  "category": "other",
+  "summary": "A 5-step route from CDP to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR181971"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "cdp",
+      "name": "CDP",
+      "formula": "C9H12N3O11P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1102191"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "dcmp",
+      "name": "dCMP",
+      "formula": "C9H12N3O7P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM266"
+      }
+    },
+    {
+      "id": "ctp",
+      "name": "CTP",
+      "formula": "C9H12N3O14P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1103718"
+      }
+    },
+    {
+      "id": "2_deoxycytidine",
+      "name": "2'-deoxycytidine",
+      "formula": "C9H13N3O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15698"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "2_deoxycytosine_5_monophosphate",
+      "name": "2'-deoxycytosine 5'-monophosphate",
+      "short": "2'-deoxycytosine…",
+      "formula": "C9H12N3O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57566"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "dcdp",
+      "name": "dCDP",
+      "formula": "C9H12N3O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58593"
+      }
+    },
+    {
+      "id": "dctp",
+      "name": "dCTP",
+      "formula": "C9H12N3O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:61481"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_1_74",
+      "name": "deoxycytidine kinase",
+      "ec": [
+        "2.7.1.74"
+      ],
+      "xrefs": {
+        "uniprot": "P27707"
+      }
+    },
+    {
+      "id": "ec_2_7_1_145",
+      "name": "deoxynucleoside kinase",
+      "ec": [
+        "2.7.1.145"
+      ]
+    },
+    {
+      "id": "ec_2_7_4_14",
+      "name": "UMP/CMP kinase",
+      "ec": [
+        "2.7.4.14"
+      ],
+      "xrefs": {
+        "uniprot": "Q5EBM0"
+      }
+    },
+    {
+      "id": "ec_2_7_4_25",
+      "name": "(d)CMP kinase",
+      "ec": [
+        "2.7.4.25"
+      ]
+    },
+    {
+      "id": "ec_2_7_4_6",
+      "name": "nucleoside-diphosphate kinase",
+      "ec": [
+        "2.7.4.6"
+      ],
+      "xrefs": {
+        "uniprot": "Q5EBM0"
+      }
+    },
+    {
+      "id": "ec_3_6_1_9",
+      "name": "nucleotide diphosphatase",
+      "ec": [
+        "3.6.1.9"
+      ],
+      "xrefs": {
+        "uniprot": "O95671"
+      }
+    },
+    {
+      "id": "ec_3_6_1_12",
+      "name": "dCTP diphosphatase",
+      "ec": [
+        "3.6.1.12"
+      ],
+      "xrefs": {
+        "uniprot": "Q9H773"
+      }
+    },
+    {
+      "id": "ec_3_6_1_65",
+      "name": "(d)CTP diphosphatase",
+      "ec": [
+        "3.6.1.65"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "deoxycytidine kinase",
+      "ec": "2.7.1.74",
+      "substrates": [
+        {
+          "metabolite": "cdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dcmp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ctp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_deoxycytidine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_74"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR181971"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR181971"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "deoxycytidine kinase",
+      "equation": "2'-deoxycytidine + ATP = dCMP + ADP + H(+)",
+      "ec": "2.7.1.74",
+      "substrates": [
+        {
+          "metabolite": "2_deoxycytidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxycytosine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_74"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:46040"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46040"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "UMP/CMP kinase",
+      "equation": "dCMP + ATP = dCDP + ADP",
+      "ec": "2.7.4.14",
+      "substrates": [
+        {
+          "metabolite": "2_deoxycytosine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dcdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_4_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:25094"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25094"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "nucleoside-diphosphate kinase",
+      "equation": "dCDP + ATP = dCTP + ADP",
+      "ec": "2.7.4.6",
+      "substrates": [
+        {
+          "metabolite": "dcdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dctp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_4_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:27678"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27678"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "nucleotide diphosphatase",
+      "equation": "dCTP + H2O = dCMP + diphosphate + H(+)",
+      "ec": "3.6.1.9",
+      "substrates": [
+        {
+          "metabolite": "dctp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxycytosine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:22636"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22636"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_2_deoxycytosine_5_monophosphate_2-deoxyguanosine-to-2-hydroxy-3-oxopropanoate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxycytosine_5_monophosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-deoxyguanosine-to-2-hydroxy-3-oxopropanoate"
+      },
+      "note": "Shares 2'-deoxycytosine 5'-monophosphate with 2'-deoxyguanosine… to 2-hydroxy-3-oxopropanoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57566"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxycytosine_5_monophosphate_coenzyme-b-to-dtdp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxycytosine_5_monophosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "coenzyme-b-to-dtdp"
+      },
+      "note": "Shares 2'-deoxycytosine 5'-monophosphate with coenzyme B to dTDP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57566"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxycytosine_5_monophosphate_dctp-to-cytosine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxycytosine_5_monophosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dctp-to-cytosine"
+      },
+      "note": "Shares 2'-deoxycytosine 5'-monophosphate with dCTP to cytosine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57566"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxycytosine_5_monophosphate_dioleoyl-phosphatidic-acid-to-5-methyldeoxycytid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxycytosine_5_monophosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dioleoyl-phosphatidic-acid-to-5-methyldeoxycytid"
+      },
+      "note": "Shares 2'-deoxycytosine 5'-monophosphate with dioleoyl phosphatidic acid to 5-methyldeoxycytidine….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57566"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxycytosine_5_monophosphate_gdp-4-amino-4-6-dideoxy-to-2-deoxy-5-hydroxymeth",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxycytosine_5_monophosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gdp-4-amino-4-6-dideoxy-to-2-deoxy-5-hydroxymeth"
+      },
+      "note": "Shares 2'-deoxycytosine 5'-monophosphate with GDP-4-amino-4,6-dideoxy-α… to 2'-deoxy-5-hydroxymethyl-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57566"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dcdp_coenzyme-b-to-dtdp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dcdp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "coenzyme-b-to-dtdp"
+      },
+      "note": "Shares dCDP with coenzyme B to dTDP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58593"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dcdp_dcdp-to-dudp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dcdp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dcdp-to-dudp"
+      },
+      "note": "Shares dCDP with dCDP to dUDP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58593"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dcdp_dctp-to-cytosine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dcdp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dctp-to-cytosine"
+      },
+      "note": "Shares dCDP with dCTP to cytosine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58593"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dcdp_dtdp-l-dihydrostreptose-to-dtdp-4-dehydro-l-rham",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dcdp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-l-dihydrostreptose-to-dtdp-4-dehydro-l-rham"
+      },
+      "note": "Shares dCDP with dTDP-L-dihydrostreptose to dTDP-4-dehydro-β-L-rhamno….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58593"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dctp_coenzyme-b-to-dtdp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dctp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "coenzyme-b-to-dtdp"
+      },
+      "note": "Shares dCTP with coenzyme B to dTDP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61481"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dctp_dcdp-to-dudp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dctp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dcdp-to-dudp"
+      },
+      "note": "Shares dCTP with dCDP to dUDP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61481"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dctp_dctp-to-cytosine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dctp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dctp-to-cytosine"
+      },
+      "note": "Shares dCTP with dCTP to cytosine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61481"
+          }
+        ]
+      }
+    }
+  ]
+}

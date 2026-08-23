@@ -92,6 +92,15 @@
       }
     },
     {
+      "id": "acyl_coa",
+      "name": "acyl-CoA",
+      "formula": "C22H31N7O17P3SR",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58342"
+      }
+    },
+    {
       "id": "1_2_diglyceride",
       "name": "1,2-diglyceride",
       "formula": "C5H6O5R2",
@@ -101,12 +110,12 @@
       }
     },
     {
-      "id": "glycerol",
-      "name": "glycerol",
-      "formula": "C3H8O3",
-      "charge": 0,
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:17754"
+        "chebi": "CHEBI:57287"
       }
     },
     {
@@ -168,30 +177,12 @@
       }
     },
     {
-      "id": "acyl_coa",
-      "name": "acyl-CoA",
-      "formula": "C22H31N7O17P3SR",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:58342"
-      }
-    },
-    {
       "id": "triacyl_sn_glycerol",
       "name": "triacyl-sn-glycerol",
       "formula": "C6H5O6R3",
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:64615"
-      }
-    },
-    {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57287"
       }
     }
   ],
@@ -289,12 +280,16 @@
     },
     {
       "id": "r3",
-      "name": "2 a 1-acylglycerol = a 1,2-diacylglycerol + glycerol",
-      "equation": "2 a 1-acylglycerol = a 1,2-diacylglycerol + glycerol",
+      "name": "a 1-acylglycerol + an acyl-CoA = a 1,2-diacylglycerol + CoA",
+      "equation": "a 1-acylglycerol + an acyl-CoA = a 1,2-diacylglycerol + CoA",
       "substrates": [
         {
           "metabolite": "1_monoglyceride",
-          "stoichiometry": 2
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acyl_coa",
+          "stoichiometry": 1
         }
       ],
       "products": [
@@ -303,21 +298,21 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "glycerol",
+          "metabolite": "coa",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 3,
       "xrefs": {
-        "rhea": "RHEA:44432"
+        "rhea": "RHEA:39943"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:44432"
+            "id": "RHEA:39943"
           }
         ]
       }
@@ -441,6 +436,272 @@
           {
             "db": "Rhea",
             "id": "RHEA:39839"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3_acyl_sn_glycerol_1-3-diacyl-2-linoleoylgly-to-triacyl-sn-glycerol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_acyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-3-diacyl-2-linoleoylgly-to-triacyl-sn-glycerol"
+      },
+      "note": "Shares 3-acyl-sn-glycerol with 1,3-diacyl-2-linoleoylgly… to triacyl-sn-glycerol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64760"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_acyl_sn_glycerol_1-oleoyl-2-acyl-sn-3-glyc-to-1-2-diacyl-sn-glyce",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_acyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-oleoyl-2-acyl-sn-3-glyc-to-1-2-diacyl-sn-glyce"
+      },
+      "note": "Shares 3-acyl-sn-glycerol with 1-oleoyl-2-acyl-sn-3-glyc… to 1,2-diacyl-sn-glycero-3-p….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64760"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_acyl_sn_glycerol_1-oleoyl-2-linoleoyl-sn-g-to-3-hydroxypropanal",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_acyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-oleoyl-2-linoleoyl-sn-g-to-3-hydroxypropanal"
+      },
+      "note": "Shares 3-acyl-sn-glycerol with 1-oleoyl-2-linoleoyl-sn-g… to 3-hydroxypropanal.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64760"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_acyl_sn_glycerol_2-hydroxyhexacosanoyl-coa-to-carboxylic-acid-ani",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_acyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-hydroxyhexacosanoyl-coa-to-carboxylic-acid-ani"
+      },
+      "note": "Shares 3-acyl-sn-glycerol with 2-hydroxyhexacosanoyl-CoA to carboxylic acid anion.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64760"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_acyl_sn_glycerol_2-monoglyceride-to-glycerol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_acyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-monoglyceride-to-glycerol"
+      },
+      "note": "Shares 3-acyl-sn-glycerol with 2-monoglyceride to glycerol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64760"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_acyl_sn_glycerol_3-acyl-sn-glycerol-to-1-2-diacyl-sn-glycerol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_acyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-acyl-sn-glycerol-to-1-2-diacyl-sn-glycerol"
+      },
+      "note": "Shares 3-acyl-sn-glycerol with 3-acyl-sn-glycerol to 1,2-diacyl-sn-glycerol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64760"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_acyl_sn_glycerol_lipid-a-4-e-coli-to-sn-glycerol-3-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_acyl_sn_glycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "lipid-a-4-e-coli-to-sn-glycerol-3-phosphate"
+      },
+      "note": "Shares 3-acyl-sn-glycerol with lipid A(4−) (E. coli) to sn-glycerol 3-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:64760"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_monoglyceride_1-2-diacyl-3-linoleoylgly-to-1-acyl-2-r-12-hydro",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_monoglyceride"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-diacyl-3-linoleoylgly-to-1-acyl-2-r-12-hydro"
+      },
+      "note": "Shares 1-monoglyceride with 1,2-diacyl-3-linoleoylgly… to 1-acyl-2-[(R)-12-hydroxyo….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:35759"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_monoglyceride_1-3-diacyl-2-linoleoylgly-to-fatty-acid-anion",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_monoglyceride"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-3-diacyl-2-linoleoylgly-to-fatty-acid-anion"
+      },
+      "note": "Shares 1-monoglyceride with 1,3-diacyl-2-linoleoylgly… to fatty acid anion.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:35759"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_monoglyceride_1-monoglyceride-to-triglyceride",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_monoglyceride"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-monoglyceride-to-triglyceride"
+      },
+      "note": "Shares 1-monoglyceride with 1-monoglyceride to triglyceride.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:35759"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_monoglyceride_1-oleoyl-2-acyl-sn-3-glyc-to-1-2-diacyl-sn-glyce",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_monoglyceride"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-oleoyl-2-acyl-sn-3-glyc-to-1-2-diacyl-sn-glyce"
+      },
+      "note": "Shares 1-monoglyceride with 1-oleoyl-2-acyl-sn-3-glyc… to 1,2-diacyl-sn-glycero-3-p….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:35759"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_monoglyceride_1-palmitoyl-2-azelaoyl-sn-to-fatty-acid-anion",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_monoglyceride"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-palmitoyl-2-azelaoyl-sn-to-fatty-acid-anion"
+      },
+      "note": "Shares 1-monoglyceride with 1-palmitoyl-2-azelaoyl-sn… to fatty acid anion.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:35759"
           }
         ]
       }

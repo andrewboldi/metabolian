@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-methylnicotinate-to-ammonium "N-methylnicotinate to ammonium" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     n_methylnicotinate
@@ -16,17 +16,5 @@ pathway n-methylnicotinate-to-ammonium "N-methylnicotinate to ammonium" {
     4_oxobutanoate
     <-> . +methylamine +nad +h2o -nh3 -nadh -hplus
     formaldehyde
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +terpinene +fmnh2 +o2 +h2o +hplus
-    carvacrol
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +terpinene +fmnh2 +o2 +h2o +hplus
-    thymol
   }
 }

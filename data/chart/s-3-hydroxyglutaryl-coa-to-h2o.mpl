@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-3-hydroxyglutaryl-coa-to-h2o "(S)-3-hydroxyglutaryl-CoA to H2O" {
-  spacing 194
+  spacing 152
 
   spine at 0,0 {
     s_3_hydroxyglutaryl_coa
@@ -14,47 +14,5 @@ pathway s-3-hydroxyglutaryl-coa-to-h2o "(S)-3-hydroxyglutaryl-CoA to H2O" {
     h
     <-> . +coa +trans_glutaconate -h2o
     2e_glutaconyl_coa
-  }
-
-  branch from glutaconyl_coenzyme_a side left {
-    glutaconyl_coenzyme_a
-    <-> . +glutaryl_coa +fad +h
-    fadh2
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +fagopyritol_a3 +phosphate +fagopyritol_a3
-    atp
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    agarotetraose
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
-    d_apiofuranosyl_1_6_d_glucopyranose
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
-    lambda_carratetraose
-  }
-
-  branch from coa side right {
-    coa
-    <-> ec_2_3_1_45 [2.3.1.45] +acetyl_coa +n_acetyl_alpha_neuraminate
-    n_acetyl_7_o_acetylneuraminate
-  }
-
-  branch from coa side left {
-    coa
-    <-> ec_2_3_1_45 [2.3.1.45] +acetyl_coa +n_acetyl_neuraminic_acid
-    neuac9ac
   }
 }

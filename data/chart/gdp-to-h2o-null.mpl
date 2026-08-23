@@ -4,95 +4,117 @@
 # edit the generator, not this file.
 
 pathway gdp-to-h2o-null "GDP to H2O" {
-  spacing 322
+  spacing 254
 
   spine at 0,0 {
     gdp
-    <-> ec_2_4_1_83 [2.4.1.83] +beta_d_mannosyl_c55_omega_saturated_dolichyl_pho -an_archeal_dolichol_phosphate
-    gdp_alpha_d_mannose
-    <-> .
-    gdp_alpha_d_glucose
-    <-> . +l_galactose_1_phosphate -h -gdp_beta_l_galactose
-    d_glucopyranose_1_phosphate
-    <-> ec_3_6_1_9 [3.6.1.9] +cmp +h -h2o
-    cdp_alpha_d_glucose
+    <-> . +astaxanthin_dirhamnoside +h -all_trans_3s_3_s_astaxanthin
+    gdp_alpha_d_rhamnose
+    <-> . +nadh +h +all_trans_3s_3_s_astaxanthin +o2 -nad -h2o
+    2r_3s_3_s_2_3_3_trihydroxy_beta_beta_carotene_4
+    <-> . +nadh +h +o2 -nad -h2o
+    2r_2_r_3s_3_s_2_2_3_3_tetrahydroxy_beta_beta_ca
   }
 
-  branch from gdp_alpha_d_mannose side left {
-    gdp_alpha_d_mannose
-    <-> ec_2_4_1_83 [2.4.1.83] +gdp +dolichyl_phosphate_d_mannose +h
-    dolichol_phosphate_human_uterine_homolog
+  branch from all_trans_3s_3_s_astaxanthin side left {
+    all_trans_3s_3_s_astaxanthin
+    <-> . +h2o
+    4_4_dihydroxyadonixanthin
   }
 
-  branch from gdp_alpha_d_mannose side right {
-    gdp_alpha_d_mannose
-    <-> ec_2_4_1_32 [2.4.1.32] +gdp +h +glucomannan_longer_by_one_mannose_unit
-    glucomannan
+  branch from nad side right {
+    nad
+    <-> . +nadh +4r_limonene +h +o2 +h2o
+    perillyl_alcohol
   }
 
-  branch from gdp_alpha_d_glucose side left {
-    gdp_alpha_d_glucose
-    <-> ec_3_2_1_42 [3.2.1.42] +gdp +h +h2o
-    beta_d_glucose
-  }
-
-  branch from gdp_alpha_d_glucose side right {
-    gdp_alpha_d_glucose
-    <-> . +gdp +h +glucose_1_p
-    phosphate
-  }
-
-  branch from d_glucopyranose_1_phosphate side left {
-    d_glucopyranose_1_phosphate
-    <-> ec_2_4_1_1 [2.4.1.1] +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g +phosphate
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp
-  }
-
-  branch from d_glucopyranose_1_phosphate side right {
-    d_glucopyranose_1_phosphate
-    <-> ec_2_4_1_1 [2.4.1.1] +phosphate +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp
-    maltopentaose
-  }
-
-  branch from h side left {
-    h
-    <-> . +2_chloro_2_2_4_dichloro_5_oxofuran_2_yl_acetate
-    2_3_5_trichloro_cis_cis_muconate
-  }
-
-  branch from h side right {
-    h
-    <-> ec_5_5_1_7 [5.5.1.7] +2_chloro_4_methyl_cis_dienelactone
-    2_chloro_4_methyl_cis_cis_muconate
-  }
-
-  branch from gdp_beta_l_galactose side left {
-    gdp_beta_l_galactose
-    <-> . +h +l_galactose +phosphate +h2o
-    gmp
-  }
-
-  branch from cdp_alpha_d_glucose side right {
-    cdp_alpha_d_glucose
-    <-> ec_2_7_7_33 [2.7.7.33] +ctp +d_glucopyranose_1_phosphate +h
-    diphosphate
-  }
-
-  branch from cdp_alpha_d_glucose side left {
-    cdp_alpha_d_glucose
-    <-> ec_2_4_1_13 [2.4.1.13] +cdp +sucrose +h
-    beta_d_fructose
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_418 [1.1.1.418] +3_hydroxy_9_9_19_cyclolanost_24_en_28_oate +nadh +31_norcycloartenone
+    co2
   }
 
   branch from h2o side right {
     h2o
-    <-> . +di_trans_poly_cis_polyprenyl_diphosphate_c80 +diphosphate
-    di_trans_poly_cis_polyprenol_c80
+    <-> . +l_glutamine +l_tryptophan +l_tyrosine
+    trp_tyr_gln
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_4_17_13 [3.4.17.13] +d_alanine +l_alanyl_d_glutamyl_meso_2_6_diaminoheptanedioat +h
-    l_alanyl_gamma_d_glutamyl_meso_2_6_diaminopimelo
+    <-> . +l_tryptophan +l_tyrosine
+    tryptophanyl_tyrosyl_tyrosine
+  }
+
+  branch from gdp side right {
+    gdp
+    <-> ec_2_4_1_308 [2.4.1.308] +l_fuc_1_2_d_gal_1_3_d_galnac_1_3_d_galnac_dipho +h +d_gal_1_3_d_galnac_1_3_d_galnac_diphospho_ditra
+    gdp_l_fucose
+  }
+
+  branch from gdp side left {
+    gdp
+    <-> ec_2_7_4_8 [2.7.4.8] +gmp +datp
+    dadp
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_7_1_1 [2.7.1.1] +beta_d_glucose_6_phosphate +dadp +datp
+    beta_d_glucose
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_5_1_33 [3.5.1.33] +beta_d_glucosamine +acetate +h2o
+    n_acetyl_beta_d_glucosamine
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +h +3_oxosphinganine +nad
+    sphinganine
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> . +3_oxooctanoyl_coa +h +nad +h2o
+    2e_octenoyl_coa
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_14_21_8 [1.14.21.8] +h +pratensein +nadph +5_hydroxy_pseudobaptigenin +h2o
+    nadp
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_14_13_133 [1.14.13.133] +pentalenene +h +nadph +nadp +h2o
+    pentalen_13_ol
+  }
+
+  branch from nad side right {
+    nad
+    <-> . +nadh +h +cholesterol +o2 +h2o
+    26_hydroxycholesterol
+  }
+
+  branch from nad side left {
+    nad
+    <-> . +nadh +all_trans_zeaxanthin +h +o2 +3r_11_cis_3_hydroxyretinal +h2o
+    3r_all_trans_3_hydroxyretinal
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +l_aspartate +l_valine +l_tryptophan
+    tryptophanyl_valyl_aspartate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +l_alanine +l_phenylalanine +l_tyrosine
+    tyrosyl_alaninyl_phenylalanine
   }
 }

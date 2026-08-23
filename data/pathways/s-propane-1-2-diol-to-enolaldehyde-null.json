@@ -1,0 +1,422 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-propane-1-2-diol-to-enolaldehyde-null",
+  "name": "(S)-propane-1,2-diol to enolaldehyde",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from (S)-propane-1,2-diol to enolaldehyde, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR95789"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_propane_1_2_diol",
+      "name": "(S)-propane-1,2-diol",
+      "formula": "C3H8O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1255"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "hydroxyacetone",
+      "name": "hydroxyacetone",
+      "formula": "C3H6O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1744"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "3_4_dimethoxybenzaldehyde",
+      "name": "3,4-dimethoxybenzaldehyde",
+      "short": "3,4-dimethoxybenzal…",
+      "formula": "C9H10O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM2607"
+      }
+    },
+    {
+      "id": "methylglyoxal",
+      "name": "methylglyoxal",
+      "formula": "C3H4O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM310"
+      }
+    },
+    {
+      "id": "3_4_dimethoxyphenyl_methanol",
+      "name": "(3,4-dimethoxyphenyl)methanol",
+      "short": "(3,4-dimethoxypheny…",
+      "formula": "C9H12O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62150"
+      }
+    },
+    {
+      "id": "enolaldehyde",
+      "name": "enolaldehyde",
+      "formula": "C3H4O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM722979"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_21",
+      "name": "aldose reductase",
+      "ec": [
+        "1.1.1.21"
+      ],
+      "xrefs": {
+        "uniprot": "P15121"
+      }
+    },
+    {
+      "id": "ec_1_1_99_36",
+      "name": "alcohol dehydrogenase (nicotinoprotein)",
+      "ec": [
+        "1.1.99.36"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "aldose reductase",
+      "ec": "1.1.1.21",
+      "substrates": [
+        {
+          "metabolite": "s_propane_1_2_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hydroxyacetone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR95789"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR95789"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "alcohol dehydrogenase (nicotinoprotein)",
+      "ec": "1.1.99.36",
+      "substrates": [
+        {
+          "metabolite": "hydroxyacetone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_4_dimethoxybenzaldehyde",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methylglyoxal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_4_dimethoxyphenyl_methanol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_99_36"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR172175"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR172175"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR140159",
+      "substrates": [
+        {
+          "metabolite": "methylglyoxal",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "enolaldehyde",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR140159"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR140159"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_s_propane_1_2_diol_isoepoxydon-to-e-ascladiol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_propane_1_2_diol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isoepoxydon-to-e-ascladiol"
+      },
+      "note": "Shares (S)-propane-1,2-diol with (+)-isoepoxydon to (E)-ascladiol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1255"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_propane_1_2_diol_isoepoxydon-to-e-ascladiol-62216",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_propane_1_2_diol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isoepoxydon-to-e-ascladiol-62216"
+      },
+      "note": "Shares (S)-propane-1,2-diol with (+)-isoepoxydon to (E)-ascladiol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1255"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_propane_1_2_diol_r-s-lactoylglutathione-to-l-alaninol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_propane_1_2_diol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-s-lactoylglutathione-to-l-alaninol"
+      },
+      "note": "Shares (S)-propane-1,2-diol with (R)-S-lactoylglutathione to L-alaninol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1255"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_propane_1_2_diol_r-s-lactoylglutathione-to-l-alaninol-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_propane_1_2_diol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-s-lactoylglutathione-to-l-alaninol-null"
+      },
+      "note": "Shares (S)-propane-1,2-diol with (R)-S-lactoylglutathione to L-alaninol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1255"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_propane_1_2_diol_s-propane-1-2-diol-to-enolaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_propane_1_2_diol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-propane-1-2-diol-to-enolaldehyde"
+      },
+      "note": "Shares (S)-propane-1,2-diol with (S)-propane-1,2-diol to enolaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1255"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_enolaldehyde_alpha-beta-dihydroxyethyl-to-r-lactaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "enolaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-beta-dihydroxyethyl-to-r-lactaldehyde"
+      },
+      "note": "Shares enolaldehyde with alpha,beta-Dihydroxyethyl… to (R)-lactaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM722979"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_enolaldehyde_alpha-beta-dihydroxyethyl-to-r-lactaldehyde-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "enolaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-beta-dihydroxyethyl-to-r-lactaldehyde-null"
+      },
+      "note": "Shares enolaldehyde with alpha,beta-Dihydroxyethyl… to (R)-lactaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM722979"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_enolaldehyde_s-propane-1-2-diol-to-enolaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "enolaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-propane-1-2-diol-to-enolaldehyde"
+      },
+      "note": "Shares enolaldehyde with (S)-propane-1,2-diol to enolaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM722979"
+          }
+        ]
+      }
+    }
+  ]
+}

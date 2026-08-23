@@ -101,53 +101,6 @@
       "xrefs": {
         "chebi": "CHEBI:15354"
       }
-    },
-    {
-      "id": "xylosyl_d_ceramide_d18_1_4e",
-      "name": "xylosyl-β-D-ceramide(d18:1(4E))",
-      "short": "xylosyl-β-D-ceramid…",
-      "formula": "C24H44NO7R",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:189068"
-      }
-    },
-    {
-      "id": "cholesterol",
-      "name": "Cholesterol",
-      "formula": "C27H46O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16113"
-      }
-    },
-    {
-      "id": "cholesteryl_d_xyloside",
-      "name": "cholesteryl β-D-xyloside",
-      "short": "cholesteryl…",
-      "formula": "C32H54O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:189067"
-      }
-    },
-    {
-      "id": "udp_d_xylose",
-      "name": "UDP-α-D-xylose",
-      "formula": "C14H20N2O16P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57632"
-      }
-    },
-    {
-      "id": "udp",
-      "name": "UDP",
-      "formula": "C9H11N2O12P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58223"
-      }
     }
   ],
   "enzymes": [
@@ -156,7 +109,10 @@
       "name": "ceramidase",
       "ec": [
         "3.5.1.23"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q8TDN7"
+      }
     }
   ],
   "reactions": [
@@ -290,85 +246,225 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "a beta-D-xylosyl-(1<->1')-N-acylsphing-4-enine + cholesterol = cholesteryl 3-beta-D-xyl...",
-      "equation": "a beta-D-xylosyl-(1<->1')-N-acylsphing-4-enine + cholesterol = cholesteryl 3-beta-D-xyloside + an N-acylsphing-4-enine",
-      "substrates": [
-        {
-          "metabolite": "xylosyl_d_ceramide_d18_1_4e",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "cholesterol",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "cholesteryl_d_xyloside",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "n_acylsphingosine",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:70239"
+      "id": "xt_2_acyl_1_alkyl_sn_glycero_3_phosphocholine_1-o-alkyl-2-o-arachidonoy-to-1-alkyl-sn-glycero",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_acyl_1_alkyl_sn_glycero_3_phosphocholine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1-o-alkyl-2-o-arachidonoy-to-1-alkyl-sn-glycero"
+      },
+      "note": "Shares 2-acyl-1-alkyl-sn-glycero-3-phosphocholine with 1-O-alkyl-2-O-arachidonoy… to 1-alkyl-sn-glycero-3-phos….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:70239"
+            "db": "ChEBI",
+            "id": "CHEBI:36702"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "UDP-alpha-D-xylose + an N-acylsphing-4-enine = a beta-D-xylosyl-(1<->1')-N-acylsphing-4...",
-      "equation": "UDP-alpha-D-xylose + an N-acylsphing-4-enine = a beta-D-xylosyl-(1<->1')-N-acylsphing-4-enine + UDP + H(+)",
-      "substrates": [
-        {
-          "metabolite": "udp_d_xylose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "n_acylsphingosine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "xylosyl_d_ceramide_d18_1_4e",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:70243"
+      "id": "xt_2_acyl_1_alkyl_sn_glycero_3_phosphocholine_2-monoglyceride-to-1-o-alkyl-2-o-arachidonoy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_acyl_1_alkyl_sn_glycero_3_phosphocholine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "2-monoglyceride-to-1-o-alkyl-2-o-arachidonoy"
+      },
+      "note": "Shares 2-acyl-1-alkyl-sn-glycero-3-phosphocholine with 2-monoglyceride to 1-O-alkyl-2-O-arachidonoy….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:70243"
+            "db": "ChEBI",
+            "id": "CHEBI:36702"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_acyl_1_alkyl_sn_glycero_3_phosphocholine_o-alkylglycerone-to-2-acyl-1-alkyl-sn-glycero",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_acyl_1_alkyl_sn_glycero_3_phosphocholine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "o-alkylglycerone-to-2-acyl-1-alkyl-sn-glycero"
+      },
+      "note": "Shares 2-acyl-1-alkyl-sn-glycero-3-phosphocholine with O-alkylglycerone to 2-acyl-1-alkyl-sn-glycero….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:36702"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_alkyl_sn_glycero_3_phosphocholine_1-alkyl-2-acetyl-sn-glyce-to-choline-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_alkyl_sn_glycero_3_phosphocholine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-alkyl-2-acetyl-sn-glyce-to-choline-phosphate"
+      },
+      "note": "Shares 1-alkyl-sn-glycero-3-phosphocholine with 1-alkyl-2-acetyl-sn-glyce… to choline phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:30909"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_alkyl_sn_glycero_3_phosphocholine_1-o-alkyl-2-o-arachidonoy-to-1-alkyl-sn-glycero",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_alkyl_sn_glycero_3_phosphocholine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-o-alkyl-2-o-arachidonoy-to-1-alkyl-sn-glycero"
+      },
+      "note": "Shares 1-alkyl-sn-glycero-3-phosphocholine with 1-O-alkyl-2-O-arachidonoy… to 1-alkyl-sn-glycero-3-phos….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:30909"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_alkyl_sn_glycero_3_phosphocholine_2-monoglyceride-to-1-o-alkyl-2-o-arachidonoy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_alkyl_sn_glycero_3_phosphocholine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-monoglyceride-to-1-o-alkyl-2-o-arachidonoy"
+      },
+      "note": "Shares 1-alkyl-sn-glycero-3-phosphocholine with 2-monoglyceride to 1-O-alkyl-2-O-arachidonoy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:30909"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_alkyl_sn_glycero_3_phosphocholine_o-alkylglycerone-to-2-acyl-1-alkyl-sn-glycero",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_alkyl_sn_glycero_3_phosphocholine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "o-alkylglycerone-to-2-acyl-1-alkyl-sn-glycero"
+      },
+      "note": "Shares 1-alkyl-sn-glycero-3-phosphocholine with O-alkylglycerone to 2-acyl-1-alkyl-sn-glycero….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:30909"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_alkyl_sn_glycerol_3_phosphate_1-alkyl-2-acyl-sn-glycerol-to-1-o-alkyl-sn-glyce",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_alkyl_sn_glycerol_3_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-alkyl-2-acyl-sn-glycerol-to-1-o-alkyl-sn-glyce"
+      },
+      "note": "Shares 1-alkyl-sn-glycerol 3-phosphate with 1-alkyl-2-acyl-sn-glycerol to 1-O-alkyl-sn-glycerol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58014"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_alkyl_sn_glycerol_3_phosphate_1-alkyl-sn-glycero-3-phos-to-1-alkyl-sn-glycerol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_alkyl_sn_glycerol_3_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-alkyl-sn-glycero-3-phos-to-1-alkyl-sn-glycerol"
+      },
+      "note": "Shares 1-alkyl-sn-glycerol 3-phosphate with 1-alkyl-sn-glycero-3-phos… to 1-alkyl-sn-glycerol….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58014"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_alkyl_sn_glycerol_3_phosphate_o-alkylglycerone-to-2-acyl-1-alkyl-sn-glycero",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_alkyl_sn_glycerol_3_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "o-alkylglycerone-to-2-acyl-1-alkyl-sn-glycero"
+      },
+      "note": "Shares 1-alkyl-sn-glycerol 3-phosphate with O-alkylglycerone to 2-acyl-1-alkyl-sn-glycero….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58014"
           }
         ]
       }

@@ -102,64 +102,9 @@
       "xrefs": {
         "chebi": "CHEBI:81086"
       }
-    },
-    {
-      "id": "di_trans_poly_cis_nonaprenyl_diphosphate",
-      "name": "di-trans,poly-cis-nonaprenyl diphosphate",
-      "short": "di-trans,poly-cis-n…",
-      "formula": "C45H73O7P2",
-      "charge": -3,
-      "xrefs": {
-        "metanetx": "MNXM1371158"
-      }
-    },
-    {
-      "id": "2e_6e_farnesyl_diphosphate",
-      "name": "(2E,6E)-farnesyl diphosphate",
-      "short": "(2E,6E)-farnesyl PP",
-      "formula": "C15H25O7P2",
-      "charge": -3,
-      "xrefs": {
-        "metanetx": "MNXM1363833"
-      }
-    },
-    {
-      "id": "tri_trans_penta_cis_nonaprenyl_diphosphate",
-      "name": "tri-trans,penta-cis-nonaprenyl diphosphate",
-      "short": "tri-trans,penta-cis…",
-      "formula": "C45H73O7P2",
-      "charge": -3,
-      "xrefs": {
-        "metanetx": "MNXM1132357"
-      }
-    },
-    {
-      "id": "2e_6e_10e_geranylgeranyl_diphosphate",
-      "name": "(2E,6E,10E)-geranylgeranyl diphosphate",
-      "short": "(2E,6E,10E)-geranyl…",
-      "formula": "C20H33O7P2",
-      "charge": -3,
-      "xrefs": {
-        "metanetx": "MNXM728266"
-      }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_2_5_1_87",
-      "name": "ditrans,polycis-polyprenyl diphosphate synthase [(2E,6E)-farnesyl",
-      "ec": [
-        "2.5.1.87"
-      ]
-    },
-    {
-      "id": "ec_2_5_1_89",
-      "name": "tritrans,polycis-undecaprenyl-diphosphate synthase [geranylgeranyl-",
-      "ec": [
-        "2.5.1.89"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -388,91 +333,93 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r7",
-      "name": "ditrans,polycis-polyprenyl diphosphate synthase [(2E,6E)-farnesyl",
-      "ec": "2.5.1.87",
-      "substrates": [
-        {
-          "metabolite": "diphosphate",
-          "stoichiometry": 6
-        },
-        {
-          "metabolite": "di_trans_poly_cis_nonaprenyl_diphosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2e_6e_farnesyl_diphosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ipp",
-          "stoichiometry": 6
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_5_1_87"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "metanetx": "MNXR193182"
+      "id": "xt_di_trans_poly_cis_undecaprenyl_diphosphate_cdp-n-methyl-l-glucosamine-to-lipid-iib",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "di_trans_poly_cis_undecaprenyl_diphosphate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "cdp-n-methyl-l-glucosamine-to-lipid-iib"
+      },
+      "note": "Shares di-trans,poly-cis-Undecaprenyl diphosphate with CDP-N-methyl-L-glucosamine to lipid IIB.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR193182"
+            "id": "MNXM1364682"
           }
         ]
       }
     },
     {
-      "id": "r8",
-      "name": "tritrans,polycis-undecaprenyl-diphosphate synthase [geranylgeranyl-",
-      "ec": "2.5.1.89",
-      "substrates": [
-        {
-          "metabolite": "tri_trans_penta_cis_nonaprenyl_diphosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "diphosphate",
-          "stoichiometry": 5
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2e_6e_10e_geranylgeranyl_diphosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ipp",
-          "stoichiometry": 5
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_5_1_89"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "metanetx": "MNXR193183"
+      "id": "xt_di_trans_poly_cis_undecaprenyl_diphosphate_cmp-to-udp-n-acetyl-alpha-d-mura",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "di_trans_poly_cis_undecaprenyl_diphosphate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "cmp-to-udp-n-acetyl-alpha-d-mura"
+      },
+      "note": "Shares di-trans,poly-cis-Undecaprenyl diphosphate with CMP to UDP-N-acetyl-alpha-D-mura….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR193183"
+            "id": "MNXM1364682"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_di_trans_poly_cis_undecaprenyl_diphosphate_udp-to-3beta-14beta-dihydroxy-5b",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "di_trans_poly_cis_undecaprenyl_diphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-3beta-14beta-dihydroxy-5b"
+      },
+      "note": "Shares di-trans,poly-cis-Undecaprenyl diphosphate with UDP to 3beta,14beta-dihydroxy-5b….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1364682"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_ditrans_polycis_pentaprenyl_diphosphate_10z-13z-16z-19z-docosat-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ditrans_polycis_pentaprenyl_diphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "10z-13z-16z-19z-docosat-to-h2o"
+      },
+      "note": "Shares ditrans,polycis-pentaprenyl diphosphate with (10Z,13Z,16Z,19Z)-docosat… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:81086"
           }
         ]
       }

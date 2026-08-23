@@ -1,0 +1,572 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "4-pyridinecarboxaldehyde-to-coa-null",
+  "name": "4-pyridinecarboxaldehyde to CoA",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 4-pyridinecarboxaldehyde to CoA, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR129516"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "4_pyridinecarboxaldehyde",
+      "name": "4-pyridinecarboxaldehyde",
+      "short": "4-pyridinecarboxald…",
+      "formula": "C6H5NO",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM163569"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "isonicotinate",
+      "name": "isonicotinate",
+      "formula": "C6H4NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:38186"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "hydrazine",
+      "name": "hydrazine",
+      "formula": "H4N2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM728383"
+      }
+    },
+    {
+      "id": "isoniazide",
+      "name": "isoniazide",
+      "formula": "C6H7N3O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:6030"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1104266"
+      }
+    },
+    {
+      "id": "n_acetylisoniazid",
+      "name": "N'-acetylisoniazid",
+      "formula": "C8H9N3O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:7207"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_2_1_5",
+      "name": "aldehyde dehydrogenase [NAD(P)(+)]",
+      "ec": [
+        "1.2.1.5"
+      ],
+      "xrefs": {
+        "uniprot": "P30838"
+      }
+    },
+    {
+      "id": "ec_3_1_1_1",
+      "name": "carboxylesterase",
+      "ec": [
+        "3.1.1.1"
+      ],
+      "xrefs": {
+        "uniprot": "P23141"
+      }
+    },
+    {
+      "id": "ec_2_3_1_118",
+      "name": "N-hydroxyarylamine O-acetyltransferase",
+      "ec": [
+        "2.3.1.118"
+      ],
+      "xrefs": {
+        "uniprot": "P11245"
+      }
+    },
+    {
+      "id": "ec_2_3_1_5",
+      "name": "arylamine N-acetyltransferase",
+      "ec": [
+        "2.3.1.5"
+      ],
+      "xrefs": {
+        "uniprot": "P18440"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "aldehyde dehydrogenase [NAD(P)(+)]",
+      "ec": "1.2.1.5",
+      "substrates": [
+        {
+          "metabolite": "4_pyridinecarboxaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "isonicotinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR129516"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR129516"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "carboxylesterase",
+      "ec": "3.1.1.1",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "isonicotinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrazine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "isoniazide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR111806"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR111806"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "N-hydroxyarylamine O-acetyltransferase",
+      "ec": "2.3.1.118",
+      "substrates": [
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "isoniazide",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetylisoniazid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_118"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR111803"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR111803"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_4_pyridinecarboxaldehyde_3-methylcatechol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_pyridinecarboxaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-methylcatechol-to-h2o"
+      },
+      "note": "Shares 4-pyridinecarboxaldehyde with 3-methylcatechol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM163569"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_pyridinecarboxaldehyde_3-methylcatechol-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_pyridinecarboxaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-methylcatechol-to-h2o-null"
+      },
+      "note": "Shares 4-pyridinecarboxaldehyde with 3-methylcatechol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM163569"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_pyridinecarboxaldehyde_4-pyridinecarboxaldehyde-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_pyridinecarboxaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-pyridinecarboxaldehyde-to-coa"
+      },
+      "note": "Shares 4-pyridinecarboxaldehyde with 4-pyridinecarboxaldehyde to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM163569"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_pyridinecarboxaldehyde_gdp-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_pyridinecarboxaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gdp-to-h2o"
+      },
+      "note": "Shares 4-pyridinecarboxaldehyde with GDP to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM163569"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_pyridinecarboxaldehyde_isonicotinyl-coa-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_pyridinecarboxaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isonicotinyl-coa-to-h2o"
+      },
+      "note": "Shares 4-pyridinecarboxaldehyde with isonicotinyl-CoA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM163569"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_pyridinecarboxaldehyde_isonicotinyl-coa-to-h2o-83539",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_pyridinecarboxaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isonicotinyl-coa-to-h2o-83539"
+      },
+      "note": "Shares 4-pyridinecarboxaldehyde with isonicotinyl-CoA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM163569"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_pyridinecarboxaldehyde_l-pyrrolysine-to-diphosphate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_pyridinecarboxaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-pyrrolysine-to-diphosphate-null"
+      },
+      "note": "Shares 4-pyridinecarboxaldehyde with L-pyrrolysine to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM163569"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_isonicotinate_4-pyridinecarboxaldehyde-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isonicotinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-pyridinecarboxaldehyde-to-coa"
+      },
+      "note": "Shares isonicotinate with 4-pyridinecarboxaldehyde to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:38186"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_isonicotinate_isonicotinyl-coa-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isonicotinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isonicotinyl-coa-to-h2o"
+      },
+      "note": "Shares isonicotinate with isonicotinyl-CoA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:38186"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_isonicotinate_isonicotinyl-coa-to-h2o-83539",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isonicotinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isonicotinyl-coa-to-h2o-83539"
+      },
+      "note": "Shares isonicotinate with isonicotinyl-CoA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:38186"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hydrazine_4-pyridinecarboxaldehyde-to-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydrazine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-pyridinecarboxaldehyde-to-coa"
+      },
+      "note": "Shares hydrazine with 4-pyridinecarboxaldehyde to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM728383"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hydrazine_isonicotinyl-coa-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hydrazine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "isonicotinyl-coa-to-h2o"
+      },
+      "note": "Shares hydrazine with isonicotinyl-CoA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM728383"
+          }
+        ]
+      }
+    }
+  ]
+}

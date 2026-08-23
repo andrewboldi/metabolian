@@ -1,0 +1,511 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-trans-6-trans-farnesyl-to-fmn-10340",
+  "name": "2-trans,6-trans-farnesyl… to FMN",
+  "category": "other",
+  "summary": "A 3-step route from 2-trans,6-trans-farnesyl diphosphate(3−) to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:10340"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:175763"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "premnaspirodiene",
+      "name": "premnaspirodiene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:46971"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "solavetivol",
+      "name": "solavetivol",
+      "formula": "C15H24O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61307"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "solavetivone",
+      "name": "solavetivone",
+      "formula": "C15H22O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:9192"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_2_3_21",
+      "name": "vetispiradiene synthase",
+      "ec": [
+        "4.2.3.21"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "vetispiradiene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (-)-vetispiradiene + diphosphate",
+      "ec": "4.2.3.21",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "premnaspirodiene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:10340"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10340"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(-)-vetispiradiene + reduced [NADPH--hemoprotein reductase] + O2 = solavetivol + oxidiz...",
+      "equation": "(-)-vetispiradiene + reduced [NADPH--hemoprotein reductase] + O2 = solavetivol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "premnaspirodiene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "solavetivol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:28623"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28623"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "solavetivol + reduced [NADPH--hemoprotein reductase] + O2 = solavetivone + oxidized [NA...",
+      "equation": "solavetivol + reduced [NADPH--hemoprotein reductase] + O2 = solavetivone + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "solavetivol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "solavetivone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:28627"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28627"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_premnaspirodiene_2-trans-6-trans-farnesyl-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "premnaspirodiene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-trans-6-trans-farnesyl-to-fmn"
+      },
+      "note": "Shares premnaspirodiene with 2-trans,6-trans-farnesyl… to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:46971"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_premnaspirodiene_d-arabinitol-to-fmnh2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "premnaspirodiene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-arabinitol-to-fmnh2"
+      },
+      "note": "Shares premnaspirodiene with D-arabinitol to FMNH2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:46971"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_premnaspirodiene_d-arabinitol-to-fmnh2-11868",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "premnaspirodiene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-arabinitol-to-fmnh2-11868"
+      },
+      "note": "Shares premnaspirodiene with D-arabinitol to FMNH2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:46971"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_solavetivol_2-trans-6-trans-farnesyl-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "solavetivol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-trans-6-trans-farnesyl-to-fmn"
+      },
+      "note": "Shares solavetivol with 2-trans,6-trans-farnesyl… to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61307"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_solavetivol_gdp-3-dehydro-6-deoxy-alp-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "solavetivol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gdp-3-dehydro-6-deoxy-alp-to-nadph"
+      },
+      "note": "Shares solavetivol with GDP-3-dehydro-6-deoxy-alp… to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61307"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_solavetivone_2-trans-6-trans-farnesyl-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "solavetivone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-trans-6-trans-farnesyl-to-fmn"
+      },
+      "note": "Shares solavetivone with 2-trans,6-trans-farnesyl… to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:9192"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_solavetivone_20-deoxo-20-dihydro-12-13-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "solavetivone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "20-deoxo-20-dihydro-12-13-to-h2o"
+      },
+      "note": "Shares solavetivone with 20-deoxo-20-dihydro-12,13… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:9192"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_solavetivone_d-arabinitol-to-fmnh2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "solavetivone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-arabinitol-to-fmnh2"
+      },
+      "note": "Shares solavetivone with D-arabinitol to FMNH2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:9192"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_solavetivone_d-arabinitol-to-fmnh2-11868",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "solavetivone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-arabinitol-to-fmnh2-11868"
+      },
+      "note": "Shares solavetivone with D-arabinitol to FMNH2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:9192"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_solavetivone_gdp-3-dehydro-6-deoxy-alp-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "solavetivone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "gdp-3-dehydro-6-deoxy-alp-to-nadph"
+      },
+      "note": "Shares solavetivone with GDP-3-dehydro-6-deoxy-alp… to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:9192"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_solavetivone_udp-to-d-glucose-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "solavetivone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-d-glucose-null"
+      },
+      "note": "Shares solavetivone with UDP to β-D-glucose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:9192"
+          }
+        ]
+      }
+    }
+  ]
+}

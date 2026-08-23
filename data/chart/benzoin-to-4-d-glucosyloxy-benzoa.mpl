@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway benzoin-to-4-d-glucosyloxy-benzoa "benzoin to 4-(β-D-glucosyloxy)benzoa…" {
-  spacing 304
+  spacing 340
 
   spine at 0,0 {
     benzoin
@@ -24,45 +24,81 @@ pathway benzoin-to-4-d-glucosyloxy-benzoa "benzoin to 4-(β-D-glucosyloxy)benzoa
     benzyl_alcohol
   }
 
-  branch from benzaldehyde side right {
-    benzaldehyde
-    <-> . +benzylaminium +nad +h2o +nadh +hplus
-    nh3
+  branch from 4_hydroxybenzoate side right {
+    4_hydroxybenzoate
+    <-> . +7_14_16_trihydroxyconfertifolin +hplus +h2o
+    dideacetyl_astellolide_b
   }
 
   branch from 4_hydroxybenzoate side left {
     4_hydroxybenzoate
-    <-> ec_2_5_1_39 [2.5.1.39] +all_trans_heptaprenyl_diphosphate +ppi
-    4_hydroxy_3_all_trans_heptaprenylbenzoate
-  }
-
-  branch from 4_hydroxybenzoate side right {
-    4_hydroxybenzoate
-    <-> . +atp +hplus +ppi
-    4_hydroxybenzoyl_amp
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> ec_1_14_14_156 [1.14.14.156] +l_tryptophan +fmnh2 +o2 +co2 +h2o +hplus
-    e_indol_3_ylacetaldehyde_oxime
+    <-> . +udp_d_glucose +udp
+    1_o_4_hydroxybenzoyl_d_glucopyranose
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_42 [1.14.14.42] +l_pentahomomethionine +fmnh2 +o2 +co2 +h2o +hplus
-    e_8_methylsulfanyl_octanal_oxime
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    16_hete
   }
 
-  branch from 4_d_glucosyloxy_benzoate side left {
-    4_d_glucosyloxy_benzoate
-    <-> . +glucose +4_hydroxybenzoate
-    h2o
+  branch from fmn side left {
+    fmn
+    <-> . +5z_8z_11z_icosatrienoate +fmnh2 +o2 +h2o +hplus
+    19_hetre
   }
 
   branch from 4_d_glucosyloxy_benzoate side right {
     4_d_glucosyloxy_benzoate
+    <-> . +beta_d_glucose +4_hydroxybenzoate
+    h2o
+  }
+
+  branch from 4_d_glucosyloxy_benzoate side left {
+    4_d_glucosyloxy_benzoate
     <-> . +4_hydroxybenzoate +h2o
-    beta_d_glucose
+    alpha_d_glucose
+  }
+
+  branch from benzoin side right {
+    benzoin
+    <-> . +nadp +nadph +hplus
+    benzil
+  }
+
+  branch from fmnh2 side left {
+    fmnh2
+    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +o2 +fmn +h2o +hplus
+    21_hdohe
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> . +5z_8z_11z_icosatrienoate +o2 +fmn +h2o +hplus
+    20_hetre
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_19 [1.14.14.19] +pregnenolone +fmnh2 +o2 +h2o +hplus
+    17_hydroxypregnenolone
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +cholesterol +fmnh2 +o2 +h2o +hplus
+    25_hydroxycholesterol
+  }
+
+  branch from udp_d_glucose side left {
+    udp_d_glucose
+    <-> ec_2_4_1_171 [2.4.1.171] +methylazoxymethanol +udp +hplus
+    cycasin
+  }
+
+  branch from udp_d_glucose side right {
+    udp_d_glucose
+    <-> ec_2_4_1_103 [2.4.1.103] +alizarin +udp +hplus
+    1_hydroxy_2_d_glucosyloxy_9_10_anthraquinone
   }
 }

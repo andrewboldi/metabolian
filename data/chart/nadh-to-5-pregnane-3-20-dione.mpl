@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-5-pregnane-3-20-dione "NADH to 5β-pregnane-3,20-dione" {
-  spacing 260
+  spacing 248
 
   spine at 0,0 {
     nadh
@@ -14,17 +14,5 @@ pathway nadh-to-5-pregnane-3-20-dione "NADH to 5β-pregnane-3,20-dione" {
     h
     <-> . +5_pregnan_20_ol_3_one +nadp -nadph -hplus
     5_pregnane_3_20_dione
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    s_glutathionyl_ethacrynic_acid
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +1_4_alpha_d_glucan +phosphate +1_4_alpha_d_glucan +h2o
-    atp
   }
 }

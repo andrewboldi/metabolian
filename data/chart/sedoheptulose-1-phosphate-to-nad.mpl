@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway sedoheptulose-1-phosphate-to-nad "sedoheptulose 1-phosphate to NAD" {
-  spacing 254
+  spacing 326
 
   spine at 0,0 {
     sedoheptulose_1_phosphate
@@ -16,57 +16,129 @@ pathway sedoheptulose-1-phosphate-to-nad "sedoheptulose 1-phosphate to NAD" {
     xylitol_5_phosphate
   }
 
-  branch from sedoheptulose side left {
-    sedoheptulose
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    h2o
+  branch from h side left {
+    h
+    <-> . +d_glucuronate +6_o_desmethyldonepezil +h2o
+    donepezil_metabolite_m11
   }
 
   branch from h side right {
     h
-    <-> ec_3_5_1_1 [3.5.1.1] +l_asparagine +hydroxylamine +n_hydroxy_l_aspartic_1_amide
-    nh4
-  }
-
-  branch from h side left {
-    h
-    <-> . +d_glucono_1_5_lactone +h2o +d_gluconate
-    pmf
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
-    ala_leu
+    <-> . +d_glucuronate +5_o_desmethyldonepezil +h2o
+    donepezil_metabolite_m12
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
-    2_deoxy_d_ribofuranose
+    <-> . +h +adp +phosphate +h2o
+    ezetimibe_phenoxy_glucuronide
   }
 
-  branch from d_ribose side right {
-    d_ribose
-    <-> . +pmf +pmf
-    beta_d_ribopyranose
+  branch from atp side right {
+    atp
+    <-> . +linoelaidic_acid +coa +linoelaidyl_coenzyme_a +h +amp
+    diphosphate
   }
 
   branch from d_ribose side left {
     d_ribose
     <-> .
-    beta_d_ribofuranose
+    beta_d_ribopyranose
   }
 
-  branch from nad side right {
-    nad
-    <-> ec_1_14_13_25 [1.14.13.25] +nadh +h +ethene_1_2_diyl_group +o2 +h2o
-    epoxy_group
+  branch from d_ribose side right {
+    d_ribose
+    <-> ec_5_3_1_20 [5.3.1.20]
+    alpha_d_ribulose
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_241 [1.1.1.241] +nadh +6_oxocineole +h
-    6_endo_hydroxycineole
+    <-> . +nadh +acetyl_coa +5_8_11_14_17_eicosapentenoylcoa +h +2_7_10_13_16_19_docosahexenoyl_coenzyme_a +h2o
+    coa
+  }
+
+  branch from nad side right {
+    nad
+    <-> . +nadh +acetyl_coa +z_hex_3_enoyl_coa +h +h2o2 +coa +o2 +h2o
+    5_octenoylcoa
+  }
+
+  branch from adp side left {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    ferrichrome
+  }
+
+  branch from adp side right {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    folate
+  }
+
+  branch from h side left {
+    h
+    <-> . +d_glucuronate +dextrorphan +h2o
+    dextrorphan_o_glucosiduronic_acid
+  }
+
+  branch from h side right {
+    h
+    <-> . +r_lactate +ferricytochrome_c +pyruvate
+    ferrocytochrome_c
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +7z_10z_13z_16z_docosatetraenoyl_coa +diphosphate +amp +coa
+    adrenic_acid
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +7z_10z_13z_16z_19z_docosapentaenoyl_coa +diphosphate +amp +coa
+    all_cis_7_10_13_16_19_docosapentaenoate
+  }
+
+  branch from d_glyceraldehyde_3_phosphate side left {
+    d_glyceraldehyde_3_phosphate
+    <-> . +pyruvate
+    2_dehydro_3_deoxy_d_galactonate_6_phosphate
+  }
+
+  branch from d_glyceraldehyde_3_phosphate side right {
+    d_glyceraldehyde_3_phosphate
+    <-> . +phosphate
+    methylglyoxal
+  }
+
+  branch from d_ribose side left {
+    d_ribose
+    <-> . +atp +h +adp
+    alpha_d_ribose_5_phosphate
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +acetyl_coa +4e_decenoyl_coa +h +coa +nad +h2o
+    trans2_6dodecadienoylcoa
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> . +h +riboflavin +nad
+    4a_5_dihydroriboflavin
+  }
+
+  branch from nad side right {
+    nad
+    <-> . +nadh +d_tagatofuranose_6_phosphate +h
+    galactitol_1_phosphate
+  }
+
+  branch from nad side left {
+    nad
+    <-> . +trimethylamine +acetyl_phosphate +h2o +nadh +h +phosphate
+    glycine_betaine
   }
 }

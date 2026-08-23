@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-carboxy-2-hydroxy-cis-c-to-r-4-hydroxy-4-methy "4-carboxy-2-hydroxy-cis,c… to (R)-4-hydroxy-4-methyl-2-…" {
-  spacing 200
+  spacing 152
 
   spine at 0,0 {
     4_carboxy_2_hydroxy_cis_cis_muconate
@@ -14,53 +14,5 @@ pathway 4-carboxy-2-hydroxy-cis-c-to-r-4-hydroxy-4-methy "4-carboxy-2-hydroxy-ci
     4_methylene_2_oxoglutarate
     <-> . +h2o -r_4_hydroxy_4_methyl_2_oxoglutarate
     h
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_117 [1.1.1.117] +h +nadph +d_arabinono_1_4_lactone
-    d_arabinopyranose
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_14_99_33 [1.14.99.33] +9z_12z_octadecadienoate +h +o2 +nadph +h2o
-    crepenynate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_threonine +l_tyrosine
-    tyrosyl_threonine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_tryptophan +l_phenylalanine +l_tyrosine
-    tyr_trp_phe
-  }
-
-  branch from formate side left {
-    formate
-    <-> . +1_deoxy_l_glycero_tetrulose_4_phosphate +h
-    alpha_d_ribofuranose_5_phosphate
-  }
-
-  branch from formate side right {
-    formate
-    <-> ec_4_1_99_12 [4.1.99.12] +2_hydroxy_3_oxobutyl_phosphate +h
-    d_ribulose_5_phosphate
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    18_3_16_3_pa
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_stearoyl_2_linoleoyl_sn_glycero_3_phosphate
   }
 }

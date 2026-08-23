@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dibenzofuran-to-o2 "dibenzofuran to O2" {
-  spacing 282
+  spacing 336
 
   spine at 0,0 {
     dibenzofuran
@@ -40,14 +40,14 @@ pathway dibenzofuran-to-o2 "dibenzofuran to O2" {
 
   branch from h2o side right {
     h2o
-    <-> . +20_dihydroxyleukotriene_b4
-    20_oxo_leukotriene_b4
+    <-> . +1_2_bis_4_hydroxyphenyl_propan_2_ol
+    4_4_dihydroxy_alpha_methylstilbene
   }
 
   branch from h2o side left {
     h2o
-    <-> . +12_20_dioxoleukotriene_b4 +h
-    12_oxo_20_dihydroxy_leukotriene_b4
+    <-> . +nadh +h +2_2_bis_4_hydroxyphenyl_1_propanol +o2 +nad
+    2_3_bis_4_hydroxyphenyl_1_2_propanediol
   }
 
   branch from 3_propylcatechol side right {
@@ -64,13 +64,67 @@ pathway dibenzofuran-to-o2 "dibenzofuran to O2" {
 
   branch from o2 side right {
     o2
-    <-> . +10_11_dihydro_ltb4_coa +h2o2
-    5_s_12_r_dihydroxy_eicosa_2_8_trans_6_14_cis_tet
+    <-> ec_1_14_12_26 [1.14.12.26] +nadh +h +1_2_4_trichlorobenzene +nad
+    1s_2r_3_4_6_trichlorocyclohexa_3_5_diene_1_2_di
   }
 
   branch from o2 side left {
     o2
-    <-> . +5_s_6_s_epoxy_15_r_hepe +h2o
-    15_r_hepe
+    <-> ec_1_14_12_12 [1.14.12.12] +nadh +h +1_methylnaphthalene +nad
+    cis_1_2_dihydroxy_1_2_dihydro_8_methylnaphthalen
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_1_1_151 [2.1.1.151] +s_adenosyl_l_homocysteine +cobalt_factor_iii +cobalt_sirohydrochlorin
+    s_adenosyl_l_methionine
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_1_1_50 [2.1.1.50] +s_adenosyl_l_homocysteine +secologanin +s_adenosyl_l_methionine
+    secologanate
+  }
+
+  branch from butanoate side right {
+    butanoate
+    <-> ec_3_5_1_97 [3.5.1.97] +l_homoserine_lactone +h2o
+    a_s_butyr_amido_r_butyrolactone
+  }
+
+  branch from butanoate side left {
+    butanoate
+    <-> ec_3_1_1_1 [3.1.1.1] +tributyrin +h2o +h
+    2s_3_hydroxy_1_2_propanediyl_dibutanoate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +naphthyl_2_hydroxymethyl_succinyl_coa
+    naphthyl_2_methylene_succinyl_coa
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +nadh +h +1_methylnaphthalene +o2 +nad
+    1_naphthyl_methanol
+  }
+
+  branch from 3_propylcatechol side right {
+    3_propylcatechol
+    <-> . +h +o2
+    2_hydroxy_6_oxo_nona_2_4_dienoate
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +2_hydroxy_8_methylchromene_2_carboxylate
+    8_methylnaphthalene_1_2_diol
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +nadh +h +1_naphthoate +nad
+    cis_1_2_dihydroxy_1_2_dihydro_8_carboxynaphthale
   }
 }

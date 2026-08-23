@@ -1,0 +1,406 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "phenylacetyl-coa-to-h2o-null",
+  "name": "phenylacetyl-CoA to H2O",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from phenylacetyl-CoA to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR181006"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "phenylacetyl_coa",
+      "name": "phenylacetyl-CoA",
+      "formula": "C29H38N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1104563"
+      }
+    },
+    {
+      "id": "2_demethylmenaquinone_8",
+      "name": "2-demethylmenaquinone-8",
+      "short": "2-demethylmenaquino…",
+      "formula": "C50H70O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:48455"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "phenylglyoxylyl_coa",
+      "name": "phenylglyoxylyl-CoA",
+      "formula": "C29H36N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM2272"
+      }
+    },
+    {
+      "id": "2_demethylmenaquinol_8",
+      "name": "2-demethylmenaquinol-8",
+      "short": "2-demethylmenaquino…",
+      "formula": "C50H72O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61873"
+      }
+    },
+    {
+      "id": "thiosulfate",
+      "name": "thiosulfate",
+      "formula": "HO3S2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1094289"
+      }
+    },
+    {
+      "id": "hydrogen_sulfide",
+      "name": "hydrogen sulfide",
+      "formula": "HS",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1366460"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "sulfite",
+      "name": "sulfite",
+      "formula": "O3S",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM726339"
+      }
+    },
+    {
+      "id": "2e_4z_2_hydroxymuconate",
+      "name": "(2E,4Z)-2-hydroxymuconate",
+      "short": "(2E,4Z)-2-hydroxymu…",
+      "formula": "C6H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:64016"
+      }
+    },
+    {
+      "id": "2_3_dihydroxybenzenesulfonate",
+      "name": "2,3-dihydroxybenzenesulfonate",
+      "short": "2,3-dihydroxybenzen…",
+      "formula": "C6H5O5S",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM2772"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_17_5_1",
+      "name": "phenylacetyl-CoA dehydrogenase",
+      "ec": [
+        "1.17.5.1"
+      ]
+    },
+    {
+      "id": "ec_1_13_11_2",
+      "name": "catechol 2,3-dioxygenase",
+      "ec": [
+        "1.13.11.2"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "phenylacetyl-CoA dehydrogenase",
+      "ec": "1.17.5.1",
+      "substrates": [
+        {
+          "metabolite": "phenylacetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_demethylmenaquinone_8",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phenylglyoxylyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_demethylmenaquinol_8",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_17_5_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR181006"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR181006"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR179257",
+      "substrates": [
+        {
+          "metabolite": "thiosulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_demethylmenaquinol_8",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hydrogen_sulfide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "2_demethylmenaquinone_8",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfite",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR179257"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR179257"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "catechol 2,3-dioxygenase",
+      "ec": "1.13.11.2",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "sulfite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2e_4z_2_hydroxymuconate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_3_dihydroxybenzenesulfonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR151920"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR151920"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_2_3_dihydroxybenzenesulfonate_3-methylbut-2-enoyl-coa-to-3-methylglutaric-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_3_dihydroxybenzenesulfonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-methylbut-2-enoyl-coa-to-3-methylglutaric-acid"
+      },
+      "note": "Shares 2,3-dihydroxybenzenesulfonate with 3-methylbut-2-enoyl-CoA to 3-methylglutaric acid.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2772"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_3_dihydroxybenzenesulfonate_biphenyl-2-3-diol-to-nadp-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_3_dihydroxybenzenesulfonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "biphenyl-2-3-diol-to-nadp-null"
+      },
+      "note": "Shares 2,3-dihydroxybenzenesulfonate with biphenyl-2,3-diol to NADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2772"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_3_dihydroxybenzenesulfonate_ergothioneine-thione-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_3_dihydroxybenzenesulfonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ergothioneine-thione-to-h2o"
+      },
+      "note": "Shares 2,3-dihydroxybenzenesulfonate with ergothioneine (thione… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2772"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_3_dihydroxybenzenesulfonate_ergothioneine-thione-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_3_dihydroxybenzenesulfonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ergothioneine-thione-to-h2o-null"
+      },
+      "note": "Shares 2,3-dihydroxybenzenesulfonate with ergothioneine (thione… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2772"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_3_dihydroxybenzenesulfonate_phenylacetyl-coa-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_3_dihydroxybenzenesulfonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phenylacetyl-coa-to-h2o"
+      },
+      "note": "Shares 2,3-dihydroxybenzenesulfonate with phenylacetyl-CoA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2772"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway pentalenolactone-d-to-h2o "pentalenolactone D to H2O" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     pentalenolactone_d
@@ -14,29 +14,5 @@ pathway pentalenolactone-d-to-h2o "pentalenolactone D to H2O" {
     pentalenolactone_f
     <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate -pentalenolactone_f -h2o
     atp
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    rosuvastatin_glucuronide
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    rosuvastatin_5s_lactone
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +prostaglandin_pge2_glyceryl_ester
-    prostaglandin_pgb2_glyceryl_ester
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_dehydroascorbic_acid +14_hydroxy_d4_neuroprostane +h +l_ascorbate
-    14_hydroperoxy_h4_neuroprostane
   }
 }

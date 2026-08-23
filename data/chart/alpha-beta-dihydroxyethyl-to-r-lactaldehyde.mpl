@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway alpha-beta-dihydroxyethyl-to-r-lactaldehyde "alpha,beta-Dihydroxyethylâ€¦ to (R)-lactaldehyde" {
-  spacing 296
+  spacing 340
 
   spine at 0,0 {
     alpha_beta_dihydroxyethyl_tpp
@@ -26,20 +26,20 @@ pathway alpha-beta-dihydroxyethyl-to-r-lactaldehyde "alpha,beta-Dihydroxyethylâ€
 
   branch from d_xylulose_5_phosphate side right {
     d_xylulose_5_phosphate
-    <-> . +d_ribulose +atp +h
-    adp
+    <-> . +glyceraldehyde_3_phosphate +h2o +h +phosphate
+    acetyl_phosphate
   }
 
   branch from h side left {
     h
-    <-> ec_5_5_1_7 [5.5.1.7] +3_6_dichloro_3a_methyl_dihydro_3h_furo_3_2_b_fur
-    2_5_dichloro_3_methyl_muconolactone
+    <-> ec_3_8_1_5 [3.8.1.5] +2_bromoethanol +bromide +h2o
+    1_2_dibromoethane
   }
 
   branch from h side right {
     h
-    <-> . +2_chloro_3_methyl_maleylacetate +h2o
-    2_chloro_3_methyl_dienelactone
+    <-> ec_3_8_1_5 [3.8.1.5] +1_2_dibromopropane +h2o +bromide
+    2_bromopropanol
   }
 
   branch from thiamine_diphosphate side left {
@@ -56,73 +56,121 @@ pathway alpha-beta-dihydroxyethyl-to-r-lactaldehyde "alpha,beta-Dihydroxyethylâ€
 
   branch from glyceraldehyde_3_phosphate side left {
     glyceraldehyde_3_phosphate
-    <-> ec_1_2_1_13 [1.2.1.13] +h +nadph +nadp +phosphate
-    2r_3_phospho_glyceroyl_phosphate
+    <-> ec_1_2_1_12 [1.2.1.12] +nadh +2r_3_phospho_glyceroyl_phosphate +h +phosphate
+    nad
   }
 
   branch from glyceraldehyde_3_phosphate side right {
     glyceraldehyde_3_phosphate
-    <-> ec_2_7_1_28 [2.7.1.28] +adp +h +d_glyceraldehyde
-    atp
+    <-> ec_1_2_1_13 [1.2.1.13] +h +nadph +nadp +phosphate
+    2r_3_phospho_glyceroyl_phosphate
   }
 
   branch from d_sedoheptulose_7_phosphate side left {
-    d_sedoheptulose_7_phosphate
-    <-> ec_2_7_1_11 [2.7.1.11] +utp +h +d_sedoheptulose_1_7_bisphosphate
-    udp
-  }
-
-  branch from d_sedoheptulose_7_phosphate side right {
     d_sedoheptulose_7_phosphate
     <-> ec_2_7_1_90 [2.7.1.90] +diphosphate +h +phosphate
     d_sedoheptulose_1_7_bisphosphate
   }
 
-  branch from methylglyoxal side left {
-    methylglyoxal
-    <-> . +h2o
-    1_1_dihydroxypropan_2_one
+  branch from d_sedoheptulose_7_phosphate side right {
+    d_sedoheptulose_7_phosphate
+    <-> . +d_glyceraldehyde_3_phosphate +d_xylulose_5_phosphate
+    alpha_d_ribose_5_phosphate
   }
 
-  branch from methylglyoxal side right {
+  branch from methylglyoxal side left {
     methylglyoxal
     <-> ec_1_1_1_156 [1.1.1.156] +h +nadph +nadp
     lactaldehyde
   }
 
+  branch from methylglyoxal side right {
+    methylglyoxal
+    <-> ec_1_1_1_21 [1.1.1.21] +h +lactaldehyde +nad
+    nadh
+  }
+
   branch from phosphate side left {
     phosphate
-    <-> . +2_3_bis_o_geranylgeranyl_sn_glycero_1_phospho_1 +h2o
-    2_3_bis_o_geranylgeranyl_sn_glycero_1_phospho_1
+    <-> . +d_maltose +alpha_d_glucose_1_phosphate
+    glucose
   }
 
   branch from phosphate side right {
     phosphate
-    <-> . +1d_myo_inositol_3_4_5_6_tetrakisphosphate +h2o
-    1d_myo_inositol_1_3_4_5_6_pentakisphosphate
+    <-> . +l_glutamate_5_semialdehyde +h +nad +nadh
+    d_alpha_glutamyl_phosphate
   }
 
   branch from nadp side left {
     nadp
-    <-> . +h +o2 +nadph +n_3_carboxypropanoyl_n_hydroxyputrescine +h2o
-    3_4_amino_3_hydroxybutyl_hydroxy_carbamoyl_propa
+    <-> ec_1_14_14_55 [1.14.14.55] +2_hydroxynevirapine +h2o +h +o2 +nadph
+    11_cyclopropyl_5_11_dihydro_4_methyl_6h_dipyrido
   }
 
   branch from nadp side right {
     nadp
-    <-> . +2s_3_sulfopropanediol +h +nadph
-    1_hydroxy_2_oxo_3_sulfopropane
+    <-> ec_1_2_1_5 [1.2.1.5] +4_hydroxynon_2_enal +h2o +h +nadph
+    4_hydroxynon_2_enoic_acid
   }
 
-  branch from r_lactaldehyde side left {
-    r_lactaldehyde
-    <-> ec_1_2_1_5 [1.2.1.5] +h +nadph +nadp +h2o
-    r_lactate
+  branch from d_glyceraldehyde_3_phosphate side left {
+    d_glyceraldehyde_3_phosphate
+    <-> . +phosphate
+    enolaldehyde
   }
 
-  branch from r_lactaldehyde side right {
-    r_lactaldehyde
-    <-> ec_1_2_1_5 [1.2.1.5] +h +nadph +nadp +h2o
-    s_lactate
+  branch from d_glyceraldehyde_3_phosphate side right {
+    d_glyceraldehyde_3_phosphate
+    <-> ec_4_3_3_6 [4.3.3.6] +alpha_d_ribofuranose_5_phosphate +l_glutamine +h +l_glutamate +phosphate +h2o
+    pyridoxal_5_phosphate
+  }
+
+  branch from d_xylulose_5_phosphate side left {
+    d_xylulose_5_phosphate
+    <-> . +d_ribulose +atp +h
+    adp
+  }
+
+  branch from d_xylulose_5_phosphate side right {
+    d_xylulose_5_phosphate
+    <-> ec_2_7_1_17 [2.7.1.17] +atp +h +adp
+    d_xylulofuranose
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_8_1_5 [3.8.1.5] +3_bromo_1_propanol +bromide +h2o
+    1_3_dibromopropane
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_8_1_5 [3.8.1.5] +1_3_dichloropropane +h2o +chloride
+    compound_0040745
+  }
+
+  branch from thiamine_diphosphate side left {
+    thiamine_diphosphate
+    <-> ec_1_2_4_2 [1.2.4.2] +r_lipoamide +3_carboxy_1_hydroxypropylthiamine_diphosphate +h
+    s_succinyl_dihydrolipoamide
+  }
+
+  branch from thiamine_diphosphate side right {
+    thiamine_diphosphate
+    <-> . +thiamine_triphosphate +h2o +h +phosphate
+    pmf
+  }
+
+  branch from alpha_d_ribofuranose_5_phosphate side left {
+    alpha_d_ribofuranose_5_phosphate
+    <-> .
+    5_o_phosphono_d_ribofuranose
+  }
+
+  branch from alpha_d_ribofuranose_5_phosphate side right {
+    alpha_d_ribofuranose_5_phosphate
+    <-> . +h
+    aldehydo_d_ribose_5_phosphate
   }
 }

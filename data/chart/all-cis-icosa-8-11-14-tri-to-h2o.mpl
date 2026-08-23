@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway all-cis-icosa-8-11-14-tri-to-h2o "all-cis-icosa-8,11,14-tri… to H2O" {
-  spacing 296
+  spacing 272
 
   spine at 0,0 {
     all_cis_icosa_8_11_14_trienoate
@@ -12,43 +12,19 @@ pathway all-cis-icosa-8-11-14-tri-to-h2o "all-cis-icosa-8,11,14-tri… to H2O" {
     8z_11z_13e_15s_15_hydroperoxyicosa_8_11_13_trie
     <-> ec_1_11_1_12 [1.11.1.12] +h +glutathione -15_s_hetre -h2o
     glutathione_disulfide
-    <-> . +h +adp +phosphate -glutathione_disulfide -h2o
-    atp
+    <-> . +h +15_s_hetre +adp +phosphate -atp -h2o
+    15_s_hetre
   }
 
-  branch from glutathione_disulfide side left {
-    glutathione_disulfide
-    <-> . +12_hydroxyeicosatetraenoate +h2o +glutathione
-    12s_hydroperoxy_5z_8z_10e_14z_eicosatetraenoate
+  branch from all_cis_icosa_8_11_14_trienoate side left {
+    all_cis_icosa_8_11_14_trienoate
+    <-> . +o2
+    12_s_hpe_8_10_14_tre
   }
 
-  branch from glutathione_disulfide side right {
-    glutathione_disulfide
-    <-> ec_1_11_1_12 [1.11.1.12] +resolvin_d5 +h2o +h +glutathione
-    7s_17s_hhpdha
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    galactitol
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    l_xylo_hexos_2_ulose
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    n_acetylneuraminate
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    nystose
+  branch from all_cis_icosa_8_11_14_trienoate side right {
+    all_cis_icosa_8_11_14_trienoate
+    <-> . +o2
+    12_hpe_8_10_14_tre
   }
 }

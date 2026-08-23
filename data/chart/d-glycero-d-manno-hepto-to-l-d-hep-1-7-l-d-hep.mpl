@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-glycero-d-manno-hepto-to-l-d-hep-1-7-l-d-hep "D-glycero-β-D-manno-hepto… to L-α-D-Hep-(1→7)-L-α-D-Hep…" {
-  spacing 340
+  spacing 318
 
   spine at 0,0 {
     d_glycero_d_manno_heptose_1_phosphate
@@ -20,29 +20,5 @@ pathway d-glycero-d-manno-hepto-to-l-d-hep-1-7-l-d-hep "D-glycero-β-D-manno-hep
     adp_d_glycero_d_manno_heptose
     <-> . +l_serine +adp +hplus
     o_d_glycero_d_manno_heptosyl_l_serine
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +trans_caffeate +atp +hplus
-    trans_caffeoyl_amp
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +trans_sinapate +atp +coa +amp
-    sinapoyl_coa
-  }
-
-  branch from adp_l_glycero_d_manno_heptose side right {
-    adp_l_glycero_d_manno_heptose
-    <-> . +amp +h +adp
-    sep_540
-  }
-
-  branch from adp_l_glycero_d_manno_heptose side left {
-    adp_l_glycero_d_manno_heptose
-    <-> . +alpha_d_kdo_2_6_tetra_acylated_lipid_a_h_pylori +h +adp
-    alpha_hep_1_5_tetra_acylated_lipid_a_h_pylori
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-n-dimethyl-l-histidine-to-ergothioneyl-d-linco "Nα,Nα-dimethyl-L-histidine to ergothioneyl-α-D-lincosam…" {
-  spacing 278
+  spacing 266
 
   spine at 0,0 {
     n_n_dimethyl_l_histidine
@@ -20,21 +20,9 @@ pathway n-n-dimethyl-l-histidine-to-ergothioneyl-d-linco "Nα,Nα-dimethyl-L-his
     ergothioneyl_d_lincosamide_1
   }
 
-  branch from n_n_n_trimethyl_l_histidine side left {
-    n_n_n_trimethyl_l_histidine
-    <-> . +cysteine +alanine
+  branch from ergothioneine side left {
+    ergothioneine
+    <-> . +hplus
     ergothioneine_thione_form
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +cytidine_5_monophosphate_1 +sam +hplus
-    5_methylcytidine_5_monophosphate_1
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +sam +5_methylcytidine_5_monophosphate_1 +hplus
-    cytidine_5_monophosphate_1
   }
 }

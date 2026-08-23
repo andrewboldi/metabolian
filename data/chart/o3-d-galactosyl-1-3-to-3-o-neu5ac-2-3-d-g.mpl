@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway o3-d-galactosyl-1-3-to-3-o-neu5ac-2-3-d-g "O3-{β-D-galactosyl-(1→3)-… to 3-O-{α-Neu5Ac-(2→3)-β-D-G…" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     o3_d_galactosyl_1_3_n_acetyl_d_glucosaminyl_1_6
@@ -14,5 +14,17 @@ pathway o3-d-galactosyl-1-3-to-3-o-neu5ac-2-3-d-g "O3-{β-D-galactosyl-(1→3)-�
     3_o_neu5ac_2_3_d_gal_1_4_d_glcnac_1_6_d_gal_1_3
     <-> . +gdp_l_fucose -gdp -hplus
     3_o_neu5ac_2_3_d_gal_1_4_l_fuc_1_3_d_glcnac_1_6
+  }
+
+  branch from gdp_l_fucose side left {
+    gdp_l_fucose
+    <-> . +methyl_8_l_fucosyl_1_2_d_galactosyl_1_3_n_acetyl +gdp +hplus
+    methyl_8_l_fucosyl_1_2_d_galactosyl_1_3_l_fucosy
+  }
+
+  branch from gdp_l_fucose side right {
+    gdp_l_fucose
+    <-> . +methyl_8_n_acetyl_neuraminosyl_2_3_d_galactosyl +gdp +hplus
+    methyl_8_n_acetyl_neuraminosyl_2_3_d_galactosyl
   }
 }

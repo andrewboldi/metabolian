@@ -4,15 +4,15 @@
 # edit the generator, not this file.
 
 pathway utp-to-h2o-null "UTP to H2O" {
-  spacing 152
+  spacing 292
 
   spine at 0,0 {
     utp
-    <-> ec_2_7_1_36 [2.7.1.36] +r_mevalonate -h -r_5_phosphomevalonate
-    udp
-    <-> ec_2_7_1_36 [2.7.1.36] +gdp +h +r_5_phosphomevalonate -r_mevalonate
-    gtp
-    <-> . +hydrogen_oxide -h2o
-    8_oxo_gtp
+    <-> ec_2_7_7_99 [2.7.7.99] +h +n_acetyl_d_muramate_1_phosphate -diphosphate
+    udp_n_acetyl_alpha_d_muramate
+    <-> ec_6_3_2_45 [6.3.2.45] +l_alanyl_d_glutamyl_meso_2_6_diaminoheptanedioat +atp -h -adp -phosphate
+    udp_n_acetyl_alpha_d_muramoyl_l_alanyl_gamma_d_g
+    <-> . +d_alanine -h2o
+    udp_n_acetylmuramoyl_l_alanyl_d_gamma_glutamyl_m
   }
 }

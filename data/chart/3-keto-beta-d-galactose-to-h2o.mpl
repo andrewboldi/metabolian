@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-keto-beta-d-galactose-to-h2o "3-keto-beta-D-galactose to H2O" {
-  spacing 242
+  spacing 308
 
   spine at 0,0 {
     3_keto_beta_d_galactose
@@ -14,101 +14,163 @@ pathway 3-keto-beta-d-galactose-to-h2o "3-keto-beta-D-galactose to H2O" {
     lactose
     <-> ec_3_2_1_108 [3.2.1.108] +h2o -d_galactose
     glucose
-    <-> . +sphing_4_enine +d_galactose +h -h2o
-    beta_d_galactosyl_11_sphing_4_enine
-    <-> . +udp -sphing_4_enine
-    udp_alpha_d_galactose
-    <-> ec_3_5_1_23 [3.5.1.23] +9z_octadecenoate +sphing_4_enine +h -h2o
-    n_oleoyl_d_sphingosine
+    <-> . +d_galactose +h +na +adp +phosphate -na -atp -h2o
+    d_galactose
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_14_14_1 [1.14.14.1] +h +17beta_estradiol +o2 +nadph +2_hydroxy_17beta_estradiol
-    nadp
+    <-> . +d_galactopyranose +beta_d_gal_1_3_beta_d_glcnac_1_3_beta_d_glcnac_1
+    d_gal_1_3_d_glcnac_1_3_d_gal_1_4_d_glcnac_1_6_d
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_4_4_1_21 [4.4.1.21] +d_ribose +l_homocysteine
-    s_ribosyl_l_homocysteine
+    <-> . +1s_4r_4_aminocyclopent_2_ene_1_carboxylate
+    1r_4s_2_azabicyclo_2_2_1_hept_5_en_3_one
   }
 
   branch from lactose side left {
     lactose
-    <-> . +h +adp +phosphate +h2o
-    atp
+    <-> ec_5_1_3_11 [5.1.3.11]
+    d_gal_1_4_d_man
   }
 
   branch from lactose side right {
     lactose
-    <-> ec_3_2_1_23 [3.2.1.23] +phosphate +h2o
-    lactose_6_phosphate
+    <-> ec_3_2_1_18 [3.2.1.18] +n_acetylneuraminate +h +h2o
+    4s_5r_6r_5_acetamido_4_hydroxy_6_1r_2r_1_2_3_tr
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_21 [1.1.1.21] +nadh +d_ribose +h
-    ribitol
+    <-> . +nadh +9z_octadecenoyl_coa +h +o2 +h2o
+    linoelaidyl_coenzyme_a
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_6_2_6 [1.6.2.6] +nadh +ferrileghemoglobin +h
-    ferroleghemoglobin
+    <-> . +nadh +h +o2 +linoelaidyl_coenzyme_a +h2o
+    11z_octadecenoyl_coa
   }
 
   branch from glucose side left {
     glucose
-    <-> ec_3_2_1_10 [3.2.1.10] +sucrose +h2o
+    <-> ec_5_3_1_5 [5.3.1.5]
     d_fructofuranose
   }
 
   branch from glucose side right {
     glucose
-    <-> ec_2_4_1_10 [2.4.1.10] +sucrose +h2o
-    keto_d_fructose
+    <-> . +lampranthin_ii +1_o_feruloyl_d_glucose
+    betanin
   }
 
   branch from d_galactose side left {
     d_galactose
-    <-> ec_3_2_1_20 [3.2.1.20] +h2o +glucose
-    melibiose
+    <-> .
+    alpha_d_galactose
   }
 
   branch from d_galactose side right {
     d_galactose
-    <-> ec_3_2_1_22 [3.2.1.22] +h2o +glucose
-    polydextrose
+    <-> ec_5_1_3_3 [5.1.3.3]
+    beta_d_galactose
   }
 
-  branch from beta_d_galactosyl_11_sphing_4_enine side left {
-    beta_d_galactosyl_11_sphing_4_enine
-    <-> . +alpha_d_galactose +h2o
-    sphing_4_enine
+  branch from na side left {
+    na
+    <-> . +h +adp +phosphate +atp +h2o
+    biotin
   }
 
-  branch from udp_alpha_d_galactose side right {
-    udp_alpha_d_galactose
-    <-> ec_2_4_1_241 [2.4.1.241] +udp +h +1_18_3_2_16_3_digalactosyldiacylglycerol
-    1_9z_12z_15z_octadecatrienoyl_2_7z_10z_13z_hexad
+  branch from atp side right {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    chloramphenicol_3_glucuronide
   }
 
-  branch from udp_alpha_d_galactose side left {
-    udp_alpha_d_galactose
-    <-> ec_2_4_1_241 [2.4.1.241] +udp +h +1_18_2_2_16_0_digalactosyldiacylglycerol
-    1_9z_12z_octadecadienoyl_2_hexadecanoyl_3_beta_d
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    clopidogrel_acyl_beta_d_glucuronide
   }
 
-  branch from sphing_4_enine side right {
-    sphing_4_enine
-    <-> ec_3_1_3_4 [3.1.3.4] +sphing_4_enine_1_phosphate +h2o +h
+  branch from glucose side right {
+    glucose
+    <-> . +lampranthin_ii +1_o_feruloyl_d_glucose
+    betanin
+  }
+
+  branch from glucose side left {
+    glucose
+    <-> . +lampranthin_ii +betanin
+    1_o_feruloyl_d_glucose
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +1r_4s_4_aminocyclopent_2_ene_1_carboxylate
+    1s_4r_2_azabicyclo_2_2_1_hept_5_en_3_one
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +chanoclavin_epoxide_intermediate +nadp +h +o2 +nadph
+    chanoclavin_diene_intermediate
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +h +o2 +linoelaidyl_coenzyme_a +nad +h2o
+    2e_octadecenoyl_coa
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> . +digitoxin +h +nad
+    20_22_dihydrodigitoxin
+  }
+
+  branch from h side right {
+    h
+    <-> . +cmp +ls_tetrasaccharide_c +d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_glc
+    cmp_n_acetyl_beta_neuraminate
+  }
+
+  branch from h side left {
+    h
+    <-> . +chanoclavine_i +co2
+    chanoclavin_epoxide_intermediate
+  }
+
+  branch from nad side right {
+    nad
+    <-> . +nadh +digoxin +h
+    dihydrodigoxin
+  }
+
+  branch from nad side left {
+    nad
+    <-> . +nadh +acetyl_coa +5_octenoylcoa +h +coa +h2o
+    2_7_decadienoylcoa
+  }
+
+  branch from adp side right {
+    adp
+    <-> . +hydrogenobyrinate_a_c_diamide +h +atp +co +h2o +phosphate
+    cob_ii_yrinate_a_c_diamide
+  }
+
+  branch from adp side left {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    carboxy_gliclazide
+  }
+
+  branch from phosphate side right {
     phosphate
-  }
-
-  branch from sphing_4_enine side left {
-    sphing_4_enine
-    <-> ec_3_1_4_38 [3.1.4.38] +sphing_4_enine_phosphocholine +h2o +h
-    phosphocholine
+    <-> . +h +adp +atp +h2o
+    cerivastatin
   }
 }

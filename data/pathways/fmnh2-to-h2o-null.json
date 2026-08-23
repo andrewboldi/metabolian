@@ -1,0 +1,526 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "fmnh2-to-h2o-null",
+  "name": "FMNH2 to H2O",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from FMNH2 to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR192279"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1107623"
+      }
+    },
+    {
+      "id": "thymine",
+      "name": "Thymine",
+      "formula": "C5H6N2O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1369303"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H21N4O9P",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364147"
+      }
+    },
+    {
+      "id": "z_2_methylureidoperacrylic_acid",
+      "name": "(Z)-2-methylureidoperacrylic acid",
+      "short": "2-methylureidoperac…",
+      "formula": "C5H8N2O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:63249"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "actinorhodin_intermediate",
+      "name": "actinorhodin intermediate",
+      "short": "actinorhodin…",
+      "formula": "C32H24O12",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM491054"
+      }
+    },
+    {
+      "id": "actinorhodin",
+      "name": "actinorhodin",
+      "formula": "C32H26O14",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:2448"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_99_46",
+      "name": "pyrimidine monooxygenase",
+      "ec": [
+        "1.14.99.46"
+      ]
+    },
+    {
+      "id": "ec_3_6_3_44",
+      "name": "EC 3.6.3.44",
+      "ec": [
+        "3.6.3.44"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "pyrimidine monooxygenase",
+      "ec": "1.14.99.46",
+      "substrates": [
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "thymine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "z_2_methylureidoperacrylic_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_99_46"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR192279"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR192279"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR177777",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "actinorhodin_intermediate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "actinorhodin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR177777"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR177777"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR175186",
+      "ec": "3.6.3.44",
+      "substrates": [
+        {
+          "metabolite": "actinorhodin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "actinorhodin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_3_44"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR175186"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR175186"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_thymine_2-oxoglutarate-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "thymine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-oxoglutarate-to-succinate"
+      },
+      "note": "Shares Thymine with 2-oxoglutarate to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1369303"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_thymine_4-pyridoxolactone-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "thymine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-pyridoxolactone-to-h2o"
+      },
+      "note": "Shares Thymine with 4-pyridoxolactone to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1369303"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_thymine_geranylgeranyl-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "thymine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "geranylgeranyl-to-h2o-null"
+      },
+      "note": "Shares Thymine with Geranylgeranyl… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1369303"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_thymine_h-to-2-hydroxyacetophenone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "thymine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-2-hydroxyacetophenone"
+      },
+      "note": "Shares Thymine with H to 2-hydroxyacetophenone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1369303"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_thymine_nadh-to-d-allulose-6-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "thymine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-d-allulose-6-phosphate"
+      },
+      "note": "Shares Thymine with NADH to D-Allulose 6-phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1369303"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_z_2_methylureidoperacrylic_acid_fmn-n5-oxide-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "z_2_methylureidoperacrylic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fmn-n5-oxide-to-o2"
+      },
+      "note": "Shares (Z)-2-methylureidoperacrylic acid with FMN-N5-oxide to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:63249"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_z_2_methylureidoperacrylic_acid_n-demethyl-desepoxymaytan-to-7a-hydroxy-o-carbam",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "z_2_methylureidoperacrylic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-demethyl-desepoxymaytan-to-7a-hydroxy-o-carbam"
+      },
+      "note": "Shares (Z)-2-methylureidoperacrylic acid with N-Demethyl-desepoxymaytan… to 7a-Hydroxy-o-carbamoyl-de….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:63249"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_z_2_methylureidoperacrylic_acid_s-2-ureidoglycine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "z_2_methylureidoperacrylic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-2-ureidoglycine-to-h2o"
+      },
+      "note": "Shares (Z)-2-methylureidoperacrylic acid with (S)-2-ureidoglycine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:63249"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_actinorhodin_intermediate_p-nitrophenyl-valerate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "actinorhodin_intermediate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "p-nitrophenyl-valerate-to-h2o"
+      },
+      "note": "Shares actinorhodin intermediate with p-Nitrophenyl valerate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM491054"
+          }
+        ]
+      }
+    }
+  ]
+}

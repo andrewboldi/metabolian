@@ -1,0 +1,495 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "acryloyl-coa-to-nicotinamide-null",
+  "name": "acryloyl-CoA to nicotinamide…",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from acryloyl-CoA to nicotinamide hypoxanthine dinucleotide, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR145414"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "acryloyl_coa",
+      "name": "acryloyl-CoA",
+      "formula": "C24H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1364005"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "lactoyl_coa",
+      "name": "lactoyl-CoA",
+      "formula": "C24H40N7O18P3S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM726793"
+      }
+    },
+    {
+      "id": "propanoate",
+      "name": "propanoate",
+      "formula": "C3H5O2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1094052"
+      }
+    },
+    {
+      "id": "propanoyl_coa",
+      "name": "propanoyl-CoA",
+      "formula": "C24H36N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1364266"
+      }
+    },
+    {
+      "id": "s_lactate",
+      "name": "(S)-lactate",
+      "formula": "C3H5O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1371363"
+      }
+    },
+    {
+      "id": "deamido_nad",
+      "name": "deamido-NAD",
+      "formula": "C21H24N6O15P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1103300"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM23"
+      }
+    },
+    {
+      "id": "nicotinamide_hypoxanthine_dinucleotide",
+      "name": "nicotinamide hypoxanthine dinucleotide",
+      "short": "nicotinamide…",
+      "formula": "C21H26N6O15P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM507495"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_2_1_54",
+      "name": "lactoyl-CoA dehydratase",
+      "ec": [
+        "4.2.1.54"
+      ]
+    },
+    {
+      "id": "ec_2_8_3_1",
+      "name": "propionate CoA-transferase",
+      "ec": [
+        "2.8.3.1"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_27",
+      "name": "L-lactate dehydrogenase",
+      "ec": [
+        "1.1.1.27"
+      ],
+      "xrefs": {
+        "uniprot": "Q6ZMR3"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "lactoyl-CoA dehydratase",
+      "ec": "4.2.1.54",
+      "substrates": [
+        {
+          "metabolite": "acryloyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "lactoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_54"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR145414"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR145414"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "propionate CoA-transferase",
+      "ec": "2.8.3.1",
+      "substrates": [
+        {
+          "metabolite": "propanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "lactoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "propanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "s_lactate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 4
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_3_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR147311"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR147311"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "L-lactate dehydrogenase",
+      "ec": "1.1.1.27",
+      "substrates": [
+        {
+          "metabolite": "deamido_nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "s_lactate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nicotinamide_hypoxanthine_dinucleotide",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_27"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR130124"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR130124"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_lactoyl_coa_acryloyl-coa-to-nicotinamide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lactoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acryloyl-coa-to-nicotinamide"
+      },
+      "note": "Shares lactoyl-CoA with acryloyl-CoA to nicotinamide….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM726793"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lactoyl_coa_pmf-to-lactoyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lactoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "pmf-to-lactoyl-coa"
+      },
+      "note": "Shares lactoyl-CoA with PMF to lactoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM726793"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_lactoyl_coa_pmf-to-lactoyl-coa-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lactoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "pmf-to-lactoyl-coa-null"
+      },
+      "note": "Shares lactoyl-CoA with PMF to lactoyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM726793"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_deamido_nad_4-hydroxymethylcatechol-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "deamido_nad"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxymethylcatechol-to-h2o-null"
+      },
+      "note": "Shares deamido-NAD with 4-hydroxymethylcatechol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1103300"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_deamido_nad_acryloyl-coa-to-nicotinamide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "deamido_nad"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "acryloyl-coa-to-nicotinamide"
+      },
+      "note": "Shares deamido-NAD with acryloyl-CoA to nicotinamide….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1103300"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_deamido_nad_deamido-nad-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "deamido_nad"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "deamido-nad-to-h2o"
+      },
+      "note": "Shares deamido-NAD with deamido-NAD to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1103300"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_deamido_nad_deamido-nad-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "deamido_nad"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "deamido-nad-to-h2o-null"
+      },
+      "note": "Shares deamido-NAD with deamido-NAD to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1103300"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_deamido_nad_nadh-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "deamido_nad"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-h2o"
+      },
+      "note": "Shares deamido-NAD with NADH to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1103300"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_deamido_nad_propanoate-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "deamido_nad"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "propanoate-to-o2"
+      },
+      "note": "Shares deamido-NAD with propanoate to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1103300"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_deamido_nad_propanoate-to-o2-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "deamido_nad"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "propanoate-to-o2-null"
+      },
+      "note": "Shares deamido-NAD with propanoate to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1103300"
+          }
+        ]
+      }
+    }
+  ]
+}

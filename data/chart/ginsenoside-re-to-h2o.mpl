@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway ginsenoside-re-to-h2o "ginsenoside Re to H2O" {
-  spacing 194
+  spacing 212
 
   spine at 0,0 {
     ginsenoside_re
@@ -18,45 +18,63 @@ pathway ginsenoside-re-to-h2o "ginsenoside Re to H2O" {
     quercitrin
   }
 
-  branch from l_rhamnopyranose side left {
-    l_rhamnopyranose
+  branch from l_rhamnofuranose side left {
+    l_rhamnofuranose
     <-> .
-    l_rhamnulose
+    alpha_l_rhamnose
   }
 
   branch from beta_l_rhamnose side right {
     beta_l_rhamnose
-    <-> ec_3_2_1_40 [3.2.1.40] +h +quercetin_3_o_d_glucopyranoside +h2o
-    rutin
+    <-> ec_3_2_1_40 [3.2.1.40] +tilianin +h2o
+    linarin
   }
 
-  branch from beta_l_rhamnose side left {
-    beta_l_rhamnose
-    <-> ec_2_4_1_247 [2.4.1.247] +alpha_d_galactose_1_phosphate +phosphate
-    d_galactosyl_1_4_l_rhamnose
-  }
-
-  branch from quercitrin side right {
+  branch from quercitrin side left {
     quercitrin
     <-> . +udp +quercetin_3_o_rhamnoside_7_o_glucoside
     udp_alpha_d_glucose
   }
 
-  branch from quercitrin side left {
+  branch from quercitrin side right {
     quercitrin
     <-> . +quercetin_3_o_rhamnoside_7_o_glucoside +udp_alpha_d_glucose
     udp
   }
 
+  branch from h2o side left {
+    h2o
+    <-> . +4_hydroxy_9_fluorenone
+    3_4_dihydroxy_3_4_dihydro_9_fluorenone
+  }
+
   branch from h2o side right {
     h2o
-    <-> . +5_6_epoxy_alpha_tocopheryl_quinone +h2o2
-    7_8_epoxy_8alpha_hydroperoxytocopherone
+    <-> . +co2 +coa +nh4 +cyclohexane_1_4_dione +2_amino_5_oxocyclohex_1_enecarbonyl_coa
+    h
+  }
+
+  branch from quercetin side left {
+    quercetin
+    <-> ec_1_14_13_21 [1.14.13.21] +luteolin +h +o2 +nadph +h2o
+    nadp
+  }
+
+  branch from quercetin side right {
+    quercetin
+    <-> . +udp +h +udp_alpha_d_glucose
+    quercetin_4_o_d_glucopyranoside
   }
 
   branch from h2o side left {
     h2o
-    <-> . +2_3_epoxy_alpha_tocopheryl_quinone +h2o2
-    4alpha_5_epoxy_8alpha_hydroperoxytocopherone
+    <-> ec_3_8_1_8 [3.8.1.8] +h +6_chloro_1_3_5_triazine_2_4_diamine +nh4
+    4_amino_6_chloro_1_3_5_triazin_2_ol
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_5_5_1 [3.5.5.1] +benzoate +nh4
+    benzonitrile
   }
 }

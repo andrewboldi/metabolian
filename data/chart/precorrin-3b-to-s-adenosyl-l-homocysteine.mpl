@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway precorrin-3b-to-s-adenosyl-l-homocysteine "precorrin-3B to S-adenosyl-L-homocysteine" {
-  spacing 230
+  spacing 212
 
   spine at 0,0 {
     precorrin_3b
@@ -14,23 +14,5 @@ pathway precorrin-3b-to-s-adenosyl-l-homocysteine "precorrin-3B to S-adenosyl-L-
     precorrin_5
     <-> ec_2_1_1_152 [2.1.1.152] +sam +h2o -acetate -sah -hplus
     precorrin_6a
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +cytidine_5_monophosphate_1 +sam +hplus
-    5_methylcytidine_5_monophosphate_1
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +n6_n6_dimethyl_l_lysine_1 +sam +hplus
-    n6_n6_n6_trimethyl_l_lysine
-  }
-
-  branch from precorrin_6a side left {
-    precorrin_6a
-    <-> ec_1_3_1_54 [1.3.1.54] +nadp +nadph +hplus
-    precorrin_6y
   }
 }

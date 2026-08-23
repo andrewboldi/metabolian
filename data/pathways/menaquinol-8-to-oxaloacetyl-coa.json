@@ -1,0 +1,421 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "menaquinol-8-to-oxaloacetyl-coa",
+  "name": "Menaquinol 8 to Oxaloacetyl-CoA",
+  "category": "other",
+  "summary": "A 3-step route from Menaquinol 8 to Oxaloacetyl-CoA, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR198931"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "menaquinol_8",
+      "name": "Menaquinol 8",
+      "formula": "C51H74O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1368769"
+      }
+    },
+    {
+      "id": "orotate",
+      "name": "orotate",
+      "formula": "C5H3N2O4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM235"
+      }
+    },
+    {
+      "id": "mk_8",
+      "name": "MK-8",
+      "formula": "C51H72O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:205208"
+      }
+    },
+    {
+      "id": "s_dihydroorotate",
+      "name": "(S)-dihydroorotate",
+      "formula": "C5H5N2O4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM252"
+      }
+    },
+    {
+      "id": "s_malate",
+      "name": "(S)-malate",
+      "formula": "C4H4O5",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1107192"
+      }
+    },
+    {
+      "id": "oxaloacetate",
+      "name": "oxaloacetate",
+      "formula": "C4H2O5",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM46"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1104266"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM26"
+      }
+    },
+    {
+      "id": "oxaloacetyl_coa",
+      "name": "Oxaloacetyl-CoA",
+      "formula": "C25H38N7O20P3S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM819706"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_8_3_18",
+      "name": "succinyl-CoA:acetate CoA-transferase",
+      "ec": [
+        "2.8.3.18"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR198931",
+      "substrates": [
+        {
+          "metabolite": "menaquinol_8",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "orotate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "mk_8",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "s_dihydroorotate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR198931"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198931"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR195500",
+      "substrates": [
+        {
+          "metabolite": "s_malate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "mk_8",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "menaquinol_8",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oxaloacetate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR195500"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR195500"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "succinyl-CoA:acetate CoA-transferase",
+      "ec": "2.8.3.18",
+      "substrates": [
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 5
+        },
+        {
+          "metabolite": "oxaloacetate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oxaloacetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_3_18"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR172267"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR172267"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_orotate_2-demethylmenaquinone-6-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "orotate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-demethylmenaquinone-6-to-phosphate"
+      },
+      "note": "Shares orotate with 2-demethylmenaquinone-6 to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM235"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_orotate_2s-2-5-amino-1-5-phos-to-2-6-dichloroindophenol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "orotate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2s-2-5-amino-1-5-phos-to-2-6-dichloroindophenol"
+      },
+      "note": "Shares orotate with (2S)-2-[5-amino-1-(5-phos… to 2,6-dichloroindophenol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM235"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_orotate_trithionate-to-menadiol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "orotate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trithionate-to-menadiol"
+      },
+      "note": "Shares orotate with trithionate to menadiol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM235"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_orotate_ubiquinone-0-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "orotate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ubiquinone-0-to-h2o"
+      },
+      "note": "Shares orotate with ubiquinone-0 to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM235"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_dihydroorotate_2-demethylmenaquinone-6-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_dihydroorotate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-demethylmenaquinone-6-to-phosphate"
+      },
+      "note": "Shares (S)-dihydroorotate with 2-demethylmenaquinone-6 to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM252"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_dihydroorotate_2s-2-5-amino-1-5-phos-to-2-6-dichloroindophenol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_dihydroorotate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2s-2-5-amino-1-5-phos-to-2-6-dichloroindophenol"
+      },
+      "note": "Shares (S)-dihydroorotate with (2S)-2-[5-amino-1-(5-phos… to 2,6-dichloroindophenol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM252"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_dihydroorotate_trithionate-to-menadiol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_dihydroorotate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trithionate-to-menadiol"
+      },
+      "note": "Shares (S)-dihydroorotate with trithionate to menadiol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM252"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_dihydroorotate_ubiquinone-0-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_dihydroorotate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ubiquinone-0-to-h2o"
+      },
+      "note": "Shares (S)-dihydroorotate with ubiquinone-0 to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM252"
+          }
+        ]
+      }
+    }
+  ]
+}

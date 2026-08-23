@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-nitrobenzaldehyde-to-h2o "4-nitrobenzaldehyde to H2O" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     4_nitrobenzaldehyde
@@ -14,17 +14,5 @@ pathway 4-nitrobenzaldehyde-to-h2o "4-nitrobenzaldehyde to H2O" {
     4_hydroxyamino_benzoate
     <-> . +o2 -h2o
     4_nitrobenzoate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    sm_d18_1_22_0_sphingomyelin
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    sm_d18_1_23_0_sphingomyelin
   }
 }

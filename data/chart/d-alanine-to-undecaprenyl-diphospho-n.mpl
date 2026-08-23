@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-alanine-to-undecaprenyl-diphospho-n "D-alanine to Undecaprenyl-diphospho-N-…" {
-  spacing 248
+  spacing 278
 
   spine at 0,0 {
     d_alanine
@@ -18,25 +18,55 @@ pathway d-alanine-to-undecaprenyl-diphospho-n "D-alanine to Undecaprenyl-diphosp
 
   branch from h2o side left {
     h2o
-    <-> ec_1_14_13_88 [1.14.13.88] +h +o2 +3_hydroxyflavanone +nadph +3_5_dihydroxyflavanone
-    nadp
+    <-> . +d_glucuronate +losartan
+    losartan_2_n_d_glucuronide
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_14_13_137 [1.14.13.137] +indolin_2_one +nadp +h +o2 +nadph
-    indole
+    <-> . +l_lysine +l_isoleucine +l_phenylalanine
+    lysyl_phenylalanyl_isoleucine
   }
 
   branch from h side left {
     h
-    <-> ec_1_14_13_138 [1.14.13.138] +indolin_2_one +o2 +nadph +nadp +h2o
-    3_hydroxyindolin_2_one
+    <-> . +adp +phosphate +atp +h2o
+    phenobarbital_o_glucuronide
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_2 [1.1.1.2] +d_galactopyranuronic_acid +nadph +nadp
-    l_galactonic_acid
+    <-> . +adp +phosphate +atp +h2o
+    pc_18_1_9z_e_2_0
+  }
+
+  branch from h side left {
+    h
+    <-> . +hydrogenobyrinate
+    precorrin_8
+  }
+
+  branch from h side right {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    1_docosahexenoylglycerophosphocholine_delta_4_7
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +l_lysine +l_isoleucine +l_tyrosine
+    lysyl_tyrosyl_isoleucine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +l_lysine +l_valine +l_tryptophan
+    lysyl_valyl_tryptophan
+  }
+
+  branch from undecaprenyl_diphosphate side left {
+    undecaprenyl_diphosphate
+    <-> . +undecaprenyl_diphospho_n_acetylglucosamine_n_ace +h
+    enterobacterial_common_antigen_x2_undecaprenyl
   }
 }

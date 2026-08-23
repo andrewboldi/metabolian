@@ -1,0 +1,476 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "fmnh2-to-nad",
+  "name": "FMNH2 to NAD",
+  "category": "energy-metabolism",
+  "summary": "A 4-step route from FMNH2 to NAD(+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR153263"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1107623"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "coprogen",
+      "name": "coprogen",
+      "formula": "C35H53FeN6O13",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM726881"
+      }
+    },
+    {
+      "id": "desferricoprogen",
+      "name": "desferricoprogen",
+      "formula": "C35H56N6O13",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:83125"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H21N4O9P",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364147"
+      }
+    },
+    {
+      "id": "fe",
+      "name": "Fe",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "metanetx": "MNXM1370983"
+      }
+    },
+    {
+      "id": "fe",
+      "name": "Fe",
+      "formula": "Fe",
+      "charge": 3,
+      "xrefs": {
+        "metanetx": "MNXM1370984"
+      }
+    },
+    {
+      "id": "coprogen",
+      "name": "Coprogen",
+      "formula": "C35H53FeN6O13",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM726879"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_13_7",
+      "name": "phenol 2-monooxygenase (NADPH)",
+      "ec": [
+        "1.14.13.7"
+      ]
+    },
+    {
+      "id": "ec_1_5_1_29",
+      "name": "EC 1.5.1.29",
+      "ec": [
+        "1.5.1.29"
+      ]
+    },
+    {
+      "id": "ec_1_5_1_30",
+      "name": "flavin reductase (NADPH)",
+      "ec": [
+        "1.5.1.30"
+      ],
+      "xrefs": {
+        "uniprot": "P30043"
+      }
+    },
+    {
+      "id": "ec_1_5_1_36",
+      "name": "flavin reductase (NADH)",
+      "ec": [
+        "1.5.1.36"
+      ]
+    },
+    {
+      "id": "ec_1_5_1_39",
+      "name": "FMN reductase [NAD(P)H]",
+      "ec": [
+        "1.5.1.39"
+      ]
+    },
+    {
+      "id": "ec_1_5_1_41",
+      "name": "riboflavin reductase [NAD(P)H]",
+      "ec": [
+        "1.5.1.41"
+      ]
+    },
+    {
+      "id": "ec_1_5_1_42",
+      "name": "FMN reductase (NADH)",
+      "ec": [
+        "1.5.1.42"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR153263",
+      "substrates": [
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 6
+        },
+        {
+          "metabolite": "coprogen",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "desferricoprogen",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR153263"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR153263"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR153268",
+      "substrates": [
+        {
+          "metabolite": "desferricoprogen",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "coprogen",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR153268"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR153268"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR153262",
+      "substrates": [
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 6
+        },
+        {
+          "metabolite": "coprogen",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "desferricoprogen",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR153262"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR153262"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "phenol 2-monooxygenase (NADPH)",
+      "ec": "1.14.13.7",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR198820"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198820"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_coprogen_fe-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coprogen"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fe-to-h2o"
+      },
+      "note": "Shares coprogen with Fe to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM726881"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_coprogen_nicotinate-beta-d-ribonuc-to-fe",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coprogen"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nicotinate-beta-d-ribonuc-to-fe"
+      },
+      "note": "Shares coprogen with nicotinate beta-D-ribonuc… to Fe.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM726881"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_desferricoprogen_fe-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "desferricoprogen"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fe-to-h2o"
+      },
+      "note": "Shares desferricoprogen with Fe to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83125"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_desferricoprogen_nicotinate-beta-d-ribonuc-to-fe",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "desferricoprogen"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nicotinate-beta-d-ribonuc-to-fe"
+      },
+      "note": "Shares desferricoprogen with nicotinate beta-D-ribonuc… to Fe.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83125"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_desferricoprogen_udp-2-acetamido-4-amino-2-to-h",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "desferricoprogen"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-2-acetamido-4-amino-2-to-h"
+      },
+      "note": "Shares desferricoprogen with UDP-2-acetamido-4-amino-2… to H.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83125"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_coprogen_diphosphate-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "coprogen"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diphosphate-to-nadph"
+      },
+      "note": "Shares Coprogen with diphosphate to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM726879"
+          }
+        ]
+      }
+    }
+  ]
+}

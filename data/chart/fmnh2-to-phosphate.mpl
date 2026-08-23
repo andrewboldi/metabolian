@@ -4,51 +4,15 @@
 # edit the generator, not this file.
 
 pathway fmnh2-to-phosphate "FMNH2 to phosphate" {
-  spacing 216
+  spacing 296
 
   spine at 0,0 {
     fmnh2
-    <-> ec_1_1_99_31 [1.1.99.31] +h +2_oxopentanoate -2_hydroxypentanoate
+    <-> ec_1_3_8_16 [1.3.8.16] +h +3_1_carboxyvinyloxy_anthranilate -2s_2_amino_4_deoxychorismate
     fmn
     <-> ec_2_7_1_42 [2.7.1.42] +glucose -h -riboflavin
     alpha_d_glucose_1_phosphate
-    <-> ec_2_4_1_31 [2.4.1.31] +alpha_d_glucose -phosphate
-    beta_d_glucosyl_1_3_d_glucose
-  }
-
-  branch from alpha_d_glucose_1_phosphate side left {
-    alpha_d_glucose_1_phosphate
-    <-> . +alpha_d_glucose
-    alpha_d_glucose_1_6_bisphosphate
-  }
-
-  branch from alpha_d_glucose_1_phosphate side right {
-    alpha_d_glucose_1_phosphate
-    <-> ec_2_4_1_389 [2.4.1.389] +d_glcp_1_3_d_galp +phosphate
-    aldehydo_d_galactose
-  }
-
-  branch from h side left {
-    h
-    <-> . +adenosine_3_5_bisphosphate +salicylsulfuric_acid +salicylate
-    3_phosphoadenylyl_sulfate
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_1_4_38 [3.1.4.38] +phosphocholine +4_nitrophenol +h2o
-    p_nitrophenylphosphocholine
-  }
-
-  branch from phosphate side left {
-    phosphate
-    <-> ec_3_6_1_5 [3.6.1.5] +8_bromo_amp +h +h2o
-    8_bromoadenosine_5_triphosphate
-  }
-
-  branch from phosphate side right {
-    phosphate
-    <-> ec_3_1_3_76 [3.1.3.76] +1_octadecyllysophosphatidic_cid +h2o +h
-    batilol
+    <-> ec_2_4_1_392 [2.4.1.392] +aldehydo_d_glucuronate -phosphate
+    beta_d_glucosyl_1_3_d_glucuronate
   }
 }

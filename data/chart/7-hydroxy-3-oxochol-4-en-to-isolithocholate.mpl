@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 7-hydroxy-3-oxochol-4-en-to-isolithocholate "7α-hydroxy-3-oxochol-4-en… to isolithocholate" {
-  spacing 276
+  spacing 312
 
   spine at 0,0 {
     7_hydroxy_3_oxochol_4_en_24_oate
@@ -26,19 +26,55 @@ pathway 7-hydroxy-3-oxochol-4-en-to-isolithocholate "7α-hydroxy-3-oxochol-4-en�
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_62 [1.1.1.62] +nadh +h +16alpha_hydroxyestrone
-    16alpha_17beta_estriol
+    <-> ec_1_14_12_10 [1.14.12.10] +nadh +h +2_fluorobenzoic_acid +o2
+    6_fluorocyclohexadiene_cis_cis_1_2_diol_1_carbox
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_4_1_12 [1.4.1.12] +nadh +h +2_amino_5_oxohexanoate +nh4 +h2o
-    2r_5s_2_5_diaminohexanoate
+    <-> . +nadh +h +o2 +monofluorobenzene
+    4_fluorocyclohexadiene_cis_cis_1_2_diol
   }
 
-  branch from 3_oxo_5_cholanate side right {
-    3_oxo_5_cholanate
-    <-> ec_1_1_1_392 [1.1.1.392] +nadp +nadph +hplus
-    lithocholate
+  branch from 7_hydroxy_3_oxochol_4_en_24_oate side right {
+    7_hydroxy_3_oxochol_4_en_24_oate
+    <-> ec_2_8_3_25 [2.8.3.25] +choloyl_coa +7_hydroxy_3_oxochol_4_en_24_oyl_coa
+    cholate
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> . +h +o2 +monofluorobenzene +nad
+    1_fluorocyclohexadiene_cis_cis_1_2_diol
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_14_12_10 [1.14.12.10] +h +3_fluorobenzoic_acid +o2 +nad
+    3_fluorocyclohexadiene_cis_cis_1_2_diol_1_carbox
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_3_2_10 [3.3.2.10] +5_6_eet +h2o
+    5_6_dhet
+  }
+
+  branch from h side right {
+    h
+    <-> . +glutathione_episulfonium_ion +h2o
+    s_2_hydroxyethyl_glutathione
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_14_12_10 [1.14.12.10] +nadh +h +3_fluorobenzoic_acid +o2
+    5_fluorocyclohexadiene_cis_cis_1_2_diol_1_carbox
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_3_1_25 [1.3.1.25] +nadh +h +3_fluorocatechol +3_fluorocyclohexadiene_cis_cis_1_2_diol_1_carbox
+    co2
   }
 }

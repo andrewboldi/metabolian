@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-hydroxy-3-all-trans-hep-to-h2o "4-hydroxy-3-all-trans-hep… to H2O" {
-  spacing 276
+  spacing 240
 
   spine at 0,0 {
     4_hydroxy_3_all_trans_heptaprenylbenzoate
@@ -16,41 +16,5 @@ pathway 4-hydroxy-3-all-trans-hep-to-h2o "4-hydroxy-3-all-trans-hep… to H2O" {
     2_methoxy_6_all_trans_heptaprenyl_phenol
     <-> . +h +o2 +nadph -2_methoxy_6_all_trans_heptaprenylhydroquinone -h2o
     nadp
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +4_8_dihydroxyflavone_7_olate +sam +hplus
-    8_hydroxy_4_methoxyflavone_7_olate
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +an_8_hydroxyflavone +sam +hplus
-    an_8_methoxyflavone
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_270 [1.1.1.270] +isoavenastenone +h +nadph
-    isoavenasterol
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +3_amino_4_hydroxyphenyl_arsonate +h2o +h +nadph
-    roxarsone
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_2_1_177 [3.2.1.177] +d_xylp_1_6_d_glcp +alpha_d_xylose
-    beta_d_glucose
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_2_1_159 [3.2.1.159] +beta_d_galactose +3_6_anhydro_l_galactopyranose
-    neoagarobiose
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-aminoethenylphosphonate-to-1-2-dihydroxyethylp "1-aminoethenylphosphonate to 1,2-dihydroxyethylphospho…" {
-  spacing 194
+  spacing 152
 
   spine at 0,0 {
     1_aminoethenylphosphonate
@@ -16,47 +16,5 @@ pathway 1-aminoethenylphosphonate-to-1-2-dihydroxyethylp "1-aminoethenylphosphon
     nad
     <-> . +h +adp +1_hydroxy_2_phosphorylethylphosphonate -1_2_dihydroxyethylphosphonate
     atp
-  }
-
-  branch from 1_amino_2_phosphorylethylphosphonate side left {
-    1_amino_2_phosphorylethylphosphonate
-    <-> . +hydrogen_acetylphosphonate +nh4 +phosphate +h
-    h2o
-  }
-
-  branch from l_glutamate side right {
-    l_glutamate
-    <-> . +l_proline +l_tryptophan +h2o
-    tryptophanyl_glutamyl_proline
-  }
-
-  branch from l_glutamate side left {
-    l_glutamate
-    <-> . +l_tryptophan +l_tyrosine +h2o
-    tryptophanyl_glutamyl_tyrosine
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_14_13_162 [1.14.13.162] +nadh +1r_4r_bornane_2_5_dione +h +o2 +h2o
-    1r_4r_5_oxo_1_2_campholide
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_418 [1.1.1.418] +3_hydroxy_9_9_19_cyclolanost_24_en_28_oate +nadh +31_norcycloartenone
-    co2
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    taurodeoxycholic_acid_3_sulfate
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    5_8_tetradecadienoic_acid
   }
 }

@@ -1,0 +1,434 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "5-ammoniopentanal-to-h2o-61628",
+  "name": "5-ammoniopentanal to H2O",
+  "category": "other",
+  "summary": "A 3-step route from 5-ammoniopentanal to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:61628"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:144896"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "5_ammoniopentanal",
+      "name": "5-ammoniopentanal",
+      "formula": "C5H12NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:144896"
+      }
+    },
+    {
+      "id": "1_piperideinium",
+      "name": "1-piperideinium",
+      "formula": "C5H10N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:144897"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "nh4",
+      "name": "NH4",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM729302"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "H2O2",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM732620"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "cadaverine",
+      "name": "cadaverine",
+      "formula": "C5H16N2",
+      "charge": 2,
+      "xrefs": {
+        "metanetx": "MNXM943"
+      }
+    },
+    {
+      "id": "2_oxoglutarate",
+      "name": "2-oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1368744"
+      }
+    },
+    {
+      "id": "l_glutamate",
+      "name": "L-glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM741173"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "5-aminopentanal = 1-piperideine + H2O",
+      "equation": "5-aminopentanal = 1-piperideine + H2O",
+      "substrates": [
+        {
+          "metabolite": "5_ammoniopentanal",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_piperideinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:61628"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61628"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR137746",
+      "substrates": [
+        {
+          "metabolite": "1_piperideinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh4",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cadaverine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR137746"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR137746"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR97139",
+      "substrates": [
+        {
+          "metabolite": "2_oxoglutarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cadaverine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_piperideinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR97139"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR97139"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_5_ammoniopentanal_5-ammoniopentanal-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_ammoniopentanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-ammoniopentanal-to-h2o"
+      },
+      "note": "Shares 5-ammoniopentanal with 5-ammoniopentanal to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:144896"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_ammoniopentanal_cadaverine-to-wortmanamide-a",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_ammoniopentanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cadaverine-to-wortmanamide-a"
+      },
+      "note": "Shares 5-ammoniopentanal with cadaverine to wortmanamide A.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:144896"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_ammoniopentanal_cadaverine-to-wortmanamide-a-61624",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_ammoniopentanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cadaverine-to-wortmanamide-a-61624"
+      },
+      "note": "Shares 5-ammoniopentanal with cadaverine to wortmanamide A.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:144896"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_ammoniopentanal_guaiacylglycerol-guaiac-to-hydroquinone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_ammoniopentanal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "guaiacylglycerol-guaiac-to-hydroquinone"
+      },
+      "note": "Shares 5-ammoniopentanal with guaiacylglycerol-β-guaiac… to hydroquinone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:144896"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_piperideinium_5-ammoniopentanal-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_piperideinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-ammoniopentanal-to-h2o"
+      },
+      "note": "Shares 1-piperideinium with 5-ammoniopentanal to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:144897"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_piperideinium_biphenyl-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_piperideinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "biphenyl-to-nad"
+      },
+      "note": "Shares 1-piperideinium with biphenyl to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:144897"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_piperideinium_biphenyl-to-nad-18165",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_piperideinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "biphenyl-to-nad-18165"
+      },
+      "note": "Shares 1-piperideinium with biphenyl to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:144897"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_piperideinium_co2-to-anapheline",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_piperideinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "co2-to-anapheline"
+      },
+      "note": "Shares 1-piperideinium with CO2 to Anapheline.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:144897"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_1_piperideinium_co2-to-anapheline-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "1_piperideinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "co2-to-anapheline-null"
+      },
+      "note": "Shares 1-piperideinium with CO2 to Anapheline.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:144897"
+          }
+        ]
+      }
+    }
+  ]
+}

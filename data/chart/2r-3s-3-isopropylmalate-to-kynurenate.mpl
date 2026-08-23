@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2r-3s-3-isopropylmalate-to-kynurenate "(2R,3S)-3-isopropylmalate to kynurenate" {
-  spacing 224
+  spacing 236
 
   spine at 0,0 {
     2r_3s_3_isopropylmalate
@@ -18,37 +18,49 @@ pathway 2r-3s-3-isopropylmalate-to-kynurenate "(2R,3S)-3-isopropylmalate to kynu
 
   branch from 4_2_aminophenyl_2_4_dioxobutanoate side left {
     4_2_aminophenyl_2_4_dioxobutanoate
-    <-> . +l_kynurenine +pyruvate
-    alanine
-  }
-
-  branch from 4_2_aminophenyl_2_4_dioxobutanoate side right {
-    4_2_aminophenyl_2_4_dioxobutanoate
     <-> . +3_indol_3_yl_pyruvate +l_kynurenine
     l_tryptophan
   }
 
+  branch from 4_2_aminophenyl_2_4_dioxobutanoate side right {
+    4_2_aminophenyl_2_4_dioxobutanoate
+    <-> . +keto_phenylpyruvate +l_kynurenine
+    l_phenylalanine
+  }
+
   branch from leucine side left {
     leucine
-    <-> . +r_3_phenyllactate +dlactate +sam +atp +amp +sah +ppi +hplus
-    pf1022c
+    <-> . +n_1_deoxy_d_fructopyranos_1_yl_l_leucine_betaine +o2 +h2o +h2o2
+    2_dehydro_d_glucopyranose
   }
 
   branch from leucine side right {
     leucine
-    <-> . +r_3_phenyllactate +dlactate +sam +atp +amp +sah +ppi +hplus
-    pf1022d
+    <-> ec_2_1_4_4 [2.1.4.4] +arginine +ornithine
+    n_amidino_l_leucine
   }
 
   branch from kynurenate side left {
     kynurenate
-    <-> . +l_kynurenine +l_tryptophan +h2o
-    3_indol_3_yl_pyruvate
+    <-> . +l_kynurenine +l_phenylalanine +h2o
+    keto_phenylpyruvate
   }
 
-  branch from kynurenate side right {
-    kynurenate
-    <-> . +l_kynurenine +oxaloacetate +h2o
-    aspartate
+  branch from l_kynurenine side right {
+    l_kynurenine
+    <-> . +n_methyl_l_alanine +atp +amp +ppi +hplus
+    aspkyncin
+  }
+
+  branch from leucine side left {
+    leucine
+    <-> . +n_carbamoyl_l_leucinate +h2o +hplus +co2
+    nh3
+  }
+
+  branch from leucine side right {
+    leucine
+    <-> . +n_terminal_l_leucyl_l_amino_acid_1 +h2o
+    n_terminal_amino_acid_1
   }
 }

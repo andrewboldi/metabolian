@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway shikimate-to-4-ethyl-2-methoxyphenol "shikimate to 4-Ethyl-2-methoxyphenol" {
-  spacing 274
+  spacing 340
 
   spine at 0,0 {
     shikimate
@@ -22,11 +22,123 @@ pathway shikimate-to-4-ethyl-2-methoxyphenol "shikimate to 4-Ethyl-2-methoxyphen
     4_ethyl_2_methoxyphenol
   }
 
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_42 [1.14.14.42] +l_dihomomethionine +fmnh2 +o2 +co2 +h2o +hplus
+    e_5_methylsulfanyl_pentanal_oxime
+  }
 
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_42 [1.14.14.42] +l_trihomomethionine +fmnh2 +o2 +co2 +h2o +hplus
+    e_6_methylsulfanyl_hexanal_oxime
+  }
 
+  branch from shikimate side left {
+    shikimate
+    <-> ec_1_1_1_25 [1.1.1.25] +nadp +nadph +hplus
+    3_dehydroshikimate
+  }
 
+  branch from trans_caffeate side right {
+    trans_caffeate
+    <-> . +udp_d_glucose +udp
+    1_caffeoyl_d_glucose
+  }
 
+  branch from trans_caffeate side left {
+    trans_caffeate
+    <-> . +malonyl-coa +atp +hplus +amp +co2 +ppi +coa
+    hispidin
+  }
 
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_145 [2.1.1.145] +trans_aconitate +sam
+    2e_2_methoxycarbonylmethyl_but_2_enedioate
+  }
 
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_38 [2.1.1.38] +o_demethylpuromycin +sam +hplus
+    puromycin
+  }
 
+  branch from 2_methoxy_4_vinylphenol side right {
+    2_methoxy_4_vinylphenol
+    <-> ec_1_13_11_94 [1.13.11.94] +o2 +formaldehyde
+    vanillin
+  }
+
+  branch from 4_coumaroyl_coa side left {
+    4_coumaroyl_coa
+    <-> ec_2_3_1_211 [2.3.1.211] +malonyl-coa +h2o +hplus +co2 +coa
+    bisdemethoxycurcumin
+  }
+
+  branch from 4_coumaroyl_coa side right {
+    4_coumaroyl_coa
+    <-> ec_2_3_1_218 [2.3.1.218] +malonyl-coa +hplus +co2 +coa
+    4_coumaroyl_acetyl_coa
+  }
+
+  branch from fmnh2 side left {
+    fmnh2
+    <-> ec_1_14_14_133 [1.14.14.133] +1_8_cineole +o2 +fmn +h2o +hplus
+    2_endo_hydroxy_1_8_cineole
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> ec_1_14_14_114 [1.14.14.114] +amorpha_4_11_diene +o2 +fmn +h2o +hplus
+    artemisinate
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_42 [1.14.14.42] +l_tetrahomomethionine +fmnh2 +o2 +co2 +h2o +hplus
+    e_7_methylsulfanyl_heptanal_oxime
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_40 [1.14.14.40] +l_phenylalanine +fmnh2 +o2 +co2 +h2o +hplus
+    e_phenylacetaldehyde_oxime
+  }
+
+  branch from trans_caffeate side left {
+    trans_caffeate
+    <-> . +h2o +pyruvate +hplus
+    e_caffeoylpyruvate
+  }
+
+  branch from trans_caffeate side right {
+    trans_caffeate
+    <-> . +atp +hplus +ppi
+    trans_caffeoyl_amp
+  }
+
+  branch from sam side left {
+    sam
+    <-> ec_4_4_1_42 [4.4.1.42] +5_s_methyl_5_thioadenosine
+    l_homoserine_lactone
+  }
+
+  branch from sam side right {
+    sam
+    <-> ec_2_1_1_62 [2.1.1.62] +5_n7_methyl_5_triphosphoguanosine_2_o_methyladen +sah +hplus
+    5_n7_methyl_5_triphosphoguanosine_n6_methyl_2_o
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_49 [2.1.1.49] +primary_ammonium_ion +sam +hplus
+    methylated_primary_amine
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_117 [2.1.1.117] +s_scoulerine +sam +hplus
+    s_tetrahydrocolumbamine
+  }
 }

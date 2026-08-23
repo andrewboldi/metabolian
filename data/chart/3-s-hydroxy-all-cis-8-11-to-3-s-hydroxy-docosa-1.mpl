@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-s-hydroxy-all-cis-8-11-to-3-s-hydroxy-docosa-1 "3(S)-hydroxy-all-cis-8,11… to 3(S)-hydroxy-docosa-10,13…" {
-  spacing 188
+  spacing 164
 
   spine at 0,0 {
     3_s_hydroxy_all_cis_8_11_14_17_eicosatetraenoyl
@@ -22,39 +22,15 @@ pathway 3-s-hydroxy-all-cis-8-11-to-3-s-hydroxy-docosa-1 "3(S)-hydroxy-all-cis-8
     nadp
   }
 
-  branch from h side left {
-    h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +streptothricin_d +phosphate +streptothricin_d +h2o
-    atp
+  branch from malonyl-coa side left {
+    malonyl-coa
+    <-> . +flavonol_7_o_d_glucoside +coa
+    flavonol_7_o_6_o_malonyl_d_glucoside
   }
 
-  branch from h side right {
-    h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    streptothricin_d_acid
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> . +pseudomonate_c +nadp +h
-    deoxymupirocin_f
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> ec_1_3_1_113 [1.3.1.113] +h +4_octanoyl_5_oxo_2h_furan_3_yl_methyl_phosphate +nadp
-    3s_4r_4_octanoyl_5_oxooxolan_3_yl_methyl_phosph
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +tetrahydrogeranylgeranyl_bacteriochlorophyllide +h +nadph
-    dihydrogeranylgeranyl_bacteriochlorophyllide_b
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_1_1_413 [1.1.1.413] +h +nadph +6_dehydro_virginiae_butanolide_a
-    virginiae_butanolide_a
+  branch from malonyl-coa side right {
+    malonyl-coa
+    <-> . +lauroyl_coa +hplus +co2 +coa
+    3_oxotetradecanoyl_coa
   }
 }

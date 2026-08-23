@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "tricarballylate-to-d-erythro-isocitrate",
   "name": "tricarballylate to D-erythro-isocitrate",
-  "category": "other",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from tricarballylate to D-erythro-isocitrate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -91,15 +91,6 @@
       }
     },
     {
-      "id": "citrate",
-      "name": "Citrate",
-      "formula": "C6H5O7",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:16947"
-      }
-    },
-    {
       "id": "nadp",
       "name": "NADP+",
       "formula": "C21H25N7O17P3",
@@ -125,6 +116,25 @@
       "xrefs": {
         "chebi": "CHEBI:57783"
       }
+    },
+    {
+      "id": "fumonisin_b1",
+      "name": "fumonisin B1",
+      "formula": "C34H56NO15",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:62554"
+      }
+    },
+    {
+      "id": "2s_3s_5r_10r_12s_14s_15r_16r_2_amino_12_16_dime",
+      "name": "(2S,3S,5R,10R,12S,14S,15R,16R)-2-amino-12,16-dimethylicosane-3,5,10,14,15-pentol",
+      "short": "(2S,3S,5R,10R,12S,1…",
+      "formula": "C22H48NO5",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:62526"
+      }
     }
   ],
   "enzymes": [
@@ -136,10 +146,10 @@
       ]
     },
     {
-      "id": "ec_4_2_1_3",
-      "name": "aconitate hydratase",
+      "id": "ec_3_1_1_87",
+      "name": "fumonisin B1 esterase",
       "ec": [
-        "4.2.1.3"
+        "3.1.1.87"
       ]
     }
   ],
@@ -261,43 +271,6 @@
     },
     {
       "id": "r4",
-      "name": "aconitate hydratase",
-      "equation": "citrate = D-threo-isocitrate",
-      "ec": "4.2.1.3",
-      "substrates": [
-        {
-          "metabolite": "citrate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "d_threo_isocitrate",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_1_3"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:10336"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:10336"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
       "name": "D-threo-isocitrate + NADP(+) = (S)-oxalosuccinate + NADPH + H(+)",
       "equation": "D-threo-isocitrate + NADP(+) = (S)-oxalosuccinate + NADPH + H(+)",
       "substrates": [
@@ -325,7 +298,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
         "rhea": "RHEA:25588"
       },
@@ -335,6 +308,321 @@
           {
             "db": "Rhea",
             "id": "RHEA:25588"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "fumonisin B1 esterase",
+      "equation": "fumonisin B1 + 2 H2O = (2S,3S,5R,10R,12S,14S,15R,16R)-2-amino-12,16-dimethylicosane-3,5,10,14,15-pentol + 2 tricarballylate + 2 H(+)",
+      "ec": "3.1.1.87",
+      "substrates": [
+        {
+          "metabolite": "fumonisin_b1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2s_3s_5r_10r_12s_14s_15r_16r_2_amino_12_16_dime",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "tricarballylate",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_87"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:30363"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30363"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_cis_aconitate_citrate-to-cis-aconitate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cis_aconitate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "citrate-to-cis-aconitate"
+      },
+      "note": "Shares cis-Aconitate with citrate to cis-aconitate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16383"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cis_aconitate_citric-acid-cycle",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cis_aconitate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "citric-acid-cycle"
+      },
+      "note": "Shares cis-Aconitate with Citric acid cycle (TCA / Krebs cycle).",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16383"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cis_aconitate_trans-aconitate-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cis_aconitate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-aconitate-to-succinate"
+      },
+      "note": "Shares cis-Aconitate with trans-aconitate to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16383"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_threo_isocitrate_7r-7-5-carboxy-5-oxope-to-cephalosporin-c",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_threo_isocitrate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7r-7-5-carboxy-5-oxope-to-cephalosporin-c"
+      },
+      "note": "Shares D-threo-isocitrate with (7R)-7-(5-carboxy-5-oxope… to cephalosporin C.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15562"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_threo_isocitrate_l-histidinol-phosphate-to-l-glutamate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_threo_isocitrate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-histidinol-phosphate-to-l-glutamate"
+      },
+      "note": "Shares D-threo-isocitrate with L-histidinol phosphate to L-glutamate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15562"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_threo_isocitrate_oxaloacetate-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_threo_isocitrate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "oxaloacetate-to-succinate"
+      },
+      "note": "Shares D-threo-isocitrate with oxaloacetate to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15562"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_threo_isocitrate_udp-to-quercetin-3-o-6-o-caffe",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_threo_isocitrate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-quercetin-3-o-6-o-caffe"
+      },
+      "note": "Shares D-threo-isocitrate with UDP to quercetin 3-O-[(6-O-caffe….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15562"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_oxalatosuccinate_24-methylidenelophenol-to-episterol-ester",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_oxalatosuccinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "24-methylidenelophenol-to-episterol-ester"
+      },
+      "note": "Shares (S)-oxalatosuccinate with 24-methylidenelophenol to episterol ester.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:153066"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_oxalatosuccinate_2e-4z-7e-2-hydroxy-6-ox-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_oxalatosuccinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2e-4z-7e-2-hydroxy-6-ox-to-h2o"
+      },
+      "note": "Shares (S)-oxalatosuccinate with (2E,4Z,7E)-2-hydroxy-6-ox… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:153066"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_oxalatosuccinate_7r-7-5-carboxy-5-oxope-to-cephalosporin-c",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_oxalatosuccinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7r-7-5-carboxy-5-oxope-to-cephalosporin-c"
+      },
+      "note": "Shares (S)-oxalatosuccinate with (7R)-7-(5-carboxy-5-oxope… to cephalosporin C.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:153066"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_oxalatosuccinate_9-hydroxygeraniol-to-2e-geraniol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_oxalatosuccinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "9-hydroxygeraniol-to-2e-geraniol"
+      },
+      "note": "Shares (S)-oxalatosuccinate with 9-Hydroxygeraniol to (2E)-geraniol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:153066"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_s_oxalatosuccinate_n-acetyl-d-6-sulfogalac-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "s_oxalatosuccinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyl-d-6-sulfogalac-to-h2o"
+      },
+      "note": "Shares (S)-oxalatosuccinate with N-acetyl-β-D-6-sulfogalac… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:153066"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-adenosyl-l-homocysteine-to-prostreptovaricin "S-adenosyl-L-homocysteine to prostreptovaricin" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     s_adenosyl_l_homocysteine
@@ -14,17 +14,5 @@ pathway s-adenosyl-l-homocysteine-to-prostreptovaricin "S-adenosyl-L-homocystein
     3_methylprostreptovaricin
     <-> . +s_adenosyl_l_homocysteine +h -prostreptovaricin
     s_adenosyl_l_methionine
-  }
-
-  branch from s_adenosyl_l_methionine side left {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +protostreptovaricin_iv
-    protostreptovaricin_iii
-  }
-
-  branch from s_adenosyl_l_methionine side right {
-    s_adenosyl_l_methionine
-    <-> . +chaxamycin_a_rel +s_adenosyl_l_homocysteine +h
-    3_demethylchaxamycin_a
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-oleoyl-2-palmitoyl-sn-g-to-9z-hexadecenoyl-sn "1-oleoyl-2-palmitoyl-sn-g… to [(9Z)-hexadecenoyl]-sn-gl…" {
-  spacing 152
+  spacing 176
 
   spine at 0,0 {
     1_oleoyl_2_palmitoyl_sn_glycero_3_phosphocholine
@@ -16,5 +16,29 @@ pathway 1-oleoyl-2-palmitoyl-sn-g-to-9z-hexadecenoyl-sn "1-oleoyl-2-palmitoyl-sn
     choline_alfoscerate
     <-> . +palmitoleoyl_coa -coa
     9z_hexadecenoyl_sn_glycero_3_phosphocholine
+  }
+
+  branch from palmitoyl_coa side left {
+    palmitoyl_coa
+    <-> . +isoamylol +coa
+    3_methylbutyl_hexadecanoate
+  }
+
+  branch from palmitoyl_coa side right {
+    palmitoyl_coa
+    <-> . +4_methylpentan_1_ol +coa
+    4_methylpentyl_hexadecanoate
+  }
+
+  branch from palmitoleoyl_coa side left {
+    palmitoleoyl_coa
+    <-> ec_1_14_19_6 [1.14.19.6] +fe2 +o2 +hplus +iron +h2o
+    9z_12z_hexadecadienoyl_coa
+  }
+
+  branch from palmitoleoyl_coa side right {
+    palmitoleoyl_coa
+    <-> . +fad +hplus +fadh2
+    2e_9z_hexadecadienoyl_coa
   }
 }

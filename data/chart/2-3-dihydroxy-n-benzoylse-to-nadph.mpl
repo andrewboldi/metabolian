@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-3-dihydroxy-n-benzoylse-to-nadph "2,3-dihydroxy-N-benzoylse… to NADPH" {
-  spacing 272
+  spacing 308
 
   spine at 0,0 {
     2_3_dihydroxy_n_benzoylserine_dimer
@@ -20,121 +20,157 @@ pathway 2-3-dihydroxy-n-benzoylse-to-nadph "2,3-dihydroxy-N-benzoylse… to NADP
 
   branch from h side left {
     h
-    <-> . +diphosphate +12_ethyl_8_isobutylbacteriochlorophyll_d +12_ethyl_8_isobutylbacteriochlorophyllide_d
-    2e_6e_farnesyl_diphosphate
+    <-> . +rosuvastatin +h2o
+    rosuvastatin_5s_lactone
   }
 
   branch from h side right {
     h
-    <-> . +diphosphate +31r_8_ethyl_12_methylbacteriochlorophyll_c +2e_6e_farnesyl_diphosphate
-    31r_8_ethyl_12_methylbacteriochlorophyllide_c
-  }
-
-  branch from n_2_3_dihydroxybenzoyl_l_serine side left {
-    n_2_3_dihydroxybenzoyl_l_serine
-    <-> . +h +h2o
-    n_2_3_dihydroxybenzoyl_l_serine_trimer
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_2_7_1_20 [2.7.1.20] +vidarabine_phosphate_usan +adp +h
-    adenine_arabinoside
+    <-> . +adp +phosphate +atp +h2o
+    sm_d18_0_24_1_sphingomyelin
   }
 
   branch from atp side left {
     atp
-    <-> ec_2_7_1_2 [2.7.1.2] +glucose +h +adp
-    d_glucopyranose_1_phosphate
+    <-> . +h +adp +phosphate +h2o
+    sm_d18_1_14_0_sphingomyelin
   }
 
-  branch from l_serine side right {
-    l_serine
-    <-> ec_3_4_11_1 [3.4.11.1] +compound_0068886 +h +h2o
-    glycine
+  branch from atp side right {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    sm_d18_1_15_0_sphingomyelin
   }
 
   branch from l_serine side left {
     l_serine
-    <-> ec_3_4_13_9 [3.4.13.9] +l_proline +h2o
-    ser_pro
+    <-> . +l_tryptophan +l_phenylalanine +h2o
+    phenylalanyl_seryl_tryptophan
   }
 
-  branch from co2 side right {
-    co2
-    <-> ec_2_3_1_260 [2.3.1.260] +malonyl_coa +o_s_malonamoylpantetheine_4_phosphoryl_serine_1 +h +coa
-    o_s_18_carbamoyl_3_5_7_9_11_13_15_17_octaoxoocta
+  branch from l_serine side right {
+    l_serine
+    <-> . +l_alanine +l_arginine +h2o
+    seryl_arginyl_alanine
   }
 
   branch from co2 side left {
     co2
-    <-> . +2_oxo_10_methylthiodecanoic_acid +h
-    3_carboxy_10_methylsulfanyl_2_oxodecanoate
+    <-> . +salinisporamycin_a
+    rifsaliniketal
   }
 
-  branch from 1_2_3_trihydroxybenzene side right {
-    1_2_3_trihydroxybenzene
-    <-> ec_1_97_1_2 [1.97.1.2]
-    1_3_5_trihydroxybenzene
+  branch from co2 side right {
+    co2
+    <-> ec_2_3_1_199 [2.3.1.199] +6z_9z_12z_15z_18z_tetracosapentaenoyl_coa +malonyl_coa +h +8z_11z_14z_17z_20z_3_oxohexacosapentaenoyl_coa
+    coa
   }
 
   branch from 1_2_3_trihydroxybenzene side left {
+    1_2_3_trihydroxybenzene
+    <-> ec_1_13_11_35 [1.13.11.35] +h +o2
+    z_5_oxohex_2_enedioate
+  }
+
+  branch from 1_2_3_trihydroxybenzene side right {
     1_2_3_trihydroxybenzene
     <-> ec_1_14_13_236 [1.14.13.236] +nadh +h +o2 +nad +h2o
     catechol
   }
 
-  branch from nad side right {
-    nad
-    <-> . +nadh +co2 +h +glycine_betaine +o2 +h2o
-    trimethylaminoacetone
-  }
-
   branch from nad side left {
     nad
-    <-> ec_1_14_12_16 [1.14.12.16] +nadh +h +3_methyl_quinolin_2_ol +o2
-    5_6_dihydroxy_3_methyl_5_6_dihydroquinolin_2_1h
+    <-> ec_1_14_13_9 [1.14.13.9] +nadh +h +l_kynurenine +o2 +h2o
+    3_hydroxy_l_kynurenine
   }
 
-  branch from h2o side right {
-    h2o
-    <-> ec_4_2_1_17 [4.2.1.17] +2e_9z_hexadecadienoyl_coa
-    3s_9z_3_hydroxyhexadecenoyl_coa
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_387 [1.1.1.387] +nadh +h +methyl_2_2_dimethyl_3_oxopropanoate
+    methyl_2_2_dimethyl_3_hydroxypropionate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_4_2_1_17 [4.2.1.17] +e_z_tetradeca_2_7_dienoyl_coa
-    3s_7z_3_hydroxytetradec_7_enoyl_coa
+    <-> . +l_lysine
+    lysyl_lysyl_lysine
   }
 
-  branch from resorcinol side right {
+  branch from h2o side right {
+    h2o
+    <-> . +l_lysine +l_isoleucine +l_phenylalanine
+    lysyl_phenylalanyl_isoleucine
+  }
+
+  branch from resorcinol side left {
     resorcinol
     <-> ec_1_10_3_2 [1.10.3.2] +h2o +o2
     3_benzosemiquinone
   }
 
-  branch from o2 side left {
-    o2
-    <-> . +4_hydroxytetracenomycin_a2 +h2o
-    tetracenomycin_a2_epoxyquinone
-  }
-
   branch from o2 side right {
     o2
-    <-> . +lycorine +nadp +h2o +h +nadph
-    caranine
+    <-> . +h +nadph +phenylarsonous_acid +nadp +h2o
+    phenylarsonic_acid
   }
 
-  branch from nadph side left {
-    nadph
-    <-> ec_1_3_1_111 [1.3.1.111] +h +geranylgeranyl_bacteriochlorophyllide_b +nadp
-    bacteriochlorophyll_b
+  branch from o2 side left {
+    o2
+    <-> . +h +nadph +roxarsone_iii +nadp +h2o
+    roxarsone
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_14_13_237 [1.14.13.237] +glucoiberverin +h +o2 +nadp +h2o
-    glucoiberin
+    <-> ec_1_1_1_314 [1.1.1.314] +germacra_1_10_4_11_13_trien_12_oate +h +nadp +h2o
+    germacra_1_10_4_11_13_trien_12_al
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_1_1_314 [1.1.1.314] +germacra_1_10_4_11_13_trien_12_oate +h +nadp +h2o
+    germacra_1_10_4_11_13_trien_12_ol
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +l_lysine +l_isoleucine +l_tyrosine
+    lysyl_tyrosyl_isoleucine
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +l_lysine +l_valine +l_tryptophan
+    lysyl_valyl_tryptophan
+  }
+
+  branch from h side right {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    sm_d18_1_16_1_sphingomyelin
+  }
+
+  branch from h side left {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    sm_d18_1_16_0_sphingomyelin
+  }
+
+  branch from adp side right {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    sm_d18_1_17_0_sphingomyelin
+  }
+
+  branch from adp side left {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    sm_d18_1_18_1_sphingomyelin
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    sm_d18_1_18_0_sphingomyelin
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-xylp-1-6-d-glcp-to-h2o "α-D-Xylp-(1→6)-D-Glcp to H2O" {
-  spacing 222
+  spacing 312
 
   spine at 0,0 {
     d_xylp_1_6_d_glcp
@@ -24,25 +24,115 @@ pathway d-xylp-1-6-d-glcp-to-h2o "α-D-Xylp-(1→6)-D-Glcp to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_194 [3.2.1.194] +glucose +protopanaxatriol
-    ginsenoside_rf
+    <-> . +hepoxilin_b3
+    10_11s_12r_trihydroxy_5z_8z_14z_eicosatrienoate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_186 [3.2.1.186] +glucose +26_degluco_protogracillin
-    protogracillin
+    <-> ec_1_14_13_52 [1.14.13.52] +biochanin_a +h +o2 +nadph +nadp
+    pratensein
   }
 
   branch from atp side right {
     atp
-    <-> . +diphosphate +c27_mycolipanoyl_coa +amp +coa
-    c27_mycolipanoate
+    <-> . +h +adp +phosphate +h2o
+    4_acetamidophenol
   }
 
   branch from atp side left {
     atp
-    <-> . +diphosphate +l_4_hydroxyphenylglycine_l_arginyl_d_4_hydroxyph +h +amp +l_serine +l_arginine +h2o
-    l_4_hydroxymethyl_glycine
+    <-> . +h +adp +phosphate +h2o
+    r_adrenaline
+  }
+
+  branch from d_xylp_1_6_d_glcp side right {
+    d_xylp_1_6_d_glcp
+    <-> ec_3_2_1_177 [3.2.1.177] +h2o +alpha_d_xylose
+    beta_d_glucose
+  }
+
+  branch from glucose side left {
+    glucose
+    <-> ec_5_3_1_5 [5.3.1.5]
+    beta_d_fructose
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> ec_2_4_1_20 [2.4.1.20] +d_glucopyranose_1_phosphate +phosphate
+    beta_cellobiose
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_4_2_1_119 [4.2.1.119] +2e_6z_9z_12z_15z_18z_tetracosahexaenoyl_coa
+    3r_6z_9z_12z_15z_18z_3_hydroxytetracosapentaeno
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +2e_6z_9z_12z_15z_18z_tetracosahexaenoyl_coa
+    6z_9z_12z_15z_18z_3_hydroxytetracosapenta_6_9_1
+  }
+
+  branch from d_galactopyranose side left {
+    d_galactopyranose
+    <-> ec_5_1_3_3 [5.1.3.3]
+    beta_d_galactose
+  }
+
+  branch from d_galactopyranose side right {
+    d_galactopyranose
+    <-> . +melibiose +h2o
+    alpha_d_glucose
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_5_1_32 [2.5.1.32] +prephytoene_diphosphate +all_trans_phytoene
+    diphosphate
+  }
+
+  branch from h side right {
+    h
+    <-> . +phaseic_acid
+    8_hydroxyabscisate
+  }
+
+  branch from adp side left {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    agmatine
+  }
+
+  branch from adp side right {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    3alpha_hydroxy_5beta_androstan_17_one
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> ec_3_6_1_52 [3.6.1.52] +1d_myo_inositol_hexakisphosphate +h +h2o
+    3_diphospho_1d_myo_inositol_1_2_4_5_6_pentakisph
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_2_5_1_54 [2.5.1.54] +d_arabinose_5_phosphate +h +phosphoenolpyruvate +h2o
+    8_phospho_3_deoxy_d_manno_oct_2_ulosonic_acid
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    cyclosporin_a_metabolite_m1a
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    am1al_cyclosporine
   }
 }

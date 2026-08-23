@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-glucosamine-to-5-o-phosphonato-d-ribof "α-D-glucosamine… to 5-O-phosphonato-α-D-ribof…" {
-  spacing 278
+  spacing 296
 
   spine at 0,0 {
     d_glucosamine_1_phosphate
@@ -20,45 +20,63 @@ pathway d-glucosamine-to-5-o-phosphonato-d-ribof "α-D-glucosamine… to 5-O-pho
     prpp
   }
 
-  branch from n_acetyl_d_glucosamine_1_phosphate side left {
-    n_acetyl_d_glucosamine_1_phosphate
-    <-> . +udpglcnac +h2o +hplus
-    ump
+  branch from udpglcnac side left {
+    udpglcnac
+    <-> ec_2_4_1_39 [2.4.1.39] +17_estradiol_3_glucosiduronate +udp +hplus
+    17_n_acetyl_d_glucosaminyl_estradiol_3_glucosidu
   }
 
   branch from udpglcnac side right {
     udpglcnac
-    <-> ec_1_1_1_136 [1.1.1.136] +nad +h2o +nadh +hplus
-    udp_2_acetamido_2_deoxy_d_glucuronate
-  }
-
-  branch from udpglcnac side left {
-    udpglcnac
-    <-> ec_2_4_1_138 [2.4.1.138] +d_manp_1_3_d_manp_1_2_d_manp_1_2_d_manp +udp +hplus
-    d_glcpnac_1_2_d_manp_1_3_d_manp_1_2_d_manp_1_2
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> ec_6_2_1_24 [6.2.1.24] +phytanate +atp +coa +amp
-    phytanoyl_coa
+    <-> ec_2_4_1_149 [2.4.1.149] +d_galactosyl_1_4_n_acetyl_d_glucosaminide +udp +hplus
+    n_acetyl_d_glucosaminyl_1_3_d_galactosyl_1_4_n_a
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_3_1_7_1 [3.1.7.1] +dmapp +h2o
-    prenol
+    <-> ec_2_5_1_81 [2.5.1.81] +ipp +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    all_trans_pentaprenyl_diphosphate
   }
 
-  branch from adenine side right {
-    adenine
-    <-> . +2_deoxyadenosine_5_monophosphate +h2o
-    2_deoxy_d_ribofuranose_5_phosphate
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_40 [4.2.3.40] +fpp
+    z_bisabolene
   }
 
-  branch from adenine side left {
-    adenine
-    <-> . +datp +h2o
-    2_deoxyribose_5_triphosphate
+  branch from utp side left {
+    utp
+    <-> . +atp +ppi
+    3_3_cuamp
+  }
+
+  branch from utp side right {
+    utp
+    <-> . +ppi
+    cyclic_di_ump
+  }
+
+  branch from udpglcnac side left {
+    udpglcnac
+    <-> ec_2_4_1_94 [2.4.1.94] +l_asparagine +udp +hplus
+    n4_n_acetyl_d_glucosyl_l_asparagine
+  }
+
+  branch from udpglcnac side right {
+    udpglcnac
+    <-> ec_2_4_1_150 [2.4.1.150] +d_galactosyl_1_4_n_acetyl_d_glucosaminide +udp +hplus
+    n_acetyl_d_glucosaminyl_1_6_d_galactosyl_1_4_n_a
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_39 [4.2.3.39] +fpp +h2o
+    epi_cedrol
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_44 [4.2.3.44] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    isopimara_7_15_diene
   }
 }

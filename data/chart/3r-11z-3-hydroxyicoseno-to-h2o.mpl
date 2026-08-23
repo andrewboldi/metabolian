@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3r-11z-3-hydroxyicoseno-to-h2o "(3R,11Z)-3-hydroxyicoseno… to H2O" {
-  spacing 212
+  spacing 152
 
   spine at 0,0 {
     3r_11z_3_hydroxyicosenoyl_coa
@@ -18,65 +18,5 @@ pathway 3r-11z-3-hydroxyicoseno-to-h2o "(3R,11Z)-3-hydroxyicoseno… to H2O" {
     atp
     <-> . +h +adp +8_11_eicosadienoic_acid +phosphate -atp -h2o
     8_11_eicosadienoic_acid
-  }
-
-  branch from 11z_eicosenoyl_coa side left {
-    11z_eicosenoyl_coa
-    <-> . +sn_glycerol_3_phosphate +coa
-    1_11z_eicosenoyl_glycero_3_phosphate
-  }
-
-  branch from 11z_eicosenoyl_coa side right {
-    11z_eicosenoyl_coa
-    <-> . +s_carnitine +coa
-    9z_icos_9_enoylcarnitine
-  }
-
-  branch from 8z_11z_icosadienoyl_coa side left {
-    8z_11z_icosadienoyl_coa
-    <-> . +h +o2 +nadph +nadp +h2o
-    5z_8z_11z_icosatrienoyl_coa
-  }
-
-  branch from 8z_11z_icosadienoyl_coa side right {
-    8z_11z_icosadienoyl_coa
-    <-> . +s_carnitine +coa
-    8z_11z_icosa_8_11_dienoylcarnitine
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    indolmycin
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    dihydrokalafungin
-  }
-
-  branch from coa side left {
-    coa
-    <-> ec_2_3_1_16 [2.3.1.16] +3_oxopentanoyl_coa +propanoyl_coa
-    acetyl_coa
-  }
-
-  branch from coa side right {
-    coa
-    <-> ec_2_3_1_37 [2.3.1.37] +succinyl_coa +h +glycine
-    2_amino_3_oxoadipic_acid
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    actinorhodin_intermediate
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    deacetoxycephalosporin_c
   }
 }

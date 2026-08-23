@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway butanal-to-3-oxopentanoate "butanal to 3-oxopentanoate" {
-  spacing 214
+  spacing 196
 
   spine at 0,0 {
     butanal
@@ -14,23 +14,5 @@ pathway butanal-to-3-oxopentanoate "butanal to 3-oxopentanoate" {
     butan_2_one
     <-> ec_6_4_1_6 [6.4.1.6] +hco3 +atp +h2o -amp -pi -hplus
     3_oxopentanoate
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +tazarotenic_acid +h +o2 +nadph +h2o
-    tazarotenic_acid_sulfoxide
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_1_1_206 [1.1.1.206] +3_methylcyclohexanone +h +nadph
-    3_methylcyclohexanol
-  }
-
-  branch from butan_2_ol side left {
-    butan_2_ol
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +z_but_2_enol +h
-    nad
   }
 }

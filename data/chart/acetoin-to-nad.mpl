@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway acetoin-to-nad "acetoin to NAD" {
-  spacing 288
+  spacing 324
 
   spine at 0,0 {
     acetoin
@@ -18,61 +18,97 @@ pathway acetoin-to-nad "acetoin to NAD" {
 
   branch from h side left {
     h
-    <-> ec_1_14_13_96 [1.14.13.96] +5beta_cholestane_3alpha_7alpha_diol +o2 +nadph +5beta_cholestane_3alpha_7alpha_12alpha_triol +h2o
-    nadp
+    <-> . +2s_methylsuccinyl_coa
+    2_ethylpropanedioyl_coa
   }
 
   branch from h side right {
     h
-    <-> ec_2_5_1_32 [2.5.1.32] +prephytoene_diphosphate +all_trans_phytoene
-    diphosphate
-  }
-
-  branch from acetaldehyde side left {
-    acetaldehyde
-    <-> ec_4_1_2_30 [4.1.2.30] +h +17alpha_hydroxypregnenolone +o2 +nadph +nadp +h2o
-    3beta_hydroxyandrost_5_en_17_one
-  }
-
-  branch from acetaldehyde side right {
-    acetaldehyde
-    <-> ec_1_1_5_5 [1.1.5.5] +ethanol +ubiquinone_10
-    ubiquinol_10
-  }
-
-  branch from actn side left {
-    actn
-    <-> ec_1_1_1_5 [1.1.1.5] +nadp +h +nadph
-    diacetyl
-  }
-
-  branch from actn side right {
-    actn
-    <-> ec_1_1_1_4 [1.1.1.4] +nadh +h +nad
-    meso_butane_2_3_diol
+    <-> . +adp +morphine_3_glucuronide +phosphate +morphine_3_glucuronide +h2o
+    atp
   }
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_235 [2.3.1.235] +malonyl_coa +h +co2 +h2o
-    tetracenomycin_f2
+    <-> . +3s_hydroxytetradecanoyl_coa +s_carnitine
+    3_hydroxytetradecanoylcarnitine
   }
 
   branch from coa side right {
     coa
-    <-> . +acetyl_coa +malonyl_coa +h +nadph +6_hydroxymellein +nadp +h2o
-    co2
+    <-> . +2e_hexadecenoyl_coa +s_carnitine
+    2e_hexadecenoylcarnitine
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_158 [1.1.1.158] +nadh +h +udp_n_acetyl_3_o_1_carboxyvinyl_alpha_d_glucosam
-    udp_n_acetyl_alpha_d_muramate
+    <-> . +nadh +sulfasalazine +h +sulfapyridine
+    mesalaminate
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_312 [1.1.1.312] +nadh +h +2z_4e_5_hydroxypenta_2_4_diene_1_2_5_tricarboxy +h2o
-    2_hydroxy_5_carboxymethylmuconate_semialdehyde
+    <-> . +nadh +h +l_tryptophan +nh4
+    indole_3_propanoate
+  }
+
+  branch from h side left {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    morphine_6_glucuronide
+  }
+
+  branch from h side right {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    metronidazole_beta_d_glucuronide
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> . +h +l_tyrosine +nh4 +nad
+    phloretate
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +ursocholate +nad +h
+    3_12_dihydroxy_7_oxo_5_cholanate
+  }
+
+  branch from acetyl_coa side left {
+    acetyl_coa
+    <-> . +3z_dodecenoyl_coa +coa
+    3_oxomyrist_5_enoyl_coenzyme_a
+  }
+
+  branch from acetyl_coa side right {
+    acetyl_coa
+    <-> . +13z_3_oxoicosenoyl_coa +coa
+    11e_octadecenoyl_coa
+  }
+
+  branch from coa side left {
+    coa
+    <-> . +octadecanoyl_coa +s_carnitine
+    o_octadecanoyl_r_carnitine
+  }
+
+  branch from coa side right {
+    coa
+    <-> . +s_carnitine +9z_octadecenoyl_coa
+    r_oleoylcarnitine
+  }
+
+  branch from nad side left {
+    nad
+    <-> . +nadh +thymine +h
+    dihydrothymine
+  }
+
+  branch from nad side right {
+    nad
+    <-> . +nadh +h +vanillylmandelic_acid +h2o
+    3_methoxy_4_hydroxyphenylglycolaldehyde
   }
 }

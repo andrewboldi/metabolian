@@ -31,4 +31,28 @@ pathway tritrans-heptacis-undecap-to-d-galnac-1-4-2-d "tritrans,heptacis-undecap
     <-> . +udp +h +alpha_d_glucosyl_1_3_n_n_diacetyl_alpha_d_bacill
     udp_alpha_d_glucose
   }
+
+  branch from udp_n_acetyl_d_galactosamine side left {
+    udp_n_acetyl_d_galactosamine
+    <-> . +n_acetyl_d_galactosaminyl_1_3_d_galactosyl_1_4_d +udp +hplus
+    d_galnac_1_3_d_galnac_1_3_d_gal_1_4_d_gal_1_4_d
+  }
+
+  branch from udp_n_acetyl_d_galactosamine side right {
+    udp_n_acetyl_d_galactosamine
+    <-> . +d_galactosyl_1_4_d_galactosyl_1_4_d_glucosyl_1 +udp +hplus
+    n_acetyl_d_galactosaminyl_1_3_d_galactosyl_1_4_d
+  }
+
+  branch from udp_d_glucose side left {
+    udp_d_glucose
+    <-> . +delphinidin_3_o_6_o_malonyl_d_glucoside +udp
+    delphinidin_5_olate_3_o_6_o_carboxylatoacetyl_d
+  }
+
+  branch from udp_d_glucose side right {
+    udp_d_glucose
+    <-> . +delphinidin_5_olate_3_o_6_o_carboxylatoacetyl_d +udp +hplus
+    ternatin_c5
+  }
 }

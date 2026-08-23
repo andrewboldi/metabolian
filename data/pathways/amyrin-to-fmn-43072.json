@@ -107,61 +107,6 @@
       "xrefs": {
         "chebi": "CHEBI:138946"
       }
-    },
-    {
-      "id": "dodecan_1_ol",
-      "name": "dodecan-1-ol",
-      "formula": "C12H26O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:28878"
-      }
-    },
-    {
-      "id": "1_9_dodecanediol",
-      "name": "1,9-dodecanediol",
-      "formula": "C12H26O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:195446"
-      }
-    },
-    {
-      "id": "1_10_dodecanediol",
-      "name": "1,10-dodecanediol",
-      "formula": "C12H26O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:195447"
-      }
-    },
-    {
-      "id": "udp_d_glucose",
-      "name": "UDP-α-D-glucose",
-      "formula": "C15H22N2O17P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:58885"
-      }
-    },
-    {
-      "id": "oleanolate_3_o_d_glucoside",
-      "name": "oleanolate 3-O-β-D-glucoside",
-      "short": "oleanolate…",
-      "formula": "C36H57O8",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:142488"
-      }
-    },
-    {
-      "id": "udp",
-      "name": "UDP",
-      "formula": "C9H11N2O12P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58223"
-      }
     }
   ],
   "enzymes": [
@@ -170,13 +115,6 @@
       "name": "beta-amyrin 16beta-monooxygenase",
       "ec": [
         "1.14.14.63"
-      ]
-    },
-    {
-      "id": "ec_2_4_1_368",
-      "name": "oleanolate 3-O-glucosyltransferase",
-      "ec": [
-        "2.4.1.368"
       ]
     }
   ],
@@ -390,154 +328,137 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "dodecan-1-ol + reduced [NADPH--hemoprotein reductase] + O2 = 1,9-dodecanediol + oxidize...",
-      "equation": "dodecan-1-ol + reduced [NADPH--hemoprotein reductase] + O2 = 1,9-dodecanediol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "dodecan_1_ol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_9_dodecanediol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:76783"
+      "id": "xt_oleanolate_9-cis-violaxanthin-to-fmnh2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "oleanolate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "9-cis-violaxanthin-to-fmnh2"
+      },
+      "note": "Shares oleanolate with 9-cis-violaxanthin to FMNH2.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:76783"
+            "db": "ChEBI",
+            "id": "CHEBI:82828"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "dodecan-1-ol + reduced [NADPH--hemoprotein reductase] + O2 = 1,10-dodecanediol + oxidiz...",
-      "equation": "dodecan-1-ol + reduced [NADPH--hemoprotein reductase] + O2 = 1,10-dodecanediol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "dodecan_1_ol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_10_dodecanediol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:76787"
+      "id": "xt_oleanolate_dammarenediol-ii-to-ginsenoside-c-k",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "oleanolate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "dammarenediol-ii-to-ginsenoside-c-k"
+      },
+      "note": "Shares oleanolate with dammarenediol-II to ginsenoside C-K.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:76787"
+            "db": "ChEBI",
+            "id": "CHEBI:82828"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "oleanolate 3-O-glucosyltransferase",
-      "equation": "oleanolate + UDP-alpha-D-glucose = oleanolate 3-O-beta-D-glucoside + UDP + H(+)",
-      "ec": "2.4.1.368",
-      "substrates": [
-        {
-          "metabolite": "oleanolate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp_d_glucose",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "oleanolate_3_o_d_glucoside",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_4_1_368"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:58024"
+      "id": "xt_oleanolate_n-stearoyl-1-oleoyl-sn-gl-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "oleanolate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "n-stearoyl-1-oleoyl-sn-gl-to-fmn"
+      },
+      "note": "Shares oleanolate with N-stearoyl-1-oleoyl-sn-gl… to FMN.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:58024"
+            "db": "ChEBI",
+            "id": "CHEBI:82828"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_oleanolate_oleanolate-to-3-o-d-glucuronosyl-me",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "oleanolate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "oleanolate-to-3-o-d-glucuronosyl-me"
+      },
+      "note": "Shares oleanolate with oleanolate to 3-O-(β-D-glucuronosyl)-me….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:82828"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_oleanolate_oleanolate-to-gypsogenin-28-d-glucosi",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "oleanolate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "oleanolate-to-gypsogenin-28-d-glucosi"
+      },
+      "note": "Shares oleanolate with oleanolate to gypsogenin 28-β-D-glucosi….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:82828"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_oleanolate_oleanolate-to-quillaic-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "oleanolate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "oleanolate-to-quillaic-acid"
+      },
+      "note": "Shares oleanolate with oleanolate to quillaic acid….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:82828"
           }
         ]
       }

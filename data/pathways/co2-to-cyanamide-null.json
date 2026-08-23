@@ -1,0 +1,661 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "co2-to-cyanamide-null",
+  "name": "CO2 to cyanamide",
+  "category": "energy-metabolism",
+  "summary": "A 5-step route from CO2 to cyanamide, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR193426"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "delta_guanidovaleramide",
+      "name": "delta-guanidovaleramide",
+      "short": "delta-guanidovalera…",
+      "formula": "C6H15N4O",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM89539"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "l_homoarginine",
+      "name": "L-homoarginine",
+      "formula": "C7H17N4O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:143006"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "6_hydroxy_l_homoarginine",
+      "name": "6-hydroxy-L-homoarginine",
+      "short": "6-hydroxy-L-homoarg…",
+      "formula": "C7H17N4O3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:231270"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "guanidinium",
+      "name": "guanidinium",
+      "formula": "CH6N3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:30087"
+      }
+    },
+    {
+      "id": "l_allysine",
+      "name": "L-allysine",
+      "formula": "C6H11NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58321"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "urea",
+      "name": "Urea",
+      "formula": "CH4N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16199"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "cyanamide",
+      "name": "cyanamide",
+      "formula": "CH2N2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16698"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_13_12_1",
+      "name": "arginine 2-monooxygenase",
+      "ec": [
+        "1.13.12.1"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_69",
+      "name": "cyanamide hydratase",
+      "ec": [
+        "4.2.1.69"
+      ],
+      "xrefs": {
+        "uniprot": "P00915"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "arginine 2-monooxygenase",
+      "ec": "1.13.12.1",
+      "substrates": [
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "delta_guanidovaleramide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_homoarginine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_12_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR193426"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR193426"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "L-homoarginine + 2-oxoglutarate + O2 = 6-hydroxy-L-homoarginine + succinate + CO2",
+      "equation": "L-homoarginine + 2-oxoglutarate + O2 = 6-hydroxy-L-homoarginine + succinate + CO2",
+      "substrates": [
+        {
+          "metabolite": "l_homoarginine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_hydroxy_l_homoarginine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:79839"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79839"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "6-hydroxy-L-homoarginine = guanidine + (S)-2-amino-6-oxohexanoate",
+      "equation": "6-hydroxy-L-homoarginine = guanidine + (S)-2-amino-6-oxohexanoate",
+      "substrates": [
+        {
+          "metabolite": "6_hydroxy_l_homoarginine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "guanidinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_allysine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:79843"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79843"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "guanidine + H2O = urea + NH4(+)",
+      "equation": "guanidine + H2O = urea + NH4(+)",
+      "substrates": [
+        {
+          "metabolite": "guanidinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "urea",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:79567"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79567"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "cyanamide hydratase",
+      "equation": "urea = cyanamide + H2O",
+      "ec": "4.2.1.69",
+      "substrates": [
+        {
+          "metabolite": "urea",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cyanamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_69"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:23056"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23056"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_delta_guanidovaleramide_co2-to-cyanamide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "delta_guanidovaleramide"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "co2-to-cyanamide"
+      },
+      "note": "Shares delta-guanidovaleramide with CO2 to cyanamide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM89539"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_homoarginine_3-4-dihydroquinoxaline-2-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_homoarginine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-4-dihydroquinoxaline-2-to-h2o"
+      },
+      "note": "Shares L-homoarginine with 3,4-dihydroquinoxaline-2-… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:143006"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_homoarginine_co2-to-cyanamide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_homoarginine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "co2-to-cyanamide"
+      },
+      "note": "Shares L-homoarginine with CO2 to cyanamide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:143006"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_homoarginine_d-alpha-phenylglycine-to-n-hydroxysuccinimide-nu",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_homoarginine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-alpha-phenylglycine-to-n-hydroxysuccinimide-nu"
+      },
+      "note": "Shares L-homoarginine with D-alpha-phenylglycine to N-hydroxysuccinimide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:143006"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_homoarginine_l-canavanine-to-o-ureidohomoserine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_homoarginine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-canavanine-to-o-ureidohomoserine"
+      },
+      "note": "Shares L-homoarginine with L-canavanine to O-Ureidohomoserine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:143006"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_homoarginine_l-canavanine-to-o-ureidohomoserine-62444",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_homoarginine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-canavanine-to-o-ureidohomoserine-62444"
+      },
+      "note": "Shares L-homoarginine with L-canavanine to O-Ureidohomoserine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:143006"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_homoarginine_n2-acetyl-l-ornithine-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_homoarginine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n2-acetyl-l-ornithine-to-ammonium"
+      },
+      "note": "Shares L-homoarginine with N2-acetyl-L-ornithine to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:143006"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_homoarginine_n2-acetyl-l-ornithine-to-ammonium-15941",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_homoarginine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n2-acetyl-l-ornithine-to-ammonium-15941"
+      },
+      "note": "Shares L-homoarginine with N2-acetyl-L-ornithine to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:143006"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_hydroxy_l_homoarginine_co2-to-cyanamide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_hydroxy_l_homoarginine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "co2-to-cyanamide"
+      },
+      "note": "Shares 6-hydroxy-L-homoarginine with CO2 to cyanamide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:231270"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_guanidinium_co2-to-cyanamide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "guanidinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "co2-to-cyanamide"
+      },
+      "note": "Shares guanidinium with CO2 to cyanamide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:30087"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_guanidinium_l-argininium-to-n-acetyl-l-glutamyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "guanidinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-argininium-to-n-acetyl-l-glutamyl"
+      },
+      "note": "Shares guanidinium with L-argininium to N-acetyl-L-γ-glutamyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:30087"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_guanidinium_l-argininium-to-n-acetyl-l-glutamyl-31535",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "guanidinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-argininium-to-n-acetyl-l-glutamyl-31535"
+      },
+      "note": "Shares guanidinium with L-argininium to N-acetyl-L-γ-glutamyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:30087"
+          }
+        ]
+      }
+    }
+  ]
+}

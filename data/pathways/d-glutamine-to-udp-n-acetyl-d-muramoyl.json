@@ -147,6 +147,34 @@
       "xrefs": {
         "chebi": "CHEBI:83912"
       }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "n_acetyl_d_glutaminate",
+      "name": "N-acetyl-D-glutaminate",
+      "short": "N-acetyl-D-glutamin…",
+      "formula": "C7H11N2O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:143880"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
     }
   ],
   "enzymes": [
@@ -176,6 +204,13 @@
       "name": "UDP-N-acetylmuramoyl-L-alanyl-D-glutamate--D-lysine ligase",
       "ec": [
         "6.3.2.37"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_312",
+      "name": "D-glutamate N-acetyltransferase",
+      "ec": [
+        "2.3.1.312"
       ]
     }
   ],
@@ -392,6 +427,299 @@
           {
             "db": "Rhea",
             "id": "RHEA:25273"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "D-glutamate N-acetyltransferase",
+      "equation": "D-glutamine + acetyl-CoA = N-acetyl-D-glutamine + CoA + H(+)",
+      "ec": "2.3.1.312",
+      "substrates": [
+        {
+          "metabolite": "d_glutamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_d_glutaminate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_312"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:76547"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:76547"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_d_glutamine_1-methyladenosine-to-5-amino-1-5-phosphonato",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glutamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-methyladenosine-to-5-amino-1-5-phosphonato"
+      },
+      "note": "Shares D-glutamine with 1-methyladenosine to 5-amino-1-(5-phosphonato-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58000"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glutamine_5-methyltetrahydropteroyl-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glutamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-methyltetrahydropteroyl-to-ammonium"
+      },
+      "note": "Shares D-glutamine with 5-methyltetrahydropteroyl… to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58000"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glutamine_n-carbamoyl-l-amino-to-n-acetyl-d-amino-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glutamine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-carbamoyl-l-amino-to-n-acetyl-d-amino-acid"
+      },
+      "note": "Shares D-glutamine with N-carbamoyl-L-α-amino… to N-acetyl-D-amino acid….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58000"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_udp_n_acetyl_d_muramoyl_l_alaninate_udp-n-acetyl-d-muramate-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "udp_n_acetyl_d_muramoyl_l_alaninate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-n-acetyl-d-muramate-to-ammonium"
+      },
+      "note": "Shares UDP-N-acetyl-α-D-muramoyl-L-alaninate with UDP-N-acetyl-α-D-muramate to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83898"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamate_udp-n-acetyl-d-muramate-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-n-acetyl-d-muramate-to-ammonium"
+      },
+      "note": "Shares UDP-N-acetyl-α-D-muramoyl-L-alanyl-D-glutamate with UDP-N-acetyl-α-D-muramate to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83900"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_l_ly_n-acetyl-d-muramoyl-l-ala-to-amp-3-end-1",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_l_ly"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetyl-d-muramoyl-l-ala-to-amp-3-end-1"
+      },
+      "note": "Shares UDP-N-acetyl-α-D-muramoyl-L-alanyl-D-γ-glutamyl-L-lysinate with N-acetyl-D-muramoyl-L-ala… to AMP 3'-end(1−).",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83903"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_lysinium_7r-7-5-carboxy-5-oxope-to-cephalosporin-c",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_lysinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7r-7-5-carboxy-5-oxope-to-cephalosporin-c"
+      },
+      "note": "Shares D-lysinium with (7R)-7-(5-carboxy-5-oxope… to cephalosporin C.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:32557"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_lysinium_cadaverine-to-wortmanamide-a",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_lysinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cadaverine-to-wortmanamide-a"
+      },
+      "note": "Shares D-lysinium with cadaverine to wortmanamide A.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:32557"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_lysinium_n-carbamoyl-l-amino-to-n-acetyl-d-amino-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_lysinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-carbamoyl-l-amino-to-n-acetyl-d-amino-acid"
+      },
+      "note": "Shares D-lysinium with N-carbamoyl-L-α-amino… to N-acetyl-D-amino acid….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:32557"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_lysinium_n2-4-aminobutanoyl-l-ly-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_lysinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n2-4-aminobutanoyl-l-ly-to-succinate"
+      },
+      "note": "Shares D-lysinium with N2-(4-aminobutanoyl)-L-ly… to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:32557"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_lysinium_organohalogen-compound-to-adenosine-3-5-bismonop",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_lysinium"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "organohalogen-compound-to-adenosine-3-5-bismonop"
+      },
+      "note": "Shares D-lysinium with organohalogen compound to adenosine 3',5'-bismonoph….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:32557"
           }
         ]
       }

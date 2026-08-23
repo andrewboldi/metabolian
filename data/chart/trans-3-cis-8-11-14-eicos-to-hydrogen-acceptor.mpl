@@ -16,27 +16,27 @@ pathway trans-3-cis-8-11-14-eicos-to-hydrogen-acceptor "Trans-3-Cis-8,11,14-Eico
     arachidonoyl_coa
   }
 
-  branch from 2e_8z_11z_14z_icosatetraenoyl_coa side left {
-    2e_8z_11z_14z_icosatetraenoyl_coa
-    <-> . +8z_11z_14z_eicosatrienoyl_coa +fad +h
-    fadh2
-  }
-
-  branch from 2e_8z_11z_14z_icosatetraenoyl_coa side right {
-    2e_8z_11z_14z_icosatetraenoyl_coa
-    <-> . +3_icosa_8_11_14_trienoyl_coa +h2o
-    h
-  }
-
   branch from arachidonoyl_coa side left {
     arachidonoyl_coa
-    <-> . +1_hexadecanoyl_sn_glycero_3_phospho_d_myo_inosit +coa
-    1_hexadecanoyl_2_5z_8z_11z_14z_icosatetraenoyl_s
+    <-> . +1_octadecanoyl_sn_glycero_3_phospho_1_sn_glycero +coa
+    1_stearoyl_2_arachidonoyl_sn_glycero_3_phospho_1
   }
 
   branch from arachidonoyl_coa side right {
     arachidonoyl_coa
-    <-> . +malonyl-coa +hplus +co2 +coa
-    7z_10z_13z_16z_3_oxodocosatetraenoyl_coa
+    <-> . +2_2_dilysocardiolipin +coa
+    2_arachidonoyl_2_monolysocardiolipin
+  }
+
+  branch from arachidonoyl_coa side left {
+    arachidonoyl_coa
+    <-> . +1_heptadecanoyl_sn_glycero_3_phosphate +coa
+    1_heptadecanoyl_2_arachidonoyl_sn_glycero_3_phos
+  }
+
+  branch from arachidonoyl_coa side right {
+    arachidonoyl_coa
+    <-> . +1_oleyl_sn_glycero_3_phosphate +coa
+    1_9z_octadecenyl_2_arachidonoyl_sn_glycero_3_pho
   }
 }

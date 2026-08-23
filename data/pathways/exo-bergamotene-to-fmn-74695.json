@@ -1,0 +1,517 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "exo-bergamotene-to-fmn-74695",
+  "name": "(+)-exo-β-bergamotene to FMN",
+  "category": "other",
+  "summary": "A 3-step route from (+)-exo-β-bergamotene to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:74695"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:193166"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "exo_bergamotene",
+      "name": "(+)-exo-β-bergamotene",
+      "short": "(+)-exo-β-bergamote…",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:193166"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "5r_hydroxy_trans_bergamotene",
+      "name": "(5R)-hydroxy-β-trans-bergamotene",
+      "short": "hydroxy-β-trans-ber…",
+      "formula": "C15H24O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:193167"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3s_3_2_methyl_3_3_methylbut_2_en_1_yl_oxiran_2",
+      "name": "(3S)-3-[2-methyl-3-(3-methylbut-2-en-1-yl)oxiran-2-yl]-4-methylidenecyclohexan-1-one",
+      "short": "3-[2-methyl-3-(3-me…",
+      "formula": "C15H22O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:193168"
+      }
+    },
+    {
+      "id": "5_dehydro_6_demethoxyfumagillol",
+      "name": "5-dehydro-6-demethoxyfumagillol",
+      "short": "5-dehydro-6-demetho…",
+      "formula": "C15H22O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:193517"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(+)-exo-beta-bergamotene + reduced [NADPH--hemoprotein reductase] + O2 = (5R)-hydroxy-b...",
+      "equation": "(+)-exo-beta-bergamotene + reduced [NADPH--hemoprotein reductase] + O2 = (5R)-hydroxy-beta-trans-bergamotene + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "exo_bergamotene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5r_hydroxy_trans_bergamotene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:74695"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:74695"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(5R)-hydroxy-beta-trans-bergamotene + O2 = (3S)-3-[2-methyl-3-(3-methylbut-2-en-1-yl)ox...",
+      "equation": "(5R)-hydroxy-beta-trans-bergamotene + O2 = (3S)-3-[2-methyl-3-(3-methylbut-2-en-1-yl)oxiran-2-yl]-4-methylidenecyclohexan-1-one + H2O",
+      "substrates": [
+        {
+          "metabolite": "5r_hydroxy_trans_bergamotene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3s_3_2_methyl_3_3_methylbut_2_en_1_yl_oxiran_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:74699"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:74699"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(3S)-3-[2-methyl-3-(3-methylbut-2-en-1-yl)oxiran-2-yl]-4-methylidenecyclohexan-1-one + ...",
+      "equation": "(3S)-3-[2-methyl-3-(3-methylbut-2-en-1-yl)oxiran-2-yl]-4-methylidenecyclohexan-1-one + reduced [NADPH--hemoprotein reductase] + O2 = 5-dehydro-6-demethoxyfumagillol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "3s_3_2_methyl_3_3_methylbut_2_en_1_yl_oxiran_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_dehydro_6_demethoxyfumagillol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:74703"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:74703"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_exo_bergamotene_1-octadecanoyl-2-octanoyl-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "exo_bergamotene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-octadecanoyl-2-octanoyl-to-diphosphate"
+      },
+      "note": "Shares (+)-exo-β-bergamotene with 1-octadecanoyl-2-octanoyl… to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:193166"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_exo_bergamotene_2-o-glutaroyl-1-o-palmito-to-hexadecanoate-62480",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "exo_bergamotene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-o-glutaroyl-1-o-palmito-to-hexadecanoate-62480"
+      },
+      "note": "Shares (+)-exo-β-bergamotene with 2-O-glutaroyl-1-O-palmito… to hexadecanoate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:193166"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_exo_bergamotene_exo-bergamotene-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "exo_bergamotene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "exo-bergamotene-to-fmn"
+      },
+      "note": "Shares (+)-exo-β-bergamotene with (+)-exo-β-bergamotene to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:193166"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_exo_bergamotene_exo-bergamotene-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "exo_bergamotene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "exo-bergamotene-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares (+)-exo-β-bergamotene with (+)-exo-β-bergamotene to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:193166"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_exo_bergamotene_exo-bergamotene-to-s-adenosyl-l-homocysteine-74",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "exo_bergamotene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "exo-bergamotene-to-s-adenosyl-l-homocysteine-74"
+      },
+      "note": "Shares (+)-exo-β-bergamotene with (+)-exo-β-bergamotene to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:193166"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5r_hydroxy_trans_bergamotene_2-methyladenine-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5r_hydroxy_trans_bergamotene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-methyladenine-to-h2o-null"
+      },
+      "note": "Shares (5R)-hydroxy-β-trans-bergamotene with 2-methyladenine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:193167"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5r_hydroxy_trans_bergamotene_exo-bergamotene-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5r_hydroxy_trans_bergamotene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "exo-bergamotene-to-fmn"
+      },
+      "note": "Shares (5R)-hydroxy-β-trans-bergamotene with (+)-exo-β-bergamotene to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:193167"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5r_hydroxy_trans_bergamotene_h-to-2-hydroxyacetophenone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5r_hydroxy_trans_bergamotene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-2-hydroxyacetophenone"
+      },
+      "note": "Shares (5R)-hydroxy-β-trans-bergamotene with H to 2-hydroxyacetophenone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:193167"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3s_3_2_methyl_3_3_methylbut_2_en_1_yl_oxiran_2_exo-bergamotene-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3s_3_2_methyl_3_3_methylbut_2_en_1_yl_oxiran_2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "exo-bergamotene-to-fmn"
+      },
+      "note": "Shares (3S)-3-[2-methyl-3-(3-methylbut-2-en-1-yl)oxiran-2-yl]-4-methylidenecyclohexan-1-one with (+)-exo-β-bergamotene to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:193168"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_dehydro_6_demethoxyfumagillol_exo-bergamotene-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_dehydro_6_demethoxyfumagillol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "exo-bergamotene-to-fmn"
+      },
+      "note": "Shares 5-dehydro-6-demethoxyfumagillol with (+)-exo-β-bergamotene to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:193517"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_dehydro_6_demethoxyfumagillol_exo-bergamotene-to-s-adenosyl-l-homocysteine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_dehydro_6_demethoxyfumagillol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "exo-bergamotene-to-s-adenosyl-l-homocysteine"
+      },
+      "note": "Shares 5-dehydro-6-demethoxyfumagillol with (+)-exo-β-bergamotene to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:193517"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_dehydro_6_demethoxyfumagillol_exo-bergamotene-to-s-adenosyl-l-homocysteine-74",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_dehydro_6_demethoxyfumagillol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "exo-bergamotene-to-s-adenosyl-l-homocysteine-74"
+      },
+      "note": "Shares 5-dehydro-6-demethoxyfumagillol with (+)-exo-β-bergamotene to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:193517"
+          }
+        ]
+      }
+    }
+  ]
+}

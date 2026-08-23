@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-glucopyranose-to-1-o-galloyl-beta-d-glucose "D-glucopyranose to 1-O-galloyl-beta-D-glucose" {
-  spacing 176
+  spacing 212
 
   spine at 0,0 {
     glucose
@@ -20,25 +20,61 @@ pathway d-glucopyranose-to-1-o-galloyl-beta-d-glucose "D-glucopyranose to 1-O-ga
 
   branch from beta_d_glucose side left {
     beta_d_glucose
-    <-> ec_3_2_1_20 [3.2.1.20] +h2o
-    2_o_beta_d_glucopyranosyl_beta_d_glucopyranose
+    <-> ec_3_2_1_147 [3.2.1.147] +benzylglucosinolate_aglycone +h +h2o
+    z_glucotropeolin
   }
 
   branch from beta_d_glucose side right {
     beta_d_glucose
-    <-> ec_3_2_1_21 [3.2.1.21] +h2o
-    beta_d_glcp_1_6_beta_d_glcp
+    <-> . +oleandomycin +h2o
+    glucosyl_oleandomycin
   }
 
   branch from h side left {
     h
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +2_oxohexane +nad
-    r_2_hexanol
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +westiellamide +phosphate +westiellamide +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +s_2_methylbutanal +nad
-    s_2_methylbutan_1_ol
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    symplostatin_1
+  }
+
+  branch from glucose side left {
+    glucose
+    <-> ec_3_2_1_21 [3.2.1.21] +cellobiosan +h2o
+    levoglucosan
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> . +celosianin_ii +1_o_feruloyl_d_glucose
+    amaranthin
+  }
+
+  branch from beta_d_glucose side left {
+    beta_d_glucose
+    <-> . +indol_3_ylacetothiohydroxamate_o_sulfonate +h +h2o
+    z_glucobrassicin
+  }
+
+  branch from beta_d_glucose side right {
+    beta_d_glucose
+    <-> . +biochanin_a +h2o
+    biochanin_a_7_o_beta_d_glucoside
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    scyptolin_a
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    schizopeptin_791
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-hydroxy-l-valinate-to-linamarin "N-hydroxy-L-valinate to linamarin" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     n_hydroxy_l_valinate
@@ -20,17 +20,5 @@ pathway n-hydroxy-l-valinate-to-linamarin "N-hydroxy-L-valinate to linamarin" {
     2_hydroxy_2_methylpropanenitrile
     <-> ec_2_4_1_63 [2.4.1.63] +udp_d_glucose -udp -hplus
     linamarin
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +preaspterpenacid_acid_i +fmnh2 +o2 +h2o +hplus
-    preaspterpenacid_acid_ii
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +cholesterol +fmnh2 +o2 +h2o +hplus
-    16s_22s_dihydroxycholesterol
   }
 }

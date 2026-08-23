@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway ubiquinone-0-to-h2o "ubiquinone-0 to H2O" {
-  spacing 300
+  spacing 340
 
   spine at 0,0 {
     ubiquinone_0
@@ -14,8 +14,10 @@ pathway ubiquinone-0-to-h2o "ubiquinone-0 to H2O" {
     s_dihydroorotate
     <-> ec_1_3_5_2 [1.3.5.2] +phylloquinone -orotate
     phylloquinol
-    <-> ec_4_1_1_90 [4.1.1.90] +co2 +o2 +gla_protein_precursor -gla_protein -h2o
-    2_3_epoxyphylloquinone
+    <-> ec_1_10_99_2 [1.10.99.2] +beta_nicotinamide_d_riboside -h -1_d_ribofuranosyl_1_4_dihydronicotinamide
+    phylloquinone
+    <-> . +h +adp +phosphate -phylloquinone -h2o
+    atp
   }
 
   branch from ubiquinol_0 side left {
@@ -38,14 +40,14 @@ pathway ubiquinone-0-to-h2o "ubiquinone-0 to H2O" {
 
   branch from s_dihydroorotate side right {
     s_dihydroorotate
-    <-> ec_1_3_5_2 [1.3.5.2] +ubiquinol_7 +orotate
-    ubiquinone_7
+    <-> . +ubiquinol_10 +orotate
+    ubiquinone_10
   }
 
   branch from s_dihydroorotate side left {
     s_dihydroorotate
-    <-> . +menaquinol_8 +orotate
-    mk_8
+    <-> ec_1_3_3_1 [1.3.3.1] +orotate +h2o2
+    o2
   }
 
   branch from phylloquinol side right {
@@ -56,49 +58,121 @@ pathway ubiquinone-0-to-h2o "ubiquinone-0 to H2O" {
 
   branch from phylloquinol side left {
     phylloquinol
-    <-> ec_1_10_99_2 [1.10.99.2] +beta_nicotinamide_d_riboside +phylloquinone +1_d_ribofuranosyl_1_4_dihydronicotinamide
+    <-> . +d_alanine +phylloquinone +h2o +nh4
+    pyruvate
+  }
+
+  branch from phylloquinone side right {
+    phylloquinone
+    <-> . +phylloquinol +pyruvate
+    r_lactate
+  }
+
+  branch from phylloquinone side left {
+    phylloquinone
+    <-> ec_1_1_5_4 [1.1.5.4] +s_malate +phylloquinol
+    oxaloacetate
+  }
+
+  branch from h side right {
     h
+    <-> . +11z_eicosenoyl_coa +h2o +coa
+    11z_eicosenoate
   }
 
-  branch from orotate side right {
-    orotate
-    <-> ec_1_3_5_2 [1.3.5.2] +plastoquinol_9 +s_dihydroorotate
-    plastoquinone_9
+  branch from h side left {
+    h
+    <-> . +erucoyl_coa +h2o +coa
+    13z_docosenoate
   }
 
-  branch from orotate side left {
-    orotate
-    <-> . +ubiquinol_10 +s_dihydroorotate
-    ubiquinone_10
-  }
-
-  branch from 2_3_epoxyphylloquinone side right {
-    2_3_epoxyphylloquinone
-    <-> ec_1_1_4_1 [1.1.4.1] +4r_5r_1_2_dithiane_4_5_diol +phylloquinone +h2o
-    l_1_4_dithiothreitol
-  }
-
-  branch from 2_3_epoxyphylloquinone side left {
-    2_3_epoxyphylloquinone
-    <-> ec_1_1_4_2 [1.1.4.2] +2_hydroxy_vitamin_k +l_1_4_dithiothreitol
-    4r_5r_1_2_dithiane_4_5_diol
-  }
-
-  branch from gla_protein side right {
-    gla_protein
-    <-> ec_4_1_1_90 [4.1.1.90] +co2 +o2 +menaquinol +gla_protein_precursor +h2o
-    2_3_epoxymenaquinone
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +h +adp +prostaglandin_e2 +phosphate +prostaglandin_e2
+  branch from atp side right {
     atp
+    <-> ec_3_6_3_5 [3.6.3.5] +h +adp +phosphate +h2o
+    zn
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    1_pentanesulfonate
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_22 [3.6.3.22] +h +adp +phosphate +atp
-    l_proline
+    <-> . +2e_13z_docosadienoyl_coa
+    3_s_hydroxy_13cis_docosenoyl_coa
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +2e_9z_octadecadienoyl_coa
+    3_s_hydroxy_cis_9_octadecenoyl_coa
+  }
+
+  branch from 1_3_7_trimethyluric_acid side right {
+    1_3_7_trimethyluric_acid
+    <-> ec_1_7_3_3 [1.7.3.3] +o2 +h2o +3_6_8_trimethylallantoin +h2o2
+    co2
+  }
+
+  branch from phylloquinone side left {
+    phylloquinone
+    <-> ec_1_6_5_2 [1.6.5.2] +h +phylloquinol +nadp
+    nadph
+  }
+
+  branch from phylloquinone side right {
+    phylloquinone
+    <-> ec_1_7_5_1 [1.7.5.1] +nitrite +h2o +phylloquinol
+    nitrate
+  }
+
+  branch from phylloquinol side left {
+    phylloquinol
+    <-> ec_1_1_5_6 [1.1.5.6] +phylloquinone +h +co2
+    formate
+  }
+
+  branch from phylloquinol side right {
+    phylloquinol
+    <-> ec_1_1_5_3 [1.1.5.3] +phylloquinone +sn_glycerol_3_phosphate
+    dihydroxyacetone_phosphate
+  }
+
+  branch from beta_nicotinamide_d_riboside side left {
+    beta_nicotinamide_d_riboside
+    <-> ec_3_2_2_1 [3.2.2.1] +h2o +h +beta_d_ribofuranose
+    nicotinamide
+  }
+
+  branch from beta_nicotinamide_d_riboside side right {
+    beta_nicotinamide_d_riboside
+    <-> . +h2o +h +nicotinamide
+    aldehydo_d_ribose
+  }
+
+  branch from h side left {
+    h
+    <-> . +udp +12_hydroxy_13_o_d_glucuronoside_octadec_9z_enoat +12_13_dihydroxy_9z_octadecenoate
+    udp_alpha_d_glucuronate
+  }
+
+  branch from h side right {
+    h
+    <-> . +9_hydroxy_10_o_d_glucuronoside_12z_octadecenoate +udp +udp_alpha_d_glucuronate
+    9_10_dihydroxy_12z_octadecenoate
+  }
+
+  branch from adp side left {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26
+  }
+
+  branch from adp side right {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol
   }
 }

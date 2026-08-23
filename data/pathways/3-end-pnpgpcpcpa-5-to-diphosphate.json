@@ -172,61 +172,23 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:175763"
-      }
-    },
-    {
-      "id": "7_epi_eudesmol",
-      "name": "7-epi-α-eudesmol",
-      "formula": "C15H26O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:138040"
-      }
-    },
-    {
-      "id": "4_epi_cubebol",
-      "name": "(+)-4-epi-cubebol",
-      "formula": "C15H26O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:138041"
-      }
-    },
-    {
-      "id": "trna_3_terminal_nucleotidyl_cytidyl_cytidine_3",
-      "name": "tRNA 3'-terminal nucleotidyl-cytidyl-cytidine(3−)",
-      "short": "tRNA 3'-terminal…",
-      "formula": "C23H30N6O20P3R",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:83069"
-      }
-    },
-    {
-      "id": "ribonucleotide_ribonucleotide_2",
-      "name": "ribonucleotide-ribonucleotide(2−)",
-      "short": "ribonucleotide-ribo…",
-      "formula": "C10H14O12P2R2",
+      "id": "3_end_ribonucleotidyl_ribonucleotide_2",
+      "name": "3'-end ribonucleotidyl-ribonucleotide(2−)",
+      "short": "3'-end ribonucleoti…",
+      "formula": "C10H15O12P2R2",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:173118"
+        "chebi": "CHEBI:197502"
       }
     },
     {
-      "id": "5_end_ribonucleotide_2",
-      "name": "5'-end ribonucleotide(2−)",
-      "short": "5'-end ribonucleoti…",
-      "formula": "C5H7O7PR",
+      "id": "nucleoside_5_monophosphate",
+      "name": "nucleoside 5'-monophosphate",
+      "short": "nucleoside 5'-MP",
+      "formula": "C5H8O7PR",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:138282"
+        "chebi": "CHEBI:58043"
       }
     }
   ],
@@ -250,21 +212,10 @@
       "name": "CCA tRNA nucleotidyltransferase",
       "ec": [
         "2.7.7.72"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_169",
-      "name": "7-epi-alpha-eudesmol synthase",
-      "ec": [
-        "4.2.3.169"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_170",
-      "name": "4-epi-cubebol synthase",
-      "ec": [
-        "4.2.3.170"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q96Q11"
+      }
     }
   ],
   "reactions": [
@@ -538,140 +489,11 @@
     },
     {
       "id": "r7",
-      "name": "7-epi-alpha-eudesmol synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate + H2O = 7-epi-alpha-eudesmol + diphosphate",
-      "ec": "4.2.3.169",
+      "name": "a 3'-end ribonucleotidyl-ribonucleotide-RNA + H2O = a 3'-end ribonucleotide-RNA + a rib...",
+      "equation": "a 3'-end ribonucleotidyl-ribonucleotide-RNA + H2O = a 3'-end ribonucleotide-RNA + a ribonucleoside 5'-phosphate + H(+)",
       "substrates": [
         {
-          "metabolite": "fpp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "7_epi_eudesmol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_169"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:54044"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:54044"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r8",
-      "name": "4-epi-cubebol synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate + H2O = 4-epi-cubebol + diphosphate",
-      "ec": "4.2.3.170",
-      "substrates": [
-        {
-          "metabolite": "fpp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "4_epi_cubebol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_170"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "rhea": "RHEA:54048"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:54048"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r9",
-      "name": "a tRNA precursor + 2 CTP = a tRNA with a 3' CC end + 2 diphosphate",
-      "equation": "a tRNA precursor + 2 CTP = a tRNA with a 3' CC end + 2 diphosphate",
-      "substrates": [
-        {
-          "metabolite": "3_end_ribonucleotide_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ctp",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "trna_3_terminal_nucleotidyl_cytidyl_cytidine_3",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 9,
-      "xrefs": {
-        "rhea": "RHEA:60008"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:60008"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r10",
-      "name": "a ribonucleotidyl-ribonucleotide-RNA + H2O = a 3'-end ribonucleotide-RNA + a 5'-end 5'-...",
-      "equation": "a ribonucleotidyl-ribonucleotide-RNA + H2O = a 3'-end ribonucleotide-RNA + a 5'-end 5'-phospho-ribonucleoside-RNA + H(+)",
-      "substrates": [
-        {
-          "metabolite": "ribonucleotide_ribonucleotide_2",
+          "metabolite": "3_end_ribonucleotidyl_ribonucleotide_2",
           "stoichiometry": 1
         },
         {
@@ -685,7 +507,7 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "5_end_ribonucleotide_2",
+          "metabolite": "nucleoside_5_monophosphate",
           "stoichiometry": 1
         },
         {
@@ -694,16 +516,282 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 10,
+      "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:68096"
+        "rhea": "RHEA:77763"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:68096"
+            "id": "RHEA:77763"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3_end_ribonucleotide_3_phosphate_3_5-end-ribonucleotide-2-to-5-end-ribonucleoside",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_end_ribonucleotide_3_phosphate_3"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-end-ribonucleotide-2-to-5-end-ribonucleoside"
+      },
+      "note": "Shares 3'-end ribonucleotide 3'-phosphate(3−) with 5'-end ribonucleotide(2−) to 5'-end ribonucleoside.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83062"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_end_ribonucleotide_3_phosphate_3_n-5-guanosyl-phosphono-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_end_ribonucleotide_3_phosphate_3"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-5-guanosyl-phosphono-to-diphosphate"
+      },
+      "note": "Shares 3'-end ribonucleotide 3'-phosphate(3−) with Nπ-(5'-guanosyl-phosphono… to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83062"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_end_ribonucleotide_3_phosphate_3_ribonucleotide-uridine-2-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_end_ribonucleotide_3_phosphate_3"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ribonucleotide-uridine-2-to-diphosphate"
+      },
+      "note": "Shares 3'-end ribonucleotide 3'-phosphate(3−) with ribonucleotide-uridine(2−) to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83062"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_end_ribonucleotide_2_3_cyclic_phosphate_2_n-5-guanosyl-phosphono-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_end_ribonucleotide_2_3_cyclic_phosphate_2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-5-guanosyl-phosphono-to-diphosphate"
+      },
+      "note": "Shares 3'-end ribonucleotide 2',3'-cyclic phosphate(2−) with Nπ-(5'-guanosyl-phosphono… to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83064"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_end_ribonucleotide_2_3_cyclic_phosphate_2_ribonucleotide-uridine-2-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_end_ribonucleotide_2_3_cyclic_phosphate_2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ribonucleotide-uridine-2-to-diphosphate"
+      },
+      "note": "Shares 3'-end ribonucleotide 2',3'-cyclic phosphate(2−) with ribonucleotide-uridine(2−) to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83064"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_end_ribonucleotide_1_1-6-anhydro-n-acetyl-mu-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_end_ribonucleotide_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-6-anhydro-n-acetyl-mu-to-diphosphate"
+      },
+      "note": "Shares 3'-end ribonucleotide(1−) with 1,6-anhydro-N-acetyl-β-mu… to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74896"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_end_ribonucleotide_1_5-end-nad-phospho-ribonu-to-diphosphate-60880",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_end_ribonucleotide_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-end-nad-phospho-ribonu-to-diphosphate-60880"
+      },
+      "note": "Shares 3'-end ribonucleotide(1−) with 5'-end NAD-phospho-ribonu… to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74896"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_end_ribonucleotide_1_ribonucleotide-uridine-2-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_end_ribonucleotide_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ribonucleotide-uridine-2-to-diphosphate"
+      },
+      "note": "Shares 3'-end ribonucleotide(1−) with ribonucleotide-uridine(2−) to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74896"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_end_ribonucleotide_1_trans-isoeugenol-to-arsenite",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_end_ribonucleotide_1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-isoeugenol-to-arsenite"
+      },
+      "note": "Shares 3'-end ribonucleotide(1−) with trans-isoeugenol to arsenite.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74896"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trna_3_terminal_nucleotidyl_cytidyl_cytidyl_aden_3-3as-4s-5r-7as-5-hydr-to-3-3as-4s-5r-7as-5-hydr",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trna_3_terminal_nucleotidyl_cytidyl_cytidyl_aden"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-3as-4s-5r-7as-5-hydr-to-3-3as-4s-5r-7as-5-hydr"
+      },
+      "note": "Shares tRNA 3'-terminal nucleotidyl-cytidyl-cytidyl-adenosine(4−) with 3-[(3aS,4S,5R,7aS)-5-hydr… to 3-[(3aS,4S,5R,7aS)-5-hydr….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:83071"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nucleoside_5_monophosphate_5-end-5-hydroxy-deoxyri-to-2-deoxynucleoside",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nucleoside_5_monophosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-end-5-hydroxy-deoxyri-to-2-deoxynucleoside"
+      },
+      "note": "Shares nucleoside 5'-monophosphate with 5'-end 5'-hydroxy-deoxyri… to 2'-deoxynucleoside….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58043"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_nucleoside_5_monophosphate_chlorophyll-to-2-4-divinyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "nucleoside_5_monophosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "chlorophyll-to-2-4-divinyl"
+      },
+      "note": "Shares nucleoside 5'-monophosphate with chlorophyll to 2,4-divinyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58043"
           }
         ]
       }

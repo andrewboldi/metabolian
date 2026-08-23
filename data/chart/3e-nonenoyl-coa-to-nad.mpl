@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3e-nonenoyl-coa-to-nad "(3E)-nonenoyl-CoA to NAD" {
-  spacing 212
+  spacing 272
 
   spine at 0,0 {
     3e_nonenoyl_coa
@@ -24,14 +24,14 @@ pathway 3e-nonenoyl-coa-to-nad "(3E)-nonenoyl-CoA to NAD" {
 
   branch from coa side right {
     coa
-    <-> . +2s_2_methylbutanoyl_coa +glycine
-    n_2_methylbutanoyl_glycine
+    <-> ec_2_3_1_26 [2.3.1.26] +2e_hexadecenoyl_coa +cholesterol
+    cholesteryl_palmitoleate
   }
 
   branch from coa side left {
     coa
-    <-> . +3_oxo_10_r_hydroxy_octadeca_6e_8e_12z_trienoyl_c +h2o
-    6e_8e_10r_12z_10_hydroxy_3_oxooctadecatrienoic
+    <-> ec_2_3_1_118 [2.3.1.118] +acetyl_coa +aniline
+    n_phenylacetamide
   }
 
   branch from 3r_hydroxy_4_trans_undecenoyl_coa side right {
@@ -42,13 +42,73 @@ pathway 3e-nonenoyl-coa-to-nad "(3E)-nonenoyl-CoA to NAD" {
 
   branch from nad side left {
     nad
-    <-> ec_1_2_1_40 [1.2.1.40] +nadh +h +25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol +h2o
-    25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol
+    <-> . +nadh +h +2_amino_4_6_dinitrotoluene +h2o
+    2_6_diamino_4_nitrotoluene
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_145 [1.1.1.145] +nadh +h +21_hydroxyprogesterone
-    21_hydroxypregnenolone
+    <-> . +nadh +h +2_amino_4_6_dinitrotoluene +h2o
+    2_4_diamino_6_nitrotoluene
+  }
+
+  branch from acetyl_coa side left {
+    acetyl_coa
+    <-> ec_2_3_1_57 [2.3.1.57] +primary_diamine +coa
+    n_acetyldiamine
+  }
+
+  branch from acetyl_coa side right {
+    acetyl_coa
+    <-> ec_2_3_1_118 [2.3.1.118] +n_phenylhydroxylamine +coa
+    n_acetyloxy_benzenamine
+  }
+
+  branch from coa side left {
+    coa
+    <-> . +4_hydroxyphenylacetylglycine +4_hydroxyphenylacetyl_coa
+    glycine
+  }
+
+  branch from coa side right {
+    coa
+    <-> . +acetyl_coa +n_6_n_6_o_tridemethylpuromycin_5_phosphate
+    n_acetyl_n6_n6_o_tridemethylpuromycin_5_phosphat
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> . +h +4_amino_2_6_dinitrotoluene +2_4_diamino_6_nitrotoluene +nad
+    h2o
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> . +h +4_amino_2_6_dinitrotoluene +nad +h2o
+    4_amino_2_hydroxylamino_6_nitrotoluene
+  }
+
+  branch from h side left {
+    h
+    <-> ec_1_14_14_1 [1.14.14.1] +15s_hydroperoxy_5z_8z_11z_13e_eicosatetraenoate
+    11h_14_15_eeta
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_5_1_18 [2.5.1.18] +3_4_dihydro_3_hydroxy_4_s_glutathionyl_bromobenz +glutathione
+    bromobenzene_3_4_oxide
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_35 [1.1.1.35] +nadh +h +5_methyl_3_oxo_4_hexenoyl_coa
+    3_hydroxy_5_methylhex_4_enoyl_coa
+  }
+
+  branch from nad side right {
+    nad
+    <-> . +nadh +h +citronellic_acid +h2o
+    s_citronellal
   }
 }

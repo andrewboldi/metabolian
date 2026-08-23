@@ -83,43 +83,6 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
-    },
-    {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:175763"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "Water",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:15377"
-      }
-    },
-    {
-      "id": "palustrol",
-      "name": "palustrol",
-      "formula": "C15H26O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:231493"
-      }
-    },
-    {
-      "id": "selina_6_en_4_ol",
-      "name": "selina-6-en-4-ol",
-      "formula": "C15H26O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:231497"
-      }
     }
   ],
   "enzymes": [
@@ -277,81 +240,27 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "(2E,6E)-farnesyl diphosphate + H2O = palustrol + diphosphate",
-      "equation": "(2E,6E)-farnesyl diphosphate + H2O = palustrol + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "fpp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "palustrol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:80399"
+      "id": "xt_2_2_methylbutanoyl_phloroglucinol_secalciferol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_2_methylbutanoyl_phloroglucinol"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "secalciferol-to-h2o"
+      },
+      "note": "Shares 2-(2-methylbutanoyl)phloroglucinol with secalciferol to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:80399"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "(2E,6E)-farnesyl diphosphate + H2O = selina-6-en-4-ol + diphosphate",
-      "equation": "(2E,6E)-farnesyl diphosphate + H2O = selina-6-en-4-ol + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "fpp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "selina_6_en_4_ol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:80403"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:80403"
+            "db": "ChEBI",
+            "id": "CHEBI:134326"
           }
         ]
       }

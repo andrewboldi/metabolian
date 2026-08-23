@@ -20,14 +20,14 @@ pathway 3-hydroxy-9-10-secoandros-to-diphosphate "3-hydroxy-9,10-secoandros… t
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_124 [1.14.14.124] +dihydromonacolin_l_carboxylate +fmnh2 +o2 +h2o +hplus
-    monacolin_l_carboxylate
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    16_s_hete
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_126 [1.14.14.126] +amyrin +fmnh2 +o2 +h2o +hplus
-    oleanolate
+    <-> . +testosterone +fmnh2 +o2 +h2o +hplus
+    11_hydroxytestosterone
   }
 
   branch from 9_17_dioxo_1_2_3_4_10_19_hexanorandrostan_5_oate side left {
@@ -56,13 +56,49 @@ pathway 3-hydroxy-9-10-secoandros-to-diphosphate "3-hydroxy-9,10-secoandros… t
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_69 [4.2.3.69] +fpp
-    barbatene
+    <-> . +14_15_eet +atp +coa +amp
+    14_15_epoxy_5z_8z_11z_icosatrienoyl_coa
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_70 [4.2.3.70] +fpp +h2o
-    patchouli_alcohol
+    <-> . +5_6_eet +atp +coa +amp
+    5_6_epoxy_8z_11z_14z_icosatrienoyl_coa
+  }
+
+  branch from fmnh2 side left {
+    fmnh2
+    <-> . +9s_10r_epoxyoctadecanoate +o2 +fmn +h2o +hplus
+    9s_10r_9_10_epoxy_18_hydroxyoctadecanoate
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> . +9r_10s_9_10_epoxyoctadecanoate +o2 +fmn +h2o +hplus
+    9r_10s_9_10_epoxy_18_hydroxyoctadecanoate
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> . +9_10_epoxyoctadecanoate +fmnh2 +o2 +h2o +hplus
+    9_10_epoxy_18_hydroxyoctadecanoate
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +9_10_epome +fmnh2 +o2 +h2o +hplus
+    9_10_epoxy_18_hydroxy_12z_octadecenoate
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +5_hete +atp +coa +amp
+    5_hydroxy_6e_8z_11z_14z_icosatetraenoyl_coa
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +12_hete +atp +coa +amp
+    12_hydroxy_5z_8z_10e_14z_icosatetraenoyl_coa
   }
 }

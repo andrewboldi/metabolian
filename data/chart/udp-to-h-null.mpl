@@ -4,115 +4,43 @@
 # edit the generator, not this file.
 
 pathway udp-to-h-null "UDP to H" {
-  spacing 340
+  spacing 180
 
   spine at 0,0 {
     udp
-    <-> ec_2_4_2_34 [2.4.2.34] +indol_3_yl_acetyl_myo_inositol_l_arabinoside +h -udp_beta_l_arabinopyranose
-    indole_3_acetyl_1d_myo_inositol
-    <-> . +d_galactopyranose -h2o
-    5_o_indol_3_ylacetyl_myo_inositol_d_galactoside
-    <-> ec_2_4_1_156 [2.4.1.156] +udp +h -indole_3_acetyl_1d_myo_inositol
-    udp_alpha_d_galactose
-    <-> ec_2_7_7_12 [2.7.7.12] +d_glucopyranose_1_phosphate -alpha_d_galactose_1_phosphate
+    <-> . +oleanolate_3_beta_d_glucuronoside_3_1_galactosid -udp_alpha_d_glucose
+    oleanolate_3_beta_d_glucuronoside_3_1_galactosid
+    <-> . +udp +h -oleanolate_3_beta_d_glucuronoside_3_1_galactosid
     udp_alpha_d_glucose
-    <-> . +n_benzyladenine -n_benzyl_9_d_glucosyl_adenine -h
-    udp
-  }
-
-  branch from indole_3_acetyl_1d_myo_inositol side left {
-    indole_3_acetyl_1d_myo_inositol
-    <-> . +h +indol_3_yl_acetate +h2o
-    myo_inositol
-  }
-
-  branch from indole_3_acetyl_1d_myo_inositol side right {
-    indole_3_acetyl_1d_myo_inositol
-    <-> . +5_o_indol_3_ylacetyl_myo_inositol_d_galactoside +h2o
-    beta_d_galactose
-  }
-
-  branch from udp_beta_l_arabinopyranose side left {
-    udp_beta_l_arabinopyranose
-    <-> . +udp +h +isovitexin_2_o_arabinoside
-    isovitexin
-  }
-
-  branch from udp_beta_l_arabinopyranose side right {
-    udp_beta_l_arabinopyranose
-    <-> . +udp +isovitexin_7_o_xylosyl_2_o_arabinoside +h
-    isovitexin_7_o_xyloside
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +ginsenoside_mc +glucose
-    notoginsenoside_fe
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +glucose +ginsenoside_c_mx1
-    ginsenoside_rb3
-  }
-
-  branch from udp_alpha_d_galactose side left {
+    <-> . +udp +h +oleanolate_3_beta_d_glucuronoside_3_1_galactosid -oleanolic_acid_3_o_beta_d_glucosiduronic_acid
     udp_alpha_d_galactose
-    <-> . +udp +beta_d_galactosyl_chenodeoxycholate
-    chenodeoxycholate
-  }
-
-  branch from udp_alpha_d_galactose side right {
-    udp_alpha_d_galactose
-    <-> . +udp +fagopyritol_b1 +h
-    1d_chiro_inositol
-  }
-
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> . +udp +benzoyl_d_glucoside
-    benzoate
-  }
-
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> ec_2_4_1_35 [2.4.1.35] +udp +h +2_naphthyl_d_glucoside
-    2_naphthol
-  }
-
-  branch from alpha_d_galactose_1_phosphate side left {
-    alpha_d_galactose_1_phosphate
-    <-> . +alpha_d_galactose +atp +h
-    adp
-  }
-
-  branch from alpha_d_galactose_1_phosphate side right {
-    alpha_d_galactose_1_phosphate
-    <-> ec_2_7_1_6 [2.7.1.6] +beta_d_galactose +h +adp
-    atp
-  }
-
-  branch from udp side left {
-    udp
-    <-> . +beta_d_glucuronosyl_1_4_beta_d_glucuronosyl_1_4 +h +beta_d_glucuronosyl_1_4_alpha_d_glucosyl_c55_ome
+    <-> ec_2_4_1_17 [2.4.1.17] +udp +oleanolic_acid_3_o_beta_d_glucosiduronic_acid -h -oleanolate
     udp_alpha_d_glucuronate
-  }
-
-  branch from udp side right {
+    <-> ec_2_4_1_17 [2.4.1.17] +3_3_5_triiodo_l_thyronine -3_5_3_triiodo_l_thyronine_acyl_beta_d_glucuronid -h
     udp
-    <-> ec_2_4_1_356 [2.4.1.356] +beta_d_glucuronosyl_1_4_alpha_d_glucosyl_c55_ome +h +udp_alpha_d_glucuronate
-    alpha_d_glucosyl_c55_omega_saturated_dolichyl_ph
   }
 
   branch from h side left {
     h
-    <-> . +s_adenosyl_l_homocysteine +gliotoxin +n_desmethyl_gliotoxin
-    s_adenosyl_l_methionine
+    <-> ec_2_5_1_91 [2.5.1.91] +diphosphate +all_trans_decaprenyl_diphosphate +ipp
+    farnesyl_diphosphate
   }
 
   branch from h side right {
     h
-    <-> . +dihydromonacolin_l_carboxylate +h2o
-    dihydromonacolin_l
+    <-> ec_2_5_1_91 [2.5.1.91] +diphosphate +all_trans_decaprenyl_diphosphate +ipp
+    2e_6e_farnesyl_diphosphate
+  }
+
+  branch from h side left {
+    h
+    <-> ec_4_2_1_17 [4.2.1.17] +2_methylbut_2_enoyl_coenzyme_a +h2o
+    2s_3s_3_hydroxy_2_methylbutanoyl_coa
+  }
+
+  branch from h side right {
+    h
+    <-> ec_2_5_1_1 [2.5.1.1] +2e_geranyl_diphosphate +ipp +farnesyl_diphosphate
+    diphosphate
   }
 }

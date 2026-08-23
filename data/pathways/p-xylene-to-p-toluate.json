@@ -128,21 +128,48 @@
       }
     },
     {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM10"
-      }
-    },
-    {
       "id": "h",
       "name": "H",
       "formula": "H",
       "charge": 1,
       "xrefs": {
         "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "4_methylbenzaldehyde",
+      "name": "4-methylbenzaldehyde",
+      "formula": "C8H8O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM4077"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
       }
     },
     {
@@ -180,55 +207,6 @@
       "xrefs": {
         "metanetx": "WATER"
       }
-    },
-    {
-      "id": "4_methylbenzaldehyde",
-      "name": "4-methylbenzaldehyde",
-      "formula": "C8H8O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM4077"
-      }
-    },
-    {
-      "id": "dtdp_4_dehydro_2_6_dideoxy_d_glucose",
-      "name": "dTDP-4-dehydro-2,6-dideoxy-α-D-glucose",
-      "short": "dTDP-4-dehydro-2,6-…",
-      "formula": "C16H22N2O14P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:84537"
-      }
-    },
-    {
-      "id": "dtdp_4_dehydro_2_3_6_trideoxy_d_glucose",
-      "name": "dTDP-4-dehydro-2,3,6-trideoxy-α-D-glucose",
-      "short": "dTDP-4-dehydro-2,3,…",
-      "formula": "C16H22N2O13P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:90944"
-      }
-    },
-    {
-      "id": "24r_24_25_dihydroxycalciol",
-      "name": "(24R)-24,25-dihydroxycalciol",
-      "short": "24,25-dihydroxycalc…",
-      "formula": "C27H44O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:28818"
-      }
-    },
-    {
-      "id": "25_hydroxy_24_oxocalciol",
-      "name": "25-hydroxy-24-oxocalciol",
-      "short": "25-hydroxy-24-oxoca…",
-      "formula": "C27H42O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:47805"
-      }
     }
   ],
   "enzymes": [
@@ -244,20 +222,16 @@
       "name": "aldose reductase",
       "ec": [
         "1.1.1.21"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P15121"
+      }
     },
     {
       "id": "ec_1_1_1_90",
       "name": "aryl-alcohol dehydrogenase",
       "ec": [
         "1.1.1.90"
-      ]
-    },
-    {
-      "id": "ec_4_2_1_164",
-      "name": "dTDP-4-dehydro-2,6-dideoxy-D-glucose 3-dehydratase",
-      "ec": [
-        "4.2.1.164"
       ]
     }
   ],
@@ -407,6 +381,54 @@
     },
     {
       "id": "r4",
+      "name": "aldose reductase",
+      "ec": "1.1.1.21",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4_methylbenzaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_methylbenzyl_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR130059"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR130059"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
       "name": "Reaction MNXR146191",
       "substrates": [
         {
@@ -441,7 +463,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 5,
       "xrefs": {
         "metanetx": "MNXR146191"
       },
@@ -456,7 +478,7 @@
       }
     },
     {
-      "id": "r5",
+      "id": "r6",
       "name": "aldose reductase",
       "ec": "1.1.1.21",
       "substrates": [
@@ -489,7 +511,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
         "metanetx": "MNXR95030"
       },
@@ -502,107 +524,49 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r6",
-      "name": "dTDP-4-dehydro-2,6-dideoxy-D-glucose 3-dehydratase",
-      "equation": "dTDP-4-dehydro-2,6-dideoxy-alpha-D-glucose + 2 reduced [2Fe-2S]-[ferredoxin] + 2 H(+) = dTDP-4-dehydro-2,3,6-trideoxy-alpha-D-hexopyranose + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
-      "ec": "4.2.1.164",
-      "substrates": [
-        {
-          "metabolite": "dtdp_4_dehydro_2_6_dideoxy_d_glucose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "dtdp_4_dehydro_2_3_6_trideoxy_d_glucose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_1_164"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:49140"
+      "id": "xt_4_methylbenzaldehyde_formaldehyde-to-morphiniumone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_methylbenzaldehyde"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "formaldehyde-to-morphiniumone"
+      },
+      "note": "Shares 4-methylbenzaldehyde with formaldehyde to morphiniumone.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:49140"
+            "db": "MetaNetX",
+            "id": "MNXM4077"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "secalciferol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = 25-hydroxy-24-oxocalciol + 2 oxi...",
-      "equation": "secalciferol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = 25-hydroxy-24-oxocalciol + 2 oxidized [adrenodoxin] + 2 H2O",
-      "substrates": [
-        {
-          "metabolite": "24r_24_25_dihydroxycalciol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "25_hydroxy_24_oxocalciol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:49196"
+      "id": "xt_4_methylbenzaldehyde_tocotrienol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_methylbenzaldehyde"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "tocotrienol-to-h2o"
+      },
+      "note": "Shares 4-methylbenzaldehyde with γ-tocotrienol to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:49196"
+            "db": "MetaNetX",
+            "id": "MNXM4077"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway tryptophol-to-indol-3-ylacetyl-myo-in "tryptophol to (indol-3-ylacetyl)-myo-in…" {
-  spacing 282
+  spacing 300
 
   spine at 0,0 {
     tryptophol
@@ -26,27 +26,45 @@ pathway tryptophol-to-indol-3-ylacetyl-myo-in "tryptophol to (indol-3-ylacetyl)-
     3_indol_3_yl_pyruvate
   }
 
-  branch from indole_3_acetate side right {
-    indole_3_acetate
-    <-> ec_2_8_3_28 [2.8.3.28] +succinyl_coa +succinate
-    indol_3_ylacetyl_coa
-  }
-
-  branch from 1d_1_o_indol_3_yl_acetyl_myo_inositol side left {
-    1d_1_o_indol_3_yl_acetyl_myo_inositol
-    <-> ec_2_4_1_156 [2.4.1.156] +udp_d_galactose +udp +hplus
-    5_o_indol_3_ylacetyl_myo_inositol_d_galactoside
-  }
-
   branch from glucose side right {
     glucose
-    <-> ec_1_1_1_47 [1.1.1.47] +nadp +nadph +hplus
-    d_glucono_1_5_lactone
+    <-> ec_2_3_1_n12 [2.3.1.n12] +cyanidin_3_o_6_o_4_o_d_glucosyl_p_coumaroyl_2_o +1_o_sinapoyl_d_glucose
+    cyanidin_3_o_6_o_4_o_d_glucosyl_p_coumaroyl_2_o
   }
 
   branch from glucose side left {
     glucose
-    <-> ec_2_7_1_41 [2.7.1.41] +d_glucopyranose_1_phosphate
-    d_glucose_1_6_bisphosphate
+    <-> ec_4_2_99_22 [4.2.99.22] +6_tuliposide_a
+    methylene_butyrolactone
+  }
+
+  branch from udp_d_glucose side right {
+    udp_d_glucose
+    <-> ec_2_4_1_178 [2.4.1.178] +4_hydroxymandelonitrile +udp +hplus
+    r_4_hydroxymandelonitrile_d_glucoside
+  }
+
+  branch from udp_d_glucose side left {
+    udp_d_glucose
+    <-> ec_2_4_1_192 [2.4.1.192] +nuatigenin +udp +hplus
+    nuatigenin_3_d_glucopyranoside
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> ec_3_2_1_189 [3.2.1.189] +dioscin +h2o +l_rhamnopyranose
+    diosgenin
+  }
+
+  branch from glucose side left {
+    glucose
+    <-> ec_3_2_1_186 [3.2.1.186] +protodioscin +h2o
+    26_desglucoprotodioscin
+  }
+
+  branch from udp_l_arabinopyranose side right {
+    udp_l_arabinopyranose
+    <-> ec_4_1_1_67 [4.1.1.67] +hplus +co2
+    udp_d_galacturonate
   }
 }

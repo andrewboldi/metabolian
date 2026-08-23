@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway neoabietadiene-diol-to-ent-copalyl-diphosphate "neoabietadiene-diol to ent-copalyl diphosphate" {
-  spacing 220
+  spacing 292
 
   spine at 0,0 {
     neoabietadiene_diol
@@ -30,49 +30,121 @@ pathway neoabietadiene-diol-to-ent-copalyl-diphosphate "neoabietadiene-diol to e
 
   branch from h side left {
     h
-    <-> . +p_nitrostyrene_oxide +bromide
-    s_p_nitro_2_bromo_1_phenylethanol
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +anabaenopeptilide_90a +phosphate +anabaenopeptilide_90a +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> . +r_2_chloro_1_phenylethanol +chloride
-    s_styrene_oxide
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    nostopeptolide_a2
   }
 
   branch from o2 side left {
     o2
-    <-> . +6_hydroxychlorzoxazone +nadp +h2o +h +nadph
-    chlorzoxazone
+    <-> ec_1_14_13_107 [1.14.13.107] +nadh +4r_limonene +h +nad +h2o
+    4r_limonene_1_2_epoxide
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_18_1 [1.14.18.1] +4_acetamido_o_benzoquinone +h2o
-    4_acetamidophenol
+    <-> ec_1_14_13_107 [1.14.13.107] +4s_limonene +h +nadph +nadp +h2o
+    1s_4s_limonene_1_2_epoxide
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_21 [1.1.1.21] +3_bromobenzaldehyde +h +nadp
-    3_bromobenzyl_alcohol
+    <-> ec_1_1_1_71 [1.1.1.71] +h +abietal +nadp
+    palustradienol
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_21 [1.1.1.21] +2_ethylbutanal +h +nadp
-    2_ethylbutanol
+    <-> ec_1_1_1_71 [1.1.1.71] +h +abietal +nadp
+    isopimara_7_15_dienol
   }
 
   branch from ent_copalyl_diphosphate side left {
     ent_copalyl_diphosphate
-    <-> . +diphosphate
-    pimaradiene
+    <-> ec_4_2_3_185 [4.2.3.185] +diphosphate
+    ent_atiserene
   }
 
   branch from ent_copalyl_diphosphate side right {
     ent_copalyl_diphosphate
-    <-> ec_4_2_3_18 [4.2.3.18] +diphosphate
-    abieta_7_13_diene
+    <-> ec_4_2_3_185 [4.2.3.185] +diphosphate
+    ent_atiserene
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_1_1_71 [1.1.1.71] +neoabietadienal +h +nadph
+    levopimaradienol
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +palustradienol
+    neoabietadienal
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    nostopeptolide_a1
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    nostocyclopeptide_a1
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    nostocyclopeptide_a2
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    nostocyclopeptide_a3
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_14_13_107 [1.14.13.107] +nadh +h +1s_4s_limonene_1_2_epoxide +nad +h2o
+    4s_limonene
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_14_13_107 [1.14.13.107] +4s_limonene +h +nadph +nadp +h2o
+    1r_4s_limonene_1_2_epoxide
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_1_1_71 [1.1.1.71] +h +nadp +palustradienol
+    palustradienal
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_1_1_71 [1.1.1.71] +h +nadp +palustradienol
+    isopimara_7_15_dienal
+  }
+
+  branch from diphosphate side left {
+    diphosphate
+    <-> . +7r_11s_16s_7_hydroxy_ent_kauran_11_16_epoxy_19 +h +atp
+    7r_11s_16s_7_hydroxy_ent_kauran_11_16_epoxy_19
+  }
+
+  branch from diphosphate side right {
+    diphosphate
+    <-> ec_6_2_1_2 [6.2.1.2] +valproyl_coa +h +amp +atp +coa
+    valproic_acid
   }
 }

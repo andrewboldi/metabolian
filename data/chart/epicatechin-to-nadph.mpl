@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway epicatechin-to-nadph "(+)-epicatechin to NADPH" {
-  spacing 312
+  spacing 276
 
   spine at 0,0 {
     epicatechin
@@ -14,41 +14,5 @@ pathway epicatechin-to-nadph "(+)-epicatechin to NADPH" {
     epicatechin
     <-> ec_1_3_1_77 [1.3.1.77] +nadp -h -nadph
     cyanidin
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +pc_22_0_18_3_9z_12z_15z +phosphate +pc_22_0_18_3_9z_12z_15z +h2o
-    atp
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    22_1_18_3_pc
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> ec_1_1_1_71 [1.1.1.71] +h +phellandral +nadp
-    s_terpineol
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> ec_1_1_1_71 [1.1.1.71] +h +phellandral +nadp
-    nerol
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_geranial +h
-    neodihydrocarveol
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +11r_dihydroartemisinic_aldehyde
-    presilphiperfolan_8_ol
   }
 }

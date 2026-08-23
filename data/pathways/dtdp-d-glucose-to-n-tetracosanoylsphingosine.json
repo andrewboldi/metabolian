@@ -139,51 +139,50 @@
       }
     },
     {
-      "id": "z_3s_2_3_hydroxybutenyl_thiohydroximate_o_sulfa",
-      "name": "(Z,3S)-2-(3-hydroxybutenyl)-thiohydroximate-O-sulfate",
-      "short": "(Z,3S)-2-(3-hydroxy…",
-      "formula": "C5H8NO5S2",
-      "charge": -1,
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H30N9O15P2",
+      "charge": -3,
       "xrefs": {
-        "metanetx": "MNXM1368612"
+        "chebi": "CHEBI:57692"
       }
     },
     {
-      "id": "h",
-      "name": "H",
-      "formula": "H",
-      "charge": 1,
+      "id": "trans_2_tetracosenoyl_coa",
+      "name": "trans-2-tetracosenoyl-CoA",
+      "short": "trans-2-tetracoseno…",
+      "formula": "C45H76N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "metanetx": "MNXM1"
+        "chebi": "CHEBI:74693"
       }
     },
     {
-      "id": "2r_2_hydroxybut_3_enylglucosinolate",
-      "name": "(2R)-2-Hydroxybut-3-enylglucosinolate",
-      "short": "2-Hydroxybut-3-enyl…",
-      "formula": "C11H19NO10S2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:190717"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "WATER"
-      }
-    },
-    {
-      "id": "e_3s_2_3_hydroxybutenyl_thiohydroximate_o_sulfa",
-      "name": "(E,3S)-2-(3-hydroxybutenyl)-thiohydroximate-O-sulfate",
-      "short": "(E,3S)-2-(3-hydroxy…",
-      "formula": "C5H7NO5S2",
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
       "charge": -2,
       "xrefs": {
-        "metanetx": "MNXM1368613"
+        "chebi": "CHEBI:58307"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "3_oxohexacosanoyl_coa",
+      "name": "3-oxohexacosanoyl-CoA",
+      "short": "3-oxohexacosanoyl-C…",
+      "formula": "C47H80N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:73980"
       }
     }
   ],
@@ -193,14 +192,10 @@
       "name": "sphingomyelin deacylase",
       "ec": [
         "3.5.1.109"
-      ]
-    },
-    {
-      "id": "ec_3_2_1_147",
-      "name": "thioglucosidase",
-      "ec": [
-        "3.2.1.147"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q13510"
+      }
     }
   ],
   "reactions": [
@@ -376,90 +371,348 @@
     },
     {
       "id": "r5",
-      "name": "thioglucosidase",
-      "ec": "3.2.1.147",
+      "name": "tetracosanoyl-CoA + oxidized [electron-transfer flavoprotein] + H(+) = (2E)-tetracoseno...",
+      "equation": "tetracosanoyl-CoA + oxidized [electron-transfer flavoprotein] + H(+) = (2E)-tetracosenoyl-CoA + reduced [electron-transfer flavoprotein]",
       "substrates": [
         {
-          "metabolite": "glucose",
+          "metabolite": "tetracosanoyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "z_3s_2_3_hydroxybutenyl_thiohydroximate_o_sulfa",
+          "metabolite": "fad",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h",
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "2r_2_hydroxybut_3_enylglucosinolate",
+          "metabolite": "trans_2_tetracosenoyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "fadh2",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_2_1_147"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR197037"
+        "rhea": "RHEA:47232"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR197037"
+            "db": "Rhea",
+            "id": "RHEA:47232"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "Reaction MNXR197038",
+      "name": "tetracosanoyl-CoA + acetyl-CoA = 3-oxohexacosanoyl-CoA + CoA",
+      "equation": "tetracosanoyl-CoA + acetyl-CoA = 3-oxohexacosanoyl-CoA + CoA",
       "substrates": [
         {
-          "metabolite": "glucose",
+          "metabolite": "tetracosanoyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "e_3s_2_3_hydroxybutenyl_thiohydroximate_o_sulfa",
+          "metabolite": "acetyl_coa",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "2r_2_hydroxybut_3_enylglucosinolate",
+          "metabolite": "3_oxohexacosanoyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "coa",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "metanetx": "MNXR197038"
+        "rhea": "RHEA:78639"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR197038"
+            "db": "Rhea",
+            "id": "RHEA:78639"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_dtdp_d_glucose_dtdp-l-dihydrostreptose-to-dtdp-4-dehydro-l-rham",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dtdp_d_glucose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-l-dihydrostreptose-to-dtdp-4-dehydro-l-rham"
+      },
+      "note": "Shares dTDP-α-D-glucose with dTDP-L-dihydrostreptose to dTDP-4-dehydro-β-L-rhamno….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57477"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glucosyl_n_acylsphingosine_1-lauroyl-sn-glycero-3-ph-to-d-glucopyranose-411",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glucosyl_n_acylsphingosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-lauroyl-sn-glycero-3-ph-to-d-glucopyranose-411"
+      },
+      "note": "Shares β-D-glucosyl-N-acylsphingosine with 1-lauroyl-sn-glycero-3-ph… to D-glucopyranose.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:22801"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_glucosyl_n_acylsphingosine_d-gal-1-3-d-glcnac-to-5-o-phosphonato-d-ribof",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_glucosyl_n_acylsphingosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-gal-1-3-d-glcnac-to-5-o-phosphonato-d-ribof"
+      },
+      "note": "Shares β-D-glucosyl-N-acylsphingosine with β-D-Gal-(1→3)-β-D-GlcNAc-… to 5-O-phosphonato-α-D-ribof….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:22801"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tetracosanoyl_coa_3-hydroxyicosanoyl-coa-to-n-2-hydroxytetracosano",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tetracosanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxyicosanoyl-coa-to-n-2-hydroxytetracosano"
+      },
+      "note": "Shares tetracosanoyl-CoA with 3-hydroxyicosanoyl-CoA to N-(2-hydroxytetracosanoyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:65052"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tetracosanoyl_coa_3s-3-hydroxytetracosano-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tetracosanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3s-3-hydroxytetracosano-to-fmn"
+      },
+      "note": "Shares tetracosanoyl-CoA with (3S)-3-hydroxytetracosano… to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:65052"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tetracosanoyl_coa_n-lignoceroylsphingosine-to-n-2-hydroxytetracosa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tetracosanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-lignoceroylsphingosine-to-n-2-hydroxytetracosa"
+      },
+      "note": "Shares tetracosanoyl-CoA with N-lignoceroylsphingosine-… to N-(2-hydroxytetracosanoyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:65052"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tetracosanoyl_coa_tetracosanoyl-coa-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tetracosanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "tetracosanoyl-coa-to-fmn"
+      },
+      "note": "Shares tetracosanoyl-CoA with tetracosanoyl-CoA to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:65052"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_tetracosanoylsphingosine_n-lignoceroylsphingosine-to-n-2-hydroxytetracosa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_tetracosanoylsphingosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-lignoceroylsphingosine-to-n-2-hydroxytetracosa"
+      },
+      "note": "Shares N-tetracosanoylsphingosine with N-lignoceroylsphingosine-… to N-(2-hydroxytetracosanoyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:72965"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_2_tetracosenoyl_coa_3-hydroxyicosanoyl-coa-to-n-2-hydroxytetracosano",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_2_tetracosenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-hydroxyicosanoyl-coa-to-n-2-hydroxytetracosano"
+      },
+      "note": "Shares trans-2-tetracosenoyl-CoA with 3-hydroxyicosanoyl-CoA to N-(2-hydroxytetracosanoyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74693"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_2_tetracosenoyl_coa_3s-3-hydroxytetracosano-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_2_tetracosenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3s-3-hydroxytetracosano-to-fmn"
+      },
+      "note": "Shares trans-2-tetracosenoyl-CoA with (3S)-3-hydroxytetracosano… to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74693"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_trans_2_tetracosenoyl_coa_n-lignoceroylsphingosine-to-n-2-hydroxytetracosa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_2_tetracosenoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-lignoceroylsphingosine-to-n-2-hydroxytetracosa"
+      },
+      "note": "Shares trans-2-tetracosenoyl-CoA with N-lignoceroylsphingosine-… to N-(2-hydroxytetracosanoyl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:74693"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_oxohexacosanoyl_coa_3s-3-hydroxytetracosano-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_oxohexacosanoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3s-3-hydroxytetracosano-to-fmn"
+      },
+      "note": "Shares 3-oxohexacosanoyl-CoA with (3S)-3-hydroxytetracosano… to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:73980"
           }
         ]
       }

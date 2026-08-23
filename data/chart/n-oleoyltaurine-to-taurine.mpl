@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-oleoyltaurine-to-taurine "N-oleoyltaurine to taurine" {
-  spacing 222
+  spacing 192
 
   spine at 0,0 {
     n_oleoyltaurine
@@ -26,43 +26,13 @@ pathway n-oleoyltaurine-to-taurine "N-oleoyltaurine to taurine" {
 
   branch from taurine side left {
     taurine
-    <-> . +myristoyl_coa +coa +hplus
-    n_tetradecanoyltaurine
+    <-> . +n_arachidonoyltaurine +h2o
+    arachidonate
   }
 
   branch from taurine side right {
     taurine
-    <-> . +palmitoyl_coa +coa +hplus
-    n_hexadecanoyltaurine
-  }
-
-  branch from ammonioacetaldehyde side left {
-    ammonioacetaldehyde
-    <-> ec_1_1_1_276 [1.1.1.276] +nadp +co2 +nadph
-    serine
-  }
-
-  branch from succinate side right {
-    succinate
-    <-> . +prekainate +akg +o2 +co2 +h2o
-    kainate
-  }
-
-  branch from succinate side left {
-    succinate
-    <-> . +n_geranyl_l_glutamate +akg +o2 +co2 +h2o
-    dainate_a
-  }
-
-  branch from glycine side right {
-    glycine
-    <-> . +n_arachidonoylglycinate +h2o
-    arachidonate
-  }
-
-  branch from glycine side left {
-    glycine
-    <-> . +fatty_acyl_coa +coa +hplus
-    n_fatty_acyl_glycine
+    <-> . +taurocholate +l_phenylalanine
+    l_phenylalanocholate
   }
 }

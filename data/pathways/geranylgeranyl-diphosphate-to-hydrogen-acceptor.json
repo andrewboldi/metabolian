@@ -100,44 +100,6 @@
       "xrefs": {
         "chebi": "CHEBI:78370"
       }
-    },
-    {
-      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
-      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
-      "short": "2-trans,6-trans,10-…",
-      "formula": "C20H33O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58756"
-      }
-    },
-    {
-      "id": "variediene",
-      "name": "variediene",
-      "formula": "C20H32",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:177888"
-      }
-    },
-    {
-      "id": "all_trans_pentaprenyl_diphosphate",
-      "name": "all-trans-pentaprenyl diphosphate",
-      "short": "all-trans-pentapren…",
-      "formula": "C25H41O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:57907"
-      }
-    },
-    {
-      "id": "r_2e_cericerene",
-      "name": "(R,2E)-α-cericerene",
-      "formula": "C25H40",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:228261"
-      }
     }
   ],
   "enzymes": [
@@ -160,20 +122,6 @@
       "name": "cyclooctatin synthase",
       "ec": [
         "1.14.99.62"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_218",
-      "name": "variediene synthase",
-      "ec": [
-        "4.2.3.218"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_219",
-      "name": "(2E)-alpha-cericerene synthase",
-      "ec": [
-        "4.2.3.219"
       ]
     }
   ],
@@ -328,85 +276,159 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "variediene synthase",
-      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate = variediene + diphosphate",
-      "ec": "4.2.3.218",
-      "substrates": [
-        {
-          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "variediene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_218"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:78287"
+      "id": "xt_geranylgeranyl_diphosphate_1-2-di-o-myristoyl-sn-gly-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "geranylgeranyl_diphosphate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "1-2-di-o-myristoyl-sn-gly-to-h2o"
+      },
+      "note": "Shares geranylgeranyl diphosphate with 1,2-di-O-myristoyl-sn-gly… to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:78287"
+            "db": "ChEBI",
+            "id": "CHEBI:57533"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "(2E)-alpha-cericerene synthase",
-      "equation": "(2E,6E,10E,14E)-geranylfarnesyl diphosphate = (R,2E)-alpha-cericerene + diphosphate",
-      "ec": "4.2.3.219",
-      "substrates": [
-        {
-          "metabolite": "all_trans_pentaprenyl_diphosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "r_2e_cericerene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_219"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:78291"
+      "id": "xt_geranylgeranyl_diphosphate_aldehydo-d-allose-to-5-hydroxyisouric-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "geranylgeranyl_diphosphate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "aldehydo-d-allose-to-5-hydroxyisouric-acid"
+      },
+      "note": "Shares geranylgeranyl diphosphate with aldehydo-D-allose to 5-hydroxyisouric acid.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:78291"
+            "db": "ChEBI",
+            "id": "CHEBI:57533"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_geranylgeranyl_diphosphate_d-apiitol-to-nitrate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "geranylgeranyl_diphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-apiitol-to-nitrate"
+      },
+      "note": "Shares geranylgeranyl diphosphate with D-apiitol to nitrate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57533"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_geranylgeranyl_diphosphate_d-gal-1-3-d-glcnac-to-5-o-phosphonato-d-ribof",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "geranylgeranyl_diphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-gal-1-3-d-glcnac-to-5-o-phosphonato-d-ribof"
+      },
+      "note": "Shares geranylgeranyl diphosphate with β-D-Gal-(1→3)-β-D-GlcNAc-… to 5-O-phosphonato-α-D-ribof….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57533"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_geranylgeranyl_diphosphate_geranylgeranyl-diphosphate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "geranylgeranyl_diphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "geranylgeranyl-diphosphate-to-h2o"
+      },
+      "note": "Shares geranylgeranyl diphosphate with geranylgeranyl diphosphate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57533"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_geranylgeranyl_diphosphate_h-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "geranylgeranyl_diphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-diphosphate"
+      },
+      "note": "Shares geranylgeranyl diphosphate with H to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57533"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cyclooctat_9_en_7_ol_tuberculosinyl-diphosphate-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cyclooctat_9_en_7_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "tuberculosinyl-diphosphate-to-diphosphate"
+      },
+      "note": "Shares cyclooctat-9-en-7-ol with tuberculosinyl diphosphate to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78352"
           }
         ]
       }

@@ -1,0 +1,566 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-oxoglutarate-to-2-hydroxyacetophenone-null",
+  "name": "2-oxoglutarate to 2-hydroxyacetophenone",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 2-oxoglutarate to 2-hydroxyacetophenone, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR193199"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_oxoglutarate",
+      "name": "2-oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1368744"
+      }
+    },
+    {
+      "id": "d_alpha_phenylglycine",
+      "name": "D-alpha-phenylglycine",
+      "short": "D-alpha-phenylglyci…",
+      "formula": "C8H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1371218"
+      }
+    },
+    {
+      "id": "l_glutamate",
+      "name": "L-glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM741173"
+      }
+    },
+    {
+      "id": "phenylglyoxylate",
+      "name": "phenylglyoxylate",
+      "formula": "C8H5O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM764"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "phenylglyoxal",
+      "name": "Phenylglyoxal",
+      "formula": "C8H6O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:88868"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "2_hydroxyacetophenone",
+      "name": "2-hydroxyacetophenone",
+      "short": "2-hydroxyacetopheno…",
+      "formula": "C8H8O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM9838"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_6_1_72",
+      "name": "D-4-hydroxyphenylglycine transaminase",
+      "ec": [
+        "2.6.1.72"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_49",
+      "name": "2-oxoaldehyde dehydrogenase (NADP(+))",
+      "ec": [
+        "1.2.1.49"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_188",
+      "name": "prostaglandin-F synthase",
+      "ec": [
+        "1.1.1.188"
+      ],
+      "xrefs": {
+        "uniprot": "P42330"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "D-4-hydroxyphenylglycine transaminase",
+      "ec": "2.6.1.72",
+      "substrates": [
+        {
+          "metabolite": "2_oxoglutarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_alpha_phenylglycine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phenylglyoxylate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_72"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR193199"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR193199"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2-oxoaldehyde dehydrogenase (NADP(+))",
+      "ec": "1.2.1.49",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phenylglyoxylate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phenylglyoxal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_49"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR129384"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR129384"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "prostaglandin-F synthase",
+      "ec": "1.1.1.188",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phenylglyoxal",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_hydroxyacetophenone",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_188"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR129453"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR129453"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_d_alpha_phenylglycine_2-oxoglutarate-to-2-hydroxyacetophenone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_alpha_phenylglycine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-oxoglutarate-to-2-hydroxyacetophenone"
+      },
+      "note": "Shares D-alpha-phenylglycine with 2-oxoglutarate to 2-hydroxyacetophenone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371218"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_alpha_phenylglycine_3-epiecdysone-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_alpha_phenylglycine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-epiecdysone-to-h2o"
+      },
+      "note": "Shares D-alpha-phenylglycine with 3-Epiecdysone to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371218"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_alpha_phenylglycine_anthraniloyl-coa-to-ammonium-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_alpha_phenylglycine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "anthraniloyl-coa-to-ammonium-null"
+      },
+      "note": "Shares D-alpha-phenylglycine with anthraniloyl-CoA to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371218"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_alpha_phenylglycine_d-alpha-phenylglycine-to-n-hydroxysuccinimide",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_alpha_phenylglycine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-alpha-phenylglycine-to-n-hydroxysuccinimide"
+      },
+      "note": "Shares D-alpha-phenylglycine with D-alpha-phenylglycine to N-hydroxysuccinimide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371218"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_alpha_phenylglycine_d-alpha-phenylglycine-to-n-hydroxysuccinimide-nu",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_alpha_phenylglycine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-alpha-phenylglycine-to-n-hydroxysuccinimide-nu"
+      },
+      "note": "Shares D-alpha-phenylglycine with D-alpha-phenylglycine to N-hydroxysuccinimide.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371218"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_alpha_phenylglycine_phenoxymethylpenicillin-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_alpha_phenylglycine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phenoxymethylpenicillin-to-o2"
+      },
+      "note": "Shares D-alpha-phenylglycine with phenoxymethylpenicillin to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371218"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_alpha_phenylglycine_phenoxymethylpenicillin-to-o2-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_alpha_phenylglycine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phenoxymethylpenicillin-to-o2-null"
+      },
+      "note": "Shares D-alpha-phenylglycine with phenoxymethylpenicillin to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371218"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phenylglyoxal_2-oxoglutarate-to-2-hydroxyacetophenone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phenylglyoxal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-oxoglutarate-to-2-hydroxyacetophenone"
+      },
+      "note": "Shares Phenylglyoxal with 2-oxoglutarate to 2-hydroxyacetophenone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:88868"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phenylglyoxal_nadh-to-3-4-dimethoxyphenyl-meth",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phenylglyoxal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-3-4-dimethoxyphenyl-meth"
+      },
+      "note": "Shares Phenylglyoxal with NADH to (3,4-dimethoxyphenyl)meth….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:88868"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phenylglyoxal_nadh-to-3-4-dimethoxyphenyl-meth-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phenylglyoxal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-3-4-dimethoxyphenyl-meth-null"
+      },
+      "note": "Shares Phenylglyoxal with NADH to (3,4-dimethoxyphenyl)meth….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:88868"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phenylglyoxal_s-4-hydroxymandelate-to-2-hydroxyacetophenone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phenylglyoxal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-4-hydroxymandelate-to-2-hydroxyacetophenone"
+      },
+      "note": "Shares Phenylglyoxal with (S)-4-hydroxymandelate to 2-hydroxyacetophenone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:88868"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_phenylglyoxal_s-4-hydroxymandelate-to-2-hydroxyacetophenone-n",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "phenylglyoxal"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-4-hydroxymandelate-to-2-hydroxyacetophenone-n"
+      },
+      "note": "Shares Phenylglyoxal with (S)-4-hydroxymandelate to 2-hydroxyacetophenone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:88868"
+          }
+        ]
+      }
+    }
+  ]
+}

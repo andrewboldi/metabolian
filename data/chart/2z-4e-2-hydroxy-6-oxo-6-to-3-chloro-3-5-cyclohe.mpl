@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2z-4e-2-hydroxy-6-oxo-6-to-3-chloro-3-5-cyclohe "(2Z,4E)-2-hydroxy-6-oxo-6… to 3-chloro-3,5-cyclohexadie…" {
-  spacing 236
+  spacing 152
 
   spine at 0,0 {
     2z_4e_2_hydroxy_6_oxo_6_sulfonatohexa_2_4_dieno
@@ -16,89 +16,5 @@ pathway 2z-4e-2-hydroxy-6-oxo-6-to-3-chloro-3-5-cyclohe "(2Z,4E)-2-hydroxy-6-oxo
     3_chlorocatechol
     <-> . +nadh +co2 -3_chloro_3_5_cyclohexadiene_l_2_diol_1_carboxyla
     nad
-  }
-
-  branch from 2z_4e_2_hydroxyhexa_2_4_dienedioate side left {
-    2z_4e_2_hydroxyhexa_2_4_dienedioate
-    <-> .
-    4_oxalocrotonate
-  }
-
-  branch from 2z_4e_2_hydroxyhexa_2_4_dienedioate side right {
-    2z_4e_2_hydroxyhexa_2_4_dienedioate
-    <-> ec_1_13_11_2 [1.13.11.2] +h +sulfite +o2 +h2o
-    2_3_dihydroxybenzenesulfonate
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +pc_20_2_11z_14z_18_3_9z_12z_15z +phosphate +pc_20_2_11z_14z_18_3_9z_12z_15z +h2o
-    atp
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_11z_14z_17z_eicoastrienoyl_2_9z_12z_15z_octade
-  }
-
-  branch from sulfite side left {
-    sulfite
-    <-> . +thiosulfate +mk_8 +h +trithionate
-    menaquinol_8
-  }
-
-  branch from sulfite side right {
-    sulfite
-    <-> ec_3_1_1_92 [3.1.1.92] +maleylacetate +h +h2o
-    4_sulfomuconolactone
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_4_2_1_65 [4.2.1.65] +3_phenylpropionitrile
-    3_phenylpropanamide
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_2_1_2_1 [2.1.2.1] +6r_5_10_methylene_5_6_7_8_tetrahydrofolate +glycine +d_serine
-    6s_5_6_7_8_tetrahydrofolate
-  }
-
-  branch from 3_chlorocatechol side left {
-    3_chlorocatechol
-    <-> ec_1_13_11_39 [1.13.11.39] +o2
-    3_chloro_2_hydroxymuconic_semialdehyde
-  }
-
-  branch from 3_chlorocatechol side right {
-    3_chlorocatechol
-    <-> ec_1_13_11_39 [1.13.11.39] +h +o2
-    3_chloro_2_hydroxymuconic_semialdehyde
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +nadh +9z_12z_octadecadienoate +h +nad +h2o
-    vernolate
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +ubiquinol_9 +ubiquinone_9 +h2o
-    pmf
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_geranial +h
-    isodihydrocarveol
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
-    neoisodihydrocarveol
   }
 }

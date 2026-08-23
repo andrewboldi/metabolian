@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-hydroxy-l-tryptophan-to-s-adenosyl-l-homocyste "4-hydroxy-L-tryptophan to S-adenosyl-L-homocysteine" {
-  spacing 198
+  spacing 180
 
   spine at 0,0 {
     4_hydroxy_l_tryptophan
@@ -16,33 +16,15 @@ pathway 4-hydroxy-l-tryptophan-to-s-adenosyl-l-homocyste "4-hydroxy-L-tryptophan
     psilocybin
   }
 
-  branch from co2 side left {
-    co2
-    <-> ec_4_1_1_68 [4.1.1.68] +2_hydroxyhepta_2_4_dienedioic_acid
-    5_carboxy_2_oxohept_3_enedioate
+  branch from h side left {
+    h
+    <-> . +diphosphate +vaccenyl_coenzyme_a +amp +coa +vaccenic_acid
+    atp
   }
 
-  branch from co2 side right {
-    co2
-    <-> ec_4_1_1_77 [4.1.1.77] +2_hydroxy_cis_hex_2_4_dienoate
-    2_oxo_5_methyl_cis_muconate
-  }
-
-  branch from norbaeocystin side left {
-    norbaeocystin
-    <-> . +sam +sah +hplus
-    baeocystin
-  }
-
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_257 [2.1.1.257] +pseudouridine_5_phosphate_1 +sam +hplus
-    n1_methylpseudouridine_5_monophosphate_1
-  }
-
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_42 [2.1.1.42] +3_hydroxyflavonoid +sam +hplus
-    3_methoxyflavones
+  branch from h side right {
+    h
+    <-> . +8z_11z_14z_17z_eicosatetraenoyl_coa +diphosphate +amp +atp +all_cis_8_11_14_17_icosatetraenoic_acid
+    coa
   }
 }

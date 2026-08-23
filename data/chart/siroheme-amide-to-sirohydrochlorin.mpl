@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway siroheme-amide-to-sirohydrochlorin "siroheme amide to sirohydrochlorin" {
-  spacing 260
+  spacing 164
 
   spine at 0,0 {
     siroheme_amide
@@ -13,104 +13,8 @@ pathway siroheme-amide-to-sirohydrochlorin "siroheme amide to sirohydrochlorin" 
     <-> . +siroamide +h +adp +l_glutamate +phosphate -atp -sirohydrochlorin -h2o
     l_glutamine
     <-> ec_1_3_1_76 [1.3.1.76] +nadh +h +sirohydrochlorin -nad
-    dihydrosirohydrochlorin
+    precorrin_2
     <-> . +nadp -nadph -sirohydrochlorin
     h
-  }
-
-  branch from fe side left {
-    fe
-    <-> ec_1_16_3_2 [1.16.3.2] +h2o2 +h2o +h
-    iron_iii_oxide_hydroxide
-  }
-
-  branch from fe side right {
-    fe
-    <-> ec_1_16_3_1 [1.16.3.1] +h +o2 +h2o
-    fe
-  }
-
-  branch from l_glutamine side left {
-    l_glutamine
-    <-> . +indol_3_yl_acetate +h2o
-    indol_3_yl_acetyl_l_glutamine
-  }
-
-  branch from l_glutamine side right {
-    l_glutamine
-    <-> ec_2_1_3_3 [2.1.3.3] +hydrogencarbonate +atp +ornithine +h2o +h +adp +l_glutamate +phosphate
-    l_citrulline
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    1_hexadecanoyl_sn_glycero_3_phosphocholine
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    1_9z_octadecenoyl_sn_glycero_3_phosphocholine
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +4r_5r_4_5_dihydroxycyclohex_2_ene_1_carbonyl_co
-    5r_5_hydroxycyclohexa_1_3_diene_1_carbonyl_coa
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +3s_3_hydroxycyclohexane_1_carbonyl_coa
-    cyclohex_2_ene_1_carbonyl_coa
-  }
-
-  branch from dihydrosirohydrochlorin side left {
-    dihydrosirohydrochlorin
-    <-> ec_2_1_1_107 [2.1.1.107] +s_adenosyl_l_homocysteine +h +uroporphyrinogen_iii
-    s_adenosyl_l_methionine
-  }
-
-  branch from dihydrosirohydrochlorin side right {
-    dihydrosirohydrochlorin
-    <-> . +precorrin_3a +h +s_adenosyl_l_methionine
-    s_adenosyl_l_homocysteine
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
-    dihydrocarveol
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
-    1s_2s_4r_isodihydrocarveol
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_9z_12z_octadecadienoyl_sn_glycero_3_phosphocho
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    pe_16_1_9z_0_0
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> ec_1_1_1_71 [1.1.1.71] +h +phellandral +nadp
-    r_terpineol
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> ec_1_1_1_71 [1.1.1.71] +h +phellandral +nadp
-    thujan_3_ol
   }
 }

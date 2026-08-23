@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-hydroxymethylcatechol-to-h2o "4-hydroxymethylcatechol to H2O" {
-  spacing 234
+  spacing 318
 
   spine at 0,0 {
     4_hydroxymethylcatechol
@@ -18,67 +18,151 @@ pathway 4-hydroxymethylcatechol-to-h2o "4-hydroxymethylcatechol to H2O" {
 
   branch from nadh side left {
     nadh
-    <-> . +4r_limonene +h +o2 +nad +h2o
-    r_perillyl_alcohol
+    <-> ec_1_1_1_1 [1.1.1.1] +3_methylcyclohexanone +h +nad
+    3_methylcyclohexanol
   }
 
   branch from nadh side right {
     nadh
-    <-> . +diphenylamine +h +o2 +aniline +nad
-    catechol
+    <-> ec_1_1_1_1 [1.1.1.1] +h +3_methylbutan_2_one +nad
+    3_methyl_2_butanol
   }
 
   branch from h side left {
     h
-    <-> ec_2_4_1_17 [2.4.1.17] +udp +l_thyroxine_acyl_beta_d_glucuronide +l_thyroxine
-    udp_alpha_d_glucuronate
+    <-> ec_1_1_1_21 [1.1.1.21] +aldehydo_l_idose +nadph +nadp
+    l_iditol
   }
 
   branch from h side right {
     h
-    <-> ec_2_4_1_17 [2.4.1.17] +udp +tetraiodothyroacetate_ether_glucuronide +udp_alpha_d_glucuronate
-    3_3_5_5_tetraiodothyroacetic_acid
+    <-> ec_1_1_1_2 [1.1.1.2] +pentan_1_ol +nadp +nadph
+    pentanal
   }
 
   branch from o2 side left {
     o2
-    <-> . +beta_fenchene +co2 +h2o
-    beta_fenchocamphorone
+    <-> ec_1_14_14_94 [1.14.14.94] +leukotriene_b4 +h +nadph +nadp +h2o
+    19_hydroxyleukotriene_b4
   }
 
   branch from o2 side right {
     o2
-    <-> . +dimeric_urushiol_peroxide +h2o
-    3_8z_11e_13z_pentadeca_8_11_13_trien_1_yl_catech
+    <-> ec_1_1_3_15 [1.1.3.15] +3_chlorolactic_acid +h +h2o2
+    compound_0039890
   }
 
   branch from nad side left {
     nad
-    <-> . +4_chloro_crotonyl_coa +nadh +co2
-    chloroethylmalonyl_coa
+    <-> ec_1_1_1_1 [1.1.1.1] +pentan_3_one +nadh +h
+    pentan_3_ol
   }
 
   branch from nad side right {
     nad
-    <-> . +collinusin +nadh +h
-    7_8_7_8_tetrahydrojusticidin_b
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +4_oxoretinal
+    all_trans_4_oxoretinol
   }
 
   branch from h2o side left {
     h2o
-    <-> . +5_hydroxyindol_3_yl_acetaldehyde +l_cysteine +h
-    5_hydroxyindole_thiazolidine_carboxylate
+    <-> ec_3_5_1_88 [3.5.1.88] +met_ala_ser +formate
+    n_formyl_l_methionyl_l_alanyl_l_serinate
   }
 
   branch from h2o side right {
     h2o
-    <-> . +1_carboxyvinyl_carboxyphosphonate
-    2_phosphono_formylglycerate
+    <-> ec_3_1_1_81 [3.1.1.81] +n_3_oxodecanoyl_l_homoserine
+    n_3_oxo_decanoyl_homoserine_lactone
   }
 
   branch from 2_hydroxy_4_hydroxymethylbenzalpyruvate side left {
     2_hydroxy_4_hydroxymethylbenzalpyruvate
     <-> .
     2_hydroxy_7_hydroxymethylchromene_2_carboxylate
+  }
+
+  branch from co2 side right {
+    co2
+    <-> . +2e_hexadecenoyl_coa +l_serine +coa
+    3_dehydrosphingosine
+  }
+
+  branch from co2 side left {
+    co2
+    <-> . +9z_12z_15z_octadecatrienoate +h +h2o2 +h2o
+    aplotaxene
+  }
+
+  branch from nad side right {
+    nad
+    <-> . +nadh +codeinone
+    hydrocodone
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_5_1_34 [1.5.1.34] +nadh +2_amino_4_hydroxy_6_7_dimethyldihydropteridine +h
+    6_7_dimethyltetrahydropterin
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_1_1_81 [3.1.1.81] +n_hexanoyl_l_homoserine
+    n_2_oxooxolan_3_yl_hexanamide
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_4_21_62 [3.4.21.62] +n_acetyl_l_tyrosine_methyl_ester +methanol
+    n_acetyl_l_tyrosine
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_4_1_20 [1.4.1.20] +4_ethylthio_2_oxobutanoate +nh4 +nad +h2o
+    l_ethionine
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> ec_1_1_1_27 [1.1.1.27] +h +2_oxopentanoate +nad
+    2_hydroxypentanoate
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_1_6_1 [3.1.6.1] +2_hydroxy_5_nitrophenyl_hydrogen_sulfate +h2o +sulfate
+    4_nitrocatechol
+  }
+
+  branch from h side left {
+    h
+    <-> . +3_bromo_2e_acrylic_acid +h2o +bromide
+    3_oxopropanoate
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_13_11_12 [1.13.11.12] +9z_12z_octadecadienoate +h
+    hydroperoxylinoleic_acid
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_14_99_1 [1.14.99.1] +prostaglandin_g2
+    prostaglandin_h2
+  }
+
+  branch from pyruvate side right {
+    pyruvate
+    <-> ec_2_7_1_40 [2.7.1.40] +xtp +h +phosphoenolpyruvate
+    xdp
+  }
+
+  branch from pyruvate side left {
+    pyruvate
+    <-> ec_4_4_1_13 [4.4.1.13] +h +z_2_phenyl_1_thioacetohydroximate +nh4 +h2o
+    s_phenylacetothiohydroximoyl_l_cysteine
   }
 }

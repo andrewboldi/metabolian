@@ -36,63 +36,75 @@ pathway guaiacylglycerol-guaiac-to-hydroquinone "guaiacylglycerol-β-guaiac… t
     d_glucose_6_phosphate
   }
 
-  branch from formaldehyde side left {
-    formaldehyde
-    <-> . +n6_n6_dimethyl_l_lysine_1 +akg +o2 +succinate +co2
-    l_lysinium
+  branch from 5_methyltetrahydrosarcinapterin side left {
+    5_methyltetrahydrosarcinapterin
+    <-> . +acetyl_coa +5_6_7_8_tetrahydrosarcinapterin +coa
+    co
   }
 
-  branch from formaldehyde side right {
-    formaldehyde
-    <-> . +n6_methyl_l_lysinium +akg +o2 +l_lysinium +co2
-    succinate
-  }
-
-  branch from copper side left {
-    copper
-    <-> . +copper +ascorbate +hplus
-    mdha
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +4_aminoimidazole +h2o +hplus
-    n_formimidoylglycine
+  branch from 5_methyltetrahydrosarcinapterin side right {
+    5_methyltetrahydrosarcinapterin
+    <-> . +5_6_7_8_tetrahydrosarcinapterin +methanol
+    h2o
   }
 
   branch from nh3 side left {
     nh3
-    <-> ec_4_3_1_28 [4.3.1.28] +l_lysinium
-    l_pipecolic_acid
+    <-> . +serotonin +o2 +h2o +h2o2
+    5_hydroxyindol_3_yl_acetaldehyde
   }
 
-  branch from 4_hydroxybenzaldehyde side right {
-    4_hydroxybenzaldehyde
-    <-> . +trans_resveratrol +o2
-    3_5_dihydroxybenzaldehyde
+  branch from nh3 side right {
+    nh3
+    <-> . +norepinephrine +o2 +h2o +h2o2
+    r_3_4_dihydroxymandelaldehyde
   }
 
-  branch from 4_hydroxybenzaldehyde side left {
-    4_hydroxybenzaldehyde
-    <-> ec_1_13_11_94 [1.13.11.94] +o2 +formaldehyde
-    4_hydroxystyrene
-  }
-
-  branch from 4_hydroxybenzoate side right {
-    4_hydroxybenzoate
-    <-> ec_4_1_1_123 [4.1.1.123] +pi +hplus +co2 +h2o
-    phenyl_phosphate
-  }
-
-  branch from 4_hydroxybenzoate side left {
-    4_hydroxybenzoate
-    <-> . +7_14_16_trihydroxyconfertifolin +hplus +h2o
-    dideacetyl_astellolide_b
-  }
-
-  branch from quinol side right {
+  branch from quinol side left {
     quinol
     <-> . +nadh +hplus +nad
     quinone
+  }
+
+  branch from 5_methyltetrahydrosarcinapterin side right {
+    5_methyltetrahydrosarcinapterin
+    <-> . +5_6_7_8_tetrahydrosarcinapterin +methyl_coenzyme_m +coenzyme_m
+    na
+  }
+
+  branch from 5_methyltetrahydrosarcinapterin side left {
+    5_methyltetrahydrosarcinapterin
+    <-> . +acetyl_coa +5_6_7_8_tetrahydrosarcinapterin +h +coa
+    carbon_monoxide
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> . +cadaverine +o2 +h2o +h2o2
+    5_ammoniopentanal
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> . +spermine +o2 +h2o +h2o2
+    spermine_dialdehyde
+  }
+
+  branch from udp_d_glucose side right {
+    udp_d_glucose
+    <-> ec_2_4_1_215 [2.4.1.215] +cis_zeatin +udp +hplus
+    o_d_glucosyl_cis_zeatin
+  }
+
+  branch from udp_d_glucose side left {
+    udp_d_glucose
+    <-> ec_2_4_1_188 [2.4.1.188] +n_acetyl_d_glucosaminyl_1_diphospho_ditrans_poly +udp +hplus
+    d_glucosyl_1_4_n_acetyl_d_glucosaminyl_undecapr
+  }
+
+  branch from phosphonatoenolpyruvate side right {
+    phosphonatoenolpyruvate
+    <-> . +2_deoxyribonucleoside_5_triphosphate +pyruvate +hplus
+    2_deoxyribonucleoside_5_diphosphate
   }
 }

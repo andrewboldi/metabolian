@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway fadh2-to-o-linoleyl-l-carnitine "FADH2 to O-linoleyl-L-carnitine" {
-  spacing 182
+  spacing 158
 
   spine at 0,0 {
     fadh2
@@ -16,33 +16,9 @@ pathway fadh2-to-o-linoleyl-l-carnitine "FADH2 to O-linoleyl-L-carnitine" {
     coa
   }
 
-  branch from 9e_12e_octadecadienoyl_coa side left {
-    9e_12e_octadecadienoyl_coa
-    <-> . +h +adp +phosphate +h2o
-    atp
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +17z_hexacosenoyl_coa +s_carnitine
-    17z_hexacosenoylcarnitine
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +3z_dodecenoyl_coa +acetyl_coa
-    3_oxomyrist_5_enoyl_coenzyme_a
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    2_hydroxy_3_octadeca_6_9_12_trienoyloxypropyl_2
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    1_octadeca_trienoylglycerophosphocholine_sn1_lpc
+  branch from s_carnitine side left {
+    s_carnitine
+    <-> .
+    carnitine
   }
 }

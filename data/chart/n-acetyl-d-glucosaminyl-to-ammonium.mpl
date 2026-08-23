@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-acetyl-d-glucosaminyl-to-ammonium "N-acetyl-β-D-glucosaminyl… to ammonium" {
-  spacing 248
+  spacing 212
 
   spine at 0,0 {
     n_acetyl_d_glucosaminyl_n_acetyl_d_muramoyl_l_al
@@ -16,41 +16,5 @@ pathway n-acetyl-d-glucosaminyl-to-ammonium "N-acetyl-β-D-glucosaminyl… to am
     d_glutamate
     <-> ec_1_4_3_7 [1.4.3.7] +o2 +h2o -h2o2 -nh3
     akg
-  }
-
-  branch from d_glutamate side left {
-    d_glutamate
-    <-> ec_4_2_1_48 [4.2.1.48] +h2o
-    5_oxo_d_prolinate
-  }
-
-  branch from d_glutamate side right {
-    d_glutamate
-    <-> . +d_lysinium +akg
-    6_amino_2_oxohexanoic_acid
-  }
-
-  branch from akg side left {
-    akg
-    <-> . +fad +hplus +fadh2
-    2_hydroxyglutarate
-  }
-
-  branch from akg side right {
-    akg
-    <-> . +fad +hplus +fadh2
-    s_2_hydroxyglutarate
-  }
-
-  branch from nh3 side left {
-    nh3
-    <-> . +dserine +nad +h2o +nadh +hplus
-    3_hydroxypyruvate
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +2r_heptan_2_aminium +nad +h2o +nadh +hplus
-    heptan_2_one
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway gibberellin-a53-to-succinate "gibberellin A53 to succinate" {
-  spacing 198
+  spacing 192
 
   spine at 0,0 {
     gibberellin_a53
@@ -22,15 +22,9 @@ pathway gibberellin-a53-to-succinate "gibberellin A53 to succinate" {
     gibberellin_a19
   }
 
-  branch from succinate side right {
-    succinate
-    <-> ec_1_14_11_75 [1.14.11.75] +31_hydroxy_l_isoleucine +akg +o2 +co2
-    4s_31_4_dihydroxy_l_isoleucine
-  }
-
-  branch from succinate side left {
-    succinate
-    <-> . +preaustinoid_a1 +akg +o2 +co2 +h2o
-    berkeleyone_b
+  branch from gibberellin_a53 side right {
+    gibberellin_a53
+    <-> . +2_oxoglutarate +o2 +succinate +gibberellin_a97
+    co2
   }
 }

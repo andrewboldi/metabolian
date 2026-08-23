@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-2-dilinoleoyl-sn-glycer-to-glycerol "1,2-dilinoleoyl-sn-glycer… to glycerol" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     1_2_dilinoleoyl_sn_glycero_3_phosphoethanolamine
@@ -20,29 +20,5 @@ pathway 1-2-dilinoleoyl-sn-glycer-to-glycerol "1,2-dilinoleoyl-sn-glycer… to g
     1_linoleoyl_sn_glycerol
     <-> . +h2o -glycerol -hplus
     linoleate
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +dopamine +sam +hplus
-    epinine_cation
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +epinine_cation +sam +hplus
-    n_n_dimethyldopaminium
-  }
-
-  branch from linoleate side left {
-    linoleate
-    <-> . +1_2_3_trilinoleoylglycerol +h2o +hplus
-    dilinoleoylglycerol
-  }
-
-  branch from linoleate side right {
-    linoleate
-    <-> . +o2
-    9_hpode
   }
 }

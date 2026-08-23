@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 9z-12z-15z-18z-21z-tetr-to-11z-14z-17z-20z-23z "(9Z,12Z,15Z,18Z,21Z)-tetr… to (11Z,14Z,17Z,20Z,23Z)-hex…" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     9z_12z_15z_18z_21z_tetracosapentaenoyl_coa
@@ -16,5 +16,17 @@ pathway 9z-12z-15z-18z-21z-tetr-to-11z-14z-17z-20z-23z "(9Z,12Z,15Z,18Z,21Z)-tet
     2e_11z_14z_17z_20z_23z_hexacosahexaenoyl_coa
     <-> . +nadph +hplus -nadp
     11z_14z_17z_20z_23z_hexacosapentaenoyl_coa
+  }
+
+  branch from malonyl-coa side left {
+    malonyl-coa
+    <-> . +acetyl_coa +nadph +hplus +co2 +nadp +coa +h2o
+    7_methylmellein
+  }
+
+  branch from malonyl-coa side right {
+    malonyl-coa
+    <-> . +acetyl_coa +hplus +co2 +coa +h2o
+    2_2_4_dihydroxy_6_oxidobenzoyl_5_hydroxy_3_methy
   }
 }

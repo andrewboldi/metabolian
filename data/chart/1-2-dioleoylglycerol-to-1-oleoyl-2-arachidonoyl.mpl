@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-2-dioleoylglycerol-to-1-oleoyl-2-arachidonoyl "1,2-dioleoylglycerol to 1-oleoyl-2-arachidonoyl-s…" {
-  spacing 152
+  spacing 164
 
   spine at 0,0 {
     1_2_dioleoylglycerol
@@ -14,5 +14,17 @@ pathway 1-2-dioleoylglycerol-to-1-oleoyl-2-arachidonoyl "1,2-dioleoylglycerol to
     1_o_oleoyl_n_acetylsphingosine
     <-> . +1_o_oleoyl_sn_glycero_3_phosphocholine +arachidonoyl_coa -coa
     1_oleoyl_2_arachidonoyl_sn_glycero_3_phosphochol
+  }
+
+  branch from arachidonoyl_coa side left {
+    arachidonoyl_coa
+    <-> . +1_10z_heptadecenoyl_sn_glycero_3_phosphoethanola +coa
+    1_10z_heptadecenoyl_2_arachidonoyl_sn_glycero_3
+  }
+
+  branch from arachidonoyl_coa side right {
+    arachidonoyl_coa
+    <-> . +coa +acetyl_coa
+    7z_10z_13z_16z_3_oxodocosatetraenoyl_coa
   }
 }

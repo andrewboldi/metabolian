@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway beta-d-glucose-to-h2o "beta-D-glucose to H2O" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     beta_d_glucose
@@ -18,29 +18,5 @@ pathway beta-d-glucose-to-h2o "beta-D-glucose to H2O" {
     tomatidine_galactoside
     <-> . +beta_d_glucose -h2o
     gamma_tomatine
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +h +adp +cyclosporin_a_metabolite_m21 +phosphate +cyclosporin_a_metabolite_m21
-    atp
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +cyclosporin_a +h +o2 +nadph +cyclosporin_a_metabolite_m1
-    nadp
-  }
-
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> . +udp +beta_d_man_1_2_alpha_d_glc_1_3_alpha_d_man_1_2_a +h
-    beta_d_man_1_2_alpha_d_man_1_2_alpha_d_man_1_2_b
-  }
-
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> . +udp +h +beta_d_man_1_2_alpha_d_man_1_2_alpha_d_man_1_2_b
-    beta_d_man_1_2_alpha_d_man_1_2_alpha_d_glc_1_3_a
   }
 }

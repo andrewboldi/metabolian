@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway methacrylyl-coa-to-methylmalonate "methacrylyl-CoA to methylmalonate" {
-  spacing 212
+  spacing 200
 
   spine at 0,0 {
     methacrylyl_coa
@@ -16,17 +16,5 @@ pathway methacrylyl-coa-to-methylmalonate "methacrylyl-CoA to methylmalonate" {
     mmsa
     <-> . +nad +h2o -nadh -hplus
     methylmalonate
-  }
-
-  branch from mmsa side left {
-    mmsa
-    <-> . +nad +coa +h2o +hco3 +nadh +hplus
-    propionyl_coa
-  }
-
-  branch from methylmalonate side right {
-    methylmalonate
-    <-> ec_3_1_2_17 [3.1.2.17] +h2o +coa +hplus
-    s_methylmalonyl_coa
   }
 }

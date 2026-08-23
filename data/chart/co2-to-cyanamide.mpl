@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway co2-to-cyanamide "CO2 to cyanamide" {
-  spacing 184
+  spacing 160
 
   spine at 0,0 {
     co2
@@ -18,29 +18,5 @@ pathway co2-to-cyanamide "CO2 to cyanamide" {
     urea
     <-> ec_4_2_1_69 [4.2.1.69] -h2o
     cyanamide
-  }
-
-  branch from l_homoarginine side left {
-    l_homoarginine
-    <-> ec_3_5_3_6 [3.5.3.6] +h2o +2_amino_6_ureidohexanoic_acid
-    nh4
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +co2 +9z_tricosene +nadp +h2o +15_tetracosenal +nadph
-    h
-  }
-
-  branch from o2 side left {
-    o2
-    <-> ec_1_14_13_121 [1.14.13.121] +h +vetispiradiene +nadph +solavetivone +h2o
-    nadp
-  }
-
-  branch from l_allysine side right {
-    l_allysine
-    <-> . +n6_1_deoxy_d_fructopyranos_1_yl_l_lysinium +o2 +h2o +h2o2
-    1_deoxy_d_fructos_1_yl_amine
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway tryptophol-to-n6-indol-3-yl-acetyl-l "tryptophol to N6-[(indol-3-yl)acetyl]-L…" {
-  spacing 240
+  spacing 258
 
   spine at 0,0 {
     tryptophol
@@ -38,5 +38,23 @@ pathway tryptophol-to-n6-indol-3-yl-acetyl-l "tryptophol to N6-[(indol-3-yl)acet
     indole_3_acetate
     <-> . +atp +hplus +ppi
     indole_3_acetyl_amp
+  }
+
+  branch from indole_3_acetate side left {
+    indole_3_acetate
+    <-> . +akg +o2 +succinate +co2
+    2_oxindole_3_acetate
+  }
+
+  branch from l_lysinium side right {
+    l_lysinium
+    <-> ec_4_1_1_20 [4.1.1.20] +hplus +co2
+    meso_2_6_diaminopimelic_acid_dizwitterion
+  }
+
+  branch from l_lysinium side left {
+    l_lysinium
+    <-> ec_4_3_2_8 [4.3.2.8] +glutamyl_lysine_dizwitterion
+    5_oxo_l_prolinate
   }
 }

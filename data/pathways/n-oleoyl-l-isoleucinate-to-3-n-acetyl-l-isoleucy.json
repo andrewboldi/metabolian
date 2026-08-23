@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "n-oleoyl-l-isoleucinate-to-3-n-acetyl-l-isoleucy",
   "name": "N-oleoyl-L-isoleucinate to 3'-(N-acetyl-L-isoleucyl)…",
-  "category": "amino-acid-metabolism",
+  "category": "other",
   "summary": "A 3-step route from N-oleoyl-L-isoleucinate to 3'-(N-acetyl-L-isoleucyl)adenylyl residue(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -139,69 +139,50 @@
       }
     },
     {
-      "id": "arginine",
-      "name": "L-Arginine",
-      "formula": "C6H15N4O2",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:32682"
-      }
-    },
-    {
-      "id": "n_amidino_l_isoleucine",
-      "name": "N-amidino-L-isoleucine",
-      "short": "N-amidino-L-isoleuc…",
-      "formula": "C7H15N3O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:232116"
-      }
-    },
-    {
-      "id": "ornithine",
-      "name": "L-Ornithine",
-      "formula": "C5H13N2O2",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:46911"
-      }
-    },
-    {
-      "id": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
-      "name": "5α,9α,10β-labda-8(20),13-dien-15-yl diphosphate",
-      "short": "5α,9α,10β-labda-8(2…",
-      "formula": "C20H33O7P2",
+      "id": "all_trans_pentaprenyl_diphosphate",
+      "name": "all-trans-pentaprenyl diphosphate",
+      "short": "all-trans-pentapren…",
+      "formula": "C25H41O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58635"
+        "chebi": "CHEBI:57907"
       }
     },
     {
-      "id": "13_epi_manool",
-      "name": "13-epi-manool",
-      "formula": "C20H34O",
+      "id": "fusoxypene_b",
+      "name": "fusoxypene B",
+      "formula": "C25H40",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:76944"
+        "chebi": "CHEBI:191386"
       }
     },
     {
-      "id": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
-      "name": "5β,9α,10α-labda-8(20),13-dien-15-yl diphosphate",
-      "short": "5β,9α,10α-labda-8(2…",
-      "formula": "C20H33O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58553"
-      }
-    },
-    {
-      "id": "ent_copalol",
-      "name": "(−)-ent-copalol",
-      "formula": "C20H34O",
+      "id": "fusoxypene_c",
+      "name": "fusoxypene C",
+      "formula": "C25H40",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:76950"
+        "chebi": "CHEBI:191387"
+      }
+    },
+    {
+      "id": "astellatene",
+      "name": "(−)-astellatene",
+      "formula": "C25H40",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:191388"
+      }
+    },
+    {
+      "id": "preaspterpenacid_acid_i",
+      "name": "preaspterpenacid acid I",
+      "short": "preaspterpenacid…",
+      "formula": "C25H42O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:191389"
       }
     }
   ],
@@ -211,14 +192,10 @@
       "name": "isoleucine--tRNA ligase",
       "ec": [
         "6.1.1.5"
-      ]
-    },
-    {
-      "id": "ec_2_1_4_4",
-      "name": "valine amidinotransferase",
-      "ec": [
-        "2.1.4.4"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "P41252"
+      }
     }
   ],
   "reactions": [
@@ -359,66 +336,52 @@
     },
     {
       "id": "r4",
-      "name": "valine amidinotransferase",
-      "equation": "L-isoleucine + L-arginine = N-amidino-L-isoleucine + L-ornithine",
-      "ec": "2.1.4.4",
+      "name": "(2E,6E,10E,14E)-geranylfarnesyl diphosphate = fusoxypene B + diphosphate",
+      "equation": "(2E,6E,10E,14E)-geranylfarnesyl diphosphate = fusoxypene B + diphosphate",
       "substrates": [
         {
-          "metabolite": "isoleucine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "arginine",
+          "metabolite": "all_trans_pentaprenyl_diphosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n_amidino_l_isoleucine",
+          "metabolite": "fusoxypene_b",
           "stoichiometry": 1
         },
         {
-          "metabolite": "ornithine",
+          "metabolite": "ppi",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_4_4"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:82223"
+        "rhea": "RHEA:71983"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:82223"
+            "id": "RHEA:71983"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "(+)-copalyl diphosphate + H2O = 13-epi-manool + diphosphate",
-      "equation": "(+)-copalyl diphosphate + H2O = 13-epi-manool + diphosphate",
+      "name": "(2E,6E,10E,14E)-geranylfarnesyl diphosphate = fusoxypene C + diphosphate",
+      "equation": "(2E,6E,10E,14E)-geranylfarnesyl diphosphate = fusoxypene C + diphosphate",
       "substrates": [
         {
-          "metabolite": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "all_trans_pentaprenyl_diphosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "13_epi_manool",
+          "metabolite": "fusoxypene_c",
           "stoichiometry": 1
         },
         {
@@ -429,35 +392,31 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:40015"
+        "rhea": "RHEA:71987"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:40015"
+            "id": "RHEA:71987"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "ent-copalyl diphosphate + H2O = (-)-ent-copalol + diphosphate",
-      "equation": "ent-copalyl diphosphate + H2O = (-)-ent-copalol + diphosphate",
+      "name": "(2E,6E,10E,14E)-geranylfarnesyl diphosphate = (-)-astellatene + diphosphate",
+      "equation": "(2E,6E,10E,14E)-geranylfarnesyl diphosphate = (-)-astellatene + diphosphate",
       "substrates": [
         {
-          "metabolite": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "all_trans_pentaprenyl_diphosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "ent_copalol",
+          "metabolite": "astellatene",
           "stoichiometry": 1
         },
         {
@@ -468,14 +427,99 @@
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:40019"
+        "rhea": "RHEA:71991"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:40019"
+            "id": "RHEA:71991"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "(2E,6E,10E,14E)-geranylfarnesyl diphosphate + H2O = preaspterpenacid acid I + diphosphate",
+      "equation": "(2E,6E,10E,14E)-geranylfarnesyl diphosphate + H2O = preaspterpenacid acid I + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "all_trans_pentaprenyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "preaspterpenacid_acid_i",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:71995"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:71995"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3_l_isoleucyl_adenylyl_zwitterionic_group_demethylaltemicidin-to-o-pantetheine-4-phospho",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_l_isoleucyl_adenylyl_zwitterionic_group"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "demethylaltemicidin-to-o-pantetheine-4-phospho"
+      },
+      "note": "Shares 3'-(L-isoleucyl)adenylyl zwitterionic group with demethylaltemicidin to O-(pantetheine-4'-phospho….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78528"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_preaspterpenacid_acid_i_19e-geissoschizine-to-perakine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "preaspterpenacid_acid_i"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "19e-geissoschizine-to-perakine"
+      },
+      "note": "Shares preaspterpenacid acid I with (19E)-geissoschizine to perakine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:191389"
           }
         ]
       }

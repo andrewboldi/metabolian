@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-hydroxyisobutanoyl-coa-to-3-cyanopyridine "2-hydroxyisobutanoyl-CoA to 3-cyanopyridine" {
-  spacing 194
+  spacing 224
 
   spine at 0,0 {
     2_hydroxyisobutanoyl_coa
@@ -24,26 +24,26 @@ pathway 2-hydroxyisobutanoyl-coa-to-3-cyanopyridine "2-hydroxyisobutanoyl-CoA to
 
   branch from nicotinamide side right {
     nicotinamide
-    <-> . +l_aspartate +nad
-    4_adp_d_ribosyl_l_aspartyl_2
+    <-> . +guanosine +nad +hplus
+    n2_adp_d_ribosyl_guanosine
   }
 
   branch from nicotinamide side left {
     nicotinamide
-    <-> ec_2_4_2_31 [2.4.2.31] +l_argininium +nadp +hplus
-    n_2_phospho_adp_d_ribosyl_l_arginine_3
+    <-> . +2_deoxyguanosine +nad +hplus
+    n2_adp_d_ribosyl_2_deoxyguanosine
   }
 
   branch from l_lysinium side right {
     l_lysinium
-    <-> . +butyryl_coa +coa +hplus
-    n6_butyryl_l_lysine
+    <-> ec_2_1_1_367 [2.1.1.367] +sam +sah +hplus
+    n6_methyl_l_lysinium
   }
 
   branch from l_lysinium side left {
     l_lysinium
-    <-> . +acyl_coa +coa +hplus
-    n6_acyl_l_lysine
+    <-> ec_2_1_1_369 [2.1.1.369] +sam +n6_methyl_l_lysinium +hplus
+    sah
   }
 
   branch from 3_cyanopyridine side right {
@@ -56,5 +56,35 @@ pathway 2-hydroxyisobutanoyl-coa-to-3-cyanopyridine "2-hydroxyisobutanoyl-CoA to
     3_cyanopyridine
     <-> ec_4_2_1_84 [4.2.1.84] +h2o
     nicotinamide
+  }
+
+  branch from 2_hydroxyisobutanoyl_coa side right {
+    2_hydroxyisobutanoyl_coa
+    <-> . +diphosphate +amp +2_hydroxyisobutyrate +coa
+    atp
+  }
+
+  branch from l_lysinium side left {
+    l_lysinium
+    <-> . +n6_methyl_l_lysinium +sah +hplus
+    sam
+  }
+
+  branch from l_lysinium side right {
+    l_lysinium
+    <-> . +8s_8_amino_7_oxononanoic_acid +nadh +hplus +nad +h2o
+    n6_2s_3r_2_amino_8_carboxyoctan_3_yl_l_lysine_1
+  }
+
+  branch from nicotinamide side left {
+    nicotinamide
+    <-> . +gmp +nad +hplus
+    n2_adp_d_ribosyl_gmp
+  }
+
+  branch from nicotinamide side right {
+    nicotinamide
+    <-> . +gtp +nad +hplus
+    n2_adp_d_ribosyl_gtp
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-oleoyl-sn-glycero-3-pho-to-s-adenosyl-l-homocy "1-oleoyl-sn-glycero-3-pho… to S-adenosyl-L-homocysteine" {
-  spacing 310
+  spacing 292
 
   spine at 0,0 {
     1_oleoyl_sn_glycero_3_phospho_d_myo_inositol
@@ -18,57 +18,39 @@ pathway 1-oleoyl-sn-glycero-3-pho-to-s-adenosyl-l-homocy "1-oleoyl-sn-glycero-3-
     1d_1_o_methyl_myo_inositol
   }
 
-  branch from 1_sn_glycero_3_o_phosphonato_1d_myo_inositol side left {
-    1_sn_glycero_3_o_phosphonato_1d_myo_inositol
-    <-> . +1_acyl_sn_glycero_3_phospho_1d_myo_inositol
-    1_phosphatidyl_1d_myo_inositol
-  }
-
-  branch from oleate side right {
-    oleate
-    <-> . +s_s_bis_2_oleoylglycero_1_phosphate +h2o +hplus
-    s_s_2_oleoylglycero_1_phospho_1_glycerol
-  }
-
-  branch from oleate side left {
-    oleate
-    <-> . +r_r_bis_2_oleoylglycero_3_phosphate +h2o +hplus
-    r_r_2_oleoylglycero_1_phospho_1_glycerol
-  }
-
-  branch from 1d_myo_inositol_1_phosphate side right {
-    1d_myo_inositol_1_phosphate
-    <-> . +h2o +pi
-    1d_myo_inositol_1_3_biphosphate
-  }
-
-  branch from 1d_myo_inositol_1_phosphate side left {
-    1d_myo_inositol_1_phosphate
-    <-> . +2_acyl_sn_glycero_3_phospho_1d_myo_inositol +h2o +hplus
-    2_monoglyceride
-  }
-
-  branch from glycerol side right {
-    glycerol
-    <-> . +prostaglandin_e2_1_glyceryl_ester +h2o +hplus
-    prostaglandin_e2
-  }
-
-  branch from glycerol side left {
-    glycerol
-    <-> . +1_linolenoylglycerol +h2o +hplus
-    linolenate
+  branch from sah side left {
+    sah
+    <-> . +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_386 [2.1.1.386] +3_end_ribonucleotide_1 +sam +hplus
-    3_end_2_o_methylribonucleotide_1
+    <-> . +sam +5_methylcytidine_5_monophosphate_1 +hplus
+    cytidine_5_monophosphate_1
+  }
+
+  branch from sam side left {
+    sam
+    <-> . +cytidine_5_monophosphate_1 +sah +hplus
+    n4_methylcytidine_5_monophosphate_1
+  }
+
+  branch from sam side right {
+    sam
+    <-> . +malonyl-coa +acetyl_coa +hplus +sah +co2 +coa
+    5_methylorsellinate
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_95 [2.1.1.95] +tocopherol +sam +hplus
-    tocopherol
+    <-> . +ribonucleotide +sam +hplus
+    2_o_methylribonucleotide_1
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_373 [2.1.1.373] +2r_2_hydroxy_4_methylsulfanyl_butanoate +sam
+    2r_4_dimethylsulfaniumyl_2_hydroxybutanoate
   }
 }

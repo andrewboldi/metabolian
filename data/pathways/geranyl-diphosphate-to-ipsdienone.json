@@ -126,72 +126,6 @@
       "xrefs": {
         "chebi": "CHEBI:57783"
       }
-    },
-    {
-      "id": "2_cis_6_cis_farnesyl_diphosphate",
-      "name": "2-cis,6-cis-farnesyl diphosphate",
-      "short": "2-cis,6-cis-farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:60374"
-      }
-    },
-    {
-      "id": "z_bisabolene",
-      "name": "(Z)-γ-bisabolene",
-      "formula": "C15H24",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:49238"
-      }
-    },
-    {
-      "id": "z_ocimene",
-      "name": "(Z)-β-ocimene",
-      "formula": "C10H16",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:87574"
-      }
-    },
-    {
-      "id": "soppiline_b",
-      "name": "soppiline B",
-      "formula": "C24H34O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:167549"
-      }
-    },
-    {
-      "id": "soppiline_c",
-      "name": "soppiline C",
-      "formula": "C24H31O4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:167551"
-      }
-    },
-    {
-      "id": "diol_cdca",
-      "name": "5beta-Cholestane-3alpha,7alpha-diol",
-      "short": "5beta-Cholestane-3a…",
-      "formula": "C27H48O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:28047"
-      }
-    },
-    {
-      "id": "5_cholestane_3_7_25_triol",
-      "name": "5β-cholestane-3α,7α,25-triol",
-      "short": "5β-cholestane-3α,7α…",
-      "formula": "C27H48O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:169972"
-      }
     }
   ],
   "enzymes": [
@@ -214,13 +148,6 @@
       "name": "ipsdienol dehydrogenase",
       "ec": [
         "1.1.1.386"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_228",
-      "name": "(Z)-beta-ocimene synthase",
-      "ec": [
-        "4.2.3.228"
       ]
     }
   ],
@@ -371,181 +298,27 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "(2Z,6Z)-farnesyl diphosphate = (Z)-gamma-bisabolene + diphosphate",
-      "equation": "(2Z,6Z)-farnesyl diphosphate = (Z)-gamma-bisabolene + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "2_cis_6_cis_farnesyl_diphosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "z_bisabolene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:68788"
+      "id": "xt_myrcene_geranyl-diphosphate-to-myrcene",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "myrcene"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "geranyl-diphosphate-to-myrcene"
+      },
+      "note": "Shares β-myrcene with geranyl diphosphate to β-myrcene.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:68788"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "(Z)-beta-ocimene synthase",
-      "equation": "(2E)-geranyl diphosphate = (Z)-beta-ocimene + diphosphate",
-      "ec": "4.2.3.228",
-      "substrates": [
-        {
-          "metabolite": "gpp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "z_ocimene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_228"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:68824"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:68824"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "soppiline B + 3 reduced [NADPH--hemoprotein reductase] + 3 O2 = soppiline C + 3 oxidize...",
-      "equation": "soppiline B + 3 reduced [NADPH--hemoprotein reductase] + 3 O2 = soppiline C + 3 oxidized [NADPH--hemoprotein reductase] + 4 H2O + 4 H(+)",
-      "substrates": [
-        {
-          "metabolite": "soppiline_b",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 3
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "soppiline_c",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 4
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 4
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:66944"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:66944"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "5beta-cholestane-3alpha,7alpha-diol + reduced [NADPH--hemoprotein reductase] + O2 = 5be...",
-      "equation": "5beta-cholestane-3alpha,7alpha-diol + reduced [NADPH--hemoprotein reductase] + O2 = 5beta-cholestane-3alpha,7alpha,25-triol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "diol_cdca",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "5_cholestane_3_7_25_triol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:67384"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:67384"
+            "db": "ChEBI",
+            "id": "CHEBI:17221"
           }
         ]
       }

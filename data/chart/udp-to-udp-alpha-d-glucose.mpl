@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-udp-alpha-d-glucose "UDP to UDP-alpha-D-glucose" {
-  spacing 164
+  spacing 176
 
   spine at 0,0 {
     udp
@@ -16,15 +16,27 @@ pathway udp-to-udp-alpha-d-glucose "UDP to UDP-alpha-D-glucose" {
     sesaminol
   }
 
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> ec_2_4_1_35 [2.4.1.35] +udp +phenyl_beta_d_glucopyranoside +h
-    phenol
+  branch from udp side left {
+    udp
+    <-> . +rac_4_hydroxy_4_o_beta_d_glucuronide_all_trans_r +h +4_hydroxy_all_trans_retinyl_acetate
+    udp_alpha_d_glucuronate
   }
 
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> ec_2_4_1_173 [2.4.1.173] +udp +h +sterol_3_beta_d_glucoside
-    3beta_hydroxysterol
+  branch from udp side right {
+    udp
+    <-> . +4_oxo_9_cis_retinoyl_beta_glucuronide +udp_alpha_d_glucuronate
+    4_oxo_9_cis_retinoate
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_5_1_30 [2.5.1.30] +diphosphate +all_trans_heptaprenyl_diphosphate +ipp
+    farnesyl_diphosphate
+  }
+
+  branch from h side right {
+    h
+    <-> ec_4_2_3_67 [4.2.3.67] +cis_muurola_3_5_diene +farnesyl_diphosphate
+    diphosphate
   }
 }

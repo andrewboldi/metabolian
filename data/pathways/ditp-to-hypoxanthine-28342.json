@@ -1,0 +1,607 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "ditp-to-hypoxanthine-28342",
+  "name": "dITP to hypoxanthine",
+  "category": "other",
+  "summary": "A 3-step route from dITP(4−) to hypoxanthine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:28342"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:61382"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "ditp",
+      "name": "dITP",
+      "formula": "C10H11N4O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:61382"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2_deoxyinosine_5_phosphate",
+      "name": "2'-deoxyinosine 5'-phosphate",
+      "short": "2'-deoxyinosine 5'-P",
+      "formula": "C10H11N4O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:61194"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "2_deoxyinosine",
+      "name": "2'-deoxyinosine",
+      "formula": "C10H12N4O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28997"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "2_deoxy_d_ribose_1_phosphate",
+      "name": "2-deoxy-α-D-ribose 1-phosphate",
+      "short": "2-deoxy-α-D-ribose…",
+      "formula": "C5H9O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57259"
+      }
+    },
+    {
+      "id": "hypoxanthine",
+      "name": "Hypoxanthine",
+      "formula": "C5H4N4O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17368"
+      }
+    },
+    {
+      "id": "2_deoxyinosine_5_diphosphate",
+      "name": "2'-deoxyinosine 5'-diphosphate",
+      "short": "2'-deoxyinosine…",
+      "formula": "C10H11N4O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:62286"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_6_1_9",
+      "name": "nucleotide diphosphatase",
+      "ec": [
+        "3.6.1.9"
+      ],
+      "xrefs": {
+        "uniprot": "O95671"
+      }
+    },
+    {
+      "id": "ec_3_6_1_66",
+      "name": "XTP/dITP diphosphatase",
+      "ec": [
+        "3.6.1.66"
+      ],
+      "xrefs": {
+        "uniprot": "Q9BY32"
+      }
+    },
+    {
+      "id": "ec_2_4_2_1",
+      "name": "purine-nucleoside phosphorylase",
+      "ec": [
+        "2.4.2.1"
+      ],
+      "xrefs": {
+        "uniprot": "Q8IV20"
+      }
+    },
+    {
+      "id": "ec_3_6_1_64",
+      "name": "inosine diphosphate phosphatase",
+      "ec": [
+        "3.6.1.64"
+      ],
+      "xrefs": {
+        "uniprot": "Q96DE0"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "nucleotide diphosphatase",
+      "equation": "dITP + H2O = dIMP + diphosphate + H(+)",
+      "ec": "3.6.1.9",
+      "substrates": [
+        {
+          "metabolite": "ditp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxyinosine_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:28342"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28342"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "dIMP + H2O = 2'-deoxyinosine + phosphate",
+      "equation": "dIMP + H2O = 2'-deoxyinosine + phosphate",
+      "substrates": [
+        {
+          "metabolite": "2_deoxyinosine_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxyinosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:29383"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:29383"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "purine-nucleoside phosphorylase",
+      "equation": "2'-deoxyinosine + phosphate = 2-deoxy-alpha-D-ribose 1-phosphate + hypoxanthine",
+      "ec": "2.4.2.1",
+      "substrates": [
+        {
+          "metabolite": "2_deoxyinosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxy_d_ribose_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hypoxanthine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_2_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:27750"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27750"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "inosine diphosphate phosphatase",
+      "equation": "dIDP + H2O = dIMP + phosphate + H(+)",
+      "ec": "3.6.1.64",
+      "substrates": [
+        {
+          "metabolite": "2_deoxyinosine_5_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxyinosine_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_64"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:35211"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35211"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_ditp_ditp-to-hypoxanthine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "ditp"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ditp-to-hypoxanthine"
+      },
+      "note": "Shares dITP with dITP to hypoxanthine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61382"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxyinosine_5_phosphate_7s-salutaridinol-to-codeinone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxyinosine_5_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7s-salutaridinol-to-codeinone"
+      },
+      "note": "Shares 2'-deoxyinosine 5'-phosphate with (7S)-salutaridinol to codeinone.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61194"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxyinosine_5_phosphate_aldehydo-d-allose-to-5-hydroxyisouric-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxyinosine_5_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aldehydo-d-allose-to-5-hydroxyisouric-acid"
+      },
+      "note": "Shares 2'-deoxyinosine 5'-phosphate with aldehydo-D-allose to 5-hydroxyisouric acid.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61194"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxyinosine_5_phosphate_aldehydo-d-allose-to-5-hydroxyisouric-acid-14805",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxyinosine_5_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "aldehydo-d-allose-to-5-hydroxyisouric-acid-14805"
+      },
+      "note": "Shares 2'-deoxyinosine 5'-phosphate with aldehydo-D-allose to 5-hydroxyisouric acid.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61194"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxyinosine_5_phosphate_ditp-to-hypoxanthine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxyinosine_5_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ditp-to-hypoxanthine"
+      },
+      "note": "Shares 2'-deoxyinosine 5'-phosphate with dITP to hypoxanthine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61194"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxyinosine_5_phosphate_n-acetylneuraminyl-2-3-to-cytidine-5-monophosph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxyinosine_5_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetylneuraminyl-2-3-to-cytidine-5-monophosph"
+      },
+      "note": "Shares 2'-deoxyinosine 5'-phosphate with α-N-acetylneuraminyl-(2→3… to cytidine 5'-monophosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61194"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxyinosine_5_phosphate_valienol-1-phosphate-to-succinate-26055",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxyinosine_5_phosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "valienol-1-phosphate-to-succinate-26055"
+      },
+      "note": "Shares 2'-deoxyinosine 5'-phosphate with valienol 1-phosphate to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61194"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxyinosine_ditp-to-hypoxanthine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxyinosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ditp-to-hypoxanthine"
+      },
+      "note": "Shares 2'-deoxyinosine with dITP to hypoxanthine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28997"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxyinosine_dtmp-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxyinosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtmp-to-ammonium"
+      },
+      "note": "Shares 2'-deoxyinosine with dTMP to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28997"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxyinosine_dtmp-to-ammonium-82683",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxyinosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtmp-to-ammonium-82683"
+      },
+      "note": "Shares 2'-deoxyinosine with dTMP to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28997"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxyinosine_n-acetylneuraminyl-2-3-to-cytidine-5-monophosph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxyinosine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-acetylneuraminyl-2-3-to-cytidine-5-monophosph"
+      },
+      "note": "Shares 2'-deoxyinosine with α-N-acetylneuraminyl-(2→3… to cytidine 5'-monophosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28997"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_deoxyinosine_5_diphosphate_ditp-to-hypoxanthine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_deoxyinosine_5_diphosphate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "ditp-to-hypoxanthine"
+      },
+      "note": "Shares 2'-deoxyinosine 5'-diphosphate with dITP to hypoxanthine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62286"
+          }
+        ]
+      }
+    }
+  ]
+}

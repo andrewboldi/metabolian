@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-mandelate-to-n2-n5-dibenzoyl-l-ornithi "(S)-mandelate to N2,N5-dibenzoyl-L-ornithi…" {
-  spacing 256
+  spacing 274
 
   spine at 0,0 {
     s_mandelate
@@ -18,27 +18,45 @@ pathway s-mandelate-to-n2-n5-dibenzoyl-l-ornithi "(S)-mandelate to N2,N5-dibenzo
     n2_n5_dibenzoyl_l_ornithinate
   }
 
-  branch from r_mandelate side left {
-    r_mandelate
-    <-> ec_3_5_1_86 [3.5.1.86] +r_mandelamide +h2o
-    nh3
-  }
-
-  branch from phenylglyoxylate side right {
+  branch from phenylglyoxylate side left {
     phenylglyoxylate
     <-> . +o2 +h2o2
     mandelate
   }
 
-  branch from benzoyl_coa side left {
+  branch from benzoyl_coa side right {
     benzoyl_coa
     <-> ec_2_3_1_196 [2.3.1.196] +benzyl_alcohol +coa
     benzyl_benzoate
   }
 
-  branch from benzoyl_coa side right {
+  branch from benzoyl_coa side left {
     benzoyl_coa
     <-> ec_2_3_1_220 [2.3.1.220] +malonyl-coa +hplus +co2 +coa
     2_4_6_trihydroxybenzophenone
+  }
+
+  branch from benzoyl_coa side right {
+    benzoyl_coa
+    <-> . +butan_1_ol +coa
+    butyl_benzoate
+  }
+
+  branch from benzoyl_coa side left {
+    benzoyl_coa
+    <-> . +ethanol +coa
+    ethyl_benzoate
+  }
+
+  branch from ornithine side right {
+    ornithine
+    <-> ec_3_5_3_25 [3.5.3.25] +n5_hydroxyamino_imino_methyl_l_ornithinium +h2o
+    hydroxyurea
+  }
+
+  branch from ornithine side left {
+    ornithine
+    <-> ec_1_14_13_195 [1.14.13.195] +nadph +o2 +nadp +h2o
+    n5_hydroxy_l_ornithine
   }
 }

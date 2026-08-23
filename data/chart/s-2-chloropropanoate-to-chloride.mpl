@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-2-chloropropanoate-to-chloride "(S)-2-chloropropanoate to chloride" {
-  spacing 196
+  spacing 244
 
   spine at 0,0 {
     s_2_chloropropanoate
@@ -18,37 +18,85 @@ pathway s-2-chloropropanoate-to-chloride "(S)-2-chloropropanoate to chloride" {
 
   branch from h side left {
     h
-    <-> . +cmp +phosphatidylserine_ditetradec_7_enoyl_n_c14_1 +l_serine
-    cdp_1_2_ditetradec_7_enoylglycerol
+    <-> ec_3_2_1_56 [3.2.1.56] +d_glucuronate +n_6_o_disulfo_d_glucosamine +h2o
+    3_d_glucuronosyl_n_2_6_disulfo_beta_d_glucosamin
   }
 
   branch from h side right {
     h
-    <-> ec_2_7_8_8 [2.7.8.8] +cmp +phosphatidylserine_dioctadec_11_enoyl_n_c18_1 +l_serine
-    cdp_1_2_dioctadec_11_enoylglycerol
+    <-> . +5_pyridoxate +h2o
+    5_pyridoxolactone
   }
 
   branch from pyruvate side left {
     pyruvate
-    <-> . +salicin_6_phosphate +phosphoenolpyruvate
-    salicin
+    <-> . +h +1_hydroxy_2_naphthaldehyde +h2o
+    cis_4_1_hydroxynaphth_2_yl_2_oxobut_3_enoate
   }
 
   branch from pyruvate side right {
     pyruvate
-    <-> . +d_tagatose_1_phosphate +h +phosphoenolpyruvate
-    keto_d_tagatose
+    <-> . +isoniazid_pyruvate +h2o +h
+    isoniazide
   }
 
   branch from chloride side left {
     chloride
-    <-> . +h +2_2_bis_4_chlorophenyl_ethanol +h2o
-    1_chloro_2_2_bis_4_chlorophenyl_ethane
+    <-> . +h +2_5_dichlorophenol
+    1s_4r_2_4_5_trichloro_2_5_cyclohexadiene_1_diol
   }
 
   branch from chloride side right {
     chloride
-    <-> . +h +2_5_dichlorophenol
-    1s_4r_2_4_5_trichloro_2_5_cyclohexadiene_1_diol
+    <-> . +h +chlorobenzene
+    5_6_dichloro_1_3_cyclohexadiene
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_5_4_20 [3.5.4.20] +h +1_4_amino_2_methylpyrimidin_5_ylmethyl_3_2_hydro +1_4_hydroxy_2_methylpyrimidin_5_ylmethyl_3_2_hyd
+    nh4
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_1_4_1_12 [1.4.1.12] +h +2_amino_5_oxohexanoate +nh4 +nadph +nadp
+    2r_5s_2_5_diaminohexanoate
+  }
+
+  branch from h side left {
+    h
+    <-> ec_1_1_1_62 [1.1.1.62] +16alpha_hydroxyestrone +nadph +nadp
+    16alpha_17beta_estriol
+  }
+
+  branch from h side right {
+    h
+    <-> ec_1_1_1_146 [1.1.1.146] +adrenosterone +nadph +nadp
+    11beta_hydroxyandrost_4_ene_3_17_dione
+  }
+
+  branch from pyruvate side left {
+    pyruvate
+    <-> ec_4_4_1_13 [4.4.1.13] +nh4 +p_hydroxyphenylacetothiohydroximate +h2o
+    s_hydroxyphenylacetothiohydroximoyl_l_cysteine
+  }
+
+  branch from pyruvate side right {
+    pyruvate
+    <-> ec_4_4_1_13 [4.4.1.13] +4_methylthiobutylthiohydroximate +nh4 +h2o
+    s_4_methylthiobutylthiohydroximoyl_l_cysteine
+  }
+
+  branch from chloride side left {
+    chloride
+    <-> ec_5_5_1_7 [5.5.1.7] +h +2_3_5_trichloro_cis_cis_muconate
+    2_5_dichloro_carboxymethylenebut_2_en_4_olide
+  }
+
+  branch from chloride side right {
+    chloride
+    <-> ec_1_3_1_32 [1.3.1.32] +nadh +h +2e_2_5_dichloro_4_oxo_2_hexenedioic_acid +nad
+    2_chloro_3_oxoadipic_acid
   }
 }

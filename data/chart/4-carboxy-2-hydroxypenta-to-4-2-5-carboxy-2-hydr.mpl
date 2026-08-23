@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-carboxy-2-hydroxypenta-to-4-2-5-carboxy-2-hydr "4-carboxy-2-hydroxypenta-… to 4-[2-(5-Carboxy-2-hydroxy…" {
-  spacing 194
+  spacing 152
 
   spine at 0,0 {
     4_carboxy_2_hydroxypenta_2_4_dienoate
@@ -14,47 +14,5 @@ pathway 4-carboxy-2-hydroxypenta-to-4-2-5-carboxy-2-hydr "4-carboxy-2-hydroxypen
     5_6_6_trihydroxy_5_methoxy_biphenyl_3_3_dicarbox
     <-> . +h +o2
     4_2_5_carboxy_2_hydroxy_3_methoxyphenyl_2_oxoeth
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_13z_docosenoyl_2_9z_octadecenoyl_sn_glycero_3
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +1_docosanoyl_2_9z_12z_octadecadienoyl_sn_glycero +phosphate +1_docosanoyl_2_9z_12z_octadecadienoyl_sn_glycero +h2o
-    atp
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_2_1_22 [3.2.1.22] +alpha_d_mannopyranose +alpha_d_galactose
-    epimelibiose
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_2_1_104 [3.2.1.104] +beta_d_glucose +cholesterol
-    cholesteryl_3_beta_d_glucoside
-  }
-
-  branch from 5_6_6_trihydroxy_5_methoxy_biphenyl_3_3_dicarbox side left {
-    5_6_6_trihydroxy_5_methoxy_biphenyl_3_3_dicarbox
-    <-> . +h +o2
-    4_2_5_carboxy_2_hydroxy_3_methoxyphenyl_2_oxoeth
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +docosan_1_ol +h2o2
-    docosanal
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +hexacosan_1_ol +h2o2
-    hexacosanal
   }
 }

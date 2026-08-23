@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-acetyl-d-muramoyl-l-ala-to-amp-3-end-1 "N-acetyl-D-muramoyl-L-ala… to AMP 3'-end(1−)" {
-  spacing 330
+  spacing 318
 
   spine at 0,0 {
     n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_meso_2_6
@@ -20,21 +20,9 @@ pathway n-acetyl-d-muramoyl-l-ala-to-amp-3-end-1 "N-acetyl-D-muramoyl-L-ala… t
     udp_n_acetylmuramoyl_l_alanyl_d_glutamyl_n6_l_al
   }
 
-  branch from d_alanine side left {
-    d_alanine
-    <-> ec_6_3_2_35 [6.3.2.35] +dserine +atp +adp +pi +hplus
-    d_alanyl_d_serine
-  }
-
-  branch from d_alanine side right {
-    d_alanine
-    <-> . +plp +pyruvate
-    pyridoxamine_5_phosphate
-  }
-
-  branch from udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_l_ly side left {
-    udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_l_ly
-    <-> . +h2o +d_alanine
-    udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_l_ly
+  branch from 3_l_alanyl_adenylyl_zwitterionic_group side left {
+    3_l_alanyl_adenylyl_zwitterionic_group
+    <-> . +acetyl_coa +coa +hplus
+    3_n_acetyl_l_alanyl_adenylyl_1
   }
 }

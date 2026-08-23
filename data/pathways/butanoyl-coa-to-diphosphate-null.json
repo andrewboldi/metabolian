@@ -1,0 +1,457 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "butanoyl-coa-to-diphosphate-null",
+  "name": "butanoyl-CoA to diphosphate",
+  "category": "other",
+  "summary": "A 3-step route from butanoyl-CoA to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR181978"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "butanoyl_coa",
+      "name": "butanoyl-CoA",
+      "formula": "C25H38N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1104300"
+      }
+    },
+    {
+      "id": "2s_3_hydroxy_1_2_propanediyl_dibutanoate",
+      "name": "(2S)-3-Hydroxy-1,2-propanediyl dibutanoate",
+      "short": "3-Hydroxy-1,2-propa…",
+      "formula": "C11H20O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:177530"
+      }
+    },
+    {
+      "id": "tributyrin",
+      "name": "tributyrin",
+      "formula": "C15H26O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:35020"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "dibutyrin",
+      "name": "dibutyrin",
+      "formula": "C11H20O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:76478"
+      }
+    },
+    {
+      "id": "butyrate",
+      "name": "Butyrate",
+      "formula": "C4H7O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17968"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "butanal",
+      "name": "butanal",
+      "formula": "C4H8O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15743"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_3_1_20",
+      "name": "diacylglycerol O-acyltransferase",
+      "ec": [
+        "2.3.1.20"
+      ],
+      "xrefs": {
+        "uniprot": "Q6E213"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "diacylglycerol O-acyltransferase",
+      "ec": "2.3.1.20",
+      "substrates": [
+        {
+          "metabolite": "butanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2s_3_hydroxy_1_2_propanediyl_dibutanoate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "tributyrin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR181978"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR181978"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "1,2,3-tributanoylglycerol + H2O = dibutanoylglycerol + butanoate + H(+)",
+      "equation": "1,2,3-tributanoylglycerol + H2O = dibutanoylglycerol + butanoate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "tributyrin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dibutyrin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "butyrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:40475"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40475"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "butanoate + ATP + NADPH + H(+) = butanal + AMP + diphosphate + NADP(+)",
+      "equation": "butanoate + ATP + NADPH + H(+) = butanal + AMP + diphosphate + NADP(+)",
+      "substrates": [
+        {
+          "metabolite": "butyrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "butanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:68916"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:68916"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_2s_3_hydroxy_1_2_propanediyl_dibutanoate_butanoyl-coa-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2s_3_hydroxy_1_2_propanediyl_dibutanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "butanoyl-coa-to-diphosphate"
+      },
+      "note": "Shares (2S)-3-Hydroxy-1,2-propanediyl dibutanoate with butanoyl-CoA to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:177530"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2s_3_hydroxy_1_2_propanediyl_dibutanoate_dibenzofuran-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2s_3_hydroxy_1_2_propanediyl_dibutanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dibenzofuran-to-o2"
+      },
+      "note": "Shares (2S)-3-Hydroxy-1,2-propanediyl dibutanoate with dibenzofuran to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:177530"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2s_3_hydroxy_1_2_propanediyl_dibutanoate_dibenzofuran-to-o2-42460",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2s_3_hydroxy_1_2_propanediyl_dibutanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dibenzofuran-to-o2-42460"
+      },
+      "note": "Shares (2S)-3-Hydroxy-1,2-propanediyl dibutanoate with dibenzofuran to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:177530"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tributyrin_butanoyl-coa-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tributyrin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "butanoyl-coa-to-diphosphate"
+      },
+      "note": "Shares tributyrin with butanoyl-CoA to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:35020"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tributyrin_dibenzofuran-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tributyrin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dibenzofuran-to-o2"
+      },
+      "note": "Shares tributyrin with dibenzofuran to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:35020"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_tributyrin_dibenzofuran-to-o2-42460",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tributyrin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dibenzofuran-to-o2-42460"
+      },
+      "note": "Shares tributyrin with dibenzofuran to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:35020"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dibutyrin_butanoyl-coa-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dibutyrin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "butanoyl-coa-to-diphosphate"
+      },
+      "note": "Shares dibutyrin with butanoyl-CoA to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:76478"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 9s-13s-15z-12-oxophyto-to-9-hydroxy-12-oxo-15-z "(9S,13S,15Z)-12-oxophyto-… to 9-Hydroxy-12-oxo-15(Z)-oc…" {
-  spacing 164
+  spacing 212
 
   spine at 0,0 {
     9s_13s_15z_12_oxophyto_10_15_dienoate
@@ -18,13 +18,61 @@ pathway 9s-13s-15z-12-oxophyto-to-9-hydroxy-12-oxo-15-z "(9S,13S,15Z)-12-oxophyt
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_145 [1.1.1.145] +h +21_hydroxyprogesterone +nadph
-    21_hydroxypregnenolone
+    <-> . +5_hydroxy_desmethylanthrotainin +h2o +h +o2 +nadph
+    desmethylanthrotainin
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_17_1_8 [1.17.1.8] +h +nadph +2_3_dihydrodipicolinate
-    2_3_4_5_tetrahydrodipicolinate
+    <-> . +3_5_7_9_11_13_15_17_19_nonaoxohenicosanoate +h +o2 +nadph +homo_uwm6 +h2o
+    co2
+  }
+
+  branch from h side left {
+    h
+    <-> . +2_hydroxy_5_carboxymuconate_6_semialdehyde +nh4 +h2o
+    2z_4z_2_amino_5_formylhexa_2_4_dienedioate
+  }
+
+  branch from h side right {
+    h
+    <-> . +hexanoyl_coa +malonyl_coa +co2 +coa
+    3_5_dioxodecanoyl_coa
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +1_phenyl_3_3_c_glucosyl_2_4_6_trihydroxyphenyl_p
+    8_c_glucosyl_chrysin
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +h +8_c_glucosyl_chrysin
+    1_phenyl_3_3_c_glucosyl_2_4_6_trihydroxyphenyl_p
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +3_5_7_9_11_13_15_17_19_nonaoxohenicosanoate +h +o2 +co2 +nadp +h2o
+    homo_uwm6
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +tirandamycin_f +h +o2 +nadp +h2o
+    tirandamycin_e
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +tirandamycin_f +h +o2 +nadph +h2o
+    tirandamycin_e
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +tirandamycin_f +h2o +h +o2 +nadph
+    tirandamycin_c
   }
 }

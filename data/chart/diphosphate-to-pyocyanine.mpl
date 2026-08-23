@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway diphosphate-to-pyocyanine "diphosphate to pyocyanine" {
-  spacing 312
+  spacing 340
 
   spine at 0,0 {
     diphosphate
@@ -18,61 +18,121 @@ pathway diphosphate-to-pyocyanine "diphosphate to pyocyanine" {
 
   branch from l_glutamine side left {
     l_glutamine
-    <-> . +l_asparagine +h2o
-    glutaminyl_asparaginyl_glutamine
+    <-> ec_1_5_3_25 [1.5.3.25] +n_1_deoxy_d_fructos_1_yl_l_glutamine +o2 +h2o +h2o2
+    d_glucosone
   }
 
   branch from l_glutamine side right {
     l_glutamine
-    <-> . +l_histidine +h2o
-    glutaminyl_histidyl_histidine
+    <-> . +heliopine +nadp +h2o +h +nadph
+    pyruvate
   }
 
   branch from atp side left {
     atp
-    <-> ec_2_7_1_15 [2.7.1.15] +d_ribose +h +adp
-    aldehydo_d_ribose_5_phosphate
+    <-> ec_7_6_2_3 [7.6.2.3] +h +adp +phosphate +h2o
+    3_glutathion_s_yl_3_methylhexan_1_ol
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
-    d_ribose
-  }
-
-  branch from phenazine_1_carboxylate side left {
-    phenazine_1_carboxylate
-    <-> ec_3_6_3_44 [3.6.3.44] +h +phosphate +atp +h2o
-    adp
-  }
-
-  branch from phenazine_1_carboxylate side right {
-    phenazine_1_carboxylate
-    <-> . +2_hydroxyphenazine_1_carboxylic_acid +nadp +h2o +h +nadph
-    o2
+    <-> ec_6_2_1_12 [6.2.1.12] +diphosphate +caffeoyl_coa +amp +h +coa
+    caffeic_acid
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_23 [3.2.1.23] +beta_d_galactose +3_nitrophenol
-    m_nitrophenyl_beta_d_galactoside
+    <-> . +ent_kauran_17_oate +o2
+    ent_kaur_19_al_17_oate
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_23 [3.2.1.23] +beta_d_galactose +3_methylphenol
-    3_methylphenyl_beta_d_galactopyranoside
+    <-> . +ent_kaur_15_en_17_oate +o2
+    ent_kaur_15_en_19_al_17_oate
   }
 
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_299 [2.1.1.299] +n_terminal_l_prolyl_l_prolyl_l_lysyl_2 +sam +hplus
-    n_terminal_n_methyl_l_prolyl_l_prolyl_l_lysyl_2
+  branch from diphosphate side left {
+    diphosphate
+    <-> ec_2_5_1_123 [2.5.1.123] +2e_geranyl_diphosphate +flaviolin
+    3_linalylflaviolin_2_olate
   }
 
-  branch from sah side right {
-    sah
-    <-> . +cytidine_5_monophosphate_1 +sam +hplus
-    5_methylcytidine_5_monophosphate_1
+  branch from diphosphate side right {
+    diphosphate
+    <-> . +2e_geranyl_diphosphate +5_hydroxyanthrotainin
+    previridicatumtoxin
+  }
+
+  branch from h side left {
+    h
+    <-> . +4_2_5_carboxy_2_hydroxy_3_methoxyphenyl_2_oxoeth +o2
+    5_6_6_trihydroxy_5_methoxy_biphenyl_3_3_dicarbox
+  }
+
+  branch from h side right {
+    h
+    <-> . +dibenzoylmethane
+    2_5_7_trihydroxy_2_4_hydroxyphenyl_2_3_dihydro_4
+  }
+
+  branch from amp side left {
+    amp
+    <-> . +l_alanine +6_diazo_5_oxo_l_norleucyl_6_diazo_5_oxo_l_norleu +atp +diphosphate +h
+    alazopeptin
+  }
+
+  branch from amp side right {
+    amp
+    <-> . +adp_l_glycero_d_manno_heptose +h +adp
+    sep_540
+  }
+
+  branch from l_glutamate side left {
+    l_glutamate
+    <-> . +2_oxoglutarate +h +myxochelin_b
+    myxochelin_aldehyde_intermediate
+  }
+
+  branch from l_glutamate side right {
+    l_glutamate
+    <-> . +2_oxoglutarate +e_2_butenyl_4_methyl_threonine
+    3r_4r_6e_3_hydroxy_4_methyl_2_oxooct_6_enoate
+  }
+
+  branch from l_glutamine side left {
+    l_glutamine
+    <-> . +diphosphate +h +atp
+    l_glutaminyl_adenylate
+  }
+
+  branch from l_glutamine side right {
+    l_glutamine
+    <-> . +diphosphate +cob_ii_yrinate_a_c_diamide +h +adp +l_glutamate +atp +h2o
+    cobyrinate
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_7_6_2_8 [7.6.2.8] +h +adp +phosphate +h2o
+    cbi_ii
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    choline_sulfate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +3_oxooctanoyl_coa +trans_4_coumaroyl_coa +co2 +coa
+    1_4_hydroxyphenyl_1_decene_3_5_dione
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +3_oxooctanoyl_coa +trans_4_coumaroyl_coa +co2 +coa
+    1_4_hydroxyphenyl_1_decene_3_5_dione
   }
 }

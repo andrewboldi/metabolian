@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cyclotriphosphate-to-nadp "cyclotriphosphate to NADP" {
-  spacing 330
+  spacing 340
 
   spine at 0,0 {
     cyclotriphosphate
@@ -26,26 +26,26 @@ pathway cyclotriphosphate-to-nadp "cyclotriphosphate to NADP" {
 
   branch from triphosphate side left {
     triphosphate
-    <-> . +datp +h2o +hplus
-    2_deoxyadenosine
+    <-> . +7_8_dihydroneopterin_3_triphosphate +h2o +h +6_hydroxymethyl_7_8_dihydropterin
+    acetate
   }
 
   branch from triphosphate side right {
     triphosphate
-    <-> . +dctp +h2o +hplus
-    2_deoxycytidine
+    <-> . +7_8_dihydroneopterin_3_triphosphate +h2o +h +glycolaldehyde
+    6_hydroxymethyl_7_8_dihydropterin
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_6_3_2_24 [6.3.2.24] +tyrosine +arginine +atp +amp +hplus
-    l_tyrosiniumyl_l_arginine
+    <-> ec_4_2_3_13 [4.2.3.13] +fpp
+    cadinene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_6_1_1 [4.6.1.1] +atp
-    camp
+    <-> ec_4_2_3_11 [4.2.3.11] +gpp +h2o
+    sabinene_hydrate
   }
 
   branch from quinolinate side left {
@@ -68,13 +68,85 @@ pathway cyclotriphosphate-to-nadp "cyclotriphosphate to NADP" {
 
   branch from nadp side right {
     nadp
-    <-> . +acetyl_coa +malonyl_coa +h +nadph +co2 +coa +h2o
-    9z_hexadecenoate
+    <-> . +h +21_hydroxyprogesterone +o2 +nadph +h2o
+    aldosterone
   }
 
   branch from nadp side left {
     nadp
-    <-> . +2_c_methyl_d_erythritol_2_4_cyclic_diphosphate +h +nadph +h2o
-    1_hydroxy_2_methyl_2_e_butenyl_4_diphosphate
+    <-> ec_1_14_14_1 [1.14.14.1] +h +progesterone +o2 +nadph +h2o
+    21_hydroxyprogesterone
+  }
+
+  branch from triphosphate side right {
+    triphosphate
+    <-> ec_4_2_3_12 [4.2.3.12] +7_8_dihydroneopterin_3_triphosphate +h
+    6_pyruvoyl_5_6_7_8_tetrahydropterin
+  }
+
+  branch from triphosphate side left {
+    triphosphate
+    <-> ec_2_7_4_3 [2.7.4.3] +diphosphate +adp +h
+    amp
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_6_1_1_12 [6.1.1.12] +amp_3_end_1 +aspartate +atp +amp
+    3_l_aspartate_adenylyl_1_group
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_6_2_1_11 [6.2.1.11] +biotinate +atp +coa +amp
+    biotinyl_coa
+  }
+
+  branch from nicotinate_d_ribonucleotide side right {
+    nicotinate_d_ribonucleotide
+    <-> ec_2_7_1_173 [2.7.1.173] +atp +adp +hplus
+    d_ribosylnicotinate
+  }
+
+  branch from trans_polycis_decaprenyl_phosphate side left {
+    trans_polycis_decaprenyl_phosphate
+    <-> . +gdp +trans_octacis_decaprenylphospho_beta_d_mannose
+    gdp_alpha_d_mannose
+  }
+
+  branch from h side right {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    glycine
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_21 [3.6.3.21] +glycine +adp +phosphate +glycine +h2o
+    atp
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +antipyrine +h +o2 +nadp +methanol
+    edaravone
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +5_hydroxyomeprazole +nadp +h2o +h +o2
+    5_methoxy_2_4_methoxy_3_5_dimethylpyridin_2_yl_m
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_14_14_1 [1.14.14.1] +6_hydroxypaclitaxel +h2o +h +o2 +nadph
+    paclitaxel
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_14_14_1 [1.14.14.1] +4_hydroxytolbutamide +h2o +h +o2 +nadph
+    tolbutamide
   }
 }

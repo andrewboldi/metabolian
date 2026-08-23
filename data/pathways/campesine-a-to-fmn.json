@@ -127,24 +127,6 @@
       "xrefs": {
         "chebi": "CHEBI:232517"
       }
-    },
-    {
-      "id": "alanine",
-      "name": "L-Alanine",
-      "formula": "C3H7NO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:57972"
-      }
-    },
-    {
-      "id": "n_methyl_l_alanine",
-      "name": "N-methyl-L-alanine",
-      "formula": "C4H9NO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:58175"
-      }
     }
   ],
   "enzymes": [],
@@ -297,46 +279,71 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "L-alanine + S-adenosyl-L-methionine = N-methyl-L-alanine + S-adenosyl-L-homocysteine + ...",
-      "equation": "L-alanine + S-adenosyl-L-methionine = N-methyl-L-alanine + S-adenosyl-L-homocysteine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "alanine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n_methyl_l_alanine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:86047"
+      "id": "xt_campesine_a_l-tryptophanal-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "campesine_a"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "l-tryptophanal-to-fmn"
+      },
+      "note": "Shares campesine A with L-tryptophanal to FMN.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:86047"
+            "db": "ChEBI",
+            "id": "CHEBI:232509"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_campesine_b_n-fatty-acyl-l-isoleuci-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "campesine_b"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "n-fatty-acyl-l-isoleuci-to-fmn"
+      },
+      "note": "Shares campesine B with N-(fatty acyl)-L-isoleuci… to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:232510"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_campesine_c_l-tryptophanal-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "campesine_c"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-tryptophanal-to-fmn"
+      },
+      "note": "Shares campesine C with L-tryptophanal to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:232511"
           }
         ]
       }

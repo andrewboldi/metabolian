@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-chlorophenyl-phosphate-to-l-erythro-3-methylma "4-Chlorophenyl phosphate to L-erythro-3-Methylmalyl-C…" {
-  spacing 248
+  spacing 332
 
   spine at 0,0 {
     4_chlorophenyl_phosphate
@@ -20,73 +20,157 @@ pathway 4-chlorophenyl-phosphate-to-l-erythro-3-methylma "4-Chlorophenyl phospha
 
   branch from phosphate side left {
     phosphate
-    <-> . +d_glyceraldehyde_3_phosphate
-    enolaldehyde
+    <-> . +creatinine_phosphate +h2o
+    creatinine
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_1_3_91 [3.1.3.91] +n_7_methyl_gmp +h2o +h
-    n2_methylguanosine
+    <-> . +h +adp +alpha_d_glucosyl_1_3_n_n_diacetyl_alpha_d_bacill +alpha_d_glucosyl_1_3_n_n_diacetyl_alpha_d_bacill +h2o
+    atp
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_13_25 [1.14.13.25] +nadh +ethane +h +nad +h2o
-    ethanol
+    <-> . +tyrindoxyl +h2o
+    tyrindoleninone
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_4_3_21 [1.4.3.21] +h +2_pyridinemethanamine +h2o +nh4 +h2o2
-    2_formylpyridine
+    <-> . +methylroxarsone_v +h
+    methylroxarsone_iii
   }
 
   branch from co2 side left {
     co2
-    <-> ec_4_1_1_74 [4.1.1.74] +compound_0066905
-    4_fluorobenzoylformate
+    <-> . +feruloyl_diketide +e_feruloyl_coa +h +coa
+    curcumin
   }
 
   branch from co2 side right {
     co2
-    <-> ec_4_1_1_74 [4.1.1.74] +4_methoxybenzaldehyde
-    4_methoxybenzoylformic_acid
+    <-> . +4_coumaroyl_diketide +e_feruloyl_coa +h +coa
+    demethoxycurcumin
   }
 
   branch from h side left {
     h
-    <-> ec_1_2_1_3 [1.2.1.3] +nadh +cl_75947_quinoline_3_carboxylic_acid +nad +h2o
-    quinoline_3_carboxaldehyde
+    <-> . +2s_4_prop_1_en_1_yl_2_3_dihydro_1h_pyrrole_2_ca
+    2s_4_propylidene_2_3_dihydropyrrole_2_carboxyla
   }
 
   branch from h side right {
     h
-    <-> ec_1_2_1_3 [1.2.1.3] +nadh +quinoline_4_carboxylate +nad +h2o
-    quinoline_4_carboxaldehyde
+    <-> ec_3_4_22_40 [3.4.22.40] +bleomycin_a2 +h2o +nh4
+    deamido_bleomycin_a2
   }
 
   branch from succinate side left {
     succinate
-    <-> . +n_2_succinyl_l_arginine +h2o
-    l_arginine
+    <-> . +gibberellin_a13 +2_oxoglutarate +o2 +co2 +h
+    gibberellin_a43
   }
 
   branch from succinate side right {
     succinate
-    <-> ec_3_7_1_14 [3.7.1.14] +2_hydroxy_6_oxonona_2_4_dienedioic_acid +h2o +h
-    2_hydroxypenta_2_4_dienoic_acid
+    <-> . +gibberellin_a13 +2_oxoglutarate +o2 +co2 +h
+    ga43
   }
 
   branch from glyoxylate side left {
     glyoxylate
-    <-> . +n_n_dimethylurea +n_methyl_urea +h +h2o
-    3_6_8_trimethylallantoin
+    <-> ec_4_3_2_5 [4.3.2.5] +alpha_n_acetyl_tyrosyl_valinamide +h
+    alpha_n_acetyl_tyrosyl_valyl_alpha_hydroxylglyci
   }
 
   branch from glyoxylate side right {
     glyoxylate
-    <-> ec_4_1_3_1 [4.1.3.1] +succinate
-    d_erythro_isocitrate
+    <-> ec_1_14_14_33 [1.14.14.33] +fmnh2 +ethylenediaminetriacetate +h +o2 +ethylenediaminediacetate +h2o
+    fmn
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +chlorophyllide_b2
+    71_dihydroxychlorophyllide_a2
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +2s_2_carboxyamino_3_methylamino_propanoate +h
+    1_methyl_2_oxoimidazolidine_4_carboxylate
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +p_gingivalis_kdo2_lipid_a_penta_acylated_bis_pho +h2o
+    p_gingivalis_kdo2_lipid_a_penta_acylated_1_depho
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> . +p_gingivalis_kdo2_lipid_a_3_deacylated_4_dephosp +h2o
+    p_gingivalis_kdo2_lipid_a_3_deacylated_non_phosp
+  }
+
+  branch from h side left {
+    h
+    <-> . +3_hydroxypropenoate
+    3_oxopropanoate
+  }
+
+  branch from h side right {
+    h
+    <-> . +dehydrotomatidine +h2o
+    26_amino_furostanol
+  }
+
+  branch from glyoxylate side left {
+    glyoxylate
+    <-> . +fmnh2 +sulfoacetate +h +o2 +fmn +h2o
+    sulfite
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +3_amino_4_hydroxyphenyl_methyl_arsinate +h
+    3_amino_4_hydroxyphenyl_methyl_arsinous_acid
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_7_1_1_5 [7.1.1.5] +menaquinol_9 +menaquinone_9 +h2o
+    pmf
+  }
+
+  branch from 2_oxoglutarate side right {
+    2_oxoglutarate
+    <-> . +gibberellin_a46 +co2 +succinate +o2
+    gibberellin_a25
+  }
+
+  branch from 2_oxoglutarate side left {
+    2_oxoglutarate
+    <-> . +co2 +succinate +o2 +gibberellin_a25
+    ga46
+  }
+
+  branch from co2 side right {
+    co2
+    <-> . +4_bromo_3_chloroaniline +n_o_dimethylhydroxylamine +h2o
+    chlorbromuron
+  }
+
+  branch from co2 side left {
+    co2
+    <-> . +n_o_dimethylhydroxylamine +4_bromoaniline +h2o
+    metobromuron
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> ec_1_14_20_4 [1.14.20.4] +2_oxoglutarate +2r_3s_4s_3_4_leucopelargonidin +o2 +co2 +h +h2o
+    pelargonidin
   }
 }

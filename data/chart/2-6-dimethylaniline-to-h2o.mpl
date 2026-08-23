@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-6-dimethylaniline-to-h2o "2,6-dimethylaniline to H2O" {
-  spacing 196
+  spacing 268
 
   spine at 0,0 {
     2_6_dimethylaniline
@@ -18,37 +18,109 @@ pathway 2-6-dimethylaniline-to-h2o "2,6-dimethylaniline to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> ec_1_14_14_1 [1.14.14.1] +h +1_1_dichloroethene +o2 +nadph +nadp
-    chloroacetyl_chloride
+    <-> . +tirandamycin_a +h +o2 +nadph +nadp
+    tirandamycin_b
   }
 
   branch from h2o side right {
     h2o
-    <-> . +2_2_dichloroacetaldehyde
-    2_2_dichloro_1_1_ethanediol
+    <-> ec_3_5_1_28 [3.5.1.28] +peptidoglycan_dimer_with_a_single_pentapeptide_s +l_alanyl_gamma_d_glutamyl_meso_2_6_diaminopimelo
+    peptidoglycan_dimer_with_pentapeptide_stems_meso
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_14_1 [1.14.14.1] +trichloroethene +h +nadph +nadp +h2o
-    trichloroacetaldehyde
+    <-> ec_1_8_3_2 [1.8.3.2] +3_benzyl_3_6_disulfide_6_hydroxymethyl_diketopip +h2o2
+    3_benzyl_3_6_dithio_6_hydroxymethyl_diketopipera
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_14_1 [1.14.14.1] +nadp +2_bromoacetaldehyde +bromide +h2o +nadph
-    1_2_dibromoethane
+    <-> . +fumiquinazoline_a +h2o2
+    fumiquinazoline_c
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_99_31 [1.14.99.31] +tetradecanoyl_coa +h +o2 +nadph +h2o
-    trans_tetradec_11_enoyl_coa
+    <-> . +l_2_amino_8_hydroxydecanoate +h +nadph
+    l_2_amino_8_oxodecanoate
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_99_32 [1.14.99.32] +tetradecanoyl_coa +h +o2 +nadph +h2o
-    cis_tetradec_11_enoyl_coa
+    <-> ec_1_2_1_7 [1.2.1.7] +3_hydroxy_4_methyl_benzoate +h +nadph +h2o
+    3_hydroxy_4_methylbenzaldehyde
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_7_1_23 [3.7.1.23] +2_methylmaleate +h +pyruvate
+    2e_3_methyl_4_6_dioxohept_2_enedioate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_1_2_1_7 [1.2.1.7] +3_hydroxy_5_methyl_benzoate +h +nadph +nadp
+    3_hydroxy_5_methylbenzaldehyde
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_4_1_356 [2.4.1.356] +udp +beta_d_glucuronosyl_1_4_alpha_d_glucosyl_c55_ome +alpha_d_glucosyl_c55_omega_saturated_dolichyl_ph
+    udp_alpha_d_glucuronate
+  }
+
+  branch from h side right {
+    h
+    <-> . +trichosetin
+    dieckmann_product
+  }
+
+  branch from formate side left {
+    formate
+    <-> ec_3_5_1_9 [3.5.1.9] +r_beta_hydroxy_l_kynurenine +h +h2o
+    r_n_formyl_beta_hydroxy_l_kynurenine
+  }
+
+  branch from formate side right {
+    formate
+    <-> . +tert_butyl_formate +h2o +h
+    tert_butanol
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +2_methyl_3_n_amyl_pyrrole +h2o2
+    2_methyl_3_n_amyl_dihydropyrrole
+  }
+
+  branch from o2 side right {
+    o2
+    <-> ec_1_3_3_6 [1.3.3.6] +acryloyl_coa +h2o2
+    propanoyl_coa
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> .
+    2_hydro_nadp
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> .
+    6_hydro_nadp
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +4_hydroxy_3_hydroxymethyl_benzoate +h2o +o2 +nadph
+    4_hydroxy_3_methylbenzoic_acid
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +lyngbyatoxin_a +h +o2 +nadph +h2o
+    lyngbyatoxin_b
   }
 }

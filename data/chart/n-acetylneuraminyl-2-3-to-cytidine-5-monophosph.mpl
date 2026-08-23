@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-acetylneuraminyl-2-3-to-cytidine-5-monophosph "α-N-acetylneuraminyl-(2→3… to cytidine 5'-monophosphate" {
-  spacing 300
+  spacing 340
 
   spine at 0,0 {
     n_acetylneuraminyl_2_3_d_galactoside
@@ -19,24 +19,72 @@ pathway n-acetylneuraminyl-2-3-to-cytidine-5-monophosph "α-N-acetylneuraminyl-(
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
     <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +cmp_n_acetyl_neuraminate +hplus
-    neu5ac_2_3_d_gal_1_3_neu5ac_2_6_d_galnac_1_4_ne
+    neu5ac_2_8_neu5ac_2_3_d_gal_1_3_d_galnac_1_4_d
   }
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> . +neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac +cmp_n_acetyl_neuraminate +hplus
-    neu5ac_2_3_d_gal_1_3_neu5ac_2_6_d_galnac_1_4_ne
+    <-> . +n_acetyl_neuraminosyl_2_3_d_galactosylceramide +cmp_n_acetyl_neuraminate +hplus
+    neu5ac_2_8_neu5ac_2_3_d_gal_1_1_n_acylsphingosi
   }
 
   branch from imp side left {
     imp
-    <-> ec_3_6_1_6 [3.6.1.6] +h2o +pi +hplus
-    idp
+    <-> . +2_deoxyinosine_5_phosphate +inosine
+    2_deoxyinosine
   }
 
   branch from imp side right {
     imp
-    <-> . +2_deoxyinosine_5_phosphate +inosine
-    2_deoxyinosine
+    <-> . +2_deoxyguanosine_5_monophosphate +inosine
+    2_deoxyguanosine
+  }
+
+  branch from n_acetylneuraminyl_2_3_d_galactoside side left {
+    n_acetylneuraminyl_2_3_d_galactoside
+    <-> ec_2_4_1_165 [2.4.1.165] +udp_n_acetyl_d_galactosamine +udp +hplus
+    n_acetyl_d_galactosaminyl_1_4_n_acetyl_neuraminy
+  }
+
+  branch from cmp_n_acetyl_neuraminate side right {
+    cmp_n_acetyl_neuraminate
+    <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +cytidine_5_monophosphate +hplus
+    neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac
+  }
+
+  branch from cmp_n_acetyl_neuraminate side left {
+    cmp_n_acetyl_neuraminate
+    <-> ec_2_4_3_1 [2.4.3.1] +d_galactoside +cytidine_5_monophosphate +hplus
+    n_acetyl_neuraminyl_2_6_d_galactoside
+  }
+
+  branch from cytidine_5_monophosphate side right {
+    cytidine_5_monophosphate
+    <-> ec_2_4_3_6 [2.4.3.6] +d_galactosyl_1_4_n_acetyl_d_glucosaminide +cmp_n_acetyl_neuraminate +hplus
+    n_acetylneuraminyl_2_3_d_galactosyl_1_4_n_acety
+  }
+
+  branch from cytidine_5_monophosphate side left {
+    cytidine_5_monophosphate
+    <-> ec_2_4_3_2 [2.4.3.2] +d_galactosyl_1_3_n_acetyl_d_galactosaminide +cmp_n_acetyl_neuraminate +hplus
+    n_acetyl_neuraminyl_2_3_d_galactosyl_1_3_n_acety
+  }
+
+  branch from inosine side right {
+    inosine
+    <-> ec_1_1_3_28 [1.1.3.28] +o2 +h2o +hplus
+    9_riburonosylhypoxanthine
+  }
+
+  branch from imp side left {
+    imp
+    <-> . +h2o +pi +hplus
+    itp
+  }
+
+  branch from imp side right {
+    imp
+    <-> . +n6_dimethylallyl_adenosine_5_phosphate +h2o +hplus
+    dimethylallylammonium
   }
 }

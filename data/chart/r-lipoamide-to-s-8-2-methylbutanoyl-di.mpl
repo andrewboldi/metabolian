@@ -18,49 +18,61 @@ pathway r-lipoamide-to-s-8-2-methylbutanoyl-di "(R)-lipoamide to S(8)-(2-methylb
 
   branch from h side left {
     h
-    <-> . +2_dehydro_d_gluconate +h2o
-    2_dehydro_d_glucono_1_5_lactone
+    <-> . +5e_3_imino_4_sulfanyl_5_sulfanylmethylidene_pyr
+    dithioholothin
   }
 
   branch from h side right {
     h
-    <-> ec_3_5_4_43 [3.5.4.43] +ammelide +chloride +h2o
-    4_amino_6_chloro_1_3_5_triazin_2_ol
-  }
-
-  branch from thiamine_diphosphate side left {
-    thiamine_diphosphate
-    <-> . +r_lipoamide +2_methyl_1_hydroxypropylthiamine_diphosphate +h
-    s_8_2_methylpropanoyl_dihydrolipoamide
-  }
-
-  branch from s_2_methylpropanoyl_dihydrolipoamide side right {
-    s_2_methylpropanoyl_dihydrolipoamide
-    <-> ec_2_3_1_168 [2.3.1.168] +2_methylpropanoyl_coa +r_dihydrolipoamide
-    coa
+    <-> . +5e_3_amino_4_sulfanyl_5_sulfanylmethylidene_pyr +co2
+    4_amino_2_methanethioyl_5_oxo_3_sulfanylpyrrolid
   }
 
   branch from co2 side left {
     co2
-    <-> . +2_aminoethyl_phosphonate
-    2_amino_3_phosphonopropanoic_acid
+    <-> . +2_hydroxyphenazine_1_carboxylic_acid
+    2_hydroxyphenazine
   }
 
   branch from co2 side right {
     co2
-    <-> . +styrene
-    3_isochromanone
+    <-> . +4_amino_2_methanethioyl_5_oxo_3_sulfanylpyrrolid
+    5e_3_amino_4_sulfanyl_5_sulfanylmethylidene_pyr
   }
 
-  branch from s_8_2_methylbutanoyl_dihydrolipoamide side left {
-    s_8_2_methylbutanoyl_dihydrolipoamide
-    <-> ec_2_3_1_168 [2.3.1.168] +2s_2_methylbutanoyl_coa +coa
-    r_dihydrolipoamide
+  branch from h side left {
+    h
+    <-> . +acetyl_coa +dithioholothin +coa
+    dithioholomycin
   }
 
-  branch from s_8_2_methylbutanoyl_dihydrolipoamide side right {
-    s_8_2_methylbutanoyl_dihydrolipoamide
-    <-> ec_1_2_4_4 [1.2.4.4] +r_lipoamide +h +co2
-    3_methyl_2_oxopentanoate
+  branch from h side right {
+    h
+    <-> . +pelargonidin +nadph +nadp
+    epiafzelechin
+  }
+
+  branch from s_3_methyl_2_oxopentanoate side left {
+    s_3_methyl_2_oxopentanoate
+    <-> . +l_tryptophan +l_isoleucine
+    indole_3_pyruvate
+  }
+
+  branch from s_3_methyl_2_oxopentanoate side right {
+    s_3_methyl_2_oxopentanoate
+    <-> . +l_tyrosine +l_isoleucine
+    3_4_hydroxyphenyl_pyruvate
+  }
+
+  branch from co2 side left {
+    co2
+    <-> ec_4_1_1_45 [4.1.1.45] +cis_cis_2_ammonio_3_3_oxoprop_1_enyl_but_2_enedi +h
+    2_aminomuconate_6_semialdehyde
+  }
+
+  branch from co2 side right {
+    co2
+    <-> ec_4_1_1_45 [4.1.1.45] +2_amino_3_carboxymuconate_6_semialdehyde +h
+    2z_4e_2_amino_6_oxohexa_2_4_dienoate
   }
 }

@@ -1,0 +1,444 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-oxoethyl-com-to-h2o-null",
+  "name": "2-oxoethyl-CoM to H2O",
+  "category": "other",
+  "summary": "A 3-step route from 2-oxoethyl-CoM to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR121018"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_oxoethyl_com",
+      "name": "2-oxoethyl-CoM",
+      "formula": "C4H7O4S2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM163659"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "chloride",
+      "name": "chloride",
+      "formula": "Cl",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM735978"
+      }
+    },
+    {
+      "id": "2_chloro_2_hydroxyethyl_com",
+      "name": "2-Chloro-2-hydroxyethyl-CoM",
+      "short": "2-Chloro-2-hydroxye…",
+      "formula": "C4H9ClO4S2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM164121"
+      }
+    },
+    {
+      "id": "2_chlorooxirane",
+      "name": "2-chlorooxirane",
+      "formula": "C2H3ClO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29129"
+      }
+    },
+    {
+      "id": "coenzyme_m",
+      "name": "coenzyme M",
+      "formula": "C2H5O3S2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM399"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM23"
+      }
+    },
+    {
+      "id": "nh4",
+      "name": "NH4",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM729302"
+      }
+    },
+    {
+      "id": "sulfoethylcysteine",
+      "name": "sulfoethylcysteine",
+      "formula": "C5H10NO5S2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM5937"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_4_1_23",
+      "name": "2-hydroxypropyl-CoM lyase",
+      "ec": [
+        "4.4.1.23"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR121018",
+      "substrates": [
+        {
+          "metabolite": "2_oxoethyl_com",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "chloride",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_chloro_2_hydroxyethyl_com",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR121018"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR121018"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2-hydroxypropyl-CoM lyase",
+      "ec": "4.4.1.23",
+      "substrates": [
+        {
+          "metabolite": "2_chloro_2_hydroxyethyl_com",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_chlorooxirane",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coenzyme_m",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_4_1_23"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR121015"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR121015"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR96847",
+      "substrates": [
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coenzyme_m",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh4",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sulfoethylcysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR96847"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR96847"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_2_oxoethyl_com_2-oxoethyl-com-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxoethyl_com"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-oxoethyl-com-to-h2o"
+      },
+      "note": "Shares 2-oxoethyl-CoM with 2-oxoethyl-CoM to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM163659"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_oxoethyl_com_nadh-to-2-chloroethanol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxoethyl_com"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-2-chloroethanol"
+      },
+      "note": "Shares 2-oxoethyl-CoM with NADH to 2-chloroethanol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM163659"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_oxoethyl_com_nadh-to-2-chloroethanol-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxoethyl_com"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-2-chloroethanol-null"
+      },
+      "note": "Shares 2-oxoethyl-CoM with NADH to 2-chloroethanol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM163659"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_chloro_2_hydroxyethyl_com_2-oxoethyl-com-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_chloro_2_hydroxyethyl_com"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-oxoethyl-com-to-h2o"
+      },
+      "note": "Shares 2-Chloro-2-hydroxyethyl-CoM with 2-oxoethyl-CoM to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM164121"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_chlorooxirane_1-1-dichloroethene-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_chlorooxirane"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-1-dichloroethene-to-succinate"
+      },
+      "note": "Shares 2-chlorooxirane with 1,1-dichloroethene to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29129"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_chlorooxirane_1-1-dichloroethene-to-succinate-68000",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_chlorooxirane"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-1-dichloroethene-to-succinate-68000"
+      },
+      "note": "Shares 2-chlorooxirane with 1,1-dichloroethene to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29129"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_chlorooxirane_2-oxoethyl-com-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_chlorooxirane"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-oxoethyl-com-to-h2o"
+      },
+      "note": "Shares 2-chlorooxirane with 2-oxoethyl-CoM to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29129"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sulfoethylcysteine_2-oxoethyl-com-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sulfoethylcysteine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-oxoethyl-com-to-h2o"
+      },
+      "note": "Shares sulfoethylcysteine with 2-oxoethyl-CoM to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM5937"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sulfoethylcysteine_nadh-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sulfoethylcysteine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-nad"
+      },
+      "note": "Shares sulfoethylcysteine with NADH to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM5937"
+          }
+        ]
+      }
+    }
+  ]
+}

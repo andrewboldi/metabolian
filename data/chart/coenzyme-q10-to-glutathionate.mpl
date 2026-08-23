@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway coenzyme-q10-to-glutathionate "coenzyme Q10 to glutathionate" {
-  spacing 292
+  spacing 274
 
   spine at 0,0 {
     coenzyme_q10
@@ -28,39 +28,21 @@ pathway coenzyme-q10-to-glutathionate "coenzyme Q10 to glutathionate" {
     ubiquinone_10
   }
 
-  branch from gssg side left {
-    gssg
-    <-> . +12_s_hpete +gsh +h2o
-    12_s_hete
+  branch from trioxidosulfanidosulfate side left {
+    trioxidosulfanidosulfate
+    <-> ec_1_8_2_2 [1.8.2.2] +iron +fe2 +hplus
+    tetrathionate
   }
 
-  branch from gssg side right {
-    gssg
-    <-> . +cumene_hydroperoxide +gsh +h2o
-    2_phenylpropan_2_ol
+  branch from ubiquinol_10 side right {
+    ubiquinol_10
+    <-> . +alpha_tocopheryl_quinone +ubiquinone_10
+    alpha_tocopheryl_hydroquinone
   }
 
-  branch from h2s side left {
-    h2s
-    <-> ec_6_2_2_1 [6.2.2.1] +glycine +atp +adp +pi
-    thioglycine
-  }
-
-  branch from h2s side right {
-    h2s
-    <-> . +cysteine +hplus
-    l_lanthionine_dizwitterion
-  }
-
-  branch from gsh side left {
-    gsh
-    <-> . +11_s_hydroxy_14_s_15_s_hepoxilin_a3
-    11_s_15_s_dihydroxy_14_r_s_glutathionyl_5_z_8_z
-  }
-
-  branch from gsh side right {
-    gsh
-    <-> . +prostaglandin_a2
-    s_pga2_s_glutathione_conjugate
+  branch from ubiquinol_10 side left {
+    ubiquinol_10
+    <-> . +dihydroxyacetone_phosphate +ubiquinone_10
+    sn_glycerol_3_phosphate
   }
 }

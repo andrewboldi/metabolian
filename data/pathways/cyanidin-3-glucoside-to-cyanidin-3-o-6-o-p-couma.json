@@ -1,0 +1,358 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "cyanidin-3-glucoside-to-cyanidin-3-o-6-o-p-couma",
+  "name": "Cyanidin 3-glucoside… to Cyanidin 3-O-(6-O-p-couma…",
+  "category": "other",
+  "summary": "A 3-step route from Cyanidin 3-glucoside 5-caffeoylglucoside to Cyanidin 3-O-(6-O-p-coumaroyl)glucoside, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR196086"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "cyanidin_3_glucoside_5_caffeoylglucoside",
+      "name": "Cyanidin 3-glucoside 5-caffeoylglucoside",
+      "short": "Cyanidin 3-glucosid…",
+      "formula": "C36H36O19",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364617"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "trans_caffeoyl_coa",
+      "name": "trans-caffeoyl-CoA",
+      "formula": "C30H38N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:87136"
+      }
+    },
+    {
+      "id": "cyanin",
+      "name": "Cyanin",
+      "formula": "C27H30O16",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1371152"
+      }
+    },
+    {
+      "id": "trans_4_coumaroyl_coa",
+      "name": "trans-4-coumaroyl-CoA",
+      "short": "trans-4-coumaroyl-C…",
+      "formula": "C30H38N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:85008"
+      }
+    },
+    {
+      "id": "shisonin",
+      "name": "Shisonin",
+      "formula": "C36H36O18",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1369265"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1102128"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "udp_alpha_d_glucose",
+      "name": "UDP-alpha-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1364019"
+      }
+    },
+    {
+      "id": "cyanidin_3_o_6_o_p_coumaroyl_glucoside",
+      "name": "Cyanidin 3-O-(6-O-p-coumaroyl)glucoside",
+      "short": "Cyanidin 3-O-(6-O-p…",
+      "formula": "C30H26O13",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1368588"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_3_1_153",
+      "name": "anthocyanin 5-(6'''-hydroxycinnamoyltransferase)",
+      "ec": [
+        "2.3.1.153"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "anthocyanin 5-(6'''-hydroxycinnamoyltransferase)",
+      "ec": "2.3.1.153",
+      "substrates": [
+        {
+          "metabolite": "cyanidin_3_glucoside_5_caffeoylglucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_caffeoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cyanin",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_153"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR196086"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196086"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR195936",
+      "substrates": [
+        {
+          "metabolite": "trans_4_coumaroyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cyanin",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "shisonin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR195936"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR195936"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR197578",
+      "substrates": [
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "shisonin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "udp_alpha_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cyanidin_3_o_6_o_p_coumaroyl_glucoside",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR197578"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197578"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_cyanin_d-glucopyranose-to-2r-3s-catechin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cyanin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glucopyranose-to-2r-3s-catechin"
+      },
+      "note": "Shares Cyanin with D-glucopyranose to (2R,3S)-catechin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371152"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cyanin_d-glucopyranose-to-coa-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cyanin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glucopyranose-to-coa-null"
+      },
+      "note": "Shares Cyanin with D-glucopyranose to CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371152"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cyanin_d-glucopyranose-to-cyanidin-3-o-glucoside",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cyanin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glucopyranose-to-cyanidin-3-o-glucoside"
+      },
+      "note": "Shares Cyanin with D-glucopyranose to Cyanidin 3-O-glucoside.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371152"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_shisonin_dtdp-4-amino-4-6-dideoxy-to-h",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "shisonin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-4-amino-4-6-dideoxy-to-h"
+      },
+      "note": "Shares Shisonin with DTDP-4-amino-4,6-dideoxy-… to H.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1369265"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cyanidin_3_o_6_o_p_coumaroyl_glucoside_cyanidin-3-o-2-o-xylosy-to-cyanidin-3-o-6-o-p-co",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cyanidin_3_o_6_o_p_coumaroyl_glucoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cyanidin-3-o-2-o-xylosy-to-cyanidin-3-o-6-o-p-co"
+      },
+      "note": "Shares Cyanidin 3-O-(6-O-p-coumaroyl)glucoside with cyanidin 3-O-[2″-O-xylosy… to Cyanidin 3-O-(6-O-p-couma….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1368588"
+          }
+        ]
+      }
+    }
+  ]
+}

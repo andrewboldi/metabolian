@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2s-3-sulfopropanediol-to-3-hydroxyhexane-2-5-di "(2S)-3-sulfopropanediol to 3-hydroxyhexane-2,5-dione" {
-  spacing 200
+  spacing 212
 
   spine at 0,0 {
     2s_3_sulfopropanediol
@@ -14,5 +14,17 @@ pathway 2s-3-sulfopropanediol-to-3-hydroxyhexane-2-5-di "(2S)-3-sulfopropanediol
     methylglyoxal
     <-> . +acetoacetate +hplus -co2
     3_hydroxyhexane_2_5_dione
+  }
+
+  branch from 2s_3_sulfopropanediol side left {
+    2s_3_sulfopropanediol
+    <-> ec_4_2_1_177 [4.2.1.177] +h2o
+    3_oxopropane_1_sulfonate
+  }
+
+  branch from acetoacetate side right {
+    acetoacetate
+    <-> ec_6_4_1_6 [6.4.1.6] +co2 +acetone +atp +h2o +amp +phosphate
+    h
   }
 }

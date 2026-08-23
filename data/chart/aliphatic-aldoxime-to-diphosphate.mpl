@@ -30,26 +30,26 @@ pathway aliphatic-aldoxime-to-diphosphate "aliphatic aldoxime to diphosphate" {
 
   branch from carboxylic_acid_anion side right {
     carboxylic_acid_anion
-    <-> ec_2_7_1_61 [2.7.1.61] +d_hexose +acyl_monophosphate +hplus
-    d_hexose_phosphate
-  }
-
-  branch from carboxylic_acid_anion side left {
-    carboxylic_acid_anion
     <-> ec_3_6_1_7 [3.6.1.7] +h2o +pi +hplus
     acyl_monophosphate
   }
 
+  branch from carboxylic_acid_anion side left {
+    carboxylic_acid_anion
+    <-> ec_3_6_1_20 [3.6.1.20] +h2o +amp +hplus
+    5_acylphosphoadenosine
+  }
+
   branch from nh3 side right {
     nh3
-    <-> ec_3_5_4_11 [3.5.4.11] +2_aminopteridin_4_ol +h2o +hplus
-    lumazine
+    <-> ec_4_3_1_18 [4.3.1.18] +pyruvate
+    dserine
   }
 
   branch from nh3 side left {
     nh3
-    <-> . +hydroxylamine +h2o +hplus
-    hydrazine
+    <-> ec_3_5_4_24 [3.5.4.24] +l_sepiapterin +h2o +hplus
+    s_xanthopterin_b2
   }
 
   branch from acyl_coa side right {
@@ -66,14 +66,14 @@ pathway aliphatic-aldoxime-to-diphosphate "aliphatic aldoxime to diphosphate" {
 
   branch from ppi side right {
     ppi
-    <-> ec_6_1_1_14 [6.1.1.14] +amp_3_end_1 +glycine +atp +amp
-    3_glycyladenylyl_zwitterionic_group
+    <-> ec_6_2_1_15 [6.2.1.15] +arachidonate +atp +coa +amp
+    arachidonoyl_coa
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_167 [4.2.3.167] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +h2o
-    3e_7e_dolabella_3_7_dien_18_ol
+    <-> ec_4_2_3_9 [4.2.3.9] +fpp
+    aristolochene
   }
 
   branch from uracil side right {
@@ -82,21 +82,81 @@ pathway aliphatic-aldoxime-to-diphosphate "aliphatic aldoxime to diphosphate" {
     5_6_dihydrouracil
   }
 
-  branch from uracil side left {
-    uracil
-    <-> . +dump +h2o
-    2_deoxyribose_5_monophosphate_1
-  }
-
-  branch from 4_d_ribofuranosyl_aminobenzene_5_phosphate side right {
+  branch from 4_d_ribofuranosyl_aminobenzene_5_phosphate side left {
     4_d_ribofuranosyl_aminobenzene_5_phosphate
     <-> ec_2_5_1_105 [2.5.1.105] +1_2_amino_7_methyl_4_oxo_7_8_dihydro_3h_pteridi +diphosphate
     1_2_amino_7_methyl_4_oxo_7_8_dihydro_3h_pteridi
   }
 
-  branch from 4_d_ribofuranosyl_aminobenzene_5_phosphate side left {
+  branch from 4_d_ribofuranosyl_aminobenzene_5_phosphate side right {
     4_d_ribofuranosyl_aminobenzene_5_phosphate
     <-> . +fumarate
     4_beta_d_ribofuranosyl_n_succinylaminobenzene_5
+  }
+
+  branch from carboxylic_acid_anion side left {
+    carboxylic_acid_anion
+    <-> ec_3_5_1_83 [3.5.1.83] +n_acyl_d_aspartate +h2o
+    d_aspartate
+  }
+
+  branch from carboxylic_acid_anion side right {
+    carboxylic_acid_anion
+    <-> ec_3_5_1_11 [3.5.1.11] +penicillinate_anion +h2o
+    6_aminopenicillanic_acid
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> ec_6_3_1_4 [6.3.1.4] +aspartate +atp +adp +pi +hplus
+    l_asparagine
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_1_4_3_14 [1.4.3.14] +l_lysinium +o2 +h2o +h2o2
+    6_amino_2_oxohexanoic_acid
+  }
+
+  branch from acyl_coa side left {
+    acyl_coa
+    <-> ec_2_3_1_125 [2.3.1.125] +1_alkyl_2_acetyl_sn_glycerol +coa
+    1_alkyl_2_acetyl_3_acyl_sn_glycerol
+  }
+
+  branch from acyl_coa side right {
+    acyl_coa
+    <-> ec_2_3_1_185 [2.3.1.185] +tropinium +coa +hplus
+    o_acyltropine
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_6_1_1_18 [6.1.1.18] +amp_3_end_1 +glutamine +atp +amp
+    3_l_glutaminyl_adenylyl_zwitterionic_group
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_5_1_1_11 [5.1.1.11] +l_phenylalanine +atp +h2o +amp +hplus
+    d_phenylalanine
+  }
+
+  branch from ump side left {
+    ump
+    <-> ec_2_7_8_18 [2.7.8.18] +udpglcnac +udp_d_galactose +hplus
+    udp_n_acetyl_6_d_galactose_1_phosphonato_d_gluco
+  }
+
+  branch from ump side right {
+    ump
+    <-> ec_3_6_1_8 [3.6.1.8] +h2o +ppi +hplus
+    utp
+  }
+
+  branch from 4_aminobenzoate side left {
+    4_aminobenzoate
+    <-> . +l_tyrosine +ascorbate +l_lysinium +o2 +l_allysine +l_dehydroascorbate +h2o +hplus
+    glycine
   }
 }

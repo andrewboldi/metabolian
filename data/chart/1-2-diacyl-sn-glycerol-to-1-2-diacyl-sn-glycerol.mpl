@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-2-diacyl-sn-glycerol-to-1-2-diacyl-sn-glycerol "1,2-diacyl-sn-glycerol… to 1,2-diacyl-sn-glycerol…" {
-  spacing 234
+  spacing 240
 
   spine at 0,0 {
     1_2_diacyl_sn_glycerol_3_diphosphate
@@ -16,21 +16,27 @@ pathway 1-2-diacyl-sn-glycerol-to-1-2-diacyl-sn-glycerol "1,2-diacyl-sn-glycerol
     1_2_diacyl_sn_glycerol_3_phosphate
   }
 
-  branch from 1_2_diacyl_sn_glycerol_3_phosphate side left {
-    1_2_diacyl_sn_glycerol_3_phosphate
-    <-> . +1_acyl_sn_glycerol_3_phosphate +1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol
-    1_acyl_sn_glycero_3_phospho_1_sn_glycerol
+  branch from dag side left {
+    dag
+    <-> ec_3_1_4_11 [3.1.4.11] +1_phosphatidyl_1d_myo_inositol_4_5_bisphosphate +h2o +hplus
+    1d_myo_inositol_1_4_5_trisphosphate
   }
 
   branch from dag side right {
     dag
-    <-> ec_4_6_1_13 [4.6.1.13] +1_phosphatidyl_1d_myo_inositol
-    1d_myo_inositol_1_2_cyclic_phosphate
+    <-> . +n_acylphytosphingosine +1_phosphatidyl_1d_myo_inositol
+    inositol_phosphophytoceramide_t18_0
   }
 
   branch from dag side left {
     dag
-    <-> ec_2_7_8_27 [2.7.8.27] +n_acylsphingosine +phosphatidylcholine
-    sphingomyelin
+    <-> . +n_tetracosanoylsphinganine +1_phosphatidyl_1d_myo_inositol
+    ins_1_p_cer_d18_0_24_0
+  }
+
+  branch from dag side right {
+    dag
+    <-> ec_2_7_8_48 [2.7.8.48] +n_acylsphingosine +1_2_diacyl_sn_glycero_3_phosphoethanolamine
+    n_acylsphingosine_1_phosphoethanolamine
   }
 }

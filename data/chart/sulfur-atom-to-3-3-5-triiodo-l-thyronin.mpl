@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway sulfur-atom-to-3-3-5-triiodo-l-thyronin "sulfur atom to 3,3',5-triiodo-L-thyronin…" {
-  spacing 302
+  spacing 248
 
   spine at 0,0 {
     sulfur_atom
@@ -14,59 +14,5 @@ pathway sulfur-atom-to-3-3-5-triiodo-l-thyronin "sulfur atom to 3,3',5-triiodo-L
     3_phosphoadenylyl_sulfate
     <-> . +3_3_5_triiodo_l_thyronine -h -3_3_5_triiodo_l_thyronine_sulfate
     adenosine_3_5_bisphosphate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +h +adp +5_r_hete +phosphate +5_r_hete
-    atp
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    14_15_eet
-  }
-
-  branch from 3_phosphoadenylyl_sulfate side left {
-    3_phosphoadenylyl_sulfate
-    <-> . +adenosine_3_5_bisphosphate +thiomethyl_sulphoxide_acetaminophen_sulphate
-    thiomethyl_sulphoxide_conjugate_acetaminophen
-  }
-
-  branch from 3_phosphoadenylyl_sulfate side right {
-    3_phosphoadenylyl_sulfate
-    <-> . +adenosine_3_5_bisphosphate +sinalbin
-    p_hydroxybenzyldesulphoglucosinolate
-  }
-
-  branch from z_indolylmethyl_desulfoglucosinolate side left {
-    z_indolylmethyl_desulfoglucosinolate
-    <-> ec_2_4_1_195 [2.4.1.195] +udp_d_glucose +udp
-    z_2_indol_3_yl_1_thioacetohydroximate
-  }
-
-  branch from adenosine_3_5_bisphosphate side right {
-    adenosine_3_5_bisphosphate
-    <-> ec_2_8_2_15 [2.8.2.15] +diethylstilbestrol_sulfate +3_phosphoadenylyl_sulfate
-    diethylstilbestrol
-  }
-
-  branch from adenosine_3_5_bisphosphate side left {
-    adenosine_3_5_bisphosphate
-    <-> ec_2_8_2_1 [2.8.2.1] +2_acetamidofluorene_n_sulfate +3_phosphoadenylyl_sulfate
-    n_hydroxy_2_acetamidofluorene
-  }
-
-  branch from h side right {
-    h
-    <-> . +s_adenosyl_l_homocysteine +cyclosporin_a_metabolite_m26 +am1c4n9_cyclosporine
-    s_adenosyl_l_methionine
-  }
-
-  branch from h side left {
-    h
-    <-> . +s_adenosyl_l_homocysteine +cyclosporin_a_metabolite_m1 +s_adenosyl_l_methionine
-    cyclosporin_a_metabolite_m13
   }
 }

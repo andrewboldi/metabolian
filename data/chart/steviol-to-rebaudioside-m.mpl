@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway steviol-to-rebaudioside-m "steviol to rebaudioside M" {
-  spacing 158
+  spacing 152
 
   spine at 0,0 {
     steviol
@@ -20,11 +20,5 @@ pathway steviol-to-rebaudioside-m "steviol to rebaudioside M" {
     rebaudioside_d
     <-> . +udp_d_glucose -udp -hplus
     rebaudioside_m
-  }
-
-  branch from rebaudioside_a side left {
-    rebaudioside_a
-    <-> . +udp_d_glucose +udp
-    rebaudioside_b
   }
 }

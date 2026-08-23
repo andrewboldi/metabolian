@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway diphosphate-to-nadph "diphosphate to NADPH" {
-  spacing 286
+  spacing 340
 
   spine at 0,0 {
     diphosphate
@@ -20,38 +20,38 @@ pathway diphosphate-to-nadph "diphosphate to NADPH" {
 
   branch from h side left {
     h
-    <-> ec_2_4_1_17 [2.4.1.17] +udp +triiodothyroacetate_ether_glucuronide +tiratricol
-    udp_alpha_d_glucuronate
+    <-> ec_3_1_1_7 [3.1.1.7] +s_propyl_thioacetate +h2o +propane_1_thiol
+    acetate
   }
 
   branch from h side right {
     h
-    <-> ec_2_4_1_17 [2.4.1.17] +udp +5_hydroxytryptophol_glucuronide +udp_alpha_d_glucuronate
-    5_hydroxytryptophol
+    <-> ec_3_1_1_7 [3.1.1.7] +propanoate +thiocholine +h2o
+    propionylthiocholine
   }
 
   branch from atp side left {
     atp
-    <-> . +2_methyl_3_n_amyl_pyrrole +4_methoxy_2_2_bipyrrole_5_carboxaldehyde +h +adp +phosphate
-    prodigiosin
+    <-> . +h +adp +phosphate +h2o
+    coprogen
   }
 
   branch from atp side right {
     atp
-    <-> . +l_leucine +demethylblasticidin_s +adp +phosphate
-    l_leucyl_demethyl_blasticidin_s
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
+    ala_leu
   }
 
   branch from coa side left {
     coa
-    <-> . +4_sinapoyloxybutylglucosinolate +e_sinapoyl_coa
-    4_hydroxybutylglucosinolate
+    <-> . +acetyl_coa +h2 +glycine
+    l_threonine
   }
 
   branch from coa side right {
     coa
-    <-> . +2_sinapoyloxy_3_butenylglucosinolate +e_sinapoyl_coa
-    xi_progoitrin
+    <-> . +isorhamnetin_3_o_6_o_4_coumaroyl_glucoside +isorhamnetin_3_o_d_glucopyranoside
+    trans_4_coumaroyl_coa
   }
 
   branch from r_citronellal side left {
@@ -68,26 +68,26 @@ pathway diphosphate-to-nadph "diphosphate to NADPH" {
 
   branch from nad side left {
     nad
-    <-> . +3_oxo_24_ethyl_26_al_cholest_4_ene +h2o +nadh +h
-    3_oxo_24_ethyl_cholest_4_en_26_oate
+    <-> ec_1_1_1_218 [1.1.1.218] +nadh +ethylmorphinone +h
+    ethylmorphine
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_327 [1.1.1.327] +nadh +1s_bornane_2_5_dione +h
-    1s_4s_5r_5_hydroxycamphor
+    <-> ec_2_4_2_31 [2.4.2.31] +h +nicotinamide +n_omega_adp_d_ribosyl_l_arginine
+    l_arginine
   }
 
   branch from h2o side left {
     h2o
-    <-> . +lesquerella_oil +h +dodecanoate
-    triglyceride_estolide
+    <-> ec_3_2_1_21 [3.2.1.21] +beta_d_glucose +methanol
+    methyl_d_glucopyranoside
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_4_19_16 [3.4.19.16] +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +l_glutamate
-    z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa
+    <-> ec_3_2_1_21 [3.2.1.21] +4_methylumbelliferyl_beta_d_xylopyranoside +beta_d_xylose
+    4_methylumbelliferone
   }
 
   branch from r_citronellol side left {
@@ -98,13 +98,79 @@ pathway diphosphate-to-nadph "diphosphate to NADPH" {
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_393 [1.1.1.393] +h +3_7_12_trioxo_5_cholan_24_oate +nadp
-    3beta_hydroxy_7_12_dioxo_5beta_cholan_24_oic_aci
+    <-> ec_1_1_1_184 [1.1.1.184] +toluquinol +nadp +h
+    2_methyl_1_4_benzoquinone
   }
 
   branch from nadph side left {
     nadph
-    <-> . +8_8a_deoxyoleandolide +co2 +nadp +coa +h2o +s_methylmalonyl_coa +h
-    acetyl_coa
+    <-> ec_1_1_1_145 [1.1.1.145] +h +cortisol +nadp
+    11beta_17alpha_21_trihydroxypregnenolone
+  }
+
+  branch from diphosphate side right {
+    diphosphate
+    <-> . +alpha_cubebene
+    2e_6e_farnesyl_diphosphate
+  }
+
+  branch from diphosphate side left {
+    diphosphate
+    <-> . +2e_6e_farnesyl_diphosphate
+    z_e_germacrene_b
+  }
+
+  branch from amp side right {
+    amp
+    <-> . +diphosphate +vaccenyl_coenzyme_a +h +atp +coa +vaccenic_acid
+    pmf
+  }
+
+  branch from amp side left {
+    amp
+    <-> . +5z_tetradecenoyl_coa +diphosphate +h +atp +coa
+    cis_tetradec_5_enoic_acid
+  }
+
+  branch from h side right {
+    h
+    <-> ec_1_1_1_1 [1.1.1.1] +acetate +4_nitrophenol +h2o
+    4_nitrophenyl_acetate
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_1_1_7 [3.1.1.7] +thiocholine +butanoate +h2o
+    butyrylthiocholine
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
+    2_deoxy_d_ribofuranose
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    ferric_2_3_dihydroxybenzoylserine
+  }
+
+  branch from coa side right {
+    coa
+    <-> . +isorhamnetin_3_o_6_o_feruloyl_glucoside +isorhamnetin_3_o_d_glucopyranoside
+    e_feruloyl_coa
+  }
+
+  branch from coa side left {
+    coa
+    <-> . +quercetin_3_o_3_o_4_coumaroyl_6_o_feruloyl_gluco +trans_4_coumaroyl_coa
+    quercetin_3_6_ferulylglucoside
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_1_1_240 [1.1.1.240] +h +n_acetyl_d_glucosaminate +nad +h2o
+    n_acetyl_d_hexosamine
   }
 }

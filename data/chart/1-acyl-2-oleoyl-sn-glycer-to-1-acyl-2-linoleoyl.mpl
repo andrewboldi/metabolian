@@ -22,15 +22,15 @@ pathway 1-acyl-2-oleoyl-sn-glycer-to-1-acyl-2-linoleoyl "1-acyl-2-oleoyl-sn-glyc
     1_acyl_2_linolenoyl_sn_glycero_3_phosphocholine
   }
 
-  branch from linoleate side right {
-    linoleate
-    <-> . +o2
-    11r_11_hydroperoxylinoleate
+  branch from linoleoyl_coa side right {
+    linoleoyl_coa
+    <-> . +fe2 +o2 +hplus +iron +h2o
+    linolenoyl_coa
   }
 
-  branch from linoleate side left {
-    linoleate
-    <-> . +1_tetradecanoyl_2_9z_12z_octadecadienoyl_sn_glyc +h2o +hplus
-    1_myristoyl_sn_glycero_3_phosphocholine
+  branch from linoleoyl_coa side left {
+    linoleoyl_coa
+    <-> . +2_oleoylglycerol +coa
+    1_linoleoyl_2_oleoylglycerol
   }
 }

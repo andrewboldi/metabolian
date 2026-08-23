@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-s-hydroxy-tetracosa-12-to-h2o-null "3(S)-hydroxy-tetracosa-12… to H2O" {
-  spacing 236
+  spacing 308
 
   spine at 0,0 {
     3_s_hydroxy_tetracosa_12_15_18_21_all_cis_tetrae
@@ -20,38 +20,38 @@ pathway 3-s-hydroxy-tetracosa-12-to-h2o-null "3(S)-hydroxy-tetracosa-12… to H2
 
   branch from h side left {
     h
-    <-> ec_1_1_1_35 [1.1.1.35] +nadh +5_methyl_3_oxo_4_hexenoyl_coa +nad
-    3_hydroxy_5_methylhex_4_enoyl_coa
+    <-> . +co2 +2_oxopentanoate
+    3_ethyl_2_oxosuccinate
   }
 
   branch from h side right {
     h
-    <-> ec_1_14_12_10 [1.14.12.10] +nadh +2_fluorobenzoic_acid +o2 +nad
-    6_fluorocyclohexadiene_cis_cis_1_2_diol_1_carbox
+    <-> . +myo_inositol +indol_3_yl_acetate +h2o
+    indole_3_acetyl_1d_myo_inositol
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_14_14_1 [1.14.14.1] +h +ifosfamide +o2 +nadp +h2o
-    4_hydroxyifosfamide
+    <-> . +deacetylcolchicine +formaldehyde +nadp +h2o +h +o2
+    demecolcine
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_14_14_1 [1.14.14.1] +p_hydroxyfelbamate +nadp +h2o +h +o2
-    felbamate
+    <-> . +4_hydroxy_3_octaprenylbenzoate +h +o2 +nadp +h2o
+    3_4_dihydroxy_5_all_trans_octaprenyl_benzoate
   }
 
   branch from malonyl_coa side left {
     malonyl_coa
-    <-> ec_2_3_1_206 [2.3.1.206] +hexanoyl_coa +h +co2 +coa
-    4_hydroxy_6_2_oxoheptyl_pyran_2_one
+    <-> . +trans_4_coumaroyl_coa +h +co2 +coa
+    bis_noryangonin
   }
 
   branch from malonyl_coa side right {
     malonyl_coa
-    <-> . +h +co2 +coa +h2o
-    6_2_4_dihydroxy_6_methylphenyl_4_hydroxypyran_2
+    <-> . +trans_4_coumaroyl_coa +h +h2o +co2 +coa
+    4_coumaroyltriacetate
   }
 
   branch from all_cis_10_13_16_19_docosatetraenoyl_coa side left {
@@ -68,37 +68,109 @@ pathway 3-s-hydroxy-tetracosa-12-to-h2o-null "3(S)-hydroxy-tetracosa-12… to H2
 
   branch from atp side left {
     atp
-    <-> ec_2_7_1_163 [2.7.1.163] +h +adp +4_o_phosphohygromycin
-    hygromycin_b
+    <-> . +1_2_amino_7_methyl_4_oxo_7_8_dihydro_3h_pteridi +amp
+    1_2_amino_7_methyl_4_oxo_7_8_dihydro_3h_pteridi
   }
 
   branch from atp side right {
     atp
-    <-> . +diphosphate +indol_3_yl_acetyl_l_isoleucine +h +amp +l_isoleucine
-    indol_3_yl_acetate
+    <-> . +s_4_deoxygadusol +glycine +h +adp +phosphate
+    mycosporine_glycine
   }
 
   branch from coa side left {
     coa
-    <-> ec_2_3_3_17 [2.3.3.17] +acetyl_coa +2_oxo_7_methylthioheptanoic_acid +h2o
-    2_5_methylthio_pentylmalic_acid
+    <-> . +9z_12z_18_hydroxyoctadecadienoyl_coa +tri_acyl_estolide
+    tetra_acyl_estolide
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_3_17 [2.3.3.17] +acetyl_coa +2_oxo_8_methylthiooctanoic_acid +h2o
-    2_6_methylthio_hexylmalic_acid
+    <-> . +acetyl_coa +9z_11e_tetradecadien_1_ol
+    9z_11e_tetradecadienyl_acetate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +isoniazid_pyruvate +h +isoniazide
-    pyruvate
+    <-> ec_3_2_1_21 [3.2.1.21] +linamarin +2_hydroxy_2_methylpropanenitrile
+    glucose
   }
 
   branch from h2o side right {
     h2o
-    <-> . +isoniazid_alpha_ketoglutaric_acid +h +isoniazide
+    <-> . +betaine_aldehyde
+    betaine_aldehyde_hydrate
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +3_4_dihydroxy_5_all_trans_nonaprenyl_benzoate +h2o +h +o2 +nadph
+    4_hydroxy_3_all_trans_nonaprenyl_benzoate
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +h +o2 +nadph +4_hydroxy_3_all_trans_heptaprenyl_benzoate +h2o
+    3_4_dihydroxy_5_all_trans_heptaprenyl_benzoate
+  }
+
+  branch from h side left {
+    h
+    <-> . +trimethylaminoacetone +co2
+    3_dehydrocarnitine
+  }
+
+  branch from h side right {
+    h
+    <-> . +1_3_aminopropyl_pyrrolinium +h2o
+    n_3_aminopropyl_4_aminobutanal
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_14_13_48 [1.14.13.48] +4s_limonene +h +o2 +nadp +h2o
+    cis_carveol
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +versicolorin_a +h +nadp
+    versicolorin_b
+  }
+
+  branch from co2 side left {
+    co2
+    <-> . +phosphonate
+    phosphonoformate
+  }
+
+  branch from co2 side right {
+    co2
+    <-> . +gibberellin_a13 +succinate +h +o2 +gibberellin_a25
     2_oxoglutarate
+  }
+
+  branch from coa side left {
+    coa
+    <-> . +acetyl_coa +11z_tetradecenol
+    11z_tetradecenyl_acetate
+  }
+
+  branch from coa side right {
+    coa
+    <-> . +acetyl_coa +9z_tetradecen_1_ol
+    9z_tetradecenyl_acetate
+  }
+
+  branch from malonyl_coa side left {
+    malonyl_coa
+    <-> . +7_o_beta_d_glucosyl_7_hydroxyflavone +coa
+    7_hydroxyflavone_7_o_6_malonyl_beta_d_glucoside
+  }
+
+  branch from malonyl_coa side right {
+    malonyl_coa
+    <-> ec_2_3_1_119 [2.3.1.119] +nadh +octadecanoyl_coa +h +co2 +coa +nad +h2o
+    eicosanoyl_coa
   }
 }

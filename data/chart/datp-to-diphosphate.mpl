@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway datp-to-diphosphate "dATP to diphosphate" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     datp
@@ -16,29 +16,5 @@ pathway datp-to-diphosphate "dATP to diphosphate" {
     adp
     <-> ec_2_5_1_62 [2.5.1.62] +chlorophyllide_b2 +h +phytyl_diphosphate -diphosphate
     chlorophyll_b2
-  }
-
-  branch from adp side left {
-    adp
-    <-> . +h +1_propionyl_2_butanoyl_sn_glycero_3_phospho_l_se +phosphate +1_propionyl_2_butanoyl_sn_glycero_3_phospho_l_se +h2o
-    atp
-  }
-
-  branch from adp side right {
-    adp
-    <-> . +h +phosphate +atp +h2o
-    pitavastatin_glucuronide
-  }
-
-  branch from diphosphate side left {
-    diphosphate
-    <-> ec_4_2_3_185 [4.2.3.185] +ent_atiserene
-    ent_copalyl_diphosphate
-  }
-
-  branch from diphosphate side right {
-    diphosphate
-    <-> ec_4_2_3_189 [4.2.3.189] +13r_9_13_epoxylabd_14_ene
-    peregrinol_diphosphate
   }
 }

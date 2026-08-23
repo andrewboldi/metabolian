@@ -4,47 +4,51 @@
 # edit the generator, not this file.
 
 pathway butan-2-one-to-h2o-null "butan-2-one to H2O" {
-  spacing 250
+  spacing 236
 
   spine at 0,0 {
     butan_2_one
-    <-> ec_1_1_99_36 [1.1.99.36] +4_hydroxylamino_n_n_dimethylaniline -2s_butan_2_ol
-    n_n_dimethyl_4_nitrosoaniline
-    <-> ec_1_1_99_36 [1.1.99.36] +2_phenylethanol -2_phenylacetaldehyde
-    4_hydroxylamino_n_n_dimethylaniline
-    <-> . +h +2_phenylacetaldehyde +nh4 +pyrroloquinoline_quinol -2_phenylethylamine -h2o
-    pyrroloquinoline_quinone
-    <-> . +h +adp +2_phenylethylamine +phosphate -2_phenylethylamine -h2o
-    atp
-  }
-
-  branch from 2_phenylacetaldehyde side left {
-    2_phenylacetaldehyde
-    <-> . +z_phenylacetaldehyde_oxime +h +h2o +nh4
-    h2o2
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_lysine +l_arginine
-    arginyl_arginyl_lysine
+    <-> ec_4_1_2_46 [4.1.2.46] +hydrogen_cyanide
+    2r_2_hydroxy_2_methylbutanenitrile
+    <-> ec_3_2_1_21 [3.2.1.21] +glucose -h2o
+    lotaustralin
+    <-> ec_3_2_1_21 [3.2.1.21] +glucose -h2o
+    neolinustatin
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_arginine
-    arginyl_arginine
+    <-> . +nadh +9_13_cis_retinoic_acid +h +nad
+    9_cis_retinal
   }
 
-  branch from atp side right {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    atorvastatin_acid
+  branch from h2o side right {
+    h2o
+    <-> ec_4_2_1_114 [4.2.1.114] +r_dihomocitrate
+    cis_homo_2aconitate
   }
 
-  branch from atp side left {
-    atp
-    <-> . +h +amp +atorvastatin_lactone +atorvastatin_acid
-    diphosphate
+  branch from glucose side left {
+    glucose
+    <-> . +ginsenoside_mx +h2o
+    ginsenoside_c_mx1
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> . +ginsenoside_c_mx1 +h2o
+    ginsenoside_mx
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_1_4_38 [3.1.4.38] +sphing_4_enine_phosphocholine +h +phosphocholine
+    sphing_4_enine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_1_8_1_3 [1.8.1.3] +nadh +h +taurine +nad
+    hypotaurine
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-glutathion-s-yl-1-4-h-to-fmn "2-(glutathion-S-yl)-1,4-h… to FMN" {
-  spacing 252
+  spacing 288
 
   spine at 0,0 {
     2_glutathion_s_yl_1_4_hydroquinone
@@ -14,18 +14,6 @@ pathway 2-glutathion-s-yl-1-4-h-to-fmn "2-(glutathion-S-yl)-1,4-h… to FMN" {
     geranylhydroquinone
     <-> ec_1_14_14_174 [1.14.14.174] +fmnh2 +o2 -fmn -h2o -hplus
     3_hydroxy_geranylhydroquinone
-  }
-
-  branch from gssg side left {
-    gssg
-    <-> . +15_s_hpete +gsh +h2o
-    15_s_hete
-  }
-
-  branch from gssg side right {
-    gssg
-    <-> . +5_s_hpepe +gsh +h2o
-    5_s_hepe
   }
 
   branch from geranylhydroquinone side left {
@@ -42,25 +30,73 @@ pathway 2-glutathion-s-yl-1-4-h-to-fmn "2-(glutathion-S-yl)-1,4-h… to FMN" {
 
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_124 [2.5.1.124] +2_o_3_dimethylflaviolin_7_olate +gpp
-    6_linalyl_2_o_3_dimethylflaviolin_7_olate
+    <-> . +neoechinulin_a +dmapp
+    isoechinulin_a
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_122 [2.5.1.122] +tyrosine +dmapp
-    4_o_dimethylallyl_l_tyrosine
+    <-> . +isoechinulin_a +dmapp
+    dehydroechinulin
   }
 
   branch from fmn side left {
     fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    18_r_hete
+    <-> . +terpinene +fmnh2 +o2 +h2o +hplus
+    thymol
   }
 
   branch from fmn side right {
     fmn
-    <-> . +prostaglandin_h2 +fmnh2 +o2 +h2o +hplus
-    19_hydroxyprostaglandin_h2
+    <-> . +terpinene +fmnh2 +o2 +h2o +hplus
+    carvacrol
+  }
+
+  branch from gpp side left {
+    gpp
+    <-> ec_5_5_1_22 [5.5.1.22]
+    bornyl_diphosphate
+  }
+
+  branch from gpp side right {
+    gpp
+    <-> . +ppi
+    4e_6e_2_6_dimethylocta_2_4_6_triene
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +neoechinulin_b_anion +dmapp
+    isoechinulin_b_anion
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +fpp
+    maaliene
+  }
+
+  branch from fmnh2 side left {
+    fmnh2
+    <-> . +4r_limonene +o2 +fmn +h2o +hplus
+    trans_isopiperitenol
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> . +o2
+    fmn_n5_peroxide
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> . +5_fad_phosphoribonucleoside_2 +h2o +hplus
+    5_end_phospho_adenosine_phospho_ribonucleoside_3
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +methyl_very_long_chain_fatty_acid_anion +fmnh2 +o2 +h2o +hplus
+    hydroxy_very_long_chain_fatty_acid_anion
   }
 }

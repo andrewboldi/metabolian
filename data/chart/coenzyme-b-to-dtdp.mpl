@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway coenzyme-b-to-dtdp "coenzyme B to dTDP" {
-  spacing 320
+  spacing 314
 
   spine at 0,0 {
     coenzyme_b
@@ -20,18 +20,6 @@ pathway coenzyme-b-to-dtdp "coenzyme B to dTDP" {
     dtdp
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
-    <-> . +20s_23_dihydroxyvitamin_d3 +di_sulfido_diiron +o2 +hplus +h2o
-    20s_23_25_trihydroxyvitamin_d3
-  }
-
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
-    <-> ec_1_14_19_53 [1.14.19.53] +all_trans_retinol +di_sulfido_diiron +o2 +hplus +h2o
-    all_trans_3_4_didehydroretinol
-  }
-
   branch from dctp side left {
     dctp
     <-> . +h2o +pi +hplus
@@ -44,27 +32,33 @@ pathway coenzyme-b-to-dtdp "coenzyme B to dTDP" {
     dcdp
   }
 
-  branch from nh3 side left {
-    nh3
-    <-> . +s_1_hydroxy_3_methylhexan_3_yl_l_cysteine +h2o +pyruvate
-    3_methyl_3_sulfanylhexan_1_ol
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +3_sulfanylhexan_1_ol_l_cysteine +h2o +pyruvate
-    3_mercaptohexanol
-  }
-
   branch from ppi side left {
     ppi
-    <-> . +3_hydroxy_9_oxo_9_10_seco_23_24_bisnorchola_1_3 +atp +coa +amp
-    3_hydroxy_9_oxo_9_10_seco_23_24_bisnorchola_1_3
+    <-> ec_4_2_3_220 [4.2.3.220] +all_trans_hexaprenyl_diphosphate
+    talaropentaene
   }
 
   branch from ppi side right {
     ppi
-    <-> . +25s_cholestenoate +atp +coa +amp
-    25s_3_hydroxy_5_cholesten_26_oyl_coa
+    <-> ec_4_2_3_213 [4.2.3.213] +all_trans_hexaprenyl_diphosphate +h2o
+    colleterpenol
+  }
+
+  branch from dctp side left {
+    dctp
+    <-> . +kanamycin_a +ppi
+    4_2_deoxycytidylyl_kanamycin_a
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +utp
+    2_3_cyclic_di_ump
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_212 [4.2.3.212] +fpp +h2o
+    cadinol
   }
 }

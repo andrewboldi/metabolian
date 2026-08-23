@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 8z-11z-14z-eicosatrieno-to-fmn "(8Z,11Z,14Z)-eicosatrieno… to FMN" {
-  spacing 176
+  spacing 164
 
   spine at 0,0 {
     8z_11z_14z_eicosatrienoic_acid
@@ -26,17 +26,5 @@ pathway 8z-11z-14z-eicosatrieno-to-fmn "(8Z,11Z,14Z)-eicosatrieno… to FMN" {
     prostaglandin_h1
     <-> .
     prostaglandin_d1
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +8_hydroxygermacra_1_10_4_11_13_trien_12_oate +fmnh2 +o2 +h2o +hplus
-    6_8_hydroxygermacra_1_10_4_11_13_trien_12_oate
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +germacra_1_10_4_11_13_trien_12_oate +fmnh2 +o2 +h2o +hplus
-    8_hydroxygermacra_1_10_4_11_13_trien_12_oate
   }
 }

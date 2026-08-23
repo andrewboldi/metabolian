@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-3-hydroxybutanoyl-coa-to-3-hydroxy-5-oxohexan "(S)-3-hydroxybutanoyl-CoA to 3-hydroxy-5-oxohexanoyl-C…" {
-  spacing 202
+  spacing 160
 
   spine at 0,0 {
     hydroxybutyryl_coa
@@ -14,47 +14,5 @@ pathway s-3-hydroxybutanoyl-coa-to-3-hydroxy-5-oxohexan "(S)-3-hydroxybutanoyl-C
     3s_3_hydroxybutanoyl_coa
     <-> . +acetyl_coa +h -3_hydroxy_5_oxohexanoyl_coa
     coa
-  }
-
-  branch from 3s_3_hydroxybutanoyl_coa side left {
-    3s_3_hydroxybutanoyl_coa
-    <-> . +dtdp_4_amino_4_6_dideoxy_alpha_d_glucose +h +coa
-    dtdp_4_deoxy_4_s_3_hydroxybutanoylamino_alpha_d
-  }
-
-  branch from diphosphate side right {
-    diphosphate
-    <-> ec_6_2_1_1 [6.2.1.1] +propanoate +h +atp
-    propanoyl_amp
-  }
-
-  branch from diphosphate side left {
-    diphosphate
-    <-> ec_2_7_7_41 [2.7.7.41] +ctp +1_2_didodecanoyl_sn_glycerol_3_phosphate
-    cdp_1_2_didodecanoylglycerol
-  }
-
-  branch from amp side right {
-    amp
-    <-> . +co2 +butan_2_one +atp +h2o +h +phosphate
-    3_oxopentanoate
-  }
-
-  branch from amp side left {
-    amp
-    <-> . +3r_3_hydroxy_l_glutamate +atp +nh4 +diphosphate +h
-    3r_3_hydroxy_l_glutamine
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +4_coumaroyl_diketide +e_feruloyl_coa +h +co2
-    demethoxycurcumin
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +succinyl_coa +beta_d_glc_1_3_beta_d_glc_1_6_beta_d_glc_1_6_bet
-    6_o_succinoyl_beta_d_glc_1_3_beta_d_glc_1_6_beta
   }
 }

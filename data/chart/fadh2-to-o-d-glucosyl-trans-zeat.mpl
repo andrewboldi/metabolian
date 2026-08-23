@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway fadh2-to-o-d-glucosyl-trans-zeat "FADH2 to O-β-D-glucosyl-trans-zeat…" {
-  spacing 336
+  spacing 340
 
   spine at 0,0 {
     fadh2
@@ -24,49 +24,103 @@ pathway fadh2-to-o-d-glucosyl-trans-zeat "FADH2 to O-β-D-glucosyl-trans-zeat…
 
   branch from fad side left {
     fad
-    <-> . +fadh2 +co2 +h +succinate +h2o
-    2_oxoglutarate
+    <-> ec_1_5_99_8 [1.5.99.8] +s_1_pyrroline_5_carboxylate +fadh2 +h
+    l_proline
   }
 
   branch from fad side right {
     fad
-    <-> ec_1_4_3_16 [1.4.3.16] +fadh2 +iminoaspartate +h
-    l_aspartate
-  }
-
-  branch from n_6_dimethylallyladenine side left {
-    n_6_dimethylallyladenine
-    <-> . +udp +7_d_glucosyl_n6_isopentenyladenine +h
-    udp_alpha_d_glucose
-  }
-
-  branch from n_6_dimethylallyladenine side right {
-    n_6_dimethylallyladenine
-    <-> . +h +9_d_glucosyl_n6_isopentenyladenine +udp_alpha_d_glucose
-    udp
+    <-> ec_1_3_8_4 [1.3.8.4] +fadh2 +3_methylbut_2_enoyl_coa +h
+    3_methylbutanoyl_coa
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_20 [3.2.1.20] +maltopentaose +beta_d_glucose
-    maltohexaose
+    <-> ec_3_2_1_106 [3.2.1.106] +aldehydo_d_glucose +glc_a1_3_glc_a1_3_man_a1_2_man_a1_2_man_a1_3_man
+    glc3man9glcnac2
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_3 [3.2.1.3] +d_maltose
-    beta_d_glucose
+    <-> ec_3_2_1_113 [3.2.1.113] +aldehydo_d_mannose +d_man_1_2_d_man_1_2_d_man_1_3_d_man_1_6_d_man_1
+    man_a1_2_man_a1_2_man_a1_3_man_a1_2_man_a1_3_man
   }
 
-  branch from n6_2_isopentenyl_adenosine side left {
-    n6_2_isopentenyl_adenosine
-    <-> . +n_6_dimethylallyladenine +h2o
-    beta_d_ribofuranose
+  branch from fadh2 side left {
+    fadh2
+    <-> . +ochratoxin_b +h +o2 +chloride +fad +h2o
+    ochratoxin_a
   }
 
-  branch from n6_dimethylallyl_adenosine_5_phosphate side right {
-    n6_dimethylallyl_adenosine_5_phosphate
-    <-> . +h2o +hplus +imp
-    dimethylallylammonium
+  branch from fadh2 side right {
+    fadh2
+    <-> . +2_4_5_dichloro_1h_pyrrole_2_carbonyl_phenol +h +o2 +chloride +fad +h2o
+    pyrrolomycin_c
+  }
+
+  branch from adenine side left {
+    adenine
+    <-> . +alpha_d_ribose_5_phosphate +h2o
+    amp
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    6_deoxy_d_sorbose
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +l_gulopyranose +phosphate +l_gulopyranose +h2o
+    atp
+  }
+
+  branch from fad side right {
+    fad
+    <-> . +fadh2 +pyrrolomycin_c +h +o2 +chloride +h2o
+    pyrrolomycin_d
+  }
+
+  branch from fad side left {
+    fad
+    <-> . +fadh2 +h +2_2_dimethyl_2_3_dihydro_1_benzofuran_7_ol +o2 +h2o
+    4_hydroxycarbofuran_phenol
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
+    d_talopyranose
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
+    d_xylulofuranose
+  }
+
+  branch from d_ribose side right {
+    d_ribose
+    <-> . +beta_d_ribopyranose
+    pmf
+  }
+
+  branch from d_ribose side left {
+    d_ribose
+    <-> .
+    aldehydo_d_ribose
+  }
+
+  branch from udp_d_glucose side right {
+    udp_d_glucose
+    <-> ec_2_4_1_385 [2.4.1.385] +5_6_17_27_tetrahydroxywithanolide +udp +hplus
+    5_6_17_trihydroxywithanolide_27_o_d_glucoside
+  }
+
+  branch from udp_d_glucose side left {
+    udp_d_glucose
+    <-> . +11_o_acetylcyathatriol +udp +hplus
+    erinacine_q2
   }
 }

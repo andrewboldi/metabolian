@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway testosterone-to-fmn "testosterone to FMN" {
-  spacing 202
+  spacing 196
 
   spine at 0,0 {
     testosterone
@@ -14,11 +14,5 @@ pathway testosterone-to-fmn "testosterone to FMN" {
     estrone
     <-> . +fmnh2 +o2 -fmn -h2o -hplus
     6_hydroxyestrone
-  }
-
-  branch from 17_estradiol side left {
-    17_estradiol
-    <-> . +udp_d_glucuronate +udp +hplus
-    17_estradiol_17_glucosiduronate
   }
 }

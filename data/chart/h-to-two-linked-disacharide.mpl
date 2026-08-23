@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway h-to-two-linked-disacharide "H to Two linked disacharide…" {
-  spacing 236
+  spacing 212
 
   spine at 0,0 {
     h
@@ -14,29 +14,5 @@ pathway h-to-two-linked-disacharide "H to Two linked disacharide…" {
     h
     <-> . +d_alanyl_d_alanine +two_disacharide_linked_murein_units_pentapeptide
     two_linked_disacharide_pentapeptide_murein_units
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +5_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem +h
-    muscaflavin
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +2_hydroxy_5_carboxymuconate_6_semialdehyde +nh4 +h
-    2z_4z_2_amino_5_formylhexa_2_4_dienedioate
-  }
-
-  branch from h side left {
-    h
-    <-> . +adenosine_3_5_bisphosphate +22r_23r_28_homocastasterone_22_o_sulfate +22r_23r_28_homocastasterone
-    3_phosphoadenylyl_sulfate
-  }
-
-  branch from h side right {
-    h
-    <-> . +adenosine_3_5_bisphosphate +22r_23r_28_homocastasterone_22_o_sulfate +3_phosphoadenylyl_sulfate
-    a_brassinosteroid_glycoside
   }
 }

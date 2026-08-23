@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 11beta-hydroxy-5alpha-and-to-11-keto-5-androstan "11beta-hydroxy-5alpha-and… to 11-keto-5α-androstane-3α,…" {
-  spacing 252
+  spacing 222
 
   spine at 0,0 {
     11beta_hydroxy_5alpha_androstanedione
@@ -14,18 +14,6 @@ pathway 11beta-hydroxy-5alpha-and-to-11-keto-5-androstan "11beta-hydroxy-5alpha-
     11_oxo_5_dihydrotestosterone
     <-> . +nadph +hplus -nadp
     11_keto_5_androstane_3_17_diol
-  }
-
-  branch from h side left {
-    h
-    <-> . +keto_d_fructose +l_lysine +h2o
-    glucoselysine
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_1_4_61 [3.1.4.61] +2r_2_3_bisphosphoglycerate +h2o
-    cyclic_2_3_bisphosphoglycerate
   }
 
   branch from 5alpha_androstane_3_11_17_trione side left {
@@ -40,27 +28,9 @@ pathway 11beta-hydroxy-5alpha-and-to-11-keto-5-androstan "11beta-hydroxy-5alpha-
     11_ketoepiandrosterone
   }
 
-  branch from nadph side left {
-    nadph
-    <-> . +24z_ethylidene_cholest_5_en_3beta_22s_diol +nadp +h2o +h +isofucosterol
-    o2
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> . +22s_22_hydroxycholestanol +nadp +h2o +h +o2
-    epidihydrocholesterin
-  }
-
   branch from 11_oxo_5_dihydrotestosterone side left {
     11_oxo_5_dihydrotestosterone
     <-> . +nadph +hplus +nadp
     11_keto_5_androstane_3_17_diol
-  }
-
-  branch from 11_oxo_5_dihydrotestosterone side right {
-    11_oxo_5_dihydrotestosterone
-    <-> ec_1_1_1_146 [1.1.1.146] +h +nadph +nadp
-    11beta_hydroxydihydrotestosterone
   }
 }

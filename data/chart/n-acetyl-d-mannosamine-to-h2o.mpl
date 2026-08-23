@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-acetyl-d-mannosamine-to-h2o "N-acetyl-D-mannosamine to H2O" {
-  spacing 270
+  spacing 228
 
   spine at 0,0 {
     n_acetyl_d_mannosamine
@@ -14,47 +14,5 @@ pathway n-acetyl-d-mannosamine-to-h2o "N-acetyl-D-mannosamine to H2O" {
     n_acetyl_7_o_acetylneuraminate
     <-> . +phosphate -phosphoenolpyruvate -h2o
     4_o_acetyl_n_acetylmannosamine
-  }
-
-  branch from n_acetylneuraminate side left {
-    n_acetylneuraminate
-    <-> ec_3_2_1_18 [3.2.1.18] +lactose +h +h2o
-    4s_5r_6r_5_acetamido_4_hydroxy_6_1r_2r_1_2_3_tr
-  }
-
-  branch from coa side right {
-    coa
-    <-> ec_2_3_1_93 [2.3.1.93] +2e_2_methylbut_2_enoyl_coa +13_hydroxylupanine
-    13alpha_tigloyloxylupanine
-  }
-
-  branch from coa side left {
-    coa
-    <-> . +acetyl_coa +minovincinine
-    echitovenine
-  }
-
-  branch from phosphoenolpyruvate side right {
-    phosphoenolpyruvate
-    <-> . +beta_d_fructose +pyruvate
-    d_fructose_1_phosphate
-  }
-
-  branch from phosphoenolpyruvate side left {
-    phosphoenolpyruvate
-    <-> . +galactitol +pyruvate
-    galactitol_1_phosphate
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +8_oxo_gmp +h +phosphate
-    8_oxo_gdp
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +1_3_4_dihydroxyphenyl_3_3_c_glucosyl_2_4_6_trihy +h
-    orientin
   }
 }

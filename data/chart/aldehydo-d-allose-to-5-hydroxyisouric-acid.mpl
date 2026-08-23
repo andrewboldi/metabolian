@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway aldehydo-d-allose-to-5-hydroxyisouric-acid "aldehydo-D-allose to 5-hydroxyisouric acid" {
-  spacing 258
+  spacing 276
 
   spine at 0,0 {
     aldehydo_d_allose
@@ -26,45 +26,63 @@ pathway aldehydo-d-allose-to-5-hydroxyisouric-acid "aldehydo-D-allose to 5-hydro
     5_hydroxyisouric_acid
   }
 
-  branch from d_psicose_6_phosphate side left {
-    d_psicose_6_phosphate
-    <-> .
-    beta_d_fructose_6_phosphate
-  }
-
-  branch from cdp_6_keto_d_fructose side right {
+  branch from cdp_6_keto_d_fructose side left {
     cdp_6_keto_d_fructose
     <-> . +nadp +nadph +hplus
     cdp_6_d_glucitol
   }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_2_5_1_69 [2.5.1.69] +dmapp
-    r_lavandulyl_diphosphate
-  }
-
   branch from ppi side right {
     ppi
-    <-> ec_6_2_1_28 [6.2.1.28] +25r_3_7_dihydroxy_5_cholestan_26_oate +atp +coa +amp
-    25r_3_7_dihydroxy_5_cholestan_26_oyl_coa
+    <-> ec_4_2_3_42 [4.2.3.42] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
+    aphidicolan_16_ol
   }
 
-  branch from hypoxanthine side left {
+  branch from ppi side left {
+    ppi
+    <-> ec_3_1_7_5 [3.1.7.5] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +h2o
+    e_e_e_geranylgeraniol
+  }
+
+  branch from hypoxanthine side right {
     hypoxanthine
     <-> . +2_deoxyinosine_5_phosphate +h2o
     2_deoxy_d_ribofuranose_5_phosphate
   }
 
-  branch from 7_9_dihydro_1h_purine_2_6_8_3h_trione side right {
-    7_9_dihydro_1h_purine_2_6_8_3h_trione
-    <-> ec_1_17_3_2 [1.17.3.2] +h2o2 +o2 +h2o
-    hypoxanthine
+  branch from ctp side left {
+    ctp
+    <-> ec_3_6_1_8 [3.6.1.8] +h2o +ppi +hplus
+    cytidine_5_monophosphate
   }
 
-  branch from 7_9_dihydro_1h_purine_2_6_8_3h_trione side left {
-    7_9_dihydro_1h_purine_2_6_8_3h_trione
-    <-> ec_1_7_3_3 [1.7.3.3] +o2 +h2o +h2o2 +allantoin
-    co2
+  branch from ctp side right {
+    ctp
+    <-> . +1_2_diarachidonoyl_sn_glycero_3_phosphate +hplus +ppi
+    cdp_1_2_diarachidonoyl_sn_glycerol
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_41 [4.2.3.41] +geranylgeranyl_diphosphate
+    elisabethatriene
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_43 [4.2.3.43] +geranylgeranyl_diphosphate
+    fusicocca_2_10_14_diene
+  }
+
+  branch from imp side left {
+    imp
+    <-> ec_3_1_3_99 [3.1.3.99] +h2o +pi
+    inosine
+  }
+
+  branch from imp side right {
+    imp
+    <-> ec_3_6_1_6 [3.6.1.6] +h2o +pi +hplus
+    idp
   }
 }

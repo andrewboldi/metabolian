@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway acryloyl-coa-to-nicotinamide "acryloyl-CoA to nicotinamide…" {
-  spacing 180
+  spacing 168
 
   spine at 0,0 {
     acryloyl_coa
@@ -14,17 +14,5 @@ pathway acryloyl-coa-to-nicotinamide "acryloyl-CoA to nicotinamide…" {
     propanoyl_coa
     <-> ec_1_1_1_27 [1.1.1.27] +deamido_nad +s_lactate -nicotinamide_hypoxanthine_dinucleotide
     pyruvate
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +chromate +phosphate +chromate +h2o
-    atp
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    d_cysteine
   }
 }

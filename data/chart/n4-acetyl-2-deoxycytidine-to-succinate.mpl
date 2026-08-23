@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n4-acetyl-2-deoxycytidine-to-succinate "N4-acetyl-2'-deoxycytidine to succinate" {
-  spacing 264
+  spacing 252
 
   spine at 0,0 {
     n4_acetyl_2_deoxycytidine
@@ -24,31 +24,19 @@ pathway n4-acetyl-2-deoxycytidine-to-succinate "N4-acetyl-2'-deoxycytidine to su
 
   branch from 2_deoxycytidine side right {
     2_deoxycytidine
+    <-> ec_2_7_1_74 [2.7.1.74] +h +dcmp +dgdp
+    dgtp
+  }
+
+  branch from 2_deoxycytidine side left {
+    2_deoxycytidine
     <-> ec_2_7_1_74 [2.7.1.74] +dtdp +h +dcmp
     dttp
   }
 
-  branch from nh3 side left {
-    nh3
-    <-> . +norepinephrine +o2 +h2o +h2o2
-    r_3_4_dihydroxymandelaldehyde
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +cadaverine +o2 +h2o +h2o2
-    5_ammoniopentanal
-  }
-
-  branch from succinate side left {
-    succinate
-    <-> . +fumigatonoid_c +akg +o2 +co2 +h2o
-    novofumigatonin
-  }
-
-  branch from succinate side right {
-    succinate
-    <-> . +jasmonate +akg +o2 +co2
-    12_hydroxyjasmonate
+  branch from 2_deoxycytidine side right {
+    2_deoxycytidine
+    <-> ec_2_7_1_74 [2.7.1.74] +dcmp +adp +dgtp
+    h
   }
 }

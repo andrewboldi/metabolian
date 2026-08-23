@@ -26,44 +26,44 @@ pathway 6-demethylsterigmatocystin-to-acetylene "6-demethylsterigmatocystin to a
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_147 [2.1.1.147] +palmatine +sam +nadph +nadp
-    corydaline
+    <-> ec_2_1_1_34 [2.1.1.34] +guanosine_5_monophosphate_1 +sam +hplus
+    2_o_methylguanosine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_144 [2.1.1.144] +trans_aconitate +sam
-    2e_3_methoxycarbonyl_pent_2_enedioate
+    <-> ec_2_1_1_7 [2.1.1.7] +nicotinate +sam
+    n_methylnicotinate
   }
 
   branch from methanol side left {
     methanol
-    <-> ec_3_1_1_85 [3.1.1.85] +o_s_6_methoxycarbonylhexanoyl_pantetheine_4_phos +h2o +hplus
-    o_s_pimeloylpantetheine_4_phosphoryl_serine_2
+    <-> . +4_o_methylrhodomycin_d +h2o +hplus
+    10_carboxy_13_deoxydaunorubicin
   }
 
   branch from methanol side right {
     methanol
-    <-> ec_3_1_1_59 [3.1.1.59] +juvenile_hormone_i +h2o +hplus
-    juvenile_hormone_i_carboxylate
+    <-> ec_3_3_2_14 [3.3.2.14] +2_4_dinitroanisole +h2o +hplus
+    2_4_dinitrophenol
   }
 
   branch from fmn side left {
     fmn
-    <-> . +tyrosine +fmnh2 +o2 +h2o +hplus
-    n_hydroxy_l_tyrosinate
+    <-> ec_1_14_14_158 [1.14.14.158] +carotene +fmnh2 +o2 +h2o +hplus
+    cryptoxanthin
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_25 [1.14.14.25] +cholesterol +fmnh2 +o2 +h2o +hplus
-    24s_24_hydroxycholesterol
+    <-> . +valine +fmnh2 +o2 +h2o +hplus
+    n_hydroxy_l_valinate
   }
 
   branch from 4_hydroxylamino_n_n_dimethylaniline side left {
     4_hydroxylamino_n_n_dimethylaniline
-    <-> ec_1_1_99_36 [1.1.99.36] +e_cinnamaldehyde +n_n_dimethyl_4_nitrosoaniline
-    cinnamyl_alcohol
+    <-> ec_1_1_99_36 [1.1.99.36] +4_4_methoxyphenyl_butanal +n_n_dimethyl_4_nitrosoaniline
+    4_4_methoxyphenyl_butan_1_ol
   }
 
   branch from 4_hydroxylamino_n_n_dimethylaniline side right {
@@ -74,26 +74,26 @@ pathway 6-demethylsterigmatocystin-to-acetylene "6-demethylsterigmatocystin to a
 
   branch from formaldehyde side left {
     formaldehyde
-    <-> . +n_methyl_l_tryptophan +o2 +h2o +h2o2
-    l_tryptophan
+    <-> ec_1_14_13_178 [1.14.13.178] +theophylline +nadh +o2 +hplus +nad +h2o
+    3_methyl_7h_xanthine
   }
 
   branch from formaldehyde side right {
     formaldehyde
-    <-> ec_1_14_14_34 [1.14.14.34] +methanesulfonate +fmnh2 +o2 +fmn +h2o +hplus
-    sulfite
+    <-> ec_1_14_99_48 [1.14.99.48] +ferroheme_b +hydrogen_donor +o2 +hplus +fe2 +hydrogen_acceptor +h2o
+    5_oxo_bilirubin
   }
 
   branch from n_n_dimethyl_4_nitrosoaniline side left {
     n_n_dimethyl_4_nitrosoaniline
-    <-> ec_1_1_99_36 [1.1.99.36] +4_hydroxylamino_n_n_dimethylaniline +2_oxohexane
-    hexan_2_ol
+    <-> ec_1_1_99_36 [1.1.99.36] +butan_2_one +4_hydroxylamino_n_n_dimethylaniline
+    2s_butan_2_ol
   }
 
   branch from n_n_dimethyl_4_nitrosoaniline side right {
     n_n_dimethyl_4_nitrosoaniline
-    <-> ec_1_1_99_36 [1.1.99.36] +acetophenone +4_hydroxylamino_n_n_dimethylaniline
-    1_phenylethanol
+    <-> ec_1_1_99_36 [1.1.99.36] +4_hydroxylamino_n_n_dimethylaniline +2_octanone
+    octan_2_ol
   }
 
   branch from 1_propanol side left {
@@ -110,13 +110,73 @@ pathway 6-demethylsterigmatocystin-to-acetylene "6-demethylsterigmatocystin to a
 
   branch from acetaldehyde side left {
     acetaldehyde
-    <-> . +fmnh2 +o2 +fmn +sulfite +h2o +hplus
-    ethanesulfonate
+    <-> . +n1_ethyl_2_deoxyadenosine_5_monophosphate +akg +o2 +succinate +co2 +hplus
+    2_deoxyadenosine_5_monophosphate_1
   }
 
-  branch from acetaldehyde side right {
-    acetaldehyde
-    <-> ec_1_1_99_36 [1.1.99.36] +ethanol +hydrogen_acceptor
-    hydrogen_donor
+  branch from sam side right {
+    sam
+    <-> ec_2_1_1_344 [2.1.1.344] +n2_3r_3_2_saturated_acyloxy_acyl_l_ornithine +sah +hplus
+    n5_n5_n5_trimethyl_n2_3r_3_acyloxy_acyl_l_ornith
+  }
+
+  branch from sam side left {
+    sam
+    <-> . +cytidine_5_monophosphate_1 +sah +hplus
+    5_methylcytidine_5_monophosphate_1
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_70 [2.1.1.70] +8_hydroxyfurocoumarin +sam +hplus
+    8_methoxyfurocoumarin
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_100 [2.1.1.100] +s_2e_6e_farnesyl_l_cysteinate +sam
+    s_2e_6e_farnesyl_l_cysteine_methyl_ester
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> ec_1_14_14_134 [1.14.14.134] +sophoradiol +o2 +fmn +h2o +hplus
+    soyasapogenol_b
+  }
+
+  branch from fmnh2 side left {
+    fmnh2
+    <-> ec_1_14_14_10 [1.14.14.10] +nitrilotriacetate +o2 +fmn +glyoxylate +h2o
+    ammoniodiacetate
+  }
+
+  branch from methanol side right {
+    methanol
+    <-> ec_3_1_1_59 [3.1.1.59] +juvenile_hormone_i +h2o +hplus
+    juvenile_hormone_i_carboxylate
+  }
+
+  branch from methanol side left {
+    methanol
+    <-> ec_3_1_1_n2 [3.1.1.n2] +s_2e_6e_farnesyl_l_cysteine_methyl_ester +h2o +hplus
+    s_2e_6e_farnesyl_l_cysteinate
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_99_46 [1.14.99.46] +thymine +fmnh2 +nadh +o2 +nad +h2o +hplus
+    z_2_methylureidoacrylate
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_152 [1.14.14.152] +amyrin +fmnh2 +o2 +h2o +hplus
+    11_oxo_amyrin
+  }
+
+  branch from n_n_dimethyl_4_nitrosoaniline side right {
+    n_n_dimethyl_4_nitrosoaniline
+    <-> ec_1_1_99_36 [1.1.99.36] +3_methylheptan_4_one +4_hydroxylamino_n_n_dimethylaniline
+    3_methylheptan_4_ol
   }
 }

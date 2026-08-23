@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-n-dimethylurea-to-h2o "N,N'-dimethylurea to H2O" {
-  spacing 194
+  spacing 230
 
   spine at 0,0 {
     n_n_dimethylurea
@@ -20,43 +20,79 @@ pathway n-n-dimethylurea-to-h2o "N,N'-dimethylurea to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> . +o_s_3r_7z_19z_3_hydroxyoctatriacontadienoylpante
-    o_s_2e_7z_19z_octatriacontatrienoylpantetheine_4
+    <-> ec_3_3_2_10 [3.3.2.10] +1_2_dihydroxypropyl_benzene
+    trans_2_methylstyrene_7_8_oxide
   }
 
   branch from h2o side right {
     h2o
-    <-> . +o_s_3r_9z_21z_3_hydroxytetracontadienoylpantethe
-    o_s_2e_9z_21z_tetracontatrienoylpantetheine_4_ph
-  }
-
-  branch from 3_6_8_trimethylallantoin side left {
-    3_6_8_trimethylallantoin
-    <-> ec_1_7_3_3 [1.7.3.3] +1_3_7_trimethyluric_acid +o2 +h2o +co2
-    h2o2
-  }
-
-  branch from 3_6_8_trimethylallantoin side right {
-    3_6_8_trimethylallantoin
-    <-> ec_1_7_3_3 [1.7.3.3] +o2 +h2o +co2 +h2o2
-    1_3_7_trimethyluric_acid
+    <-> ec_2_1_2_1 [2.1.2.1] +5_10_methylenetetrahydropteroyl_tetra_l_glutamat +glycine +l_serine
+    tetrahydropteroyl_tetra_l_glutamate
   }
 
   branch from h side left {
     h
-    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_9z_21z_3_hydroxytetracontadienoylpantethe +nadp +nadph
-    o_s_9z_21z_3_oxotetracontadienoylpantetheine_4_p
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_hexacosanoyl_2_9z_12z_15z_octadecatrienoyl_sn
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_13z_3_hydroxydotriacontenoylpantetheine_4 +nadp +nadph
-    o_s_13z_3_oxodotriacontenoylpantetheine_4_phosph
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_15z_tetracosenoyl_2_9z_12z_15z_octadecatrienoy
   }
 
   branch from 1_3_7_trimethyl_5_hydroxyisouric_acid side left {
     1_3_7_trimethyl_5_hydroxyisouric_acid
     <-> ec_1_14_13_212 [1.14.13.212] +nadh +1_3_7_trimethyluric_acid +h +o2 +h2o
     nad
+  }
+
+  branch from glyoxylate side right {
+    glyoxylate
+    <-> ec_2_6_1_44 [2.6.1.44] +pyruvate +glycine
+    alanine
+  }
+
+  branch from glyoxylate side left {
+    glyoxylate
+    <-> ec_2_6_1_13 [2.6.1.13] +l_glutamate_5_semialdehyde +glycine
+    l_ornithine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_2_1_2_1 [2.1.2.1] +glycine +5_10_methylenetetrahydropteroyl_hexa_l_glutamate +tetrahydropteroyl_hexa_l_glutamate
+    l_serine
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_2_1_2_1 [2.1.2.1] +5_10_methylenetetrahydropteroyl_penta_l_glutamat +glycine +l_serine
+    tetrahydropteroyl_penta_l_glutamate
+  }
+
+  branch from h side right {
+    h
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +1_2_dioctadecanoyl_sn_glycerol_3_phosphate +phosphate +1_2_dioctadecanoyl_sn_glycerol_3_phosphate +h2o
+    atp
+  }
+
+  branch from h side left {
+    h
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    2_dodecanoyl_sn_glycero_3_phospho_1_sn_glycerol
+  }
+
+  branch from co2 side right {
+    co2
+    <-> ec_4_1_1_65 [4.1.1.65] +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +h
+    1_palmitoyl_2_linoleoyl_sn_glycero_3_phosphoseri
+  }
+
+  branch from co2 side left {
+    co2
+    <-> ec_4_1_1_65 [4.1.1.65] +pe_16_0_18_3_9z_12z_15z +h
+    16_0_18_3_ps
   }
 }

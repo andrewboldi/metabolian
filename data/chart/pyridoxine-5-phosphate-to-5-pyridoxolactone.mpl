@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway pyridoxine-5-phosphate-to-5-pyridoxolactone "pyridoxine 5'-phosphate to 5-pyridoxolactone" {
-  spacing 292
+  spacing 286
 
   spine at 0,0 {
     pyridoxine_5_phosphate
@@ -20,11 +20,5 @@ pathway pyridoxine-5-phosphate-to-5-pyridoxolactone "pyridoxine 5'-phosphate to 
     pyridoxine
     <-> ec_1_1_3_12 [1.1.3.12] +o2 +h2o2
     pyridoxal
-  }
-
-  branch from pyridoxine side right {
-    pyridoxine
-    <-> ec_2_4_1_160 [2.4.1.160] +udp_d_glucose +udp +hplus
-    5_o_d_glucosylpyridoxine
   }
 }

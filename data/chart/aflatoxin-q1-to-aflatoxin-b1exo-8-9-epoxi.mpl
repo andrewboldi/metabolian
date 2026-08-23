@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway aflatoxin-q1-to-aflatoxin-b1exo-8-9-epoxi "aflatoxin Q1 to Aflatoxin B1exo-8,9-epoxi…" {
-  spacing 226
+  spacing 298
 
   spine at 0,0 {
     aflatoxin_q1
@@ -15,6 +15,18 @@ pathway aflatoxin-q1-to-aflatoxin-b1exo-8-9-epoxi "aflatoxin Q1 to Aflatoxin B1e
     <-> ec_2_5_1_18 [2.5.1.18] +h +glutathione +aflatoxin_b1_exo_8_9_epoxide
     aflatoxin_b1exo_8_9_epoxide_gsh
   }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

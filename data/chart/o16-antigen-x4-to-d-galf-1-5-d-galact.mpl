@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway o16-antigen-x4-to-d-galf-1-5-d-galact "(O16 antigen)x4… to β-D-Galf-(1→5)-β-D-galact…" {
-  spacing 324
+  spacing 300
 
   spine at 0,0 {
     o16_antigen_x4_undecaprenyl_diphosphate
@@ -20,29 +20,5 @@ pathway o16-antigen-x4-to-d-galf-1-5-d-galact "(O16 antigen)x4… to β-D-Galf-(
     udp_d_galactofuranose
     <-> ec_2_4_1_398 [2.4.1.398] +d_galactofuranosides -udp -hplus
     d_galf_1_5_d_galactofuranosides
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +1_9z_12z_15z_octadecatrienoyl_2_hexadecanoyl_sn +phosphate +1_9z_12z_15z_octadecatrienoyl_2_hexadecanoyl_sn +h2o
-    atp
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_9z_12z_15z_octadecatrienoyl_2_9z_octadecenoyl
-  }
-
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> ec_2_4_1_115 [2.4.1.115] +udp +pelargonidin_3_glucoside
-    pelargonidin
-  }
-
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> ec_2_4_1_115 [2.4.1.115] +udp +mirtillin
-    ephdine
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dimethylsulfonio-acetate-to-acetate "(dimethylsulfonio)acetate to acetate" {
-  spacing 310
+  spacing 340
 
   spine at 0,0 {
     dimethylsulfonio_acetate
@@ -28,14 +28,14 @@ pathway dimethylsulfonio-acetate-to-acetate "(dimethylsulfonio)acetate to acetat
 
   branch from methionine side left {
     methionine
-    <-> . +glycine +fmnh2 +sam +fmnh +5_deoxyadenosine +hplus
-    glycyl_radical
+    <-> . +cytidine_5_hydroxy_2_hydroxyethyl_phosphonoyl_ph +methylcobalamin +sam +cob_iii_alamin +5_deoxyadenosine
+    cytidine_5_hydroxy_s_2_hydroxypropyl_phosphonoyl
   }
 
   branch from methionine side right {
     methionine
-    <-> . +n_oleoyl_l_methionine +h2o
-    oleate
+    <-> . +2r_3r_5r_2_s_pantetheinyl_carbapenam_3_carboxyl +methylcobalamin +sam +cob_iii_alamin +5_deoxyadenosine
+    2r_3r_5s_6r_6_methyl_2_s_pantetheinyl_carbapena
   }
 
   branch from 3_l_methionyl_adenylyl_zwitterionic_group side left {
@@ -46,14 +46,14 @@ pathway dimethylsulfonio-acetate-to-acetate "(dimethylsulfonio)acetate to acetat
 
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_31 [2.5.1.31] +ipp +fpp
-    ditrans_polycis_undecaprenyl_diphosphate
+    <-> ec_4_2_3_137 [4.2.3.137] +fpp
+    e_2_epi_caryophyllene
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_82 [2.5.1.82] +ipp +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    all_trans_hexaprenyl_diphosphate
+    <-> . +atp +hplus
+    p1_p4_bis_5_adenosyl_tetraphosphate
   }
 
   branch from 3_methylthio_propanoyl_coa side right {
@@ -78,5 +78,35 @@ pathway dimethylsulfonio-acetate-to-acetate "(dimethylsulfonio)acetate to acetat
     3_methylthio_acryloyl_coa
     <-> . +3_methylthio_propanoyl_coa +fad +h
     fadh2
+  }
+
+  branch from methionine side right {
+    methionine
+    <-> . +2r_3r_5s_6r_6_methyl_2_s_pantetheinyl_carbapena +methylcobalamin +sam +cob_iii_alamin +5_deoxyadenosine
+    2r_3r_5s_6r_6_ethyl_2_s_pantetheinyl_carbapenam
+  }
+
+  branch from amp_3_end_1 side left {
+    amp_3_end_1
+    <-> ec_3_1_1_96 [3.1.1.96] +3_d_aspartyl_adenylyl_1_group +h2o +hplus
+    d_aspartate
+  }
+
+  branch from amp_3_end_1 side right {
+    amp_3_end_1
+    <-> ec_3_1_1_96 [3.1.1.96] +3_d_tryptophyl_adenylyl_1_group +h2o
+    d_tryptophan
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_142 [4.2.3.142] +fpp
+    7_epi_zingiberene
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_2_5_1_109 [2.5.1.109] +brevianamide_f +dmapp
+    deoxybrevianamide_e
   }
 }

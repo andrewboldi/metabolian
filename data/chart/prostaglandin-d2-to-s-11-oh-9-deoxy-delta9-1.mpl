@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway prostaglandin-d2-to-s-11-oh-9-deoxy-delta9-1 "prostaglandin D2 to S-(11-OH-9-deoxy-delta9,1…" {
-  spacing 188
+  spacing 266
 
   spine at 0,0 {
     prostaglandin_d2
@@ -18,37 +18,115 @@ pathway prostaglandin-d2-to-s-11-oh-9-deoxy-delta9-1 "prostaglandin D2 to S-(11-
 
   branch from delta12_prostaglandin_j2 side left {
     delta12_prostaglandin_j2
+    <-> . +h2o
+    15_deoxy_delta_12_14_prostaglandin_j2
+  }
+
+  branch from delta12_prostaglandin_j2 side right {
+    delta12_prostaglandin_j2
     <-> .
     prostaglandin_j2
   }
 
-  branch from delta12_prostaglandin_j2 side right {
+  branch from h2o side left {
+    h2o
+    <-> . +n_beta_d_glucosyl_indol_3_yl_acetyl_l_glutamate +n_beta_d_glucosyl_indol_3_yl_acetate
+    l_glutamate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +2_o_alpha_l_rhamnosylisoorietin +h
+    maysin
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_3_1_38 [1.3.1.38] +phytanoyl_coa +h +nadph
+    phytenoyl_coa
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_14_13_237 [1.14.13.237] +6_methylsulfinyl_hexyl_glucosinolate +h2o +h +6_methylsulfanyl_hexyl_glucosinolate +nadph
+    o2
+  }
+
+  branch from prostaglandin_d2 side left {
+    prostaglandin_d2
+    <-> ec_1_1_1_188 [1.1.1.188] +nadh +h +nad
+    11beta_prostaglandin_f2
+  }
+
+  branch from prostaglandin_d2 side right {
+    prostaglandin_d2
+    <-> . +h
+    13_14_dihydro_15_ketoprostaglandin_d2
+  }
+
+  branch from delta12_prostaglandin_j2 side left {
     delta12_prostaglandin_j2
     <-> . +glutathione
     s_9_deoxy_delta9_12_pgd2_glutathione
   }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_3_1_1_36 [3.1.1.36] +limonin
-    limonoate_a_ring_lactone
-  }
-
   branch from h2o side right {
     h2o
-    <-> . +n_hydroxyl_tryptamine +nadp +nadph +tryptamine
-    o2
+    <-> . +h +trichloroacetate +o2
+    2_2_2_trichloroethanol
   }
 
-  branch from nadp side left {
-    nadp
-    <-> ec_1_8_1_12 [1.8.1.12] +homotrypanothione_disulfide +h +nadph
-    homotrypanothione
+  branch from h2o side left {
+    h2o
+    <-> . +dalcochinin +glucose
+    dalcochinin_8_o_beta_glucoside
+  }
+
+  branch from h side right {
+    h
+    <-> . +s_adenosyl_l_homocysteine +trans_methylbixin +s_adenosyl_l_methionine
+    beta_bixin
+  }
+
+  branch from h side left {
+    h
+    <-> . +chloride +thiophosgene
+    trichloromethanethiol
+  }
+
+  branch from glutathione side right {
+    glutathione
+    <-> ec_2_5_1_18 [2.5.1.18] +bromoacetate +h +bromide
+    2_s_glutathionyl_acetate
+  }
+
+  branch from glutathione side left {
+    glutathione
+    <-> . +indol_3_ylmethyl_glutathione +h2o
+    indole_3_methanol
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_14_13_237 [1.14.13.237] +glucohirsutin +nadp +h2o +h +o2
+    8_methylsulfanyl_octyl_glucosinolate
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_1_1_184 [1.1.1.184] +doxorubicinol +nadp
+    doxorubicin
   }
 
   branch from nadp side right {
     nadp
-    <-> . +h +nadph +n_demethylnarwedine
-    norgalanthamine
+    <-> ec_1_14_13_42 [1.14.13.42] +h +4_hydroxyphenylacetonitrile +o2 +nadph +h2o
+    4_hydroxymandelonitrile
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_14_14_1 [1.14.14.1] +h +progesterone +o2 +nadph +h2o
+    6_hydroxyprogesterone
   }
 }

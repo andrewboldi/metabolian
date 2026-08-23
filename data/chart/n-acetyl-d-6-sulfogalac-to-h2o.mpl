@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-acetyl-d-6-sulfogalac-to-h2o "N-acetyl-β-D-6-sulfogalac… to H2O" {
-  spacing 278
+  spacing 340
 
   spine at 0,0 {
     n_acetyl_d_6_sulfogalactosaminyl_1_4_l_iduronyl
@@ -24,25 +24,97 @@ pathway n-acetyl-d-6-sulfogalac-to-h2o "N-acetyl-β-D-6-sulfogalac… to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> . +l_threo_3_methylmalic_acid +h
-    mesaconate
+    <-> . +malonyl_coa +h +coa +6_2_4_dihydroxy_6_methylphenyl_4_hydroxypyran_2
+    co2
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_4_2_1_84 [4.2.1.84] +indol_3_yl_acetonitrile
-    indole_3_acetamide
+    <-> . +malonyl_coa +h +co2 +coa
+    6_2_2_4_dihydroxy_6_methylphenyl_2_oxoethyl_4_hy
   }
 
   branch from atp side right {
     atp
-    <-> ec_1_2_1_31 [1.2.1.31] +diphosphate +l_2_aminoadipate_adenylate +h
-    l_2_aminoadipate
+    <-> . +l_leucine +indol_3_yl_acetate +n_indole_3_acetyl_l_leucine +amp
+    diphosphate
   }
 
   branch from atp side left {
     atp
-    <-> ec_2_7_1_102 [2.7.1.102] +h +d_hamamelose +adp
-    d_hamamelose_2_1_phosphate
+    <-> . +diphosphate +indole_3_acetyl_l_glutamic_acid +amp +h +l_glutamate
+    indol_3_yl_acetate
+  }
+
+  branch from 4_deoxy_l_threo_hex_4_enopyranuronate side right {
+    4_deoxy_l_threo_hex_4_enopyranuronate
+    <-> ec_4_2_2_6 [4.2.2.6] +beta_d_galacturonate
+    d_galacturonosyl_1_4_d_galacturonate
+  }
+
+  branch from 4_deoxy_l_threo_hex_4_enopyranuronate side left {
+    4_deoxy_l_threo_hex_4_enopyranuronate
+    <-> ec_3_2_1_179 [3.2.1.179] +n_acetyl_d_galactosamine +h2o
+    beta_d_4_deoxy_delta_4_glcpa_1_3_beta_d_galpnac
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +malonyl_coa +h +co2 +coa
+    octaketide_sek4
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +5_hydroxyindol_3_yl_acetaldehyde +l_cysteine +h
+    5_hydroxyindole_thiazolidine_carboxylate
+  }
+
+  branch from h side right {
+    h
+    <-> . +4_chloro_2_fluoromuconate +o2
+    5_chloro_3_fluorocatechol
+  }
+
+  branch from h side left {
+    h
+    <-> . +2_chloro_4_fluoromuconolactone
+    2_chloro_4_fluoromuconate
+  }
+
+  branch from adp side right {
+    adp
+    <-> . +1d_myo_inositol_3_4_5_6_tetrakisphosphate +h +atp
+    1d_myo_inositol_3_4_6_trisphosphate
+  }
+
+  branch from adp side left {
+    adp
+    <-> ec_6_2_1_26 [6.2.1.26] +2_succinylbenzoate +atp +coa +phosphate
+    2_succinylbenzoyl_coa
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> . +1_archaetidyl_d_myo_inositol +h2o
+    1_archaetidyl_1d_myo_inositol_3_phosphate
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +guanosine +h2o
+    guanosine_2_monophosphate
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +diphosphate +h +amp +indol_3_yl_acetyl_l_glutamine +indol_3_yl_acetate
+    l_glutamine
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_6_4_1_7 [6.4.1.7] +s_oxalatosuccinate +h +adp +phosphate +co2 +h2o
+    2_oxoglutarate
   }
 }

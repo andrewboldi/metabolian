@@ -4,87 +4,17 @@
 # edit the generator, not this file.
 
 pathway triboa-to-h2o "TRIBOA to H2O" {
-  spacing 224
+  spacing 340
 
   spine at 0,0 {
     triboa
     <-> . +co2 +succinate -2_oxoglutarate -o2
     diboa
-    <-> ec_1_14_13_140 [1.14.13.140] +nadp +h2o -h -o2 -nadph
-    hboa
-    <-> ec_1_14_13_140 [1.14.13.140] +nadh +h +o2 -nad -h2o
+    <-> ec_3_2_1_182 [3.2.1.182] +beta_d_glucose -h2o
+    diboa_d_glucoside
+    <-> ec_2_4_1_202 [2.4.1.202] +udp -udp_alpha_d_glucose
     diboa
-  }
-
-  branch from 2_oxoglutarate side left {
-    2_oxoglutarate
-    <-> ec_1_14_20_15 [1.14.20.15] +h +o2 +chloride +o_s_l_threonyl_pantetheine_4_phosphoryl_l_serine +co2 +succinate +h2o
-    o_s_4_chloro_l_threonyl_pantetheine_4_phosphoryl
-  }
-
-  branch from 2_oxoglutarate side right {
-    2_oxoglutarate
-    <-> ec_1_14_11_70 [1.14.11.70] +o2 +deoxycylindrospermopsin +co2 +succinate
-    cylindrospermopsin
-  }
-
-  branch from o2 side left {
-    o2
-    <-> ec_1_14_17_1 [1.14.17.1] +monodehydro_l_ascorbate_radical +4_hydroxynorephedrine +h2o +h +l_ascorbate
-    4_2_aminopropyl_phenol
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +dihydrotoxoflavin +co2
-    1_6e_5_hydroxy_1_methyl_1_6_dihydro_1_2_4_triazi
-  }
-
-  branch from h side left {
-    h
-    <-> . +sn_glycerol_3_phosphocholine +h2o +choline
-    glycerol_2_phosphate
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +guanidinoacetate +phosphate +guanidinoacetate +h2o
-    atp
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> ec_1_14_14_1 [1.14.14.1] +4_aminophenol +nadp +h2o +h +o2
-    aniline
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> ec_1_14_13_144 [1.14.13.144] +9_pimara_7_15_diene +h +o2 +nadp +h2o
-    9_pimara_7_15_dien_19_oate
-  }
-
-  branch from nad side left {
-    nad
-    <-> . +nadh +o2 +6_hydroxypicolinic_acid +h2o
-    3_6_dihydroxypicolinate
-  }
-
-  branch from nad side right {
-    nad
-    <-> . +nadh +h +o2 +5_hydroxypicolinic_acid +co2 +h2o
-    2_5_dihydroxypyridine
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_threonine +l_glutamate
-    glutamyl_threonine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_histidine +l_lysine +glycine
-    glycyl_histidyl_lysine
+    <-> ec_3_2_1_182 [3.2.1.182] +glucose +h -h2o
+    diboa_d_glucoside
   }
 }

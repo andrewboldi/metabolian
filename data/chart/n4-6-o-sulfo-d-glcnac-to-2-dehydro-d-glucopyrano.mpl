@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n4-6-o-sulfo-d-glcnac-to-2-dehydro-d-glucopyrano "N4-{6-O-sulfo-β-D-GlcNAc-… to 2-dehydro-D-glucopyranose" {
-  spacing 336
+  spacing 324
 
   spine at 0,0 {
     n4_6_o_sulfo_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2
@@ -16,17 +16,5 @@ pathway n4-6-o-sulfo-d-glcnac-to-2-dehydro-d-glucopyrano "N4-{6-O-sulfo-β-D-Glc
     n4_d_gal_1_4_d_glcnac_1_2_d_man_1_6_d_man_1_4_d
     <-> ec_1_1_1_292 [1.1.1.292] +d_mannopyranose +nadp -nadph -hplus
     2_dehydro_d_glucopyranose
-  }
-
-  branch from d_mannopyranose side left {
-    d_mannopyranose
-    <-> .
-    beta_d_mannose
-  }
-
-  branch from d_mannopyranose side right {
-    d_mannopyranose
-    <-> . +h +adp +phosphate +h2o
-    atp
   }
 }

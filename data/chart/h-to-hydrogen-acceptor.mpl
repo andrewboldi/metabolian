@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway h-to-hydrogen-acceptor "H to hydrogen acceptor" {
-  spacing 194
+  spacing 152
 
   spine at 0,0 {
     h
@@ -14,47 +14,5 @@ pathway h-to-hydrogen-acceptor "H to hydrogen acceptor" {
     p_aminophenylarsonous_acid
     <-> . +hydrogen_donor +o2 -arsenite -hydrogen_acceptor
     4_ammoniocyclohexa_2_5_dien_1_one
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +dihydrogeranylgeranyl_bacteriochlorophyll_a +h +nadph
-    geranylgeranyl_bacteriochlorophyll_a
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +4_chloronitrobenzene +h +nadph +h2o
-    1_chloro_4_nitrosobenzene
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_aspartate +l_tryptophan
-    tryptophanyl_aspartyl_aspartate
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +glycyl_l_leucine +l_tryptophan
-    tryptophanyl_glycyl_leucine
-  }
-
-  branch from p_aminophenylarsonous_acid side left {
-    p_aminophenylarsonous_acid
-    <-> . +h +nadph +nadp +h2o
-    nitarsone_iii
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +cannabigerolate +cannabichromenate
-    h2o2
-  }
-
-  branch from o2 side left {
-    o2
-    <-> ec_1_13_11_52 [1.13.11.52] +d_tryptophan
-    n_formyl_l_kynurenine
   }
 }

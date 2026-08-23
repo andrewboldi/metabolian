@@ -18,49 +18,115 @@ pathway r-2-hydroxy-3-methylbut-to-s-8-3-methylbutanoyl "(R)-2-hydroxy-3-methylb
 
   branch from l_valine side left {
     l_valine
-    <-> . +diphosphate +jasmonoyl_l_valine +h +amp +jasmonate
-    atp
+    <-> ec_3_4_13_9 [3.4.13.9] +l_proline +h2o
+    valyl_proline
   }
 
   branch from l_valine side right {
     l_valine
-    <-> ec_6_3_2_52 [6.3.2.52] +diphosphate +a_jasmonoyl_l_valine +h +amp +atp
-    jasmonic_acid_anion
+    <-> . +l_alanine +h2o
+    ala_val
   }
 
   branch from 4_methyl_2_oxopentanoate side left {
-    4_methyl_2_oxopentanoate
-    <-> ec_1_2_4_4 [1.2.4.4] +co2 +3_methyl_1_hydroxybutyl_thpp +h
-    thiamine_diphosphate
-  }
-
-  branch from 4_methyl_2_oxopentanoate side right {
     4_methyl_2_oxopentanoate
     <-> . +l_leucine +3_4_hydroxyphenyl_pyruvate
     l_tyrosine
   }
 
+  branch from 4_methyl_2_oxopentanoate side right {
+    4_methyl_2_oxopentanoate
+    <-> . +l_leucine +3_phenylpyruvate
+    l_phenylalanine
+  }
+
   branch from co2 side left {
     co2
-    <-> ec_1_14_11_9 [1.14.11.9] +2_oxoglutarate +butin +o2 +trans_fustin
-    succinate
+    <-> . +3e_3_nonen_2_one +h +pyruvate
+    s_3_pentanylhexane_2_5_dione
   }
 
   branch from co2 side right {
     co2
-    <-> ec_1_14_11_23 [1.14.11.23] +galangin +succinate +h2o +pinobanksin +o2
-    2_oxoglutarate
+    <-> . +e_dec_3_en_2_one +h +pyruvate
+    s_3_hexanylhexane_2_5_dione
   }
 
   branch from s_8_3_methylbutanoyl_dihydrolipoamide side left {
     s_8_3_methylbutanoyl_dihydrolipoamide
-    <-> . +r_lipoamide +h +thiamine_diphosphate
-    3_methyl_1_hydroxybutyl_thpp
+    <-> . +r_lipoamide +3_methyl_1_hydroxybutyl_thpp +h
+    thiamine_diphosphate
   }
 
   branch from s_8_3_methylbutanoyl_dihydrolipoamide side right {
     s_8_3_methylbutanoyl_dihydrolipoamide
     <-> ec_2_3_1_168 [2.3.1.168] +r_dihydrolipoamide +3_methylbutanoyl_coa
     coa
+  }
+
+  branch from l_leucine side left {
+    l_leucine
+    <-> . +arginomycin +h2o
+    l_leucyl_arginomycin
+  }
+
+  branch from l_leucine side right {
+    l_leucine
+    <-> . +blasticidin_s +h2o
+    l_leucyl_blasticidin_s
+  }
+
+  branch from l_valine side left {
+    l_valine
+    <-> . +ganciclovir +h2o
+    valganciclovir
+  }
+
+  branch from l_valine side right {
+    l_valine
+    <-> . +l_arginine +l_tyrosine +h2o
+    argtyrval
+  }
+
+  branch from 4_methyl_2_oxopentanoate side left {
+    4_methyl_2_oxopentanoate
+    <-> . +nadh +3_methylbutanoate +co2 +h +h2o
+    nad
+  }
+
+  branch from r_lipoamide side right {
+    r_lipoamide
+    <-> . +glutathione +glutathione_disulfide
+    r_dihydrolipoamide
+  }
+
+  branch from r_lipoamide side left {
+    r_lipoamide
+    <-> ec_1_2_4_1 [1.2.4.1] +h +pyruvate +co2
+    r_s_6_acetyldihydrolipoamide
+  }
+
+  branch from h side right {
+    h
+    <-> . +3_hydroxy_3_5_dihydromonacolin_l_carboxylate +h2o
+    3alpha_hydroxy_3_5_dihydromonacolin_l_lactone
+  }
+
+  branch from h side left {
+    h
+    <-> . +5_aminolevulinyl_coa +coa
+    2_5_piperidinedione
+  }
+
+  branch from co2 side right {
+    co2
+    <-> . +r_phenylhexane_2_5_dione +h +trans_benzylideneacetone
+    pyruvate
+  }
+
+  branch from co2 side left {
+    co2
+    <-> . +3_2_hydroxyphenyl_1_phenylpentane_1_4_dione +h +pyruvate
+    2_hydroxychalcone
   }
 }

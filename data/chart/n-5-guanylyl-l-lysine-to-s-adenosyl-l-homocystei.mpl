@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-5-guanylyl-l-lysine-to-s-adenosyl-l-homocystei "Nε-(5'-guanylyl)-L-lysine… to S-adenosyl-L-homocysteine" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     n_5_guanylyl_l_lysine_1
@@ -14,29 +14,5 @@ pathway n-5-guanylyl-l-lysine-to-s-adenosyl-l-homocystei "Nε-(5'-guanylyl)-L-ly
     5_n7_methyl_5_triphosphoguanosine_ribonucleoside
     <-> ec_2_1_1_57 [2.1.1.57] +sam -sah -hplus
     5_n7_methyl_5_triphosphoguanosine_2_o_methyl_rib
-  }
-
-  branch from l_lysinium side left {
-    l_lysinium
-    <-> . +n6_2_methylpropenoyl_l_lysine +nad +h2o +nicotinamide
-    2_o_methacrylyl_adp_d_ribose
-  }
-
-  branch from l_lysinium side right {
-    l_lysinium
-    <-> . +sam +sah +hplus
-    n6_methyl_l_lysinium
-  }
-
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_395 [2.1.1.395] +7_o_demethylcephaeline +sam +hplus
-    cephaeline
-  }
-
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_396 [2.1.1.396] +cephaeline +sam +hplus
-    emetine
   }
 }

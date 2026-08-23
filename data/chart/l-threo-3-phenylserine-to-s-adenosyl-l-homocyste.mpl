@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-threo-3-phenylserine-to-s-adenosyl-l-homocyste "L-threo-3-phenylserine to S-adenosyl-L-homocysteine" {
-  spacing 206
+  spacing 242
 
   spine at 0,0 {
     l_threo_3_phenylserine
@@ -24,25 +24,61 @@ pathway l-threo-3-phenylserine-to-s-adenosyl-l-homocyste "L-threo-3-phenylserine
 
   branch from glycine side right {
     glycine
-    <-> . +cysgly +h2o
-    cysteine
+    <-> . +palmitoleoyl_coa +coa +hplus
+    n_9z_hexadecenoyl_glycinate
   }
 
   branch from glycine side left {
     glycine
-    <-> ec_2_1_1_156 [2.1.1.156] +sam +sah +hplus
-    dmglycine
+    <-> ec_3_1_1_96 [3.1.1.96] +3_glycyladenylyl_zwitterionic_group +h2o +hplus
+    amp_3_end_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_78 [2.1.1.78] +isoorientin +sam +hplus
-    isoscoparin_7_olate
+    <-> ec_2_1_1_202 [2.1.1.202] +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_185 [2.1.1.185] +guanosine_5_monophosphate_1 +sam +hplus
-    2_o_methylguanosine_5_monophosphate_1
+    <-> ec_2_1_1_202 [2.1.1.202] +sam +5_methylcytidine_5_monophosphate_1 +hplus
+    cytidine_5_monophosphate_1
+  }
+
+  branch from glycine side right {
+    glycine
+    <-> . +5_10_methylenetetrahydrosulfopterin +h2o +serine
+    tetrahydrosulfopterin
+  }
+
+  branch from glycine side left {
+    glycine
+    <-> . +palmitoyl_coa +coa +hplus
+    n_hexadecanoylglycinate
+  }
+
+  branch from sam side right {
+    sam
+    <-> ec_2_1_1_206 [2.1.1.206] +cytidine_5_monophosphate_1 +sah +hplus
+    2_o_methylcytidine_5_monophosphate_1
+  }
+
+  branch from sam side left {
+    sam
+    <-> ec_2_1_1_208 [2.1.1.208] +uridine_5_monophosphate_1 +sah +hplus
+    2_o_methyluridine_5_monophosphate_1
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_209 [2.1.1.209] +guanosine_5_monophosphate_1 +sam +hplus
+    n1_methylguanosine_5_monophosphate_1
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_211 [2.1.1.211] +sam +2_o_methyluridine_5_monophosphate_1 +hplus
+    uridine_5_monophosphate_1
   }
 }

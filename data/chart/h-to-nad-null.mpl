@@ -4,12 +4,12 @@
 # edit the generator, not this file.
 
 pathway h-to-nad-null "H to NAD" {
-  spacing 276
+  spacing 340
 
   spine at 0,0 {
     h
-    <-> ec_1_2_5_2 [1.2.5.2] +propynoate +pyrroloquinoline_quinol -pyrroloquinoline_quinone -h2o
-    prop_2_ynal
+    <-> ec_1_2_99_3 [1.2.99.3] +3_butynoate +pyrroloquinoline_quinol -pyrroloquinoline_quinone -h2o
+    but_3_ynal
     <-> . +glucose +pyrroloquinoline_quinone -h -pyrroloquinoline_quinol
     d_glucono_1_5_lactone
     <-> ec_1_1_1_118 [1.1.1.118] +nadh +h -nad
@@ -24,79 +24,151 @@ pathway h-to-nad-null "H to NAD" {
 
   branch from pyrroloquinoline_quinone side right {
     pyrroloquinoline_quinone
-    <-> ec_1_1_99_1 [1.1.99.1] +h +glycine_betaine +pyrroloquinoline_quinol +h2o
-    betaine_aldehyde
+    <-> ec_1_1_99_1 [1.1.99.1] +h +betaine_aldehyde +pyrroloquinoline_quinol
+    choline
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_8_1_9 [1.8.1.9] +methylselenol +nadp +h +nadph
-    methylseleninic_acid
+    <-> ec_1_2_1_3 [1.2.1.3] +1h_imidazole +p_dimethylamino_cinnamate
+    p_dimethylamino_cinnamoylimidazole
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_3_2_8 [3.3.2.8] +1r_2r_4s_limonene_1_2_diol
-    4s_limonene_1_2_epoxide
+    <-> ec_3_2_1_21 [3.2.1.21] +4_nitrophenyl_l_arabinoside +h +alpha_l_arabinopyanose
+    4_nitrophenol
   }
 
   branch from d_glucono_1_5_lactone side left {
-    d_glucono_1_5_lactone
-    <-> ec_1_1_3_5 [1.1.3.5] +glucose +o2
-    h2o2
-  }
-
-  branch from d_glucono_1_5_lactone side right {
     d_glucono_1_5_lactone
     <-> ec_1_1_1_121 [1.1.1.121] +nadh +h +nad
     d_aldose
   }
 
+  branch from d_glucono_1_5_lactone side right {
+    d_glucono_1_5_lactone
+    <-> . +glucose +nadp +h
+    nadph
+  }
+
   branch from h side left {
     h
-    <-> ec_5_5_1_7 [5.5.1.7] +tetrachloro_cis_cis_muconic_acid +chloride
-    2_3_5_trichlorodienelactone
+    <-> ec_2_4_1_17 [2.4.1.17] +udp +glucuronosyletoposide +etoposide
+    udp_alpha_d_glucuronate
   }
 
   branch from h side right {
     h
-    <-> . +10_oxabenzo_def_chrysen_9_one +formate
-    cis_4_8_hydroxypyren_7_yl_2_oxobut_3_enoate
+    <-> ec_2_4_1_17 [2.4.1.17] +udp +cyproheptadine_beta_d_glucuronide +udp_alpha_d_glucuronate
+    cyproheptadine
   }
 
   branch from pyrroloquinoline_quinol side left {
-    pyrroloquinoline_quinol
-    <-> ec_1_1_99_1 [1.1.99.1] +h +betaine_aldehyde +pyrroloquinoline_quinone
-    choline
-  }
-
-  branch from pyrroloquinoline_quinol side right {
     pyrroloquinoline_quinol
     <-> . +h +pyrroloquinoline_quinone +h2o
     o2
   }
 
-  branch from beta_d_glucose side left {
-    beta_d_glucose
-    <-> ec_3_2_1_21 [3.2.1.21] +linamarin +h2o
-    2_hydroxy_2_methylpropanenitrile
-  }
-
   branch from beta_d_glucose side right {
     beta_d_glucose
-    <-> ec_3_2_1_3 [3.2.1.3] +d_glcp_1_4_d_glcp_1_4_d_glcp +h2o
-    d_maltose
+    <-> ec_3_2_1_20 [3.2.1.20] +h2o
+    2_o_beta_d_glucopyranosyl_beta_d_glucopyranose
   }
 
-  branch from nad side left {
-    nad
-    <-> . +benzo_a_pyrene_cis_4_5_dihydrodiol +nadh +h +o2
-    benzo_a_pyrene
+  branch from beta_d_glucose side left {
+    beta_d_glucose
+    <-> ec_3_2_1_21 [3.2.1.21] +h2o
+    beta_d_glcp_1_6_beta_d_glcp
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +benzo_a_pyrene +o2
-    benzo_a_pyrene_cis_11_12_dihydrodiol
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +decanal
+    decan_1_ol
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +tetradecanal +h
+    tetradecan_1_ol
+  }
+
+  branch from h side right {
+    h
+    <-> ec_4_3_1_24 [4.3.1.24] +4_chloro_l_phenylalanine +nh4
+    4_chlorocinnamic_acid
+  }
+
+  branch from h side left {
+    h
+    <-> ec_2_3_2_2 [2.3.2.2] +l_glutamine_hydroxamate +nh4 +hydroxylamine
+    l_glutamine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_5_1_1 [3.5.1.1] +ile_asn +h +nh4
+    isoleucyl_aspartate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_5_1_1 [3.5.1.1] +l_valyl_l_aspartate +nh4 +h
+    val_asn
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> ec_2_4_1_22 [2.4.1.22] +udp +alpha_lactose +h
+    udp_alpha_d_galactose
+  }
+
+  branch from glucose side left {
+    glucose
+    <-> . +2_4_hydroxyphenyl_ethanol +h2o
+    salidroside
+  }
+
+  branch from d_glucono_1_5_lactone side right {
+    d_glucono_1_5_lactone
+    <-> ec_1_1_3_10 [1.1.3.10] +o2 +h2o2
+    2_dehydro_d_glucono_1_5_lactone
+  }
+
+  branch from d_glucono_1_5_lactone side left {
+    d_glucono_1_5_lactone
+    <-> ec_1_1_5_2 [1.1.5.2] +ubiquinol_2 +glucose
+    ubiquinone_2
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_1_1_1 [1.1.1.1] +3_methyl_2_butenal +h +nad
+    prenol
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> ec_1_1_1_28 [1.1.1.28] +h +3_bromopyruvic_acid +nad
+    3_bromolactate
+  }
+
+  branch from beta_d_glucose side right {
+    beta_d_glucose
+    <-> ec_3_2_1_21 [3.2.1.21] +h2o
+    beta_d_glucosyl_1_3_d_glucose
+  }
+
+  branch from beta_d_glucose side left {
+    beta_d_glucose
+    <-> ec_3_2_1_21 [3.2.1.21] +h2o +beta_d_glucosyl_1_3_d_glucose
+    laminaritriose
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_14_14_37 [1.14.14.37] +nadh +4_hydroxyphenylacetaldehyde_oxime +h +o2 +h2o
+    4_hydroxymandelonitrile
   }
 }

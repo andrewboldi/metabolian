@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway biotinate-sulfoxide-to-l-lysinium "biotinate sulfoxide to L-lysinium" {
-  spacing 298
+  spacing 328
 
   spine at 0,0 {
     biotinate_sulfoxide
@@ -16,45 +16,75 @@ pathway biotinate-sulfoxide-to-l-lysinium "biotinate sulfoxide to L-lysinium" {
     2_o_biotinyl_adp_d_ribose
   }
 
-  branch from biotinyl_l_lysine side left {
-    biotinyl_l_lysine
-    <-> . +l_lysinium +amp +hplus
-    biotinyl_5_amp
+  branch from ppi side left {
+    ppi
+    <-> ec_2_5_1_138 [2.5.1.138] +esculetin +gpp
+    8_geranylesculetin
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_66 [4.2.3.66] +fpp
-    selinene
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_67 [4.2.3.67] +fpp
-    cis_muurola_3_5_diene
-  }
-
-  branch from nicotinamide side right {
-    nicotinamide
-    <-> ec_2_4_2_60 [2.4.2.60] +l_cysteine +glycine +nad +adp_5_ethyl_4_methylthiazole_2_carboxylate +h2o +hplus
-    dehydroalanine
+    <-> ec_2_5_1_139 [2.5.1.139] +umbelliferone +dmapp
+    osthenol
   }
 
   branch from nicotinamide side left {
     nicotinamide
-    <-> . +l_cysteine +nad +hplus
-    s_adp_d_ribosyl_l_cysteine_2
+    <-> . +2_deoxyguanosine_5_monophosphate +nad +hplus
+    n2_adp_d_ribosyl_dgmp
   }
 
-  branch from l_lysinium side right {
-    l_lysinium
-    <-> . +propionyl_coa +coa +hplus
-    n6_propanoyl_l_lysine
+  branch from nicotinamide side right {
+    nicotinamide
+    <-> . +dgtp +nad +hplus
+    n2_adp_d_ribosyl_dgtp
   }
 
   branch from l_lysinium side left {
     l_lysinium
-    <-> . +sam +sah +hplus
+    <-> ec_2_1_1_370 [2.1.1.370] +sam +sah +hplus
+    n6_n6_dimethyl_l_lysine_1
+  }
+
+  branch from l_lysinium side right {
+    l_lysinium
+    <-> ec_2_1_1_371 [2.1.1.371] +sam +n6_n6_dimethyl_l_lysine_1 +hplus
+    sah
+  }
+
+  branch from l_lysinium side left {
+    l_lysinium
+    <-> ec_2_1_1_372 [2.1.1.372] +sam +sah +hplus
     n6_n6_n6_trimethyl_l_lysine
+  }
+
+  branch from l_lysinium side right {
+    l_lysinium
+    <-> . +l_methionine +h2o2 +h2o +hplus
+    s_l_lysyl_l_methionine_sulfilimine
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +8_9_eet +atp +coa +amp
+    8_9_epoxy_5z_11z_14z_icosatrienoyl_coa
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +11_12_eet +atp +coa +amp
+    11_12_epoxy_5z_8z_14z_icosatrienoyl_coa
+  }
+
+  branch from nicotinamide side left {
+    nicotinamide
+    <-> . +3_5_cyclic_gmp +nad +hplus
+    n2_adp_d_ribosyl_3_5_cyclic_gmp
+  }
+
+  branch from nicotinamide side right {
+    nicotinamide
+    <-> . +gdp +nad +hplus
+    n2_adp_d_ribosyl_gdp
   }
 }

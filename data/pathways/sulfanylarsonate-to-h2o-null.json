@@ -1,0 +1,488 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "sulfanylarsonate-to-h2o-null",
+  "name": "sulfanylarsonate to H2O",
+  "category": "redox-detox",
+  "summary": "A 3-step route from sulfanylarsonate to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR193889"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "sulfanylarsonate",
+      "name": "sulfanylarsonate",
+      "formula": "HAsO3S",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1132891"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "arsenate",
+      "name": "arsenate",
+      "formula": "HAsO4",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1137656"
+      }
+    },
+    {
+      "id": "hydrogen_sulfide",
+      "name": "hydrogen sulfide",
+      "formula": "HS",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1366460"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "glutathione",
+      "name": "glutathione",
+      "formula": "C10H16N3O6S",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM490899"
+      }
+    },
+    {
+      "id": "glutathione_disulfide",
+      "name": "glutathione disulfide",
+      "short": "glutathione…",
+      "formula": "C20H30N6O12S2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1371191"
+      }
+    },
+    {
+      "id": "arsenous_acid",
+      "name": "arsenous acid",
+      "formula": "H3AsO3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM739275"
+      }
+    },
+    {
+      "id": "arsenic_triglutathione",
+      "name": "arsenic triglutathione",
+      "short": "arsenic triglutathi…",
+      "formula": "C30H45AsN9O18S3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:183640"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_20_4_1",
+      "name": "arsenate reductase (glutathione/glutaredoxin)",
+      "ec": [
+        "1.20.4.1"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR193889",
+      "substrates": [
+        {
+          "metabolite": "sulfanylarsonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "arsenate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_sulfide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR193889"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR193889"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "arsenate reductase (glutathione/glutaredoxin)",
+      "ec": "1.20.4.1",
+      "substrates": [
+        {
+          "metabolite": "arsenate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "glutathione",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glutathione_disulfide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "arsenous_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_20_4_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR153048"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR153048"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR165216",
+      "substrates": [
+        {
+          "metabolite": "glutathione",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "arsenous_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "arsenic_triglutathione",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR165216"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR165216"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_sulfanylarsonate_sulfanylarsonate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sulfanylarsonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "sulfanylarsonate-to-h2o"
+      },
+      "note": "Shares sulfanylarsonate with sulfanylarsonate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1132891"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_sulfanylarsonate_z-indol-3-yl-n-sulfo-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "sulfanylarsonate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "z-indol-3-yl-n-sulfo-to-h2o"
+      },
+      "note": "Shares sulfanylarsonate with (Z)-(indol-3-yl)-N-(sulfo… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1132891"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_arsenate_arginine-4-nitroanilide-to-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "arsenate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "arginine-4-nitroanilide-to-phosphate"
+      },
+      "note": "Shares arsenate with Arginine-4-nitroanilide to phosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1137656"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_arsenate_arseno-mycothiol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "arsenate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "arseno-mycothiol-to-h2o"
+      },
+      "note": "Shares arsenate with Arseno-mycothiol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1137656"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_arsenate_trans-isoeugenol-to-arsenite",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "arsenate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-isoeugenol-to-arsenite"
+      },
+      "note": "Shares arsenate with trans-isoeugenol to arsenite.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1137656"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_arsenous_acid_arseno-mycothiol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "arsenous_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "arseno-mycothiol-to-h2o"
+      },
+      "note": "Shares arsenous acid with Arseno-mycothiol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM739275"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_arsenous_acid_methyl-benzeneacetate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "arsenous_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "methyl-benzeneacetate-to-h2o"
+      },
+      "note": "Shares arsenous acid with Methyl benzeneacetate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM739275"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_arsenous_acid_nadh-to-keto-d-tagatose",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "arsenous_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-keto-d-tagatose"
+      },
+      "note": "Shares arsenous acid with NADH to keto-D-tagatose….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM739275"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_arsenous_acid_nadh-to-s-2-hydroxyoctanenitrile",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "arsenous_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-s-2-hydroxyoctanenitrile"
+      },
+      "note": "Shares arsenous acid with NADH to (S)-2-Hydroxyoctanenitrile.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM739275"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_arsenous_acid_z-indol-3-yl-n-sulfo-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "arsenous_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "z-indol-3-yl-n-sulfo-to-h2o"
+      },
+      "note": "Shares arsenous acid with (Z)-(indol-3-yl)-N-(sulfo… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM739275"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_arsenic_triglutathione_nitarsone-iii-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "arsenic_triglutathione"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nitarsone-iii-to-h2o"
+      },
+      "note": "Shares arsenic triglutathione with nitarsone (III) to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:183640"
+          }
+        ]
+      }
+    }
+  ]
+}

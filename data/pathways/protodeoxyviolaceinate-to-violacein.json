@@ -117,6 +117,42 @@
       "xrefs": {
         "chebi": "CHEBI:131916"
       }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "deoxyviolaceinate",
+      "name": "deoxyviolaceinate",
+      "formula": "C21H14N3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:90910"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "deoxyviolacein",
+      "name": "deoxyviolacein",
+      "formula": "C20H13N3O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:131915"
+      }
     }
   ],
   "enzymes": [
@@ -352,6 +388,258 @@
           {
             "db": "Rhea",
             "id": "RHEA:49756"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "violacein synthase",
+      "equation": "protodeoxyviolaceinate + NADH + O2 + H(+) = deoxyviolaceinate + NAD(+) + H2O",
+      "ec": "1.14.13.224",
+      "substrates": [
+        {
+          "metabolite": "protodeoxyviolaceinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "deoxyviolaceinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_224"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:49668"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49668"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "violacein synthase",
+      "equation": "protodeoxyviolaceinate + NADH + 2 O2 + 2 H(+) = deoxyviolacein + CO2 + NAD(+) + 2 H2O",
+      "ec": "1.14.13.224",
+      "substrates": [
+        {
+          "metabolite": "protodeoxyviolaceinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "deoxyviolacein",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_224"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:49736"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49736"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_protodeoxyviolaceinate_2-iminio-3-indol-3-yl-pr-to-deoxyviolacein",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "protodeoxyviolaceinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-iminio-3-indol-3-yl-pr-to-deoxyviolacein"
+      },
+      "note": "Shares protodeoxyviolaceinate with 2-iminio-3-(indol-3-yl)pr… to deoxyviolacein.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:90907"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_protoviolaceinate_2-iminio-3-indol-3-yl-pr-to-deoxyviolacein",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "protoviolaceinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-iminio-3-indol-3-yl-pr-to-deoxyviolacein"
+      },
+      "note": "Shares protoviolaceinate with 2-iminio-3-(indol-3-yl)pr… to deoxyviolacein.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:90898"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_proviolacein_2-iminio-3-indol-3-yl-pr-to-deoxyviolacein",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "proviolacein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-iminio-3-indol-3-yl-pr-to-deoxyviolacein"
+      },
+      "note": "Shares proviolacein with 2-iminio-3-(indol-3-yl)pr… to deoxyviolacein.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:131916"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_deoxyviolaceinate_2-iminio-3-indol-3-yl-pr-to-deoxyviolacein",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "deoxyviolaceinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-iminio-3-indol-3-yl-pr-to-deoxyviolacein"
+      },
+      "note": "Shares deoxyviolaceinate with 2-iminio-3-(indol-3-yl)pr… to deoxyviolacein.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:90910"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_deoxyviolacein_2-iminio-3-indol-3-yl-pr-to-deoxyviolacein",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "deoxyviolacein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-iminio-3-indol-3-yl-pr-to-deoxyviolacein"
+      },
+      "note": "Shares deoxyviolacein with 2-iminio-3-(indol-3-yl)pr… to deoxyviolacein.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:131915"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_deoxyviolacein_enterobacterial-common-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "deoxyviolacein"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "enterobacterial-common-to-h2o"
+      },
+      "note": "Shares deoxyviolacein with (enterobacterial common… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:131915"
           }
         ]
       }

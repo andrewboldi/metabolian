@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-hydroxynonanal-to-1-hydroperoxy-8-carboxyoc "4-hydroxynonanal to 1-hydroperoxy-8-carboxyoc…" {
-  spacing 224
+  spacing 194
 
   spine at 0,0 {
     4_hydroxynonanal
@@ -16,39 +16,9 @@ pathway 4-hydroxynonanal-to-1-hydroperoxy-8-carboxyoc "4-hydroxynonanal to 1-hyd
     1_hydroperoxy_8_carboxyoctyl_3_4_epoxynon_2e_eny
   }
 
-  branch from h side left {
-    h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +l_ribose +phosphate +l_ribose +h2o
-    atp
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
-    n_acetyl_d_galactosamine_1_phosphate
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> ec_1_1_1_71 [1.1.1.71] +2e_geranial +h +nadp
-    s_terpineol
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> ec_1_1_1_71 [1.1.1.71] +h +s_citronellal +nadp
-    isomenthol
-  }
-
   branch from 3_4_epoxynonanal side left {
     3_4_epoxynonanal
     <-> .
     e_4_hydroxynon_2_enal
-  }
-
-  branch from 1_hydroperoxy_8_carboxyoctyl_3_4_epoxynon_2e_eny side right {
-    1_hydroperoxy_8_carboxyoctyl_3_4_epoxynon_2e_eny
-    <-> . +o2
-    9_10_12_13_diepoxyoctadecanoate
   }
 }

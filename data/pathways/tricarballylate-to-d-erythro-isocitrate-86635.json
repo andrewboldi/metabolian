@@ -1,0 +1,631 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "tricarballylate-to-d-erythro-isocitrate-86635",
+  "name": "tricarballylate to D-erythro-isocitrate",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from tricarballylate to D-erythro-isocitrate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:86635"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:62517"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "tricarballylate",
+      "name": "tricarballylate",
+      "formula": "C6H5O6",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:62517"
+      }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H30N9O15P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57692"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "cis_aconitate",
+      "name": "cis-Aconitate",
+      "formula": "C6H3O6",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:16383"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58307"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "d_threo_isocitrate",
+      "name": "D-threo-isocitrate",
+      "formula": "C6H5O7",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:15562"
+      }
+    },
+    {
+      "id": "d_erythro_isocitrate",
+      "name": "D-erythro-isocitrate",
+      "formula": "C6H5O7",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:15563"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "s_oxalatosuccinate",
+      "name": "(S)-oxalatosuccinate",
+      "formula": "C6H3O7",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:153066"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "fumonisin_b1",
+      "name": "fumonisin B1",
+      "formula": "C34H56NO15",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:62554"
+      }
+    },
+    {
+      "id": "2s_3s_5r_10r_12s_14s_15r_16r_2_amino_12_16_dime",
+      "name": "(2S,3S,5R,10R,12S,14S,15R,16R)-2-amino-12,16-dimethylicosane-3,5,10,14,15-pentol",
+      "short": "(2S,3S,5R,10R,12S,1…",
+      "formula": "C22H48NO5",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:62526"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_1_2_6",
+      "name": "isocitrate epimerase",
+      "ec": [
+        "5.1.2.6"
+      ]
+    },
+    {
+      "id": "ec_3_1_1_87",
+      "name": "fumonisin B1 esterase",
+      "ec": [
+        "3.1.1.87"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "tricarballylate + FAD + H(+) = cis-aconitate + FADH2",
+      "equation": "tricarballylate + FAD + H(+) = cis-aconitate + FADH2",
+      "substrates": [
+        {
+          "metabolite": "tricarballylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cis_aconitate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:86635"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:86635"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "cis-aconitate + H2O = D-threo-isocitrate",
+      "equation": "cis-aconitate + H2O = D-threo-isocitrate",
+      "substrates": [
+        {
+          "metabolite": "cis_aconitate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_threo_isocitrate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:22144"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22144"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "isocitrate epimerase",
+      "equation": "D-threo-isocitrate = D-erythro-isocitrate",
+      "ec": "5.1.2.6",
+      "substrates": [
+        {
+          "metabolite": "d_threo_isocitrate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_erythro_isocitrate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_1_2_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:10820"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10820"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "D-threo-isocitrate + NADP(+) = (S)-oxalosuccinate + NADPH + H(+)",
+      "equation": "D-threo-isocitrate + NADP(+) = (S)-oxalosuccinate + NADPH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "d_threo_isocitrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_oxalatosuccinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:25588"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25588"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "fumonisin B1 esterase",
+      "equation": "fumonisin B1 + 2 H2O = (2S,3S,5R,10R,12S,14S,15R,16R)-2-amino-12,16-dimethylicosane-3,5,10,14,15-pentol + 2 tricarballylate + 2 H(+)",
+      "ec": "3.1.1.87",
+      "substrates": [
+        {
+          "metabolite": "fumonisin_b1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2s_3s_5r_10r_12s_14s_15r_16r_2_amino_12_16_dime",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "tricarballylate",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_87"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:30363"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30363"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_tricarballylate_tricarballylate-to-d-erythro-isocitrate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "tricarballylate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "tricarballylate-to-d-erythro-isocitrate"
+      },
+      "note": "Shares tricarballylate with tricarballylate to D-erythro-isocitrate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62517"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cis_aconitate_citrate-to-cis-aconitate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cis_aconitate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "citrate-to-cis-aconitate"
+      },
+      "note": "Shares cis-Aconitate with citrate to cis-aconitate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16383"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cis_aconitate_citrate-to-cis-aconitate-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cis_aconitate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "citrate-to-cis-aconitate-null"
+      },
+      "note": "Shares cis-Aconitate with citrate to cis-aconitate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16383"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cis_aconitate_citric-acid-cycle",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cis_aconitate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "citric-acid-cycle"
+      },
+      "note": "Shares cis-Aconitate with Citric acid cycle (TCA / Krebs cycle).",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16383"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cis_aconitate_trans-aconitate-to-succinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cis_aconitate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-aconitate-to-succinate"
+      },
+      "note": "Shares cis-Aconitate with trans-aconitate to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16383"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cis_aconitate_trans-aconitate-to-succinate-17265",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cis_aconitate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "trans-aconitate-to-succinate-17265"
+      },
+      "note": "Shares cis-Aconitate with trans-aconitate to succinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16383"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cis_aconitate_tricarballylate-to-d-erythro-isocitrate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cis_aconitate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "tricarballylate-to-d-erythro-isocitrate"
+      },
+      "note": "Shares cis-Aconitate with tricarballylate to D-erythro-isocitrate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:16383"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_erythro_isocitrate_tricarballylate-to-d-erythro-isocitrate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_erythro_isocitrate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "tricarballylate-to-d-erythro-isocitrate"
+      },
+      "note": "Shares D-erythro-isocitrate with tricarballylate to D-erythro-isocitrate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15563"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_fumonisin_b1_3s-3-hydroxytetracosano-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "fumonisin_b1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3s-3-hydroxytetracosano-to-fmn"
+      },
+      "note": "Shares fumonisin B1 with (3S)-3-hydroxytetracosano… to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62554"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_fumonisin_b1_3s-3-hydroxytetracosano-to-fmn-78559",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "fumonisin_b1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3s-3-hydroxytetracosano-to-fmn-78559"
+      },
+      "note": "Shares fumonisin B1 with (3S)-3-hydroxytetracosano… to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62554"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_fumonisin_b1_tricarballylate-to-d-erythro-isocitrate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "fumonisin_b1"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "tricarballylate-to-d-erythro-isocitrate"
+      },
+      "note": "Shares fumonisin B1 with tricarballylate to D-erythro-isocitrate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62554"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2s_3s_5r_10r_12s_14s_15r_16r_2_amino_12_16_dime_methyl-group-to-1-hexadecyl-sn-glycero-3",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2s_3s_5r_10r_12s_14s_15r_16r_2_amino_12_16_dime"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "methyl-group-to-1-hexadecyl-sn-glycero-3"
+      },
+      "note": "Shares (2S,3S,5R,10R,12S,14S,15R,16R)-2-amino-12,16-dimethylicosane-3,5,10,14,15-pentol with methyl group to 1-hexadecyl-sn-glycero-3-….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:62526"
+          }
+        ]
+      }
+    }
+  ]
+}

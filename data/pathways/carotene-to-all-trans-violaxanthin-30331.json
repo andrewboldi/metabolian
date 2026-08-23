@@ -1,0 +1,574 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "carotene-to-all-trans-violaxanthin-30331",
+  "name": "β-carotene to all-trans-violaxanthin",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from β-carotene to all-trans-violaxanthin, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:30331"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:17579"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "carotene",
+      "name": "β-carotene",
+      "formula": "C40H56",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17579"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "zeaxanthin",
+      "name": "zeaxanthin",
+      "formula": "C40H56O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27547"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "4_9_dimethyldodeca_2_4_6_8_10_pentaenedial",
+      "name": "4,9-dimethyldodeca-2,4,6,8,10-pentaenedial",
+      "short": "4,9-dimethyldodeca-…",
+      "formula": "C14H16O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:53171"
+      }
+    },
+    {
+      "id": "3r_hydroxy_ionone",
+      "name": "(3R)-hydroxy-β-ionone",
+      "short": "hydroxy-β-ionone",
+      "formula": "C13H20O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:53173"
+      }
+    },
+    {
+      "id": "5_6_epoxy_3_hydroxy_9_apo_beta_caroten_9_one",
+      "name": "5,6-epoxy-3-hydroxy-9-apo-beta-caroten-9-one",
+      "short": "5,6-epoxy-3-hydroxy…",
+      "formula": "C13H20O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM102752"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "all_trans_violaxanthin",
+      "name": "all-trans-violaxanthin",
+      "short": "all-trans-violaxant…",
+      "formula": "C40H56O4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM738452"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_15_24",
+      "name": "beta-carotene 3-hydroxylase",
+      "ec": [
+        "1.14.15.24"
+      ]
+    },
+    {
+      "id": "ec_1_14_99_n4",
+      "name": "carotenoid 9,10-dioxygenase",
+      "ec": [
+        "1.14.99.n4"
+      ]
+    },
+    {
+      "id": "ec_1_13_11_71",
+      "name": "carotenoid-9',10'-cleaving dioxygenase",
+      "ec": [
+        "1.13.11.71"
+      ],
+      "xrefs": {
+        "uniprot": "Q9BYV7"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "beta-carotene 3-hydroxylase",
+      "equation": "all-trans-beta-carotene + 4 reduced [2Fe-2S]-[ferredoxin] + 2 O2 + 4 H(+) = all-trans-zeaxanthin + 4 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
+      "ec": "1.14.15.24",
+      "substrates": [
+        {
+          "metabolite": "carotene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 4
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "zeaxanthin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_15_24"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:30331"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30331"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "carotenoid 9,10-dioxygenase",
+      "equation": "all-trans-zeaxanthin + 2 O2 = 4,9-dimethyldodeca-2,4,6,8,10-pentaenedial + 2 (3R)-hydroxy-beta-ionone",
+      "ec": "1.14.99.n4",
+      "substrates": [
+        {
+          "metabolite": "zeaxanthin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_9_dimethyldodeca_2_4_6_8_10_pentaenedial",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3r_hydroxy_ionone",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_99_n4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:26393"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26393"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "carotenoid-9',10'-cleaving dioxygenase",
+      "ec": "1.13.11.71",
+      "substrates": [
+        {
+          "metabolite": "5_6_epoxy_3_hydroxy_9_apo_beta_caroten_9_one",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "4_9_dimethyldodeca_2_4_6_8_10_pentaenedial",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "all_trans_violaxanthin",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_71"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR122076"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR122076"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3r_hydroxy_ionone_5-cis-lycopene-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3r_hydroxy_ionone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cis-lycopene-to-h2o"
+      },
+      "note": "Shares (3R)-hydroxy-β-ionone with 5-cis-lycopene to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:53173"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3r_hydroxy_ionone_5-cis-lycopene-to-h2o-68444",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3r_hydroxy_ionone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cis-lycopene-to-h2o-68444"
+      },
+      "note": "Shares (3R)-hydroxy-β-ionone with 5-cis-lycopene to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:53173"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3r_hydroxy_ionone_carotene-to-all-trans-violaxanthin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3r_hydroxy_ionone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "carotene-to-all-trans-violaxanthin"
+      },
+      "note": "Shares (3R)-hydroxy-β-ionone with β-carotene to all-trans-violaxanthin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:53173"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3r_hydroxy_ionone_lutein-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3r_hydroxy_ionone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "lutein-to-o2"
+      },
+      "note": "Shares (3R)-hydroxy-β-ionone with lutein to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:53173"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3r_hydroxy_ionone_lutein-to-o2-68428",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3r_hydroxy_ionone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "lutein-to-o2-68428"
+      },
+      "note": "Shares (3R)-hydroxy-β-ionone with lutein to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:53173"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3r_hydroxy_ionone_lutein-to-o2-68432",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3r_hydroxy_ionone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "lutein-to-o2-68432"
+      },
+      "note": "Shares (3R)-hydroxy-β-ionone with lutein to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:53173"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_6_epoxy_3_hydroxy_9_apo_beta_caroten_9_one_carotene-to-all-trans-violaxanthin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_6_epoxy_3_hydroxy_9_apo_beta_caroten_9_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "carotene-to-all-trans-violaxanthin"
+      },
+      "note": "Shares 5,6-epoxy-3-hydroxy-9-apo-beta-caroten-9-one with β-carotene to all-trans-violaxanthin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM102752"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_6_epoxy_3_hydroxy_9_apo_beta_caroten_9_one_lutein-to-o2",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_6_epoxy_3_hydroxy_9_apo_beta_caroten_9_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "lutein-to-o2"
+      },
+      "note": "Shares 5,6-epoxy-3-hydroxy-9-apo-beta-caroten-9-one with lutein to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM102752"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_6_epoxy_3_hydroxy_9_apo_beta_caroten_9_one_lutein-to-o2-68428",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_6_epoxy_3_hydroxy_9_apo_beta_caroten_9_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "lutein-to-o2-68428"
+      },
+      "note": "Shares 5,6-epoxy-3-hydroxy-9-apo-beta-caroten-9-one with lutein to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM102752"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_6_epoxy_3_hydroxy_9_apo_beta_caroten_9_one_lutein-to-o2-68432",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_6_epoxy_3_hydroxy_9_apo_beta_caroten_9_one"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "lutein-to-o2-68432"
+      },
+      "note": "Shares 5,6-epoxy-3-hydroxy-9-apo-beta-caroten-9-one with lutein to O2.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM102752"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_violaxanthin_2-dehydro-d-glucose-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_violaxanthin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-dehydro-d-glucose-to-h2o-null"
+      },
+      "note": "Shares all-trans-violaxanthin with 2-Dehydro-D-glucose to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM738452"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_violaxanthin_4-2-iminoethyl-phenol-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_violaxanthin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-2-iminoethyl-phenol-to-h2o"
+      },
+      "note": "Shares all-trans-violaxanthin with 4-(2-iminoethyl)phenol to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM738452"
+          }
+        ]
+      }
+    }
+  ]
+}

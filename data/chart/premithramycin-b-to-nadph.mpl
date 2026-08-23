@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway premithramycin-b-to-nadph "premithramycin B to NADPH" {
-  spacing 200
+  spacing 242
 
   spine at 0,0 {
     premithramycin_b
@@ -34,8 +34,8 @@ pathway premithramycin-b-to-nadph "premithramycin B to NADPH" {
 
   branch from mithramycin_dk side left {
     mithramycin_dk
-    <-> . +co2 +h2o
-    premithramycin_b_lactone
+    <-> . +co2 +nadp +h +o2 +nadph
+    premithramycin_b
   }
 
   branch from mithramycin side right {
@@ -46,25 +46,67 @@ pathway premithramycin-b-to-nadph "premithramycin B to NADPH" {
 
   branch from h side left {
     h
-    <-> ec_1_3_1_29 [1.3.1.29] +nadh +1_2_dihydroxy_7_hydroxymethylnaphthalene +nad
-    cis_1_2_dihydroxy_1_2_dihydro_7_hydroxymethylnap
+    <-> . +4_o_acetyl_udp_n_acetylglucosamine +h2o +4_o_acetyl_n_acetylmannosamine
+    udp
   }
 
   branch from h side right {
     h
-    <-> ec_1_14_12_12 [1.14.12.12] +nadh +2_methylnaphthalene +o2 +nad
-    1r_2s_7_methyl_1_2_dihydronaphthalene_1_2_diol
+    <-> . +2r_3r_4s_5s_1_3_4_5_tetrahydroxy_6_oxohexan_2_a
+    nojirimycin_b
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_14_14_1 [1.14.14.1] +9z_12z_octadecadienoate +h +o2 +nadp +h2o
-    vernolate
+    <-> ec_1_3_1_93 [1.3.1.93] +2e_11z_14r_17z_14_hydroxy_icosa_2_11_17_trienoy +h +nadp
+    auricoloyl_coa
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_14_14_1 [1.14.14.1] +h +bromobenzene +o2 +nadp +h2o
-    bromobenzene_3_4_oxide
+    <-> . +gdp_6_deoxy_4_keto_d_arabino_heptose +h +nadp
+    gdp_6_deoxy_d_altro_heptose
+  }
+
+  branch from mithramycin_dk side left {
+    mithramycin_dk
+    <-> . +co2 +h2o
+    premithramycin_b_lactone
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +gdp_6_deoxy_4_keto_l_xylo_heptose +h +nadph
+    gdp_6_deoxy_l_gluco_heptose
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +tridecane_3_4_dione +h +nadph
+    cai_1
+  }
+
+  branch from h side right {
+    h
+    <-> . +dihydromonacolin_l_carboxylate +h2o
+    dihydromonacolin_l
+  }
+
+  branch from h side left {
+    h
+    <-> . +monacolin_l_carboxylate +h2o
+    monacolin_l
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +acetyl_coa +malonyl_coa +s_methylmalonyl_coa +h +decarboxy_dehydroxy_demycosaminyl_nystatin +nadp +coa +h2o
+    co2
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +7_2_dihydroxy_4_5_methylenedioxyisoflavan +h +o2 +nadp +h2o
+    10_2_dihydroxy_4_5_methylenedioxy_isoflav_8_ene
   }
 }

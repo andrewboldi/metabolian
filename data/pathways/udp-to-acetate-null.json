@@ -1,0 +1,401 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "udp-to-acetate-null",
+  "name": "UDP to acetate",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from UDP to acetate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR197660"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1102128"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "trans_zeatin_o_glucoside_7_n_glucoside",
+      "name": "trans-zeatin-O-glucoside-7-N-glucoside",
+      "short": "trans-zeatin-O-gluc…",
+      "formula": "C22H33N5O11",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM22134"
+      }
+    },
+    {
+      "id": "udp_alpha_d_glucose",
+      "name": "UDP-alpha-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1364019"
+      }
+    },
+    {
+      "id": "o_beta_d_glucosyl_trans_zeatin",
+      "name": "O-beta-D-glucosyl-trans-zeatin",
+      "short": "O-beta-D-glucosyl-t…",
+      "formula": "C16H23N5O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1371272"
+      }
+    },
+    {
+      "id": "zeatin",
+      "name": "zeatin",
+      "formula": "C10H13N5O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15333"
+      }
+    },
+    {
+      "id": "o_acetyl_l_serine",
+      "name": "O-acetyl-L-serine",
+      "formula": "C5H9NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58340"
+      }
+    },
+    {
+      "id": "l_lupinic_acid",
+      "name": "L-lupinic acid",
+      "formula": "C13H18N6O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58927"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "Acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30089"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_1_203",
+      "name": "trans-zeatin O-beta-D-glucosyltransferase",
+      "ec": [
+        "2.4.1.203"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_50",
+      "name": "zeatin 9-aminocarboxyethyltransferase",
+      "ec": [
+        "2.5.1.50"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR197660",
+      "substrates": [
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "trans_zeatin_o_glucoside_7_n_glucoside",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "udp_alpha_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o_beta_d_glucosyl_trans_zeatin",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR197660"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197660"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "trans-zeatin O-beta-D-glucosyltransferase",
+      "ec": "2.4.1.203",
+      "substrates": [
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o_beta_d_glucosyl_trans_zeatin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "udp_alpha_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "zeatin",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_203"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR197552"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197552"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "zeatin 9-aminocarboxyethyltransferase",
+      "equation": "zeatin + O-acetyl-L-serine = L-lupinate + acetate + H(+)",
+      "ec": "2.5.1.50",
+      "substrates": [
+        {
+          "metabolite": "zeatin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o_acetyl_l_serine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_lupinic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_50"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:17333"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17333"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_trans_zeatin_o_glucoside_7_n_glucoside_udp-to-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "trans_zeatin_o_glucoside_7_n_glucoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-acetate"
+      },
+      "note": "Shares trans-zeatin-O-glucoside-7-N-glucoside with UDP to acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM22134"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_o_beta_d_glucosyl_trans_zeatin_udp-to-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "o_beta_d_glucosyl_trans_zeatin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-acetate"
+      },
+      "note": "Shares O-beta-D-glucosyl-trans-zeatin with UDP to acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM1371272"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_zeatin_udp-l-arabinofuranose-to-o-d-xylosylzeatin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "zeatin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-l-arabinofuranose-to-o-d-xylosylzeatin"
+      },
+      "note": "Shares zeatin with UDP-β-L-arabinofuranose to O-β-D-xylosylzeatin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15333"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_zeatin_udp-l-arabinofuranose-to-o-d-xylosylzeatin-28350",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "zeatin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-l-arabinofuranose-to-o-d-xylosylzeatin-28350"
+      },
+      "note": "Shares zeatin with UDP-β-L-arabinofuranose to O-β-D-xylosylzeatin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15333"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_zeatin_udp-to-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "zeatin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-acetate"
+      },
+      "note": "Shares zeatin with UDP to acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:15333"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_l_lupinic_acid_udp-to-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_lupinic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-acetate"
+      },
+      "note": "Shares L-lupinic acid with UDP to acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58927"
+          }
+        ]
+      }
+    }
+  ]
+}

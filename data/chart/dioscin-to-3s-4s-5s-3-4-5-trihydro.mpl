@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dioscin-to-3s-4s-5s-3-4-5-trihydro "dioscin to (3S,4S,5S)-3,4,5-trihydro…" {
-  spacing 298
+  spacing 316
 
   spine at 0,0 {
     dioscin
@@ -34,7 +34,25 @@ pathway dioscin-to-3s-4s-5s-3-4-5-trihydro "dioscin to (3S,4S,5S)-3,4,5-trihydro
 
   branch from l_rhamnopyranose side left {
     l_rhamnopyranose
-    <-> ec_3_2_1_194 [3.2.1.194] +ginsenoside_rg2 +h2o +protopanaxatriol
-    glucose
+    <-> ec_4_2_2_28 [4.2.2.28] +h +4_deoxy_l_threo_hex_4_enopyranuronate
+    alpha_l_rhamnosyl_1_4_d_glucuronate
+  }
+
+  branch from l_rhamnopyranose side right {
+    l_rhamnopyranose
+    <-> .
+    l_rhamnulose
+  }
+
+  branch from 3_hydroxypyruvate side left {
+    3_hydroxypyruvate
+    <-> . +d_erythrose
+    3s_4s_5r_6r_3_4_5_6_7_pentahydroxy_2_oxoheptano
+  }
+
+  branch from 3_hydroxypyruvate side right {
+    3_hydroxypyruvate
+    <-> . +nad +nadh +hplus
+    glycerate
   }
 }

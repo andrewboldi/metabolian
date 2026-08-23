@@ -1,0 +1,332 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-adenosyl-l-homocysteine-to-petiolaroside-null",
+  "name": "S-adenosyl-L-homocysteine to petiolaroside",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from S-adenosyl-L-homocysteine to petiolaroside(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR195673"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_adenosyl_l_homocysteine",
+      "name": "S-adenosyl-L-homocysteine",
+      "short": "S-adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1102167"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "3_4_5_7_tetrahydroxy_3_methoxyflavone",
+      "name": "3',4',5,7-tetrahydroxy-3-methoxyflavone",
+      "short": "3',4',5,7-tetrahydr…",
+      "formula": "C16H11O7",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM2326"
+      }
+    },
+    {
+      "id": "s_s_adenosyl_l_methionine",
+      "name": "(S)-S-adenosyl-L-methionine",
+      "short": "S-adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:142094"
+      }
+    },
+    {
+      "id": "quercetin",
+      "name": "quercetin",
+      "formula": "C15H9O7",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM620"
+      }
+    },
+    {
+      "id": "glucose",
+      "name": "D-Glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4167"
+      }
+    },
+    {
+      "id": "quercetin_3_o_d_glucopyranoside",
+      "name": "quercetin 3-O-β-D-glucopyranoside",
+      "short": "quercetin…",
+      "formula": "C21H19O12",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:144437"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "udp_l_rhamnose",
+      "name": "UDP-β-L-rhamnose",
+      "formula": "C15H22N2O16P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:83836"
+      }
+    },
+    {
+      "id": "petiolaroside",
+      "name": "petiolaroside",
+      "formula": "C27H29O16",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:144436"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_76",
+      "name": "quercetin 3-O-methyltransferase",
+      "ec": [
+        "2.1.1.76"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_62",
+      "name": "glycosylceramidase",
+      "ec": [
+        "3.2.1.62"
+      ],
+      "xrefs": {
+        "uniprot": "P09848"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "quercetin 3-O-methyltransferase",
+      "ec": "2.1.1.76",
+      "substrates": [
+        {
+          "metabolite": "s_adenosyl_l_homocysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_4_5_7_tetrahydroxy_3_methoxyflavone",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_s_adenosyl_l_methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "quercetin",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_76"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR195673"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR195673"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "glycosylceramidase",
+      "ec": "3.2.1.62",
+      "substrates": [
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "quercetin",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "quercetin_3_o_d_glucopyranoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_62"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR152569"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR152569"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "quercetin 3-O-beta-D-glucoside + UDP-beta-L-rhamnose = quercetin 3-O-beta-D-glucoside-7...",
+      "equation": "quercetin 3-O-beta-D-glucoside + UDP-beta-L-rhamnose = quercetin 3-O-beta-D-glucoside-7-O-alpha-L-rhamnoside + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "quercetin_3_o_d_glucopyranoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_l_rhamnose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "petiolaroside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:61188"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61188"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_3_4_5_7_tetrahydroxy_3_methoxyflavone_s-adenosyl-l-homocysteine-to-petiolaroside",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_4_5_7_tetrahydroxy_3_methoxyflavone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-petiolaroside"
+      },
+      "note": "Shares 3',4',5,7-tetrahydroxy-3-methoxyflavone with S-adenosyl-L-homocysteine to petiolaroside.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM2326"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_petiolaroside_s-adenosyl-l-homocysteine-to-petiolaroside",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "petiolaroside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-petiolaroside"
+      },
+      "note": "Shares petiolaroside with S-adenosyl-L-homocysteine to petiolaroside.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:144436"
+          }
+        ]
+      }
+    }
+  ]
+}

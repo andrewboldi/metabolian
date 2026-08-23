@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway amino-acid-ester-to-l-argininium "α-amino acid ester to L-argininium" {
-  spacing 230
+  spacing 260
 
   spine at 0,0 {
     amino_acid_ester
@@ -30,33 +30,63 @@ pathway amino-acid-ester-to-l-argininium "α-amino acid ester to L-argininium" {
     n_terminal_l_phenylalanyl_l_amino_acid_1
   }
 
-  branch from n_terminal_l_arginyl_l_amino_acid_2 side left {
-    n_terminal_l_arginyl_l_amino_acid_2
-    <-> ec_3_4_11_27 [3.4.11.27] +h2o +n_terminal_amino_acid_1
-    l_arginine
-  }
-
-  branch from amp_3_end_1 side right {
-    amp_3_end_1
-    <-> . +3_l_alanyl_adenylyl_zwitterionic_group +h2o +hplus
-    alanine
-  }
-
   branch from amp_3_end_1 side left {
     amp_3_end_1
     <-> ec_3_6_1_n2 [3.6.1.n2] +3_l_cysteinyl_adenylyl_zwitterionic_group +h2o +hplus
     cysteine
   }
 
-  branch from arginine side right {
-    arginine
-    <-> ec_1_13_12_1 [1.13.12.1] +o2 +co2 +h2o
-    4_guanidiniumylbutanamide
+  branch from amp_3_end_1 side right {
+    amp_3_end_1
+    <-> ec_6_1_1_11 [6.1.1.11] +serine +atp +amp +ppi +hplus
+    3_l_seryl_adenylyl_1_group
   }
 
   branch from arginine side left {
     arginine
-    <-> ec_1_5_1_11 [1.5.1.11] +nad +h2o +pyruvate +nadh +hplus
-    d_octopine_dizwitterion
+    <-> ec_5_1_1_9 [5.1.1.9]
+    d_argininium
+  }
+
+  branch from arginine side right {
+    arginine
+    <-> ec_1_14_13_39 [1.14.13.39] +nadph +o2 +hplus +no +nadp +h2o
+    citrulline
+  }
+
+  branch from n_terminal_amino_acid_1 side left {
+    n_terminal_amino_acid_1
+    <-> . +sam +sah +hplus
+    n_terminal_trimethyl_amino_acid_1
+  }
+
+  branch from n_terminal_amino_acid_1 side right {
+    n_terminal_amino_acid_1
+    <-> ec_3_4_11_17 [3.4.11.17] +n_terminal_l_tryptophanyl_peptide +h2o
+    l_tryptophan
+  }
+
+  branch from amp_3_end_1 side left {
+    amp_3_end_1
+    <-> ec_2_3_2_22 [2.3.2.22] +3_l_leucyl_adenylyl_zwitterionic_group +hplus
+    cyclo_l_leucyl_l_leucyl
+  }
+
+  branch from amp_3_end_1 side right {
+    amp_3_end_1
+    <-> ec_2_3_2_6 [2.3.2.6] +l_argininiumyl_2_group +3_l_leucyl_adenylyl_zwitterionic_group +hplus
+    l_leucyl_l_arginyl_2_group
+  }
+
+  branch from arginine side left {
+    arginine
+    <-> ec_2_7_3_3 [2.7.3.3] +atp +adp +hplus
+    n_phosphonato_l_arginine
+  }
+
+  branch from arginine side right {
+    arginine
+    <-> . +nadph +o2 +hplus +nadp +h2o
+    n5_hydroxyamino_imino_methyl_l_ornithinium
   }
 }

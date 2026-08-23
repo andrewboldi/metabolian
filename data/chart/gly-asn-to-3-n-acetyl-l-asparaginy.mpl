@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway gly-asn-to-3-n-acetyl-l-asparaginy "Gly-Asn to 3'-(N-acetyl-L-asparaginy…" {
-  spacing 198
+  spacing 192
 
   spine at 0,0 {
     gly_asn
@@ -16,45 +16,39 @@ pathway gly-asn-to-3-n-acetyl-l-asparaginy "Gly-Asn to 3'-(N-acetyl-L-asparaginy
     3_n_acetyl_l_asparaginyl_adenylyl_1
   }
 
-  branch from l_asparagine side left {
-    l_asparagine
-    <-> .
-    d_asparagine
-  }
-
-  branch from l_asparagine side right {
-    l_asparagine
-    <-> . +o2 +h2o +h2o2 +nh3
-    2_oxosuccinamate
-  }
-
-  branch from glycine side left {
-    glycine
-    <-> . +hexacosanoyl_coa +coa +hplus
-    n_hexacosanoylglycinate
-  }
-
-  branch from glycine side right {
-    glycine
-    <-> . +chenodeoxycholoyl_coa +coa +hplus
-    glycochenodeoxycholate
-  }
-
-  branch from 3_l_asparaginyl_adenylyl_1_group side left {
-    3_l_asparaginyl_adenylyl_1_group
-    <-> . +nh3 +pi +hplus
-    3_4_phosphooxy_l_aspartate_adenylyl_3_group
+  branch from ppi side left {
+    ppi
+    <-> ec_2_7_7_n6 [2.7.7.n6] +l_tyrosine +gtp
+    o_guanylyl_l_tyrosine_1
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_227 [4.2.3.227] +2_cis_6_trans_farnesyl_diphosphate
-    cedr_8_ene
+    <-> ec_4_2_3_182 [4.2.3.182] +fpp +h2o
+    2s_3r_9r_pristinol
+  }
+
+  branch from amp_3_end_1 side left {
+    amp_3_end_1
+    <-> . +3_l_threonyl_adenylyl_1_group +h2o
+    threonine
+  }
+
+  branch from amp_3_end_1 side right {
+    amp_3_end_1
+    <-> . +h2o +threonine
+    3_l_threonyl_adenylyl_1_group
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_81 [4.2.3.81] +fpp
-    exo_bergamotene
+    <-> ec_4_2_3_183 [4.2.3.183] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
+    nezukol
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_184 [4.2.3.184] +fpp +h2o
+    5_hydroxy_gurjunene
   }
 }

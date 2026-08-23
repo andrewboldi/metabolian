@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-3-carboxylatopropanoyl-to-quinolinate "S-(3-carboxylatopropanoyl… to quinolinate" {
-  spacing 218
+  spacing 254
 
   spine at 0,0 {
     s_3_carboxylatopropanoyl_glutathionate
@@ -20,31 +20,67 @@ pathway s-3-carboxylatopropanoyl-to-quinolinate "S-(3-carboxylatopropanoyl… to
 
   branch from gsh side left {
     gsh
-    <-> ec_1_8_1_7 [1.8.1.7] +nadp +nadph +hplus
+    <-> ec_1_11_1_9 [1.11.1.9] +h2o2 +h2o
     gssg
   }
 
   branch from gsh side right {
     gsh
-    <-> ec_1_20_4_2 [1.20.4.2] +methylarsonate +hplus +gssg +h2o
-    methylarsonous_acid
+    <-> . +13_s_hpode +gssg +h2o
+    13_s_hode
   }
 
   branch from succinate side left {
     succinate
-    <-> ec_2_8_3_22 [2.8.3.22] +succinyl_coa +malate
-    3s_3_carboxy_3_hydroxypropanoyl_coa
+    <-> ec_1_14_20_4 [1.14.20.4] +2r_3s_4s_leucoanthocyanidin +akg +o2 +co2 +h2o
+    4_unsubstituted_3_hydroxyanthocyanidin_betaine
   }
 
   branch from succinate side right {
     succinate
-    <-> ec_2_8_3_22 [2.8.3.22] +l_citramalate +succinyl_coa
-    3s_citramalyl_coa
+    <-> . +2r_3s_4s_leucoanthocyanidin +akg +o2 +co2 +h2o +hplus
+    4s_2_3_dehydroflavan_3_4_diol
   }
 
   branch from iminoaspartate side left {
     iminoaspartate
     <-> ec_4_2_1_184 [4.2.1.184] +h2o
     3s_3_hydroxy_d_aspartate
+  }
+
+  branch from gsh side right {
+    gsh
+    <-> ec_4_4_1_34 [4.4.1.34] +s_1_hydroxy_2_methylbut_3_en_2_yl_glutathione
+    3r_3_4_epoxy_3_methylbut_1_ene
+  }
+
+  branch from gsh side left {
+    gsh
+    <-> . +11_s_hydroxy_14_s_15_s_hepoxilin_a3
+    11_s_15_s_dihydroxy_14_r_s_glutathionyl_5_z_8_z
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> . +palmitoyl_coa +akg +o2 +co2
+    2_hydroxypalmitoyl_coa
+  }
+
+  branch from succinate side left {
+    succinate
+    <-> . +octanoyl_coa +akg +o2 +co2
+    2_hydroxyoctanoyl_coa
+  }
+
+  branch from aspartate side right {
+    aspartate
+    <-> ec_4_1_1_11 [4.1.1.11] +hplus +co2
+    alanine
+  }
+
+  branch from aspartate side left {
+    aspartate
+    <-> ec_2_7_2_4 [2.7.2.4] +atp +adp
+    4_phosphonato_l_aspartic_acid
   }
 }

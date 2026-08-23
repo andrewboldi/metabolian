@@ -22,39 +22,39 @@ pathway n-acetyldemethylphosphino-to-hypoxanthine "N-Acetyldemethylphosphino… 
     glufosinate_p
   }
 
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> . +dopamine +hydrogen_donor +h2o
-    m_tyraminium
-  }
-
-  branch from hydrogen_acceptor side left {
-    hydrogen_acceptor
-    <-> . +dehydroprobetaenone_i +hydrogen_donor
-    probetaenone_i
-  }
-
   branch from sah side right {
     sah
-    <-> ec_2_1_1_177 [2.1.1.177] +pseudouridine_5_phosphate_1 +sam +hplus
-    n3_methylpseudouridine_5_monophosphate_1
+    <-> . +kaempferol_oxoanion +sam +hplus
+    kaempferol_3_olate_7_methyl_ether
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_178 [2.1.1.178] +cytidine_5_monophosphate_1 +sam +hplus
-    5_methylcytidine_5_monophosphate_1
+    <-> . +4_8_dihydroxyflavone_7_olate +sam
+    4_8_dihydroxy_7_methoxyflavone
   }
 
-  branch from nh3 side right {
-    nh3
-    <-> . +glutamine +o2 +h2o +h2o2
-    2_oxoglutaramate
+  branch from sam side right {
+    sam
+    <-> . +8_hydroxy_7_methoxyflavone +sah +hplus
+    7_8_dimethoxyflavone
   }
 
-  branch from nh3 side left {
-    nh3
-    <-> . +o2 +h2o +pyruvate +h2o2
-    alanine
+  branch from sam side left {
+    sam
+    <-> . +4_8_dihydroxyflavone_7_olate +sah +hplus
+    4_hydroxy_8_methoxyflavone_7_olate
+  }
+
+  branch from sah side right {
+    sah
+    <-> . +scutellarein +sam +hplus
+    scutellarein_7_olate_4_methyl_ether
+  }
+
+  branch from sah side left {
+    sah
+    <-> . +cirsiliol +sam +hplus
+    eupatorin
   }
 }

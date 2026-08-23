@@ -156,6 +156,16 @@
       "xrefs": {
         "chebi": "CHEBI:234449"
       }
+    },
+    {
+      "id": "5_pregnan_11_ol_3_20_dione",
+      "name": "5α-pregnan-11β-ol-3,20-dione",
+      "short": "5α-pregnan-11β-ol-3…",
+      "formula": "C21H32O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:233590"
+      }
     }
   ],
   "enzymes": [],
@@ -434,6 +444,161 @@
           {
             "db": "Rhea",
             "id": "RHEA:85543"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "11beta-hydroxyprogesterone + NADPH + H(+) = 11beta-hydroxy-5alpha-pregnan-3,20-dione + ...",
+      "equation": "11beta-hydroxyprogesterone + NADPH + H(+) = 11beta-hydroxy-5alpha-pregnan-3,20-dione + NADP(+)",
+      "substrates": [
+        {
+          "metabolite": "11_hydroxyprogesterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_pregnan_11_ol_3_20_dione",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:84191"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84191"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_11_hydroxyprogesterone_progesterone-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11_hydroxyprogesterone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "progesterone-to-fmn"
+      },
+      "note": "Shares 11β-hydroxyprogesterone with progesterone to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:28247"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_11_ketoprogesterone_progesterone-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11_ketoprogesterone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "progesterone-to-fmn"
+      },
+      "note": "Shares 11-Ketoprogesterone with progesterone to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:166773"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_5_pregnan_3_11_20_trione_2r-2-hydroxy-4-methyls-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "5_pregnan_3_11_20_trione"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2r-2-hydroxy-4-methyls-to-h2o"
+      },
+      "note": "Shares 5α-pregnan-3,11,20-trione with (2R)-2-hydroxy-4-(methyls… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:233589"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_11_ketoandrosterone_11beta-hydroxy-5alpha-and-to-11-keto-5-androstan",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11_ketoandrosterone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "11beta-hydroxy-5alpha-and-to-11-keto-5-androstan"
+      },
+      "note": "Shares 11-Ketoandrosterone with 11beta-hydroxy-5alpha-and… to 11-keto-5α-androstane-3α,….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:34134"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_11_keto_5_androstane_3_17_diol_11beta-hydroxy-5alpha-and-to-11-keto-5-androstan",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "11_keto_5_androstane_3_17_diol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "11beta-hydroxy-5alpha-and-to-11-keto-5-androstan"
+      },
+      "note": "Shares 11-keto-5α-androstane-3α,17β-diol with 11beta-hydroxy-5alpha-and… to 11-keto-5α-androstane-3α,….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:234449"
           }
         ]
       }

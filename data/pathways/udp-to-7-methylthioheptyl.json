@@ -131,85 +131,6 @@
       "xrefs": {
         "chebi": "CHEBI:80988"
       }
-    },
-    {
-      "id": "glucoiberverin",
-      "name": "Glucoiberverin",
-      "formula": "C11H21NO9S3",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1371927"
-      }
-    },
-    {
-      "id": "3_methylthiopropyl_desulfoglucosinolate",
-      "name": "3-Methylthiopropyl-desulfoglucosinolate",
-      "short": "3-Methylthiopropyl-…",
-      "formula": "C11H21NO6S2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1370906"
-      }
-    },
-    {
-      "id": "omega_sulfo_beta_dihydromenaquinone_9",
-      "name": "omega-Sulfo-beta-dihydromenaquinone-9",
-      "short": "omega-Sulfo-beta-di…",
-      "formula": "C56H82O6S",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1372664"
-      }
-    },
-    {
-      "id": "omega_hydroxy_beta_dihydromenaquinone_9",
-      "name": "omega-Hydroxy-beta-dihydromenaquinone-9",
-      "short": "omega-Hydroxy-beta-…",
-      "formula": "C56H82O3",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1368600"
-      }
-    },
-    {
-      "id": "keratan_sulfate_ii_core_4_linked",
-      "name": "keratan sulfate II (core 4-linked)",
-      "short": "keratan sulfate II…",
-      "formula": "C86H132N8O70S3",
-      "charge": -10,
-      "xrefs": {
-        "metanetx": "MNXM1560647"
-      }
-    },
-    {
-      "id": "keratan_sulfate_ii_biosynthesis_precursor_10",
-      "name": "keratan sulfate II biosynthesis, precursor 10",
-      "short": "keratan sulfate II…",
-      "formula": "C86H133N8O67S2",
-      "charge": -9,
-      "xrefs": {
-        "metanetx": "MNXM1560649"
-      }
-    },
-    {
-      "id": "keratan_sulfate_ii_biosynthesis_precursor_9",
-      "name": "keratan sulfate II biosynthesis, precursor 9",
-      "short": "keratan sulfate II…",
-      "formula": "C78H121N7O62S2",
-      "charge": -8,
-      "xrefs": {
-        "metanetx": "MNXM1560646"
-      }
-    },
-    {
-      "id": "keratan_sulfate_ii_biosynthesis_precursor_8",
-      "name": "keratan sulfate II biosynthesis, precursor 8",
-      "short": "keratan sulfate II…",
-      "formula": "C78H122N7O59S",
-      "charge": -7,
-      "xrefs": {
-        "metanetx": "MNXM1560645"
-      }
     }
   ],
   "enzymes": [
@@ -218,13 +139,6 @@
       "name": "aliphatic desulfoglucosinolate sulfotransferase",
       "ec": [
         "2.8.2.38"
-      ]
-    },
-    {
-      "id": "ec_2_8_2_40",
-      "name": "omega-hydroxy-beta-dihydromenaquinone-9 sulfotransferase",
-      "ec": [
-        "2.8.2.40"
       ]
     }
   ],
@@ -398,169 +312,71 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "Reaction MNXR196164",
-      "substrates": [
-        {
-          "metabolite": "adenosine_3_5_bisphosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glucoiberverin",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_phosphoadenylyl_sulfate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "3_methylthiopropyl_desulfoglucosinolate",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR196164"
+      "id": "xt_keratan_sulfate_ii_biosynthesis_precursor_8_udp-to-sulfate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "keratan_sulfate_ii_biosynthesis_precursor_8"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-sulfate"
+      },
+      "note": "Shares keratan sulfate II biosynthesis, precursor 8 with UDP to sulfate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR196164"
+            "id": "MNXM1560656"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "omega-hydroxy-beta-dihydromenaquinone-9 sulfotransferase",
-      "ec": "2.8.2.40",
-      "substrates": [
-        {
-          "metabolite": "adenosine_3_5_bisphosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "omega_sulfo_beta_dihydromenaquinone_9",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_phosphoadenylyl_sulfate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "omega_hydroxy_beta_dihydromenaquinone_9",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_8_2_40"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "metanetx": "MNXR198994"
+      "id": "xt_keratan_sulfate_ii_biosynthesis_precursor_5_udp-to-keratan-sulfate-ii",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "keratan_sulfate_ii_biosynthesis_precursor_5"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-keratan-sulfate-ii"
+      },
+      "note": "Shares keratan sulfate II biosynthesis, precursor 5 with UDP to keratan sulfate II….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR198994"
+            "id": "MNXM1560653"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "Reaction MNXR206827",
-      "substrates": [
-        {
-          "metabolite": "adenosine_3_5_bisphosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "keratan_sulfate_ii_core_4_linked",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_phosphoadenylyl_sulfate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "keratan_sulfate_ii_biosynthesis_precursor_10",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "metanetx": "MNXR206827"
+      "id": "xt_7_methylthioheptyl_desulfoglucosinolate_r-pantothenate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_methylthioheptyl_desulfoglucosinolate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "r-pantothenate-to-h2o"
+      },
+      "note": "Shares 7-Methylthioheptyl-desulfoglucosinolate with (R)-pantothenate to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR206827"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r8",
-      "name": "Reaction MNXR206829",
-      "substrates": [
-        {
-          "metabolite": "adenosine_3_5_bisphosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "keratan_sulfate_ii_biosynthesis_precursor_9",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_phosphoadenylyl_sulfate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "keratan_sulfate_ii_biosynthesis_precursor_8",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "metanetx": "MNXR206829"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR206829"
+            "id": "MNXM10427"
           }
         ]
       }

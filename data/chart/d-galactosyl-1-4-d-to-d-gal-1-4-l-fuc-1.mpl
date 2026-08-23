@@ -16,15 +16,15 @@ pathway d-galactosyl-1-4-d-to-d-gal-1-4-l-fuc-1 "β-D-galactosyl-(1→4)-β-D-�
     d_gal_1_4_l_fuc_1_3_d_glcnac_1_3_d_gal_1_4_d_gl
   }
 
-  branch from d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_glc_1_1_cer side left {
-    d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_glc_1_1_cer
-    <-> . +gdp_l_fucose +gdp +hplus
-    l_fucosyl_1_2_d_galactosyl_1_4_n_acetyl_d_gluco
+  branch from gdp_l_fucose side left {
+    gdp_l_fucose
+    <-> . +d_galactosyl_1_4_n_acetyl_d_6_sulfooxy_glucosam +gdp +hplus
+    d_galactosyl_1_4_l_fucosyl_1_3_n_acetyl_d_6_sul
   }
 
-  branch from d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_glc_1_1_cer side right {
-    d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_glc_1_1_cer
-    <-> . +udp_d_galactose +udp +hplus
-    d_galactosyl_1_4_d_galactosyl_1_4_n_acetyl_d_gl
+  branch from gdp_l_fucose side right {
+    gdp_l_fucose
+    <-> . +n_acetyl_neuraminosyl_2_3_d_galactosyl_1_4_n_ace +gdp +hplus
+    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_4_n_ace
   }
 }

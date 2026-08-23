@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 6-methylsalicylate-to-3-hydroxybenzaldehyde "6-methylsalicylate to 3-hydroxybenzaldehyde" {
-  spacing 230
+  spacing 218
 
   spine at 0,0 {
     6_methylsalicylate
@@ -20,17 +20,5 @@ pathway 6-methylsalicylate-to-3-hydroxybenzaldehyde "6-methylsalicylate to 3-hyd
     3_hydroxybenzyl_alcohol
     <-> . +acetyl_coa +coa
     3_hydroxybenzyl_acetate
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +6_deoxo_28_norteasterone +fmnh2 +o2 +h2o +hplus
-    28_norteasterone
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +6_deoxo_28_norteasterone +fmnh2 +o2 +h2o +hplus
-    6_hydroxy_28_norteasterone
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway pmf-to-ammonium "PMF to ammonium" {
-  spacing 236
+  spacing 260
 
   spine at 0,0 {
     pmf
@@ -20,49 +20,73 @@ pathway pmf-to-ammonium "PMF to ammonium" {
 
   branch from pmf side left {
     pmf
-    <-> . +phenylalanine
-    l_phenylalanine
+    <-> . +asparagine
+    l_asparagine
   }
 
   branch from pmf side right {
     pmf
-    <-> . +h +adp +phosphate +h2o
-    atp
-  }
-
-  branch from nh4 side left {
-    nh4
-    <-> ec_3_5_99_11 [3.5.99.11] +h +2e_4z_2_hydroxymuconate +h2o
-    2e_4z_2_aminomuconic_acid
-  }
-
-  branch from nh4 side right {
-    nh4
-    <-> ec_4_4_1_1 [4.4.1.1] +l_homocysteine +pyruvate +h2o
-    cystathionine
+    <-> . +partially_degraded_s_cerevisiae_mannan_extracell
+    partially_degraded_s_cerevisiae_mannan_periplasm
   }
 
   branch from h2o2 side left {
     h2o2
-    <-> . +nadh +octanedioyl_coa +acetyl_coa +h +coa +o2 +nad +h2o
-    decanedioyl_coa
+    <-> . +decanoyl_coa +coa +o2 +nad +h2o +nadh +acetyl_coa +h
+    octanoyl_coa
   }
 
   branch from h2o2 side right {
     h2o2
-    <-> . +4z_7z_10z_13z_hexadecatetraenoyl_coa +o2
-    2e_4z_7z_10z_13z_hexadecapentaenoyl_coa
+    <-> . +decanoyl_coa +nadh +acetyl_coa +h +coa +o2 +nad +h2o
+    dodecanoyl_coa
   }
 
-  branch from nh3 side left {
-    nh3
-    <-> . +3_4_dimethoxy_l_phenylalanine
-    3_4_dimethoxy_e_cinnamate
+  branch from pmf side left {
+    pmf
+    <-> ec_3_6_3_6 [3.6.3.6] +h +adp +phosphate +h2o
+    atp
   }
 
-  branch from nh3 side right {
-    nh3
-    <-> . +arginine +adp +pi +hplus +atp
-    citrulline
+  branch from pmf side right {
+    pmf
+    <-> . +adp +phosphate +atp +h2o
+    h
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +pmf +ubiquinone_8 +h2o +pmf
+    ubiquinol_8
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +nadh +9z_12z_15z_octadecatrienoyl_coa +h +nad +h2o
+    6z_9z_12z_15z_octadecatetraenoyl_coa
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +d_glucuronate +sch_57871
+    sch_57871_glucuronide
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +h +succinate +2s_6s_2_6_diaminopimelate
+    n_succinyl_l_l_2_6_diaminopimelate
+  }
+
+  branch from h2o2 side left {
+    h2o2
+    <-> . +dodecanoyl_coa +nadh +acetyl_coa +h +coa +o2 +nad +h2o
+    tetradecanoyl_coa
+  }
+
+  branch from h2o2 side right {
+    h2o2
+    <-> . +nadh +acetyl_coa +tetradecanoyl_coa +h +coa +o2 +nad +h2o
+    hexadecanoyl_coa
   }
 }

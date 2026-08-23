@@ -91,9 +91,73 @@
       "xrefs": {
         "chebi": "CHEBI:15378"
       }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "biliverdin",
+      "name": "biliverdin",
+      "formula": "C33H32N4O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57991"
+      }
+    },
+    {
+      "id": "candesartan",
+      "name": "candesartan",
+      "formula": "C24H18N6O3",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:149509"
+      }
+    },
+    {
+      "id": "candesartan_2_n_d_glucuronide",
+      "name": "candesartan-2-N-β-D-glucuronide",
+      "short": "candesartan-2-N-β-D…",
+      "formula": "C30H26N6O9",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:149523"
+      }
+    },
+    {
+      "id": "zolasartan",
+      "name": "zolasartan",
+      "formula": "C24H18BrClN6O3",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:149524"
+      }
+    },
+    {
+      "id": "zolarsartan_o_d_glucuronoside",
+      "name": "zolarsartan O-β-D-glucuronoside",
+      "short": "zolarsartan…",
+      "formula": "C30H26BrClN6O9",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:149526"
+      }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_1_3_3_5",
+      "name": "bilirubin oxidase",
+      "ec": [
+        "1.3.3.5"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -212,6 +276,395 @@
           {
             "db": "Rhea",
             "id": "RHEA:79243"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "bilirubin oxidase",
+      "equation": "2 (4Z,15Z)-bilirubin IXalpha + O2 = 2 biliverdin IXalpha + 2 H2O",
+      "ec": "1.3.3.5",
+      "substrates": [
+        {
+          "metabolite": "bilirubin",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "biliverdin",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_3_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:20980"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20980"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "candesartan + UDP-alpha-D-glucuronate = candesartan-2-N-beta-D-glucuronide + UDP",
+      "equation": "candesartan + UDP-alpha-D-glucuronate = candesartan-2-N-beta-D-glucuronide + UDP",
+      "substrates": [
+        {
+          "metabolite": "candesartan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucuronate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "candesartan_2_n_d_glucuronide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:63728"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63728"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "zolasartan + UDP-alpha-D-glucuronate = zolarsartan O-beta-D-glucuronoside + UDP",
+      "equation": "zolasartan + UDP-alpha-D-glucuronate = zolarsartan O-beta-D-glucuronoside + UDP",
+      "substrates": [
+        {
+          "metabolite": "zolasartan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucuronate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "zolarsartan_o_d_glucuronoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:63732"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63732"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_bilirubin_7-ammoniomethyl-7-deazagu-to-d-mannosyl-4-o-queu",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "bilirubin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "7-ammoniomethyl-7-deazagu-to-d-mannosyl-4-o-queu"
+      },
+      "note": "Shares bilirubin with 7-ammoniomethyl-7-deazagu… to α-D-mannosyl-4''-O-queuos….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57977"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_bilirubin_bilirubin-to-d-glucopyranuronate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "bilirubin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "bilirubin-to-d-glucopyranuronate"
+      },
+      "note": "Shares bilirubin with bilirubin to D-glucopyranuronate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57977"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_bilirubin_hydrazine-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "bilirubin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hydrazine-to-fmn"
+      },
+      "note": "Shares bilirubin with hydrazine to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57977"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_bilirubin_l-gulono-1-4-lactone-to-d-fructofuranuronate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "bilirubin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-gulono-1-4-lactone-to-d-fructofuranuronate"
+      },
+      "note": "Shares bilirubin with L-gulono-1,4-lactone to D-fructofuranuronate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57977"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4z_15z_bilirubin_ix_c8_d_glucuronoside_l-gulono-1-4-lactone-to-d-fructofuranuronate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4z_15z_bilirubin_ix_c8_d_glucuronoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-gulono-1-4-lactone-to-d-fructofuranuronate"
+      },
+      "note": "Shares (4Z,15Z)-bilirubin IXα C8-β-D-glucuronoside with L-gulono-1,4-lactone to D-fructofuranuronate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:229704"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4z_15z_bilirubin_ix_c8_c12_d_bisglucuronoside_bilirubin-to-d-glucopyranuronate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4z_15z_bilirubin_ix_c8_c12_d_bisglucuronoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "bilirubin-to-d-glucopyranuronate"
+      },
+      "note": "Shares (4Z,15Z)-bilirubin IXα C8,C12-β-D-bisglucuronoside with bilirubin to D-glucopyranuronate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:229706"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_biliverdin_5-cholestan-3-one-to-hydrogen-donor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "biliverdin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-cholestan-3-one-to-hydrogen-donor"
+      },
+      "note": "Shares biliverdin with 5β-cholestan-3-one to hydrogen donor.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57991"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_biliverdin_5-formimidoyltetrahydrofo-to-methyl-com",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "biliverdin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-formimidoyltetrahydrofo-to-methyl-com"
+      },
+      "note": "Shares biliverdin with 5-formimidoyltetrahydrofo… to methyl-CoM.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57991"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_biliverdin_bilirubin-to-d-glucopyranuronate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "biliverdin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "bilirubin-to-d-glucopyranuronate"
+      },
+      "note": "Shares biliverdin with bilirubin to D-glucopyranuronate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57991"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_biliverdin_hydrazine-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "biliverdin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hydrazine-to-fmn"
+      },
+      "note": "Shares biliverdin with hydrazine to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:57991"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_candesartan_bilirubin-to-d-glucopyranuronate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "candesartan"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "bilirubin-to-d-glucopyranuronate"
+      },
+      "note": "Shares candesartan with bilirubin to D-glucopyranuronate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:149509"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_zolasartan_oleanolate-to-3-o-d-glucuronosyl-me",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "zolasartan"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "oleanolate-to-3-o-d-glucuronosyl-me"
+      },
+      "note": "Shares zolasartan with oleanolate to 3-O-(β-D-glucuronosyl)-me….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:149524"
           }
         ]
       }

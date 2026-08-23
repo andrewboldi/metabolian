@@ -110,43 +110,6 @@
       "xrefs": {
         "chebi": "CHEBI:32337"
       }
-    },
-    {
-      "id": "s_methyl_l_cysteinyl_adenylate",
-      "name": "(S-methyl-L-cysteinyl)adenylate",
-      "short": "(S-methyl-L-cystein…",
-      "formula": "C14H21N6O8PS",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1132405"
-      }
-    },
-    {
-      "id": "l_cysteinyl_amp",
-      "name": "L-cysteinyl-AMP",
-      "formula": "C13H19N6O8PS",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:144924"
-      }
-    },
-    {
-      "id": "pyrrolomycin_h",
-      "name": "Pyrrolomycin H",
-      "formula": "C12H8Cl4N2O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:222702"
-      }
-    },
-    {
-      "id": "pyrrolomycin_g",
-      "name": "Pyrrolomycin G",
-      "formula": "C11H6Cl4N2O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:210960"
-      }
     }
   ],
   "enzymes": [],
@@ -276,87 +239,225 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "Reaction MNXR193353",
-      "substrates": [
-        {
-          "metabolite": "s_adenosyl_l_homocysteine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "s_methyl_l_cysteinyl_adenylate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "s_adenosyl_l_methionine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_cysteinyl_amp",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR193353"
+      "id": "xt_3a_deolivosylpremithramycin_b_urdamycin-f-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3a_deolivosylpremithramycin_b"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "urdamycin-f-to-h2o"
+      },
+      "note": "Shares 3A-Deolivosylpremithramycin B with Urdamycin F to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR193353"
+            "db": "ChEBI",
+            "id": "CHEBI:81905"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "Reaction MNXR193645",
-      "substrates": [
-        {
-          "metabolite": "s_adenosyl_l_homocysteine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pyrrolomycin_h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "pyrrolomycin_g",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "s_adenosyl_l_methionine",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR193645"
+      "id": "xt_premithramycin_a3_co2-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "premithramycin_a3"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "co2-to-h2o-null"
+      },
+      "note": "Shares Premithramycin A3 with CO2 to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR193645"
+            "db": "ChEBI",
+            "id": "CHEBI:32048"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dtdp_d_olivose_dtdp-to-h",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dtdp_d_olivose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-to-h"
+      },
+      "note": "Shares dTDP-D-olivose with dTDP to H.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29729"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dtdp_d_olivose_dtdp-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dtdp_d_olivose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-to-h2o"
+      },
+      "note": "Shares dTDP-D-olivose with dTDP to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29729"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dtdp_d_olivose_dtdp-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dtdp_d_olivose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-to-h2o-null"
+      },
+      "note": "Shares dTDP-D-olivose with dTDP to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29729"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dtdp_d_olivose_o-methyl-l-tyrosine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dtdp_d_olivose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "o-methyl-l-tyrosine-to-h2o"
+      },
+      "note": "Shares dTDP-D-olivose with O-methyl-L-tyrosine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29729"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dtdp_d_olivose_urdamycin-f-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dtdp_d_olivose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "urdamycin-f-to-h2o"
+      },
+      "note": "Shares dTDP-D-olivose with Urdamycin F to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:29729"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_premithramycin_a2_dtdp-to-h",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "premithramycin_a2"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-to-h"
+      },
+      "note": "Shares premithramycin A2' with dTDP to H.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:32047"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dtdp_beta_d_mycarose_dtdp-to-h",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dtdp_beta_d_mycarose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dtdp-to-h"
+      },
+      "note": "Shares dTDP-beta-D-mycarose with dTDP to H.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:32337"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_dtdp_beta_d_mycarose_o-methyl-l-tyrosine-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "dtdp_beta_d_mycarose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "o-methyl-l-tyrosine-to-h2o"
+      },
+      "note": "Shares dTDP-beta-D-mycarose with O-methyl-L-tyrosine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:32337"
           }
         ]
       }

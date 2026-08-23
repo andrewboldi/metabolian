@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway h-to-9r-10s-9-10-epoxy-9-10 "H to (9R,10S)-9,10-epoxy-9,10-…" {
-  spacing 250
+  spacing 292
 
   spine at 0,0 {
     h
@@ -18,31 +18,73 @@ pathway h-to-9r-10s-9-10-epoxy-9-10 "H to (9R,10S)-9,10-epoxy-9,10-…" {
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_62 [1.1.1.62] +2_3_pentanediol +h +nadph
-    pentane_2_3_dione
+    <-> . +tetrahydrogeranylgeranyl_bacteriochlorophyllide +h +nadph
+    7r_8z_bacteriochlorophyll_b
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_21 [1.1.1.21] +diacetyl +h +nadph
-    butane_2_3_diol
+    <-> . +h +nadph +6_dehydro_scb3
+    scb3
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_14_13_84 [1.14.13.84] +phenyl_butyrate +nadp +h +o2 +nadph
-    butyrophenone
+    <-> . +h +adp +phosphate +atp
+    l_sorbosone_2_6_lactone
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_14_13_84 [1.14.13.84] +isobutyrophenone +h +o2 +nadph +nadp
-    phenyl_isobutyrate
+    <-> . +h +adp +phosphate +atp
+    perosamine
   }
 
-  branch from 9r_10s_9_10_epoxy_9_10_dihydrophenanthrene side left {
-    9r_10s_9_10_epoxy_9_10_dihydrophenanthrene
-    <-> . +nadh +h +phenanthrene +o2 +h2o
-    nad
+  branch from h side left {
+    h
+    <-> . +phellandrene
+    alpha_terpinyl_cation
+  }
+
+  branch from h side right {
+    h
+    <-> . +hexacosanal +carbon_monoxide
+    pentacosane
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_1_1_412 [1.1.1.412] +h +2r_2_dodecyl_3_oxohexadecanoate +nadp
+    2r_3s_2_dodecyl_3_hydroxyhexadecanoate
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> . +h +mupirocin_f1 +nadp
+    pseudomonate_a
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +geranylgeranyl_bacteriochlorophyllide_b +h +nadph
+    dihydrogeranylgeranyl_bacteriochlorophyllide_b
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +pseudomonate_c +h +nadph
+    deoxymupirocin_f
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +h +adp +phosphate +atp
+    1_5_anhydro_d_mannitol
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +h +adp +phosphate +atp
+    6_6_kestotetraose
   }
 }

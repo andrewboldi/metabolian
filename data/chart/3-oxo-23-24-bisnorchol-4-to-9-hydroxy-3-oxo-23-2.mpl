@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-oxo-23-24-bisnorchol-4-to-9-hydroxy-3-oxo-23-2 "3-oxo-23,24-bisnorchol-4-… to 9α-hydroxy-3-oxo-23,24-bi…" {
-  spacing 176
+  spacing 194
 
   spine at 0,0 {
     3_oxo_23_24_bisnorchol_4_en_22_oate
@@ -30,13 +30,31 @@ pathway 3-oxo-23-24-bisnorchol-4-to-9-hydroxy-3-oxo-23-2 "3-oxo-23,24-bisnorchol
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_97 [4.2.3.97] +fpp
-    cadinene
+    <-> . +fpp
+    sesquisabinene_a
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_128 [4.2.3.128] +fpp
-    cubebene
+    <-> . +gpp +h2o
+    4_terpineol
+  }
+
+  branch from 3_oxo_23_24_bisnorchol_4_en_22_oate side left {
+    3_oxo_23_24_bisnorchol_4_en_22_oate
+    <-> . +nadh +o2 +hplus +nad +h2o
+    9_hydroxy_3_oxo_23_24_bisnorchol_4_en_22_oate
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_205 [4.2.3.205] +pre_sodorifen_diphosphate
+    sodorifen
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_204 [4.2.3.204] +fpp +h2o
+    valerianol
   }
 }

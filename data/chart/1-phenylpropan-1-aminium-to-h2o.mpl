@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-phenylpropan-1-aminium-to-h2o "1-phenylpropan-1-aminium to H2O" {
-  spacing 280
+  spacing 340
 
   spine at 0,0 {
     1_phenylpropan_1_aminium
@@ -26,28 +26,52 @@ pathway 1-phenylpropan-1-aminium-to-h2o "1-phenylpropan-1-aminium to H2O" {
     o2
   }
 
-  branch from alanine side right {
-    alanine
-    <-> . +atp +hplus +ppi
-    l_alanyl_amp
-  }
-
-  branch from alanine side left {
-    alanine
-    <-> . +3_phenylpropylaminium +pyruvate
-    3_phenylpropanal
-  }
-
   branch from n_n_dimethyl_4_nitrosoaniline side right {
+    n_n_dimethyl_4_nitrosoaniline
+    <-> ec_1_1_99_36 [1.1.99.36] +acetophenone +4_hydroxylamino_n_n_dimethylaniline
+    1_phenylethanol
+  }
+
+  branch from n_n_dimethyl_4_nitrosoaniline side left {
     n_n_dimethyl_4_nitrosoaniline
     <-> ec_1_1_99_36 [1.1.99.36] +4_hydroxylamino_n_n_dimethylaniline +phenylacetone
     1_phenylpropan_2_ol
   }
 
-  branch from n_n_dimethyl_4_nitrosoaniline side left {
-    n_n_dimethyl_4_nitrosoaniline
-    <-> ec_1_1_99_36 [1.1.99.36] +4_hydroxylamino_n_n_dimethylaniline +cyclohexanone
+  branch from 4_hydroxylamino_n_n_dimethylaniline side right {
+    4_hydroxylamino_n_n_dimethylaniline
+    <-> ec_1_1_99_36 [1.1.99.36] +1_phenylbutan_2_one +n_n_dimethyl_4_nitrosoaniline
+    1_phenylbutan_2_ol
+  }
+
+  branch from 4_hydroxylamino_n_n_dimethylaniline side left {
+    4_hydroxylamino_n_n_dimethylaniline
+    <-> ec_1_1_99_36 [1.1.99.36] +cyclohexanone +n_n_dimethyl_4_nitrosoaniline
     cyclohexanol
+  }
+
+  branch from benzyl_alcohol side right {
+    benzyl_alcohol
+    <-> . +h +acetate +h2o
+    benzyl_acetate
+  }
+
+  branch from benzyl_alcohol side left {
+    benzyl_alcohol
+    <-> . +nadh +h +o2 +toluene +h2o
+    nad
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_1_1_81 [3.1.1.81] +n_3_oxooctanoyl_l_homoserine
+    3_oxo_n_3s_2_oxotetrahydrofuran_3_yl_octanamide
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +h +5_chloro_2_methyl_maleylacetate
+    5_chloro_2_methyl_dienelactone
   }
 
   branch from 4_hydroxylamino_n_n_dimethylaniline side right {
@@ -56,27 +80,63 @@ pathway 1-phenylpropan-1-aminium-to-h2o "1-phenylpropan-1-aminium to H2O" {
     propane_1_3_diol
   }
 
+  branch from benzaldehyde side left {
+    benzaldehyde
+    <-> ec_1_14_13_84 [1.14.13.84] +benzoate +nadp +h2o +o2
+    nadph
+  }
+
+  branch from benzaldehyde side right {
+    benzaldehyde
+    <-> ec_4_1_2_26 [4.1.2.26] +glycine
+    l_threo_3_phenylserine
+  }
+
   branch from benzyl_alcohol side left {
     benzyl_alcohol
-    <-> . +h +acetate +h2o
-    benzyl_acetate
+    <-> ec_1_1_99_36 [1.1.99.36] +3_4_dimethoxybenzaldehyde +benzaldehyde
+    3_4_dimethoxyphenyl_methanol
   }
 
   branch from benzyl_alcohol side right {
     benzyl_alcohol
-    <-> . +nadh +h +o2 +toluene +h2o
-    nad
+    <-> ec_3_5_1_133 [3.5.1.133] +co2 +l_glutamine +h +h2o
+    n_carbobenzyloxy_l_glutamine
+  }
+
+  branch from h side left {
+    h
+    <-> ec_5_5_1_7 [5.5.1.7] +3_6_dichloro_3a_methyl_dihydro_3h_furo_3_2_b_fur
+    2_5_dichloro_3_methyl_muconolactone
+  }
+
+  branch from h side right {
+    h
+    <-> . +2_chloro_3_methyl_maleylacetate +h2o
+    2_chloro_3_methyl_dienelactone
+  }
+
+  branch from benzoate side left {
+    benzoate
+    <-> . +h +o2 +nadph +1_hydroxy_6_oxocyclohex_2_ene_1_carboxylate
+    nadp
+  }
+
+  branch from benzoate side right {
+    benzoate
+    <-> ec_3_1_2_23 [3.1.2.23] +benzoyl_coa +h2o +h
+    coa
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_4_1_2_34 [4.1.2.34] +2_formylbenzoate +h +pyruvate
-    trans_2_carboxybenzylidenepyruvic_acid
+    <-> . +3_hydroxybenzoate +h +chloride
+    3_chlorobenzoate
   }
 
   branch from h2o side right {
     h2o
-    <-> . +3_beta_d_galactosyl_sn_glycerol +glycerol
-    aldehydo_d_galactose
+    <-> . +16_hydroxyhexadecanoyl_coa +h +o2 +nadph +nadp
+    10_16_dihydroxypalmitoyl_coa
   }
 }

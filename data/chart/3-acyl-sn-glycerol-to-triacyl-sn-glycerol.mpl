@@ -12,7 +12,7 @@ pathway 3-acyl-sn-glycerol-to-triacyl-sn-glycerol "3-acyl-sn-glycerol to triacyl
     1_3_diglyceride
     <-> . +h2o -fatty-acid -hplus
     1_monoglyceride
-    <-> . -glycerol
+    <-> . +acyl_coa -coa
     1_2_diglyceride
     <-> ec_2_3_1_158 [2.3.1.158] +1_2_diacyl_sn_glycero_3_phospholipid -triglyceride
     1_acyl_sn_glycero_3_phospholipid

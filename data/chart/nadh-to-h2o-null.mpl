@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-h2o-null "NADH to H2O" {
-  spacing 254
+  spacing 340
 
   spine at 0,0 {
     nadh
@@ -26,49 +26,151 @@ pathway nadh-to-h2o-null "NADH to H2O" {
 
   branch from nad side right {
     nad
-    <-> . +nadh +2_benzyl_3_oxobutanedioate +h
-    3_benzylmalic_acid
+    <-> ec_1_14_12_17 [1.14.12.17] +nadh +13s_hydroperoxy_9z_11e_octadecadienoate +h +h2o
+    13s_hydroxy_9z_11e_octadecadienoate
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +acetyl_coa +6_trans_tridecenoyl_coa +h +h2o2 +coa +o2 +h2o
-    10_trans_heptadecenoyl_coa
+    <-> . +nadh +indigo +h
+    leucoindigo
   }
 
   branch from h2o side right {
     h2o
-    <-> . +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +z_omega_methylsulfanyl_heptyl_thiohydroximate
-    ser_gly
+    <-> ec_3_2_1_23 [3.2.1.23] +beta_d_galactose +phenol
+    phenyl_beta_d_galactopyranoside
   }
 
   branch from h2o side left {
     h2o
-    <-> . +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +ser_gly
-    z_omega_methylsulfanyl_octyl_thiohydroximate
+    <-> ec_3_2_1_23 [3.2.1.23] +beta_d_galactose +3_nitrophenol
+    m_nitrophenyl_beta_d_galactoside
   }
 
   branch from h side right {
     h
-    <-> ec_3_1_1_1 [3.1.1.1] +tributyrin +h2o +2s_3_hydroxy_1_2_propanediyl_dibutanoate
-    butanoate
+    <-> ec_3_1_1_17 [3.1.1.17] +l_arabino_1_5_lactone +h2o
+    l_arabinonate
   }
 
   branch from h side left {
     h
-    <-> . +neocarratetraose_4_o_disulfate +h2o +sulfate
-    neocarratetraose_4_o_sulfate
+    <-> ec_1_1_1_246 [1.1.1.246] +3r_vestitone +nadph +nadp +h2o
+    medicarpin
   }
 
   branch from nadp side right {
     nadp
-    <-> . +dtdp_4_dehydro_3_c_methyl_2_6_dideoxy_alpha_d_gl +h +nadph
-    dtdp_beta_d_mycarose
+    <-> . +3_keto_beta_d_galactose +h +nadph
+    beta_d_galactose
   }
 
   branch from nadp side left {
     nadp
-    <-> . +h +s_nicotine +nadph
-    3_6_dihydronicotine
+    <-> ec_1_1_1_145 [1.1.1.145] +h +21_hydroxyprogesterone +nadph
+    21_hydroxypregnenolone
+  }
+
+  branch from nadh side right {
+    nadh
+    <-> ec_1_6_5_2 [1.6.5.2] +h +ubiquinone_2 +nad
+    ubiquinol_2
+  }
+
+  branch from nadh side left {
+    nadh
+    <-> ec_1_2_1_36 [1.2.1.36] +2e_hexenoic_acid +h +nad +h2o
+    2_hexenal
+  }
+
+  branch from h side right {
+    h
+    <-> . +diphosphate +trichodiene
+    nerolidyl_diphosphate
+  }
+
+  branch from h side left {
+    h
+    <-> ec_1_17_1_8 [1.17.1.8] +nadph +2_3_dihydrodipicolinate +nadp
+    2_3_4_5_tetrahydrodipicolinate
+  }
+
+  branch from 3_carbamoyl_2_phenylpropionic_acid side right {
+    3_carbamoyl_2_phenylpropionic_acid
+    <-> . +h2o
+    5_phenyl_1_3_oxazinane_2_4_dione
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_21 [1.1.1.21] +d_arabinitol +nadh +h
+    d_lyxose
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_12 [1.1.1.12] +nadh +l_fructofuranose +h
+    l_mannitol
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_2_1_23 [3.2.1.23] +beta_d_galactose +3_methylphenol
+    3_methylphenyl_beta_d_galactopyranoside
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_4_11_4 [3.4.11.4] +l_leucine +leucyl_leucine
+    l_leucyl_l_leucyl_l_leucine
+  }
+
+  branch from co2 side left {
+    co2
+    <-> ec_1_2_2_4 [1.2.2.4] +h +h2o2 +o2 +h2o
+    carbon_monoxide
+  }
+
+  branch from co2 side right {
+    co2
+    <-> ec_4_1_1_42 [4.1.1.42] +r_carnitine +h
+    2_methylcholine
+  }
+
+  branch from nh4 side left {
+    nh4
+    <-> ec_1_14_99_39 [1.14.99.39] +ubiquinol_2 +o2 +h +hydroxylamine +h2o
+    ubiquinone_2
+  }
+
+  branch from nh4 side right {
+    nh4
+    <-> ec_4_3_1_15 [4.3.1.15] +pyruvate
+    serine
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_14_13_68 [1.14.13.68] +z_4_hydroxyphenyl_acetaldehyde_oxime +h +nadph +nadp +h2o
+    s_4_hydroxymandelonitrile
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +2_2_bis_4_hydroxyphenyl_1_propanol +h2o
+    2_2_bis_4_hydroxyphenyl_propanoic_acid
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_1_1_133 [1.1.1.133] +gdp_4_dehydro_6_deoxy_l_mannose +h +nadp
+    gdp_6_deoxy_l_mannose
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_1_1_145 [1.1.1.145] +h +11_deoxycortisol +nadp
+    17alpha_21_dihydroxypregnenolone
   }
 }

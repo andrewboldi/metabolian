@@ -147,33 +147,6 @@
       "xrefs": {
         "chebi": "CHEBI:30089"
       }
-    },
-    {
-      "id": "pyruvate",
-      "name": "Pyruvate",
-      "formula": "C3H3O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:15361"
-      }
-    },
-    {
-      "id": "mercaptopyruvate",
-      "name": "3-Mercaptopyruvate",
-      "formula": "C3H3O3S",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:57678"
-      }
-    },
-    {
-      "id": "alanine",
-      "name": "L-Alanine",
-      "formula": "C3H7NO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:57972"
-      }
     }
   ],
   "enzymes": [],
@@ -365,42 +338,247 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "L-cysteine + pyruvate = 2-oxo-3-sulfanylpropanoate + L-alanine",
-      "equation": "L-cysteine + pyruvate = 2-oxo-3-sulfanylpropanoate + L-alanine",
-      "substrates": [
-        {
-          "metabolite": "cysteine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pyruvate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "mercaptopyruvate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "alanine",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:82415"
+      "id": "xt_n_acetyl_s_benzyl_l_cysteine_20s-17-20-dihydroxypreg-to-hydrogen-acceptor",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyl_s_benzyl_l_cysteine"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "20s-17-20-dihydroxypreg-to-hydrogen-acceptor"
+      },
+      "note": "Shares N-acetyl-S-benzyl-L-cysteine with (20S)-17,20-dihydroxypreg… to hydrogen acceptor.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:82415"
+            "db": "ChEBI",
+            "id": "CHEBI:194342"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetyl_s_benzyl_l_cysteine_s-benzyl-l-cysteinylglyci-to-thiobenzaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyl_s_benzyl_l_cysteine"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-benzyl-l-cysteinylglyci-to-thiobenzaldehyde"
+      },
+      "note": "Shares N-acetyl-S-benzyl-L-cysteine with S-benzyl-L-cysteinylglyci… to thiobenzaldehyde.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:194342"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_benzaldehyde_2-phenylacetamide-to-s-mandelonitrile",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "benzaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-phenylacetamide-to-s-mandelonitrile"
+      },
+      "note": "Shares benzaldehyde with 2-phenylacetamide to (S)-mandelonitrile.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17169"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_benzaldehyde_benzoin-to-4-d-glucosyloxy-benzoa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "benzaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "benzoin-to-4-d-glucosyloxy-benzoa"
+      },
+      "note": "Shares benzaldehyde with benzoin to 4-(β-D-glucosyloxy)benzoa….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17169"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_benzaldehyde_benzoylagmatinium-to-glycine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "benzaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "benzoylagmatinium-to-glycine"
+      },
+      "note": "Shares benzaldehyde with benzoylagmatinium to glycine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17169"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_benzaldehyde_e-phenylacetaldehyde-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "benzaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "e-phenylacetaldehyde-to-ammonium"
+      },
+      "note": "Shares benzaldehyde with (E)-phenylacetaldehyde… to ammonium.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17169"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_benzaldehyde_l-threo-3-phenylserine-to-s-adenosyl-l-homocyste",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "benzaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-threo-3-phenylserine-to-s-adenosyl-l-homocyste"
+      },
+      "note": "Shares benzaldehyde with L-threo-3-phenylserine to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17169"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_benzaldehyde_phenylglyoxylyl-coa-to-cis-cis-muconate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "benzaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phenylglyoxylyl-coa-to-cis-cis-muconate"
+      },
+      "note": "Shares benzaldehyde with phenylglyoxylyl-CoA to cis,cis-muconate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:17169"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetyl_l_cysteinate_2e-4z-7e-2-hydroxy-6-ox-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyl_l_cysteinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2e-4z-7e-2-hydroxy-6-ox-to-h2o"
+      },
+      "note": "Shares N-acetyl-L-cysteinate with (2E,4Z,7E)-2-hydroxy-6-ox… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78236"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetyl_l_cysteinate_3-4-dihydrocoumarin-to-2-benzylsuccinate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyl_l_cysteinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-4-dihydrocoumarin-to-2-benzylsuccinate"
+      },
+      "note": "Shares N-acetyl-L-cysteinate with 3,4-dihydrocoumarin to 2-benzylsuccinate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78236"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_n_acetyl_l_cysteinate_3-amino-4-hydroxybenzalde-to-di-sulfido-diiron",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "n_acetyl_l_cysteinate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-amino-4-hydroxybenzalde-to-di-sulfido-diiron"
+      },
+      "note": "Shares N-acetyl-L-cysteinate with 3-amino-4-hydroxybenzalde… to di-μ-sulfido-diiron.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:78236"
           }
         ]
       }

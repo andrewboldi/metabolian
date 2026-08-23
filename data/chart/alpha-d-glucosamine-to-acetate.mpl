@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway alpha-d-glucosamine-to-acetate "alpha-D-glucosamine… to acetate" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     alpha_d_glucosamine_6_phosphate
@@ -14,17 +14,5 @@ pathway alpha-d-glucosamine-to-acetate "alpha-D-glucosamine… to acetate" {
     diacetylchitobiose_6_phosphate
     <-> . +h2o -acetate
     n_monoacetylchitobiose_6_phosphate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +2e_6z_9z_12z_octadecatetraenoyl_coa
-    3_s_hydroxy_6z_9z_12z_octadecatrienoyl_coa
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +13z_docosenoate +h +cholesterol
-    cholest_5_en_3b_yl_13z_docosenoate
   }
 }

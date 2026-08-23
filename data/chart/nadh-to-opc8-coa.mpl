@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-opc8-coa "NADH to OPC8-CoA" {
-  spacing 236
+  spacing 188
 
   spine at 0,0 {
     nadh
@@ -14,53 +14,5 @@ pathway nadh-to-opc8-coa "NADH to OPC8-CoA" {
     trans_2_enoyl_opc8_coa
     <-> ec_1_3_3_6 [1.3.3.6] +fadh2 +h -opc8_coa
     fad
-  }
-
-  branch from h side left {
-    h
-    <-> . +aldehydo_n_glycolylneuraminate
-    n_glycoloyl_neuraminic_acid
-  }
-
-  branch from h side right {
-    h
-    <-> . +plp_d_cycloserine_aldimine
-    plp_d_cycloserine_ketimine
-  }
-
-  branch from nad side left {
-    nad
-    <-> . +nadh +octadecanoyl_coa +h +o2 +h2o
-    9z_octadecenoyl_coa
-  }
-
-  branch from nad side right {
-    nad
-    <-> . +nadh +8z_11z_14z_eicosatrienoyl_coa +h +o2 +h2o
-    5z_8z_11z_14z_eicosatetraenoyl_coa
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +leporin_c
-    pre_leporin_c
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +phthalate +h +isobutanol
-    monoisobutyl_phthalate
-  }
-
-  branch from fad side left {
-    fad
-    <-> . +decanoyl_coa +coa +nad +h2o +nadh +acetyl_coa +fadh2 +h
-    octanoyl_coa
-  }
-
-  branch from fad side right {
-    fad
-    <-> . +nadh +acetyl_coa +fadh2 +h +coa +nad +h2o
-    tetradecanoyl_coa
   }
 }

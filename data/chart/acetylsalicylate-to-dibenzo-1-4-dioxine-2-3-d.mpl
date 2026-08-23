@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway acetylsalicylate-to-dibenzo-1-4-dioxine-2-3-d "acetylsalicylate to dibenzo[1,4]dioxine-2,3-d…" {
-  spacing 216
+  spacing 246
 
   spine at 0,0 {
     acetylsalicylate
@@ -30,14 +30,14 @@ pathway acetylsalicylate-to-dibenzo-1-4-dioxine-2-3-d "acetylsalicylate to diben
 
   branch from acetate side left {
     acetate
-    <-> ec_4_1_3_26 [4.1.3.26] +3_hydroxy_3_4_methylpent_3_en_1_yl_glutaryl_coa
-    7_methyl_3_oxooct_6_enoyl_coa
+    <-> . +1_o_palmityl_2_acetyl_sn_glycerol +h2o +hplus
+    1_o_hexadecyl_sn_glycerol
   }
 
   branch from acetate side right {
     acetate
-    <-> ec_2_8_3_12 [2.8.3.12] +e_glutaconate +acetyl_coa
-    trans_4_carboxybut_2_enoyl_coa
+    <-> ec_2_5_1_119 [2.5.1.119] +isoxazolin_5_one +o_acetyl_l_serine +hplus
+    3_5_oxoisoxazolin_4_yl_l_alanine
   }
 
   branch from catechol side left {
@@ -50,5 +50,35 @@ pathway acetylsalicylate-to-dibenzo-1-4-dioxine-2-3-d "acetylsalicylate to diben
     catechol
     <-> ec_1_14_12_13 [1.14.12.13] +nadh +o2 +hplus +chloride +co2 +nad
     2_chlorobenzoate
+  }
+
+  branch from salicylate side left {
+    salicylate
+    <-> . +atp +nadph +hplus +amp +ppi +nadp
+    salicylaldehyde
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> . +2_o_acetyl_1_o_octadecyl_sn_glycero_3_phosphocho +h2o +hplus
+    1_o_octadecyl_sn_glycero_3_phosphocholine
+  }
+
+  branch from acetate side left {
+    acetate
+    <-> . +1_palmitoyl_2_acetyl_sn_glycero_3_phosphocholine +h2o +hplus
+    1_hexadecanoyl_sn_glycero_3_phosphocholine
+  }
+
+  branch from catechol side right {
+    catechol
+    <-> ec_1_14_14_20 [1.14.14.20] +fadh2 +o2 +fad +h2o +hplus
+    phenol
+  }
+
+  branch from catechol side left {
+    catechol
+    <-> ec_1_3_1_20 [1.3.1.20] +nadp +nadph +hplus
+    1s_2s_cyclohexa_3_5_diene_1_2_diol
   }
 }

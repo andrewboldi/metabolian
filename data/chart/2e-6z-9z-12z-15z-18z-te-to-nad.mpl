@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2e-6z-9z-12z-15z-18z-te-to-nad "(2E,6Z,9Z,12Z,15Z,18Z)-te… to NAD" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     2e_6z_9z_12z_15z_18z_tetracosahexaenoyl_coa
@@ -14,17 +14,5 @@ pathway 2e-6z-9z-12z-15z-18z-te-to-nad "(2E,6Z,9Z,12Z,15Z,18Z)-te… to NAD" {
     6z_9z_12z_15z_18z_3_oxotetracosapentaenoyl_coa
     <-> . +nadh +h -nad
     3r_6z_9z_12z_15z_18z_3_hydroxytetracosapentaeno
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_93 [1.1.1.93] +2r_3s_tartrate +nadh +h
-    oxaloglycolate
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_3_1_1 [1.3.1.1] +nadh +thymine +h
-    r_5_6_dihydrothymine
   }
 }

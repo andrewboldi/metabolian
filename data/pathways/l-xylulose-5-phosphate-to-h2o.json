@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "l-xylulose-5-phosphate-to-h2o",
   "name": "L-xylulose 5-phosphate to H2O",
-  "category": "lipid-metabolism",
+  "category": "other",
   "summary": "A 3-step route from L-xylulose 5-phosphate to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -105,93 +105,6 @@
       "xrefs": {
         "metanetx": "MNXM1368631"
       }
-    },
-    {
-      "id": "d_xylopyranose",
-      "name": "D-xylopyranose",
-      "formula": "C5H10O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:53455"
-      }
-    },
-    {
-      "id": "a_2_demethylmenaquinone",
-      "name": "a 2-demethylmenaquinone",
-      "short": "a 2-demethylmenaqui…",
-      "formula": "C15H14O2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM739528"
-      }
-    },
-    {
-      "id": "phosphate",
-      "name": "phosphate",
-      "formula": "HO4P",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM9"
-      }
-    },
-    {
-      "id": "2_hydroxy_atorvastatin_acyl_glucuronide",
-      "name": "2-hydroxy-atorvastatin-acyl-glucuronide",
-      "short": "2-hydroxy-atorvasta…",
-      "formula": "C39H43FN2O12",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM744412"
-      }
-    },
-    {
-      "id": "4_hydroxycinnamoylmethane",
-      "name": "4-Hydroxycinnamoylmethane",
-      "short": "4-Hydroxycinnamoylm…",
-      "formula": "C10H10O2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1363455"
-      }
-    },
-    {
-      "id": "4_hydroxy_4_4_hydroxyphenyl_butan_2_one",
-      "name": "4-hydroxy-4-(4-hydroxyphenyl)butan-2-one",
-      "short": "4-hydroxy-4-(4-hydr…",
-      "formula": "C10H12O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:193192"
-      }
-    },
-    {
-      "id": "1_3_5_trihydroxybenzene",
-      "name": "1,3,5-trihydroxybenzene",
-      "short": "1,3,5-trihydroxyben…",
-      "formula": "C6H6O3",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1769"
-      }
-    },
-    {
-      "id": "3_3_4_dihydroxyphenyl_propanoate",
-      "name": "3-(3,4-dihydroxyphenyl)propanoate",
-      "short": "3-(3,4-dihydroxyphe…",
-      "formula": "C9H9O4",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM3476"
-      }
-    },
-    {
-      "id": "3_hydroxyphloretin",
-      "name": "3-Hydroxyphloretin",
-      "formula": "C15H14O6",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:174757"
-      }
     }
   ],
   "enzymes": [
@@ -207,7 +120,10 @@
       "name": "beta-glucosidase",
       "ec": [
         "3.2.1.21"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q9H227"
+      }
     },
     {
       "id": "ec_3_2_1_37",
@@ -228,13 +144,6 @@
       "name": "D-lyxose ketol-isomerase",
       "ec": [
         "5.3.1.15"
-      ]
-    },
-    {
-      "id": "ec_3_7_1_4",
-      "name": "phloretin hydrolase",
-      "ec": [
-        "3.7.1.4"
       ]
     }
   ],
@@ -400,221 +309,269 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "xylose isomerase",
-      "ec": "5.3.1.5",
-      "substrates": [
-        {
-          "metabolite": "d_xylulofuranose",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "d_xylopyranose",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_5_3_1_5"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR197323"
+      "id": "xt_l_xylulose_5_phosphate_3-methylbut-2-enoyl-coa-to-3-methylglutaric-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_xylulose_5_phosphate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "3-methylbut-2-enoyl-coa-to-3-methylglutaric-acid"
+      },
+      "note": "Shares L-xylulose 5-phosphate with 3-methylbut-2-enoyl-CoA to 3-methylglutaric acid.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR197323"
+            "id": "MNXM1238"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "Reaction MNXR203887",
-      "substrates": [
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "a_2_demethylmenaquinone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "a_2_demethylmenaquinone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "metanetx": "MNXR203887"
+      "id": "xt_l_xylulose_5_phosphate_beta-d-fructose-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_xylulose_5_phosphate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-d-fructose-to-h2o-null"
+      },
+      "note": "Shares L-xylulose 5-phosphate with beta-D-fructose… to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR203887"
+            "id": "MNXM1238"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "Reaction MNXR203892",
-      "substrates": [
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "2_hydroxy_atorvastatin_acyl_glucuronide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "2_hydroxy_atorvastatin_acyl_glucuronide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "metanetx": "MNXR203892"
+      "id": "xt_l_xylulose_5_phosphate_l-xylulose-5-phosphate-to-octulose-8-phosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "l_xylulose_5_phosphate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "l-xylulose-5-phosphate-to-octulose-8-phosphate"
+      },
+      "note": "Shares L-xylulose 5-phosphate with L-xylulose 5-phosphate to octulose 8-phosphate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR203892"
+            "id": "MNXM1238"
           }
         ]
       }
     },
     {
-      "id": "r8",
-      "name": "Reaction MNXR199162",
-      "substrates": [
-        {
-          "metabolite": "4_hydroxycinnamoylmethane",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "4_hydroxy_4_4_hydroxyphenyl_butan_2_one",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "metanetx": "MNXR199162"
+      "id": "xt_d_xylulofuranose_alpha-beta-dihydroxyethyl-to-r-lactaldehyde",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_xylulofuranose"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-beta-dihydroxyethyl-to-r-lactaldehyde"
+      },
+      "note": "Shares D-xylulofuranose with alpha,beta-Dihydroxyethyl… to (R)-lactaldehyde.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR199162"
+            "db": "ChEBI",
+            "id": "CHEBI:144889"
           }
         ]
       }
     },
     {
-      "id": "r9",
-      "name": "phloretin hydrolase",
-      "ec": "3.7.1.4",
-      "substrates": [
-        {
-          "metabolite": "1_3_5_trihydroxybenzene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "3_3_4_dihydroxyphenyl_propanoate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_hydroxyphloretin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_7_1_4"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 9,
-      "xrefs": {
-        "metanetx": "MNXR199164"
+      "id": "xt_d_xylulofuranose_d-glucopyranose-to-d-xylono-1-5-lactone",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_xylulofuranose"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "d-glucopyranose-to-d-xylono-1-5-lactone"
+      },
+      "note": "Shares D-xylulofuranose with D-glucopyranose to D-xylono-1,5-lactone.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR199164"
+            "db": "ChEBI",
+            "id": "CHEBI:144889"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_xylulofuranose_d-xylulose-1-phosphate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_xylulofuranose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-xylulose-1-phosphate-to-h2o"
+      },
+      "note": "Shares D-xylulofuranose with D-Xylulose 1-phosphate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:144889"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_xylulofuranose_fadh2-to-o-d-glucosyl-trans-zeat",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_xylulofuranose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "fadh2-to-o-d-glucosyl-trans-zeat"
+      },
+      "note": "Shares D-xylulofuranose with FADH2 to O-β-D-glucosyl-trans-zeat….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:144889"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_xylulofuranose_l-lyxonate-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_xylulofuranose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-lyxonate-to-h2o"
+      },
+      "note": "Shares D-xylulofuranose with L-lyxonate to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:144889"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_xylulofuranose_r-demethyl-4-deoxygadus-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_xylulofuranose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-demethyl-4-deoxygadus-to-nad"
+      },
+      "note": "Shares D-xylulofuranose with (R)-demethyl-4-deoxygadus… to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:144889"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_d_xylulofuranose_udp-to-nadp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "d_xylulofuranose"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-nadp"
+      },
+      "note": "Shares D-xylulofuranose with UDP to NADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:144889"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_nitrophenyl_d_xyloside_alpha-d-xylose-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_nitrophenyl_d_xyloside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "alpha-d-xylose-to-h2o"
+      },
+      "note": "Shares 4-nitrophenyl β-D-xyloside with alpha-D-xylose to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:90148"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_nitrophenyl_d_xyloside_s-adenosyl-l-homocysteine-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_nitrophenyl_d_xyloside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-h2o-null"
+      },
+      "note": "Shares 4-nitrophenyl β-D-xyloside with S-adenosyl-L-homocysteine to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:90148"
           }
         ]
       }

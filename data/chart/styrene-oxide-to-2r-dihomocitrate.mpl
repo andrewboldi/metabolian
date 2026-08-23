@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway styrene-oxide-to-2r-dihomocitrate "styrene oxide to (2R)-dihomocitrate" {
-  spacing 244
+  spacing 280
 
   spine at 0,0 {
     styrene_oxide
@@ -24,14 +24,14 @@ pathway styrene-oxide-to-2r-dihomocitrate "styrene oxide to (2R)-dihomocitrate" 
 
   branch from phenylacetaldehyde side left {
     phenylacetaldehyde
-    <-> ec_4_1_1_109 [4.1.1.109] +l_phenylalanine +o2 +h2o +hplus +h2o2 +co2
-    nh3
+    <-> . +2_phenylethanaminium +pyruvate
+    alanine
   }
 
   branch from phenylacetaldehyde side right {
     phenylacetaldehyde
-    <-> . +2_phenylethanaminium +pyruvate
-    alanine
+    <-> . +iron +fe2 +hplus
+    2_phenylethanol
   }
 
   branch from phenylacetate side left {
@@ -48,25 +48,61 @@ pathway styrene-oxide-to-2r-dihomocitrate "styrene oxide to (2R)-dihomocitrate" 
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_40 [4.2.3.40] +fpp
-    z_bisabolene
+    <-> ec_2_5_1_21 [2.5.1.21] +fpp +nadh +hplus +nad
+    squalene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_39 [4.2.3.39] +fpp +h2o
-    epi_cedrol
+    <-> ec_4_2_3_107 [4.2.3.107] +gpp
+    car_3_ene
   }
 
   branch from glycine side left {
     glycine
-    <-> ec_4_1_3_41 [4.1.3.41] +glyoxylate
-    3s_3_hydroxy_d_aspartate
+    <-> . +n_fatty_acyl_glycine +h2o
+    fatty-acid
   }
 
   branch from glycine side right {
     glycine
-    <-> ec_4_1_3_41 [4.1.3.41] +glyoxylate
-    3r_3_hydroxy_d_aspartate
+    <-> . +oleoyl_coa +coa +hplus
+    n_oleoylglycinate
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_112 [4.2.3.112] +gpp +h2o
+    r_terpineol
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_114 [4.2.3.114] +gpp
+    terpinene
+  }
+
+  branch from glyoxylate side left {
+    glyoxylate
+    <-> . +glyphosate +o2 +h2o +h2o2 +hplus
+    aminomethyl_phosphonate
+  }
+
+  branch from glyoxylate side right {
+    glyoxylate
+    <-> . +5_methyl_dcmp_1 +ascorbate +o2 +co2
+    8s_9s_5_glyceryldeoxycytidine_5_monophosphate_1
+  }
+
+  branch from glycine side left {
+    glycine
+    <-> . +arachidonoyl_coa +coa +hplus
+    n_arachidonoylglycinate
+  }
+
+  branch from glycine side right {
+    glycine
+    <-> . +stearoyl_coa +coa +hplus
+    n_octadecanoylglycinate
   }
 }

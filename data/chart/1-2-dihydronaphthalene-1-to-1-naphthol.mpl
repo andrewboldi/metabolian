@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-2-dihydronaphthalene-1-to-1-naphthol "1,2-dihydronaphthalene-1,… to 1-naphthol" {
-  spacing 226
+  spacing 160
 
   spine at 0,0 {
     1_2_dihydronaphthalene_1_2_diol
@@ -16,71 +16,5 @@ pathway 1-2-dihydronaphthalene-1-to-1-naphthol "1,2-dihydronaphthalene-1,… to 
     1r_2s_naphthalene_1_2_oxide
     <-> .
     1_naphthol
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    10_deoxymethymycin
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    10_deoxymethynolide
-  }
-
-  branch from naphthalene side left {
-    naphthalene
-    <-> ec_1_14_13_236 [1.14.13.236] +nadh +h +o2 +1_naphthol +h2o
-    nad
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    methymycin
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    neomethymycin
-  }
-
-  branch from o2 side right {
-    o2
-    <-> ec_1_13_11_49 [1.13.11.49] +chlorous_acid +h
-    chloride
-  }
-
-  branch from o2 side left {
-    o2
-    <-> ec_1_14_13_101 [1.14.13.101] +senecionine_n_oxide +nadp +h2o +h +nadph
-    senecionine
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> ec_1_1_1_120 [1.1.1.120] +d_galactopyranose +nadp +h
-    d_galactono_1_4_lactone
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> ec_1_1_1_120 [1.1.1.120] +nadp +h +d_galactono_1_4_lactone
-    alpha_d_galactose
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_1_1_112 [1.1.1.112] +indan_1_one +h +nadph
-    indan_1_ol
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_294 [1.1.1.294] +71_hydroxychlorophyllide_a +h +nadph
-    chlorophyllide_b
   }
 }

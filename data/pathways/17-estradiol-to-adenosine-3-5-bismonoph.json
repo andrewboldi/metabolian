@@ -140,51 +140,41 @@
       }
     },
     {
-      "id": "estriol_16_o_d_glucuronide",
-      "name": "estriol 16-O-(β-D-glucuronide)",
-      "short": "estriol 16-O-(β-D-g…",
-      "formula": "C24H31O9",
+      "id": "prunetin_5_olate",
+      "name": "prunetin-5-olate",
+      "formula": "C16H11O5",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:136650"
+        "chebi": "CHEBI:147403"
       }
     },
     {
-      "id": "6z_octenoyl_coa",
-      "name": "(6Z)-octenoyl-CoA",
-      "formula": "C29H44N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:172383"
-      }
-    },
-    {
-      "id": "s_6z_octenoyl_4_phosphopantetheine",
-      "name": "S-(6Z-octenoyl)-4'-phosphopantetheine",
-      "short": "S-(6Z-octenoyl)-4'-…",
-      "formula": "C19H33N2O8PS",
+      "id": "prunetin_c8_d_glucuronide",
+      "name": "prunetin-C8-β-D-glucuronide",
+      "short": "prunetin-C8-β-D-glu…",
+      "formula": "C22H18O11",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:172384"
+        "chebi": "CHEBI:147407"
       }
     },
     {
-      "id": "linolenoyl_coa",
-      "name": "α-linolenoyl-CoA",
-      "formula": "C39H60N7O17P3S",
-      "charge": -4,
+      "id": "losartan",
+      "name": "losartan",
+      "formula": "C22H22ClN6O",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:74034"
+        "chebi": "CHEBI:149504"
       }
     },
     {
-      "id": "s_9z_12z_15z_octadecatrienoyl_4_phosphopantethei",
-      "name": "S-(9Z,12Z,15Z-octadecatrienoyl)-4'-phosphopantetheine",
-      "short": "S-(9Z,12Z,15Z-octad…",
-      "formula": "C29H49N2O8PS",
-      "charge": -2,
+      "id": "losartan_1_n_d_glucuronide",
+      "name": "losartan-1-N-β-D-glucuronide",
+      "short": "losartan-1-N-β-D-gl…",
+      "formula": "C28H30ClN6O7",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:172386"
+        "chebi": "CHEBI:149506"
       }
     }
   ],
@@ -329,11 +319,11 @@
     },
     {
       "id": "r4",
-      "name": "16alpha,17beta-estriol + UDP-alpha-D-glucuronate = 16alpha,17beta-estriol 16-O-(beta-D-...",
-      "equation": "16alpha,17beta-estriol + UDP-alpha-D-glucuronate = 16alpha,17beta-estriol 16-O-(beta-D-glucuronate) + UDP + H(+)",
+      "name": "prunetin + UDP-alpha-D-glucuronate = prunetin-C(8)-beta-D-glucuronide + UDP + H(+)",
+      "equation": "prunetin + UDP-alpha-D-glucuronate = prunetin-C(8)-beta-D-glucuronide + UDP + H(+)",
       "substrates": [
         {
-          "metabolite": "estriol",
+          "metabolite": "prunetin_5_olate",
           "stoichiometry": 1
         },
         {
@@ -343,7 +333,7 @@
       ],
       "products": [
         {
-          "metabolite": "estriol_16_o_d_glucuronide",
+          "metabolite": "prunetin_c8_d_glucuronide",
           "stoichiometry": 1
         },
         {
@@ -358,100 +348,165 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:52472"
+        "rhea": "RHEA:63616"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:52472"
+            "id": "RHEA:63616"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "(6Z)-octenoyl-CoA + H2O = S-(6Z-octenoyl)-4'-phosphopantetheine + adenosine 3',5'-bisph...",
-      "equation": "(6Z)-octenoyl-CoA + H2O = S-(6Z-octenoyl)-4'-phosphopantetheine + adenosine 3',5'-bisphosphate + 2 H(+)",
+      "name": "losartan + UDP-alpha-D-glucuronate = losartan-1-N-beta-D-glucuronide + UDP",
+      "equation": "losartan + UDP-alpha-D-glucuronate = losartan-1-N-beta-D-glucuronide + UDP",
       "substrates": [
         {
-          "metabolite": "6z_octenoyl_coa",
+          "metabolite": "losartan",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "udp_d_glucuronate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "s_6z_octenoyl_4_phosphopantetheine",
+          "metabolite": "losartan_1_n_d_glucuronide",
           "stoichiometry": 1
         },
         {
-          "metabolite": "adenosine_3_5_bismonophosphate",
+          "metabolite": "udp",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:67528"
+        "rhea": "RHEA:63716"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:67528"
+            "id": "RHEA:63716"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_estriol_3-oxoorientin-to-luteolin-7-o-d-glucos",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "estriol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-oxoorientin-to-luteolin-7-o-d-glucos"
+      },
+      "note": "Shares estriol with 3''-oxoorientin to luteolin 7-O-[(β-D-glucos….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:27974"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "(9Z,12Z,15Z)-octadecatrienoyl-CoA + H2O = S-(9Z,12Z,15Z-octadecatrienoyl)-4'-phosphopan...",
-      "equation": "(9Z,12Z,15Z)-octadecatrienoyl-CoA + H2O = S-(9Z,12Z,15Z-octadecatrienoyl)-4'-phosphopantetheine + adenosine 3',5'-bisphosphate + 2 H(+)",
-      "substrates": [
-        {
-          "metabolite": "linolenoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "s_9z_12z_15z_octadecatrienoyl_4_phosphopantethei",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adenosine_3_5_bismonophosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:67532"
+      "id": "xt_prunetin_5_olate_all-trans-retinyl-to-4-d-glucopyranuronosyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prunetin_5_olate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "all-trans-retinyl-to-4-d-glucopyranuronosyl"
+      },
+      "note": "Shares prunetin-5-olate with all-trans-retinyl… to 4-(β-D-glucopyranuronosyl….",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:67532"
+            "db": "ChEBI",
+            "id": "CHEBI:147403"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prunetin_5_olate_peonidin-to-r-norreticuline",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prunetin_5_olate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "peonidin-to-r-norreticuline"
+      },
+      "note": "Shares prunetin-5-olate with peonidin to (R)-norreticuline.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:147403"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_prunetin_5_olate_udp-to-quercetagetin",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "prunetin_5_olate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-quercetagetin"
+      },
+      "note": "Shares prunetin-5-olate with UDP to quercetagetin.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:147403"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_losartan_bilirubin-to-d-glucopyranuronate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "losartan"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "bilirubin-to-d-glucopyranuronate"
+      },
+      "note": "Shares losartan with bilirubin to D-glucopyranuronate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:149504"
           }
         ]
       }

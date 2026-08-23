@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "r-carnitine-to-nad",
   "name": "(R)-carnitine to NAD",
-  "category": "amino-acid-metabolism",
+  "category": "other",
   "summary": "A 3-step route from (R)-carnitine to NAD(+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -95,53 +95,6 @@
       "charge": -1,
       "xrefs": {
         "metanetx": "MNXM8"
-      }
-    },
-    {
-      "id": "tyrosyl_phenylalanyl_tyrosine",
-      "name": "Tyrosyl-Phenylalanyl-Tyrosine",
-      "short": "Tyrosyl-Phenylalany…",
-      "formula": "C27H29N3O6",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1560795"
-      }
-    },
-    {
-      "id": "l_phenylalanine",
-      "name": "L-phenylalanine",
-      "formula": "C9H11NO2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM741664"
-      }
-    },
-    {
-      "id": "l_tyrosine",
-      "name": "L-tyrosine",
-      "formula": "C9H11NO3",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM76"
-      }
-    },
-    {
-      "id": "tyrosyl_tryptophanyl_phenylalanine",
-      "name": "Tyrosyl-Tryptophanyl-Phenylalanine",
-      "short": "Tyrosyl-Tryptophany…",
-      "formula": "C29H30N4O5",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1560796"
-      }
-    },
-    {
-      "id": "l_tryptophan",
-      "name": "L-tryptophan",
-      "formula": "C11H12N2O2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM741553"
       }
     }
   ],
@@ -278,83 +231,181 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "Reaction MNXR207056",
-      "substrates": [
-        {
-          "metabolite": "tyrosyl_phenylalanyl_tyrosine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "l_phenylalanine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_tyrosine",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR207056"
+      "id": "xt_e_4_trimethylammonio_but_2_enoate_butyrobetainyl-coa-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_4_trimethylammonio_but_2_enoate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "butyrobetainyl-coa-to-diphosphate"
+      },
+      "note": "Shares (E)-4-(trimethylammonio)but-2-enoate with γ-butyrobetainyl-CoA to diphosphate.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR207056"
+            "db": "ChEBI",
+            "id": "CHEBI:17237"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "Reaction MNXR207058",
-      "substrates": [
-        {
-          "metabolite": "tyrosyl_tryptophanyl_phenylalanine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "l_tryptophan",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_phenylalanine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_tyrosine",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR207058"
+      "id": "xt_e_4_trimethylammonio_but_2_enoyl_coa_4-trimethylammonio-butan-to-butyrobetainyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_4_trimethylammonio_but_2_enoyl_coa"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "4-trimethylammonio-butan-to-butyrobetainyl-coa"
+      },
+      "note": "Shares (E)-4-(trimethylammonio)but-2-enoyl-CoA with 4-(trimethylammonio)butan… to γ-butyrobetainyl-CoA.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "MetaNetX",
-            "id": "MNXR207058"
+            "db": "ChEBI",
+            "id": "CHEBI:60933"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_e_4_trimethylammonio_but_2_enoyl_coa_butyrobetainyl-coa-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "e_4_trimethylammonio_but_2_enoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "butyrobetainyl-coa-to-diphosphate"
+      },
+      "note": "Shares (E)-4-(trimethylammonio)but-2-enoyl-CoA with γ-butyrobetainyl-CoA to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:60933"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_butyrobetainyl_coa_4-trimethylammonio-butan-to-butyrobetainyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "butyrobetainyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-trimethylammonio-butan-to-butyrobetainyl-coa"
+      },
+      "note": "Shares γ-butyrobetainyl-CoA with 4-(trimethylammonio)butan… to γ-butyrobetainyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61513"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_butyrobetainyl_coa_beta-nicotinamide-to-cyclopropanecarboxyl-coa",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "butyrobetainyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "beta-nicotinamide-to-cyclopropanecarboxyl-coa"
+      },
+      "note": "Shares γ-butyrobetainyl-CoA with beta-nicotinamide… to Cyclopropanecarboxyl-CoA.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61513"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_butyrobetainyl_coa_butyrobetainyl-coa-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "butyrobetainyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "butyrobetainyl-coa-to-diphosphate"
+      },
+      "note": "Shares γ-butyrobetainyl-CoA with γ-butyrobetainyl-CoA to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61513"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_butyrobetainyl_coa_s-adenosyl-l-homocysteine-to-adp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "butyrobetainyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "s-adenosyl-l-homocysteine-to-adp"
+      },
+      "note": "Shares γ-butyrobetainyl-CoA with S-adenosyl-L-homocysteine to ADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61513"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_butyrobetainyl_coa_udp-to-d-lupinic-acid",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "butyrobetainyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-d-lupinic-acid"
+      },
+      "note": "Shares γ-butyrobetainyl-CoA with UDP to D-lupinic acid.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61513"
           }
         ]
       }

@@ -138,6 +138,52 @@
       "xrefs": {
         "chebi": "CHEBI:11656"
       }
+    },
+    {
+      "id": "juglone",
+      "name": "juglone",
+      "formula": "C10H6O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15794"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "8_hydroxy_1_4_dioxo_1_4_dihydronaphthalen_2_olat",
+      "name": "8-hydroxy-1,4-dioxo-1,4-dihydronaphthalen-2-olate",
+      "short": "8-hydroxy-1,4-dioxo…",
+      "formula": "C10H5O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58026"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
     }
   ],
   "enzymes": [
@@ -375,6 +421,350 @@
           {
             "db": "MetaNetX",
             "id": "MNXR151575"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "juglone + H2O = naphthalene-1,2,4,8-tetrol",
+      "equation": "juglone + H2O = naphthalene-1,2,4,8-tetrol",
+      "substrates": [
+        {
+          "metabolite": "juglone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "naphthalene_1_2_4_8_tetrol",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:50748"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50748"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "2 naphthalene-1,2,4,8-tetrol + O2 = 2 3,5-dihydroxy-1,4-naphthoquinone + 2 H2O + 2 H(+)",
+      "equation": "2 naphthalene-1,2,4,8-tetrol + O2 = 2 3,5-dihydroxy-1,4-naphthoquinone + 2 H2O + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "naphthalene_1_2_4_8_tetrol",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "8_hydroxy_1_4_dioxo_1_4_dihydronaphthalen_2_olat",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:50752"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50752"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_naphthalene_1_2_4_8_tetrol_1-3-5-trihydroxybenzene-to-s-8-glutaryldihydroli",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "naphthalene_1_2_4_8_tetrol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-3-5-trihydroxybenzene-to-s-8-glutaryldihydroli"
+      },
+      "note": "Shares naphthalene-1,2,4,8-tetrol with 1,3,5-trihydroxybenzene to S(8)-glutaryldihydrolipoa….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133723"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_naphthalene_1_2_4_8_tetrol_chloroacetaldehyde-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "naphthalene_1_2_4_8_tetrol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "chloroacetaldehyde-to-nad"
+      },
+      "note": "Shares naphthalene-1,2,4,8-tetrol with chloroacetaldehyde to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133723"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_naphthalene_1_2_4_8_tetrol_enterobacterial-common-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "naphthalene_1_2_4_8_tetrol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "enterobacterial-common-to-h2o"
+      },
+      "note": "Shares naphthalene-1,2,4,8-tetrol with (enterobacterial common… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:133723"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_3_dihydroxybenzoate_2-3-dihydroxy-n-benzoylse-to-nadph",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_3_dihydroxybenzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3-dihydroxy-n-benzoylse-to-nadph"
+      },
+      "note": "Shares 2,3-dihydroxybenzoate with 2,3-dihydroxy-N-benzoylse… to NADPH.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM455"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_3_dihydroxybenzoate_2e-2-hydroxypenta-2-4-d-to-3-carboxy-2-hydroxym",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_3_dihydroxybenzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2e-2-hydroxypenta-2-4-d-to-3-carboxy-2-hydroxym"
+      },
+      "note": "Shares 2,3-dihydroxybenzoate with (2E)-2-hydroxypenta-2,4-d… to 3-Carboxy-2-hydroxymucona….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM455"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_3_dihydroxybenzoate_2z-4e-2-hydroxy-6-oxohe-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_3_dihydroxybenzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2z-4e-2-hydroxy-6-oxohe-to-h2o"
+      },
+      "note": "Shares 2,3-dihydroxybenzoate with (2Z,4E)-2-hydroxy-6-oxohe… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM455"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_3_dihydroxybenzoate_5-hydroxy-2-oxopentanoate-to-biphenyl-2-2-3-3-te",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_3_dihydroxybenzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "5-hydroxy-2-oxopentanoate-to-biphenyl-2-2-3-3-te"
+      },
+      "note": "Shares 2,3-dihydroxybenzoate with 5-hydroxy-2-oxopentanoate to biphenyl-2,2',3,3'-tetraol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM455"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_3_dihydroxybenzoate_h-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_3_dihydroxybenzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-nad"
+      },
+      "note": "Shares 2,3-dihydroxybenzoate with H to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM455"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_3_dihydroxybenzoate_vibriobactin-to-dehydrospermidine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_3_dihydroxybenzoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "vibriobactin-to-dehydrospermidine"
+      },
+      "note": "Shares 2,3-dihydroxybenzoate with vibriobactin to dehydrospermidine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM455"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_isochorismate_diaminobutyryl-citryl-eth-to-diaminobutyryl-citr",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isochorismate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "diaminobutyryl-citryl-eth-to-diaminobutyryl-citr"
+      },
+      "note": "Shares isochorismate with diaminobutyryl-citryl-eth… to diaminobutyryl-citryl-eth….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM799"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_isochorismate_jasmonoyl-l-isoleucine-to-diphosphate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isochorismate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "jasmonoyl-l-isoleucine-to-diphosphate"
+      },
+      "note": "Shares isochorismate with (-)-Jasmonoyl-L-isoleucine to diphosphate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM799"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_isochorismate_l-alanine-to-2-propylpiperidine",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "isochorismate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "l-alanine-to-2-propylpiperidine"
+      },
+      "note": "Shares isochorismate with L-alanine to 2-propylpiperidine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM799"
           }
         ]
       }

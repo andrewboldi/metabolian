@@ -102,44 +102,6 @@
       "xrefs": {
         "chebi": "CHEBI:58353"
       }
-    },
-    {
-      "id": "oleoyl_coa",
-      "name": "oleoyl-CoA",
-      "formula": "C39H64N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57387"
-      }
-    },
-    {
-      "id": "s_oleoyl_4_phosphopantetheine",
-      "name": "S-oleoyl-4'-phosphopantetheine",
-      "short": "S-oleoyl-4'-phospho…",
-      "formula": "C29H53N2O8PS",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:156553"
-      }
-    },
-    {
-      "id": "arachidonoyl_coa",
-      "name": "arachidonoyl-CoA",
-      "formula": "C41H62N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57368"
-      }
-    },
-    {
-      "id": "s_arachidonoyl_4_phosphopantetheine",
-      "name": "S-arachidonoyl-4'-phosphopantetheine",
-      "short": "S-arachidonoyl-4'-p…",
-      "formula": "C31H51N2O8PS",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:156554"
-      }
     }
   ],
   "enzymes": [
@@ -295,89 +257,93 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r4",
-      "name": "(9Z)-octadecenoyl-CoA + H2O = S-(9Z-octadecenoyl)-4'-phosphopantetheine + adenosine 3',...",
-      "equation": "(9Z)-octadecenoyl-CoA + H2O = S-(9Z-octadecenoyl)-4'-phosphopantetheine + adenosine 3',5'-bisphosphate + 2 H(+)",
-      "substrates": [
-        {
-          "metabolite": "oleoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "s_oleoyl_4_phosphopantetheine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adenosine_3_5_bismonophosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:65564"
+      "id": "xt_quercetin_4_o_d_glucopyranoside_ginsenoside-re-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "quercetin_4_o_d_glucopyranoside"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "ginsenoside-re-to-h2o"
+      },
+      "note": "Shares quercetin 4'-O-β-D-glucopyranoside with ginsenoside Re to H2O.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:65564"
+            "db": "ChEBI",
+            "id": "CHEBI:187902"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoyl-CoA + H2O = S-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-4'-phos...",
-      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoyl-CoA + H2O = S-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-4'-phosphopantetheine + adenosine 3',5'-bisphosphate + 2 H(+)",
-      "substrates": [
-        {
-          "metabolite": "arachidonoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "s_arachidonoyl_4_phosphopantetheine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adenosine_3_5_bismonophosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:65568"
+      "id": "xt_quercetin_4_o_d_glucopyranoside_isatin-to-2r-dimboa-glucoside",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "quercetin_4_o_d_glucopyranoside"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "isatin-to-2r-dimboa-glucoside"
+      },
+      "note": "Shares quercetin 4'-O-β-D-glucopyranoside with isatin to (2R)-DIMBOA glucoside.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:65568"
+            "db": "ChEBI",
+            "id": "CHEBI:187902"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_quercetin_4_o_d_glucopyranoside_udp-to-kaempferol-3-o-beta-d-gal",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "quercetin_4_o_d_glucopyranoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-kaempferol-3-o-beta-d-gal"
+      },
+      "note": "Shares quercetin 4'-O-β-D-glucopyranoside with UDP to kaempferol 3-O-beta-D-gal….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:187902"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_quercetin_3_sulfate_phenylthioacetohydroximate-to-benzyl-thiocyanate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "quercetin_3_sulfate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "phenylthioacetohydroximate-to-benzyl-thiocyanate"
+      },
+      "note": "Shares quercetin 3-sulfate with phenylthioacetohydroximate to benzyl thiocyanate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58254"
           }
         ]
       }

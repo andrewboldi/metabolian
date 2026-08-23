@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-phospho-ji-20a-to-h2o "3'-phospho-JI-20A to H2O" {
-  spacing 212
+  spacing 308
 
   spine at 0,0 {
     3_phospho_ji_20a
@@ -22,61 +22,157 @@ pathway 3-phospho-ji-20a-to-h2o "3'-phospho-JI-20A to H2O" {
 
   branch from h side left {
     h
-    <-> . +diphosphate +31r_8_12_diethylbacteriochlorophyll_d +31r_8_12_diethylbacteriochlorophyllide_d
-    2e_6e_farnesyl_diphosphate
+    <-> . +adp +phosphate +atp +h2o
+    pravastatin_sodium
   }
 
   branch from h side right {
     h
-    <-> . +diphosphate +12_ethyl_8_propylbacteriochlorophyll_d +2e_6e_farnesyl_diphosphate
-    12_ethyl_8_propylbacteriochlorophyllide_d
+    <-> . +adp +phosphate +atp +h2o
+    pravastatin_glucuronide
   }
 
   branch from atp side left {
     atp
-    <-> ec_2_7_1_145 [2.7.1.145] +cytarabine +h +adp
-    1_beta_d_arabinofuranosylcytosine_5_monophosphat
+    <-> . +h +adp +phosphate +h2o
+    1_tridecanoylglycerophosphoethanolamine_c13_0_pe
   }
 
   branch from atp side right {
     atp
-    <-> ec_2_7_1_74 [2.7.1.74] +zalcitabine +h +adp
-    l_ddcmp
+    <-> . +h +adp +phosphate +h2o
+    all_trans_retinal
   }
 
   branch from l_glutamate side left {
     l_glutamate
-    <-> ec_2_3_2_2 [2.3.2.2] +h +4_nitroaniline +h2o
-    gamma_glutamyl_p_nitroanilide
+    <-> . +l_proline +l_lysine +h2o
+    prolyl_glutamatsyl_lysine
   }
 
   branch from l_glutamate side right {
     l_glutamate
-    <-> ec_3_4_17_11 [3.4.17.11] +methotrexate +h +h2o
-    4_amino_n10_methylpteroic_acid
+    <-> . +glycine +l_serine +h2o
+    seryl_glycyl_glutamate
   }
 
   branch from fad side left {
     fad
-    <-> ec_1_5_99_12 [1.5.99.12] +adenosine +fadh2 +h +2e_4_hydroxy_3_methylbut_2_enal +h2o
-    9_ribosyl_trans_zeatin
+    <-> . +fadh2 +h +2_6_dimethyl_trans_2_heptenoyl_coa
+    2s_2_6_dimethylheptanoyl_coa
   }
 
   branch from fad side right {
     fad
-    <-> . +fadh2 +h +ubiquinone_2
-    ubiquinol_2
+    <-> . +2_methyl_3_n_amyl_pyrrole +fadh2 +h
+    2_methyl_3_n_amyl_dihydropyrrole
   }
 
   branch from h2o side left {
     h2o
-    <-> . +tert_butyl_formate +h +formate
-    tert_butanol
+    <-> . +l_histidine +l_lysine +l_cysteine
+    lysyl_cysteinyl_histidine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +beta_d_galactose +d_fructofuranose
-    lactulose
+    <-> . +l_lysine +l_glutamine +l_phenylalanine
+    lysyl_glutaminyl_phenylalanine
+  }
+
+  branch from adp side left {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    rosuvastatin
+  }
+
+  branch from adp side right {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    rosuvastatin_5s_lactone
+  }
+
+  branch from h side left {
+    h
+    <-> . +acetyl_coa +3z_6z_dodecadienoyl_coa +coa
+    3_oxo_cis_cis_5_8_tetradecadienoyl_coa
+  }
+
+  branch from h side right {
+    h
+    <-> . +d_glucuronate +rosuvastatin +h2o
+    rosuvastatin_glucuronide
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    sulphate_conjugate_3_methoxy_acetaminophen
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    siroheme
+  }
+
+  branch from 2_oxoglutarate side left {
+    2_oxoglutarate
+    <-> . +ambiguine_b +co2 +succinate +h2o +h +o2 +chloride
+    ambiguine_c
+  }
+
+  branch from 2_oxoglutarate side right {
+    2_oxoglutarate
+    <-> . +diphosphate +h +amp +baumannoferrin_b +atp
+    n5_2_4_diaminobutanoate_n1_citryl_n3_decanoyl_n3
+  }
+
+  branch from l_glutamate side left {
+    l_glutamate
+    <-> . +l_threonine +l_glutamine +h2o
+    threonyl_glutaminyl_glutamate
+  }
+
+  branch from l_glutamate side right {
+    l_glutamate
+    <-> . +glycine +l_tryptophan +h2o
+    tryptophanyl_glutamyl_glycine
+  }
+
+  branch from fadh2 side left {
+    fadh2
+    <-> . +cis_aconitate +h +fad
+    tricarballylate
+  }
+
+  branch from fadh2 side right {
+    fadh2
+    <-> . +3_6_dichloropyridine_2_5_dione +h +fad
+    3_6_dichloropyridine_2_5_diol
+  }
+
+  branch from fad side left {
+    fad
+    <-> . +25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol +fadh2 +h
+    24e_3alpha_7alpha_12alpha_trihydroxy_5beta_chol
+  }
+
+  branch from fad side right {
+    fad
+    <-> . +fadh2 +h +5_chloro_l_tryptophan +l_tryptophan
+    chloride
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> . +d_ribulose +h2o
+    d_ribulose_5_phosphate
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    simvastatin
   }
 }

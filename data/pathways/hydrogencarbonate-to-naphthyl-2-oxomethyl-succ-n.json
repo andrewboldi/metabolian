@@ -1,0 +1,429 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "hydrogencarbonate-to-naphthyl-2-oxomethyl-succ-n",
+  "name": "hydrogencarbonate to Naphthyl-2-oxomethyl-succ…",
+  "category": "other",
+  "summary": "A 3-step route from hydrogencarbonate to Naphthyl-2-oxomethyl-succinyl-CoA, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR119062"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "hydrogencarbonate",
+      "name": "hydrogencarbonate",
+      "formula": "CHO3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1094693"
+      }
+    },
+    {
+      "id": "naphthalene",
+      "name": "naphthalene",
+      "formula": "C10H8",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1363334"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "2_naphthoic_acid",
+      "name": "2-naphthoic acid",
+      "formula": "C11H8O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM4298"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "2_naphthoyl_coa",
+      "name": "2-naphthoyl-CoA",
+      "formula": "C32H42N7O17P3S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:34300"
+      }
+    },
+    {
+      "id": "succinyl_coa",
+      "name": "succinyl-CoA",
+      "formula": "C25H35N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "metanetx": "MNXM1104774"
+      }
+    },
+    {
+      "id": "naphthyl_2_oxomethyl_succinyl_coa",
+      "name": "Naphthyl-2-oxomethyl-succinyl-CoA",
+      "short": "Naphthyl-2-oxomethy…",
+      "formula": "C36H46N7O20P3S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM740066"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR119062",
+      "substrates": [
+        {
+          "metabolite": "hydrogencarbonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "naphthalene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_naphthoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR119062"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR119062"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR111464",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "2_naphthoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_naphthoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR111464"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR111464"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR110633",
+      "substrates": [
+        {
+          "metabolite": "succinyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_naphthoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "naphthyl_2_oxomethyl_succinyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR110633"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR110633"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_2_naphthoic_acid_1-hydroxy-2-naphthoate-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_naphthoic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-hydroxy-2-naphthoate-to-nad"
+      },
+      "note": "Shares 2-naphthoic acid with 1-hydroxy-2-naphthoate to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM4298"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_naphthoic_acid_1-hydroxy-2-naphthoate-to-nad-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_naphthoic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-hydroxy-2-naphthoate-to-nad-null"
+      },
+      "note": "Shares 2-naphthoic acid with 1-hydroxy-2-naphthoate to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM4298"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_naphthoic_acid_1-oleoyl-2-acyl-sn-glycer-to-h2o-62052",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_naphthoic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-oleoyl-2-acyl-sn-glycer-to-h2o-62052"
+      },
+      "note": "Shares 2-naphthoic acid with 1-oleoyl-2-acyl-sn-glycer… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM4298"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_naphthoic_acid_4-nitrobenzoyl-coa-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_naphthoic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-nitrobenzoyl-coa-to-h2o"
+      },
+      "note": "Shares 2-naphthoic acid with 4-nitrobenzoyl-CoA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM4298"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_naphthoic_acid_hydrogencarbonate-to-naphthyl-2-oxomethyl-succ",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_naphthoic_acid"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hydrogencarbonate-to-naphthyl-2-oxomethyl-succ"
+      },
+      "note": "Shares 2-naphthoic acid with hydrogencarbonate to Naphthyl-2-oxomethyl-succ….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM4298"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_naphthoyl_coa_1-oleoyl-2-acyl-sn-glycer-to-h2o-62052",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_naphthoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-oleoyl-2-acyl-sn-glycer-to-h2o-62052"
+      },
+      "note": "Shares 2-naphthoyl-CoA with 1-oleoyl-2-acyl-sn-glycer… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:34300"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_naphthoyl_coa_4-nitrobenzoyl-coa-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_naphthoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-nitrobenzoyl-coa-to-h2o"
+      },
+      "note": "Shares 2-naphthoyl-CoA with 4-nitrobenzoyl-CoA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:34300"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_naphthoyl_coa_hydrogencarbonate-to-naphthyl-2-oxomethyl-succ",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_naphthoyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hydrogencarbonate-to-naphthyl-2-oxomethyl-succ"
+      },
+      "note": "Shares 2-naphthoyl-CoA with hydrogencarbonate to Naphthyl-2-oxomethyl-succ….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:34300"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_naphthyl_2_oxomethyl_succinyl_coa_hydrogencarbonate-to-naphthyl-2-oxomethyl-succ",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "naphthyl_2_oxomethyl_succinyl_coa"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "hydrogencarbonate-to-naphthyl-2-oxomethyl-succ"
+      },
+      "note": "Shares Naphthyl-2-oxomethyl-succinyl-CoA with hydrogencarbonate to Naphthyl-2-oxomethyl-succ….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM740066"
+          }
+        ]
+      }
+    }
+  ]
+}

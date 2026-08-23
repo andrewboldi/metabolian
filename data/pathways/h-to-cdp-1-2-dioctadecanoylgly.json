@@ -1,0 +1,448 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "h-to-cdp-1-2-dioctadecanoylgly",
+  "name": "H to CDP-1,2-dioctadecanoylgly…",
+  "category": "other",
+  "summary": "A 3-step route from H(+) to CDP-1,2-dioctadecanoylglycerol, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR205970"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "octadecanoate",
+      "name": "octadecanoate",
+      "formula": "C18H35O2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM236"
+      }
+    },
+    {
+      "id": "sn_glycerol_3_phosphate",
+      "name": "sn-glycerol 3-phosphate",
+      "short": "sn-glycerol 3-P",
+      "formula": "C3H7O6P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM66"
+      }
+    },
+    {
+      "id": "lysopa_18_0_0_0",
+      "name": "LysoPA(18:0/0:0)",
+      "formula": "C21H43O7P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:170124"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "3_phosphonooxy_1_2_propanediyl_dioctadecanoate",
+      "name": "3-(Phosphonooxy)-1,2-propanediyl dioctadecanoate",
+      "short": "3-(Phosphonooxy)-1,…",
+      "formula": "C39H77O8P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:176709"
+      }
+    },
+    {
+      "id": "ctp",
+      "name": "CTP",
+      "formula": "C9H12N3O14P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1103718"
+      }
+    },
+    {
+      "id": "diphosphate",
+      "name": "diphosphate",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM11"
+      }
+    },
+    {
+      "id": "cdp_1_2_dioctadecanoylglycerol",
+      "name": "CDP-1,2-dioctadecanoylglycerol",
+      "short": "CDP-1,2-dioctadecan…",
+      "formula": "C48H87N3O15P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM736453"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_7_41",
+      "name": "phosphatidate cytidylyltransferase",
+      "ec": [
+        "2.7.7.41"
+      ],
+      "xrefs": {
+        "uniprot": "Q92903"
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR205970",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "octadecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sn_glycerol_3_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "lysopa_18_0_0_0",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR205970"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR205970"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR206399",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "octadecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "lysopa_18_0_0_0",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_phosphonooxy_1_2_propanediyl_dioctadecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR206399"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR206399"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "phosphatidate cytidylyltransferase",
+      "ec": "2.7.7.41",
+      "substrates": [
+        {
+          "metabolite": "ctp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_phosphonooxy_1_2_propanediyl_dioctadecanoate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cdp_1_2_dioctadecanoylglycerol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_7_41"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR153310"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR153310"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_lysopa_18_0_0_0_octadecanoyl-coa-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "lysopa_18_0_0_0"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "octadecanoyl-coa-to-h2o-null"
+      },
+      "note": "Shares LysoPA(18:0/0:0) with octadecanoyl-CoA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:170124"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_phosphonooxy_1_2_propanediyl_dioctadecanoate_1-stearoyl-2-myristoyl-sn-to-1-stearoyl-2-oleoyl",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_phosphonooxy_1_2_propanediyl_dioctadecanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1-stearoyl-2-myristoyl-sn-to-1-stearoyl-2-oleoyl"
+      },
+      "note": "Shares 3-(Phosphonooxy)-1,2-propanediyl dioctadecanoate with 1-stearoyl-2-myristoyl-sn… to 1-stearoyl-2-oleoyl-sn-gl….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:176709"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_phosphonooxy_1_2_propanediyl_dioctadecanoate_2e-2-hydroxypenta-2-4-d-to-tert-butoxymethanol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_phosphonooxy_1_2_propanediyl_dioctadecanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2e-2-hydroxypenta-2-4-d-to-tert-butoxymethanol"
+      },
+      "note": "Shares 3-(Phosphonooxy)-1,2-propanediyl dioctadecanoate with (2E)-2-hydroxypenta-2,4-d… to tert-butoxymethanol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:176709"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_phosphonooxy_1_2_propanediyl_dioctadecanoate_co2-to-pyruvate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_phosphonooxy_1_2_propanediyl_dioctadecanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "co2-to-pyruvate"
+      },
+      "note": "Shares 3-(Phosphonooxy)-1,2-propanediyl dioctadecanoate with CO2 to pyruvate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:176709"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_phosphonooxy_1_2_propanediyl_dioctadecanoate_glycerophosphatidylethano-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_phosphonooxy_1_2_propanediyl_dioctadecanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "glycerophosphatidylethano-to-h2o-null"
+      },
+      "note": "Shares 3-(Phosphonooxy)-1,2-propanediyl dioctadecanoate with glycerophosphatidylethano… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:176709"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_3_phosphonooxy_1_2_propanediyl_dioctadecanoate_octadecanoyl-coa-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_phosphonooxy_1_2_propanediyl_dioctadecanoate"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "octadecanoyl-coa-to-h2o-null"
+      },
+      "note": "Shares 3-(Phosphonooxy)-1,2-propanediyl dioctadecanoate with octadecanoyl-CoA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:176709"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cdp_1_2_dioctadecanoylglycerol_3-8-dideoxy-8-oxo-alpha-d-to-adp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cdp_1_2_dioctadecanoylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-8-dideoxy-8-oxo-alpha-d-to-adp"
+      },
+      "note": "Shares CDP-1,2-dioctadecanoylglycerol with 3,8-dideoxy-8-oxo-alpha-D… to ADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM736453"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cdp_1_2_dioctadecanoylglycerol_calicheamicin-gamma-1-i-to-h",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cdp_1_2_dioctadecanoylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "calicheamicin-gamma-1-i-to-h"
+      },
+      "note": "Shares CDP-1,2-dioctadecanoylglycerol with Calicheamicin gamma(1)I to H.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM736453"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_cdp_1_2_dioctadecanoylglycerol_octadecanoyl-coa-to-h2o-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "cdp_1_2_dioctadecanoylglycerol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "octadecanoyl-coa-to-h2o-null"
+      },
+      "note": "Shares CDP-1,2-dioctadecanoylglycerol with octadecanoyl-CoA to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM736453"
+          }
+        ]
+      }
+    }
+  ]
+}

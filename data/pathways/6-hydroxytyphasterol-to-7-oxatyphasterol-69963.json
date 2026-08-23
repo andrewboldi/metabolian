@@ -1,0 +1,549 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "6-hydroxytyphasterol-to-7-oxatyphasterol-69963",
+  "name": "6α-hydroxytyphasterol to 7-oxatyphasterol",
+  "category": "other",
+  "summary": "A 3-step route from 6α-hydroxytyphasterol to 7-oxatyphasterol, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:69963"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:188495"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "6_hydroxytyphasterol",
+      "name": "6α-hydroxytyphasterol",
+      "short": "6α-hydroxytyphaster…",
+      "formula": "C28H50O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:188495"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "teasterone",
+      "name": "teasterone",
+      "formula": "C28H48O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:26863"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "7_oxateasterone",
+      "name": "7-oxateasterone",
+      "formula": "C28H48O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM726212"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "7_oxatyphasterol",
+      "name": "7-oxatyphasterol",
+      "formula": "C28H48O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM726214"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "6alpha-hydroxytyphasterol + reduced [NADPH--hemoprotein reductase] + O2 = teasterone + ...",
+      "equation": "6alpha-hydroxytyphasterol + reduced [NADPH--hemoprotein reductase] + O2 = teasterone + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "6_hydroxytyphasterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "teasterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:69963"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69963"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR176074",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "teasterone",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "7_oxateasterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR176074"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR176074"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR150438",
+      "substrates": [
+        {
+          "metabolite": "7_oxateasterone",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_oxatyphasterol",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR150438"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR150438"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_6_hydroxytyphasterol_3-epi-6-deoxocathasterone-to-nadp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_hydroxytyphasterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-epi-6-deoxocathasterone-to-nadp"
+      },
+      "note": "Shares 6α-hydroxytyphasterol with 3-epi-6-deoxocathasterone to NADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:188495"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_hydroxytyphasterol_3-epi-6-deoxocathasterone-to-nadp-27321",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_hydroxytyphasterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-epi-6-deoxocathasterone-to-nadp-27321"
+      },
+      "note": "Shares 6α-hydroxytyphasterol with 3-epi-6-deoxocathasterone to NADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:188495"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_6_hydroxytyphasterol_6-hydroxytyphasterol-to-7-oxatyphasterol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "6_hydroxytyphasterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-hydroxytyphasterol-to-7-oxatyphasterol"
+      },
+      "note": "Shares 6α-hydroxytyphasterol with 6α-hydroxytyphasterol to 7-oxatyphasterol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:188495"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_teasterone_1s-bornane-2-5-dione-to-delta2-5-3-4-4-trimethy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "teasterone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "1s-bornane-2-5-dione-to-delta2-5-3-4-4-trimethy"
+      },
+      "note": "Shares teasterone with (1S)-bornane-2,5-dione to Delta2,5-3,4,4-trimethylp….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:26863"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_teasterone_6-hydroxytyphasterol-to-7-oxatyphasterol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "teasterone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-hydroxytyphasterol-to-7-oxatyphasterol"
+      },
+      "note": "Shares teasterone with 6α-hydroxytyphasterol to 7-oxatyphasterol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:26863"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_teasterone_6-oxocampestanol-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "teasterone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-oxocampestanol-to-fmn"
+      },
+      "note": "Shares teasterone with 6-oxocampestanol to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:26863"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_teasterone_6-oxocampestanol-to-fmn-70003",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "teasterone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-oxocampestanol-to-fmn-70003"
+      },
+      "note": "Shares teasterone with 6-oxocampestanol to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:26863"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_teasterone_campestanol-to-fmn",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "teasterone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "campestanol-to-fmn"
+      },
+      "note": "Shares teasterone with campestanol to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:26863"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_teasterone_campestanol-to-fmn-69831",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "teasterone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "campestanol-to-fmn-69831"
+      },
+      "note": "Shares teasterone with campestanol to FMN.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:26863"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_teasterone_dihydroprecondylocarpine-to-echitovenine-58588",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "teasterone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "dihydroprecondylocarpine-to-echitovenine-58588"
+      },
+      "note": "Shares teasterone with dihydroprecondylocarpine… to (+)-echitovenine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:26863"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_oxateasterone_6-hydroxytyphasterol-to-7-oxatyphasterol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_oxateasterone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "6-hydroxytyphasterol-to-7-oxatyphasterol"
+      },
+      "note": "Shares 7-oxateasterone with 6α-hydroxytyphasterol to 7-oxatyphasterol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM726212"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_7_oxatyphasterol_3-epi-6-deoxocathasterone-to-nadp",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "7_oxatyphasterol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-epi-6-deoxocathasterone-to-nadp"
+      },
+      "note": "Shares 7-oxatyphasterol with 3-epi-6-deoxocathasterone to NADP.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM726214"
+          }
+        ]
+      }
+    }
+  ]
+}

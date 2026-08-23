@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-palmitoyl-2-oleoyl-sn-g-to-fmn "1-palmitoyl-2-oleoyl-sn-g… to FMN" {
-  spacing 182
+  spacing 170
 
   spine at 0,0 {
     1_palmitoyl_2_oleoyl_sn_glycero_3_phospho_1_sn_g
@@ -20,31 +20,19 @@ pathway 1-palmitoyl-2-oleoyl-sn-g-to-fmn "1-palmitoyl-2-oleoyl-sn-g… to FMN" {
 
   branch from 1_hexadecanoyl_sn_glycero_3_phospho_1_sn_glycero side left {
     1_hexadecanoyl_sn_glycero_3_phospho_1_sn_glycero
-    <-> . +stearoyl_coa +coa
-    1_hexadecanoyl_2_octadecanoyl_sn_glycero_3_phosp
+    <-> . +sn_glycero_3_phospho_1_sn_glycerol
+    1_palmitoyl_sn_glycero_3_phospho_3_palmitoyl_1_s
   }
 
-  branch from 1_hexadecanoyl_sn_glycero_3_phospho_1_sn_glycero side right {
-    1_hexadecanoyl_sn_glycero_3_phospho_1_sn_glycero
-    <-> . +1_palmitoyl_2_oleoyl_sn_glycero_3_phospho_1_sn_g +coa
-    oleoyl_coa
+  branch from palmitoyl_coa side right {
+    palmitoyl_coa
+    <-> . +dodecan_1_ol +coa
+    dodecyl_palmitate
   }
 
-  branch from 1_2_dipalmitoyl_sn_glycero_3_phospho_1_sn_glycer side left {
-    1_2_dipalmitoyl_sn_glycero_3_phospho_1_sn_glycer
-    <-> ec_3_1_3_27 [3.1.3.27] +h +phosphate +h2o
-    1_2_dihexadecanoyl_sn_glycero_3_phospho_1_sn_gly
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +decan_1_ol +fmnh2 +o2 +h2o +hplus
-    1_7_decanediol
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +dodecan_1_ol +fmnh2 +o2 +h2o +hplus
-    1_6_dodecanediol
+  branch from palmitoyl_coa side left {
+    palmitoyl_coa
+    <-> . +nadh +hplus +nad +coa
+    hexadecan_1_ol
   }
 }

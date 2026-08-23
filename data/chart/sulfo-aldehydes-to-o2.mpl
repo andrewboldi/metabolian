@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway sulfo-aldehydes-to-o2 "Sulfo-Aldehydes to O2" {
-  spacing 200
+  spacing 152
 
   spine at 0,0 {
     sulfo_aldehydes
@@ -14,53 +14,5 @@ pathway sulfo-aldehydes-to-o2 "Sulfo-Aldehydes to O2" {
     5_chlorocarbonyl_2_hydroxy_penta_2_4_dienate
     <-> . +h -o2
     3_chlorocatechol
-  }
-
-  branch from 2_oxohex_3_enedioic_acid side left {
-    2_oxohex_3_enedioic_acid
-    <-> . +h
-    2e_4z_2_hydroxymuconate
-  }
-
-  branch from 2_oxohex_3_enedioic_acid side right {
-    2_oxohex_3_enedioic_acid
-    <-> . +h
-    4_oxalocrotonate
-  }
-
-  branch from sulfite side left {
-    sulfite
-    <-> . +2_oxohex_3_enedioic_acid +h +o2 +h2o
-    2_3_dihydroxybenzenesulfonate
-  }
-
-  branch from sulfite side right {
-    sulfite
-    <-> . +fmnh2 +sulfoacetate +h +o2 +glyoxylate +h2o
-    fmn
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_2_1_10 [3.2.1.10] +sucrose +beta_d_glucose
-    d_fructofuranose
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_2_1_10 [3.2.1.10] +sucrose +d_fructofuranose
-    alpha_d_glucose
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +ubiquinol_10 +ubiquinone_10 +h2o
-    pmf
-  }
-
-  branch from o2 side right {
-    o2
-    <-> ec_1_14_13_72 [1.14.13.72] +nadh +h +4_4_dimethyl_5alpha_cholesta_8_24_dien_3beta_ol +nad +h2o
-    4_hydroxymethyl_4_methylzymosterol
   }
 }

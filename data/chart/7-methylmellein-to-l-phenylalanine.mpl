@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 7-methylmellein-to-l-phenylalanine "7-methylmellein to L-phenylalanine" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     7_methylmellein
@@ -16,17 +16,5 @@ pathway 7-methylmellein-to-l-phenylalanine "7-methylmellein to L-phenylalanine" 
     ochratoxin_a
     <-> . +h2o -l_phenylalanine
     ochratoxin
-  }
-
-  branch from l_phenylalanine side left {
-    l_phenylalanine
-    <-> . +apelin_13 +h2o
-    apelin_12
-  }
-
-  branch from l_phenylalanine side right {
-    l_phenylalanine
-    <-> . +pyr1_apelin_13 +h2o
-    pyr1_apelin_12
   }
 }

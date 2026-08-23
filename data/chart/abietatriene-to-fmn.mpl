@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway abietatriene-to-fmn "abietatriene to FMN" {
-  spacing 196
+  spacing 214
 
   spine at 0,0 {
     abietatriene
@@ -18,37 +18,55 @@ pathway abietatriene-to-fmn "abietatriene to FMN" {
 
   branch from ferruginol side left {
     ferruginol
-    <-> ec_1_14_14_62 [1.14.14.62] +fmnh2 +o2 +fmn +h2o +hplus
-    salviol
-  }
-
-  branch from ferruginol side right {
-    ferruginol
-    <-> ec_1_14_14_65 [1.14.14.65] +fmnh2 +o2 +fmn +h2o +hplus
-    sugiol
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +17_estradiol +fmnh2 +o2 +h2o +hplus
-    6_hydroxy_17_estradiol
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    pisiferate
   }
 
   branch from fmn side right {
     fmn
-    <-> . +17_estradiol +fmnh2 +o2 +h2o +hplus
-    7_hydroxyestradiol
+    <-> . +s_naringenin +fmnh2 +o2 +h2o +hplus
+    eriodictyol
   }
 
-  branch from 11_hydroxyferruginol side left {
-    11_hydroxyferruginol
-    <-> ec_1_14_14_65 [1.14.14.65] +fmnh2 +o2 +fmn +h2o +hplus
-    11_hydroxysugiol
+  branch from fmn side left {
+    fmn
+    <-> . +eriodictyol +fmnh2 +o2 +h2o +hplus
+    2s_dihydrotricetin
   }
 
-  branch from 11_hydroxyferruginol side right {
-    11_hydroxyferruginol
-    <-> ec_1_14_14_67 [1.14.14.67] +fmnh2 +o2 +fmn +h2o +hplus
-    11_20_dihydroxyferruginol
+  branch from abietatriene side right {
+    abietatriene
+    <-> . +h +o2 +nadph +dehydroabietadienol +h2o
+    nadp
+  }
+
+  branch from abietatriene side left {
+    abietatriene
+    <-> . +nadp +h2o +o2 +nadph +miltiradiene
+    h
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> . +o2 +2s_dihydrotricetin +fmn +h2o +hplus
+    s_naringenin
+  }
+
+  branch from fmnh2 side left {
+    fmnh2
+    <-> . +kaempferol_oxoanion +o2 +fmn +h2o +hplus
+    quercetin_7_olate
+  }
+
+  branch from fmn side right {
+    fmn
+    <-> . +peregrinol +fmnh2 +o2 +h2o +hplus
+    labd_13z_ene_9_15_16_triol
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> . +3_hydroxybenzyl_alcohol +fmnh2 +o2 +h2o +hplus
+    gentisyl_alcohol
   }
 }

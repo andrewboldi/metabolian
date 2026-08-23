@@ -1,0 +1,548 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "4-hydroxylamino-n-n-dim-to-pentyl-acetate-null",
+  "name": "4-(hydroxylamino)-N,N-dim… to pentyl acetate",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 4-(hydroxylamino)-N,N-dimethylaniline to pentyl acetate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR172153"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:59991"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "4_hydroxylamino_n_n_dimethylaniline",
+      "name": "4-(hydroxylamino)-N,N-dimethylaniline",
+      "short": "4-(hydroxylamino)-N…",
+      "formula": "C8H12N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59991"
+      }
+    },
+    {
+      "id": "2_oxohexane",
+      "name": "2-Oxohexane",
+      "formula": "C6H12O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:89206"
+      }
+    },
+    {
+      "id": "n_n_dimethyl_4_nitrosoaniline",
+      "name": "N,N-dimethyl-4-nitrosoaniline",
+      "short": "N,N-dimethyl-4-nitr…",
+      "formula": "C8H10N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59990"
+      }
+    },
+    {
+      "id": "hexan_2_ol",
+      "name": "hexan-2-ol",
+      "formula": "C6H14O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:88370"
+      }
+    },
+    {
+      "id": "heptan_2_ol",
+      "name": "heptan-2-ol",
+      "formula": "C7H16O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:88815"
+      }
+    },
+    {
+      "id": "heptan_2_one",
+      "name": "heptan-2-one",
+      "formula": "C7H14O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:5672"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "pentyl_acetate",
+      "name": "pentyl acetate",
+      "formula": "C7H14O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:87362"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_99_36",
+      "name": "alcohol dehydrogenase (nicotinoprotein)",
+      "ec": [
+        "1.1.99.36"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "alcohol dehydrogenase (nicotinoprotein)",
+      "ec": "1.1.99.36",
+      "substrates": [
+        {
+          "metabolite": "4_hydroxylamino_n_n_dimethylaniline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_oxohexane",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_n_dimethyl_4_nitrosoaniline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hexan_2_ol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_99_36"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR172153"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR172153"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "alcohol dehydrogenase (nicotinoprotein)",
+      "ec": "1.1.99.36",
+      "substrates": [
+        {
+          "metabolite": "heptan_2_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_n_dimethyl_4_nitrosoaniline",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxylamino_n_n_dimethylaniline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "heptan_2_one",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_99_36"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR172154"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR172154"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "heptan-2-one + NADPH + O2 + H(+) = pentyl acetate + NADP(+) + H2O",
+      "equation": "heptan-2-one + NADPH + O2 + H(+) = pentyl acetate + NADP(+) + H2O",
+      "substrates": [
+        {
+          "metabolite": "heptan_2_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pentyl_acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:54836"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54836"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_2_oxohexane_2-3-cyclic-amp-to-9h-xanthine-37191",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxohexane"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-3-cyclic-amp-to-9h-xanthine-37191"
+      },
+      "note": "Shares 2-Oxohexane with 2',3'-cyclic AMP to 9H-xanthine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:89206"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_oxohexane_2-phenylacetamide-to-s-mandelonitrile-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxohexane"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-phenylacetamide-to-s-mandelonitrile-null"
+      },
+      "note": "Shares 2-Oxohexane with 2-phenylacetamide to (S)-mandelonitrile.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:89206"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_oxohexane_4-hydroxylamino-n-n-dim-to-pentyl-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxohexane"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxylamino-n-n-dim-to-pentyl-acetate"
+      },
+      "note": "Shares 2-Oxohexane with 4-(hydroxylamino)-N,N-dim… to pentyl acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:89206"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_oxohexane_4-hydroxyphthalic-acid-to-nad-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxohexane"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxyphthalic-acid-to-nad-null"
+      },
+      "note": "Shares 2-Oxohexane with 4-hydroxyphthalic acid to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:89206"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_oxohexane_d-valine-to-2s-2-hydroxy-3-methylbu",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxohexane"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "d-valine-to-2s-2-hydroxy-3-methylbu"
+      },
+      "note": "Shares 2-Oxohexane with D-valine to (2S)-2-hydroxy-3-methylbu….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:89206"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_oxohexane_h-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxohexane"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-nad"
+      },
+      "note": "Shares 2-Oxohexane with H to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:89206"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_oxohexane_nadh-to-coa-18-cooh-15e-dinor-lte4",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_oxohexane"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-coa-18-cooh-15e-dinor-lte4"
+      },
+      "note": "Shares 2-Oxohexane with NADH to CoA-18-COOH-15E-dinor-LTE4.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:89206"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hexan_2_ol_10-deacetyl-2-debenzoylba-to-paclitaxel",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hexan_2_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "10-deacetyl-2-debenzoylba-to-paclitaxel"
+      },
+      "note": "Shares hexan-2-ol with 10-deacetyl-2-debenzoylba… to paclitaxel.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:88370"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hexan_2_ol_10-deacetyl-2-debenzoylba-to-paclitaxel-18741",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hexan_2_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "10-deacetyl-2-debenzoylba-to-paclitaxel-18741"
+      },
+      "note": "Shares hexan-2-ol with 10-deacetyl-2-debenzoylba… to paclitaxel.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:88370"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hexan_2_ol_4-hydroxylamino-n-n-dim-to-pentyl-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hexan_2_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxylamino-n-n-dim-to-pentyl-acetate"
+      },
+      "note": "Shares hexan-2-ol with 4-(hydroxylamino)-N,N-dim… to pentyl acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:88370"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_hexan_2_ol_nadh-to-coa-18-cooh-15e-dinor-lte4",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "hexan_2_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "nadh-to-coa-18-cooh-15e-dinor-lte4"
+      },
+      "note": "Shares hexan-2-ol with NADH to CoA-18-COOH-15E-dinor-LTE4.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:88370"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_heptan_2_ol_4-hydroxylamino-n-n-dim-to-pentyl-acetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "heptan_2_ol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-hydroxylamino-n-n-dim-to-pentyl-acetate"
+      },
+      "note": "Shares heptan-2-ol with 4-(hydroxylamino)-N,N-dim… to pentyl acetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:88815"
+          }
+        ]
+      }
+    }
+  ]
+}

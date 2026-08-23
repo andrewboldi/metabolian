@@ -1,0 +1,441 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "kaempferol-oxoanion-to-myricetin-3-o-d-glucosy-6",
+  "name": "kaempferol oxoanion to myricetin 3-O-β-D-glucosy…",
+  "category": "other",
+  "summary": "A 3-step route from kaempferol oxoanion to myricetin 3-O-β-D-glucosyl-(1→2)-β-D-glucoside(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:61120"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58573"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "kaempferol_oxoanion",
+      "name": "kaempferol oxoanion",
+      "formula": "C15H9O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58573"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "myricetin",
+      "name": "myricetin",
+      "formula": "C15H9O8",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58395"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "myricetin_3_o_d_glucopyranoside",
+      "name": "myricetin 3-O-β-D-glucopyranoside",
+      "short": "myricetin…",
+      "formula": "C21H19O13",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:144444"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "myricetin_3_o_d_glucosyl_1_2_d_glucoside",
+      "name": "myricetin 3-O-β-D-glucosyl-(1→2)-β-D-glucoside",
+      "short": "myricetin…",
+      "formula": "C27H29O18",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:144439"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "kaempferol + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = myricetin + 2 oxidized [...",
+      "equation": "kaempferol + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = myricetin + 2 oxidized [NADPH--hemoprotein reductase] + 2 H2O + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "kaempferol_oxoanion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "myricetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:61120"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61120"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "myricetin + UDP-alpha-D-glucose = myricetin 3-O-beta-D-glucoside + UDP + H(+)",
+      "equation": "myricetin + UDP-alpha-D-glucose = myricetin 3-O-beta-D-glucoside + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "myricetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "myricetin_3_o_d_glucopyranoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:61212"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61212"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "myricetin 3-O-beta-D-glucoside + UDP-alpha-D-glucose = myricetin 3-O-beta-D-glucosyl-(1...",
+      "equation": "myricetin 3-O-beta-D-glucoside + UDP-alpha-D-glucose = myricetin 3-O-beta-D-glucosyl-(1->2)-beta-D-glucoside + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "myricetin_3_o_d_glucopyranoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "myricetin_3_o_d_glucosyl_1_2_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:61172"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61172"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_myricetin_cis-3-4-leucopelargonidin-to-s-adenosyl-l-homocy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "myricetin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "cis-3-4-leucopelargonidin-to-s-adenosyl-l-homocy"
+      },
+      "note": "Shares myricetin with cis-3,4-leucopelargonidin to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58395"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_myricetin_kaempferol-oxoanion-to-myricetin-3-o-d-glucosy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "myricetin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "kaempferol-oxoanion-to-myricetin-3-o-d-glucosy"
+      },
+      "note": "Shares myricetin with kaempferol oxoanion to myricetin 3-O-β-D-glucosy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58395"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_myricetin_myricetin-to-myricetin-3-o-6-o-caffe",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "myricetin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "myricetin-to-myricetin-3-o-6-o-caffe"
+      },
+      "note": "Shares myricetin with myricetin to myricetin 3-O-[(6-O-caffe….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58395"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_myricetin_myricetin-to-myricetin-3-o-6-o-caffe-61144",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "myricetin"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "myricetin-to-myricetin-3-o-6-o-caffe-61144"
+      },
+      "note": "Shares myricetin with myricetin to myricetin 3-O-[(6-O-caffe….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:58395"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_myricetin_3_o_d_glucopyranoside_h-to-3-o-d-xyl-1-3-d-g-null",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "myricetin_3_o_d_glucopyranoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "h-to-3-o-d-xyl-1-3-d-g-null"
+      },
+      "note": "Shares myricetin 3-O-β-D-glucopyranoside with H to 3-O-{β-D-Xyl-(1→3)-[β-D-G….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:144444"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_myricetin_3_o_d_glucopyranoside_kaempferol-oxoanion-to-myricetin-3-o-d-glucosy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "myricetin_3_o_d_glucopyranoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "kaempferol-oxoanion-to-myricetin-3-o-d-glucosy"
+      },
+      "note": "Shares myricetin 3-O-β-D-glucopyranoside with kaempferol oxoanion to myricetin 3-O-β-D-glucosy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:144444"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_myricetin_3_o_d_glucopyranoside_udp-to-d-mannosyl-ditrans-polyci",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "myricetin_3_o_d_glucopyranoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "udp-to-d-mannosyl-ditrans-polyci"
+      },
+      "note": "Shares myricetin 3-O-β-D-glucopyranoside with UDP to D-mannosyl ditrans,polyci….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:144444"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_myricetin_3_o_d_glucosyl_1_2_d_glucoside_kaempferol-oxoanion-to-myricetin-3-o-d-glucosy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "myricetin_3_o_d_glucosyl_1_2_d_glucoside"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "kaempferol-oxoanion-to-myricetin-3-o-d-glucosy"
+      },
+      "note": "Shares myricetin 3-O-β-D-glucosyl-(1→2)-β-D-glucoside with kaempferol oxoanion to myricetin 3-O-β-D-glucosy….",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:144439"
+          }
+        ]
+      }
+    }
+  ]
+}

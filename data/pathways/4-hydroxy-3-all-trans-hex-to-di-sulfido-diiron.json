@@ -141,34 +141,6 @@
       "xrefs": {
         "chebi": "CHEBI:61472"
       }
-    },
-    {
-      "id": "g5_ppp5_aaca_mrna",
-      "name": "G5'ppp5'AACA-mRNA",
-      "formula": "C50H57N22O36P6",
-      "charge": -6,
-      "xrefs": {
-        "chebi": "CHEBI:156484"
-      }
-    },
-    {
-      "id": "m7g5_ppp5_m2_aaca_mrna",
-      "name": "m7G5'ppp5'm2'AACA-mRNA",
-      "short": "m7G5'ppp5'm2'AACA-m…",
-      "formula": "C52H62N22O36P6",
-      "charge": -5,
-      "xrefs": {
-        "chebi": "CHEBI:156483"
-      }
-    },
-    {
-      "id": "g5_ppp5_m2_aaca_mrna",
-      "name": "G5'ppp5'm2'AACA-mRNA",
-      "formula": "C51H59N22O36P6",
-      "charge": -6,
-      "xrefs": {
-        "chebi": "CHEBI:156482"
-      }
     }
   ],
   "enzymes": [
@@ -177,35 +149,40 @@
       "name": "4-hydroxy-3-polyprenylbenzoate 5-hydroxylase",
       "ec": [
         "1.14.15.45"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q9Y2Z9"
+      }
     },
     {
       "id": "ec_2_1_1_114",
       "name": "polyprenyldihydroxybenzoate methyltransferase",
       "ec": [
         "2.1.1.114"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q9NZJ6"
+      }
     },
     {
       "id": "ec_4_1_1_130",
       "name": "4-hydroxy-3-methoxy-5-polyprenylbenzoate decarboxylase",
       "ec": [
         "4.1.1.130"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q9Y3A0"
+      }
     },
     {
       "id": "ec_1_14_15_46",
       "name": "2-methoxy-6-polyprenylphenol 4-hydroxylase",
       "ec": [
         "1.14.15.46"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_375",
-      "name": "NNS virus cap methyltransferase",
-      "ec": [
-        "2.1.1.375"
-      ]
+      ],
+      "xrefs": {
+        "uniprot": "Q9Y2Z9"
+      }
     }
   ],
   "reactions": [
@@ -416,95 +393,115 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "relations": [
     {
-      "id": "r5",
-      "name": "NNS virus cap methyltransferase",
-      "equation": "a 5'-end (5'-triphosphoguanosine)-adenylyl-adenylyl-cytidylyl-adenosine in mRNA + 2 S-adenosyl-L-methionine = a 5'-end (N(7)-methyl 5'-triphosphoguanosine)-(2'-O-methyladenylyl)-adenylyl-cytidylyl-adenosine in mRNA + 2 S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.375",
-      "substrates": [
-        {
-          "metabolite": "g5_ppp5_aaca_mrna",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "m7g5_ppp5_m2_aaca_mrna",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_1_375"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:65376"
+      "id": "xt_4_hydroxy_3_all_trans_hexaprenylbenzoate_isopentenyl-diphosphate-to-2-hexaprenylphenol",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_hydroxy_3_all_trans_hexaprenylbenzoate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "isopentenyl-diphosphate-to-2-hexaprenylphenol"
+      },
+      "note": "Shares 4-hydroxy-3-all-trans-hexaprenylbenzoate with isopentenyl diphosphate to 2-hexaprenylphenol.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:65376"
+            "db": "ChEBI",
+            "id": "CHEBI:84492"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "a 5'-end (5'-triphosphoguanosine)-adenylyl-adenylyl-cytidylyl-adenosine in mRNA + S-ade...",
-      "equation": "a 5'-end (5'-triphosphoguanosine)-adenylyl-adenylyl-cytidylyl-adenosine in mRNA + S-adenosyl-L-methionine = a 5'-end (5'-triphosphoguanosine)-(2'-O-methyladenylyl)-adenylyl-cytidylyl-adenosine in mRNA + S-adenosyl-L-homocysteine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "g5_ppp5_aaca_mrna",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "g5_ppp5_m2_aaca_mrna",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:65380"
+      "id": "xt_3_hexaprenyl_4_5_dihydroxybenzoate_all-trans-hexaprenyl-to-ammonium",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "3_hexaprenyl_4_5_dihydroxybenzoate"
       },
+      "target": {
+        "kind": "pathway",
+        "id": "all-trans-hexaprenyl-to-ammonium"
+      },
+      "note": "Shares 3-hexaprenyl-4,5-dihydroxybenzoate with all-trans-hexaprenyl… to ammonium.",
       "provenance": {
-        "confidence": "high",
+        "confidence": "medium",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:65380"
+            "db": "ChEBI",
+            "id": "CHEBI:58373"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_hexaprenyl_6_methoxyphenol_2-hexaprenyl-6-hydroxyphe-to-s-adenosyl-l-homocy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_hexaprenyl_6_methoxyphenol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-hexaprenyl-6-hydroxyphe-to-s-adenosyl-l-homocy"
+      },
+      "note": "Shares 2-hexaprenyl-6-methoxyphenol with 2-hexaprenyl-6-hydroxyphe… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:1109"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_2_hexaprenyl_6_methoxyphenol_r-2-4-chloro-2-methylp-to-5-chloro-3-methylcate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "2_hexaprenyl_6_methoxyphenol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "r-2-4-chloro-2-methylp-to-5-chloro-3-methylcate"
+      },
+      "note": "Shares 2-hexaprenyl-6-methoxyphenol with (R)-2-(4-chloro-2-methylp… to 5-chloro-3-methylcatechol.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:1109"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_all_trans_6_methoxy_2_hexaprenylhydroquinone_2-hexaprenyl-6-hydroxyphe-to-s-adenosyl-l-homocy",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "all_trans_6_methoxy_2_hexaprenylhydroquinone"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "2-hexaprenyl-6-hydroxyphe-to-s-adenosyl-l-homocy"
+      },
+      "note": "Shares all-trans-6-methoxy-2-hexaprenylhydroquinone with 2-hexaprenyl-6-hydroxyphe… to S-adenosyl-L-homocysteine.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:61472"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-nitrophenolate-to-nitrite "2-nitrophenolate to nitrite" {
-  spacing 216
+  spacing 270
 
   spine at 0,0 {
     2_nitrophenolate
@@ -18,37 +18,91 @@ pathway 2-nitrophenolate-to-nitrite "2-nitrophenolate to nitrite" {
 
   branch from nitrite side left {
     nitrite
-    <-> ec_1_7_2_6 [1.7.2.6] +iron +h2o +fe2 +hplus
-    hydroxylamine
+    <-> ec_1_14_13_210 [1.14.13.210] +4_methyl_5_nitrocatechol +nadh +o2 +nad +h2o +hplus
+    2_oxido_5_methylquinone
   }
 
   branch from nitrite side right {
     nitrite
-    <-> . +fe2 +o2 +hplus +iron +h2o
-    nitroxyl
+    <-> ec_1_14_12_23 [1.14.12.23] +2_6_dinitrotoluene +nadh +o2 +nad
+    3_methyl_4_nitrocatechol
   }
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> . +9z_12z_15z_18z_tetracosatetraenoyl_coa +o2 +hydrogen_acceptor +h2o
-    6z_9z_12z_15z_18z_tetracosapentaenoyl_coa
+    <-> ec_1_17_99_10 [1.17.99.10] +calciol +hydrogen_acceptor +h2o
+    calcidiol
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> . +dodecanedioyl_coa +hydrogen_acceptor
-    trans_2_dodecenedioyl_coa
+    <-> ec_1_16_99_1 [1.16.99.1] +cobalt +atp +h2o +hydrogen_acceptor +adp +pi +hplus
+    cobalt
   }
 
   branch from 1_4_benzoquinones side left {
     1_4_benzoquinones
-    <-> . +ent_glycosmisate +h2o +hydroquinones +hplus
-    dca_cc
+    <-> ec_1_97_1_14 [1.97.1.14] +selenite +h2o +hydroquinones
+    selenate
   }
 
   branch from 1_4_benzoquinones side right {
     1_4_benzoquinones
-    <-> . +ent_glycosmisate +hydroquinones
-    dca_cl
+    <-> ec_1_3_5_3 [1.3.5.3] +protoporphyrinogen9 +hydroquinones
+    protoporphyrin9
+  }
+
+  branch from nitrite side left {
+    nitrite
+    <-> ec_1_14_12_23 [1.14.12.23] +2_nitrotoluene +nadh +o2 +nad
+    3_methylcatechol
+  }
+
+  branch from nitrite side right {
+    nitrite
+    <-> ec_1_14_12_23 [1.14.12.23] +3_nitrotoluene +nadh +o2 +nad
+    4_methylcatechol
+  }
+
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> . +1_hydroxy_3_oxo_steroid +hydrogen_donor
+    steroid_1_3_dione
+  }
+
+  branch from hydrogen_acceptor side right {
+    hydrogen_acceptor
+    <-> ec_1_17_99_11 [1.17.99.11] +1_dihydrotestosterone +h2o +hydrogen_donor
+    17_hydroxyandrostan_1_3_dione
+  }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> . +hydrogen_acceptor +17_hydroxyandrostan_1_3_dione
+    1_17_dihydroxyandrostan_3_one
+  }
+
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> . +1_hydroxy_5_androstan_3_17_dione +hydrogen_acceptor
+    5_androstan_1_3_17_trione
+  }
+
+  branch from hydroquinones side left {
+    hydroquinones
+    <-> . +r_malate +1_4_benzoquinones
+    enol_oxaloacetate
+  }
+
+  branch from hydroquinones side right {
+    hydroquinones
+    <-> . +1_4_benzoquinones +enol_oxaloacetate
+    malate
+  }
+
+  branch from 1_4_benzoquinones side left {
+    1_4_benzoquinones
+    <-> . +nadh +hplus +nad
+    1_4_benzosemiquinones
   }
 }

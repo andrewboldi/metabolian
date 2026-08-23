@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-demethylmenaquinone-9-to-adenosine-3-5-bismono "2-demethylmenaquinone-9 to adenosine 3',5'-bismonoph…" {
-  spacing 340
+  spacing 324
 
   spine at 0,0 {
     2_demethylmenaquinone_9
@@ -22,17 +22,39 @@ pathway 2-demethylmenaquinone-9-to-adenosine-3-5-bismono "2-demethylmenaquinone-
     sulfo_dihydromenaquinone_9
   }
 
+  branch from adenosine_3_5_bismonophosphate side left {
+    adenosine_3_5_bismonophosphate
+    <-> . +d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4 +3_phosphonato_5_adenylyl_sulfate +hplus
+    so3_3_d_galactosyl_1_3_n_acetyl_d_galactosaminyl
+  }
 
+  branch from adenosine_3_5_bismonophosphate side right {
+    adenosine_3_5_bismonophosphate
+    <-> . +d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4 +3_phosphonato_5_adenylyl_sulfate +hplus
+    3_o_sulfo_d_galactosyl_1_3_n_acetyl_d_galactosam
+  }
 
+  branch from 3_phosphonato_5_adenylyl_sulfate side left {
+    3_phosphonato_5_adenylyl_sulfate
+    <-> . +sungeidine_f +adenosine_3_5_bismonophosphate +hplus
+    sulfosungeidine_f
+  }
 
+  branch from 3_phosphonato_5_adenylyl_sulfate side right {
+    3_phosphonato_5_adenylyl_sulfate
+    <-> . +sungeidine_e +adenosine_3_5_bismonophosphate +hplus
+    sulfosungeidine_e
+  }
 
+  branch from adenosine_3_5_bismonophosphate side left {
+    adenosine_3_5_bismonophosphate
+    <-> . +d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_glc_1_1_cer +3_phosphonato_5_adenylyl_sulfate +hplus
+    d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4
+  }
 
-
-
-
-
-
-
-
-
+  branch from adenosine_3_5_bismonophosphate side right {
+    adenosine_3_5_bismonophosphate
+    <-> . +d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4 +3_phosphonato_5_adenylyl_sulfate +hplus
+    3_o_sulfo_d_galactosyl_1_3_n_acetyl_d_galactosam
+  }
 }

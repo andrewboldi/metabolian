@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway quinolinone-b-to-penigequinolone-a "Quinolinone B to penigequinolone A" {
-  spacing 200
+  spacing 182
 
   spine at 0,0 {
     quinolinone_b
@@ -20,30 +20,6 @@ pathway quinolinone-b-to-penigequinolone-a "Quinolinone B to penigequinolone A" 
     yaequinolone_d
     <-> . +nadph +hplus -nadp -h2o
     penigequinolone_a
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +d_alanine +atp +hplus
-    d_alanyl_amp
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_195 [4.2.3.195] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    rhizathalene_a
-  }
-
-  branch from hydrogen_donor side left {
-    hydrogen_donor
-    <-> . +cyathatriol +hydrogen_acceptor
-    cyathin_a3
-  }
-
-  branch from hydrogen_donor side right {
-    hydrogen_donor
-    <-> . +2r_9s_annullatin_h +hydrogen_acceptor
-    2r_annullatin_f
   }
 
   branch from 1_e_3_hydroxy_3_7_dimethylocta_1_6_dien_1_yl_qu side left {
@@ -68,5 +44,11 @@ pathway quinolinone-b-to-penigequinolone-a "Quinolinone B to penigequinolone A" 
     yaequinolone_d
     <-> . +nadph +hplus +nadp +h2o
     penigequinolone_b
+  }
+
+  branch from quinolinone_b side left {
+    quinolinone_b
+    <-> . +nadp +h2o +h +o2 +nadph
+    quinolinone_a
   }
 }

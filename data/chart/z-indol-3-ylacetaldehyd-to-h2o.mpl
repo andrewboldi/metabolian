@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway z-indol-3-ylacetaldehyd-to-h2o "(Z)-indol-3-ylacetaldehyd… to H2O" {
-  spacing 322
+  spacing 244
 
   spine at 0,0 {
     z_indol_3_ylacetaldehyde_oxime
@@ -14,83 +14,5 @@ pathway z-indol-3-ylacetaldehyd-to-h2o "(Z)-indol-3-ylacetaldehyd… to H2O" {
     e_indol_3_yl_acetaldehyde_oxime
     <-> ec_1_14_14_43 [1.14.14.43] +h +o2 +l_cysteine +nadph -s_indolylmethylthiohydroximoyl_l_cysteine -h2o
     nadp
-  }
-
-  branch from iaox_n_oxide side left {
-    iaox_n_oxide
-    <-> . +glutathione +h2o
-    z_1_glutathion_s_yl_n_hydroxy_2_1h_indol_3_yl_e
-  }
-
-  branch from h side right {
-    h
-    <-> . +adp +5_s_15_s_dihete +phosphate +5_s_15_s_dihete +h2o
-    atp
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    choline
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> . +losartan +h +o2 +nadp +h2o
-    losartan_m5
-  }
-
-  branch from nadph side left {
-    nadph
-    <-> . +h +7_2_6_dimethyl_8_2_methyl_1_oxobutoxy_1_2_6_7_8 +o2 +nadp +h2o
-    6_beta_hydroxy_lovastatin_acid_form
-  }
-
-  branch from e_indol_3_yl_acetaldehyde_oxime side right {
-    e_indol_3_yl_acetaldehyde_oxime
-    <-> ec_1_14_13_125 [1.14.13.125] +co2 +nadp +h2o +h +o2 +nadph
-    l_tryptophan
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +7z_hexadecenoyl_coa +h2o2
-    2e_7z_hexadecadienoyl_coa
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +h +7_2_6_dimethyl_8_2_methyl_1_oxobutoxy_1_2_6_7_8 +nadph +nadp +h2o
-    6_exomethylene_lovastatin_acid_form
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +h +lovastatin +o2 +nadph +h2o
-    3_hydroxy_lovastatin_lactone_form
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +h +lovastatin +o2 +nadph +h2o
-    6_beta_hydroxy_lovastatin_lactone_form
-  }
-
-  branch from s_indolylmethylthiohydroximoyl_l_cysteine side left {
-    s_indolylmethylthiohydroximoyl_l_cysteine
-    <-> ec_3_4_13_23 [3.4.13.23] +z_1_l_cysteinylglycin_s_yl_n_hydroxy_2_1h_indol +h2o
-    glycine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    chloramphenicol
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    coprostanol
   }
 }

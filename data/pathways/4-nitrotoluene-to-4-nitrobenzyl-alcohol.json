@@ -173,44 +173,6 @@
       }
     },
     {
-      "id": "18_hydroxycortisol",
-      "name": "18-hydroxycortisol",
-      "formula": "C21H30O6",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:89455"
-      }
-    },
-    {
-      "id": "18_oxocortisol",
-      "name": "18-oxocortisol",
-      "formula": "C21H28O6",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:89213"
-      }
-    },
-    {
-      "id": "11_deoxycorticosterone",
-      "name": "11-deoxycorticosterone",
-      "short": "11-deoxycorticoster…",
-      "formula": "C21H30O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16973"
-      }
-    },
-    {
-      "id": "18_hydroxydeoxycorticosterone",
-      "name": "18-hydroxydeoxycorticosterone",
-      "short": "18-hydroxydeoxycort…",
-      "formula": "C21H30O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:195166"
-      }
-    },
-    {
       "id": "co2",
       "name": "CO2",
       "formula": "CO2",
@@ -425,108 +387,6 @@
     },
     {
       "id": "r5",
-      "name": "18-hydroxycortisol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = 18-oxocortisol + 2 oxidize...",
-      "equation": "18-hydroxycortisol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = 18-oxocortisol + 2 oxidized [adrenodoxin] + 2 H2O",
-      "substrates": [
-        {
-          "metabolite": "18_hydroxycortisol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "18_oxocortisol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:76023"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:76023"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "21-hydroxyprogesterone + 2 reduced [adrenodoxin] + O2 + 2 H(+) = 18-hydroxy-11-deoxycor...",
-      "equation": "21-hydroxyprogesterone + 2 reduced [adrenodoxin] + O2 + 2 H(+) = 18-hydroxy-11-deoxycorticosterone + 2 oxidized [adrenodoxin] + H2O",
-      "substrates": [
-        {
-          "metabolite": "11_deoxycorticosterone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "18_hydroxydeoxycorticosterone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:76151"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:76151"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
       "name": "indolepyruvate decarboxylase",
       "ec": "4.1.1.74",
       "substrates": [
@@ -555,7 +415,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 5,
       "xrefs": {
         "metanetx": "MNXR133001"
       },
@@ -565,6 +425,118 @@
           {
             "db": "MetaNetX",
             "id": "MNXR133001"
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "xt_4_nitrotoluene_4-nitrophenyl-phosphate-to-maleylacetate",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_nitrotoluene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-nitrophenyl-phosphate-to-maleylacetate"
+      },
+      "note": "Shares 4-nitrotoluene with 4-nitrophenyl phosphate to maleylacetate.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:35227"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_nitrobenzyl_alcohol_4-aminobenzoate-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_nitrobenzyl_alcohol"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-aminobenzoate-to-nad"
+      },
+      "note": "Shares 4-nitrobenzyl alcohol with 4-aminobenzoate to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:41214"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_nitrobenzaldehyde_4-aminobenzoate-to-nad",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_nitrobenzaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-aminobenzoate-to-nad"
+      },
+      "note": "Shares 4-nitrobenzaldehyde with 4-aminobenzoate to NAD.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:66926"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_nitrobenzaldehyde_4-nitrobenzaldehyde-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_nitrobenzaldehyde"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "4-nitrobenzaldehyde-to-h2o"
+      },
+      "note": "Shares 4-nitrobenzaldehyde with 4-nitrobenzaldehyde to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "ChEBI",
+            "id": "CHEBI:66926"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xt_4_nitrotoluene_3-s-hydroxy-10-13-16-all-to-h2o",
+      "type": "crosstalk",
+      "source": {
+        "kind": "metabolite",
+        "id": "4_nitrotoluene"
+      },
+      "target": {
+        "kind": "pathway",
+        "id": "3-s-hydroxy-10-13-16-all-to-h2o"
+      },
+      "note": "Shares 4-nitrotoluene with 3(S)-hydroxy-10,13,16-all… to H2O.",
+      "provenance": {
+        "confidence": "medium",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXM10227"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway malonyl-coa-to-h2o "malonyl-CoA to H2O" {
-  spacing 312
+  spacing 340
 
   spine at 0,0 {
     malonyl_coa
@@ -18,49 +18,133 @@ pathway malonyl-coa-to-h2o "malonyl-CoA to H2O" {
 
   branch from co2 side left {
     co2
-    <-> . +2_oxo_8_methylthiooctanoic_acid +h
-    3_carboxy_8_methylsulfanyl_2_oxooctanoate
+    <-> . +4alpha_14alpha_dimethyl_ergosta_8_25_27_dienol +h
+    4beta_carboxycyclolaudenol
   }
 
   branch from co2 side right {
     co2
-    <-> . +2_oxo_7_methylthioheptanoic_acid +h
-    3_carboxy_7_methylsulfanyl_2_oxoheptanoate
+    <-> . +2_5_dihydroxypyridine +h
+    3_6_dihydroxypicolinate
   }
 
   branch from coa side left {
     coa
-    <-> . +acetyl_coa +11e_tetradecen_1_ol
-    11e_tetradecenyl_acetate
+    <-> . +cis_cis_cis_10_13_16_docosatrienoyl_coa +r_carnitine
+    10z_13z_16z_docosatrienoylcarnitine
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_155 [2.3.1.155] +9z_myristoleoyl_coa +acetyl_coa
-    11z_3_oxohexadecenoyl_coa
+    <-> . +9e_myristelaidoyl_coa +cholesterol
+    ce_14_1_9z
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_348 [1.1.1.348] +h +sophorol +nadph
-    3r_4r_2_hydroxy_4_5_methylenedioxyisoflavan_4_7
+    <-> ec_1_14_14_1 [1.14.14.1] +4_methylamino_antipyrine +formaldehyde +h2o +h +o2 +nadph
+    aminophenazone
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_3_1_72 [1.3.1.72] +cycloartenol +h +nadph
-    cycloartanol
+    <-> ec_1_14_13_144 [1.14.13.144] +9_pimara_7_15_diene +h +o2 +nadph +h2o
+    9_pimara_7_15_dien_19_oate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_4_2_1_74 [4.2.1.74] +e_z_dodeca_2_5_dienoyl_coa
-    s_z_3_hydroxydodec_5_enoyl_coa
+    <-> . +l_glutamine +l_methionine +l_tyrosine
+    met_gln_tyr
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_4_21_4 [3.4.21.4] +l_4_hydroxyphenylglycyl_l_arginine +d_4_hydroxyphenylglycine_l_seryl_l_4_hydroxyphen +h
-    l_4_hydroxyphenylglycine_l_arginyl_d_4_hydroxyph
+    <-> . +glycine +l_methionine +l_arginine
+    methionyl_glycyl_arginine
+  }
+
+  branch from malonyl_coa side left {
+    malonyl_coa
+    <-> . +3beta_14beta_21_trihydroxy_5beta_pregnane_20_one +coa
+    3beta_14beta_dihydroxy_5beta_pregnane_20_one_21
+  }
+
+  branch from malonyl_coa side right {
+    malonyl_coa
+    <-> . +e_cinnamoyl_coa +h +co2 +coa
+    e_4_hydroxy_6_styryl_pyran_2_one
+  }
+
+  branch from h side left {
+    h
+    <-> . +adp +sm_d18_1_20_1_sphingomyelin +phosphate +sm_d18_1_20_1_sphingomyelin +h2o
+    atp
+  }
+
+  branch from h side right {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    sm_d18_1_20_0_sphingomyelin
+  }
+
+  branch from co2 side left {
+    co2
+    <-> . +3_methylbutyraldehyde_oxime +h2o +h
+    n_n_dihydroxy_l_leucine
+  }
+
+  branch from co2 side right {
+    co2
+    <-> ec_1_13_12_3 [1.13.12.3] +3_methylsulfanylpropanamide +h2o +l_methionine
+    o2
+  }
+
+  branch from coa side left {
+    coa
+    <-> . +10z_heptadecenoyl_coa +cholesterol
+    cholest_5_en_3b_yl_9z_heptadecenoate
+  }
+
+  branch from coa side right {
+    coa
+    <-> . +nonadecanoyl_coa +cholesterol
+    cholesteryl_nonadecanoate
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_8_1_15 [1.8.1.15] +5_mercapto_2_nitrobenzoate +nadp +h
+    dithionitrobenzoic_acid
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_6_5_2 [1.6.5.2] +2_6_dimethyl_1_4_benzenediol +nadp +h
+    2_6_dimethyl_1_4_benzoquinone
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +tazarotenic_acid +h +o2 +nadph +h2o
+    tazarotenic_acid_sulfoxide
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_1_1_206 [1.1.1.206] +3_methylcyclohexanone +h +nadph
+    3_methylcyclohexanol
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +l_histidine +l_lysine +l_methionine
+    methionyl_histidyl_lysine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +l_isoleucine +l_methionine
+    methionyl_methionyl_isoleucine
   }
 }

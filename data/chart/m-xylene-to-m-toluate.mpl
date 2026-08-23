@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway m-xylene-to-m-toluate "m-xylene to m-toluate" {
-  spacing 188
+  spacing 176
 
   spine at 0,0 {
     m_xylene
@@ -14,17 +14,5 @@ pathway m-xylene-to-m-toluate "m-xylene to m-toluate" {
     m_tolualdehyde
     <-> . +nad +h2o -nadh -hplus
     m_toluate
-  }
-
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
-    <-> . +20s_hydroxyvitamin_d3 +di_sulfido_diiron +o2 +hplus +h2o
-    20s_24r_dihydroxyvitamin_d3
-  }
-
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
-    <-> . +20s_hydroxyvitamin_d3 +di_sulfido_diiron +o2 +hplus +h2o
-    20s_24s_dihydroxyvitamin_d3
   }
 }

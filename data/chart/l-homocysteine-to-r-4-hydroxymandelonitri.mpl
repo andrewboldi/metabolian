@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-homocysteine-to-r-4-hydroxymandelonitri "L-homocysteine to (R)-4-hydroxymandelonitri…" {
-  spacing 258
+  spacing 300
 
   spine at 0,0 {
     l_homocysteine
@@ -18,31 +18,73 @@ pathway l-homocysteine-to-r-4-hydroxymandelonitri "L-homocysteine to (R)-4-hydro
 
   branch from h2o side left {
     h2o
-    <-> . +nitrite +menaquinone_2 +menaquinol
-    nitrate
+    <-> . +2_4_6_6_tetranitro_2_4_azoxytoluene +2_hydroxylamino_4_6_dinitrotoluene +o2
+    4_hydroxylamino_2_6_dinitrotoluene
   }
 
   branch from h2o side right {
     h2o
-    <-> . +2_methoxy_6_all_trans_octaprenyl_phenol +o2
-    6_methoxy_2_all_trans_octaprenyl_1_4_benzoquinon
-  }
-
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> ec_2_4_1_195 [2.4.1.195] +udp +4_methylthiobutyl_desulfoglucosinolate +h
-    z_omega_methylsulfanyl_pentyl_thiohydroximate
-  }
-
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> ec_2_4_1_195 [2.4.1.195] +5_methylsulfanyl_pentyl_desulfoglucosinolate +udp +h
-    z_omega_methylsulfanyl_hexyl_thiohydroximate
+    <-> . +1_4_5_7_10_tetrahydroxy_3_3_oxobutanoyl_anthrace +o2
+    premithramycinone_g
   }
 
   branch from r_4_hydroxymandelonitrile side left {
     r_4_hydroxymandelonitrile
     <-> .
     s_4_hydroxymandelonitrile
+  }
+
+  branch from l_homocysteine side right {
+    l_homocysteine
+    <-> . +6s_5_6_7_8_tetrahydrofolate +h +l_methionine
+    5_methyltetrahydrofolic_acid
+  }
+
+  branch from h side left {
+    h
+    <-> . +2z_2e_2_hydroxy_6_oxo_6_2_3_dihydroxyphenyl_hex +biphenyl_2_2_3_3_tetraol
+    o2
+  }
+
+  branch from h side right {
+    h
+    <-> . +o2 +premithramycinone_g +h2o
+    1_4_5_7_10_tetrahydroxy_3_3_oxobutanoyl_anthrace
+  }
+
+  branch from glucose side left {
+    glucose
+    <-> . +1_o_trans_sinapoyl_beta_d_glucose +cyanidin_3_o_6_o_4_o_beta_d_glucosyl_p_coumaroyl
+    cyanidin_3_o_2_o_2_o_sinapoyl_bata_d_xylopyranos
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> ec_2_3_1_213 [2.3.1.213] +cyanidin_3_o_6_o_4_coumaroyl_beta_d_glucosyl_1_6 +h +1_o_4_coumaroyl_d_glucose
+    cyanidin_3_o_6_o_glucosyl_2_o_xylosylgalactoside
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +emodin +h
+    hypericin
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +emodin
+    hypericin
+  }
+
+  branch from udp side left {
+    udp
+    <-> . +beta_d_gal_1_7_alpha_d_d_hep_1_2_alpha_l_d_hep_1 +h +alpha_d_d_hep_1_2_alpha_l_d_hep_1_3_alpha_l_d_he
+    udp_alpha_d_galactose
+  }
+
+  branch from udp side right {
+    udp
+    <-> ec_2_4_1_182 [2.4.1.182] +lipid_a_disaccharide_h_pylori +h +lipid_x_h_pylori
+    udp_2_n_3r_3_hydroxyoctadecanoyl_3_o_3r_3_hydrox
   }
 }
